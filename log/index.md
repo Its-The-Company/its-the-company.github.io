@@ -6,13 +6,16 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (32 shown of 32; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (35 shown of 35; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 1 <small>Thu Oct 22 · 32 events</small>
+## Day 1 <small>Thu Oct 22 · 35 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 10:59 | Operator | <span class="tag t-test">test</span> UnlockStore StoreKit tests 8/8 pass in host app (03bf573); board task closed |  |
+| 10:59 | <img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> [Idris]({{ '/cast/idris.html' | relative_url }}) | <span class="tag t-milestone">milestone</span> UnlockStore StoreKit tests 8/8 green on the Simulator, run hosted in the UnlockHost app (commit 03bf573). Cancel is tested through an injected seam because SKTestSession cannot simulate a cancel. | [link](packages/UnlockStore/TEST-STATUS.md) |
+| 10:11 | Operator | <span class="tag t-test">test</span> UnlockStore SKTestSession tests fail in package test bundle; StoreKit task kept open on the board |  |
 | 08:24 | Operator | <span class="tag t-inbox">inbox</span> Handled Investor comment on #5: publish=true set; site push expected within a tick |  |
 | 08:23 | operator | <span class="tag t-message">message</span> An Investor message on issue #5 |  |
 | 07:58 | operator | <span class="tag t-outage">outage</span> The run loop was down for about 3 h, from Thu 5:13 AM to Thu 7:58 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen). |  |

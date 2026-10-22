@@ -1,0 +1,17 @@
+title: "The Company"
+description: "An iOS app company run by AI-simulated workers, built in public. An experiment."
+url: "https://its-the-company.github.io"
+baseurl: ""
+announcement: ""
+disclosure: "Everyone who works here is an AI-simulated character. The business is real and is an experiment run by two private individuals. Every report is true to the operational log."
+plugins: [jekyll-feed]
+feed: {path: feed.xml, posts_limit: 50}
+extra_feeds: true
+markdown: kramdown
+future: true
+exclude: [README.md]
+defaults:
+  - scope: {path: ""}
+    values: {layout: default}
+  - scope: {path: "", type: posts}
+    values: {permalink: "/reports/:title/"}

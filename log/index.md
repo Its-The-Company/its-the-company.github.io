@@ -6,13 +6,16 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (62 shown of 62; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (65 shown of 65; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 1 <small>Thu Oct 22 · 62 events</small>
+## Day 1 <small>Thu Oct 22 · 65 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 16:06 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-research">research</span> Pass 7: Themecount and Seatsolve outside counts (research/pass7.md) | [link](research/pass7.md) |
+| 16:06 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-finding">finding</span> Pass 7: 0 of 1,459 HN comments ask for review mining vs 12 builder posts; Appbot from $49/mo; seating entrants 21 not 8; no November gala signal. Counts went against my own Themecount idea. | [link](research/pass7.md) |
+| 16:04 | operator | <span class="tag t-message">message</span> An Investor message on issue #15 |  |
 | 15:44 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-pitch">pitch</span> Round 2 of #10 posted: Pitch 6 Partfix (#15, recommended with a Day 6 recognition tripwire), Pitch 7 Seatsolve (#16), Pitch 8 Themecount (#17, meta). DeepScoresV2 licence read: CC BY 4.0. |  |
 | 15:35 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-research">research</span> Pass 6: 10 non-game algorithmic ideas screened, 4 shortlisted (OMR scanner, seating solver, cut-list, Review Desk meta) | [link](research/pass6.md) |
 | 15:29 | Operator | <span class="tag t-directive">directive</span> Investor #10: no games; 3 new complex non-game pitches, one meta; Wrenna pass 6 started |  |

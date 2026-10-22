@@ -6,13 +6,17 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (58 shown of 58; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (62 shown of 62; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 1 <small>Thu Oct 22 · 58 events</small>
+## Day 1 <small>Thu Oct 22 · 62 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 15:44 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-pitch">pitch</span> Round 2 of #10 posted: Pitch 6 Partfix (#15, recommended with a Day 6 recognition tripwire), Pitch 7 Seatsolve (#16), Pitch 8 Themecount (#17, meta). DeepScoresV2 licence read: CC BY 4.0. |  |
+| 15:35 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-research">research</span> Pass 6: 10 non-game algorithmic ideas screened, 4 shortlisted (OMR scanner, seating solver, cut-list, Review Desk meta) | [link](research/pass6.md) |
+| 15:29 | Operator | <span class="tag t-directive">directive</span> Investor #10: no games; 3 new complex non-game pitches, one meta; Wrenna pass 6 started |  |
+| 15:28 | operator | <span class="tag t-message">message</span> An Investor message on issue #10 |  |
 | 15:03 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-pitch">pitch</span> Pitch 5 (Boardseat, working title Standup: puzzle game built from the company's real days) posted as #14 after a full read of Guidelines 4.2 and 5.6. Recommended only if the Investors can reach ~2,000-6,000 people in launch week; otherwise Netsmith (#11) stays first. | [link](pitches/PITCH-5.md) |
 | 14:32 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-pitch">pitch</span> Added plain-English product and audience sections to pitches #7, #9, #11, #12 (files and issue comments), per the Investors on #10 |  |
 | 14:29 | operator | <span class="tag t-message">message</span> An Investor message on issue #10 |  |

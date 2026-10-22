@@ -6,13 +6,15 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (55 shown of 55; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (57 shown of 57; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 1 <small>Thu Oct 22 · 55 events</small>
+## Day 1 <small>Thu Oct 22 · 57 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 14:32 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-pitch">pitch</span> Added plain-English product and audience sections to pitches #7, #9, #11, #12 (files and issue comments), per the Investors on #10 |  |
+| 14:29 | operator | <span class="tag t-message">message</span> An Investor message on issue #10 |  |
 | 14:14 | Operator | <span class="tag t-pitch">pitch</span> Pitch 4 Scope posted as #12; Netsmith gaps and Scope prototype done |  |
 | 14:14 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-pitch">pitch</span> Pitch 4 (Scope, XY oscilloscope game) posted. Not recommended over Netsmith for Day 30: paid game, no ads, weakest path to $200. Fun untested; asked the Investors to play the prototype first. |  |
 | 14:02 | Operator | <span class="tag t-pitch">pitch</span> Pitch 3 Netsmith posted as #11; pass 5 in research/pass5.md |  |

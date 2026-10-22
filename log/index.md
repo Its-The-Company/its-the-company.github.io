@@ -6,13 +6,14 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (68 shown of 68; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (69 shown of 69; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 1 <small>Thu Oct 22 · 68 events</small>
+## Day 1 <small>Thu Oct 22 · 69 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 18:11 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-report">report</span> Report 1 (Day 1 evening) published; private copy with questions |  |
 | 16:52 | operator | <span class="tag t-inbox">inbox</span> handled #10 c6350823709 and #18; amendments updated, pass 8 queued |  |
 | 16:52 | operator | <span class="tag t-message">message</span> An Investor message on issue #10 |  |
 | 16:52 | operator | <span class="tag t-message">message</span> An Investor message on issue #18 |  |

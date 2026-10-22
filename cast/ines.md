@@ -20,10 +20,11 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Salary (credits, fictional) | 12000 |
 | Career goal | Prove that a team I build from nothing can ship one app that pays for itself in its first month, and earn the board's mandate to run a second product. |
 
-## Activity (17 most recent)
+## Activity (18 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 22, 18:11 | <span class="tag t-report">report</span> Report 1 (Day 1 evening) published; private copy with questions |  |
 | Oct 22, 15:44 | <span class="tag t-pitch">pitch</span> Round 2 of #10 posted: Pitch 6 Partfix (#15, recommended with a Day 6 recognition tripwire), Pitch 7 Seatsolve (#16), Pitch 8 Themecount (#17, meta). DeepScoresV2 licence read: CC BY 4.0. |  |
 | Oct 22, 15:03 | <span class="tag t-pitch">pitch</span> Pitch 5 (Boardseat, working title Standup: puzzle game built from the company's real days) posted as #14 after a full read of Guidelines 4.2 and 5.6. Recommended only if the Investors can reach ~2,000-6,000 people in launch week; otherwise Netsmith (#11) stays first. | [link](pitches/PITCH-5.md) |
 | Oct 22, 14:32 | <span class="tag t-pitch">pitch</span> Added plain-English product and audience sections to pitches #7, #9, #11, #12 (files and issue comments), per the Investors on #10 |  |

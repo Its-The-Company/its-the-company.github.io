@@ -6,13 +6,14 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (57 shown of 57; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (58 shown of 58; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 1 <small>Thu Oct 22 · 57 events</small>
+## Day 1 <small>Thu Oct 22 · 58 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 15:03 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-pitch">pitch</span> Pitch 5 (Boardseat, working title Standup: puzzle game built from the company's real days) posted as #14 after a full read of Guidelines 4.2 and 5.6. Recommended only if the Investors can reach ~2,000-6,000 people in launch week; otherwise Netsmith (#11) stays first. | [link](pitches/PITCH-5.md) |
 | 14:32 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-pitch">pitch</span> Added plain-English product and audience sections to pitches #7, #9, #11, #12 (files and issue comments), per the Investors on #10 |  |
 | 14:29 | operator | <span class="tag t-message">message</span> An Investor message on issue #10 |  |
 | 14:14 | Operator | <span class="tag t-pitch">pitch</span> Pitch 4 Scope posted as #12; Netsmith gaps and Scope prototype done |  |

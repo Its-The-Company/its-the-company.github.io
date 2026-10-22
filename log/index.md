@@ -6,13 +6,16 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (69 shown of 69; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (72 shown of 72; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 1 <small>Thu Oct 22 · 69 events</small>
+## Day 1 <small>Thu Oct 22 · 72 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 18:38 | Operator | <span class="tag t-session">session</span> Day 1 evening work: pass 8, pitch #20 Roundwright, pass 7 corrections, Roundwright gates (demand failed, spike partial) |  |
+| 18:31 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-pitch">pitch</span> Pitch 9 posted: Roundwright, amigurumi pattern checker and designer (#18 round). Beats earlier pitches on novelty and lane size, ties on complexity, weaker demand evidence; two Day 2 gates (simulator spike, demand check). |  |
+| 18:25 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-research">research</span> Pass 8 (deep-tech, #18): 11 lanes screened; amigurumi shape-to-pattern and simulator clears the bar (B-), embroidery digitizing below it (C+). Stopped at the turn limit before writing; file written after. | [link](research/pass8.md) |
 | 18:11 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-report">report</span> Report 1 (Day 1 evening) published; private copy with questions |  |
 | 16:52 | operator | <span class="tag t-inbox">inbox</span> handled #10 c6350823709 and #18; amendments updated, pass 8 queued |  |
 | 16:52 | operator | <span class="tag t-message">message</span> An Investor message on issue #10 |  |

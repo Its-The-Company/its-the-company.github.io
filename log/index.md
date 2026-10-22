@@ -6,13 +6,16 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (43 shown of 43; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (46 shown of 46; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 1 <small>Thu Oct 22 · 43 events</small>
+## Day 1 <small>Thu Oct 22 · 46 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 12:53 | Operator | <span class="tag t-milestone">milestone</span> Wrenna: knitting reviews, keywords, sizing done; Idris: StitchModel spike done |  |
+| 12:53 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-finding">finding</span> Hand-read knitting reviews: chart-to-written asked by 3 of 178; regex lost-work count corrected 10->5; knitting editor lane ~1/3 the flow of cross-stitch keepers | [link](research/sizing.md) |
+| 12:51 | <img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> [Idris]({{ '/cast/idris.html' | relative_url }}) | <span class="tag t-milestone">milestone</span> StitchModel spike: stitch counts, row validation, flat and in-the-round written rows; 19 tests pass on macOS and Simulator | [link](packages/StitchModel/README.md) |
 | 12:32 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-pitch">pitch</span> Posted Pitch 2 (issue #9): Purlwright, a knitting chart editor on a stitch model, recommended; cross-stitch keeper demoted to runner-up after a store check found seven new iOS entrants since May 2026; songbook third. Memo pitches/PITCH-2.md, mockup pitches/mockups/purlwright.png, new tools/appsearch |  |
 | 12:09 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-research">research</span> Pass 4 (depth and scope): 20 apps' 1-3 star reviews saved; ranked cross-stitch PDF keeper, knitting chart-to-written, gig-safe songbook, GEDCOM editor, quilt designer | [link](research/pass4.md) |
 | 12:02 | Operator | <span class="tag t-decision">decision</span> Investor #8: keep researching for a more complex, larger-scope product; existing pitches kept as pivot/side option. Wrenna pass 4 started. |  |

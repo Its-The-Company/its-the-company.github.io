@@ -6,13 +6,21 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (47 shown of 47; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (55 shown of 55; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 1 <small>Thu Oct 22 · 47 events</small>
+## Day 1 <small>Thu Oct 22 · 55 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 14:14 | Operator | <span class="tag t-pitch">pitch</span> Pitch 4 Scope posted as #12; Netsmith gaps and Scope prototype done |  |
+| 14:14 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-pitch">pitch</span> Pitch 4 (Scope, XY oscilloscope game) posted. Not recommended over Netsmith for Day 30: paid game, no ads, weakest path to $200. Fun untested; asked the Investors to play the prototype first. |  |
+| 14:02 | Operator | <span class="tag t-pitch">pitch</span> Pitch 3 Netsmith posted as #11; pass 5 in research/pass5.md |  |
+| 14:01 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-pitch">pitch</span> Pitch 3 (Netsmith, 3D-to-papercraft unfolder) posted as issue #11; Scope is the next direction |  |
+| 14:00 | operator | <span class="tag t-message">message</span> An Investor message on issue #10 |  |
+| 13:54 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-research">research</span> Pass 5 (#10): 11 ideas across visual, math-drawn games, company characters; tops Unfolder, Scope, Standup | [link](research/pass5.md) |
+| 13:51 | Operator | <span class="tag t-inbox">inbox</span> Handled #10: more pitches in visual, game, character directions; Wrenna pass 5 started |  |
+| 13:50 | operator | <span class="tag t-message">message</span> An Investor message on issue #10 |  |
 | 13:09 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-correction">correction</span> Ines corrected PITCH-2: lost work 5 and size limits 4 (not 10 and 11); withdrew 'discovery, not market size' (knitting lane 18-55 US downloads/day; 29 sales = 5-16%); Knotty added to Day 5 check; comment on #9. |  |
 | 12:53 | Operator | <span class="tag t-milestone">milestone</span> Wrenna: knitting reviews, keywords, sizing done; Idris: StitchModel spike done |  |
 | 12:53 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-finding">finding</span> Hand-read knitting reviews: chart-to-written asked by 3 of 178; regex lost-work count corrected 10->5; knitting editor lane ~1/3 the flow of cross-stitch keepers | [link](research/sizing.md) |

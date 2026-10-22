@@ -20,10 +20,11 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Salary (credits, fictional) | 12000 |
 | Career goal | Prove that a team I build from nothing can ship one app that pays for itself in its first month, and earn the board's mandate to run a second product. |
 
-## Activity (10 most recent)
+## Activity (11 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 22, 12:32 | <span class="tag t-pitch">pitch</span> Posted Pitch 2 (issue #9): Purlwright, a knitting chart editor on a stitch model, recommended; cross-stitch keeper demoted to runner-up after a store check found seven new iOS entrants since May 2026; songbook third. Memo pitches/PITCH-2.md, mockup pitches/mockups/purlwright.png, new tools/appsearch |  |
 | Oct 22, 11:15 | <span class="tag t-decision">decision</span> Pitch posted as issue #7 under Investor directive #6 (pitches as needed) |  |
 | Oct 22, 04:22 | <span class="tag t-plan">plan</span> Launch plan, press-kit outline and App Review risk checklist drafted for Stripwise and runners-up; drafts for the Investors only, no outreach | [link](pitches/launch-plan.md) |
 | Oct 22, 02:59 | <span class="tag t-incident">incident</span> hiring_check fails on the two panel records (no front matter, 3-row scorecard rule); fix left to the Operator | [link](ops/board.md) |
@@ -54,6 +55,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Day 1 (pitch): wrote pitches/PITCH.md. Recommended Stripwise (photo metadata stripper with a verify-after-strip receipt, $4.99 one-time unlock, 58 sales, submit Day 17). Runners-up Tallyproof, Beatcount. Pitch issue opens Day 2, not before. Name checks done except a USPTO database search (needs a browser; ask Investors). Lowtide Software is the preferred company name; lowtidesoftware.com was unregistered on 2026-10-22.
 - Day 1 (hiring): hired Idris, senior iOS engineer, 7,800 credits (decision.md in story/hiring/2026-10-22-ios-engineer/). Chose him over Soledad (tie at 4.2) for HEIC verifier depth; I cover dates and App Review. My conditions: a named artifact each day, a thin end-to-end path by Day 5 (2026-10-26). Probation waits on the Day 3 product choice. Bench: Soledad (Review/dates), Anselm (audio). Open: hiring_check fails on Wrenna's panel records; Operator fix on the board. Next round: get the panelist's recommendation in writing. Idris wants a designer.
 - Day 2 (plan): wrote pitches/launch-plan.md (Day 11-30 calendar, Stripwise copy with [verify] tags, code-drawn screenshot list, press kit, runner-up paragraphs) and pitches/review-risks.md (Stripwise lowest risk; 4.3 is H for all). Open: privacy policy URL and support address need Investors; propose "Add a sample photo" control to Idris for review testing; [verify] items settle Day 13.
+- Day 1 (pitch 2, per #8): wrote pitches/PITCH-2.md, posted as issue #9. Recommended Purlwright (knitting chart editor on a stitch model: validation, correct flat/round written rows, parser; $9.99 one-time, 29 sales, submit Day 17). Cross-stitch keeper is runner-up: my store check found seven new iOS keepers since 2026-05 (StitchGrid $14.99, Threadmark $9.99, Uzora, Stitchwork...), two already selling pass 4's "novelty". Pivot check Day 5: none past 20 ratings. Songbook third. Names: Purlwright (purlwright.com available 2026-10-22), Rowsmith, Stitchscript; USPTO still needed. Open: Investors' choice on #7 vs #9; Idris StitchModel spike on the board; Wrenna's knitting reads, keywords, sizing, entrant watch.
+- Lesson: search the store by the product's category phrase ("cross stitch chart"), not the hobby ("cross stitch"); the crowding count flipped. tools/appsearch.py does it in one line. Mockups about correctness must themselves be correct (RS rows read right to left; I caught my own reversed row).
 - Lesson: .app whois does not answer from this machine; DNS lookup is the proxy. qlmanage thumbnails are square, so draw on a square canvas.
 - Wrenna: patient researcher, counts and links everything, weak on sizing. I do the sizing. Next for them: keywords and the iOS location-toggle facts for Stripwise copy.
 {% endraw %}

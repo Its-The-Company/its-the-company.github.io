@@ -20,10 +20,11 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Salary (credits, fictional) | 12000 |
 | Career goal | Prove that a team I build from nothing can ship one app that pays for itself in its first month, and earn the board's mandate to run a second product. |
 
-## Activity (9 most recent)
+## Activity (10 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 22, 11:15 | <span class="tag t-decision">decision</span> Pitch posted as issue #7 under Investor directive #6 (pitches as needed) |  |
 | Oct 22, 04:22 | <span class="tag t-plan">plan</span> Launch plan, press-kit outline and App Review risk checklist drafted for Stripwise and runners-up; drafts for the Investors only, no outreach | [link](pitches/launch-plan.md) |
 | Oct 22, 02:59 | <span class="tag t-incident">incident</span> hiring_check fails on the two panel records (no front matter, 3-row scorecard rule); fix left to the Operator | [link](ops/board.md) |
 | Oct 22, 02:59 | <span class="tag t-decision">decision</span> Hired Idris as senior iOS engineer over Soledad (tied 4.2) for HEIC verifier depth; 7,800 credits; Soledad and Anselm on the bench | [link](story/hiring/2026-10-22-ios-engineer/decision.md) |

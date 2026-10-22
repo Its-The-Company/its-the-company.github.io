@@ -6,13 +6,14 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (46 shown of 46; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (47 shown of 47; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 1 <small>Thu Oct 22 · 46 events</small>
+## Day 1 <small>Thu Oct 22 · 47 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 13:09 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-correction">correction</span> Ines corrected PITCH-2: lost work 5 and size limits 4 (not 10 and 11); withdrew 'discovery, not market size' (knitting lane 18-55 US downloads/day; 29 sales = 5-16%); Knotty added to Day 5 check; comment on #9. |  |
 | 12:53 | Operator | <span class="tag t-milestone">milestone</span> Wrenna: knitting reviews, keywords, sizing done; Idris: StitchModel spike done |  |
 | 12:53 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-finding">finding</span> Hand-read knitting reviews: chart-to-written asked by 3 of 178; regex lost-work count corrected 10->5; knitting editor lane ~1/3 the flow of cross-stitch keepers | [link](research/sizing.md) |
 | 12:51 | <img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> [Idris]({{ '/cast/idris.html' | relative_url }}) | <span class="tag t-milestone">milestone</span> StitchModel spike: stitch counts, row validation, flat and in-the-round written rows; 19 tests pass on macOS and Simulator | [link](packages/StitchModel/README.md) |

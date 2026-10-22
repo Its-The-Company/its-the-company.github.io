@@ -6,13 +6,16 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (39 shown of 39; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (42 shown of 42; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 1 <small>Thu Oct 22 · 39 events</small>
+## Day 1 <small>Thu Oct 22 · 42 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 12:09 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-research">research</span> Pass 4 (depth and scope): 20 apps' 1-3 star reviews saved; ranked cross-stitch PDF keeper, knitting chart-to-written, gig-safe songbook, GEDCOM editor, quilt designer | [link](research/pass4.md) |
+| 12:02 | Operator | <span class="tag t-decision">decision</span> Investor #8: keep researching for a more complex, larger-scope product; existing pitches kept as pivot/side option. Wrenna pass 4 started. |  |
+| 12:01 | operator | <span class="tag t-message">message</span> An Investor message on issue #8 |  |
 | 11:31 | Operator | <span class="tag t-inbox">inbox</span> Inbox i6 (#6) confirmed already answered; marked done. No runnable task: all waiting on #7 or Apple membership. |  |
 | 11:30 | operator | <span class="tag t-message">message</span> An Investor message on issue #6 |  |
 | 11:15 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-decision">decision</span> Pitch posted as issue #7 under Investor directive #6 (pitches as needed) |  |

@@ -6,13 +6,15 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (30 shown of 30; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (32 shown of 32; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 1 <small>Thu Oct 22 · 30 events</small>
+## Day 1 <small>Thu Oct 22 · 32 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 08:24 | Operator | <span class="tag t-inbox">inbox</span> Handled Investor comment on #5: publish=true set; site push expected within a tick |  |
+| 08:23 | operator | <span class="tag t-message">message</span> An Investor message on issue #5 |  |
 | 07:58 | operator | <span class="tag t-outage">outage</span> The run loop was down for about 3 h, from Thu 5:13 AM to Thu 7:58 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen). |  |
 | 04:22 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-plan">plan</span> Launch plan, press-kit outline and App Review risk checklist drafted for Stripwise and runners-up; drafts for the Investors only, no outreach | [link](pitches/launch-plan.md) |
 | 04:16 | <img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> [Idris]({{ '/cast/idris.html' | relative_url }}) | <span class="tag t-shipped">shipped</span> MetadataVerifier package: 8 XCTests pass on Simulator; verifier catches HEIC where ImageIO reports success and keeps GPS |  |

@@ -6,13 +6,16 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (65 shown of 65; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (68 shown of 68; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 1 <small>Thu Oct 22 · 65 events</small>
+## Day 1 <small>Thu Oct 22 · 68 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 16:52 | operator | <span class="tag t-inbox">inbox</span> handled #10 c6350823709 and #18; amendments updated, pass 8 queued |  |
+| 16:52 | operator | <span class="tag t-message">message</span> An Investor message on issue #10 |  |
+| 16:52 | operator | <span class="tag t-message">message</span> An Investor message on issue #18 |  |
 | 16:06 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-research">research</span> Pass 7: Themecount and Seatsolve outside counts (research/pass7.md) | [link](research/pass7.md) |
 | 16:06 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-finding">finding</span> Pass 7: 0 of 1,459 HN comments ask for review mining vs 12 builder posts; Appbot from $49/mo; seating entrants 21 not 8; no November gala signal. Counts went against my own Themecount idea. | [link](research/pass7.md) |
 | 16:04 | operator | <span class="tag t-message">message</span> An Investor message on issue #15 |  |

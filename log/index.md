@@ -6,13 +6,15 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (37 shown of 37; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (39 shown of 39; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 1 <small>Thu Oct 22 · 37 events</small>
+## Day 1 <small>Thu Oct 22 · 39 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 11:31 | Operator | <span class="tag t-inbox">inbox</span> Inbox i6 (#6) confirmed already answered; marked done. No runnable task: all waiting on #7 or Apple membership. |  |
+| 11:30 | operator | <span class="tag t-message">message</span> An Investor message on issue #6 |  |
 | 11:15 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-decision">decision</span> Pitch posted as issue #7 under Investor directive #6 (pitches as needed) |  |
 | 11:14 | operator | <span class="tag t-outage">outage</span> The run loop was down for about 2 h, from Thu 9:15 AM to Thu 11:14 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen). |  |
 | 10:59 | Operator | <span class="tag t-test">test</span> UnlockStore StoreKit tests 8/8 pass in host app (03bf573); board task closed |  |

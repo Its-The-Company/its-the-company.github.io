@@ -1,30 +1,64 @@
 {
  "schema": 1,
- "at": "2026-10-23T05:03:12.389593+00:00",
+ "at": "2026-10-23T05:20:22.095195+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T01:01:40-04:00"
+  "started": "2026-10-23T01:03:37-04:00"
  },
- "workers": [],
- "recent": [],
+ "workers": [
+  {
+   "name": "wrenna",
+   "task": "[test] Site v2 baseline measurement",
+   "model": "opus",
+   "started": "2026-10-23T05:04:41.805Z",
+   "seconds": 940,
+   "finished": null
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] Split site_build.py",
+   "model": "opus",
+   "started": "2026-10-23T05:05:09.426Z",
+   "seconds": 912,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[design] Site v2 visual system",
+   "model": "fable",
+   "started": "2026-10-23T05:10:20.010Z",
+   "seconds": 602,
+   "finished": null
+  }
+ ],
+ "recent": [
+  {
+   "name": "ines",
+   "task": "[plan] Site v2 spec",
+   "model": "fable",
+   "started": "2026-10-23T05:04:39.558Z",
+   "seconds": null,
+   "finished": "2026-10-23T05:10:10.588000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [
    {
-    "kind": "plan",
-    "text": "Ines: write ops/plans/site-v2.md: chat-first page map (home = composer + live \"Now\" + the conversation; Requests..."
-   },
-   {
     "kind": "tools",
-    "text": "Odalys: split tools/site_build.py into tools/site/ (templates, one CSS file, one JS file, the builder) with no..."
+    "text": "Odalys: site v2 slices 2 and 4 (ops/plans/site-v2.md 6.1, 6.2). Slice 2 first and alone: split tools/site_build.py..."
    },
    {
     "kind": "design",
-    "text": "Idris: visual system for v2, all from code: type scale, color tokens with dark mode, spacing, the chat bubbles and..."
+    "text": "Idris: site v2 slices 3, 5, 6, 7 (ops/plans/site-v2.md section 4, 6.2). Slice 3 now, before the split lands and..."
    },
    {
     "kind": "test",
-    "text": "Wrenna: before/after for v2: measure today's site first (page weight, requests, load time, taps from the home page..."
+    "text": "Wrenna: site v2 slices 1 and 8 (ops/plans/site-v2.md section 5, 6.2). Slice 1 now: measure today's live site into..."
+   },
+   {
+    "kind": "hiring",
+    "text": "Ines: open the product and visual designer round (ops/plans/site-v2.md section 8): write..."
    },
    {
     "kind": "plan",
@@ -32,14 +66,6 @@
    }
   ],
   "blocked": [
-   {
-    "kind": "build",
-    "text": "(waiting on Idris: switch the composer on. Review done (ops/plans/site-review.md, fixes 1973ac2 and 8685861);..."
-   },
-   {
-    "kind": "test",
-    "text": "(waiting on Wrenna: a real Chromium or safaridriver --enable is still requested on (Investor/sudo). Free workaround..."
-   },
    {
     "kind": "build",
     "text": "(waiting on Idris probation: create the Xcode project for the chosen app and land the first commit by Day 3..."
@@ -51,10 +77,18 @@
    {
     "kind": "build",
     "text": "(waiting on Idris: Boardseat one-level prototype: DayKit deterministic simulation with XCTests and the Day 1..."
+   },
+   {
+    "kind": "build",
+    "text": "(waiting on Idris: Partfix recognition spike, Days 3-5: DeepScoresV2 dense subset (CC BY 4.0, log the licence) to a..."
+   },
+   {
+    "kind": "build",
+    "text": "(waiting on Idris: Seatsolve Seating package: model, CSV import, cost function, seeded annealing, broken-rules..."
    }
   ],
-  "runnable_count": 15,
-  "blocked_count": 11
+  "runnable_count": 17,
+  "blocked_count": 9
  },
  "meter": {
   "five_hour": {
@@ -71,5 +105,5 @@
   },
   "read_at": "2026-10-23T01:01:39.818560-04:00"
  },
- "next_tick": "2026-10-23T01:16:40-04:00"
+ "next_tick": "2026-10-23T01:18:37-04:00"
 }

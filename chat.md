@@ -7,6 +7,6 @@ section: "chat"
 
 # Chat
 
-<div id="chat-root" data-repo="Its-The-Company/itsthecompany"></div>
+<div id="chat-root" data-repo="Its-The-Company/itsthecompany" data-composer="on"></div>
 
 <noscript>This page needs JavaScript. The same threads are on GitHub in the issue list.</noscript>

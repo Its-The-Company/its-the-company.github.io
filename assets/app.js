@@ -3,7 +3,7 @@
 'use strict';
 var API = 'https://api.github.com';
 var KEY = 'company-chat-token', NAME = 'company-chat-name';
-var later = typeof setTimeout === 'function' ? setTimeout : function () { return 0; };
+var later = setTimeout;
 var stop = typeof clearTimeout === 'function' ? clearTimeout : function () {};
 function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
 function byId(id) { return document.getElementById(id); }
@@ -22,12 +22,13 @@ function checkAuth(r) {
 if (r && r.status === 401 && !rejected && getToken()) { rejected = true; onReject.forEach(function (f) { f(); }); }
 return r;
 }
+function hdrs() { var h = { 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' }, t = getToken(); if (t) h['Authorization'] = 'Bearer ' + t; return h; }
 function gh(path, opts) {
-var h = { 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' };
-var t = getToken(); if (t) h['Authorization'] = 'Bearer ' + t;
+var h = hdrs();
 if (opts && opts.etag) h['If-None-Match'] = opts.etag;
 return fetch(API + path, { headers: h, cache: 'no-store' }).then(checkAuth);
 }
+function said(r) { return 'GitHub answered ' + r.status; }
 function cap(s) { s = String(s || ''); return s.charAt(0).toUpperCase() + s.slice(1); }
 function ago(iso) {
 var s = Math.max(0, (Date.now() - Date.parse(iso)) / 1000);
@@ -117,7 +118,8 @@ p.then(function () { busy = false; }, function () { busy = false; });
 var timer, started = false, tokenPath = getToken() && repo && !rejected;
 function start() { if (started || rejected) return; started = true; timer = setInterval(live, 5000); live(true); }
 onReject.push(function () { clearInterval(timer); started = true; etag = null; last = null; timer = setInterval(live, 60000); });
-if (tokenPath) { pub(true); onDrawn.push(start); later(start, 5000); }
+var frame = typeof requestAnimationFrame === 'function' ? requestAnimationFrame : later;
+if (tokenPath) { pub(true); onDrawn.push(function () { frame(function () { later(start, 0); }); }); later(start, 5000); }
 else { timer = setInterval(live, 60000); live(true); }
 on(document, 'visibilitychange', function () { if (!document.hidden && (started || !tokenPath)) live(); });
 }
@@ -138,7 +140,7 @@ save.onclick = function () {
 var t = input.value.trim(); if (!t) { out.textContent = 'Paste the token first.'; return; }
 setToken(t, remember.checked); input.value = ''; out.textContent = 'Checking the token with GitHub...';
 gh('/repos/' + repo).then(function (r) {
-if (!r.ok) throw new Error('GitHub answered ' + r.status + (r.status === 401 ? ' (the token was not accepted)' : r.status === 404 ? ' (the token cannot see the company repository: check steps 3 and 5)' : ''));
+if (!r.ok) throw new Error(said(r) + (r.status === 401 ? ' (the token was not accepted)' : r.status === 404 ? ' (the token cannot see the company repository: check steps 3 and 5)' : ''));
 out.className = 'state sent'; out.textContent = 'Saved, and it can read the company repository. ';
 var a = el('a', null, 'Go to the home page to send a message.'); a.href = root.getAttribute('data-home') || './'; out.appendChild(a);
 }).catch(function (e) { out.className = 'state failed'; out.textContent = 'Saved, but it does not work yet: ' + e.message + '. Forget it and try again.'; });
@@ -226,8 +228,9 @@ topicIn.hidden = sel.value !== 'new';
 }
 sel.onchange = function () { topicIn.hidden = sel.value !== 'new'; };
 function post(path, body) {
-return fetch(API + path, { method: 'POST', headers: { 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Authorization': 'Bearer ' + getToken(), 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
-.then(checkAuth).then(function (r) { if (!r.ok) throw new Error('GitHub answered ' + r.status + (r.status === 401 ? ' (the token was not accepted)' : r.status === 403 || r.status === 404 ? ' (does the token have Issues: read and write?)' : '')); return r.json(); });
+var h = hdrs(); h['Content-Type'] = 'application/json';
+return fetch(API + path, { method: 'POST', headers: h, body: JSON.stringify(body) })
+.then(checkAuth).then(function (r) { if (!r.ok) throw new Error(said(r) + (r.status === 401 ? ' (the token was not accepted)' : r.status === 403 || r.status === 404 ? ' (does the token have Issues: read and write?)' : '')); return r.json(); });
 }
 function cleanName(n) { return (n || '').replace(/[^A-Za-z0-9 _.-]/g, '').trim().slice(0, 40); }
 function mentions(names) { return names.length ? 'Urgent: ' + names.map(function (n) { return '@' + n; }).join(' ') : ''; }
@@ -264,7 +267,7 @@ send.onclick = function (ev) { if (ev && ev.preventDefault) ev.preventDefault();
 function get(path) {
 return gh(path, { etag: etags[path] }).then(function (r) {
 if (r.status === 304) return cache[path];
-if (!r.ok) throw new Error('GitHub answered ' + r.status);
+if (!r.ok) throw new Error(said(r));
 etags[path] = r.headers.get('ETag'); return r.json().then(function (j) { cache[path] = j; return j; });
 });
 }
@@ -275,7 +278,7 @@ function allow() {
 var c = readAllow();
 return gh('/repos/' + repo + '/contents/investors/allowlist.md', { etag: c && c.etag }).then(function (r) {
 if (r.status === 304 && c) return (allowNames = c.names);
-if (!r.ok) throw new Error('GitHub answered ' + r.status);
+if (!r.ok) throw new Error(said(r));
 var tag = r.headers.get('ETag');
 return r.json().then(function (f) {
 var text = atob(f.content.replace(/\n/g, ''));

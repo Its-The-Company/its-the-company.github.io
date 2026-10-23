@@ -1,36 +1,37 @@
 {
  "schema": 1,
- "at": "2026-10-23T08:54:33.709196+00:00",
+ "at": "2026-10-23T09:16:18.911558+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T04:35:32-04:00"
+  "started": "2026-10-23T04:54:49-04:00"
  },
- "workers": [],
- "recent": [
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[build] Token first paint in app.js",
+   "model": "opus",
+   "started": "2026-10-23T08:55:08.226Z",
+   "seconds": 1270,
+   "finished": null
+  },
   {
    "name": "idris",
-   "task": "[build] UnlockStore v2 paywall",
+   "task": "[build] AppShell package packet 2",
    "model": "opus",
-   "started": "2026-10-23T08:36:11.162Z",
-   "seconds": null,
-   "finished": "2026-10-23T08:54:15.653000+00:00"
-  },
+   "started": "2026-10-23T08:55:10.359Z",
+   "seconds": 1268,
+   "finished": null
+  }
+ ],
+ "recent": [
   {
    "name": "maren",
-   "task": "[design] Site v2 second pass",
+   "task": "[design] Site v2 second pass and paywall options",
    "model": "opus",
-   "started": "2026-10-23T08:36:14.534Z",
+   "started": "2026-10-23T08:55:12.584Z",
    "seconds": null,
-   "finished": "2026-10-23T08:41:08.275000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] Keywords Netsmith Ledger",
-   "model": "sonnet",
-   "started": "2026-10-23T08:36:12.796Z",
-   "seconds": null,
-   "finished": "2026-10-23T08:38:15.238000+00:00"
+   "finished": "2026-10-23T09:04:10.635000+00:00"
   }
  ],
  "queue": {
@@ -78,30 +79,30 @@
     "text": "(waiting on Idris: Seatsolve Seating package: model, CSV import, cost function, seeded annealing, broken-rules..."
    }
   ],
-  "runnable_count": 20,
+  "runnable_count": 19,
   "blocked_count": 9
  },
  "meter": {
   "five_hour": {
-   "pct": 29.0,
-   "resets_at": "2026-10-23T08:50:00.414106+00:00",
+   "pct": 0.0,
+   "resets_at": "2026-10-23T13:50:00.150331+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 71.0,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 11.0,
-   "resets_at": "2026-10-25T07:00:00.414125+00:00",
+   "pct": 12.0,
+   "resets_at": "2026-10-25T07:00:00.150353+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 89.0,
+   "left": 88.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 5.0,
-   "resets_at": "2026-10-25T07:00:00.414241+00:00",
+   "resets_at": "2026-10-25T07:00:00.150483+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T04:35:31.988380-04:00"
+  "read_at": "2026-10-23T04:54:48.724933-04:00"
  },
  "ui": {
   "week_pct": 0.03,
@@ -116,5 +117,5 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T04:50:32-04:00"
+ "next_tick": "2026-10-23T05:09:48-04:00"
 }

@@ -352,6 +352,53 @@ img.portrait{width:120px;height:120px;border-radius:var(--r-l);flex:none;margin-
 .log-days li[aria-current]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .log-days small{font-weight:400;color:inherit;opacity:.8}.log-days li a small{color:var(--muted);opacity:1}
 
+/* Reports and Records indexes: a plain list, not cards (site-v2.md section 9: cards on home and People only) */
+.ix .cards,.ix .recs{grid-template-columns:minmax(0,1fr);gap:0;border-top:1px solid var(--line)}
+.ix .card,.ix .rec{padding:var(--s3) 0;border:0;border-bottom:1px solid var(--line);border-radius:0;background:none}.ix .card:hover b,.ix .rec:hover b{text-decoration:underline}
+
+/* additions: plan 1.3,2,4,6.4,6.6; cap 4 KB raw / 1.5 KB gz (plan 7.1) */
+.bell{order:1;margin-left:auto;position:relative;display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--head-line);border-radius:var(--r-m);background:none;color:inherit}
+.bell svg{width:22px}
+.badge{position:absolute;top:-4px;right:-4px;padding:0 6px;border-radius:9px;background:var(--hot);color:var(--bg);font:800 12px/18px var(--font)}
+@media (max-width:879px){.site .tabs{order:2;flex-basis:100%}}
+@media (min-width:880px){.bell{margin:0}.bellp{left:auto!important;width:400px}}
+.bellp,.sheet{position:absolute;top:100%;right:8px;left:8px;z-index:9;padding:var(--s3);background:var(--bg);color:var(--ink);border-radius:var(--r-l);box-shadow:var(--shadow)}
+.bellp h4{margin:var(--s3) 0 0;font-size:var(--fs-0);text-transform:uppercase;color:var(--muted)}
+.trial{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2);padding:var(--s2) var(--s3);border-radius:var(--r-m);background:var(--soft)}
+.trial b{flex:1}.trial small{flex-basis:100%}
+.seg2{display:flex;padding:2px;border-radius:99px;background:var(--soft-2)}
+.seg2 a{padding:0 var(--s3);border-radius:inherit;color:var(--muted);text-decoration:none;font-weight:600}
+.seg2 [aria-current]{background:var(--bg);color:var(--ink)}
+.item{display:grid;gap:var(--s1);padding:var(--s3) 0;border-bottom:1px solid var(--line)}
+.acts{display:flex;flex-wrap:wrap;gap:var(--s2)}.acts .btn{min-height:36px}
+.due{height:3px;background:var(--soft-2)}.due i{display:block;height:3px;background:var(--hot)}
+.thumbs svg{width:44px;height:96px;margin-right:var(--s2);border-radius:6px}
+.chip.q{background:var(--blue-bg);color:var(--blue-fg)}.chip.run{background:var(--green-bg);color:var(--green-fg)}
+.chip.wait{background:var(--amber-bg);color:var(--amber-fg)}.chip.done{box-shadow:inset 0 0 0 1px var(--line);color:var(--muted)}
+.chip.nx{background:none;border:1px dashed var(--muted);color:var(--muted);font-weight:400}
+.chip .dot{margin-right:5px}
+.lane .task{white-space:nowrap;text-overflow:ellipsis}
+.lane .who{font-size:var(--fs-0);color:var(--muted)}.lane>div:last-child{grid-column:2}
+.lane.blocked{box-shadow:inset 3px 0 var(--warm)}
+.meta.idle{display:flex;align-items:center;gap:6px}.meta.idle img{width:28px;border-radius:7px;filter:grayscale(1)}
+.meter p{margin:var(--s2) 0 3px}.meter .bar-track{height:6px}
+ul.q{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
+.q .row{position:relative;display:grid;grid-template-columns:20px 1fr auto;gap:2px var(--s2);padding:var(--s3);border:1px solid var(--line);border-radius:var(--r-m);background:var(--bg)}
+.grip{height:20px;background:radial-gradient(circle,var(--muted) 1.5px,#0000 2px) 0 0/6px 6.5px}
+.q .who{grid-column:2/-1;display:flex;flex-wrap:wrap;gap:var(--s1) var(--s2);font-size:var(--fs-0);color:var(--muted)}
+.q .waits{margin-left:22px;background:var(--soft)}
+.waits:before{content:"";position:absolute;left:-15px;top:-10px;width:12px;height:30px;border:solid var(--warm);border-width:0 0 2px 2px;border-radius:0 0 0 8px}
+.sug:before{border-style:dashed;border-color:var(--muted)}
+.q .tied{display:block;padding:0}.tied .q{gap:0}.tied .row{border:0}.tied .row+.row{border-top:1px solid var(--line)}
+.sheet{position:fixed;inset:auto 0 0;padding:var(--s4);border-radius:var(--r-l) var(--r-l) 0 0;box-shadow:0 0 0 100vmax #0007}
+@media (min-width:880px){.sheet{inset:15vh auto auto 50%;width:520px;margin-left:-260px;border-radius:var(--r-l)}}
+.sheet fieldset{border:0;margin:0 0 var(--s3);padding:0}.sheet legend{font-weight:700}
+.opts{display:flex;flex-wrap:wrap;gap:var(--s1)}
+.opts label{flex:1;padding:var(--s2) var(--s3);border:1px solid var(--line);border-radius:var(--r-s);font-weight:600;text-align:center;white-space:nowrap}
+.opts .cd{flex-basis:100%;text-align:left}
+.opts [aria-checked=true]{border:2px solid var(--accent);background:var(--accent-soft)}
+/* end additions */
+
 /* chat and Now panel (placeholder styling) */
 {% raw %}/* Empty since slice 5: the chat and Now styles are part of the system above. build.py still splits here. */
 {% endraw %}
@@ -381,7 +428,7 @@ img.portrait{width:120px;height:120px;border-radius:var(--r-l);flex:none;margin-
 <a href="{{ '/usage.html' | relative_url }}"{% if page.section == "usage" %} aria-current="page"{% endif %}>Usage</a>
 </nav>{% endif %}
 </div>
-<main id="main"{% if page.url == "/" %} class="home"{% endif %}>
+<main id="main"{% if page.url == "/" %} class="home"{% endif %}{% if page.section == "reports" or page.section == "records" %} class="ix"{% endif %}>
 {{ content }}
 </main>
 <footer><span>{{ site.title }}</span><a href="{{ '/privacy.html' | relative_url }}">Privacy</a><a href="{{ '/support.html' | relative_url }}">Support</a><a href="{{ '/press.html' | relative_url }}">Press kit</a><a href="{{ '/subscribe.html' | relative_url }}">Subscribe (RSS)</a></footer>

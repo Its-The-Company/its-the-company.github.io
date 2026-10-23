@@ -90,14 +90,6 @@ var t = strip(b), m = /^On [^\n]{4,200}(?:\n[^\n]{0,200})?wrote:\s*$/m.exec(t);
 return m && m.index ? [t.slice(0, m.index), t.slice(m.index)] : [t, ''];
 }
 function long(t) { return t.split('\n').reduce((n, l) => n + Math.max(1, Math.ceil(l.length / 40)), 0) > 6; }
-function parseAllow(t) {
-var out = [], f = 0;
-t.replace(/<!--[\s\S]*?-->/g, '').split('\n').forEach((l) => {
-l = l.replace(/^\s*([*-]\s+)?@?/, '').trim().toLowerCase();
-if (/^(\x60{3}|~~~)/.test(l)) f = !f; else if (!f && l.length < 40 && /^[a-z0-9](-?[a-z0-9])*$/.test(l) && out.indexOf(l) < 0) out.push(l);
-});
-return out;
-}
 function chat(root) {
 if (!getToken()) return;
 var repo = root.getAttribute('data-repo'), composerOn = root.getAttribute('data-composer') === 'on';
@@ -168,7 +160,7 @@ b.type = 'button'; attr(b, 'role', 'tab'); attr(b, 'aria-selected', sel ? 'true'
 if (k !== 'home') mk(b, 'span', 'cv-n', '#' + k);
 mk(b, 'span', 'cv-t', k === 'home' ? 'Home' : i ? i.title : '');
 if (u) attr(mk(b, 'span', 'cv-badge', String(u)), 'aria-label', u + ' new');
-if (sel && k !== 'home') { var x = mk(b, 'span', 'cv-x', '×'); attr(x, 'aria-hidden', 'true'); x.onclick = (ev) => { if (ev && ev.stopPropagation) ev.stopPropagation(); closeTab(k); }; }
+if (sel && k !== 'home') { attr(b, 'aria-keyshortcuts', 'Delete'); var x = mk(b, 'span', 'cv-x', '×'); attr(x, 'aria-hidden', 'true'); x.onclick = (ev) => { if (ev && ev.stopPropagation) ev.stopPropagation(); closeTab(k); }; }
 b.onclick = () => { go(k); };
 b.k = k;
 });
@@ -178,8 +170,9 @@ if (h && de && de.style) de.style.setProperty('--cv-tabs-h', h + 'px');
 }
 bar.onkeydown = (ev) => {
 var ks = keys(), at = ks.map(String).indexOf(String(cur)), k = ev.key;
-if (k !== 'ArrowLeft' && k !== 'ArrowRight') return;
-stop(ev); go(ks[(at + (k === 'ArrowRight' ? 1 : ks.length - 1)) % ks.length]);
+if (k === 'Delete' && typeof cur === 'number') { stop(ev); closeTab(cur); }
+else if (k === 'ArrowLeft' || k === 'ArrowRight') { stop(ev); go(ks[(at + (k === 'ArrowRight' ? 1 : ks.length - 1)) % ks.length]); }
+else return;
 var t = [].filter.call(bar.querySelectorAll('[role=tab]'), (b) => String(b.k) === String(cur))[0]; if (t) t.focus();
 };
 on(W, 'hashchange', () => { var k = parse(); if (String(k) !== String(cur)) select(k); });
@@ -295,7 +288,7 @@ return b;
 function glance() {
 var g = el('div', 'cv-glance'), st = (S.status && S.status()) || {}, m = (st.meter || {}).five_hour || {}, ws = st.workers || [];
 tile(g, D('company'), 'Day', D('day'), 'of ' + D('days'), D('day') / D('days'));
-tile(g, D('company'), 'Net proceeds', '$' + D('rev'), 'of $' + D('goal'), D('rev') / D('goal'));
+tile(g, D('company'), 'Net proceeds', '$' + D('rev'), 'of $' + D('goal'), +D('revf'));
 tile(g, D('usage'), '5-hour usage', m.pct != null ? Math.round(m.pct) + '%' : '?', m.resets_at ? 'resets ' + clock(m.resets_at) : '');
 var b = tile(g, D('company'), 'Right now', ws.length + ' at work', ws.map((w) => { var s = String(w.name || ''); return s.charAt(0).toUpperCase() + s.slice(1); }).join(', ') || 'No worker call is running');
 b.parentNode.className += ' cv-live'; if (ws.length) b.insertBefore(el('span', 'cv-dot'), b.firstChild);
@@ -349,7 +342,7 @@ function drawView(open) {
 view.textContent = ''; side.textContent = ''; log = head = anchor = null;
 if (stripEl) stripEl.hidden = cur === 'home';
 put(side, glance());
-if (!lastDraw) { mk(view, 'p', 'muted', 'Loading the conversations...'); return; }
+if (!lastDraw) { var p = mk(view, 'p', 'muted', S.rejected() ? NO_TOKEN + ' ' : 'Loading the conversations...'); if (S.rejected()) mk(p, 'a', null, 'Change the token').href = tokenLink.href; return; }
 if (cur === 'home') { [glance(), needs(), replies(), allConvos()].forEach((x) => { put(view, x); }); return; }
 put(side, needs());
 if (cur === 'new') {
@@ -464,7 +457,7 @@ if (r.status === 304 && c) return (names = c.names);
 if (!r.ok) throw new Error(said(r));
 var tag = r.headers.get('ETag');
 return r.json().then((f) => {
-names = parseAllow(atob(f.content.replace(/\n/g, '')));
+names = S.parseAllow(atob(f.content.replace(/\n/g, '')));
 if (getToken()) tokenStore().setItem(ALLOW, JSON.stringify({ names: names, etag: tag }));
 return names;
 });
@@ -503,7 +496,7 @@ drawView(false); drawDock();
 var loadTimer = setInterval(load, 30000);
 onReject.push(() => {
 clearInterval(loadTimer); send.disabled = barSend.disabled = true; tokenLink.textContent = 'Token rejected · change';
-status.textContent = NO_TOKEN; var u = byId('urgent'); if (u) u.hidden = false;
+status.textContent = NO_TOKEN; var u = byId('urgent'); if (u) u.hidden = false; if (!lastDraw) drawView(false);
 });
 load();
 }

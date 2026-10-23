@@ -11,6 +11,14 @@ function on(target, ev, fn) { if (target && target.addEventListener) target.addE
 function getToken() { return sessionStorage.getItem(KEY) || localStorage.getItem(KEY) || ''; }
 var ALLOW = 'company.allow';
 function tokenStore() { return localStorage.getItem(KEY) ? localStorage : sessionStorage; }
+function parseAllow(t) {
+var out = [], f = 0;
+String(t || '').replace(/<!--[\s\S]*?-->/g, '').split('\n').forEach(function (l) {
+l = l.replace(/^\s*([*-]\s+)?@?/, '').trim().toLowerCase();
+if (/^(\x60{3}|~~~)/.test(l)) f = !f; else if (!f && l.length < 40 && /^[a-z0-9](-?[a-z0-9])*$/.test(l) && out.indexOf(l) < 0) out.push(l);
+});
+return out;
+}
 function setToken(t, remember) {
 [sessionStorage, localStorage].forEach(function (s) { s.removeItem(KEY); s.removeItem(ALLOW); });
 if (t) (remember ? localStorage : sessionStorage).setItem(KEY, t);
@@ -149,11 +157,14 @@ out.className = 'state sent'; out.textContent = 'Saved, and it can read the comp
 var a = el('a', null, 'Go to the home page to send a message.'); a.href = root.getAttribute('data-home') || './'; out.appendChild(a);
 }).catch(function (e) { out.className = 'state failed'; out.textContent = 'Saved, but it does not work yet: ' + e.message + '. Forget it and try again.'; });
 };
-forget.onclick = function () { setToken('', false); show(); };
+forget.onclick = function () {
+[sessionStorage, localStorage].forEach(function (s) { for (var i = s.length; i--;) { var k = s.key(i); if (/^company/.test(k || '')) s.removeItem(k); } });
+show();
+};
 show();
 }
 window.CompanySite = { API: API, KEY: KEY, NAME: NAME, ALLOW: ALLOW, NO_TOKEN: NO_TOKEN, el: el, byId: byId, on: on, later: later, stop: stop,
-getToken: getToken, setToken: setToken, tokenStore: tokenStore, hdrs: hdrs, gh: gh, said: said, ago: ago, checkAuth: checkAuth,
+getToken: getToken, setToken: setToken, tokenStore: tokenStore, hdrs: hdrs, gh: gh, said: said, ago: ago, checkAuth: checkAuth, parseAllow: parseAllow,
 onDrawn: onDrawn, onReject: onReject, rejected: function () { return rejected; },
 status: function () { return lastSt; }, onStatus: onStatus };
 var n = byId('now-panel'); if (n) nowPanel(n);

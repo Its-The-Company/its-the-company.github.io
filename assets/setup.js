@@ -13,7 +13,7 @@ var KEYS = 'https://github.com/settings/personal-access-tokens', APPROVE = 'http
 var STEP = 'company.step', at = /^#name/.test(location.hash) ? 6 : +(sessionStorage.getItem(STEP) || 1), login = '';
 var wiz = el('div', 'cv-wiz'), first = byId('first-run'), tr = byId('token-root');
 var host = first || tr; host.parentNode.insertBefore(wiz, host);
-if (first) first.hidden = true; if (tr) tr.hidden = true;
+if (first) first.hidden = true;
 function link(p, text, href, cls) { var a = mk(p, 'a', cls || 'btn primary', text); a.href = href; a.target = '_blank'; a.rel = 'noopener'; return a; }
 function btn(p, text, fn, cls) { var b = mk(p, 'button', cls || 'btn', text); b.type = 'button'; b.onclick = fn; return b; }
 function para(p, parts) {
@@ -24,6 +24,7 @@ return e;
 function go(n) { at = n; sessionStorage.setItem(STEP, String(n)); draw(); scrollTo(0, 0); }
 function draw() {
 wiz.textContent = '';
+if (tr) tr.hidden = at < 6;
 var bar = mk(wiz, 'ol', 'cv-steps'), k; bar.setAttribute('aria-hidden', 'true');
 for (k = 1; k <= 6; k++) mk(bar, 'li', k < at ? 'cv-done' : k === at ? 'cv-here' : '');
 var s = mk(wiz, 'section', 'cv-step');
@@ -84,6 +85,7 @@ if (text) r[1].textContent = text; if (fix) mk(r[0], 'span', 'cv-fix', fix);
 var again = btn(act, 'Check again', draw), next = btn(act, 'Next', () => go(6), 'btn primary');
 next.hidden = true;
 gh('/user').then((r) => {
+if (r.status === 401) S.setToken('');
 if (!r.ok) throw [0, 'GitHub does not accept this key. Paste it again (step 4) or make a new one (step 2).'];
 return r.json();
 }).then((u) => {
@@ -99,7 +101,7 @@ throw [2, /pending/i.test(j.message) ? 'Waiting for an org owner to approve the 
 return gh('/repos/' + repo + '/contents/investors/allowlist.md').then((r) => { if (!r.ok) throw [2, S.said(r) + '.']; return r.json(); });
 }).then((f) => {
 mark(2, true);
-var names = atob(String(f.content || '').replace(/\n/g, '')).replace(/<!--[\s\S]*?-->/g, '').split('\n').map((l) => l.replace(/^\s*([*-]\s+)?@?/, '').trim().toLowerCase());
+var names = S.parseAllow(atob(String(f.content || '').replace(/\n/g, '')));
 if (names.indexOf(login.toLowerCase()) < 0) throw [1, 'This key belongs to @' + login + ', which is not on the Investors’ list.'];
 mark(1, true, '@' + login + ' is on the Investors’ list.');
 return gh('/repos/' + repo + '/actions/variables/COMPANY_STATUS');

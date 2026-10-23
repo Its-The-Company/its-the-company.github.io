@@ -1,36 +1,37 @@
 {
  "schema": 1,
- "at": "2026-10-23T15:09:44.429484+00:00",
+ "at": "2026-10-23T15:26:52.981226+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T10:56:34-04:00"
+  "started": "2026-10-23T11:09:58-04:00"
  },
- "workers": [],
- "recent": [
+ "workers": [
   {
    "name": "idris",
-   "task": "[test] Idris chat v3 render checks",
+   "task": "[build] Chat v3 fixes V3-1..V3-5",
    "model": "opus",
-   "started": "2026-10-23T14:57:13.381Z",
-   "seconds": null,
-   "finished": "2026-10-23T15:09:29.975000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] Wrenna Boardread demand count",
-   "model": "opus",
-   "started": "2026-10-23T14:57:18.646Z",
-   "seconds": null,
-   "finished": "2026-10-23T15:04:53.032000+00:00"
-  },
+   "started": "2026-10-23T15:10:23.029Z",
+   "seconds": 989,
+   "finished": null
+  }
+ ],
+ "recent": [
   {
    "name": "odalys",
-   "task": "[review] Odalys C13 review chat v3",
+   "task": "[build] Investor queue D2 conditions",
    "model": "opus",
-   "started": "2026-10-23T14:57:15.980Z",
+   "started": "2026-10-23T15:10:25.564Z",
    "seconds": null,
-   "finished": "2026-10-23T15:03:46.790000+00:00"
+   "finished": "2026-10-23T15:16:51.216000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[review] Second grader for hunt lanes",
+   "model": "opus",
+   "started": "2026-10-23T15:10:27.029Z",
+   "seconds": null,
+   "finished": "2026-10-23T15:15:59.966000+00:00"
   }
  ],
  "queue": {
@@ -52,8 +53,8 @@
     "text": "Maren: designer probation: (a) second pass on site v2 inside the approved system (ops/plans/site-v2.md section 9:..."
    },
    {
-    "kind": "build",
-    "text": "Odalys: additions back ends now, behind tests, no page wiring (ops/plans/site-v2-additions.md 8 'What runs now'): B..."
+    "kind": "research",
+    "text": "Unrelated side project (LOWEST priority; start only when no company task is runnable;: Collatz vs. the tools in..."
    }
   ],
   "blocked": [
@@ -78,30 +79,30 @@
     "text": "(waiting on Idris: Seatsolve Seating package: model, CSV import, cost function, seeded annealing, broken-rules..."
    }
   ],
-  "runnable_count": 26,
+  "runnable_count": 23,
   "blocked_count": 9
  },
  "meter": {
   "five_hour": {
-   "pct": 20.0,
-   "resets_at": "2026-10-23T18:49:59.856051+00:00",
+   "pct": 23.0,
+   "resets_at": "2026-10-23T18:49:59.893183+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 80.0,
+   "left": 77.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 16.0,
-   "resets_at": "2026-10-25T06:59:59.856071+00:00",
+   "pct": 17.0,
+   "resets_at": "2026-10-25T06:59:59.893198+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 84.0,
+   "left": 83.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-10-25T06:59:59.856240+00:00",
+   "resets_at": "2026-10-25T06:59:59.893311+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T10:56:34.507756-04:00"
+  "read_at": "2026-10-23T11:09:58.482964-04:00"
  },
  "ui": {
   "week_pct": 0.024,
@@ -116,17 +117,17 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T11:11:34-04:00",
+ "next_tick": "2026-10-23T11:24:58-04:00",
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris: implement chat v3 per Maren's spec (tabs per thread, scroll-up history, collapsible composer, inline replies...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[build] Chat v3 fixes V3-1..V3-5",
+   "model": "opus",
+   "since": "2026-10-23T15:10:23.029Z",
    "next": [
-    "Idris, P2 (Odalys review V3-1): connect.html#name (the...",
-    "Idris, P2 (Odalys review V3-2): Forget (setToken(\"\"))..."
+    "Idris: implement chat v3 per Maren's spec (tabs per...",
+    "Idris, P2 (Odalys review V3-1): connect.html#name (the..."
    ]
   },
   {
@@ -136,7 +137,6 @@
    "model": null,
    "since": null,
    "next": [
-    "Odalys: additions back ends now, behind tests, no page...",
     "Odalys probation: write tools/ops_metrics.py (reads..."
    ]
   },
@@ -157,9 +157,7 @@
    "task": "Maren: designer probation: (a) second pass on site v2 inside the approved system (ops/plans/site-v2.md section 9:...",
    "model": null,
    "since": null,
-   "next": [
-    "Maren: visual review of Idris's chat v3 commits against..."
-   ]
+   "next": []
   },
   {
    "name": "Ines",
@@ -172,5 +170,16 @@
    ]
   }
  ],
- "inbox": []
+ "inbox": [
+  {
+   "id": "i34",
+   "state": "waiting",
+   "position": 1,
+   "eta": "2026-10-23T11:24:58-04:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   }
+  }
+ ]
 }

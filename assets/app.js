@@ -112,7 +112,9 @@ if (!body) { box.textContent = ''; add(box, 'h3', null, 'Now'); head = add(box, 
 head.textContent = headLine;
 var carded = {};
 var cards = box.querySelectorAll ? Array.prototype.slice.call(box.querySelectorAll('[data-worker]')) : [];
+var ls = !stale && (st.lanes || []).length ? st.lanes : null;
 cards.forEach(function (c) {
+c.hidden = !!ls;
 var slug = c.getAttribute('data-worker'), w = null, k;
 for (k = 0; k < ws.length; k++) if ((ws[k].name || '').toLowerCase() === slug) w = ws[k];
 var t = c.querySelector('.t'), d = c.querySelector('.dot');
@@ -122,7 +124,8 @@ if (t) t.textContent = w ? taskLine(w) : stale ? 'no task then' : 'idle';
 if (w) carded[slug] = true;
 });
 body.textContent = '';
-var rest = ws.filter(function (w) { return !carded[(w.name || '').toLowerCase()]; });
+if (ls) lanes(body, ls, cards);
+var rest = ls ? [] : ws.filter(function (w) { return !carded[(w.name || '').toLowerCase()]; });
 if (rest.length) {
 add(body, 'p', 'now-sub', 'Working now');
 body.appendChild(list(rest, function (w) { return cap(w.name) + ': ' + taskLine(w); }));
@@ -140,6 +143,29 @@ add(body, 'p', 'muted', source + (st.at ? ' · updated ' + ago(st.at) + ' ago' :
 renderStrip(st);
 if (!toggled) showNow(box, !!s.active && !stale);
 lastSt = st; onStatus.forEach(function (f) { f(st); });
+}
+function lanes(body, ls, cards) {
+var pic = {}, idle = [], g = add(body, 'div', 'cards now-cards');
+cards.forEach(function (c) { var i = c.querySelector('img'); if (i) pic[c.getAttribute('data-worker')] = i.getAttribute('src'); });
+function img(box, k) { if (pic[k]) { var i = add(box, 'img'); i.src = pic[k]; i.alt = ''; } }
+ls.forEach(function (l) {
+var k = String(l.name).toLowerCase(), s = l.state, r = s === 'running', d, w, t;
+if (s === 'idle') return idle.push(l);
+d = add(g, 'div', 'card lane ' + (r ? 'live' : s === 'blocked' ? s : 'idle')); img(d, k);
+w = add(d, 'div', 'who'); add(w, 'b', null, cap(l.name) + ' ');
+add(w, 'span', 'chip ' + (r ? 'run' : s === 'next' ? 'q' : 'wait'), r ? 'Running' : s === 'next' ? 'Next'
+: (l.waiting_on || []).length ? 'Waiting on you: #' + l.waiting_on.join(', #') : 'Blocked');
+if (l.model) add(w, 'span', 'chip other', l.model);
+if (r && l.since) add(w, 'span', null, ' ' + ago(l.since));
+t = add(d, 'p', 'task', l.task || '');
+t.onclick = function () { t.style.whiteSpace = t.style.whiteSpace ? '' : 'normal'; };
+w = add(d, 'div', 'who');
+(l.next || []).forEach(function (x) { add(w, 'span', 'chip nx', 'Next: ' + x); });
+});
+if (!idle.length) return;
+var p = add(body, 'p', 'meta idle');
+idle.forEach(function (l) { img(p, String(l.name).toLowerCase()); });
+add(p, 'span', null, idle.map(function (l) { return cap(l.name); }).join(', ') + ': idle');
 }
 function nowPanel(box) {
 var repo = box.getAttribute('data-repo'), etag = null, last = null, busy = false;

@@ -102,6 +102,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-10-23 ~12:30: additions wiring B done (5c8537d): CompanySite.tiles draws usage tiles for chat.js; strip gains s-wk-r. A (bell) left as UNCOMMITTED WIP: app.js bell/feed/notify trial, chat.js S.feed hook, notify_trial flag, composer_test 'bell' mode with no ok() checks yet. Next: write bell assertions after line 355 of composer_test, run tests/run.sh, commit. app.js has ~1.1 KB headroom left.
 
 - 2026-10-23 ~13:30: additions A done. Bell code had been swept into Operator 4b2784a; my tests + fixes e998d9f (composer 164/0), board 5810e1c. C lanes drafted and stashed ('odalys C lanes draft', now_panel 38/0, app.js 9 B under cap). Lesson: site_build_unit forbids backticks anywhere in shipped JS, even inside a regex; use \x60. Next: pop stash, run.sh, commit C.
+
+- 2026-10-23 ~12:45: additions C committed a0e0fc7 (stash popped, run.sh green, app.js 6 B under cap). Day 2 to 12:36 in baseline.md: $1.63 per finished task (n=127) vs $1.37 Day 1; Opus 87%. ops_metrics takes dates only (no times); Day 3 does not exist until midnight. Change chosen: tools/landed.py (c45a088), measure Day 8 by counting late-ticked lines. Open: close Day 2 after midnight, Day 3 by Day 4; page wiring D/D2 (queue.js), E.
 {% endraw %}
 
 

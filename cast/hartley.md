@@ -14,7 +14,7 @@ Former LLM platform engineer who cut inference spend at a mid-sized startup by r
 
 | | |
 | --- | --- |
-| Portrait | hypotrochoid curve, seeded by the name |
+| Portrait | rose curve, seeded by the name |
 | Temperament | steady: rises and sinks on a straight line, like treading water |
 | Hiring round | [Process and operations engineer, Day 1]({{ '/story/hiring/2026-10-22-process-engineer/' | relative_url }}) |
 

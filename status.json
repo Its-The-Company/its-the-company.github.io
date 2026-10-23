@@ -1,45 +1,60 @@
 {
  "schema": 1,
- "at": "2026-10-23T05:20:22.095195+00:00",
+ "at": "2026-10-23T05:44:52.203480+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T01:03:37-04:00"
+  "started": "2026-10-23T01:20:38-04:00"
  },
- "workers": [
-  {
-   "name": "wrenna",
-   "task": "[test] Site v2 baseline measurement",
-   "model": "opus",
-   "started": "2026-10-23T05:04:41.805Z",
-   "seconds": 940,
-   "finished": null
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] Split site_build.py",
-   "model": "opus",
-   "started": "2026-10-23T05:05:09.426Z",
-   "seconds": 912,
-   "finished": null
-  },
-  {
-   "name": "idris",
-   "task": "[design] Site v2 visual system",
-   "model": "fable",
-   "started": "2026-10-23T05:10:20.010Z",
-   "seconds": 602,
-   "finished": null
-  }
- ],
+ "workers": [],
  "recent": [
   {
    "name": "ines",
-   "task": "[plan] Site v2 spec",
-   "model": "fable",
-   "started": "2026-10-23T05:04:39.558Z",
+   "task": "[hiring] Designer decision memo and hire",
+   "model": "opus",
+   "started": "2026-10-23T05:32:31.385Z",
    "seconds": null,
-   "finished": "2026-10-23T05:10:10.588000+00:00"
+   "finished": "2026-10-23T05:34:37.198000+00:00"
+  },
+  {
+   "name": "general-purpose",
+   "task": "[hiring] Designer round slate and interviews (fallback)",
+   "model": "haiku",
+   "started": "2026-10-23T05:30:22.283Z",
+   "seconds": null,
+   "finished": "2026-10-23T05:32:26.011000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] Pick site v2 home option",
+   "model": "opus",
+   "started": "2026-10-23T05:27:59.709Z",
+   "seconds": null,
+   "finished": "2026-10-23T05:30:12.928000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[design] Site v2 slice 3 home options",
+   "model": "opus",
+   "started": "2026-10-23T05:21:21.131Z",
+   "seconds": null,
+   "finished": "2026-10-23T05:27:55.896000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] Site v2 slice 2 builder split",
+   "model": "opus",
+   "started": "2026-10-23T05:21:19.535Z",
+   "seconds": null,
+   "finished": "2026-10-23T05:26:14.519000+00:00"
+  },
+  {
+   "name": "wrenna",
+   "task": "[test] Site v2 slice 1 measurements",
+   "model": "sonnet",
+   "started": "2026-10-23T05:21:22.283Z",
+   "seconds": null,
+   "finished": "2026-10-23T05:25:45.967000+00:00"
   }
  ],
  "queue": {
@@ -54,11 +69,11 @@
    },
    {
     "kind": "test",
-    "text": "Wrenna: site v2 slices 1 and 8 (ops/plans/site-v2.md section 5, 6.2). Slice 1 now: measure today's live site into..."
+    "text": "Wrenna: site v2 slice 1 DONE 2026-10-23 (954e2b8, measure.md; not measured: throttled 4G, home with token, composer..."
    },
    {
-    "kind": "hiring",
-    "text": "Ines: open the product and visual designer round (ops/plans/site-v2.md section 8): write..."
+    "kind": "design",
+    "text": "Maren: designer probation: (a) second pass on site v2 inside the approved system (ops/plans/site-v2.md section 9:..."
    },
    {
     "kind": "plan",
@@ -92,18 +107,18 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
-   "resets_at": "2026-10-23T08:50:00.246857+00:00"
+   "pct": 10.0,
+   "resets_at": "2026-10-23T08:50:00.067827+00:00"
   },
   "weekly": {
-   "pct": 7.0,
-   "resets_at": "2026-10-25T07:00:00.246897+00:00"
+   "pct": 8.0,
+   "resets_at": "2026-10-25T07:00:00.067845+00:00"
   },
   "fable": {
-   "pct": 4.0,
-   "resets_at": "2026-10-25T07:00:00.247039+00:00"
+   "pct": 5.0,
+   "resets_at": "2026-10-25T07:00:00.067971+00:00"
   },
-  "read_at": "2026-10-23T01:01:39.818560-04:00"
+  "read_at": "2026-10-23T01:20:37.626422-04:00"
  },
- "next_tick": "2026-10-23T01:18:37-04:00"
+ "next_tick": "2026-10-23T01:35:37-04:00"
 }

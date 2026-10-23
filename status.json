@@ -1,40 +1,40 @@
 {
  "schema": 1,
- "at": "2026-10-23T11:21:02.868317+00:00",
+ "at": "2026-10-23T13:51:14.355355+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T06:49:30-04:00"
+  "started": "2026-10-23T07:21:18-04:00"
  },
  "workers": [],
  "recent": [
   {
    "name": "idris",
-   "task": "[design] Site v2 slice 6 company page",
+   "task": "[build] Chat v3 implementation",
    "model": "opus",
-   "started": "2026-10-23T10:49:48.679Z",
+   "started": "2026-10-23T11:22:04.071Z",
    "seconds": null,
-   "finished": "2026-10-23T11:08:20.246000+00:00"
+   "finished": "2026-10-23T11:32:09.729000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[build] Site QA bug fixes",
+   "name": "maren",
+   "task": "[design] Chat v3 spec and mockups",
    "model": "opus",
-   "started": "2026-10-23T10:49:46.331Z",
+   "started": "2026-10-23T11:22:01.608Z",
    "seconds": null,
-   "finished": "2026-10-23T11:02:21.135000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[test] Re-QA live site",
-   "model": "opus",
-   "started": "2026-10-23T10:49:50.302Z",
-   "seconds": null,
-   "finished": "2026-10-23T10:52:36.216000+00:00"
+   "finished": "2026-10-23T11:32:09.728000+00:00"
   }
  ],
  "queue": {
   "runnable": [
+   {
+    "kind": "design",
+    "text": "Maren: spec + mockups for chat v3 in ops/plans/site-chat-v3.md: Claude-Code-like thread view (history scrolls up,..."
+   },
+   {
+    "kind": "build",
+    "text": "Idris: implement chat v3 per Maren's spec (tabs per thread, scroll-up history, collapsible composer, inline replies..."
+   },
    {
     "kind": "tools",
     "text": "Odalys: site v2 slices 2 and 4 (ops/plans/site-v2.md 6.1, 6.2). Slice 2 first and alone: split tools/site_build.py..."
@@ -46,14 +46,6 @@
    {
     "kind": "design",
     "text": "Maren: designer probation: (a) second pass on site v2 inside the approved system (ops/plans/site-v2.md section 9:..."
-   },
-   {
-    "kind": "build",
-    "text": "Odalys: additions back ends now, behind tests, no page wiring (ops/plans/site-v2-additions.md 8 'What runs now'): B..."
-   },
-   {
-    "kind": "research",
-    "text": "Unrelated side project (LOWEST priority; start only when no company task is runnable;: Collatz vs. the tools in..."
    }
   ],
   "blocked": [
@@ -78,30 +70,30 @@
     "text": "(waiting on Idris: Seatsolve Seating package: model, CSV import, cost function, seeded annealing, broken-rules..."
    }
   ],
-  "runnable_count": 16,
+  "runnable_count": 18,
   "blocked_count": 9
  },
  "meter": {
   "five_hour": {
-   "pct": 13.0,
-   "resets_at": "2026-10-23T13:49:59.881600+00:00",
+   "pct": 15.0,
+   "resets_at": "2026-10-23T13:49:59.639330+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 87.0,
+   "left": 85.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 14.0,
-   "resets_at": "2026-10-25T06:59:59.881616+00:00",
+   "resets_at": "2026-10-25T06:59:59.639349+00:00",
    "used_words": "of your weekly allowance used",
    "left": 86.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 5.0,
-   "resets_at": "2026-10-25T06:59:59.881800+00:00",
+   "resets_at": "2026-10-25T06:59:59.639496+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T06:49:30.451101-04:00"
+  "read_at": "2026-10-23T07:21:18.402335-04:00"
  },
  "ui": {
   "week_pct": 0.024,
@@ -116,7 +108,7 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T07:04:30-04:00",
+ "next_tick": "2026-10-23T07:36:18-04:00",
  "lanes": [
   {
    "name": "Odalys",
@@ -171,10 +163,20 @@
  ],
  "inbox": [
   {
-   "id": "c6363218565",
+   "id": "c6364126560",
    "state": "waiting",
    "position": 1,
-   "eta": "2026-10-23T07:04:30-04:00",
+   "eta": "2026-10-23T07:36:18-04:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   }
+  },
+  {
+   "id": "c6365049333",
+   "state": "waiting",
+   "position": 2,
+   "eta": "2026-10-23T07:36:18-04:00",
    "tasks": {
     "open": 0,
     "done": 0

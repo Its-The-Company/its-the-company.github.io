@@ -6,11 +6,13 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (174 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (176 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 2 <small>Fri Oct 23 · 73 events</small>
+## Day 2 <small>Fri Oct 23 · 75 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">08:38</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #33</td></tr>
+<tr><td class="t num">07:45</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #33</td></tr>
 <tr><td class="t num">07:12</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work session Day 2: site QA fixes, company page, live QA; tests green</td></tr>
 <tr><td class="t num">07:12</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a></td><td class="what"><span class="tag t-build">build</span> Now panel no longer reads an end-of-session status copy as live; usage % carry their denominators on home and the usage page (6d20abe)</td></tr>
 <tr><td class="t num">07:08</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-finding">finding</span> Site v2 line 11 closed; main HEAD red on inbox_test (Operator-swept test), two more reds from uncommitted pages.py/app.js edits</td></tr>
@@ -88,5 +90,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-22.html' | relative_url }}">Older →<b>Day 1</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 73</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 75</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
 

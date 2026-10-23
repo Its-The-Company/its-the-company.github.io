@@ -1,36 +1,36 @@
 {
  "schema": 1,
- "at": "2026-10-23T10:49:15.573552+00:00",
+ "at": "2026-10-23T11:21:02.868317+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T06:39:07-04:00"
+  "started": "2026-10-23T06:49:30-04:00"
  },
  "workers": [],
  "recent": [
   {
-   "name": "maren",
-   "task": "[design] Maren site pass finish",
-   "model": "opus",
-   "started": "2026-10-23T10:39:44.181Z",
-   "seconds": null,
-   "finished": "2026-10-23T10:48:54.625000+00:00"
-  },
-  {
    "name": "idris",
-   "task": "[review] Idris paywall AX5 and additions review",
+   "task": "[design] Site v2 slice 6 company page",
    "model": "opus",
-   "started": "2026-10-23T10:39:42.279Z",
+   "started": "2026-10-23T10:49:48.679Z",
    "seconds": null,
-   "finished": "2026-10-23T10:45:11.710000+00:00"
+   "finished": "2026-10-23T11:08:20.246000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[build] Odalys site queue D2 and bugs",
+   "task": "[build] Site QA bug fixes",
    "model": "opus",
-   "started": "2026-10-23T10:39:40.541Z",
+   "started": "2026-10-23T10:49:46.331Z",
    "seconds": null,
-   "finished": "2026-10-23T10:43:56.135000+00:00"
+   "finished": "2026-10-23T11:02:21.135000+00:00"
+  },
+  {
+   "name": "wrenna",
+   "task": "[test] Re-QA live site",
+   "model": "opus",
+   "started": "2026-10-23T10:49:50.302Z",
+   "seconds": null,
+   "finished": "2026-10-23T10:52:36.216000+00:00"
   }
  ],
  "queue": {
@@ -38,10 +38,6 @@
    {
     "kind": "tools",
     "text": "Odalys: site v2 slices 2 and 4 (ops/plans/site-v2.md 6.1, 6.2). Slice 2 first and alone: split tools/site_build.py..."
-   },
-   {
-    "kind": "design",
-    "text": "Idris: site v2 slices 3, 5, 6, 7 (ops/plans/site-v2.md section 4, 6.2). Slice 3 now, before the split lands and..."
    },
    {
     "kind": "test",
@@ -54,6 +50,10 @@
    {
     "kind": "build",
     "text": "Odalys: additions back ends now, behind tests, no page wiring (ops/plans/site-v2-additions.md 8 'What runs now'): B..."
+   },
+   {
+    "kind": "research",
+    "text": "Unrelated side project (LOWEST priority; start only when no company task is runnable;: Collatz vs. the tools in..."
    }
   ],
   "blocked": [
@@ -78,30 +78,30 @@
     "text": "(waiting on Idris: Seatsolve Seating package: model, CSV import, cost function, seeded annealing, broken-rules..."
    }
   ],
-  "runnable_count": 22,
+  "runnable_count": 16,
   "blocked_count": 9
  },
  "meter": {
   "five_hour": {
-   "pct": 11.0,
-   "resets_at": "2026-10-23T13:50:00.445505+00:00",
+   "pct": 13.0,
+   "resets_at": "2026-10-23T13:49:59.881600+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 89.0,
+   "left": 87.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 13.0,
-   "resets_at": "2026-10-25T07:00:00.445523+00:00",
+   "pct": 14.0,
+   "resets_at": "2026-10-25T06:59:59.881616+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 87.0,
+   "left": 86.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 5.0,
-   "resets_at": "2026-10-25T07:00:00.445679+00:00",
+   "resets_at": "2026-10-25T06:59:59.881800+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T06:30:43.023756-04:00"
+  "read_at": "2026-10-23T06:49:30.451101-04:00"
  },
  "ui": {
   "week_pct": 0.024,
@@ -116,7 +116,7 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T06:54:07-04:00",
+ "next_tick": "2026-10-23T07:04:30-04:00",
  "lanes": [
   {
    "name": "Odalys",
@@ -127,17 +127,6 @@
    "next": [
     "Odalys: additions back ends now, behind tests, no page...",
     "Odalys, P3 (Idris review B-1): governor.ui_line skips..."
-   ]
-  },
-  {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris: site v2 slices 3, 5, 6, 7 (ops/plans/site-v2.md section 4, 6.2). Slice 3 now, before the split lands and...",
-   "model": null,
-   "since": null,
-   "next": [
-    "Idris: independent review of Odalys's site JavaScript...",
-    "settled 2026-10-23 01:10: chat_composer is true in..."
    ]
   },
   {
@@ -168,7 +157,28 @@
    "next": [
     "Ines + Maren, P2 (Idris, paywall check): option B with..."
    ]
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris: independent review of Odalys's site JavaScript and tools/site_build.py changes (C13 hand-off), then build...",
+   "model": null,
+   "since": null,
+   "next": [
+    "settled 2026-10-23 01:10: chat_composer is true in..."
+   ]
   }
  ],
- "inbox": []
+ "inbox": [
+  {
+   "id": "c6363218565",
+   "state": "waiting",
+   "position": 1,
+   "eta": "2026-10-23T07:04:30-04:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   }
+  }
+ ]
 }

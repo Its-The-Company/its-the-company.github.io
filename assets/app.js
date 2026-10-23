@@ -17,7 +17,7 @@ if (t) (remember ? localStorage : sessionStorage).setItem(KEY, t);
 }
 var onDrawn = [];
 var rejected = false, onReject = [];
-var NO_TOKEN = 'GitHub did not accept the token (401), so the threads cannot be read and nothing can be sent. Change it on the connect page.';
+var NO_TOKEN = 'GitHub did not accept the token (401): nothing can be read or sent. Change it on the connect page.';
 function checkAuth(r) {
 if (r && r.status === 401 && !rejected && getToken()) { rejected = true; onReject.forEach(function (f) { f(); }); }
 return r;
@@ -39,7 +39,7 @@ function clock(iso) { return iso ? new Date(iso).toLocaleTimeString([], { hour: 
 function pctText(m) {
 if (!m || m.pct == null) return 'not read yet';
 var r = clock(m.resets_at);
-return Math.round(m.pct) + '% used' + (r ? ', resets ' + r : '');
+return Math.round(m.pct) + '% ' + (m.used_words || 'used') + (r ? ', resets ' + r : '');
 }
 function setText(id, text) { var e = byId(id); if (e && text != null) e.textContent = text; }
 function list(items, fmt) { var ul = el('ul'); items.forEach(function (x) { ul.appendChild(el('li', null, fmt(x))); }); return ul; }
@@ -60,9 +60,11 @@ if (q.runnable_count != null) setText('s-ready', String(q.runnable_count));
 if (q.blocked_count != null) setText('s-blocked', String(q.blocked_count));
 }
 function taskLine(w) { return (w.task || '') + (w.model ? ' [' + w.model + ']' : '') + (w.started ? ', for ' + ago(w.started) : ''); }
-function renderNow(box, st, source) {
+function renderNow(box, st, source, isPublic) {
 var s = st.session || {}, ws = st.workers || [];
-var headLine = s.active ? 'A ' + (s.kind || 'work') + ' session is running' + (s.started ? ' (started ' + ago(s.started) + ' ago).' : '.') : 'No session is running; the next one starts at the next 15-minute tick.';
+var stale = isPublic && Date.now() - Date.parse(st.at) > 12e4;
+var headLine = stale ? 'Status from the site build ' + ago(st.at) + ' ago.'
+: s.active ? 'A ' + (s.kind || 'work') + ' session is running' + (s.started ? ' (started ' + ago(s.started) + ' ago).' : '.') : 'No session is running; one starts each tick.';
 var head = box.querySelector ? box.querySelector('.now-head') : null;
 var body = box.querySelector ? box.querySelector('.now-body') : null;
 if (!body) { box.textContent = ''; box.appendChild(el('h3', null, 'Now')); head = box.appendChild(el('p', 'now-head')); body = box.appendChild(el('div', 'now-body')); }
@@ -75,7 +77,7 @@ for (k = 0; k < ws.length; k++) if ((ws[k].name || '').toLowerCase() === slug) w
 var t = c.querySelector('.t'), d = c.querySelector('.dot');
 c.className = 'card ' + (w ? 'live' : 'idle');
 if (d) d.className = 'dot ' + (w ? 'live' : 'idle');
-if (t) t.textContent = w ? taskLine(w) : 'idle';
+if (t) t.textContent = w ? taskLine(w) : stale ? 'no task then' : 'idle';
 if (w) carded[slug] = true;
 });
 body.textContent = '';
@@ -83,7 +85,7 @@ var rest = ws.filter(function (w) { return !carded[(w.name || '').toLowerCase()]
 if (rest.length) {
 body.appendChild(el('p', 'now-sub', 'Working now'));
 body.appendChild(list(rest, function (w) { return cap(w.name) + ': ' + taskLine(w); }));
-} else if (s.active && !ws.length) body.appendChild(el('p', 'muted', 'No worker call is running at this moment.'));
+} else if (s.active && !ws.length && !stale) body.appendChild(el('p', 'muted', 'No worker call is running.'));
 var rec = (st.recent || []).slice(0, 3);
 if (rec.length) {
 body.appendChild(el('p', 'now-sub', 'Just finished'));
@@ -93,10 +95,10 @@ var q = st.queue || {};
 body.appendChild(el('p', 'now-sub', 'Queue: ' + (q.runnable_count || 0) + ' tasks ready, ' + (q.blocked_count || 0) + ' blocked'));
 if ((q.runnable || []).length) body.appendChild(list(q.runnable.slice(0, 5), function (t) { return '[' + t.kind + '] ' + t.text; }));
 var m = st.meter || {};
-body.appendChild(el('p', null, '5-hour limit: ' + pctText(m.five_hour) + '. Week: ' + pctText(m.weekly) + '.'));
+body.appendChild(el('p', null, '5-hour: ' + pctText(m.five_hour) + '. Week: ' + pctText(m.weekly) + '.'));
 body.appendChild(el('p', 'muted', source + (st.at ? ' · updated ' + ago(st.at) + ' ago' : '')));
 renderStrip(st);
-if (!toggled) showNow(box, !!s.active);
+if (!toggled) showNow(box, !!s.active && !stale);
 }
 function nowPanel(box) {
 var repo = box.getAttribute('data-repo'), etag = null, last = null, busy = false;
@@ -104,7 +106,7 @@ var b = document.querySelector && document.querySelector('.now-toggle');
 if (b) b.onclick = function () { toggled = true; showNow(box, box.hidden); };
 function pub(first) {
 return fetch(box.getAttribute('data-status'), { cache: 'no-store' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-.then(function (st) { if (first && last) return; renderNow(box, st, 'public copy, refreshed with each site build (every 15 minutes or so)'); }).catch(function () {});
+.then(function (st) { if (first && last) return; renderNow(box, st, 'public copy, from the last site build', true); }).catch(function () {});
 }
 function live(force) {
 if (busy || (document.hidden && force !== true)) return; busy = true;
@@ -140,7 +142,7 @@ save.onclick = function () {
 var t = input.value.trim(); if (!t) { out.textContent = 'Paste the token first.'; return; }
 setToken(t, remember.checked); input.value = ''; out.textContent = 'Checking the token with GitHub...';
 gh('/repos/' + repo).then(function (r) {
-if (!r.ok) throw new Error(said(r) + (r.status === 401 ? ' (the token was not accepted)' : r.status === 404 ? ' (the token cannot see the company repository: check steps 3 and 5)' : ''));
+if (!r.ok) throw new Error(said(r) + (r.status === 401 ? ' (the token was not accepted)' : r.status === 404 ? ' (the token cannot see the repository: steps 3 and 5)' : ''));
 out.className = 'state sent'; out.textContent = 'Saved, and it can read the company repository. ';
 var a = el('a', null, 'Go to the home page to send a message.'); a.href = root.getAttribute('data-home') || './'; out.appendChild(a);
 }).catch(function (e) { out.className = 'state failed'; out.textContent = 'Saved, but it does not work yet: ' + e.message + '. Forget it and try again.'; });
@@ -203,7 +205,7 @@ var foot = el('div', 'foot');
 [ul2, nameIn, send].forEach(function (x) { foot.appendChild(x); });
 [sel, topicIn, msgIn, foot, out].forEach(function (x) { comp.appendChild(x); });
 if (composerOn) root.appendChild(comp);
-else root.appendChild(el('p', 'muted', 'Sending from this page is switched off; reply on GitHub for now. The threads below are read with your token.'));
+else root.appendChild(el('p', 'muted', 'Sending is switched off; reply on GitHub. Threads are read with your token.'));
 root.appendChild(status); root.appendChild(document.createTextNode(' ')); root.appendChild(tokenLink);
 var clearTimer = 0;
 function state(kind, text, ms) {
@@ -257,7 +259,7 @@ return urgent ? post('/repos/' + repo + '/issues/' + target + '/labels', { label
 });
 p.then(function (r) {
 msgIn.value = ''; urg.checked = false; topicIn.value = '';
-state('sent', 'Sent' + (r.number ? ' as #' + r.number : '') + '. A receipt follows within a tick; the reply appears in the thread.' + warn, warn ? 15000 : 8000);
+state('sent', 'Sent' + (r.number ? ' as #' + r.number : '') + '. A receipt follows within a tick.' + warn, warn ? 15000 : 8000);
 etags = {}; load(r.number && target === 'new' ? String(r.number) : null);
 }).catch(function (e) { state('failed', 'Not sent: ' + e.message + '. Your text is kept; press Send to retry.', 30000); })
 .then(function () { sending = false; send.disabled = rejected; });

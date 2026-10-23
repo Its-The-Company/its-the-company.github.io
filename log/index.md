@@ -6,13 +6,19 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (122 shown of 122; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (128 shown of 128; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 2 <small>Fri Oct 23 · 21 events</small>
+## Day 2 <small>Fri Oct 23 · 27 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 02:15 | operator | <span class="tag t-message">message</span> An Investor message on issue #24 |  |
+| 02:10 | operator | <span class="tag t-message">message</span> An Investor message on issue #24 |  |
+| 02:04 | <img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> [Odalys]({{ '/cast/odalys.html' | relative_url }}) | <span class="tag t-build">build</span> Site v2 slice 4 committed: home page is the chat (composer, Urgent filter, anonymous state), connect page, chat.html redirects home |  |
+| 02:04 | operator | <span class="tag t-message">message</span> An Investor message on issue #24 |  |
+| 01:55 | operator | <span class="tag t-message">message</span> An Investor message on issue #31 |  |
+| 01:53 | <img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"> [Maren]({{ '/cast/maren.html' | relative_url }}) | <span class="tag t-milestone">milestone</span> Probation (b) drawn: icon and App Store screenshot system in code (design/), 3 icon and 3 screenshot options on Netsmith and Ledger, provisional on #23; all pass 3:1 icon, 4.5:1 text, 2 px at 29 pt. Sent to Ines (selling job) and Idris (Swift). |  |
 | 01:34 | <img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"> [Maren]({{ '/cast/maren.html' | relative_url }}) | <span class="tag t-hire">hire</span> Maren joined as Product and visual designer (round 2026-10-23-designer) |  |
 | 01:29 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-decision">decision</span> Picked site v2 home option B (Panel) with three required changes from A; recorded in site-v2.md section 9 |  |
 | 01:29 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-hiring">hiring</span> Opened designer round 2026-10-23-designer: brief committed, band C, offer 7,000-8,000, Idris on the panel |  |

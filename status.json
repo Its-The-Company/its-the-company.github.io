@@ -1,60 +1,52 @@
 {
  "schema": 1,
- "at": "2026-10-23T05:44:52.203480+00:00",
+ "at": "2026-10-23T06:16:04.227640+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T01:20:38-04:00"
+  "started": "2026-10-23T01:45:08-04:00"
  },
  "workers": [],
  "recent": [
   {
-   "name": "ines",
-   "task": "[hiring] Designer decision memo and hire",
-   "model": "opus",
-   "started": "2026-10-23T05:32:31.385Z",
-   "seconds": null,
-   "finished": "2026-10-23T05:34:37.198000+00:00"
-  },
-  {
-   "name": "general-purpose",
-   "task": "[hiring] Designer round slate and interviews (fallback)",
-   "model": "haiku",
-   "started": "2026-10-23T05:30:22.283Z",
-   "seconds": null,
-   "finished": "2026-10-23T05:32:26.011000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] Pick site v2 home option",
-   "model": "opus",
-   "started": "2026-10-23T05:27:59.709Z",
-   "seconds": null,
-   "finished": "2026-10-23T05:30:12.928000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[design] Site v2 slice 3 home options",
-   "model": "opus",
-   "started": "2026-10-23T05:21:21.131Z",
-   "seconds": null,
-   "finished": "2026-10-23T05:27:55.896000+00:00"
-  },
-  {
    "name": "odalys",
-   "task": "[tools] Site v2 slice 2 builder split",
+   "task": "[build] Site v2 split and home chat",
    "model": "opus",
-   "started": "2026-10-23T05:21:19.535Z",
+   "started": "2026-10-23T05:45:38.573Z",
    "seconds": null,
-   "finished": "2026-10-23T05:26:14.519000+00:00"
+   "finished": "2026-10-23T05:56:47.889000+00:00"
   },
   {
    "name": "wrenna",
-   "task": "[test] Site v2 slice 1 measurements",
+   "task": "[test] Playwright setup and site QA",
    "model": "sonnet",
-   "started": "2026-10-23T05:21:22.283Z",
+   "started": "2026-10-23T05:53:56.493Z",
    "seconds": null,
-   "finished": "2026-10-23T05:25:45.967000+00:00"
+   "finished": "2026-10-23T05:55:07.734000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[design] Site v2 visual system",
+   "model": "opus",
+   "started": "2026-10-23T05:45:41.338Z",
+   "seconds": null,
+   "finished": "2026-10-23T05:54:46.670000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[design] App icon and screenshot system",
+   "model": "opus",
+   "started": "2026-10-23T05:45:43.603Z",
+   "seconds": null,
+   "finished": "2026-10-23T05:53:53.427000+00:00"
+  },
+  {
+   "name": "wrenna",
+   "task": "[test] Playwright setup and site QA",
+   "model": "sonnet",
+   "started": "2026-10-23T05:45:45.426Z",
+   "seconds": null,
+   "finished": "2026-10-23T05:45:46.031Z"
   }
  ],
  "queue": {
@@ -72,12 +64,12 @@
     "text": "Wrenna: site v2 slice 1 DONE 2026-10-23 (954e2b8, measure.md; not measured: throttled 4G, home with token, composer..."
    },
    {
-    "kind": "design",
-    "text": "Maren: designer probation: (a) second pass on site v2 inside the approved system (ops/plans/site-v2.md section 9:..."
+    "kind": "review",
+    "text": "Idris: C13 review of slice 4 (bcf53f1: tools/site/pages.py home/connect/requests, tools/site/assets/app.js);..."
    },
    {
-    "kind": "plan",
-    "text": "Ines: when v2's home page is live, post its screenshots in the chat for the Investors' review (C51) together with..."
+    "kind": "test",
+    "text": "Wrenna: slice 8 QA of slice 4 once live: /, /connect.html, /chat.html redirect, /requests.html at 390 and 1280;..."
    }
   ],
   "blocked": [
@@ -102,23 +94,23 @@
     "text": "(waiting on Idris: Seatsolve Seating package: model, CSV import, cost function, seeded annealing, broken-rules..."
    }
   ],
-  "runnable_count": 17,
+  "runnable_count": 20,
   "blocked_count": 9
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
-   "resets_at": "2026-10-23T08:50:00.067827+00:00"
+   "pct": 12.0,
+   "resets_at": "2026-10-23T08:50:00.305441+00:00"
   },
   "weekly": {
-   "pct": 8.0,
-   "resets_at": "2026-10-25T07:00:00.067845+00:00"
+   "pct": 9.0,
+   "resets_at": "2026-10-25T07:00:00.305460+00:00"
   },
   "fable": {
    "pct": 5.0,
-   "resets_at": "2026-10-25T07:00:00.067971+00:00"
+   "resets_at": "2026-10-25T07:00:00.305573+00:00"
   },
-  "read_at": "2026-10-23T01:20:37.626422-04:00"
+  "read_at": "2026-10-23T01:45:07.886999-04:00"
  },
- "next_tick": "2026-10-23T01:35:37-04:00"
+ "next_tick": "2026-10-23T02:00:08-04:00"
 }

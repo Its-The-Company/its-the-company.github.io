@@ -1,20 +1,36 @@
 {
  "schema": 1,
- "at": "2026-10-23T10:07:54.054111+00:00",
+ "at": "2026-10-23T10:30:28.954541+00:00",
  "session": {
   "active": true,
-  "kind": "morning",
-  "started": "2026-10-23T06:06:34-04:00"
+  "kind": "work",
+  "started": "2026-10-23T06:20:20-04:00"
  },
  "workers": [],
  "recent": [
   {
-   "name": "ines",
-   "task": "CEO morning report, Day 2",
-   "model": "haiku",
-   "started": "2026-10-23T10:06:44.037Z",
+   "name": "odalys",
+   "task": "[build] Odalys additions D2 and test flake",
+   "model": "opus",
+   "started": "2026-10-23T10:20:37.220Z",
    "seconds": null,
-   "finished": "2026-10-23T10:07:25.336000+00:00"
+   "finished": "2026-10-23T10:30:10.879000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[design] Idris site v2 slice 6 company pages",
+   "model": "opus",
+   "started": "2026-10-23T10:20:39.953Z",
+   "seconds": null,
+   "finished": "2026-10-23T10:26:06.239000+00:00"
+  },
+  {
+   "name": "wrenna",
+   "task": "[test] Wrenna live site QA",
+   "model": "sonnet",
+   "started": "2026-10-23T10:20:42.077Z",
+   "seconds": null,
+   "finished": "2026-10-23T10:25:15.421000+00:00"
   }
  ],
  "queue": {
@@ -62,33 +78,33 @@
     "text": "(waiting on Idris: Seatsolve Seating package: model, CSV import, cost function, seeded annealing, broken-rules..."
    }
   ],
-  "runnable_count": 17,
+  "runnable_count": 20,
   "blocked_count": 9
  },
  "meter": {
   "five_hour": {
    "pct": 10.0,
-   "resets_at": "2026-10-23T13:50:00.218198+00:00",
+   "resets_at": "2026-10-23T13:49:59.921447+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 90.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 13.0,
-   "resets_at": "2026-10-25T07:00:00.218221+00:00",
+   "resets_at": "2026-10-25T06:59:59.921465+00:00",
    "used_words": "of your weekly allowance used",
    "left": 87.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 5.0,
-   "resets_at": "2026-10-25T07:00:00.218352+00:00",
+   "resets_at": "2026-10-25T06:59:59.921600+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T06:06:32.861370-04:00"
+  "read_at": "2026-10-23T06:20:19.551539-04:00"
  },
  "ui": {
-  "week_pct": 0.027,
+  "week_pct": 0.026,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -100,7 +116,7 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T06:21:33-04:00",
+ "next_tick": "2026-10-23T06:35:19-04:00",
  "lanes": [
   {
    "name": "Odalys",

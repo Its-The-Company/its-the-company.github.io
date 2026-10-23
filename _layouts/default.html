@@ -210,7 +210,7 @@ img.portrait{width:120px;height:120px;border-radius:var(--r-l);flex:none;margin-
 .avatars{display:inline-flex;flex-wrap:wrap;gap:4px}img.avatar{width:28px;height:28px;border-radius:7px;border:1px solid var(--line)}
 .card .avatars img.avatar{width:36px;height:36px;border-radius:8px}img.avatar.hired{outline:2px solid var(--ok);outline-offset:1px}
 .byline{display:flex;align-items:center;gap:var(--s2);margin:var(--s3) 0 0;font-size:var(--fs-1);color:var(--muted)}.byline img.avatar{width:32px;height:32px}
-.behind{margin:22px 0 0;font-size:var(--fs-1);color:var(--muted)}
+p.behind{margin:22px 0 0;font-size:var(--fs-1);color:var(--muted)}
 .reports{list-style:none;padding:0}.reports li{margin:var(--s2) 0}.latest{font-size:var(--fs-1);color:var(--muted);margin:6px 0 0}
 .wpanel{margin:14px 0 0}.wpanel summary{display:inline-block;cursor:pointer;padding:var(--s2) var(--s4);border:1px solid var(--accent);border-radius:var(--r-pill);background:var(--bg);font-weight:600;list-style:none}
 .wpanel summary::-webkit-details-marker{display:none}.wpanel[open] summary{background:var(--accent);color:var(--accent-ink)}.wpanel .panel{margin-top:10px}
@@ -266,8 +266,8 @@ img.portrait{width:120px;height:120px;border-radius:var(--r-l);flex:none;margin-
 }
 
 /* Now panel: worker cards with the animated portraits. */
-.now{margin-top:var(--s3)}
-.now h3{margin:0 0 var(--s1)}
+section.now{margin-top:var(--s3)}
+section.now h3{margin:0 0 var(--s1)}
 .now-head{font-size:var(--fs-1);color:var(--muted)}
 .now-cards{grid-template-columns:minmax(0,1fr);gap:var(--s2);margin:0 0 var(--s3)}
 .now-cards .card{display:grid;grid-template-columns:48px minmax(0,1fr);grid-template-rows:auto auto;column-gap:var(--s3);row-gap:2px;padding:var(--s2) var(--s3);border-radius:var(--r-m);background:var(--soft)}
@@ -335,7 +335,6 @@ img.portrait{width:120px;height:120px;border-radius:var(--r-l);flex:none;margin-
   /* The numbers move into the tiles; the strip keeps "waiting on you" and the Now button. */
   .status-strip>span,.status-strip>a:not(.waiting){display:none}
   .side{display:block;order:-1}
-  .now{margin-top:var(--s3)}
   .msg{max-width:76%}
 }
 

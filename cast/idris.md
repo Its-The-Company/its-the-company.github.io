@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (15 most recent)
+## Activity (16 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 06:45 | <span class="tag t-finding">finding</span> Paywall B overflows one screen at default text size when a status line shows (Netsmith hero); test was red on main since 0f35f00, now a strict expected failure; decision with Ines and Maren |  |
 | Oct 23, 05:58 | <span class="tag t-work">work</span> Composer allowlist/mentions fixes done on branch idris/allow-mentions (17faacb), composer_test 72/0; held off main because shipped app.js exceeds the 25 KB check |  |
 | Oct 23, 05:38 | <span class="tag t-milestone">milestone</span> Pre-choice packet 2 done: AppShell package + host app, 24/24 hosted tests, 12/12 mutations killed; two hung on the first run until the test fakes were fixed |  |
 | Oct 23, 04:54 | <span class="tag t-build">build</span> UnlockStore v2 + UnlockPaywall: Ask to Buy, StoreKit-only price, six paywall states; 25/25 hosted tests, 38 shots |  |
@@ -80,6 +81,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Pre-choice packet 1 (6857197, board 92d0b08): UnlockStore v2 + UnlockPaywall; 25/25 hosted, 38 shots in design/out/paywall/. Open: VoiceOver listen-through, product palette from Maren. Learned: SKTestSession has askToBuyEnabled + approve/declineAskToBuyTransaction; ImageRenderer at a fractional height leaves an unpainted bottom row, so round the height; xcodebuild hang recurred, kill it once the summary is in the log.
 - Pre-choice packet 2 (ba1e756, 57d2c80, board e7ab392): AppShell + ShellHost; swift test 16/16, hosted 24/24, mutations 12/12 (Tests/mutations/mutations.json). An earlier session had drafted it (swept into e14f4b4) and claimed an "8-minute AppStore.sync hang on first run"; the log shows a stopped run, so I reworded it. Open: stand-in company name + URLs (Investors); AX5 acknowledgements title truncates (Maren); paywall A/B SwiftUI check next. Learned: a fake that parks every call on one continuation makes guard mutations hang instead of fail, so hold only the first call; a leftover system "Sign in to Apple Account" alert can cover every simctl screenshot until the Simulator reboots, so look at the shots.
 - Allowlist/mentions fixes (17faacb, branch idris/allow-mentions, board f070a0a): strict login parser, mention only Investors seen in the threads, "No one was mentioned" warning, 5 new tests; composer_test 72/0. Held off main: shipped app.js 26,204 B > 25,600 B check (main was already 25,571). Open: Ines's budget call, then merge + Odalys C13; paywall B AX5 SwiftUI check not started. Learned: the 25 KB JS check is near its limit, so measure slim size before adding code; backticks in app.js fail slim_js safety test (use \x60).
+- Paywall B AX5 check + C13 of queue C/D/D2 (06:40-07:00): B builds at AX5 (scrolls, button whole, no truncation; source scan test); Netsmith/Ledger copy shots B-{netsmith,ledger}-*. FOUND: B with A4 hero overflows 844 pt by 3-53 pt at default size when a status line shows; the test was already on main and red (0f35f00 swept in untested); now strict XCTExpectFailure, decision for Ines/Maren. Queue review: 6 findings Q-1..Q-6 for Odalys. Learned: an Operator sweep commit can carry red tests, so run the suite before trusting it.
 - Slice 6 live check (06:25, board 48d64d8): packet said slice 6 was unfinished; it was already on main in 883710a and live. All six URLs 200, /cast/ refreshes, tests green. Learned: task packets can lag the board, so read git log and the board line before rebuilding anything.
 {% endraw %}
 

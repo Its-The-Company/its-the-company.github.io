@@ -83,6 +83,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 2026-10-23 ~11:30: D2 had landed at 06:27 (50989f2) but board line 42 was never ticked; checked tests per limit and ticked (cb1694d). Allowlist @ marker b9a4990: once any line has @, only @name counts; Investors close the residual by adding @. Lesson again: grep git log for the slice name before building. Open: site_qa.py and chat.js allowlist readers still take bare words (Wrenna, Idris).
 
+- 2026-10-23 18:10: wrote the Day 2 diary (story/diaries/2026-10-23-odalys.md) from ops/report_facts.md.
+
 ## Open
 - #24 plan awaits Investor answers (token vs relay, reply speed, lanes) and Ines's board entries; Phase 1 (live_status.py, read-only chat page) is unblocked.
 - Write tools/ops_metrics.py (cost and time per worker, kind, model, finished task; hours blocked per task), record the Day 1-3 baseline in ops/ by Day 4 (2026-10-25) with gaps listed, then one measured change before/after by Day 6 (2026-10-27); reconcile with ops/usage.json within 5%, tests required, no loss in test results.

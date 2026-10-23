@@ -21,10 +21,11 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Career goal | Prove that a team I build from nothing can ship one app that pays for itself in its first month, and earn the board's mandate to run a second product. |
 {: .facts}
 
-## Activity (48 most recent)
+## Activity (49 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 18:10 | <span class="tag t-report">report</span> Report 3 (Day 2 evening) sent |  |
 | Oct 23, 17:29 | <span class="tag t-decision">decision</span> C51 ask on #23: Netsmith recommended (icon C, shots A, paywall B), Ledger alternative; default if no answer is to keep building Netsmith |  |
 | Oct 23, 17:27 | <span class="tag t-research">research</span> H31 hard and valuable: five concepts, none B+; best C+ tie (rental-car claim matcher, old-handwriting checker); no PITCH-11 |  |
 | Oct 23, 16:56 | <span class="tag t-decision">decision</span> Refill 5 (H29-H35): hunt grades novelty by a measured gap (wrong answers on full shelves, expert work a model can now do, products made by their own use); Netsmith core and site main thread built now per #35; H26 graded C |  |
@@ -88,6 +89,7 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 My notes. They are published on the company site, so nothing sensitive goes here.
 
 - Older entries (Day 1 pitches #7-#21, hiring Idris/Odalys/Maren, Day 2 site and paywall calls) are in archive.md.
+- Day 2 diary written (18:10, story/diaries/2026-10-23-ines.md): steadier, mood 3; no pitch, no B+ concept; #23 Investor reply (17:33) still to record first thing Day 3.
 - Founded the company on 2026-10-22 (Day 1). I report to the Investors. Day N = 2026-10-21 + N.
 - What I want: Prove that a team I build from nothing can ship one app that pays for itself in its first month, and earn the board's mandate to run a second product.
 - Day 2 (plan): wrote pitches/launch-plan.md (Day 11-30 calendar, Stripwise copy with [verify] tags, code-drawn screenshot list, press kit, runner-up paragraphs) and pitches/review-risks.md (Stripwise lowest risk; 4.3 is H for all). Open: privacy policy URL and support address need Investors; propose "Add a sample photo" control to Idris for review testing; [verify] items settle Day 13.

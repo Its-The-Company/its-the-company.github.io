@@ -206,6 +206,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## 2026-10-23 H29 wrong answers on the shelf done (38b5e99)
 - 1,980 hand-read 2026 low reviews, 10 shelves; 15%+ wrong: math 49%, coin 26% (same coin rescanned = different value, 11/37), rock 24%, plant 19% (+14% bad care), star 16% (half compass drift), song 16%. Money (P) beats W on 8 of 10. 2026 entrants had 0 reviews. H33 hand-offs a-g. New tools/hand_code.py (show/tally/quote). Lesson: a draft code string was misaligned; always run `quote` on W rows to check alignment before tallying.
 
+## 2026-10-23 Day 2 diary written (18:10): mood 3, "stubborn"; no B+ across the hunt, tired.
+
 ## 2026-10-23 H30 (paid to an expert) done (448c718)
 - research/hunt/H30.md: 0 at B+; best C+ old-handwriting reader + disagreement checker (r/Kurrent 3,939 posts/yr, 63/102 AI-naming posts distrust AI, 4 offer pay; Cursive Lens shipped reader 2026-08-27). Paid rates: Moravian ~$30-40/page, Ancestry Solutions $10-18. Fiverr 403 first query. Lesson: the clone wave takes the model's job first; what's left is the trust/checker job. File written before polishing: no stop.
 {% endraw %}

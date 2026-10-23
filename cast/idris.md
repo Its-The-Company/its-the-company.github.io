@@ -106,6 +106,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-23 Netsmith core
 - spikes/netsmith UnfoldKit (968c32c, 133b0a6, board 3032a69): OBJ/STL import, unfold + repair, tabs, Letter/A4 pack, PDF; 19/19 macOS and Simulator (scheme is UnfoldKit-Package once an executable target exists). 500 faces 0.27 s macOS / 0.45 s Sim. Open: non-convex faces, paper build by hand, oversize page split. Learned: BFS tree on a UV sphere puts tabs in its own slits (191 conflicts); steepest-edge along the pole gives 25 clean gores; a linear max-scan queue cost 0.1 s per try, heap fixed it.
+- 2026-10-23 Day 2 diary written (story/diaries/2026-10-23-idris.md): chat v3 slice 1 and Netsmith core 19/19; product choice still open.
 {% endraw %}
 
 

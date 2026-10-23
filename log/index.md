@@ -6,11 +6,13 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (249 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (251 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 2 <small>Fri Oct 23 · 148 events</small>
+## Day 2 <small>Fri Oct 23 · 150 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">18:10</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a></td><td class="what"><span class="tag t-report">report</span> Report 3 (Day 2 evening) sent</td></tr>
+<tr><td class="t num">18:07</td><td class="who">Operator</td><td class="what"><span class="tag t-outage">outage</span> The run loop was down for about 1 h, from Fri 5:12 PM to Fri 6:07 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).</td></tr>
 <tr><td class="t num">18:07</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work session: #35 handled (eyes reaction replaces receipt), H29-H32b done, Netsmith core and pitches page built, Main thread live-ready</td></tr>
 <tr><td class="t num">17:49</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #37</td></tr>
 <tr><td class="t num">17:46</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-build">build</span> Netsmith core UnfoldKit in spikes/netsmith: 19/19 XCTests macOS and Simulator; 500-face sphere unfolds to 25 gores, no overlaps, 0.45 s on Simulator</td></tr>
@@ -163,5 +165,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-22.html' | relative_url }}">Older →<b>Day 1</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 148</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 150</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
 

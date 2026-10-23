@@ -4,7 +4,7 @@
 var S = window.CompanySite; if (!S) return;
 var API = S.API, NAME = S.NAME, ALLOW = S.ALLOW, NO_TOKEN = S.NO_TOKEN, el = S.el, byId = S.byId, on = S.on, later = S.later;
 var getToken = S.getToken, tokenStore = S.tokenStore, hdrs = S.hdrs, gh = S.gh, said = S.said, ago = S.ago, checkAuth = S.checkAuth;
-var onDrawn = S.onDrawn, onReject = S.onReject, LS = localStorage, W = window;
+var onDrawn = S.onDrawn, onReject = S.onReject, LS = localStorage, W = window, DE = document.documentElement;
 function put(p, c) { return p.appendChild(c); }
 function txt(t) { return document.createTextNode(t); }
 function mk(p, tag, cls, text) { return p.appendChild(el(tag, cls, text)); }
@@ -92,7 +92,7 @@ return m && m.index ? [t.slice(0, m.index), t.slice(m.index)] : [t, ''];
 function long(t) { return t.split('\n').reduce((n, l) => n + Math.max(1, Math.ceil(l.length / 40)), 0) > 6; }
 function chat(root) {
 if (!getToken()) return;
-var repo = root.getAttribute('data-repo'), composerOn = root.getAttribute('data-composer') === 'on';
+var repo = root.getAttribute('data-repo'), RI = '/repos/' + repo + '/issues', composerOn = root.getAttribute('data-composer') === 'on';
 function D(k) { return root.getAttribute('data-' + k) || ''; }
 var etags = {}, cache = {}, names = [], issues = [], extra = {}, comments = [], threads = {}, lastDraw = null;
 if (D('queue')) (document.head || root).appendChild(Object.assign(el('script'), { src: D('queue') }));
@@ -125,19 +125,20 @@ function login(x) { return String((x && x.user && x.user.login) || '').toLowerCa
 function numOf(c) { return +String(c.issue_url || '').split('/').pop(); }
 function isInv(l) { return names.indexOf(l) >= 0; }
 function issue(n) { for (var k = 0; k < issues.length; k++) if (issues[k].number === n) return issues[k]; return extra[n] || null; }
+function mainN() { var i = issues.concat(flat(extra)).filter((x) => x.state === 'open' && labelsOf(x).indexOf('main') >= 0)[0]; return i ? i.number : 0; }
 function openIssues() { return issues.filter((i) => i.state === 'open'); }
 function byAt(a, b) { return a.created_at < b.created_at ? -1 : a.created_at > b.created_at ? 1 : 0; }
 function msgsOf(n) { return threads[n] || comments.filter((c) => numOf(c) === n).sort(byAt); }
 function allComments() { var by = {}; comments.concat(flat(threads)).forEach((c) => { by[c.id] = c; }); return Object.keys(by).map((k) => by[k]); }
 function seen(n) { var s = LS.getItem('company.seen.' + n); return s && s > seen0 ? s : seen0; }
-function fresh(c, n) { return !isInv(login(c)) && !isReceipt(c.body) && c.created_at > seen(n); }
-function unread(n) { return msgsOf(n).filter((c) => fresh(c, n)).length; }
+function unread(n) { return msgsOf(n).filter((c) => !isInv(login(c)) && !isReceipt(c.body) && c.created_at > seen(n)).length; }
 function markSeen(n) { var l = msgsOf(n); if (typeof n === 'number' && l.length) LS.setItem('company.seen.' + n, l[l.length - 1].created_at); }
 function parse() { var m = /^#t=(\w+)/.exec((W.location && W.location.hash) || ''); return m ? m[1] : 'home'; }
-function go(k) { var h = '#t=' + k; if (W.location && W.location.hash !== h) W.location.hash = h; if (String(k) !== String(cur)) select(k); }
+function go(k) { if (k === 'main') k = mainN() || k; var h = '#t=' + k; if (W.location && W.location.hash !== h) W.location.hash = h; if (String(k) !== String(cur)) select(k); }
 function select(k) {
-if (k !== 'home' && k !== 'new') { k = +k; if (k > 0) openTab(k); else k = 'home'; }
-saveDraft(); cur = k; limit = 30; jump.hidden = true; isOpen = isDesk || (k === 'new' && composerOn); drawTabs(); drawView(true); drawDock();
+if (k === 'main') k = mainN() || k;
+if (k !== 'home' && k !== 'new' && k !== 'main') { k = +k; if (k > 0) { if (k !== mainN()) openTab(k); } else k = 'home'; }
+saveDraft(); cur = k; limit = 30; jump.hidden = true; isOpen = isDesk || ((k === 'new' || isMain(k)) && composerOn); drawTabs(); drawView(true); drawDock();
 }
 function openTab(n) {
 if (tabs.indexOf(n) >= 0) return;
@@ -152,26 +153,26 @@ function closeTab(n) {
 var at = tabs.indexOf(n); tabs.splice(at, 1); LS.setItem('company.tabs', JSON.stringify(tabs));
 go(tabs[at] || tabs[at - 1] || 'home');
 }
-function keys() { return ['home'].concat(tabs, ['new']); }
+function keys() { var m = mainN(); return ['home', m || 'main'].concat(tabs.filter((t) => t !== m), ['new']); }
 function drawTabs() {
 scroller.textContent = '';
 keys().slice(0, -1).forEach((k) => {
-var b = mk(scroller, 'button', 'cv-tab'), sel = String(k) === String(cur), u = k === 'home' ? 0 : unread(k), i = k === 'home' ? null : issue(k);
+var b = mk(scroller, 'button', 'cv-tab'), sel = String(k) === String(cur), u = typeof k === 'number' ? unread(k) : 0, i = issue(k), m = isMain(k);
 b.type = 'button'; attr(b, 'role', 'tab'); attr(b, 'aria-selected', sel ? 'true' : 'false'); b.tabIndex = sel ? 0 : -1;
-if (k !== 'home') mk(b, 'span', 'cv-n', '#' + k);
-mk(b, 'span', 'cv-t', k === 'home' ? 'Home' : i ? i.title : '');
+if (k > 0 && !m) mk(b, 'span', 'cv-n', '#' + k);
+mk(b, 'span', 'cv-t', k === 'home' ? 'Home' : m ? 'Main' : i ? i.title : '');
 if (u) attr(mk(b, 'span', 'cv-badge', String(u)), 'aria-label', u + ' new');
-if (sel && k !== 'home') { attr(b, 'aria-keyshortcuts', 'Delete'); var x = mk(b, 'span', 'cv-x', '×'); attr(x, 'aria-hidden', 'true'); x.onclick = (ev) => { if (ev && ev.stopPropagation) ev.stopPropagation(); closeTab(k); }; }
+if (sel && typeof k === 'number' && !m) { attr(b, 'aria-keyshortcuts', 'Delete'); var x = mk(b, 'span', 'cv-x', '×'); attr(x, 'aria-hidden', 'true'); x.onclick = (ev) => { if (ev && ev.stopPropagation) ev.stopPropagation(); closeTab(k); }; }
 b.onclick = () => { go(k); };
 b.k = k;
 });
 attr(plus, 'aria-selected', cur === 'new' ? 'true' : 'false'); plus.tabIndex = cur === 'new' ? 0 : -1; plus.k = 'new';
-var h = bar.offsetHeight, de = document.documentElement;
+var h = bar.offsetHeight, de = DE;
 if (h && de && de.style) de.style.setProperty('--cv-tabs-h', h + 'px');
 }
 bar.onkeydown = (ev) => {
 var ks = keys(), at = ks.map(String).indexOf(String(cur)), k = ev.key;
-if (k === 'Delete' && typeof cur === 'number') { stop(ev); closeTab(cur); }
+if (k === 'Delete' && typeof cur === 'number' && !isMain(cur)) { stop(ev); closeTab(cur); }
 else if (k === 'ArrowLeft' || k === 'ArrowRight') { stop(ev); go(ks[(at + (k === 'ArrowRight' ? 1 : ks.length - 1)) % ks.length]); }
 else return;
 var t = [].filter.call(bar.querySelectorAll('[role=tab]'), (b) => String(b.k) === String(cur))[0]; if (t) t.focus();
@@ -191,7 +192,7 @@ md(parts[0], inner);
 clamp = clamp && long(parts[0]);
 if (parts[1] || clamp) {
 if (clamp) inner.className = 'cv-clamp';
-var more = mk(b, 'button', 'cv-quoted', 'Show the whole message' + (parts[1] ? ' (quoted email hidden)' : ''));
+var more = mk(b, 'button', 'cv-quoted', 'Show the whole message');
 more.type = 'button';
 more.onclick = () => { inner.className = ''; if (parts[1]) md(parts[1], inner); more.hidden = true; };
 }
@@ -221,8 +222,8 @@ for (j = all.length - 1; j >= 0; j--) if (isInv(all[j].l)) { q = j; break; }
 var answered = q >= 0 && all.slice(q + 1).some((x) => !isInv(x.l) && !isReceipt(x.body));
 if (q >= 0 && start > q) start = q;
 if (start > 0) {
-var e = mk(log, 'button', 'cv-earlier', 'Load ' + Math.min(30, start) + ' earlier message' + (start > 1 ? 's' : '')); e.type = 'button';
-e.onclick = () => { var de = document.documentElement, below = de.scrollHeight - W.scrollY; limit += 30; drawView(false); W.scrollTo(0, de.scrollHeight - below); };
+var e = mk(log, 'button', 'cv-earlier', 'Load earlier messages'); e.type = 'button';
+e.onclick = () => { var de = DE, below = de.scrollHeight - W.scrollY; limit += 30; drawView(false); W.scrollTo(0, de.scrollHeight - below); };
 }
 all.slice(start).forEach((x, j2) => { var m = add(x, answered && j2 + start === q); if (j2 + start === q) anchor = m; });
 waitLine();
@@ -230,16 +231,17 @@ if (open) position();
 if (!threads[n] || !i) readThread(n);
 }
 function headH() { return (bar.offsetHeight || 0) + (head ? head.offsetHeight || 0 : 0); }
-function bottom() { if (W.scrollTo && document.documentElement) W.scrollTo(0, document.documentElement.scrollHeight); }
-function nearBottom() { var de = document.documentElement; return !de || !W.innerHeight || de.scrollHeight - (W.scrollY + W.innerHeight) < 200; }
+function bottom() { if (W.scrollTo && DE) W.scrollTo(0, DE.scrollHeight); }
+function toMsg(a) { W.scrollTo(0, a.getBoundingClientRect().top + W.scrollY - headH() - 8); }
+function nearBottom() { var de = DE; return !de || !W.innerHeight || de.scrollHeight - (W.scrollY + W.innerHeight) < 200; }
 function position() {
-if (W.scrollTo) { if (anchor && anchor.getBoundingClientRect) W.scrollTo(0, anchor.getBoundingClientRect().top + W.scrollY - headH() - 8); else bottom(); }
+if (W.scrollTo) { if (anchor && anchor.getBoundingClientRect) toMsg(anchor); else bottom(); }
 markSeen(cur); drawTabs();
 if (pinObs) pinObs.disconnect();
 if (!anchor || !W.IntersectionObserver) return;
 var a = anchor, x = items(cur).filter((m) => isInv(m.l)).pop();
 pin.textContent = ''; mk(pin, 'b', null, 'You asked, ' + clock(x.at)); mk(pin, 'span', null, summary(x.body).slice(0, 80));
-pin.onclick = () => { W.scrollTo(0, a.getBoundingClientRect().top + W.scrollY - headH() - 8); };
+pin.onclick = () => { toMsg(a); };
 pinObs = new W.IntersectionObserver((es) => {
 var e = es[es.length - 1]; pin.hidden = e.isIntersecting || e.boundingClientRect.top > (e.rootBounds ? e.rootBounds.top : 0);
 }, { rootMargin: '-' + headH() + 'px 0px 0px 0px' });
@@ -256,7 +258,7 @@ waitEl = mk(log, 'div', 'cv-wait'); mk(waitEl, 'span', 'cv-dot'); put(waitEl, tx
 }
 function update() {
 if (typeof cur !== 'number' || !log) return;
-var nw = items(cur).filter((x) => !shown[x.id]), de = document.documentElement;
+var nw = items(cur).filter((x) => !shown[x.id]), de = DE;
 if (!nw.length) return waitLine();
 if (nw.some((x) => x.at < lastAt)) { var below = de ? de.scrollHeight - W.scrollY : 0; drawView(false); if (de && W.scrollTo) W.scrollTo(0, de.scrollHeight - below); return; }
 var at = nearBottom();
@@ -264,8 +266,8 @@ nw.forEach((x) => { add(x); }); waitLine();
 if (at) { bottom(); markSeen(cur); } else { jump.textContent = '↓ ' + nw.length + ' new'; jump.hidden = false; }
 }
 function readThread(n) {
-if (!issue(n)) get('/repos/' + repo + '/issues/' + n).then((i) => { extra[n] = i; if (cur === n) { drawTabs(); drawView(true); } }, () => {});
-var have = threads[n], i = issue(n), path = '/repos/' + repo + '/issues/' + n + '/comments?per_page=100';
+if (!issue(n)) get(RI + '/' + n).then((i) => { extra[n] = i; if (cur === n) { drawTabs(); drawView(true); } }, () => {});
+var have = threads[n], i = issue(n), path = RI + '/' + n + '/comments?per_page=100';
 if (have && have.length) path += '&since=' + have[have.length - 1].created_at;
 else if (i && i.comments > 100) path += '&page=' + Math.ceil(i.comments / 100);
 return get(path).then((list) => {
@@ -295,7 +297,6 @@ var b = tile(g, D('company'), 'Right now', ws.length + ' at work', ws.map((w) =>
 b.parentNode.className += ' cv-live'; if (ws.length) b.insertBefore(el('span', 'cv-dot'), b.firstChild);
 return g;
 }
-function sec(box, text, count) { var h = mk(box, 'h2', 'cv-sec', text + ' '); mk(h, 'span', 'cv-count', count); }
 function row(ul, n, title, meta, sum, cls, k) {
 var a = mk(mk(ul, 'li'), 'a', 'cv-row' + (cls || '')), rt; a.href = '#t=' + n;
 a.onclick = (ev) => { stop(ev); go(n); };
@@ -315,21 +316,10 @@ var e = el('span', 'cv-due' + (d.t - Date.now() < 864e5 ? ' cv-soon' : ''), new 
 attr(e, 'data-t', new Date(d.t).toISOString()); e.title = 'Deadline: ' + d.text; return e;
 }
 function needs() {
-var box = el('div', 'cv-needs'), l = urgentList(); sec(box, 'Needs you', String(l.length));
+var box = el('div', 'cv-needs'), l = urgentList(); mk(mk(box, 'h2', 'cv-sec', 'Needs you '), 'span', 'cv-count', String(l.length));
 if (!l.length) { mk(box, 'p', 'muted', 'Nothing is waiting on you.'); return box; }
 var ul = mk(box, 'ul', 'cv-list');
 l.forEach((x) => { row(ul, x.i.number, x.i.title, due(x.d), (x.d && !x.d.t ? 'Deadline: ' + x.d.text + '. ' : '') + summary(x.i.body)); });
-return box;
-}
-function replies() {
-var box = el('div'), l = allComments().filter((c) => !isInv(login(c)) && !isReceipt(c.body)).sort(byAt).reverse().slice(0, 5);
-l.forEach((c) => { c.u = fresh(c, numOf(c)) ? 1 : 0; });
-l.sort((a, b) => b.u - a.u);
-var nu = l.filter((c) => c.u).length;
-sec(box, 'Latest replies', nu ? nu + ' new' : '');
-if (!l.length) { mk(box, 'p', 'muted', 'No replies yet.'); return box; }
-var ul = mk(box, 'ul', 'cv-list');
-l.forEach((c) => { var n = numOf(c), i = issue(n); row(ul, n, i ? i.title : '', el('span', 'cv-rm', clock(c.created_at)), 'Company: ' + summary(c.body), c.u ? ' cv-unread' : ''); });
 return box;
 }
 function allConvos() {
@@ -344,11 +334,11 @@ view.textContent = ''; side.textContent = ''; log = head = anchor = null;
 if (stripEl) stripEl.hidden = cur === 'home';
 put(side, glance());
 if (!lastDraw) { var p = mk(view, 'p', 'muted', S.rejected() ? NO_TOKEN + ' ' : 'Loading the conversations...'); if (S.rejected()) mk(p, 'a', null, 'Change the token').href = tokenLink.href; return; }
-if (cur === 'home') { [glance(), needs(), replies(), allConvos()].forEach((x) => { put(view, x); }); return; }
+if (cur === 'home') { [glance(), needs(), allConvos()].forEach((x) => { put(view, x); }); return; }
 put(side, needs());
-if (cur === 'new') {
-mk(mk(view, 'div', 'cv-head'), 'h2', null, 'New conversation');
-mk(view, 'p', 'muted', 'Your message starts a new thread.');
+if (cur === 'new' || cur === 'main') {
+mk(mk(view, 'div', 'cv-head'), 'h2', null, toText());
+mk(view, 'p', 'muted', 'Your message starts ' + (cur === 'new' ? 'a new thread.' : 'the Main thread; + starts one of its own.'));
 return;
 }
 drawThread(open);
@@ -359,23 +349,24 @@ var topicIn = el('input', 'field'), ta = el('textarea'), tools = el('div', 'cv-t
 var urg = mk(tools, 'button', 'cv-tool', '! Urgent'), hide = mk(tools, 'button', 'cv-tool cv-hide', 'Hide ⌄'), send = mk(tools, 'button', 'cv-send', '↑');
 [fake, barSend, urg, hide, send].forEach((b) => { b.type = 'button'; });
 attr(barSend, 'aria-label', 'Send'); attr(send, 'aria-label', 'Send'); attr(hide, 'aria-label', 'Hide the keyboard and the composer');
-topicIn.type = 'text'; topicIn.maxLength = 30; topicIn.placeholder = 'Topic (letters, digits, dashes)'; attr(topicIn, 'aria-label', 'Topic for the new conversation');
+topicIn.type = 'text'; topicIn.maxLength = 30; topicIn.placeholder = 'Topic (optional)'; attr(topicIn, 'aria-label', 'Topic for the new conversation');
 ta.rows = 3; attr(ta, 'aria-label', 'Message'); ta.placeholder = 'Handled as if typed into Claude Code.';
 attr(out, 'role', 'status');
-function target() { return typeof cur === 'number' ? cur : 'new'; }
+function isMain(k) { return k === 'main' || (k > 0 && k === mainN()); }
+function target() { return typeof cur === 'number' || cur === 'new' ? cur : mainN() || 'main'; }
 function draftKey() { return 'company.draft.' + target(); }
 function saveDraft() { if (cur === null) return; if (ta.value.trim()) LS.setItem(draftKey(), ta.value); else LS.removeItem(draftKey()); }
-function toText() { var n = target(), i = issue(n); return n === 'new' ? 'New conversation' : '#' + n + (i ? ' ' + i.title : ''); }
+function toText() { var n = target(), i = issue(n); return n === 'new' ? 'New conversation' : isMain(n) ? 'Main thread' : '#' + n + (i ? ' ' + i.title : ''); }
 function canSend() { return !!ta.value.trim() && !S.rejected() && !sending; }
 function drawDock() {
 dock.textContent = '';
-if (!composerOn) { mk(dock, 'p', 'muted', 'Sending is switched off; reply on GitHub.'); return; }
+if (!composerOn) { mk(dock, 'p', 'muted', 'Sending is switched off.'); return; }
 ta.value = LS.getItem(draftKey()) || '';
 barSend.disabled = send.disabled = !canSend();
 if (main) main.className = 'cv-desk' + (isOpen ? ' cv-open' : '');
 if (!isOpen) {
 var b = mk(dock, 'div', 'cv-bar'); put(b, fake); put(b, barSend);
-fake.textContent = ta.value.trim() ? ta.value.trim().split('\n')[0] : target() === 'new' ? 'Message the company (new chat)...' : 'Reply to ' + toText() + '...';
+fake.textContent = ta.value.trim() ? ta.value.trim().split('\n')[0] : target() === 'new' ? 'Message the company (new chat)...' : isMain(target()) ? 'Message the company...' : 'Reply to ' + toText() + '...';
 return;
 }
 to.textContent = 'To '; mk(to, 'b', null, toText());
@@ -400,7 +391,7 @@ if (ms) clearTimer = later(() => { out.className = 'cv-state'; out.textContent =
 function post(path, body) {
 var h = hdrs(); h['Content-Type'] = 'application/json';
 return fetch(API + path, { method: 'POST', headers: h, body: JSON.stringify(body) })
-.then(checkAuth).then((r) => { if (!r.ok) throw new Error(said(r) + (r.status === 401 ? ' (the token was not accepted)' : r.status === 403 || r.status === 404 ? ' (does the token have Issues: read and write?)' : '')); return r.json(); });
+.then(checkAuth).then((r) => { if (!r.ok) throw new Error(said(r) + (r.status === 403 || r.status === 404 ? ' (does the token have Issues: read and write?)' : '')); return r.json(); });
 }
 function cleanName(n) { return (n || '').replace(/[^A-Za-z0-9 _.-]/g, '').trim().slice(0, 40); }
 function splitNames(l) {
@@ -413,28 +404,30 @@ function mentions(l) { return l.length ? 'Urgent: ' + l.map((n) => '@' + n).join
 function stamp(text, name, cc) { return text.replace(/<!--[\s\S]*?-->/g, '').trim() + (cc ? '\n\n' + cc : '') + (name ? '\n\n<!-- as: ' + name + ' -->' : ''); }
 function doSend() {
 if (!composerOn || sending || S.rejected()) return;
-var text = ta.value.trim(), name = cleanName(LS.getItem(NAME)), urgent = urgentOn, n = target();
+var text = ta.value.trim(), name = cleanName(LS.getItem(NAME)), urgent = urgentOn, n = target(), dk = draftKey();
 if (!text) { state('failed', 'Write a message first.', 4000); return; }
 sending = true; send.disabled = barSend.disabled = true; state('', 'Sending...');
 var warn = '', who = (!urgent || names.length) ? Promise.resolve(names) : allow();
+if (n === 'main') who = get(RI + '?labels=main').then((l) => { if (l && l[0]) extra[n = l[0].number] = l[0]; return who; });
 who.then((l) => {
 var w = splitNames(urgent ? l : []), cc = urgent ? mentions(w[0]) : '';
 if (urgent) warn = (cc ? '' : ' No one was mentioned.') + (w[1].length ? ' Not mentioned (no post here yet): ' + w[1].join(', ') + '.' : '');
-if (n === 'new') {
-var topic = topicIn.value.trim().toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/^-+|-+$/g, '').slice(0, 30);
-var labels = ['chat']; if (topic) labels.push('topic:' + topic); if (urgent) labels.push('urgent');
-return post('/repos/' + repo + '/issues', { title: (topic ? topic + ': ' : 'Chat: ') + text.replace(/\s+/g, ' ').slice(0, 60), body: stamp(text, name, cc), labels: labels });
+if (typeof n !== 'number') {
+var topic = n === 'new' && topicIn.value.trim().toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/^-+|-+$/g, '').slice(0, 30);
+var labels = ['chat']; if (topic) labels.push('topic:' + topic); if (n === 'main') labels.push('main'); if (urgent) labels.push('urgent');
+return post(RI, { title: n === 'main' ? 'Main thread' : (topic ? topic + ': ' : 'Chat: ') + text.replace(/\s+/g, ' ').slice(0, 60), body: stamp(text, name, cc), labels: labels });
 }
-return post('/repos/' + repo + '/issues/' + n + '/comments', { body: stamp(text, name, cc) }).then((r) => {
-return urgent ? post('/repos/' + repo + '/issues/' + n + '/labels', { labels: ['urgent'] })
+return post(RI + '/' + n + '/comments', { body: stamp(text, name, cc) }).then((r) => {
+return urgent ? post(RI + '/' + n + '/labels', { labels: ['urgent'] })
 .then(() => r, (e) => { warn = ' The urgent label was not added (' + e.message + ')' + (cc ? '; the mentions were sent.' : '.') + warn; return r; }) : r;
 });
 }).then((r) => {
-LS.removeItem(draftKey()); ta.value = ''; urgentOn = false; topicIn.value = '';
-state('sent', 'Sent' + (n === 'new' && r.number ? ' as #' + r.number : '') + '. A receipt follows within a tick.' + warn, warn ? 15000 : 8000);
+LS.removeItem(dk); ta.value = ''; urgentOn = false; topicIn.value = '';
+var made = typeof n !== 'number' && r.number;
+state('sent', 'Sent' + (made ? ' as #' + r.number : '') + '. A receipt follows within a tick.' + warn, warn ? 15000 : 8000);
 etags = {}; sending = false;
-if (n === 'new' && r.number) { extra[r.number] = r; threads[r.number] = []; go(r.number); }
-else { if (r.id && threads[n]) threads[n].push(r); else if (r.id) comments.unshift(r); update(); drawDock(); }
+if (made) { extra[r.number] = r; threads[r.number] = []; go(r.number); }
+else { if (r.id && threads[n]) threads[n].push(r); else if (r.id) comments.unshift(r); if (cur !== n) go(n); else { update(); drawDock(); } }
 load();
 }).catch((e) => {
 state('failed', 'Not sent: ' + e.message + '. Your text is kept; tap Send to retry.', 30000);
@@ -468,7 +461,7 @@ function refresh() { drawTabs(); if (cur === 'home') drawView(false); else updat
 function load() {
 if (document.hidden && lastDraw) return;
 var n = lastDraw ? 100 : 30, cached = !lastDraw && readAllow();
-Promise.all([cached ? (names = cached.names) : allow(), get('/repos/' + repo + '/issues?state=all&per_page=' + n + '&sort=updated'), get('/repos/' + repo + '/issues/comments?per_page=' + n + '&sort=created&direction=desc')])
+Promise.all([cached ? (names = cached.names) : allow(), get(RI + '?state=all&per_page=' + n + '&sort=updated'), get(RI + '/comments?per_page=' + n + '&sort=created&direction=desc')])
 .then((res) => {
 var same = lastDraw && lastDraw[1] === res[1] && lastDraw[2] === res[2] && String(lastDraw[0]) === String(res[0]);
 names = res[0]; issues = res[1].filter((i) => !i.pull_request); comments = res[2] || [];

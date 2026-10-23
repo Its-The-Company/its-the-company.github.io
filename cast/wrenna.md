@@ -197,6 +197,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-23 Hunt H18-H20 done (06743dc, 7173cc2, b800b5a)
 - H18 Mac-to-iPad: 0 asks from paying Mac users (D+); mobile_gap misses iOS siblings under another dev name (SimpleMind). H19 votes: Logseq top 7v/yr, Obsidian 54 likes, Trakt V3 regressions 204 likes but 13 iOS Trakt clients (C-). H20 GitHub: top ask 98 +1 answered by maintainers' own PWA (D+); Lemmy search unusable. New tools discourse_topic.py, discourse_votes.py (Logseq orders by votes; Obsidian 503 after 8 pages), gh_asks.py. Lesson: loud asks go to vendors, who answer them. H22 is Maren's, not mine.
+
+## 2026-10-23 H23 + H25 (done 14:36/14:40, ticked 16:55, 3d46f26)
+- H23 abandoned earners: best C Scrivener iPad companion (vendor rewriting iOS app); H25 Show HN: 3 iOS asks in 2,327 comments, best D+. Re-dispatched after done because board lines were unticked: tick the board in the same commit as the file.
 {% endraw %}
 
 

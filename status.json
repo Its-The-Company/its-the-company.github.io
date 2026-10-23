@@ -1,30 +1,54 @@
 {
  "schema": 1,
- "at": "2026-10-23T20:52:55.841018+00:00",
+ "at": "2026-10-23T21:12:21.091511+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T16:42:26-04:00"
+  "started": "2026-10-23T16:53:14-04:00"
  },
- "workers": [
+ "workers": [],
+ "recent": [
   {
-   "name": "odalys",
-   "task": "[build] queue row titles in live_status",
+   "name": "wrenna",
+   "task": "[research] H29 selling-but-wrong apps",
    "model": "opus",
-   "started": "2026-10-23T20:42:48.510Z",
-   "seconds": 607,
-   "finished": null
+   "started": "2026-10-23T20:57:09.395Z",
+   "seconds": null,
+   "finished": "2026-10-23T21:02:20.720000+00:00"
   },
   {
    "name": "idris",
-   "task": "[build] paywall B status band",
+   "task": "[build] Site main-thread chat",
    "model": "opus",
-   "started": "2026-10-23T20:42:50.671Z",
-   "seconds": 605,
-   "finished": null
+   "started": "2026-10-23T20:53:45.446Z",
+   "seconds": null,
+   "finished": "2026-10-23T21:02:07.383000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[research] H32 meta lane",
+   "model": "opus",
+   "started": "2026-10-23T20:57:10.821Z",
+   "seconds": null,
+   "finished": "2026-10-23T21:00:12.115000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] H28 and pitch refill",
+   "model": "opus",
+   "started": "2026-10-23T20:53:42.842Z",
+   "seconds": null,
+   "finished": "2026-10-23T20:57:05.994000+00:00"
+  },
+  {
+   "name": "wrenna",
+   "task": "[research] H23 abandoned earners",
+   "model": "opus",
+   "started": "2026-10-23T20:53:39.639Z",
+   "seconds": null,
+   "finished": "2026-10-23T20:54:29.891000+00:00"
   }
  ],
- "recent": [],
  "queue": {
   "runnable": [
    {
@@ -70,33 +94,33 @@
     "text": "(waiting on Idris: Boardseat one-level prototype: DayKit deterministic simulation with XCTests and the Day 1..."
    }
   ],
-  "runnable_count": 21,
+  "runnable_count": 28,
   "blocked_count": 11
  },
  "meter": {
   "five_hour": {
-   "pct": 4.0,
-   "resets_at": "2026-10-24T00:00:00.351297+00:00",
+   "pct": 5.0,
+   "resets_at": "2026-10-24T00:00:00.022131+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 96.0,
+   "left": 95.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 21.0,
-   "resets_at": "2026-10-25T07:00:00.351317+00:00",
+   "resets_at": "2026-10-25T07:00:00.022152+00:00",
    "used_words": "of your weekly allowance used",
    "left": 79.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-10-25T07:00:00.351436+00:00",
+   "resets_at": "2026-10-25T07:00:00.022280+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T16:42:26.192052-04:00"
+  "read_at": "2026-10-23T16:53:13.656030-04:00"
  },
  "ui": {
-  "week_pct": 0.027,
+  "week_pct": 0.026,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -108,28 +132,28 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T16:57:26-04:00",
+ "next_tick": "2026-10-23T17:08:13-04:00",
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[build] queue row titles in live_status",
-   "model": "opus",
-   "since": "2026-10-23T20:42:48.510Z",
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris: implement chat v3 per Maren's spec (tabs per thread, scroll-up history, collapsible composer, inline replies...",
+   "model": null,
+   "since": null,
    "next": [
-    "Odalys: site v2 slices 2 and 4 (ops/plans/site-v2.md...",
-    "Odalys, P3 (rest of Idris C13 F6): a queue row whose..."
+    "Idris: independent review of Odalys's site JavaScript...",
+    "settled 2026-10-23 01:10: chat_composer is true in..."
    ]
   },
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] paywall B status band",
-   "model": "opus",
-   "since": "2026-10-23T20:42:50.671Z",
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys: site v2 slices 2 and 4 (ops/plans/site-v2.md 6.1, 6.2). Slice 2 first and alone: split tools/site_build.py...",
+   "model": null,
+   "since": null,
    "next": [
-    "Idris: implement chat v3 per Maren's spec (tabs per...",
-    "Idris: independent review of Odalys's site JavaScript..."
+    "Odalys, P3 (rest of Idris C13 F6): a queue row whose...",
+    "Odalys, H34 hunt leaderboard: python3 tools/hunt.py top..."
    ]
   },
   {
@@ -150,20 +174,66 @@
    "model": null,
    "since": null,
    "next": [
-    "Maren, H22: blind grades on H18-H21, letters committed..."
+    "Maren, H22: blind grades on H18-H21, letters committed...",
+    "Maren, H32b blind letters on H29, H30 and H31 as each..."
    ]
   },
   {
    "name": "Ines",
    "state": "next",
-   "task": "Ines + Maren, P2 (Idris, paywall check): option B with Netsmith's page-sized hero (196 x 277 pt) is 3 to 53 pt...",
+   "task": "Ines: C51 ask for Netsmith (my recommendation) now, per (ask, then build the recommended option): post its icon,...",
    "model": null,
    "since": null,
    "next": [
+    "Ines + Maren, P2 (Idris, paywall check): option B with...",
     "Ines, H-P1: grade each hunt file as it lands (18:00 pass..."
    ]
   }
  ],
  "qr": [],
- "inbox": []
+ "inbox": [
+  {
+   "id": "c6374681598",
+   "state": "waiting",
+   "position": 1,
+   "eta": "2026-10-23T17:08:13-04:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "The Company should NOT do work unrelated to the project when other tasks run..."
+  },
+  {
+   "id": "c6374770878",
+   "state": "waiting",
+   "position": 2,
+   "eta": "2026-10-23T17:08:13-04:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Let's also consolidate all of the pitches on an intuitive pitches page, which..."
+  },
+  {
+   "id": "c6374809671",
+   "state": "waiting",
+   "position": 3,
+   "eta": "2026-10-23T17:08:13-04:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "No more \u201cReceived (Fri 5:08 PM ET). It reached the Mac mini at once. A sessio..."
+  },
+  {
+   "id": "i35",
+   "state": "replied",
+   "position": 4,
+   "tasks": {
+    "open": 9,
+    "done": 1
+   },
+   "title": "Urgent -- Get to Work!!"
+  }
+ ]
 }

@@ -22,10 +22,11 @@ Designs web systems in CSS tokens and inline SVG, with a byte budget in mind.
 | Career goal | One system that the whole company can read, for the site and the app, with the source in the repo. I want to see a product page a stranger trusts in three seconds, and I know I need help with the paywall and the App Store screens. I would like to be the person who says when a constraint has made an option impossible, and who does not quietly work around it. |
 {: .facts}
 
-## Activity (16 most recent)
+## Activity (17 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 17:00 | <span class="tag t-research">research</span> H32 meta lane: 5 concepts (walked map, return graph, company reader, week replay, steps journey), none B+, no hero; company reader fails 4.2 alone |  |
 | Oct 23, 16:25 | <span class="tag t-research">research</span> H27 paid on Android, absent on iOS: 0 at B+; every Android-only paid app is absent because iOS forbids the job or the shelf is full |  |
 | Oct 23, 13:57 | <span class="tag t-research">research</span> H22: second grades on H18-H20, 0 at B+, best D/B-; a 1,372-rating Trakt watch-time app already sells H19's top ask; H21 pending |  |
 | Oct 23, 13:44 | <span class="tag t-review">review</span> H17: novelty and selling on H12-H15, 19 concepts, none at B+, no hero |  |
@@ -73,6 +74,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - H17 done 5726231 (H12-H15, 19 concepts): research/hunt/grades-maren-h17.md, none B+, no hero; best Plotback B-/B, pitch accent C-/B. Committed before H16.md existed.
 - H9 done (H6-H8, H10, H11): research/hunt/grades-maren-h9.md, none B+, no hero (best Sepwright B-/B; SepForge Mac 2026-08-11 breaks 'Mac empty'). Tables carry Ines's/Wrenna's grades, so blindness is partial; said so.
 - H27 done ef2fede (board b3ff906): none B+; best field map C-/C+. Android-only paid = iOS forbids the job or shelf full. Lesson: tools/play_ios_gap.py too slow for 100+ rows and gives false 'android-only?'; hand-pick then play_app.py --dev.
+- H32 done 245e38a: 5 meta concepts, none B+, no hero; best H32-1 D/B, H32-3 B/C- (fails 4.2 alone). Open: H32b blind letters on H29-H31 (H29 title-only at commit). Lesson: EventKit keeps no move history, Obsidian records no opens; check what the store actually keeps before captioning.
 - H22 H18-H20 done 86b07f3 (research/hunt/H22.md): none B+, no hero; best D/B-. H21 (Ines) not landed: add its section and tick board line 147 when it does. Lesson: hand-search the title of the ask; trakt.TV Time To Watch was the screenshot.
 {% endraw %}
 

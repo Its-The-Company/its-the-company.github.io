@@ -406,8 +406,8 @@ if (!composerOn || sending || S.rejected()) return;
 var text = ta.value.trim(), name = cleanName(LS.getItem(NAME)), urgent = urgentOn, n = target(), dk = draftKey();
 if (!text) { state('failed', 'Write a message first.', 4000); return; }
 sending = true; send.disabled = barSend.disabled = true; state('', 'Sending...');
-var warn = '', who = (!urgent || names.length) ? Promise.resolve(names) : allow();
-if (n === 'main') who = get(RI + '?labels=main').then((l) => { if (l && l[0]) extra[n = l[0].number] = l[0]; return who; });
+var warn = '', w0 = (!urgent || names.length) ? Promise.resolve(names) : allow();
+var who = n === 'main' ? get(RI + '?labels=main').then((l) => { if (l && l[0]) extra[n = l[0].number] = l[0]; return w0; }) : w0;
 who.then((l) => {
 var w = splitNames(urgent ? l : []), cc = urgent ? mentions(w[0]) : '';
 if (urgent) warn = (cc ? '' : ' No one was mentioned.') + (w[1].length ? ' Not mentioned (no post here yet): ' + w[1].join(', ') + '.' : '');

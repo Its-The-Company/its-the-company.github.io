@@ -401,6 +401,20 @@ ul.q{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
 .opts [aria-checked=true]{border:2px solid var(--accent);background:var(--accent-soft)}
 /* end additions */
 
+/* brief and Tasks (#37; Maren, ops/plans/site-dashboard.md 3 and 4; assets/now.js, Odalys). No new colour or size. */
+.cv-live[role=button]{cursor:pointer}.cv-live[aria-expanded=true]{border-color:var(--accent)}
+.cv-brief{display:grid;gap:2px;margin:0 0 var(--s3);padding:var(--s3);border:1px solid var(--line);border-radius:var(--r-m);background:var(--bg)}
+.cv-brief p{margin:0;font-size:var(--fs-1);line-height:1.35}.cv-brief .cv-bp{margin-bottom:var(--s1);font-weight:600}
+.cv-brief .cv-bp,.cv-brief .cv-bt{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cv-brief .cv-bm{font-size:var(--fs-0);color:var(--muted)}.cv-brief .cv-bc,.cv-brief .cv-bl{font-size:var(--fs-0)}.cv-brief .cv-bc{margin-top:var(--s1)}
+.tk-h{display:flex;align-items:baseline;gap:var(--s2);margin:var(--s3) 0 var(--s2);font-size:var(--fs-2)}.tk-h .cv-count{font-size:var(--fs-1);color:var(--muted);font-weight:600}
+ul.tk{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
+.tk-r{display:grid;gap:2px;padding:var(--s2) var(--s3);border:1px solid var(--line);border-radius:var(--r-m);background:var(--bg);color:var(--ink);text-decoration:none}
+.tk-t{font-size:var(--fs-1);font-weight:600;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;overflow-wrap:anywhere}
+.tk-m{font-size:var(--fs-0);color:var(--muted)}.tk-m .chip{vertical-align:baseline}
+.tk-p{display:inline-block;width:48px;height:6px;vertical-align:middle}.tk-more{margin-top:var(--s2)}
+.cv-queue{margin:var(--s4) 0}.q-sum{min-height:44px;padding:var(--s2) 0;font-weight:700;cursor:pointer}
+
 /* chat and Now panel (placeholder styling) */
 {% raw %}/* Empty since slice 5: the chat and Now styles are part of the system above. build.py still splits here. */
 

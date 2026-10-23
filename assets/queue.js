@@ -4,6 +4,7 @@
 var S = window.CompanySite; if (!S || !S.getToken()) return;
 var el = S.el, later = S.later, W = window, D = document, root = S.byId('chat-root'), repo = root && root.getAttribute('data-repo');
 if (!repo) return;
+var nj = root.getAttribute('data-now'); if (nj) (D.head || root).appendChild(Object.assign(el('script'), { src: nj }));
 var iss = [], com = [], st = S.status && S.status(), loc = null, ln = [], so = 0, fT = 0, xT = 0, pend = [], why = '', qn = null, mode = '', box = null, fid = null, dead = 0, sig = '', mid = null, said = '';
 function mk(p, t, c, x) { return p.appendChild(el(t, c, x)); }
 function at(e, k, v) { e.setAttribute(k, v); return e; }
@@ -75,12 +76,12 @@ function chip(p, x, c) { return mk(p, 'span', 'chip ' + (c || 'other'), x); }
 function kid(p, c) { var k = (p && p.children) || []; for (var i = 0; i < k.length; i++) if ((' ' + k[i].className + ' ').indexOf(' ' + c + ' ') >= 0) return k[i]; return null; }
 function draw() {
 if (dead) return;
-if (!box) { var col = kid(S.byId('main'), 'cv-col'); if (!col) return; box = at(el('section', 'cv-queue'), 'aria-label', 'Your open messages'); col.insertBefore(box, kid(col, 'cv-dock')); on(W, 'hashchange', draw); }
+if (!box) { var col = kid(S.byId('main'), 'cv-col'); if (!col) return; box = el('details', 'cv-queue'); col.insertBefore(box, kid(col, 'cv-dock')); on(W, 'hashchange', draw); }
 var rs = rows(), m = map(), ids = ord(), q = qi(), h = (W.location && W.location.hash) || '', z = JSON.stringify([rs, ids, mode, said, h, iss.length, com.length]), t, M, ul, n = 0, p = null;
 if (z === sig) return; sig = z;
 box.hidden = !rs.length || !/^(#t=home)?$/.test(h); box.textContent = '';
 if (box.hidden) return;
-mk(mk(box, 'h2', 'cv-sec', 'Your open messages '), 'span', 'cv-count', String(rs.length));
+mk(box, 'summary', 'q-sum', 'Reorder your messages (' + rs.length + ')');
 mk(box, 'p', 'meta', 'Drag a grip to reorder (long-press on a phone; Alt+Up/Down on desktop).');
 t = mk(box, 'p', 'meta'); M = { pending: ['Not saved yet', 'q'], saving: ['Saving', 'q'], saved: ['Saved', 'done'] }[mode] || mode && ['Not saved', 'wait'];
 if (M) { chip(t, M[0], M[1]); tx(t, ' '); }

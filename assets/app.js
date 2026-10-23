@@ -3,8 +3,8 @@
 'use strict';
 var API = 'https://api.github.com';
 var KEY = 'company-chat-token', NAME = 'company-chat-name';
-var later = setTimeout;
-var stop = typeof clearTimeout === 'function' ? clearTimeout : function () {};
+function later(f, ms) { return setTimeout(f, ms); }
+function stop(t) { clearTimeout(t); }
 function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
 function add(box, tag, cls, text) { return box.appendChild(el(tag, cls, text)); }
 function byId(id) { return document.getElementById(id); }
@@ -142,7 +142,7 @@ body.appendChild(meters(st));
 add(body, 'p', 'muted', source + (st.at ? ' · updated ' + ago(st.at) + ' ago' : ''));
 renderStrip(st);
 if (!toggled) showNow(box, !!s.active && !stale);
-lastSt = st; onStatus.forEach(function (f) { f(st); });
+lastSt = st; onStatus.forEach(function (f) { f(st, isPublic); });
 }
 function lanes(body, ls, cards) {
 var pic = {}, idle = [], g = add(body, 'div', 'cards now-cards');

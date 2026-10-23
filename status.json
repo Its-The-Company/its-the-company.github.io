@@ -1,69 +1,65 @@
 {
  "schema": 1,
- "at": "2026-10-23T04:53:49.850477+00:00",
+ "at": "2026-10-23T05:01:22.365108+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T00:50:24-04:00"
+  "started": "2026-10-23T00:54:01-04:00"
  },
  "workers": [],
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] Site live: Odalys P0 tasks",
-   "model": "sonnet",
-   "started": "2026-10-23T04:50:36.037Z",
-   "seconds": null,
-   "finished": "2026-10-23T04:53:33.624000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[review] Review site JS, build composer",
-   "model": "opus",
-   "started": "2026-10-23T04:50:38.671Z",
-   "seconds": null,
-   "finished": "2026-10-23T04:52:53.005000+00:00"
-  },
-  {
    "name": "wrenna",
-   "task": "[test] QA live site, browser blocker",
+   "task": "[test] Wrenna live site QA sweep",
    "model": "sonnet",
-   "started": "2026-10-23T04:50:41.548Z",
+   "started": "2026-10-23T04:54:18.287Z",
    "seconds": null,
-   "finished": "2026-10-23T04:52:12.909000+00:00"
+   "finished": "2026-10-23T05:01:09.213000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] Ines opens site Urgent Request",
+   "model": "opus",
+   "started": "2026-10-23T04:54:16.493Z",
+   "seconds": null,
+   "finished": "2026-10-23T04:55:52.865000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[build] Odalys site fixes and review",
+   "model": "sonnet",
+   "started": "2026-10-23T04:54:14.026Z",
+   "seconds": null,
+   "finished": "2026-10-23T04:55:47.659000+00:00"
   }
  ],
  "queue": {
   "runnable": [
    {
-    "kind": "build",
-    "text": "Idris: independent review of Odalys's site JavaScript and tools/site_build.py changes (C13 hand-off), then build..."
+    "kind": "plan",
+    "text": "Ines: write ops/plans/site-v2.md: chat-first page map (home = composer + live \"Now\" + the conversation; Requests..."
+   },
+   {
+    "kind": "tools",
+    "text": "Odalys: split tools/site_build.py into tools/site/ (templates, one CSS file, one JS file, the builder) with no..."
+   },
+   {
+    "kind": "design",
+    "text": "Idris: visual system for v2, all from code: type scale, color tokens with dark mode, spacing, the chat bubbles and..."
    },
    {
     "kind": "test",
-    "text": "Odalys: independent review (C13) of my composer changes in 8685861 (flag, \"mark urgent\" mentions from..."
+    "text": "Wrenna: before/after for v2: measure today's site first (page weight, requests, load time, taps from the home page..."
    },
    {
-    "kind": "build",
-    "text": "Odalys, P1 (Idris review: chat.html reads only the 100 newest comments repo-wide (/issues/comments?per_page=100), so..."
-   },
-   {
-    "kind": "build",
-    "text": "Odalys, P2 (Idris review: chat groups are sorted alphabetically, so Urgent is not first; sort by the ORDER index."
-   },
-   {
-    "kind": "build",
-    "text": "Odalys, P2 (Idris review: setIssues rebuilds the thread <select> every 30 s, which can close an open picker on a..."
+    "kind": "plan",
+    "text": "Ines: when v2's home page is live, post its screenshots in the chat for the Investors' review (C51) together with..."
    }
   ],
   "blocked": [
    {
     "kind": "build",
     "text": "(waiting on Idris: switch the composer on. Review done (ops/plans/site-review.md, fixes 1973ac2 and 8685861);..."
-   },
-   {
-    "kind": "plan",
-    "text": "(waiting on Odalys's screenshots in ops/site-checks/) Ines: open ONE Urgent Request: (a) C51 approval of chat page..."
    },
    {
     "kind": "test",
@@ -76,10 +72,14 @@
    {
     "kind": "research",
     "text": "(waiting on Wrenna: write the Stripwise App Store keyword list and the exact iOS share-sheet location-toggle..."
+   },
+   {
+    "kind": "build",
+    "text": "(waiting on Idris: Boardseat one-level prototype: DayKit deterministic simulation with XCTests and the Day 1..."
    }
   ],
-  "runnable_count": 18,
-  "blocked_count": 12
+  "runnable_count": 15,
+  "blocked_count": 11
  },
  "meter": {
   "five_hour": {
@@ -96,5 +96,5 @@
   },
   "read_at": "2026-10-23T00:50:23.635249-04:00"
  },
- "next_tick": "2026-10-23T01:05:24-04:00"
+ "next_tick": "2026-10-23T01:09:01-04:00"
 }

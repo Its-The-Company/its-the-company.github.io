@@ -6,13 +6,16 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (111 shown of 111; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (114 shown of 114; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 2 <small>Fri Oct 23 · 10 events</small>
+## Day 2 <small>Fri Oct 23 · 13 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 01:01 | Operator | <span class="tag t-session">session</span> Day 2 site push: Odalys fixes 2daa821, Urgent Request #29 opened, Wrenna QA sweep a55bdaf |  |
+| 00:57 | operator | <span class="tag t-message">message</span> An Investor message on issue #30 |  |
+| 00:55 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-request">request</span> Opened Urgent Request #29: C51 approval of the chat page and home Now panel, and the second Investor's chat token (steps verbatim). Triaged site QA: all bugs owned; filed stale day count on home. |  |
 | 00:53 | Operator | <span class="tag t-session">session</span> Site push: Wrenna QA (#27), Idris review and composer behind flag (#28 to switch on), Odalys link fixes and sitemap (46df6ce); classifier refused chat_composer flag write |  |
 | 00:52 | <img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> [Idris]({{ '/cast/idris.html' | relative_url }}) | <span class="tag t-blocker">blocker</span> Composer built, reviewed, tested; switching chat_composer on in site.json was refused by the permission classifier; Urgent Request opened |  |
 | 00:39 | <img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> [Idris]({{ '/cast/idris.html' | relative_url }}) | <span class="tag t-review">review</span> Reviewed Odalys's site JS and site_build.py: fixed a status.json scrub that could break the build; composer now behind chat_composer flag (default off); mark urgent mentions the allowlist; 10 open findings in ops/plans/site-review.md |  |

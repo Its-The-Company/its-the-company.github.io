@@ -93,7 +93,7 @@
       (composerOn ? 'Messages you send here are posted to the GitHub issue under your own account (the token needs Issues: read and write).'
                   : 'Sending from this page is switched off until an Investor has confirmed reading with their own token; reply on GitHub for now.')));
     root.appendChild(bar); root.appendChild(status);
-    var etags = {}, cache = {}, issuesList = [], allowNames = [];
+    var etags = {}, cache = {}, issuesList = [], allowNames = [], issuesSig = null;
     // ---- Composer: a comment on a thread, or a new chat issue. The author is the token's account, so
     // inbox.py sees an ordinary allowlisted comment (Commandment 57). The "as:" line is cosmetic.
     var comp = el('div', 'composer'); comp.appendChild(el('h3', null, 'Send a message'));
@@ -106,7 +106,10 @@
     if (composerOn) root.appendChild(comp);
     root.appendChild(lanes);
     function setIssues(list) {
-      issuesList = list; var keep = sel.value; sel.textContent = '';
+      var sig = list.filter(function (i) { return !i.pull_request && i.state === 'open'; }).slice(0, 40)
+        .map(function (i) { return i.number + ':' + i.title; }).join('|');
+      if (sig === issuesSig) { issuesList = list; return; }
+      issuesSig = sig; issuesList = list; var keep = sel.value; sel.textContent = '';
       sel.appendChild(Object.assign(el('option', null, 'New chat (opens an issue)'), { value: 'new' }));
       list.filter(function (i) { return !i.pull_request && i.state === 'open'; }).slice(0, 40).forEach(function (i) {
         sel.appendChild(Object.assign(el('option', null, 'Reply on #' + i.number + ' ' + i.title.slice(0, 50)), { value: String(i.number) }));
@@ -149,7 +152,7 @@
         .catch(function (e) { out.textContent = 'Not sent: ' + e.message; }).then(function () { send.disabled = false; });
     };
     save.onclick = function () { setToken(input.value.trim(), remember.checked); input.value = ''; load(); };
-    forget.onclick = function () { setToken('', false); lanes.textContent = ''; status.textContent = 'Token removed from this browser.'; };
+    forget.onclick = function () { setToken('', false); etags = {}; cache = {}; allowNames = []; issuesSig = null; lanes.textContent = ''; status.textContent = 'Token removed from this browser.'; };
     function get(path) {
       return gh(path, { etag: etags[path] }).then(function (r) {
         if (r.status === 304) return cache[path];
@@ -198,13 +201,32 @@
         var g = topicOf(i); if (!groups[g]) { groups[g] = el('div', 'lane'); groups[g].appendChild(el('h3', null, g)); }
         var t = el('div', 'thread'); t.appendChild(el('b', null, '#' + i.number + ' ' + i.title + (i.state === 'closed' ? ' (closed)' : '')));
         var first = el('div', 'msg', plain(i.body)); first.insertBefore(sender(i.user && i.user.login, i.body, names), first.firstChild); t.appendChild(first);
-        (by[i.number] || []).slice(0, 5).reverse().forEach(function (c) {
+        var shown = (by[i.number] || []).slice(0, 5).reverse();
+        function addMsg(c, into) {
           var m = el('div', 'msg', plain(c.body)); m.insertBefore(el('small', null, ' ' + ago(c.created_at) + ' ago'), m.firstChild);
-          m.insertBefore(sender(c.user && c.user.login, c.body, names), m.firstChild); t.appendChild(m);
-        });
+          m.insertBefore(sender(c.user && c.user.login, c.body, names), m.firstChild); into.appendChild(m);
+        }
+        shown.forEach(function (c) { addMsg(c, t); });
+        // The repo-wide read holds only the 100 newest comments, so an older thread can have replies it did not
+        // get. i.comments (the issue's own count) says so; "Show all" reads that one thread.
+        if ((i.comments || 0) > shown.length) {
+          (function (num, total, thread) {
+            var more = el('button', null, 'Show all ' + total + ' replies'); more.type = 'button';
+            more.onclick = function () {
+              more.disabled = true; more.textContent = 'Loading...';
+              get('/repos/' + repo + '/issues/' + num + '/comments?per_page=100').then(function (all) {
+                Array.prototype.slice.call(thread.querySelectorAll('.msg')).slice(1).forEach(function (x) { thread.removeChild(x); });
+                var box = el('div', 'full'); all.forEach(function (c) { addMsg(c, box); });
+                thread.insertBefore(box, more); more.style.display = 'none';
+              }).catch(function (e) { more.disabled = false; more.textContent = 'Could not load (' + e.message + '); retry'; });
+            };
+            thread.appendChild(more);
+          })(i.number, i.comments, t);
+        }
         groups[g].appendChild(t);
       });
-      lanes.textContent = ''; Object.keys(groups).sort().forEach(function (n) { lanes.appendChild(groups[n]); });
+      function rank(n) { var k = ORDER.indexOf(n); return k < 0 ? (n.indexOf('Topic: ') === 0 ? ORDER.length : ORDER.length + 1) : k; }
+      lanes.textContent = ''; Object.keys(groups).sort(function (a, b) { return rank(a) - rank(b) || (a < b ? -1 : a > b ? 1 : 0); }).forEach(function (n) { lanes.appendChild(groups[n]); });
     }
     load(); setInterval(load, 30000);
   }

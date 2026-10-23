@@ -109,7 +109,7 @@ if (r.nb) chip(w, 'Not before ' + r.nb.replace('T', ' ') + ' ET', 'wait');
 if (r.tie) chip(w, 'Tied');
 sw = ['model', 'effort', 'split'].filter(y => set[y]).map(y => cap(set[y] === 'one' ? 'one worker' : set[y]));
 if (sw.length) chip(w, sw.join(' · '), 'q');
-li.onkeydown = e => { if (e.altKey && /^Arrow(Up|Down)$/.test(e.key)) { if (e.preventDefault) e.preventDefault(); moveTo(u[0], ui(r.id) + (e.key === 'ArrowUp' ? -1 : 1)); } };
+li.onkeydown = e => { if (e.target === li && e.altKey && /^Arrow(Up|Down)$/.test(e.key)) { if (e.preventDefault) e.preventDefault(); moveTo(u[0], ui(r.id) + (e.key === 'ArrowUp' ? -1 : 1)); } };
 if (mid === r.id) menu(li, r);
 if (fid === r.id && li.focus) { fid = null; later(() => { li.focus(); }, 0); }
 }
@@ -169,16 +169,19 @@ if ((r.aft || []).length || r.nb || r.tie) bt(d, 'Clear conditions', () => { chg
 }
 var OPTS = { model: ['fable', 'opus', 'sonnet', 'haiku'], effort: ['low', 'medium', 'high', 'max'], split: ['one', 'team'] };
 function sheet(r) {
-var cur = Object.assign({}, r.set || {}), back = D.activeElement, id = r.id, s = at(at(el('div', 'sheet'), 'role', 'dialog'), 'aria-label', 'Settings for: ' + nm(id)), a;
+var cur = Object.assign({}, r.set || {}), back = D.activeElement, id = r.id, s = at(at(at(el('div', 'sheet'), 'role', 'dialog'), 'aria-modal', 'true'), 'aria-label', 'Settings for: ' + nm(id)), a, f0;
 mk(s, 'h3', null, nm(id)); mk(s, 'p', 'meta', 'Applies to every task from this message; hard limits win.');
 Object.keys(OPTS).forEach(k => {
 var f = mk(s, 'fieldset'), g;
 mk(f, 'legend', null, cap(k)); g = at(mk(f, 'div', 'opts'), 'role', 'radiogroup');
 ['company'].concat(OPTS[k]).forEach(v => {
 var l = at(mk(g, 'label', v === 'company' ? 'cd' : null, v === 'company' ? 'Company decides' : cap(v === 'one' ? 'one worker' : v)), 'role', 'radio');
-l.tabIndex = 0; at(l, 'aria-checked', String((cur[k] || 'company') === v));
-l.onclick = () => { cur[k] = v; [].slice.call(g.children).forEach(c => { at(c, 'aria-checked', String(c === l)); }); };
-l.onkeydown = e => { if (e.key === ' ' || e.key === 'Enter') { if (e.preventDefault) e.preventDefault(); l.onclick(); } };
+var c = (cur[k] || 'company') === v; l.tabIndex = c ? 0 : -1; at(l, 'aria-checked', String(c)); if (c && !f0) f0 = l;
+l.onclick = () => { cur[k] = v; [].slice.call(g.children).forEach(c => { at(c, 'aria-checked', String(c === l)); c.tabIndex = c === l ? 0 : -1; }); };
+l.onkeydown = e => {
+var o = [].slice.call(g.children), j = o.indexOf(l), d = /^Arrow(Down|Right)$/.test(e.key) ? 1 : /^Arrow(Up|Left)$/.test(e.key) ? -1 : 0, n;
+if (d || e.key === ' ' || e.key === 'Enter') { if (e.preventDefault) e.preventDefault(); n = d ? o[(j + d + o.length) % o.length] : l; n.onclick(); if (n.focus) n.focus(); }
+};
 });
 });
 mk(s, 'p', 'meta', 'Typical cost: not measured yet.');
@@ -192,6 +195,7 @@ say('Settings for ' + nm(id) + ': ' + kv.join(', ') + '.'); close();
 }, 'primary');
 s.onkeydown = e => { if (e.key === 'Escape') close(); };
 (S.byId('main') || box).appendChild(s);
+if (f0 && f0.focus) f0.focus();
 }
 S.queue = { moveTo: moveTo, flush: flush, fail: fail, sheet: id => sheet(map()[id]), menu: menu, ord: ord };
 draw();

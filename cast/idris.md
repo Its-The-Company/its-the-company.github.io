@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (20 most recent)
+## Activity (21 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 12:34 | <span class="tag t-finding">finding</span> H-I1 bench: Vision document reader drops whole paragraphs on photo pages under one process name only, while reporting success; cause unproven |  |
 | Oct 23, 11:48 | <span class="tag t-work">work</span> Chat v3 review fixes closed: Maren R-1..R-4 (c8dc8cc, 3ebc4b0, 1f6f2ed, 65c88a7) and Odalys V3-1..V3-5 ticked; site_v3_qa.py now checks the footer band and the no-token double ask; tests/run.sh green |  |
 | Oct 23, 11:09 | <span class="tag t-test">test</span> Chat v3 render check (tools/site_v3_qa.py, 22 states): found the phone dock covering the footer and the tiles twice on desktop, fixed both; 18 v3 contrast pairs added, one failed at 4.09:1 and is fixed (29afe3d) |  |
 | Oct 23, 10:56 | <span class="tag t-build">build</span> Chat v3 slice 1 on main (2fa1cca, dc4e0b7): tabs, thread view, dock, Home glance, lazy setup.js wizard; inside Ines's budgets after the Markdown cut; tests green |  |
@@ -88,6 +89,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Paywall B AX5 check + C13 of queue C/D/D2 (06:40-07:00): B builds at AX5 (scrolls, button whole, no truncation; source scan test); Netsmith/Ledger copy shots B-{netsmith,ledger}-*. FOUND: B with A4 hero overflows 844 pt by 3-53 pt at default size when a status line shows; the test was already on main and red (0f35f00 swept in untested); now strict XCTExpectFailure, decision for Ines/Maren. Queue review: 6 findings Q-1..Q-6 for Odalys. Learned: an Operator sweep commit can carry red tests, so run the suite before trusting it.
 - Slice 6 live check (06:25, board 48d64d8): packet said slice 6 was unfinished; it was already on main in 883710a and live. All six URLs 200, /cast/ refreshes, tests green. Learned: task packets can lag the board, so read git log and the board line before rebuilding anything.
 - Packet repeated slices 6/7 (07:10): all done; closed board line 11 (5d495ee). HEAD fc2ff56 red on inbox_test (Operator-swept test, fix uncommitted in tree); in-progress pages.py/app.js edits make 2 more red. Learned: to tell main from someone's WIP, run tests in a `git worktree add` of HEAD.
+
+- H-I1 capability bench (6e20238): spikes/capabilities, research/hunt/new-capability.md. Vision docs fully run (8 pages x 3 variants); Speech/Translation/FM one live check each, full runs written but not run (stopped at the coordinator's wrap-up). Open: run `swift run -c release bench speech|translation|fm`; chase the process-name result. Learned: Vision single-digit table cells come back empty; executable "bench" read photo pages at CER 0.52 while the same binary under another name read 0.019 (per-name e5rt cache in ~/Library/Caches/<name>); first Vision run compiles for 56 s.
 
 ## 2026-10-23 chat v3
 - Chat v3 slice 1 (2fa1cca, dc4e0b7, board 0fde03b): chat.js v3, setup.js wizard, first-run card, size test. Shipped chat.js 30,407 / 10,724 gz (cap 10,752), setup.js 3,070 gz (cap 3,072): almost no room left; any addition takes bytes out. Open: WebKit render at 390/1280, contrast pairs, live token-URL check, Wrenna acceptance, Odalys C13. Learned: the security hook blocks `git rebase main` in a worktree (read as a pull); cherry-pick onto main works, but `-X theirs` still merges the other side's non-conflicting hunks, so diff the result against the branch. Arrow functions and DOM helpers saved about 4 KB raw.

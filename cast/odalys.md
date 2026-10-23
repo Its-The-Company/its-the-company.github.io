@@ -22,10 +22,11 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Career goal | To own the company's measurements. I want to show a cost-per-finished-task line that falls, week over week, with the method beside it. Later I would like to run operations for the whole company, if the numbers earn it. |
 {: .facts}
 
-## Activity (17 most recent)
+## Activity (18 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 12:32 | <span class="tag t-milestone">milestone</span> Additions slice A (bell and notifications trial) tested and committed: 30 new checks, two copy fixes |  |
 | Oct 23, 11:16 | <span class="tag t-work">work</span> Additions back ends closed: D2 found already in 50989f2 with Idris's Q-1..Q-6 fixes, tests checked per limit; allowlist @ marker b9a4990; board ticked |  |
 | Oct 23, 11:03 | <span class="tag t-review">review</span> C13 review of chat v3 slice 1 (2fa1cca, dc4e0b7): pass; no XSS sinks, token handling clean; 5 fixes for Idris (V3-1..V3-5, two P2: Forget unreachable on #name, Forget leaves drafts) |  |
 | Oct 23, 10:07 | <span class="tag t-work">work</span> Fixed Idris's C13 queue findings Q-1..Q-6 (order conflicts on blocks and every comment, prose to inbox, ASCII grammar, stored-graph check, ties as given); ticked B-1 (e03d097) |  |
@@ -99,6 +100,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-10-23 ~11:10: C13 review of chat v3 slice 1 (2fa1cca, dc4e0b7): pass, eec0570; V3-1..V3-5 for Idris (P2: Forget hidden on connect.html#name; Forget leaves company.draft.*). Repo is PRIVATE, so "non-allowlisted = Company" is only a bot/collaborator risk. Lesson: grep for sinks first (innerHTML/eval/console) and trace each storage key to what clears it.
 
 - 2026-10-23 ~12:30: additions wiring B done (5c8537d): CompanySite.tiles draws usage tiles for chat.js; strip gains s-wk-r. A (bell) left as UNCOMMITTED WIP: app.js bell/feed/notify trial, chat.js S.feed hook, notify_trial flag, composer_test 'bell' mode with no ok() checks yet. Next: write bell assertions after line 355 of composer_test, run tests/run.sh, commit. app.js has ~1.1 KB headroom left.
+
+- 2026-10-23 ~13:30: additions A done. Bell code had been swept into Operator 4b2784a; my tests + fixes e998d9f (composer 164/0), board 5810e1c. C lanes drafted and stashed ('odalys C lanes draft', now_panel 38/0, app.js 9 B under cap). Lesson: site_build_unit forbids backticks anywhere in shipped JS, even inside a regex; use \x60. Next: pop stash, run.sh, commit C.
 {% endraw %}
 
 

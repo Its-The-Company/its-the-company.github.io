@@ -1,45 +1,36 @@
 {
  "schema": 1,
- "at": "2026-10-23T16:16:08.451588+00:00",
+ "at": "2026-10-23T16:35:00.263414+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T11:48:36-04:00"
+  "started": "2026-10-23T12:16:24-04:00"
  },
- "workers": [
-  {
-   "name": "idris",
-   "task": "[build] Fitpath spike H-S5",
-   "model": "opus",
-   "started": "2026-10-23T15:49:04.397Z",
-   "seconds": 1624,
-   "finished": null
-  }
- ],
+ "workers": [],
  "recent": [
   {
-   "name": "odalys",
-   "task": "[build] Additions page wiring B",
+   "name": "idris",
+   "task": "[build] On-device capability bench H-I1",
    "model": "opus",
-   "started": "2026-10-23T15:51:10.027Z",
+   "started": "2026-10-23T16:16:47.395Z",
    "seconds": null,
-   "finished": "2026-10-23T16:05:29.504000+00:00"
+   "finished": "2026-10-23T16:33:11.487000+00:00"
   },
   {
    "name": "wrenna",
-   "task": "[test] Chat v3 live acceptance",
+   "task": "[research] Hunt lane H6 paid to a human",
    "model": "opus",
-   "started": "2026-10-23T15:49:06.683Z",
+   "started": "2026-10-23T16:16:42.500Z",
    "seconds": null,
-   "finished": "2026-10-23T15:57:48.086000+00:00"
+   "finished": "2026-10-23T16:26:02.865000+00:00"
   },
   {
-   "name": "ines",
-   "task": "[plan] Grade hunt files, pitch",
+   "name": "odalys",
+   "task": "[build] Additions wiring A bell",
    "model": "opus",
-   "started": "2026-10-23T15:49:09.728Z",
+   "started": "2026-10-23T16:16:45.340Z",
    "seconds": null,
-   "finished": "2026-10-23T15:51:05.655000+00:00"
+   "finished": "2026-10-23T16:25:08.516000+00:00"
   }
  ],
  "queue": {
@@ -87,33 +78,33 @@
     "text": "(waiting on Wrenna: write the Stripwise App Store keyword list and the exact iOS share-sheet location-toggle..."
    }
   ],
-  "runnable_count": 23,
+  "runnable_count": 21,
   "blocked_count": 12
  },
  "meter": {
   "five_hour": {
-   "pct": 26.0,
-   "resets_at": "2026-10-23T18:49:59.558785+00:00",
+   "pct": 31.0,
+   "resets_at": "2026-10-23T18:49:59.941140+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 74.0,
+   "left": 69.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 17.0,
-   "resets_at": "2026-10-25T06:59:59.558806+00:00",
+   "pct": 18.0,
+   "resets_at": "2026-10-25T06:59:59.941157+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 83.0,
+   "left": 82.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-10-25T06:59:59.558953+00:00",
+   "resets_at": "2026-10-25T06:59:59.941299+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T11:48:36.325948-04:00"
+  "read_at": "2026-10-23T12:16:23.578345-04:00"
  },
  "ui": {
-  "week_pct": 0.024,
+  "week_pct": 0.025,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -125,17 +116,17 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T12:03:36-04:00",
+ "next_tick": "2026-10-23T12:31:23-04:00",
  "lanes": [
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] Fitpath spike H-S5",
-   "model": "opus",
-   "since": "2026-10-23T15:49:04.397Z",
+   "state": "next",
+   "task": "Idris: implement chat v3 per Maren's spec (tabs per thread, scroll-up history, collapsible composer, inline replies...",
+   "model": null,
+   "since": null,
    "next": [
-    "Idris: implement chat v3 per Maren's spec (tabs per...",
-    "Idris: independent review of Odalys's site JavaScript..."
+    "Idris: independent review of Odalys's site JavaScript...",
+    "settled 2026-10-23 01:10: chat_composer is true in..."
    ]
   },
   {

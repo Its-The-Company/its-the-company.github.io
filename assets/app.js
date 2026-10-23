@@ -6,6 +6,7 @@ var KEY = 'company-chat-token', NAME = 'company-chat-name';
 var later = setTimeout;
 var stop = typeof clearTimeout === 'function' ? clearTimeout : function () {};
 function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+function add(box, tag, cls, text) { return box.appendChild(el(tag, cls, text)); }
 function byId(id) { return document.getElementById(id); }
 function on(target, ev, fn) { if (target && target.addEventListener) target.addEventListener(ev, fn); }
 function getToken() { return sessionStorage.getItem(KEY) || localStorage.getItem(KEY) || ''; }
@@ -53,18 +54,18 @@ function meters(st) {
 var box = el('div'), m = st.meter || {}, ui = st.ui || {};
 [['5-hour', m.five_hour], ['Week', m.weekly, 1]].forEach(function (x) {
 var v = x[1]; if (!v || v.pct == null) return;
-var d = box.appendChild(el('div', 'meter')), p = d.appendChild(el('p')), t = d.appendChild(el('div', 'bar-track'));
-p.appendChild(el('b', null, x[0] + ': ' + Math.round(v.pct) + '%'));
-p.appendChild(el('span', null, ' ' + v.used_words + ' '));
-p.appendChild(el('span', 'muted', tail(v, x[2]).slice(1)));
+var d = add(box, 'div', 'meter'), p = add(d, 'p'), t = add(d, 'div', 'bar-track');
+add(p, 'b', null, x[0] + ': ' + Math.round(v.pct) + '%');
+add(p, 'span', null, ' ' + v.used_words + ' ');
+add(p, 'span', 'muted', tail(v, x[2]).slice(1));
 t.setAttribute('role', 'img'); t.setAttribute('aria-label', Math.round(v.pct) + '% ' + v.used_words);
-t.appendChild(el('div', 'bar-fill')).style.width = Math.max(0, Math.min(100, v.pct)) + '%';
+add(t, 'div', 'bar-fill').style.width = Math.max(0, Math.min(100, v.pct)) + '%';
 });
 if (ui.week_pct != null) {
-var u = box.appendChild(el('p', 'meta', 'Running the site: about ' + pts(ui.week_pct) + '% ' + ui.words
+var u = add(box, 'p', 'meta', 'Running the site: about ' + pts(ui.week_pct) + '% ' + ui.words
 + (ui.five_hour_pct != null ? ' and ' + pts(ui.five_hour_pct) + '% of your 5-hour allowance' : '')
 + (ui.over ? ' (over its cap: chat replies are batched)' : ui.warn ? ' (near its cap: chat replies are batched)' : '')
-+ (ui.show_coverage ? '; cost measured for ' + Math.round(100 * ui.coverage) + ' in 100 runs' : '') + '.'));
++ (ui.show_coverage ? '; cost measured for ' + Math.round(100 * ui.coverage) + ' in 100 runs' : '') + '.');
 if (ui.warn || ui.over) u.style.color = 'var(--warm)';
 }
 return box;
@@ -77,7 +78,7 @@ tile(g, href, x[0] + ' usage', v.pct != null ? Math.round(v.pct) + '%' : '?', (v
 });
 if (ui.week_pct != null) tile(g, href, 'Running the site', pts(ui.week_pct) + '%', ui.words + ' (about)');
 }
-function list(items, fmt) { var ul = el('ul'); items.forEach(function (x) { ul.appendChild(el('li', null, fmt(x))); }); return ul; }
+function list(items, fmt) { var ul = el('ul'); items.forEach(function (x) { add(ul, 'li', null, fmt(x)); }); return ul; }
 var toggled = false;
 function showNow(box, open) {
 box.hidden = !open;
@@ -93,7 +94,7 @@ setText('s-5h-r', tail(m.five_hour).slice(1));
 if (m.weekly && m.weekly.pct != null) {
 setText('s-wk', Math.round(m.weekly.pct) + '%');
 var w = byId('s-wk'), r = byId('s-wk-r');
-if (w && !r && w.parentNode) { r = w.parentNode.appendChild(el('small')); r.id = 's-wk-r'; }
+if (w && !r && w.parentNode) { r = add(w.parentNode, 'small'); r.id = 's-wk-r'; }
 if (r) r.textContent = ' ' + tail(m.weekly, 1).slice(1);
 }
 if (q.runnable_count != null) setText('s-ready', String(q.runnable_count));
@@ -107,7 +108,7 @@ var headLine = stale ? 'Status from the site build ' + ago(st.at) + ' ago.'
 : s.active ? 'A ' + (s.kind || 'work') + ' session is running' + (s.started ? ' (started ' + ago(s.started) + ' ago).' : '.') : 'No session is running; one starts each tick.';
 var head = box.querySelector ? box.querySelector('.now-head') : null;
 var body = box.querySelector ? box.querySelector('.now-body') : null;
-if (!body) { box.textContent = ''; box.appendChild(el('h3', null, 'Now')); head = box.appendChild(el('p', 'now-head')); body = box.appendChild(el('div', 'now-body')); }
+if (!body) { box.textContent = ''; add(box, 'h3', null, 'Now'); head = add(box, 'p', 'now-head'); body = add(box, 'div', 'now-body'); }
 head.textContent = headLine;
 var carded = {};
 var cards = box.querySelectorAll ? Array.prototype.slice.call(box.querySelectorAll('[data-worker]')) : [];
@@ -123,19 +124,19 @@ if (w) carded[slug] = true;
 body.textContent = '';
 var rest = ws.filter(function (w) { return !carded[(w.name || '').toLowerCase()]; });
 if (rest.length) {
-body.appendChild(el('p', 'now-sub', 'Working now'));
+add(body, 'p', 'now-sub', 'Working now');
 body.appendChild(list(rest, function (w) { return cap(w.name) + ': ' + taskLine(w); }));
-} else if (s.active && !ws.length && !stale) body.appendChild(el('p', 'muted', 'No worker call is running.'));
+} else if (s.active && !ws.length && !stale) add(body, 'p', 'muted', 'No worker call is running.');
 var rec = (st.recent || []).slice(0, 3);
 if (rec.length) {
-body.appendChild(el('p', 'now-sub', 'Just finished'));
+add(body, 'p', 'now-sub', 'Just finished');
 body.appendChild(list(rec, function (w) { return cap(w.name) + ': ' + (w.task || '') + (w.finished ? ', ' + ago(w.finished) + ' ago' : ''); }));
 }
 var q = st.queue || {};
-body.appendChild(el('p', 'now-sub', 'Queue: ' + (q.runnable_count || 0) + ' tasks ready, ' + (q.blocked_count || 0) + ' blocked'));
+add(body, 'p', 'now-sub', 'Queue: ' + (q.runnable_count || 0) + ' tasks ready, ' + (q.blocked_count || 0) + ' blocked');
 if ((q.runnable || []).length) body.appendChild(list(q.runnable.slice(0, 5), function (t) { return '[' + t.kind + '] ' + t.text; }));
 body.appendChild(meters(st));
-body.appendChild(el('p', 'muted', source + (st.at ? ' · updated ' + ago(st.at) + ' ago' : '')));
+add(body, 'p', 'muted', source + (st.at ? ' · updated ' + ago(st.at) + ' ago' : ''));
 renderStrip(st);
 if (!toggled) showNow(box, !!s.active && !stale);
 lastSt = st; onStatus.forEach(function (f) { f(st); });
@@ -178,8 +179,10 @@ if (c.w !== weekKey()) c = { w: weekKey(), n: 0 };
 if (add) { c.n += add; localStorage.setItem(NC, JSON.stringify(c)); }
 return c.n;
 }
-function plain(b) { b = String(b || '').replace(/<!--[\s\S]*?-->/g, '').replace(/\s+/g, ' ').trim(); return b.length > 140 ? b.slice(0, 137) + '...' : b; }
-function btn(box, text, cls, fn) { var b = box.appendChild(el('button', 'btn' + (cls ? ' ' + cls : ''), text)); b.type = 'button'; b.onclick = fn; return b; }
+function plain(b) {
+b = String(b || '').replace(/<!--[\s\S]*?-->|<[^>]*>/g, '').replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1')
+.replace(/^\s*(#+|>|[-*+]|\d+\.)\s+/gm, '').replace(/[*_\x60~]+/g, '').replace(/\s+/g, ' ').trim(); return b.length > 140 ? b.slice(0, 137) + '...' : b; }
+function btn(box, text, cls, fn) { var b = add(box, 'button', 'btn' + (cls ? ' ' + cls : ''), text); b.type = 'button'; b.onclick = fn; return b; }
 function toThread(n) { showBell(false); location.hash = '#t=' + n; }
 function compose(n, text) { showBell(false); if (chatOpen) chatOpen(n, text); else toThread(n); }
 function dueWords(ms) {
@@ -228,8 +231,8 @@ var w = document.querySelector && document.querySelector('header.site .wrap');
 if (!w || !document.createElementNS) return;
 title0 = document.title;
 w.style.position = 'relative';
-bellB = w.appendChild(el('button', 'bell')); bellB.type = 'button';
-bellP = w.appendChild(el('div', 'bellp')); bellP.setAttribute('role', 'dialog'); bellP.setAttribute('aria-label', 'Notifications'); bellP.hidden = true;
+bellB = add(w, 'button', 'bell'); bellB.type = 'button';
+bellP = add(w, 'div', 'bellp'); bellP.setAttribute('role', 'dialog'); bellP.setAttribute('aria-label', 'Notifications'); bellP.hidden = true;
 bellB.onclick = function () { showBell(!bellOpen); };
 on(document, 'keydown', function (e) { if (bellOpen && e.key === 'Escape') { showBell(false); bellB.focus(); } });
 on(document, 'click', function (e) { var t = e.target; if (bellOpen && bellP.contains && !bellP.contains(t) && !bellB.contains(t)) showBell(false); });
@@ -242,61 +245,61 @@ var n = items.need.length + items.rep.length, s = svg('svg', { viewBox: '0 0 24 
 s.appendChild(svg('path', { d: 'M12 3.5a5.5 5.5 0 0 0-5.5 5.5v3.6L4.8 15.8h14.4l-1.7-3.2V9A5.5 5.5 0 0 0 12 3.5z', 'stroke-linejoin': 'round' }));
 s.appendChild(svg('path', { d: 'M9.8 18.6a2.3 2.3 0 0 0 4.4 0', 'stroke-linecap': 'round' }));
 bellB.textContent = ''; bellB.appendChild(s);
-if (n) bellB.appendChild(el('span', 'badge', String(n)));
+if (n) add(bellB, 'span', 'badge', String(n));
 bellB.setAttribute('aria-label', 'Notifications, ' + (n ? n + ' need you' : 'nothing waiting on you'));
 bellB.setAttribute('aria-expanded', bellOpen ? 'true' : 'false');
 document.title = (n ? '(' + n + ') ' : '') + title0;
 bellP.hidden = !bellOpen;
 if (!bellOpen) return;
 bellP.textContent = '';
-trial(bellP.appendChild(el('div', 'trial')));
+trial(add(bellP, 'div', 'trial'));
 [['Needs you', items.need, needItem], ['Replies', items.rep, repItem], ['For information', items.info, infoItem]].forEach(function (g) {
 if (!g[1].length) return;
-bellP.appendChild(el('h4', null, g[0]));
+add(bellP, 'h4', null, g[0]);
 g[1].forEach(function (x) { bellP.appendChild(g[2](x)); });
 });
-if (!n && !items.info.length) bellP.appendChild(el('p', 'muted', 'Nothing is waiting on you.'));
+if (!n && !items.info.length) add(bellP, 'p', 'muted', 'Nothing is waiting on you.');
 }
 function trial(t) {
-function say(b, small) { t.appendChild(el('b', null, b)); if (small) t.appendChild(el('small', 'muted', small)); }
+function say(b, small) { add(t, 'b', null, b); if (small) add(t, 'small', 'muted', small); }
 if (!flagOn()) return say('Notifications are off', 'Turned off for both of you on #24. The bell still lists everything.');
 if (iPhone()) return say('Notifications', 'On iPhone, Safari sends them only to a site added to the Home Screen (iOS 16.4 or later). Share, then Add to Home Screen.');
 if (!hasN()) return say('Notifications', 'This browser does not offer them. The bell still lists everything.');
 if (Notification.permission === 'denied') return say('Notifications', 'Blocked in this browser’s settings for this site. The bell still lists everything.');
 if (Notification.permission !== 'granted' || !localStorage.getItem(NL)) {
-t.appendChild(el('b', null, 'Try notifications (trial)'));
+add(t, 'b', null, 'Try notifications (trial)');
 btn(t, 'Turn on', 'primary', function () {
 function done() { if (Notification.permission === 'granted') localStorage.setItem(NL, 'on'); drawBell(); }
 var r = Notification.requestPermission(done); if (r && r.then) r.then(done);
 });
-return t.appendChild(el('small', 'muted', 'Only while this tab is open. One per item, at most one every 2 minutes.'));
+return add(t, 'small', 'muted', 'Only while this tab is open. One per item, at most one every 2 minutes.');
 }
-t.appendChild(el('b', null, 'Notifications'));
-var seg = t.appendChild(el('span', 'seg2')), cur = localStorage.getItem(NL);
+add(t, 'b', null, 'Notifications');
+var seg = add(t, 'span', 'seg2'), cur = localStorage.getItem(NL);
 ['On', 'Off'].forEach(function (w) {
-var a = seg.appendChild(el('a', null, w)); a.href = '#';
+var a = add(seg, 'a', null, w); a.href = '#';
 if (cur === w.toLowerCase()) a.setAttribute('aria-current', 'true');
 a.onclick = function (e) { if (e && e.preventDefault) e.preventDefault(); localStorage.setItem(NL, w.toLowerCase()); drawBell(); };
 });
-t.appendChild(el('small', 'muted', 'Trial · ' + weekCount(0) + ' this week · off for both of you: write "notifications off" on #24'));
+add(t, 'small', 'muted', 'Trial · ' + weekCount(0) + ' this week · off for both of you: write "notifications off" on #24');
 }
 function needItem(x) {
-var d = el('div', 'item'), top = d.appendChild(el('div', 'acts')), dl = x.d, a;
-top.appendChild(el('span', 'chip ' + (x.ap ? 'pitch' : 'urgent'), x.ap ? 'Approval (C51)' : 'Urgent'));
-top.appendChild(el('span', 'ref', '#' + x.n));
-d.appendChild(el('b', null, x.i.title));
+var d = el('div', 'item'), top = add(d, 'div', 'acts'), dl = x.d, a;
+add(top, 'span', 'chip ' + (x.ap ? 'pitch' : 'urgent'), x.ap ? 'Approval (C51)' : 'Urgent');
+add(top, 'span', 'ref', '#' + x.n);
+add(d, 'b', null, x.i.title);
 if (dl && dl.t) {
-var left = dl.t - Date.now(), span = dl.t - Date.parse(x.i.created_at), w = dueWords(left), bar = d.appendChild(el('div', 'due'));
+var left = dl.t - Date.now(), span = dl.t - Date.parse(x.i.created_at), w = dueWords(left), bar = add(d, 'div', 'due');
 bar.setAttribute('role', 'img'); bar.setAttribute('aria-label', w);
-bar.appendChild(el('i')).style.width = Math.max(0, Math.min(100, span > 0 ? 100 * left / span : 0)).toFixed(1) + '%';
-d.appendChild(el('small', 'muted', w + ' · ' + when(new Date(dl.t).toISOString(), 1)));
-} else if (dl) d.appendChild(el('small', 'muted', 'Deadline: ' + dl.text));
-a = d.appendChild(el('div', 'acts'));
+add(bar, 'i').style.width = Math.max(0, Math.min(100, span > 0 ? 100 * left / span : 0)).toFixed(1) + '%';
+add(d, 'small', 'muted', w + ' · ' + when(new Date(dl.t).toISOString(), 1));
+} else if (dl) add(d, 'small', 'muted', 'Deadline: ' + dl.text);
+a = add(d, 'div', 'acts');
 if (x.ap) {
 [['Approve', 'Approved'], ['Ask for changes', 'Changes asked'], ['Reject', 'Rejected']].forEach(function (b, k) {
 btn(a, b[0], k ? '' : 'primary', function () { compose(x.n, b[1] + ': ' + x.i.title); });
 });
-d.appendChild(el('small', 'muted', 'Each opens the composer with your words pre-filled; nothing posts until you press Send.'));
+add(d, 'small', 'muted', 'Each opens the composer with your words pre-filled; nothing posts until you press Send.');
 } else {
 btn(a, 'Reply', 'primary', function () { compose(x.n, ''); });
 btn(a, 'Open thread', '', function () { toThread(x.n); });
@@ -304,11 +307,11 @@ btn(a, 'Open thread', '', function () { toThread(x.n); });
 return d;
 }
 function repItem(x) {
-var d = el('div', 'item'), top = d.appendChild(el('div')), a;
-top.appendChild(el('span', 'chip sender company', 'Company'));
-top.appendChild(el('small', 'muted', ' ' + clock(x.c.created_at) + ' · #' + x.n));
-d.appendChild(el('span', null, plain(x.c.body)));
-a = d.appendChild(el('div', 'acts'));
+var d = el('div', 'item'), top = add(d, 'div'), a;
+add(top, 'span', 'chip sender company', 'Company');
+add(top, 'small', 'muted', ' ' + clock(x.c.created_at) + ' · #' + x.n);
+add(d, 'span', null, plain(x.c.body));
+a = add(d, 'div', 'acts');
 btn(a, 'Reply', '', function () { compose(x.n, ''); });
 btn(a, 'Mark seen', '', function () {
 var k = 'company.seen.' + x.n; if ((localStorage.getItem(k) || '') < x.c.created_at) localStorage.setItem(k, x.c.created_at);
@@ -317,10 +320,10 @@ items.rep = items.rep.filter(function (y) { return y.n !== x.n || y.c.created_at
 return d;
 }
 function infoItem(x) {
-var d = el('div', 'item'), s = d.appendChild(el('span')), a;
-s.appendChild(el('span', 'chip report', 'Report')); s.appendChild(el('span', null, ' '));
-a = s.appendChild(el('a', null, x.i.title)); a.href = '#t=' + x.n;
-d.appendChild(el('small', 'muted', ago(x.i.created_at) + ' ago · no badge, never notifies'));
+var d = el('div', 'item'), s = add(d, 'span'), a;
+add(s, 'span', 'chip report', 'Report'); add(s, 'span', null, ' ');
+a = add(s, 'a', null, x.i.title); a.href = '#t=' + x.n;
+add(d, 'small', 'muted', ago(x.i.created_at) + ' ago');
 return d;
 }
 function tokenBox(root) {

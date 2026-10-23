@@ -1,37 +1,76 @@
 {
  "schema": 1,
- "at": "2026-10-23T09:16:18.911558+00:00",
+ "at": "2026-10-23T09:50:10.811982+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T04:54:49-04:00"
+  "started": "2026-10-23T05:16:34-04:00"
  },
- "workers": [
+ "workers": [],
+ "recent": [
+  {
+   "name": "idris",
+   "task": "[build] paywall match and allow fixes",
+   "model": "opus",
+   "started": "2026-10-23T09:38:15.754Z",
+   "seconds": null,
+   "finished": "2026-10-23T09:50:10.497000+00:00"
+  },
   {
    "name": "odalys",
-   "task": "[build] Token first paint in app.js",
+   "task": "[build] additions C, D, D2 back ends",
    "model": "opus",
-   "started": "2026-10-23T08:55:08.226Z",
-   "seconds": 1270,
-   "finished": null
+   "started": "2026-10-23T09:38:10.954Z",
+   "seconds": null,
+   "finished": "2026-10-23T09:50:10.496000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[design] Ledger caption wording",
+   "model": "opus",
+   "started": "2026-10-23T09:28:55.094Z",
+   "seconds": null,
+   "finished": "2026-10-23T09:39:29.901000+00:00"
   },
   {
    "name": "idris",
    "task": "[build] AppShell package packet 2",
    "model": "opus",
-   "started": "2026-10-23T08:55:10.359Z",
-   "seconds": 1268,
-   "finished": null
-  }
- ],
- "recent": [
+   "started": "2026-10-23T09:17:21.332Z",
+   "seconds": null,
+   "finished": "2026-10-23T09:37:06.469000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[build] token first paint app.js",
+   "model": "opus",
+   "started": "2026-10-23T09:17:19.604Z",
+   "seconds": null,
+   "finished": "2026-10-23T09:28:44.749000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[review] recheck Ledger shots",
+   "model": "opus",
+   "started": "2026-10-23T09:26:43.398Z",
+   "seconds": null,
+   "finished": "2026-10-23T09:28:09.697000+00:00"
+  },
   {
    "name": "maren",
-   "task": "[design] Site v2 second pass and paywall options",
+   "task": "[design] Maren fixes from Ines review",
    "model": "opus",
-   "started": "2026-10-23T08:55:12.584Z",
+   "started": "2026-10-23T09:23:18.958Z",
    "seconds": null,
-   "finished": "2026-10-23T09:04:10.635000+00:00"
+   "finished": "2026-10-23T09:26:39.776000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[review] paywall pick and product pages",
+   "model": "opus",
+   "started": "2026-10-23T09:17:23.332Z",
+   "seconds": null,
+   "finished": "2026-10-23T09:23:11.962000+00:00"
   }
  ],
  "queue": {
@@ -79,33 +118,33 @@
     "text": "(waiting on Idris: Seatsolve Seating package: model, CSV import, cost function, seeded annealing, broken-rules..."
    }
   ],
-  "runnable_count": 19,
+  "runnable_count": 17,
   "blocked_count": 9
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
-   "resets_at": "2026-10-23T13:50:00.150331+00:00",
+   "pct": 3.0,
+   "resets_at": "2026-10-23T13:50:00.179052+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 100.0,
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 12.0,
-   "resets_at": "2026-10-25T07:00:00.150353+00:00",
+   "resets_at": "2026-10-25T07:00:00.179074+00:00",
    "used_words": "of your weekly allowance used",
    "left": 88.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 5.0,
-   "resets_at": "2026-10-25T07:00:00.150483+00:00",
+   "resets_at": "2026-10-25T07:00:00.179261+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T04:54:48.724933-04:00"
+  "read_at": "2026-10-23T05:16:33.828075-04:00"
  },
  "ui": {
-  "week_pct": 0.03,
+  "week_pct": 0.028,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -117,5 +156,7 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T05:09:48-04:00"
+ "next_tick": "2026-10-23T05:31:34-04:00",
+ "lanes": [],
+ "inbox": []
 }

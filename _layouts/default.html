@@ -226,7 +226,7 @@ img.portrait{width:120px;height:120px;border-radius:var(--r-l);flex:none;margin-
 @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(31,138,76,.45)}50%{box-shadow:0 0 0 5px rgba(31,138,76,0)}}
 @media (min-width:720px){.hero.two{grid-template-columns:3fr 2fr}.strip{grid-template-columns:1fr 1fr}}
 @media (min-width:880px){.report-grid{grid-template-columns:minmax(0,1.65fr) minmax(0,1fr)}.report-grid .panel.period{border-top:0;border-left:1px solid var(--line);padding:0 0 0 var(--s5);margin-top:0}}
-@media (max-width:540px){h1{font-size:var(--fs-5)}table{display:block;overflow-x:auto;max-width:100%}td,th{overflow-wrap:anywhere}img.portrait{width:84px;height:84px}.pager{grid-template-columns:1fr}.pager .next{grid-column:1}.tabs a{padding:6px 4px;font-size:var(--fs-1)}}
+@media (max-width:540px){h1{font-size:var(--fs-5)}table{display:block;overflow-x:auto;max-width:100%}td,th{overflow-wrap:anywhere}td:first-child,th:first-child{overflow-wrap:normal;min-width:7em}.subtabs{flex-wrap:nowrap;gap:var(--s4)}.subtabs a{font-size:var(--fs-1)}img.portrait{width:84px;height:84px}.pager{grid-template-columns:1fr}.pager .next{grid-column:1}.tabs a{padding:6px 4px;font-size:var(--fs-1)}}
 
 /* ---------- home (the chat): strip, composer, Now, conversation ---------- */
 /* Phone, top to bottom: the text strip, the composer, Now, the conversation, one line of links (section 2.1). */

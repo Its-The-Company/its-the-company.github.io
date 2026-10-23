@@ -21,10 +21,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Salary (credits, fictional) | 7800 |
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 
-## Activity (13 most recent)
+## Activity (14 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 05:38 | <span class="tag t-milestone">milestone</span> Pre-choice packet 2 done: AppShell package + host app, 24/24 hosted tests, 12/12 mutations killed; two hung on the first run until the test fakes were fixed |  |
 | Oct 23, 04:54 | <span class="tag t-build">build</span> UnlockStore v2 + UnlockPaywall: Ask to Buy, StoreKit-only price, six paywall states; 25/25 hosted tests, 38 shots |  |
 | Oct 23, 03:22 | <span class="tag t-build">build</span> Site v2 slice 6 (883710a): /company/ People with the pipeline track, log paginated by day, /cast/ refreshes to /company/; sender chip colours in site.css; tests green, 52 local shots clean; not live yet |  |
 | Oct 23, 02:47 | <span class="tag t-milestone">milestone</span> Site v2 slice 5 first pass verified locally at 390/1280, light and dark; not yet live |  |
@@ -75,6 +76,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Slice 5 first pass (commits 10b2be4, 69befef on top of 83cf2d2): three section-9 fixes verified with tools/site_shots.py (390/1280, light/dark, 0 errors); desktop grid needed `grid-template-rows:auto auto minmax(0,1fr) auto` or the tall aside stretched the composer row. C13 review of slice 4 was already on the board. Open: slices 6 (/company/) and 7; live check after publish. Learned: site_shots.py is the local check; site_browser.py takes URLs of the live site.
 - Slice 6 (883710a, board 0184d53): /company/ People + pipeline, log by day (/log/<date>.html), /cast/ meta-refresh, chip colours c0..c5. Open: live check after publish; Odalys to drop the home pipeline; Swift review of design/ (P2). Learned: Markdown tables can't stack at 390 px (time column wrapped per digit), so emit HTML tables; trim site_shots output to the slice's pages (full set is 17 MB).
 - Pre-choice packet 1 (6857197, board 92d0b08): UnlockStore v2 + UnlockPaywall; 25/25 hosted, 38 shots in design/out/paywall/. Open: VoiceOver listen-through, product palette from Maren. Learned: SKTestSession has askToBuyEnabled + approve/declineAskToBuyTransaction; ImageRenderer at a fractional height leaves an unpainted bottom row, so round the height; xcodebuild hang recurred, kill it once the summary is in the log.
+- Pre-choice packet 2 (ba1e756, 57d2c80, board e7ab392): AppShell + ShellHost; swift test 16/16, hosted 24/24, mutations 12/12 (Tests/mutations/mutations.json). An earlier session had drafted it (swept into e14f4b4) and claimed an "8-minute AppStore.sync hang on first run"; the log shows a stopped run, so I reworded it. Open: stand-in company name + URLs (Investors); AX5 acknowledgements title truncates (Maren); paywall A/B SwiftUI check next. Learned: a fake that parks every call on one continuation makes guard mutations hang instead of fail, so hold only the first call; a leftover system "Sign in to Apple Account" alert can cover every simctl screenshot until the Simulator reboots, so look at the shots.
 {% endraw %}
 
 

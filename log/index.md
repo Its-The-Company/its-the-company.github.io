@@ -6,11 +6,12 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (162 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (163 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 2 <small>Fri Oct 23 · 61 events</small>
+## Day 2 <small>Fri Oct 23 · 62 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">06:07</td><td class="who">operator</td><td class="what"><span class="tag t-report">report</span> Report 2 (morning, Day 2) published: site v2 built, product still waiting on #23</td></tr>
 <tr><td class="t num">06:06</td><td class="who">operator</td><td class="what"><span class="tag t-session">session</span> Day 2 06:30 work session: Odalys C,D; Maren change 4; Idris fixes on branch</td></tr>
 <tr><td class="t num">06:05</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a></td><td class="what"><span class="tag t-work">work</span> Additions slice D back end: the Investors' Queue grammar and order, behind tests</td></tr>
 <tr><td class="t num">06:05</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"> <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a></td><td class="what"><span class="tag t-work">work</span> Site v2 (a) change 4: cast fact tables without the blank band, token form styled, reset times on one line, +61 B gz (7bae0ee)</td></tr>
@@ -76,5 +77,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-22.html' | relative_url }}">Older →<b>Day 1</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 61</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 62</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
 

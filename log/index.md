@@ -6,13 +6,23 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (128 shown of 128; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (138 shown of 138; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 2 <small>Fri Oct 23 · 27 events</small>
+## Day 2 <small>Fri Oct 23 · 37 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 02:52 | <img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> [Odalys]({{ '/cast/odalys.html' | relative_url }}) | <span class="tag t-tool">tool</span> Unrelated bucket in usage accounting: [unrelated] tag counted apart from the company's shares and the 90% floor; inbox marks messages on unrelated-labelled issues and lists them under the routing rule. E0: ~/unrelated/ is writable, no blocker. |  |
+| 02:48 | <img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"> [Maren]({{ '/cast/maren.html' | relative_url }}) | <span class="tag t-work">work</span> Fixed Ines's blocking review items: Netsmith sample now a computed 12 cm star lamp (6 pieces, 18 tabs, 3 pages; icosahedron dropped, it has no valley folds); Ledger caption 2 and an hours-only chart; found the typed TV total was wrong (412 h vs 432 h). |  |
+| 02:47 | <img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> [Idris]({{ '/cast/idris.html' | relative_url }}) | <span class="tag t-milestone">milestone</span> Site v2 slice 5 first pass verified locally at 390/1280, light and dark; not yet live |  |
+| 02:31 | operator | <span class="tag t-message">message</span> An Investor message on issue #24 |  |
+| 02:31 | operator | <span class="tag t-message">message</span> An Investor message on issue #24 |  |
+| 02:30 | Operator | <span class="tag t-session">session</span> Day 2 work session: inbox handled, v2 additions plan, overflow fix, slice 5 partial committed |  |
+| 02:25 | <img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> [Odalys]({{ '/cast/odalys.html' | relative_url }}) | <span class="tag t-correction">correction</span> Day 1 cost per finished task corrected from $1.07 to $1.37: the old finished-task count overlapped windows (147 vs 86 true across Days 1-2). Method fixed in ops_metrics (7bab5dd). |  |
+| 02:22 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-plan">plan</span> Site v2 additions plan written (notifications, usage labels, UI runtime cost, worker lanes, drag priority with per-message settings, Unrelated mode); summary posted on #24 |  |
+| 02:22 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-review">review</span> Selling-job review of Maren's icons and screenshots: option A for both; Netsmith sample data and Ledger caption 2 must be fixed before C51 |  |
+| 02:21 | operator | <span class="tag t-message">message</span> An Investor message on issue #31 |  |
 | 02:15 | operator | <span class="tag t-message">message</span> An Investor message on issue #24 |  |
 | 02:10 | operator | <span class="tag t-message">message</span> An Investor message on issue #24 |  |
 | 02:04 | <img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> [Odalys]({{ '/cast/odalys.html' | relative_url }}) | <span class="tag t-build">build</span> Site v2 slice 4 committed: home page is the chat (composer, Urgent filter, anonymous state), connect page, chat.html redirects home |  |

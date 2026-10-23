@@ -1,52 +1,76 @@
 {
  "schema": 1,
- "at": "2026-10-23T06:16:04.227640+00:00",
+ "at": "2026-10-23T06:52:55.777225+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T01:45:08-04:00"
+  "started": "2026-10-23T02:16:17-04:00"
  },
  "workers": [],
  "recent": [
   {
    "name": "odalys",
-   "task": "[build] Site v2 split and home chat",
+   "task": "[tools] Unrelated usage tag and workspace",
    "model": "opus",
-   "started": "2026-10-23T05:45:38.573Z",
+   "started": "2026-10-23T06:41:21.327Z",
    "seconds": null,
-   "finished": "2026-10-23T05:56:47.889000+00:00"
+   "finished": "2026-10-23T06:52:49.588000+00:00"
   },
   {
-   "name": "wrenna",
-   "task": "[test] Playwright setup and site QA",
-   "model": "sonnet",
-   "started": "2026-10-23T05:53:56.493Z",
-   "seconds": null,
-   "finished": "2026-10-23T05:55:07.734000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[design] Site v2 visual system",
+   "name": "ines",
+   "task": "[plan] Add dependencies to priority plan",
    "model": "opus",
-   "started": "2026-10-23T05:45:41.338Z",
+   "started": "2026-10-23T06:47:59.682Z",
    "seconds": null,
-   "finished": "2026-10-23T05:54:46.670000+00:00"
+   "finished": "2026-10-23T06:50:21.003000+00:00"
   },
   {
    "name": "maren",
-   "task": "[design] App icon and screenshot system",
+   "task": "[design] Fix icon/screenshot review errors",
    "model": "opus",
-   "started": "2026-10-23T05:45:43.603Z",
+   "started": "2026-10-23T06:41:22.760Z",
    "seconds": null,
-   "finished": "2026-10-23T05:53:53.427000+00:00"
+   "finished": "2026-10-23T06:48:32.250000+00:00"
   },
   {
-   "name": "wrenna",
-   "task": "[test] Playwright setup and site QA",
-   "model": "sonnet",
-   "started": "2026-10-23T05:45:45.426Z",
+   "name": "idris",
+   "task": "[design] Finish slice 5, slice 4 review",
+   "model": "opus",
+   "started": "2026-10-23T06:41:19.591Z",
    "seconds": null,
-   "finished": "2026-10-23T05:45:46.031Z"
+   "finished": "2026-10-23T06:47:56.141000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] Add dependencies to priority plan",
+   "model": "opus",
+   "started": "2026-10-23T06:41:24.350Z",
+   "seconds": null,
+   "finished": "2026-10-23T06:41:24.805Z"
+  },
+  {
+   "name": "idris",
+   "task": "[review] C13 review slice 4, then slice 5",
+   "model": "opus",
+   "started": "2026-10-23T06:17:02.842Z",
+   "seconds": null,
+   "finished": "2026-10-23T06:26:28.936000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] Overflow fix and ops metrics",
+   "model": "opus",
+   "started": "2026-10-23T06:17:05.027Z",
+   "seconds": null,
+   "finished": "2026-10-23T06:25:10.866000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] Site v2 additions plan",
+   "model": "opus",
+   "started": "2026-10-23T06:16:59.865Z",
+   "seconds": null,
+   "finished": "2026-10-23T06:23:29.534000+00:00"
   }
  ],
  "queue": {
@@ -64,12 +88,12 @@
     "text": "Wrenna: site v2 slice 1 DONE 2026-10-23 (954e2b8, measure.md; not measured: throttled 4G, home with token, composer..."
    },
    {
-    "kind": "review",
-    "text": "Idris: C13 review of slice 4 (bcf53f1: tools/site/pages.py home/connect/requests, tools/site/assets/app.js);..."
-   },
-   {
     "kind": "test",
     "text": "Wrenna: slice 8 QA of slice 4 once live: /, /connect.html, /chat.html redirect, /requests.html at 390 and 1280;..."
+   },
+   {
+    "kind": "design",
+    "text": "Maren: designer probation: (a) second pass on site v2 inside the approved system (ops/plans/site-v2.md section 9:..."
    }
   ],
   "blocked": [
@@ -99,18 +123,18 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 12.0,
-   "resets_at": "2026-10-23T08:50:00.305441+00:00"
+   "pct": 16.0,
+   "resets_at": "2026-10-23T08:49:59.827052+00:00"
   },
   "weekly": {
    "pct": 9.0,
-   "resets_at": "2026-10-25T07:00:00.305460+00:00"
+   "resets_at": "2026-10-25T06:59:59.827068+00:00"
   },
   "fable": {
    "pct": 5.0,
-   "resets_at": "2026-10-25T07:00:00.305573+00:00"
+   "resets_at": "2026-10-25T06:59:59.827197+00:00"
   },
-  "read_at": "2026-10-23T01:45:07.886999-04:00"
+  "read_at": "2026-10-23T02:16:17.456682-04:00"
  },
- "next_tick": "2026-10-23T02:00:08-04:00"
+ "next_tick": "2026-10-23T02:31:17-04:00"
 }

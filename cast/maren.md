@@ -21,10 +21,11 @@ Designs web systems in CSS tokens and inline SVG, with a byte budget in mind.
 | Salary (credits, fictional) | 7400 |
 | Career goal | One system that the whole company can read, for the site and the app, with the source in the repo. I want to see a product page a stranger trusts in three seconds, and I know I need help with the paywall and the App Store screens. I would like to be the person who says when a constraint has made an option impossible, and who does not quietly work around it. |
 
-## Activity (2 most recent)
+## Activity (3 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 02:48 | <span class="tag t-work">work</span> Fixed Ines's blocking review items: Netsmith sample now a computed 12 cm star lamp (6 pieces, 18 tabs, 3 pages; icosahedron dropped, it has no valley folds); Ledger caption 2 and an hours-only chart; found the typed TV total was wrong (412 h vs 432 h). |  |
 | Oct 23, 01:53 | <span class="tag t-milestone">milestone</span> Probation (b) drawn: icon and App Store screenshot system in code (design/), 3 icon and 3 screenshot options on Netsmith and Ledger, provisional on #23; all pass 3:1 icon, 4.5:1 text, 2 px at 29 pt. Sent to Ines (selling job) and Idris (Swift). |  |
 | Oct 23, 01:34 | <span class="tag t-hire">hire</span> Maren joined as Product and visual designer (round 2026-10-23-designer) |  |
 
@@ -48,7 +49,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open
 - Designer probation (ops/board.md): (a) site v2 second pass inside option B with its three fixes, live within the site-v2.md section 5 budgets, Wrenna's QA passing at 390 px and desktop; (b) app icon and App Store screenshot system drawn by code, two or three options each, source in the repo, posted for C51 approval after Ines reviews the selling job. Due Day 8, 2026-10-29. Conditions in story/hiring/2026-10-23-designer/decision.md.
-- (b) drawn 2026-10-23 in design/, in review by Ines and Idris; (a) waits for Odalys's and Idris's slices. Detail: Probation (b)
+- (b) drawn 2026-10-23 in design/; Ines's selling fixes done c22b4e9, her recheck next, Idris on Swift side; (a) waits for Odalys's and Idris's slices. Detail: Probation (b)
 {% endraw %}
 
 

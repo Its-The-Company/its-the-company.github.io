@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src 'self' https://api.github.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'self'; form-action 'self' https://github.com">
 <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
 <meta name="description" content="{{ page.description | default: site.description }}">
@@ -401,6 +401,159 @@ ul.q{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
 
 /* chat and Now panel (placeholder styling) */
 {% raw %}/* Empty since slice 5: the chat and Now styles are part of the system above. build.py still splits here. */
+
+/* chat v3 (Maren, ops/plans/site-chat-v3.md; source ops/site-checks/v3/v3.css). Every class starts with cv-. */
+
+/* ---------- conversation tabs: one tab per thread, Home first, + last ---------- */
+.cv-tabs{position:sticky;top:0;z-index:6;display:flex;gap:var(--s1);overflow-x:auto;scrollbar-width:none;
+  margin:var(--s3) calc(-1*var(--s4)) 0;padding:var(--s2) var(--s4);background:var(--page);border-bottom:1px solid var(--line)}
+.cv-tabs::-webkit-scrollbar{display:none}
+.cv-tab{flex:none;display:inline-flex;align-items:center;gap:6px;max-width:168px;min-height:40px;padding:0 var(--s3);
+  border:1px solid var(--line);border-radius:var(--r-m);background:var(--bg);color:var(--muted);font:inherit;font-size:var(--fs-1);font-weight:600;cursor:pointer}
+.cv-tab .cv-t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cv-tab .cv-n{font-weight:400;font-variant-numeric:tabular-nums}
+.cv-tab[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.cv-tab .cv-badge{min-width:20px;padding:0 6px;border-radius:var(--r-pill);background:var(--hot);color:var(--bg);font-size:var(--fs-0);line-height:20px;text-align:center}
+.cv-tab .cv-x{margin-right:calc(-1*var(--s2));width:28px;height:28px;display:inline-grid;place-items:center;border-radius:var(--r-s);opacity:.8}
+.cv-tab.cv-new{color:var(--accent);font-size:var(--fs-3);padding:0 var(--s3)}
+
+/* ---------- thread head: sticky under the tabs ---------- */
+.cv-head{position:sticky;top:var(--cv-tabs-h,57px);z-index:5;display:flex;align-items:center;gap:var(--s2);margin:0 calc(-1*var(--s4));
+  padding:var(--s2) var(--s4);background:var(--page);border-bottom:1px solid var(--line)}
+.cv-head h2{flex:1;min-width:0;margin:0;font-size:var(--fs-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cv-head .cv-dl{color:var(--hot);font-weight:700;font-size:var(--fs-0);white-space:nowrap}
+/* The pinned question: shown only when the latest Investor message has scrolled above the head. */
+.cv-pin{display:flex;gap:var(--s2);align-items:baseline;width:100%;margin:0;padding:6px var(--s3);border:0;border-left:3px solid var(--accent);
+  background:var(--accent-soft);color:var(--ink);font:inherit;font-size:var(--fs-0);text-align:left;cursor:pointer}
+.cv-pin b{flex:none}.cv-pin span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* ---------- history: oldest at the top, newest at the bottom ---------- */
+.cv-log{display:grid;gap:var(--s3);padding:var(--s3) 0 var(--s4)}
+.cv-earlier{justify-self:center;min-height:36px;padding:0 var(--s4);border:1px solid var(--line);border-radius:var(--r-pill);background:var(--bg);color:var(--muted);font:inherit;font-size:var(--fs-0);font-weight:600}
+.cv-day{justify-self:center;font-size:var(--fs-0);color:var(--muted);font-weight:600}
+/* Full message bodies (no 600-character cut), markdown-lite rendered with textContent only. */
+.cv-msg{display:grid;gap:2px;max-width:92%;min-width:0;justify-self:start}
+.cv-msg.cv-inv{justify-self:end}
+.cv-msg .cv-from{display:flex;align-items:baseline;gap:var(--s2);padding:0 var(--s1);font-size:var(--fs-0);color:var(--muted)}
+.cv-msg.cv-inv .cv-from{justify-content:flex-end}
+.cv-body{padding:var(--s2) var(--s3);border:1px solid var(--co-line);border-radius:var(--r-l);border-top-left-radius:var(--s1);background:var(--co-bg);color:var(--ink);overflow-wrap:anywhere;font-size:var(--fs-1)}
+.cv-inv .cv-body{background:var(--accent);color:var(--accent-ink);border-color:transparent;border-radius:var(--r-l);border-top-right-radius:var(--s1)}
+.cv-body p,.cv-body ul,.cv-body ol{margin:0 0 var(--s2)}.cv-body>:last-child{margin-bottom:0}
+.cv-body ul,.cv-body ol{padding-left:1.25em}
+.cv-body b.cv-h{display:block;margin:var(--s2) 0 var(--s1)}
+.cv-body code{font-size:.9em;padding:0 3px;border-radius:4px;background:var(--soft-2)}
+.cv-inv .cv-body code{background:rgba(255,255,255,.18)}
+.cv-body pre{margin:0 0 var(--s2);padding:var(--s2);border-radius:var(--r-s);background:var(--soft-2);overflow-x:auto;font:var(--fs-0)/1.45 var(--mono);white-space:pre}
+.cv-body blockquote{margin:0 0 var(--s2);padding-left:var(--s2);border-left:3px solid var(--line);color:var(--muted)}
+.cv-inv .cv-body a{color:inherit}
+/* A question with an answer under it is clamped to 6 lines, so the pair fits one phone screen. */
+.cv-clamp{display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden}
+.cv-quoted{display:inline-block;margin-top:var(--s1);font-size:var(--fs-0);color:inherit;opacity:.8;background:none;border:0;padding:0;text-decoration:underline;font-family:inherit}
+/* The automatic receipt is one quiet line, not a bubble. */
+.cv-sys{justify-self:center;display:flex;align-items:center;gap:6px;max-width:100%;padding:2px var(--s3);border-radius:var(--r-pill);background:var(--soft-2);color:var(--muted);font-size:var(--fs-0)}
+.cv-sys .cv-ok{color:var(--ok);font-weight:700}
+/* Waiting for the answer: one live line under the question. */
+.cv-wait{justify-self:start;display:flex;align-items:center;gap:var(--s2);padding:var(--s2) var(--s3);border:1px dashed var(--line);border-radius:var(--r-l);font-size:var(--fs-0);color:var(--muted)}
+.cv-dot{width:8px;height:8px;border-radius:50%;background:var(--ok);flex:none;animation:cv-pulse 1.6s ease-in-out infinite}
+@keyframes cv-pulse{50%{opacity:.35}}
+.cv-jump{position:fixed;left:50%;transform:translateX(-50%);bottom:84px;z-index:6;min-height:36px;padding:0 var(--s4);border:0;border-radius:var(--r-pill);background:var(--ink);color:var(--bg);font:inherit;font-size:var(--fs-0);font-weight:700;box-shadow:var(--shadow)}
+
+/* ---------- the dock: collapsed bar or open composer, pinned to the bottom on a phone ---------- */
+.cv-dock{position:fixed;left:0;right:0;bottom:0;z-index:7;background:var(--bg);border-top:1px solid var(--line);box-shadow:0 -6px 24px rgba(20,24,40,.12);
+  padding:var(--s2) var(--s4) calc(var(--s2) + env(safe-area-inset-bottom))}
+.cv-bar{display:flex;align-items:center;gap:var(--s2)}
+.cv-bar .cv-fake{flex:1;min-width:0;min-height:44px;display:flex;align-items:center;padding:0 var(--s3);border:1px solid var(--line);border-radius:var(--r-pill);background:var(--soft);color:var(--muted);font:inherit;font-size:var(--fs-2);text-align:left;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.cv-send{flex:none;width:44px;height:44px;display:grid;place-items:center;border:0;border-radius:50%;background:var(--accent);color:var(--accent-ink);font:inherit;font-size:var(--fs-3);font-weight:800}
+.cv-send:disabled{background:var(--soft-2);color:var(--muted)}
+.cv-dock textarea{display:block;width:100%;min-height:44px;max-height:40vh;padding:var(--s2) var(--s3);border:1px solid var(--accent);border-radius:var(--r-m);background:var(--bg);color:var(--ink);font:inherit;font-size:var(--fs-2);resize:none}
+.cv-to{display:flex;align-items:center;gap:var(--s2);margin-bottom:var(--s2);font-size:var(--fs-0);color:var(--muted)}
+.cv-to b{color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cv-tools{display:flex;align-items:center;gap:var(--s2);margin-top:var(--s2)}
+.cv-tool{min-height:36px;display:inline-flex;align-items:center;gap:6px;padding:0 var(--s3);border:1px solid var(--line);border-radius:var(--r-pill);background:var(--bg);color:var(--ink);font:inherit;font-size:var(--fs-0);font-weight:600}
+.cv-tool[aria-pressed="true"]{background:var(--hot-bg);color:var(--hot);border-color:transparent}
+.cv-tools .cv-send{margin-left:auto}
+.cv-hide{color:var(--muted)}
+.cv-dock .cv-state{margin:var(--s1) 0 0;font-size:var(--fs-0);font-weight:600}
+.cv-state.cv-sent{color:var(--ok)}.cv-state.cv-failed{color:var(--hot)}
+main.cv-desk{padding-bottom:96px}
+main.cv-desk.cv-open{padding-bottom:200px}
+
+/* ---------- Home tab: the glance ---------- */
+.cv-glance{display:grid;grid-template-columns:1fr 1fr;gap:var(--s2);margin:var(--s3) 0}
+.cv-tile{display:grid;gap:2px;padding:var(--s3);border:1px solid var(--line);border-radius:var(--r-m);background:var(--bg);text-decoration:none;color:var(--ink)}
+.cv-tile small{color:var(--muted);font-size:var(--fs-0);font-weight:600}
+.cv-tile b{font-size:var(--fs-4);line-height:1.1;font-variant-numeric:tabular-nums}
+.cv-tile .cv-sub{font-size:var(--fs-0);color:var(--muted)}
+.cv-meter{height:6px;border-radius:3px;background:var(--soft-2);overflow:hidden;margin-top:var(--s1)}
+.cv-meter i{display:block;height:100%;background:var(--accent)}
+.cv-tile.cv-live b{display:flex;align-items:center;gap:var(--s2);font-size:var(--fs-3)}
+.cv-sec{margin:var(--s5) 0 var(--s2);display:flex;align-items:baseline;gap:var(--s2);font-size:var(--fs-3)}
+.cv-sec .cv-count{font-size:var(--fs-1);color:var(--muted);font-weight:600}
+.cv-list{display:grid;margin:0;padding:0;list-style:none;border:1px solid var(--line);border-radius:var(--r-l);background:var(--bg);overflow:hidden}
+.cv-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px var(--s3);padding:var(--s3) var(--s4);color:var(--ink);text-decoration:none;min-height:56px}
+.cv-list>li+li{border-top:1px solid var(--line)}
+.cv-row .cv-rt{font-weight:700;font-size:var(--fs-1);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cv-row .cv-rs{grid-column:1/-1;font-size:var(--fs-1);color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.cv-row .cv-rm{font-size:var(--fs-0);color:var(--muted);white-space:nowrap}
+.cv-row.cv-unread .cv-rt::before{content:"";display:inline-block;width:8px;height:8px;margin-right:6px;border-radius:50%;background:var(--accent);vertical-align:1px}
+.cv-due{font-size:var(--fs-0);font-weight:700;white-space:nowrap;color:var(--warm)}.cv-due.cv-soon{color:var(--hot)}
+
+/* ---------- first-run card (home, no token) and the setup wizard (/connect.html) ---------- */
+.cv-first{margin-top:var(--s3);padding:var(--s4);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:var(--r-l);background:var(--bg);box-shadow:var(--shadow)}
+.cv-first h2{margin:0 0 var(--s1);font-size:var(--fs-3)}
+.cv-first p{margin:0 0 var(--s3);color:var(--muted);font-size:var(--fs-1)}
+.cv-first .cv-acts{display:flex;gap:var(--s2);flex-wrap:wrap}
+.cv-wiz{margin:var(--s3) 0 var(--s6)}
+.cv-steps{display:flex;gap:4px;margin:0 0 var(--s2);padding:0;list-style:none}
+.cv-steps li{flex:1;height:6px;border-radius:3px;background:var(--soft-2)}
+.cv-steps li.cv-done{background:var(--accent)}.cv-steps li.cv-here{background:var(--ink)}
+.cv-step{padding:var(--s4);border:1px solid var(--line);border-radius:var(--r-l);background:var(--bg);box-shadow:var(--shadow)}
+.cv-step .cv-of{margin:0;font-size:var(--fs-0);font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.cv-step h2{margin:var(--s1) 0 var(--s2);font-size:var(--fs-4)}
+.cv-step p,.cv-step li{font-size:var(--fs-2)}
+.cv-step .cv-do{display:grid;gap:var(--s2);margin-top:var(--s4)}
+.cv-step .cv-do .btn{width:100%}
+.cv-back{background:none;border:0;padding:0;color:var(--accent);font:inherit;font-size:var(--fs-1);font-weight:600;min-height:44px}
+.cv-filled{margin:var(--s3) 0;padding:0;list-style:none;display:grid;gap:var(--s1)}
+.cv-filled li{display:flex;gap:var(--s2);font-size:var(--fs-1)}
+.cv-filled .cv-ok{color:var(--ok);font-weight:800}
+/* The schematic: a drawing of the one GitHub control the Investor sets by hand, built from boxes and text (C9). */
+.cv-schem{margin:var(--s3) 0;padding:var(--s3);border:1px solid var(--line);border-radius:var(--r-m);background:var(--soft);font-size:var(--fs-1)}
+.cv-schem .cv-cap{margin:0 0 var(--s2);font-size:var(--fs-0);font-weight:700;color:var(--muted)}
+.cv-radio{display:flex;align-items:center;gap:var(--s2);padding:6px var(--s2);border-radius:var(--r-s)}
+.cv-radio i{width:16px;height:16px;border-radius:50%;border:2px solid var(--muted);flex:none}
+.cv-radio.cv-pick{background:var(--bg);outline:2px solid var(--accent)}
+.cv-radio.cv-pick i{border-color:var(--accent);box-shadow:inset 0 0 0 3px var(--bg);background:var(--accent)}
+.cv-radio .cv-arrow{margin-left:auto;color:var(--accent);font-weight:800}
+.cv-pickrepo{margin:var(--s1) 0 0 30px;padding:6px var(--s2);border:1px solid var(--line);border-radius:var(--r-s);background:var(--bg);font-family:var(--mono);font-size:var(--fs-0)}
+.cv-checks{margin:var(--s3) 0;padding:0;list-style:none;display:grid;gap:var(--s2)}
+.cv-checks li{display:grid;grid-template-columns:24px 1fr;gap:var(--s2);font-size:var(--fs-1)}
+.cv-checks .cv-mk{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:var(--fs-0)}
+.cv-checks .cv-pass .cv-mk{background:var(--ok-bg);color:var(--ok)}
+.cv-checks .cv-fail .cv-mk{background:var(--hot-bg);color:var(--hot)}
+.cv-checks .cv-todo .cv-mk{background:var(--soft-2);color:var(--muted)}
+.cv-fix{grid-column:2;margin-top:var(--s1);padding:var(--s2) var(--s3);border-radius:var(--r-s);background:var(--hot-bg);color:var(--ink);font-size:var(--fs-1)}
+
+/* ---------- desktop from 880 px: tabs and thread on the left, the glance on the right ---------- */
+@media (min-width:880px){
+  main.cv-desk{display:grid;grid-template-columns:minmax(0,1fr) var(--side);column-gap:var(--s6);align-items:start;padding-bottom:var(--s6)}
+  main.cv-desk .cv-side{position:sticky;top:var(--s3)}
+  .cv-tabs{margin:var(--s3) 0 0;padding:var(--s2) 0}
+  .cv-head{margin:0;padding:var(--s2) 0}
+  .cv-dock{position:sticky;bottom:0;margin-top:var(--s3);border:1px solid var(--line);border-radius:var(--r-l);padding:var(--s3) var(--s4)}
+  .cv-msg{max-width:80%}
+  .cv-glance{grid-template-columns:1fr 1fr;margin-top:var(--s3)}
+}
+@media (max-width:879px){.cv-side{display:none}}
+@media (prefers-reduced-motion:reduce){.cv-dot{animation:none}}
+/* chat v3 build fixes (Idris): "+" is pinned outside the tab scroller (spec 1.1); the settings row; the desktop
+   grid places the column and the side by name, so the hidden v2 parts of main cannot take a cell. */
+.cv-tabs{overflow:visible}
+.cv-scroll{display:flex;gap:var(--s1);flex:1;min-width:0;overflow-x:auto;scrollbar-width:none}
+.cv-scroll::-webkit-scrollbar{display:none}
+.cv-set{margin:var(--s1) 0 0}
+.cv-set .chat-status{font-size:var(--fs-0)}
+@media (min-width:880px){main.cv-desk>.cv-col{grid-column:1;grid-row:1}main.cv-desk>.cv-side{grid-column:2;grid-row:1}}
 {% endraw %}
 /* investors/site/theme.css */
 {% raw %}/* The Investors' styles for the site. Anything here is added after the site's own styles, so it wins.
@@ -431,7 +584,7 @@ ul.q{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
 <main id="main"{% if page.url == "/" %} class="home"{% endif %}{% if page.section == "reports" or page.section == "records" %} class="ix"{% endif %}>
 {{ content }}
 </main>
-<footer><span>{{ site.title }}</span><a href="{{ '/privacy.html' | relative_url }}">Privacy</a><a href="{{ '/support.html' | relative_url }}">Support</a><a href="{{ '/press.html' | relative_url }}">Press kit</a><a href="{{ '/subscribe.html' | relative_url }}">Subscribe (RSS)</a></footer>
+<footer><span>{{ site.title }}</span>{% if page.url == "/" %}<a href="{{ '/connect.html' | relative_url }}#setup">Investor setup</a>{% endif %}<a href="{{ '/privacy.html' | relative_url }}">Privacy</a><a href="{{ '/support.html' | relative_url }}">Support</a><a href="{{ '/press.html' | relative_url }}">Press kit</a><a href="{{ '/subscribe.html' | relative_url }}">Subscribe (RSS)</a></footer>
 <script src="{{ '/assets/app.js' | relative_url }}"></script>
 </body>
 </html>

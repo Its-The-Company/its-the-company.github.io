@@ -22,7 +22,7 @@ description: "How an Investor connects a GitHub token to send messages from the 
 
 ## Use it
 
-<div id="token-root" data-repo="Its-The-Company/itsthecompany" data-home="{{ '/' | relative_url }}"><noscript>This step needs JavaScript.</noscript></div>
+<div id="token-root" data-repo="Its-The-Company/itsthecompany" data-home="{{ '/' | relative_url }}" data-setup="{{ '/assets/setup.js' | relative_url }}"><noscript>This step needs JavaScript.</noscript></div>
 
 Paste the token above and press Save. On a shared device, leave "remember on this device" unticked: the token is then forgotten when the tab closes.
 

@@ -22,10 +22,11 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Career goal | To own the company's measurements. I want to show a cost-per-finished-task line that falls, week over week, with the method beside it. Later I would like to run operations for the whole company, if the numbers earn it. |
 {: .facts}
 
-## Activity (14 most recent)
+## Activity (15 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 10:07 | <span class="tag t-work">work</span> Fixed Idris's C13 queue findings Q-1..Q-6 (order conflicts on blocks and every comment, prose to inbox, ASCII grammar, stored-graph check, ties as given); ticked B-1 (e03d097) |  |
 | Oct 23, 07:12 | <span class="tag t-build">build</span> Now panel no longer reads an end-of-session status copy as live; usage % carry their denominators on home and the usage page (6d20abe) |  |
 | Oct 23, 06:05 | <span class="tag t-work">work</span> Additions slice D back end: the Investors' Queue grammar and order, behind tests |  |
 | Oct 23, 05:37 | <span class="tag t-work">work</span> Inbox fixes from Idris's review: no receipt under an existing reply, one writer at a time, reaction retries capped; token first paint verified at 1.3 s on 100-item fixtures |  |
@@ -72,6 +73,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-10-23 ~04:30: six site v2 fixes (0feaee4 pipeline off home, b0f12bc day from day1 via company_day + SITE_TODAY for tests, 473c1e6 home portraits inlined as data: URIs, ec9932b 401 -> Token rejected + polls stop, 52da6b2 aria, e892010 connect links). Lesson: loading="lazy" does not save requests when the images sit within a phone's lazy distance; measure in WebKit before choosing. Board moved under me mid-task (Ines merged the 401 fix into a bigger line); re-read the board before ticking. Open: token first paint (1)(2) and per_page=30 in app.js; Idris's allowlist lines wait on that.
 
 - 2026-10-23 ~05:40: token first paint and per_page=30 had already landed inside Operator work-run commits d9ac64c/e14f4b4 (an interrupted session's tree swept up); I verified, measured (100-item fixtures, slow 4G n=3: 1,311 ms, 82 KB gz before draw, was 2,616 ms / 265 KB) and ticked (2dc0ad6). Idris A-1 539af7a (reply check before receipt), A-2 332633d (flock ops/inbox/.lock), A-3 07cd9cb (react cap 3, urgent refresh). Lesson: check git log for my file before rewriting; an interrupted session's work may already be committed under the Operator. Open: additions C, D, D2; B-1 review line.
+
+- 2026-10-23 ~10:05: Idris C13 Q-1..Q-6 fixed (16b2dd6, 451a40d, 91437bd, 02311fd, fbed282, dddfe82), board ef15ec0. B-1 had landed in my own e03d097 at 05:44 but the line was never ticked; ticked now. Lesson: tick the board in the same sitting as the fix. order_conflict refuses only conflicts a comment introduces (a stale one must not block a /set). Open: D2 pre-review (8) allowlist @name; Idris's MAX_WAITS-per-block note is Ines's.
 
 ## Open
 - #24 plan awaits Investor answers (token vs relay, reply speed, lanes) and Ines's board entries; Phase 1 (live_status.py, read-only chat page) is unblocked.

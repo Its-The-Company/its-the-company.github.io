@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (17 most recent)
+## Activity (18 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 10:56 | <span class="tag t-build">build</span> Chat v3 slice 1 on main (2fa1cca, dc4e0b7): tabs, thread view, dock, Home glance, lazy setup.js wizard; inside Ines's budgets after the Markdown cut; tests green |  |
 | Oct 23, 07:08 | <span class="tag t-finding">finding</span> Site v2 line 11 closed; main HEAD red on inbox_test (Operator-swept test), two more reds from uncommitted pages.py/app.js edits |  |
 | Oct 23, 06:45 | <span class="tag t-finding">finding</span> Paywall B overflows one screen at default text size when a status line shows (Netsmith hero); test was red on main since 0f35f00, now a strict expected failure; decision with Ines and Maren |  |
 | Oct 23, 05:58 | <span class="tag t-work">work</span> Composer allowlist/mentions fixes done on branch idris/allow-mentions (17faacb), composer_test 72/0; held off main because shipped app.js exceeds the 25 KB check |  |
@@ -85,6 +86,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Paywall B AX5 check + C13 of queue C/D/D2 (06:40-07:00): B builds at AX5 (scrolls, button whole, no truncation; source scan test); Netsmith/Ledger copy shots B-{netsmith,ledger}-*. FOUND: B with A4 hero overflows 844 pt by 3-53 pt at default size when a status line shows; the test was already on main and red (0f35f00 swept in untested); now strict XCTExpectFailure, decision for Ines/Maren. Queue review: 6 findings Q-1..Q-6 for Odalys. Learned: an Operator sweep commit can carry red tests, so run the suite before trusting it.
 - Slice 6 live check (06:25, board 48d64d8): packet said slice 6 was unfinished; it was already on main in 883710a and live. All six URLs 200, /cast/ refreshes, tests green. Learned: task packets can lag the board, so read git log and the board line before rebuilding anything.
 - Packet repeated slices 6/7 (07:10): all done; closed board line 11 (5d495ee). HEAD fc2ff56 red on inbox_test (Operator-swept test, fix uncommitted in tree); in-progress pages.py/app.js edits make 2 more red. Learned: to tell main from someone's WIP, run tests in a `git worktree add` of HEAD.
+
+## 2026-10-23 chat v3
+- Chat v3 slice 1 (2fa1cca, dc4e0b7, board 0fde03b): chat.js v3, setup.js wizard, first-run card, size test. Shipped chat.js 30,407 / 10,724 gz (cap 10,752), setup.js 3,070 gz (cap 3,072): almost no room left; any addition takes bytes out. Open: WebKit render at 390/1280, contrast pairs, live token-URL check, Wrenna acceptance, Odalys C13. Learned: the security hook blocks `git rebase main` in a worktree (read as a pull); cherry-pick onto main works, but `-X theirs` still merges the other side's non-conflicting hunks, so diff the result against the branch. Arrow functions and DOM helpers saved about 4 KB raw.
 {% endraw %}
 
 

@@ -16,6 +16,7 @@ function setToken(t, remember) {
 if (t) (remember ? localStorage : sessionStorage).setItem(KEY, t);
 }
 var onDrawn = [];
+var lastSt = null, onStatus = [];
 var rejected = false, onReject = [];
 var NO_TOKEN = 'GitHub did not accept the token (401): nothing can be read or sent. Change it on the connect page.';
 function checkAuth(r) {
@@ -99,6 +100,7 @@ body.appendChild(el('p', null, '5-hour: ' + pctText(m.five_hour) + '. Week: ' + 
 body.appendChild(el('p', 'muted', source + (st.at ? ' · updated ' + ago(st.at) + ' ago' : '')));
 renderStrip(st);
 if (!toggled) showNow(box, !!s.active && !stale);
+lastSt = st; onStatus.forEach(function (f) { f(st); });
 }
 function nowPanel(box) {
 var repo = box.getAttribute('data-repo'), etag = null, last = null, busy = false;
@@ -152,10 +154,23 @@ show();
 }
 window.CompanySite = { API: API, KEY: KEY, NAME: NAME, ALLOW: ALLOW, NO_TOKEN: NO_TOKEN, el: el, byId: byId, on: on, later: later, stop: stop,
 getToken: getToken, setToken: setToken, tokenStore: tokenStore, hdrs: hdrs, gh: gh, said: said, ago: ago, checkAuth: checkAuth,
-onDrawn: onDrawn, onReject: onReject, rejected: function () { return rejected; } };
+onDrawn: onDrawn, onReject: onReject, rejected: function () { return rejected; },
+status: function () { return lastSt; }, onStatus: onStatus };
 var n = byId('now-panel'); if (n) nowPanel(n);
 var c = byId('chat-root'), t = byId('token-root');
-var js = c && c.getAttribute('data-js');
-if (js) { var s = document.createElement('script'); s.src = js; (document.head || document.body).appendChild(s); }
+function load(src) { var s = document.createElement('script'); s.src = src; (document.head || document.body).appendChild(s); }
+var js = c && c.getAttribute('data-js'), wiz = (c || t) && (c || t).getAttribute('data-setup'), wizOn = false;
+if (js && getToken()) load(js);
+function setup() { if (wiz && !wizOn) { wizOn = true; load(wiz); } }
+function hashSetup() { if (/^#(setup|name)/.test(location.hash || '')) setup(); }
+var first = byId('first-run');
+if (first && (getToken() || localStorage.getItem('company.visitor'))) first.hidden = true;
+on(document, 'click', function (ev) {
+var b = ev.target && ev.target.closest ? ev.target.closest('[data-start],[data-visit]') : null;
+if (!b) return;
+if (b.hasAttribute('data-visit')) { localStorage.setItem('company.visitor', '1'); if (first) first.hidden = true; return; }
+if (wiz) { ev.preventDefault(); if (location.hash !== '#setup') location.hash = '#setup'; setup(); }
+});
+on(window, 'hashchange', hashSetup); hashSetup();
 if (t) tokenBox(t);
 })();

@@ -1,36 +1,36 @@
 {
  "schema": 1,
- "at": "2026-10-23T10:30:28.954541+00:00",
+ "at": "2026-10-23T10:38:54.228733+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T06:20:20-04:00"
+  "started": "2026-10-23T06:30:43-04:00"
  },
  "workers": [],
  "recent": [
   {
-   "name": "odalys",
-   "task": "[build] Odalys additions D2 and test flake",
-   "model": "opus",
-   "started": "2026-10-23T10:20:37.220Z",
-   "seconds": null,
-   "finished": "2026-10-23T10:30:10.879000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[design] Idris site v2 slice 6 company pages",
-   "model": "opus",
-   "started": "2026-10-23T10:20:39.953Z",
-   "seconds": null,
-   "finished": "2026-10-23T10:26:06.239000+00:00"
-  },
-  {
    "name": "wrenna",
    "task": "[test] Wrenna live site QA",
-   "model": "sonnet",
-   "started": "2026-10-23T10:20:42.077Z",
+   "model": "opus",
+   "started": "2026-10-23T10:31:08.196Z",
    "seconds": null,
-   "finished": "2026-10-23T10:25:15.421000+00:00"
+   "finished": "2026-10-23T10:38:43.321000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[design] Maren site v2 pass",
+   "model": "opus",
+   "started": "2026-10-23T10:31:06.629Z",
+   "seconds": null,
+   "finished": "2026-10-23T10:35:56.528000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[build] Odalys site fixes",
+   "model": "opus",
+   "started": "2026-10-23T10:31:04.628Z",
+   "seconds": null,
+   "finished": "2026-10-23T10:35:36.041000+00:00"
   }
  ],
  "queue": {
@@ -78,33 +78,33 @@
     "text": "(waiting on Idris: Seatsolve Seating package: model, CSV import, cost function, seeded annealing, broken-rules..."
    }
   ],
-  "runnable_count": 20,
+  "runnable_count": 22,
   "blocked_count": 9
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
-   "resets_at": "2026-10-23T13:49:59.921447+00:00",
+   "pct": 11.0,
+   "resets_at": "2026-10-23T13:50:00.445505+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 90.0,
+   "left": 89.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 13.0,
-   "resets_at": "2026-10-25T06:59:59.921465+00:00",
+   "resets_at": "2026-10-25T07:00:00.445523+00:00",
    "used_words": "of your weekly allowance used",
    "left": 87.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 5.0,
-   "resets_at": "2026-10-25T06:59:59.921600+00:00",
+   "resets_at": "2026-10-25T07:00:00.445679+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T06:20:19.551539-04:00"
+  "read_at": "2026-10-23T06:30:43.023756-04:00"
  },
  "ui": {
-  "week_pct": 0.026,
+  "week_pct": 0.024,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -116,7 +116,7 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T06:35:19-04:00",
+ "next_tick": "2026-10-23T06:45:43-04:00",
  "lanes": [
   {
    "name": "Odalys",
@@ -168,5 +168,16 @@
    "next": []
   }
  ],
- "inbox": []
+ "inbox": [
+  {
+   "id": "c6362888347",
+   "state": "waiting",
+   "position": 1,
+   "eta": "2026-10-23T06:45:43-04:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   }
+  }
+ ]
 }

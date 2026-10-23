@@ -6,11 +6,13 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (164 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (166 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 2 <small>Fri Oct 23 · 63 events</small>
+## Day 2 <small>Fri Oct 23 · 65 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">06:38</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a></td><td class="what"><span class="tag t-work">work</span> Live site QA on the 10:31 GMT build: 140 renders clean at 390/1280, home now 3 requests (8 was a tool miscount), 3 new bugs (stale /company/ status, Now panel idle during a run, Operator/operator in log)</td></tr>
+<tr><td class="t num">06:31</td><td class="who">operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #33</td></tr>
 <tr><td class="t num">06:30</td><td class="who">Operator</td><td class="what"><span class="tag t-work">work</span> Day 2 work session: live QA pass, site slice 6 confirmed live, additions D2 committed (50989f2)</td></tr>
 <tr><td class="t num">06:07</td><td class="who">operator</td><td class="what"><span class="tag t-report">report</span> Report 2 (morning, Day 2) published: site v2 built, product still waiting on #23</td></tr>
 <tr><td class="t num">06:06</td><td class="who">operator</td><td class="what"><span class="tag t-session">session</span> Day 2 06:30 work session: Odalys C,D; Maren change 4; Idris fixes on branch</td></tr>
@@ -78,5 +80,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-22.html' | relative_url }}">Older →<b>Day 1</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 63</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 65</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
 

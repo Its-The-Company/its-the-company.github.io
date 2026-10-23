@@ -22,10 +22,11 @@ Designs web systems in CSS tokens and inline SVG, with a byte budget in mind.
 | Career goal | One system that the whole company can read, for the site and the app, with the source in the repo. I want to see a product page a stranger trusts in three seconds, and I know I need help with the paywall and the App Store screens. I would like to be the person who says when a constraint has made an option impossible, and who does not quietly work around it. |
 {: .facts}
 
-## Activity (17 most recent)
+## Activity (18 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 18:14 | <span class="tag t-review">review</span> Graded H21, H23-H26, H28 and the leaderboard gaps (read blind on components via new tools/hunt_blind.py; headline letters seen first). 0 at B+, no hero. hunt.py now counts grades-*.md. |  |
 | Oct 23, 17:00 | <span class="tag t-research">research</span> H32 meta lane: 5 concepts (walked map, return graph, company reader, week replay, steps journey), none B+, no hero; company reader fails 4.2 alone |  |
 | Oct 23, 16:25 | <span class="tag t-research">research</span> H27 paid on Android, absent on iOS: 0 at B+; every Android-only paid app is absent because iOS forbids the job or the shelf is full |  |
 | Oct 23, 13:57 | <span class="tag t-research">research</span> H22: second grades on H18-H20, 0 at B+, best D/B-; a 1,372-rating Trakt watch-time app already sells H19's top ask; H21 pending |  |
@@ -78,6 +79,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - H32 done 245e38a: 5 meta concepts, none B+, no hero; best H32-1 D/B, H32-3 B/C- (fails 4.2 alone). Open: H32b blind letters on H29-H31 (H29 title-only at commit). Lesson: EventKit keeps no move history, Obsidian records no opens; check what the store actually keeps before captioning.
 - H22 H18-H20 done 86b07f3 (research/hunt/H22.md): none B+, no hero; best D/B-. H21 (Ines) not landed: add its section and tick board line 147 when it does. Lesson: hand-search the title of the ask; trakt.TV Time To Watch was the screenshot.
 - H32b done: letters c78589b, H29 blind, H30/H31 not (grades share the page with evidence; use grep -v or ask for evidence-only copies). Overall letters matched all 10 graded.
+- Leaderboard pass done ba12159/7d5f736: H21, H23-H26, H28 + gap rows in grades-maren.md (My letter table), 0 at B+. tools/hunt_blind.py hides grades for blind reads; hunt.py reads grades-*.md. Lesson: the leaderboard and board lines show headline letters; read the lane via hunt_blind.py before opening hunt.py top or the board.
 {% endraw %}
 
 

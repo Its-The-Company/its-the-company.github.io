@@ -1,76 +1,37 @@
 {
  "schema": 1,
- "at": "2026-10-23T22:10:12.768537+00:00",
+ "at": "2026-10-23T22:24:26.687919+00:00",
  "session": {
   "active": true,
-  "kind": "evening",
-  "started": "2026-10-23T18:07:36-04:00"
+  "kind": "work",
+  "started": "2026-10-23T18:10:36-04:00"
  },
- "workers": [],
- "recent": [
-  {
-   "name": "general-purpose",
-   "task": "[talk] Idris and Odalys",
-   "model": "haiku",
-   "started": "2026-10-23T22:09:34.621Z",
-   "seconds": null,
-   "finished": "2026-10-23T22:09:53.443000+00:00"
-  },
-  {
-   "name": "general-purpose",
-   "task": "[talk] Wrenna and Maren",
-   "model": "haiku",
-   "started": "2026-10-23T22:09:32.950Z",
-   "seconds": null,
-   "finished": "2026-10-23T22:09:52.497000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[report] evening",
-   "model": "sonnet",
-   "started": "2026-10-23T22:08:31.046Z",
-   "seconds": null,
-   "finished": "2026-10-23T22:09:29.681000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[diary] Odalys",
-   "model": "haiku",
-   "started": "2026-10-23T22:08:32.580Z",
-   "seconds": null,
-   "finished": "2026-10-23T22:08:55.961000+00:00"
-  },
+ "workers": [
   {
    "name": "wrenna",
-   "task": "[diary] Wrenna",
-   "model": "haiku",
-   "started": "2026-10-23T22:08:33.969Z",
-   "seconds": null,
-   "finished": "2026-10-23T22:08:54.608000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[diary] Idris",
-   "model": "haiku",
-   "started": "2026-10-23T22:07:50.945Z",
-   "seconds": null,
-   "finished": "2026-10-23T22:08:28.931000+00:00"
+   "task": "[research] Hunt H36 demand-first lanes",
+   "model": "opus",
+   "started": "2026-10-23T22:11:08.533Z",
+   "seconds": 798,
+   "finished": null
   },
   {
    "name": "ines",
-   "task": "[diary] Ines",
-   "model": "haiku",
-   "started": "2026-10-23T22:07:52.613Z",
-   "seconds": null,
-   "finished": "2026-10-23T22:08:24.945000+00:00"
-  },
+   "task": "[research] Hunt H37 first-principles A search",
+   "model": "fable",
+   "started": "2026-10-23T22:11:12.197Z",
+   "seconds": 794,
+   "finished": null
+  }
+ ],
+ "recent": [
   {
    "name": "maren",
-   "task": "[diary] Maren",
-   "model": "haiku",
-   "started": "2026-10-23T22:07:54.214Z",
+   "task": "[review] Maren blind grades H30-H35",
+   "model": "opus",
+   "started": "2026-10-23T22:11:14.117Z",
    "seconds": null,
-   "finished": "2026-10-23T22:08:22.691000+00:00"
+   "finished": "2026-10-23T22:14:25.362000+00:00"
   }
  ],
  "queue": {
@@ -118,7 +79,7 @@
     "text": "(waiting on Idris: Boardseat one-level prototype: DayKit deterministic simulation with XCTests and the Day 1..."
    }
   ],
-  "runnable_count": 23,
+  "runnable_count": 22,
   "blocked_count": 11
  },
  "meter": {
@@ -156,8 +117,30 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T18:22:34-04:00",
+ "next_tick": "2026-10-23T18:25:35-04:00",
  "lanes": [
+  {
+   "name": "Wrenna",
+   "state": "running",
+   "task": "[research] Hunt H36 demand-first lanes",
+   "model": "opus",
+   "since": "2026-10-23T22:11:08.533Z",
+   "next": [
+    "Wrenna: site v2 slice 1 DONE 2026-10-23 (954e2b8,...",
+    "Wrenna: site_qa.py checks for the additions against..."
+   ]
+  },
+  {
+   "name": "Ines",
+   "state": "running",
+   "task": "[research] Hunt H37 first-principles A search",
+   "model": "fable",
+   "since": "2026-10-23T22:11:12.197Z",
+   "next": [
+    "Ines + Maren, P2 (Idris, paywall check): option B with...",
+    "Ines, H-P1: grade each hunt file as it lands (18:00 pass..."
+   ]
+  },
   {
    "name": "Idris",
    "state": "next",
@@ -181,63 +164,20 @@
    ]
   },
   {
-   "name": "Wrenna",
-   "state": "next",
-   "task": "Wrenna: site v2 slice 1 DONE 2026-10-23 (954e2b8, measure.md; not measured: throttled 4G, home with token, composer...",
-   "model": null,
-   "since": null,
-   "next": [
-    "Wrenna: site_qa.py checks for the additions against...",
-    "Unrelated side project (LOWEST priority; start only when..."
-   ]
-  },
-  {
    "name": "Maren",
    "state": "next",
    "task": "Maren: designer probation: (a) second pass on site v2 inside the approved system (ops/plans/site-v2.md section 9:...",
    "model": null,
    "since": null,
-   "next": [
-    "Maren, H22: blind grades on H18-H21, letters committed..."
-   ]
-  },
-  {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines + Maren, P2 (Idris, paywall check): option B with Netsmith's page-sized hero (196 x 277 pt) is 3 to 53 pt...",
-   "model": null,
-   "since": null,
-   "next": [
-    "Ines, H-P1: grade each hunt file as it lands (18:00 pass..."
-   ]
+   "next": []
   }
  ],
  "qr": [],
  "inbox": [
   {
-   "id": "c6375164710",
-   "state": "in_progress",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "No! Keep thinking of ideas. No more building any of the products; the Investo..."
-  },
-  {
-   "id": "i37",
-   "state": "in_progress",
-   "position": 2,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Brief Description"
-  },
-  {
    "id": "i35",
    "state": "replied",
-   "position": 3,
+   "position": 1,
    "tasks": {
     "open": 2,
     "done": 10

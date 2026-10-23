@@ -65,7 +65,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - H-M1 done (e50df15, 5bcec57): research/hunt/grades-maren.md, heroes design/hunt_heroes.py. Line 106 done: v3 review R-1..R-4 on board (R-1 P2 duplicate connect card). Wrenna's need C-C+ holds all four concepts below B+.
 - Chat v3 spec done 6cbc9bb (ops/plans/site-chat-v3.md, 16 frames in ops/site-checks/v3/). Open: Ines on chat.js 32,768 B + setup.js 8,192 B; pre-filled token URL unverified (Idris); + button must sit outside the tab scroller. Idris builds.
 - Lessons: grade blind means commit my letters before opening hers; in lane files her grades sit in the tables, so say so. A good screenshot does not lift need. An earlier run of mine left mockups without a spec; check the folder before redrawing. Mocks carry placeholder Investor names, never real ones (C42). Before chasing a height change, swap only the CSS on one fixed build; content moves, CSS may not. Script the contrast (four light chip pairs I trusted failed 4.5:1). Merging mock CSS into a live sheet: grep every class name against the sheet first; .row, .q, .idle all collided.
-- H9 half done (H6/H7): research/hunt/grades-maren-h9.md, none B+, no hero. H8 absent at start; still open for it. Ines's/Idris's H6/H7 grades not opened.
+- H9 done (H6-H8, H10, H11): research/hunt/grades-maren-h9.md, none B+, no hero (best Sepwright B-/B; SepForge Mac 2026-08-11 breaks 'Mac empty'). Tables carry Ines's/Wrenna's grades, so blindness is partial; said so.
 {% endraw %}
 
 

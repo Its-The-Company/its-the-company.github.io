@@ -1,38 +1,30 @@
 {
  "schema": 1,
- "at": "2026-10-23T20:42:12.628741+00:00",
+ "at": "2026-10-23T20:52:55.841018+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T16:20:35-04:00"
+  "started": "2026-10-23T16:42:26-04:00"
  },
- "workers": [],
- "recent": [
+ "workers": [
   {
-   "name": "wrenna",
-   "task": "[research] H26 trade apps at $20+",
+   "name": "odalys",
+   "task": "[build] queue row titles in live_status",
    "model": "opus",
-   "started": "2026-10-23T20:20:55.618Z",
-   "seconds": null,
-   "finished": "2026-10-23T20:32:38.344000+00:00"
+   "started": "2026-10-23T20:42:48.510Z",
+   "seconds": 607,
+   "finished": null
   },
   {
-   "name": "maren",
-   "task": "[research] H27 paid Android absent iOS",
+   "name": "idris",
+   "task": "[build] paywall B status band",
    "model": "opus",
-   "started": "2026-10-23T20:20:56.986Z",
-   "seconds": null,
-   "finished": "2026-10-23T20:27:09.474000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] H28 sell to our own trade",
-   "model": "opus",
-   "started": "2026-10-23T20:20:58.457Z",
-   "seconds": null,
-   "finished": "2026-10-23T20:26:23.660000+00:00"
+   "started": "2026-10-23T20:42:50.671Z",
+   "seconds": 605,
+   "finished": null
   }
  ],
+ "recent": [],
  "queue": {
   "runnable": [
    {
@@ -83,28 +75,28 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 2.0,
-   "resets_at": "2026-10-23T23:59:59.573888+00:00",
+   "pct": 4.0,
+   "resets_at": "2026-10-24T00:00:00.351297+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 98.0,
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 21.0,
-   "resets_at": "2026-10-25T06:59:59.573908+00:00",
+   "resets_at": "2026-10-25T07:00:00.351317+00:00",
    "used_words": "of your weekly allowance used",
    "left": 79.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-10-25T06:59:59.574042+00:00",
+   "resets_at": "2026-10-25T07:00:00.351436+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T16:20:35.492297-04:00"
+  "read_at": "2026-10-23T16:42:26.192052-04:00"
  },
  "ui": {
-  "week_pct": 0.026,
+  "week_pct": 0.027,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -116,28 +108,28 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T16:35:35-04:00",
+ "next_tick": "2026-10-23T16:57:26-04:00",
  "lanes": [
   {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris: implement chat v3 per Maren's spec (tabs per thread, scroll-up history, collapsible composer, inline replies...",
-   "model": null,
-   "since": null,
+   "name": "Odalys",
+   "state": "running",
+   "task": "[build] queue row titles in live_status",
+   "model": "opus",
+   "since": "2026-10-23T20:42:48.510Z",
    "next": [
-    "Idris: independent review of Odalys's site JavaScript...",
-    "settled 2026-10-23 01:10: chat_composer is true in..."
+    "Odalys: site v2 slices 2 and 4 (ops/plans/site-v2.md...",
+    "Odalys, P3 (rest of Idris C13 F6): a queue row whose..."
    ]
   },
   {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys: site v2 slices 2 and 4 (ops/plans/site-v2.md 6.1, 6.2). Slice 2 first and alone: split tools/site_build.py...",
-   "model": null,
-   "since": null,
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] paywall B status band",
+   "model": "opus",
+   "since": "2026-10-23T20:42:50.671Z",
    "next": [
-    "Odalys, P3 (rest of Idris C13 F6): a queue row whose...",
-    "Odalys probation: write tools/ops_metrics.py (reads..."
+    "Idris: implement chat v3 per Maren's spec (tabs per...",
+    "Idris: independent review of Odalys's site JavaScript..."
    ]
   },
   {

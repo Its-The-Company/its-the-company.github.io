@@ -24,8 +24,8 @@ function flat(u) { return [].concat.apply([], u); }
 function ui(id) { return units(ord()).findIndex(u => u.indexOf(id) >= 0); }
 function bad(ids) { var m = map(); for (var j = 0; j < ids.length; j++) { var a = (m[ids[j]] && m[ids[j]].aft) || []; for (var k = 0; k < a.length; k++) if (ids.indexOf(a[k]) > j) return [ids[j], a[k]]; } return null; }
 function info(id) {
-var n = +id.slice(1), i = id[0] === 'i', x = (i ? iss : com).find(y => (i ? y.number : y.id) === n), b;
-if (!x) return { t: 'Message ' + id };
+var n = +id.slice(1), i = id[0] === 'i', x = (i ? iss : com).find(y => (i ? y.number : y.id) === n), b, r;
+if (!x) return { t: (r = map()[id]) && typeof r.title == 'string' && r.title.trim() ? r.title.slice(0, 80) : 'Message ' + id };
 b = i ? x.title : String(x.body || '').replace(/<!--[\s\S]*?-->/g, '').replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1').replace(/[#*_>~\x60]+/g, '').replace(/\s+/g, ' ').trim();
 return { t: b.length > 80 ? b.slice(0, 77) + '...' : b, who: x.user && x.user.login, at: x.created_at };
 }

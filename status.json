@@ -1,44 +1,85 @@
 {
  "schema": 1,
- "at": "2026-10-23T17:33:48.081181+00:00",
+ "at": "2026-10-23T18:21:29.085734+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T13:08:32-04:00"
+  "started": "2026-10-23T13:34:02-04:00"
  },
- "workers": [],
+ "workers": [
+  {
+   "name": "wrenna",
+   "task": "[research] Hunt lanes H23-H28 Wrenna",
+   "model": "opus",
+   "started": "2026-10-23T18:11:11.627Z",
+   "seconds": 617,
+   "finished": null
+  }
+ ],
  "recent": [
   {
-   "name": "wrenna",
-   "task": "[research] Hunt lanes H12 H13",
+   "name": "odalys",
+   "task": "[build] Fix queue.js review findings",
    "model": "opus",
-   "started": "2026-10-23T17:10:46.662Z",
+   "started": "2026-10-23T18:02:56.846Z",
    "seconds": null,
-   "finished": "2026-10-23T17:21:22.795000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] Hunt lanes H14 H15",
-   "model": "opus",
-   "started": "2026-10-23T17:10:48.502Z",
-   "seconds": null,
-   "finished": "2026-10-23T17:17:05.198000+00:00"
+   "finished": "2026-10-23T18:11:22.284000+00:00"
   },
   {
    "name": "ines",
-   "task": "[plan] Regrade Sepwright, refill hunt",
+   "task": "[research] Hunt lane H21",
    "model": "opus",
-   "started": "2026-10-23T17:08:56.105Z",
+   "started": "2026-10-23T17:56:43.647Z",
    "seconds": null,
-   "finished": "2026-10-23T17:10:41.359000+00:00"
+   "finished": "2026-10-23T18:07:39.752000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] Queue.js cap and hunt refill",
+   "model": "opus",
+   "started": "2026-10-23T18:05:06.228Z",
+   "seconds": null,
+   "finished": "2026-10-23T18:07:18.397000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[review] C13 review of queue.js",
+   "model": "opus",
+   "started": "2026-10-23T17:57:31.314Z",
+   "seconds": null,
+   "finished": "2026-10-23T18:02:49.249000+00:00"
   },
   {
    "name": "maren",
-   "task": "[review] Blind grades H8 H10 H11",
-   "model": "sonnet",
-   "started": "2026-10-23T17:08:58.099Z",
+   "task": "[research] Hunt lane H22",
+   "model": "opus",
+   "started": "2026-10-23T17:56:45.025Z",
    "seconds": null,
-   "finished": "2026-10-23T17:09:36.541000+00:00"
+   "finished": "2026-10-23T17:57:42.606000+00:00"
+  },
+  {
+   "name": "wrenna",
+   "task": "[research] Hunt lanes H18-H20",
+   "model": "opus",
+   "started": "2026-10-23T17:45:56.029Z",
+   "seconds": null,
+   "finished": "2026-10-23T17:56:39.709000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] Grade H12-H15",
+   "model": "opus",
+   "started": "2026-10-23T17:44:00.173Z",
+   "seconds": null,
+   "finished": "2026-10-23T17:45:51.426000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[review] H17 blind grades H12-H15",
+   "model": "opus",
+   "started": "2026-10-23T17:44:01.629Z",
+   "seconds": null,
+   "finished": "2026-10-23T17:44:48.543000+00:00"
   }
  ],
  "queue": {
@@ -86,33 +127,33 @@
     "text": "(waiting on Idris: Boardseat one-level prototype: DayKit deterministic simulation with XCTests and the Day 1..."
    }
   ],
-  "runnable_count": 21,
+  "runnable_count": 25,
   "blocked_count": 11
  },
  "meter": {
   "five_hour": {
-   "pct": 37.0,
-   "resets_at": "2026-10-23T18:50:00.457571+00:00",
+   "pct": 40.0,
+   "resets_at": "2026-10-23T18:50:00.245630+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 63.0,
+   "left": 60.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 18.0,
-   "resets_at": "2026-10-25T07:00:00.457589+00:00",
+   "pct": 19.0,
+   "resets_at": "2026-10-25T07:00:00.245650+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 82.0,
+   "left": 81.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-10-25T07:00:00.457721+00:00",
+   "resets_at": "2026-10-25T07:00:00.245773+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T13:08:32.053589-04:00"
+  "read_at": "2026-10-23T13:34:01.841995-04:00"
  },
  "ui": {
-  "week_pct": 0.025,
+  "week_pct": 0.026,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -124,8 +165,19 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T13:23:32-04:00",
+ "next_tick": "2026-10-23T13:49:02-04:00",
  "lanes": [
+  {
+   "name": "Wrenna",
+   "state": "running",
+   "task": "[research] Hunt lanes H23-H28 Wrenna",
+   "model": "opus",
+   "since": "2026-10-23T18:11:11.627Z",
+   "next": [
+    "Wrenna: site v2 slice 1 DONE 2026-10-23 (954e2b8,...",
+    "Wrenna: site_qa.py checks for the additions against..."
+   ]
+  },
   {
    "name": "Idris",
    "state": "next",
@@ -144,18 +196,8 @@
    "model": null,
    "since": null,
    "next": [
-    "Odalys probation: write tools/ops_metrics.py (reads..."
-   ]
-  },
-  {
-   "name": "Wrenna",
-   "state": "next",
-   "task": "Wrenna: site v2 slice 1 DONE 2026-10-23 (954e2b8, measure.md; not measured: throttled 4G, home with token, composer...",
-   "model": null,
-   "since": null,
-   "next": [
-    "Wrenna: site_qa.py checks for the additions against...",
-    "Unrelated side project (LOWEST priority; start only when..."
+    "Odalys, P1 (Idris C13 F2): /notbefore reads \"Saved\" with...",
+    "Odalys, P1 (Idris C13 F5): COMPANY_STATUS is pushed only..."
    ]
   },
   {
@@ -165,7 +207,7 @@
    "model": null,
    "since": null,
    "next": [
-    "Maren, H17: novelty and selling grades on H12-H15 as..."
+    "Maren, H22: blind grades on H18-H21, letters committed..."
    ]
   },
   {
@@ -176,9 +218,10 @@
    "since": null,
    "next": [
     "Ines, H-P1: grade each hunt file as it lands (18:00 pass...",
-    "Ines, H16: grade H12-H15 as each lands, before reading..."
+    "Ines, H28 \"sell to our own trade\": tools iOS and Mac..."
    ]
   }
  ],
+ "qr": [],
  "inbox": []
 }

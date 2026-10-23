@@ -106,6 +106,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-10-23 ~12:45: additions C committed a0e0fc7 (stash popped, run.sh green, app.js 6 B under cap). Day 2 to 12:36 in baseline.md: $1.63 per finished task (n=127) vs $1.37 Day 1; Opus 87%. ops_metrics takes dates only (no times); Day 3 does not exist until midnight. Change chosen: tools/landed.py (c45a088), measure Day 8 by counting late-ticked lines. Open: close Day 2 after midnight, Day 3 by Day 4; page wiring D/D2 (queue.js), E.
 
 - 2026-10-23 ~14:10: board slices 2 and 4 line was already done (6395e82, bcf53f1); only did Maren's cast-chip wrap (3a132e1, site.css @media 540, role hidden). Lesson again: read the board line's own tail before starting.
+
+- 2026-10-23 ~14:30: D2 page data 31a1ff5: live_status inbox rows now in run order via iq.ordered (shared with plan()), plus set/aft/tie per row; board 2eaab50. Next: queue.js (own lazy file, 10 KB cap, load from chat.js: app.js has 6 B), Maren's mock in ops/site-checks/additions/queue.html + sheet.html; then E. Lesson: tests/run.sh suite names are file names (live_status_test.py), a wrong name runs nothing and still prints "All tests passed".
+- 2026-10-23 ~15:30: queue.js 6e2d728 (D2 page). JSC test tests/queue_page_test.py reuses composer_test HARNESS as text with asserted anchors. queue.js measured 13,993 B / 5,695 gz vs the plan's 10 KB guess; proposed cap 14,336/6,144, open for Ines. Lesson: the JSC stub runs a script on append, so set src before appendChild. Next: E; Idris review; Queue issue must exist.
 {% endraw %}
 
 

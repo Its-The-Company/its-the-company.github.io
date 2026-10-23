@@ -95,6 +95,7 @@ if (!getToken()) return;
 var repo = root.getAttribute('data-repo'), composerOn = root.getAttribute('data-composer') === 'on';
 function D(k) { return root.getAttribute('data-' + k) || ''; }
 var etags = {}, cache = {}, names = [], issues = [], extra = {}, comments = [], threads = {}, lastDraw = null;
+if (D('queue')) (document.head || root).appendChild(Object.assign(el('script'), { src: D('queue') }));
 var tabs = [], cur = null, limit = 30;
 try { tabs = (JSON.parse(LS.getItem('company.tabs')) || []).filter((n) => n > 0).slice(-8); } catch (e) { tabs = []; }
 if (!LS.getItem('company.seen0')) LS.setItem('company.seen0', now().toISOString());

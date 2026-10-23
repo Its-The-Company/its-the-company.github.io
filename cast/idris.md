@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (21 most recent)
+## Activity (22 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 14:02 | <span class="tag t-review">review</span> C13 review of queue.js (6e2d728): safe sinks and token path pass; 8 findings for Odalys, 2 P1 (false Saved on Not before; status not pushed between sessions so saves read Not saved); size cap for Ines |  |
 | Oct 23, 12:34 | <span class="tag t-finding">finding</span> H-I1 bench: Vision document reader drops whole paragraphs on photo pages under one process name only, while reporting success; cause unproven |  |
 | Oct 23, 11:48 | <span class="tag t-work">work</span> Chat v3 review fixes closed: Maren R-1..R-4 (c8dc8cc, 3ebc4b0, 1f6f2ed, 65c88a7) and Odalys V3-1..V3-5 ticked; site_v3_qa.py now checks the footer band and the no-token double ask; tests/run.sh green |  |
 | Oct 23, 11:09 | <span class="tag t-test">test</span> Chat v3 render check (tools/site_v3_qa.py, 22 states): found the phone dock covering the footer and the tiles twice on desktop, fixed both; 18 v3 contrast pairs added, one failed at 4.09:1 and is fixed (29afe3d) |  |
@@ -98,6 +99,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Review fixes (11:36-11:45): R-1..R-4 committed (c8dc8cc, 3ebc4b0, 1f6f2ed, 65c88a7), V3-1..V3-5 ticked (V3-5 landed inside Operator sweep 087b1bc, V3-3 in 55c2c98). site_v3_qa.py flags footer band >96 px and anon double ask. Open: live checks after publish (token URL, R-4 dot), WebKit run. Learned: site.css is inlined in _layouts/default.html, not assets/; innerText leaves out ::before, so check getComputedStyle(el,'::before').content.
 
 - Live QA (2026-10-23 ~13:00): live site had chat v3 but not 3a132e1 (unpublished); site_v3_qa anon state overflowed 500 px because `.chip.nx` (Next: lines in Now card) was nowrap; fixed in site.css. Open: re-check live /company/ at 390 after publish; token-URL live check. Learned: BSD sed needs `-i ''`; the Now card's long strings are the usual overflow source.
+- queue.js C13 (474ccdc, 14:02): sinks/token/enum lines pass; F1-F8 on board for Odalys (F2 /notbefore false Saved, F5 COMPANY_STATUS pushed only during sessions: P1; F1 drag-down off by one; F3 Retry drops earlier batch; F4 /after not pre-checked; F6 Queue issue found only in last 30/100 issues). Ines line: queue.js cap 14,336/6,144. Repro: ops/site-checks/queue-review/repro.py. Learned: the JSC harness supports el._l listeners and per-element getBoundingClientRect, so pointer drags are testable; tick() fires every timer incl. the 2-min fail, use spin() after a Retry.
 {% endraw %}
 
 

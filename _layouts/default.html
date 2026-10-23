@@ -30,7 +30,7 @@
   --col:1040px;--side:340px;--measure:70ch;
   --bg:#ffffff;--page:#f3f4f7;--soft:#f3f4f7;--soft-2:#e9ebf0;--line:#dfe2e8;
   --ink:#17191d;--muted:#5c6270;
-  --accent:#2b5bd7;--accent-ink:#ffffff;--accent-soft:#e3eaff;
+  --accent:#2b5bd7;--accent-ink:#ffffff;--accent-soft:#e3eaff;--inv-code:rgba(0,0,0,.2);
   --head-bg:#17191d;--head-ink:#ffffff;--head-dim:rgba(255,255,255,.74);--head-line:rgba(255,255,255,.14);
   --shadow:0 1px 2px rgba(20,24,40,.08),0 4px 16px rgba(20,24,40,.06);
   --ok:#17703d;--ok-bg:#d6f1e0;--warm:#7a5400;--warn-bg:#fbe9b7;--hot:#a82a17;--tab-mark:#2b5bd7;--hot-bg:#fbdcd5;--pink:#c04fb0;
@@ -43,7 +43,7 @@
 @media (prefers-color-scheme:dark){:root{
   --bg:#16191e;--page:#0e1013;--soft:#1c2026;--soft-2:#252a32;--line:#2f353f;
   --ink:#e9eaee;--muted:#a2a8b5;
-  --accent:#8fb0ff;--accent-ink:#0b1a44;--accent-soft:#1b2a55;
+  --accent:#8fb0ff;--accent-ink:#0b1a44;--accent-soft:#1b2a55;--inv-code:rgba(255,255,255,.18);
   --head-bg:#21252d;--head-ink:#e9eaee;--head-dim:rgba(233,234,238,.72);--head-line:rgba(255,255,255,.10);
   --shadow:0 1px 2px rgba(0,0,0,.5),0 6px 20px rgba(0,0,0,.3);
   --tab-mark:#2b5bd7;--ok:#5fcf8a;--ok-bg:#163a26;--warm:#f0c35a;--warn-bg:#4a3a12;--hot:#ff8a74;--hot-bg:#4d1f16;--pink:#e07bd2;
@@ -442,7 +442,7 @@ ul.q{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
 .cv-body ul,.cv-body ol{padding-left:1.25em}
 .cv-body b.cv-h{display:block;margin:var(--s2) 0 var(--s1)}
 .cv-body code{font-size:.9em;padding:0 3px;border-radius:4px;background:var(--soft-2)}
-.cv-inv .cv-body code{background:rgba(255,255,255,.18)}
+.cv-inv .cv-body code{background:var(--inv-code)}
 .cv-body pre{margin:0 0 var(--s2);padding:var(--s2);border-radius:var(--r-s);background:var(--soft-2);overflow-x:auto;font:var(--fs-0)/1.45 var(--mono);white-space:pre}
 .cv-body blockquote{margin:0 0 var(--s2);padding-left:var(--s2);border-left:3px solid var(--line);color:var(--muted)}
 .cv-inv .cv-body a{color:inherit}
@@ -554,6 +554,11 @@ main.cv-desk.cv-open{padding-bottom:200px}
 .cv-set{margin:var(--s1) 0 0}
 .cv-set .chat-status{font-size:var(--fs-0)}
 @media (min-width:880px){main.cv-desk>.cv-col{grid-column:1;grid-row:1}main.cv-desk>.cv-side{grid-column:2;grid-row:1}}
+/* Render check fixes (Idris, tools/site_v3_qa.py): on a phone the fixed dock covered the footer's last row, so the
+   room for the dock goes under the footer, not under main; on desktop the tiles show once, in the side. */
+@media (max-width:879px){main.cv-desk,main.cv-desk.cv-open{padding-bottom:0}
+  main.cv-desk+footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}main.cv-desk.cv-open+footer{padding-bottom:calc(200px + env(safe-area-inset-bottom))}}
+@media (min-width:880px){.cv-view>.cv-glance{display:none}}
 {% endraw %}
 /* investors/site/theme.css */
 {% raw %}/* The Investors' styles for the site. Anything here is added after the site's own styles, so it wins.

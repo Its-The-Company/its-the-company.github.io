@@ -22,10 +22,11 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Career goal | To own the company's measurements. I want to show a cost-per-finished-task line that falls, week over week, with the method beside it. Later I would like to run operations for the whole company, if the numbers earn it. |
 {: .facts}
 
-## Activity (15 most recent)
+## Activity (16 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 11:03 | <span class="tag t-review">review</span> C13 review of chat v3 slice 1 (2fa1cca, dc4e0b7): pass; no XSS sinks, token handling clean; 5 fixes for Idris (V3-1..V3-5, two P2: Forget unreachable on #name, Forget leaves drafts) |  |
 | Oct 23, 10:07 | <span class="tag t-work">work</span> Fixed Idris's C13 queue findings Q-1..Q-6 (order conflicts on blocks and every comment, prose to inbox, ASCII grammar, stored-graph check, ties as given); ticked B-1 (e03d097) |  |
 | Oct 23, 07:12 | <span class="tag t-build">build</span> Now panel no longer reads an end-of-session status copy as live; usage % carry their denominators on home and the usage page (6d20abe) |  |
 | Oct 23, 06:05 | <span class="tag t-work">work</span> Additions slice D back end: the Investors' Queue grammar and order, behind tests |  |
@@ -91,6 +92,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-10-23 ~06:30: additions C was already in Operator commit 0f35f00 (verified green); D back end 59c793b (tools/investor_queue.py grammar, Queue comments off pending.json, investor.json, hourly summary, governor investor_queue). Board 60b54b0. Open: D2 conditions; allowlist @name (pre-review 8); full tests/run.sh printed "Some tests failed" once though every suite passed alone; recheck.
 
 - 2026-10-23 ~07:15: WIP 65153ac (status line from day + open pitches, /log/ names) verified, all suites green. 6d20abe: public status.json is written at session end so it always showed 'session running, no workers' (n=3); old copy now drawn as dated snapshot. Usage % denominators on home/usage. app.js was 29 bytes under its 25 KB budget: any JS add needs cuts; measure shipped size first. Fixed inbox_test grouping bug (pipe bound to the loop only). Open: live check after publish; budget headroom is ~3 bytes.
+
+- 2026-10-23 ~11:10: C13 review of chat v3 slice 1 (2fa1cca, dc4e0b7): pass, eec0570; V3-1..V3-5 for Idris (P2: Forget hidden on connect.html#name; Forget leaves company.draft.*). Repo is PRIVATE, so "non-allowlisted = Company" is only a bot/collaborator risk. Lesson: grep for sinks first (innerHTML/eval/console) and trace each storage key to what clears it.
 {% endraw %}
 
 

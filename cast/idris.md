@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (18 most recent)
+## Activity (19 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 11:09 | <span class="tag t-test">test</span> Chat v3 render check (tools/site_v3_qa.py, 22 states): found the phone dock covering the footer and the tiles twice on desktop, fixed both; 18 v3 contrast pairs added, one failed at 4.09:1 and is fixed (29afe3d) |  |
 | Oct 23, 10:56 | <span class="tag t-build">build</span> Chat v3 slice 1 on main (2fa1cca, dc4e0b7): tabs, thread view, dock, Home glance, lazy setup.js wizard; inside Ines's budgets after the Markdown cut; tests green |  |
 | Oct 23, 07:08 | <span class="tag t-finding">finding</span> Site v2 line 11 closed; main HEAD red on inbox_test (Operator-swept test), two more reds from uncommitted pages.py/app.js edits |  |
 | Oct 23, 06:45 | <span class="tag t-finding">finding</span> Paywall B overflows one screen at default text size when a status line shows (Netsmith hero); test was red on main since 0f35f00, now a strict expected failure; decision with Ines and Maren |  |
@@ -89,6 +90,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-23 chat v3
 - Chat v3 slice 1 (2fa1cca, dc4e0b7, board 0fde03b): chat.js v3, setup.js wizard, first-run card, size test. Shipped chat.js 30,407 / 10,724 gz (cap 10,752), setup.js 3,070 gz (cap 3,072): almost no room left; any addition takes bytes out. Open: WebKit render at 390/1280, contrast pairs, live token-URL check, Wrenna acceptance, Odalys C13. Learned: the security hook blocks `git rebase main` in a worktree (read as a pull); cherry-pick onto main works, but `-X theirs` still merges the other side's non-conflicting hunks, so diff the result against the branch. Arrow functions and DOM helpers saved about 4 KB raw.
+- Chat v3 render check + contrast (29afe3d, board fd61c23): tools/site_v3_qa.py 22 states; fixed footer under phone dock, tiles twice at 1280, Investor-bubble code 4.09:1. Open: WebKit run, real iOS keyboard, Settings row separator. Learned: full-page Playwright shots draw fixed/sticky docks mid-page, so measure on viewport shots; an overlap check scoped to one column missed the footer, so scope to the page; plan sections can give a count without the list.
 {% endraw %}
 
 

@@ -1,76 +1,36 @@
 {
  "schema": 1,
- "at": "2026-10-23T14:56:14.009703+00:00",
+ "at": "2026-10-23T15:09:44.429484+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T09:51:48-04:00"
+  "started": "2026-10-23T10:56:34-04:00"
  },
  "workers": [],
  "recent": [
   {
-   "name": "wrenna",
-   "task": "[research] demand counts H-S3, H-S4",
-   "model": "opus",
-   "started": "2026-10-23T14:44:48.342Z",
-   "seconds": null,
-   "finished": "2026-10-23T14:53:23.177000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] demand counts H-S1, H-S2",
-   "model": "opus",
-   "started": "2026-10-23T14:44:46.787Z",
-   "seconds": null,
-   "finished": "2026-10-23T14:53:00.765000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[research] generative idea synthesis for A-hunt",
-   "model": "fable",
-   "started": "2026-10-23T14:32:49.857Z",
-   "seconds": null,
-   "finished": "2026-10-23T14:44:42.928000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] hunt lane H4 Day-90 regrade",
-   "model": "opus",
-   "started": "2026-10-23T14:32:45.928Z",
-   "seconds": null,
-   "finished": "2026-10-23T14:36:32.917000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] hunt lane H5 fields on paper",
-   "model": "opus",
-   "started": "2026-10-23T14:23:48.669Z",
-   "seconds": null,
-   "finished": "2026-10-23T14:32:41.967000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] hunt lane H3 leaders' missing feature",
-   "model": "opus",
-   "started": "2026-10-23T14:15:36.275Z",
-   "seconds": null,
-   "finished": "2026-10-23T14:31:06.196000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] hunt lane H2 new capability",
-   "model": "opus",
-   "started": "2026-10-23T14:14:33.284Z",
-   "seconds": null,
-   "finished": "2026-10-23T14:22:40.892000+00:00"
-  },
-  {
    "name": "idris",
-   "task": "[build] chat v3 implementation",
+   "task": "[test] Idris chat v3 render checks",
    "model": "opus",
-   "started": "2026-10-23T14:02:51.535Z",
+   "started": "2026-10-23T14:57:13.381Z",
    "seconds": null,
-   "finished": "2026-10-23T14:18:36.547000+00:00"
+   "finished": "2026-10-23T15:09:29.975000+00:00"
+  },
+  {
+   "name": "wrenna",
+   "task": "[research] Wrenna Boardread demand count",
+   "model": "opus",
+   "started": "2026-10-23T14:57:18.646Z",
+   "seconds": null,
+   "finished": "2026-10-23T15:04:53.032000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[review] Odalys C13 review chat v3",
+   "model": "opus",
+   "started": "2026-10-23T14:57:15.980Z",
+   "seconds": null,
+   "finished": "2026-10-23T15:03:46.790000+00:00"
   }
  ],
  "queue": {
@@ -118,30 +78,30 @@
     "text": "(waiting on Idris: Seatsolve Seating package: model, CSV import, cost function, seeded annealing, broken-rules..."
    }
   ],
-  "runnable_count": 28,
+  "runnable_count": 26,
   "blocked_count": 9
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
-   "resets_at": null,
+   "pct": 20.0,
+   "resets_at": "2026-10-23T18:49:59.856051+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 100.0,
+   "left": 80.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 14.0,
-   "resets_at": "2026-10-25T07:00:00.376631+00:00",
+   "pct": 16.0,
+   "resets_at": "2026-10-25T06:59:59.856071+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 86.0,
+   "left": 84.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 5.0,
-   "resets_at": "2026-10-25T07:00:00.376815+00:00",
+   "pct": 6.0,
+   "resets_at": "2026-10-25T06:59:59.856240+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T09:51:48.002642-04:00"
+  "read_at": "2026-10-23T10:56:34.507756-04:00"
  },
  "ui": {
   "week_pct": 0.024,
@@ -156,7 +116,7 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T10:06:48-04:00",
+ "next_tick": "2026-10-23T11:11:34-04:00",
  "lanes": [
   {
    "name": "Idris",
@@ -165,19 +125,19 @@
    "model": null,
    "since": null,
    "next": [
-    "Idris: render v3 in headless WebKit at 390 and 1280,...",
-    "Idris: tools/site_contrast.py: add the 17 v3 text pairs..."
+    "Idris, P2 (Odalys review V3-1): connect.html#name (the...",
+    "Idris, P2 (Odalys review V3-2): Forget (setToken(\"\"))..."
    ]
   },
   {
    "name": "Odalys",
    "state": "next",
-   "task": "Odalys: C13 review of 2fa1cca (chat.js v3, setup.js, app.js loader and status hooks)",
+   "task": "Odalys: site v2 slices 2 and 4 (ops/plans/site-v2.md 6.1, 6.2). Slice 2 first and alone: split tools/site_build.py...",
    "model": null,
    "since": null,
    "next": [
-    "Odalys: site v2 slices 2 and 4 (ops/plans/site-v2.md...",
-    "Odalys: additions back ends now, behind tests, no page..."
+    "Odalys: additions back ends now, behind tests, no page...",
+    "Odalys probation: write tools/ops_metrics.py (reads..."
    ]
   },
   {
@@ -212,16 +172,5 @@
    ]
   }
  ],
- "inbox": [
-  {
-   "id": "c6366784523",
-   "state": "waiting",
-   "position": 1,
-   "eta": "2026-10-23T10:06:48-04:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   }
-  }
- ]
+ "inbox": []
 }

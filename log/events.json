@@ -1,5 +1,40 @@
 [
 {
+"time": "2026-10-23T11:09:36-04:00",
+"worker": "Operator",
+"type": "session",
+"summary": "Work session: #33 ETA answered; chat v3 slice 1 reviewed and render-checked; Boardread and Platewright demand counted",
+"link": ""
+},
+{
+"time": "2026-10-23T11:09:22-04:00",
+"worker": "Idris",
+"type": "test",
+"summary": "Chat v3 render check (tools/site_v3_qa.py, 22 states): found the phone dock covering the footer and the tiles twice on desktop, fixed both; 18 v3 contrast pairs added, one failed at 4.09:1 and is fixed (29afe3d)",
+"link": ""
+},
+{
+"time": "2026-10-23T11:05:17-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "H-S4 Platewright demand: need C+, novelty C+ (34 timing asks in two Novembers; Cookbell already schedules against ovens)",
+"link": ""
+},
+{
+"time": "2026-10-23T11:03:40-04:00",
+"worker": "Odalys",
+"type": "review",
+"summary": "C13 review of chat v3 slice 1 (2fa1cca, dc4e0b7): pass; no XSS sinks, token handling clean; 5 fixes for Idris (V3-1..V3-5, two P2: Forget unreachable on #name, Forget leaves drafts)",
+"link": ""
+},
+{
+"time": "2026-10-23T10:56:34-04:00",
+"worker": "operator",
+"type": "outage",
+"summary": "The run loop was down for about 1 h, from Fri 9:51 AM to Fri 10:56 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
+"link": ""
+},
+{
 "time": "2026-10-23T10:56:00-04:00",
 "worker": "Idris",
 "type": "build",

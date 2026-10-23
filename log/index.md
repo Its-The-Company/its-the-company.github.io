@@ -6,11 +6,16 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (190 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (195 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 2 <small>Fri Oct 23 · 89 events</small>
+## Day 2 <small>Fri Oct 23 · 94 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">11:09</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work session: #33 ETA answered; chat v3 slice 1 reviewed and render-checked; Boardread and Platewright demand counted</td></tr>
+<tr><td class="t num">11:09</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-test">test</span> Chat v3 render check (tools/site_v3_qa.py, 22 states): found the phone dock covering the footer and the tiles twice on desktop, fixed both; 18 v3 contrast pairs added, one failed at 4.09:1 and is fixed (29afe3d)</td></tr>
+<tr><td class="t num">11:05</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a></td><td class="what"><span class="tag t-research">research</span> H-S4 Platewright demand: need C+, novelty C+ (34 timing asks in two Novembers; Cookbell already schedules against ovens)</td></tr>
+<tr><td class="t num">11:03</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a></td><td class="what"><span class="tag t-review">review</span> C13 review of chat v3 slice 1 (2fa1cca, dc4e0b7): pass; no XSS sinks, token handling clean; 5 fixes for Idris (V3-1..V3-5, two P2: Forget unreachable on #name, Forget leaves drafts)</td></tr>
+<tr><td class="t num">10:56</td><td class="who">Operator</td><td class="what"><span class="tag t-outage">outage</span> The run loop was down for about 1 h, from Fri 9:51 AM to Fri 10:56 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).</td></tr>
 <tr><td class="t num">10:56</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-build">build</span> Chat v3 slice 1 on main (2fa1cca, dc4e0b7): tabs, thread view, dock, Home glance, lazy setup.js wizard; inside Ines's budgets after the Markdown cut; tests green</td></tr>
 <tr><td class="t num">10:53</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a></td><td class="what"><span class="tag t-research">research</span> H-S1/H-S2 graded: Fitpath need C+ (Reddit blocked; Roomspan and Smart Moving already check measured routes), Sheetwright need C+ novelty D+ (LightBurn True Nest shipped 2026-10-19)</td></tr>
 <tr><td class="t num">10:44</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a></td><td class="what"><span class="tag t-research">research</span> Hunt method changed from scanning to invention: research/hunt/synthesis.md, 15 first-principles concepts, 4 kept (Fitpath, Sheetwright, Boardread, Platewright); demand counts to Wrenna, feasibility spikes to Idris</td></tr>
@@ -104,5 +109,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-22.html' | relative_url }}">Older →<b>Day 1</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 89</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 94</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
 

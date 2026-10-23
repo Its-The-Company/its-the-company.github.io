@@ -297,7 +297,7 @@ img.portrait{width:120px;height:120px;border-radius:var(--r-l);flex:none;margin-
 .chip{display:inline-flex;align-items:center;font-size:var(--fs-0);font-weight:700;padding:0 var(--s2);border-radius:var(--r-pill);white-space:nowrap;line-height:1.6}
 .chip.urgent{background:var(--hot-bg);color:var(--hot)}.chip.report{background:var(--ok-bg);color:var(--ok)}.chip.pitch{background:var(--warn-bg);color:var(--warm)}
 .chip.chat{background:var(--accent-soft);color:var(--accent)}.chip.other{background:var(--soft-2);color:var(--muted)}
-.chip.sender{color:#fff}
+.chip.sender{color:#fff}.chip.sender.c0{background:#1b6ca8}.chip.sender.c1{background:#b5541c}.chip.sender.c2{background:#2e7d32}.chip.sender.c3{background:#8e44ad}.chip.sender.c4{background:#8a6d00}.chip.sender.c5{background:#00838f}.chip.sender.company{background:var(--soft-2);color:var(--ink)}
 .ref{font-family:var(--mono);font-size:var(--fs-0);color:var(--muted)}
 .msgs{display:grid;gap:var(--s2)}
 .msg{max-width:88%;display:grid;gap:2px;justify-self:start;min-width:0}
@@ -334,6 +334,18 @@ img.portrait{width:120px;height:120px;border-radius:var(--r-l);flex:none;margin-
 
 /* Motion: the portraits (inside their SVG) and the status pulse only, neither under reduced motion. */
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+/* Company > People: where the company is, above the cast. Log: the list of days, the current one marked (slice 6). */
+.where{margin:var(--s4) 0 var(--s5);box-shadow:var(--shadow)}.where h2{margin:0 0 var(--s2);font-size:var(--fs-3)}
+.where .latest{color:var(--ink)}
+.log-table td.t{white-space:nowrap;color:var(--muted)}.log-table td.who{white-space:nowrap}.log-table td.who img{width:20px;height:20px;vertical-align:-5px;border-radius:5px}
+@media (max-width:540px){.log-table thead{display:none}.log-table tbody,.log-table tr,.log-table td{display:block}
+.log-table tr{display:grid;grid-template-columns:auto 1fr;gap:2px var(--s3);padding:var(--s2) 0;border-bottom:1px solid var(--line)}
+.log-table td{border:0;padding:0}.log-table td.what{grid-column:1/-1;overflow-wrap:anywhere}}
+.log-days h2{font-size:var(--fs-3)}.log-days ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:var(--s2)}
+.log-days li a,.log-days li[aria-current]{display:inline-block;padding:6px var(--s3);border:1px solid var(--line);border-radius:var(--r-pill);background:var(--bg);text-decoration:none;font-weight:600}
+.log-days li[aria-current]{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.log-days small{font-weight:400;color:inherit;opacity:.8}.log-days li a small{color:var(--muted);opacity:1}
+
 /* chat and Now panel (placeholder styling) */
 {% raw %}/* Empty since slice 5: the chat and Now styles are part of the system above. build.py still splits here. */
 {% endraw %}
@@ -349,7 +361,7 @@ img.portrait{width:120px;height:120px;border-radius:var(--r-l);flex:none;margin-
 <nav class="tabs" aria-label="Sections">
 <a href="{{ '/' | relative_url }}"{% if page.section == "home" or page.section == "requests" %} aria-current="page"{% endif %}>Home</a>
 <a href="{{ '/reports/' | relative_url }}"{% if page.section == "reports" %} aria-current="page"{% endif %}>Reports</a>
-<a href="{{ '/cast/' | relative_url }}"{% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" %} aria-current="page"{% endif %}>Company</a>
+<a href="{{ '/company/' | relative_url }}"{% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" %} aria-current="page"{% endif %}>Company</a>
 <a href="{{ '/about.html' | relative_url }}"{% if page.section == "about" %} aria-current="page"{% endif %}>About</a>
 </nav>
 </div></header>
@@ -357,7 +369,7 @@ img.portrait{width:120px;height:120px;border-radius:var(--r-l);flex:none;margin-
 <p class="notice">{{ site.disclosure }}</p>
 {% if site.announcement and site.announcement != "" %}<p class="notice announce">{{ site.announcement }}</p>{% endif %}
 {% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" %}<nav class="subtabs" aria-label="Company">
-<a href="{{ '/cast/' | relative_url }}"{% if page.section == "cast" %} aria-current="page"{% endif %}>People</a>
+<a href="{{ '/company/' | relative_url }}"{% if page.section == "cast" %} aria-current="page"{% endif %}>People</a>
 <a href="{{ '/story/' | relative_url }}"{% if page.section == "records" %} aria-current="page"{% endif %}>Records</a>
 <a href="{{ '/log/' | relative_url }}"{% if page.section == "log" %} aria-current="page"{% endif %}>Log</a>
 <a href="{{ '/usage.html' | relative_url }}"{% if page.section == "usage" %} aria-current="page"{% endif %}>Usage</a>

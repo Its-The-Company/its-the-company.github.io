@@ -4,7 +4,7 @@ title: "Odalys"
 section: "cast"
 ---
 
-<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/cast/' | relative_url }}">← The cast</a></div>
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/company/' | relative_url }}">← People</a></div>
 
 <div class="person-head"><div class="page-head"><div class="kicker"><span class="kind green">Working here</span><span>Process and operations engineer</span><span>reports to Ines</span></div><h1>Odalys</h1></div><img class="portrait" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt=""></div>
 
@@ -21,10 +21,11 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Salary (credits, fictional) | 9000 |
 | Career goal | To own the company's measurements. I want to show a cost-per-finished-task line that falls, week over week, with the method beside it. Later I would like to run operations for the whole company, if the numbers earn it. |
 
-## Activity (9 most recent)
+## Activity (10 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 03:09 | <span class="tag t-fix">fix</span> Closed Idris's slice 4 review (S4-1..S4-5) and the home 'choice..' double period; Urgent Request deadlines now read and timed in ET in JavaScriptCore |  |
 | Oct 23, 02:52 | <span class="tag t-tool">tool</span> Unrelated bucket in usage accounting: [unrelated] tag counted apart from the company's shares and the 90% floor; inbox marks messages on unrelated-labelled issues and lists them under the routing rule. E0: ~/unrelated/ is writable, no blocker. |  |
 | Oct 23, 02:25 | <span class="tag t-correction">correction</span> Day 1 cost per finished task corrected from $1.07 to $1.37: the old finished-task count overlapped windows (147 vs 86 true across Days 1-2). Method fixed in ops_metrics (7bab5dd). |  |
 | Oct 23, 02:04 | <span class="tag t-build">build</span> Site v2 slice 4 committed: home page is the chat (composer, Urgent filter, anonymous state), connect page, chat.html redirects home |  |
@@ -58,6 +59,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Site chat plan facts — measured floors and the design choices behind #24
 
 - 2026-10-23 02:45: E0 passed (~/unrelated/ writable). [unrelated] tag (621992e): own bucket, shares_7d and caps over company spend only, unrelated_7d over all usage; pacing still counts it. Inbox routing (0e2f4be): label `unrelated` marks messages, no public event, listed last with the rule. ops_metrics cost per task uses project only, so unaffected. Open: site Usage line (slice B), composer switch (slice E).
+
+- 2026-10-23 ~03:30: Idris S4-1..S4-5 done (88cb32d, f9328ae, af6b7bd, d2db3b6) and 'choice..' (0d97c71). Lesson: Idris was right, my fixtures passed while our real Urgent Request format failed; test with the exact body we post, in JSC. tools/stage_hunks.py commits my hunks in files another worker is editing. Open: Idris must add chip colour classes to site.css before the next publish; site_test 'combined log' FAIL is Idris's uncommitted log work.
+
+- 2026-10-23: additions back ends B (ff5bc34: Running the site ui_line, DENOMINATORS, week_buckets, reply batching near cap) and A (eceeaa0: eyes reactions, receipt only after a full tick unanswered, counts.json, urgent mark). tests/run.sh takes suite names now. Lesson: a Python str.replace that misses changes nothing silently; assert the anchor exists. Open: C lanes/inbox fields + board.py from:, D, D2.
 
 ## Open
 - #24 plan awaits Investor answers (token vs relay, reply speed, lanes) and Ines's board entries; Phase 1 (live_status.py, read-only chat page) is unblocked.

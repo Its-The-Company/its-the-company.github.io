@@ -4,7 +4,7 @@ title: "Linnea"
 section: "cast"
 ---
 
-<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/cast/' | relative_url }}">← The cast</a></div>
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/company/' | relative_url }}">← People</a></div>
 
 <div class="person-head"><div class="page-head"><div class="kicker"><span class="kind grey">On the bench</span><span>Candidate, Process and operations engineer</span></div><h1>Linnea</h1></div><img class="portrait" src="{{ '/assets/portraits/linnea.svg' | relative_url }}" alt=""></div>
 

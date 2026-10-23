@@ -64,19 +64,19 @@ for (k = 0; k < ws.length; k++) if ((ws[k].name || '').toLowerCase() === slug) w
 var t = c.querySelector('.t'), d = c.querySelector('.dot');
 c.className = 'card ' + (w ? 'live' : 'idle');
 if (d) d.className = 'dot ' + (w ? 'live' : 'idle');
-if (t) t.textContent = w ? w.task + (w.model ? ' [' + w.model + ']' : '') + (w.started ? ', for ' + ago(w.started) : '') : 'idle';
+if (t) t.textContent = w ? (w.task || '') + (w.model ? ' [' + w.model + ']' : '') + (w.started ? ', for ' + ago(w.started) : '') : 'idle';
 if (w) carded[slug] = true;
 });
 body.textContent = '';
 var rest = ws.filter(function (w) { return !carded[(w.name || '').toLowerCase()]; });
 if (rest.length) {
 body.appendChild(el('p', 'now-sub', 'Working now'));
-body.appendChild(list(rest, function (w) { return cap(w.name) + ': ' + w.task + (w.model ? ' [' + w.model + ']' : '') + (w.started ? ', for ' + ago(w.started) : ''); }));
+body.appendChild(list(rest, function (w) { return cap(w.name) + ': ' + (w.task || '') + (w.model ? ' [' + w.model + ']' : '') + (w.started ? ', for ' + ago(w.started) : ''); }));
 } else if (s.active && !ws.length) body.appendChild(el('p', 'muted', 'No worker call is running at this moment.'));
 var rec = (st.recent || []).slice(0, 3);
 if (rec.length) {
 body.appendChild(el('p', 'now-sub', 'Just finished'));
-body.appendChild(list(rec, function (w) { return cap(w.name) + ': ' + w.task + (w.finished ? ', ' + ago(w.finished) + ' ago' : ''); }));
+body.appendChild(list(rec, function (w) { return cap(w.name) + ': ' + (w.task || '') + (w.finished ? ', ' + ago(w.finished) + ' ago' : ''); }));
 }
 var q = st.queue || {};
 body.appendChild(el('p', 'now-sub', 'Queue: ' + (q.runnable_count || 0) + ' tasks ready, ' + (q.blocked_count || 0) + ' blocked'));
@@ -143,11 +143,26 @@ if (ls.indexOf('pitch') >= 0) return 'pitch';
 if (ls.indexOf('chat') >= 0 || ls.some(function (l) { return l.indexOf('topic:') === 0; })) return 'chat';
 return 'other';
 }
+var DEADLINE = /^[ \t]*(?:[-*+][ \t]+)?\**[ \t]*(?:deadline\**[ \t]*:|(?:needed|answer|decide) by\**[ \t]*:?)\**[ \t]*(.+)$/im;
+function etOffset(y, mo, d) {
+function sunday(m, n) { var first = new Date(Date.UTC(y, m - 1, 1)).getUTCDay(); return 1 + (7 - first) % 7 + 7 * (n - 1); }
+return ((mo > 3 && mo < 11) || (mo === 3 && d >= sunday(3, 2)) || (mo === 11 && d < sunday(11, 1))) ? 4 : 5;
+}
+function deadlineTime(text) {
+var d = /(\d{4})-(\d{2})-(\d{2})/.exec(text);
+if (!d) return null;
+var y = +d[1], mo = +d[2], day = +d[3], rest = text.slice(d.index + d[0].length);
+var h = /(?:^|[^\d])(\d{1,2}):(\d{2})/.exec(rest), hh = h ? +h[1] : 23, mm = h ? +h[2] : 59;
+if (mo < 1 || mo > 12 || day < 1 || day > 31 || hh > 23 || mm > 59) return null;
+var off = /\b(?:UTC|GMT)\b|\d{2}Z\b/.test(rest) ? 0 : etOffset(y, mo, day);
+return Date.UTC(y, mo - 1, day, hh + off, mm);
+}
 function deadlineOf(i) {
-var m = /(?:deadline|needed by|answer by|decide by)\s*[:\-]?\s*\**\s*([^\n*.;]{3,60})/i.exec(i.body || '');
+var m = DEADLINE.exec(i.body || '');
 if (!m) return null;
-var text = m[1].trim(), t = Date.parse(text.replace(/\b(ET|EDT|EST)\b/, '').replace(/,?\s+at\s+/, ' '));
-return { text: text, t: isNaN(t) ? null : t };
+var text = m[1].replace(/\*+/g, '').trim().replace(/\.$/, '');
+if (text.length > 80) text = text.slice(0, 77) + '...';
+return text ? { text: text, t: deadlineTime(text) } : null;
 }
 function chat(root) {
 var repo = root.getAttribute('data-repo');
@@ -259,13 +274,12 @@ status.textContent = 'Updated ' + new Date().toLocaleTimeString() + '; refreshes
 })
 .catch(function (e) { status.textContent = 'Could not load the threads: ' + e.message + '. Check the token on the connect page.'; });
 }
-var PAL = ['#1b6ca8', '#b5541c', '#2e7d32', '#8e44ad', '#8a6d00', '#00838f'];
-function colour(login) { var h = 0, k; for (k = 0; k < login.length; k++) h = (h * 31 + login.charCodeAt(k)) >>> 0; return PAL[h % PAL.length]; }
+function hue(login) { var h = 0, k; for (k = 0; k < login.length; k++) h = (h * 31 + login.charCodeAt(k)) >>> 0; return 'c' + (h % 6); }
 function isInvestor(login, names) { return names.indexOf((login || '').toLowerCase()) >= 0; }
 function sender(login, body, names) {
 var l = (login || '').toLowerCase(), m = /<!--\s*as:\s*([^>]{1,40}?)\s*-->/.exec(body || ''), inv = isInvestor(l, names);
-var chip = el('span', 'chip sender', inv ? (m ? m[1] : login) : 'Company');
-chip.style.background = inv ? colour(l) : '#5b6270'; chip.title = login || '';
+var chip = el('span', 'chip sender ' + (inv ? hue(l) : 'company'), inv ? (m ? m[1] : login) : 'Company');
+chip.title = login || '';
 return chip;
 }
 function plain(body) { return (body || '').replace(/<!--[\s\S]*?-->/g, '').trim().slice(0, 600); }
@@ -309,7 +323,10 @@ var i = x.i, k = kindOf(i), t = el('article', 'thread ' + k);
 var head = el('div', 'thread-head');
 head.appendChild(el('span', 'chip ' + k, KINDS[k])); head.appendChild(el('span', 'ref meta', '#' + i.number));
 head.appendChild(el('h3', null, i.title + (i.state === 'closed' ? ' (closed)' : '')));
-if (x.d) head.appendChild(el('span', 'deadline', 'Deadline: ' + x.d.text));
+if (x.d) {
+var dl = head.appendChild(el('span', 'deadline', 'Deadline: ' + x.d.text));
+if (x.d.t) dl.setAttribute('data-t', new Date(x.d.t).toISOString());
+}
 head.appendChild(el('span', 'meta', 'updated ' + ago(i.updated_at) + ' ago'));
 t.appendChild(head);
 var msgs = el('div', 'msgs'); t.appendChild(msgs);
@@ -335,7 +352,11 @@ threadsBox.appendChild(t);
 });
 }
 var waiting = document.querySelector ? document.querySelector('[data-filter="urgent"]') : null;
-if (waiting) waiting.onclick = function () { if (lastDraw) setFilter('urgent'); };
+if (waiting) {
+var whoEl = waiting.querySelector ? waiting.querySelector('[data-who]') : null;
+if (whoEl) whoEl.textContent = 'waiting on you';
+waiting.onclick = function () { if (lastDraw) setFilter('urgent'); };
+}
 load(); setInterval(load, 30000);
 }
 var n = byId('now-panel'); if (n) nowPanel(n);

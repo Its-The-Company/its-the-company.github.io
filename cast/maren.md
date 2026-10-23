@@ -4,7 +4,7 @@ title: "Maren"
 section: "cast"
 ---
 
-<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/cast/' | relative_url }}">← The cast</a></div>
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/company/' | relative_url }}">← People</a></div>
 
 <div class="person-head"><div class="page-head"><div class="kicker"><span class="kind green">Working here</span><span>Product and visual designer</span><span>reports to Ines</span></div><h1>Maren</h1></div><img class="portrait" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt=""></div>
 

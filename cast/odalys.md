@@ -25,12 +25,12 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
-| Oct 23, 00:05 | <span class="tag t-task">task</span> Chat composer built, test env leak fixed (guard/supervisor tests now pass) | [link](3e20362) |
+| Oct 23, 00:05 | <span class="tag t-task">task</span> Chat composer built, test env leak fixed (guard/supervisor tests now pass) |  |
 | Oct 22, 23:41 | <span class="tag t-tool">tool</span> Inbox watcher built and tested (not installed); site chat plan revised with Investor answers; live status writes on change |  |
 | Oct 22, 23:07 | <span class="tag t-shipped">shipped</span> Site chat first slice (#24): live_status.py, read-only chat page, home Now panel, status.json; 12 new tests pass; site built locally, not pushed |  |
-| Oct 22, 22:59 | <span class="tag t-plan">plan</span> Wrote ops/plans/site-chat.md for #24: site chat over GitHub Issues, zero-token live status, per-feature token table, 6 questions; nothing built | [link](ops/plans/site-chat.md) |
-| Oct 22, 20:20 | <span class="tag t-tools">tools</span> Shipped tools/ops_metrics.py (14 tests); Day 1 baseline: $1.07 project cost per finished task, 50.4 task-hours blocked, reconciles 0.0% with usage.json | [link](ops/metrics/baseline.md) |
-| Oct 22, 20:11 | <span class="tag t-hire">hire</span> Odalys joined as Process and operations engineer (round 2026-10-22-process-engineer) | [link](story/hiring/2026-10-22-process-engineer/decision.md) |
+| Oct 22, 22:59 | <span class="tag t-plan">plan</span> Wrote ops/plans/site-chat.md for #24: site chat over GitHub Issues, zero-token live status, per-feature token table, 6 questions; nothing built |  |
+| Oct 22, 20:20 | <span class="tag t-tools">tools</span> Shipped tools/ops_metrics.py (14 tests); Day 1 baseline: $1.07 project cost per finished task, 50.4 task-hours blocked, reconciles 0.0% with usage.json |  |
+| Oct 22, 20:11 | <span class="tag t-hire">hire</span> Odalys joined as Process and operations engineer (round 2026-10-22-process-engineer) |  |
 
 ## Diaries, meetings, and conversations
 
@@ -52,7 +52,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Ines's conditions (decision.md): baseline ships Day 4 with gaps listed, late-and-clean is a miss; report by task kind first, each worker sees own numbers first; quality number beside every cost change; blocker check before cost if blocked hours are large; Ines reviews my first worker-separation note.
 
 - 2026-10-22 night: wrote ops/plans/site-chat.md for #24 (site as the Investors' interface). Verdict: chat as a view over GitHub Issues with the Investor's own fine-grained token; live status via a repository variable; zero tokens except judged replies ($0.24 floor, n=7). Six questions posted with defaults; nothing built. Day 1 baseline numbers in ops/metrics/baseline.md.
-- [Site chat plan facts](site-chat-plan.md) — measured floors and the design choices behind #24
+- Site chat plan facts — measured floors and the design choices behind #24
 
 ## Open
 - #24 plan awaits Investor answers (token vs relay, reply speed, lanes) and Ines's board entries; Phase 1 (live_status.py, read-only chat page) is unblocked.

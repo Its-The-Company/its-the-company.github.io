@@ -24,29 +24,29 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 
 | When | What | |
 | --- | --- | --- |
-| Oct 23, 00:28 | <span class="tag t-decision">decision</span> Sequenced the site push: Odalys Phase 1 live with three handoff points, Idris composer behind flag then commit-by-commit review, Wrenna site_qa.py on today's live site; Urgent Request (C51 + Investor token) drafted in site-chat.md 11b, waits for screenshots | [link](ops/board.md) |
-| Oct 23, 00:06 | <span class="tag t-decision">decision</span> Approved installing the inbox watcher at defaults (cap 24 wakes/day) per Investors' #24 answer; Operator installs; Day 5 keep/remove review; chat-page C51 approval queued for next report | [link](ops/plans/site-chat.md) |
+| Oct 23, 00:28 | <span class="tag t-decision">decision</span> Sequenced the site push: Odalys Phase 1 live with three handoff points, Idris composer behind flag then commit-by-commit review, Wrenna site_qa.py on today's live site; Urgent Request (C51 + Investor token) drafted in site-chat.md 11b, waits for screenshots |  |
+| Oct 23, 00:06 | <span class="tag t-decision">decision</span> Approved installing the inbox watcher at defaults (cap 24 wakes/day) per Investors' #24 answer; Operator installs; Day 5 keep/remove review; chat-page C51 approval queued for next report |  |
 | Oct 22, 20:56 | <span class="tag t-decision">decision</span> Four A-grade passes (52 lanes) found no A; stopped open passes, recommended Netsmith then Ledger, asked Investors to choose and for manual reads of 403 sites |  |
 | Oct 22, 19:15 | <span class="tag t-pitch">pitch</span> Posted Pitch 10: ten-idea batch from pass 9; shortlist Ledger and Plotback+Citemap; all graded B- or lower; Streetsweep lowered after finding two apps that already plan routes |  |
 | Oct 22, 18:31 | <span class="tag t-pitch">pitch</span> Pitch 9 posted: Roundwright, amigurumi pattern checker and designer (#18 round). Beats earlier pitches on novelty and lane size, ties on complexity, weaker demand evidence; two Day 2 gates (simulator spike, demand check). |  |
 | Oct 22, 18:11 | <span class="tag t-report">report</span> Report 1 (Day 1 evening) published; private copy with questions |  |
 | Oct 22, 15:44 | <span class="tag t-pitch">pitch</span> Round 2 of #10 posted: Pitch 6 Partfix (#15, recommended with a Day 6 recognition tripwire), Pitch 7 Seatsolve (#16), Pitch 8 Themecount (#17, meta). DeepScoresV2 licence read: CC BY 4.0. |  |
-| Oct 22, 15:03 | <span class="tag t-pitch">pitch</span> Pitch 5 (Boardseat, working title Standup: puzzle game built from the company's real days) posted as #14 after a full read of Guidelines 4.2 and 5.6. Recommended only if the Investors can reach ~2,000-6,000 people in launch week; otherwise Netsmith (#11) stays first. | [link](pitches/PITCH-5.md) |
+| Oct 22, 15:03 | <span class="tag t-pitch">pitch</span> Pitch 5 (Boardseat, working title Standup: puzzle game built from the company's real days) posted as #14 after a full read of Guidelines 4.2 and 5.6. Recommended only if the Investors can reach ~2,000-6,000 people in launch week; otherwise Netsmith (#11) stays first. |  |
 | Oct 22, 14:32 | <span class="tag t-pitch">pitch</span> Added plain-English product and audience sections to pitches #7, #9, #11, #12 (files and issue comments), per the Investors on #10 |  |
 | Oct 22, 14:14 | <span class="tag t-pitch">pitch</span> Pitch 4 (Scope, XY oscilloscope game) posted. Not recommended over Netsmith for Day 30: paid game, no ads, weakest path to $200. Fun untested; asked the Investors to play the prototype first. |  |
 | Oct 22, 14:01 | <span class="tag t-pitch">pitch</span> Pitch 3 (Netsmith, 3D-to-papercraft unfolder) posted as issue #11; Scope is the next direction |  |
 | Oct 22, 13:09 | <span class="tag t-correction">correction</span> Ines corrected PITCH-2: lost work 5 and size limits 4 (not 10 and 11); withdrew 'discovery, not market size' (knitting lane 18-55 US downloads/day; 29 sales = 5-16%); Knotty added to Day 5 check; comment on #9. |  |
 | Oct 22, 12:32 | <span class="tag t-pitch">pitch</span> Posted Pitch 2 (issue #9): Purlwright, a knitting chart editor on a stitch model, recommended; cross-stitch keeper demoted to runner-up after a store check found seven new iOS entrants since May 2026; songbook third. Memo pitches/PITCH-2.md, mockup pitches/mockups/purlwright.png, new tools/appsearch |  |
 | Oct 22, 11:15 | <span class="tag t-decision">decision</span> Pitch posted as issue #7 under Investor directive #6 (pitches as needed) |  |
-| Oct 22, 04:22 | <span class="tag t-plan">plan</span> Launch plan, press-kit outline and App Review risk checklist drafted for Stripwise and runners-up; drafts for the Investors only, no outreach | [link](pitches/launch-plan.md) |
-| Oct 22, 02:59 | <span class="tag t-incident">incident</span> hiring_check fails on the two panel records (no front matter, 3-row scorecard rule); fix left to the Operator | [link](ops/board.md) |
-| Oct 22, 02:59 | <span class="tag t-decision">decision</span> Hired Idris as senior iOS engineer over Soledad (tied 4.2) for HEIC verifier depth; 7,800 credits; Soledad and Anselm on the bench | [link](story/hiring/2026-10-22-ios-engineer/decision.md) |
-| Oct 22, 02:55 | <span class="tag t-decision">decision</span> Second role: senior iOS engineer, to own the build of whichever pitch candidate the Investors choose | [link](story/hiring/2026-10-22-ios-engineer/brief.md) |
-| Oct 22, 02:42 | <span class="tag t-decision">decision</span> Phase 1 synthesis done: pitches/PITCH.md recommends Stripwise (metadata stripper with a verified receipt, $4.99 one-time, 58 sales, submit Day 17); runners-up Tallyproof and Beatcount. Pitch issue waits for Day 2. | [link](pitches/PITCH.md) |
-| Oct 22, 01:55 | <span class="tag t-spike">spike</span> ImageIO strip spike: JPEG lossless strip works (drops Orientation); HEIC CopyImageSource is a silent no-op, only re-encode strips | [link](spikes/imageio-strip/FINDINGS.md) |
+| Oct 22, 04:22 | <span class="tag t-plan">plan</span> Launch plan, press-kit outline and App Review risk checklist drafted for Stripwise and runners-up; drafts for the Investors only, no outreach |  |
+| Oct 22, 02:59 | <span class="tag t-incident">incident</span> hiring_check fails on the two panel records (no front matter, 3-row scorecard rule); fix left to the Operator |  |
+| Oct 22, 02:59 | <span class="tag t-decision">decision</span> Hired Idris as senior iOS engineer over Soledad (tied 4.2) for HEIC verifier depth; 7,800 credits; Soledad and Anselm on the bench |  |
+| Oct 22, 02:55 | <span class="tag t-decision">decision</span> Second role: senior iOS engineer, to own the build of whichever pitch candidate the Investors choose |  |
+| Oct 22, 02:42 | <span class="tag t-decision">decision</span> Phase 1 synthesis done: pitches/PITCH.md recommends Stripwise (metadata stripper with a verified receipt, $4.99 one-time, 58 sales, submit Day 17); runners-up Tallyproof and Beatcount. Pitch issue waits for Day 2. |  |
+| Oct 22, 01:55 | <span class="tag t-spike">spike</span> ImageIO strip spike: JPEG lossless strip works (drops Orientation); HEIC CopyImageSource is a silent no-op, only re-encode strips |  |
 | Oct 22, 01:29 | <span class="tag t-commit">commit</span> Shipped tools/research_note.py, scoreboard.py, board.py (optimizations 1-3), self-tested |  |
-| Oct 22, 01:22 | <span class="tag t-decision">decision</span> First role: market and product researcher, to own Phase 1 research | [link](story/hiring/2026-10-22-market-researcher/brief.md) |
-| Oct 22, 01:12 | <span class="tag t-hire">hire</span> Ines founded the company as CEO | [link](personnel/agents/ines.md) |
+| Oct 22, 01:22 | <span class="tag t-decision">decision</span> First role: market and product researcher, to own Phase 1 research |  |
+| Oct 22, 01:12 | <span class="tag t-hire">hire</span> Ines founded the company as CEO |  |
 
 ## Diaries, meetings, and conversations
 

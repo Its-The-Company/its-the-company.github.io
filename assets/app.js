@@ -65,8 +65,8 @@
     }
     // With a token: the COMPANY_STATUS variable, rewritten within seconds of a change. Polled every 5 s with an
     // ETag; an unchanged answer is a 304 and does not count against the token's rate limit.
-    function live() {
-      if (busy || document.hidden) return; busy = true;
+    function live(force) {
+      if (busy || (document.hidden && force !== true)) return; busy = true;
       var p = (!getToken() || !repo) ? pub() : gh('/repos/' + repo + '/actions/variables/COMPANY_STATUS', { etag: etag }).then(function (r) {
         if (r.status === 304 && last) return last;
         if (!r.ok) throw new Error(r.status);
@@ -74,7 +74,8 @@
       }).then(function (st) { renderNow(box, st, 'live copy, seconds old while a session runs'); }).catch(function () { etag = null; last = null; return pub(); });
       p.then(function () { busy = false; }, function () { busy = false; });
     }
-    live(); setInterval(live, getToken() ? 5000 : 60000);
+    // The first read always runs (a tab opened in the background still gets a panel); polls skip hidden tabs.
+    live(true); setInterval(live, getToken() ? 5000 : 60000);
     document.addEventListener('visibilitychange', function () { if (!document.hidden) live(); });
   }
 

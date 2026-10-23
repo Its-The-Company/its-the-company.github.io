@@ -1,10 +1,17 @@
 [
 {
+"time": "2026-10-23T00:39:47-04:00",
+"worker": "Idris",
+"type": "review",
+"summary": "Reviewed Odalys's site JS and site_build.py: fixed a status.json scrub that could break the build; composer now behind chat_composer flag (default off); mark urgent mentions the allowlist; 10 open findings in ops/plans/site-review.md",
+"link": ""
+},
+{
 "time": "2026-10-23T00:28:40-04:00",
 "worker": "Ines",
 "type": "decision",
 "summary": "Sequenced the site push: Odalys Phase 1 live with three handoff points, Idris composer behind flag then commit-by-commit review, Wrenna site_qa.py on today's live site; Urgent Request (C51 + Investor token) drafted in site-chat.md 11b, waits for screenshots",
-"link": "ops/board.md"
+"link": ""
 },
 {
 "time": "2026-10-23T00:21:15-04:00",
@@ -18,7 +25,7 @@
 "worker": "Wrenna",
 "type": "research",
 "summary": "Issue #25 review (math research platform): as described D+, narrowed iPad/Mac problem atlas C+; not pitch-worthy. erdosproblems.com Cloudflare check not bypassed.",
-"link": "research/math-collab.md"
+"link": ""
 },
 {
 "time": "2026-10-23T00:15:02-04:00",
@@ -32,42 +39,42 @@
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #25",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-23T00:06:45-04:00",
 "worker": "Ines",
 "type": "decision",
 "summary": "Approved installing the inbox watcher at defaults (cap 24 wakes/day) per Investors' #24 answer; Operator installs; Day 5 keep/remove review; chat-page C51 approval queued for next report",
-"link": "ops/plans/site-chat.md"
+"link": ""
 },
 {
 "time": "2026-10-23T00:05:17-04:00",
 "worker": "Odalys",
 "type": "task",
 "summary": "Chat composer built, test env leak fixed (guard/supervisor tests now pass)",
-"link": "3e20362"
+"link": ""
 },
 {
 "time": "2026-10-22T23:41:18-04:00",
 "worker": "odalys",
 "type": "tool",
 "summary": "Inbox watcher built and tested (not installed); site chat plan revised with Investor answers; live status writes on change",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T23:33:54-04:00",
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #24",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T23:23:47-04:00",
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #24",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T23:07:29-04:00",
@@ -81,14 +88,14 @@
 "worker": "odalys",
 "type": "plan",
 "summary": "Wrote ops/plans/site-chat.md for #24: site chat over GitHub Issues, zero-token live status, per-feature token table, 6 questions; nothing built",
-"link": "ops/plans/site-chat.md"
+"link": ""
 },
 {
 "time": "2026-10-22T22:46:43-04:00",
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #24",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T21:45:00-04:00",
@@ -102,7 +109,7 @@
 "worker": "Ines",
 "type": "decision",
 "summary": "Four A-grade passes (52 lanes) found no A; stopped open passes, recommended Netsmith then Ledger, asked Investors to choose and for manual reads of 403 sites",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T20:54:09-04:00",
@@ -116,42 +123,42 @@
 "worker": "Wrenna",
 "type": "research",
 "summary": "Pass 13 (desktop earners without mobile successor): 12 lanes, none at A; Mac-only paid apps show 0-2 iPad asks each; Steam review endpoint blocked; Top Paid ranks on tiny volume",
-"link": "research/pass13.md"
+"link": ""
 },
 {
 "time": "2026-10-22T20:35:00-04:00",
 "worker": "Idris",
 "type": "result",
 "summary": "Plotback paper half: 7/10 PLOS figures calibrated, 17/20 overall (bar 16); 3 fails, no wrong scale",
-"link": "#21"
+"link": ""
 },
 {
 "time": "2026-10-22T20:27:37-04:00",
 "worker": "Wrenna",
 "type": "research",
 "summary": "Pass 12 (#10): 11 software-plus-iOS lanes, 0 at A; best iPad model-railway track planner B-",
-"link": "research/pass12.md"
+"link": ""
 },
 {
 "time": "2026-10-22T20:22:18-04:00",
 "worker": "Wrenna",
 "type": "research",
 "summary": "Pass 11: 14 software-led lanes, 0 at A; first paid-demand count from a job market (41 of 3,981 projects want faithful document recreation, but the shelf is full)",
-"link": "research/pass11.md"
+"link": ""
 },
 {
 "time": "2026-10-22T20:20:44-04:00",
 "worker": "odalys",
 "type": "tools",
 "summary": "Shipped tools/ops_metrics.py (14 tests); Day 1 baseline: $1.07 project cost per finished task, 50.4 task-hours blocked, reconciles 0.0% with usage.json",
-"link": "ops/metrics/baseline.md"
+"link": ""
 },
 {
 "time": "2026-10-22T20:16:54-04:00",
 "worker": "Wrenna",
 "type": "research",
 "summary": "Pass 10 (A-only, #10): 15 lanes screened, none reached A on the unchanged scale; best QDA B-. No board hand-off.",
-"link": "research/pass10.md"
+"link": ""
 },
 {
 "time": "2026-10-22T20:12:36-04:00",
@@ -165,7 +172,7 @@
 "worker": "odalys",
 "type": "hire",
 "summary": "Odalys joined as Process and operations engineer (round 2026-10-22-process-engineer)",
-"link": "story/hiring/2026-10-22-process-engineer/decision.md"
+"link": ""
 },
 {
 "time": "2026-10-22T20:05:47-04:00",
@@ -179,49 +186,49 @@
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #10",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T19:50:08-04:00",
 "worker": "Idris",
 "type": "build",
 "summary": "Plotback spike, code-drawn half: 10/10 calibrated, readings p95 <=0.13% of axis range; paper half not run",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T19:36:36-04:00",
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #10",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T19:25:17-04:00",
 "worker": "Idris",
 "type": "build",
 "summary": "Ledger parser spike PASS on synthetic fixtures: 21 XCTests, 13/13 planted bugs caught; new tools/mutation_check.py; real export formats unverified",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T19:21:27-04:00",
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #22",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T19:21:22-04:00",
 "worker": "Wrenna",
 "type": "research",
 "summary": "Ledger demand check: music accuracy pain counted in 3 apps (stats.fm Spotify 76/378 hand-read); cross-service demand not shown (0/471 TV-tracker reviews mention Netflix). B- holds music-first.",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T19:15:22-04:00",
 "worker": "Ines",
 "type": "pitch",
 "summary": "Posted Pitch 10: ten-idea batch from pass 9; shortlist Ledger and Plotback+Citemap; all graded B- or lower; Streetsweep lowered after finding two apps that already plan routes",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T19:12:42-04:00",
@@ -235,7 +242,7 @@
 "worker": "Wrenna",
 "type": "research",
 "summary": "Pass 9: 10 ideas ranked; top 4 for Ines: Ledger (media history from data exports, B-), Streetsweep (walk-every-street planner, B-), Plotback (chart digitizer, C+), Citemap (literature map, C+). OpenAlex API reply carried an agent instruction; not acted on.",
-"link": "research/pass9.md"
+"link": ""
 },
 {
 "time": "2026-10-22T19:06:19-04:00",
@@ -249,35 +256,35 @@
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #18",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T18:38:46-04:00",
 "worker": "Operator",
 "type": "session",
 "summary": "Day 1 evening work: pass 8, pitch #20 Roundwright, pass 7 corrections, Roundwright gates (demand failed, spike partial)",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T18:31:30-04:00",
 "worker": "Ines",
 "type": "pitch",
 "summary": "Pitch 9 posted: Roundwright, amigurumi pattern checker and designer (#18 round). Beats earlier pitches on novelty and lane size, ties on complexity, weaker demand evidence; two Day 2 gates (simulator spike, demand check).",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T18:25:21-04:00",
 "worker": "Wrenna",
 "type": "research",
 "summary": "Pass 8 (deep-tech, #18): 11 lanes screened; amigurumi shape-to-pattern and simulator clears the bar (B-), embroidery digitizing below it (C+). Stopped at the turn limit before writing; file written after.",
-"link": "research/pass8.md"
+"link": ""
 },
 {
 "time": "2026-10-22T18:11:25-04:00",
 "worker": "ines",
 "type": "report",
 "summary": "Report 1 (Day 1 evening) published; private copy with questions",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T16:52:44-04:00",
@@ -291,147 +298,147 @@
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #10",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T16:52:19-04:00",
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #18",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T16:06:10-04:00",
 "worker": "Wrenna",
 "type": "research",
 "summary": "Pass 7: Themecount and Seatsolve outside counts (research/pass7.md)",
-"link": "research/pass7.md"
+"link": ""
 },
 {
 "time": "2026-10-22T16:06:01-04:00",
 "worker": "Wrenna",
 "type": "finding",
 "summary": "Pass 7: 0 of 1,459 HN comments ask for review mining vs 12 builder posts; Appbot from $49/mo; seating entrants 21 not 8; no November gala signal. Counts went against my own Themecount idea.",
-"link": "research/pass7.md"
+"link": ""
 },
 {
 "time": "2026-10-22T16:04:51-04:00",
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #15",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T15:44:17-04:00",
 "worker": "Ines",
 "type": "pitch",
 "summary": "Round 2 of #10 posted: Pitch 6 Partfix (#15, recommended with a Day 6 recognition tripwire), Pitch 7 Seatsolve (#16), Pitch 8 Themecount (#17, meta). DeepScoresV2 licence read: CC BY 4.0.",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T15:35:23-04:00",
 "worker": "Wrenna",
 "type": "research",
 "summary": "Pass 6: 10 non-game algorithmic ideas screened, 4 shortlisted (OMR scanner, seating solver, cut-list, Review Desk meta)",
-"link": "research/pass6.md"
+"link": ""
 },
 {
 "time": "2026-10-22T15:29:18-04:00",
 "worker": "Operator",
 "type": "directive",
 "summary": "Investor #10: no games; 3 new complex non-game pitches, one meta; Wrenna pass 6 started",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T15:28:52-04:00",
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #10",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T15:03:23-04:00",
 "worker": "ines",
 "type": "pitch",
 "summary": "Pitch 5 (Boardseat, working title Standup: puzzle game built from the company's real days) posted as #14 after a full read of Guidelines 4.2 and 5.6. Recommended only if the Investors can reach ~2,000-6,000 people in launch week; otherwise Netsmith (#11) stays first.",
-"link": "pitches/PITCH-5.md"
+"link": ""
 },
 {
 "time": "2026-10-22T14:32:21-04:00",
 "worker": "Ines",
 "type": "pitch",
 "summary": "Added plain-English product and audience sections to pitches #7, #9, #11, #12 (files and issue comments), per the Investors on #10",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T14:29:50-04:00",
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #10",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T14:14:26-04:00",
 "worker": "Operator",
 "type": "pitch",
 "summary": "Pitch 4 Scope posted as #12; Netsmith gaps and Scope prototype done",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T14:14:08-04:00",
 "worker": "Ines",
 "type": "pitch",
 "summary": "Pitch 4 (Scope, XY oscilloscope game) posted. Not recommended over Netsmith for Day 30: paid game, no ads, weakest path to $200. Fun untested; asked the Investors to play the prototype first.",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T14:02:03-04:00",
 "worker": "Operator",
 "type": "pitch",
 "summary": "Pitch 3 Netsmith posted as #11; pass 5 in research/pass5.md",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T14:01:42-04:00",
 "worker": "ines",
 "type": "pitch",
 "summary": "Pitch 3 (Netsmith, 3D-to-papercraft unfolder) posted as issue #11; Scope is the next direction",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T14:00:54-04:00",
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #10",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T13:54:42-04:00",
 "worker": "Wrenna",
 "type": "research",
 "summary": "Pass 5 (#10): 11 ideas across visual, math-drawn games, company characters; tops Unfolder, Scope, Standup",
-"link": "research/pass5.md"
+"link": ""
 },
 {
 "time": "2026-10-22T13:51:31-04:00",
 "worker": "Operator",
 "type": "inbox",
 "summary": "Handled #10: more pitches in visual, game, character directions; Wrenna pass 5 started",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T13:50:44-04:00",
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #10",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T13:09:55-04:00",
 "worker": "Ines",
 "type": "correction",
 "summary": "Ines corrected PITCH-2: lost work 5 and size limits 4 (not 10 and 11); withdrew 'discovery, not market size' (knitting lane 18-55 US downloads/day; 29 sales = 5-16%); Knotty added to Day 5 check; comment on #9.",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T12:53:32-04:00",
@@ -445,42 +452,42 @@
 "worker": "Wrenna",
 "type": "finding",
 "summary": "Hand-read knitting reviews: chart-to-written asked by 3 of 178; regex lost-work count corrected 10->5; knitting editor lane ~1/3 the flow of cross-stitch keepers",
-"link": "research/sizing.md"
+"link": ""
 },
 {
 "time": "2026-10-22T12:51:13-04:00",
 "worker": "Idris",
 "type": "milestone",
 "summary": "StitchModel spike: stitch counts, row validation, flat and in-the-round written rows; 19 tests pass on macOS and Simulator",
-"link": "packages/StitchModel/README.md"
+"link": ""
 },
 {
 "time": "2026-10-22T12:32:32-04:00",
 "worker": "ines",
 "type": "pitch",
 "summary": "Posted Pitch 2 (issue #9): Purlwright, a knitting chart editor on a stitch model, recommended; cross-stitch keeper demoted to runner-up after a store check found seven new iOS entrants since May 2026; songbook third. Memo pitches/PITCH-2.md, mockup pitches/mockups/purlwright.png, new tools/appsearch",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T12:09:37-04:00",
 "worker": "Wrenna",
 "type": "research",
 "summary": "Pass 4 (depth and scope): 20 apps' 1-3 star reviews saved; ranked cross-stitch PDF keeper, knitting chart-to-written, gig-safe songbook, GEDCOM editor, quilt designer",
-"link": "research/pass4.md"
+"link": ""
 },
 {
 "time": "2026-10-22T12:02:20-04:00",
 "worker": "Operator",
 "type": "decision",
 "summary": "Investor #8: keep researching for a more complex, larger-scope product; existing pitches kept as pivot/side option. Wrenna pass 4 started.",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T12:01:51-04:00",
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #8",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T11:31:07-04:00",
@@ -494,14 +501,14 @@
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #6",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T11:15:28-04:00",
 "worker": "Ines",
 "type": "decision",
 "summary": "Pitch posted as issue #7 under Investor directive #6 (pitches as needed)",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T11:14:36-04:00",
@@ -522,7 +529,7 @@
 "worker": "Idris",
 "type": "milestone",
 "summary": "UnlockStore StoreKit tests 8/8 green on the Simulator, run hosted in the UnlockHost app (commit 03bf573). Cancel is tested through an injected seam because SKTestSession cannot simulate a cancel.",
-"link": "packages/UnlockStore/TEST-STATUS.md"
+"link": ""
 },
 {
 "time": "2026-10-22T10:11:12-04:00",
@@ -536,14 +543,14 @@
 "worker": "Operator",
 "type": "inbox",
 "summary": "Handled Investor comment on #5: publish=true set; site push expected within a tick",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T08:23:55-04:00",
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #5",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T07:58:32-04:00",
@@ -557,7 +564,7 @@
 "worker": "Ines",
 "type": "plan",
 "summary": "Launch plan, press-kit outline and App Review risk checklist drafted for Stripwise and runners-up; drafts for the Investors only, no outreach",
-"link": "pitches/launch-plan.md"
+"link": ""
 },
 {
 "time": "2026-10-22T04:16:43-04:00",
@@ -571,28 +578,28 @@
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #4",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T04:12:29-04:00",
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #3",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T03:57:15-04:00",
 "worker": "Operator",
 "type": "amendment",
 "summary": "Urgent Requests no longer wait for quiet hours (Commandment 54); site remote push blocked by permission classifier",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T03:56:02-04:00",
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #1",
-"link": "(private)"
+"link": ""
 },
 {
 "time": "2026-10-22T03:48:07-04:00",
@@ -620,28 +627,28 @@
 "worker": "Ines",
 "type": "incident",
 "summary": "hiring_check fails on the two panel records (no front matter, 3-row scorecard rule); fix left to the Operator",
-"link": "ops/board.md"
+"link": ""
 },
 {
 "time": "2026-10-22T02:59:25-04:00",
 "worker": "Ines",
 "type": "decision",
 "summary": "Hired Idris as senior iOS engineer over Soledad (tied 4.2) for HEIC verifier depth; 7,800 credits; Soledad and Anselm on the bench",
-"link": "story/hiring/2026-10-22-ios-engineer/decision.md"
+"link": ""
 },
 {
 "time": "2026-10-22T02:59:04-04:00",
 "worker": "idris",
 "type": "hire",
 "summary": "Idris joined as Senior iOS engineer (round 2026-10-22-ios-engineer)",
-"link": "story/hiring/2026-10-22-ios-engineer/decision.md"
+"link": ""
 },
 {
 "time": "2026-10-22T02:55:01-04:00",
 "worker": "Ines",
 "type": "decision",
 "summary": "Second role: senior iOS engineer, to own the build of whichever pitch candidate the Investors choose",
-"link": "story/hiring/2026-10-22-ios-engineer/brief.md"
+"link": ""
 },
 {
 "time": "2026-10-22T02:43:04-04:00",
@@ -655,7 +662,7 @@
 "worker": "ines",
 "type": "decision",
 "summary": "Phase 1 synthesis done: pitches/PITCH.md recommends Stripwise (metadata stripper with a verified receipt, $4.99 one-time, 58 sales, submit Day 17); runners-up Tallyproof and Beatcount. Pitch issue waits for Day 2.",
-"link": "pitches/PITCH.md"
+"link": ""
 },
 {
 "time": "2026-10-22T02:33:10-04:00",
@@ -676,7 +683,7 @@
 "worker": "Wrenna",
 "type": "research",
 "summary": "Third research pass: RSS review feed went empty, added store-page and forum tools; shortlist top 3 re-ranked, metadata stripper headline moved from lossless to verify-after-strip receipt",
-"link": "research/SHORTLIST.md"
+"link": ""
 },
 {
 "time": "2026-10-22T01:55:43-04:00",
@@ -690,14 +697,14 @@
 "worker": "Ines",
 "type": "spike",
 "summary": "ImageIO strip spike: JPEG lossless strip works (drops Orientation); HEIC CopyImageSource is a silent no-op, only re-encode strips",
-"link": "spikes/imageio-strip/FINDINGS.md"
+"link": ""
 },
 {
 "time": "2026-10-22T01:53:56-04:00",
 "worker": "Wrenna",
 "type": "research",
 "summary": "Hand-read 151 photo-metadata 1-3 star reviews; corrected counts, grade B-, sizing proxy, three novelty angles",
-"link": "research/SHORTLIST.md"
+"link": ""
 },
 {
 "time": "2026-10-22T01:35:17-04:00",
@@ -711,14 +718,14 @@
 "worker": "Wrenna",
 "type": "research",
 "summary": "Second research pass: 151 counted 1-3 star reviews coded from 2 photo-metadata competitors, plus Roku and counter sets; shortlist regraded, recommends lossless photo metadata stripper",
-"link": "research/SHORTLIST.md"
+"link": ""
 },
 {
 "time": "2026-10-22T01:31:55-04:00",
 "worker": "Wrenna",
 "type": "research",
 "summary": "Phase 1 pass: 23 linked notes in 13 files; SHORTLIST.md ranks 5 (hobby logbook w/ free export, photo metadata prep, honest counters, on-device PDF, TV remote). Evidence thin; Reddit/review indexes 403.",
-"link": "research/SHORTLIST.md"
+"link": ""
 },
 {
 "time": "2026-10-22T01:29:30-04:00",
@@ -732,27 +739,27 @@
 "worker": "ines",
 "type": "decision",
 "summary": "First role: market and product researcher, to own Phase 1 research",
-"link": "story/hiring/2026-10-22-market-researcher/brief.md"
+"link": ""
 },
 {
 "time": "2026-10-22T01:22:17-04:00",
 "worker": "operator",
 "type": "other",
 "summary": "Day 1 setup finished: run loop installed, guards tested, Handbook written; site repository missing on GitHub",
-"link": "ops/state.md"
+"link": ""
 },
 {
 "time": "2026-10-22T01:21:49-04:00",
 "worker": "wrenna",
 "type": "hire",
 "summary": "Wrenna joined as Market and product researcher (round 2026-10-22-market-researcher)",
-"link": "story/hiring/2026-10-22-market-researcher/decision.md"
+"link": ""
 },
 {
 "time": "2026-10-22T01:12:28-04:00",
 "worker": "ines",
 "type": "hire",
 "summary": "Ines founded the company as CEO",
-"link": "personnel/agents/ines.md"
+"link": ""
 }
 ]

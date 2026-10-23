@@ -212,7 +212,7 @@ var n = cur, i = issue(n), k = i ? kindOf(i) : 'chat', d = i && k === 'urgent' ?
 head = mk(view, 'div', 'cv-head');
 mk(head, 'span', 'chip ' + k, KINDS[k]); mk(head, 'span', 'meta', '#' + n);
 mk(head, 'h2', null, i ? i.title + (i.state === 'closed' ? ' (closed)' : '') : 'Loading...');
-if (d) mk(head, 'span', 'cv-dl', d.t ? due(d).textContent : d.text);
+if (d) put(head, d.t ? due(d) : el('span', 'cv-due', d.text));
 pin = mk(head, 'button', 'cv-pin'); pin.type = 'button'; pin.hidden = true;
 log = mk(view, 'div', 'cv-log'); shown = {}; lastDay = ''; waitEl = null; anchor = null;
 var all = items(n), start = Math.max(0, all.length - limit), q = -1, j;

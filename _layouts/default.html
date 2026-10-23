@@ -244,6 +244,7 @@ p.behind{margin:22px 0 0;font-size:var(--fs-1);color:var(--muted)}
 
 /* Composer: a card. Without a token it holds the connect line; with one, the form. */
 .composer-box{margin-top:var(--s3);padding:var(--s4)}
+#first-run:not([hidden])~.composer-box{display:none}
 .connect{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s3)}
 .connect p{margin:0;flex:1 1 180px;font-weight:600}
 .composer{display:grid;gap:var(--s2)}
@@ -421,7 +422,6 @@ ul.q{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
 .cv-head{position:sticky;top:var(--cv-tabs-h,57px);z-index:5;display:flex;align-items:center;gap:var(--s2);margin:0 calc(-1*var(--s4));
   padding:var(--s2) var(--s4);background:var(--page);border-bottom:1px solid var(--line)}
 .cv-head h2{flex:1;min-width:0;margin:0;font-size:var(--fs-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.cv-head .cv-dl{color:var(--hot);font-weight:700;font-size:var(--fs-0);white-space:nowrap}
 /* The pinned question: shown only when the latest Investor message has scrolled above the head. */
 .cv-pin{display:flex;gap:var(--s2);align-items:baseline;width:100%;margin:0;padding:6px var(--s3);border:0;border-left:3px solid var(--accent);
   background:var(--accent-soft);color:var(--ink);font:inherit;font-size:var(--fs-0);text-align:left;cursor:pointer}
@@ -536,7 +536,7 @@ main.cv-desk.cv-open{padding-bottom:200px}
 
 /* ---------- desktop from 880 px: tabs and thread on the left, the glance on the right ---------- */
 @media (min-width:880px){
-  main.cv-desk{display:grid;grid-template-columns:minmax(0,1fr) var(--side);column-gap:var(--s6);align-items:start;padding-bottom:var(--s6)}
+  main.cv-desk{display:grid;grid-template-columns:minmax(0,1fr) var(--side);column-gap:var(--s6);align-items:start}main.cv-desk,main.cv-desk.cv-open{padding-bottom:var(--s6)}
   main.cv-desk .cv-side{position:sticky;top:var(--s3)}
   .cv-tabs{margin:var(--s3) 0 0;padding:var(--s2) 0}
   .cv-head{margin:0;padding:var(--s2) 0}
@@ -553,6 +553,8 @@ main.cv-desk.cv-open{padding-bottom:200px}
 .cv-scroll::-webkit-scrollbar{display:none}
 .cv-set{margin:var(--s1) 0 0}
 .cv-set .chat-status{font-size:var(--fs-0)}
+/* R-4: a middle dot before the status ('Updated 11:14 AM.', the 401 line), only when it has text */
+.cv-set .chat-status:not(:empty)::before{content:'· '}
 @media (min-width:880px){main.cv-desk>.cv-col{grid-column:1;grid-row:1}main.cv-desk>.cv-side{grid-column:2;grid-row:1}}
 /* Render check fixes (Idris, tools/site_v3_qa.py): on a phone the fixed dock covered the footer's last row, so the
    room for the dock goes under the footer, not under main; on desktop the tiles show once, in the side. */

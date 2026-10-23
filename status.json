@@ -1,36 +1,52 @@
 {
  "schema": 1,
- "at": "2026-10-23T16:46:25.203719+00:00",
+ "at": "2026-10-23T17:08:18.697793+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T12:35:16-04:00"
+  "started": "2026-10-23T12:46:40-04:00"
  },
  "workers": [],
  "recent": [
   {
    "name": "wrenna",
-   "task": "[research] H7 lab-teacher buyer",
+   "task": "[research] H10 gig-type hunt",
    "model": "sonnet",
-   "started": "2026-10-23T16:35:48.137Z",
+   "started": "2026-10-23T16:49:16.879Z",
    "seconds": null,
-   "finished": "2026-10-23T16:46:14.435000+00:00"
+   "finished": "2026-10-23T17:08:06.639000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[test] Live QA of cast-chip and chat home",
+   "model": "sonnet",
+   "started": "2026-10-23T16:52:42.133Z",
+   "seconds": null,
+   "finished": "2026-10-23T16:59:32.022000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] Odalys metrics Day 2 baseline",
+   "task": "[tools] Site v2 slice 2 split",
    "model": "sonnet",
-   "started": "2026-10-23T16:35:50.069Z",
+   "started": "2026-10-23T16:46:53.849Z",
    "seconds": null,
-   "finished": "2026-10-23T16:42:37.023000+00:00"
+   "finished": "2026-10-23T16:52:38.885000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] H8 demand-first synthesis",
+   "model": "opus",
+   "started": "2026-10-23T16:46:52.330Z",
+   "seconds": null,
+   "finished": "2026-10-23T16:49:13.035000+00:00"
   },
   {
    "name": "maren",
-   "task": "[design] Maren site v2 second pass",
+   "task": "[review] H9 blind novelty grades",
    "model": "sonnet",
-   "started": "2026-10-23T16:35:51.781Z",
+   "started": "2026-10-23T16:46:55.339Z",
    "seconds": null,
-   "finished": "2026-10-23T16:36:54.038000+00:00"
+   "finished": "2026-10-23T16:47:32.440000+00:00"
   }
  ],
  "queue": {
@@ -63,10 +79,6 @@
    },
    {
     "kind": "build",
-    "text": "Idris, H-S7 Boardread spike: hole-lattice detection and jumper-wire endpoint localisation on five breadboard photos..."
-   },
-   {
-    "kind": "build",
     "text": "Idris, H-S8 Platewright spike: spikes/platewright, Swift: six-dish fixture (one oven at two temperatures, four..."
    },
    {
@@ -76,35 +88,39 @@
    {
     "kind": "research",
     "text": "(waiting on Wrenna: write the Stripwise App Store keyword list and the exact iOS share-sheet location-toggle..."
+   },
+   {
+    "kind": "build",
+    "text": "(waiting on Idris: Boardseat one-level prototype: DayKit deterministic simulation with XCTests and the Day 1..."
    }
   ],
-  "runnable_count": 20,
-  "blocked_count": 12
+  "runnable_count": 19,
+  "blocked_count": 11
  },
  "meter": {
   "five_hour": {
-   "pct": 34.0,
-   "resets_at": "2026-10-23T18:49:59.892057+00:00",
+   "pct": 35.0,
+   "resets_at": "2026-10-23T18:50:00.127641+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 66.0,
+   "left": 65.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 18.0,
-   "resets_at": "2026-10-25T06:59:59.892081+00:00",
+   "resets_at": "2026-10-25T07:00:00.127660+00:00",
    "used_words": "of your weekly allowance used",
    "left": 82.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-10-25T06:59:59.892293+00:00",
+   "resets_at": "2026-10-25T07:00:00.127777+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T12:35:15.586424-04:00"
+  "read_at": "2026-10-23T12:46:39.746104-04:00"
  },
  "ui": {
-  "week_pct": 0.026,
+  "week_pct": 0.025,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -116,7 +132,7 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T12:50:15-04:00",
+ "next_tick": "2026-10-23T13:01:39-04:00",
  "lanes": [
   {
    "name": "Idris",
@@ -167,8 +183,7 @@
    "model": null,
    "since": null,
    "next": [
-    "Ines, H-P1: grade each hunt file as it lands (18:00 pass...",
-    "Ines, H8: demand-first synthesis from H6 and H7: at most..."
+    "Ines, H-P1: grade each hunt file as it lands (18:00 pass..."
    ]
   }
  ],

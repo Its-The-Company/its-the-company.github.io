@@ -189,6 +189,7 @@ img.portrait{width:120px;height:120px;border-radius:var(--r-l);flex:none;margin-
 .people{display:flex;flex-wrap:wrap;gap:var(--s3)}
 .person{display:flex;align-items:center;gap:var(--s2);text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:10px;padding:6px 10px;background:var(--bg)}
 .person img{width:40px;height:40px;border-radius:8px;border:1px solid var(--line)}.person small{color:var(--muted)}
+@media(max-width:540px){.people{gap:var(--s2)}.people .person{padding:4px 8px}.people .person img{width:28px;height:28px}.people .person small{display:none}}
 .moods{list-style:none;padding:0;margin:0}.moods li{margin:6px 0}
 .minis{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}.mini{display:flex;align-items:center;gap:var(--s2);flex-wrap:wrap;font-size:var(--fs-1)}.mini .spark{margin-left:auto}
 .report-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--s2) 28px;align-items:start}.report-main{min-width:0}.report-main>:first-child{margin-top:0}
@@ -376,7 +377,7 @@ section.now h3{margin:0 0 var(--s1)}
 .thumbs svg{width:44px;height:96px;margin-right:var(--s2);border-radius:6px}
 .chip.q{background:var(--blue-bg);color:var(--blue-fg)}.chip.run{background:var(--green-bg);color:var(--green-fg)}
 .chip.wait{background:var(--amber-bg);color:var(--amber-fg)}.chip.done{box-shadow:inset 0 0 0 1px var(--line);color:var(--muted)}
-.chip.nx{background:none;border:1px dashed var(--muted);color:var(--muted);font-weight:400}
+.chip.nx{background:none;border:1px dashed var(--muted);color:var(--muted);font-weight:400;white-space:normal;max-width:100%;min-width:0;overflow-wrap:anywhere;border-radius:var(--r-l)}
 .chip .dot{margin-right:5px}
 .lane .task{white-space:nowrap;text-overflow:ellipsis}
 .lane .who{font-size:var(--fs-0);color:var(--muted)}.lane>div:last-child{grid-column:2}

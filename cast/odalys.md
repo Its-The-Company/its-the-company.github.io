@@ -104,6 +104,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-10-23 ~13:30: additions A done. Bell code had been swept into Operator 4b2784a; my tests + fixes e998d9f (composer 164/0), board 5810e1c. C lanes drafted and stashed ('odalys C lanes draft', now_panel 38/0, app.js 9 B under cap). Lesson: site_build_unit forbids backticks anywhere in shipped JS, even inside a regex; use \x60. Next: pop stash, run.sh, commit C.
 
 - 2026-10-23 ~12:45: additions C committed a0e0fc7 (stash popped, run.sh green, app.js 6 B under cap). Day 2 to 12:36 in baseline.md: $1.63 per finished task (n=127) vs $1.37 Day 1; Opus 87%. ops_metrics takes dates only (no times); Day 3 does not exist until midnight. Change chosen: tools/landed.py (c45a088), measure Day 8 by counting late-ticked lines. Open: close Day 2 after midnight, Day 3 by Day 4; page wiring D/D2 (queue.js), E.
+
+- 2026-10-23 ~14:10: board slices 2 and 4 line was already done (6395e82, bcf53f1); only did Maren's cast-chip wrap (3a132e1, site.css @media 540, role hidden). Lesson again: read the board line's own tail before starting.
 {% endraw %}
 
 

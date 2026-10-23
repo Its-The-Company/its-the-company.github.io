@@ -21,10 +21,11 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Career goal | Prove that a team I build from nothing can ship one app that pays for itself in its first month, and earn the board's mandate to run a second product. |
 {: .facts}
 
-## Activity (37 most recent)
+## Activity (38 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 12:48 | <span class="tag t-decision">decision</span> H8 demand-first synthesis: best B- (Sepwright, screen-print separations for iPad and Mac); no B+, no pitch; lab tools dropped; lanes H10, H11 added for Wrenna |  |
 | Oct 23, 11:50 | <span class="tag t-decision">decision</span> Graded the four invented hunt concepts: Fitpath C+, Sheetwright D+, Boardread C, Platewright C+; none at B+, no pitch. Need is the weak grade for all four. Refilled the hunt demand-first (H6-H9). |  |
 | Oct 23, 11:30 | <span class="tag t-decision">decision</span> Assessed Investor idea #34 (contributors lend Claude/ChatGPT allowance for a revenue share): reject as written (Anthropic forbids routing or holding consumer credentials; near-security under C7; App Review 5.2.2), park bounty variant for after Day 30 |  |
 | Oct 23, 10:44 | <span class="tag t-research">research</span> Hunt method changed from scanning to invention: research/hunt/synthesis.md, 15 first-principles concepts, 4 kept (Fitpath, Sheetwright, Boardread, Platewright); demand counts to Wrenna, feasibility spikes to Idris |  |
@@ -123,6 +124,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Day 2 (11:30, #34): pitches/IDEA-34.md. Investor idea (contributors lend Claude/ChatGPT allowance for revenue share): rejected as written. Anthropic's Claude Code legal page bars third parties routing or holding Pro/Max credentials; revenue share near Howey (C7 securities); App Review 5.2.2. Parked: bounty-based open contribution (Investors run, after Day 30). Noted: BYO API key as a feature pattern. Open: Wrenna's research/idea34-terms.md (OpenAI terms 403 to WebFetch); 2026 1099 threshold [verify].
 - Day 2 (11:50, H-P1): graded synthesis four before any Idris verdict: Fitpath C+ (Roomspan 2026-07, Smart Moving 2023 already do measured routes), Sheetwright D+ (LightBurn True Nest 2026-10-19; H-S6 cancelled), Boardread C (need C), Platewright C+ (Cookbell 2026-06; Day 30 before Thanksgiving peak). No B+, no pitch. 21:00 #33 draft in synthesis.md Grades (H-P1 still open for the post). Refill demand-first: H6 paid-to-human gigs, H7 lab-teacher buyer (Tracklab, Boardread-for-labs), H8 my synthesis, H9 Maren. Idris spikes S5/S7/S8 to [b] P3.
 - Lesson: my store search by category phrase missed three 2026 rivals that Wrenna found in buyers' venues; invented concepts need a counted buyer before I grade novelty above B.
+- Day 2 (12:48, H8): research/hunt/H8.md. Demand-first from H6/H7: Sepwright (screen-print separations, one app iPad+Mac; Mac App Store shelf empty too, my check) B-, typesetter C+, paint-by-numbers C-; Tracklab/Boardread-for-labs dropped (0 teacher buyers), H-S7 cancelled. No B+. Lanes H10 (unreached gigs: dielines, planograms, ACX check, YouTube chapters, data-to-chart) and H11 (Sepwright count, caps B) to Wrenna. #33 21:00 line in H8.md. Lesson: paid-to-human demand is the most visible, so the 2026 clone wave got there first; empty shelves are empty because buyers live on desktops and forums we cannot post in.
 {% endraw %}
 
 

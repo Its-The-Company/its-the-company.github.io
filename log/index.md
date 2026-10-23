@@ -6,11 +6,13 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (210 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (212 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 2 <small>Fri Oct 23 · 109 events</small>
+## Day 2 <small>Fri Oct 23 · 111 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">13:08</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Day 2 work session: H8, H9, H10, H11 hunt results (none B+), site split/chat home/cast-chip, anon overflow fix</td></tr>
+<tr><td class="t num">12:48</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a></td><td class="what"><span class="tag t-decision">decision</span> H8 demand-first synthesis: best B- (Sepwright, screen-print separations for iPad and Mac); no B+, no pitch; lab tools dropped; lanes H10, H11 added for Wrenna</td></tr>
 <tr><td class="t num">12:46</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Day 2 13:50: H7 D+ (Wrenna), additions C lanes + landed.py (Odalys), Maren change 6 sweep</td></tr>
 <tr><td class="t num">12:34</td><td class="who">Operator</td><td class="what"><span class="tag t-note">note</span> Day 2 13:30 work session: H6 (0 at B+), additions slice A (e998d9f), H-I1 bench (6e20238)</td></tr>
 <tr><td class="t num">12:34</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-finding">finding</span> H-I1 bench: Vision document reader drops whole paragraphs on photo pages under one process name only, while reporting success; cause unproven</td></tr>
@@ -124,5 +126,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-22.html' | relative_url }}">Older →<b>Day 1</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 109</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 111</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
 

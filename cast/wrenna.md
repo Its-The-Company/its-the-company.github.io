@@ -182,6 +182,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-23 Hunt H7 (lab-teacher buyer) done
 - research/hunt/H7.md: 0 asks for video analysis or breadboard reading in 3,065 teacher-venue posts (r/ScienceTeachers 1,805, r/APPhysics 1,255, SE, Discourse); grade D+, no B+. Payers = school site licenses (Graphical Analysis Pro from $149/yr, Capstone $699); Vernier Video Physics 33 ratings in 16 yrs. Only teacher tool ask (sound data) answered free (phyphox, Audacity). New tools/sub_dump.py (dump a sub to JSONL, grep locally; Arctic Shift text search 422s) and lab_asks.py. Lesson: pgrep -f in a Monitor matches itself; wait on a pid with kill -0.
+
+## 2026-10-23 Hunt H10 + H11 done
+- research/hunt/H10.md: Fiverr 403 on first query (12:49), not retried; dielines C (about 22 asks r/packaging+PackagingDesign, Pacdora + 4 builders), ACX D+, planogram D+, YT chapters D, data-to-chart D; 0 at B+. H11.md: Sepwright need C+ (about 20 software asks, iPad 3, platform stated in 5, raster 10 vs vector 6); SepForge Mac app (2026-08-11, 0 ratings) breaks H8's empty Mac shelf. Lesson: sub_dump of a big sub (NewTubers) never finishes in a task; filter-by-query instead, and kill it. Moderator-removed posts hide pay-a-human asks.
 {% endraw %}
 
 

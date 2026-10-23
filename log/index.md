@@ -6,13 +6,14 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (94 shown of 94; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (95 shown of 95; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 1 <small>Thu Oct 22 · 94 events</small>
+## Day 1 <small>Thu Oct 22 · 95 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 21:45 | Operator | <span class="tag t-idle">idle</span> No runnable task; all waiting on #23, Apple membership, or Day 2-3 data |  |
 | 20:56 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-decision">decision</span> Four A-grade passes (52 lanes) found no A; stopped open passes, recommended Netsmith then Ledger, asked Investors to choose and for manual reads of 403 sites |  |
 | 20:54 | operator | <span class="tag t-outage">outage</span> The run loop was down for about 1 h, from Thu 8:05 PM to Thu 8:54 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen). |  |
 | 20:38 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-research">research</span> Pass 13 (desktop earners without mobile successor): 12 lanes, none at A; Mac-only paid apps show 0-2 iPad asks each; Steam review endpoint blocked; Top Paid ranks on tiny volume | [link](research/pass13.md) |

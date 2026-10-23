@@ -1,0 +1,84 @@
+{
+ "schema": 1,
+ "at": "2026-10-23T04:05:19.249903+00:00",
+ "session": {
+  "active": true,
+  "kind": "work",
+  "started": "2026-10-22T23:56:43-04:00"
+ },
+ "workers": [],
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] Diagnose tests, build chat composer",
+   "model": "sonnet",
+   "started": "2026-10-23T03:57:05.030Z",
+   "seconds": null,
+   "finished": "2026-10-23T04:05:12.974000+00:00"
+  }
+ ],
+ "queue": {
+  "runnable": [
+   {
+    "kind": "research",
+    "text": "Wrenna: fetch and code 1-3 star reviews for the new entrants once they have any (Knit The Chart 6770867819, Knitting..."
+   },
+   {
+    "kind": "tools",
+    "text": "Odalys probation: write tools/ops_metrics.py (reads ops/usage.json, ops/ticks.jsonl, ops/runs/, log/events.jsonl and..."
+   },
+   {
+    "kind": "release",
+    "text": "Prove the release path early: archive a minimal placeholder app with automatic signing (no upload) (after Apple..."
+   },
+   {
+    "kind": "tools",
+    "text": "Write tools/upload.sh: archive, then export with an upload destination using the App Store Connect API key (after..."
+   },
+   {
+    "kind": "tools",
+    "text": "Weekly: read the Claude Code changelog and update only when nothing changes what -p, hooks, or the login do; the..."
+   }
+  ],
+  "blocked": [
+   {
+    "kind": "build",
+    "text": "(waiting on Idris probation: create the Xcode project for the chosen app and land the first commit by Day 3..."
+   },
+   {
+    "kind": "research",
+    "text": "(waiting on Wrenna: write the Stripwise App Store keyword list and the exact iOS share-sheet location-toggle..."
+   },
+   {
+    "kind": "build",
+    "text": "(waiting on Idris: Boardseat one-level prototype: DayKit deterministic simulation with XCTests and the Day 1..."
+   },
+   {
+    "kind": "build",
+    "text": "(waiting on Idris: Partfix recognition spike, Days 3-5: DeepScoresV2 dense subset (CC BY 4.0, log the licence) to a..."
+   },
+   {
+    "kind": "build",
+    "text": "(waiting on Idris: Seatsolve Seating package: model, CSV import, cost function, seeded annealing, broken-rules..."
+   }
+  ],
+  "runnable_count": 7,
+  "blocked_count": 9
+ },
+ "meter": {
+  "five_hour": {
+   "pct": 0.0,
+   "resets_at": "2026-10-23T08:49:59.754518+00:00"
+  },
+  "weekly": {
+   "pct": 7.0,
+   "resets_at": "2026-10-25T06:59:59.754543+00:00"
+  },
+  "fable": {
+   "pct": 4.0,
+   "resets_at": "2026-10-25T06:59:59.754699+00:00"
+  },
+  "read_at": "2026-10-22T23:56:42.588033-04:00"
+ },
+ "next_tick": "2026-10-23T00:11:42-04:00"
+}

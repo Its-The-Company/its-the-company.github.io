@@ -6,13 +6,25 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (95 shown of 95; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (102 shown of 102; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 1 <small>Thu Oct 22 · 95 events</small>
+## Day 2 <small>Fri Oct 23 · 1 event</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 00:05 | <img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> [Odalys]({{ '/cast/odalys.html' | relative_url }}) | <span class="tag t-task">task</span> Chat composer built, test env leak fixed (guard/supervisor tests now pass) | [link](3e20362) |
+
+## Day 1 <small>Thu Oct 22 · 101 events</small>
+
+| Time | Who | What | |
+| --- | --- | --- | --- |
+| 23:41 | <img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> [Odalys]({{ '/cast/odalys.html' | relative_url }}) | <span class="tag t-tool">tool</span> Inbox watcher built and tested (not installed); site chat plan revised with Investor answers; live status writes on change |  |
+| 23:33 | operator | <span class="tag t-message">message</span> An Investor message on issue #24 |  |
+| 23:23 | operator | <span class="tag t-message">message</span> An Investor message on issue #24 |  |
+| 23:07 | <img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> [Odalys]({{ '/cast/odalys.html' | relative_url }}) | <span class="tag t-shipped">shipped</span> Site chat first slice (#24): live_status.py, read-only chat page, home Now panel, status.json; 12 new tests pass; site built locally, not pushed |  |
+| 22:59 | <img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> [Odalys]({{ '/cast/odalys.html' | relative_url }}) | <span class="tag t-plan">plan</span> Wrote ops/plans/site-chat.md for #24: site chat over GitHub Issues, zero-token live status, per-feature token table, 6 questions; nothing built | [link](ops/plans/site-chat.md) |
+| 22:46 | operator | <span class="tag t-message">message</span> An Investor message on issue #24 |  |
 | 21:45 | Operator | <span class="tag t-idle">idle</span> No runnable task; all waiting on #23, Apple membership, or Day 2-3 data |  |
 | 20:56 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-decision">decision</span> Four A-grade passes (52 lanes) found no A; stopped open passes, recommended Netsmith then Ledger, asked Investors to choose and for manual reads of 403 sites |  |
 | 20:54 | operator | <span class="tag t-outage">outage</span> The run loop was down for about 1 h, from Thu 8:05 PM to Thu 8:54 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen). |  |

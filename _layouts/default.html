@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src 'self' https://api.github.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; base-uri 'self'; form-action 'self' https://github.com">
 <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
 <meta name="description" content="{{ page.description | default: site.description }}">
 <meta property="og:type" content="website">
@@ -117,6 +118,15 @@ details{margin:12px 0}summary{cursor:pointer}footer{padding:28px 18px 44px;color
 @media (min-width:880px){.report-grid{grid-template-columns:minmax(0,1.65fr) minmax(0,1fr)}}
 @media (max-width:540px){h1{font-size:28px}img.portrait{width:84px;height:84px}.pager{grid-template-columns:1fr}.pager .next{grid-column:1}.tabs a{padding:6px 10px;font-size:14.5px}}
 @media (prefers-reduced-motion:reduce){.bar-fill{transition:none}}
+/* chat and Now panel (placeholder styling) */
+{% raw %}
+.now{margin:14px 0 0}.now h3{margin:0 0 6px}.now ul{margin:6px 0;padding-left:18px}.now .muted{color:var(--muted,#667);font-size:.9em}
+.chat-bar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:10px 0}.chat-bar input[type=password]{flex:1;min-width:200px;padding:6px 8px}
+.lanes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}.lane{border:1px solid var(--line);border-radius:12px;padding:10px 12px;background:var(--soft)}
+.lane h3{margin:0 0 8px}.chip{display:inline-block;color:#fff;border-radius:10px;padding:0 8px;font-size:.8em;font-weight:600;margin-right:6px}.thread{border-top:1px solid var(--line);padding:6px 0}.thread b{display:block}.msg{margin:4px 0 4px 10px;padding-left:8px;border-left:3px solid var(--line);white-space:pre-wrap;word-break:break-word}
+.composer{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:10px 0}.composer textarea{display:block;width:100%;box-sizing:border-box;margin:6px 0}.composer select,.composer input[type=text]{padding:6px 8px;margin:2px 0}
+.msg small{display:block;color:var(--muted,#667)}
+{% endraw %}
 /* investors/site/theme.css */
 {% raw %}/* The Investors' styles for the site. Anything here is added after the site's own styles, so it wins.
    Example: :root { --accent: #0b7a55; } */{% endraw %}
@@ -133,6 +143,7 @@ details{margin:12px 0}summary{cursor:pointer}footer{padding:28px 18px 44px;color
 <a href="{{ '/log/' | relative_url }}"{% if page.section == "log" %} aria-current="true"{% endif %}>Log</a>
 <a href="{{ '/usage.html' | relative_url }}"{% if page.section == "usage" %} aria-current="true"{% endif %}>Usage</a>
 <a href="{{ '/requests.html' | relative_url }}"{% if page.section == "requests" %} aria-current="true"{% endif %}>Requests</a>
+<a href="{{ '/chat.html' | relative_url }}"{% if page.section == "chat" %} aria-current="true"{% endif %}>Chat</a>
 <a href="{{ '/about.html' | relative_url }}"{% if page.section == "about" %} aria-current="true"{% endif %}>About</a>
 </nav>
 <div class="notice">{{ site.disclosure }}</div>
@@ -142,5 +153,6 @@ details{margin:12px 0}summary{cursor:pointer}footer{padding:28px 18px 44px;color
 {{ content }}
 </main>
 <footer>{{ site.title }} · <a href="{{ '/privacy.html' | relative_url }}">Privacy</a> · <a href="{{ '/support.html' | relative_url }}">Support</a> · <a href="{{ '/press.html' | relative_url }}">Press kit</a> · <a href="{{ '/subscribe.html' | relative_url }}">Subscribe (RSS)</a></footer>
+<script src="{{ '/assets/app.js' | relative_url }}"></script>
 </body>
 </html>

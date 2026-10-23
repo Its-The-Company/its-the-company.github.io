@@ -4,7 +4,7 @@
 var L = document.getElementById("pc-list"), F = document.getElementById("pf");
 if (!L || !F) return;
 var cards = [].slice.call(L.children), f = "all", q = "", s = "order";
-var rank = { recommended: 0, open: 1, parked: 2 };
+var rank = { recommended: 0, open: 1, parked: 2, "runner-up": 3 };
 var key = {
 order: function (c) { return +c.dataset.order; },
 status: function (c) { return rank[c.dataset.status] * 1000 + +c.dataset.order; },

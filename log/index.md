@@ -6,11 +6,18 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (253 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (260 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 2 <small>Fri Oct 23 · 152 events</small>
+## Day 2 <small>Fri Oct 23 · 159 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">18:46</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> H36 hunt done (0 at B+, best C+)</td></tr>
+<tr><td class="t num">18:46</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a></td><td class="what"><span class="tag t-research">research</span> H36 done: 5 unscreened lanes, 0 at B+; best C+ own-map walker with automatic georeferencing (Avenza import-paywall anger, ~75 of 189 2026 low reviews); every lane has a 2026 entrant. Cut short at turn limit.</td></tr>
+<tr><td class="t num">18:45</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #37</td></tr>
+<tr><td class="t num">18:41</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work run Day 2 evening: per-worker page 92e454e, H37 hunt (0 at B+); H36 pending</td></tr>
+<tr><td class="t num">18:40</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a></td><td class="what"><span class="tag t-research">research</span> H37 first-principles hunt: 0 at B+; best C+ homeowner EV-charger panel check (37 asks/yr r/evcharging, no homeowner app); streaming rotation C, aging-in-place home check C, league scheduler C, cut list D; six earlier H37 concepts all on the 2026 shelf</td></tr>
+<tr><td class="t num">18:37</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-release">release</span> Company &gt; Work page built: each worker's current task and queue, scrubbed, static (92e454e)</td></tr>
+<tr><td class="t num">18:32</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #37</td></tr>
 <tr><td class="t num">18:14</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"> <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a></td><td class="what"><span class="tag t-review">review</span> Graded H21, H23-H26, H28 and the leaderboard gaps (read blind on components via new tools/hunt_blind.py; headline letters seen first). 0 at B+, no hero. hunt.py now counts grades-*.md.</td></tr>
 <tr><td class="t num">18:11</td><td class="who">Operator</td><td class="what"><span class="tag t-inbox">inbox</span> Handled #23 (stop building, hunt on) and #37; hunt batch H36/H37 launched</td></tr>
 <tr><td class="t num">18:10</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a></td><td class="what"><span class="tag t-report">report</span> Report 3 (Day 2 evening) sent</td></tr>
@@ -167,5 +174,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-22.html' | relative_url }}">Older →<b>Day 1</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 152</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 159</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
 

@@ -563,6 +563,35 @@ main.cv-desk.cv-open{padding-bottom:200px}
 @media (max-width:879px){main.cv-desk,main.cv-desk.cv-open{padding-bottom:0}
   main.cv-desk+footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}main.cv-desk.cv-open+footer{padding-bottom:calc(200px + env(safe-area-inset-bottom))}}
 @media (min-width:880px){.cv-view>.cv-glance{display:none}}
+
+/* ---------- Company > Work (/company/work.html, tools/site/work.py; owner: Idris) ---------- */
+.wk-sum{display:flex;align-items:baseline;gap:var(--s2);margin:0 0 var(--s3);color:var(--muted)}.wk-sum .dot{flex:none;position:relative;top:-1px}
+.wk-jump{display:flex;flex-wrap:wrap;gap:var(--s2);margin:0 0 var(--s4)}
+.wk-jump a{padding:2px var(--s3);border:1px solid var(--line);border-radius:var(--r-pill);background:var(--bg);text-decoration:none;color:var(--ink);font-size:var(--fs-0);font-weight:600}
+.wk-jump a:hover{border-color:var(--accent)}
+.wk-lanes{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,460px),1fr));gap:var(--s4)}
+.wk-lane{min-width:0;padding:var(--s4);border:1px solid var(--line);border-radius:var(--r-l);background:var(--bg);box-shadow:var(--shadow);scroll-margin-top:var(--s4)}
+.wk-lane.running{border-color:var(--ok)}.wk-lane.loose{margin-top:var(--s5)}
+.wk-lane h2{margin:0;font-size:var(--fs-4);line-height:var(--lh-tight)}.wk-lane h2 a{color:inherit;text-decoration:none}.wk-lane h2 a:hover{color:var(--accent)}
+.wk-lane h2 span,.wk-g span{color:var(--muted);font-weight:400}
+.wk-h{display:flex;align-items:center;gap:var(--s3)}.wk-h>div{flex:1;min-width:0}
+.wk-h img{flex:none;width:56px;height:56px;border-radius:var(--r-m);border:1px solid var(--line);background:var(--portrait)}
+.wk-role{display:block;color:var(--muted);font-size:var(--fs-0)}
+.wk-h .chip{flex:none}
+.wk-now{margin:var(--s3) 0 0;padding:var(--s3);border-radius:var(--r-m);background:var(--soft);overflow-wrap:anywhere}
+.wk-now small{display:block;margin-top:2px;color:var(--muted);font-size:var(--fs-0)}
+.wk-k{display:block;font-size:var(--fs-0);font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.wk-c{margin:var(--s2) 0 0;font-size:var(--fs-0);color:var(--muted)}
+.wk-more{margin:var(--s3) 0 0}.wk-more>summary{font-weight:600;font-size:var(--fs-1)}
+.wk-g{margin:var(--s3) 0 var(--s1);font-size:var(--fs-1)}
+.wk-q{margin:0;padding:0 0 0 1.6em}ul.wk-q{list-style:none;padding:0}
+.wk-i{padding:var(--s2) 0;border-top:1px solid var(--line);overflow-wrap:anywhere}.wk-i:first-child{border-top:0}
+.wk-i p{margin:0;font-size:var(--fs-1);line-height:1.45}.wk-full{margin:2px 0 0}.wk-full>summary{font-size:var(--fs-0);color:var(--accent)}.wk-full p{margin-top:var(--s1);color:var(--muted)}
+.wk-i .wk-m{margin-top:2px;font-size:var(--fs-0);color:var(--muted)}
+.wk-t{display:flex;flex-wrap:wrap;gap:var(--s1);margin-bottom:2px}.wk-t:empty{display:none}
+.wk-p{font-size:12px;font-weight:700;padding:1px 7px;border-radius:10px;background:var(--soft-2);color:var(--ink)}
+.wk-i.waiting>p:first-of-type,.wk-i.blocked>p:first-of-type{color:var(--muted)}
+.wk-link{margin:var(--s3) 0 0;font-weight:600}
 {% endraw %}
 /* investors/site/theme.css */
 {% raw %}/* The Investors' styles for the site. Anything here is added after the site's own styles, so it wins.
@@ -576,15 +605,16 @@ main.cv-desk.cv-open{padding-bottom:200px}
 <nav class="tabs" aria-label="Sections">
 <a href="{{ '/' | relative_url }}"{% if page.section == "home" or page.section == "requests" %} aria-current="page"{% endif %}>Home</a>
 <a href="{{ '/reports/' | relative_url }}"{% if page.section == "reports" %} aria-current="page"{% endif %}>Reports</a>
-<a href="{{ '/company/' | relative_url }}"{% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" or page.section == "pitches" %} aria-current="page"{% endif %}>Company</a>
+<a href="{{ '/company/' | relative_url }}"{% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" or page.section == "pitches" or page.section == "work" %} aria-current="page"{% endif %}>Company</a>
 <a href="{{ '/about.html' | relative_url }}"{% if page.section == "about" %} aria-current="page"{% endif %}>About</a>
 </nav>
 </div></header>
 <div class="wrap notice-row">
 <p class="notice">{{ site.disclosure }}</p>
 {% if site.announcement and site.announcement != "" %}<p class="notice announce">{{ site.announcement }}</p>{% endif %}
-{% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" or page.section == "pitches" %}<nav class="subtabs" aria-label="Company">
+{% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" or page.section == "pitches" or page.section == "work" %}<nav class="subtabs" aria-label="Company">
 <a href="{{ '/company/' | relative_url }}"{% if page.section == "cast" %} aria-current="page"{% endif %}>People</a>
+<a href="{{ '/company/work.html' | relative_url }}"{% if page.section == "work" %} aria-current="page"{% endif %}>Work</a>
 <a href="{{ '/story/' | relative_url }}"{% if page.section == "records" %} aria-current="page"{% endif %}>Records</a>
 <a href="{{ '/log/' | relative_url }}"{% if page.section == "log" %} aria-current="page"{% endif %}>Log</a>
 <a href="{{ '/usage.html' | relative_url }}"{% if page.section == "usage" %} aria-current="page"{% endif %}>Usage</a>

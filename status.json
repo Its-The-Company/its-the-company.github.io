@@ -1,37 +1,36 @@
 {
  "schema": 1,
- "at": "2026-10-23T22:24:26.687919+00:00",
+ "at": "2026-10-23T23:02:02.748099+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T18:10:36-04:00"
+  "started": "2026-10-23T18:24:41-04:00"
  },
- "workers": [
+ "workers": [],
+ "recent": [
   {
    "name": "wrenna",
-   "task": "[research] Hunt H36 demand-first lanes",
+   "task": "[research] H36 idea hunt",
    "model": "opus",
-   "started": "2026-10-23T22:11:08.533Z",
-   "seconds": 798,
-   "finished": null
+   "started": "2026-10-23T22:25:02.789Z",
+   "seconds": null,
+   "finished": "2026-10-23T22:45:04.543000+00:00"
   },
   {
    "name": "ines",
-   "task": "[research] Hunt H37 first-principles A search",
+   "task": "[research] H37 first-principles hunt",
    "model": "fable",
-   "started": "2026-10-23T22:11:12.197Z",
-   "seconds": 794,
-   "finished": null
-  }
- ],
- "recent": [
-  {
-   "name": "maren",
-   "task": "[review] Maren blind grades H30-H35",
-   "model": "opus",
-   "started": "2026-10-23T22:11:14.117Z",
+   "started": "2026-10-23T22:25:05.554Z",
    "seconds": null,
-   "finished": "2026-10-23T22:14:25.362000+00:00"
+   "finished": "2026-10-23T22:41:22.024000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] per-worker view page",
+   "model": "opus",
+   "started": "2026-10-23T22:25:07.957Z",
+   "seconds": null,
+   "finished": "2026-10-23T22:31:41.559000+00:00"
   }
  ],
  "queue": {
@@ -79,30 +78,30 @@
     "text": "(waiting on Idris: Boardseat one-level prototype: DayKit deterministic simulation with XCTests and the Day 1..."
    }
   ],
-  "runnable_count": 22,
+  "runnable_count": 21,
   "blocked_count": 11
  },
  "meter": {
   "five_hour": {
-   "pct": 12.0,
-   "resets_at": "2026-10-23T23:59:59.796834+00:00",
+   "pct": 16.0,
+   "resets_at": "2026-10-23T23:59:59.578147+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 88.0,
+   "left": 84.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 22.0,
-   "resets_at": "2026-10-25T06:59:59.796858+00:00",
+   "pct": 23.0,
+   "resets_at": "2026-10-25T06:59:59.578164+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 78.0,
+   "left": 77.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 6.0,
-   "resets_at": "2026-10-25T06:59:59.797030+00:00",
+   "pct": 7.0,
+   "resets_at": "2026-10-25T06:59:59.578302+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T18:07:34.376929-04:00"
+  "read_at": "2026-10-23T18:24:41.179105-04:00"
  },
  "ui": {
   "week_pct": 0.026,
@@ -117,30 +116,8 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T18:25:35-04:00",
+ "next_tick": "2026-10-23T18:39:41-04:00",
  "lanes": [
-  {
-   "name": "Wrenna",
-   "state": "running",
-   "task": "[research] Hunt H36 demand-first lanes",
-   "model": "opus",
-   "since": "2026-10-23T22:11:08.533Z",
-   "next": [
-    "Wrenna: site v2 slice 1 DONE 2026-10-23 (954e2b8,...",
-    "Wrenna: site_qa.py checks for the additions against..."
-   ]
-  },
-  {
-   "name": "Ines",
-   "state": "running",
-   "task": "[research] Hunt H37 first-principles A search",
-   "model": "fable",
-   "since": "2026-10-23T22:11:12.197Z",
-   "next": [
-    "Ines + Maren, P2 (Idris, paywall check): option B with...",
-    "Ines, H-P1: grade each hunt file as it lands (18:00 pass..."
-   ]
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -164,23 +141,66 @@
    ]
   },
   {
+   "name": "Wrenna",
+   "state": "next",
+   "task": "Wrenna: site v2 slice 1 DONE 2026-10-23 (954e2b8, measure.md; not measured: throttled 4G, home with token, composer...",
+   "model": null,
+   "since": null,
+   "next": [
+    "Wrenna: site_qa.py checks for the additions against...",
+    "Unrelated side project (LOWEST priority; start only when..."
+   ]
+  },
+  {
    "name": "Maren",
    "state": "next",
    "task": "Maren: designer probation: (a) second pass on site v2 inside the approved system (ops/plans/site-v2.md section 9:...",
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines + Maren, P2 (Idris, paywall check): option B with Netsmith's page-sized hero (196 x 277 pt) is 3 to 53 pt...",
+   "model": null,
+   "since": null,
+   "next": [
+    "Ines, H-P1: grade each hunt file as it lands (18:00 pass..."
+   ]
   }
  ],
  "qr": [],
  "inbox": [
   {
+   "id": "c6376041652",
+   "state": "waiting",
+   "position": 1,
+   "eta": "2026-10-23T18:39:41-04:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Push effort level to max and use the best models until the refresh on Sunday...."
+  },
+  {
+   "id": "c6376224536",
+   "state": "waiting",
+   "position": 2,
+   "eta": "2026-10-23T18:39:41-04:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "The priority list shouldn\u2019t be \u201cYour open messages\u201d. The Company should extra..."
+  },
+  {
    "id": "i35",
    "state": "replied",
-   "position": 1,
+   "position": 3,
    "tasks": {
-    "open": 2,
-    "done": 10
+    "open": 1,
+    "done": 11
    },
    "title": "Urgent -- Get to Work!!"
   }

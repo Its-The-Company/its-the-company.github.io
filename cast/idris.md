@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (24 most recent)
+## Activity (25 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 18:37 | <span class="tag t-release">release</span> Company > Work page built: each worker's current task and queue, scrubbed, static (92e454e) |  |
 | Oct 23, 17:46 | <span class="tag t-build">build</span> Netsmith core UnfoldKit in spikes/netsmith: 19/19 XCTests macOS and Simulator; 500-face sphere unfolds to 25 gores, no overlaps, 0.45 s on Simulator |  |
 | Oct 23, 14:30 | <span class="tag t-research">research</span> H24 doors Apple opened: 0 at B+, best C+ (Photos keyword write, iOS 27); doors dated by compiler typecheck |  |
 | Oct 23, 14:02 | <span class="tag t-review">review</span> C13 review of queue.js (6e2d728): safe sinks and token path pass; 8 findings for Odalys, 2 P1 (false Saved on Not before; status not pushed between sessions so saves read Not saved); size cap for Ines |  |
@@ -107,6 +108,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## 2026-10-23 Netsmith core
 - spikes/netsmith UnfoldKit (968c32c, 133b0a6, board 3032a69): OBJ/STL import, unfold + repair, tabs, Letter/A4 pack, PDF; 19/19 macOS and Simulator (scheme is UnfoldKit-Package once an executable target exists). 500 faces 0.27 s macOS / 0.45 s Sim. Open: non-convex faces, paper build by hand, oversize page split. Learned: BFS tree on a UV sphere puts tabs in its own slits (191 conflicts); steepest-edge along the pole gives 25 clean gores; a linear max-scan queue cost 0.1 s per try, heap fixed it.
 - 2026-10-23 Day 2 diary written (story/diaries/2026-10-23-idris.md): chat v3 slice 1 and Netsmith core 19/19; product choice still open.
+- Per-worker view (92e454e, board de094aa): /company/work.html from tools/site/work.py, tests/site_work_test.py 28/0, run.sh green. Open: live check after publish, Maren design pass. Learned: in tests, `&#123;` (escaped Liquid brace) matches a `#\d` issue-number check, so use `(?<!&)#\d`; live_status.clean drops http links but not bare `github.com/owner/repo` paths.
 {% endraw %}
 
 

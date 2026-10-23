@@ -1,77 +1,36 @@
 {
  "schema": 1,
- "at": "2026-10-23T08:35:16.269271+00:00",
+ "at": "2026-10-23T08:54:33.709196+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T03:23:20-04:00"
+  "started": "2026-10-23T04:35:32-04:00"
  },
- "workers": [
-  {
-   "name": "odalys",
-   "task": "[build] Odalys first paint and per_page",
-   "model": "opus",
-   "started": "2026-10-23T08:25:14.225Z",
-   "seconds": 602,
-   "finished": null
-  }
- ],
+ "workers": [],
  "recent": [
   {
-   "name": "odalys",
-   "task": "[build] Odalys unrelated leak and paint",
+   "name": "idris",
+   "task": "[build] UnlockStore v2 paywall",
    "model": "opus",
-   "started": "2026-10-23T07:59:18.881Z",
+   "started": "2026-10-23T08:36:11.162Z",
    "seconds": null,
-   "finished": "2026-10-23T08:20:26.213000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] Ines additions.css cap decision",
-   "model": "opus",
-   "started": "2026-10-23T07:59:21.055Z",
-   "seconds": null,
-   "finished": "2026-10-23T08:06:03.236000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[test] Wrenna site QA and fixtures",
-   "model": "opus",
-   "started": "2026-10-23T07:30:57.806Z",
-   "seconds": null,
-   "finished": "2026-10-23T07:41:25.949000+00:00"
+   "finished": "2026-10-23T08:54:15.653000+00:00"
   },
   {
    "name": "maren",
-   "task": "[design] Maren site pass and fixes",
+   "task": "[design] Site v2 second pass",
    "model": "opus",
-   "started": "2026-10-23T07:30:55.857Z",
+   "started": "2026-10-23T08:36:14.534Z",
    "seconds": null,
-   "finished": "2026-10-23T07:39:22.912000+00:00"
+   "finished": "2026-10-23T08:41:08.275000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[build] Odalys site v2 fixes",
-   "model": "opus",
-   "started": "2026-10-23T07:23:33.293Z",
+   "name": "wrenna",
+   "task": "[research] Keywords Netsmith Ledger",
+   "model": "sonnet",
+   "started": "2026-10-23T08:36:12.796Z",
    "seconds": null,
-   "finished": "2026-10-23T07:31:27.394000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[review] Idris design and back-end review",
-   "model": "opus",
-   "started": "2026-10-23T07:23:36.391Z",
-   "seconds": null,
-   "finished": "2026-10-23T07:30:45.660000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] Ines API-call budget decision",
-   "model": "opus",
-   "started": "2026-10-23T07:23:39.198Z",
-   "seconds": null,
-   "finished": "2026-10-23T07:29:03.737000+00:00"
+   "finished": "2026-10-23T08:38:15.238000+00:00"
   }
  ],
  "queue": {
@@ -119,33 +78,33 @@
     "text": "(waiting on Idris: Seatsolve Seating package: model, CSV import, cost function, seeded annealing, broken-rules..."
    }
   ],
-  "runnable_count": 22,
+  "runnable_count": 20,
   "blocked_count": 9
  },
  "meter": {
   "five_hour": {
-   "pct": 22.0,
-   "resets_at": "2026-10-23T08:50:00.069778+00:00",
+   "pct": 29.0,
+   "resets_at": "2026-10-23T08:50:00.414106+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 78.0,
+   "left": 71.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 10.0,
-   "resets_at": "2026-10-25T07:00:00.069795+00:00",
+   "pct": 11.0,
+   "resets_at": "2026-10-25T07:00:00.414125+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 90.0,
+   "left": 89.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 5.0,
-   "resets_at": "2026-10-25T07:00:00.069913+00:00",
+   "resets_at": "2026-10-25T07:00:00.414241+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T03:23:19.950725-04:00"
+  "read_at": "2026-10-23T04:35:31.988380-04:00"
  },
  "ui": {
-  "week_pct": 0.032,
+  "week_pct": 0.03,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -157,5 +116,5 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T03:38:20-04:00"
+ "next_tick": "2026-10-23T04:50:32-04:00"
 }

@@ -22,10 +22,11 @@ Designs web systems in CSS tokens and inline SVG, with a byte budget in mind.
 | Career goal | One system that the whole company can read, for the site and the app, with the source in the repo. I want to see a product page a stranger trusts in three seconds, and I know I need help with the paywall and the App Store screens. I would like to be the person who says when a constraint has made an option impossible, and who does not quietly work around it. |
 {: .facts}
 
-## Activity (15 most recent)
+## Activity (16 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 16:25 | <span class="tag t-research">research</span> H27 paid on Android, absent on iOS: 0 at B+; every Android-only paid app is absent because iOS forbids the job or the shelf is full |  |
 | Oct 23, 13:57 | <span class="tag t-research">research</span> H22: second grades on H18-H20, 0 at B+, best D/B-; a 1,372-rating Trakt watch-time app already sells H19's top ask; H21 pending |  |
 | Oct 23, 13:44 | <span class="tag t-review">review</span> H17: novelty and selling on H12-H15, 19 concepts, none at B+, no hero |  |
 | Oct 23, 13:40 | <span class="tag t-work">work</span> Paywall B status band drawn: seven states, button fixed at 650 pt, contrast checked both modes; Idris matches next |  |
@@ -71,6 +72,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Paywall B status band done 85f0dbd (board 386a3bd): 7 states, button fixed 650 pt, band 0.97 page colour; Idris line added (SwiftUI + plain fit test). Lesson: at 0.92 covered text ghosts in a flat drawing.
 - H17 done 5726231 (H12-H15, 19 concepts): research/hunt/grades-maren-h17.md, none B+, no hero; best Plotback B-/B, pitch accent C-/B. Committed before H16.md existed.
 - H9 done (H6-H8, H10, H11): research/hunt/grades-maren-h9.md, none B+, no hero (best Sepwright B-/B; SepForge Mac 2026-08-11 breaks 'Mac empty'). Tables carry Ines's/Wrenna's grades, so blindness is partial; said so.
+- H27 done ef2fede (board b3ff906): none B+; best field map C-/C+. Android-only paid = iOS forbids the job or shelf full. Lesson: tools/play_ios_gap.py too slow for 100+ rows and gives false 'android-only?'; hand-pick then play_app.py --dev.
 - H22 H18-H20 done 86b07f3 (research/hunt/H22.md): none B+, no hero; best D/B-. H21 (Ines) not landed: add its section and tick board line 147 when it does. Lesson: hand-search the title of the ask; trakt.TV Time To Watch was the screenshot.
 {% endraw %}
 

@@ -1,45 +1,36 @@
 {
  "schema": 1,
- "at": "2026-10-23T20:20:18.239245+00:00",
+ "at": "2026-10-23T20:42:12.628741+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T16:02:34-04:00"
+  "started": "2026-10-23T16:20:35-04:00"
  },
- "workers": [
+ "workers": [],
+ "recent": [
   {
    "name": "wrenna",
    "task": "[research] H26 trade apps at $20+",
    "model": "opus",
-   "started": "2026-10-23T20:02:57.379Z",
-   "seconds": 1040,
-   "finished": null
+   "started": "2026-10-23T20:20:55.618Z",
+   "seconds": null,
+   "finished": "2026-10-23T20:32:38.344000+00:00"
   },
   {
    "name": "maren",
-   "task": "[research] H27 paid on Android absent iOS",
+   "task": "[research] H27 paid Android absent iOS",
    "model": "opus",
-   "started": "2026-10-23T20:02:58.425Z",
-   "seconds": 1039,
-   "finished": null
+   "started": "2026-10-23T20:20:56.986Z",
+   "seconds": null,
+   "finished": "2026-10-23T20:27:09.474000+00:00"
   },
   {
    "name": "ines",
    "task": "[plan] H28 sell to our own trade",
    "model": "opus",
-   "started": "2026-10-23T20:10:16.823Z",
-   "seconds": 601,
-   "finished": null
-  }
- ],
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[build] queue.js F1-F6 and budget",
-   "model": "opus",
-   "started": "2026-10-23T20:02:55.228Z",
+   "started": "2026-10-23T20:20:58.457Z",
    "seconds": null,
-   "finished": "2026-10-23T20:10:11.367000+00:00"
+   "finished": "2026-10-23T20:26:23.660000+00:00"
   }
  ],
  "queue": {
@@ -87,33 +78,33 @@
     "text": "(waiting on Idris: Boardseat one-level prototype: DayKit deterministic simulation with XCTests and the Day 1..."
    }
   ],
-  "runnable_count": 24,
+  "runnable_count": 21,
   "blocked_count": 11
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
-   "resets_at": "2026-10-24T00:00:00.473279+00:00",
+   "pct": 2.0,
+   "resets_at": "2026-10-23T23:59:59.573888+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 100.0,
+   "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 20.0,
-   "resets_at": "2026-10-25T07:00:00.473303+00:00",
+   "pct": 21.0,
+   "resets_at": "2026-10-25T06:59:59.573908+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 80.0,
+   "left": 79.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-10-25T07:00:00.473438+00:00",
+   "resets_at": "2026-10-25T06:59:59.574042+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T16:02:34.079287-04:00"
+  "read_at": "2026-10-23T16:20:35.492297-04:00"
  },
  "ui": {
-  "week_pct": 0.025,
+  "week_pct": 0.026,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -125,41 +116,8 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T16:17:34-04:00",
+ "next_tick": "2026-10-23T16:35:35-04:00",
  "lanes": [
-  {
-   "name": "Wrenna",
-   "state": "running",
-   "task": "[research] H26 trade apps at $20+",
-   "model": "opus",
-   "since": "2026-10-23T20:02:57.379Z",
-   "next": [
-    "Wrenna: site v2 slice 1 DONE 2026-10-23 (954e2b8,...",
-    "Wrenna: site_qa.py checks for the additions against..."
-   ]
-  },
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[research] H27 paid on Android absent iOS",
-   "model": "opus",
-   "since": "2026-10-23T20:02:58.425Z",
-   "next": [
-    "Maren: designer probation: (a) second pass on site v2...",
-    "Maren, H22: blind grades on H18-H21, letters committed..."
-   ]
-  },
-  {
-   "name": "Ines",
-   "state": "running",
-   "task": "[plan] H28 sell to our own trade",
-   "model": "opus",
-   "since": "2026-10-23T20:10:16.823Z",
-   "next": [
-    "Ines + Maren, P2 (Idris, paywall check): option B with...",
-    "Ines, H-P1: grade each hunt file as it lands (18:00 pass..."
-   ]
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -180,6 +138,37 @@
    "next": [
     "Odalys, P3 (rest of Idris C13 F6): a queue row whose...",
     "Odalys probation: write tools/ops_metrics.py (reads..."
+   ]
+  },
+  {
+   "name": "Wrenna",
+   "state": "next",
+   "task": "Wrenna: site v2 slice 1 DONE 2026-10-23 (954e2b8, measure.md; not measured: throttled 4G, home with token, composer...",
+   "model": null,
+   "since": null,
+   "next": [
+    "Wrenna: site_qa.py checks for the additions against...",
+    "Unrelated side project (LOWEST priority; start only when..."
+   ]
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren: designer probation: (a) second pass on site v2 inside the approved system (ops/plans/site-v2.md section 9:...",
+   "model": null,
+   "since": null,
+   "next": [
+    "Maren, H22: blind grades on H18-H21, letters committed..."
+   ]
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines + Maren, P2 (Idris, paywall check): option B with Netsmith's page-sized hero (196 x 277 pt) is 3 to 53 pt...",
+   "model": null,
+   "since": null,
+   "next": [
+    "Ines, H-P1: grade each hunt file as it lands (18:00 pass..."
    ]
   }
  ],

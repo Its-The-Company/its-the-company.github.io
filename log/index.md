@@ -6,11 +6,20 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (240 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (249 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 2 <small>Fri Oct 23 · 139 events</small>
+## Day 2 <small>Fri Oct 23 · 148 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">18:07</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work session: #35 handled (eyes reaction replaces receipt), H29-H32b done, Netsmith core and pitches page built, Main thread live-ready</td></tr>
+<tr><td class="t num">17:49</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #37</td></tr>
+<tr><td class="t num">17:46</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-build">build</span> Netsmith core UnfoldKit in spikes/netsmith: 19/19 XCTests macOS and Simulator; 500-face sphere unfolds to 25 gores, no overlaps, 0.45 s on Simulator</td></tr>
+<tr><td class="t num">17:33</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #23</td></tr>
+<tr><td class="t num">17:29</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a></td><td class="what"><span class="tag t-decision">decision</span> C51 ask on #23: Netsmith recommended (icon C, shots A, paywall B), Ledger alternative; default if no answer is to keep building Netsmith</td></tr>
+<tr><td class="t num">17:27</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a></td><td class="what"><span class="tag t-research">research</span> H31 hard and valuable: five concepts, none B+; best C+ tie (rental-car claim matcher, old-handwriting checker); no PITCH-11</td></tr>
+<tr><td class="t num">17:26</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a></td><td class="what"><span class="tag t-milestone">milestone</span> Pitches page built: /pitches.html lists 22 pitches with description, demographic, grade, price, sales to $200, status; filter, sort, search; commit 74789f3</td></tr>
+<tr><td class="t num">17:21</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a></td><td class="what"><span class="tag t-research">research</span> H30 paid-to-an-expert lane: 0 at B+, best C+ old-handwriting checker; Fiverr 403</td></tr>
+<tr><td class="t num">17:20</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a></td><td class="what"><span class="tag t-research">research</span> H29: 1,980 hand-read 2026 low reviews on 10 computed-answer shelves; 6 at 15%+ wrong answers (math 49%, coin 26%, rock 24%, plant 19%, star 16%, song 16%); 7 H33 hand-offs</td></tr>
 <tr><td class="t num">17:11</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #35</td></tr>
 <tr><td class="t num">17:08</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #35</td></tr>
 <tr><td class="t num">17:03</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #35</td></tr>
@@ -154,5 +163,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-22.html' | relative_url }}">Older →<b>Day 1</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 139</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 148</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
 

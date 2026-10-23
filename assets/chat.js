@@ -133,12 +133,12 @@ function allComments() { var by = {}; comments.concat(flat(threads)).forEach((c)
 function seen(n) { var s = LS.getItem('company.seen.' + n); return s && s > seen0 ? s : seen0; }
 function unread(n) { return msgsOf(n).filter((c) => !isInv(login(c)) && !isReceipt(c.body) && c.created_at > seen(n)).length; }
 function markSeen(n) { var l = msgsOf(n); if (typeof n === 'number' && l.length) LS.setItem('company.seen.' + n, l[l.length - 1].created_at); }
-function parse() { var m = /^#t=(\w+)/.exec((W.location && W.location.hash) || ''); return m ? m[1] : 'home'; }
+function parse() { var m = /^#t=(\w+)/.exec((W.location && W.location.hash) || ''); return m ? m[1] : 'main'; }
 function go(k) { if (k === 'main') k = mainN() || k; var h = '#t=' + k; if (W.location && W.location.hash !== h) W.location.hash = h; if (String(k) !== String(cur)) select(k); }
 function select(k) {
 if (k === 'main') k = mainN() || k;
 if (k !== 'home' && k !== 'new' && k !== 'main') { k = +k; if (k > 0) { if (k !== mainN()) openTab(k); } else k = 'home'; }
-saveDraft(); cur = k; limit = 30; jump.hidden = true; isOpen = isDesk || ((k === 'new' || isMain(k)) && composerOn); drawTabs(); drawView(true); drawDock();
+saveDraft(); cur = k; limit = 30; jump.hidden = true; isOpen = isDesk || ((k === 'new' || isMain(k)) && composerOn); drawTabs(); drawView(true); drawDock(); if (isDesk && composerOn && isMain(k) && ta.focus) ta.focus();
 }
 function openTab(n) {
 if (tabs.indexOf(n) >= 0) return;
@@ -322,10 +322,10 @@ var ul = mk(box, 'ul', 'cv-list');
 l.forEach((x) => { row(ul, x.i.number, x.i.title, due(x.d), (x.d && !x.d.t ? 'Deadline: ' + x.d.text + '. ' : '') + summary(x.i.body)); });
 return box;
 }
-function allConvos() {
-var box = el('div', 'cv-all'), recent = Date.now() - 3 * 864e5, ul;
-mk(box, 'h2', 'cv-sec', 'All conversations'); ul = mk(box, 'ul', 'cv-list');
-issues.filter((i) => i.state === 'open' || Date.parse(i.closed_at || i.updated_at) > recent).slice(0, 30)
+function allConvos(h) {
+var box = el('div', 'cv-all'), recent = Date.now() - 3 * 864e5, ul, nz = h ? urgentList().map((x) => x.i.number) : [];
+mk(box, 'h2', 'cv-sec', h || 'All conversations'); ul = mk(box, 'ul', 'cv-list');
+issues.filter((i) => nz.indexOf(i.number) < 0 && (i.state === 'open' || Date.parse(i.closed_at || i.updated_at) > recent)).slice(0, 30)
 .forEach((i) => { row(ul, i.number, i.title + (i.state === 'closed' ? ' (closed)' : ''), el('span', 'cv-rm', ago(i.updated_at)), '', '', kindOf(i)); });
 return box;
 }
@@ -333,12 +333,11 @@ function drawView(open) {
 view.textContent = ''; side.textContent = ''; log = head = anchor = null;
 if (stripEl) stripEl.hidden = cur === 'home';
 put(side, glance());
-if (!lastDraw) { var p = mk(view, 'p', 'muted', S.rejected() ? NO_TOKEN + ' ' : 'Loading the conversations...'); if (S.rejected()) mk(p, 'a', null, 'Change the token').href = tokenLink.href; return; }
+if (!lastDraw) { var p = mk(view, 'p', 'muted', S.rejected() ? NO_TOKEN + ' ' : 'Loading...'); if (S.rejected()) mk(p, 'a', null, 'Change the token').href = tokenLink.href; return; }
 if (cur === 'home') { [glance(), needs(), allConvos()].forEach((x) => { put(view, x); }); return; }
-put(side, needs());
+put(side, needs()); put(side, allConvos('Older threads'));
 if (cur === 'new' || cur === 'main') {
 mk(mk(view, 'div', 'cv-head'), 'h2', null, toText());
-mk(view, 'p', 'muted', 'Your message starts ' + (cur === 'new' ? 'a new thread.' : 'the Main thread; + starts one of its own.'));
 return;
 }
 drawThread(open);
@@ -348,7 +347,7 @@ var fake = el('button', 'cv-fake'), barSend = el('button', 'cv-send', '↑'), to
 var topicIn = el('input', 'field'), ta = el('textarea'), tools = el('div', 'cv-tools'), out = el('p', 'cv-state', '');
 var urg = mk(tools, 'button', 'cv-tool', '! Urgent'), hide = mk(tools, 'button', 'cv-tool cv-hide', 'Hide ⌄'), send = mk(tools, 'button', 'cv-send', '↑');
 [fake, barSend, urg, hide, send].forEach((b) => { b.type = 'button'; });
-attr(barSend, 'aria-label', 'Send'); attr(send, 'aria-label', 'Send'); attr(hide, 'aria-label', 'Hide the keyboard and the composer');
+attr(barSend, 'aria-label', 'Send'); attr(send, 'aria-label', 'Send'); attr(hide, 'aria-label', 'Hide the composer');
 topicIn.type = 'text'; topicIn.maxLength = 30; topicIn.placeholder = 'Topic (optional)'; attr(topicIn, 'aria-label', 'Topic for the new conversation');
 ta.rows = 3; attr(ta, 'aria-label', 'Message'); ta.placeholder = 'Handled as if typed into Claude Code.';
 attr(out, 'role', 'status');
@@ -360,13 +359,13 @@ function toText() { var n = target(), i = issue(n); return n === 'new' ? 'New co
 function canSend() { return !!ta.value.trim() && !S.rejected() && !sending; }
 function drawDock() {
 dock.textContent = '';
-if (!composerOn) { mk(dock, 'p', 'muted', 'Sending is switched off.'); return; }
+if (!composerOn) { mk(dock, 'p', 'muted', 'Sending is off.'); return; }
 ta.value = LS.getItem(draftKey()) || '';
 barSend.disabled = send.disabled = !canSend();
 if (main) main.className = 'cv-desk' + (isOpen ? ' cv-open' : '');
 if (!isOpen) {
 var b = mk(dock, 'div', 'cv-bar'); put(b, fake); put(b, barSend);
-fake.textContent = ta.value.trim() ? ta.value.trim().split('\n')[0] : target() === 'new' ? 'Message the company (new chat)...' : isMain(target()) ? 'Message the company...' : 'Reply to ' + toText() + '...';
+fake.textContent = ta.value.trim() ? ta.value.trim().split('\n')[0] : target() === 'new' ? 'Message the company...' : isMain(target()) ? 'Message the company...' : 'Reply to ' + toText() + '...';
 return;
 }
 to.textContent = 'To '; mk(to, 'b', null, toText());

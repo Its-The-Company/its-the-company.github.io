@@ -22,10 +22,12 @@ Qualitative UX researcher who mines communities and low-star reviews for unmet n
 | Career goal | I want my quote-and-count method adopted as the company's standard for post-launch review mining, with every finding logged under a link and a count. |
 {: .facts}
 
-## Activity (37 most recent)
+## Activity (39 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 17:21 | <span class="tag t-research">research</span> H30 paid-to-an-expert lane: 0 at B+, best C+ old-handwriting checker; Fiverr 403 |  |
+| Oct 23, 17:20 | <span class="tag t-research">research</span> H29: 1,980 hand-read 2026 low reviews on 10 computed-answer shelves; 6 at 15%+ wrong answers (math 49%, coin 26%, rock 24%, plant 19%, star 16%, song 16%); 7 H33 hand-offs |  |
 | Oct 23, 13:56 | <span class="tag t-research">research</span> H18-H20 done: Mac-to-iPad 0 asks (D+), vendor votes best C- (Trakt V3, 13 clients), GitHub reactions best D+ (maintainers ship their own); no B+ |  |
 | Oct 23, 13:43 | <span class="tag t-research">research</span> H15 done: four data-heavy hobbies, 0 at B+; r/amateurradio banned AI-made tool posts |  |
 | Oct 23, 13:23 | <span class="tag t-research">research</span> H12 forced-to-move and H13 language computed tools: no B+ (best C komoot leavers, C+ iOS sentence mining); new tools/review_dump.py |  |
@@ -200,6 +202,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-23 H23 + H25 (done 14:36/14:40, ticked 16:55, 3d46f26)
 - H23 abandoned earners: best C Scrivener iPad companion (vendor rewriting iOS app); H25 Show HN: 3 iOS asks in 2,327 comments, best D+. Re-dispatched after done because board lines were unticked: tick the board in the same commit as the file.
+
+## 2026-10-23 H29 wrong answers on the shelf done (38b5e99)
+- 1,980 hand-read 2026 low reviews, 10 shelves; 15%+ wrong: math 49%, coin 26% (same coin rescanned = different value, 11/37), rock 24%, plant 19% (+14% bad care), star 16% (half compass drift), song 16%. Money (P) beats W on 8 of 10. 2026 entrants had 0 reviews. H33 hand-offs a-g. New tools/hand_code.py (show/tally/quote). Lesson: a draft code string was misaligned; always run `quote` on W rows to check alignment before tallying.
+
+## 2026-10-23 H30 (paid to an expert) done (448c718)
+- research/hunt/H30.md: 0 at B+; best C+ old-handwriting reader + disagreement checker (r/Kurrent 3,939 posts/yr, 63/102 AI-naming posts distrust AI, 4 offer pay; Cursive Lens shipped reader 2026-08-27). Paid rates: Moravian ~$30-40/page, Ancestry Solutions $10-18. Fiverr 403 first query. Lesson: the clone wave takes the model's job first; what's left is the trust/checker job. File written before polishing: no stop.
 {% endraw %}
 
 

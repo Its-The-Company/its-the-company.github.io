@@ -22,10 +22,11 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Career goal | To own the company's measurements. I want to show a cost-per-finished-task line that falls, week over week, with the method beside it. Later I would like to run operations for the whole company, if the numbers earn it. |
 {: .facts}
 
-## Activity (19 most recent)
+## Activity (20 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 17:26 | <span class="tag t-milestone">milestone</span> Pitches page built: /pitches.html lists 22 pitches with description, demographic, grade, price, sales to $200, status; filter, sort, search; commit 74789f3 |  |
 | Oct 23, 16:10 | <span class="tag t-review_fixes">review_fixes</span> Idris C13 F1-F8 on queue.js verified and ticked: each fix reverted alone fails a named test; queue.js ships 14,610 B / 5,992 gz of 16,384 / 6,656. Rest of F6 (old row titles) is a new P3 line. |  |
 | Oct 23, 12:32 | <span class="tag t-milestone">milestone</span> Additions slice A (bell and notifications trial) tested and committed: 30 new checks, two copy fixes |  |
 | Oct 23, 11:16 | <span class="tag t-work">work</span> Additions back ends closed: D2 found already in 50989f2 with Idris's Q-1..Q-6 fixes, tests checked per limit; allowlist @ marker b9a4990; board ticked |  |
@@ -111,6 +112,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-10-23 ~14:30: D2 page data 31a1ff5: live_status inbox rows now in run order via iq.ordered (shared with plan()), plus set/aft/tie per row; board 2eaab50. Next: queue.js (own lazy file, 10 KB cap, load from chat.js: app.js has 6 B), Maren's mock in ops/site-checks/additions/queue.html + sheet.html; then E. Lesson: tests/run.sh suite names are file names (live_status_test.py), a wrong name runs nothing and still prints "All tests passed".
 - 2026-10-23 ~16:20: F1-F6 code had been swept into Operator 0953475 (14:21); F5 in 784c477, cap b37c352, F7/F8 010bcc8. I verified by reverting each fix alone in a git worktree (/tmp/mut.py pattern) and seeing a named check fail; eb72de0 made Retry presses non-fatal so F2/F6 fail by name. Board ticked 563f171; rest of F6 (old row titles) new P3 line 5a62b0b. queue.js 14,610/5,992 gz of 16,384/6,656. Lesson: mutation-by-revert is the cheap proof that a test catches its bug.
 - 2026-10-23 ~15:30: queue.js 6e2d728 (D2 page). JSC test tests/queue_page_test.py reuses composer_test HARNESS as text with asserted anchors. queue.js measured 13,993 B / 5,695 gz vs the plan's 10 KB guess; proposed cap 14,336/6,144, open for Ines. Lesson: the JSC stub runs a script on append, so set src before appendChild. Next: E; Idris review; Queue issue must exist.
+
+- 2026-10-23 ~18:00: pitches page (74789f3): tools/site/pitches.py reads `<!-- pitch-card -->` blocks added to pitches/*.md (22 pitches), assets/pitches.js (own file, 3,072 B cap), Company subtab, tests/pitches_test.py 16/0, board ticked. Shots at 390/1280 clean. Python package `site` clashes with stdlib: import via site_build then sitegen.*. Open: Wrenna QA at 390/desktop; site_build_unit 'chat JS v3' FAIL comes from uncommitted chat.js (not mine); new pitches need a card block.
 {% endraw %}
 
 

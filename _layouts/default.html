@@ -422,6 +422,7 @@ ul.q{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
 /* ---------- thread head: sticky under the tabs ---------- */
 .cv-head{position:sticky;top:var(--cv-tabs-h,57px);z-index:5;display:flex;align-items:center;gap:var(--s2);margin:0 calc(-1*var(--s4));
   padding:var(--s2) var(--s4);background:var(--page);border-bottom:1px solid var(--line)}
+.cv-head{margin-top:var(--s2)}
 .cv-head h2{flex:1;min-width:0;margin:0;font-size:var(--fs-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 /* The pinned question: shown only when the latest Investor message has scrolled above the head. */
 .cv-pin{display:flex;gap:var(--s2);align-items:baseline;width:100%;margin:0;padding:6px var(--s3);border:0;border-left:3px solid var(--accent);
@@ -538,7 +539,7 @@ main.cv-desk.cv-open{padding-bottom:200px}
 /* ---------- desktop from 880 px: tabs and thread on the left, the glance on the right ---------- */
 @media (min-width:880px){
   main.cv-desk{display:grid;grid-template-columns:minmax(0,1fr) var(--side);column-gap:var(--s6);align-items:start}main.cv-desk,main.cv-desk.cv-open{padding-bottom:var(--s6)}
-  main.cv-desk .cv-side{position:sticky;top:var(--s3)}
+  main.cv-desk .cv-side{position:sticky;top:var(--s3);max-height:calc(100vh - 2 * var(--s3));overflow-y:auto}
   .cv-tabs{margin:var(--s3) 0 0;padding:var(--s2) 0}
   .cv-head{margin:0;padding:var(--s2) 0}
   .cv-dock{position:sticky;bottom:0;margin-top:var(--s3);border:1px solid var(--line);border-radius:var(--r-l);padding:var(--s3) var(--s4)}
@@ -575,18 +576,19 @@ main.cv-desk.cv-open{padding-bottom:200px}
 <nav class="tabs" aria-label="Sections">
 <a href="{{ '/' | relative_url }}"{% if page.section == "home" or page.section == "requests" %} aria-current="page"{% endif %}>Home</a>
 <a href="{{ '/reports/' | relative_url }}"{% if page.section == "reports" %} aria-current="page"{% endif %}>Reports</a>
-<a href="{{ '/company/' | relative_url }}"{% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" %} aria-current="page"{% endif %}>Company</a>
+<a href="{{ '/company/' | relative_url }}"{% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" or page.section == "pitches" %} aria-current="page"{% endif %}>Company</a>
 <a href="{{ '/about.html' | relative_url }}"{% if page.section == "about" %} aria-current="page"{% endif %}>About</a>
 </nav>
 </div></header>
 <div class="wrap notice-row">
 <p class="notice">{{ site.disclosure }}</p>
 {% if site.announcement and site.announcement != "" %}<p class="notice announce">{{ site.announcement }}</p>{% endif %}
-{% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" %}<nav class="subtabs" aria-label="Company">
+{% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" or page.section == "pitches" %}<nav class="subtabs" aria-label="Company">
 <a href="{{ '/company/' | relative_url }}"{% if page.section == "cast" %} aria-current="page"{% endif %}>People</a>
 <a href="{{ '/story/' | relative_url }}"{% if page.section == "records" %} aria-current="page"{% endif %}>Records</a>
 <a href="{{ '/log/' | relative_url }}"{% if page.section == "log" %} aria-current="page"{% endif %}>Log</a>
 <a href="{{ '/usage.html' | relative_url }}"{% if page.section == "usage" %} aria-current="page"{% endif %}>Usage</a>
+<a href="{{ '/pitches.html' | relative_url }}"{% if page.section == "pitches" %} aria-current="page"{% endif %}>Pitches</a>
 </nav>{% endif %}
 </div>
 <main id="main"{% if page.url == "/" %} class="home"{% endif %}{% if page.section == "reports" or page.section == "records" %} class="ix"{% endif %}>

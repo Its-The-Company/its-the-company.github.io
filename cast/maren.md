@@ -76,6 +76,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - H27 done ef2fede (board b3ff906): none B+; best field map C-/C+. Android-only paid = iOS forbids the job or shelf full. Lesson: tools/play_ios_gap.py too slow for 100+ rows and gives false 'android-only?'; hand-pick then play_app.py --dev.
 - H32 done 245e38a: 5 meta concepts, none B+, no hero; best H32-1 D/B, H32-3 B/C- (fails 4.2 alone). Open: H32b blind letters on H29-H31 (H29 title-only at commit). Lesson: EventKit keeps no move history, Obsidian records no opens; check what the store actually keeps before captioning.
 - H22 H18-H20 done 86b07f3 (research/hunt/H22.md): none B+, no hero; best D/B-. H21 (Ines) not landed: add its section and tick board line 147 when it does. Lesson: hand-search the title of the ask; trakt.TV Time To Watch was the screenshot.
+- H32b done: letters c78589b, H29 blind, H30/H31 not (grades share the page with evidence; use grep -v or ask for evidence-only copies). Overall letters matched all 10 graded.
 {% endraw %}
 
 

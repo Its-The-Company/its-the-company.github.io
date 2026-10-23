@@ -1,52 +1,76 @@
 {
  "schema": 1,
- "at": "2026-10-23T21:12:21.091511+00:00",
+ "at": "2026-10-23T22:07:17.880806+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T16:53:14-04:00"
+  "started": "2026-10-23T17:12:41-04:00"
  },
  "workers": [],
  "recent": [
   {
-   "name": "wrenna",
-   "task": "[research] H29 selling-but-wrong apps",
-   "model": "opus",
-   "started": "2026-10-23T20:57:09.395Z",
+   "name": "idris",
+   "task": "[build] Main thread review fixes",
+   "model": "sonnet",
+   "started": "2026-10-23T21:46:36.364Z",
    "seconds": null,
-   "finished": "2026-10-23T21:02:20.720000+00:00"
+   "finished": "2026-10-23T22:01:25.153000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] Update receipt test expectations",
+   "model": "sonnet",
+   "started": "2026-10-23T21:37:57.806Z",
+   "seconds": null,
+   "finished": "2026-10-23T21:55:04.098000+00:00"
   },
   {
    "name": "idris",
-   "task": "[build] Site main-thread chat",
+   "task": "[build] Netsmith core UnfoldKit",
    "model": "opus",
-   "started": "2026-10-23T20:53:45.446Z",
+   "started": "2026-10-23T21:31:25.316Z",
    "seconds": null,
-   "finished": "2026-10-23T21:02:07.383000+00:00"
+   "finished": "2026-10-23T21:45:52.636000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] Fix tests/run.sh syntax error",
+   "model": "sonnet",
+   "started": "2026-10-23T21:31:28.977Z",
+   "seconds": null,
+   "finished": "2026-10-23T21:37:53.336000+00:00"
   },
   {
    "name": "maren",
-   "task": "[research] H32 meta lane",
-   "model": "opus",
-   "started": "2026-10-23T20:57:10.821Z",
+   "task": "[review] Visual review of main thread",
+   "model": "sonnet",
+   "started": "2026-10-23T21:31:27.525Z",
    "seconds": null,
-   "finished": "2026-10-23T21:00:12.115000+00:00"
+   "finished": "2026-10-23T21:32:05.264000+00:00"
   },
   {
-   "name": "ines",
-   "task": "[plan] H28 and pitch refill",
-   "model": "opus",
-   "started": "2026-10-23T20:53:42.842Z",
+   "name": "odalys",
+   "task": "[build] Fix pitches page QA bugs",
+   "model": "sonnet",
+   "started": "2026-10-23T21:30:25.059Z",
    "seconds": null,
-   "finished": "2026-10-23T20:57:05.994000+00:00"
+   "finished": "2026-10-23T21:30:54.938000+00:00"
   },
   {
    "name": "wrenna",
-   "task": "[research] H23 abandoned earners",
-   "model": "opus",
-   "started": "2026-10-23T20:53:39.639Z",
+   "task": "[test] QA pitches page",
+   "model": "sonnet",
+   "started": "2026-10-23T21:28:53.384Z",
    "seconds": null,
-   "finished": "2026-10-23T20:54:29.891000+00:00"
+   "finished": "2026-10-23T21:30:21.291000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] C51 Netsmith ask on",
+   "model": "opus",
+   "started": "2026-10-23T21:28:41.053Z",
+   "seconds": null,
+   "finished": "2026-10-23T21:29:55.838000+00:00"
   }
  ],
  "queue": {
@@ -94,30 +118,30 @@
     "text": "(waiting on Idris: Boardseat one-level prototype: DayKit deterministic simulation with XCTests and the Day 1..."
    }
   ],
-  "runnable_count": 28,
+  "runnable_count": 23,
   "blocked_count": 11
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
-   "resets_at": "2026-10-24T00:00:00.022131+00:00",
+   "pct": 7.0,
+   "resets_at": "2026-10-24T00:00:00.419226+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 95.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 21.0,
-   "resets_at": "2026-10-25T07:00:00.022152+00:00",
+   "resets_at": "2026-10-25T07:00:00.419245+00:00",
    "used_words": "of your weekly allowance used",
    "left": 79.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-10-25T07:00:00.022280+00:00",
+   "resets_at": "2026-10-25T07:00:00.419388+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T16:53:13.656030-04:00"
+  "read_at": "2026-10-23T17:12:41.007384-04:00"
  },
  "ui": {
   "week_pct": 0.026,
@@ -132,7 +156,7 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T17:08:13-04:00",
+ "next_tick": "2026-10-23T17:27:41-04:00",
  "lanes": [
   {
    "name": "Idris",
@@ -153,7 +177,7 @@
    "since": null,
    "next": [
     "Odalys, P3 (rest of Idris C13 F6): a queue row whose...",
-    "Odalys, H34 hunt leaderboard: python3 tools/hunt.py top..."
+    "Odalys probation: write tools/ops_metrics.py (reads..."
    ]
   },
   {
@@ -174,18 +198,16 @@
    "model": null,
    "since": null,
    "next": [
-    "Maren, H22: blind grades on H18-H21, letters committed...",
-    "Maren, H32b blind letters on H29, H30 and H31 as each..."
+    "Maren, H22: blind grades on H18-H21, letters committed..."
    ]
   },
   {
    "name": "Ines",
    "state": "next",
-   "task": "Ines: C51 ask for Netsmith (my recommendation) now, per (ask, then build the recommended option): post its icon,...",
+   "task": "Ines + Maren, P2 (Idris, paywall check): option B with Netsmith's page-sized hero (196 x 277 pt) is 3 to 53 pt...",
    "model": null,
    "since": null,
    "next": [
-    "Ines + Maren, P2 (Idris, paywall check): option B with...",
     "Ines, H-P1: grade each hunt file as it lands (18:00 pass..."
    ]
   }
@@ -193,45 +215,34 @@
  "qr": [],
  "inbox": [
   {
-   "id": "c6374681598",
+   "id": "c6375164710",
    "state": "waiting",
    "position": 1,
-   "eta": "2026-10-23T17:08:13-04:00",
+   "eta": "2026-10-23T17:27:41-04:00",
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "The Company should NOT do work unrelated to the project when other tasks run..."
+   "title": "No! Keep thinking of ideas. No more building any of the products; the Investo..."
   },
   {
-   "id": "c6374770878",
+   "id": "i37",
    "state": "waiting",
    "position": 2,
-   "eta": "2026-10-23T17:08:13-04:00",
+   "eta": "2026-10-23T17:27:41-04:00",
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "Let's also consolidate all of the pitches on an intuitive pitches page, which..."
-  },
-  {
-   "id": "c6374809671",
-   "state": "waiting",
-   "position": 3,
-   "eta": "2026-10-23T17:08:13-04:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "No more \u201cReceived (Fri 5:08 PM ET). It reached the Mac mini at once. A sessio..."
+   "title": "Brief Description"
   },
   {
    "id": "i35",
    "state": "replied",
-   "position": 4,
+   "position": 3,
    "tasks": {
-    "open": 9,
-    "done": 1
+    "open": 2,
+    "done": 10
    },
    "title": "Urgent -- Get to Work!!"
   }

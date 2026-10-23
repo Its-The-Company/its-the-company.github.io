@@ -6,13 +6,18 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (102 shown of 102; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (107 shown of 107; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 2 <small>Fri Oct 23 · 1 event</small>
+## Day 2 <small>Fri Oct 23 · 6 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 00:21 | Operator | <span class="tag t-note">note</span> #25 math-collab review posted (D+, narrowed C+) |  |
+| 00:21 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-research">research</span> Issue #25 review (math research platform): as described D+, narrowed iPad/Mac problem atlas C+; not pitch-worthy. erdosproblems.com Cloudflare check not bypassed. | [link](research/math-collab.md) |
+| 00:15 | operator | <span class="tag t-note">note</span> watcher install refused; urgent #26 opened; inbox_route built |  |
+| 00:10 | operator | <span class="tag t-message">message</span> An Investor message on issue #25 |  |
+| 00:06 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-decision">decision</span> Approved installing the inbox watcher at defaults (cap 24 wakes/day) per Investors' #24 answer; Operator installs; Day 5 keep/remove review; chat-page C51 approval queued for next report | [link](ops/plans/site-chat.md) |
 | 00:05 | <img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> [Odalys]({{ '/cast/odalys.html' | relative_url }}) | <span class="tag t-task">task</span> Chat composer built, test env leak fixed (guard/supervisor tests now pass) | [link](3e20362) |
 
 ## Day 1 <small>Thu Oct 22 · 101 events</small>

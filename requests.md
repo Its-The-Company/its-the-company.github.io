@@ -12,6 +12,7 @@ Open items, most urgent first. Each one is answered on its GitHub issue, which o
 | --- | --- | --- | --- |
 | <span class="tag">Emergency</span> | [A session changed Investor-owned files; the supervisor put them back](https://github.com/Its-The-Company/itsthecompany/issues/13) | Oct 22, 18:14 | 0 |
 | <span class="tag">Urgent request</span> | [Urgent: no idea reached A in four passes; please choose a pitch to build](https://github.com/Its-The-Company/itsthecompany/issues/23) | Oct 23, 00:55 | 0 |
+| <span class="tag">Urgent request</span> | [Urgent: please run 'tools/install-launchd.sh --watch' (inbox watcher install refused)](https://github.com/Its-The-Company/itsthecompany/issues/26) | Oct 23, 04:07 | 0 |
 | <span class="tag">A report's questions</span> | [Report 1 — Day 1 — 2026-10-22](https://github.com/Its-The-Company/itsthecompany/issues/19) | Oct 22, 22:11 | 0 |
 | <span class="tag">The Pitch</span> | [Pitch: Stripwise (recommended), Tallyproof, Beatcount](https://github.com/Its-The-Company/itsthecompany/issues/7) | Oct 22, 15:15 | 1 |
 | <span class="tag">The Pitch</span> | [Pitch 2: Purlwright (recommended), cross-stitch chart keeper, songbook](https://github.com/Its-The-Company/itsthecompany/issues/9) | Oct 22, 16:32 | 2 |

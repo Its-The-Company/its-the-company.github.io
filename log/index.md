@@ -6,13 +6,14 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (107 shown of 107; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (108 shown of 108; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 2 <small>Fri Oct 23 · 6 events</small>
+## Day 2 <small>Fri Oct 23 · 7 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 00:28 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-decision">decision</span> Sequenced the site push: Odalys Phase 1 live with three handoff points, Idris composer behind flag then commit-by-commit review, Wrenna site_qa.py on today's live site; Urgent Request (C51 + Investor token) drafted in site-chat.md 11b, waits for screenshots | [link](ops/board.md) |
 | 00:21 | Operator | <span class="tag t-note">note</span> #25 math-collab review posted (D+, narrowed C+) |  |
 | 00:21 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-research">research</span> Issue #25 review (math research platform): as described D+, narrowed iPad/Mac problem atlas C+; not pitch-worthy. erdosproblems.com Cloudflare check not bypassed. | [link](research/math-collab.md) |
 | 00:15 | operator | <span class="tag t-note">note</span> watcher install refused; urgent #26 opened; inbox_route built |  |

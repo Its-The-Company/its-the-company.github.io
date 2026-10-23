@@ -15,8 +15,11 @@
     var h = { 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' };
     var t = getToken(); if (t) h['Authorization'] = 'Bearer ' + t;
     if (opts && opts.etag) h['If-None-Match'] = opts.etag;
-    return fetch(API + path, { headers: h });
+    // no-store: api.github.com answers "private, max-age=60", so the browser cache would hide changes for up to a
+    // minute. We keep our own ETags instead; a 304 reaches this code and costs no rate limit.
+    return fetch(API + path, { headers: h, cache: 'no-store' });
   }
+  function cap(s) { s = String(s || ''); return s.charAt(0).toUpperCase() + s.slice(1); }
   function ago(iso) {
     var s = Math.max(0, (Date.now() - Date.parse(iso)) / 1000);
     if (isNaN(s)) return '';
@@ -29,6 +32,9 @@
   }
 
   // ---- Now panel -------------------------------------------------------------------------
+  // Elapsed time comes from `started`, not `seconds`: the variable is rewritten only when something a reader sees
+  // changes, so a pushed `seconds` counter goes stale between writes.
+  function list(items, fmt) { var ul = el('ul'); items.forEach(function (x) { ul.appendChild(el('li', null, fmt(x))); }); return ul; }
   function renderNow(box, st, source) {
     box.textContent = '';
     box.appendChild(el('h3', null, 'Now'));
@@ -36,41 +42,57 @@
     box.appendChild(el('p', null, s.active ? 'A ' + (s.kind || 'work') + ' session is running' + (s.started ? ' (started ' + ago(s.started) + ' ago).' : '.') : 'No session is running; the next one starts at the next 15-minute tick.'));
     var ws = st.workers || [];
     if (ws.length) {
-      var ul = el('ul'); ws.forEach(function (w) { ul.appendChild(el('li', null, w.name + ': ' + w.task + (w.model ? ' [' + w.model + ']' : '') + (w.seconds != null ? ', ' + ago(new Date(Date.now() - w.seconds * 1000).toISOString()) : ''))); });
-      box.appendChild(ul);
+      box.appendChild(el('p', 'now-sub', 'Working now'));
+      box.appendChild(list(ws, function (w) { return cap(w.name) + ': ' + w.task + (w.model ? ' [' + w.model + ']' : '') + (w.started ? ', for ' + ago(w.started) : ''); }));
+    } else if (s.active) box.appendChild(el('p', 'muted', 'No worker call is running at this moment.'));
+    var rec = (st.recent || []).slice(0, 3);
+    if (rec.length) {
+      box.appendChild(el('p', 'now-sub', 'Just finished'));
+      box.appendChild(list(rec, function (w) { return cap(w.name) + ': ' + w.task + (w.finished ? ', ' + ago(w.finished) + ' ago' : ''); }));
     }
     var q = st.queue || {};
-    box.appendChild(el('p', null, (q.runnable_count || 0) + ' tasks ready, ' + (q.blocked_count || 0) + ' blocked.'));
+    box.appendChild(el('p', 'now-sub', 'Queue: ' + (q.runnable_count || 0) + ' tasks ready, ' + (q.blocked_count || 0) + ' blocked'));
+    if ((q.runnable || []).length) box.appendChild(list(q.runnable.slice(0, 5), function (t) { return '[' + t.kind + '] ' + t.text; }));
     var m = st.meter || {};
     box.appendChild(el('p', null, '5-hour limit: ' + pctText(m.five_hour) + '. Week: ' + pctText(m.weekly) + '.'));
     box.appendChild(el('p', 'muted', source + (st.at ? ' · updated ' + ago(st.at) + ' ago' : '')));
   }
   function nowPanel(box) {
+    var repo = box.getAttribute('data-repo'), etag = null, last = null, busy = false;
     function pub() {
-      return fetch(box.getAttribute('data-status'), { cache: 'no-store' }).then(function (r) { return r.json(); })
-        .then(function (st) { renderNow(box, st, 'public copy, refreshed with each site build'); }).catch(function () {});
+      return fetch(box.getAttribute('data-status'), { cache: 'no-store' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (st) { renderNow(box, st, 'public copy, refreshed with each site build (every 15 minutes or so)'); }).catch(function () {});
     }
+    // With a token: the COMPANY_STATUS variable, rewritten within seconds of a change. Polled every 5 s with an
+    // ETag; an unchanged answer is a 304 and does not count against the token's rate limit.
     function live() {
-      var repo = box.getAttribute('data-repo');
-      if (!getToken() || !repo) return pub();
-      return gh('/repos/' + repo + '/actions/variables/COMPANY_STATUS').then(function (r) {
-        if (!r.ok) throw new Error(r.status); return r.json();
-      }).then(function (v) { renderNow(box, JSON.parse(v.value), 'live copy, a few seconds old at most while a session runs'); }).catch(pub);
+      if (busy || document.hidden) return; busy = true;
+      var p = (!getToken() || !repo) ? pub() : gh('/repos/' + repo + '/actions/variables/COMPANY_STATUS', { etag: etag }).then(function (r) {
+        if (r.status === 304 && last) return last;
+        if (!r.ok) throw new Error(r.status);
+        etag = r.headers.get('ETag'); return r.json().then(function (v) { last = JSON.parse(v.value); return last; });
+      }).then(function (st) { renderNow(box, st, 'live copy, seconds old while a session runs'); }).catch(function () { etag = null; last = null; return pub(); });
+      p.then(function () { busy = false; }, function () { busy = false; });
     }
-    live(); setInterval(live, 15000);
+    live(); setInterval(live, getToken() ? 5000 : 60000);
+    document.addEventListener('visibilitychange', function () { if (!document.hidden) live(); });
   }
 
   // ---- Chat view (read only) -------------------------------------------------------------
   function chat(root) {
     var repo = root.getAttribute('data-repo');
+    // The composer is off unless the build set data-composer="on" (site.json chat_composer, default false).
+    var composerOn = root.getAttribute('data-composer') === 'on';
     var status = el('p', 'muted', ''), lanes = el('div', 'lanes');
-    var bar = el('div', 'chat-bar'), input = el('input'); input.type = 'password'; input.placeholder = 'Fine-grained GitHub token (Issues: read, Contents: read, Variables: read)'; input.autocomplete = 'off';
+    var bar = el('div', 'chat-bar'), input = el('input'); input.type = 'password'; input.placeholder = 'Fine-grained GitHub token (Issues: read' + (composerOn ? ' and write' : '') + ', Contents: read, Variables: read)'; input.autocomplete = 'off';
     var remember = el('input'); remember.type = 'checkbox'; var rl = el('label', null, ' remember on this device'); rl.insertBefore(remember, rl.firstChild);
     var save = el('button', null, 'Save token'), forget = el('button', null, 'Forget token');
     bar.appendChild(input); bar.appendChild(rl); bar.appendChild(save); bar.appendChild(forget);
-    root.appendChild(el('p', null, 'This page reads the Investors\' conversation threads from the private company repository, using your own token. The token stays in this browser and is sent only to api.github.com. Messages you send here are posted to the GitHub issue under your own account (the token needs Issues: read and write).'));
+    root.appendChild(el('p', null, 'This page reads the Investors\' conversation threads from the private company repository, using your own token. The token stays in this browser and is sent only to api.github.com. ' +
+      (composerOn ? 'Messages you send here are posted to the GitHub issue under your own account (the token needs Issues: read and write).'
+                  : 'Sending from this page is switched off until an Investor has confirmed reading with their own token; reply on GitHub for now.')));
     root.appendChild(bar); root.appendChild(status);
-    var etags = {}, cache = {}, issuesList = [];
+    var etags = {}, cache = {}, issuesList = [], allowNames = [];
     // ---- Composer: a comment on a thread, or a new chat issue. The author is the token's account, so
     // inbox.py sees an ordinary allowlisted comment (Commandment 57). The "as:" line is cosmetic.
     var comp = el('div', 'composer'); comp.appendChild(el('h3', null, 'Send a message'));
@@ -80,7 +102,8 @@
     var urg = el('input'); urg.type = 'checkbox'; var ul2 = el('label', null, ' mark urgent'); ul2.insertBefore(urg, ul2.firstChild);
     var send = el('button', null, 'Send'), out = el('p', 'muted', '');
     [sel, topicIn, msgIn, nameIn, ul2, send, out].forEach(function (x) { comp.appendChild(x); comp.appendChild(document.createTextNode(' ')); });
-    root.appendChild(comp); root.appendChild(lanes);
+    if (composerOn) root.appendChild(comp);
+    root.appendChild(lanes);
     function setIssues(list) {
       issuesList = list; var keep = sel.value; sel.textContent = '';
       sel.appendChild(Object.assign(el('option', null, 'New chat (opens an issue)'), { value: 'new' }));
@@ -96,23 +119,32 @@
         .then(function (r) { if (!r.ok) throw new Error('GitHub answered ' + r.status + (r.status === 403 || r.status === 404 ? ' (does the token have Issues: read and write?)' : '')); return r.json(); });
     }
     function cleanName(n) { return (n || '').replace(/[^A-Za-z0-9 _.-]/g, '').trim().slice(0, 40); }
-    function stamp(text, name) { return text.replace(/<!--[\s\S]*?-->/g, '').trim() + (name ? '\n\n<!-- as: ' + name + ' -->' : ''); }
+    // "mark urgent" mentions every allowlisted account, so GitHub notifies them the way an Urgent Request does.
+    function mentions(names) { return names.length ? 'Urgent: ' + names.map(function (n) { return '@' + n; }).join(' ') : ''; }
+    function stamp(text, name, cc) { return text.replace(/<!--[\s\S]*?-->/g, '').trim() + (cc ? '\n\n' + cc : '') + (name ? '\n\n<!-- as: ' + name + ' -->' : ''); }
     send.onclick = function () {
-      var text = msgIn.value.trim(), name = cleanName(nameIn.value);
+      if (!composerOn) return;
+      var text = msgIn.value.trim(), name = cleanName(nameIn.value), urgent = urg.checked, target = sel.value;
       if (!getToken()) { out.textContent = 'Save your token first.'; return; }
       if (!text) { out.textContent = 'Write a message first.'; return; }
       localStorage.setItem(NAME, name); send.disabled = true; out.textContent = 'Sending...';
-      var p;
-      if (sel.value === 'new') {
-        var topic = topicIn.value.trim().toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/^-+|-+$/g, '').slice(0, 30);
-        var labels = ['chat']; if (topic) labels.push('topic:' + topic); if (urg.checked) labels.push('urgent');
-        p = post('/repos/' + repo + '/issues', { title: (topic ? topic + ': ' : 'Chat: ') + text.replace(/\s+/g, ' ').slice(0, 60), body: stamp(text, name), labels: labels });
-      } else {
-        p = post('/repos/' + repo + '/issues/' + sel.value + '/comments', { body: stamp(text, name) }).then(function (r) {
-          return urg.checked ? post('/repos/' + repo + '/issues/' + sel.value + '/labels', { labels: ['urgent'] }).then(function () { return r; }) : r;
+      var warn = '';
+      // The allowlist is read on every load; if the first load has not finished, read it now.
+      var who = (!urgent || allowNames.length) ? Promise.resolve(allowNames) : allow();
+      var p = who.then(function (names) {
+        var cc = urgent ? mentions(names) : '';
+        if (target === 'new') {
+          var topic = topicIn.value.trim().toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/^-+|-+$/g, '').slice(0, 30);
+          var labels = ['chat']; if (topic) labels.push('topic:' + topic); if (urgent) labels.push('urgent');
+          return post('/repos/' + repo + '/issues', { title: (topic ? topic + ': ' : 'Chat: ') + text.replace(/\s+/g, ' ').slice(0, 60), body: stamp(text, name, cc), labels: labels });
+        }
+        return post('/repos/' + repo + '/issues/' + target + '/comments', { body: stamp(text, name, cc) }).then(function (r) {
+          // The comment is already posted here: a failed label must not read as "Not sent", or it gets sent twice.
+          return urgent ? post('/repos/' + repo + '/issues/' + target + '/labels', { labels: ['urgent'] })
+            .then(function () { return r; }, function (e) { warn = ' The urgent label was not added (' + e.message + '); the mentions were sent.'; return r; }) : r;
         });
-      }
-      p.then(function (r) { msgIn.value = ''; urg.checked = false; out.textContent = 'Sent (' + (r.html_url || 'ok') + '). A receipt follows within a tick; the reply appears here.'; etags = {}; load(); })
+      });
+      p.then(function (r) { msgIn.value = ''; urg.checked = false; out.textContent = 'Sent (' + (r.html_url || 'ok') + '). A receipt follows within a tick; the reply appears here.' + warn; etags = {}; load(); })
         .catch(function (e) { out.textContent = 'Not sent: ' + e.message; }).then(function () { send.disabled = false; });
     };
     save.onclick = function () { setToken(input.value.trim(), remember.checked); input.value = ''; load(); };
@@ -127,8 +159,9 @@
     function allow() {
       return get('/repos/' + repo + '/contents/investors/allowlist.md').then(function (f) {
         var text = atob(f.content.replace(/\n/g, ''));
-        return text.split('\n').map(function (l) { return l.replace(/^[\s*\-]+/, '').replace(/^@/, '').trim().toLowerCase(); })
+        allowNames = text.split('\n').map(function (l) { return l.replace(/^[\s*\-]+/, '').replace(/^@/, '').trim().toLowerCase(); })
           .filter(function (l) { return /^[a-z0-9-]{1,39}$/.test(l); });
+        return allowNames;
       });
     }
     function load() {

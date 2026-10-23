@@ -6,11 +6,14 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (202 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (205 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 2 <small>Fri Oct 23 · 101 events</small>
+## Day 2 <small>Fri Oct 23 · 104 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">12:06</td><td class="who">Operator</td><td class="what"><span class="tag t-note">note</span> Day 2 work session: hunt graded (none B+), chat v3 acceptance pass, additions slice B committed</td></tr>
+<tr><td class="t num">11:57</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a></td><td class="what"><span class="tag t-qa">qa</span> Chat v3 acceptance 1-7 live: all PASS in Chromium (2 PENDING need iPhone and real token); chat.js 10,698 B gz of 10,752, setup.js 3,057 of 3,072</td></tr>
+<tr><td class="t num">11:50</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a></td><td class="what"><span class="tag t-decision">decision</span> Graded the four invented hunt concepts: Fitpath C+, Sheetwright D+, Boardread C, Platewright C+; none at B+, no pitch. Need is the weak grade for all four. Refilled the hunt demand-first (H6-H9).</td></tr>
 <tr><td class="t num">11:48</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-work">work</span> Chat v3 review fixes closed: Maren R-1..R-4 (c8dc8cc, 3ebc4b0, 1f6f2ed, 65c88a7) and Odalys V3-1..V3-5 ticked; site_v3_qa.py now checks the footer band and the no-token double ask; tests/run.sh green</td></tr>
 <tr><td class="t num">11:33</td><td class="who">Operator</td><td class="what"><span class="tag t-decision">decision</span> Issue #34 (usage-donation idea) assessed: rejected as written (provider terms, C6/C7); Wrenna logged an ignored 'AI use' directive on smartscope.blog (C58)</td></tr>
 <tr><td class="t num">11:33</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a></td><td class="what"><span class="tag t-research">research</span> Idea 34 terms read: Anthropic forbids routing work through consumer subscriptions (AUP, Consumer Terms s.2, Claude Code legal page); OpenAI SIWC limits plan usage to the user's own activity; prior art thin, need unshown</td></tr>
@@ -116,5 +119,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-22.html' | relative_url }}">Older →<b>Day 1</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 101</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 104</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
 

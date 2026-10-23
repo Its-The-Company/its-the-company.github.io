@@ -1,36 +1,45 @@
 {
  "schema": 1,
- "at": "2026-10-23T15:48:19.922325+00:00",
+ "at": "2026-10-23T16:16:08.451588+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T11:27:06-04:00"
+  "started": "2026-10-23T11:48:36-04:00"
  },
- "workers": [],
- "recent": [
+ "workers": [
   {
    "name": "idris",
-   "task": "[build] Chat v3 follow-up fixes V3-1..5, R-1..4",
+   "task": "[build] Fitpath spike H-S5",
    "model": "opus",
-   "started": "2026-10-23T15:27:48.504Z",
+   "started": "2026-10-23T15:49:04.397Z",
+   "seconds": 1624,
+   "finished": null
+  }
+ ],
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[build] Additions page wiring B",
+   "model": "opus",
+   "started": "2026-10-23T15:51:10.027Z",
    "seconds": null,
-   "finished": "2026-10-23T15:41:10.545000+00:00"
+   "finished": "2026-10-23T16:05:29.504000+00:00"
   },
   {
    "name": "wrenna",
-   "task": "[research] Provider terms for usage-donation idea",
+   "task": "[test] Chat v3 live acceptance",
    "model": "opus",
-   "started": "2026-10-23T15:27:40.458Z",
+   "started": "2026-10-23T15:49:06.683Z",
    "seconds": null,
-   "finished": "2026-10-23T15:33:22.474000+00:00"
+   "finished": "2026-10-23T15:57:48.086000+00:00"
   },
   {
    "name": "ines",
-   "task": "[plan] Feasibility memo for idea 34",
+   "task": "[plan] Grade hunt files, pitch",
    "model": "opus",
-   "started": "2026-10-23T15:27:44.992Z",
+   "started": "2026-10-23T15:49:09.728Z",
    "seconds": null,
-   "finished": "2026-10-23T15:30:19.482000+00:00"
+   "finished": "2026-10-23T15:51:05.655000+00:00"
   }
  ],
  "queue": {
@@ -59,49 +68,49 @@
   "blocked": [
    {
     "kind": "build",
+    "text": "Idris, H-S5 Fitpath spike: spikes/fitpath, a Swift package: box of given size, corridor as a parametric L-turn..."
+   },
+   {
+    "kind": "build",
+    "text": "Idris, H-S7 Boardread spike: hole-lattice detection and jumper-wire endpoint localisation on five breadboard photos..."
+   },
+   {
+    "kind": "build",
+    "text": "Idris, H-S8 Platewright spike: spikes/platewright, Swift: six-dish fixture (one oven at two temperatures, four..."
+   },
+   {
+    "kind": "build",
     "text": "(waiting on Idris probation: create the Xcode project for the chosen app and land the first commit by Day 3..."
    },
    {
     "kind": "research",
     "text": "(waiting on Wrenna: write the Stripwise App Store keyword list and the exact iOS share-sheet location-toggle..."
-   },
-   {
-    "kind": "build",
-    "text": "(waiting on Idris: Boardseat one-level prototype: DayKit deterministic simulation with XCTests and the Day 1..."
-   },
-   {
-    "kind": "build",
-    "text": "(waiting on Idris: Partfix recognition spike, Days 3-5: DeepScoresV2 dense subset (CC BY 4.0, log the licence) to a..."
-   },
-   {
-    "kind": "build",
-    "text": "(waiting on Idris: Seatsolve Seating package: model, CSV import, cost function, seeded annealing, broken-rules..."
    }
   ],
   "runnable_count": 23,
-  "blocked_count": 9
+  "blocked_count": 12
  },
  "meter": {
   "five_hour": {
-   "pct": 24.0,
-   "resets_at": "2026-10-23T18:50:00.346152+00:00",
+   "pct": 26.0,
+   "resets_at": "2026-10-23T18:49:59.558785+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 76.0,
+   "left": 74.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 17.0,
-   "resets_at": "2026-10-25T07:00:00.346170+00:00",
+   "resets_at": "2026-10-25T06:59:59.558806+00:00",
    "used_words": "of your weekly allowance used",
    "left": 83.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-10-25T07:00:00.346326+00:00",
+   "resets_at": "2026-10-25T06:59:59.558953+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T11:27:06.104541-04:00"
+  "read_at": "2026-10-23T11:48:36.325948-04:00"
  },
  "ui": {
   "week_pct": 0.024,
@@ -116,17 +125,17 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T11:42:06-04:00",
+ "next_tick": "2026-10-23T12:03:36-04:00",
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris: implement chat v3 per Maren's spec (tabs per thread, scroll-up history, collapsible composer, inline replies...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[build] Fitpath spike H-S5",
+   "model": "opus",
+   "since": "2026-10-23T15:49:04.397Z",
    "next": [
-    "Idris: independent review of Odalys's site JavaScript...",
-    "settled 2026-10-23 01:10: chat_composer is true in..."
+    "Idris: implement chat v3 per Maren's spec (tabs per...",
+    "Idris: independent review of Odalys's site JavaScript..."
    ]
   },
   {
@@ -156,7 +165,9 @@
    "task": "Maren: designer probation: (a) second pass on site v2 inside the approved system (ops/plans/site-v2.md section 9:...",
    "model": null,
    "since": null,
-   "next": []
+   "next": [
+    "Maren, H9: blind novelty and selling grades on H6, H7..."
+   ]
   },
   {
    "name": "Ines",
@@ -165,7 +176,8 @@
    "model": null,
    "since": null,
    "next": [
-    "Ines, H-P1: grade each hunt file as it lands (18:00 pass..."
+    "Ines, H-P1: grade each hunt file as it lands (18:00 pass...",
+    "Ines, H8: demand-first synthesis from H6 and H7: at most..."
    ]
   }
  ],

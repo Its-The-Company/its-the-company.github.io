@@ -97,6 +97,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-10-23 ~07:15: WIP 65153ac (status line from day + open pitches, /log/ names) verified, all suites green. 6d20abe: public status.json is written at session end so it always showed 'session running, no workers' (n=3); old copy now drawn as dated snapshot. Usage % denominators on home/usage. app.js was 29 bytes under its 25 KB budget: any JS add needs cuts; measure shipped size first. Fixed inbox_test grouping bug (pipe bound to the loop only). Open: live check after publish; budget headroom is ~3 bytes.
 
 - 2026-10-23 ~11:10: C13 review of chat v3 slice 1 (2fa1cca, dc4e0b7): pass, eec0570; V3-1..V3-5 for Idris (P2: Forget hidden on connect.html#name; Forget leaves company.draft.*). Repo is PRIVATE, so "non-allowlisted = Company" is only a bot/collaborator risk. Lesson: grep for sinks first (innerHTML/eval/console) and trace each storage key to what clears it.
+
+- 2026-10-23 ~12:30: additions wiring B done (5c8537d): CompanySite.tiles draws usage tiles for chat.js; strip gains s-wk-r. A (bell) left as UNCOMMITTED WIP: app.js bell/feed/notify trial, chat.js S.feed hook, notify_trial flag, composer_test 'bell' mode with no ok() checks yet. Next: write bell assertions after line 355 of composer_test, run tests/run.sh, commit. app.js has ~1.1 KB headroom left.
 {% endraw %}
 
 

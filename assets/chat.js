@@ -286,10 +286,10 @@ mk(mk(a, 'div', 'cv-meter'), 'i').style.width = Math.max(0, Math.min(100, 100 * 
 return b;
 }
 function glance() {
-var g = el('div', 'cv-glance'), st = (S.status && S.status()) || {}, m = (st.meter || {}).five_hour || {}, ws = st.workers || [];
+var g = el('div', 'cv-glance'), ws = ((S.status && S.status()) || {}).workers || [];
 tile(g, D('company'), 'Day', D('day'), 'of ' + D('days'), D('day') / D('days'));
 tile(g, D('company'), 'Net proceeds', '$' + D('rev'), 'of $' + D('goal'), +D('revf'));
-tile(g, D('usage'), '5-hour usage', m.pct != null ? Math.round(m.pct) + '%' : '?', m.resets_at ? 'resets ' + clock(m.resets_at) : '');
+S.tiles(g, tile, D('usage'));
 var b = tile(g, D('company'), 'Right now', ws.length + ' at work', ws.map((w) => { var s = String(w.name || ''); return s.charAt(0).toUpperCase() + s.slice(1); }).join(', ') || 'No worker call is running');
 b.parentNode.className += ' cv-live'; if (ws.length) b.insertBefore(el('span', 'cv-dot'), b.firstChild);
 return g;
@@ -473,6 +473,7 @@ var same = lastDraw && lastDraw[1] === res[1] && lastDraw[2] === res[2] && Strin
 names = res[0]; issues = res[1].filter((i) => !i.pull_request); comments = res[2] || [];
 if (!lastDraw) { lastDraw = res; select(parse()); } else if (!same) { lastDraw = res; refresh(); }
 onDrawn.splice(0).forEach((f) => { f(); });
+S.feed(issues, allComments(), names, deadlineOf, kindOf, (k, t) => { go(k); if (t && !ta.value.trim()) { ta.value = t; saveDraft(); } isOpen = true; drawDock(); });
 if (cached) allow().then((a) => { if (String(a) !== String(cached.names)) refresh(); }, () => {});
 if (typeof cur === 'number' && threads[cur] && n === 100) readThread(cur);
 status.textContent = 'Updated ' + clock(now().toISOString()) + '.';
@@ -487,7 +488,7 @@ waiting.onclick = (ev) => { stop(ev); go('home'); };
 }
 var sig = '';
 if (S.onStatus) S.onStatus.push((st) => {
-var s = JSON.stringify([st.meter && st.meter.five_hour, (st.workers || []).map((w) => w.name), st.session]);
+var s = JSON.stringify([st.meter, st.ui, (st.workers || []).map((w) => w.name), st.session]);
 if (s === sig || !lastDraw) return; sig = s;
 [].slice.call(document.querySelectorAll ? document.querySelectorAll('.cv-glance') : []).forEach((g) => { g.parentNode.replaceChild(glance(), g); });
 waitLine();

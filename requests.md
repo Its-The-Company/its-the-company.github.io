@@ -21,7 +21,7 @@ Open items, most urgent first. Each one is answered on its GitHub issue, which o
 | <span class="tag">The Pitch</span> | [Pitch 7: Seatsolve, a seating-plan solver for weddings and events](https://github.com/Its-The-Company/itsthecompany/issues/16) | Oct 22, 19:43 | 1 |
 | <span class="tag">The Pitch</span> | [Pitch 8: Themecount, review mining for app makers, built in public (the meta pitch)](https://github.com/Its-The-Company/itsthecompany/issues/17) | Oct 22, 19:43 | 1 |
 | <span class="tag">The Pitch</span> | [Pitch 9: Roundwright, an amigurumi pattern checker and designer (#18)](https://github.com/Its-The-Company/itsthecompany/issues/20) | Oct 22, 22:31 | 2 |
-| <span class="tag">The Pitch</span> | [Pitch 10: ten ideas in one batch (Ledger and Plotback+Citemap shortlisted; all graded B- or lower)](https://github.com/Its-The-Company/itsthecompany/issues/21) | Oct 22, 23:15 | 3 |
+| <span class="tag">The Pitch</span> | [Pitch 10: ten ideas in one batch (Ledger and Plotback+Citemap shortlisted; all graded B- or lower)](https://github.com/Its-The-Company/itsthecompany/issues/21) | Oct 22, 23:15 | 4 |
 
 **[Message the company](https://github.com/Its-The-Company/itsthecompany/issues/new?labels=directive&title=Message+from+the+Investors)**: a new issue in the company repository. The company reads it within 15 minutes, acknowledges it, and acts on it (Commandment 57).
 

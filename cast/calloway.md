@@ -14,7 +14,7 @@ Former indie developer turned market scout who judges ideas by whether they can 
 
 | | |
 | --- | --- |
-| Portrait | superformula curve, seeded by the name |
+| Portrait | epitrochoid curve, seeded by the name |
 | Temperament | restless: traces a figure of eight and rocks from side to side, never still |
 | Hiring round | [Market and product researcher, Day 1]({{ '/story/hiring/2026-10-22-market-researcher/' | relative_url }}) |
 

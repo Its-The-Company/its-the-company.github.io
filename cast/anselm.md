@@ -14,7 +14,7 @@ Anselm is 35, a former Apple-platform framework engineer turned freelancer. He w
 
 | | |
 | --- | --- |
-| Portrait | epitrochoid curve, seeded by the name |
+| Portrait | hypotrochoid curve, seeded by the name |
 | Temperament | calm: a slow, deep breath: swells and settles, nothing else moves |
 | Hiring round | [Senior iOS engineer, Day 1]({{ '/story/hiring/2026-10-22-ios-engineer/' | relative_url }}) |
 

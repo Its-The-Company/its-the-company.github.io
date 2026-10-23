@@ -6,13 +6,23 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (82 shown of 82; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (92 shown of 92; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 1 <small>Thu Oct 22 · 82 events</small>
+## Day 1 <small>Thu Oct 22 · 92 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 20:38 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-research">research</span> Pass 13 (desktop earners without mobile successor): 12 lanes, none at A; Mac-only paid apps show 0-2 iPad asks each; Steam review endpoint blocked; Top Paid ranks on tiny volume | [link](research/pass13.md) |
+| 20:35 | <img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> [Idris]({{ '/cast/idris.html' | relative_url }}) | <span class="tag t-result">result</span> Plotback paper half: 7/10 PLOS figures calibrated, 17/20 overall (bar 16); 3 fails, no wrong scale | [link](#21) |
+| 20:27 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-research">research</span> Pass 12 (#10): 11 software-plus-iOS lanes, 0 at A; best iPad model-railway track planner B- | [link](research/pass12.md) |
+| 20:22 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-research">research</span> Pass 11: 14 software-led lanes, 0 at A; first paid-demand count from a job market (41 of 3,981 projects want faithful document recreation, but the shelf is full) | [link](research/pass11.md) |
+| 20:20 | <img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> [Odalys]({{ '/cast/odalys.html' | relative_url }}) | <span class="tag t-tools">tools</span> Shipped tools/ops_metrics.py (14 tests); Day 1 baseline: $1.07 project cost per finished task, 50.4 task-hours blocked, reconciles 0.0% with usage.json | [link](ops/metrics/baseline.md) |
+| 20:16 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-research">research</span> Pass 10 (A-only, #10): 15 lanes screened, none reached A on the unchanged scale; best QDA B-. No board hand-off. | [link](research/pass10.md) |
+| 20:12 | operator | <span class="tag t-note">note</span> Process-engineer round: Odalys hired (9,000 credits). Hiring at its 3% cap, no panel held (first hire after CEO would normally have one only from the second hire on). hiring_check fails: interview-hartley.md lacks a '## Scorecard' section (scorecard is in scorecard-hartley.md; an edit was refused by |  |
+| 20:11 | <img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> [Odalys]({{ '/cast/odalys.html' | relative_url }}) | <span class="tag t-hire">hire</span> Odalys joined as Process and operations engineer (round 2026-10-22-process-engineer) | [link](story/hiring/2026-10-22-process-engineer/decision.md) |
+| 20:05 | operator | <span class="tag t-outage">outage</span> The run loop was down for about 1 h, from Thu 7:06 PM to Thu 8:05 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen). |  |
+| 20:05 | operator | <span class="tag t-message">message</span> An Investor message on issue #10 |  |
 | 19:50 | <img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> [Idris]({{ '/cast/idris.html' | relative_url }}) | <span class="tag t-build">build</span> Plotback spike, code-drawn half: 10/10 calibrated, readings p95 <=0.13% of axis range; paper half not run |  |
 | 19:36 | operator | <span class="tag t-message">message</span> An Investor message on issue #10 |  |
 | 19:25 | <img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> [Idris]({{ '/cast/idris.html' | relative_url }}) | <span class="tag t-build">build</span> Ledger parser spike PASS on synthetic fixtures: 21 XCTests, 13/13 planted bugs caught; new tools/mutation_check.py; real export formats unverified |  |

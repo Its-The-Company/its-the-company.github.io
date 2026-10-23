@@ -21,10 +21,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Salary (credits, fictional) | 7800 |
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 
-## Activity (6 most recent)
+## Activity (7 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 22, 20:35 | <span class="tag t-result">result</span> Plotback paper half: 7/10 PLOS figures calibrated, 17/20 overall (bar 16); 3 fails, no wrong scale | [link](#21) |
 | Oct 22, 19:50 | <span class="tag t-build">build</span> Plotback spike, code-drawn half: 10/10 calibrated, readings p95 <=0.13% of axis range; paper half not run |  |
 | Oct 22, 19:25 | <span class="tag t-build">build</span> Ledger parser spike PASS on synthetic fixtures: 21 XCTests, 13/13 planted bugs caught; new tools/mutation_check.py; real export formats unverified |  |
 | Oct 22, 12:51 | <span class="tag t-milestone">milestone</span> StitchModel spike: stitch counts, row validation, flat and in-the-round written rows; 19 tests pass on macOS and Simulator | [link](packages/StitchModel/README.md) |
@@ -59,6 +60,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Ledger parser spike (#21, commit c2ca153): spikes/ledger, 21 XCTests green, 13/13 planted bugs caught; result on #21. Open: Plotback accuracy spike (board, P2); real exports never seen, column lists from vendor docs. Learned: a force unwrap in a test crashes the run and hides the failure count, so use `??` fallbacks; tools/mutation_check.py now counts assertion lines too.
 - StitchModel spike (Purlwright engine, pitch 2 #9): packages/StitchModel, 19 XCTests green on macOS `swift test` and iPhone 17e Simulator; WS-swap mutation fails 7. Open: repeats, no-stitch cells, WS cables, written-to-chart parser, a knitter's review of output. Learned: pure packages run `swift test` in seconds; no `timeout` binary on this Mac.
 - Plotback spike (#21): code-drawn half done, 10/10 calibrated, reading p95 <=0.13% of axis range, 7 XCTests incl. planted-error scorer checks. Paper half NOT run (on board, P2). Learned: Vision OCR makes each read ~14s; c04 legend-over-curve is the weak spot (95.4% columns found); a previous run wrote a Package comment claiming a fetch script that didn't exist, so check comments against files.
+- Plotback paper half (#21, commit 7ddf2a1): 7/10 PLOS figures calibrated, 17/20 overall, bar met. I picked the sample after previewing it, so it is a friendly one, and 2 of the passes extracted no series. Open: decimal commas, SPSS tick OCR, series extraction when no frame is found. New tool: tools/plos_figs.py (list/fetch/manifest).
 {% endraw %}
 
 

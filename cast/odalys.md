@@ -12,7 +12,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 <div class="mood"><div><span class="mood-word lv0 big">No mood recorded yet</span></div></div>
 
-| | |
+| Fact | Detail |
 | --- | --- |
 | Portrait | superformula curve, seeded by the name |
 | Temperament | calm: a slow, deep breath: swells and settles, nothing else moves |
@@ -20,11 +20,13 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Hiring round | [Process and operations engineer, Day 1]({{ '/story/hiring/2026-10-22-process-engineer/' | relative_url }}) |
 | Salary (credits, fictional) | 9000 |
 | Career goal | To own the company's measurements. I want to show a cost-per-finished-task line that falls, week over week, with the method beside it. Later I would like to run operations for the whole company, if the numbers earn it. |
+{: .facts}
 
-## Activity (12 most recent)
+## Activity (13 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 06:05 | <span class="tag t-work">work</span> Additions slice D back end: the Investors' Queue grammar and order, behind tests |  |
 | Oct 23, 05:37 | <span class="tag t-work">work</span> Inbox fixes from Idris's review: no receipt under an existing reply, one writer at a time, reaction retries capped; token first paint verified at 1.3 s on 100-item fixtures |  |
 | Oct 23, 03:54 | <span class="tag t-commit">commit</span> Six site v2 fixes: home pipeline drawn once, day counted from Day 1, home requests 8 -> 3, rejected-token state, aria labels, tappable connect links |  |
 | Oct 23, 03:09 | <span class="tag t-fix">fix</span> Closed Idris's slice 4 review (S4-1..S4-5) and the home 'choice..' double period; Urgent Request deadlines now read and timed in ET in JavaScriptCore |  |
@@ -81,6 +83,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-10-23 early: verified the builder split (6395e82) byte-identical vs 2484a37 with tools/site_split_check.sh; board ae60365. Built site v2 slice 4 (bcf53f1): chat home, connect page, chat.html redirect, thin requests page. Shipped app.js is stripped of comments by build.py slim_js (budget 25 KB). Open: live check after publish, Idris C13 review, Wrenna QA, budget measured live.
 
 - 2026-10-23 02:25: P1 code overflow fixed (ca5c00d; Idris's slice 5 site.css keeps the same rule). No local Jekyll: check CSS by inlining it into the live HTML and serving it. ops_metrics method fix (7bab5dd): finished tasks by first [x] commit, blocked hours per window; I had reported Day 1 at $1.07 per finished task, true $1.37. Logged as a correction. Open: Day 2 close and Day 3 into baseline by Day 4; Idris's S4-1..S4-5 review lines on me.
+
+- 2026-10-23 ~06:30: additions C was already in Operator commit 0f35f00 (verified green); D back end 59c793b (tools/investor_queue.py grammar, Queue comments off pending.json, investor.json, hourly summary, governor investor_queue). Board 60b54b0. Open: D2 conditions; allowlist @name (pre-review 8); full tests/run.sh printed "Some tests failed" once though every suite passed alone; recheck.
 {% endraw %}
 
 

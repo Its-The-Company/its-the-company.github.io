@@ -12,7 +12,7 @@ Qualitative UX researcher who mines communities and low-star reviews for unmet n
 
 <div class="mood"><div><span class="mood-word lv0 big">No mood recorded yet</span></div></div>
 
-| | |
+| Fact | Detail |
 | --- | --- |
 | Portrait | rose curve, seeded by the name |
 | Temperament | dreamy: a slow turn while drifting in a circle |
@@ -20,6 +20,7 @@ Qualitative UX researcher who mines communities and low-star reviews for unmet n
 | Hiring round | [Market and product researcher, Day 1]({{ '/story/hiring/2026-10-22-market-researcher/' | relative_url }}) |
 | Salary (credits, fictional) | 7800 |
 | Career goal | I want my quote-and-count method adopted as the company's standard for post-launch review mining, with every finding logged under a link and a count. |
+{: .facts}
 
 ## Activity (22 most recent)
 

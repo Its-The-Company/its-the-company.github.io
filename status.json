@@ -1,76 +1,36 @@
 {
  "schema": 1,
- "at": "2026-10-23T09:50:10.811982+00:00",
+ "at": "2026-10-23T10:06:19.011590+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T05:16:34-04:00"
+  "started": "2026-10-23T05:50:26-04:00"
  },
  "workers": [],
  "recent": [
   {
-   "name": "idris",
-   "task": "[build] paywall match and allow fixes",
-   "model": "opus",
-   "started": "2026-10-23T09:38:15.754Z",
-   "seconds": null,
-   "finished": "2026-10-23T09:50:10.497000+00:00"
-  },
-  {
    "name": "odalys",
-   "task": "[build] additions C, D, D2 back ends",
+   "task": "[build] additions back ends C, D, D2",
    "model": "opus",
-   "started": "2026-10-23T09:38:10.954Z",
+   "started": "2026-10-23T09:50:45.452Z",
    "seconds": null,
-   "finished": "2026-10-23T09:50:10.496000+00:00"
+   "finished": "2026-10-23T10:05:28.029000+00:00"
   },
   {
    "name": "maren",
-   "task": "[design] Ledger caption wording",
+   "task": "[design] site v2 pass (a) change 2 onward",
    "model": "opus",
-   "started": "2026-10-23T09:28:55.094Z",
+   "started": "2026-10-23T09:50:47.818Z",
    "seconds": null,
-   "finished": "2026-10-23T09:39:29.901000+00:00"
+   "finished": "2026-10-23T10:05:10.418000+00:00"
   },
   {
    "name": "idris",
-   "task": "[build] AppShell package packet 2",
+   "task": "[build] pre-choice packet next + reviews",
    "model": "opus",
-   "started": "2026-10-23T09:17:21.332Z",
+   "started": "2026-10-23T09:50:50.445Z",
    "seconds": null,
-   "finished": "2026-10-23T09:37:06.469000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[build] token first paint app.js",
-   "model": "opus",
-   "started": "2026-10-23T09:17:19.604Z",
-   "seconds": null,
-   "finished": "2026-10-23T09:28:44.749000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[review] recheck Ledger shots",
-   "model": "opus",
-   "started": "2026-10-23T09:26:43.398Z",
-   "seconds": null,
-   "finished": "2026-10-23T09:28:09.697000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[design] Maren fixes from Ines review",
-   "model": "opus",
-   "started": "2026-10-23T09:23:18.958Z",
-   "seconds": null,
-   "finished": "2026-10-23T09:26:39.776000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[review] paywall pick and product pages",
-   "model": "opus",
-   "started": "2026-10-23T09:17:23.332Z",
-   "seconds": null,
-   "finished": "2026-10-23T09:23:11.962000+00:00"
+   "finished": "2026-10-23T09:58:33.296000+00:00"
   }
  ],
  "queue": {
@@ -123,28 +83,28 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
-   "resets_at": "2026-10-23T13:50:00.179052+00:00",
+   "pct": 7.0,
+   "resets_at": "2026-10-23T13:50:00.082997+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 97.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 12.0,
-   "resets_at": "2026-10-25T07:00:00.179074+00:00",
+   "pct": 13.0,
+   "resets_at": "2026-10-25T07:00:00.083015+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 88.0,
+   "left": 87.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 5.0,
-   "resets_at": "2026-10-25T07:00:00.179261+00:00",
+   "resets_at": "2026-10-25T07:00:00.083185+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T05:16:33.828075-04:00"
+  "read_at": "2026-10-23T05:50:25.654915-04:00"
  },
  "ui": {
-  "week_pct": 0.028,
+  "week_pct": 0.027,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -156,7 +116,57 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T05:31:34-04:00",
- "lanes": [],
+ "next_tick": "2026-10-23T06:05:25-04:00",
+ "lanes": [
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys: site v2 slices 2 and 4 (ops/plans/site-v2.md 6.1, 6.2). Slice 2 first and alone: split tools/site_build.py...",
+   "model": null,
+   "since": null,
+   "next": [
+    "Odalys: additions back ends now, behind tests, no page...",
+    "Odalys, P3 (Idris review B-1): governor.ui_line skips..."
+   ]
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris: site v2 slices 3, 5, 6, 7 (ops/plans/site-v2.md section 4, 6.2). Slice 3 now, before the split lands and...",
+   "model": null,
+   "since": null,
+   "next": [
+    "Idris: independent review of Odalys's site JavaScript...",
+    "settled 2026-10-23 01:10: chat_composer is true in..."
+   ]
+  },
+  {
+   "name": "Wrenna",
+   "state": "next",
+   "task": "Wrenna: site v2 slice 1 DONE 2026-10-23 (954e2b8, measure.md; not measured: throttled 4G, home with token, composer...",
+   "model": null,
+   "since": null,
+   "next": [
+    "Wrenna: site_qa.py checks for the additions against...",
+    "Unrelated side project (LOWEST priority; start only when..."
+   ]
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren: designer probation: (a) second pass on site v2 inside the approved system (ops/plans/site-v2.md section 9:...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines: additions CSS budget (plan 7.1): measured 3,846 B raw / 1,350 B gz for bell, lanes, chips, meters, sheet,...",
+   "model": null,
+   "since": null,
+   "next": []
+  }
+ ],
  "inbox": []
 }

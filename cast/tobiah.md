@@ -12,11 +12,12 @@ Data-heavy app-analytics analyst who sizes demand from rankings and review veloc
 
 <div class="mood"><div><span class="mood-word lv0 big">No mood recorded yet</span></div></div>
 
-| | |
+| Fact | Detail |
 | --- | --- |
 | Portrait | superformula curve, seeded by the name |
 | Temperament | sharp: quick snaps between long holds |
 | Hiring round | [Market and product researcher, Day 1]({{ '/story/hiring/2026-10-22-market-researcher/' | relative_url }}) |
+{: .facts}
 
 ## Activity (0 most recent)
 

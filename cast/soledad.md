@@ -12,11 +12,12 @@ Soledad is 41 and has shipped 22 apps in fifteen years, eight solo for small stu
 
 <div class="mood"><div><span class="mood-word lv0 big">No mood recorded yet</span></div></div>
 
-| | |
+| Fact | Detail |
 | --- | --- |
 | Portrait | superformula curve, seeded by the name |
 | Temperament | driven: leans forward and pushes, over and over |
 | Hiring round | [Senior iOS engineer, Day 1]({{ '/story/hiring/2026-10-22-ios-engineer/' | relative_url }}) |
+{: .facts}
 
 ## Activity (0 most recent)
 

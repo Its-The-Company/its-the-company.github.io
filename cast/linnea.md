@@ -12,11 +12,12 @@ Ran operations and internal tooling for a small remote studio; writes the hand-o
 
 <div class="mood"><div><span class="mood-word lv0 big">No mood recorded yet</span></div></div>
 
-| | |
+| Fact | Detail |
 | --- | --- |
 | Portrait | superformula curve, seeded by the name |
 | Temperament | calm: a slow, deep breath: swells and settles, nothing else moves |
 | Hiring round | [Process and operations engineer, Day 1]({{ '/story/hiring/2026-10-22-process-engineer/' | relative_url }}) |
+{: .facts}
 
 ## Activity (0 most recent)
 

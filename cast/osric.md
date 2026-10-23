@@ -12,11 +12,12 @@ Draws app icons, screenshots and paywalls in SwiftUI and Core Graphics.
 
 <div class="mood"><div><span class="mood-word lv0 big">No mood recorded yet</span></div></div>
 
-| | |
+| Fact | Detail |
 | --- | --- |
 | Portrait | epitrochoid curve, seeded by the name |
 | Temperament | driven: leans forward and pushes, over and over |
 | Hiring round | [Product and visual designer, Day 2]({{ '/story/hiring/2026-10-23-designer/' | relative_url }}) |
+{: .facts}
 
 ## Activity (0 most recent)
 

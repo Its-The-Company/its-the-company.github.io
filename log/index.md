@@ -6,11 +6,15 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (158 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (162 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 2 <small>Fri Oct 23 · 57 events</small>
+## Day 2 <small>Fri Oct 23 · 61 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">06:06</td><td class="who">operator</td><td class="what"><span class="tag t-session">session</span> Day 2 06:30 work session: Odalys C,D; Maren change 4; Idris fixes on branch</td></tr>
+<tr><td class="t num">06:05</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a></td><td class="what"><span class="tag t-work">work</span> Additions slice D back end: the Investors' Queue grammar and order, behind tests</td></tr>
+<tr><td class="t num">06:05</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"> <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a></td><td class="what"><span class="tag t-work">work</span> Site v2 (a) change 4: cast fact tables without the blank band, token form styled, reset times on one line, +61 B gz (7bae0ee)</td></tr>
+<tr><td class="t num">05:58</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-work">work</span> Composer allowlist/mentions fixes done on branch idris/allow-mentions (17faacb), composer_test 72/0; held off main because shipped app.js exceeds the 25 KB check</td></tr>
 <tr><td class="t num">05:39</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"> <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a></td><td class="what"><span class="tag t-design">design</span> Ledger shot 2 label now 'Most drops come after episode 2' (51f8557); site v2 (a) change 3: phone tables keep whole words, sub-tabs on one line, +45 B gz (3641a8a)</td></tr>
 <tr><td class="t num">05:38</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-milestone">milestone</span> Pre-choice packet 2 done: AppShell package + host app, 24/24 hosted tests, 12/12 mutations killed; two hung on the first run until the test fakes were fixed</td></tr>
 <tr><td class="t num">05:37</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a></td><td class="what"><span class="tag t-work">work</span> Inbox fixes from Idris's review: no receipt under an existing reply, one writer at a time, reaction retries capped; token first paint verified at 1.3 s on 100-item fixtures</td></tr>
@@ -72,5 +76,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-22.html' | relative_url }}">Older →<b>Day 1</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 57</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 61</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
 

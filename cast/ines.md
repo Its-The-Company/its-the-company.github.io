@@ -12,13 +12,14 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 
 <div class="mood"><div><span class="mood-word lv0 big">No mood recorded yet</span></div></div>
 
-| | |
+| Fact | Detail |
 | --- | --- |
 | Portrait | rose curve, seeded by the name |
 | Temperament | calm: a slow, deep breath: swells and settles, nothing else moves |
 | Joined | 2026-10-22 |
 | Salary (credits, fictional) | 12000 |
 | Career goal | Prove that a team I build from nothing can ship one app that pays for itself in its first month, and earn the board's mandate to run a second product. |
+{: .facts}
 
 ## Activity (33 most recent)
 

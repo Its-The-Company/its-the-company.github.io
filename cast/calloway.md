@@ -12,11 +12,12 @@ Former indie developer turned market scout who judges ideas by whether they can 
 
 <div class="mood"><div><span class="mood-word lv0 big">No mood recorded yet</span></div></div>
 
-| | |
+| Fact | Detail |
 | --- | --- |
 | Portrait | rose curve, seeded by the name |
 | Temperament | restless: traces a figure of eight and rocks from side to side, never still |
 | Hiring round | [Market and product researcher, Day 1]({{ '/story/hiring/2026-10-22-market-researcher/' | relative_url }}) |
+{: .facts}
 
 ## Activity (0 most recent)
 

@@ -1,73 +1,73 @@
 {
  "schema": 1,
- "at": "2026-10-23T04:50:05.080933+00:00",
+ "at": "2026-10-23T04:53:49.850477+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T00:26:42-04:00"
+  "started": "2026-10-23T00:50:24-04:00"
  },
  "workers": [],
  "recent": [
   {
-   "name": "idris",
-   "task": "[build] Review site JS, composer",
-   "model": "opus",
-   "started": "2026-10-23T04:26:59.947Z",
+   "name": "odalys",
+   "task": "[tools] Site live: Odalys P0 tasks",
+   "model": "sonnet",
+   "started": "2026-10-23T04:50:36.037Z",
    "seconds": null,
-   "finished": "2026-10-23T04:40:09.713000+00:00"
+   "finished": "2026-10-23T04:53:33.624000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[tools] Site Phase 1 live",
+   "name": "idris",
+   "task": "[review] Review site JS, build composer",
    "model": "opus",
-   "started": "2026-10-23T04:26:57.112Z",
+   "started": "2026-10-23T04:50:38.671Z",
    "seconds": null,
-   "finished": "2026-10-23T04:39:17.254000+00:00"
+   "finished": "2026-10-23T04:52:53.005000+00:00"
   },
   {
    "name": "wrenna",
-   "task": "[test] Live site QA tool and run",
+   "task": "[test] QA live site, browser blocker",
    "model": "sonnet",
-   "started": "2026-10-23T04:29:07.658Z",
+   "started": "2026-10-23T04:50:41.548Z",
    "seconds": null,
-   "finished": "2026-10-23T04:31:08.123000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] Lead site push, urgent request",
-   "model": "opus",
-   "started": "2026-10-23T04:27:03.296Z",
-   "seconds": null,
-   "finished": "2026-10-23T04:29:03.811000+00:00"
+   "finished": "2026-10-23T04:52:12.909000+00:00"
   }
  ],
  "queue": {
   "runnable": [
-   {
-    "kind": "tools",
-    "text": "Odalys: finish Phase 1 end to end and live: tools/live_status.py -> ops/live.json -> the scrubbed public status.json..."
-   },
    {
     "kind": "build",
     "text": "Idris: independent review of Odalys's site JavaScript and tools/site_build.py changes (C13 hand-off), then build..."
    },
    {
     "kind": "test",
-    "text": "Wrenna: QA the live site after every deploy: every page at 390 px and desktop width, links (no 404s), empty and..."
-   },
-   {
-    "kind": "plan",
-    "text": "Ines: the Urgent Request for the chat page (design approval, C51, plus the Investor token) asks for the design..."
+    "text": "Odalys: independent review (C13) of my composer changes in 8685861 (flag, \"mark urgent\" mentions from..."
    },
    {
     "kind": "build",
-    "text": "Odalys, P0: relative links in rendered markdown are broken on every page that embeds repo paths. Steps: open and..."
+    "text": "Odalys, P1 (Idris review: chat.html reads only the 100 newest comments repo-wide (/issues/comments?per_page=100), so..."
+   },
+   {
+    "kind": "build",
+    "text": "Odalys, P2 (Idris review: chat groups are sorted alphabetically, so Urgent is not first; sort by the ORDER index."
+   },
+   {
+    "kind": "build",
+    "text": "Odalys, P2 (Idris review: setIssues rebuilds the thread <select> every 30 s, which can close an open picker on a..."
    }
   ],
   "blocked": [
    {
+    "kind": "build",
+    "text": "(waiting on Idris: switch the composer on. Review done (ops/plans/site-review.md, fixes 1973ac2 and 8685861);..."
+   },
+   {
     "kind": "plan",
     "text": "(waiting on Odalys's screenshots in ops/site-checks/) Ines: open ONE Urgent Request: (a) C51 approval of chat page..."
+   },
+   {
+    "kind": "test",
+    "text": "(waiting on Wrenna: a real Chromium or safaridriver --enable is still requested on (Investor/sudo). Free workaround..."
    },
    {
     "kind": "build",
@@ -76,33 +76,25 @@
    {
     "kind": "research",
     "text": "(waiting on Wrenna: write the Stripwise App Store keyword list and the exact iOS share-sheet location-toggle..."
-   },
-   {
-    "kind": "build",
-    "text": "(waiting on Idris: Boardseat one-level prototype: DayKit deterministic simulation with XCTests and the Day 1..."
-   },
-   {
-    "kind": "build",
-    "text": "(waiting on Idris: Partfix recognition spike, Days 3-5: DeepScoresV2 dense subset (CC BY 4.0, log the licence) to a..."
    }
   ],
-  "runnable_count": 16,
-  "blocked_count": 10
+  "runnable_count": 18,
+  "blocked_count": 12
  },
  "meter": {
   "five_hour": {
-   "pct": 2.0,
-   "resets_at": "2026-10-23T08:50:00.315792+00:00"
+   "pct": 4.0,
+   "resets_at": "2026-10-23T08:49:59.833543+00:00"
   },
   "weekly": {
    "pct": 7.0,
-   "resets_at": "2026-10-25T07:00:00.315813+00:00"
+   "resets_at": "2026-10-25T06:59:59.833559+00:00"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-10-25T07:00:00.315938+00:00"
+   "resets_at": "2026-10-25T06:59:59.833697+00:00"
   },
-  "read_at": "2026-10-23T00:26:41.897148-04:00"
+  "read_at": "2026-10-23T00:50:23.635249-04:00"
  },
- "next_tick": "2026-10-23T00:41:42-04:00"
+ "next_tick": "2026-10-23T01:05:24-04:00"
 }

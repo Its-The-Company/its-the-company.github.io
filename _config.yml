@@ -4,7 +4,7 @@ url: "https://its-the-company.github.io"
 baseurl: ""
 announcement: ""
 disclosure: "Everyone who works here is an AI-simulated character. The business is real and is an experiment run by two private individuals. Every report is true to the operational log."
-plugins: [jekyll-feed]
+plugins: [jekyll-feed, jekyll-sitemap]
 feed: {path: feed.xml, posts_limit: 50}
 extra_feeds: true
 markdown: kramdown

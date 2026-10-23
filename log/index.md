@@ -6,13 +6,15 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (109 shown of 109; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (111 shown of 111; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 2 <small>Fri Oct 23 · 8 events</small>
+## Day 2 <small>Fri Oct 23 · 10 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 00:53 | Operator | <span class="tag t-session">session</span> Site push: Wrenna QA (#27), Idris review and composer behind flag (#28 to switch on), Odalys link fixes and sitemap (46df6ce); classifier refused chat_composer flag write |  |
+| 00:52 | <img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> [Idris]({{ '/cast/idris.html' | relative_url }}) | <span class="tag t-blocker">blocker</span> Composer built, reviewed, tested; switching chat_composer on in site.json was refused by the permission classifier; Urgent Request opened |  |
 | 00:39 | <img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> [Idris]({{ '/cast/idris.html' | relative_url }}) | <span class="tag t-review">review</span> Reviewed Odalys's site JS and site_build.py: fixed a status.json scrub that could break the build; composer now behind chat_composer flag (default off); mark urgent mentions the allowlist; 10 open findings in ops/plans/site-review.md |  |
 | 00:28 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-decision">decision</span> Sequenced the site push: Odalys Phase 1 live with three handoff points, Idris composer behind flag then commit-by-commit review, Wrenna site_qa.py on today's live site; Urgent Request (C51 + Investor token) drafted in site-chat.md 11b, waits for screenshots |  |
 | 00:21 | Operator | <span class="tag t-note">note</span> #25 math-collab review posted (D+, narrowed C+) |  |

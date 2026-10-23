@@ -6,13 +6,14 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (114 shown of 114; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (115 shown of 115; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 2 <small>Fri Oct 23 · 13 events</small>
+## Day 2 <small>Fri Oct 23 · 14 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 01:01 | operator | <span class="tag t-message">message</span> An Investor message on issue #28 |  |
 | 01:01 | Operator | <span class="tag t-session">session</span> Day 2 site push: Odalys fixes 2daa821, Urgent Request #29 opened, Wrenna QA sweep a55bdaf |  |
 | 00:57 | operator | <span class="tag t-message">message</span> An Investor message on issue #30 |  |
 | 00:55 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-request">request</span> Opened Urgent Request #29: C51 approval of the chat page and home Now panel, and the second Investor's chat token (steps verbatim). Triaged site QA: all bugs owned; filed stale day count on home. |  |

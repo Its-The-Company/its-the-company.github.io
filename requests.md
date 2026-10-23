@@ -14,7 +14,7 @@ Open items, most urgent first. Each one is answered on its GitHub issue in the p
 | <span class="tag">Urgent request</span> | #23 Urgent: no idea reached A in four passes; please choose a pitch to build | Oct 23, 00:55 | 0 |
 | <span class="tag">Urgent request</span> | #26 Urgent: please run 'tools/install-launchd.sh --watch' (inbox watcher install refused) | Oct 23, 04:07 | 0 |
 | <span class="tag">Urgent request</span> | #27 Urgent: site browser checks blocked: install Chromium or enable safaridriver | Oct 23, 04:50 | 1 |
-| <span class="tag">Urgent request</span> | #28 Urgent: switching on the chat composer was refused (site.json chat_composer) | Oct 23, 04:52 | 1 |
+| <span class="tag">Urgent request</span> | #28 Urgent: switching on the chat composer was refused (site.json chat_composer) | Oct 23, 04:52 | 2 |
 | <span class="tag">Urgent request</span> | #29 Urgent: approve the chat page and Now panel design (C51), and the second Investor's token for the chat page | Oct 23, 04:55 | 0 |
 | <span class="tag">A report's questions</span> | #19 Report 1 — Day 1 — 2026-10-22 | Oct 22, 22:11 | 0 |
 | <span class="tag">The Pitch</span> | #7 Pitch: Stripwise (recommended), Tallyproof, Beatcount | Oct 22, 15:15 | 1 |

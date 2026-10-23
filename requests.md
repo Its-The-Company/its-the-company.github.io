@@ -11,10 +11,11 @@ Open items, most urgent first. Each one is answered on its GitHub issue, which o
 | | Request | Opened | Replies |
 | --- | --- | --- | --- |
 | <span class="tag">Emergency</span> | [A session changed Investor-owned files; the supervisor put them back](https://github.com/Its-The-Company/itsthecompany/issues/13) | Oct 22, 18:14 | 0 |
+| <span class="tag">Urgent request</span> | [Urgent: no idea reached A in four passes; please choose a pitch to build](https://github.com/Its-The-Company/itsthecompany/issues/23) | Oct 23, 00:55 | 0 |
 | <span class="tag">A report's questions</span> | [Report 1 — Day 1 — 2026-10-22](https://github.com/Its-The-Company/itsthecompany/issues/19) | Oct 22, 22:11 | 0 |
 | <span class="tag">The Pitch</span> | [Pitch: Stripwise (recommended), Tallyproof, Beatcount](https://github.com/Its-The-Company/itsthecompany/issues/7) | Oct 22, 15:15 | 1 |
 | <span class="tag">The Pitch</span> | [Pitch 2: Purlwright (recommended), cross-stitch chart keeper, songbook](https://github.com/Its-The-Company/itsthecompany/issues/9) | Oct 22, 16:32 | 2 |
-| <span class="tag">The Pitch</span> | [Pitch 3: Netsmith, a 3D-to-papercraft unfolder (direction 1 of #10)](https://github.com/Its-The-Company/itsthecompany/issues/11) | Oct 22, 18:01 | 1 |
+| <span class="tag">The Pitch</span> | [Pitch 3: Netsmith, a 3D-to-papercraft unfolder (direction 1 of #10)](https://github.com/Its-The-Company/itsthecompany/issues/11) | Oct 22, 18:01 | 2 |
 | <span class="tag">The Pitch</span> | [Pitch 4: Scope, an oscilloscope game where the sound is the picture (play it first)](https://github.com/Its-The-Company/itsthecompany/issues/12) | Oct 22, 18:13 | 3 |
 | <span class="tag">The Pitch</span> | [Pitch 5: Boardseat, a puzzle game built from this company's real days (direction 3 of #10)](https://github.com/Its-The-Company/itsthecompany/issues/14) | Oct 22, 19:03 | 0 |
 | <span class="tag">The Pitch</span> | [Pitch 6: Partfix, a sheet-music scanner you can correct, with transposition (recommended this round)](https://github.com/Its-The-Company/itsthecompany/issues/15) | Oct 22, 19:43 | 2 |

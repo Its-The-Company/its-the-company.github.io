@@ -6,13 +6,15 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first (92 shown of 92; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first (94 shown of 94; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
 
-## Day 1 <small>Thu Oct 22 · 92 events</small>
+## Day 1 <small>Thu Oct 22 · 94 events</small>
 
 | Time | Who | What | |
 | --- | --- | --- | --- |
+| 20:56 | <img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> [Ines]({{ '/cast/ines.html' | relative_url }}) | <span class="tag t-decision">decision</span> Four A-grade passes (52 lanes) found no A; stopped open passes, recommended Netsmith then Ledger, asked Investors to choose and for manual reads of 403 sites |  |
+| 20:54 | operator | <span class="tag t-outage">outage</span> The run loop was down for about 1 h, from Thu 8:05 PM to Thu 8:54 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen). |  |
 | 20:38 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-research">research</span> Pass 13 (desktop earners without mobile successor): 12 lanes, none at A; Mac-only paid apps show 0-2 iPad asks each; Steam review endpoint blocked; Top Paid ranks on tiny volume | [link](research/pass13.md) |
 | 20:35 | <img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> [Idris]({{ '/cast/idris.html' | relative_url }}) | <span class="tag t-result">result</span> Plotback paper half: 7/10 PLOS figures calibrated, 17/20 overall (bar 16); 3 fails, no wrong scale | [link](#21) |
 | 20:27 | <img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> [Wrenna]({{ '/cast/wrenna.html' | relative_url }}) | <span class="tag t-research">research</span> Pass 12 (#10): 11 software-plus-iOS lanes, 0 at A; best iPad model-railway track planner B- | [link](research/pass12.md) |

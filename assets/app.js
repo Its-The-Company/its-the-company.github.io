@@ -9,15 +9,24 @@ function el(tag, cls, text) { var e = document.createElement(tag); if (cls) e.cl
 function byId(id) { return document.getElementById(id); }
 function on(target, ev, fn) { if (target && target.addEventListener) target.addEventListener(ev, fn); }
 function getToken() { return sessionStorage.getItem(KEY) || localStorage.getItem(KEY) || ''; }
+var ALLOW = 'company.allow';
+function tokenStore() { return localStorage.getItem(KEY) ? localStorage : sessionStorage; }
 function setToken(t, remember) {
-sessionStorage.removeItem(KEY); localStorage.removeItem(KEY);
+[sessionStorage, localStorage].forEach(function (s) { s.removeItem(KEY); s.removeItem(ALLOW); });
 if (t) (remember ? localStorage : sessionStorage).setItem(KEY, t);
+}
+var onDrawn = [];
+var rejected = false, onReject = [];
+var NO_TOKEN = 'GitHub did not accept the token (401), so the threads cannot be read and nothing can be sent. Change it on the connect page.';
+function checkAuth(r) {
+if (r && r.status === 401 && !rejected && getToken()) { rejected = true; onReject.forEach(function (f) { f(); }); }
+return r;
 }
 function gh(path, opts) {
 var h = { 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28' };
 var t = getToken(); if (t) h['Authorization'] = 'Bearer ' + t;
 if (opts && opts.etag) h['If-None-Match'] = opts.etag;
-return fetch(API + path, { headers: h, cache: 'no-store' });
+return fetch(API + path, { headers: h, cache: 'no-store' }).then(checkAuth);
 }
 function cap(s) { s = String(s || ''); return s.charAt(0).toUpperCase() + s.slice(1); }
 function ago(iso) {
@@ -33,7 +42,7 @@ return Math.round(m.pct) + '% used' + (r ? ', resets ' + r : '');
 }
 function setText(id, text) { var e = byId(id); if (e && text != null) e.textContent = text; }
 function list(items, fmt) { var ul = el('ul'); items.forEach(function (x) { ul.appendChild(el('li', null, fmt(x))); }); return ul; }
-var toggled = false;  // once the reader opens or closes the panel, the live status no longer does
+var toggled = false;
 function showNow(box, open) {
 box.hidden = !open;
 var b = document.querySelector && document.querySelector('.now-toggle');
@@ -49,6 +58,7 @@ if (m.weekly && m.weekly.pct != null) setText('s-wk', Math.round(m.weekly.pct) +
 if (q.runnable_count != null) setText('s-ready', String(q.runnable_count));
 if (q.blocked_count != null) setText('s-blocked', String(q.blocked_count));
 }
+function taskLine(w) { return (w.task || '') + (w.model ? ' [' + w.model + ']' : '') + (w.started ? ', for ' + ago(w.started) : ''); }
 function renderNow(box, st, source) {
 var s = st.session || {}, ws = st.workers || [];
 var headLine = s.active ? 'A ' + (s.kind || 'work') + ' session is running' + (s.started ? ' (started ' + ago(s.started) + ' ago).' : '.') : 'No session is running; the next one starts at the next 15-minute tick.';
@@ -64,14 +74,14 @@ for (k = 0; k < ws.length; k++) if ((ws[k].name || '').toLowerCase() === slug) w
 var t = c.querySelector('.t'), d = c.querySelector('.dot');
 c.className = 'card ' + (w ? 'live' : 'idle');
 if (d) d.className = 'dot ' + (w ? 'live' : 'idle');
-if (t) t.textContent = w ? (w.task || '') + (w.model ? ' [' + w.model + ']' : '') + (w.started ? ', for ' + ago(w.started) : '') : 'idle';
+if (t) t.textContent = w ? taskLine(w) : 'idle';
 if (w) carded[slug] = true;
 });
 body.textContent = '';
 var rest = ws.filter(function (w) { return !carded[(w.name || '').toLowerCase()]; });
 if (rest.length) {
 body.appendChild(el('p', 'now-sub', 'Working now'));
-body.appendChild(list(rest, function (w) { return cap(w.name) + ': ' + (w.task || '') + (w.model ? ' [' + w.model + ']' : '') + (w.started ? ', for ' + ago(w.started) : ''); }));
+body.appendChild(list(rest, function (w) { return cap(w.name) + ': ' + taskLine(w); }));
 } else if (s.active && !ws.length) body.appendChild(el('p', 'muted', 'No worker call is running at this moment.'));
 var rec = (st.recent || []).slice(0, 3);
 if (rec.length) {
@@ -91,21 +101,25 @@ function nowPanel(box) {
 var repo = box.getAttribute('data-repo'), etag = null, last = null, busy = false;
 var b = document.querySelector && document.querySelector('.now-toggle');
 if (b) b.onclick = function () { toggled = true; showNow(box, box.hidden); };
-function pub() {
+function pub(first) {
 return fetch(box.getAttribute('data-status'), { cache: 'no-store' }).then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-.then(function (st) { renderNow(box, st, 'public copy, refreshed with each site build (every 15 minutes or so)'); }).catch(function () {});
+.then(function (st) { if (first && last) return; renderNow(box, st, 'public copy, refreshed with each site build (every 15 minutes or so)'); }).catch(function () {});
 }
 function live(force) {
 if (busy || (document.hidden && force !== true)) return; busy = true;
-var p = (!getToken() || !repo) ? pub() : gh('/repos/' + repo + '/actions/variables/COMPANY_STATUS', { etag: etag }).then(function (r) {
+var p = (!getToken() || !repo || rejected) ? pub() : gh('/repos/' + repo + '/actions/variables/COMPANY_STATUS', { etag: etag }).then(function (r) {
 if (r.status === 304 && last) return last;
 if (!r.ok) throw new Error(r.status);
 etag = r.headers.get('ETag'); return r.json().then(function (v) { last = JSON.parse(v.value); return last; });
 }).then(function (st) { renderNow(box, st, 'live copy, seconds old while a session runs'); }).catch(function () { etag = null; last = null; return pub(); });
 p.then(function () { busy = false; }, function () { busy = false; });
 }
-live(true); setInterval(live, getToken() ? 5000 : 60000);
-on(document, 'visibilitychange', function () { if (!document.hidden) live(); });
+var timer, started = false, tokenPath = getToken() && repo && !rejected;
+function start() { if (started || rejected) return; started = true; timer = setInterval(live, 5000); live(true); }
+onReject.push(function () { clearInterval(timer); started = true; etag = null; last = null; timer = setInterval(live, 60000); });
+if (tokenPath) { pub(true); onDrawn.push(start); later(start, 5000); }
+else { timer = setInterval(live, 60000); live(true); }
+on(document, 'visibilitychange', function () { if (!document.hidden && (started || !tokenPath)) live(); });
 }
 function tokenBox(root) {
 var repo = root.getAttribute('data-repo');
@@ -113,7 +127,7 @@ var bar = el('div', 'chat-bar'), input = el('input'); input.type = 'password'; i
 input.placeholder = 'Fine-grained GitHub token (github_pat_...)'; input.setAttribute('aria-label', 'GitHub token');
 var remember = el('input'); remember.type = 'checkbox'; var rl = el('label', null, ' remember on this device'); rl.insertBefore(remember, rl.firstChild);
 var save = el('button', 'btn primary', 'Save token'), forget = el('button', 'btn', 'Forget token'), out = el('p', 'state', '');
-save.type = forget.type = 'button';
+save.type = forget.type = 'button'; out.setAttribute('role', 'status');
 [input, rl, save, forget].forEach(function (x) { bar.appendChild(x); });
 root.appendChild(bar); root.appendChild(out);
 function show() {
@@ -171,14 +185,14 @@ var threadsBox = byId('threads') || root.appendChild(el('div', 'threads'));
 var filtersBox = byId('filters') || root.appendChild(el('div', 'filters'));
 var publicBox = byId('public');
 var status = el('p', 'chat-status muted', '');
-if (!getToken()) return;  // the static "Connect your GitHub token" block and the public list stay as built
+if (!getToken()) return;
 var connect = root.querySelector ? root.querySelector('.connect') : null; if (connect) connect.parentNode.removeChild(connect);
 var etags = {}, cache = {}, issuesList = [], allowNames = [], issuesSig = null, filter = 'all', lastDraw = null;
 var comp = el('form', 'composer'); comp.setAttribute('action', '#');
 var sel = el('select', 'field'); sel.setAttribute('aria-label', 'Thread');
-var topicIn = el('input', 'field'); topicIn.type = 'text'; topicIn.maxLength = 30; topicIn.placeholder = 'Topic for the new chat (letters, digits, dashes)';
+var topicIn = el('input', 'field'); topicIn.type = 'text'; topicIn.maxLength = 30; topicIn.placeholder = 'Topic for the new chat (letters, digits, dashes)'; topicIn.setAttribute('aria-label', 'Topic for the new chat');
 var msgIn = el('textarea', 'field'); msgIn.rows = 3; msgIn.placeholder = 'Message the company. It is handled as if typed into Claude Code.'; msgIn.setAttribute('aria-label', 'Message');
-var nameIn = el('input', 'field'); nameIn.type = 'text'; nameIn.maxLength = 40; nameIn.placeholder = 'Display name (optional)'; nameIn.value = localStorage.getItem(NAME) || '';
+var nameIn = el('input', 'field'); nameIn.type = 'text'; nameIn.maxLength = 40; nameIn.placeholder = 'Display name (optional)'; nameIn.setAttribute('aria-label', 'Display name (optional)'); nameIn.value = localStorage.getItem(NAME) || '';
 var urg = el('input'); urg.type = 'checkbox'; var ul2 = el('label', 'check', ' Mark urgent'); ul2.insertBefore(urg, ul2.firstChild);
 var send = el('button', 'btn primary send', 'Send'); send.type = 'submit';
 var out = el('p', 'state', ''); out.setAttribute('role', 'status');
@@ -188,7 +202,7 @@ var foot = el('div', 'foot');
 [sel, topicIn, msgIn, foot, out].forEach(function (x) { comp.appendChild(x); });
 if (composerOn) root.appendChild(comp);
 else root.appendChild(el('p', 'muted', 'Sending from this page is switched off; reply on GitHub for now. The threads below are read with your token.'));
-root.appendChild(status); root.appendChild(tokenLink);
+root.appendChild(status); root.appendChild(document.createTextNode(' ')); root.appendChild(tokenLink);
 var clearTimer = 0;
 function state(kind, text, ms) {
 stop(clearTimer); out.className = 'state' + (kind ? ' ' + kind : ''); out.textContent = text;
@@ -213,14 +227,14 @@ topicIn.hidden = sel.value !== 'new';
 sel.onchange = function () { topicIn.hidden = sel.value !== 'new'; };
 function post(path, body) {
 return fetch(API + path, { method: 'POST', headers: { 'Accept': 'application/vnd.github+json', 'X-GitHub-Api-Version': '2022-11-28', 'Authorization': 'Bearer ' + getToken(), 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
-.then(function (r) { if (!r.ok) throw new Error('GitHub answered ' + r.status + (r.status === 403 || r.status === 404 ? ' (does the token have Issues: read and write?)' : '')); return r.json(); });
+.then(checkAuth).then(function (r) { if (!r.ok) throw new Error('GitHub answered ' + r.status + (r.status === 401 ? ' (the token was not accepted)' : r.status === 403 || r.status === 404 ? ' (does the token have Issues: read and write?)' : '')); return r.json(); });
 }
 function cleanName(n) { return (n || '').replace(/[^A-Za-z0-9 _.-]/g, '').trim().slice(0, 40); }
 function mentions(names) { return names.length ? 'Urgent: ' + names.map(function (n) { return '@' + n; }).join(' ') : ''; }
 function stamp(text, name, cc) { return text.replace(/<!--[\s\S]*?-->/g, '').trim() + (cc ? '\n\n' + cc : '') + (name ? '\n\n<!-- as: ' + name + ' -->' : ''); }
 var sending = false;
 function doSend() {
-if (!composerOn || sending) return;
+if (!composerOn || sending || rejected) return;
 var text = msgIn.value.trim(), name = cleanName(nameIn.value), urgent = urg.checked, target = sel.value;
 if (!text) { state('failed', 'Write a message first.', 4000); return; }
 localStorage.setItem(NAME, name); sending = true; send.disabled = true; state('sending', 'Sending...');
@@ -243,7 +257,7 @@ msgIn.value = ''; urg.checked = false; topicIn.value = '';
 state('sent', 'Sent' + (r.number ? ' as #' + r.number : '') + '. A receipt follows within a tick; the reply appears in the thread.' + warn, warn ? 15000 : 8000);
 etags = {}; load(r.number && target === 'new' ? String(r.number) : null);
 }).catch(function (e) { state('failed', 'Not sent: ' + e.message + '. Your text is kept; press Send to retry.', 30000); })
-.then(function () { sending = false; send.disabled = false; });
+.then(function () { sending = false; send.disabled = rejected; });
 }
 comp.onsubmit = function (ev) { if (ev && ev.preventDefault) ev.preventDefault(); doSend(); return false; };
 send.onclick = function (ev) { if (ev && ev.preventDefault) ev.preventDefault(); doSend(); };
@@ -254,25 +268,41 @@ if (!r.ok) throw new Error('GitHub answered ' + r.status);
 etags[path] = r.headers.get('ETag'); return r.json().then(function (j) { cache[path] = j; return j; });
 });
 }
+function readAllow() {
+try { var a = JSON.parse(tokenStore().getItem(ALLOW) || 'null'); return a && Array.isArray(a.names) ? a : null; } catch (e) { return null; }
+}
 function allow() {
-return get('/repos/' + repo + '/contents/investors/allowlist.md').then(function (f) {
+var c = readAllow();
+return gh('/repos/' + repo + '/contents/investors/allowlist.md', { etag: c && c.etag }).then(function (r) {
+if (r.status === 304 && c) return (allowNames = c.names);
+if (!r.ok) throw new Error('GitHub answered ' + r.status);
+var tag = r.headers.get('ETag');
+return r.json().then(function (f) {
 var text = atob(f.content.replace(/\n/g, ''));
 allowNames = text.split('\n').map(function (l) { return l.replace(/^[\s*\-]+/, '').replace(/^@/, '').trim().toLowerCase(); })
 .filter(function (l) { return /^[a-z0-9-]{1,39}$/.test(l); });
+if (getToken()) tokenStore().setItem(ALLOW, JSON.stringify({ names: allowNames, etag: tag }));
 return allowNames;
+});
 });
 }
 function load(pick) {
 if (document.hidden && !pick && lastDraw) return;
 if (!lastDraw) status.textContent = 'Loading the threads...';
-Promise.all([allow(), get('/repos/' + repo + '/issues?state=all&per_page=100&sort=updated'), get('/repos/' + repo + '/issues/comments?per_page=100&sort=created&direction=desc')])
+var n = lastDraw ? 100 : 30, cached = !lastDraw && readAllow();
+Promise.all([cached ? (allowNames = cached.names) : allow(), get('/repos/' + repo + '/issues?state=all&per_page=' + n + '&sort=updated'), get('/repos/' + repo + '/issues/comments?per_page=' + n + '&sort=created&direction=desc')])
 .then(function (res) {
-var same = lastDraw && lastDraw[1] === res[1] && lastDraw[2] === res[2] && lastDraw[0] === res[0];
+var same = lastDraw && lastDraw[1] === res[1] && lastDraw[2] === res[2] && String(lastDraw[0]) === String(res[0]);
 setIssues(res[1], pick); if (!same) { lastDraw = res; draw(); }
+if (cached) allow().then(function (a) { if (String(a) !== String(lastDraw[0])) { lastDraw[0] = a; draw(); } }, function () {});
+onDrawn.splice(0).forEach(function (f) { f(); });
 if (publicBox) publicBox.hidden = true;
 status.textContent = 'Updated ' + new Date().toLocaleTimeString() + '; refreshes every 30 seconds while this tab is open.';
 })
-.catch(function (e) { status.textContent = 'Could not load the threads: ' + e.message + '. Check the token on the connect page.'; });
+.catch(function (e) {
+status.textContent = rejected ? NO_TOKEN
+: 'Could not load the threads: ' + e.message + '. Check the token on the connect page.';
+});
 }
 function hue(login) { var h = 0, k; for (k = 0; k < login.length; k++) h = (h * 31 + login.charCodeAt(k)) >>> 0; return 'c' + (h % 6); }
 function isInvestor(login, names) { return names.indexOf((login || '').toLowerCase()) >= 0; }
@@ -357,7 +387,13 @@ var whoEl = waiting.querySelector ? waiting.querySelector('[data-who]') : null;
 if (whoEl) whoEl.textContent = 'waiting on you';
 waiting.onclick = function () { if (lastDraw) setFilter('urgent'); };
 }
-load(); setInterval(load, 30000);
+var loadTimer = setInterval(load, 30000);
+onReject.push(function () {
+clearInterval(loadTimer); send.disabled = true; tokenLink.textContent = 'Token rejected · change';
+status.textContent = NO_TOKEN;
+if (publicBox) publicBox.hidden = false;
+});
+load();
 }
 var n = byId('now-panel'); if (n) nowPanel(n);
 var c = byId('chat-root'); if (c) chat(c);

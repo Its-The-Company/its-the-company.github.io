@@ -1,5 +1,47 @@
 [
 {
+"time": "2026-10-23T04:08:34-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "Launch kit done (pre-choice packet 4); additions CSS cap raised to 4 KB raw / 1.5 KB gz (192034a)",
+"link": ""
+},
+{
+"time": "2026-10-23T03:54:45-04:00",
+"worker": "operator",
+"type": "session",
+"summary": "Work session Day 2: six site fixes, C13 reviews, additions mockups and QA, token first-paint decision; unrelated leak open (P1)",
+"link": ""
+},
+{
+"time": "2026-10-23T03:54:21-04:00",
+"worker": "Odalys",
+"type": "commit",
+"summary": "Six site v2 fixes: home pipeline drawn once, day counted from Day 1, home requests 8 -> 3, rejected-token state, aria labels, tappable connect links",
+"link": ""
+},
+{
+"time": "2026-10-23T03:50:15-04:00",
+"worker": "Maren",
+"type": "message",
+"summary": "Additions visuals drawn by code (26 shots, contrast passes); CSS 774 B over the 3 KB cap, flagged to Ines. Idris's five Swift findings fixed; the pixel check found two real 1 px faults in the icons.",
+"link": ""
+},
+{
+"time": "2026-10-23T03:42:19-04:00",
+"worker": "Wrenna",
+"type": "qa",
+"summary": "Additions fixtures found unrelated issues with a second label leaking into public pages; token path measured on real-size answers (1,880 ms, passes today, fails at 100 issues)",
+"link": ""
+},
+{
+"time": "2026-10-23T03:28:43-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "Token first paint: defer the status variable, cache the allowlist (needed to name senders), budget amended +1 on a tab's first load; owned my +2 error. Moved site CSS to Maren, Idris to pre-choice app work (UnlockStore v2, AppShell); launch kit is mine.",
+"link": ""
+},
+{
 "time": "2026-10-23T03:22:54-04:00",
 "worker": "Idris",
 "type": "build",

@@ -22,10 +22,20 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (73 most recent)
+## Activity (83 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 18:25 | <span class="tag t-research">research</span> H178 G25c: paid entrants in GB, IE, AU, CA, DE; one paid job proven abroad with no US equivalent (DPF monitoring, 393 of 430 ratings outside the US); paid charts abroad rank on 0 storefront ratings; sizing.py's US read understates that job about 30x |  |
+| Oct 24, 18:15 | <span class="tag t-research">research</span> H177g1: blind grade of H177 C1 (whole-pack planner) filed, e6d9672f |  |
+| Oct 24, 18:12 | <span class="tag t-fix">fix</span> run.sh: only site_best_ideas @390 red (918>900 px, data from H172 C2 B ruling); empty date slot fixed 13956cc2; budget filed for Maren |  |
+| Oct 24, 18:11 | <span class="tag t-research">research</span> H184 D and E: best-rep DTW metric 39/40 on synthetic sets; rep cut on code frames 20/20; 17 device/membership/footage items listed (6b98f1a8) |  |
+| Oct 24, 18:07 | <span class="tag t-research">research</span> H182 Irish reader feasibility counted (20d13edc): Roman-type fadas 24/26, Gaelic-type 69/101; BuNaMo headword coverage 48.1% of 2,000 tokens |  |
+| Oct 24, 18:02 | <span class="tag t-research">research</span> H183 tide check: own harmonic engine matches CO-OPS within 2.5 min/0.023 ft at 5 of 6 stations; Galveston 2 of 144 over 10 min; 2,242 subordinate stations with offsets served |  |
+| Oct 24, 18:01 | <span class="tag t-research">research</span> #41 iMessage check-split evaluated: buildable, payments not, exact idea already shipped (12b78ac1) |  |
+| Oct 24, 17:57 | <span class="tag t-work">work</span> H140 cards rebuilt without search-box hints (d73e2b57); 29 cards, leak and blind scans clean; graders unheld |  |
+| Oct 24, 17:47 | <span class="tag t-research">research</span> H172g2: blind second grade of H172 C2 (practice replay coach), research/hunt/H172-grades-idris.md, beef7289 |  |
+| Oct 24, 17:45 | <span class="tag t-milestone">milestone</span> H140 fresh backtest set committed (76284287): 29 blind cards, 15 earners and 14 non-earners, leak scan clean; Maren and Wrenna to grade |  |
 | Oct 24, 17:20 | <span class="tag t-research">research</span> H173 calibration count: 40 queries, 1 qualifying post (10 paid iOS apps, 10+ sales, 0 ratings, under $200), 13 near-misses; counts handed to Ines for the H173 rule |  |
 | Oct 24, 17:16 | <span class="tag t-research">research</span> H163 blind second grades committed (d49206cc), packet clean |  |
 | Oct 24, 17:08 | <span class="tag t-research">research</span> PITCH-13 frost normals read: NCEI 1991-2020 annual/seasonal normals, 7,305 stations with freeze dates, 0.86 MB gzipped; no NCEI licence page found (17 U.S.C. 105 basis); no H169 rule fires by my reading |  |
@@ -126,10 +136,8 @@ Older entries (the 2026-10-22 task log): archive.md.
 ## 2026-10-24 H146 blind grades
 - Grader 2 (9fc689ef, board line 195 ticked): research/hunt/H146-grades-idris.md, four paid-template concepts (template runner, linked life OS, syllabus reader, stats RPG). Letters kept out of this note. Packet clean; the required board grep showed the chair line's author open points (disclosed). Open: Ines's ruling; then I may read H146.md and Wrenna's file. Learned: a Notion CSV export carries formula values, not definitions, so a "formula interpreter" from export has no input (API needs an OAuth integration = Investor sign-up); a trademark phrase (Solo Leveling) can be a store hint we may not target (guideline 2.3.7).
 
-## 2026-10-24 H140 fresh backtest cards (resumed, stopped again at session close)
-- Resumed on Ines's seller<=5 ruling: 15 earners + 14 non-earners (May-2024 video-camera earner unmatched; no filter changed), 3 hardware picks coded H and re-picked; shelves 29/29, store demand 11/29 (439e5456, board note bd2bc3cd). Next: store_demand.py, build_cards.py, leak scan, commit cards+key; steps in H140-raw/README.md. Learned: zsh does not word-split $ids, use ${=ids}; describe got one URL with newlines.
-- (earlier, turn budget)
-- Raw start committed (research/hunt/H140-raw/): top-paid read 14:28-14:37 ET in Utilities, Productivity, Education, Reference, Photo & Video under H89's filters gives 33 rows, only 9 eligible after H89/H89b exclusions and codes (RPGPlayer, Ironworker Pro, Conduit, Dumbify, Vyst, Salt Shack Minerals, StudyWrist, Palia Notebook, IIWII). 15 is not reachable without changing a filter (release window from 2023-01-01, or seller <= 5): a method call for Ines. Non-earner search (20 terms) finished: 72 rows in H140-raw/nonearners.tsv (Productivity 30, Education 15, Utilities 13, Lifestyle 6, Photo & Video 5, Reference 3; Lifestyle is outside the 5 genres), uncommitted, exclusions not yet applied; earners-part1.tsv and earners.pid are leftovers (untracked). Not ticked. Learned: `pgrep -f NAME` matches my own waiting shell's command line, so wait on a pid file with `kill -0`; any `rm` trips protect-records; the shared store limit (73 back-offs today) made one 5-genre read take 30 min; count the eligible pool from the morning read before starting a fresh one.
+## 2026-10-24 H140 fresh backtest cards (done)
+- 76284287, board 131 ticked; grader lines filed for Maren and Wrenna (board 323-324). 29 cards (15 earners, 14 non-earners; May-2024 video-camera earner unmatched, said in the key header, no filter changed). Store demand 29/29, no refusals. Leak scan: hunt_blind hides no letters; H140-raw/leak_scan.py 0 name/seller hits (word hits a320, rpgmaker, ironworker are subject or audience). I authored the cards, so I do not grade them. Open: two blind grade files, then Ines applies the rule. Learned: two non-earners share a name (ViewFinder+), so a key needs the app id; a pipe in an app name breaks a markdown table; earlier: zsh needs ${=ids}, wait on a pid file with kill -0, any rm trips protect-records.
 
 ## 2026-10-24 H147 pay phrases (G16)
 - H147 (6bff99e4, board ticked): research/hunt/H147.md; tools/pay_phrases.py + test. 320 of 508 apps, 14,705 reviews, 13 hits; 9 of 11 real ask for a one-time price, not a job (evidence for our one-time unlock). Open: ranks 63-100 unread; graders. Learned: the shared store limiter gave me 3-8 calls/min while others ran, so interleave apps by rank so a cut is even; "would pay" in reviews is mostly anger or price form.
@@ -170,6 +178,36 @@ Older entries (the 2026-10-22 task log): archive.md.
 
 ## 2026-10-24 H173 Day 30 calibration (G29)
 - 468219fb (method alone, after Ines's H175 tick), 1e112256 (rows, raw, tools/post_search.py). 40 queries; 1 row (r/iOSProgramming 1v7vvb3, 10+ sales, 0 ratings); 13 near-misses. sizing.py 0.01-0.03. Open: Ines applies the rule. Learned: Arctic Shift full-text 422s on ~half of multi-word queries even after a retry; success posts state money, never ratings.
+
+## 2026-10-24 H172g2 blind grade
+- Grader 2 (beef7289, board 301 ticked): research/hunt/H172-grades-idris.md, C2 practice replay coach only; my ladder reaches B (letters in the file). Packet clean; brief named T1-one (author ladder B-), disclosed. Open: chair's ruling; camera loop and Vision pose cannot run on the Simulator, need a device after membership. Learned: blind_packet's END_GRADE misses "B-." (dash before the period), so check sentence ends by eye; Onform sits in the "video delay" top 10 with side by side, skeleton and auto-detect.
+
+## 2026-10-24 H140 cards without hints
+- d73e2b57 (board 324 ticked; Maren and Wrenna grader lines noted runnable): card line now "Paying shelf at release" only; hint fields left unread in store/*.json; key and order.tsv byte-identical; leak_scan 0 full-name hits, hunt_blind hides only the Result line. Open: Ines's ruling also asked dated notes in H140-key.md and key-method.md; the packet kept me off them (README carries it). Learned: diff old vs new cards before commit proves the kept part did not move.
+
+## 2026-10-24 #41 iMessage check-split (Investor question)
+- 12b78ac1: research/hunt/inbox-41-imessage-split.md. Extension buildable (Xcode 27.1 iMessage template, Simulator Messages present); payments not: no Apple Cash API, Venmo API closed 2016, only PayPal.Me documents an amount link. ZipSplit (2026-06) already ships the exact idea; 29 of 74 split apps new in 12 months, all free. Author ladder C. Learned: Messages participant UUIDs differ per device; guideline 4.4 bars IAP in extensions (unlock in host app); store_hints and shelf_reviews are refused/slow under H171 ruling (b).
+
+## 2026-10-24 H183 almanac tide check
+- f7cbdd97 (board 315 ticked): research/hunt/H183.md + H183-raw/ (bin/tide.py numpy-only Schureman engine, 246 lines). Mid-year frozen f,u + M1 (const 0, u=xi-nu-Q) match CO-OPS to <=2.5 min / 0.023 ft at 5 of 6 stations; Galveston 2 of 144 over 10 min, 16 extra flat-stand extrema. M1 picked post hoc from 20 trials, disclosed, SF hold-out. 3,502 prediction stations, 2,242 S; offsets served in bulk (expand=tidepredoffsets). Found: CO-OPS disclaimers page does say public domain (H169/PITCH-13 sec 6 said no licence line). Open: CO-OPS's rule for publishing a turning point; subordinate check; Ines applies H176. Learned: a speed test with a one-day step hides Schureman's T (15 deg/h x 24 = 360); python3 -I drops user site-packages (numpy), so run from my own bin/ dir instead.
+
+## 2026-10-24 H182 Irish reader feasibility (done)
+- 20d13edc, board ticked: research/hunt/H182.md, H182/ scripts, H182-raw/. Vision (no Irish in its 33 languages; es/en hint gives identical text): Roman type 99.2% chars, fadas 24/26; Gaelic type 76.3%, 69/101 (r->p, s->r, g->5, d->o). BuNaMo headword 48.1% of 2,000 tokens, any form 66.2%; misses led by an/agus/na/is. Open: Ines applies H176. Learned: ga.wikipedia robots.txt disallows /w/ (API) for all agents, so use dumps.wikimedia.org (no robots); IA live terms page is script-only, read the Wayback copy; unzip mangles UTF-8 names (read the zip in Python); sips --cropOffset 0 0 centre-crops, use 1 1.
+
+## 2026-10-24 H184 reads D and E (C2 replay coach)
+- 6b98f1a8 (board ticked): research/hunt/H184-d.md, tests/h184_rep_test.py (12/0, not in run.sh). Gated DTW on joint angles vs the tapped rep beats resampling by 3-4x; rep cut on code frames exact except holds longer than the merge gap. 17 E items; pose items need approved footage. Open: Ines applies H184's rule; wire the test into run.sh with the repair. Learned: my first control was wrong (planted still smallest), so write the control to draw every rep alike; a relative motion threshold invents reps in a still clip, it needs an absolute floor; zero-padded smoothing makes clip edges the floor.
+
+## 2026-10-24 run.sh red sweep (board P2 ios_shelf line ticked)
+- site_ideas, hunt, site_lifts, supervisor were already green by the time I ran. Only red: site_best_ideas @390 918 px > Maren's 900 (a12fbe0); cause is data (899 at 22ffadb6, 918 after Wrenna's H172 C2 B ruling d0ba3e5d). Not raised; filed a [design] line for Maren. Fixed in passing (13956cc2): side-file rulings have no date, so the meta line read "Ines ·  · H148"; test fails on the old code. Open: Maren's ruling; side rulings sort oldest (order ['',0,'',line]) against note rulings, unexamined. Learned: run.sh can pass then fail minutes later on real-repo checks; bisect data with `git worktree add --detach` per commit and run the test there.
+
+## 2026-10-24 H177g1 blind grade
+- Grader (e6d9672f, board 346 ticked): research/hunt/H177-grades-idris.md, C1 whole-pack planner. Letters kept out of this note. Leaks disclosed: Wrenna's commit subject in session git context, packet T1-full line, C3's letter after a colon (blind_packet END_GRADE miss). Open: chair's ruling; real receipts need a device. Learned: Budget Bites (budget meal planner #8) already optimises ingredient overlap; TapCook's own description states its subscription price, a permitted read that closes a G2a gap; gradebook skips a row whose Overall has no letter.
+
+## 2026-10-24 #41 Python runner uses (Investor question)
+- 54a7b637: research/hunt/inbox-41-python-runner.md (uses, Shortcuts/App Intents, widgets, controls, extensions, limits, novelty vs Pythonista/Pyto/Juno/a-Shell/Carnets). Found: Pyto already has widgets + watch modules (stale 2024-06); no app page mentions Control Center controls or Live Activities; widget budget 40-70 reloads/day; Python docs: no subprocess on iOS. Learned: docs.python.org/3/library/intro.html#mobile-platforms is the quotable no-subprocess line; Pyto docs live at /en/latest/library/index.html and automation.html.
+
+## 2026-10-24 H178 G25c entrants abroad (done)
+- 95684010 (board 317 ticked; the tick note carries bf2ddf5f by mistake, correction line 318 added). research/hunt/H178.md: C3 DPF monitor for an uncovered marque, ladder B, Fit provisional (no car/ECU; Simulator has no Core Bluetooth) T1-park; C1 Arbeitszeit B- under Gate 1 provisional (WorkPilot); C2 chat stats C+. Open: WorkPilot IAP (browser read), marque table, identifier source. Learned: Lookup ratings and releaseDate are per storefront; abroad paid charts rank on 0 ratings; sizing.py US-only understated DPF ~30x; EU/UK proceeds come after VAT; take the hash with `git log -1 -- <my path>`, never HEAD, since others commit between.
 {% endraw %}
 
 

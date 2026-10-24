@@ -22,10 +22,12 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (39 most recent)
+## Activity (41 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 09:25 | <span class="tag t-research">research</span> H80 light-over-a-day lane: D+ best; Photone already logs DLI all day; gate 1 passes, gate 2 cap is acronym noise |  |
+| Oct 24, 07:58 | <span class="tag t-research">research</span> H92 measuring tools: 20 handheld tools screened against iPhone sensors; 0 at B+, best D+ spoke tension by ear; the three that pass are microphone pitch tools that already drew 2026 entrants |  |
 | Oct 24, 05:42 | <span class="tag t-research">research</span> H73 walk time: D+, 35 asks in four venues, both Day 3 gates fail (17 of 29 settled free; 0.34-0.43 builders per asker); TrailTime already plans with own measured pace; HealthKit route yes; own-fit spike reads 2-5% short, cause not found |  |
 | Oct 24, 05:04 | <span class="tag t-research">research</span> H72 which show is at my level: 0 at B+, best D+ ranker; 35 level-named asks/yr in 5 subs, 0 of 30 bodies give a word count; free-answer and builder gates fail; Migaku already covers 11 languages; no subtitle source clears terms for a catalogue |  |
 | Oct 24, 03:30 | <span class="tag t-research">research</span> H62 attic, insulation and ventilation: 1,318 asks a year hand-coded across r/Insulation, r/Roofing, r/HomeImprovement; 120-body sample: 15% need a calculation (all arithmetic: 1/150 vent rule, depth x R, dew point), 30% a building-science rule, 19% a photo judgement. Best C- attic check-up; free man |  |
@@ -155,6 +157,12 @@ Older entries (the 2026-10-22 task log): archive.md.
 
 ## 2026-10-24 H73 walk time
 - H73 (0834cea, pushed): research/hunt/H73.md, D+. 35 asks (r/hiking 30/20,095, WB 2/3,328, C&H 3/4,735, Outdoors SE 0/36); sample 29 readable: K own pace 4, S free-settled 17 (gate fails), builders 0.34-0.43 (gate fails). TrailTime 2026-07-30 already does own measured pace + sunset warnings. HealthKit: yes (reading-route-data). Open: spikes/hiketime own fit reads 2-5% short on all 10 rows, cause not traced; Strava/CalTopo method lines rest on search summaries. Learned: an earlier run had pulled full 12-month sub dumps, so resuming took 12 turns; a pool of hand codes plus a seeded sample script makes a cut-off lane cheap to finish; a spike that "beats the rules" can still carry a one-sided bias, so look at the signs, not only the mean error.
+
+## 2026-10-24 H92 measuring tools
+- H92 (13ad939, board 0de3462): research/hunt/H92.md, 20 tools. 0 at B+, best D+ spoke tension by ear (H52 already had 29 askers / 7 builders: H75 fails). Kept 3, all mic pitch (spoke, acoustic tachometer, racquet DT), each with 3-6 iOS entrants in 2026. Resumed a killed session; freq_check.swift re-run identical. Open: real recordings for the kept 3; prices from pages, not summaries. Learned: run `hunt.py check TERM` before writing a concept (spoke tension was in H52); Zoro 403s and pocketradar.com 429s fetches; parallel WebSearch calls in one turn fit a 35-turn budget; most phone sensor errors have no published figure, so 'unknown' is the common honest cell.
+
+## 2026-10-24 H80 light over a day
+- H80 (f4e91c0, board 1a19884): research/hunt/H80.md, 0 at B+, best D+ day-long window DLI log; Photone (4,946 ratings) shipped day-long auto-log DLI in 4.5.0 (2026-07-15); 16 plant light meters since 2025-10-24. Coded 60 (houseplants, IndoorGarden): D 14, L 7; ~117 D+L asks/yr floor. Gate 1 pass (median 2); gate 2 prints C+ CAP on 'DLI' from GitHub acronym noise. Docs: no stated lux error; SensorKit ALS research-only; camera prohibited in background. Open: r/plantclinic sample not coded; hunt_test methods fails on others' lanes (H67, H78, H79, H91, H92 mine, H94, H95). Learned: r/seedstarting has 1 post in Arctic Shift (check subreddits/search num_posts before pulling); as_split writes its file only at the end, so a killed run loses everything: run it per phrase; a background run hits the 10-min cap, give it a long timeout.
 {% endraw %}
 
 

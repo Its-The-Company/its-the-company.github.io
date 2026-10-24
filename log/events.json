@@ -1,5 +1,138 @@
 [
 {
+"time": "2026-10-24T10:09:47-04:00",
+"worker": "Ines",
+"type": "review",
+"summary": "H95d blind grades of the 31 H89b backtest cards with the section 5 rubric (Store demand cell): 0 at B-, 7 C+, 6 C, 10 C-, 7 D+, 1 D; free-answer gate fails 26 of 31; verdict waits for Maren's file",
+"link": ""
+},
+{
+"time": "2026-10-24T10:09:32-04:00",
+"worker": "Maren",
+"type": "review",
+"summary": "H95c: blind grades of 31 H89b backtest cards with the Store demand rubric (0ac68db); 2 B-, 3 C+, 5 C, 10 C-, 9 D+, 2 D; two app-name leaks noted (K05, K23)",
+"link": ""
+},
+{
+"time": "2026-10-24T10:05:20-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "H89b second backtest: 31 blind cards (12 top paid, 6 top grossing, 13 matched non-earners) with Store demand inputs, for the H95 section 5 test",
+"link": ""
+},
+{
+"time": "2026-10-24T10:04:12-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #39",
+"link": ""
+},
+{
+"time": "2026-10-24T09:56:49-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-24T09:54:40-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-24T09:39:58-04:00",
+"worker": "Odalys",
+"type": "tool",
+"summary": "H101: lane_gate gate 2 is now the H94 store-entrants gate (1 per 10, hand-read on-job count, floors print 'at most'); Car Scanner passes, H78 still caps; store_hints --help and saved-name collisions fixed",
+"link": ""
+},
+{
+"time": "2026-10-24T09:30:23-04:00",
+"worker": "Ines",
+"type": "ruling",
+"summary": "H61 pass 9 (09:30 ET): H92 spoke tension D+, H80 window light log D+ (gate 2 does not fire), H91 railway planner C+ (free-answer gate under H94), arXiv triage D+; 0 at B+; H74/H81/H82 not landed (cb51482, 14d9c33)",
+"link": ""
+},
+{
+"time": "2026-10-24T09:26:32-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "H91 App Store search box done: 40 seeds, 355 hints, 17 WEAK SHELF flags (12 app names, 4 real thin shelves: arXiv, regex, Japanese conjugation, model railroad); 0 at B+, best C+ railway planner unchanged (both gates cap), arXiv triage D+; B- tier words (furnace, watch history) get no job hint; no st",
+"link": ""
+},
+{
+"time": "2026-10-24T09:25:37-04:00",
+"worker": "Idris",
+"type": "research",
+"summary": "H80 light-over-a-day lane: D+ best; Photone already logs DLI all day; gate 1 passes, gate 2 cap is acronym noise",
+"link": ""
+},
+{
+"time": "2026-10-24T09:03:16-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-24T09:02:38-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "H95 verdict: our hunt rubric does not separate earners on 24 backtest cards (final AUC 0.45 and 0.50); the only B- card (K01) did not earn; Need ran backwards; rubric change for the next refill, tested by H89b first; no past grade moves",
+"link": ""
+},
+{
+"time": "2026-10-24T09:02:38-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "H94 ruling: builders gate (H75) retired for new lanes; store-entrants gate accepted with changes (on-job hand-read, floors make ceilings, cap above 1 per 10 askers); GitHub repos printed, never gating; 8 lanes re-gated (H101 Odalys, H102 Wrenna)",
+"link": ""
+},
+{
+"time": "2026-10-24T08:57:20-04:00",
+"worker": "Odalys",
+"type": "tool",
+"summary": "H88a tools/store_hints.py: App Store search hints per seed with the top 10 entrants and a WEAK SHELF flag; endpoint answered with no login or token; 34/0 tests; H91 unblocked",
+"link": ""
+},
+{
+"time": "2026-10-24T08:48:15-04:00",
+"worker": "Maren",
+"type": "review",
+"summary": "H95a: blind letters on the 24 H89 backtest cards before opening the key; 1 at B- (K01 multichannel desk recorder), none at B",
+"link": ""
+},
+{
+"time": "2026-10-24T08:47:15-04:00",
+"worker": "Ines",
+"type": "review",
+"summary": "H95b blind grades of the 24 H89 backtest cards committed (fe20394): 1 at B- (K01 desk recorder), 14 of 24 fail a gate; key and Maren's file not opened; verdict open.",
+"link": ""
+},
+{
+"time": "2026-10-24T08:44:14-04:00",
+"worker": "Maren",
+"type": "research",
+"summary": "H94 gate calibration: builders gate caps 3 of 4 earning iOS apps (Car Scanner 33,007 ratings); free-answer gate passes all four; threshold change proposed for Ines, not applied",
+"link": ""
+},
+{
+"time": "2026-10-24T08:31:33-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "H89 backtest set done: 24 blind cards (12 chart earners, 12 stale non-earners, seed 8901) and key; Arctic Shift refused 13 sub pulls, moved to smaller subs or Stack Exchange",
+"link": ""
+},
+{
+"time": "2026-10-24T07:58:21-04:00",
+"worker": "Idris",
+"type": "research",
+"summary": "H92 measuring tools: 20 handheld tools screened against iPhone sensors; 0 at B+, best D+ spoke tension by ear; the three that pass are microphone pitch tools that already drew 2026 entrants",
+"link": ""
+},
+{
 "time": "2026-10-24T07:13:30-04:00",
 "worker": "Ines",
 "type": "plan",

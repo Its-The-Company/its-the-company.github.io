@@ -1,42 +1,89 @@
 {
  "schema": 1,
- "at": "2026-10-24T11:49:54.784890+00:00",
+ "at": "2026-10-24T14:20:11.041049+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-24T07:37:31-04:00"
+  "started": "2026-10-24T07:50:13-04:00"
  },
  "workers": [
   {
    "name": "wrenna",
-   "task": "[research] Wrenna H89 backtest set",
+   "task": "[research] Wrenna H102 re-gate capped lanes",
    "model": "opus",
-   "started": "2026-10-24T11:38:41.516Z",
-   "seconds": 673,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[research] Idris H92 hardware iPhone replaces",
-   "model": "opus",
-   "started": "2026-10-24T11:38:47.218Z",
-   "seconds": 667,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "maren",
-   "task": "[research] Maren H94 gate calibration",
-   "model": "opus",
-   "started": "2026-10-24T11:38:52.024Z",
-   "seconds": 662,
+   "started": "2026-10-24T14:06:02.316Z",
+   "seconds": 848,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Wrenna, Idris, Maren",
- "recent": [],
+ "who": "Wrenna",
+ "recent": [
+  {
+   "name": "ines",
+   "task": "[review] Ines H95d blind grades of H89b",
+   "model": "opus",
+   "started": "2026-10-24T14:05:56.768Z",
+   "seconds": null,
+   "finished": "2026-10-24T14:09:54.597Z"
+  },
+  {
+   "name": "maren",
+   "task": "[review] Maren H95c blind grades of H89b",
+   "model": "opus",
+   "started": "2026-10-24T14:05:52.616Z",
+   "seconds": null,
+   "finished": "2026-10-24T14:09:39.276Z"
+  },
+  {
+   "name": "wrenna",
+   "task": "[research] Wrenna H89b second backtest set",
+   "model": "opus",
+   "started": "2026-10-24T13:27:09.301Z",
+   "seconds": null,
+   "finished": "2026-10-24T14:05:27.976Z"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] Odalys H101 lane_gate + store_hints fixes",
+   "model": "opus",
+   "started": "2026-10-24T13:27:02.200Z",
+   "seconds": null,
+   "finished": "2026-10-24T13:40:13.438Z"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] Ines H61 pass 9 grades",
+   "model": "opus",
+   "started": "2026-10-24T13:27:16.237Z",
+   "seconds": null,
+   "finished": "2026-10-24T13:30:31.220Z"
+  },
+  {
+   "name": "wrenna",
+   "task": "[research] Wrenna H91 App Store search hints",
+   "model": "opus",
+   "started": "2026-10-24T12:58:06.359Z",
+   "seconds": null,
+   "finished": "2026-10-24T13:26:40.311Z"
+  },
+  {
+   "name": "idris",
+   "task": "[research] Idris H80 plant light lane (resume)",
+   "model": "opus",
+   "started": "2026-10-24T12:58:11.285Z",
+   "seconds": null,
+   "finished": "2026-10-24T13:25:45.472Z"
+  },
+  {
+   "name": "ines",
+   "task": "[review] Ines H95 verdict and H94 ruling",
+   "model": "opus",
+   "started": "2026-10-24T12:58:00.806Z",
+   "seconds": null,
+   "finished": "2026-10-24T13:02:56.893Z"
+  }
+ ],
  "queue": {
   "runnable": [
    {
@@ -82,30 +129,30 @@
     "text": "Unrelated side project; Collatz, workspace ~/unrelated/collatz); full text in log/board-archive-2026-10-23.md"
    }
   ],
-  "runnable_count": 27,
-  "blocked_count": 23
+  "runnable_count": 24,
+  "blocked_count": 21
  },
  "meter": {
   "five_hour": {
-   "pct": 12.0,
-   "resets_at": "2026-10-24T14:59:59.680568+00:00",
+   "pct": 13.0,
+   "resets_at": "2026-10-24T14:59:59.527299+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 88.0,
+   "left": 87.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 40.0,
-   "resets_at": "2026-10-25T06:59:59.680586+00:00",
+   "pct": 41.0,
+   "resets_at": "2026-10-25T06:59:59.527324+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 60.0,
+   "left": 59.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 13.0,
-   "resets_at": "2026-10-25T06:59:59.680712+00:00",
+   "resets_at": "2026-10-25T06:59:59.527792+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-24T07:37:31.250181-04:00"
+  "read_at": "2026-10-24T07:50:13.315159-04:00"
  },
  "ui": {
   "week_pct": 0.024,
@@ -120,41 +167,17 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-24T07:52:31-04:00",
+ "next_tick": "2026-10-24T08:05:13-04:00",
  "lanes": [
   {
    "name": "Wrenna",
    "state": "running",
-   "task": "[research] Wrenna H89 backtest set",
+   "task": "[research] Wrenna H102 re-gate capped lanes",
    "model": "opus",
-   "since": "2026-10-24T11:38:41.516Z",
+   "since": "2026-10-24T14:06:02.316Z",
    "next": [
     "Wrenna: site_qa.py checks for the additions against...",
     "Wrenna: QA the live site after every deploy: every page..."
-   ],
-   "effort": "high"
-  },
-  {
-   "name": "Idris",
-   "state": "running",
-   "task": "[research] Idris H92 hardware iPhone replaces",
-   "model": "opus",
-   "since": "2026-10-24T11:38:47.218Z",
-   "next": [
-    "Idris, P2, H80 is this light enough for this plant,...",
-    "Idris, P2, H81 wood stove burn the owner watches but..."
-   ],
-   "effort": "high"
-  },
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[research] Maren H94 gate calibration",
-   "model": "opus",
-   "since": "2026-10-24T11:38:52.024Z",
-   "next": [
-    "Maren, P3 (Wrenna live QA 07:13): site_qa.py USAGE_WORDS...",
-    "Maren, P3, H74 which test do I use (refill 11, Ines..."
    ],
    "effort": "high"
   },
@@ -166,7 +189,18 @@
    "since": null,
    "next": [
     "Odalys, P3, H77 subject coverage in tools/hunt.py...",
-    "Odalys, P1, H88a tools/store_hints.py (refill 13; Tenet..."
+    "Odalys, P2, H88b tools/blind_packet.py LANE so no grader..."
+   ]
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P3 (Wrenna live QA 07:13): site_qa.py USAGE_WORDS ('share', 'week', 'budget') flags 30 research shares that...",
+   "model": null,
+   "since": null,
+   "next": [
+    "Maren, P3, H74 which test do I use (refill 11, Ines...",
+    "Maren, P2, H82 is my EV battery fading normally (refill..."
    ]
   },
   {
@@ -179,6 +213,17 @@
     "Ines, P2, H83 damp basement and crawl space from the...",
     "Ines, P1, H61 pass 9 grades as lanes land (refill 13):..."
    ]
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, H81 wood stove burn the owner watches but cannot judge (refill 12, Ines 05:33; method: counted asks plus...",
+   "model": null,
+   "since": null,
+   "next": [
+    "Idris, P2, H93 Apple's built-in sound classifier as a...",
+    "Idris, P2, H97 is my photo library actually safe (refill..."
+   ]
   }
  ],
  "tasks": {
@@ -186,28 +231,10 @@
    {
     "w": "Wrenna",
     "k": "research",
-    "t": "H89 backtest set",
+    "t": "H102 re-gate capped lanes",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T11:38:41.516Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
-    "t": "H92 hardware iPhone replaces",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-24T11:38:47.218Z",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "research",
-    "t": "H94 gate calibration",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-24T11:38:52.024Z",
+    "at": "2026-10-24T14:06:02.316Z",
     "o": "c"
    }
   ],
@@ -331,13 +358,6 @@
    {
     "w": "Idris",
     "k": "research",
-    "t": "H80 is this light enough for this plant, measured over a day",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
     "t": "H81 wood stove burn the owner watches but cannot judge",
     "s": "next",
     "o": "c"
@@ -380,13 +400,6 @@
    {
     "w": "Wrenna",
     "k": "research",
-    "t": "H89 backtest set",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
     "t": "H90 logs a rule makes people keep, with arithmetic in them",
     "s": "next",
     "o": "c"
@@ -395,20 +408,6 @@
     "w": "Wrenna",
     "k": "research",
     "t": "H99 the companion app owners hate, from App Store reviews",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H91 what people type into the App Store search box",
-    "s": "wait",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
-    "t": "H92 measuring tools that sell as hardware and the iPhone can replace",
     "s": "next",
     "o": "c"
    },
@@ -436,13 +435,6 @@
    {
     "w": "Maren",
     "k": "research",
-    "t": "H94 calibrate the two gates on what we already rate and on apps that earn",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "research",
     "t": "H96 language learners' own review history",
     "s": "next",
     "o": "c"
@@ -462,23 +454,23 @@
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "review",
-    "t": "H95a backtest blind grades",
+    "w": "Wrenna",
+    "k": "research",
+    "t": "H102 re-gate the lanes the builders count capped",
     "s": "wait",
     "o": "c"
    },
    {
     "w": "Ines",
     "k": "review",
-    "t": "H95b backtest blind grades and the verdict",
-    "s": "wait",
+    "t": "H95d blind grades of H89b and the section 5 verdict",
+    "s": "next",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "H88a tools/store_hints.py",
+    "w": "Maren",
+    "k": "build",
+    "t": "Tests/hunt_test.py 'methods' fails in tests/run.sh",
     "s": "next",
     "o": "c"
    },
@@ -567,33 +559,65 @@
   ],
   "done": [
    {
+    "w": "Ines",
+    "k": "review",
+    "t": "H95d blind grades of H89b",
+    "at": "2026-10-24T14:09:54.597Z",
+    "o": "c"
+   },
+   {
     "w": "Maren",
-    "k": "research",
-    "t": "H94 gate calibration",
-    "at": "2026-10-24T11:37:13.730000+00:00",
-    "o": "c",
-    "x": "killed"
+    "k": "review",
+    "t": "H95c blind grades of H89b",
+    "at": "2026-10-24T14:09:39.276Z",
+    "o": "c"
    },
    {
     "w": "Wrenna",
     "k": "research",
-    "t": "H89 backtest set",
-    "at": "2026-10-24T11:37:13.727000+00:00",
-    "o": "c",
-    "x": "killed"
+    "t": "H89b second backtest set",
+    "at": "2026-10-24T14:05:27.976Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "H101 lane_gate + store_hints fixes",
+    "at": "2026-10-24T13:40:13.438Z",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "H61 pass 9 grades",
+    "at": "2026-10-24T13:30:31.220Z",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "H91 App Store search hints",
+    "at": "2026-10-24T13:26:40.311Z",
+    "o": "c"
    },
    {
     "w": "Idris",
     "k": "research",
-    "t": "H92 hardware iPhone replaces",
-    "at": "2026-10-24T11:37:13.727000+00:00",
-    "o": "c",
-    "x": "killed"
+    "t": "H80 plant light lane",
+    "at": "2026-10-24T13:25:45.472Z",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "review",
+    "t": "H95 verdict and H94 ruling",
+    "at": "2026-10-24T13:02:56.893Z",
+    "o": "c"
    }
   ],
   "count": {
-   "next": 27,
-   "wait": 5,
+   "next": 24,
+   "wait": 3,
    "blocked": 18,
    "you": 1
   }
@@ -601,9 +625,53 @@
  "qr": [],
  "inbox": [
   {
+   "id": "c6384543023",
+   "state": "waiting",
+   "position": 1,
+   "eta": "2026-10-24T08:05:13-04:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Is there a problem with the search algorithm that\u2019s preventing us from gettin..."
+  },
+  {
+   "id": "c6385052359",
+   "state": "waiting",
+   "position": 2,
+   "eta": "2026-10-24T08:05:13-04:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Respond to the above urgently Urgent: friesevan jeremyfries"
+  },
+  {
+   "id": "c6385074661",
+   "state": "waiting",
+   "position": 3,
+   "eta": "2026-10-24T08:05:13-04:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Also, there seems to be quite a delay between sending a message and it being..."
+  },
+  {
+   "id": "c6385142759",
+   "state": "waiting",
+   "position": 4,
+   "eta": "2026-10-24T08:05:13-04:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Are you reading my recent messages on Main? Respond to this email with an ans..."
+  },
+  {
    "id": "i35",
    "state": "replied",
-   "position": 1,
+   "position": 5,
    "tasks": {
     "open": 1,
     "done": 0

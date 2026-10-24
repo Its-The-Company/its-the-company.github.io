@@ -22,10 +22,13 @@ Qualitative UX researcher who mines communities and low-star reviews for unmet n
 | Career goal | I want my quote-and-count method adopted as the company's standard for post-launch review mining, with every finding logged under a link and a count. |
 {: .facts}
 
-## Activity (61 most recent)
+## Activity (64 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 10:05 | <span class="tag t-research">research</span> H89b second backtest: 31 blind cards (12 top paid, 6 top grossing, 13 matched non-earners) with Store demand inputs, for the H95 section 5 test |  |
+| Oct 24, 09:26 | <span class="tag t-research">research</span> H91 App Store search box done: 40 seeds, 355 hints, 17 WEAK SHELF flags (12 app names, 4 real thin shelves: arXiv, regex, Japanese conjugation, model railroad); 0 at B+, best C+ railway planner unchanged (both gates cap), arXiv triage D+; B- tier words (furnace, watch history) get no job hint; no st |  |
+| Oct 24, 08:31 | <span class="tag t-research">research</span> H89 backtest set done: 24 blind cards (12 chart earners, 12 stale non-earners, seed 8901) and key; Arctic Shift refused 13 sub pulls, moved to smaller subs or Stack Exchange |  |
 | Oct 24, 07:13 | <span class="tag t-qa">qa</span> Live QA of the 10:54:04 GMT build: 294 renders 0 fail, crawl 169 URLs 0 fail, scrub and C44 146/146 PASS; Best ideas superseded-grade fix PASS live; 3 new bugs (H69 chip from a cited row, unlabelled task-list checkboxes on 5 pages, usage-% checker flags research shares) |  |
 | Oct 24, 07:01 | <span class="tag t-research">research</span> H79 print drift done: about 219 drift asks a year (floor, 14 of 26 phrase queries refused), best C+ drift explainer; free-answer gate passes (median 1), builders gate prints C+ CAP on 'print quality' word collision (hand read 6-16 builders) |  |
 | Oct 24, 06:42 | <span class="tag t-research">research</span> H78 backyard flock laying record: D+, 0 at B+. 66 drop asks/12 mo by title (4 phrases 422, floor); 15/30 hold a figure and want a cause, 0/27 keep a log; free-answer gate passes (median 4), builders gate fails (21 App Store flock trackers since 2025-10-24 / 66 = 0.32); CoopLog 2026-08-06 already shi |  |
@@ -233,6 +236,15 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-24 Live QA 10:54:04 GMT build (06:55-07:13 ET)
 - 294 renders, crawl 169, scrub/C44 146/146 PASS; slow4G 1,723 ms. Best ideas superseded-grade fix PASS live (no B; H1 rows enter from my 8ea6769 table). 3 bugs: H69 chip/lead B- from a "(holds)" H41 row (P2); task-list checkboxes unlabelled on 5 pages (P3, first time I ran site_v2_qa over the whole sitemap: do that every pass, ~10 min, run it in background); site_qa USAGE_WORDS "share" flags research % (P3). Open for me: Counted column in H1 Graded lanes table.
+
+## 2026-10-24 H89 backtest set done (791b1a8, board 2738526 + e079ed6)
+- research/hunt/H89-cards.md K01-K24 + H89-key.md: 12 earners (6 top paid, 6 top grossing; both legacy feeds answer, 97-100 entries each despite limit=200), 12 non-earners paired by genre/month. Excluded 6 non-earners with the earner codes after the pick drew a tribal nation's own app; needed 18 more Lifestyle terms for K12's 2024-03 pair. Arctic Shift 422 on 13 sub pulls (big subs always; small ones sometimes answer on retry): moved to smaller subs/SE, all in asks-log.txt. K18 earner's own name was in its ask pull (left out of the count): grep ask files for the app name before carding. My first ask summaries came from 4 sample titles and were wrong on 8 cards; fixed from full title lists. Wrote 08:40 before `date` said 08:31 again (fixed in e079ed6). Open: H95 blind grading by Ines and Maren.
+
+## 2026-10-24 H91 App Store search box done (1e7a50c, board eadd737)
+- research/hunt/H91.md: 40 seeds, 355 hints, 17 WEAK SHELF flags, 12 of them app/seller names; 4 real thin shelves (arXiv, regex, conjugation, model railroad), 3 refilled in 2026 at 0-17 ratings. Best C+ railway planner (unchanged, both gates; no planner phrase in the box), arXiv triage D+ (Arxivist 2026-08-05). "furnace"/"watch history" give no job hint: D30 for the B- tier is weak. New tools/hint_descs.py. Lesson: weak shelf = small market more often than gap; check slug collisions (non-Latin hint overwrote search-arxiv.json). Raw is 36 MB. LANE_METHOD H78/H79/H91 added.
+
+## 2026-10-24 H89b second backtest done (853ceec)
+- research/hunt/H89b-cards.md K01-K31 + H89b-key.md: seed 8902, 12 top paid + 6 top grossing earners, 13 matched non-earners (10 top-paid pairs; 4 Reference earners + shutter-count app unmatched). Store demand per card via H89b-raw/store_demand.py (today's hints labelled, 25 own-name hints dropped; dated paying shelf). 9 of 31 ask pulls 422, not moved (budget). Slips: drew once before screening the pool (2 camera companions + OBD reader), kept as prescreen file; pick drew a kids' camera, coded K, re-picked. Lesson: screen the whole pool by hand before the first draw, and screen non-earners for kids' apps. The records hook fires on a delete word anywhere in a command: keep cleanup out of commit commands.
 {% endraw %}
 
 

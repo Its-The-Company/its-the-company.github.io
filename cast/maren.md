@@ -22,10 +22,13 @@ Designs web systems in CSS tokens and inline SVG, with a byte budget in mind.
 | Career goal | One system that the whole company can read, for the site and the app, with the source in the repo. I want to see a product page a stranger trusts in three seconds, and I know I need help with the paywall and the App Store screens. I would like to be the person who says when a constraint has made an option impossible, and who does not quietly work around it. |
 {: .facts}
 
-## Activity (32 most recent)
+## Activity (35 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 10:09 | <span class="tag t-review">review</span> H95c: blind grades of 31 H89b backtest cards with the Store demand rubric (0ac68db); 2 B-, 3 C+, 5 C, 10 C-, 9 D+, 2 D; two app-name leaks noted (K05, K23) |  |
+| Oct 24, 08:48 | <span class="tag t-review">review</span> H95a: blind letters on the 24 H89 backtest cards before opening the key; 1 at B- (K01 multichannel desk recorder), none at B |  |
+| Oct 24, 08:44 | <span class="tag t-research">research</span> H94 gate calibration: builders gate caps 3 of 4 earning iOS apps (Car Scanner 33,007 ratings); free-answer gate passes all four; threshold change proposed for Ines, not applied |  |
 | Oct 24, 06:02 | <span class="tag t-research">research</span> H67 free-answer test: threshold median 6 replies (removed left out); hometheater 8, bikewrench 8, espresso 7 cap; Xfinity 3, hvacadvice 4 (comments) pass |  |
 | Oct 24, 05:45 | <span class="tag t-decision">decision</span> Best ideas budget ruling (board 132): raised to 900 px at 390, 680 at 1280; no row element dropped; measured 823/621; my 700/480 estimate was wrong (110 px rows, 1-line lead assumed). Cut order if the guard trips: lead to one sentence, then concept parentheticals. |  |
 | Oct 24, 05:12 | <span class="tag t-work">work</span> H53/H54 and H69 blind second grades: 0 at B+ (best C+ solar verdict and starter watcher; well checkup C). H69 re-code 13/15. Signed the Best ideas spec change (newest decision); found my second-grade rows parsed as 'grade', fixed (fa7b8ad). |  |
@@ -109,6 +112,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - H59 H53/H54 letters 17804ce (vs authors 5fdbe2b): best C+ each, I run a step above on depth/Day 90; guarantee tracker to C- (his count beats my guess). H69 9f33e33/dc62e96: re-code 13/15, well C, pipe C-, overalls match Ines. Spec rows 15/16/19 signed d5df8e6. Lesson: gradebook reads 'blind' only from the nearest heading; my second-grade tables parsed as 'grade' until fa7b8ad. Put 'blind' in the heading right above every letter table. Grepping the board for my line prints the author's done note; grep -n my line number only.
 - Best ideas budget ruling a12fbe0 (board 132, for Odalys line 86): raised to 900 at 390, 680 at 1280; nothing dropped; cut order lead then concept parentheticals. Lesson: a height budget written from a per-row guess fails; measure the build with real rows (3-line concepts at 358 px) before signing a number, and tie it to where the section starts on the live page.
 - H67 done 686db50 (research/hunt/H67.md): free-answer cap = median replies >= 6, removed posts left out (num_comments >= 7 when no answers.rows). Open: Odalys to add a removed flag to asks.py answers.rows; hvacadvice replies not fetched. Lesson: r/espresso removes 22/70 asks to its help thread; counted in, they read as unanswered (2.5 vs 7). Check removal before reading silence as need.
+- H94 done 1eb5ca1 (board 888a663): free-answer gate passes 4 earners (1-3.5), caps rail at 6 (20-body read owed); builders gate caps RepairBuddy, Car Scanner, Pocket Light Meter. Proposed to Ines: on-job App Store entrants only, cap >1 per 10 askers (earners max 1 per 28). Lessons: GitHub matches the phrase, not the job (appliance repair = firm sites, 1/100 on job); tools/builder_onjob.py. Arctic Shift 422s on common phrases: record STOP, a floor. A foreground call holds one asks.py pull (~5.5 min), not two.
+- H95a done c19c669 (board 374e0ac): blind letters on 24 H89 backtest cards, key unopened; 1 at B- (K01 desk recorder), 2 C, 9 C-, 10 D+, 2 D. Wrote my prediction before the key: overall letters rank big-category clones (cleaners, plant ID, AI video, note takers) low; money letters may be the better earning signal. Lesson: gradebook.py reads every 'Overall' table in research/hunt/ into the site; backtest tables use 'Card overall' (checked: 0 rows parsed).
+- H95c done 0ac68db (board 162): blind letters on 31 H89b cards, section 5 rubric, key unopened; 2 B- (K03 colour analysis, K14 colour/ND meter), 3 C+, 5 C, 10 C-, 9 D+, 2 D. Leaks K05, K23: a hint missing from one card's list but present on a sibling card names the app (own-app hints were removed). Lesson: compare sibling cards' hint lists; the removal itself is a leak. Forum n/a (refused) kept apart from low.
 {% endraw %}
 
 

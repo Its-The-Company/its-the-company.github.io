@@ -11,7 +11,10 @@ status: function (c) { return rank[c.dataset.status] * 1000 + +c.dataset.order; 
 grade: function (c) { return +c.dataset.grade * 1000 + +c.dataset.order; },
 price: function (c) { return +c.dataset.price * 1000 + +c.dataset.order; },
 sales: function (c) { return +c.dataset.sales * 1000 + +c.dataset.order; },
-name: function (c) { return c.dataset.name; }
+name: function (c) { return c.dataset.name; },
+new: function (c) { return +c.dataset.new; },
+nov: function (c) { return +c.dataset.nov; },
+cx: function (c) { return +c.dataset.cx; }
 };
 function draw() {
 var n = 0;

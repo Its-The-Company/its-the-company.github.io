@@ -1,64 +1,48 @@
 {
  "schema": 1,
- "at": "2026-10-24T01:30:38.668337+00:00",
+ "at": "2026-10-24T01:47:41.046714+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T21:03:50-04:00"
+  "started": "2026-10-23T21:30:59-04:00"
  },
  "workers": [
   {
    "name": "odalys",
-   "task": "[build] Odalys Now wording + Work bugs",
+   "task": "[build] Odalys pitches sort/stats",
    "model": "opus",
-   "started": "2026-10-24T01:14:50.413Z",
-   "seconds": 948,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "ines",
-   "task": "[research] Ines H46 friction moats",
-   "model": "opus",
-   "started": "2026-10-24T01:19:41.339Z",
-   "seconds": 657,
+   "started": "2026-10-24T01:32:21.604Z",
+   "seconds": 919,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "idris",
-   "task": "[test] Idris restore composer test",
+   "task": "[build] Idris swipe between tabs",
    "model": "opus",
-   "started": "2026-10-24T01:20:27.640Z",
-   "seconds": 611,
+   "started": "2026-10-24T01:32:36.799Z",
+   "seconds": 904,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[build] Odalys Work page two bugs",
+   "model": "opus",
+   "started": "2026-10-24T01:37:41.569Z",
+   "seconds": 599,
    "finished": null,
    "effort": "high"
   }
  ],
  "recent": [
   {
-   "name": "idris",
-   "task": "[review] Idris C13 review 05c86a6",
+   "name": "ines",
+   "task": "[research] Ines pitch-card novelty/complexity",
    "model": "opus",
-   "started": "2026-10-24T01:04:46.415Z",
+   "started": "2026-10-24T01:32:28.753Z",
    "seconds": null,
-   "finished": "2026-10-24T01:20:14.514000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[tools] Maren dash probe check",
-   "model": "opus",
-   "started": "2026-10-24T01:04:40.271Z",
-   "seconds": null,
-   "finished": "2026-10-24T01:19:30.936000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[test] Wrenna live site QA",
-   "model": "opus",
-   "started": "2026-10-24T01:04:32.844Z",
-   "seconds": null,
-   "finished": "2026-10-24T01:14:39.726000+00:00"
+   "finished": "2026-10-24T01:37:35.878000+00:00"
   }
  ],
  "queue": {
@@ -111,25 +95,25 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 13.0,
-   "resets_at": "2026-10-24T05:00:00.225795+00:00",
+   "pct": 16.0,
+   "resets_at": "2026-10-24T05:00:00.309180+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 87.0,
+   "left": 84.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 29.0,
-   "resets_at": "2026-10-25T07:00:00.225814+00:00",
+   "resets_at": "2026-10-25T07:00:00.309204+00:00",
    "used_words": "of your weekly allowance used",
    "left": 71.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 11.0,
-   "resets_at": "2026-10-25T07:00:00.225958+00:00",
+   "resets_at": "2026-10-25T07:00:00.309385+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T21:03:49.846177-04:00"
+  "read_at": "2026-10-23T21:30:58.875383-04:00"
  },
  "ui": {
   "week_pct": 0.029,
@@ -144,14 +128,14 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T21:18:50-04:00",
+ "next_tick": "2026-10-23T21:45:59-04:00",
  "lanes": [
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[build] Odalys Now wording + Work bugs",
+   "task": "[build] Odalys pitches sort/stats",
    "model": "opus",
-   "since": "2026-10-24T01:14:50.413Z",
+   "since": "2026-10-24T01:32:21.604Z",
    "next": [
     "Odalys, P2: C13 review of e5ffe2b (Idris, 'Sent as #N'...",
     "Odalys, P2: the Now panel still says \"Queue: N tasks..."
@@ -159,23 +143,11 @@
    "effort": "high"
   },
   {
-   "name": "Ines",
-   "state": "running",
-   "task": "[research] Ines H46 friction moats",
-   "model": "opus",
-   "since": "2026-10-24T01:19:41.339Z",
-   "next": [
-    "Ines, P2: read the home brief, Tasks, Work and Documents...",
-    "Ines, H-P1: grade each hunt file as it lands (18:00 pass..."
-   ],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "running",
-   "task": "[test] Idris restore composer test",
+   "task": "[build] Idris swipe between tabs",
    "model": "opus",
-   "since": "2026-10-24T01:20:27.640Z",
+   "since": "2026-10-24T01:32:36.799Z",
    "next": [
     "Idris: restore the composer_test case dropped in my...",
     "Idris, H45 deep formats: files iPhone and iPad owners..."
@@ -191,6 +163,17 @@
    "next": [
     "Maren, P3: design pass on Idris's /company/work.html...",
     "Maren, H40c movies, TV, music listening and YouTube..."
+   ]
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P2: read the home brief, Tasks, Work and Documents pages as an Investor would, at 390 and 1280, on the live...",
+   "model": null,
+   "since": null,
+   "next": [
+    "Ines, H-P1: grade each hunt file as it lands (18:00 pass...",
+    "Ines, H46 friction moats: at most five concepts in the..."
    ]
   },
   {
@@ -210,28 +193,28 @@
    {
     "w": "Odalys",
     "k": "build",
-    "t": "Now wording + Work bugs",
+    "t": "Pitches sort/stats",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T01:14:50.413Z",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "research",
-    "t": "H46 friction moats",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-24T01:19:41.339Z",
-    "o": "c"
+    "at": "2026-10-24T01:32:21.604Z",
+    "o": "i"
    },
    {
     "w": "Idris",
-    "k": "test",
-    "t": "Restore composer test",
+    "k": "build",
+    "t": "Swipe between tabs",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T01:20:27.640Z",
+    "at": "2026-10-24T01:32:36.799Z",
+    "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "build",
+    "t": "Work page two bugs",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-24T01:37:41.569Z",
     "o": "c"
    }
   ],
@@ -549,6 +532,37 @@
   ],
   "done": [
    {
+    "w": "Ines",
+    "k": "research",
+    "t": "Pitch-card novelty/complexity",
+    "at": "2026-10-24T01:37:35.878000+00:00",
+    "o": "i"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "Restore composer test",
+    "at": "2026-10-24T01:30:40.841000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
+    "w": "Odalys",
+    "k": "build",
+    "t": "Now wording + Work bugs",
+    "at": "2026-10-24T01:30:40.840000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
+    "w": "Ines",
+    "k": "research",
+    "t": "H46 friction moats",
+    "at": "2026-10-24T01:30:40.840000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
     "w": "Idris",
     "k": "review",
     "t": "C13 review 05c86a6",
@@ -568,44 +582,6 @@
     "t": "Live site QA",
     "at": "2026-10-24T01:14:39.726000+00:00",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "review",
-    "t": "C13 of e5ffe2b + Now label eta ~45m",
-    "at": "2026-10-24T01:03:34.387000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H44 November-dated demand eta ~2h",
-    "at": "2026-10-24T01:03:34.387000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Maren",
-    "k": "research",
-    "t": "H40c media-data hunt eta ~2h",
-    "at": "2026-10-24T01:03:34.386000+00:00",
-    "o": "i",
-    "x": "killed"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Board cleanup and refill eta ~45m",
-    "at": "2026-10-24T00:53:03.797000+00:00",
-    "o": "i"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Sent-as-#N bar fix",
-    "at": "2026-10-24T00:50:00.392000+00:00",
-    "o": "c"
    }
   ],
   "count": {
@@ -618,31 +594,9 @@
  "qr": [],
  "inbox": [
   {
-   "id": "i41",
-   "state": "waiting",
-   "position": 1,
-   "eta": "2026-10-23T21:18:50-04:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Main thread"
-  },
-  {
-   "id": "c6378131416",
-   "state": "waiting",
-   "position": 2,
-   "eta": "2026-10-23T21:18:50-04:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Also allow swiping left and right to go between tabs (home, reports, etc)"
-  },
-  {
    "id": "i35",
    "state": "replied",
-   "position": 3,
+   "position": 1,
    "tasks": {
     "open": 1,
     "done": 0

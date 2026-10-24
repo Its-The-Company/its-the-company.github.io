@@ -1,57 +1,21 @@
 {
  "schema": 1,
- "at": "2026-10-24T10:13:21.099047+00:00",
+ "at": "2026-10-24T10:15:29.662693+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-10-24T05:55:59-04:00"
+  "kind": "morning",
+  "started": "2026-10-24T06:13:38-04:00"
  },
- "workers": [
-  {
-   "name": "wrenna",
-   "task": "[research] Wrenna H78 flock laying",
-   "model": "opus",
-   "started": "2026-10-24T09:57:31.473Z",
-   "seconds": 949,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] Odalys H84 lane_gate.py",
-   "model": "opus",
-   "started": "2026-10-24T10:02:49.592Z",
-   "seconds": 631,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[research] Idris H80 plant light",
-   "model": "opus",
-   "started": "2026-10-24T10:03:19.612Z",
-   "seconds": 601,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Wrenna, Odalys, Idris",
+ "workers": [],
+ "who": "",
  "recent": [
   {
-   "name": "maren",
-   "task": "[research] Maren H67 free-answer test",
-   "model": "opus",
-   "started": "2026-10-24T09:57:25.121Z",
-   "seconds": null,
-   "finished": "2026-10-24T10:03:07.948000+00:00"
-  },
-  {
    "name": "ines",
-   "task": "[plan] Ines H61 grades H73 H76",
-   "model": "opus",
-   "started": "2026-10-24T09:57:18.669Z",
+   "task": "[report] morning",
+   "model": "haiku",
+   "started": "2026-10-24T10:13:52.410Z",
    "seconds": null,
-   "finished": "2026-10-24T10:02:39.469000+00:00"
+   "finished": "2026-10-24T10:14:59.699Z"
   }
  ],
  "queue": {
@@ -104,25 +68,25 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 33.0,
-   "resets_at": "2026-10-24T09:59:59.960623+00:00",
+   "pct": 1.0,
+   "resets_at": "2026-10-24T15:00:00.095262+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 67.0,
+   "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 38.0,
-   "resets_at": "2026-10-25T06:59:59.960644+00:00",
+   "pct": 39.0,
+   "resets_at": "2026-10-25T07:00:00.095282+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 62.0,
+   "left": 61.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 12.0,
-   "resets_at": "2026-10-25T06:59:59.960823+00:00",
+   "resets_at": "2026-10-25T07:00:00.095464+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-24T05:55:58.541450-04:00"
+  "read_at": "2026-10-24T06:13:36.751954-04:00"
  },
  "ui": {
   "week_pct": 0.025,
@@ -137,43 +101,29 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-24T06:10:58-04:00",
+ "next_tick": "2026-10-24T06:28:36-04:00",
  "lanes": [
   {
    "name": "Wrenna",
-   "state": "running",
-   "task": "[research] Wrenna H78 flock laying",
-   "model": "opus",
-   "since": "2026-10-24T09:57:31.473Z",
+   "state": "next",
+   "task": "Wrenna: site_qa.py checks for the additions against fixtures now (every % names its denominator; unrelated content...",
+   "model": null,
+   "since": null,
    "next": [
-    "Wrenna: site_qa.py checks for the additions against...",
-    "Wrenna: QA the live site after every deploy: every page..."
-   ],
-   "effort": "high"
+    "Wrenna: QA the live site after every deploy: every page...",
+    "Wrenna, P2, H78 backyard flock laying record (refill 12,..."
+   ]
   },
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[tools] Odalys H84 lane_gate.py",
-   "model": "opus",
-   "since": "2026-10-24T10:02:49.592Z",
+   "state": "next",
+   "task": "Odalys, P3, Best ideas: spec differences (Maren 17197a3, measured 02:19): section height at 390 is 861 px in...",
+   "model": null,
+   "since": null,
    "next": [
-    "Odalys, P3, Best ideas: spec differences (Maren 17197a3,...",
-    "Odalys, P3, H77 subject coverage in tools/hunt.py..."
-   ],
-   "effort": "high"
-  },
-  {
-   "name": "Idris",
-   "state": "running",
-   "task": "[research] Idris H80 plant light",
-   "model": "opus",
-   "since": "2026-10-24T10:03:19.612Z",
-   "next": [
-    "Idris, P2, H80 is this light enough for this plant,...",
-    "Idris, P2, H81 wood stove burn the owner watches but..."
-   ],
-   "effort": "high"
+    "Odalys, P3, H77 subject coverage in tools/hunt.py...",
+    "Odalys, P2, H84 both gates in one command (refill 12,..."
+   ]
   },
   {
    "name": "Ines",
@@ -194,38 +144,20 @@
    "next": [
     "Maren, P2, H82 is my EV battery fading normally (refill..."
    ]
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, H80 is this light enough for this plant, measured over a day (refill 12, Ines 05:33; method: counted asks...",
+   "model": null,
+   "since": null,
+   "next": [
+    "Idris, P2, H81 wood stove burn the owner watches but..."
+   ]
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H78 flock laying",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-24T09:57:31.473Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "H84 lane_gate.py",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-24T10:02:49.592Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
-    "t": "H80 plant light",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-24T10:03:19.612Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Idris",
@@ -463,6 +395,37 @@
   ],
   "done": [
    {
+    "w": "Ines",
+    "k": "report",
+    "t": "Morning",
+    "at": "2026-10-24T10:14:59.699Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "H84 lane_gate.py",
+    "at": "2026-10-24T10:13:23.657000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
+    "w": "Idris",
+    "k": "research",
+    "t": "H80 plant light",
+    "at": "2026-10-24T10:13:23.657000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "H78 flock laying",
+    "at": "2026-10-24T10:13:23.656000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
     "w": "Maren",
     "k": "research",
     "t": "H67 free-answer test",
@@ -474,51 +437,6 @@
     "k": "plan",
     "t": "H61 grades H73 H76",
     "at": "2026-10-24T10:02:39.469000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "test",
-    "t": "Live site QA",
-    "at": "2026-10-24T09:55:45.773000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Odalys",
-    "k": "build",
-    "t": "Best ideas spec diffs",
-    "at": "2026-10-24T09:55:45.773000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Maren",
-    "k": "research",
-    "t": "H67 free-answer test",
-    "at": "2026-10-24T09:55:45.772000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "Best ideas height ruling",
-    "at": "2026-10-24T09:45:36.018000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
-    "t": "H73 hike time lane",
-    "at": "2026-10-24T09:43:00.927000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "research",
-    "t": "H76 turntable lane",
-    "at": "2026-10-24T09:39:33.492000+00:00",
     "o": "c"
    }
   ],

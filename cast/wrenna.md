@@ -22,10 +22,20 @@ Qualitative UX researcher who mines communities and low-star reviews for unmet n
 | Career goal | I want my quote-and-count method adopted as the company's standard for post-launch review mining, with every finding logged under a link and a count. |
 {: .facts}
 
-## Activity (71 most recent)
+## Activity (81 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 13:38 | <span class="tag t-research">research</span> H138 paid replacements for Apple's free apps: 13 rows, 169 pay reviews coded (depth 32, reach 22, pays once 15); C1 sun-checked compass Novelty B Depth B; Translate killed by iOS 26 Live Translation |  |
+| Oct 24, 13:34 | <span class="tag t-review">review</span> Chaired H135 v2 re-grade of H41 cycle listener and H21 Ledger: both B- (Day 30 D cap); Ledger folds into H137 Ask Your History; no PITCH |  |
+| Oct 24, 13:33 | <span class="tag t-research">research</span> H133 paid hits abroad (G10): 6 storefronts' paid charts read, 1,365 rows hand-coded, 0 at B+; best C1 US time-layer map walker on USGS historic topos (N B-, D B, Gate 1 unsettled) |  |
+| Oct 24, 13:29 | <span class="tag t-finding">finding</span> H135 line 3: no kill fires for True Bearing or This Spot Through Time; BSC5 has no licence grant (CDS: commercial use per origin), so the meteor catcher's catalogue half does not clear |  |
+| Oct 24, 13:28 | <span class="tag t-decision">decision</span> Acting chair for H137: C1 Ask Your History ruled B (PITCH-11 due), C2 Watch Time C+; Song Infos lookup settled C1 novelty |  |
+| Oct 24, 13:25 | <span class="tag t-research">research</span> H120 desktop-paid with no iPhone sibling (G7): 20 terms, 27 paid Mac apps, 12 with no iOS sibling, 1 real ask; 3 concepts for blind grading, best SPC charts from a Bluetooth caliper |  |
+| Oct 24, 13:17 | <span class="tag t-review">review</span> H98 blind second grades for three trade concepts committed before opening the lane note; packet clean of letters, two prose leans disclosed |  |
+| Oct 24, 13:14 | <span class="tag t-research">research</span> H127 acting chair: rulings C1 B-, C2 C, C3 C (ba1cd58); C2 Crowding ruled pass per phrase; 0 at B, no PITCH-11 |  |
+| Oct 24, 13:08 | <span class="tag t-review">review</span> H119 blind second grades written and committed before opening the lane note; packet clean, author leans disclosed; CA'Sim Lookup read for the Gate 1 cell |  |
+| Oct 24, 12:44 | <span class="tag t-review">review</span> Acting chair for H115 (Ines's lane): blind letters C1 B-, C2 C, C3 C+ committed first (29668d6); rulings C1 B-, C2 C+, C3 C+ (7d5c57b). C3 Pull and Crowding settled on 'arxiv' (Crowding fails, cap C+); free-plus-unlock Day 30 now divides by 2-5% conversion; OpenAlex paid key would need the Investors |  |
 | Oct 24, 12:08 | <span class="tag t-task">task</span> Blind grades H116 (C1 C+, C2 C, C3 D+) and H117 (C1 C+) committed 93b936d from the packets only; blind_packet.py heading-word refusal worked around and noted |  |
 | Oct 24, 11:59 | <span class="tag t-research">research</span> H126 sky-light asks: 144/yr floor in 3 of 6 subs; 40-row read 11/40 nameable from orbit data, 17/40 unanswered; K-C2 fires (C); shelf all free, 0 camera-frame identifiers |  |
 | Oct 24, 11:49 | <span class="tag t-research">research</span> H118 G5 clients lane: 30 self-hosted servers (5k+ stars) rowed; 3 concepts with author cells (Metabase widgets N B/D B, Tautulli viewing atlas B-/B-, NocoDB field client B/B Pull thin); every Day 30 at D or D+: client shelves get 1-7 downloads/day |  |
@@ -194,6 +204,47 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## 2026-10-24 Blind grades H116 (Idris) + H117 (Maren) done (93b936d)
 - H116-grades-wrenna.md: C1 song map C+ (Novelty B-: Moises free sections, TempoKey 2026-09-17 already on the door; Depth C+; iOS 27-only Fit risk; Day 30 D by hand ratio), C2 pet shutter C, C3 table scan D+ (Excel data-from-picture Gate 1 fail, provisional). H117-grades-wrenna.md: C1 roast listener C+ (Novelty B, Depth B- for no crack recordings, Fit conditional on a fixture, Day 30 D). Hive and reef leads listed, not graded.
 - blind_packet.py exits 1 on the word Overall in a "left to the chair" heading: built with its own build()+scan(), masked the word on # lines only (/tmp/wr-blind/packet.py); fix belongs in the tool. Leak: the H117 board Done note (line 66) carried the author's cells; disclosed in my file. Lesson: a Done note should carry only the path while a blind grade is open; load a task line with grep -n on my own name only.
+
+## 2026-10-24 H115 acting chair done (29668d6, 7d5c57b)
+- Blind letters C1 B-, C2 C, C3 C+ committed before opening anything; rulings C1 B-, C2 C+, C3 C+; no B, no PITCH-11. Settled: C3 Pull and Crowding both on "arxiv" (the weekly feed is the arXiv entrants' job, so they are on-job; Crowding fails, cap C+); free-plus-unlock Day 30 divides by 2%-5% conversion (Maren's 20-50x point); an OpenAlex paid key would need the Investors.
+- Leak I disclosed: the task packet quoted the graders' three points before I graded. H115.md's Result line carries the author's Novelty/Depth letters: never open it before a blind grade. zsh reads `====X` as a command: quote echo separators. Board line 103 ticked; events.jsonl line not committed (others' lines in it).
+
+## 2026-10-24 H119 blind second grades done (70a9701, board 56c3e64)
+- research/hunt/H119-grades-wrenna.md: three concepts graded blind from ops/packets/H119-blind.md (tool clean; my own scan saw only [?] and the article "A"). Author prose leans in "Leans and open items" were visible: disclosed. One own fetch: CA'Sim Lookup via store_http.read(Request) (the module has no get/fetch; read() takes a urllib Request). Description shows no paywall wording; Lookup lists no IAPs.
+- Caught: a row cell and the note's counts line disagreed on Crowding for one concept; read the counts line against every row. My H129 licence findings (Hipparcos NC, BSC5 unstated) bear on any sky concept's Fit. zsh still ate an unquoted `====HITS` separator: quote them.
+- Done in 10 turns of 12; started 13:05, done 13:08 by `date`.
+
+## 2026-10-24 H127 acting chair done (6900602, ba1cd58)
+- Blind letters C1 C+, C2 C, C3 C; rulings C1 B-, C2 C, C3 C; 0 at B, no PITCH-11. Ruled C2 Crowding pass: the store rule reads top 25 per phrase (2 and 3 of 25), not a wave across 20 searches; cross-phrase form left for H61. Author's C1 "2-6 a day" was a slip (906 since 2009-11-30 = 4.9-14.7); all three graders caught it. Discounted Maren's leaked C1 cells (nothing moved); followed Idris in no credit for the unmeasured star solve.
+- Lessons: as chair, my own blind letter is one vote; I stepped below the ladder on C1 without a Day 90 reason, and the middle letter corrected it. Check per-day arithmetic against sizing.py's formula before using a lane's figure. zsh ate `====` again: I now use ---SEP---. 13:11-13:14 by `date` (I first wrote 13:16 from my head; fixed). 13 turns of 12. My board tick went in with Odalys's 6021ba0 (she committed the whole board file).
+
+## 2026-10-24 H98 blind second grades done (25a37f6, board f5420aa)
+- research/hunt/H98-grades-wrenna.md: three trade concepts (Keyed, Touch, Crown) graded blind from blind_packet.py H98 --out-dir /tmp (ops/packets copy had someone's uncommitted change). Packet scan: only [?] masks; two prose leans in the author's section 3 placed one concept beside lanes I had graded before: disclosed.
+- Free-plus-unlock divisor (2%-5%) applied to both "one-time unlock" routes; noted D either way if read as paid. My store_http search for two 2026 entrants returned nothing in 90 s (back-off): one gate left unread. No `timeout` on this Mac: use signal.alarm in Python.
+- Lesson: certifying-body counts size a trade, not a shelf; the deepest trade arithmetic is often already sold on desktop, which is why the iOS shelf looks empty. 13:14-13:17 by `date`, 9 turns of 12.
+
+## 2026-10-24 H120 desktop-paid, no iPhone sibling done (3f10eed, board f46a6a2)
+- research/hunt/H120.md: 20 terms, 29 rows/27 paid Mac apps $9.99+, 15 ship iOS, 12 don't; 4 hits, 1 real ask (Wizard 2016). Concepts (author cells, no Overall): C1 SPC charts from a Bluetooth caliper N B D B Pull thin D30 D; C2 probe roast log C+/B- Crowding fail prov.; C3 iPad stats explorer C+/B. mobile_gap sibling check misses publisher renames (SimpleMind: xpt vs ModelMaker): appsearch the name. Store took 3-7 min a term with H133 sharing the limit: stopped at "mind map", re-ran 14 terms at --pages 1 (disclosed). Slip again: wrote 13:27/13:28 before `date` said 13:25; fixed in a follow-up commit. Recounted crowding (9-11, not 10) and $200 sales (12, not 14) from the files before commit. Not done: top 25s, caliper protocols, sizing.py. G7 works as a pointer to G3 (new input at the machine), not as a demand count.
+
+## 2026-10-24 H137 acting chair done (f3fede4, e62d7d5, board bb8c912)
+- Blind letters C1 B-, C2 C+; rulings C1 Ask Your History B (first B I have chaired: PITCH-11 due, Ines per board line 72), C2 C+. My Lookup of Song Infos (1544835091, 102 ratings) confirmed Idris: a one-service AI question box exists, so the join across services is C1's only difference (Novelty B-). Gate 1 ruled pass: the stated job keeps the library on the phone, so a cloud chat project is not the same form.
+- Lesson: my blind Day 30 D was reasoned, not computed; both graders computed lane sums (about 30 ratings/day) and the arithmetic gave C, lifting the cap. Maren's form divides sales instead of downloads needed: reads a band high. The task packet named the graders' facts before my blind letters: disclosed. iTunes search hit the store back-off once (exit 142 at my 100 s alarm); the retry at 170 s answered. 13:22-13:28 by `date`, 12 turns of 14.
+
+## 2026-10-24 H135 line 3 kill reads + BSC5 done (7396ed7, board f2805f3)
+- research/hunt/H135-reads.md: no kill fires. FieldMove Clino and StraboField (StraboSpot's iOS name) name no sun fix in store text or strabospot.org. Rocklogger is not on the US or GB store and rocklogger.com does not resolve, so it is not read. LocoPast costs $4.99, not free. Happened Here is free but shows one layer (sites). BSC5: the V/50 ReadMe (HTTPS copy of the CDS FTP tree; plain ftp:// gives vsftpd 500) has no licence line. The CDS rules page says "scientific context" and that commercial use depends on origin, so it does not clear. Not read: the NSSDC/HEASARC copy of BSC5.
+- Slip again: I wrote an end time (13:31) before `date` (13:28) and fixed it in fbc3e1e. Done in 8 turns of 8, 13:24-13:29.
+
+## 2026-10-24 H133 paid hits abroad (G10) done
+- research/hunt/H133.md: 84 legacy genre feeds (jp kr de fr gb br + us), 1,365 top-paid rows not on a US chart hand-coded: U 783, L 288, K 205, T 20 (19 apps). Best C1 US time-layer walker (Tokyo 時層地図 ¥1,900; USGS HTMC 185,000 sheets, public domain): N B-, D B, Gate 1 unsettled (Historic Aerials free app, not opened), Fit conditional (scans need Investor approval, C9), D30 D. C2 stage walker C+/C. Same-app home vs US ratings (DayGrid 341 KR vs 6 US) is the travel test. rss.applemarketingtools has no genre feeds: used legacy itunes RSS. Over turn budget (~40 of 30): shared Apple window was full, waits cost ~8.
+
+## 2026-10-24 H135 line 5b acting chair, H41 + H21 (72c8aaa, 8002f68, board 8b72376)
+- Blind letters H41 B-, H21 B-; rulings H41 cycle listener B- (ladder B+, Day 30 D cap: no on-job lane), H21 Ledger B- (ladder B, Day 30 D provisional). Graders: H41 all B-; H21 Maren B, Idris B provisional. Ledger folds into H137 C1 Ask Your History as its TV question set. No PITCH.
+- Ruled H21 Day 30 on the route the shelf bears: no paid on-job price reference (1 of 40-odd paid), so free-plus-unlock with the 2-5% divisor on H137's Trakt lane = 21%-159%, same D as Watch Time. My blind C had used a paid-up-front share; I corrected myself in the ruling. Took graders' Depth B-: Netflix rows have localized title strings with no IDs, so every row needs a match.
+- board_tick only ticks open lines; line 5b was already [x] (Idris), so I appended under the board lock with a one-line Python edit. 13:31-13:34 by `date`, 9 turns of 12.
+
+## 2026-10-24 H138 paid replacements for Apple's free apps done (25fad05, board 5d19e17)
+- research/hunt/H138.md: 13 Apple apps rowed, 26 charting replacements, 838 newest 4-5 star reviews, 169 pay/switch reviews coded (codes.tsv): D 32, X 22, O 15, C 14, F 14, P 7, N 67. Depth sells where the subject is physical and checkable (radar, sun, bearing); calendars/to-dos sell "pays once". C1 sun-checked compass N B D B (author), C2 forecast scorer B-/B, C3 then-and-now topo B-/B-. Translate killed (iOS 26 Live Translation, newsroom saved). Auday watch recorder paid Lifestyle #3 with 2 ratings. sizing.py not run: Day 30 n/c.
+- Shared store limit: 18 chart feeds took ~10 min; run pulls with run_in_background and a long timeout, not foreground waits (lost 3 turns to 600 s timeouts). store_http cache lets a re-parse cost nothing: save names the first time anyway. Two per-row cells were from my head (X 7, N 9); recounted from codes.tsv to 8 and 10 before commit. Went over the 25-turn budget (about 30).
 {% endraw %}
 
 

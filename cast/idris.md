@@ -208,6 +208,7 @@ Older entries (the 2026-10-22 task log): archive.md.
 
 ## 2026-10-24 H178 G25c entrants abroad (done)
 - 95684010 (board 317 ticked; the tick note carries bf2ddf5f by mistake, correction line 318 added). research/hunt/H178.md: C3 DPF monitor for an uncovered marque, ladder B, Fit provisional (no car/ECU; Simulator has no Core Bluetooth) T1-park; C1 Arbeitszeit B- under Gate 1 provisional (WorkPilot); C2 chat stats C+. Open: WorkPilot IAP (browser read), marque table, identifier source. Learned: Lookup ratings and releaseDate are per storefront; abroad paid charts rank on 0 ratings; sizing.py US-only understated DPF ~30x; EU/UK proceeds come after VAT; take the hash with `git log -1 -- <my path>`, never HEAD, since others commit between.
+- 2026-10-24 Day 3 diary written (story/diaries/2026-10-24-idris.md): uneasy, 3/5; probation commit still waits on the product choice.
 {% endraw %}
 
 

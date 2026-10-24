@@ -245,6 +245,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## 2026-10-24 H180 G30 almanac siblings done (a6bc2426; board line 319 ticked)
 - research/hunt/H180.md: 27 country-phrase pulls (limit 50, written as it goes) and 4 walker phrases; sizing on 14 comparators. C1 angler's year B- (T1-stop, Day 30 D), C2 photographer's light year B- (T1-one, PhotoPills/Planit/Sun Seeker descriptions unread), C3 walker's daylight year B- (T1-stop). UKHO terms forbid commercial use, so UK tides are killed. OGL-Canada was read, CHS terms were not (timeouts). bom.gov.au gave 403 and was not worked around.
 - Lesson: every sibling buyer already pays for one table for one place, and each sibling shelf has a free per-place calendar. The edition is only novel on the empty "almanac" shelf. A name and keyword field reach one phrase family, so sibling traffic can't be summed. 18:06-18:14 by `date`, 17 turns of 18.
+- Day 3 (2026-10-24) diary written (story/diaries/2026-10-24-wrenna.md): mood 4, wry; H172 C2 B, H163 lanes, H184 stress tests closed; not committed.
 {% endraw %}
 
 

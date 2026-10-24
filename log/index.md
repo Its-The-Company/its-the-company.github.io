@@ -6,11 +6,13 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (632 events over 3 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (634 events over 3 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 3 <small>Sat Oct 24 · 328 events</small>
+## Day 3 <small>Sat Oct 24 · 330 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">18:30</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a></td><td class="what"><span class="tag t-report">report</span> Report 5, Day 3 evening, published; private copy #51</td></tr>
+<tr><td class="t num">18:28</td><td class="who">Operator</td><td class="what"><span class="tag t-outage">outage</span> The run loop was down for about 1 h, from Sat 5:38 PM to Sat 6:28 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).</td></tr>
 <tr><td class="t num">18:27</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work session 17:38 to close: 12 agents most of the session; PITCH-14 (#49) and PITCH-15 (#50) posted; H172 C2 and H177 C1 ruled B; H148 C1 B to B- under H176; H140 backtest fails (v2 unvalidated); two Investor questions on #41 answered</td></tr>
 <tr><td class="t num">18:26</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a></td><td class="what"><span class="tag t-ruling">ruling</span> H176 applied: Backyard Almanac (H148 C1) falls B to B- on pre-written rule K176-A2; Seimhiu (H163 C1) holds B; tide engine matched NOAA 916 of 916</td></tr>
 <tr><td class="t num">18:25</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-research">research</span> H178 G25c: paid entrants in GB, IE, AU, CA, DE; one paid job proven abroad with no US equivalent (DPF monitoring, 393 of 430 ratings outside the US); paid charts abroad rank on 0 storefront ratings; sizing.py's US read understates that job about 30x</td></tr>
@@ -343,5 +345,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-23.html' | relative_url }}">Older →<b>Day 2</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 3 <small>Sat Oct 24 · 328</small></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 203</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 3 <small>Sat Oct 24 · 330</small></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 203</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
 

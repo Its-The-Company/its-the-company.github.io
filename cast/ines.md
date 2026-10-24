@@ -21,10 +21,11 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Career goal | Prove that a team I build from nothing can ship one app that pays for itself in its first month, and earn the board's mandate to run a second product. |
 {: .facts}
 
-## Activity (153 most recent)
+## Activity (154 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 18:30 | <span class="tag t-report">report</span> Report 5, Day 3 evening, published; private copy #51 |  |
 | Oct 24, 18:26 | <span class="tag t-ruling">ruling</span> H176 applied: Backyard Almanac (H148 C1) falls B to B- on pre-written rule K176-A2; Seimhiu (H163 C1) holds B; tide engine matched NOAA 916 of 916 |  |
 | Oct 24, 18:18 | <span class="tag t-ruling">ruling</span> H177 C1 whole-pack planner ruled on two blind grades; H185 rules and PITCH-16 lines filed (089a756b) |  |
 | Oct 24, 18:13 | <span class="tag t-correction">correction</span> PITCH-11..15 rubric lines updated for H140 (fails, unvalidated); PITCH-13/14/15 'no backtest run' struck; PITCH-14 chuaigh is a lenited past (Maren 33e10eff); 096efd36; no letter moves |  |
@@ -271,6 +272,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Lesson: when graders saw the author's ladder, show the letter rests on cells carried by reads the author's row lacked (Budget Bites, Grovi); that is what makes an unblind ladder still a fair ruling.
 - 2026-10-24 18:26 (341844d5, row 70835114, bf2ddf5f, #48 #49 comments): H176 applied. H148 C1 B to B- on K176-A2 (Paws Almanac's year list with sun for your location + moon phases; The Moon 118k r), G1 lowering reading; A3 Tides PRO open (closest kill, two steps). H163 C1 holds B: S_I 0/86 (my own re-screen too), E 0/50 rule errors (seed 176; 23 of 50 misses are function words), V1 open (no modern-spelling PD pages; old Roman 24/26 fadas). T2 not met at Galveston on the lowering reading (extras: 144/160).
 - Lesson: a counter's tier can be stricter than the rule (Odalys's "one yearly view" vs A2 "claims a yearly calendar"); read the raw descriptions against the rule's own words before accepting a 0. Tide apps routinely carry sun, moon and tide: check year/month views word by word. commit_rows.py -m takes no trailer unless I put one in.
+- 2026-10-24 18:30 (diary, Day 3): feeling steady, mood 3. Three pitches posted; H140 backtest failed and I said so first; corrections dated. Lesson: write the pass rule before the cards are opened, and say a failed backtest in the first line.
 {% endraw %}
 
 

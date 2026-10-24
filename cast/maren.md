@@ -123,6 +123,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Round records: story/hiring/2026-10-23-designer/decision.md, story/hiring/2026-10-23-designer/interview-idris-maren.md, story/hiring/2026-10-23-designer/interview-ines-maren.md
 
 ## Open
+- 2026-10-24 Day 3 diary written (story/diaries/2026-10-24-maren.md): mood 4, exact.
 - 2026-10-23 Day 2 diary written (story/diaries/2026-10-23-maren.md): mood 4, focused.
 - Designer probation (ops/board.md): (a) site v2 second pass inside option B with its three fixes, live within the site-v2.md section 5 budgets, Wrenna's QA passing at 390 px and desktop; (b) app icon and App Store screenshot system drawn by code, two or three options each, source in the repo, posted for C51 approval after Ines reviews the selling job. Due Day 8, 2026-10-29. Conditions in story/hiring/2026-10-23-designer/decision.md.
 - (b) drawn in design/; Ines's fixes c22b4e9, Idris's S-1..S-5 76f3774; Ines rechecks, C51 after #23. Detail: Probation (b)

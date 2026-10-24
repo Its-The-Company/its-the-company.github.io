@@ -1,63 +1,100 @@
 {
  "schema": 1,
- "at": "2026-10-24T03:18:06.557655+00:00",
+ "at": "2026-10-24T04:28:04.591409+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T23:06:31-04:00"
+  "started": "2026-10-23T23:18:22-04:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
+  {
+   "name": "maren",
+   "task": "[research] Maren H52 hobby gear lane",
+   "model": "opus",
+   "started": "2026-10-24T04:11:52.374Z",
+   "seconds": null,
+   "finished": "2026-10-24T04:28:04.436000+00:00"
+  },
   {
    "name": "idris",
-   "task": "[build] Idris dock CSS fix + 403 test",
+   "task": "[research] Idris H41c synthetic cycle bench",
    "model": "opus",
-   "started": "2026-10-24T03:07:24.832Z",
-   "seconds": 641,
-   "finished": null,
-   "effort": "high"
+   "started": "2026-10-24T04:05:19.637Z",
+   "seconds": null,
+   "finished": "2026-10-24T04:28:04.433000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] Odalys hunt.py Overall column",
+   "task": "[tools] Odalys squashed-table check in browser QA",
    "model": "opus",
-   "started": "2026-10-24T03:07:29.283Z",
-   "seconds": 637,
-   "finished": null,
-   "effort": "high"
+   "started": "2026-10-24T04:01:08.136Z",
+   "seconds": null,
+   "finished": "2026-10-24T04:18:00.648000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[build] Odalys Right-now tile names",
+   "name": "ines",
+   "task": "[plan] Ines grade H40c/H48/H49 and refill board",
    "model": "opus",
-   "started": "2026-10-24T03:07:33.681Z",
-   "seconds": 632,
-   "finished": null,
-   "effort": "high"
+   "started": "2026-10-24T04:07:33.707Z",
+   "seconds": null,
+   "finished": "2026-10-24T04:11:35.217000+00:00"
+  },
+  {
+   "name": "wrenna",
+   "task": "[research] Wrenna H48 spreadsheet-beside-app lane",
+   "model": "opus",
+   "started": "2026-10-24T03:45:12.958Z",
+   "seconds": null,
+   "finished": "2026-10-24T04:07:23.124000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[design] Maren Work page and Documents pass",
+   "model": "opus",
+   "started": "2026-10-24T03:51:01.036Z",
+   "seconds": null,
+   "finished": "2026-10-24T04:04:59.876000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[research] Idris H49 papers with code lane",
+   "model": "opus",
+   "started": "2026-10-24T03:49:23.931Z",
+   "seconds": null,
+   "finished": "2026-10-24T04:00:58.183000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] Idris Documents tables and empty section",
+   "model": "opus",
+   "started": "2026-10-24T03:36:47.122Z",
+   "seconds": null,
+   "finished": "2026-10-24T03:50:51.447000+00:00"
   }
  ],
- "who": "Idris, Odalys x2",
- "recent": [],
  "queue": {
   "runnable": [
-   {
-    "kind": "design",
-    "text": "Idris, P3 (Odalys C13 of e5ffe2b): at 390 x 844 with the dock folded, a 3-line status (403 'Not sent', urgent..."
-   },
-   {
-    "kind": "test",
-    "text": "Idris, P3 (Odalys C13 of e5ffe2b): site_send_test case for Send on the folded bar failing with 403: 'Not sent' shows..."
-   },
    {
     "kind": "research",
     "text": "Wrenna, P3 (H42 follow-up, 738f26f): retry the 9 archive queries refused for H42 (homebuyer and inspector subreddits..."
    },
    {
-    "kind": "tools",
-    "text": "Odalys, P3 (Maren 738f26f): python3 tools/hunt.py list shows the Need grade instead of Overall for H41 and H42 rows..."
+    "kind": "research",
+    "text": "Wrenna, P3 (Ines Documents read 23:31): the H40 card's summary reads 'Started 20:21 ET (from date). Method: ...'..."
    },
    {
-    "kind": "design",
-    "text": "Maren, P3: design pass on Idris's /company/work.html (92e454e, 'Maren design pass' not done) and the new Documents..."
+    "kind": "test",
+    "text": "Wrenna: QA the live site after every deploy: every page at 390 px and desktop width, links (no 404s), empty and..."
+   },
+   {
+    "kind": "plan",
+    "text": "Ines, H-P1: grade each hunt file as it lands (18:00 pass at the latest); draft PITCH-11 onward for any B+ (plain..."
+   },
+   {
+    "kind": "research",
+    "text": "Wrenna, P3 (H44 follow-up, 7c00c07): hand-read r/Thanksgiving and r/Hosting for 2025-11-01 to 11-20 (post volume..."
    }
   ],
   "blocked": [
@@ -82,30 +119,30 @@
     "text": "Unrelated side project; Collatz, workspace ~/unrelated/collatz); full text in log/board-archive-2026-10-23.md"
    }
   ],
-  "runnable_count": 17,
-  "blocked_count": 24
+  "runnable_count": 18,
+  "blocked_count": 18
  },
  "meter": {
   "five_hour": {
-   "pct": 25.0,
-   "resets_at": "2026-10-24T05:00:00.206717+00:00",
+   "pct": 26.0,
+   "resets_at": "2026-10-24T05:00:00.290365+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 75.0,
+   "left": 74.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 31.0,
-   "resets_at": "2026-10-25T07:00:00.206736+00:00",
+   "resets_at": "2026-10-25T07:00:00.290383+00:00",
    "used_words": "of your weekly allowance used",
    "left": 69.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 11.0,
-   "resets_at": "2026-10-25T07:00:00.206906+00:00",
+   "resets_at": "2026-10-25T07:00:00.290507+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T23:06:30.783234-04:00"
+  "read_at": "2026-10-23T23:18:22.063109-04:00"
  },
  "ui": {
   "week_pct": 0.026,
@@ -120,32 +157,8 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T23:21:31-04:00",
+ "next_tick": "2026-10-23T23:33:22-04:00",
  "lanes": [
-  {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] Idris dock CSS fix + 403 test",
-   "model": "opus",
-   "since": "2026-10-24T03:07:24.832Z",
-   "next": [
-    "Idris, P3 (Odalys C13 of e5ffe2b): at 390 x 844 with the...",
-    "Idris, P3 (Odalys C13 of e5ffe2b): site_send_test case..."
-   ],
-   "effort": "high"
-  },
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] Odalys hunt.py Overall column",
-   "model": "opus",
-   "since": "2026-10-24T03:07:29.283Z",
-   "next": [
-    "Odalys, P3 (Maren 738f26f): python3 tools/hunt.py list...",
-    "Odalys, P3 (Ines site read 22:25): Home 'Right now' tile..."
-   ],
-   "effort": "high"
-  },
   {
    "name": "Wrenna",
    "state": "next",
@@ -153,62 +166,55 @@
    "model": null,
    "since": null,
    "next": [
-    "Wrenna: site_qa.py checks for the additions against...",
-    "Wrenna: QA the live site after every deploy: every page..."
-   ]
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P3: design pass on Idris's /company/work.html (92e454e, 'Maren design pass' not done) and the new Documents...",
-   "model": null,
-   "since": null,
-   "next": [
-    "Maren, H40c movies, TV, music listening and YouTube..."
+    "Wrenna, P3 (Ines Documents read 23:31): the H40 card's...",
+    "Wrenna: site_qa.py checks for the additions against..."
    ]
   },
   {
    "name": "Ines",
    "state": "next",
-   "task": "Ines, P3: read the Documents tab (f37ba2f) as an Investor would at 390 and 1280; findings as board lines",
+   "task": "Ines, H-P1: grade each hunt file as it lands (18:00 pass at the latest); draft PITCH-11 onward for any B+ (plain...",
    "model": null,
    "since": null,
    "next": [
-    "Ines, P2 (Ines site read 22:25): Tasks > Waiting shows...",
-    "Ines, H-P1: grade each hunt file as it lands (18:00 pass..."
+    "Ines, P2, H54 slow processes and noises in the home (H51..."
+   ]
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P3 (H45 follow-up, de664a1): when Arctic Shift answers again, count the home venues: r/AutoCAD 'compare',...",
+   "model": null,
+   "since": null,
+   "next": [
+    "Idris, P3, H41c cycle segmentation on synthetic audio...",
+    "Idris, P2, H51b Atmos gap fixtures (a measurement, not..."
+   ]
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P2, H52 hobby gear the owner cannot judge alone (H51 method): r/espresso (dial-in: sour, bitter, channeling,...",
+   "model": null,
+   "since": null,
+   "next": [
+    "Maren, P2, Documents 'Best ideas so far' (H51): a spec,...",
+    "Maren, P3 (from Odalys d77930e): a chip style for the..."
+   ]
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P2, Documents 'Best ideas so far' (H51, site): build Maren's spec from ops/plans/site-documents-best.md when...",
+   "model": null,
+   "since": null,
+   "next": [
+    "Odalys, P3, method tag for tools/hunt.py (H51): give..."
    ]
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Dock CSS fix + 403 test",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-24T03:07:24.832Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Hunt.py Overall column",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-24T03:07:29.283Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "build",
-    "t": "Right-now tile names",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-24T03:07:33.681Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Idris",
@@ -225,20 +231,6 @@
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "design",
-    "t": "At 390 x 844 with the dock folded, a 3-line status",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "Site_send_test case for Send on the folded bar failing with 403: 'Not sent'...",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Wrenna",
     "k": "research",
     "t": "Retry the 9 archive queries refused for H42",
@@ -246,37 +238,9 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Python3 tools/hunt.py list shows the Need grade instead of Overall for H41...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "Design pass on Idris's /company/work.html",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "review",
-    "t": "Read the Documents tab",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "build",
-    "t": "Home 'Right now' tile reads 'Ines, Wrenna, Ines' when one worker runs two...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Tasks > Waiting shows six old pitch-build lines 'waits on the Investors'",
+    "w": "Wrenna",
+    "k": "research",
+    "t": "The H40 card's summary reads 'Started 20:21 ET",
     "s": "next",
     "o": "c"
    },
@@ -320,13 +284,6 @@
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "research",
-    "t": "H40c movies, TV, music listening and YouTube data, data-driven only",
-    "s": "next",
-    "o": "i"
-   },
-   {
     "w": "Wrenna",
     "k": "research",
     "t": "Hand-read r/Thanksgiving and r/Hosting for 2025-11-01 to 11-20",
@@ -341,23 +298,86 @@
     "o": "c"
    },
    {
+    "w": "Idris",
+    "k": "research",
+    "t": "H41c cycle segmentation on synthetic audio",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "research",
+    "t": "H50b store-search proxy for the Atmos layout planner",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
     "w": "Wrenna",
     "k": "research",
-    "t": "Sort the 195 Xfinity and 51 Spectrum packet-loss titles",
+    "t": "H51a Atmos planner body read",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Wrenna",
     "k": "research",
-    "t": "H39b Atmos planner count",
+    "t": "H51c cycle listener need widened",
     "s": "next",
     "o": "c"
    },
    {
-    "w": "Wrenna",
+    "w": "Idris",
     "k": "research",
-    "t": "H41b cycle listener count",
+    "t": "H51b Atmos gap fixtures",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "research",
+    "t": "H53 home meters the owner can read but not interpret",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "research",
+    "t": "H52 hobby gear the owner cannot judge alone",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Documents 'Best ideas so far'",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "A chip style for the hunt cards' grade, span.kind.grade[data-grade] after...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "build",
+    "t": "Documents 'Best ideas so far'",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Method tag for tools/hunt.py",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "research",
+    "t": "H54 slow processes and noises in the home",
     "s": "next",
     "o": "c"
    },
@@ -407,57 +427,9 @@
    {
     "w": "Wrenna",
     "k": "research",
-    "t": "Stripwise App Store keywords, the iOS share-sheet location toggle's exact...",
-    "s": "blocked",
-    "o": "c",
-    "y": 1
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
     "t": "Fetch and code 1-3 star reviews for the new entrants once they have any",
     "s": "blocked",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Boardseat one-level prototype",
-    "s": "blocked",
-    "o": "c",
-    "y": 1
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Partfix recognition spike",
-    "s": "blocked",
-    "o": "c",
-    "y": 1
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Seatsolve Seating package",
-    "s": "blocked",
-    "o": "c",
-    "y": 1
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Themecount ReviewSource + ThemeKit",
-    "s": "blocked",
-    "o": "c",
-    "y": 1
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Partfix follow-ups",
-    "s": "blocked",
-    "o": "c",
-    "y": 1
    },
    {
     "w": "Wrenna",
@@ -465,14 +437,6 @@
     "t": "Audio-to-sheet-music and stem separation as a product",
     "s": "blocked",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Roundwright RoundKit parser and checker, then Plush relaxation, only if the...",
-    "s": "blocked",
-    "o": "c",
-    "y": 1
    },
    {
     "w": "Odalys",
@@ -509,35 +473,69 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Hunt.py Overall column fix",
-    "at": "2026-10-24T03:06:19.148000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Idris",
-    "k": "design",
-    "t": "Dock CSS fix and 403 test",
-    "at": "2026-10-24T03:06:19.147000+00:00",
+    "w": "Maren",
+    "k": "research",
+    "t": "H52 hobby gear lane",
+    "at": "2026-10-24T04:28:04.436000+00:00",
     "o": "c",
     "x": "killed"
    },
    {
     "w": "Idris",
     "k": "research",
-    "t": "H45 follow-up counts",
-    "at": "2026-10-24T03:06:19.147000+00:00",
-    "o": "i",
+    "t": "H41c synthetic cycle bench",
+    "at": "2026-10-24T04:28:04.433000+00:00",
+    "o": "c",
     "x": "killed"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Squashed-table check in browser QA",
+    "at": "2026-10-24T04:18:00.648000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Grade H40c/H48/H49 and refill board",
+    "at": "2026-10-24T04:11:35.217000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "H48 spreadsheet-beside-app lane",
+    "at": "2026-10-24T04:07:23.124000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Work page and Documents pass",
+    "at": "2026-10-24T04:04:59.876000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "research",
+    "t": "H49 papers with code lane",
+    "at": "2026-10-24T04:00:58.183000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Documents tables and empty section",
+    "at": "2026-10-24T03:50:51.447000+00:00",
+    "o": "c"
    }
   ],
   "count": {
-   "next": 17,
+   "next": 18,
    "wait": 0,
-   "blocked": 24,
-   "you": 8
+   "blocked": 18,
+   "you": 1
   }
  },
  "qr": [],

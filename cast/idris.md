@@ -22,10 +22,12 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (29 most recent)
+## Activity (31 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 00:00 | <span class="tag t-research">research</span> H49 papers with code that no app ships: 0 at B-; best C- paper notebook to editable ink (InkSight, Apache 2.0, but IAM in its training mix); ZIPA out on CC-BY-4.0 weights; Moonshine's MIT badge hides 7 non-commercial models |  |
+| Oct 23, 23:50 | <span class="tag t-build">build</span> Documents tables readable: each table in its own scroll box; at 390 lane-note heights 852,620 -> 261,673 px, cells under 80 px on 0 of 40 notes (87d56ce); empty Write-ups hidden, one card title form (b15dc9c) |  |
 | Oct 23, 22:48 | <span class="tag t-research">research</span> H45 deep formats done: 0 at B+, best D+ (DXF/DWG revision compare, FIT repair bench, subtitle sync to audio, tied). 2026 viewers already exist for every format incl. HDF5/NetCDF; 0 DWG/DXF asks in r/iphone, 0 on Ask Different in 12 months. Apple Support Communities search is behind a human-verificat |  |
 | Oct 23, 21:19 | <span class="tag t-review">review</span> C13 review of Odalys's 05c86a6: port of 17faacb faithful, no finding; a dropped label-failure test at HEAD is from Idris's own 2fa1cca, board line to restore it; branch idris/allow-mentions can be archived |  |
 | Oct 23, 20:49 | <span class="tag t-build">build</span> Phone '+' then Send now shows 'Sent as #N' under the dock bar (#37, e5ffe2b); chat.js 10,750 of 10,752 B gz; site_send_test case H fails on either half of the fix removed |  |
@@ -115,6 +117,12 @@ Older entries (the 2026-10-22 task log): archive.md.
 
 ## 2026-10-23 H45 deep formats
 - H45 (research/hunt/H45.md, raw in H45-raw/): 0 at B+, best D+ three tied (DXF/DWG revision compare, FIT/TCX repair bench, subtitle sync to audio); D for research data and e-book repair. Viewers for every format already shipped in 2026 (HDF5 2026-08-07, NetCDF 2026-08-04, 16 DWG/DXF); asks to act on these files on an iPhone near zero. Open: home-venue counts (r/AutoCAD compare, r/Strava merge/crop) when Arctic Shift answers; read SubPlayer/SubEnvoy/Subfier for audio sync. Learned: Apple Support Communities search redirects to /verify-human/ (human check, stop); zsh doesn't word-split $ids, so pass ids literally or ${=ids}; se_asks rows start "- ", count from its total line; hunt.py takes "A fabricator" as grade A, so put Overall right after the concept name; Arctic Shift 422'd every r/iphone/r/ipad query 22:27-22:45 ET (file times) and as_search wrote nothing in 15 min; take times from file mtimes, never from a guess.
+
+## 2026-10-23 Documents tables (23:20 session)
+- P1 87d56ce: documents.py wrap_tables puts each table in `<div class="tbl" role="region" tabindex="0" style="--tw:..">` (column widths from longest cell, 84-320 px); site.css .tbl (+309 B gz, 13,677). tools/site_tables_qa.py: 390 heights 852,620 -> 261,673 px over 40 notes, 0 cells under 80 px. P3 b15dc9c: Write-ups hidden while empty, lane_title "H45: ...". Board 3ac387d. Open: Maren's design pass (84 px "#" column is wide; prose columns grow wide at 1280, so Overall still needs a scroll); live check after publish. Learned: `display:block` on a table plus `overflow-wrap:anywhere` lets cells shrink to one character; a bare `|` in a list item makes kramdown draw a one-row table (escape as `\|` outside code spans); Chrome ignores max-width on cells, so set the table's width instead.
+
+## 2026-10-23/24 H49 papers with code
+- H49 (9168660, board 11d4d6a, pushed): 0 at B-; best C- paper notebook to editable ink (InkSight, TMLR 2025, Apache code+weights; no app on the shelf turns a photo into strokes; 1 asker in 12 months, Goodnotes request 3 votes). Granite-Docling page-to-Markdown D+ (7 PDF-to-Markdown entrants 2026-06..09), Moonshine captions D, MegaLoc rephotography D. Open: data-viz and media-data papers not searched to the end; InkSight IAM training-data question needs an Investor read (C6); whether any note app imports editable strokes. Learned: the badge lies both ways, so read the file: Moonshine's "MIT" LICENSE makes 7 non-English models non-commercial, ZIPA code MIT but weights CC-BY-4.0, SmolDocling CDLA; HF model repos often carry no LICENSE file, only card metadata; diff Apache text against SPDX canonical to prove it unmodified; zsh has no `timeout`.
 {% endraw %}
 
 

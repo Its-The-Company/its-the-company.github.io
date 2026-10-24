@@ -72,10 +72,15 @@ small,.meta{font-size:var(--fs-0);color:var(--muted)}
 code{font-family:var(--mono);font-size:.92em;white-space:pre-wrap;overflow-wrap:anywhere}
 table{border-collapse:collapse;width:100%;font-size:var(--fs-1);margin:var(--s3) 0}
 th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+/* A wide table in its own scroll box (documents.py wrap_tables sets --tw, the sum of its columns' widths): the
+   table scrolls sideways and the page does not. Edge shades say there is more to the side and fade at each end. */
+.tbl{overflow-x:auto;max-width:100%;margin:var(--s3) 0;overscroll-behavior-x:contain;--sh:color-mix(in srgb,var(--ink) 20%,transparent);background:linear-gradient(90deg,var(--page) 40%,transparent) 0 0/32px 100% no-repeat local,linear-gradient(270deg,var(--page) 40%,transparent) 100% 0/32px 100% no-repeat local,radial-gradient(farthest-side at 0 50%,var(--sh),transparent) 0 0/10px 100% no-repeat scroll,radial-gradient(farthest-side at 100% 50%,var(--sh),transparent) 100% 0/10px 100% no-repeat scroll}
+.tbl:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.tbl>table{display:table;margin:0;width:max(100%,var(--tw,0px));max-width:none;overflow:visible}.tbl th,.tbl td{min-width:84px;overflow-wrap:anywhere}
 details{margin:var(--s3) 0}summary{cursor:pointer}
 blockquote{border-left:3px solid var(--line);margin:0 0 var(--s3);padding-left:var(--s3);color:var(--muted)}
 /* Reading pages stay a plain column with a 70-character line (section 9). */
-main:not(.home)>p,main:not(.home)>ul,main:not(.home)>ol,main:not(.home)>blockquote,.report-main p,.report-main li{max-width:var(--measure)}
+main:not(.home)>p,main:not(.home)>ul,main:not(.home)>ol,main:not(.home)>blockquote,.report-main p,.report-main li,.doc-body>:is(p,ul,ol,blockquote,h2,h3,h4){max-width:var(--measure)}
 /* Report pages carry no cards (Maren, section 9): the day strip and the period column are plain, set off by rules. */
 .report-grid .panel.period,.panel.period.wide{background:none;border:0;border-radius:0;padding:0}
 .report-grid .panel.period{border-top:1px solid var(--line);padding-top:var(--s4);margin-top:var(--s5)}
@@ -614,6 +619,7 @@ main.cv-desk.cv-open{padding-bottom:200px}
 .wk-t{display:flex;flex-wrap:wrap;gap:var(--s1);margin-bottom:2px}.wk-t:empty{display:none}
 .wk-p{font-size:12px;font-weight:700;padding:1px 7px;border-radius:10px;background:var(--soft-2);color:var(--ink)}
 .wk-i.waiting>p:first-of-type,.wk-i.blocked>p:first-of-type{color:var(--muted)}
+.wk-i.waiting,.wk-i.blocked{padding-left:var(--s3);box-shadow:inset 3px 0 var(--line)}.wk-i.blocked{box-shadow:inset 3px 0 var(--warm)}
 .wk-link{margin:var(--s3) 0 0;font-weight:600}
 {% endraw %}
 /* investors/site/theme.css */

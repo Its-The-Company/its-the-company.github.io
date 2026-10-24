@@ -22,10 +22,11 @@ Qualitative UX researcher who mines communities and low-star reviews for unmet n
 | Career goal | I want my quote-and-count method adopted as the company's standard for post-launch review mining, with every finding logged under a link and a count. |
 {: .facts}
 
-## Activity (54 most recent)
+## Activity (55 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 03:17 | <span class="tag t-qa">qa</span> Live QA of the 07:03 GMT build: 272 renders and 150-URL crawl 0 fail, scrub and C44 134/134; Documents 'Best ideas so far' layout and contrast pass, but it still ranks the Atmos planner first at B after Ines moved it to C+ (bug filed, not a publish lag) |  |
 | Oct 24, 02:29 | <span class="tag t-research">research</span> H64 Atmos stand count: S-NO 9, S-OK 4, S-? 10 of 23 posts; household limits (dogs, partner veto, walkway, door) rule stands out in 9 of 13 that say |  |
 | Oct 24, 02:02 | <span class="tag t-qa">qa</span> Live QA of the 05:51:59 GMT build (../site 18ce872): 266 renders, crawl 150 URLs 0 fail, scrub and C44 131/131 PASS, slow 4G 1,686 ms; both Documents grade bugs fixed live; 0 new bugs |  |
 | Oct 24, 01:01 | <span class="tag t-research">research</span> H56: Atmos planner Day 30 discovery graded C+; 'atmos speaker placement' has no layout planner in the US top 25, but the two placement entrants have 0 ratings; no free web tool takes sloped ceilings, open sides or doors/windows |  |
@@ -207,6 +208,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-24 H64 Atmos stand count done (71133bc)
 - research/hunt/H64.md: S-NO 9, S-OK 4, S-? 10 of 23 (13 say, 69%); holds 6/10 with soft rows as S-?; 46% only if all 3 soft/mixed go S-OK. Reasons are household: dogs 3, partner veto 2+F2, walkway, door. Asker comments decided 5 codes: askers state limits when a commenter suggests stands. New tools/op_replies.py (asker's own comments only; 422 four times, 8 s pause). F5 comments unread. Slip: my awk print ran past the H61 rule section into its bold grade lines; disclosed in H64.md. Stop a section print at the next blank-line-then-bold too, or print by line numbers.
+
+## 2026-10-24 Live QA 07:03:17 GMT build + Best ideas check (03:08-03:16 ET)
+- 272 renders, crawl 150, scrub/C44 134/134 PASS; slow4G 1,692 ms. Best ideas layout/links/contrast PASS (new tools/site_best_live.py: live computed contrast; site_contrast.py only reads local CSS, the live page inlines CSS). Content bug to Odalys P2 + Ines P3: list keeps Atmos at B (best-ever letter rule + pass 3 C+ only in prose). Lesson: test "waiting on publish" by running the generator on main (sitegen via `import site_build`). H51c line ticked (798eec0).
 {% endraw %}
 
 

@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (36 most recent)
+## Activity (37 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 03:30 | <span class="tag t-research">research</span> H62 attic, insulation and ventilation: 1,318 asks a year hand-coded across r/Insulation, r/Roofing, r/HomeImprovement; 120-body sample: 15% need a calculation (all arithmetic: 1/150 vent rule, depth x R, dew point), 30% a building-science rule, 19% a photo judgement. Best C- attic check-up; free man |  |
 | Oct 24, 02:51 | <span class="tag t-research">research</span> H53 home meters: 0 at B+. Best C, solar 'should I have made more?' verdict (110 askers in 12 months across r/solar and r/SolarDIY; Cenit 2026-09 and HelioPeak 2026-04 already hold the parts; 19 builders). Aquarium cycle reader D+ (about 40 asks a month, sample estimate; Nitrify and TankDiary shipped |  |
 | Oct 24, 02:27 | <span class="tag t-research">research</span> H65: Jensen Speakers' free home theatre design tool takes Open Sided/Open Back/Open Rear toggles and places surrounds and Atmos heights (rear pair flagged back-wall limited); H55 kill clause met. No slope, door, window or L input. Five H51b fixtures: V WRONG, W OK (flagged), P taken, G WRONG unless  |  |
 | Oct 24, 02:01 | <span class="tag t-milestone">milestone</span> H41c capture test: synthetic furnace cycles segment at 20 dB (every cycle start, 8/8 failed ignitions, 0 false cycles); burner off missed in half the normal cycles, the weakest stage; 10 dB loses half the cycles; synthetic audio flatters any detector |  |
@@ -143,6 +144,9 @@ Older entries (the 2026-10-22 task log): archive.md.
 
 ## 2026-10-24 H53 home meters
 - H53 (062903e, board ticked): 0 at B+; best C solar production verdict (110 askers/yr, 9 a month; Cenit 2026-09-16, HelioPeak 2026-04-14 already there; 19 builders). Aquarium cycle reader D+ (about 40 asks/month by seeded sample; Nitrify, TankDiary July 2026). Open: vendor-app review read for "expected/should"; Cenit/HelioPeak reviews. Learned: the earlier session's r/solar dump stopped at 2026-01-28, so fill the gap with dated title queries and state the method split; Arctic Shift STOP files can hold more rows than the retry (cycled stop1 had 300), so read both; tools/as_seq.sh = as_batch with a date window + 20 s retry. Catch made-up numbers in the "what would make me wrong" section (I had written "2,000+ owners" with no source).
+
+## 2026-10-24 H62 attic
+- H62 (2c0b886, board ticked): research/hunt/H62.md. 1,318 asks/yr (Ins 762, Roof 202, HI 354, up to 88 cross-posts); bodies 120: C 18 (15%), A rule 36, P photo 23, H 32. Best C- attic check-up (math is arithmetic; CertainTeed/Lomanco/GAF/ORNL free; atticvent 2026-10-23, insulationmath 2026-09-26). Open: A-class rules engine idea unmeasured; photos not opened. Learned: hand-aligned rows of ten drift, so code sparse (tools/codes_expand.py: default + exception lists); body_sample draw expects raw as_titles columns, not as_merge's, so strip row/phrases first; I wrote guessed clock times in spec headers and caught it with `date` (03:29, not 04:05): stamp from `date` before writing any time.
 {% endraw %}
 
 

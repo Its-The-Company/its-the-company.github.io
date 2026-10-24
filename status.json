@@ -1,18 +1,18 @@
 {
  "schema": 1,
- "at": "2026-10-24T11:37:09.029391+00:00",
+ "at": "2026-10-24T11:49:54.784890+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-24T07:24:35-04:00"
+  "started": "2026-10-24T07:37:31-04:00"
  },
  "workers": [
   {
    "name": "wrenna",
    "task": "[research] Wrenna H89 backtest set",
    "model": "opus",
-   "started": "2026-10-24T11:25:50.038Z",
-   "seconds": 678,
+   "started": "2026-10-24T11:38:41.516Z",
+   "seconds": 673,
    "finished": null,
    "effort": "high"
   },
@@ -20,8 +20,8 @@
    "name": "idris",
    "task": "[research] Idris H92 hardware iPhone replaces",
    "model": "opus",
-   "started": "2026-10-24T11:25:55.590Z",
-   "seconds": 673,
+   "started": "2026-10-24T11:38:47.218Z",
+   "seconds": 667,
    "finished": null,
    "effort": "high"
   },
@@ -29,8 +29,8 @@
    "name": "maren",
    "task": "[research] Maren H94 gate calibration",
    "model": "opus",
-   "started": "2026-10-24T11:26:01.343Z",
-   "seconds": 667,
+   "started": "2026-10-24T11:38:52.024Z",
+   "seconds": 662,
    "finished": null,
    "effort": "high"
   }
@@ -87,25 +87,25 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
-   "resets_at": "2026-10-24T14:59:59.684169+00:00",
+   "pct": 12.0,
+   "resets_at": "2026-10-24T14:59:59.680568+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 90.0,
+   "left": 88.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 40.0,
-   "resets_at": "2026-10-25T06:59:59.684191+00:00",
+   "resets_at": "2026-10-25T06:59:59.680586+00:00",
    "used_words": "of your weekly allowance used",
    "left": 60.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 13.0,
-   "resets_at": "2026-10-25T06:59:59.684334+00:00",
+   "resets_at": "2026-10-25T06:59:59.680712+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-24T07:24:35.347190-04:00"
+  "read_at": "2026-10-24T07:37:31.250181-04:00"
  },
  "ui": {
   "week_pct": 0.024,
@@ -120,14 +120,14 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-24T07:39:35-04:00",
+ "next_tick": "2026-10-24T07:52:31-04:00",
  "lanes": [
   {
    "name": "Wrenna",
    "state": "running",
    "task": "[research] Wrenna H89 backtest set",
    "model": "opus",
-   "since": "2026-10-24T11:25:50.038Z",
+   "since": "2026-10-24T11:38:41.516Z",
    "next": [
     "Wrenna: site_qa.py checks for the additions against...",
     "Wrenna: QA the live site after every deploy: every page..."
@@ -139,7 +139,7 @@
    "state": "running",
    "task": "[research] Idris H92 hardware iPhone replaces",
    "model": "opus",
-   "since": "2026-10-24T11:25:55.590Z",
+   "since": "2026-10-24T11:38:47.218Z",
    "next": [
     "Idris, P2, H80 is this light enough for this plant,...",
     "Idris, P2, H81 wood stove burn the owner watches but..."
@@ -151,7 +151,7 @@
    "state": "running",
    "task": "[research] Maren H94 gate calibration",
    "model": "opus",
-   "since": "2026-10-24T11:26:01.343Z",
+   "since": "2026-10-24T11:38:52.024Z",
    "next": [
     "Maren, P3 (Wrenna live QA 07:13): site_qa.py USAGE_WORDS...",
     "Maren, P3, H74 which test do I use (refill 11, Ines..."
@@ -189,7 +189,7 @@
     "t": "H89 backtest set",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T11:25:50.038Z",
+    "at": "2026-10-24T11:38:41.516Z",
     "o": "c"
    },
    {
@@ -198,7 +198,7 @@
     "t": "H92 hardware iPhone replaces",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T11:25:55.590Z",
+    "at": "2026-10-24T11:38:47.218Z",
     "o": "c"
    },
    {
@@ -207,7 +207,7 @@
     "t": "H94 gate calibration",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T11:26:01.343Z",
+    "at": "2026-10-24T11:38:52.024Z",
     "o": "c"
    }
   ],
@@ -567,56 +567,28 @@
   ],
   "done": [
    {
-    "w": "Ines",
+    "w": "Maren",
     "k": "research",
-    "t": "H85 failure synthesis",
-    "at": "2026-10-24T11:24:12.367000+00:00",
+    "t": "H94 gate calibration",
+    "at": "2026-10-24T11:37:13.730000+00:00",
     "o": "c",
     "x": "killed"
    },
    {
-    "w": "Odalys",
-    "k": "build",
-    "t": "Documents site fixes",
-    "at": "2026-10-24T11:24:12.365000+00:00",
+    "w": "Wrenna",
+    "k": "research",
+    "t": "H89 backtest set",
+    "at": "2026-10-24T11:37:13.727000+00:00",
     "o": "c",
     "x": "killed"
    },
    {
     "w": "Idris",
     "k": "research",
-    "t": "H80 plant light",
-    "at": "2026-10-24T11:24:12.351000+00:00",
+    "t": "H92 hardware iPhone replaces",
+    "at": "2026-10-24T11:37:13.727000+00:00",
     "o": "c",
     "x": "killed"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Board refill 13",
-    "at": "2026-10-24T11:13:42.595000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "test",
-    "t": "Live site QA",
-    "at": "2026-10-24T11:13:36.580000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "H61 grading pass 8",
-    "at": "2026-10-24T11:06:05.881000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H79 finish",
-    "at": "2026-10-24T11:02:08.014000+00:00",
-    "o": "c"
    }
   ],
   "count": {

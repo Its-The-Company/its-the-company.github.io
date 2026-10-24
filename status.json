@@ -1,75 +1,42 @@
 {
  "schema": 1,
- "at": "2026-10-24T11:24:08.704140+00:00",
+ "at": "2026-10-24T11:37:09.029391+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-24T06:53:21-04:00"
+  "started": "2026-10-24T07:24:35-04:00"
  },
  "workers": [
   {
+   "name": "wrenna",
+   "task": "[research] Wrenna H89 backtest set",
+   "model": "opus",
+   "started": "2026-10-24T11:25:50.038Z",
+   "seconds": 678,
+   "finished": null,
+   "effort": "high"
+  },
+  {
    "name": "idris",
-   "task": "[research] Idris H80 plant light",
+   "task": "[research] Idris H92 hardware iPhone replaces",
    "model": "opus",
-   "started": "2026-10-24T10:54:42.112Z",
-   "seconds": 1766,
+   "started": "2026-10-24T11:25:55.590Z",
+   "seconds": 673,
    "finished": null,
    "effort": "high"
   },
   {
-   "name": "odalys",
-   "task": "[build] Odalys documents site fixes",
+   "name": "maren",
+   "task": "[research] Maren H94 gate calibration",
    "model": "opus",
-   "started": "2026-10-24T11:13:51.758Z",
-   "seconds": 616,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "ines",
-   "task": "[research] Ines H85 failure synthesis",
-   "model": "fable",
-   "started": "2026-10-24T11:14:08.137Z",
-   "seconds": 600,
+   "started": "2026-10-24T11:26:01.343Z",
+   "seconds": 667,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Odalys, Ines",
- "recent": [
-  {
-   "name": "ines",
-   "task": "[plan] Ines board refill 13",
-   "model": "opus",
-   "started": "2026-10-24T11:06:15.068Z",
-   "seconds": null,
-   "finished": "2026-10-24T11:13:42.595000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[test] Wrenna live site QA",
-   "model": "opus",
-   "started": "2026-10-24T10:54:36.109Z",
-   "seconds": null,
-   "finished": "2026-10-24T11:13:36.580000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] Ines H61 grading pass 8",
-   "model": "opus",
-   "started": "2026-10-24T11:02:16.115Z",
-   "seconds": null,
-   "finished": "2026-10-24T11:06:05.881000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] Wrenna H79 finish",
-   "model": "opus",
-   "started": "2026-10-24T10:54:29.209Z",
-   "seconds": null,
-   "finished": "2026-10-24T11:02:08.014000+00:00"
-  }
- ],
+ "who": "Wrenna, Idris, Maren",
+ "recent": [],
  "queue": {
   "runnable": [
    {
@@ -115,33 +82,33 @@
     "text": "Unrelated side project; Collatz, workspace ~/unrelated/collatz); full text in log/board-archive-2026-10-23.md"
    }
   ],
-  "runnable_count": 29,
+  "runnable_count": 27,
   "blocked_count": 23
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
-   "resets_at": "2026-10-24T15:00:00.147285+00:00",
+   "pct": 10.0,
+   "resets_at": "2026-10-24T14:59:59.684169+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 95.0,
+   "left": 90.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 39.0,
-   "resets_at": "2026-10-25T07:00:00.147307+00:00",
+   "pct": 40.0,
+   "resets_at": "2026-10-25T06:59:59.684191+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 61.0,
+   "left": 60.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 12.0,
-   "resets_at": "2026-10-25T07:00:00.147472+00:00",
+   "pct": 13.0,
+   "resets_at": "2026-10-25T06:59:59.684334+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-24T06:53:20.727606-04:00"
+  "read_at": "2026-10-24T07:24:35.347190-04:00"
  },
  "ui": {
-  "week_pct": 0.026,
+  "week_pct": 0.024,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -153,14 +120,26 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-24T07:08:20-04:00",
+ "next_tick": "2026-10-24T07:39:35-04:00",
  "lanes": [
+  {
+   "name": "Wrenna",
+   "state": "running",
+   "task": "[research] Wrenna H89 backtest set",
+   "model": "opus",
+   "since": "2026-10-24T11:25:50.038Z",
+   "next": [
+    "Wrenna: site_qa.py checks for the additions against...",
+    "Wrenna: QA the live site after every deploy: every page..."
+   ],
+   "effort": "high"
+  },
   {
    "name": "Idris",
    "state": "running",
-   "task": "[research] Idris H80 plant light",
+   "task": "[research] Idris H92 hardware iPhone replaces",
    "model": "opus",
-   "since": "2026-10-24T10:54:42.112Z",
+   "since": "2026-10-24T11:25:55.590Z",
    "next": [
     "Idris, P2, H80 is this light enough for this plant,...",
     "Idris, P2, H81 wood stove burn the owner watches but..."
@@ -168,79 +147,67 @@
    "effort": "high"
   },
   {
-   "name": "Odalys",
+   "name": "Maren",
    "state": "running",
-   "task": "[build] Odalys documents site fixes",
+   "task": "[research] Maren H94 gate calibration",
    "model": "opus",
-   "since": "2026-10-24T11:13:51.758Z",
+   "since": "2026-10-24T11:26:01.343Z",
    "next": [
-    "Odalys, P3 (Wrenna live QA 07:13): task-list checkboxes...",
-    "Odalys, P3, H77 subject coverage in tools/hunt.py..."
+    "Maren, P3 (Wrenna live QA 07:13): site_qa.py USAGE_WORDS...",
+    "Maren, P3, H74 which test do I use (refill 11, Ines..."
    ],
    "effort": "high"
   },
   {
-   "name": "Ines",
-   "state": "running",
-   "task": "[research] Ines H85 failure synthesis",
-   "model": "fable",
-   "since": "2026-10-24T11:14:08.137Z",
-   "next": [
-    "Ines, P1, H61 Atmos B+ rule applied and the next grades:...",
-    "Ines, P2, H83 damp basement and crawl space from the..."
-   ],
-   "effort": "high"
-  },
-  {
-   "name": "Wrenna",
+   "name": "Odalys",
    "state": "next",
-   "task": "Wrenna: site_qa.py checks for the additions against fixtures now (every % names its denominator; unrelated content...",
+   "task": "Odalys, P3 (Wrenna live QA 07:13): task-list checkboxes have no accessible label on h55-grades.html and the four...",
    "model": null,
    "since": null,
    "next": [
-    "Wrenna: QA the live site after every deploy: every page...",
-    "Wrenna, P2, H79 3D printer quality that drifts (refill..."
+    "Odalys, P3, H77 subject coverage in tools/hunt.py...",
+    "Odalys, P1, H88a tools/store_hints.py (refill 13; Tenet..."
    ]
   },
   {
-   "name": "Maren",
+   "name": "Ines",
    "state": "next",
-   "task": "Maren, P3 (Wrenna live QA 07:13): site_qa.py USAGE_WORDS ('share', 'week', 'budget') flags 30 research shares that...",
+   "task": "Ines, P1, H61 Atmos B+ rule applied and the next grades: the B+ rule is already written in...",
    "model": null,
    "since": null,
    "next": [
-    "Maren, P3, H74 which test do I use (refill 11, Ines...",
-    "Maren, P2, H82 is my EV battery fading normally (refill..."
+    "Ines, P2, H83 damp basement and crawl space from the...",
+    "Ines, P1, H61 pass 9 grades as lanes land (refill 13):..."
    ]
   }
  ],
  "tasks": {
   "run": [
    {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "H89 backtest set",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-24T11:25:50.038Z",
+    "o": "c"
+   },
+   {
     "w": "Idris",
     "k": "research",
-    "t": "H80 plant light",
+    "t": "H92 hardware iPhone replaces",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T10:54:42.112Z",
+    "at": "2026-10-24T11:25:55.590Z",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "build",
-    "t": "Documents site fixes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-24T11:13:51.758Z",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
+    "w": "Maren",
     "k": "research",
-    "t": "H85 failure synthesis",
-    "m": "fable",
+    "t": "H94 gate calibration",
+    "m": "opus",
     "e": "high",
-    "at": "2026-10-24T11:14:08.137Z",
+    "at": "2026-10-24T11:26:01.343Z",
     "o": "c"
    }
   ],
@@ -362,13 +329,6 @@
     "o": "c"
    },
    {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H79 3D printer quality that drifts",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "research",
     "t": "H80 is this light enough for this plant, measured over a day",
@@ -400,13 +360,6 @@
     "w": "Maren",
     "k": "review",
     "t": "H76 second grade",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "research",
-    "t": "H85 why 84 lanes failed, a first-principles synthesis",
     "s": "next",
     "o": "c"
    },
@@ -615,6 +568,30 @@
   "done": [
    {
     "w": "Ines",
+    "k": "research",
+    "t": "H85 failure synthesis",
+    "at": "2026-10-24T11:24:12.367000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
+    "w": "Odalys",
+    "k": "build",
+    "t": "Documents site fixes",
+    "at": "2026-10-24T11:24:12.365000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
+    "w": "Idris",
+    "k": "research",
+    "t": "H80 plant light",
+    "at": "2026-10-24T11:24:12.351000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
+    "w": "Ines",
     "k": "plan",
     "t": "Board refill 13",
     "at": "2026-10-24T11:13:42.595000+00:00",
@@ -640,41 +617,10 @@
     "t": "H79 finish",
     "at": "2026-10-24T11:02:08.014000+00:00",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "build",
-    "t": "Best ideas site lines",
-    "at": "2026-10-24T10:53:06.865000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
-    "t": "H80 plant light",
-    "at": "2026-10-24T10:53:06.858000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H79 print drift",
-    "at": "2026-10-24T10:53:06.853000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H78 flock laying",
-    "at": "2026-10-24T10:42:54.923000+00:00",
-    "o": "c"
    }
   ],
   "count": {
-   "next": 29,
+   "next": 27,
    "wait": 5,
    "blocked": 18,
    "you": 1

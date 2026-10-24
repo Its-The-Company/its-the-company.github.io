@@ -1,27 +1,18 @@
 {
  "schema": 1,
- "at": "2026-10-24T07:59:17.212233+00:00",
+ "at": "2026-10-24T08:11:36.910490+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-24T03:47:38-04:00"
+  "started": "2026-10-24T03:59:37-04:00"
  },
  "workers": [
   {
    "name": "odalys",
-   "task": "[build] Odalys gradebook/best-ideas fixes",
+   "task": "[build] Odalys best ideas newest ruling",
    "model": "opus",
-   "started": "2026-10-24T07:48:21.085Z",
-   "seconds": 656,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[build] Odalys H66 free-answer column",
-   "model": "opus",
-   "started": "2026-10-24T07:48:26.799Z",
-   "seconds": 650,
+   "started": "2026-10-24T08:00:37.289Z",
+   "seconds": 659,
    "finished": null,
    "effort": "high"
   },
@@ -29,8 +20,17 @@
    "name": "odalys",
    "task": "[tools] Odalys H75 shelf_gap.py",
    "model": "opus",
-   "started": "2026-10-24T07:48:32.342Z",
-   "seconds": 644,
+   "started": "2026-10-24T08:00:42.190Z",
+   "seconds": 654,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] Odalys H66 asks.py free-answer",
+   "model": "opus",
+   "started": "2026-10-24T08:00:46.723Z",
+   "seconds": 650,
    "finished": null,
    "effort": "high"
   }
@@ -82,33 +82,33 @@
     "text": "Unrelated side project; Collatz, workspace ~/unrelated/collatz); full text in log/board-archive-2026-10-23.md"
    }
   ],
-  "runnable_count": 23,
+  "runnable_count": 22,
   "blocked_count": 18
  },
  "meter": {
   "five_hour": {
-   "pct": 20.0,
-   "resets_at": "2026-10-24T10:00:00.313556+00:00",
+   "pct": 21.0,
+   "resets_at": "2026-10-24T10:00:00.094366+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 80.0,
+   "left": 79.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 36.0,
-   "resets_at": "2026-10-25T07:00:00.313581+00:00",
+   "resets_at": "2026-10-25T07:00:00.094386+00:00",
    "used_words": "of your weekly allowance used",
    "left": 64.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 12.0,
-   "resets_at": "2026-10-25T07:00:00.313730+00:00",
+   "resets_at": "2026-10-25T07:00:00.094515+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-24T03:47:38.026232-04:00"
+  "read_at": "2026-10-24T03:59:36.854759-04:00"
  },
  "ui": {
-  "week_pct": 0.025,
+  "week_pct": 0.024,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -120,14 +120,14 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-24T04:02:38-04:00",
+ "next_tick": "2026-10-24T04:14:37-04:00",
  "lanes": [
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[build] Odalys gradebook/best-ideas fixes",
+   "task": "[build] Odalys best ideas newest ruling",
    "model": "opus",
-   "since": "2026-10-24T07:48:21.085Z",
+   "since": "2026-10-24T08:00:37.289Z",
    "next": [
     "Odalys, P2 (Wrenna live QA 2026-10-24 03:16, bug):...",
     "Odalys, P3, Best ideas: spec differences (Maren 17197a3,..."
@@ -183,19 +183,10 @@
    {
     "w": "Odalys",
     "k": "build",
-    "t": "Gradebook/best-ideas fixes",
+    "t": "Best ideas newest ruling",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T07:48:21.085Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "build",
-    "t": "H66 free-answer column",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-24T07:48:26.799Z",
+    "at": "2026-10-24T08:00:37.289Z",
     "o": "c"
    },
    {
@@ -204,7 +195,16 @@
     "t": "H75 shelf_gap.py",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T07:48:32.342Z",
+    "at": "2026-10-24T08:00:42.190Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "H66 asks.py free-answer",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-24T08:00:46.723Z",
     "o": "c"
    }
   ],
@@ -376,13 +376,6 @@
    },
    {
     "w": "Wrenna",
-    "k": "build",
-    "t": "Research/hunt/H69.md has no LANE_METHOD entry in tools/hunt.py, so...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
     "k": "research",
     "t": "H70 home air monitors the owner reads but cannot judge",
     "s": "next",
@@ -501,67 +494,32 @@
   ],
   "done": [
    {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H70 home air monitors",
-    "at": "2026-10-24T07:47:19.610000+00:00",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "H75 shelf_gap.py",
+    "at": "2026-10-24T07:59:21.493000+00:00",
     "o": "c",
     "x": "killed"
    },
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "Silent zeros and hunt test",
-    "at": "2026-10-24T07:47:19.609000+00:00",
+    "k": "build",
+    "t": "H66 free-answer column",
+    "at": "2026-10-24T07:59:21.492000+00:00",
     "o": "c",
     "x": "killed"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
-    "t": "H72 show at my level",
-    "at": "2026-10-24T07:47:19.608000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Ruling rows and H61 pass 5",
-    "at": "2026-10-24T07:37:08.669000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "research",
-    "t": "H63 telescope image judging",
-    "at": "2026-10-24T07:35:06.722000+00:00",
-    "o": "c"
    },
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "H68 grade ledger",
-    "at": "2026-10-24T07:32:41.362000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
-    "t": "H62 attic ventilation",
-    "at": "2026-10-24T07:30:45.314000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "research",
-    "t": "H69 water systems",
-    "at": "2026-10-24T07:21:40.190000+00:00",
-    "o": "c"
+    "k": "build",
+    "t": "Gradebook/best-ideas fixes",
+    "at": "2026-10-24T07:59:21.491000+00:00",
+    "o": "c",
+    "x": "killed"
    }
   ],
   "count": {
-   "next": 23,
+   "next": 22,
    "wait": 0,
    "blocked": 18,
    "you": 1

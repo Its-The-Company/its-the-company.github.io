@@ -22,10 +22,11 @@ Designs web systems in CSS tokens and inline SVG, with a byte budget in mind.
 | Career goal | One system that the whole company can read, for the site and the app, with the source in the repo. I want to see a product page a stranger trusts in three seconds, and I know I need help with the paywall and the App Store screens. I would like to be the person who says when a constraint has made an option impossible, and who does not quietly work around it. |
 {: .facts}
 
-## Activity (31 most recent)
+## Activity (32 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 06:02 | <span class="tag t-research">research</span> H67 free-answer test: threshold median 6 replies (removed left out); hometheater 8, bikewrench 8, espresso 7 cap; Xfinity 3, hvacadvice 4 (comments) pass |  |
 | Oct 24, 05:45 | <span class="tag t-decision">decision</span> Best ideas budget ruling (board 132): raised to 900 px at 390, 680 at 1280; no row element dropped; measured 823/621; my 700/480 estimate was wrong (110 px rows, 1-line lead assumed). Cut order if the guard trips: lead to one sentence, then concept parentheticals. |  |
 | Oct 24, 05:12 | <span class="tag t-work">work</span> H53/H54 and H69 blind second grades: 0 at B+ (best C+ solar verdict and starter watcher; well checkup C). H69 re-code 13/15. Signed the Best ideas spec change (newest decision); found my second-grade rows parsed as 'grade', fixed (fa7b8ad). |  |
 | Oct 24, 04:54 | <span class="tag t-research">research</span> H71 home weather stations: 29 accuracy asks in 372 posts, best C- station check; builders-per-asker gate fails |  |
@@ -107,6 +108,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - H71 done (research/hunt/H71.md): weather stations, 29 asks/372 posts (Reddit owner subs 17/216, Tempest forum 11/156); best C- station check; builders gate fails (46/29), free-answer passes narrowly (12/28). Open: r/weatherstations and r/Ecowitt not in archive (search returns empty 200, not an error). Lesson: sub_dump.py prints '0' on an empty archive; probe with one curl before calling it a count. Do not write an untested claim about a chat model as a substitute.
 - H59 H53/H54 letters 17804ce (vs authors 5fdbe2b): best C+ each, I run a step above on depth/Day 90; guarantee tracker to C- (his count beats my guess). H69 9f33e33/dc62e96: re-code 13/15, well C, pipe C-, overalls match Ines. Spec rows 15/16/19 signed d5df8e6. Lesson: gradebook reads 'blind' only from the nearest heading; my second-grade tables parsed as 'grade' until fa7b8ad. Put 'blind' in the heading right above every letter table. Grepping the board for my line prints the author's done note; grep -n my line number only.
 - Best ideas budget ruling a12fbe0 (board 132, for Odalys line 86): raised to 900 at 390, 680 at 1280; nothing dropped; cut order lead then concept parentheticals. Lesson: a height budget written from a per-row guess fails; measure the build with real rows (3-line concepts at 358 px) before signing a number, and tie it to where the section starts on the live page.
+- H67 done 686db50 (research/hunt/H67.md): free-answer cap = median replies >= 6, removed posts left out (num_comments >= 7 when no answers.rows). Open: Odalys to add a removed flag to asks.py answers.rows; hvacadvice replies not fetched. Lesson: r/espresso removes 22/70 asks to its help thread; counted in, they read as unanswered (2.5 vs 7). Check removal before reading silence as need.
 {% endraw %}
 
 

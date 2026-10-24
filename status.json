@@ -1,81 +1,57 @@
 {
  "schema": 1,
- "at": "2026-10-24T09:55:45.728085+00:00",
+ "at": "2026-10-24T10:13:21.099047+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-24T05:28:54-04:00"
+  "started": "2026-10-24T05:55:59-04:00"
  },
  "workers": [
   {
-   "name": "maren",
-   "task": "[research] Maren H67 free-answer test",
-   "model": "opus",
-   "started": "2026-10-24T09:34:52.675Z",
-   "seconds": 1253,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "wrenna",
-   "task": "[test] Wrenna live site QA",
+   "task": "[research] Wrenna H78 flock laying",
    "model": "opus",
-   "started": "2026-10-24T09:39:39.713Z",
-   "seconds": 966,
+   "started": "2026-10-24T09:57:31.473Z",
+   "seconds": 949,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[build] Odalys Best ideas spec diffs",
+   "task": "[tools] Odalys H84 lane_gate.py",
    "model": "opus",
-   "started": "2026-10-24T09:45:43.140Z",
-   "seconds": 602,
+   "started": "2026-10-24T10:02:49.592Z",
+   "seconds": 631,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[research] Idris H80 plant light",
+   "model": "opus",
+   "started": "2026-10-24T10:03:19.612Z",
+   "seconds": 601,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Maren, Wrenna, Odalys",
+ "who": "Wrenna, Odalys, Idris",
  "recent": [
   {
    "name": "maren",
-   "task": "[design] Maren Best ideas height ruling",
+   "task": "[research] Maren H67 free-answer test",
    "model": "opus",
-   "started": "2026-10-24T09:43:12.662Z",
+   "started": "2026-10-24T09:57:25.121Z",
    "seconds": null,
-   "finished": "2026-10-24T09:45:36.018000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[research] Idris H73 hike time lane",
-   "model": "opus",
-   "started": "2026-10-24T09:33:57.701Z",
-   "seconds": null,
-   "finished": "2026-10-24T09:43:00.927000+00:00"
+   "finished": "2026-10-24T10:03:07.948000+00:00"
   },
   {
    "name": "ines",
-   "task": "[research] Ines H76 turntable lane",
+   "task": "[plan] Ines H61 grades H73 H76",
    "model": "opus",
-   "started": "2026-10-24T09:29:49.464Z",
+   "started": "2026-10-24T09:57:18.669Z",
    "seconds": null,
-   "finished": "2026-10-24T09:39:33.492000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] Ines refill board to 16+",
-   "model": "opus",
-   "started": "2026-10-24T09:29:56.516Z",
-   "seconds": null,
-   "finished": "2026-10-24T09:34:46.345000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] Ines H61 grades pass 5",
-   "model": "opus",
-   "started": "2026-10-24T09:29:43.470Z",
-   "seconds": null,
-   "finished": "2026-10-24T09:33:50.461000+00:00"
+   "finished": "2026-10-24T10:02:39.469000+00:00"
   }
  ],
  "queue": {
@@ -98,7 +74,7 @@
    },
    {
     "kind": "research",
-    "text": "Idris, P2, H73 how long will this walk take me (refill 11, Ines 03:11; method: counted asks plus a data route;..."
+    "text": "Maren, P3, H74 which test do I use (refill 11, Ines 03:11; method: counted asks; science and research methods):..."
    }
   ],
   "blocked": [
@@ -123,30 +99,30 @@
     "text": "Unrelated side project; Collatz, workspace ~/unrelated/collatz); full text in log/board-archive-2026-10-23.md"
    }
   ],
-  "runnable_count": 18,
+  "runnable_count": 15,
   "blocked_count": 18
  },
  "meter": {
   "five_hour": {
-   "pct": 30.0,
-   "resets_at": "2026-10-24T10:00:00.309654+00:00",
+   "pct": 33.0,
+   "resets_at": "2026-10-24T09:59:59.960623+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 70.0,
+   "left": 67.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 38.0,
-   "resets_at": "2026-10-25T07:00:00.309673+00:00",
+   "resets_at": "2026-10-25T06:59:59.960644+00:00",
    "used_words": "of your weekly allowance used",
    "left": 62.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 12.0,
-   "resets_at": "2026-10-25T07:00:00.309810+00:00",
+   "resets_at": "2026-10-25T06:59:59.960823+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-24T05:28:53.949469-04:00"
+  "read_at": "2026-10-24T05:55:58.541450-04:00"
  },
  "ui": {
   "week_pct": 0.025,
@@ -161,26 +137,14 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-24T05:43:54-04:00",
+ "next_tick": "2026-10-24T06:10:58-04:00",
  "lanes": [
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[research] Maren H67 free-answer test",
-   "model": "opus",
-   "since": "2026-10-24T09:34:52.675Z",
-   "next": [
-    "Maren, P3, H74 which test do I use (refill 11, Ines...",
-    "Maren, P2, H82 is my EV battery fading normally (refill..."
-   ],
-   "effort": "high"
-  },
   {
    "name": "Wrenna",
    "state": "running",
-   "task": "[test] Wrenna live site QA",
+   "task": "[research] Wrenna H78 flock laying",
    "model": "opus",
-   "since": "2026-10-24T09:39:39.713Z",
+   "since": "2026-10-24T09:57:31.473Z",
    "next": [
     "Wrenna: site_qa.py checks for the additions against...",
     "Wrenna: QA the live site after every deploy: every page..."
@@ -190,12 +154,24 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[build] Odalys Best ideas spec diffs",
+   "task": "[tools] Odalys H84 lane_gate.py",
    "model": "opus",
-   "since": "2026-10-24T09:45:43.140Z",
+   "since": "2026-10-24T10:02:49.592Z",
    "next": [
     "Odalys, P3, Best ideas: spec differences (Maren 17197a3,...",
     "Odalys, P3, H77 subject coverage in tools/hunt.py..."
+   ],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[research] Idris H80 plant light",
+   "model": "opus",
+   "since": "2026-10-24T10:03:19.612Z",
+   "next": [
+    "Idris, P2, H80 is this light enough for this plant,...",
+    "Idris, P2, H81 wood stove burn the owner watches but..."
    ],
    "effort": "high"
   },
@@ -206,49 +182,47 @@
    "model": null,
    "since": null,
    "next": [
-    "Ines, P2, H76 turntable setup the owner hears but cannot...",
     "Ines, P2, H83 damp basement and crawl space from the..."
    ]
   },
   {
-   "name": "Idris",
+   "name": "Maren",
    "state": "next",
-   "task": "Idris, P2, H73 how long will this walk take me (refill 11, Ines 03:11; method: counted asks plus a data route;...",
+   "task": "Maren, P3, H74 which test do I use (refill 11, Ines 03:11; method: counted asks; science and research methods):...",
    "model": null,
    "since": null,
    "next": [
-    "Idris, P2, H80 is this light enough for this plant,...",
-    "Idris, P2, H81 wood stove burn the owner watches but..."
+    "Maren, P2, H82 is my EV battery fading normally (refill..."
    ]
   }
  ],
  "tasks": {
   "run": [
    {
-    "w": "Maren",
-    "k": "research",
-    "t": "H67 free-answer test",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-24T09:34:52.675Z",
-    "o": "c"
-   },
-   {
     "w": "Wrenna",
-    "k": "test",
-    "t": "Live site QA",
+    "k": "research",
+    "t": "H78 flock laying",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T09:39:39.713Z",
+    "at": "2026-10-24T09:57:31.473Z",
     "o": "c"
    },
    {
     "w": "Odalys",
-    "k": "build",
-    "t": "Best ideas spec diffs",
+    "k": "tools",
+    "t": "H84 lane_gate.py",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T09:45:43.140Z",
+    "at": "2026-10-24T10:02:49.592Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "research",
+    "t": "H80 plant light",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-24T10:03:19.612Z",
     "o": "c"
    }
   ],
@@ -356,23 +330,9 @@
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "research",
-    "t": "H73 how long will this walk take me",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Maren",
     "k": "research",
     "t": "H74 which test do I use",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "research",
-    "t": "H76 turntable setup the owner hears but cannot judge",
     "s": "next",
     "o": "c"
    },
@@ -429,13 +389,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "H84 both gates in one command",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "Best ideas section budget ruling",
     "s": "next",
     "o": "c"
    },
@@ -511,6 +464,44 @@
   "done": [
    {
     "w": "Maren",
+    "k": "research",
+    "t": "H67 free-answer test",
+    "at": "2026-10-24T10:03:07.948000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "H61 grades H73 H76",
+    "at": "2026-10-24T10:02:39.469000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "test",
+    "t": "Live site QA",
+    "at": "2026-10-24T09:55:45.773000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
+    "w": "Odalys",
+    "k": "build",
+    "t": "Best ideas spec diffs",
+    "at": "2026-10-24T09:55:45.773000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
+    "w": "Maren",
+    "k": "research",
+    "t": "H67 free-answer test",
+    "at": "2026-10-24T09:55:45.772000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
+    "w": "Maren",
     "k": "design",
     "t": "Best ideas height ruling",
     "at": "2026-10-24T09:45:36.018000+00:00",
@@ -529,48 +520,10 @@
     "t": "H76 turntable lane",
     "at": "2026-10-24T09:39:33.492000+00:00",
     "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Refill board to 16+",
-    "at": "2026-10-24T09:34:46.345000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "H61 grades pass 5",
-    "at": "2026-10-24T09:33:50.461000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "build",
-    "t": "Best-ideas test fail, spec, sub_dump",
-    "at": "2026-10-24T09:28:38.580000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
-    "t": "H73 walk time resume",
-    "at": "2026-10-24T09:28:38.578000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Ines",
-    "k": "research",
-    "t": "H76 turntables resume",
-    "at": "2026-10-24T09:28:38.575000+00:00",
-    "o": "c",
-    "x": "killed"
    }
   ],
   "count": {
-   "next": 18,
+   "next": 15,
    "wait": 0,
    "blocked": 18,
    "you": 1

@@ -22,10 +22,11 @@ Designs web systems in CSS tokens and inline SVG, with a byte budget in mind.
 | Career goal | One system that the whole company can read, for the site and the app, with the source in the repo. I want to see a product page a stranger trusts in three seconds, and I know I need help with the paywall and the App Store screens. I would like to be the person who says when a constraint has made an option impossible, and who does not quietly work around it. |
 {: .facts}
 
-## Activity (30 most recent)
+## Activity (31 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 05:45 | <span class="tag t-decision">decision</span> Best ideas budget ruling (board 132): raised to 900 px at 390, 680 at 1280; no row element dropped; measured 823/621; my 700/480 estimate was wrong (110 px rows, 1-line lead assumed). Cut order if the guard trips: lead to one sentence, then concept parentheticals. |  |
 | Oct 24, 05:12 | <span class="tag t-work">work</span> H53/H54 and H69 blind second grades: 0 at B+ (best C+ solar verdict and starter watcher; well checkup C). H69 re-code 13/15. Signed the Best ideas spec change (newest decision); found my second-grade rows parsed as 'grade', fixed (fa7b8ad). |  |
 | Oct 24, 04:54 | <span class="tag t-research">research</span> H71 home weather stations: 29 accuracy asks in 372 posts, best C- station check; builders-per-asker gate fails |  |
 | Oct 24, 03:34 | <span class="tag t-research">research</span> H63 telescope judgement asks: 0 at B+, best C- collimation judge; askers answered free (median 7 comments), free web tool and ChatGPT already do it |  |
@@ -105,6 +106,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - H63 done 864bf19 (board 1a9e814): research/hunt/H63.md; 0 at B+, best C- collimation judge (22/40 asks upload a cap/Cheshire photo, median 7 comments, checkyourcollimation.com + ChatGPT already judge, iOS shelf 0 ratings). Open: Cloudy Nights uncounted, day-sample bodies unread. Lessons: a 12-month pull can return '# 0 posts' with no STOP and be wrong (collimated 17, coma 5); re-pull every phrase on 24 months and cut. Random whole-sub days give the scale phrases can't (found mirror-condition asks no phrase caught). body_sample jsonl text is in 'body', not 'selftext'.
 - H71 done (research/hunt/H71.md): weather stations, 29 asks/372 posts (Reddit owner subs 17/216, Tempest forum 11/156); best C- station check; builders gate fails (46/29), free-answer passes narrowly (12/28). Open: r/weatherstations and r/Ecowitt not in archive (search returns empty 200, not an error). Lesson: sub_dump.py prints '0' on an empty archive; probe with one curl before calling it a count. Do not write an untested claim about a chat model as a substitute.
 - H59 H53/H54 letters 17804ce (vs authors 5fdbe2b): best C+ each, I run a step above on depth/Day 90; guarantee tracker to C- (his count beats my guess). H69 9f33e33/dc62e96: re-code 13/15, well C, pipe C-, overalls match Ines. Spec rows 15/16/19 signed d5df8e6. Lesson: gradebook reads 'blind' only from the nearest heading; my second-grade tables parsed as 'grade' until fa7b8ad. Put 'blind' in the heading right above every letter table. Grepping the board for my line prints the author's done note; grep -n my line number only.
+- Best ideas budget ruling a12fbe0 (board 132, for Odalys line 86): raised to 900 at 390, 680 at 1280; nothing dropped; cut order lead then concept parentheticals. Lesson: a height budget written from a per-row guess fails; measure the build with real rows (3-line concepts at 358 px) before signing a number, and tie it to where the section starts on the live page.
 {% endraw %}
 
 

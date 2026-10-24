@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (38 most recent)
+## Activity (39 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 05:42 | <span class="tag t-research">research</span> H73 walk time: D+, 35 asks in four venues, both Day 3 gates fail (17 of 29 settled free; 0.34-0.43 builders per asker); TrailTime already plans with own measured pace; HealthKit route yes; own-fit spike reads 2-5% short, cause not found |  |
 | Oct 24, 05:04 | <span class="tag t-research">research</span> H72 which show is at my level: 0 at B+, best D+ ranker; 35 level-named asks/yr in 5 subs, 0 of 30 bodies give a word count; free-answer and builder gates fail; Migaku already covers 11 languages; no subtitle source clears terms for a catalogue |  |
 | Oct 24, 03:30 | <span class="tag t-research">research</span> H62 attic, insulation and ventilation: 1,318 asks a year hand-coded across r/Insulation, r/Roofing, r/HomeImprovement; 120-body sample: 15% need a calculation (all arithmetic: 1/150 vent rule, depth x R, dew point), 30% a building-science rule, 19% a photo judgement. Best C- attic check-up; free man |  |
 | Oct 24, 02:51 | <span class="tag t-research">research</span> H53 home meters: 0 at B+. Best C, solar 'should I have made more?' verdict (110 askers in 12 months across r/solar and r/SolarDIY; Cenit 2026-09 and HelioPeak 2026-04 already hold the parts; 19 builders). Aquarium cycle reader D+ (about 40 asks a month, sample estimate; Nitrify and TankDiary shipped |  |
@@ -151,6 +152,9 @@ Older entries (the 2026-10-22 task log): archive.md.
 
 ## 2026-10-24 H72 which show is at my level
 - H72 (research/hunt/H72.md): 0 at B+, best D+ show-at-my-level ranker. 5 subs hand-read (Japanese 55, French 110, Spanish 167, German 166, languagelearning 259): 35 distinct L asks/yr, 199 L+R; sample 30: 11 name a level, 0 a known-word count. Both Day 3 gates fail (L+R median 4-7 comments; "comprehensible input" 85 GitHub repos/yr; r/languagelearning 33 builder posts vs 21 asks). Migaku already scores comprehension per show in 11 languages. OpenSubtitles terms behind a Cloudflare check (stopped); Netflix 1.4/1.8 and YouTube captions.download say no; user .srt yes. Open: OpenSubtitles terms read by a human; per-language level tests. Learned: titles with a newline split a pull row (fields < 5), so count tools must skip them and the codes shift; as_split runs ~7 min per sub, so run the next sub in the background while hand-coding; quotes from search summaries are not quotes of the page, so cite them as summaries or drop them.
+
+## 2026-10-24 H73 walk time
+- H73 (0834cea, pushed): research/hunt/H73.md, D+. 35 asks (r/hiking 30/20,095, WB 2/3,328, C&H 3/4,735, Outdoors SE 0/36); sample 29 readable: K own pace 4, S free-settled 17 (gate fails), builders 0.34-0.43 (gate fails). TrailTime 2026-07-30 already does own measured pace + sunset warnings. HealthKit: yes (reading-route-data). Open: spikes/hiketime own fit reads 2-5% short on all 10 rows, cause not traced; Strava/CalTopo method lines rest on search summaries. Learned: an earlier run had pulled full 12-month sub dumps, so resuming took 12 turns; a pool of hand codes plus a seeded sample script makes a cut-off lane cheap to finish; a spike that "beats the rules" can still carry a one-sided bias, so look at the signs, not only the mean error.
 {% endraw %}
 
 

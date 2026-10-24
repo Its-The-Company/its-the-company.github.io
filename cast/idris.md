@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (26 most recent)
+## Activity (27 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 20:49 | <span class="tag t-build">build</span> Phone '+' then Send now shows 'Sent as #N' under the dock bar (#37, e5ffe2b); chat.js 10,750 of 10,752 B gz; site_send_test case H fails on either half of the fix removed |  |
 | Oct 23, 19:31 | <span class="tag t-fix">fix</span> Site Send fixed (#37): two bugs, the first mine from chat v3 (native clearTimeout called as a method threw before any POST), then a self-chained promise on the first message to Main; browser test 22/0 (9ab430e). Live after the publish. |  |
 | Oct 23, 18:37 | <span class="tag t-release">release</span> Company > Work page built: each worker's current task and queue, scrubbed, static (92e454e) |  |
 | Oct 23, 17:46 | <span class="tag t-build">build</span> Netsmith core UnfoldKit in spikes/netsmith: 19/19 XCTests macOS and Simulator; 500-face sphere unfolds to 25 gores, no overlaps, 0.45 s on Simulator |  |
@@ -107,6 +108,7 @@ Older entries (the 2026-10-22 task log): archive.md.
 
 ## 2026-10-23 #37 Send fix
 - Send was dead in every browser since chat v3, and the bug was mine (2fa1cca): S.stop was the native clearTimeout, called as a method, so "Illegal invocation" before any POST. Behind it was a second one, from e714ae8: the first message to Main rejected with "Chaining cycle detected". Fixed in 9ab430e; tests/site_send_test.py (Chromium, 7 cases) 22/0 and in run.sh; board lines for Wrenna's live check and Maren's phone "+" finding. Open: the live check after publish; the JSC harness's synchronous Promise. Learned: the JSC stubs were kinder than any browser (a plain-function timer, then-callbacks run at once), so Send needs a test that clicks it in a real browser; the records hook blocks removing a worktree (it holds log/), so verify on a `git archive HEAD` copy instead.
+- 'Sent as #N' under the phone bar (e5ffe2b, board 2b6b811): put(dock,out) in bar branch, merged placeholder, .cv-state:empty rule; chat.js 30,158 / 10,750 gz (2 B left). site_send_test 27/0 with case H; run.sh green. Open: Odalys C13, live check. Learned: an empty <p> has 0 height with or without display:none, so a "takes no room" check must read computed display or the dock height (65 vs 61 px), else the CSS half goes untested.
 {% endraw %}
 
 

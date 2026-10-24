@@ -136,7 +136,7 @@ add(body, 'p', 'now-sub', 'Just finished');
 body.appendChild(list(rec, function (w) { return cap(w.name) + ': ' + (w.task || '') + (w.finished ? ', ' + ago(w.finished) + ' ago' : ''); }));
 }
 var q = st.queue || {};
-add(body, 'p', 'now-sub', 'Queue: ' + (q.runnable_count || 0) + ' tasks ready, ' + (q.blocked_count || 0) + ' blocked');
+add(body, 'p', 'now-sub', 'Queue: ' + (q.runnable_count || 0) + ' ready, ' + (q.blocked_count || 0) + ' waiting or blocked');
 if ((q.runnable || []).length) body.appendChild(list(q.runnable.slice(0, 5), function (t) { return '[' + t.kind + '] ' + t.text; }));
 body.appendChild(meters(st));
 add(body, 'p', 'muted', source + (st.at ? ' · updated ' + ago(st.at) + ' ago' : ''));

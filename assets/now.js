@@ -37,7 +37,11 @@ function work(o) { var r = Q('#chat-root'); return ((r && r.getAttribute('data-c
 function tiles() {
 QA('.cv-live').forEach(x => { at(at(at(x, 'role', 'button'), 'aria-controls', 'cv-brief'), 'aria-expanded', String(on)); });
 }
-function toggle() { on = !on; place(); }
+function toggle() {
+on = !on; place();
+var d = Q('.cv-dock'), a, b;
+if (on && d && !br.hidden) { a = br.getBoundingClientRect(); b = d.getBoundingClientRect(); if (a.left < b.right && b.left < a.right && a.bottom > b.top) W.scrollBy(0, a.bottom - b.top + 12); }
+}
 D.addEventListener('click', e => { var t = e.target.closest && e.target.closest('.cv-live'); if (t) { e.preventDefault(); toggle(); } });
 D.addEventListener('keydown', e => { var t = e.key === ' ' && e.target.closest && e.target.closest('.cv-live'); if (t) { e.preventDefault(); toggle(); } });
 var END = { limit: 'stopped at its turn limit', failed: 'failed', killed: 'stopped', cancelled: 'stopped' };

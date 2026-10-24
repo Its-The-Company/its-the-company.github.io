@@ -364,8 +364,8 @@ ta.value = LS.getItem(draftKey()) || '';
 barSend.disabled = send.disabled = !canSend();
 if (main) main.className = 'cv-desk' + (isOpen ? ' cv-open' : '');
 if (!isOpen) {
-var b = mk(dock, 'div', 'cv-bar'); put(b, fake); put(b, barSend);
-fake.textContent = ta.value.trim() ? ta.value.trim().split('\n')[0] : target() === 'new' ? 'Message the company...' : isMain(target()) ? 'Message the company...' : 'Reply to ' + toText() + '...';
+var b = mk(dock, 'div', 'cv-bar'); put(b, fake); put(b, barSend); put(dock, out);
+fake.textContent = ta.value.trim() ? ta.value.trim().split('\n')[0] : target() === 'new' || isMain(target()) ? 'Message the company...' : 'Reply to ' + toText() + '...';
 return;
 }
 to.textContent = 'To '; mk(to, 'b', null, toText());

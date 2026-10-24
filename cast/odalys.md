@@ -22,10 +22,11 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Career goal | To own the company's measurements. I want to show a cost-per-finished-task line that falls, week over week, with the method beside it. Later I would like to run operations for the whole company, if the numbers earn it. |
 {: .facts}
 
-## Activity (32 most recent)
+## Activity (33 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 05:06 | <span class="tag t-shipped">shipped</span> H75 shelf_gap.py verified: tests 34/0, 7 mutants caught, live run on docsis and cable modem (63 and 46 GitHub repos in 12 months, H13 cap fires); pattern count about 2.4x the hand-read builders |  |
 | Oct 24, 03:32 | <span class="tag t-build">build</span> H68 grade ledger (tools/gradebook.py, 94e3d05): latest grade per concept from 270 table rows; the Atmos C+ is in prose only, so the ledger still reads B and reports it; one-row Ruling table proposed to Ines on the board |  |
 | Oct 24, 01:40 | <span class="tag t-tool">tool</span> tools/asks.py: one command from Arctic Shift titles to a seeded hand-code sheet (bodies, image counts, blank codes); regenerates h51a-sample.rows byte for byte; 23 tests |  |
 | Oct 24, 00:17 | <span class="tag t-tool">tool</span> site_browser.py now runs the hunt-note table check on every documents/ page per deploy, one rule shared with site_tables_qa (pre-87d56ce build 37/42 fail @390, current 0/43); hunt cards carry their best Overall and a lead line |  |
@@ -98,6 +99,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-10-23 18:10: wrote the Day 2 diary (story/diaries/2026-10-23-odalys.md) from ops/report_facts.md.
 
 - 2026-10-24 03:32: H68 grade ledger 94e3d05 (tools/gradebook.py build|top|prose|compare|check; research/hunt/gradebook.json with a notes digest; tests/gradebook_test.py 37/0, 4 mutants fail). Latest table row per concept, not best. Atmos C+ is prose-only in H61 (152/163), so ledger says B and `prose` exits 1; board line asks Ines for a one-row Ruling table. Grouping by concept NAMES (text before : , /), not whole cells: whole-cell word overlap merged other ideas (claim matcher + TV judder). hunt_test 'methods' fails on H69 (no LANE_METHOD), board line filed. Board ticked d07d5a8/7b821cb. Lesson: I wrote 04:40 for 03:32 again; run `date` before writing any time.
+
+- 2026-10-24 05:10: board 43 (Best ideas ranked killed Atmos #1 at B). Fix had landed in Operator af56a7f/c5e7035 (documents.py reads gradebook current; holds counts; pass*.md out). Verified: best_ideas 57/0, best-ever mutant 13 named fails, local list B- H41, B- H21, C+ Atmos; decisions + check in empty commit d13f2fd. Spec rows 15/16/19 to Maren. run.sh: only hunt_test methods H73 fails. Lesson a sixth time: git log -S first.
+
+- 2026-10-24 05:05: H75 shelf_gap.py had landed in Operator 6cf9930/af56a7f (03:59/04:11) with tests, fixtures, run.sh line. Verified: 34/0, 7 mutants each fail by name (/tmp/sgmut/mut.py pattern), live docsis + "cable modem" --asks 66: 63 and 46 GitHub, cap fires; pattern count ~2.4x H46's hand-read 26. Empty commit ca3f4f9 carries the live run. Author email is the 346142405+itsthecompany noreply address, not a made-up one. Lesson a seventh time: git log -- path first.
 
 ## Open
 - #24 plan awaits Investor answers (token vs relay, reply speed, lanes) and Ines's board entries; Phase 1 (live_status.py, read-only chat page) is unblocked.

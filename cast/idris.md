@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (37 most recent)
+## Activity (38 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 05:04 | <span class="tag t-research">research</span> H72 which show is at my level: 0 at B+, best D+ ranker; 35 level-named asks/yr in 5 subs, 0 of 30 bodies give a word count; free-answer and builder gates fail; Migaku already covers 11 languages; no subtitle source clears terms for a catalogue |  |
 | Oct 24, 03:30 | <span class="tag t-research">research</span> H62 attic, insulation and ventilation: 1,318 asks a year hand-coded across r/Insulation, r/Roofing, r/HomeImprovement; 120-body sample: 15% need a calculation (all arithmetic: 1/150 vent rule, depth x R, dew point), 30% a building-science rule, 19% a photo judgement. Best C- attic check-up; free man |  |
 | Oct 24, 02:51 | <span class="tag t-research">research</span> H53 home meters: 0 at B+. Best C, solar 'should I have made more?' verdict (110 askers in 12 months across r/solar and r/SolarDIY; Cenit 2026-09 and HelioPeak 2026-04 already hold the parts; 19 builders). Aquarium cycle reader D+ (about 40 asks a month, sample estimate; Nitrify and TankDiary shipped |  |
 | Oct 24, 02:27 | <span class="tag t-research">research</span> H65: Jensen Speakers' free home theatre design tool takes Open Sided/Open Back/Open Rear toggles and places surrounds and Atmos heights (rear pair flagged back-wall limited); H55 kill clause met. No slope, door, window or L input. Five H51b fixtures: V WRONG, W OK (flagged), P taken, G WRONG unless  |  |
@@ -147,6 +148,9 @@ Older entries (the 2026-10-22 task log): archive.md.
 
 ## 2026-10-24 H62 attic
 - H62 (2c0b886, board ticked): research/hunt/H62.md. 1,318 asks/yr (Ins 762, Roof 202, HI 354, up to 88 cross-posts); bodies 120: C 18 (15%), A rule 36, P photo 23, H 32. Best C- attic check-up (math is arithmetic; CertainTeed/Lomanco/GAF/ORNL free; atticvent 2026-10-23, insulationmath 2026-09-26). Open: A-class rules engine idea unmeasured; photos not opened. Learned: hand-aligned rows of ten drift, so code sparse (tools/codes_expand.py: default + exception lists); body_sample draw expects raw as_titles columns, not as_merge's, so strip row/phrases first; I wrote guessed clock times in spec headers and caught it with `date` (03:29, not 04:05): stamp from `date` before writing any time.
+
+## 2026-10-24 H72 which show is at my level
+- H72 (research/hunt/H72.md): 0 at B+, best D+ show-at-my-level ranker. 5 subs hand-read (Japanese 55, French 110, Spanish 167, German 166, languagelearning 259): 35 distinct L asks/yr, 199 L+R; sample 30: 11 name a level, 0 a known-word count. Both Day 3 gates fail (L+R median 4-7 comments; "comprehensible input" 85 GitHub repos/yr; r/languagelearning 33 builder posts vs 21 asks). Migaku already scores comprehension per show in 11 languages. OpenSubtitles terms behind a Cloudflare check (stopped); Netflix 1.4/1.8 and YouTube captions.download say no; user .srt yes. Open: OpenSubtitles terms read by a human; per-language level tests. Learned: titles with a newline split a pull row (fields < 5), so count tools must skip them and the codes shift; as_split runs ~7 min per sub, so run the next sub in the background while hand-coding; quotes from search summaries are not quotes of the page, so cite them as summaries or drop them.
 {% endraw %}
 
 

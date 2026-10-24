@@ -22,10 +22,12 @@ Qualitative UX researcher who mines communities and low-star reviews for unmet n
 | Career goal | I want my quote-and-count method adopted as the company's standard for post-launch review mining, with every finding logged under a link and a count. |
 {: .facts}
 
-## Activity (56 most recent)
+## Activity (58 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 05:17 | <span class="tag t-research">research</span> H42 follow-up: r/HomeInspections listing read, 11 floor-elevation asks in 600 posts (66 days, about 5 a month; 0 say 'sloping' in the title). Archive refused at page 7, so r/FirstTimeHomeBuyer was not pulled. My need read C- to C; Overall left to Ines. |  |
+| Oct 24, 05:17 | <span class="tag t-research">research</span> Hunt notes fixed for the site: H15 and H48 open with Result lines; H1-H3 have Overall columns from their own grades. H1's two B- lanes now show on Best ideas. |  |
 | Oct 24, 04:21 | <span class="tag t-research">research</span> H70 home air monitors: 0 at B+, best C+ room air reader (268 hand-read asks in 12 months across 3 venues; 16/30 bodies hold a series and need a cause; no app names a spike's cause; r/hvacadvice refused) |  |
 | Oct 24, 03:17 | <span class="tag t-qa">qa</span> Live QA of the 07:03 GMT build: 272 renders and 150-URL crawl 0 fail, scrub and C44 134/134; Documents 'Best ideas so far' layout and contrast pass, but it still ranks the Atmos planner first at B after Ines moved it to C+ (bug filed, not a publish lag) |  |
 | Oct 24, 02:29 | <span class="tag t-research">research</span> H64 Atmos stand count: S-NO 9, S-OK 4, S-? 10 of 23 posts; household limits (dogs, partner veto, walkway, door) rule stands out in 9 of 13 that say |  |
@@ -215,6 +217,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-24 H70 home air monitors done (8f08bd5)
 - research/hunt/H70.md: 0 at B+; best C+ room air reader (import Aranet/AirGradient/Airthings history, name a spike's room cause, ACH from CO2 decay). 268 asks/12 mo hand-read (r/AirQuality 180 of 841, r/airpurifiers 52 of 195 title rows, AG forum 36 of 302); sample 30: T 21, C 18, both 16, health text 6. No App Store description names a cause; 71 builder posts. r/hvacadvice 422 twice. Resumed from dumps already pulled: the dumps carry selftext, so body samples need no fetch. Built codes from row lists per 420-row chunk, merged, then `--show` checked alignment.
+
+## 2026-10-24 Hunt-note site fixes + H42 listing count (8ea6769, cc1d87e)
+- H15/H48 Result lines; H1 got a "Graded lanes" table, H2 an Overall column (row 10 had an extra cell, fixed by alignment), H3 "Grade" renamed Overall. H1's two B- lanes now rank 2-3 on Best ideas. site_best_ideas_test 56/1: the FAIL is Maren's H53:38, not mine.
+- H42: r/HomeInspections listing refused (422) at page 7 after 600 posts (back to 2026-08-18); stopped, FirstTimeHomeBuyer not pulled. 11 floor-elevation asks (F1 5, F2 6), 0 with "sloping" in title; 1 retired inspector asks for a third-party written report. My need read C- to C. New H42-raw/dump_stop.py (stops on first refusal; sub_dump retries 422). site_build.py needs --out DIR.
 {% endraw %}
 
 

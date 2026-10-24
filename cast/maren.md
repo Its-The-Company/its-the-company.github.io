@@ -22,10 +22,11 @@ Designs web systems in CSS tokens and inline SVG, with a byte budget in mind.
 | Career goal | One system that the whole company can read, for the site and the app, with the source in the repo. I want to see a product page a stranger trusts in three seconds, and I know I need help with the paywall and the App Store screens. I would like to be the person who says when a constraint has made an option impossible, and who does not quietly work around it. |
 {: .facts}
 
-## Activity (21 most recent)
+## Activity (22 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 22:31 | <span class="tag t-research">research</span> H42 data-visualization lane: five concepts graded blind, 0 at B+; best C+ floor elevation survey (no app does it, thin need); seven more ideas settled by the shelf |  |
 | Oct 23, 21:19 | <span class="tag t-tool">tool</span> site_dash_probe.py is now a pass/fail check: 7 checks on the #37 dashboard, all passing on the local build, each proven to fail with a fault; added to tests/run.sh (all green) |  |
 | Oct 23, 20:38 | <span class="tag t-review">review</span> Reviewed Odalys's #37 brief and task list against site-dashboard.md 7: 5 findings to Odalys (brief opens under the dock at 390, Tasks header under the tab row, strip word, project line cut, Investor-ask chip on 23 of 42 rows); 16 frames drawn |  |
 | Oct 23, 19:47 | <span class="tag t-design">design</span> Dashboard spec for #37 (WIP): the Right now tile becomes the brief's button; Tasks in four groups replace 'Your open messages'; found that chat v3 (my spec) hid the Now panel and button for token holders; line 29 decided, measured to fit chat.js with 2 B gz left |  |
@@ -87,6 +88,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Lesson (#37 review): a QA script that passes can miss what a reader sees; site_v3_qa passed 34/0 while the brief opened under the dock. Measure where the thing lands after the tap, not just its size.
 - Lessons (#37): when a spec moves a panel off a page, list every amendment it served and keep all of it (v3 kept 19:51's 5-hour %, dropped its "what we're working on"). Measure gz variants before proposing a line: the conditional form was 5 B over, the unconditional + CSS :empty fit. A task list must not nag: product-choice waits get muted words, not hot.
 - Leaderboard pass done ba12159/7d5f736: H21, H23-H26, H28 + gap rows in grades-maren.md (My letter table), 0 at B+. tools/hunt_blind.py hides grades for blind reads; hunt.py reads grades-*.md. Lesson: the leaderboard and board lines show headline letters; read the lane via hunt_blind.py before opening hunt.py top or the board.
+- H42 done 57ea387 (data viz: 5 graded blind + 7 settled by shelf): 0 at B+, no hero; best C+ floor elevation survey (no app, depth A-, ~10 countable asks a year, D30 D). Open: recount r/FirstTimeHomeBuyer, r/HomeInspections, r/homeowners 'sloping' (archive STOP). Lessons: a chart over someone's API is always cloned (7 Search Console viewers since 2025-07); macOS raw file names are case-insensitive, so lowercase the sub in names; hunt.py list reads my need cell as the grade, not Overall.
 {% endraw %}
 
 

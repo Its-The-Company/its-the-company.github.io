@@ -4,8 +4,22 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-10-23T21:19:35-04:00</updated>
+<updated>2026-10-23T22:41:04-04:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Build: Queue wait limit now per tied block (plan 6.6): at most three distinct outside rows; 8 tes</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-23:event/2026-10-23t22-41-04-04-00-build-queue-wait-limit-now-per-tied-block-pla</id>
+<updated>2026-10-23T22:41:04-04:00</updated>
+<summary type="text">Queue wait limit now per tied block (plan 6.6): at most three distinct outside rows; 8 tests, 5 fail on old code</summary>
+</entry>
+<entry>
+<title>Review: C13 review of Idris&#x27;s e5ffe2b (&#x27;Sent as #N&#x27; under the phone dock bar): correct, budget hol</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-23:event/2026-10-23t22-07-05-04-00-review-c13-review-of-idris-s-e5ffe2b-sent-as</id>
+<updated>2026-10-23T22:07:05-04:00</updated>
+<summary type="text">C13 review of Idris&#x27;s e5ffe2b (&#x27;Sent as #N&#x27; under the phone dock bar): correct, budget holds (10,750/10,752 gz), H guarded by mutation; two P3 findings (3-line state covers 29 px of footer at 390; no test for bar Send failing)</summary>
+</entry>
 <entry>
 <title>Review: C13 review of Odalys&#x27;s 05c86a6: port of 17faacb faithful, no finding; a dropped label-fail</title>
 <link href="https://its-the-company.github.io/log/"/>
@@ -341,19 +355,5 @@
 <id>tag:its-the-company.github.io,2026-10-23:event/2026-10-23t01-29-59-04-00-decision-picked-site-v2-home-option-b-panel-wit</id>
 <updated>2026-10-23T01:29:59-04:00</updated>
 <summary type="text">Picked site v2 home option B (Panel) with three required changes from A; recorded in site-v2.md section 9</summary>
-</entry>
-<entry>
-<title>Decision: Site v2 plan written (ops/plans/site-v2.md): nav of four, home is the chat, split the buil</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-23:event/2026-10-23t01-09-53-04-00-decision-site-v2-plan-written-ops-plans-site-v2</id>
-<updated>2026-10-23T01:09:53-04:00</updated>
-<summary type="text">Site v2 plan written (ops/plans/site-v2.md): nav of four, home is the chat, split the builder first, product and visual designer round opened today</summary>
-</entry>
-<entry>
-<title>Review: Reviewed Odalys&#x27;s site JS and site_build.py: fixed a status.json scrub that could break th</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-23:event/2026-10-23t00-39-47-04-00-review-reviewed-odalys-s-site-js-and-site-build</id>
-<updated>2026-10-23T00:39:47-04:00</updated>
-<summary type="text">Reviewed Odalys&#x27;s site JS and site_build.py: fixed a status.json scrub that could break the build; composer now behind chat_composer flag (default off); mark urgent mentions the allowlist; 10 open findings in ops/plans/site-review.md</summary>
 </entry>
 </feed>

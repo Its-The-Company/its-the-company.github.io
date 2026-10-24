@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (28 most recent)
+## Activity (29 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 22:48 | <span class="tag t-research">research</span> H45 deep formats done: 0 at B+, best D+ (DXF/DWG revision compare, FIT repair bench, subtitle sync to audio, tied). 2026 viewers already exist for every format incl. HDF5/NetCDF; 0 DWG/DXF asks in r/iphone, 0 on Ask Different in 12 months. Apple Support Communities search is behind a human-verificat |  |
 | Oct 23, 21:19 | <span class="tag t-review">review</span> C13 review of Odalys's 05c86a6: port of 17faacb faithful, no finding; a dropped label-failure test at HEAD is from Idris's own 2fa1cca, board line to restore it; branch idris/allow-mentions can be archived |  |
 | Oct 23, 20:49 | <span class="tag t-build">build</span> Phone '+' then Send now shows 'Sent as #N' under the dock bar (#37, e5ffe2b); chat.js 10,750 of 10,752 B gz; site_send_test case H fails on either half of the fix removed |  |
 | Oct 23, 19:31 | <span class="tag t-fix">fix</span> Site Send fixed (#37): two bugs, the first mine from chat v3 (native clearTimeout called as a method threw before any POST), then a self-chained promise on the first message to Main; browser test 22/0 (9ab430e). Live after the publish. |  |
@@ -111,6 +112,9 @@ Older entries (the 2026-10-22 task log): archive.md.
 - Send was dead in every browser since chat v3, and the bug was mine (2fa1cca): S.stop was the native clearTimeout, called as a method, so "Illegal invocation" before any POST. Behind it was a second one, from e714ae8: the first message to Main rejected with "Chaining cycle detected". Fixed in 9ab430e; tests/site_send_test.py (Chromium, 7 cases) 22/0 and in run.sh; board lines for Wrenna's live check and Maren's phone "+" finding. Open: the live check after publish; the JSC harness's synchronous Promise. Learned: the JSC stubs were kinder than any browser (a plain-function timer, then-callbacks run at once), so Send needs a test that clicks it in a real browser; the records hook blocks removing a worktree (it holds log/), so verify on a `git archive HEAD` copy instead.
 - 'Sent as #N' under the phone bar (e5ffe2b, board 2b6b811): put(dock,out) in bar branch, merged placeholder, .cv-state:empty rule; chat.js 30,158 / 10,750 gz (2 B left). site_send_test 27/0 with case H; run.sh green. Open: Odalys C13, live check. Learned: an empty <p> has 0 height with or without display:none, so a "takes no room" check must read computed display or the dock height (65 vs 61 px), else the CSS half goes untested.
 - C13 of Odalys's 05c86a6 (21:20): port of 17faacb faithful (JS and test hunks identical), no finding. Gap at HEAD is mine: 2fa1cca dropped the "empty allowlist + failed label" test; bare-string mutation passes 175/0. Board: my [test] line to restore it; Operator line to archive idris/allow-mentions. Learned: when a rewrite follows a port, review HEAD too, not just the commit; mutate a `git archive` copy with a control mutation to prove the copy is under test.
+
+## 2026-10-23 H45 deep formats
+- H45 (research/hunt/H45.md, raw in H45-raw/): 0 at B+, best D+ three tied (DXF/DWG revision compare, FIT/TCX repair bench, subtitle sync to audio); D for research data and e-book repair. Viewers for every format already shipped in 2026 (HDF5 2026-08-07, NetCDF 2026-08-04, 16 DWG/DXF); asks to act on these files on an iPhone near zero. Open: home-venue counts (r/AutoCAD compare, r/Strava merge/crop) when Arctic Shift answers; read SubPlayer/SubEnvoy/Subfier for audio sync. Learned: Apple Support Communities search redirects to /verify-human/ (human check, stop); zsh doesn't word-split $ids, so pass ids literally or ${=ids}; se_asks rows start "- ", count from its total line; hunt.py takes "A fabricator" as grade A, so put Overall right after the concept name; Arctic Shift 422'd every r/iphone/r/ipad query 22:27-22:45 ET (file times) and as_search wrote nothing in 15 min; take times from file mtimes, never from a guess.
 {% endraw %}
 
 

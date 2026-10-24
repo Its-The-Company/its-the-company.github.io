@@ -22,10 +22,11 @@ Designs web systems in CSS tokens and inline SVG, with a byte budget in mind.
 | Career goal | One system that the whole company can read, for the site and the app, with the source in the repo. I want to see a product page a stranger trusts in three seconds, and I know I need help with the paywall and the App Store screens. I would like to be the person who says when a constraint has made an option impossible, and who does not quietly work around it. |
 {: .facts}
 
-## Activity (24 most recent)
+## Activity (25 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 00:55 | <span class="tag t-research">research</span> H59: buyer's phrases committed before H56 (7287e30); Atmos planner second grade B- overall (need B-, novelty B, depth A-, D30 C-, D90 C+); my three phrases return 0 planners in 45 store rows; H51b, H53, H54, H56, H57, H58 waiting |  |
 | Oct 24, 00:04 | <span class="tag t-shipped">shipped</span> Design pass on Company > Work and Documents tables: Overall grade in view before scrolling on 33 of 33 tables (was 9 at 1280, 1 at 390); site.css +48 B gz |  |
 | Oct 23, 23:44 | <span class="tag t-research">research</span> H40c media-record lane finished: 4 concepts, 0 at B+; best C+ Library Watch for Apple Music (48 library-loss posts in 12 months; Hezel and Soundcheck already on the shelf) |  |
 | Oct 23, 22:31 | <span class="tag t-research">research</span> H42 data-visualization lane: five concepts graded blind, 0 at B+; best C+ floor elevation survey (no app does it, thin need); seven more ideas settled by the shelf |  |
@@ -93,6 +94,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - H42 done 57ea387 (data viz: 5 graded blind + 7 settled by shelf): 0 at B+, no hero; best C+ floor elevation survey (no app, depth A-, ~10 countable asks a year, D30 D). Open: recount r/FirstTimeHomeBuyer, r/HomeInspections, r/homeowners 'sloping' (archive STOP). Lessons: a chart over someone's API is always cloned (7 Search Console viewers since 2025-07); macOS raw file names are case-insensitive, so lowercase the sub in names; hunt.py list reads my need cell as the grade, not Overall.
 - H40c done 017bcfa (media records: 4 concepts): 0 at B+, no hero; best C+ Library Watch (Apple Music library-loss diff, 48 r/AppleMusic posts/12 mo, 4 tool-shaped; Hezel 2023 446 ratings + Soundcheck 2026 on shelf; 4 Hezel reviews say auto-backup fails). Open: Apple Support Communities count; a fixture for silent label removal needs an Investor-owned account. Lessons: music-sub 'missing/greyed' posts are mostly support questions, so count tool-shaped asks apart; my first run drifted to IMAX seats and speaker layout (not the user's record); check the lane's scope before pulling.
 - Work/Documents design pass done ce15074 (board e75a0ca): short-value columns drop 84 px floor, Overall sticky right (cut 24/33 -> 0 at 1280), doc prose 70ch, waiting/blocked row rules; site.css gz +48. Per-column rules ship in documents.py BODY_CSS, not site.css. tools/site_design_shots.py for before/after. I changed Idris's site_tables_qa exemption (data-n whole cells): he should review. Lesson: CSS tied to generated data attributes belongs next to the generator and only on its pages; home pays for every byte in site.css.
+- H59 done 7287e30/439d6dd/ef92a09 (research/hunt/grades-maren-h59.md): phrases first; Atmos B- (need B-, nov B, depth A-, D30 C-, D90 C+). Open: grade H51b, H56, H57, H58, H53, H54 as they commit. Lesson: git log subjects carry grades, so a 'what landed' check leaks; use git ls-files or --format=%h only.
 {% endraw %}
 
 

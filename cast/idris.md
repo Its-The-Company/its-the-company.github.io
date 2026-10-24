@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (31 most recent)
+## Activity (32 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 01:01 | <span class="tag t-research">research</span> H58: RoomPlan returns walls, doors, windows, openings, floors, 16 object kinds but no ceiling; Atmos planner depth B; E hand-marked only; LiDAR ~49% of top-10 iPhones (TelemetryDeck, estimate) |  |
 | Oct 24, 00:00 | <span class="tag t-research">research</span> H49 papers with code that no app ships: 0 at B-; best C- paper notebook to editable ink (InkSight, Apache 2.0, but IAM in its training mix); ZIPA out on CC-BY-4.0 weights; Moonshine's MIT badge hides 7 non-commercial models |  |
 | Oct 23, 23:50 | <span class="tag t-build">build</span> Documents tables readable: each table in its own scroll box; at 390 lane-note heights 852,620 -> 261,673 px, cells under 80 px on 0 of 40 notes (87d56ce); empty Write-ups hidden, one card title form (b15dc9c) |  |
 | Oct 23, 22:48 | <span class="tag t-research">research</span> H45 deep formats done: 0 at B+, best D+ (DXF/DWG revision compare, FIT repair bench, subtitle sync to audio, tied). 2026 viewers already exist for every format incl. HDF5/NetCDF; 0 DWG/DXF asks in r/iphone, 0 on Ask Different in 12 months. Apple Support Communities search is behind a human-verificat |  |
@@ -123,6 +124,9 @@ Older entries (the 2026-10-22 task log): archive.md.
 
 ## 2026-10-23/24 H49 papers with code
 - H49 (9168660, board 11d4d6a, pushed): 0 at B-; best C- paper notebook to editable ink (InkSight, TMLR 2025, Apache code+weights; no app on the shelf turns a photo into strokes; 1 asker in 12 months, Goodnotes request 3 votes). Granite-Docling page-to-Markdown D+ (7 PDF-to-Markdown entrants 2026-06..09), Moonshine captions D, MegaLoc rephotography D. Open: data-viz and media-data papers not searched to the end; InkSight IAM training-data question needs an Investor read (C6); whether any note app imports editable strokes. Learned: the badge lies both ways, so read the file: Moonshine's "MIT" LICENSE makes 7 non-English models non-commercial, ZIPA code MIT but weights CC-BY-4.0, SmolDocling CDLA; HF model repos often carry no LICENSE file, only card metadata; diff Apache text against SPDX canonical to prove it unmodified; zsh has no `timeout`.
+
+## 2026-10-24 H58 Atmos capture path
+- H58 (a4bf9fc, board 64fd516): research/hunt/H58.md. RoomPlan Surface.Category has no ceiling (floor/door/opening/wall/window); ceiling only from wall dimensions or polygonCorners tops (iOS 17). V/P/R in part, W/G/A captured, E hand-marked only; depth B (saw Ines's B first, said so). LiDAR = 12 Pro..17 Pro iPhones + iPad Pro 2020+; TelemetryDeck top-10 week 2026-09-28: 49.4% LiDAR (estimate, topN only, no republish). Open: device spike after Day 7, does ARKit .ceiling mesh arrive while RoomPlan holds the session (init(arSession:)). Learned: Apple doc pages read cleanly as JSON at developer.apple.com/tutorials/data/documentation/<path>.json; support.apple.com guide text comes out with curl -L -A Mozilla on the /en-us/guide/iphone/<id>/26.0/ios/26.0 form; TelemetryDeck CSV/JSON links sit in the page HTML (cdn.sanity.io) and the JSON shows the query (topN, threshold 10).
 {% endraw %}
 
 

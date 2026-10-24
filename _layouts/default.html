@@ -579,6 +579,13 @@ main.cv-desk.cv-open{padding-bottom:200px}
 @media (max-width:879px){main.cv-desk,main.cv-desk.cv-open{padding-bottom:0}
   main.cv-desk+footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}main.cv-desk.cv-open+footer{padding-bottom:calc(200px + env(safe-area-inset-bottom))}}
 @media (min-width:880px){.cv-view>.cv-glance{display:none}}
+/* Odalys C13 of e5ffe2b: a 3-line state line ('Not sent: ...', urgent warnings) made the folded dock 125 px, over the
+   96 px kept clear, so ~29 px of the footer's last row hid under it for up to 30 s. The line now holds at most 3 lines
+   (more scrolls inside it, nothing cut), and while it shows the footer keeps that much more room (tests/site_send_test.py I). */
+.cv-dock .cv-state{max-height:calc(3 * var(--lh-body) * var(--fs-0));overflow-y:auto}
+@media (max-width:879px){
+  main.cv-desk:has(.cv-dock .cv-state:not(:empty))+footer{padding-bottom:calc(96px + var(--s1) + 3 * var(--lh-body) * var(--fs-0) + env(safe-area-inset-bottom))}
+  main.cv-desk.cv-open:has(.cv-dock .cv-state:not(:empty))+footer{padding-bottom:calc(200px + var(--s1) + 3 * var(--lh-body) * var(--fs-0) + env(safe-area-inset-bottom))}}
 
 /* ---------- Company > Work (/company/work.html, tools/site/work.py; owner: Idris) ---------- */
 .wk-sum{display:flex;align-items:baseline;gap:var(--s2);margin:0 0 var(--s3);color:var(--muted)}.wk-sum .dot{flex:none;position:relative;top:-1px}

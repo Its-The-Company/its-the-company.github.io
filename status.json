@@ -1,78 +1,41 @@
 {
  "schema": 1,
- "at": "2026-10-24T02:54:10.206067+00:00",
+ "at": "2026-10-24T03:06:16.568194+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T21:48:00-04:00"
+  "started": "2026-10-23T22:54:24-04:00"
  },
- "workers": [],
- "recent": [
+ "workers": [
   {
-   "name": "odalys",
-   "task": "[build] Odalys: Work page title and dedupe fixes",
+   "name": "idris",
+   "task": "[design] Idris dock CSS fix and 403 test",
    "model": "opus",
-   "started": "2026-10-24T02:31:32.599Z",
-   "seconds": null,
-   "finished": "2026-10-24T02:53:41.224000+00:00"
+   "started": "2026-10-24T02:55:09.626Z",
+   "seconds": 666,
+   "finished": null,
+   "effort": "high"
   },
   {
    "name": "idris",
-   "task": "[research] Idris: H45 deep formats",
+   "task": "[research] Idris H45 follow-up counts",
    "model": "opus",
-   "started": "2026-10-24T02:26:40.055Z",
-   "seconds": null,
-   "finished": "2026-10-24T02:49:06.915000+00:00"
+   "started": "2026-10-24T02:55:14.536Z",
+   "seconds": 662,
+   "finished": null,
+   "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[build] Odalys: per-block MAX_WAITS",
+   "task": "[tools] Odalys hunt.py Overall column fix",
    "model": "opus",
-   "started": "2026-10-24T02:25:43.169Z",
-   "seconds": null,
-   "finished": "2026-10-24T02:41:09.848000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[research] Maren: H42 data-viz concepts",
-   "model": "opus",
-   "started": "2026-10-24T02:16:55.962Z",
-   "seconds": null,
-   "finished": "2026-10-24T02:31:25.468000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] Wrenna: H44 dated demand",
-   "model": "opus",
-   "started": "2026-10-24T02:07:21.803Z",
-   "seconds": null,
-   "finished": "2026-10-24T02:26:31.806000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[research] Ines: H46 friction moats",
-   "model": "opus",
-   "started": "2026-10-24T02:05:17.758Z",
-   "seconds": null,
-   "finished": "2026-10-24T02:25:36.337000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[review] Ines: Investor-eye site read + plan 6.6",
-   "model": "opus",
-   "started": "2026-10-24T02:10:50.368Z",
-   "seconds": null,
-   "finished": "2026-10-24T02:16:48.787000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[test] Wrenna: live QA of 21:47 deploy",
-   "model": "opus",
-   "started": "2026-10-24T01:58:57.005Z",
-   "seconds": null,
-   "finished": "2026-10-24T02:10:42.855000+00:00"
+   "started": "2026-10-24T02:55:18.685Z",
+   "seconds": 657,
+   "finished": null,
+   "effort": "high"
   }
  ],
+ "recent": [],
  "queue": {
   "runnable": [
    {
@@ -123,28 +86,28 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 18.0,
-   "resets_at": "2026-10-24T04:59:59.926807+00:00",
+   "pct": 25.0,
+   "resets_at": "2026-10-24T04:59:59.516504+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 82.0,
+   "left": 75.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 29.0,
-   "resets_at": "2026-10-25T06:59:59.926828+00:00",
+   "pct": 30.0,
+   "resets_at": "2026-10-25T06:59:59.516527+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 71.0,
+   "left": 70.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 11.0,
-   "resets_at": "2026-10-25T06:59:59.926998+00:00",
+   "resets_at": "2026-10-25T06:59:59.516718+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T21:47:59.749691-04:00"
+  "read_at": "2026-10-23T22:54:24.123205-04:00"
  },
  "ui": {
-  "week_pct": 0.029,
+  "week_pct": 0.026,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -156,18 +119,31 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T22:02:59-04:00",
+ "next_tick": "2026-10-23T23:09:24-04:00",
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P3 (Odalys C13 of e5ffe2b): at 390 x 844 with the dock folded, a 3-line status (403 'Not sent', urgent...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[design] Idris dock CSS fix and 403 test",
+   "model": "opus",
+   "since": "2026-10-24T02:55:09.626Z",
    "next": [
-    "Idris, P3 (Odalys C13 of e5ffe2b): site_send_test case...",
-    "Idris, P3 (H45 follow-up, de664a1): when Arctic Shift..."
-   ]
+    "Idris, P3 (Odalys C13 of e5ffe2b): at 390 x 844 with the...",
+    "Idris, P3 (Odalys C13 of e5ffe2b): site_send_test case..."
+   ],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] Odalys hunt.py Overall column fix",
+   "model": "opus",
+   "since": "2026-10-24T02:55:18.685Z",
+   "next": [
+    "Odalys, P3 (Maren 738f26f): python3 tools/hunt.py list...",
+    "Odalys, P3 (Ines site read 22:25): Home 'Right now' tile..."
+   ],
+   "effort": "high"
   },
   {
    "name": "Wrenna",
@@ -178,16 +154,6 @@
    "next": [
     "Wrenna: site_qa.py checks for the additions against...",
     "Wrenna: QA the live site after every deploy: every page..."
-   ]
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P3 (Maren 738f26f): python3 tools/hunt.py list shows the Need grade instead of Overall for H41 and H42 rows...",
-   "model": null,
-   "since": null,
-   "next": [
-    "Odalys, P3 (Ines site read 22:25): Home 'Right now' tile..."
    ]
   },
   {
@@ -213,7 +179,35 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "design",
+    "t": "Dock CSS fix and 403 test",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-24T02:55:09.626Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "research",
+    "t": "H45 follow-up counts",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-24T02:55:14.536Z",
+    "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Hunt.py Overall column fix",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-24T02:55:18.685Z",
+    "o": "c"
+   }
+  ],
   "open": [
    {
     "w": "Idris",

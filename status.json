@@ -1,87 +1,77 @@
 {
  "schema": 1,
- "at": "2026-10-24T14:20:11.041049+00:00",
+ "at": "2026-10-24T15:12:51.515394+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-24T07:50:13-04:00"
+  "started": "2026-10-24T10:20:44-04:00"
  },
- "workers": [
-  {
-   "name": "wrenna",
-   "task": "[research] Wrenna H102 re-gate capped lanes",
-   "model": "opus",
-   "started": "2026-10-24T14:06:02.316Z",
-   "seconds": 848,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Wrenna",
+ "workers": [],
+ "who": "",
  "recent": [
   {
-   "name": "ines",
-   "task": "[review] Ines H95d blind grades of H89b",
+   "name": "odalys",
+   "task": "[tools] Odalys H111 method v2 in the tools",
    "model": "opus",
-   "started": "2026-10-24T14:05:56.768Z",
+   "started": "2026-10-24T14:42:09.623Z",
    "seconds": null,
-   "finished": "2026-10-24T14:09:54.597Z"
+   "finished": "2026-10-24T15:11:55.596000+00:00"
+  },
+  {
+   "name": "wrenna",
+   "task": "[research] Wrenna H113 weak leader paying shelf",
+   "model": "opus",
+   "started": "2026-10-24T14:47:23.047Z",
+   "seconds": null,
+   "finished": "2026-10-24T15:03:23.606000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] Ines H110b verdict",
+   "model": "fable",
+   "started": "2026-10-24T14:57:18.385Z",
+   "seconds": null,
+   "finished": "2026-10-24T15:02:14.552000+00:00"
   },
   {
    "name": "maren",
-   "task": "[review] Maren H95c blind grades of H89b",
+   "task": "[review] Maren H110b Gate 1 re-apply",
    "model": "opus",
-   "started": "2026-10-24T14:05:52.616Z",
+   "started": "2026-10-24T14:55:05.239Z",
    "seconds": null,
-   "finished": "2026-10-24T14:09:39.276Z"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] Wrenna H89b second backtest set",
-   "model": "opus",
-   "started": "2026-10-24T13:27:09.301Z",
-   "seconds": null,
-   "finished": "2026-10-24T14:05:27.976Z"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] Odalys H101 lane_gate + store_hints fixes",
-   "model": "opus",
-   "started": "2026-10-24T13:27:02.200Z",
-   "seconds": null,
-   "finished": "2026-10-24T13:40:13.438Z"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] Ines H61 pass 9 grades",
-   "model": "opus",
-   "started": "2026-10-24T13:27:16.237Z",
-   "seconds": null,
-   "finished": "2026-10-24T13:30:31.220Z"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] Wrenna H91 App Store search hints",
-   "model": "opus",
-   "started": "2026-10-24T12:58:06.359Z",
-   "seconds": null,
-   "finished": "2026-10-24T13:26:40.311Z"
+   "finished": "2026-10-24T14:57:09.037000+00:00"
   },
   {
    "name": "idris",
-   "task": "[research] Idris H80 plant light lane (resume)",
+   "task": "[review] Idris H110b Gate 1 re-apply",
    "model": "opus",
-   "started": "2026-10-24T12:58:11.285Z",
+   "started": "2026-10-24T14:52:22.435Z",
    "seconds": null,
-   "finished": "2026-10-24T13:25:45.472Z"
+   "finished": "2026-10-24T14:54:57.946000+00:00"
   },
   {
    "name": "ines",
-   "task": "[review] Ines H95 verdict and H94 ruling",
-   "model": "opus",
-   "started": "2026-10-24T12:58:00.806Z",
+   "task": "[plan] Ines H110 verdict on v2 rubric",
+   "model": "fable",
+   "started": "2026-10-24T14:47:36.325Z",
    "seconds": null,
-   "finished": "2026-10-24T13:02:56.893Z"
+   "finished": "2026-10-24T14:52:08.176000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[review] Maren H110 blind v2 re-grade",
+   "model": "fable",
+   "started": "2026-10-24T14:41:31.635Z",
+   "seconds": null,
+   "finished": "2026-10-24T14:47:26.074000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[review] Idris H110 blind v2 re-grade",
+   "model": "fable",
+   "started": "2026-10-24T14:40:18.382Z",
+   "seconds": null,
+   "finished": "2026-10-24T14:47:14.779000+00:00"
   }
  ],
  "queue": {
@@ -99,12 +89,12 @@
     "text": "Maren, P3 (Wrenna live QA 07:13): site_qa.py USAGE_WORDS ('share', 'week', 'budget') flags 30 research shares that..."
    },
    {
-    "kind": "plan",
-    "text": "Ines, P1, H61 Atmos B+ rule applied and the next grades: the B+ rule is already written in..."
+    "kind": "research",
+    "text": "Idris, P2, H114 weak leader on a paying shelf: Reference, Education, Navigation, Entertainment, Lifestyle (method..."
    },
    {
     "kind": "research",
-    "text": "Maren, P3, H74 which test do I use (refill 11, Ines 03:11; method: counted asks; science and research methods):..."
+    "text": "Ines, P1, H115 public datasets to explore (method v2, G2; the Investor's angle in; model: top model, high effort):..."
    }
   ],
   "blocked": [
@@ -129,30 +119,30 @@
     "text": "Unrelated side project; Collatz, workspace ~/unrelated/collatz); full text in log/board-archive-2026-10-23.md"
    }
   ],
-  "runnable_count": 24,
-  "blocked_count": 21
+  "runnable_count": 12,
+  "blocked_count": 30
  },
  "meter": {
   "five_hour": {
-   "pct": 13.0,
-   "resets_at": "2026-10-24T14:59:59.527299+00:00",
+   "pct": 21.0,
+   "resets_at": "2026-10-24T14:59:59.803721+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 87.0,
+   "left": 79.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 41.0,
-   "resets_at": "2026-10-25T06:59:59.527324+00:00",
+   "pct": 42.0,
+   "resets_at": "2026-10-25T06:59:59.803744+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 59.0,
+   "left": 58.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 13.0,
-   "resets_at": "2026-10-25T06:59:59.527792+00:00",
+   "resets_at": "2026-10-25T06:59:59.803903+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-24T07:50:13.315159-04:00"
+  "read_at": "2026-10-24T10:20:44.486624-04:00"
  },
  "ui": {
   "week_pct": 0.024,
@@ -167,19 +157,18 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-24T08:05:13-04:00",
+ "next_tick": "2026-10-24T10:35:44-04:00",
  "lanes": [
   {
    "name": "Wrenna",
-   "state": "running",
-   "task": "[research] Wrenna H102 re-gate capped lanes",
-   "model": "opus",
-   "since": "2026-10-24T14:06:02.316Z",
+   "state": "next",
+   "task": "Wrenna: site_qa.py checks for the additions against fixtures now (every % names its denominator; unrelated content...",
+   "model": null,
+   "since": null,
    "next": [
-    "Wrenna: site_qa.py checks for the additions against...",
-    "Wrenna: QA the live site after every deploy: every page..."
-   ],
-   "effort": "high"
+    "Wrenna: QA the live site after every deploy: every page...",
+    "Wrenna, P2, H99 the companion app owners hate, from App..."
+   ]
   },
   {
    "name": "Odalys",
@@ -188,8 +177,8 @@
    "model": null,
    "since": null,
    "next": [
-    "Odalys, P3, H77 subject coverage in tools/hunt.py...",
-    "Odalys, P2, H88b tools/blind_packet.py LANE so no grader..."
+    "Odalys, P2, H88b tools/blind_packet.py LANE so no grader...",
+    "Odalys, P2, site: the hunt funnel on /documents/ (refill..."
    ]
   },
   {
@@ -198,46 +187,32 @@
    "task": "Maren, P3 (Wrenna live QA 07:13): site_qa.py USAGE_WORDS ('share', 'week', 'budget') flags 30 research shares that...",
    "model": null,
    "since": null,
-   "next": [
-    "Maren, P3, H74 which test do I use (refill 11, Ines...",
-    "Maren, P2, H82 is my EV battery fading normally (refill..."
-   ]
+   "next": []
   },
   {
    "name": "Ines",
    "state": "next",
-   "task": "Ines, P1, H61 Atmos B+ rule applied and the next grades: the B+ rule is already written in...",
+   "task": "Ines, P1, H115 public datasets to explore (method v2, G2; the Investor's angle in; model: top model, high effort):...",
    "model": null,
    "since": null,
    "next": [
-    "Ines, P2, H83 damp basement and crawl space from the...",
-    "Ines, P1, H61 pass 9 grades as lanes land (refill 13):..."
+    "Ines, P1, blind second grades of H113 C1-C3 and the H103...",
+    "Ines, P2, H98 fields without apps, the arithmetic small..."
    ]
   },
   {
    "name": "Idris",
    "state": "next",
-   "task": "Idris, P2, H81 wood stove burn the owner watches but cannot judge (refill 12, Ines 05:33; method: counted asks plus...",
+   "task": "Idris, P1, H122 can an iPhone camera catch meteors at all (Operator from H113, 2026-10-24 11:10; H113 C1, the meteor...",
    "model": null,
    "since": null,
    "next": [
-    "Idris, P2, H93 Apple's built-in sound classifier as a...",
-    "Idris, P2, H97 is my photo library actually safe (refill..."
+    "Idris, P2, site: an Ideas library page (refill 13;..."
    ]
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H102 re-gate capped lanes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-24T14:06:02.316Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Idris",
@@ -300,6 +275,98 @@
     "o": "c"
    },
    {
+    "w": "Idris",
+    "k": "research",
+    "t": "H114 weak leader on a paying shelf",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "research",
+    "t": "H115 public datasets to explore",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "research",
+    "t": "H116 new doors",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "research",
+    "t": "H117 hobbies with spending and bad tools",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "H118 clients for things people already own, run or collect",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "research",
+    "t": "H119 learn a thing by doing",
+    "s": "wait",
+    "o": "c",
+    "y": 1
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "H120 desktop-paid with no iPhone sibling",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "research",
+    "t": "H121 wrong answers on a paying shelf",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "H112 tools/wiki_views.py",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "V2 grading pass as H113-H121 land",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "build",
+    "t": "Site: a 'Method v2' note on /documents/ beside Best ideas",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "research",
+    "t": "H122 can an iPhone camera catch meteors at all",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "review",
+    "t": "Blind second grades of H113 C1-C3 and the H103 seeds under the H110b ruling",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Ines",
     "k": "research",
     "t": "H50b store-search proxy for the Atmos layout planner",
@@ -336,71 +403,8 @@
    },
    {
     "w": "Ines",
-    "k": "plan",
-    "t": "H61 Atmos B+ rule applied and the next grades",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "research",
-    "t": "H74 which test do I use",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "H77 subject coverage in tools/hunt.py",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
-    "t": "H81 wood stove burn the owner watches but cannot judge",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "research",
-    "t": "H82 is my EV battery fading normally",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "research",
-    "t": "H83 damp basement and crawl space from the owner's hygrometer export",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "review",
-    "t": "H76 second grade",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "H61 pass 9 grades as lanes land",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
     "k": "research",
     "t": "H98 fields without apps, the arithmetic small trades do by hand on every job",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H90 logs a rule makes people keep, with arithmetic in them",
     "s": "next",
     "o": "c"
    },
@@ -413,44 +417,9 @@
    },
    {
     "w": "Idris",
-    "k": "research",
-    "t": "H93 Apple's built-in sound classifier as a generator",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
-    "t": "H97 is my photo library actually safe",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
     "k": "build",
     "t": "Site: an Ideas library page",
     "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "research",
-    "t": "H96 language learners' own review history",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "research",
-    "t": "H100 displays with no export, read by the camera over hours",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "review",
-    "t": "H83 second grade",
-    "s": "wait",
     "o": "c"
    },
    {
@@ -458,20 +427,6 @@
     "k": "research",
     "t": "H102 re-gate the lanes the builders count capped",
     "s": "wait",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "review",
-    "t": "H95d blind grades of H89b and the section 5 verdict",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "build",
-    "t": "Tests/hunt_test.py 'methods' fails in tests/run.sh",
-    "s": "next",
     "o": "c"
    },
    {
@@ -559,119 +514,75 @@
   ],
   "done": [
    {
-    "w": "Ines",
-    "k": "review",
-    "t": "H95d blind grades of H89b",
-    "at": "2026-10-24T14:09:54.597Z",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "review",
-    "t": "H95c blind grades of H89b",
-    "at": "2026-10-24T14:09:39.276Z",
-    "o": "c"
+    "w": "Odalys",
+    "k": "tools",
+    "t": "H111 method v2 in the tools",
+    "at": "2026-10-24T15:11:55.596000+00:00",
+    "o": "i"
    },
    {
     "w": "Wrenna",
     "k": "research",
-    "t": "H89b second backtest set",
-    "at": "2026-10-24T14:05:27.976Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "H101 lane_gate + store_hints fixes",
-    "at": "2026-10-24T13:40:13.438Z",
+    "t": "H113 weak leader paying shelf",
+    "at": "2026-10-24T15:03:23.606000+00:00",
     "o": "c"
    },
    {
     "w": "Ines",
     "k": "plan",
-    "t": "H61 pass 9 grades",
-    "at": "2026-10-24T13:30:31.220Z",
+    "t": "H110b verdict",
+    "at": "2026-10-24T15:02:14.552000+00:00",
     "o": "c"
    },
    {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H91 App Store search hints",
-    "at": "2026-10-24T13:26:40.311Z",
+    "w": "Maren",
+    "k": "review",
+    "t": "H110b Gate 1 re-apply",
+    "at": "2026-10-24T14:57:09.037000+00:00",
     "o": "c"
    },
    {
     "w": "Idris",
-    "k": "research",
-    "t": "H80 plant light lane",
-    "at": "2026-10-24T13:25:45.472Z",
+    "k": "review",
+    "t": "H110b Gate 1 re-apply",
+    "at": "2026-10-24T14:54:57.946000+00:00",
     "o": "c"
    },
    {
     "w": "Ines",
-    "k": "review",
-    "t": "H95 verdict and H94 ruling",
-    "at": "2026-10-24T13:02:56.893Z",
+    "k": "plan",
+    "t": "H110 verdict on v2 rubric",
+    "at": "2026-10-24T14:52:08.176000+00:00",
     "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "review",
+    "t": "H110 blind v2 re-grade",
+    "at": "2026-10-24T14:47:26.074000+00:00",
+    "o": "i"
+   },
+   {
+    "w": "Idris",
+    "k": "review",
+    "t": "H110 blind v2 re-grade",
+    "at": "2026-10-24T14:47:14.779000+00:00",
+    "o": "i"
    }
   ],
   "count": {
-   "next": 24,
-   "wait": 3,
+   "next": 12,
+   "wait": 12,
    "blocked": 18,
-   "you": 1
+   "you": 2
   }
  },
  "qr": [],
  "inbox": [
   {
-   "id": "c6384543023",
-   "state": "waiting",
-   "position": 1,
-   "eta": "2026-10-24T08:05:13-04:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Is there a problem with the search algorithm that\u2019s preventing us from gettin..."
-  },
-  {
-   "id": "c6385052359",
-   "state": "waiting",
-   "position": 2,
-   "eta": "2026-10-24T08:05:13-04:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Respond to the above urgently Urgent: friesevan jeremyfries"
-  },
-  {
-   "id": "c6385074661",
-   "state": "waiting",
-   "position": 3,
-   "eta": "2026-10-24T08:05:13-04:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Also, there seems to be quite a delay between sending a message and it being..."
-  },
-  {
-   "id": "c6385142759",
-   "state": "waiting",
-   "position": 4,
-   "eta": "2026-10-24T08:05:13-04:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Are you reading my recent messages on Main? Respond to this email with an ans..."
-  },
-  {
    "id": "i35",
    "state": "replied",
-   "position": 5,
+   "position": 1,
    "tasks": {
     "open": 1,
     "done": 0

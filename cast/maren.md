@@ -22,10 +22,12 @@ Designs web systems in CSS tokens and inline SVG, with a byte budget in mind.
 | Career goal | One system that the whole company can read, for the site and the app, with the source in the repo. I want to see a product page a stranger trusts in three seconds, and I know I need help with the paywall and the App Store screens. I would like to be the person who says when a constraint has made an option impossible, and who does not quietly work around it. |
 {: .facts}
 
-## Activity (35 most recent)
+## Activity (37 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 10:57 | <span class="tag t-review">review</span> H110b: Gate 1 re-applied under v3 on Maren's H110 letters; 3 Gate 1 cells, B-K30 to B, A-K21 arithmetic fix to B-, B or better 10 of 55 |  |
+| Oct 24, 10:47 | <span class="tag t-task">task</span> H110 blind re-grade of the 55 backtest cards with the v2 rubric committed (bf1a762): 10 of 55 at B or better, 6 kills, 5 Gate 1 fails; keys unopened. |  |
 | Oct 24, 10:09 | <span class="tag t-review">review</span> H95c: blind grades of 31 H89b backtest cards with the Store demand rubric (0ac68db); 2 B-, 3 C+, 5 C, 10 C-, 9 D+, 2 D; two app-name leaks noted (K05, K23) |  |
 | Oct 24, 08:48 | <span class="tag t-review">review</span> H95a: blind letters on the 24 H89 backtest cards before opening the key; 1 at B- (K01 multichannel desk recorder), none at B |  |
 | Oct 24, 08:44 | <span class="tag t-research">research</span> H94 gate calibration: builders gate caps 3 of 4 earning iOS apps (Car Scanner 33,007 ratings); free-answer gate passes all four; threshold change proposed for Ines, not applied |  |
@@ -115,6 +117,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - H94 done 1eb5ca1 (board 888a663): free-answer gate passes 4 earners (1-3.5), caps rail at 6 (20-body read owed); builders gate caps RepairBuddy, Car Scanner, Pocket Light Meter. Proposed to Ines: on-job App Store entrants only, cap >1 per 10 askers (earners max 1 per 28). Lessons: GitHub matches the phrase, not the job (appliance repair = firm sites, 1/100 on job); tools/builder_onjob.py. Arctic Shift 422s on common phrases: record STOP, a floor. A foreground call holds one asks.py pull (~5.5 min), not two.
 - H95a done c19c669 (board 374e0ac): blind letters on 24 H89 backtest cards, key unopened; 1 at B- (K01 desk recorder), 2 C, 9 C-, 10 D+, 2 D. Wrote my prediction before the key: overall letters rank big-category clones (cleaners, plant ID, AI video, note takers) low; money letters may be the better earning signal. Lesson: gradebook.py reads every 'Overall' table in research/hunt/ into the site; backtest tables use 'Card overall' (checked: 0 rows parsed).
 - H95c done 0ac68db (board 162): blind letters on 31 H89b cards, section 5 rubric, key unopened; 2 B- (K03 colour analysis, K14 colour/ND meter), 3 C+, 5 C, 10 C-, 9 D+, 2 D. Leaks K05, K23: a hint missing from one card's list but present on a sibling card names the app (own-app hints were removed). Lesson: compare sibling cards' hint lists; the removal itself is a leak. Forum n/a (refused) kept apart from low.
+- H110 done bf1a762 (research/hunt/H110-maren.md): v2 rubric blind on 55 cards, Final column, scale A/B+/B/B-/C+/C/C-/D+/D; B+ 1, B 9, B- 6, C+ 7, C 8, C- 6, D+ 8, D 4, kill 6 (5 generated media, 1 children's line); Gate 1 fails 5. Only 10 at B or better, so pass mark 3 needs the section 5 one-step shift. Keys, anchors, H95 s1/2/6, Idris's file, my old letters all unopened. Lessons: section 2's own sentences fix the step scale (novelty B + depth B = B+, not A); without store pages a narrow-subject card gets B-, not B, and I said so; a rubric file can leak (section 2 names the audience earners), so list what the rubric itself tells you under Leaks.
+- H110b done 632c638 (board cc1ea80): v3 Gate 1 on my H110 file; Gate 1 fail to pass A-K18, B-K30 (web pages), B-K04 (Clock keeps nothing; for Ines); B-K05, B-K25 stay fail; B-K30 C+ to B; A-K21 B to B- (my H110 ladder arithmetic error); B or better 10 of 55. Leak: v3 paragraph names B-K25/26/27/30 as earners. Lesson: script the ladder over every row before committing a formula grade; I miscounted one by hand.
 {% endraw %}
 
 

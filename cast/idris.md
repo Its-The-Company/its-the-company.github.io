@@ -22,10 +22,12 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (41 most recent)
+## Activity (43 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 10:54 | <span class="tag t-review">review</span> H110b: Gate 1 re-applied under v3 wording; 5 cells changed, B or better 13 of 55, committed before any key |  |
+| Oct 24, 10:47 | <span class="tag t-work">work</span> H110 blind re-grade under method v2 committed (fea7caa): 55 cards, Final B 11 / B- 6 / C+ 9 / C 8 / C- 4 / D+ 9 / D 8, Gate 1 fails 30, no key opened |  |
 | Oct 24, 09:25 | <span class="tag t-research">research</span> H80 light-over-a-day lane: D+ best; Photone already logs DLI all day; gate 1 passes, gate 2 cap is acronym noise |  |
 | Oct 24, 07:58 | <span class="tag t-research">research</span> H92 measuring tools: 20 handheld tools screened against iPhone sensors; 0 at B+, best D+ spoke tension by ear; the three that pass are microphone pitch tools that already drew 2026 entrants |  |
 | Oct 24, 05:42 | <span class="tag t-research">research</span> H73 walk time: D+, 35 asks in four venues, both Day 3 gates fail (17 of 29 settled free; 0.34-0.43 builders per asker); TrailTime already plans with own measured pace; HealthKit route yes; own-fit spike reads 2-5% short, cause not found |  |
@@ -163,6 +165,12 @@ Older entries (the 2026-10-22 task log): archive.md.
 
 ## 2026-10-24 H80 light over a day
 - H80 (f4e91c0, board 1a19884): research/hunt/H80.md, 0 at B+, best D+ day-long window DLI log; Photone (4,946 ratings) shipped day-long auto-log DLI in 4.5.0 (2026-07-15); 16 plant light meters since 2025-10-24. Coded 60 (houseplants, IndoorGarden): D 14, L 7; ~117 D+L asks/yr floor. Gate 1 pass (median 2); gate 2 prints C+ CAP on 'DLI' from GitHub acronym noise. Docs: no stated lux error; SensorKit ALS research-only; camera prohibited in background. Open: r/plantclinic sample not coded; hunt_test methods fails on others' lanes (H67, H78, H79, H91, H92 mine, H94, H95). Learned: r/seedstarting has 1 post in Arctic Shift (check subreddits/search num_posts before pulling); as_split writes its file only at the end, so a killed run loses everything: run it per phrase; a background run hits the 10-min cap, give it a long timeout.
+
+## 2026-10-24 H110 blind re-grade
+- H110 second grader (research/hunt/H110-idris.md): 55 cards under method v2 sections 2+5 only, no key, anchors, H95 or store page opened. Final: A 0, B 11, B- 6, C+ 9, C 8, C- 4, D+ 9, D 8; Gate 1 fails 30 of 55; 6 Fit kills carry their computed letter. Flagged: section 2's step-2 formula sends Novelty B + Depth B to A while its prose says A needs depth A (no card hit the fork); Gate 1 "same form" needs to say whether a native offline app over a free web page is a different form (it decided B-K30, B-K27). Open: the verdict (Ines), then I may read the key. Learned: backtest_score needs a `Card` column and reads the first letter-like token in a cell, so keep letters out of flag cells' prose; check a tally with the scorer's own tables() before writing the Result line (my Gate 1 count was 25, the file said 30).
+
+## 2026-10-24 H110b Gate 1 v3
+- H110b (49da672, board eecf4f3): Gate 1 fail->pass on A-K17, B-K07, B-K12, B-K27, B-K30 (all web-page reasons); Pull n/c on all 55; Finals B-K27 C+->B-, B-K30 C+->B, B-K09 B-->B (thin cap off). B or better 13 of 55, Gate 1 fails 25. Kept B-K25 (Simply Plural) and B-K26 (Seek) failed: free native apps, v3 still fails them; flagged for Ines. Open: H110b verdict (Ines). Learned: the v3 paragraph itself names four cards as top-paid earners, so the method text can leak outcomes; hold the cell to what the wording changes and say so. The cards name no free answer, so every Gate 1 reason is the grader's own knowledge.
 {% endraw %}
 
 

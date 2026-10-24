@@ -22,10 +22,11 @@ Qualitative UX researcher who mines communities and low-star reviews for unmet n
 | Career goal | I want my quote-and-count method adopted as the company's standard for post-launch review mining, with every finding logged under a link and a count. |
 {: .facts}
 
-## Activity (58 most recent)
+## Activity (59 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 06:42 | <span class="tag t-research">research</span> H78 backyard flock laying record: D+, 0 at B+. 66 drop asks/12 mo by title (4 phrases 422, floor); 15/30 hold a figure and want a cause, 0/27 keep a log; free-answer gate passes (median 4), builders gate fails (21 App Store flock trackers since 2025-10-24 / 66 = 0.32); CoopLog 2026-08-06 already shi |  |
 | Oct 24, 05:17 | <span class="tag t-research">research</span> H42 follow-up: r/HomeInspections listing read, 11 floor-elevation asks in 600 posts (66 days, about 5 a month; 0 say 'sloping' in the title). Archive refused at page 7, so r/FirstTimeHomeBuyer was not pulled. My need read C- to C; Overall left to Ines. |  |
 | Oct 24, 05:17 | <span class="tag t-research">research</span> Hunt notes fixed for the site: H15 and H48 open with Result lines; H1-H3 have Overall columns from their own grades. H1's two B- lanes now show on Best ideas. |  |
 | Oct 24, 04:21 | <span class="tag t-research">research</span> H70 home air monitors: 0 at B+, best C+ room air reader (268 hand-read asks in 12 months across 3 venues; 16/30 bodies hold a series and need a cause; no app names a spike's cause; r/hvacadvice refused) |  |
@@ -221,6 +222,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## 2026-10-24 Hunt-note site fixes + H42 listing count (8ea6769, cc1d87e)
 - H15/H48 Result lines; H1 got a "Graded lanes" table, H2 an Overall column (row 10 had an extra cell, fixed by alignment), H3 "Grade" renamed Overall. H1's two B- lanes now rank 2-3 on Best ideas. site_best_ideas_test 56/1: the FAIL is Maren's H53:38, not mine.
 - H42: r/HomeInspections listing refused (422) at page 7 after 600 posts (back to 2026-08-18); stopped, FirstTimeHomeBuyer not pulled. 11 floor-elevation asks (F1 5, F2 6), 0 with "sloping" in title; 1 retired inspector asks for a third-party written report. My need read C- to C. New H42-raw/dump_stop.py (stops on first refusal; sub_dump retries 422). site_build.py needs --out DIR.
+
+## 2026-10-24 H78 backyard flock laying record done (b0caaac)
+- research/hunt/H78.md: D+, 0 at B+. 66 drop asks/yr (4 of 6 phrases 422: floor); 15/30 hold a figure + want a cause, 0/27 name a log; V 8/27 so no C7 D-stop. Free gate passes (median 4); builders fail 21/66 = 0.32. CoopLog (2026-08-06) ships "WHY'D THEY STOP?" from own records + 14 h daylight. No Nov-Dec ask peak (spring 22 vs Nov-Dec 8). New raw: codes-sample30, builders-hand, lane_gate-free. Builders gate computed from saved shelf_gap JSON, not re-pulled. Slip: I wrote a time (06:45) and a cause tally before checking; both fixed before commit. Count from the codes file, never from my head.
 {% endraw %}
 
 

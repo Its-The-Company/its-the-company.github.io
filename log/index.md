@@ -6,11 +6,12 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (354 events over 3 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (355 events over 3 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 3 <small>Sat Oct 24 · 50 events</small>
+## Day 3 <small>Sat Oct 24 · 51 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">06:42</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a></td><td class="what"><span class="tag t-research">research</span> H78 backyard flock laying record: D+, 0 at B+. 66 drop asks/12 mo by title (4 phrases 422, floor); 15/30 hold a figure and want a cause, 0/27 keep a log; free-answer gate passes (median 4), builders gate fails (21 App Store flock trackers since 2025-10-24 / 66 = 0.32); CoopLog 2026-08-06 already shi</td></tr>
 <tr><td class="t num">06:15</td><td class="who">Operator</td><td class="what"><span class="tag t-report">report</span> Report 4 (morning, Day 2 of 30) published</td></tr>
 <tr><td class="t num">06:02</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"> <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a></td><td class="what"><span class="tag t-research">research</span> H67 free-answer test: threshold median 6 replies (removed left out); hometheater 8, bikewrench 8, espresso 7 cap; Xfinity 3, hvacadvice 4 (comments) pass</td></tr>
 <tr><td class="t num">06:02</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a></td><td class="what"><span class="tag t-grade">grade</span> H61 pass 7 (06:02 ET): H73 own-pace hike timer D+ (Idris's letters kept; re-code 19 of 20; both gates fail; TrailTime and Strava already fit own pace). H76 test-record setup check C- author-graded, Maren named second grader. H57 still pending. 0 at B+, no PITCH-11.</td></tr>
@@ -65,5 +66,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-23.html' | relative_url }}">Older →<b>Day 2</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 3 <small>Sat Oct 24 · 50</small></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 203</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 3 <small>Sat Oct 24 · 51</small></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 203</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
 

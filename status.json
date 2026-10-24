@@ -1,39 +1,51 @@
 {
  "schema": 1,
- "at": "2026-10-24T10:35:21.171417+00:00",
+ "at": "2026-10-24T10:53:02.857482+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-24T06:23:03-04:00"
+  "started": "2026-10-24T06:35:39-04:00"
  },
  "workers": [
   {
    "name": "wrenna",
-   "task": "[research] Wrenna H78 flock laying",
+   "task": "[research] Wrenna H79 print drift",
    "model": "opus",
-   "started": "2026-10-24T10:24:16.132Z",
-   "seconds": 665,
-   "finished": null
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] Wrenna H79 printer drift",
-   "model": "opus",
-   "started": "2026-10-24T10:24:20.835Z",
-   "seconds": 660,
-   "finished": null
+   "started": "2026-10-24T10:37:03.854Z",
+   "seconds": 959,
+   "finished": null,
+   "effort": "high"
   },
   {
    "name": "idris",
    "task": "[research] Idris H80 plant light",
    "model": "opus",
-   "started": "2026-10-24T10:24:25.686Z",
-   "seconds": 655,
-   "finished": null
+   "started": "2026-10-24T10:37:09.649Z",
+   "seconds": 953,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[build] Odalys Best ideas site lines",
+   "model": "opus",
+   "started": "2026-10-24T10:43:02.592Z",
+   "seconds": 600,
+   "finished": null,
+   "effort": "high"
   }
  ],
- "who": "Wrenna x2, Idris",
- "recent": [],
+ "who": "Wrenna, Idris, Odalys",
+ "recent": [
+  {
+   "name": "wrenna",
+   "task": "[research] Wrenna H78 flock laying",
+   "model": "opus",
+   "started": "2026-10-24T10:36:58.047Z",
+   "seconds": null,
+   "finished": "2026-10-24T10:42:54.923000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [
    {
@@ -84,28 +96,28 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 1.0,
-   "resets_at": "2026-10-24T15:00:00.095262+00:00",
+   "pct": 3.0,
+   "resets_at": "2026-10-24T15:00:00.480897+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 99.0,
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 39.0,
-   "resets_at": "2026-10-25T07:00:00.095282+00:00",
+   "resets_at": "2026-10-25T07:00:00.480914+00:00",
    "used_words": "of your weekly allowance used",
    "left": 61.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 12.0,
-   "resets_at": "2026-10-25T07:00:00.095464+00:00",
+   "resets_at": "2026-10-25T07:00:00.481212+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-24T06:13:36.751954-04:00"
+  "read_at": "2026-10-24T06:35:39.344876-04:00"
  },
  "ui": {
-  "week_pct": 0.025,
+  "week_pct": 0.026,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -117,40 +129,43 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-24T06:38:03-04:00",
+ "next_tick": "2026-10-24T06:50:39-04:00",
  "lanes": [
   {
    "name": "Wrenna",
    "state": "running",
-   "task": "[research] Wrenna H78 flock laying",
+   "task": "[research] Wrenna H79 print drift",
    "model": "opus",
-   "since": "2026-10-24T10:24:16.132Z",
+   "since": "2026-10-24T10:37:03.854Z",
    "next": [
     "Wrenna: site_qa.py checks for the additions against...",
     "Wrenna: QA the live site after every deploy: every page..."
-   ]
+   ],
+   "effort": "high"
   },
   {
    "name": "Idris",
    "state": "running",
    "task": "[research] Idris H80 plant light",
    "model": "opus",
-   "since": "2026-10-24T10:24:25.686Z",
+   "since": "2026-10-24T10:37:09.649Z",
    "next": [
     "Idris, P2, H80 is this light enough for this plant,...",
     "Idris, P2, H81 wood stove burn the owner watches but..."
-   ]
+   ],
+   "effort": "high"
   },
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P3, Best ideas: spec differences (Maren 17197a3, measured 02:19): section height at 390 is 861 px in...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[build] Odalys Best ideas site lines",
+   "model": "opus",
+   "since": "2026-10-24T10:43:02.592Z",
    "next": [
-    "Odalys, P3, H77 subject coverage in tools/hunt.py...",
-    "Odalys, P2, H84 both gates in one command (refill 12,..."
-   ]
+    "Odalys, P3, Best ideas: spec differences (Maren 17197a3,...",
+    "Odalys, P3, H77 subject coverage in tools/hunt.py..."
+   ],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -178,17 +193,10 @@
    {
     "w": "Wrenna",
     "k": "research",
-    "t": "H78 flock laying",
+    "t": "H79 print drift",
     "m": "opus",
-    "at": "2026-10-24T10:24:16.132Z",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H79 printer drift",
-    "m": "opus",
-    "at": "2026-10-24T10:24:20.835Z",
+    "e": "high",
+    "at": "2026-10-24T10:37:03.854Z",
     "o": "c"
    },
    {
@@ -196,7 +204,17 @@
     "k": "research",
     "t": "H80 plant light",
     "m": "opus",
-    "at": "2026-10-24T10:24:25.686Z",
+    "e": "high",
+    "at": "2026-10-24T10:37:09.649Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "build",
+    "t": "Best ideas site lines",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-24T10:43:02.592Z",
     "o": "c"
    }
   ],
@@ -430,11 +448,35 @@
   ],
   "done": [
    {
-    "w": "Ines",
-    "k": "report",
-    "t": "Morning",
-    "at": "2026-10-24T10:14:59.699Z",
+    "w": "Wrenna",
+    "k": "research",
+    "t": "H78 flock laying",
+    "at": "2026-10-24T10:42:54.923000+00:00",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "research",
+    "t": "H80 plant light",
+    "at": "2026-10-24T10:35:25.457000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "H79 printer drift",
+    "at": "2026-10-24T10:35:25.454000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "H78 flock laying",
+    "at": "2026-10-24T10:35:25.450000+00:00",
+    "o": "c",
+    "x": "killed"
    }
   ],
   "count": {

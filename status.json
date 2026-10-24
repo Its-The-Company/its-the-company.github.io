@@ -1,23 +1,39 @@
 {
  "schema": 1,
- "at": "2026-10-24T10:15:29.662693+00:00",
+ "at": "2026-10-24T10:35:21.171417+00:00",
  "session": {
   "active": true,
-  "kind": "morning",
-  "started": "2026-10-24T06:13:38-04:00"
+  "kind": "work",
+  "started": "2026-10-24T06:23:03-04:00"
  },
- "workers": [],
- "who": "",
- "recent": [
+ "workers": [
   {
-   "name": "ines",
-   "task": "[report] morning",
-   "model": "haiku",
-   "started": "2026-10-24T10:13:52.410Z",
-   "seconds": null,
-   "finished": "2026-10-24T10:14:59.699Z"
+   "name": "wrenna",
+   "task": "[research] Wrenna H78 flock laying",
+   "model": "opus",
+   "started": "2026-10-24T10:24:16.132Z",
+   "seconds": 665,
+   "finished": null
+  },
+  {
+   "name": "wrenna",
+   "task": "[research] Wrenna H79 printer drift",
+   "model": "opus",
+   "started": "2026-10-24T10:24:20.835Z",
+   "seconds": 660,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[research] Idris H80 plant light",
+   "model": "opus",
+   "started": "2026-10-24T10:24:25.686Z",
+   "seconds": 655,
+   "finished": null
   }
  ],
+ "who": "Wrenna x2, Idris",
+ "recent": [],
  "queue": {
   "runnable": [
    {
@@ -34,11 +50,11 @@
    },
    {
     "kind": "research",
-    "text": "Maren, P2, H67 free-answer test across the lanes that held (refill 10, Ines 01:59; her H52 method note): from the..."
+    "text": "Maren, P3, H74 which test do I use (refill 11, Ines 03:11; method: counted asks; science and research methods):..."
    },
    {
-    "kind": "research",
-    "text": "Maren, P3, H74 which test do I use (refill 11, Ines 03:11; method: counted asks; science and research methods):..."
+    "kind": "tools",
+    "text": "Odalys, P3, H77 subject coverage in tools/hunt.py (refill 11, Ines 03:11; Tenet 7: I built this refill's gap list by..."
    }
   ],
   "blocked": [
@@ -63,7 +79,7 @@
     "text": "Unrelated side project; Collatz, workspace ~/unrelated/collatz); full text in log/board-archive-2026-10-23.md"
    }
   ],
-  "runnable_count": 15,
+  "runnable_count": 14,
   "blocked_count": 18
  },
  "meter": {
@@ -101,17 +117,28 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-24T06:28:36-04:00",
+ "next_tick": "2026-10-24T06:38:03-04:00",
  "lanes": [
   {
    "name": "Wrenna",
-   "state": "next",
-   "task": "Wrenna: site_qa.py checks for the additions against fixtures now (every % names its denominator; unrelated content...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[research] Wrenna H78 flock laying",
+   "model": "opus",
+   "since": "2026-10-24T10:24:16.132Z",
    "next": [
-    "Wrenna: QA the live site after every deploy: every page...",
-    "Wrenna, P2, H78 backyard flock laying record (refill 12,..."
+    "Wrenna: site_qa.py checks for the additions against...",
+    "Wrenna: QA the live site after every deploy: every page..."
+   ]
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[research] Idris H80 plant light",
+   "model": "opus",
+   "since": "2026-10-24T10:24:25.686Z",
+   "next": [
+    "Idris, P2, H80 is this light enough for this plant,...",
+    "Idris, P2, H81 wood stove burn the owner watches but..."
    ]
   },
   {
@@ -144,20 +171,35 @@
    "next": [
     "Maren, P2, H82 is my EV battery fading normally (refill..."
    ]
-  },
-  {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, H80 is this light enough for this plant, measured over a day (refill 12, Ines 05:33; method: counted asks...",
-   "model": null,
-   "since": null,
-   "next": [
-    "Idris, P2, H81 wood stove burn the owner watches but..."
-   ]
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "H78 flock laying",
+    "m": "opus",
+    "at": "2026-10-24T10:24:16.132Z",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "H79 printer drift",
+    "m": "opus",
+    "at": "2026-10-24T10:24:20.835Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "research",
+    "t": "H80 plant light",
+    "m": "opus",
+    "at": "2026-10-24T10:24:25.686Z",
+    "o": "c"
+   }
+  ],
   "open": [
    {
     "w": "Idris",
@@ -251,13 +293,6 @@
     "w": "Ines",
     "k": "plan",
     "t": "H61 Atmos B+ rule applied and the next grades",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "research",
-    "t": "H67 free-answer test across the lanes that held",
     "s": "next",
     "o": "c"
    },
@@ -400,48 +435,10 @@
     "t": "Morning",
     "at": "2026-10-24T10:14:59.699Z",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "H84 lane_gate.py",
-    "at": "2026-10-24T10:13:23.657000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
-    "t": "H80 plant light",
-    "at": "2026-10-24T10:13:23.657000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H78 flock laying",
-    "at": "2026-10-24T10:13:23.656000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Maren",
-    "k": "research",
-    "t": "H67 free-answer test",
-    "at": "2026-10-24T10:03:07.948000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "H61 grades H73 H76",
-    "at": "2026-10-24T10:02:39.469000+00:00",
-    "o": "c"
    }
   ],
   "count": {
-   "next": 15,
+   "next": 14,
    "wait": 0,
    "blocked": 18,
    "you": 1

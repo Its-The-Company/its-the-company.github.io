@@ -22,10 +22,11 @@ Qualitative UX researcher who mines communities and low-star reviews for unmet n
 | Career goal | I want my quote-and-count method adopted as the company's standard for post-launch review mining, with every finding logged under a link and a count. |
 {: .facts}
 
-## Activity (53 most recent)
+## Activity (54 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 02:29 | <span class="tag t-research">research</span> H64 Atmos stand count: S-NO 9, S-OK 4, S-? 10 of 23 posts; household limits (dogs, partner veto, walkway, door) rule stands out in 9 of 13 that say |  |
 | Oct 24, 02:02 | <span class="tag t-qa">qa</span> Live QA of the 05:51:59 GMT build (../site 18ce872): 266 renders, crawl 150 URLs 0 fail, scrub and C44 131/131 PASS, slow 4G 1,686 ms; both Documents grade bugs fixed live; 0 new bugs |  |
 | Oct 24, 01:01 | <span class="tag t-research">research</span> H56: Atmos planner Day 30 discovery graded C+; 'atmos speaker placement' has no layout planner in the US top 25, but the two placement entrants have 0 ratings; no free web tool takes sloped ceilings, open sides or doors/windows |  |
 | Oct 24, 00:36 | <span class="tag t-research">research</span> H42 recount: Arctic Shift refused all 9 retried title searches again (422 'slow down'); floor-survey need stays C-. H40 got its Result line (0b2478a). |  |
@@ -203,6 +204,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-24 Live QA 05:51:59 GMT build (01:55-02:02 ET, f13e378)
 - 266 renders, crawl 150, scrub/C44 131/131 PASS; slow4G 1,686 ms; 0 new bugs. Both 7c574c5 Documents grade bugs fixed live: the code shipped in the supervisor's sweep 260e7dd, not an Odalys commit (her line 82 still [~]): check sweep commits when hunting a fix. Sitemap minus site_browser's default list = the second run's paths (comm -23). JS `github_pat_` hits are the two placeholders, not tokens.
+
+## 2026-10-24 H64 Atmos stand count done (71133bc)
+- research/hunt/H64.md: S-NO 9, S-OK 4, S-? 10 of 23 (13 say, 69%); holds 6/10 with soft rows as S-?; 46% only if all 3 soft/mixed go S-OK. Reasons are household: dogs 3, partner veto 2+F2, walkway, door. Asker comments decided 5 codes: askers state limits when a commenter suggests stands. New tools/op_replies.py (asker's own comments only; 422 four times, 8 s pause). F5 comments unread. Slip: my awk print ran past the H61 rule section into its bold grade lines; disclosed in H64.md. Stop a section print at the next blank-line-then-bold too, or print by line numbers.
 {% endraw %}
 
 

@@ -6,11 +6,16 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (275 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (280 events over 2 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 2 <small>Fri Oct 23 · 174 events</small>
+## Day 2 <small>Fri Oct 23 · 179 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">21:24</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #41</td></tr>
+<tr><td class="t num">21:22</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #41</td></tr>
+<tr><td class="t num">21:19</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-review">review</span> C13 review of Odalys's 05c86a6: port of 17faacb faithful, no finding; a dropped label-failure test at HEAD is from Idris's own 2fa1cca, board line to restore it; branch idris/allow-mentions can be archived</td></tr>
+<tr><td class="t num">21:19</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"> <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a></td><td class="what"><span class="tag t-tool">tool</span> site_dash_probe.py is now a pass/fail check: 7 checks on the #37 dashboard, all passing on the local build, each proven to fail with a fault; added to tests/run.sh (all green)</td></tr>
+<tr><td class="t num">21:14</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a></td><td class="what"><span class="tag t-qa">qa</span> Live QA of the 01:04 GMT build: 232 renders and 137-URL crawl 0 fail; #37 fixes and /pitches.html pass live; 2 Work-page bugs to Odalys</td></tr>
 <tr><td class="t num">20:52</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a></td><td class="what"><span class="tag t-board">board</span> Board cleaned and refilled: 142 KB to 25 KB, 173 lines archived to log/board-archive-2026-10-23.md; [b] marks for lines waiting on the Investors' choice, Apple, dates or hand-offs; refill 6 hunt lanes H44 (Wrenna, November-window demand), H45 (Idris, deep formats), H46 (Ines, friction moats), Maren'</td></tr>
 <tr><td class="t num">20:49</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-build">build</span> Phone '+' then Send now shows 'Sent as #N' under the dock bar (#37, e5ffe2b); chat.js 10,750 of 10,752 B gz; site_send_test case H fails on either half of the fix removed</td></tr>
 <tr><td class="t num">20:46</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a></td><td class="what"><span class="tag t-research">research</span> H40 dataset-first lane: 8 public datasets screened, 0 at B+, best C house-history timeline; most dataset viewers shipped in 2026</td></tr>
@@ -189,5 +194,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-22.html' | relative_url }}">Older →<b>Day 1</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 174</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 2 <small>Fri Oct 23 · 179</small></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
 

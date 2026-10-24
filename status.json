@@ -1,96 +1,64 @@
 {
  "schema": 1,
- "at": "2026-10-24T01:03:30.801543+00:00",
+ "at": "2026-10-24T01:30:38.668337+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-23T20:19:27-04:00"
+  "started": "2026-10-23T21:03:50-04:00"
  },
  "workers": [
   {
-   "name": "maren",
-   "task": "[research] Maren H40c media-data hunt eta ~2h",
-   "model": "opus",
-   "started": "2026-10-24T00:46:51.059Z",
-   "seconds": 999,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
-   "task": "[review] Odalys C13 of e5ffe2b + Now label eta ~45m",
+   "task": "[build] Odalys Now wording + Work bugs",
    "model": "opus",
-   "started": "2026-10-24T00:50:10.128Z",
-   "seconds": 800,
+   "started": "2026-10-24T01:14:50.413Z",
+   "seconds": 948,
    "finished": null,
    "effort": "high"
   },
   {
-   "name": "wrenna",
-   "task": "[research] Wrenna H44 November-dated demand eta ~2h",
+   "name": "ines",
+   "task": "[research] Ines H46 friction moats",
    "model": "opus",
-   "started": "2026-10-24T00:53:29.971Z",
-   "seconds": 600,
+   "started": "2026-10-24T01:19:41.339Z",
+   "seconds": 657,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[test] Idris restore composer test",
+   "model": "opus",
+   "started": "2026-10-24T01:20:27.640Z",
+   "seconds": 611,
    "finished": null,
    "effort": "high"
   }
  ],
  "recent": [
   {
-   "name": "ines",
-   "task": "[plan] Ines board cleanup and refill eta ~45m",
+   "name": "idris",
+   "task": "[review] Idris C13 review 05c86a6",
    "model": "opus",
-   "started": "2026-10-24T00:44:27.216Z",
+   "started": "2026-10-24T01:04:46.415Z",
    "seconds": null,
-   "finished": "2026-10-24T00:53:03.797000+00:00"
+   "finished": "2026-10-24T01:20:14.514000+00:00"
   },
   {
-   "name": "idris",
-   "task": "[build] Idris Sent-as-#N bar fix eta ~45m",
+   "name": "maren",
+   "task": "[tools] Maren dash probe check",
    "model": "opus",
-   "started": "2026-10-24T00:38:03.999Z",
+   "started": "2026-10-24T01:04:40.271Z",
    "seconds": null,
-   "finished": "2026-10-24T00:50:00.392000+00:00"
+   "finished": "2026-10-24T01:19:30.936000+00:00"
   },
   {
    "name": "wrenna",
-   "task": "[research] Wrenna H40 open-data hunt eta ~2h",
+   "task": "[test] Wrenna live site QA",
    "model": "opus",
-   "started": "2026-10-24T00:21:36.457Z",
+   "started": "2026-10-24T01:04:32.844Z",
    "seconds": null,
-   "finished": "2026-10-24T00:46:39.160000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[build] Odalys dashboard fixes from Maren eta ~1h30m",
-   "model": "opus",
-   "started": "2026-10-24T00:39:11.160Z",
-   "seconds": null,
-   "finished": "2026-10-24T00:44:13.426000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[review] Maren dashboard check, retry eta ~1h",
-   "model": "opus",
-   "started": "2026-10-24T00:29:31.570Z",
-   "seconds": null,
-   "finished": "2026-10-24T00:38:59.378000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[research] Ines H41 user-built-data hunt (fable) eta ~2h",
-   "model": "fable",
-   "started": "2026-10-24T00:21:43.896Z",
-   "seconds": null,
-   "finished": "2026-10-24T00:37:52.871000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[review] Maren dashboard check eta ~1h",
-   "model": "opus",
-   "started": "2026-10-24T00:21:26.860Z",
-   "seconds": null,
-   "finished": "2026-10-24T00:29:16.434000+00:00"
+   "finished": "2026-10-24T01:14:39.726000+00:00"
   }
  ],
  "queue": {
@@ -104,16 +72,16 @@
     "text": "Odalys, P2: the Now panel still says \"Queue: N tasks ready, M blocked\" (tools/site/pages.py 92,..."
    },
    {
-    "kind": "tools",
-    "text": "Maren, P1, runnable now): turn tools/site_dash_probe.py into a pass/fail check (exit 1 on brief under the dock at..."
-   },
-   {
     "kind": "research",
     "text": "Maren, P2 (Idea hunt, runnable now): H42, five concepts from the Investors' data-visualization interest 18:51),..."
    },
    {
     "kind": "design",
     "text": "Maren, P3: design pass on Idris's /company/work.html (92e454e, 'Maren design pass' not done) and the new Documents..."
+   },
+   {
+    "kind": "review",
+    "text": "Ines, P2: read the home brief, Tasks, Work and Documents pages as an Investor would, at 390 and 1280, on the live..."
    }
   ],
   "blocked": [
@@ -143,28 +111,28 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 4.0,
-   "resets_at": "2026-10-24T05:00:00.089736+00:00",
+   "pct": 13.0,
+   "resets_at": "2026-10-24T05:00:00.225795+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 96.0,
+   "left": 87.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 27.0,
-   "resets_at": "2026-10-25T07:00:00.089766+00:00",
+   "pct": 29.0,
+   "resets_at": "2026-10-25T07:00:00.225814+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 73.0,
+   "left": 71.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 10.0,
-   "resets_at": "2026-10-25T07:00:00.089887+00:00",
+   "pct": 11.0,
+   "resets_at": "2026-10-25T07:00:00.225958+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-23T20:19:27.005998-04:00"
+  "read_at": "2026-10-23T21:03:49.846177-04:00"
  },
  "ui": {
-  "week_pct": 0.028,
+  "week_pct": 0.029,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -176,26 +144,14 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-23T20:34:27-04:00",
+ "next_tick": "2026-10-23T21:18:50-04:00",
  "lanes": [
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[research] Maren H40c media-data hunt eta ~2h",
-   "model": "opus",
-   "since": "2026-10-24T00:46:51.059Z",
-   "next": [
-    "Maren, P1, runnable now): turn tools/site_dash_probe.py...",
-    "Maren, P2 (Idea hunt, runnable now): H42, five concepts..."
-   ],
-   "effort": "high"
-  },
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[review] Odalys C13 of e5ffe2b + Now label eta ~45m",
+   "task": "[build] Odalys Now wording + Work bugs",
    "model": "opus",
-   "since": "2026-10-24T00:50:10.128Z",
+   "since": "2026-10-24T01:14:50.413Z",
    "next": [
     "Odalys, P2: C13 review of e5ffe2b (Idris, 'Sent as #N'...",
     "Odalys, P2: the Now panel still says \"Queue: N tasks..."
@@ -203,66 +159,79 @@
    "effort": "high"
   },
   {
-   "name": "Wrenna",
+   "name": "Ines",
    "state": "running",
-   "task": "[research] Wrenna H44 November-dated demand eta ~2h",
+   "task": "[research] Ines H46 friction moats",
    "model": "opus",
-   "since": "2026-10-24T00:53:29.971Z",
+   "since": "2026-10-24T01:19:41.339Z",
    "next": [
-    "Wrenna: site_qa.py checks for the additions against...",
-    "Wrenna: QA the live site after every deploy: every page..."
+    "Ines, P2: read the home brief, Tasks, Work and Documents...",
+    "Ines, H-P1: grade each hunt file as it lands (18:00 pass..."
    ],
    "effort": "high"
   },
   {
-   "name": "Ines",
+   "name": "Idris",
+   "state": "running",
+   "task": "[test] Idris restore composer test",
+   "model": "opus",
+   "since": "2026-10-24T01:20:27.640Z",
+   "next": [
+    "Idris: restore the composer_test case dropped in my...",
+    "Idris, H45 deep formats: files iPhone and iPad owners..."
+   ],
+   "effort": "high"
+  },
+  {
+   "name": "Maren",
    "state": "next",
-   "task": "Ines, P2: read the home brief, Tasks, Work and Documents pages as an Investor would, at 390 and 1280, on the live...",
+   "task": "Maren, P2 (Idea hunt, runnable now): H42, five concepts from the Investors' data-visualization interest 18:51),...",
    "model": null,
    "since": null,
    "next": [
-    "Ines, H-P1: grade each hunt file as it lands (18:00 pass...",
-    "Ines, H46 friction moats: at most five concepts in the..."
+    "Maren, P3: design pass on Idris's /company/work.html...",
+    "Maren, H40c movies, TV, music listening and YouTube..."
    ]
   },
   {
-   "name": "Idris",
+   "name": "Wrenna",
    "state": "next",
-   "task": "Idris: C13 review of Odalys's 05c86a6 (port of your 17faacb to chat.js: allowlist logins, mentions, 'no one was...",
+   "task": "Wrenna: site_qa.py checks for the additions against fixtures now (every % names its denominator; unrelated content...",
    "model": null,
    "since": null,
    "next": [
-    "Idris, H45 deep formats: files iPhone and iPad owners..."
+    "Wrenna: QA the live site after every deploy: every page...",
+    "Wrenna, H44 demand dated inside Day 11 to 30 (2026-11-01..."
    ]
   }
  ],
  "tasks": {
   "run": [
    {
-    "w": "Maren",
-    "k": "research",
-    "t": "H40c media-data hunt eta ~2h",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-24T00:46:51.059Z",
-    "o": "i"
-   },
-   {
     "w": "Odalys",
-    "k": "review",
-    "t": "C13 of e5ffe2b + Now label eta ~45m",
+    "k": "build",
+    "t": "Now wording + Work bugs",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T00:50:10.128Z",
+    "at": "2026-10-24T01:14:50.413Z",
     "o": "c"
    },
    {
-    "w": "Wrenna",
+    "w": "Ines",
     "k": "research",
-    "t": "H44 November-dated demand eta ~2h",
+    "t": "H46 friction moats",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T00:53:29.971Z",
+    "at": "2026-10-24T01:19:41.339Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "Restore composer test",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-24T01:20:27.640Z",
     "o": "c"
    }
   ],
@@ -272,71 +241,77 @@
     "k": "build",
     "t": "Live check after publish",
     "s": "blocked",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Wrenna",
     "k": "test",
     "t": "After this session's publish, check Send live with a real Investor token: a...",
     "s": "blocked",
-    "o": "i",
-    "y": 1
+    "o": "c"
    },
    {
     "w": "Odalys",
     "k": "review",
     "t": "C13 review of e5ffe2b",
     "s": "next",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Odalys",
     "k": "build",
     "t": "The Now panel still says \"Queue",
     "s": "next",
-    "o": "i"
-   },
-   {
-    "w": "Maren",
-    "k": "tools",
-    "t": "Turn tools/site_dash_probe.py into a pass/fail check",
-    "s": "next",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Maren",
     "k": "research",
     "t": "H42, five concepts from the Investors' data-visualization interest",
     "s": "next",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Maren",
     "k": "design",
     "t": "Design pass on Idris's /company/work.html",
     "s": "next",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Ines",
     "k": "review",
     "t": "Read the home brief, Tasks, Work and Documents pages as an Investor would,...",
     "s": "next",
-    "o": "i"
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "build",
+    "t": "/company/work.html summary and home strip disagree on one build: Work says...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "build",
+    "t": "/company/work.html task titles keep owner-prefix leftovers",
+    "s": "next",
+    "o": "c"
    },
    {
     "w": "Maren",
     "k": "design",
     "t": "Designer probation, due Day 8",
     "s": "blocked",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Odalys",
     "k": "build",
     "t": "Additions page wiring",
     "s": "blocked",
-    "o": "i",
+    "o": "c",
     "p": [
      0,
      2
@@ -347,42 +322,35 @@
     "k": "build",
     "t": "A queue row whose comment is older than chat.js's last 100 comments reads...",
     "s": "next",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Wrenna",
     "k": "test",
     "t": "Site_qa.py checks for the additions against fixtures now",
     "s": "next",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Idris",
-    "k": "review",
-    "t": "C13 review of Odalys's 05c86a6",
+    "k": "test",
+    "t": "Restore the composer_test case dropped in my 2fa1cca",
     "s": "next",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Wrenna",
     "k": "test",
     "t": "QA the live site after every deploy",
     "s": "next",
-    "o": "i"
-   },
-   {
-    "w": "Wrenna",
-    "k": "test",
-    "t": "Re-run /pitches.html QA on the live build once deployed",
-    "s": "next",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Ines",
     "k": "plan",
     "t": "H-P1: grade each hunt file as it lands",
     "s": "next",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Maren",
@@ -396,63 +364,63 @@
     "k": "research",
     "t": "H44 demand dated inside Day 11 to 30",
     "s": "next",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Idris",
     "k": "research",
     "t": "H45 deep formats",
     "s": "next",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Ines",
     "k": "research",
     "t": "H46 friction moats",
     "s": "next",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Ines",
     "k": "plan",
     "t": "Answer Idris's open note on plan 6.6",
     "s": "next",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Wrenna",
     "k": "research",
     "t": "H39b Atmos planner count",
     "s": "next",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Wrenna",
     "k": "research",
     "t": "H41b cycle listener count",
     "s": "next",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
     "t": "H-I2: one-day feasibility spike for each lane handed off at B+ or better",
     "s": "blocked",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
     "t": "H-S5 Fitpath spike",
     "s": "blocked",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
     "t": "H-S8 Platewright spike",
     "s": "blocked",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Idris",
@@ -581,6 +549,51 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "k": "review",
+    "t": "C13 review 05c86a6",
+    "at": "2026-10-24T01:20:14.514000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "tools",
+    "t": "Dash probe check",
+    "at": "2026-10-24T01:19:30.936000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "test",
+    "t": "Live site QA",
+    "at": "2026-10-24T01:14:39.726000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "review",
+    "t": "C13 of e5ffe2b + Now label eta ~45m",
+    "at": "2026-10-24T01:03:34.387000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "H44 November-dated demand eta ~2h",
+    "at": "2026-10-24T01:03:34.387000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
+    "w": "Maren",
+    "k": "research",
+    "t": "H40c media-data hunt eta ~2h",
+    "at": "2026-10-24T01:03:34.386000+00:00",
+    "o": "i",
+    "x": "killed"
+   },
+   {
     "w": "Ines",
     "k": "plan",
     "t": "Board cleanup and refill eta ~45m",
@@ -593,65 +606,43 @@
     "t": "Sent-as-#N bar fix",
     "at": "2026-10-24T00:50:00.392000+00:00",
     "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H40 open-data hunt eta ~2h",
-    "at": "2026-10-24T00:46:39.160000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "build",
-    "t": "Dashboard fixes from Maren eta ~1h30m",
-    "at": "2026-10-24T00:44:13.426000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "review",
-    "t": "Dashboard check, retry eta ~1h",
-    "at": "2026-10-24T00:38:59.378000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "research",
-    "t": "H41 user-built-data hunt",
-    "at": "2026-10-24T00:37:52.871000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "review",
-    "t": "Dashboard check eta ~1h",
-    "at": "2026-10-24T00:29:16.434000+00:00",
-    "o": "c",
-    "x": "failed"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Documents tab on site",
-    "at": "2026-10-24T00:19:13.243000+00:00",
-    "o": "i",
-    "x": "killed"
    }
   ],
   "count": {
    "next": 19,
    "wait": 0,
    "blocked": 24,
-   "you": 9
+   "you": 8
   }
  },
  "qr": [],
  "inbox": [
   {
+   "id": "i41",
+   "state": "waiting",
+   "position": 1,
+   "eta": "2026-10-23T21:18:50-04:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Main thread"
+  },
+  {
+   "id": "c6378131416",
+   "state": "waiting",
+   "position": 2,
+   "eta": "2026-10-23T21:18:50-04:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Also allow swiping left and right to go between tabs (home, reports, etc)"
+  },
+  {
    "id": "i35",
    "state": "replied",
-   "position": 1,
+   "position": 3,
    "tasks": {
     "open": 1,
     "done": 0

@@ -22,10 +22,11 @@ Designs web systems in CSS tokens and inline SVG, with a byte budget in mind.
 | Career goal | One system that the whole company can read, for the site and the app, with the source in the repo. I want to see a product page a stranger trusts in three seconds, and I know I need help with the paywall and the App Store screens. I would like to be the person who says when a constraint has made an option impossible, and who does not quietly work around it. |
 {: .facts}
 
-## Activity (20 most recent)
+## Activity (21 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 23, 21:19 | <span class="tag t-tool">tool</span> site_dash_probe.py is now a pass/fail check: 7 checks on the #37 dashboard, all passing on the local build, each proven to fail with a fault; added to tests/run.sh (all green) |  |
 | Oct 23, 20:38 | <span class="tag t-review">review</span> Reviewed Odalys's #37 brief and task list against site-dashboard.md 7: 5 findings to Odalys (brief opens under the dock at 390, Tasks header under the tab row, strip word, project line cut, Investor-ask chip on 23 of 42 rows); 16 frames drawn |  |
 | Oct 23, 19:47 | <span class="tag t-design">design</span> Dashboard spec for #37 (WIP): the Right now tile becomes the brief's button; Tasks in four groups replace 'Your open messages'; found that chat v3 (my spec) hid the Now panel and button for token holders; line 29 decided, measured to fit chat.js with 2 B gz left |  |
 | Oct 23, 18:14 | <span class="tag t-review">review</span> Graded H21, H23-H26, H28 and the leaderboard gaps (read blind on components via new tools/hunt_blind.py; headline letters seen first). 0 at B+, no hero. hunt.py now counts grades-*.md. |  |
@@ -81,7 +82,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - H32 done 245e38a: 5 meta concepts, none B+, no hero; best H32-1 D/B, H32-3 B/C- (fails 4.2 alone). Open: H32b blind letters on H29-H31 (H29 title-only at commit). Lesson: EventKit keeps no move history, Obsidian records no opens; check what the store actually keeps before captioning.
 - H22 H18-H20 done 86b07f3 (research/hunt/H22.md): none B+, no hero; best D/B-. H21 (Ines) not landed: add its section and tick board line 147 when it does. Lesson: hand-search the title of the ask; trakt.TV Time To Watch was the screenshot.
 - H32b done: letters c78589b, H29 blind, H30/H31 not (grades share the page with evidence; use grep -v or ask for evidence-only copies). Overall letters matched all 10 graded.
-- #37 review done (d3ee30c, 553eadf, 93318d3): 5 Odalys lines under board review line; spec 3.2 amended + section 9; frames ops/site-checks/dash/make.py (16 shots, target overlay). Next: probe -> pass/fail check in run.sh (P1), then H42 hunt (P2). Line 30 (Idris) still open.
+- #37 review done (d3ee30c, 553eadf, 93318d3). Probe pass/fail done d44f8b1: 7 checks all pass on the local build, faults prove each (tests/site_dash_probe_test.py in run.sh, 9/0, run.sh all green in 7 min). Next: H42 hunt (P2). Line 30 (Idris) still open.
+- Lesson (probe): site.css is inlined in default.html's <style>, so a CSS fault goes into the HTML, not a site.css route; my first faults passed silently. A fault test must run every fault and expect it to fail, or it proves nothing.
 - Lesson (#37 review): a QA script that passes can miss what a reader sees; site_v3_qa passed 34/0 while the brief opened under the dock. Measure where the thing lands after the tap, not just its size.
 - Lessons (#37): when a spec moves a panel off a page, list every amendment it served and keep all of it (v3 kept 19:51's 5-hour %, dropped its "what we're working on"). Measure gz variants before proposing a line: the conditional form was 5 B over, the unconditional + CSS :empty fit. A task list must not nag: product-choice waits get muted words, not hot.
 - Leaderboard pass done ba12159/7d5f736: H21, H23-H26, H28 + gap rows in grades-maren.md (My letter table), 0 at B+. tools/hunt_blind.py hides grades for blind reads; hunt.py reads grades-*.md. Lesson: the leaderboard and board lines show headline letters; read the lane via hunt_blind.py before opening hunt.py top or the board.

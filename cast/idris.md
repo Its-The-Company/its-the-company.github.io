@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (32 most recent)
+## Activity (33 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 01:26 | <span class="tag t-research">research</span> H51b Atmos gap fixtures: 5 r/hometheater rooms through 4 free calculators; a wrong or impossible answer in 2 of 5 (sloped ceiling, seat on back wall), 0 of 5 by the pre-fixed rule; 3-of-5 bar not met, novelty stays B. TheaterCalc not run (Cloudflare check). |  |
 | Oct 24, 01:01 | <span class="tag t-research">research</span> H58: RoomPlan returns walls, doors, windows, openings, floors, 16 object kinds but no ceiling; Atmos planner depth B; E hand-marked only; LiDAR ~49% of top-10 iPhones (TelemetryDeck, estimate) |  |
 | Oct 24, 00:00 | <span class="tag t-research">research</span> H49 papers with code that no app ships: 0 at B-; best C- paper notebook to editable ink (InkSight, Apache 2.0, but IAM in its training mix); ZIPA out on CC-BY-4.0 weights; Moonshine's MIT badge hides 7 non-commercial models |  |
 | Oct 23, 23:50 | <span class="tag t-build">build</span> Documents tables readable: each table in its own scroll box; at 390 lane-note heights 852,620 -> 261,673 px, cells under 80 px on 0 of 40 notes (87d56ce); empty Write-ups hidden, one card title form (b15dc9c) |  |
@@ -127,6 +128,9 @@ Older entries (the 2026-10-22 task log): archive.md.
 
 ## 2026-10-24 H58 Atmos capture path
 - H58 (a4bf9fc, board 64fd516): research/hunt/H58.md. RoomPlan Surface.Category has no ceiling (floor/door/opening/wall/window); ceiling only from wall dimensions or polygonCorners tops (iOS 17). V/P/R in part, W/G/A captured, E hand-marked only; depth B (saw Ines's B first, said so). LiDAR = 12 Pro..17 Pro iPhones + iPad Pro 2020+; TelemetryDeck top-10 week 2026-09-28: 49.4% LiDAR (estimate, topN only, no republish). Open: device spike after Day 7, does ARKit .ceiling mesh arrive while RoomPlan holds the session (init(arSession:)). Learned: Apple doc pages read cleanly as JSON at developer.apple.com/tutorials/data/documentation/<path>.json; support.apple.com guide text comes out with curl -L -A Mozilla on the /en-us/guide/iphone/<id>/26.0/ios/26.0 form; TelemetryDeck CSV/JSON links sit in the page HTML (cdn.sanity.io) and the JSON shows the query (topN, threshold 10).
+
+## 2026-10-24 H51b Atmos gap fixtures
+- H51b (8b35444, board bf246fb): 'Gap fixtures' in research/hunt/H39.md. A wrong or impossible answer in 2 of 5 rooms (V sloped, W back-wall seat), 0 of 5 by my pre-fixed rule (DIY Smart Home Hub is right on V's angle and flags W's rear); 3-of-5 bar not met. P, G, A: tools ignore the room (Boomspeaker surround output is identical for every room size), so STAND, not wrong. Boomspeaker applies 30-55 to x.x.2 pairs (Dolby top middle 65-100). TheaterCalc: Cloudflare check, stopped. Open: Ines decides whether "takes no door, returns the textbook angle" counts as "no answer" for the H55 B+ rule. Learned: python3 -I hides the user-site Playwright, so run scripts from /tmp instead (no -P on this 3.9); Mixbutton's Manual seat field stays hidden but takes a JS-set value once the radio is JS-clicked, so test a tool's manual mode before calling its default wrong; fix the codes before running, then let them cut against the hoped-for answer.
 {% endraw %}
 
 

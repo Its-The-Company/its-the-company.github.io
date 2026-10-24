@@ -1,65 +1,73 @@
 {
  "schema": 1,
- "at": "2026-10-24T05:12:03.290863+00:00",
+ "at": "2026-10-24T05:51:10.757647+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-24T00:51:38-04:00"
+  "started": "2026-10-24T01:12:23-04:00"
  },
  "workers": [
   {
    "name": "wrenna",
-   "task": "[research] Wrenna H57 room to grow",
+   "task": "[research] Wrenna H57 Atmos room to grow",
    "model": "opus",
-   "started": "2026-10-24T04:53:08.170Z",
-   "seconds": 1135,
+   "started": "2026-10-24T05:13:30.287Z",
+   "seconds": 2260,
    "finished": null,
    "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[research] Idris H47 cyclebench verdict",
+   "model": "opus",
+   "started": "2026-10-24T05:34:55.506Z",
+   "seconds": 975,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[research] Ines H54 slow home processes",
+   "model": "opus",
+   "started": "2026-10-24T05:41:07.143Z",
+   "seconds": 603,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Wrenna, Idris, Ines",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] Odalys H60 asks.py tool",
+   "model": "opus",
+   "started": "2026-10-24T05:26:36.828Z",
+   "seconds": null,
+   "finished": "2026-10-24T05:40:59.609000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[research] Maren H52 hobby gear judgement asks",
+   "model": "opus",
+   "started": "2026-10-24T05:19:09.728Z",
+   "seconds": null,
+   "finished": "2026-10-24T05:34:48.926000+00:00"
   },
   {
    "name": "idris",
    "task": "[research] Idris H51b Atmos gap fixtures",
    "model": "opus",
-   "started": "2026-10-24T05:01:39.126Z",
-   "seconds": 624,
-   "finished": null,
-   "effort": "high"
+   "started": "2026-10-24T05:13:25.684Z",
+   "seconds": null,
+   "finished": "2026-10-24T05:26:30.635000+00:00"
   },
   {
-   "name": "maren",
-   "task": "[research] Maren H52 hobby gear",
-   "model": "opus",
-   "started": "2026-10-24T05:02:02.890Z",
-   "seconds": 600,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Wrenna, Idris, Maren",
- "recent": [
-  {
-   "name": "wrenna",
-   "task": "[research] Wrenna H56 Atmos discovery",
-   "model": "opus",
-   "started": "2026-10-24T04:53:03.120Z",
+   "name": "ines",
+   "task": "[research] Ines H61 grades of landed lanes",
+   "model": "fable",
+   "started": "2026-10-24T05:13:36.636Z",
    "seconds": null,
-   "finished": "2026-10-24T05:01:52.109000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[research] Idris H58 capture path",
-   "model": "opus",
-   "started": "2026-10-24T04:55:56.417Z",
-   "seconds": null,
-   "finished": "2026-10-24T05:01:31.562000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[research] Maren H59 blind grades",
-   "model": "opus",
-   "started": "2026-10-24T04:52:55.920Z",
-   "seconds": null,
-   "finished": "2026-10-24T04:55:50.116000+00:00"
+   "finished": "2026-10-24T05:19:03.602000+00:00"
   }
  ],
  "queue": {
@@ -107,30 +115,30 @@
     "text": "Unrelated side project; Collatz, workspace ~/unrelated/collatz); full text in log/board-archive-2026-10-23.md"
    }
   ],
-  "runnable_count": 23,
+  "runnable_count": 19,
   "blocked_count": 18
  },
  "meter": {
   "five_hour": {
-   "pct": 39.0,
-   "resets_at": "2026-10-24T05:00:00.159356+00:00",
+   "pct": 2.0,
+   "resets_at": "2026-10-24T09:59:59.983385+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 61.0,
+   "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 33.0,
-   "resets_at": "2026-10-25T07:00:00.159377+00:00",
+   "resets_at": "2026-10-25T06:59:59.983410+00:00",
    "used_words": "of your weekly allowance used",
    "left": 67.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 11.0,
-   "resets_at": "2026-10-25T07:00:00.159550+00:00",
+   "resets_at": "2026-10-25T06:59:59.983569+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-24T00:51:37.730718-04:00"
+  "read_at": "2026-10-24T01:12:22.577047-04:00"
  },
  "ui": {
   "week_pct": 0.027,
@@ -145,14 +153,14 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-24T01:06:37-04:00",
+ "next_tick": "2026-10-24T01:27:22-04:00",
  "lanes": [
   {
    "name": "Wrenna",
    "state": "running",
-   "task": "[research] Wrenna H57 room to grow",
+   "task": "[research] Wrenna H57 Atmos room to grow",
    "model": "opus",
-   "since": "2026-10-24T04:53:08.170Z",
+   "since": "2026-10-24T05:13:30.287Z",
    "next": [
     "Wrenna: site_qa.py checks for the additions against...",
     "Wrenna: QA the live site after every deploy: every page..."
@@ -162,9 +170,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[research] Idris H51b Atmos gap fixtures",
+   "task": "[research] Idris H47 cyclebench verdict",
    "model": "opus",
-   "since": "2026-10-24T05:01:39.126Z",
+   "since": "2026-10-24T05:34:55.506Z",
    "next": [
     "Idris, P3 (H45 follow-up, de664a1): when Arctic Shift...",
     "Idris, P3, H41c cycle segmentation on synthetic audio..."
@@ -172,25 +180,25 @@
    "effort": "high"
   },
   {
-   "name": "Maren",
+   "name": "Ines",
    "state": "running",
-   "task": "[research] Maren H52 hobby gear",
+   "task": "[research] Ines H54 slow home processes",
    "model": "opus",
-   "since": "2026-10-24T05:02:02.890Z",
+   "since": "2026-10-24T05:41:07.143Z",
    "next": [
-    "Maren, P2, H52 hobby gear the owner cannot judge alone...",
-    "Maren, P2, Documents 'Best ideas so far' (H51): a spec,..."
+    "Ines, H-P1: grade each hunt file as it lands (18:00 pass...",
+    "Ines, P2, H54 slow processes and noises in the home (H51..."
    ],
    "effort": "high"
   },
   {
-   "name": "Ines",
+   "name": "Maren",
    "state": "next",
-   "task": "Ines, H-P1: grade each hunt file as it lands (18:00 pass at the latest); draft PITCH-11 onward for any B+ (plain...",
+   "task": "Maren, P2, Documents 'Best ideas so far' (H51): a spec, no code, for a short list at the top of /documents/: the 5...",
    "model": null,
    "since": null,
    "next": [
-    "Ines, P2, H54 slow processes and noises in the home (H51..."
+    "Maren, P3 (from Odalys d77930e): a chip style for the..."
    ]
   },
   {
@@ -207,28 +215,28 @@
    {
     "w": "Wrenna",
     "k": "research",
-    "t": "H57 room to grow",
+    "t": "H57 Atmos room to grow",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T04:53:08.170Z",
+    "at": "2026-10-24T05:13:30.287Z",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "research",
-    "t": "H51b Atmos gap fixtures",
+    "t": "H47 cyclebench verdict",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T05:01:39.126Z",
+    "at": "2026-10-24T05:34:55.506Z",
     "o": "c"
    },
    {
-    "w": "Maren",
+    "w": "Ines",
     "k": "research",
-    "t": "H52 hobby gear",
+    "t": "H54 slow home processes",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T05:02:02.890Z",
+    "at": "2026-10-24T05:41:07.143Z",
     "o": "c"
    }
   ],
@@ -324,21 +332,7 @@
    {
     "w": "Idris",
     "k": "research",
-    "t": "H51b Atmos gap fixtures",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
     "t": "H53 home meters the owner can read but not interpret",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "research",
-    "t": "H52 hobby gear the owner cannot judge alone",
     "s": "next",
     "o": "c"
    },
@@ -401,13 +395,6 @@
    {
     "w": "Wrenna",
     "k": "research",
-    "t": "H56 Atmos planner Day 30 discovery",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
     "t": "H57 Atmos planner room to grow, counted",
     "s": "next",
     "o": "c"
@@ -430,13 +417,6 @@
     "w": "Maren",
     "k": "research",
     "t": "H63 telescope owners who cannot judge a star image alone",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "build",
-    "t": "H60 ask-sheet tool",
     "s": "next",
     "o": "c"
    },
@@ -525,31 +505,38 @@
   ],
   "done": [
    {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H56 Atmos discovery",
-    "at": "2026-10-24T05:01:52.109000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
-    "t": "H58 capture path",
-    "at": "2026-10-24T05:01:31.562000+00:00",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "H60 asks.py tool",
+    "at": "2026-10-24T05:40:59.609000+00:00",
     "o": "c"
    },
    {
     "w": "Maren",
     "k": "research",
-    "t": "H59 blind grades",
-    "at": "2026-10-24T04:55:50.116000+00:00",
+    "t": "H52 hobby gear judgement asks",
+    "at": "2026-10-24T05:34:48.926000+00:00",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "build",
-    "t": "Hunt grade fixes + method tag",
-    "at": "2026-10-24T04:51:14.610000+00:00",
+    "w": "Idris",
+    "k": "research",
+    "t": "H51b Atmos gap fixtures",
+    "at": "2026-10-24T05:26:30.635000+00:00",
+    "o": "i"
+   },
+   {
+    "w": "Ines",
+    "k": "research",
+    "t": "H61 grades of landed lanes",
+    "at": "2026-10-24T05:19:03.602000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "research",
+    "t": "H52 hobby gear",
+    "at": "2026-10-24T05:12:05.193000+00:00",
     "o": "c",
     "x": "killed"
    },
@@ -557,35 +544,28 @@
     "w": "Idris",
     "k": "research",
     "t": "H51b Atmos gap fixtures",
-    "at": "2026-10-24T04:51:14.606000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Maren",
-    "k": "research",
-    "t": "H52 hobby gear lane",
-    "at": "2026-10-24T04:51:14.605000+00:00",
+    "at": "2026-10-24T05:12:05.191000+00:00",
     "o": "c",
     "x": "killed"
    },
    {
     "w": "Wrenna",
-    "k": "test",
-    "t": "Live site QA",
-    "at": "2026-10-24T04:40:50.064000+00:00",
-    "o": "c"
+    "k": "research",
+    "t": "H57 room to grow",
+    "at": "2026-10-24T05:12:05.188000+00:00",
+    "o": "c",
+    "x": "killed"
    },
    {
-    "w": "Ines",
+    "w": "Wrenna",
     "k": "research",
-    "t": "H-P1 grade new hunt files",
-    "at": "2026-10-24T04:40:22.463000+00:00",
+    "t": "H56 Atmos discovery",
+    "at": "2026-10-24T05:01:52.109000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 23,
+   "next": 19,
    "wait": 0,
    "blocked": 18,
    "you": 1

@@ -15,8 +15,8 @@ Written by Ines, CEO. Round `2026-10-22-market-researcher`. This brief is commit
 
 The board has P1 work with no owner:
 
-> - [ ] [research] Phase 1 research: App Store charts and paid rankings, 1 to 3 star reviews, forums, search gaps, pricing; findings in research/ with links (owner: the market researcher, P1)
-> - [ ] [research] Phase 1 synthesis and the Pitch on Fable: pitches/PITCH.md, 2 to 4 candidates (owner: Ines with the researcher, P1)
+> - <input type="checkbox" class="task-list-item-checkbox" disabled="disabled" aria-label="Not done" /> [research] Phase 1 research: App Store charts and paid rankings, 1 to 3 star reviews, forums, search gaps, pricing; findings in research/ with links (owner: the market researcher, P1)
+> - <input type="checkbox" class="task-list-item-checkbox" disabled="disabled" aria-label="Not done" /> [research] Phase 1 synthesis and the Pitch on Fable: pitches/PITCH.md, 2 to 4 candidates (owner: Ines with the researcher, P1)
 
 Research is the workload the month depends on. A weak idea costs the whole month. I can judge evidence, but I can't run a disciplined research pass across charts, reviews, communities, and trademarks while also planning, hiring, and reporting. After the Pitch, the same person owns the evidence behind pricing, the App Store page, and post-launch review mining, so the role recurs.
 

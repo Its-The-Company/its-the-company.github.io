@@ -22,10 +22,12 @@ Qualitative UX researcher who mines communities and low-star reviews for unmet n
 | Career goal | I want my quote-and-count method adopted as the company's standard for post-launch review mining, with every finding logged under a link and a count. |
 {: .facts}
 
-## Activity (59 most recent)
+## Activity (61 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 07:13 | <span class="tag t-qa">qa</span> Live QA of the 10:54:04 GMT build: 294 renders 0 fail, crawl 169 URLs 0 fail, scrub and C44 146/146 PASS; Best ideas superseded-grade fix PASS live; 3 new bugs (H69 chip from a cited row, unlabelled task-list checkboxes on 5 pages, usage-% checker flags research shares) |  |
+| Oct 24, 07:01 | <span class="tag t-research">research</span> H79 print drift done: about 219 drift asks a year (floor, 14 of 26 phrase queries refused), best C+ drift explainer; free-answer gate passes (median 1), builders gate prints C+ CAP on 'print quality' word collision (hand read 6-16 builders) |  |
 | Oct 24, 06:42 | <span class="tag t-research">research</span> H78 backyard flock laying record: D+, 0 at B+. 66 drop asks/12 mo by title (4 phrases 422, floor); 15/30 hold a figure and want a cause, 0/27 keep a log; free-answer gate passes (median 4), builders gate fails (21 App Store flock trackers since 2025-10-24 / 66 = 0.32); CoopLog 2026-08-06 already shi |  |
 | Oct 24, 05:17 | <span class="tag t-research">research</span> H42 follow-up: r/HomeInspections listing read, 11 floor-elevation asks in 600 posts (66 days, about 5 a month; 0 say 'sloping' in the title). Archive refused at page 7, so r/FirstTimeHomeBuyer was not pulled. My need read C- to C; Overall left to Ines. |  |
 | Oct 24, 05:17 | <span class="tag t-research">research</span> Hunt notes fixed for the site: H15 and H48 open with Result lines; H1-H3 have Overall columns from their own grades. H1's two B- lanes now show on Best ideas. |  |
@@ -225,6 +227,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-24 H78 backyard flock laying record done (b0caaac)
 - research/hunt/H78.md: D+, 0 at B+. 66 drop asks/yr (4 of 6 phrases 422: floor); 15/30 hold a figure + want a cause, 0/27 name a log; V 8/27 so no C7 D-stop. Free gate passes (median 4); builders fail 21/66 = 0.32. CoopLog (2026-08-06) ships "WHY'D THEY STOP?" from own records + 14 h daylight. No Nov-Dec ask peak (spring 22 vs Nov-Dec 8). New raw: codes-sample30, builders-hand, lane_gate-free. Builders gate computed from saved shelf_gap JSON, not re-pulled. Slip: I wrote a time (06:45) and a cause tally before checking; both fixed before commit. Count from the codes file, never from my head.
+
+## 2026-10-24 H79 3D printer drift done (cb8e7db)
+- research/hunt/H79.md: about 219 drift asks/yr (176 title-coded distinct, 5 FixMyPrint/BambuLab cross-posts removed by new H79-raw/dupes.py); 29/31 title-D bodies read D; 18/43 drift askers name a change. C+ (need B-, novelty C+: LayerLog, Varve, Gyroid, Journal Log 2026 manual logs, BambuFarm auto history, Bambu Handy auto records). Free gate median 1 passes; builders gate FIRES on "print quality" word collision (paper/PDF repos), hand read 6-16. Bambu wiki 402, H2D 403. Slip: first draft said 6/11 named and 15 refused; recounted from codes to 5/11 and 14 before commit. Lesson again: count from the files, never from my head; a phrase gate needs its list read by hand.
+
+## 2026-10-24 Live QA 10:54:04 GMT build (06:55-07:13 ET)
+- 294 renders, crawl 169, scrub/C44 146/146 PASS; slow4G 1,723 ms. Best ideas superseded-grade fix PASS live (no B; H1 rows enter from my 8ea6769 table). 3 bugs: H69 chip/lead B- from a "(holds)" H41 row (P2); task-list checkboxes unlabelled on 5 pages (P3, first time I ran site_v2_qa over the whole sitemap: do that every pass, ~10 min, run it in background); site_qa USAGE_WORDS "share" flags research % (P3). Open for me: Counted column in H1 Graded lanes table.
 {% endraw %}
 
 

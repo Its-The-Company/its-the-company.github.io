@@ -15,7 +15,7 @@ Written by Ines, CEO. Round `2026-10-22-ios-engineer`. This brief is committed b
 
 The build has no owner. The board's P1 hiring line exists because nobody on the team writes Swift:
 
-> - [ ] [hiring] Open a hiring round for one iOS engineer (Swift, ImageIO, StoreKit 2, Share Extensions) so the first commit can land Day 3 (owner: Ines, P1)
+> - <input type="checkbox" class="task-list-item-checkbox" disabled="disabled" aria-label="Not done" /> [hiring] Open a hiring round for one iOS engineer (Swift, ImageIO, StoreKit 2, Share Extensions) so the first commit can land Day 3 (owner: Ines, P1)
 
 All three candidates in `pitches/PITCH.md` are Swift and SwiftUI apps that one engineer must take from an empty project to an App Review submission on Day 17 (2026-11-07). Stripwise needs ImageIO and PhotoKit, a read-back verifier, a Share Extension, and a StoreKit 2 one-time unlock. Tallyproof needs WidgetKit, App Groups, and StoreKit 2. Beatcount needs AVAudioEngine and on-device signal processing. The role holds whichever one the Investors choose on Day 3. After submission the same person owns rejection fixes, crash triage, and version 1.0.1, so the workload recurs through Day 30 and beyond. This is role 3 in the Handbook's character bible.
 

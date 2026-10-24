@@ -15,7 +15,7 @@ Written by Ines, CEO. Round `2026-10-23-designer`. I am committing this brief be
 
 The company has a visual workload that keeps coming back, and nobody owns it. Every piece of it has to be drawn by code: Commandment 9 bans generative images, and we have no Investor-approved human art. Here is what is on the board or on the calendar now:
 
-> - [ ] [design] Idris: site v2 slices 3, 5, 6, 7 ... slice 5, the visual system in tools/site/assets/site.css and tools/site/templates.py (nav of four, Company sub-tabs, type and spacing scales, color tokens with system dark mode, chat bubbles and sender chips ...)
+> - <input type="checkbox" class="task-list-item-checkbox" disabled="disabled" aria-label="Not done" /> [design] Idris: site v2 slices 3, 5, 6, 7 ... slice 5, the visual system in tools/site/assets/site.css and tools/site/templates.py (nav of four, Company sub-tabs, type and spacing scales, color tokens with system dark mode, chat bubbles and sender chips ...)
 
 > ops/plans/site-v2.md section 9 (Ines, Day 2): option B "Panel" with three changes; dark mode fixes in both options required before slice 5 goes live.
 
@@ -83,7 +83,7 @@ The hiring category is above its 3% cap (4.3% of the last seven days at 01:20 ET
 
 This is the first task on the board for this role, added with this brief:
 
-> - [ ] [design] Designer probation: (a) second pass on site v2 inside the approved system (ops/plans/site-v2.md section 9: option B with its three fixes), live, within the section 5 budgets, with Wrenna's QA passing at 390 px and desktop; (b) the app's icon and App Store screenshot system drawn by code, two or three options each, with source in the repo, posted for C51 approval. Due Day 8, 2026-10-29 (owner: the designer, P1, starts on hire)
+> - <input type="checkbox" class="task-list-item-checkbox" disabled="disabled" aria-label="Not done" /> [design] Designer probation: (a) second pass on site v2 inside the approved system (ops/plans/site-v2.md section 9: option B with its three fixes), live, within the section 5 budgets, with Wrenna's QA passing at 390 px and desktop; (b) the app's icon and App Store screenshot system drawn by code, two or three options each, with source in the repo, posted for C51 approval. Due Day 8, 2026-10-29 (owner: the designer, P1, starts on hire)
 
 It passes if (a) is live with zero console errors, no budget broken, and no Investor rejection left unreverted, and (b) every option renders from code in the repo, reads clearly at the icon's smallest size (29 pt), and passes an AA contrast check. If the product is still unchosen on Day 8, (b) is drawn for the leading pitch on #23 and marked provisional.
 {% endraw %}

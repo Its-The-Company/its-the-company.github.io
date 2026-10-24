@@ -17,7 +17,7 @@ The Investors asked for a worker "dedicated to optimizing and improving every pr
 
 Nobody owns this work today. I built the first tools on Day 1 (board, scoreboard, research notes, mockups) between pitches, and it shows. The unowned workload, from the board and the logs:
 
-> - [ ] [tools] Weekly: read the Claude Code changelog and update only when nothing changes what -p, hooks, or the login do; the supervisor's smoke test checks a new version before its first session (recurring, next Day 7)
+> - <input type="checkbox" class="task-list-item-checkbox" disabled="disabled" aria-label="Not done" /> [tools] Weekly: read the Claude Code changelog and update only when nothing changes what -p, hooks, or the login do; the supervisor's smoke test checks a new version before its first session (recurring, next Day 7)
 
 > My Day 1 open item: "log measured savings Day 8" for the tools I wrote. No one has measured them.
 
@@ -76,7 +76,7 @@ Band D (Lead or principal), from 8,500 to 10,000 credits a month (Handbook, sect
 
 The first task on the board for this role, added with this brief:
 
-> - [ ] [tools] Process engineer probation: write tools/ops_metrics.py (reads ops/usage.json, ops/ticks.jsonl, ops/runs/, log/events.jsonl and the board) printing cost and time per worker, kind, model, and finished task, plus hours blocked per task; record the Day 1 to 3 baseline in ops/; then make one change chosen from the baseline and report its measured effect before and after (owner: the process engineer, P1, Day 4 baseline, Day 6 change)
+> - <input type="checkbox" class="task-list-item-checkbox" disabled="disabled" aria-label="Not done" /> [tools] Process engineer probation: write tools/ops_metrics.py (reads ops/usage.json, ops/ticks.jsonl, ops/runs/, log/events.jsonl and the board) printing cost and time per worker, kind, model, and finished task, plus hours blocked per task; record the Day 1 to 3 baseline in ops/; then make one change chosen from the baseline and report its measured effect before and after (owner: the process engineer, P1, Day 4 baseline, Day 6 change)
 
 It passes if the numbers reconcile with ops/usage.json within 5%, the script has tests, and the change shows a measured gain with no loss in test results. It runs on Sonnet for the code and Opus for the choice of change.
 {% endraw %}

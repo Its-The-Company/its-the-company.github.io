@@ -2,7 +2,7 @@
 (() => {
 'use strict';
 var S = window.CompanySite; if (!S || !S.getToken()) return;
-var D = document, W = window, el = S.el, ago = S.ago, pub = null, on = false, all = {}, sig = '', bs = '', br = null, sec = null;
+var D = document, W = window, el = S.el, ago = S.ago, pub = null, on = false, all = {}, sig = '', bs = '', br = null, sec = null, jump = 0;
 function mk(p, t, c, x) { return p.appendChild(el(t, c, x)); }
 function at(e, k, v) { e.setAttribute(k, v); return e; }
 function cap(s) { s = String(s || ''); return s.charAt(0).toUpperCase() + s.slice(1); }
@@ -28,7 +28,7 @@ if (t.count) mk(br, 'p', 'cv-bc', (c.next || 0) + ' ready · ' + ((c.wait || 0) 
 mk(br, 'p', 'cv-bc', '5-hour ' + (f.pct != null ? Math.round(f.pct) + '% used' + (f.resets_at ? ', resets ' + et(f.resets_at) : '') : 'not read yet')
 + (k.pct != null ? ' · week ' + Math.round(k.pct) + '%' : ''));
 p = mk(br, 'p', 'cv-bl'); a = mk(p, 'a', null, 'All tasks ↓'); a.href = '#cv-tasks';
-a.onclick = e => { e.preventDefault(); if (sec && sec.scrollIntoView) sec.scrollIntoView({ block: 'start' }); };
+a.onclick = e => { e.preventDefault(); if (sec.hidden) { jump = 1; W.location.hash = '#t=home'; } else sec.scrollIntoView({ block: 'start' }); };
 p.appendChild(D.createTextNode(' · '));
 mk(p, 'a', null, 'Each worker: Company › Work').href = work();
 mk(br, 'p', 'cv-bm', !st.at ? 'No status read yet.' : (pub === false ? 'Live copy, ' + ago(st.at) + ' old' : 'Public copy from the site build, ' + ago(st.at) + ' ago') + '.');
@@ -55,16 +55,17 @@ m.appendChild(D.createTextNode(' · ' + p[0] + ' of ' + p[1] + ' done '));
 mk(mk(m, 'span', 'cv-meter tk-p'), 'i').style.width = Math.round(100 * p[0] / p[1]) + '%';
 }
 }
-function group(k, h, rs, n, more) {
-if (!rs.length) return;
-var ul;
-mk(mk(sec, 'h3', 'tk-h', h + ' '), 'span', 'cv-count', String(rs.length));
+function group(k, h, rs, n, more, N) {
+N = Math.max(N || 0, rs.length);
+if (!N) return;
+var ul, b;
+mk(mk(sec, 'h3', 'tk-h', h + ' '), 'span', 'cv-count', String(N));
 if (all[k]) n = rs.length;
 if (n) { ul = at(mk(sec, 'ul', 'tk'), 'aria-label', h); rs.slice(0, n).forEach(r => { row(ul, r, k); }); }
 if (rs.length > n) {
-var b = mk(sec, 'button', 'btn tk-more', more ? more.replace('N', rs.length) : 'Show all ' + rs.length); b.type = 'button';
+b = mk(sec, 'button', 'btn tk-more', more ? more.replace('N', N) : 'Show all ' + N); b.type = 'button';
 b.onclick = () => { all[k] = 1; sig = ''; place(); };
-}
+} else if (N > rs.length) mk(mk(sec, 'p', 'tk-m'), 'a', null, (rs.length ? N - rs.length + ' more' : 'See them') + ' on Company › Work').href = work();
 }
 function tasks(st) {
 var t = st.tasks || {}, op = t.open || [], c = t.count || {};
@@ -72,8 +73,8 @@ sec.textContent = '';
 mk(mk(sec, 'h2', 'cv-sec', 'Tasks '), 'span', 'cv-count', String((c.next || 0) + (c.wait || 0) + (c.blocked || 0)));
 if (!st.tasks) { mk(sec, 'p', 'muted', 'The task list arrives with the next status.'); return; }
 if (!stale(st)) group('r', 'Working now', (t.run || []).slice(0, 8), 8);
-group('n', 'Ready', op.filter(r => r.s === 'next'), 5);
-group('w', 'Waiting or blocked', op.filter(r => r.s !== 'next'), 0, 'Show N waiting or blocked');
+group('n', 'Ready', op.filter(r => r.s === 'next'), 5, 0, c.next);
+group('w', 'Waiting or blocked', op.filter(r => r.s !== 'next'), 0, 'Show N waiting or blocked', (c.wait || 0) + (c.blocked || 0));
 group('d', 'Just finished', t.done || [], 3);
 }
 function place() {
@@ -94,11 +95,13 @@ if (on && !br.hidden && z !== bs) { bs = z; brief(); }
 if (!on) bs = '';
 z = JSON.stringify([home, st.tasks, pub, all, stale(st), mn]);
 if (home && z !== sig) { sig = z; tasks(st); }
+if (home && jump) { jump = 0; sec.scrollIntoView({ block: 'start' }); }
 }
 S.onStatus.push((st, isPub) => { pub = !!isPub; place(); });
 if (W.MutationObserver) new MutationObserver(place).observe(S.byId('main') || D.body, { childList: true, subtree: true });
 W.addEventListener('hashchange', place);
 W.addEventListener('resize', place);
+W.setInterval(place, 6e4);
 place();
 S.dash = { place: place, toggle: toggle };
 })();

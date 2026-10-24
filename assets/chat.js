@@ -289,11 +289,11 @@ mk(mk(a, 'div', 'cv-meter'), 'i').style.width = Math.max(0, Math.min(100, 100 * 
 return b;
 }
 function glance() {
-var g = el('div', 'cv-glance'), ws = ((S.status && S.status()) || {}).workers || [];
+var g = el('div', 'cv-glance'), st = (S.status && S.status()) || {}, ws = st.workers || [];
 tile(g, D('company'), 'Day', D('day'), 'of ' + D('days'), D('day') / D('days'));
 tile(g, D('company'), 'Net proceeds', '$' + D('rev'), 'of $' + D('goal'), +D('revf'));
 S.tiles(g, tile, D('usage'));
-var b = tile(g, D('company'), 'Right now', ws.length + ' at work', ws.map((w) => { var s = String(w.name || ''); return s.charAt(0).toUpperCase() + s.slice(1); }).join(', ') || 'No worker call is running');
+var b = tile(g, D('company'), 'Right now', ws.length + ' at work', st.who || 'No worker call is running');
 b.parentNode.className += ' cv-live'; if (ws.length) b.insertBefore(el('span', 'cv-dot'), b.firstChild);
 return g;
 }

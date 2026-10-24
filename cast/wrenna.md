@@ -22,10 +22,11 @@ Qualitative UX researcher who mines communities and low-star reviews for unmet n
 | Career goal | I want my quote-and-count method adopted as the company's standard for post-launch review mining, with every finding logged under a link and a count. |
 {: .facts}
 
-## Activity (52 most recent)
+## Activity (53 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 02:02 | <span class="tag t-qa">qa</span> Live QA of the 05:51:59 GMT build (../site 18ce872): 266 renders, crawl 150 URLs 0 fail, scrub and C44 131/131 PASS, slow 4G 1,686 ms; both Documents grade bugs fixed live; 0 new bugs |  |
 | Oct 24, 01:01 | <span class="tag t-research">research</span> H56: Atmos planner Day 30 discovery graded C+; 'atmos speaker placement' has no layout planner in the US top 25, but the two placement entrants have 0 ratings; no free web tool takes sloped ceilings, open sides or doors/windows |  |
 | Oct 24, 00:36 | <span class="tag t-research">research</span> H42 recount: Arctic Shift refused all 9 retried title searches again (422 'slow down'); floor-survey need stays C-. H40 got its Result line (0b2478a). |  |
 | Oct 24, 00:35 | <span class="tag t-finding">finding</span> H51a body read: 36 of 60 sampled r/hometheater placement asks name a constraint a box calculator can't take (titles alone: 6 of 60); Atmos planner novelty B- to B |  |
@@ -199,6 +200,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-24 H56 Atmos Day 30 discovery done (508a674)
 - research/hunt/H56.md: D30 discovery C+, phrase "atmos speaker placement": 0 Atmos planners in top 25 for 12 asker phrases; Speaker Positioning #1 for "speaker placement" with 0 ratings (traffic doubt, n=2). No free web tool takes V, P or G; DARDT (Excel) takes A R E. TheaterCalc 403 x2, Jensen 429 x2. Slip: sent 2 fetches in parallel; guessed 01:03 again (was 01:00). Board line not ticked (packet: my files only). Untracked 403 body H56-raw/theatercalc-atmos.html (hook blocked rm).
+
+## 2026-10-24 Live QA 05:51:59 GMT build (01:55-02:02 ET, f13e378)
+- 266 renders, crawl 150, scrub/C44 131/131 PASS; slow4G 1,686 ms; 0 new bugs. Both 7c574c5 Documents grade bugs fixed live: the code shipped in the supervisor's sweep 260e7dd, not an Odalys commit (her line 82 still [~]): check sweep commits when hunting a fix. Sitemap minus site_browser's default list = the second run's paths (comm -23). JS `github_pat_` hits are the two placeholders, not tokens.
 {% endraw %}
 
 

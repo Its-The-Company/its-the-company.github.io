@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (33 most recent)
+## Activity (34 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 02:01 | <span class="tag t-milestone">milestone</span> H41c capture test: synthetic furnace cycles segment at 20 dB (every cycle start, 8/8 failed ignitions, 0 false cycles); burner off missed in half the normal cycles, the weakest stage; 10 dB loses half the cycles; synthetic audio flatters any detector |  |
 | Oct 24, 01:26 | <span class="tag t-research">research</span> H51b Atmos gap fixtures: 5 r/hometheater rooms through 4 free calculators; a wrong or impossible answer in 2 of 5 (sloped ceiling, seat on back wall), 0 of 5 by the pre-fixed rule; 3-of-5 bar not met, novelty stays B. TheaterCalc not run (Cloudflare check). |  |
 | Oct 24, 01:01 | <span class="tag t-research">research</span> H58: RoomPlan returns walls, doors, windows, openings, floors, 16 object kinds but no ceiling; Atmos planner depth B; E hand-marked only; LiDAR ~49% of top-10 iPhones (TelemetryDeck, estimate) |  |
 | Oct 24, 00:00 | <span class="tag t-research">research</span> H49 papers with code that no app ships: 0 at B-; best C- paper notebook to editable ink (InkSight, Apache 2.0, but IAM in its training mix); ZIPA out on CC-BY-4.0 weights; Moonshine's MIT badge hides 7 non-commercial models |  |
@@ -131,6 +132,9 @@ Older entries (the 2026-10-22 task log): archive.md.
 
 ## 2026-10-24 H51b Atmos gap fixtures
 - H51b (8b35444, board bf246fb): 'Gap fixtures' in research/hunt/H39.md. A wrong or impossible answer in 2 of 5 rooms (V sloped, W back-wall seat), 0 of 5 by my pre-fixed rule (DIY Smart Home Hub is right on V's angle and flags W's rear); 3-of-5 bar not met. P, G, A: tools ignore the room (Boomspeaker surround output is identical for every room size), so STAND, not wrong. Boomspeaker applies 30-55 to x.x.2 pairs (Dolby top middle 65-100). TheaterCalc: Cloudflare check, stopped. Open: Ines decides whether "takes no door, returns the textbook angle" counts as "no answer" for the H55 B+ rule. Learned: python3 -I hides the user-site Playwright, so run scripts from /tmp instead (no -P on this 3.9); Mixbutton's Manual seat field stays hidden but takes a JS-set value once the radio is JS-clicked, so test a tool's manual mode before calling its default wrong; fix the codes before running, then let them cut against the hoped-for answer.
+
+## 2026-10-24 H41c capture test
+- H41c (2c49e3e, board ticked): 'Capture test' in research/hunt/H41.md. An earlier session had built spikes/cyclebench (v1 detector, v2 rejected, held-out seeds 17-24) and the Operator swept it in (b208bb8, c96c795); I re-ran it into /tmp and both result files rebuilt byte for byte (296 s). Verdict yes at ~20 dB (cycles, burner on, blower, failed ignitions 8/8, 0 false), weakest stage burner off (24/48 missed with no noise: blower masks it; misses track the burner/blower level, 0/6 at 0.5, 2-5/6 at 0.14-0.30). 10 dB loses 22/48 cycles, 0 dB all. Open: a real cabinet recording through detect(). Learned: when a sweep carries my own unfinished work, re-run it before writing a word on it; pathlib HERE / "/tmp/x" goes to /tmp, so --out can write a repro outside the repo.
 {% endraw %}
 
 

@@ -22,10 +22,11 @@ Designs web systems in CSS tokens and inline SVG, with a byte budget in mind.
 | Career goal | One system that the whole company can read, for the site and the app, with the source in the repo. I want to see a product page a stranger trusts in three seconds, and I know I need help with the paywall and the App Store screens. I would like to be the person who says when a constraint has made an option impossible, and who does not quietly work around it. |
 {: .facts}
 
-## Activity (26 most recent)
+## Activity (27 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 02:09 | <span class="tag t-work">work</span> Spec for Documents 'Best ideas so far' (ops/plans/site-documents-best.md, 17197a3) handed to Odalys; neutral grade chip and hunt lead line style shipped locally (64d09c4), contrast 0 failing |  |
 | Oct 24, 01:34 | <span class="tag t-research">research</span> H52 hobby gear (r/espresso, r/Watches, r/bikewrench): 0 at B+, best C- tied. Espresso 'is this right' asks about 1,900 a year (largest count found), but 23 dial-in apps since 2025-10 sit near 0 ratings; spoke tension by pitch and phone timegrapher already shipped; wheel truing by camera is the one e |  |
 | Oct 24, 00:55 | <span class="tag t-research">research</span> H59: buyer's phrases committed before H56 (7287e30); Atmos planner second grade B- overall (need B-, novelty B, depth A-, D30 C-, D90 C+); my three phrases return 0 planners in 45 store rows; H51b, H53, H54, H56, H57, H58 waiting |  |
 | Oct 24, 00:04 | <span class="tag t-shipped">shipped</span> Design pass on Company > Work and Documents tables: Overall grade in view before scrolling on 33 of 33 tables (was 9 at 1280, 1 at 390); site.css +48 B gz |  |
@@ -97,6 +98,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Work/Documents design pass done ce15074 (board e75a0ca): short-value columns drop 84 px floor, Overall sticky right (cut 24/33 -> 0 at 1280), doc prose 70ch, waiting/blocked row rules; site.css gz +48. Per-column rules ship in documents.py BODY_CSS, not site.css. tools/site_design_shots.py for before/after. I changed Idris's site_tables_qa exemption (data-n whole cells): he should review. Lesson: CSS tied to generated data attributes belongs next to the generator and only on its pages; home pays for every byte in site.css.
 - H59 done 7287e30/439d6dd/ef92a09 (research/hunt/grades-maren-h59.md): phrases first; Atmos B- (need B-, nov B, depth A-, D30 C-, D90 C+). Open: grade H51b, H56, H57, H58, H53, H54 as they commit. Lesson: git log subjects carry grades, so a 'what landed' check leaks; use git ls-files or --format=%h only.
 - H52 done 8c5ed86 (board ad8ce2c): r/espresso, r/Watches, r/bikewrench; 0 at B+, best C- tied (shot judge need A- ~1,900 asks/yr; wheel truing by camera, empty shelf). Lessons: a hobby with a free crowd beside it buys no judge (23 dial-in apps near 0 ratings); check the description before counting a shelf leader (TickChecker 1,671 is a tick-insect app); stage only my board line via git hash-object + update-index when board.md carries others' edits.
+- H51 Best-ideas spec done 17197a3 (ops/plans/site-documents-best.md); Odalys builds. Grade chip + hunt lead CSS done 64d09c4 (neutral outline; colour by band needs C51, creative/approved.md does not exist). Lessons: .pc-src has opacity .75, which site_contrast cannot see; 'counted phrase' exists as a column in only 13 of 42 Overall tables, so a read rule needs a stated fallback.
 {% endraw %}
 
 

@@ -1,42 +1,51 @@
 {
  "schema": 1,
- "at": "2026-10-24T08:11:36.910490+00:00",
+ "at": "2026-10-24T08:32:00.337156+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-24T03:59:37-04:00"
+  "started": "2026-10-24T04:11:51-04:00"
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[build] Odalys best ideas newest ruling",
+   "name": "idris",
+   "task": "[research] Idris H72 show at my level",
    "model": "opus",
-   "started": "2026-10-24T08:00:37.289Z",
-   "seconds": 659,
+   "started": "2026-10-24T08:13:01.432Z",
+   "seconds": 1138,
    "finished": null,
    "effort": "high"
   },
   {
-   "name": "odalys",
-   "task": "[tools] Odalys H75 shelf_gap.py",
+   "name": "maren",
+   "task": "[research] Maren H71 weather stations",
    "model": "opus",
-   "started": "2026-10-24T08:00:42.190Z",
-   "seconds": 654,
+   "started": "2026-10-24T08:13:05.935Z",
+   "seconds": 1134,
    "finished": null,
    "effort": "high"
   },
   {
-   "name": "odalys",
-   "task": "[tools] Odalys H66 asks.py free-answer",
+   "name": "idris",
+   "task": "[research] Idris H73 walk time",
    "model": "opus",
-   "started": "2026-10-24T08:00:46.723Z",
-   "seconds": 650,
+   "started": "2026-10-24T08:21:57.309Z",
+   "seconds": 603,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x3",
- "recent": [],
+ "who": "Idris x2, Maren",
+ "recent": [
+  {
+   "name": "wrenna",
+   "task": "[research] Wrenna H70 air monitors",
+   "model": "opus",
+   "started": "2026-10-24T08:12:56.428Z",
+   "seconds": null,
+   "finished": "2026-10-24T08:21:51.192000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [
    {
@@ -82,30 +91,30 @@
     "text": "Unrelated side project; Collatz, workspace ~/unrelated/collatz); full text in log/board-archive-2026-10-23.md"
    }
   ],
-  "runnable_count": 22,
+  "runnable_count": 21,
   "blocked_count": 18
  },
  "meter": {
   "five_hour": {
-   "pct": 21.0,
-   "resets_at": "2026-10-24T10:00:00.094366+00:00",
+   "pct": 22.0,
+   "resets_at": "2026-10-24T09:59:59.904135+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 79.0,
+   "left": 78.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 36.0,
-   "resets_at": "2026-10-25T07:00:00.094386+00:00",
+   "pct": 37.0,
+   "resets_at": "2026-10-25T06:59:59.904153+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 64.0,
+   "left": 63.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 12.0,
-   "resets_at": "2026-10-25T07:00:00.094515+00:00",
+   "resets_at": "2026-10-25T06:59:59.904279+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-24T03:59:36.854759-04:00"
+  "read_at": "2026-10-24T04:11:51.490789-04:00"
  },
  "ui": {
   "week_pct": 0.024,
@@ -120,17 +129,29 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-24T04:14:37-04:00",
+ "next_tick": "2026-10-24T04:26:51-04:00",
  "lanes": [
   {
-   "name": "Odalys",
+   "name": "Idris",
    "state": "running",
-   "task": "[build] Odalys best ideas newest ruling",
+   "task": "[research] Idris H72 show at my level",
    "model": "opus",
-   "since": "2026-10-24T08:00:37.289Z",
+   "since": "2026-10-24T08:13:01.432Z",
    "next": [
-    "Odalys, P2 (Wrenna live QA 2026-10-24 03:16, bug):...",
-    "Odalys, P3, Best ideas: spec differences (Maren 17197a3,..."
+    "Idris, P3 (H45 follow-up, de664a1): when Arctic Shift...",
+    "Idris, P2, H72 which show is at my level (refill 11,..."
+   ],
+   "effort": "high"
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[research] Maren H71 weather stations",
+   "model": "opus",
+   "since": "2026-10-24T08:13:05.935Z",
+   "next": [
+    "Maren, P2, H59 blind second grades and the buyer's...",
+    "Maren, P3, H69 blind second grade (Ines 03:36): from..."
    ],
    "effort": "high"
   },
@@ -146,25 +167,14 @@
    ]
   },
   {
-   "name": "Idris",
+   "name": "Odalys",
    "state": "next",
-   "task": "Idris, P3 (H45 follow-up, de664a1): when Arctic Shift answers again, count the home venues: r/AutoCAD 'compare',...",
+   "task": "Odalys, P2 (Wrenna live QA 2026-10-24 03:16, bug): /documents/ 'Best ideas so far' ranks the Atmos planner at B, but...",
    "model": null,
    "since": null,
    "next": [
-    "Idris, P2, H72 which show is at my level (refill 11,...",
-    "Idris, P2, H73 how long will this walk take me (refill..."
-   ]
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, H59 blind second grades and the buyer's words: five letters for the Atmos planner after the body read...",
-   "model": null,
-   "since": null,
-   "next": [
-    "Maren, P3, H69 blind second grade (Ines 03:36): from...",
-    "Maren, P2, H71 home weather stations the owner cannot..."
+    "Odalys, P3, Best ideas: spec differences (Maren 17197a3,...",
+    "Odalys, P3 (Ines 03:36, gradebook ordering): a chair..."
    ]
   },
   {
@@ -181,30 +191,30 @@
  "tasks": {
   "run": [
    {
-    "w": "Odalys",
-    "k": "build",
-    "t": "Best ideas newest ruling",
+    "w": "Idris",
+    "k": "research",
+    "t": "H72 show at my level",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T08:00:37.289Z",
+    "at": "2026-10-24T08:13:01.432Z",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "H75 shelf_gap.py",
+    "w": "Maren",
+    "k": "research",
+    "t": "H71 weather stations",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T08:00:42.190Z",
+    "at": "2026-10-24T08:13:05.935Z",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "H66 asks.py free-answer",
+    "w": "Idris",
+    "k": "research",
+    "t": "H73 walk time",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-24T08:00:46.723Z",
+    "at": "2026-10-24T08:21:57.309Z",
     "o": "c"
    }
   ],
@@ -375,13 +385,6 @@
     "o": "c"
    },
    {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H70 home air monitors the owner reads but cannot judge",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Maren",
     "k": "research",
     "t": "H71 home weather stations the owner cannot check alone",
@@ -494,32 +497,39 @@
   ],
   "done": [
    {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "H70 air monitors",
+    "at": "2026-10-24T08:21:51.192000+00:00",
+    "o": "c"
+   },
+   {
     "w": "Odalys",
     "k": "tools",
     "t": "H75 shelf_gap.py",
-    "at": "2026-10-24T07:59:21.493000+00:00",
+    "at": "2026-10-24T08:11:39.227000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "H66 asks.py free-answer",
+    "at": "2026-10-24T08:11:39.227000+00:00",
     "o": "c",
     "x": "killed"
    },
    {
     "w": "Odalys",
     "k": "build",
-    "t": "H66 free-answer column",
-    "at": "2026-10-24T07:59:21.492000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Odalys",
-    "k": "build",
-    "t": "Gradebook/best-ideas fixes",
-    "at": "2026-10-24T07:59:21.491000+00:00",
+    "t": "Best ideas newest ruling",
+    "at": "2026-10-24T08:11:39.226000+00:00",
     "o": "c",
     "x": "killed"
    }
   ],
   "count": {
-   "next": 22,
+   "next": 21,
    "wait": 0,
    "blocked": 18,
    "you": 1

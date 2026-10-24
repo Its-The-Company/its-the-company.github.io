@@ -22,10 +22,11 @@ Qualitative UX researcher who mines communities and low-star reviews for unmet n
 | Career goal | I want my quote-and-count method adopted as the company's standard for post-launch review mining, with every finding logged under a link and a count. |
 {: .facts}
 
-## Activity (55 most recent)
+## Activity (56 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 04:21 | <span class="tag t-research">research</span> H70 home air monitors: 0 at B+, best C+ room air reader (268 hand-read asks in 12 months across 3 venues; 16/30 bodies hold a series and need a cause; no app names a spike's cause; r/hvacadvice refused) |  |
 | Oct 24, 03:17 | <span class="tag t-qa">qa</span> Live QA of the 07:03 GMT build: 272 renders and 150-URL crawl 0 fail, scrub and C44 134/134; Documents 'Best ideas so far' layout and contrast pass, but it still ranks the Atmos planner first at B after Ines moved it to C+ (bug filed, not a publish lag) |  |
 | Oct 24, 02:29 | <span class="tag t-research">research</span> H64 Atmos stand count: S-NO 9, S-OK 4, S-? 10 of 23 posts; household limits (dogs, partner veto, walkway, door) rule stands out in 9 of 13 that say |  |
 | Oct 24, 02:02 | <span class="tag t-qa">qa</span> Live QA of the 05:51:59 GMT build (../site 18ce872): 266 renders, crawl 150 URLs 0 fail, scrub and C44 131/131 PASS, slow 4G 1,686 ms; both Documents grade bugs fixed live; 0 new bugs |  |
@@ -211,6 +212,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-24 Live QA 07:03:17 GMT build + Best ideas check (03:08-03:16 ET)
 - 272 renders, crawl 150, scrub/C44 134/134 PASS; slow4G 1,692 ms. Best ideas layout/links/contrast PASS (new tools/site_best_live.py: live computed contrast; site_contrast.py only reads local CSS, the live page inlines CSS). Content bug to Odalys P2 + Ines P3: list keeps Atmos at B (best-ever letter rule + pass 3 C+ only in prose). Lesson: test "waiting on publish" by running the generator on main (sitegen via `import site_build`). H51c line ticked (798eec0).
+
+## 2026-10-24 H70 home air monitors done (8f08bd5)
+- research/hunt/H70.md: 0 at B+; best C+ room air reader (import Aranet/AirGradient/Airthings history, name a spike's room cause, ACH from CO2 decay). 268 asks/12 mo hand-read (r/AirQuality 180 of 841, r/airpurifiers 52 of 195 title rows, AG forum 36 of 302); sample 30: T 21, C 18, both 16, health text 6. No App Store description names a cause; 71 builder posts. r/hvacadvice 422 twice. Resumed from dumps already pulled: the dumps carry selftext, so body samples need no fetch. Built codes from row lists per 420-row chunk, merged, then `--show` checked alignment.
 {% endraw %}
 
 

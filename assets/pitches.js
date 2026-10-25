@@ -48,6 +48,8 @@ function go() {
 var h = location.hash.slice(1), t = h && document.getElementById(h);
 if (!t) return;
 if (t.hidden) clear();
+var d = t.querySelector("details");
+if (d) d.open = true;
 t.scrollIntoView();
 }
 window.onhashchange = go;

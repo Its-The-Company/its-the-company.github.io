@@ -96,8 +96,8 @@ var repo = root.getAttribute('data-repo'), RI = '/repos/' + repo + '/issues', co
 function D(k) { return root.getAttribute('data-' + k) || ''; }
 var etags = {}, cache = {}, names = [], issues = [], extra = {}, comments = [], threads = {}, lastDraw = null;
 if (D('queue')) (document.head || root).appendChild(Object.assign(el('script'), { src: D('queue') }));
-var tabs = [], cur = null, limit = 30;
-try { tabs = (JSON.parse(LS.getItem('company.tabs')) || []).filter((n) => n > 0).slice(-8); } catch (e) { tabs = []; }
+var cur = null, limit = 30;
+if (W.history && 'scrollRestoration' in W.history) W.history.scrollRestoration = 'manual';
 if (!LS.getItem('company.seen0')) LS.setItem('company.seen0', now().toISOString());
 var seen0 = LS.getItem('company.seen0'), isDesk = !!(W.matchMedia && W.matchMedia('(min-width:880px)').matches);
 var Q = (s) => document.querySelector ? document.querySelector(s) : null;
@@ -109,8 +109,6 @@ else put(root, col);
 if (stripEl) put(col, stripEl);
 var bar = mk(col, 'div', 'cv-tabs'), scroller = mk(bar, 'div', 'cv-scroll');
 attr(bar, 'role', 'tablist'); attr(bar, 'aria-label', 'Conversations');
-var plus = mk(bar, 'button', 'cv-tab cv-new', '+'); plus.type = 'button'; attr(plus, 'role', 'tab'); attr(plus, 'aria-label', 'New conversation');
-plus.onclick = () => { go('new'); };
 var setRow = mk(col, 'p', 'meta cv-set'), setL = mk(setRow, 'a', null, 'Settings'); setL.href = (D('connect') || 'connect.html') + '#name';
 put(setRow, txt(' · '));
 var tokenLink = mk(setRow, 'a', 'meta', 'Token connected · change'); tokenLink.href = D('connect') || 'connect.html';
@@ -125,6 +123,7 @@ function login(x) { return String((x && x.user && x.user.login) || '').toLowerCa
 function numOf(c) { return +String(c.issue_url || '').split('/').pop(); }
 function isInv(l) { return names.indexOf(l) >= 0; }
 function issue(n) { for (var k = 0; k < issues.length; k++) if (issues[k].number === n) return issues[k]; return extra[n] || null; }
+function ttl(i) { return labelsOf(i).indexOf('main') >= 0 ? 'Chat' : i.title; }
 function mainN() { var i = issues.concat(flat(extra)).filter((x) => x.state === 'open' && labelsOf(x).indexOf('main') >= 0)[0]; return i ? i.number : 0; }
 function openIssues() { return issues.filter((i) => i.state === 'open'); }
 function byAt(a, b) { return a.created_at < b.created_at ? -1 : a.created_at > b.created_at ? 1 : 0; }
@@ -133,49 +132,33 @@ function allComments() { var by = {}; comments.concat(flat(threads)).forEach((c)
 function seen(n) { var s = LS.getItem('company.seen.' + n); return s && s > seen0 ? s : seen0; }
 function unread(n) { return msgsOf(n).filter((c) => !isInv(login(c)) && !isReceipt(c.body) && c.created_at > seen(n)).length; }
 function markSeen(n) { var l = msgsOf(n); if (typeof n === 'number' && l.length) LS.setItem('company.seen.' + n, l[l.length - 1].created_at); }
-function parse() { var m = /^#t=(\w+)/.exec((W.location && W.location.hash) || ''); return m ? m[1] : 'main'; }
+function parse() { var m = /^#t=(\w+)/.exec((W.location && W.location.hash) || ''); return m ? m[1] : 'home'; }
 function go(k) { if (k === 'main') k = mainN() || k; var h = '#t=' + k; if (W.location && W.location.hash !== h) W.location.hash = h; if (String(k) !== String(cur)) select(k); }
 function select(k) {
 if (k === 'main') k = mainN() || k;
-if (k !== 'home' && k !== 'new' && k !== 'main') { k = +k; if (k > 0) { if (k !== mainN()) openTab(k); } else k = 'home'; }
-saveDraft(); cur = k; limit = 30; jump.hidden = true; isOpen = isDesk || ((k === 'new' || isMain(k)) && composerOn); drawTabs(); drawView(true); drawDock(); if (isDesk && composerOn && isMain(k) && ta.focus) ta.focus();
+if (k !== 'home' && k !== 'main') { k = +k; if (!(k > 0)) k = 'home'; }
+saveDraft(); cur = k; limit = 30; jump.hidden = true; isOpen = isDesk || (isMain(k) && composerOn); drawTabs(); drawView(true); drawDock();
+if (k === 'home') { if (W.scrollTo) W.scrollTo(0, 0); } else bottom();
+if (isDesk && composerOn && isMain(k) && ta.focus) ta.focus();
 }
-function openTab(n) {
-if (tabs.indexOf(n) >= 0) return;
-tabs.push(n);
-while (tabs.length > 8) {
-var drop = tabs.filter((t) => t !== n && !unread(t))[0] || tabs[0];
-tabs.splice(tabs.indexOf(drop), 1);
-}
-LS.setItem('company.tabs', JSON.stringify(tabs));
-}
-function closeTab(n) {
-var at = tabs.indexOf(n); tabs.splice(at, 1); LS.setItem('company.tabs', JSON.stringify(tabs));
-go(tabs[at] || tabs[at - 1] || 'home');
-}
-function keys() { var m = mainN(); return ['home', m || 'main'].concat(tabs.filter((t) => t !== m), ['new']); }
+function keys() { return ['home', mainN() || 'main']; }
 function drawTabs() {
 scroller.textContent = '';
-keys().slice(0, -1).forEach((k) => {
-var b = mk(scroller, 'button', 'cv-tab'), sel = String(k) === String(cur), u = typeof k === 'number' ? unread(k) : 0, i = issue(k), m = isMain(k);
+keys().forEach((k) => {
+var b = mk(scroller, 'button', 'cv-tab'), sel = (k === 'home') === (cur === 'home'), u = typeof k === 'number' ? unread(k) : 0;
 b.type = 'button'; attr(b, 'role', 'tab'); attr(b, 'aria-selected', sel ? 'true' : 'false'); b.tabIndex = sel ? 0 : -1;
-if (k > 0 && !m) mk(b, 'span', 'cv-n', '#' + k);
-mk(b, 'span', 'cv-t', k === 'home' ? 'Home' : m ? 'Main' : i ? i.title : '');
+mk(b, 'span', 'cv-t', k === 'home' ? 'Home' : 'Chat');
 if (u) attr(mk(b, 'span', 'cv-badge', String(u)), 'aria-label', u + ' new');
-if (sel && typeof k === 'number' && !m) { attr(b, 'aria-keyshortcuts', 'Delete'); var x = mk(b, 'span', 'cv-x', '×'); attr(x, 'aria-hidden', 'true'); x.onclick = (ev) => { if (ev && ev.stopPropagation) ev.stopPropagation(); closeTab(k); }; }
 b.onclick = () => { go(k); };
 b.k = k;
 });
-attr(plus, 'aria-selected', cur === 'new' ? 'true' : 'false'); plus.tabIndex = cur === 'new' ? 0 : -1; plus.k = 'new';
 var h = bar.offsetHeight, de = DE;
 if (h && de && de.style) de.style.setProperty('--cv-tabs-h', h + 'px');
 }
 bar.onkeydown = (ev) => {
-var ks = keys(), at = ks.map(String).indexOf(String(cur)), k = ev.key;
-if (k === 'Delete' && typeof cur === 'number' && !isMain(cur)) { stop(ev); closeTab(cur); }
-else if (k === 'ArrowLeft' || k === 'ArrowRight') { stop(ev); go(ks[(at + (k === 'ArrowRight' ? 1 : ks.length - 1)) % ks.length]); }
-else return;
-var t = [].filter.call(bar.querySelectorAll('[role=tab]'), (b) => String(b.k) === String(cur))[0]; if (t) t.focus();
+if (ev.key !== 'ArrowLeft' && ev.key !== 'ArrowRight') return;
+stop(ev); go(cur === 'home' ? 'main' : 'home');
+var t = [].filter.call(bar.querySelectorAll('[role=tab]'), (b) => b.tabIndex === 0)[0]; if (t) t.focus();
 };
 on(W, 'hashchange', () => { var k = parse(); if (String(k) !== String(cur)) select(k); });
 function hue(l) { var h = 0, k; for (k = 0; k < l.length; k++) h = (h * 31 + l.charCodeAt(k)) >>> 0; return 'c' + (h % 6); }
@@ -213,7 +196,8 @@ function drawThread(open) {
 var n = cur, i = issue(n), k = i ? kindOf(i) : 'chat', d = i && k === 'urgent' ? deadlineOf(i) : null;
 head = mk(view, 'div', 'cv-head');
 mk(head, 'span', 'chip ' + k, KINDS[k]); mk(head, 'span', 'meta', '#' + n);
-mk(head, 'h2', null, i ? i.title + (i.state === 'closed' ? ' (closed)' : '') : 'Loading...');
+mk(head, 'h2', null, i ? ttl(i) + (i.state === 'closed' ? ' (closed)' : '') : 'Loading...');
+if (!isMain(n)) mk(head, 'a', 'meta', '← Chat').href = '#t=main';
 if (d) put(head, d.t ? due(d) : el('span', 'cv-due', d.text));
 pin = mk(head, 'button', 'cv-pin'); pin.type = 'button'; pin.hidden = true;
 log = mk(view, 'div', 'cv-log'); shown = {}; lastDay = ''; waitEl = null; anchor = null;
@@ -235,7 +219,7 @@ function bottom() { if (W.scrollTo && DE) W.scrollTo(0, DE.scrollHeight); }
 function toMsg(a) { W.scrollTo(0, a.getBoundingClientRect().top + W.scrollY - headH() - 8); }
 function nearBottom() { var de = DE; return !de || !W.innerHeight || de.scrollHeight - (W.scrollY + W.innerHeight) < 200; }
 function position() {
-if (W.scrollTo) { if (anchor && anchor.getBoundingClientRect) toMsg(anchor); else bottom(); }
+bottom();
 markSeen(cur); drawTabs();
 if (pinObs) pinObs.disconnect();
 if (!anchor || !W.IntersectionObserver) return;
@@ -323,10 +307,11 @@ l.forEach((x) => { row(ul, x.i.number, x.i.title, due(x.d), (x.d && !x.d.t ? 'De
 return box;
 }
 function allConvos(h) {
-var box = el('div', 'cv-all'), recent = Date.now() - 3 * 864e5, ul, nz = h ? urgentList().map((x) => x.i.number) : [];
-mk(box, 'h2', 'cv-sec', h || 'All conversations'); ul = mk(box, 'ul', 'cv-list');
-issues.filter((i) => nz.indexOf(i.number) < 0 && (i.state === 'open' || Date.parse(i.closed_at || i.updated_at) > recent)).slice(0, 30)
-.forEach((i) => { row(ul, i.number, i.title + (i.state === 'closed' ? ' (closed)' : ''), el('span', 'cv-rm', ago(i.updated_at)), '', '', kindOf(i)); });
+var box = el('details', 'cv-all'), recent = Date.now() - 3 * 864e5, nz = h ? urgentList().map((x) => x.i.number) : [];
+var l = issues.filter((i) => nz.indexOf(i.number) < 0 && (i.state === 'open' || Date.parse(i.closed_at || i.updated_at) > recent)).slice(0, 30);
+mk(mk(box, 'summary', 'cv-sec', (h || 'All conversations') + ' '), 'span', 'cv-count', String(l.length));
+var ul = mk(box, 'ul', 'cv-list');
+l.forEach((i) => { row(ul, i.number, ttl(i) + (i.state === 'closed' ? ' (closed)' : ''), el('span', 'cv-rm', ago(i.updated_at)), '', '', kindOf(i)); });
 return box;
 }
 function drawView(open) {
@@ -336,7 +321,7 @@ put(side, glance());
 if (!lastDraw) { var p = mk(view, 'p', 'muted', S.rejected() ? NO_TOKEN + ' ' : 'Loading...'); if (S.rejected()) mk(p, 'a', null, 'Change the token').href = tokenLink.href; return; }
 if (cur === 'home') { [glance(), needs(), allConvos()].forEach((x) => { put(view, x); }); return; }
 put(side, needs()); put(side, allConvos('Older threads'));
-if (cur === 'new' || cur === 'main') {
+if (cur === 'main') {
 mk(mk(view, 'div', 'cv-head'), 'h2', null, toText());
 return;
 }
@@ -344,18 +329,17 @@ drawThread(open);
 }
 var isOpen = isDesk, urgentOn = false, sending = false;
 var fake = el('button', 'cv-fake'), barSend = el('button', 'cv-send', '↑'), to = el('div', 'cv-to');
-var topicIn = el('input', 'field'), ta = el('textarea'), tools = el('div', 'cv-tools'), out = el('p', 'cv-state', '');
+var ta = el('textarea'), tools = el('div', 'cv-tools'), out = el('p', 'cv-state', '');
 var urg = mk(tools, 'button', 'cv-tool', '! Urgent'), hide = mk(tools, 'button', 'cv-tool cv-hide', 'Hide ⌄'), send = mk(tools, 'button', 'cv-send', '↑');
 [fake, barSend, urg, hide, send].forEach((b) => { b.type = 'button'; });
 attr(barSend, 'aria-label', 'Send'); attr(send, 'aria-label', 'Send'); attr(hide, 'aria-label', 'Hide the composer');
-topicIn.type = 'text'; topicIn.maxLength = 30; topicIn.placeholder = 'Topic (optional)'; attr(topicIn, 'aria-label', 'Topic for the new conversation');
 ta.rows = 3; attr(ta, 'aria-label', 'Message'); ta.placeholder = 'Handled as if typed into Claude Code.';
 attr(out, 'role', 'status');
 function isMain(k) { return k === 'main' || (k > 0 && k === mainN()); }
-function target() { return typeof cur === 'number' || cur === 'new' ? cur : mainN() || 'main'; }
+function target() { return typeof cur === 'number' ? cur : mainN() || 'main'; }
 function draftKey() { return 'company.draft.' + target(); }
 function saveDraft() { if (cur === null) return; if (ta.value.trim()) LS.setItem(draftKey(), ta.value); else LS.removeItem(draftKey()); }
-function toText() { var n = target(), i = issue(n); return n === 'new' ? 'New conversation' : isMain(n) ? 'Main thread' : '#' + n + (i ? ' ' + i.title : ''); }
+function toText() { var n = target(), i = issue(n); return isMain(n) ? 'Chat' : '#' + n + (i ? ' ' + i.title : ''); }
 function canSend() { return !!ta.value.trim() && !S.rejected() && !sending; }
 function drawDock() {
 dock.textContent = '';
@@ -365,13 +349,13 @@ barSend.disabled = send.disabled = !canSend();
 if (main) main.className = 'cv-desk' + (isOpen ? ' cv-open' : '');
 if (!isOpen) {
 var b = mk(dock, 'div', 'cv-bar'); put(b, fake); put(b, barSend); put(dock, out);
-fake.textContent = ta.value.trim() ? ta.value.trim().split('\n')[0] : target() === 'new' || isMain(target()) ? 'Message the company...' : 'Reply to ' + toText() + '...';
+fake.textContent = ta.value.trim() ? ta.value.trim().split('\n')[0] : isMain(target()) ? 'Message the company...' : 'Reply to ' + toText() + '...';
 return;
 }
 to.textContent = 'To '; mk(to, 'b', null, toText());
 var nm = LS.getItem(NAME); if (nm) mk(to, 'span', null, '· as ' + nm);
 attr(urg, 'aria-pressed', urgentOn ? 'true' : 'false');
-[to].concat(target() === 'new' ? [topicIn] : [], [ta, tools, out]).forEach((x) => { put(dock, x); });
+[to, ta, tools, out].forEach((x) => { put(dock, x); });
 }
 fake.onclick = () => { isOpen = true; drawDock(); if (ta.focus) ta.focus(); };
 barSend.onclick = () => { doSend(); };
@@ -411,17 +395,13 @@ var who = n === 'main' ? get(RI + '?labels=main').then((l) => { if (l && l[0]) e
 who.then((l) => {
 var w = splitNames(urgent ? l : []), cc = urgent ? mentions(w[0]) : '';
 if (urgent) warn = (cc ? '' : ' No one was mentioned.') + (w[1].length ? ' Not mentioned (no post here yet): ' + w[1].join(', ') + '.' : '');
-if (typeof n !== 'number') {
-var topic = n === 'new' && topicIn.value.trim().toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/^-+|-+$/g, '').slice(0, 30);
-var labels = ['chat']; if (topic) labels.push('topic:' + topic); if (n === 'main') labels.push('main'); if (urgent) labels.push('urgent');
-return post(RI, { title: n === 'main' ? 'Main thread' : (topic ? topic + ': ' : 'Chat: ') + text.replace(/\s+/g, ' ').slice(0, 60), body: stamp(text, name, cc), labels: labels });
-}
+if (typeof n !== 'number') return post(RI, { title: 'Chat', body: stamp(text, name, cc), labels: ['chat', 'main'].concat(urgent ? ['urgent'] : []) });
 return post(RI + '/' + n + '/comments', { body: stamp(text, name, cc) }).then((r) => {
 return urgent ? post(RI + '/' + n + '/labels', { labels: ['urgent'] })
 .then(() => r, (e) => { warn = ' The urgent label was not added (' + e.message + ')' + (cc ? '; the mentions were sent.' : '.') + warn; return r; }) : r;
 });
 }).then((r) => {
-LS.removeItem(dk); ta.value = ''; urgentOn = false; topicIn.value = '';
+LS.removeItem(dk); ta.value = ''; urgentOn = false;
 var made = typeof n !== 'number' && r.number;
 state('sent', 'Sent' + (made ? ' as #' + r.number : '') + '. A receipt follows within a tick.' + warn, warn ? 15000 : 8000);
 etags = {}; sending = false;

@@ -1,77 +1,21 @@
 {
  "schema": 1,
- "at": "2026-10-25T10:03:26.880637+00:00",
+ "at": "2026-10-25T10:20:40.725402+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-10-25T05:37:24-04:00"
+  "kind": "morning",
+  "started": "2026-10-25T06:18:59-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] Odalys T32-1 cap_map fixes",
-   "model": "opus",
-   "started": "2026-10-25T09:47:17.965Z",
-   "seconds": null,
-   "finished": "2026-10-25T10:02:31.231000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[build] Odalys site S28-3 then S30",
-   "model": "opus",
-   "started": "2026-10-25T09:38:50.770Z",
-   "seconds": null,
-   "finished": "2026-10-25T10:01:16.171000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] Odalys fix terms_locate home step",
-   "model": "opus",
-   "started": "2026-10-25T09:50:32.000Z",
-   "seconds": null,
-   "finished": "2026-10-25T09:53:54.964000+00:00"
-  },
-  {
    "name": "ines",
-   "task": "[plan] Ines refill 33 board",
-   "model": "opus",
-   "started": "2026-10-25T09:48:54.126Z",
+   "task": "[report] morning",
+   "model": "haiku",
+   "started": "2026-10-25T10:19:20.444Z",
    "seconds": null,
-   "finished": "2026-10-25T09:53:53.781000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[research] Idris H259 Irish mutation rules test",
-   "model": "opus",
-   "started": "2026-10-25T09:46:50.712Z",
-   "seconds": null,
-   "finished": "2026-10-25T09:53:53.047000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[research] Maren H263 CC0 graphs generator",
-   "model": "opus",
-   "started": "2026-10-25T09:48:32.701Z",
-   "seconds": null,
-   "finished": "2026-10-25T09:53:04.314000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[research] Idris H260 federal data generator",
-   "model": "opus",
-   "started": "2026-10-25T09:46:55.514Z",
-   "seconds": null,
-   "finished": "2026-10-25T09:52:13.271000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[research] Ines chair Lemmy federation",
-   "model": "opus",
-   "started": "2026-10-25T09:50:36.602Z",
-   "seconds": null,
-   "finished": "2026-10-25T09:51:32.699000+00:00"
+   "finished": "2026-10-25T10:20:00.982Z"
   }
  ],
  "queue": {
@@ -124,17 +68,17 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 40.0,
-   "resets_at": "2026-10-25T11:59:59.976859+00:00",
+   "pct": 50.0,
+   "resets_at": "2026-10-25T11:59:59.921396+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 60.0,
+   "left": 50.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 7.0,
-   "resets_at": "2026-11-01T06:59:59.976876+00:00",
+   "pct": 9.0,
+   "resets_at": "2026-11-01T06:59:59.921451+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 93.0,
+   "left": 91.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -142,7 +86,7 @@
    "resets_at": "2026-11-01T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-25T05:37:23.599184-04:00"
+  "read_at": "2026-10-25T06:18:57.763803-04:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -157,7 +101,7 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-25T05:52:23-04:00",
+ "next_tick": "2026-10-25T06:33:57-04:00",
  "lanes": [
   {
    "name": "Wrenna",
@@ -165,7 +109,10 @@
    "task": "Wrenna: site_qa.py checks for the additions against fixtures now (every % names its denominator; unrelated content...",
    "model": null,
    "since": null,
-   "next": []
+   "next": [
+    "Wrenna, P2, G26 lane 2 from weak top-5 rows (Ines 17:43...",
+    "Wrenna, P1, H269 G82 Stack Exchange subject sites..."
+   ]
   },
   {
    "name": "Ines",
@@ -173,7 +120,10 @@
    "task": "Ines, P2, T1 triage, then chair, for H177, H178, H179 and H180 as each lands (method-v2.md T1): read the lane's...",
    "model": null,
    "since": null,
-   "next": []
+   "next": [
+    "Ines, P2, T1 triage for H187, H188 and H189-H195 as each...",
+    "Ines, P2, H263 data routes (Maren 7db832ef, H263.md..."
+   ]
   },
   {
    "name": "Idris",
@@ -181,7 +131,10 @@
    "task": "Idris, P2, H265 G76 papers-first (research/hunt/refill-33.md section 4, R33-2): arXiv API terms and rate limit...",
    "model": null,
    "since": null,
-   "next": []
+   "next": [
+    "Idris, P2, H266 G78 instrument substitution...",
+    "Idris, P3, H267 G77 expired patents (refill-33.md..."
+   ]
   },
   {
    "name": "Maren",
@@ -189,7 +142,10 @@
    "task": "Maren, P2, H270 G79 crafts that compute from printed tables (refill-33.md section 4, R33-2; no crochet, knitting or...",
    "model": null,
    "since": null,
-   "next": []
+   "next": [
+    "Maren, P2, H271 G81 paid field trades (refill-33.md...",
+    "Maren, P2, S33-1 route-status panel design (refill-33.md..."
+   ]
   },
   {
    "name": "Odalys",
@@ -197,7 +153,10 @@
    "task": "Odalys, P2, T33-1 gen_yield hold column (refill-33.md section 5): per generator, concepts T1-open and held, split by...",
    "model": null,
    "since": null,
-   "next": []
+   "next": [
+    "Odalys, P2, T33-2 route status table (refill-33.md...",
+    "Odalys, P3, T33-3 terms_locate Bluesky-case test..."
+   ]
   }
  ],
  "tasks": {
@@ -727,6 +686,13 @@
   ],
   "done": [
    {
+    "w": "Ines",
+    "k": "report",
+    "t": "Morning",
+    "at": "2026-10-25T10:20:00.982Z",
+    "o": "i"
+   },
+   {
     "w": "Odalys",
     "k": "tools",
     "t": "T32-1 cap_map fixes",
@@ -774,13 +740,6 @@
     "t": "H260 federal data generator",
     "at": "2026-10-25T09:52:13.271000+00:00",
     "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "research",
-    "t": "Chair Lemmy federation",
-    "at": "2026-10-25T09:51:32.699000+00:00",
-    "o": "c"
    }
   ],
   "count": {
@@ -802,8 +761,5 @@
    },
    "title": "Urgent -- Get to Work!!"
   }
- ],
- "trimmed": [
-  "lane_next"
  ]
 }

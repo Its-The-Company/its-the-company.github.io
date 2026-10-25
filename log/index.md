@@ -6,11 +6,12 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (953 events over 4 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (954 events over 4 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 4 <small>Sun Oct 25 · 154 events</small>
+## Day 4 <small>Sun Oct 25 · 155 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">06:20</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a></td><td class="what"><span class="tag t-report">report</span> Report 6 (morning, Day 3) published; private copy in #55</td></tr>
 <tr><td class="t num">06:02</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work session 05:38-06:03: about 30 tasks, 10-12 agents at once (Opus high); <span title="A numbered batch of planned work, with its own plan file.">refills</span> 32 and 33 on the board; H259 rules-only Irish mutation marking passed; terms_locate fixes; no new letter at B or above</td></tr>
 <tr><td class="t num">06:02</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a></td><td class="what"><span class="tag t-tools">tools</span> terms_locate (a2) documented-route step and route table (26f0bd49)</td></tr>
 <tr><td class="t num">06:02</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a></td><td class="what"><span class="tag t-tools">tools</span> T32-1 cap_map reading fixes: H163 C1 now shows its binding cell (<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>, <span title="The final letter, after the caps.">Overall</span>) instead of unknown; Why words read across the <span title="One product idea inside a lane. C1 is the lane&#x27;s first idea.">concept</span>'s Whys; tool lines no longer counted as <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> (3f002cce)</td></tr>
@@ -169,5 +170,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-24.html' | relative_url }}">Older →<b>Day 3</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 4 <small>Sun Oct 25 · 154</small></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 495</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 203</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 4 <small>Sun Oct 25 · 155</small></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 495</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 203</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
 

@@ -25,6 +25,7 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 
 | When | What | |
 | --- | --- | --- |
+| Oct 25, 06:20 | <span class="tag t-report">report</span> Report 6 (morning, Day 3) published; private copy in #55 |  |
 | Oct 25, 05:53 | <span class="tag t-plan">plan</span> <span title="A numbered batch of planned work, with its own plan file.">Refill</span> 33: <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> H265-H272 reserved, R33-1 opens Stack Exchange per site, R33-2 rules for eight new source kinds; 18 board lines, 15 runnable now (95bb02e6, 0f075bad) |  |
 | Oct 25, 05:51 | <span class="tag t-decision">decision</span> lemmy.world route ruled local-only; recall control 5 of 5 federated, route moved from open to gap |  |
 | Oct 25, 05:48 | <span class="tag t-ruling"><span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span></span> H257 s4.1: Discourse /tos route citation stays unread (GitHub <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>; CDCK terms do not cover meta); gap stands (d39c67ba) |  |
@@ -224,7 +225,6 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Oct 23, 01:29 | <span class="tag t-decision">decision</span> Picked site v2 home option B (Panel) with three required changes from A; recorded in site-v2.md section 9 |  |
 | Oct 23, 01:29 | <span class="tag t-hiring">hiring</span> Opened designer round 2026-10-23-designer: brief committed, band C, offer 7,000-8,000, Idris on the panel |  |
 | Oct 23, 01:09 | <span class="tag t-decision">decision</span> Site v2 plan written (ops/plans/site-v2.md): nav of four, home is the chat, split the builder first, product and visual designer round opened today |  |
-| Oct 23, 00:55 | <span class="tag t-request">request</span> Opened Urgent Request #29: C51 approval of the chat page and home Now panel, and the second Investor's chat token (steps verbatim). Triaged site QA: all bugs owned; filed stale day count on home. |  |
 
 ## Diaries, meetings, and conversations
 

@@ -1,79 +1,14 @@
 {
  "schema": 1,
- "at": "2026-10-25T11:18:12.695450+00:00",
+ "at": "2026-10-25T12:16:44.870997+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-10-25T06:36:08-04:00"
+  "kind": "inbox",
+  "started": "2026-10-25T08:16:28-04:00"
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "maren",
-   "task": "[research] H263 re-run C2 MusicBrainz dump",
-   "model": "opus",
-   "started": "2026-10-25T10:43:13.080Z",
-   "seconds": null,
-   "finished": "2026-10-25T11:17:38.582000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T33-4 preflight hosts, terms_locate fixes",
-   "model": "opus",
-   "started": "2026-10-25T10:46:19.735Z",
-   "seconds": null,
-   "finished": "2026-10-25T11:03:53.062000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T34-2 route rows, robots_rules red",
-   "model": "opus",
-   "started": "2026-10-25T10:48:45.651Z",
-   "seconds": null,
-   "finished": "2026-10-25T11:03:17.953000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] H276 Wiktionary dump stream",
-   "model": "opus",
-   "started": "2026-10-25T10:48:39.419Z",
-   "seconds": null,
-   "finished": "2026-10-25T11:01:38.174000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[research] H277 TVmaze watch-list lane",
-   "model": "opus",
-   "started": "2026-10-25T10:48:32.971Z",
-   "seconds": null,
-   "finished": "2026-10-25T10:53:28.963000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[test] red suites terms_guard fakes",
-   "model": "opus",
-   "started": "2026-10-25T10:37:11.061Z",
-   "seconds": null,
-   "finished": "2026-10-25T10:51:37.257000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[research] H274 OpenAlex papers-first",
-   "model": "opus",
-   "started": "2026-10-25T10:48:27.218Z",
-   "seconds": null,
-   "finished": "2026-10-25T10:51:08.599000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T1 H269-H271, tsv letter fix",
-   "model": "opus",
-   "started": "2026-10-25T10:46:34.940Z",
-   "seconds": null,
-   "finished": "2026-10-25T10:50:19.813000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [
    {
@@ -124,17 +59,17 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 50.0,
-   "resets_at": "2026-10-25T11:59:59.882064+00:00",
+   "pct": 0.0,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "left": 50.0,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 9.0,
-   "resets_at": "2026-11-01T06:59:59.882085+00:00",
+   "pct": 11.0,
+   "resets_at": "2026-11-01T06:59:59.865477+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 91.0,
+   "left": 89.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -142,7 +77,7 @@
    "resets_at": "2026-11-01T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-25T06:36:07.511873-04:00"
+  "read_at": "2026-10-25T08:16:27.612515-04:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -157,7 +92,7 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-25T06:51:07-04:00",
+ "next_tick": "2026-10-25T08:31:27-04:00",
  "lanes": [
   {
    "name": "Wrenna",
@@ -165,7 +100,10 @@
    "task": "Wrenna: site_qa.py checks for the additions against fixtures now (every % names its denominator; unrelated content...",
    "model": null,
    "since": null,
-   "next": []
+   "next": [
+    "Wrenna, P2, G26 lane 2 from weak top-5 rows (Ines 17:43...",
+    "Wrenna, P3, route atlas 33 (refill-33.md section 5,..."
+   ]
   },
   {
    "name": "Ines",
@@ -173,7 +111,10 @@
    "task": "Ines, P2, T1 triage, then chair, for H177, H178, H179 and H180 as each lands (method-v2.md T1): read the lane's...",
    "model": null,
    "since": null,
-   "next": []
+   "next": [
+    "Ines, P2, T1 triage for H187, H188 and H189-H195 as each...",
+    "Ines, P2, apply the S33-1 and S33-2 SE read outcomes..."
+   ]
   },
   {
    "name": "Maren",
@@ -181,7 +122,9 @@
    "task": "Maren, P2, H263 re-run C2 MusicBrainz core dump (chair ruling H263.md section 6 R1, a1c39570): first read the...",
    "model": null,
    "since": null,
-   "next": []
+   "next": [
+    "Maren, P2, H263 C2 dump resume (H263.md section 7.2):..."
+   ]
   },
   {
    "name": "Odalys",
@@ -189,7 +132,10 @@
    "task": "Odalys, P3, T33-3 terms_locate Bluesky-case test (refill-33.md section 5): a host whose home page links no terms...",
    "model": null,
    "since": null,
-   "next": []
+   "next": [
+    "Odalys, P2, terms_guard refusal text (route-atlas-32...",
+    "Odalys, P1, web_hits_test red (Odalys T34-2 75d6b0c4..."
+   ]
   },
   {
    "name": "Idris",
@@ -772,17 +718,24 @@
  "qr": [],
  "inbox": [
   {
+   "id": "c6397514916",
+   "state": "in_progress",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Is everything stopped again?"
+  },
+  {
    "id": "i35",
    "state": "replied",
-   "position": 1,
+   "position": 2,
    "tasks": {
     "open": 1,
     "done": 0
    },
    "title": "Urgent -- Get to Work!!"
   }
- ],
- "trimmed": [
-  "lane_next"
  ]
 }

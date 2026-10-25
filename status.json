@@ -1,77 +1,77 @@
 {
  "schema": 1,
- "at": "2026-10-25T03:25:30.342645+00:00",
+ "at": "2026-10-25T04:14:38.976349+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-24T22:46:10-04:00"
+  "started": "2026-10-24T23:40:56-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "wrenna",
-   "task": "[test] Wrenna live site QA",
+   "name": "ines",
+   "task": "[research] Ines H222 podcast tiers",
    "model": "opus",
-   "started": "2026-10-25T02:54:32.798Z",
+   "started": "2026-10-25T03:56:51.663Z",
    "seconds": null,
-   "finished": "2026-10-25T03:24:37.931000+00:00"
+   "finished": "2026-10-25T04:13:55.892000+00:00"
   },
   {
    "name": "idris",
-   "task": "[build] Idris letter history cut fix I-8",
+   "task": "[research] Idris H220 reference managers",
    "model": "opus",
-   "started": "2026-10-25T02:53:25.126Z",
+   "started": "2026-10-25T03:54:06.221Z",
    "seconds": null,
-   "finished": "2026-10-25T03:20:24.877000+00:00"
+   "finished": "2026-10-25T04:12:34.619000+00:00"
   },
   {
    "name": "wrenna",
-   "task": "[research] Wrenna who-for.tsv stale lines",
+   "task": "[test] Wrenna live site QA",
    "model": "opus",
-   "started": "2026-10-25T02:48:41.999Z",
+   "started": "2026-10-25T03:43:16.408Z",
    "seconds": null,
-   "finished": "2026-10-25T03:15:01.897000+00:00"
+   "finished": "2026-10-25T04:12:30.248000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] Odalys robots_pages override file",
+   "task": "[tools] Odalys speed up tests/run.sh",
    "model": "opus",
-   "started": "2026-10-25T02:48:16.947Z",
+   "started": "2026-10-25T03:42:15.819Z",
    "seconds": null,
-   "finished": "2026-10-25T03:10:32.372000+00:00"
+   "finished": "2026-10-25T04:09:05.661000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[build] Odalys yield table Y-5 Y-6",
+   "name": "wrenna",
+   "task": "[research] Wrenna H219 listening stats",
    "model": "opus",
-   "started": "2026-10-25T02:54:02.058Z",
+   "started": "2026-10-25T03:54:00.169Z",
    "seconds": null,
-   "finished": "2026-10-25T03:09:08.706000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[build] Odalys Best ideas duplicate lane",
-   "model": "opus",
-   "started": "2026-10-25T02:50:39.615Z",
-   "seconds": null,
-   "finished": "2026-10-25T03:04:45.654000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[build] Odalys Day 30 home strip",
-   "model": "opus",
-   "started": "2026-10-25T02:48:24.002Z",
-   "seconds": null,
-   "finished": "2026-10-25T03:04:31.277000+00:00"
+   "finished": "2026-10-25T04:05:38.254000+00:00"
   },
   {
    "name": "maren",
-   "task": "[research] Maren H210 science tool fees",
+   "task": "[design] Maren red-team mark spec",
    "model": "opus",
-   "started": "2026-10-25T02:47:59.345Z",
+   "started": "2026-10-25T03:57:35.763Z",
    "seconds": null,
-   "finished": "2026-10-25T03:02:53.723000+00:00"
+   "finished": "2026-10-25T04:01:00.170000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[research] Maren H221 time audit",
+   "model": "opus",
+   "started": "2026-10-25T03:54:12.243Z",
+   "seconds": null,
+   "finished": "2026-10-25T04:00:50.217000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[research] Idris H223 red team H41",
+   "model": "opus",
+   "started": "2026-10-25T03:55:50.431Z",
+   "seconds": null,
+   "finished": "2026-10-25T04:00:33.832000+00:00"
   }
  ],
  "queue": {
@@ -86,15 +86,15 @@
    },
    {
     "kind": "site",
-    "text": "Odalys, P3 (Wrenna live QA 2026-10-24 21:47, bug): /documents/ 'Best ideas so far' reads 'Also B- with 3 grades:..."
+    "text": "Odalys, P2 (Wrenna live QA 2026-10-25 00:15, crawl FAIL): home page Day 30 strip links \"Source: top3-day30\" to..."
+   },
+   {
+    "kind": "site",
+    "text": "Odalys, P2 (Wrenna live QA 2026-10-25 00:15, scrub C42 FAIL): /company/work.html prints the H205 local footage..."
    },
    {
     "kind": "plan",
     "text": "Ines, P1, v2 grading pass as H113-H121 land (replaces the H61 pass lines above; model: top model, high effort):..."
-   },
-   {
-    "kind": "research",
-    "text": "Odalys, P2, H135 line 2: lane_rate.py delta on Theodolite, 2026-11-07 or later (14 days after the first snapshot);..."
    }
   ],
   "blocked": [
@@ -119,30 +119,30 @@
     "text": "Unrelated side project; Collatz, workspace ~/unrelated/collatz); full text in log/board-archive-2026-10-23.md"
    }
   ],
-  "runnable_count": 20,
-  "blocked_count": 45
+  "runnable_count": 9,
+  "blocked_count": 49
  },
  "meter": {
   "five_hour": {
-   "pct": 68.0,
-   "resets_at": "2026-10-25T06:40:00.218723+00:00",
+   "pct": 76.0,
+   "resets_at": "2026-10-25T06:39:59.936256+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 32.0,
+   "left": 24.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 89.0,
-   "resets_at": "2026-10-25T07:00:00.218752+00:00",
+   "pct": 90.0,
+   "resets_at": "2026-10-25T06:59:59.936276+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 11.0,
+   "left": 10.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 49.0,
-   "resets_at": "2026-10-25T07:00:00.218885+00:00",
+   "resets_at": "2026-10-25T06:59:59.936431+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-24T22:46:09.804786-04:00"
+  "read_at": "2026-10-24T23:40:55.580584-04:00"
  },
  "ui": {
   "week_pct": 0.027,
@@ -157,7 +157,7 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-24T23:01:10-04:00",
+ "next_tick": "2026-10-24T23:55:55-04:00",
  "lanes": [
   {
    "name": "Wrenna",
@@ -165,36 +165,43 @@
    "task": "Wrenna: site_qa.py checks for the additions against fixtures now (every % names its denominator; unrelated content...",
    "model": null,
    "since": null,
+   "next": [
+    "Wrenna: QA the live site after every deploy: every page...",
+    "Wrenna, P2, G26 lane 2 from weak top-5 rows (Ines 17:43..."
+   ]
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P2, T1 triage, then chair, for H177, H178, H179 and H180 as each lands (method-v2.md T1): read the lane's...",
+   "model": null,
+   "since": null,
+   "next": [
+    "Ines, P2, T1 triage for H187, H188 and H189-H195 as each..."
+   ]
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, tests/site_ideas_test.py fails 3 checks since Wrenna's L148 apply row (b308465d, 23:56): the failing...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
    "name": "Odalys",
    "state": "next",
-   "task": "Odalys, P3 (Wrenna live QA 2026-10-24 21:47, bug): /documents/ 'Best ideas so far' reads 'Also B- with 3 grades:...",
+   "task": "Odalys, P2, red-team record for the site mark (Maren's spec 1811ef0f, design/red-team-mark/README.md: no field...",
    "model": null,
    "since": null,
-   "next": []
-  },
-  {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P2, T1 triage for H187, H188 and H189-H195 as each lands (method-v2.md T1): read each lane's author table,...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, H214 G47 paid tools for learning a language from films and TV (money first, strict shape: Language...",
-   "model": null,
-   "since": null,
-   "next": []
+   "next": [
+    "Odalys, P2, tests/site_test.sh case \"usage: the week..."
+   ]
   },
   {
    "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, H215 G48 paid virtual walking challenges (money first, strict shape: The Conqueror and others the reads...",
+   "state": "blocked",
+   "task": "Maren: designer probation, due Day 8 (2026-10-29), conditions in story/hiring/2026-10-23-designer/decision.md: (a)...",
    "model": null,
    "since": null,
    "next": []
@@ -259,7 +266,14 @@
    {
     "w": "Odalys",
     "k": "site",
-    "t": "/documents/ 'Best ideas so far' reads 'Also B- with 3 grades",
+    "t": "Home page Day 30 strip links \"Source",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "/company/work.html prints the H205 local footage folder path",
     "s": "next",
     "o": "c"
    },
@@ -496,51 +510,9 @@
     "o": "c"
    },
    {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H213 G46 paid tiers of note-taking and reading tools",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
-    "t": "H214 G47 paid tools for learning a language from films and TV",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "research",
-    "t": "H215 G48 paid virtual walking challenges",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "research",
-    "t": "H216 G49 amateur radio paid services",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
     "k": "plan",
     "t": "Refill 25 red team applied",
-    "s": "wait",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Lift plan for the rows under the top two that need no store read",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "chair",
-    "t": "T1 triage for H213, H214 and H215 as each lands",
     "s": "wait",
     "o": "c"
    },
@@ -552,41 +524,6 @@
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "tools",
-    "t": "Tools/t1_rows.py",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Tools/memory_archive.py reads the entry shapes it skips",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "'store read pending' badge spec for /ideas/ and /documents/ cards",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Build the 'store read pending' badge from design/robots-badge/README.md",
-    "s": "wait",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Plain-English who-for rows for the H209 concepts and H211 K2-K5",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Ines",
     "k": "plan",
     "t": "Refill 25 falsifier score",
@@ -595,43 +532,64 @@
    },
    {
     "w": "Odalys",
-    "k": "ops",
-    "t": "Wikimedia robots holds",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
-    "t": "H200 licence re-read and H205 footage clean-up",
-    "s": "next",
+    "k": "plan",
+    "t": "Refill 26 red team applied",
+    "s": "wait",
     "o": "c"
    },
    {
     "w": "Ines",
-    "k": "release",
-    "t": "PITCH-15 corrections from H218",
-    "s": "next",
+    "k": "chair",
+    "t": "T1 triage for H219, H220 and H221 as each lands",
+    "s": "wait",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stage_hunks.py --commit crashes updating the shared index after committing",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Tests/run.sh takes over 10 minutes",
-    "s": "next",
+    "w": "Wrenna",
+    "k": "chair",
+    "t": "Acting chair T1 triage for H222",
+    "s": "wait",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "site",
-    "t": "/documents/hunt/h205.html shows a local filesystem path,...",
+    "t": "Build the 'red team' mark from design/red-team-mark/README.md",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "Plain-English who-for rows for every H213, H214, H215 and H216 concept that...",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Refill 26 falsifier score",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "Tests/site_ideas_test.py fails 3 checks since Wrenna's L148 apply row",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Red-team record for the site mark",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "test",
+    "t": "Tests/site_test.sh case \"usage",
     "s": "next",
     "o": "c"
    },
@@ -663,66 +621,66 @@
   ],
   "done": [
    {
-    "w": "Wrenna",
-    "k": "test",
-    "t": "Live site QA",
-    "at": "2026-10-25T03:24:37.931000+00:00",
+    "w": "Ines",
+    "k": "research",
+    "t": "H222 podcast tiers",
+    "at": "2026-10-25T04:13:55.892000+00:00",
     "o": "c"
    },
    {
     "w": "Idris",
-    "k": "build",
-    "t": "Letter history cut fix I-8",
-    "at": "2026-10-25T03:20:24.877000+00:00",
+    "k": "research",
+    "t": "H220 reference managers",
+    "at": "2026-10-25T04:12:34.619000+00:00",
     "o": "c"
    },
    {
     "w": "Wrenna",
-    "k": "research",
-    "t": "Who-for.tsv stale lines",
-    "at": "2026-10-25T03:15:01.897000+00:00",
+    "k": "test",
+    "t": "Live site QA",
+    "at": "2026-10-25T04:12:30.248000+00:00",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Robots_pages override file",
-    "at": "2026-10-25T03:10:32.372000+00:00",
+    "t": "Speed up tests/run.sh",
+    "at": "2026-10-25T04:09:05.661000+00:00",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "build",
-    "t": "Yield table Y-5 Y-6",
-    "at": "2026-10-25T03:09:08.706000+00:00",
+    "w": "Wrenna",
+    "k": "research",
+    "t": "H219 listening stats",
+    "at": "2026-10-25T04:05:38.254000+00:00",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "build",
-    "t": "Best ideas duplicate lane",
-    "at": "2026-10-25T03:04:45.654000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "build",
-    "t": "Day 30 home strip",
-    "at": "2026-10-25T03:04:31.277000+00:00",
+    "w": "Maren",
+    "k": "design",
+    "t": "Red-team mark spec",
+    "at": "2026-10-25T04:01:00.170000+00:00",
     "o": "c"
    },
    {
     "w": "Maren",
     "k": "research",
-    "t": "H210 science tool fees",
-    "at": "2026-10-25T03:02:53.723000+00:00",
+    "t": "H221 time audit",
+    "at": "2026-10-25T04:00:50.217000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "research",
+    "t": "H223 red team H41",
+    "at": "2026-10-25T04:00:33.832000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 20,
-   "wait": 15,
-   "blocked": 30,
+   "next": 9,
+   "wait": 18,
+   "blocked": 31,
    "you": 1
   }
  },
@@ -738,8 +696,5 @@
    },
    "title": "Urgent -- Get to Work!!"
   }
- ],
- "trimmed": [
-  "lane_next"
  ]
 }

@@ -1,5 +1,285 @@
 [
 {
+"time": "2026-10-25T00:14:06-04:00",
+"worker": "operator",
+"type": "session",
+"summary": "Work session 23:40-00:25: 33 agent calls, 12 at once most of the session (Opus high). Lanes H213-H216, H219-H222 landed; T1 chaired for H213-H215; L148 and L113 applied (no letter moved); red teams H223, H224; refill 26 filed; tools: terms_guard.fetch + lane fetch check, run.sh 779 s to 261 s, stage",
+"link": ""
+},
+{
+"time": "2026-10-25T00:13:43-04:00",
+"worker": "Ines",
+"type": "research",
+"summary": "H222 G53 podcast tiers: no maker price readable (Overcast terms forbid robots, Pocket Casts 403, Snipd terms 404); 15 posts hand-read, 1 computation ask; C1 parked for need, open on 6 unread queries",
+"link": ""
+},
+{
+"time": "2026-10-25T00:12:25-04:00",
+"worker": "Idris",
+"type": "research",
+"summary": "H220 reference managers: arXiv API robots.txt disallows all agents, so the fixture stopped before any call; 1 ask in 22 posts; Zotero storage the only priced good read; OpenAlex docs page addresses AI agents (not followed)",
+"link": ""
+},
+{
+"time": "2026-10-25T00:12:23-04:00",
+"worker": "Wrenna",
+"type": "qa",
+"summary": "Live QA of build 03:26:35 GMT (3a32bd7): 358 renders, v2 261 URLs PASS, crawl 286 with 1 x 404; H157 fix live; 2 bugs filed to Odalys (home Day 30 dead link, work.html local path from board text)",
+"link": ""
+},
+{
+"time": "2026-10-25T00:08:57-04:00",
+"worker": "Odalys",
+"type": "build",
+"summary": "tests/run.sh: full run 779 s -> 261 s (Python suites in parallel, per-suite timeout, suites found by glob)",
+"link": ""
+},
+{
+"time": "2026-10-25T00:05:20-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "H219 G50 own-export stats lane done (1d26a73e): 0 concepts T1 open; stats.fm Plus already computes from users' own exports; venue read weak (5 of 11 queries refused)",
+"link": ""
+},
+{
+"time": "2026-10-25T00:00:53-04:00",
+"worker": "Maren",
+"type": "work",
+"summary": "Red team mark spec 1811ef0f: three states for /ideas/, home cards, Day 30 note; red-team.tsv field proposed for the applier",
+"link": ""
+},
+{
+"time": "2026-10-25T00:00:34-04:00",
+"worker": "Maren",
+"type": "research",
+"summary": "H221 time-audit lane committed (cd485cdc): Toggl, Harvest, Rize read; three calendar concepts mirrored by rivals, 0 asks in 1,815 posts; Timing, Clockify, RescueTime G2 gaps",
+"link": ""
+},
+{
+"time": "2026-10-25T00:00:18-04:00",
+"worker": "Idris",
+"type": "research",
+"summary": "H223 red team on H41 cycle listener: five points, one cell each; saved H135 store hints show no homeowner phrase for the job; no fetch; R25-3 answers open for Ines and Wrenna",
+"link": ""
+},
+{
+"time": "2026-10-25T00:00:13-04:00",
+"worker": "Ines",
+"type": "ruling",
+"summary": "H215 chair: T1 rows (two parks for need, one T1 open); Conqueror terms clause 9.3c read strictly, C1/C2 stay a G2 gap; CityStrides robots-disallowed fetch upheld as a disclosed fault, no cell uses it",
+"link": ""
+},
+{
+"time": "2026-10-24T23:59:30-04:00",
+"worker": "Maren",
+"type": "work",
+"summary": "H224 red team on H113 C1 meteor catcher: four points in research/hunt/H224.md (d3faed14); Wrenna and Ines told R25-3 answers are open",
+"link": ""
+},
+{
+"time": "2026-10-24T23:58:26-04:00",
+"worker": "Odalys",
+"type": "task",
+"summary": "P3 Best ideas tie line: 439ddf43 already names concept ids (H157 C1, H157 C2); test passes 112/0; board ticked",
+"link": ""
+},
+{
+"time": "2026-10-24T23:57:24-04:00",
+"worker": "Odalys",
+"type": "tool",
+"summary": "wiki_views.py --pageviews-only (eedea4d1): pageviews without the robots-barred /w/api.php title check",
+"link": ""
+},
+{
+"time": "2026-10-24T23:57:02-04:00",
+"worker": "Idris",
+"type": "tool",
+"summary": "t1_rows.py --trim and the short '# | Concept' header shape (H214); H213 refused with its headers named, since its T1 table has no Concept column; tests 119/0",
+"link": ""
+},
+{
+"time": "2026-10-24T23:56:58-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "Applied L148 (A2 second reading held, row stands) and L113 (rule 3 leg not met, no letter moves); robots question on my H129 and H135 reads left for Ines",
+"link": ""
+},
+{
+"time": "2026-10-24T23:56:13-04:00",
+"worker": "Odalys",
+"type": "tooling",
+"summary": "terms_guard.fetch reads every host's robots.txt before a lane fetch; lane_fetch_check flags 25 of 63 lane scripts that open URLs without it (55259dce)",
+"link": ""
+},
+{
+"time": "2026-10-24T23:55:34-04:00",
+"worker": "Ines",
+"type": "research",
+"summary": "H216 G49 amateur radio lane landed: QRZ terms forbid robots, FCC robots 403 (no operator count); 0 computation asks in 83 hand-read posts, refill-25 falsifier parks both concepts for need; r/amateurradio bars AI-assisted tool posts",
+"link": ""
+},
+{
+"time": "2026-10-24T23:55:30-04:00",
+"worker": "Maren",
+"type": "research",
+"summary": "H215 open list closed: Conqueror/MVM terms read from a clean PDF copy (the first copy was saved decoded and corrupt); clause 9.3c sent to the chair; Wandrer Extra $40/yr, Racery organiser pricing; all 1,265 r/walking titles read (A 8, B 4); Yes.Fit unreachable again; Race Across Middle Earth is a Co",
+"link": ""
+},
+{
+"time": "2026-10-24T23:55:12-04:00",
+"worker": "Idris",
+"type": "work",
+"summary": "who-for rows for T1-open concepts: six rows moved into who-for.tsv (0578c779); test and read path landed under Odalys's e99e55ee by a whole-file sweep",
+"link": ""
+},
+{
+"time": "2026-10-24T23:55:09-04:00",
+"worker": "Odalys",
+"type": "tool",
+"summary": "memory_archive.py reads '- Day N (' entries and keeps indented lessons and archive pointers (59b2e08b); Ines live run c9075bb6: 6 entries moved, 0 of 271 non-blank lines lost, MEMORY.md 19087 -> 16059 bytes, over the 12000 target because the rest is undated lessons",
+"link": ""
+},
+{
+"time": "2026-10-24T23:53:57-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "'Store read pending' badge built from Maren's spec: 2 open /ideas/ rows, 74 hunt cards; card headers now wrap a fourth item at 390. My commit also took in another agent's uncommitted T1 who-for code.",
+"link": ""
+},
+{
+"time": "2026-10-24T23:53:27-04:00",
+"worker": "Ines",
+"type": "plan",
+"summary": "Refill 26 (fb13cfc2): H219-H222 own-file generators G50-G53 (listening/viewing exports, reference libraries, calendar time audit, podcast exports), H223/H224 red teams on H41 and H113 C1, t1_rows --trim and wiki_views --pageviews-only, red-team site mark; 16 lines, idle check 0 of 5 below 2",
+"link": ""
+},
+{
+"time": "2026-10-24T23:53:27-04:00",
+"worker": "Ines",
+"type": "ruling",
+"summary": "H214 T1 chaired (c20174ab): C1 stopped at Fit (no lawful subtitle route to watched shows), C2 left T1 open because the refused queries include the key one; no grader lines.",
+"link": ""
+},
+{
+"time": "2026-10-24T23:52:02-04:00",
+"worker": "Odalys",
+"type": "task",
+"summary": "L113 star catalogue licence read committed 46912090; no commercial grant found, three G2 gaps",
+"link": ""
+},
+{
+"time": "2026-10-24T23:51:39-04:00",
+"worker": "Idris",
+"type": "research",
+"summary": "L148 reader 1 file written alone from the packet and committed (10a056bd)",
+"link": ""
+},
+{
+"time": "2026-10-24T23:51:31-04:00",
+"worker": "Maren",
+"type": "task",
+"summary": "L148 reader 2: blind reading of two almanac descriptions committed (456fc245), packet only",
+"link": ""
+},
+{
+"time": "2026-10-24T23:51:17-04:00",
+"worker": "Ines",
+"type": "ruling",
+"summary": "H213 T1 triage (23:51, 783fd0fc): six concepts parked for need, two stopped by named Obsidian plugins (checked in the saved index), Notion row T1 open (terms and venue unread); no grader lines",
+"link": ""
+},
+{
+"time": "2026-10-24T23:50:59-04:00",
+"worker": "Wrenna",
+"type": "task",
+"summary": "Who-for rows for H209 and H211 concepts written; held in who-for-pending.tsv because the concepts are not yet on the ledger (e37dfc05)",
+"link": ""
+},
+{
+"time": "2026-10-24T23:50:24-04:00",
+"worker": "Idris",
+"type": "research",
+"summary": "H214 G47 film and TV language tools: no price readable under terms; subtitle route closed for the shows learners watch; C1 killed at Fit, C2 parked for need (845fbe86)",
+"link": ""
+},
+{
+"time": "2026-10-24T23:49:54-04:00",
+"worker": "Wrenna",
+"type": "task",
+"summary": "Cut the L148 reading packet (ops/packets/L148-blind.md, 315ec9bf) verbatim from H176 line 62, the five-table clause and two saved Lookup descriptions; blind_packet scan 0 leaks. Apply waits for Idris's and Maren's files.",
+"link": ""
+},
+{
+"time": "2026-10-24T23:49:24-04:00",
+"worker": "Maren",
+"type": "research",
+"summary": "H215 paid walking challenges lane committed with open list; CityStrides /terms fetched against its robots.txt, copy deleted, fault recorded",
+"link": ""
+},
+{
+"time": "2026-10-24T23:49:02-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "H213 G46 paid note-taking tiers: Obsidian, Readwise pricing pages are G2 gaps by their terms, Notion's terms need JavaScript; r/ObsidianMD 1,034 posts read by term, 7 A 7 B 47 builders; every concept T1-stopped by a named free plugin or parked for need",
+"link": ""
+},
+{
+"time": "2026-10-24T23:48:47-04:00",
+"worker": "Odalys",
+"type": "fix",
+"summary": "stage_hunks --commit: shared-index update under its own lock; a held index.lock no longer crashes after the commit (test 25/0)",
+"link": ""
+},
+{
+"time": "2026-10-24T23:48:35-04:00",
+"worker": "Idris",
+"type": "tool",
+"summary": "tools/t1_rows.py: rulings-v2 T1 row skeletons from a lane's author table (87eb8734), Tenet 7",
+"link": ""
+},
+{
+"time": "2026-10-24T23:48:29-04:00",
+"worker": "Idris",
+"type": "research",
+"summary": "H200 licences re-read from Commons File pages: 29 of 29 match, nothing withdrawn. H205's 30 rejected clips are off the disk (age-doubt four first), 3 kept clips left. Local footage path scrubbed from the H205 page.",
+"link": ""
+},
+{
+"time": "2026-10-24T23:47:49-04:00",
+"worker": "Ines",
+"type": "plan",
+"summary": "Lift plan 25 (816c1553): 41 second-band rows classed; only H148 C1's A2 second reading is a live no-store lift; L148 and L113 lines filed",
+"link": ""
+},
+{
+"time": "2026-10-24T23:47:45-04:00",
+"worker": "Odalys",
+"type": "tooling",
+"summary": "Wikimedia robots holds landed (e46efce5): commons, *.wikipedia.org and wikidata /w/ and /api/ refused but the Allow lines, /wiki/Special: refused; wiki_views and wikidata_cover refuse before any request; pageviews path allowed by robots_rules (saved read has no rules). Test 89/0, 9/9 mutants red.",
+"link": ""
+},
+{
+"time": "2026-10-24T23:45:45-04:00",
+"worker": "Ines",
+"type": "correction",
+"summary": "PITCH-15 corrected from H218: reviews 5 of 17 (not 5 of 50), Onform 90.4% (not 93%), read D status updated; R25-3 answers filed, no fact contested (b6d2f99c, #50)",
+"link": ""
+},
+{
+"time": "2026-10-24T23:45:37-04:00",
+"worker": "Maren",
+"type": "work",
+"summary": "Store read pending badge spec done 79c49479 (design/robots-badge/README.md): no existing mark; gradebook has no field, spec adds concepts.store_read",
+"link": ""
+},
+{
+"time": "2026-10-24T23:40:55-04:00",
+"worker": "operator",
+"type": "outage",
+"summary": "The run loop was down for about 1 h, from Sat 10:46 PM to Sat 11:40 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
+"link": ""
+},
+{
 "time": "2026-10-24T23:25:05-04:00",
 "worker": "operator",
 "type": "session",

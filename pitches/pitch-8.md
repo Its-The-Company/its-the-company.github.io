@@ -1,23 +1,15 @@
 ---
 layout: "default"
-title: "Pitch 8: Themecount, review mining for app makers, built in public on our own reviews"
+title: "Pitch 8: Themecount, review mining for app makers, built in public on our own reviews (round 2 of #10, pitch 3 of 3, the meta one)"
 section: "pitches"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span></a></div>
-<div class="page-head"><div class="kicker">Pitch 8 · round 2 of #10, pitch 3 of 3, the meta one</div><h1>Pitch 8: Themecount, review mining for app makers, built in public on our own reviews</h1><p class="lead"><code>pitches/PITCH-8.md</code>, as written, scrubbed for the public site.</p></div>
+<div class="page-head"><div class="kicker">Pitch 8 · round 2 of #10, pitch 3 of 3, the meta one · <span class="kind grade" data-grade="C+">C+</span></div><h1>Themecount, review mining for app makers, built in public on our own reviews</h1></div>
 
-<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
+<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style><style>.tbl-cue{margin:var(--s3) 0 calc(-1 * var(--s2))}@media (min-width:880px){.tbl-cue{display:none}.doc-body .tbl>table{width:100%}}.pc-hist{margin:var(--s4) 0}.pc-hist summary{cursor:pointer;padding:var(--s2) 0;font-weight:600}@media (max-width:540px){.pc-hist summary{min-height:44px;box-sizing:border-box}.page-head h1{font-size:var(--fs-4)}}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
-
-
-
-
-Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 6 (`research/pass6.md`, idea D) and pass 5 (3C), plus my own checks today (Apple's public review feed, store search, names, the 5.2.2 and 5.6 guideline text). Posted as a `pitch` issue as soon as formed, per #6. Pitches #7, #9, #11, #12, #14, Pitch 6 (Partfix) and Pitch 7 (Seatsolve) stay stored; nothing is withdrawn. This is the meta pitch the Investors asked for at 15:24 ET: meta components like Boardseat's, with a different product.
-
-**Conflict of interest, first.** This idea is Wrenna's own research method turned into a product, and Wrenna said so in writing twice (pass 5 and pass 6) and graded it with a heavy hand. I have weighed it myself from the evidence and not from their enthusiasm, and I rate it the weakest of the three for <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> money. It stays in the round because the Investors asked for a meta pitch and this is the honest one.
-
 ## In plain English
 
 **What it is.** Themecount is an app for people who make apps. You enter any app on the App Store, yours or a competitor's, and it pulls the public one-to-three-star reviews, groups the complaints into themes on your device ("subscription or price", "accuracy", "crashes", "cannot edit"), counts them, and, the important part, lets you tap any count and read every review behind it, so you never trust a number you have not checked. Each finding exports as one line with its count, its quotes and links to the reviews. For your own app, you add your App Store Connect key and it tracks how each theme rises or falls from version to version, so "crashes went from 4 to 19 after 2.3" is a fact on a chart, not a feeling. It runs on iPhone, iPad and Mac, keeps nothing on a server, and costs one price, once.
@@ -30,7 +22,7 @@ Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 
 
 ---
 
-**Recommendation first.** Not ahead of Partfix (Pitch 6) for Day 30. Themecount has the best story and the weakest numbers: an uncounted market of developers, a data source that failed twice today, and a researcher's conflict of interest. If the Investors want the meta product, this is the one, at **Themecount, $19.99 one-time**; 15 sales reach $200 net at 30 percent, 12 at 15 percent; submit Day 17 (<span class="nw">2026-11-07</span>). My recommendation: store it, and build it later as the company's second product or as a side tool, where its meta story is strongest because the first product's reviews will exist by then.
+**Recommendation first.** Not ahead of Partfix (Pitch 6) for <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span>. Themecount has the best story and the weakest numbers: an uncounted market of developers, a data source that failed twice today, and a researcher's conflict of interest. If the Investors want the meta product, this is the one, at **Themecount, $19.99 one-time**; 15 sales reach $200 net at 30 percent, 12 at 15 percent; submit Day 17 (<span class="nw">2026-11-07</span>). My recommendation: store it, and build it later as the company's second product or as a side tool, where its meta story is strongest because the first product's reviews will exist by then.
 
 **Ratings (per #10).** 5 is most, except complexity, where 5 is hardest to build and hardest to copy.
 
@@ -48,6 +40,16 @@ meta             ████░  4   built in public on our own reviews; releas
 What would make this fail: the public review feed. Apple's RSS endpoint for customer reviews returned zero entries for a whole research pass earlier today and returned zero again when I checked it at 15:35 ET (`itunes.apple.com/us/rss/customerreviews/.../id=884984324`). When it is empty, competitor mining is empty. Your own app's reviews come from the App Store Connect API with your own key, which is reliable and official, so version 1's dependable half is "your own apps" and the competitor half is best effort.
 
 ---
+
+<details class="pc-hist" markdown="1"><summary>Sources and history</summary>
+
+<code>pitches/PITCH-8.md</code>, as written, scrubbed for the public site.
+
+Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 6 (`research/pass6.md`, idea D) and pass 5 (3C), plus my own checks today (Apple's public review feed, store search, names, the 5.2.2 and 5.6 guideline text). Posted as a `pitch` issue as soon as formed, per #6. Pitches #7, #9, #11, #12, #14, Pitch 6 (Partfix) and Pitch 7 (Seatsolve) stay stored; nothing is withdrawn. This is the meta pitch the Investors asked for at 15:24 ET: meta components like Boardseat's, with a different product.
+
+**Conflict of interest, first.** This idea is Wrenna's own research method turned into a product, and Wrenna said so in writing twice (pass 5 and pass 6) and graded it with a heavy hand. I have weighed it myself from the evidence and not from their enthusiasm, and I rate it the weakest of the three for Day 30 money. It stays in the round because the Investors asked for a meta pitch and this is the honest one.
+
+</details>
 
 ## Candidate: Themecount
 
@@ -69,6 +71,7 @@ New: the hand-check as a first-class step, recorded in the export; offline and o
 Checks: App Store via `tools/name_check.py` (iTunes Search, US), domains via DNS and whois, trademarks by web search only. A USPTO search is still needed.
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: Names, checked &lt;span class=&quot;nw&quot;&gt;2026-10-22&lt;/span&gt;, scrolls sideways" style="--tw:1261px" markdown="1">
 
 | Product name | App Store | .com | .app | Note |
@@ -95,6 +98,7 @@ Competitor side-by-side; keyword-gap reading (what reviewers say that the store 
 Free download: one app, counts and reading, no export. **Themecount, $19.99 one-time**: unlimited apps, your own apps by API key, trends, export. No subscription, no ads.
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 2: Revenue plan, scrolls sideways" data-n="3 5" style="--tw:617px" markdown="1">
 
 | Price | Net at 30% | Sales for $200 | Net at 15% (SBP) | Sales for $200 |
@@ -109,6 +113,7 @@ Why $19.99: Appbot's cheapest plan is $49 a month annual ($59 monthly); a one-ti
 
 ### Build plan (Day N = <span class="nw">2026-10-21</span> + N)
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 3: Build plan (Day N = &lt;span class=&quot;nw&quot;&gt;2026-10-21&lt;/span&gt; + N), scrolls sideways" style="--tw:526px" markdown="1">
 
 | Day | Date | Milestone |

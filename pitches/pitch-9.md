@@ -1,23 +1,15 @@
 ---
 layout: "default"
-title: "Pitch 9: Roundwright, an amigurumi pattern checker and designer"
+title: "Pitch 9: Roundwright, an amigurumi pattern checker and designer (#18, deep-tech round)"
 section: "pitches"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span></a></div>
-<div class="page-head"><div class="kicker">Pitch 9 · #18, deep-tech round</div><h1>Pitch 9: Roundwright, an amigurumi pattern checker and designer</h1><p class="lead"><code>pitches/PITCH-9.md</code>, as written, scrubbed for the public site.</p></div>
+<div class="page-head"><div class="kicker">Pitch 9 · #18, deep-tech round</div><h1>Roundwright, an amigurumi pattern checker and designer</h1></div>
 
-<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
+<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style><style>.tbl-cue{margin:var(--s3) 0 calc(-1 * var(--s2))}@media (min-width:880px){.tbl-cue{display:none}.doc-body .tbl>table{width:100%}}.pc-hist{margin:var(--s4) 0}.pc-hist summary{cursor:pointer;padding:var(--s2) 0;font-weight:600}@media (max-width:540px){.pc-hist summary{min-height:44px;box-sizing:border-box}.page-head h1{font-size:var(--fs-4)}}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
-
-
-
-
-Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 8 (`research/pass8.md`, idea A) plus my own store, name and review checks this evening. Posted as a `pitch` issue as soon as formed, per #6. Every earlier pitch (#7, #9, #11, #12, #14, #15, #16, #17) stays stored; nothing is withdrawn. Working title: Roundwright. Issue: #20.
-
-Pass 8 screened eleven <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> and kept two. Only this one clears the bar of the 16:40 and 16:42 ET briefs. The other, on-device embroidery digitizing, is not pitched: it would be the fifth app on the <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span> doing the same job (Embroidly, <span class="nw">2026-09-29</span>, already does fills, satin and underlay on iPhone). It stays in `research/pass8.md` as a fallback.
-
 ## In plain English
 
 **What it is.** Amigurumi are small stuffed toys made by crochet: a bear, a whale, a mushroom. They are worked in spiral rounds, and a pattern is a list of those rounds: "Rnd 5: (sc 3, inc) x6 [30]" means "three plain stitches, then two stitches into the next one, six times; you should now have 30 stitches." Roundwright does two jobs on an iPhone or iPad.
@@ -30,6 +22,16 @@ Everything runs on the device. No account, nothing uploaded.
 **One session, pictured.** A crocheter bought a $6 bear pattern on Etsy. The photo looks lovely, but she has read that many listings now use machine-made pictures. Before winding yarn she pastes the head section into Roundwright. Round 5 is marked red: the repeat says x5 where it must say x6. The 3D view shows the head misshapen as written and round with the fix. She fixes it in one tap, crochets it, and it works. A week later she designs a whale for her niece from an egg and a cone, and exports the pattern.
 
 **Who it is for.** Adult crocheters who make toys and gifts. My judgment, not measured: mostly women aged 18 to 45; amigurumi skews younger than knitting. Second, small designers who sell amigurumi patterns on Etsy and Ravelry. Today they test each prototype by crocheting it by hand, and they would pay most readily for the designer. **Why they pay:** the fear of wasting yarn and hours on a pattern that cannot work, and (for designers) days of trial crochet saved.
+
+<details class="pc-hist" markdown="1"><summary>Sources and history</summary>
+
+<code>pitches/PITCH-9.md</code>, as written, scrubbed for the public site.
+
+Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 8 (`research/pass8.md`, idea A) plus my own store, name and review checks this evening. Posted as a `pitch` issue as soon as formed, per #6. Every earlier pitch (#7, #9, #11, #12, #14, #15, #16, #17) stays stored; nothing is withdrawn. Working title: Roundwright. Issue: #20.
+
+Pass 8 screened eleven <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> and kept two. Only this one clears the bar of the 16:40 and 16:42 ET briefs. The other, on-device embroidery digitizing, is not pitched: it would be the fifth app on the <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span> doing the same job (Embroidly, <span class="nw">2026-09-29</span>, already does fills, satin and underlay on iPhone). It stays in `research/pass8.md` as a fallback.
+
+</details>
 
 ## Recommendation first
 
@@ -86,6 +88,7 @@ Four parts, each testable on the Simulator.
 ## Build plan (Day N = <span class="nw">2026-10-21</span> + N)
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: Build plan (Day N = &lt;span class=&quot;nw&quot;&gt;2026-10-21&lt;/span&gt; + N), scrolls sideways" style="--tw:526px" markdown="1">
 
 | Day | Date | Milestone |
@@ -113,6 +116,7 @@ Budget asked: one domain, if the Investors want one. Nothing else; no dataset, n
 Free download: check any pattern's counts, unlimited (it is the hook and the honest proof); 3D preview of one saved piece. **Roundwright Full, $14.99 one-time**: unlimited 3D previews, the designer, PDF export, photo import. No subscription, no ads.
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 2: Revenue plan, scrolls sideways" data-n="3 5" style="--tw:668px" markdown="1">
 
 | Price | Net at 30% | Sales for $200 | Net at 15% (SBP) | Sales for $200 |

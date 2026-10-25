@@ -1,21 +1,15 @@
 ---
 layout: "default"
-title: "Pitch 3: Netsmith, a 3D-to-papercraft unfolder"
+title: "Pitch 3: Netsmith, a 3D-to-papercraft unfolder (direction 1 of issue #10)"
 section: "pitches"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span></a></div>
-<div class="page-head"><div class="kicker">Pitch 3 · direction 1 of issue #10</div><h1>Pitch 3: Netsmith, a 3D-to-papercraft unfolder</h1><p class="lead"><code>pitches/PITCH-3.md</code>, as written, scrubbed for the public site.</p></div>
+<div class="page-head"><div class="kicker">Pitch 3 · direction 1 of issue #10 · <span class="kind grade" data-grade="B-">B-</span></div><h1>Netsmith, a 3D-to-papercraft unfolder</h1></div>
 
-<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
+<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style><style>.tbl-cue{margin:var(--s3) 0 calc(-1 * var(--s2))}@media (min-width:880px){.tbl-cue{display:none}.doc-body .tbl>table{width:100%}}.pc-hist{margin:var(--s4) 0}.pc-hist summary{cursor:pointer;padding:var(--s2) 0;font-weight:600}@media (max-width:540px){.pc-hist summary{min-height:44px;box-sizing:border-box}.page-head h1{font-size:var(--fs-4)}}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
-
-
-
-
-Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 5 (`research/pass5.md`) plus my own checks today. Posted as a `pitch` issue as soon as formed, per #6. Pitches #7 (Stripwise, Tallyproof, Beatcount) and #9 (Purlwright, cross-stitch keeper, songbook) stay stored; nothing there is withdrawn. Issue #10 asked for the directions one pitch at a time; this is direction 1 (visual products drawn by code). Direction 2 (Scope, the oscilloscope game) comes next, after a one-day fun test; direction 3 (Standup) after a 4.2 and 5.6 guideline read.
-
 ## In plain English (added <span class="nw">2026-10-22</span>, per #10)
 
 **What it is.** Netsmith turns a 3D model on screen into flat pieces you print, cut, fold and glue into the real object, the way a cereal box unfolds into one flat sheet. You open a 3D model file (downloaded from a model site, exported from a game or a 3D app, or scanned with an iPhone), choose how tall the finished object should be and which paper you print on, and Netsmith works out where to cut it. You get printable pages of flat shapes with glue tabs, a matching number on both sides of every cut so you know which edge meets which, and fold lines marked as folding up or down. Tap any piece and the 3D view shows where it goes, and folds it from the flat piece so you can see it is right before you print. A foam mode makes patterns for EVA foam, the material cosplayers use for armour: no glue tabs, a seam allowance, and the bevel angle marked on each sharp edge.
@@ -45,6 +39,14 @@ What would make this fail: a net that does not fold back into the model. One tab
 
 ---
 
+<details class="pc-hist" markdown="1"><summary>Sources and history</summary>
+
+<code>pitches/PITCH-3.md</code>, as written, scrubbed for the public site.
+
+Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 5 (`research/pass5.md`) plus my own checks today. Posted as a `pitch` issue as soon as formed, per #6. Pitches #7 (Stripwise, Tallyproof, Beatcount) and #9 (Purlwright, cross-stitch keeper, songbook) stay stored; nothing there is withdrawn. Issue #10 asked for the directions one pitch at a time; this is direction 1 (visual products drawn by code). Direction 2 (Scope, the oscilloscope game) comes next, after a one-day fun test; direction 3 (Standup) after a 4.2 and 5.6 guideline read.
+
+</details>
+
 ## Candidate: Netsmith
 
 Mockup: `pitches/mockups/netsmith.png` (drawn by `tools/mockup.py`: the model is projected by code from ten vertices, the net is drawn from the same dimensions; no images).
@@ -67,6 +69,7 @@ New on iOS: all of it; there is no unfolder. New anywhere: the fold-back check s
 Checks: App Store via the iTunes Search API (US, `tools/name_check.py`), domains via DNS and whois, trademarks via web search only. A USPTO search is still needed before any name goes on the store (browser session; plan in `research/name-risk.md` Part 2 applies).
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: Names, checked &lt;span class=&quot;nw&quot;&gt;2026-10-22&lt;/span&gt;, scrolls sideways" style="--tw:1188px" markdown="1">
 
 | Product name | App Store | .com | .app | Trademark (web search) |
@@ -93,6 +96,7 @@ Manual cut and join on the 3D model; tab shape options and tab-collision avoidan
 Free download. Import any model, unfold it, see the 3D fold-back and the page preview, all free, so the engine proves itself before anyone pays. **Netsmith Unlimited, $9.99**, one-time: PDF export, foam mode, A4 and custom paper, models over 500 faces. No subscription, no ads. This is the same gate the incumbents use (Pepakura and Unfolder both unlock export with purchase), so the audience expects it.
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 2: Revenue plan, scrolls sideways" data-n="3 4" style="--tw:609px" markdown="1">
 
 | Price | Net per sale at 30% | Sales for $200 | Per selling day (10 days) |
@@ -108,6 +112,7 @@ Why $9.99: a third of Unfolder for Mac, a seventh of Pepakura's listed price, an
 
 ### Build plan (Day N = <span class="nw">2026-10-21</span> + N)
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 3: Build plan (Day N = &lt;span class=&quot;nw&quot;&gt;2026-10-21&lt;/span&gt; + N), scrolls sideways" style="--tw:526px" markdown="1">
 
 | Day | Date | Milestone |
@@ -144,6 +149,7 @@ Budget asked: one domain. Nothing else.
 ## Stored options from pass 5 (not pitched today)
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 4: Stored options from pass 5 (not pitched today), scrolls sideways" data-n="2 7" style="--tw:1111px" markdown="1">
 
 | idea | dir | novelty | need | profit | complexity | Wrenna's grade | status |
@@ -164,7 +170,7 @@ Budget asked: one domain. Nothing else.
 
 Why Netsmith over Scope today: Scope's fun is untested and games sell on discovery we cannot drive; Netsmith has a buyer who already pays for the job and a search term nobody on iOS owns. Scope gets its own pitch once a prototype has been played.
 
-Earlier pitches, all stored as pivot or side options: #7 Stripwise, Tallyproof, Beatcount (`pitches/PITCH.md`); #9 Purlwright, cross-stitch keeper, songbook (`pitches/PITCH-2.md`).
+Earlier pitches, all stored as pivot or side options: #7 Stripwise, Tallyproof, Beatcount (<a href="pitch.html">PITCH</a>); #9 Purlwright, cross-stitch keeper, songbook (<a href="pitch-2.html">PITCH-2</a>).
 
 ## Recommendation
 **Netsmith.** The first unfolder on iOS, a maker audience that already pays $29.99 to $69 for the job on desktop, an engine we can test to the vertex without hardware, an honest free tier, and a roadmap that runs from paper to foam to camera scans. Its weakness is sizing: the evidence is forum-shaped, and I have no count of buyers per day. If the Investors want a counted market before committing, Purlwright (#9) has one, and Stripwise (#7) has the lowest review risk.

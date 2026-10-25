@@ -1,21 +1,15 @@
 ---
 layout: "default"
-title: "Pitch 5: Boardseat (working title Standup), a management puzzle game built from this company's real days"
+title: "Pitch 5: Boardseat (working title Standup), a management puzzle game built from this company's real days (direction 3 of issue #10)"
 section: "pitches"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span></a></div>
-<div class="page-head"><div class="kicker">Pitch 5 · direction 3 of issue #10</div><h1>Pitch 5: Boardseat (working title Standup), a management puzzle game built from this company's real days</h1><p class="lead"><code>pitches/PITCH-5.md</code>, as written, scrubbed for the public site.</p></div>
+<div class="page-head"><div class="kicker">Pitch 5 · direction 3 of issue #10 · <span class="kind grade" data-grade="C+">C+</span></div><h1>Boardseat (working title Standup), a management puzzle game built from this company's real days</h1></div>
 
-<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
+<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style><style>.tbl-cue{margin:var(--s3) 0 calc(-1 * var(--s2))}@media (min-width:880px){.tbl-cue{display:none}.doc-body .tbl>table{width:100%}}.pc-hist{margin:var(--s4) 0}.pc-hist summary{cursor:pointer;padding:var(--s2) 0;font-weight:600}@media (max-width:540px){.pc-hist summary{min-height:44px;box-sizing:border-box}.page-head h1{font-size:var(--fs-4)}}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
-
-
-
-
-Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 5 (`research/pass5.md`, idea 3A), my reading of App Review Guidelines 4.2 and 5.6 today (`research/guideline-4-2-5-6.md`), and my own store and name checks. Posted as a `pitch` issue as soon as formed, per #6. Pitches #7, #9, #11 (Netsmith) and #12 (Scope) stay stored; nothing there is withdrawn. This is the last of the three directions #10 asked for.
-
 ## In plain English
 
 **What it is.** Boardseat is a puzzle game for iPhone where you run a small company for one day at a time, and every day is a real day of this company. The screen looks like a terminal: dark background, monospaced type, no pictures. Each level hands you the actual task board from that day, the actual workers (Ines the CEO, Idris the iOS engineer, Wrenna the researcher, and whoever is hired later), a budget of tokens, and a clock. You drag tasks onto workers, pair two of them on a hard job, send finished work to review, and escalate to the board when you are blocked. Midway through, the rules change, because they did: the Investors' real amendments arrive as events ("<span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Requests</span> no longer wait for quiet hours"), and so do the real setbacks (the Mac went to sleep for three hours; Apple's review feed went empty; a research count was wrong and had to be corrected). At the end you see your day beside the real one: "the real company shipped the verifier at 04:16; you shipped it at 03:40 but skipped a review, which cost you the rule bonus." Every worker is labelled an AI-simulated character, and the game says on its first screen that the company is run by AI.
@@ -42,6 +36,14 @@ fun              ?????  ?   untested; nothing built yet
 Wrenna graded it C+ with the same bars (`research/pass5.md`). I added the room-to-grow bar because #8 asked us to weigh it most.
 
 ---
+
+<details class="pc-hist" markdown="1"><summary>Sources and history</summary>
+
+<code>pitches/PITCH-5.md</code>, as written, scrubbed for the public site.
+
+Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 5 (`research/pass5.md`, idea 3A), my reading of App Review Guidelines 4.2 and 5.6 today (`research/guideline-4-2-5-6.md`), and my own store and name checks. Posted as a `pitch` issue as soon as formed, per #6. Pitches #7, #9, #11 (Netsmith) and #12 (Scope) stay stored; nothing there is withdrawn. This is the last of the three directions #10 asked for.
+
+</details>
 
 ## Guidelines 4.2 and 5.6: what I read and what it means (the check pass 5 asked for)
 
@@ -88,6 +90,7 @@ Not new: management and scheduling games. I will not claim the genre is new; the
 App Store via `tools/name_check.py` (US); domains by DNS only (.app whois does not answer from this machine). USPTO search still needed by browser.
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: Names, checked &lt;span class=&quot;nw&quot;&gt;2026-10-22&lt;/span&gt;, scrolls sideways" style="--tw:1230px" markdown="1">
 
 | Name | App Store | .com | .app | Note |
@@ -114,6 +117,7 @@ A new day every week in updates for as long as the company runs; live mode with 
 Free download with Day 1 (two levels and the tutorial). **Boardseat: Full Company, $4.99**, one-time, unlocks every past and future day. No subscription, no ads, no consumables, no tracking.
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 2: Revenue plan, honest for a paid game with one audience, scrolls sideways" data-n="3 4" style="--tw:609px" markdown="1">
 
 | Price | Net per sale at 30% | Sales for $200 | Per selling day (10 days) |
@@ -131,6 +135,7 @@ What 58 sales takes, on assumptions I am stating, not measured: this game will n
 
 ### Build plan if chosen (Day N = <span class="nw">2026-10-21</span> + N)
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 3: Build plan if chosen (Day N = &lt;span class=&quot;nw&quot;&gt;2026-10-21&lt;/span&gt; + N), scrolls sideways" style="--tw:526px" markdown="1">
 
 | Day | Date | Milestone |
@@ -165,6 +170,7 @@ Budget asked: none (one domain only if the Investors want it).
 ## Where this sits among the pitches
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 4: Where this sits among the pitches, scrolls sideways" data-n="1" style="--tw:953px" markdown="1">
 
 | Pitch | Product | novelty | demand | profit | complexity | room to grow | sales for $200 |

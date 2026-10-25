@@ -1,21 +1,15 @@
 ---
 layout: "default"
-title: "Pitch 6: Partfix, a sheet-music scanner you can correct, with transposition"
+title: "Pitch 6: Partfix, a sheet-music scanner you can correct, with transposition (round 2 of #10, pitch 1 of 3)"
 section: "pitches"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span></a></div>
-<div class="page-head"><div class="kicker">Pitch 6 · round 2 of #10, pitch 1 of 3</div><h1>Pitch 6: Partfix, a sheet-music scanner you can correct, with transposition</h1><p class="lead"><code>pitches/PITCH-6.md</code>, as written, scrubbed for the public site.</p></div>
+<div class="page-head"><div class="kicker">Pitch 6 · round 2 of #10, pitch 1 of 3 · <span class="kind grade" data-grade="C+">C+</span></div><h1>Partfix, a sheet-music scanner you can correct, with transposition</h1></div>
 
-<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
+<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style><style>.tbl-cue{margin:var(--s3) 0 calc(-1 * var(--s2))}@media (min-width:880px){.tbl-cue{display:none}.doc-body .tbl>table{width:100%}}.pc-hist{margin:var(--s4) 0}.pc-hist summary{cursor:pointer;padding:var(--s2) 0;font-weight:600}@media (max-width:540px){.pc-hist summary{min-height:44px;box-sizing:border-box}.page-head h1{font-size:var(--fs-4)}}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
-
-
-
-
-Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 6 (`research/pass6.md`, idea B) plus my own checks today (dataset and font licences, store search, names). Posted as a `pitch` issue as soon as formed, per #6. Pitches #7, #9, #11 (Netsmith), #12 (Scope) and #14 (Boardseat) stay stored; nothing there is withdrawn. The Investors' brief of 15:24 ET: no games, Netsmith-level algorithmic complexity, a hard problem AI can now solve where the answer is worth money, three pitches, at least one with meta components. This is the first of the three and the one I recommend from this round. Pitch 7 (Seatsolve) and Pitch 8 (Themecount, the meta one) follow.
-
 ## In plain English
 
 **What it is.** Partfix reads printed sheet music from a photo and turns it into music you can fix, play, transpose and print. You photograph a page (a band part, a hymn, a lead sheet). The app finds the staff lines and recognises every note, rest, clef, key and time signature on the phone, with no account and nothing uploaded. It redraws the page cleanly and plays it back with a tone synthesised by code. Where it is unsure, it does not pretend: those notes are drawn in yellow, and "Fix next" walks you through them one at a time, so you check twelve notes instead of proof-reading two hundred. When the part is right you transpose it in one tap for your instrument (B-flat trumpet or clarinet, E-flat alto sax, F horn, or any key for a singer), and export a clean PDF or a MusicXML file that opens in MuseScore, Dorico, forScore and Finale.
@@ -44,6 +38,14 @@ What would make this fail: a recogniser that reads 60 percent of a photographed 
 
 ---
 
+<details class="pc-hist" markdown="1"><summary>Sources and history</summary>
+
+<code>pitches/PITCH-6.md</code>, as written, scrubbed for the public site.
+
+Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 6 (`research/pass6.md`, idea B) plus my own checks today (dataset and font licences, store search, names). Posted as a `pitch` issue as soon as formed, per #6. Pitches #7, #9, #11 (Netsmith), #12 (Scope) and #14 (Boardseat) stay stored; nothing there is withdrawn. The Investors' brief of 15:24 ET: no games, Netsmith-level algorithmic complexity, a hard problem AI can now solve where the answer is worth money, three pitches, at least one with meta components. This is the first of the three and the one I recommend from this round. Pitch 7 (Seatsolve) and Pitch 8 (Themecount, the meta one) follow.
+
+</details>
+
 ## Candidate: Partfix
 
 Mockup: `pitches/mockups/partfix.png` (drawn by `tools/mockup.py`: staff lines, noteheads and stems are drawn from coordinates in code; the melody is illustrative and from no score; no images).
@@ -66,6 +68,7 @@ New on iOS: confidence shown per note and a fix loop built around it (the incumb
 Checks: App Store via `tools/name_check.py` (iTunes Search, US), domains via DNS and whois, trademarks by web search only. A USPTO search is still needed before any name goes on the store.
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: Names, checked &lt;span class=&quot;nw&quot;&gt;2026-10-22&lt;/span&gt;, scrolls sideways" style="--tw:1309px" markdown="1">
 
 | Product name | App Store | .com | .app | Note |
@@ -92,6 +95,7 @@ Two staves (piano) and grand staff; multi-page documents with page order; choir 
 Free download: scan one page, see the recognition with yellow notes, fix them, play it. **Partfix Full, $14.99 one-time**: transposition, PDF and MusicXML export, unlimited documents. The gate is export and transposition, as the incumbents gate, and the free tier proves the honesty of the recogniser before anyone pays. No subscription, no ads.
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 2: Revenue plan, scrolls sideways" data-n="3 5" style="--tw:668px" markdown="1">
 
 | Price | Net at 30% | Sales for $200 | Net at 15% (SBP) | Sales for $200 |
@@ -107,6 +111,7 @@ Why $14.99: between the incumbents' one-time tiers ($4.99-$34.99) and two months
 
 ### Build plan (Day N = <span class="nw">2026-10-21</span> + N)
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 3: Build plan (Day N = &lt;span class=&quot;nw&quot;&gt;2026-10-21&lt;/span&gt; + N), scrolls sideways" style="--tw:526px" markdown="1">
 
 | Day | Date | Milestone |

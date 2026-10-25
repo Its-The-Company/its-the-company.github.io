@@ -1,5 +1,222 @@
 [
 {
+"time": "2026-10-25T06:02:49-04:00",
+"worker": "operator",
+"type": "session",
+"summary": "Work session 05:38-06:03: about 30 tasks, 10-12 agents at once (Opus high); refills 32 and 33 on the board; H259 rules-only Irish mutation marking passed; terms_locate fixes; no new letter at B or above",
+"link": ""
+},
+{
+"time": "2026-10-25T06:02:49-04:00",
+"worker": "odalys",
+"type": "tools",
+"summary": "terms_locate (a2) documented-route step and route table (26f0bd49)",
+"link": ""
+},
+{
+"time": "2026-10-25T06:02:15-04:00",
+"worker": "Odalys",
+"type": "tools",
+"summary": "T32-1 cap_map reading fixes: H163 C1 now shows its binding cell (chair, Overall) instead of unknown; Why words read across the concept's Whys; tool lines no longer counted as lifts (3f002cce)",
+"link": ""
+},
+{
+"time": "2026-10-25T06:01:08-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "S28-3 code size (fcd0ba8a) and site review 30 items S30-2..9, 11, 12 (711c194e): home rows link pitch pages, ideas grouped by letter, pitch pages open with plain English; site_s30_test 169/0",
+"link": ""
+},
+{
+"time": "2026-10-25T05:53:46-04:00",
+"worker": "Odalys",
+"type": "fix",
+"summary": "terms_locate: content-path matches dropped so the home step runs (atlas 32 false gaps); terms_guard robots.txt redirect recursion fixed (H258 tgftp). 10a32ebc",
+"link": ""
+},
+{
+"time": "2026-10-25T05:53:44-04:00",
+"worker": "Idris",
+"type": "research",
+"summary": "H259: rules-only Irish mutation marking, no BuNaMo, passes 95% on word, type and trigger (250/254 truth, 250/263 engine marks); base form 78.3%, gender 3.0% from rules",
+"link": ""
+},
+{
+"time": "2026-10-25T05:53:39-04:00",
+"worker": "Ines",
+"type": "plan",
+"summary": "Refill 33: lanes H265-H272 reserved, R33-1 opens Stack Exchange per site, R33-2 rules for eight new source kinds; 18 board lines, 15 runnable now (95bb02e6, 0f075bad)",
+"link": ""
+},
+{
+"time": "2026-10-25T05:52:49-04:00",
+"worker": "Maren",
+"type": "research",
+"summary": "H263 G75: Wikidata and MusicBrainz core data CC0 by their pages; WDQS robots.txt disallows /sparql and MusicBrainz web service is non-commercial free, so 0 capability reads; 4 concepts parked for data",
+"link": ""
+},
+{
+"time": "2026-10-25T05:51:59-04:00",
+"worker": "Idris",
+"type": "research",
+"summary": "H260 G74 federal bulk data: 10 datasets read for licence and size, 4 public domain on agency pages, 4 concepts; T1 v2 top 10 not read (#53)",
+"link": ""
+},
+{
+"time": "2026-10-25T05:51:21-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "lemmy.world route ruled local-only; recall control 5 of 5 federated, route moved from open to gap",
+"link": ""
+},
+{
+"time": "2026-10-25T05:51:02-04:00",
+"worker": "Idris",
+"type": "research",
+"summary": "H258 (R32-1, H138 C2 lift): no NOAA host's terms located by terms_locate, so no data read; (i)-(iii) unread, (iv) not met; Open list for a NOAA terms route",
+"link": ""
+},
+{
+"time": "2026-10-25T05:50:42-04:00",
+"worker": "Maren",
+"type": "research",
+"summary": "H262 G73 merges: 6 considered, 2 kept (walker own-pace daylight; ground through time), both Day 30 D; 0 fetches; H180 C3 G7 reading flagged to chair",
+"link": ""
+},
+{
+"time": "2026-10-25T05:50:39-04:00",
+"worker": "Odalys",
+"type": "tool",
+"summary": "lane_preflight.py (T32-2) 28610ca6: H255 dry run finds 7 of 8 hosts with no terms page located; terms_locate slug matches flagged",
+"link": ""
+},
+{
+"time": "2026-10-25T05:50:36-04:00",
+"worker": "Maren",
+"type": "research",
+"summary": "H261 G72 stopped at G2: Wikimedia terms URL robots-barred (/wiki/Special:), 0 pageview calls, 4 requests",
+"link": ""
+},
+{
+"time": "2026-10-25T05:50:10-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "Route atlas 32 (R32-5): lemmy.world open on all four tests (search 100 per 600 s, recall 5), with a federation condition for Ines; Lobsters refused by robots; 8 venues are gaps (terms unfound or under the floor)",
+"link": ""
+},
+{
+"time": "2026-10-25T05:49:11-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "H264 H138 C3 lift reads: held; 0 of 8 own pages read, 0 sliders, USGS terms unread",
+"link": ""
+},
+{
+"time": "2026-10-25T05:48:36-04:00",
+"worker": "Odalys",
+"type": "research",
+"summary": "Bluesky route (R32-5): gap. Robots allow; terms_locate found no terms page on 4 Bluesky hosts, so no tool written.",
+"link": ""
+},
+{
+"time": "2026-10-25T05:48:03-04:00",
+"worker": "Ines",
+"type": "ruling",
+"summary": "H257 s4.1: Discourse /tos route citation stays unread (GitHub hold; CDCK terms do not cover meta); gap stands (d39c67ba)",
+"link": ""
+},
+{
+"time": "2026-10-25T05:46:30-04:00",
+"worker": "Ines",
+"type": "plan",
+"summary": "Refill 32 (ee8cee5e): 14 board lines, H258-H264 reserved; R32-1 data read on a chair-stepped row's own lift, a route atlas under R32-5, four store-free generators G72-G75, cap_map fixes and a lane preflight. Idle check 0 of 5 below 2.",
+"link": ""
+},
+{
+"time": "2026-10-25T05:46:23-04:00",
+"worker": "Odalys",
+"type": "tools",
+"summary": "One robots.txt cache for all hosts, keyed on the ET day; store hosts keep store_http's rate limit (14e0af3e)",
+"link": ""
+},
+{
+"time": "2026-10-25T05:45:37-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "H257 s4.0: Discourse /tos route citation could not be read cleanly; 05:11 terms gap stands, no forum fetched",
+"link": ""
+},
+{
+"time": "2026-10-25T05:45:34-04:00",
+"worker": "Ines",
+"type": "ruling",
+"summary": "H251 Sense clause (iii) covers sense.com; home-page read struck, no cell moves",
+"link": ""
+},
+{
+"time": "2026-10-25T05:44:46-04:00",
+"worker": "Maren",
+"type": "research",
+"summary": "H250 s5: TVmaze sister policies read under the 05:41 ruling; host cleared (API CC BY-SA, Data Policies an editorial index); Premium tiers named, price not in page text; 19 of 30 requests",
+"link": ""
+},
+{
+"time": "2026-10-25T05:44:19-04:00",
+"worker": "Idris",
+"type": "test",
+"summary": "Red suites after 05:20 green: H246 robots note copied from the withdrawal ruling; a mistyped letter in the R31-2 H137 row corrected to C+ (a051a58d). Own slip: truncated rulings-v2.md for a moment while Ines had an uncommitted row; restored at once, her row landed intact in d60b1a17.",
+"link": ""
+},
+{
+"time": "2026-10-25T05:43:56-04:00",
+"worker": "Odalys",
+"type": "research",
+"summary": "SE API terms read on stackapps.com, no bar to a keyless research read; H236 re-rule conversion applied (11 park rows); rulings-v2.md rewritten under the reader twice, rows committed from the index",
+"link": ""
+},
+{
+"time": "2026-10-25T05:43:53-04:00",
+"worker": "Odalys",
+"type": "research",
+"summary": "R31-1 applied to H250/H251 and L31-1 to H253: all held, no rulings row (d2bc3da1); Sense clause filed for Ines",
+"link": ""
+},
+{
+"time": "2026-10-25T05:43:46-04:00",
+"worker": "Idris",
+"type": "research",
+"summary": "H254 s3: Sofa import help page read; imports land in Logbook, Stats Dashboard not named",
+"link": ""
+},
+{
+"time": "2026-10-25T05:42:44-04:00",
+"worker": "Ines",
+"type": "ruling",
+"summary": "Chair: three terms/census questions ruled (d60b1a17); rulings-v2.md found truncated to 0 bytes at 05:42 by an unknown writer, restored from HEAD plus one row",
+"link": ""
+},
+{
+"time": "2026-10-25T05:42:06-04:00",
+"worker": "Maren",
+"type": "design",
+"summary": "S31-0 lift map spec: /documents/ideas/ tracker is 16,992 px at 390; L1-L8 add a 5-group summary and closed groups from cap_map --json; top two B ideas have no readable cap",
+"link": ""
+},
+{
+"time": "2026-10-25T05:42:04-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "H251 R31-1 re-run: 0 priced rivals read for H41 and H134 C1 (Emporia terms refuse, three terms gaps, GitHub hold); unread, not the kill",
+"link": ""
+},
+{
+"time": "2026-10-25T05:41:45-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "creative/approved.md started: 0 Investor creative approvals on record; 12 items listed as not yet approved for the next report's C51 questions (2ec34161)",
+"link": ""
+},
+{
 "time": "2026-10-25T05:21:35-04:00",
 "worker": "operator",
 "type": "session",

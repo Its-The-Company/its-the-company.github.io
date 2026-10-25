@@ -1,21 +1,15 @@
 ---
 layout: "default"
-title: "Pitch 7: Seatsolve, a seating-plan solver for weddings and events"
+title: "Pitch 7: Seatsolve, a seating-plan solver for weddings and events (round 2 of #10, pitch 2 of 3)"
 section: "pitches"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span></a></div>
-<div class="page-head"><div class="kicker">Pitch 7 · round 2 of #10, pitch 2 of 3</div><h1>Pitch 7: Seatsolve, a seating-plan solver for weddings and events</h1><p class="lead"><code>pitches/PITCH-7.md</code>, as written, scrubbed for the public site.</p></div>
+<div class="page-head"><div class="kicker">Pitch 7 · round 2 of #10, pitch 2 of 3 · <span class="kind grade" data-grade="C+">C+</span></div><h1>Seatsolve, a seating-plan solver for weddings and events</h1></div>
 
-<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
+<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style><style>.tbl-cue{margin:var(--s3) 0 calc(-1 * var(--s2))}@media (min-width:880px){.tbl-cue{display:none}.doc-body .tbl>table{width:100%}}.pc-hist{margin:var(--s4) 0}.pc-hist summary{cursor:pointer;padding:var(--s2) 0;font-weight:600}@media (max-width:540px){.pc-hist summary{min-height:44px;box-sizing:border-box}.page-head h1{font-size:var(--fs-4)}}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
-
-
-
-
-Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 6 (`research/pass6.md`, idea A) plus my own store search and name checks today. Posted as a `pitch` issue as soon as formed, per #6. Pitches #7, #9, #11, #12, #14 and Pitch 6 (Partfix) stay stored; nothing is withdrawn. This is the second of three in the round the Investors asked for at 15:24 ET (no games; Netsmith-level algorithmic complexity; at least one meta pitch, which is Pitch 8).
-
 ## In plain English
 
 **What it is.** Seatsolve works out where everyone sits. You type or paste your guest list (or import it from a spreadsheet), mark who must sit together (couples, families, "the Rivera table"), who must not (the divorced uncles, the two friends who fell out), who should be near the front or the exit, and what tables you have (round tables of ten, two long tables of twelve, a head table). You give the room's real size and drag the tables to where they will stand. Then the app solves the plan: every rule honoured where possible, the broken ones listed plainly, and the result shown as a to-scale floor plan. You can lock anyone you have already placed and re-solve around them, move people by hand and see which rules that breaks, keep two versions and compare them side by side, and print place cards, table lists for the caterer, and a floor plan for the venue. Everything stays on the phone; no account.
@@ -44,6 +38,14 @@ What would make this fail: being invisible. The <span title="One numbered piece 
 
 ---
 
+<details class="pc-hist" markdown="1"><summary>Sources and history</summary>
+
+<code>pitches/PITCH-7.md</code>, as written, scrubbed for the public site.
+
+Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 6 (`research/pass6.md`, idea A) plus my own store search and name checks today. Posted as a `pitch` issue as soon as formed, per #6. Pitches #7, #9, #11, #12, #14 and Pitch 6 (Partfix) stay stored; nothing is withdrawn. This is the second of three in the round the Investors asked for at 15:24 ET (no games; Netsmith-level algorithmic complexity; at least one meta pitch, which is Pitch 8).
+
+</details>
+
 ## Candidate: Seatsolve
 
 Mockup: `pitches/mockups/seatsolve.png` (drawn by `tools/mockup.py`: tables are circles placed on a grid by code, seats are dots on each circle; the guest counts are the HN brief's 120 guests; no images).
@@ -64,6 +66,7 @@ New on iOS: the explained report of broken rules, lock-and-resolve, version comp
 Checks: App Store via `tools/name_check.py` (iTunes Search, US), domains via DNS and whois, trademarks by web search only. A USPTO search is still needed.
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: Names, checked &lt;span class=&quot;nw&quot;&gt;2026-10-22&lt;/span&gt;, scrolls sideways" style="--tw:997px" markdown="1">
 
 | Product name | App Store | .com | .app | Note |
@@ -90,6 +93,7 @@ Venue templates and a shared floor-plan library; RSVP and meal import from the b
 Free download: enter any number of guests, rules and tables, solve, see the floor plan and the report. **Seatsolve Event, $14.99 one-time**, unlocks one event's exports (place cards, table lists, floor plan PDF), version compare and CSV import. A second event is a second purchase (non-consumable per event is awkward; a consumable "event unlock" is the honest StoreKit shape, and I will check 3.1.1 on it before Day 10). No subscription, no ads.
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 2: Revenue plan, scrolls sideways" data-n="3 5" style="--tw:484px" markdown="1">
 
 | Price | Net at 30% | Sales for $200 | Net at 15% (SBP) | Sales for $200 |
@@ -104,6 +108,7 @@ Why $14.99: Zola's seating unlock is $14.99 and Seatful's event pass is $14.99, 
 
 ### Build plan (Day N = <span class="nw">2026-10-21</span> + N)
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 3: Build plan (Day N = &lt;span class=&quot;nw&quot;&gt;2026-10-21&lt;/span&gt; + N), scrolls sideways" style="--tw:526px" markdown="1">
 
 | Day | Date | Milestone |

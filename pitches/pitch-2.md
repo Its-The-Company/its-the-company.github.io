@@ -4,18 +4,12 @@ title: "Pitch 2: a feature-rich product, per issue #8"
 section: "pitches"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span></a></div>
-<div class="page-head"><div class="kicker">Pitch 2</div><h1>Pitch 2: a feature-rich product, per issue #8</h1><p class="lead"><code>pitches/PITCH-2.md</code>, as written, scrubbed for the public site.</p></div>
+<div class="page-head"><div class="kicker">Pitch 2</div><h1>a feature-rich product, per issue #8</h1></div>
 
-<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
+<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style><style>.tbl-cue{margin:var(--s3) 0 calc(-1 * var(--s2))}@media (min-width:880px){.tbl-cue{display:none}.doc-body .tbl>table{width:100%}}.pc-hist{margin:var(--s4) 0}.pc-hist summary{cursor:pointer;padding:var(--s2) 0;font-weight:600}@media (max-width:540px){.pc-hist summary{min-height:44px;box-sizing:border-box}.page-head h1{font-size:var(--fs-4)}}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
-
-
-
-
-Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 4 (`research/pass4.md`) plus my own App Store checks today. Posted as a `pitch` issue as soon as formed, per #6. Pitch #7 (Stripwise, Tallyproof, Beatcount) stays open as the pivot or side-project option; nothing there is withdrawn.
-
 ## In plain English (added <span class="nw">2026-10-22</span>, per #10)
 
 **What it is.** Purlwright is an iPad and iPhone app for knitters who make or change their own patterns. A knitting pattern comes in two forms: a chart (a grid where each square is a symbol for one stitch) and written rows ("Row 1: k2, p2, k2tog, yo, k3"). Designers draw the chart and then type the written rows by hand, and that is where mistakes get in: wrong-side rows have to be read backwards with knits and purls swapped, and turning a flat pattern into one knitted in the round changes every second row. Purlwright treats each square as a real stitch, so it knows how many stitches each row uses and makes. You draw the chart; it checks every row adds up and points at the exact square that does not; it writes the written rows correctly for flat or in-the-round knitting; it can turn typed rows back into a chart; and it exports a clean PDF. Charts are saved automatically as ordinary files, so nothing vanishes on a restart.
@@ -38,6 +32,14 @@ What would make this fail: a wrong written row. The whole pitch is "the words ar
 
 ---
 
+<details class="pc-hist" markdown="1"><summary>Sources and history</summary>
+
+<code>pitches/PITCH-2.md</code>, as written, scrubbed for the public site.
+
+Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 4 (`research/pass4.md`) plus my own App Store checks today. Posted as a `pitch` issue as soon as formed, per #6. Pitch #7 (Stripwise, Tallyproof, Beatcount) stays open as the pivot or side-project option; nothing there is withdrawn.
+
+</details>
+
 ## Candidate 1: Purlwright (recommended)
 
 Mockup: `pitches/mockups/purlwright.png` (drawn by `tools/mockup.py` from coordinates; no images).
@@ -57,6 +59,7 @@ Purlwright is a chart editor for knitters who design or adapt patterns. You draw
 Checks: App Store via the iTunes Search API (US, `tools/name_check.py`), domains via whois and DNS, trademarks via web search only. A USPTO search is still needed before any name goes on the store (browser session; plan in `research/name-risk.md` Part 2 applies, with these terms).
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: Names, checked &lt;span class=&quot;nw&quot;&gt;2026-10-22&lt;/span&gt;, scrolls sideways" style="--tw:1144px" markdown="1">
 
 | Product name | App Store | .com | .app | Trademark (web search) |
@@ -83,6 +86,7 @@ Cables with crossing validation (2/2, 3/3, twisted); lace with multi-row decreas
 Free download. Two charts, every symbol, full written output and validation free, so the engine proves itself before anyone pays. **Purlwright Unlimited, $9.99**, one-time: unlimited charts, PDF and image export, repeats and sizes. No subscription, no ads.
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 2: Revenue plan, scrolls sideways" data-n="3 4" style="--tw:530px" markdown="1">
 
 | Price | Net per sale at 30% | Sales for $200 | Per selling day (10 days) |
@@ -99,6 +103,7 @@ Sizing (corrected <span class="nw">2026-10-22</span>, `research/sizing.md`). Thi
 
 ### Build plan (Day N = <span class="nw">2026-10-21</span> + N)
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 3: Build plan (Day N = &lt;span class=&quot;nw&quot;&gt;2026-10-21&lt;/span&gt; + N), scrolls sideways" style="--tw:526px" markdown="1">
 
 | Day | Date | Milestone |
@@ -138,6 +143,7 @@ Pass 4's first choice. Evidence is in `research/pass4.md` section 1: Markup R-XP
 **What I found today that changes the ranking.** iTunes Search, US, "cross stitch chart" and "threadmark", <span class="nw">2026-10-22</span>:
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 4: Candidate 2: cross-stitch PDF chart keeper (runner-up, not for month one), scrolls sideways" data-n="4" style="--tw:997px" markdown="1">
 
 | App | Released | Price | Ratings | Claims |

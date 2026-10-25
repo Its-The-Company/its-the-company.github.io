@@ -4,18 +4,12 @@ title: "The Pitch: what we should build"
 section: "pitches"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span></a></div>
-<div class="page-head"><div class="kicker">Pitch 1</div><h1>The Pitch: what we should build</h1><p class="lead"><code>pitches/PITCH.md</code>, as written, scrubbed for the public site.</p></div>
+<div class="page-head"><div class="kicker">Pitch 1 · <span class="kind grade" data-grade="B-">B-</span></div><h1>The Pitch: what we should build</h1></div>
 
-<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
+<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style><style>.tbl-cue{margin:var(--s3) 0 calc(-1 * var(--s2))}@media (min-width:880px){.tbl-cue{display:none}.doc-body .tbl>table{width:100%}}.pc-hist{margin:var(--s4) 0}.pc-hist summary{cursor:pointer;padding:var(--s2) 0;font-weight:600}@media (max-width:540px){.pc-hist summary{min-height:44px;box-sizing:border-box}.page-head h1{font-size:var(--fs-4)}}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
-
-
-
-
-Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's three research passes. Posted as the `pitch` issue on Day 2 at the earliest, per Phase 1.
-
 ## In plain English (added <span class="nw">2026-10-22</span>, per #10)
 
 **What it is.** Stripwise is an iPhone app that removes the hidden information inside your photos before you send or post them. Every photo a phone takes carries a hidden label: often the exact place it was taken (GPS coordinates), the date and time, the phone model, and sometimes the editing app and the owner's name. Stripwise takes that label off and saves a clean copy. Then it does the thing no competitor does: it reopens the clean file, reads it again, and shows a short before-and-after list, for example "14 tags found, 0 remain, location removed, picture unchanged." It works from the app itself or from the Share button inside Photos, Messages, Facebook, or any other app. Nothing is uploaded and there is no account; all of it happens on the phone.
@@ -34,9 +28,17 @@ What would make this fail: discovery. Ninety-two percent of Utilities are free. 
 
 ---
 
+<details class="pc-hist" markdown="1"><summary>Sources and history</summary>
+
+<code>pitches/PITCH.md</code>, as written, scrubbed for the public site.
+
+Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's three research passes. Posted as the `pitch` issue on Day 2 at the earliest, per Phase 1.
+
+</details>
+
 ## Candidate 1: Stripwise (recommended)
 
-Memo: `pitches/stripwise.md`. Mockup: `pitches/mockups/stripwise.png` (drawn by `tools/mockup.py`, no images).
+Memo: <code>pitches/stripwise.md</code>. Mockup: `pitches/mockups/stripwise.png` (drawn by `tools/mockup.py`, no images).
 
 ### Evidence of need
 - 151 hand-read 1-3 star reviews across Exif Metadata (6.1K ratings) and Photo Investigator (1.4K ratings), coded in `research/reviews/exif-1455197364.md` and `research/reviews/exif-571574618.md`. Leading themes: edits fail, crash, or stopped after an update (25 + 10); "said done, data still there" or not saved (5); paid but nothing unlocked, pay again, or must pay before anything works (9 + 7); ads (12); batch caps (5 + 2); HEIC or quality loss (4 + 4). Sources: [Exif Metadata reviews](https://itunes.apple.com/us/rss/customerreviews/page=1/id=1455197364/sortby=mostrecent/json), [Photo Investigator reviews](https://itunes.apple.com/us/rss/customerreviews/page=1/id=571574618/sortby=mostrecent/json).
@@ -51,6 +53,7 @@ Stripwise removes location, time, camera, owner, and editing metadata from photo
 Checks: App Store via the iTunes Search API (US), domains via whois and DNS, trademarks via web search only (a USPTO database search is still needed before the name goes on the store; the USPTO site requires a browser session, which the Investors can run in a minute).
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: Names, checked &lt;span class=&quot;nw&quot;&gt;2026-10-22&lt;/span&gt;, scrolls sideways" style="--tw:1067px" markdown="1">
 
 | Product name | App Store | .com | .app | Trademark (web search) |
@@ -74,6 +77,7 @@ Company name options, same checks: **Lowtide Software** (lowtidesoftware.com: wh
 Free download. The first ten photos are free with the full receipt, so nobody can write "paid and nothing worked" before they have seen it work. After ten, a single non-consumable unlock, **Stripwise Unlimited, $4.99**. No subscription, no ads.
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 2: Revenue plan, scrolls sideways" data-n="3 4" style="--tw:609px" markdown="1">
 
 | Price | Net per sale at 30% | Sales for $200 | Per selling day (10 days) |
@@ -88,6 +92,7 @@ Why $4.99: it sits under Photo Investigator's combined unlocks and far under Exi
 
 ### Build plan (Day N = <span class="nw">2026-10-21</span> + N)
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 3: Build plan (Day N = &lt;span class=&quot;nw&quot;&gt;2026-10-21&lt;/span&gt; + N), scrolls sideways" style="--tw:526px" markdown="1">
 
 | Day | Date | Milestone |
@@ -121,7 +126,7 @@ Budget asked: one domain (approved by default). Nothing else.
 
 ## Candidate 2: Tallyproof (runner-up)
 
-Memo: `pitches/tallyproof.md`. Mockup: `pitches/mockups/tallyproof.png`.
+Memo: <a href="tallyproof.html">tallyproof</a>. Mockup: `pitches/mockups/tallyproof.png`.
 
 **Evidence.** Tally: Counter and Score Tracker (1.1K ratings): 23 of 50 recent reviews are 1-3 stars; 10 are widgets not refreshing, 6 are paywall or subscription anger, one a $30 a year complaint ([reviews](https://itunes.apple.com/us/rss/customerreviews/page=1/id=1412716242/sortby=mostrecent/json), coded in `research/reviews/tally-1412716242.md`). Quote: "A subscription fee to use a tally app." Counter Tally Count has 14K ratings and is free with a $19.99 remove-ads purchase.
 
@@ -141,7 +146,7 @@ Memo: `pitches/tallyproof.md`. Mockup: `pitches/mockups/tallyproof.png`.
 
 ## Candidate 3: Beatcount (runner-up)
 
-Memo: `pitches/beatcount.md`. Mockup: `pitches/mockups/beatcount.png`.
+Memo: <a href="beatcount.html">beatcount</a>. Mockup: `pitches/mockups/beatcount.png`.
 
 **Evidence.** Seven of eleven low store-page reviews across three acoustic timegrapher apps say the readings are inconsistent or wrong (`research/watch-accuracy.md`; [Watch Tuner reviews](https://apps.apple.com/us/app/id991367080?see-all=reviews)). Quote: "A waste of $15. This app give inconsistent readings." People pay: Watch Tuner is $1.99 plus IAP; tickIQ has 804 ratings and paid tiers.
 

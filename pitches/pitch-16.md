@@ -4,35 +4,44 @@ title: "Pitch 16: Wholepack, the week of dinners planned from your own recipes s
 section: "pitches"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span></a></div>
-<div class="page-head"><div class="kicker">Pitch 16</div><h1>Pitch 16: Wholepack, the week of dinners planned from your own recipes so every pack you buy gets used up (H177 C1, ruled B; B- after the H185 stress test)</h1><p class="lead"><code>pitches/PITCH-16.md</code>, as written, scrubbed for the public site.</p><p class="pc-src">Mockup screens are drawn; they go public after creative approval.</p></div>
+<div class="page-head"><div class="kicker">Pitch 16 · <span class="kind grade" data-grade="B-">B-</span></div><h1>Wholepack, the week of dinners planned from your own recipes so every pack you buy gets used up</h1></div>
 
-<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
+<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style><style>.tbl-cue{margin:var(--s3) 0 calc(-1 * var(--s2))}@media (min-width:880px){.tbl-cue{display:none}.doc-body .tbl>table{width:100%}}.pc-hist{margin:var(--s4) 0}.pc-hist summary{cursor:pointer;padding:var(--s2) 0;font-weight:600}@media (max-width:540px){.pc-hist summary{min-height:44px;box-sizing:border-box}.page-head h1{font-size:var(--fs-4)}}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
-
-
-
-
-> **<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Ruling</span> changed, <span class="nw">2026-10-24</span> 19:26 ET (Odalys, H185 applied).** The letter is now **B-**, not B. Two of the four depth parts failed their pre-written lines (K185-D2): the ingredient parser, read the lowering way, got 392 of 442 generated lines fully right (88.7%, under 90%), and code-rendered receipt lines matched the right ingredient 73 of 253 times (28.9%, under 60%). <span title="How much room the idea has to grow. It moves the grade up or down a step or two.">Depth</span> falls from B to C+ and no longer <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> the <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span>. Every <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span>, crowding and fit check came back not met. Section 15 has each line; research/hunt/H185.md 'H185 applied' has the counts.
-
-Prepared Day 3 (<span class="nw">2026-10-24</span>) by Ines, from Wrenna's <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> H177 (`research/hunt/H177.md`, <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">generator</span> G25b: new paid entrants winning this quarter, c5c46490), two <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span> grades (Idris, `research/hunt/H177-grades-idris.md`, e6d9672f; Maren, `research/hunt/H177-grades-maren.md`, 365ad639) and my chair ruling (`research/hunt/rulings-v2.md`, 'H177 chair (Ines, 18:17)' rows, 089a756b). I did not author or grade the lane. Before any check was read I wrote what each could do to the letter (`research/hunt/H185.md`, 2b4078dd). **No check has landed yet; every one is printed open in section 13 with its move.** Mockups: `pitches/PITCH-16-mockups/` (mine, drawn by code). Issue: #52.
-
-No decision is asked (amendment <span class="nw">2026-10-23</span> 17:33). The letter is the judgment of two blind graders and a chair under a rubric that has not passed a validation test (section 8). Every number is cited; the sales figures are arithmetic, not a forecast. Names and visuals are proposals under <span title="Commandment 51: the Investors approve every visual before it ships.">Commandment 51</span>.
-
 ## 1. In plain English
 
 **What it is.** A meal planner that plans around what the shop actually sells. You give it the dinners you already cook, pasted as text or shared from a recipe page. It reads the ingredient lines ("1/2 cup cream", "2 bell peppers", "1 (15 oz) can black beans"). From your receipts, photographed once and confirmed line by line, it learns the packs your store sells and what they cost: a 473 ml carton of cream, a 3-pack of peppers. Then it chooses the week's dinners so that the packs you buy get used up across the week: the recipe that opens the cream on Monday is paired with the one that empties it on Thursday, the three-pack of peppers goes into two dinners, the half onion is carried forward. The shopping list is priced in whole packs, which is what the till rings up, and it tells you which part-packs the week will leave over before you shop. Nothing is fetched from a shop; the prices are yours, from your receipts and your typing.
 
 **One session.** You paste eight recipes you cook on rotation. You photograph last week's receipt and confirm each line: "GRN PEPR 3CT 2.99" is bell peppers, a pack of three. You say five dinners for four people. In a second the app shows the week: Monday chicken fajitas (opens six fresh packs), Tuesday black bean tacos (empties the peppers and the limes), Wednesday tofu curry (uses the open onions), Thursday frittata (uses the open cheddar and spinach), Friday chicken rice bowls (empties the chicken and the scallions). The till total reads $59.97; priced by the portion, the way other planners price it, the same week would read $37.94, a number no till will charge. You swap Wednesday for pasta and the total and the leftover line change. You tap "Make the list" and shop. (Every number here is the mockup's own generated instance, section 9.)
 
-**Who it is for.** Adults who cook dinners at home for a household on a budget, from recipes they already use, and shop a week at a time. These are the buyers of this quarter's meal-planner wave: TapCook (6769601354, released <span class="nw">2026-07-17</span>, 4,983 ratings, 50.33 a day, Food and Drink grossing #3 on <span class="nw">2026-10-24</span>), mise (3,681 ratings, 27.07 a day), Potto (2,314, 17.27 a day), NeatEat and Whipp (`research/hunt/H177.md`, lines 21-33). Their low reviews say two things: the price at the till is not the price on the screen ("it recommends portions of items, for instance 1 pepper at Aldi, and prices that, not the cost of the 3 pepper package", TapCook us #8; "the budget only accounts for 1/4 cup of cream, you can't buy 1/4 cup of cream", Potto us #22; "I copy and pasted in Instacart came out to $248" against $116 quoted, TapCook us #26), and the subscription is the loudest complaint of all ("$6.99 a week is crazy! That's nearly $400 a year", Potto us #92; price, paywall or trial billing in 41 of TapCook's 97 low reviews). Some of them cook their own rotation ("I have recipes that I use as a constant rotation", TapCook us #42). Of the Investors' subjects (amendment <span class="nw">2026-10-22</span> 18:51), cooking is not on the list; the nearest is organisation, a planned week and a list. The ruling noted this and did not <span title="A test written in advance. If it fires, we drop the idea.">kill</span> on it. This is not a product about what to eat; it is a product about what to buy, and it makes no claim of the kind Commandment 7 bars (section 6).
+**Who it is for.** Adults who cook dinners at home for a household on a budget, from recipes they already use, and shop a week at a time. These are the buyers of this quarter's meal-planner wave: TapCook (6769601354, released <span class="nw">2026-07-17</span>, 4,983 ratings, 50.33 a day, Food and Drink grossing #3 on <span class="nw">2026-10-24</span>), mise (3,681 ratings, 27.07 a day), Potto (2,314, 17.27 a day), NeatEat and Whipp (<a href="../documents/hunt/h177.html">H177</a>, lines 21-33). Their low reviews say two things: the price at the till is not the price on the screen ("it recommends portions of items, for instance 1 pepper at Aldi, and prices that, not the cost of the 3 pepper package", TapCook us #8; "the budget only accounts for 1/4 cup of cream, you can't buy 1/4 cup of cream", Potto us #22; "I copy and pasted in Instacart came out to $248" against $116 quoted, TapCook us #26), and the subscription is the loudest complaint of all ("$6.99 a week is crazy! That's nearly $400 a year", Potto us #92; price, paywall or trial billing in 41 of TapCook's 97 low reviews). Some of them cook their own rotation ("I have recipes that I use as a constant rotation", TapCook us #42). Of the Investors' subjects (amendment <span class="nw">2026-10-22</span> 18:51), cooking is not on the list; the nearest is organisation, a planned week and a list. The <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> noted this and did not <span title="A test written in advance. If it fires, we drop the idea.">kill</span> on it. This is not a product about what to eat; it is a product about what to buy, and it makes no claim of the kind Commandment 7 bars (section 6).
+
+> **Ruling changed, <span class="nw">2026-10-24</span> 19:26 ET (Odalys, <a href="../documents/hunt/h185.html">H185</a> applied).** The letter is now **B-**, not B. Two of the four depth parts failed their pre-written lines (K185-D2): the ingredient parser, read the lowering way, got 392 of 442 generated lines fully right (88.7%, under 90%), and code-rendered receipt lines matched the right ingredient 73 of 253 times (28.9%, under 60%). <span title="How much room the idea has to grow. It moves the grade up or down a step or two.">Depth</span> falls from B to C+ and no longer <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> the <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span>. Every <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span>, crowding and fit check came back not met. Section 15 has each line; <a href="../documents/hunt/h185.html">H185</a> '<a href="../documents/hunt/h185.html">H185</a> applied' has the counts.
+
+<details class="pc-hist" markdown="1"><summary>Sources and history</summary>
+
+<code>pitches/PITCH-16.md</code>, as written, scrubbed for the public site.
+
+Mockup screens are drawn; they go public after creative approval.
+
+Title as written: Pitch 16: Wholepack, the week of dinners planned from your own recipes so every pack you buy gets used up (<a href="../documents/hunt/h177.html">H177</a> C1, ruled B; B- after the <a href="../documents/hunt/h185.html">H185</a> stress test)
+
+Prepared Day 3 (<span class="nw">2026-10-24</span>) by Ines, from Wrenna's <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> <a href="../documents/hunt/h177.html">H177</a> (<a href="../documents/hunt/h177.html">H177</a>, <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">generator</span> G25b: new paid entrants winning this quarter, c5c46490), two <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span> grades (Idris, <code><a href="../documents/hunt/h177.html">H177</a>-grades-idris</code>, e6d9672f; Maren, <code><a href="../documents/hunt/h177.html">H177</a>-grades-maren</code>, 365ad639) and my chair ruling (<a href="../documents/#v2-rulings">rulings-v2</a>, '<a href="../documents/hunt/h177.html">H177</a> chair (Ines, 18:17)' rows, 089a756b). I did not author or grade the lane. Before any check was read I wrote what each could do to the letter (<a href="../documents/hunt/h185.html">H185</a>, 2b4078dd). **No check has landed yet; every one is printed open in section 13 with its move.** Mockups: `pitches/PITCH-16-mockups/` (mine, drawn by code). Issue: #52.
+
+No decision is asked (amendment <span class="nw">2026-10-23</span> 17:33). The letter is the judgment of two blind graders and a chair under a rubric that has not passed a validation test (section 8). Every number is cited; the sales figures are arithmetic, not a forecast. Names and visuals are proposals under <span title="Commandment 51: the Investors approve every visual before it ships.">Commandment 51</span>.
+
+Files named on this page that have no page on the site: `research/hunt/H177-raw/rev/`, `research/hunt/H140-verdict.md`, `research/hunt/refill-23.md`, `research/hunt/H177-grades-idris.md`, `research/hunt/H177-grades-maren.md`.
+
+</details>
 
 ## 2. Evidence of need, with links
 
-<span title="How many people show, in their own words, that they want this.">Need</span> is not a cell of the v2 rubric; it is the Why, and I state it as it was counted, not louder. All counts are from `research/hunt/H177.md` (lines 43-45) over the 1-3 star reviews since <span class="nw">2026-05-01</span> of the shelf's entrants (`research/hunt/H177-raw/rev/`).
+<span title="How many people show, in their own words, that they want this.">Need</span> is not a cell of the v2 rubric; it is the Why, and I state it as it was counted, not louder. All counts are from <a href="../documents/hunt/h177.html">H177</a> (lines 43-45) over the 1-3 star reviews since <span class="nw">2026-05-01</span> of the shelf's entrants (<code><a href="../documents/hunt/h177.html">H177</a>-raw</code>).
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: 2. Evidence of need, with links, scrolls sideways" style="--tw:937px" markdown="1">
 
 | What buyers ask for | Count | Where |
@@ -47,11 +56,11 @@ No decision is asked (amendment <span class="nw">2026-10-23</span> 17:33). The l
 </div>
 
 
-**The loud ask is the price, not the pack feature.** Four reviews in 442 name the pack problem; forty-one in ninety-seven name the subscription. This pitch leads on paying once and on a list whose total is what the till charges, and treats whole-pack planning as the method that makes the total honest, not as a demanded feature. H185 read (b) (Wrenna: the uncoded Whipp and MyRecipes dumps, and a seeded 90-post forum sample from r/EatCheapAndHealthy, r/MealPrepSunday and r/Frugal) will add its counts here under rule Q185-1..3; until then the pitch may not say that buyers write about the leftover half-pack, and it does not.
+**The loud ask is the price, not the pack feature.** Four reviews in 442 name the pack problem; forty-one in ninety-seven name the subscription. This pitch leads on paying once and on a list whose total is what the till charges, and treats whole-pack planning as the method that makes the total honest, not as a demanded feature. <a href="../documents/hunt/h185.html">H185</a> read (b) (Wrenna: the uncoded Whipp and MyRecipes dumps, and a seeded 90-post forum sample from r/EatCheapAndHealthy, r/MealPrepSunday and r/Frugal) will add its counts here under rule Q185-1..3; until then the pitch may not say that buyers write about the leftover half-pack, and it does not.
 
 ## 3. What is new
 
-The chair ruling's difference line: **"Your recipes, planned so every pack empties."** On the shelf as read on <span class="nw">2026-10-24</span> (`rulings-v2.md`, H177 chair C1 <span title="How different the idea is from what the App Store already sells.">Novelty</span> cell):
+The chair ruling's difference line: **"Your recipes, planned so every pack empties."** On the shelf as read on <span class="nw">2026-10-24</span> (`rulings-v2.md`, <a href="../documents/hunt/h177.html">H177</a> chair C1 <span title="How different the idea is from what the App Store already sells.">Novelty</span> cell):
 
 - 0 of the top 10 under "meal planner" plans by pack; 4 of 10 claim "food waste" (mise, Meal Planner & Weekly Menu, MealPrepPro, Eat This Much), and ReciMe and Plan to Eat import your recipes. The goal is claimed, the method is not.
 - Under "budget meal planner", Budget Bites (#8, 2 ratings, <span class="nw">2026-02-13</span>, $2.99 a month) builds a week "to maximize ingredient overlap" on its own 500 recipes, without pack sizes. Grovi (#10) prices an imported recipe at your store. MealBoard (#10 under "meal planner") tracks prices per store and marks leftovers.
@@ -64,6 +73,7 @@ One top-10 app has the overlap half, so Novelty is B-, not B; the rest of the di
 The mission's line is $200 net by <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> (<span class="nw">2026-11-20</span>). Day 22 (<span class="nw">2026-11-12</span>) is the build line, so the selling window is 8 days. Net is 70 percent of price at Apple's standard rate (the Small Business Program's 85 percent waits on membership; I use 70).
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 2: 4. The money, both grades, scrolls sideways" style="--tw:1514px" markdown="1">
 
 | Route | Price | Sales for $200 net | A day over 8 days | What the lane says | Cell |
@@ -74,7 +84,7 @@ The mission's line is $200 net by <span title="Our arithmetic estimate of what t
 </div>
 
 
-The ruling put Day 30 at the middle line, not the best: every number is sizing's lifetime average on a shelf of free downloads into subscriptions, no paid-up-front entrant earns on Food and Drink this quarter (H177: 4 of 43 earners at one rating a day were paid, all Music), and H173 (paid newcomers' window rate) gave no verdict. Day 30 never lifts the <span title="The final letter, after the caps.">Overall</span>. Which route is printed as the one to build is decided by H185 rules K185-C2..C4 on Maren's two Paprika reads (the second on or after <span class="nw">2026-10-28</span>), not by a preference and not by the Investors.
+The ruling put Day 30 at the middle line, not the best: every number is sizing's lifetime average on a shelf of free downloads into subscriptions, no paid-up-front entrant earns on Food and Drink this quarter (<a href="../documents/hunt/h177.html">H177</a>: 4 of 43 earners at one rating a day were paid, all Music), and <a href="../documents/hunt/h173.html">H173</a> (paid newcomers' window rate) gave no verdict. Day 30 never lifts the <span title="The final letter, after the caps.">Overall</span>. Which route is printed as the one to build is decided by <a href="../documents/hunt/h185.html">H185</a> rules K185-C2..C4 on Maren's two Paprika reads (the second on or after <span class="nw">2026-10-28</span>), not by a preference and not by the Investors.
 
 Day 90 B (Maren, Idris): the shelf grows weekly, the engine does not change, and the obvious next features are the ones buyers already ask for: Canada and postal codes (TapCook 11 of 97), several stores, a freezer, household sharing, a Mac app.
 
@@ -85,6 +95,7 @@ Overall **B** (ladder: Novelty B- up one for Depth B, the same in all three rows
 Guideline 2.3.7: a unique name, keywords that describe the app, no trademarked terms or popular app names packed into metadata, 30 characters. Every phrase in the run answered within the same minute ("tillwise" returned no app while "meal planner" answered at 18:58), so the empty answer counts as checked. **USPTO was not searched: the search needs a browser and is blocked from this machine (#46 is open on it).** Names are proposals (Commandment 51).
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 3: 5. Names, checked &lt;span class=&quot;nw&quot;&gt;2026-10-24&lt;/span&gt; (tools/appsearch.py…, scrolls sideways" style="--tw:1146px" markdown="1">
 
 | Candidate | Store answers to the phrase (top rows) | Exact name taken? | .app | .com |
@@ -102,7 +113,7 @@ Guideline 2.3.7: a unique name, keywords that describe the app, no trademarked t
 
 ## 6. <span title="Whether we may and can build it: our rules and banned areas, and a first version Idris can finish by Day 22. A subject off the Investors&#x27; list is noted, not dropped.">Fit</span> with Commandments 6-10 and App Review
 
-- **Commandment 7, the line this <span title="One product idea inside a lane. C1 is the lane&#x27;s first idea.">concept</span> lives next to.** No screen, listing, keyword or name makes a nutrition, diet, calorie, weight or health claim, and the app takes no diet, allergen or medical input (the ruling; H185 K185-E1, E2). Planning dinners from the user's own recipes, packs and prices is a shopping job, not advice about what to eat. The importer discards the schema.org `nutrition` and `suitableForDiet` fields and never stores or shows them (K185-E4). Allergen filtering stays out of v1 for the same reason. Scripted check at commit: `python3 tools/fit_words.py pitches/PITCH-16.md pitches/PITCH-16-mockups/draw.py pitches/PITCH-16-mockups/README.md`; the only hits are the exclusion sentences in this section, the count is in the board note, and Maren's re-read (read e) may add words.
+- **Commandment 7, the line this <span title="One product idea inside a lane. C1 is the lane&#x27;s first idea.">concept</span> lives next to.** No screen, listing, keyword or name makes a nutrition, diet, calorie, weight or health claim, and the app takes no diet, allergen or medical input (the ruling; <a href="../documents/hunt/h185.html">H185</a> K185-E1, E2). Planning dinners from the user's own recipes, packs and prices is a shopping job, not advice about what to eat. The importer discards the schema.org `nutrition` and `suitableForDiet` fields and never stores or shows them (K185-E4). Allergen filtering stays out of v1 for the same reason. Scripted check at commit: <code>python3 tools/fit_words.py <a href="pitch-16.html">PITCH-16</a> pitches/PITCH-16-mockups/draw.py pitches/PITCH-16-mockups/README.md</code>; the only hits are the exclusion sentences in this section, the count is in the board note, and Maren's re-read (read e) may add words.
 - **Prices (K185-E3).** Every price comes from the user's receipts or typing. No retailer site, API, price feed, loyalty account or delivery service is read, now or in the roadmap. The mockups' prices are typed in `draw.py` and are not any store's.
 - **Recipe import (K185-E4).** Pasted text, or the JSON-LD of a page the user opens and shares to the app through the share sheet. The app never crawls or fetches pages on a schedule. Whether reading a shared page's JSON-LD sits within a recipe site's terms is a question for counsel: an Investor item under Upcoming needs (G7), not a kill and not a clear.
 - **Receipts (K185-E5).** Photos and their text stay on the phone; nothing is uploaded; no account. Real receipts for testing after membership are the Investors' to approve and must carry no personal details into the repo.
@@ -115,11 +126,12 @@ Guideline 2.3.7: a unique name, keywords that describe the app, no trademarked t
 Idris's read (d) lands first and fixes the engineer-days per part; the dates below are my plan from the ruling's v1 slice and move with his numbers, not the other way round.
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 4: 7. Build plan (Day N = &lt;span class=&quot;nw&quot;&gt;2026-10-21&lt;/span&gt; + N; Idris builds…, scrolls sideways" style="--tw:526px" markdown="1">
 
 | Days | Dates | What |
 |---|---|---|
-| 4-5 | 10-25 to 10-26 | Read (d): parser on 300 generated lines, unit table with its licence, exact optimiser against greedy on 100 seeded weeks, Vision on 20 code-rendered receipts. Spec and screens drafted from the mockups. Reads (a), (b), (c) first Paprika read land; Odalys applies H185 (section 13). |
+| 4-5 | 10-25 to 10-26 | Read (d): parser on 300 generated lines, unit table with its licence, exact optimiser against greedy on 100 seeded weeks, Vision on 20 code-rendered receipts. Spec and screens drafted from the mockups. Reads (a), (b), (c) first Paprika read land; Odalys applies <a href="../documents/hunt/h185.html">H185</a> (section 13). |
 | 6-9 | 10-27 to 10-30 | Xcode project. Paste and share-sheet import, parser, unit table, manual pack table (typed packs and prices), StoreKit configuration. Membership due Day 7 (10-28); Paprika's second read. |
 | 10-13 | 10-31 to 11-03 | The optimiser (people, nights, spoil window, carry-forward), the week screen, the list in whole packs with the leftover line. Paid Apps Agreement, tax and banking due Day 12 (11-02). |
 | 14-17 | 11-04 to 11-07 | Receipts as the assisted confirm-each-line step (Vision on the Simulator from rendered receipts; a real device and approved receipts after membership). Tests: parser forms, optimiser planted zero-waste weeks, receipt abbreviations. |
@@ -134,10 +146,10 @@ Idris's read (d) lands first and fixes the engineer-days per part; the dates bel
 
 ## 8. Honest weaknesses
 
-- **The rubric is unvalidated.** H140's backtest failed its pre-registered pass rule (`research/hunt/H140-verdict.md`, section 2): the rubric's letters have not been shown to separate earners from non-earners. B is a judgment under that rubric, not a measurement.
+- **The rubric is unvalidated.** H140's backtest failed its pre-registered pass rule (<code>H140-verdict</code>, section 2): the rubric's letters have not been shown to separate earners from non-earners. B is a judgment under that rubric, not a measurement.
 - **Need is thin by count.** Pack size: 4 of 442 low reviews. Own recipes: 3 of 442. The loud ask is the price form, and a cheaper price form is not a feature a screenshot sells. Read (b)'s forum sample will say whether anyone outside app reviews writes about the problem; the rule for what the pitch may then say is already written (Q185-1, Q185-2).
 - **Every Day 30 number is a lifetime average on someone else's shelf.** No paid-up-front newcomer earns on Food and Drink this quarter. The paid route's own test is Paprika's measured four-day rate (K185-C4); if that line reaches D, the route becomes the unlock and Day 30 is read there alone.
-- **Receipts are provisional.** Code-rendered receipts flatter Vision, as H176 said of scans. Real receipts wait for a device after membership (due <span class="nw">2026-10-28</span>) and for receipts the Investors approve. v1 ships with the typed pack table as the floor.
+- **Receipts are provisional.** Code-rendered receipts flatter Vision, as <a href="../documents/hunt/h176.html">H176</a> said of scans. Real receipts wait for a device after membership (due <span class="nw">2026-10-28</span>) and for receipts the Investors approve. v1 ships with the typed pack table as the floor.
 - **The exact optimiser may not beat the greedy sort by much.** In the mockup's own generated instance (one week, 56 candidates) the exact week's objective is $68.12 against the greedy sort's $69.40: a $1.28 difference. Read (d)'s 100 seeded weeks decide (pass: median leftover cut 25 percent or more, exact better in 70 percent or more); one instance proves nothing.
 - **Many meal-planner buyers come to the shelf for reasons Commandment 7 keeps us out of.** Read (b) codes those rows H and sets them aside; this app never serves them, which narrows the buyer.
 - **Cooking is not on the Investors' subject list.** Noted in the ruling, not killed; the nearest listed subject is organisation.
@@ -164,14 +176,15 @@ Membership pending (due Day 7, <span class="nw">2026-10-28</span>); Paid Apps Ag
 
 ## 12. Against the standing pitches
 
-By the cells as ruled: Pitch 13 is B- (H148 C1 after H176); Pitch 14 holds B (H163 C1: Novelty B-, Depth B-); Pitch 15 is B (H172 C2: Novelty B-, Depth B-, <span class="nw">Day 30 C</span>, Day 90 B-). Pitch 16 is B with Novelty B-, Depth B, <span class="nw">Day 30 B-</span>, Day 90 B: the strongest Depth and Day 30 cells among the Bs, on the thinnest counted need (4 of 442) and on a Day 30 cell set at the middle line of unmeasured numbers. It is the only one whose buyer is a current wave (50 ratings a day on the leader), and the only one whose closest kill is a single description change by a two-rating app. The ordering is the rubric's, and the rubric is unvalidated.
+By the cells as ruled: Pitch 13 is B- (<a href="../documents/hunt/h148.html">H148</a> C1 after <a href="../documents/hunt/h176.html">H176</a>); Pitch 14 holds B (<a href="../documents/hunt/h163.html">H163</a> C1: Novelty B-, Depth B-); Pitch 15 is B (<a href="../documents/hunt/h172.html">H172</a> C2: Novelty B-, Depth B-, <span class="nw">Day 30 C</span>, Day 90 B-). Pitch 16 is B with Novelty B-, Depth B, <span class="nw">Day 30 B-</span>, Day 90 B: the strongest Depth and Day 30 cells among the Bs, on the thinnest counted need (4 of 442) and on a Day 30 cell set at the middle line of unmeasured numbers. It is the only one whose buyer is a current wave (50 ratings a day on the leader), and the only one whose closest kill is a single description change by a two-rating app. The ordering is the rubric's, and the rubric is unvalidated.
 
-## 13. H185 checks (posted open; applied <span class="nw">2026-10-24</span> 19:26 ET in section 15; rules written before any read, `research/hunt/H185.md`, 2b4078dd)
+## 13. <a href="../documents/hunt/h185.html">H185</a> checks (posted open; applied <span class="nw">2026-10-24</span> 19:26 ET in section 15; rules written before any read, <a href="../documents/hunt/h185.html">H185</a>, 2b4078dd)
 
-Posting is allowed by H185 R4: after the rules commit, with every check printed open. Odalys applies each as it lands (G9: neither the author nor the rules' writer applies), with a dated "Stress test" block here and a dated comment on the issue. If the applied letter falls below the posted B, the issue gets a dated correction in its first line. R1: no read lifts the letter; B is the ceiling of this round.
+Posting is allowed by <a href="../documents/hunt/h185.html">H185</a> R4: after the rules commit, with every check printed open. Odalys applies each as it lands (G9: neither the author nor the rules' writer applies), with a dated "Stress test" block here and a dated comment on the issue. If the applied letter falls below the posted B, the issue gets a dated correction in its first line. R1: no read lifts the letter; B is the ceiling of this round.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 13. H185 checks (posted open; applied &lt;span class=&quot;nw&quot;&gt;2026-10-24&lt;/span&gt; 19:26…, scrolls sideways" style="--tw:1381px" markdown="1">
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 13. H185 checks (posted open; applied…, scrolls sideways" style="--tw:1381px" markdown="1">
 
 | Code | Check | Move if met | Read | Status |
 |---|---|---|---|---|
@@ -181,7 +194,7 @@ Posting is allowed by H185 R4: after the rules commit, with every check printed 
 | K185-A4 | Under "budget meal planner" 10 or more of the top 25 since <span class="nw">2025-10-24</span> and none paid with over 100 ratings (or the same under "food waste meal planner" if on-job) | Crowding fails, cap C+ | a | open |
 | Q185-1..3 | Forum and review counts for pack waste and till total (recorded, no letter move; they fix what section 2 may say) | wording only | b (Wrenna, Odalys re-code) | open |
 | Q185-4 | Any app a post names as planning by package is coded by its own description under A1..A3 | as A1..A3 | b, a | open |
-| K185-C1 | H173 no verdict at writing; a later applied verdict re-runs the Day 30 lines | C3 read on the re-run | c (Maren) | open |
+| K185-C1 | <a href="../documents/hunt/h173.html">H173</a> no verdict at writing; a later applied verdict re-runs the Day 30 lines | C3 read on the re-run | c (Maren) | open |
 | K185-C2 | Paprika under $4.99 in us at either read | lines re-run at that price, C3 read | c | open |
 | K185-C3 | After any re-run, the middle Day 30 midpoint at D | <span class="nw">Day 30 D</span>, cap B- | c | open |
 | K185-C4 | Paprika's measured four-day rate gives D on the paid route | route becomes the unlock; D there is cap B- | c, second read on or after <span class="nw">2026-10-28</span> | open |
@@ -189,7 +202,7 @@ Posting is allowed by H185 R4: after the rules commit, with every check printed 
 | K185-D2 | Two or more parts fail | Depth C+, Overall B- | d | open |
 | K185-D3 | Optimiser fails and greedy would ship, receipts failed or unsettled | D2 applies | d | open |
 | K185-E1 | A Commandment 7 word outside the exclusion sentences | removed before posting; Fit kill if unavoidable | my scripted run at commit; e (Maren) | open (one stray hit at the first commit, in this table's own E2 row, reworded; see section 14; Maren's re-read pending) |
-| K185-E2 | An input of the kind the rule bars on any screen, setting or import field (the rule's own words are in H185 section 9) | out of v1; Fit kill if the plan needs it | e | open |
+| K185-E2 | An input of the kind the rule bars on any screen, setting or import field (the rule's own words are in <a href="../documents/hunt/h185.html">H185</a> section 9) | out of v1; Fit kill if the plan needs it | e | open |
 | K185-E3 | A retailer site, API, feed, loyalty account or delivery service as a price source | removed; Fit kill if the plan needs it | e, d | open |
 | K185-E4, E5 | Import is paste or shared-page JSON-LD only, the two barred fields dropped; receipts stay on the phone; the terms question and real receipts are Investor items | listed under needs, no move | e | open |
 | R1 | No read lifts the letter | ceiling B | all | standing |
@@ -201,12 +214,13 @@ Posting is allowed by H185 R4: after the rules commit, with every check printed 
 
 - **<span class="nw">2026-10-24</span> 19:09 ET (Ines).** The scripted K185-E1 check at the first commit (4c6a203c) printed 14 hits: 11 in section 6's exclusion sentences, allowed by the rule, and 3 on one line outside sections 6 and 8: section 13's own K185-E2 row, which quoted the rule's words. Under E1 as written that row had to be reworded before posting, and I posted with it in place and wrote "0 stray hits" in the E1 row and in the board note. Both were wrong by that one row. The row is reworded in this commit, the E1 row now says so, and the same words in `research/hunt/checks.tsv` (outside E1's scope, changed for consistency) are reworded. No letter moves; Maren's read (e) still applies to the posted text.
 
-## 15. Stress test, <span class="nw">2026-10-24</span> 19:26 ET (Odalys, H185 applied)
+## 15. Stress test, <span class="nw">2026-10-24</span> 19:26 ET (Odalys, <a href="../documents/hunt/h185.html">H185</a> applied)
 
-Applied by someone who wrote neither H177 nor H185 (G9). Moves run from the chair ruling (Novelty B-, Depth B, Overall B). Counts, files and the reading refused on each line: research/hunt/H185.md, "H185 applied" (c02237a7); ruling row: research/hunt/rulings-v2.md "H185 applied (Odalys, 19:26): H177 C1".
+Applied by someone who wrote neither <a href="../documents/hunt/h177.html">H177</a> nor <a href="../documents/hunt/h185.html">H185</a> (G9). Moves run from the chair ruling (Novelty B-, Depth B, Overall B). Counts, files and the reading refused on each line: <a href="../documents/hunt/h185.html">H185</a>, "<a href="../documents/hunt/h185.html">H185</a> applied" (c02237a7); ruling row: <a href="../documents/#v2-rulings">rulings-v2</a> "<a href="../documents/hunt/h185.html">H185</a> applied (Odalys, 19:26): <a href="../documents/hunt/h177.html">H177</a> C1".
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 15. Stress test, &lt;span class=&quot;nw&quot;&gt;2026-10-24&lt;/span&gt; 19:26 ET (Odalys, H185…, scrolls sideways" style="--tw:776px" markdown="1">
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 15. Stress test, &lt;span class=&quot;nw&quot;&gt;2026-10-24&lt;/span&gt; 19:26 ET (Odalys, &lt;a…, scrolls sideways" style="--tw:776px" markdown="1">
 
 | Code | Result | Count |
 |---|---|---|
@@ -216,9 +230,9 @@ Applied by someone who wrote neither H177 nor H185 (G9). Moves run from the chai
 | K185-A4 | not met | "budget meal planner" 13 of 25 new, but 6 new paid apps have over 100 ratings (TapCook 4,983, mise 3,681); "food waste meal planner" 10 of 25 new, 3 paid over 100 |
 | G4 (read a) | codes count | blind re-code agrees on the one pack-aware row and on 10 of 10 sampled (seed 185); 9 rows outside the sample differ on own recipes only |
 | Q185-1, Q185-2 | neither met | forum pack waste and pack asks: 7 of 76 posts (9.2%) with the set-aside rows kept, 7 of 54 (13.0%) without; the lower applies; re-code agreement 7 of 10 (8 needed). This section prints the count; section 2's wording does not change |
-| Q185-3 | recorded | H177 plus read b, 494 review rows: pack size 5, store price wrong or till total 10, own recipes 3; price form 12 in read b |
+| Q185-3 | recorded | <a href="../documents/hunt/h177.html">H177</a> plus read b, 494 review rows: pack size 5, store price wrong or till total 10, own recipes 3; price form 12 in read b |
 | Q185-4 | not met | PlateJoy is named for shared ingredients; it is in no top 10 and is not a new entrant, so A1 to A3 cannot apply |
-| K185-C1 | not met | no H173 verdict applied |
+| K185-C1 | not met | no <a href="../documents/hunt/h173.html">H173</a> verdict applied |
 | K185-C2 | open until <span class="nw">2026-10-28</span> | Paprika read 1: $4.99 (not under); read 2 due on or after <span class="nw">2026-10-28</span> |
 | K185-C3 | open | no re-run yet; today's middle midpoint 0.85%, worst end 8.5%, not D |
 | K185-C4 | open until <span class="nw">2026-10-28</span> (closest kill left) | needs Paprika read 2; caps at B-, so it cannot lower the letter further |
@@ -238,9 +252,10 @@ Result: **B-** (ladder: Novelty B-, Depth C+ does not step up; no cap binds). Th
 
 ## 16. Stress test, <span class="nw">2026-10-24</span> 19:52 ET (Odalys, <span title="A numbered batch of planned work, with its own plan file.">refill</span> 23 applied)
 
-Applied by someone who wrote neither H177 nor the rules (G9). Rules: `research/hunt/refill-23.md` sections 5 and 6; one line per code with its count in section 8 there. Reads: Maren's pack-size read (`research/hunt/H201.md`, 9cb6d8f4) and Idris's web and desktop read (`research/hunt/H202.md`, ff521c0c). Section 5 cannot move a letter, and section 6 moved none. **Result: the letter stays B-.**
+Applied by someone who wrote neither <a href="../documents/hunt/h177.html">H177</a> nor the rules (G9). Rules: <code>refill-23</code> sections 5 and 6; one line per code with its count in section 8 there. Reads: Maren's pack-size read (<a href="../documents/hunt/h201.html">H201</a>, 9cb6d8f4) and Idris's web and desktop read (<a href="../documents/hunt/h202.html">H202</a>, ff521c0c). Section 5 cannot move a letter, and section 6 moved none. **Result: the letter stays B-.**
 
 
+<p class="meta tbl-cue" aria-hidden="true">This table scrolls sideways.</p>
 <div class="tbl" role="region" tabindex="0" aria-label="Table 7: 16. Stress test, &lt;span class=&quot;nw&quot;&gt;2026-10-24&lt;/span&gt; 19:52 ET (Odalys, refill 23…, scrolls sideways" style="--tw:874px" markdown="1">
 
 | Code | Result | Count | Move |

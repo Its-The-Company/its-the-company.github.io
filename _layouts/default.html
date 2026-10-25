@@ -69,7 +69,7 @@ small,.meta{font-size:var(--fs-0);color:var(--muted)}
 .vh,.facts thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .skip{position:absolute;left:var(--s2);top:-60px;z-index:20;padding:var(--s2) var(--s3);border-radius:var(--r-s);background:var(--bg);color:var(--ink)}.skip:focus{top:var(--s2)}
 .wrap,main,footer{max-width:var(--col);margin:0 auto;padding:0 var(--s4)}
-code{font-family:var(--mono);font-size:.92em;white-space:pre-wrap;overflow-wrap:anywhere}
+code{font-family:var(--mono);font-size:inherit;white-space:pre-wrap;overflow-wrap:anywhere}
 table{border-collapse:collapse;width:100%;font-size:var(--fs-1);margin:var(--s3) 0}
 th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
 /* A wide table in its own scroll box (documents.py wrap_tables sets --tw, the sum of its columns' widths): the
@@ -334,6 +334,12 @@ section.now h3{margin:0 0 var(--s1)}
 .public h2{margin:var(--s5) 0 var(--s3);font-size:var(--fs-3)}.public h2:first-child,.standing h2:first-child{margin-top:0}
 .list{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
 .list li{display:flex;flex-wrap:wrap;gap:var(--s1) var(--s2);align-items:baseline}
+/* S28-6: each request its own block, and room before the line after the list */
+.list.requests{gap:0}.list.requests li{padding:var(--s2) 0;border-bottom:1px solid var(--line)}.list.requests li:first-child{border-top:1px solid var(--line)}.list.requests+p{margin-top:var(--s3)}
+/* S28-1: dates and 'Day 30 C-' stay on one line */
+.nw{white-space:nowrap}
+/* S28-5: footer and back links 44 px tall on a phone; text where it was */
+@media (max-width:440px){footer{row-gap:0}footer a,.crumbs a{display:inline-flex;align-items:center;min-height:44px}}
 .public .cards{grid-template-columns:minmax(0,1fr)}
 .links{margin:var(--s4) 0 0}.links a{color:inherit}
 

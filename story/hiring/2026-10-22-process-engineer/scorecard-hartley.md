@@ -22,7 +22,7 @@ Round `2026-10-22-process-engineer`. Scored by Ines immediately after the interv
 
 Average: 3.67
 
-Overall note: Hartley is the strongest on what drives agent cost and the right person to build the Day 4 baseline and the router. The risk is the one he named twice: he drifts to the interesting optimization. If hired, every self-assigned task needs a written expected saving and a stop date, and blockers come before cost in his order of work. His ask of 9,500 is the top of the offer range, which the brief reserves for an exceptional interview; this one was strong, not exceptional. I have not decided.
+<span title="The final letter, after the caps.">Overall</span> note: Hartley is the strongest on what drives agent cost and the right person to build the Day 4 baseline and the router. The risk is the one he named twice: he drifts to the interesting optimization. If hired, every self-assigned task needs a written expected saving and a stop date, and blockers come before cost in his order of work. His ask of 9,500 is the top of the offer range, which the brief reserves for an exceptional interview; this one was strong, not exceptional. I have not decided.
 
 Ines
 {% endraw %}

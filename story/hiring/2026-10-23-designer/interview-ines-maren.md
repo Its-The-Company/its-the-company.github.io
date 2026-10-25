@@ -13,7 +13,7 @@ Round `2026-10-23-designer`. Interviewer: Ines, CEO. Six fixed questions from th
 
 **Ines:** Question one. Show me a piece of visual work you made with code, and walk me through the code that draws it. Then one decision in that code you would change now.
 
-**Maren:** The chart generator for the public-health newsletter. It reads a CSV, maps values to a fixed scale, and writes SVG by hand: axes, ticks, a legend, and a title with the same type tokens as the page. The part I would change is the tick logic. I put the tick count in a magic number per chart, so every new chart needed a human to pick it. Now I would derive it from the axis width and the label width, measured, not guessed. The tokens are the good part. Every colour in the file is a token name, not a hex value, so a dark mode is a second block, not a second drawing.
+**Maren:** The chart <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">generator</span> for the public-health newsletter. It reads a CSV, maps values to a fixed scale, and writes SVG by hand: axes, ticks, a legend, and a title with the same type tokens as the page. The part I would change is the tick logic. I put the tick count in a magic number per chart, so every new chart needed a human to pick it. Now I would derive it from the axis width and the label width, measured, not guessed. The tokens are the good part. Every colour in the file is a token name, not a hex value, so a dark mode is a second block, not a second drawing.
 
 **Ines:** Question two. Tell me about an App Store page, a paywall, or an onboarding flow you designed. What did it have to make the user do, and how did you know whether it worked?
 
@@ -52,7 +52,7 @@ Scored by Ines immediately after the interview, from this transcript only. I hav
 
 Average: 4.00
 
-Overall note: Strongest of the three on the site (probation part a) and on the token system that would carry into the app. Her gap is the one the brief names: no paywall or App Store page work, so the app half of the probation (b) would lean on Osric. A strong candidate for this role, not an exceptional one on App Store work.
+<span title="The final letter, after the caps.">Overall</span> note: Strongest of the three on the site (probation part a) and on the token system that would carry into the app. Her gap is the one the brief names: no paywall or App Store page work, so the app half of the probation (b) would lean on Osric. A strong candidate for this role, not an exceptional one on App Store work.
 
 Ines
 {% endraw %}

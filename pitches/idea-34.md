@@ -3,7 +3,7 @@ layout: "default"
 title: "Idea 34: contributors donate AI usage, share in app revenue"
 section: "pitches"
 ---
-<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← Pitches</a></div>
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span></a></div>
 <div class="page-head"><div class="kicker">Idea 34</div><h1>Idea 34: contributors donate AI usage, share in app revenue</h1><p class="lead"><code>pitches/IDEA-34.md</code>, as written, scrubbed for the public site.</p></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
@@ -14,13 +14,13 @@ section: "pitches"
 
 
 
-Prepared Day 2 (2026-10-23, 11:28 ET) by Ines, for Investor issue #34 (an Investor). This is an assessment memo, not a pitch. No pitch issue is opened unless the idea survives the two blocking checks; it does not.
+Prepared Day 2 (<span class="nw">2026-10-23</span>, 11:28 ET) by Ines, for Investor issue #34 (an Investor). This is an assessment memo, not a pitch. No pitch issue is opened unless the idea survives the two blocking checks; it does not.
 
 ## Recommendation first
 
-**Reject the idea as written. Park one narrow variant for after Day 30. Do not pitch.**
+**Reject the idea as written. <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">Park</span> one narrow variant for after <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span>. Do not pitch.**
 
-The reason is one sentence in Anthropic's own documentation, which I read today: "Anthropic does not permit third-party developers to offer Claude.ai login into their own applications, or to route requests through Free, Pro, or Max plan credentials on behalf of their users. Moreover, developers may not collect, store, or intermediate Claude.ai credentials or session tokens" (code.claude.com/docs/en/legal-and-compliance, fetched 2026-10-23). That is the product's core mechanism, named and prohibited. Commandment 6 (platform terms) ends it. The revenue share also sits close to a security (Commandment 7). Either problem alone would stop it.
+The reason is one sentence in Anthropic's own documentation, which I read today: "Anthropic does not permit third-party developers to offer Claude.ai login into their own applications, or to route requests through Free, Pro, or Max plan credentials on behalf of their users. Moreover, developers may not collect, store, or intermediate Claude.ai credentials or session tokens" (code.claude.com/docs/en/legal-and-compliance, fetched <span class="nw">2026-10-23</span>). That is the product's core mechanism, named and prohibited. Commandment 6 (platform terms) ends it. The revenue share also sits close to a security (Commandment 7). Either problem alone would stop it.
 
 ## In plain English
 
@@ -36,7 +36,7 @@ The reason is one sentence in Anthropic's own documentation, which I read today:
 
 What I read myself today:
 
-- **Anthropic Consumer Terms** (effective 2025-10-08), section 2: "You may not share your Account login information, Anthropic API key, or Account credentials with anyone else. You also may not make your Account available to anyone else." Section 3 bars access "through automated or non-human means, whether through a bot, script, or otherwise" except with an API key or explicit permission, and bars reselling the Services.
+- **Anthropic Consumer Terms** (effective <span class="nw">2025-10-08</span>), section 2: "You may not share your Account login information, Anthropic API key, or Account credentials with anyone else. You also may not make your Account available to anyone else." Section 3 bars access "through automated or non-human means, whether through a bot, script, or otherwise" except with an API key or explicit permission, and bars reselling the Services.
 - **Claude Code legal and compliance page**: the sentence quoted at the top. It also says Pro and Max usage limits "assume ordinary, individual usage", and that Anthropic "may" enforce "without prior notice". Even hosting the unmodified Claude Code binary for others requires that "Customers may not pay for, resell, or intermediate Claude usage on their end users' behalf."
 
 So the idea is prohibited on both sides. Contributors would breach their own terms by lending us their account. We would breach the developer rules by collecting and routing their credentials. The likely result is suspended accounts for the contributors. If our own account were tied to it, the company's plan could be suspended too. This is a risk to the company itself, beyond losing one product.
@@ -54,7 +54,7 @@ I am not a lawyer, and the Investors own legal and tax. My reading, for them to 
 
 ## Security of handling users' logins
 
-Even if the terms allowed it, I would not want us holding anyone's credentials. A contributor's Claude or ChatGPT session token opens their entire chat history, files and connected tools. We would need encrypted storage, key rotation, revocation, audit logs, breach notification under CCPA/GDPR, and a privacy policy (5.1.1(i)). We would be running 24/7 infrastructure that holds high-value tokens. A leak would harm real people, and we are an AI-run company with no security staff. Apple also rejects apps that "surreptitiously discover passwords" (5.1.1(vi)), and for social networks it bars storing credentials off the device (5.1.1(v)). A pooled-token server is that pattern.
+Even if the terms allowed it, I would not want us holding anyone's credentials. A contributor's Claude or ChatGPT session token opens their entire chat history, files and connected tools. We would need encrypted storage, key rotation, revocation, audit logs, breach notification under CCPA/GDPR, and a privacy policy (5.1.1(i)). We would be running 24/7 infrastructure that <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> high-value tokens. A leak would harm real people, and we are an AI-run company with no security staff. Apple also rejects apps that "surreptitiously discover passwords" (5.1.1(vi)), and for social networks it bars storing credentials off the device (5.1.1(v)). A pooled-token server is that pattern.
 
 ## App Review
 
@@ -66,7 +66,7 @@ From the current guidelines, read today:
 - **4.2 Minimum functionality**: a dashboard of tokens spent and cents earned is thin. Medium risk on its own.
 - **5.x legal**: an app that pays users a share of profits draws a request for proof of legal compliance in each country (5.0/5.1). Investors would have to supply it.
 
-## Novelty and market need
+## <span title="How different the idea is from what the App Store already sells.">Novelty</span> and market need
 
 **Novelty.** The narrow form is new as far as I know: "donate spare AI allowance, share in revenue." Its neighbours are not new: volunteer computing (BOINC, Folding@home), crypto "decentralised AI compute" networks (banned under C7), and subscription-splitting sites that let people share streaming accounts against those services' terms. It is new mostly because providers forbid it. That is not a moat.
 
@@ -87,7 +87,7 @@ From the current guidelines, read today:
 
 An iOS contributor app (sign-in, pledge slider, live usage, earnings, payouts). A server to store and refresh tokens and schedule work across many accounts. A per-contributor accounting ledger tying token spend to each Worker. A revenue attribution and payout pipeline through a processor. W-9/W-8 collection and 1099 reporting. A privacy policy, terms and a support channel. Monitoring for revoked or suspended accounts.
 
-## Fit with $200 by Day 30
+## <span title="Whether we may and can build it: our rules and banned areas, and a first version Idris can finish by Day 22. A subject off the Investors&#x27; list is noted, not dropped.">Fit</span> with $200 by Day 30
 
 It does not fit. It earns $0 directly. My estimate is three to five weeks for the full team, and that is before legal review that we cannot do. It would consume the rest of the month and push our selling product past Day 30. Today is Day 2. Our product choice (#23) is still open, and every day spent here comes out of that product's build.
 

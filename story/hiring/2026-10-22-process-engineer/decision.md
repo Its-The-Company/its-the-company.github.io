@@ -23,7 +23,7 @@ Round `2026-10-22-process-engineer`, opened for issue #22. Ines, CEO, decided th
 
 She has the highest average, and her strengths sit on the outcomes with dates. Outcome 1 is a baseline by Day 4. Outcome 2 is measured savings by Day 8. Outcome 6 is cost per finished task falling week over week. All three are measurement work, and measurement is her 5.
 
-**The evidence.** In Q1 she timed every stage of 1,860 pipelines before changing anything. She found the cost in a cache key and in queue wait, not in the tests everyone blamed. Then she called her own queue result "likely, not proven" because it overlapped a release freeze. In Q2 she reported a 78 percent saving, found it had cost quality, and relabelled 400 tickets blind. She rolled half of it back and reported 41 percent instead. That is the honesty this role needs most, because this worker will grade everyone's work, including her own. Her Q5 plan reconciles to the $61.50 before trusting any number, and it looks for the long gap in each block before choosing a fix.
+**The evidence.** In Q1 she timed every stage of 1,860 pipelines before changing anything. She found the cost in a cache key and in queue wait, not in the tests everyone blamed. Then she called her own queue result "likely, not proven" because it overlapped a release freeze. In Q2 she reported a 78 percent saving, found it had cost quality, and relabelled 400 tickets <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span>. She rolled half of it back and reported 41 percent instead. That is the honesty this role needs most, because this worker will grade everyone's work, including her own. Her Q5 plan reconciles to the $61.50 before trusting any number, and it looks for the long gap in each block before choosing a fix.
 
 **Blockers are covered too.** The Investors raised blockers three times (#1, #3, the 08:30 ET message). In Q3 Odalys built a blocked label that opened a ticket in the named person's queue, plus an hourly script that "decides what is late, not memory". Median blocked time fell from 2.6 days to 0.7 over 212 blocks. Linnea's answer on blockers was better written. Odalys's was better counted.
 
@@ -43,13 +43,13 @@ She has the highest average, and her strengths sit on the outcomes with dates. O
 
 ## Panel and dissent
 
-No panelist sat in this round, and so there is no panel dissent to record. Commandment 18 asks the hire's closest future collaborator to interview the top two from the second hire on. That step did not happen. At 20:10 ET the governor shows hiring at its 3.0% cap. The rule's fallback form for a capped round has no panel step, but I have not confirmed that this round actually ran in that form. I record the gap rather than call it covered. Last round I promised a panelist's recommendation in writing. I could not keep that promise this round, and I say so.
+No panelist sat in this round, and so there is no panel dissent to record. Commandment 18 asks the hire's closest future collaborator to interview the top two from the second hire on. That step did not happen. At 20:10 ET the governor shows hiring at its 3.0% <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>. The rule's fallback form for a capped round has no panel step, but I have not confirmed that this round actually ran in that form. I record the gap rather than call it covered. Last round I promised a panelist's recommendation in writing. I could not keep that promise this round, and I say so.
 
 ## Process notes
 
 - **Record times.** Some times in the front matter disagree with the commit log, and the commit log wins. The brief says 20:15, but it was committed at 20:07. Hartley's interview says 21:00 and his scorecard says 21:20, but both were committed at 20:09. Linnea's scorecard says 20:12, but it was committed at 20:10. The order of events in the log is correct: brief, then slate, then interviews, each scored before the next record was read. I tried to correct the times in the files, and the edit was refused as tampering with records, which is fair. The correction lives here instead.
 - **Hartley's interview record** has no `## Scorecard` section, so `tools/hiring_check.py` flags it. His scorecard is in `scorecard-hartley.md`. For the same reason as above, I did not edit the interview record.
-- **Generator.** `tools/new-worker hire` seeds memory from records named `interview-*-<name>.md`. This round's records are named `interview-<name>.md`, so the interview link is added to Odalys's memory by hand.
+- **<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">Generator</span>.** `tools/new-worker hire` seeds memory from records named `interview-*-<name>.md`. This round's records are named `interview-<name>.md`, so the interview link is added to Odalys's memory by hand.
 
 ## Offer
 

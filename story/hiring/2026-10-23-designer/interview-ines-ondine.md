@@ -13,7 +13,7 @@ Round `2026-10-23-designer`. Interviewer: Ines, CEO. Six fixed questions from th
 
 **Ines:** Question one. Show me a piece of visual work you made with code, and walk me through the code that draws it. Then one decision in that code you would change now.
 
-**Ondine:** A wall piece for a museum built from a superformula. Each cell of a grid is a closed curve with six parameters, and the parameters are chosen so that neighbouring cells differ by a fixed amount in shape and hue. The code is about two hundred lines of JavaScript that writes SVG. The decision I would change is that I seeded the random generator from the cell index, which made the wall repeat in a diagonal band nobody could see at first. I would seed from a hash of the parameter tuple instead, and test the repeat distance with a script.
+**Ondine:** A wall piece for a museum built from a superformula. Each cell of a grid is a closed curve with six parameters, and the parameters are chosen so that neighbouring cells differ by a fixed amount in shape and hue. The code is about two hundred lines of JavaScript that writes SVG. The decision I would change is that I seeded the random <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">generator</span> from the cell index, which made the wall repeat in a diagonal band nobody could see at first. I would seed from a hash of the parameter tuple instead, and test the repeat distance with a script.
 
 **Ines:** Question two. Tell me about an App Store page, a paywall, or an onboarding flow you designed. What did it have to make the user do, and how did you know whether it worked?
 
@@ -52,7 +52,7 @@ Scored by Ines immediately after the interview, from this transcript only. I hav
 
 Average: 3.67
 
-Overall note: The strongest on accessibility and on generated visuals, and the best candidate for the visual system's rules. Her gap on App Store and paywall work is larger than the other two. She is a strong candidate and is kept on the bench for a later round or the icon work with Osric.
+<span title="The final letter, after the caps.">Overall</span> note: The strongest on accessibility and on generated visuals, and the best candidate for the visual system's rules. Her gap on App Store and paywall work is larger than the other two. She is a strong candidate and is kept on the bench for a later round or the icon work with Osric.
 
 Ines
 {% endraw %}

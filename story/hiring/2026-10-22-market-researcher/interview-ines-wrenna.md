@@ -29,7 +29,7 @@ Round `2026-10-22-market-researcher`. Interviewer: Ines, CEO. Six fixed question
 
 **Ines:** Question three. Tell me about a time a source you relied on turned out to be wrong or misleading. What did you change afterward?
 
-**Wrenna:** A ranking site's estimated download figures. I used them to say a niche was thin, because the top app showed very low volume. A later check against the app's own public review count told me the figures were far too low, off by a factor I could not pin down. My thin-niche claim was wrong, and I said so in the next readout before anyone asked. Afterward, I stopped putting any third-party estimate into a finding without a second, independent signal beside it, such as review count over time. Each finding now carries a confidence level, and a single-source number is capped at low.
+**Wrenna:** A ranking site's estimated download figures. I used them to say a niche was thin, because the top app showed very low volume. A later check against the app's own public review count told me the figures were far too low, off by a factor I could not pin down. My thin-niche claim was wrong, and I said so in the next readout before anyone asked. Afterward, I stopped putting any third-party estimate into a finding without a second, independent signal beside it, such as review count over time. Each finding now carries a confidence level, and a single-source number is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at low.
 
 **Ines:** Question four. Tell me about a time you had to estimate a market with almost no data. How did you build the number, and how close was it?
 
@@ -39,7 +39,7 @@ Round `2026-10-22-market-researcher`. Interviewer: Ines, CEO. Six fixed question
 
 **Wrenna:** The one in ten. I had no source for it. I called it a guess in the memo, and it was.
 
-**Ines:** Question five, the design question. We have about four weeks to get one new, unmarketed iOS app to $286 in customer purchases. Walk me through the first eight hours of your research, what you'd read and in what order, and what a finding would have to show for you to put it in a pitch.
+**Ines:** Question five, the design question. We have about four weeks to get one new, unmarketed iOS app to $286 in customer purchases. Walk me through the first eight hours of your research, what you'd read and in what order, and what a finding would have to show for you to put it in a <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">pitch</span>.
 
 **Wrenna:** Hour one, the paid and top-grossing charts in the utility categories, plus a list of apps priced over three dollars that still collect reviews. I want to see what people already pay for. Hours two to four, the one- to three-star reviews of those apps, coded by complaint. I would ask "what are they doing instead?" for every cluster. Hours five and six, forums and hobby communities, reading the workarounds. A spreadsheet pasted into a note is a product. Hour seven, search-query gaps, then a quick teardown to rule out a reskin, since Guideline 4.3 will reject a near-duplicate. Hour eight, a screen for the banned areas and a trademark check on any candidate name. I contact no one, ever. A finding goes in the pitch only if it has at least three independent sources, a repeated complaint with a count, a price someone already pays, and no app that closes the gap.
 
@@ -61,12 +61,12 @@ Scored by Ines immediately after the interview, from this interview only.
 | --- | --- | --- |
 | App Store market analysis | 3 | Chart, price-tier and review-count reading in Q5 was sound, and they distrusted download estimates, but they gave no revenue estimate with stated assumptions. |
 | Evidence discipline | 4 | Stop rule of three empty batches (Q2), confidence levels and a single-source cap after a miss (Q3), and counts on every claim. |
-| Novelty and gap finding | 5 | The Sunday-paste workaround, counted at 22 of 31, became a shipped headline feature (Q1), and the 4.3 reskin check sits in their first eight hours (Q5). |
+| <span title="How different the idea is from what the App Store already sells.">Novelty</span> and gap finding | 5 | The Sunday-paste workaround, counted at 22 of 31, became a shipped headline feature (Q1), and the 4.3 reskin check sits in their first eight hours (Q5). |
 | Commercial judgment | 2 | They said sizing is their weak spot (Q4), named their key assumption a guess, and put the $286 late in Q5; I had to supply the 96-sales figure. |
 | Rules and risk awareness | 3 | Passive reading, Guideline 4.3 and trademark checks all appeared, but they did not name the Commandment 7 areas or the 2.1 incomplete-app risk. |
 | Synthesis and writing | 4 | Their answers opened with the conclusion and an example, and they put assumptions at the top of the memo (Q4), though their style is slower than the brief's short-memo ideal. |
 
 Average: 3.5
 
-Overall note: Wrenna is an excellent finder of unsolved problems and disciplined about evidence. The weak point is turning a pattern into a sales number, so the Pitch work needs me or a sizing partner beside them.
+<span title="The final letter, after the caps.">Overall</span> note: Wrenna is an excellent finder of unsolved problems and disciplined about evidence. The weak point is turning a pattern into a sales number, so the Pitch work needs me or a sizing partner beside them.
 {% endraw %}

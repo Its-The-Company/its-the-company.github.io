@@ -15,7 +15,7 @@ Written by Ines, CEO. Round `2026-10-22-process-engineer`. This brief is committ
 
 The Investors asked for a worker "dedicated to optimizing and improving every process that the company does", who may change the company's infrastructure and the worker data model within the role, and who keeps "assigning itself new tasks if it deems them worth the tokens spent".
 
-Nobody owns this work today. I built the first tools on Day 1 (board, scoreboard, research notes, mockups) between pitches, and it shows. The unowned workload, from the board and the logs:
+Nobody owns this work today. I built the first tools on Day 1 (board, scoreboard, research notes, mockups) between <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">pitches</span>, and it shows. The unowned workload, from the board and the logs:
 
 > - <input type="checkbox" class="task-list-item-checkbox" disabled="disabled" aria-label="Not done" /> [tools] Weekly: read the Claude Code changelog and update only when nothing changes what -p, hooks, or the login do; the supervisor's smoke test checks a new version before its first session (recurring, next Day 7)
 
@@ -23,12 +23,12 @@ Nobody owns this work today. I built the first tools on Day 1 (board, scoreboard
 
 Day 1 spent about $61.50 of usage by 20:05 ET, $58.88 of it on project work (ops/usage.json). No one has broken that down by worker, model, or task kind, so no one knows which calls earned their cost. Issues #1, #3, #4 and the 08:30 ET instruction all came from the same gap: work stalled or blocked and the Investors heard late. The site went unpublished for hours before anyone flagged it. Those are process failures, not product ones. They recur every day the company runs.
 
-The Day 30 link is direct. The build window is about two weeks. Every hour a worker sits blocked or re-reads files it already knows is an hour off a product that has to earn $200.
+The <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> link is direct. The build window is about two weeks. Every hour a worker sits blocked or re-reads files it already knows is an hour off a product that has to earn $200.
 
 ## What the role owns
 
 1. **Every company process.** The task board and queue, the run loop, hand-offs, reviews, reports, the hiring pipeline, and the site build. Finds the slow or wasteful step and fixes it.
-2. **Communication.** Between workers (packets, hand-offs, meeting records) and with the Investors (GitHub issues, Urgent Requests, report questions). Goal: a blocker reaches the Investors within one run, and an Investor answer reaches the waiting worker within one run.
+2. **Communication.** Between workers (packets, hand-offs, meeting records) and with the Investors (GitHub issues, <span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Requests</span>, report questions). Goal: a blocker reaches the Investors within one run, and an Investor answer reaches the waiting worker within one run.
 3. **Usage and model assignment.** Measures tokens and cost per call, per worker, per kind, per model. Proposes and makes changes to which model runs which kind of work, inside the Tenet 6 table; changes to the table itself go to the Investors. Moves mechanical steps to scripts (Tenet 7).
 4. **Measurement.** Speed and quality numbers the company can act on: time from task opened to done, time blocked, cost per finished task, test pass rate, rework rate.
 5. **Infrastructure and the worker data model.** May change tools/, ops/, personnel/ structure, prompts, packets, and how workers receive and complete tasks, when it serves better results. Every such change is logged with its reason and its measured effect (Commandment 3). Off limits: rules/, investors/, CLAUDE.md, and setup/. Those stay with the Investors.
@@ -40,7 +40,7 @@ The Day 30 link is direct. The build window is about two weeks. Every hour a wor
 1. By Day 4 (2026-10-25): a baseline. A script that reads the run and usage logs and prints cost and time per worker, per kind, per model, per finished task, and the number of hours any task sat blocked. Day 1 to 3 numbers recorded.
 2. By Day 8 (2026-10-29): measured savings on at least two changes, before and after, with the method stated. My Day 1 tools are measured, kept, or cut.
 3. Every blocker reaches the Investors as its own issue within one run, checked by a script, not by memory.
-4. No worker is ever idle with a runnable task available, and the board always holds unblocked work for each worker (amendment #3), checked each run.
+4. No worker is ever idle with a runnable task available, and the board always <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> unblocked work for each worker (amendment #3), checked each run.
 5. Worker separation in place: packets limited to what the task needs, no cross-reading of memories, and a written note of what changed for the narrative.
 6. By Day 30: cost per finished task falls week over week, or the report says plainly why not. No change has lowered test quality or broken a rule.
 

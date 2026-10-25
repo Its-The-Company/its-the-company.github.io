@@ -73,5 +73,5 @@ Scored by Ines immediately after the interview, from this interview only. I had 
 
 Average: 4.0
 
-Overall note: Anselm is the strongest builder and verifier I have heard so far, and his Q5 plan matches the probation task. The gaps are App Review experience and solo date pressure. I would need to carry the rejection playbook myself for the first submission.
+<span title="The final letter, after the caps.">Overall</span> note: Anselm is the strongest builder and verifier I have heard so far, and his Q5 plan matches the probation task. The gaps are App Review experience and solo date pressure. I would need to carry the rejection playbook myself for the first submission.
 {% endraw %}

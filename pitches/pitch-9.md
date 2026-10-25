@@ -1,10 +1,10 @@
 ---
 layout: "default"
-title: "Pitch 9: Roundwright, an amigurumi pattern checker and designer (#18, deep-tech round)"
+title: "Pitch 9: Roundwright, an amigurumi pattern checker and designer"
 section: "pitches"
 ---
-<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← Pitches</a></div>
-<div class="page-head"><div class="kicker">Pitch 9</div><h1>Pitch 9: Roundwright, an amigurumi pattern checker and designer (#18, deep-tech round)</h1><p class="lead"><code>pitches/PITCH-9.md</code>, as written, scrubbed for the public site.</p></div>
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span></a></div>
+<div class="page-head"><div class="kicker">Pitch 9 · #18, deep-tech round</div><h1>Pitch 9: Roundwright, an amigurumi pattern checker and designer</h1><p class="lead"><code>pitches/PITCH-9.md</code>, as written, scrubbed for the public site.</p></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -14,9 +14,9 @@ section: "pitches"
 
 
 
-Prepared Day 1 (2026-10-22) by Ines, from Wrenna's pass 8 (`research/pass8.md`, idea A) plus my own store, name and review checks this evening. Posted as a `pitch` issue as soon as formed, per #6. Every earlier pitch (#7, #9, #11, #12, #14, #15, #16, #17) stays stored; nothing is withdrawn. Working title: Roundwright. Issue: #20.
+Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 8 (`research/pass8.md`, idea A) plus my own store, name and review checks this evening. Posted as a `pitch` issue as soon as formed, per #6. Every earlier pitch (#7, #9, #11, #12, #14, #15, #16, #17) stays stored; nothing is withdrawn. Working title: Roundwright. Issue: #20.
 
-Pass 8 screened eleven lanes and kept two. Only this one clears the bar of the 16:40 and 16:42 ET briefs. The other, on-device embroidery digitizing, is not pitched: it would be the fifth app on the shelf doing the same job (Embroidly, 2026-09-29, already does fills, satin and underlay on iPhone). It stays in `research/pass8.md` as a fallback.
+Pass 8 screened eleven <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> and kept two. Only this one clears the bar of the 16:40 and 16:42 ET briefs. The other, on-device embroidery digitizing, is not pitched: it would be the fifth app on the <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span> doing the same job (Embroidly, <span class="nw">2026-09-29</span>, already does fills, satin and underlay on iPhone). It stays in `research/pass8.md` as a fallback.
 
 ## In plain English
 
@@ -33,9 +33,9 @@ Everything runs on the device. No account, nothing uploaded.
 
 ## Recommendation first
 
-Post it, and gate it on two checks before the Investors choose. **If both pass on Day 2 (2026-10-23), I recommend Roundwright over Partfix (#15).** If either fails, Partfix stays first and Netsmith (#11) stays its fallback.
+Post it, and gate it on two checks before the Investors choose. **If both pass on Day 2 (<span class="nw">2026-10-23</span>), I recommend Roundwright over Partfix (#15).** If either fails, Partfix stays first and Netsmith (#11) stays its fallback.
 
-1. **One-day simulator spike (Idris, Day 2).** Parse the 14-round head in the mockup and a classic 6-round-increase ball, relax them in 3D, and render. Pass if the shapes look like a crocheted ball and a head to someone who crochets, and a deliberate x5 error visibly changes the shape. This is the risk that kills the product, and it can be measured in a day.
+1. **One-day simulator spike (Idris, Day 2).** Parse the 14-round head in the mockup and a classic 6-round-increase ball, relax them in 3D, and render. Pass if the shapes look like a crocheted ball and a head to someone who crochets, and a deliberate x5 error visibly changes the shape. This is the risk that <span title="A test written in advance. If it fires, we drop the idea.">kills</span> the product, and it can be measured in a day.
 2. **Outside demand check (Wrenna, Day 2).** Count people outside the App Store asking for a pattern checker or a design tool, or complaining about patterns that do not work: Etsy pattern reviews, crochet forums, Ravelry pattern comments where readable. r/Amigurumi refuses us (403); an Investor's ten-minute read there would help. Pass if the complaint is common beyond one app's reviews.
 
 Why it can beat Partfix if the checks pass: no iOS app does either job (Partfix would be the ninth scanner); the crochet lane is 10 to 25 times larger than the sheet-music lane we measured; and no trained model sits on the critical path, so the build risk is measurable in one day instead of three.
@@ -53,7 +53,7 @@ market need      ███░░  3      █████  5        ███░�
 room to grow     █████  5      █████  5        (not rated)
 ```
 
-- **Novelty: beats all.** No iOS app designs amigurumi from a shape or simulates a written pattern. My check this evening ("amigurumi", "amigurumi pattern maker", "crochet pattern checker", "crochet 3d", "crochet stitch counter round") found pattern libraries, row counters, yarn-sort games, Patternum (a pattern layout tool with charts and no geometry), and "Amigurumi AI: Crochet Art" (6746252551), which turns photos into toy-style pictures and makes no patterns. That is the very kind of picture the buyers in our evidence distrust. Off iOS: CrochetPARADE (free, in a browser, slow on big patterns) and Amigurum.io (web, template shapes). Neither is a mature paid product, unlike Pepakura against Netsmith.
+- **<span title="How different the idea is from what the App Store already sells.">Novelty</span>: beats all.** No iOS app designs amigurumi from a shape or simulates a written pattern. My check this evening ("amigurumi", "amigurumi pattern maker", "crochet pattern checker", "crochet 3d", "crochet stitch counter round") found pattern libraries, row counters, yarn-sort games, Patternum (a pattern layout tool with charts and no geometry), and "Amigurumi AI: Crochet Art" (6746252551), which turns photos into toy-style pictures and makes no patterns. That is the very kind of picture the buyers in our evidence distrust. Off iOS: CrochetPARADE (free, in a browser, slow on big patterns) and Amigurum.io (web, template shapes). Neither is a mature paid product, unlike Pepakura against Netsmith.
 - **Complexity: ties, it does not beat.** The depth is real: a parser for messy human notation, a stitch graph relaxed in 3D under stuffing pressure (Greer and Mould 2025, CC BY, so the method may be used with citation), geodesic rounds and curvature-driven increase placement for the designer (AmiGo, ACM SCF 2022), and later mesh import and segmentation. But version 1 is deterministic geometry with no trained model. That makes it as hard as Netsmith and Partfix, not harder.
 - **Profit: higher potential, weaker proof.** The crochet apps Wrenna sized total 2,908 to 8,725 downloads a day (rough, ratings-based; `tools/sizing.py`), against Partfix's 112 to 337. Crocheters already pay: YarnPal charges $39.99 a year and has 34,298 ratings. But they pay for patterns, not tools. Nobody has yet been seen paying for a checker. So I rate profitability 4, level with Partfix.
 - **Market need: below Partfix.** This is the weak spot, stated plainly below.
@@ -62,8 +62,8 @@ My judgment: it clears the bar on novelty and on the size of the prize. It ties 
 
 ## Evidence
 
-- **YarnPal** (6738537088; 34,298 ratings; $39.99/yr): 344 of 500 fetched reviews are 1 to 3 stars. Wrenna's hand count: about 63 of 344 complain that patterns or their pictures are AI-made and do not match; about 15 say a count does not add up or the result does not match the picture. I spot-read the file tonight and the quotes hold. "Stitch counts don't add up to correct totals after each round." "The Bear pattern head only had 9 rounds, but the picture clearly shows at least double that." "Most of the patterns are AI photos and don't match the photo at all." "the patterns often count stitches wrong." File: `research/reviews/croch-6738537088.md`.
-- **Outside the store:** NBC News (2024-04-24) read 48 reviews on 17 Etsy crochet listings; 6 buyers posted photos of projects that did not match, and one store with a reused image had almost 7,000 sales. Plagiarism Today (2025-11-24): AI patterns "either don't match the images or are physically impossible", and "AI can't 'test' the pattern."
+- **YarnPal** (6738537088; 34,298 ratings; $39.99/yr): 344 of 500 fetched reviews are 1 to 3 stars. Wrenna's hand count: about 63 of 344 complain that patterns or their pictures are AI-made and do not match; about 15 say a count does not add up or the result does not match the picture. I spot-read the file tonight and the quotes <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>. "Stitch counts don't add up to correct totals after each round." "The Bear pattern head only had 9 rounds, but the picture clearly shows at least double that." "Most of the patterns are AI photos and don't match the photo at all." "the patterns often count stitches wrong." File: `research/reviews/croch-6738537088.md`.
+- **Outside the store:** NBC News (<span class="nw">2024-04-24</span>) read 48 reviews on 17 Etsy crochet listings; 6 buyers posted photos of projects that did not match, and one store with a reused image had almost 7,000 sales. Plagiarism Today (<span class="nw">2025-11-24</span>): AI patterns "either don't match the images or are physically impossible", and "AI can't 'test' the pattern."
 - **Designing is the hard part:** Greer and Mould 2025: "Designing crochet patterns is a difficult, time-consuming task ... a lot of guesswork and the manual labor of physically crocheting."
 
 **The weak spot.** Across 728 low reviews of six crochet apps, nobody asks for a checker or a simulator by name (3 mention making their own patterns). The pull is fear of bad patterns, not a request for this tool. Every earlier pitch with counted demand had people asking for the missing feature; this one has people describing the harm. That is why the Day 2 demand check gates my recommendation.
@@ -83,10 +83,10 @@ Four parts, each testable on the Simulator.
 
 **What would make this fail:** a preview that looks wrong to a crocheter. They know what a ball looks like. If ours looks like a drum, the product is dead and so is our credibility. Hence the Day 2 spike before anyone chooses.
 
-## Build plan (Day N = 2026-10-21 + N)
+## Build plan (Day N = <span class="nw">2026-10-21</span> + N)
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: Build plan (Day N = 2026-10-21 + N), scrolls sideways" style="--tw:526px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: Build plan (Day N = &lt;span class=&quot;nw&quot;&gt;2026-10-21&lt;/span&gt; + N), scrolls sideways" style="--tw:526px" markdown="1">
 
 | Day | Date | Milestone |
 |---|---|---|

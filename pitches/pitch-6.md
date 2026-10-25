@@ -1,10 +1,10 @@
 ---
 layout: "default"
-title: "Pitch 6: Partfix, a sheet-music scanner you can correct, with transposition (round 2 of #10, pitch 1 of 3)"
+title: "Pitch 6: Partfix, a sheet-music scanner you can correct, with transposition"
 section: "pitches"
 ---
-<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← Pitches</a></div>
-<div class="page-head"><div class="kicker">Pitch 6</div><h1>Pitch 6: Partfix, a sheet-music scanner you can correct, with transposition (round 2 of #10, pitch 1 of 3)</h1><p class="lead"><code>pitches/PITCH-6.md</code>, as written, scrubbed for the public site.</p></div>
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span></a></div>
+<div class="page-head"><div class="kicker">Pitch 6 · round 2 of #10, pitch 1 of 3</div><h1>Pitch 6: Partfix, a sheet-music scanner you can correct, with transposition</h1><p class="lead"><code>pitches/PITCH-6.md</code>, as written, scrubbed for the public site.</p></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -14,7 +14,7 @@ section: "pitches"
 
 
 
-Prepared Day 1 (2026-10-22) by Ines, from Wrenna's pass 6 (`research/pass6.md`, idea B) plus my own checks today (dataset and font licences, store search, names). Posted as a `pitch` issue as soon as formed, per #6. Pitches #7, #9, #11 (Netsmith), #12 (Scope) and #14 (Boardseat) stay stored; nothing there is withdrawn. The Investors' brief of 15:24 ET: no games, Netsmith-level algorithmic complexity, a hard problem AI can now solve where the answer is worth money, three pitches, at least one with meta components. This is the first of the three and the one I recommend from this round. Pitch 7 (Seatsolve) and Pitch 8 (Themecount, the meta one) follow.
+Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 6 (`research/pass6.md`, idea B) plus my own checks today (dataset and font licences, store search, names). Posted as a `pitch` issue as soon as formed, per #6. Pitches #7, #9, #11 (Netsmith), #12 (Scope) and #14 (Boardseat) stay stored; nothing there is withdrawn. The Investors' brief of 15:24 ET: no games, Netsmith-level algorithmic complexity, a hard problem AI can now solve where the answer is worth money, three pitches, at least one with meta components. This is the first of the three and the one I recommend from this round. Pitch 7 (Seatsolve) and Pitch 8 (Themecount, the meta one) follow.
 
 ## In plain English
 
@@ -26,7 +26,7 @@ Prepared Day 1 (2026-10-22) by Ines, from Wrenna's pass 6 (`research/pass6.md`, 
 
 ---
 
-**Recommendation first.** Build **Partfix**, with a tripwire. Version 1: printed music, one staff at a time (band parts, choir lines, lead-sheet melodies), one page per scan, on-device recognition with confidence shown, tap-to-fix, synthesised playback, transposition, PDF and MusicXML export. **Partfix Full, $14.99 one-time**; 20 sales reach $200 net at Apple's 30 percent, 16 if the Small Business Program is active. Submit to App Review Day 17 (2026-11-07). The tripwire: a recognition spike on Days 3 to 5 with a go/no-go on Day 6 (2026-10-27). If a detector trained on the licensed data cannot read 85 percent of symbols on ten photographed test pages by Day 6, we stop and build Netsmith (#11) on the same calendar. I would rather lose three days than thirty.
+**Recommendation first.** Build **Partfix**, with a tripwire. Version 1: printed music, one staff at a time (band parts, choir lines, lead-sheet melodies), one page per scan, on-device recognition with confidence shown, tap-to-fix, synthesised playback, transposition, PDF and MusicXML export. **Partfix Full, $14.99 one-time**; 20 sales reach $200 net at Apple's 30 percent, 16 if the Small Business Program is active. Submit to App Review Day 17 (<span class="nw">2026-11-07</span>). The tripwire: a recognition spike on Days 3 to 5 with a go/no-go on Day 6 (<span class="nw">2026-10-27</span>). If a detector trained on the licensed data cannot read 85 percent of symbols on ten photographed test pages by Day 6, we stop and build Netsmith (#11) on the same calendar. I would rather lose three days than thirty.
 
 **Ratings (per #10).** 5 is most, except complexity, where 5 is hardest to build and hardest to copy.
 
@@ -52,9 +52,9 @@ Mockup: `pitches/mockups/partfix.png` (drawn by `tools/mockup.py`: staff lines, 
 All from Wrenna's pass 6, files under `research/reviews/`, counts hand-checked by her with `theme_count.py --show`.
 - **Sheet Music Scanner** (884984324; 6,483 ratings; one-time tiers $4.99-$34.99; 48-144 downloads/day): 209 low-star reviews. Subscription or price 37, editing or correcting 24, accuracy 21 (every hit a real accuracy complaint), playback 16. "Pretty amazing but not good enough ... there were enough mistakes that I spent hours going back and fixing things manually." "Not bad, no way to correct mistakes ... there's no way to tell it 'hey that's wrong'."
 - **PlayScore 2** (1449591118; 4,752 ratings; $6.99/month, $59.99/year; 56-168 downloads/day): 248 low-star reviews. Playback 38, subscription 30, accuracy 26, multi-page 25, crashes 9. "Inherently Flawed: As with any OCR app, there will be mistakes. And since this app is for playback of the music with no editing functionality, you're going to have to put up with the mistakes."
-- **Transposition asked directly** in only 3-4 reviews per app (honest: a low count). The strongest ask is on HN 48644574 (2026-06-23): "replace a stack of jazz 'Real Books' at jam sessions ... it would be great to transpose on the fly for e.g. Bb or [Eb]". I treat transposition as the reason to finish the correction, not as the demand signal; the demand signal is accuracy plus editing, 45 and 64 complaints across the two apps.
+- **Transposition asked directly** in only 3-4 reviews per app (honest: a low count). The strongest ask is on HN 48644574 (<span class="nw">2026-06-23</span>): "replace a stack of jazz 'Real Books' at jam sessions ... it would be great to transpose on the fly for e.g. Bb or [Eb]". I treat transposition as the reason to finish the correction, not as the demand signal; the demand signal is accuracy plus editing, 45 and 64 complaints across the two apps.
 - **What they do instead:** re-enter the notes by hand in Dorico or MuseScore ("It would be faster for me to enter the notes into Dorico than to fix all of the egregious errors").
-- **Lane size:** 112-337 downloads/day across the sized apps (`tools/sizing.py`, a ratings-to-downloads range; rough). At 20 sales over ten selling days we need 2 a day, roughly 1 to 2 percent of the lane's daily downloads. That is the first pitch where I can say the target is a small share of a measured lane rather than a guess.
+- **<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">Lane</span> size:** 112-337 downloads/day across the sized apps (`tools/sizing.py`, a ratings-to-downloads range; rough). At 20 sales over ten selling days we need 2 a day, roughly 1 to 2 percent of the lane's daily downloads. That is the first pitch where I can say the target is a small share of a measured lane rather than a guess.
 - **Store, checked today** (`tools/appsearch.py`, US): "sheet music scanner" returns Sheet Music Scanner, PlayScore 2, Musicnotes, Sheets Music Scanner & Reader (15 ratings, 2026-04), Halbestunde (1,490), MuseScore, PlayScan (2 ratings, 2026-08), Newzik. Two fresh entrants in 2026 with 2-15 ratings: the lane is attracting clones, but none sells correction with confidence.
 
 ### The idea, and what is new
@@ -62,11 +62,11 @@ Partfix is a scanner that admits what it does not know. The pipeline: photograph
 
 New on iOS: confidence shown per note and a fix loop built around it (the incumbents' top two non-price complaints); one-tap transposition for a named instrument from a photo; one-time price in a lane with two subscriptions. Not new: scanning sheet music, which has existed since 2014 on iOS. I will not claim better accuracy than the incumbents in the store copy; I will claim honesty about errors and the speed of fixing them.
 
-### Names, checked 2026-10-22
+### Names, checked <span class="nw">2026-10-22</span>
 Checks: App Store via `tools/name_check.py` (iTunes Search, US), domains via DNS and whois, trademarks by web search only. A USPTO search is still needed before any name goes on the store.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: Names, checked 2026-10-22, scrolls sideways" style="--tw:1309px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: Names, checked &lt;span class=&quot;nw&quot;&gt;2026-10-22&lt;/span&gt;, scrolls sideways" style="--tw:1309px" markdown="1">
 
 | Product name | App Store | .com | .app | Note |
 |---|---|---|---|---|
@@ -79,7 +79,7 @@ Checks: App Store via `tools/name_check.py` (iTunes Search, US), domains via DNS
 
 Recommendation: Partfix by Lowtide Software, partfix.app if the registry confirms it. Subtitle carries "sheet music scanner" and "transpose", which are the search terms.
 
-### Fit
+### <span title="Whether we may and can build it: our rules and banned areas, and a first version Idris can finish by Day 22. A subject off the Investors&#x27; list is noted, not dropped.">Fit</span>
 - A tool with a real job (Commandment 8); music is not a banned area (7). No server, no account, no data leaves the phone (6).
 - Buildable on one M1 Mac mini: Create ML trains the detector on the dense DeepScoresV2 subset; the rest is Swift packages (`StaffKit` for image work, `ScoreKit` for music logic and MusicXML, `Engrave` for drawing) with XCTests on fixture images and known scores; SwiftUI; AVAudioEngine with a code-generated tone (C9 allows synthesised audio; no sampled instruments); UIGraphicsPDFRenderer for export; StoreKit testing in Xcode. The camera needs a device for the real test; the Simulator takes fixture photos. Nothing needs App Store Connect before the membership is active.
 - Assets and licences to log: DeepScoresV2 (CC BY 4.0; attribution in About), Bravura (SIL OFL 1.1). No other outside asset. Every screenshot is the app's own output; the icon is a notehead drawn in code.
@@ -105,9 +105,9 @@ Free download: scan one page, see the recognition with yellow notes, fix them, p
 
 Why $14.99: between the incumbents' one-time tiers ($4.99-$34.99) and two months of PlayScore's subscription; 37 and 30 low-star reviews across the two apps complain about subscriptions, so a one-time price is a selling point we can put in the subtitle.
 
-### Build plan (Day N = 2026-10-21 + N)
+### Build plan (Day N = <span class="nw">2026-10-21</span> + N)
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Build plan (Day N = 2026-10-21 + N), scrolls sideways" style="--tw:526px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Build plan (Day N = &lt;span class=&quot;nw&quot;&gt;2026-10-21&lt;/span&gt; + N), scrolls sideways" style="--tw:526px" markdown="1">
 
 | Day | Date | Milestone |
 |---|---|---|
@@ -142,9 +142,9 @@ Budget asked: one domain. Nothing else. The dataset is free.
 ---
 
 ## Across all open pitches
-Partfix is my recommendation from this round and, if the Day 6 spike passes, my recommendation overall: it is the first pitch where the demand is counted in a large lane, the price is proven by incumbents, the dataset is licensed, and the complexity is the product. Netsmith (#11) is the fallback on a fixed calendar if the spike fails. Seatsolve (Pitch 7) is buildable and wanted but is now one of at least eight near-identical 2026 entrants. Themecount (Pitch 8, meta) is the weakest for Day 30 money and the strongest as a story. Earlier pitches #7, #9, #12 and #14 stay stored as pivot or side options.
+Partfix is my recommendation from this round and, if the Day 6 spike passes, my recommendation overall: it is the first pitch where the demand is counted in a large lane, the price is proven by incumbents, the dataset is licensed, and the complexity is the product. Netsmith (#11) is the fallback on a fixed calendar if the spike fails. Seatsolve (Pitch 7) is buildable and wanted but is now one of at least eight near-identical 2026 entrants. Themecount (Pitch 8, meta) is the weakest for <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> money and the strongest as a story. Earlier pitches #7, #9, #12 and #14 stay stored as pivot or side options.
 
-Decisions asked of the Investors: whether to build Partfix with the Day 6 tripwire; the product name (Partfix, Clefwright) and company name (Lowtide Software); whether to register the domain; who will photograph ten printed pages for the test set on Day 3 (a human with a phone). The visual identity comes separately for creative approval (Commandment 51).
+Decisions asked of the Investors: whether to build Partfix with the Day 6 tripwire; the product name (Partfix, Clefwright) and company name (Lowtide Software); whether to register the domain; who will photograph ten printed pages for the test set on Day 3 (a human with a phone). The visual identity comes separately for creative approval (<span title="Commandment 51: the Investors approve every visual before it ships.">Commandment 51</span>).
 
 Open research (board tasks): a hand count of the Sheet Music Scanner and PlayScore reviews that mention transposition by instrument; the Guideline 4.3 note draft; USPTO check for the names.
 {% endraw %}

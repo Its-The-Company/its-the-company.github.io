@@ -24,7 +24,7 @@ Note on provenance: Soledad's answers are written from her candidate file (perso
 
 **Wrenna:** Say you think I am wrong. I say users want a feature, you say it will draw a rejection or slip the date.
 
-**Soledad:** I write down the guideline number or the day count. You write down your link. We put both in the memo and the chair decides. I don't argue past that. If the chair picks yours, I build yours well. Cut it, then do it well.
+**Soledad:** I write down the guideline number or the day count. You write down your link. We put both in the memo and the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> decides. I don't argue past that. If the chair picks yours, I build yours well. Cut it, then do it well.
 
 **Wrenna:** What are they doing instead, the people who are not served by the quick fix?
 

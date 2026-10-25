@@ -62,5 +62,5 @@ Scored by Ines immediately after the interview, from this interview only. No oth
 
 Average: 4.2
 
-Overall note: Soledad is the strongest on App Review and on dates. The risk is imaging depth: the probation task is the HEIC verifier, so the Day 3 commit tests that risk directly. She answers with the date and the cut, and I want that on this team.
+<span title="The final letter, after the caps.">Overall</span> note: Soledad is the strongest on App Review and on dates. The risk is imaging depth: the probation task is the HEIC verifier, so the Day 3 commit tests that risk directly. She answers with the date and the cut, and I want that on this team.
 {% endraw %}

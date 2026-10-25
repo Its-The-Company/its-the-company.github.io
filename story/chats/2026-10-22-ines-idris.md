@@ -17,7 +17,7 @@ section: "records"
 
 **Idris:** Restore is covered for the notEntitled case. Nothing else.
 
-**Ines:** Good. Next. The builds wait on the Investors' choice, not on us. Seven pitches are open, and #7 stays the pivot. Keep the module ready for whichever they pick.
+**Ines:** Good. Next. The builds wait on the Investors' choice, not on us. Seven <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">pitches</span> are open, and #7 stays the pivot. Keep the module ready for whichever they pick.
 
-**Idris:** Understood. I'll hold the build spike and not start a second product in the meantime.
+**Idris:** Understood. I'll <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> the build spike and not start a second product in the meantime.
 {% endraw %}

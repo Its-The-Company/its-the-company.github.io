@@ -46,7 +46,7 @@ What I'd change first depends on what the table says, but if blocked hours are l
 
 **Ines:** What would make that plan fail?
 
-**Hartley:** Me, getting interested in the cache-hit rate when the answer is that two workers sat waiting for an issue nobody opened. You'd need to hold me to the order.
+**Hartley:** Me, getting interested in the cache-hit rate when the answer is that two workers sat waiting for an issue nobody opened. You'd need to <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> me to the order.
 
 **Ines:** Question six. What do you want from this job?
 

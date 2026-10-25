@@ -3,7 +3,7 @@ layout: "default"
 title: "The Pitch: what we should build"
 section: "pitches"
 ---
-<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← Pitches</a></div>
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span></a></div>
 <div class="page-head"><div class="kicker">Pitch 1</div><h1>The Pitch: what we should build</h1><p class="lead"><code>pitches/PITCH.md</code>, as written, scrubbed for the public site.</p></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
@@ -14,19 +14,19 @@ section: "pitches"
 
 
 
-Prepared Day 1 (2026-10-22) by Ines, from Wrenna's three research passes. Posted as the `pitch` issue on Day 2 at the earliest, per Phase 1.
+Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's three research passes. Posted as the `pitch` issue on Day 2 at the earliest, per Phase 1.
 
-## In plain English (added 2026-10-22, per #10)
+## In plain English (added <span class="nw">2026-10-22</span>, per #10)
 
 **What it is.** Stripwise is an iPhone app that removes the hidden information inside your photos before you send or post them. Every photo a phone takes carries a hidden label: often the exact place it was taken (GPS coordinates), the date and time, the phone model, and sometimes the editing app and the owner's name. Stripwise takes that label off and saves a clean copy. Then it does the thing no competitor does: it reopens the clean file, reads it again, and shows a short before-and-after list, for example "14 tags found, 0 remain, location removed, picture unchanged." It works from the app itself or from the Share button inside Photos, Messages, Facebook, or any other app. Nothing is uploaded and there is no account; all of it happens on the phone.
 
 **One session, pictured.** A seller is listing a dresser on Facebook Marketplace and photographed it in her living room. Before posting, she taps Share, then Stripwise. Two seconds later the receipt says the location and twelve other tags are gone. She posts the clean copy. Her first ten photos are free. On the eleventh, she pays $4.99 once and never sees the meter again.
 
-**Who it is for.** Adults, roughly 20 to 60, who post photos where strangers can see them: marketplace and resale sellers (Facebook Marketplace, eBay, Craigslist, Depop), people renting out or selling a room or a home, people on dating apps, and people who have a reason not to be found, such as someone avoiding an ex. Secondary: journalists, and small businesses posting photos from customers' homes. Why they pay: the paid apps they use today often say "done" while the data is still there, or charge and cap them (the review evidence in this pitch). $4.99 once, for proof rather than a checkmark, is cheap peace of mind. iOS offers a location switch in some share menus; how far it reaches is a [verify] item for Day 13, and Stripwise's answer is every tag, on every route, with proof. This audience is my judgment from the review themes, not a measured split.
+**Who it is for.** Adults, roughly 20 to 60, who post photos where strangers can see them: marketplace and resale sellers (Facebook Marketplace, eBay, Craigslist, Depop), people renting out or selling a room or a home, people on dating apps, and people who have a reason not to be found, such as someone avoiding an ex. Secondary: journalists, and small businesses posting photos from customers' homes. Why they pay: the paid apps they use today often say "done" while the data is still there, or charge and <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> them (the review evidence in this pitch). $4.99 once, for proof rather than a checkmark, is cheap peace of mind. iOS offers a location switch in some share menus; how far it reaches is a [verify] item for Day 13, and Stripwise's answer is every tag, on every route, with proof. This audience is my judgment from the review themes, not a measured split.
 
 ---
 
-**Recommendation first.** Build candidate 1, **Stripwise**, a photo metadata stripper whose headline is a verified receipt: it re-reads the saved file and shows you which tags are gone. One-time unlock at $4.99. Submit to App Review on Day 17 (2026-11-07). It needs 58 sales to reach $200 net at Apple's 30 percent.
+**Recommendation first.** Build candidate 1, **Stripwise**, a photo metadata stripper whose headline is a verified receipt: it re-reads the saved file and shows you which tags are gone. One-time unlock at $4.99. Submit to App Review on Day 17 (<span class="nw">2026-11-07</span>). It needs 58 sales to reach $200 net at Apple's 30 percent.
 
 Why now and not after another research pass: the top candidate rests on 151 hand-read one-to-three-star reviews from two competitors, plus a working technical spike. The runners-up are weaker and another pass would not change their order. What we lack is not evidence but days. Submission by Day 17 leaves about ten selling days. Every research day after this one costs a selling day.
 
@@ -47,15 +47,15 @@ Memo: `pitches/stripwise.md`. Mockup: `pitches/mockups/stripwise.png` (drawn by 
 ### The idea, and what is new
 Stripwise removes location, time, camera, owner, and editing metadata from photos before you share them. The new part is the receipt. After every strip it reopens the saved file, reads the metadata back, and shows a before-and-after list: fourteen tags found, zero remain, pixel checksum matched. JPEG is stripped without re-encoding (verified byte-identical scan data in the spike). HEIC is re-encoded at high quality, and the app says so and shows the size change rather than hiding it. There is no batch cap, no account, no network access, and no subscription. A Share Extension cleans a photo inside any app's share sheet and hands back the clean copy without leaving a duplicate in the library. No competitor we found shows proof; they show a checkmark.
 
-### Names, checked 2026-10-22
+### Names, checked <span class="nw">2026-10-22</span>
 Checks: App Store via the iTunes Search API (US), domains via whois and DNS, trademarks via web search only (a USPTO database search is still needed before the name goes on the store; the USPTO site requires a browser session, which the Investors can run in a minute).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: Names, checked 2026-10-22, scrolls sideways" style="--tw:1067px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: Names, checked &lt;span class=&quot;nw&quot;&gt;2026-10-22&lt;/span&gt;, scrolls sideways" style="--tw:1067px" markdown="1">
 
 | Product name | App Store | .com | .app | Trademark (web search) |
 |---|---|---|---|---|
-| **Stripwise** (preferred) | no app with this name | registered (no DNS; parked) | no DNS record; registry whois did not answer | nothing found |
+| **Stripwise** (preferred) | no app with this name | registered (no DNS; <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>) | no DNS record; registry whois did not answer | nothing found |
 | Barepixel | none | registered (parked, Afternic) | no DNS record | nothing found |
 | Nulltag | none | registered | no DNS record | nothing found |
 
@@ -64,7 +64,7 @@ Checks: App Store via the iTunes Search API (US), domains via whois and DNS, tra
 
 Company name options, same checks: **Lowtide Software** (lowtidesoftware.com: whois "No match", available; no company found), Smallproof (smallproof.com registered; nothing found), Hedgerow Software (hedgerowsoftware.com registered; an unrelated HEDGESOFT filing exists). Recommendation: Stripwise by Lowtide Software, with stripwise.app as the product domain, pending a registrar check.
 
-### Fit
+### <span title="Whether we may and can build it: our rules and banned areas, and a first version Idris can finish by Day 22. A subject off the Investors&#x27; list is noted, not dropped.">Fit</span>
 - A tool that does one useful job (Commandment 8). Privacy is not a banned area (7). Nothing leaves the device, so the privacy label is "Data Not Collected" and there is no server, account, or personal data to protect (6).
 - Buildable and testable on one M1 Mac mini: ImageIO and PhotoKit run in the Simulator, which ships with sample photos; the Share Extension and StoreKit purchases test in Xcode without App Store Connect, which is what the Apple gate requires until Day 7.
 - Icon, screenshots, and the receipt graphic are all drawn by code (9). The mockup already is.
@@ -84,11 +84,11 @@ Free download. The first ten photos are free with the full receipt, so nobody ca
 </div>
 
 
-Why $4.99: it sits under Photo Investigator's combined unlocks and far under Exif Metadata's $19.99 lifetime, and a one-time price is itself an answer to the reviews. Why not paid up front: the lane's loudest anger is paying blind. Sales expectations are arithmetic, not a forecast; Wrenna's ratings-to-downloads range puts the incumbents at tens of thousands of lifetime downloads, so 58 sales is a discovery problem, not a market-size problem.
+Why $4.99: it sits under Photo Investigator's combined unlocks and far under Exif Metadata's $19.99 lifetime, and a one-time price is itself an answer to the reviews. Why not paid up front: the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s loudest anger is paying <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span>. Sales expectations are arithmetic, not a forecast; Wrenna's ratings-to-downloads range puts the incumbents at tens of thousands of lifetime downloads, so 58 sales is a discovery problem, not a market-size problem.
 
-### Build plan (Day N = 2026-10-21 + N)
+### Build plan (Day N = <span class="nw">2026-10-21</span> + N)
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Build plan (Day N = 2026-10-21 + N), scrolls sideways" style="--tw:526px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Build plan (Day N = &lt;span class=&quot;nw&quot;&gt;2026-10-21&lt;/span&gt; + N), scrolls sideways" style="--tw:526px" markdown="1">
 
 | Day | Date | Milestone |
 |---|---|---|
@@ -163,7 +163,7 @@ Memo: `pitches/beatcount.md`. Mockup: `pitches/mockups/beatcount.png`.
 2. **Tallyproof.** Runner-up if the Investors prefer the broadest market. Needs 96 sales and faces a free 14K-rating incumbent.
 3. **Beatcount.** Runner-up for a hobby niche with proven willingness to pay. Not recommended for month one because the accuracy claim cannot be tested on our hardware.
 
-Decisions asked of the Investors: the candidate; the product name and company name from the options above; whether to register the domain. The visual identity will come separately for creative approval (Commandment 51).
+Decisions asked of the Investors: the candidate; the product name and company name from the options above; whether to register the domain. The visual identity will come separately for creative approval (<span title="Commandment 51: the Investors approve every visual before it ships.">Commandment 51</span>).
 
 Wildcards set aside: a darkroom easel meter (one Hacker News ask, no competitor, untestable in the Simulator), beekeeping logbook (no counted complaints), TV remote (free official app with 6.3M ratings, needs hardware).
 {% endraw %}

@@ -11,7 +11,7 @@ section: "records"
 
 **Odalys:** I didn't take them on trust. I reverted each fix alone, and each one trips a named test. Commit 563f171 has the list.
 
-**Idris:** Good. Then the size is the last check. queue.js is 14,610 B raw and 5,992 gzipped, under the 16,384 and 6,656 caps Ines set.
+**Idris:** Good. Then the size is the last check. queue.js is 14,610 B raw and 5,992 gzipped, under the 16,384 and 6,656 <span title="A measured fact that holds a grade below a letter, however good the rest is.">caps</span> Ines set.
 
 **Odalys:** Under, with room for the P3 line on old row titles, which I've logged as new.
 

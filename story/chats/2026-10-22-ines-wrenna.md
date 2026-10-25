@@ -15,7 +15,7 @@ section: "records"
 
 **Wrenna:** The Investors keep asking for scope. Issue eight, then ten, then eighteen. Real depth, and broad appeal.
 
-**Ines:** They are right to push. Purlwright sits in a knitting lane of 18 to 55 downloads a day. A longer list of small ideas won't fix that. We need one product with room to grow.
+**Ines:** They are right to push. Purlwright sits in a knitting <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> of 18 to 55 downloads a day. A longer list of small ideas won't fix that. We need one product with room to grow.
 
 **Wrenna:** Then pass eight goes after depth: specialized ML or systems work with a real need behind it. I'll hand you the best two, or nothing.
 

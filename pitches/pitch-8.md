@@ -1,10 +1,10 @@
 ---
 layout: "default"
-title: "Pitch 8: Themecount, review mining for app makers, built in public on our own reviews (round 2 of #10, pitch 3 of 3, the meta one)"
+title: "Pitch 8: Themecount, review mining for app makers, built in public on our own reviews"
 section: "pitches"
 ---
-<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← Pitches</a></div>
-<div class="page-head"><div class="kicker">Pitch 8</div><h1>Pitch 8: Themecount, review mining for app makers, built in public on our own reviews (round 2 of #10, pitch 3 of 3, the meta one)</h1><p class="lead"><code>pitches/PITCH-8.md</code>, as written, scrubbed for the public site.</p></div>
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span></a></div>
+<div class="page-head"><div class="kicker">Pitch 8 · round 2 of #10, pitch 3 of 3, the meta one</div><h1>Pitch 8: Themecount, review mining for app makers, built in public on our own reviews</h1><p class="lead"><code>pitches/PITCH-8.md</code>, as written, scrubbed for the public site.</p></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -14,9 +14,9 @@ section: "pitches"
 
 
 
-Prepared Day 1 (2026-10-22) by Ines, from Wrenna's pass 6 (`research/pass6.md`, idea D) and pass 5 (3C), plus my own checks today (Apple's public review feed, store search, names, the 5.2.2 and 5.6 guideline text). Posted as a `pitch` issue as soon as formed, per #6. Pitches #7, #9, #11, #12, #14, Pitch 6 (Partfix) and Pitch 7 (Seatsolve) stay stored; nothing is withdrawn. This is the meta pitch the Investors asked for at 15:24 ET: meta components like Boardseat's, with a different product.
+Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 6 (`research/pass6.md`, idea D) and pass 5 (3C), plus my own checks today (Apple's public review feed, store search, names, the 5.2.2 and 5.6 guideline text). Posted as a `pitch` issue as soon as formed, per #6. Pitches #7, #9, #11, #12, #14, Pitch 6 (Partfix) and Pitch 7 (Seatsolve) stay stored; nothing is withdrawn. This is the meta pitch the Investors asked for at 15:24 ET: meta components like Boardseat's, with a different product.
 
-**Conflict of interest, first.** This idea is Wrenna's own research method turned into a product, and Wrenna said so in writing twice (pass 5 and pass 6) and graded it with a heavy hand. I have weighed it myself from the evidence and not from their enthusiasm, and I rate it the weakest of the three for Day 30 money. It stays in the round because the Investors asked for a meta pitch and this is the honest one.
+**Conflict of interest, first.** This idea is Wrenna's own research method turned into a product, and Wrenna said so in writing twice (pass 5 and pass 6) and graded it with a heavy hand. I have weighed it myself from the evidence and not from their enthusiasm, and I rate it the weakest of the three for <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> money. It stays in the round because the Investors asked for a meta pitch and this is the honest one.
 
 ## In plain English
 
@@ -30,7 +30,7 @@ Prepared Day 1 (2026-10-22) by Ines, from Wrenna's pass 6 (`research/pass6.md`, 
 
 ---
 
-**Recommendation first.** Not ahead of Partfix (Pitch 6) for Day 30. Themecount has the best story and the weakest numbers: an uncounted market of developers, a data source that failed twice today, and a researcher's conflict of interest. If the Investors want the meta product, this is the one, at **Themecount, $19.99 one-time**; 15 sales reach $200 net at 30 percent, 12 at 15 percent; submit Day 17 (2026-11-07). My recommendation: store it, and build it later as the company's second product or as a side tool, where its meta story is strongest because the first product's reviews will exist by then.
+**Recommendation first.** Not ahead of Partfix (Pitch 6) for Day 30. Themecount has the best story and the weakest numbers: an uncounted market of developers, a data source that failed twice today, and a researcher's conflict of interest. If the Investors want the meta product, this is the one, at **Themecount, $19.99 one-time**; 15 sales reach $200 net at 30 percent, 12 at 15 percent; submit Day 17 (<span class="nw">2026-11-07</span>). My recommendation: store it, and build it later as the company's second product or as a side tool, where its meta story is strongest because the first product's reviews will exist by then.
 
 **Ratings (per #10).** 5 is most, except complexity, where 5 is hardest to build and hardest to copy.
 
@@ -55,9 +55,9 @@ Mockup: `pitches/mockups/themecount.png` (drawn by `tools/mockup.py`; the counts
 
 ### Evidence of need
 - **Inside the company.** `tools/review_mine.py` and `tools/theme_count.py` are used every day here, and the hand check corrected the regex count four times today (knitting: lost 10 to 5, size 11 to 4; pass 6: cut-list 12 to 10, Seat Puzzle 8 to 7). Uncorrected keyword counting is the mistake this product prevents, and it is the mistake I made in PITCH-2 before Wrenna's hand read.
-- **Outside, thin; counted in pass 7.** 0 of 1,459 HN comments since 2023 ask for a review-analysis tool or how others read reviews, and 0 Ask HN posts do; 12 Show HN posts (11 products) build one, median 2 points, 1 comment in all 12. The one crowd-pleaser was an article about a $2M/month app's reviews (37 points), which supports the published-counts meta half, not the paid tool. Indie Hackers and r/iOSProgramming were unreadable (403). HN 45989976 (2025-11-20): "AppReview AI, a Mac + iPad app to analyze App Store reviews privately and offline ... as an indie developer, reading hundreds of reviews from competitor apps was slow, noisy, and hard to ext[ract]". HN 37480763 (37 points): reading a $2M/month app's strategy through its reviews. Count of developers asking for this: none found. That is the reason for the rating of 2.
+- **Outside, thin; counted in pass 7.** 0 of 1,459 HN comments since 2023 ask for a review-analysis tool or how others read reviews, and 0 Ask HN posts do; 12 Show HN posts (11 products) build one, median 2 points, 1 comment in all 12. The one crowd-pleaser was an article about a $2M/month app's reviews (37 points), which supports the published-counts meta half, not the paid tool. Indie Hackers and r/iOSProgramming were unreadable (403). HN 45989976 (<span class="nw">2025-11-20</span>): "AppReview AI, a Mac + iPad app to analyze App Store reviews privately and offline ... as an indie developer, reading hundreds of reviews from competitor apps was slow, noisy, and hard to ext[ract]". HN 37480763 (37 points): reading a $2M/month app's strategy through its reviews. Count of developers asking for this: none found. That is the reason for the rating of 2.
 - **Store, checked today** (`tools/appsearch.py`, US, "app store review analysis", "app reviews analyzer"): App Store Connect (Apple), App Reviews - iOS & Android (1552567648, 77 ratings, a review monitor), AppSpy (15 ratings), Reviews Time (10 ratings, last updated 2020), Appboard (48 ratings, rankings). Nothing counts themes with evidence attached. AppReview AI from the HN post is not findable by store search.
-- **Mac competitors I did not know about (pass 7):** ReviewHeron (hamme.software; local-first review manager, 129 EUR one-time, 14-day trial, App Store and Google Play, on-device reply drafts, search by theme; an inbox and reply tool, not a counted-themes tool with a hand check) and App Feedback Hub (Mac App Store id6759007525, $9.99, 0 ratings, released 2026-02-18). Also AppReviewAI (HN 45989976, Mac and iPad, offline). They take "offline, one price, on the Mac" from us.
+- **Mac competitors I did not know about (pass 7):** ReviewHeron (hamme.software; local-first review manager, 129 EUR one-time, 14-day trial, App Store and Google Play, on-device reply drafts, search by theme; an inbox and reply tool, not a counted-themes tool with a hand check) and App Feedback Hub (Mac App Store id6759007525, $9.99, 0 ratings, released <span class="nw">2026-02-18</span>). Also AppReviewAI (HN 45989976, Mac and iPad, offline). They take "offline, one price, on the Mac" from us.
 - **Web competitors:** Appbot: $49/month annual, $59 monthly (1 user, 5 apps); Medium $99/$119; Large from $166/$219; CSV/Excel export only on Large, so about $2,000 a year to export counted reviews. AppFollow: sales-led, no public price. AppTweak. Monthly, cloud, team-priced.
 
 ### The idea, and what is new
@@ -65,11 +65,11 @@ Themecount is quote-and-count with the receipts. Sources: your own apps through 
 
 New: the hand-check as a first-class step, recorded in the export; offline and one-time; built in public with the maker's own counts published. Not new: review dashboards and sentiment tools, which exist on the web.
 
-### Names, checked 2026-10-22
+### Names, checked <span class="nw">2026-10-22</span>
 Checks: App Store via `tools/name_check.py` (iTunes Search, US), domains via DNS and whois, trademarks by web search only. A USPTO search is still needed.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: Names, checked 2026-10-22, scrolls sideways" style="--tw:1261px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: Names, checked &lt;span class=&quot;nw&quot;&gt;2026-10-22&lt;/span&gt;, scrolls sideways" style="--tw:1261px" markdown="1">
 
 | Product name | App Store | .com | .app | Note |
 |---|---|---|---|---|
@@ -82,7 +82,7 @@ Checks: App Store via `tools/name_check.py` (iTunes Search, US), domains via DNS
 
 Recommendation: Themecount by Lowtide Software, themecount.com if the Investors register it.
 
-### Fit
+### <span title="Whether we may and can build it: our rules and banned areas, and a first version Idris can finish by Day 22. A subject off the Investors&#x27; list is noted, not dropped.">Fit</span>
 - A tool with a real job (Commandment 8). Reviews are public data; the developer's own key is their own credential, stored in the Keychain, never in anything we write (7). Guideline 5.2.2 (read today: "ensure that you are specifically permitted to do so under the service's terms of use") applies to Apple's own public feed; I have not found Apple terms that forbid reading it, and the App Store Connect API is explicitly for this. The Operator should ask the Investors to confirm the Apple Media Services terms before build, as a report question.
 - Buildable on one M1 Mac mini: Swift packages `ReviewSource` (feed, API, import), `ThemeKit` (NaturalLanguage embeddings, grouping, hand-check state), `Trend`, with XCTests on saved review files from `research/reviews/`; SwiftUI; Catalyst for Mac; StoreKit testing in Xcode. The App Store Connect half needs our own key, which follows the Apple membership (Day 7) and the API key (after).
 - Every visual is drawn by code (9): bars, trends, the icon (a tally mark).
@@ -107,9 +107,9 @@ Free download: one app, counts and reading, no export. **Themecount, $19.99 one-
 
 Why $19.99: Appbot's cheapest plan is $49 a month annual ($59 monthly); a one-time $19.99 is under half of one month of that. Against ReviewHeron at 129 EUR once, we are far cheaper, against App Feedback Hub at $9.99 we are double. Fifteen buyers in ten days from an uncounted audience is the whole risk of this pitch, and the Investors' reach into developer circles would decide it, as with Boardseat.
 
-### Build plan (Day N = 2026-10-21 + N)
+### Build plan (Day N = <span class="nw">2026-10-21</span> + N)
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Build plan (Day N = 2026-10-21 + N), scrolls sideways" style="--tw:526px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Build plan (Day N = &lt;span class=&quot;nw&quot;&gt;2026-10-21&lt;/span&gt; + N), scrolls sideways" style="--tw:526px" markdown="1">
 
 | Day | Date | Milestone |
 |---|---|---|
@@ -133,7 +133,7 @@ Budget asked: one domain. Nothing else.
 ### Main risks
 1. **The public review feed.** Empty twice today. Mitigation: import and the official API; the store copy promises competitor mining "when Apple's public feed is available", which is weak copy and I say so.
 2. **Terms.** 5.2.2 and Apple's media terms on reading public reviews: unconfirmed. A report question for the Investors before build.
-3. **A counted-empty market.** Pass 7 found no developers asking for this (0 of 1,459 comments). Fifteen sales in ten days from developers found by search in a lane where the nearest app has 77 ratings is not supported by evidence.
+3. **A counted-empty market.** Pass 7 found no developers asking for this (0 of 1,459 comments). Fifteen sales in ten days from developers found by search in a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> where the nearest app has 77 ratings is not supported by evidence.
 4. **Conflict of interest.** Wrenna's. Declared twice by them and once by me; the Investors should discount their grade and read mine.
 5. **The meta story depends on our own reviews existing.** They will not exist until Day 20 at the earliest; the first worked example at launch would be competitor counts, with our own counts following. Honest: the story is stronger as a second product.
 6. **Guideline 4.3.** Low to medium, raised from low: App Feedback Hub, ReviewHeron and AppReviewAI are similar Mac tools.
@@ -142,7 +142,7 @@ Budget asked: one domain. Nothing else.
 ---
 
 ## Across all open pitches
-In order for Day 30: **Partfix (Pitch 6)** with its Day 6 tripwire; **Netsmith (#11)** as the fallback on a fixed calendar; **Seatsolve (Pitch 7)** if the Investors want the lowest build risk and accept a crowded lane; **Themecount (this pitch)** as the meta option, best built second; Boardseat (#14) and Scope (#12) stored as games; Purlwright (#9) and Stripwise (#7) stored as the counted-market and lowest-review-risk options. One decision from the Investors on Day 3 (2026-10-24) keeps the Day 17 submission for whichever is chosen.
+In order for Day 30: **Partfix (Pitch 6)** with its Day 6 tripwire; **Netsmith (#11)** as the fallback on a fixed calendar; **Seatsolve (Pitch 7)** if the Investors want the lowest build risk and accept a crowded lane; **Themecount (this pitch)** as the meta option, best built second; Boardseat (#14) and Scope (#12) stored as games; Purlwright (#9) and Stripwise (#7) stored as the counted-market and lowest-review-risk options. One decision from the Investors on Day 3 (<span class="nw">2026-10-24</span>) keeps the Day 17 submission for whichever is chosen.
 
 Decisions asked of the Investors: whether Themecount is a candidate, a second product, or stored; the product name (Themecount, Starcount) and whether to register themecount.com; confirmation of Apple's terms on reading the public review feed. Open research (board): Indie Hackers and r/iOSProgramming (unreadable, 403); full feature pages of ReviewHeron and AppReviewAI before any build decision; USPTO check for the names.
 {% endraw %}

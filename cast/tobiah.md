@@ -15,7 +15,7 @@ Data-heavy app-analytics analyst who sizes demand from rankings and review veloc
 | Fact | Detail |
 | --- | --- |
 | Portrait | superformula curve, seeded by the name |
-| Temperament | sharp: quick snaps between long holds |
+| Temperament | sharp: quick snaps between long <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> |
 | Hiring round | [Market and product researcher, Day 1]({{ '/story/hiring/2026-10-22-market-researcher/' | relative_url }}) |
 {: .facts}
 

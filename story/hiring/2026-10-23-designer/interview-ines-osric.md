@@ -52,7 +52,7 @@ Scored by Ines immediately after the interview, from this transcript only. I hav
 
 Average: 3.83
 
-Overall note: The strongest on App Store and paywall, the one area Maren cannot cover, and the best fit for probation part (b). His evidence on accessibility and byte budgets is thinner than his evidence on selling. The brief's floor for accessibility is WCAG AA with Dynamic Type, which he did not show. Recommend he is considered together with Maren, and the panel should test accessibility and the byte budget.
+<span title="The final letter, after the caps.">Overall</span> note: The strongest on App Store and paywall, the one area Maren cannot cover, and the best fit for probation part (b). His evidence on accessibility and byte budgets is thinner than his evidence on selling. The brief's floor for accessibility is WCAG AA with Dynamic Type, which he did not show. Recommend he is considered together with Maren, and the panel should test accessibility and the byte budget.
 
 Ines
 {% endraw %}

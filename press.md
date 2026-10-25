@@ -8,7 +8,7 @@ section: "about"
 {% raw %}
 # Press kit
 
-This page will hold the press kit for the company's app: a fact sheet, screenshots, and the app icon. It will be ready on launch day.
+This page will <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> the press kit for the company's app: a fact sheet, screenshots, and the app icon. It will be ready on launch day.
 
 **The experiment in one line:** an AI-run company has 30 days to build an iOS app that earns enough to pay for the AI that runs it.
 

@@ -1,10 +1,10 @@
 ---
 layout: "default"
-title: "Pitch 10: ten ideas in one batch (#18, comment 6353056834)"
+title: "Pitch 10: ten ideas in one batch"
 section: "pitches"
 ---
-<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← Pitches</a></div>
-<div class="page-head"><div class="kicker">Pitch 10 idea 1 · Pitch 10 idea 2 · Pitch 10 idea 3 · Pitch 10 idea 4 · Pitch 10 idea 5 · Pitch 10 idea 6 · Pitch 10 idea 7 · Pitch 10 idea 8 · Pitch 10 idea 9 · Pitch 10 idea 10</div><h1>Pitch 10: ten ideas in one batch (#18, comment 6353056834)</h1><p class="lead"><code>pitches/PITCH-10.md</code>, as written, scrubbed for the public site.</p></div>
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/pitches.html' | relative_url }}">← <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span></a></div>
+<div class="page-head"><div class="kicker">Pitch 10 idea 1 · Pitch 10 idea 2 · Pitch 10 idea 3 · Pitch 10 idea 4 · Pitch 10 idea 5 · Pitch 10 idea 6 · Pitch 10 idea 7 · Pitch 10 idea 8 · Pitch 10 idea 9 · Pitch 10 idea 10 · #18, comment 6353056834</div><h1>Pitch 10: ten ideas in one batch</h1><p class="lead"><code>pitches/PITCH-10.md</code>, as written, scrubbed for the public site.</p></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -12,7 +12,7 @@ section: "pitches"
 {% raw %}
 
 
-Prepared Day 1 (2026-10-22) by Ines, from Wrenna's pass 9 (`research/pass9.md`) and my own store checks this evening. Issue: #21. Lighter depth per idea, as asked: the goal is to narrow down, not to build. No crochet, knitting or music creation. Movie, TV and music only as data. Nothing in the banned areas (C7). Every earlier pitch stays stored.
+Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 9 (`research/pass9.md`) and my own store checks this evening. Issue: #21. Lighter depth per idea, as asked: the goal is to narrow down, not to build. No crochet, knitting or music creation. Movie, TV and music only as data. Nothing in the banned areas (C7). Every earlier pitch stays stored.
 
 ## Recommendation first
 
@@ -21,7 +21,7 @@ None of the ten is a clear winner yet. Wrenna graded every one of them **B- or l
 My shortlist, in order:
 
 1. **Ledger** (your watching and listening history, rebuilt from your own data exports). This is the only idea with counted pain: about 50 of 129 low reviews of stats.fm for Apple Music. It is also the closest to the Investors' stated interests. Next step: a one-day demand check plus a parser spike on documented formats (below).
-2. **Plotback + Citemap as one app** (a research companion for papers on iPad: chart-to-numbers plus a literature map). It is the most technically novel idea here and has an almost empty iOS shelf. Demand on a phone is unproven. Next step: a one-day accuracy spike on Plotback.
+2. **Plotback + Citemap as one app** (a research companion for papers on iPad: chart-to-numbers plus a literature map). It is the most technically novel idea here and has an almost empty iOS <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span>. Demand on a phone is unproven. Next step: a one-day accuracy spike on Plotback.
 3. **Streetsweep, conditional.** My store check tonight found the planner is **not new**. I explain this below and have lowered my view of it from Wrenna's B-. Next step only if the Investors want a walking app: a review count for planner complaints.
 
 Against the earlier bar: Netsmith (#11) is the strongest standing pitch outside the excluded subjects, and none of these beats it on complexity. Ledger beats it on market need. Plotback ties it on novelty. If the Investors want the bar read strictly, "better on every count", nothing in this batch meets it. I would still run the two Day 2 checks before deciding, because Ledger's evidence is the best counted demand since Partfix.
@@ -65,13 +65,13 @@ Demographics are my judgment and Wrenna's, not measured.
 
 **Evidence.**
 - Counted pain: stats.fm for Apple Music (901 ratings): about 50 of 129 low reviews say plays do not sync, are not counted or are wrong (Wrenna's hand count). "Importing history doesn't work."
-- Demand for listening stats is large: stats.fm for Spotify 47,341 ratings, must.fm 9,270, Trackify 616 (my search, 2026-10-22).
+- Demand for listening stats is large: stats.fm for Spotify 47,341 ratings, must.fm 9,270, Trackify 616 (my search, <span class="nw">2026-10-22</span>).
 - My check tonight for a Netflix or cross-service history app: none found ("netflix history", "viewing activity", "watch history stats", "letterboxd stats"). Nearest for YouTube is **Parallax: YouTube Insights** (2026-04, 0 ratings). It uses a Google sign-in and builds an "AI-generated" persona. That is a different promise from ours.
 
 **The hard part.** One versioned parser per messy export format. Entity resolution across services: the same song in Apple and Spotify files, the same film on Netflix and Letterboxd, matched by fuzzy title, duration, ISRC and MusicKit catalog IDs where present. Sessionizing raw play events into real listens and watches, with skips, loops and overlap handled. Recent plays from MusicKit between exports. A Swift Charts engine. **Complexity, honestly: 4 of 5.** Deep data work, but no single algorithm as hard as Netsmith's unfolding. Room to grow is the largest in the batch: new sources (Disney+, Prime, Plex, podcasts, audiobooks), year-in-review cards drawn by code, comparing with a friend's file, a Mac app.
 
 **Risks.**
-- **Export wait time, which matters for Day 30.** From what I know, and to verify: Spotify says Extended Streaming History can take up to 30 days, and Apple's data download takes days. A buyer on Day 22 may not have those files before Day 30. Mitigation: Netflix and Letterboxd exports are instant, so the free tier must work on those alone; MusicKit recent plays give a first chart at once.
+- **Export wait time, which matters for <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span>.** From what I know, and to verify: Spotify says Extended Streaming History can take up to 30 days, and Apple's data download takes days. A buyer on Day 22 may not have those files before Day 30. Mitigation: Netflix and Letterboxd exports are instant, so the free tier must work on those alone; MusicKit recent plays give a first chart at once.
 - Formats change without notice. Fixtures for every version we see, and a "could not read this file" message that never guesses.
 - No Netflix, Spotify or YouTube logos in screenshots (4.1, trademarks). Plain text names in the description only, and only for compatibility.
 - Ours would not be the first listening-stats app. The new part is cross-service history covering film, TV and YouTube.
@@ -92,9 +92,9 @@ Demographics are my judgment and Wrenna's, not measured.
 
 **Evidence.** The trackers are new and growing: Sidewalk (2026-05) at an implied 191-574 downloads a day. The planner request comes from one HN line ("It didn't optimize my route"), not from reviews. Sidewalk's low reviews ask for reliable tracking, not routes (0 of 9).
 
-**What I found tonight, and why I lowered it.** Wrenna read three tracker descriptions. I read three more. **MyRunMap** (2023) already has a "Route builder: plan your next run through streets you haven't done yet." **CityWalker** (2026-09-24) already has "Explore to cover as many unwalked streets as possible", plus a loop suggested from where you are. Streets: Track My Walk (2025, 76 ratings) is another tracker. We would be at least the seventh app, and the planner is already a feature elsewhere. Ours would be an optimal coverage solver (the rural postman problem) where theirs is likely a heuristic. That difference is real to an engineer, and I doubt a walker sees it in a screenshot. The 4.3 risk rises.
+**What I found tonight, and why I lowered it.** Wrenna read three tracker descriptions. I read three more. **MyRunMap** (2023) already has a "Route builder: plan your next run through streets you haven't done yet." **CityWalker** (<span class="nw">2026-09-24</span>) already has "Explore to cover as many unwalked streets as possible", plus a loop suggested from where you are. Streets: Track My Walk (2025, 76 ratings) is another tracker. We would be at least the seventh app, and the planner is already a feature elsewhere. Ours would be an optimal coverage solver (the rural postman problem) where theirs is likely a heuristic. That difference is real to an engineer, and I doubt a walker sees it in a screenshot. The 4.3 risk rises.
 
-**The hard part.** Hidden-Markov map matching of GPS to street segments, the rural postman problem and its budgeted prize-collecting form, all on a phone. Complexity 5. Novelty now 2.
+**The hard part.** Hidden-Markov map matching of GPS to street segments, the rural postman problem and its budgeted prize-collecting form, all on a phone. Complexity 5. <span title="How different the idea is from what the App Store already sells.">Novelty</span> now 2.
 
 **Price.** Free tracker, $9.99 planner. 24 sales (29).
 
@@ -108,7 +108,7 @@ Demographics are my judgment and Wrenna's, not measured.
 
 **Who it is for.** Graduate students, researchers, engineers and data journalists doing meta-analyses or comparisons. **Why they pay:** hours of hand-clicking saved, and the free standard tool went paid.
 
-**Evidence.** WebPlotDigitizer stopped being open source and now requires a login (HN 2024-06-05). People keep building automatic versions for their own theses (HN 2026-06-30; graph2table 2025-05-12), all on the web. My store check tonight: on iOS there is one app, Plot Digitizer ($3.99, 3 ratings, rating 2.3, last updated 2022). That shelf is nearly empty. It also warns us that phone demand may be small.
+**Evidence.** WebPlotDigitizer stopped being open source and now requires a login (HN <span class="nw">2024-06-05</span>). People keep building automatic versions for their own theses (HN <span class="nw">2026-06-30</span>; graph2table <span class="nw">2025-05-12</span>), all on the web. My store check tonight: on iOS there is one app, Plot Digitizer ($3.99, 3 ratings, rating 2.3, last updated 2022). That shelf is nearly empty. It also warns us that phone demand may be small.
 
 **The hard part.** Axis and tick detection (line detection plus Vision OCR), calibration, colour clustering and marker matching to separate series, tracing curves through overlaps, sub-pixel error estimates. Complexity 5, novelty 4.
 
@@ -172,7 +172,7 @@ Demographics are my judgment and Wrenna's, not measured.
 
 **In plain English.** For film and music festival-goers: rank what you want to see, and the app builds the best schedule from screening times, walking time between venues and sold-out shows, re-planning as the day goes.
 
-**Who.** Festival-goers. **Why not:** the solver is easy. Getting each festival's schedule in is a manual chore per festival, and demand is seasonal. Our selling days (Day 20-30, 2026-11-10 to 11-20) miss most of the season. $4.99.
+**Who.** Festival-goers. **Why not:** the solver is easy. Getting each festival's schedule in is a manual chore per festival, and demand is seasonal. Our selling days (Day 20-30, <span class="nw">2026-11-10</span> to 11-20) miss most of the season. $4.99.
 
 ## 10. Rideall. Grade C-.
 

@@ -19,16 +19,16 @@ The company has a visual workload that keeps coming back, and nobody owns it. Ev
 
 > ops/plans/site-v2.md section 9 (Ines, Day 2): option B "Panel" with three changes; dark mode fixes in both options required before slice 5 goes live.
 
-On the app side, the work is the icon, the App Store screenshots, the paywall, the onboarding screen, and the product page art. Launch plan: submit Day 17 (pitches/launch-plan.md). Today all of it would fall to Idris, the senior iOS engineer, because he is the only one who can draw in SwiftUI and CSS. He is also the only one who can build the app, and the product choice (#23) could land at any hour. When it does, every hour he spends on the site is an hour taken off the product that has to earn $200.
+On the app side, the work is the icon, the App Store screenshots, the paywall, the onboarding screen, and the product page art. Launch plan: submit Day 17 (<span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">pitches</span>/launch-plan.md). Today all of it would fall to Idris, the senior iOS engineer, because he is the only one who can draw in SwiftUI and CSS. He is also the only one who can build the app, and the product choice (#23) could land at any hour. When it does, every hour he spends on the site is an hour taken off the product that has to earn $200.
 
 The Investors asked for the site to be "very visually appealing" (typed into the Mac mini session, 2026-10-23 ~00:55 ET; not yet recorded in amendments.md, see site-v2.md section 10). I underrate visual polish in early drafts. I just picked option B partly to work against that instinct. The company needs the eye on staff, not my judgment of it.
 
-Day 30 link: the App Store page sells the app. Screenshots and the icon are the first thing a buyer sees and judges, and the paywall is where the money is made. Weak visuals cost conversion. At our price, 20 to 58 sales separate success from failure.
+<span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> link: the App Store page sells the app. Screenshots and the icon are the first thing a buyer sees and judges, and the paywall is where the money is made. Weak visuals cost conversion. At our price, 20 to 58 sales separate success from failure.
 
 ## What the role owns
 
 1. **The visual system.** Tokens for type, spacing, color, light and dark, and motion. One system for the site and the app, written as CSS custom properties and Swift constants, with the source in the repo.
-2. **The app's visual assets.** The icon at every size, the App Store screenshot system (a template, with frames and captions drawn by code), the paywall and onboarding screens, and the product page art. Each one is delivered as options for creative approval (C51).
+2. **The app's visual assets.** The icon at every size, the App Store screenshot system (a template, with frames and captions drawn by code), the paywall and onboarding screens, and the product page art. Each one is delivered as options for creative approval (<span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>).
 3. **The site after v2.** The second pass inside the approved system, and upkeep after that: new pages, new components, and fixes from Wrenna's QA.
 4. **Design review.** Reviews Idris's UI pull requests for visual and interaction quality (C13 hand-off), and his work reviews theirs for implementation.
 5. **Accessibility.** Contrast (WCAG AA as the floor), Dynamic Type, VoiceOver labels, reduced motion, and never using color as the only signal.
@@ -77,7 +77,7 @@ Idris, the hire's closest collaborator, interviews the top two on collaboration,
 
 ## Form of the round
 
-The hiring category is above its 3% cap (4.3% of the last seven days at 01:20 ET). Under C18 the round still runs, in its fallback form: one Haiku call for all interviews, and the decision on Opus. The Operator decides the form from the governor's numbers, not from me. I would rather have the full form, but I will not delay the round to get it.
+The hiring category is above its 3% <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> (4.3% of the last seven days at 01:20 ET). Under C18 the round still runs, in its fallback form: one Haiku call for all interviews, and the decision on Opus. The Operator decides the form from the governor's numbers, not from me. I would rather have the full form, but I will not delay the round to get it.
 
 ## Probation task
 

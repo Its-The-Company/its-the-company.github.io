@@ -49,11 +49,11 @@ Interviewer: Ines, CEO. Six fixed questions from the brief, in order.
 
 ## Question 5
 
-**Ines:** Design question. We have about four weeks to get one new, unmarketed iOS app to $286 in customer purchases. Walk me through the first eight hours of your research, what you'd read and in what order, and what a finding would have to show for you to put it in a pitch.
+**Ines:** Design question. We have about four weeks to get one new, unmarketed iOS app to $286 in customer purchases. Walk me through the first eight hours of your research, what you'd read and in what order, and what a finding would have to show for you to put it in a <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">pitch</span>.
 
 **Tobiah:** Hours one to two: paid and top-grossing charts across all categories, a 10-minute snapshot each, noting price tier and rank. I'm looking for apps in the 100 to 600 range that charge real money. That tells me what buyers pay for without a marketing push. Hours three to five: one- to three-star reviews on those apps and on the top ten of adjacent categories. I tag complaints and count repeats. A complaint needs at least ten independent mentions. Hours six and seven: communities. Forums and subreddits, read passively, looking for workarounds, such as spreadsheets people keep by hand. Hour eight: price tiers and a first sales model. At $4.99 and 30 percent commission, $286 is about 82 sales. At $2.99 it is about 137.
 
-A finding goes in the pitch if it has: a repeated complaint with at least ten sources linked, a price point existing apps already hold, an estimate of monthly sales for the nearest competitor with stated assumptions, and a reading of what an unmarketed app can get. With no outreach and no ads, a new app might see a few dozen organic downloads a week. So I want a niche where search demand exists and the incumbent is weak. I'd mark every finding with a confidence level.
+A finding goes in the pitch if it has: a repeated complaint with at least ten sources linked, a price point existing apps already <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>, an estimate of monthly sales for the nearest competitor with stated assumptions, and a reading of what an unmarketed app can get. With no outreach and no ads, a new app might see a few dozen organic downloads a week. So I want a niche where search demand exists and the incumbent is weak. I'd mark every finding with a confidence level.
 
 **Ines:** What would make this fail?
 
@@ -73,7 +73,7 @@ A finding goes in the pitch if it has: a repeated complaint with at least ten so
 | --- | --- | --- |
 | App Store market analysis | 5 | Used rank history and review velocity, gave sales ranges with confidence, and computed 82 and 137 sales for $286 at two prices. |
 | Evidence discipline | 4 | Wrote the stopping rule in advance, logged source checks, and reported a bad estimator early. Link-level sourcing was stated rather than shown. |
-| Novelty and gap finding | 3 | The complaint threshold of ten mentions is sound, but examples were about sizing, not about inventing a new angle. Said little about spotting clones. |
+| <span title="How different the idea is from what the App Store already sells.">Novelty</span> and gap finding | 3 | The complaint threshold of ten mentions is sound, but examples were about sizing, not about inventing a new angle. Said little about spotting clones. |
 | Commercial judgment | 4 | Priced against a $286 target after commission and was realistic about unmarketed reach. Did not weigh subscription against one-time purchase. |
 | Rules and risk awareness | 3 | Screened banned areas first and noted passive reading. Did not mention App Review rejection risks or trademark checks unprompted. |
 | Synthesis and writing | 4 | Answers were short and led with the figure. Mentioned no memo format, and the dossier warns of tables burying readers. |

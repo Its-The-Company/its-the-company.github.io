@@ -1,21 +1,77 @@
 {
  "schema": 1,
- "at": "2026-10-25T10:20:40.725402+00:00",
+ "at": "2026-10-25T11:18:12.695450+00:00",
  "session": {
   "active": true,
-  "kind": "morning",
-  "started": "2026-10-25T06:18:59-04:00"
+  "kind": "work",
+  "started": "2026-10-25T06:36:08-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "ines",
-   "task": "[report] morning",
-   "model": "haiku",
-   "started": "2026-10-25T10:19:20.444Z",
+   "name": "maren",
+   "task": "[research] H263 re-run C2 MusicBrainz dump",
+   "model": "opus",
+   "started": "2026-10-25T10:43:13.080Z",
    "seconds": null,
-   "finished": "2026-10-25T10:20:00.982Z"
+   "finished": "2026-10-25T11:17:38.582000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T33-4 preflight hosts, terms_locate fixes",
+   "model": "opus",
+   "started": "2026-10-25T10:46:19.735Z",
+   "seconds": null,
+   "finished": "2026-10-25T11:03:53.062000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T34-2 route rows, robots_rules red",
+   "model": "opus",
+   "started": "2026-10-25T10:48:45.651Z",
+   "seconds": null,
+   "finished": "2026-10-25T11:03:17.953000+00:00"
+  },
+  {
+   "name": "wrenna",
+   "task": "[research] H276 Wiktionary dump stream",
+   "model": "opus",
+   "started": "2026-10-25T10:48:39.419Z",
+   "seconds": null,
+   "finished": "2026-10-25T11:01:38.174000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[research] H277 TVmaze watch-list lane",
+   "model": "opus",
+   "started": "2026-10-25T10:48:32.971Z",
+   "seconds": null,
+   "finished": "2026-10-25T10:53:28.963000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[test] red suites terms_guard fakes",
+   "model": "opus",
+   "started": "2026-10-25T10:37:11.061Z",
+   "seconds": null,
+   "finished": "2026-10-25T10:51:37.257000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[research] H274 OpenAlex papers-first",
+   "model": "opus",
+   "started": "2026-10-25T10:48:27.218Z",
+   "seconds": null,
+   "finished": "2026-10-25T10:51:08.599000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T1 H269-H271, tsv letter fix",
+   "model": "opus",
+   "started": "2026-10-25T10:46:34.940Z",
+   "seconds": null,
+   "finished": "2026-10-25T10:50:19.813000+00:00"
   }
  ],
  "queue": {
@@ -63,20 +119,20 @@
     "text": "Unrelated side project; Collatz, workspace ~/unrelated/collatz); full text in log/board-archive-2026-10-23.md"
    }
   ],
-  "runnable_count": 22,
+  "runnable_count": 19,
   "blocked_count": 52
  },
  "meter": {
   "five_hour": {
    "pct": 50.0,
-   "resets_at": "2026-10-25T11:59:59.921396+00:00",
+   "resets_at": "2026-10-25T11:59:59.882064+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 50.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 9.0,
-   "resets_at": "2026-11-01T06:59:59.921451+00:00",
+   "resets_at": "2026-11-01T06:59:59.882085+00:00",
    "used_words": "of your weekly allowance used",
    "left": 91.0,
    "left_words": "of your weekly allowance left"
@@ -86,7 +142,7 @@
    "resets_at": "2026-11-01T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-25T06:18:57.763803-04:00"
+  "read_at": "2026-10-25T06:36:07.511873-04:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -101,7 +157,7 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-25T06:33:57-04:00",
+ "next_tick": "2026-10-25T06:51:07-04:00",
  "lanes": [
   {
    "name": "Wrenna",
@@ -109,10 +165,7 @@
    "task": "Wrenna: site_qa.py checks for the additions against fixtures now (every % names its denominator; unrelated content...",
    "model": null,
    "since": null,
-   "next": [
-    "Wrenna, P2, G26 lane 2 from weak top-5 rows (Ines 17:43...",
-    "Wrenna, P1, H269 G82 Stack Exchange subject sites..."
-   ]
+   "next": []
   },
   {
    "name": "Ines",
@@ -120,43 +173,31 @@
    "task": "Ines, P2, T1 triage, then chair, for H177, H178, H179 and H180 as each lands (method-v2.md T1): read the lane's...",
    "model": null,
    "since": null,
-   "next": [
-    "Ines, P2, T1 triage for H187, H188 and H189-H195 as each...",
-    "Ines, P2, H263 data routes (Maren 7db832ef, H263.md..."
-   ]
-  },
-  {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, H265 G76 papers-first (research/hunt/refill-33.md section 4, R33-2): arXiv API terms and rate limit...",
-   "model": null,
-   "since": null,
-   "next": [
-    "Idris, P2, H266 G78 instrument substitution...",
-    "Idris, P3, H267 G77 expired patents (refill-33.md..."
-   ]
+   "next": []
   },
   {
    "name": "Maren",
    "state": "next",
-   "task": "Maren, P2, H270 G79 crafts that compute from printed tables (refill-33.md section 4, R33-2; no crochet, knitting or...",
+   "task": "Maren, P2, H263 re-run C2 MusicBrainz core dump (chair ruling H263.md section 6 R1, a1c39570): first read the...",
    "model": null,
    "since": null,
-   "next": [
-    "Maren, P2, H271 G81 paid field trades (refill-33.md...",
-    "Maren, P2, S33-1 route-status panel design (refill-33.md..."
-   ]
+   "next": []
   },
   {
    "name": "Odalys",
    "state": "next",
-   "task": "Odalys, P2, T33-1 gen_yield hold column (refill-33.md section 5): per generator, concepts T1-open and held, split by...",
+   "task": "Odalys, P3, T33-3 terms_locate Bluesky-case test (refill-33.md section 5): a host whose home page links no terms...",
    "model": null,
    "since": null,
-   "next": [
-    "Odalys, P2, T33-2 route status table (refill-33.md...",
-    "Odalys, P3, T33-3 terms_locate Bluesky-case test..."
-   ]
+   "next": []
+  },
+  {
+   "name": "Idris",
+   "state": "blocked",
+   "task": "Idris: live check after publish: open /connect.html#setup, follow the pre-filled token link on github.com and...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
@@ -484,13 +525,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "plan",
-    "t": "R32-1 applied",
-    "s": "wait",
-    "o": "c"
-   },
-   {
     "w": "Ines",
     "k": "plan",
     "t": "Refill 32 falsifier score",
@@ -505,45 +539,17 @@
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "chair",
-    "t": "H263 data routes",
+    "w": "Maren",
+    "k": "research",
+    "t": "H263 re-run C2 MusicBrainz core dump",
     "s": "next",
     "o": "c"
    },
    {
-    "w": "Idris",
+    "w": "Maren",
     "k": "research",
-    "t": "H265 G76 papers-first",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
-    "t": "H266 G78 instrument substitution",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
-    "t": "H267 G77 expired patents",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H269 G82 Stack Exchange subject sites",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "H268 G80 rulebook computations",
-    "s": "next",
+    "t": "H263 re-run C1/C3/C4 Wikidata dump stream",
+    "s": "wait",
     "o": "c"
    },
    {
@@ -554,65 +560,9 @@
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "research",
-    "t": "H270 G79 crafts that compute from printed tables",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "research",
-    "t": "H271 G81 paid field trades",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "S33-1 route-status panel design",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T33-1 gen_yield hold column",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T33-2 route status table",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "T33-3 terms_locate Bluesky-case test",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "research",
-    "t": "H272 G83 open-access museum and archive collections",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "P33-1 plain-English lines for the top band",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "P33-2 Stack Exchange scope list",
     "s": "next",
     "o": "c"
    },
@@ -631,20 +581,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "plan",
-    "t": "R32-4 applied",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Re-run the locate gaps after the terms_locate fix",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Maren",
     "k": "site",
     "t": "S30 render check",
@@ -652,9 +588,93 @@
     "o": "c"
    },
    {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "H273 G84 Stack Exchange high-view jobs",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "research",
+    "t": "H275 G86 MusicBrainz credits graph",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "M34-1 missing-cell list",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T34-1 host clearance cache",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "S34-1 plain-English lines on /documents/ideas/",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "chair",
+    "t": "T1 for H273-H277 as each lands",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "F34 falsifier score",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "chair",
+    "t": "Apply the S33-1 and S33-2 SE read outcomes",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "Discuss.python.org incorporated policies",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Terms_guard refusal text",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Odalys",
     "k": "test",
-    "t": "Red suites after the terms_guard changes",
+    "t": "Web_hits_test red",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "chair",
+    "t": "H276 user-agent retry after a 403",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "research",
+    "t": "H263 C2 dump resume",
     "s": "next",
     "o": "c"
    },
@@ -686,64 +706,64 @@
   ],
   "done": [
    {
-    "w": "Ines",
-    "k": "report",
-    "t": "Morning",
-    "at": "2026-10-25T10:20:00.982Z",
-    "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T32-1 cap_map fixes",
-    "at": "2026-10-25T10:02:31.231000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "build",
-    "t": "Site S28-3 then S30",
-    "at": "2026-10-25T10:01:16.171000+00:00",
+    "w": "Maren",
+    "k": "research",
+    "t": "H263 re-run C2 MusicBrainz dump",
+    "at": "2026-10-25T11:17:38.582000+00:00",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Fix terms_locate home step",
-    "at": "2026-10-25T09:53:54.964000+00:00",
+    "t": "T33-4 preflight hosts, terms_locate fixes",
+    "at": "2026-10-25T11:03:53.062000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T34-2 route rows, robots_rules red",
+    "at": "2026-10-25T11:03:17.953000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "H276 Wiktionary dump stream",
+    "at": "2026-10-25T11:01:38.174000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "research",
+    "t": "H277 TVmaze watch-list lane",
+    "at": "2026-10-25T10:53:28.963000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "test",
+    "t": "Red suites terms_guard fakes",
+    "at": "2026-10-25T10:51:37.257000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "research",
+    "t": "H274 OpenAlex papers-first",
+    "at": "2026-10-25T10:51:08.599000+00:00",
     "o": "c"
    },
    {
     "w": "Ines",
     "k": "plan",
-    "t": "Refill 33 board",
-    "at": "2026-10-25T09:53:53.781000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
-    "t": "H259 Irish mutation rules test",
-    "at": "2026-10-25T09:53:53.047000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "research",
-    "t": "H263 CC0 graphs generator",
-    "at": "2026-10-25T09:53:04.314000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "research",
-    "t": "H260 federal data generator",
-    "at": "2026-10-25T09:52:13.271000+00:00",
+    "t": "T1 H269-H271, tsv letter fix",
+    "at": "2026-10-25T10:50:19.813000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 22,
+   "next": 19,
    "wait": 12,
    "blocked": 40,
    "you": 2
@@ -761,5 +781,8 @@
    },
    "title": "Urgent -- Get to Work!!"
   }
+ ],
+ "trimmed": [
+  "lane_next"
  ]
 }

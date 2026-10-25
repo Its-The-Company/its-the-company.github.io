@@ -11,7 +11,7 @@ section: "usage"
 <div class="panel">
 <p class="status-line warm"><b>7 points ahead of the week's even pace.</b> <span>Source: the plan's own meter, read Sun 8:16 AM.</span></p>
 <div class="bar warm"><div class="bar-head"><span>This week</span><span>11% of the weekly limit · resets Sun 1:59 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:11.0%"></div><i class="mark plan" style="left:3.8%" title="plan by now: 4%"></i></div><div class="bar-foot">Plan by now: 4% of your weekly allowance used, the marker.</div></div>
-<div class="bar warm"><div class="bar-head"><span>Today</span><span>101% of today's share</span></div><div class="bar-track"><div class="bar-fill" style="width:100.0%"></div><i class="mark plan" style="left:26.4%" title="plan by now: 26%"></i><i class="mark reserve" style="left:90.0%" title="the evening report's reserve"></i></div><div class="bar-foot">Plan by now: 26% of today's share of your weekly allowance. The grey marker <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> back a reserve for the evening report; it is released once the report is done.</div></div>
+<div class="bar warm"><div class="bar-head"><span>Today</span><span>101% of today's share</span></div><div class="bar-track"><div class="bar-fill" style="width:100.0%"></div><i class="mark plan" style="left:26.6%" title="plan by now: 27%"></i><i class="mark reserve" style="left:90.0%" title="the evening report's reserve"></i></div><div class="bar-foot">Plan by now: 27% of today's share of your weekly allowance. The grey marker <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> back a reserve for the evening report; it is released once the report is done.</div></div>
 <div class="bar ok"><div class="bar-head"><span>Last 5 hours</span><span>64% of the 5-hour limit</span></div><div class="bar-track"><div class="bar-fill" style="width:64.0%"></div></div></div>
 <div class="bar ok"><div class="bar-head"><span>Fable this week</span><span>0% of its weekly allowance</span></div><div class="bar-track"><div class="bar-fill" style="width:0.0%"></div></div><div class="bar-foot">A ceiling, not a target: Fable shares the weekly limit, so it is used as the work needs.</div></div>
 </div>
@@ -25,7 +25,7 @@ section: "usage"
 What the run loop was doing in each hour of the pacing week.
 
 <div class="week-strip" role="img" aria-label="This week, hour by hour"><div class="wrow head"><span></span><span>0</span><span></span><span></span><span></span><span></span><span></span><span>6</span><span></span><span></span><span></span><span></span><span></span><span>12</span><span></span><span></span><span></span><span></span><span></span><span>18</span><span></span><span></span><span></span><span></span><span></span></div><div class="wrow"><span>Sun</span><i class="h out"></i><i class="h out"></i><i class="h c-limit_5h" title="Sun 2:00 · at the 5-hour limit"></i><i class="h c-work" title="Sun 3:00 · working"></i><i class="h c-work" title="Sun 4:00 · working"></i><i class="h c-work" title="Sun 5:00 · working"></i><i class="h c-work" title="Sun 6:00 · working"></i><i class="h c-share_spent" title="Sun 7:00 · today's share used"></i><i class="h c-work" title="Sun 8:00 · working"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i></div></div>
-<div class="legend hours"><span><i class="h c-work"></i>working 2 h</span><span><i class="h c-limit_5h"></i>at the 5-hour limit 1 h</span><span><i class="h c-share_spent"></i>today's share used 1 h</span><span><i class="h c-offline"></i>no tick: offline or stopped 3 h</span></div>
+<div class="legend hours"><span><i class="h c-work"></i>working 2 h</span><span><i class="h c-limit_5h"></i>at the 5-hour limit 1 h</span><span><i class="h c-share_spent"></i>today's share used 1.5 h</span><span><i class="h c-offline"></i>no tick: offline or stopped 2.5 h</span></div>
 
 ## Where the usage went, last 7 days
 
@@ -76,7 +76,7 @@ The plan includes API credits each month. The company uses them only as overflow
 | Window | Used | Plan by now |
 | --- | --- | --- |
 | This 5-hour window | 64% of the 5-hour limit (estimate from recorded runs; a session still running is not in it yet) | |
-| Today | 101% of the daily pace | 26% |
+| Today | 101% of the daily pace | 27% |
 | This week | 11% of the weekly limit (resets Sun Nov 1, 1:59 AM) | 4% |
 | Fable this week | 0% of its weekly allowance | |
 

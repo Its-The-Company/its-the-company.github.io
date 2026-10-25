@@ -22,10 +22,14 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (101 most recent)
+## Activity (105 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 24, 23:20 | <span class="tag t-fix">fix</span> I-8: /ideas/ letter-history reasons no longer end on an unclosed '(' or a bare short word (9fce0a41); test case rode in Wrenna's fb61ed3f |  |
+| Oct 24, 22:57 | <span class="tag t-research">research</span> H217 red team on H163 C1 (PITCH-14) written: points for Odalys to apply under R25; Wrenna's answers open |  |
+| Oct 24, 22:52 | <span class="tag t-research">research</span> H205 rep cut on real Commons footage: truth committed before the run (1ac96e9d); 3 clips, 10 reps kept of 33 viewed; pooled hit share 0.70, false cuts over true reps 1.30 (3209530d); every floor rep split at its bottom pause; the 8-clip floor not met; chair line filed for Ines |  |
+| Oct 24, 22:49 | <span class="tag t-task_done">task_done</span> C42 scrub check for /documents/hunt/h192.html: the seller's gmail address was already withheld in H192.md by the 22:43 work-run commit; no other personal address in published lane notes or pitches; the build scrub carries an email pattern. Live recheck is Wrenna's after the next deploy. |  |
 | Oct 24, 22:41 | <span class="tag t-work">work</span> Applied Maren's seven letter-history findings on /documents/ideas/ (bc485107) and fixed Wrenna's QA bug: top3-day30's restating rows no longer become idea cards (a64086d6); 422 -> 419 ideas, 390 page 102,406 -> 94,395 px closed. |  |
 | Oct 24, 22:36 | <span class="tag t-research">research</span> H209 G43 paid Shortcuts helpers done (3ad664dc): six Lookups, r/shortcuts 22 posts coded, GitHub 88 repos, Pushcut prices; two concepts; Crowding robots gap. Order mistake disclosed: toolboxpro.app home fetched before the robots matcher ran, copy removed and refetched after the verdict allowed it. |  |
 | Oct 24, 22:19 | <span class="tag t-work">work</span> Who it is for on /ideas/: 15 who-for.tsv rows render, d9725018, run.sh green |  |
@@ -235,6 +239,18 @@ Older entries (the 2026-10-22 task log): archive.md.
 
 ## 2026-10-24 /ideas/ history review fixes + top3-day30 cards (Operator 22:20)
 - bc485107 (Maren 44c44c0a findings 1-7, board 610-616 ticked) and a64086d6 (gradebook REF_ONLY skip; Wrenna QA line 62 ticked, taken from Odalys). 390 closed 102,406 -> 94,395 px; 1280 65,488 -> 59,671; overflow 0; ideas 422 -> 419. Filed: Wrenna P3 (who-for.tsv lines 4-5 now name no card), Maren P3 review of bc485107. run.sh red only on robots_rules_test (Odalys's uncommitted robots_pages.py). Learned: in a multi-ruling block the Why line comes from the earlier move row, so "newest repeats Why" fires 2 of 21, not Maren's 67 (her count was mostly singles); a new untracked path needs `git add <path>` before `git commit -- <path>`.
+
+## 2026-10-24 H192 C42 email scrub (board 61 ticked)
+- No edit: row 49 already '(seller's email, withheld)' via 2e95a4de; no other address in hunt/*.md, research/*.md, pitches/*.md; raw copies stay (documents.py never reads *-raw); data.py scrubber has EMAIL_RE. Open: Wrenna's live crawl. Learned: board_tick refuses any count in a note while a blind-grade line for the lane is open, row numbers included; check git log -S before editing, the fix may already be in.
+
+## 2026-10-24 H205 rep cut on real footage (done, floor not met)
+- 1ac96e9d (truth before any cut), 3209530d (tables), e8ec7848 (time fix); board ticked, Ines chair line at board end (robots /w/, H200 miss, pool shortfall, c297/c465 stricter reading). 33 of 33 sheets viewed, 3 kept (all Taco fleur, one balcony), 10 reps; pooled hit 0.70, false/true 1.30; D3 splits each floor rep at the bottom pause, merges across short stands. c292 (child) footage deleted. Open: chair's route (second Commons pass vs own device footage). Learned: Commons fitness videos are mostly edited montages; a pre-reg must say whether a passer-by fails "only person moving" or is a stressor, or the two clauses conflict at viewing; `git commit -- newfile` needs `git add` first (again).
+
+## 2026-10-24 H217 red team on H163 C1 (done)
+- d2b844dd (board 606 ticked): research/hunt/H217.md, five points, no fetch, no letters. Depth (18:12 correction: no numeral rule, two systems not four dialects, three-way "a" partial, IPA unsourced) and Fit (Vision later failed; rest is open checks) argued R25-1; Need (robots-unverified, mark "provisional (robots)"), Novelty (UDPipe web marks lemma+Len/Ecl+gender), Day 30 (one app) argued R25-2. Open: Wrenna's R25-3 answers, Odalys applies. Learned: zsh expands a leading "==" in echo (prints "not found" and kills the rest of the command); use "--" separators.
+
+## 2026-10-24 I-8 history cut (Maren review of bc485107)
+- 9fce0a41 (board 599 ticked; run.sh green): tools/site/ideas.py hist_cut + HIST_TAIL; a cut line backs off past an unclosed '(' and a short tail word; a reason opening on '(' drops the bracket (live case, H-ladder row). Test lines were swept into Wrenna's fb61ed3f whole-file commit before my stage_hunks ran; disclosed in the tick. Shots ops/site-checks/ideas-history-fixes/idris-i8/. Learned: run.sh now takes over 10 min (supervisor_test.sh), so run it in background with a 30 min timeout; a live-data check found a third failure shape the brief did not name.
 {% endraw %}
 
 

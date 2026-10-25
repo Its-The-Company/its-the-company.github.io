@@ -160,9 +160,9 @@ footer a{color:inherit}
 .track i.past{background:var(--accent);opacity:.55}.track i.now{background:var(--accent);outline:2px solid var(--accent);outline-offset:1px}.track i.launch{background:var(--ok)}
 .chart{width:100%;height:auto;display:block}.chart .lbl{font-size:11px;fill:var(--muted)}.chart .lbl.strong{fill:var(--ink);font-weight:700;font-size:12px}
 .chart.small .lbl{font-size:10px}.d-ok{fill:var(--ok)}.d-warm{fill:var(--warm)}.d-hot{fill:var(--hot)}
-/* hunt funnel (tools/site/funnel.py; Maren's review 2026-10-24): chart capped at 460px, its labels 12px (C13 review, Y-4); note and table full width, left-aligned, at every width */
-.funnel .chart{max-width:460px}.funnel .chart .lbl{font-size:12px}.chart .lbl.grp{fill:var(--ink);font-weight:600}.funnel .meta{margin-top:0}.funnel details{margin-top:var(--s2)}.funnel table{display:table;width:100%}.funnel .tbl>table{width:max(100%,var(--tw,0px))}.funnel caption{text-align:left}
-@media (min-width:880px){.report-grid.funnel{grid-template-columns:minmax(0,460px) minmax(0,1fr)}.funnel .tbl>table{width:100%}}
+/* hunt funnel (tools/site/funnel.py; Maren's review 2026-10-24): chart capped at 460px, its labels 12.1 units so 12px+ render at 390 (viewBox 360 drawn at 358; Y-4, Y-6); at 880+ the note sits beside the chart and the open table spans both columns below it (Y-5); note and table full width, left-aligned, at every width */
+.funnel .chart{max-width:460px}.funnel .chart .lbl{font-size:12.1px}.chart .lbl.grp{fill:var(--ink);font-weight:600}.funnel .meta{margin-top:0}.funnel details{margin-top:var(--s2)}.funnel table{display:table;width:100%}.funnel .tbl>table{width:max(100%,var(--tw,0px))}.funnel caption{text-align:left}
+@media (min-width:880px){.report-grid.funnel{grid-template-columns:minmax(0,460px) minmax(0,1fr)}.report-grid.funnel>div{display:contents}.report-grid.funnel details{grid-column:1/-1}.funnel .tbl>table{width:100%}}
 .stack{display:flex;height:16px;border-radius:8px;overflow:hidden;background:var(--line);margin:var(--s2) 0 6px}.seg{display:inline-block;height:100%}
 .seg.project{background:var(--accent)}.seg.reports{background:var(--ok)}.seg.meetings{background:var(--warm)}.seg.hiring{background:var(--pink)}.seg.talk{background:var(--hot)}
 .legend{font-size:var(--fs-0);color:var(--muted);display:flex;flex-wrap:wrap;gap:4px var(--s4)}.legend .seg{width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle}

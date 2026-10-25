@@ -9,10 +9,10 @@ section: "usage"
 <p class="lead">One Claude Max 20x subscription runs the company, and it never buys extra usage. The plan meters a rolling 5-hour window, a weekly window, and a weekly Fable allowance; each bar shows how much of that limit is used. The company aims to use the whole weekly allowance by each reset, never early (Tenet 7), and a marker on each bar shows the plan by now.</p>
 
 <div class="panel">
-<p class="status-line warm"><b>7 points ahead of the week's even pace.</b> <span>Source: the plan's own meter, read Sun 8:35 AM.</span></p>
-<div class="bar warm"><div class="bar-head"><span>This week</span><span>11% of the weekly limit · resets Sun 1:59 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:11.0%"></div><i class="mark plan" style="left:3.9%" title="plan by now: 4%"></i></div><div class="bar-foot">Plan by now: 4% of your weekly allowance used, the marker.</div></div>
-<div class="bar warm"><div class="bar-head"><span>Today</span><span>101% of today's share</span></div><div class="bar-track"><div class="bar-fill" style="width:100.0%"></div><i class="mark plan" style="left:27.5%" title="plan by now: 28%"></i><i class="mark reserve" style="left:90.0%" title="the evening report's reserve"></i></div><div class="bar-foot">Plan by now: 28% of today's share of your weekly allowance. The grey marker <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> back a reserve for the evening report; it is released once the report is done.</div></div>
-<div class="bar ok"><div class="bar-head"><span>Last 5 hours</span><span>0% of the 5-hour limit · resets 1:09 PM</span></div><div class="bar-track"><div class="bar-fill" style="width:0.0%"></div></div></div>
+<p class="status-line warm"><b>7 points ahead of the week's even pace.</b> <span>Source: the plan's own meter, read Sun 8:50 AM.</span></p>
+<div class="bar warm"><div class="bar-head"><span>This week</span><span>11% of the weekly limit · resets Sun 1:59 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:11.0%"></div><i class="mark plan" style="left:4.1%" title="plan by now: 4%"></i></div><div class="bar-foot">Plan by now: 4% of your weekly allowance used, the marker.</div></div>
+<div class="bar warm"><div class="bar-head"><span>Today</span><span>101% of today's share</span></div><div class="bar-track"><div class="bar-fill" style="width:100.0%"></div><i class="mark plan" style="left:28.6%" title="plan by now: 29%"></i><i class="mark reserve" style="left:90.0%" title="the evening report's reserve"></i></div><div class="bar-foot">Plan by now: 29% of today's share of your weekly allowance. The grey marker <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> back a reserve for the evening report; it is released once the report is done.</div></div>
+<div class="bar ok"><div class="bar-head"><span>Last 5 hours</span><span>0% of the 5-hour limit · resets 1:09 PM</span></div><div class="bar-track"><div class="bar-fill" style="width:0.1%"></div></div></div>
 <div class="bar ok"><div class="bar-head"><span>Fable this week</span><span>0% of its weekly allowance</span></div><div class="bar-track"><div class="bar-fill" style="width:0.0%"></div></div><div class="bar-foot">A ceiling, not a target: Fable shares the weekly limit, so it is used as the work needs.</div></div>
 </div>
 
@@ -53,8 +53,8 @@ Each worker call names its kind of work; the Operator's own turns count as opera
 
 ## Models this week
 
-<div class="bar ok"><div class="bar-head"><span>Opus</span><span>100% of this week's usage</span></div><div class="bar-track"><div class="bar-fill" style="width:99.7%"></div></div></div>
-<div class="bar ok"><div class="bar-head"><span>Sonnet</span><span>0% of this week's usage</span></div><div class="bar-track"><div class="bar-fill" style="width:0.2%"></div></div></div>
+<div class="bar ok"><div class="bar-head"><span>Opus</span><span>100% of this week's usage</span></div><div class="bar-track"><div class="bar-fill" style="width:99.6%"></div></div></div>
+<div class="bar ok"><div class="bar-head"><span>Sonnet</span><span>0% of this week's usage</span></div><div class="bar-track"><div class="bar-fill" style="width:0.3%"></div></div></div>
 <div class="bar ok"><div class="bar-head"><span>Haiku</span><span>0% of this week's usage</span></div><div class="bar-track"><div class="bar-fill" style="width:0.1%"></div></div></div>
 
 ## API credits
@@ -75,8 +75,8 @@ The plan includes API credits each month. The company uses them only as overflow
 
 | Window | Used | Plan by now |
 | --- | --- | --- |
-| This 5-hour window | 0% of the 5-hour limit (resets 1:09 PM) | |
-| Today | 101% of the daily pace | 28% |
+| This 5-hour window | 0% of the 5-hour limit (resets 1:09 PM; the plan's reading plus the runs recorded since) | |
+| Today | 101% of the daily pace | 29% |
 | This week | 11% of the weekly limit (resets Sun Nov 1, 1:59 AM) | 4% |
 | Fable this week | 0% of its weekly allowance | |
 
@@ -91,7 +91,7 @@ The plan includes API credits each month. The company uses them only as overflow
 
 Product work by kind, last 7 days: research 43%, build 15%, tools 11%, operations 9%, plan 8%, review 6%, design 4%, test 3%.
 
-Running the site: about 0.014% of this week's allowance (cap 3%; 1 run(s) with a model call).
+Running the site: about 0.027% of this week's allowance (cap 3%; 2 run(s) with a model call).
 
 | Category | Share | Cap |
 | --- | --- | --- |

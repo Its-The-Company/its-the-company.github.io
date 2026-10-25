@@ -98,6 +98,7 @@ header.site .brand{font-weight:800;font-size:var(--fs-3);letter-spacing:-.01em;t
 .tabs a[aria-current]{background:var(--head-ink);color:var(--head-bg);font-weight:700;box-shadow:inset 0 -3px 0 var(--tab-mark)}
 .tabs a:focus-visible{outline-color:var(--head-ink)}
 @media (min-width:880px){.tabs{flex:0 1 460px;margin-left:auto}}
+@media (max-width:440px){.tabs a{padding:var(--s2) var(--s1)}}
 
 /* C44: the notice is one quiet line on every page, never hidden and never behind a tap. */
 .notice-row{padding-top:var(--s3)}
@@ -639,7 +640,8 @@ main.cv-desk.cv-open{padding-bottom:200px}
 <nav class="tabs" aria-label="Sections">
 <a href="{{ '/' | relative_url }}"{% if page.section == "home" or page.section == "requests" %} aria-current="page"{% endif %}>Home</a>
 <a href="{{ '/reports/' | relative_url }}"{% if page.section == "reports" %} aria-current="page"{% endif %}>Reports</a>
-<a href="{{ '/company/' | relative_url }}"{% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" or page.section == "pitches" or page.section == "documents" or page.section == "work" %} aria-current="page"{% endif %}>Company</a>
+<a href="{{ '/company/' | relative_url }}"{% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" or page.section == "documents" or page.section == "work" %} aria-current="page"{% endif %}>Company</a>
+<a href="{{ '/pitches.html' | relative_url }}"{% if page.section == "pitches" %} aria-current="page"{% endif %}>Pitches</a>
 <a href="{{ '/about.html' | relative_url }}"{% if page.section == "about" %} aria-current="page"{% endif %}>About</a>
 </nav>
 </div></header>

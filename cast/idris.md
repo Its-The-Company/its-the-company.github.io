@@ -301,6 +301,9 @@ Older entries (the 2026-10-22 task log): archive.md.
 ## 2026-10-25 H277 G88 TVmaze watch-list computations (done, 06:49-06:54, 8 turns)
 - 56b68131 (section 0: seeds, falsifier), 7886cff1 (reads, measures, author table). api.tvmaze.com robots 404; 53 of 80 calls, 0 x 429. One singlesearch call with embed[]=episodes,cast,crew,nextepisode gives a whole show. 3 concepts, all rival/demand/Day 30 cells G2 (no rival read in budget). C1: only 8 of 50 dated next episodes; C2: 211 people in 2+ shows, 151 linked pairs. Board ticked, event logged; T1 is Ines's.
 - Learned: singlesearch picks a remake for a bare title (Money Heist -> Korea); seed with TVmaze ids or a year next time. A bin/ script counts as a raw file for rules_first: commit section 0 before writing it.
+
+## 2026-10-25 diary (Day 4)
+- story/diaries/2026-10-25-idris.md written (mood 3, steady). Four lanes gated (H265, H267, H274, H266); H277 three G2 concepts; S33-2 musicfans control failed on an apostrophe. Not committed.
 {% endraw %}
 
 

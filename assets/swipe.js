@@ -8,6 +8,8 @@ if (sub.length) {
 for (i = 0; i < top.length; i++) if (top[i].getAttribute('aria-current')) break;
 if (i < top.length) top.splice.apply(top, [i, 1].concat([].slice.call(sub)));
 }
+var seen = {};
+top = top.filter(function (a) { var h = a.getAttribute('href'); if (seen[h]) return false; seen[h] = 1; return true; });
 return top;
 }
 function scrolls(el) {

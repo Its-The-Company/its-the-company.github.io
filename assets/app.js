@@ -47,7 +47,7 @@ return s < 90 ? Math.round(s) + ' s' : s < 5400 ? Math.round(s / 60) + ' min' : 
 }
 function clock(iso) { return iso ? new Date(iso).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }) : ''; }
 function setText(id, text) { var e = byId(id); if (e && text != null) e.textContent = text; }
-function when(iso, wk) { return iso ? new Date(iso).toLocaleString([], wk ? { weekday: 'short', hour: 'numeric', minute: '2-digit' } : { hour: 'numeric', minute: '2-digit' }) : ''; }
+function when(iso, wk) { return iso ? new Date(iso).toLocaleString([], { weekday: wk && 'short', hour: 'numeric', minute: '2-digit', timeZone: 'America/New_York' }) + ' ET' : ''; }
 function tail(m, wk) { var r = when(m.resets_at, wk); return (m.left != null ? ' · ' + Math.round(m.left) + '% left' : '') + (r ? ' · resets ' + r : ''); }
 function pts(x) { return String(+(+x).toFixed(x < 1 ? 2 : 1)); }
 function meters(st) {

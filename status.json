@@ -1,63 +1,14 @@
 {
  "schema": 1,
- "at": "2026-10-25T22:09:46.065366+00:00",
+ "at": "2026-10-25T22:40:30.556601+00:00",
  "session": {
   "active": true,
-  "kind": "evening",
-  "started": "2026-10-25T18:07:06-04:00"
+  "kind": "inbox",
+  "started": "2026-10-25T18:40:13-04:00"
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "ines",
-   "task": "[report] evening",
-   "model": "sonnet",
-   "started": "2026-10-25T22:07:45.341Z",
-   "seconds": null,
-   "finished": "2026-10-25T22:08:25.147000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[diary] Odalys",
-   "model": "haiku",
-   "started": "2026-10-25T22:07:37.152Z",
-   "seconds": null,
-   "finished": "2026-10-25T22:08:18.826000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[diary] Maren",
-   "model": "haiku",
-   "started": "2026-10-25T22:07:35.358Z",
-   "seconds": null,
-   "finished": "2026-10-25T22:08:10.934000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[diary] Ines",
-   "model": "haiku",
-   "started": "2026-10-25T22:07:33.420Z",
-   "seconds": null,
-   "finished": "2026-10-25T22:08:10.115000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[diary] Wrenna",
-   "model": "haiku",
-   "started": "2026-10-25T22:07:39.016Z",
-   "seconds": null,
-   "finished": "2026-10-25T22:08:09.065000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[diary] Idris",
-   "model": "haiku",
-   "started": "2026-10-25T22:07:31.448Z",
-   "seconds": null,
-   "finished": "2026-10-25T22:08:07.562000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [
    {
@@ -109,14 +60,14 @@
  "meter": {
   "five_hour": {
    "pct": 0.0,
-   "resets_at": null,
+   "resets_at": "2026-10-26T02:59:59.874341+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 11.0,
-   "resets_at": "2026-11-01T07:00:00.467347+00:00",
+   "resets_at": "2026-11-01T06:59:59.874363+00:00",
    "used_words": "of your weekly allowance used",
    "left": 89.0,
    "left_words": "of your weekly allowance left"
@@ -126,7 +77,7 @@
    "resets_at": "2026-11-01T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-25T18:07:04.149463-04:00"
+  "read_at": "2026-10-25T18:40:13.475358-04:00"
  },
  "ui": {
   "week_pct": 0.027,
@@ -141,7 +92,7 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-25T18:22:04-04:00",
+ "next_tick": "2026-10-25T18:55:13-04:00",
  "lanes": [
   {
    "name": "Wrenna",
@@ -753,9 +704,19 @@
  "qr": [],
  "inbox": [
   {
+   "id": "c6404397645",
+   "state": "in_progress",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "The Investors have decided on the pitch idea that we are going with. You may..."
+  },
+  {
    "id": "i35",
    "state": "replied",
-   "position": 1,
+   "position": 2,
    "tasks": {
     "open": 1,
     "done": 0

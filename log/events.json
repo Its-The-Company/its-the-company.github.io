@@ -1,5 +1,26 @@
 [
 {
+"time": "2026-10-25T23:46:13-04:00",
+"worker": "operator",
+"type": "session",
+"summary": "Work session 22:09-23:45: 11 Investor messages handled (#29, #53, #59 x2, #61, #57, #54, #41 x4, #56, #62), amendments recorded; #54 site request shipped and published; OPS-1..5, 7, 10 landed, OPS-6 trial; T-0056 runtime Python half 26/26 BridgeTests; #54 drop wired for the next supervisor tick",
+"link": ""
+},
+{
+"time": "2026-10-25T23:45:11-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "#54 option A wired (560d5a7e): the supervisor runs tools/drop_blob.sh in its own tick when the 100 MB guard trips, then pushes. Clone test on current HEAD: 782 commits kept, 19 files differ, fast-forward, nothing over 100 MB.",
+"link": ""
+},
+{
+"time": "2026-10-25T23:32:59-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "OPS-10 proposal applier: tools/apply_proposal.py runs between sessions before HEAD_BEFORE; refuses investors/, guard files, Commandments 6/7/11 text, loosened settings; #62 applies at the supervisor's next tick",
+"link": ""
+},
+{
 "time": "2026-10-25T23:30:15-04:00",
 "worker": "Maren",
 "type": "shipped",

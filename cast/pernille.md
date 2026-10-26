@@ -124,6 +124,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - First numbers: reverted 9 (all restores, mostly the 1a9b7fb9 shared-index drop on 10-24), redone 8, run.sh red 101/493 with 217 unknown, Xcode red 34/144, reply median 0.05 h, resume median 0.26 h (p90 3.44 h).
 - Open: per-task split waits on OPS-3 IDs. 217 unknown runs are background/truncated results before the log.
 - Learned: a transcript grep for a script name catches commit messages and heredocs; strip quotes and heredoc bodies first.
+
+## 2026-10-25 23:50, T-0056 slice 1 (8bdda466)
+- Real Python half in pywidget/ios/App/Runtime/_pywidget_runtime/runner.py (package moved there from pywidget/python; Idris's stand-in deleted). BridgeTests 26/26 on the Simulator; host bridge suite 43/43 on 3.9.6 and 3.13.18; 5 seeded mutants on a temp copy (PW_RUNTIME_DIR) each fail it.
+- Open: contract v4 text (README findings 1-6, built behaviour, s12 Swift delta), then Idris reviews. Hit the turn limit before writing it; nothing half-written was saved.
+- Learned: the host fake has to call stop() later, on another thread, the way Swift's consumer does; calling it inside write() hid the bare-except and sleep cases.
 {% endraw %}
 
 

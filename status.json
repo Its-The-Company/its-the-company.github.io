@@ -1,42 +1,38 @@
 {
  "schema": 1,
- "at": "2026-10-26T03:30:33.263601+00:00",
+ "at": "2026-10-26T03:46:39.189374+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-10-25T22:09:07-04:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] A: supervisor runs drop_blob then pushes",
    "model": "opus",
    "started": "2026-10-26T03:02:58.293Z",
-   "seconds": 1654,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] ops T-0002 OPS-10 proposal applier",
-   "model": "opus",
-   "started": "2026-10-26T03:13:14.165Z",
-   "seconds": 1039,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-10-26T03:45:29.146000+00:00"
   },
   {
    "name": "pernille",
    "task": "[build] T-0056 runtime Python half",
    "model": "opus",
    "started": "2026-10-26T03:27:13.504Z",
-   "seconds": 199,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x2, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-10-26T03:45:08.713000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] ops T-0002 OPS-10 proposal applier",
+   "model": "opus",
+   "started": "2026-10-26T03:13:14.165Z",
+   "seconds": null,
+   "finished": "2026-10-26T03:33:14.129000+00:00"
+  },
   {
    "name": "maren",
    "task": "[design] Needs You image options side by side; update",
@@ -68,13 +64,21 @@
    "started": "2026-10-26T02:56:50.803Z",
    "seconds": null,
    "finished": "2026-10-26T03:20:15.306000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[tools] ops OPS-6 structural trial: worktree per agent",
+   "model": "opus",
+   "started": "2026-10-26T02:57:48.094Z",
+   "seconds": null,
+   "finished": "2026-10-26T03:17:48.859000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
   "runnable_count": 44,
-  "blocked_count": 34
+  "blocked_count": 33
  },
  "meter": {
   "five_hour": {
@@ -114,24 +118,6 @@
  "next_tick": "2026-10-25T22:24:07-04:00",
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] A: supervisor runs drop_blob then pushes",
-   "model": "opus",
-   "since": "2026-10-26T03:02:58.293Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[build] T-0056 runtime Python half",
-   "model": "opus",
-   "since": "2026-10-26T03:27:13.504Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Wrenna",
    "state": "next",
    "task": "T-0013 Wrenna, P2, L11 benchmark gaps: in-app prices for Pythonista, Pyto, Scriptable, Widgy, a-Shell, Juno are...",
@@ -143,6 +129,22 @@
    "name": "Idris",
    "state": "next",
    "task": "T-0015 Idris, P1, L4 view DSL and view-tree schema v1: Python API mirroring widget-safe SwiftUI (stacks, Text with...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "T-0020 Pernille, P1, apply the agreed pywidget_ui renames (closes probation (a) with both reviewers' check): the 19...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "T-0023 Odalys, P2, CORRECTIONS upkeep: create pywidget/docs/research/CORRECTIONS.md (brief section, claim, current...",
    "model": null,
    "since": null,
    "next": []
@@ -165,36 +167,14 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "A: supervisor runs drop_blob then pushes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T03:02:58.293Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Ops T-0002 OPS-10 proposal applier",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T03:13:14.165Z",
-    "o": "i"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "T-0056 runtime Python half",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T03:27:13.504Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
+   {
+    "k": "test",
+    "t": "T-0082 Maren, P1, site_test.sh red",
+    "s": "next",
+    "o": "c"
+   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -230,12 +210,6 @@
    {
     "k": "tools",
     "t": "T-0001 Odalys, P2, OPS-1 follow-up",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "k": "tools",
-    "t": "T-0002 Odalys, P0, OPS-10 proposal applier",
     "s": "next",
     "o": "c"
    },
@@ -681,14 +655,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T-0072 Odalys, P1, option A",
-    "s": "wait",
-    "o": "c",
-    "y": 1
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "T-0073 Odalys, P3, T33-3 terms_locate Bluesky-case test",
     "s": "blocked",
     "o": "c"
@@ -735,6 +701,27 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "A: supervisor runs drop_blob then pushes",
+    "at": "2026-10-26T03:45:29.146000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "T-0056 runtime Python half",
+    "at": "2026-10-26T03:45:08.713000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Ops T-0002 OPS-10 proposal applier",
+    "at": "2026-10-26T03:33:14.129000+00:00",
+    "o": "i"
+   },
+   {
     "w": "Maren",
     "k": "design",
     "t": "Needs You image options side by side",
@@ -768,41 +755,19 @@
     "t": "Ops OPS-6 structural trial",
     "at": "2026-10-26T03:17:48.859000+00:00",
     "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Ops OPS-2 first audit, five largest losses",
-    "at": "2026-10-26T03:12:47.594000+00:00",
-    "o": "i"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Ops OPS-7 research-process audit",
-    "at": "2026-10-26T03:12:13.275000+00:00",
-    "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Ops OPS-1 keep raw transcripts",
-    "at": "2026-10-26T03:10:01.400000+00:00",
-    "o": "i"
    }
   ],
   "count": {
    "next": 44,
-   "wait": 21,
+   "wait": 20,
    "blocked": 13,
-   "you": 7
+   "you": 6
   }
  },
  "qr": [],
  "inbox": [],
  "trimmed": [
   "lane_next",
-  "queue_text",
-  "recent"
+  "queue_text"
  ]
 }

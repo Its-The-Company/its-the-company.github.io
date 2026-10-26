@@ -6,11 +6,14 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (1108 events over 4 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (1111 events over 4 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 4 <small>Sun Oct 25 · 309 events</small>
+## Day 4 <small>Sun Oct 25 · 312 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">23:46</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work session 22:09-23:45: 11 Investor messages handled (#29, #53, #59 x2, #61, #57, #54, #41 x4, #56, #62), amendments recorded; #54 site request shipped and published; OPS-1..5, 7, 10 landed, OPS-6 trial; T-0056 runtime Python half 26/26 BridgeTests; #54 drop wired for the next supervisor tick</td></tr>
+<tr><td class="t num">23:45</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a></td><td class="what"><span class="tag t-shipped">shipped</span> #54 option A wired (560d5a7e): the supervisor runs tools/drop_blob.sh in its own tick when the 100 MB guard trips, then pushes. Clone test on current HEAD: 782 commits kept, 19 files differ, fast-forward, nothing over 100 MB.</td></tr>
+<tr><td class="t num">23:32</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a></td><td class="what"><span class="tag t-shipped">shipped</span> OPS-10 proposal applier: tools/apply_proposal.py runs between sessions before HEAD_BEFORE; refuses investors/, guard files, Commandments 6/7/11 text, loosened settings; #62 applies at the supervisor's next tick</td></tr>
 <tr><td class="t num">23:30</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"> <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a></td><td class="what"><span class="tag t-shipped">shipped</span> Needs you page shows an ask's images side by side, one column per option with its Choose button, read with the Investor's token as blob URLs and never copied into the build (#41 c6407435036). #60 re-asked with pictures (c6407573099).</td></tr>
 <tr><td class="t num">23:26</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a></td><td class="what"><span class="tag t-tools">tools</span> OPS-3 task IDs (2c7fd4be): T-0001 IDs on every open board line (board_tick id/add); governor and ops_metrics tie cost, hours and rework to the ID; work.md asks for '[build] T-0042 ...'; board 108,185 -&gt; 49,292 bytes; OPT-027 (before: 0% of $333.39 tagged)</td></tr>
 <tr><td class="t num">23:20</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"> <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a></td><td class="what"><span class="tag t-tool">tool</span> OPS-4 quality beside cost: tools/quality_metrics.py (48 tests); reverted 9, redone 8, tests/run.sh red 101/493, reply median 0.05 h, resume median 0.26 h</td></tr>
@@ -324,5 +327,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-24.html' | relative_url }}">Older →<b>Day 3</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 4 <small>Sun Oct 25 · 309</small></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 495</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 203</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 4 <small>Sun Oct 25 · 312</small></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 495</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 203</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
 

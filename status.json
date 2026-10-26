@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-10-26T03:18:17.441487+00:00",
+ "at": "2026-10-26T03:30:33.263601+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,37 +9,10 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] ops OPS-3 task IDs everywhere",
-   "model": "opus",
-   "started": "2026-10-26T02:56:31.505Z",
-   "seconds": 1305,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[tools] ops OPS-4 quality metrics and Investor latency",
-   "model": "opus",
-   "started": "2026-10-26T02:56:41.602Z",
-   "seconds": 1295,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[tools] ops OPS-5 experiment ledger and XmR",
-   "model": "opus",
-   "started": "2026-10-26T02:56:50.803Z",
-   "seconds": 1286,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[tools] A: supervisor runs drop_blob then pushes",
    "model": "opus",
    "started": "2026-10-26T03:02:58.293Z",
-   "seconds": 919,
+   "seconds": 1654,
    "finished": null,
    "effort": "high"
   },
@@ -48,51 +21,60 @@
    "task": "[tools] ops T-0002 OPS-10 proposal applier",
    "model": "opus",
    "started": "2026-10-26T03:13:14.165Z",
-   "seconds": 303,
+   "seconds": 1039,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-0056 runtime Python half",
+   "model": "opus",
+   "started": "2026-10-26T03:27:13.504Z",
+   "seconds": 199,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x3, Pernille x2",
+ "who": "Odalys x2, Pernille",
  "recent": [
   {
-   "name": "idris",
-   "task": "[tools] ops OPS-6 structural trial: worktree per agent",
+   "name": "maren",
+   "task": "[design] Needs You image options side by side; update",
    "model": "opus",
-   "started": "2026-10-26T02:57:48.094Z",
+   "started": "2026-10-26T03:19:01.484Z",
    "seconds": null,
-   "finished": "2026-10-26T03:17:48.859000+00:00"
+   "finished": "2026-10-26T03:30:23.009000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] ops OPS-2 first audit, five largest losses",
+   "task": "[tools] ops OPS-3 task IDs everywhere",
    "model": "opus",
-   "started": "2026-10-26T02:51:41.777Z",
+   "started": "2026-10-26T02:56:31.505Z",
    "seconds": null,
-   "finished": "2026-10-26T03:12:47.594000+00:00"
+   "finished": "2026-10-26T03:26:51.040000+00:00"
   },
   {
-   "name": "wrenna",
-   "task": "[research] ops OPS-7 research-process audit",
+   "name": "pernille",
+   "task": "[tools] ops OPS-4 quality metrics and Investor latency",
    "model": "opus",
-   "started": "2026-10-26T02:56:59.804Z",
+   "started": "2026-10-26T02:56:41.602Z",
    "seconds": null,
-   "finished": "2026-10-26T03:12:13.275000+00:00"
+   "finished": "2026-10-26T03:20:36.642000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[tools] ops OPS-1 keep raw transcripts",
+   "name": "pernille",
+   "task": "[tools] ops OPS-5 experiment ledger and XmR",
    "model": "opus",
-   "started": "2026-10-26T02:51:34.001Z",
+   "started": "2026-10-26T02:56:50.803Z",
    "seconds": null,
-   "finished": "2026-10-26T03:10:01.400000+00:00"
+   "finished": "2026-10-26T03:20:15.306000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 46,
-  "blocked_count": 33
+  "runnable_count": 44,
+  "blocked_count": 34
  },
  "meter": {
   "five_hour": {
@@ -134,25 +116,25 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] ops OPS-3 task IDs everywhere",
+   "task": "[tools] A: supervisor runs drop_blob then pushes",
    "model": "opus",
-   "since": "2026-10-26T02:56:31.505Z",
+   "since": "2026-10-26T03:02:58.293Z",
    "next": [],
    "effort": "high"
   },
   {
    "name": "Pernille",
    "state": "running",
-   "task": "[tools] ops OPS-4 quality metrics and Investor latency",
+   "task": "[build] T-0056 runtime Python half",
    "model": "opus",
-   "since": "2026-10-26T02:56:41.602Z",
+   "since": "2026-10-26T03:27:13.504Z",
    "next": [],
    "effort": "high"
   },
   {
    "name": "Wrenna",
    "state": "next",
-   "task": "Wrenna, P2, L11 benchmark gaps: in-app prices for Pythonista, Pyto, Scriptable, Widgy, a-Shell, Juno are unread...",
+   "task": "T-0013 Wrenna, P2, L11 benchmark gaps: in-app prices for Pythonista, Pyto, Scriptable, Widgy, a-Shell, Juno are...",
    "model": null,
    "since": null,
    "next": []
@@ -160,7 +142,7 @@
   {
    "name": "Idris",
    "state": "next",
-   "task": "Idris, P1, L4 view DSL and view-tree schema v1: Python API mirroring widget-safe SwiftUI (stacks, Text with date...",
+   "task": "T-0015 Idris, P1, L4 view DSL and view-tree schema v1: Python API mirroring widget-safe SwiftUI (stacks, Text with...",
    "model": null,
    "since": null,
    "next": []
@@ -168,7 +150,7 @@
   {
    "name": "Maren",
    "state": "next",
-   "task": "Maren, P1, C13 after the Investors pick a direction: high-contrast (7:1) palette variants, token export to Swift...",
+   "task": "T-0040 Maren, P1, C13 after the Investors pick a direction: high-contrast (7:1) palette variants, token export to...",
    "model": null,
    "since": null,
    "next": []
@@ -187,33 +169,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Ops OPS-3 task IDs everywhere",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T02:56:31.505Z",
-    "o": "i"
-   },
-   {
-    "w": "Pernille",
-    "k": "tools",
-    "t": "Ops OPS-4 quality metrics and Investor latency",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T02:56:41.602Z",
-    "o": "i"
-   },
-   {
-    "w": "Pernille",
-    "k": "tools",
-    "t": "Ops OPS-5 experiment ledger and XmR",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T02:56:50.803Z",
-    "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "A: supervisor runs drop_blob then pushes",
     "m": "opus",
     "e": "high",
@@ -228,48 +183,46 @@
     "e": "high",
     "at": "2026-10-26T03:13:14.165Z",
     "o": "i"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "T-0056 runtime Python half",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-26T03:27:13.504Z",
+    "o": "c"
    }
   ],
   "open": [
    {
     "w": "Odalys",
-    "k": "ops",
-    "t": "OPS-3 task IDs",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "OPS-4 quality beside cost",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "OPS-5 experiment ledger",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "OPS-6 structural trials",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "OPS-8 Company > Infrastructure page",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "tools",
-    "t": "OPS-9 proposal",
+    "t": "T-0080 Odalys, P2, OPS-3 follow-up",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "k": "ops",
+    "t": "T-0004 Odalys, P1, OPS-5 experiment ledger",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "k": "ops",
+    "t": "T-0005 Odalys, P2, OPS-6 structural trials",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "k": "site",
+    "t": "T-0006 Odalys, P2, OPS-8 Company > Infrastructure page",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "k": "tools",
+    "t": "T-0007 Odalys, P1, OPS-9 proposal",
     "s": "blocked",
     "o": "c",
     "y": 1
@@ -287,50 +240,48 @@
     "o": "c"
    },
    {
-    "w": "Idris",
     "k": "build",
-    "t": "L3 device run",
+    "t": "T-0008 Idris, P0, L3 device run",
     "s": "wait",
     "o": "c"
    },
    {
-    "w": "Idris",
     "k": "build",
-    "t": "L3 follow-ups on the Simulator",
+    "t": "T-0009 Idris, P1, L3 follow-ups on the Simulator",
     "s": "next",
     "o": "c"
    },
    {
     "w": "unassigned",
     "k": "build",
-    "t": "L1 demo widgets",
+    "t": "T-0010 L1 demo widgets",
     "s": "next",
     "o": "c"
    },
    {
     "w": "unassigned",
     "k": "measure",
-    "t": "L1/L2 device checks",
+    "t": "T-0011 L1/L2 device checks",
     "s": "next",
     "o": "c"
    },
    {
     "w": "unassigned",
     "k": "browser",
-    "t": "Read developer.apple.com \"Keeping a widget up to date\", WidgetPushHandler,...",
+    "t": "T-0012 Read developer.apple.com \"Keeping a widget up to date\",...",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Wrenna",
     "k": "research",
-    "t": "L11 benchmark gaps",
+    "t": "T-0013 Wrenna, P2, L11 benchmark gaps",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Investors",
-    "t": "[needs-person] Investors, P2, L11 person read",
+    "t": "[needs-person] T-0014 Investors, P2, L11 person read",
     "s": "blocked",
     "o": "c",
     "y": 1
@@ -338,247 +289,244 @@
    {
     "w": "Idris",
     "k": "research",
-    "t": "L4 view DSL and view-tree schema v1",
+    "t": "T-0015 Idris, P1, L4 view DSL and view-tree schema v1",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "App skeleton",
+    "t": "T-0016 Idris, P1, app skeleton",
     "s": "wait",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "research",
-    "t": "L5 interaction API spec for 1.1",
+    "t": "T-0017 Idris, P3, L5 interaction API spec for 1.1",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "research",
-    "t": "L17 builder ADR desk research for 1.2",
+    "t": "T-0018 Idris, P3, L17 builder ADR desk research for 1.2",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "review",
-    "t": "Review pywidget_ui public names before they freeze",
+    "t": "T-0019 Idris + Maren, P1, review pywidget_ui public names before they freeze",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Pernille",
     "k": "build",
-    "t": "Apply the agreed pywidget_ui renames",
+    "t": "T-0020 Pernille, P1, apply the agreed pywidget_ui renames",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "test",
-    "t": "One Simulator preview snapshot for the names freeze",
+    "t": "T-0021 Idris, P2, one Simulator preview snapshot for the names freeze",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Pernille",
     "k": "build",
-    "t": "Python runtime engineer probation",
+    "t": "T-0022 Pernille, P1, Python runtime engineer probation",
     "s": "wait",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "research",
-    "t": "CORRECTIONS upkeep",
+    "t": "T-0023 Odalys, P2, CORRECTIONS upkeep",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "Maren states open items 2-3",
+    "t": "T-0024 Idris, P2, Maren states open items 2-3",
     "s": "wait",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "String Catalog",
+    "t": "T-0025 Idris, P2, String Catalog",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "build",
-    "t": "Premade widget code",
+    "t": "T-0026 Odalys, P2, premade widget code",
     "s": "wait",
     "o": "c"
    },
    {
     "w": "Wrenna",
     "k": "research",
-    "t": "L14 web IDE desk research for Phase 3",
+    "t": "T-0027 Wrenna, P3, L14 web IDE desk research for Phase 3",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "ADR-005 s7 item 2",
+    "t": "T-0028 Odalys, P1, ADR-005 s7 item 2",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Wrenna",
     "k": "research",
-    "t": "L15 module usage ranking and corpus",
+    "t": "T-0029 Wrenna, P2, L15 module usage ranking and corpus",
     "s": "wait",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "build",
-    "t": "L15 clean-room fixtures and overlap check",
+    "t": "T-0030 Odalys, P3, L15 clean-room fixtures and overlap check",
     "s": "wait",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "Pro purchase",
+    "t": "T-0031 Idris, P1, Pro purchase",
     "s": "wait",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "L9 device probe once a device or Simulator is free",
+    "t": "T-0032 Idris, P1, L9 device probe once a device or Simulator is free: Share...",
     "s": "next",
     "o": "c"
    },
    {
     "k": "research",
-    "t": "Unassigned, P2, person's browser checks on developer.apple.com for the [M]...",
+    "t": "T-0033 Unassigned, P2, person's browser checks on developer.apple.com for...",
     "s": "next",
     "o": "c"
    },
    {
     "k": "research",
-    "t": "Person read",
+    "t": "T-0034 Person read",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Operator",
-    "t": "[needs-person] Investors or Operator, P1, add to the developer.apple.com...",
+    "t": "[needs-person] T-0035 Investors or Operator, P1, add to the...",
     "s": "wait",
     "o": "c",
     "y": 1
    },
    {
-    "w": "Idris",
     "k": "release",
-    "t": "PrivacyInfo.xcprivacy for the app and the embedded CPython and native...",
+    "t": "T-0036 Idris, P2, PrivacyInfo.xcprivacy for the app and the embedded CPython...",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "L4 renderer",
+    "t": "T-0037 Idris, P0, L4 renderer",
     "s": "wait",
     "o": "c"
    },
    {
     "w": "Maren",
     "k": "design",
-    "t": "L4 gallery",
+    "t": "T-0038 Maren+Idris, P1, L4 gallery",
     "s": "wait",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "C13 check",
+    "t": "T-0039 Idris, P2, C13 check",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Maren",
     "k": "design",
-    "t": "C13 after the Investors pick a direction",
+    "t": "T-0040 Maren, P1, C13 after the Investors pick a direction",
     "s": "next",
     "o": "c"
    },
    {
-    "w": "Idris",
     "k": "build",
-    "t": "ADR-004 editor spike",
+    "t": "T-0041 Idris, P1, ADR-004 editor spike",
     "s": "next",
     "o": "c"
    },
    {
-    "w": "Idris",
     "k": "build",
-    "t": "Acknowledgements screen",
+    "t": "T-0042 Idris, P2, Acknowledgements screen",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "ios",
-    "t": "V1 bundle strip",
+    "t": "T-0043 Idris, P1, v1 bundle strip",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "ios",
-    "t": "L12 Q3 spike",
+    "t": "T-0044 Idris, P3, L12 Q3 spike",
     "s": "next",
     "o": "c"
    },
    {
     "k": "research",
-    "t": "Person, P2, name checks",
+    "t": "T-0045 Person, P2, name checks",
     "s": "next",
     "o": "c"
    },
    {
     "k": "research",
-    "t": "Person",
+    "t": "T-0046 person",
     "s": "next",
     "o": "c"
    },
    {
     "k": "build",
-    "t": "Spike owner, P3, C2 Info.plist strings and privacy manifest",
+    "t": "T-0047 spike owner, P3, C2 Info.plist strings and privacy manifest: add...",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "plan",
-    "t": "Widget debugging v1",
+    "t": "T-0048 Idris, P1, widget debugging v1",
     "s": "wait",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "build",
-    "t": "Install from file, Python side",
+    "t": "T-0049 Odalys, P2, Install from file, Python side",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "site",
-    "t": "S1 first-party web gallery",
+    "t": "T-0050 Odalys, P3, S1 first-party web gallery",
     "s": "wait",
     "o": "c",
     "y": 1
@@ -586,118 +534,114 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Pro premade placement",
+    "t": "T-0051 Idris, P1, Pro premade placement",
     "s": "wait",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "Stdlib cut in the build phase",
+    "t": "T-0052 Idris, P1, stdlib cut in the build phase",
     "s": "wait",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "C2-Q1 Swift-only location fix in the widget extension",
+    "t": "T-0053 Idris, P2, C2-Q1 Swift-only location fix in the widget extension",
     "s": "wait",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "research",
-    "t": "Align L12-security.md with the C2 chair note",
+    "t": "T-0054 Odalys, P3, align L12-security.md with the C2 chair note",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Pernille",
     "k": "build",
-    "t": "Widget run keeps the script's timeline",
+    "t": "T-0055 Pernille, P1, widget run keeps the script's timeline",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Pernille",
     "k": "build",
-    "t": "Replace the stand-in pywidget/ios/App/Runtime/_pywidget_runtime.py with the...",
+    "t": "T-0056 Pernille, P1, replace the stand-in...",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "C1 bridge slice 2",
+    "t": "T-0057 Idris, P1, C1 bridge slice 2",
     "s": "wait",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "Console view",
+    "t": "T-0058 Idris, P1, console view",
     "s": "wait",
     "o": "c"
    },
    {
-    "w": "Ines",
     "k": "plan",
-    "t": "Chair the L6 s8 finding",
+    "t": "T-0059 Ines, P1, chair the L6 s8 finding",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Operator",
-    "t": "[needs-person] Investors or Operator, P2, browser read of Apple Developer...",
+    "t": "[needs-person] T-0060 Investors or Operator, P2, browser read of Apple...",
     "s": "next",
     "o": "c"
    },
    {
-    "w": "Wrenna",
     "k": "release",
-    "t": "Readiness matrix and store text from L6 s8 duties",
+    "t": "T-0061 Wrenna, P2, readiness matrix and store text from L6 s8 duties",
     "s": "next",
     "o": "c"
    },
    {
-    "w": "Maren",
     "k": "design",
-    "t": "State-spec s3.2 Pro card",
+    "t": "T-0062 Maren, P3, state-spec s3.2 Pro card",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "k": "build",
+    "t": "T-0063 Idris, P3, location-declined state for the \"distance to a saved...",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "Location-declined state for the \"distance to a saved place\" premade",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Live check after publish",
+    "t": "T-0064 Idris",
     "s": "blocked",
     "o": "c"
    },
    {
     "w": "Wrenna",
     "k": "test",
-    "t": "After this session's publish, check Send live with a real Investor token: a...",
+    "t": "T-0065 Wrenna, P1",
     "s": "blocked",
     "o": "c"
    },
    {
     "w": "Maren",
     "k": "design",
-    "t": "Designer probation, due Day 8",
+    "t": "T-0066 Maren",
     "s": "blocked",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "build",
-    "t": "Additions page wiring",
+    "t": "T-0067 Odalys",
     "s": "blocked",
     "o": "c",
     "p": [
@@ -708,14 +652,21 @@
    {
     "w": "Wrenna",
     "k": "test",
-    "t": "Site_qa.py checks for the additions against fixtures now",
+    "t": "T-0068 Wrenna",
     "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "T-0069 Unrelated side project",
+    "s": "blocked",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "The Xcode project for the chosen app, first commit, daily named artifact,...",
+    "t": "T-0070 Idris probation",
     "s": "wait",
     "o": "c",
     "y": 1
@@ -723,14 +674,14 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Tools/ops_metrics.py and its tests done",
+    "t": "T-0071 Odalys probation",
     "s": "blocked",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Option A",
+    "t": "T-0072 Odalys, P1, option A",
     "s": "wait",
     "o": "c",
     "y": 1
@@ -738,14 +689,13 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T33-3 terms_locate Bluesky-case test",
+    "t": "T-0073 Odalys, P3, T33-3 terms_locate Bluesky-case test",
     "s": "blocked",
     "o": "c"
    },
    {
-    "w": "Odalys",
     "k": "tools",
-    "t": "T34-1 host clearance cache",
+    "t": "T-0074 Odalys, P2, T34-1 host clearance cache",
     "s": "blocked",
     "o": "i",
     "y": 1
@@ -753,37 +703,65 @@
    {
     "w": "Wrenna",
     "k": "test",
-    "t": "Rst_surface_test no summary",
+    "t": "T-0075 Wrenna, P2, rst_surface_test no summary",
     "s": "next",
     "o": "c"
    },
    {
     "k": "release",
-    "t": "Prove the release path early",
+    "t": "T-0076 Prove the release path early",
     "s": "blocked",
     "o": "c"
    },
    {
     "k": "tools",
-    "t": "Write tools/upload.sh",
+    "t": "T-0077 Write tools/upload.sh",
     "s": "blocked",
     "o": "c"
    },
    {
     "k": "tools",
-    "t": "Weekly: read the Claude Code changelog and update only when nothing changes...",
+    "t": "T-0078 Weekly",
     "s": "blocked",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Watcher review on Day 5",
+    "t": "T-0079 Odalys",
     "s": "blocked",
     "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Needs You image options side by side",
+    "at": "2026-10-26T03:30:23.009000+00:00",
+    "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Ops OPS-3 task IDs everywhere",
+    "at": "2026-10-26T03:26:51.040000+00:00",
+    "o": "i"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Ops OPS-4 quality metrics and Investor latency",
+    "at": "2026-10-26T03:20:36.642000+00:00",
+    "o": "i"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Ops OPS-5 experiment ledger and XmR",
+    "at": "2026-10-26T03:20:15.306000+00:00",
+    "o": "i"
+   },
    {
     "w": "Idris",
     "k": "tools",
@@ -804,33 +782,27 @@
     "t": "Ops OPS-7 research-process audit",
     "at": "2026-10-26T03:12:13.275000+00:00",
     "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Ops OPS-1 keep raw transcripts",
+    "at": "2026-10-26T03:10:01.400000+00:00",
+    "o": "i"
    }
   ],
   "count": {
-   "next": 46,
-   "wait": 20,
+   "next": 44,
+   "wait": 21,
    "blocked": 13,
    "you": 7
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6407435036",
-   "state": "waiting",
-   "position": 1,
-   "eta": "2026-10-25T22:24:07-04:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Update the site so that Investor requests regarding visual direction show eac..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
-  "task_done"
+  "recent"
  ]
 }

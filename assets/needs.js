@@ -37,16 +37,37 @@ return out;
 }
 function isReceipt(b) { return /\(automatic receipt\)\s*$/.test(b || ''); }
 function who(c) { return String((c && c.user && c.user.login) || '').toLowerCase(); }
-function pickAsk(issue, cs, inv) {
+function pickAsk(issue, cs, inv, repo) {
 var co = [], last = -1;
 cs.forEach((c, i) => { if (inv(who(c))) last = i; else if (!isReceipt(c.body)) co.push({ c: c, i: i }); });
 var after = co.filter((x) => x.i > last), pool = after.length ? after : co, hit = null;
 for (var k = pool.length - 1; k >= 0 && !hit; k--) if (options(pool[k].c.body).length) hit = pool[k];
 if (!hit && after.length) hit = after[after.length - 1];
 var src = hit ? hit.c : issue, opts = options(src && src.body);
-return { body: (src && src.body) || '', at: (src && src.created_at) || '', opts: opts, answered: !!hit && last > hit.i, lastInv: last >= 0 ? cs[last] : null };
+return { body: (src && src.body) || '', imgs: images(src && src.body, repo), at: (src && src.created_at) || '', opts: opts, answered: !!hit && last > hit.i, lastInv: last >= 0 ? cs[last] : null };
 }
-window.CompanyNeeds = { options: options, pickAsk: pickAsk };
+var START = /^[ \t]*(?:#{1,4}[ \t]+(?:\*\*|__)?(?:Option[ \t]+)?\(?([A-Fa-f])\)?(?:\*\*|__)?[ \t]*(?:$|[.:,\u2014-])|(?:[-*+][ \t]+)?(?:\*\*|__)?[ \t]*\(?([A-Fa-f])(?:[ \t]+\([^)\n]{1,30}\))?(?:\*\*|__)?[ \t]*[.):,\u2014-])/;
+var IMG = /!\[([^\]]*)\]\(\s*<?([^)\s>]+)>?[^)]*\)|<img\b([^>]*)>/gi;
+function where(u, repo) {
+u = String(u || '').replace(/[?#].*$/, '');
+var m = /^[a-z]+:\/\/(?:(?:www\.)?github\.com\/([^/]+\/[^/]+)\/(?:blob|raw)|raw\.githubusercontent\.com\/([^/]+\/[^/]+))\/([^/]+)\/(.+)$/i.exec(u), r = { ref: '', path: u };
+if (m) { if ((m[1] || m[2]).toLowerCase() !== String(repo).toLowerCase()) return null; r = { ref: m[3], path: m[4] }; } else if (/^[a-z][\w+.-]*:|^\/\//i.test(u)) return null;
+try { r.path = decodeURIComponent(r.path).replace(/^\.?\//, ''); } catch (e) { return null; }
+return /(^|\/)\.\.(\/|$)/.test(r.path) || !/\.(png|jpe?g|gif|webp|svg)$/i.test(r.path) ? null : r;
+}
+function images(text, repo) {
+var out = [], key = '';
+String(text || '').replace(/<!--[\s\S]*?-->|\r/g, '').replace(/```[\s\S]*?```/g, '').split('\n').forEach((ln) => {
+var s = START.exec(ln), m; if (s) key = (s[1] || s[2]).toUpperCase();
+IMG.lastIndex = 0;
+while ((m = IMG.exec(ln))) {
+var at = m[3] || '', src = m[2] || (/\bsrc=["']([^"']+)/i.exec(at) || [])[1], w = where(src, repo);
+if (w) out.push({ key: key, alt: clean(m[2] ? m[1] : (/\balt=["']([^"']*)/i.exec(at) || [])[1]), path: w.path, ref: w.ref });
+}
+});
+return out;
+}
+window.CompanyNeeds = { options: options, pickAsk: pickAsk, images: images };
 var S = window.CompanySite, root = document.getElementById('needs-root');
 if (!S || !root || !S.getToken()) return;
 var anon = document.getElementById('needs-anon'); if (anon) anon.hidden = true;
@@ -86,6 +107,17 @@ if (!r.ok) throw new Error(S.said(r) + ' saving ' + f.name);
 return r.json().then((j) => { var u = j.content && j.content.html_url; return (/^image\//.test(f.type) ? '![' + safe + '](' + u + '?raw=true)' : '[' + safe + '](' + u + ')'); });
 });
 }
+function pic(p, im) {
+var a = mk(p, 'a', 'ny-pic', 'Loading ' + im.path + '...'), h = S.hdrs(), x = im.path.split('.').pop().toLowerCase();
+h.Accept = 'application/vnd.github.raw'; if (im.alt) mk(p, 'span', 'meta', im.alt);
+fetch(S.API + '/repos/' + repo + '/contents/' + im.path.split('/').map(encodeURIComponent).join('/') + (im.ref ? '?ref=' + encodeURIComponent(im.ref) : ''), { headers: h })
+.then(S.checkAuth).then((r) => { if (!r.ok) throw new Error(r.status === 404 ? 'not on GitHub yet' : S.said(r)); return r.blob(); })
+.then((bl) => {
+var u = URL.createObjectURL(new Blob([bl], { type: 'image/' + ({ jpg: 'jpeg', svg: 'svg+xml' }[x] || x) })), img = el('img');
+img.src = u; img.alt = im.alt || im.path; a.textContent = ''; a.appendChild(img);
+if (x !== 'svg') { a.href = u; a.target = '_blank'; a.title = 'Open full size'; }
+}, (e) => { a.className = 'meta ny-warn'; a.textContent = (im.alt || im.path) + ': ' + e.message + '.'; });
+}
 function box(li, n, i, ask) {
 var b = li.querySelector('.ny-box') || li.appendChild(el('div', 'ny-box')), files = [], dk = 'company.draft.' + n, pressed = null;
 b.textContent = '';
@@ -95,9 +127,15 @@ s.title = 'The question this reply answers'; mk(a, 'pre', null, plain(ask.body))
 if (!ask.opts.length) a.open = true;
 }
 if (ask.answered && ask.lastInv) mk(b, 'p', 'meta ny-done', 'You answered ' + when(ask.lastInv.created_at) + ': "' + plain(ask.lastInv.body).slice(0, 80) + '". The company closes the issue once it has read it.');
+var cols = {}, grid = (ask.imgs || []).length ? mk(b, 'div', 'ny-imgs') : null;
+(ask.imgs || []).forEach((im) => {
+var c = cols[im.key], o = ask.opts.filter((y) => y.key === im.key)[0];
+if (!c) { c = cols[im.key] = mk(grid, 'div', 'ny-col'); mk(c, 'p', 'ny-key', im.key ? im.key + (o && o.label ? ': ' + o.label : '') : 'Images'); }
+pic(c, im);
+});
 var ta = el('textarea'), opts = mk(b, 'div', 'ny-opts'), form = mk(b, 'div', 'ny-form');
 ask.opts.forEach((o) => {
-var btn = mk(opts, 'button', 'cv-tool', o.key === o.label || !o.label ? o.key : o.key + ': ' + o.label); btn.type = 'button';
+var c = cols[o.key], btn = c ? mk(c, 'button', 'cv-tool', 'Choose ' + o.key) : mk(opts, 'button', 'cv-tool', o.key === o.label || !o.label ? o.key : o.key + ': ' + o.label); btn.type = 'button';
 btn.setAttribute('aria-pressed', 'false'); btn.title = 'Fill the reply with ' + o.reply;
 btn.onclick = () => {
 if (pressed) pressed.setAttribute('aria-pressed', 'false');
@@ -107,7 +145,7 @@ ta.value = v.trim() ? o.reply + '\n\n' + v : o.reply;
 btn.setAttribute('data-r', o.reply); btn.setAttribute('aria-pressed', 'true'); pressed = btn; ta.focus(); save(); sync();
 };
 });
-if (!ask.opts.length) opts.parentNode.removeChild(opts);
+if (!opts.firstChild) b.removeChild(opts);
 ta.placeholder = ask.opts.length ? 'Tap an option or write your answer to #' + n : 'Your answer to #' + n;
 ta.setAttribute('aria-label', 'Your reply to #' + n); ta.value = LS.getItem(dk) || ''; form.appendChild(ta);
 var list = mk(form, 'ul', 'ny-files'), bar = mk(form, 'div', 'ny-bar'), pick = el('input'), add = mk(bar, 'button', 'cv-tool', 'Add files');
@@ -193,7 +231,7 @@ if (Array.prototype.every.call(ul.children, (li) => li.hidden)) for (var e = ul;
 rows.forEach((x) => {
 var i = open[x[1]], b = x[0].querySelector('.ny-box') || x[0].appendChild(el('div', 'ny-box'));
 b.textContent = 'Reading the question...';
-thread(i).then((cs) => box(x[0], x[1], i, pickAsk(i, cs, inv)), (e) => { b.textContent = 'Could not read #' + x[1] + ': ' + e.message + '.'; });
+thread(i).then((cs) => box(x[0], x[1], i, pickAsk(i, cs, inv, repo)), (e) => { b.textContent = 'Could not read #' + x[1] + ': ' + e.message + '.'; });
 });
 }, (e) => { mk(root, 'p', 'meta ny-warn', 'Could not read the open requests: ' + e.message + '. The list below is as built.'); });
 })();

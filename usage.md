@@ -9,11 +9,11 @@ section: "usage"
 <p class="lead">One Claude Max 20x subscription runs the company, and it never buys extra usage. The plan meters a rolling 5-hour window, a weekly window, and a weekly Fable allowance; each bar shows how much of that limit is used. The company aims to use the whole weekly allowance by each reset, never early (Tenet 7), and a marker on each bar shows the plan by now.</p>
 
 <div class="panel">
-<p class="status-line warm"><b>6 points ahead of the week's even pace.</b> <span>Source: the plan's own meter, read Sun 10:09 PM.</span></p>
-<div class="bar warm"><div class="bar-head"><span>This week</span><span>19% of the weekly limit · resets Sun 2:00 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:19.0%"></div><i class="mark plan" style="left:12.7%" title="plan by now: 13%"></i></div><div class="bar-foot">Plan by now: 13% of your weekly allowance used, the marker.</div></div>
-<div class="bar behind"><div class="bar-head"><span>Today</span><span>57% of today's share</span></div><div class="bar-track"><div class="bar-fill" style="width:57.2%"></div><i class="mark plan" style="left:88.8%" title="plan by now: 89%"></i><i class="mark reserve" style="left:100.0%" title="the evening report's reserve"></i></div><div class="bar-foot">Plan by now: 89% of today's share of your weekly allowance. The grey marker <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> back a reserve for the evening report; it is released once the report is done.</div></div>
+<p class="status-line warm"><b>6 points ahead of the week's even pace.</b> <span>Source: the governor's estimate, until the plan's meter is read.</span></p>
+<div class="bar warm"><div class="bar-head"><span>This week</span><span>19% of the weekly limit · resets Sun 2:00 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:18.9%"></div><i class="mark plan" style="left:12.8%" title="plan by now: 13%"></i></div><div class="bar-foot">Plan by now: 13% of your weekly allowance used, the marker.</div></div>
+<div class="bar behind"><div class="bar-head"><span>Today</span><span>57% of today's share</span></div><div class="bar-track"><div class="bar-fill" style="width:57.2%"></div><i class="mark plan" style="left:89.6%" title="plan by now: 90%"></i><i class="mark reserve" style="left:100.0%" title="the evening report's reserve"></i></div><div class="bar-foot">Plan by now: 90% of today's share of your weekly allowance. The grey marker <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> back a reserve for the evening report; it is released once the report is done.</div></div>
 <div class="bar ok"><div class="bar-head"><span>Last 5 hours</span><span>0% of the 5-hour limit</span></div><div class="bar-track"><div class="bar-fill" style="width:0.0%"></div></div></div>
-<div class="bar ok"><div class="bar-head"><span>Fable this week</span><span>2% of its weekly allowance</span></div><div class="bar-track"><div class="bar-fill" style="width:2.0%"></div></div><div class="bar-foot">A ceiling, not a target: Fable shares the weekly limit, so it is used as the work needs.</div></div>
+<div class="bar ok"><div class="bar-head"><span>Fable this week</span><span>1% of its weekly allowance</span></div><div class="bar-track"><div class="bar-fill" style="width:1.2%"></div></div><div class="bar-foot">A ceiling, not a target: Fable shares the weekly limit, so it is used as the work needs.</div></div>
 </div>
 
 ## Why
@@ -77,11 +77,11 @@ The plan includes API credits each month. The company uses them only as overflow
 | Window | Used | Plan by now |
 | --- | --- | --- |
 | This 5-hour window | 0% of the 5-hour limit (since the plan's reset at 11:00 PM; estimate from recorded runs; a session still running is not in it yet) | |
-| Today | 57% of the daily pace | 89% |
+| Today | 57% of the daily pace | 90% |
 | This week | 19% of the weekly limit (resets Sun Nov 1, 2:00 AM) | 13% |
-| Fable this week | 2% of its weekly allowance | |
+| Fable this week | 1% of its weekly allowance | |
 
-6 points ahead of the week's even pace. Why: More work ran early in the week than an even pace would. (Source: the plan's own meter.)
+6 points ahead of the week's even pace. Why: More work ran early in the week than an even pace would. (Source: the governor's estimate.)
 
 | Model | Share of this week's usage |
 | --- | --- |

@@ -1,45 +1,96 @@
 {
  "schema": 1,
- "at": "2026-10-26T07:00:28.439507+00:00",
+ "at": "2026-10-26T10:04:52.222239+00:00",
  "session": {
   "active": true,
-  "kind": "inbox",
-  "started": "2026-10-26T02:59:38-04:00"
+  "kind": "morning",
+  "started": "2026-10-26T06:01:16-04:00"
  },
  "workers": [],
  "who": "",
- "recent": [],
+ "recent": [
+  {
+   "name": "ines",
+   "task": "[report] morning",
+   "model": "haiku",
+   "started": "2026-10-26T10:01:41.578Z",
+   "seconds": null,
+   "finished": "2026-10-26T10:04:16.676000+00:00"
+  }
+ ],
  "queue": {
-  "runnable": [],
-  "blocked": [],
+  "runnable": [
+   {
+    "kind": "ops",
+    "text": "T-0005 Odalys, P2, OPS-6 structural trials: worktree per agent, a task store in place of the markdown board,..."
+   },
+   {
+    "kind": "site",
+    "text": "T-0006 Odalys, P2, OPS-8 Company > Infrastructure page: workflow diagrams from code/config with live counts and..."
+   },
+   {
+    "kind": "research",
+    "text": "T-0115 Ines + Odalys, P3, CORRECTIONS pass 3 s3b tags in docs Wrenna does not own (T-0109, 4eb6a81a; quotes and..."
+   },
+   {
+    "kind": "tools",
+    "text": "T-0140 Odalys, P2, after 20 builds in ops/metrics/xc.jsonl (tools/xc.sh evidence line, d9a9cc48): measure build..."
+   },
+   {
+    "kind": "tools",
+    "text": "T-0171 Odalys, P1, and approved (an Investor 02:28, 02:29): both edit the same setup/OPERATIONS.md paragraph. After..."
+   }
+  ],
+  "blocked": [
+   {
+    "kind": "tools",
+    "text": "T-0007 Odalys, P1, OPS-9 proposal item 7): rules/hooks/model-guard.py refuses an [ops] kind tag (2026-10-25 22:55,..."
+   },
+   {
+    "kind": "measure",
+    "text": "T-0011 L1/L2 device checks: CMPedometer, CMMotionActivity, HealthKit (locked/unlocked), battery, location inside the..."
+   },
+   {
+    "kind": "research",
+    "text": "T-0045 Person, P2, name checks: USPTO wordmark search (Class 9 and 42, live and dead) for Lathe, Pith, Coilwork with..."
+   },
+   {
+    "kind": "research",
+    "text": "T-0155 Wrenna, P1, T-0035 re-read (fix landed: T-0143 9c4620b1): re-read the one page..."
+   },
+   {
+    "kind": "build",
+    "text": "T-0064 Idris: live check after publish: open /connect.html#setup, follow the pre-filled token link on github.com and..."
+   }
+  ],
   "runnable_count": 52,
   "blocked_count": 39
  },
  "meter": {
   "five_hour": {
-   "pct": 93.0,
-   "resets_at": "2026-10-26T07:59:59.861555+00:00",
+   "pct": 0.0,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "left": 7.0,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 36.0,
-   "resets_at": "2026-11-01T06:59:59.861575+00:00",
+   "resets_at": "2026-11-01T07:00:00.474844+00:00",
    "used_words": "of your weekly allowance used",
    "left": 64.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 2.0,
-   "resets_at": "2026-11-01T06:59:59.861773+00:00",
+   "resets_at": "2026-11-01T07:00:00.475004+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-26T02:59:37.474689-04:00"
+  "read_at": "2026-10-26T06:01:11.141438-04:00"
  },
  "ui": {
-  "week_pct": 0.058,
-  "five_hour_pct": 0.0,
+  "week_pct": 0.078,
+  "five_hour_pct": 0.101,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -752,60 +803,11 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0154 Infrastructure Techniques section",
-    "at": "2026-10-26T06:57:41.758000+00:00",
-    "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0196 open arxiv help/robots only",
-    "at": "2026-10-26T06:56:05.014000+00:00",
+    "w": "Ines",
+    "k": "report",
+    "t": "Morning",
+    "at": "2026-10-26T10:04:16.676000+00:00",
     "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "T-0030 clean-room fixtures + overlap check",
-    "at": "2026-10-26T06:55:18.903000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0185 T-0186 literal pathspecs",
-    "at": "2026-10-26T06:54:20.078000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "build",
-    "t": "T-0026 premade widget code",
-    "at": "2026-10-26T06:50:26.498000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0122 Swift renderer fonts+card",
-    "at": "2026-10-26T06:49:29.866000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0176 immediate auto-apply + auto-revert",
-    "at": "2026-10-26T06:48:46.913000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0178 hide false outages on site",
-    "at": "2026-10-26T06:48:04.353000+00:00",
-    "o": "i"
    }
   ],
   "count": {
@@ -818,7 +820,6 @@
  "qr": [],
  "inbox": [],
  "trimmed": [
-  "lane_next",
-  "queue_text"
+  "lane_next"
  ]
 }

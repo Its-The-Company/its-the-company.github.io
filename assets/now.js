@@ -19,12 +19,11 @@ run = t.run || [], old = !st.at || stale(st), hl = Q('.where .latest'), p, a, n 
 br.textContent = '';
 if (hl) mk(br, 'p', 'cv-bp', String(hl.textContent || '').split('. ')[0].replace(/\.$/, '') + '.');
 if (!old) {
-run.slice(0, 5).forEach(r => { mk(br, 'p', 'cv-bm', dot([r.w, lvl(r.m, r.e), r.at && ago(r.at)])); mk(br, 'p', 'cv-bt', r.t || ''); });
-if (run.length > 5) mk(br, 'p', 'cv-bm', '+' + (run.length - 5) + ' more');
+run.slice(0, 3).forEach(r => { mk(br, 'p', 'cv-bm', dot([r.w, lvl(r.m, r.e), r.at && ago(r.at)])); mk(br, 'p', 'cv-bt', r.t || ''); });
 if (!run.length) mk(br, 'p', null, st.session && st.session.active ? 'No worker call is running.' + (n ? ' The next tick is at ' + n + '.' : '')
 : 'No session is running.' + (n ? ' The next one starts at ' + n + '.' : ''));
 }
-if (t.count) mk(br, 'p', 'cv-bc', (c.next || 0) + ' ready · ' + ((c.wait || 0) + (c.blocked || 0)) + ' waiting or blocked');
+if (t.count) mk(br, 'p', 'cv-bc', (!old && run.length > 3 ? run.length + ' running · ' : '') + (c.next || 0) + ' ready · ' + ((c.wait || 0) + (c.blocked || 0)) + ' waiting or blocked');
 mk(br, 'p', 'cv-bc', '5-hour ' + (f.pct != null ? Math.round(f.pct) + '% used' + (f.resets_at ? ', resets ' + et(f.resets_at) : '') : 'not read yet')
 + (k.pct != null ? ' · week ' + Math.round(k.pct) + '%' : ''));
 p = mk(br, 'p', 'cv-bl'); a = mk(p, 'a', null, 'All tasks ↓'); a.href = '#cv-tasks';

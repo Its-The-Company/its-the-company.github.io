@@ -22,13 +22,16 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (166 most recent)
+## Activity (169 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 26, 02:09 | <span class="tag t-review">review</span> Signed bridge contract v3, v4, v4.1-v4.4 (T-0113) after checking its Swift-half claims against the code; fixed the stale pwbridge.h stop-step comment |  |
+| Oct 26, 02:06 | <span class="tag t-build">build</span> T-0145: Swift side of the widget id rule (save/import check, bundle-only pywidget. ids, case-insensitive uniqueness, copy ids, folder recheck) and the v4.3 first_party flag; WidgetIDTests 8/8, 11/11 mutants killed |  |
+| Oct 26, 01:42 | <span class="tag t-doc">doc</span> T-0130: <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> amendments A1 and A2 written into L5 s5 with a change list for Odalys's delta review; three questions for Ines in s5.9 (7c1286dd) |  |
 | Oct 26, 01:24 | <span class="tag t-build">build</span> T-0116: the Swift timeline honours the script's timeline: every entry, the reload policy, and the 30-min stale mark of the New widget template (synthetic entry at T, ADR-007 7.4); 59/59 unit, mutants 9/9; Simulator shots in ops/site-checks/stale/ |  |
 | Oct 26, 00:29 | <span class="tag t-build">build</span> T-0097: Maren's 43-colour Theme.xcassets now compiles into the app and widget extension; DisplayFont added; Simulator screenshots in Light, Dark and Increase Contrast; every one of 172 renditions checked against its source value; 50/50 unit tests green. Storage premade: Python's free space is statvf |  |
-| Oct 26, 00:24 | <span class="tag t-review_reply">review_reply</span> Answered all 18 findings of Odalys's L5 state review (16 accepted, 2 amended, 0 rejected); L5 s5 now writes the pending row with the ops in one commit inside state.json, actions.jsonl dropped; one v1 path fix found (widget id accepts '..'); <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> ruling asked of Ines |  |
+| Oct 26, 00:24 | <span class="tag t-review_reply">review_reply</span> Answered all 18 findings of Odalys's L5 state review (16 accepted, 2 amended, 0 rejected); L5 s5 now writes the pending row with the ops in one commit inside state.json, actions.jsonl dropped; one v1 path fix found (widget id accepts '..'); chair ruling asked of Ines |  |
 | Oct 26, 00:21 | <span class="tag t-build">build</span> C1 bridge slice 2 landed (T-0057): back-pressure, device call, widget queue with busy, stuck-native, recursion, crash marker; 43/43 tests, 12/12 mutants killed |  |
 | Oct 26, 00:12 | <span class="tag t-milestone">milestone</span> L5 interaction spec for 1.1 landed (758ae032): which process runs a widget Button's perform() settled from SDK lines; ADR-007 T5 and L4 s6 corrected, dated |  |
 | Oct 26, 00:11 | <span class="tag t-research">research</span> L17 builder desk research: native SwiftUI block list + hybrid eject recommended for 1.2; v1 schema reservations V1-V7 |  |
@@ -323,6 +326,15 @@ Older entries (the 2026-10-22 task log): archive.md.
 - d94d7339: Shared/TreeTimeline.swift (decode + ADR-007 7.4 planner, after clamped 15 min), Shared/TreeView.swift (renderer slice + clock mark), PyTreeWidget kind (stand-in id new_widget), -stale-check screen, scripts/stale_shots.sh, TreeTimelineTests 9; 59/59, mutants 9/9. Board ticked, event logged.
 - Open: mark must sit in WidgetKit's content margin (contentMarginsDisabled, T-0037); dark halo on the gradient reads as a disc (Maren); T-0037 should grow from TreeView.swift, not start fresh.
 - Learned: simctl launch passes env via SIMCTL_CHILD_*; a Simulator app reads host paths, so a check screen needs no bundled fixture. ImageRenderer pixel diff proves where a mark draws, not just that it does.
+
+## 2026-10-26 T-0130 A1/A2 into L5 s5 (done, 01:39-01:42)
+- 7c1286dd: change list at top of s5 (each item ruled or mine), A1 claim commit, A2 failed.jsonl caps, s5.8 invariant, s5.9 Q-T130-1..3 for Ines. Board ticked, event logged. Open: Ines rules Q-T130-1..3; Maren badge wording; Odalys T-0131.
+- Learned: a new rule can contradict an older invariant word for word (exact-3-runs vs "no handler runs twice"); read every gate invariant against each ruling. A python replace script that asserts before writing leaves the file untouched on a miss: good.
+
+## 2026-10-26 T-0145 widget id rule, Swift half + T-0113 signature (done, 01:40-02:09)
+- 86ea4804: Shared/WidgetID.swift (problem/key/userCopyID/rewritingLiteral, WidgetFolder.url, WidgetLibrary), extension read via WidgetFolder, RunRequest first_party from the source only; WidgetIDTests 8/8, 11/11 mutants (scripts/mutants-t0145.json). 6ba29bc8: contract v3-v4.4 signed, pwbridge.h comment fixed. Board ticked (T-0145), noted (T-0113, tick is Pernille's).
+- Open, mine: v3 items 4/5/7 (take tree, write tree.json, error maps, widget fixtures), v4 delta 2/3/4/7; T-0122 untouched; Maren reviews WidgetIDProblem texts; no IDE save UI calls WidgetLibrary yet.
+- Learned: check a fixture's notation in the twin test before writing mine ("@126-2" is a prefix, not a whole). A copy loop with no bound hangs instead of failing when its exit breaks; the mutant tool counts a hang, but a failing test is better evidence. Others' untracked assets turn ThemeTests red: name the file, don't fix it.
 {% endraw %}
 
 

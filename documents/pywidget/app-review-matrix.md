@@ -72,7 +72,7 @@ L6 section 1 carries 2.5.2, 2.5.1, 2.5.19, DPLA 3.3.1(B), 4.7-4.7.5, 1.2, 1.2.1(
 | 5.1.5 Location | Use Location Services "only when it is directly relevant to the features and services provided by the app"; rejections where the app was "not functional when Location Services are disabled". | [snippet] (2018 copy; current wording unread) |
 | 2.5.11 SiriKit / Shortcuts | Register only intents the app can handle; no misleading phrases. | [recall] |
 | 4.1 Copycats | Don't copy another app's UI or name. Bears on the Pythonista-compatibility layer (1.1, L15), not v1. | [recall] |
-| Notes field size | "4000 bytes" per one guide that reads Apple's help page; everyone else says 4,000 characters. Our draft is plain ASCII, so the two agree. | [snippet] |
+| Notes field size | "4000 bytes" per one guide that reads Apple's help page; everyone else says 4,000 characters. Our draft is plain ASCII, so the two agree. *(Note 2026-10-26 01:45 ET, Wrenna, T-0132: Apple's page says bytes: "The Notes field can contain up to 4000 bytes." (1d A8))* | [apple-page] (was [snippet]) |
 
 </div>
 
@@ -110,7 +110,7 @@ Quoted from the PDF's extracted text, line breaks joined; page is the footer pag
 </div>
 
 
-Not in the PDF, so still unverified: the 100-character keyword field, the 30-character subtitle, the 170-character promotional text, the 4,000-character description and notes fields (App Store Connect help, not the guidelines), and anything in the DPLA.
+Not in the PDF, so still unverified: the 100-character keyword field, the 30-character subtitle, the 170-character promotional text, the 4,000-character description and notes fields (App Store Connect help, not the guidelines), and anything in the DPLA. *(Note 2026-10-26 01:45 ET, Wrenna, T-0132: keyword (100 bytes), promotional text (170), description (4,000) and notes (4,000 bytes) now read on Apple's page, 1d A8; the subtitle's 30 is 2.3.7 [primary]. The DPLA stays T-0060's.)*
 
 ### 1c. Apple's text for the row tags raised on 2026-10-26 (T-0109)
 
@@ -144,6 +144,7 @@ Read signed out through `python3 tools/fetch_cite.py --apple URL --task T-NNNN` 
 - **[A5] AppShortcutsProvider**, https://developer.apple.com/documentation/appintents/appshortcutsprovider.md (01:16:44 ET). States **no** ceiling on the number of App Shortcuts or phrases (the ceiling stays [M], T-0033). New fact: "Apple may extract anonymized App Shortcuts data such as localized phrases, display representation values, and the title and description of related intents."
 - **[A6] Complying with Encryption Export Regulations**, https://developer.apple.com/documentation/security/complying-with-encryption-export-regulations.md (01:17:51 ET). "Set the value to `NO` if your app—including any third-party libraries it links against—doesn’t use encryption, or if it only uses forms of encryption that are exempt from export compliance documentation requirements." "Typically, the use of encryption that’s built into the operating system" (HTTPS through URLSession is the example) "is exempt from export documentation upload requirements, whereas the use of proprietary encryption is not." And: "If your app uses exempt forms of encryption, you might alternatively be required to submit a year-end self-classification report to the U.S. government."
 - **[A7] Age ratings values and definitions**, https://developer.apple.com/help/app-store-connect/reference/app-information/age-ratings-values-and-definitions (01:17:46 ET). "An Unrated app can't be published on the App Store." Unrestricted Web Access: "Users can navigate to any webpage within the app or freely browse the web." It "May include: embedded browser functionality or browser app." and is listed under 16+. Global values on the page: 4+, 9+, 13+, 16+, 18+ (the matrix's "13+/16+/18+" left out 4+ and 9+).
+- **[A8] Platform version information**, https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information (01:42:47 ET, T-0132; main text extracted by script, no other page followed). The version fields App Store Connect asks for. Promotional Text: "This property can’t be longer than 170 characters." Description: "Limited to 4000 characters. The description should be in plain text, with line breaks as needed. HTML format isn't supported." Keywords: "One or more keywords (each greater than two characters) describing your app. You can provide up to 100 bytes of content." and "Names of other apps or companies aren't allowed." Support URL: "This URL must lead to actual contact information (legal address, email address, telephone number), as may be required by local law". Copyright: "The name of the person or entity that owns the exclusive rights to the app, preceded by the year the rights were obtained". What's New: "This property isn't available for the first version of the app". App Review Notes: "The Notes field can contain up to 4000 bytes." Field by field in s2c.
 
 ## 2. The matrix: every v1 feature (ADR-001 3.1, as revised)
 
@@ -345,6 +346,38 @@ ADR-006 makes the notes themselves the S0 gate. Each claim below has one sentenc
 
 ## 2c. Submission items that are not guideline rows (person or Investor)
 
+**Day 17 fields, one by one (T-0132, 2026-10-26 01:45 ET).** Source for every quote marked A8: Apple's Platform version information page, https://developer.apple.com/help/app-store-connect/reference/app-information/platform-version-information, fetched 2026-10-26 01:42:47 ET signed out under the #64 ruling (research/inbound/apple/, index.tsv). A6 and A7 as in 1d. "Who" says who types or decides the value; **Investors** marks an entry only they can make, each listed in ops/questions.md item 14 (or item 12 for encryption). v1 scope: ADR-001 3.1 (no account, no server, no web view), ADR-006 (no marketplace in v1), ADR-007.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 17: 2c. Submission items that are not guideline rows (person or Investor), scrolls sideways" style="--tw:1264px" markdown="1">
+
+| Field | What Apple asks (quote) | Our answer for v1 | Who |
+|---|---|---|---|
+| Promotional Text | "This property can’t be longer than 170 characters." Changeable "without requiring an updated submission" (A8) | P1 (126 characters), P2 or P3 by the checker; store page s5 | Investors approve the copy (<span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>); a person pastes |
+| Description | "Limited to 4000 characters. The description should be in plain text, with line breaks as needed. HTML format isn't supported." Also "will be used for web engine search results" (A8) | Store page s6: 3,864 to 3,872 with every insert kept; no HTML or Markdown marks (script check 01:43) | Investors (C51, G6 Pro text) |
+| Keywords | "One or more keywords (each greater than two characters) describing your app. You can provide up to 100 bytes of content." "Names of other apps or companies aren't allowed." (A8) | kw-a 98 bytes ASCII, shortest term `ide`; `shortcuts` and `home` also name Apple apps (store page F5) | Person read (F5); seller name check (F10) |
+| Support URL | "This URL must lead to actual contact information (legal address, email address, telephone number), as may be required by local law" ; "This property is required" (A8) | No page exists. Not drafted by the company: the contact details are the Investors' (Commandment 7) | **Investors**: host, contact, and which details local law needs (C6, C10) |
+| Marketing URL | "The website where users get more information about the app." No "required" line (A8) | Leave empty for v1 unless the Investors publish an app page | Investors, optional |
+| Version Number | "The version number that's provided for your app that appears on App Store product pages" (A8) | 1.0 (ADR-001 s3, "version 1.0"); must equal the build's version string [recall] | Idris |
+| Copyright | "The name of the person or entity that owns the exclusive rights to the app, preceded by the year the rights were obtained" ; "The copyright symbol is added automatically." ; "This property is required." (A8) | "2026" followed by the owner's name; do not type the © | **Investors**: the owner's legal name (same name as privacy policy P3) |
+| Routing App Coverage File | A routing app's ".geojson" coverage file (A8) | Not applicable: pywidget is not a routing app | none |
+| Version Release Settings | "Manual", "Automatic" ("goes live automatically after it is approved"), or "Automatic, no earlier than" (A8) | Recommendation: Automatic, so an approval near <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> is on sale the same hour; Manual waits for a person | **Investors** choose |
+| What's New in this Version | "This property isn't available for the first version of the app but required for all subsequent versions." (A8) | Nothing for 1.0 | none until 1.1 |
+| Phased Release, Reset Overview Rating | Both for a "version update" or "a new version" (A8) | Not applicable to 1.0 | none |
+| Screenshots | "This property is required and can be localized." (A8) | PROPOSAL-003 (Maren); sizes are on the Screenshot specifications page, **unread** | Investors (C51) |
+| App Preview | "optional short video" (A8) | None in v1 (any video needs C51 approval and no generative tool, C9) | none |
+| App Review contact | "Name, email, phone number" ; "Enter the phone number in international format, including a plus sign (+)" (A8) | Not written by the company (Commandment 7) | **Investors** |
+| App Review Notes | "The Notes field can contain up to 4000 bytes." (A8) | review-notes-draft.md: 3,578 bytes ASCII at draft time, brackets still in | Wrenna drafts; a person pastes after gates |
+| Sign-in required | "Sign-in information for a demo account" ... "If your app requires a login to use it." (A8) | No: v1 has "No account, no server" (ADR-001 3.1) | none |
+| Export compliance | A6 (1d) | The Investors' declaration (CPython's own OpenSSL); no plist key until they answer | **Investors**, ops/questions.md item 12 |
+| Age rating | A7 (1d) | 4+ reading; 16+ the day a web view lands | A person submits the questionnaire (signed in) |
+| Privacy Policy URL, App Privacy | 5.1.1(i) [primary]; A1 | Row 41, G11; privacy-label.md | **Investors** (policy text and host) |
+| Name, subtitle, category, content rights | Not on A8; on Apple's "App information" page, **unread** (the day's last page is kept in reserve for the company; read on 2026-10-27) | Name and subtitle limits are 2.3.7 [primary]; category and the third-party content question [recall] | Read next day |
+
+</div>
+
+
+
 - **Age rating questionnaire** (2025 scale, 13+/16+/18+): it asks about unrestricted web access. Sources disagree on whether an in-app browser lands at 16+ or 18+ [snippet]. We have no browser, but user code can fetch any URL. How Pythonista, Pyto and Juno answered is unread (store pages barred, #53). Owed: a person's read of the questionnaire text. *(Note 2026-10-26 01:22 ET, Wrenna, T-0132: Apple's definitions page read (1d A7). Unrestricted Web Access is "Users can navigate to any webpage within the app or freely browse the web", with "embedded browser functionality or browser app" as its examples, and it sits at 16+. v1 has no web view and no browser (ADR-001 3.1; no WKWebView or SFSafariViewController in the design docs), and a script fetching data is not a person navigating to a page, so my reading is "No" and, with no other descriptor, 4+. That reading flips to 16+ the day any in-app web view lets a user or a script open any URL: a release gate for 1.1, not v1. The scale has 4+ and 9+ as well. The questionnaire itself sits behind App Store Connect sign-in (the Investors'); this read is the definitions page, not the form.)*
 - **Export compliance**: CPython bundles its own OpenSSL (`_ssl`) rather than only the OS's TLS. The answer to the encryption question needs a person's read [recall: standard algorithms are usually exempt, but the form must be answered truthfully]. *(Note 2026-10-26 01:22 ET, Wrenna, T-0132: Apple's page read (1d A6). The plist answer covers "any third-party libraries it links against", so CPython's own OpenSSL counts. Apple's easy case is encryption "built into the operating system"; ours is not that, but it is standard, not proprietary, encryption. Whether that is exempt, and whether a year-end self-classification report to the U.S. government is owed, is a legal question for the Investors (Commandment 6), not a reading I make. Until they answer: no `ITSAppUsesNonExemptEncryption` key in the build (it would pre-answer the form), and the question goes in the Day 12 Apple-readiness list. Option for the build owner: if Python's `ssl` used the system's TLS instead of a bundled OpenSSL, the easy case would apply; that is a runtime decision (Pernille, Idris), not mine.)*
 - **Contacting App Review, submitting, and replying to a rejection** are human checkpoints (L6 s5).
@@ -365,7 +398,7 @@ ADR-006 makes the notes themselves the S0 gate. Each claim below has one sentenc
 ## 4. Gates before the notes are pasted (in order)
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 17: 4. Gates before the notes are pasted (in order), scrolls sideways" style="--tw:958px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 18: 4. Gates before the notes are pasted (in order), scrolls sideways" style="--tw:958px" markdown="1">
 
 | Gate | Owner | Changes in the notes if it fails |
 |---|---|---|

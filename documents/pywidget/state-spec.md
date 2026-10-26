@@ -51,6 +51,7 @@ A failed run also means old data, so the badge outranks the stale mark. Never a 
 - 2 pt halo in the widget's own container background (full colour and accented). No halo in vibrant.
 - Margins under 14 pt (some devices, StandBy): same size and position; it overlaps the content corner and the halo keeps it legible.
 - Badge = `exclamationmark.circle.fill` (filled, heavy: act). Stale = `clock` (outline, light: information). Same slot, different weight, so they read apart in grey.
+- **Note, 2026-10-26 01:51 ET (Maren, T-0144). Dark halo and placement.** The halo is a knock-out, not a fill: the card's own paint (the `widgetCard` gradient in dark, `bg.surface` in light), drawn at the card's own size and coordinates and masked to the 20 pt circle, so it is the card itself at that spot. d94d7339 fills the circle with `widget.card.start`, but the top-trailing corner is further along the 150° gradient, so the halo shows as a disc: rim contrast 1.68:1 (habits medium) and 1.45:1 (storage small) in dark, 1.51 and 1.34 in dark Increase Contrast. Knock-out: 1.01 in both, 1.00 in light (`draw_stale_slot.py`, `stale-slot.jpg`, `stale-slot-qa.json`). Full colour only: in accented and vibrant the system draws the ground, so no halo there (was "full colour and accented"). Correction to the first bullet: a 16 pt glyph centred 14 pt in reaches 22 pt (halo 24 pt), past the 16 pt margin, so content in the top-trailing 8 × 8 pt corner goes under the slot at the default margin too (habits medium: "of 21", 1 overlap; storage small: 0). The knock-out is what keeps both legible; it is not only for margins under 14 pt. Placement (Idris, T-0037): `.contentMarginsDisabled()` on the configuration; the tree padded by `@Environment(\.widgetContentMargins)`; the slot on the full-bleed frame, `.padding(.top, 6).padding(.trailing, 6)`. Clock colour `widget.onCard.secondary`, 4.77:1 or more on the card. Board line T-0160.
 - Small: one tap target, so the badge is not separately tappable; the widget keeps the user's `widgetURL`, or opens the run log if the script set none. Medium and larger: the slot is a `Link` to the widget's Activity screen.
 
 ## 3. The cards (renderer-drawn)
@@ -123,7 +124,7 @@ Chair ruling 2026-10-25 20:08 item 3, ADR-007 7.1 row 2. A placed Pro premade wh
 
 | Mode | Glyphs | Words | Background |
 |---|---|---|---|
-| Full colour | badge `status.danger`, update `status.warning`, stale `text.secondary`; knock-out `bg.surface` | `text.primary`, `text.secondary` | `bg.surface` |
+| Full colour | badge `status.danger`, update `status.warning`, stale `text.secondary` (`widget.onCard.secondary` on the card); knock-out = the card's own paint (`bg.surface` light, the gradient dark; s2 note T-0144) | `text.primary`, `text.secondary` | `bg.surface` |
 | Accented | the glyph alone takes `.widgetAccentable()` | default group (primary, secondary opacity) | system |
 | Vibrant | white 1.0 (stale 0.66), knock-out transparent | white 1.0 and 0.66 | none; wallpaper or StandBy black |
 

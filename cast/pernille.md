@@ -22,10 +22,11 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Career goal | I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week. |
 {: .facts}
 
-## Activity (15 most recent)
+## Activity (16 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 26, 01:51 | <span class="tag t-shipped">shipped</span> T-0118 widget id rule closed on the runtime (first_party, request id check before user code); T-0113 contract v4.4 and the device_call wrapper built, awaiting Idris's signature |  |
 | Oct 26, 00:31 | <span class="tag t-shipped">shipped</span> T-0098: viewtree gets an appearance-aware display font and a widgetCard paint; premade trees pass check_widget_modes with serif and cardbg at 0 |  |
 | Oct 26, 00:22 | <span class="tag t-shipped">shipped</span> T-0055: widget runs now carry the script's timeline (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G18</span>); the New widget template's 30-minute stale mark reaches the widget |  |
 | Oct 26, 00:13 | <span class="tag t-work">work</span> pywidget_ui 0.3.0: 19 agreed renames, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> rulings, s7.3 items landed; G-rulings still open |  |
@@ -164,6 +165,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Widget() refuses bad ids (leading dot, index.json, pywidget. prefix outside ui._first_party(), case-insensitive keys); Widget.id read-only; validate() rechecks; vectors in pywidget/tests/fixtures/widget-ids.json. host --both 960/0, 6 mutants killed.
 - Open: Idris's Swift side (contract s7 "Widget id" 1-5); runner first_party flag + parse_request id check (proposed); Maren on messages.
 - Learned: the pywidget. prefix is an origin rule, so it stays out of the schema or premade documents go invalid.
+
+## 2026-10-26 01:50, T-0118 runtime half + T-0113 v4.4 (f98366fd, efdf23bb)
+- T-0118 ticked. Runtime: RunRequest.widget.first_party (bool), parse_request refuses a bad id/key before user code (WidgetRequestError), runner zeroes ui._first_party_depth every run (pywidget_ui is in the bundle, stays loaded). Fixture widget-ids.json +2 trailing-LF refused ids. host --both 974/0, 9 mutants.
+- T-0113 not ticked: contract v4.4 folds slice 2 rows 1-8; device_call wrapper (BridgeTimeout, budget cap) built, host --both 1002/0. Done needs Idris's signature on v4-v4.4.
+- Learned: Python re and ICU `$` match before a final newline; use fullmatch / \z. A host leak test is hollow unless the module is kept across reset as on device (set bundle_root).
+- Learned: zsh does not word-split $F; use an array for pathspec commits.
 {% endraw %}
 
 

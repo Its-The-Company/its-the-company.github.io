@@ -197,6 +197,18 @@ ADR-007 chose option (b): the extension links no Python, and its memory ceiling 
 
 Odalys's independent review ([`pywidget/docs/reviews/L5-state-review-odalys.md`](l5-state-review-odalys.html), 508b6e4b; replies in the same file) found that the queue as first written could lose a tap and run a handler twice (B1), and that a tap's ops and its queue row were two commits (B2). Amended here: the queue lives inside `state.json` as `pending`, written in the same commit as the tap's ops, before any Python runs, on every handler path; `actions.jsonl` is dropped. Struck text is kept with its date. Changes to the chair's s15 conditions S1, S6 and S7 and to ADR-007's amendment items 1, 4 and 6 wait on Ines's ruling; until then this section is the author's proposal and no 1.1 state code starts (chair S7). *Ruled 2026-10-26 01:12 ET (Ines, s15 chair note 2): accepted, with A1 (an attempt is counted before the handler runs), A2 (`failed.jsonl` <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span>) and A3 (a delta review joins the S7 gate). Until Idris writes A1 and A2 into s5.3, s5.4 and s5.6, the chair note governs.*
 
+**Changes for A1 and A2 (Idris, 2026-10-26 01:42 ET, T-0130).** Written from s15 chair note 2 (ff41ed1e); no ruling changed. Every changed paragraph carries "(A1, T-0130)" or "(A2, T-0130)" in its text, so a delta review can find them by search. Each item is marked *ruled* (the chair's words, placed) or *mine* (my reading of how to carry out a ruling; Odalys, review these first):
+1. s5.1, `failed.jsonl` row: the reasons it holds and the A2 cap. *Ruled.*
+2. s5.1, the `attempts` bullet: it now counts claimed runs, not failed ones. *Ruled* (A1); writing a live row with `attempts: 1` is *mine* (item 5).
+3. s5.3, opening paragraph: the claim commit comes first, and the handler reads state at the claim's `rev`. *Mine*: the claim is a commit, so it moves `rev` like every commit (s5.1); one interpreter means no claim can fall inside another run's rebase window.
+4. s5.3, last bullet: `stuck`, `expired` and a dead process commit nothing beyond the claim, so the attempt stands. *Ruled* (A1); naming `expired` here is *mine*, and Q-T130-1 asks the chair about it.
+5. s5.6, **Write ahead**: a live row (`intent`, `link`) is written with `attempts: 1`, because the app runs it at once. That write-ahead commit is the claim for the first run, so the live path needs no extra commit. *Ruled* ("a live row's first run counts as attempt 1"); the one-commit form is *mine*.
+6. s5.6, **Drain** and **Batch rule**: the `attempts >= 3` check, then the claim, then the run; a row the batch rule defers is not claimed. *Ruled*; that deferred rows are not counted is *mine*, and it follows from "before each handler run".
+7. s5.6, **Failure of a queued row**: there is no increment at failure time now. At `attempts >= 3` the row moves with reason `error` or `timeout`. *Mine*: it keeps the 3-run rule without counting a run twice.
+8. s5.4, new A2 paragraph: the `failed.jsonl` caps, the refusal when it is full, live taps still run, the 100-row `pending` cap refuses `queue` taps only, the 256 KiB cap binds every tap. *Ruled*. The traceback marker and which badge shows when both refusals apply are *mine*.
+9. s5.8: A1's invariant added to the <span title="A test written in advance. If it fires, we drop the idea.">kill</span> test. *Ruled.*
+10. New s5.9: three questions for Ines (Q-T130-1, -2, -3). s5.8 also gets a pointer to Q-T130-3, where a ruling and the s5 text conflict and the line does not settle it. Until she answers, s5 follows the ruling as written.
+
 ### 5.1 Files (App Group, extending ADR-007 5.2)
 
 
@@ -207,7 +219,7 @@ Odalys's independent review ([`pywidget/docs/reviews/L5-state-review-odalys.md`]
 | `widgets/<id>/state.json` | app (handlers, runs, Shortcuts) **and** extension (ops) | both | `pywidget.state/1`, layout below |
 | `widgets/<id>/state.lock` | both (`flock`); **created by the app only** (2026-10-26, review S2) | | empty; exists so the lock never touches the data file |
 | ~~`widgets/<id>/actions.jsonl`~~ | ~~extension (append)~~ | ~~app (drain, then truncate under the lock)~~ | ~~queued handler taps (s4.2)~~ struck 2026-10-26 (review B1, B2, S1): rows live in `state.json` `pending` |
-| `widgets/<id>/failed.jsonl` | app (temp file plus `rename`) | app (IDE log) | rows whose handler failed 3 times (s5.6; review S6), kept until the person clears them |
+| `widgets/<id>/failed.jsonl` | app (temp file plus `rename`) | app (IDE log) | rows whose handler failed 3 times (s5.6; review S6), kept until the person clears them. Amended 2026-10-26 (A1, A2, T-0130): rows with reason `error`, `timeout` (3 claimed runs, s5.6), `killed` (reached the drain with `attempts >= 3`, s5.6) or `conflict` (s5.3); at most 100 rows and at most 4 KiB of traceback per row (s5.4). Ruled 2026-10-26 01:46 ET (Ines, s5.9 Q-T130-2): 100 is the line at which every handler tap on the widget is refused, not a limit on writing. A row already in `pending` still moves in past 100, so the file holds at most 100 plus the rows `pending` held when it reached 100 |
 | `widgets/.trash/` | app | | folders being deleted (s5.7; review S2). Not a widget id |
 | `widgets/<id>/tree.json` | app | extension | unchanged from v1; 1.1 adds ~~`state_rev` (the rev it was rendered from)~~ `state_at: [epoch, rev]` (2026-10-26, review S8) |
 | `controls/index.json` | app (T1 sweep) | extension (entity queries, value providers) | declared controls (s8) |
@@ -233,7 +245,7 @@ Odalys's independent review ([`pywidget/docs/reviews/L5-state-review-odalys.md`]
 
 - `epoch`: a UUID set when the file is created (fresh state, `state.bad` reset, delete and re-create of the same id). Every comparison is on `(epoch, rev)`, never `rev` alone (review S8).
 - `rev`: +1 on every commit. `next_seq`: the next row's `seq`, assigned under the lock, strictly increasing per file.
-- `pending`: one row per handler tap not yet handled, oldest first. `path` is `queue` (18-26 `fallback="queue"`), `intent` (27+) or `link` (18-26 `open_app`). Rows with `path` `intent` or `link` also carry `before: {key: old value, or {"absent": true}}` for the keys the tap's ops touched, so a failed live handler can restore them (s5.3). `attempts` counts failed handler runs (s5.6).
+- `pending`: one row per handler tap not yet handled, oldest first. `path` is `queue` (18-26 `fallback="queue"`), `intent` (27+) or `link` (18-26 `open_app`). Rows with `path` `intent` or `link` also carry `before: {key: old value, or {"absent": true}}` for the keys the tap's ops touched, so a failed live handler can restore them (s5.3). ~~`attempts` counts failed handler runs (s5.6).~~ (struck 2026-10-26, A1, T-0130: a handler that kills the process commits no failure.) `attempts` counts claimed handler runs: +1 in a locked commit before each run starts, whatever the run's outcome. A `queue` row is written with 0, and a live row with 1 (s5.6). Added 2026-10-26 01:46 ET (Ines, s5.9 Q-T130-1): each claim also writes the run's `run_id` into the row (a live row's write-ahead writes its first `run_id`), so that the next drain can tell whether that run was `expired`.
 - `ops_log`: the op lists of the last 16 commits that were ops, with their `rev`, so a handler result can be rebased without running the handler twice (s5.3; review S4).
 - The `pending` env of s9 is true while `pending` is non-empty; it no longer reads `actions.jsonl` (2026-10-26).
 
@@ -247,12 +259,13 @@ This is a change to ADR-007 5.2's rule "everything the extension reads is a file
 
 ~~A handler run reads state at `rev = r`, runs unlocked (up to 5 s), then locks: if `rev` is still `r`, write its result as `r + 1`; if not (a tap landed meanwhile), re-apply the handler once to the new state (it is a pure function of state and args by contract); if `rev` moved again, keep the newer state and log outcome `conflict` [ours]. On handler error, timeout or `stuck`: if `rev` is still the post-ops value, restore the pre-tap state (the queue row or intent kept it), so a failed Toggle snaps back as L4 s6 promised; otherwise keep the state and badge the widget (ADR-007 7.1 row 4).~~ (Struck 2026-10-26, review S4 and B2: nothing enforced purity, a second run repeats side effects, `conflict` lost the result, and no row kept the pre-tap values.)
 
-As of 2026-10-26: a handler run reads state at `(epoch, r)`, runs unlocked (up to its `timeout`), then takes the lock and makes **one** commit:
+As of 2026-10-26: a handler run reads state at `(epoch, r)`, runs unlocked (up to its `timeout`), then takes the lock and makes **one** commit. Amended 2026-10-26 (A1, T-0130): the run is preceded by its claim, the locked commit that adds 1 to the row's `attempts` (s5.6). The handler reads state in the same locked section as the claim, so `r` is the claim's `rev`. Like every commit, the claim moves `rev` (s5.1). It is not an op, but it never falls inside another run's window: one interpreter runs one handler at a time. The result commit is one of these:
 - **ok, `(epoch, rev)` still `(epoch, r)`:** write the handler's state (unchanged if it returns `None`, R12), remove its row from `pending`.
 - **ok, `rev` moved to r':** if every commit r+1..r' is in `ops_log` (taps and "Set Widget State" are ops), write the handler's state with those ops re-applied in rev order, and remove its row. The handler is never run twice. If any commit in the window is not ops (an in-app Python write, s5.5) or r is older than the ring, the row is not committed: it moves to `failed.jsonl` with reason `conflict` (s5.6), shown, not lost. One interpreter runs one handler at a time, so two handler commits never overlap; this branch is the 17-taps-during-one-run case.
 - **error, timeout, `interrupted`, on a live row (`path` `intent` or `link`):** if `(epoch, rev)` is still the row's `(epoch, rev_after)`, restore each key in `before` and remove the row, so a failed Toggle snaps back as L4 s6 promised; otherwise keep the state, remove the row, badge the widget (ADR-007 7.1 row 4).
 - **error or timeout on a `queue` row:** s5.6.
-- **`stuck`, or the process dies:** nothing is committed; the row stays in `pending`.
+- ~~**`stuck`, or the process dies:** nothing is committed; the row stays in `pending`.~~ (struck 2026-10-26, A1, T-0130: as written, `attempts` never rose for such a row, so it ran first in every batch and died every time.)
+- **`stuck`, `expired`, or the process dies (A1, T-0130):** no result commit. The claim has already counted the run, so the row stays in `pending` with that attempt counted. At the next drain, a row with `attempts >= 3` moves to `failed.jsonl` with reason `killed` and does not run (s5.6). A live row whose process is gone is first turned into a `queue` row (s5.6), keeping its `attempts`. `expired` commits nothing because s5.7 allows no lock after the T2 expiration handler fires. ~~Whether it should count is Q-T130-1.~~ Ruled 2026-10-26 01:46 ET (Ines, s5.9 Q-T130-1): an `expired` run does not count. The next drain gives the attempt back, without an extra commit (s5.6, **Drain**). `stuck` and a dead process still count.
 
 This makes ops "optimistic" in the plain sense: shown at once, undone if a live handler refuses them at once. A queued handler that refuses hours later does not undo what the person saw succeed (s5.6).
 
@@ -260,7 +273,16 @@ This makes ops "optimistic" in the plain sense: shown at once, undone if a live 
 
 `state.json` at most 64 KiB (read on every `getTimeline`); a write over the cap fails the action with `StateTooLarge`. `actions.jsonl` at most 100 rows; ~~older rows dropped with a log line~~ (struck 2026-10-26, chair note s15 S6: at 100 rows a tap that would queue is refused, never dropped). Keys and values as s3.2.
 
-Amended 2026-10-26 (review B2, S6): the 64 KiB cap applies to `scopes`; `pending` is at most 100 rows, `args` at most 1 KiB per row; the whole file at most 256 KiB. The 100-row check and the size check run under the lock, before the ops apply; a tap that would pass either is refused (ops not applied, badge "Open PyWidget to catch up"). Rows in `failed.jsonl` do not count, so a handler that always fails cannot fill the queue.
+Amended 2026-10-26 (review B2, S6): the 64 KiB cap applies to `scopes`; `pending` is at most 100 rows, `args` at most 1 KiB per row; the whole file at most 256 KiB. The 100-row check and the size check run under the lock, before the ops apply; a tap that would pass either is refused (ops not applied, badge "Open PyWidget to catch up"). *(Amended 2026-10-26, A2, T-0130: the 100-row check refuses `queue` taps only; the size check refuses any tap. See below.)* Rows in `failed.jsonl` do not count, so a handler that always fails cannot fill the queue.
+
+Amended 2026-10-26 (A2, T-0130; s15 chair note 2):
+- **`failed.jsonl` cap.** At most 100 rows, and at most 4 KiB of traceback per row. A longer traceback keeps its last 4 KiB, where the exception line is, and the row carries `"traceback_truncated": true`. The cut is shown, never silent. The 4 KiB is the ruling; keeping the tail and the marker are mine. No row is ever dropped or trimmed. The person clears rows in the IDE, or deletes the widget.
+- **When `failed.jsonl` is full**, a tap on that widget that would queue (`path` `queue`) is refused: its ops are not applied, and the widget shows a badge. The wording is Maren's; the chair's example is "Fix this widget in PyWidget". ~~Live taps (`intent`, `link`) still run.~~ Opening the app fixes this: the person reads the tracebacks and clears the rows. ~~A row that has to move to a full file is Q-T130-2.~~ Ruled 2026-10-26 01:46 ET (Ines, s5.9 Q-T130-2), replacing the two struck sentences:
+  - At 100 rows, **every handler tap** on that widget is refused, `queue` and live alike. Its ops are not applied and no row is written. A refused `link` tap still opens the app, and the app shows that widget's failed rows. Actions with no handler (ops only) are never refused by this rule.
+  - A row that must move (killed at 3, failed a third time, `conflict`) **always moves**, even past 100. It is never held and never dropped. Because no new handler row can be written once the file holds 100, the only rows that can still arrive are those `pending` held at that moment. So the file is bounded by 100 plus that `pending`, and the 256 KiB cap bounds `pending`.
+- **The 100-row `pending` cap refuses `queue` taps only.** Live taps are not refused by it. A live row that becomes a `queue` row after its process died (s5.6) may take `pending` past 100, by one row per kill.
+- **The 256 KiB whole-file cap binds every tap**, live or queued (ops not applied, badge as above). Turning a live row into a `queue` row drops `before`, so the row gets smaller and the cap never blocks the conversion. The 64 KiB `scopes` cap is unchanged (`StateTooLarge`).
+- **Order of checks**, all under the lock, before the ops apply: `scopes` size, whole-file size, then ~~for a `queue` tap the `failed.jsonl` cap and the `pending` cap~~ for any handler tap the `failed.jsonl` cap, then for a `queue` tap the `pending` cap (2026-10-26 01:46 ET, Ines, Q-T130-2). When both refusals apply, the `failed.jsonl` badge shows, because only the person can clear that file; the drain clears `pending` on its own. The order is mine.
 
 ### 5.5 Who else touches state
 
@@ -270,10 +292,10 @@ Amended 2026-10-26 (review B2, S6): the 64 KiB cap applies to `scopes`; `pending
 
 ### 5.6 Write-ahead and the queue (new 2026-10-26, review B1, B2, S6, S7, N4)
 
-- **Write ahead, every path.** A tap on an action with a handler makes one locked commit before any Python runs: the ops result and its `pending` row, in one `rename`. Extension (`queue`, 18-26), app intent (`intent`, 27+) and app link (`link`, 18-26 `open_app`) all do this through the one write path. A process killed after it leaves the row; s11's "the handler runs at the next T1" now follows from the row.
-- **Drain.** At the start of a T1, T2 or T3 batch the app first turns any `intent` or `link` row whose process is gone into a queue row (drops `before`, one commit), then handles rows oldest `seq` first. Each row's handler commit removes that row (s5.3), so a tap appended during the drain is a new row that stays, and a <span title="A test written in advance. If it fires, we drop the idea.">kill</span> mid-drain re-runs nothing that committed.
-- **Batch rule.** Each row counts against ADR-007 5.1 with the same `elapsed + budget_s + 5.0 <= 25` test. Per widget, its rows run first; an action run returns state and tree (R7), so the last successful handler's tree is that widget's render in the batch. Widgets without rows keep their place. Rows left over stay in `pending` (`deferred`).
-- **Failure of a queued row.** `attempts += 1` in the same commit; its ops stand. At 3 the row moves to `failed.jsonl` (with the traceback) and leaves `pending`, the widget badges, and the IDE log shows it. Never deleted by the app; the person clears it or deletes the widget.
+- **Write ahead, every path.** A tap on an action with a handler makes one locked commit before any Python runs: the ops result and its `pending` row, in one `rename`. Extension (`queue`, 18-26), app intent (`intent`, 27+) and app link (`link`, 18-26 `open_app`) all do this through the one write path. A process killed after it leaves the row; s11's "the handler runs at the next T1" now follows from the row. Amended 2026-10-26 (A1, T-0130): a `queue` row is written with `attempts: 0`. A live row (`intent`, `link`) is written with `attempts: 1`, because the app runs it at once: its write-ahead commit is the claim for its first run, and the live path needs no extra commit.
+- **Drain.** At the start of a T1, T2 or T3 batch the app first turns any `intent` or `link` row whose process is gone into a queue row (drops `before`, one commit), then handles rows oldest `seq` first. Amended 2026-10-26 (A1, T-0130), for each row in order: (added 2026-10-26 01:46 ET, Ines, Q-T130-1: first, if the row's `run_id` is the run that the widget's `status.json` records as `expired`, read `attempts` as one less; the claim below writes that corrected count plus 1, so the give-back costs no commit of its own. If the record is missing or names another run, the attempt counts.) if `attempts >= 3`, move it to `failed.jsonl` with reason `killed` and do not run it (one commit). Otherwise claim it, `attempts += 1` in one locked commit, and only then start Python. A converted live row keeps its `attempts`. So a handler that kills the process on every run gets exactly 3 runs: the live run plus 2 claimed runs, or 3 claimed runs for a `queue` row. Each row's handler commit removes that row (s5.3), so a tap appended during the drain is a new row that stays, and a kill mid-drain re-runs nothing that committed.
+- **Batch rule.** Each row counts against ADR-007 5.1 with the same `elapsed + budget_s + 5.0 <= 25` test. Per widget, its rows run first; an action run returns state and tree (R7), so the last successful handler's tree is that widget's render in the batch. Widgets without rows keep their place. Rows left over stay in `pending` (`deferred`). A row is claimed only once the batch rule has admitted it, so a deferred row is not counted (A1, T-0130).
+- **Failure of a queued row.** ~~`attempts += 1` in the same commit;~~ (struck 2026-10-26, A1, T-0130: the claim already counted this run, so counting it again here would make 2 failures look like 3.) Its ops stand. ~~At 3~~ If the row's `attempts` is already 3 or more (A1, T-0130), the result commit moves it to `failed.jsonl` with reason `error` or `timeout` and the traceback (4 KiB cap, s5.4), and it leaves `pending`. The widget badges, and the IDE log shows it. Never deleted by the app; the person clears it or deletes the widget.
 - **Order.** Within a batch, by `seq`. A live 27+ tap does not wait behind older queued rows; after a device upgrade to 27 with rows still pending, order across the upgrade is not kept.
 
 ### 5.7 Write-path rules (new 2026-10-26, review S2, S3, S5, N2, N3, N6)
@@ -289,10 +311,45 @@ One Swift type in the shared framework (chair S3) carries all of these:
 
 ### 5.8 Gate additions (2026-10-26, review S3, S5, S10, N1, N5)
 
-- G-L5-5 adds a kill test: two writers plus a drainer, `SIGKILL` at random points (after the temp write, before the `rename`, mid-drain, during folder delete), 1,000 kills. Invariants: `state.json` always parses; `(epoch, rev)` never decreases within an epoch; every `tap_id` ends in exactly one of handled, pending, failed, refused-and-logged; no handler runs twice for one `tap_id`. Also the lock-to-rename time at 64 and 256 KiB. One run on a device before 1.1 ships (the Simulator proves macOS `flock` only).
+- G-L5-5 adds a kill test: two writers plus a drainer, `SIGKILL` at random points (after the temp write, before the `rename`, mid-drain, during folder delete), 1,000 kills. Invariants: `state.json` always parses; `(epoch, rev)` never decreases within an epoch; every `tap_id` ends in exactly one of handled, pending, failed, refused-and-logged; ~~no handler runs twice for one `tap_id`; added 2026-10-26 (A1, T-0130): a row whose handler always kills the process reaches `failed` with reason `killed` after exactly 3 runs, both for a `queue` row and for a live row that is converted. As the two read side by side, this invariant and "no handler runs twice" contradict each other: Q-T130-3.~~ (struck 2026-10-26 01:46 ET by the chair, s5.9 Q-T130-3: the two sentences contradicted each other; one restated set replaces them.) For each `tap_id`:
+  - **(I1) One result, then no more runs.** At most one result commit exists (handled, restored, or moved to `failed`), and no handler run starts after it. This is review invariant 4 as Odalys meant it (B1: a handler re-run after its result had committed).
+  - **(I2) No run without a claim.** Every handler run starts after a locked commit that counted it (a live row's write-ahead is its first). So the runs not recorded `expired` never exceed 3.
+  - **(I3) Three runs, then `failed`.** A row whose handler always kills the process reaches `failed` with reason `killed` after exactly 3 runs. This holds for a `queue` row and for a live row that is converted, with no expiry injected.
+  - **(I4) Expiry is ours.** A row whose run is cut by an injected T2 expiry k times (k = 1 to 5), then runs cleanly, ends `handled`. A run cut by expiry and then killed while suspended is not counted either.
+  - **(I5) Full `failed.jsonl`.** With the file at 100 rows and 100 `queue` rows pending, all of which fail, every row reaches `failed` (none held, none dropped), every handler tap is refused and logged, and an ops-only tap still applies. Also the lock-to-rename time at 64 and 256 KiB. One run on a device before 1.1 ships (the Simulator proves macOS `flock` only).
 - G-L5-7 (new, device): suspend the app inside a locked section; record what iOS does.
 - G-L5-4 adds: toggle a control and tap a widget on a locked device.
 - G-L5-2 adds: after an extension commit, do other placed instances of the kind reload.
+
+### 5.9 Open after T-0130 (for Ines; Idris, 2026-10-26 01:42 ET)
+
+These are the places where s15 chair note 2 and the s5 text conflict, and the T-0130 line does not settle which wins. Until Ines rules, s5 follows the chair note as written. I have changed no ruling.
+
+- **Q-T130-1. Does a T2 `expired` run count as an attempt?** A1 counts every claimed run, and the chair names "T2 expiry inside the handler" as one of its causes. ADR-007 5.3 says `expired` "never counts toward the loop breaker (7.2 `killed`), so a healthy widget is never demoted for our own scheduling". Those are two different counters, but they rest on opposite reasons. As written, a queued handler that is healthy but slow, cut off by our T2 expiry three times, lands in `failed` as `killed`. Options: (a) it counts, as ruled. That is simple, and the kill test needs nothing more. (b) It does not count: at the next launch the app reads `expired` for that run from `status.json` and gives the attempt back (`attempts -= 1`) in a locked commit. This cannot happen at expiry itself, because s5.7 allows no lock after the expiration handler fires. My lean is (b), because of the ADR-007 principle. It costs one more commit path and one more kill-test case. s5 stays at (a) until you rule.
+- **Q-T130-2. Where does a row go when it must move to a full `failed.jsonl`?** A2 says no row is ever dropped, and that when the file is full only `queue` taps are refused. A row still has to move when it is killed at 3, fails a third time, or hits a `conflict`, and that last one can be a live row. Options: (a) the row stays in `pending`, gets `"held": "failed_full"`, is not run or claimed again, and still counts toward the `pending` cap. Once the person clears `failed.jsonl`, the next drain moves it. (b) `failed.jsonl` takes it past 100, with a hard ceiling (say 110). My lean is (a): no new cap, and the widget already shows the "fix this widget" badge. Both keep "never dropped".
+- **Q-T130-3. The kill-test invariant "no handler runs twice for one `tap_id`"** (s5.8, review invariant 4) contradicts A1's "reaches `failed` after exactly 3 runs", and it already conflicted with the 3-attempt retry in s5.6. I read Odalys's intent as: no handler runs again once a result commit for its `tap_id` exists (the double-run fault of B1). Proposed wording: "no handler runs again for a `tap_id` once a result commit (handled, restored, or moved to `failed`) exists for it". That changes the wording of an invariant you accepted, so it waits on you. Odalys should see it in T-0131.
+
+#### Chair note (Ines), 2026-10-26 01:46 ET: Q-T130-1, -2, -3
+
+Read: s5 in full and s5.9 at 7c1286dd; my s15 chair note 2 (ff41ed1e); ADR-007 5.3 (expiration handler, recovery), 7.2 (`expired`, `killed` rows) and amendment 2 item 6; Odalys's review invariant 4 and B1 (508b6e4b). I ran nothing. The test I used for each: what is simplest to build and test in the Simulator, and what is safest for the person, meaning no handler is lost without a trace and no file grows without bound. I have written each ruling into the s5 text, dated, so there are not two texts.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: Chair note (Ines), 2026-10-26 01:46 ET: Q-T130-1, -2, -3, scrolls sideways" style="--tw:853px" markdown="1">
+
+| Q | Ruling | Why |
+|---|---|---|
+| Q-T130-1, `expired` | **Does not count** (Idris's (b), in a cheaper form). The claim writes the run's `run_id` into the row. At the next drain, if the widget's `status.json` records that `run_id` as `expired`, the drain reads `attempts` as one less, and its claim writes the corrected count plus 1. No new commit path. If the record is missing or names another run, the attempt counts. `stuck` and a dead process still count | A1 named "T2 expiry inside the handler" as a cause. That was my error: ADR-007 5.3 had already ruled that our scheduling never counts against a script, and I broke that principle without saying so. Counting expiry would put a healthy handler in `failed` as `killed` and show the person a "fix this widget" badge for our fault. T1 has no expiry, so on the next T1 a slow handler either finishes or meets its own `timeout`, which counts. Not counting expiry therefore cannot make a loop that never ends. The give-back rides on the claim, so it costs one field and one comparison. Errors go the safe way: a lost record counts the run, and that is visible in `failed` |
+| Q-T130-2, full `failed.jsonl` | **The row always moves; 100 refuses every handler tap.** Neither held (a) nor a second ceiling (b). At 100 rows, every handler tap on that widget is refused, `queue` and live; ops-only actions still run. A refused `link` tap opens the app on that widget's failed rows. Rows already in `pending` move in past 100 | (a) <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parks</span> rows in the file every `getTimeline` reads, with nowhere to keep a 4 KiB traceback, and adds a state that never runs. (b)'s 110 needs a rule for 111. Both fail because live taps kept making rows: a converted kill and a live `conflict` both reach `failed`. So my A2 "live taps still run" is what left the file unbounded, and I withdraw it. With every handler tap refused at 100, no new row can start, and the file is bounded by 100 plus what `pending` held at that moment, which the 256 KiB cap bounds. It is one check, `failed.count >= 100 && action.hasHandler`, and one test (I5). A widget with 100 failed runs is broken, and the honest response is to send the person to the tracebacks |
+| Q-T130-3, invariant | **Restated in s5.8 as I1-I5.** The struck pair is replaced. I1 keeps review invariant 4's purpose (no run after a result commit, B1). I2 says every run is claimed first. I3 is A1's exactly-3, with no expiry injected. I4 and I5 are the tests for Q1 and Q2 | Idris read Odalys's intent rightly, and his wording is I1. "No handler runs twice" was already false the moment s5.6 allowed 3 attempts. I accepted both texts at 01:12 without reading them side by side. A gate whose invariants contradict cannot pass, so each now names one thing a test can check |
+
+</div>
+
+
+**What follows outside L5.** These are not written here, because this commit touches L5 only:
+- ADR-007 5.3 expiration handler: it also records the stopped run's `run_id` with `last_outcome=expired` (Idris names the field). The write is `status.json`'s usual atomic rename, not under `state.lock`, so s5.7 still holds.
+- ADR-007 amendment 2 item 6: "a `queue` tap is refused ... when that widget's `failed.jsonl` holds 100 rows" becomes "every handler tap". Add one line saying an `expired` run gives its attempt back.
+- Badge and VoiceOver wording for the full-file refusal, now on live taps too, and the in-app view a refused `link` tap opens (Maren).
+Board lines: T-0157 (Maren, wording) and T-0158 (Idris, ADR-007). Odalys's T-0131 delta review now covers these rulings too. If she finds that I4's give-back or I5's bound fails, her finding reopens the row; it is not settled because I wrote it.
 
 ## 6. Paging
 
@@ -303,7 +360,7 @@ One Swift type in the shared framework (chair S3) carries all of these:
 ### 7.1 URL grammar (custom scheme; no universal links, which need a server)
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 7.1 URL grammar (custom scheme; no universal links, which need a server), scrolls sideways" data-n="3" style="--tw:706px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 7.1 URL grammar (custom scheme; no universal links, which need a server), scrolls sideways" data-n="3" style="--tw:706px" markdown="1">
 
 | URL | Meaning | Signed |
 |---|---|---|
@@ -331,7 +388,7 @@ Widgets take no text (s1). An action declared with `input=` is always drawn as a
 Three fixed control kinds ship in the widget extension; the person adds any of them as often as they like and picks what each one does in its configuration.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 8. Control Center, Lock Screen and Action button controls, scrolls sideways" style="--tw:1330px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 8. Control Center, Lock Screen and Action button controls, scrolls sideways" style="--tw:1330px" markdown="1">
 
 | Kind (permanent strings) | Template | Configuration | Value | Action |
 |---|---|---|---|---|
@@ -365,7 +422,7 @@ PROPOSAL-002 row 2 calls the Run Script control "an App Intent we already build"
 ## 10. Limits
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 10. Limits, scrolls sideways" style="--tw:960px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 10. Limits, scrolls sideways" style="--tw:960px" markdown="1">
 
 | Limit | Value | Source |
 |---|---|---|
@@ -396,7 +453,7 @@ PROPOSAL-002 row 2 calls the Run Script control "an App Intent we already build"
 ## 11. Failure behaviour
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 11. Failure behaviour, scrolls sideways" style="--tw:958px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: 11. Failure behaviour, scrolls sideways" style="--tw:958px" markdown="1">
 
 | Case | Shown | State |
 |---|---|---|
@@ -450,7 +507,7 @@ Top 5 items per page, up to 3 pages, from a list the script fetched at its last 
 Each row is cheap now and a breaking change later. Owners named; none of these is done by this task.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 10: 13. What v1 must reserve so 1.1 does not break it, scrolls sideways" data-n="1" style="--tw:1005px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 13. What v1 must reserve so 1.1 does not break it, scrolls sideways" data-n="1" style="--tw:1005px" markdown="1">
 
 | # | Reserve in v1 | Why | Owner |
 |---|---|---|---|
@@ -476,7 +533,7 @@ Each row is cheap now and a breaking change later. Owners named; none of these i
 Additions after review (2026-10-26): s5.8 (G-L5-5 kill test and device run, new G-L5-7, G-L5-4 and G-L5-2 rows).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 14. Gates (Simulator first, device where marked), scrolls sideways" style="--tw:1044px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 12: 14. Gates (Simulator first, device where marked), scrolls sideways" style="--tw:1044px" markdown="1">
 
 | Gate | Question | How | Pass |
 |---|---|---|---|
@@ -520,7 +577,7 @@ The s4.1 routing is accepted as written: `WidgetOpsIntent` only in the extension
 **What v1 reserves (before the Day 13 freeze, 2026-11-03).** The app and the extension ship in one bundle and update together, and trees on the device come from the bundled package, so a v1 renderer on the phone never meets a 1.1 tree. The cross-version path that is real is L4 s8's: a newer document on an older renderer (the web renderer, a shared gallery script). I keep the rows that serve that path or that cost nothing, and drop the rows that only guard a phone-side mismatch that cannot happen.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 12: Chair note (Ines), 2026-10-26 00:15 ET: items 1 and 2, and what v1 reserves, scrolls sideways" style="--tw:578px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 13: Chair note (Ines), 2026-10-26 00:15 ET: items 1 and 2, and what v1 reserves, scrolls sideways" style="--tw:578px" markdown="1">
 
 | Row | Ruling | Owner |
 |---|---|---|
@@ -548,7 +605,7 @@ Form: independent review (Odalys, T-0108, 508b6e4b), the author's replies (Idris
 **Verdict.** The write-ahead design is accepted. It is better than what I ruled at 00:15: my S6 promised "never dropped", and the layout I accepted could not keep that promise (B1, B2). I should have asked for the review before writing the promise, not after. Three amendments of mine (A1-A3) follow. All three are 1.1 doc changes. The only v1 code this review produces is the widget id rule, and that rule is wider than the board line says (last part of this note).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 13: Chair note 2 (Ines), 2026-10-26 01:12 ET: the review answers; S1, S6, S7 and…, scrolls sideways" style="--tw:1131px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 14: Chair note 2 (Ines), 2026-10-26 01:12 ET: the review answers; S1, S6, S7 and…, scrolls sideways" style="--tw:1131px" markdown="1">
 
 | Item | Idris's proposal (312d6a1e) | Ruling | Why |
 |---|---|---|---|

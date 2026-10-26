@@ -74,6 +74,8 @@ At most 12 lines and 280 px tall at 390 with 3 workers. It never scrolls inside 
 - The project line (item 1) clamps to 2 lines like `.tk-t`, with no bottom margin. On one line it showed only its label. Measured 278 px with 3 running, under the 280 <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>.
 - The "All tasks" link lands with the Tasks header below the sticky tab row: `#cv-tasks{scroll-margin-top:69px}` (tab row 57 + s3).
 - The strip's second number is wait + blocked (live_status), so its word is "waiting or blocked", the brief's word. This changes the visitors' strip label too (an exception to 7.7: the old word was wrong).
+
+**Amended 2026-10-26 01:50 ET (Maren, T-0121):** with 8 live calls (5 shown) the brief measured 361 px at 390, over the 280 cap; the 3-call sample hid it. Item 2 now shows at most 3 entries, same two-line format; with more than 3 running, the total leads the counts line: "8 running · 52 ready · 40 waiting or blocked" (no "+N more" line). The usage line has no top margin of its own. Measured at 390: live 254 px; worst case 274 px (8 running, 2-line project, 999 counts, 100% with a 12:59 PM reset). tools/site_dash_probe.py reads that worst case on every run.
 ### 3.3 Tasks (replaces "Your open messages"; same place: Home tab, above the dock)
 Header: "Tasks" with the open count. Groups are `h3` with a count, in this order:
 

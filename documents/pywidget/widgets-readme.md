@@ -178,6 +178,15 @@ Each pair below is in `trees/`. Together they cover every family the premades cl
 - Idris: R0-R6 (sent to the L4 board line), and Simulator snapshots of the 15 reference designs in all modes.
 - Odalys: port `trees/` to `pywidget_dsl` (premade widget code line). Data rules stay as L16 says (User-Agent, GitHub backoff, no shipped tokens).
 - A person picks the quote list (L16 rule) before any quote ships.
+
+## Non-text marks on the card (T-0147, 2026-10-26)
+
+Maren, 01:39-01:51 ET by `date`. WCAG 1.4.11: a mark that carries data (dots, rings, bars, paths, glyphs) needs 3:1 against what it sits on.
+
+- **Token.** `widget.onCard.track` (tokens.json `appearances`; generated into `tokens-app.json`, `ios/Shared/Theme.xcassets` `WidgetOnCardTrack`, `tokens.css`). On the card the renderer draws `line.strong` with it. Light `#959085` (was `line.strong` `#C9C4B8`, 1.74:1 on the white card; now 3.18:1). Dark `rgba(255,255,255,0.56)` (was `#394158`, 1.48:1 at the violet stop; now 3.17:1 at the worst point). Increase Contrast: `card_mark` 4.5:1 (`#7B766C`, white 0.67). `appearance.py` refuses a source value under 3:1; `check_tokens.py` checks it at 11 points of the card (864 pairs, 0 fails).
+- **Check.** `render.py` draws a QA-only card page per premade (every system family plus the stale state, full colour, in light, dark, lightHC and darkHC; never saved as an image). Every shape, path, glyph and gauge part carries `data-g`. At points where hit testing finds the mark, its declared colour (times ancestor opacity) is composited over the ground: the next tagged element below, else the bare card pixel. Median per mark, floor 3:1. `bg.sunken` and `accent.soft` shapes are tracks and tile grounds: measured (`track_min`), not floored, because the mark on them and the text beside them carry the value. Results in `qa.json` per premade: `card`, `graphics_faults`, `card_text_faults`.
+- **Habits, missed day, worst mark:** dark 1.04 to 3.53; light 1.74 to 3.18; darkHC 2.27 to 5.39; lightHC 3.58 to 4.52. Steps, sun and the horizon line moved with it (02 dark 1.21 to 4.73).
+- **Fixed in T-0159 (01:56):** dark `accent` glyphs near the violet start stop (03, 04, 05, 08, 10) were 2.75-2.91: on the card the renderer now draws `accent` with `widget.onCard.accent` (dark `#B0A3FD`, OKLCH lightness only from `#A08BFF`, 3.10:1 worst token pair; light = `accent`; Increase Contrast 4.5:1, `#BEB6FC` / `#1B47A6`), measured 3.30-3.56 dark. 03 Steps goal line was `text.secondary` at 0.5 opacity (2.61 dark, 2.28 light): now `line.strong` solid, so `widget.onCard.track` on the card (3.30 dark, 3.18 light). 11 Clocks dial <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> was an accent dot on the hands (2.05-2.75): now a hub in the hands' colour under them; hands and hub carry `.widgetAccentable()`, which also makes the hands show in accented mode (they vanished into the face before). Graphics faults 30 -> 0. Still open: in clear mode (luminance) the dial face and hands are both white, so the day dials read as discs.
 {% endraw %}
 
 </div>

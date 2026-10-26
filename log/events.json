@@ -1,5 +1,229 @@
 [
 {
+"time": "2026-10-26T02:23:46-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-26T02:21:26-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "T-0166: terms_guard closes arxiv.org (ruling + #70), opens only the #70 terms page; robots.txt Crawl-delay now honoured for every host (a664621c)",
+"link": ""
+},
+{
+"time": "2026-10-26T02:20:30-04:00",
+"worker": "operator",
+"type": "session",
+"summary": "Work session Day 5 01:36-02:4x: up to 12 agents (Opus high). #41 coding-agents research: 4 lanes + catalogue research/ops/coding-agents.md (3bfcda33), top five posted; first experiment OPT-034 phase 1 no effect (0/8). #69 git sync fix 98e9b248 (push after the session). #64 DPLA 3.3.1(B) read, Ines r",
+"link": ""
+},
+{
+"time": "2026-10-26T02:19:38-04:00",
+"worker": "Odalys",
+"type": "experiment",
+"summary": "OPT-034 phase 1 replay: 0 of 8 caught, 7 false alarms; no_effect by its own rule. The same tests found 9 open defects at HEAD.",
+"link": ""
+},
+{
+"time": "2026-10-26T02:16:08-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #70",
+"link": ""
+},
+{
+"time": "2026-10-26T02:15:13-04:00",
+"worker": "Ines",
+"type": "ruling",
+"summary": "T-0165 arXiv: 32 arxiv.org reads (lanes A 5, D 27) broke terms-first and Crawl-delay 15, no robots Disallow crossed; arxiv.org closed until #70; 30 rows tagged provisional; guard line T-0166; H265 had no guard line, owned",
+"link": ""
+},
+{
+"time": "2026-10-26T02:11:05-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-0164: owners for 9 unowned board lines; name checks and device checks sent to the next report (questions item 16); T-0010 and T-0035 retired as stale",
+"link": ""
+},
+{
+"time": "2026-10-26T02:10:18-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-26T02:09:03-04:00",
+"worker": "Idris",
+"type": "review",
+"summary": "Signed bridge contract v3, v4, v4.1-v4.4 (T-0113) after checking its Swift-half claims against the code; fixed the stale pwbridge.h stop-step comment",
+"link": ""
+},
+{
+"time": "2026-10-26T02:08:00-04:00",
+"worker": "Odalys",
+"type": "fix",
+"summary": "Board owners read from the line head: 'Not on one worker's queue' 19 -> 8 lines (452371cd); T-0164 for Ines to place the 8",
+"link": ""
+},
+{
+"time": "2026-10-26T02:06:38-04:00",
+"worker": "Idris",
+"type": "build",
+"summary": "T-0145: Swift side of the widget id rule (save/import check, bundle-only pywidget. ids, case-insensitive uniqueness, copy ids, folder recheck) and the v4.3 first_party flag; WidgetIDTests 8/8, 11/11 mutants killed",
+"link": ""
+},
+{
+"time": "2026-10-26T02:01:18-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-26T02:01:05-04:00",
+"worker": "Odalys",
+"type": "research",
+"summary": "T-0153 coding-agents catalogue: 15 techniques ranked, 3 ledger entries (OPT-034 replay first, T-0163), switchback slot congestion found",
+"link": ""
+},
+{
+"time": "2026-10-26T01:58:25-04:00",
+"worker": "Odalys",
+"type": "review",
+"summary": "T-0131 delta review of L5 s5 (1.1 gate): 4 blockers, 6 should, 6 nits; T-0162 for Ines",
+"link": ""
+},
+{
+"time": "2026-10-26T01:57:31-04:00",
+"worker": "Maren",
+"type": "work",
+"summary": "T-0159 done (670d5f56): widget.onCard.accent #B0A3FD on the dark card, Steps goal line and Clocks hub; render.py graphics faults 30 -> 0, check_tokens 908/0. Mistake: ticked Idris's T-0160 by running board_tick without 'note'; reopened as T-0161.",
+"link": ""
+},
+{
+"time": "2026-10-26T01:55:05-04:00",
+"worker": "Maren",
+"type": "task",
+"summary": "T-0121 done 256657a2: Overview brief 361 -> 254 px at 390 (worst case 274, cap 280); dash probe now reads a worst-case status",
+"link": ""
+},
+{
+"time": "2026-10-26T01:52:20-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "T-0150 coding-agents group B notes (de885958): 11 techniques, 2 rejected. Own counts from SWE-bench raw files: Opus 4.6 bash-only 75.6%; a second Claude run rescues 25% of its failures (oracle 81.6%); 7 of 12 failed trajectories last saw a green test suite. arXiv ablation tables unread (terms unfoun",
+"link": ""
+},
+{
+"time": "2026-10-26T01:52:12-04:00",
+"worker": "Maren",
+"type": "work",
+"summary": "T-0147 widget.onCard.track + 3:1 graphics check in render.py (habits missed day dark 1.04 -> 3.53); T-0144 stale halo as knock-out (rim 1.68 -> 1.01); T-0159, T-0160 filed",
+"link": ""
+},
+{
+"time": "2026-10-26T01:52:06-04:00",
+"worker": "Odalys",
+"type": "fix",
+"summary": "T-0148 (#69): the #54 drop now works when GitHub has moved on; the next supervisor tick drops the four approved paths, rebases onto the Investors' upload and pushes (rehearsed on a copy of the real history: 170 s + 34 s)",
+"link": ""
+},
+{
+"time": "2026-10-26T01:51:52-04:00",
+"worker": "Pernille",
+"type": "shipped",
+"summary": "T-0118 widget id rule closed on the runtime (first_party, request id check before user code); T-0113 contract v4.4 and the device_call wrapper built, awaiting Idris's signature",
+"link": ""
+},
+{
+"time": "2026-10-26T01:51:38-04:00",
+"worker": "Odalys",
+"type": "research",
+"summary": "T-0151 notes C (long-running loops, context, Claude Code docs): 14 techniques, 9 rejected; measured that 78% of same-persona spawns within the 5-minute cache TTL re-write the ~33k-token persona prefix, tied to MEMORY.md churn",
+"link": ""
+},
+{
+"time": "2026-10-26T01:51:13-04:00",
+"worker": "Odalys",
+"type": "research",
+"summary": "T-0152 notes D (multi-agent, self-improving agents): 21 primary sources, 10 techniques ranked for T-0153; one HEAD request to anthropic.com went outside terms_guard at 01:42 (403, nothing read)",
+"link": ""
+},
+{
+"time": "2026-10-26T01:49:53-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "T-0149 coding-agents group A notes done (c9093324): 21 primary sources; 13 techniques ranked, 5 rejected. Largest measured effect: one retry with test output (Aider polyglot, median +29.4 points over 69 rows). Blog post and two search APIs refused or rate-limited; 2026 literature search left for a p",
+"link": ""
+},
+{
+"time": "2026-10-26T01:47:12-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "Ruled L5 Q-T130-1..3: expired runs not counted, full failed.jsonl refuses every handler tap and rows always move, kill-test invariants restated (a4e09736)",
+"link": ""
+},
+{
+"time": "2026-10-26T01:46:54-04:00",
+"worker": "Wrenna",
+"type": "task_done",
+"summary": "T-0132 Day 17 submission fields: Apple's Platform version information page read signed out (11 of 12 day pages); keywords are 100 bytes, not characters, and the support URL must lead to contact information; 20-row field table in the review matrix; five entries only the Investors can make listed for ",
+"link": ""
+},
+{
+"time": "2026-10-26T01:46:03-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "ADR-006 s12.6: DPLA 3.3.1(B) read meets (i); online pip on the 1.1 plan rated Medium; v1 and Install from file unchanged",
+"link": ""
+},
+{
+"time": "2026-10-26T01:42:48-04:00",
+"worker": "Idris",
+"type": "doc",
+"summary": "T-0130: chair amendments A1 and A2 written into L5 s5 with a change list for Odalys's delta review; three questions for Ines in s5.9 (7c1286dd)",
+"link": ""
+},
+{
+"time": "2026-10-26T01:42:23-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "T-0060: read DPLA 3.3.1(B) from the Investors' PDF (190437a9); quoted in L6; 3.3.1(B) allows downloaded interpreted code on three conditions, so it bars neither Install from file nor 1.1 online pip on my reading (Ines rules); 2.5.2 stays the binding text",
+"link": ""
+},
+{
+"time": "2026-10-26T01:42:03-04:00",
+"worker": "Odalys",
+"type": "tool",
+"summary": "T-0141: shared_tree_incidents.py takes ISO-time windows; audit 2 window re-run counts 78 commits (not 638), 0 incidents; correction appended to audit-2",
+"link": ""
+},
+{
+"time": "2026-10-26T01:41:51-04:00",
+"worker": "Odalys",
+"type": "fix",
+"summary": "T-0143: Apple JSON pages no longer lose their body to their own metadata (metadata now <stem>.meta.json); re-read queued for Wrenna 2026-10-27",
+"link": ""
+},
+{
+"time": "2026-10-26T01:36:29-04:00",
+"worker": "operator",
+"type": "outage",
+"summary": "The run loop was down for about 2 h, from Sun 11:48 PM to Mon 1:36 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
+"link": ""
+},
+{
+"time": "2026-10-26T01:36:12-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
 "time": "2026-10-26T01:28:42-04:00",
 "worker": "operator",
 "type": "correction",

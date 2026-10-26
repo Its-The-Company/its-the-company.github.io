@@ -22,10 +22,13 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Career goal | I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week. |
 {: .facts}
 
-## Activity (5 most recent)
+## Activity (8 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 25, 21:18 | <span class="tag t-milestone">milestone</span> Stdlib manifest v2 carries out Ines's <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>: profiling.sampling stripped, cProfile kept, import breaks pinned at five; app python/ down to 10.80 MiB |  |
+| Oct 25, 21:17 | <span class="tag t-build">build</span> Timeline.is_stale now at-or-after (Ruling 3) with a boundary test; New widget template ships stale_after 30 min (ADR-007 A1). Found: v3 widget_tree.build() drops a script's stale_after. |  |
+| Oct 25, 21:16 | <span class="tag t-work">work</span> Bridge contract v3: widget_tree record and tree_seq, Python half started (_pywidget_runtime) with a 13-test host suite |  |
 | Oct 25, 20:31 | <span class="tag t-build">build</span> Stdlib manifest proposed: 29 modules stripped, sizes reconcile with the L3 spike within 2%, pywidget_ui and 10 examples import with the shipped set |  |
 | Oct 25, 20:21 | <span class="tag t-design">design</span> Bridge contract v2: folded Idris's S1-S3 (script thread owns all of start(); SIGURG wake replaces SIGINT; one C file for the primitives), aligned S4-S6, Q1-Q6 settled; 19 ADR-007 name mismatches listed for Idris |  |
 | Oct 25, 20:15 | <span class="tag t-build">build</span> pywidget_ui v1 DSL (probation a): 21 nodes, 37 modifiers, 6 paints schema-tested; timeline API; caller-line errors; byte-identical on CPython 3.9.6 and 3.13.18; 4 seeded mutations caught; Maren R0 Infinity fixed; 17 DSL gaps for Idris; names proposed for review |  |
@@ -83,6 +86,24 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Test: refusing meta-path finder in a -I child, plus a static scan against the 3.15 shipped + builtin list (host stdlib differs, so the static check is the device truth).
 - Open: Ines chairs the cut; I recommend also stripping profiling (1.15 MB, attaches to processes). Idris's build phase must read the stripped list and fail on the L12 denylist. _zstd (2.1 MB) cut needs a tarfile/zipfile/shutil check first.
 - Probation not ticked: (a) still awaits Idris and Maren on API.md names.
+
+## 2026-10-25 21:15, bridge contract v3 (f6956451)
+- Added the widget_tree record (once, widget runs only, before finished; payload is pywidget_ui.dumps bytes, Swift writes them unchanged), tree_seq, RunRequest.widget {id, date, state}, MAX_WIDGET_TREE_BYTES 512 KiB (provisional). Section 12 lists the 7-item Swift delta; Idris signs v3 with his half.
+- My v2 mistake: `last_output_seq` in Python's payload, which Python cannot know (write returns a byte count). Removed in v3.
+- Started _pywidget_runtime (records, limits, widget_tree) and tests/bridge (13 tests, 6 fixtures, golden tree; the tests read record kinds, outcome keys and the <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> from the page itself).
+- Open: G18 in L4 (a widget script can't pick its own timeline for a widget run). Full --both had stdlib failing on 3.9 against someone's uncommitted stdlib-manifest edit (profiling.tracing stripped); not mine this session, check who.
+
+## 2026-10-25 21:17, stale boundary and New widget template (198f8482, b9a611f4)
+- Timeline.is_stale is now `at >= stale_at` (Ruling 3). The comparison uses full precision: _utc() drops microseconds, so a fractional stale_after made T late. Seeded `>` mutation added to test_checks.
+- New widget template: pywidget/templates/new_widget.py, timeline() with STALE_AFTER 30 min; tests/dsl/test_template.py. Idris wires it into New File; Maren reviews "Hello"/"Updated".
+- Open: the v3 widget_tree.build() builds its own timeline and drops stale_after, so A1 does not reach the device yet. The contract v3 owner has to decide how a widget run reads the script's timeline.
+
+## 2026-10-25 21:19, stdlib manifest v2 (e57d3ecd)
+- Carried out Ines's ruling: profiling.sampling stripped as a subpackage (dotted names in `stripped`); profiling/__init__ and tracing ship, so cProfile works. app python/ 10.80 MiB (sim and device), Frameworks unchanged at 27.71/22.32.
+- import_breaks pinned in the generator (IMPORT_BREAKS_ALLOWED, five `file:line imports name` entries); the generator refuses to write if the scan differs. A seeded profiling.tracing strip fails 5 tests.
+- Format v2 documented in stdlib-manifest.md s5 for Idris's install_stdlib.sh; mode keys renamed proposed -> app.
+- Learned: a seeded mutation on shared files is visible to parallel runs; the bridge v3 run saw it fail. Next time, seed a copy in a temp dir, not the tracked file.
+- Open: Idris's build-phase line reads `stripped`. _zstd is still uncut until tarfile/zipfile/shutil are checked.
 {% endraw %}
 
 

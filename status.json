@@ -1,14 +1,79 @@
 {
  "schema": 1,
- "at": "2026-10-26T00:37:49.396731+00:00",
+ "at": "2026-10-26T01:38:49.856499+00:00",
  "session": {
   "active": true,
-  "kind": "inbox",
-  "started": "2026-10-25T20:37:32-04:00"
+  "kind": "work",
+  "started": "2026-10-25T21:03:26-04:00"
  },
  "workers": [],
  "who": "",
- "recent": [],
+ "recent": [
+  {
+   "name": "idris",
+   "task": "[build] Idris C1 Swift-Python bridge",
+   "model": "opus",
+   "started": "2026-10-26T01:05:28.813Z",
+   "seconds": null,
+   "finished": "2026-10-26T01:37:46.444000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] Pernille stdlib manifest v2",
+   "model": "opus",
+   "started": "2026-10-26T01:11:18.275Z",
+   "seconds": null,
+   "finished": "2026-10-26T01:18:58.291000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[review] Idris reviews pywidget_ui names",
+   "model": "opus",
+   "started": "2026-10-26T01:11:53.970Z",
+   "seconds": null,
+   "finished": "2026-10-26T01:17:59.125000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] Pernille New widget template and is_stale",
+   "model": "opus",
+   "started": "2026-10-26T01:14:15.553Z",
+   "seconds": null,
+   "finished": "2026-10-26T01:17:45.805000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[plan] Pernille bridge contract v3",
+   "model": "opus",
+   "started": "2026-10-26T01:05:34.113Z",
+   "seconds": null,
+   "finished": "2026-10-26T01:16:59.563000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] Ines routes CORRECTIONS open items",
+   "model": "opus",
+   "started": "2026-10-26T01:14:47.292Z",
+   "seconds": null,
+   "finished": "2026-10-26T01:16:41.144000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] Odalys report evidence collector",
+   "model": "opus",
+   "started": "2026-10-26T01:05:41.110Z",
+   "seconds": null,
+   "finished": "2026-10-26T01:15:30.259000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[test] Odalys fix web_hits_test and terms_guard text",
+   "model": "opus",
+   "started": "2026-10-26T01:05:45.913Z",
+   "seconds": null,
+   "finished": "2026-10-26T01:15:24.685000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [
    {
@@ -20,16 +85,16 @@
     "text": "Idris, P1, L3 follow-ups on the Simulator: frozen-modules measurement, Release-build rerun, strip CPython test..."
    },
    {
-    "kind": "plan",
-    "text": "Idris + Ines (chair), P0, ADR-003 execution architecture and failure-mode spec from L3-runtime-spike.md s5 (ADR-001..."
-   },
-   {
     "kind": "build",
     "text": "L1 demo widgets (Where I am, Steps today, Heading last known, Altitude, Next event countdown), spec in..."
    },
    {
     "kind": "measure",
     "text": "L1/L2 device checks: CMPedometer, CMMotionActivity, HealthKit (locked/unlocked), battery, location inside the widget..."
+   },
+   {
+    "kind": "browser",
+    "text": "Read developer.apple.com \"Keeping a widget up to date\", WidgetPushHandler, Live Activity duration,..."
    }
   ],
   "blocked": [
@@ -54,34 +119,34 @@
     "text": "Odalys: additions page wiring (ops/plans/site-v2-additions.md 8): B, A, C, D, D2 and queue.js done (hashes in the..."
    }
   ],
-  "runnable_count": 37,
-  "blocked_count": 29
+  "runnable_count": 35,
+  "blocked_count": 31
  },
  "meter": {
   "five_hour": {
    "pct": 42.0,
-   "resets_at": "2026-10-26T02:59:59.744653+00:00",
+   "resets_at": "2026-10-26T02:59:59.540972+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 58.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 17.0,
-   "resets_at": "2026-11-01T06:59:59.744673+00:00",
+   "resets_at": "2026-11-01T06:59:59.540992+00:00",
    "used_words": "of your weekly allowance used",
    "left": 83.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 2.0,
-   "resets_at": "2026-11-01T06:59:59.744807+00:00",
+   "resets_at": "2026-11-01T06:59:59.541119+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-25T20:37:32.358990-04:00"
+  "read_at": "2026-10-25T21:03:26.197633-04:00"
  },
  "ui": {
-  "week_pct": 0.039,
-  "five_hour_pct": 0.072,
+  "week_pct": 0.048,
+  "five_hour_pct": 0.145,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -92,7 +157,7 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-25T20:52:32-04:00",
+ "next_tick": "2026-10-25T21:18:26-04:00",
  "lanes": [
   {
    "name": "Wrenna",
@@ -119,29 +184,13 @@
   {
    "name": "Pernille",
    "state": "next",
-   "task": "Pernille, P1, bridge contract v3: add the widget_tree record kind (emitted once before finished, payload the ADR-002...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, tree_too_large card copy variant (script did nothing wrong) for state-spec s3, per ADR-007 7.1 row 3...",
+   "task": "Pernille, P1, apply the agreed pywidget_ui renames (closes probation (a) with both reviewers' check): the 19 renames...",
    "model": null,
    "since": null,
    "next": [
-    "Maren, P1, C13 after the Investors pick a direction:...",
-    "Maren, P2, Pro card state (chair ruling 2026-10-25 20:08..."
+    "Pernille, P1, widget run keeps the script's timeline...",
+    "Pernille, P1, replace the stand-in..."
    ]
-  },
-  {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P1, chair the stdlib cut (Pernille a4ce0794, pywidget/runtime/stdlib-manifest.json,...",
-   "model": null,
-   "since": null,
-   "next": []
   },
   {
    "name": "Odalys",
@@ -151,8 +200,24 @@
    "since": null,
    "next": [
     "Odalys, P2, Install from file, Python side (ADR-006 s3...",
-    "Odalys, P3, T33-3 terms_locate Bluesky-case test..."
+    "Odalys, P3, align L12-security.md with the C2 chair note..."
    ]
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P1, C13 after the Investors pick a direction: high-contrast (7:1) palette variants, token export to Swift...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P1, chair the two pywidget_ui name disputes from the Idris/Maren reconciliation (9c75aeb7,...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
@@ -169,13 +234,6 @@
     "w": "Idris",
     "k": "build",
     "t": "L3 follow-ups on the Simulator",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "plan",
-    "t": "P0, ADR-003 execution architecture and failure-mode spec from...",
     "s": "next",
     "o": "c"
    },
@@ -229,34 +287,6 @@
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "plan",
-    "t": "Bridge contract v3",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "Tree_too_large card copy variant",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Chair line on ADR-007 execution architecture after Odalys's review: accept...",
-    "s": "wait",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "C1 Swift-Python bridge",
-    "s": "wait",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "App skeleton",
@@ -278,16 +308,16 @@
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Chair the stdlib cut",
+    "w": "Idris",
+    "k": "review",
+    "t": "Review pywidget_ui public names before they freeze",
     "s": "next",
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "review",
-    "t": "Review pywidget_ui public names before they freeze",
+    "w": "Pernille",
+    "k": "build",
+    "t": "Apply the agreed pywidget_ui renames",
     "s": "next",
     "o": "c"
    },
@@ -450,13 +480,6 @@
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "decision",
-    "t": "C2-Q1: Swift-only location fix in the widget extension handed to the next...",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "k": "research",
     "t": "Person",
     "s": "next",
@@ -491,16 +514,65 @@
     "y": 1
    },
    {
-    "w": "Maren",
-    "k": "design",
-    "t": "Pro card state",
+    "w": "Idris",
+    "k": "build",
+    "t": "Pro premade placement",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Stdlib cut in the build phase",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "C2-Q1 Swift-only location fix in the widget extension",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "research",
+    "t": "Align L12-security.md with the C2 chair note",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Widget run keeps the script's timeline",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Chair the two pywidget_ui name disputes from the Idris/Maren reconciliation",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Replace the stand-in pywidget/ios/App/Runtime/_pywidget_runtime.py with the...",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "Pro premade placement",
+    "t": "C1 bridge slice 2",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Console view",
     "s": "wait",
     "o": "c"
    },
@@ -581,16 +653,9 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Terms_guard refusal text",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
+    "w": "Wrenna",
     "k": "test",
-    "t": "Web_hits_test red",
+    "t": "Rst_surface_test no summary",
     "s": "next",
     "o": "c"
    },
@@ -622,65 +687,65 @@
   ],
   "done": [
    {
-    "w": "General-purpose",
+    "w": "Idris",
     "k": "build",
-    "t": "Pernille stdlib manifest",
-    "at": "2026-10-26T00:31:32.515000+00:00",
+    "t": "C1 Swift-Python bridge",
+    "at": "2026-10-26T01:37:46.444000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Stdlib manifest v2",
+    "at": "2026-10-26T01:18:58.291000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "review",
+    "t": "Reviews pywidget_ui names",
+    "at": "2026-10-26T01:17:59.125000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "New widget template and is_stale",
+    "at": "2026-10-26T01:17:45.805000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "plan",
+    "t": "Bridge contract v3",
+    "at": "2026-10-26T01:16:59.563000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Routes CORRECTIONS open items",
+    "at": "2026-10-26T01:16:41.144000+00:00",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Tamper alerts to Needs You",
-    "at": "2026-10-26T00:29:30.916000+00:00",
+    "t": "Report evidence collector",
+    "at": "2026-10-26T01:15:30.259000+00:00",
     "o": "i"
    },
    {
-    "w": "Idris",
-    "k": "plan",
-    "t": "Amends ADR-007 for review",
-    "at": "2026-10-26T00:28:37.328000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "General-purpose",
-    "k": "design",
-    "t": "Pernille folds review into contract",
-    "at": "2026-10-26T00:21:06.380000+00:00",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
-    "k": "review",
-    "t": "Review of ADR-007",
-    "at": "2026-10-26T00:20:28.646000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "review",
-    "t": "Reviews bridge contract",
-    "at": "2026-10-26T00:17:12.635000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "plan",
-    "t": "Execution architecture ADR",
-    "at": "2026-10-26T00:15:32.729000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "General-purpose",
-    "k": "build",
-    "t": "Pernille DSL probation",
-    "at": "2026-10-26T00:15:30.355000+00:00",
+    "k": "test",
+    "t": "Fix web_hits_test and terms_guard text",
+    "at": "2026-10-26T01:15:24.685000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 37,
-   "wait": 16,
+   "next": 35,
+   "wait": 18,
    "blocked": 13,
    "you": 6
   }

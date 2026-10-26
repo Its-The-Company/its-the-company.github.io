@@ -1,5 +1,117 @@
 [
 {
+"time": "2026-10-25T21:38:08-04:00",
+"worker": "operator",
+"type": "investor-message",
+"summary": "Replied on #41 (c6405925635): 17% week vs daily-share pause explained; reports now carry documents, images and links (amendment 2026-10-25 20:44, report_facts Evidence ce8a1bbc, prompts updated)",
+"link": ""
+},
+{
+"time": "2026-10-25T21:38:08-04:00",
+"worker": "operator",
+"type": "session",
+"summary": "Work session 21:03-21:38: 8-agent pool, 13 agent runs (Opus high); C1 bridge Swift half (a168e190), ADR-007 accepted (3bac1693), stdlib cut (c045aa9d, e57d3ecd), bridge contract v3 (f6956451), report evidence (ce8a1bbc); new launches held after ~21:25 at the Investors' 20% daily concession",
+"link": ""
+},
+{
+"time": "2026-10-25T21:37:29-04:00",
+"worker": "Idris",
+"type": "build",
+"summary": "C1 Swift-Python bridge, Swift half, landed (a168e190): run, streamed output, input() via the app prompt, Stop ladder, restart, tracebacks with file and line; 26 XCTest + 3 UI tests green on the Simulator via xc.sh. Found two Stop bugs the contract missed: SIGURG blocked on GCD-spawned threads, and P",
+"link": ""
+},
+{
+"time": "2026-10-25T21:18:43-04:00",
+"worker": "Pernille",
+"type": "milestone",
+"summary": "Stdlib manifest v2 carries out Ines's ruling: profiling.sampling stripped, cProfile kept, import breaks pinned at five; app python/ down to 10.80 MiB",
+"link": ""
+},
+{
+"time": "2026-10-25T21:17:46-04:00",
+"worker": "Idris",
+"type": "review",
+"summary": "pywidget_ui names review (engineer): 11 renames, 8 questions written blind (789a4a72), then reconciled with Maren (9c75aeb7): 19 renames agreed incl. 2 schema names (AccessoryWidgetBackground, widgetAccentedRenderingMode, my L4 slips); G1-G17 agreed; Ines chairs Image.symbol renderingMode and clip_s",
+"link": ""
+},
+{
+"time": "2026-10-25T21:17:34-04:00",
+"worker": "Pernille",
+"type": "build",
+"summary": "Timeline.is_stale now at-or-after (Ruling 3) with a boundary test; New widget template ships stale_after 30 min (ADR-007 A1). Found: v3 widget_tree.build() drops a script's stale_after.",
+"link": ""
+},
+{
+"time": "2026-10-25T21:16:52-04:00",
+"worker": "Pernille",
+"type": "work",
+"summary": "Bridge contract v3: widget_tree record and tree_seq, Python half started (_pywidget_runtime) with a 13-test host suite",
+"link": ""
+},
+{
+"time": "2026-10-25T21:16:31-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "Chair calls on CORRECTIONS pass 1: battery premade becomes Storage in v1; no MET Norway in 1.0; C2 names govern v1 keychain (C2-Q5 no); ADR-007 rows checked",
+"link": ""
+},
+{
+"time": "2026-10-25T21:15:13-04:00",
+"worker": "Odalys",
+"type": "tool",
+"summary": "Report evidence: report_facts lists documents, code-made images and public links; report_assets stages capped, scrubbed images for the site (ce8a1bbc)",
+"link": ""
+},
+{
+"time": "2026-10-25T21:15:11-04:00",
+"worker": "Odalys",
+"type": "task",
+"summary": "web_hits_test and store_refusal_test green (1d0bec5d); terms_guard SystemExit text names the real reason, G2a only for G2a hosts (c0cf8efd). Full run.sh red only on rst_surface_test (no summary line; board line for Wrenna).",
+"link": ""
+},
+{
+"time": "2026-10-25T21:14:23-04:00",
+"worker": "Wrenna",
+"type": "correction",
+"summary": "Correction to my 21:14 event: 10 CORRECTIONS pass-1 rows correct my own docs, not 9 (U1-27 also mine; counted by grep)",
+"link": ""
+},
+{
+"time": "2026-10-25T21:14:15-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "CORRECTIONS upkeep pass 1 (taken over from Odalys): 35 rows from 15 L/C-docs against the brief, ADR-001 to ADR-007 and each other; 9 rows correct my own L6, L7, L11, L16, L19",
+"link": ""
+},
+{
+"time": "2026-10-25T21:13:55-04:00",
+"worker": "Maren",
+"type": "design",
+"summary": "state-spec s1 closed per ADR-007 Ruling 3: stale at or after T, inserted entry, absent stale_after never stale; Pro card VoiceOver aligned to Double-tap; check_states guards both. DSL is_stale uses > (Pernille line).",
+"link": ""
+},
+{
+"time": "2026-10-25T21:11:40-04:00",
+"worker": "Maren",
+"type": "design",
+"summary": "Widget states: tree_too_large copy variant (s3.1) and Pro card (s3.2) drawn in all families and modes, proposed for C51; checks green",
+"link": ""
+},
+{
+"time": "2026-10-25T21:11:32-04:00",
+"worker": "Maren",
+"type": "review",
+"summary": "Designer review of pywidget_ui public names: not ready to freeze; 19 renames, 11 questions, 100 keep of 130; additions A1-A7; G1-G17 answered. Fault: amended a commit Ines had just landed; restored her 10c295c9 and recommitted mine.",
+"link": ""
+},
+{
+"time": "2026-10-25T21:10:41-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "ADR-007 accepted at the chair line (3bac1693): option (b) for v1, (c) gated; C2-Q1 approved as a 1.0 stretch; 7.4 closes state-spec s1. Stdlib cut ruled (c045aa9d): 29 strips, profiling.sampling only, cProfile kept.",
+"link": ""
+},
+{
 "time": "2026-10-25T20:44:34-04:00",
 "worker": "operator",
 "type": "message",

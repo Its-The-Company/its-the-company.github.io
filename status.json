@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-10-26T06:44:54.123796+00:00",
+ "at": "2026-10-26T06:56:31.050737+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,118 +8,55 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-0122 Swift renderer fonts+card",
-   "model": "opus",
-   "started": "2026-10-26T06:27:43.810Z",
-   "seconds": 1030,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[tools] T-0154 Infrastructure Techniques section",
    "model": "opus",
    "started": "2026-10-26T06:28:33.760Z",
-   "seconds": 980,
+   "seconds": 1677,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
   {
    "name": "odalys",
-   "task": "[build] T-0026 premade widget code",
+   "task": "[tools] T-0196 open arxiv help/robots only",
    "model": "opus",
-   "started": "2026-10-26T06:28:51.209Z",
-   "seconds": 962,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0176 immediate auto-apply + auto-revert",
-   "model": "opus",
-   "started": "2026-10-26T06:34:33.058Z",
-   "seconds": 621,
-   "finished": null,
-   "effort": "high"
+   "started": "2026-10-26T06:40:26.163Z",
+   "seconds": null,
+   "finished": "2026-10-26T06:56:05.014000+00:00"
   },
   {
    "name": "pernille",
    "task": "[build] T-0030 clean-room fixtures + overlap check",
    "model": "opus",
    "started": "2026-10-26T06:35:49.406Z",
-   "seconds": 544,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-10-26T06:55:18.903000+00:00"
   },
   {
    "name": "odalys",
    "task": "[tools] T-0185 T-0186 literal pathspecs",
    "model": "opus",
    "started": "2026-10-26T06:37:39.961Z",
-   "seconds": 434,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-10-26T06:54:20.078000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-0178 hide false outages on site",
+   "task": "[build] T-0026 premade widget code",
    "model": "opus",
-   "started": "2026-10-26T06:39:38.926Z",
-   "seconds": 315,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0196 open arxiv help/robots only",
-   "model": "opus",
-   "started": "2026-10-26T06:40:26.163Z",
-   "seconds": 267,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Odalys x6, Pernille",
- "recent": [
-  {
-   "name": "wrenna",
-   "task": "[research] T-0195 read uploaded agent papers",
-   "model": "opus",
-   "started": "2026-10-26T06:38:37.596Z",
+   "started": "2026-10-26T06:28:51.209Z",
    "seconds": null,
-   "finished": "2026-10-26T06:44:11.004000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[review] T-0020 renames check + run_action copy",
-   "model": "opus",
-   "started": "2026-10-26T06:36:55.941Z",
-   "seconds": null,
-   "finished": "2026-10-26T06:42:25.327000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-0157 failed-queue badge wording",
-   "model": "opus",
-   "started": "2026-10-26T06:33:23.107Z",
-   "seconds": null,
-   "finished": "2026-10-26T06:42:18.250000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-0188 Q-T158-1 last_outcome ruling",
-   "model": "opus",
-   "started": "2026-10-26T06:37:23.799Z",
-   "seconds": null,
-   "finished": "2026-10-26T06:41:17.762000+00:00"
+   "finished": "2026-10-26T06:50:26.498000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 55,
-  "blocked_count": 42
+  "runnable_count": 51,
+  "blocked_count": 40
  },
  "meter": {
   "five_hour": {
@@ -160,29 +97,11 @@
  "next_tick_why": null,
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-0122 Swift renderer fonts+card",
-   "model": "opus",
-   "since": "2026-10-26T06:27:43.810Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-0154 Infrastructure Techniques section",
    "model": "opus",
    "since": "2026-10-26T06:28:33.760Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[build] T-0030 clean-room fixtures + overlap check",
-   "model": "opus",
-   "since": "2026-10-26T06:35:49.406Z",
    "next": [],
    "effort": "high"
   },
@@ -195,9 +114,25 @@
    "next": []
   },
   {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, tools/agent_worktree.sh merge lets a rename out of a protected path through (rules/r.txt renamed...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Wrenna",
    "state": "next",
    "task": "Read developer.apple.com \"Keeping a widget up to date\", WidgetPushHandler, Live Activity duration,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, apply the agreed pywidget_ui renames (closes probation (a) with both reviewers' check): the 19 renames...",
    "model": null,
    "since": null,
    "next": []
@@ -214,15 +149,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0122 Swift renderer fonts+card",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T06:27:43.810Z",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "T-0154 Infrastructure Techniques section",
@@ -230,60 +156,6 @@
     "e": "high",
     "at": "2026-10-26T06:28:33.760Z",
     "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "build",
-    "t": "T-0026 premade widget code",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T06:28:51.209Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0176 immediate auto-apply + auto-revert",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T06:34:33.058Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "T-0030 clean-room fixtures + overlap check",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T06:35:49.406Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0185 T-0186 literal pathspecs",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T06:37:39.961Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0178 hide false outages on site",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T06:39:38.926Z",
-    "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0196 open arxiv help/robots only",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T06:40:26.163Z",
-    "o": "c"
    }
   ],
   "open": [
@@ -302,16 +174,17 @@
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "research",
-    "t": "CORRECTIONS pass 3 s3b tags in docs Wrenna...",
-    "s": "next",
-    "o": "c"
+    "w": "Odalys",
+    "k": "tools",
+    "t": "OPS-9 proposal",
+    "s": "blocked",
+    "o": "c",
+    "y": 1
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Swift renderer for T-0098",
+    "w": "Ines",
+    "k": "research",
+    "t": "CORRECTIONS pass 3 s3b tags in docs Wrenna does not own",
     "s": "next",
     "o": "c"
    },
@@ -338,13 +211,6 @@
    },
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "C6409798674",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "site",
     "t": "C6409798674",
     "s": "next",
@@ -352,78 +218,71 @@
    },
    {
     "w": "Odalys",
+    "k": "tools",
+    "t": "Literal pathspecs in the rest",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Route_status_test has 1 failure that also fails at HEAD 23620938",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
     "k": "site",
-    "t": "Tools/site/pages.py shows outage events in...",
+    "t": "Company > Infrastructure Techniques section",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "31 closed-hunt scripts under research/hunt/ call urllib/curl directly,...",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "31 closed-hunt scripts under research/hunt/...",
+    "t": "Tools/task_context.py matches memory keys by substring",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Tools/task_context.py matches memory keys by...",
+    "t": "Tools/context_use.py misses a read of a tool file by absolute path",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Tools/context_use.py misses a read of a tool...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Tools/context_use.py --since garbage is...",
+    "t": "Tools/context_use.py --since garbage is accepted silently and returns every...",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "tools",
-    "t": "Tools/agent_worktree.sh merge lets a rename...",
+    "t": "Tools/agent_worktree.sh merge lets a rename out of a protected path through",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "tools",
-    "t": "Tools/agent_worktree.sh shared-state regex...",
+    "t": "Tools/agent_worktree.sh shared-state regex is unanchored",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Supervisor step 12 / tools/stage_hunks.py...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Tools/drop_blob.sh passes names as glob...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Tools/evidence_tags.py treats only as a code...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Option A",
+    "t": "Tools/evidence_tags.py treats only as a code fence",
     "s": "next",
     "o": "c"
    },
@@ -437,14 +296,28 @@
    {
     "w": "Idris",
     "k": "build",
+    "t": "L3 device run",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
     "t": "L3 follow-ups on the Simulator",
     "s": "next",
     "o": "c"
    },
    {
+    "w": "Idris",
+    "k": "measure",
+    "t": "L1/L2 device checks",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
     "w": "Wrenna",
     "k": "browser",
-    "t": "Read developer.apple.com \"Keeping a widget...",
+    "t": "Read developer.apple.com \"Keeping a widget up to date\", WidgetPushHandler,...",
     "s": "next",
     "o": "c"
    },
@@ -456,6 +329,13 @@
     "o": "c"
    },
    {
+    "w": "Investors",
+    "t": "[needs-person] Investors, P2, L11 person read",
+    "s": "blocked",
+    "o": "c",
+    "y": 1
+   },
+   {
     "w": "Idris",
     "k": "research",
     "t": "L4 view DSL and view-tree schema v1",
@@ -464,8 +344,15 @@
    },
    {
     "w": "Idris",
+    "k": "build",
+    "t": "App skeleton",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
     "k": "review",
-    "t": "Review pywidget_ui public names before they...",
+    "t": "Review pywidget_ui public names before they freeze",
     "s": "next",
     "o": "c"
    },
@@ -479,8 +366,15 @@
    {
     "w": "Idris",
     "k": "test",
-    "t": "One Simulator preview snapshot for the names...",
+    "t": "One Simulator preview snapshot for the names freeze",
     "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Python runtime engineer probation",
+    "s": "wait",
     "o": "c"
    },
    {
@@ -493,6 +387,13 @@
    {
     "w": "Idris",
     "k": "build",
+    "t": "Maren states open items 2-3",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
     "t": "String Catalog",
     "s": "next",
     "o": "c"
@@ -500,14 +401,21 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "L9 device probe once a device or Simulator...",
+    "t": "Pro purchase",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "L9 device probe once a device or Simulator is free",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Wrenna",
     "k": "research",
-    "t": "Unassigned, P2, person's browser checks on...",
+    "t": "Unassigned, P2, person's browser checks on developer.apple.com for the [M]...",
     "s": "next",
     "o": "c"
    },
@@ -521,8 +429,22 @@
    {
     "w": "Idris",
     "k": "release",
-    "t": "PrivacyInfo.xcprivacy for the app and the...",
+    "t": "PrivacyInfo.xcprivacy for the app and the embedded CPython and native...",
     "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "L4 renderer",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "L4 gallery",
+    "s": "wait",
     "o": "c"
    },
    {
@@ -561,6 +483,12 @@
     "o": "c"
    },
    {
+    "k": "research",
+    "t": "Person, P2, name checks",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
     "w": "Wrenna",
     "k": "research",
     "t": "Person",
@@ -570,8 +498,15 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Spike owner, P3, C2 Info.plist strings and...",
+    "t": "Spike owner, P3, C2 Info.plist strings and privacy manifest",
     "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "plan",
+    "t": "Widget debugging v1",
+    "s": "wait",
     "o": "c"
    },
    {
@@ -582,10 +517,46 @@
     "o": "c"
    },
    {
+    "w": "Odalys",
+    "k": "site",
+    "t": "S1 first-party web gallery",
+    "s": "wait",
+    "o": "c",
+    "y": 1
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Pro premade placement",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Stdlib cut in the build phase",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "C2-Q1 Swift-only location fix in the widget extension",
+    "s": "wait",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "build",
-    "t": "Replace the stand-in...",
+    "t": "Replace the stand-in pywidget/ios/App/Runtime/_pywidget_runtime.py with the...",
     "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Console view",
+    "s": "wait",
     "o": "c"
    },
    {
@@ -598,8 +569,29 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Location-declined state for the \"distance to...",
+    "t": "Location-declined state for the \"distance to a saved place\" premade",
     "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "L5 v1 reservations in Renderer.v1",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "L5 v1 reservations in the schema and run log",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Schema-invalid fixtures in Swift",
+    "s": "wait",
     "o": "c"
    },
    {
@@ -617,6 +609,13 @@
     "o": "c"
    },
    {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "T-0035 re-read",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
     "w": "Idris",
     "k": "build",
     "t": "V1 status.json expired_runs",
@@ -625,8 +624,22 @@
    },
    {
     "w": "Idris",
+    "k": "research",
+    "t": "Write the T-0162 rulings into L5 s5.1-s5.8 as dated lines",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "review",
+    "t": "Placement check of the T-0162 rulings in L5 s5",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
     "k": "build",
-    "t": "Preview queue key, before any preview code...",
+    "t": "Preview queue key, before any preview code merges, gallery or editor",
     "s": "next",
     "o": "c"
    },
@@ -635,6 +648,27 @@
     "k": "build",
     "t": "Runtime half of a preview request",
     "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Gallery screen and its preview route",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Editor preview pane, part A",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "First-run tour page 3 on the gallery path",
+    "s": "wait",
     "o": "c"
    },
    {
@@ -652,17 +686,114 @@
     "o": "c"
    },
    {
-    "w": "Wrenna",
-    "k": "test",
-    "t": "Site_qa.py checks for the additions against...",
+    "w": "Maren",
+    "k": "design",
+    "t": "Clear design-system-v0 s8.3",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "Swift renderer",
+    "t": "Live check after publish",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "test",
+    "t": "After this session's publish, check Send live with a real Investor token: a...",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Designer probation, due Day 8",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "build",
+    "t": "Additions page wiring",
+    "s": "blocked",
+    "o": "c",
+    "p": [
+     1,
+     2
+    ]
+   },
+   {
+    "w": "Wrenna",
+    "k": "test",
+    "t": "Site_qa.py checks for the additions against fixtures now",
     "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "The Xcode project for the chosen app, first commit, daily named artifact,...",
+    "s": "wait",
+    "o": "c",
+    "y": 1
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Tools/ops_metrics.py and its tests done",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T33-3 terms_locate Bluesky-case test",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T34-1 host clearance cache",
+    "s": "blocked",
+    "o": "i",
+    "y": 1
+   },
+   {
+    "w": "Idris",
+    "k": "release",
+    "t": "Prove the release path early",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Write tools/upload.sh",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Weekly: read the Claude Code changelog and update only when nothing changes...",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Watcher review on Day 5",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "C1 console view",
+    "s": "wait",
     "o": "c"
    },
    {
@@ -675,30 +806,30 @@
   ],
   "done": [
    {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "T-0195 read uploaded agent papers",
-    "at": "2026-10-26T06:44:11.004000+00:00",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0196 open arxiv help/robots only",
+    "at": "2026-10-26T06:56:05.014000+00:00",
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "review",
-    "t": "T-0020 renames check + run_action copy",
-    "at": "2026-10-26T06:42:25.327000+00:00",
+    "w": "Pernille",
+    "k": "build",
+    "t": "T-0030 clean-room fixtures + overlap check",
+    "at": "2026-10-26T06:55:18.903000+00:00",
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "design",
-    "t": "T-0157 failed-queue badge wording",
-    "at": "2026-10-26T06:42:18.250000+00:00",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0185 T-0186 literal pathspecs",
+    "at": "2026-10-26T06:54:20.078000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 55,
-   "wait": 26,
+   "next": 51,
+   "wait": 24,
    "blocked": 16,
    "you": 5
   }
@@ -709,8 +840,6 @@
   "lane_next",
   "queue_text",
   "recent",
-  "task_done",
-  "task_title",
-  "task_open"
+  "task_done"
  ]
 }

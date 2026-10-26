@@ -675,12 +675,12 @@ summary.cv-sec{display:list-item;cursor:pointer;min-height:44px}
 {% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" or page.section == "pitches" or page.section == "documents" or page.section == "work" or page.section == "infra" %}<nav class="subtabs" aria-label="Company">
 <a href="{{ '/company/' | relative_url }}"{% if page.section == "cast" %} aria-current="page"{% endif %}>People</a>
 <a href="{{ '/company/work.html' | relative_url }}"{% if page.section == "work" %} aria-current="page"{% endif %}>Work</a>
+<a href="{{ '/company/infrastructure.html' | relative_url }}"{% if page.section == "infra" %} aria-current="page"{% endif %}>Infrastructure</a>
 <a href="{{ '/story/' | relative_url }}"{% if page.section == "records" %} aria-current="page"{% endif %}>Records</a>
 <a href="{{ '/log/' | relative_url }}"{% if page.section == "log" %} aria-current="page"{% endif %}>Log</a>
 <a href="{{ '/usage.html' | relative_url }}"{% if page.section == "usage" %} aria-current="page"{% endif %}>Usage</a>
 <a href="{{ '/pitches.html' | relative_url }}"{% if page.section == "pitches" %} aria-current="page"{% endif %}>Pitches</a>
 <a href="{{ '/documents/' | relative_url }}"{% if page.section == "documents" %} aria-current="page"{% endif %}>Documents</a>
-<a href="{{ '/company/infrastructure.html' | relative_url }}"{% if page.section == "infra" %} aria-current="page"{% endif %}>Infrastructure</a>
 </nav>{% endif %}
 </div>
 <main id="main"{% if page.url == "/" %} class="home"{% endif %}{% if page.section == "reports" or page.section == "records" %} class="ix"{% endif %}>

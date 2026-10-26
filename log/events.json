@@ -1,5 +1,61 @@
 [
 {
+"time": "2026-10-26T02:55:57-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "T-0196: terms_guard opens arxiv.org/help/robots for #70 option A (plus its info.arxiv.org redirect, only as a hop); every other arXiv path and variant stays refused; 187 checks pass",
+"link": ""
+},
+{
+"time": "2026-10-26T02:55:01-04:00",
+"worker": "Pernille",
+"type": "milestone",
+"summary": "T-0030 done: clean-room compat corpus, 26 fixtures covering all 759 spec entries, and tools/overlap_check.py green (ee1ec9cf)",
+"link": ""
+},
+{
+"time": "2026-10-26T02:53:50-04:00",
+"worker": "Odalys",
+"type": "fix",
+"summary": "T-0185/T-0186: file names now reach git as literal pathspecs in drop_blob, stage_hunks, commit_paths, big_files and the supervisor; a[1].bin no longer drags a1.bin into a commit or out of history (b81492ac)",
+"link": ""
+},
+{
+"time": "2026-10-26T02:50:09-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "T-0026: the 12 v1 premade widgets written in pywidget_ui (5 free / 7 Pro), 28 host tests green on 3.9 and 3.13; the design scene reproduces Maren's trees except 5 design-text slips sent to her",
+"link": ""
+},
+{
+"time": "2026-10-26T02:49:12-04:00",
+"worker": "Idris",
+"type": "build",
+"summary": "T-0122/T-0146: the widget renderer draws the display face by appearance, the widget card (solid light, gradient dark) and onCard text; 7 pixel read-back tests, 74/74 unit + 3/3 UI green, snapshot sheets in both appearances and the stripped modes",
+"link": ""
+},
+{
+"time": "2026-10-26T02:48:50-04:00",
+"worker": "operator",
+"type": "session",
+"summary": "Work session Day 5 02:25-~03:00: 12 agents at once most of the time (Opus high), ~24 agent runs. Investor #41 (nobody working: 5-min gap; 34 false outages fixed and off the site), #66/#67/#68 approved (#67: immediate auto-apply + auto-revert, Proposals tab), #70 A + PDFs read, cleanup rule. PR #71 o",
+"link": ""
+},
+{
+"time": "2026-10-26T02:48:26-04:00",
+"worker": "Odalys",
+"type": "ops",
+"summary": "T-0176: proposals auto-apply on posting; a detached post-apply check reverts any that turn a suite red (#67, OPT-038)",
+"link": ""
+},
+{
+"time": "2026-10-26T02:47:12-04:00",
+"worker": "Odalys",
+"type": "tool",
+"summary": "T-0178: the 34 false outage events of 10-22..10-26 and their 02:35 correction are off the site (feed, log pages); a real gap still shows (governor check at build time, plus a pinned replay list). log/events.jsonl unchanged",
+"link": ""
+},
+{
 "time": "2026-10-26T02:43:37-04:00",
 "worker": "Wrenna",
 "type": "research",

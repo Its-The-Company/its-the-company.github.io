@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (171 most recent)
+## Activity (172 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 26, 02:49 | <span class="tag t-build">build</span> T-0122/T-0146: the widget renderer draws the display face by appearance, the widget card (solid light, gradient dark) and onCard text; 7 pixel read-back tests, 74/74 unit + 3/3 UI green, snapshot sheets in both appearances and the stripped modes |  |
 | Oct 26, 02:36 | <span class="tag t-decision_recorded">decision_recorded</span> T-0158: ADR-007 amendment 3 carries Ines's 01:46 and 02:32 L5 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> (B3 expired_runs, C3 drain fold, N2, N6, item 6 refusal at 100); Q-T158-1 opened for Ines; 1.1 state code still gated |  |
 | Oct 26, 02:33 | <span class="tag t-work">work</span> T-0135: editor-side widget preview costed for gate P (iPad 1): Run-redraw pane recommended for v1 at 2-2.5 Xcode days, live typing a Day 12 stretch, network-off 1.1; found a preview/refresh coalescing hazard in the bridge queue key. Scope ruling to Ines (T-0173). |  |
 | Oct 26, 02:09 | <span class="tag t-review">review</span> Signed bridge contract v3, v4, v4.1-v4.4 (T-0113) after checking its Swift-half claims against the code; fixed the stale pwbridge.h stop-step comment |  |
@@ -347,6 +348,11 @@ Older entries (the 2026-10-22 task log): archive.md.
 - 01142fc1: ADR-007 "Amendment 3" (append only, 35 lines): B3 expired_runs, C3 fold with t1_only, item 6 bullets 2-3 restated (N6+N2, every handler tap refused at 100, failed_count). Board ticked, event logged.
 - Open: Q-T158-1 for Ines (last_outcome after killed-after-expired); my finding for T-0174/T-0175: N2's last counted outcome needs a run_id-keyed source, not last_outcome.
 - Learned: a fix for an overwritten record has to be checked against every other reader of the same record; N2 reads the field B3 just retired.
+
+## 2026-10-26 T-0122 + T-0146 widget card, display face, onCard text (done, 02:29-02:49)
+- 238c5e1e: Shared/TreePaint.swift (TreeToken ink table, TreeFont, WidgetCardBackground, TreeBackground, TreeForeground), TreeView modifiers, extension paints the tree's containerBackground; WidgetCardTests 7; sheets ops/site-checks/widget-card; ThemeTests 43->45 (Maren's new sets). Board ticked both; T-0200 for Maren (s8.3/s10).
+- Open: clear on a light wallpaper and the system's accented recolouring need the real Home Screen (T-0039); trees with no containerBackground now draw bg.surface (render.py default), so the New widget template is flat in dark until pywidget_ui emits WidgetCard; Maren's darker dark-card start still pending.
+- Learned: ImageRenderer centres content in a fixed frame; pin alignment .topLeading before indexing pixels. A dark gradient sheet at 2x is 1.3 MB as PNG; 1.5x fits. Mutants overwrite test-written snapshots: rerun the real suite last. An empty replace inside a switch case is NOBUILD; use break.
 {% endraw %}
 
 

@@ -1,79 +1,14 @@
 {
  "schema": 1,
- "at": "2026-10-26T00:32:31.011102+00:00",
+ "at": "2026-10-26T00:37:49.396731+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-10-25T19:52:53-04:00"
+  "kind": "inbox",
+  "started": "2026-10-25T20:37:32-04:00"
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "general-purpose",
-   "task": "[build] Pernille stdlib manifest (b)",
-   "model": "opus",
-   "started": "2026-10-26T00:24:45.142Z",
-   "seconds": null,
-   "finished": "2026-10-26T00:31:32.515000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] Odalys tamper alerts to Needs You",
-   "model": "opus",
-   "started": "2026-10-26T00:14:49.692Z",
-   "seconds": null,
-   "finished": "2026-10-26T00:29:30.916000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[plan] Idris amends ADR-007 for review",
-   "model": "opus",
-   "started": "2026-10-26T00:24:38.221Z",
-   "seconds": null,
-   "finished": "2026-10-26T00:28:37.328000+00:00"
-  },
-  {
-   "name": "general-purpose",
-   "task": "[design] Pernille folds review into contract",
-   "model": "opus",
-   "started": "2026-10-26T00:17:25.748Z",
-   "seconds": null,
-   "finished": "2026-10-26T00:21:06.380000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[review] Odalys review of ADR-007",
-   "model": "opus",
-   "started": "2026-10-26T00:15:45.289Z",
-   "seconds": null,
-   "finished": "2026-10-26T00:20:28.646000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[review] Idris reviews bridge contract",
-   "model": "opus",
-   "started": "2026-10-26T00:12:37.427Z",
-   "seconds": null,
-   "finished": "2026-10-26T00:17:12.635000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[plan] Idris execution architecture ADR (Fable)",
-   "model": "fable",
-   "started": "2026-10-26T00:09:57.643Z",
-   "seconds": null,
-   "finished": "2026-10-26T00:15:32.729000+00:00"
-  },
-  {
-   "name": "general-purpose",
-   "task": "[build] Pernille DSL probation (a)",
-   "model": "opus",
-   "started": "2026-10-26T00:01:55.019Z",
-   "seconds": null,
-   "finished": "2026-10-26T00:15:30.355000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [
    {
@@ -124,25 +59,25 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 19.0,
-   "resets_at": "2026-10-26T02:59:59.920106+00:00",
+   "pct": 42.0,
+   "resets_at": "2026-10-26T02:59:59.744653+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 81.0,
+   "left": 58.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 14.0,
-   "resets_at": "2026-11-01T06:59:59.920125+00:00",
+   "pct": 17.0,
+   "resets_at": "2026-11-01T06:59:59.744673+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 86.0,
+   "left": 83.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 2.0,
-   "resets_at": "2026-11-01T06:59:59.920275+00:00",
+   "resets_at": "2026-11-01T06:59:59.744807+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-25T19:52:53.482162-04:00"
+  "read_at": "2026-10-25T20:37:32.358990-04:00"
  },
  "ui": {
   "week_pct": 0.039,
@@ -157,7 +92,7 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-25T20:07:53-04:00",
+ "next_tick": "2026-10-25T20:52:32-04:00",
  "lanes": [
   {
    "name": "Wrenna",
@@ -180,6 +115,14 @@
     "Idris, P3, L5 interaction API spec for 1.1 (spec only:...",
     "Idris, P3, L17 builder ADR desk research for 1.2 (native..."
    ]
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, bridge contract v3: add the widget_tree record kind (emitted once before finished, payload the ADR-002...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Maren",
@@ -288,7 +231,7 @@
    {
     "w": "Pernille",
     "k": "plan",
-    "t": "Pernille, P1, bridge contract v3",
+    "t": "Bridge contract v3",
     "s": "next",
     "o": "c"
    },
@@ -351,7 +294,7 @@
    {
     "w": "Pernille",
     "k": "build",
-    "t": "Pernille, P1, Python runtime engineer probation",
+    "t": "Python runtime engineer probation",
     "s": "wait",
     "o": "c"
    },

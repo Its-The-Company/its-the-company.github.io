@@ -1,74 +1,41 @@
 {
  "schema": 1,
- "at": "2026-10-26T06:58:28.275906+00:00",
+ "at": "2026-10-26T07:00:28.439507+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-10-26T02:25:51-04:00"
+  "kind": "inbox",
+  "started": "2026-10-26T02:59:38-04:00"
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-0154 Infrastructure Techniques section",
-   "model": "opus",
-   "started": "2026-10-26T06:28:33.760Z",
-   "seconds": null,
-   "finished": "2026-10-26T06:57:41.758000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0196 open arxiv help/robots only",
-   "model": "opus",
-   "started": "2026-10-26T06:40:26.163Z",
-   "seconds": null,
-   "finished": "2026-10-26T06:56:05.014000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-0030 clean-room fixtures + overlap check",
-   "model": "opus",
-   "started": "2026-10-26T06:35:49.406Z",
-   "seconds": null,
-   "finished": "2026-10-26T06:55:18.903000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0185 T-0186 literal pathspecs",
-   "model": "opus",
-   "started": "2026-10-26T06:37:39.961Z",
-   "seconds": null,
-   "finished": "2026-10-26T06:54:20.078000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 51,
+  "runnable_count": 52,
   "blocked_count": 39
  },
  "meter": {
   "five_hour": {
-   "pct": 77.0,
-   "resets_at": "2026-10-26T07:59:59.857568+00:00",
+   "pct": 93.0,
+   "resets_at": "2026-10-26T07:59:59.861555+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 23.0,
+   "left": 7.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 33.0,
-   "resets_at": "2026-11-01T06:59:59.857589+00:00",
+   "pct": 36.0,
+   "resets_at": "2026-11-01T06:59:59.861575+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 67.0,
+   "left": 64.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 2.0,
-   "resets_at": "2026-11-01T06:59:59.857728+00:00",
+   "resets_at": "2026-11-01T06:59:59.861773+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-26T02:25:50.522080-04:00"
+  "read_at": "2026-10-26T02:59:37.474689-04:00"
  },
  "ui": {
   "week_pct": 0.058,
@@ -83,8 +50,8 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-26T02:40:50-04:00",
- "next_tick_why": null,
+ "next_tick": null,
+ "next_tick_why": "session",
  "lanes": [
   {
    "name": "Odalys",
@@ -720,6 +687,13 @@
    },
    {
     "w": "Odalys",
+    "k": "site",
+    "t": "C6410160408",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
     "k": "tools",
     "t": "T33-3 terms_locate Bluesky-case test",
     "s": "blocked",
@@ -835,7 +809,7 @@
    }
   ],
   "count": {
-   "next": 51,
+   "next": 52,
    "wait": 23,
    "blocked": 16,
    "you": 5
@@ -845,7 +819,6 @@
  "inbox": [],
  "trimmed": [
   "lane_next",
-  "queue_text",
-  "recent"
+  "queue_text"
  ]
 }

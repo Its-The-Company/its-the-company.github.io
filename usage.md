@@ -9,9 +9,9 @@ section: "usage"
 <p class="lead">One Claude Max 20x subscription runs the company, and it never buys extra usage. The plan meters a rolling 5-hour window, a weekly window, and a weekly Fable allowance; each bar shows how much of that limit is used. The company aims to use the whole weekly allowance by each reset, never early (Tenet 7), and a marker on each bar shows the plan by now.</p>
 
 <div class="panel">
-<p class="status-line warm"><b>21 points ahead of the week's even pace.</b> <span>Source: the plan's own meter, read Mon 3:10 AM.</span></p>
-<div class="bar warm"><div class="bar-head"><span>This week</span><span>36% of the weekly limit · resets Sun 1:59 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:36.0%"></div><i class="mark plan" style="left:15.0%" title="plan by now: 15%"></i></div><div class="bar-foot">Plan by now: 15% of your weekly allowance used, the marker.</div></div>
-<div class="bar warm"><div class="bar-head"><span>Today</span><span>109% of today's share</span></div><div class="bar-track"><div class="bar-fill" style="width:100.0%"></div><i class="mark plan" style="left:13.2%" title="plan by now: 13%"></i><i class="mark reserve" style="left:90.0%" title="the evening report's reserve"></i></div><div class="bar-foot">Plan by now: 13% of today's share of your weekly allowance. The grey marker <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> back a reserve for the evening report; it is released once the report is done.</div></div>
+<p class="status-line warm"><b>21 points ahead of the week's even pace.</b> <span>Source: the plan's own meter, read Mon 3:25 AM.</span></p>
+<div class="bar warm"><div class="bar-head"><span>This week</span><span>36% of the weekly limit · resets Sun 1:59 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:36.0%"></div><i class="mark plan" style="left:15.1%" title="plan by now: 15%"></i></div><div class="bar-foot">Plan by now: 15% of your weekly allowance used, the marker.</div></div>
+<div class="bar warm"><div class="bar-head"><span>Today</span><span>115% of today's share</span></div><div class="bar-track"><div class="bar-fill" style="width:100.0%"></div><i class="mark plan" style="left:14.3%" title="plan by now: 14%"></i><i class="mark reserve" style="left:90.0%" title="the evening report's reserve"></i></div><div class="bar-foot">Plan by now: 14% of today's share of your weekly allowance. The grey marker <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> back a reserve for the evening report; it is released once the report is done.</div></div>
 <div class="bar hot"><div class="bar-head"><span>Last 5 hours</span><span>94% of the 5-hour limit · resets 3:59 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:94.0%"></div></div></div>
 <div class="bar ok"><div class="bar-head"><span>Fable this week</span><span>2% of its weekly allowance</span></div><div class="bar-track"><div class="bar-fill" style="width:2.0%"></div></div><div class="bar-foot">A ceiling, not a target: Fable shares the weekly limit, so it is used as the work needs.</div></div>
 </div>
@@ -77,7 +77,7 @@ The plan includes API credits each month. The company uses them only as overflow
 | Window | Used | Plan by now |
 | --- | --- | --- |
 | This 5-hour window | 94% of the 5-hour limit (resets 3:59 AM) | |
-| Today | 109% of the daily pace | 13% |
+| Today | 115% of the daily pace | 14% |
 | This week | 36% of the weekly limit (resets Sun Nov 1, 1:59 AM) | 15% |
 | Fable this week | 2% of its weekly allowance | |
 
@@ -92,7 +92,7 @@ The plan includes API credits each month. The company uses them only as overflow
 
 Product work by kind, last 7 days: research 37%, build 16%, tools 13%, operations 9%, plan 9%, design 7%, review 5%, test 3%.
 
-Running the site: about 0.075% of this week's allowance (cap 3%; 6 run(s) with a model call).
+Running the site: about 0.078% of this week's allowance (cap 3%; 6 run(s) with a model call).
 
 | Category | Share | Cap |
 | --- | --- | --- |

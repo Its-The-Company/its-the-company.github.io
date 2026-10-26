@@ -6,11 +6,12 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (1059 events over 4 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (1060 events over 4 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 4 <small>Sun Oct 25 · 260 events</small>
+## Day 4 <small>Sun Oct 25 · 261 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">20:44</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #41</td></tr>
 <tr><td class="t num">20:37</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #41</td></tr>
 <tr><td class="t num">20:31</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work session 19:53-20:31: about 30 agent calls (Opus high, one Fable). Pernille hired; L3 spike, ADR-007 with review and amendment, bridge contract v2 signed, ADR-005/006 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span>, pywidget_ui 0.2.0, stdlib manifest, examples, mockups, review matrix, store draft, site #41 items 3-5. Urgent #61 opened</td></tr>
 <tr><td class="t num">20:31</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"> <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a></td><td class="what"><span class="tag t-build">build</span> Stdlib manifest proposed: 29 modules stripped, sizes reconcile with the L3 spike within 2%, pywidget_ui and 10 examples import with the shipped set</td></tr>
@@ -275,5 +276,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-24.html' | relative_url }}">Older →<b>Day 3</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 4 <small>Sun Oct 25 · 260</small></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 495</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 203</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 4 <small>Sun Oct 25 · 261</small></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 495</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 203</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
 

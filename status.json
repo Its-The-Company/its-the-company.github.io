@@ -1,24 +1,22 @@
 {
  "schema": 1,
- "at": "2026-10-26T06:56:31.050737+00:00",
+ "at": "2026-10-26T06:58:28.275906+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-10-26T02:25:51-04:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-0154 Infrastructure Techniques section",
    "model": "opus",
    "started": "2026-10-26T06:28:33.760Z",
-   "seconds": 1677,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-10-26T06:57:41.758000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-0196 open arxiv help/robots only",
@@ -42,21 +40,13 @@
    "started": "2026-10-26T06:37:39.961Z",
    "seconds": null,
    "finished": "2026-10-26T06:54:20.078000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[build] T-0026 premade widget code",
-   "model": "opus",
-   "started": "2026-10-26T06:28:51.209Z",
-   "seconds": null,
-   "finished": "2026-10-26T06:50:26.498000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
   "runnable_count": 51,
-  "blocked_count": 40
+  "blocked_count": 39
  },
  "meter": {
   "five_hour": {
@@ -98,12 +88,11 @@
  "lanes": [
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-0154 Infrastructure Techniques section",
-   "model": "opus",
-   "since": "2026-10-26T06:28:33.760Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P2, OPS-6 structural trials: worktree per agent, a task store in place of the markdown board, task-scoped...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -147,17 +136,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0154 Infrastructure Techniques section",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T06:28:33.760Z",
-    "o": "i"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -228,13 +207,6 @@
     "k": "tools",
     "t": "Route_status_test has 1 failure that also fails at HEAD 23620938",
     "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Company > Infrastructure Techniques section",
-    "s": "wait",
     "o": "c"
    },
    {
@@ -808,6 +780,13 @@
    {
     "w": "Odalys",
     "k": "tools",
+    "t": "T-0154 Infrastructure Techniques section",
+    "at": "2026-10-26T06:57:41.758000+00:00",
+    "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
     "t": "T-0196 open arxiv help/robots only",
     "at": "2026-10-26T06:56:05.014000+00:00",
     "o": "c"
@@ -825,11 +804,39 @@
     "t": "T-0185 T-0186 literal pathspecs",
     "at": "2026-10-26T06:54:20.078000+00:00",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "build",
+    "t": "T-0026 premade widget code",
+    "at": "2026-10-26T06:50:26.498000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0122 Swift renderer fonts+card",
+    "at": "2026-10-26T06:49:29.866000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0176 immediate auto-apply + auto-revert",
+    "at": "2026-10-26T06:48:46.913000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0178 hide false outages on site",
+    "at": "2026-10-26T06:48:04.353000+00:00",
+    "o": "i"
    }
   ],
   "count": {
    "next": 51,
-   "wait": 24,
+   "wait": 23,
    "blocked": 16,
    "you": 5
   }
@@ -839,7 +846,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
-  "task_done"
+  "recent"
  ]
 }

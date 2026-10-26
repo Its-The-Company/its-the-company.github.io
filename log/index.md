@@ -6,11 +6,13 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (1212 events over 5 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (1214 events over 5 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 5 <small>Mon Oct 26 · 125 events</small>
+## Day 5 <small>Mon Oct 26 · 127 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">02:58</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #41</td></tr>
+<tr><td class="t num">02:57</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a></td><td class="what"><span class="tag t-shipped">shipped</span> Company &gt; Infrastructure is live: every coding-agent technique the company considered, its status read from the experiment ledger, and an XmR chart per metric marking where each change began; the four build metrics are now counted from raw evidence</td></tr>
 <tr><td class="t num">02:55</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a></td><td class="what"><span class="tag t-shipped">shipped</span> T-0196: terms_guard opens arxiv.org/help/robots for #70 option A (plus its info.arxiv.org redirect, only as a hop); every other arXiv path and variant stays refused; 187 checks pass</td></tr>
 <tr><td class="t num">02:55</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"> <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a></td><td class="what"><span class="tag t-milestone">milestone</span> T-0030 done: clean-room compat corpus, 26 fixtures covering all 759 spec entries, and tools/overlap_check.py green (ee1ec9cf)</td></tr>
 <tr><td class="t num">02:53</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a></td><td class="what"><span class="tag t-fix">fix</span> T-0185/T-0186: file names now reach git as literal pathspecs in drop_blob, stage_hunks, commit_paths, big_files and the supervisor; a[1].bin no longer drags a1.bin into a commit or out of history (b81492ac)</td></tr>
@@ -140,5 +142,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-25.html' | relative_url }}">Older →<b>Day 4</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 5 <small>Mon Oct 26 · 125</small></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 5 <small>Mon Oct 26 · 127</small></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
 

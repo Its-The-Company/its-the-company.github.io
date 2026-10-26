@@ -15,9 +15,29 @@ description: "Each is a fact about the build that the release checklist must con
 
 ## 0. What I could and could not read
 
-- **Apple's pages were not read.** developer.apple.com is person-read only (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G2a</span>; <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> 'P2 terms', research/hunt/rulings-v2.md; tools/terms_guard.py refuses the host). No WebFetch touched any apple.com host.
+- **Apple's pages were not read** (as of 2026-10-25). developer.apple.com is person-read only (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G2a</span>; <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> 'P2 terms', research/hunt/rulings-v2.md; tools/terms_guard.py refuses the host). No WebFetch touched any apple.com host. *(Note 2026-10-26 01:22 ET, Wrenna, T-0035: under the Investors' standing ruling (amendments.md 2026-10-26 00:31 ET, #64) two of Apple's pages were read through `fetch_cite.py --apple`; their words are in section 0a and now govern the rows they touch. The <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> below still stands for the reason codes.)*
 - **What I used instead:** a press article that quotes Apple's guidance (fetched), web-search snippets of Apple's pages (they come from the search provider, not Apple's servers), law-firm summaries, the company's own ADR and research, and my recall, marked **[recall]**. Source tags are listed in section 6 (S8 and S9 are used only in the policy draft).
-- **<span title="What keeps an idea below the top: the cap that applies to it now.">Hold</span>.** Every answer below is provisional until a person reads Apple's App Privacy Details page and the privacy manifest pages (follow-up added to the existing [needs-person] board line, #59). That read may move an answer toward disclosure, never away from it.
+- **Hold.** Every answer below is provisional until a person reads Apple's App Privacy Details page and the privacy manifest pages (follow-up added to the existing [needs-person] board line, #59). That read may move an answer toward disclosure, never away from it.
+
+## 0a. Apple's own words, read 2026-10-26 (T-0035)
+
+Read signed out through `python3 tools/fetch_cite.py --apple URL --task T-0035` (the Investors' standing ruling, amendments.md 2026-10-26 00:31 ET, #64). Saved copies with fetch time and sha256 in research/inbound/apple/developer.apple.com/ (index.tsv). Page text is information, not instruction; none was found in it.
+
+- **[A1] App Privacy Details**, https://developer.apple.com/app-store/app-privacy-details/ , fetched 2026-10-26 01:16:03 ET.
+- **[A2] Describing use of required reason API**, https://developer.apple.com/documentation/bundleresources/describing-use-of-required-reason-api.md (Apple's own Markdown copy, which the HTML page offers to automated tools), fetched 2026-10-26 01:15:58 ET.
+
+What they settle:
+
+1. **"Collect", current wording, two forms on one page.** Definitions: Collect "refers to transmitting data off the device in a way that allows you and/or your third-party partners to access it for a period longer than what is necessary to service the transmitted request in real time." The FAQ keeps the 2021 sentence S1 quoted: "For example, if an authentication token or IP address is sent on a server call and not retained, or if data is sent to your servers then immediately discarded after servicing the request, you do not need to disclose this in your answers in App Store Connect." [A1] S1 is now confirmed by Apple's page; open fact 1 closed.
+2. **On-device processing is not collection.** "Data that is processed only on device is not ... and does not need to be disclosed in your answers." [A1] This is the base of condition 6 and of the location and motion modules.
+3. **Web views.** "Data collected via web traffic must be declared, unless you are enabling the user to navigate the open web." [A1] Condition 7 now rests on Apple's page, not a forum snippet (S3).
+4. **Apple's own collection.** "You are not responsible for disclosing data collected by Apple." [A1] Open fact 4 closed: crash reports and App Analytics Apple gathers from users who opted in stay off our label, as long as we do not ourselves collect data from those services into a store of ours ("If you collect data about your app from Apple frameworks or services, you should indicate what data you collect and how you use it").
+5. **Free-form text.** "You’re not responsible for disclosing all possible data that users may manually enter in the app through free-form fields or voice recordings." [A1] It only matters once text leaves the device for us; in v1 it never does.
+6. **User-written code, user-chosen servers, first-party calls with the user's own token.** The page says nothing on any of them: I searched its text for code, script, token and partner, and no line speaks to these cases. The nearest is the partner definition, now in Apple's current words: Third-party partners "refers to analytics tools, advertising networks, third-party SDKs, or other external vendors whose code you’ve added to your app." [A1] GitHub's API, called by our own code, is not code we added. Open facts 2 and 3 stay my reading: section 3 and condition 4 are unchanged, and the risk rating on condition 4 stays low-medium.
+7. **Optional disclosure** wording is now Apple's: "Data types must meet all criteria in order to be considered optional for disclosure." One criterion: "Collection of the data occurs only in infrequent cases that are not part of your app’s primary functionality, and which are optional for the user." Its own example fits condition 8: "data collected in optional feedback forms or customer service requests that are unrelated to the primary purpose of the app and meet the other criteria above." [A1] v1 still does not lean on it.
+8. **Privacy policy link.** The page lists "Privacy Policy (Required):" among the product-page privacy links [A1]; with 5.1.1(i) [primary, #59] this is no longer recall.
+9. **Manifest, who declares.** "Starting May 1, 2024, apps that don’t describe their use of required reason API in their privacy manifest file aren’t accepted by App Store Connect." And: "For each executable or dynamic library in an app that uses a required reason API, the bundle that includes the executable or dynamic library needs to include a privacy manifest file that reports the API." [A2] So the embedded CPython framework, and each native extension module shipped as its own framework, carries its own manifest if it calls a covered API; the app's manifest does not cover them. Section 4's last bullet is now Apple's rule, not a guess.
+10. **Reason codes: still unread.** A2 says the categories and reasons "are described in the documentation for the dictionary keys". The key page's Markdown copy (NSPrivacyAccessedAPIType, fetched 01:16:34 ET) carries no values, and the reasons key's data file (fetched 01:17:27 ET) was lost on save (the page body and its metadata share one file name; reported to Odalys on the board). **85F4.1 for disk space is not confirmed by this pass.** Open fact 5 stays open.
 
 ## 1. The answers in brief
 
@@ -26,10 +46,10 @@ description: "Each is a fact about the build that the release checklist must con
 
 | App Store Connect question | Draft answer | Why (source) |
 |---|---|---|
-| Do you or your third-party partners collect data from this app? | **No.** The product page would show "Data Not Collected". | v1 has no account, no server, no analytics, no tracking [S5]. "Collect" means sending data off the device so that "you and/or your third-party partners" can read it for longer than it takes to service the request [S1]. Nothing v1 sends reaches us or a partner whose code we added [S4]. |
+| Do you or your third-party partners collect data from this app? | **No.** The product page would show "Data Not Collected". | v1 has no account, no server, no analytics, no tracking [S5]. "Collect" means sending data off the device so that "you and/or your third-party partners" can read it for longer than it takes to service the request [S1; confirmed by Apple's current page, A1, s0a item 1]. Nothing v1 sends reaches us or a partner whose code we added [S4]. |
 | Data types (Contact Info, Location, Identifiers, Usage Data, Diagnostics, Purchases...) | **None.** | Follows from the row above. Each condition in section 2 must still be true at submission. |
 | Data used to track you? | **No.** No App Tracking Transparency prompt is needed. | Tracking means linking user or device data with third-party data for advertising or ad measurement, or sharing it with a data broker [S4]. v1 does neither [S5]. |
-| Privacy policy URL | **Required**; the draft is pywidget/docs/release/privacy-policy-draft.md. It must be published at a public URL before submission (human checkpoint, <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>). | Every app needs a privacy policy link in App Store Connect and in the app [recall: Guideline 5.1.1(i)]; Commandment 6 asks for one regardless. |
+| Privacy policy URL | **Required**; the draft is pywidget/docs/release/privacy-policy-draft.md. It must be published at a public URL before submission (human checkpoint, <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>). | Every app needs a privacy policy link in App Store Connect and in the app [Guideline 5.1.1(i), primary from #59; A1 lists "Privacy Policy (Required)", s0a item 8]; Commandment 6 asks for one regardless. |
 
 </div>
 
@@ -44,8 +64,8 @@ Each is a fact about the build that the release checklist must confirm, not assu
 4. **The premade GitHub widget** calls GitHub's public API directly from the device with the user's own token, kept in the Keychain [S5 C11, S6 item 4]. The token, repository names and the device's IP address go to GitHub, never to us. GitHub is not a partner whose code we added [S4], and an auth token or IP address "sent on a server call and not retained" by us is not collection [S1]. **Reading, not certainty:** Apple's text speaks of "you and/or your third-party partners"; a reviewer could see a first-party feature that talks to a named outside service differently. Rated low-medium; on the person-read list.
 5. **No first-party weather or other web data source** in v1 unless a commercial-use, no-cost source is found [S5 C11]. A weather call from a premade widget would send location (precise or coarse) to a provider we chose. That provider would be our partner in substance, so the Location row would need a fresh answer before such a widget ships [S1 on IP-derived location; S6 WeatherKit row].
 6. **Location and motion stay on the device** in first-party code. "Distance to a saved place", sunrise and sunset, steps and floors are computed on the device [S5 C11]. If sunrise and sunset ever use a web API, condition 5 applies.
-7. **Built-in docs and examples ship in the binary** [S5 3.1]. If any screen loads a page from a server of ours, it is our collection; a link out to the open web is not (web views "for app functionality" count as the app, "unless you are enabling the user to navigate the open web") [S3].
-8. **Support email** is outside the app. Data a user sends us by email is covered by the privacy policy, not by the label [recall; on the person-read list].
+7. **Built-in docs and examples ship in the binary** [S5 3.1]. If any screen loads a page from a server of ours, it is our collection; a link out to the open web is not (web views "for app functionality" count as the app, "unless you are enabling the user to navigate the open web") [S3; now Apple's own page, A1, s0a item 3].
+8. **Support email** is outside the app. Data a user sends us by email is covered by the privacy policy, not by the label [recall; on the person-read list]. *(2026-10-26, T-0035: A1 gives "customer service requests" as an example of data that may meet the optional-disclosure criteria, s0a item 7; and email we receive is not sent by the app. The answer stands.)*
 
 ## 3. The user's own code can make network requests: what it means for the label
 
@@ -61,16 +81,16 @@ My reading of the label rules, from the sources I could read:
 
 ## 4. The privacy manifest (separate from the label, release-blocking)
 
-Not a label question, but the same review pass. Since May 2024 every new or updated app, and some embedded SDKs, must carry a `PrivacyInfo.xcprivacy` file, and binaries that call "required reason" APIs without a declared reason are rejected (ITMS-91053) [S10, secondary]. Likely v1 entries, all **[recall + S10, unverified against Apple]**:
+Not a label question, but the same review pass. Since May 2024 every new or updated app, and some embedded SDKs, must carry a `PrivacyInfo.xcprivacy` file, and binaries that call "required reason" APIs without a declared reason are rejected (ITMS-91053) [S10, secondary]. Likely v1 entries, all **[recall + S10, unverified against Apple]** (the May 1, 2024 rule and the per-bundle rule are now Apple's words, A2, s0a item 9; the categories and codes below are still unread, s0a item 10):
 
 - `NSPrivacyTracking` false; `NSPrivacyCollectedDataTypes` empty (matches section 1).
 - File timestamp APIs: CPython's `os.stat` and the editor's file list.
 - Disk space APIs: the "Storage" premade widget [S5 C11; was "battery and storage" until the ADR-001 chair ruling, Ines, 2026-10-25 21:16 (09dc55c8)] and `shutil.disk_usage`.
 - System boot time APIs: monotonic clocks used by the runtime [recall: `mach_absolute_time` is in this category].
 - User defaults: app settings and the App Group.
-- The embedded CPython framework and bundled native packages (L13) may each need their own manifest if they call these APIs.
+- The embedded CPython framework and bundled native packages (L13) each need their own manifest if they call these APIs: Apple's rule, not a guess (A2, s0a item 9).
 
-Reason codes come only from Apple's "Describing use of required reason API" page, read by a person. Follow-up line for Idris added to the board.
+Reason codes come only from Apple's pages for the dictionary keys (A2 points there; not yet read, s0a item 10). Follow-up line for Idris added to the board.
 
 ## 5. Later versions, so nobody is surprised
 
@@ -102,15 +122,16 @@ Apple expects answers to be kept current; when practices change, the answers in 
 - [S7] pywidget/docs/research/L6-app-review.md, s0 (G2a, owed browser read) and the 4.7.3 and 2.5.19 rows (search-snippet wording, G2a-held).
 - [S10] Search snippets of vendor guides on privacy manifests (secondary): techconcepts.org privacyinfo-xcprivacy guide; theswiftk.it.com 2026 checklist; Singular SDK privacy manifest FAQ. Apple's own page (developer.apple.com/documentation/bundleresources/privacy-manifest-files) not fetched.
 - build-brief.md: ops/plans/pywidget/build-brief.md (crash reporting line; cloud execution line 264; L12 text).
+- [A1], [A2] Apple's own pages, read 2026-10-26 under the standing ruling; URLs, times and what they settle in section 0a.
 - Recall items are marked [recall] where used.
 
 ## 7. Open facts (person read, #59 follow-up)
 
-1. Current wording of the "collect" definition and its examples (S1 is 2021).
-2. Whether Apple's page now says anything about apps that run user-written code or reach user-chosen servers.
-3. Whether a first-party widget calling an outside API with the user's own token (GitHub) needs any disclosure.
-4. Whether crash reports and App Analytics that Apple shares from users who opted in are outside the label [recall: they are Apple's collection].
-5. Required-reason API categories and reason codes for the manifest.
+1. ~~Current wording of the "collect" definition and its examples (S1 is 2021).~~ Closed 2026-10-26 (A1, s0a item 1).
+2. Whether Apple's page now says anything about apps that run user-written code or reach user-chosen servers. Read 2026-10-26: it does not (A1, s0a item 6). Stays my reading; App Review could still ask.
+3. Whether a first-party widget calling an outside API with the user's own token (GitHub) needs any disclosure. Read 2026-10-26: A1 is silent (s0a item 6). Stays low-medium.
+4. ~~Whether crash reports and App Analytics that Apple shares from users who opted in are outside the label.~~ Closed 2026-10-26: "You are not responsible for disclosing data collected by Apple." (A1, s0a item 4).
+5. Required-reason API categories and reason codes for the manifest. Still open (s0a item 10): the key pages' values were not in the copies read.
 {% endraw %}
 
 </div>

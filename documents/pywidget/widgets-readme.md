@@ -11,7 +11,7 @@ description: "List from ADR-001 3.1 (C11) and its Revised section: weather is an
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Maren, 2026-10-25, 19:55-20:13 ET by `date`. Board line: "[design] Maren, P1, 12 premade widget designs". Status: **proposal**. Nothing here is approved under <span title="Commandment 51: the Investors approve every visual before it ships.">Commandment 51</span>; the build keeps placeholders until the Investors pick a direction (ops/questions.md item 5). Drawn in direction A (Paper, recommended); `PW_DIRECTION=B python3 premade.py` switches the hero face to rounded, and the token table switches the colours.
+Maren, 2026-10-25, 19:55-20:13 ET by `date`. Board line: "[design] Maren, P1, 12 premade widget designs". Status: **proposal**. Nothing here is approved under <span title="Commandment 51: the Investors approve every visual before it ships.">Commandment 51</span>; the build keeps placeholders until the Investors pick a direction (ops/questions.md item 5). Drawn in direction A (Paper, recommended); `PW_DIRECTION=B python3 premade.py` switches the hero face to rounded, and the token table switches the colours. **Update 2026-10-26 (T-0104):** the Investors chose on #60 (light A Paper, dark B Studio); all 12 sheets are redrawn in that look, section "Re-render in the approved look".
 
 List from ADR-001 3.1 (C11) and its Revised section: weather is an example recipe, not a premade. Data sources from L16. Nodes from L4 and viewtree.schema.json v1 only.
 
@@ -23,9 +23,9 @@ List from ADR-001 3.1 (C11) and its Revised section: weather is an example recip
 | File | What |
 |---|---|
 | `premade.py` | The 12 widgets written with `pywidget_ui` (Idris's reference serializer). Writes `trees/NN-id.json`, one document per widget, a view per family; `pywidget_ui.validate` reports 0 problems on all 12. |
-| `render.py` | A small HTML/SVG interpreter for viewtree v1 (CSS flex for stacks, SVG for Path and Gauge), rasterised by headless Chromium. Writes `sheets/NN-id.jpg`, `qa.json`, [`nodes-needed.md`](nodes-needed.html). |
+| `render.py` | A small HTML/SVG interpreter for viewtree v1 (CSS flex for stacks, SVG for Path and Gauge), rasterised by headless Chromium. Writes the sheets to `--out DIR` (a design-previews worktree, not main), and `qa.json` and [`nodes-needed.md`](nodes-needed.html) here. |
 | `trees/` | 12 documents, 166 KB. Odalys ports these to `pywidget_dsl` (board line "premade widget code"). |
-| `sheets/` | 12 gallery sheets, 2.63 MB in total (JPEG q78 at 1.25x). `08-storage.jpg` is in the approved look (light A Paper, dark B Studio, #60); the other 11 are still direction A in both schemes until they are re-rendered (`PW_LOOK=direction` keeps the v0 look). |
+| sheets | 12 gallery sheets in the approved look (light A Paper, dark B Studio, #60), 4.32 MB (JPEG q78 at 1.25x), on the `design-previews` branch in `widgets/premade/` (20dd9177), not on main. `PW_LOOK=direction` still draws the v0 look. |
 | [`nodes-needed.md`](nodes-needed.html) | Generated: nodes, modifiers, text kinds and SF Symbol names per widget. |
 
 </div>
@@ -33,7 +33,7 @@ List from ADR-001 3.1 (C11) and its Revised section: weather is an example recip
 
 No image model, stock art or photo. Fonts are the macOS system faces already logged in log/assets.md (row of 2026-10-25), read in place. SF Symbols are **not** drawn: each symbol is a stand-in glyph written in `render.py`; the tree names the real symbol and the app draws it through the system API.
 
-Each sheet shows: every family the widget claims, in full colour light and dark and accented light and dark (sample tint #5AA9C8); Lock Screen accessories in vibrant over a dark and a light wallpaper; states (stale, failing) where the widget has them; and a header with families, data, update policy, nodes, modifiers and the VoiceOver label.
+Each sheet shows: every family the widget claims, in full colour light and dark and accented light and dark (sample tint #5AA9C8); iOS 26 clear in light and dark, each over a light and a dark wallpaper; Lock Screen accessories in vibrant in light and dark appearance, each over a dark and a light wallpaper; states (stale, failing) where the widget has them; and a header with families, data, update policy, nodes, modifiers and the VoiceOver label.
 
 QA by script (`qa.json`): 168 widget renders, 0 faults (premade 8 redrawn 2026-10-26: 15 renders, 0 faults). Checked per render: text truncated, text or graphics outside the widget, text inside the 16 pt content margin, text over text, text under 11 pt. The first full run found faults in 55 renders (long relative dates, a stale label too wide for small, a dial pushed out of a medium widget, which the text-only check missed; the graphics check was added for it). Fixed in the designs, not hidden.
 
@@ -112,14 +112,44 @@ For Idris to confirm (none of this is read on a device yet):
 
 **Check.** All four claimed families in full colour light and dark and accented light and dark, Lock Screen vibrant on two wallpapers, and three states (low small, low medium, stale): 15 renders, 0 faults. Contrast of the pairs used, computed from tokens.json at HEAD: A light on bg.surface, secondary 7.08, tertiary 5.72, warning 6.11, accent 7.38; B dark, secondary 8.03, tertiary 5.60, warning 10.98, accent 6.37 (all over 4.5:1).
 
-**When T-0040's appearance tokens land.** Drawn from tokens.json at HEAD (`color.A.light`, `color.B.dark`); the uncommitted appearance block was not used. Expected changes: the dark hero face moves to SF Pro Rounded weight 600 (the tree says medium), the dark widget background may become the `widget.card` gradient (#5B33E6 to #1E1450) with `widget.onCard` text, which would replace `bg.surface` and change every dark contrast figure above; and the Increase Contrast sets give a 7:1 variant. Re-render with `render.py 08` then.
+**When T-0040's appearance tokens land** (done 2026-10-26 01:23 ET, T-0104; see below). Drawn from tokens.json at HEAD (`color.A.light`, `color.B.dark`); the uncommitted appearance block was not used. Expected changes: the dark hero face moves to SF Pro Rounded weight 600 (the tree says medium), the dark widget background may become the `widget.card` gradient (#5B33E6 to #1E1450) with `widget.onCard` text, which would replace `bg.surface` and change every dark contrast figure above; and the Increase Contrast sets give a 7:1 variant. Re-render with `render.py 08` then.
+
+## Re-render in the approved look (T-0104, 2026-10-26)
+
+Maren, 01:16-01:23 ET by `date`. All 12 sheets redrawn from `trees/*.json` at HEAD with the T-0040 appearance tokens (`tokens-app.json`) and Pernille's display design and `widgetCard` paint (5fac59ec). Sheets on design-previews `widgets/premade/` (20dd9177). `check_widget_modes.py`: literal, gradient, accent, colouronly, serif and cardbg all 0 over 52 views.
+
+**One renderer rule added.** Text on the widget card takes `widget.onCard.*`: `text.primary` to `widget.onCard.primary`, `text.secondary` and `text.tertiary` to `widget.onCard.secondary` (three levels on the card). Without it B's `text.secondary` (#A9AFC5) measured 3.62:1 on the violet card ("NEXT UP", Countdown medium). With it full colour dark is 5.18 at worst. The Swift renderer needs the same rule (Idris); the tree does not change.
+
+**QA** (`qa.json`): 328 widget renders, 0 layout faults (truncation, outside, margin, text over text, under 11 pt). New: text contrast measured from the pixels (text hidden, background sampled at 9 points per text box, median; floor 4.5, or 3.0 at 18 pt and up or 14 pt bold), 233 Home Screen texts per panel and 50 Lock Screen texts:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: Re-render in the approved look (T-0104, 2026-10-26), scrolls sideways" data-n="2" style="--tw:471px" markdown="1">
+
+| Panel | Worst | Under floor |
+|---|---|---|
+| Full colour light | 7.08 | 0 |
+| Full colour dark (widget card) | 5.18 | 0 |
+| Accented dark | 4.48 | 2 |
+| Accented light | 2.84 | 150 |
+| Clear dark, dark wallpaper | 5.07 | 0 |
+| Clear light, dark wallpaper | 2.78 | 159 |
+| Clear, either appearance, light wallpaper | 1.09 | 466 of 466 |
+| Vibrant, dark Lock Screen wallpaper | 6.89 | 0 |
+| Vibrant, light Lock Screen wallpaper | 2.17 | 100 of 100 |
+
+</div>
+
+
+Only full colour is our paint, and it passes. The other rows are my approximation of what the system does (tint mix, glass, white at 1.0/0.66/0.24), so they are not faults in the designs; they say where to look on a device. White content over a light wallpaper is the weak case in clear and vibrant, and the 0.66 secondary level is the first to fail. Idris's Simulator check, clear on a light wallpaper first, decides whether the system's glass rescues it or whether secondary text needs to go to 1.0 in those modes.
+
+**Seen, not fixed.** Habit tracker in full colour dark: a missed day's dot is close to the violet card (a gap rather than a mark; graphics are not contrast-checked yet). Needs a track colour on the card (`widget.onCard` track token) before the premade ships.
 
 ## The 15 L4 reference designs, taken from these
 
 Each pair below is in `trees/`. Together they cover every family the premades claim and all three rendering modes; whether they also cover every node the premades use is not yet checked by script.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: The 15 L4 reference designs, taken from these, scrolls sideways" data-n="1" style="--tw:601px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: The 15 L4 reference designs, taken from these, scrolls sideways" data-n="1" style="--tw:601px" markdown="1">
 
 | # | Widget, family | What it exercises |
 |---|---|---|
@@ -144,7 +174,7 @@ Each pair below is in `trees/`. Together they cover every family the premades cl
 
 ## Open
 
-- C51: the Investors pick A or B; these sheets are A.
+- C51: answered on #60 (light A, dark B); the sheets are in that look (T-0104).
 - Idris: R0-R6 (sent to the L4 board line), and Simulator snapshots of the 15 reference designs in all modes.
 - Odalys: port `trees/` to `pywidget_dsl` (premade widget code line). Data rules stay as L16 says (User-Agent, GitHub backoff, no shipped tokens).
 - A person picks the quote list (L16 rule) before any quote ships.

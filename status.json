@@ -1,125 +1,52 @@
 {
  "schema": 1,
- "at": "2026-10-26T05:14:36.130103+00:00",
+ "at": "2026-10-26T05:29:09.560963+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-10-25T23:48:23-04:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
-   "task": "[tools] T-0124 proposal auto-apply after 12 h",
+   "task": "[tools] T-0133 session-end rule: measure drains, supervisor flags, proposal",
    "model": "opus",
-   "started": "2026-10-26T05:05:06.089Z",
-   "seconds": 570,
-   "finished": null,
-   "effort": "high"
+   "started": "2026-10-26T05:16:39.372Z",
+   "seconds": null,
+   "finished": "2026-10-26T05:27:49.695000+00:00"
   },
   {
-   "name": "ines",
-   "task": "[plan] T-0126 amendments retirement and fold proposal",
+   "name": "maren",
+   "task": "[design] T-0104 re-render premade sheets in both looks",
    "model": "opus",
-   "started": "2026-10-26T05:05:29.586Z",
-   "seconds": 546,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[plan] T-0111 setup OPERATIONS drift proposal",
-   "model": "opus",
-   "started": "2026-10-26T05:05:38.765Z",
-   "seconds": 537,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] OPS audit 2: losses in the 23:48 session",
-   "model": "opus",
-   "started": "2026-10-26T05:05:46.514Z",
-   "seconds": 529,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0005 OPS-6 task-scoped context trial",
-   "model": "opus",
-   "started": "2026-10-26T05:07:58.856Z",
-   "seconds": 397,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-0116 renderer honours the script's timeline",
-   "model": "opus",
-   "started": "2026-10-26T05:11:56.966Z",
-   "seconds": 159,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] T-0033 Apple developer pages read under the ruling",
-   "model": "opus",
-   "started": "2026-10-26T05:13:24.957Z",
-   "seconds": 71,
-   "finished": null,
-   "effort": "high"
+   "started": "2026-10-26T05:16:49.339Z",
+   "seconds": null,
+   "finished": "2026-10-26T05:25:53.692000+00:00"
   },
   {
    "name": "pernille",
    "task": "[build] T-0118 widget id validation (path traversal)",
    "model": "opus",
    "started": "2026-10-26T05:13:58.165Z",
-   "seconds": 37,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x4, Ines, Idris, Wrenna, Pernille",
- "recent": [
-  {
-   "name": "maren",
-   "task": "[design] T-0127 Issues tab closed dropdown and close button",
-   "model": "opus",
-   "started": "2026-10-26T04:46:48.218Z",
    "seconds": null,
-   "finished": "2026-10-26T05:14:31.500000+00:00"
+   "finished": "2026-10-26T05:24:37.556000+00:00"
   },
   {
-   "name": "ines",
-   "task": "[plan] T-0117 Ines chairs Idris's answers to the L5 state review",
+   "name": "idris",
+   "task": "[build] T-0116 renderer honours the script's timeline",
    "model": "opus",
-   "started": "2026-10-26T05:09:33.116Z",
+   "started": "2026-10-26T05:11:56.966Z",
    "seconds": null,
-   "finished": "2026-10-26T05:13:50.882000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0123 Apple pages fetch limits from ruling",
-   "model": "opus",
-   "started": "2026-10-26T05:05:16.094Z",
-   "seconds": null,
-   "finished": "2026-10-26T05:13:14.761000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[test] tests leak localhost files into the shared robots cache",
-   "model": "opus",
-   "started": "2026-10-26T05:07:47.960Z",
-   "seconds": null,
-   "finished": "2026-10-26T05:11:47.708000+00:00"
+   "finished": "2026-10-26T05:24:36.018000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 40,
-  "blocked_count": 40
+  "runnable_count": 49,
+  "blocked_count": 39
  },
  "meter": {
   "five_hour": {
@@ -159,134 +86,56 @@
  "next_tick": "2026-10-26T00:03:22-04:00",
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-0124 proposal auto-apply after 12 h",
-   "model": "opus",
-   "since": "2026-10-26T05:05:06.089Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Ines",
-   "state": "running",
-   "task": "[plan] T-0126 amendments retirement and fold proposal",
-   "model": "opus",
-   "since": "2026-10-26T05:05:29.586Z",
-   "next": [],
-   "effort": "high"
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P3, Overview status brief measures 361 px on a phone with the live status text, over its 280 px cap (dash...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-0116 renderer honours the script's timeline",
-   "model": "opus",
-   "since": "2026-10-26T05:11:56.966Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P1, Swift renderer for T-0098 (Pernille 5fac59ec): font design \"display\" = New York serif in light, SF Pro...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P0, due 2026-10-27 00:39 item 4): one proposal that retires expired or superseded amendments (idea hunt ended...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P2, after 20 builds in ops/metrics/xc.jsonl (tools/xc.sh evidence line, d9a9cc48): measure build seconds and...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Wrenna",
-   "state": "running",
-   "task": "[research] T-0033 Apple developer pages read under the ruling",
-   "model": "opus",
-   "since": "2026-10-26T05:13:24.957Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Wrenna, P2, L11 benchmark gaps: in-app prices for Pythonista, Pyto, Scriptable, Widgy, a-Shell, Juno are unread...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Pernille",
-   "state": "running",
-   "task": "[build] T-0118 widget id validation (path traversal)",
-   "model": "opus",
-   "since": "2026-10-26T05:13:58.165Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Maren",
    "state": "next",
-   "task": "Maren, P2, IDE spec fixes from PROPOSAL-003 (62b4b8eb): remove \"Send to Home Screen\" (iOS does not allow it), and...",
+   "task": "Pernille, P1, apply the agreed pywidget_ui renames (closes probation (a) with both reviewers' check): the 19 renames...",
    "model": null,
    "since": null,
    "next": []
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0124 proposal auto-apply after 12 h",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T05:05:06.089Z",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "T-0126 amendments retirement and fold proposal",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T05:05:29.586Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "plan",
-    "t": "T-0111 setup OPERATIONS drift proposal",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T05:05:38.765Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "OPS audit 2",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T05:05:46.514Z",
-    "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0005 OPS-6 task-scoped context trial",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T05:07:58.856Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0116 renderer honours the script's timeline",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T05:11:56.966Z",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "T-0033 Apple developer pages read under the ruling",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T05:13:24.957Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "T-0118 widget id validation",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T05:13:58.165Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -304,43 +153,30 @@
    },
    {
     "w": "Odalys",
-    "k": "plan",
-    "t": "Proposal",
-    "s": "next",
-    "o": "c"
+    "k": "tools",
+    "t": "OPS-9 proposal",
+    "s": "blocked",
+    "o": "c",
+    "y": 1
    },
    {
     "w": "Ines",
     "k": "research",
-    "t": "CORRECTIONS pass 3 s3b tags in docs Wrenna...",
+    "t": "CORRECTIONS pass 3 s3b tags in docs Wrenna does not own",
     "s": "next",
     "o": "c"
    },
    {
-    "w": "Idris",
+    "w": "Pernille",
     "k": "build",
-    "t": "Renderer honours the script's timeline",
-    "s": "next",
+    "t": "Widget id accepts \"..\" and v1 uses it as a folder name",
+    "s": "wait",
     "o": "c"
    },
    {
     "w": "Maren",
     "k": "design",
-    "t": "IDE spec fixes from PROPOSAL-003",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Review PROPOSAL-003's draft screenshot captions",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "Overview status brief measures 361 px on a...",
+    "t": "Overview status brief measures 361 px on a phone with the live status text,...",
     "s": "next",
     "o": "c"
    },
@@ -348,13 +184,6 @@
     "w": "Idris",
     "k": "build",
     "t": "Swift renderer for T-0098",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Proposal auto-apply",
     "s": "next",
     "o": "c"
    },
@@ -370,6 +199,62 @@
     "k": "research",
     "t": "Write the T-0117 chair amendments into L5 s5",
     "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "plan",
+    "t": "Independent delta review of L5 s5 for the 1.1 gate",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Operator",
+    "k": "plan",
+    "t": "Open log/audit/proposal-close-rule.md as a \"proposal\" issue with the exact...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Pernille's persona file has no effort line, so she runs at the builder's...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "After 20 builds in ops/metrics/xc.jsonl",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Tools/shared_tree_incidents.py --since/--until read only the date",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Stale-mark clock in dark mode",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Swift side of the widget id rule",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "L3 device run",
+    "s": "wait",
     "o": "c"
    },
    {
@@ -396,7 +281,7 @@
    {
     "w": "unassigned",
     "k": "browser",
-    "t": "Read developer.apple.com \"Keeping a widget...",
+    "t": "Read developer.apple.com \"Keeping a widget up to date\", WidgetPushHandler,...",
     "s": "next",
     "o": "c"
    },
@@ -408,6 +293,13 @@
     "o": "c"
    },
    {
+    "w": "Investors",
+    "t": "[needs-person] Investors, P2, L11 person read",
+    "s": "blocked",
+    "o": "c",
+    "y": 1
+   },
+   {
     "w": "Idris",
     "k": "research",
     "t": "L4 view DSL and view-tree schema v1",
@@ -416,8 +308,15 @@
    },
    {
     "w": "Idris",
+    "k": "build",
+    "t": "App skeleton",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
     "k": "review",
-    "t": "Review pywidget_ui public names before they...",
+    "t": "Review pywidget_ui public names before they freeze",
     "s": "next",
     "o": "c"
    },
@@ -431,8 +330,15 @@
    {
     "w": "Idris",
     "k": "test",
-    "t": "One Simulator preview snapshot for the names...",
+    "t": "One Simulator preview snapshot for the names freeze",
     "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Python runtime engineer probation",
+    "s": "wait",
     "o": "c"
    },
    {
@@ -445,20 +351,48 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "String Catalog",
-    "s": "next",
+    "t": "Maren states open items 2-3",
+    "s": "wait",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "L9 device probe once a device or Simulator...",
+    "t": "String Catalog",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "build",
+    "t": "Premade widget code",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "build",
+    "t": "L15 clean-room fixtures and overlap check",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Pro purchase",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "L9 device probe once a device or Simulator is free",
     "s": "next",
     "o": "c"
    },
    {
     "k": "research",
-    "t": "Unassigned, P2, person's browser checks on...",
+    "t": "Unassigned, P2, person's browser checks on developer.apple.com for the [M]...",
     "s": "next",
     "o": "c"
    },
@@ -469,10 +403,31 @@
     "o": "c"
    },
    {
+    "w": "Operator",
+    "t": "[needs-person] Investors or Operator, P1, add to the developer.apple.com...",
+    "s": "wait",
+    "o": "c",
+    "y": 1
+   },
+   {
     "w": "Idris",
     "k": "release",
-    "t": "PrivacyInfo.xcprivacy for the app and the...",
+    "t": "PrivacyInfo.xcprivacy for the app and the embedded CPython and native...",
     "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "L4 renderer",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "L4 gallery",
+    "s": "wait",
     "o": "c"
    },
    {
@@ -524,8 +479,15 @@
    },
    {
     "k": "build",
-    "t": "Spike owner, P3, C2 Info.plist strings and...",
+    "t": "Spike owner, P3, C2 Info.plist strings and privacy manifest",
     "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "plan",
+    "t": "Widget debugging v1",
+    "s": "wait",
     "o": "c"
    },
    {
@@ -536,10 +498,46 @@
     "o": "c"
    },
    {
+    "w": "Odalys",
+    "k": "site",
+    "t": "S1 first-party web gallery",
+    "s": "wait",
+    "o": "c",
+    "y": 1
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Pro premade placement",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Stdlib cut in the build phase",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "C2-Q1 Swift-only location fix in the widget extension",
+    "s": "wait",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "build",
-    "t": "Replace the stand-in...",
+    "t": "Replace the stand-in pywidget/ios/App/Runtime/_pywidget_runtime.py with the...",
     "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Console view",
+    "s": "wait",
     "o": "c"
    },
    {
@@ -550,46 +548,273 @@
     "o": "c"
    },
    {
+    "w": "Operator",
+    "t": "[needs-person] Investors or Operator, P2, browser read of Apple Developer...",
+    "s": "wait",
+    "o": "c",
+    "y": 1
+   },
+   {
     "w": "Idris",
     "k": "build",
-    "t": "Location-declined state for the \"distance to...",
+    "t": "Location-declined state for the \"distance to a saved place\" premade",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "L5 v1 reservations in Renderer.v1",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "L5 v1 reservations in the schema and run log",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "L5 v1 reservations in the package",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Schema-invalid fixtures in Swift",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "Day 17 submission fields from Apple's own pages under the standing ruling",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "plan",
+    "t": "Gate P for store shot iPad 1",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Wrenna",
+    "k": "research",
+    "t": "Store-page-draft.md s6 WIDGETS",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "PROPOSAL-003 s2.6 follow-ups",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "research",
+    "t": "Apple-page facts for docs Wrenna does not own",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fetch_cite --apple / terms_guard._apple_save",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Live check after publish",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
     "k": "test",
-    "t": "Site_qa.py checks for the additions against...",
+    "t": "After this session's publish, check Send live with a real Investor token: a...",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Designer probation, due Day 8",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "build",
+    "t": "Additions page wiring",
+    "s": "blocked",
+    "o": "c",
+    "p": [
+     1,
+     2
+    ]
+   },
+   {
+    "w": "Wrenna",
+    "k": "test",
+    "t": "Site_qa.py checks for the additions against fixtures now",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "The Xcode project for the chosen app, first commit, daily named artifact,...",
+    "s": "wait",
+    "o": "c",
+    "y": 1
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Tools/ops_metrics.py and its tests done",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T33-3 terms_locate Bluesky-case test",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T34-1 host clearance cache",
+    "s": "blocked",
+    "o": "i",
+    "y": 1
+   },
+   {
+    "k": "release",
+    "t": "Prove the release path early",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "k": "tools",
+    "t": "Write tools/upload.sh",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "k": "tools",
+    "t": "Weekly: read the Claude Code changelog and update only when nothing changes...",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Watcher review on Day 5",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Contract v4 from Idris's slice 2 delta",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "C1 console view",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0104a Idris, P2, Swift renderer",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "T-0104b Maren, P3, habit tracker dark full colour",
     "s": "next",
     "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Maren",
-    "k": "design",
-    "t": "T-0127 Issues tab closed dropdown and close button",
-    "at": "2026-10-26T05:14:31.500000+00:00",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0133 session-end rule",
+    "at": "2026-10-26T05:27:49.695000+00:00",
     "o": "i"
    },
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "T-0117 Ines chairs Idris's answers to the L5 state review",
-    "at": "2026-10-26T05:13:50.882000+00:00",
+    "w": "Maren",
+    "k": "design",
+    "t": "T-0104 re-render premade sheets in both looks",
+    "at": "2026-10-26T05:25:53.692000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "T-0118 widget id validation",
+    "at": "2026-10-26T05:24:37.556000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0116 renderer honours the script's timeline",
+    "at": "2026-10-26T05:24:36.018000+00:00",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T-0123 Apple pages fetch limits from ruling",
-    "at": "2026-10-26T05:13:14.761000+00:00",
+    "t": "T-0124 proposal auto-apply after 12 h",
+    "at": "2026-10-26T05:24:22.351000+00:00",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0134 why Pernille's threads hit the turn limit",
+    "at": "2026-10-26T05:23:26.899000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "T-0033 Apple developer pages read under the ruling",
+    "at": "2026-10-26T05:23:04.312000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "OPS audit 2",
+    "at": "2026-10-26T05:21:14.819000+00:00",
+    "o": "i"
    }
   ],
   "count": {
-   "next": 40,
-   "wait": 27,
+   "next": 49,
+   "wait": 26,
    "blocked": 13,
    "you": 7
   }
@@ -599,9 +824,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
-  "task_done",
-  "task_title",
-  "task_open"
+  "recent"
  ]
 }

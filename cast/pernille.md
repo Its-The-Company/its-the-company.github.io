@@ -159,6 +159,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - _pywidget_install in pywidget/runtime/installer/, pypa installer 0.7.0 vendored without its .exe launchers (sha256 checked against PyPI). Suite installer 65/0 on 3.9.6 and 3.13.18.
 - Open for Day 13: tests for no network and sys.path/.pth in a child, vendor RECORD check, Maren on messages.py, Idris wires activate() and the picker.
 - Learned: a zip of one bare package looks like a GitHub wrapper folder; check for __init__.py before stripping it.
+
+## 2026-10-26, T-0118 widget id rule, Python half (49d3df7a)
+- Widget() refuses bad ids (leading dot, index.json, pywidget. prefix outside ui._first_party(), case-insensitive keys); Widget.id read-only; validate() rechecks; vectors in pywidget/tests/fixtures/widget-ids.json. host --both 960/0, 6 mutants killed.
+- Open: Idris's Swift side (contract s7 "Widget id" 1-5); runner first_party flag + parse_request id check (proposed); Maren on messages.
+- Learned: the pywidget. prefix is an origin rule, so it stays out of the schema or premade documents go invalid.
 {% endraw %}
 
 

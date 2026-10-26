@@ -143,6 +143,48 @@ Caption contrast [measured, store/qa.json]: light 15.8 and 6.77 (accent line); d
 </div>
 
 
+### 2.6 Chair note, 2026-10-26 01:19 ET (Ines, T-0120): caption review
+
+Maren's captions in 2.3 stay as written; my suggested wording sits beside them. Both go to the Investors with ops/questions.md item 11, and they choose.
+
+Held to: ADR-001 3.1 with tonight's rulings (5 free / 7 Pro, b8b4f0e4; no share extension in v1, ADR-001 00:04; no online pip in v1, ADR-006 s10 and s12; Install from file a stretch, G10), store-page-draft.md (sections 6 and 7), matrix rows 25, 31, 33, 34 and 44, and Apple's text from the #59 PDF copy (/private/tmp/i59pdf/guidelines.txt):
+- 2.3 (p. 12): "make sure all your app metadata, including privacy information, your app description, screenshots, and previews accurately reflect the app's core experience"
+- 2.3.1(a) (p. 12): "marketing your app in a misleading way, such as by promoting content or services that it does not actually offer ... is grounds for removal"
+- 2.3.2 (pp. 12-13): "make sure your app description, screenshots, and previews clearly indicate whether any featured items, levels, subscriptions, etc. require additional purchases."
+- 2.3.3 (p. 13): "Screenshots should show the app in use, and not merely the title art, login page, or splash screen."
+- 2.3.7 (p. 14): "Metadata such as app names, subtitles, screenshots, and previews should not include prices, terms, or descriptions that are not specific to the metadata type."
+- 2.3.9 (p. 14): "you should display fictional account information instead of data from a real person."
+- 2.3.10 (p. 14): "don't include names, icons, or imagery of other mobile platforms or alternative app marketplaces in your app or metadata"
+
+Result: 7 of 9 captions stand; 2 change (shot 3, iPad 1); shot 6 keeps its caption and changes its sample. No caption names another app, carries a price or "free", or claims a share extension, pip, Install from file, interactive widgets or weather.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 2.6 Chair note, 2026-10-26 01:19 ET (Ines, T-0120): caption review, scrolls sideways" style="--tw:1288px" markdown="1">
+
+| # | Maren's caption | Suggested | Verdict | Why |
+|---|---|---|---|---|
+| 1 | Python® 3.15, / on your iPhone | unchanged | Stands (gates V, S2) | C1: CPython 3.15.1 bundled. Same words as promo P1. If the F1 read refuses the ®-use, Maren's fallback "Write and run code / on your iPhone" (S2) |
+| 2 | Your Python, / on your Home Screen | unchanged | Stands (G5), with two capture conditions | C4: a user's script writes a widget. The five premades shown are free and open as editable source (C11), so the picture is the claim. Capture: the Simulator Home Screen page <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> only our widgets, no other app's icon or name; every place and date in them is fictional (2.3.9) |
+| 3 | Every widget is / Python you can edit | **Open a premade, / change its Python** | Change | "Every" is false for a free buyer: 7 of 12 premades are Pro, and a locked tile has no source path (state-spec s6; PROPOSAL-002 s6, "source after purchase"). A screenshot that calls every widget editable when seven need a purchase misses 2.3.2. The suggestion speaks of the one on screen, a free premade. 15 and 17 characters, inside the set's widest line (19), so the caption size does not drop |
+| 4 | Run it, and see / what it made | unchanged | Stands | C5: console with plain-text and table output |
+| 5 | Errors that take / you to the line | unchanged | Stands | C5: "go to line from a traceback"; C1: "tracebacks with file and line" |
+| 6 | Native forms from / a few lines of code | caption unchanged; **sample changes** | Stands, S3 ruled | S3: the sample leaves money. "Split the bill" with "Amount 84.50" is not our price, but 2.3.7 keeps prices out of screenshots, and a bill splitter puts money maths in our own pictures next to a banned area (C7, finance). Cheaper to remove than to argue. Use a form with no money in it (a habit: name, days, a time), so "forms" stays true. If Maren uses her picker swap instead, the caption becomes **Native screens from / a few lines of code** (19 / 19; the description's own word). Either way the script behind the shot is one of the 10 examples and builds the screen in 10 lines or fewer, so "a few lines" can be checked |
+| 7 | And on your / Lock Screen | unchanged | Stands (G5) | C4: accessory families; free premades only; same capture conditions as shot 2 |
+| iPad 1 | Write a widget and / watch it change | **Write a widget and / see how it looks** | Change, plus a new gate P | "Watch it change" promises a preview that redraws as you edit. ADR-001 3.1 names no editor-side widget preview: only the IDE spec has one (screen 8's right pane; tour page 3, "redraws the preview as the user types"), beside the gallery's live preview (state-spec s6), and no board line builds the editor pane. The suggestion claims a preview, not its timing. Gate **P**: the editor's widget preview is in the v1 build (board line for Idris). If P fails, iPad 1 comes out and the iPad set is iPad 2 alone (Apple takes 1 to 10) |
+| iPad 2 | Editor and console, / side by side | unchanged | Stands, one condition | C5: "iPad gets a sidebar and editor split"; IDE spec screen 8: the right pane holds the console. Condition: the build's right pane can hold the console, not only a second editor; if not, the caption is false and the shot comes out |
+
+</div>
+
+
+The 2.5 questions: S1 is a licence read, not mine; the default stands. S2 rides with store-page F1; the default stands. S3 is ruled in row 6.
+
+2.3.3 is met only by Simulator captures (matrix row 33), as 2.2 already says. Until then, every preview keeps its placeholder line.
+
+Owed outside this file (board lines added with this note):
+1. store-page-draft.md s6, WIDGETS: "12 premade widgets come built in, each one Python you can open and change" has caption 3's fault for a free buyer. Suggested, inside the G6 insert so it goes if Pro does: "each one Python you can open and change[[G6:  (Pro ones once bought)]]:". Wrenna's file; checker re-run after.
+2. draw_store.py checks captions against its DENY list, not the text on the screens; the 84.50 sat on a screen. A screen-text check for money-shaped numbers (two decimals, a currency sign) belongs in its QA. Maren.
+3. Gate P: Idris says whether the editor-side widget preview (IDE spec screen 8) is in the v1 build and what it costs; I rule scope on his answer.
+
 ## Found on the way (fixes owed outside this proposal)
 
 1. The IDE spec's iPad widget preview has a "Send to Home Screen" link. An app cannot place a widget on the Home Screen. The screenshot leaves it out; the spec and draw_ide.py need the same fix (mine, next pass).

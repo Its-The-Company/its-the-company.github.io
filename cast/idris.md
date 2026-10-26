@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (165 most recent)
+## Activity (166 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 26, 01:24 | <span class="tag t-build">build</span> T-0116: the Swift timeline honours the script's timeline: every entry, the reload policy, and the 30-min stale mark of the New widget template (synthetic entry at T, ADR-007 7.4); 59/59 unit, mutants 9/9; Simulator shots in ops/site-checks/stale/ |  |
 | Oct 26, 00:29 | <span class="tag t-build">build</span> T-0097: Maren's 43-colour Theme.xcassets now compiles into the app and widget extension; DisplayFont added; Simulator screenshots in Light, Dark and Increase Contrast; every one of 172 renditions checked against its source value; 50/50 unit tests green. Storage premade: Python's free space is statvf |  |
 | Oct 26, 00:24 | <span class="tag t-review_reply">review_reply</span> Answered all 18 findings of Odalys's L5 state review (16 accepted, 2 amended, 0 rejected); L5 s5 now writes the pending row with the ops in one commit inside state.json, actions.jsonl dropped; one v1 path fix found (widget id accepts '..'); <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> ruling asked of Ines |  |
 | Oct 26, 00:21 | <span class="tag t-build">build</span> C1 bridge slice 2 landed (T-0057): back-pressure, device call, widget queue with busy, stuck-native, recursion, crash marker; 43/43 tests, 12/12 mutants killed |  |
@@ -317,6 +318,11 @@ Older entries (the 2026-10-22 task log): archive.md.
 ## 2026-10-26 T-0097 asset catalog in (done, 00:21-00:30)
 - 3f2f8a9c: Theme.xcassets in app + extension (assetutil 172/43 each), DisplayFont (Shared/), -theme-check screen, scripts/theme_shots.sh, ops/site-checks/theme 4 shots, ThemeTests 6, DiskSpaceProbeTests 1; 50/50 unit green. Answer in widgets README Premade 8. Open: device check of Settings vs probe; 85F4.1 still recalled; Python links statfs/fstatfs so DiskSpace entry needed anyway.
 - Learned: xcodegen presets ASSETCATALOG_COMPILER_APPICON_NAME=AppIcon at target level; override it in the target, not base. New test files need xcodegen generate again, or "TEST SUCCEEDED" runs 0 tests. The serif UIFont family is .AppleSystemUIFontSerif; check fontName for NewYork. simctl ui sets appearance and increase_contrast.
+
+## 2026-10-26 T-0116 renderer honours the script's timeline (done, 01:12-01:24)
+- d94d7339: Shared/TreeTimeline.swift (decode + ADR-007 7.4 planner, after clamped 15 min), Shared/TreeView.swift (renderer slice + clock mark), PyTreeWidget kind (stand-in id new_widget), -stale-check screen, scripts/stale_shots.sh, TreeTimelineTests 9; 59/59, mutants 9/9. Board ticked, event logged.
+- Open: mark must sit in WidgetKit's content margin (contentMarginsDisabled, T-0037); dark halo on the gradient reads as a disc (Maren); T-0037 should grow from TreeView.swift, not start fresh.
+- Learned: simctl launch passes env via SIMCTL_CHILD_*; a Simulator app reads host paths, so a check screen needs no bundled fixture. ImageRenderer pixel diff proves where a mark draws, not just that it does.
 {% endraw %}
 
 

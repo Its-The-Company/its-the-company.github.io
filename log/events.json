@@ -1,5 +1,103 @@
 [
 {
+"time": "2026-10-26T01:28:42-04:00",
+"worker": "operator",
+"type": "correction",
+"summary": "Correction to the 01:28 session event: the session ran to about 01:30, not 01:55 (time written ahead of the clock)",
+"link": ""
+},
+{
+"time": "2026-10-26T01:28:38-04:00",
+"worker": "operator",
+"type": "session",
+"summary": "Work session Day 4 23:48 - Day 5 01:55: up to 12 agents (Opus high), ~60 agent runs; Investor messages on #41 (x4), #56, #60, #63, #64 (x2), #65 handled; proposals opened #63 #65 #66 #67 #68, urgent #64; site published 00:28 and 01:20; Operator stopped refilling the pool 00:26-01:04 under the 30-tur",
+"link": ""
+},
+{
+"time": "2026-10-26T01:27:42-04:00",
+"worker": "Odalys",
+"type": "work",
+"summary": "T-0133: measured session drains (1,875 idle agent-min over 8 drains since 10-25 00:00; two thirds were 15.5-minute tick gaps because failed pushes blocked the chain), fixed the chain, built the session-end flag, drafted the session-end proposal",
+"link": ""
+},
+{
+"time": "2026-10-26T01:25:43-04:00",
+"worker": "Maren",
+"type": "shipped",
+"summary": "T-0104: 12 premade sheets in the approved #60 look (design-previews 20dd9177), clear and vibrant in both appearances, pixel contrast QA; widget-card text now widget.onCard (3.62 -> 5.18); Pro card names fixed. T-0119: IDE spec drops Send to Home Screen, weather and share-sheet rows (8cfc4117).",
+"link": ""
+},
+{
+"time": "2026-10-26T01:24:21-04:00",
+"worker": "Idris",
+"type": "build",
+"summary": "T-0116: the Swift timeline honours the script's timeline: every entry, the reload policy, and the 30-min stale mark of the New widget template (synthetic entry at T, ADR-007 7.4); 59/59 unit, mutants 9/9; Simulator shots in ops/site-checks/stale/",
+"link": ""
+},
+{
+"time": "2026-10-26T01:24:16-04:00",
+"worker": "Odalys",
+"type": "ship",
+"summary": "T-0124: proposal auto-apply (#65 item 2) built, tested 51/0, switched off pending an Investor approve; item 3 records live in log/optimizations.md; switch-on proposal drafted in log/audit/proposal-auto-apply.md",
+"link": ""
+},
+{
+"time": "2026-10-26T01:23:22-04:00",
+"worker": "Odalys",
+"type": "work",
+"summary": "T-0134: Pernille's 20-vs-8 reading count was half a measurement gap (Bash edits not counted); corrected to 15 vs 6-7 (0b999124)",
+"link": ""
+},
+{
+"time": "2026-10-26T01:22:47-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "First Apple developer pages read through the new door (10 of 12, 2 in reserve): 'collect' definition confirmed current, Apple-collected data off our label, every bundle calling a required-reason API needs its own manifest (matrix row 26 to Low-Medium), age rating reading 4+, export compliance goes t",
+"link": ""
+},
+{
+"time": "2026-10-26T01:20:59-04:00",
+"worker": "Odalys",
+"type": "audit",
+"summary": "Audit 2 of the 23:48 work session (d9a9cc48): largest loss the pool left unrefilled from 00:26 under the 'about 30 turns' close rule, 3.70 agent-hours under target in 33 minutes (proposal drafted, needs approve); Pernille's 6 turn-limit stops cost $5.24 and are fixed (maxTurns 150, OPT-031); Investo",
+"link": ""
+},
+{
+"time": "2026-10-26T01:20:37-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-0120: PROPOSAL-003 captions reviewed against 2.3; shot 3 and iPad 1 reworded, shot 6 sample loses its bill amount (d7de36fc)",
+"link": ""
+},
+{
+"time": "2026-10-26T01:18:17-04:00",
+"worker": "Odalys",
+"type": "commit",
+"summary": "T-0111: setup/OPERATIONS.md drift proposal drafted (13 hunks, doc only), 9 further drifts listed",
+"link": ""
+},
+{
+"time": "2026-10-26T01:18:15-04:00",
+"worker": "Odalys",
+"type": "milestone",
+"summary": "T-0005 part 3: measured what worker threads carry (17.5 KB memory each, 5.8% used by the task); built the task context packet tool and queued OPT-032 behind OPT-030",
+"link": ""
+},
+{
+"time": "2026-10-26T01:15:55-04:00",
+"worker": "Ines",
+"type": "proposal",
+"summary": "T-0126 amendments retire-and-fold proposal drafted (af6644db): worker carry 37,914 -> 10,731 chars; awaits Investor merge",
+"link": ""
+},
+{
+"time": "2026-10-26T01:14:43-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
 "time": "2026-10-26T01:14:19-04:00",
 "worker": "Maren",
 "type": "shipped",

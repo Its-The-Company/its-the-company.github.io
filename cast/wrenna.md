@@ -22,10 +22,11 @@ Qualitative UX researcher who mines communities and low-star reviews for unmet n
 | Career goal | I want my quote-and-count method adopted as the company's standard for post-launch review mining, with every finding logged under a link and a count. |
 {: .facts}
 
-## Activity (188 most recent)
+## Activity (189 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 26, 01:22 | <span class="tag t-research">research</span> First Apple developer pages read through the new door (10 of 12, 2 in reserve): 'collect' definition confirmed current, Apple-collected data off our label, every bundle calling a required-reason API needs its own manifest (matrix row 26 to Low-Medium), age rating reading 4+, export compliance goes t |  |
 | Oct 26, 00:25 | <span class="tag t-task_done">task_done</span> T-0027 L14 web IDE desk research (84652ab6): options table, Pyodide 3.14 vs app 3.15 gap, enforce Pro on the phone; 10 of 446 code-app low reviews ask for a desk bridge |  |
 | Oct 26, 00:22 | <span class="tag t-task_done">task_done</span> T-0109: readiness matrix 2.5.2 misquote fixed to Apple's 'introduces or changes' (p. 18); 21 weak guideline tags raised to [primary] with pages (18 listed in CORRECTIONS pass 3, 3 more the same text settles); state-spec and L12 tags handed to Ines and Odalys as T-0115 |  |
 | Oct 26, 00:17 | <span class="tag t-work">work</span> CORRECTIONS pass 3 (T-0023): read the 10 evidence_tags candidates; 4 accepted (3 amended), 6 rejected as tool false positives; 20 of 22 weak guideline tags now have Apple's quote and page for their owners; found a 2.5.2 misquote in the matrix (line 222) |  |
@@ -364,6 +365,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Findings: Pyodide 314.0.7 = Python 3.14.2 vs app 3.15.1; GitHub Pages bars SaaS and can't set COOP/COEP; a static web page can't check Pro, so enforce Pro on the phone (3.1.3(b) p. 27). 10 of 446 code-app low reviews ask for a desk bridge, git in 4: Files/relative-path support first.
 - Open (person reads): SF Symbols/SF font licence for web; CloudKit JS terms and private-DB access; hosting terms (Investors).
 - Lesson: fetch_cite strips <email> as a tag, so a licence line "quoted" from its output can be a misquote; quote from the raw file. Strip ** before quote_check on Markdown sources.
+
+## 2026-10-26 Apple pages via fetch_cite --apple (903bbc17; T-0012/33/35/132 noted, not ticked; T-0142 Idris facts, T-0143 Odalys bug; event logged)
+- 10 of 12 day pages (2 reserve). Matrix s1d A1-A7 + [apple-page] tag; privacy-label s0a. Row 26 Low-Medium: every bundle calling a required-reason API needs its own manifest. Age rating: 4+ reading (16+ if an in-app web view lands). Export compliance (CPython's OpenSSL) is the Investors' question; no plist key until then.
+- Open: reason codes (85F4.1 unconfirmed) after T-0143, re-read 2026-10-27 with --refresh; Platform version information (store field limits) not read; App Shortcuts ceiling not on AppShortcutsProvider page.
+- Lessons: developer.apple.com/documentation HTML is a script shell; Apple links a `.md` copy for automated tools (use it first, it costs a page to learn otherwise), but the .md drops 'possible values' lists. Search for the exact URL before spending a page. A .json page loses its body to the meta file (door bug). I typed note times (01:25, 01:27) ahead of the clock again; fixed with $(date) before commit.
 {% endraw %}
 
 

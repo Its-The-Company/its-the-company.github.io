@@ -1,79 +1,14 @@
 {
  "schema": 1,
- "at": "2026-10-26T01:38:49.856499+00:00",
+ "at": "2026-10-26T01:44:22.115764+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-10-25T21:03:26-04:00"
+  "kind": "inbox",
+  "started": "2026-10-25T21:43:34-04:00"
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[build] Idris C1 Swift-Python bridge",
-   "model": "opus",
-   "started": "2026-10-26T01:05:28.813Z",
-   "seconds": null,
-   "finished": "2026-10-26T01:37:46.444000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] Pernille stdlib manifest v2",
-   "model": "opus",
-   "started": "2026-10-26T01:11:18.275Z",
-   "seconds": null,
-   "finished": "2026-10-26T01:18:58.291000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[review] Idris reviews pywidget_ui names",
-   "model": "opus",
-   "started": "2026-10-26T01:11:53.970Z",
-   "seconds": null,
-   "finished": "2026-10-26T01:17:59.125000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] Pernille New widget template and is_stale",
-   "model": "opus",
-   "started": "2026-10-26T01:14:15.553Z",
-   "seconds": null,
-   "finished": "2026-10-26T01:17:45.805000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[plan] Pernille bridge contract v3",
-   "model": "opus",
-   "started": "2026-10-26T01:05:34.113Z",
-   "seconds": null,
-   "finished": "2026-10-26T01:16:59.563000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] Ines routes CORRECTIONS open items",
-   "model": "opus",
-   "started": "2026-10-26T01:14:47.292Z",
-   "seconds": null,
-   "finished": "2026-10-26T01:16:41.144000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] Odalys report evidence collector",
-   "model": "opus",
-   "started": "2026-10-26T01:05:41.110Z",
-   "seconds": null,
-   "finished": "2026-10-26T01:15:30.259000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[test] Odalys fix web_hits_test and terms_guard text",
-   "model": "opus",
-   "started": "2026-10-26T01:05:45.913Z",
-   "seconds": null,
-   "finished": "2026-10-26T01:15:24.685000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [
    {
@@ -124,29 +59,29 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 42.0,
-   "resets_at": "2026-10-26T02:59:59.540972+00:00",
+   "pct": 50.0,
+   "resets_at": "2026-10-26T03:00:00.073451+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 58.0,
+   "left": 50.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 17.0,
-   "resets_at": "2026-11-01T06:59:59.540992+00:00",
+   "pct": 19.0,
+   "resets_at": "2026-11-01T07:00:00.073476+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 83.0,
+   "left": 81.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 2.0,
-   "resets_at": "2026-11-01T06:59:59.541119+00:00",
+   "resets_at": "2026-11-01T07:00:00.073668+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-25T21:03:26.197633-04:00"
+  "read_at": "2026-10-25T21:43:33.714234-04:00"
  },
  "ui": {
   "week_pct": 0.048,
-  "five_hour_pct": 0.145,
+  "five_hour_pct": 0.144,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -157,7 +92,7 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-25T21:18:26-04:00",
+ "next_tick": "2026-10-25T21:58:33-04:00",
  "lanes": [
   {
    "name": "Wrenna",
@@ -634,7 +569,7 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Option A",
-    "s": "blocked",
+    "s": "wait",
     "o": "c",
     "y": 1
    },
@@ -745,8 +680,8 @@
   ],
   "count": {
    "next": 35,
-   "wait": 18,
-   "blocked": 13,
+   "wait": 19,
+   "blocked": 12,
    "you": 6
   }
  },

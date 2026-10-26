@@ -6,11 +6,12 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (1076 events over 4 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (1077 events over 4 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 4 <small>Sun Oct 25 · 277 events</small>
+## Day 4 <small>Sun Oct 25 · 278 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">21:43</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #54</td></tr>
 <tr><td class="t num">21:38</td><td class="who">Operator</td><td class="what"><span class="tag t-investor-message">investor-message</span> Replied on #41 (c6405925635): 17% week vs daily-share pause explained; reports now carry documents, images and links (amendment 2026-10-25 20:44, report_facts Evidence ce8a1bbc, prompts updated)</td></tr>
 <tr><td class="t num">21:38</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work session 21:03-21:38: 8-agent pool, 13 agent runs (Opus high); C1 bridge Swift half (a168e190), ADR-007 accepted (3bac1693), stdlib cut (c045aa9d, e57d3ecd), bridge contract v3 (f6956451), report evidence (ce8a1bbc); new launches held after ~21:25 at the Investors' 20% daily concession</td></tr>
 <tr><td class="t num">21:37</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-build">build</span> C1 Swift-Python bridge, Swift half, landed (a168e190): run, streamed output, input() via the app prompt, Stop <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span>, restart, tracebacks with file and line; 26 XCTest + 3 UI tests green on the Simulator via xc.sh. Found two Stop bugs the contract missed: SIGURG blocked on GCD-spawned threads, and P</td></tr>
@@ -292,5 +293,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-24.html' | relative_url }}">Older →<b>Day 3</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 4 <small>Sun Oct 25 · 277</small></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 495</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 203</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 4 <small>Sun Oct 25 · 278</small></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 495</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 203</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 101</small></a></li></ul></nav>
 

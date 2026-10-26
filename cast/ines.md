@@ -25,6 +25,7 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 
 | When | What | |
 | --- | --- | --- |
+| Oct 26, 18:03 | <span class="tag t-report">report</span> Report 9 (Day 5 evening) published; quiet period |  |
 | Oct 26, 02:41 | <span class="tag t-decision">decision</span> <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Chair</span> line on Q-T158-1 (ADR-007): last_outcome stays expired after a killed-after-expired run, no badge; last_outcome display-only; v1 now writes expired_runs so the v1 loop breaker tests run_id membership (T-0198 Idris) |  |
 | Oct 26, 02:38 | <span class="tag t-decision">decision</span> T-0173: editor widget preview scope ruled. Pane redrawn on Run and save in v1 (due Day 12, else 1.1 and iPad 1 shot out); redraw-as-you-type and network-off to 1.1; tour page 3 v1; preview queue-key fix placed first (7895d2a9) |  |
 | Oct 26, 02:33 | <span class="tag t-decision">decision</span> Ruled Odalys's four L5 state blockers (T-0162): all accepted; withdrew my 01:46 expiry record form and added a drain-time fold so the bound does not rest on an 8-entry list. Pernille's persona now runs at high effort (T-0139). |  |
@@ -224,7 +225,6 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Oct 24, 05:39 | <span class="tag t-research">research</span> H76 turntable setup done (05:39): C- (need C, novelty C-, depth B-, Day 30 D+, Day 90 C-). 225 heard-symptom asks in 781 hand-read titles (r/turntables 208/511, r/vinyl 10/63, r/audiophile 7/207); sample 30 coded, 18/29 cannot judge, 12/26 settled free; both gates pass narrowly. Free browser test-re |  |
 | Oct 24, 05:34 | <span class="tag t-plan">plan</span> Board refill 12 (519ef84): H78-H84 plus two Best ideas site lines; 17 runnable, nobody below 2 |  |
 | Oct 24, 05:33 | <span class="tag t-research">research</span> H61 pass 6 (05:33 ET): H69 well checkup C with Maren as second grader (pipe noise C-), H70 room air reader C+ (builder gate 71 to 268 caps novelty), H71 station check C-, H72 level ranker D+. Re-codes 29/30 cells, 9/10, 15/15. H57 skipped (Result pending). 0 at B+, no pitch. |  |
-| Oct 24, 04:35 | <span class="tag t-plan">plan</span> Day 3 plan written: hunt aims at things owners sense but cannot judge over time; H67 and H75 gate every lane; site fix for Best ideas first; H44 and H45 follow-ups dropped |  |
 
 ## Diaries, meetings, and conversations
 

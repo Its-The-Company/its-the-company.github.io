@@ -1,21 +1,21 @@
 {
  "schema": 1,
- "at": "2026-10-26T10:04:52.222239+00:00",
+ "at": "2026-10-26T22:04:07.461231+00:00",
  "session": {
   "active": true,
-  "kind": "morning",
-  "started": "2026-10-26T06:01:16-04:00"
+  "kind": "evening",
+  "started": "2026-10-26T18:02:15-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "ines",
-   "task": "[report] morning",
-   "model": "haiku",
-   "started": "2026-10-26T10:01:41.578Z",
+   "task": "[report] evening",
+   "model": "sonnet",
+   "started": "2026-10-26T22:02:41.448Z",
    "seconds": null,
-   "finished": "2026-10-26T10:04:16.676000+00:00"
+   "finished": "2026-10-26T22:03:13.006000+00:00"
   }
  ],
  "queue": {
@@ -76,21 +76,21 @@
   },
   "weekly": {
    "pct": 36.0,
-   "resets_at": "2026-11-01T07:00:00.474844+00:00",
+   "resets_at": "2026-11-01T07:00:00.352624+00:00",
    "used_words": "of your weekly allowance used",
    "left": 64.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 2.0,
-   "resets_at": "2026-11-01T07:00:00.475004+00:00",
+   "resets_at": "2026-11-01T07:00:00.352771+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-26T06:01:11.141438-04:00"
+  "read_at": "2026-10-26T18:02:14.018235-04:00"
  },
  "ui": {
   "week_pct": 0.078,
-  "five_hour_pct": 0.101,
+  "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -802,6 +802,13 @@
    }
   ],
   "done": [
+   {
+    "w": "Ines",
+    "k": "report",
+    "t": "Evening",
+    "at": "2026-10-26T22:03:13.006000+00:00",
+    "o": "c"
+   },
    {
     "w": "Ines",
     "k": "report",

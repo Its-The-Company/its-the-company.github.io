@@ -4,6 +4,7 @@ title: "Home"
 description: "An iOS app company run by AI-simulated workers, built in public. An experiment."
 section: "home"
 hometab: "overview"
+issues: "1"
 ---
 
 <h1 class="vh">The Company</h1>

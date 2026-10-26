@@ -1,87 +1,124 @@
 {
  "schema": 1,
- "at": "2026-10-26T01:44:22.115764+00:00",
+ "at": "2026-10-26T03:18:17.441487+00:00",
  "session": {
   "active": true,
-  "kind": "inbox",
-  "started": "2026-10-25T21:43:34-04:00"
+  "kind": "work",
+  "started": "2026-10-25T22:09:07-04:00"
  },
- "workers": [],
- "who": "",
- "recent": [],
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] ops OPS-3 task IDs everywhere",
+   "model": "opus",
+   "started": "2026-10-26T02:56:31.505Z",
+   "seconds": 1305,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[tools] ops OPS-4 quality metrics and Investor latency",
+   "model": "opus",
+   "started": "2026-10-26T02:56:41.602Z",
+   "seconds": 1295,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[tools] ops OPS-5 experiment ledger and XmR",
+   "model": "opus",
+   "started": "2026-10-26T02:56:50.803Z",
+   "seconds": 1286,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] A: supervisor runs drop_blob then pushes",
+   "model": "opus",
+   "started": "2026-10-26T03:02:58.293Z",
+   "seconds": 919,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] ops T-0002 OPS-10 proposal applier",
+   "model": "opus",
+   "started": "2026-10-26T03:13:14.165Z",
+   "seconds": 303,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys x3, Pernille x2",
+ "recent": [
+  {
+   "name": "idris",
+   "task": "[tools] ops OPS-6 structural trial: worktree per agent",
+   "model": "opus",
+   "started": "2026-10-26T02:57:48.094Z",
+   "seconds": null,
+   "finished": "2026-10-26T03:17:48.859000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] ops OPS-2 first audit, five largest losses",
+   "model": "opus",
+   "started": "2026-10-26T02:51:41.777Z",
+   "seconds": null,
+   "finished": "2026-10-26T03:12:47.594000+00:00"
+  },
+  {
+   "name": "wrenna",
+   "task": "[research] ops OPS-7 research-process audit",
+   "model": "opus",
+   "started": "2026-10-26T02:56:59.804Z",
+   "seconds": null,
+   "finished": "2026-10-26T03:12:13.275000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] ops OPS-1 keep raw transcripts",
+   "model": "opus",
+   "started": "2026-10-26T02:51:34.001Z",
+   "seconds": null,
+   "finished": "2026-10-26T03:10:01.400000+00:00"
+  }
+ ],
  "queue": {
-  "runnable": [
-   {
-    "kind": "build",
-    "text": "Idris, P0, L3 device run: CPython cold start, peak and the real extension memory ceiling (allocation ramp,..."
-   },
-   {
-    "kind": "build",
-    "text": "Idris, P1, L3 follow-ups on the Simulator: frozen-modules measurement, Release-build rerun, strip CPython test..."
-   },
-   {
-    "kind": "build",
-    "text": "L1 demo widgets (Where I am, Steps today, Heading last known, Altitude, Next event countdown), spec in..."
-   },
-   {
-    "kind": "measure",
-    "text": "L1/L2 device checks: CMPedometer, CMMotionActivity, HealthKit (locked/unlocked), battery, location inside the widget..."
-   },
-   {
-    "kind": "browser",
-    "text": "Read developer.apple.com \"Keeping a widget up to date\", WidgetPushHandler, Live Activity duration,..."
-   }
-  ],
-  "blocked": [
-   {
-    "kind": "research",
-    "text": "Wrenna, P2, L15 module usage ranking and corpus (per ADR-005): rank the abandoned app's modules by use in the..."
-   },
-   {
-    "kind": "build",
-    "text": "Idris: live check after publish: open /connect.html#setup, follow the pre-filled token link on github.com and..."
-   },
-   {
-    "kind": "test",
-    "text": "Wrenna, P1: after this session's publish, check Send live with a real Investor token: a reply on a thread, the Main..."
-   },
-   {
-    "kind": "design",
-    "text": "Maren: designer probation, due Day 8 (2026-10-29), conditions in story/hiring/2026-10-23-designer/decision.md: (a)..."
-   },
-   {
-    "kind": "build",
-    "text": "Odalys: additions page wiring (ops/plans/site-v2-additions.md 8): B, A, C, D, D2 and queue.js done (hashes in the..."
-   }
-  ],
-  "runnable_count": 35,
-  "blocked_count": 31
+  "runnable": [],
+  "blocked": [],
+  "runnable_count": 46,
+  "blocked_count": 33
  },
  "meter": {
   "five_hour": {
    "pct": 50.0,
-   "resets_at": "2026-10-26T03:00:00.073451+00:00",
+   "resets_at": "2026-10-26T03:00:00.160725+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 50.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 19.0,
-   "resets_at": "2026-11-01T07:00:00.073476+00:00",
+   "resets_at": "2026-11-01T07:00:00.160749+00:00",
    "used_words": "of your weekly allowance used",
    "left": 81.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 2.0,
-   "resets_at": "2026-11-01T07:00:00.073668+00:00",
+   "resets_at": "2026-11-01T07:00:00.160960+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-25T21:43:33.714234-04:00"
+  "read_at": "2026-10-25T22:09:06.791610-04:00"
  },
  "ui": {
-  "week_pct": 0.048,
-  "five_hour_pct": 0.144,
+  "week_pct": 0.058,
+  "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -92,18 +129,33 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-25T21:58:33-04:00",
+ "next_tick": "2026-10-25T22:24:07-04:00",
  "lanes": [
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] ops OPS-3 task IDs everywhere",
+   "model": "opus",
+   "since": "2026-10-26T02:56:31.505Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[tools] ops OPS-4 quality metrics and Investor latency",
+   "model": "opus",
+   "since": "2026-10-26T02:56:41.602Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P2, L11 benchmark gaps: in-app prices for Pythonista, Pyto, Scriptable, Widgy, a-Shell, Juno are unread...",
    "model": null,
    "since": null,
-   "next": [
-    "Wrenna, P3, L14 web IDE desk research for Phase 3...",
-    "Wrenna: site_qa.py checks for the additions against..."
-   ]
+   "next": []
   },
   {
    "name": "Idris",
@@ -111,32 +163,7 @@
    "task": "Idris, P1, L4 view DSL and view-tree schema v1: Python API mirroring widget-safe SwiftUI (stacks, Text with date...",
    "model": null,
    "since": null,
-   "next": [
-    "Idris, P3, L5 interaction API spec for 1.1 (spec only:...",
-    "Idris, P3, L17 builder ADR desk research for 1.2 (native..."
-   ]
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, apply the agreed pywidget_ui renames (closes probation (a) with both reviewers' check): the 19 renames...",
-   "model": null,
-   "since": null,
-   "next": [
-    "Pernille, P1, widget run keeps the script's timeline...",
-    "Pernille, P1, replace the stand-in..."
-   ]
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P2, CORRECTIONS upkeep: create pywidget/docs/research/CORRECTIONS.md (brief section, claim, current source...",
-   "model": null,
-   "since": null,
-   "next": [
-    "Odalys, P2, Install from file, Python side (ADR-006 s3...",
-    "Odalys, P3, align L12-security.md with the C2 chair note..."
-   ]
+   "next": []
   },
   {
    "name": "Maren",
@@ -148,16 +175,117 @@
   },
   {
    "name": "Ines",
-   "state": "next",
-   "task": "Ines, P1, chair the two pywidget_ui name disputes from the Idris/Maren reconciliation (9c75aeb7,...",
+   "state": "idle",
+   "task": null,
    "model": null,
    "since": null,
    "next": []
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Ops OPS-3 task IDs everywhere",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-26T02:56:31.505Z",
+    "o": "i"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Ops OPS-4 quality metrics and Investor latency",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-26T02:56:41.602Z",
+    "o": "i"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Ops OPS-5 experiment ledger and XmR",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-26T02:56:50.803Z",
+    "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "A: supervisor runs drop_blob then pushes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-26T03:02:58.293Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Ops T-0002 OPS-10 proposal applier",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-26T03:13:14.165Z",
+    "o": "i"
+   }
+  ],
   "open": [
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "OPS-3 task IDs",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "OPS-4 quality beside cost",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "OPS-5 experiment ledger",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "OPS-6 structural trials",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "OPS-8 Company > Infrastructure page",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "OPS-9 proposal",
+    "s": "blocked",
+    "o": "c",
+    "y": 1
+   },
+   {
+    "k": "tools",
+    "t": "T-0001 Odalys, P2, OPS-1 follow-up",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "k": "tools",
+    "t": "T-0002 Odalys, P0, OPS-10 proposal applier",
+    "s": "next",
+    "o": "c"
+   },
    {
     "w": "Idris",
     "k": "build",
@@ -192,13 +320,6 @@
     "t": "Read developer.apple.com \"Keeping a widget up to date\", WidgetPushHandler,...",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Operator",
-    "t": "[needs-person] Investors or Operator, P0, browser read of...",
-    "s": "blocked",
-    "o": "c",
-    "y": 1
    },
    {
     "w": "Wrenna",
@@ -257,6 +378,13 @@
     "o": "c"
    },
    {
+    "w": "Idris",
+    "k": "test",
+    "t": "One Simulator preview snapshot for the names freeze",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "build",
     "t": "Python runtime engineer probation",
@@ -299,10 +427,17 @@
     "o": "c"
    },
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "ADR-005 s7 item 2",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Wrenna",
     "k": "research",
     "t": "L15 module usage ranking and corpus",
-    "s": "blocked",
+    "s": "wait",
     "o": "c"
    },
    {
@@ -484,13 +619,6 @@
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Chair the two pywidget_ui name disputes from the Idris/Maren reconciliation",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "Replace the stand-in pywidget/ios/App/Runtime/_pywidget_runtime.py with the...",
@@ -509,6 +637,40 @@
     "k": "build",
     "t": "Console view",
     "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Chair the L6 s8 finding",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Operator",
+    "t": "[needs-person] Investors or Operator, P2, browser read of Apple Developer...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "release",
+    "t": "Readiness matrix and store text from L6 s8 duties",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "State-spec s3.2 Pro card",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Location-declined state for the \"distance to a saved place\" premade",
+    "s": "next",
     "o": "c"
    },
    {
@@ -577,15 +739,16 @@
     "w": "Odalys",
     "k": "tools",
     "t": "T33-3 terms_locate Bluesky-case test",
-    "s": "next",
+    "s": "blocked",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
     "t": "T34-1 host clearance cache",
-    "s": "next",
-    "o": "c"
+    "s": "blocked",
+    "o": "i",
+    "y": 1
    },
    {
     "w": "Wrenna",
@@ -623,68 +786,51 @@
   "done": [
    {
     "w": "Idris",
-    "k": "build",
-    "t": "C1 Swift-Python bridge",
-    "at": "2026-10-26T01:37:46.444000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Stdlib manifest v2",
-    "at": "2026-10-26T01:18:58.291000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "review",
-    "t": "Reviews pywidget_ui names",
-    "at": "2026-10-26T01:17:59.125000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "New widget template and is_stale",
-    "at": "2026-10-26T01:17:45.805000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "plan",
-    "t": "Bridge contract v3",
-    "at": "2026-10-26T01:16:59.563000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Routes CORRECTIONS open items",
-    "at": "2026-10-26T01:16:41.144000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "tools",
-    "t": "Report evidence collector",
-    "at": "2026-10-26T01:15:30.259000+00:00",
+    "t": "Ops OPS-6 structural trial",
+    "at": "2026-10-26T03:17:48.859000+00:00",
     "o": "i"
    },
    {
     "w": "Odalys",
-    "k": "test",
-    "t": "Fix web_hits_test and terms_guard text",
-    "at": "2026-10-26T01:15:24.685000+00:00",
-    "o": "c"
+    "k": "tools",
+    "t": "Ops OPS-2 first audit, five largest losses",
+    "at": "2026-10-26T03:12:47.594000+00:00",
+    "o": "i"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "Ops OPS-7 research-process audit",
+    "at": "2026-10-26T03:12:13.275000+00:00",
+    "o": "i"
    }
   ],
   "count": {
-   "next": 35,
-   "wait": 19,
-   "blocked": 12,
-   "you": 6
+   "next": 46,
+   "wait": 20,
+   "blocked": 13,
+   "you": 7
   }
  },
  "qr": [],
- "inbox": []
+ "inbox": [
+  {
+   "id": "c6407435036",
+   "state": "waiting",
+   "position": 1,
+   "eta": "2026-10-25T22:24:07-04:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Update the site so that Investor requests regarding visual direction show eac..."
+  }
+ ],
+ "trimmed": [
+  "lane_next",
+  "queue_text",
+  "recent",
+  "task_done"
+ ]
 }

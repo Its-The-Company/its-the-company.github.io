@@ -15,7 +15,7 @@ function stt() { return (S.status && S.status()) || null; }
 function stale(st) { return pub !== false && Date.now() - Date.parse(st.at) > 12e4; }
 function brief() {
 var st = stt() || {}, t = st.tasks || {}, c = t.count || {}, m = st.meter || {}, f = m.five_hour || {}, k = m.weekly || {},
-run = t.run || [], old = !st.at || stale(st), hl = Q('.hero .latest'), p, a, n = st.next_tick && et(st.next_tick);
+run = t.run || [], old = !st.at || stale(st), hl = Q('.where .latest'), p, a, n = st.next_tick && et(st.next_tick);
 br.textContent = '';
 if (hl) mk(br, 'p', 'cv-bp', String(hl.textContent || '').split('. ')[0].replace(/\.$/, '') + '.');
 if (!old) {

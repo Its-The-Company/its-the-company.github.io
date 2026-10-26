@@ -1,0 +1,471 @@
+---
+layout: "default"
+title: "C1 bridge contract: Swift and Python, one interpreter per process"
+section: "documents"
+description: "Fact tags: [hdr] read in the pinned CPython 3.15.1 iOS XCframework headers or its stdlib (Vendor/python). [host] run on host CPython 3.13.18 (Homebrew) on 2026-10-25 by me; the probe is quoted where it matters\u2026"
+---
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/' | relative_url }}">← Documents</a><a href="{{ '/documents/pywidget/bridge-contract.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
+<div class="page-head"><div class="kicker"><span class="kind grey">Design</span><span>Day 4 · Sun Oct 25</span><span><code>pywidget/docs/design/bridge-contract.md</code></span></div><h1>C1 bridge contract: Swift and Python, one interpreter per process</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
+
+<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
+<div class="doc-body" markdown="1">
+
+{% raw %}
+Pernille. **Version 3, 2026-10-25 21:09 ET, Day 4.** v3 adds the widget tree channel ADR-007 8.3 settled (76a833f5, s11 A5): a `widget_tree` record and `tree_seq` in `finished`; it also drops `last_output_seq`, which Python cannot know. Every change, and what the Swift half must change, is in section 12 (changelog). Idris is coding against v2; he signs v3 when his half is done. v2 (20:20, ebca07ba) folded his S1-S3 into sections 2, 3 and 5, aligned S4-S6 where they touch the Python half, and wrote his Q1-Q6 answers into the body; his review section below is unchanged. v1 (20:10, 1ba53f42) was signed by Idris at 20:16 with no blocker (f84b7d9b). Section 11 lists where ADR-007 s8.3's provisional names differ from this page. The Swift half codes against this page; the Python half (`_pywidget_runtime` in `pywidget/python/`, owned by me) and the host tests (`pywidget/tests/bridge/`) code against it too. Built so far on the Python half: the record kinds, the `finished` payload, `limits`, and the widget tree channel; the rest lands with the C1 build.
+
+Grounded in: the spike sources in `pywidget/ios/` (`Shared/PythonRuntime.swift`, `Shared/PyBridge.h`, `Shared/Bench.swift`, `App/PyWidgetApp.swift`, `Widget/PyWidget.swift`, `bench/*.txt`, `scripts/fetch_python.sh`); ADR-001 3.1 C1 and C4; C2-device-api.md 1.3 and 1.6; ADR-004 s6 and [`pywidget/docs/research/ide-tooling.md`](ide-tooling.html) (position units); the build brief C1. L3-runtime-spike.md had not landed at 20:09; numbers below that depend on it are marked **[measure]**.
+
+Fact tags: **[hdr]** read in the pinned CPython 3.15.1 iOS XCframework headers or its stdlib (`Vendor/python`). **[host]** run on host CPython 3.13.18 (Homebrew) on 2026-10-25 by me; the probe is quoted where it matters. **[recalled]** from memory; a fixture in section 9 settles it.
+
+## 0. The first thing that broke
+
+Four faults in the spike's runtime would each sink C1. None is Idris's mistake; the spike was built to measure cold start, not to run a console.
+
+1. `Py_InitializeFromConfig` runs on whatever thread calls `start()`: the app's main thread in `PyWidgetApp.init` (via `queue.sync`, which runs the block on the caller's thread). Python's "main thread" is the thread that initialises it, and only that thread runs signal handlers. So a Stop aimed at a worker thread never lands, and the UI thread owns the interpreter.
+2. `config.install_signal_handlers = 0` is right for an app, but it also means SIGINT has no Python handler, and `PyErr_SetInterruptEx(SIGINT)` is then **ignored** [host: probe 3, `SIG_IGN` -> "interrupt_main ignored"; same rule for `SIG_DFL`, header comment and docs]. Bootstrap must put `signal.default_int_handler` back on the script thread.
+3. `ConsoleModel.run()` calls `queue.sync` from `Task.detached`, which <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parks</span> a Swift-concurrency pool thread for the whole script, `input()` waits included. The pool has about one thread per core. Two parked scripts and the app's async code starves.
+4. The harness compiles as `''`, buffers output in a `StringIO` until the end, and calls `PyErr_Print()` on a harness failure. `PyErr_Print` on an escaped `SystemExit` calls `Py_Exit`, which ends the app.
+
+The contract below replaces `PythonRuntime.run` and the harness. `start()`'s `PyConfig` (isolated, `write_bytecode = 0`, `user_site_directory = 0`, home and executable paths) stays as Idris wrote it.
+
+## 1. Fixed decisions
+
+- **One interpreter per process, never finalised.** CPython 3.15.1, the GIL build (`Py_GIL_DISABLED` undefined in `pyconfig-arm64.h` [hdr]). `Py_FinalizeEx` is never called, not on Restart and not at app exit. Single-phase-init extension modules (numpy is one) keep static C state and do not survive finalise-and-reinitialise; iOS has no child process to <span title="A test written in advance. If it fires, we drop the idea.">kill</span> instead [recalled; numpy's own docs say so]. Restart therefore clears the user's modules and globals and keeps the interpreter (section 6).
+- **Python runs only in the app process.** ADR-001 C4: widget runs and Shortcut runs are app-process runs; the widget extension only renders. The spike's in-extension Python (`Widget/PyWidget.swift`) is bench code and does not ship. (`bench/widget-full.txt`: five runs, "no widget line within 20 s"; unmeasured, not needed for v1.)
+- **The main thread never enters the C API.** No `PyGILState_Ensure`, no `Py_*` call, no wait on the script thread. It posts requests and drains records.
+- **One run at a time, and the rest queue.** A run is a console run, a widget run or a Shortcut run (C2 1.1 contexts). A widget or Shortcut run that arrives during any console run, an `input()` wait included, queues: at most one pending per widget and one per Shortcut invocation, repeated refreshes of one widget coalesce, and when the caller's budget runs out it gets `busy`. A queued run never stops the console run. (Q1, Idris: scheduling inside the app process, so it is his call, not a C4 question for Ines.)
+- **Positions on the bridge are editor positions**: line 1-based, column 0-based in UTF-16 code units, converted in Python, never in Swift (ide-tooling.md, Odalys; `pywidget_tooling/positions.py`). Code-point columns ride along for text consumers.
+
+## 2. Threads and who <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the GIL
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 2. Threads and who holds the GIL, scrolls sideways" style="--tw:1201px" markdown="1">
+
+| Thread | Created by | Enters the C API | GIL |
+|---|---|---|---|
+| Main (UI) | iOS | Never | Never |
+| **Script thread** | Swift half, once, as the first thing `start()` does, **before any `PyConfig_*` call** (S1): a `Thread` (pthread, not GCD), `Thread.stackSize` **8 MiB** set before `Thread.start()` (Q2, provisional), QoS `.userInitiated` | Yes: **all of `start()`** (`PyConfig_*`, `PyImport_AppendInittab("_pwbridge")`, the SIGURG handler, `Py_InitializeFromConfig`, bootstrap), every run, every reset | Holds it only inside `start`/`run`/`reset`; parked with it released (`PyEval_SaveThread`) between jobs. Python's main thread, so `threading.main_thread()` and signal handlers live here. |
+| **Stop thread** | Swift half, once, at `start()` | Only for the hard stop (section 5, 2.0 s step) | `PyGILState_Ensure`; may block for as long as a C call holds the GIL, which is why it is not the main thread or a GCD worker |
+| Tooling thread | Swift half, once (ADR-004 s6) | jedi/pyflakes requests | `PyGILState_Ensure` per request, released after. Runs while a script runs or waits for input; shares the GIL in 5 ms slices [recalled: default switch interval]. Accepted for v1 (Q6): completion latency under `while True: pass` is a row in the ADR-004 <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span> gate; past 1 s the editor shows "Suggestions paused while your script runs", no second interpreter |
+| Record consumer | Swift half (an actor or serial queue) | Never | Never; woken by a `DISPATCH_SOURCE_TYPE_DATA_OR` source and copies records out through one C call (S3) |
+| User threads (`threading.Thread`) | The user's script | Yes, as Python threads | Normal CPython rules; their output and device calls go through the same bridge functions |
+
+</div>
+
+
+The script thread keeps one `PyThreadState` for the life of the process: `PyEval_RestoreThread(ts)` on job entry, `PyEval_SaveThread()` on job exit.
+
+**Why all of `start()` (S1).** `_PyRuntime.main_thread` is runtime-wide [hdr: `internal/pycore_runtime_structs.h:205`, Idris] and is fixed when the runtime first initialises, which `PyConfig_SetBytesString` can already trigger through pre-initialisation [recalled]. Calling only `Py_InitializeFromConfig` on the script thread is therefore not enough. Bootstrap checks it: it asserts `threading.current_thread() is threading.main_thread()` and that `signal.signal(SIGINT, signal.default_int_handler)` succeeded, and reports the second as `RuntimeInfo.sigint_installed`; `hello.py`'s expect file checks both.
+
+**Where the primitives live (S3).** `_pwbridge`, the wait slots, the record queue and the job FIFO are **one C file in `Shared/`**, written by the Swift half, not Swift: Swift 6 makes C function pointers that take the GIL awkward, and a `PyObject *` must never cross an isolation boundary. Locks: pthread mutex and condition variable for the slots and the FIFO; `os_unfair_lock` for the record queue. The C side wakes the Swift consumer with a `DISPATCH_SOURCE_TYPE_DATA_OR` source, which coalesces and never blocks the writer. **Lock rule: no thread holds a slot mutex or the queue lock while it takes or waits for the GIL.** A bridge wait releases the GIL first, then takes the slot mutex; on wake it drops the mutex, then retakes the GIL. The main thread touches only `provideLine`, `endInput` and `stop`, each of which holds a slot mutex for microseconds.
+
+## 3. Swift calls into Python (Swift half API, proposed names)
+
+All are called from the main thread and return without waiting on Python, except `start` and `restart`, which are `async`.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 3. Swift calls into Python (Swift half API, proposed names), scrolls sideways" style="--tw:3831px" markdown="1">
+
+| Call | Arguments | Runs on | GIL entry -> exit (on the thread that runs it) | Blocks the caller | Returns | Errors and what Swift shows |
+|---|---|---|---|---|---|---|
+| `start(config)` | `RuntimeConfig`: home, executable, `user_roots: [URL]`, `bundle_root`, `stdlib_mode`, `lazy_imports: Bool` Script thread, **the whole call** (S1): `PyConfig_*`, `PyImport_AppendInittab`, the SIGURG no-op handler (section 5), `Py_InitializeFromConfig`, bootstrap | none -> held after `Py_InitializeFromConfig` -> bootstrap -> released (`PyEval_SaveThread`) | `async`; the main thread does not wait | `RuntimeInfo {python_version, stdlib_mode, init_s, sigint_installed}`; `sigint_installed` false is an `initFailed` in debug and a logged warning in release (Stop then relies on the hard stop) | `initFailed(stage, message)` from a `PyStatus` exception or a bootstrap exception. Permanent for the process. Banner: "Python couldn't start: \<message\>. Quit and reopen PyWidget. If it happens again, send a report." Run buttons disabled. A second `start()` is a no-op that returns the first result. |
+| `run(request)` | `RunRequest`: `run_id: UInt64` (Swift assigns, increasing), `source: .file(URL) | .text(String, name: String)`, `argv: [String]`, `cwd: URL`, `stdin: .interactive | .preset(String) | .none`, `context: .app | .widget | .shortcut`, `budget_s: Double?`, **v3:** `widget: WidgetRequest?` (`.widget` runs only; section 7, the `widget_tree` record) | Script thread: `_pywidget_runtime.run(request_json)` | released -> held (`PyEval_RestoreThread`) -> released | No; throws synchronously only for the cases on the right, else returns a handle | `RunHandle(run_id)`; the outcome arrives later as a `finished` record (section 7) | `busy` (a run is active and the caller's budget ran out while queued, Q1): console cannot hit it (Run turns into Stop); a widget or Shortcut run queues first (section 1), then on `busy` the widget keeps its last good entry, marked stale, and the Shortcut fails with "PyWidget is already running a script. Try again when it finishes." (copy changes go to Maren and Wrenna). `stuck`: the stuck banner (section 5). `notStarted`: the request waits for `start()`; never shown. |
+| `provideLine(run_id, wait_id, line)` | `String` without its newline | Wakes the parked wait | none (no Python touched) | No | `Bool`: false if the wait is stale (another wait id, or the run ended) | None shown. A stale reply is dropped and logged. |
+| `endInput(run_id, wait_id)` | | Wakes the parked wait | none | No | `Bool` as above | None |
+| `stop(run_id)` | | Stop <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span> (section 5) | none on the caller; the ladder's later steps run on the stop thread | No | Nothing; progress arrives as `status` records | Unknown or finished `run_id`: no-op |
+| `restart()` | | Stop (if running), wait up to the deadline, then `_pywidget_runtime.reset()` on the script thread | released -> held -> released | `async` | `RestartReport {cleared_modules: Int, background_threads: Int, stuck: Bool}` | `stuck`: the stuck banner; restart is refused. Background threads still alive after reset: console line "1 background thread is still running. Quit and reopen PyWidget to end it." |
+| `records(after: seq)` / `AsyncStream<Record>` | `UInt64` | Record consumer | none | No | The records after `seq`, in order (section 4) | A gap in `seq` is a bridge bug: assert in debug, "Output may be incomplete" line in release |
+
+</div>
+
+
+The Swift-to-Python entry points are three Python functions in `_pywidget_runtime`, each taking and returning one JSON string (`str`), so the C surface stays tiny and Swift decodes with `Codable`: `bootstrap(config_json) -> info_json`, `run(request_json) -> outcome_json`, `reset() -> report_json`. A fourth, `hard_stop(run_id)`, is called by the stop thread (section 5). None of them may raise: each catches `BaseException` and returns an `internal_error` outcome. If one still returns `NULL`, Swift calls `PyErr_Clear()` (never `PyErr_Print()`), reports `internal_error` and logs the type name.
+
+## 4. Python calls into Swift: the `_pwbridge` built-in module
+
+A C extension module in the one C file of section 2 (S3), written by the Swift half and registered with `PyImport_AppendInittab("_pwbridge", ...)` on the script thread before `Py_InitializeFromConfig`. Every function is called with the GIL held and returns with it held.
+
+```c
+/* _pwbridge, version 1. Every function: GIL held on entry and on exit. */
+write(stream: int, data: bytes-like) -> int              /* 1 stdout, 2 stderr; returns len(data) */
+request_line(prompt: str) -> str | None                  /* None = end of input */
+call(module: str, method: str, payload: bytes, timeout: float) -> bytes   /* JSON in, JSON out */
+stop_requested() -> bool
+run_id() -> int                                          /* 0 when no run is active */
+emit(kind: str, payload: bytes) -> int                   /* structured record; returns its seq; never blocks. v3: kind may be "widget_tree" */
+rearm_wake() -> bool                                     /* v2, new: reinstall the SIGURG no-op handler; True if it had been replaced */
+```
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 4. Python calls into Swift: the _pwbridge built-in module, scrolls sideways" style="--tw:1722px" markdown="1">
+
+| Function | Thread | Releases the GIL | Blocks | Returns | Raises |
+|---|---|---|---|---|---|
+| `write` | Any Python thread | Only under back-pressure | Only when more than **1 MiB** is pending undrained [measure]; waits on the thread's wait slot (below) | Byte count | `KeyboardInterrupt` if Stop arrives during a back-pressure wait; `ValueError` for a bad stream; `TypeError` for non-bytes |
+| `request_line` | Any Python thread; one prompt at a time (an input lock in Python serialises threads) | Yes, for the whole wait (`Py_BEGIN_ALLOW_THREADS`) | Until a line, end of input, or Stop | `str` without the newline; `None` at end of input | `KeyboardInterrupt` on Stop, never `EOFError` (Python raises that from `None`) |
+| `call` | Any Python thread | Yes, for the wait | Until the Swift handler answers, `timeout`, or Stop | Swift's JSON: `{"ok": value}` or `{"error": {"class", "message", "fix", "native"}}` | `KeyboardInterrupt` on Stop; `TimeoutError` at `timeout` (Python maps it to `pywidget.errors.BridgeTimeout`, C2 1.3); the error classes are raised by the Python wrapper, not by C |
+| `stop_requested` | Any | No | No | `True` from the first Stop until the run ends | None |
+| `run_id` | Any | No | No | Current run id or 0 | None |
+| `emit` | Any | No | No (S5: `finished` must always get out) | The record's `seq` | `ValueError` for an unknown kind |
+| `rearm_wake` | Script thread, from `reset` | No | No | `True` if the handler found was not ours | None. Needed because a C handler cannot be put back from Python: `signal.getsignal(SIGURG)` reads `None` for a handler not installed from Python [recalled], so the reset snapshot cannot restore it with `signal.signal` |
+
+</div>
+
+
+**The wait slot.** One primitive, one per Python thread (mutex, condition variable, a result slot, a `wait_id`). `request_line`, `call` and the back-pressure wait all park on it. Exactly three things can post to it: an answer (a line, or a device reply), end of input, and Stop. The first post wins; later posts with the same `wait_id` are no-ops and return false to Swift. Stop posts to every parked slot of the current run. Ordering rule: Swift sets the run's `stop_requested` flag **before** it decides whether to post to a slot or to signal (section 5), and a thread checks the flag after taking the slot's mutex and before parking. So a Stop that lands between "decided not parked" and "parked" still wakes the wait.
+
+How a woken wait raises, inside the C function after `Py_END_ALLOW_THREADS`:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 4. Python calls into Swift: the _pwbridge built-in module, scrolls sideways" style="--tw:571px" markdown="1">
+
+| Woken by | `request_line` | `call` |
+|---|---|---|
+| A line | returns the line | returns the reply |
+| End of input | returns `None`; Python's `input()` raises `EOFError`, `sys.stdin.readline()` returns `''` | n/a |
+| Stop | `PyErr_SetInterruptEx(SIGINT)` then `PyErr_CheckSignals()`: the user's SIGINT handler runs if they installed one (same as Ctrl-C at a terminal prompt). If SIGINT is `SIG_IGN` or `SIG_DFL`, `PyErr_SetInterruptEx` is ignored [host, probe 3], so the C code sets `KeyboardInterrupt` directly: Stop is stronger than Ctrl-C | same |
+| Timeout | n/a | `TimeoutError` |
+
+</div>
+
+
+**`input()` and stdin (Python half).** Bootstrap replaces `builtins.input` and `sys.stdin`. `input(prompt)` flushes stdout and stderr, writes `prompt` to stdout (so it is in the transcript, sequenced before the sheet), then calls `request_line(prompt)`. Modes:
+
+- `.interactive` (console): every line comes from the Swift sheet.
+- `.preset(text)` (Run Script with Input, L9): lines come from `text`, split on `\n`, `\r\n`, `\r`; when they run out, end of input. No sheet, ever.
+- `.none` (widget runs): the first `input()` gets end of input, so `EOFError`.
+
+`sys.stdin.read()` reads lines until end of input. `sys.stdin.isatty()` is `False`.
+
+**Device calls.** The C2 modules call `_pwbridge.call` through one Python wrapper that maps `{"error"}` replies to `pywidget.errors` classes. C2 1.6 holds: the call blocks the script's thread, Swift does any main-thread work, Apple's completion queues are joined in Swift. `timeout` defaults to 10 s and is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> by the run's remaining budget.
+
+## 5. Stop: the ladder and the deadline
+
+Stop always ends as `KeyboardInterrupt` in the script thread, or as whatever the user's own SIGINT handler raises. It is never `EOFError`, and end of input is never `KeyboardInterrupt`.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 5. Stop: the ladder and the deadline, scrolls sideways" style="--tw:1542px" markdown="1">
+
+| Time after the first Stop | Step | Needs the GIL | What it beats | What it cannot beat |
+|---|---|---|---|---|
+| 0 | Set `stop_requested`. Post to every parked wait slot of the run (the slot check and ordering rule of section 4). Else `PyErr_SetInterruptEx(SIGINT)`, then **`pthread_kill(script_thread, SIGURG)`, every time, with no `sigaction` check** (S2). Status record `stopping`. | No (both calls are async-signal-safe) | Bytecode loops; `time.sleep`, `select`, socket reads, `lock.acquire` (so `thread.join`) via `EINTR`: SIGURG's no-op handler interrupts the syscall, PEP 475's retry calls `PyErr_CheckSignals`, which runs the tripped SIGINT handler. Without a wake, `time.sleep(1.5)` ran its full length after `interrupt_main` at 0.2 s (1.57-1.65 s); with the wake, `KeyboardInterrupt` came at 0.25 s (SIGURG, Idris probe I1) and 0.33 s (SIGINT, my probe 2); `lock.acquire(timeout=1.5)` broke at 0.24 s [host, probes 1, 2, 4, I1] | A C call that holds the GIL and never checks signals |
+| Every 250 ms until the run returns | Repeat step 0's interrupt and SIGURG | No | A bare `except:` or `except KeyboardInterrupt:` that loops back into bytecode | `except BaseException: pass` that swallows every one; SIGINT at `SIG_IGN`/`SIG_DFL` (the interrupt is ignored, the wait resumes) |
+| 2.0 s | **Hard stop.** The stop thread takes the GIL (`PyGILState_Ensure`), checks the run is still the same `run_id` (it may have ended while the thread waited), and calls `_pywidget_runtime.hard_stop(run_id)`: claims a `sys.monitoring` tool id (4, else 3; neither free means no hard stop), turns on `LINE` and `JUMP` events, and the callback raises `KeyboardInterrupt` in user code (filename under a user root) and returns `sys.monitoring.DISABLE` everywhere else. The runner turns the events off and frees the id as the first thing it does when the run unwinds. | Yes; it waits behind any C call holding the GIL | `except BaseException: pass` loops and ignored SIGINT. On host a `while: try: ... except BaseException: pass` loop ended as soon as the events were turned on from another thread [host, probe 7]. The same probe, with no filter and no switch-off, then raised again in the probe's own outer handler and in `threading._shutdown`: hence the user-root filter and the switch-off first | A C call that holds the GIL |
+| **5.0 s** | **Deadline.** A `DispatchSourceTimer` on a utility queue, independent of the GIL and of the main actor (Q3). If the script thread has not returned from `run`, the run's state becomes `stuck`. | No | | |
+
+</div>
+
+
+**Why SIGURG and not SIGINT (S2).** v1 read `sigaction(SIGINT)` and sent `pthread_kill(SIGINT)` only if Python's handler was installed. That is check-then-act across a thread boundary: if the user's script runs `signal.signal(SIGINT, SIG_DFL)` between the check and the kill, SIGINT's default action **terminates the process**, and the app dies with the user's unsaved state. iOS gives no way to make the check and the kill atomic. SIGURG has no such window: the Swift half installs a no-op C handler for it at `start()` (`sigaction`, **no `SA_RESTART`**, so blocking syscalls return `EINTR`), and SIGURG's default action is ignore, so if the user replaces or resets it the worst case is no wake, never a kill; the hard stop still ends the run. The parked-slot check stays as it was: it decides between posting to a slot and signalling, and a thread re-checks `stop_requested` under the slot mutex before parking, so no Stop is lost. `reset` calls `_pwbridge.rearm_wake()` so a user's SIGURG change does not outlive the run. If the user installs a Python SIGURG handler, it runs once per Stop repeat; harmless.
+
+The deadline is **5.0 s**, a constant `stopDeadlineSeconds = 5.0` in both halves, tested against the same fixture (`stop_stuck_native.py`). Why 5: steps 0 and 1 end ordinary scripts in under 0.5 s; the hard stop gets 3 s to win the GIL from a GIL-releasing C call; past that, waiting longer only makes the user wait. Idris kept 2.0 s and 5.0 s (Q3) on condition that `stop_swallow.py` runs twice in one process and the second hard stop claims the tool id again and still wins.
+
+**Why not `PyThreadState_SetAsyncExc`.** It needs the GIL as well, it lands only in bytecode (so it beats nothing the hard stop does not), and it lands anywhere, including inside a `finally` that is writing a file. The hard stop has the same `finally` risk, so it is step 3, not step 1, and it only raises in user code. Exists in 3.15.1 as `int PyThreadState_SetAsyncExc(unsigned long, PyObject *)` [hdr, pystate.h:67] if we ever need it.
+
+**Stuck.** The console shows, plainly: "This script is stuck in native code and can't be stopped. Quit and reopen PyWidget to run Python again. Your files are saved." Run, Restart, widget runs and Shortcut runs refuse with `stuck`. The editor and file saving keep working. The app never quits itself. If the script thread does return later (a long numpy call finishes, then the pending `KeyboardInterrupt` lands), the state goes `stuck -> finished(interrupted)`, a `status` record `unstuck` withdraws the banner, and Python is usable again.
+
+**Budgets.** A widget or Shortcut run with `budget_s` is stopped by the same ladder when the budget runs out. A Shortcut gets **`budget_s = 20`** (S4): 25 plus the 5.0 s deadline put a stuck verdict at exactly the 30-second intent limit (L9-shortcuts.md line 42), with nothing left for a cold launch (about 0.33 s to result on the Simulator, L3) or the intent's own return; 20 leaves 5 s. Revisit only if device runs show progress reporting extends the limit.
+
+**Debugging note.** No real SIGINT is ever sent now; `PyErr_SetInterruptEx` only trips a flag. lldb passes SIGURG without stopping by default [recalled]; to be certain, in the scheme: `process handle SIGURG -s false -p true -n false`.
+
+## 6. Restart: what is cleared and what is kept
+
+Every `run` starts with a reset, so an edited helper module is picked up on the next Run. `restart()` is the same reset without a run, plus the stop. Reset runs on the script thread with the GIL.
+
+**Cleared**
+
+- `__main__`: each run gets a new module object, `sys.modules['__main__']` points at it, with `__file__` set for file runs.
+- Every `sys.modules` entry that was not present at bootstrap **and** whose file is not inside the app bundle: the user's own modules and any pure-Python package the user put in Documents. Native code can only load from the signed bundle, so nothing native is ever cleared.
+- `sys.path`, `sys.argv`, `os.environ`, the working directory, `os.umask`, `sys.excepthook`, `sys.displayhook`, `sys.settrace`/`sys.setprofile`, `sys.monitoring` tool ids we claimed, the recursion limit, `sys.set_int_max_str_digits`, `socket.setdefaulttimeout`, `warnings.filters`: restored to the bootstrap snapshot.
+- `builtins`: keys the user added are removed, keys they replaced are restored (`input` included).
+- Signal handlers: SIGINT back to `default_int_handler`; others to the snapshot; SIGURG through `_pwbridge.rearm_wake()` (section 5), since Python cannot restore a C handler.
+- `logging`: root handlers and level back to the snapshot; loggers named after cleared modules dropped.
+- `atexit`: the run's callbacks are run at the end of the run (section 7), then cleared.
+- Then `gc.collect()`.
+
+**Kept**
+
+- The interpreter, its thread state, and every module from the bundle (stdlib, bundled packages, numpy when it ships), in whatever state the user left it. Restart cannot undo a monkeypatch to a stdlib or bundled module; quit and reopen does. The about-Restart help text says so.
+- `sys.stdout`, `sys.stderr` and `sys.stdin`: the same objects for the life of the process, so a `logging.StreamHandler` made in an earlier run still writes somewhere live. Only their run id changes.
+- Threads. Python cannot kill a thread. A run ends after its main code returns **and** every non-daemon thread it started has finished (CPython does the same at exit; the join is interruptible by Stop). Daemon threads keep running. Live user threads are not signalled (signal handlers run only on the script thread). At reset `stop_requested` stays true for them until the deadline, so any bridge wait they park in raises `KeyboardInterrupt`; any still alive after the deadline are counted in `RestartReport.background_threads` and the console says so.
+
+## 7. Output and records
+
+Output is bytes with sequence numbers; Swift decodes and renders.
+
+- Bootstrap sets `sys.stdout` and `sys.stderr` to `io.TextIOWrapper` over a raw writer that calls `_pwbridge.write`. Encoding `utf-8`; errors `surrogateescape` on stdout and `backslashreplace` on stderr (CPython's UTF-8-mode defaults) [recalled]. Console runs: `line_buffering=True` on both. Widget and Shortcut runs: stdout block-buffered (8 KiB), stderr line-buffered. `isatty()` is `False`. `sys.stdout.buffer.write(b"...")` works.
+- C-level writes to file descriptors 1 and 2 (`printf` in an extension, `os.write(1, ...)`) are **not** captured in v1; they go to the system log. Fixture `fd_write.py` pins this so nobody is surprised.
+- `write` copies the bytes into the record queue under an `os_unfair_lock`, signals the consumer's dispatch source, and returns; it never calls into Swift UI code (S3).
+
+**Record** (C struct, read by the Swift consumer):
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 7. Output and records, scrolls sideways" style="--tw:488px" markdown="1">
+
+| Field | Type | Meaning |
+|---|---|---|
+| `seq` | `UInt64` | One counter per process across all runs and all kinds, starting at 1, no gaps |
+| `run_id` | `UInt64` | The run current when the record was made; 0 for output from a daemon thread after its run ended (the console shows it dimmed, "from a background thread") |
+| `kind` | enum | `stdout`, `stderr`, `input_request {wait_id, prompt}`, `input_echo {wait_id, line or eof}`, `status {stopping, stuck, unstuck, background_threads}`, `table`/`image` (reserved for rich output), `widget_tree {document}` (v3), `finished {outcome}` |
+| `payload` | bytes | Raw output bytes, or UTF-8 JSON for structured kinds |
+
+</div>
+
+
+- The order of `stdout` and `stderr` records is the order of the `write` calls, so interleaving is exact.
+- `input_echo` is made when the wait consumes the answer, so the typed line sits in the transcript exactly where the script read it.
+- **Batching.** Python batches through the text wrapper (line or 8 KiB). Swift coalesces adjacent same-stream records and renders at most 30 times a second. The consumer drains continuously, also in the background; the 1 MiB back-pressure only bites if it falls behind.
+- **Decoding.** Swift keeps one streaming UTF-8 decoder per stream and carries an incomplete trailing sequence into the next record, so a 4-byte emoji split across two `write` calls renders once. Invalid bytes become U+FFFD.
+- **Console rendering.** `\r` not followed by `\n` returns to the start of the current line (progress bars). ANSI CSI sequences are stripped in v1, not rendered.
+- **Cap.** The console keeps the last 10,000 lines (and at most 2 MiB); above that it drops the oldest and shows "Output truncated: N earlier lines". A Shortcut returns at most 1 MiB of stdout, cut at a character boundary, with the same note. The console is a TextKit 2 view fed by appends, not a SwiftUI `Text` (S6, Swift side).
+- **Provisional constants (Q5).** Back-pressure at 1 MiB pending, the 10,000-line / 2 MiB console cap and the 1 MiB Shortcut cap are provisional until `flood.py` runs on the Simulator (time to drain, peak footprint, frames dropped). Each lives in one Swift file and one Python module (`_pywidget_runtime.limits`, built in v3), and a test asserts the two are equal, as for `stopDeadlineSeconds`. v3 adds one more: `MAX_WIDGET_TREE_BYTES` (below).
+
+**The `finished` record** is the last record of a run, and **every run gets exactly one** (S5). Before it, in this order (v3): the runner joins non-daemon threads; in a widget run, builds and emits the `widget_tree` record (below); runs `atexit` callbacks; turns off any hard-stop monitoring; and flushes both streams. The tree is built before monitoring goes off because building it runs the user's `render()`, which Stop must still reach. A Stop during the final flush makes `write` raise `KeyboardInterrupt` under back-pressure; the runner catches it, drops the unflushed rest, and still emits `finished` (`emit` never blocks), with no gap in `seq`. Its payload, `bridge-outcome/1` (v3: `tree_seq` added, `last_output_seq` removed; every key is always present, `null` where it does not apply, so the Swift `Codable` has one shape):
+
+```json
+{"schema": "bridge-outcome/1", "run_id": 7, "status": "error",
+ "exit_code": null, "duration_s": 0.412,
+ "error": {"...": "section 8"}, "syntax": null, "background_threads": 0,
+ "tree_seq": null}
+```
+
+- `tree_seq` (v3): the `seq` of this run's `widget_tree` record, or `null` when the run emitted none (every non-widget run, and every widget run that produced no tree). Python knows it because `emit` returns the seq.
+- `last_output_seq` is gone (v3). `write` returns a byte count, not a seq, so Python could never fill it; v2 was wrong to put it in Python's payload. The consumer sees every record in order and knows the run's last `stdout`/`stderr` seq itself.
+- The schema string stays `bridge-outcome/1`: nothing has shipped, so v3 changes the shape in place. Once a build ships, any change to the payload bumps it.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 7. Output and records, scrolls sideways" style="--tw:762px" markdown="1">
+
+| `status` | Cause | Swift shows |
+|---|---|---|
+| `ok` | The code returned | Grey line "Finished in 0.41 s" |
+| `exit` | `SystemExit`, including `sys.exit()`, `exit()`, `quit()`, and `os._exit(n)` (patched at bootstrap to raise `SystemExit(n)` so it cannot end the app; called from a user thread it ends only that thread, which the help text says in one line) | `exit_code` 0: as `ok`, "Exited". Non-zero: "Exited with code 3". `sys.exit("message")`: the message on stderr, code 1 (CPython's rule) |
+| `error` | Any other exception | The traceback block (section 8), red. Tapping a frame opens the file at the line and column |
+| `interrupted` | `KeyboardInterrupt` reached the runner | "Stopped at main.py, line 12", traceback folded, frames still tappable |
+| `syntax_error` | `SyntaxError` and its subclasses from `compile()` | Editor caret and underline at the range; console line "SyntaxError: ... (main.py, line 3)". No frames |
+| `internal_error` | The runner itself failed | "Internal error in the Python bridge (TypeError). Restart to continue." and an os_log line with the type name |
+
+</div>
+
+
+**The `widget_tree` record (v3; ADR-007 8.3, s11 A5).** How a widget run hands its view tree to Swift. A record, not an outcome field (ADR-007 8.3's choice): it is size-capped like any record, and a script that exits before it builds a widget is visibly "no tree".
+
+- **Who emits it.** Only the runner, only in `context: .widget` runs, **at most once per run**, after the user's main code returned with `ok` or with `exit` code 0, after non-daemon threads joined, and before `finished` (order above). A console run or a Shortcut run of the same script emits none. User code can import `_pwbridge` and call `emit("widget_tree", ...)` itself; Swift takes the tree only from the record whose `seq` is `finished.tree_seq` and ignores any other `widget_tree` record (logged, not shown).
+- **Payload.** Exactly the ADR-002 serializer's bytes: `pywidget_ui.dumps(widget.document(timeline, state))`, compact, sorted keys, UTF-8, no NaN or Infinity (`pywidget_ui` v1, `viewtree.schema.json`). Swift does not re-encode it: it validates it against `viewtree.schema.json` and, on `ok`, writes the same bytes to `tree.json` atomically (ADR-007 7.2), so the phone and the web IDE can diff trees byte for byte.
+- **Which widget** (`RunRequest.widget`, new in v3, all fields optional): `WidgetRequest {id: String?, date: String? (ISO 8601 with Z or an offset), state: JSON object?}`. The runner looks at the `pywidget_ui.Widget` objects bound to top-level names of the script's `__main__`. With `id`, the one with that id; without it, the only one. If there is none (the script ended, or exited 0, before it built its widget), no record, `tree_seq` null, and the status stays what the code did; Swift maps that to `NoTree` (ADR-007 7.2). Several widgets and no `id`, or an `id` the script does not define, ends the run as `error`, type `WidgetChoiceError`, with the ids it found in the message.
+- **Which entry.** One timeline entry at `widget.date` (default: the run's start, UTC, to the second), with `sampled_at` = that date, `state` = `widget.state` (default `{}`; written into the document only when the request carried it), rendered for every family the widget declares. A script cannot yet pick its own entry dates, reload policy or `stale_after` for a widget run; that is an L4 gap row (G18), not settled here.
+- **Failures while building it.** The user's `render()` raising ends the run as `error` with that exception (section 8 frames point into `render`), no record. Stop during `render()` gives `interrupted`, no record. A tree over `MAX_WIDGET_TREE_BYTES` gives `error`, type `TreeTooLarge` ("the widget's view tree is N bytes; the limit is M"), no record. That is a Python-side cap on the bytes; ADR-007's `tree_too_large` is the renderer's memory rule and never reaches Python. In every case `exit_code` is null and `tree_seq` null.
+- **Cap.** `MAX_WIDGET_TREE_BYTES` = 524,288 bytes (512 KiB), in `_pywidget_runtime.limits` and its Swift twin. Provisional until the renderer-footprint task (ADR-007 open item 2) measures a fixture tree; it sits under the 1 MiB back-pressure window so one tree never fills it alone. Inline bitmaps are already capped at 64 KiB each by the serializer.
+- **Output during `render()`.** Both streams are flushed before the record is emitted, so anything `render()` printed comes before the tree in `seq` order.
+
+**Crash marker.** The runner writes a marker file in Caches at run start and deletes it in the `finished` path; `faulthandler` is enabled into a file beside it, which stays open for the life of the process. When the scene goes to background mid-run, the Swift half appends a `backgrounded` line to the marker (a plain file write; no Python, no GIL), and removes it if the run is still going when the scene returns. A marker found at launch means the last run ended with the app. With `backgrounded`: "Your last run didn't finish: iOS closed PyWidget while it was in the background." Without: "Your last run didn't finish: PyWidget was closed while it ran, possibly out of memory." plus the faulthandler text if any. (Idris's ADR-007 carry item 4; copy to Maren.)
+
+## 8. Tracebacks and SyntaxError positions
+
+Compile with the real path (`compile(source_bytes, path, "exec")`), never `'<string>'` or `''`; bytes, so PEP 263 cookies and a BOM work. A `.text` run uses the name `<editor:NAME>` and seeds `linecache` with the text, so its lines print. The runner trims its own frames from the top, so the first frame is the user's.
+
+Python sends structure; Swift draws it. Python also sends `text`, CPython's own formatting with the bridge frames removed, for copy, Shortcut output and logs, never for the screen.
+
+```json
+{"type": "ZeroDivisionError", "module": "builtins", "qualname": "ZeroDivisionError",
+ "message": "division by zero", "notes": [],
+ "frames": [
+   {"path": "/var/.../Documents/Scripts/demo/main.py", "display": "main.py",
+    "kind": "user", "name": "main", "line": 12, "end_line": 12,
+    "col16": 8, "end_col16": 13, "col_cp": 8, "end_col_cp": 13,
+    "source_line": "    z = 1 / x"}],
+ "cause": null, "context": null, "suppress_context": false, "group": null,
+ "text": "Traceback (most recent call last):\n  ..."}
+```
+
+- `frames`: oldest first, as CPython prints them. `kind` is `user` (under a user root), `stdlib`, `bundled` or `internal`; the console folds non-user frames. `name` is `co_qualname`.
+- **Columns.** CPython's frame positions (`co_positions`, `FrameSummary.colno`) are 0-based **UTF-8 byte** offsets; the stdlib converts them only for display [hdr: `traceback.py:618`, `_byte_offset_to_character_offset`; host: on `s = "😀é"; z = 1 / 0`, `colno` 18 where the code-point index is 14]. The Python half converts with `positions.byte_to_col16` and `byte_to_cp` against the source line. Positions missing (`None`) give `null` columns: jump to the line only.
+- **SyntaxError.** `offset` and `end_offset` are 1-based **code points** into `exc.text` [hdr: `traceback.py:1553-1577`; host: `x = "😀" + (1` gives `offset` 11, the code-point position of `(` plus 1, where a byte count would be 14]. `end_offset` can be 0 or `None` (unclosed bracket: 0 [host]); `end_lineno` can differ from `lineno`. The Python half converts with Odalys's `positions.syntax_error_range` and sends `{"path", "display", "line", "end_line", "col16", "end_col16", "col_cp", "end_col_cp", "message", "source_line", "kind": "SyntaxError" | "IndentationError" | "TabError"}`. On 3.15 the stdlib's keyword-typo hint can rewrite `text` and `offset` while formatting [hdr: `_find_keyword_typos` at traceback.py:1548]; the structure is taken from the exception before any formatting.
+- **Chains and groups.** `cause` and `context` are nested objects of the same shape; `group` is a list for `ExceptionGroup`. <span title="How much room the idea has to grow. It moves the grade up or down a step or two.">Depth</span> capped at 10, frames per exception at 100 (middle frames folded, as CPython does for recursion), `message` at 4 KiB.
+- **Stale positions.** Each `user` frame for the run's main file carries the run's `run_id`. If the editor's document changed since the run, Swift jumps to the line without the column underline and says "This file changed since the run."
+- **Lazy imports.** If `lazy_imports=all` ships (the bench's `-lazy` option), an `ImportError` surfaces at the first use of the name, and the frame points at that line, not at the `import`. Fixture `lazy_import_error.py` pins whichever we ship.
+
+## 9. Shared fixtures
+
+One directory, both halves: `pywidget/tests/bridge/fixtures/`. Each fixture is `NAME.py`, `NAME.actions.json` (scripted input lines, end of input, and Stop, each triggered by an output marker such as "when stdout contains READY", never by wall-clock time) and `NAME.expect.json` (the normalised record stream: stream, text, `input_*`, `status` and the `finished` outcome, plus time bounds). The host suite (Python half, pure-Python stand-in for `_pwbridge`, real signals on the host main thread) runs in `pywidget/tests/run_host.py`; the XCTest suite (Swift half, real module, Simulator through `tools/xc.sh`) reads the same files. `[xcode]` marks fixtures that only the Simulator can run.
+
+The `expect.json` shape, as the six v3 widget fixtures use it (the first ones written; the others follow it): `{"fixture", "contract": 3, "cases": [{"name", "request": {"context", "widget"?}, "tree_limit"?, "records": [...]}]}`. Records are normalised: adjacent same-stream output merged into `{"kind": "stdout", "text"}`; `{"kind": "widget_tree", "golden"?}` where `golden` names a file in the folder holding the exact payload bytes; `{"kind": "finished", "outcome": {"status", "exit_code", "tree_seq", "error_type"}}` where `tree_seq` is `"@widget_tree"` (the seq of the case's `widget_tree` record) or `null`. `tree_limit` is a host-only knob that lowers the cap; the XCTest suite skips cases that carry it.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 9. Shared fixtures, scrolls sideways" style="--tw:547px" markdown="1">
+
+| Fixture | Settles |
+|---|---|
+| `hello.py` | One `print`, `ok`, seq starts after the previous run's last seq; `RuntimeInfo.sigint_installed` true and bootstrap ran on `threading.main_thread()` (S1) |
+| `interleave.py` | Alternating stdout/stderr writes: exact order |
+| `unicode_out.py` | Emoji, combining marks, CJK; a lone surrogate on stdout (`surrogateescape`) and stderr (`backslashreplace`); a 4-byte emoji written as two `buffer.write` calls renders once |
+| `flood.py` | 200,000 lines: no loss, no gaps, back-pressure engages, console cap message [measure: time, drain, peak footprint; fixes the Q5 constants]. Second case: Stop mid-flood gives `interrupted`, exactly one `finished` record, no seq gap (S5) |
+| `carriage.py` | `\r` progress line and ANSI colour: one line rewritten, escapes stripped |
+| `fd_write.py` | `os.write(1, ...)` is not in the console (v1 rule) |
+| `input_roundtrip.py` | The board's done test: `name = input("Name? ")`, `print(f"Hi {name}")`, answer "Ada"; prompt before `input_request`, echo after it |
+| `input_eof.py` | End of input gives `EOFError`; `sys.stdin.readline()` gives `''` |
+| `input_stop.py` | Stop during `input()` gives `interrupted`, never `EOFError`; a late `provideLine` returns false |
+| `stdin_preset.py` | `.preset("a\nb\n")`: two lines, then `EOFError`, no `input_request` record; `sys.stdin.read()` |
+| `stdin_none.py` | Widget mode: first `input()` raises `EOFError` |
+| `stop_loop.py` | `while True: pass`, interrupted under 0.5 s |
+| `stop_sleep.py` | `time.sleep(600)` (Teodor's first test), interrupted under 0.5 s: needs the SIGURG wake |
+| `stop_bare_except.py` | `except KeyboardInterrupt: continue` loop: ended by the 250 ms repeats before 2 s |
+| `stop_swallow.py` | `except BaseException: pass` loop: ended by the hard stop between 2 and 5 s; records whether a user `finally` was cut short (expected yes: the known cost of the hard stop). Run **twice in one process**: the second hard stop claims the tool id again and still wins (Q3) |
+| `stop_custom_handler.py` | User SIGINT handler that prints and raises `SystemExit(130)`: `exit`, 130, handler output present |
+| `stop_sig_dfl.py` | `signal.signal(SIGINT, SIG_DFL)` then a sleep loop: the app survives (only SIGURG is sent), the interrupt is ignored, the hard stop ends it |
+| `stop_sigurg_reset.py` | `signal.signal(SIGURG, SIG_DFL)` then `time.sleep(600)`: app alive, no wake, the hard stop ends it; the next run's reset reports `rearm_wake() == True` and `stop_sleep.py` after it still stops under 0.5 s (S2) |
+| `stop_stuck_native.py` `[xcode]` | `pw_test_hold_gil(8.0)`, exported by the XCTest bundle (test target only, never the app; Idris, Q4), reached with `ctypes.PyDLL(None)` so the GIL stays held; it busy-waits on `mach_absolute_time` because SIGURG would cut a `usleep` short. `stuck` at 5.0 s (+-0.25), `unstuck` and `interrupted` at about 8 s |
+| `exit_codes.py` | `sys.exit(0)`, `sys.exit(3)`, `sys.exit("msg")`, `exit()`, `os._exit(4)`: each an `exit` outcome; the app lives |
+| `tb_two_files.py` (+ `helper.py`) | Frames across two user files, bridge frames trimmed, `cause`/`context`, `add_note`, an `ExceptionGroup` |
+| `tb_columns.py` | Failing expression after `"😀é"` on the same line: `col16`, `col_cp` and the byte column all differ |
+| `syntax_*.py` | Unclosed bracket (`end_offset` 0), `IndentationError`, `TabError`, error after a non-BMP character, an f-string error, CRLF endings, a BOM and a coding cookie, invalid UTF-8 bytes |
+| `restart_modules.py` | Run A imports `helper` v1 and patches `builtins` and `sys.path`; helper edited to v2; run B sees v2 and none of A's changes; `logging.basicConfig` from A does not stop B's logging |
+| `restart_native.py` `[xcode]` | After numpy ships: `import numpy`, restart, import again, same module object |
+| `threads.py` | A non-daemon thread printing after main returns holds the run open; a daemon thread is reported at restart |
+| `atexit_run.py` | `atexit` output appears before `finished` and does not repeat in the next run |
+| `recursion.py` `[xcode]` | Unbounded recursion, and `sys.setrecursionlimit(100_000)` with deep recursion, end as `RecursionError` or `MemoryError`, never a crash: decides the 8 MiB stack on the Simulator now, one device when membership allows. A crash means 16 MiB before any change to the recursion limit (Q2) |
+| `device_call.py` | A stub device call: Stop during the wait gives `interrupted`; `timeout=0.1` gives `BridgeTimeout` |
+| `busy.py` | A widget run requested while a console run waits for input queues; two refreshes of the same widget coalesce into one pending run; when its budget runs out it gets `busy` and the console run is untouched (Q1) |
+| `lazy_import_error.py` | Where an `ImportError` frame points, with and without lazy imports |
+| `widget_ok.py` (v3) | One widget, `render()` prints and reads `state`: a `.widget` run emits one `widget_tree` before `finished`, `tree_seq` is its seq, the payload validates against `viewtree.schema.json` and equals `widget_ok.tree.json` byte for byte; output printed in `render()` comes before the tree; a `.app` and a `.shortcut` run of the same script emit no tree, `tree_seq` null; over the cap gives `error` `TreeTooLarge`, no record |
+| `widget_render_error.py` (v3) | `render()` raises: `error` (`ZeroDivisionError`), no tree |
+| `widget_exit_early.py` (v3) | `sys.exit(0)` before any widget exists: `exit` 0, no tree, `tree_seq` null (Swift's `NoTree`) |
+| `widget_exit_code.py` (v3) | A widget exists, then `sys.exit(2)`: `exit` 2, `render()` never runs |
+| `widget_two.py` (v3) | Two widgets: no `id` gives `error` `WidgetChoiceError`; `id: "b"` gives b's tree; an unknown id gives `WidgetChoiceError` |
+| `widget_stop_in_render.py` (v3) | Stop during `render()`: `interrupted`, no tree. Host stand-in raises `KeyboardInterrupt`; the Simulator case presses Stop on a `render()` that sleeps |
+
+</div>
+
+
+Positions fixtures reuse Odalys's emoji lines from `pywidget/tests/tooling/test_positions.py` rather than inventing new ones.
+
+## 10. Questions from v1, now settled
+
+All six answered by Idris at 20:16 (full answers in his review below); where each landed in the body:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 10. Questions from v1, now settled, scrolls sideways" data-n="1" style="--tw:1000px" markdown="1">
+
+| # | Question | My proposal | Settled (v2) |
+|---|---|---|---|
+| Q1 | A widget refresh or Shortcut run arrives while a console script is waiting for `input()`. Queue it, or `busy`? (Ines chairs if it touches C4) | Queue up to the caller's budget, then `busy`. Sub-interpreters would avoid it, but numpy does not support them [recalled]; not v1 | Queue, then `busy`; Idris's call, not Ines's. Section 1, section 3 `run`, `busy.py` |
+| Q2 | Script-thread stack: 8 MiB enough, too much? | Decide on `recursion.py` on the Simulator and one device | 8 MiB provisional; 16 MiB if `recursion.py` crashes. Section 2, `recursion.py` |
+| Q3 | The 5.0 s deadline and the 2.0 s hard-stop step | Keep unless `stop_swallow.py` shows the hard stop needs longer to win the GIL | 2.0 s and 5.0 s kept; deadline is a `DispatchSourceTimer`. Section 5, `stop_swallow.py` twice |
+| Q4 | Who writes the test-only native GIL-holder for `stop_stuck_native.py` | Swift half, in the test target only, never in the app | Swift half, test target, `ctypes.PyDLL(None)`. `stop_stuck_native.py` |
+| Q5 | Back-pressure at 1 MiB pending and the 10,000-line console cap | Measure on `flood.py`, then fix the numbers here | Provisional; one Swift file, one Python module, tested equal. Section 7, `flood.py` |
+| Q6 | Tooling thread while a script runs: jedi competes for the GIL with a busy script | Accept for v1; completion latency under a CPU-bound script is a row for the ADR-004 gate | Accepted; G1 gate row, "Suggestions paused" past 1 s. Section 2 |
+
+</div>
+
+
+Not in this page: the debugger (1.1), rich output kinds beyond reserving `table` and `image`. (v3: the view-tree output of widget runs is now in section 7, the `widget_tree` record.)
+
+## Review (Idris)
+
+Idris, 2026-10-25 20:16 ET, Swift-half owner. Hand-off with independent review (C13). Read against `pywidget/ios/Shared/PythonRuntime.swift`, `Shared/PyBridge.h`, `App/PyWidgetApp.swift`, `Shared/Bench.swift`, `project.yml` (Swift 6, strict concurrency complete, iOS 18 floor), the 3.15.1 headers in `Vendor/python`, and `L3-runtime-spike.md` (landed 20:07; nothing in it changes a number on this page, and its section 5 recommendation (b) agrees with section 1 here). No Xcode build for this review.
+
+**Section 0 is right on all four counts.** My spike starts Python on the main thread (`App.init` -> `Bench.coldStart` -> `start()` -> `queue.sync`), sets `install_signal_handlers = 0`, parks a pool thread with `Task.detached` + `queue.sync`, and calls `PyErr_Print()` on a harness failure. One precision on item 1: `queue.sync` running the block on the caller's thread is a GCD optimisation, not a documented guarantee [recalled]; the dedicated script thread makes it moot.
+
+**Blockers: none.** The page can be coded against. The changes below are binding on the Swift half from now; Pernille, please fold S1-S3 into sections 3, 5 and 2 on your next pass so readers do not have to read this section to get them right.
+
+### Changes the Swift half makes
+
+- **S1. The whole of `start()` runs on the script thread, not only `Py_InitializeFromConfig`.** `_PyRuntime.main_thread` is runtime-wide [hdr: `internal/pycore_runtime_structs.h:205`], and it is fixed when the runtime is first initialised, which `PyConfig_SetBytesString` can already trigger through pre-initialisation [recalled]. So `PyConfig_*`, `PyImport_AppendInittab("_pwbridge")`, `Py_InitializeFromConfig` and bootstrap all run there. Bootstrap asserts `threading.current_thread() is threading.main_thread()` and that `signal.signal(SIGINT, default_int_handler)` succeeded; `RuntimeInfo.sigint_installed` reports it, and `hello.py`'s expect file checks it.
+- **S2. The wake signal is SIGURG with a C no-op handler, not SIGINT.** Section 5 step 0 reads `sigaction(SIGINT)` and then sends `pthread_kill(SIGINT)`: if the user's script sets `SIG_DFL` between the two, SIGINT ends the app. The Swift half instead installs, at `start()`, a no-op C handler for SIGURG (`sigaction`, no `SA_RESTART`), and step 0 becomes `PyErr_SetInterruptEx(SIGINT)` then `pthread_kill(script_thread, SIGURG)`, every time, no check. The EINTR wakes the sleep or lock; PEP 475 retry calls `PyErr_CheckSignals`, which runs the tripped SIGINT handler. If the user has set SIGINT to `SIG_DFL`/`SIG_IGN`, the interrupt is ignored and the wait resumes; nothing kills the app, and the hard stop ends it. If the user resets SIGURG itself, its default action is ignore, so the worst case is no wake, never a kill. [host, probe I1, 3.13.18, Python handler standing in for the C one: `interrupt_main` at 0.2 s, `time.sleep(1.5)` -> KeyboardInterrupt at 1.57 s without the wake, 0.25 s with it; `lock.acquire(timeout=1.5)` 1.57 s / 0.24 s; with SIGINT at `SIG_DFL` plus the wake, `time.sleep(0.8)` returned at 0.87 s and the process lived.] The `stop_sig_dfl.py` and `stop_sleep.py` fixtures hold unchanged; add `stop_sigurg_reset.py` (user resets SIGURG to `SIG_DFL`, then sleeps: app alive, hard stop ends it).
+- **S3. Where the primitives live.** `_pwbridge`, the wait slots, the record queue and the job FIFO are one C file in `Shared/` (pthread mutex and cond for slots and FIFO, `os_unfair_lock` for the queue), not Swift: Swift 6 makes C function pointers that take the GIL awkward, and `PyObject *` must never cross an isolation boundary. The C side wakes the Swift consumer with a `DISPATCH_SOURCE_TYPE_DATA_OR` source (coalesces, never blocks the writer). Swift reads records by copying them out through one C call. Rule: no thread holds a slot mutex or the queue lock while it takes or waits for the GIL. The main thread touches only `provideLine`, `endInput` and `stop`, which take a slot mutex for microseconds.
+- **S4. The Shortcut budget is 20 s, not 25.** With 25 + the 5.0 s deadline, a stuck verdict lands at exactly 30 s, the intent limit (L9-shortcuts.md line 42, [SDK doc comment]), with no margin for a cold launch (about 0.33 s to result on the Simulator, L3 table, slower on a phone) and the intent's own return. 20 s leaves 5 s. Revisit only if device runs show progress reporting extends the limit.
+- **S5. The `finished` record is guaranteed.** A Stop during the runner's final flush makes `write` raise under back-pressure; the runner catches it, drops the rest, and still emits `finished` (`emit` never blocks). Add to `flood.py`: Stop mid-flood gives `interrupted`, a `finished` record, no seq gap.
+- **S6. The console view.** 10,000 lines / 2 MiB is too much for a SwiftUI `Text` (my spike's console); the console is a TextKit 2 view fed by appends. Swift-side, no contract change.
+
+### Answers to section 10
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: Answers to section 10, scrolls sideways" data-n="1" style="--tw:360px" markdown="1">
+
+| # | Answer |
+|---|---|
+| Q1 | **Mine, not to Ines.** The question is scheduling inside the app process; where Python runs (C4) does not move. Agree with your proposal: a widget or Shortcut run that arrives during any console run (an `input()` wait included) queues, at most one pending per widget and one per Shortcut invocation, repeated widget refreshes coalesce; when the caller's budget runs out it gets `busy`. The widget keeps its last good entry, marked stale; the Shortcut fails with your copy. A queued run never stops the user's console run. The `busy.py` fixture tests the queue-then-busy path. Copy changes go to Maren and Wrenna as usual. |
+| Q2 | **8 MiB, provisionally.** It is a reservation; only touched pages count toward footprint, so the cost is near zero until deep recursion. `Thread.stackSize` is set before `start()`. CPython 3.14+ derives its C-recursion guard from the thread's real stack bounds [recalled], so `recursion.py` decides on the Simulator now and one device when membership allows (due Day 7). If it crashes rather than raising, raise to 16 MiB before touching the recursion limit. |
+| Q3 | **Keep 2.0 s and 5.0 s.** The deadline timer is a `DispatchSourceTimer` on a utility queue, independent of the GIL and of the main actor. Add a run of `stop_swallow.py` twice in one process: the second hard stop must claim the tool id again and still win (checks the switch-off and `DISABLE` leave no residue). |
+| Q4 | **Swift half, me, in the test target only.** Not through `PyImport_AppendInittab`: the XCTest bundle loads into the host app after the app has started Python, too late for the inittab. The test bundle exports a C function `pw_test_hold_gil(double seconds)` that busy-waits on `mach_absolute_time` (a `usleep` would be cut short by the SIGURG wake), and the fixture reaches it with `ctypes.PyDLL(None)`, which keeps the GIL held for the call. `_ctypes` is in the 3.15.1 XCframework [checked: `lib-dynload/_ctypes.cpython-315-iphoneos.so`]. Never in the app target. |
+| Q5 | **Accept 1 MiB and 10,000 lines / 2 MiB as provisional constants**, then fix them from `flood.py` on the Simulator (time to drain, peak footprint, frames dropped). Both constants live in one Swift file and one Python module and are tested equal, like `stopDeadlineSeconds`. |
+| Q6 | **Accept for v1.** Measure completion latency with `while True: pass` running as a row in the ADR-004 G1 gate. If it passes 1 s, the editor shows "Suggestions paused while your script runs" rather than a spinner; no second interpreter. |
+
+</div>
+
+
+### What ADR-007 (execution architecture) must carry
+
+Noted for the other Idris run writing `docs/decisions/ADR-007-execution-architecture.md`; I have not edited it.
+
+1. This page as the C1 contract it builds on, with S1-S6.
+2. The thread model: one script thread that is Python's main thread, created before any `PyConfig_*` call; the stop thread; the tooling thread; the main thread never in the C API.
+3. Background runs: a widget run in a `BGAppRefreshTask` gets an expiration handler that calls `stop(run_id)` and calls `setTaskCompleted` at once, without waiting for the 5.0 s deadline (iOS ends the app if the task is not completed). A run suspended with the app resumes on the next launch or is stopped; the ADR picks one.
+4. The crash marker wording: a run cut off by a normal background termination is not a crash. The runner writes "backgrounded" into the marker when the scene goes to background mid-run, and the launch message says so instead of "possibly out of memory".
+5. The Shortcut budget of 20 s (S4) and the queue-then-busy rule (Q1).
+6. The spike's in-extension Python is bench code, not shipped; the hybrid (c) from L3 section 5 stays behind a flag until device numbers exist.
+
+Small notes, not blockers: `os._exit` patched to `SystemExit` ends only the calling thread when called from a user thread (worth one line in the help text); `faulthandler`'s file stays open for the life of the process.
+
+Signed: Idris, 2026-10-25 20:16 ET. No open blocker. Accepted with S1-S6, binding on the Swift half.
+
+## 11. ADR-007 s8.3 against this page: rows for Idris
+
+ADR-007 s8.3 (proposed, 20:12) wrote its bridge names before v1 of this page landed and says "when her page lands its names win and this section is updated to cite it". These are the differences I found, in s8.3 and in the sections that lean on it (7.2, 7.3, 8.1, 8.2). I have not edited ADR-007; Odalys is reviewing it. Each row is Idris's to carry into the ADR or to push back on here.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 11. ADR-007 s8.3 against this page: rows for Idris, scrolls sideways" data-n="1" style="--tw:1005px" markdown="1">
+
+| # | ADR-007 says | This page says | Proposed resolution |
+|---|---|---|---|
+| A1 | s8.3 `run(source\|path, mode: script\|widget, deadline, trigger, stdin: prompt provider)` | `run(RunRequest)`: `source: .file(URL) \| .text(String, name:)`, `context: .app \| .widget \| .shortcut`, `budget_s`, `stdin: .interactive \| .preset \| .none`, plus `run_id`, `argv`, `cwd` | ADR cites `RunRequest`. `mode` -> `context` (three values: Shortcut runs have their own budget and stdin rule); `deadline` -> `budget_s`; the prompt provider is `stdin` plus `provideLine`/`endInput` |
+| A2 | s8.3 `trigger` is a run argument (for the `runs.jsonl` row) | No `trigger` in `RunRequest`; Python never needs it | Keep it Swift-side: the run row is written by Swift from its own job record keyed by `run_id`. If the ADR wants it in the outcome, add `trigger` to `RunRequest` as an opaque string Python echoes; say which |
+| A3 | s8.3 `run(...) -> RunResult{...}`, a return value | `run` returns `RunHandle(run_id)`; the result is the `finished` record, `bridge-outcome/1`, and output streams as records | ADR names `bridge-outcome/1` and the `finished` record instead of `RunResult` |
+| A4 | `RunResult.outcome` with 7.2's values `ok`, `error`, `timeout`, `oom_guard`, `oom`/`killed`, `tree_too_large` | `bridge-outcome/1.status`: `ok`, `exit`, `error`, `interrupted`, `syntax_error`, `internal_error` | Two vocabularies, two layers: 7.2's are widget-run outcomes in `status.json`, decided by Swift; mine are what Python reports. Mapping for the ADR: `ok`/`exit 0` -> `ok`; `error`/`syntax_error`/`internal_error`/`exit != 0` -> `error`; `interrupted` after a budget stop -> `timeout`; `oom_guard`, `killed`, `tree_too_large` never reach Python. Swift knows it sent the budget stop, so no new field is needed unless you want `stopped_by` in the outcome |
+| A5 | `RunResult.value` (tree JSON for widget mode) | Not on this page ("Not in this page: the view-tree output of widget runs (ADR-002)") | Gap. Proposal: a `widget_tree` record kind emitted once by the widget runner before `finished`, payload the ADR-002 serializer's JSON; `finished` carries its `seq` as `tree_seq` (null for non-widget runs). Your call on record versus outcome field; I add it in v3. **Settled v3:** ADR-007 8.3 (76a833f5) chose the record; section 7 "The `widget_tree` record", section 12 |
+| A6 | `RunResult.stdout`, `stderr` | Streamed `stdout`/`stderr` records; Swift collects them (Shortcut: at most 1 MiB, section 7) | ADR says Swift assembles them from records |
+| A7 | `traceback{type, file, line, text}` | `error{type, module, qualname, message, notes, frames[{path, display, kind, line, col16, ...}], cause, context, group, text}` (section 8) | ADR's `status.json` fields map: `type` = `type`, `file` = last `user` frame's `display`, `line` = its `line`, `text` = `text` |
+| A8 | `duration_ms`, `peak_mb` | `duration_s`; no peak memory | `duration_s` stays (Python measures it); Swift converts. `peak_mb` is a Swift measurement (`task_info` around the run), not a bridge field; ADR says so |
+| A9 | `surviving_threads` (RunResult and restart) | `background_threads` (outcome and `RestartReport`) | Rename in ADR to `background_threads` |
+| A10 | s8.3 `interrupt()`, no argument | `stop(run_id)`, idempotent; unknown or finished `run_id` is a no-op | Rename in ADR; the `run_id` stops a late Stop from hitting the next run |
+| A11 | s8.3 `restart()` returns modules cleared and threads surviving | `restart() async -> RestartReport{cleared_modules, background_threads, stuck}`; refused while `stuck` | ADR cites `RestartReport` |
+| A12 | 7.2 `timeout` row and 7.3: interrupt, then after 2 s "the run is abandoned, the worker thread is left to finish and the interpreter is marked tainted", the batch moves on | Ladder (section 5): hard stop at 2.0 s, deadline at 5.0 s, then `stuck`; with one script thread nothing else can run until it returns, so a stuck run refuses every later run until quit-and-reopen (or `unstuck`) | Semantic, not a name. "Abandon and move on" cannot happen with one interpreter and one script thread. ADR 7.2/7.3 adopt `stuck`: the batch ends, the remaining widgets keep their last good entry (stale), and the next launch runs them |
+| A13 | 7.3 "a script inside a long C call (sockets, `time.sleep`) stops when it returns"; interrupt is "`PyErr_SetInterrupt`-class" | `time.sleep`, `select`, socket reads and lock waits are woken by SIGURG (section 5, step 0) | ADR can drop the "stops when it returns" caveat for syscalls; it still holds for a C call that holds the GIL. The per-call socket timeout of min(remaining, 10 s) stays, as defence in depth |
+| A14 | 8.1 "every run takes it on one serial queue" | A dedicated pthread script thread created before any `PyConfig_*` call, Python's main thread (S1) | ADR 8.1 says "the script thread (contract section 2)"; a GCD serial queue does not pin a thread, so signal handlers would not run on it |
+| A15 | 8.2 step 1 "deadline 2 s" | 2.0 s is the hard-stop step; the deadline is 5.0 s | ADR 8.2 cites `stopDeadlineSeconds = 5.0` |
+| A16 | 8.2 step 2 clears modules whose `__spec__.origin` is under the user's scripts directory or the App Group | Clears every module not present at bootstrap **and** not inside the app bundle (section 6) | Mine is the stricter set (it also catches a namespace package, a module with no `__spec__.origin`, and a module loaded from a temp path). ADR cites section 6 |
+| A17 | 8.2 step 3 resets the `sys.stdin/stdout/stderr` wrappers | Same objects for the life of the process; only their run id changes (section 6, so an old `StreamHandler` stays live) | ADR follows section 6 |
+| A18 | 8.2 step 4: `atexit`, `logging` handlers and `signal` handlers "cannot be undone from outside"; file handles and sockets closed via `pywidget`'s tracker | Section 6 restores `atexit` (run then cleared), root `logging` handlers, and signal handlers (SIGURG via `rearm_wake`); does not close file handles or sockets | ADR follows section 6 for the first three. Closing handed-out handles is new to me: if `pywidget` tracks them, the reset can close them; say whether that is v1 and I add it to section 6 |
+| A19 | 7.2 widget timeout defaults: 5 s per widget, manifest up to 20 s, batch 25 s (T2) and 20 s (T3) | `budget_s` per run; Shortcut 20 s (S4) | No conflict with this page; noting that a T2 batch of 25 s plus the 5.0 s deadline is 30 s, the same arithmetic S4 fixed for Shortcuts, if a `BGAppRefreshTask` expiry is near (your carry item 3) |
+
+</div>
+
+
+## 12. Changelog
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 12: 12. Changelog, scrolls sideways" data-n="1" style="--tw:840px" markdown="1">
+
+| Version | When | What changed | Commit |
+|---|---|---|---|
+| v1 | 2026-10-25 20:10 | First page | 1ba53f42; signed by Idris 20:16, f84b7d9b |
+| v2 | 2026-10-25 20:20 | Idris's S1-S3 folded (all of `start()` on the script thread; SIGURG wake, no `sigaction` check, `rearm_wake`; primitives in one C file, lock rule); S4-S6 aligned; Q1-Q6 in the body; section 11 (A1-A19) | ebca07ba |
+| v3 | 2026-10-25 21:09 | `widget_tree` record kind (section 7), `tree_seq` in `finished`, `RunRequest.widget`, `MAX_WIDGET_TREE_BYTES`, `last_output_seq` removed, tail order in section 7, six widget fixtures (section 9); A5 settled. Python half: `_pywidget_runtime` (`records`, `limits`, `widget_tree`) and host suite `pywidget/tests/bridge/` | this commit |
+
+</div>
+
+
+**The v3 delta for the Swift half (Idris is coding against v2).** He signs v3 when his half is done; nothing here changes threads, locks, the stop ladder or restart.
+
+1. **Record kind enum:** add `widget_tree`, between `image` and `finished`. `emit` in the C file must accept `"widget_tree"`; any other unknown kind still raises `ValueError`.
+2. **`bridge-outcome/1` Codable:** add `tree_seq: UInt64?` (always present, may be `null`); **remove `last_output_seq`**. If you need the run's last output seq, take it from the consumer, which sees every record.
+3. **`RunRequest`:** add `widget: WidgetRequest?` with `id: String?`, `date: String?` (ISO 8601 UTC with `Z`), `state: [String: JSON]?`, sent only with `context: .widget`. Without it the runner uses the script's only widget, the run start and `{}`; with several widgets in one script the run needs `id`.
+4. **Taking the tree:** use only the record whose `seq == finished.tree_seq`; ignore other `widget_tree` records (log them). Validate against `viewtree.schema.json`, and on `ok` write the payload bytes unchanged to `tree.json` (no decode and re-encode). `ok` or `exit 0` with `tree_seq == null` is `NoTree` (ADR-007 7.2).
+5. **New error types** in the ADR-007 7.2 mapping, both `error`: `TreeTooLarge` (Python's byte cap, distinct from the renderer's `tree_too_large`) and `WidgetChoiceError`.
+6. **Limits twin:** `MAX_WIDGET_TREE_BYTES = 524288` in the Swift constants file, and its equality test with `_pywidget_runtime.limits`.
+7. **XCTest:** read the six `widget_*.expect.json` files in `pywidget/tests/bridge/fixtures/`; skip cases with `tree_limit` (host knob).
+
+Open after v3: G18 (L4 gap row): a widget script cannot choose its own entry dates, reload policy or `stale_after` for a widget run; the runner builds one entry. The Python half's runner, stdio, `input()`, stop and reset are not built yet (C1 build); the host runner in `pywidget/tests/bridge/host_run.py` stands in for them.
+{% endraw %}
+
+</div>

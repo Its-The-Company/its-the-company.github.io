@@ -40,11 +40,6 @@ var text = m[1].replace(/\*+/g, '').trim().replace(/\.$/, '');
 if (text.length > 80) text = text.slice(0, 77) + '...';
 return text ? { text: text, t: deadlineTime(text) } : null;
 }
-function byDeadline(a, b) {
-var x = a.d && a.d.t, y = b.d && b.d.t;
-if (x && y) return x - y; if (x) return -1; if (y) return 1;
-return Date.parse(a.i.created_at) - Date.parse(b.i.created_at);
-}
 function now() { return new Date(Date.now()); }
 function clock(iso) { return new Date(iso).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }); }
 function dayKey(d) { return d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate(); }
@@ -101,7 +96,7 @@ if (W.history && 'scrollRestoration' in W.history) W.history.scrollRestoration =
 if (!LS.getItem('company.seen0')) LS.setItem('company.seen0', now().toISOString());
 var seen0 = LS.getItem('company.seen0'), isDesk = !!(W.matchMedia && W.matchMedia('(min-width:880px)').matches);
 var Q = (s) => document.querySelector ? document.querySelector(s) : null;
-var main = byId('main'), stripEl = byId('strip'), links = Q('main > .links'), aside = Q('main > .aside'), tog = Q('.now-toggle');
+var main = byId('main'), stripEl = byId('strip'), links = Q('main > .links'), aside = Q('main > .aside'), tog = Q('.now-toggle'), where = Q('main .where');
 [byId('composer'), byId('urgent'), aside, tog].forEach((x) => { if (x) x.hidden = true; });
 var col = el('div', 'cv-col'), side = el('aside', 'cv-side'); attr(side, 'aria-label', 'At a glance');
 if (main) { main.insertBefore(col, stripEl || main.firstChild); main.insertBefore(side, stripEl || main.firstChild); main.className = 'cv-desk'; }
@@ -125,7 +120,6 @@ function isInv(l) { return names.indexOf(l) >= 0; }
 function issue(n) { for (var k = 0; k < issues.length; k++) if (issues[k].number === n) return issues[k]; return extra[n] || null; }
 function ttl(i) { return labelsOf(i).indexOf('main') >= 0 ? 'Chat' : i.title; }
 function mainN() { var i = issues.concat(flat(extra)).filter((x) => x.state === 'open' && labelsOf(x).indexOf('main') >= 0)[0]; return i ? i.number : 0; }
-function openIssues() { return issues.filter((i) => i.state === 'open'); }
 function byAt(a, b) { return a.created_at < b.created_at ? -1 : a.created_at > b.created_at ? 1 : 0; }
 function msgsOf(n) { return threads[n] || comments.filter((c) => numOf(c) === n).sort(byAt); }
 function allComments() { var by = {}; comments.concat(flat(threads)).forEach((c) => { by[c.id] = c; }); return Object.keys(by).map((k) => by[k]); }
@@ -281,65 +275,18 @@ var b = tile(g, D('company'), 'Right now', ws.length + ' at work', st.who || 'No
 b.parentNode.className += ' cv-live'; if (ws.length) b.insertBefore(el('span', 'cv-dot'), b.firstChild);
 return g;
 }
-function row(ul, n, title, meta, sum, cls, k) {
-var a = mk(mk(ul, 'li'), 'a', 'cv-row' + (cls || '')), rt; a.href = '#t=' + n;
-a.onclick = (ev) => { stop(ev); go(n); };
-rt = mk(a, 'span', 'cv-rt');
-if (k) { mk(rt, 'span', 'chip ' + k, KINDS[k]); put(rt, txt(' ')); }
-put(rt, txt('#' + n + ' ' + title));
-if (meta) put(a, meta);
-if (sum) mk(a, 'span', 'cv-rs', sum);
-return a;
-}
-function urgentList() {
-return openIssues().filter((i) => kindOf(i) === 'urgent').map((i) => { return { i: i, d: deadlineOf(i) }; }).sort(byDeadline);
-}
 function due(d) {
 if (!d || !d.t) return null;
 var e = el('span', 'cv-due' + (d.t - Date.now() < 864e5 ? ' cv-soon' : ''), new Date(d.t).toLocaleString([], { weekday: 'short', hour: 'numeric', minute: '2-digit' }));
 attr(e, 'data-t', new Date(d.t).toISOString()); e.title = 'Deadline: ' + d.text; return e;
-}
-var ny = null, sideNy = null, ORD = { decide: 0, ask: 1, 'new': 2, optional: 3 };
-function needList() {
-var d = ny || { items: [], named: [] }, named = d.named.slice(), l = [];
-d.items.forEach((x) => {
-var ns = x[0].filter((n) => { var i = issue(n); named.push(n); return !i || i.state === 'open'; });
-if (!x[0].length || ns.length) l.push({ n: ns, k: x[1], q: x[2], r: x[3], t: x[4] === 'emergency' ? 'urgent' : x[4] });
-});
-urgentList().map((x) => x.i).concat(openIssues().filter((i) => /^(report|pitch)$/.test(kindOf(i))))
-.forEach((i) => { if (named.indexOf(i.number) < 0 && labelsOf(i).indexOf('unrelated') < 0) { named.push(i.number); l.push({ n: [i.number], k: 'new', q: i.title, r: '', t: kindOf(i) }); } });
-return l.sort((a, b) => ORD[a.k] - ORD[b.k]);
-}
-function needTop() { return needList().filter((x) => x.k === 'decide' || (x.k === 'new' && x.t === 'urgent')); }
-function needs() {
-var box = el('div', 'cv-needs'), l = needList(), top = needTop(); mk(mk(box, 'h2', 'cv-sec', 'Needs you '), 'span', 'cv-count', String(l.length));
-if (!l.length) { mk(box, 'p', 'muted', 'Nothing is waiting on you.'); return box; }
-var ul = mk(box, 'ul', 'cv-list');
-top.forEach((x) => {
-var n = x.n[0], i = issue(n), d = i && kindOf(i) === 'urgent' ? deadlineOf(i) : null, a;
-if (!n) { mk(mk(ul, 'li'), 'p', 'cv-row', x.q); return; }
-a = row(ul, n, x.n.slice(1).map((m) => '#' + m + ' ').join('') + x.q, due(d), x.r || (d && !d.t ? 'Deadline: ' + d.text + '. ' : '') + (i ? summary(i.body) : ''));
-if (x.k === 'decide') a.firstChild.insertBefore(el('span', 'tag ny-tag-decide', 'Decide'), a.firstChild.firstChild);
-});
-if (!top.length) ul.parentNode.removeChild(ul);
-if (D('requests')) mk(mk(box, 'p', 'meta'), 'a', null, 'See ' + (l.length === 1 ? 'the ask' : 'all ' + l.length + ' asks') + ' and what settles each').href = D('requests');
-return box;
-}
-function allConvos(h) {
-var box = el('details', 'cv-all'), recent = Date.now() - 3 * 864e5, nz = h ? [].concat.apply([], needTop().map((x) => x.n)) : [];
-var l = issues.filter((i) => nz.indexOf(i.number) < 0 && (i.state === 'open' || Date.parse(i.closed_at || i.updated_at) > recent)).slice(0, 30);
-mk(mk(box, 'summary', 'cv-sec', (h || 'All conversations') + ' '), 'span', 'cv-count', String(l.length));
-var ul = mk(box, 'ul', 'cv-list');
-l.forEach((i) => { row(ul, i.number, ttl(i) + (i.state === 'closed' ? ' (closed)' : ''), el('span', 'cv-rm', ago(i.updated_at)), '', '', kindOf(i)); });
-return box;
 }
 function drawView(open) {
 view.textContent = ''; side.textContent = ''; log = head = anchor = null;
 if (stripEl) stripEl.hidden = cur === 'home';
 put(side, glance());
 if (!lastDraw) { var p = mk(view, 'p', 'muted', S.rejected() ? NO_TOKEN + ' ' : 'Loading...'); if (S.rejected()) mk(p, 'a', null, 'Change the token').href = tokenLink.href; return; }
-if (cur === 'home') { [glance(), needs(), allConvos()].forEach((x) => { put(view, x); }); return; }
-put(side, sideNy = needs()); put(side, allConvos('Older threads'));
+if (cur === 'home') { put(view, glance()); if (where) put(view, where); return; }
+if (where && aside) put(aside, where);
 if (cur === 'main') {
 mk(mk(view, 'div', 'cv-head'), 'h2', null, toText());
 return;
@@ -361,7 +308,7 @@ function saveDraft() { if (cur === null) return; if (ta.value.trim()) LS.setItem
 function toText() { var n = target(), i = issue(n); return isMain(n) ? 'Chat' : '#' + n + (i ? ' ' + i.title : ''); }
 function canSend() { return !!ta.value.trim() && !S.rejected() && !sending; }
 function drawDock() {
-dock.textContent = '';
+dock.textContent = ''; dock.hidden = (cur || parse()) === 'home';
 if (!composerOn) { mk(dock, 'p', 'muted', 'Sending is off.'); return; }
 ta.value = LS.getItem(draftKey()) || '';
 barSend.disabled = send.disabled = !canSend();
@@ -476,7 +423,6 @@ var waiting = Q('[data-filter="urgent"]');
 if (waiting) {
 var whoEl = waiting.querySelector ? waiting.querySelector('[data-who]') : null;
 if (whoEl) whoEl.textContent = 'waiting on you';
-waiting.onclick = (ev) => { stop(ev); go('home'); };
 }
 var sig = '';
 if (S.onStatus) S.onStatus.push((st) => {
@@ -491,10 +437,6 @@ onReject.push(() => {
 clearInterval(loadTimer); send.disabled = barSend.disabled = true; tokenLink.textContent = 'Token rejected · change';
 status.textContent = NO_TOKEN; var u = byId('urgent'); if (u) u.hidden = false; if (!lastDraw) drawView(false);
 });
-if (D('needs')) fetch(D('needs'), { cache: 'no-store' }).then((r) => r.ok ? r.json() : null).then((x) => {
-ny = x && x.items ? x : null; if (!ny || !lastDraw) return;
-if (cur === 'home') drawView(false); else if (sideNy && sideNy.parentNode) { var o = sideNy; o.parentNode.replaceChild(sideNy = needs(), o); }
-}).catch(() => {});
 load();
 }
 var c = byId('chat-root'); if (c) chat(c);

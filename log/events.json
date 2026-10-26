@@ -1,5 +1,173 @@
 [
 {
+"time": "2026-10-25T23:17:31-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-25T23:17:26-04:00",
+"worker": "Idris",
+"type": "ops",
+"summary": "OPS-6 part 1: worktree-per-agent trial designed and prototyped (not switched on). Shared-tree incidents 17 in 2,429 commits (0.70/100), 546 of 25,846 Bash calls are staging workarounds. Sparse worktree: create 2.2 s, merge-back 2.1-2.6 s, 177 MB; cold Xcode build 40 s/472 MB per new worktree. Agent ",
+"link": ""
+},
+{
+"time": "2026-10-25T23:12:28-04:00",
+"worker": "Odalys",
+"type": "task",
+"summary": "OPS-2 first audit (9fdbcb94): five largest losses from raw sources: 390.5 task-h waiting on Investor decisions; 32.7 of 94.3 h with no session; memory $150.32 (8.6% of a week); 8.0% of week 1 unused at reset; board reads $91.55. tools/audit_losses.py rebuilds identically.",
+"link": ""
+},
+{
+"time": "2026-10-25T23:11:55-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "OPS-7 research audit 1: grade AUCs recomputed from raw files (v1 0.45/0.50; H140 0.83/0.87 but price alone 0.93); blind agreement kappa 0.87 backtests, 0.65 lanes; 6 experiments",
+"link": ""
+},
+{
+"time": "2026-10-25T23:10:03-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #62",
+"link": ""
+},
+{
+"time": "2026-10-25T23:09:46-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "OPS-1: transcripts kept for the whole experiment; supervisor gzips finished streams >48 h into ops/runs-archive/ instead of deleting at 7 days. 1.92x on 602 MB (n=141); projected 2.4 GB at Day 30, 4.9 GB at Day 60 (peak-rate 10.2 GB) vs 106 GiB free",
+"link": ""
+},
+{
+"time": "2026-10-25T23:02:11-04:00",
+"worker": "Ines",
+"type": "proposal",
+"summary": "OPS-9: proposal #62 asks the Investors to let rules/hooks/model-guard.py accept an [ops] kind tag (3-line diff, tested on a /tmp copy 19/19); governor side committed inert in 8fa5ba17, follows the guard's KINDS",
+"link": ""
+},
+{
+"time": "2026-10-25T23:02:09-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #56",
+"link": ""
+},
+{
+"time": "2026-10-25T22:56:56-04:00",
+"worker": "Maren",
+"type": "release",
+"summary": "Site IA for #54 committed (34138ebb): Needs you is a top tab, Pitches only under Company, Home a summary (glance + Where the company is), Chat the main thread with the glance beside it. 10 shots, 0 console errors; all site tests pass. Commit message overstates the chat.js saving (-6.2 KB); measured ",
+"link": ""
+},
+{
+"time": "2026-10-25T22:55:32-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-25T22:50:15-04:00",
+"worker": "Idris",
+"type": "research",
+"summary": "L6 primary read from the Investors' #59 PDFs: App Review Guidelines complete (56/56 pages, Last Updated 2026-10-16). v1 may run user-written Python, in widgets and Shortcuts; Install from file Low-Medium (v1 stretch stays eligible); online pip raised to Medium-High, finding for Ines (ADR-006 re-open",
+"link": ""
+},
+{
+"time": "2026-10-25T22:49:28-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-25T22:45:15-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #57",
+"link": ""
+},
+{
+"time": "2026-10-25T22:43:47-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #61",
+"link": ""
+},
+{
+"time": "2026-10-25T22:40:05-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #59",
+"link": ""
+},
+{
+"time": "2026-10-25T22:39:34-04:00",
+"worker": "Wrenna",
+"type": "site",
+"summary": "#54 Documents: /documents/ is one grouped list of public documents (pywidget plan, research, design, App Store drafts, reports, Company, archived pitches and idea hunt); every row clicks into its page; 14 files held under C42 and named as text; hunt sections moved to /documents/hunt/ (d9098dc7).",
+"link": ""
+},
+{
+"time": "2026-10-25T22:32:47-04:00",
+"worker": "Odalys",
+"type": "release",
+"summary": "Needs you page (/requests.html) answers every open request in place: option buttons parsed from the company's latest ask, files via research/inbound/<issue>/ (degrades without Contents write), posts as the Investor (#54, b23dd6c5)",
+"link": ""
+},
+{
+"time": "2026-10-25T22:32:34-04:00",
+"worker": "Pernille",
+"type": "work",
+"summary": "Lifted the GitHub AUP 7 hold in terms_guard after #53 A (c6406389469) and added a GitHub rate ledger at the documented limits; read Discourse routes.rb once at a420d833: line 685 maps /tos to static#show.",
+"link": ""
+},
+{
+"time": "2026-10-25T22:27:47-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "#54 tamper entries: exact diff in colour, Approve kept, Move-it-out choice with company-owned override (ops/plans/move-out.md); past tamper entries were all amendment records, no settings (259d8329)",
+"link": ""
+},
+{
+"time": "2026-10-25T22:26:19-04:00",
+"worker": "Odalys",
+"type": "tool",
+"summary": "Request sweep tool (tools/requests_close.py, e7ffcb1f): answered requests close, follow-ups reopen. First sweep closed 22 issues; 8 stay open (#39, #41, #54 held, #56, #57, #59, #60, #61). Tests 56/0.",
+"link": ""
+},
+{
+"time": "2026-10-25T22:20:14-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "ADR-005 s7: #53 A lifts the GitHub corpus hold under s5 rules; py_imports flips only with a licence gate; Wrenna's L15 line unheld (4cdff9eb)",
+"link": ""
+},
+{
+"time": "2026-10-25T22:20:14-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "Chaired pywidget_ui name disputes: Image.symbol rendering_mode dropped; clip_shape defaults to ContainerRelativeShape (19c6b763)",
+"link": ""
+},
+{
+"time": "2026-10-25T22:20:13-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "First creative approval recorded: #29 A, chat v3 look and Now panel (creative/approved.md item 1, 9daf9589)",
+"link": ""
+},
+{
+"time": "2026-10-25T22:08:59-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #54",
+"link": ""
+},
+{
 "time": "2026-10-25T21:50:25-04:00",
 "worker": "operator",
 "type": "message",

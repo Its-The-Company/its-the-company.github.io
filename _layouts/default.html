@@ -655,10 +655,10 @@ summary.cv-sec{display:list-item;cursor:pointer;min-height:44px}
 <header class="site"><div class="wrap">
 <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
 <nav class="tabs" aria-label="Sections">
-<a href="{{ '/' | relative_url }}"{% if page.section == "home" or page.section == "requests" %} aria-current="page"{% endif %}>Home</a>
+<a href="{{ '/' | relative_url }}"{% if page.section == "home" %} aria-current="page"{% endif %}>Home</a>
+<a href="{{ '/requests.html' | relative_url }}"{% if page.section == "requests" %} aria-current="page"{% endif %}>Needs you</a>
 <a href="{{ '/reports/' | relative_url }}"{% if page.section == "reports" %} aria-current="page"{% endif %}>Reports</a>
-<a href="{{ '/company/' | relative_url }}"{% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" or page.section == "documents" or page.section == "work" %} aria-current="page"{% endif %}>Company</a>
-<a href="{{ '/pitches.html' | relative_url }}"{% if page.section == "pitches" %} aria-current="page"{% endif %}>Pitches</a>
+<a href="{{ '/company/' | relative_url }}"{% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" or page.section == "documents" or page.section == "work" or page.section == "pitches" %} aria-current="page"{% endif %}>Company</a>
 <a href="{{ '/about.html' | relative_url }}"{% if page.section == "about" %} aria-current="page"{% endif %}>About</a>
 </nav>
 </div></header>

@@ -1,0 +1,213 @@
+---
+layout: "default"
+title: "pywidget design system v0 (C13)"
+section: "documents"
+description: "Constraint I am keeping on purpose: one token file feeds the app (generated asset catalog and a Theme struct), the website (generated CSS custom properties) and the premade widgets. No colour ships that is not a token."
+---
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/' | relative_url }}">← Documents</a><a href="{{ '/documents/pywidget/design-system-v0.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
+<div class="page-head"><div class="kicker"><span class="kind grey">Design</span><span>Day 4 · Sun Oct 25</span><span><code>pywidget/docs/design/design-system-v0.md</code></span></div><h1>pywidget design system v0 (C13)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"><span>By <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a>, Product and visual designer</span></div></div>
+
+<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
+<div class="doc-body" markdown="1">
+
+{% raw %}
+Maren, 2026-10-25. Status: **proposal**. Nothing here is approved under <span title="Commandment 51: the Investors approve every visual before it ships.">Commandment 51</span> (creative/approved.md lists none). The build keeps neutral placeholders (system colours, system fonts, no custom theme) until the Investors pick a direction.
+
+Source of truth: `tokens.json` (this folder). Contrast is checked by script, not by eye: `python3 pywidget/docs/design/check_tokens.py` checks 336 pairs, 0 below their floor (closest: B light `accent.2` on canvas 4.51). Mockups: `mockups/draw.py` renders 10 PNGs and writes `mockups/qa.json` (fonts loaded, clipped text, truncation, text-over-text, text under 11 pt): all 10 screens report 0 on each.
+
+Constraint I am keeping on purpose: one token file feeds the app (generated asset catalog and a `Theme` struct), the website (generated CSS custom properties) and the premade widgets. No colour ships that is not a token.
+
+## 1. Principles
+
+1. **The code is the hero.** Chrome recedes; the editor, the console and the user's widget get the contrast and the space.
+2. **System first.** Navigation bars, tab bars, sheets and menus are the iOS 26 system components, so the Liquid Glass chrome comes from Apple and stays current. We theme content, not chrome.
+3. **Identity in type, not only in colour.** Colour is stripped in accented, vibrant and clear widget modes. A widget's voice has to survive in grey: one hero number in the direction's display face.
+4. **Readable in grey first.** Every state has a shape or text cue as well as a colour (lint squiggle plus label, run dot plus word).
+5. **Measured, not judged.** Contrast, fit and clipping are scripts in this folder.
+
+## 2. Colour
+
+Roles (both directions, light and dark): `bg.canvas`, `bg.surface`, `bg.raised`, `bg.sunken`, `bg.editor`, `bg.console`, `line.hairline`, `line.strong`, `text.primary|secondary|tertiary|onAccent`, `accent`, `accent.soft`, `status.success|warning|danger`, `key.bg|bgAlt|text`. Direction B adds `accent.2` (gradient partner) and `glass.fill|stroke`.
+
+Rules:
+- Text roles reach 4.5:1 on every surface they can sit on (all 6 backgrounds checked, not only the canvas).
+- `line.hairline` is decoration and never the only separator of meaning; `line.strong` is used where a boundary matters.
+- `accent` is for the one primary action per screen (Run, New) and for selection. Never for body text.
+- Status colours always travel with an icon or a word.
+- Dark mode is its own palette, not an inversion: surfaces step up in lightness, shadows go away.
+- Increase Contrast (iOS setting): `text.secondary` maps to `text.primary`, hairlines map to `line.strong`. To build: a high-contrast variant per palette, checked to 7:1.
+
+## 3. Type
+
+### 3.1 Families
+All system fonts through the OS API; nothing is bundled. SF Mono's own licence (read from its name table) limits the font file to Apple-branded apps and bars making content with it, so the website never names or loads it, and the mockups set code in Menlo (macOS system font, used for display under the macOS licence). In the app, SF Mono comes only from `Font.system(design: .monospaced)`, the route Apple provides to apps.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 3.1 Families, scrolls sideways" style="--tw:734px" markdown="1">
+
+| Role | iOS | Web fallback |
+|---|---|---|
+| UI | SF Pro (`.default`) | system-ui stack |
+| Code | SF Mono (`.monospaced`) | ui-monospace, Menlo, Consolas (never `SF Mono` by name) |
+| Display, A | New York (`.serif`) for large titles and widget hero numbers | ui-serif, Georgia |
+| Display, B | SF Pro Rounded (`.rounded`) for titles and hero numbers | ui-rounded, system-ui |
+
+</div>
+
+
+### 3.2 Scale (Dynamic Type, default size Large)
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 3.2 Scale (Dynamic Type, default size Large), scrolls sideways" style="--tw:607px" markdown="1">
+
+| Token | Text style | pt / leading | Use |
+|---|---|---|---|
+| largeTitle | .largeTitle | 34/41 bold | Screen titles |
+| title1 | .title | 28/34 bold | Empty states |
+| title2 | .title2 | 22/28 bold | Sheets, medium widget hero |
+| title3 | .title3 | 20/25 semibold | Doc sections |
+| headline | .headline | 17/22 semibold | Row titles, buttons |
+| body | .body | 17/22 | Prose |
+| callout | .callout | 16/21 | Inline help |
+| subheadline | .subheadline | 15/20 | Row subtitles, tabs |
+| footnote | .footnote | 13/18 | Metadata |
+| caption1 | .caption | 12/16 | Badges, widget labels |
+| caption2 | .caption2 | 11/13 medium | Floor for all text, widgets included |
+
+</div>
+
+
+Code: editor 15/22 relative to `.body` (user range 11-24, clamps at 32 under AX sizes and soft-wraps with a hanging indent); console 13/19 relative to `.subheadline`; gutter 12 with the editor's leading; extra keys 17 medium.
+
+Dynamic Type: app chrome goes to AX5. Rows switch from horizontal to stacked at AX1 and up (`ViewThatFits`). Widgets clamp at `.xxxLarge`.
+
+### 3.3 Typesetting rules
+Tabular figures (`.monospacedDigit()`) for every changing number: timers, run times, console tables, widget values. Sentence case everywhere except the small <span title="A measured fact that holds a grade below a letter, however good the rest is.">caps</span> eyebrow labels (`caption1`, +0.04 em tracking).
+
+### 3.4 Optional licensed editor font
+If the Investors want a non-system code face: JetBrains Mono, SIL Open Font License 1.1 (commercial use allowed, may be bundled). Not bundled in v0; it would be logged in log/assets.md before use.
+
+## 4. Space, radius, elevation
+
+4 pt base: 0, 2, 4, 8, 12, 16, 20, 24, 32, 40, 48, 64. Screen margin 16 (iPhone), 20 (iPad). Rows at least 44 tall; hit targets 44×44 even when the drawn key is smaller.
+
+Radii 6, 10, 14, 20, 28, pill. Concentric rule: inner radius = outer minus padding. Widgets use `ContainerRelativeShape`, never a fixed radius.
+
+Elevation: light mode uses a hairline plus one soft shadow (e1, e2, e3 in tokens); dark mode uses surface steps and no shadow except e3 for popovers.
+
+## 5. Motion
+
+Durations 120 (quick), 220 (standard), 360 (emphasized) ms. Springs: `.snappy` for keys, toggles and tabs; `.smooth` for sheets, console expand and split resize; `.bouncy` only for the run-succeeded tick.
+
+- Run: the button morphs Run to Stop (standard); the status strip slides in from the top of the console.
+- Completion menu: appears in 120 ms with no scale; never animates while the user types.
+- Reduce Motion: every moving transition becomes a 120 ms crossfade; no springs, no scale, no parallax; the running indicator becomes a static filled dot.
+- Never: animate the caret, loop anything longer than 2 s without user action, or animate widget content beyond `.contentTransition(.numericText())`.
+
+## 6. Accessibility
+
+- Contrast: 4.5:1 text, 3:1 large text and non-text marks (caret, focus ring, `line.strong`). Script: `check_tokens.py`.
+- VoiceOver: editor lines read as "line 3, import sys, warning: F401 unused import"; the rotor offers Lines, Errors, Functions. Console outputs carry a summary label ("Table, 3 rows: rides 24, total 548.4, mean 22.8"; "Line chart, 24 points, highest 34.8 at ride 21"). Each extra key has a spoken name ("Indent", "Open parenthesis"). Widgets give one combined label per element group.
+- Reduce Motion as in section 5. Reduce Transparency: glass surfaces become `bg.surface` solid.
+- Hardware keyboard on iPad: every toolbar action has a shortcut (⌘R run, ⌘. stop, ⌘B breakpoint, ⌘/ comment, ⌘⇧C console, ⌘P open file) and appears in the ⌘-<span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> menu.
+- Never colour alone: lint squiggle plus label; run history dot plus word ("failed").
+
+## 7. Editor syntax themes
+
+Two themes, each with light and dark variants, all roles checked at 4.5:1 on the background, the current-line band and the selection.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 7. Editor syntax themes, scrolls sideways" style="--tw:526px" markdown="1">
+
+| Role | Quill light | Quill dark | Lumen light | Lumen dark |
+|---|---|---|---|---|
+| bg | #FCFBF8 | #17160F | #F8F9FC | #0E1120 |
+| text | #1C1B19 | #ECE8DF | #141826 | #E6E9F5 |
+| comment (italic) | #6B675E | #A6A195 | #5C6280 | #9198B5 |
+| keyword | #8A2F8F | #DDA0E6 | #5B33E6 | #C59BFF |
+| string | #1D6B40 | #93D3A2 | #086848 | #7FE3BA |
+| number | #9A4500 | #F2AA70 | #92440A | #FFB86E |
+| function | #2350B0 | #93B6FF | #1757BD | #72BBFF |
+| type | #795700 | #E9D07E | #735200 | #FFD970 |
+| builtin | #0B6670 | #74D0D6 | #A91E55 | #FF93B6 |
+
+</div>
+
+
+Gutter, current line, selection, error and caret are in tokens.json. Highlighting in the mockups uses Python's own `tokenize` module, so the colours fall where a real tokenizer puts them. Quill is calm and low-chroma for long sessions; Lumen is brighter with more hue separation.
+
+## 8. Widget template rules (every family, every mode)
+
+### 8.1 Families (393 pt iPhone; flex to the container, never to these numbers)
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 8.1 Families (393 pt iPhone; flex to the container, never to these numbers), scrolls sideways" style="--tw:812px" markdown="1">
+
+| Family | Size | Layout | Content rule |
+|---|---|---|---|
+| systemSmall | 158×158 | 2×2 zones | One hero value, one label, at most one mark. One tap target (`widgetURL`). |
+| systemMedium | 338×158 | 4×2 | Hero left (≈ 1/3), series or list right. Up to 4 `Link`/Button regions. |
+| systemLarge | 338×354 | 4×4 | Header row (eyebrow + hero) then a list or grid; interactive Buttons/Toggles via App Intents (L5). |
+| systemExtraLarge (iPad) | 715×338 | 8×4 | Two medium compositions side by side, sharing one header. |
+| accessoryCircular | 72×72 | ring or gauge | `Gauge` or one number + a 2-word label. |
+| accessoryRectangular | 160×72 | 3 lines | Title with symbol, one value line, one sparkline or progress. |
+| accessoryInline | 1 line | text + symbol | Under 20 characters; no custom fonts (system decides). |
+| StandBy | large rendering of small | | Background removed; content must sit on black at night (red-tinted vibrant). |
+
+</div>
+
+
+Common: 16 pt content margins (`contentMargins` default); 11 pt text floor; at most three type levels; tabular figures; `containerBackground(for: .widget)` always set so the system can remove it on the Lock Screen and in StandBy.
+
+### 8.2 Rendering modes
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 8.2 Rendering modes, scrolls sideways" style="--tw:1124px" markdown="1">
+
+| Mode | Where | What the system does | Our rule |
+|---|---|---|---|
+| fullColor | Home Screen default | Our colours | Design here last, not first. |
+| accented | Tinted Home Screen (iOS 18+) and iOS 26 tinted styles | Two groups, both recoloured from the user's tint; background replaced | Only the hero value and its mark take `.widgetAccentable()`; labels stay default. Images declare `widgetAccentedRenderingMode` (`.desaturated` unless the image is the content). |
+| vibrant | Lock Screen, StandBy | Luminance only, over the wallpaper | Use white at three opacities (1.0, 0.66, 0.24 for tracks); no colour meaning. |
+| clear (iOS 26 glass) | Home Screen "Clear" style | Background becomes glass; content rendered light | Same as vibrant; check legibility over a light and a dark wallpaper. |
+
+</div>
+
+
+Pillow image fallback (L4): bitmaps lose colour in accented, vibrant and clear modes. The DSL should warn at preview time when an image carries information by colour.
+
+Every premade widget is drawn and checked in all four modes before it ships; the iPad preview pane has a mode switch (mockup B-ipad/A-ipad) so users get the same check.
+
+## 9. Two directions
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 9. Two directions, scrolls sideways" style="--tw:739px" markdown="1">
+
+| | A, Paper | B, Studio |
+|---|---|---|
+| Mood | Warm paper and ink; editorial; calm | Dark-first; violet-to-coral gradients; glass panels |
+| Display face | New York serif | SF Pro Rounded |
+| Syntax | Quill | Lumen |
+| Primary action | Solid ink-blue pill | Gradient pill |
+| Widgets | White/ink cards, serif hero numbers | Gradient cards, rounded hero numbers |
+| Primary appearance | Light (dark fully specified) | Dark (light fully specified) |
+
+</div>
+
+
+Mockups (each direction): `mockups/{A,B}-editor.png` (iPhone editor, extra key row, lint, completion), `{A,B}-console.png` (table, plot, image, `input()`), `{A,B}-projects.png`, `{A,B}-ipad.png` (sidebar, editor with breakpoint, console traceback linking to the line, widget preview with family and mode switches; drawn in the other appearance), `{A,B}-gallery.png` (small light and dark, medium, large interactive, accented, clear, Lock Screen vibrant with circular, rectangular and inline). Generating code: `mockups/draw.py`.
+
+### Recommendation: A (Paper)
+1. Identity survives the modes. In accented, vibrant and clear modes B's gradients are stripped and its widgets become generic; A's identity is the serif hero numeral, which survives every mode (compare the accented and clear panels in both galleries).
+2. It sits under iOS 26's own glass chrome instead of competing with it; B adds its own glass on top of Apple's.
+3. Long sessions: Quill is lower in chroma than Lumen, and A's light paper is softer than white for hours of reading code.
+4. Cost: A is mostly system components plus tokens; B's gradients and custom glass cost build and review time on every screen.
+
+What B does better: it reads as "creative tool" at a glance and photographs well for App Store screenshots. If the Investors like that, option 3 in ops/questions.md keeps A for the app and offers B's gradient cards as one optional premade widget style.
+
+## 10. Open
+- The Investors choose a direction (C51); until then the build uses placeholders.
+- Idris checks the widget family sizes and mode rendering in the Simulator; the numbers here are from Apple's published layouts and need a device check.
+- High-contrast palette variants (7:1) to build after the choice.
+- App icon and App Store screenshots follow the chosen direction (C51, separate proposal).
+- QA note: both galleries report 1 element past the canvas edge in qa.json (`offcanvas`); no text is clipped (clip 0) and the PNGs show no cut content. Not yet traced.
+{% endraw %}
+
+</div>

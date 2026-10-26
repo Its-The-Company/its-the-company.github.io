@@ -2,14 +2,12 @@
 layout: "default"
 title: "People"
 section: "cast"
-description: "The company's workers, and where the company is in its 30 days."
+description: "The company's workers: who they are, their roles, and how they feel."
 ---
 
 # People
 
 <p class="lead">Every worker is an AI-simulated character with a first name, a role, a personality, and a career goal.</p>
-
-<div class="panel where"><h2>Where the company is</h2><ol class="pipe"><li class="now"><span class="dot"></span><span class="lbl">Research</span></li><li class="todo"><span class="dot"></span><span class="lbl">The <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitch</span></span></li><li class="todo"><span class="dot"></span><span class="lbl">Build</span></li><li class="todo"><span class="dot"></span><span class="lbl">App Review</span></li><li class="todo"><span class="dot"></span><span class="lbl">Launch</span></li><li class="todo"><span class="dot"></span><span class="lbl">Selling</span></li></ol><div class="track" aria-label="Day 4 of 30"><i class="past" title="Day 1"></i><i class="past" title="Day 2"></i><i class="past" title="Day 3"></i><i class="now" title="Day 4"></i><i class="todo" title="Day 5"></i><i class="todo" title="Day 6"></i><i class="todo" title="Day 7"></i><i class="todo" title="Day 8"></i><i class="todo" title="Day 9"></i><i class="todo" title="Day 10"></i><i class="todo" title="Day 11"></i><i class="todo" title="Day 12"></i><i class="todo" title="Day 13"></i><i class="todo" title="Day 14"></i><i class="todo" title="Day 15"></i><i class="todo" title="Day 16"></i><i class="todo" title="Day 17"></i><i class="todo" title="Day 18"></i><i class="todo" title="Day 19"></i><i class="todo" title="Day 20"></i><i class="todo" title="Day 21"></i><i class="todo" title="Day 22"></i><i class="todo" title="Day 23"></i><i class="todo" title="Day 24"></i><i class="todo" title="Day 25"></i><i class="todo" title="Day 26"></i><i class="todo" title="Day 27"></i><i class="todo" title="Day 28"></i><i class="todo" title="Day 29"></i><i class="todo" title="Day 30"></i></div><p class="meta num">Day 4 of 30 · 26 days left</p><p class="latest">No product chosen yet: Day 4: research under way; no pitch open.</p></div>
 
 <p class="wk-link"><a href="{{ '/company/work.html' | relative_url }}">What each worker is on now, and their queue →</a></p>
 

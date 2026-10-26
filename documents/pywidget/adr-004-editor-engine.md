@@ -1,0 +1,159 @@
+---
+layout: "default"
+title: "ADR-004: The code editor is Runestone with Tree-sitter Python, behind our own editor protocol"
+section: "documents"
+description: "Option A: Runestone (MIT) with Tree-sitter (MIT) and the tree-sitter-python grammar (MIT), vendored at a pinned commit in pywidget/ios/Vendor/, used only through a protocol of ours, CodeEditorEngine (text, selection\u2026"
+---
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/' | relative_url }}">← Documents</a><a href="{{ '/documents/pywidget/adr-004-editor-engine.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Decision</span><span>Day 4 · Sun Oct 25</span><span><code>pywidget/docs/decisions/ADR-004-editor-engine.md</code></span></div><h1>ADR-004: The code editor is Runestone with Tree-sitter Python, behind our own editor protocol</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"><span>By <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a>, Senior iOS engineer</span></div></div>
+
+<style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
+<div class="doc-body" markdown="1">
+
+{% raw %}
+- Status: proposed (Idris, 2026-10-25 19:31 ET). Needs: Ines's <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line; Maren's read of themes and the iPhone key row. Becomes accepted only when gates <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>-G3 (section 7) pass in the editor spike; until then the fallback (section 5) is live.
+- Author: Idris. Desk research; no Xcode build in this ADR. Every number not read from a source is marked **unmeasured** or **[recalled]**.
+- Inputs: ops/plans/pywidget/build-brief.md section 2.5 (Editor); ADR-001 section 3.1 (C5 core editor scope); local iPhoneOS27.1.sdk UIKit headers; licence files, READMEs and two source files read through tools/terms_guard.py into `../research/ADR-004-raw/pages/` (fetch log `fetch-log.tsv`, 19:28-19:30 ET; licence, docs and repo-metadata pages only, no search, issue or pull reads, per the #53 <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>).
+
+## 1. Context
+
+ADR-001 fixes the v1 editor: syntax highlighting with design-system themes (light and dark), an extra key row on iPhone, find and replace, tabs, line numbers, go to line from a traceback, iPad hardware keyboard shortcuts (run, stop, find, tabs), completion from jedi and inline errors from pyflakes on save, Dynamic Type and VoiceOver labels. The brief (2.5) adds formatting, go to definition, trackpad, split view and multiple windows; formatting is not in ADR-001's v1 list. Deployment target is iOS 18.0 (`pywidget/ios/project.yml`). One engineer, one Xcode task at a time, 26 days to <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span>.
+
+The editor is the screen a script-only buyer spends all their time in. It has to be fast on a real file, correct with every input method (hardware keyboard, IME, dictation), and readable by VoiceOver.
+
+## 2. Options and evidence
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 2. Options and evidence, scrolls sideways" style="--tw:1920px" markdown="1">
+
+| Option | Licence (read) | Engine | Maintenance (repo metadata, read 19:28 ET) | Fits v1 | Verdict |
+| --- | --- | --- | --- | --- | --- |
+| **A. Runestone + Tree-sitter + tree-sitter-python** | MIT, "Copyright (c) 2021 Simon Støvring" (Runestone, TreeSitterLanguages); MIT, "Copyright (c) 2018 Max Brunsfeld" (tree-sitter); MIT, "Copyright (c) 2016 Max Brunsfeld" (tree-sitter-python) | Own `TextView: UIScrollView` with a `TextInputView: UIView, UITextInput` (TextView.swift line 13, TextInputView.swift line 35); Tree-sitter incremental parse; line manager after AvalonEdit (README "Performance") | Pushed 2026-10-25; release 0.5.2 on 2026-03-25, previous 0.5.1 on 2024-06-11; 3,230 stars, 26 open issues; one maintainer; README pins Tree-sitter v0.27.1 and documents iOS 27 Writing Tools behaviour | Highlighting, line numbers, current-line highlight, invisibles, character pairs, regex search, indent detection, colour and font themes, line wrapping (README "Features"); `isFindInteractionEnabled` / `findInteraction` (UIFindInteraction, TextView.swift lines 690-707); `inputAccessoryView` for the iPhone key row (line 318); marked-text (IME) handling with documented workarounds (TextInputView.swift 1280-1302, 1707-1736) | **Chosen**, gated |
+| B. Custom editor on UITextView / TextKit 2, highlighting by Neon + SwiftTreeSitter | Neon BSD-3-Clause, "Copyright (c) 2022, Chime"; SwiftTreeSitter BSD-3-Clause, "Copyright (c) 2021, Chime" | `NSTextLayoutManager` (iOS 15), `NSTextViewportLayoutController` (iOS 15), UITextView TextKit 2 by default since iOS 16 | Neon now at slsrepo/Neon (pushed 2026-08-27, 394 stars); SwiftTreeSitter now tree-sitter/swift-tree-sitter (pushed 2026-08-12) | Free from UIKit: VoiceOver, find (`findInteractionEnabled`, iOS 16), hardware keyboard text navigation, Writing Tools. To build ourselves: line-number gutter, current line, pairs, indentation, highlighting timing | **Fallback** (section 5) |
+| C. STTextView | GPL-3.0 or a paid commercial licence (README "License": "If use of the software under the GPL v3.0 does not satisfy your organization's legal department, commercial licenses are available"); repo metadata `NOASSERTION` | TextKit 2 UITextView/NSTextView reimplementation, iOS 16+ | Pushed 2026-10-06, 1,607 stars | Good fit technically | **Rejected on licence**: GPL terms conflict with App Store distribution of a closed app, and the commercial licence costs money (Commandment 7: no spending) |
+| D. CodeEditorView | Apache-2.0, "Copyright [2021..2025] Manuel M. T. Chakravarty" | SwiftUI view over TextKit 2 | Pushed 2026-10-17, 54 open issues; README "Status": "still to be of pre-release quality ... mostly a set of known bugs" | Highlighting, inline messages, bracket matching, minimap; completion and identifier info on macOS only (README line 8) | Rejected for v1 (author's own pre-release statement); worth re-reading for 1.1 |
+| E. Monaco in WKWebView | MIT, "Copyright (c) 2016 - present Microsoft Corporation" | Browser editor | Pushed 2026-10-23, 46,887 stars | README FAQ: "Is the editor supported in mobile browsers or mobile web app frameworks? No." | **Rejected on iOS.** Stays the web IDE's editor (brief, Web) |
+| F. CodeMirror 6 in WKWebView | MIT, "Copyright (C) 2018-2021 by Marijn Haverbeke and others" (codemirror/view) | contenteditable in WebKit | GitHub mirror codemirror/view is **archived** (pushed 2026-04-15); where CM6 is now maintained is unread | Touch support [recalled] | Rejected for v1: hardware-keyboard routing between UIKeyCommand and web content, VoiceOver through WebKit contenteditable, a JS hop in every jedi/pyflakes call, a second theme system, and a non-native feel against the founder's polish bar. Re-read only if both A and B fail |
+| G. Highlightr (highlight.js in JavaScriptCore) | MIT, "Copyright (c) 2016 Illanes, Juan Pablo" | Regex highlighting of the text through JavaScriptCore | Pushed 2026-02-13 | No incremental parse; no structure for indentation or brackets | Rejected (architecture re-highlights text; speed unmeasured) |
+
+</div>
+
+
+### Why not build B first
+
+- Neon's own README (section "TextKit Integration"): flicker-free on-keypress highlighting needs an `NSTextStorage` subclass and precise invalidation timing, and "I have not yet figured out a way to do this with TextKit 2, and it may not be possible without new API." That is the hard part of a code editor, stated by the author of the library we would lean on.
+- TextKit 1 fallback trap (UITextView.h lines 263 and 277): a TextKit 2 UITextView silently falls back to TextKit 1 when anything touches `.layoutManager`, and "any TextKit 2 objects you may have cached will cease functioning". Any helper that uses `NSLayoutManager` (Neon ships a `LayoutManagerSystemInterface`) puts us there.
+- Gutter, current-line highlight, character pairs, indentation, regex search and large-file line management are weeks of one engineer's time [estimate, unmeasured], all of which Runestone already ships and its own app uses (README "Runestone app").
+
+### Why A, and what it costs us
+
+A gives the whole ADR-001 editor list except completion, inline errors, tabs and keyboard shortcuts, which are ours in any option. Its costs:
+
+1. **Accessibility is unproven.** Runestone draws its own text. A grep of TextView.swift (1,663 lines) and TextInputView.swift (2,275 lines) for "accessib" finds 0 lines; other files are unread. UITextInput gives VoiceOver some text access [recalled], but line-by-line reading, caret announcements and rotor navigation are unverified. This is gate G2.
+2. **One maintainer**, irregular releases (0.5.1 to 0.5.2 took 21 months), active main branch. MIT lets us vendor and patch: we pin a commit, keep patches in our tree, and never depend on an upstream fix for v1.
+3. **One Tree-sitter runtime** (README "Tree-sitter runtime": "do not also link an independent copy from another package"). The Python grammar must come through TreeSitterLanguages built against Runestone's `TreeSitter` product, or as grammar source compiled into our target. Checked in the spike.
+
+## 3. Criteria, side by side
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 3. Criteria, side by side, scrolls sideways" style="--tw:930px" markdown="1">
+
+| Criterion | A. Runestone | B. Custom TextKit 2 |
+| --- | --- | --- |
+| Licence | MIT throughout (section 8 lines) | BSD-3 (Neon, SwiftTreeSitter) + MIT (tree-sitter, grammar) |
+| Highlighting, 2,000-line file | **Unmeasured.** Incremental Tree-sitter parse plus line manager; README warns to judge only Release builds | **Unmeasured.** Highlight via rendering attributes or storage attributes; timing problem stated by Neon |
+| iPad hardware keyboard | Text input through UITextInput; arrow-key and selection navigation on its own view to be checked (G3). App shortcuts are our `UIKeyCommand`s on the responder chain (`wantsPriorityOverSystemBehavior`, iOS 15, UIKeyCommand.h line 52) | System behaviour for text navigation; same `UIKeyCommand` work for app shortcuts |
+| Trackpad, split view, multiple windows | Pointer behaviour on a custom view to be checked (G3); split view and scenes are app-level, engine-neutral | System |
+| Accessibility | Unproven (G2) | System UITextView behaviour |
+| Find and replace | UIFindInteraction built in | UIFindInteraction built in (`findInteractionEnabled`, iOS 16, UITextView.h line 293) |
+| iPhone key row | `inputAccessoryView` | `inputAccessoryView` |
+| Maintenance | Vendored, pinned; one upstream maintainer | Ours entirely |
+| Time to v1 editor | Days [estimate] | Weeks [estimate] |
+
+</div>
+
+
+## 4. Decision
+
+Option A: Runestone (MIT) with Tree-sitter (MIT) and the tree-sitter-python grammar (MIT), vendored at a pinned commit in `pywidget/ios/Vendor/`, used only through a protocol of ours, `CodeEditorEngine` (text, selection, version counter, set highlights/diagnostics, replace range with undo, scroll to line, key-row insertion). No pywidget code imports Runestone outside its adapter, so option B can replace it without touching the IDE.
+
+Themes come from Maren's design-system tokens and are mapped to Runestone's theme protocol in the adapter. Tabs, the iPhone key row, keyboard shortcuts, go to line from a traceback, completion UI and diagnostics UI are ours, built on the protocol.
+
+## 5. Fallback
+
+If G1 or G2 fails and cannot be fixed by a patch inside the time box, the editor becomes a TextKit 2 `UITextView` (`textViewUsingTextLayoutManager: YES`, never touching `.layoutManager`) with Neon + SwiftTreeSitter highlighting over the visible range and a gutter we draw. It is slower to build and gives up some of A's features for v1 (character pairs, invisibles), and gains system accessibility.
+
+## 6. The interface the editor needs from the tooling (Odalys's jedi/pyflakes read)
+
+The editor asks; Python answers on the interpreter's worker thread; the main thread never waits.
+
+- **Every request** carries `doc_id`, `version` (an integer the editor bumps on each edit), `path`, and the full source text (or a reference to the saved file). A response whose `version` is older than the editor's current one is dropped. Completion requests are latest-wins and cancellable.
+- **Positions**: line 1-based, column 0-based **in Unicode code points**, which is what jedi takes [recalled; to confirm in Odalys's read]. The editor works in UTF-16 (`NSRange`); the adapter converts both ways. A fixture line with a non-BMP character (an emoji) must round-trip in a test.
+- **Completion** `complete(doc, line, col) -> [{name, kind, insert_text, replace_start, replace_end, signature?, doc_first_line?}]`. Budget for a keystroke-triggered call: target under 100 ms on device, **unmeasured** (Odalys measures jedi; ADR-001 says keyword completion only if jedi is too slow).
+- **Diagnostics** `lint(doc) -> [{line, col, end_line?, end_col?, severity: error|warning, code, message}]`, from `compile()` for syntax errors and pyflakes for the rest, on save (ADR-001). SyntaxError `offset` units must be stated by the tooling read [unverified].
+- **Go to definition** `goto(doc, line, col) -> [{path, line, col}]` (brief 2.5; not in ADR-001 v1, the interface reserves it).
+- **Format** `format(doc) -> text` is reserved; the editor applies it as one undoable replace that keeps the caret's line. Ruff is a native binary and iOS cannot spawn a subprocess [recalled], so a formatter would have to be pure Python; not in v1.
+- Highlighting, bracket matching and indentation use Tree-sitter in Swift and never call Python.
+
+### Note, 2026-10-25 20:07 ET (Odalys): section 6 measured
+
+Host only: Apple M1 Mac mini, CPython 3.9.6, jedi 0.19.2, parso 0.8.7, pyflakes 3.4.0, in the existing venv `~/.venvs/idetool` (no new install; rows already in log/software.md). The app's runtime is 3.15.1 and the device is slower by a factor nobody has measured; every number below is a host number. Raw results: `pywidget/tests/tooling/results/editor2000-host-py39.json` (final) and `...-run1-loopconv.json` (before the conversion fix). Script: `pywidget/tests/tooling/bench_editor2000.py` (generates the 2,000-line file itself; spawning blocked; fresh process and empty jedi cache per run).
+
+1. **jedi columns: confirmed, code points**, in and out. A completion at the code-point column works; the UTF-16 or byte column of the same line raises `ValueError` (out of range), and a shorter wrong column would silently ask about another spot. `get_names()` columns are code points too. Lines are 1-based. (`test_positions.py`, JediUnits, 4 tests.)
+2. **Correction: send a whole-document UTF-16 offset (`NSRange.location`), not line and column.** parso and CPython break lines on `\r\n`, `\r`, `\n` only; form feed, U+0085, U+2028 and U+2029 are ordinary characters (checked against `parso.utils.split_lines` on 9 texts and against `ast` line numbers). NSString's line enumeration also breaks on U+0085/U+2028/U+2029 [recalled; Runestone's own line rule unverified, no checkout here]. With an offset, Python splits the lines itself and the two sides never have to agree. Results come back as offsets the same way. Line/column calls stay available for the gutter.
+3. **Rules for bad positions** (none raise): past the end of a line clamps to the end, negative to 0, line past the last clamps to the last; an offset inside a surrogate pair or inside `\r\n` floors to the character start / end of line.
+4. **SyntaxError offset: 1-based code points into `exc.text`**, measured on 3.9.6 in 9 cases (parser and tokenizer errors after an emoji, tab, indent, unterminated string, open paren, NBSP). Two traps: (a) `exc.text` is not always the source line: for a 3.9 f-string error it is the inner expression `(1 +)` and the offset counts into that, so the adapter marks the whole line; (b) for errors at end of line the offset is one past the last character. 3.10+ adds `end_offset`; the helper uses it when present. **3.15 unmeasured**: `test_positions.py` asserts the unit on whatever interpreter runs it, so running it inside the app's runtime re-checks it.
+5. **pyflakes columns: confirmed, UTF-8 bytes** (`ast` col_offset), 1-based lines.
+6. **Completion on a code-generated 2,000-line file** (one-character edit ten lines above the cursor before each call; n = 5 fresh processes x 40 calls = 200 per probe):
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Note, 2026-10-25 20:07 ET (Odalys): section 6 measured, scrolls sideways" data-n="2" style="--tw:1152px" markdown="1">
+
+| Probe | Items | First call, empty cache (p50 / max of 5) | Keystroke p50 | Keystroke p95 (median of 5 runs) | Worst single call |
+|---|---|---|---|---|---|
+| `os.pa` at line 12 | 6 | 833 / 852 ms | 38.8 ms | 57.9 ms | 104.9 ms |
+| `self.` in a method at line 1012 | 28 | 394 / 410 ms | 34.5 ms | 49.6 ms | 108.8 ms |
+| `rec.` at line 2000, class from line 15 | 28 | 645 / 684 ms | 29.6 ms | 36.5 ms | 75.0 ms |
+| `json.lo` at line 2000 | 2 | 200 / 261 ms | 10.6 ms | 12.9 ms | 24.9 ms |
+
+</div>
+
+
+   On the host, keystroke p95 is under the 100 ms budget with room of 1.7x at worst; the worst single calls were 105 and 109 ms (the script keeps only per-run maxima, so how many of the 800 calls passed 100 ms is not known). On a phone 2x slower the `os.pa` and `self.` probes would sit near or over the budget at p95. The budget stays a target until the in-app run; the editor rules in ide-tooling.md (trigger on `.` or a 2-character prefix, warm jedi at launch, latest-wins) are what keep it usable if the device misses it. Diagnostics on the same file: `compile()` 8.0 ms p50, pyflakes 42.8 ms p50 / 69.7 ms p95 (n = 20), fine for a 300 ms pause debounce.
+7. **Conversion cost, a change that paid**: my first helper converted with a per-character Python loop: 4.4 ms to split the 2,000 lines and 11.3 ms to turn an end-of-file offset into a position (n = 20). Rewritten on `str.encode`/`decode` and `re`: 0.43 ms and 0.55 ms (n = 20). Same 21 tests pass; three mutants (mid-pair rounding up, form feed as a break, offset inside `\r\n`) are each caught.
+8. **Cancellation: jedi has none** (0.19.2 source: no cancel or timeout parameter). Measured instead: a second thread raises `Cancelled` in the worker with `PyThreadState_SetAsyncExc`. 36 trials (2 probes x 6 delays from 5 to 400 ms x 3, fresh process each): 27 cancelled, 9 had already finished, **0 ignored**; delay from the call to the worker seeing it p50 0.06 ms, max 0.42 ms (first run max 3.5 ms); **36 of 36** next completions on the same text matched a clean run. Rules that follow:
+   - `Cancelled` must derive from `BaseException`: jedi has 14 `except Exception` sites (parso none). Two bare `except:` remain (jedi's readline helper, unused here; parso's grammar generator, which runs on first load) and could swallow a cancel during warm-up, so the version check still drops any late reply.
+   - Swift calls `PyThreadState_SetAsyncExc` itself, from a background queue, never the main thread: it must take the GIL, which the busy worker hands over only at the switch interval (5 ms on the host). Not through `ctypes`: L12 may strip `_ctypes` from the bundle.
+   - It lands between bytecodes only; a long C call (a big regex, a C-extension import) delays it. The worker wraps each job in `try/except Cancelled` and clears "current job" inside that `try`, so a cancel that lands just after a job ends is caught and discarded rather than hitting the next one.
+9. **Helper**: `pywidget/python/pywidget_tooling/positions.py` (stdlib only, runs on host and in the app) with `pywidget/tests/tooling/test_positions.py`, 21 tests, 21 pass under the idetool venv; under the system python 15 pass and 6 skip (no jedi/pyflakes). The tooling prototype `bridge.py` now uses it (its 13 tests still pass). Open: the in-app numbers (a device run of the same probes; needs an in-app harness, since this script starts child processes) and a 3.15 run of `test_positions.py`.
+
+## 7. Gates (the editor spike, a board line)
+
+- **G1 speed.** A code-generated 2,000-line Python file (no copied code; generator committed). Measure in a Release build on the Simulator through `tools/xc.sh`, later on a device: open to first highlighted frame, and keystroke to re-highlight p50/p95 at the top, middle and end of the file. Proposed bar: open under 300 ms, keystroke p95 under 16 ms (one 60 Hz frame). Both numbers are targets, not measurements.
+- **G2 accessibility.** VoiceOver on the Simulator and the Accessibility Inspector: reads the current line, announces caret moves and selection, edits by typing, Dynamic Type scales the editor font. Fail means a fix in the adapter (e.g. `UIAccessibilityReadingContent`) within one day, or the fallback.
+- **G3 iPad input.** Hardware keyboard: arrows, option and command arrows, shift selection, command-Z/shift-command-Z, tab and shift-tab indent, our shortcuts listed in the command-key overlay; trackpad I-beam and click-drag selection; IME (Japanese kana) and dictation; two scenes editing two files.
+
+## 8. Licence lines (logged in log/assets.md, Commandments 4-5)
+
+- Runestone, https://github.com/simonbs/Runestone, MIT, Copyright (c) 2021 Simon Støvring.
+- TreeSitterLanguages (TreeSitterPython and its queries only), https://github.com/simonbs/TreeSitterLanguages, MIT, Copyright (c) 2021 Simon Støvring.
+- Tree-sitter, https://github.com/tree-sitter/tree-sitter, MIT, Copyright (c) 2018 Max Brunsfeld. Runestone's README says the submodule also carries `lib/src/unicode/LICENSE`; that file is **unread** and must be read before the first build that ships.
+- tree-sitter-python, https://github.com/tree-sitter/tree-sitter-python, MIT, Copyright (c) 2016 Max Brunsfeld.
+- Fallback only, not used unless section 5 fires: Neon (BSD-3-Clause, Copyright (c) 2022, Chime), SwiftTreeSitter (BSD-3-Clause, Copyright (c) 2021, Chime).
+
+MIT and BSD-3 both require the copyright notice and licence text in copies of the software: the app needs an Acknowledgements screen carrying them (board line). Nothing here is a visual or sound asset; Commandment 9 is not touched.
+
+## 9. Consequences
+
+- The editor spike follows the CPython spike and bridge in the single Xcode queue; it does not need Python to run (G1-G3 test the editor alone).
+- Completion and diagnostics UI wait on Odalys's tooling numbers but not on the engine: the protocol in section 6 lets both sides build against a fake.
+- If Runestone upstream stalls, nothing changes for v1: we own the pinned copy.
+
+## 10. Evidence
+
+- `../research/ADR-004-raw/pages/` : licence files, READMEs (Runestone, Neon, STTextView, CodeEditorView, Monaco), repo metadata JSON, Runestone releases, Runestone TextView.swift and TextInputView.swift; `fetch-log.tsv` lists every URL with time and size. Script: `../research/ADR-004-raw/bin/fetch.py`.
+- iPhoneOS27.1.sdk, UIKit headers: UITextView.h lines 263-277 (TextKit 2 default since iOS 16, TextKit 1 fallback), 289-293 (find interaction, iOS 16); NSTextLayoutManager.h line 65 (iOS 15); NSTextViewportLayoutController.h line 32 (iOS 15); NSTextContentManager.h line 229 (`performEditingTransactionUsingBlock`); UIKeyCommand.h line 52 (`wantsPriorityOverSystemBehavior`, iOS 15).
+- Not read: developer.apple.com (person-read only, G2a); Runestone's docs site; any issue tracker (#53 hold).
+{% endraw %}
+
+</div>

@@ -261,6 +261,10 @@ Ines, CEO
 ## Chair note, 2026-10-26 00:12 ET (Ines): online pip back on the 1.1 plan, gated on one read
 
 ADR-006 section 12 re-opens section 10 by its own clause (Wrenna's T-0085: 14 apps from 11 developers state on-device pure-Python installs with a version dated after 2025-11-13). Online pip returns to the 1.1 plan, gated only on a person's read of DPLA 3.3.1(B) (T-0060, now an <span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Request</span>). Not v1 and not a v1 stretch: Day 17 review risk, no Day 30 revenue, no capacity before Day 20. The 2026-10-25 note above stays as written; one reason in the ADR-006 s10 ruling it summarises (stale precedents) was wrong and is corrected in s10.2 with a dated note. v1 scope, the cut line and the dates do not change.
+
+## Chair ruling, 2026-10-26 02:36 ET (Ines): the editor-side widget preview
+
+Ruled in pywidget/docs/design/ide/editor-preview-note.md s6 (T-0173). 3.1 C5 gains, in v1: a widget preview pane in the editor, redrawn on Run and on save, with family and mode switches and the entry stepper (iPad right pane, iPhone a tab in the console sheet); it is where PROPOSAL-002 s5's "Run as widget" lives. The first-run tour's page 3 runs on the gallery path. 3.2 gains two rows, both 1.1: redraw as you type (C5), and the network-off switch (C5), which leaves PROPOSAL-002 s5's v1 list. A is due with the Day 12 iPad milestone; if it is not in that build it goes to 1.1 and store shot iPad 1 comes out. The preview queue-key fix comes before any preview code. Dates, freeze and the cut line do not change.
 {% endraw %}
 
 </div>

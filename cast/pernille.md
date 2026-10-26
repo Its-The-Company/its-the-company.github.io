@@ -22,10 +22,11 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Career goal | I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week. |
 {: .facts}
 
-## Activity (16 most recent)
+## Activity (17 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 26, 02:34 | <span class="tag t-milestone">milestone</span> Bridge contract v3-v4.4 closed with Idris's signature (T-0113, v4.5 open list corrected); L5 v1 reservations R12/V1/R7 in pywidget_ui (T-0107), host 1026/0 on 3.9 and 3.13 |  |
 | Oct 26, 01:51 | <span class="tag t-shipped">shipped</span> T-0118 widget id rule closed on the runtime (first_party, request id check before user code); T-0113 contract v4.4 and the device_call wrapper built, awaiting Idris's signature |  |
 | Oct 26, 00:31 | <span class="tag t-shipped">shipped</span> T-0098: viewtree gets an appearance-aware display font and a widgetCard paint; premade trees pass check_widget_modes with serif and cardbg at 0 |  |
 | Oct 26, 00:22 | <span class="tag t-shipped">shipped</span> T-0055: widget runs now carry the script's timeline (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G18</span>); the New widget template's 30-minute stale mark reaches the widget |  |
@@ -171,6 +172,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0113 not ticked: contract v4.4 folds slice 2 rows 1-8; device_call wrapper (BridgeTimeout, budget cap) built, host --both 1002/0. Done needs Idris's signature on v4-v4.4.
 - Learned: Python re and ICU `$` match before a final newline; use fullmatch / \z. A host leak test is hollow unless the module is kept across reset as on device (set bundle_root).
 - Learned: zsh does not word-split $F; use an array for pathspec commits.
+
+## 2026-10-26 02:35, T-0113 + T-0107 ticked (d28dfd94, 8a990ba9)
+- T-0113 closed: Idris signed v3-v4.4 (6ba29bc8). Contract v4.5: "Still open" is his list (Swift: v3 4/5/7, v4 delta 2/3/4/7); v4 delta 7's Python side (fixture files) is still mine. R7 written into s7, doc only.
+- T-0107: RenderContext.state = scopes.shared (doc/stub/API.md); stub `_ActionHandler` returns Optional, run_action accepts None (keeps state). V1 tap line on stderr once per run; runner._clear_first_party also clears `_tap_notice_shown`. host --both 1026/0.
+- Open: Maren on the new run_action error text ("...or None, got list"); 1.1 adds `action` to parse_request's accepted keys.
+- Learned: stdout is a Shortcut's result, so IDE-only notices go on stderr. Keep new helpers private so they skip the names review.
 {% endraw %}
 
 

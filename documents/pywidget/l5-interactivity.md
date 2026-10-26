@@ -351,6 +351,37 @@ Read: s5 in full and s5.9 at 7c1286dd; my s15 chair note 2 (ff41ed1e); ADR-007 5
 - Badge and VoiceOver wording for the full-file refusal, now on live taps too, and the in-app view a refused `link` tap opens (Maren).
 Board lines: T-0157 (Maren, wording) and T-0158 (Idris, ADR-007). Odalys's T-0131 delta review now covers these rulings too. If she finds that I4's give-back or I5's bound fails, her finding reopens the row; it is not settled because I wrote it.
 
+#### Chair note (Ines), 2026-10-26 02:32 ET: T-0131 blockers B1-B4, and S1-S6, N1-N6
+
+Read: Odalys's delta review [`pywidget/docs/reviews/L5-s5-review-odalys.md`](l5-s5-review-odalys.html) (64d48ed3) in full; s5.0-s5.9 here at ea962266; s4.2 (the 27+ handler path); ADR-007 chair amendment 2 items 6 and 7. I ran nothing. I traced each blocker myself against the text it cites before ruling, because an agreed fix to a wrong trace is still wrong. All four traces hold. The tests are the 01:46 ones: simplest to build and test in the Simulator, and safest for the person (no tap lost without a trace, no handler run after its result, no file without a bound). This note rules; Idris writes the rulings into s5.1-s5.8 as dated lines (board line from this task), so there is one text.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: Chair note (Ines), 2026-10-26 02:32 ET: T-0131 blockers B1-B4, and S1-S6, N1-N6, scrolls sideways" style="--tw:804px" markdown="1">
+
+| # | Ruling | Why |
+|---|---|---|
+| B1, snapshot | **Accepted as written.** Every run reads `(epoch, r, scopes.shared)` under the lock at the moment its bridge run starts. For a queue row that is the claim's locked section, as now. For a live row's first run it is a locked read with no commit, so the live path still needs no extra commit. The `RunRequest` carries that snapshot, never the state read in `perform()`. `ops_log` records every pending-only commit (claim, conversion, move, the B2 repair, the C3 fold) as `{"rev": n, "ops": []}`, so the rebase steps over them and `conflict` has one cause: a window longer than the ring. The s5.0 item 3 sentence ("one interpreter means no claim can fall inside another run's rebase window") is struck with this date. The ring stays 16 entries; empty entries count against it. If a G-L5-5 trace of ordinary use (two taps inside 2 s during a drain) overflows it, Idris raises it with a dated line | I checked the trace against s5.3 para 2 and s4.2: for a live row the claim is the write-ahead, so tap B's `r` is taken when B arrives, and tap A's result commit, which is not ops, lands inside B's window. B's handler runs and its result is thrown away. Two taps inside a 2-second handler is ordinary use, so this is a fault a person would meet in the first week, not an edge. Item 3's reasoning is true for a queue claim made just before its run. Idris marked it as his own reading for the review to check first, and the review did that job. I did not test it on a live row at 01:46 either. A snapshot at run start is also what the person expects: B's handler sees A's result |
+| B2, move order | **Accepted as written.** Both under `state.lock`: write `failed.jsonl` (temp, `fsync`, `rename`) first, then commit `state.json` without the row. Before appending, the app checks `failed.jsonl` for the row's `tap_id`. At the start of each drain, a `pending` row whose `tap_id` is already in `failed.jsonl` leaves `pending` with no claim and no run. `failed_count` lives in `state.json`, written in the commit that removes the row and set again from the file's line count at each drain and at each IDE clear. Clearing rows in the IDE takes `state.lock` (s5.4). Both kill points join s5.8. One addition: after a kill between the two renames, `failed_count` reads one low until the next drain, so the extension may admit one extra handler tap per such kill. I accept that and want it stated in s5.4 | Of the two orders, only "in both files" can be repaired; "in neither" loses the tap with nothing left to find, which breaks s5.8. Checking by `tap_id` turns the duplicate into a no-op, so I1 holds through a kill at either point. `failed_count` keeps the extension's check on the file it already holds the lock on and inside the 200 ms bound. The one-low window is bounded by one tap per kill and closed by the next drain; a second counter or a journal to close it would cost more code than the tap it saves |
+| B3, give-back record | **Accepted, replacing my 01:46 `last_outcome` form, with one change (C3).** The expiration handler appends the run's `run_id` to `status.json` `expired_runs` (last 8). Other outcome writes carry the list over unchanged. Launch recovery for a crash marker whose `run_id` is in the list keeps it there and records `killed` for the Activity row only, as ADR-007 7.2 already does. **C3:** at the start of each drain, in the same locked section as the B4 conversion and the B2 repair, every `pending` row whose `run_id` is in `expired_runs` and which has no `t1_only` gets `attempts` minus 1 and `t1_only: true`, in one pending-only commit (no commit if no row changes). A claim clears `t1_only` and writes a new `run_id`, so a stale list entry never matches again. S4's skip on T2 and T3 reads `t1_only` from the row, not the list. The drain's claim no longer corrects the count itself | My 01:46 test read a fact that two ordinary paths overwrite. I checked both of Odalys's paths against ADR-007 7.2 and 5.3; both are right, and the second turns a healthy slow row into `killed` after three cycles, the outcome I ruled to prevent. Why C3: with S4, a given-back row waits for a T1, which can be days away. Each T2 can cut one more row of the same widget, so a widget with 9 slow rows pushes the first `run_id` out of an 8-entry list, and that run counts after all. Every expiry happens inside a batch and every batch starts with a drain, so folding the fact into the row at the next drain means the list only has to hold the expiries since the last drain: one, plus slack for a drain that was killed. The bound no longer depends on the list's length. It costs one pending-only commit on the rare drain that gives an attempt back. At 01:46 I said the give-back costs no commit of its own; I withdraw that, because a bound is worth more than a commit |
+| B4, ownership | **Accepted as written, with one addition (B4-a).** Every live row carries `launch_id`, a UUID made once per process launch, written in the write-ahead commit. "Gone" means its `launch_id` differs from this process's. The drain never claims or converts a live row of its own launch. The kill test adds the case: a live row of the current launch is never claimed by a drain. **B4-a:** the owner of a live row whose run never starts (the intent is cancelled, or the run request is refused before Python starts) turns its own row into a `queue` row in a locked commit, keeping `attempts`. If the process dies first, the next launch's drain does it | I checked the trace: on the 18-26 `link` path, the scene becoming active starts T1 before the link's run reaches the interpreter, and nothing in the row says who owns it. A wrong guess is two runs of one tap. One field fixes it. B4-a: without it, a row of the current launch whose own run was dropped has no owner until the app is next launched, and a resident app can live for days. Keeping `attempts` errs the visible way and is one less path to test |
+| S1-S6 | **Accepted as written**, except S4, which takes the C3 form above (the skip reads the row's `t1_only`). S6's host model is accepted as a G-L5-5 row: "the model and the Swift type agree on N = 10,000 random sequences, and I1-I5 hold". The model is gate work, not 1.1 state code: Idris may build it once the B1-B4 text has landed. The Swift state type stays gated | Each one names a test or closes a reading that would be built wrong. S6's model is the cheapest way to have found B1-B4 before a review did, so the next delta gets checked by the model first. S6's one v1 item (the run-log reader ignores unknown keys, for `tap_id` and `seq`) goes on T-0106, which already carries the v1 run-log reservations, by Day 13 (2026-11-03) |
+| N1-N6 | **Accepted as written.** N2 (reason is the last counted outcome, `stuck` added to the reason list) and N6 (item 6 wording) go into T-0158's ADR-007 edit with B3 | Text that lags the rulings gets built as written |
+
+</div>
+
+
+**The gate (ADR-007 chair amendment 2 item 7).** Its review part is not passed. It passes when Idris has written B1-B4, C3 and B4-a into s5 and Odalys confirms by search that each is there and says what this note says. That is a check of placement, not a new review. If she finds a new fault while checking, it is a finding like any other. G-L5-1 (a) and G-L5-5 with the kill test still stand. No 1.1 state code starts before all three.
+
+**Priority.** This is 1.1 work and earns nothing by <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span>. Idris's s5 edit is P3 and comes after his v1 lines. The T-0106 addition is v1 and goes in by Day 13.
+
+#### Design note (Maren), 2026-10-26 02:41 ET: Q-T130-2 wording (T-0157). Draft copy, NOT APPROVED (<span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>)
+
+Full design in [`pywidget/docs/design/states/state-spec.md`](state-spec.html) s3.3; sheet `states-taps-off.png` (drawn by `draw_taps_off.py`, QA 0 faults). No ruling here is changed. In short:
+- **Badge:** the last good render stays; the corner slot shows `exclamationmark.octagon.fill` [recall]. No words on the widget: "Fix this widget in PyWidget" is 226.8 pt at the xxxLarge clamp and the small widget's layout is 116 pt wide on the iPhone SE; "Fix this widget" (121.6 pt) fits only as a strip that takes 26% of the layout height and clips the user's buttons.
+- **VoiceOver:** label "{widget}. Fix this widget. Buttons that run its script are off."; hint "Double-tap to open its failed runs in {app}."; each handler node keeps its own label, value "Off".
+- **Tap (mine, for Idris and Ines):** while `failed_count >= 100`, the s4.1 chooser draws every handler action as a link to the widget's Activity screen on its failed runs (small: drawn plain, `widgetURL` to the same screen); ops-only actions stay intents. This shows nothing that did not happen (no Toggle flips back). The tap-time refusal stays the authority.
+- **In-app view:** "Buttons are off" header with the file's own count, the most common failure, "Open script at line {line}", "Clear {n} failed runs" (asks first), "Export"; after a refused tap, the banner "That tap did not run. Fix this widget to turn its buttons back on."
+
 ## 6. Paging
 
 `w.pager("page", count=n)` plus `ui.Pages("page", p0, p1, ...)`, which serializes as a `Group` of `When("state.page", i, p_i)` with `otherwise` = `p0`, so an out-of-range page (data shrank) shows the first page instead of nothing. All pages are in the tree, so the whole widget must fit `MAX_WIDGET_TREE_BYTES` (512 KiB, contract s7); a pager over 10 pages draws a lint warning [ours]. Next/prev are ops-only actions: instant, no Python, every iOS. Python re-renders the pages whenever the widget runs; `state.page` survives runs.
@@ -360,7 +391,7 @@ Board lines: T-0157 (Maren, wording) and T-0158 (Idris, ADR-007). Odalys's T-013
 ### 7.1 URL grammar (custom scheme; no universal links, which need a server)
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 7.1 URL grammar (custom scheme; no universal links, which need a server), scrolls sideways" data-n="3" style="--tw:706px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 7.1 URL grammar (custom scheme; no universal links, which need a server), scrolls sideways" data-n="3" style="--tw:706px" markdown="1">
 
 | URL | Meaning | Signed |
 |---|---|---|
@@ -388,7 +419,7 @@ Widgets take no text (s1). An action declared with `input=` is always drawn as a
 Three fixed control kinds ship in the widget extension; the person adds any of them as often as they like and picks what each one does in its configuration.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 8. Control Center, Lock Screen and Action button controls, scrolls sideways" style="--tw:1330px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 8. Control Center, Lock Screen and Action button controls, scrolls sideways" style="--tw:1330px" markdown="1">
 
 | Kind (permanent strings) | Template | Configuration | Value | Action |
 |---|---|---|---|---|
@@ -422,7 +453,7 @@ PROPOSAL-002 row 2 calls the Run Script control "an App Intent we already build"
 ## 10. Limits
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 10. Limits, scrolls sideways" style="--tw:960px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: 10. Limits, scrolls sideways" style="--tw:960px" markdown="1">
 
 | Limit | Value | Source |
 |---|---|---|
@@ -453,7 +484,7 @@ PROPOSAL-002 row 2 calls the Run Script control "an App Intent we already build"
 ## 11. Failure behaviour
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 10: 11. Failure behaviour, scrolls sideways" style="--tw:958px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 11. Failure behaviour, scrolls sideways" style="--tw:958px" markdown="1">
 
 | Case | Shown | State |
 |---|---|---|
@@ -507,7 +538,7 @@ Top 5 items per page, up to 3 pages, from a list the script fetched at its last 
 Each row is cheap now and a breaking change later. Owners named; none of these is done by this task.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 13. What v1 must reserve so 1.1 does not break it, scrolls sideways" data-n="1" style="--tw:1005px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 12: 13. What v1 must reserve so 1.1 does not break it, scrolls sideways" data-n="1" style="--tw:1005px" markdown="1">
 
 | # | Reserve in v1 | Why | Owner |
 |---|---|---|---|
@@ -533,7 +564,7 @@ Each row is cheap now and a breaking change later. Owners named; none of these i
 Additions after review (2026-10-26): s5.8 (G-L5-5 kill test and device run, new G-L5-7, G-L5-4 and G-L5-2 rows).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 12: 14. Gates (Simulator first, device where marked), scrolls sideways" style="--tw:1044px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 13: 14. Gates (Simulator first, device where marked), scrolls sideways" style="--tw:1044px" markdown="1">
 
 | Gate | Question | How | Pass |
 |---|---|---|---|
@@ -577,7 +608,7 @@ The s4.1 routing is accepted as written: `WidgetOpsIntent` only in the extension
 **What v1 reserves (before the Day 13 freeze, 2026-11-03).** The app and the extension ship in one bundle and update together, and trees on the device come from the bundled package, so a v1 renderer on the phone never meets a 1.1 tree. The cross-version path that is real is L4 s8's: a newer document on an older renderer (the web renderer, a shared gallery script). I keep the rows that serve that path or that cost nothing, and drop the rows that only guard a phone-side mismatch that cannot happen.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 13: Chair note (Ines), 2026-10-26 00:15 ET: items 1 and 2, and what v1 reserves, scrolls sideways" style="--tw:578px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 14: Chair note (Ines), 2026-10-26 00:15 ET: items 1 and 2, and what v1 reserves, scrolls sideways" style="--tw:578px" markdown="1">
 
 | Row | Ruling | Owner |
 |---|---|---|
@@ -596,7 +627,7 @@ The s4.1 routing is accepted as written: `WidgetOpsIntent` only in the extension
 </div>
 
 
-What this costs before the freeze: my estimate is under half a day for Idris, most of it fixtures inside the renderer work he is already doing, and under an hour for Pernille. Neither of these earns by <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span>. Both keep 1.1 from breaking documents people have already saved, so they go in at P2, behind the renderer and the Pro purchase.
+What this costs before the freeze: my estimate is under half a day for Idris, most of it fixtures inside the renderer work he is already doing, and under an hour for Pernille. Neither of these earns by Day 30. Both keep 1.1 from breaking documents people have already saved, so they go in at P2, behind the renderer and the Pro purchase.
 
 ### Chair note 2 (Ines), 2026-10-26 01:12 ET: the review answers; S1, S6, S7 and ADR-007 items 1, 4, 6
 
@@ -605,7 +636,7 @@ Form: independent review (Odalys, T-0108, 508b6e4b), the author's replies (Idris
 **Verdict.** The write-ahead design is accepted. It is better than what I ruled at 00:15: my S6 promised "never dropped", and the layout I accepted could not keep that promise (B1, B2). I should have asked for the review before writing the promise, not after. Three amendments of mine (A1-A3) follow. All three are 1.1 doc changes. The only v1 code this review produces is the widget id rule, and that rule is wider than the board line says (last part of this note).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 14: Chair note 2 (Ines), 2026-10-26 01:12 ET: the review answers; S1, S6, S7 and…, scrolls sideways" style="--tw:1131px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 15: Chair note 2 (Ines), 2026-10-26 01:12 ET: the review answers; S1, S6, S7 and…, scrolls sideways" style="--tw:1131px" markdown="1">
 
 | Item | Idris's proposal (312d6a1e) | Ruling | Why |
 |---|---|---|---|

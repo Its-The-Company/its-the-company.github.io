@@ -281,6 +281,46 @@ All verified in the SDK. Additive, so s8 allows them after freeze, but A1 and A2
 - Rename my type tokens `title1` and `caption1` to SwiftUI's `title` and `caption` in design-system-v0 s3.2 and tokens.json, so a user never meets two names for one style.
 - Express tracking in points as well as em in s3.3, once A3 exists.
 - Error-text review: I need the full list of user-facing messages (`ViewTreeError.reason` strings and IDE warnings) to review them line by line.
+
+## Check after 0.3.0 (T-0020), 2026-10-26 02:41 ET
+
+A short check, not a new review (Idris s7.7). Read against bdc83f8f, 53e9edb9, 086d9b47 at HEAD 01142fc1: `pywidget_ui/__init__.py` and `.pyi`, API.md, viewtree.schema.json, L4 s4. Method: a probe script (/tmp, not committed) imported the package and checked each name, each signature and the JSON each call writes; old names checked absent. `run_host.py --both`: 1,026 tests, 0 failed suites (3.9.6 and 3.13.18).
+
+**Renames, s7.1-7.2 (19 rows): 19 applied, 0 missing, 0 different.**
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: Check after 0.3.0 (T-0020), 2026-10-26 02:41 ET, scrolls sideways" style="--tw:892px" markdown="1">
+
+| Rename | Package | Stub | API.md | Schema |
+|---|---|---|---|---|
+| `VERSION` to `SCHEMA_VERSION` (+ `__version__` 0.3.0) | applied | applied | applied | n/a |
+| `FAMILIES` to `ALL_FAMILIES` (9, `accessoryCorner` in) | applied | applied | applied | n/a |
+| `IOS_FAMILIES` to `FAMILIES` (8, `accessoryCorner` out) | applied | applied | applied | n/a |
+| `ACCENTED_MODES` to `ACCENTED_RENDERING_MODES` | applied | applied | applied | n/a |
+| `MAX_INLINE_BITMAP` to `MAX_INLINE_BITMAP_BYTES` | applied | applied | applied | n/a |
+| `Color.rgb(a=)` to `opacity=` (still written `a`) | applied | applied | applied | n/a |
+| `Color.material` to `Material` | applied | applied | applied | n/a |
+| `foreground`, `rotation`, `scale`, `multiline_alignment` to `foreground_style`, `rotation_effect`, `scale_effect`, `multiline_text_alignment` (4) | applied | applied | applied | n/a |
+| `symbol_rendering` to `symbol_rendering_mode` | applied | applied | applied | n/a |
+| `accented_rendering` to `widget_accented_rendering_mode`; schema `widgetAccentedRenderingMode` | applied | applied | applied | applied (emitted; old name 0 in schema, L4 s4 uses the new one) |
+| `invalidatable` to `invalidatable_content` | applied | applied | applied | n/a |
+| `aspect_ratio(ratio=None, content_mode="fit")` | applied | applied | applied | n/a |
+| `AccessoryBackground` to `AccessoryWidgetBackground`, node `t` too | applied | applied | applied | applied |
+| `PathBuilder.rect` / `ellipse` `w, h` to `width, height` (2) | applied | applied | applied | n/a |
+| `When(env, value, *then, otherwise=())` | applied | applied | applied | n/a (keys stay `is`, `alt`) |
+
+</div>
+
+
+**s7.3 agreed items: all applied.** `views_by_family` (no `views`; neither given raises "an entry takes view ... exactly one"); `Entry._roots`; `iso` on a naive datetime raises "give the datetime a time zone, for example datetime.now(timezone.utc) ..."; `Font.custom(relative_to=None)`; `overlay` takes a paint; `arc(clockwise=True)` writes SwiftUI's `"clockwise": false`.
+
+**<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Chair</span> rulings (s8): both applied.** Ruling 1: `Image.symbol(name, variable_value=None)`, and the schema's symbol source has no `renderingMode` (the one `renderingMode` left is the `When` env key, correct). Ruling 2: `clip_shape()` writes `"shape": "ContainerRelativeShape"`; `clip_shape(Circle())` writes `Circle`; schema `clipShape` requires `shape`, no default, and requires `cornerRadius` for `RoundedRectangle`; A1 node `ContainerRelativeShape` exists and is in `shapeName`.
+
+**The RoundedRectangle radius message** (the board line had it as mine to write). Pernille's text is in: "clip_shape('RoundedRectangle') needs corner_radius, for example corner_radius=12; or call clip_shape() to follow the widget's corners". It names the fix, gives a value and offers the rule-following default. I adopt it as written; no change.
+
+**Not checked here:** the G-rows (G1-G3, G6, G9, G10, G14-G16) in the schema and spec, which this check does not cover; my design-system follow-ups above (title1/caption1) are mine and still open.
+
+**Result: pass.**
 {% endraw %}
 
 </div>

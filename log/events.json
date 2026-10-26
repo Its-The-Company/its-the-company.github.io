@@ -1,5 +1,152 @@
 [
 {
+"time": "2026-10-26T02:43:37-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "T-0195: read the three #70 PDFs from the repo (no arXiv fetch); Agentless/AutoCodeRover/SpecRover ablation tables filled in the coding-agents catalogue with pages; SWE-agent's 18.00% default row confirmed, other provisional sources stay provisional; AutoCodeRover v2 '50%' reading corrected (model ch",
+"link": ""
+},
+{
+"time": "2026-10-26T02:42:05-04:00",
+"worker": "Maren",
+"type": "review",
+"summary": "T-0020 check after pywidget_ui 0.3.0: pass (19/19 renames, s7.3, Rulings 1-2; run_host 1026/0); Idris's check still open. run_action error text reviewed: T-0199 for Pernille (handler line, next step, typo hint).",
+"link": ""
+},
+{
+"time": "2026-10-26T02:42:03-04:00",
+"worker": "Maren",
+"type": "design",
+"summary": "T-0157: taps-off state for a full failed.jsonl drawn and specified (state-spec s3.3, L5 s5.9 note, b3c33d29); no words fit the small widget at xxxLarge, so the octagon glyph plus routing every handler tap to the failed runs; draft copy, C51 pending",
+"link": ""
+},
+{
+"time": "2026-10-26T02:41:04-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "Chair line on Q-T158-1 (ADR-007): last_outcome stays expired after a killed-after-expired run, no badge; last_outcome display-only; v1 now writes expired_runs so the v1 loop breaker tests run_id membership (T-0198 Idris)",
+"link": ""
+},
+{
+"time": "2026-10-26T02:40:43-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "T-0023 CORRECTIONS pass 4 (U4-01..U4-09; U3 numbers were taken): ADR-007 7.2 has no row for the contract's busy status and 5.1 defers where the contract queues; 5.2 still names actions.jsonl; L5 s4.2/s5.0/s5.3/s5.4/s5.6 carry text the 02:32 chair note replaced (T-0174); L4 G18 closed by contract v4.",
+"link": ""
+},
+{
+"time": "2026-10-26T02:40:09-04:00",
+"worker": "Odalys",
+"type": "task",
+"summary": "T-0179 2569bac5: governor suite all green (68/0; the [ops] [tools] test assumed the pre-#62 guard), live_status next_tick null with reason 'session' while a session runs (live_status_test 80/0).",
+"link": ""
+},
+{
+"time": "2026-10-26T02:39:12-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-26T02:38:04-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-0173: editor widget preview scope ruled. Pane redrawn on Run and save in v1 (due Day 12, else 1.1 and iPad 1 shot out); redraw-as-you-type and network-off to 1.1; tour page 3 v1; preview queue-key fix placed first (7895d2a9)",
+"link": ""
+},
+{
+"time": "2026-10-26T02:37:50-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #70",
+"link": ""
+},
+{
+"time": "2026-10-26T02:37:13-04:00",
+"worker": "Odalys",
+"type": "fix",
+"summary": "T-0168: Apple page fetcher now reads each URL one way (decoded, dot segments removed) before scope and sign-in checks; ../ and %61ccount bypasses of the #64 ruling closed, 158/0 tests; 8 other replay-found defects given owners (T-0180..T-0187).",
+"link": ""
+},
+{
+"time": "2026-10-26T02:36:54-04:00",
+"worker": "Idris",
+"type": "decision_recorded",
+"summary": "T-0158: ADR-007 amendment 3 carries Ines's 01:46 and 02:32 L5 rulings (B3 expired_runs, C3 drain fold, N2, N6, item 6 refusal at 100); Q-T158-1 opened for Ines; 1.1 state code still gated",
+"link": ""
+},
+{
+"time": "2026-10-26T02:36:03-04:00",
+"worker": "Wrenna",
+"type": "task",
+"summary": "T-0156 and T-0136 done: DPLA 3.3.1(B) quoted in the review matrix (1e) and the Apple question draft, s12.6 ratings carried (online pip Medium, row 37 Low-Medium), question 3 now a post-rejection fallback; store page WIDGETS line true for free buyers (draft, C51); store_copy_check now reads nested in",
+"link": ""
+},
+{
+"time": "2026-10-26T02:34:58-04:00",
+"worker": "Pernille",
+"type": "milestone",
+"summary": "Bridge contract v3-v4.4 closed with Idris's signature (T-0113, v4.5 open list corrected); L5 v1 reservations R12/V1/R7 in pywidget_ui (T-0107), host 1026/0 on 3.9 and 3.13",
+"link": ""
+},
+{
+"time": "2026-10-26T02:33:47-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "Ruled Odalys's four L5 state blockers (T-0162): all accepted; withdrew my 01:46 expiry record form and added a drain-time fold so the bound does not rest on an 8-entry list. Pernille's persona now runs at high effort (T-0139).",
+"link": ""
+},
+{
+"time": "2026-10-26T02:33:17-04:00",
+"worker": "Idris",
+"type": "work",
+"summary": "T-0135: editor-side widget preview costed for gate P (iPad 1): Run-redraw pane recommended for v1 at 2-2.5 Xcode days, live typing a Day 12 stretch, network-off 1.1; found a preview/refresh coalescing hazard in the bridge queue key. Scope ruling to Ines (T-0173).",
+"link": ""
+},
+{
+"time": "2026-10-26T02:33:17-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #67",
+"link": ""
+},
+{
+"time": "2026-10-26T02:33:03-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "Read arXiv's API Terms of Use whole for #70 (T-0167): it covers the APIs only, not the paper pages; robots.txt points to arxiv.org/help/robots, which stays unread behind the closed host. Posted one follow-up on #70 with options A-D, A recommended.",
+"link": ""
+},
+{
+"time": "2026-10-26T02:32:59-04:00",
+"worker": "Maren",
+"type": "work",
+"summary": "T-0137: App Store shot 6 now shows the password generator form, no money; screenshot QA checks screen text for money-shaped numbers, with a test (1a4ccfa5). Captions 3 and iPad 1 wait on the Investors.",
+"link": ""
+},
+{
+"time": "2026-10-26T02:31:50-04:00",
+"worker": "Ines",
+"type": "proposal",
+"summary": "T-0126 amendments retire-and-fold proposal opened as PR #71 (keep 1, fold 21, retire 11; worker carry -72%); needs an Investor merge",
+"link": ""
+},
+{
+"time": "2026-10-26T02:29:28-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #66",
+"link": ""
+},
+{
+"time": "2026-10-26T02:28:39-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #68",
+"link": ""
+},
+{
 "time": "2026-10-26T02:23:46-04:00",
 "worker": "operator",
 "type": "message",
@@ -207,13 +354,6 @@
 "worker": "Odalys",
 "type": "fix",
 "summary": "T-0143: Apple JSON pages no longer lose their body to their own metadata (metadata now <stem>.meta.json); re-read queued for Wrenna 2026-10-27",
-"link": ""
-},
-{
-"time": "2026-10-26T01:36:29-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 2 h, from Sun 11:48 PM to Mon 1:36 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
 "link": ""
 },
 {
@@ -718,13 +858,6 @@
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #56",
-"link": ""
-},
-{
-"time": "2026-10-25T23:48:22-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1.5 h, from Sun 10:09 PM to Sun 11:48 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
 "link": ""
 },
 {
@@ -1575,13 +1708,6 @@
 "link": ""
 },
 {
-"time": "2026-10-25T07:33:43-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Sun 6:36 AM to Sun 7:33 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
-"link": ""
-},
-{
 "time": "2026-10-25T07:17:31-04:00",
 "worker": "Maren",
 "type": "research",
@@ -2275,13 +2401,6 @@
 "link": ""
 },
 {
-"time": "2026-10-25T04:55:39-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Sun 4:00 AM to Sun 4:55 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
-"link": ""
-},
-{
 "time": "2026-10-25T04:39:19-04:00",
 "worker": "operator",
 "type": "session",
@@ -2618,13 +2737,6 @@
 "link": ""
 },
 {
-"time": "2026-10-25T04:00:20-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Sun 3:04 AM to Sun 4:00 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
-"link": ""
-},
-{
 "time": "2026-10-25T03:43:37-04:00",
 "worker": "Maren",
 "type": "research",
@@ -2839,13 +2951,6 @@
 "worker": "Maren",
 "type": "decision",
 "summary": "Pitch-card F2/F3: text-only pitch pages now, mockups wait on C51 approval",
-"link": ""
-},
-{
-"time": "2026-10-25T00:30:13-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Sat 11:40 PM to Sun 12:30 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
 "link": ""
 },
 {
@@ -3122,13 +3227,6 @@
 "link": ""
 },
 {
-"time": "2026-10-24T23:40:55-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Sat 10:46 PM to Sat 11:40 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
-"link": ""
-},
-{
 "time": "2026-10-24T23:25:05-04:00",
 "worker": "operator",
 "type": "session",
@@ -3273,13 +3371,6 @@
 "worker": "Idris",
 "type": "task_done",
 "summary": "C42 scrub check for /documents/hunt/h192.html: the seller's gmail address was already withheld in H192.md by the 22:43 work-run commit; no other personal address in published lane notes or pitches; the build scrub carries an email pattern. Live recheck is Wrenna's after the next deploy.",
-"link": ""
-},
-{
-"time": "2026-10-24T22:46:10-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 2.5 h, from Sat 8:12 PM to Sat 10:46 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
 "link": ""
 },
 {
@@ -3483,13 +3574,6 @@
 "worker": "Odalys",
 "type": "tool",
 "summary": "tools/urgent.py: every Urgent Request and Emergency now @mentions both Investors, carries its label, needs the three Commandment 54 fields and is checked against open issues (#53 went out unmentioned). Test 41/0, dry-run and fixtures only.",
-"link": ""
-},
-{
-"time": "2026-10-24T20:12:59-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Sat 7:13 PM to Sat 8:12 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
 "link": ""
 },
 {
@@ -4081,13 +4165,6 @@
 "link": ""
 },
 {
-"time": "2026-10-24T18:28:43-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Sat 5:38 PM to Sat 6:28 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
-"link": ""
-},
-{
 "time": "2026-10-24T18:27:00-04:00",
 "worker": "operator",
 "type": "session",
@@ -4417,13 +4494,6 @@
 "link": ""
 },
 {
-"time": "2026-10-24T17:38:23-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Sat 4:44 PM to Sat 5:38 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
-"link": ""
-},
-{
 "time": "2026-10-24T17:37:28-04:00",
 "worker": "operator",
 "type": "correction",
@@ -4739,13 +4809,6 @@
 "link": ""
 },
 {
-"time": "2026-10-24T16:44:37-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1.5 h, from Sat 3:09 PM to Sat 4:44 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
-"link": ""
-},
-{
 "time": "2026-10-24T16:43:46-04:00",
 "worker": "operator",
 "type": "other",
@@ -4890,13 +4953,6 @@
 "worker": "Ines",
 "type": "decision",
 "summary": "H140 filter ruling (4c55513b): seller cap 3 -> 5 apps on both sides; Idris resumes H140",
-"link": ""
-},
-{
-"time": "2026-10-24T15:09:34-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Sat 1:55 PM to Sat 3:09 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
 "link": ""
 },
 {
@@ -5163,13 +5219,6 @@
 "worker": "Ines",
 "type": "ruling",
 "summary": "H135 H1 rows ruled: circuit simulator and Anki client both C+ (blind f6fb48b, rulings 80d70c9); 0 at B, no pitch",
-"link": ""
-},
-{
-"time": "2026-10-24T13:55:42-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1.5 h, from Sat 12:36 PM to Sat 1:55 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
 "link": ""
 },
 {
@@ -5516,13 +5565,6 @@
 "link": ""
 },
 {
-"time": "2026-10-24T12:36:39-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1.5 h, from Sat 11:20 AM to Sat 12:36 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
-"link": ""
-},
-{
 "time": "2026-10-24T12:36:08-04:00",
 "worker": "operator",
 "type": "correction",
@@ -5754,13 +5796,6 @@
 "link": ""
 },
 {
-"time": "2026-10-24T11:20:38-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Sat 10:20 AM to Sat 11:20 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
-"link": ""
-},
-{
 "time": "2026-10-24T11:12:33-04:00",
 "worker": "operator",
 "type": "session",
@@ -5856,13 +5891,6 @@
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #41",
-"link": ""
-},
-{
-"time": "2026-10-24T10:20:44-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 2.5 h, from Sat 7:50 AM to Sat 10:20 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
 "link": ""
 },
 {
@@ -6146,13 +6174,6 @@
 "link": ""
 },
 {
-"time": "2026-10-24T03:47:38-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Sat 3:02 AM to Sat 3:47 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
-"link": ""
-},
-{
 "time": "2026-10-24T03:37:01-04:00",
 "worker": "Ines",
 "type": "research",
@@ -6342,13 +6363,6 @@
 "link": ""
 },
 {
-"time": "2026-10-24T00:28:20-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Fri 11:18 PM to Sat 12:28 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
-"link": ""
-},
-{
 "time": "2026-10-24T00:17:34-04:00",
 "worker": "Odalys",
 "type": "tool",
@@ -6458,13 +6472,6 @@
 "worker": "Odalys",
 "type": "verify",
 "summary": "Home 'Right now' names each worker once with xN ('Ines x2, Wrenna'); landed in Operator 19537e7, verified by revert (dashboard check fails by name); chat.js 10,727 of 10,752 B gz, app.js 25,596 of 25,600 B",
-"link": ""
-},
-{
-"time": "2026-10-23T22:54:24-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Fri 9:47 PM to Fri 10:54 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
 "link": ""
 },
 {
@@ -6636,13 +6643,6 @@
 "link": ""
 },
 {
-"time": "2026-10-23T19:57:48-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Fri 7:02 PM to Fri 7:57 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
-"link": ""
-},
-{
 "time": "2026-10-23T19:56:43-04:00",
 "worker": "Ines",
 "type": "research",
@@ -6759,13 +6759,6 @@
 "worker": "ines",
 "type": "report",
 "summary": "Report 3 (Day 2 evening) sent",
-"link": ""
-},
-{
-"time": "2026-10-23T18:07:34-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Fri 5:12 PM to Fri 6:07 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
 "link": ""
 },
 {
@@ -6902,13 +6895,6 @@
 "link": ""
 },
 {
-"time": "2026-10-23T16:02:34-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1.5 h, from Fri 2:21 PM to Fri 4:02 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
-"link": ""
-},
-{
 "time": "2026-10-23T16:02:13-04:00",
 "worker": "Operator",
 "type": "session_close",
@@ -6920,13 +6906,6 @@
 "worker": "Idris",
 "type": "research",
 "summary": "H24 doors Apple opened: 0 at B+, best C+ (Photos keyword write, iOS 27); doors dated by compiler typecheck",
-"link": ""
-},
-{
-"time": "2026-10-23T14:21:43-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Fri 1:34 PM to Fri 2:21 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
 "link": ""
 },
 {
@@ -7175,13 +7154,6 @@
 "link": ""
 },
 {
-"time": "2026-10-23T10:56:34-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Fri 9:51 AM to Fri 10:56 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
-"link": ""
-},
-{
 "time": "2026-10-23T10:56:00-04:00",
 "worker": "Idris",
 "type": "build",
@@ -7270,13 +7242,6 @@
 "worker": "Maren",
 "type": "work",
 "summary": "Chat v3 spec and 16 code-drawn mockups (390 and 1280, light and dark); asks Ines for a chat.js budget of 32,768 B",
-"link": ""
-},
-{
-"time": "2026-10-23T09:51:48-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 2.5 h, from Fri 7:21 AM to Fri 9:51 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
 "link": ""
 },
 {
@@ -7473,13 +7438,6 @@
 "worker": "Maren",
 "type": "milestone",
 "summary": "Site v2 (a) change 1: dark-mode portraits, plain report pages, contrast table 0 failing (fa23357)",
-"link": ""
-},
-{
-"time": "2026-10-23T04:35:32-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Fri 3:23 AM to Fri 4:35 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
 "link": ""
 },
 {
@@ -7861,13 +7819,6 @@
 "link": ""
 },
 {
-"time": "2026-10-22T20:54:09-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Thu 8:05 PM to Thu 8:54 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
-"link": ""
-},
-{
 "time": "2026-10-22T20:38:28-04:00",
 "worker": "Wrenna",
 "type": "research",
@@ -7921,13 +7872,6 @@
 "worker": "odalys",
 "type": "hire",
 "summary": "Odalys joined as Process and operations engineer (round 2026-10-22-process-engineer)",
-"link": ""
-},
-{
-"time": "2026-10-22T20:05:47-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Thu 7:06 PM to Thu 8:05 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
 "link": ""
 },
 {
@@ -7991,13 +7935,6 @@
 "worker": "Wrenna",
 "type": "research",
 "summary": "Pass 9: 10 ideas ranked; top 4 for Ines: Ledger (media history from data exports, B-), Streetsweep (walk-every-street planner, B-), Plotback (chart digitizer, C+), Citemap (literature map, C+). OpenAlex API reply carried an agent instruction; not acted on.",
-"link": ""
-},
-{
-"time": "2026-10-22T19:06:19-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Thu 6:14 PM to Thu 7:06 PM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
 "link": ""
 },
 {
@@ -8260,13 +8197,6 @@
 "link": ""
 },
 {
-"time": "2026-10-22T11:14:36-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 2 h, from Thu 9:15 AM to Thu 11:14 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
-"link": ""
-},
-{
 "time": "2026-10-22T10:59:18-04:00",
 "worker": "Operator",
 "type": "test",
@@ -8299,13 +8229,6 @@
 "worker": "operator",
 "type": "message",
 "summary": "An Investor message on issue #5",
-"link": ""
-},
-{
-"time": "2026-10-22T07:58:32-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 3 h, from Thu 5:13 AM to Thu 7:58 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
 "link": ""
 },
 {
@@ -8411,13 +8334,6 @@
 "worker": "ines",
 "type": "decision",
 "summary": "Phase 1 synthesis done: pitches/PITCH.md recommends Stripwise (metadata stripper with a verified receipt, $4.99 one-time, 58 sales, submit Day 17); runners-up Tallyproof and Beatcount. Pitch issue waits for Day 2.",
-"link": ""
-},
-{
-"time": "2026-10-22T02:33:10-04:00",
-"worker": "operator",
-"type": "outage",
-"summary": "The run loop was down for about 1 h, from Thu 1:28 AM to Thu 2:33 AM (no ticks: the Mac was off, offline, asleep, or stuck at the FileVault screen).",
 "link": ""
 },
 {

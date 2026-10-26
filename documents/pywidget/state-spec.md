@@ -117,10 +117,54 @@ Chair ruling 2026-10-25 20:08 item 3, ADR-007 7.1 row 2. A placed Pro premade wh
 - `check_states.py` fails if `pro_card` is not between `update` and `error_card` in `priority`, if any Pro card string (or its VoiceOver) carries a price or sales word, or if the Lock Screen string is more than the title. `draw_states.py` QA fails on any drawn word outside {name, "Needs Pro", "Tap to open"} (Lock Screen: "Needs Pro"), any price, any slot on a Pro card, and any text outside the accessoryCircular circle.
 - **Note, 2026-10-26 00:16 ET (Maren, T-0062).** Citation: the bar above was "2.5.16" until now (CORRECTIONS P5). 2.5.16 says only that widgets "should be related to the content and functionality of your app" (p. 20); 4.4 is the rule that bars a purchase inside an extension. Design unchanged. The 20:08 ruling's own 2.5.16 bullet is Ines's text and is not edited here. Checked against the 00:05 ruling (5 free, 7 Pro, no Pro premade needs a permission): s3.2 holds. No Pro premade asks for a grant, so a Pro card never stands in for a "Location is off" state, and its tap opens the detail sheet with no prompt. Checked against Storage (premade 8, Pro; families small, medium, circular, rectangular; stale after 6 h; LOW SPACE under 10%): an unentitled Storage shows the Pro card, never its last render, LOW SPACE or the stale mark (`pro_card` outranks `stale` in `priority`); "STORAGE" (7 characters) fits the small name line; circular and rectangular follow the Lock Screen bullet. One mismatch, not redrawn: `states-pro-card.png` names its samples MOON (small), HOURLY WEATHER (medium), HABITS (large) and TODAY BOARD (extra large) (`NAMES` in `draw_states.py`). Only HABITS is in the 7 Pro. They are placeholders for name length, and the card's words do not depend on them. On the next re-render, take the names from the Pro set: STORAGE (small), WORLD CLOCKS (medium), HABITS (large), DAY PROGRESS (extra large). Re-rendered 2026-10-26 01:19 ET (T-0104): `NAMES` now STORAGE, WORLD CLOCKS, HABITS, DAY PROGRESS; `states-pro-card.png` 180,835 B, QA 0 faults.
 
+### 3.3 Taps off: `failed.jsonl` at 100 (draft copy, NOT APPROVED, C51)
+
+Maren, 2026-10-26 02:41 ET, T-0157. Answers the wording part of L5 s5.9 Q-T130-2 (chair note, Ines, 01:46 ET): at 100 rows every handler tap on the widget is refused, `queue` and live; ops-only actions still run; a refused `link` tap opens the app on the widget's failed rows. Draft UI text: it goes to the Investors with the next creative batch and is not approved. Sheet: `states-taps-off.png` (714,341 B, 1x), drawn by `draw_taps_off.py` (copy in its `COPY`, the single source until approval), QA in `taps-off-qa.json`.
+
+**What the widget shows.** The last good render, unchanged, with a new glyph in the corner slot (s2): `exclamationmark.octagon.fill` [recall; Idris confirms the name]. The octagon is the stop sign: filled and heavy like the error badge (act), and a different outline from every circle glyph, so it reads apart from "last run failed" in grey. Colour as the error badge: `status.danger` in full colour, the glyph alone accentable in accented, white 1.0 in vibrant; knock-out halo in full colour only (s2 note T-0144). No words on the widget.
+
+**Priority (s1).** New row between the error card (3) and the error badge (4): trigger `state.json` `failed_count >= 100` (L5 s5.9 chair note 02:32, B2). It outranks the badge and the stale mark because only the person can clear it. Joins `priority` and `state-tokens.json` after approval, not before.
+
+**Why no words on the widget (the constraint, measured).** The chair's example "Fix this widget in PyWidget" is 226.8 pt wide in SF semibold at caption2 xxxLarge (17 pt), where widgets clamp. The small widget on the smallest iOS 18 iPhone (SE, 375 pt) is 148 × 148 pt [recall], 116 × 116 pt inside the margins. "Fix this widget" alone is 121.6 pt: it fits only as a full-bleed strip with no glyph, and the strip takes 30 pt of the 116 pt layout height (26%). Option B on the sheet draws it: the user's buttons are clipped at xxxLarge (QA `option_b`, 1 fault, kept as evidence). The slot never moves or covers the user's layout (s2), so the words go where the person meets the refusal: the tap.
+
+**What a tap does (the renderer; mine, Idris confirms against L5 s4.1).** At render time, if `failed_count >= 100`, the intent chooser in L5 s4.1 gets a first branch: an action with a handler is drawn as a `Link` to the widget's Activity screen on its failed runs (proposed `pywidget://w/<id>/activity?show=failed`, unsigned because it only opens a screen, L5 s7.2; this and s3.1's `view=activity` must become one route, Idris names it). In systemSmall a `Link` is not its own target, so the node is drawn plain and the widget's `widgetURL` becomes that route while taps are off. Ops-only Buttons and Toggles stay intents and keep working. Why: a refused intent tap gives the person nothing but a reload, and a handler Toggle would flip at once [recalled, L5 s4.2] and then snap back, which shows a change that did not happen. The tap-time check in the extension and the app stays the authority: it covers a render drawn before the 100th row landed and the one-low `failed_count` window (B2). The first refused tap reloads the widget into this state.
+
+**Families.**
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 3.3 Taps off: failed.jsonl at 100 (draft copy, NOT APPROVED, C51), scrolls sideways" style="--tw:881px" markdown="1">
+
+| Family | Shows | Tap |
+|---|---|---|
+| systemSmall | last render + octagon in the slot | handler nodes plain; whole widget opens the failed runs |
+| systemMedium, Large, ExtraLarge | last render + octagon in the slot | the slot and every handler node open the failed runs |
+| accessoryCircular, Rectangular | 14 pt octagon per s5 | `widgetURL` opens the failed runs (Buttons are inert on the Lock Screen, L5 s9) |
+| accessoryInline | octagon replaces the leading symbol; the text stays | as above |
+
+</div>
+
+
+Surfaces as s4: small in light (A Paper), dark (B Studio), accented, vibrant (StandBy); medium to extra large in light, dark, accented; Lock Screen vibrant. Glyph contrast at the slot, 3:1 floor: light 6.54; dark, sampled on the card gradient under the slot centre, 3.91 (large) to 4.70 (medium) (the gradient's start colour alone would read 2.75, but the slot never sits on it); accented sample tint 6.90; vibrant 21.0. The glyph has no text, so Dynamic Type does not change it; the sample content is drawn at xxxLarge, QA 0 clipped, 0 truncated, 0 text over text, 0 slot over text.
+
+**VoiceOver** ("{app}" is `CFBundleDisplayName`, now "PyWidget", so a rename does not break the copy; "Double-tap" as s3.2):
+- Widget summary (small) and the slot element (medium and larger), label: "{widget}. Fix this widget. Buttons that run its script are off." Hint: "Double-tap to open its failed runs in {app}."
+- Each handler node: its own label from the script, unchanged; value "Off"; hint "Double-tap to open the failed runs in {app}."
+- Lock Screen: the same label and hint. Nothing in them is private.
+- No count in the widget strings: `failed_count` can read one low (B2), so the exact number is said only in the app, from the file.
+
+**What the tap opens** (the T-0048 Activity screen, filtered to failed runs; Idris builds):
+- Arrival banner, only after a refused tap: "That tap did not run. Fix this widget to turn its buttons back on." with "Back" (as the L5 s4.2 result banner). True on every path: no ops applied, no row written.
+- Header: octagon + "Buttons are off". Body: "{widget} has {n} failed runs saved. Buttons that run its script stay off until you clear them. Buttons that only change the widget still work." Then "Most failed with {type} on line {line} ({k} of {n})." `n` is the file's line count, which may be over 100.
+- Actions: primary "Open script at line {line}" (the fix is in the script; one primary per screen), then "Clear {n} failed runs" (`status.danger`), "Export" (share sheet only, PROPOSAL-002 s5). Clear asks first: "Clear {n} failed runs?" / "Their tracebacks are deleted from this device. Buttons that run the script turn back on." / "Clear", "Cancel". After it: "Buttons are back on." and the app reloads the widget. Rows can also be deleted one at a time; buttons come back below 100, so "until you clear them" errs toward the full clear.
+- Row reasons: error "{type}, line {line}"; timeout "Took too long" (L5 s11); killed "Stopped after 3 tries"; conflict "Not saved: state changed during the run"; a cut traceback adds "Traceback cut to its last 4 KB".
+- Dynamic Type to AX5: at AX1 and up the three actions stack full width and the rows stack time over reason (sheet: AX3 panel). Contrast: Clear text 5.49 light, 8.05 dark; primary 7.38 light, 6.83 dark.
+
+Open: glyph name and the route (Idris); the s4.1 branch (Idris, Ines); C51 with the next creative batch. On approval, `taps_off` joins `priority` and the `voiceover` block, and `check_states.py` gets its copy rules.
+
 ## 4. Rendering modes
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 4. Rendering modes, scrolls sideways" style="--tw:987px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 4. Rendering modes, scrolls sideways" style="--tw:987px" markdown="1">
 
 | Mode | Glyphs | Words | Background |
 |---|---|---|---|

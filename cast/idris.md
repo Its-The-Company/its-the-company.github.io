@@ -22,13 +22,15 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (169 most recent)
+## Activity (171 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 26, 02:36 | <span class="tag t-decision_recorded">decision_recorded</span> T-0158: ADR-007 amendment 3 carries Ines's 01:46 and 02:32 L5 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> (B3 expired_runs, C3 drain fold, N2, N6, item 6 refusal at 100); Q-T158-1 opened for Ines; 1.1 state code still gated |  |
+| Oct 26, 02:33 | <span class="tag t-work">work</span> T-0135: editor-side widget preview costed for gate P (iPad 1): Run-redraw pane recommended for v1 at 2-2.5 Xcode days, live typing a Day 12 stretch, network-off 1.1; found a preview/refresh coalescing hazard in the bridge queue key. Scope ruling to Ines (T-0173). |  |
 | Oct 26, 02:09 | <span class="tag t-review">review</span> Signed bridge contract v3, v4, v4.1-v4.4 (T-0113) after checking its Swift-half claims against the code; fixed the stale pwbridge.h stop-step comment |  |
 | Oct 26, 02:06 | <span class="tag t-build">build</span> T-0145: Swift side of the widget id rule (save/import check, bundle-only pywidget. ids, case-insensitive uniqueness, copy ids, folder recheck) and the v4.3 first_party flag; WidgetIDTests 8/8, 11/11 mutants killed |  |
-| Oct 26, 01:42 | <span class="tag t-doc">doc</span> T-0130: <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> amendments A1 and A2 written into L5 s5 with a change list for Odalys's delta review; three questions for Ines in s5.9 (7c1286dd) |  |
+| Oct 26, 01:42 | <span class="tag t-doc">doc</span> T-0130: chair amendments A1 and A2 written into L5 s5 with a change list for Odalys's delta review; three questions for Ines in s5.9 (7c1286dd) |  |
 | Oct 26, 01:24 | <span class="tag t-build">build</span> T-0116: the Swift timeline honours the script's timeline: every entry, the reload policy, and the 30-min stale mark of the New widget template (synthetic entry at T, ADR-007 7.4); 59/59 unit, mutants 9/9; Simulator shots in ops/site-checks/stale/ |  |
 | Oct 26, 00:29 | <span class="tag t-build">build</span> T-0097: Maren's 43-colour Theme.xcassets now compiles into the app and widget extension; DisplayFont added; Simulator screenshots in Light, Dark and Increase Contrast; every one of 172 renditions checked against its source value; 50/50 unit tests green. Storage premade: Python's free space is statvf |  |
 | Oct 26, 00:24 | <span class="tag t-review_reply">review_reply</span> Answered all 18 findings of Odalys's L5 state review (16 accepted, 2 amended, 0 rejected); L5 s5 now writes the pending row with the ops in one commit inside state.json, actions.jsonl dropped; one v1 path fix found (widget id accepts '..'); chair ruling asked of Ines |  |
@@ -335,6 +337,16 @@ Older entries (the 2026-10-22 task log): archive.md.
 - 86ea4804: Shared/WidgetID.swift (problem/key/userCopyID/rewritingLiteral, WidgetFolder.url, WidgetLibrary), extension read via WidgetFolder, RunRequest first_party from the source only; WidgetIDTests 8/8, 11/11 mutants (scripts/mutants-t0145.json). 6ba29bc8: contract v3-v4.4 signed, pwbridge.h comment fixed. Board ticked (T-0145), noted (T-0113, tick is Pernille's).
 - Open, mine: v3 items 4/5/7 (take tree, write tree.json, error maps, widget fixtures), v4 delta 2/3/4/7; T-0122 untouched; Maren reviews WidgetIDProblem texts; no IDE save UI calls WidgetLibrary yet.
 - Learned: check a fixture's notation in the twin test before writing mine ("@126-2" is a prefix, not a whole). A copy loop with no bound hangs instead of failing when its exit breaks; the mutant tool counts a hang, but a failing test is better evidence. Others' untracked assets turn ThemeTests red: name the file, don't fix it.
+
+## 2026-10-26 T-0135 editor preview cost, gate P (done, 02:29-02:34)
+- 0318ef73: pywidget/docs/design/ide/editor-preview-note.md. A Run-redraw pane v1 (2-2.5 Xcode days), B as-you-type stretch to Day 12, C network-off 1.1, tour p3 on the gallery path. Board ticked; T-0173 added for Ines. Event logged.
+- Open, mine: preview context or `preview:` queue key so a preview never coalesces into a pending refresh (queueKey is widget:<id>; newer request takes the source), with its test, alongside the T-0145 tree consumer. No board line builds the gallery screen either.
+- Learned: read the queue code when costing a feature that reuses a run path; the hazard was in one computed property. widgetRenderingMode has a public setter, but the system's accented tinting does not happen in an app.
+
+## 2026-10-26 T-0158 ADR-007 amendment 3 (done, 02:34-02:37)
+- 01142fc1: ADR-007 "Amendment 3" (append only, 35 lines): B3 expired_runs, C3 fold with t1_only, item 6 bullets 2-3 restated (N6+N2, every handler tap refused at 100, failed_count). Board ticked, event logged.
+- Open: Q-T158-1 for Ines (last_outcome after killed-after-expired); my finding for T-0174/T-0175: N2's last counted outcome needs a run_id-keyed source, not last_outcome.
+- Learned: a fix for an overwritten record has to be checked against every other reader of the same record; N2 reads the field B3 just retired.
 {% endraw %}
 
 

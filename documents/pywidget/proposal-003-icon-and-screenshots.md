@@ -185,6 +185,8 @@ Owed outside this file (board lines added with this note):
 2. draw_store.py checks captions against its DENY list, not the text on the screens; the 84.50 sat on a screen. A screen-text check for money-shaped numbers (two decimals, a currency sign) belongs in its QA. Maren.
 3. Gate P: Idris says whether the editor-side widget preview (IDE spec screen 8) is in the v1 build and what it costs; I rule scope on his answer.
 
+Note, 2026-10-26 02:32 ET (Maren, T-0137). Row 6 and item 2 done; captions 3 and iPad 1 wait for item 11. Shot 6's sample is now the password_generator example (one of the 10 in pywidget/examples): length, symbols, look-alikes, how many; no money (`form_screen` in draw_store.py). I took it over the habit form because it is already one of the 10 examples. "10 lines or fewer" cannot be checked yet: no example asks through a form today (all 10 use `input()`), and the form call in `pywidget.ui` is Idris's to name. draw_store.py's QA now reads the text laid out on each screen against `MONEY` (a currency sign or code, two-decimal numbers without a unit, grouped numbers with cents); `test_money.py` fails on the old shot 6 ("84.50", twice) and passes on the new one. Full set: 18 shots, 0 faults. A bare grouped count ("7,842 of 10,000" steps, shot 2) is not money and passes. The previews branch still shows the old shot 6.
+
 ## Found on the way (fixes owed outside this proposal)
 
 1. The IDE spec's iPad widget preview has a "Send to Home Screen" link. An app cannot place a widget on the Home Screen. The screenshot leaves it out; the spec and draw_ide.py need the same fix (mine, next pass).

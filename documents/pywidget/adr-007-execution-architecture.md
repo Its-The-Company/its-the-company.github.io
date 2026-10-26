@@ -459,6 +459,29 @@ Ruled in L5-interactivity.md s15 (chair note, items 1 and 2); this records the a
 5. **7.5, reserved values (L5 R8):** triggers `widget_action`, `control`, `deep_link`; outcome `conflict`. The v1 log reader shows any unknown trigger or outcome as text and never fails.
 6. **T5 on iOS 18-26:** a handler action defaults to `fallback="open_app"`, a signed link that opens the app and runs the handler in the foreground; `queue` is opt-in, and a queued tap is never dropped (refused at 100 rows).
 7. **Gate:** no 1.1 state code before G-L5-1 (a) and the widened G-L5-5 pass in the Simulator and Odalys has reviewed L5 s5 independently.
+
+## Chair amendment 2 (Ines), 2026-10-26 01:12 ET: items 1, 4, 6 after the L5 state review
+
+Ruled in L5-interactivity.md s15 (chair note 2). Odalys's independent review (T-0108, 508b6e4b) found that the 00:15 layout could lose a queued tap and run a handler twice. Idris's answers (312d6a1e) move the queue into `state.json` as a `pending` list, written ahead with the tap's ops in one commit. Items 2, 3 and 5 above are unchanged. Items 1, 4 and 6 are restated here, and item 7's gate list widens. The 00:15 text is kept above as it was written.
+
+1. **5.2's rule, restated (replaces item 1).** Every App Group file is written atomically: temp file, `fsync`, then `rename` in the same directory. The extension writes only these files:
+   - `widgets/<id>/wants-run` (T6), as in v1;
+   - `location/last.json` (C2-Q1, if it lands), as in v1;
+   - from 1.1, `widgets/<id>/state.json`, under `flock` on `widgets/<id>/state.lock`.
+
+   The extension never creates `widgets/<id>/` or `state.lock`. If either is missing, the tap fails visibly. The app writes every other file the extension reads. `failed.jsonl` is written by the app only. `widgets/` holds id folders, `index.json` and `.trash/`, and nothing else; any new file there needs a dated line here and a reserved id.
+4. **Names held from v1, nothing written in v1 (replaces item 4):**
+   - `widgets/<id>/state.json`, schema `pywidget.state/1`, with fields `schema`, `epoch`, `rev`, `next_seq`, `scopes.shared`, `pending`, `ops_log` (L5 s5.1);
+   - `state.lock`, `failed.jsonl`, `widgets/.trash/`, `controls/`, `secrets/`;
+   - in `tree.json`, `state_at: [epoch, rev]`.
+
+   `actions.jsonl` is released. `secrets/link.key` is still created at first 1.1 launch. Widget ids are reserved so that none can collide with this layout: no leading dot, not `index.json`, no `pywidget.` prefix in a user script, and unique without regard to case (T-0118, before the Day 13 freeze).
+6. **T5 on iOS 18-26 (replaces item 6).** The default is still `fallback="open_app"`, and `queue` is still opt-in.
+   - Every handler tap, on every path, makes one locked commit before any Python runs: the ops and a `pending` row.
+   - `attempts` is counted in a locked commit before each handler run. At 3 attempts, the row moves to `failed.jsonl` (reason `error`, `timeout`, `killed` or `conflict`) and leaves `pending`.
+   - A `queue` tap is refused, never dropped, in two cases: when `pending` holds 100 rows, and when that widget's `failed.jsonl` holds 100 rows.
+   - A queued row's ops stand when its handler fails. A live row's ops are restored from `before`.
+7. **Gate, widened.** No 1.1 state code starts until three things pass in the Simulator: G-L5-1 (a), G-L5-5 with the kill test, and Odalys's independent review of the 312d6a1e delta plus the chair's A1 and A2. G-L5-5 on a device, G-L5-7 and the locked-device row of G-L5-4 must pass before 1.1 ships.
 {% endraw %}
 
 </div>

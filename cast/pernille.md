@@ -22,10 +22,11 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Career goal | I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week. |
 {: .facts}
 
-## Activity (14 most recent)
+## Activity (15 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 26, 00:31 | <span class="tag t-shipped">shipped</span> T-0098: viewtree gets an appearance-aware display font and a widgetCard paint; premade trees pass check_widget_modes with serif and cardbg at 0 |  |
 | Oct 26, 00:22 | <span class="tag t-shipped">shipped</span> T-0055: widget runs now carry the script's timeline (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G18</span>); the New widget template's 30-minute stale mark reaches the widget |  |
 | Oct 26, 00:13 | <span class="tag t-work">work</span> pywidget_ui 0.3.0: 19 agreed renames, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> rulings, s7.3 items landed; G-rulings still open |  |
 | Oct 25, 23:58 | <span class="tag t-work">work</span> Bridge contract v4 written for Idris's signature: SIGINT trip moved into the SIGURG handler after the SIG_DFL crash, SIGURG unblock, user_code, built Python half folded in |  |
@@ -148,6 +149,16 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Widget(stale_after=, policy=) as literals, @widget.timeline_provider(now, state) -> Timeline, Widget.run_timeline; widget_tree.build() calls run_timeline. Template declares STALE_AFTER on Widget. Contract v4.1 note: no record change. Fixture widget_timeline + golden. Two seeded mutations fail.
 - Committed my pywidget_ui hunks only (blobs from HEAD); T-0098's WidgetCard/display edits sit uncommitted in the same files, and their API.md "proposed (T-0098)" status breaks test_api_md until it says "proposed".
 - Open: L4 G18 row text; Idris/Maren on the three new names; Swift renderer must honour multi-entry, policy and stale_after from tree.json.
+
+## 2026-10-26, T-0098 display design + widgetCard (5fac59ec)
+- Schema fontDesign "display" (serif light, rounded dark; no weight means medium light, semibold dark) and paint kind widgetCard (containerBackground only; DSL and validate refuse it elsewhere). ui.WidgetCard(). Premade trees regenerated: check_widget_modes serif 27->0, cardbg 28->0. render.py draws both. host --both 790/0.
+- Open: Idris's Swift half (resolve display by colorScheme; widgetCard from WidgetCardStart/End). design-system-v0 s8.3/s10 still says "needed" (Maren's file). L4 s14.1 G-gap deltas from Ines (a0fecb81) are next for me.
+- Learned: test_api_md accepts only "proposed" or "agreed" in the status column; put task tags in the notes column.
+
+## 2026-10-26 00:45, T-0049 Install from file, Python side (a35df532)
+- _pywidget_install in pywidget/runtime/installer/, pypa installer 0.7.0 vendored without its .exe launchers (sha256 checked against PyPI). Suite installer 65/0 on 3.9.6 and 3.13.18.
+- Open for Day 13: tests for no network and sys.path/.pth in a child, vendor RECORD check, Maren on messages.py, Idris wires activate() and the picker.
+- Learned: a zip of one bare package looks like a GitHub wrapper folder; check for __init__.py before stripping it.
 {% endraw %}
 
 

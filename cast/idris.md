@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (164 most recent)
+## Activity (165 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 26, 00:29 | <span class="tag t-build">build</span> T-0097: Maren's 43-colour Theme.xcassets now compiles into the app and widget extension; DisplayFont added; Simulator screenshots in Light, Dark and Increase Contrast; every one of 172 renditions checked against its source value; 50/50 unit tests green. Storage premade: Python's free space is statvf |  |
 | Oct 26, 00:24 | <span class="tag t-review_reply">review_reply</span> Answered all 18 findings of Odalys's L5 state review (16 accepted, 2 amended, 0 rejected); L5 s5 now writes the pending row with the ops in one commit inside state.json, actions.jsonl dropped; one v1 path fix found (widget id accepts '..'); <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> ruling asked of Ines |  |
 | Oct 26, 00:21 | <span class="tag t-build">build</span> C1 bridge slice 2 landed (T-0057): back-pressure, device call, widget queue with busy, stuck-native, recursion, crash marker; 43/43 tests, 12/12 mutants killed |  |
 | Oct 26, 00:12 | <span class="tag t-milestone">milestone</span> L5 interaction spec for 1.1 landed (758ae032): which process runs a widget Button's perform() settled from SDK lines; ADR-007 T5 and L4 s6 corrected, dated |  |
@@ -312,6 +313,10 @@ Older entries (the 2026-10-22 task log): archive.md.
 ## 2026-10-26 T-0108 replies to Odalys's L5 state review (done, 00:20-00:25)
 - 312d6a1e: replies table in pywidget/docs/reviews/L5-state-review-odalys.md (18/18 accepted, B2 and S4 amended); L5 s5.0-s5.8 rewritten with dated strikes: `pending` rows inside state.json written ahead with the ops, actions.jsonl dropped, epoch, ops_log rebase, failed.jsonl after 3 attempts, write-path rules, gate additions. Board notes on T-0105/6/7 written but left uncommitted (classifier refused my index-only board commit). Event logged. Open: Ines rules on her S1/S6/S7 and ADR-007 items 1, 4, 6.
 - Learned: v1 widget id pattern accepts '..' and v1 already uses id as a folder name: check every id that becomes a path. "Drain then truncate" with the lock released is a lost-update; the done-marker belongs in the same commit as the result. Lock hold is milliseconds on this Mac, not microseconds: measure before writing a unit.
+
+## 2026-10-26 T-0097 asset catalog in (done, 00:21-00:30)
+- 3f2f8a9c: Theme.xcassets in app + extension (assetutil 172/43 each), DisplayFont (Shared/), -theme-check screen, scripts/theme_shots.sh, ops/site-checks/theme 4 shots, ThemeTests 6, DiskSpaceProbeTests 1; 50/50 unit green. Answer in widgets README Premade 8. Open: device check of Settings vs probe; 85F4.1 still recalled; Python links statfs/fstatfs so DiskSpace entry needed anyway.
+- Learned: xcodegen presets ASSETCATALOG_COMPILER_APPICON_NAME=AppIcon at target level; override it in the target, not base. New test files need xcodegen generate again, or "TEST SUCCEEDED" runs 0 tests. The serif UIFont family is .AppleSystemUIFontSerif; check fontName for NewYork. simctl ui sets appearance and increase_contrast.
 {% endraw %}
 
 

@@ -73,11 +73,13 @@ if (!S || !root || !S.getToken()) return;
 var anon = document.getElementById('needs-anon'); if (anon) anon.hidden = true;
 var chatTab = document.querySelector('nav.hometabs [data-chat-tab]'); if (chatTab) chatTab.hidden = false;
 var repo = root.getAttribute('data-repo'), RI = '/repos/' + repo + '/issues', LS = localStorage, el = S.el;
-var named = (root.getAttribute('data-named') || '').split(/\s+/).filter(Boolean).map(Number);
+function nums(a) { return (root.getAttribute(a) || '').split(/\s+/).filter(Boolean).map(Number); }
+var named = nums('data-named'), skip = nums('data-skip'), shut = document.getElementById('needs-closed'), cl = null, cn = 0, cnum = null;
 var KEEP = ['emergency', 'urgent', 'report', 'pitch'], MAXF = 10 * 1048576, names = [];
 function mk(p, tag, cls, text) { return p.appendChild(el(tag, cls, text)); }
 function labels(i) { return (i.labels || []).map((x) => String(x.name || x).toLowerCase()); }
 function inv(l) { return names.indexOf(l) >= 0; }
+function off(i) { return skip.indexOf(i.number) >= 0 || labels(i).indexOf('main') >= 0; }
 function getJ(p) { return S.gh(p).then((r) => { if (!r.ok) throw new Error(S.said(r)); return r.json(); }); }
 function send(method, p, body) {
 var h = S.hdrs(); h['Content-Type'] = 'application/json';
@@ -94,6 +96,7 @@ return getJ(p);
 }
 function plain(b) { return String(b || '').replace(/<!--[\s\S]*?-->/g, '').replace(/<img[^>]*>/gi, '[image]').replace(/!\[([^\]]*)\]\([^)]*\)/g, '[image: $1]').replace(/\r/g, '').trim(); }
 function when(iso) { return iso ? new Date(iso).toLocaleString([], { weekday: 'short', hour: 'numeric', minute: '2-digit' }) : ''; }
+function day(iso) { return iso ? new Date(iso).toLocaleString([], { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : ''; }
 function b64file(f) {
 return new Promise((res, rej) => { var r = new FileReader(); r.onload = () => res(String(r.result).split(',')[1] || ''); r.onerror = () => rej(new Error('could not read ' + f.name)); r.readAsDataURL(f); });
 }
@@ -119,7 +122,7 @@ img.src = u; img.alt = im.alt || im.path; a.textContent = ''; a.appendChild(img)
 if (x !== 'svg') { a.href = u; a.target = '_blank'; a.title = 'Open full size'; }
 }, (e) => { a.className = 'meta ny-warn'; a.textContent = (im.alt || im.path) + ': ' + e.message + '.'; });
 }
-function box(li, n, i, ask) {
+function box(li, n, i, ask, re) {
 var b = li.querySelector('.ny-box') || li.appendChild(el('div', 'ny-box')), files = [], dk = 'company.draft.' + n, pressed = null;
 b.textContent = '';
 if (ask.body) {
@@ -147,12 +150,12 @@ btn.setAttribute('data-r', o.reply); btn.setAttribute('aria-pressed', 'true'); p
 };
 });
 if (!opts.firstChild) b.removeChild(opts);
-ta.placeholder = ask.opts.length ? 'Tap an option or write your answer to #' + n : 'Your answer to #' + n;
+ta.placeholder = re ? 'A follow-up on #' + n + ' (sending reopens it)' : ask.opts.length ? 'Tap an option or write your answer to #' + n : 'Your answer to #' + n;
 ta.setAttribute('aria-label', 'Your reply to #' + n); ta.value = LS.getItem(dk) || ''; form.appendChild(ta);
 var list = mk(form, 'ul', 'ny-files'), bar = mk(form, 'div', 'ny-bar'), pick = el('input'), add = mk(bar, 'button', 'cv-tool', 'Add files');
 pick.type = 'file'; pick.multiple = true; pick.hidden = true; bar.appendChild(pick); add.type = 'button';
 add.onclick = () => pick.click();
-var go = mk(bar, 'button', 'cv-tool ny-send', 'Send'), st = mk(form, 'p', 'meta', ''), extra = mk(form, 'div', 'ny-bar');
+var go = mk(bar, 'button', 'cv-tool ny-send', re ? 'Send and reopen' : 'Send'), st = mk(form, 'p', 'meta', ''), extra = mk(form, 'div', 'ny-bar');
 go.type = 'button'; st.setAttribute('role', 'status'); extra.hidden = true;
 function save() { if (ta.value.trim()) LS.setItem(dk, ta.value); else LS.removeItem(dk); }
 function sync() { go.disabled = !(ta.value.trim() || files.length) || S.rejected(); }
@@ -178,7 +181,7 @@ function post(withFiles) {
 var text = ta.value.trim(), name = (LS.getItem(S.NAME) || '').replace(/[^A-Za-z0-9 _.-]/g, '').trim().slice(0, 40), links = [];
 go.disabled = true; extra.hidden = true; extra.textContent = ''; st.className = 'meta'; st.textContent = withFiles && files.length ? 'Saving files...' : 'Sending...';
 var up = (withFiles ? files : []).reduce((p, f) => p.then(() => upload(n, f).then((l) => { links.push(l); })), Promise.resolve());
-return up.then(() => {
+return up.then(() => re && send('PATCH', RI + '/' + n, { state: 'open' }).then((r) => { if (!r.ok) throw new Error(S.said(r) + ' reopening #' + n); })).then(() => {
 st.textContent = 'Sending...';
 var body = [text, links.length ? 'Files:\n' + links.map((l) => '- ' + l).join('\n') : ''].filter(Boolean).join('\n\n') + (name ? '\n\n<!-- as: ' + name + ' -->' : '');
 return send('POST', RI + '/' + n + '/comments', { body: body }).then((r) => {
@@ -187,8 +190,9 @@ return r.json();
 });
 }).then((c) => {
 ta.value = ''; files = []; drawFiles(); save();
-st.className = 'meta ny-done'; st.textContent = 'Sent ' + when(c.created_at) + (links.length ? ' with ' + links.length + ' file' + (links.length > 1 ? 's' : '') : '') + '. The company reads it within minutes and closes the issue once it is settled.';
+st.className = 'meta ny-done'; st.textContent = (re ? 'Reopened #' + n + ' and sent ' : 'Sent ') + when(c.created_at) + (links.length ? ' with ' + links.length + ' file' + (links.length > 1 ? 's' : '') : '') + '. The company reads it within minutes and closes the issue once it is settled.';
 if (pressed) pressed.setAttribute('aria-pressed', 'false');
+if (re) re(c);
 }, (e) => {
 sync();
 st.className = 'meta ny-warn';
@@ -203,16 +207,58 @@ var g = mk(extra, 'a', null, 'Attach them on GitHub instead'); g.href = 'https:/
 go.onclick = () => post(true);
 sync();
 }
+function closer(li, ns) {
+var w = mk(li.querySelector('.ny-box'), 'div', 'ny-bar ny-shut'), t = ns.map((n) => '#' + n).join(' and '), c = mk(w, 'button', 'cv-tool', 'Close ' + t), st = mk(w, 'span', 'meta', '');
+c.type = 'button'; st.setAttribute('role', 'status');
+c.onclick = () => {
+if (!confirm('Close ' + t + ' on GitHub? Do this when it is settled. A follow-up from Closed issues reopens it.')) return;
+c.disabled = true; st.className = 'meta'; st.textContent = 'Closing...';
+ns.reduce((p, n) => p.then(() => send('PATCH', RI + '/' + n, { state: 'closed', state_reason: 'completed' }).then((r) => {
+if (!r.ok) throw new Error(S.said(r) + (r.status === 403 || r.status === 404 ? ' (does your token have Issues: Read and write?)' : ''));
+return r.json();
+}).then((x) => { if (cl) cRow(x, 1); })), Promise.resolve()).then(() => {
+li.hidden = true; fold(); live.textContent = 'Closed ' + t + '. It is under Closed issues below.';
+}, (e) => { c.disabled = false; st.className = 'meta ny-warn'; st.textContent = 'Not closed: ' + e.message + '.'; });
+};
+}
+function tell(p, x) {
+var l = who(x), a = /<!--\s*as:\s*([^>]{1,40}?)\s*-->/.exec(x.body || ''), m = mk(p, 'div', 'ny-msg' + (inv(l) ? ' ny-inv' : ''));
+mk(m, 'p', 'meta', (inv(l) ? (a ? a[1] : l) : 'Company') + ' \u00b7 ' + day(x.created_at));
+mk(m, 'pre', null, plain(x.body).replace(/[\w.+-]+@[\w-]+(?:\.[\w-]+)+/g, '[email]') || '(no text)');
+}
+function cRow(i, top) {
+var li = el('li', 'ny ny-cl'), d = mk(li, 'details', 'ny-th'), s = mk(d, 'summary'), k = KEEP.concat('chat').filter((x) => labels(i).indexOf(x) >= 0)[0];
+if (k) { mk(s, 'span', 'tag ' + k, k.charAt(0).toUpperCase() + k.slice(1)); s.appendChild(document.createTextNode(' ')); }
+mk(s, 'span', 'ref', '#' + i.number); var on = mk(s, 'span', 'meta', ' closed ' + day(i.closed_at)); mk(s, 'span', 'ny-t', i.title);
+var t = mk(d, 'div', 'ny-msgs');
+d.addEventListener('toggle', () => {
+if (!d.open || d.got) return; d.got = 1; t.textContent = 'Reading #' + i.number + '...';
+thread(i).then((cs) => {
+t.textContent = ''; tell(t, i);
+if (i.comments > 100) mk(t, 'p', 'meta', 'Earlier replies are on GitHub; the latest 100 follow.');
+cs.forEach((c) => tell(t, c));
+box(d, i.number, i, { opts: [] }, (c) => { tell(t, c); on.textContent = ' reopened ' + day(c.created_at); });
+}, (e) => { d.got = 0; t.textContent = 'Could not read #' + i.number + ': ' + e.message + '.'; });
+});
+if (top) cl.insertBefore(li, cl.firstChild); else cl.appendChild(li);
+cnum.textContent = String(++cn);
+}
+function fold() {
+Array.prototype.forEach.call(document.querySelectorAll('ul[data-group]'), (ul) => {
+if (Array.prototype.every.call(ul.children, (li) => li.hidden)) for (var e = ul; e && (e === ul || e.tagName !== 'UL'); e = e.previousElementSibling) { e.hidden = true; if (e.tagName === 'H2') break; }
+});
+}
+var live = mk(root, 'p', 'meta ny-done ny-live'); live.setAttribute('role', 'status');
 function closedNote(k) { if (k) mk(root, 'p', 'meta', k + ' request' + (k === 1 ? '' : 's') + ' answered and closed since this page was built ' + (k === 1 ? 'is' : 'are') + ' hidden.'); }
-Promise.all([allow(), getJ(RI + '?state=open&per_page=100')]).then((res) => {
-names = res[0].map((x) => String(x).toLowerCase());
+var al = allow().then((a) => { names = a.map((x) => String(x).toLowerCase()); });
+Promise.all([al, getJ(RI + '?state=open&per_page=100')]).then((res) => {
 var open = {}, rows = [], shown = {}, hidden = 0;
-res[1].filter((i) => !i.pull_request).forEach((i) => { open[i.number] = i; });
+res[1].filter((i) => !i.pull_request && !off(i)).forEach((i) => { open[i.number] = i; });
 Array.prototype.forEach.call(document.querySelectorAll('li[data-nums]'), (li) => {
 var ns = li.getAttribute('data-nums').split(' ').map(Number).filter((n) => open[n]);
 li.getAttribute('data-nums').split(' ').forEach((n) => { shown[n] = 1; });
 if (!ns.length) { li.hidden = true; hidden++; return; }
-rows.push([li, ns[0]]);
+rows.push([li, ns[0], ns]);
 });
 var fresh = Object.keys(open).map((k) => open[k]).filter((i) => !shown[i.number] && named.indexOf(i.number) < 0 && labels(i).indexOf('unrelated') < 0 && labels(i).some((l) => KEEP.indexOf(l) >= 0));
 if (fresh.length) {
@@ -222,17 +268,21 @@ fresh.forEach((i) => {
 var li = mk(ul, 'li', 'ny ny-new'), k = KEEP.filter((l) => labels(i).indexOf(l) >= 0)[0];
 mk(li, 'span', 'tag ' + k, k.charAt(0).toUpperCase() + k.slice(1)); li.appendChild(document.createTextNode(' '));
 mk(li, 'span', 'ref', '#' + i.number); mk(li, 'span', 'ny-q', i.title);
-rows.push([li, i.number]);
+rows.push([li, i.number, [i.number]]);
 });
 }
-closedNote(hidden);
-Array.prototype.forEach.call(document.querySelectorAll('ul[data-group]'), (ul) => {
-if (Array.prototype.every.call(ul.children, (li) => li.hidden)) for (var e = ul; e && (e === ul || e.tagName !== 'UL'); e = e.previousElementSibling) { e.hidden = true; if (e.tagName === 'H2') break; }
-});
+closedNote(hidden); fold();
 rows.forEach((x) => {
 var i = open[x[1]], b = x[0].querySelector('.ny-box') || x[0].appendChild(el('div', 'ny-box'));
 b.textContent = 'Reading the question...';
-thread(i).then((cs) => box(x[0], x[1], i, pickAsk(i, cs, inv, repo)), (e) => { b.textContent = 'Could not read #' + x[1] + ': ' + e.message + '.'; });
+thread(i).then((cs) => { box(x[0], x[1], i, pickAsk(i, cs, inv, repo)); closer(x[0], x[2]); }, (e) => { b.textContent = 'Could not read #' + x[1] + ': ' + e.message + '.'; });
 });
 }, (e) => { mk(root, 'p', 'meta ny-warn', 'Could not read the open requests: ' + e.message + '. The list below is as built.'); });
+if (shut) al.then(() => getJ(RI + '?state=closed&per_page=100&sort=updated')).then((l) => {
+l = l.filter((i) => !i.pull_request && !off(i));
+var d = mk(shut, 'details', 'ny-closed'), h = mk(mk(d, 'summary'), 'h2', null, 'Closed issues ');
+cnum = mk(h, 'span', 'num ny-count', '0');
+mk(d, 'p', 'meta', 'Open one to read it and its replies. Send a follow-up from it to reopen it.' + (l.length > 99 ? ' Older ones are on GitHub.' : ''));
+cl = mk(d, 'ul', 'list needs'); l.forEach((i) => cRow(i));
+}, (e) => { mk(shut, 'p', 'meta ny-warn', 'Could not read the closed issues: ' + e.message + '.'); });
 })();

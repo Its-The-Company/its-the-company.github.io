@@ -1,5 +1,103 @@
 [
 {
+"time": "2026-10-26T01:14:19-04:00",
+"worker": "Maren",
+"type": "shipped",
+"summary": "T-0127 Issues: closed issues dropdown with follow-up that reopens, Close button, #39 and Chat left out, Chat head chip removed (71b4492a, not published)",
+"link": ""
+},
+{
+"time": "2026-10-26T01:13:45-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-0117: chaired Idris's answers to Odalys's L5 state review (ff41ed1e). Write-ahead pending list accepted; added A1 (count an attempt before a handler runs, so a process-killing handler cannot block every batch), A2 (failed.jsonl capped), A3 (delta review joins the 1.1 gate). Widened T-0118: reserve",
+"link": ""
+},
+{
+"time": "2026-10-26T01:13:09-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "T-0123: Apple pages open one at a time under the #64 ruling (fetch_cite.py --apple), signed out, 5 s apart, robots first, saved with date; sign-in pages refused for every fetcher",
+"link": ""
+},
+{
+"time": "2026-10-26T01:11:44-04:00",
+"worker": "Odalys",
+"type": "fix",
+"summary": "T-0129: site_browser_test was the only suite leaking 127.0.0.1 robots copies into the shared cache; it now has its own cache, run.sh fails any new leak, 71 stale entries removed",
+"link": ""
+},
+{
+"time": "2026-10-26T01:09:12-04:00",
+"worker": "Odalys",
+"type": "tool",
+"summary": "T-0110: evidence_tags.py pass-3 fixes; all 5 candidates Wrenna rejected no longer appear, accepted ones still do (4a549a12)",
+"link": ""
+},
+{
+"time": "2026-10-26T01:04:34-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-26T00:46:32-04:00",
+"worker": "Odalys",
+"type": "commit",
+"summary": "T-0103: supervisor_test.sh 332 s (load 17) -> 57-62 s, 139 checks kept, parallel groups (b21ae602). T-0093: supervisor step 12b keeps ops/metrics/xmr current, with a stale-session-pid fix (b4ccd8be).",
+"link": ""
+},
+{
+"time": "2026-10-26T00:46:13-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-26T00:43:03-04:00",
+"worker": "Odalys",
+"type": "experiment",
+"summary": "OPT-030 approved (#65): OPT-028 A/A stopped at n=0; amend_compact switchback started, arms when the build_agents.py diff lands",
+"link": ""
+},
+{
+"time": "2026-10-26T00:41:11-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #64",
+"link": ""
+},
+{
+"time": "2026-10-26T00:40:03-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #65",
+"link": ""
+},
+{
+"time": "2026-10-26T00:33:48-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #64",
+"link": ""
+},
+{
+"time": "2026-10-26T00:31:08-04:00",
+"worker": "Pernille",
+"type": "shipped",
+"summary": "T-0098: viewtree gets an appearance-aware display font and a widgetCard paint; premade trees pass check_widget_modes with serif and cardbg at 0",
+"link": ""
+},
+{
+"time": "2026-10-26T00:29:46-04:00",
+"worker": "Idris",
+"type": "build",
+"summary": "T-0097: Maren's 43-colour Theme.xcassets now compiles into the app and widget extension; DisplayFont added; Simulator screenshots in Light, Dark and Increase Contrast; every one of 172 renditions checked against its source value; 50/50 unit tests green. Storage premade: Python's free space is statvf",
+"link": ""
+},
+{
 "time": "2026-10-26T00:27:57-04:00",
 "worker": "Maren",
 "type": "shipped",

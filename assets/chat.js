@@ -190,11 +190,11 @@ var d = dayKey(new Date(x.at)); if (d !== lastDay) { lastDay = d; mk(log, 'span'
 return put(log, !isInv(x.l) && isReceipt(x.body) ? sysEl(x) : msgEl(x, clamp));
 }
 function drawThread(open) {
-var n = cur, i = issue(n), k = i ? kindOf(i) : 'chat', d = i && k === 'urgent' ? deadlineOf(i) : null;
+var n = cur, i = issue(n), k = i ? kindOf(i) : 'chat', m0 = isMain(n), d = i && k === 'urgent' && !m0 ? deadlineOf(i) : null;
 head = mk(view, 'div', 'cv-head');
-mk(head, 'span', 'chip ' + k, KINDS[k]); mk(head, 'span', 'meta', '#' + n);
+if (!m0) { mk(head, 'span', 'chip ' + k, KINDS[k]); mk(head, 'span', 'meta', '#' + n); }
 mk(head, 'h2', null, i ? ttl(i) + (i.state === 'closed' ? ' (closed)' : '') : 'Loading...');
-if (!isMain(n)) mk(head, 'a', 'meta', '← Chat').href = '#t=main';
+if (!m0) mk(head, 'a', 'meta', '← Chat').href = '#t=main';
 if (d) put(head, d.t ? due(d) : el('span', 'cv-due', d.text));
 pin = mk(head, 'button', 'cv-pin'); pin.type = 'button'; pin.hidden = true;
 log = mk(view, 'div', 'cv-log'); shown = {}; lastDay = ''; waitEl = null; anchor = null;

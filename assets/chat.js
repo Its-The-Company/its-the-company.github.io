@@ -97,9 +97,10 @@ if (!LS.getItem('company.seen0')) LS.setItem('company.seen0', now().toISOString(
 var seen0 = LS.getItem('company.seen0'), isDesk = !!(W.matchMedia && W.matchMedia('(min-width:880px)').matches);
 var Q = (s) => document.querySelector ? document.querySelector(s) : null;
 var main = byId('main'), stripEl = byId('strip'), links = Q('main > .links'), aside = Q('main > .aside'), tog = Q('.now-toggle'), where = Q('main .where');
-[byId('composer'), byId('urgent'), aside, tog].forEach((x) => { if (x) x.hidden = true; });
-var col = el('div', 'cv-col'), side = el('aside', 'cv-side'); attr(side, 'aria-label', 'At a glance');
-if (main) { main.insertBefore(col, stripEl || main.firstChild); main.insertBefore(side, stripEl || main.firstChild); main.className = 'cv-desk'; }
+var homeRow = Q('nav.hometabs'), issuesA = homeRow && homeRow.querySelector('[data-issues]');
+[byId('composer'), byId('urgent'), aside, tog, homeRow].forEach((x) => { if (x) x.hidden = true; });
+var col = el('div', 'cv-col');
+if (main) { main.insertBefore(col, stripEl || main.firstChild); main.className = 'cv-desk'; }
 else put(root, col);
 if (stripEl) put(col, stripEl);
 var bar = mk(col, 'div', 'cv-tabs'), scroller = mk(bar, 'div', 'cv-scroll');
@@ -141,10 +142,12 @@ scroller.textContent = '';
 keys().forEach((k) => {
 var b = mk(scroller, 'button', 'cv-tab'), sel = (k === 'home') === (cur === 'home'), u = typeof k === 'number' ? unread(k) : 0;
 b.type = 'button'; attr(b, 'role', 'tab'); attr(b, 'aria-selected', sel ? 'true' : 'false'); b.tabIndex = sel ? 0 : -1;
-mk(b, 'span', 'cv-t', k === 'home' ? 'Home' : 'Chat');
+mk(b, 'span', 'cv-t', k === 'home' ? 'Overview' : 'Chat');
 if (u) attr(mk(b, 'span', 'cv-badge', String(u)), 'aria-label', u + ' new');
 b.onclick = () => { go(k); };
 b.k = k;
+if (k === 'home' && issuesA) { var a = mk(scroller, 'a', 'cv-tab cv-link'); a.href = issuesA.href; mk(a, 'span', 'cv-t', 'Issues');
+var c = issuesA.querySelector('.num'); if (c) mk(a, 'span', 'cv-n', c.textContent); }
 });
 var h = bar.offsetHeight, de = DE;
 if (h && de && de.style) de.style.setProperty('--cv-tabs-h', h + 'px');
@@ -281,11 +284,11 @@ var e = el('span', 'cv-due' + (d.t - Date.now() < 864e5 ? ' cv-soon' : ''), new 
 attr(e, 'data-t', new Date(d.t).toISOString()); e.title = 'Deadline: ' + d.text; return e;
 }
 function drawView(open) {
-view.textContent = ''; side.textContent = ''; log = head = anchor = null;
-if (stripEl) stripEl.hidden = cur === 'home';
-put(side, glance());
-if (!lastDraw) { var p = mk(view, 'p', 'muted', S.rejected() ? NO_TOKEN + ' ' : 'Loading...'); if (S.rejected()) mk(p, 'a', null, 'Change the token').href = tokenLink.href; return; }
-if (cur === 'home') { put(view, glance()); if (where) put(view, where); return; }
+view.textContent = ''; log = head = anchor = null;
+var home = cur === 'home' || (cur == null && parse() === 'home');
+if (stripEl) stripEl.hidden = home;
+if (!lastDraw && (!home || S.rejected())) { var p = mk(view, 'p', 'muted', S.rejected() ? NO_TOKEN + ' ' : 'Loading...'); if (S.rejected()) mk(p, 'a', null, 'Change the token').href = tokenLink.href; if (!home) return; }
+if (home) { put(view, glance()); if (where) put(view, where); return; }
 if (where && aside) put(aside, where);
 if (cur === 'main') {
 mk(mk(view, 'div', 'cv-head'), 'h2', null, toText());
@@ -418,11 +421,6 @@ if (typeof cur === 'number' && threads[cur] && n === 100) readThread(cur);
 status.textContent = 'Updated ' + clock(now().toISOString()) + '.';
 })
 .catch((e) => { status.textContent = S.rejected() ? NO_TOKEN : 'Could not load the threads: ' + e.message + '.'; });
-}
-var waiting = Q('[data-filter="urgent"]');
-if (waiting) {
-var whoEl = waiting.querySelector ? waiting.querySelector('[data-who]') : null;
-if (whoEl) whoEl.textContent = 'waiting on you';
 }
 var sig = '';
 if (S.onStatus) S.onStatus.push((st) => {

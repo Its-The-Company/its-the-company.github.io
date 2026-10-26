@@ -4,7 +4,7 @@ title: "ADR-007: Widget execution architecture. Python runs in the app; the exte
 section: "documents"
 description: "This is ADR-001&#x27;s default, confirmed by measurement rather than assumed. The one change from ADR-001&#x27;s wording: &quot;the extension only renders&quot; now also covers the gallery snapshot and placeholder paths, which the spike\u2026"
 ---
-<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/' | relative_url }}">← Documents</a><a href="{{ '/documents/pywidget/adr-007-execution-architecture.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/build-plan/decisions/' | relative_url }}">← Decisions</a><a href="{{ '/documents/pywidget/adr-007-execution-architecture.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
 <div class="page-head"><div class="kicker"><span class="kind blue">Decision</span><span>Day 4 · Sun Oct 25</span><span><code>pywidget/docs/decisions/ADR-007-execution-architecture.md</code></span></div><h1>ADR-007: Widget execution architecture. Python runs in the app; the extension only renders (option b), with the hybrid (c) gated on device…</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"><span>By <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a>, Senior iOS engineer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
@@ -92,9 +92,9 @@ This is ADR-001's default, confirmed by measurement rather than assumed. The one
 | T2 | Background refresh | `BGAppRefreshTask`, identifier `com.pywidget.refresh`, rescheduled after every run at the smallest requested interval, never under 15 min | batched run under the batch rule below (worst-case end 25 s against the task's limit of about 30 s [recalled]); an **expiration handler** is set before the first run (5.3) | `reloadTimelines(ofKind:)` only for widgets whose tree hash changed | counts; one reload per changed widget |
 | T3 | App Intent `Refresh Widgets` (Shortcuts automation: time of day, arrival, alarm off, Focus change) | intent handler in the app process, no scene | the named widgets, or all; same batch rule as T2 (the intent limit is also about 30 s [recalled], L9 line 42) | as T2 | counts [recalled; L2 measure item] |
 | T4 | App Intents `Run Script`, `Run Script with Input` | app process | the script, `budget_s = 20` (contract S4); if it is a widget script, its tree is written too | as T2 | as T3 |
-| T5 | Widget configuration or action intent (1.1, L5) | app process | the widget's handler, then `render(state)` | `reloadTimelines(ofKind:)` | counts |
+| T5 | Widget action intent (1.1, L5) | app process **on iOS 27+ only** (`allowedExecutionTargets = [.main]`); on iOS 18-26 the app runs a handler only after a signed action link opens it, or from the queue at the next T1-T3; state ops run in the extension (corrected 2026-10-26 by Idris: L5-interactivity.md s0, s4) | the widget's handler, then `render(state)` | none on 27+ (the system reloads after `perform()` [recalled]); `reloadTimelines(ofKind:)` from the foreground on 18-26 | not charged for the post-intent reload [recalled; L5 gate G-L5-2] |
 | T6 | WidgetKit asks the extension for a timeline (`getTimeline`) | extension | **no Python.** Reads `tree.json` and `status.json`; if `tree.json` is missing, writes `widgets/<id>/wants-run` and returns the error card | none (it is the reload) | the system's own schedule |
-| T7 | Location wake, push reload | app (significant change needs Always; push needs a server) | - | - | **not v1** (ADR-001; L2 s1) |
+| T7 | Location wake, push reload | app (significant change needs Always; push needs a server) | - | - | **not v1** (ADR-001; push also L2 s2 item 6; citation corrected 2026-10-26, CORRECTIONS U1-06) |
 
 </div>
 
@@ -113,7 +113,7 @@ This is ADR-001's default, confirmed by measurement rather than assumed. The one
 | Extension (no Python linked) | App |
 |---|---|
 | View-tree decoder and SwiftUI interpreter (ADR-002), all families and modes | CPython 3.15.1, the bridge (section 8), every widget and script run |
-| State precedence (section 7.1) from `tree.json` + `status.json` + `entitlement.json` + tree `version` | Writes `tree.json`, `status.json`, `entitlement.json` (StoreKit, Pro purchase line), the Activity log rows (L2 s5) |
+| State precedence (section 7.1) from `tree.json` + `status.json` + `entitlement.json` + tree `version` | Writes `tree.json`, `status.json`, `entitlement.json` (StoreKit, Pro purchase line), the Activity log rows (L2 s3.3) |
 | Timeline construction: entries from the tree, badge flag, the synthetic stale entry (7.4) | Scheduling T2; the L2 estimator |
 | `getSnapshot`/`placeholder`: last good tree, else the premade's bundled preview tree, else the renderer's placeholder; never a run | Premade gallery previews (real runs on the user's data, chair ruling item 1) |
 | App Intent entity query for the widget picker (reads `widgets/index.json`; Pro premades only with the entitlement, chair ruling item 2) | Keeps `widgets/index.json` current |
@@ -122,7 +122,7 @@ This is ADR-001's default, confirmed by measurement rather than assumed. The one
 </div>
 
 
-App Group layout (one container, `group.<bundle>.shared`): `widgets/index.json`; `widgets/<id>/tree.json`, `status.json`, `wants-run`, `render-fault.json`, `state.json` (1.1); `entitlement.json`; `location/last.json` (C2); `log/runs.jsonl` (L2 s5, 14 days). Everything the extension reads is a file written atomically by the app, so a half-written file is never seen. The in-flight run marker is the contract's crash marker in the app's Caches (contract s7), not an App Group file: under (b) only the app needs it. One marker for one event (review S11 gap c); the (c) lane will need an App Group marker of its own and its ADR line names it.
+App Group layout (one container, `group.<bundle>.shared`): `widgets/index.json`; `widgets/<id>/tree.json`, `status.json`, `wants-run`, `render-fault.json`, `state.json` (1.1); `entitlement.json`; `location/last.json` (C2); `log/runs.jsonl` (L2 s3.3, 14 days). Everything the extension reads is a file written atomically by the app, so a half-written file is never seen. (Amended 2026-10-26 for 1.1, chair amendment at the end: the extension also writes `state.json` and `actions.jsonl` under a lock; v1 unchanged.) The in-flight run marker is the contract's crash marker in the app's Caches (contract s7), not an App Group file: under (b) only the app needs it. One marker for one event (review S11 gap c); the (c) lane will need an App Group marker of its own and its ADR line names it.
 
 ### 5.3 Background expiry and the stuck state (T2, T3)
 
@@ -224,7 +224,7 @@ The provider turns `tree.json`'s `timeline.entries` into `TimelineEntry`s in dat
 
 ### 7.5 Logging
 
-Every run (any trigger, any outcome) appends one row to `log/runs.jsonl` with the L2 s5 columns (`ts`, kind, id, trigger, duration ms, peak MB, outcome, sensors), plus `run_id` and `headroom` (MB at start, or `unknown`). Trigger and peak MB are Swift's: the trigger from its job record keyed by `run_id`, peak MB from `phys_footprint` sampled by `task_info` around the run (contract s11 A2, A8); duration from the contract's `duration_s`. 14 days, export by share sheet only (PROPOSAL-002 s5). That row set is also the device evidence for section 6's gates.
+Every run (any trigger, any outcome) appends one row to `log/runs.jsonl` with the L2 s3.3 columns (`ts`, kind, id, trigger, duration ms, peak MB, outcome, sensors), plus `run_id` and `headroom` (MB at start, or `unknown`). Trigger and peak MB are Swift's: the trigger from its job record keyed by `run_id`, peak MB from `phys_footprint` sampled by `task_info` around the run (contract s11 A2, A8); duration from the contract's `duration_s`. 14 days, export by share sheet only (PROPOSAL-002 s5). That row set is also the device evidence for section 6's gates.
 
 ## 8. Runtime and bridge: restart rule and interface
 
@@ -439,6 +439,26 @@ Amendments (binding on the build):
 The Idris line "Maren states open items 2-3" keeps its Simulator items (corner clipping, rendering modes); its timeline-entry question is answered here.
 
 Open, owned elsewhere: device numbers C, A, B (L3 device run, waits on the membership, due 2026-10-28); contract v3 `widget_tree` (Pernille); `tree_too_large` copy (Maren); renderer fixtures and B (first renderer task).
+
+## Corrections after acceptance (Idris, 2026-10-26)
+
+Not a change to the decision (option b stands); facts and citations only.
+
+1. **T5 (CORRECTIONS U1-34).** The row said a widget action intent runs in the app process. The SDK says the process is whichever target contains the intent ("By default, the system performs an intent or entity query using any available target", doc comment of `IntentExecutionTargets`), and it can be pinned only from iOS 27 (`allowedExecutionTargets`, AppIntents.swiftinterface 3111-3112). On our iOS 18 floor the row was true only for iOS 27+. The row now says so; the 1.1 design for 18-26 (ops in the extension, signed action links, a queue) is L5-interactivity.md s4. That design has the extension write `state.json` and `actions.jsonl`, which changes 5.2's "everything the extension reads is a file written atomically by the app"; that is for a 1.1 chair line (L5 s15 item 1), not changed here. T5 also no longer names "configuration" intents: a widget's configuration intent is resolved by the timeline provider in the extension and runs no Python.
+2. **Citations (CORRECTIONS U1-06).** "L2 s5" (5.2 twice, 7.5) is L2 s3.3: L2 has no section 5. T7's "L2 s1" is L2 s2 item 6, which says push is not v1; location wake not being v1 rests on ADR-001.
+3. **T3's "about 30 s [recalled]"** now has a primary source: the `LongRunningIntent` doc comment, "In iOS, iPadOS, tvOS, visionOS, and watchOS, the system gives tasks 30 seconds to run in the background unless you use the methods of this protocol to extend that runtime." The row text is unchanged; the batch rule's 25 s stands.
+
+## Chair amendment (Ines), 2026-10-26 00:15 ET: 5.2 writers for 1.1
+
+Ruled in L5-interactivity.md s15 (chair note, items 1 and 2); this records the architecture change. Option (b) stands, and so does "no Python in any extension". Idris's corrections 1-3 above are accepted.
+
+1. **5.2's rule, restated.** Every App Group file is written atomically (temp file plus `rename` in the same directory). The extension writes only: `widgets/<id>/wants-run` (T6) and `location/last.json` (C2-Q1, if it lands), as in v1; and from 1.1, `widgets/<id>/state.json` and `widgets/<id>/actions.jsonl`, both under `flock` on `widgets/<id>/state.lock`. Every other file the extension reads is written by the app. The old sentence was already not literal for `wants-run` and the location fix.
+2. **What the extension may do to state** is a closed op set fixed in Swift (L5 s3.2: `set`, `set_arg`, `toggle`, `add`, `cycle`, `toggle_member`, `clear`). No expressions and no user code. A new op is an app update and a dated line here.
+3. **One write path, bounded lock** (L5 s15 S3-S5): one Swift type in the shared framework does every state write in both processes; the extension's lock wait is non-blocking with at most 200 ms of retry; the lock is never held across an `await` or a Python run; an unreadable state file is kept as `state.bad.json`, never silently reset.
+4. **Names held from v1 (L5 R6), nothing written in v1:** `widgets/<id>/state.json` (`schema`, `rev`, `scopes.shared`), `state.lock`, `actions.jsonl`, `controls/`, `secrets/`. `secrets/link.key` is created by the app at first 1.1 launch, not in v1 (L5 R10 dropped).
+5. **7.5, reserved values (L5 R8):** triggers `widget_action`, `control`, `deep_link`; outcome `conflict`. The v1 log reader shows any unknown trigger or outcome as text and never fails.
+6. **T5 on iOS 18-26:** a handler action defaults to `fallback="open_app"`, a signed link that opens the app and runs the handler in the foreground; `queue` is opt-in, and a queued tap is never dropped (refused at 100 rows).
+7. **Gate:** no 1.1 state code before G-L5-1 (a) and the widened G-L5-5 pass in the Simulator and Odalys has reviewed L5 s5 independently.
 {% endraw %}
 
 </div>

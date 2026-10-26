@@ -1,16 +1,18 @@
 ---
 layout: "default"
-title: "pywidget app icon: three directions (v0)"
+title: "pywidget app icon: three directions (v1)"
 section: "documents"
-description: "Four lines of code drawn as bars: a line ending in a colon, an indented line, a deeper line that is a live toggle, a dedent. Python&#x27;s structure is its indentation, and the colon opens a block; nobody else uses that\u2026"
+description: "v1, 2026-10-26 (Maren, T-0099): redrawn in the approved appearances (#60, creative/approved.md item 2): every light icon in A Paper, every dark icon in B Studio, tinted in grey. Prompt and Trace no longer use the Studio\u2026"
 ---
-<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/' | relative_url }}">← Documents</a><a href="{{ '/documents/pywidget/icon-readme.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind grey">Design</span><span>Day 4 · Sun Oct 25</span><span><code>pywidget/docs/design/icon/README.md</code></span></div><h1>pywidget app icon: three directions (v0)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"><span>By <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a>, Product and visual designer</span></div></div>
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/design/' | relative_url }}">← Design &amp; Specs</a><a href="{{ '/documents/pywidget/icon-readme.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
+<div class="page-head"><div class="kicker"><span class="kind grey">Design</span><span>Day 5 · Mon Oct 26</span><span><code>pywidget/docs/design/icon/README.md</code></span></div><h1>pywidget app icon: three directions (v1)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"><span>By <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a>, Product and visual designer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
+**v1, 2026-10-26 (Maren, T-0099):** redrawn in the approved appearances (#60, creative/approved.md item 2): every light icon in A Paper, every dark icon in B Studio, tinted in grey. Prompt and Trace no longer use the Studio gradient in light. The 1024 px PNGs and the sheet now go to the design-previews branch (`draw_icons.py OUTDIR`; links in pywidget/docs/proposals/PROPOSAL-003-icon-and-screenshots.md); this folder keeps the SVG masters, the 60 px PNGs and qa.json. v1 checks: 9 renders, 0 faults; contrast lowest 6.77 light, 5.68 dark, 7.84 tinted; every 1024 PNG is RGB with no alpha. The proposal is the current text; the v0 notes below still <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> for meaning and risks, but their colour descriptions and file list are v0's.
+
 Maren, 2026-10-25, 20:06 to 20:12 ET by `date`. Status: **proposal** (<span title="Commandment 51: the Investors approve every visual before it ships.">Commandment 51</span>). Nothing here is approved or shipped. Name-independent: no letters or words, so any name the Investors pick can sit under any of them.
 
 Source: `draw_icons.py` (this folder). One function per direction draws the SVG geometry; the 1024 px and 60 px PNGs for light, dark and tinted all come from that one SVG, rasterised by headless Chromium. Colours come from `../tokens.json` (C13 v0). No image model, no stock art, no fonts, no traced shapes; the script asserts no `<text>` and no `<image>` in any SVG (Commandment 9).
@@ -60,7 +62,7 @@ Python's interactive prompt, three open chevrons, then a block cursor waiting. E
 One parametric curve, x = cos 3t, y = sin 2t, and a dot for "now" on it. The icon is itself a plot drawn by a script, which is the product in one picture: your code draws what the widget shows.
 
 - The only direction that is purely mathematical, and the one that photographs best.
-- Weakest meaning at a glance: it does not say Python or widget. At 60 px the crossings close up slightly but the figure <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>.
+- Weakest meaning at a glance: it does not say Python or widget. At 60 px the crossings close up slightly but the figure holds.
 - Risk: closed Lissajous figures read as an orbit or atom. I also drew partial traces (the pen mid-stroke); they read as letters (e, a, Ø), so I dropped them.
 
 ## Recommendation

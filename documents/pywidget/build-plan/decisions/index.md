@@ -1,0 +1,22 @@
+---
+layout: "default"
+title: "Decisions \u00b7 Documents"
+section: "documents"
+description: "The decision records (ADRs) the build rests on, in number order."
+---
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/build-plan/' | relative_url }}">← Build Plan</a></div>
+
+<div class="page-head"><div class="kicker"><span class="trail"><a href="{{ '/documents/' | relative_url }}">Documents</a> › <a href="{{ '/documents/pywidget/' | relative_url }}">Pywidget</a> › <a href="{{ '/documents/pywidget/build-plan/' | relative_url }}">Build Plan</a> › <span>Decisions</span></span></div><h1>Decisions</h1><p class="lead">The decision records (ADRs) the build rests on, in number order.</p></div>
+
+<nav class="subtabs doc-tabs" aria-label="Documents or Archive"><a href="{{ '/documents/' | relative_url }}" aria-current="true">Documents</a><a href="{{ '/documents/archive/' | relative_url }}">Archive</a></nav>
+<style>.doc-tabs{margin:var(--s3) 0 var(--s4)}.fld-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,160px),1fr));gap:var(--s2);margin:var(--s3) 0 var(--s5)}.fld-grid .btn.fld{flex-direction:column;align-items:flex-start;justify-content:center;gap:2px;min-width:0;min-height:64px;padding:var(--s2) var(--s3);text-align:left}.btn.fld b{font-size:var(--fs-2);line-height:1.25}.btn.fld small{font-weight:400;font-size:var(--fs-0);color:var(--muted)}.btn.fld:hover{border-color:var(--accent)}.btn.fld:focus-visible{outline:2px solid var(--accent);outline-offset:2px}</style>
+
+<div class="ix">
+
+<h2 id="documents">Documents</h2>
+<p class="meta">6 documents.</p>
+<div class="cards"><a class="card" href="{{ '/documents/pywidget/adr-001-mvp-and-phasing.html' | relative_url }}"><span class="meta"><span class="kind blue">Decision</span><span>Ines</span><span>Day 4 · Sun Oct 25</span></span><b>ADR-001: Version 1 scope and phasing</b><p>The promise v1 proves. You can write and run real Python on iPhone and iPad in a polished, current environment, and the same Python can put a…</p></a><a class="card" href="{{ '/documents/pywidget/adr-002-widget-view-tree.html' | relative_url }}"><span class="meta"><span class="kind blue">Decision</span><span>Idris</span><span>Day 4 · Sun Oct 25</span></span><b>ADR-002: Widgets are described by a versioned JSON view tree produced by a Python DSL</b><p>C4 needs Python to describe widget UI that WidgetKit renders with SwiftUI. WidgetKit renders only an archived SwiftUI view hierarchy produced by the…</p></a><a class="card" href="{{ '/documents/pywidget/adr-004-editor-engine.html' | relative_url }}"><span class="meta"><span class="kind blue">Decision</span><span>Idris</span><span>Day 4 · Sun Oct 25</span></span><b>ADR-004: The code editor is Runestone with Tree-sitter Python, behind our own editor protocol</b><p>Option A: Runestone (MIT) with Tree-sitter (MIT) and the tree-sitter-python grammar (MIT), vendored at a pinned commit in pywidget/ios/Vendor/, used…</p></a><a class="card" href="{{ '/documents/pywidget/adr-005-compat-corpus.html' | relative_url }}"><span class="meta"><span class="kind blue">Decision</span><span>Ines</span><span>Day 4 · Sun Oct 25</span></span><b>ADR-005: The compatibility corpus waits on #53; a clean-room corpus is allowed now</b><p>The licences on the scripts (H152's list, 113 target rows): none 71, MIT 30, GPL-3.0 5, Apache-2.0 4, GPL-2.0 2, NOASSERTION 1.</p></a><a class="card" href="{{ '/documents/pywidget/adr-006-marketplace-staging.html' | relative_url }}"><span class="meta"><span class="kind blue">Decision</span><span>Ines</span><span>Day 4 · Sun Oct 25</span></span><b>ADR-006: Marketplace staging, pip timing, and where marketplace Python runs</b><p>The founder's marketplace (2.1) is three things: a place to publish widgets, a place to get other people's widgets, and the paid tier's reason to…</p></a><a class="card" href="{{ '/documents/pywidget/adr-007-execution-architecture.html' | relative_url }}"><span class="meta"><span class="kind blue">Decision</span><span>Idris</span><span>Day 4 · Sun Oct 25</span></span><b>ADR-007: Widget execution architecture. Python runs in the app; the extension only renders (option b), with the hybrid (c) gated on device…</b><p>This is ADR-001's default, confirmed by measurement rather than assumed. The one change from ADR-001's wording: "the extension only renders" now also…</p></a></div>
+
+
+
+</div>

@@ -1,0 +1,25 @@
+---
+layout: "default"
+title: "Build Plan \u00b7 Documents"
+section: "documents"
+description: "What version 1 is and when it ships, the decisions it rests on, and the proposals waiting on the Investors."
+---
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/' | relative_url }}">← Pywidget</a></div>
+
+<div class="page-head"><div class="kicker"><span class="trail"><a href="{{ '/documents/' | relative_url }}">Documents</a> › <a href="{{ '/documents/pywidget/' | relative_url }}">Pywidget</a> › <span>Build Plan</span></span></div><h1>Build Plan</h1><p class="lead">What version 1 is and when it ships, the decisions it rests on, and the proposals waiting on the Investors.</p></div>
+
+<nav class="subtabs doc-tabs" aria-label="Documents or Archive"><a href="{{ '/documents/' | relative_url }}" aria-current="true">Documents</a><a href="{{ '/documents/archive/' | relative_url }}">Archive</a></nav>
+<style>.doc-tabs{margin:var(--s3) 0 var(--s4)}.fld-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,160px),1fr));gap:var(--s2);margin:var(--s3) 0 var(--s5)}.fld-grid .btn.fld{flex-direction:column;align-items:flex-start;justify-content:center;gap:2px;min-width:0;min-height:64px;padding:var(--s2) var(--s3);text-align:left}.btn.fld b{font-size:var(--fs-2);line-height:1.25}.btn.fld small{font-weight:400;font-size:var(--fs-0);color:var(--muted)}.btn.fld:hover{border-color:var(--accent)}.btn.fld:focus-visible{outline:2px solid var(--accent);outline-offset:2px}</style>
+
+<h2 id="folders">Folders</h2>
+<nav class="fld-grid" aria-label="Folders"><a class="btn fld" href="{{ '/documents/pywidget/build-plan/decisions/' | relative_url }}"><b>Decisions</b><small>6 documents</small></a></nav>
+
+<div class="ix">
+
+<h2 id="documents">Documents in this folder</h2>
+<p class="meta">2 documents.</p>
+<div class="cards"><a class="card" href="{{ '/documents/pywidget/pywidget-plan.html' | relative_url }}"><span class="meta"><span class="kind blue">Plan</span><span>Ines</span><span>Day 4 · Sun Oct 25</span></span><b>pywidget build plan (one page)</b><p>Goal. Submit version 1.0 on Day 17 (2026-11-07), App Review quality, with the Investors' approval; Day 20 (2026-11-10) is the last safe submission…</p></a><a class="card" href="{{ '/documents/pywidget/proposal-003-icon-and-screenshots.html' | relative_url }}"><span class="meta"><span class="kind grey">Proposal</span><span>Maren</span><span>Day 5 · Mon Oct 26</span></span><b>PROPOSAL-003: App icon and App Store screenshots</b><p>All drawn by code; none comes from an image model (Commandment 9).</p></a></div>
+
+<details class="wk-more" id="held"><summary>4 documents in this folder kept off the public site</summary><p class="meta">They stay in the company repository: each says it is not public, or <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> what Commandment 42 keeps private.</p><ul class="list"><li><b>build-brief.md</b> <span class="muted">the Investors' own brief to the company</span></li><li><b>PROPOSAL-001. Pricing: a paid tier that can earn before the marketplace exists</b> <span class="muted">waiting for the Investors' decision on pricing</span></li><li><b>PROPOSAL-001: What the paid tier holds in version 1, so the app can earn by <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span></b> <span class="muted">waiting for the Investors' decision on pricing</span></li><li><b>PROPOSAL-002: Product details left open by the brief (L18)</b> <span class="muted">waiting for the Investors' answers</span></li></ul></details>
+
+</div>

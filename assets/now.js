@@ -82,11 +82,11 @@ group('w', 'Waiting or blocked', op.filter(r => r.s !== 'next'), 0, 'Show N wait
 group('d', 'Just finished', t.done || [], 3);
 }
 function place() {
-var st = stt(), col = Q('.cv-col'), desk = W.matchMedia && W.matchMedia('(min-width:880px)').matches, gs = QA('.cv-glance'), g, home, tab, z;
+var st = stt(), col = Q('.cv-col'), gs = QA('.cv-glance'), g, home, tab, z;
 if (!st || !col) return;
 if (!br) { br = at(el('div', 'cv-brief'), 'id', 'cv-brief'); sec = at(at(el('section', 'cv-tasks'), 'id', 'cv-tasks'), 'aria-label', 'Tasks'); }
 tiles();
-g = gs.filter(x => !!(x.closest && x.closest('.cv-side')) === !!desk)[0] || gs[0];
+g = gs[0];
 br.hidden = !on || !g;
 if (g && br.previousSibling !== g) g.parentNode.insertBefore(br, g.nextSibling);
 tab = Q('.cv-tabs [role=tab]'); home = !!tab && tab.getAttribute('aria-selected') === 'true';

@@ -4,16 +4,16 @@ title: "pywidget design system v0 (C13)"
 section: "documents"
 description: "Constraint I am keeping on purpose: one token file feeds the app (generated asset catalog and a Theme struct), the website (generated CSS custom properties) and the premade widgets. No colour ships that is not a token."
 ---
-<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/' | relative_url }}">← Documents</a><a href="{{ '/documents/pywidget/design-system-v0.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/design/' | relative_url }}">← Design &amp; Specs</a><a href="{{ '/documents/pywidget/design-system-v0.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
 <div class="page-head"><div class="kicker"><span class="kind grey">Design</span><span>Day 4 · Sun Oct 25</span><span><code>pywidget/docs/design/design-system-v0.md</code></span></div><h1>pywidget design system v0 (C13)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"><span>By <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a>, Product and visual designer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Maren, 2026-10-25. Status: **proposal**. Nothing here is approved under <span title="Commandment 51: the Investors approve every visual before it ships.">Commandment 51</span> (creative/approved.md lists none). The build keeps neutral placeholders (system colours, system fonts, no custom theme) until the Investors pick a direction.
+Maren, 2026-10-25; appearances added 2026-10-26. Status: **direction approved** (creative/approved.md item 2, #60, an Investor 2026-10-25 23:59 ET: "Keep both themes as light-mode and dark-mode options"). The app's **light appearance is A Paper and its dark appearance is B Studio**, following the system Light/Dark setting. Icon, App Store screenshots and store copy are not approved and come back as their own proposals.
 
-Source of truth: `tokens.json` (this folder). Contrast is checked by script, not by eye: `python3 pywidget/docs/design/check_tokens.py` checks 336 pairs, 0 below their floor (closest: B light `accent.2` on canvas 4.51). Mockups: `mockups/draw.py` renders 10 PNGs and writes `mockups/qa.json` (fonts loaded, clipped text, truncation, text-over-text, text under 11 pt): all 10 screens report 0 on each.
+Source of truth: `tokens.json` (this folder; the `appearances` block maps light and dark). `appearance.py all` resolves it into `tokens-app.json` (four sets with the same keys: light, dark, lightHC, darkHC), the asset catalog `pywidget/ios/Shared/Theme.xcassets` and `tokens.css`. Contrast is checked by script, not by eye: `python3 pywidget/docs/design/check_tokens.py` checks 820 pairs, 0 below their floor (336 direction pairs as before, plus 484 for the four shipped sets), and fails if the catalog or the CSS is stale. Mockups: `mockups/draw.py` renders 10 PNGs and writes `mockups/qa.json`: all 10 screens report 0 on each check. Previews of the four sets and of the dark widget in the stripped modes: `preview_appearances.py OUTDIR` (PNGs on the design-previews branch, `appearances/`).
 
 Constraint I am keeping on purpose: one token file feeds the app (generated asset catalog and a `Theme` struct), the website (generated CSS custom properties) and the premade widgets. No colour ships that is not a token.
 
@@ -27,15 +27,58 @@ Constraint I am keeping on purpose: one token file feeds the app (generated asse
 
 ## 2. Colour
 
+### 2.0 The two appearances (approved, #60)
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 2.0 The two appearances (approved, #60), scrolls sideways" style="--tw:958px" markdown="1">
+
+| | Light | Dark |
+|---|---|---|
+| Colour set | `color.A.light` (Paper) | `color.B.dark` (Studio) |
+| Syntax theme | Quill light | Lumen dark |
+| Display face (titles, widget hero numbers) | New York (`.serif`), titles 600, numbers 500 | SF Pro Rounded (`.rounded`), titles 700, numbers 600 |
+| Primary action | Solid ink-blue pill (`accent.2` = `accent`) | Violet-to-coral gradient pill (`accent` to `accent.2`) |
+| Glass | None: `glass.fill` = `bg.surface` (solid) | `glass.fill` rgba(30,35,51,0.55) |
+| Widget card | White card (`widget.card.start` = `end` = `bg.surface`) | Gradient card `#5B33E6` to `#1E1450`, white text |
+| Increase Contrast | `lightHC` (7:1) | `darkHC` (7:1) |
+
+</div>
+
+
+One code path draws both: in light the gradient's second stop equals the first and glass is the solid surface, so a view that asks for the gradient pill draws A's solid pill. A dark and B light are not shipped; their sets stay in tokens.json only for reference and checking.
+
+**Fix inside the approved style (listed for the next report).** The B gallery's dark card started at `#A08BFF`; its 78% white "TRIP" label measured **2.25:1** on that end of the gradient. The shipped card starts at `#5B33E6`, B's own violet from its light set: the worst text point on the card is now **4.77:1** (11 points along the gradient checked, `card_pairs` in appearance.py). Same hue family, darker start. Preview: `appearances/dark-widget-modes.png`, panels 1 and 2.
+
+**Increase Contrast (7:1).** The high-contrast sets are derived, not hand-picked: each text role keeps its hue and moves only in OKLCH lightness (darker in light, lighter in dark; chroma reduced only to stay in sRGB) until its worst pair over all six surfaces reaches 7:1 (`accent` also on `accent.soft`, `key.text` on both key fills, `text.onAccent` on both gradient stops). `line.hairline` takes the standard `line.strong`; `line.strong` reaches 3:1 on every surface. Overrides: dark glass rises to 0.85 alpha and the card's secondary text to 90% white; the dark card start darkens to `#511ED6`. Colours already over the floor do not move. Moved: 11 colours in lightHC, 8 in darkHC, and 11 and 7 syntax roles. One consequence to know: in lightHC `text.secondary` (#514D46) and `text.tertiary` (#514D45) become the same colour; at 7:1 on `bg.sunken` there is no room for a third grey, so hierarchy in that set rides on size and weight.
+
+### 2.1 Exports
+
+- **Asset catalog** `pywidget/ios/Shared/Theme.xcassets`: 43 colour sets (27 in `Theme/`, 16 in `Syntax/` prefixed `Syntax`), each with four appearances: Any, Dark, Any + High Contrast, Dark + High Contrast. Names are UpperCamel of the token (`text.primary` to `TextPrimary`, `accent.2` to `Accent2`). It compiles with `actool` (iOS 18, iPhone and iPad) with no warnings: 172 colour renditions, 4 per name. `Shared/` is a source path of both the app and the widget extension in `project.yml`, so after `xcodegen generate` both targets get it. Xcode's generated asset symbols then give `Color(.textPrimary)`, `Color(.syntaxKeyword)` and so on. No set is named `AccentColor`, so the system tint is untouched until we choose to set it.
+- **CSS** `tokens.css` (5,281 B): `:root` <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> light; `prefers-color-scheme: dark` holds dark; `prefers-contrast: more` holds the 7:1 sets. Includes `--font-display` per appearance, the type scale, space and radius. Never names SF Mono.
+- **Display face by appearance (Swift, for Idris):**
+
+```swift
+struct DisplayFont: ViewModifier {
+    @Environment(\.colorScheme) private var scheme
+    let style: Font.TextStyle
+    func body(content: Content) -> some View {
+        content.font(.system(style, design: scheme == .dark ? .rounded : .serif,
+                             weight: scheme == .dark ? .semibold : .medium))
+    }
+}
+```
+
+### 2.2 Roles and rules
+
 Roles (both directions, light and dark): `bg.canvas`, `bg.surface`, `bg.raised`, `bg.sunken`, `bg.editor`, `bg.console`, `line.hairline`, `line.strong`, `text.primary|secondary|tertiary|onAccent`, `accent`, `accent.soft`, `status.success|warning|danger`, `key.bg|bgAlt|text`. Direction B adds `accent.2` (gradient partner) and `glass.fill|stroke`.
 
 Rules:
 - Text roles reach 4.5:1 on every surface they can sit on (all 6 backgrounds checked, not only the canvas).
-- `line.hairline` is decoration and never the only separator of meaning; `line.strong` is used where a boundary matters.
+- `line.hairline` is decoration and never the only separator of meaning. Correction to v0: standard `line.strong` measures 1.74:1 (light) and 1.73:1 (dark) on `bg.surface` (worst surface 1.46 and 1.54), so it is **not** a 3:1 boundary and v0's script never checked it at 3:1 (it used 1.0). In the standard sets a boundary that matters is carried by a fill change or a system control, not by the line alone. In the Increase Contrast sets `line.strong` is 3:1 on every surface.
 - `accent` is for the one primary action per screen (Run, New) and for selection. Never for body text.
 - Status colours always travel with an icon or a word.
 - Dark mode is its own palette, not an inversion: surfaces step up in lightness, shadows go away.
-- Increase Contrast (iOS setting): `text.secondary` maps to `text.primary`, hairlines map to `line.strong`. To build: a high-contrast variant per palette, checked to 7:1.
+- Increase Contrast (iOS setting): the `lightHC` and `darkHC` sets in section 2.0, all text at 7:1, boundaries at 3:1. They live in the asset catalog's high-contrast appearances, so the system picks them; no code switches.
 
 ## 3. Type
 
@@ -43,7 +86,7 @@ Rules:
 All system fonts through the OS API; nothing is bundled. SF Mono's own licence (read from its name table) limits the font file to Apple-branded apps and bars making content with it, so the website never names or loads it, and the mockups set code in Menlo (macOS system font, used for display under the macOS licence). In the app, SF Mono comes only from `Font.system(design: .monospaced)`, the route Apple provides to apps.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 3.1 Families, scrolls sideways" style="--tw:734px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 3.1 Families, scrolls sideways" style="--tw:734px" markdown="1">
 
 | Role | iOS | Web fallback |
 |---|---|---|
@@ -57,7 +100,7 @@ All system fonts through the OS API; nothing is bundled. SF Mono's own licence (
 
 ### 3.2 Scale (Dynamic Type, default size Large)
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 3.2 Scale (Dynamic Type, default size Large), scrolls sideways" style="--tw:607px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 3.2 Scale (Dynamic Type, default size Large), scrolls sideways" style="--tw:607px" markdown="1">
 
 | Token | Text style | pt / leading | Use |
 |---|---|---|---|
@@ -105,10 +148,10 @@ Durations 120 (quick), 220 (standard), 360 (emphasized) ms. Springs: `.snappy` f
 
 ## 6. Accessibility
 
-- Contrast: 4.5:1 text, 3:1 large text and non-text marks (caret, focus ring, `line.strong`). Script: `check_tokens.py`.
+- Contrast: 4.5:1 text, 3:1 large text and non-text marks (caret, focus ring); with Increase Contrast, 7:1 text, 4.5:1 caret, 3:1 `line.strong`. Script: `check_tokens.py`.
 - VoiceOver: editor lines read as "line 3, import sys, warning: F401 unused import"; the rotor offers Lines, Errors, Functions. Console outputs carry a summary label ("Table, 3 rows: rides 24, total 548.4, mean 22.8"; "Line chart, 24 points, highest 34.8 at ride 21"). Each extra key has a spoken name ("Indent", "Open parenthesis"). Widgets give one combined label per element group.
 - Reduce Motion as in section 5. Reduce Transparency: glass surfaces become `bg.surface` solid.
-- Hardware keyboard on iPad: every toolbar action has a shortcut (⌘R run, ⌘. stop, ⌘B breakpoint, ⌘/ comment, ⌘⇧C console, ⌘P open file) and appears in the ⌘-<span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> menu.
+- Hardware keyboard on iPad: every toolbar action has a shortcut (⌘R run, ⌘. stop, ⌘B breakpoint, ⌘/ comment, ⌘⇧C console, ⌘P open file) and appears in the ⌘-hold menu.
 - Never colour alone: lint squiggle plus label; run history dot plus word ("failed").
 
 ## 7. Editor syntax themes
@@ -116,7 +159,7 @@ Durations 120 (quick), 220 (standard), 360 (emphasized) ms. Springs: `.snappy` f
 Two themes, each with light and dark variants, all roles checked at 4.5:1 on the background, the current-line band and the selection.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 7. Editor syntax themes, scrolls sideways" style="--tw:526px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 7. Editor syntax themes, scrolls sideways" style="--tw:526px" markdown="1">
 
 | Role | Quill light | Quill dark | Lumen light | Lumen dark |
 |---|---|---|---|---|
@@ -139,7 +182,7 @@ Gutter, current line, selection, error and caret are in tokens.json. Highlightin
 
 ### 8.1 Families (393 pt iPhone; flex to the container, never to these numbers)
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 8.1 Families (393 pt iPhone; flex to the container, never to these numbers), scrolls sideways" style="--tw:812px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 8.1 Families (393 pt iPhone; flex to the container, never to these numbers), scrolls sideways" style="--tw:812px" markdown="1">
 
 | Family | Size | Layout | Content rule |
 |---|---|---|---|
@@ -159,7 +202,7 @@ Common: 16 pt content margins (`contentMargins` default); 11 pt text floor; at m
 
 ### 8.2 Rendering modes
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 8.2 Rendering modes, scrolls sideways" style="--tw:1124px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 8.2 Rendering modes, scrolls sideways" style="--tw:1124px" markdown="1">
 
 | Mode | Where | What the system does | Our rule |
 |---|---|---|---|
@@ -175,10 +218,29 @@ Pillow image fallback (L4): bitmaps lose colour in accented, vibrant and clear m
 
 Every premade widget is drawn and checked in all four modes before it ships; the iPad preview pane has a mode switch (mockup B-ipad/A-ipad) so users get the same check.
 
-## 9. Two directions
+### 8.3 Dark (B Studio) widgets when colour is stripped
+
+In accented, vibrant and clear the system removes the container background, so B's gradient card is gone, and content is repainted by luminance (accented: two tint groups). B's identity in those modes is not its colour. What carries a dark widget:
+
+1. **The SF Pro Rounded hero numeral** (600). It is the one thing that survives every mode, as New York does in light.
+2. **Three luminance levels only:** primary 1.0, secondary 0.66, tracks 0.24 (render.py `ROLE_ALPHA`). Never a fourth level that only colour separates.
+3. **The hero and its mark are the accent group** (`.widgetAccentable()`); labels stay in the default group.
+4. **Nothing means anything by hue or gradient.** Status travels with a symbol or a word; no text sits on meaning carried by the gradient.
+5. **Every paint is a token**, so the system can remap it per mode. No literal colours on Text or Image.
+
+`check_widget_modes.py` reads the 12 premade trees (52 family views) and counts what must be 0: literal colours 0, gradient paints 0, system-family views with no accentable node 0, colour-only status marks 0 (`--strict` fails on any). It also counts two gaps the dark appearance opens in the trees, which are work for the DSL and renderer owners:
+
+- **26 hero Text nodes hard-code `design: serif`.** In dark they would draw New York, not the approved rounded face. Needed: an appearance-aware display design in viewtree (for example `"design": "display"`, resolved by the Swift renderer from `colorScheme`: serif in light, rounded in dark), and `pywidget_ui` emitting it for hero numbers.
+- **28 views set `containerBackground` to `bg.surface`.** In dark full colour that draws B's flat surface, not its gradient card. Needed: a `widget.card` paint (gradient `widget.card.start` to `widget.card.end`; solid in light because both stops are `bg.surface`).
+
+Preview (approximation of the system, `preview_appearances.py`): `appearances/dark-widget-modes.png` on design-previews, the countdown widget in full colour (mockup card and shipped card), accented, clear on a dark wallpaper and clear on a light wallpaper. Clear on a light wallpaper is where white content is weakest; the system adapts the glass there, and only Idris's device check can say how much.
+
+## 9. Two directions (history: the #60 choice)
+
+The Investors kept both (#60, 2026-10-25 23:59 ET): A is the light appearance, B the dark one (section 2.0). The table and the recommendation below are the proposal as it was put to them; the recommendation for A alone was not taken.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 9. Two directions, scrolls sideways" style="--tw:739px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 9. Two directions (history: the #60 choice), scrolls sideways" style="--tw:739px" markdown="1">
 
 | | A, Paper | B, Studio |
 |---|---|---|
@@ -203,10 +265,12 @@ Mockups (each direction): `mockups/{A,B}-editor.png` (iPhone editor, extra key r
 What B does better: it reads as "creative tool" at a glance and photographs well for App Store screenshots. If the Investors like that, option 3 in ops/questions.md keeps A for the app and offers B's gradient cards as one optional premade widget style.
 
 ## 10. Open
-- The Investors choose a direction (C51); until then the build uses placeholders.
-- Idris checks the widget family sizes and mode rendering in the Simulator; the numbers here are from Apple's published layouts and need a device check.
-- High-contrast palette variants (7:1) to build after the choice.
-- App icon and App Store screenshots follow the chosen direction (C51, separate proposal).
+- ~~The Investors choose a direction~~: done, #60 (section 2.0, creative/approved.md item 2).
+- ~~High-contrast palette variants (7:1)~~: done 2026-10-26 (section 2.0).
+- Idris: run `xcodegen generate` in pywidget/ios so `Shared/Theme.xcassets` joins both targets, build, and check in the Simulator: Light, Dark, and both with Increase Contrast (Settings, Accessibility, Display and Text Size). Then the widget family sizes and the four rendering modes, clear on a light wallpaper first (section 8.3).
+- DSL and renderer owners: the display design and the `widget.card` paint (section 8.3), then the premade trees regenerate.
+- For the next report (<span title="Commandment 51: the Investors approve every visual before it ships.">C51</span> visibility, inside the approved style): the dark card start `#A08BFF` to `#5B33E6` (section 2.0), and the Increase Contrast sets.
+- App icon and App Store screenshots: separate C51 proposal in the approved appearances (board line).
 - QA note: both galleries report 1 element past the canvas edge in qa.json (`offcanvas`); no text is clipped (clip 0) and the PNGs show no cut content. Not yet traced.
 {% endraw %}
 

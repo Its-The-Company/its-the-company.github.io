@@ -450,6 +450,14 @@ ul.tk{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
 .cv-tab .cv-badge{min-width:20px;padding:0 6px;border-radius:var(--r-pill);background:var(--hot);color:var(--bg);font-size:var(--fs-0);line-height:20px;text-align:center}
 .cv-tab .cv-x{margin-right:calc(-1*var(--s2));width:28px;height:28px;display:inline-grid;place-items:center;border-radius:var(--r-s);opacity:.8}
 .cv-tab.cv-new{color:var(--accent);font-size:var(--fs-3);padding:0 var(--s3)}
+/* Home's row (#41 c6407765312): Overview, Issues, Chat. The layout's row (visitors, and /requests.html) wears the
+   same pills as the chat's row, so Home > Issues looks like a tab of the page it came from. */
+.cv-tab.cv-link{text-decoration:none}
+nav.subtabs.hometabs{gap:var(--s1);padding:var(--s2) 0;margin-top:var(--s3)}
+nav.subtabs.hometabs a{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 var(--s3);margin:0;
+  border:1px solid var(--line);border-radius:var(--r-m);background:var(--bg);color:var(--muted);font-size:var(--fs-1)}
+nav.subtabs.hometabs a[aria-current]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+nav.subtabs.hometabs .num{font-weight:400}
 
 /* ---------- thread head: sticky under the tabs ---------- */
 .cv-head{position:sticky;top:var(--cv-tabs-h,57px);z-index:5;display:flex;align-items:center;gap:var(--s2);margin:0 calc(-1*var(--s4));
@@ -570,17 +578,15 @@ summary.cv-sec{display:list-item;cursor:pointer;min-height:44px}
 .cv-checks .cv-todo .cv-mk{background:var(--soft-2);color:var(--muted)}
 .cv-fix{grid-column:2;margin-top:var(--s1);padding:var(--s2) var(--s3);border-radius:var(--r-s);background:var(--hot-bg);color:var(--ink);font-size:var(--fs-1)}
 
-/* ---------- desktop from 880 px: tabs and thread on the left, the glance on the right ---------- */
+/* ---------- desktop from 880 px: one full-width column; the glance is on Overview only (#41 c6407765312) ---------- */
 @media (min-width:880px){
-  main.cv-desk{display:grid;grid-template-columns:minmax(0,1fr) var(--side);column-gap:var(--s6);align-items:start}main.cv-desk,main.cv-desk.cv-open{padding-bottom:var(--s6)}
-  main.cv-desk .cv-side{position:sticky;top:var(--s3);max-height:calc(100vh - 2 * var(--s3));overflow-y:auto}
+  main.cv-desk,main.cv-desk.cv-open{padding-bottom:var(--s6)}
   .cv-tabs{margin:var(--s3) 0 0;padding:var(--s2) 0}
   .cv-head{margin:0;padding:var(--s2) 0}
   .cv-dock{position:sticky;bottom:0;margin-top:var(--s3);border:1px solid var(--line);border-radius:var(--r-l);padding:var(--s3) var(--s4)}
   .cv-msg{max-width:80%}
-  .cv-glance{grid-template-columns:1fr 1fr;margin-top:var(--s3)}
+  .cv-glance{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:var(--s3)}
 }
-@media (max-width:879px){.cv-side{display:none}}
 @media (prefers-reduced-motion:reduce){.cv-dot{animation:none}}
 /* chat v3 build fixes (Idris): "+" is pinned outside the tab scroller (spec 1.1); the settings row; the desktop
    grid places the column and the side by name, so the hidden v2 parts of main cannot take a cell. */
@@ -591,12 +597,10 @@ summary.cv-sec{display:list-item;cursor:pointer;min-height:44px}
 .cv-set .chat-status{font-size:var(--fs-0)}
 /* R-4: a middle dot before the status ('Updated 11:14 AM.', the 401 line), only when it has text */
 .cv-set .chat-status:not(:empty)::before{content:'· '}
-@media (min-width:880px){main.cv-desk>.cv-col{grid-column:1;grid-row:1}main.cv-desk>.cv-side{grid-column:2;grid-row:1}}
 /* Render check fixes (Idris, tools/site_v3_qa.py): on a phone the fixed dock covered the footer's last row, so the
    room for the dock goes under the footer, not under main; on desktop the tiles show once, in the side. */
 @media (max-width:879px){main.cv-desk,main.cv-desk.cv-open{padding-bottom:0}
   main.cv-desk+footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}main.cv-desk.cv-open+footer{padding-bottom:calc(200px + env(safe-area-inset-bottom))}}
-@media (min-width:880px){.cv-view>.cv-glance{display:none}}
 /* Odalys C13 of e5ffe2b: a 3-line state line ('Not sent: ...', urgent warnings) made the folded dock 125 px, over the
    96 px kept clear, so ~29 px of the footer's last row hid under it for up to 30 s. The line now holds at most 3 lines
    (more scrolls inside it, nothing cut), and while it shows the footer keeps that much more room (tests/site_send_test.py I). */
@@ -636,7 +640,7 @@ summary.cv-sec{display:list-item;cursor:pointer;min-height:44px}
 .wk-link{margin:var(--s3) 0 0;font-weight:600}
 /* S28-3: the filter "Clear" buttons took the user-agent 13.33 px; inherit the line they sit in (16, on the scale) */
 #pf-c,#if-c{font:inherit}
-/* Needs you (Maren, #41 c6404533692): /requests.html and Home's panel. A decision row carries a left rule and the soft accent. */
+/* Home > Issues (Maren, #41 c6404533692, renamed in c6407765312): /requests.html. A decision row carries a left rule and the soft accent. */
 .list.needs{gap:0}.list.needs li{padding:var(--s3) var(--s3);border-bottom:1px solid var(--line)}.list.needs li:first-child{border-top:1px solid var(--line)}
 .list.needs .ny-decide{background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:0 var(--r-s) var(--r-s) 0;border-bottom-color:var(--bg)}
 .ny-q,.ny-r{flex-basis:100%}.ny-r{font-weight:600}.ny-decide .ny-r{color:var(--ink)}.ny-optional .ny-q,.ny-optional .ny-r{color:var(--muted);font-weight:400}
@@ -655,16 +659,19 @@ summary.cv-sec{display:list-item;cursor:pointer;min-height:44px}
 <header class="site"><div class="wrap">
 <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
 <nav class="tabs" aria-label="Sections">
-<a href="{{ '/' | relative_url }}"{% if page.section == "home" %} aria-current="page"{% endif %}>Home</a>
-<a href="{{ '/requests.html' | relative_url }}"{% if page.section == "requests" %} aria-current="page"{% endif %}>Needs you</a>
+<a href="{{ '/' | relative_url }}"{% if page.section == "home" or page.section == "requests" %} aria-current="page"{% endif %}>Home</a>
 <a href="{{ '/reports/' | relative_url }}"{% if page.section == "reports" %} aria-current="page"{% endif %}>Reports</a>
 <a href="{{ '/company/' | relative_url }}"{% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" or page.section == "documents" or page.section == "work" or page.section == "pitches" %} aria-current="page"{% endif %}>Company</a>
 <a href="{{ '/about.html' | relative_url }}"{% if page.section == "about" %} aria-current="page"{% endif %}>About</a>
 </nav>
 </div></header>
 <div class="wrap notice-row">
-<p class="notice">{{ site.disclosure }}</p>
 {% if site.announcement and site.announcement != "" %}<p class="notice announce">{{ site.announcement }}</p>{% endif %}
+{% if page.hometab %}<nav class="subtabs hometabs" aria-label="Home">
+<a href="{{ '/' | relative_url }}"{% if page.hometab == "overview" %} aria-current="page"{% endif %}>Overview</a>
+<a href="{{ '/requests.html' | relative_url }}" data-issues{% if page.hometab == "issues" %} aria-current="page"{% endif %}>Issues{% if page.issues %} <span class="num">{{ page.issues }}</span>{% endif %}</a>
+<a href="{{ '/' | relative_url }}#t=main" data-chat-tab hidden>Chat</a>
+</nav>{% endif %}
 {% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" or page.section == "pitches" or page.section == "documents" or page.section == "work" %}<nav class="subtabs" aria-label="Company">
 <a href="{{ '/company/' | relative_url }}"{% if page.section == "cast" %} aria-current="page"{% endif %}>People</a>
 <a href="{{ '/company/work.html' | relative_url }}"{% if page.section == "work" %} aria-current="page"{% endif %}>Work</a>

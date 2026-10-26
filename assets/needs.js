@@ -71,6 +71,7 @@ window.CompanyNeeds = { options: options, pickAsk: pickAsk, images: images };
 var S = window.CompanySite, root = document.getElementById('needs-root');
 if (!S || !root || !S.getToken()) return;
 var anon = document.getElementById('needs-anon'); if (anon) anon.hidden = true;
+var chatTab = document.querySelector('nav.hometabs [data-chat-tab]'); if (chatTab) chatTab.hidden = false;
 var repo = root.getAttribute('data-repo'), RI = '/repos/' + repo + '/issues', LS = localStorage, el = S.el;
 var named = (root.getAttribute('data-named') || '').split(/\s+/).filter(Boolean).map(Number);
 var KEEP = ['emergency', 'urgent', 'report', 'pitch'], MAXF = 10 * 1048576, names = [];

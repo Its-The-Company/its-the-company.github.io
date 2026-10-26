@@ -3,7 +3,7 @@
 var x, y, t, on = false;
 var NO = 'input,textarea,select,button,[contenteditable],pre,code,table,.subtabs,.cv-dock,.cv-tabs,.filters';
 function order() {
-var top = [].slice.call(document.querySelectorAll('nav.tabs a')), sub = document.querySelectorAll('nav.subtabs a'), i;
+var top = [].slice.call(document.querySelectorAll('nav.tabs a')), sub = [].filter.call(document.querySelectorAll('nav.subtabs a'), function (a) { return !a.hidden; }), i;
 if (sub.length) {
 for (i = 0; i < top.length; i++) if (top[i].getAttribute('aria-current')) break;
 if (i < top.length) top.splice.apply(top, [i, 1].concat([].slice.call(sub)));
@@ -37,8 +37,8 @@ on = false;
 var p = e.changedTouches[0], dx = p.clientX - x, dy = p.clientY - y;
 if (Math.abs(dx) <= 60 || Math.abs(dx) <= 2 * Math.abs(dy) || Date.now() - t >= 600 || picked()) return;
 var a = order(), i;
-for (i = 0; i < a.length; i++) if (a[i].getAttribute('aria-current')) break;
+for (i = a.length - 1; i >= 0; i--) if (a[i].getAttribute('aria-current')) break;
 var go = a[i + (dx < 0 ? 1 : -1)];
-if (i < a.length && go) location.href = go.href;
+if (i >= 0 && go) location.href = go.href;
 }, {passive: true});
 })();

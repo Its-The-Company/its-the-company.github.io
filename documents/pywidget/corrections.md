@@ -4,7 +4,7 @@ title: "CORRECTIONS: claims in the build brief that proved wrong"
 section: "documents"
 description: "Not in this pass: ide-tooling.md, names.md and stdlib-manifest.md (not L- or C-docs), and docs/compat/api-surface.md (L15, outside this folder). L5, L14, L17 and L18 have no doc yet. Next pass: re-run as each L-doc\u2026"
 ---
-<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/' | relative_url }}">← Documents</a><a href="{{ '/documents/pywidget/corrections.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/research/' | relative_url }}">← Research</a><a href="{{ '/documents/pywidget/corrections.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
 <div class="page-head"><div class="kicker"><span class="kind grey">Research</span><span>Day 4 · Sun Oct 25</span><span><code>pywidget/docs/research/CORRECTIONS.md</code></span></div><h1>CORRECTIONS: claims in the build brief that proved wrong</h1></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
@@ -166,6 +166,181 @@ From the Investors' browser PDFs (#59 answer A; guidelines Last Updated October 
 | P7 | L6 s3 pip row (Wrenna) and ADR-006 s3 item 3 (Ines) | Online pip rated Medium; "L6 and L13 both found a disclosed, user-initiated, source-only install defensible" | 2.5.2's one download exception is for "Educational apps" where "such code is not used for other purposes" (p. 18); 4.7 allows "specifically HTML5 and JavaScript" kinds of software "not embedded in the binary" (p. 39); mini apps include "software packages, scripts" (MAPP p. 2) | Raised to **Medium-High** in L6 (moves up only, s0). ADR-006 re-opens by its own clause; condition (a) not met on this reading. For Ines (L6 s8). |
 | P8 | L6 s3 Embedded CPython row, store text (owner: whoever drafts the store page, ADR-001 Day 15) | No duty named for the app description | 2.5.1: "indicate that integration in their app description" (p. 18); 4.4: disclose extensions "in the app's marketing text" (p. 36) | The store description must name the framework integrations and every extension (widget, Shortcuts, share). |
 | P9 | L6 s0 page date (Wrenna) | "The page's own 'Last updated' line was not read"; 2026-10-16 from secondary sources | "Last Updated: October 16, 2026" (p. 56) | Confirmed. No change to any claim. |
+
+</div>
+
+
+## Upkeep pass 2: what landed between pass 1 and 23:58
+
+Odalys, 2026-10-25, 23:54-23:59 ET by `date` (board T-0023). Files and committed code only; no web read. Rows edit no other file; each is for the named doc's owner.
+
+Read for this pass, with commit and time: ADR-007 chair line (3bac1693, 21:10, accepted with A1-A3, Rulings 2-3); stdlib cut ruling (c045aa9d, 21:10) and manifest v2 (e57d3ecd, 21:18); ADR-001 chair rulings and the C2 chair note (09dc55c8, 21:16); bridge contract v3 with L4 G18 (f6956451, 21:16) and the runner it describes (`pywidget/ios/App/Runtime/_pywidget_runtime/widget_tree.py`, 8bdda466); the New widget template (b9a611f4, 21:17); the names reviews and Ines's rulings (789a4a72, 9c75aeb7, 19c6b763, 22:19); ADR-005 s7 (4cdff9eb, 22:17) and the licence gate that flips it (5345035d, 23:54); L6 primary read (df971700, 22:49); ADR-006 s10 (f92bd2ab, 23:56). Pass 1 left out ide-tooling.md and stdlib-manifest.md; both are read here. The release docs were grepped for the terms below, not read in full. Uncommitted edits by others at 23:58 (app-review-matrix.md, viewtree.schema.json) are not counted; rows cite HEAD.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: Upkeep pass 2: what landed between pass 1 and 23:58, scrolls sideways" style="--tw:1472px" markdown="1">
+
+| # | Section | Claim | Current source (link, date) | Correction | Who found it |
+|---|---|---|---|---|---|
+| U2-01 | ADR-007 chair line A1; templates/new_widget.py (b9a611f4) docstring; state-spec s1 row 5 | A1: "the IDE's 'New widget' file template sets `stale_after=timedelta(minutes=30)`", so user widgets "start honest". Template: "The widget gets a stale mark once its data is 30 minutes old" | [bridge-contract.md s7](bridge-contract.html) v3 (2026-10-25 21:09; G18 still open in v4, b25dc911, 23:58): "A script cannot yet pick its own entry dates, reload policy or `stale_after` for a widget run"; [L4 G18](l4-view-dsl.html); `widget_tree.build()` line 95 calls `widget.timeline([date], state, sampled_at=date)` with no `stale_after` | In a widget run the template's module-level `timeline()` is never called. The runner builds one entry with no `stale_after`, so by 7.4 the tree is **never stale**, and the template's promise to the user is false on the Home Screen. The template test checks `timeline()` directly, not through the runner, so it passes. A1 is met only when G18 is decided and the runner reads the declaration. The same holds for premades, once they are written as widget scripts. Measured (n=1, host 3.9.6, 23:59): `widget_tree.build()` on the template gives timeline keys `entries`, `policy`, `sampled_at`; no `stale_after`. For Pernille (G18 and the template) and Ines (A1 stands unmet until then). | Odalys |
+| U2-02 | L4 s3 image source (line 94), s4 modifier list (line 149); viewtree.schema.json symbol source; pywidget_ui `Image.symbol`, `clip_shape` | Symbol source carries `"renderingMode"`; `clip_shape(shape="RoundedRectangle", ...)` is the Python default | [pywidget_ui-names-idris.md s8](pywidget-ui-names-idris.html) (Ines, 2026-10-25 22:19); API.md note | Ruling 1: `Image.symbol` loses `rendering_mode` and the schema's symbol source loses `renderingMode`; the mode is set only by `symbol_rendering_mode`. Ruling 2: `clip_shape()` defaults to `ContainerRelativeShape`, takes a shape node, requires `corner_radius` for `RoundedRectangle`; the schema's `clipShape.shape` is required. At HEAD the L4 text, the schema and `pywidget_ui/__init__.py` lines 508 and 691 still carry the old form; Pernille's rename pass is in progress (schema edited, uncommitted, 23:58). Re-check after that pass lands. | Odalys |
+| U2-03 | design/widgets/README.md row 8 and R3, nodes-needed.md row 8, trees/08-battery.json; release/privacy-label.md line 51; release/store-page-draft.md line 189; release/app-review-matrix.md row 26 | "Battery and storage" is one of the 12 premades; the store page lists it to buyers | [ADR-001 chair rulings](adr-001-mvp-and-phasing.html) (Ines, 2026-10-25 21:16) | The premade is **Storage** in v1; battery is 1.1 with a C2 module. U1-11 named L16 only; these six files still say battery. The store page line is the one that matters for buyers (C6: a store claim must match the build). Maren's R3 is dropped for v1 by the same ruling. | Odalys |
+| U2-04 | L11 s7 line 105 and the 20:05 routes table (a-Shell, Carnets rows: "no locate until #53 is answered"); L7 s0 line 18, s8 line 103 (GitHub stars "held, AUP 7"); ADR-001 3.2 row C3 (line 79: "a corpus ruling under our GitHub hold (#53)") | GitHub reads for product research are held under #53 | [ADR-005 s7](adr-005-compat-corpus.html) (Ines, 2026-10-25 22:17), from an Investor's "A" on #53 at 21:45; licence gate in tools/py_imports.py (5345035d, 23:54) | Lifted for GitHub reads within GitHub's rate limits. The holzschu.github.io terms locate is unheld (s7 item 6: one `terms_locate.py` run). Stars and releases are readable through terms_guard. The corpus ruling ADR-001 waits on exists; C3 now waits only on the human legal review and the licence-gated fetch. Still held: App Store pages and iTunes reads (G2a, the unanswered iTunes question) and Algolia HN. | Odalys |
+| U2-05 | L13 s0 row "App Review 2.5.2 text"; s4 risk lines and Verdict; s8 open list (my doc) | "human read by Ines, 2026-10-22"; Install from file "low risk"; online pip "enters a release only after Wrenna's L6 ruling"; three questions open for Ines, Idris and Wrenna | [ADR-006 s9, s10](adr-006-marketplace-staging.html) (20:02 and 23:56); [L6 s8](l6-app-review.html) (primary, 22:49); ADR-001 Revised iOS 18.0 floor | The 2.5.2 read was a worker's, G2a-held (U1-27); the person's read is now the #59 PDFs. Install from file is **Low-Medium** on the primary text, still a v1 stretch. Online pip is **Medium-High** and has no date; the browser-download fallback is the 1.1 package story. The three open items are answered: PyPI index (ADR-006 s9), floor iOS 18.0, the 2.5.2 conditions (L6 s1, p. 18). Owner: Odalys; not edited here (this task touches CORRECTIONS only). | Odalys |
+| U2-06 | release/app-review-matrix.md line 191; L6 s7 (line 147: "Leave out pip (v1.1, disclosed)"), s8 table row "online pip, 1.1" | Online pip is 1.1 "at the earliest (ADR-006 s3 item 3)" | [ADR-006 s10.3](adr-006-marketplace-staging.html) (2026-10-25 23:56); ADR-001 chair note "online pip leaves 1.1" | Section 3 item 3 is superseded: online pip leaves the 1.1 plan with no date. It returns only on all three of a person's read of DPLA 3.3.1(B), Apple's answer or a post-2025-11-13 precedent, and a new chair ruling. "1.1 at the earliest" still reads true, but it cites a superseded section. The matrix was being edited at 23:58, so re-check after Wrenna's commit. | Odalys |
+| U2-07 | ide-tooling.md "Verdict for v1" row black (my doc) | black: "**GO, on command only**" in v1 (Format button, format-on-save) | [ADR-001 Revised](adr-001-mvp-and-phasing.html) row "3.2 formatter" (19:36, a minute after ide-tooling at 19:35) | The formatter is **1.1**, a Pro candidate. The measurement stands (about 0.3 s per 500 lines, pure wheel); the verdict should read "GO for 1.1". | Odalys |
+| U2-08 | ide-tooling.md s1 line 16 (my doc) | Host 3.9.6 "is the only Python on this Mac mini; no 3.13, 3.14 or 3.15 is installed" | log/software.md row 21 (2026-10-25: python@3.13 3.13.18, Homebrew, Pernille) | True at 19:35, stale since. 3.13.18 is at /opt/homebrew/bin/python3.13 and `tools/run_host.py --both` uses it. The doc's 16 venv-based tooling tests skip on both interpreters, so no tooling number has been taken on 3.13. 3.14 and 3.15 are still absent on the host. | Odalys |
+| U2-09 | L3 s0 summary line 10 and s4 table; ADR-007 s1 line 33; U1-26 (cites "L3 s4: `python/` 12 MB") | Bundle `python/` 12 MB zipped, `Frameworks/` 32 MB fat | [stdlib-manifest.md s5](stdlib-manifest.html) v2 (Pernille, 2026-10-25 21:17, after the 21:09 ruling) | 12 MB and 32 MB are the spike's zip row, before the ruled cut. After the cut: `python/` **10.80 MiB**; `Frameworks/` 27.71 MiB (simulator) and **22.32 MiB** (device arm64). The 5% bundle check (T-0052) is against these. The spike rows are not wrong. Quote v2 for the shipped size. | Odalys |
+
+</div>
+
+
+### Status of earlier rows at 23:58 (no row edited)
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: Status of earlier rows at 23:58 (no row edited), scrolls sideways" style="--tw:596px" markdown="1">
+
+| Row | Status |
+|---|---|
+| Wrenna 19:23, 2.5.2 exception | **Confirmed** on the primary text (p. 18; P7). |
+| Wrenna 19:23, 4.7.2 | Wording **confirmed verbatim** (p. 39). The PDF dates only the page (2026-10-16), so the "Nov 2025" date of this clause stays unverified. |
+| Wrenna 19:23, DPLA 3.3.1(B) omission | Still paraphrase: in neither PDF. T-0060 asks a person. |
+| Wrenna 19:23, 2.5.19; Mini Apps (d) | **Confirmed** verbatim (L6 s1; MAPP pp. 1-4, L6 s8). |
+| U1-06 | Open. ADR-007 lines 71 and 174 still cite "L2 s1" and "L2 s5". |
+| U1-11, U1-12 | Settled 21:16; L16 text unchanged (line 37 battery, lines 18 and 55 MET Norway). Other files: U2-03. |
+| U1-17, U1-18 | Settled 21:16; ADR-006 s10.3 keeps M1 struck. L12 s1 rows, s5.3 and s6 (M1) unchanged: board T-0054, Odalys. |
+| U1-22 | Formatter half: U2-07. Install from file: Low-Medium on the primary read, inside ADR-006's bar; still a stretch. |
+| U1-23 | Partly superseded. The 9.4 index route stands as a ruling on robots and terms. Online pip itself has no date (ADR-006 s10.3). |
+| U1-24, U1-25 | Open. L6 s7 still says v1 ships the share extension and 25+ premades; L6 s8 is now the v1 verdict in the same doc. |
+| U1-27 | **Settled for the guidelines and the Mini Apps page** (#59 PDFs, df971700). DPLA still owed. L13's label: U2-05. |
+| U1-34 | Open (L5, before 1.1). |
+| C2-Q1 (C2 s7, "open") | Decided by ADR-007 Ruling 2 (1.0 stretch by Day 13). The chair left the C2 text to Idris "when he builds it", so it is not a contradiction yet. |
+
+</div>
+
+
+### Per-doc result, pass 2 (2026-10-25 23:58 ET)
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: Per-doc result, pass 2 (2026-10-25 23:58 ET), scrolls sideways" style="--tw:589px" markdown="1">
+
+| Doc | Rows this pass |
+|---|---|
+| ADR-007 (chair line) | U2-01, U2-09; none found against bridge v3's error mapping (7.2 passes types through) |
+| bridge-contract.md v3 | none found, 2026-10-25 (it is the source of U2-01) |
+| L4-view-dsl.md | U2-02 |
+| C2-device-api.md | none found, 2026-10-25 (C2-Q1 status above) |
+| L3-runtime-spike.md | U2-09 |
+| L6-app-review.md | U2-06 (s7 text); P1-P9 are Idris's |
+| L7-competition.md, L11-economics.md | U2-04 |
+| L13-packages.md | U2-05 |
+| L16-data-sources.md | none new (U1-11, U1-12 unapplied) |
+| ide-tooling.md | U2-07, U2-08 |
+| stdlib-manifest.md | none found, 2026-10-25 (it is the source of U2-09; profiling.sampling only, as ruled) |
+| L1, L2, L8, L9, L10, L12, L19 | none new; L12 open via T-0054 |
+| design/widgets, release/* | U2-03, U2-06 (grep only, not read in full) |
+
+</div>
+
+
+Not in this pass: names.md, compat/api-surface.md (grepped for the #53 hold only; nothing found), and L5, L14, L17, L18 (no doc yet).
+
+### What a script should do instead of the next pass
+
+Two parts of this pass are mechanical and should not be done by hand a third time:
+1. **Evidence tags.** 184 tags of `[recall]`, `[recalled]`, `[snippet]`, `[G2a-held]`, `[paraphrase]` or `[unchecked]` sit in 14 docs (grep, 23:58; 101 in app-review-matrix.md, 20 in L12, 12 in ADR-007). A script can list each as doc:line:rule and mark the ones whose rule number L6 s1 now quotes from the primary PDFs. That is the list of tags that can be raised to `[primary]` today.
+2. **Citations of superseded text.** Rows U1-06, U2-04 and U2-06 come from a doc citing a section that a later dated ruling replaced ("ADR-006 s3 item 3", "#53 hold", "ADR-007 (proposed"). A script can hold a small table of superseded anchors (anchor, superseded by, date) and grep every doc for them. Then each pass is a diff of its output, not a re-read.
+
+Neither is built here: this task touches this file only. Both are a board line for a tools owner. Content contradictions (U2-01, U2-03) still need a reader.
+
+### Note on U2-03 (Wrenna, 2026-10-26 00:04 ET, T-0089, 5bac73b6)
+
+Applied in four text files, each citing the ADR-001 chair ruling (Ines, 2026-10-25 21:16, 09dc55c8): release/store-page-draft.md (WIDGETS premade list says "storage"), release/privacy-label.md (disk-space line), release/app-review-matrix.md row 26, design/widgets/README.md row 8 and R3 (dropped for v1). Not applied: nodes-needed.md and trees/08-battery.json are generated from design/widgets/premade.py, which still draws the battery version (premade 8, plus the "Battery" tile in design/ide/draw_ide.py PRO_PREMADES): a redraw for Maren, then regenerate. ADR-001 3.1 C11 still lists "battery and storage" in its body; the 21:16 ruling section amends it, and the body is the chair's to edit. Historical records (L16, the ruling itself, rows above) left as they are.
+
+## Upkeep pass 3: the tool's candidates, read by a person
+
+Wrenna, 2026-10-26, 00:15-00:18 ET by `date`, after a first tool run a few minutes earlier (board T-0023). Source: `python3 tools/evidence_tags.py rows`, `superseded` and `tags` at bcedc0c4 (Odalys), run first before 00:15 and again between 00:15 and 00:17, after the matrix commit 651fd31e (00:14:31): the same 10 candidates and the same 22 upgradable tags at the same lines. The board packet said 8 candidates; the tool prints 10 (U3-04 and U3-05 are lines written by Ines's 00:12 ADR-006 fix itself). Each candidate was read against its own line, the ruling it cites, and for the tags Apple's text in the #59 guidelines PDF (Last Updated October 16, 2026; extracted with tools/pdftext.swift; p. = PDF page, which is also the printed footer page). No other file edited; each row is for the named doc's owner.
+
+Result: **4 accepted (3 of them amended), 6 rejected.** Of the 22 weak tags, **20 can be raised to [primary]** with the quotes in section 3b; one of those 20 first needs its quote corrected (matrix line 222). **2 cannot** (matrix line 214, L12 line 124).
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: Upkeep pass 3: the tool&#x27;s candidates, read by a person, scrolls sideways" style="--tw:1684px" markdown="1">
+
+| # | Section | Claim | Current source (link, date) | Correction | Who found it |
+|---|---|---|---|---|---|
+| U3-03 | ADR-004 s10 Evidence (line 127) | "Not read: developer.apple.com (person-read only, G2a); Runestone's docs site; any issue tracker (#53 hold)." | [ADR-005 s7](adr-005-compat-corpus.html) (Ines, 2026-10-25 22:17): GitHub reads for product research allowed within GitHub's rate limits | Amended. This line is a list of gaps, and its reason no longer holds for Runestone's issue tracker, which is on GitHub (simonbs/Runestone, the repo ADR-004-raw already read the licence from). That gap is now readable through terms_guard if the owner wants it; no verdict depends on it. developer.apple.com stays person-read (G2a). Line 5 of the same doc is a true record of how the 19:28-19:30 reads were made and stays (U3-02, rejected below). | evidence_tags.py (candidate); Wrenna (reader) |
+| U3-06 | L16 Verdicts, "GitHub repository status" row (line 23) | "The company's own research hold on GitHub issue reads (#53) is about our scripted demand counting, not this" | [ADR-005 s7](adr-005-compat-corpus.html) (2026-10-25 22:17) | Amended. The verdict is right and stays (the widget reads no issues; the user's own requests under the user's own token). The clause names a hold that ended at 22:17: say it was lifted (ADR-005 s7), or drop the clause. Wording only. | evidence_tags.py (candidate); Wrenna (reader) |
+| U3-08 | state-spec, chair ruling 2026-10-25 20:08 (lines 150-153) | Line 150: tags "as in the matrix; the guideline page is unread until #59". Line 152: 3.1.1 [snippet], and the trial rule "as I recall the guideline [recall]". Line 153: 2.5.16 [snippet] | #59 guidelines PDF, read into [L6 s1](l6-app-review.html) (Idris, df971700, 2026-10-25 22:49); quotes Q1-Q3 in 3b | Accepted, with one addition. Both [snippet] tags can be [primary] (Q1, p. 22; Q3, p. 20). The trial [recall] in line 152, which the tool did not count (its tag names no rule), matches Apple's 3.1.1 text on p. 23 (Q2): a zero-price non-consumable named as a trial, and before it starts the app states its length, what stops at the end, and the later charge. It can be [primary] too. Line 150's "unread until #59" has been stale since 22:49. The ruling itself does not change. | evidence_tags.py (candidate); Wrenna (reader; trial tag) |
+| U3-09 | release/app-review-matrix.md, 19 tags in rows 1, 2, 3, 4, 7, 24, 32, 38, s2c and s3 (lines 91-94, 102, 134, 152, 173, 214, 222) | Weak tags on guidelines whose text the matrix's own s1b and L6 s1 now quote | #59 guidelines PDF; [matrix s1b](app-review-matrix.html) (T-0061, 2026-10-26) | Amended: **18 of 19 can be raised**, line by line in 3b. Two findings beyond the tags: (a) line 222 quotes 2.5.2 as *introduce or change features or functionality of the app*; Apple's words are "introduces or changes" (Q4, p. 18). Fix the quote when the tag is raised. (b) Line 214's [recall] belongs to "required field" for the Support URL, not to 5.1.1: the tool attached the nearest rule number. The guidelines PDF names the Support URL only in 1.5 (Q14, p. 10) and does not call it required, so that tag stays [recall] until App Store Connect can be read (membership, Day 7). | evidence_tags.py (candidate); Wrenna (reader; misquote at 222) |
+
+</div>
+
+
+### Rejected candidates, pass 3
+
+- **U3-01** (ADR-001 chair note 00:12, line 216, "cites ADR-006 s12, superseded by app-review-matrix s10"). The tool read the matrix note at line 206 (*ADR-006 s12 now governs; s3 item 3 was superseded by s10*) as "ADR-006 s12 is superseded". The note says the opposite: s12 governs. ADR-001 cites the current section. A parser false positive. Side effect: the matrix half of U2-06 is settled by that same note (Ines, 00:12); L6 s7 and s8 still carry the old citation.
+- **U3-02** (ADR-004 head, line 5). It records how the 19:28-19:30 reads were made, under the hold then in force. True as a record of method; ADR-005 s7 says of its own earlier sections that they "stand as written", and the same holds for method lines in other docs. Not a correction.
+- **U3-04** (ADR-006 s9.5, line 153). This line is the dated note that fixed the citation (L13 s9 to s8). L13's headings at HEAD run 0-8, and the heading at line 151 now reads "L13 s8 (b)". Nothing left to fix.
+- **U3-05** (ADR-006 s12.5, line 283). The board note recording the same fix. Same reason.
+- **U3-07** (names.md line 9, "No scripted store reads (#53 hold)"). ADR-005 s7 lifted the hold for GitHub reads only; its item 6 says "The App Store pages stay barred (the iTunes question)", and U2-04 lists App Store pages and iTunes reads as still held. The line is right. The tool's #53 seed matches any "#53 hold", store reads included.
+- **U3-10** (L12 s5.4, line 124, "5.1.1 purpose-string rejections are common [recall]"). The tag carries a claim about how often apps are rejected, which Apple's text cannot show. The duty itself is quotable (Q13, p. 43), so the owner may add it as a [primary] clause, but "common" stays [recall] (or becomes a forum count with links).
+
+For the tool's owner (Odalys), four patterns behind the 6 rejections, so the next run drops them: (1) "X now governs; Y was superseded by Z" is parsed with X as the superseded anchor (U3-01); (2) a dated correction note, or a board note, that names the old anchor while fixing it ("Citation corrected", "s9 -> s8") is not aware-marked (U3-04, U3-05); (3) a method line that records a past read under a then-current hold is history, not a citation (U3-02); (4) the #53 seed should match only GitHub contexts, since App Store, iTunes and Algolia HN reads are still held (U3-07). And for the tags: a tag takes the nearest rule number even when it belongs to another clause (matrix line 214). Not built here; this task touches this file only.
+
+### 3b. Apple's text for the 22 weak tags (#59 guidelines PDF)
+
+Quoted from the PDF's extracted text, line breaks joined; "..." marks a cut. Each quote was checked with `python3 tools/quote_check.py` against the extracted text (all found). A doc's owner can raise a tag to [primary] by citing the quote and page below; most are already in matrix s1b or L6 s1.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: 3b. Apple&#x27;s text for the 22 weak tags (#59 guidelines PDF), scrolls sideways" data-n="1" style="--tw:508px" markdown="1">
+
+| Q | Rule (page) | Apple's text |
+|---|---|---|
+| Q1 | 3.1.1 (p. 22) | "you must use in-app purchase. Apps may not use their own mechanisms to unlock content or functionality, such as license keys" |
+| Q2 | 3.1.1 (p. 23) | "Non-subscription apps may offer a free time-based trial period before presenting a full unlock option by setting up a Non-Consumable IAP item at Price Tier 0 that follows the naming convention" ... "Prior to the start of the trial, your app must clearly identify its duration, the content or services that will no longer be accessible when the trial ends, and any downstream charges the user would need to pay for full functionality." |
+| Q3 | 2.5.16 (p. 20) | "Widgets, extensions, and notifications should be related to the content and functionality of your app." |
+| Q4 | 2.5.2 (p. 18) | "Apps should be self-contained in their bundles" ... "nor may they download, install, or execute code which introduces or changes features or functionality of the app, including other apps." |
+| Q5 | 2.5.1 (p. 17) | "Apps may only use public APIs and must run on the currently shipping OS." |
+| Q6 | 2.3.1(a) (p. 12) | "All new features, functionality, and product changes must be described with specificity in the Notes for Review section of App Store Connect (generic descriptions will be rejected) and accessible for review." |
+| Q7 | 2.5.19 (p. 21) | "Don't include any hidden, dormant, or undocumented features in your app; your app's functionality should be clear to end users and App Review." |
+| Q8 | 5.2.1 (p. 49) | "Don't use protected third-party material such as trademarks, copyrighted works, or patented ideas in your app without permission" |
+| Q9 | 4.2 (p. 33) | "Your app should include features, content, and UI that elevate it beyond a repackaged website." |
+| Q10 | 2.1(b) (p. 11) | "If you offer in-app purchases in your app, make sure they are complete" ... "visible to the reviewer and functional. If any configured in-app purchase items cannot be found or reviewed in your app, explain the reason in your review notes." |
+| Q11 | 2.5.11(i) (p. 19) | "Apps integrating SiriKit and Shortcuts should only sign up for intents they can handle without the support of an additional app and that users would expect from the stated functionality." |
+| Q12 | 4.7.2 (p. 39) | "Your app may not extend or expose native platform APIs or technologies to the software without prior permission from Apple." |
+| Q13 | 5.1.1(ii) (p. 43) | "Ensure your purpose strings clearly and completely describe your use of the data." |
+| Q14 | 1.5 (p. 10) | "Make sure your app and its Support URL include an easy way to contact you" |
+
+</div>
+
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 3b. Apple&#x27;s text for the 22 weak tags (#59 guidelines PDF), scrolls sideways" style="--tw:1080px" markdown="1">
+
+| Doc:line (section) | Rule and tag now | Quote | Raise to [primary]? |
+|---|---|---|---|
+| state-spec:152 (ruling 20:08) | 3.1.1 [snippet] | Q1 | Yes |
+| state-spec:153 (ruling 20:08) | 2.5.16 [snippet] | Q3 | Yes |
+| matrix:91 (row 1) | 2.5.2 [G2a-held] | Q4, first part | Yes |
+| matrix:91 (row 1) | 2.5.2 [snippet] | Q4, first part | Yes (one [primary] can replace the pair) |
+| matrix:91 (row 1) | 2.5.1 [recall] | Q5 | Yes |
+| matrix:92 (row 2) | 2.5.1 [recall] | Q5 | Yes |
+| matrix:92 (row 2) | 2.3.1 [snippet] | Q6 | Yes |
+| matrix:92 (row 2) | 2.5.19 [snippet] | Q7 | Yes |
+| matrix:93 (row 3) | 5.2.1 [recall] | Q8 (copyrighted works without permission: the licence duty) | Yes |
+| matrix:94 (row 4) | 2.5.1 [recall] | Q5 | Yes |
+| matrix:102 (row 7) | 4.2 [recall] | Q9 | Yes |
+| matrix:102 (row 7) | 5.2.1 [recall] | Q8 | Yes |
+| matrix:134 (row 24) | 2.5.19 [snippet] | Q7 | Yes |
+| matrix:152 (row 32) | 2.1 [paraphrase] | Q10 (the IAP clause is 2.1(b)) | Yes |
+| matrix:152 (row 32) | 3.1.1 [snippet, L6] | Q1 | Yes |
+| matrix:173 (row 38) | 2.5.2 [G2a-held] | Q4, second part | Yes |
+| matrix:173 (row 38) | 2.5.2 [snippet] | Q4, second part | Yes (one [primary] can replace the pair) |
+| matrix:173 (row 38) | 2.5.11 [recall] | Q11 | Yes |
+| matrix:173 (row 38) | 4.7.2 [snippet] | Q12 | Yes |
+| matrix:214 (s2c) | 5.1.1 [recall] | Q14 is the nearest text; it does not say required | **No**: the tag belongs to the Support URL clause (U3-09 b) |
+| matrix:222 (s3) | 2.5.2 [G2a-held] | Q4, second part | Yes, after the quote is corrected to *introduces or changes* (U3-09 a) |
+| L12:124 (s5.4) | 5.1.1 [recall] | Q13 for the duty only | **No**: the tag carries *rejections are common*, L12's own claim (U3-10) |
+| state-spec:152 (not in the tool's 22) | trial rule [recall] | Q2 | Yes (U3-08) |
 
 </div>
 {% endraw %}

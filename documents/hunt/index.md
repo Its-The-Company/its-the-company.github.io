@@ -5,7 +5,7 @@ section: "documents"
 description: "The archived idea hunt: best ideas, the chair's rulings, the funnel and every lane note."
 ---
 
-<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/' | relative_url }}">← Documents</a></div>
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/archive/idea-hunt/' | relative_url }}">← Archive: the idea hunt</a></div>
 
 # The idea hunt (archived)
 

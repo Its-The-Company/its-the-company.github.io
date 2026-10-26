@@ -4,7 +4,7 @@ title: "pywidget v1: App Privacy label draft"
 section: "documents"
 description: "Each is a fact about the build that the release checklist must confirm, not assume."
 ---
-<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/' | relative_url }}">← Documents</a><a href="{{ '/documents/pywidget/privacy-label.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/app-store-drafts/' | relative_url }}">← App Store Drafts</a><a href="{{ '/documents/pywidget/privacy-label.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
 <div class="page-head"><div class="kicker"><span class="kind grey">Draft</span><span>Day 4 · Sun Oct 25</span><span><code>pywidget/docs/release/privacy-label.md</code></span></div><h1>pywidget v1: App Privacy label draft</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"><span>By <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a>, Market and product researcher</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
@@ -65,7 +65,7 @@ Not a label question, but the same review pass. Since May 2024 every new or upda
 
 - `NSPrivacyTracking` false; `NSPrivacyCollectedDataTypes` empty (matches section 1).
 - File timestamp APIs: CPython's `os.stat` and the editor's file list.
-- Disk space APIs: the "battery and storage" premade widget [S5 C11] and `shutil.disk_usage`.
+- Disk space APIs: the "Storage" premade widget [S5 C11; was "battery and storage" until the ADR-001 chair ruling, Ines, 2026-10-25 21:16 (09dc55c8)] and `shutil.disk_usage`.
 - System boot time APIs: monotonic clocks used by the runtime [recall: `mach_absolute_time` is in this category].
 - User defaults: app settings and the App Group.
 - The embedded CPython framework and bundled native packages (L13) may each need their own manifest if they call these APIs.

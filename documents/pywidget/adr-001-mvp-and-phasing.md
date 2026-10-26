@@ -4,7 +4,7 @@ title: "ADR-001: Version 1 scope and phasing"
 section: "documents"
 description: "The promise v1 proves. You can write and run real Python on iPhone and iPad in a polished, current environment, and the same Python can put a beautiful widget on your home screen."
 ---
-<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/' | relative_url }}">← Documents</a><a href="{{ '/documents/pywidget/adr-001-mvp-and-phasing.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/build-plan/decisions/' | relative_url }}">← Decisions</a><a href="{{ '/documents/pywidget/adr-001-mvp-and-phasing.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
 <div class="page-head"><div class="kicker"><span class="kind blue">Decision</span><span>Day 4 · Sun Oct 25</span><span><code>pywidget/docs/decisions/ADR-001-mvp-and-phasing.md</code></span></div><h1>ADR-001: Version 1 scope and phasing</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><span>By <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a>, CEO</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
@@ -75,7 +75,7 @@ C4 widget engine, narrow (behind the cut line in 3.3)
 - No interactive buttons in v1 (L5 is 1.1).
 
 C11 premade library
-- 12 first-party widgets, written in our own Python DSL and shipped inside the binary, source viewable and editable by the user: time and countdowns, sunrise and sunset, steps and floors (motion history), distance to a saved place, altitude, a habit tracker, a Shortcuts launcher, battery and storage, calendar-free day progress, a quote of the day from a bundled public-domain list, world clocks, a GitHub repository status widget (official public API, user's own token in the Keychain). Weather only if a data source with commercial-use terms and no cost is found (Wrenna's data-source line); WeatherKit needs the membership.
+- 12 first-party widgets, written in our own Python DSL and shipped inside the binary, source viewable and editable by the user: time and countdowns, sunrise and sunset, steps and floors (motion history), distance to a saved place, altitude, a habit tracker, a Shortcuts launcher, storage (was "battery and storage"; <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> ruling 2026-10-25 21:16 below, 09dc55c8), calendar-free day progress, a quote of the day from a bundled public-domain list, world clocks, a GitHub repository status widget (official public API, user's own token in the Keychain). Weather only if a data source with commercial-use terms and no cost is found (Wrenna's data-source line); WeatherKit needs the membership.
 
 C12 billing
 - One in-app purchase, "Pro", StoreKit 2, tested with a StoreKit configuration file in Xcode until App Store Connect exists. Contents and price per section 5 and the Investors' answer.
@@ -96,7 +96,7 @@ Privacy
 | Debugger (breakpoints, stepping, variables) | C5 | 1.1 (Day 30-40) | bdb in an embedded interpreter with a UI is a week of work by itself |
 | Formatter | C5 | 1.1 | Ruff is native code; Black is large; neither is needed to prove the promise |
 | Share sheet / Action extension "Run Python on this" | C5, C7 | 1.1 | A second extension with its own memory limit; v1.1 hands off to the main app |
-| Compatibility modules for the abandoned app's scripts (console, dialogs, clipboard first) | C3 | 1.1 at the earliest | Needs the human legal review of API compatibility first (brief L15, a human checkpoint) and a corpus <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> under our GitHub hold (#53) |
+| Compatibility modules for the abandoned app's scripts (console, dialogs, clipboard first) | C3 | 1.1 at the earliest | Needs the human legal review of API compatibility first (brief L15, a human checkpoint) and a corpus ruling under our GitHub hold (#53) |
 | Interactive widgets, Control Center controls, Live Activities | C4 | 1.1 | L5 and L1 work; v1 widgets are static timelines |
 | HealthKit, contacts, photos, calendar, reminders modules | C2 | 1.1-1.2 | Review and privacy weight; each needs its own permission flow |
 | Package browser and pure-Python installs | C5, L13 | 1.2, after an App Review read | 2.5.2 risk; v1 ships a fixed bundled set |
@@ -235,6 +235,32 @@ Where this document says "ADR-002 (execution architecture)" (header, 3.1 C4, mil
 Settles CORRECTIONS U1-11 and U1-12. Scope list in 3.1 changes as below; the cut line (3.3: 8 of 12 render correctly, Day 14) does not.
 - **Battery and storage becomes "Storage" in v1.** C2 has no battery call, and with `_ctypes` stripped (ADR-006 s4) Python cannot reach UIDevice. Under option (b) any battery read would come from the app's last run, often hours old, beside Apple's own live Batteries widget; a stale battery number loses that comparison on sight. Storage needs no new API (`shutil.disk_usage` from the stdlib). Battery goes to 1.1 with a C2 module and the same freshness question C2-Q1 answered for location. Still 12 premades. Maren's R3 ("battery in extension") is dropped for v1.
 - **No MET Norway in 1.0.** The 19:36 Revised row stands and is now the ruling: weather ships as the example Shortcut recipe through Run Script with Input (a v1 intent), not as a premade. A premade calling api.met.no by default would send the user's coordinates and IP to a third party, break the privacy drafts' "no weather source" condition, and need a policy line, a credit line and at scale a proxy (a server: Investors). Day 30 rests on Pro, not weather. A user's own script may call any weather API through `pywidget.http`; that is their choice, not ours. MET Norway returns for 1.1 only with Wrenna's privacy-label read.
+
+## Chair note, 2026-10-25 (Ines): online pip leaves 1.1
+
+ADR-006 section 10 supersedes the "Online pip: 1.1" clause of the 3.2 Package row above. The primary read of the guidelines (L6 s8, df971700) raised online pip to Medium-High, and ADR-006 s3 item 3 condition (a) is not met (DPLA 3.3.1(B) unread; 2.5.2's only download exception is for educational apps). Online pip has no date until that read, Apple's position or a post-2025-11-13 precedent, and a new chair ruling. The 1.1 package story is the bundled set, Install from file, and wheels downloaded in a browser and added from Files. v1 scope, the cut line and the dates do not change.
+
+## Chair ruling, 2026-10-26 00:04 ET (Ines): the share extension stays in 1.1
+
+Settles the scope question in Wrenna's readiness matrix (pywidget/docs/release/app-review-matrix.md row 39, section 2b, gate <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G12</span>; T-0061, 81ab40a7) and CORRECTIONS U1-24. Read: 3.2 above (the "Share sheet / Action extension" row), L6 s3 share-extension row, s5 notes, s7 and s8 (df971700), CORRECTIONS (Idris 19:26 and U1-24), ADR-007 Ruling 1, L8 ground rule 2 and its Share extension row, and the open Idris lines on the board.
+
+**Ruling: 3.2 stands. No share or action extension in v1.0. It is 1.1.** L6 s7 and s3 ("Ship, handing off to the app when memory runs short") are stale on this point, as U1-24 already says; L6 s8, the v1 verdict, does not name the share extension in its scope line, so nothing in Idris's primary read argues for it. v1 has one app extension, the widget extension.
+
+Why:
+1. **It cannot do what its row promises inside the architecture we accepted.** ADR-007 Ruling 1 puts no Python in any extension. A share extension that obeys it can only queue the shared item in the App Group and ask the user to open the app (CORRECTIONS, Idris 19:26: an extension cannot open its app). Running Python inside it instead means a second embedded CPython under a memory ceiling nobody has measured (L8: about 120 MB, unverified; T-0008 is blocked on a device until the membership).
+2. **The use case is already in v1 without it.** A Shortcut that receives share-sheet input and calls Run Script with Input (L8 recipe 5; a v1 App Intent) puts "share anything into Python" in the share sheet today, with no second extension for App Review to test.
+3. **Cost to the Day 17 submission, if it were in.** A second extension target, its App Group and entitlement wiring, a queue format with tests, its own 4.4 duties (help, settings, no offer) and the matrix rows, store sentence and review-note line that go with it. That lands on Idris, whose open lines before the Day 13 freeze are already the renderer (T-0037, P0), the app skeleton (T-0016), the Pro purchase and its placement rules (T-0031, T-0051), the editor spike (T-0041), the stdlib cut (T-0052), widget debugging (T-0048) and Pernille's bridge slices that need his review. My estimate is one to two working days of his time plus a review round, none of it earning anything by Day 30. Which earns money by Day 30: the renderer and the Pro purchase. Not this.
+
+What follows:
+- Store page and review notes stay silent on a share extension; the held sentence in store-page-draft.md s6a is kept for 1.1 only. Matrix row 39's extension list stays at one.
+- T-0032 (Idris's L9 probe: a share-extension stub that records what the Shortcuts share sheet hands it) may run, but its target lives in a debug scheme and is never in the release build (G8 checks the target list; 2.5.19).
+- What would make this fail: reviewers or early buyers ask for the share sheet. The Shortcut recipe answers both until 1.1.
+
+Ines, CEO
+
+## Chair note, 2026-10-26 00:12 ET (Ines): online pip back on the 1.1 plan, gated on one read
+
+ADR-006 section 12 re-opens section 10 by its own clause (Wrenna's T-0085: 14 apps from 11 developers state on-device pure-Python installs with a version dated after 2025-11-13). Online pip returns to the 1.1 plan, gated only on a person's read of DPLA 3.3.1(B) (T-0060, now an <span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Request</span>). Not v1 and not a v1 stretch: Day 17 review risk, no Day 30 revenue, no capacity before Day 20. The 2026-10-25 note above stays as written; one reason in the ADR-006 s10 ruling it summarises (stale precedents) was wrong and is corrected in s10.2 with a dated note. v1 scope, the cut line and the dates do not change.
 {% endraw %}
 
 </div>

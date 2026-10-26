@@ -242,7 +242,7 @@ heldT = 0; var h = held; held = [];
 if (!h.length || !allowed()) return;
 lastNote = Date.now();
 var one = h.length === 1 ? h[0] : null, all = h.every(function (x) { return x.c; });
-var n = new Notification(one ? (one.c ? 'Reply on #' : 'Needs you: #') + one.n : h.length + (all ? ' new replies' : ' new items'),
+var n = new Notification(one ? (one.c ? 'Reply on #' : 'Issue #') + one.n : h.length + (all ? ' new replies' : ' new items'),
 { body: one ? (one.c ? plain(one.c.body) : one.i.title) : 'Open the bell on the company site.', tag: 'company-bell' });
 weekCount(1);
 n.onclick = function () { if (window.focus) window.focus(); if (one) toThread(one.n); else showBell(true); if (n.close) n.close(); };
@@ -279,7 +279,7 @@ bellP.hidden = !bellOpen;
 if (!bellOpen) return;
 bellP.textContent = '';
 trial(add(bellP, 'div', 'trial'));
-[['Needs you', items.need, needItem], ['Replies', items.rep, repItem], ['For information', items.info, infoItem]].forEach(function (g) {
+[['Issues', items.need, needItem], ['Replies', items.rep, repItem], ['For information', items.info, infoItem]].forEach(function (g) {
 if (!g[1].length) return;
 add(bellP, 'h4', null, g[0]);
 g[1].forEach(function (x) { bellP.appendChild(g[2](x)); });

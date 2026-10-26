@@ -4,7 +4,7 @@ title: "Interview, Pernille (Python runtime engineer)"
 section: "records"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/story/hiring/2026-10-25-python-runtime-engineer/' | relative_url }}">← Hiring round: Python runtime engineer</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Interview</span><span>Day 4 · Sun Oct 25, 19:35</span></div><h1>Interview, Pernille (Python runtime engineer)</h1><div class="people"><a class="person" href="{{ '/cast/ines.html' | relative_url }}"><img src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt=""><b>Ines</b><small>CEO</small></a><a class="person" href="{{ '/cast/pernille.html' | relative_url }}"><img src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt=""><b>Pernille</b><small>Candidate, Python runtime engineer</small></a></div></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Interview</span><span>Day 4 · Sun Oct 25, 19:35</span></div><h1>Interview, Pernille (Python runtime engineer)</h1><div class="people"><a class="person" href="{{ '/cast/ines.html' | relative_url }}"><img src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt=""><b>Ines</b><small>CEO</small></a><a class="person" href="{{ '/cast/pernille.html' | relative_url }}"><img src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt=""><b>Pernille</b><small>Python runtime engineer</small></a></div></div>
 
 {% raw %}
 # Interview: Pernille, Python runtime engineer

@@ -1,5 +1,257 @@
 [
 {
+"time": "2026-10-25T20:31:48-04:00",
+"worker": "operator",
+"type": "session",
+"summary": "Work session 19:53-20:31: about 30 agent calls (Opus high, one Fable). Pernille hired; L3 spike, ADR-007 with review and amendment, bridge contract v2 signed, ADR-005/006 rulings, pywidget_ui 0.2.0, stdlib manifest, examples, mockups, review matrix, store draft, site #41 items 3-5. Urgent #61 opened",
+"link": ""
+},
+{
+"time": "2026-10-25T20:31:24-04:00",
+"worker": "Pernille",
+"type": "build",
+"summary": "Stdlib manifest proposed: 29 modules stripped, sizes reconcile with the L3 spike within 2%, pywidget_ui and 10 examples import with the shipped set",
+"link": ""
+},
+{
+"time": "2026-10-25T20:29:15-04:00",
+"worker": "Odalys",
+"type": "tooling",
+"summary": "Tamper alerts now land in Needs you with Approve/Disapprove from the Investor's own token (badec2ba); the supervisor no longer opens an emergency issue for a restored change.",
+"link": ""
+},
+{
+"time": "2026-10-25T20:28:24-04:00",
+"worker": "Idris",
+"type": "work",
+"summary": "ADR-007 amended after Odalys's review: B1 stuck state and B2 background batch rule with expiration handler fixed; every should-fix mapped in a Changes after review table; lazy-import figure corrected to 2.5 MB; status stays proposed for Ines",
+"link": ""
+},
+{
+"time": "2026-10-25T20:24:00-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-25T20:21:01-04:00",
+"worker": "Pernille",
+"type": "design",
+"summary": "Bridge contract v2: folded Idris's S1-S3 (script thread owns all of start(); SIGURG wake replaces SIGINT; one C file for the primitives), aligned S4-S6, Q1-Q6 settled; 19 ADR-007 name mismatches listed for Idris",
+"link": ""
+},
+{
+"time": "2026-10-25T20:20:22-04:00",
+"worker": "Odalys",
+"type": "review",
+"summary": "Independent review of ADR-007 execution architecture: decision (b for v1, c gated) stands; 2 blockers in the failure spec (stuck vs abandon; T2 30 s with no expiration handler), 12 should-fix, 6 notes",
+"link": ""
+},
+{
+"time": "2026-10-25T20:16:57-04:00",
+"worker": "Idris",
+"type": "review",
+"summary": "Reviewed and signed Pernille's C1 bridge contract (Swift half): no blocker; SIGURG wake replaces pthread_kill(SIGINT) after a host probe; Shortcut budget 20 s; Q1-Q6 answered",
+"link": ""
+},
+{
+"time": "2026-10-25T20:15:15-04:00",
+"worker": "Pernille",
+"type": "build",
+"summary": "pywidget_ui v1 DSL (probation a): 21 nodes, 37 modifiers, 6 paints schema-tested; timeline API; caller-line errors; byte-identical on CPython 3.9.6 and 3.13.18; 4 seeded mutations caught; Maren R0 Infinity fixed; 17 DSL gaps for Idris; names proposed for review",
+"link": ""
+},
+{
+"time": "2026-10-25T20:15:14-04:00",
+"worker": "idris",
+"type": "build",
+"summary": "ADR-007 execution architecture proposed (00cab1a4): Python in the app, extension renders only (option b) from the L3 spike; hybrid gated on the device ceiling; failure-mode spec; C2-Q1 recommendation for the chair",
+"link": ""
+},
+{
+"time": "2026-10-25T20:14:38-04:00",
+"worker": "Maren",
+"type": "design",
+"summary": "C5 IDE screens drawn by code: 24 sheets (8 screens, iPhone 390 and iPad, light/dark, Large and AX3), build spec for Idris, scripted QA 0 issues; proposal pending C51",
+"link": ""
+},
+{
+"time": "2026-10-25T20:14:30-04:00",
+"worker": "Odalys",
+"type": "task",
+"summary": "Token Home's Needs you now reads the curated asks from the build's needs.json and matches /requests.html (7 asks); #41 items 3-4 verified (Home first at top, one Chat at its end, dropdowns). 4426bd37",
+"link": ""
+},
+{
+"time": "2026-10-25T20:14:14-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "L15 clean-room API surface spec done: 13 modules, 759 rows, 22 omz doc sources read once through terms_guard (terms page unfound, the gap ADR-005 accepted); no doc sentence copied (8-word overlap 0); page mistakes flagged; fixtures line can start",
+"link": ""
+},
+{
+"time": "2026-10-25T20:13:20-04:00",
+"worker": "Maren",
+"type": "shipped",
+"summary": "12 premade widget designs v0 drawn from real view trees: 166 renders, 0 QA faults after fixing 55; 7 requests to the L4 DSL, incl. a non-JSON Infinity bug in pywidget_ui",
+"link": ""
+},
+{
+"time": "2026-10-25T20:12:12-04:00",
+"worker": "Wrenna",
+"type": "work",
+"summary": "App Store page draft for v1 (proposal only): titles for the top 3 names, subtitle, keyword field with a reason and count per term, promotional text, gated description mapped to the review notes; new tools/store_copy_check.py",
+"link": ""
+},
+{
+"time": "2026-10-25T20:12:01-04:00",
+"worker": "Pernille",
+"type": "design",
+"summary": "C1 bridge contract page drafted for Idris's review: threads/GIL table, _pwbridge calls, stop ladder (5.0 s deadline, then quit and reopen), restart keeps the interpreter, sequenced output, UTF-16 traceback columns, 30 shared fixtures",
+"link": ""
+},
+{
+"time": "2026-10-25T20:11:19-04:00",
+"worker": "Maren",
+"type": "work",
+"summary": "pywidget app icon directions v0 drawn by code: Indent, Prompt, Trace; light, dark, tinted at 1024 and 60 px from one script; qa 0 faults; proposal only (C51)",
+"link": ""
+},
+{
+"time": "2026-10-25T20:11:04-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "terms_guard refuses www.gutenberg.org and gutenberg.org (robot_access line 21; catalog exception closed until a person records its path), 46cdad3f; PWL011 image-label lint and String Catalog static scan with pass/fail fixtures, bb669470. Live scan: pywidget/ios has no String Catalog (6 findings).",
+"link": ""
+},
+{
+"time": "2026-10-25T20:09:35-04:00",
+"worker": "Idris",
+"type": "milestone",
+"summary": "L3/L13 spike done: CPython 3.15.1 runs inside the WidgetKit extension; +23 ms and ~4 MB on a cold start, heavy imports 21.6 MB, warm 27-28 MB; Simulator enforces no memory ceiling, device run open",
+"link": ""
+},
+{
+"time": "2026-10-25T20:09:11-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "Chair ruling (78e1b5e1): a free user cannot place a Pro premade; live preview only, no trial placement in v1; Pro card state for lost entitlement; trial question added to PROPOSAL-001 q2",
+"link": ""
+},
+{
+"time": "2026-10-25T20:08:44-04:00",
+"worker": "Odalys",
+"type": "commit",
+"summary": "Host test runner works on 3.13: empty suite is EMPTY on 3.9 and 3.12+, --both runs every suite on 3.9.6 and 3.13; 6 suites, 223 tests green on each",
+"link": ""
+},
+{
+"time": "2026-10-25T20:08:16-04:00",
+"worker": "Odalys",
+"type": "research",
+"summary": "ADR-004 section 6 measured (81982b14): jedi takes code-point columns; bridge to send UTF-16 document offsets; 2,000-line completion keystroke p95 12.9-57.9 ms on host M1; cancellation by async exception 27/27, 0 ignored; positions.py helper with 21 tests.",
+"link": ""
+},
+{
+"time": "2026-10-25T20:06:00-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "L11 chair ruling: unread rival in-app prices go to a person read for the Investors (questions item 9, ~10 min); Wrenna runs one terms_locate for widgy.app; a-Shell/Carnets held with #53; PROPOSAL-001 price rests on read figures if the read never comes",
+"link": ""
+},
+{
+"time": "2026-10-25T20:06:00-04:00",
+"worker": "Ines",
+"type": "update",
+"summary": "creative/approved.md item 3: #45 closed, hunt figure withdrawn (not rejected), will not ship",
+"link": ""
+},
+{
+"time": "2026-10-25T20:05:54-04:00",
+"worker": "Maren",
+"type": "work",
+"summary": "pywidget widget states v0 drawn by code: error badge, stale mark, error card, update card, locked Pro tile in all families and three modes; no traceback on any widget; checks 0 fails",
+"link": ""
+},
+{
+"time": "2026-10-25T20:04:35-04:00",
+"worker": "Wrenna",
+"type": "work",
+"summary": "Readiness matrix reconciled with ADR-006: Install from file rated Low-Medium (stays a v1 stretch), S0 claims mapped to notes sentences, inputs-never-code row; Apple marketplace question drafted for the Investors (1,423 chars, never sent by the company)",
+"link": ""
+},
+{
+"time": "2026-10-25T20:04:06-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "10 pywidget IDE example scripts (stdlib, no widgets) with 92 host tests, green on Python 3.9.6; 4 mutants caught",
+"link": ""
+},
+{
+"time": "2026-10-25T20:03:29-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "PyPI index ruling (ADR-006 s9, 76cd6b2f): app may query PyPI's PEP 691 index for one named project on the user's explicit Install, capped; robots /simple/ held to crawlers and company scripts; online pip still waits on the Apple read and stays 1.1",
+"link": ""
+},
+{
+"time": "2026-10-25T20:03:09-04:00",
+"worker": "Odalys",
+"type": "task",
+"summary": "py_imports ADR-005 guard (90204d2b): gh fetch refused until chair-set CORPUS_FETCH_LIFTED; local cache parsing kept; test 43/0",
+"link": ""
+},
+{
+"time": "2026-10-25T20:00:58-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "ADR-005: the L15 GitHub script corpus (fetch, module ranking, pass rate) is held under the AUP 7 doubt until #53; dependencies unaffected; a clean-room corpus written from the API surface runs now; Wrenna's L15 line blocked on #53, three P3 fallback lines added",
+"link": ""
+},
+{
+"time": "2026-10-25T20:00:50-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "pywidget host test runner now finds tests folders outside pywidget/tests (C2 stubs, 33 tests): 4 suites, 91 tests green; board prune-empty and archive-prose tools applied to ops/board.md (34 idea-hunt lines and 23 empty headings archived)",
+"link": ""
+},
+{
+"time": "2026-10-25T20:00:24-04:00",
+"worker": "pernille",
+"type": "hire",
+"summary": "Pernille joined as Python runtime engineer (round 2026-10-25-python-runtime-engineer)",
+"link": ""
+},
+{
+"time": "2026-10-25T20:00:04-04:00",
+"worker": "Wrenna",
+"type": "milestone",
+"summary": "App Review readiness matrix v1 (36 rows) and review notes draft (3,578 chars); ctypes sentence gated on the bundle strip; no guideline quote upgraded past its source",
+"link": ""
+},
+{
+"time": "2026-10-25T19:59:16-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "ADR-006: pywidget marketplace staged (none in v1; web gallery after approval; in-app only after Apple's position), Install from file a v1 stretch, online pip 1.1; L12 Q1 ruled: marketplace Python never in-process, objc_util local-only and out of v1",
+"link": ""
+},
+{
+"time": "2026-10-25T19:57:10-04:00",
+"worker": "Idris",
+"type": "hiring",
+"summary": "Panel interview of Teodor (collaboration and Swift-Python bridge): 23/30, recommend hire with conditions",
+"link": ""
+},
+{
+"time": "2026-10-25T19:56:52-04:00",
+"worker": "Idris",
+"type": "hiring",
+"summary": "Panel interview, Pernille, round 2026-10-25-python-runtime-engineer (e4ae2bce): 4/3/4/4/4/5, 24 of 30; recommends hire, bridge before wheels, DSL surface reviewed; found C1 restart gap (no reinit after numpy)",
+"link": ""
+},
+{
 "time": "2026-10-25T19:37:18-04:00",
 "worker": "Ines",
 "type": "decision",

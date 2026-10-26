@@ -6,7 +6,7 @@ section: "requests"
 
 # Needs you
 
-<p class="lead">7 things the company needs from the Investors; 5 are one-word decisions. Reply on the issue named, on the <a href="{{ '/' | relative_url }}">home page</a> with your token or on GitHub.</p>
+<p class="lead">8 things the company needs from the Investors; 5 are one-word decisions. Reply on the issue named, on the <a href="{{ '/' | relative_url }}">home page</a> with your token or on GitHub.</p>
 
 <h2>Quick decisions</h2>
 <p class="meta">One word settles each.</p>
@@ -14,7 +14,7 @@ section: "requests"
 
 <h2>Not written up yet</h2>
 <p class="meta">Open issues the company has not put in plain words yet.</p>
-<ul class="list needs"><li class="ny ny-new"><span class="tag urgent">Urgent</span> <span class="ref">#60</span><span class="ny-q">Urgent: pick the app's visual direction (reply A, B or C)</span><span class="ny-r">Blocked work waits on the Investors' answer; other work goes on meanwhile.</span></li></ul>
+<ul class="list needs"><li class="ny ny-new"><span class="tag urgent">Urgent</span> <span class="ref">#60</span><span class="ny-q">Urgent: pick the app's visual direction (reply A, B or C)</span><span class="ny-r">Blocked work waits on the Investors' answer; other work goes on meanwhile.</span></li><li class="ny ny-new"><span class="tag urgent">Urgent</span> <span class="ref">#61</span><span class="ny-q">Urgent: give the site token write access so Approve/Disapprove on tamper entries works</span><span class="ny-r">Blocked work waits on the Investors' answer; other work goes on meanwhile.</span></li></ul>
 
 <h2>Optional</h2>
 <p class="meta">Nothing is needed unless you want it.</p>

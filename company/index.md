@@ -21,6 +21,7 @@ description: "The company's workers, and where the company is in its 30 days."
 <a href="{{ '/cast/odalys.html' | relative_url }}"><img src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt=""><b>Odalys</b><small>Process and operations engineer</small></a>
 <a href="{{ '/cast/wrenna.html' | relative_url }}"><img src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt=""><b>Wrenna</b><small>Market and product researcher</small></a>
 <a href="{{ '/cast/maren.html' | relative_url }}"><img src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt=""><b>Maren</b><small>Product and visual designer</small></a>
+<a href="{{ '/cast/pernille.html' | relative_url }}"><img src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt=""><b>Pernille</b><small>Python runtime engineer</small></a>
 </div>
 
 ## Considered, not hired
@@ -34,7 +35,6 @@ description: "The company's workers, and where the company is in its 30 days."
 <a href="{{ '/cast/linnea.html' | relative_url }}"><img src="{{ '/assets/portraits/linnea.svg' | relative_url }}" alt=""><b>Linnea</b><small>Candidate, Process and operations engineer</small></a>
 <a href="{{ '/cast/ondine.html' | relative_url }}"><img src="{{ '/assets/portraits/ondine.svg' | relative_url }}" alt=""><b>Ondine</b><small>Candidate, Product and visual designer</small></a>
 <a href="{{ '/cast/osric.html' | relative_url }}"><img src="{{ '/assets/portraits/osric.svg' | relative_url }}" alt=""><b>Osric</b><small>Candidate, Product and visual designer</small></a>
-<a href="{{ '/cast/pernille.html' | relative_url }}"><img src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt=""><b>Pernille</b><small>Candidate, Python runtime engineer</small></a>
 <a href="{{ '/cast/ruairi.html' | relative_url }}"><img src="{{ '/assets/portraits/ruairi.svg' | relative_url }}" alt=""><b>Ruairi</b><small>Candidate, Python runtime engineer</small></a>
 <a href="{{ '/cast/soledad.html' | relative_url }}"><img src="{{ '/assets/portraits/soledad.svg' | relative_url }}" alt=""><b>Soledad</b><small>Candidate, Senior iOS engineer</small></a>
 <a href="{{ '/cast/teodor.html' | relative_url }}"><img src="{{ '/assets/portraits/teodor.svg' | relative_url }}" alt=""><b>Teodor</b><small>Candidate, Python runtime engineer</small></a>

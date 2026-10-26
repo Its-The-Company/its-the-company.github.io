@@ -299,15 +299,34 @@ if (!d || !d.t) return null;
 var e = el('span', 'cv-due' + (d.t - Date.now() < 864e5 ? ' cv-soon' : ''), new Date(d.t).toLocaleString([], { weekday: 'short', hour: 'numeric', minute: '2-digit' }));
 attr(e, 'data-t', new Date(d.t).toISOString()); e.title = 'Deadline: ' + d.text; return e;
 }
+var ny = null, sideNy = null, ORD = { decide: 0, ask: 1, 'new': 2, optional: 3 };
+function needList() {
+var d = ny || { items: [], named: [] }, named = d.named.slice(), l = [];
+d.items.forEach((x) => {
+var ns = x[0].filter((n) => { var i = issue(n); named.push(n); return !i || i.state === 'open'; });
+if (!x[0].length || ns.length) l.push({ n: ns, k: x[1], q: x[2], r: x[3], t: x[4] === 'emergency' ? 'urgent' : x[4] });
+});
+urgentList().map((x) => x.i).concat(openIssues().filter((i) => /^(report|pitch)$/.test(kindOf(i))))
+.forEach((i) => { if (named.indexOf(i.number) < 0 && labelsOf(i).indexOf('unrelated') < 0) { named.push(i.number); l.push({ n: [i.number], k: 'new', q: i.title, r: '', t: kindOf(i) }); } });
+return l.sort((a, b) => ORD[a.k] - ORD[b.k]);
+}
+function needTop() { return needList().filter((x) => x.k === 'decide' || (x.k === 'new' && x.t === 'urgent')); }
 function needs() {
-var box = el('div', 'cv-needs'), l = urgentList(); mk(mk(box, 'h2', 'cv-sec', 'Needs you '), 'span', 'cv-count', String(l.length));
+var box = el('div', 'cv-needs'), l = needList(), top = needTop(); mk(mk(box, 'h2', 'cv-sec', 'Needs you '), 'span', 'cv-count', String(l.length));
 if (!l.length) { mk(box, 'p', 'muted', 'Nothing is waiting on you.'); return box; }
 var ul = mk(box, 'ul', 'cv-list');
-l.forEach((x) => { row(ul, x.i.number, x.i.title, due(x.d), (x.d && !x.d.t ? 'Deadline: ' + x.d.text + '. ' : '') + summary(x.i.body)); });
+top.forEach((x) => {
+var n = x.n[0], i = issue(n), d = i && kindOf(i) === 'urgent' ? deadlineOf(i) : null, a;
+if (!n) { mk(mk(ul, 'li'), 'p', 'cv-row', x.q); return; }
+a = row(ul, n, x.n.slice(1).map((m) => '#' + m + ' ').join('') + x.q, due(d), x.r || (d && !d.t ? 'Deadline: ' + d.text + '. ' : '') + (i ? summary(i.body) : ''));
+if (x.k === 'decide') a.firstChild.insertBefore(el('span', 'tag ny-tag-decide', 'Decide'), a.firstChild.firstChild);
+});
+if (!top.length) ul.parentNode.removeChild(ul);
+if (D('requests')) mk(mk(box, 'p', 'meta'), 'a', null, 'See ' + (l.length === 1 ? 'the ask' : 'all ' + l.length + ' asks') + ' and what settles each').href = D('requests');
 return box;
 }
 function allConvos(h) {
-var box = el('details', 'cv-all'), recent = Date.now() - 3 * 864e5, nz = h ? urgentList().map((x) => x.i.number) : [];
+var box = el('details', 'cv-all'), recent = Date.now() - 3 * 864e5, nz = h ? [].concat.apply([], needTop().map((x) => x.n)) : [];
 var l = issues.filter((i) => nz.indexOf(i.number) < 0 && (i.state === 'open' || Date.parse(i.closed_at || i.updated_at) > recent)).slice(0, 30);
 mk(mk(box, 'summary', 'cv-sec', (h || 'All conversations') + ' '), 'span', 'cv-count', String(l.length));
 var ul = mk(box, 'ul', 'cv-list');
@@ -320,7 +339,7 @@ if (stripEl) stripEl.hidden = cur === 'home';
 put(side, glance());
 if (!lastDraw) { var p = mk(view, 'p', 'muted', S.rejected() ? NO_TOKEN + ' ' : 'Loading...'); if (S.rejected()) mk(p, 'a', null, 'Change the token').href = tokenLink.href; return; }
 if (cur === 'home') { [glance(), needs(), allConvos()].forEach((x) => { put(view, x); }); return; }
-put(side, needs()); put(side, allConvos('Older threads'));
+put(side, sideNy = needs()); put(side, allConvos('Older threads'));
 if (cur === 'main') {
 mk(mk(view, 'div', 'cv-head'), 'h2', null, toText());
 return;
@@ -472,6 +491,10 @@ onReject.push(() => {
 clearInterval(loadTimer); send.disabled = barSend.disabled = true; tokenLink.textContent = 'Token rejected · change';
 status.textContent = NO_TOKEN; var u = byId('urgent'); if (u) u.hidden = false; if (!lastDraw) drawView(false);
 });
+if (D('needs')) fetch(D('needs'), { cache: 'no-store' }).then((r) => r.ok ? r.json() : null).then((x) => {
+ny = x && x.items ? x : null; if (!ny || !lastDraw) return;
+if (cur === 'home') drawView(false); else if (sideNy && sideNy.parentNode) { var o = sideNy; o.parentNode.replaceChild(sideNy = needs(), o); }
+}).catch(() => {});
 load();
 }
 var c = byId('chat-root'); if (c) chat(c);

@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (185 most recent)
+## Activity (186 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 26, 20:38 | <span class="tag t-review">review</span> T-0265 C13 review of the Lock in toggle: exact words, token and C42 pass; a double-click sends (F1, T-0290); three low findings (T-0291) |  |
 | Oct 26, 20:32 | <span class="tag t-task">task</span> T-0266: L5 <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> byte measures stated and tested against state_ceiling.py; live-tap ring case fixed by count (ba71e2ea) |  |
 | Oct 26, 20:24 | <span class="tag t-build">build</span> T-0112: the app checks every widget tree against viewtree.schema.json before writing it (all 10 invalid fixtures rejected, all 20 goldens accepted); renderer rules <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G6</span> and G16 in; ThemeTests repaired after the six new editor tokens |  |
 | Oct 26, 20:21 | <span class="tag t-task_done">task_done</span> T-0264: L5 s5 takes Ines's 20:18 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> on Q-T251-1 (ceiling 416,217 bytes stands); state_ceiling.py is the one row-field list with compute() and --json, and a new test ties the doc's figures to it (12/12) |  |
@@ -292,6 +293,10 @@ Older entries (the 2026-10-22 task log): archive.md.
 ## 2026-10-26 T-0266 Odalys F1/F2 into L5 s5 (done, 20:27-20:32)
 - ba71e2ea: s5.3/s5.8 live-tap case by count (>16 entries or 32 KiB after rev_after; 8 rows restore, 9 badge); s5.4 **What the caps count** (compact UTF-8 JSONEncoder bytes, `/` as `\/`); state_ceiling.py MEASURES + enc(); test 24/24 builds the largest admitted file (416,215, 2 under; other readings +26). Header 122->123, ceiling unchanged. Board ticked (uncommitted), event logged.
 - Learned: a bound is only as exact as its unit; write the measure beside the cap. Build the worst-case file and encode it rather than trust the sum. JSONEncoder escapes `/` by default [recalled]; Python json.dumps does not.
+
+## 2026-10-26 T-0265 C13 review, Odalys's Lock in toggle (done, 20:33-20:39)
+- fe10569d ops/site-checks/lock-in/ (review, probe_t0265.py, 390 shot), e75554d8 tick + T-0290 (F1 dblclick sends, P1), T-0291 (F2 390 Chat title 0 px, F3 fallback day checks, F4 live region) for Odalys. Exact words, token, C42 all pass; test 34/0.
+- Learned: a two-tap confirm with no minimum gap is defeated by one double-click. Read the test's screenshots: 34/0 passed while the Chat title was 0 px wide. Reuse a test's fixtures in a /tmp probe rather than edit its file.
 {% endraw %}
 
 

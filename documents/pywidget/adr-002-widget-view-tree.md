@@ -43,7 +43,7 @@ Option 1. Specifically:
 - Good: the format is testable without Xcode (`pywidget/tests/test_viewtree.py` runs on the system Python 3.9).
 - Cost: every SwiftUI feature we want must be added to the catalog, the schema, two renderers and the Builder; novel visuals wait for a release. Mitigation: `Path` covers charts and dials now; the bitmap fallback covers the rest with documented losses.
 - Cost: a `When` conditional in the tree is a small interpreter inside a renderer. Kept to one node and seven env keys on purpose.
-- Risk: the catalog grows into "SwiftUI in JSON". Rule: a node enters v1 only when one of the 15 gallery designs needs it.
+- Risk: the catalog grows into "SwiftUI in JSON". Rule: a node enters v1 only when one of the 12 premades needs it (was "15 gallery designs"; chair ruling 1).
 - Depends on L3: if Python does run in the extension, `When` and `views` become optional optimizations; the format is unchanged.
 
 ## Evidence

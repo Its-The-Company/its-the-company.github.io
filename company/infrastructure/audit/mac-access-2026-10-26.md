@@ -73,6 +73,8 @@ Odalys, 2026-10-26 20:09 ET (committed 818dc87b). Asked by an Investor on #41 (c
 ### C. Claude Code permission rules, not macOS settings
 
 All 239 refusals in finding 8 come from Claude Code: 190 hook refusals, 43 from the auto-mode classifier, and 6 from permission rules. None can be fixed in System Settings. The largest group, `protect-records.sh` with 145, is mostly false matches: by command shape, only 1 of the 145 moved or deleted a protected path, and a sample of 6 of the others was false every time. Changes to hooks, rules/ or the Claude Code settings go through the Investors' proposal process (#41 c6407113363), and under #65 they need an explicit "approve".
+
+**Correction (2026-10-26 20:50 ET, T-0255).** Finding 8 said 1 of the 145 protect-records refusals really moved or deleted a protected path. Read command by command, it was `mv $T/worker-rules.md $T/rules/` with `$T` a `mktemp -d` folder in /tmp: a scratch copy, not a record. 0 of 145 (0 of 148 to 20:17) touched a record. Breakdown and fixture: proposal #80, tests/fixtures/protect_records/refused-2026-10-26.json.
 {% endraw %}
 
 </div>

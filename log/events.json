@@ -1,5 +1,201 @@
 [
 {
+"time": "2026-10-26T21:02:25-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #82",
+"link": ""
+},
+{
+"time": "2026-10-26T21:02:10-04:00",
+"worker": "Odalys",
+"type": "experiment",
+"summary": "T-0005 part 2: task store trial offline (301a94b6). Replay 556/556 board commits byte-identical; 100 of 100 swept lines on 10-26 prevented. OPT-044 proposed; switch is proposal #82, needs approve.",
+"link": ""
+},
+{
+"time": "2026-10-26T21:00:10-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #80",
+"link": ""
+},
+{
+"time": "2026-10-26T20:57:55-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #79",
+"link": ""
+},
+{
+"time": "2026-10-26T20:57:35-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #80",
+"link": ""
+},
+{
+"time": "2026-10-26T20:57:35-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #81",
+"link": ""
+},
+{
+"time": "2026-10-26T20:56:26-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-26T20:52:21-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #78",
+"link": ""
+},
+{
+"time": "2026-10-26T20:52:21-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #76",
+"link": ""
+},
+{
+"time": "2026-10-26T20:51:59-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #81",
+"link": ""
+},
+{
+"time": "2026-10-26T20:51:59-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #79",
+"link": ""
+},
+{
+"time": "2026-10-26T20:51:39-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #80",
+"link": ""
+},
+{
+"time": "2026-10-26T20:50:52-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "T-0294 slice 1: proposals can be files in ops/proposals/ that apply at once and revert on a test break; guards keep refusing (69/0). Switch-on waits for approve on #81.",
+"link": ""
+},
+{
+"time": "2026-10-26T20:49:12-04:00",
+"worker": "Odalys",
+"type": "ops",
+"summary": "Proposal #80: narrow protect-records to block only a delete or move whose operand is a record; 146 of 148 past refusals saved, 0 of 148 were real (corrects T-0241's 1); tests 560/0",
+"link": ""
+},
+{
+"time": "2026-10-26T20:48:46-04:00",
+"worker": "Pernille",
+"type": "build",
+"summary": "T-0285: package stage script tools/pkg_stage.py landed (c0a10060). Real pure set stages to 2,500,579 B on the ruled zip -9 measure, under the 3.0 MB ceiling; release stage refuses until the assets rows and certifi's full MPL-2.0 text exist.",
+"link": ""
+},
+{
+"time": "2026-10-26T20:48:08-04:00",
+"worker": "Odalys",
+"type": "revert",
+"summary": "T-0295: OPT-039 day-of-start booking reverted per Investor (pause was intended pacing); no-window 5-hour fix kept. 93d8d2eb",
+"link": ""
+},
+{
+"time": "2026-10-26T20:42:13-04:00",
+"worker": "Odalys",
+"type": "review",
+"summary": "C13 review of tools/pkg_sandbox.py: network, env, -I and sha hold; 4 blockers (home/tmp reads, Keychain via securityd, cfprefsd writes, unlogged crashes) to Pernille T-0296; #79 should wait",
+"link": ""
+},
+{
+"time": "2026-10-26T20:41:45-04:00",
+"worker": "Pernille",
+"type": "build",
+"summary": "T-0250 and T-0233 landed: widget renders and timeline providers get deep copies of state; semantic colours are a closed list ('background' now says use ui.WidgetCard()); A2 accessibility modifiers and R2 time zones on date text in schema and DSL",
+"link": ""
+},
+{
+"time": "2026-10-26T20:41:02-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "Q-T252-1 ruled (L5 s5.9, 032b7a29): widgets.state() in app, handler and Shortcut runs; widget runs and previews refused, reads too; bridge decides by recorded run context",
+"link": ""
+},
+{
+"time": "2026-10-26T20:39:45-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-26T20:39:06-04:00",
+"worker": "Wrenna",
+"type": "task_done",
+"summary": "T-0283: store-page s6b case C replaced by memo s8 fallbacks C1-C3; each case checked 14 fields 0 problems; two widget sentences that outlived a cut now gated; launch plan and press kit notes",
+"link": ""
+},
+{
+"time": "2026-10-26T20:38:57-04:00",
+"worker": "Idris",
+"type": "review",
+"summary": "T-0265 C13 review of the Lock in toggle: exact words, token and C42 pass; a double-click sends (F1, T-0290); three low findings (T-0291)",
+"link": ""
+},
+{
+"time": "2026-10-26T20:35:45-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "Proposals tab live under Home, separate from Issues: each proposal with its state, answerable in place with Approve, Hold or No",
+"link": ""
+},
+{
+"time": "2026-10-26T20:35:01-04:00",
+"worker": "Pernille",
+"type": "build",
+"summary": "T-0253: Maren's installer copy read applied (draft, C51); .tar.gz refusal, ' (1)' wheel names, version_conflict by source; 435f8ba3",
+"link": ""
+},
+{
+"time": "2026-10-26T20:34:43-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "ADR-003 chair line on Odalys's review: stage step owned (T-0285 Pernille, T-0286 Idris, by Day 9); certifi MPL-2.0 granted with four conditions; pure-set ceiling restated as 3.0 MB on one measure; Day 10 gate written for A1, A2 and no answer by 2026-10-29 noon.",
+"link": ""
+},
+{
+"time": "2026-10-26T20:34:09-04:00",
+"worker": "Maren",
+"type": "done",
+"summary": "T-0271: three Pro editor theme pairs (Ember, Fern, Graphite) drafted as C51 PROPOSAL-004; 780 draft contrast pairs, 0 fails; preview drawn by code",
+"link": ""
+},
+{
+"time": "2026-10-26T20:34:00-04:00",
+"worker": "Pernille",
+"type": "proposal",
+"summary": "T-0275: package sandbox wrapper (tools/pkg_sandbox.py, 75/0) and settings proposal #79: two narrow allow rules, import-test (A2 core) and iOS build (A1 only); Investor applies by hand",
+"link": ""
+},
+{
+"time": "2026-10-26T20:33:51-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-0277: fallback Pro content ruled (memo s8: C1 passing native packages, C2 themes only at a recommended $4.99, C3 no IAP in v1.0; set on Day 10); G6 suffix taken (0eaeb5b7)",
+"link": ""
+},
+{
 "time": "2026-10-26T20:32:19-04:00",
 "worker": "Idris",
 "type": "task",

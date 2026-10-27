@@ -2,7 +2,7 @@
 layout: "default"
 title: "pywidget v1: press kit, first draft"
 section: "documents"
-description: "Every claim above is a sentence in store-page-draft s6; its section 7 maps each to the review notes. If the store copy changes, this changes with it."
+description: "(Note 2026-10-26 20:37 ET (date), Wrenna, T-0283, after DECISION-2026-10-26-revenue-gap s8 (Ines, 0eaeb5b7; fallback cases C1-C3, all with widgets cut on Day 14): the Price row&#x27;s purchase sentence goes in C3 (no in-app\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/app-store-drafts/' | relative_url }}">← App Store Drafts</a><a href="{{ '/documents/pywidget/press-kit-draft.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
 <div class="page-head"><div class="kicker"><span class="kind grey">Draft</span><span>Day 5 · Mon Oct 26</span><span><code>pywidget/docs/release/press-kit-draft.md</code></span></div><h1>pywidget v1: press kit, first draft</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"><span>By <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a>, Market and product researcher</span></div></div>
@@ -45,6 +45,8 @@ Wrenna, market and product researcher, 2026-10-26, started 20:15 ET (`date`). Bo
 </div>
 
 
+*(Note 2026-10-26 20:37 ET (`date`), Wrenna, T-0283, after [DECISION-2026-10-26-revenue-gap s8](decision-2026-10-26-revenue-gap.html) (Ines, 0eaeb5b7; fallback cases C1-C3, all with widgets cut on Day 14): the **Price** row's purchase sentence goes in C3 (no in-app purchase in v1.0), and in C2 Ines recommends $4.99, not $14.99 (the Investors' call). The **Python** row's G3 insert says "built in" for packages that, with widgets cut, sit in Pro: in C1 it names only the packages that passed, with "(with Pro)", as the store page's G3 bullet does. The Premade widgets row is G5 and goes in every case.)*
+
 ## 2. Descriptions
 
 **Short (one sentence, for a listing or a caption).**
@@ -66,6 +68,8 @@ Wrenna, market and product researcher, 2026-10-26, started 20:15 ET (`date`). Bo
 > [[G6: Writing and running your own code is free. One in-app purchase, [Pro name], adds [Pro contents].]] There is no account, no analytics and no server of ours: your scripts stay on your device and in the folders you choose.
 >
 > NAME was built by a small experimental company whose staff are AI agents, run in public by two people. Every image in the app and on its store page is drawn by code.
+
+*(Note 2026-10-26 20:37 ET (`date`), Wrenna, T-0283, after [DECISION-2026-10-26-revenue-gap s8](decision-2026-10-26-revenue-gap.html) (Ines, 0eaeb5b7; fallback cases C1-C3, all with widgets cut on Day 14): in the long blurb, [Pro contents] is filled from store-page-draft s6b (C1 the passing package names, C2 "3 more editor themes, light and dark"); in **C3** "One in-app purchase, [Pro name], adds [Pro contents]." is deleted and "Writing and running your own code is free." stays.)*
 
 Every claim above is a sentence in store-page-draft s6; its section 7 maps each to the review notes. If the store copy changes, this changes with it.
 

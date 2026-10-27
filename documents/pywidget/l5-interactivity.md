@@ -238,7 +238,7 @@ Odalys's independent review ([`pywidget/docs/reviews/L5-state-review-odalys.md`]
 1. Q-T227-1 confirmed: the "mine until confirmed" marks come off in s5.1 (`ops_log` rule) and s5.3 (live error branch), struck with this date; T-0235 item 4's "*mine*, with Q-T227-1" is ruled too. *Ruled.*
 2. Q-T227-1's G-L5-5 case, a live tap behind a drain run that fails: s5.8. *Ruled.*
 3. Q-T226-1 in the wider form: the IDE clear runs s5.6 **Drain** step 1 in full first, then its two writes; the standing rule (any writer that removes `failed.jsonl` rows runs step 1 first); the kill case: s5.4, and the kill case also under s5.8 **Kill points**. *Ruled.*
-4. Q-T235-1 (1)-(3), which cap binds which write: s5.4 and the size lines of s5.5. *Ruled.* s5.5's module API text (how `pywidget.widgets.state()` raises) is Pernille's (T-0252) and is not written here.
+4. Q-T235-1 (1)-(3), which cap binds which write: s5.4 and the size lines of s5.5. *Ruled.* s5.5's module API text (how `pywidget.widgets.state()` raises) is Pernille's (T-0252) and is not written here. Written 2026-10-26 20:36 ET (Pernille, T-0252): s5.5 **Module API**, with Q-T252-1 for Ines.
 5. Q-T235-1 (4), the ceiling: 288 KiB replaced by the figure computed from the field sizes, 416,217 bytes (406.46 KiB) with the ring, 383,438 bytes (374.45 KiB) without it: s5.4 (the arithmetic), s5.1, s5.8 I5. *Ruled* that 288 is wrong and that Idris computes it; the arithmetic and its assumptions are *mine* (script `L5-raw/state_ceiling.py`). It is larger than the note's "below 320 KiB plus those fields": the fields add 54.4 KiB, because no row cap binds live or converted rows. Q-T251-1 (s5.9) asks whether to close that.
 6. Host model: `clear failed` runs step 1 first, result commits are key diffs, a module write or "Set Widget State" over 64 KiB commits nothing: s5.8. *Ruled.*
 
@@ -373,6 +373,60 @@ Amended 2026-10-26 20:15 ET (T-0251; chair note 20:08 Q-T235-1, Q-T226-1):
   - **A module write is ops.** The module records each write as the `set` and `clear` ops that turn the `scopes.shared` it replaced into the one it wrote, computed under the lock against the current file; the commit enters `ops_log` with them (s5.1), and a handler's rebase re-applies them as it does a tap's (s5.3). Keys are top-level and values are scalars or lists of scalars (s3.2), so every write has an exact form in the closed op set (S2); no new op. This holds for a write from any thread, including one a run left alive, daemon or not.
   - **Size.** A list value can reach the 64 KiB `scopes` cap, so one entry can pass the ring's 32 KiB bound; it is then stored as the `{"rev": n}` marker (s5.1), and a handler whose window reaches it ends `conflict`. A console loop that writes faster than the ring holds sends a handler result to `failed` as `conflict`: visible, and the cause is the person's own loop. That a write over 64 KiB raises `StateTooLarge` in the script and commits nothing is ~~mine (Q-T235-1, s5.9)~~ ruled (chair note 20:08 Q-T235-1 (1), 2026-10-26 20:15 ET, T-0251); the 256 KiB test does not bind a module write (Q-T235-1 (2); s5.4 **Which cap binds which write**). How the module states this in its API is Pernille's (T-0252).
   - **A handler writing its own widget.** A handler that writes its own widget through the module during its own run has that write re-applied over its result, so the module write wins on its keys. The IDE warns on a handler that calls `pywidget.widgets.state()` with its own widget's id (code: Idris; words: Maren, T-0237).
+  - **Module API (Pernille, 2026-10-26 20:36 ET, T-0252; answers s15 Q4).** The name stays `pywidget.widgets.state(id)`. Spec only; nothing here is built (implementation and host tests: T-0289). It follows C2 s1.3 (errors in `pywidget.errors`, each also on its nearest built-in) and C2 s1.6 (calls block the script's thread; `BridgeTimeout`). Each item is *ruled* (a chair line, quoted or placed) or *mine*.
+
+    ```python
+    from pywidget import widgets
+
+    widgets.state(id: str, *, timeout: float = 10) -> WidgetState
+        # One locked read through the bridge of (epoch, rev, scopes.shared).
+
+    class WidgetState(collections.abc.Mapping):   # read-only; never live
+        widget_id: str
+        epoch: str \| None    # None until the widget's state.json first exists
+        rev: int             # 0 until then
+        def set(self, key: str, value, *, timeout: float = 10) -> "WidgetState"
+        def clear(self, key: str, *, timeout: float = 10) -> "WidgetState"
+        def replace(self, new: Mapping[str, object], *, timeout: float = 10) -> "WidgetState"
+        # Each is one compare-and-swap on (self.epoch, self.rev) and returns the
+        # snapshot as committed; self never changes.
+
+    # pywidget.errors, re-exported by pywidget.widgets
+    class StateTooLarge(PyWidgetError, ValueError):
+        widget_id: str
+        size: int            # bytes the `scopes` value would encode to
+        limit: int           # 65536
+    class StateConflict(PyWidgetError, RuntimeError):
+        widget_id: str
+        expected: tuple      # (epoch, rev) the snapshot holds
+        current: tuple       # (epoch, rev) found under the lock
+    ```
+
+    1. **What a write is.** `set`, `clear` and `replace` each build the new `scopes.shared` from the snapshot (`set`: the snapshot with `key` = `value`; `clear`: without `key`, a missing key is no error; `replace`: exactly `new`) and hand it to the Swift write path, which records the `set` and `clear` ops between the current `scopes.shared` and the new one (s5.5 **A module write is ops**, *ruled* 19:56). The three names are *mine*; `set` and `clear` are the `ui.Op` names of s3.2 for the same change.
+    2. **Checked before the bridge, at the caller's line.** Keys and values as s3.2: a key not matching `[a-z_][a-z0-9_]{0,31}` raises `ValueError`; a value that is not a JSON scalar or a list of scalars raises `TypeError` (bool, int, float, str, None; a float that is NaN or infinite is refused, as JSON has no form for it). The error names the caller's file and line, as the DSL's do. *Mine*: these are the s3.2 rules the DSL already enforces; nothing here touches the file.
+    3. **Under the lock, in this order** (the Swift write path, s5.2): (a) `(epoch, rev)` in the file differs from the snapshot's: raise `StateConflict`, nothing commits (*ruled*, s5.5 "a mismatch raises in the script"; the name is *mine*, from the s5.3 outcome `conflict`). (b) The `scopes` value as it would be written is over 64 KiB: raise `StateTooLarge`, nothing commits (*ruled*, chair note 20:08 Q-T235-1 (1)). (c) Otherwise commit and return the new snapshot. The conflict check comes first because a write against a stale snapshot has no size worth reporting.
+    4. **What counts toward the 64 KiB.** The same words as `L5-raw/state_ceiling.py` `MEASURES["scopes"]` and s5.4 **What the caps count**: *the whole `scopes` value, braces in*, measured as UTF-8 bytes of compact JSON as the write path writes it (Swift's `JSONEncoder`, default formatting, `/` as `\/`, non-ASCII as raw UTF-8). So `{"shared":{...}}` counts, not `scopes.shared` alone. Over 64 KiB means over 65,536 bytes; a value of exactly 65,536 bytes commits. `size` is the byte count the Swift side measured with the encoder it writes with; Python does not encode a second time to pre-check (s5.4, one encoding per writer). *Ruled* (s5.4); `size` and `limit` as attributes are *mine*.
+    5. **Commits nothing.** On `StateTooLarge` or `StateConflict` the file is not written: `rev`, `scopes`, `ops_log` and `pending` stay as they were, no widget reload is asked for, and no badge shows (no tap was refused). The snapshot the call was made on is unchanged, so the script can shrink its value and call again on it, or read again after a conflict. *Ruled* (Q-T235-1 (1)).
+    6. **The 256 KiB whole-file test does not refuse it.** A module write adds no `pending` row, so a widget with many queued taps still takes a module write whose `scopes` fits 64 KiB; the module never raises for the file's size (*ruled*, chair note 20:08 Q-T235-1 (2); s5.4 **Which cap binds which write**).
+    7. **Inside a handler run.** A `StateTooLarge` the handler does not catch ends the run as any exception does: outcome `error` (s5.6). That is the handler's exception, not s5.4's handler-result `StateTooLarge`, though both read the same in the log. *Mine.*
+    8. **Other errors.** `KeyError` for an id that is not a widget script the app knows (*mine*, as C2 s4's unknown bookmark). `BridgeTimeout` after `timeout` seconds; a timeout leaves the outcome unknown to the script, so read again before writing again (*mine*). A widget whose `state.json` does not exist yet reads as empty, `epoch` None, `rev` 0, and its first write creates it through the app (s5.7: only the app creates `widgets/<id>/`); *mine*, Idris to confirm.
+    9. **Message text.** Draft, Maren's to approve (<span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>): `StateTooLarge`: "widget 'habits' state would be 70,112 bytes; the limit is 65,536. Nothing was saved." `StateConflict`: "widget 'habits' state changed since you read it (rev 41, now 43). Nothing was saved; read it again with widgets.state('habits')."
+    10. **Q-T252-1 (for Ines).** Which run contexts get the module. *Mine:* the app's console, IDE runs, handler runs and Shortcut runs read and write; widget runs and previews raise `NotAvailableHere` for reads and writes, because a widget run reads state as `ctx.state` and must not write while rendering, and a preview writes no file (bridge contract v5). Until ruled, T-0289 builds it this way.
+
+    ```python
+    from pywidget import widgets
+    from pywidget.errors import StateTooLarge, StateConflict
+
+    s = widgets.state("habits")
+    days = list(s.get("done", []))
+    days.append("2026-11-20")
+    try:
+        s = s.set("done", days)        # compare-and-swap on (s.epoch, s.rev)
+    except StateTooLarge as e:
+        print(e.size, "bytes; the limit is", e.limit)   # nothing was saved; s is as read
+    except StateConflict:
+        s = widgets.state("habits")    # a tap or another write landed; read and redo
+    ```
 - Shortcuts: L9's "Get Widget State" adds `state` to its JSON; a new "Set Widget State" (key, value) applies `Op.set` under the lock, through the same Swift type in whichever process runs it (s0; added 2026-10-26, review S9). Its entries fall under the ring's 32 KiB bound and marker (s5.1) like a module write's (2026-10-26 20:05 ET, chair note 19:56 Q-T174-2 (2), T-0235). Amended 2026-10-26 20:15 ET (chair note 20:08 Q-T235-1, T-0251): a "Set Widget State" that would take `scopes` over 64 KiB fails with its message and commits nothing, with no badge (the words are Maren's, with L9's copy); the 256 KiB test does not bind it. L9's slots (`Set Widget Data`) stay separate: slots are inputs a script reads, state is what the widget's actions change.
 - Deleting a widget script deletes its `widgets/<id>/` folder (how: s5.7, review S2). Renaming a widget's `id` starts a fresh state (the IDE warns before save).
 
@@ -480,7 +534,7 @@ Read: Odalys's delta review [`pywidget/docs/reviews/L5-s5-review-odalys.md`](l5-
 
 **Priority.** This is 1.1 work and earns nothing by <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span>. Idris's s5 edit is P3 and comes after his v1 lines. The T-0106 addition is v1 and goes in by Day 13.
 
-#### Design note (Maren), 2026-10-26 02:41 ET: Q-T130-2 wording (T-0157). Draft copy, NOT APPROVED (<span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>)
+#### Design note (Maren), 2026-10-26 02:41 ET: Q-T130-2 wording (T-0157). Draft copy, NOT APPROVED (C51)
 
 Full design in [`pywidget/docs/design/states/state-spec.md`](state-spec.html) s3.3; sheet `states-taps-off.png` (drawn by `draw_taps_off.py`, QA 0 faults). No ruling here is changed. In short:
 - **Badge:** the last good render stays; the corner slot shows `exclamationmark.octagon.fill` [recall]. No words on the widget: "Fix this widget in PyWidget" is 226.8 pt at the xxxLarge clamp and the small widget's layout is 116 pt wide on the iPhone SE; "Fix this widget" (121.6 pt) fits only as a strip that takes 26% of the layout height and clips the user's buttons.
@@ -564,6 +618,36 @@ Read: Idris's item above and s5.4 **The file's ceiling** (0563c4c5); `L5-raw/sta
 
 - **T-0266 placed Odalys's F1 and F2 (Idris, 2026-10-26 20:31 ET).** Change list in s5.0. F1: s5.3 and s5.8 state the live-tap case by count, 8 drain rows (16 entries) restore and 9 badge. F2: s5.4 **What the caps count** states the measure for the 64 KiB, 32 KiB, 256 KiB and 1 KiB caps; `state_ceiling.py` and the text say the same words, and `state_ceiling_test.py` checks it (24 checks, pass). No ruled number changed, so nothing is open for Ines.
 
+#### Chair note (Ines), 2026-10-26 20:40 ET: Q-T252-1 (T-0293)
+
+Read: Pernille's s5.5 **Module API** items 1-10 (0adc9cb0); my 19:56 (5cb79881), 20:08 (ea7594d5) and 20:18 notes; the bridge's `RunRequest.Context` (`app`, `widget`, `shortcut`, `preview`; `PyBridge.swift`) and Idris's T-0189 (fea46de1: a preview's result writes nothing and asks no reload; the bridge keeps each queued run's context for `RunResultSink`); C2 s1 (the context table, `NotAvailableHere` with `.context`, s1.2 "no script can show stale data as live"); PWL012 in L2 with Maren's note that it should fire on a write. I ran nothing. The tests are the 01:46 ones: simplest to build and test in the Simulator, and safest for the person.
+
+**Pernille's item 10 is accepted as written**, with three additions below. The context is the run's mode, not what started it: a widget refresh started by the Refresh Widgets intent from a Shortcuts automation is a widget run (C2 s1), not a Shortcut run.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 11: Chair note (Ines), 2026-10-26 20:40 ET: Q-T252-1 (T-0293), scrolls sideways" data-n="2 3" style="--tw:751px" markdown="1">
+
+| Context | Read | Write | Why |
+|---|---|---|---|
+| App runs (`app`: the console, and Run in the IDE on a script that is not drawing a widget) | yes | yes | The module's first use (s5.5 opening line). Writes are ops (19:56 Q-T174-2 (a)); 64 KiB raises `StateTooLarge`, the 256 KiB test does not bind (20:08 Q-T235-1) |
+| Handler runs (1.1) | yes | yes | A handler that updates another widget is the case the module exists for. A write to its own widget is allowed and PWL012 warns: 19:56 (3) ruled a warning, not a refusal, and this keeps it. An uncaught `StateTooLarge` or `StateConflict` ends the run `error` (s5.5 item 7). The handler run's bridge context is 1.1's to add (Idris); it must not be `widget` or `preview` |
+| Shortcut runs (`shortcut`: Run Script, Run Script with Input, L9) | yes | yes | "Set Widget State" already makes these writes from Shortcuts (s5.5 Shortcuts line; 20:08 (1)); refusing the module would let a script do less than the native action beside it. Before first unlock, a call that cannot open the file raises `DeviceLocked` (C2 s4's rule for file reads) and commits nothing; Idris confirms `state.json`'s protection class |
+| Widget runs (`widget`: every refresh, foreground or not) | no | no | `NotAvailableHere`. **Write:** a render that writes state is no longer a function of the state it was given, and a committed write is meant to reach the widget (item 5 says only a refused one asks no reload), so a widget that writes while drawing refreshes itself from its own refresh and spends L2's daily budget. **Read:** its own state already arrives as `ctx.state`, from the same snapshot the render uses. Another widget's state would be read with no reload link, so the widget would show it stale, with no sign, after the other changes: against C2 s1.2 |
+| Previews (`preview`) | no | no | `NotAvailableHere`, reads included. **Write:** contract v5 (fea46de1), a preview writes nothing. **Read:** a preview must fail where the widget run fails. A preview that can read what the Home Screen run cannot shows a widget that works in the IDE and breaks on the Home Screen; raising in the preview is how the person sees the error while editing. If a 1.1 preview runs a handler on a tap (v1 draws Button and Toggle with taps off, ADR-002 chair line 20:03), that run is a preview here: no read, no write, its result handed back as contract v5 says |
+
+</div>
+
+
+Additions.
+
+1. **The bridge decides, from the run's recorded context.** The refusal reads the context the bridge recorded when the run was queued (the record `RunResultSink` already reads, fea46de1), never anything the script can set. The Python half raises at the caller's line, in s5.5 item 2's form, with `.context` set to the run's mode. A thread keeps the context of the run that started it, including a thread alive past the run's deadline (19:56 (1)): a widget run's surviving thread is refused; a console run's surviving thread writes, as ops. A call the bridge cannot tie to a run is refused with `NotAvailableHere` and commits nothing: an unknown caller never writes. How a thread carries its run is Pernille's (T-0289).
+2. **PWL012 fires on a write.** Maren is right that a read is harmless. The trigger is a `set`, `clear` or `replace` on a snapshot the handler took with its own widget's id; a read alone does not warn. If the lint cannot tell a write from a read, it fires on the `state()` call and uses Maren's "any call" wording; Idris says which in his lint line.
+3. **Message text.** The `NotAvailableHere` message for widget runs and previews says what to do instead (read `ctx.state`; change state in a handler). Pernille drafts it with item 9's two; the words are Maren's (C51).
+
+**Reopen rule.** If a 1.1 demo or a buyer's request needs one widget to show another's state, the fix is a declared read with a reload link (the writer's commit reloads the reader), and the widget-run read row reopens. It is not ruled out, only not built.
+
+**What follows.** This is 1.1 work and earns nothing by Day 30. Pernille, T-0289: the host fake carries the run's context on every call; tests that `app`, `shortcut` and a handler context read and write; that `widget` and `preview` raise `NotAvailableHere` for a read and for each of `set`, `clear` and `replace`, with the fake file byte-identical; that a thread a widget run leaves alive past its deadline is refused and one a console run leaves alive writes as ops; that a call tied to no run is refused. Item 10's "until ruled" mark comes off. Idris: the handler run's bridge context (1.1), `state.json`'s protection class, PWL012's trigger in his lint line. Maren: the `NotAvailableHere` words. Odalys's placement check covers this note. If she or T-0289's tests find a context this table misses, her finding reopens the row; it is not settled because I wrote it.
+
 ## 6. Paging
 
 `w.pager("page", count=n)` plus `ui.Pages("page", p0, p1, ...)`, which serializes as a `Group` of `When("state.page", i, p_i)` with `otherwise` = `p0`, so an out-of-range page (data shrank) shows the first page instead of nothing. All pages are in the tree, so the whole widget must fit `MAX_WIDGET_TREE_BYTES` (512 KiB, contract s7); a pager over 10 pages draws a lint warning [ours]. Next/prev are ops-only actions: instant, no Python, every iOS. Python re-renders the pages whenever the widget runs; `state.page` survives runs.
@@ -573,7 +657,7 @@ Read: Idris's item above and s5.4 **The file's ceiling** (0563c4c5); `L5-raw/sta
 ### 7.1 URL grammar (custom scheme; no universal links, which need a server)
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 7.1 URL grammar (custom scheme; no universal links, which need a server), scrolls sideways" data-n="3" style="--tw:706px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 12: 7.1 URL grammar (custom scheme; no universal links, which need a server), scrolls sideways" data-n="3" style="--tw:706px" markdown="1">
 
 | URL | Meaning | Signed |
 |---|---|---|
@@ -601,7 +685,7 @@ Widgets take no text (s1). An action declared with `input=` is always drawn as a
 Three fixed control kinds ship in the widget extension; the person adds any of them as often as they like and picks what each one does in its configuration.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 12: 8. Control Center, Lock Screen and Action button controls, scrolls sideways" style="--tw:1330px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 13: 8. Control Center, Lock Screen and Action button controls, scrolls sideways" style="--tw:1330px" markdown="1">
 
 | Kind (permanent strings) | Template | Configuration | Value | Action |
 |---|---|---|---|---|
@@ -635,7 +719,7 @@ PROPOSAL-002 row 2 calls the Run Script control "an App Intent we already build"
 ## 10. Limits
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 13: 10. Limits, scrolls sideways" style="--tw:960px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 14: 10. Limits, scrolls sideways" style="--tw:960px" markdown="1">
 
 | Limit | Value | Source |
 |---|---|---|
@@ -666,7 +750,7 @@ PROPOSAL-002 row 2 calls the Run Script control "an App Intent we already build"
 ## 11. Failure behaviour
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 14: 11. Failure behaviour, scrolls sideways" style="--tw:960px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 15: 11. Failure behaviour, scrolls sideways" style="--tw:960px" markdown="1">
 
 | Case | Shown | State |
 |---|---|---|
@@ -722,7 +806,7 @@ Top 5 items per page, up to 3 pages, from a list the script fetched at its last 
 Each row is cheap now and a breaking change later. Owners named; none of these is done by this task.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 15: 13. What v1 must reserve so 1.1 does not break it, scrolls sideways" data-n="1" style="--tw:1005px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 16: 13. What v1 must reserve so 1.1 does not break it, scrolls sideways" data-n="1" style="--tw:1005px" markdown="1">
 
 | # | Reserve in v1 | Why | Owner |
 |---|---|---|---|
@@ -748,7 +832,7 @@ Each row is cheap now and a breaking change later. Owners named; none of these i
 Additions after review (2026-10-26): s5.8 (G-L5-5 kill test and device run, new G-L5-7, G-L5-4 and G-L5-2 rows).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 16: 14. Gates (Simulator first, device where marked), scrolls sideways" style="--tw:1044px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 17: 14. Gates (Simulator first, device where marked), scrolls sideways" style="--tw:1044px" markdown="1">
 
 | Gate | Question | How | Pass |
 |---|---|---|---|
@@ -767,7 +851,7 @@ Additions after review (2026-10-26): s5.8 (G-L5-5 kill test and device run, new 
 1. Chair: accept that in 1.1 the extension writes `state.json` and `actions.jsonl` (ADR-007 5.2 amendment), and the s4.1 routing. Without it, every interaction on 18-26 opens the app.
 2. Chair: default `fallback` for handler actions on 18-26, `open_app` (mine: correct at once, visible) or `queue` (invisible, late).
 3. Maren: the `pending` mark, the open-app result banner, the input sheet, and the "Removed in PyWidget" control state.
-4. Pernille: the module name for reading and writing widget state from in-app Python (`pywidget.widgets.state(id)`), and R7, R12.
+4. Pernille: the module name for reading and writing widget state from in-app Python (`pywidget.widgets.state(id)`), and R7, R12. Name answered 2026-10-26 20:36 ET (Pernille, T-0252): `pywidget.widgets.state(id)` stays, API in s5.5 **Module API**; R7 and R12 are not covered by this answer.
 5. Wrenna: whether App Review reads signed `pywidget://` action links and Control Center script runs under 2.5.11 or 4.4 in any way the L6 rows do not already cover.
 6. Per-instance state (a configurable widget placed twice with different settings): needs widget configuration parameters from Python, which is not in 1.1. `scopes` leaves room.
 7. Live Activities with buttons: 1.2 at the earliest (ADR-001 row "Interactive widgets, Control Center controls, Live Activities"). `LiveActivityIntent` is the one documented app-process route on 18-26 (s0 item 4), legitimate only for a real Live Activity; it gets its own small schema then (L4 s6).
@@ -792,7 +876,7 @@ The s4.1 routing is accepted as written: `WidgetOpsIntent` only in the extension
 **What v1 reserves (before the Day 13 freeze, 2026-11-03).** The app and the extension ship in one bundle and update together, and trees on the device come from the bundled package, so a v1 renderer on the phone never meets a 1.1 tree. The cross-version path that is real is L4 s8's: a newer document on an older renderer (the web renderer, a shared gallery script). I keep the rows that serve that path or that cost nothing, and drop the rows that only guard a phone-side mismatch that cannot happen.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 17: Chair note (Ines), 2026-10-26 00:15 ET: items 1 and 2, and what v1 reserves, scrolls sideways" style="--tw:578px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 18: Chair note (Ines), 2026-10-26 00:15 ET: items 1 and 2, and what v1 reserves, scrolls sideways" style="--tw:578px" markdown="1">
 
 | Row | Ruling | Owner |
 |---|---|---|
@@ -820,7 +904,7 @@ Form: independent review (Odalys, T-0108, 508b6e4b), the author's replies (Idris
 **Verdict.** The write-ahead design is accepted. It is better than what I ruled at 00:15: my S6 promised "never dropped", and the layout I accepted could not keep that promise (B1, B2). I should have asked for the review before writing the promise, not after. Three amendments of mine (A1-A3) follow. All three are 1.1 doc changes. The only v1 code this review produces is the widget id rule, and that rule is wider than the board line says (last part of this note).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 18: Chair note 2 (Ines), 2026-10-26 01:12 ET: the review answers; S1, S6, S7 and…, scrolls sideways" style="--tw:1131px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 19: Chair note 2 (Ines), 2026-10-26 01:12 ET: the review answers; S1, S6, S7 and…, scrolls sideways" style="--tw:1131px" markdown="1">
 
 | Item | Idris's proposal (312d6a1e) | Ruling | Why |
 |---|---|---|---|

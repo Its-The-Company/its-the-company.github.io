@@ -13,6 +13,7 @@ description: "It is the one place that lists what Python code ships inside the a
 {% raw %}
 - Status: **framed by the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>, author's sections pending** (Ines, 2026-10-26 20:03 ET, T-0218). Sections 0-1 and the chair line are the ruling on what this ADR covers and the pass rule for native packages. Sections 2-4 are Pernille's (T-0242, due 2026-10-28 23:59 ET), then Odalys's independent review (T-0244), then a chair line that accepts them. Plan row 6 (ops/plans/pywidget/plan.md) put this ADR on Day 6 (2026-10-27) with no author named; it is written a day late because no one owned it, and that is the chair's miss, not the runtime engineer's.
 - Reviewed 2026-10-26 20:28 ET (Odalys, T-0244): [`../reviews/ADR-003-review-odalys.md`](adr-003-review-odalys.html). 2 blockers (B1: #77's "nothing run from inside an extracted archive" rules out sdist builds, and the build toolchain is outside the manifest, T-0280; B2: no line owns the app-side package stage s1 item 3 needs, T-0281), 5 should-fix, 7 low. Pure-set pins, PyPI hashes, RECORDs and sizes.tsv reproduced, n = 8.
+- Chair-ruled 2026-10-26 20:34 ET (Ines, T-0281; chair line at the end): s2 and s4's table form accepted with changes; s3 waits on T-0280 and #77. B2 assigned (T-0285 Pernille, T-0286 Idris, by 2026-10-30). certifi (i) granted with four conditions; one size measure; Day 10 gate stated for A1, A2 and no answer by 2026-10-29 12:00. s1 items 1 and 4 read with that line's corrections ("cp315 or abi3"; "compressed" is the zip -9 .app delta).
 - Numbering: reserved for packages by plan row 6, ADR-001 3.1 C1 and ADR-006 line 5 ("ADR-003 must agree with section 3 below"). It does.
 - Inputs: ADR-001 3.1 C1 and its Revised row (native packages only if "prebuilt iOS wheels working by Day 10"; CPython 3.15.1, wheels cp315 or abi3 built here with cibuildwheel; iOS 18.0 floor); L13-packages.md s1-s8 (Odalys); the stdlib cut, [`../research/stdlib-manifest.md`](stdlib-manifest.html) chair ruling (c045aa9d, 2026-10-25 21:09); ADR-006 s3 (bundled set only in v1.0), s9.5 (build-time downloads), s11 (Install from file), s12 (online pip); ADR-007 s4 (option (b): the extension links no Python, so it gets no packages).
 
@@ -31,10 +32,36 @@ It is the one place that lists what Python code ships inside the app beyond CPyt
 | Install from file | ADR-006 s3 item 2, s11 | v1 stretch under row 37's eight conditions, condition (b) met, (a) open until Day 13 (2026-11-03); misses Day 13 -> 1.1 with no further ruling |
 | Online pip | ADR-006 s10, s12, s12.6 | not v1, not a v1 stretch; first 1.1 candidate after the bundled set, under s9.4's conditions |
 | Build-time downloads | ADR-006 s9.5 | pinned sdists and wheels by predictable `files.pythonhosted.org` URL and sha256 through `tools/terms_guard.py`; never `pip download` against `/simple/` |
-| Licences allowed | L13 s3 (c); Commandments 4-5 | MIT, BSD, Apache-2.0, PSF, HPND, ISC; no GPL or LGPL; every shipped package gets a log/assets.md row and a line on the Acknowledgements screen (T-0042) |
+| Licences allowed | L13 s3 (c); Commandments 4-5 | MIT, BSD, Apache-2.0, PSF, HPND, ISC; no GPL or LGPL; every shipped package gets a log/assets.md row and a line on the Acknowledgements screen (T-0042). Added 2026-10-26 20:34 (chair line, T-0281): MPL-2.0 for certifi only, unmodified and as source, under four conditions; named permissive families for linked libraries and unmodified fonts per that line's S4 list; unknown ids refused |
 
 </div>
 
+
+### 0.1 Licence families (the chair line's S4 list, copied by Pernille, T-0285, 2026-10-26 20:48 ET)
+
+This is the table `tools/pkg_stage.py` enforces (`FAMILIES`). An id maps to a family; an id not in this table is refused (exit 3) and comes to the chair. An SPDX `WITH` exception, or a mixed AND/OR expression with brackets, is refused the same way. Any GPL or LGPL id anywhere fails the package.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 0.1 Licence families (the chair line&#x27;s S4 list, copied by Pernille, T-0285…, scrolls sideways" style="--tw:1201px" markdown="1">
+
+| SPDX id(s) | Family | Allowed for | Source of the rule |
+| --- | --- | --- | --- |
+| MIT, MIT-0 | MIT | any package, file or linked library | L13 s3 (c) |
+| BSD-2-Clause, BSD-3-Clause | BSD | the same | L13 s3 (c) |
+| Apache-2.0 | Apache-2.0 | the same | L13 s3 (c) |
+| PSF-2.0, Python-2.0 | PSF | the same | L13 s3 (c) |
+| HPND, MIT-CMU | HPND | the same; MIT-CMU matched by id, not by a text search | L13 s3 (c); S4 |
+| ISC | ISC | the same | L13 s3 (c) |
+| Zlib; Libpng, libpng-2.0; IJG; libtiff; FTL | zlib, libpng, IJG, libtiff, FTL | linked C libraries (FreeType under the FTL only, never its GPLv2 option) | S4, each only after its text is read in the pinned sdist and cited in `recipes/<name>/LICENSES.tsv` |
+| Qhull | Qhull | linked C library, attribution | S4; s3.5 |
+| Bitstream-Vera, OFL-1.1 | font | unmodified fonts inside matplotlib's `mpl-data`, for the user's own plots; never our UI, icon, screenshots or site; a log/assets.md row each | S4 |
+| MPL-2.0 | MPL-2.0 | **certifi only**, unmodified, as source, under S3's four conditions | S3 |
+| BaKoMa (Computer Modern) | none | **not allowed**: the stage step drops `mpl-data/fonts/*/cm{b,ex,mi,r,ss,sy,tt}10.{ttf,afm,pfb}` and `LICENSE_BAKOMA*`; `check` fails if one is in the app | S4 |
+
+</div>
+
+
+Where the ids are read: `License-Expression` in `METADATA`; failing that, the `License ::` classifiers (mapped by `CLASSIFIERS`); failing that, a short `License` field that is itself an id on this table. Licence files inside the package's own `.dist-info` are covered by that id. A `LICENSE*`, `COPYING*` or `NOTICE*` file anywhere else, every font, and every linked C library needs a row in `pywidget/packages/recipes/<name>/LICENSES.tsv` (kind `file`, `font` or `library`; path or library; SPDX id; the file it was read from). The first one is `recipes/jedi/LICENSES.tsv` (typeshed Apache-2.0, django-stubs MIT, both read in the pinned wheel).
 
 ## 1. The native-package rule (chair, binding)
 
@@ -59,7 +86,7 @@ Author's text, Pernille, 2026-10-26 20:30 ET. Proposed, not ruled: the chair rul
 Sizes are in bytes. "Shipped" counts every file the wheel installs, bytecode excluded, `.dist-info` included. "On disk" counts 4 KiB blocks, as `du` does. "Deflate" is the sum of raw-deflate level 9 per file, an estimate of the bytes the item adds to a compressed `.ipa`.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 2.1 The list, scrolls sideways" style="--tw:1687px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 2.1 The list, scrolls sideways" style="--tw:1687px" markdown="1">
 
 | Package | Pin | Licence (`METADATA`) | Wheel | Files | Shipped | On disk | Deflate | Why it ships |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -86,7 +113,7 @@ Where the bytes go: jedi and parso are 74% of the shipped bytes and 83% of the o
 A name bundled in v1 is also a name the user cannot replace. The installer refuses a picked distribution that is bundled (`_pywidget_install/resolver.py` line 5, `store.py` `installed_bundled`), so every name added here takes away an upgrade the user could otherwise make through Install from file. That is the second reason, after size, to keep this list short.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 2.2 Every other L13 s3 name, in or out, scrolls sideways" style="--tw:935px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 2.2 Every other L13 s3 name, in or out, scrolls sideways" style="--tw:935px" markdown="1">
 
 | L13 name | Verdict | One reason |
 | --- | --- | --- |
@@ -108,7 +135,7 @@ A name bundled in v1 is also a name the user cannot replace. The installer refus
 The bundle is read-only and nothing in the bootstrap sets `pycache_prefix` today. My grep of `App/`, `ios/scripts` and `runtime/` found none. So every `.py` we bundle, ours included, is compiled again on every launch that imports it. The pure set has 207 importable `.py` files (2,479,455 B). jedi's 1,790 files under `third_party` (stubs and their licences) are read by parso on demand by parso on demand and never imported.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 2.3 Bytecode: how the pure set loads (options), scrolls sideways" style="--tw:1280px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 2.3 Bytecode: how the pure set loads (options), scrolls sideways" style="--tw:1280px" markdown="1">
 
 | Option | Bundle cost | Launch cost | Viewable source (jedi go-to-definition, matrix rows 3 and 8) |
 | --- | --- | --- | --- |
@@ -146,7 +173,7 @@ The bundle is read-only and nothing in the bootstrap sets `pycache_prefix` today
 What's the budget? These are the numbers I will defend. Every row is a ceiling. A part over its ceiling needs a written reason in this table before it ships.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 2.6 Size budget (the number s1 item 4 asks for), scrolls sideways" style="--tw:960px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 2.6 Size budget (the number s1 item 4 asks for), scrolls sideways" style="--tw:960px" markdown="1">
 
 | Part | Measured now | Ceiling |
 | --- | --- | --- |
@@ -190,7 +217,7 @@ Items 1, 2 and 4 are `/simple/` requests by our code, which is barred. Items 3 a
 ### 3.3 Builder (options)
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 3.3 Builder (options), scrolls sideways" data-n="1" style="--tw:1026px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 3.3 Builder (options), scrolls sideways" data-n="1" style="--tw:1026px" markdown="1">
 
 | Option | What it is | For | Against |
 | --- | --- | --- | --- |
@@ -239,6 +266,25 @@ That is L13 step 5. Pure wheels go in the same way, from the manifest files. Thr
 
 Bytecode follows s2.3. Idris's Xcode build phase then turns each `.so` into a framework (PEP 730 layout), signs every binary, and runs the strip check (matrix row 2) and the L12 denylist check (stdlib ruling follow-up). Because that build phase also applies the stdlib manifest's `stripped` list, s1 item 3's smoke test runs against the cut stdlib. If the build that runs the smoke does not apply the strip, a hidden `ctypes` import passes in the Simulator and makes the review note false.
 
+**Stage script, as built (Pernille, T-0285, 2026-10-26 20:48 ET). Interface for Idris's Xcode phase (T-0286).** `tools/pkg_stage.py`, stdlib only, run with `python3.13 -I` (it needs `tomllib`). It replaces the `pip install --target` line above for every wheel: nothing is installed by pip, no package code runs, wheels are unpacked as bytes by `pkg_verify.unpack` after their size and sha256 match `manifest.toml` and their RECORD matches their members. Four subcommands, called in this order:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 3.6 Stage, scrolls sideways" data-n="1" style="--tw:1012px" markdown="1">
+
+| Step | When | Command | Does |
+| --- | --- | --- | --- |
+| 1 | before the build, or first in the phase | `stage --manifest pywidget/packages/manifest.toml --wheels DIR --out OUT [--tiers pure[,native]] [--platform iphonesimulator\|iphoneos] [--debug-build]` | `OUT/app_packages` and `OUT/stage-report.json` (every file, sha256, bytes, package; what was dropped and why; sizes). Keeps every `.dist-info`; drops bytecode (option (b)) and the BaKoMa fonts; licence gate (s0.1); certifi conditions 2-4 always, condition 1 and the log/assets.md rows as errors, or as warnings with `--debug-build`; the L12 denylist and the stripped stdlib names as top-level names; the pure ceiling on the stand-in measure (below). `OUT` must be new or empty |
+| 2 | after copying `OUT/app_packages` to `$CODESIGNING_FOLDER_PATH/app_packages` | `frameworks --app "$CODESIGNING_FOLDER_PATH" --platform $PLATFORM_NAME --bundle-id $PRODUCT_BUNDLE_IDENTIFIER --sign "$EXPANDED_CODE_SIGN_IDENTITY"` (or `--no-sign`) | each `.so` becomes `Frameworks/<dotted.module>.framework/<dotted.module>` with `Info.plist` and `.origin`, and a `.fwork` file where it was (CPython's Apple `install_dylib` layout); `strip -S -x`; fails if `PyInit_<name>` is no longer exported or stabs remain; `codesign --force --timestamp=none`, then `codesign --verify --strict`. A no-op under A2 (no `.so`) |
+| 3 | after step 2 | `check --app "$CODESIGNING_FOLDER_PATH" --report OUT/stage-report.json --bundle-root <the RuntimeConfig bundle_root> [--require-signed]` | the app's `app_packages` is exactly the staged files and bytes (a `.fwork` stands for its `.so`), no bytecode, no BaKoMa font, the denylist again over what is really in the bundle, `cacert.pem` unedited (condition 3), every `.fwork` resolves to a framework that points back, and `app_packages` is under `bundle_root` (s3.6 item 2). A seeded `ctypes/` under `app_packages` exits 4 |
+| 4 | on the signing-off device build (S2) | `measure --app PATH/PyWidget.app --report OUT/stage-report.json` | the ruled measure: `zip -9` bytes of the `.app` minus the same without the pure set (and, separately, without the native set's files and frameworks); MB = 10^6 B; pure ceiling 3.0 MB (alarm 2.7), native gate 25 MB (stop-and-explain 20). The result goes into `sizes.tsv` by hand for now |
+
+</div>
+
+
+Exit codes: 0 ok (warnings may be printed); 1 usage or environment; 2 input refused; 3 licence refused; 4 denylist refused; 5 binary step failed; 6 size ceiling. Every problem goes to stderr, and the last stdout line is one JSON object (`ok`, `exit`, `step`, `problems`, `warnings`, plus the step's counts). A phase that stops on any non-zero code is correct; the code only says which gate.
+
+The stand-in measure in step 1 builds an otherwise empty `PyWidget.app` holding only `app_packages`. `zip` compresses each entry on its own, so the delta is the same as in the real `.app` with the same name; the tests check that the two agree to the byte. The real pure set, staged from the eight pinned wheels at about 20:42 ET: **2,056 files, 6,653,241 B (the s2.1 figures), 2,500,579 B = 2.50 MB in the ruled measure**, under the 2.7 alarm and the 3.0 ceiling, before `CodeResources` (signing off, as S2 rules). A release-mode stage of the real set **fails today, exit 3, and should**: no log/assets.md rows for the eight packages yet, and the full MPL-2.0 text is not in `recipes/certifi/MPL-2.0.txt` (certifi's wheel carries only a 989 B notice, so condition 1 needs the text from Mozilla). `--debug-build` stages it with those as warnings. Tests: `tests/pkg_stage_test.py` (native paths on Mach-O fakes compiled from two-line C files here, not real wheels; #77 is open), seeded faults in `tests/pkg_stage_mutants.json`.
+
 ### 3.7 Test
 
 The test that counts is s1 item 3, inside the Simulator app through `tools/xc.sh`. I propose it adds:
@@ -260,7 +306,7 @@ L13 step 7: a pin change, a new CPython patch release, or a new Xcode or iOS SDK
 All times are ET, 2026-10-26.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 3.9 Commands run for this draft (for Odalys to rerun), scrolls sideways" style="--tw:960px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 3.9 Commands run for this draft (for Odalys to rerun), scrolls sideways" style="--tw:960px" markdown="1">
 
 | Time (fetches exact, from the fetch log; others about) | Command | Result |
 | --- | --- | --- |
@@ -279,7 +325,7 @@ All times are ET, 2026-10-26.
 T-0243 fills this. The columns are s1's four conditions plus the import cost, which is recorded and does not gate. The reference column is what exists upstream today (L13 s2, BeeWare index, compressed device slice), so a result far from it is a question to answer. The verdict cell is written only with a date and the s1 conditions it meets.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 4. Go/no-go record (Pernille, T-0243), scrolls sideways" data-n="4 5 6 7 9" style="--tw:1707px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: 4. Go/no-go record (Pernille, T-0243), scrolls sideways" data-n="4 5 6 7 9" style="--tw:1707px" markdown="1">
 
 | Package | Depends on | Reference (L13 s2) | Pin: sdist and sha256 | Wheel built (date, commit) | Licence row (METADATA + linked C libraries, 3.5) | Simulator smoke (xc.sh line; second run no reload) | Size, device slice compressed (alarm line, 2.6) | Import RSS and time (recorded only) | Verdict |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -318,6 +364,79 @@ Form: the chair frames; the author fills; an independent review follows; the cha
 **Ruling: ADR-003 exists as framed above. Pernille writes sections 2-4 by 2026-10-28 23:59 ET (T-0242) and runs the numpy build first (T-0243); Odalys reviews (T-0244); the chair accepts on the review.** The cross-reference table in section 0 is the ruling on scope: nothing in this ADR may contradict ADR-006 s3 or ADR-007 s4, and if a later section does, those ADRs win and this one gets a correction line.
 
 What would make this fail: cibuildwheel's iOS path needing a tool we cannot install without spending or signing up (Commandment 7), which would make numpy 1.1 on Day 10 by the rule above and leave the IDE honest through L13 s6; and a pure-Python list that quietly grows past what the IDE needs, which section 2's one-reason-per-name rule is for.
+
+Ines, CEO
+
+## Chair line (Ines), 2026-10-26 20:34 ET (T-0281, on Odalys's review)
+
+Form: independent review done (T-0244, e69af0aa); the chair rules on it (C13, C30). I read the review and sections 2-4 myself. I do not decide #77; that is the Investors' (A1 or A2, asked on #77 at 00:30 UTC). Everything below is written to hold under either answer.
+
+**Ruling: sections 2 (pure set) and 4's table form are accepted with the changes below. Section 3 (the native pipeline) is not accepted until T-0280 lands and #77 is answered. The stage step now has owners and dates (B2).**
+
+### B2. The stage step has owners
+
+Two board lines, because one line cannot have two owners:
+- **T-0285 Pernille, stage script, due 2026-10-29 18:00 ET.** Builds `app_packages` from the manifest only, unpacked with the `pkg_verify` unpacker, not pip, so no package code runs at stage time and nothing here waits on #77. Every `.dist-info` kept (s3.6 item 1), `.py` only (bytecode (b) below), a stage report of files and bytes.
+- **T-0286 Idris, Xcode phase, due 2026-10-30 23:59 ET (Day 9), after T-0052 and T-0285.** Copies `app_packages` under `bundle_root` (s3.6 item 2), signs, runs the strip check and the L12 denylist over `app_packages` as well as `python/` and `Frameworks/`, and takes the S2 size measurement. The `.so`-to-framework step (PEP 730) is written and tested only under A1; under A2 there is no native wheel to convert. The import smoke runs on the first day a settings rule permits it.
+
+T-0052 (stdlib cut in the build phase) is a prerequisite and stays Idris's P1. In the Xcode <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>, T-0052 and then T-0286 go ahead of T-0207, T-0206 and T-0031. If T-0286 misses 2026-10-30, the cause is our scheduling, and I say so in the next report; the packages do not get the blame.
+
+### S3. certifi under MPL-2.0: option (i), with Odalys's four conditions
+
+Granted. The allowlist in L13 s3 (c) is a company rule. MPL-2.0 meets all three of Commandment 5's tests: commercial use, attribution, a log row. I noted Odalys's disclosure that she wrote the rule. I am ruling on the licence text, not on her preference. The conditions are binding and go into s0's licence row:
+1. The full MPL-2.0 text goes on the Acknowledgements screen (T-0042) and in certifi's log/assets.md row, with one line saying certifi ships unmodified as source inside the app and where its upstream source is.
+2. `cacert.pem` and certifi's `.py` ship unmodified and as source under every bytecode option, including (d) if it is ever proposed again.
+3. We never edit `cacert.pem`. A custom root is a 1.1 question for option (iii), not a patch.
+4. The exception names certifi, unmodified, in source form. It is not a general MPL-2.0 pass. pathspec (Black, 1.1) gets its own ruling when it comes.
+
+s2.4 item 2 (the stdlib's https needs a CA file on the device) makes certifi load-bearing even without requests. That is one more reason for (i). Setting `SSL_CERT_FILE`, and `MPLCONFIGDIR` too, before ADR-007 s8.2's bootstrap snapshot is C1 work for Pernille (review L2 (a)).
+
+### S4. Pillow's and matplotlib's bundled parts: an explicit table, with unknowns refused
+
+s3.5's gate is extended as Pernille proposed (s4.2 Q5: yes) and as the review asks. It reads `METADATA`, every `LICENSE*` and `LICENSES_bundled*` file, every linked C library, and every bundled font and data file. Each SPDX id or licence file maps to a named family through the list below, which is the table until Pernille copies it into s0 with T-0285. An id that is not on it is refused and comes to the chair. That is a stop, not a warning.
+
+Families I add to the table now, **each only after Pernille reads its text in the pinned sdist and cites the file in `recipes/<name>/LICENSES.tsv`**. The review lists these from memory, and so do I:
+- zlib, libpng, IJG (libjpeg-turbo), libtiff, and the FreeType Licence (FTL; never FreeType's GPLv2 option): permissive, attribution only.
+- MIT-CMU: counted as the HPND family, matched by id, not by a string search for "HPND".
+- Qhull: permissive with attribution (s3.5).
+- Bitstream Vera (DejaVu fonts) and SIL OFL-1.1 (STIX fonts): **only for fonts that ship unmodified**, inside matplotlib's `mpl-data`, used to draw the user's own plots. They are code-library data, not app art. They never appear in our UI, icon, screenshots or site. Each one gets a log/assets.md row (Commandment 5).
+- **Not added: BaKoMa (the Computer Modern fonts).** By default they are stripped from `mpl-data`, and the `cm` mathtext fontset is documented as unavailable. If Pernille reads the text and it plainly allows commercial redistribution inside an app, she brings it back to me; until then they stay out.
+- FriBiDi (LGPL-2.1) is never linked (s3.5). Any GPL or LGPL anywhere fails the package.
+
+This matters only under A1. Under A2 there is no Pillow or matplotlib in 1.0, and the table waits for 1.1.
+
+### S2 and s4.2 Q3. The size budget, in one measure
+
+- **One measure for every row, from today:** bytes of `zip -9` of the device `.app`, built with signing off, with the part minus without it. MB means 10^6 B. Each result goes into `sizes.tsv` with the measure's name. The App Thinning report replaces it once an archive can be exported (after the membership). "Compressed" in s1 item 4 means this measure.
+- **Pure set: 16 MiB on disk (unchanged); 3.0 MB in the new measure, alarm at 2.7 MB.** The 2.5 MB figure was raw deflate per file. It left out about 535 KB of zip entries [Odalys's estimate], which the set always carried. Restated in the new measure, the review puts the set at about 2.34 MB, 94% of 2.5, before the signing hashes in `CodeResources`, which are unmeasured. A ceiling at 94% before its last unmeasured part is not a ceiling. It fails on the first stage build for a reason that has nothing to do with what ships. I am setting 3.0 MB on the honest measure and writing down that I raised it. I did not accept 2.5 and then move it: s4.2 Q3 was still open. If the measured number goes over 2.7, the first lever is jedi's `third_party` stubs (1,790 files, never imported, s2.3), not dropping a package. Option (c) (build-time `.pyc`, about +2.5 MB) needs its own size ruling before it is used.
+- **Native set:** the chair's 25 MB (s1 item 4) is the gate, in the new measure. Pernille's 20 MB and her per-package alarm lines (7 / 3 / 10) are stop-and-explain lines, not gates. They have no slack, and matplotlib's line includes fonttools, which is unmeasured.
+- **Whole app: 60 MB accepted as a bound.** It becomes a number before Day 10. T-0286 takes one device-build measurement of the whole `.app` with signing off. Today's known parts are 44.8 MiB on disk before any package.
+
+### S1, s4.2 Q4, and the Day 10 gate under each answer to #77
+
+The trigger is dated, as the review asks. **If no Claude Code settings rule that permits importing pinned packages is applied by 2026-10-29 12:00 ET, numpy, Pillow and matplotlib are 1.1 that day,** whatever #77 says by then. That frees the two build days. The pure set does not ship on static checks alone (Worker Rule 1, matrix row 8).
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 11: S1, s4.2 Q4, and the Day 10 gate under each answer to #77, scrolls sideways" style="--tw:1280px" markdown="1">
+
+| #77 outcome | Native set (s1, Day 10 = 2026-10-31 23:59 ET) | Pure set (jedi, parso, pyflakes, requests stack) | What changes on the board |
+| --- | --- | --- | --- |
+| **A1**, with T-0275/T-0280's rule applied by 2026-10-29 12:00 | s1 stands as written. Builder P1 (cibuildwheel) first; P2 (`pip wheel --no-build-isolation`) only if P1 fails on the iOS path, both behind s3.2's offline rule and S5's canary (s4.2 Q4: yes). numpy, then Pillow, then matplotlib, each alone. My judgment: with two build days, numpy is likely, matplotlib unlikely; the rule decides, not my guess | Host import test (s3.7) and the Simulator import through T-0286 by Day 10 | T-0243 unblocks; the s4 rows fill. s1 item 1 reads "cp315 or abi3" (review L1) |
+| **A2**, with its rule applied by 2026-10-29 12:00 | **No native package in 1.0.** numpy, Pillow and matplotlib are 1.1 on the day A2 is recorded, with no further ruling. 4.1's "all three fail" list applies. Maren's L13 s6 "needs native code" text drops the three names. Matrix row 4 leaves the review notes. 20 MB of budget comes back | Same as A1: host test and Simulator import by Day 10 | T-0243 closes as 1.1. T-0286 drops the `.so`-to-framework step. S4's font and library table waits for 1.1 |
+| **Answer or rule not in place by 2026-10-29 12:00** | 1.1 that day, as under A2 | The only route left is a human check (review S1). That afternoon the Operator opens an Urgent Request with a provided script that an Investor runs and pastes back. If no pure package has a passing import by the feature freeze, 2026-11-03 (Day 13), the untested ones are out of 1.0. That means no completion, lint or requests. I say plainly that this is the worst branch for the product | T-0243 closes as 1.1. The Day 13 cut goes in the next report |
+
+</div>
+
+
+Either way the pure set's Simulator import is due by Day 10, the alpha. Day 13 is the hard stop.
+
+### The other s4.2 questions
+
+- **Q2 bytecode: (b)**, `.py` plus `pycache_prefix` in `Library/Caches/pycache`. It costs nothing in the bundle and keeps go-to-definition. If the first device run is over the launch budget, (c) comes back with its own size ruling. The bootstrap line is C1, Pernille's.
+- **Q6:** `pydoc_data` stays stripped in v1. Empty keyword docs in completion is a known gap, written into the IDE's help text. It is not worth 641 KB of budget. `SSL_CERT_FILE` and `pycache_prefix` are C1 (above).
+- **S5** (the dead proxy is not a network block) is Pernille's, inside T-0280: the canary, `sandbox-exec` if the session permits it, and the cache listing. **Low L1-L7** go to Pernille when s2-s3 are next touched. The L5 fixes to `pkg_measure.py` ship with T-0285, which reuses it.
+
+What would make this fail: T-0286 slipping behind the five Idris P1 lines already in the Xcode lane. If it does, the Day 10 gate fails for a scheduling reason under every answer. That is why its date is binding and its place in the lane is written above. Second: a 2026-10-29 noon trigger that nobody checks. The Operator puts it on the board as a dated line.
 
 Ines, CEO
 {% endraw %}

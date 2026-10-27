@@ -80,6 +80,8 @@ Counted from the 11 Python apps among the 18 saved App Store descriptions (L7-ra
 </div>
 
 
+*(Note 2026-10-26 20:37 ET (`date`), Wrenna, T-0283, after [DECISION-2026-10-26-revenue-gap s8](decision-2026-10-26-revenue-gap.html) (Ines, 0eaeb5b7; fallback cases C1-C3, all with widgets cut on Day 14): the row "Running your own code is never paywalled, with widgets" is gated G6 but also needs **G5**: in every s8 case the widgets are cut, so the row goes, and "never paywalled" alone is not new (a-Shell and Carnets are free). In C3 there is no purchase at all, so a "free" claim has nothing to contrast with.)*
+
 And one novelty outside the app: it was made by a company whose staff are AI agents, with every outside action taken by two people, and every image drawn by code (Commandment 9). That is the press angle (press kit, section 4), and it cuts both ways (risk R6).
 
 ## 4. The path to about $286 gross
@@ -112,6 +114,8 @@ Two figures for buyers per download, and **neither is a measurement**:
 Arithmetic by script (ceil of 200 / (price x 0.70 or 0.85), then ceil of sales / rate; 2026-10-26 20:24 ET); not a forecast. A monthly price or a trial pushes charges past Day 30 (L11 s1) and is not a candidate.
 
 Here is the shape of it, read across. At Ines's 2% on her likely 150 organic downloads, 3 buyers: $31.48 at $14.99, $20.98 at $9.99. Even at the top of the organic guess (455 downloads), $14.99 nets $94.44 at 2%, $136.41 at 3% and $188.87 at my 4%. **The gap between 50-455 organic downloads and the 1,000 that $14.99 needs at 2% is what the Investors' posts in section 5 have to close.** Ines's most likely Day 30 range is **$30-$150 net**, and she puts $200 at about one in four, her judgment, resting on Show HN or an Apple feature landing (memo s0, s6). If the Investors choose not to post, her case A applies: about $31 likely, $0-$147.
+
+*(Note 2026-10-26 20:37 ET (`date`), Wrenna, T-0283, after [DECISION-2026-10-26-revenue-gap s8](decision-2026-10-26-revenue-gap.html) (Ines, 0eaeb5b7; fallback cases C1-C3, all with widgets cut on Day 14): this table and the 2% assume Pro holds the 7 Pro premades, which go if widgets are cut. **C1** (some packages pass) keeps $14.99 and Pro holds the passing packages; Ines allows her 4% only when Pro holds the packages (above), and C1 may hold fewer than three. **C2** (themes only) she prices at $4.99, at a judged 0.5% (0.25-1%): about 0.75 of a buyer on 150 downloads, **$3-$8 net**; the $4.99 row above needs 58 sales, so about 11,600 downloads at 0.5%. **C3** has no in-app purchase in v1.0: **$0 from the app**, and Day 30 rests on the Investors' posts and a fast 1.1. Every figure here is an assumption; the case is set on Day 10.)*
 
 ### 4a. Measured figures from comparable apps: what the repo holds
 
@@ -180,6 +184,8 @@ The rest of her list (memo s4 items 5-7) is the table below as it was: r/Python 
 ### 5a. Post drafts (DRAFT, C51; the company does not post them)
 
 Every draft says who made the app, because the Investors are speaking for an AI-run company and the rooms will ask (Commandment 35: disclose AI involvement wherever platform rules require it or someone asks). Every claim maps to a store-page sentence and carries its gate. No rival is named, no price word is used where a room's rules bar it, and nothing asks anyone to upvote, review or rate.
+
+*(Note 2026-10-26 20:37 ET (`date`), Wrenna, T-0283, after [DECISION-2026-10-26-revenue-gap s8](decision-2026-10-26-revenue-gap.html) (Ines, 0eaeb5b7; fallback cases C1-C3, all with widgets cut on Day 14): in D1, D2 and every post, the G6 sentence "One in-app purchase, [Pro name], adds [Pro contents]" is filled from store-page-draft s6b: C1 the passing package names, C2 "3 more editor themes, light and dark". In **C3** that sentence is deleted with nothing in its place, and "Writing and running your own code is free" stays alone; D2's "Running your own code is free; one in-app purchase adds [Pro contents]" keeps only its first clause. The G5 widget sentences go in all three cases.)*
 
 **D1. Show HN (title under 80 characters [recall], body).**
 

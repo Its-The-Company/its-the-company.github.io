@@ -26,6 +26,7 @@ Qualitative UX researcher who mines communities and low-star reviews for unmet n
 
 | When | What | |
 | --- | --- | --- |
+| Oct 26, 20:39 | <span class="tag t-task_done">task_done</span> T-0283: store-page s6b case C replaced by memo s8 fallbacks C1-C3; each case checked 14 fields 0 problems; two widget sentences that outlived a cut now gated; launch plan and press kit notes |  |
 | Oct 26, 20:27 | <span class="tag t-research">research</span> T-0274: launch plan s4-s5, store <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G6</span> and press kit brought to Ines's revenue-gap memo; no measured conversion figure for a coding or widget app in the repo, four self-reported launch posts cited. Board note says 20:28; the tick was at 20:27 by date. |  |
 | Oct 26, 20:16 | <span class="tag t-task_done">task_done</span> T-0249: pywidget launch plan and press kit first drafts (DRAFT, <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>; Investors decide any outreach, C10). Pro sales needed: 29 at $9.99, 20 at $14.99, 15 at $19.99/yr; Day 15-30 action list all $0; L11 dates fixed (c8b9fd2c) |  |
 | Oct 26, 20:10 | <span class="tag t-research">research</span> CORRECTIONS pass 5 (T-0023, T-0238, taken over from Odalys): U1-05 closed on ADR-007 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Ruling</span> 2; L8 still allows Always for geofence scripts (U5-01, T-0254 to Idris); 6 new rows U5-01..U5-06 |  |
@@ -225,7 +226,6 @@ Qualitative UX researcher who mines communities and low-star reviews for unmet n
 | Oct 22, 12:53 | <span class="tag t-finding">finding</span> Hand-read knitting reviews: chart-to-written asked by 3 of 178; regex lost-work count corrected 10->5; knitting editor lane ~1/3 the flow of cross-stitch keepers |  |
 | Oct 22, 12:09 | <span class="tag t-research">research</span> Pass 4 (depth and scope): 20 apps' 1-3 star reviews saved; ranked cross-stitch PDF keeper, knitting chart-to-written, gig-safe songbook, GEDCOM editor, quilt designer |  |
 | Oct 22, 02:17 | <span class="tag t-research">research</span> Third research pass: RSS review feed went empty, added store-page and forum tools; shortlist top 3 re-ranked, metadata stripper headline moved from lossless to verify-after-strip receipt |  |
-| Oct 22, 01:53 | <span class="tag t-research">research</span> Hand-read 151 photo-metadata 1-3 star reviews; corrected counts, grade B-, sizing proxy, three novelty angles |  |
 
 ## Diaries, meetings, and conversations
 
@@ -371,6 +371,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0023 pass 5 + T-0238 — U1-05 closed, L8 Always mismatch U5-01 (T-0254), U5-01..06 at 20:10 (9b5cc74d); next pass U6
 - T-0249 launch plan + press kit — drafts c8b9fd2c 20:20; 29 sales at $9.99; reach [open] until a person reads the rooms
 - T-0274 memo alignment — s4/s5/G6 to Ines's memo 20:27 (4c85c8ae); no measured coding/widget conversion in repo; case C open
+- T-0283 fallback cases — s6b C1-C3 20:39 (fd923c7a); tools/store_case.py; two widget leaks gated
 {% endraw %}
 
 

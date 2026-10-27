@@ -464,6 +464,12 @@ nav.subtabs.hometabs .num{font-weight:400}
   padding:var(--s2) var(--s4);background:var(--page);border-bottom:1px solid var(--line)}
 .cv-head{margin-top:var(--s2)}
 .cv-head h2{flex:1;min-width:0;margin:0;font-size:var(--fs-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+/* Lock in in the Chat head (T-0291): the title keeps its width; the bar shrinks; the send note wraps under the button. */
+.cv-head:has(.cv-lockbar) h2{flex:1 0 auto}
+.cv-lockbar{flex:0 1 auto;min-width:0;display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:2px var(--s2)}
+.cv-lockbar .cv-locknote:not(:empty){flex-basis:100%;text-align:right}
+.btn[aria-disabled=true]{opacity:.6;cursor:default}
+@media (max-width:879px){.cv-lockbar .cv-lockstate{display:none}}
 /* The pinned question: shown only when the latest Investor message has scrolled above the head. */
 .cv-pin{display:flex;gap:var(--s2);align-items:baseline;width:100%;margin:0;padding:6px var(--s3);border:0;border-left:3px solid var(--accent);
   background:var(--accent-soft);color:var(--ink);font:inherit;font-size:var(--fs-0);text-align:left;cursor:pointer}

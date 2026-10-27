@@ -5,12 +5,14 @@ var S = window.CompanySite, D = document;
 if (!S) return;
 var fixed = D.getElementById('lockin'), cr = D.getElementById('chat-root');
 var repo = (cr && cr.getAttribute('data-repo')) || (fixed && fixed.getAttribute('data-repo'));
-var sent = null, posted = 0, arm = 0, armT = 0, sentT = 0, err = '', tiles = [];
+var sent = null, posted = 0, arm = 0, armOn = null, armT = 0, sentT = 0, err = '', tiles = [];
 function day(x) { return new Date(x).toLocaleDateString('en-CA', { timeZone: 'America/New_York' }); }
+function today(t) { return !!t && day(t) === day(Date.now()); }
 function now() {
 var st = (S.status && S.status()) || {}, k = st.lock_in;
-if (k) return { on: !!k.on && (!st.at || day(st.at) === day(Date.now())), pool: k.pool };
-return { on: !!fixed && fixed.getAttribute('data-on') === '1', pool: fixed ? parseInt(fixed.getAttribute('data-pool'), 10) : 0 };
+if (k) return { on: !!k.on && today(k.at || st.at), pool: k.pool };
+return { on: !!fixed && fixed.getAttribute('data-on') === '1' && today(fixed.getAttribute('data-at')),
+pool: fixed ? parseInt(fixed.getAttribute('data-pool'), 10) : 0 };
 }
 function mk(p, t, c, x) { var e = p.appendChild(D.createElement(t)); if (c) e.className = c; if (x) e.textContent = x; return e; }
 function draw() {
@@ -23,9 +25,9 @@ x.t.textContent = on ? 'Locked in for today: full speed until midnight'
 : 'Work is spread over the day' + (n > 0 ? ' (about ' + n + (n === 1 ? ' agent)' : ' agents)') : '');
 if (!x.btn) return;
 x.btn.textContent = arm ? (on ? 'Tap again to unlock' : 'Tap again to lock in') : (on ? 'Unlock' : 'Lock in');
-x.btn.disabled = sent !== null;
-x.note.textContent = err || (sent === null ? '' : posted ? 'Sent. This changes when the company reads it, usually within 15 minutes.' : 'Sending...');
-x.note.hidden = !x.note.textContent;
+x.btn.setAttribute('aria-disabled', sent !== null ? 'true' : 'false');
+x.note.textContent = err || (sent !== null ? (posted ? 'Sent. This changes when the company reads it, usually within 15 minutes.' : 'Sending...')
+: arm ? (on ? 'Tap again within 5 seconds to unlock.' : 'Tap again within 5 seconds to lock in.') : '');
 });
 }
 function send() {
@@ -47,14 +49,18 @@ posted = 1; draw();
 }
 function tap() {
 if (sent !== null || S.rejected()) return;
-if (!arm) { arm = 1; err = ''; draw(); armT = setTimeout(() => { arm = 0; draw(); }, 5000); return; }
-arm = 0; clearTimeout(armT); send();
+var t = Date.now();
+if (!arm) { arm = t; armOn = now().on; err = ''; draw(); armT = setTimeout(() => { arm = 0; draw(); }, 5000); return; }
+if (t - arm < 400) return;
+arm = 0; clearTimeout(armT);
+if (now().on !== armOn) { draw(); return; }
+send();
 }
 if (fixed) tiles.push({ box: fixed, b: fixed.querySelector('b'), t: fixed.querySelector('span') });
 function button(x, row) {
 if (S.getToken() && repo && !S.rejected()) {
 x.btn = mk(row, 'button', 'btn'); x.btn.type = 'button'; x.btn.onclick = tap;
-x.note = mk(row, 'small', 'meta'); x.note.setAttribute('role', 'status');
+x.note = mk(row, 'small', 'meta cv-locknote'); x.note.setAttribute('role', 'status');
 }
 tiles.push(x); draw();
 }
@@ -65,7 +71,7 @@ var x = { box: box, b: mk(box, 'b'), t: mk(box, 'span', 'cv-sub') };
 button(x, mk(box, 'p'));
 };
 S.lockHead = (h) => {
-var box = mk(h, 'span', 'cv-lockbar'), x = { box: box, t: mk(box, 'small', 'meta') };
+var box = mk(h, 'span', 'cv-lockbar'), x = { box: box, t: mk(box, 'small', 'meta cv-lockstate') };
 button(x, box);
 };
 [].slice.call(D.querySelectorAll('.cv-glance')).forEach((g) => { if (!g.querySelector('.cv-lock')) S.lockTile(g, g.querySelector('.cv-live')); });

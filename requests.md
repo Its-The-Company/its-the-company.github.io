@@ -4,7 +4,7 @@ title: "Issues"
 section: "requests"
 hometab: "issues"
 issues: "0"
-proposals: "3"
+proposals: "1"
 ---
 
 # Issues

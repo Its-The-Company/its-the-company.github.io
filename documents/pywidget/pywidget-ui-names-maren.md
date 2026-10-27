@@ -360,6 +360,14 @@ Draft copy, not approved. Source: `pywidget_ui/__init__.py` at a6d8a527 (Pernill
 11. **When on a boolean key, a quoted 'true'.** `When("showsContainerBackground", "true")` gets no hint, because the hint skips non-string allowed values. The slip is common (quotes around True). Recommended (13): "When('showsContainerBackground') compares against True, False, got 'true'; did you mean True (no quotes)?"; only for 'true' and 'false', case ignored. Pernille's call whether it is worth the branch.
 
 **Kept with no edit:** the "must be one of" form itself (37 call sites, one pattern; the hint fixes its weak case); `When env` typo ("got 'famly'; did you mean 'family'?"); `ui.validate`'s order line ("entries[1]: date ... is not after entries[0] (...); entries must be in time order"; zero-based paths match its other lines), unless Ines takes edit 2, when it ends with the same suffix so the two texts agree.
+
+## Chair ruling on edit 2, the G6 timeline-order suffix (T-0277), 2026-10-26 20:33 ET (Ines)
+
+**Yes.** Edit 2 is taken as Maren wrote it: "; give each entry a later time than the one before" goes at the end of the G6 text. Why: the voice rule for these messages is what happened, then what to do, and mine stopped halfway; and with two equal times "is not after" can read as "they are equal, so fine", while "a later time" settles it. Exact texts, for Pernille under T-0276:
+- Same offsets: "timeline entries must be in time order: entry 3 (09:00) is not after entry 2 (09:00); give each entry a later time than the one before".
+- Mixed offsets, with edit 1: "timeline entries must be in time order: entry 2 (11:00 +02:00) is not after entry 1 (10:00 +00:00); give each entry a later time than the one before". The day and seconds rules stay as they are.
+- `ui.validate`'s order line: the suffix **replaces** the trailing clause rather than being added after it, so the line carries one instruction, not two: "entries[1]: date 2026-10-25T23:20:00Z is not after entries[0] (2026-10-26T00:20:00Z); give each entry a later time than the one before". The pinned test at `tests/dsl/test_g_rows.py` line 92 then asserts the suffix, not "entries must be in time order".
+Still draft copy under C51 like the rest of this section; this ruling settles the wording the company proposes, not its approval.
 {% endraw %}
 
 </div>

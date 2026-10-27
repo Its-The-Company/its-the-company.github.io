@@ -13,7 +13,7 @@ description: "Each pair is a light and a dark set that follows the system appear
 {% raw %}
 - Status: **draft for creative approval (Commandment 51). Not shipping.** Maren, T-0271, 2026-10-26 20:33 ET. Due by Day 11 (2026-11-01).
 - Why: DECISION-2026-10-26-revenue-gap.md s3 puts editor themes in Pro beside the premades. ADR-004 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> 3: v1 ships only the approved pair (Quill light, Lumen dark); any extra theme goes to the Investors first. The Pro `themes` row ships only if this is approved by Day 12 (2026-11-02); otherwise the row is off and Pro ships premades only. The picker is T-0272 (Idris), built only after approval.
-- Preview: `pywidget/docs/design/themes-pro/preview.png` (772 x 1052 px, 279 KB). The free pair first, then each draft, light and dark, on one 12-line code sample (every role, a selection, the current line with the caret, one inline error).
+- Preview: `pywidget/docs/design/themes-pro/preview.png` (772 x 1056 px, 279 KB). The free pair first, then each draft, light and dark, on one 12-line code sample (every role, a selection, the current line with the caret, one inline error).
 - Source: `pywidget/docs/design/themes-pro/themes.json` (draft values and their OKLCH seeds). Script: `themes_pro.py` (pick, check, draw). Nothing is in tokens.json, tokens-app.json, Theme.xcassets or tokens.css.
 
 ## The options

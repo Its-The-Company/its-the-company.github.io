@@ -29,11 +29,11 @@ The Mission needs $200 net: **$285.71 gross at 30%** ($235.29 at 15% if the Smal
 ## 1. Timeline the money has to fit in
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 1. Timeline the money has to fit in, scrolls sideways" style="--tw:830px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 1. Timeline the money has to fit in, scrolls sideways" style="--tw:909px" markdown="1">
 
 | Item | Date | Source |
 |---|---|---|
-| v1 submission | Day 17-20 (2026-11-08 to 11-11) | task packet |
+| v1 submission | Day 17-20 (2026-11-07 to 11-10; corrected 2026-10-26 20:15 ET, T-0249: was "11-08 to 11-11", one day late, since Day 1 is 2026-10-22) | task packet; plan.md |
 | Selling days to Day 30 | about 10-13 | packet; ASSUMPTION that review takes the gap |
 | Apple membership | pending, due Day 7 (2026-10-28) | amendment 2026-10-22 01:09 |
 | Paid Apps Agreement, tax, banking | due Day 12 (2026-11-02) | same |

@@ -92,6 +92,8 @@ Not a label question, but the same review pass. Since May 2024 every new or upda
 
 Reason codes come only from Apple's pages for the dictionary keys (A2 points there; not yet read, s0a item 10). Follow-up line for Idris added to the board.
 
+*(Note 2026-10-26 20:15 ET, Idris, T-0036: the manifests in pywidget/ios/Privacy/ agree with section 1 (NSPrivacyTracking false, NSPrivacyCollectedDataTypes and NSPrivacyTrackingDomains empty in every bundle). Two list items above differ from the build: the editor's file list and user defaults call no required-reason API in our own binaries today (FileManager reads only the file type; the App Group is shared through files, not UserDefaults), so the app and extension declare none and there is no user-defaults entry. The file timestamp, disk space and boot time entries sit in Python.framework, the binary that calls stat, statfs and mach_absolute_time (nm -u, both slices), plus C617.1 in _remote_debugging.framework. All codes are [unconfirmed] (app-review-matrix.md s1d A2 note). If code of ours ever adds UserDefaults or @AppStorage, `pywidget/ios/scripts/privacy_scan.py` fails until the bundle declares it.)*
+
 ## 5. Later versions, so nobody is surprised
 
 

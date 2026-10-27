@@ -22,12 +22,15 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (179 most recent)
+## Activity (182 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 26, 20:17 | <span class="tag t-task_done">task_done</span> T-0036: privacy manifests for the app, widget extension, Python.framework and _remote_debugging.framework, with a per-bundle scan of the built app; reason codes C617.1, 85F4.1, 35F9.1 all unconfirmed until Apple's reasons page is read (T-0259); Xcode build check T-0258 |  |
+| Oct 26, 20:16 | <span class="tag t-work">work</span> T-0251: Ines's 20:08 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note written into L5 s5; state.json ceiling computed from field sizes as 416,217 bytes with the ring (383,438 without), replacing the wrong 288 KiB; Q-T251-1 asks whether to bound the 54.4 KiB row-field share |  |
+| Oct 26, 20:12 | <span class="tag t-work">work</span> T-0254: CORRECTIONS U5-01 and U5-02 applied; L8 Location row and L1 history column now say When-In-Use only, no Always in v1 or 1.1 (ADR-007 Ruling 2) |  |
 | Oct 26, 20:07 | <span class="tag t-build">build</span> T-0189 and T-0230: preview runs get their own queue key and write no App Group file; bridge contract v5 agreed on the Swift side (82/82 unit, 3/3 UI, 9/9 mutants) |  |
-| Oct 26, 20:05 | <span class="tag t-work">work</span> T-0235: placed Ines's 19:56 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note (T-0221) in L5 s5: ops_log rule and 32 KiB bound, surviving-thread writes as ops, 288 KiB ceiling, three G-L5-5 cases; new Q-T235-1 for Ines |  |
+| Oct 26, 20:05 | <span class="tag t-work">work</span> T-0235: placed Ines's 19:56 chair note (T-0221) in L5 s5: ops_log rule and 32 KiB bound, surviving-thread writes as ops, 288 KiB ceiling, three G-L5-5 cases; new Q-T235-1 for Ines |  |
 | Oct 26, 20:01 | <span class="tag t-work">work</span> T-0226 and T-0227: L5 drain step 1 now commits a stale failed_count, IDE clear order and <span title="A test written in advance. If it fires, we drop the idea.">kill</span> point placed per Ines's 19:56 note; handler result commits proposed as key diffs in ops_log (Q-T227-1); new finding Q-T226-1 |  |
 | Oct 26, 19:56 | <span class="tag t-review">review</span> T-0210: pywidget_ui 0.3.0 passes Idris's names check at 17cec9d1 (19/19 renames, six s7.3 items, Rulings 1-2); closes T-0020's two-reviewer check and T-0022 probation (a)'s Idris review; unbuilt agreed rows and A2-A7 to T-0231 (Pernille) |  |
 | Oct 26, 19:48 | <span class="tag t-work">work</span> T-0142: Apple-page facts (matrix 1d A2-A6) folded into L1, L2, L8, L9, C2; tags changed only where saved quotes support them, the rest kept with dated notes |  |
@@ -230,132 +233,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 Older entries (the 2026-10-22 task log): archive.md.
 
-## 2026-10-25 H249 L30-1 sun and moon vs USNO (done)
-- Learned: USNO year tables write a second same-day event as a continuation line with the same day number, so parse by day, not by line count. A script imported as a module must guard its argv. Never put a delete word in a command that also names log/: the hook blocks the whole command.
-
-## 2026-10-25 H215g-Idris blind grade of H215 K3 (done, 6 turns)
-- Learned: `git commit -- <path>` refuses an untracked file; `git add -- <path>` first (pathspec only). Tick after the commit lands, not before.
-
-## 2026-10-25 H254 R31-2 census, H163 C1 and H137 C1 (done, 05:03-05:07)
-- Learned: write the match code as narrow as the concept's difference line before the read; mine was wider and I could not narrow it after. lane_fetch_check takes --lane H254, not the bare id. terms_guard.fetch, not build_opener, or rules_first fails.
-
-## 2026-10-25 R31-1 applied for H252 (done, 05:08-05:10)
-- Learned: read the fetch log, not the disclosure; it showed one more host. H248 row 290 moved Day 90, not Depth: quote the row, not memory (cost one fix commit).
-
-## 2026-10-25 H258 L32-1 H138 C2 forecast scorer lift (done, 05:47-05:52, 10 turns)
-- Learned: run terms_locate before sizing the fetch plan; it decides whether there is a lane. A bare triple-equals echo fails in zsh again (one turn). The hook reads delete words anywhere in a command, memory heredocs included.
-
-## 2026-10-25 H260 G74 federal bulk data (done 05:48-05:55, 12 turns of 10)
-- Learned: a SystemExit from a terms_guard refusal stops a fetch loop; catch it per URL. The records hook reads heredoc text too: a file-erase word beside the word for the records folder blocks the whole command, even in a memory note. Print digests to a file and filter long lists before printing.
-
-## 2026-10-25 H259 L32-2 rules-only mutation marking (done, 8 turns)
-- Learned: my candidate finder missed capital tS (tSín); test the finder's patterns in both cases. A commit can fail on a HEAD lock race with another worker; retry, do not chain the tick behind it unchecked.
-
-## 2026-10-25 H265 G76 papers-first (done 06:38-06:41, 9 turns)
-- Learned: H220 had already found the same bar; grep earlier lanes for the source host before writing section 0, and generator lines should be preflighted before they are written.
-
-## 2026-10-25 H267 G77 expired patents (done, 06:45-06:48, 7 turns of 8)
-- Learned: grep earlier lanes for the source first (H158 had it); `date` before the tick note, again; `git add` a new file before `git commit --`.
-
-## 2026-10-25 S33-2 SE reads rows 5-7 (done 06:47-06:48, 11 turns of 5)
-- Learned: gate each site's queries on its control inside the script (exit on 0), never run them in the same loop unchecked. Pick a control title with no apostrophes. Stamp section 0 from `date`, not a guess (wrote 06:48 for 06:47).
-
-## 2026-10-25 H272 T1 acting chair (done, 06:47-06:50)
-- Learned: stage_hunks --line stages added lines only, so a label fix left both copies in HEAD; drop old lines with hash-object + update-index on the HEAD blob. Run `date` before writing a time into a row.
-
-## 2026-10-25 H274 G85 OpenAlex papers-first (done, 06:49-06:51, 7 turns of 8)
-- Learned: a tool's MAX_FETCHES can be lowered from a wrapper import to keep inside a preflight cap. Write section 0 times only after `date`, not as a forecast (wrote 06:53 for 06:50).
-
-## 2026-10-25 H277 G88 TVmaze watch-list computations (done, 06:49-06:54, 8 turns)
-- Learned: singlesearch picks a remake for a bare title (Money Heist -> Korea); seed with TVmaze ids or a year next time. A bin/ script counts as a raw file for rules_first: commit section 0 before writing it.
-
-## 2026-10-25 pywidget L1 + L2 research (done, 19:18-19:24)
-- Learned: developer.apple.com is refused by terms_guard, so the local SDK headers (with doc comments) are the primary source; Xcode's AdditionalDocumentation folder has no widget-budget docs. iOS 26 SDK has WidgetPushHandler; iOS 27 adds systemExtraLargePortrait and isDynamicIslandLimitedInWidth. Tag every unread Apple figure [recalled].
-
-## 2026-10-25 pywidget L8 and L9 research (done, 19:18-19:28)
-- Learned: the .swiftdoc files carry Apple's doc comments (`strings` them); that is how to read docs without developer.apple.com (G2a). For a shared tracked file with others' uncommitted rows, stage HEAD + my rows via hash-object/update-index and commit the index, not `commit -- path`.
-
-## 2026-10-25 L4 view-tree DSL spec and serializer (done, 19:25-19:31, 20 turns of 25)
-- Learned: the SDK swiftinterfaces are the fastest primary source when Xcode is held by another task; grep SwiftUICore (not SwiftUI) for Text APIs. Python 3.9 on the Mac: no match, no X|Y types. Write the schema and the serializer's enums from one list and test they agree, so they cannot drift.
-
-## 2026-10-25 ADR-004 editor engine (done, 19:26-19:33, 17 turns of 20)
-- Learned: GitHub licence, README, raw source and api repo/releases pages pass terms_guard; only search/issues/pulls/discussions are held. Neon and SwiftTreeSitter repos have moved (slsrepo, tree-sitter org). Echo of a bare '====' fails in zsh again.
-
-## 2026-10-25 pywidget C2 device modules spec (done, 19:25-19:38)
-- Learned: under ADR-001 (Python in the app) isAuthorizedForWidgetUpdates helps only the extension, so background widget runs get cached location only. NSWidgetWantsLocation is confirmed as a symbol in CoreLocation.tbd. CLLocation property declarations are not in the 27.1 ObjC headers. Host python is 3.9.6: stubs need `from __future__ import annotations`. A test that parses the spec keeps stubs and spec from drifting.
-
-## 2026-10-25 ADR-007 execution architecture (done, 20:10-20:16)
-- Learned: `git commit -- <paths>` must have `-m` before the `--` (one failed turn). Numbering: next free ADR is 008.
-
-## 2026-10-25 C1 bridge contract review (done, 20:12-20:18)
-- Learned: a check-then-signal (sigaction then pthread_kill SIGINT) is a TOCTOU that can kill the app; wake with a signal whose default is ignore. Inittab is too late from an XCTest bundle; Python is already up.
-
-## 2026-10-25 ADR-007 amend after Odalys's review (done, 20:24-20:28)
-- 76a833f5: ADR-007 + L3 spike s1/s5 (lazy 2.5 MB). B1: new 5.3 stuck (batch ends, rest deferred, refuse until unstuck or quit; stuck/killed x2 in background = loop breaker; expired never counts). B2: batch rule elapsed + budget_s + 5.0 <= 25 s for T2/T3, expiration handler stops and completes at once. s6 on C, A, B with headroom + one 2x margin. S10 ruled absent stale_after = never stale (DSL wins). A5: widget_tree record + tree_seq. "Changes after review" table. Board ticked; Ines chair line noted (note says 20:30, real 20:28); Pernille v3 and Maren copy lines added; event logged.
-- Learned: I stamped the header with a forecast time again; write the time placeholder and fill it from `date` at the end (did so here).
-
-## 2026-10-25 pywidget_ui names review with Maren (done, 21:11-21:18)
-- 789a4a72 (blind verdicts: 11 R, 8 Q, renderer cost, schema stability, G1-G17), 9c75aeb7 (s7 reconciliation): pywidget/docs/reviews/pywidget_ui-names-idris.md. 19 renames agreed; Ines chairs Image.symbol renderingMode (I drop, Maren keeps) and clip_shape default. Not signed off; Pernille line added before her probation line, review line noted. Open, mine: does Material draw in a widget (one Simulator snapshot).
-- Learned: two schema names in my own L4/schema were not Apple's (accentedRenderingMode, AccessoryBackground); grep every schema name against the SDK when writing a spec, not only the ones in doubt. Commit the blind half before opening the other review; the hash proves the order. Maren caught iso() naive-as-UTC and Font.custom scaling, which I missed: read what a beginner types, not just the SDK.
-
-## 2026-10-25 C1 Swift-Python bridge, Swift half (done, 21:06-21:37)
-- a168e190: pywidget/ios/App/Bridge (pwbridge.c/.h, PyBridge.swift, UTF8StreamDecoder, README findings), App/Runtime/_pywidget_runtime.py (stand-in; Pernille replaces), Tests/BridgeTests.swift 26 cases, UITests testInputRoundTrip. xc.sh: 26 unit + 3 UI green; 2 mutants caught. App launch no longer starts the spike runtime (bench.sh passes -bench). Board ticked; 3 lines added (Pernille stand-in + contract v4, slice 2, console view). Event logged.
-- Learned: threads spawned from Swift-concurrency/GCD inherit a mask that blocks SIGURG; unblock on the thread itself. PyErr_SetInterruptEx is not safe off a Python thread when SIGINT is SIG_DFL/IGN (RichCompare needs a tstate; segfault). Interrupts land on backward jumps, so a one-level try/except BaseException loop doesn't swallow Stop. zsh doesn't word-split $P: list paths literally. Use -collect-test-diagnostics never, or a crash leaves xcodebuild in simctl diagnose for minutes.
-
-## 2026-10-25 L6 primary read from #59 PDFs (done, 22:41-22:50)
-- df971700: L6 s0/s1/s3/s4/s5 + new s8, CORRECTIONS P1-P9 (tools/pdftext.swift already existed: I overwrote the Operator's copy, then restored it). Guidelines PDF was 56/56 pages (packet said 8), Last Updated 2026-10-16. Verdict: v1 unchanged (user Python, widgets, Shortcuts Low/Low-Medium; Install from file Low-Medium). Online pip Medium -> Medium-High: finding for Ines (ADR-006 re-opens by its own clause). Mini Apps program = commission only, no permission route. Board ticked; 5 lines added (Ines chair, DPLA read, Wrenna store text, Maren 4.4 cite, my location-declined state). Board left uncommitted; the security hook refuses bringing GitHub changes in, so no push.
-- Learned: Read cannot render PDFs here (no poppler); `swift tools/pdftext.swift` (PDFKit, the Operator's, since 2026-10-24) does. Check a tools/ path exists before writing it. Two-column prints interleave blocks and page footers break phrases: check quotes by script with footers stripped. The rule against extensions showing IAP is 4.4, not 2.5.16. Check ADR section numbers by grep before citing (I cited s6/s7 for s4/s5). The hook reads git verbs inside heredoc text too.
-
-## 2026-10-25 OPS-6 part 1 worktree trial (done, 22:58-23:18)
-- b580d41b: tools/agent_worktree.sh (create/env/merge/clean, 22/0), tools/shared_tree_incidents.py (7/0), log/audit/trial-worktree.md. Not switched on; proposal to Investors (#41 item 7). Board OPS-6 noted, not ticked. Event logged.
-- Numbers: 17 incidents / 2,429 commits (0.70/100); 546/25,846 Bash calls staging workarounds; sparse create 2.2 s, merge 2.1-2.6 s, 177 MB; cold Xcode 40 s + 472 MB per new worktree, CoW DerivedData copy no help; incremental equal.
-- Open: guard ruling on local cherry-pick merge-back; events.py path override; my stale ~/wt-idris-v2.
-- Learned: git --since with a bare date uses the current clock time; pin 00:00. Agent isolation:worktree bases on origin/main (780 commits stale while push is blocked). read-tree -m -u keeps staged entries; reset --keep unstages them. zsh again: never pass args via an unquoted $VAR.
-
-## 2026-10-26 T-0018 L17 builder desk research (done, 00:04-00:12)
-- 3288f7fa: pywidget/docs/research/L17-builder.md + L17-raw (Blockly repo files, ast injection probe). Recommend E1 native structured list + (c) hybrid, hash-gated reopen; (b) round trip a follow-up (changes my L4 s9). Reservations V1-V7 sent to owners in the doc; Q1 non-coder test is an Investor checkpoint. Board ticked, event logged.
-- Learned: the viewtree schema's t/m enums are closed while L4 s8 promises alt fallback; harmless only while tree.json never crosses builds. Comments are the splice door an ast compiler leaves open. Blockly now lives under the Raspberry Pi Foundation.
-
-## 2026-10-26 T-0017 L5 interaction spec (done, 00:01-00:12)
-- 758ae032: pywidget/docs/research/L5-interactivity.md; ADR-007 T5/T7/L2-citation fixes + "Corrections after acceptance"; L4 s6 dated fix. Board ticked, event logged. Open: chair items L5 s15 (extension writes state.json; default fallback), R1-R13 reservations, gates G-L5-1..6.
-- Learned: AppIntents iOS 27 has `allowedExecutionTargets` (.main/.appIntentsExtension/.widgetKitExtension); before 27 the intent runs in "any available target". The .swiftdoc doc comments answered what docs pages could not. The guidelines PDF text carries "=== page N" markers: cite pages from them (2.5.4 is p.18).
-
-## 2026-10-26 T-0057 C1 bridge slice 2 (done, 23:58-00:21)
-- 363af2cc: per-thread wait slots, back-pressure, call(), widget/Shortcut queue (coalesce, busy), stuck-native, recursion, crash marker, caps; 43/43 green, 12/12 mutants killed. New tools/xc_mutants.py. v4 delta rows for Pernille in App/Bridge/README.md. Board T-0113 (Pernille v4), T-0114 (mine: TextKit console, frames dropped). Left out of the commit: someone's uncommitted widget_tree.py edit.
-- Learned: PyErr_Format has no %g. pthread reports 8 MiB as +12 KiB. Stopping a background mutant run left a mutant on disk; the tool now restores on SIGTERM. My own slip: twice I reported a mutant result before reading it. Report only what the file or event shows.
-
-## 2026-10-26 T-0108 replies to Odalys's L5 state review (done, 00:20-00:25)
-- 312d6a1e: replies table in pywidget/docs/reviews/L5-state-review-odalys.md (18/18 accepted, B2 and S4 amended); L5 s5.0-s5.8 rewritten with dated strikes: `pending` rows inside state.json written ahead with the ops, actions.jsonl dropped, epoch, ops_log rebase, failed.jsonl after 3 attempts, write-path rules, gate additions. Board notes on T-0105/6/7 written but left uncommitted (classifier refused my index-only board commit). Event logged. Open: Ines rules on her S1/S6/S7 and ADR-007 items 1, 4, 6.
-- Learned: v1 widget id pattern accepts '..' and v1 already uses id as a folder name: check every id that becomes a path. "Drain then truncate" with the lock released is a lost-update; the done-marker belongs in the same commit as the result. Lock hold is milliseconds on this Mac, not microseconds: measure before writing a unit.
-
-## 2026-10-26 T-0097 asset catalog in (done, 00:21-00:30)
-- 3f2f8a9c: Theme.xcassets in app + extension (assetutil 172/43 each), DisplayFont (Shared/), -theme-check screen, scripts/theme_shots.sh, ops/site-checks/theme 4 shots, ThemeTests 6, DiskSpaceProbeTests 1; 50/50 unit green. Answer in widgets README Premade 8. Open: device check of Settings vs probe; 85F4.1 still recalled; Python links statfs/fstatfs so DiskSpace entry needed anyway.
-- Learned: xcodegen presets ASSETCATALOG_COMPILER_APPICON_NAME=AppIcon at target level; override it in the target, not base. New test files need xcodegen generate again, or "TEST SUCCEEDED" runs 0 tests. The serif UIFont family is .AppleSystemUIFontSerif; check fontName for NewYork. simctl ui sets appearance and increase_contrast.
-
-## 2026-10-26 T-0116 renderer honours the script's timeline (done, 01:12-01:24)
-- d94d7339: Shared/TreeTimeline.swift (decode + ADR-007 7.4 planner, after clamped 15 min), Shared/TreeView.swift (renderer slice + clock mark), PyTreeWidget kind (stand-in id new_widget), -stale-check screen, scripts/stale_shots.sh, TreeTimelineTests 9; 59/59, mutants 9/9. Board ticked, event logged.
-- Open: mark must sit in WidgetKit's content margin (contentMarginsDisabled, T-0037); dark halo on the gradient reads as a disc (Maren); T-0037 should grow from TreeView.swift, not start fresh.
-- Learned: simctl launch passes env via SIMCTL_CHILD_*; a Simulator app reads host paths, so a check screen needs no bundled fixture. ImageRenderer pixel diff proves where a mark draws, not just that it does.
-
-## 2026-10-26 T-0130 A1/A2 into L5 s5 (done, 01:39-01:42)
-- 7c1286dd: change list at top of s5 (each item ruled or mine), A1 claim commit, A2 failed.jsonl caps, s5.8 invariant, s5.9 Q-T130-1..3 for Ines. Board ticked, event logged. Open: Ines rules Q-T130-1..3; Maren badge wording; Odalys T-0131.
-- Learned: a new rule can contradict an older invariant word for word (exact-3-runs vs "no handler runs twice"); read every gate invariant against each ruling. A python replace script that asserts before writing leaves the file untouched on a miss: good.
-
-## 2026-10-26 T-0145 widget id rule, Swift half + T-0113 signature (done, 01:40-02:09)
-- 86ea4804: Shared/WidgetID.swift (problem/key/userCopyID/rewritingLiteral, WidgetFolder.url, WidgetLibrary), extension read via WidgetFolder, RunRequest first_party from the source only; WidgetIDTests 8/8, 11/11 mutants (scripts/mutants-t0145.json). 6ba29bc8: contract v3-v4.4 signed, pwbridge.h comment fixed. Board ticked (T-0145), noted (T-0113, tick is Pernille's).
-- Open, mine: v3 items 4/5/7 (take tree, write tree.json, error maps, widget fixtures), v4 delta 2/3/4/7; T-0122 untouched; Maren reviews WidgetIDProblem texts; no IDE save UI calls WidgetLibrary yet.
-- Learned: check a fixture's notation in the twin test before writing mine ("@126-2" is a prefix, not a whole). A copy loop with no bound hangs instead of failing when its exit breaks; the mutant tool counts a hang, but a failing test is better evidence. Others' untracked assets turn ThemeTests red: name the file, don't fix it.
-
-## 2026-10-26 T-0135 editor preview cost, gate P (done, 02:29-02:34)
-- 0318ef73: pywidget/docs/design/ide/editor-preview-note.md. A Run-redraw pane v1 (2-2.5 Xcode days), B as-you-type stretch to Day 12, C network-off 1.1, tour p3 on the gallery path. Board ticked; T-0173 added for Ines. Event logged.
-- Open, mine: preview context or `preview:` queue key so a preview never coalesces into a pending refresh (queueKey is widget:<id>; newer request takes the source), with its test, alongside the T-0145 tree consumer. No board line builds the gallery screen either.
-- Learned: read the queue code when costing a feature that reuses a run path; the hazard was in one computed property. widgetRenderingMode has a public setter, but the system's accented tinting does not happen in an app.
-
-## 2026-10-26 T-0158 ADR-007 amendment 3 (done, 02:34-02:37)
-- 01142fc1: ADR-007 "Amendment 3" (append only, 35 lines): B3 expired_runs, C3 fold with t1_only, item 6 bullets 2-3 restated (N6+N2, every handler tap refused at 100, failed_count). Board ticked, event logged.
-- Open: Q-T158-1 for Ines (last_outcome after killed-after-expired); my finding for T-0174/T-0175: N2's last counted outcome needs a run_id-keyed source, not last_outcome.
-- Learned: a fix for an overwritten record has to be checked against every other reader of the same record; N2 reads the field B3 just retired.
-
 ## 2026-10-26 T-0122 + T-0146 widget card, display face, onCard text (done, 02:29-02:49)
 - 238c5e1e: Shared/TreePaint.swift (TreeToken ink table, TreeFont, WidgetCardBackground, TreeBackground, TreeForeground), TreeView modifiers, extension paints the tree's containerBackground; WidgetCardTests 7; sheets ops/site-checks/widget-card; ThemeTests 43->45 (Maren's new sets). Board ticked both; T-0200 for Maren (s8.3/s10).
 - Open: clear on a light wallpaper and the system's accented recolouring need the real Home Screen (T-0039); trees with no containerBackground now draw bg.surface (render.py default), so the New widget template is flat in dark until pywidget_ui emits WidgetCard; Maren's darker dark-card start still pending.
@@ -385,6 +262,20 @@ Older entries (the 2026-10-22 task log): archive.md.
 ## 2026-10-26 T-0235 19:56 chair note into L5 s5 (done, 20:02-20:06)
 - 451ae1dd (L5 s5.0 list, s5.1 rule and 32 KiB bound, s5.3, s5.4 288 KiB, s5.5 module ops, s5.8 cases, s11), 4315375d (tick). Clear order was already in from T-0226. Open for Ines: Q-T235-1 (caps on module and Set Widget State writes), Q-T227-1, Q-T226-1. Odalys checks next (T-0236).
 - Learned: an anchor phrase can repeat in a chair note's quote of my text; anchor on the words before it too. The script's assert caught it before any write.
+
+## 2026-10-26 T-0254 U5-01/U5-02 into L8 and L1 (done, 20:11-20:12)
+- 518ab1ea, 6a00b643, c64a4d10. L2 PWL003 left: Maren's words still DRAFT (<span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>).
+- Learned: wrote forecast times again (20:12/20:14 for 20:11); fill times from `date` after the edit, not before.
+
+## 2026-10-26 T-0251 20:08 chair note into L5 s5 (done, 20:11-20:16)
+- 0563c4c5: s5.0 list, Q-T227-1 marks struck, live-tap-behind-drain case, clear runs drain step 1 first, caps per write, ceiling 416,217 bytes (383,438 without ring), script L5-raw/state_ceiling.py; Q-T251-1 for Ines. s5.5 API text left to Pernille (T-0252).
+- Learned: a ceiling taken from one writer's growth missed 54 KiB of row fields (live rows have no count cap); compute bounds by script from encoded fields. f-strings choke on JSON braces: use a plain placeholder.
+
+
+
+## 2026-10-26 T-0036 privacy manifests per bundle (done, 20:08-20:17)
+- 41718068: pywidget/ios/Privacy/ (app, widget, Python + _remote_debugging framework manifests), install_stdlib.sh copies + re-signs, scripts/privacy_scan.py + 8 tests. 6f70a2a0 board: T-0258 build check (Xcode slot), T-0259 reasons-page read held to 2026-10-27. All codes [unconfirmed].
+- Learned: the Apple day cap is 12 pages; check it before planning a read. A Debug .app carries the .xctest and __preview.dylib: skip them in any bundle scan. "--" is illegal inside an XML comment. Another agent edited project.yml mid-task: stage my hunks by HEAD blob + hash-object.
 {% endraw %}
 
 

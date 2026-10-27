@@ -90,6 +90,7 @@ Draft copy, not approved. Source: `pywidget/runtime/installer/_pywidget_install/
 19. **file_conflict**. "replace it": "it" could be the file or the package. Say the two can't live together.
     - Recommended (23): "{name} would replace {member}, a file that belongs to {owner}, so the two can't be added together. To add {name}, remove {owner} first."
     - "remove" must match the button on the packages screen; that screen is not in the IDE spec yet. If the button says Delete, this says delete.
+    - Remove or Delete: not settled here. No voice or copy guide is approved, so it went to the same <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span> item (2026-10-26 20:15). Recommended: "Remove" for packages (the picked file stays in Files; pairs with "add"), "Delete" only for the person's own scripts and projects.
 
 20. **missing**. Right on content, and is the most important one. Two fixes: lead with the rule, and name PyPI, because "download as wheels" assumes the reader knows where.
     - Recommended (30): "{name} needs {needs}, which {verb} not installed, and pywidget never downloads packages. Download {pronoun} as wheels (.whl) from pypi.org in your browser, then pick {pronoun} in Files together with {name}."
@@ -105,7 +106,7 @@ Draft copy, not approved. Source: `pywidget/runtime/installer/_pywidget_install/
 
 ## Two notes beyond the refusals
 
-- **Name.** Copy uses the working name "pywidget" (IDE spec line 123: the name is the Investors' call), while ios/project.yml lines 47 and 79 set the display name to "PyWidget". No recommended sentence above starts with the name, so either casing reads. Ines decides which one copy uses; one find-and-replace either way.
+- **Name.** Copy uses the working name "pywidget" (IDE spec line 123: the name is the Investors' call), while ios/project.yml lines 47 and 79 set the display name to "PyWidget". No recommended sentence above starts with the name, so either casing reads. The name and its form are the Investors' (C51), not Ines's; asked in ops/questions.md "For the next report" (2026-10-26 20:15, preview ide/name-options.png). Recommended: "PyWidget" in copy, `pywidget` only in code. One find-and-replace either way.
 - **Warnings** (not in this task): `dropped_compiled` says "file(s)"; use the `{verb}`/`{pronoun}` pattern the refusals already use. The rest read plainly.
 {% endraw %}
 

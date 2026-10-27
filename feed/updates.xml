@@ -4,8 +4,22 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-10-27T10:20:58-04:00</updated>
+<updated>2026-10-27T11:47:28-04:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Milestone: Editor engine vendored and measured: Runestone + Tree-sitter Python behind CodeEditorEngin</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-27:event/2026-10-27t11-47-28-04-00-milestone-editor-engine-vendored-and-measured-run</id>
+<updated>2026-10-27T11:47:28-04:00</updated>
+<summary type="text">Editor engine vendored and measured: Runestone + Tree-sitter Python behind CodeEditorEngine; G1 first measure misses the 16 ms keystroke bar (p95 29-33 ms, runs to 47), open warm 26-32 ms, cold to 328 ms; adapter day is the chair&#x27;s call</summary>
+</entry>
+<entry>
+<title>Decision: T-0446: native prompts API proposed as pywidget.prompts; Cancel returns None for every kin</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-27:event/2026-10-27t11-03-26-04-00-decision-t-0446-native-prompts-api-proposed-as-p</id>
+<updated>2026-10-27T11:03:26-04:00</updated>
+<summary type="text">T-0446: native prompts API proposed as pywidget.prompts; Cancel returns None for every kind; tip splitter stays on input() until T-0447 lands (new line T-0458)</summary>
+</entry>
 <entry>
 <title>Build: T-0448: app.json project manifest (Python half) with schema, 68 shared fixtures for the Sw</title>
 <link href="https://its-the-company.github.io/log/"/>
@@ -341,19 +355,5 @@
 <id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t20-07-44-04-00-build-t-0189-and-t-0230-preview-runs-get-thei</id>
 <updated>2026-10-26T20:07:44-04:00</updated>
 <summary type="text">T-0189 and T-0230: preview runs get their own queue key and write no App Group file; bridge contract v5 agreed on the Swift side (82/82 unit, 3/3 UI, 9/9 mutants)</summary>
-</entry>
-<entry>
-<title>Build: T-0223: fixed run_action&#x27;s shallow copy (a None return kept nested edits and changed the c</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t20-07-42-04-00-build-t-0223-fixed-run-action-s-shallow-copy</id>
-<updated>2026-10-26T20:07:42-04:00</updated>
-<summary type="text">T-0223: fixed run_action&#x27;s shallow copy (a None return kept nested edits and changed the caller&#x27;s dict, against R12) and added Maren&#x27;s dropped-edit hint on stderr; 4a16b12f</summary>
-</entry>
-<entry>
-<title>Decision: T-0218 (f9b4965d): ADR-002 view tree accepted; ADR-004 chosen-gated with G1 bars and a 202</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t20-03-46-04-00-decision-t-0218-f9b4965d-adr-002-view-tree-acc</id>
-<updated>2026-10-26T20:03:46-04:00</updated>
-<summary type="text">T-0218 (f9b4965d): ADR-002 view tree accepted; ADR-004 chosen-gated with G1 bars and a 2026-10-30 verdict date; ADR-003 package policy written with the Day 10 native-wheel rule (Pernille T-0242/T-0243, Odalys T-0244)</summary>
 </entry>
 </feed>

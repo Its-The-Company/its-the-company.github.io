@@ -137,6 +137,66 @@ Host only: Apple M1 Mac mini, CPython 3.9.6, jedi 0.19.2, parso 0.8.7, pyflakes 
 - **G2 accessibility.** VoiceOver on the Simulator and the Accessibility Inspector: reads the current line, announces caret moves and selection, edits by typing, Dynamic Type scales the editor font. Fail means a fix in the adapter (e.g. `UIAccessibilityReadingContent`) within one day, or the fallback.
 - **G3 iPad input.** Hardware keyboard: arrows, option and command arrows, shift selection, command-Z/shift-command-Z, tab and shift-tab indent, our shortcuts listed in the command-key overlay; trackpad I-beam and click-drag selection; IME (Japanese kana) and dictation; two scenes editing two files.
 
+### G1, first measure: 2026-10-27 11:19-11:40 ET (Idris, T-0041 slice a)
+
+**Verdict on G1 as measured: not passed.** Keystroke p95 is over the 16 ms bar at all three positions: 29.3 / 32.1 / 32.9 ms (top / middle / end) on the final run, inside ruling 2's 16-33 ms band, but three of the nine earlier focused position-runs went above 33 ms (36.8 top, 36.3 middle, 47.1 end). Open passes warm (26-32 ms) and sits at the line cold: the first open in a fresh process took 137-328 ms over five launches, one of them over 300 ms (327.7) and one 0.5 ms under (299.5). Under ruling 2 this is the one adapter day (Day 9) and a re-measure. Whether the runs above 33 ms fire section 5 now is the chair's call, not mine. G2 and G3 are not run, so the ADR stays **chosen, gated**.
+
+**What was built (slice a).**
+- **Engine.** Runestone at `acc9ecb837bd037bc6c99d8c5b38cba2088c4b90`. That is main on 2026-10-25 18:23 +0100, the commit this ADR's sections 2-4 were read from. I did not use release 0.5.2 (`592434a1`), which pulls Tree-sitter 0.20.9 as a remote SwiftPM package.
+- **Parser and grammar.** Tree-sitter v0.27.1 (`10eb5ac119eec9cb4267a8e035066473983f5f3a`), Runestone's submodule at that commit. TreeSitterLanguages at `eae9758b88636d6e2cd78ce11e4d289569b1de3b`, Python targets only. Its grammar is tree-sitter-python `26855eab` (ABI 15).
+- **How it is vendored.** `pywidget/ios/scripts/fetch_editor.sh` checks out each commit, verifies the id and a clean tree, and copies the code into `Vendor/Runestone` and `Vendor/TreeSitterLanguages` (gitignored, as CPython is). Runestone's own Package.swift is used unchanged. TreeSitterLanguages gets our trimmed manifest (`scripts/editor/TreeSitterLanguages.Package.swift`), which depends on `../Runestone`, so the app links one Tree-sitter runtime (s2, cost 3).
+- **Protocol.** `App/Editor/CodeEditorEngine.swift`. Its one conformer, `App/Editor/RunestoneEngine.swift`, is the only file that imports Runestone.
+- **Licences.** tree-sitter `lib/src/unicode/LICENSE` was read: the ICU 58+ Unicode licence (permissive, commercial use allowed, notice with copies or in documentation). It is now its own component, `tree-sitter-icu`. All five notices are pinned in `pywidget/licenses/components.json`, the Acknowledgements files are regenerated, and the rows are logged in `log/software.md`.
+
+**Commands that produced the numbers.**
+- `python3 -I pywidget/ios/scripts/editor/gen_bench_file.py --out FILE`: 2,000 lines, 71,859 bytes, sha256 `6e51c6bf...481b0a`. Python 3.9 and 3.13 give the same bytes, and the file parses.
+- `pywidget/ios/scripts/editor_bench.sh` runs `tools/xc.sh -project PyWidget.xcodeproj -scheme EditorBench -configuration Release -destination 'platform=iOS Simulator,name=iPhone 17e' PW_EDITOR_BENCH=YES ONLY_ACTIVE_ARCH=YES test -only-testing:PyWidgetUITests/EditorBenchUITests`.
+  - The run is Release, iOS 27.0 Simulator, on the Mac mini's CPU, not a device.
+  - `TEST_RUNNER_PW_BENCH_ARGS=-editor-wrap` repeats the run with soft wrap on.
+  - The raw results of the five runs (logs `xcodebuild-20261027-111907`, `-112425`, `-112607`, `-112913`, `-113924`) are in `pywidget/ios/bench/editor-g1-2026-10-27.jsonl`.
+
+**How it times** (`App/Editor/EditorBench.swift`):
+- **Frame.** A main run-loop observer after Core Animation's commit stamps the end of each turn. A "frame" below is the first such stamp after an event.
+- **Highlight landed.** Runestone asks the theme for each token's colour on the main thread just before it sets the attributes and redraws the line. The last ask marks when the latest highlight landed. Highlighting has settled after 6 display frames with no ask.
+- **Open.** From before the file read and the engine's creation to the frame after the last token of the settled burst. It is measured 5 times per launch, each with a new engine and view.
+- **Keystroke.** From just before the call to the frame after the last token it caused, or after the call returned if later. At each position the bench types 20 letters, then makes 20 deletes, at the end of lines 12, 1000 and 1996, through `insertTyped` (the key-row path, ruling 4a) and `deleteBackward`. Highlighting settles between keystrokes. Every keystroke re-highlighted inside its own call (typed = rehighlight in every run), so nothing is deferred.
+- **Proof the frame is highlighted.** The on-screen view is drawn back into a bitmap and the pixels at the resolved keyword, string and comment colours are counted: 7,612 / 26,155 / 21,760 pixels (light). The UI test fails under 50 of any of them. It also checks that the text is byte-equal to the file after the 120 keystrokes.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: G1, first measure: 2026-10-27 11:19-11:40 ET (Idris, T-0041 slice a), scrolls sideways" style="--tw:1329px" markdown="1">
+
+| Run (log) | Open, cold (first in process) | Open, warm (runs 2-5) | Keystroke p50 top / mid / end | Keystroke p95 top / mid / end | Note |
+| --- | --- | --- | --- | --- | --- |
+| 111907 | 327.7 ms | 29.5-29.9 | (invalid) | (invalid) | deletes were no-ops (fixed, see below); opens valid |
+| 112425 | 226.6 | 26.3-29.5 | 10.9 / 14.4 / 11.7 | 27.4 / 36.3 / 47.1 | editor focused |
+| 112607 | 137.3 | 29.4-39.6 | 18.0 / 12.2 / 10.2 | 36.8 / 32.0 / 32.3 | focused; unfocused p95 30.2 / 32.0 / 31.7 |
+| 112913 (wrap on) | 283.5 | 25.1-32.2 | 10.0 / 11.5 / 9.9 | 30.3 / 31.4 / 29.1 | focused; unfocused 15.4 / 29.8 / 29.6 |
+| 113924 (final code) | 299.5 | 26.9-31.7 | 10.6 / 11.9 / 10.9 | **29.3 / 32.1 / 32.9** | focused; unfocused 14.3 / 33.1 / 33.0 |
+
+</div>
+
+
+**Where the time goes (read, not yet fixed).**
+- **Inserts are the slow keystrokes.** Insert p95 is 31-33 ms against 9-10 ms for deletes on the final run, and the p50 floor is about 10 ms either way.
+- **Inside the insert.** A 12 s `sample` of the focused run puts Runestone's own insert time mostly inside `TextInputView.applyLineChangesToLayoutManager` (redisplay of the edited line plus a synchronous `layoutIfNeeded`).
+- **With the keyboard up, UIKit adds work.** `TextView.insertText` wraps the edit in `inputDelegate.selectionWillChange/DidChange`, and UIKit's keyboard resyncs its state and assistant bar on that (316 of the wrapper's 317 samples). This is the key-row path. The system keyboard calls the first responder directly. The unfocused runs are no faster on average, so this is a lead, not the cause.
+- **Cold open.** The cold extra is creating the first engine and view in a process: 92-253 ms in the "engine+view" phase. The parse off the main actor is 13.5-31 ms, and `setState` 0.2-19 ms.
+- **Wrapping.** Soft wrap on changes nothing material.
+- **Adapter-day leads.**
+  1. Find the insert-only cost (character-pair and width paths) with Instruments.
+  2. Send key-row taps through the responder's own `insertText`.
+  3. Build one engine at launch, as jedi is warmed, so the first open is warm.
+  4. Then re-measure with this script.
+
+**Fixed during the measure.** Runestone's `deleteBackward` deletes only a non-empty selection, so a bare caret deleted nothing. That is why run 111907's keystrokes are invalid. The adapter now selects the composed character before the caret first, as UIKit's keyboard does.
+
+**Capture map** (`SyntaxRole.captures`, test `EditorCaptureMapTests`, which fails when a capture is dropped, checked by removing `constructor`). The vendored `highlights.scm` has 19 capture names. They map as follows:
+- **No decorator capture.** The query has none: `(decorator) @function`. So decorators draw in the function colour, and the `decorator` role has no tokens unless our vendored query gains a capture (Maren's call).
+- **`constructor` draws as `type`.** These are capitalised names. That is my reading, for Maren's comparison with the mockups.
+- **`constant` (ALL_CAPS names), `variable`, `property`, `none` and `punctuation.special` draw as text.**
+
+The G1 screenshot comparison with `mockups/A-editor.png` / `B-editor.png` is not done; it moves to slice b.
+
 ## 8. Licence lines (logged in log/assets.md, Commandments 4-5)
 
 - Runestone, https://github.com/simonbs/Runestone, MIT, Copyright (c) 2021 Simon Støvring.

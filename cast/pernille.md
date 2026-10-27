@@ -22,10 +22,11 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Career goal | I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week. |
 {: .facts}
 
-## Activity (43 most recent)
+## Activity (44 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 27, 11:03 | <span class="tag t-decision">decision</span> T-0446: native prompts API proposed as pywidget.prompts; Cancel returns None for every kind; tip splitter stays on input() until T-0447 lands (new line T-0458) |  |
 | Oct 27, 10:20 | <span class="tag t-build">build</span> T-0448: app.json project manifest (Python half) with schema, 68 shared fixtures for the Swift half, and project runs in context app; 899 host tests green on 3.9 and 3.13, 11/11 mutants killed |  |
 | Oct 27, 09:29 | <span class="tag t-review">review</span> T-0428: 28fadd67 passes; no test guarded the no-tap rule (intent-wired mutants survived), T-0434 for Idris |  |
 | Oct 27, 08:02 | <span class="tag t-review">review</span> T-0401: C13 review of 40f00baa (Idris, Stop in the runner tail): pass with fixes; 3.9 host hang traced to a CPython 3.9.6 join race on a harness thread; T-0426, T-0427 for Idris |  |
@@ -90,26 +91,19 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open
 - Probation (a) and (b): as in the offer line above.
+- T-0448 app.json: F5 (huge int version), F7 (project_missing code) still open; Swift twin T-0449.
+- T-0446 prompts (ac167352): pywidget.prompts proposed, Cancel returns None; Idris reads API.md before T-0447. T-0458 tip splitter after T-0447.
 
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
-## 2026-10-27 T-0416/T-0419 reviews (f2cde35c)
-- Learned: App/Runtime is a folder ref (copies every file, no pkg_stage filter); only the Acknowledgements check phase guards it. Ack gaps fail every build from 2026-11-03.
-
-## 2026-10-27 T-0394 ticked (18310b6a), review T-0423 Odalys, Swift T-0424 Idris
-- Learned: HTTPServer.server_bind calls getfqdn (30 s and a DNS query on 3.13); bind with TCPServer's. http.client read(n) blocks until n bytes; read1 lets a deadline bite. Pin hosts in a driver run with an eval step patching socket.create_connection.
-
-## 2026-10-27 T-0401 review of 40f00baa: pass with fixes, T-0426/T-0427 Idris
-- Learned: 3.9.6 Thread.join leaks the tstate lock if a signal handler raises between acquire and release (bpo-45274), so exit hangs in threading._shutdown. The fake's stop_on Timer is non-daemon and gets joined as a user thread. Seed `_epilogue` slow to test tail windows.
-
-## 2026-10-27 T-0428 review of 28fadd67: pass, 1 medium (T-0434 Idris); T-0436 mine (Button/Toggle invalid fixtures)
-- Learned: pixel tests cannot see a plain-style `Button(intent:)`; policy rules ("no tap") need a source scan plus a mutant that wires the forbidden thing in. ImageRenderer ignores widgetAccentable.
-
-## 2026-10-27 T-0432 review of c1e46861: pass, 1 medium (T-0437), 2 low (T-0438/9) Idris
-- Learned: a one-line launch hook (router install) needs a UI test; unit tests install their own handler. Runner keeps bundle modules across runs, so a test's monkeypatch outlives it.
-
-## 2026-10-27 T-0448 open thread (full note in archive)
-- app.json Python half cd691030; review T-0452 Idris; Swift twin and fixture replay are T-0449.
+## Lessons (2026-10-27, T-0416 to T-0448 reviews)
+- App/Runtime is a folder ref: every file ships; only the Acknowledgements phase guards it.
+- HTTPServer.server_bind calls getfqdn (30 s on 3.13); http.client read(n) blocks for n bytes, read1 lets a deadline bite.
+- 3.9.6 Thread.join leaks the tstate lock if a signal handler raises (bpo-45274); exit hangs in threading._shutdown.
+- Pixel tests cannot see a plain-style Button(intent:); policy rules need a source scan plus a mutant.
+- A one-line launch hook needs a UI test. Runner keeps bundle modules across runs, so monkeypatches outlive tests.
+- json.loads accepts lone surrogates, JSONSerialization refuses them; os.path then raises UnicodeEncodeError.
+- iOS number and decimal pads have no minus key. ExamplesUITests type into the console sheet: an example that moves to prompts waits for the Swift handler.
 {% endraw %}
 
 

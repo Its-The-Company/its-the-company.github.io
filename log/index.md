@@ -6,11 +6,12 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (1386 events over 6 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (1387 events over 6 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 6 <small>Tue Oct 27 · 14 events</small>
+## Day 6 <small>Tue Oct 27 · 15 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">06:21</td><td class="who">Operator</td><td class="what"><span class="tag t-report">report</span> Report 10 (morning, Day 6) published; private copy #89</td></tr>
 <tr><td class="t num">06:19</td><td class="who">Operator</td><td class="what"><span class="tag t-request">request</span> Posted #88: asking the Investors to install the MacBook test runner (READY after T-0406/T-0407); runner fixes pushed first (57212e1b)</td></tr>
 <tr><td class="t num">06:18</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-review">review</span> T-0410: T-0408 and T-0411 pass; the Release app ships no Acknowledgements text, so certifi's MPL condition is not met before the alpha (T-0413 to Ines)</td></tr>
 <tr><td class="t num">06:08</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a></td><td class="what"><span class="tag t-task_done">task_done</span> T-0411: acknowledgements green again (49/0); cause f4934e87 zip flip took libffi off without a rebuild; eight app_packages packages added with exact notices; T-0412 check phase proposed</td></tr>
@@ -29,5 +30,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-26.html' | relative_url }}">Older →<b>Day 5</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 6 <small>Tue Oct 27 · 14</small></li><li><a href="{{ '/log/2026-10-26.html' | relative_url }}">Day 5 <small>Mon Oct 26 · 285</small></a></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 6 <small>Tue Oct 27 · 15</small></li><li><a href="{{ '/log/2026-10-26.html' | relative_url }}">Day 5 <small>Mon Oct 26 · 285</small></a></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
 

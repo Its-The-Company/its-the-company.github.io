@@ -1,45 +1,21 @@
 {
  "schema": 1,
- "at": "2026-10-27T10:19:27.436344+00:00",
+ "at": "2026-10-27T10:22:00.229865+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-10-27T04:19:28-04:00"
+  "kind": "morning",
+  "started": "2026-10-27T06:20:44-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "idris",
-   "task": "[review] T-0410 review T-0408 and T-0411",
-   "model": "opus",
-   "started": "2026-10-27T10:09:05.719Z",
+   "name": "ines",
+   "task": "[report] morning, Day 6 CEO report",
+   "model": "haiku",
+   "started": "2026-10-27T10:20:54.898Z",
    "seconds": null,
-   "finished": "2026-10-27T10:18:39.681000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[build] T-0411 fix stale acknowledgements",
-   "model": "opus",
-   "started": "2026-10-27T09:59:43.686Z",
-   "seconds": null,
-   "finished": "2026-10-27T10:08:55.533000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-0408 package licences and sys.path",
-   "model": "opus",
-   "started": "2026-10-27T09:47:10.060Z",
-   "seconds": null,
-   "finished": "2026-10-27T09:59:06.686000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0407 runner boot-fresh follow-ups",
-   "model": "opus",
-   "started": "2026-10-27T09:25:43.578Z",
-   "seconds": null,
-   "finished": "2026-10-27T09:47:00.506000+00:00"
+   "finished": "2026-10-27T10:21:31.825000+00:00"
   }
  ],
  "queue": {
@@ -50,25 +26,25 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
-   "resets_at": "2026-10-27T13:00:00.115375+00:00",
+   "pct": 6.0,
+   "resets_at": "2026-10-27T12:59:59.712760+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 100.0,
+   "left": 94.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 53.0,
-   "resets_at": "2026-11-01T07:00:00.115393+00:00",
+   "pct": 54.0,
+   "resets_at": "2026-11-01T06:59:59.712776+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 47.0,
+   "left": 46.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T07:00:00.115516+00:00",
+   "resets_at": "2026-11-01T06:59:59.712912+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-27T04:19:27.804009-04:00"
+  "read_at": "2026-10-27T06:20:42.323265-04:00"
  },
  "ui": {
   "week_pct": 0.101,
@@ -87,7 +63,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-27T06:20:00-04:00"
+  "at": "2026-10-27T06:22:35-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -635,6 +611,13 @@
   ],
   "done": [
    {
+    "w": "Ines",
+    "k": "report",
+    "t": "Morning, Day 6 CEO report",
+    "at": "2026-10-27T10:21:31.825000+00:00",
+    "o": "c"
+   },
+   {
     "w": "Idris",
     "k": "review",
     "t": "T-0410 review T-0408 and T-0411",
@@ -646,13 +629,6 @@
     "k": "build",
     "t": "T-0411 fix stale acknowledgements",
     "at": "2026-10-27T10:08:55.533000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "T-0408 package licences and sys.path",
-    "at": "2026-10-27T09:59:06.686000+00:00",
     "o": "c"
    }
   ],
@@ -668,7 +644,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "task_open"

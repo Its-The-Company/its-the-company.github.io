@@ -10,9 +10,9 @@ section: "usage"
 
 <div class="panel">
 <p class="status-line warm"><b>24 points ahead of the week's even pace.</b> <span>Source: the plan's own meter, read Mon 11:51 PM.</span></p>
-<div class="bar warm"><div class="bar-head"><span>This week</span><span>51% of the weekly limit · resets Sun 1:59 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:51.0%"></div><i class="mark plan" style="left:27.3%" title="plan by now: 27%"></i></div><div class="bar-foot">Plan by now: 27% of your weekly allowance used, the marker.</div></div>
-<div class="bar warm"><div class="bar-head"><span>Today</span><span>112% of today's share</span></div><div class="bar-track"><div class="bar-fill" style="width:100.0%"></div><i class="mark plan" style="left:99.4%" title="plan by now: 99%"></i><i class="mark reserve" style="left:100.0%" title="the evening report's reserve"></i></div><div class="bar-foot">Plan by now: 99% of today's share of your weekly allowance. The grey marker <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> back a reserve for the evening report; it is released once the report is done.</div></div>
-<div class="bar ok"><div class="bar-head"><span>Last 5 hours</span><span>5% of the 5-hour limit · resets 3:59 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:5.0%"></div></div></div>
+<div class="bar warm"><div class="bar-head"><span>This week</span><span>51% of the weekly limit · resets Sun 1:59 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:51.0%"></div><i class="mark plan" style="left:27.4%" title="plan by now: 27%"></i></div><div class="bar-foot">Plan by now: 27% of your weekly allowance used, the marker.</div></div>
+<div class="bar warm"><div class="bar-head"><span>Today</span><span>112% of today's share</span></div><div class="bar-track"><div class="bar-fill" style="width:100.0%"></div><i class="mark plan" style="left:100.0%" title="plan by now: 100%"></i><i class="mark reserve" style="left:100.0%" title="the evening report's reserve"></i></div><div class="bar-foot">Plan by now: 100% of today's share of your weekly allowance. The grey marker <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> back a reserve for the evening report; it is released once the report is done.</div></div>
+<div class="bar ok"><div class="bar-head"><span>Last 5 hours</span><span>5% of the 5-hour limit · resets 3:59 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:5.1%"></div></div></div>
 <div class="bar ok"><div class="bar-head"><span>Fable this week</span><span>3% of its weekly allowance</span></div><div class="bar-track"><div class="bar-fill" style="width:3.0%"></div></div><div class="bar-foot">A ceiling, not a target: Fable shares the weekly limit, so it is used as the work needs.</div></div>
 </div>
 
@@ -25,7 +25,7 @@ section: "usage"
 What the run loop was doing in each hour of the pacing week.
 
 <div class="week-strip" role="img" aria-label="This week, hour by hour"><div class="wrow head"><span></span><span>0</span><span></span><span></span><span></span><span></span><span></span><span>6</span><span></span><span></span><span></span><span></span><span></span><span>12</span><span></span><span></span><span></span><span></span><span></span><span>18</span><span></span><span></span><span></span><span></span><span></span></div><div class="wrow"><span>Sun</span><i class="h out"></i><i class="h out"></i><i class="h c-limit_5h" title="Sun 2:00 · at the 5-hour limit"></i><i class="h c-work" title="Sun 3:00 · working"></i><i class="h c-work" title="Sun 4:00 · working"></i><i class="h c-work" title="Sun 5:00 · working"></i><i class="h c-work" title="Sun 6:00 · working"></i><i class="h c-share_spent" title="Sun 7:00 · today's share used"></i><i class="h c-work" title="Sun 8:00 · working"></i><i class="h c-share_spent" title="Sun 9:00 · today's share used"></i><i class="h c-share_spent" title="Sun 10:00 · today's share used"></i><i class="h c-share_spent" title="Sun 11:00 · today's share used"></i><i class="h c-share_spent" title="Sun 12:00 · today's share used"></i><i class="h c-share_spent" title="Sun 13:00 · today's share used"></i><i class="h c-share_spent" title="Sun 14:00 · today's share used"></i><i class="h c-share_spent" title="Sun 15:00 · today's share used"></i><i class="h c-share_spent" title="Sun 16:00 · today's share used"></i><i class="h c-share_spent" title="Sun 17:00 · today's share used"></i><i class="h c-work" title="Sun 18:00 · working"></i><i class="h c-work" title="Sun 19:00 · working"></i><i class="h c-work" title="Sun 20:00 · working"></i><i class="h c-work" title="Sun 21:00 · working"></i><i class="h c-work" title="Sun 22:00 · working"></i><i class="h c-work" title="Sun 23:00 · working"></i></div><div class="wrow"><span>Mon</span><i class="h c-offline" title="Mon 0:00 · no tick: offline or stopped"></i><i class="h c-work" title="Mon 1:00 · working"></i><i class="h c-work" title="Mon 2:00 · working"></i><i class="h c-limit_5h" title="Mon 3:00 · at the 5-hour limit"></i><i class="h c-limit_5h" title="Mon 4:00 · at the 5-hour limit"></i><i class="h c-share_spent" title="Mon 5:00 · today's share used"></i><i class="h c-work" title="Mon 6:00 · working"></i><i class="h c-share_spent" title="Mon 7:00 · today's share used"></i><i class="h c-share_spent" title="Mon 8:00 · today's share used"></i><i class="h c-share_spent" title="Mon 9:00 · today's share used"></i><i class="h c-share_spent" title="Mon 10:00 · today's share used"></i><i class="h c-share_spent" title="Mon 11:00 · today's share used"></i><i class="h c-share_spent" title="Mon 12:00 · today's share used"></i><i class="h c-share_spent" title="Mon 13:00 · today's share used"></i><i class="h c-share_spent" title="Mon 14:00 · today's share used"></i><i class="h c-share_spent" title="Mon 15:00 · today's share used"></i><i class="h c-share_spent" title="Mon 16:00 · today's share used"></i><i class="h c-share_spent" title="Mon 17:00 · today's share used"></i><i class="h c-work" title="Mon 18:00 · working"></i><i class="h c-work" title="Mon 19:00 · working"></i><i class="h c-offline" title="Mon 20:00 · no tick: offline or stopped"></i><i class="h c-offline" title="Mon 21:00 · no tick: offline or stopped"></i><i class="h c-work" title="Mon 22:00 · working"></i><i class="h c-work" title="Mon 23:00 · working"></i></div></div>
-<div class="legend hours"><span><i class="h c-work"></i>working 6 h</span><span><i class="h c-limit_5h"></i>at the 5-hour limit 2.5 h</span><span><i class="h c-share_spent"></i>today's share used 27.5 h</span><span><i class="h c-offline"></i>no tick: offline or stopped 10 h</span></div>
+<div class="legend hours"><span><i class="h c-work"></i>working 6.5 h</span><span><i class="h c-limit_5h"></i>at the 5-hour limit 2.5 h</span><span><i class="h c-share_spent"></i>today's share used 27.5 h</span><span><i class="h c-offline"></i>no tick: offline or stopped 9.5 h</span></div>
 
 ## Where the usage went, last 7 days
 
@@ -77,8 +77,8 @@ The plan includes API credits each month. The company uses them only as overflow
 
 | Window | Used | Plan by now |
 | --- | --- | --- |
-| This 5-hour window | 5% of the 5-hour limit (resets 3:59 AM) | |
-| Today | 112% of the daily pace | 99% |
+| This 5-hour window | 5% of the 5-hour limit (resets 3:59 AM; the plan's reading plus the runs recorded since) | |
+| Today | 112% of the daily pace | 100% |
 | This week | 51% of the weekly limit (resets Sun Nov 1, 1:59 AM) | 27% |
 | Fable this week | 3% of its weekly allowance | |
 
@@ -93,7 +93,7 @@ The plan includes API credits each month. The company uses them only as overflow
 
 Product work by kind, last 7 days: research 33%, build 18%, tools 14%, operations 10%, plan 8%, design 7%, review 5%, test 3%, release 1%.
 
-Running the site: about 0.091% of this week's allowance (cap 3%; 7 run(s) with a model call).
+Running the site: about 0.1% of this week's allowance (cap 3%; 8 run(s) with a model call).
 
 | Category | Share | Cap |
 | --- | --- | --- |

@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-10-27T03:29:38.501404+00:00",
+ "at": "2026-10-27T03:59:04.158959+00:00",
  "session": {
   "active": true,
   "kind": "inbox",
-  "started": "2026-10-26T23:29:19-04:00"
+  "started": "2026-10-26T23:58:39-04:00"
  },
  "workers": [],
  "who": "",
@@ -18,28 +18,28 @@
  "meter": {
   "five_hour": {
    "pct": 5.0,
-   "resets_at": "2026-10-27T07:59:59.645613+00:00",
+   "resets_at": "2026-10-27T07:59:59.741651+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 95.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 51.0,
-   "resets_at": "2026-11-01T06:59:59.645629+00:00",
+   "resets_at": "2026-11-01T06:59:59.741668+00:00",
    "used_words": "of your weekly allowance used",
    "left": 49.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T06:59:59.645756+00:00",
+   "resets_at": "2026-11-01T06:59:59.741793+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-26T23:19:43.226626-04:00"
+  "read_at": "2026-10-26T23:51:06.347290-04:00"
  },
  "ui": {
-  "week_pct": 0.077,
-  "five_hour_pct": 0.0,
+  "week_pct": 0.091,
+  "five_hour_pct": 0.079,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -54,7 +54,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-10-26T23:51:09-04:00"
+  "at": "2026-10-26T23:59:36-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -860,29 +860,7 @@
     "o": "c"
    }
   ],
-  "done": [
-   {
-    "w": "Odalys",
-    "k": "release",
-    "t": "T-0345 acknowledgements notices",
-    "at": "2026-10-27T03:17:13.039000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Report overhaul plan and board lines",
-    "at": "2026-10-27T03:14:03.904000+00:00",
-    "o": "i"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "T-0364 stdlib full-mode check",
-    "at": "2026-10-27T03:13:17.570000+00:00",
-    "o": "c"
-   }
-  ],
+  "done": [],
   "count": {
    "next": 58,
    "wait": 24,
@@ -894,7 +872,6 @@
  "inbox": [],
  "trimmed": [
   "lane_next",
-  "queue_text",
-  "task_done"
+  "queue_text"
  ]
 }

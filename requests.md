@@ -20,4 +20,4 @@ Nothing is waiting on the Investors right now.
 <script defer src="{{ '/assets/needs.js' | relative_url }}"></script>
 
 <h2>Status</h2>
-<ul class="list needs"><li class="ny"><span class="ny-q">Apple membership: pending, due Day 7 (2026-10-28). Nothing can be sold until it is active.</span><span class="ny-r">Nothing to reply until Apple approves; then say so in Chat.</span></li></ul>
+<ul class="list needs"><li class="ny"><span class="ny-q">Apple Developer Program membership: pending. Due active by Day 7 (2026-10-28), the Investors.</span><span class="ny-r">Nothing to reply until Apple approves; then say so in Chat.</span></li></ul>

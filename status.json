@@ -1,74 +1,58 @@
 {
  "schema": 1,
- "at": "2026-10-27T12:03:58.309144+00:00",
+ "at": "2026-10-27T12:57:51.256467+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-27T06:23:14-04:00"
+  "started": "2026-10-27T08:05:16-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "pernille",
-   "task": "[review] T-0401 runner stop review",
+   "name": "idris",
+   "task": "[build] T-0418 Acknowledgements screen",
    "model": "opus",
-   "started": "2026-10-27T11:53:12.141Z",
+   "started": "2026-10-27T12:23:49.226Z",
    "seconds": null,
-   "finished": "2026-10-27T12:03:18.412000+00:00"
+   "finished": "2026-10-27T12:57:11.835000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[tools] T-0388 xcodebuild hang killer",
+   "name": "idris",
+   "task": "[build] T-0365 Button and Toggle",
    "model": "opus",
-   "started": "2026-10-27T11:37:16.028Z",
+   "started": "2026-10-27T12:06:02.460Z",
    "seconds": null,
-   "finished": "2026-10-27T11:53:03.200000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-0394 pywidget.http module",
-   "model": "opus",
-   "started": "2026-10-27T11:20:08.065Z",
-   "seconds": null,
-   "finished": "2026-10-27T11:37:02.276000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[review] T-0409 packages phase review",
-   "model": "opus",
-   "started": "2026-10-27T10:58:41.921Z",
-   "seconds": null,
-   "finished": "2026-10-27T11:19:51.396000+00:00"
+   "finished": "2026-10-27T12:23:31.501000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 69,
+  "runnable_count": 72,
   "blocked_count": 49
  },
  "meter": {
   "five_hour": {
-   "pct": 6.0,
-   "resets_at": "2026-10-27T12:59:59.712760+00:00",
+   "pct": 12.0,
+   "resets_at": "2026-10-27T12:59:59.610881+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 94.0,
+   "left": 88.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 54.0,
-   "resets_at": "2026-11-01T06:59:59.712776+00:00",
+   "pct": 55.0,
+   "resets_at": "2026-11-01T06:59:59.610900+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 46.0,
+   "left": 45.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T06:59:59.712912+00:00",
+   "resets_at": "2026-11-01T06:59:59.611022+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-27T06:20:42.323265-04:00"
+  "read_at": "2026-10-27T08:05:16.238661-04:00"
  },
  "ui": {
   "week_pct": 0.101,
@@ -87,7 +71,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-27T08:04:33-04:00"
+  "at": "2026-10-27T08:58:29-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -487,13 +471,6 @@
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0042 slice pulled forward",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "From T-0410 review of 6adf11d0",
@@ -532,6 +509,34 @@
     "w": "Idris",
     "k": "build",
     "t": "From T-0401 review of 40f00baa",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Independent review of 28fadd67",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Two stripped-mode findings in...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "decision",
+    "t": "Button and Toggle taps in v1",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "review",
+    "t": "Independent review of ddbfed54",
     "s": "next",
     "o": "c"
    },
@@ -629,29 +634,29 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0418 Acknowledgements screen",
+    "at": "2026-10-27T12:57:11.835000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0365 Button and Toggle",
+    "at": "2026-10-27T12:23:31.501000+00:00",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "review",
     "t": "T-0401 runner stop review",
     "at": "2026-10-27T12:03:18.412000+00:00",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0388 xcodebuild hang killer",
-    "at": "2026-10-27T11:53:03.200000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "T-0394 pywidget.http module",
-    "at": "2026-10-27T11:37:02.276000+00:00",
-    "o": "c"
    }
   ],
   "count": {
-   "next": 69,
+   "next": 72,
    "wait": 25,
    "blocked": 24,
    "you": 5
@@ -662,7 +667,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "task_open"

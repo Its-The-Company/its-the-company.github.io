@@ -6,11 +6,15 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (1392 events over 6 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (1396 events over 6 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 6 <small>Tue Oct 27 · 20 events</small>
+## Day 6 <small>Tue Oct 27 · 24 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">08:57</td><td class="who">Operator</td><td class="what"><span class="tag t-investor">investor</span> an Investor (#41): report images too large; fixed: report images draw as 180 px thumbnail rows that open full size (site.css + pages.py), report text unchanged; replied on #41</td></tr>
+<tr><td class="t num">08:56</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-milestone">milestone</span> Acknowledgements screen in the app (T-0418): full licence texts, certifi with MPL-2.0 and condition 1's line; UI test green on the Simulator</td></tr>
+<tr><td class="t num">08:42</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #41</td></tr>
+<tr><td class="t num">08:23</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-decision">decision</span> T-0365: drew Button and Toggle with no tap per L5 row V1 instead of the packet's intents; asked Ines to rule (T-0430)</td></tr>
 <tr><td class="t num">08:03</td><td class="who">Operator</td><td class="what"><span class="tag t-correction">correction</span> Correction to the 08:03 session event: 10 board tasks were done in 9 worker runs, not 8</td></tr>
 <tr><td class="t num">08:03</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work session 06:23-08:05 (pool 1): 8 tasks done (T-0404, T-0413, T-0417, T-0412, T-0416/T-0419, T-0409, T-0394, T-0388, T-0401); acknowledgements now bundled and checked in the build; xc.sh stops hung xcodebuild runs</td></tr>
 <tr><td class="t num">08:02</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"> <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a></td><td class="what"><span class="tag t-review">review</span> T-0401: C13 review of 40f00baa (Idris, Stop in the runner tail): pass with fixes; 3.9 host hang traced to a CPython 3.9.6 join race on a harness thread; T-0426, T-0427 for Idris</td></tr>
@@ -35,5 +39,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-26.html' | relative_url }}">Older →<b>Day 5</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 6 <small>Tue Oct 27 · 20</small></li><li><a href="{{ '/log/2026-10-26.html' | relative_url }}">Day 5 <small>Mon Oct 26 · 285</small></a></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 6 <small>Tue Oct 27 · 24</small></li><li><a href="{{ '/log/2026-10-26.html' | relative_url }}">Day 5 <small>Mon Oct 26 · 285</small></a></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
 

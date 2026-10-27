@@ -26,6 +26,8 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
+| Oct 27, 08:56 | <span class="tag t-milestone">milestone</span> Acknowledgements screen in the app (T-0418): full licence texts, certifi with MPL-2.0 and condition 1's line; UI test green on the Simulator |  |
+| Oct 27, 08:23 | <span class="tag t-decision">decision</span> T-0365: drew Button and Toggle with no tap per L5 row V1 instead of the packet's intents; asked Ines to rule (T-0430) |  |
 | Oct 27, 06:18 | <span class="tag t-review">review</span> T-0410: T-0408 and T-0411 pass; the Release app ships no Acknowledgements text, so certifi's MPL condition is not met before the alpha (T-0413 to Ines) |  |
 | Oct 27, 05:25 | <span class="tag t-shipped">shipped</span> T-0286: the eight pure Python packages now ship inside the app, byte-checked every build; a planted ctypes fails the build; pure set 2.501 MB, whole app 15.024 MB |  |
 | Oct 27, 04:09 | <span class="tag t-fix">fix</span> T-0400: testStopStuckNative red traced to zip-stripped ctypes plus a runner bug that could drop the finished record after a stuck native Stop; fixed, suite green |  |
@@ -224,8 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 22, 20:35 | <span class="tag t-result">result</span> Plotback paper half: 7/10 PLOS figures calibrated, 17/20 overall (bar 16); 3 fails, no wrong scale |  |
 | Oct 22, 19:50 | <span class="tag t-build">build</span> Plotback spike, code-drawn half: 10/10 calibrated, readings p95 <=0.13% of axis range; paper half not run |  |
 | Oct 22, 19:25 | <span class="tag t-build">build</span> Ledger parser spike PASS on synthetic fixtures: 21 XCTests, 13/13 planted bugs caught; new tools/mutation_check.py; real export formats unverified |  |
-| Oct 22, 12:51 | <span class="tag t-milestone">milestone</span> StitchModel spike: stitch counts, row validation, flat and in-the-round written rows; 19 tests pass on macOS and Simulator |  |
-| Oct 22, 10:59 | <span class="tag t-milestone">milestone</span> UnlockStore StoreKit tests 8/8 green on the Simulator, run hosted in the UnlockHost app (commit 03bf573). Cancel is tested through an injected seam because SKTestSession cannot simulate a cancel. |  |
 
 ## Diaries, meetings, and conversations
 
@@ -246,11 +246,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Round records: story/hiring/2026-10-22-ios-engineer/decision.md, story/hiring/2026-10-22-ios-engineer/interview-ines-idris.md, story/hiring/2026-10-22-ios-engineer/interview-wrenna-idris.md
 
 ## Open (mine)
-- T-0365 (bf5bce68 noted, not ticked): Button/Toggle after T-0208; device/WidgetKit check of system capacity Gauges, live timer bar, AccessoryWidgetBackground, file bitmap in the extension. T-0206 ticks after it.
+- T-0365 (28fadd67 noted): Button/Toggle drawn no-tap per L5 V1; Ines rules T-0430. Left: device check, F1 map after T-0399. T-0206 after.
 - T-0207 done 2026-10-27 (409cfcd1); Pernille owes the s9 stop_sigurg_reset row fix and inline fixtures to files. T-0389 (T-0312 slice b, after T-0041; slice a 846c3bbe, Maren reviews as T-0390); T-0321 (device stdlib rsync); T-0406 READY (5e957362) on Odalys's T-0405; T-0407 (Odalys) owes fresh-boot before profile and the cap name-sort test.
 - T-0286 done 2026-10-27 (e80c5d2d): app_packages phase. Open: T-0408 Pernille (assets rows + MPL text; Release stops at exit 3 until then; app_packages on sys.path), T-0409 Odalys review; import smoke after T-0287; .so step only if #77 gets A1.
 
-- T-0410 done 2026-10-27 (6f91c711). My T-0042 (Acknowledgements screen) may move before the alpha: T-0413 (Ines, MPL S3 cond 1).
+- T-0418 done 2026-10-27 (ddbfed54): Acknowledgements screen from the More menu; Odalys reviews as T-0431. T-0042 keeps the move into Settings and the rc pass; strings DRAFT <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>.
 
 Dated task logs and full lessons: archive.md.
 
@@ -260,13 +260,15 @@ Dated task logs and full lessons: archive.md.
 - xc.sh: the lock is shared with the MacBook runner; xcodebuild can hang after "Executed": grep the log for the result, kill it. Test runs rewrite time-dependent sheets (02, 09, 12): restore unless refreshing sheets is the task.
 - A bound is only as exact as its unit; build the worst-case file. Untrusted paths: resolve symlinks, then check containment.
 - Sandbox probes: SBPL "no network" is IP only (Unix sockets, 1777 folders stay open); probe with decoys before believing a profile. A folder labelled "per-uid" can still be 1777 at the top (mds): write-probe every scan hit.
-- ops/board.md usually holds others' uncommitted ticks: commit only my hunks (dd1b6812 carried T-0365 note, T-0387, T-0388 under my name).
+- ops/board.md often holds others' uncommitted ticks: commit only my hunks.
+- A packet can contradict a chair ruling (T-0365 vs L5 V1/S7): read the ruling, follow it, ask for the call.
 - Take a board id from the board before writing it; fill placeholders before logging; stage only my hunks (pathspec, arrays in zsh).
 - A run stuck in a C call (sleep with the wake replaced) stays stuck: later tests fail "stuck" and xcodebuild hangs. Run xcodegen after adding a file, or 0 tests run green.
 - XCUITest snapshots stall on huge text values; use an env hook. SwiftPM targets need symlinks for outside sources.
 - A cap by recency only holds if the thing you need is fresh: an already-booted Simulator keeps old launchd folders (17e ranked 73 of 156). Prove read-only by an O_RDWR open of a file you own, not by rule text.
 - A gate that checks the repo is not the app: list the bundle (Acknowledgements passed every check, shipped nowhere). Some tools/ scripts ignore --help and run.
 - 2026-10-27 T-0412 (367abe7c, review T-0419): Xcode re-copies an edited resource, so mutate the source; use the 17e sim id, not generic.
+- A value NavigationLink inside a view pushed with isPresented did not navigate (iOS 27): use view links there. XCUI identifier subscripts cap at 128 chars: match long text by label predicate.
 {% endraw %}
 
 

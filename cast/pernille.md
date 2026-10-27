@@ -22,10 +22,11 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Career goal | I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week. |
 {: .facts}
 
-## Activity (28 most recent)
+## Activity (29 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 26, 21:24 | <span class="tag t-shipped">shipped</span> T-0296: pkg_sandbox C13 blockers B1-B4 fixed (deny-by-default reads, Keychain Mach services and security exec denied, prefs denied, started/outcome logging with <span title="A test written in advance. If it fires, we drop the idea.">kill</span> handling) plus H1, H2, M1, M3, L1, L2; 122/0 with open controls outside, 14/14 mutants; Odalys re-review is T-0310; no real package ru |  |
 | Oct 26, 21:22 | <span class="tag t-build">build</span> T-0276 Maren's error-text edits and the <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G6</span> suffix applied to pywidget_ui (b5cefffe); T-0231 narrowed: UnitPoint names, Button string label, Color.hex, docstrings (33055c4b); schema and renderer rows moved to T-0308. Host --both 1406/0. |  |
 | Oct 26, 20:48 | <span class="tag t-build">build</span> T-0285: package stage script tools/pkg_stage.py landed (c0a10060). Real pure set stages to 2,500,579 B on the ruled zip -9 measure, under the 3.0 MB ceiling; release stage refuses until the assets rows and certifi's full MPL-2.0 text exist. |  |
 | Oct 26, 20:41 | <span class="tag t-build">build</span> T-0250 and T-0233 landed: widget renders and timeline providers get deep copies of state; semantic colours are a closed list ('background' now says use ui.WidgetCard()); A2 accessibility modifiers and R2 time zones on date text in schema and DSL |  |
@@ -149,6 +150,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Board ticks not committed (board had others' hunks).
 - Learned: the Swift renderer has no shadow case at all (grep); a Python docstring promising SwiftUI's default needs a renderer check.
 - Learned: to prove "fails on old code", export HEAD's pywidget_ui to /tmp and run the suite with PYWIDGET_UI_PATH; quicker than mutants for copy changes.
+
+## 2026-10-26 21:25, T-0296 ticked (a05fa935, board 4e7baf0e/78e4810a + fix)
+- pkg_sandbox: deny-by-default file-read-data/xattr (metadata open), Keychain Mach names + /usr/bin/security exec denied, user-preference read/write denied, unix sockets denied, own session + killpg + lsof sweep, started line + outcome in finally, SIGTERM -> "killed", clean git env, only structured result printed, -S, 1 GiB cap. 122/0, 14/14 mutants. xcrun needs /Library/Preferences/com.apple.dt.Xcode.plist read.
+- Open: T-0310 Odalys re-review (gate for T-0299); T-0311 M2 mine. #79 rule lines unchanged; rename diff still applies.
+- Learned: com.apple.securityd has no listener here, so a lookup of it "blocks" even outside; every sandbox probe needs an outside control or it is hollow.
+- Learned: matching board lines by "T-0296" in text also hit the T-0310 line that mentions it; match on the line's own prefix. Rebuild a blob from the last board commit that isn't mine, not HEAD~1.
 {% endraw %}
 
 

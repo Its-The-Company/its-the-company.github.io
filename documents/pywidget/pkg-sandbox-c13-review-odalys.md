@@ -70,6 +70,36 @@ I read the code, the profile string and the tests, not the summary. Every runtim
 ## Board lines
 
 B1-B4 are P0 for Pernille, in one line (T-0296). H1-H2 and M1-M3 go in the same change if they are cheap, or are listed in its done-note. S1 goes on #79 for the Investors.
+
+## Re-review after T-0296 (a05fa935), 2026-10-26 21:25-21:35 ET (T-0310)
+
+Probe: pywidget/docs/reviews/pkg-sandbox-c13-probe2.py, my own fake wheels only, fixture /private/tmp/odalys-sbx2-3xkp4rw9. Every probe ran first outside any sandbox (control) and then as package code through the wrapper. n=1 each, Darwin 27.0.0, Python 3.13.18. Decoys: 3 files in the real home, 1 in /tmp, 1 in the user temp folder, 1 pref domain (plain, -currentHost, and a direct plist). Cleanup checked: 0 left. No keychain item was read. Her suite: tests/pkg_sandbox_test.py 122/0 on my run.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: Re-review after T-0296 (a05fa935), 2026-10-26 21:25-21:35 ET (T-0310), scrolls sideways" data-n="2" style="--tw:515px" markdown="1">
+
+| Blocker | Verdict | Evidence (control outside -> inside) |
+|---|---|---|
+| B1 reads | **PASS** | open -> blocked for: decoys in ~/.config, ~/Library/Application Support, home root, /tmp, user temp folder; the main checkout's CLAUDE.md; listings of ~, /Users, /private/tmp, the user temp folder, ~/wt-idris-v2 and /private/tmp/odx/wt. Also blocked: reading through a symlink, a hard link and a clonefile() made in the run dir |
+| B2 Keychain | **PASS** | bootstrap_look_up open -> blocked (1100) for SecurityServer, securityd.xpc, security.agent, security.authhost, authd, security.agent.login (securityd and secd are not registered outside either: 1102). exec /usr/bin/security and a symlink to it: open -> blocked. notifyd and trustd still open inside, so the probe is not hollow and ssl keeps working |
+| B3 preferences | **PASS** | defaults write reached the host outside (v1, v2, v3, plist present). Inside, defaults exits 1 and nothing reached the host, also with CFFIXED_USER_HOME removed and HOME set to the real home, and with -currentHost. Her "B3 prefs writable" mutant removes only the deny rule and is killed, so her test proves the rule, not CFFIXED_USER_HOME |
+| B4 logging | **PASS** | member clash: exit 3, one `outcome: error` line (FileExistsError), no traceback; corrupt pinned wheel: exit 3, `error` (BadZipFile); SIGTERM mid-run: `started` then `killed`/SIGTERM, exit 4, child and grandchild both gone; SIGKILL mid-run: the `started` line is there (outcome cannot be written, as expected) |
+
+</div>
+
+
+Also held: H1 Unix socket blocked (control open, nothing accepted); M1 uncommitted manifest refused (exit 2), also with GIT_DIR on a decoy repo (exit 2); M3 the injection line did not reach stdout; L1 `-S` set (nosite 1).
+
+Her controls are real: control_run() runs the same probe code with the same interpreter outside any sandbox, and every new probe must come back open there, the Mach probe carries an unrelated service that must stay open inside, and each blocker's rule has a mutant that the suite kills (14/14). Gaps in the suite, not in the wrapper: only 2 of the 8 Mach names are probed; there is no hard-link/clonefile read test.
+
+New residuals (sandboxed processes outliving a run; the sandbox still holds for them):
+- **H2 is only partly fixed.** A child that forks, calls setsid(), chdir("/") and closes its fds is not found by `lsof +D run_dir`. It wrote late-b.txt into the run dir 6 s after the run was logged `passed`, survivors 0. The plain setsid case is caught (survivors 1, `failed`).
+- **SIGKILL of the wrapper leaves package code running.** After SIGKILL both the child and its grandchild were still alive, with no timeout left. I killed them myself.
+- Not measurable here: the environment of another process (`ps -E` shows none even outside), and a copied `security` binary (killed with -9 outside as well).
+
+Fix candidate for both (Pernille judges): find this run's processes by their sandbox, not by open files. Use `sandbox_check(pid, "file-write-data", SANDBOX_FILTER_PATH, run_dir/x)` = allowed together with `sandbox_check(pid, NULL, 0)` = sandboxed. Only processes under this run's profile match both. Then add a sweep that kills the processes of any run that has a `started` line and no `outcome`. That is T-0317 (Pernille), P1, not a gate: survivors keep the same profile.
+
+**Verdict 2026-10-26 21:35 ET: B1, B2, B3 and B4 all pass. Real packages may run through the wrapper, under the Investors' answer on #77 (A, with A1/A2 still open).**
 {% endraw %}
 
 </div>

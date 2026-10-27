@@ -1,98 +1,52 @@
 {
  "schema": 1,
- "at": "2026-10-27T01:23:12.588611+00:00",
+ "at": "2026-10-27T02:03:47.952530+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-10-26T19:38:27-04:00"
  },
- "workers": [
-  {
-   "name": "idris",
-   "task": "[build] T-0267 T-0219 T-0258 then T-0058 Xcode lane",
-   "model": "opus",
-   "started": "2026-10-27T00:25:21.214Z",
-   "seconds": 3471,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[tools] T-0296 pkg_sandbox security blockers",
-   "model": "opus",
-   "started": "2026-10-27T01:05:24.268Z",
-   "seconds": 1068,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[build] T-0303 remove Proposals tab",
-   "model": "opus",
-   "started": "2026-10-27T01:05:29.093Z",
-   "seconds": 1063,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0304 MacBook job runner first slice",
-   "model": "opus",
-   "started": "2026-10-27T01:12:41.234Z",
-   "seconds": 631,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-0308 meter vs dollar estimate calibration",
-   "model": "opus",
-   "started": "2026-10-27T01:19:39.917Z",
-   "seconds": 212,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Pernille, Odalys x3",
+ "workers": [],
+ "who": "",
  "recent": [
   {
-   "name": "pernille",
-   "task": "[build] T-0231 T-0276 pywidget_ui rows and texts",
-   "model": "opus",
-   "started": "2026-10-27T01:12:50.375Z",
-   "seconds": null,
-   "finished": "2026-10-27T01:22:32.009000+00:00"
-  },
-  {
    "name": "odalys",
-   "task": "[test] T-0298 supervisor drop_blob test failures",
+   "task": "[tools] T-0323 T-0324 MacBook runner blockers",
    "model": "opus",
-   "started": "2026-10-27T01:12:45.367Z",
+   "started": "2026-10-27T01:42:04.838Z",
    "seconds": null,
-   "finished": "2026-10-27T01:21:34.385000+00:00"
+   "finished": "2026-10-27T02:03:12.334000+00:00"
   },
   {
-   "name": "maren",
-   "task": "[design] T-0038 L4 gallery 15 reference widgets",
+   "name": "idris",
+   "task": "[build] T-0322 TreeRules Simulator suite",
    "model": "opus",
-   "started": "2026-10-27T00:34:55.055Z",
+   "started": "2026-10-27T01:42:08.535Z",
    "seconds": null,
-   "finished": "2026-10-27T01:11:53.261000+00:00"
+   "finished": "2026-10-27T02:00:09.370000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[build] T-0290 T-0291 Lock in toggle fixes",
+   "name": "idris",
+   "task": "[review] T-0318 MacBook runner C13 review",
    "model": "opus",
-   "started": "2026-10-27T00:39:17.313Z",
+   "started": "2026-10-27T01:35:36.733Z",
    "seconds": null,
-   "finished": "2026-10-27T01:10:44.718000+00:00"
+   "finished": "2026-10-27T01:41:43.517000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-0297 Release build rsync failure then T-0234",
+   "model": "opus",
+   "started": "2026-10-27T01:25:31.113Z",
+   "seconds": null,
+   "finished": "2026-10-27T01:37:56.080000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 40,
-  "blocked_count": 45
+  "runnable_count": 45,
+  "blocked_count": 44
  },
  "meter": {
   "five_hour": {
@@ -132,42 +86,39 @@
  "next_tick": null,
  "lock_in": {
   "on": true,
-  "pool": 9,
-  "at": "2026-10-26T21:23:15-04:00"
+  "pool": 1,
+  "at": "2026-10-26T22:04:25-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-0267 T-0219 T-0258 then T-0058 Xcode lane",
-   "model": "opus",
-   "since": "2026-10-27T00:25:21.214Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[tools] T-0296 pkg_sandbox security blockers",
-   "model": "opus",
-   "since": "2026-10-27T01:05:24.268Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[build] T-0303 remove Proposals tab",
-   "model": "opus",
-   "since": "2026-10-27T01:05:29.093Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Ines",
    "state": "next",
    "task": "Ines + Odalys, P3, CORRECTIONS pass 3 s3b tags in docs Wrenna does not own (T-0109, 4eb6a81a; quotes and pages in...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P2, after the supervisor syncs (merge 6a12854c, T-0172): tools/task_context.py amendments_for matches #N...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, pkg_sandbox residuals from T-0310 re-review (pywidget/docs/reviews/pkg-sandbox-c13-review-odalys.md,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P0, re-review T-0323 (ca292444): runner account check, own Simulator, runner fetch (no repo code with...",
    "model": null,
    "since": null,
    "next": []
@@ -190,53 +141,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0267 T-0219 T-0258 then T-0058 Xcode lane",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-27T00:25:21.214Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "tools",
-    "t": "T-0296 pkg_sandbox security blockers",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-27T01:05:24.268Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "build",
-    "t": "T-0303 remove Proposals tab",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-27T01:05:29.093Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0304 MacBook job runner first slice",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-27T01:12:41.234Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "T-0308 meter vs dollar estimate calibration",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-27T01:19:39.917Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -298,14 +203,14 @@
    {
     "w": "Pernille",
     "k": "tools",
-    "t": "Pkg_sandbox C13 blockers",
+    "t": "Pkg_sandbox residuals from T-0310 re-review",
     "s": "next",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "site",
-    "t": "T-0294 part 2",
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Pkg_sandbox M2 from the C13 review",
     "s": "next",
     "o": "c"
    },
@@ -332,22 +237,64 @@
    },
    {
     "w": "Odalys",
-    "k": "build",
-    "t": "C6431019650",
+    "k": "site",
+    "t": "T-0303 part 2",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "review",
+    "t": "Re-review T-0323",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "C6431019650",
+    "t": "T-0318 review follow-ups",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
-    "k": "ops",
-    "t": "C6431319388",
+    "k": "site",
+    "t": "MacBook panel under Home > Issues, after T-0303/T-0313 leave tools/site: the...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "MacBook runner follow-ups",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "test",
+    "t": "Composer_test fails on a clean HEAD",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Board_tick add gave two lines the same ID twice on 2026-10-26",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0308 follow-up",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Answered A",
     "s": "next",
     "o": "c"
    },
@@ -536,8 +483,8 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Console view",
-    "s": "wait",
+    "t": "Console view slice 2",
+    "s": "next",
     "o": "c"
    },
    {
@@ -647,13 +594,6 @@
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "ADR-002 design read changes",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "Numpy cp315 iOS wheel, the first ADR-003 go/no-go package",
@@ -713,7 +653,7 @@
     "w": "Idris",
     "k": "build",
     "t": "Xcode slot",
-    "s": "next",
+    "s": "wait",
     "o": "c"
    },
    {
@@ -829,13 +769,6 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "C1 console view",
-    "s": "wait",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
     "t": "T-0160 REOPENED",
     "s": "next",
     "o": "c"
@@ -843,30 +776,65 @@
   ],
   "done": [
    {
-    "w": "Pernille",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0323 T-0324 MacBook runner blockers",
+    "at": "2026-10-27T02:03:12.334000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
     "k": "build",
-    "t": "T-0231 T-0276 pywidget_ui rows and texts",
-    "at": "2026-10-27T01:22:32.009000+00:00",
+    "t": "T-0322 TreeRules Simulator suite",
+    "at": "2026-10-27T02:00:09.370000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "review",
+    "t": "T-0318 MacBook runner C13 review",
+    "at": "2026-10-27T01:41:43.517000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0297 Release build rsync failure then T-0234",
+    "at": "2026-10-27T01:37:56.080000+00:00",
     "o": "c"
    },
    {
     "w": "Odalys",
-    "k": "test",
-    "t": "T-0298 supervisor drop_blob test failures",
-    "at": "2026-10-27T01:21:34.385000+00:00",
+    "k": "tools",
+    "t": "T-0304 MacBook job runner first slice",
+    "at": "2026-10-27T01:35:26.315000+00:00",
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "design",
-    "t": "T-0038 L4 gallery 15 reference widgets",
-    "at": "2026-10-27T01:11:53.261000+00:00",
+    "w": "Odalys",
+    "k": "review",
+    "t": "T-0310 pkg_sandbox re-review",
+    "at": "2026-10-27T01:33:01.456000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "T-0308 meter vs dollar estimate calibration",
+    "at": "2026-10-27T01:27:55.134000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "build",
+    "t": "T-0303 remove Proposals tab",
+    "at": "2026-10-27T01:26:08.204000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 40,
-   "wait": 22,
+   "next": 45,
+   "wait": 21,
    "blocked": 23,
    "you": 5
   }
@@ -876,7 +844,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
-  "task_done"
+  "recent"
  ]
 }

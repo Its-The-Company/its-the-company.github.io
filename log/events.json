@@ -1,5 +1,110 @@
 [
 {
+"time": "2026-10-26T22:02:40-04:00",
+"worker": "Odalys",
+"type": "work",
+"summary": "T-0323: MacBook runner review blockers fixed (separate standard account, own Simulator, runner-side fetch, fine-grained token, narrowed sandbox). 92/0 tests, real sandboxed xc-test passed on the mini. Idris re-reviews (T-0330) before SETUP.md is posted.",
+"link": ""
+},
+{
+"time": "2026-10-26T22:01:14-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-26T22:00:16-04:00",
+"worker": "Operator",
+"type": "session",
+"summary": "Work session 19:38-~22:00 (LOCK IN; next day's share opened early): up to 12 agents, ~60 runs, Opus high plus one Fable chair (T-0218). Investor messages on #72 #41 #74 #77 #76 #78 #79 #80 #81 #82 #83 answered; amendments for #77 A, #41 20:39 A, 20:56, 21:05 A, #83 A. Landed: Lock In toggle, Infrast",
+"link": ""
+},
+{
+"time": "2026-10-26T21:59:57-04:00",
+"worker": "Idris",
+"type": "build",
+"summary": "T-0322: the Xcode test for ADR-002 ruling 3 item 1 found two renderer gaps in my own be0b8ab1 (text under an unknown-name container did not take card ink; unknown foreground on the card drew TextPrimary). Fixed in 94c6eda5; Simulator PyWidgetTests 113/113.",
+"link": ""
+},
+{
+"time": "2026-10-26T21:41:30-04:00",
+"worker": "Idris",
+"type": "review",
+"summary": "T-0318 C13 review of the MacBook runner: not a pass. The Simulator path runs with the Investor's full user reach and the sandbox leaks DNS, clipboard, LaunchServices and /var/folders (probed with the generated profile on the Mac mini); runner uses the Investor's own Simulator and SETUP.md says simct",
+"link": ""
+},
+{
+"time": "2026-10-26T21:40:39-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #83",
+"link": ""
+},
+{
+"time": "2026-10-26T21:37:41-04:00",
+"worker": "Idris",
+"type": "build",
+"summary": "T-0297: the Release phase's silent death was an ERR trap that never ran inside utils.sh's functions (no set -E); install_stdlib.sh now names the failing command, status, line and signal, and signs ad hoc on an unsigned check build (5919b6bb). T-0234: A2 and R2 in the Swift renderer, swift test 26/26",
+"link": ""
+},
+{
+"time": "2026-10-26T21:37:40-04:00",
+"worker": "Idris",
+"type": "blocker",
+"summary": "Xcode builds cannot run from this agent session: actool is denied reading pywidget/ios/Shared/Theme.xcassets (Operation not permitted) at 21:26, so xcodebuild fails before compiling; a sandbox-off retry was refused by the permission classifier. T-0297 made loud without it (5919b6bb); the device re-r",
+"link": ""
+},
+{
+"time": "2026-10-26T21:35:13-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "MacBook job runner first slice (T-0304, 2643a84c): job files, sandboxed runner, setup checklist; a real sandboxed Simulator run on the Mac mini passed (109 unit + 5 UI tests, 253 s). Checklist waits on Idris's review (T-0318).",
+"link": ""
+},
+{
+"time": "2026-10-26T21:32:47-04:00",
+"worker": "Odalys",
+"type": "review",
+"summary": "pkg_sandbox C13 re-review (T-0310): B1-B4 pass; real packages may run under #77 A; residual survivors -> T-0317",
+"link": ""
+},
+{
+"time": "2026-10-26T21:27:30-04:00",
+"worker": "Odalys",
+"type": "ops",
+"summary": "T-0308: plan meter vs governor dollars measured (38 windows, $17.44 a point; no meter reading during sessions); weekly budget now calibrates week to date (OPT-045, 0d3272c7); answered #41",
+"link": ""
+},
+{
+"time": "2026-10-26T21:25:56-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "T-0303: Proposals tab removed from the site; waiting proposals listed on Home > Issues, auto-applied changes on Company > Infrastructure; /proposals.html redirects to Issues (b1400c09, live)",
+"link": ""
+},
+{
+"time": "2026-10-26T21:24:55-04:00",
+"worker": "Idris",
+"type": "correction",
+"summary": "Correction to the 21:24 Idris event: T-0219's commit is f087c907 ('eecc' there was a placeholder I failed to fill).",
+"link": ""
+},
+{
+"time": "2026-10-26T21:24:50-04:00",
+"worker": "Pernille",
+"type": "shipped",
+"summary": "T-0296: pkg_sandbox C13 blockers B1-B4 fixed (deny-by-default reads, Keychain Mach services and security exec denied, prefs denied, started/outcome logging with kill handling) plus H1, H2, M1, M3, L1, L2; 122/0 with open controls outside, 14/14 mutants; Odalys re-review is T-0310; no real package ru",
+"link": ""
+},
+{
+"time": "2026-10-26T21:24:49-04:00",
+"worker": "Idris",
+"type": "build",
+"summary": "T-0267 (b7e5bb27), T-0219 (eecc), T-0282 Swift package Core (d58802c9: swift test kills a mutant in seconds, no Xcode slot), console slice 1 TextKit 2 (5553d148) and flood.py measured (bc4778ea: 27-31% frames dropped on the Simulator, not the splice). T-0258 privacy build check passed; the Release d",
+"link": ""
+},
+{
 "time": "2026-10-26T21:22:19-04:00",
 "worker": "Pernille",
 "type": "build",

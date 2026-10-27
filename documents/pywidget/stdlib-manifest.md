@@ -145,6 +145,10 @@ Known and accepted, not module-level so not on the list: `from profiling import 
 
 
 `python3 pywidget/runtime/stdlib_manifest.py --check` exits 0 when the file matches the vendored tree, 1 when it is stale or the cut is refused, 2 when the vendored runtime is absent.
+
+### Enforcement in the build phase (Pernille, 2026-10-26, T-0339)
+
+`ios/scripts/install_stdlib.sh` no longer has a strip list of its own. In `stripped` and `zip` modes it runs `ios/scripts/stdlib_cut.py apply`, which removes exactly the `stripped` names as the table above defines them (plus the opt-1/opt-2 `.pyc`, and `Frameworks/<name>.framework` for an extension, since `install_python` has already moved the `.so`), and fails when a name removes nothing. Then `stdlib_cut.py check` fails the phase when the bundle holds an L12 denylist name (pinned in the script, not read from the manifest, so a manifest that stops stripping `ctypes` still fails), any other stripped name, or lacks a shipped name; in `zip` mode it also checks python/lib and Frameworks/ (without `Python.framework/Headers` and `_CodeSignature`) against `modes.app` or `modes.app_device_arm64` within 5%. `full` mode is unchanged and unchecked. `STDLIB_MANIFEST` overrides the manifest path for a seeded check. Host run of the real phase (no Xcode), device slice, zip: python/lib 11,321,344 B (10.80 MiB, -0.1% against the manifest), Frameworks/ 23,834,624 B (+1.8%; the `.origin` files and upstream privacy manifests the generator does not model). Tests: `tests/stdlib/test_stdlib_cut.py`, 21 (17 on a fake bundle, 4 on the real phase: stripped against full differs by exactly the 30 names, zip sizes device and simulator, a manifest that ships ctypes fails the phase); 26 seeded mutants of the reader and 4 of the phase wiring, all caught.
 {% endraw %}
 
 </div>

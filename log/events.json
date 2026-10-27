@@ -1,5 +1,299 @@
 [
 {
+"time": "2026-10-26T23:16:57-04:00",
+"worker": "Odalys",
+"type": "work",
+"summary": "T-0345: Acknowledgements notice text generated from the bundle; 6 of 9 bundled notices exact, 3 open; CPython static parts added to log/assets.md",
+"link": ""
+},
+{
+"time": "2026-10-26T23:16:11-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #85",
+"link": ""
+},
+{
+"time": "2026-10-26T23:15:34-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-26T23:13:22-04:00",
+"worker": "Ines",
+"type": "plan",
+"summary": "Report overhaul plan (#41 c6432739086): 14 board lines T-0370 to T-0383 under a new heading; items 1 and 6 (done-note fields, request issues, PROPOSAL-001 card) first on Day 6, design pick Day 7-8, fresh-reader test Day 9, archive rebuild Day 11-12; plan text in the hand-back because the file write ",
+"link": ""
+},
+{
+"time": "2026-10-26T23:13:01-04:00",
+"worker": "Pernille",
+"type": "build",
+"summary": "T-0364: a Release build can no longer ship the full stdlib with ctypes; install_stdlib.sh requires zip outside Debug and checks every mode (53/53 tests, 10/10 mutants).",
+"link": ""
+},
+{
+"time": "2026-10-26T23:12:13-04:00",
+"worker": "Maren",
+"type": "work",
+"summary": "Studied 9 real changelogs and newsletters for the report redesign (12 pages, fetch guard; gov.uk guidance refused and dropped); three candidate directions for the mockups",
+"link": ""
+},
+{
+"time": "2026-10-26T23:11:40-04:00",
+"worker": "operator",
+"type": "investor_message",
+"summary": "an Investor on #41 (23:06): overhaul the reports (content, structure, design, requests as issues, fresh-reader test, archive rebuild); answered, recorded in amendments.md, plan and design study started",
+"link": ""
+},
+{
+"time": "2026-10-26T23:11:40-04:00",
+"worker": "operator",
+"type": "session",
+"summary": "Work session 22:05-23:30, LOCK IN, up to 12 agents on Opus high; renderer node set, alpha checklist and tools, Pro screen/flag file, runner fixes (still not ready), live meter",
+"link": ""
+},
+{
+"time": "2026-10-26T23:10:31-04:00",
+"worker": "Idris",
+"type": "build",
+"summary": "T-0161: stale slot halo is now a knock-out of the card's own paint, full colour only; the old disc test went red first (91,51,230 vs the card's 68,40,175). Card mark tokens and the clocks hub pinned by pixel tests. 137/137 on the Simulator.",
+"link": ""
+},
+{
+"time": "2026-10-26T23:08:28-04:00",
+"worker": "Idris",
+"type": "review",
+"summary": "T-0366: MacBook runner re-check NOT READY. /tmp, /var/tmp and TCP localhost now denied (decoy probes), but a sandboxed job still connects to local Unix sockets (usbmuxd, cupsd) and reads /Library/Caches; SETUP.md sandbox bullet overstates. Fixes as T-0369.",
+"link": ""
+},
+{
+"time": "2026-10-26T23:07:07-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-26T23:06:21-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "T-0356: tools/alpha_run.sh for the Day 10 alpha run (one commit, one run, raw record, no verdict); 16 host tests on fakes, 20/20 mutants; dry run at HEAD found s1 A1's BridgeSlice2Tests identifier names no class",
+"link": ""
+},
+{
+"time": "2026-10-26T23:03:42-04:00",
+"worker": "Odalys",
+"type": "tools",
+"summary": "T-0351: MacBook runner sandbox now denies shared /tmp, /var/tmp and localhost; SETUP.md disclosure rewritten. Real xc-test at a1a7702a passed under both profiles (n=1 each, stale-mark test passed both). Waits on Idris's re-check (T-0366); SETUP.md not posted.",
+"link": ""
+},
+{
+"time": "2026-10-26T23:03:32-04:00",
+"worker": "Pernille",
+"type": "build",
+"summary": "T-0354: real pywidget.clipboard, device.location, device.pedometer over _pwbridge.call; shared C2 call fixture (87 cases) for Idris's XCTest; contract v5.1 additive; 27/27 mutants killed",
+"link": ""
+},
+{
+"time": "2026-10-26T22:58:55-04:00",
+"worker": "Idris",
+"type": "build",
+"summary": "T-0206 slice: the renderer draws every node and modifier the 12 premades use, in all six families; the tests caught ImageRenderer drawing a yellow placeholder for the system's progress bars. 133/133 on the Simulator.",
+"link": ""
+},
+{
+"time": "2026-10-26T22:53:45-04:00",
+"worker": "Pernille",
+"type": "build",
+"summary": "T-0340: tour page 3 fixtures for Idris's T-0193 UI test, 11 picked dates through the real runner; the picked event rides in the preview request, so the tour never touches the App Group. Found the first draft's no-write probe was hollow (the runner drops modules between runs) and replaced it.",
+"link": ""
+},
+{
+"time": "2026-10-26T22:51:13-04:00",
+"worker": "Pernille",
+"type": "build",
+"summary": "T-0339: the build phase's stdlib cut now reads the manifest; the bundle check fails on ctypes and other L12 names, and on sizes more than 5% off (python/lib 10.80 MiB on a host run of the real phase). Idris runs the Simulator build next (T-0052).",
+"link": ""
+},
+{
+"time": "2026-10-26T22:50:08-04:00",
+"worker": "odalys",
+"type": "commit",
+"summary": "T-0313: Infrastructure's auto-applied list shows each change's diff and a token-only Revert (off, waiting on the applier change T-0363, which needs approve); site_workflow_test fixed for the #74 prompt change",
+"link": ""
+},
+{
+"time": "2026-10-26T22:48:18-04:00",
+"worker": "Odalys",
+"type": "bug_fixed",
+"summary": "T-0357: generating sim_cases.json from the real scripts showed tip_splitter printing 'Tip 2E+1%' for a 20% tip (my own example, Decimal.normalize); fixed with a regression test before the case file froze it",
+"link": ""
+},
+{
+"time": "2026-10-26T22:43:38-04:00",
+"worker": "Maren",
+"type": "design",
+"summary": "T-0335: Settings screen spec (IDE spec s5.10) with code-drawn sheets in both looks, QA 0 issues; found CPython's licence rows missing from log/assets.md",
+"link": ""
+},
+{
+"time": "2026-10-26T22:42:56-04:00",
+"worker": "Pernille",
+"type": "incident",
+"summary": "T-0317 test run: a fence-less sandbox-identity sweep in tools/pkg_sandbox.py matched and SIGKILLed about 14 of the Mac mini's own sandboxed user agents (cfprefsd, sharingd, usernoted, NotificationCenter and others; their profiles allow /private/tmp writes); launchd relaunched them. Fixed in 8e849e98",
+"link": ""
+},
+{
+"time": "2026-10-26T22:42:56-04:00",
+"worker": "Pernille",
+"type": "shipped",
+"summary": "T-0317 and T-0311: pkg_sandbox now finds a run's processes by sandbox (no lsof), a watchdog and an orphan sweep cover a SIGKILLed wrapper, and every pinned file needs a terms_guard fetch record plus PyPI's blake2b-256 path hash. Suite 182/0 (old wrapper 154/27), 27/27 mutants killed; re-review T-036",
+"link": ""
+},
+{
+"time": "2026-10-26T22:42:54-04:00",
+"worker": "Maren",
+"type": "design",
+"summary": "T-0342: C51 error-voice previews drawn by code in both approved looks (A-error-voice-phone.png, B-error-voice-phone.png), real texts from pywidget_ui before and as built, QA 0; question updated with recommendation A",
+"link": ""
+},
+{
+"time": "2026-10-26T22:40:16-04:00",
+"worker": "Odalys",
+"type": "proposal",
+"summary": "Found issue-proposal auto-apply never switched on (#67's approval was not a plain 'approve'); filed proposal #84 for one approve",
+"link": ""
+},
+{
+"time": "2026-10-26T22:39:31-04:00",
+"worker": "Ines",
+"type": "plan",
+"summary": "T-0332: Day 10 alpha and Day 13 freeze pass rules written before evidence; device modules and Projects/Files found without build lines, now T-0353..T-0355",
+"link": ""
+},
+{
+"time": "2026-10-26T22:38:15-04:00",
+"worker": "Maren",
+"type": "milestone",
+"summary": "T-0334 done: gallery screen build spec (IDE spec s5.9) for T-0191, three code-drawn sheets from the 12 premade trees, QA 0 issues, strings DRAFT C51",
+"link": ""
+},
+{
+"time": "2026-10-26T22:37:09-04:00",
+"worker": "Odalys",
+"type": "task_done",
+"summary": "T-0343: xc.sh now stops Xcode helper daemons left running under a sandbox before each build (while holding the machine lock); the MacBook runner stops the ones its own job leaves. First real run found and stopped one.",
+"link": ""
+},
+{
+"time": "2026-10-26T22:36:59-04:00",
+"worker": "Idris",
+"type": "review",
+"summary": "T-0330 re-review of the MacBook runner: account wall, own Simulator, runner fetch and one-repo token pass; not ready to post SETUP.md: sandbox still reaches /tmp and localhost, and the disclosure omits external drives, /tmp, local network and process command lines. Fixes T-0351/T-0352 for Odalys.",
+"link": ""
+},
+{
+"time": "2026-10-26T22:35:49-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "T-0336: coded 253 saved low reviews from four rival apps by what was paywalled; paying to run code (51) and billing that failed one-time buyers (50) lead, packages 0; verdicts on the memo's three planning values left for Ines",
+"link": ""
+},
+{
+"time": "2026-10-26T22:32:39-04:00",
+"worker": "Maren",
+"type": "design",
+"summary": "T-0333 Pro screen redrawn to the revenue-gap memo: four flag-file variants, eight purchase states, three entry points, redline and 53 DRAFT strings for Idris's T-0031; sheets cut from up to 976 KB to under 300 KB with a new palette tool; C51 question queued",
+"link": ""
+},
+{
+"time": "2026-10-26T22:32:30-04:00",
+"worker": "Pernille",
+"type": "work",
+"summary": "T-0341: Maren's T-0307 error-text verdicts applied to pywidget_ui (DRAFT C51); three wrong did-you-mean hints fixed by a suffix rule; 14/14 mutants killed",
+"link": ""
+},
+{
+"time": "2026-10-26T22:31:57-04:00",
+"worker": "Odalys",
+"type": "verification",
+"summary": "Verified the 22:05 proposal applies (#74 #76 #78 #81) and #80's hand-applied hook: diffs equal, tests pass, 148 refusals replayed 146 allowed/2 blocked; #81 turned on file proposals only, issue auto-apply still off",
+"link": ""
+},
+{
+"time": "2026-10-26T22:30:35-04:00",
+"worker": "Pernille",
+"type": "build",
+"summary": "T-0338: Pro flag file pywidget/runtime/pro-flags.json with five PROPOSAL-001/memo variants, validator and Swift contract for T-0031; 38 host tests on 3.9 and 3.13, 22 of 22 mutants killed",
+"link": ""
+},
+{
+"time": "2026-10-26T22:30:12-04:00",
+"worker": "Odalys",
+"type": "fix",
+"summary": "T-0314: composer_test red since my own T-0177; bisected, fixed chat.js back to one Issues link (95ed15de), 178/0",
+"link": ""
+},
+{
+"time": "2026-10-26T22:26:45-04:00",
+"worker": "Odalys",
+"type": "tools",
+"summary": "T-0315: board task IDs now issued once under the board lock (reserved mark, add refuses a taken ID, id --reserve, dups check). Concurrent-add test 25/0, 17 fails on the old tool, 12/12 mutants killed; live check finds only T-0308 twice in the archive.",
+"link": ""
+},
+{
+"time": "2026-10-26T22:26:44-04:00",
+"worker": "Pernille",
+"type": "work",
+"summary": "T-0280: the native build toolchain is pinned. 20 wheels (cibuildwheel 4.3.4 and what it and the build backends need) with sha256 and PyPI's blake2b-256, 20 of 20 verified; 4 Homebrew tools recorded with bottle sha256. Found cibuildwheel would fetch CPython 3.15.0 from python.org, not our 3.15.1.",
+"link": ""
+},
+{
+"time": "2026-10-26T22:25:12-04:00",
+"worker": "Odalys",
+"type": "tool",
+"summary": "task_context packets now find Investor rulings folded into CLAUDE.md and worker-rules rule 5; unresolved ruling lines 18/32 -> 11/31 on one board snapshot (T-0239)",
+"link": ""
+},
+{
+"time": "2026-10-26T22:23:22-04:00",
+"worker": "Odalys",
+"type": "tool",
+"summary": "T-0316: the plan meter is now read during a session from its own stream (OPT-046); baseline median 10 points unseen at session end over 32 sessions",
+"link": ""
+},
+{
+"time": "2026-10-26T22:18:28-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "Chair ruling T-0331: Day 6-10 Xcode queue (main, worktree, MacBook none until installed); T-0207 raised to P0 as the line that moves the Day 10 alpha; T-0212, T-0032, T-0044 to 1.1; three half-lines moved to Odalys and Pernille",
+"link": ""
+},
+{
+"time": "2026-10-26T22:15:08-04:00",
+"worker": "Odalys",
+"type": "finding",
+"summary": "T-0325: the 21:26 actool 'Operation not permitted' was not the Claude Code sandbox (off) nor TCC, but a sandboxed ibtoold daemon left by my own T-0304 runner trial and reused by Idris's builds; reproduced on the Mac mini. No settings change asked of the Investors; findings on #83, guard work T-0343/",
+"link": ""
+},
+{
+"time": "2026-10-26T22:15:00-04:00",
+"worker": "Maren",
+"type": "review",
+"summary": "T-0307: read 22 pywidget_ui error texts; 13 changes incl. three wrong hints (onAccent->accent, PST->MST, UTC+2->UTC); asked the Investors to approve one console error voice (C51)",
+"link": ""
+},
+{
+"time": "2026-10-26T22:13:07-04:00",
+"worker": "Ines",
+"type": "plan",
+"summary": "Board refill Day 5 22:10: 10 lines T-0331..T-0340 (Ines 2, Maren 3, Wrenna 2, Pernille 3); T-0191 corrected to the 5 free / 7 Pro split",
+"link": ""
+},
+{
 "time": "2026-10-26T22:02:40-04:00",
 "worker": "Odalys",
 "type": "work",

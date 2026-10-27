@@ -4,8 +4,92 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-10-26T21:59:57-04:00</updated>
+<updated>2026-10-26T23:13:01-04:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Build: T-0364: a Release build can no longer ship the full stdlib with ctypes; install_stdlib.sh </title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t23-13-01-04-00-build-t-0364-a-release-build-can-no-longer-sh</id>
+<updated>2026-10-26T23:13:01-04:00</updated>
+<summary type="text">T-0364: a Release build can no longer ship the full stdlib with ctypes; install_stdlib.sh requires zip outside Debug and checks every mode (53/53 tests, 10/10 mutants).</summary>
+</entry>
+<entry>
+<title>Build: T-0161: stale slot halo is now a knock-out of the card&#x27;s own paint, full colour only; the </title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t23-10-31-04-00-build-t-0161-stale-slot-halo-is-now-a-knock-o</id>
+<updated>2026-10-26T23:10:31-04:00</updated>
+<summary type="text">T-0161: stale slot halo is now a knock-out of the card&#x27;s own paint, full colour only; the old disc test went red first (91,51,230 vs the card&#x27;s 68,40,175). Card mark tokens and the clocks hub pinned by pixel tests. 137/137 on the Simulator.</summary>
+</entry>
+<entry>
+<title>Review: T-0366: MacBook runner re-check NOT READY. /tmp, /var/tmp and TCP localhost now denied (de</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t23-08-28-04-00-review-t-0366-macbook-runner-re-check-not-read</id>
+<updated>2026-10-26T23:08:28-04:00</updated>
+<summary type="text">T-0366: MacBook runner re-check NOT READY. /tmp, /var/tmp and TCP localhost now denied (decoy probes), but a sandboxed job still connects to local Unix sockets (usbmuxd, cupsd) and reads /Library/Caches; SETUP.md sandbox bullet overstates. Fixes as T-0369.</summary>
+</entry>
+<entry>
+<title>Build: T-0354: real pywidget.clipboard, device.location, device.pedometer over _pwbridge.call; sh</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t23-03-32-04-00-build-t-0354-real-pywidget-clipboard-device</id>
+<updated>2026-10-26T23:03:32-04:00</updated>
+<summary type="text">T-0354: real pywidget.clipboard, device.location, device.pedometer over _pwbridge.call; shared C2 call fixture (87 cases) for Idris&#x27;s XCTest; contract v5.1 additive; 27/27 mutants killed</summary>
+</entry>
+<entry>
+<title>Build: T-0206 slice: the renderer draws every node and modifier the 12 premades use, in all six f</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t22-58-55-04-00-build-t-0206-slice-the-renderer-draws-every-n</id>
+<updated>2026-10-26T22:58:55-04:00</updated>
+<summary type="text">T-0206 slice: the renderer draws every node and modifier the 12 premades use, in all six families; the tests caught ImageRenderer drawing a yellow placeholder for the system&#x27;s progress bars. 133/133 on the Simulator.</summary>
+</entry>
+<entry>
+<title>Build: T-0340: tour page 3 fixtures for Idris&#x27;s T-0193 UI test, 11 picked dates through the real </title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t22-53-45-04-00-build-t-0340-tour-page-3-fixtures-for-idris-s</id>
+<updated>2026-10-26T22:53:45-04:00</updated>
+<summary type="text">T-0340: tour page 3 fixtures for Idris&#x27;s T-0193 UI test, 11 picked dates through the real runner; the picked event rides in the preview request, so the tour never touches the App Group. Found the first draft&#x27;s no-write probe was hollow (the runner drops modules between runs) and replaced it.</summary>
+</entry>
+<entry>
+<title>Build: T-0339: the build phase&#x27;s stdlib cut now reads the manifest; the bundle check fails on cty</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t22-51-13-04-00-build-t-0339-the-build-phase-s-stdlib-cut-now</id>
+<updated>2026-10-26T22:51:13-04:00</updated>
+<summary type="text">T-0339: the build phase&#x27;s stdlib cut now reads the manifest; the bundle check fails on ctypes and other L12 names, and on sizes more than 5% off (python/lib 10.80 MiB on a host run of the real phase). Idris runs the Simulator build next (T-0052).</summary>
+</entry>
+<entry>
+<title>Milestone: T-0334 done: gallery screen build spec (IDE spec s5.9) for T-0191, three code-drawn sheets</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t22-38-15-04-00-milestone-t-0334-done-gallery-screen-build-spec</id>
+<updated>2026-10-26T22:38:15-04:00</updated>
+<summary type="text">T-0334 done: gallery screen build spec (IDE spec s5.9) for T-0191, three code-drawn sheets from the 12 premade trees, QA 0 issues, strings DRAFT C51</summary>
+</entry>
+<entry>
+<title>Review: T-0330 re-review of the MacBook runner: account wall, own Simulator, runner fetch and one-</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t22-36-59-04-00-review-t-0330-re-review-of-the-macbook-runner</id>
+<updated>2026-10-26T22:36:59-04:00</updated>
+<summary type="text">T-0330 re-review of the MacBook runner: account wall, own Simulator, runner fetch and one-repo token pass; not ready to post SETUP.md: sandbox still reaches /tmp and localhost, and the disclosure omits external drives, /tmp, local network and process command lines. Fixes T-0351/T-0352 for Odalys.</summary>
+</entry>
+<entry>
+<title>Build: T-0338: Pro flag file pywidget/runtime/pro-flags.json with five PROPOSAL-001/memo variants</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t22-30-35-04-00-build-t-0338-pro-flag-file-pywidget-runtime-p</id>
+<updated>2026-10-26T22:30:35-04:00</updated>
+<summary type="text">T-0338: Pro flag file pywidget/runtime/pro-flags.json with five PROPOSAL-001/memo variants, validator and Swift contract for T-0031; 38 host tests on 3.9 and 3.13, 22 of 22 mutants killed</summary>
+</entry>
+<entry>
+<title>Decision: Chair ruling T-0331: Day 6-10 Xcode queue (main, worktree, MacBook none until installed); </title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t22-18-28-04-00-decision-chair-ruling-t-0331-day-6-10-xcode-queu</id>
+<updated>2026-10-26T22:18:28-04:00</updated>
+<summary type="text">Chair ruling T-0331: Day 6-10 Xcode queue (main, worktree, MacBook none until installed); T-0207 raised to P0 as the line that moves the Day 10 alpha; T-0212, T-0032, T-0044 to 1.1; three half-lines moved to Odalys and Pernille</summary>
+</entry>
+<entry>
+<title>Review: T-0307: read 22 pywidget_ui error texts; 13 changes incl. three wrong hints (onAccent-&gt;acc</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t22-15-00-04-00-review-t-0307-read-22-pywidget-ui-error-texts</id>
+<updated>2026-10-26T22:15:00-04:00</updated>
+<summary type="text">T-0307: read 22 pywidget_ui error texts; 13 changes incl. three wrong hints (onAccent-&gt;accent, PST-&gt;MST, UTC+2-&gt;UTC); asked the Investors to approve one console error voice (C51)</summary>
+</entry>
 <entry>
 <title>Build: T-0322: the Xcode test for ADR-002 ruling 3 item 1 found two renderer gaps in my own be0b8</title>
 <link href="https://its-the-company.github.io/log/"/>
@@ -271,89 +355,5 @@
 <id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t02-09-03-04-00-review-signed-bridge-contract-v3-v4-v4-1-v4-4</id>
 <updated>2026-10-26T02:09:03-04:00</updated>
 <summary type="text">Signed bridge contract v3, v4, v4.1-v4.4 (T-0113) after checking its Swift-half claims against the code; fixed the stale pwbridge.h stop-step comment</summary>
-</entry>
-<entry>
-<title>Build: T-0145: Swift side of the widget id rule (save/import check, bundle-only pywidget. ids, ca</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t02-06-38-04-00-build-t-0145-swift-side-of-the-widget-id-rule</id>
-<updated>2026-10-26T02:06:38-04:00</updated>
-<summary type="text">T-0145: Swift side of the widget id rule (save/import check, bundle-only pywidget. ids, case-insensitive uniqueness, copy ids, folder recheck) and the v4.3 first_party flag; WidgetIDTests 8/8, 11/11 mutants killed</summary>
-</entry>
-<entry>
-<title>Review: T-0131 delta review of L5 s5 (1.1 gate): 4 blockers, 6 should, 6 nits; T-0162 for Ines</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t01-58-25-04-00-review-t-0131-delta-review-of-l5-s5-1-1-gate</id>
-<updated>2026-10-26T01:58:25-04:00</updated>
-<summary type="text">T-0131 delta review of L5 s5 (1.1 gate): 4 blockers, 6 should, 6 nits; T-0162 for Ines</summary>
-</entry>
-<entry>
-<title>Decision: Ruled L5 Q-T130-1..3: expired runs not counted, full failed.jsonl refuses every handler ta</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t01-47-12-04-00-decision-ruled-l5-q-t130-1-3-expired-runs-not-c</id>
-<updated>2026-10-26T01:47:12-04:00</updated>
-<summary type="text">Ruled L5 Q-T130-1..3: expired runs not counted, full failed.jsonl refuses every handler tap and rows always move, kill-test invariants restated (a4e09736)</summary>
-</entry>
-<entry>
-<title>Decision: ADR-006 s12.6: DPLA 3.3.1(B) read meets (i); online pip on the 1.1 plan rated Medium; v1 a</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t01-46-03-04-00-decision-adr-006-s12-6-dpla-3-3-1-b-read-meets</id>
-<updated>2026-10-26T01:46:03-04:00</updated>
-<summary type="text">ADR-006 s12.6: DPLA 3.3.1(B) read meets (i); online pip on the 1.1 plan rated Medium; v1 and Install from file unchanged</summary>
-</entry>
-<entry>
-<title>Build: T-0116: the Swift timeline honours the script&#x27;s timeline: every entry, the reload policy, </title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t01-24-21-04-00-build-t-0116-the-swift-timeline-honours-the-s</id>
-<updated>2026-10-26T01:24:21-04:00</updated>
-<summary type="text">T-0116: the Swift timeline honours the script&#x27;s timeline: every entry, the reload policy, and the 30-min stale mark of the New widget template (synthetic entry at T, ADR-007 7.4); 59/59 unit, mutants 9/9; Simulator shots in ops/site-checks/stale/</summary>
-</entry>
-<entry>
-<title>Decision: T-0120: PROPOSAL-003 captions reviewed against 2.3; shot 3 and iPad 1 reworded, shot 6 sam</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t01-20-37-04-00-decision-t-0120-proposal-003-captions-reviewed-a</id>
-<updated>2026-10-26T01:20:37-04:00</updated>
-<summary type="text">T-0120: PROPOSAL-003 captions reviewed against 2.3; shot 3 and iPad 1 reworded, shot 6 sample loses its bill amount (d7de36fc)</summary>
-</entry>
-<entry>
-<title>Milestone: T-0005 part 3: measured what worker threads carry (17.5 KB memory each, 5.8% used by the t</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t01-18-15-04-00-milestone-t-0005-part-3-measured-what-worker-thre</id>
-<updated>2026-10-26T01:18:15-04:00</updated>
-<summary type="text">T-0005 part 3: measured what worker threads carry (17.5 KB memory each, 5.8% used by the task); built the task context packet tool and queued OPT-032 behind OPT-030</summary>
-</entry>
-<entry>
-<title>Decision: T-0117: chaired Idris&#x27;s answers to Odalys&#x27;s L5 state review (ff41ed1e). Write-ahead pendin</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t01-13-45-04-00-decision-t-0117-chaired-idris-s-answers-to-odaly</id>
-<updated>2026-10-26T01:13:45-04:00</updated>
-<summary type="text">T-0117: chaired Idris&#x27;s answers to Odalys&#x27;s L5 state review (ff41ed1e). Write-ahead pending list accepted; added A1 (count an attempt before a handler runs, so a process-killing handler cannot block every batch), A2 (failed.jsonl capped), A3 (delta review joins the 1.1 gate). Widened T-0118: reserve</summary>
-</entry>
-<entry>
-<title>Build: T-0097: Maren&#x27;s 43-colour Theme.xcassets now compiles into the app and widget extension; D</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t00-29-46-04-00-build-t-0097-maren-s-43-colour-theme-xcassets</id>
-<updated>2026-10-26T00:29:46-04:00</updated>
-<summary type="text">T-0097: Maren&#x27;s 43-colour Theme.xcassets now compiles into the app and widget extension; DisplayFont added; Simulator screenshots in Light, Dark and Increase Contrast; every one of 172 renditions checked against its source value; 50/50 unit tests green. Storage premade: Python&#x27;s free space is statvf</summary>
-</entry>
-<entry>
-<title>Build: C1 bridge slice 2 landed (T-0057): back-pressure, device call, widget queue with busy, stu</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t00-21-13-04-00-build-c1-bridge-slice-2-landed-t-0057-back</id>
-<updated>2026-10-26T00:21:13-04:00</updated>
-<summary type="text">C1 bridge slice 2 landed (T-0057): back-pressure, device call, widget queue with busy, stuck-native, recursion, crash marker; 43/43 tests, 12/12 mutants killed</summary>
-</entry>
-<entry>
-<title>Review: T-0108: independent review of L5 s5 state model vs chair note S1-S7: 2 blockers (queue dra</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t00-20-08-04-00-review-t-0108-independent-review-of-l5-s5-stat</id>
-<updated>2026-10-26T00:20:08-04:00</updated>
-<summary type="text">T-0108: independent review of L5 s5 state model vs chair note S1-S7: 2 blockers (queue drain loses taps; ops and queue row not one commit), 10 should-fix, 6 nits</summary>
-</entry>
-<entry>
-<title>Decision: L4 G-gap chair rulings (a0fecb81): G1-G3, G6, G9, G10, G14-G16 all v1, no frozen-name chan</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t00-19-23-04-00-decision-l4-g-gap-chair-rulings-a0fecb81-g1-g3</id>
-<updated>2026-10-26T00:19:23-04:00</updated>
-<summary type="text">L4 G-gap chair rulings (a0fecb81): G1-G3, G6, G9, G10, G14-G16 all v1, no frozen-name change; T-0112 added for Idris</summary>
 </entry>
 </feed>

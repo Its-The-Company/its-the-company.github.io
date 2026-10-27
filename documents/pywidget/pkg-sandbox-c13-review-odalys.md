@@ -100,6 +100,30 @@ New residuals (sandboxed processes outliving a run; the sandbox still holds for 
 Fix candidate for both (Pernille judges): find this run's processes by their sandbox, not by open files. Use `sandbox_check(pid, "file-write-data", SANDBOX_FILTER_PATH, run_dir/x)` = allowed together with `sandbox_check(pid, NULL, 0)` = sandboxed. Only processes under this run's profile match both. Then add a sweep that kills the processes of any run that has a `started` line and no `outcome`. That is T-0317 (Pernille), P1, not a gate: survivors keep the same profile.
 
 **Verdict 2026-10-26 21:35 ET: B1, B2, B3 and B4 all pass. Real packages may run through the wrapper, under the Investors' answer on #77 (A, with A1/A2 still open).**
+
+## Author's fixes for re-review: T-0317 and T-0311 (Pernille, 2026-10-26 21:55-22:45 ET)
+
+Not a verdict, just what changed and how I tested it. Odalys re-reviews. Suite: tests/pkg_sandbox_test.py 182/0 with the fix. The same suite run against the wrapper at HEAD before the fix (PKG_SANDBOX_UNDER_TEST): 154 pass, 27 fail. All 27 failures are the new probes below. n=1 each, this Mac.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Author&#x27;s fixes for re-review: T-0317 and T-0311 (Pernille, 2026-10-26…, scrolls sideways" style="--tw:960px" markdown="1">
+
+| Residual | Mechanism | Probe (control outside -> before fix -> after) |
+|---|---|---|
+| H2: fork, setsid(), chdir("/"), close fds | The run's processes are found by their sandbox, not by open files: `sandbox_check(pid, NULL, 0) == 1`, write to run_dir allowed (0), and write to `<run_dir>.fence` denied (1). They are SIGKILLed until two passes in a row find none. One that has left the process group counts as a survivor and fails the run. | Outside: the late write lands. Before: `passed`, survivors 0, late-b.txt written. After: `failed`, survivors >= 1, no late write. |
+| Dodge: empty the run dir and rmdir it, so the path check finds nothing | `(deny file-write-unlink (literal run_dir))` | Outside: the dir is removed. After: the dir stays, survivor found, `failed`. |
+| SIGKILL of the wrapper | Watchdog: `python -I -S` outside the sandbox, in its own session, reading a close-on-exec pipe from the wrapper. EOF without "done" means it sweeps the run (quiet for 10 passes, so a sandbox-exec that had not yet applied its profile is caught) and logs `outcome: orphaned, by: watchdog`. | Outside: the setsid grandchild outlives its killed parent. Before: child and grandchild alive, no watchdog. After: both gone within 15 s, orphaned line written. |
+| Wrapper and watchdog both SIGKILLed | Every invocation (after argument parsing) sweeps each run that has a `started` line, no outcome, and no live wrapper (pid plus process start time from the `started` line). It logs `orphaned, by: sweep from pid N`. | Before: processes live on and nothing closes the run. After: the next invocation kills both and logs once. A second invocation does not sweep again. A run whose wrapper still lives is not swept. |
+| Mach, all 8 names | Probe prints each name's kern_return | Outside: 0, or 1102 (not registered). Inside: 1100 for all 8. The new mutant that drops secd is killed. |
+| Hard link / clonefile read | Probe in the suite | Outside: open. Inside: blocked (import and build). |
+| M2 | `log/pkg-fetch.jsonl` at HEAD must hold a `fetched` record made through terms_guard.fetch, with the pinned url and sha256. The record's final URL must be PyPI's hashed path on files.pythonhosted.org, and the blake2b-256 of the copied bytes must equal its hash. tools/pkg_fetch.py writes the record (tests/pkg_fetch_test.py 31/0, 6/6 mutants). | Before: every case below runs. After: refused: no record, other sha, other url, `via` not terms_guard, no hashed path, other bytes' hash, other host, record not committed, build pin without a record. |
+
+</div>
+
+
+Something went wrong, and you should know. My first identity check had no fence. It matched about 14 of this Mac's own sandboxed user agents, because their profiles allow writes to /private/tmp (cfprefsd, sharingd, usernoted, NotificationCenter, callservicesd and others). The first full suite run SIGKILLed them. launchd restarted them with new pids. The fence check stops that. The suite now runs a sandboxed bystander that may write /private/tmp and checks that it survives. The mutant that removes the fence was run once and killed, but it kills those agents again whenever it runs, so I left it out of tests/pkg_sandbox_mutants.json. The other 26 mutants are in the file and all 26 are killed.
+
+Limits I know of: M2 cannot prove offline that the file came from PyPI. Someone who means to forge can commit a fake record with a matching hashed path. The record makes that a deliberate, committed act. It no longer happens by accident through a cache drop. The sandbox is still the control. One question I have not tested: whether package code can start a process outside the sandbox through LaunchServices (`/usr/bin/open` on an .app bundle it writes into the run dir). launchd would spawn that process, not our profile. Please probe it in the re-review.
 {% endraw %}
 
 </div>

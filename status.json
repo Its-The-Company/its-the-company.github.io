@@ -1,77 +1,77 @@
 {
  "schema": 1,
- "at": "2026-10-27T02:03:47.952530+00:00",
+ "at": "2026-10-27T03:18:22.231038+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-26T19:38:27-04:00"
+  "started": "2026-10-26T22:05:28-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "odalys",
-   "task": "[tools] T-0323 T-0324 MacBook runner blockers",
+   "task": "[release] T-0345 acknowledgements notices",
    "model": "opus",
-   "started": "2026-10-27T01:42:04.838Z",
+   "started": "2026-10-27T02:36:19.400Z",
    "seconds": null,
-   "finished": "2026-10-27T02:03:12.334000+00:00"
+   "finished": "2026-10-27T03:17:13.039000+00:00"
   },
   {
-   "name": "idris",
-   "task": "[build] T-0322 TreeRules Simulator suite",
+   "name": "ines",
+   "task": "[plan] report overhaul plan and board lines",
    "model": "opus",
-   "started": "2026-10-27T01:42:08.535Z",
+   "started": "2026-10-27T03:08:27.461Z",
    "seconds": null,
-   "finished": "2026-10-27T02:00:09.370000+00:00"
+   "finished": "2026-10-27T03:14:03.904000+00:00"
   },
   {
-   "name": "idris",
-   "task": "[review] T-0318 MacBook runner C13 review",
+   "name": "pernille",
+   "task": "[build] T-0364 stdlib full-mode check",
    "model": "opus",
-   "started": "2026-10-27T01:35:36.733Z",
+   "started": "2026-10-27T02:51:38.292Z",
    "seconds": null,
-   "finished": "2026-10-27T01:41:43.517000+00:00"
+   "finished": "2026-10-27T03:13:17.570000+00:00"
   },
   {
-   "name": "idris",
-   "task": "[build] T-0297 Release build rsync failure then T-0234",
+   "name": "maren",
+   "task": "[design] report design references study",
    "model": "opus",
-   "started": "2026-10-27T01:25:31.113Z",
+   "started": "2026-10-27T03:08:35.361Z",
    "seconds": null,
-   "finished": "2026-10-27T01:37:56.080000+00:00"
+   "finished": "2026-10-27T03:12:58.375000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 45,
-  "blocked_count": 44
+  "runnable_count": 58,
+  "blocked_count": 48
  },
  "meter": {
   "five_hour": {
-   "pct": 1.0,
-   "resets_at": "2026-10-27T03:00:00.116350+00:00",
+   "pct": 63.0,
+   "resets_at": "2026-10-27T02:59:59.934312+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 99.0,
+   "left": 37.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 36.0,
-   "resets_at": "2026-11-01T07:00:00.116369+00:00",
+   "pct": 47.0,
+   "resets_at": "2026-11-01T06:59:59.934328+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 64.0,
+   "left": 53.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 2.0,
-   "resets_at": "2026-11-01T07:00:00.116499+00:00",
+   "pct": 3.0,
+   "resets_at": "2026-11-01T06:59:59.934465+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-26T19:38:26.973493-04:00"
+  "read_at": "2026-10-26T22:05:27.493890-04:00"
  },
  "ui": {
-  "week_pct": 0.078,
+  "week_pct": 0.079,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -87,14 +87,30 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-10-26T22:04:25-04:00"
+  "at": "2026-10-26T23:19:03-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
   {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, after T-0354 (a779625e) and T-0340 (15cd5a0f): (1) T-0340 found that...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Ines",
    "state": "next",
-   "task": "Ines + Odalys, P3, CORRECTIONS pass 3 s3b tags in docs Wrenna does not own (T-0109, 4eb6a81a; quotes and pages in...",
+   "task": "Ines, P1, alpha checklist fixes from T-0356 (5fdd375e, tools/alpha_rows.tsv): (1) chair line (s0.6): A1 names...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P1, report overhaul step 1 c6432739086 item 4): land the design references study. Done 23:08-23:20 on...",
    "model": null,
    "since": null,
    "next": []
@@ -102,15 +118,7 @@
   {
    "name": "Odalys",
    "state": "next",
-   "task": "Odalys, P2, after the supervisor syncs (merge 6a12854c, T-0172): tools/task_context.py amendments_for matches #N...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, pkg_sandbox residuals from T-0310 re-review (pywidget/docs/reviews/pkg-sandbox-c13-review-odalys.md,...",
+   "task": "Odalys, P1, C13 re-review of tools/pkg_sandbox.py after T-0317/T-0311 (8e849e98; notes at the end of...",
    "model": null,
    "since": null,
    "next": []
@@ -118,7 +126,7 @@
   {
    "name": "Idris",
    "state": "next",
-   "task": "Idris, P0, re-review T-0323 (ca292444): runner account check, own Simulator, runner fetch (no repo code with...",
+   "task": "Idris, P0, L3 device run: CPython cold start, peak and the real extension memory ceiling (allocation ramp,...",
    "model": null,
    "since": null,
    "next": []
@@ -130,19 +138,39 @@
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, read the T-0233 error texts (Pernille 8ea1bcf5, pywidget/python/pywidget_ui/__init__.py, marked DRAFT...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
   "run": [],
   "open": [
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "After T-0354",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Alpha checklist fixes from T-0356",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Report overhaul step 1",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "review",
+    "t": "C13 re-review of tools/pkg_sandbox.py after...",
+    "s": "next",
+    "o": "c"
+   },
    {
     "w": "Odalys",
     "k": "ops",
@@ -161,21 +189,14 @@
    {
     "w": "Ines",
     "k": "research",
-    "t": "CORRECTIONS pass 3 s3b tags in docs Wrenna does not own",
+    "t": "CORRECTIONS pass 3 s3b tags in docs Wrenna...",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "After the supervisor syncs",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "31 closed-hunt scripts under research/hunt/ call urllib/curl directly,...",
+    "t": "31 closed-hunt scripts under research/hunt/...",
     "s": "next",
     "o": "c"
    },
@@ -194,58 +215,9 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Approved",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "tools",
-    "t": "Pkg_sandbox residuals from T-0310 re-review",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "tools",
-    "t": "Pkg_sandbox M2 from the C13 review",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "T-0296 follow-on reminder",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Approved",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Approvals of 2026-10-26 20:51-20:52",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "T-0303 part 2",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "review",
-    "t": "Re-review T-0323",
     "s": "next",
     "o": "c"
    },
@@ -259,7 +231,7 @@
    {
     "w": "Odalys",
     "k": "site",
-    "t": "MacBook panel under Home > Issues, after T-0303/T-0313 leave tools/site: the...",
+    "t": "MacBook panel under Home > Issues, after...",
     "s": "next",
     "o": "c"
    },
@@ -272,29 +244,29 @@
    },
    {
     "w": "Odalys",
-    "k": "test",
-    "t": "Composer_test fails on a clean HEAD",
+    "k": "tools",
+    "t": "Runner rule",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Board_tick add gave two lines the same ID twice on 2026-10-26",
+    "t": "T-0330 H3 residue",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T-0308 follow-up",
+    "t": "NEEDS \"approve\"",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Answered A",
+    "t": "T-0366 follow-ups on the MacBook runner sandbox",
     "s": "next",
     "o": "c"
    },
@@ -315,7 +287,7 @@
    {
     "w": "Wrenna",
     "k": "browser",
-    "t": "Read developer.apple.com \"Keeping a widget up to date\", WidgetPushHandler,...",
+    "t": "Read developer.apple.com \"Keeping a widget...",
     "s": "blocked",
     "o": "c"
    },
@@ -329,7 +301,7 @@
    {
     "w": "Idris",
     "k": "test",
-    "t": "One Simulator preview snapshot for the names freeze",
+    "t": "One Simulator preview snapshot for the names...",
     "s": "next",
     "o": "c"
    },
@@ -364,14 +336,14 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "L9 device probe once a device or Simulator is free",
+    "t": "L9 device probe once a device or Simulator...",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Wrenna",
     "k": "research",
-    "t": "Unassigned, P2, person's browser checks on developer.apple.com for the [M]...",
+    "t": "Unassigned, P2, person's browser checks on...",
     "s": "next",
     "o": "c"
    },
@@ -426,7 +398,7 @@
    {
     "w": "Wrenna",
     "k": "research",
-    "t": "Read developer.apple.com/documentation/mapkit/mkgeocodingrequest.md via...",
+    "t": "Read...",
     "s": "next",
     "o": "c"
    },
@@ -440,7 +412,7 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Spike owner, P3, C2 Info.plist strings and privacy manifest",
+    "t": "Spike owner, P3, C2 Info.plist strings and...",
     "s": "next",
     "o": "c"
    },
@@ -476,7 +448,7 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "C2-Q1 Swift-only location fix in the widget extension",
+    "t": "C2-Q1 Swift-only location fix in the widget...",
     "s": "wait",
     "o": "c"
    },
@@ -497,7 +469,7 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Location-declined state for the \"distance to a saved place\" premade",
+    "t": "Location-declined state for the \"distance to...",
     "s": "next",
     "o": "c"
    },
@@ -518,7 +490,7 @@
    {
     "w": "Maren",
     "k": "design",
-    "t": "PROPOSAL-003 store captions after the Investors answer ops/questions.md item...",
+    "t": "PROPOSAL-003 store captions after the...",
     "s": "wait",
     "o": "c",
     "y": 1
@@ -561,6 +533,13 @@
    {
     "w": "Idris",
     "k": "build",
+    "t": "T-0206 remainder",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
     "t": "Renderer.v1 full node set and families",
     "s": "wait",
     "o": "c"
@@ -596,7 +575,7 @@
    {
     "w": "Pernille",
     "k": "build",
-    "t": "Numpy cp315 iOS wheel, the first ADR-003 go/no-go package",
+    "t": "Numpy cp315 iOS wheel, the first ADR-003...",
     "s": "blocked",
     "o": "c"
    },
@@ -617,7 +596,7 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "After T-0041 and only if T-0271 is approved by Day 12",
+    "t": "After T-0041 and only if T-0271 is approved...",
     "s": "next",
     "o": "c"
    },
@@ -629,24 +608,10 @@
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "review",
-    "t": "Read the T-0233 error texts",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "Build L5 s5.5 Module API",
     "s": "wait",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "tools",
-    "t": "ADR-003 review B1",
-    "s": "next",
     "o": "c"
    },
    {
@@ -678,6 +643,167 @@
     "o": "c"
    },
    {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "Confirm or correct the revenue-gap memo's...",
+    "s": "blocked",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "T-0280 follow-on",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "The notice-text half of T-0042",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "The trigger-rule half of T-0273",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "The schema half of T-0106",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "C2 device modules, Swift half",
+    "s": "wait",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Projects and Files",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Premade tree export for the snapshot rows",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Alpha test pack",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "review",
+    "t": "Alpha visual reads on 2026-10-31",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Day 10 alpha verdict",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Report overhaul item 1a",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Report overhaul item 1b",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "writing",
+    "t": "Report overhaul item 6a",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Report overhaul item 6b",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "writing",
+    "t": "Report overhaul R5 proposal for the applier",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "writing",
+    "t": "Report overhaul item 2a",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Report overhaul items 2b and 3, after item...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Report overhaul item 6c",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Report overhaul item 7",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Report overhaul item 4c, after the Investors...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Report overhaul item 8",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "writing",
+    "t": "Report overhaul item 5",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Idris",
     "k": "build",
     "t": "Live check after publish",
@@ -687,7 +813,7 @@
    {
     "w": "Wrenna",
     "k": "test",
-    "t": "After this session's publish, check Send live with a real Investor token: a...",
+    "t": "After this session's publish, check Send...",
     "s": "blocked",
     "o": "c"
    },
@@ -712,7 +838,7 @@
    {
     "w": "Wrenna",
     "k": "test",
-    "t": "Site_qa.py checks for the additions against fixtures now",
+    "t": "Site_qa.py checks for the additions against...",
     "s": "next",
     "o": "c"
    },
@@ -755,7 +881,7 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Weekly: read the Claude Code changelog and update only when nothing changes...",
+    "t": "Weekly: read the Claude Code changelog and...",
     "s": "blocked",
     "o": "c"
    },
@@ -765,77 +891,35 @@
     "t": "Watcher review on Day 5",
     "s": "blocked",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0160 REOPENED",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "T-0323 T-0324 MacBook runner blockers",
-    "at": "2026-10-27T02:03:12.334000+00:00",
+    "k": "release",
+    "t": "T-0345 acknowledgements notices",
+    "at": "2026-10-27T03:17:13.039000+00:00",
     "o": "c"
    },
    {
-    "w": "Idris",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Report overhaul plan and board lines",
+    "at": "2026-10-27T03:14:03.904000+00:00",
+    "o": "i"
+   },
+   {
+    "w": "Pernille",
     "k": "build",
-    "t": "T-0322 TreeRules Simulator suite",
-    "at": "2026-10-27T02:00:09.370000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "review",
-    "t": "T-0318 MacBook runner C13 review",
-    "at": "2026-10-27T01:41:43.517000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0297 Release build rsync failure then T-0234",
-    "at": "2026-10-27T01:37:56.080000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0304 MacBook job runner first slice",
-    "at": "2026-10-27T01:35:26.315000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "review",
-    "t": "T-0310 pkg_sandbox re-review",
-    "at": "2026-10-27T01:33:01.456000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "T-0308 meter vs dollar estimate calibration",
-    "at": "2026-10-27T01:27:55.134000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "build",
-    "t": "T-0303 remove Proposals tab",
-    "at": "2026-10-27T01:26:08.204000+00:00",
+    "t": "T-0364 stdlib full-mode check",
+    "at": "2026-10-27T03:13:17.570000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 45,
-   "wait": 21,
-   "blocked": 23,
+   "next": 58,
+   "wait": 24,
+   "blocked": 24,
    "you": 5
   }
  },
@@ -844,6 +928,8 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent"
+  "recent",
+  "task_done",
+  "task_title"
  ]
 }

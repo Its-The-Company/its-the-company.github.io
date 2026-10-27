@@ -27,7 +27,7 @@ Ines, 2026-10-25 19:27 ET. Scope and dated milestones: pywidget/docs/decisions/A
 | 7 | 10-28 | Python runs in the app with console and `input()`; Apple membership due | Idris |
 | 8 | 10-29 | Editor with highlighting; fixture widget renders; Run Script intent | Idris; Odalys (DSL package) |
 | 9 | 10-30 | End to end: editor to home-screen widget; Pro in StoreKit testing | Idris |
-| 10 | 10-31 | Alpha; 6 premade widgets; 10 example scripts; native-package go/no-go | Idris, Odalys, Maren |
+| 10 | 10-31 | Alpha; 6 premade widgets; 10 example scripts; native-package go/no-go. Pass rules: ops/plans/pywidget/alpha-day10-checklist.md (T-0332) | Idris, Odalys, Maren |
 | 11 | 11-01 | Review pack: readiness matrix, privacy drafts, store page draft | Wrenna |
 | 12 | 11-02 | iPad; 12 premade widgets; accessibility pass; pricing answer; Paid Apps due | Idris, Maren; Investors |
 | 13 | 11-03 | Feature freeze; TestFlight asked for if membership is active | Ines |
@@ -61,6 +61,10 @@ Five of six seats: Ines (CEO, chair, money, review pack sign-off), Idris (iOS: r
 **Decision: open one hiring round now, for a Python runtime engineer (band C, offer within the band per the brief).** Reason (Commandment 18, a recurring workload no current worker covers): everything between CPython and the user, written in Python and C, is unowned. Idris owns Swift and the one Xcode <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>; Odalys is the process engineer and is covering Python-side code only because no one else can. The unowned work runs to <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> and beyond: the embedded-interpreter packaging and stdlib stripping, the Python half of the bridge, our device modules' Python API, the view DSL, jedi and pyflakes in the app, native wheels (L13), then the compatibility layer (L15) and Pyodide (L14). The board shows it: of the 33 build lines filed tonight, 6 are Python-side engineering (the view DSL package, in-app tooling, example scripts, premade widget code, the device-module API, the host test runner) held by Odalys and Idris only because nobody owns them. Probation task: the Python view DSL package (pywidget/widgets/pywidget_dsl) against the L4 schema, with tests. Seat 6 of 6; no further hire without the Investors.
 
 Round lines are on the board, tagged [hiring]: brief on Opus (Ines), slate and interviews on Sonnet (Operator), panel with Idris, decision on Opus (Ines). Target: hired by Day 6 (2026-10-27). Until then Odalys <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the Python-side lines.
+
+## Chair note, 2026-10-26 22:17 ET (Ines, T-0331): Xcode queue Day 6-10
+
+Ruled in ops/plans/pywidget/xcode-queue-day6-10.md. Main slot order: T-0206 (running) + T-0161, T-0312a (input), T-0208, T-0052, T-0207 (now P0), T-0286, T-0041, T-0031, end to end, T-0051. The worktree slot takes checks and records only (T-0021, T-0024, T-0306, T-0039, T-0213 measurements, T-0321 after #83, device runs after membership). Nothing is planned on the MacBook until the Investors install the runner. Moved off Idris: T-0042 text (Odalys), T-0273 rule and T-0106 schema (Pernille), T-0259 (Wrenna). To 1.1: T-0212, T-0032, T-0044. The line that moves the alpha if late: T-0207, checkpoint Day 9 18:00.
 
 ## Rules that bind every line
 

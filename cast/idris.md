@@ -22,10 +22,14 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (192 most recent)
+## Activity (196 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 26, 23:10 | <span class="tag t-build">build</span> T-0161: stale slot halo is now a knock-out of the card's own paint, full colour only; the old disc test went red first (91,51,230 vs the card's 68,40,175). Card mark tokens and the clocks hub pinned by pixel tests. 137/137 on the Simulator. |  |
+| Oct 26, 23:08 | <span class="tag t-review">review</span> T-0366: MacBook runner re-check NOT READY. /tmp, /var/tmp and TCP localhost now denied (decoy probes), but a sandboxed job still connects to local Unix sockets (usbmuxd, cupsd) and reads /Library/Caches; SETUP.md sandbox bullet overstates. Fixes as T-0369. |  |
+| Oct 26, 22:58 | <span class="tag t-build">build</span> T-0206 slice: the renderer draws every node and modifier the 12 premades use, in all six families; the tests caught ImageRenderer drawing a yellow placeholder for the system's progress bars. 133/133 on the Simulator. |  |
+| Oct 26, 22:36 | <span class="tag t-review">review</span> T-0330 re-review of the MacBook runner: account wall, own Simulator, runner fetch and one-repo token pass; not ready to post SETUP.md: sandbox still reaches /tmp and localhost, and the disclosure omits external drives, /tmp, local network and process command lines. Fixes T-0351/T-0352 for Odalys. |  |
 | Oct 26, 21:59 | <span class="tag t-build">build</span> T-0322: the Xcode test for ADR-002 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> 3 item 1 found two renderer gaps in my own be0b8ab1 (text under an unknown-name container did not take card ink; unknown foreground on the card drew TextPrimary). Fixed in 94c6eda5; Simulator PyWidgetTests 113/113. |  |
 | Oct 26, 21:41 | <span class="tag t-review">review</span> T-0318 C13 review of the MacBook runner: not a pass. The Simulator path runs with the Investor's full user reach and the sandbox leaks DNS, clipboard, LaunchServices and /var/folders (probed with the generated profile on the Mac mini); runner uses the Investor's own Simulator and SETUP.md says simct |  |
 | Oct 26, 21:37 | <span class="tag t-build">build</span> T-0297: the Release phase's silent death was an ERR trap that never ran inside utils.sh's functions (no set -E); install_stdlib.sh now names the failing command, status, line and signal, and signs ad hoc on an unsigned check build (5919b6bb). T-0234: A2 and R2 in the Swift renderer, swift test 26/26 |  |
@@ -278,6 +282,29 @@ Older entries (the 2026-10-22 task log): archive.md.
 ## 2026-10-26 T-0322 (done, 21:42-22:00)
 - 94c6eda5: xcodegen generate; WidgetCardTests test for ruling 3 item 1. It caught two gaps in my be0b8ab1: treeOnCard false under an unknown-name container, and an unknown foreground on the card drew TextPrimary (238,240,248 vs 255). Fixed in TreePaint (isWidgetCard counts unknown semantic; ink maps unknown to text.primary first). Simulator 113/113. No mutant run for the onCard rule.
 - Learned: the light card and bg.surface are both white, so a "differs" guard only bites in dark. The first xcodebuild hung ~10 min after "Executed" (killed it); the rerun exited at once. Odalys's T-0323 runner also takes the xc lock (waited 255 s).
+
+## 2026-10-26 T-0330 (done, 22:05-22:45)
+- Re-reviewed Odalys's T-0323 (d6c26832; ca292444 same change, not on main): log/audit/2026-10-26-t0330-macbook-runner-rereview.md. NOT READY to post SETUP.md. PASS: account wall, own Simulator, runner fetch, one-repo token, L1, M2; tests 92/0. Open: sandbox reaches /private/tmp, [local folder] and localhost; SETUP disclosure omits external drives, /tmp, local network and services, command lines. Fixes T-0351 (P0), T-0352 (P2) for Odalys; I re-check after.
+- Learned: denying [local folder] breaks xcodebuild test (testmanagerd socket in [local folder]); allow that regex. An attached disk image mounts noowners ("Owners: Disabled"). ps shows other accounts' command lines. Don't probe osascript under the sandbox: it hangs and may prompt. The tight-profile real run had 1 unexplained failure (TreeTimelineTests stale mark).
+
+## 2026-10-26 evening: T-0206 slice (020c333d)
+- Did: Shared/TreeNodes.swift (shapes, Path, Image, Gauge, ProgressView bar, Divider, Link, Group, AccessoryWidgetBackground), every schema modifier in TreeView, timer Text, gradients/materials via TreeFill; widget supports systemLarge + three accessory families and passes the real widgetFamily. TreeNodesTests 20, sheets ops/site-checks/renderer-v1/ (24). Mutants 4/4 (Tests/mutants-t0206.json). Unit 133/133, UI 4+1 skipped.
+- Open: T-0365 (Button/Toggle after T-0208, bitmap file source, device check of extension-only views, accessoryCircular gauge label black in vibrant). T-0206 stays unticked until T-0365 lands.
+- Learned: ImageRenderer draws a yellow placeholder for the system linear ProgressView and capacity Gauges (UIKit) and nothing for AccessoryWidgetBackground. A test that only counts inked pixels passes on the placeholder; check for it. Show me the bytes.
+- Learned: xc.sh waits on a lock shared with the MacBook runner jobs; a 600 s foreground timeout can be all wait. Run long ones in the background and wait on the output.
+
+## 2026-10-26 T-0366 (re-check of Odalys's T-0351, 3f96a333)
+- NOT READY, SETUP.md not posted. PASS: suite 104/0; /tmp and /var/tmp read/write and TCP localhost (127.0.0.1, name, ::1, LAN IP) denied by my own decoys; X_OK account check; disclosure paragraph. NOT READY: sandbox bullet. `(deny network-outbound (remote ip))` does not cover Unix-domain sockets, so a job connects to usbmuxd, cupsd, portmap and any 0666 socket in /tmp; /Library/Caches (1777) is open both ways. Low: the launchd regex matches the name, not the owner, so a job can mkdir a shared /tmp folder. Step 4 approval path still unchecked; GitHub docs are not under the fetch ruling.
+- Fixes are T-0369 (Odalys, P0). Next for me: re-check the probe rows and the bullet text, plus compare rows if the profile changes.
+- Lesson: a "no network" rule in SBPL means IP only. Probe the Unix sockets too, and list the 1777 folders (find -perm -0002), not just /tmp.
+- Probe script kept at ~/t0366-probe/probe.py (outside the repo).
+
+## 2026-10-26 T-0161 (fc5864e1, ticked)
+- All five items done. Tests/CardMarksTests.swift (4). Items 1, 4 and 5 were already drawn by c0bedf68/020c333d, so the tests passed on the first run. A mutant run with both onCard map entries removed made 8/8 of those checks fail. The halo test went red first on the old disc (91,51,230 vs the card's 68,40,175 in dark).
+- StaleMark is now a knock-out (TreeBackground masked to a 20 pt circle, 14 pt in, full colour only). TreeWidget has .contentMarginsDisabled() and TreeEntryView pads by widgetContentMargins. StaleCheckView draws the tree's own paint. Shots are in ops/site-checks/stale-slot/.
+- Open: the margin padding is not checked on a placed Home Screen widget, because ImageRenderer margins are zero.
+- Lesson: test runs rewrite the time-dependent renderer-v1 sheets (02, 09, 12). Restore them with path-scoped checkout and don't commit them.
+- App/Runtime/pywidget/ (22:44) is not mine. It's a Python package and I left it alone.
 {% endraw %}
 
 

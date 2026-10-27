@@ -194,6 +194,7 @@ Anatomy: preview well (live render of the real premade in the selected mode) / n
 - One primary action per screen: "Unlock with Pro" in the section header (`accent`).
 - Extra large tiles appear only in the iPad gallery, at 100%.
 - VoiceOver: "{name}, {family} widget, Pro. Live preview. Source opens with Pro."
+- *Note, 2026-10-26 22:40 ET (Maren, T-0334).* The build spec for this tile is now IDE spec s5.9 (`ide/draw_gallery.py`, three sheets). Two changes from the bullets above: Extra large draws at 50% in a tile and at 100% in the iPad detail sheet (715 pt does not fit a 395 pt tile); and the tile has states (loading, failed, permission needed, declined, offline, no data) with a "Sample data" chip whenever the well is not the user's own run. Five Free chips, seven Pro, read from pro-flags.json.
 
 ## 7. VoiceOver
 

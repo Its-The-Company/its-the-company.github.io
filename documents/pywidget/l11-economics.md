@@ -187,6 +187,127 @@ T-0224 run, 2026-10-26 (Wrenna), under the 19:50 ruling. Listen to this, from th
 - https://holzschu.github.io/Carnets_Jupyter/, 19:57:00 ET (16 s after), same route, 15,885 bytes; raw copy L11-raw/carnets-home-2026-10-26.html. Same counts, all 0 ("Free" 1, in "FreeBSD license"): "Carnets is entirely OpenSource , and released under the FreeBSD license."
 - Second read: none. Neither page links a pricing, FAQ or purchase page (a-Shell links changelog, privacy policy, GitHub, Twitter, a mailto; Carnets links GitHub, Twitter, a mailto). The changelog is release notes, barred by the ruling.
 - Result: both in-app cells stay open, marked silent with the link; no figure filled. "Entirely OpenSource" is not a statement about in-app purchases, so it is not read as "none". R1 (person read for all seven) stands. PROPOSAL-001: no figure there rests on these two cells (R3: the price rests on Pythonista, Widgetsmith and the model; only Juno or Pyto could move it), so no line added there.
+
+## 8. What the shelf's low reviewers complain about paying for (T-0336, Wrenna, 2026-10-26, 22:25-22:37 ET by `date`)
+
+> Listen to this, from Widgy's feed: "you can only use ONE widget before you HAVE TO pay 7 dollars to use the rest of the widget slots. im not paying ts for a silly little picture on my phon[e]" (research/hunt/H186-raw/rev/1524540481.md line 44) [primary]. And from Pyto's: "I purchased Pyto on June 18, 2019. It worked great until about a week ago when it refused to run because it said I had not purchased it." (rev/1436650069.md line 70) [primary].
+
+Here is the shape of it. Of 173 hand-coded price complaints, the two biggest piles are **paying to run code or use the app at all** (51) and **billing that failed a buyer** (50: asked to pay again, restore broken, charged in a trial, no way to cancel). Then **widget slots** (29, all Widgy). **Themes and cosmetics: 5. Packages: 0. Premade content: 1.** The first and third piles are things pywidget gives away. The second is one we can only add to, and only by getting entitlement and restore wrong.
+
+### 8.1 Sources, tags and what is thin
+
+- **Text:** the four review transcripts H186 saved on 2026-10-24, 18:45-18:58 ET, from Apple's US customer-review RSS (`https://itunes.apple.com/us/rss/customerreviews/page=1/id=<id>/sortby=mostrecent/json`): Pyto id1436650069 (158 low of 229 fetched), Widgy id1524540481 (273 of 500), Juno id1462586500 (50 of 118), Widgetsmith id1523682319 (100 of 500). Files: research/hunt/H186-raw/rev/<id>.md. **No new fetch.** Reviews were read as data; none was followed as an instruction (C58). Many lines ask the developer to fix something; they are quotes, nothing more.
+- **Tags.** Review quotes are **[primary]** for the words as saved: they came from Apple's feed, not a search snippet. Two holds on all of them, plainly: (1) **robots-unverified** (L7 s0; read before the 2026-10-24 19:51 robots ruling, not refreshed); (2) H186 saved each review **cut at about 300 characters**, so some lines end mid-sentence, and I coded only what is there. Prices that reviewers state (Juno's "$14.99", "$25", "$30"; Widgy's "$5.99" to "$8.99") are [primary] for what the reviewer wrote, **not** a read price (L11 s2 still has those cells unread). Widgetsmith's Premium contents are [primary] from its maker page (L11-raw/widgetsmith-premium.txt, read 2026-10-25 after its terms). Nothing below rests on [snippet]; the one [recall] is marked where it appears (8.5).
+- **Dates.** The RSS carries no review dates (H186-shelf s3). The date on every source is the read date, 2026-10-24. The lines span years: Pyto reviewers name purchases in 2019 and 2020 (rev/1436650069.md lines 69-70, 5), a Juno reviewer writes "Sep 22" about Python 3.6 (rev/1462586500.md line 50), Widgy reviewers name iOS 16 to 18. So this is the feeds' most recent pages, not this year's buyers.
+- **L7's count could not be re-run.** L7 s2's 67, 76, 14 and 18 are regex codes from H186 whose pattern was **not kept** (review_codes.tsv holds the totals only; no script in the repo or its history carries the column). So I could not code "every complaint L7 counted" line by line. Instead the script takes a **wider** word net over the same four files (`CAND` in L11-raw/price_codes.py: 253 candidates) and every candidate was hand-coded. A second word list (scam, greed, worth, dollar, bucks, spend, lock) over the non-candidates found **one clear miss**: "WHY am I only allowed to upload ONE widget?! I'M NOT SPENDI[NG]" (rev/1524540481.md line 34), a slot complaint. So the counts below are a floor, short by at least one.
+- **Thin, said plainly.** Four apps, one storefront, low reviews only (people who were unhappy enough to write). Low reviews say what angers people; **they do not count buyers or measure conversion.** Every verdict in 8.6 is a direction, not a number. Premades (1 complaint, 1 stated purchase), cosmetics (5) and features (1) are too small to carry any weight on their own. Juno's 50 low reviews give 20 complaints; that is one app's voice, not a pattern.
+
+### 8.2 Method and agreement
+
+1. `price_codes.py candidates` wrote the 253 candidates, and the rule coder was frozen and committed before the coding began (35234792, 22:28:55 ET). One honest exception: while locating the files I had already seen the first 25 lines of Pyto's transcript, three of which fell in the sample (Pyto lines 5, 12, 28).
+2. `price_codes.py sample` drew a seeded random 20% (seed 336, 51 of 253). I hand-coded those 51 <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span>, seeing only the review text, and committed the codes before reading the rest (T0336-blind.tsv, ea1fbac7, 22:29:44 ET).
+3. I hand-coded the other 202 (T0336-hand.tsv holds all 253 with a short note each), then `price_codes.py count` printed every table below. Its output is saved as L11-raw/T0336-count-output.txt; running it again reproduces it.
+
+Codebook (full text at the top of the script). **what**: RUN running code or using the app at all; PKG modules or packages; SLOT widget slots; COSM themes, fonts, icons, looks; FEAT a named non-cosmetic feature; ADS; BILL a billing failure with nothing named as paywalled; GEN price or paywall with nothing named. **model**: ONE, SUB, TRIAL (the trial is the complaint, or "only the trial is free"), UNK. **once**: WOULD (says they would pay, on some terms), BOUGHT (says they paid), AGAIN (paid once and is asked to pay again), NO (says it should be free, or they won't pay), - (silent).
+
+Agreement, all from the script:
+- **Is it a price complaint at all:** 33 of the 51 sampled candidates (65%). A third of what a price word catches is a bug report from someone who paid ("Quite disappointed with this purchase", rev/1436650069.md line 154).
+- **Blind read against my final codes:** 51 of 51 on price, 33 of 33 on what and model, 32 of 33 on once. The one change is a rule I fixed after the blind read: a restore that fails is AGAIN, not BOUGHT (Pyto line 220). This is self-agreement, one coder; it shows the codebook held, not that a second reader would agree. **No second coder.** If Ines wants one, the blind file is ready for one.
+- **Frozen rule coder against the blind hand codes:** what 19 of 33 (58%); model 30 of 33 (91%), but only 7 of 10 where the hand code is not UNK. Most misses are RUN read as GEN (8): people say "pay to use it" and "not free", not "run". **Word rules are not good enough to code what was paywalled**; that is why every count below is from the hand codes.
+
+### 8.3 What was paywalled, by app (price complaints only, hand codes)
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 8.3 What was paywalled, by app (price complaints only, hand codes), scrolls sideways" data-n="2" style="--tw:818px" markdown="1">
+
+| what | All | Pyto | Widgy | Juno | Widgetsmith |
+|---|---|---|---|---|---|
+| L7 s2 regex count (for comparison) | 175 | 67 | 76 | 14 | 18 |
+| **Hand-coded price complaints** | **173** | **77** of 158 low | **57** of 273 low | **20** of 50 low | **19** of 100 low |
+| RUN: running code, or using the app at all | **51** | 34 | 1 | 16 | 0 |
+| BILL: billing failed the buyer | **50** | 32 | 15 | 1 | 2 |
+| GEN: price or paywall, nothing named | 36 | 11 | 11 | 3 | 11 |
+| SLOT: widget slots, sections, the watch slot | **29** | 0 | 29 | 0 | 0 |
+| COSM: themes, looks, transparency | 5 | 0 | 1 | 0 | 4 |
+| FEAT: a named feature (weather) | 1 | 0 | 0 | 0 | 1 |
+| ADS | 1 | 0 | 0 | 0 | 1 |
+| PKG: modules or packages | **0** | 0 | 0 | 0 | 0 |
+
+</div>
+
+
+The totals match by accident (173 against 175). Per app they do not: Widgy's regex count was **high** by 19 (paid users reporting bugs: "I paid for both upgrades and after finding it does not work", line 172, is a complaint; "Paid for the full version but can't use many features", line 176, is a bug), and Pyto and Juno were **low** (people who write "not free" or "3 day trial" without a price word). **The memo cites L7's per-app numbers (s1 row 2, and s8's "Pyto 67 of 158"); these replace them as evidence: Pyto 77 of 158, Widgy 57 of 273, Juno 20 of 50, Widgetsmith 19 of 100.** One more mismatch for Ines, not fixed here: the memo s1 and L11 R3 give "Widgy 76 of 500" and "Juno 14 of 118" (fetched as the denominator), while Pyto's "67 of 158" uses low reviews. On one footing, low reviews, it is 57 of 273 and 20 of 50.
+
+### 8.4 The model, and whether they would pay once
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 8.4 The model, and whether they would pay once, scrolls sideways" data-n="2 3 4 5 6" style="--tw:629px" markdown="1">
+
+| model | All | Pyto | Widgy | Juno | Widgetsmith |
+|---|---|---|---|---|---|
+| ONE: one-time named or implied by "I bought it" | 32 | 13 | 18 | 1 | 0 |
+| TRIAL: the trial, or "only the trial is free" | 33 | 26 | 0 | 5 | 2 |
+| SUB | 11 | 6 | 2 | 0 | 3 |
+| UNK | 97 | 32 | 37 | 14 | 14 |
+
+</div>
+
+
+what by model: BILL is mostly ONE (25 of 50): one-time buyers whose purchase was not honoured. RUN is mostly TRIAL or UNK (18 and 30): "free to download, pay to use".
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 8.4 The model, and whether they would pay once, scrolls sideways" data-n="2 3" style="--tw:499px" markdown="1">
+
+| once | In price complaints (173) | In all 253 candidates |
+|---|---|---|
+| WOULD: says they would pay, on some terms | 7 | 10 |
+| BOUGHT: says they paid | 12 | **53** |
+| AGAIN: paid once, asked to pay again | **23** | 23 |
+| NO: says it should be free, or won't pay | 25 | 25 |
+| silent | 106 | 142 |
+
+</div>
+
+
+**Would they pay once?** 76 of the 253 low reviewers say they already paid (53 BOUGHT, 23 AGAIN), 45 of them on Widgy (37 and 8). Ten more say they would, and the terms are telling: a free allowance first ("If I could use 3 then have to pay for more I'd be fine", rev/1524540481.md line 62; "make it more free, like limit 5 things aloud then need pro", rev/1462586500.md line 26), a longer trial ("14 days should be a minimum", rev/1436650069.md line 197), or a purchase that would not complete ("Fail to unlock pro", rev/1462586500.md line 7; "They make it impossible to upgrade to Pro", rev/1524540481.md line 84). Two praise a one-time price outright, inside low reviews: "Pay a one time fee to open all slots and be able to customize to your liking with no monthly fee" (rev/1524540481.md line 120) and "Atleast it's a one-time payment" (same file, line 29). No candidate in the four feeds asks for a subscription (any that did would contain "subscri" and be a candidate). Against: 25 say it should be free or they won't pay, 9 of them on Pyto, several comparing it with free Python on a computer ("Python is free on PC but this app is not free", rev/1436650069.md line 93).
+
+### 8.5 The patterns, with quotes
+
+1. **Paying to run anything at all (RUN 51; Pyto 34, Juno 16).** "Don't even pretend to have a free tier if you can't write or run code in it." (rev/1462586500.md line 9). "If an app is practically a paid app completely useless without purchase, just make it a paid app." (same file, line 30). Five reviewers ask for exactly that, an honest up-front price (Pyto lines 88, 117; Juno lines 23, 27, 30). What they are doing instead: Carnets, Thonny, Replit, "any other app" (Juno line 20; Pyto lines 89, 44, 54).
+2. **One-time buyers not honoured (AGAIN 23; BILL 50 in all).** Across devices ("I bought this app on my iPad ... it wants me to repurchase even though it's the same apple account", rev/1436650069.md line 71; Widgy lines 106, 304), across updates ("It's suppose to be one time purchase, not spend $5.99 every update", rev/1524540481.md line 152), and on restore (Pyto lines 34, 36; Widgy lines 41, 97). This is the most damaging pattern for a one-time Pro, because it lands on the people who already paid.
+3. **The trial as a trap (TRIAL 33, Pyto 26).** Charged on the tap ("immediately charged $34.97, no warning", rev/1436650069.md line 31), no way to cancel (Pyto lines 41, 43, 87, 110, 196), "only the thing that's free is a 3 day trial" (line 56).
+4. **Capacity for your own work (SLOT 29, Widgy only).** "I wasted my time creating a widget only to find out I have to pay to have it on my home and lock screen." (rev/1524540481.md line 265). And unlocks stacked on unlocks: "When I paid my first $5.99, I thought that was it.. one time pay ... Now ... 'If you want to do *that*, you have to pay another $5.99.'" (line 213; also 212, 271).
+5. **Looks (COSM 5; Widgetsmith 4).** "Why do I have to pay to customize MY PHONE." (rev/1523682319.md line 32); "THAT much money to decorate a phone is ridiculous" (line 55). These are from a consumer widget audience, not script writers. On Widgy the one cheap cosmetic add-on, transparency at $0.99, shows up as **bought** (rev/1524540481.md lines 254 and 283) and is complained about only when it does not work.
+6. **Packages (PKG 0) and premades (1).** Not one price complaint names packages as the paywalled thing, though Pyto sells numpy, pandas and matplotlib in its full version (L7 s1a). Package reviews from paid users complain that the packages **don't work** (Pyto lines 122, 142, 200, 220; Juno lines 52, 57). Premade content appears once as a complaint, inside a slot complaint ("The made up ones ready to go - you can not add them unless you pay", rev/1524540481.md line 57), and once as a purchase ("widgets like (paid) nebula, (paid) app drawer", line 47).
+
+### 8.6 What it implies for pywidget's split and PROPOSAL-001 (evidence for Ines; the memo is not edited, and she rules on these)
+
+Verdicts on the memo's three planning values:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 8.6 What it implies for pywidget&#x27;s split and PROPOSAL-001 (evidence for Ines…, scrolls sideways" style="--tw:914px" markdown="1">
+
+| Memo value | Verdict | Why, from the counts |
+|---|---|---|
+| **2% with premades** (s1) | **Holds, leaning down.** I would not raise it | The two things these buyers demonstrably pay for are running code (Pyto, Juno) and room for their own widgets (Widgy: 29 slot complaints, 37 of the 53 stated buyers). pywidget gives both away, so neither pile counts toward Pro, which repeats the memo's own point (a) with a second app. Premade content has 1 complaint and 1 stated purchase in 253: the reviews neither support a pull nor warn against one. Nothing here argues for up; the slot evidence is a second reason for the low end of the 1-3% range |
+| **0.5% with themes only** (s8, case C2) | **Holds** | Cosmetic complaints are 5 of 173 and all from consumer widget apps, so themes draw little anger. Widgy's $0.99 transparency add-on is the only cosmetic one-off with stated buyers (2), which fits the memo's $4.99 for C2 better than $14.99. No count of theme buyers exists, so no move |
+| **Packages free while widgets ship** (s3) | **Holds** | Paying to run code is the largest single pile (51), so "running your own code is never paywalled" answers the shelf's loudest complaint. The reviews do not show that gating packages itself draws price complaints (PKG 0; Pyto gates everything, so no reviewer can separate the two). They do show the next risk if packages are ever in Pro: paid users whose numpy, pandas or pip fails (6 lines) |
+
+</div>
+
+
+For the 5 free / 7 Pro split (state-spec chair ruling 2026-10-26 00:05, b8b4f0e4; the split is the Investors' to confirm, ops/questions.md item 10):
+- **It matches what the would-pay reviewers asked for**: a useful free allowance first, then pay (Widgy line 62's "3 then pay", Juno line 26's "limit 5 things"). Five working free premades plus unlimited own widgets is more than either asked. The counts give no reason to move a premade either way.
+- **One Pro, never stacked.** Widgy's anger at a second and third $5.99 after the first (lines 212, 213, 271) argues against ever splitting Pro into several unlocks (premades, then themes, then packages as separate products). The memo's single non-consumable already does this; keep it single when themes or packages join.
+- **Say exactly what Pro holds, before download.** "Why not just advertise it so then people know before downloading" (rev/1436650069.md line 158). This backs the G6 sentence (app-review-matrix row 44) as required whenever any premade is Pro.
+
+For PROPOSAL-001 and its build (T-0031), as evidence, not decisions:
+- **No trial: supported.** 33 of 173 complaints are about the trial (Pyto 26), and 11 of the 50 billing failures happen inside one. The memo's "no trial; the live preview does its job" (s3) avoids the whole pile.
+- **One-time over subscription: supported, weakly.** No reviewer asks for a subscription; two praise a one-time fee from inside a low review; 11 price complaints concern a subscription. Thin, and these are unhappy people, but the direction is one way.
+- **Entitlement and restore are a pricing risk, not only a bug class.** 23 AGAIN and 50 BILL lines are the second-largest pile, and they are one-time buyers. If the company sells a one-time Pro, the tests should cover: entitlement read at launch with no network, Restore on a second device with the same Apple ID, and an update that keeps the unlock. [recall: StoreKit 2's current-entitlements check is the call that answers "has this Apple ID bought Pro"; StoreKit testing in Xcode can simulate a second device's restore only partly.] That is Idris's to judge, and I would put one line on T-0031 for him.
+- **Option 3's IDE features:** nothing in these feeds bears on paying for editor features beyond two asides ("annoying prompts to buy features", rev/1436650069.md line 92; "even if you pay for it, you have to spend extra for the pro version", line 26), which again point at stacked tiers.
+
+Raw: L11-raw/price_codes.py, T0336-candidates.tsv, T0336-blind.tsv, T0336-hand.tsv, T0336-count-output.txt. Re-run: `python3 -I pywidget/docs/research/L11-raw/price_codes.py count`.
 {% endraw %}
 
 </div>

@@ -110,3 +110,57 @@
   });
   next();
 })();
+
+// Company > Infrastructure, 'Changes applied automatically' (T-0313, #41 c6431019650): with the Investor's token only,
+// each change still applied gets a Revert button that posts a 'revert' reply as the Investor's own GitHub comment, as
+// the Issues buttons do: on the proposal's issue ("revert"), or for a file proposal (no issue) on Chat, the open
+// issue labelled main ("revert ops/proposals/<file>.md"). Confirmed first. data-ready="0" (the applier does not act
+// on that reply yet): the button is drawn but disabled and says it waits on the applier. Nothing runs without a token.
+(function () {
+  function start() {
+    var S = window.CompanySite, list = document.getElementById('auto-list');
+    if (!S || !list || !S.getToken()) return;
+    var repo = list.getAttribute('data-repo'), RI = '/repos/' + repo + '/issues';
+    var boxes = [].slice.call(list.querySelectorAll('.ny-act[data-revert]'));
+    function send(p, body) {
+      var h = S.hdrs(); h['Content-Type'] = 'application/json';
+      return fetch(S.API + p, { method: 'POST', headers: h, body: JSON.stringify(body) }).then(S.checkAuth);
+    }
+    function chat() {
+      return S.gh(RI + '?labels=main&state=open&per_page=5').then(function (r) {
+        if (!r.ok) throw new Error(S.said(r));
+        return r.json();
+      }).then(function (l) {
+        var i = (l || []).filter(function (x) { return !x.pull_request; })[0];
+        if (!i) throw new Error('no open Chat issue (labelled main) to post on');
+        return i.number;
+      });
+    }
+    boxes.forEach(function (box) {
+      var n = Number(box.getAttribute('data-revert-issue')) || 0, file = box.getAttribute('data-revert-file') || '';
+      var ready = box.getAttribute('data-ready') === '1', ref = box.getAttribute('data-revert');
+      var b = S.el('button', 'cv-tool', ready ? 'Revert' : 'Revert (waiting on applier)'), st = S.el('span', 'meta', '');
+      b.type = 'button'; st.setAttribute('role', 'status');
+      box.appendChild(b); box.appendChild(st);
+      if (!ready) {
+        b.disabled = true;
+        st.textContent = 'The applier does not act on a revert reply yet, so this button is off until it does.';
+        return;
+      }
+      var word = n ? 'revert' : 'revert ' + file;
+      b.onclick = function () {
+        if (!confirm('Post "' + word + '" ' + (n ? 'on #' + n : 'on Chat') + ' from your GitHub account? The applier puts ' + ref + ' back between sessions.')) return;
+        b.disabled = true; st.className = 'meta'; st.textContent = 'Sending...';
+        (n ? Promise.resolve(n) : chat()).then(function (to) {
+          return send(RI + '/' + to + '/comments', { body: word }).then(function (r) {
+            if (!r.ok) throw new Error(S.said(r) + (r.status === 403 || r.status === 404 ? ' (does your token have Issues: Read and write?)' : ''));
+            st.textContent = 'Sent as your comment on #' + to + '. The applier reverts it between sessions; this list shows Reverted after the next build.';
+          });
+        }).catch(function (e) {
+          b.disabled = false; st.className = 'meta ny-warn'; st.textContent = 'Not sent: ' + e.message + '.';
+        });
+      };
+    });
+  }
+  if (window.CompanySite) start(); else window.addEventListener('load', start);
+})();

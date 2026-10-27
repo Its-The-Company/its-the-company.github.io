@@ -1,78 +1,78 @@
 {
  "schema": 1,
- "at": "2026-10-27T05:49:50.222237+00:00",
+ "at": "2026-10-27T08:18:12.788597+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-27T00:02:12-04:00"
+  "started": "2026-10-27T01:51:03-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "pernille",
-   "task": "[build] T-0391 clocks premade over tree cap",
-   "model": "opus",
-   "started": "2026-10-27T05:32:45.775Z",
+   "task": "[build] T-0393 premades in app bundle",
+   "model": "sonnet",
+   "started": "2026-10-27T08:09:55.562Z",
    "seconds": null,
-   "finished": "2026-10-27T05:48:57.354000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-0367 pywidget.files and bridge follow-ups",
-   "model": "opus",
-   "started": "2026-10-27T05:17:18.802Z",
-   "seconds": null,
-   "finished": "2026-10-27T05:32:23.220000+00:00"
+   "finished": "2026-10-27T08:17:30.196000+00:00"
   },
   {
    "name": "idris",
-   "task": "[build] T-0207 bridge Swift open items",
+   "task": "[build] T-0400 red testStopStuckNative fix",
    "model": "opus",
-   "started": "2026-10-27T04:54:37.757Z",
+   "started": "2026-10-27T07:11:03.910Z",
    "seconds": null,
-   "finished": "2026-10-27T05:16:55.760000+00:00"
+   "finished": "2026-10-27T08:09:31.147000+00:00"
   },
   {
    "name": "idris",
-   "task": "[build] T-0208 intents and StoreKit config",
-   "model": "opus",
-   "started": "2026-10-27T04:41:30.383Z",
+   "task": "[build] T-0052 stdlib cut build phase",
+   "model": "sonnet",
+   "started": "2026-10-27T06:46:10.542Z",
    "seconds": null,
-   "finished": "2026-10-27T04:54:19.937000+00:00"
+   "finished": "2026-10-27T07:10:32.552000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-0372 PROPOSAL-001 decision card",
+   "model": "opus",
+   "started": "2026-10-27T06:40:58.271Z",
+   "seconds": null,
+   "finished": "2026-10-27T06:45:17.982000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 66,
-  "blocked_count": 48
+  "runnable_count": 67,
+  "blocked_count": 46
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
-   "resets_at": "2026-10-27T08:00:00.122297+00:00",
+   "pct": 10.0,
+   "resets_at": "2026-10-27T08:00:00.413170+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 95.0,
+   "left": 90.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 51.0,
-   "resets_at": "2026-11-01T07:00:00.122316+00:00",
+   "pct": 52.0,
+   "resets_at": "2026-11-01T07:00:00.413188+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 49.0,
+   "left": 48.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T07:00:00.122465+00:00",
+   "resets_at": "2026-11-01T07:00:00.413338+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-27T00:02:11.772124-04:00"
+  "read_at": "2026-10-27T01:51:03.036785-04:00"
  },
  "ui": {
   "week_pct": 0.1,
-  "five_hour_pct": 0.135,
+  "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-27T01:50:25-04:00"
+  "at": "2026-10-27T04:18:48-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -126,7 +126,7 @@
   {
    "name": "Idris",
    "state": "next",
-   "task": "Idris, P0, L3 device run: CPython cold start, peak and the real extension memory ceiling (allocation ramp,...",
+   "task": "Idris, P0, re-check T-0369 (f64bc323) on the MacBook runner sandbox: the probe rows and SETUP.md sandbox bullet in...",
    "model": null,
    "since": null,
    "next": []
@@ -228,9 +228,9 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0366 follow-ups on the MacBook runner sandbox",
+    "w": "Idris",
+    "k": "review",
+    "t": "Re-check T-0369",
     "s": "next",
     "o": "c"
    },
@@ -433,14 +433,14 @@
    {
     "w": "Maren",
     "k": "review",
-    "t": "Renderer.v1 design read before T-0206 is ticked",
+    "t": "Dry run of the Day 10 visual fail lists",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Maren",
-    "k": "review",
-    "t": "Dry run of the Day 10 visual fail lists",
+    "k": "design",
+    "t": "Renderer.v1 fails F1-F6 from T-0385",
     "s": "next",
     "o": "c"
    },
@@ -482,13 +482,6 @@
    {
     "w": "Pernille",
     "k": "build",
-    "t": "Alpha A5",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
     "t": "The github premade imports pywidget.http,...",
     "s": "next",
     "o": "c"
@@ -511,6 +504,20 @@
     "w": "Pernille",
     "k": "ops",
     "t": "Archive Pernille MEMORY.md under 4 KB",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "C13 independent review of T-0400",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Alpha A5",
     "s": "next",
     "o": "c"
    },
@@ -610,29 +617,29 @@
    {
     "w": "Pernille",
     "k": "build",
-    "t": "T-0391 clocks premade over tree cap",
-    "at": "2026-10-27T05:48:57.354000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "T-0367 pywidget.files and bridge follow-ups",
-    "at": "2026-10-27T05:32:23.220000+00:00",
+    "t": "T-0393 premades in app bundle",
+    "at": "2026-10-27T08:17:30.196000+00:00",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "T-0207 bridge Swift open items",
-    "at": "2026-10-27T05:16:55.760000+00:00",
+    "t": "T-0400 red testStopStuckNative fix",
+    "at": "2026-10-27T08:09:31.147000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0052 stdlib cut build phase",
+    "at": "2026-10-27T07:10:32.552000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 66,
-   "wait": 23,
-   "blocked": 25,
+   "next": 67,
+   "wait": 22,
+   "blocked": 24,
    "you": 5
   }
  },

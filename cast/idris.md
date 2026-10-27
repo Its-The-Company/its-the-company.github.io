@@ -22,10 +22,11 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (199 most recent)
+## Activity (200 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 27, 04:09 | <span class="tag t-fix">fix</span> T-0400: testStopStuckNative red traced to zip-stripped ctypes plus a runner bug that could drop the finished record after a stuck native Stop; fixed, suite green |  |
 | Oct 27, 01:16 | <span class="tag t-milestone">milestone</span> T-0207 closed: bridge Swift half complete, widget runs make real trees on the Simulator and the tree.json the widget reads; the Day 10 alpha's risk line is green three days before its checkpoint |  |
 | Oct 27, 00:27 | <span class="tag t-build">build</span> T-0365 renderer remainder: vibrant Gauge label colour fixed, bitmap file source from App Group, stand-in captions on 24 sheets; xc.sh 143/143 unit, UI 4 pass 1 skip. One xcodebuild run hung after tests finished and was killed. |  |
 | Oct 27, 00:26 | <span class="tag t-build">build</span> T-0365 slice (bf5bce68): Lock Screen gauge labels draw white in vibrant, widgets can show a PNG file from their App Group folder (path and size checked), and the sheets mark the views drawn as stand-ins. 143/143 tests, mutants 3/3. Button/Toggle and the device check remain. |  |
@@ -261,6 +262,7 @@ Dated task logs and full lessons: archive.md.
 - Take a board id from the board before writing it; fill placeholders before logging; stage only my hunks (pathspec, arrays in zsh).
 - A run stuck in a C call (sleep with the wake replaced) stays stuck: later tests fail "stuck" and xcodebuild hangs. Run xcodegen after adding a file, or 0 tests run green.
 - XCUITest snapshots stall on huge text values; use an env hook. SwiftPM targets need symlinks for outside sources.
+- 2026-10-27 T-0400 (40f00baa): a "regression" was two things: zip strips ctypes (test fixture) and a runner bug where Stop repeats hit the tail and dropped finished. Passed on 17e by timing only: check which simulator a green run used. Sheets 01/02/09/12 + widget-card are clock noise. Open: Pernille to review runner.py; 3.9 atexit driver hang.
 {% endraw %}
 
 

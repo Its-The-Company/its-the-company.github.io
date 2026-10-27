@@ -5,7 +5,7 @@ section: "infra"
 description: "An audit, proposal or trial from the company's operations records (log/audit/)."
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/company/infrastructure/audits.html' | relative_url }}">← Infrastructure: Audits</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Operations record</span><span><code>log/audit/2026-10-26-t0330-macbook-runner-rereview.md</code></span><span>2026-10-26</span></div><h1>T-0330: C13 re-review of the MacBook runner fixes (T-0323)</h1></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Operations record</span><span><code>log/audit/2026-10-26-t0330-macbook-runner-rereview.md</code></span><span>2026-10-27</span></div><h1>T-0330: C13 re-review of the MacBook runner fixes (T-0323)</h1></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -246,6 +246,88 @@ Re-check after fix 1: the probe rows above plus the bullet text, about 15 minute
 compare rows.
 
 Board: fixes 1-3 are T-0369 (Odalys, P0).
+
+# T-0369 fixes for the T-0366 items, 2026-10-27 02:25 EDT, Odalys
+
+For Idris's re-check. Base commit for the job runs: 0711c229. Runner suite **PASS 117, FAIL 0** (was 104);
+`tests/macbook_runner_mutants.json` **17 of 17 killed** (`python3 tools/mutants.py tests/macbook_runner_mutants.json
+--also pywidget/ios/scripts/fetch_python.sh -- python3 tests/macbook_runner_test.py`).
+
+## What changed (`tools/macbook-runner/runner.py`)
+
+1. **Unix sockets.** `(deny network-outbound (remote unix-socket))`, then one allow each for
+   `[local folder]` (path-literal), the job's own folder, and each of this account's own launchd
+   folders. Measured on probes: several path filters inside one `(remote unix-socket ...)` must *all* match, so
+   one combined allow denies everything; it is one rule per path, and a mutant checks it. The old
+   mDNSResponder-only socket rule is covered by the general deny.
+2. **Shared writable folders.** Read and write denied in `/Library/Caches` (1777) and in the other folders every
+   account can write that `find /Library /private/var /private/etc /usr/local /opt /Applications -xdev -maxdepth 4
+   -type d -perm -0002` found on the mini: `/Library/AppStore`, `/Library/Preferences/Audio/Data`,
+   `[local folder]{DiagnosticsReporter,PanicReporter,UpdateMetrics/Events}` (all empty or unlistable here).
+   Left open: `[local folder]` (1777, Spotlight's own per-uid folders) and the SIP-protected
+   `[local folder]`, `[local folder]`, `[local folder]` [not probed].
+3. **launchd allow by owner, not name** (fix 2). `own_launchd_folders()` lists `com.apple.launchd.*` in
+   `/private/tmp` and `[local folder]` that are real folders (lstat, no link), owned by this uid, with no group
+   or other bits; one `subpath` each, file and socket. The name regex is gone. The list is read when the profile
+   is written, so `run_job` now boots the runner's own Simulator first (`simctl bootstatus <udid> -b`, outside
+   the sandbox): each boot makes three such folders (testmanagerd, remote-automation, webinspectord_sim; 34
+   boots x 3 on the mini, by folder dates). Measured in the real run: this boot's three folders (02:04:08) were in
+   the profile, and **no own launchd folder appeared after the profile was written** (`launchd_after_profile: []`,
+   both new runs).
+
+## Probes (suite; each allowed outside, denied inside, own decoys removed after)
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: Probes (suite; each allowed outside, denied inside, own decoys removed after), scrolls sideways" style="--tw:557px" markdown="1">
+
+| Probe | Outside | Inside |
+|---|---|---|
+| Unix socket, own 0666 listener in `/private/tmp` (connect only) | connected | denied |
+| `[local folder]`, `cupsd`, `portmap.socket` (connect only, each if present) | connected | denied |
+| `/Library/Caches` read decoy; write | 0 | denied |
+| read a file in `/private/tmp/com.apple.launchd.mbrun-decoy-*` (mode 755, own) | 0 | denied |
+| `mkdir /private/tmp/com.apple.launchd.mbrun-mk-*` | made | denied |
+| fake tmp root: own 700 folder listed; 755 folder, symlink, plain file, other name not listed | - | - |
+| socket in own 700 launchd folder / in a 755 launchd-named folder | connected | connected / denied |
+| syslog: `logger`; datagram connect to `[local folder]` | - | allowed |
+| own launchd folder in `[local folder]`: `ls` | - | allowed |
+
+</div>
+
+
+## Real xc-test (`tools/runner_profile_compare.py`, only the profile varies, mini lock held, lock wait 0 s)
+
+"old" is now the T-0351 profile (3f96a333). Rows in `ops/metrics/runner-profile-compare.jsonl`. The UI line has
+"with 1 test skipped and", which `counts()` missed in the T-0351 rows; fixed, so the first new row lacks the UI
+count, read from its full log instead.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: Real xc-test (tools/runner_profile_compare.py, only the profile varies, mini…, scrolls sideways" style="--tw:1177px" markdown="1">
+
+| Run | Profile | Status | Unit | UI | Stale-mark test | Seconds | T-0369-rule denials logged |
+|---|---|---|---|---|---|---|---|
+| 02:10 | new | TEST SUCCEEDED | 157/0 | 8, 1 skipped, 0 failed (full log) | passed | 310.5 | languageassetd -> mDNSResponder socket x9 |
+| 02:15 | old (T-0351) | TEST SUCCEEDED | 157/0 | 8, 1 skipped, 0 failed | passed | 277.2 | languageassetd -> mDNSResponder socket x2 |
+| 02:21 | new | TEST SUCCEEDED | 157/0 | 8, 1 skipped, 0 failed | passed | 268.6 | none |
+
+</div>
+
+
+n = 2 new, 1 old. The time difference is inside run-to-run spread at this n (268.6 and 310.5 for the same
+profile); I claim no cost either way. The mDNSResponder denial is denied by both profiles (T-0323 rule) and did not
+fail a test. Simulator device deleted after (`--cleanup`); scratch folders removed.
+
+## SETUP.md
+
+- Sandbox bullet now: no network, own address included; no local sockets of services (printing, iPhone link;
+  system log allowed); no other account's home, temp or cache folders; no shared folders (`/tmp`, `/var/tmp`,
+  `/Library/Caches`, `[local folder]`); no external drives; no Keychain, clipboard or DNS; and, new and true:
+  macOS's own system services (XPC), which Xcode needs, stay reachable. The profile is `allow default`, so
+  "not even services running on this Mac" was too strong for XPC as well as sockets.
+- Step 4 (fix 3): menu path dropped. It says an owner approves it "in the organization's settings". No source was
+  fetched (GitHub's docs are outside the Apple-docs ruling).
+
+Open for Idris: re-check the probe rows and the bullet; XPC reachability is stated, not measured service by service.
 {% endraw %}
 
 </div>

@@ -94,6 +94,21 @@ Reason codes come only from Apple's pages for the dictionary keys (A2 points the
 
 *(Note 2026-10-26 20:15 ET, Idris, T-0036: the manifests in pywidget/ios/Privacy/ agree with section 1 (NSPrivacyTracking false, NSPrivacyCollectedDataTypes and NSPrivacyTrackingDomains empty in every bundle). Two list items above differ from the build: the editor's file list and user defaults call no required-reason API in our own binaries today (FileManager reads only the file type; the App Group is shared through files, not UserDefaults), so the app and extension declare none and there is no user-defaults entry. The file timestamp, disk space and boot time entries sit in Python.framework, the binary that calls stat, statfs and mach_absolute_time (nm -u, both slices), plus C617.1 in _remote_debugging.framework. All codes are [unconfirmed] (app-review-matrix.md s1d A2 note). If code of ours ever adds UserDefaults or @AppStorage, `pywidget/ios/scripts/privacy_scan.py` fails until the bundle declares it.)*
 
+### 4a. Reason-code values, read from Apple (T-0155, for T-0035)
+
+*(Note 2026-10-27 ET, Wrenna, T-0155. Source: https://developer.apple.com/tutorials/data/documentation/bundleresources/app-privacy-configuration/nsprivacyaccessedapitypes/nsprivacyaccessedapitypereasons.json, fetched 2026-10-27 02:39:35 ET signed out through `fetch_cite.py --apple` under the #64 standing ruling; saved in research/inbound/apple/developer.apple.com/ (stem `...nsprivacyaccessedap-c6661a81.json`). This closes s0a item 10 and open fact 5. The page lists 17 values and describes each; it does not name the category beside each value, so the grouping below follows the order and wording of the descriptions (my reading, not a column Apple prints).)*
+
+Values that apply to our bundles (Apple's words, shortened):
+- **File timestamp.** C617.1: "access the timestamps, size, or other metadata of files inside the app container, app group container, or the app's CloudKit container." DDA9.1 is for displaying file timestamps to the person; 3B52.1 is for files or directories the user granted access to (document picker); 0A2A.1 is third-party SDK wrappers only.
+- **System boot time.** 35F9.1: "measure the amount of time that has elapsed between events that occurred within the app or to perform calculations to enable timers"; not sent off-device, except elapsed-time figures. 8FFB.1 (absolute timestamps) and 3D61.1 (bug report) do not fit us.
+- **Disk space.** 85F4.1: "display disk space information to the person using the device"; not sent off-device (one local-network exception with explicit permission). E174.1 is for checking there is enough space and behaving differently; 7D9E.1 for a user-submitted bug report; B728.1 for health research apps.
+- **User defaults** (none declared today): CA92.1 app-only, 1C8F.1 same App Group, C56D.1 SDK wrapper, AC6B.1 MDM.
+- Not ours: 3EC4.1 and 54BD.1 (active keyboards).
+
+Cross-check against T-0036 (be590a2c, pywidget/ios/Privacy/): Python.framework declares C617.1 (file timestamp), 85F4.1 (disk space), 35F9.1 (boot time); _remote_debugging.framework declares C617.1; App and Widget declare none. **No declared code is wrong and none is missing** for the APIs Idris found by nm -u. A grep of ios/ Swift sources (2026-10-27) finds no UserDefaults, AppStorage, document picker, or boot-time calls outside tests, which agrees with Idris's note. Two caveats, not mismatches, for review text and for Idris to keep in mind:
+1. 85F4.1 is the "display" reason and requires that the disk figure is not sent off-device. The Storage premade displays it; the reason holds only while no shipped code sends it. A user script of the person's own that sends it is the person's choice (see section 3), but our code must not.
+2. C617.1 covers our app, app-group and CloudKit containers only. If a later version lets scripts read files the user picks (document picker), the manifest needs 3B52.1 as well; same if the editor ever shows file dates (DDA9.1).
+
 ## 5. Later versions, so nobody is surprised
 
 
@@ -133,7 +148,7 @@ Apple expects answers to be kept current; when practices change, the answers in 
 2. Whether Apple's page now says anything about apps that run user-written code or reach user-chosen servers. Read 2026-10-26: it does not (A1, s0a item 6). Stays my reading; App Review could still ask.
 3. Whether a first-party widget calling an outside API with the user's own token (GitHub) needs any disclosure. Read 2026-10-26: A1 is silent (s0a item 6). Stays low-medium.
 4. ~~Whether crash reports and App Analytics that Apple shares from users who opted in are outside the label.~~ Closed 2026-10-26: "You are not responsible for disclosing data collected by Apple." (A1, s0a item 4).
-5. Required-reason API categories and reason codes for the manifest. Still open (s0a item 10): the key pages' values were not in the copies read.
+5. Required-reason API categories and reason codes for the manifest. Closed 2026-10-27 (T-0155, section 4a): values read from Apple's reasons page; T-0036's codes match.
 {% endraw %}
 
 </div>

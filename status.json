@@ -1,61 +1,77 @@
 {
  "schema": 1,
- "at": "2026-10-27T12:57:51.256467+00:00",
+ "at": "2026-10-27T14:22:09.324383+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-27T08:05:16-04:00"
+  "started": "2026-10-27T08:59:11-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "idris",
-   "task": "[build] T-0418 Acknowledgements screen",
+   "name": "pernille",
+   "task": "[build] T-0448 Home Screen scripts app.json, Python half",
    "model": "opus",
-   "started": "2026-10-27T12:23:49.226Z",
+   "started": "2026-10-27T14:08:04.889Z",
    "seconds": null,
-   "finished": "2026-10-27T12:57:11.835000+00:00"
+   "finished": "2026-10-27T14:21:27.416000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-0441 scope Investor's Home Screen apps request",
+   "model": "opus",
+   "started": "2026-10-27T14:00:08.873Z",
+   "seconds": null,
+   "finished": "2026-10-27T14:07:47.300000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[review] T-0431 review of ddbfed54 Acknowledgements",
+   "model": "opus",
+   "started": "2026-10-27T13:51:37.235Z",
+   "seconds": null,
+   "finished": "2026-10-27T13:59:50.340000+00:00"
   },
   {
    "name": "idris",
-   "task": "[build] T-0365 Button and Toggle",
-   "model": "opus",
-   "started": "2026-10-27T12:06:02.460Z",
+   "task": "[build] T-0437 review test fixes (T-0437/0438/0439/0434)",
+   "model": "sonnet",
+   "started": "2026-10-27T13:36:06.951Z",
    "seconds": null,
-   "finished": "2026-10-27T12:23:31.501000+00:00"
+   "finished": "2026-10-27T13:51:16.979000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 72,
-  "blocked_count": 49
+  "runnable_count": 78,
+  "blocked_count": 52
  },
  "meter": {
   "five_hour": {
-   "pct": 12.0,
-   "resets_at": "2026-10-27T12:59:59.610881+00:00",
+   "pct": 15.0,
+   "resets_at": "2026-10-27T12:59:59.941991+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 88.0,
+   "left": 85.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 55.0,
-   "resets_at": "2026-11-01T06:59:59.610900+00:00",
+   "resets_at": "2026-11-01T06:59:59.942008+00:00",
    "used_words": "of your weekly allowance used",
    "left": 45.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T06:59:59.611022+00:00",
+   "resets_at": "2026-11-01T06:59:59.942165+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-27T08:05:16.238661-04:00"
+  "read_at": "2026-10-27T08:59:10.546591-04:00"
  },
  "ui": {
-  "week_pct": 0.101,
+  "week_pct": 0.1,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -71,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-27T08:58:29-04:00"
+  "at": "2026-10-27T10:22:50-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -212,6 +228,13 @@
     "o": "c"
    },
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Tools/xc.sh",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Idris",
     "k": "test",
     "t": "One Simulator preview snapshot for the names...",
@@ -313,13 +336,6 @@
     "w": "Idris",
     "k": "build",
     "t": "V1 status.json expired_runs",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0206 remainder",
     "s": "next",
     "o": "c"
    },
@@ -513,13 +529,6 @@
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Independent review of 28fadd67",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Maren",
     "k": "design",
     "t": "Two stripped-mode findings in...",
@@ -527,16 +536,65 @@
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "decision",
-    "t": "Button and Toggle taps in v1",
+    "w": "Pernille",
+    "k": "build",
+    "t": "T-0428 open item",
     "s": "next",
     "o": "c"
    },
    {
-    "w": "Odalys",
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0431 L1",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0431 L2",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0431 L3",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Native prompts from scripts, Python half",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Home Screen scripts, Swift half",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Home Screen scripts design",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "Home Screen scripts in the review pack",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
     "k": "review",
-    "t": "Independent review of ddbfed54",
+    "t": "Independent Opus review of cd691030",
     "s": "next",
     "o": "c"
    },
@@ -634,30 +692,30 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0418 Acknowledgements screen",
-    "at": "2026-10-27T12:57:11.835000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0365 Button and Toggle",
-    "at": "2026-10-27T12:23:31.501000+00:00",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
+    "k": "build",
+    "t": "T-0448 Home Screen scripts app.json, Python half",
+    "at": "2026-10-27T14:21:27.416000+00:00",
+    "o": "i"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "T-0441 scope Investor's Home Screen apps request",
+    "at": "2026-10-27T14:07:47.300000+00:00",
+    "o": "i"
+   },
+   {
+    "w": "Odalys",
     "k": "review",
-    "t": "T-0401 runner stop review",
-    "at": "2026-10-27T12:03:18.412000+00:00",
+    "t": "T-0431 review of ddbfed54 Acknowledgements",
+    "at": "2026-10-27T13:59:50.340000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 72,
-   "wait": 25,
+   "next": 78,
+   "wait": 28,
    "blocked": 24,
    "you": 5
   }
@@ -667,6 +725,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "task_open"

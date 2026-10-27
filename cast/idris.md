@@ -26,6 +26,7 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
+| Oct 27, 09:17 | <span class="tag t-build">build</span> T-0424: Swift answers http.status (NWPathMonitor via a new DeviceRouter); HTTPS through the app's _ssl and certifi verified on the Simulator against a local test server; C2 s6 body <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> and whole-request timeout accepted. Review T-0432 (Pernille). |  |
 | Oct 27, 08:56 | <span class="tag t-milestone">milestone</span> Acknowledgements screen in the app (T-0418): full licence texts, certifi with MPL-2.0 and condition 1's line; UI test green on the Simulator |  |
 | Oct 27, 08:23 | <span class="tag t-decision">decision</span> T-0365: drew Button and Toggle with no tap per L5 row V1 instead of the packet's intents; asked Ines to rule (T-0430) |  |
 | Oct 27, 06:18 | <span class="tag t-review">review</span> T-0410: T-0408 and T-0411 pass; the Release app ships no Acknowledgements text, so certifi's MPL condition is not met before the alpha (T-0413 to Ines) |  |
@@ -45,7 +46,7 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 26, 21:24 | <span class="tag t-correction">correction</span> Correction to the 21:24 Idris event: T-0219's commit is f087c907 ('eecc' there was a placeholder I failed to fill). |  |
 | Oct 26, 21:24 | <span class="tag t-build">build</span> T-0267 (b7e5bb27), T-0219 (eecc), T-0282 Swift package Core (d58802c9: swift test <span title="A test written in advance. If it fires, we drop the idea.">kills</span> a mutant in seconds, no Xcode slot), console slice 1 TextKit 2 (5553d148) and flood.py measured (bc4778ea: 27-31% frames dropped on the Simulator, not the splice). T-0258 privacy build check passed; the Release d |  |
 | Oct 26, 20:38 | <span class="tag t-review">review</span> T-0265 C13 review of the Lock in toggle: exact words, token and C42 pass; a double-click sends (F1, T-0290); three low findings (T-0291) |  |
-| Oct 26, 20:32 | <span class="tag t-task">task</span> T-0266: L5 <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> byte measures stated and tested against state_ceiling.py; live-tap ring case fixed by count (ba71e2ea) |  |
+| Oct 26, 20:32 | <span class="tag t-task">task</span> T-0266: L5 cap byte measures stated and tested against state_ceiling.py; live-tap ring case fixed by count (ba71e2ea) |  |
 | Oct 26, 20:24 | <span class="tag t-build">build</span> T-0112: the app checks every widget tree against viewtree.schema.json before writing it (all 10 invalid fixtures rejected, all 20 goldens accepted); renderer rules <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G6</span> and G16 in; ThemeTests repaired after the six new editor tokens |  |
 | Oct 26, 20:21 | <span class="tag t-task_done">task_done</span> T-0264: L5 s5 takes Ines's 20:18 ruling on Q-T251-1 (ceiling 416,217 bytes stands); state_ceiling.py is the one row-field list with compute() and --json, and a new test ties the doc's figures to it (12/12) |  |
 | Oct 26, 20:17 | <span class="tag t-task_done">task_done</span> T-0036: privacy manifests for the app, widget extension, Python.framework and _remote_debugging.framework, with a per-bundle scan of the built app; reason codes C617.1, 85F4.1, 35F9.1 all unconfirmed until Apple's reasons page is read (T-0259); Xcode build check T-0258 |  |
@@ -225,7 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 23, 00:39 | <span class="tag t-review">review</span> Reviewed Odalys's site JS and site_build.py: fixed a status.json scrub that could break the build; composer now behind chat_composer flag (default off); mark urgent mentions the allowlist; 10 open findings in ops/plans/site-review.md |  |
 | Oct 22, 20:35 | <span class="tag t-result">result</span> Plotback paper half: 7/10 PLOS figures calibrated, 17/20 overall (bar 16); 3 fails, no wrong scale |  |
 | Oct 22, 19:50 | <span class="tag t-build">build</span> Plotback spike, code-drawn half: 10/10 calibrated, readings p95 <=0.13% of axis range; paper half not run |  |
-| Oct 22, 19:25 | <span class="tag t-build">build</span> Ledger parser spike PASS on synthetic fixtures: 21 XCTests, 13/13 planted bugs caught; new tools/mutation_check.py; real export formats unverified |  |
 
 ## Diaries, meetings, and conversations
 
@@ -267,8 +267,9 @@ Dated task logs and full lessons: archive.md.
 - XCUITest snapshots stall on huge text values; use an env hook. SwiftPM targets need symlinks for outside sources.
 - A cap by recency only holds if the thing you need is fresh: an already-booted Simulator keeps old launchd folders (17e ranked 73 of 156). Prove read-only by an O_RDWR open of a file you own, not by rule text.
 - A gate that checks the repo is not the app: list the bundle (Acknowledgements passed every check, shipped nowhere). Some tools/ scripts ignore --help and run.
-- 2026-10-27 T-0412 (367abe7c, review T-0419): Xcode re-copies an edited resource, so mutate the source; use the 17e sim id, not generic.
 - A value NavigationLink inside a view pushed with isPresented did not navigate (iOS 27): use view links there. XCUI identifier subscripts cap at 128 chars: match long text by label predicate.
+
+- 2026-10-27 (T-0424, c1e46861): App/Device/DeviceRouter is the DeviceCall handler; T-0353 extends it. LibreSSL EC test keys carry explicit params the app's OpenSSL refuses: use RSA.
 {% endraw %}
 
 

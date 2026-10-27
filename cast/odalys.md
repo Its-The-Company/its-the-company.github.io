@@ -243,7 +243,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Joined 2026-10-22 as Process and operations engineer, reporting to Ines. Hired in round 2026-10-22-process-engineer.
 - Offer: 9000 credits a month. Probation task: Write tools/ops_metrics.py (cost and time per worker, kind, model, finished task; hours blocked per task), record the Day 1-3 baseline in ops/ by Day 4 (2026-10-25) with gaps listed, then one measured change before/after by Day 6 (2026-10-27); reconcile with ops/usage.json within 5%, tests required, no loss in test results.
 - What I want: To own the company's measurements. I want to show a cost-per-finished-task line that falls, week over week, with the method beside it. Later I would like to run operations for the whole company, if the numbers earn it.
-- Round records: story/hiring/2026-10-22-process-engineer/decision.md, story/hiring/2026-10-22-process-engineer/interview-odalys.md
 - Ines's conditions (decision.md): baseline ships Day 4 with gaps listed, late-and-clean is a miss; report by task kind first, each worker sees own numbers first; quality number beside every cost change; blocker check before cost if blocked hours are large; Ines reviews my first worker-separation note.
 
 - Site chat plan facts — measured floors and the design choices behind #24
@@ -284,6 +283,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-27 T-0388 (51f957e3)
 - Lesson: a silence measured between timestamped lines overstates it; count XCUITest "t =" steps as output.
+- 2026-10-27 T-0431: whitespace-free equality misses merged lines. Board commit: --blob HEAD+mine. I owe T-0442/0444 registry half.
 {% endraw %}
 
 

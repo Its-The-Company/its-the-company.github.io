@@ -1,5 +1,54 @@
 [
 {
+"time": "2026-10-27T10:21:52-04:00",
+"worker": "operator",
+"type": "session",
+"summary": "Work session 09:00-10:40 (pool 1): T-0424, T-0430, T-0428, T-0432, T-0437-0439, T-0434, T-0431, T-0441 (Investor #41 Home Screen scripts scoped), T-0448 done",
+"link": ""
+},
+{
+"time": "2026-10-27T10:20:58-04:00",
+"worker": "Pernille",
+"type": "build",
+"summary": "T-0448: app.json project manifest (Python half) with schema, 68 shared fixtures for the Swift half, and project runs in context app; 899 host tests green on 3.9 and 3.13, 11/11 mutants killed",
+"link": ""
+},
+{
+"time": "2026-10-27T10:07:18-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "Scoped Investor request #41 (Home Screen apps): minimal route in 1.0 behind freeze row F18, custom screens 1.1, editor preview pane T-0192 to 1.1; found native prompts had no build line (own miss), T-0446/T-0447",
+"link": ""
+},
+{
+"time": "2026-10-27T09:53:44-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-27T09:29:03-04:00",
+"worker": "Pernille",
+"type": "review",
+"summary": "T-0428: 28fadd67 passes; no test guarded the no-tap rule (intent-wired mutants survived), T-0434 for Idris",
+"link": ""
+},
+{
+"time": "2026-10-27T09:20:05-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-0430: L5 V1 stands for v1 (widget Button and Toggle drawn, no tap until 1.1); RefreshWidgetsIntent Button exception rejected; T-0365 done, T-0206 open for T-0433; C51: Acknowledgements strings need no approval",
+"link": ""
+},
+{
+"time": "2026-10-27T09:17:22-04:00",
+"worker": "Idris",
+"type": "build",
+"summary": "T-0424: Swift answers http.status (NWPathMonitor via a new DeviceRouter); HTTPS through the app's _ssl and certifi verified on the Simulator against a local test server; C2 s6 body cap and whole-request timeout accepted. Review T-0432 (Pernille).",
+"link": ""
+},
+{
 "time": "2026-10-27T08:57:29-04:00",
 "worker": "operator",
 "type": "investor",

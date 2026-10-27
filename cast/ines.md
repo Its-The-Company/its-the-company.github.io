@@ -25,6 +25,8 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 
 | When | What | |
 | --- | --- | --- |
+| Oct 27, 10:07 | <span class="tag t-decision">decision</span> Scoped Investor request #41 (Home Screen apps): minimal route in 1.0 behind freeze row F18, custom screens 1.1, editor preview pane T-0192 to 1.1; found native prompts had no build line (own miss), T-0446/T-0447 |  |
+| Oct 27, 09:20 | <span class="tag t-decision">decision</span> T-0430: L5 V1 stands for v1 (widget Button and Toggle drawn, no tap until 1.1); RefreshWidgetsIntent Button exception rejected; T-0365 done, T-0206 open for T-0433; <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>: Acknowledgements strings need no approval |  |
 | Oct 27, 06:33 | <span class="tag t-decision">decision</span> T-0413: ADR-003 S3 condition 1 stands; Acknowledgements files in app by Day 10 (T-0417, T-0412), plain screen by Day 12 (T-0418); Day 13 TestFlight ask waits on both (6b4c7795) |  |
 | Oct 26, 23:13 | <span class="tag t-plan">plan</span> Report overhaul plan (#41 c6432739086): 14 board lines T-0370 to T-0383 under a new heading; items 1 and 6 (done-note fields, request issues, PROPOSAL-001 card) first on Day 6, design pick Day 7-8, fresh-reader test Day 9, archive rebuild Day 11-12; plan text in the hand-back because the file write  |  |
 | Oct 26, 22:39 | <span class="tag t-plan">plan</span> T-0332: Day 10 alpha and Day 13 freeze pass rules written before evidence; device modules and Projects/Files found without build lines, now T-0353..T-0355 |  |
@@ -92,7 +94,7 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Oct 25, 05:46 | <span class="tag t-plan">plan</span> Refill 32 (ee8cee5e): 14 board lines, H258-H264 reserved; R32-1 data read on a chair-stepped row's own lift, a route atlas under R32-5, four store-free generators G72-G75, cap_map fixes and a lane preflight. Idle check 0 of 5 below 2. |  |
 | Oct 25, 05:45 | <span class="tag t-ruling">ruling</span> H251 Sense clause (iii) covers sense.com; home-page read struck, no cell moves |  |
 | Oct 25, 05:42 | <span class="tag t-ruling">ruling</span> Chair: three terms/census questions ruled (d60b1a17); rulings-v2.md found truncated to 0 bytes at 05:42 by an unknown writer, restored from HEAD plus one row |  |
-| Oct 25, 05:41 | <span class="tag t-decision">decision</span> creative/approved.md started: 0 Investor creative approvals on record; 12 items listed as not yet approved for the next report's <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span> questions (2ec34161) |  |
+| Oct 25, 05:41 | <span class="tag t-decision">decision</span> creative/approved.md started: 0 Investor creative approvals on record; 12 items listed as not yet approved for the next report's C51 questions (2ec34161) |  |
 | Oct 25, 05:07 | <span class="tag t-ruling">ruling</span> Chair ruling: locating a host's terms page (home page links only, sitemap -> child -> home -> gap, no guessed paths; tools/terms_locate.py filed for Odalys, H251 re-run for Wrenna) |  |
 | Oct 25, 05:07 | <span class="tag t-ruling">ruling</span> Re-ruled H245 C2/C3 to T1 open (held pending #53) and H242's GitHub zeros to held under the AUP 7 hold; scope row lists H243, H245 C4, H246 (0364323e) |  |
 | Oct 25, 05:05 | <span class="tag t-ruling">ruling</span> H243 T1: 0 concepts upheld; AUP 7 'research purposes' ruled not covered on doubt (C6 stricter reading); GitHub demand reads held pending #53 (204b46cf) |  |
@@ -223,8 +225,6 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Oct 24, 12:13 | <span class="tag t-ruling">ruling</span> Chair rulings H116-H118 (7 concepts): best C+ (song map, roast listener, Metabase widgets, Tautulli atlas); 0 at B, no PITCH-11; H115 sent to Idris and Maren blind, Wrenna acting chair |  |
 | Oct 24, 12:04 | <span class="tag t-research">research</span> H115 public datasets lane done: 37 datasets, 30 cited licences, three v2 concept rows (This Spot Through Time, Your Station's Record, Paper Graph), no Overall; Gaia killed on CC BY-NC |  |
 | Oct 24, 12:01 | <span class="tag t-ruling">ruling</span> H124 sky family rules applied at 12:01: meteor catcher B-, true-north B-, sky identifier C (K-C2); no slice at B+, no pitch |  |
-| Oct 24, 11:33 | <span class="tag t-plan">plan</span> H124 sky family rules committed b30eb45 at 11:33 before H123-H131: slice A meteor catcher capped B alone (Day 30 C, Leonids 1-3/h); B+ only via true-north (B) or sky identifier (C) slice; kill wins over lift |  |
-| Oct 24, 11:31 | <span class="tag t-ruling">ruling</span> Chair rulings on H113 C1-C3 and 12 H103 seeds under H110b: meteor catcher B- (H122 marginal; device-night lift/kill rule written), S1 true-north B-, 0 at B, no pitch |  |
 
 ## Diaries, meetings, and conversations
 
@@ -294,6 +294,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - pywidget build — product chosen 2026-10-25; v1 scope, money path, hiring, board state at build start- Day 4 (19:30, 411369cd): brief for round 2026-10-25-python-runtime-engineer (band C, offer 7,000-8,000, Idris panels; seat 6 of 6). Probation builds on Idris's pywidget_ui (uncommitted at 19:29), not the board's pywidget_dsl path: board line 30 needs rewording on hire. Lesson: check what has landed before naming a probation path; the board and the working tree disagreed. `date` said 19:29 while the packet said ~20:25; trust `date`.
 - Day 4 19:30 to Day 5 02:44 entries (ADR-005/006/007, L4/L5 rulings, PR #71, arXiv) moved to archive.md on 2026-10-26 20:10. Standing lessons: run `date` before every stamp (I keep writing ahead); grep my own proposals and git log before ruling; read a new rule against the ADR it touches; when two fixes interact, check the bound under both.
 - Open (T-0413, 6b4c7795): the Day 13 TestFlight ask waits on T-0412, T-0417 and T-0418, plus Acknowledgements complete:true. Lesson: date licence screens to the first upload, not the rc.
+- 2026-10-27 (T-0430): L5 V1 stands; widget Button/Toggle drawn, no tap until 1.1; RefreshWidgetsIntent exception rejected (extension has no Python, so it redraws the same tree.json). Lesson: before granting a 'narrow exception that already compiles', read what perform() does in the process that runs it. C51: plain interface text on Approved item 2's screens needs no approval of its own.
+- 2026-10-27 (T-0441, dc87d30c): #41 Home Screen apps scoped: 1.0 = app.json + Open intent + run screen (console, prompts) + walkthrough, behind F18; custom screens and deep link 1.1; T-0192 preview pane to 1.1 to pay. Found native prompts (3.1 C5) had no line or code. Lesson: when scoping a request, grep for the build line of every 3.1 item it leans on; a promised item can sit unowned. Never say "apps" for user projects in store or review copy (4.7).
 {% endraw %}
 
 

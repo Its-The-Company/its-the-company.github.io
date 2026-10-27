@@ -111,6 +111,21 @@ Nothing else in the contract changes. Idris may implement `closed_state()` as wr
 - **The main slot on Day 9.** A4, A6, A5's snapshot test (T-0359) and A7 all land that day after T-0207. The T-0207 checkpoint at 10-30 18:00 is where I re-rule. At that checkpoint I also order Day 11-12 for main with T-0353 and T-0355 in it. The default, written now: T-0353 on Day 11 (location, pedometer, clipboard), T-0355 on Day 12, and T-0192 to 1.1 if both do not fit.
 - **The device modules found late.** Four free premades and the cut line's margin rest on T-0353. Had I left this to Day 10, it would have surfaced on Day 14.
 - **Me, grading under pressure.** These rules were written before any evidence. If a row reads unfair once the evidence lands, I record that, and any change applies forward to the freeze list only, never to the Day 10 verdict.
+
+## 7. Freeze rows added 2026-10-27 10:05 ET (Ines, T-0441; ADR-001 chair ruling of that time). Written before any evidence; no alpha row changes.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 7. Freeze rows added 2026-10-27 10:05 ET (Ines, T-0441; ADR-001 chair ruling of…, scrolls sideways" data-n="1" style="--tw:1730px" markdown="1">
+
+| # | Feature | Evidence that counts | Produces | By | Pass rule | A fail triggers |
+| --- | --- | --- | --- | --- | --- | --- |
+| F17 | Native prompts from scripts (ADR-001 3.1 C5; T-0446, T-0447) | Host tests of the Python half (`run_host.py`); XCTest through the bridge on the Simulator for each prompt kind, answered and cancelled; the same call from a widget or Shortcut run; Simulator screenshots of each kind, iPhone and iPad, light and dark, AX5 | Pernille, Idris; Maren reads the screens | 11-02 23:59 | Every kind returns the typed answer, cancel behaves as API.md says, a widget or Shortcut run gets the documented error (or the iOS 26 foreground hand-off) and never hangs; Maren passes the screens against IDE spec s3 | Forms go to 1.1 first. If alerts, text fields or choices fail, prompts are 1.1, tour page 2 uses `input()`, and the store page drops the prompts sentence |
+| F18 | Open a script from the Home Screen (T-0448, T-0449, T-0450) | Host tests of the manifest, hostile fixtures included; XCTest: the entity query lists exactly the valid manifests, `perform()` on the Open intent shows the run screen with the entry's output; UI test: Make App on a two-file project, open it through the intent, a second open during a run shows the confirmation; one hand run on the Simulator of Shortcuts, Add to Home Screen, tap, run screen, with screenshots (or a note that the Simulator cannot, and the check moves to the first device run); walkthrough screenshots | Pernille, Idris; Maren reads the screens | 11-03 23:59 | All green; Maren passes the run screen and the walkthrough; the walkthrough's copy matches what the hand run showed | The route is removed from the build (no dormant code), the store page and review notes are silent on it, and it is 1.1's first line |
+
+</div>
+
+
+F10 changes by the same ruling: T-0192 is 1.1, so F10 grades T-0193 (tour page 3) only. F9 grades T-0048 without Run as widget and the entry stepper.
 {% endraw %}
 
 </div>

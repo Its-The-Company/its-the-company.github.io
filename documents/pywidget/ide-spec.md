@@ -197,12 +197,12 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | Headline | 2 below the eyebrow | title1 display (New York 600 in A, SF Pro Rounded 700 in B) | `text.primary` |
    | Sub `sub` | 6 below | body | `text.secondary` |
    | Row | padding 12 vertical, gap 14, hairline between rows | title headline 600; line footnote | tile 36, radius 10, `accent.soft`, glyph 20 `accent`; line `text.secondary`; hairline `line.hairline` |
-   | Premade chips | min 28 tall, padding 4/10, radius 8, gap 6, wrap; glyph 15 | footnote | `bg.sunken`, text `text.primary`, glyph `accent`; marked: `accent.soft`, inset 1.5 `accent`, text `accent` 600 |
+   | Premade chips | min 28 tall, padding 4/10, radius 8, gap 6, wrap; no glyph (T-0474: the row tile carries it once) | footnote | `bg.sunken`, text `text.primary`; marked: `accent.soft`, inset 1.5 `accent`, text `accent` 600 |
    | Theme swatches | three equal, gap 8, padding 8/9, radius 10, 1 px `line.hairline`; name under in caption1 | code 12/16 Menlo (fixed: a sample, not text to read) | the theme's own `bg`, `text`, `keyword`, `function`, `string` for the frame's appearance (themes-pro/themes.json) |
    | "Always free" box | margin 6/20, padding 12/14, radius 14 | eyebrow + footnote | `bg.sunken` |
    | Pinned foot (every size) | bottom of the screen, padding 12/20/28, 1 px top hairline; the body scrolls above it with a matching bottom inset | | `bg.canvas`, `line.hairline` |
    | Buy button | min 50, pill, full width, gap 8 with an 18 icon | headline 600 | ready: `accent` (A), 135deg `accent` to `accent.2` (B); text `text.onAccent`; disabled: `bg.sunken`, `text.secondary`; restored: `status.success` |
-   | Line under the button | 8 below, centred | footnote | `text.secondary`; failed: `status.danger` |
+   | Line under the button | 8 below, centred; at most 72 characters (`PRO_LINE_MAX`, checked with C6) | footnote | `text.secondary`; failed and restoreFailed: `status.danger` |
    | Links | row, gap 18, wrap; each 44 tall | footnote | `accent` |
    | Purchased screen | check 44 in an 84 circle (`status.success` at 14 % on `bg.canvas`), 150 from the top; title 20 below | title1 display; body | button as Buy; Done headline `accent` |
 
@@ -212,7 +212,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **7.4 Purchase states** (sheet frame 7). The button and its line; StoreKit 2 names in brackets.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 5. Screen notes, scrolls sideways" data-n="1" style="--tw:1405px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 5. Screen notes, scrolls sideways" data-n="1" style="--tw:1519px" markdown="1">
 
    | # | State | Button | Line | Tappable | Price shown |
    |---|---|---|---|---|---|
@@ -220,8 +220,9 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | 2 | ready | `btn.ready` | `ln.ready` | yes: `product.purchase()` | yes, `product.displayPrice` |
    | 3 | buying (purchase in flight, system sheet up) | `btn.buying`, spinner | `ln.buying` | no | in Apple's sheet |
    | 3b | restoring (`AppStore.sync()`) | `btn.restoring`, spinner | `ln.restoring` | no | n/a |
-   | 4 | pending (`.pending`, Ask to Buy) | `btn.pending`, spinner | `ln.pending` | no; the screen may close; `Transaction.updates` turns Pro on later | n/a |
+   | 4 | pending (`.pending`: Ask to Buy or a bank confirmation; this screen's own result, a new screen opens on 2) | `btn.ready` (T-0481) | `ln.pending` | yes: a declined Ask to Buy sends no transaction, so a disabled button would never come back; `Transaction.updates` turns Pro on later | yes |
    | 5 | failed (an error, or an unverified transaction) | `btn.failed` | `ln.failed` in `status.danger` | yes | yes |
+   | 5b | restoreFailed (`AppStore.sync()` threw, product loaded) | `btn.ready`, never "Try again", which would buy (T-0482) | `ln.restoreFailed` in `status.danger`; on the purchased screen the same line in `text.secondary` (Pro is still active) | yes | yes |
    | 6 | offline (no products and no network) | `btn.offline` | `ln.offline` | no | no: the button cannot buy |
    | 7 | restored / purchased (verified entitlement) | `btn.restored` with check, then the purchased screen | `ln.restored` | no | n/a |
    | 8 | none found (restore ran, no entitlement) | `btn.none` | `ln.none` | yes | yes |
@@ -229,18 +230,18 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 </div>
 
 
-   `.userCancelled` returns to 2 with no message. Restore is always the first link; it is never a second button competing with Buy. No timer, count, "launch price" or urgency word anywhere (C6); `draw_ide.py --pro-strings` checks every string for them and checks the price on every buy button (seeded mutant "Launch price ends soon, only 3 left." and a price-less "Try again": both caught). Result in qa.json `_pro_c6`: 53 strings, 0 banned words, 0 buy buttons without a price.
+   `.userCancelled` returns to 2 with no message. Restore is always the first link; it is never a second button competing with Buy. No timer, count, "launch price" or urgency word anywhere (C6); `draw_ide.py --pro-strings` checks every string for them and checks the price on every buy button (seeded mutant "Launch price ends soon, only 3 left." and a price-less "Try again": both caught). Result in qa.json `_pro_c6`: 53 strings, 0 banned words, 0 buy buttons without a price. *T-0474 (2026-10-27):* `--pro-strings` also fails on any `ln.*` over 72 characters; today 0 (longest `ln.restoreFailed`, 71).
 
    **7.5 Accessibility.**
    - Dynamic Type: every text role scales; at AX1 and up the row tiles hide, the body scrolls, and the button and its line stay pinned, so the price is on screen at every size (frame 5, AX3). The links move to the end of the scrolled body at AX sizes. Chips wrap; nothing truncates (qa.json: 0 truncated).
-   - VoiceOver order: Close; eyebrow and headline (one element, trait header); sub; each row as one element ("Pro premade widgets. Add them to your Home Screen… Habit tracker, Shortcuts launcher, …"); swatches hidden behind their row (the row names the themes); "Always free" box as one element; the button (label as shown, the state line as its hint); Restore purchase, Terms of Use, Privacy Policy. Spinners are `accessibilityHidden`; a state change posts an announcement with the new line. The marked chip in entry 1 adds "selected".
+   - VoiceOver order: Close; eyebrow and headline (one element, trait header); sub; each row as one element ("Pro premade widgets. Add them to your Home Screen… Habit tracker, Shortcuts launcher, …"); swatches hidden behind their row (the row names the themes); "Always free" box as one element; the button (label as shown); the state line as its own element, read next (T-0474 ruling 1: a hint is skipped when hints are off and is not in the tree a UI test reads, and the line is the only thing telling `none` from `ready`); Restore purchase, Terms of Use, Privacy Policy. Spinners are `accessibilityHidden`; a state change posts an announcement with the new line. The marked chip in entry 1 adds "selected".
    - Contrast, measured: every text node against its composited background in qa.json (A-pro-phone 233 nodes, lowest 5.79:1; A-proentry-phone 186, 5.95; A-pro-ipad 72, 5.95; B-pro-phone 223, 7.01; B-proentry-phone 162, 5.25). Skipped by the script (on B's gradient and widget card): onAccent on the B dark gradient's stops is 6.83 (`accent`) and 9.09 (`accent.2`); onAccent on `status.success` 5.79 (A) and 9.95 (B); onAccent on `accent` in A 7.38; `key.text` on `key.bgAlt` (the Pro chip) 13.44 (A) and 14.43 (B). Increase Contrast uses the 7:1 sets as everywhere else.
    - Reduce Motion: the state change is a crossfade (120 ms), no slide; nothing on this screen moves on its own.
 
    **7.6 Strings.** Every string is **DRAFT C51**: the paywall's look and copy are outside approved item 2 and go to the Investors with these sheets (ops/questions.md). Generated by `draw_ide.py --pro-strings` from `PRO_STR`, the same table the frames draw from; if a string changes, regenerate this table.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 5. Screen notes, scrolls sideways" style="--tw:846px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 5. Screen notes, scrolls sideways" style="--tw:860px" markdown="1">
 
    | ID | String | Where | C51 |
    |---|---|---|---|
@@ -264,7 +265,6 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | `btn.ready` | Unlock Pro · [price] | button, ready; [price] = product.displayPrice | DRAFT |
    | `btn.buying` | Waiting for the App Store… | button, buying (disabled) | DRAFT |
    | `btn.restoring` | Restoring… | button, restoring (disabled) | DRAFT |
-   | `btn.pending` | Waiting for approval | button, pending (disabled) | DRAFT |
    | `btn.failed` | Try again · [price] | button, failed | DRAFT |
    | `btn.offline` | Unlock Pro | button, offline (disabled; no price, so no tap) | DRAFT |
    | `btn.restored` | Pro is active | button, restored (success fill, not a button) | DRAFT |
@@ -273,8 +273,9 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | `ln.ready` | One-time purchase through the App Store. | line under the button | DRAFT |
    | `ln.buying` | Confirm in the App Store sheet. | line under the button | DRAFT |
    | `ln.restoring` | Checking your Apple Account. | line under the button | DRAFT |
-   | `ln.pending` | The family organizer needs to approve this purchase. You can close this screen; Pro turns on once it is approved. | line under the button | DRAFT |
+   | `ln.pending` | The purchase is waiting for approval. Pro turns on by itself. | line under the priced, enabled btn.ready after a .pending result (Ask to Buy or a bank confirmation); T-0474 | DRAFT |
    | `ln.failed` | The App Store couldn’t complete the purchase. | line under the button, status.danger | DRAFT |
+   | `ln.restoreFailed` | The App Store couldn’t restore the purchase. Try Restore purchase again. | line under btn.ready after a failed Restore, status.danger; the purchased screen's line after one, text.secondary; Settings' Pro footer (T-0474) | DRAFT |
    | `ln.offline` | You’re offline. The price shows when you reconnect. | line under the button | DRAFT |
    | `ln.restored` | Restored from your Apple Account. | line under the button | DRAFT |
    | `ln.none` | No Pro purchase found for this Apple Account. | line under the button | DRAFT |
@@ -302,6 +303,8 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 
 
    **7.7 C51 question.** A (recommended): approve the Pro screen as drawn, headline by variant (`h.premades`, `h.packages`, `h.themes`). B: as A, with the plain headline `h.optB` "What Pro adds." in every variant (frame 8). C: neither; the company redraws. Not asked here: the price (`[price]` stays a placeholder, the Investors' call), which premades are Pro (questions item 10), and the theme pairs themselves (PROPOSAL-004).
+
+   *Note, 2026-10-27 (Maren, T-0474, review of T-0473 and 0d5658e5):* rulings in pywidget/docs/reviews/t0473-pro-screen-design-maren.md. Changed here: chips carry no glyph; state 4 keeps the priced Buy; state 5b added; `btn.pending` dropped (no screen shows it); final `ln.pending` and `ln.restoreFailed`; the state line is read after the button, not as its hint; a 72-character <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> on lines. The Pro sheets (A/B-pro-phone, A-pro-ipad) are owed a redraw from draw_ide.py with these changes.
 
    *Open for Idris (T-0031):* (a) the restore-in-progress state 3b is my addition to the eight; (b) in C1 a free user's `import numpy` needs a console line that points to Pro, not a pop-up; not drawn, Ines rules on it with the C1 case; (c) the purchased screen in C1 has no button, only Done.
 
@@ -514,7 +517,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    |---|---|---|---|
    | `set.title` | Settings | large title; fourth tab (iPhone); sidebar foot row (iPad) | DRAFT |
    | `set.pro.pending` | Waiting for approval | Pro row detail while a purchase is pending (Ask to Buy) | DRAFT |
-   | `set.restore.failed` | The App Store couldn’t restore the purchase. Try again later. | Pro group footer after a failed restore | DRAFT |
+   | `set.restore.failed` | The App Store couldn’t restore the purchase. Try Restore purchase again. (same text as `pro:ln.restoreFailed`; T-0474) | Pro group footer after a failed restore | DRAFT |
    | `grp.editor` | Editor | group header; the group exists only while `themes` is on | DRAFT |
    | `set.theme.default` | Quill and Lumen | Editor theme detail and the picker's first row: the free pair | DRAFT |
    | `set.theme.foot.on` | Each theme follows the Light and Dark setting, with a high-contrast set. | picker footer once Pro is active | DRAFT |

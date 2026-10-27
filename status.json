@@ -1,69 +1,77 @@
 {
  "schema": 1,
- "at": "2026-10-27T21:18:21.315914+00:00",
+ "at": "2026-10-27T22:05:17.011902+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-27T15:22:39-04:00"
+  "started": "2026-10-27T17:19:49-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "idris",
-   "task": "[build] T-0460 editor G2/G3",
+   "name": "pernille",
+   "task": "[review] T-0483 re-review paywall fixes",
    "model": "opus",
-   "started": "2026-10-27T20:10:56.785Z",
+   "started": "2026-10-27T22:02:05.918Z",
    "seconds": null,
-   "finished": "2026-10-27T21:17:37.715000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0440 xc.sh false green",
-   "model": "opus",
-   "started": "2026-10-27T19:56:20.325Z",
-   "seconds": null,
-   "finished": "2026-10-27T20:10:34.981000+00:00"
+   "finished": "2026-10-27T22:04:24.671000+00:00"
   },
   {
    "name": "idris",
-   "task": "[build] T-0473 paywall screen",
-   "model": "opus",
-   "started": "2026-10-27T19:23:22.280Z",
+   "task": "[build] T-0484 Pro screen design fixes",
+   "model": "sonnet",
+   "started": "2026-10-27T21:54:32.183Z",
    "seconds": null,
-   "finished": "2026-10-27T19:55:49.056000+00:00"
+   "finished": "2026-10-27T22:01:58.072000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[review] T-0474 Pro screen design review",
+   "model": "opus",
+   "started": "2026-10-27T21:48:09.674Z",
+   "seconds": null,
+   "finished": "2026-10-27T21:54:14.970000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-0480 paywall fixes M1-M3 (T-0480/81/82)",
+   "model": "opus",
+   "started": "2026-10-27T21:24:39.235Z",
+   "seconds": null,
+   "finished": "2026-10-27T21:47:54.589000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 81,
-  "blocked_count": 53
+  "runnable_count": 82,
+  "blocked_count": 52
  },
  "meter": {
   "five_hour": {
-   "pct": 2.0,
-   "resets_at": "2026-10-27T23:00:00.279914+00:00",
+   "pct": 8.0,
+   "resets_at": "2026-10-27T22:59:59.884576+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 98.0,
+   "left": 92.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 58.0,
-   "resets_at": "2026-11-01T07:00:00.279931+00:00",
+   "pct": 59.0,
+   "resets_at": "2026-11-01T06:59:59.884595+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 42.0,
+   "left": 41.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T07:00:00.280054+00:00",
+   "resets_at": "2026-11-01T06:59:59.884732+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-27T15:22:38.934685-04:00"
+  "read_at": "2026-10-27T17:19:48.564024-04:00"
  },
  "ui": {
-  "week_pct": 0.1,
+  "week_pct": 0.101,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -79,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-27T17:19:01-04:00"
+  "at": "2026-10-27T18:05:53-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -626,6 +634,13 @@
     "o": "c"
    },
    {
+    "w": "Idris",
+    "k": "build",
+    "t": "From T-0483 re-review N1",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Odalys",
     "k": "tools",
     "t": "Report overhaul item 1a",
@@ -705,30 +720,30 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0460 editor G2/G3",
-    "at": "2026-10-27T21:17:37.715000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0440 xc.sh false green",
-    "at": "2026-10-27T20:10:34.981000+00:00",
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-0483 re-review paywall fixes",
+    "at": "2026-10-27T22:04:24.671000+00:00",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "T-0473 paywall screen",
-    "at": "2026-10-27T19:55:49.056000+00:00",
+    "t": "T-0484 Pro screen design fixes",
+    "at": "2026-10-27T22:01:58.072000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "review",
+    "t": "T-0474 Pro screen design review",
+    "at": "2026-10-27T21:54:14.970000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 81,
-   "wait": 29,
+   "next": 82,
+   "wait": 28,
    "blocked": 24,
    "you": 5
   }
@@ -738,6 +753,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "task_open"

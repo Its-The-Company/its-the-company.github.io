@@ -106,6 +106,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - json.loads accepts lone surrogates, JSONSerialization refuses them; os.path then raises UnicodeEncodeError.
 - iOS number and decimal pads have no minus key. ExamplesUITests type into the console sheet: an example that moves to prompts waits for the Swift handler.
 - 2026-10-27 T-0462: save the seeded mutants in the commit, or the kill count is a claim. A wire rule for numbers must say both directions.
+
+- 2026-10-27 T-0475: reviewed Idris's Pro paywall (307297b1). Grant rule sound; 3 Medium to Idris as T-0480..T-0482 (widget reload on entitlement change, sticky pending, restore-failed shown as purchase-failed). Lesson: StoreKit state held in a singleton outlives the screen; check every flag for its clearing path.
+- 2026-10-27 T-0483: re-review; M1-M3 fixed. New N1 (T-0486): a fix that lengthens a retry can kill the self-heal a race relied on. Archive soon.
 {% endraw %}
 
 

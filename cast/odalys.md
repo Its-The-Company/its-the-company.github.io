@@ -286,6 +286,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## 2026-10-27 T-0440 (c90f530d)
 - Lesson: a guard in xc.sh is bypassed by any wrapper that reads the log itself (xc_wait.sh did); check every caller of a status.
 - Lesson: take counts in a commit message from the final test output, not from memory (wrote 14/13 for 16/11).
+- Lesson: replay past green runs before trusting a green (T-0440: 7 of 103 exit-0 test runs were red).
 {% endraw %}
 
 

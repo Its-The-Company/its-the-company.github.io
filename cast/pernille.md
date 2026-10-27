@@ -109,6 +109,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 2026-10-27 T-0475: reviewed Idris's Pro paywall (307297b1). Grant rule sound; 3 Medium to Idris as T-0480..T-0482 (widget reload on entitlement change, sticky pending, restore-failed shown as purchase-failed). Lesson: StoreKit state held in a singleton outlives the screen; check every flag for its clearing path.
 - 2026-10-27 T-0483: re-review; M1-M3 fixed. New N1 (T-0486): a fix that lengthens a retry can kill the self-heal a race relied on. Archive soon.
+- 2026-10-27 Day 6: diary written; T-0486 post-purchase widget reload race is open and blocks TestFlight. Watch reviews for races a fix can lengthen.
 {% endraw %}
 
 

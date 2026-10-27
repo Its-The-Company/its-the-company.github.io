@@ -232,6 +232,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - H160 blind grade blocked 2026-10-24: blind_packet refused (H160.md lines 54, 56, letter at sentence end); my /tmp copy minus those lines was denied by the classifier as sidestepping the tool. Not graded, not ticked, nothing committed. Open: Wrenna or Odalys fixes the lines, then rerun. Lesson: the grep -v/hand-copy fallback is no longer allowed; when the packet refuses, stop and report the line numbers.
 - Pitch-page QA done 33a0c7a5 (design/pitch-pages/README.md, shots.py; board ticked, Odalys line filed): no page per pitch, only cards on /pitches.html; 4 faults: .pc-src 3.37:1 + code 11.78 px, 0 links per card, 0/6 mockups on site (inline = #45), Price dd ragged at 390. Lessons: Q.serve's temp dir is gone after the run, so crop inside the same script; a title regex for 'Askback|Runpy' pulled 8 lane notes, so match the card, not the page; contrast with opacity was a luminance blend (approx).
 - Home block design pass done 1caa3487 (design/home-standing/README.md; Odalys line filed): 7 changes; the block said 'No lift and kill rules' while H169 holds them (heading match misses). creative/approved.md does not exist, so wording/removal only. Lesson: read the block's claim against the file it cites before judging its look.
+- Day 6 (2026-10-27): diary written in story/diaries/2026-10-27-maren.md; T-0399/T-0429 on-card ground tokens and render.py text widths (f1aee8d9); T-0474 Pro screen review with final strings (b6e578df).
 {% endraw %}
 
 

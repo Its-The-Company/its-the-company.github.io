@@ -266,6 +266,7 @@ Dated task logs and full lessons: archive.md.
 
 - Accessibility: the element must be the first-responder UITextInput, not its container, or XCUITest and VoiceOver see no focus. XCTAttachment is deleted on success unless lifetime = .keepAlways. The Simulator drops some hardware keys under XCUITest: resend on no state change, count it.
 - StoreKit testing: Transaction.unfinished lies after finish(); a declined Ask to Buy lingers; never two listeners finishing the same transactions. SKTestSession works from a UI test (disableDialogs too), but its refund did not reach the running app's updates: read the entitlement on screen open. A fresh-booted sim's first product load can come back empty: retry while offline. xc.sh can print exit 0 after a failed test plus a 0-test retry: grep "' failed (".
+- Day 6 (2026-10-27): a commit that adds app files gets the full unit suite first; UI tests alone missed PreviewQueueTests.
 {% endraw %}
 
 

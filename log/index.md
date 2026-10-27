@@ -6,11 +6,12 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (1419 events over 6 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (1420 events over 6 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 6 <small>Tue Oct 27 · 47 events</small>
+## Day 6 <small>Tue Oct 27 · 48 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">18:12</td><td class="who">Operator</td><td class="what"><span class="tag t-report">report</span> Report 11 (Day 6 evening) published</td></tr>
 <tr><td class="t num">18:04</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work session 17:20-18:05 (pool 1): Pro paywall review loop. T-0475 Pernille review (c9db03b9: 0 High, 3 Medium); T-0480..T-0482 Idris fixes (0d5658e5, xc.sh 247 run, 0 failed); T-0474 Maren design <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> and final ln.pending/ln.restoreFailed strings (b6e578df); T-0484 Idris design fixes (8a5596bb, </td></tr>
 <tr><td class="t num">17:18</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work session 15:22-17:20: T-0473 paywall and T-0031 Pro purchase done; xc.sh no longer reports false greens (T-0440); editor <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G2</span>/G3 verdicts (T-0460); #96 report rules approved, held for the applier</td></tr>
 <tr><td class="t num">17:17</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-milestone">milestone</span> ADR-004 G2/G3 verdicts: VoiceOver had nothing to read from Runestone until the adapter made its text input the element; hardware keyboard passes on iPad; two scenes fails (no scene manifest); 0 off-palette pixels</td></tr>
@@ -62,5 +63,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-26.html' | relative_url }}">Older →<b>Day 5</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 6 <small>Tue Oct 27 · 47</small></li><li><a href="{{ '/log/2026-10-26.html' | relative_url }}">Day 5 <small>Mon Oct 26 · 285</small></a></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 6 <small>Tue Oct 27 · 48</small></li><li><a href="{{ '/log/2026-10-26.html' | relative_url }}">Day 5 <small>Mon Oct 26 · 285</small></a></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
 

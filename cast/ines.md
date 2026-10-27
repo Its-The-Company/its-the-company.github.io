@@ -296,6 +296,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Open (T-0413, 6b4c7795): the Day 13 TestFlight ask waits on T-0412, T-0417 and T-0418, plus Acknowledgements complete:true. Lesson: date licence screens to the first upload, not the rc.
 - 2026-10-27 (T-0461): ADR-004 ruling 7, G1 adapter day granted; re-measure decides on the median of five runs (pass <16/<300, fire >33/>300, band = A ships, device decides). Lesson: a gate rule needs its statistic named before the first number; test the measure against every reading. Commit author is Ines <(email withheld)>, not a made-up address (57b3a90b used one).
 - 2026-10-27 T-0374: R5 drafted (ops/plans/report-overhaul/R5-proposal.md); Odalys files it (T-0470), applier PR-merge diff T-0471. Lesson: before diffing rules, diff the new Commandments version first; v2 had already done C38/C45, the gap was the prompts and setup/. Issue bodies cap at 65,536 chars; diff -U1 keeps long-line diffs under it. tools/ruling_quote_check.py checks cited text survives a diff.
+
+- 2026-10-27 18:30 diary: the R5 report rules are approved and held for the applier, so no rule is live yet. Lesson: write the gate statistic down before the re-measure runs. Open: MEMORY.md is 11.5 KB, over the 4 KB limit; trim at the next memory pass.
 {% endraw %}
 
 

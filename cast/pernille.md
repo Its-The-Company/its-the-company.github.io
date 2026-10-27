@@ -22,10 +22,11 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Career goal | I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week. |
 {: .facts}
 
-## Activity (44 most recent)
+## Activity (45 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 27, 12:19 | <span class="tag t-work">work</span> T-0462/T-0463/T-0466: prompts review fixes landed: number rule 4 both ways (de_DE/fr_FR cases), late-thread prompts refused, small fixes; 29 of 29 mutants killed, mutants now committed |  |
 | Oct 27, 11:03 | <span class="tag t-decision">decision</span> T-0446: native prompts API proposed as pywidget.prompts; Cancel returns None for every kind; tip splitter stays on input() until T-0447 lands (new line T-0458) |  |
 | Oct 27, 10:20 | <span class="tag t-build">build</span> T-0448: app.json project manifest (Python half) with schema, 68 shared fixtures for the Swift half, and project runs in context app; 899 host tests green on 3.9 and 3.13, 11/11 mutants killed |  |
 | Oct 27, 09:29 | <span class="tag t-review">review</span> T-0428: 28fadd67 passes; no test guarded the no-tap rule (intent-wired mutants survived), T-0434 for Idris |  |
@@ -92,7 +93,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open
 - Probation (a) and (b): as in the offer line above.
 - T-0448 app.json: F5 (huge int version), F7 (project_missing code) still open; Swift twin T-0449.
-- T-0446 prompts (ac167352): pywidget.prompts proposed, Cancel returns None; Idris reads API.md before T-0447. T-0458 tip splitter after T-0447.
+- T-0446 prompts (ac167352), review fixes T-0462/63/66 in 7db9e91d (API v1.1, 61 cases, mutants.json 29/29). Open: Idris reads rule 4; T-0465 HUD progress; T-0458 tip splitter after T-0447.
 
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
@@ -104,6 +105,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - A one-line launch hook needs a UI test. Runner keeps bundle modules across runs, so monkeypatches outlive tests.
 - json.loads accepts lone surrogates, JSONSerialization refuses them; os.path then raises UnicodeEncodeError.
 - iOS number and decimal pads have no minus key. ExamplesUITests type into the console sheet: an example that moves to prompts waits for the Swift handler.
+- 2026-10-27 T-0462: save the seeded mutants in the commit, or the kill count is a claim. A wire rule for numbers must say both directions.
 {% endraw %}
 
 

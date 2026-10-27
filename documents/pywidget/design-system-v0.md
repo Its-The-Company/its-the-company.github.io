@@ -282,12 +282,28 @@ Idris's tree renderer (238c5e1e: `Shared/TreePaint.swift`, `TreeView.swift`, `Wi
 
 Result: the display design and the `widgetCard` paint are cleared. One fix (row 8, Idris, T-0219); three spec gaps closed by writing the renderer's values in (rows 6, 7, 9). Everything stays inside creative/approved.md item 2 (the approved tokens and faces); row 8 is a contrast fix inside the approved style and is listed here for the next report.
 
+**T-0399 and T-0429 fixes (Maren, 2026-10-27 13:13 ET), listed for the next report.** All inside creative/approved.md item 2: approved tokens rearranged, and two on-card values drawn from the approved B mockup's translucent card fills.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 8.4 Renderer check against this spec (T-0200, 2026-10-26 19:46), scrolls sideways" data-n="1" style="--tw:907px" markdown="1">
+
+| # | What | Change | Measured |
+|---|---|---|---|
+| 14 | Grounds on the dark card (F1) | Two rows: `widget.onCard.ground` (`bg.sunken` on the card) white 0.28, the B mockup's card track; `widget.onCard.soft` (`accent.soft` on the card) black 0.24, a well. Light: `bg.sunken` and `accent.soft` unchanged. Row 7's map gains both | ground under primary marks 3.87:1 (darkHC 4.56); soft under primary text 9.71:1, under accent 4.40:1 (darkHC 6.08). A white well under accent glyphs measured 1.92-2.63:1, so tiles that carry glyphs moved to soft |
+| 15 | Tree roles | Shortcut tiles, the altitude area, the night clock dial, the moon's unlit disc and the script console move to `accent.soft` (wells under accent glyphs or text); tracks and the day dial stay `bg.sunken` | premade and gallery QA 0 faults, 0 card mark faults |
+| 16 | Clock dials (F2) | hands, hub and ticks are primary and secondary on every dial; day `bg.sunken`, night `accent.soft` | stripped: 1.0 hands on 0.24 / 0.18 grounds, where night dials were blank |
+| 17 | Steps today bar (F5) | primary, not accent | against past bars 5.41:1 light, 2.16:1 dark (was 1.13), 1.86:1 darkHC: a luminance step, under 3:1 |
+| 18 | Stripped controls (T-0429) | Pause pill: full colour solid accent; stripped 0.4 under a 1.0 label (`When renderingMode`). On toggle: track 0.5 (tinted), knob default group 1.0; off: track 0.24, knob 0.9. Knob shadow in full colour only | gallery 09 QA 0 faults |
+
+</div>
+
+
 ## 9. Two directions (history: the #60 choice)
 
 The Investors kept both (#60, 2026-10-25 23:59 ET): A is the light appearance, B the dark one (section 2.0). The table and the recommendation below are the proposal as it was put to them; the recommendation for A alone was not taken.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 9. Two directions (history: the #60 choice), scrolls sideways" style="--tw:739px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: 9. Two directions (history: the #60 choice), scrolls sideways" style="--tw:739px" markdown="1">
 
 | | A, Paper | B, Studio |
 |---|---|---|

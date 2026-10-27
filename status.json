@@ -1,74 +1,74 @@
 {
  "schema": 1,
- "at": "2026-10-27T15:49:08.665781+00:00",
+ "at": "2026-10-27T19:20:22.940758+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-27T10:23:36-04:00"
+  "started": "2026-10-27T11:50:27-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "idris",
-   "task": "[build] T-0041 editor spike slice a",
+   "task": "[build] T-0031 Pro purchase slice a",
    "model": "opus",
-   "started": "2026-10-27T15:04:48.042Z",
+   "started": "2026-10-27T18:47:12.504Z",
    "seconds": null,
-   "finished": "2026-10-27T15:48:16.387000+00:00"
+   "finished": "2026-10-27T19:20:12.518000+00:00"
   },
   {
-   "name": "pernille",
-   "task": "[build] T-0446 native prompts Python half",
-   "model": "opus",
-   "started": "2026-10-27T14:49:20.064Z",
+   "name": "odalys",
+   "task": "[ops] T-0470 file R5 proposal issue",
+   "model": "sonnet",
+   "started": "2026-10-27T18:45:22.296Z",
    "seconds": null,
-   "finished": "2026-10-27T15:04:13.820000+00:00"
+   "finished": "2026-10-27T18:46:39.807000+00:00"
   },
   {
-   "name": "maren",
-   "task": "[review] T-0456 Maren checks design cards",
+   "name": "idris",
+   "task": "[build] T-0467 Lock Screen WidgetKit check",
    "model": "opus",
-   "started": "2026-10-27T14:45:03.505Z",
+   "started": "2026-10-27T17:46:20.540Z",
    "seconds": null,
-   "finished": "2026-10-27T14:49:06.866000+00:00"
+   "finished": "2026-10-27T18:45:05.110000+00:00"
   },
   {
-   "name": "pernille",
-   "task": "[build] T-0453 manifest review fixes",
+   "name": "ines",
+   "task": "[ops] T-0374 report overhaul R5 draft",
    "model": "opus",
-   "started": "2026-10-27T14:39:54.011Z",
+   "started": "2026-10-27T17:32:13.782Z",
    "seconds": null,
-   "finished": "2026-10-27T14:44:51.336000+00:00"
+   "finished": "2026-10-27T17:46:04.463000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
   "runnable_count": 78,
-  "blocked_count": 54
+  "blocked_count": 53
  },
  "meter": {
   "five_hour": {
-   "pct": 7.0,
-   "resets_at": "2026-10-27T18:00:01.342849+00:00",
+   "pct": 14.0,
+   "resets_at": "2026-10-27T18:00:01.369878+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 93.0,
+   "left": 86.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 56.0,
-   "resets_at": "2026-11-01T07:00:00.342869+00:00",
+   "pct": 57.0,
+   "resets_at": "2026-11-01T07:00:00.369898+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 44.0,
+   "left": 43.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T07:00:00.343027+00:00",
+   "resets_at": "2026-11-01T07:00:00.370064+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-27T10:23:35.951183-04:00"
+  "read_at": "2026-10-27T11:50:27.015435-04:00"
  },
  "ui": {
   "week_pct": 0.101,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-27T11:49:43-04:00"
+  "at": "2026-10-27T15:21:49-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -431,13 +431,6 @@
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "design",
-    "t": "Renderer.v1 fails F1-F6 from T-0385",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Ines",
     "k": "ops",
     "t": "Archive Ines MEMORY.md under 4 KB",
@@ -529,13 +522,6 @@
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "design",
-    "t": "Two stripped-mode findings in...",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "T-0428 open item",
@@ -599,9 +585,30 @@
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "ADR-004 ruling on T-0041's first G1 measure",
+    "w": "Idris",
+    "k": "build",
+    "t": "DeviceCall carries its timeout",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "From T-0433's WidgetKit run",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "From T-0433's WidgetKit run",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Applier merges a pull request on \"approve\"...",
     "s": "next",
     "o": "c"
    },
@@ -623,13 +630,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Report overhaul item 6b",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "writing",
-    "t": "Report overhaul R5 proposal for the applier",
     "s": "next",
     "o": "c"
    },
@@ -694,28 +694,28 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "T-0041 editor spike slice a",
-    "at": "2026-10-27T15:48:16.387000+00:00",
+    "t": "T-0031 Pro purchase slice a",
+    "at": "2026-10-27T19:20:12.518000+00:00",
     "o": "c"
    },
    {
-    "w": "Pernille",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "T-0470 file R5 proposal issue",
+    "at": "2026-10-27T18:46:39.807000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
     "k": "build",
-    "t": "T-0446 native prompts Python half",
-    "at": "2026-10-27T15:04:13.820000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "review",
-    "t": "T-0456 Maren checks design cards",
-    "at": "2026-10-27T14:49:06.866000+00:00",
+    "t": "T-0467 Lock Screen WidgetKit check",
+    "at": "2026-10-27T18:45:05.110000+00:00",
     "o": "c"
    }
   ],
   "count": {
    "next": 78,
-   "wait": 30,
+   "wait": 29,
    "blocked": 24,
    "you": 5
   }

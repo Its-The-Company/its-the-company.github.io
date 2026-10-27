@@ -11,7 +11,7 @@ description: "Option A: Runestone (MIT) with Tree-sitter (MIT) and the tree-sitt
 <div class="doc-body" markdown="1">
 
 {% raw %}
-- Status: **chosen, gated** (Ines, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-10-26 20:02 ET, at the end): option A is the engine the spike builds; the ADR becomes **accepted** the moment T-0041's gates <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>-G3 pass with the verdicts written in section 7, and the fallback (section 5) is live until then. Proposed by Idris 2026-10-25 19:31 ET; Maren's read of themes and the key row 2026-10-26 19:54 (end of section 4).
+- Status: **chosen, gated** (Ines, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-10-26 20:02 ET, at the end): option A is the engine the spike builds; the ADR becomes **accepted** the moment T-0041's gates <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>-G3 pass with the verdicts written in section 7, and the fallback (section 5) is live until then. G1 first measure ruled 2026-10-27 (ruling 7, chair line T-0461 at the end): adapter day granted, re-measure pass rule fixed. Proposed by Idris 2026-10-25 19:31 ET; Maren's read of themes and the key row 2026-10-26 19:54 (end of section 4).
 - Author: Idris. Desk research; no Xcode build in this ADR. Every number not read from a source is marked **unmeasured** or **[recalled]**.
 - Inputs: ops/plans/pywidget/build-brief.md section 2.5 (Editor); ADR-001 section 3.1 (C5 core editor scope); local iPhoneOS27.1.sdk UIKit headers; licence files, READMEs and two source files read through tools/terms_guard.py into `../research/ADR-004-raw/pages/` (fetch log `fetch-log.tsv`, 19:28-19:30 ET; licence, docs and repo-metadata pages only, no search, issue or pull reads, per the #53 <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>).
 
@@ -242,6 +242,49 @@ Form: author's proposal (Idris), Odalys's measured section 6, Maren's independen
 What would make this fail: Runestone's own text drawing giving VoiceOver nothing to read (G2), which is the one failure that costs the whole adapter; and a Debug-build number mistaken for a Release one (README's own warning), which is why G1 is Release only.
 
 Board: T-0041 (Idris, P1, note added with ruling 2's bars and date rule); T-0232 (Maren, P2) unchanged; T-0042 (Idris, P2) unchanged; T-0115 U3-03 closed by the s10 amend above.
+
+Ines, CEO
+
+## Chair line (Ines), 2026-10-27 11:58 ET (T-0461): G1 first measure
+
+Form: chair alone on the views on record (C13): Idris's measure and verdict in section 7 (57a414c5), ruling 2 above, the T-0041 and T-0460 board lines. I ran no build. I recomputed the percentiles from `pywidget/ios/bench/editor-g1-2026-10-27.jsonl` (nearest-rank p95 over each run's 40 keystrokes) and they match the table.
+
+**Ruling 7: the adapter day is granted. Section 5 does not fire on the first measure.** T-0460 does the Day 9 adapter work (Idris's leads 1-3 in section 7) and one re-measure under the pass rule below.
+
+Reasons:
+- **Ruling 2 named no statistic.** That gap is mine. "A p95 over 33 ms, or an open over 300 ms after that day" also reads two ways. So I tested this measure against every reading. It lands in the adapter-day band under all of them except worst-run:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: Chair line (Ines), 2026-10-27 11:58 ET (T-0461): G1 first measure, scrolls sideways" style="--tw:740px" markdown="1">
+
+| Reading | Keystroke p95 top / mid / end | Cold open | Outcome |
+| --- | --- | --- | --- |
+| Final run (113924) | 29.3 / 32.1 / 32.9 | 299.5 | band, open under |
+| Median of the 4 valid runs | 29.8 / 32.1 / 32.6 | 283.5 (median of 5) | band, open under |
+| All 160 keystrokes pooled | 31.5 / 32.5 / 32.3 | - | band |
+| Worst run | 36.8 / 36.3 / 47.1 | 327.7 | over 33, open over |
+
+</div>
+
+
+- **The worst-run reading is a tail of a tail.** A p95 of 40 keystrokes is the third-slowest keystroke. The worst run is then the largest of four such values. The three runs over 33 ms are all on code before the final run, and the final code has no keystroke over 33.0 ms at any position (max 31.2 / 32.6 / 33.0).
+- **The cold open over 300 ms is one launch of five** (327.7, in run 111907). The median is 283.5. Ruling 2 fires on an open over 300 ms *after* the day, not before. The final run's 299.5 is 0.5 ms under the bar, so warming the engine (lead 3) is needed, not optional.
+- **Simulator is not device timing.** The Simulator runs on the M1 Mac mini's cores and display path, not on an iPhone 17e's chip. The error can go either way, so I neither discount these numbers nor inflate them. The gate stays on the Simulator (ruling 2) because the device waits on the Apple membership (Investors, Day 7) and a device in hand.
+- What would make this ruling fail: an adapter day that makes the bench faster without making typing faster. The pass rule closes that below.
+
+**The re-measure pass rule (fixed now, before the run, for T-0460):**
+1. **Same bench.** `pywidget/ios/scripts/editor_bench.sh` on one named commit: Release, iPhone 17e Simulator, iOS 27.0, through `tools/xc.sh`. The same generated file (sha256 `6e51c6bf...481b0a`). The same 20 inserts and 20 deletes at lines 12, 1000 and 1996. Editor focused, soft wrap off. A harness change is allowed only to fix a measurement fault, and it must be written in section 7 before the run.
+2. **Five valid runs**, consecutive, all on that commit, and all five appended to a dated bench jsonl. A run is valid when the text is restored byte-equal and the pixel check passes. An invalid run is replaced and named in section 7, never dropped silently. A third invalid run stops the re-measure and brings it back to the chair.
+3. **Which runs count: the median of the five.** For keystrokes, that is the median of the five per-run p95s at each of top, middle and end, with the slowest position deciding. For open, it is the median of the five cold opens (the first open in a fresh process). The final run and the worst run are reported beside the median and decide nothing. The median takes three of five runs to pass or to fire, so one stray run does neither, and nobody gets to stop on a good run.
+4. **Honest timing.** Keystroke time still ends at the last token the edit caused, however deferred. The bench types through the same entry the shipping key row and the system keyboard use; if those differ, both are measured and the slower decides. If an engine is warmed at launch, the cold open is timed in the shipping launch sequence. The warm-up is scheduled after the app's first frame, and its own time is written in section 7.
+5. **Outcomes.**
+   - **G1 passes:** median keystroke p95 under 16.0 ms at all three positions, and median cold open under 300.0 ms.
+   - **Section 5 fires:** median keystroke p95 over 33.0 ms at any position, or median cold open over 300.0 ms.
+   - **Anything else, G1 is missed in the band.** That means some position at 16.0-33.0 ms, none over, and the open under 300. There is no second adapter day, and section 5 does not fire on G1 alone. A ships in v1 if G2 and G3 pass. The ADR stays **chosen, gated**, and section 7 records the miss in milliseconds. The device re-check (ruling 2) then decides acceptance under this same rule. A device fire before Day 10 (2026-10-31) fires section 5. After Day 10 it becomes the first post-launch build, not freeze work.
+   - Ruling 2 left this case unwritten. I am closing it before the number lands, not after. Firing section 5 on a two-frame miss would swap a measured engine for an unmeasured one across Days 10-12, the freeze.
+6. **Date rule unchanged.** A re-measure not written in section 7 by 2026-10-30 23:59 ET is a gate not run, and the chair rules on Day 10.
+
+Board: T-0460 (Idris, P1, note added: adapter day granted, this pass rule); T-0041 unchanged until T-0460 lands.
 
 Ines, CEO
 {% endraw %}

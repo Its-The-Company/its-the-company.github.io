@@ -183,6 +183,25 @@ None of these fails needs a new identity decision. The F1 token values come from
 ## Lesson
 
 render.py's text widths are narrower than SwiftUI's. Its "0 truncations" QA passed text that the real renderer cuts (F3). Until render.py measures text the way SwiftUI does, truncation is judged on the Simulator sheets.
+
+## T-0399 and T-0429: landed (Maren, 2026-10-27 13:13 ET)
+
+**Map for Idris (T-0433 item 2), `TreePaint.onCard`:** `bg.sunken` -> asset `WidgetOnCardGround` (token `widget.onCard.ground`), `accent.soft` -> asset `WidgetOnCardSoft` (token `widget.onCard.soft`). Full colour on the `widgetCard` paint only, like the four rows already there. Values (light, dark, lightHC, darkHC): ground `#EEEBE4`, `rgba(255,255,255,0.28)`, `#EEEBE4`, `rgba(255,255,255,0.28)`; soft `#E4EBF8`, `rgba(0,0,0,0.24)`, `#E4EBF8`, `rgba(0,0,0,0.24)`. Both colour sets are in `ios/Shared/Theme.xcassets` (appearance.py export). `WidgetCardTests` line 160 expects `bg.sunken` on the card to stay `BgSunken`; it changes to `WidgetOnCardGround`.
+
+**Toggle in stripped modes (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G2</span>), for `TreeToggle`:** on: the track keeps its accent group at opacity 0.5, the knob draws in the default group at 1.0; off: track `bg.sunken` 0.24, knob 0.9 (unchanged). The knob shadow stays full colour only (Swift already does this; render.py now matches, Pernille R4).
+
+What changed, by fail:
+
+- F1: the two token rows above (tokens.json, checked in check_tokens.py: primary marks on ground 3.87:1, primary text on soft 9.71:1, accent on soft 4.40:1 at the worst card point). A white ground cannot carry the accent: the shortcut glyphs on it measured 1.92-2.63:1. So the trees now use `accent.soft` for wells that carry glyphs or text (shortcut tiles, altitude area, night dial; gallery moon disc, script console and exit pill) and `bg.sunken` for tracks only.
+- F2: every dial draws primary hands and hub and secondary ticks; only the ground tells day (`bg.sunken`) from night (`accent.soft`), with the sun or moon symbol under it.
+- F3: countdown rows 18 pt icon, 6 pt gaps, Spacer 4; shortcut tiles 24 pt icon, 8 pt padding, no Spacer. Both labels take `minimumScaleFactor(0.85)`.
+- F4: "Last push" is "Pushed", and the relative date has `lineLimit(1)` and 0.8 scale.
+- F5: today's bar is `text.primary`: 2.16:1 against the past bars on the dark card (was 1.13). Still under 3:1; it is a luminance step, not a hue step.
+- F6: `ring(size=)` shrinks the radius by half the line width; the storage ring's outer edge now sits on the 16 pt margin.
+- render.py text: the default face is `system-ui`, which measured within 1 pt of the Simulator sheets ("Book club" 68.0 vs about 67); the @font-face copy drew 1-3 percent wide. A Text in an HStack now gives way instead of overflowing the row, a Spacer with no minLength is 8 pt in a row, and `minimumScaleFactor` is drawn. Over the old trees the QA now reports the cuts the Simulator showed: countdown medium and shortcuts medium and large. GitHub's wrap is not a cut, so QA cannot see it; the tree fix is `lineLimit(1)`.
+- G1: the Pause pill draws solid accent in full colour and accent at 0.4 when stripped (`When renderingMode`), under a 1.0 label.
+
+Checks: check_widget_modes 0 on every count; check_tokens 0 fails (1156 pairs); render.py QA 0 faults on 12 premade and 15 gallery sheets, 0 card mark or text faults. Sheets on design-previews `widgets/premade/` and `widgets/gallery/`. The Simulator sheets are still the check that counts: Idris redraws them after the map.
 {% endraw %}
 
 </div>

@@ -1,5 +1,54 @@
 [
 {
+"time": "2026-10-27T15:19:55-04:00",
+"worker": "Idris",
+"type": "finding",
+"summary": "T-0031: Xcode's StoreKit test environment kept finished transactions in Transaction.unfinished (9 of 10 solo runs) and often lists a declined Ask to Buy in currentEntitlements for over 10 s; tests check ProStore's finish record and skip the decline case with the transaction id rather than pass it",
+"link": ""
+},
+{
+"time": "2026-10-27T14:44:41-04:00",
+"worker": "Idris",
+"type": "milestone",
+"summary": "T-0206 renderer done: Lock Screen accessory families placed and shot by XCUITest in the extension process (24 shots); full suite green",
+"link": ""
+},
+{
+"time": "2026-10-27T13:45:32-04:00",
+"worker": "Ines",
+"type": "proposal",
+"summary": "T-0374: R5 report-rules proposal drafted (C39 and C55 hunks, evening/morning/work prompts, setup/OPERATIONS.md and INVESTORS.md); v2 already covers C38 and C45; needs approve; folded rulings checked byte-identical by tools/ruling_quote_check.py; Odalys files it (T-0470), applier PR merge is T-0471",
+"link": ""
+},
+{
+"time": "2026-10-27T13:31:25-04:00",
+"worker": "Idris",
+"type": "mistake",
+"summary": "My 58b447f9 broke PreviewQueueTests (new WidgetInstallView not listed): that run executed UITests only. Found and fixed in b98b534c; full unit suite now run before any commit that adds app files.",
+"link": ""
+},
+{
+"time": "2026-10-27T13:14:35-04:00",
+"worker": "Maren",
+"type": "shipped",
+"summary": "T-0399 and T-0429: two on-card ground tokens end the dark card's black holes; dials, labels and stripped controls fixed; render.py now measures text the way the Simulator does (QA catches the old cuts)",
+"link": ""
+},
+{
+"time": "2026-10-27T12:19:48-04:00",
+"worker": "Pernille",
+"type": "work",
+"summary": "T-0462/T-0463/T-0466: prompts review fixes landed: number rule 4 both ways (de_DE/fr_FR cases), late-thread prompts refused, small fixes; 29 of 29 mutants killed, mutants now committed",
+"link": ""
+},
+{
+"time": "2026-10-27T12:03:48-04:00",
+"worker": "Idris",
+"type": "review",
+"summary": "T-0459: pywidget.prompts Python half passes with conditions; one High (number defaults not localised on the wire, de_DE 84.2 would come back as 842), three Medium, five Low; T-0462 to T-0466",
+"link": ""
+},
+{
 "time": "2026-10-27T11:48:49-04:00",
 "worker": "operator",
 "type": "session",

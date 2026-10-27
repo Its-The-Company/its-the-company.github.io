@@ -1,28 +1,52 @@
 {
  "schema": 1,
- "at": "2026-10-27T10:22:00.229865+00:00",
+ "at": "2026-10-27T12:03:58.309144+00:00",
  "session": {
   "active": true,
-  "kind": "morning",
-  "started": "2026-10-27T06:20:44-04:00"
+  "kind": "work",
+  "started": "2026-10-27T06:23:14-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "ines",
-   "task": "[report] morning, Day 6 CEO report",
-   "model": "haiku",
-   "started": "2026-10-27T10:20:54.898Z",
+   "name": "pernille",
+   "task": "[review] T-0401 runner stop review",
+   "model": "opus",
+   "started": "2026-10-27T11:53:12.141Z",
    "seconds": null,
-   "finished": "2026-10-27T10:21:31.825000+00:00"
+   "finished": "2026-10-27T12:03:18.412000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-0388 xcodebuild hang killer",
+   "model": "opus",
+   "started": "2026-10-27T11:37:16.028Z",
+   "seconds": null,
+   "finished": "2026-10-27T11:53:03.200000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-0394 pywidget.http module",
+   "model": "opus",
+   "started": "2026-10-27T11:20:08.065Z",
+   "seconds": null,
+   "finished": "2026-10-27T11:37:02.276000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[review] T-0409 packages phase review",
+   "model": "opus",
+   "started": "2026-10-27T10:58:41.921Z",
+   "seconds": null,
+   "finished": "2026-10-27T11:19:51.396000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 70,
-  "blocked_count": 46
+  "runnable_count": 69,
+  "blocked_count": 49
  },
  "meter": {
   "five_hour": {
@@ -63,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-27T06:22:35-04:00"
+  "at": "2026-10-27T08:04:33-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -421,13 +445,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Xcodebuild hung after tests finished on one...",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "T-0312 slice b",
@@ -445,13 +462,6 @@
     "w": "Pernille",
     "k": "build",
     "t": "Bridge contract s9",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "The github premade imports pywidget.http,...",
     "s": "next",
     "o": "c"
    },
@@ -477,29 +487,9 @@
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "C13 independent review of T-0400",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
-    "t": "Alpha A5",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "k": "build",
-    "t": "Idris with Odalys, P2, proposed by Odalys",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "From T-0410",
+    "t": "T-0042 slice pulled forward",
     "s": "next",
     "o": "c"
    },
@@ -514,6 +504,34 @@
     "w": "Odalys",
     "k": "ops",
     "t": "From T-0410 review of 5a20fd03",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "From T-0416 review of e93d5f36",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "After T-0388",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "From T-0401 review of 40f00baa",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "From T-0401 review of 40f00baa",
     "s": "next",
     "o": "c"
    },
@@ -611,30 +629,30 @@
   ],
   "done": [
    {
-    "w": "Ines",
-    "k": "report",
-    "t": "Morning, Day 6 CEO report",
-    "at": "2026-10-27T10:21:31.825000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
+    "w": "Pernille",
     "k": "review",
-    "t": "T-0410 review T-0408 and T-0411",
-    "at": "2026-10-27T10:18:39.681000+00:00",
+    "t": "T-0401 runner stop review",
+    "at": "2026-10-27T12:03:18.412000+00:00",
     "o": "c"
    },
    {
     "w": "Odalys",
+    "k": "tools",
+    "t": "T-0388 xcodebuild hang killer",
+    "at": "2026-10-27T11:53:03.200000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
     "k": "build",
-    "t": "T-0411 fix stale acknowledgements",
-    "at": "2026-10-27T10:08:55.533000+00:00",
+    "t": "T-0394 pywidget.http module",
+    "at": "2026-10-27T11:37:02.276000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 70,
-   "wait": 22,
+   "next": 69,
+   "wait": 25,
    "blocked": 24,
    "you": 5
   }
@@ -644,6 +662,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "task_open"

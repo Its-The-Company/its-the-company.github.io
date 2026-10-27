@@ -22,10 +22,11 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Career goal | I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week. |
 {: .facts}
 
-## Activity (40 most recent)
+## Activity (41 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 27, 08:02 | <span class="tag t-review">review</span> T-0401: C13 review of 40f00baa (Idris, Stop in the runner tail): pass with fixes; 3.9 host hang traced to a CPython 3.9.6 join race on a harness thread; T-0426, T-0427 for Idris |  |
 | Oct 27, 05:58 | <span class="tag t-shipped">shipped</span> T-0408: licence rows for the 8 bundled pure packages and the full MPL-2.0 text; Release builds pass the licence gate; app_packages on sys.path before the user's folder |  |
 | Oct 27, 01:49 | <span class="tag t-build">build</span> T-0391: clocks premade view tree cut from 1,048,487 B to 327,648 B worst case (horizon 60 to 20 minutes); new test holds every premade under 75% of the 512 KiB <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>; run_host 1688/0. |  |
 | Oct 26, 23:13 | <span class="tag t-build">build</span> T-0364: a Release build can no longer ship the full stdlib with ctypes; install_stdlib.sh requires zip outside Debug and checks every mode (53/53 tests, 10/10 mutants). |  |
@@ -88,18 +89,19 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open
 - Probation (a) and (b): as in the offer line above.
 
-- Older entries (2026-10-25 20:12 to 2026-10-26 23:13: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
-
-## 2026-10-27 01:31 T-0367 ticked (19003489, board 2nd commit)
-- Learned: a test that only calls run_timeline never meets the runner's caps; run premades through the real runner on the bundle layout.
-
-## 2026-10-27 T-0391 ticked (d7a79b38; board tick + T-0395/T-0396 left uncommitted)
-- Learned: entries are not reloads; a widget reload runs no Python (ADR-007 T6), so the horizon is how long a clock stays right after the app ran. Text style "time" never ticks; R2 only sets the zone.
-- Learned: hand-building a board.md blob with update-index is refused by the classifier; leave the board hunk for the Operator.
-- Learned: mutants.py on the bundle test needs --also pywidget/ios/App,pywidget/ios/project.yml,pywidget/python,pywidget/widgets,pywidget/tests,pywidget/docs/design/bridge-contract.md.
+- Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## 2026-10-27 T-0408 ticked (6adf11d0), review T-0410 Idris
 - Learned: the certifi wheel has only a 989 B MPL notice; full text came from mozilla.org/media/MPL/2.0/index.txt via terms_guard (sha256 3f3d9e00). The installer package can't be imported without its vendored `installer`; load paths.py by file in tests. Open: the eight are not in pywidget/licenses/components.json yet; acknowledgements_test "stale" fails at HEAD already.
+
+## 2026-10-27 T-0416/T-0419 reviews (f2cde35c)
+- Learned: App/Runtime is a folder ref (copies every file, no pkg_stage filter); only the Acknowledgements check phase guards it. Ack gaps fail every build from 2026-11-03.
+
+## 2026-10-27 T-0394 ticked (18310b6a), review T-0423 Odalys, Swift T-0424 Idris
+- Learned: HTTPServer.server_bind calls getfqdn (30 s and a DNS query on 3.13); bind with TCPServer's. http.client read(n) blocks until n bytes; read1 lets a deadline bite. Pin hosts in a driver run with an eval step patching socket.create_connection.
+
+## 2026-10-27 T-0401 review of 40f00baa: pass with fixes, T-0426/T-0427 Idris
+- Learned: 3.9.6 Thread.join leaks the tstate lock if a signal handler raises between acquire and release (bpo-45274), so exit hangs in threading._shutdown. The fake's stop_on Timer is non-daemon and gets joined as a user thread. Seed `_epilogue` slow to test tail windows.
 {% endraw %}
 
 

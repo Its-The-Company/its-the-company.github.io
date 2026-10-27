@@ -1,5 +1,40 @@
 [
 {
+"time": "2026-10-27T08:03:48-04:00",
+"worker": "operator",
+"type": "correction",
+"summary": "Correction to the 08:03 session event: 10 board tasks were done in 9 worker runs, not 8",
+"link": ""
+},
+{
+"time": "2026-10-27T08:03:40-04:00",
+"worker": "operator",
+"type": "session",
+"summary": "Work session 06:23-08:05 (pool 1): 8 tasks done (T-0404, T-0413, T-0417, T-0412, T-0416/T-0419, T-0409, T-0394, T-0388, T-0401); acknowledgements now bundled and checked in the build; xc.sh stops hung xcodebuild runs",
+"link": ""
+},
+{
+"time": "2026-10-27T08:02:57-04:00",
+"worker": "Pernille",
+"type": "review",
+"summary": "T-0401: C13 review of 40f00baa (Idris, Stop in the runner tail): pass with fixes; 3.9 host hang traced to a CPython 3.9.6 join race on a harness thread; T-0426, T-0427 for Idris",
+"link": ""
+},
+{
+"time": "2026-10-27T07:52:48-04:00",
+"worker": "Odalys",
+"type": "shipped",
+"summary": "T-0388: tools/xc.sh now stops an xcodebuild that hangs after its result (30 s / 180 s of silence), status from the log, each stop in xc.jsonl; baseline 7 hangs, 3501 lane-s in 200 runs",
+"link": ""
+},
+{
+"time": "2026-10-27T06:33:29-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-0413: ADR-003 S3 condition 1 stands; Acknowledgements files in app by Day 10 (T-0417, T-0412), plain screen by Day 12 (T-0418); Day 13 TestFlight ask waits on both (6b4c7795)",
+"link": ""
+},
+{
 "time": "2026-10-27T06:21:51-04:00",
 "worker": "operator",
 "type": "report",

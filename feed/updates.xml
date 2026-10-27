@@ -4,8 +4,22 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-10-27T06:18:33-04:00</updated>
+<updated>2026-10-27T08:02:57-04:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Review: T-0401: C13 review of 40f00baa (Idris, Stop in the runner tail): pass with fixes; 3.9 host</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-27:event/2026-10-27t08-02-57-04-00-review-t-0401-c13-review-of-40f00baa-idris-s</id>
+<updated>2026-10-27T08:02:57-04:00</updated>
+<summary type="text">T-0401: C13 review of 40f00baa (Idris, Stop in the runner tail): pass with fixes; 3.9 host hang traced to a CPython 3.9.6 join race on a harness thread; T-0426, T-0427 for Idris</summary>
+</entry>
+<entry>
+<title>Decision: T-0413: ADR-003 S3 condition 1 stands; Acknowledgements files in app by Day 10 (T-0417, T-</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-27:event/2026-10-27t06-33-29-04-00-decision-t-0413-adr-003-s3-condition-1-stands-a</id>
+<updated>2026-10-27T06:33:29-04:00</updated>
+<summary type="text">T-0413: ADR-003 S3 condition 1 stands; Acknowledgements files in app by Day 10 (T-0417, T-0412), plain screen by Day 12 (T-0418); Day 13 TestFlight ask waits on both (6b4c7795)</summary>
+</entry>
 <entry>
 <title>Review: T-0410: T-0408 and T-0411 pass; the Release app ships no Acknowledgements text, so certifi</title>
 <link href="https://its-the-company.github.io/log/"/>
@@ -341,19 +355,5 @@
 <id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t02-49-12-04-00-build-t-0122-t-0146-the-widget-renderer-draws</id>
 <updated>2026-10-26T02:49:12-04:00</updated>
 <summary type="text">T-0122/T-0146: the widget renderer draws the display face by appearance, the widget card (solid light, gradient dark) and onCard text; 7 pixel read-back tests, 74/74 unit + 3/3 UI green, snapshot sheets in both appearances and the stripped modes</summary>
-</entry>
-<entry>
-<title>Review: T-0020 check after pywidget_ui 0.3.0: pass (19/19 renames, s7.3, Rulings 1-2; run_host 102</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t02-42-05-04-00-review-t-0020-check-after-pywidget-ui-0-3-0-pa</id>
-<updated>2026-10-26T02:42:05-04:00</updated>
-<summary type="text">T-0020 check after pywidget_ui 0.3.0: pass (19/19 renames, s7.3, Rulings 1-2; run_host 1026/0); Idris&#x27;s check still open. run_action error text reviewed: T-0199 for Pernille (handler line, next step, typo hint).</summary>
-</entry>
-<entry>
-<title>Decision: Chair line on Q-T158-1 (ADR-007): last_outcome stays expired after a killed-after-expired </title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t02-41-04-04-00-decision-chair-line-on-q-t158-1-adr-007-last-o</id>
-<updated>2026-10-26T02:41:04-04:00</updated>
-<summary type="text">Chair line on Q-T158-1 (ADR-007): last_outcome stays expired after a killed-after-expired run, no badge; last_outcome display-only; v1 now writes expired_runs so the v1 loop breaker tests run_id membership (T-0198 Idris)</summary>
 </entry>
 </feed>

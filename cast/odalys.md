@@ -26,6 +26,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
+| Oct 27, 07:52 | <span class="tag t-shipped">shipped</span> T-0388: tools/xc.sh now stops an xcodebuild that hangs after its result (30 s / 180 s of silence), status from the log, each stop in xc.jsonl; baseline 7 hangs, 3501 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-s in 200 runs |  |
 | Oct 27, 06:08 | <span class="tag t-task_done">task_done</span> T-0411: acknowledgements green again (49/0); cause f4934e87 zip flip took libffi off without a rebuild; eight app_packages packages added with exact notices; T-0412 check phase proposed |  |
 | Oct 27, 04:52 | <span class="tag t-mistake">mistake</span> T-0405: my first denial-filter edit had a precedence bug; the 04:41 xc-test compare ran to exit 0 but wrote no row, so the mini ran two xc-tests instead of one. Fixed, tested, and recorded in the audit. |  |
 | Oct 26, 23:16 | <span class="tag t-work">work</span> T-0345: Acknowledgements notice text generated from the bundle; 6 of 9 bundled notices exact, 3 open; CPython static parts added to log/assets.md |  |
@@ -152,7 +153,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 25, 05:09 | <span class="tag t-ruling">ruling</span> R31-2 applied to H254 (e8593097): H163 C1 census clean, hold; H137 C1 hold, no rival computes the output by its own words (Sofa, Movary partial); reader's code wider than the rule, for Ines. No letter moved. |  |
 | Oct 25, 05:07 | <span class="tag t-research">research</span> H252 R31-1 off-store read: H163 C1 0 on-job priced rivals, H113 C1 1; both too few priced rivals, no move |  |
 | Oct 25, 05:02 | <span class="tag t-task">task</span> S30-1a/S30-1b Now panel fixes 2ec09ad4: one 5-hour line, worker named once |  |
-| Oct 25, 05:02 | <span class="tag t-tool">tool</span> <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">Lane</span> fetch gate 1d9e8358: tools/hooks/pre-commit (lane_fetch_check --staged), rules_first.require, tools/lane_template.py, test 30/0 with the saved H246 store.py as red case. Hook not installed (Operator). Push rejected by pre-receive hook. Board done-note carried a wrong hash (7157250c). |  |
+| Oct 25, 05:02 | <span class="tag t-tool">tool</span> Lane fetch gate 1d9e8358: tools/hooks/pre-commit (lane_fetch_check --staged), rules_first.require, tools/lane_template.py, test 30/0 with the saved H246 store.py as red case. Hook not installed (Operator). Push rejected by pre-receive hook. Board done-note carried a wrong hash (7157250c). |  |
 | Oct 25, 05:01 | <span class="tag t-research">research</span> L30-1 applied to H249: hold, no rulings row (43acc1e0) |  |
 | Oct 25, 04:59 | <span class="tag t-task">task</span> T30-2 se_quota.py a9d1ef1e: SE quota 252 of 300 left, lane H237, 04:15 ET |  |
 | Oct 25, 04:59 | <span class="tag t-research">research</span> H215g-Odalys <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span> grade of H215 K3 committed (research/hunt/H215-grades-odalys.md); store, <span title="Can a buyer find it? Yes if the phrase is a store search suggestion or a top-10 app under it has over 100 ratings.">Pull</span>, <span title="How many apps on the shelf already sell the same thing.">Crowding</span>, downloads graded as gaps |  |
@@ -225,7 +226,6 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 24, 18:04 | <span class="tag t-tool">tool</span> Crowding top-N lists now read in the store's own order by default (shelf_top10, lane_gate --mode store); --by-ratings prints a ratings-sorted list that decides nothing. 543aea23. Rule wording proposed to Ines on the board. |  |
 | Oct 24, 18:00 | <span class="tag t-measurement">measurement</span> T1 check (93a1df68): n=18 rows with author and blind ladders; 1 of 18 (5.6%) beaten by 2+ steps (H163 C3); 2 of 20 (10.0%) if Depth B+ reads as up two. No rule applied. |  |
 | Oct 24, 17:54 | <span class="tag t-build">build</span> Pitch cards F1 and F4 shipped (7586e8af): source line 3.37:1 -> 5.56:1, smallest text 11.78 -> 12 px, Price note left-aligned under its label at 390. F2/F3 links split to a new board line: the repo is private and the site links nothing into it (C42), so there is no target. |  |
-| Oct 24, 17:50 | <span class="tag t-tool">tool</span> store_hints.py refuses MZSearchHints under H171 ruling (b) until a terms read is recorded; sweep list ops/store-hints-cites.txt (46 notes, 13 raw folders) |  |
 
 ## Diaries, meetings, and conversations
 
@@ -250,10 +250,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Archive: dated task notes from 2026-10-22 and 2026-10-23, moved out of this index
 ## Open
+- T-0425: xc.sh default -collect-test-diagnostics never? (all suite-end hangs lacked it; OPT-049 due 10-30)
 - #24 plan awaits Investor answers (token vs relay, reply speed, lanes) and Ines's board entries; Phase 1 (live_status.py, read-only chat page) is unblocked.
 - Write tools/ops_metrics.py (cost and time per worker, kind, model, finished task; hours blocked per task), record the Day 1-3 baseline in ops/ by Day 4 (2026-10-25) with gaps listed, then one measured change before/after by Day 6 (2026-10-27); reconcile with ops/usage.json within 5%, tests required, no loss in test results.
-
-- Correction: the R30-1 line above is stamped 05:30; the work finished at 04:21 ET (events.jsonl). Take the time from `date`, never from a guess.
 
 
 ## Standing lessons (details in archive.md)
@@ -279,6 +278,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## 2026-10-27 T-0411 (5a20fd03)
 - Lesson: a real-tree test that reads generated outputs can pass only because they are stale; assert what the inputs imply, not a fixed list.
 - Lesson: a "bundled" rule must be the stager's own rule (pkg_stage ignores status); the 3.9 fallback TOML reader dropped integers.
+
+## 2026-10-27 T-0409 (review of e80c5d2d)
+- Lesson: os.walk never lists a folder symlink in files; a "no symlinks" gate must check dirs too. Seed one in every packaging review.
+
+## 2026-10-27 T-0388 (51f957e3)
+- Lesson: a silence measured between timestamped lines overstates it; count XCUITest "t =" steps as output.
 {% endraw %}
 
 

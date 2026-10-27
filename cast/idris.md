@@ -266,6 +266,7 @@ Dated task logs and full lessons: archive.md.
 - XCUITest snapshots stall on huge text values; use an env hook. SwiftPM targets need symlinks for outside sources.
 - A cap by recency only holds if the thing you need is fresh: an already-booted Simulator keeps old launchd folders (17e ranked 73 of 156). Prove read-only by an O_RDWR open of a file you own, not by rule text.
 - A gate that checks the repo is not the app: list the bundle (Acknowledgements passed every check, shipped nowhere). Some tools/ scripts ignore --help and run.
+- 2026-10-27 T-0412 (367abe7c, review T-0419): Xcode re-copies an edited resource, so mutate the source; use the 17e sim id, not generic.
 {% endraw %}
 
 

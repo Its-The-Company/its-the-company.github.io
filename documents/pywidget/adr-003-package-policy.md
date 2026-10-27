@@ -264,7 +264,7 @@ That is L13 step 5. Pure wheels go in the same way, from the manifest files. Thr
 
 1. **Keep every `.dist-info`.** The installer resolves a user's dependencies against them (`store.installed_bundled`). Without them, a user wheel that needs `requests` is told `requests` is missing when it is bundled.
 2. **`app_packages` must sit under the runner's `bundle_root`.** `runner._keep_module` keeps a module across runs only when its file is under the bundle or the stdlib. If `app_packages` sits outside it, numpy is dropped from `sys.modules` after every run and re-imported, which numpy does not support. That means warnings at best, and crashes at worst.
-3. **On `sys.path` before the user's folder** (`paths.add_user_packages`, already the rule).
+3. **On `sys.path` before the user's folder** (`paths.add_user_packages`, already the rule). As built (Pernille, T-0408, 2026-10-27): `runner.bootstrap` inserts `<bundle_root>/app_packages` right after the last `sys.path` entry inside the bundle or the stdlib (a plain entry, no `.pth` read, nothing imported; absent folder, nothing added), before the snapshot so a reset keeps it; `add_user_packages` then lands the user's folder after it. Host test: `pywidget/tests/bridge/test_runner.py` `AppPackagesPathTests`.
 
 Bytecode follows s2.3. Idris's Xcode build phase then turns each `.so` into a framework (PEP 730 layout), signs every binary, and runs the strip check (matrix row 2) and the L12 denylist check (stdlib ruling follow-up). Because that build phase also applies the stdlib manifest's `stripped` list, s1 item 3's smoke test runs against the cut stdlib. If the build that runs the smoke does not apply the strip, a hidden `ctypes` import passes in the Simulator and makes the review note false.
 

@@ -1,77 +1,77 @@
 {
  "schema": 1,
- "at": "2026-10-27T08:18:12.788597+00:00",
+ "at": "2026-10-27T10:19:27.436344+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-27T01:51:03-04:00"
+  "started": "2026-10-27T04:19:28-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
+   "name": "idris",
+   "task": "[review] T-0410 review T-0408 and T-0411",
+   "model": "opus",
+   "started": "2026-10-27T10:09:05.719Z",
+   "seconds": null,
+   "finished": "2026-10-27T10:18:39.681000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[build] T-0411 fix stale acknowledgements",
+   "model": "opus",
+   "started": "2026-10-27T09:59:43.686Z",
+   "seconds": null,
+   "finished": "2026-10-27T10:08:55.533000+00:00"
+  },
+  {
    "name": "pernille",
-   "task": "[build] T-0393 premades in app bundle",
-   "model": "sonnet",
-   "started": "2026-10-27T08:09:55.562Z",
-   "seconds": null,
-   "finished": "2026-10-27T08:17:30.196000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-0400 red testStopStuckNative fix",
+   "task": "[build] T-0408 package licences and sys.path",
    "model": "opus",
-   "started": "2026-10-27T07:11:03.910Z",
+   "started": "2026-10-27T09:47:10.060Z",
    "seconds": null,
-   "finished": "2026-10-27T08:09:31.147000+00:00"
+   "finished": "2026-10-27T09:59:06.686000+00:00"
   },
   {
-   "name": "idris",
-   "task": "[build] T-0052 stdlib cut build phase",
-   "model": "sonnet",
-   "started": "2026-10-27T06:46:10.542Z",
-   "seconds": null,
-   "finished": "2026-10-27T07:10:32.552000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-0372 PROPOSAL-001 decision card",
+   "name": "odalys",
+   "task": "[tools] T-0407 runner boot-fresh follow-ups",
    "model": "opus",
-   "started": "2026-10-27T06:40:58.271Z",
+   "started": "2026-10-27T09:25:43.578Z",
    "seconds": null,
-   "finished": "2026-10-27T06:45:17.982000+00:00"
+   "finished": "2026-10-27T09:47:00.506000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 67,
+  "runnable_count": 70,
   "blocked_count": 46
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
-   "resets_at": "2026-10-27T08:00:00.413170+00:00",
+   "pct": 0.0,
+   "resets_at": "2026-10-27T13:00:00.115375+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 90.0,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 52.0,
-   "resets_at": "2026-11-01T07:00:00.413188+00:00",
+   "pct": 53.0,
+   "resets_at": "2026-11-01T07:00:00.115393+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 48.0,
+   "left": 47.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T07:00:00.413338+00:00",
+   "resets_at": "2026-11-01T07:00:00.115516+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-27T01:51:03.036785-04:00"
+  "read_at": "2026-10-27T04:19:27.804009-04:00"
  },
  "ui": {
-  "week_pct": 0.1,
+  "week_pct": 0.101,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-27T04:18:48-04:00"
+  "at": "2026-10-27T06:20:00-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -126,7 +126,7 @@
   {
    "name": "Idris",
    "state": "next",
-   "task": "Idris, P0, re-check T-0369 (f64bc323) on the MacBook runner sandbox: the probe rows and SETUP.md sandbox bullet in...",
+   "task": "Idris, P0, L3 device run: CPython cold start, peak and the real extension memory ceiling (allocation ramp,...",
    "model": null,
    "since": null,
    "next": []
@@ -224,13 +224,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "NEEDS \"approve\"",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "review",
-    "t": "Re-check T-0369",
     "s": "next",
     "o": "c"
    },
@@ -522,6 +515,33 @@
     "o": "c"
    },
    {
+    "k": "build",
+    "t": "Idris with Odalys, P2, proposed by Odalys",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "From T-0410",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "From T-0410 review of 6adf11d0",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "From T-0410 review of 5a20fd03",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Odalys",
     "k": "tools",
     "t": "Report overhaul item 1a",
@@ -615,29 +635,29 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "k": "review",
+    "t": "T-0410 review T-0408 and T-0411",
+    "at": "2026-10-27T10:18:39.681000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "build",
+    "t": "T-0411 fix stale acknowledgements",
+    "at": "2026-10-27T10:08:55.533000+00:00",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "build",
-    "t": "T-0393 premades in app bundle",
-    "at": "2026-10-27T08:17:30.196000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0400 red testStopStuckNative fix",
-    "at": "2026-10-27T08:09:31.147000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0052 stdlib cut build phase",
-    "at": "2026-10-27T07:10:32.552000+00:00",
+    "t": "T-0408 package licences and sys.path",
+    "at": "2026-10-27T09:59:06.686000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 67,
+   "next": 70,
    "wait": 22,
    "blocked": 24,
    "you": 5

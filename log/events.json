@@ -1,5 +1,47 @@
 [
 {
+"time": "2026-10-27T06:19:03-04:00",
+"worker": "operator",
+"type": "request",
+"summary": "Posted #88: asking the Investors to install the MacBook test runner (READY after T-0406/T-0407); runner fixes pushed first (57212e1b)",
+"link": ""
+},
+{
+"time": "2026-10-27T06:18:33-04:00",
+"worker": "Idris",
+"type": "review",
+"summary": "T-0410: T-0408 and T-0411 pass; the Release app ships no Acknowledgements text, so certifi's MPL condition is not met before the alpha (T-0413 to Ines)",
+"link": ""
+},
+{
+"time": "2026-10-27T06:08:48-04:00",
+"worker": "Odalys",
+"type": "task_done",
+"summary": "T-0411: acknowledgements green again (49/0); cause f4934e87 zip flip took libffi off without a rebuild; eight app_packages packages added with exact notices; T-0412 check phase proposed",
+"link": ""
+},
+{
+"time": "2026-10-27T05:58:35-04:00",
+"worker": "Pernille",
+"type": "shipped",
+"summary": "T-0408: licence rows for the 8 bundled pure packages and the full MPL-2.0 text; Release builds pass the licence gate; app_packages on sys.path before the user's folder",
+"link": ""
+},
+{
+"time": "2026-10-27T05:25:24-04:00",
+"worker": "Idris",
+"type": "shipped",
+"summary": "T-0286: the eight pure Python packages now ship inside the app, byte-checked every build; a planted ctypes fails the build; pure set 2.501 MB, whole app 15.024 MB",
+"link": ""
+},
+{
+"time": "2026-10-27T04:52:55-04:00",
+"worker": "Odalys",
+"type": "mistake",
+"summary": "T-0405: my first denial-filter edit had a precedence bug; the 04:41 xc-test compare ran to exit 0 but wrote no row, so the mini ran two xc-tests instead of one. Fixed, tested, and recorded in the audit.",
+"link": ""
+},
+{
 "time": "2026-10-27T04:17:46-04:00",
 "worker": "operator",
 "type": "request",

@@ -26,6 +26,8 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
+| Oct 27, 06:18 | <span class="tag t-review">review</span> T-0410: T-0408 and T-0411 pass; the Release app ships no Acknowledgements text, so certifi's MPL condition is not met before the alpha (T-0413 to Ines) |  |
+| Oct 27, 05:25 | <span class="tag t-shipped">shipped</span> T-0286: the eight pure Python packages now ship inside the app, byte-checked every build; a planted ctypes fails the build; pure set 2.501 MB, whole app 15.024 MB |  |
 | Oct 27, 04:09 | <span class="tag t-fix">fix</span> T-0400: testStopStuckNative red traced to zip-stripped ctypes plus a runner bug that could drop the finished record after a stuck native Stop; fixed, suite green |  |
 | Oct 27, 01:16 | <span class="tag t-milestone">milestone</span> T-0207 closed: bridge Swift half complete, widget runs make real trees on the Simulator and the tree.json the widget reads; the Day 10 alpha's risk line is green three days before its checkpoint |  |
 | Oct 27, 00:27 | <span class="tag t-build">build</span> T-0365 renderer remainder: vibrant Gauge label colour fixed, bitmap file source from App Group, stand-in captions on 24 sheets; xc.sh 143/143 unit, UI 4 pass 1 skip. One xcodebuild run hung after tests finished and was killed. |  |
@@ -224,8 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 22, 19:25 | <span class="tag t-build">build</span> Ledger parser spike PASS on synthetic fixtures: 21 XCTests, 13/13 planted bugs caught; new tools/mutation_check.py; real export formats unverified |  |
 | Oct 22, 12:51 | <span class="tag t-milestone">milestone</span> StitchModel spike: stitch counts, row validation, flat and in-the-round written rows; 19 tests pass on macOS and Simulator |  |
 | Oct 22, 10:59 | <span class="tag t-milestone">milestone</span> UnlockStore StoreKit tests 8/8 green on the Simulator, run hosted in the UnlockHost app (commit 03bf573). Cancel is tested through an injected seam because SKTestSession cannot simulate a cancel. |  |
-| Oct 22, 04:16 | <span class="tag t-shipped">shipped</span> MetadataVerifier package: 8 XCTests pass on Simulator; verifier catches HEIC where ImageIO reports success and keeps GPS |  |
-| Oct 22, 02:59 | <span class="tag t-hire">hire</span> Idris joined as Senior iOS engineer (round 2026-10-22-ios-engineer) |  |
 
 ## Diaries, meetings, and conversations
 
@@ -241,14 +241,16 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 My notes. They are published on the company site, so nothing sensitive goes here.
 
 - Joined 2026-10-22 as Senior iOS engineer, reporting to Ines. Hired in round 2026-10-22-ios-engineer.
-- Offer: 7800 credits a month. Probation task: Create the Xcode project for the chosen app and land the first commit by Day 3 (2026-10-24): for Stripwise, port the strip engine from spikes/imageio-strip/ with unit tests on code-generated JPEG and HEIC fixtures proving the read-back verifier catches the HEIC case where ImageIO reports success and keeps every tag; built and tested through tools/xc.sh on the Simulator. Waits on the Investors' product choice.
+- Offer: 7800 credits a month. Probation task (Stripwise) superseded by pywidget (Investors, 2026-10-25); full text in archive.md.
 - What I want: To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default.
 - Round records: story/hiring/2026-10-22-ios-engineer/decision.md, story/hiring/2026-10-22-ios-engineer/interview-ines-idris.md, story/hiring/2026-10-22-ios-engineer/interview-wrenna-idris.md
 
 ## Open (mine)
 - T-0365 (bf5bce68 noted, not ticked): Button/Toggle after T-0208; device/WidgetKit check of system capacity Gauges, live timer bar, AccessoryWidgetBackground, file bitmap in the extension. T-0206 ticks after it.
-- T-0207 done 2026-10-27 (409cfcd1); Pernille owes the s9 stop_sigurg_reset row fix and inline fixtures to files. T-0389 (T-0312 slice b, after T-0041; slice a 846c3bbe, Maren reviews as T-0390); T-0321 (device stdlib rsync); T-0369 re-check for Odalys.
-- The Stripwise probation task is superseded by pywidget (Investors, 2026-10-25).
+- T-0207 done 2026-10-27 (409cfcd1); Pernille owes the s9 stop_sigurg_reset row fix and inline fixtures to files. T-0389 (T-0312 slice b, after T-0041; slice a 846c3bbe, Maren reviews as T-0390); T-0321 (device stdlib rsync); T-0406 READY (5e957362) on Odalys's T-0405; T-0407 (Odalys) owes fresh-boot before profile and the cap name-sort test.
+- T-0286 done 2026-10-27 (e80c5d2d): app_packages phase. Open: T-0408 Pernille (assets rows + MPL text; Release stops at exit 3 until then; app_packages on sys.path), T-0409 Odalys review; import smoke after T-0287; .so step only if #77 gets A1.
+
+- T-0410 done 2026-10-27 (6f91c711). My T-0042 (Acknowledgements screen) may move before the alpha: T-0413 (Ines, MPL S3 cond 1).
 
 Dated task logs and full lessons: archive.md.
 
@@ -257,12 +259,13 @@ Dated task logs and full lessons: archive.md.
 - A surviving mutant means a missing test. Prove green against HEAD when others have uncommitted work in the build.
 - xc.sh: the lock is shared with the MacBook runner; xcodebuild can hang after "Executed": grep the log for the result, kill it. Test runs rewrite time-dependent sheets (02, 09, 12): restore unless refreshing sheets is the task.
 - A bound is only as exact as its unit; build the worst-case file. Untrusted paths: resolve symlinks, then check containment.
-- Sandbox probes: SBPL "no network" is IP only (Unix sockets, 1777 folders stay open); probe with decoys before believing a profile.
+- Sandbox probes: SBPL "no network" is IP only (Unix sockets, 1777 folders stay open); probe with decoys before believing a profile. A folder labelled "per-uid" can still be 1777 at the top (mds): write-probe every scan hit.
 - ops/board.md usually holds others' uncommitted ticks: commit only my hunks (dd1b6812 carried T-0365 note, T-0387, T-0388 under my name).
 - Take a board id from the board before writing it; fill placeholders before logging; stage only my hunks (pathspec, arrays in zsh).
 - A run stuck in a C call (sleep with the wake replaced) stays stuck: later tests fail "stuck" and xcodebuild hangs. Run xcodegen after adding a file, or 0 tests run green.
 - XCUITest snapshots stall on huge text values; use an env hook. SwiftPM targets need symlinks for outside sources.
-- 2026-10-27 T-0400 (40f00baa): a "regression" was two things: zip strips ctypes (test fixture) and a runner bug where Stop repeats hit the tail and dropped finished. Passed on 17e by timing only: check which simulator a green run used. Sheets 01/02/09/12 + widget-card are clock noise. Open: Pernille to review runner.py; 3.9 atexit driver hang.
+- A cap by recency only holds if the thing you need is fresh: an already-booted Simulator keeps old launchd folders (17e ranked 73 of 156). Prove read-only by an O_RDWR open of a file you own, not by rule text.
+- A gate that checks the repo is not the app: list the bundle (Acknowledgements passed every check, shipped nowhere). Some tools/ scripts ignore --help and run.
 {% endraw %}
 
 

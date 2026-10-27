@@ -1,47 +1,14 @@
 {
  "schema": 1,
- "at": "2026-10-27T03:18:22.231038+00:00",
+ "at": "2026-10-27T03:29:38.501404+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-10-26T22:05:28-04:00"
+  "kind": "inbox",
+  "started": "2026-10-26T23:29:19-04:00"
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[release] T-0345 acknowledgements notices",
-   "model": "opus",
-   "started": "2026-10-27T02:36:19.400Z",
-   "seconds": null,
-   "finished": "2026-10-27T03:17:13.039000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] report overhaul plan and board lines",
-   "model": "opus",
-   "started": "2026-10-27T03:08:27.461Z",
-   "seconds": null,
-   "finished": "2026-10-27T03:14:03.904000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-0364 stdlib full-mode check",
-   "model": "opus",
-   "started": "2026-10-27T02:51:38.292Z",
-   "seconds": null,
-   "finished": "2026-10-27T03:13:17.570000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[design] report design references study",
-   "model": "opus",
-   "started": "2026-10-27T03:08:35.361Z",
-   "seconds": null,
-   "finished": "2026-10-27T03:12:58.375000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -50,28 +17,28 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 63.0,
-   "resets_at": "2026-10-27T02:59:59.934312+00:00",
+   "pct": 5.0,
+   "resets_at": "2026-10-27T07:59:59.645613+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 37.0,
+   "left": 95.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 47.0,
-   "resets_at": "2026-11-01T06:59:59.934328+00:00",
+   "pct": 51.0,
+   "resets_at": "2026-11-01T06:59:59.645629+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 53.0,
+   "left": 49.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T06:59:59.934465+00:00",
+   "resets_at": "2026-11-01T06:59:59.645756+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-26T22:05:27.493890-04:00"
+  "read_at": "2026-10-26T23:19:43.226626-04:00"
  },
  "ui": {
-  "week_pct": 0.079,
+  "week_pct": 0.077,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -87,7 +54,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-10-26T23:19:46-04:00"
+  "at": "2026-10-26T23:30:13-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -167,7 +134,7 @@
    {
     "w": "Odalys",
     "k": "review",
-    "t": "C13 re-review of tools/pkg_sandbox.py after...",
+    "t": "C13 re-review of tools/pkg_sandbox.py after T-0317/T-0311",
     "s": "next",
     "o": "c"
    },
@@ -189,14 +156,14 @@
    {
     "w": "Ines",
     "k": "research",
-    "t": "CORRECTIONS pass 3 s3b tags in docs Wrenna...",
+    "t": "CORRECTIONS pass 3 s3b tags in docs Wrenna does not own",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "31 closed-hunt scripts under research/hunt/...",
+    "t": "31 closed-hunt scripts under research/hunt/ call urllib/curl directly,...",
     "s": "next",
     "o": "c"
    },
@@ -231,7 +198,7 @@
    {
     "w": "Odalys",
     "k": "site",
-    "t": "MacBook panel under Home > Issues, after...",
+    "t": "MacBook panel under Home > Issues, after T-0303/T-0313 leave tools/site: the...",
     "s": "next",
     "o": "c"
    },
@@ -287,7 +254,7 @@
    {
     "w": "Wrenna",
     "k": "browser",
-    "t": "Read developer.apple.com \"Keeping a widget...",
+    "t": "Read developer.apple.com \"Keeping a widget up to date\", WidgetPushHandler,...",
     "s": "blocked",
     "o": "c"
    },
@@ -301,7 +268,7 @@
    {
     "w": "Idris",
     "k": "test",
-    "t": "One Simulator preview snapshot for the names...",
+    "t": "One Simulator preview snapshot for the names freeze",
     "s": "next",
     "o": "c"
    },
@@ -336,14 +303,14 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "L9 device probe once a device or Simulator...",
+    "t": "L9 device probe once a device or Simulator is free",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Wrenna",
     "k": "research",
-    "t": "Unassigned, P2, person's browser checks on...",
+    "t": "Unassigned, P2, person's browser checks on developer.apple.com for the [M]...",
     "s": "next",
     "o": "c"
    },
@@ -398,7 +365,7 @@
    {
     "w": "Wrenna",
     "k": "research",
-    "t": "Read...",
+    "t": "Read developer.apple.com/documentation/mapkit/mkgeocodingrequest.md via...",
     "s": "next",
     "o": "c"
    },
@@ -412,7 +379,7 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Spike owner, P3, C2 Info.plist strings and...",
+    "t": "Spike owner, P3, C2 Info.plist strings and privacy manifest",
     "s": "next",
     "o": "c"
    },
@@ -448,7 +415,7 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "C2-Q1 Swift-only location fix in the widget...",
+    "t": "C2-Q1 Swift-only location fix in the widget extension",
     "s": "wait",
     "o": "c"
    },
@@ -469,7 +436,7 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Location-declined state for the \"distance to...",
+    "t": "Location-declined state for the \"distance to a saved place\" premade",
     "s": "next",
     "o": "c"
    },
@@ -490,7 +457,7 @@
    {
     "w": "Maren",
     "k": "design",
-    "t": "PROPOSAL-003 store captions after the...",
+    "t": "PROPOSAL-003 store captions after the Investors answer ops/questions.md item...",
     "s": "wait",
     "o": "c",
     "y": 1
@@ -575,7 +542,7 @@
    {
     "w": "Pernille",
     "k": "build",
-    "t": "Numpy cp315 iOS wheel, the first ADR-003...",
+    "t": "Numpy cp315 iOS wheel, the first ADR-003 go/no-go package",
     "s": "blocked",
     "o": "c"
    },
@@ -596,7 +563,7 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "After T-0041 and only if T-0271 is approved...",
+    "t": "After T-0041 and only if T-0271 is approved by Day 12",
     "s": "next",
     "o": "c"
    },
@@ -645,7 +612,7 @@
    {
     "w": "Wrenna",
     "k": "research",
-    "t": "Confirm or correct the revenue-gap memo's...",
+    "t": "Confirm or correct the revenue-gap memo's five [recall] tags from single...",
     "s": "blocked",
     "o": "c"
    },
@@ -764,7 +731,7 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Report overhaul items 2b and 3, after item...",
+    "t": "Report overhaul items 2b and 3, after item 1b and item 2a",
     "s": "next",
     "o": "c"
    },
@@ -785,7 +752,7 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Report overhaul item 4c, after the Investors...",
+    "t": "Report overhaul item 4c, after the Investors pick a direction: build it in...",
     "s": "next",
     "o": "c"
    },
@@ -813,7 +780,7 @@
    {
     "w": "Wrenna",
     "k": "test",
-    "t": "After this session's publish, check Send...",
+    "t": "After this session's publish, check Send live with a real Investor token: a...",
     "s": "blocked",
     "o": "c"
    },
@@ -838,7 +805,7 @@
    {
     "w": "Wrenna",
     "k": "test",
-    "t": "Site_qa.py checks for the additions against...",
+    "t": "Site_qa.py checks for the additions against fixtures now",
     "s": "next",
     "o": "c"
    },
@@ -881,7 +848,7 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Weekly: read the Claude Code changelog and...",
+    "t": "Weekly: read the Claude Code changelog and update only when nothing changes...",
     "s": "blocked",
     "o": "c"
    },
@@ -928,8 +895,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
-  "task_done",
-  "task_title"
+  "task_done"
  ]
 }

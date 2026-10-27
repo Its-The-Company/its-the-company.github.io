@@ -1,77 +1,69 @@
 {
  "schema": 1,
- "at": "2026-10-27T19:20:22.940758+00:00",
+ "at": "2026-10-27T21:18:21.315914+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-27T11:50:27-04:00"
+  "started": "2026-10-27T15:22:39-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "idris",
-   "task": "[build] T-0031 Pro purchase slice a",
+   "task": "[build] T-0460 editor G2/G3",
    "model": "opus",
-   "started": "2026-10-27T18:47:12.504Z",
+   "started": "2026-10-27T20:10:56.785Z",
    "seconds": null,
-   "finished": "2026-10-27T19:20:12.518000+00:00"
+   "finished": "2026-10-27T21:17:37.715000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[ops] T-0470 file R5 proposal issue",
-   "model": "sonnet",
-   "started": "2026-10-27T18:45:22.296Z",
+   "task": "[tools] T-0440 xc.sh false green",
+   "model": "opus",
+   "started": "2026-10-27T19:56:20.325Z",
    "seconds": null,
-   "finished": "2026-10-27T18:46:39.807000+00:00"
+   "finished": "2026-10-27T20:10:34.981000+00:00"
   },
   {
    "name": "idris",
-   "task": "[build] T-0467 Lock Screen WidgetKit check",
+   "task": "[build] T-0473 paywall screen",
    "model": "opus",
-   "started": "2026-10-27T17:46:20.540Z",
+   "started": "2026-10-27T19:23:22.280Z",
    "seconds": null,
-   "finished": "2026-10-27T18:45:05.110000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[ops] T-0374 report overhaul R5 draft",
-   "model": "opus",
-   "started": "2026-10-27T17:32:13.782Z",
-   "seconds": null,
-   "finished": "2026-10-27T17:46:04.463000+00:00"
+   "finished": "2026-10-27T19:55:49.056000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 78,
+  "runnable_count": 81,
   "blocked_count": 53
  },
  "meter": {
   "five_hour": {
-   "pct": 14.0,
-   "resets_at": "2026-10-27T18:00:01.369878+00:00",
+   "pct": 2.0,
+   "resets_at": "2026-10-27T23:00:00.279914+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 86.0,
+   "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 57.0,
-   "resets_at": "2026-11-01T07:00:00.369898+00:00",
+   "pct": 58.0,
+   "resets_at": "2026-11-01T07:00:00.279931+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 43.0,
+   "left": 42.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T07:00:00.370064+00:00",
+   "resets_at": "2026-11-01T07:00:00.280054+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-27T11:50:27.015435-04:00"
+  "read_at": "2026-10-27T15:22:38.934685-04:00"
  },
  "ui": {
-  "week_pct": 0.101,
+  "week_pct": 0.1,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -87,7 +79,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-27T15:21:49-04:00"
+  "at": "2026-10-27T17:19:01-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -224,13 +216,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "NEEDS \"approve\"",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Tools/xc.sh",
     "s": "next",
     "o": "c"
    },
@@ -613,6 +598,34 @@
     "o": "c"
    },
    {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Code review of 0020d29d",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "review",
+    "t": "Rule on two key-row choices in 0020d29d",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "IPad two scenes",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "ADR-004 G2/G3 device checks, after a device...",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Odalys",
     "k": "tools",
     "t": "Report overhaul item 1a",
@@ -694,27 +707,27 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "T-0031 Pro purchase slice a",
-    "at": "2026-10-27T19:20:12.518000+00:00",
+    "t": "T-0460 editor G2/G3",
+    "at": "2026-10-27T21:17:37.715000+00:00",
     "o": "c"
    },
    {
     "w": "Odalys",
-    "k": "ops",
-    "t": "T-0470 file R5 proposal issue",
-    "at": "2026-10-27T18:46:39.807000+00:00",
+    "k": "tools",
+    "t": "T-0440 xc.sh false green",
+    "at": "2026-10-27T20:10:34.981000+00:00",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "T-0467 Lock Screen WidgetKit check",
-    "at": "2026-10-27T18:45:05.110000+00:00",
+    "t": "T-0473 paywall screen",
+    "at": "2026-10-27T19:55:49.056000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 78,
+   "next": 81,
    "wait": 29,
    "blocked": 24,
    "you": 5
@@ -725,7 +738,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "task_open"

@@ -197,6 +197,102 @@ Host only: Apple M1 Mac mini, CPython 3.9.6, jedi 0.19.2, parso 0.8.7, pyflakes 
 
 The G1 screenshot comparison with `mockups/A-editor.png` / `B-editor.png` is not done; it moves to slice b.
 
+### G2, G3 and the G1 screenshot: 2026-10-27 16:18-17:12 ET (Idris, T-0460, T-0041 slice b)
+
+**Verdicts.**
+- **G2 accessibility: passes everything the Simulator can show, after an adapter fix made today. VoiceOver's speech is a device check.** That fix is inside the adapter. Runestone is untouched, and section 5 does not fire on G2.
+- **G3 iPad input: hardware keyboard passes. Trackpad, the command-key overlay as drawn, the kana keyboard and dictation are device checks. Two scenes fails, with one finding, which is not an engine fault.**
+- **G1 screenshot against the mockups: passes.** There are 0 pixels outside the approved set. G1 itself still waits on the adapter day and re-measure (ruling 7), so T-0460 stays open.
+
+**What was built (all on `CodeEditorEngine`, nothing outside the adapter imports Runestone).**
+- **Protocol.** The protocol gained the members the key row and the shortcuts need:
+  - `accessoryView`, `onSelectionChange`, `canUndo`, `undo`/`redo`
+  - `shiftLeft`/`shiftRight`, `focus`/`endEditing`
+  - `fontPointSize`
+- **`App/Editor/EditorKeyRow.swift`.** The iPhone key row to IDE spec s3/s3.1:
+  - **Size and colour.** 44 pt, keys 40 x 36 with a gap of 6, Indent 46 wide. `key.bg`/`key.bgAlt`/`key.text`, pressed `key.bgAlt` for 120 ms.
+  - **Typing path.** Every tap goes through `insertTyped`.
+  - **Speech.** Every key is trait `.keyboardKey` and has its spoken name.
+  - **Alternates.** `"` has its three alternates as custom actions. The two-character alternates insert both halves with the caret between, one undo step.
+  - **Hardware keyboard (ruling 4b).** `attach` sets the accessory view to nil while `GCKeyboard.coalesced` is non-nil. It re-reads on connect and disconnect.
+- **`App/Editor/EditorCheck.swift`.** A gate screen, launched with `-editor-check` and used only by UI tests. It shows one editor (two with `-editor-two`) and the screen's own shortcuts, ⌘R Run and ⌘. Stop. Its state line holds text, selection, row, font size and the last announcement, and every UI check reads it back.
+- **In `RunestoneEngine.swift`.**
+  - The accessibility element (below).
+  - The editor's shortcuts, all titled for the overlay: ⇧⇥ outdent, ⌘] Indent and ⌘[ Outdent.
+  - Caret and selection announcements (`EditorSpeech`).
+- **Tests.**
+  - `Tests/EditorGateTests.swift`: 11 in-process tests.
+  - `UITests/EditorGateUITests.swift`: 8 UI tests. They run on iPhone 17e (G3 skips there) and on iPad Air 11-inch (M4), iOS 27.0.
+- **Script.** `scripts/editor/palette_check.swift` reads a screenshot back against the token colours.
+
+**G2, what failed first and the fix.**
+- **The first failure.** Runestone has no accessibility code at the pin. My first adapter made the `TextView` (a `UIScrollView`) the element. XCUITest then refused to type, with "Neither element nor any descendant has keyboard focus" (log `xcodebuild-20261027-161936`). The first responder is Runestone's internal `TextInputView`, a child of that element, and the accessibility runtime does not look through. VoiceOver would have had the same <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span> spot.
+- **The fix.** The element is now the `TextInputView` itself: the `UITextInput` that is first responder.
+  - It carries label "Code editor", value = the whole text (as `UITextView`'s), hint "Double-tap to edit." while not editing, and `accessibilityTextualContext = .sourceCode`.
+  - It gets `UIAccessibilityReadingContent` (line, content, frame and page for VoiceOver's line reading) at run time with `class_addMethod`/`class_addProtocol`. The methods are answered by our `AccessibleTextView`, so the vendored code stays unpatched and the pin check in `fetch_editor.sh` still holds.
+- **The result.** XCUITest now reports the editor as a **TextView** element with its label and value. The runtime recognises it as editable text, and typing reaches it (log `xcodebuild-20261027-162536`).
+
+**G2, evidence** (screenshots in `pywidget/ios/bench/editor-g2g3-2026-10-27/`; full suite log `xcodebuild-20261027-170221`; iPad gate log `xcodebuild-20261027-170828`):
+- **Current line.** `testReadsLineByLine` covers content per line, CRLF, the empty last line, and frames that go down the screen. Each line's own screen frame maps back to that line through `accessibilityLineNumber(for:)`. The run-time conformance answers on the element itself.
+- **Caret and selection.** VoiceOver gets nothing from Runestone here, so the adapter posts an announcement when the selection moves without typing (typing is left to the keyboard's echo):
+  - a move along a line speaks the text crossed (one character by its spoken name, e.g. "Left parenthesis");
+  - a move to another line speaks that line ("Blank" when empty);
+  - a selection speaks "<text>, selected", and a collapse speaks "Unselected".
+  - Unit-tested, and read back on the iPad from real key presses: → "i", ⌥→ "mport", ↓ reads "# A widget's body, for the editor gate.", ⇧→ "i, selected".
+  - **Device check:** whether VoiceOver also speaks its own echo for a `UITextInput` caret move, so the two double up. If they do, the announcement goes.
+- **Editing by typing.** `typeText` reaches the element on both Simulators, and the value follows. On iPhone the screen's key row also typed `()` and Undo restored it. The key row is forced on there, because the Simulator has the Mac keyboard attached; see G3.
+- **Dynamic Type.** The editor face is 15 pt at Large, smaller at XS, and clamped at 32 pt at AX5. The gutter clamps at 17. The live trait change rebuilds the theme, and a launch at AX XXXL draws 32 pt (`g2-ax5-*.png`).
+- **The key row (ruling 4c).**
+  - All 24 keys carry the s3.1 names in order, all `.keyboardKey`.
+  - Only `"` carries custom actions: "Single quote", "Triple quotes", "F-string". There are no `()`/`[]` alternates.
+  - Undo is `.notEnabled` and dimmed with nothing to undo.
+  - The keys stay 40 x 36 at AX XXXL.
+  - In the app the keys are found by those names as key elements (`g2-key-row-iphone.png`).
+- **Accessibility audit** (`performAccessibilityAudit`). Every type but Dynamic Type passes on the editor screen. The Dynamic Type audit reports one issue with no element and no frame, so it cannot be attributed. The measured check above is the evidence for Dynamic Type, and the audit issue goes to the device check with Accessibility Inspector's text-size control.
+- **Device checks (a person with VoiceOver on an iPhone).**
+  - How lines and the caret are actually spoken.
+  - Rotor navigation by character, word and line, which comes from `UITextInput`.
+  - That double-tap starts editing.
+  - The key row's swipe order and its Actions rotor.
+- **Findings, not gate fails.**
+  - (1) The keys' Large Content Viewer at accessibility sizes (s3.1 item 3) is not built.
+  - (2) Alternates open as the system menu on long-press (press, slide, release picks). This is Apple's own control for a button's alternates, not the bubble drawn in s3. That is Maren's call.
+
+**G3, evidence** (iPad Air 11-inch (M4) Simulator; XCUITest `typeKey` sends hardware key events):
+- **Arrows and selection.** All of these pass, each read back as an exact selection:
+  - ⌘↑ to the start of the document, → by one character, ⌥→ to the end of the word, ⌘→ to the end of the line.
+  - ↓ keeps the caret's column across a blank line (column 11 lands on offset 24), as `UITextView` does.
+  - ⌘↓ to the end, ⇧→, ⇧⌥→ (the word) and ⇧⌘→ (to the end of the line).
+- **Editing keys.** These pass:
+  - ⌘Z and ⇧⌘Z, back to the exact text.
+  - ⇥ inserts the indent unit and ⇧⇥ outdents.
+  - ⌘] and ⌘[ indent and outdent.
+  - ⌘R and ⌘. reach the screen's commands.
+- **No key row with a hardware keyboard.** Both Simulators have the Mac keyboard attached. `GCKeyboard` reports it, the accessory view is nil, and no key element exists (`g2-no-row-hw-*.png`). The connect/disconnect re-read is unit-tested with an injected keyboard flag.
+- **Command-key overlay.** Every shortcut has a title in process: Indent, Outdent, Run, Stop. **Device check:** holding ⌘ on an iPad and seeing them listed. XCUITest cannot hold a modifier alone.
+- **Trackpad I-beam and click-drag selection: device check.** The Simulator under XCUITest has no pointer hover, and a touch drag is not a trackpad drag.
+- **Japanese kana IME: device check for the keyboard itself.** The path it uses is unit-tested: marked text か → かん → 漢, then commit. The text is right, the marked range is cleared and the caret lands after the character.
+- **Dictation: device check.** The Simulator has no dictation.
+- **Two scenes, two files: fail, with one finding.**
+  - The app's `Info.plist` does not declare `UIApplicationSupportsMultipleScenes`, so iPad cannot open a second window of PyWidget at all.
+  - The engine side passes: two editors on one screen hold two files, typing goes to the focused one, and ⌘Z in one leaves the other untouched (UI test and unit test).
+  - The fix is the IDE screen's scene manifest plus a per-scene document, which is a new board line. It is not an adapter fault, and it does not touch ruling 1.
+- **The Simulator dropped some hardware key events under XCUITest.**
+  - What happened: the first key after a relaunch inside one run, and now and then later.
+  - The fix in the test: `press()` resends a key whose state did not change in 1.5 s, at most twice, and prints each resend.
+  - Final iPad run: 0 resends. The run before it: 1 resend.
+  - A late event resent would apply twice, and the exact expectations would catch that.
+  - Whether a person ever loses a first key is part of the device check.
+- **iOS 26 clear-bar question (ruling 4).** It stays a device check, decided on glass. `g2-key-row-iphone.png` shows the opaque bar on the iOS 27 Simulator.
+
+**G1 screenshot against the mockups.**
+- **Command.** `xcrun swift pywidget/ios/scripts/editor/palette_check.swift g2-typing-iphone.png 0 260 1170 760 <Quill light tokens>`, run on the editor area of `g2-typing-iphone.png` (light).
+- **Result.** 0 off-palette pixels. Token pixels: bg 782,354; current line 60,401; text 7,062; comment 5,882; string 3,104; keyword 2,478; function 1,352; operator 960; builtin 652; number 594; hairline 1,557. Another 22,673 pixels are anti-aliased edges between the ground and a token colour.
+- **Against the mockups.** Keywords, function names, strings, numbers and comments take the same roles as in `mockups/A-editor.png`. `B-editor.png` uses Lumen, the dark-appearance set, so its light colours are not the shipped light theme. Under ruling 3 a different approved role is fine.
+- **Not compared yet.**
+  - `float` in an annotation draws as text: tree-sitter's query gives no capture there. Maren's call, with `constructor` and decorators (above).
+  - The dark appearance (Lumen dark) was not shot in this slice.
+
 ## 8. Licence lines (logged in log/assets.md, Commandments 4-5)
 
 - Runestone, https://github.com/simonbs/Runestone, MIT, Copyright (c) 2021 Simon Støvring.

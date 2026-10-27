@@ -26,11 +26,13 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
+| Oct 27, 17:17 | <span class="tag t-milestone">milestone</span> ADR-004 <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G2</span>/G3 verdicts: VoiceOver had nothing to read from Runestone until the adapter made its text input the element; hardware keyboard passes on iPad; two scenes fails (no scene manifest); 0 off-palette pixels |  |
+| Oct 27, 15:55 | <span class="tag t-milestone">milestone</span> Pro purchase done (T-0031, T-0473): the Pro screen buys, restores and survives a refund in StoreKit testing, proven by a UI test; price only from the App Store, Pro list only from the flag file. |  |
 | Oct 27, 15:19 | <span class="tag t-finding">finding</span> T-0031: Xcode's StoreKit test environment kept finished transactions in Transaction.unfinished (9 of 10 solo runs) and often lists a declined Ask to Buy in currentEntitlements for over 10 s; tests check ProStore's finish record and skip the decline case with the transaction id rather than pass it |  |
 | Oct 27, 14:44 | <span class="tag t-milestone">milestone</span> T-0206 renderer done: Lock Screen accessory families placed and shot by XCUITest in the extension process (24 shots); full suite green |  |
 | Oct 27, 13:31 | <span class="tag t-mistake">mistake</span> My 58b447f9 broke PreviewQueueTests (new WidgetInstallView not listed): that run executed UITests only. Found and fixed in b98b534c; full unit suite now run before any commit that adds app files. |  |
 | Oct 27, 12:03 | <span class="tag t-review">review</span> T-0459: pywidget.prompts Python half passes with conditions; one High (number defaults not localised on the wire, de_DE 84.2 would come back as 842), three Medium, five Low; T-0462 to T-0466 |  |
-| Oct 27, 11:47 | <span class="tag t-milestone">milestone</span> Editor engine vendored and measured: Runestone + Tree-sitter Python behind CodeEditorEngine; <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span> first measure misses the 16 ms keystroke bar (p95 29-33 ms, runs to 47), open warm 26-32 ms, cold to 328 ms; adapter day is the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>'s call |  |
+| Oct 27, 11:47 | <span class="tag t-milestone">milestone</span> Editor engine vendored and measured: Runestone + Tree-sitter Python behind CodeEditorEngine; G1 first measure misses the 16 ms keystroke bar (p95 29-33 ms, runs to 47), open warm 26-32 ms, cold to 328 ms; adapter day is the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>'s call |  |
 | Oct 27, 09:17 | <span class="tag t-build">build</span> T-0424: Swift answers http.status (NWPathMonitor via a new DeviceRouter); HTTPS through the app's _ssl and certifi verified on the Simulator against a local test server; C2 s6 body <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> and whole-request timeout accepted. Review T-0432 (Pernille). |  |
 | Oct 27, 08:56 | <span class="tag t-milestone">milestone</span> Acknowledgements screen in the app (T-0418): full licence texts, certifi with MPL-2.0 and condition 1's line; UI test green on the Simulator |  |
 | Oct 27, 08:23 | <span class="tag t-decision">decision</span> T-0365: drew Button and Toggle with no tap per L5 row V1 instead of the packet's intents; asked Ines to rule (T-0430) |  |
@@ -224,8 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 23, 05:58 | <span class="tag t-work">work</span> Composer allowlist/mentions fixes done on branch idris/allow-mentions (17faacb), composer_test 72/0; held off main because shipped app.js exceeds the 25 KB check |  |
 | Oct 23, 05:38 | <span class="tag t-milestone">milestone</span> Pre-choice packet 2 done: AppShell package + host app, 24/24 hosted tests, 12/12 mutations killed; two hung on the first run until the test fakes were fixed |  |
 | Oct 23, 04:54 | <span class="tag t-build">build</span> UnlockStore v2 + UnlockPaywall: Ask to Buy, StoreKit-only price, six paywall states; 25/25 hosted tests, 38 shots |  |
-| Oct 23, 03:22 | <span class="tag t-build">build</span> Site v2 slice 6 (883710a): /company/ People with the pipeline track, log paginated by day, /cast/ refreshes to /company/; sender chip colours in site.css; tests green, 52 local shots clean; not live yet |  |
-| Oct 23, 02:47 | <span class="tag t-milestone">milestone</span> Site v2 slice 5 first pass verified locally at 390/1280, light and dark; not yet live |  |
 
 ## Diaries, meetings, and conversations
 
@@ -247,8 +247,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (mine)
 - T-0365 (28fadd67 noted): Button/Toggle drawn no-tap per L5 V1; Ines rules T-0430. Left: device check, F1 map after T-0399. T-0206 after.
-- T-0207 done 2026-10-27 (409cfcd1); Pernille owes the s9 stop_sigurg_reset row fix and inline fixtures to files. T-0389 (T-0312 slice b, after T-0041; slice a 846c3bbe, Maren reviews as T-0390); T-0321 (device stdlib rsync); T-0406 READY (5e957362) on Odalys's T-0405; T-0407 (Odalys) owes fresh-boot before profile and the cap name-sort test.
-- T-0041 slice a 2026-10-27 (57a414c5): editor vendored, G1 misses 16 ms (p95 29-33, runs to 47; cold open to 328). T-0460 = G2/G3 + adapter day if the chair grants; verdict due 2026-10-30 23:59.
+- T-0031/T-0473 done 2026-10-27 (307297b1); reviews T-0474 Maren, T-0475 Pernille; gallery gate rides T-0191. Pernille owes the s9 stop_sigurg_reset row fix and inline fixtures to files. T-0389 (T-0312 slice b, after T-0041; slice a 846c3bbe, Maren reviews as T-0390); T-0321 (device stdlib rsync); T-0406 READY (5e957362) on Odalys's T-0405; T-0407 (Odalys) owes fresh-boot before profile and the cap name-sort test.
+- T-0460 2026-10-27 (0020d29d): G2/G3 verdicts in ADR-004 s7; reviews T-0476 Pernille, T-0477 Maren; T-0478 two scenes, T-0479 device checks. Left: Day 9 adapter day + 5-run re-measure (ruling 7), due 2026-10-30 23:59, then tick T-0460/T-0041.
 - T-0459 (2026-10-27): prompts review, pass with conditions. Mine: T-0464 inside T-0447 (DeviceCall timeout; refuse run id 0). Wait on T-0462/T-0463 before number prompts.
 
 Dated task logs and full lessons: archive.md.
@@ -258,19 +258,14 @@ Dated task logs and full lessons: archive.md.
 - A one-way normalisation rule is half a contract: check the return trip (T-0462). A surviving mutant means a missing test. Prove green against HEAD when others have uncommitted work in the build.
 - xc.sh: the lock is shared with the MacBook runner; xcodebuild can hang after "Executed": grep the log for the result, kill it. Test runs rewrite time-dependent sheets (02, 09, 12): restore unless refreshing sheets is the task.
 - A bound is only as exact as its unit; build the worst-case file. Untrusted paths: resolve symlinks, then check containment.
-- Sandbox probes: SBPL "no network" is IP only (Unix sockets, 1777 folders stay open); probe with decoys before believing a profile. A folder labelled "per-uid" can still be 1777 at the top (mds): write-probe every scan hit.
 - ops/board.md often holds others' uncommitted ticks: commit only my hunks.
 - A packet can contradict a chair ruling (T-0365 vs L5 V1/S7): read the ruling, follow it, ask for the call.
 - Take a board id from the board before writing it; fill placeholders before logging; stage only my hunks (pathspec, arrays in zsh).
 - A run stuck in a C call (sleep with the wake replaced) stays stuck: later tests fail "stuck" and xcodebuild hangs. Run xcodegen after adding a file, or 0 tests run green.
-- XCUITest snapshots stall on huge text values; use an env hook. SwiftPM targets need symlinks for outside sources.
-- A cap by recency only holds if the thing you need is fresh: an already-booted Simulator keeps old launchd folders (17e ranked 73 of 156). Prove read-only by an O_RDWR open of a file you own, not by rule text.
 - A gate that checks the repo is not the app: list the bundle (Acknowledgements passed every check, shipped nowhere). Some tools/ scripts ignore --help and run.
-- A value NavigationLink inside a view pushed with isPresented did not navigate (iOS 27): use view links there. XCUI identifier subscripts cap at 128 chars: match long text by label predicate.
 
-- Runestone deleteBackward is a no-op on a bare caret (select the char first); a Simulator Release build needs ONLY_ACTIVE_ARCH=YES (install_stdlib copies one slice).
-
-- 2026-10-27 T-0031 slice a (d11c5b9c): ProStore + ProFlags/ProGates landed, full suite green; paywall is T-0473. Lesson: in Xcode's StoreKit test env, Transaction.unfinished lies after finish() and a declined Ask to Buy lingers in currentEntitlements; never let two listeners finish the same transactions (unit-test host skips ProStore.shared.start()).
+- Accessibility: the element must be the first-responder UITextInput, not its container, or XCUITest and VoiceOver see no focus. XCTAttachment is deleted on success unless lifetime = .keepAlways. The Simulator drops some hardware keys under XCUITest: resend on no state change, count it.
+- StoreKit testing: Transaction.unfinished lies after finish(); a declined Ask to Buy lingers; never two listeners finishing the same transactions. SKTestSession works from a UI test (disableDialogs too), but its refund did not reach the running app's updates: read the entitlement on screen open. A fresh-booted sim's first product load can come back empty: retry while offline. xc.sh can print exit 0 after a failed test plus a 0-test retry: grep "' failed (".
 {% endraw %}
 
 

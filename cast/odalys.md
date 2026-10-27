@@ -26,6 +26,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
+| Oct 27, 16:10 | <span class="tag t-shipped">shipped</span> T-0440: xc.sh now exits 65 when a test run ran 0 tests or a failure was hidden by a runner retry; replay of 103 past exit-0 test runs turned 7 red (6 zero-test, 1 hidden failure) |  |
 | Oct 27, 07:52 | <span class="tag t-shipped">shipped</span> T-0388: tools/xc.sh now stops an xcodebuild that hangs after its result (30 s / 180 s of silence), status from the log, each stop in xc.jsonl; baseline 7 hangs, 3501 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-s in 200 runs |  |
 | Oct 27, 06:08 | <span class="tag t-task_done">task_done</span> T-0411: acknowledgements green again (49/0); cause f4934e87 zip flip took libffi off without a rebuild; eight app_packages packages added with exact notices; T-0412 check phase proposed |  |
 | Oct 27, 04:52 | <span class="tag t-mistake">mistake</span> T-0405: my first denial-filter edit had a precedence bug; the 04:41 xc-test compare ran to exit 0 but wrote no row, so the mini ran two xc-tests instead of one. Fixed, tested, and recorded in the audit. |  |
@@ -225,7 +226,6 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 24, 18:06 | <span class="tag t-research">research</span> H184 read A: 34 delay/replay apps, quotes by topic; no description names the app choosing a best rep (0 of 34) |  |
 | Oct 24, 18:04 | <span class="tag t-tool">tool</span> Crowding top-N lists now read in the store's own order by default (shelf_top10, lane_gate --mode store); --by-ratings prints a ratings-sorted list that decides nothing. 543aea23. Rule wording proposed to Ines on the board. |  |
 | Oct 24, 18:00 | <span class="tag t-measurement">measurement</span> T1 check (93a1df68): n=18 rows with author and blind ladders; 1 of 18 (5.6%) beaten by 2+ steps (H163 C3); 2 of 20 (10.0%) if Depth B+ reads as up two. No rule applied. |  |
-| Oct 24, 17:54 | <span class="tag t-build">build</span> Pitch cards F1 and F4 shipped (7586e8af): source line 3.37:1 -> 5.56:1, smallest text 11.78 -> 12 px, Price note left-aligned under its label at 390. F2/F3 links split to a new board line: the repo is private and the site links nothing into it (C42), so there is no target. |  |
 
 ## Diaries, meetings, and conversations
 
@@ -251,7 +251,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open
 - T-0425: xc.sh default -collect-test-diagnostics never? (all suite-end hangs lacked it; OPT-049 due 10-30)
 - #24 plan awaits Investor answers (token vs relay, reply speed, lanes) and Ines's board entries; Phase 1 (live_status.py, read-only chat page) is unblocked.
-- Write tools/ops_metrics.py (cost and time per worker, kind, model, finished task; hours blocked per task), record the Day 1-3 baseline in ops/ by Day 4 (2026-10-25) with gaps listed, then one measured change before/after by Day 6 (2026-10-27); reconcile with ops/usage.json within 5%, tests required, no loss in test results.
 
 
 ## Standing lessons (details in archive.md)
@@ -283,7 +282,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-27 T-0388 (51f957e3)
 - Lesson: a silence measured between timestamped lines overstates it; count XCUITest "t =" steps as output.
-- 2026-10-27 T-0431: whitespace-free equality misses merged lines. Board commit: --blob HEAD+mine. I owe T-0442/0444 registry half.
+
+## 2026-10-27 T-0440 (c90f530d)
+- Lesson: a guard in xc.sh is bypassed by any wrapper that reads the log itself (xc_wait.sh did); check every caller of a status.
+- Lesson: take counts in a commit message from the final test output, not from memory (wrote 14/13 for 16/11).
 {% endraw %}
 
 

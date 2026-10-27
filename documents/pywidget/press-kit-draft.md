@@ -25,9 +25,9 @@ Wrenna, market and product researcher, 2026-10-26, started 20:15 ET (`date`). Bo
 | Name | NAME | The Investors' choice; shortlist Lathe, Pith, Coilwork (names.md); USPTO check by a person still owed |
 | Seller (as on the App Store) | [seller name] | The Investors' (ops/questions.md item 14) |
 | Platforms | iPhone and iPad (one universal app), iOS 18.0 or later | ADR-001 3.1; store-page-draft s0 |
-| Price | Free to download and to run your own code. [[G6: One in-app purchase, [Pro name], at [price].]] | PROPOSAL-001 and PROPOSAL-001-v1-paid-tier: open, the Investors' |
+| Price | Free to download and to run your own code. [[G6: One in-app purchase, [Pro name], at [price].]] | PROPOSAL-001 and PROPOSAL-001-v1-paid-tier: open, the Investors'. Ines recommends $14.99 once, with numpy, Pillow and matplotlib free while widgets ship ([DECISION-2026-10-26-revenue-gap s2-s3](decision-2026-10-26-revenue-gap.html); note 2026-10-26 20:26 ET, T-0274); [price] stays a fill until they answer |
 | Release date | [date on sale] | Target: submitted Day 17 (2026-11-07), on sale about Day 20 (2026-11-10) if the first review passes ([plan.md](pywidget-plan.html)) |
-| Python | CPython 3.15 (pinned 3.15.1, python.org's own iOS build) and its standard library; requests built in[[G3: ; numpy, Pillow and matplotlib built in]] | ADR-001 3.1 C1 [V] |
+| Python | CPython 3.15 (pinned 3.15.1, python.org's own iOS build) and its standard library; requests built in[[G3: ; numpy, Pillow and matplotlib built in[[G5: , free]]]] | ADR-001 3.1 C1 [V] |
 | Editor | Syntax highlighting, completion for the standard library and bundled packages, inline errors on save, tracebacks that go to the failing line, find and replace, coding-key row; on iPad a sidebar, split editor and keyboard shortcuts | store-page-draft s6 |
 | Console and UI | input(), stop and restart, script arguments, run history, table output; native alerts, prompts, forms, lists, pickers and HUD messages from a script | store-page-draft s6 |
 | Device access from Python | Clipboard, files, local notifications, location while in use, motion history (steps, floors, distance), Keychain; each permission asked the first time a script needs it | store-page-draft s6 |

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-10-27T00:17:33.374449+00:00",
+ "at": "2026-10-27T00:32:57.462890+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,47 +8,11 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-0189 preview queue key",
-   "model": "opus",
-   "started": "2026-10-26T23:40:29.174Z",
-   "seconds": 2224,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[build] Lock in toggle then T-0177",
    "model": "opus",
    "started": "2026-10-26T23:41:05.682Z",
-   "seconds": 2187,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-0209 L4 G-rows into schema",
-   "model": "opus",
-   "started": "2026-10-26T23:49:36.386Z",
-   "seconds": 1676,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[design] T-0242 ADR-003 package policy s2-s4",
-   "model": "opus",
-   "started": "2026-10-27T00:04:05.274Z",
-   "seconds": 808,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[release] T-0036 privacy manifests per bundle",
-   "model": "opus",
-   "started": "2026-10-27T00:08:27.673Z",
-   "seconds": 545,
+   "seconds": 3111,
    "finished": null,
    "effort": "high"
   },
@@ -57,25 +21,7 @@
    "task": "[ops] T-0255 protect-records narrowing proposal",
    "model": "opus",
    "started": "2026-10-27T00:10:50.532Z",
-   "seconds": 402,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[test] evening green sweep of all suites",
-   "model": "opus",
-   "started": "2026-10-27T00:12:49.131Z",
-   "seconds": 284,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0140 two-slot Xcode measurement",
-   "model": "opus",
-   "started": "2026-10-27T00:14:50.939Z",
-   "seconds": 162,
+   "seconds": 1326,
    "finished": null,
    "effort": "high"
   },
@@ -84,78 +30,132 @@
    "task": "[build] T-0006 Infrastructure metrics remainder",
    "model": "opus",
    "started": "2026-10-27T00:14:54.977Z",
-   "seconds": 158,
+   "seconds": 1082,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[tools] T-0275 package sandbox settings proposal",
+   "model": "opus",
+   "started": "2026-10-27T00:21:53.588Z",
+   "seconds": 663,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-0250 T-0233 state copies and colour names",
+   "model": "opus",
+   "started": "2026-10-27T00:22:07.557Z",
+   "seconds": 649,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-0253 installer refusal messages rewrite",
+   "model": "opus",
+   "started": "2026-10-27T00:22:11.657Z",
+   "seconds": 645,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-0267 T-0219 T-0258 then T-0058 Xcode lane",
+   "model": "opus",
+   "started": "2026-10-27T00:25:21.214Z",
+   "seconds": 456,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "maren",
-   "task": "[design] T-0137 store shot 6 and money QA",
+   "task": "[design] T-0271 Pro editor theme proposal",
    "model": "opus",
-   "started": "2026-10-27T00:16:11.945Z",
-   "seconds": 81,
+   "started": "2026-10-27T00:27:16.361Z",
+   "seconds": 341,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "ines",
-   "task": "[plan] revenue gap decision from launch plan",
+   "task": "[plan] T-0277 Pro fallback content and G6 suffix",
    "model": "opus",
-   "started": "2026-10-27T00:16:45.528Z",
-   "seconds": 47,
+   "started": "2026-10-27T00:30:37.933Z",
+   "seconds": 139,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-0281 ADR-003 package staging owner",
+   "model": "opus",
+   "started": "2026-10-27T00:31:27.883Z",
+   "seconds": 89,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[review] T-0236 L5 placement check of rulings",
+   "task": "[test] T-0279 hold-seed replay expectation",
    "model": "opus",
-   "started": "2026-10-27T00:16:54.827Z",
-   "seconds": 38,
+   "started": "2026-10-27T00:31:31.788Z",
+   "seconds": 85,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[review] T-0265 Lock in toggle code review",
+   "model": "opus",
+   "started": "2026-10-27T00:32:50.294Z",
+   "seconds": 7,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2, Odalys x6, Pernille x2, Maren, Ines",
+ "who": "Odalys x4, Pernille x3, Idris x2, Maren, Ines x2",
  "recent": [
   {
    "name": "idris",
-   "task": "[research] T-0251 L5 s5 T-0248 write-in",
+   "task": "[research] T-0266 L5 ring count and cap bytes",
    "model": "opus",
-   "started": "2026-10-27T00:10:54.732Z",
+   "started": "2026-10-27T00:27:35.373Z",
    "seconds": null,
-   "finished": "2026-10-27T00:16:39.287000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[release] T-0249 launch plan and press kit draft",
-   "model": "opus",
-   "started": "2026-10-27T00:07:55.752Z",
-   "seconds": null,
-   "finished": "2026-10-27T00:16:32.244000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[design] IDE mockup dark card colours fix",
-   "model": "opus",
-   "started": "2026-10-27T00:10:59.586Z",
-   "seconds": null,
-   "finished": "2026-10-27T00:16:02.028000+00:00"
+   "finished": "2026-10-27T00:32:30.638000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[build] T-0203 Infrastructure workflow page",
+   "task": "[tools] T-0140 two-slot Xcode measurement",
    "model": "opus",
-   "started": "2026-10-26T23:41:10.369Z",
+   "started": "2026-10-27T00:14:50.939Z",
    "seconds": null,
-   "finished": "2026-10-27T00:14:21.769000+00:00"
+   "finished": "2026-10-27T00:30:47.919000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[review] T-0244 ADR-003 independent review",
+   "model": "opus",
+   "started": "2026-10-27T00:20:55.130Z",
+   "seconds": null,
+   "finished": "2026-10-27T00:30:36.267000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[test] evening green sweep of all suites",
+   "model": "opus",
+   "started": "2026-10-27T00:12:49.131Z",
+   "seconds": null,
+   "finished": "2026-10-27T00:30:30.151000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 42,
-  "blocked_count": 46
+  "runnable_count": 47,
+  "blocked_count": 43
  },
  "meter": {
   "five_hour": {
@@ -200,15 +200,6 @@
  "next_tick_why": "session",
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-0189 preview queue key",
-   "model": "opus",
-   "since": "2026-10-26T23:40:29.174Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[build] Lock in toggle then T-0177",
@@ -220,27 +211,36 @@
   {
    "name": "Pernille",
    "state": "running",
-   "task": "[build] T-0209 L4 G-rows into schema",
+   "task": "[tools] T-0275 package sandbox settings proposal",
    "model": "opus",
-   "since": "2026-10-26T23:49:36.386Z",
+   "since": "2026-10-27T00:21:53.588Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-0267 T-0219 T-0258 then T-0058 Xcode lane",
+   "model": "opus",
+   "since": "2026-10-27T00:25:21.214Z",
    "next": [],
    "effort": "high"
   },
   {
    "name": "Maren",
    "state": "running",
-   "task": "[design] T-0137 store shot 6 and money QA",
+   "task": "[design] T-0271 Pro editor theme proposal",
    "model": "opus",
-   "since": "2026-10-27T00:16:11.945Z",
+   "since": "2026-10-27T00:27:16.361Z",
    "next": [],
    "effort": "high"
   },
   {
    "name": "Ines",
    "state": "running",
-   "task": "[plan] revenue gap decision from launch plan",
+   "task": "[plan] T-0277 Pro fallback content and G6 suffix",
    "model": "opus",
-   "since": "2026-10-27T00:16:45.528Z",
+   "since": "2026-10-27T00:30:37.933Z",
    "next": [],
    "effort": "high"
   },
@@ -256,15 +256,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0189 preview queue key",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T23:40:29.174Z",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
     "k": "build",
     "t": "Lock in toggle then T-0177",
@@ -272,33 +263,6 @@
     "e": "high",
     "at": "2026-10-26T23:41:05.682Z",
     "o": "i"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "T-0209 L4 G-rows into schema",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-26T23:49:36.386Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "design",
-    "t": "T-0242 ADR-003 package policy s2-s4",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-27T00:04:05.274Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "release",
-    "t": "T-0036 privacy manifests per bundle",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-10-27T00:08:27.673Z",
-    "o": "c"
    },
    {
     "w": "Odalys",
@@ -311,28 +275,64 @@
    },
    {
     "w": "Odalys",
-    "k": "test",
-    "t": "Evening green sweep of all suites",
+    "k": "build",
+    "t": "T-0006 Infrastructure metrics remainder",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-27T00:12:49.131Z",
+    "at": "2026-10-27T00:14:54.977Z",
     "o": "c"
    },
    {
-    "w": "Odalys",
+    "w": "Pernille",
     "k": "tools",
-    "t": "T-0140 two-slot Xcode measurement",
+    "t": "T-0275 package sandbox settings proposal",
     "m": "opus",
     "e": "high",
-    "at": "2026-10-27T00:14:50.939Z",
+    "at": "2026-10-27T00:21:53.588Z",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "T-0250 T-0233 state copies and colour names",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-27T00:22:07.557Z",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "T-0253 installer refusal messages rewrite",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-27T00:22:11.657Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0267 T-0219 T-0258 then T-0058 Xcode lane",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-27T00:25:21.214Z",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "T-0271 Pro editor theme proposal",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-10-27T00:27:16.361Z",
     "o": "c"
    }
   ],
   "open": [
    {
-    "w": "Odalys",
-    "k": "build",
-    "t": "A \"Lock in\" toggle on Home > Overview,...",
+    "w": "Idris",
+    "k": "review",
+    "t": "C13 review of the Lock in toggle",
     "s": "next",
     "o": "c"
    },
@@ -354,13 +354,6 @@
     "w": "Ines",
     "k": "research",
     "t": "CORRECTIONS pass 3 s3b tags in docs Wrenna...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "After 20 builds in ops/metrics/xc.jsonl",
     "s": "next",
     "o": "c"
    },
@@ -408,8 +401,15 @@
    },
    {
     "w": "Odalys",
+    "k": "tools",
+    "t": "Site build without ops/live.json shows two...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
     "k": "test",
-    "t": "Evening green sweep",
+    "t": "OPT-034 pair2 \" hold seed\"",
     "s": "next",
     "o": "c"
    },
@@ -519,13 +519,6 @@
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Runtime half of a preview request",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Bridge Swift half open items",
@@ -536,13 +529,6 @@
     "w": "Idris",
     "k": "build",
     "t": "App skeleton remainder",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "L4 s14.1 G-rows into the schema and spec",
     "s": "next",
     "o": "c"
    },
@@ -584,13 +570,6 @@
    {
     "w": "Pernille",
     "k": "build",
-    "t": "Same bug class as T-0223",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
     "t": "Apply the T-0247 copy read to the installer...",
     "s": "next",
     "o": "c"
@@ -603,9 +582,65 @@
     "o": "c"
    },
    {
+    "w": "Maren",
+    "k": "design",
+    "t": "Three Pro editor theme pairs",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "After T-0041 and only if T-0271 is approved...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "After T-0031",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Swift side of the T-0209 schema change",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "After T-0250/T-0233",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Answered A",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Ines",
     "k": "plan",
-    "t": "Revenue gap from Wrenna's launch-plan draft",
+    "t": "Two rulings from tonight",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "ADR-003 review B1",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Swift package for the Foundation-only logic",
     "s": "next",
     "o": "c"
    },
@@ -628,29 +663,29 @@
    {
     "w": "Idris",
     "k": "research",
-    "t": "T-0251 L5 s5 T-0248 write-in",
-    "at": "2026-10-27T00:16:39.287000+00:00",
+    "t": "T-0266 L5 ring count and cap bytes",
+    "at": "2026-10-27T00:32:30.638000+00:00",
     "o": "c"
    },
    {
-    "w": "Wrenna",
-    "k": "release",
-    "t": "T-0249 launch plan and press kit draft",
-    "at": "2026-10-27T00:16:32.244000+00:00",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0140 two-slot Xcode measurement",
+    "at": "2026-10-27T00:30:47.919000+00:00",
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "design",
-    "t": "IDE mockup dark card colours fix",
-    "at": "2026-10-27T00:16:02.028000+00:00",
+    "w": "Odalys",
+    "k": "review",
+    "t": "T-0244 ADR-003 independent review",
+    "at": "2026-10-27T00:30:36.267000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 42,
-   "wait": 26,
-   "blocked": 20,
+   "next": 47,
+   "wait": 22,
+   "blocked": 21,
    "you": 5
   }
  },

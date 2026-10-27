@@ -670,6 +670,7 @@ summary.cv-sec{display:list-item;cursor:pointer;min-height:44px}
 {% if page.hometab %}<nav class="subtabs hometabs" aria-label="Home">
 <a href="{{ '/' | relative_url }}"{% if page.hometab == "overview" %} aria-current="page"{% endif %}>Overview</a>
 <a href="{{ '/requests.html' | relative_url }}" data-issues{% if page.hometab == "issues" %} aria-current="page"{% endif %}>Issues{% if page.issues %} <span class="num">{{ page.issues }}</span>{% endif %}</a>
+<a href="{{ '/proposals.html' | relative_url }}" data-proposals{% if page.hometab == "proposals" %} aria-current="page"{% endif %}>Proposals{% if page.proposals %} <span class="num">{{ page.proposals }}</span>{% endif %}</a>
 <a href="{{ '/' | relative_url }}#t=main" data-chat-tab hidden>Chat</a>
 </nav>{% endif %}
 {% if page.section == "cast" or page.section == "records" or page.section == "log" or page.section == "usage" or page.section == "company" or page.section == "pitches" or page.section == "documents" or page.section == "work" or page.section == "infra" %}<nav class="subtabs" aria-label="Company">

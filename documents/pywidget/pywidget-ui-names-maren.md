@@ -334,6 +334,32 @@ line, Maren's words: "add() changed state but returned None, so the change was d
 named at the handler's @widget.action line like the wrong-return error; (3) no hint when the handler changed nothing,
 and none when it returns a dict. Pernille, board line. Why: the slip is the commonest one a new Python user makes with
 this API, and the shallow copy makes the same slip behave two ways; fix the bug before adding the message.
+
+## Error texts from T-0209 (T-0268), 2026-10-26 20:25 ET (Maren; DRAFT, <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>)
+
+Draft copy, not approved. Source: `pywidget_ui/__init__.py` at a6d8a527 (Pernille). I have not edited the code; Pernille applies (she is in the file on T-0250/T-0233). Method: a probe (/tmp, not committed) raised every new text from an extract of HEAD and printed it; word counts by script, on the filled-in text.
+
+**Voice** (as the PWL003/PWL012 drafts, fb0e859d, and the installer review, b05bf5c6): what happened, then what to do; short; a beginner can act on it without the docs. Line prefix ("probe.py, line 13: ") is already right in all of them.
+
+**Result: 11 numbered items, 10 edits (edit 2 is Ines's call) and 1 keep (8); 3 more texts kept with no edit, listed last.** Two are faults, not wording: edit 1 (the times can read false) and edit 3 (the action tells a beginner to do the opposite of what they want). Edit 9 is a wrong hint.
+
+**Tests that pin these strings** (Pernille updates them with the text): `tests/dsl/test_g_rows.py` lines 92, 234-235, 241, 248, 266-267, 377.
+
+### Edits
+
+1. **G6 timeline order, mixed time zones (fault).** Ines's wording stays. But `_clock` prints each date in the zone it was given, without the zone, and `_check_order` compares in UTC. Entry 1 at 10:00 UTC and entry 2 at 11:00 +02:00 (09:00 UTC) gives "entry 2 (11:00) is not after entry 1 (10:00)", which reads false. Fix: when the two UTC offsets differ, add the offset to both times. Recommended (18): "timeline entries must be in time order: entry 2 (11:00 +02:00) is not after entry 1 (10:00 +00:00)". Same offsets: no change (16 words, as now).
+2. **G6, the second half (Ines's call).** The text says what happened and stops. Proposed suffix (26 with it): "...; give each entry a later time than the one before". It covers both cases a beginner hits: out of order, and two entries at the same time (where "is not after" alone can read as "fine, they are equal"). Ines's wording, so Ines decides; Pernille applies only if she says yes.
+3. **G16 'watchFace' (fault).** Now: "disfavored location 'watchFace' is for Apple Watch only; on iOS use homeScreen, lockScreen, standBy, iPhoneWidgetsOnMac, carPlay" (16). "use homeScreen" reads as an instruction, and disfavoring homeScreen hides the widget from the place most people want it. The right action is to remove the entry; the widget never appears on a watch face anyway. Recommended (25): "disfavored location 'watchFace' is for Apple Watch only, and this widget runs on iOS; remove it. The iOS locations are homeScreen, lockScreen, standBy, iPhoneWidgetsOnMac, carPlay".
+4. **G16 'smartStack'.** "smartStack is for Apple Watch only" confuses anyone who has a Smart Stack on their iPhone Home Screen. Give it its own text. Recommended (27): "disfavored location 'smartStack' means the Smart Stack on Apple Watch, and this widget runs on iOS; remove it. The iOS locations are homeScreen, lockScreen, standBy, iPhoneWidgetsOnMac, carPlay". I have not put any claim about where the iPhone stack belongs into the copy; Idris can say whether one is true and worth adding.
+5. **padding edges, empty list.** Keep, one word: "name" to "edge", the word the parameter uses. Recommended (19): "padding edges is an empty list; give one edge such as 'all', or a list such as ['top', 'leading']".
+6. **padding edges, a name twice.** Now (5): "padding edges lists 'top' twice" says what happened only. Recommended (9): "padding edges lists 'top' twice; list each edge once".
+7. **When, empty list.** Now (13): "When('family') got an empty list; give one value or a list of values". "a list of values" is what they just gave. Recommended (18): "When('family') got an empty list; give one value such as 'systemSmall', or a list of one or more". The example is the key's first allowed value, written with %r (True for the boolean keys).
+8. **"did you mean" hint, the text.** Keep "; did you mean 'accented'?" as written, on every "must be one of", the family and the When errors. It names the fix in four words, matches the "no action 'ad'; did you mean 'add'?" text already shipped, and the case-ignored match finds 'top' for 'Top'. No hint when nothing is close is right; a wrong guess is worse than none.
+9. **Family 'accessoryCorner' (wrong hint).** It gets "is not an iOS widget family; did you mean 'accessoryCircular'?". accessoryCorner is a real family, on Apple Watch; the hint sends the person to a different shape. Same treatment as G16: a named text, no hint. Recommended (21): "family 'accessoryCorner' is for Apple Watch only, and this widget runs on iOS; remove it, or pick another family from ui.FAMILIES". It is the one family in ALL_FAMILIES and not in FAMILIES, so the check is `fam in ALL_FAMILIES`.
+10. **Family, no close match.** "family 'big' is not an iOS widget family" (8) gives no next step and no list. Recommended (15): "family 'big' is not an iOS widget family; pick one from ui.FAMILIES, such as 'systemSmall'". With a close match, the hint form stays as it is.
+11. **When on a boolean key, a quoted 'true'.** `When("showsContainerBackground", "true")` gets no hint, because the hint skips non-string allowed values. The slip is common (quotes around True). Recommended (13): "When('showsContainerBackground') compares against True, False, got 'true'; did you mean True (no quotes)?"; only for 'true' and 'false', case ignored. Pernille's call whether it is worth the branch.
+
+**Kept with no edit:** the "must be one of" form itself (37 call sites, one pattern; the hint fixes its weak case); `When env` typo ("got 'famly'; did you mean 'family'?"); `ui.validate`'s order line ("entries[1]: date ... is not after entries[0] (...); entries must be in time order"; zero-based paths match its other lines), unless Ines takes edit 2, when it ends with the same suffix so the two texts agree.
 {% endraw %}
 
 </div>

@@ -97,7 +97,7 @@ if (!LS.getItem('company.seen0')) LS.setItem('company.seen0', now().toISOString(
 var seen0 = LS.getItem('company.seen0'), isDesk = !!(W.matchMedia && W.matchMedia('(min-width:880px)').matches);
 var Q = (s) => document.querySelector ? document.querySelector(s) : null;
 var main = byId('main'), stripEl = byId('strip'), links = Q('main > .links'), aside = Q('main > .aside'), tog = Q('.now-toggle'), where = Q('main .where');
-var homeRow = Q('nav.hometabs'), issuesA = homeRow && homeRow.querySelector('[data-issues]');
+var homeRow = Q('nav.hometabs');
 [byId('composer'), byId('urgent'), aside, tog, homeRow].forEach((x) => { if (x) x.hidden = true; });
 var col = el('div', 'cv-col');
 if (main) { main.insertBefore(col, stripEl || main.firstChild); main.className = 'cv-desk'; }
@@ -146,8 +146,8 @@ mk(b, 'span', 'cv-t', k === 'home' ? 'Overview' : 'Chat');
 if (u) attr(mk(b, 'span', 'cv-badge', String(u)), 'aria-label', u + ' new');
 b.onclick = () => { go(k); };
 b.k = k;
-if (k === 'home' && issuesA) { var a = mk(scroller, 'a', 'cv-tab cv-link'); a.href = issuesA.href; mk(a, 'span', 'cv-t', 'Issues');
-var c = issuesA.querySelector('.num'); if (c) mk(a, 'span', 'cv-n', c.textContent); }
+if (k === 'home' && homeRow) [].forEach.call(homeRow.querySelectorAll('[data-issues],[data-proposals]'), (x) => { var a = mk(scroller, 'a', 'cv-tab cv-link'); a.href = x.href; mk(a, 'span', 'cv-t', x.hasAttribute('data-issues') ? 'Issues' : 'Proposals');
+var c = x.querySelector('.num'); if (c) mk(a, 'span', 'cv-n', c.textContent); });
 });
 var h = bar.offsetHeight, de = DE;
 if (h && de && de.style) de.style.setProperty('--cv-tabs-h', h + 'px');

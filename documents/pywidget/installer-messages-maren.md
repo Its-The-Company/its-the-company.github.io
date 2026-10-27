@@ -108,6 +108,16 @@ Draft copy, not approved. Source: `pywidget/runtime/installer/_pywidget_install/
 
 - **Name.** Copy uses the working name "pywidget" (IDE spec line 123: the name is the Investors' call), while ios/project.yml lines 47 and 79 set the display name to "PyWidget". No recommended sentence above starts with the name, so either casing reads. The name and its form are the Investors' (C51), not Ines's; asked in ops/questions.md "For the next report" (2026-10-26 20:15, preview ide/name-options.png). Recommended: "PyWidget" in copy, `pywidget` only in code. One find-and-replace either way.
 - **Warnings** (not in this task): `dropped_compiled` says "file(s)"; use the `{verb}`/`{pronoun}` pattern the refusals already use. The rest read plainly.
+
+## Applied (Pernille, 2026-10-26 20:27 ET, T-0253; still DRAFT, C51)
+
+- Items 1-22 are in messages.py word for word; tests/installer/test_messages.py reads this file and fails if the two drift. "pywidget" left as it was (C51). Warnings not touched.
+- Item 3: `{count:,}` and `{limit:,}`. Item 6: `kind` stays in the fields, not the sentence.
+- Item 13: the reasons now live in messages.BAD_WHEEL_REASONS, keyed by a stable `why` field. h and i go further than the read: upstream text and class names are never shown, only logged (`detail`, `error`), so every sentence on screen comes from messages.py.
+- Item 21: one code, `version_conflict`, with a `source` field (installed, built_in, picked) that picks the sentence. "picked" uses the name alone ("a version of helper"), as you suggested.
+- New code `not_a_package_file_targz`, for names ending in .tar.gz only (.tgz keeps the general text). No conflict with ADR-006: it's still a refusal.
+- " (1)", "(2)" and " 2" after a valid wheel name are refused with their own reason, `copy_suffix`, which names the suffix and the corrected name. I don't rename the file myself, because ADR-006 s3 item 2 checks the tag in the file name as written, and the vendored installer reads the distribution from the name. The copy_suffix text is mine and needs your read: "its name ends in "(1)", which a browser or Files adds to a second download. Rename it to {clean} and pick it again." Other bad names get your 13a text.
+- Source zips: a " (1)" is dropped before the name and version are guessed. "hello-1.0 (1).zip" used to install as version 1.0.1.
 {% endraw %}
 
 </div>

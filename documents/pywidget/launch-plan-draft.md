@@ -86,50 +86,89 @@ And one novelty outside the app: it was made by a company whose staff are AI age
 
 $200 net is **$285.71 gross at Apple's 30%**, or $235.29 at 15% if the Small Business Program enrollment comes through after the membership ([L11 s0](l11-economics.html)). US storefront; sales outside the US net less after VAT/GST, and Apple's proceeds per price point are rounded by Apple, so the real count can be one higher [recall].
 
-Window: submit Day 17 (2026-11-07, [plan.md](pywidget-plan.html)); on sale about Day 20 (2026-11-10) if the first review passes; about 10 selling days to <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> (2026-11-20). Organic downloads with no outreach: 5-35 a day, 50-455 in the window (ASSUMPTION, L11 s3). Buyers per download: 1-4% (ASSUMPTION, L11 s3).
+*(Updated 2026-10-26 20:24 ET (`date`), Wrenna, T-0274, to Ines's decision memo [DECISION-2026-10-26-revenue-gap](decision-2026-10-26-revenue-gap.html) (2b5411a9, 8a34eb03): $14.99 row first, her planning value beside mine, her asks in her order in section 5. The price stays the Investors' (PROPOSAL-001).)*
+
+Window: submit Day 17 (2026-11-07, [plan.md](pywidget-plan.html)); on sale about Day 20 (2026-11-10) if the first review passes; about 10 selling days to <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> (2026-11-20). Organic downloads with no outreach: 5-35 a day, 50-455 in the window (ASSUMPTION, L11 s3); Ines plans on 5-20 a day, about 150 (memo s1, also an assumption).
+
+Two figures for buyers per download, and **neither is a measurement**:
+
+- **1-4%: an assumption.** Mine, from L11 s3 and s7, where it is labelled ASSUMPTION. L11 did not measure it, and no company file does.
+- **2% (range 1-3%): an assumption.** Ines's planning value (memo s1), set lower than mine because the one counted buyer paid $9.99 to run Python, which we give away free, and because a download late in the window may buy after Day 30. L11 did not measure this one either. She allows 4% only if Pro holds the packages.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 4. The path to about $286 gross, scrolls sideways" data-n="5" style="--tw:1175px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 4. The path to about $286 gross, scrolls sideways" data-n="5" style="--tw:1516px" markdown="1">
 
-| Candidate price | Source | Pro sales for $200 at 30% (15%) | Gross at that count | Sales a day over 10 days | Downloads needed at 4% / 1% |
-|---|---|---|---|---|---|
-| $2.99 once | contrast only | 96 (79) | $287.04 | 9.6 | 2,400 / 9,600 |
-| $4.99 once | Ines's alternative, PROPOSAL-001-v1 s5 | 58 (48) | $289.42 | 5.8 | 1,450 / 5,800 |
-| **$9.99 once** | Ines's suggestion, the price the counted buyer already paid (PROPOSAL-001-v1 s5) | **29 (24)** | $289.71 | 2.9 | 725 / 2,900 |
-| $14.99 once | my placeholder, PROPOSAL-001 | 20 (16) | $299.80 | 2.0 | 500 / 2,000 |
-| $19.99 a year, no trial | PROPOSAL-001 | 15 (12) | $299.85 | 1.5 | 375 / 1,500 |
+| Candidate price | Source | Pro sales for $200 at 30% (15%) | Gross at that count | Sales a day over 10 days | Downloads needed at Ines's 2% (her 3% / 1%) | Downloads needed at my 4% / 1% |
+|---|---|---|---|---|---|---|
+| **$14.99 once** | **Ines's recommendation**, memo s2 (the Investors' call) | **20 (16)** | $299.80 | 2.0 | **1,000** (667 / 2,000); 800 at 15% | 500 / 2,000 |
+| $9.99 once | the price the counted buyer already paid; Ines's earlier suggestion, **withdrawn** in memo s2 | 29 (24) | $289.71 | 2.9 | 1,450 (967 / 2,900) | 725 / 2,900 |
+| $19.99 a year, no trial | PROPOSAL-001; memo s2 says wrong for Day 30 (3.1.2 ongoing value, no server in v1) | 15 (12) | $299.85 | 1.5 | 750 (500 / 1,500) | 375 / 1,500 |
+| $4.99 once | Ines's alternative, PROPOSAL-001-v1 s5 | 58 (48) | $289.42 | 5.8 | 2,900 (1,934 / 5,800) | 1,450 / 5,800 |
+| $2.99 once | contrast only | 96 (79) | $287.04 | 9.6 | 4,800 (3,200 / 9,600) | 2,400 / 9,600 |
 
 </div>
 
 
-Arithmetic by script (ceil of 200 / (price x 0.70 or 0.85)); not a forecast. A monthly price or a trial pushes charges past Day 30 (L11 s1) and is not a candidate.
+Arithmetic by script (ceil of 200 / (price x 0.70 or 0.85), then ceil of sales / rate; 2026-10-26 20:24 ET); not a forecast. A monthly price or a trial pushes charges past Day 30 (L11 s1) and is not a candidate.
 
-Here is the shape of it, read across. Even at the high end of the organic guess (455 downloads at 4%, 18 buyers), $9.99 nets about $126 and $14.99 about $189; at the low end, one or two buyers. **The gap between 50-455 organic downloads and the 500-2,900 the middle prices need is what the Investors' posts in section 5 have to close.** If they choose not to post, the plan's honest forecast is the L11 range, $5-$191 at $14.99, mostly the lower half.
+Here is the shape of it, read across. At Ines's 2% on her likely 150 organic downloads, 3 buyers: $31.48 at $14.99, $20.98 at $9.99. Even at the top of the organic guess (455 downloads), $14.99 nets $94.44 at 2%, $136.41 at 3% and $188.87 at my 4%. **The gap between 50-455 organic downloads and the 1,000 that $14.99 needs at 2% is what the Investors' posts in section 5 have to close.** Ines's most likely Day 30 range is **$30-$150 net**, and she puts $200 at about one in four, her judgment, resting on Show HN or an Apple feature landing (memo s0, s6). If the Investors choose not to post, her case A applies: about $31 likely, $0-$147.
+
+### 4a. Measured figures from comparable apps: what the repo holds
+
+I looked for any measured conversion or download figure for a paid developer tool or a widget app in what the company has already saved: L11 and its raw files, L7, the hunt archive, research/sizing.md and the store-research files. No new fetch was made for this. **No measured conversion or download figure exists in the repo for a Python, coding or widget app.** Every "downloads a day" for a rival (L11 s2, the hunt's <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> sizes) is ratings multiplied by 33-100, and that ratio is itself an assumption (tools/sizing.py: "Assumption is the caller's"). Idris's H173 calibration found one post to test it and could not confirm it ([H173 s6](../hunt/h173.html)).
+
+What the repo does hold is a few launch posts in which developers reported their own numbers ([H173 s4-s5](../hunt/h173.html), raw posts in research/hunt/H173-raw/). Each figure is the poster's own claim, not verified. All were read through Arctic Shift on 2026-10-24, a route barred since then pending #53, so they are reused from the saved file, terms-unverified, and nothing was read again. None is a Python or widget app.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 4a. Measured figures from comparable apps: what the repo holds, scrolls sideways" style="--tw:1236px" markdown="1">
+
+| Post (saved) | App type and model | Figure as posted | What it says about us |
+|---|---|---|---|
+| [r/iOSProgramming 1v7vvb3](https://www.reddit.com/r/iOSProgramming/comments/1v7vvb3/), 2026-07-27 | **10 paid-up-front developer and media tools** (a Redis GUI, an SFTP client, a web-IDE client, video tools, a Markdown editor) | "10+ sales", "Total revenue: ~$70" over 2 months; "Zero ratings"; best app 4 sales on 263 product page views | The closest comparable we hold: developer tools with no audience and no ratings sold about one unit per app in two months. Closer to case A than to 20 sales |
+| [r/SideProject 1tczn4a](https://www.reddit.com/r/SideProject/comments/1tczn4a/), 2026-05-14 | habit app, free with a purchase | 60 downloads, 1 paying user, $16, about 2 months | 1 of 60 is 1.7%, inside Ines's 1-3%; one buyer is not a rate |
+| [r/SideProject 1s56udi](https://www.reddit.com/r/SideProject/comments/1s56udi/), 2026-03-27 | fitness app, free with in-app purchases and a trial, paid ads run | first 20 days: 305 downloads, 59 in-app purchases, $99; "Day 7 download-to-paid 3.13%" | At the top of Ines's range, with paid ads, a trial, a mailing list and 100 TestFlight users beforehand, none of which we have |
+| [r/SideProject 1to4awo](https://www.reddit.com/r/SideProject/comments/1to4awo/), 2026-05-26 | Reflect, free with optional premium | ~27 downloads in 12 days with no audience, 5 ratings | About 2 a day, below the 5-20 a day Ines plans on: organic reach with no posts can be smaller than both our ranges |
+
+</div>
+
+
+Read together, these four posts put us at Ines's planning value or below it, and they do not support my 4%. These are four posts chosen by the people who wrote them, so I treat them as a check on direction only, not as a rate.
 
 How each sale would arrive, by source (proposal for what to watch, not a forecast): App Store search for "python" terms (keywords kw-a to kw-c, store page s4), the launch-day posts (section 5), and word of mouth from buyers who are happy. Only the first runs without anyone posting. The Investors can read the split in App Store Connect's analytics (sign-in; theirs) and paste it into a report; the company does not read it.
 
 ## 5. Dated action list for the Investors, Day 15 to Day 30
 
-Plan case: approval on **Day 20 (Tue 2026-11-10)**, called **L** below. If approval comes earlier or later, every row from L on moves with it; the order and the one-channel-a-day spacing stay. Posting before the app is on sale wastes the one first impression, so nothing is posted before L.
+Plan case: approval on **Day 20 (Tue 2026-11-10)**, called **L** below. If approval comes earlier or later, every row from L on moves with it; the order and the spacing stay (L carries Show HN, the newsletters and the Investors' own accounts, per the memo; the rooms after it get one a day). Posting before the app is on sale wastes the one first impression, so nothing is posted before L.
 
 Every action is the Investors', from their own existing accounts. **Cost $0 for every row**; no paid row is proposed (section 5b). Reach is given only where something is counted; otherwise [open] with what a person would read to fill it.
 
+**The four asks, in Ines's order** ([memo s4](decision-2026-10-26-revenue-gap.html), items 1-4; updated 2026-10-26 20:24 ET, T-0274). The company proposes; the Investors decide and act (C10).
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 5. Dated action list for the Investors, Day 15 to Day 30, scrolls sideways" data-n="6" style="--tw:1510px" markdown="1">
+1. **Enroll in the Small Business Program the day the membership is active** (due Day 7, Wed 2026-10-28). At 15%, $14.99 needs 16 sales, not 20. [recall: the lower rate applies from enrollment, not back to earlier sales, so the date matters.]
+2. **Show HN on launch day (L), with one of you present that day to answer questions.** The single largest swing in the plan; nothing we hold sizes it.
+3. **Submit to the Python newsletters on L, not L+4.** Issue dates are the editors', and L+4 risks landing after Day 30.
+4. **Apple's featuring nomination, the day the app record exists** (Day 12-16), if the form exists as recalled. [recall: in App Store Connect; Apple asks for lead time, so the odds inside the window are low; the cost is about ten minutes.]
+
+The rest of her list (memo s4 items 5-7) is the table below as it was: r/Python L+1, r/shortcuts L+2, their own social accounts on L, no reposting; the person's read of rival in-app prices (questions item 9); no paid ads.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 5. Dated action list for the Investors, Day 15 to Day 30, scrolls sideways" data-n="6" style="--tw:1652px" markdown="1">
 
 | Day (date) | Channel | Action (the Investors') | Post draft | Expected reach and its basis | Cost |
 |---|---|---|---|---|---|
+| **7 (Wed 10-28), the day the membership is active** | App Store Connect (signed in) | **Ask 1.** Enroll in the Small Business Program | none | Not reach: cuts the sales needed at $14.99 from 20 to 16 (memo s2) | $0 |
+| **12-16 (11-02 to 11-06), the day the app record exists** | App Store Connect (signed in) | **Ask 4.** Apple's featuring nomination, if the form exists as recalled | none | [open]; would dwarf everything else if it came, and is not counted on | $0 |
 | 15 (Thu 11-05) | Report reply | Approve, change or reject: the icon and screenshots (PROPOSAL-003), store copy (store-page-draft), this plan's posts (D1-D6) and the press kit. Choose the channels you are willing to post in | none | n/a | $0 |
 | 15 (Thu 11-05) | Each chosen room's rules | Read the self-promotion rules of r/Python, r/shortcuts and r/iOSProgramming, and HN's Show HN guidelines, as a person (about 15 minutes). Paste anything that changes a draft into the report thread | none | Fills the [open] "rules" cells; [recall] r/Python has a project-showcase format and r/iOSProgramming limits self-promotion to set days, both unverified | $0 |
-| 16 (Fri 11-06) | App Store Connect (signed in) | Product page fields from the approved copy; price (PROPOSAL-001); Support URL with contact and the Privacy Policy URL published ([matrix s2c](app-review-matrix.html); ops/questions.md item 14); release setting (matrix recommends Automatic). Optional: Apple's featuring nomination form [recall: in App Store Connect; Apple asks for lead time, so odds inside the window are low] | none | Featuring: [open]; would dwarf everything else if it came, and is not counted on | $0 |
+| 16 (Fri 11-06) | App Store Connect (signed in) | Product page fields from the approved copy; price (PROPOSAL-001); Support URL with contact and the Privacy Policy URL published ([matrix s2c](app-review-matrix.html); ops/questions.md item 14); release setting (matrix recommends Automatic). The featuring nomination, if not sent earlier (ask 4, row above) | none | n/a | $0 |
 | 17 (Sat 11-07) | none | Submission (Ines, with your approval). Nothing posted | none | n/a | $0 |
 | 18-19 (11-08, 11-09) | Company site | The company publishes the product's own page on its site once the creative is approved (C10 passive presence; not outreach) | press kit long description | Site readers: [open] (no traffic figure is read) | $0 |
-| **L, Day 20 (Tue 11-10)** | Hacker News, Show HN | One Investor posts D1, morning US time, and stays to answer questions that day (support is the Investors', C10) | **D1** below | [open]: no Show HN score is read (HN reads held, hn-terms-<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>). Precedent: a 2015 iOS "Python Widget" Show HN and a 2026 Android one (section 1, B2). The single largest unknown in this plan | $0 |
+| **L, Day 20 (Tue 11-10)** | Hacker News, Show HN | **Ask 2.** One Investor posts D1, morning US time, and one of you is present all that day to answer questions (support is the Investors', C10) | **D1** below | [open]: no Show HN score is read (HN reads held, hn-terms-<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>). Precedent: a 2015 iOS "Python Widget" Show HN and a 2026 Android one (section 1, B2). The single largest unknown in this plan | $0 |
+| L (Tue 11-10) | Python newsletters | **Ask 3.** Submit D4 through each one's own submission form (PyCoder's Weekly, Python Weekly) [recall; forms unread]. Moved from L+4 (memo s4 item 3) | **D4** | [open]: issue timing is the editor's; on L it has the best chance of landing before Day 30 | $0 |
 | L (Tue 11-10) | The Investors' own social accounts (Mastodon, Bluesky or other, whichever they already use) | Post D5, linking the App Store page | **D5** | Their own follower counts, which they know and we do not [open] | $0 |
 | L+1 (Wed 11-11) | r/Python | Post D2 under the sub's showcase rules | **D2** | Subscribers [open]; the room is active (H186-shelf s4, 16 hits in a 12-month window) but the topic is new to it | $0 |
 | L+2 (Thu 11-12) | r/shortcuts | Post D3: what the two Shortcuts actions do, with one worked shortcut | **D3** | Subscribers [open]; activity counted (H157: 158 titles on 5 phrases in 12 months; H209: 22 posts on 4 queries in 30 days). B3 and B4 | $0 |
 | L+3 (Fri 11-13) | r/iOSProgramming | Post D2's text, only if its rules allow it that day | D2 | [open]. Audience is developers, not the core buyer: lower priority, drop it first | $0 |
-| L+4 (Sat 11-14) | Python newsletters | Submit D4 through each one's own submission form (PyCoder's Weekly, Python Weekly) [recall; forms unread] | **D4** | [open]: issue timing is the editor's; may land after Day 30 | $0 |
 | L+5 (Sun 11-15) | Product Hunt (optional) | Only if one Investor already has an account. D6 | **D6** | [open]; general tech audience, weakest fit of the six | $0 |
 | 25 (Sun 11-15) | Report reply | Paste units, proceeds and the downloads-by-source split from App Store Connect, so the next report can compare with section 4 | none | n/a | $0 |
 | 26-28 (11-16 to 11-18) | Same rooms | **Only if there is real news** (a 1.0.1 that fixes what launch-day users reported, a new premade): one follow-up, in the thread already started, not a new post. No reposting the same thing | short reply drafted by the company on the day | n/a | $0 |
@@ -194,11 +233,11 @@ Counted by script on 2026-10-26 20:14 ET with the longest name (Coilwork) and ga
 ### 5b. Considered and not proposed
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 5b. Considered and not proposed, scrolls sideways" style="--tw:640px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 5b. Considered and not proposed, scrolls sideways" style="--tw:640px" markdown="1">
 
 | Option | Why not |
 |---|---|
-| Apple Search Ads or any paid ads | Spending is the Investors' (Commandment 7). Cost per install is unread [open]; with 29 sales as the target, a paid install has to convert near 4% to pay for itself, and nothing we hold says it will. Not proposed; the Investors may ask for a costed version |
+| Apple Search Ads or any paid ads | Spending is the Investors' (Commandment 7). Cost per install is unread [open]. At $14.99 an install is worth $10.49 net per sale times 2%, about **$0.21** (memo s4 item 7); one launch post in the repo reports "$6.86 avg CPA" on Apple's ads ([1s56udi](https://www.reddit.com/r/SideProject/comments/1s56udi/), the poster's claim, H173-raw), and another "Same $ on Apple Search Ads ≈ ~20 installs" for $100 ([1nvndes](https://www.reddit.com/r/SideProject/comments/1nvndes/), same caveats): both far above $0.21. Not proposed; the Investors may ask for a costed version |
 | Posting in the incumbent's GitHub Discussions, or in rivals' issue trackers | Other makers' rooms (section 1). Also keeps the abandoned app's name out of our words (store page s0; 5.2.1) |
 | Asking friends, family or followers to rate or review | Commandment 6: no fake or solicited-for-show reviews. Ratings come only from Apple's own in-app prompt, a product decision (Ines, Idris), shown after a successful run, never tied to a reward |
 | A "launch price" | Allowed only with a real end date, stated and kept (L11 s5). A lower price raises the sales needed (section 4); not proposed for v1 |
@@ -211,14 +250,14 @@ Counted by script on 2026-10-26 20:14 ET with the longest name (Coilwork) and ga
 ## 6. Risks
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 6. Risks, scrolls sideways" data-n="1" style="--tw:1005px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 6. Risks, scrolls sideways" data-n="1" style="--tw:1005px" markdown="1">
 
 | # | Risk | What it does to Day 30 | What we do |
 |---|---|---|---|
 | R1 | Apple membership still pending (due Day 7, 2026-10-28); Paid Apps, tax and banking due Day 12 (11-02) | Every date above slides with it; Day 20 is the last safe submission (plan.md) | Listed under Upcoming needs in every report |
 | R2 | A rejection on first review | One rejection likely moves on-sale past Day 30 (PROPOSAL-001, Problem item 4) | The review matrix and its gates; the posts wait for L |
-| R3 | **Demand is unproven** | 0 forum asks for Python widgets in 12 months (H186-shelf); 0 of 27 owners asking where to move (H154). Section 4 needs 725-2,900 downloads at $9.99 against 50-455 organic | Lead with current Python and free to run (counted pulls), widgets second (PROPOSAL-002 s1) |
-| R4 | Posts removed under a room's self-promotion rules, or ignored | Lose that channel's share | Rules read by a person on Day 15; one channel a day; no reposting |
+| R3 | **Demand is unproven** | 0 forum asks for Python widgets in 12 months (H186-shelf); 0 of 27 owners asking where to move (H154). Section 4 needs 1,000 downloads at $14.99 at Ines's 2% (667-2,000 at 1-3%, both assumptions) against 50-455 organic | Lead with current Python and free to run (counted pulls), widgets second (PROPOSAL-002 s1) |
+| R4 | Posts removed under a room's self-promotion rules, or ignored | Lose that channel's share | Rules read by a person on Day 15; one room a day after L; no reposting |
 | R5 | The one Show HN chance goes badly | The largest reach is a single shot [open] | Plain post, limits stated, an Investor answers questions on the day |
 | R6 | "Built by AI" turns readers away, or brings scrutiny | Either way it is the true story; hiding it is not an option (Commandment 35) | Say it once, plainly; the app's quality and the no-AI-art rule answer the "slop" worry (#10 direction) |
 | R7 | A claim outruns the build (widgets cut, Pro contents change, numpy missing) | A false claim breaks C6 and 2.3.1(a) | Gates G3, G5, G6, V on every sentence; drafts recounted after the gates are known |

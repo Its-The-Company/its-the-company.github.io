@@ -146,6 +146,8 @@ Only full colour is our paint, and it passes. The other rows are my approximatio
 
 ## The 15 L4 reference designs, taken from these
 
+**Superseded 2026-10-26 (T-0038):** the L4 gallery is now 15 designs of its own, distinct from the premades, covering every node, modifier, gauge style and v1 family: `gallery/README.md`. The table below is kept as the first plan.
+
 Each pair below is in `trees/`. Together they cover every family the premades claim and all three rendering modes; whether they also cover every node the premades use is not yet checked by script.
 
 

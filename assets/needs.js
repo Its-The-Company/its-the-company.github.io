@@ -74,14 +74,14 @@ var anon = document.getElementById('needs-anon'); if (anon) anon.hidden = true;
 var chatTab = document.querySelector('nav.hometabs [data-chat-tab]'); if (chatTab) chatTab.hidden = false;
 var repo = root.getAttribute('data-repo'), RI = '/repos/' + repo + '/issues', LS = localStorage, el = S.el;
 function nums(a) { return (root.getAttribute(a) || '').split(/\s+/).filter(Boolean).map(Number); }
-var named = nums('data-named'), skip = nums('data-skip'), shut = document.getElementById('needs-closed'), cl = null, cn = 0, cnum = null;
+var named = nums('data-named'), skip = nums('data-skip'), props = nums('data-props'), shut = document.getElementById('needs-closed'), cl = null, cn = 0, cnum = null;
 var P = root.getAttribute('data-mode') === 'proposals';
 var KEEP = P ? ['proposal'] : ['emergency', 'urgent', 'report', 'pitch'], MAXF = 10 * 1048576, names = [];
 var PO = ['Approve', 'Hold', 'No'].map((k) => ({ key: k, label: k, reply: k.toLowerCase() }));
 function mk(p, tag, cls, text) { return p.appendChild(el(tag, cls, text)); }
 function labels(i) { return (i.labels || []).map((x) => String(x.name || x).toLowerCase()); }
 function inv(l) { return names.indexOf(l) >= 0; }
-function off(i) { return skip.indexOf(i.number) >= 0 || labels(i).indexOf('main') >= 0 || (labels(i).indexOf('proposal') >= 0) !== P; }
+function off(i) { var q = labels(i).indexOf('proposal') >= 0; return skip.indexOf(i.number) >= 0 || labels(i).indexOf('main') >= 0 || (P ? !q : q && props.indexOf(i.number) < 0); }
 function getJ(p) { return S.gh(p).then((r) => { if (!r.ok) throw new Error(S.said(r)); return r.json(); }); }
 function send(method, p, body) {
 var h = S.hdrs(); h['Content-Type'] = 'application/json';
@@ -277,7 +277,7 @@ closedNote(hidden); fold();
 rows.forEach((x) => {
 var i = open[x[1]], b = x[0].querySelector('.ny-box') || x[0].appendChild(el('div', 'ny-box'));
 b.textContent = 'Reading the question...';
-thread(i).then((cs) => { var a = pickAsk(i, cs, inv, repo); if (P && !(a.opts || []).length) a.opts = PO; box(x[0], x[1], i, a); closer(x[0], x[2]); }, (e) => { b.textContent = 'Could not read #' + x[1] + ': ' + e.message + '.'; });
+thread(i).then((cs) => { var a = pickAsk(i, cs, inv, repo); if ((P || labels(i).indexOf('proposal') >= 0) && !(a.opts || []).length) a.opts = PO; box(x[0], x[1], i, a); closer(x[0], x[2]); }, (e) => { b.textContent = 'Could not read #' + x[1] + ': ' + e.message + '.'; });
 });
 }, (e) => { mk(root, 'p', 'meta ny-warn', 'Could not read the open requests: ' + e.message + '. The list below is as built.'); });
 if (shut) al.then(() => getJ(RI + '?state=closed&per_page=100&sort=updated')).then((l) => {

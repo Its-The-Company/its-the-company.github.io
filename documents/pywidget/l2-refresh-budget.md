@@ -2,7 +2,7 @@
 layout: "default"
 title: "L2: Refresh budget. What Apple documents, a draft strategy, and the estimator spec"
 section: "documents"
-description: "[recalled]: not re-read today, because developer.apple.com is refused to scripted reads."
+description: "PWL003 (warning; trigger per the T-0221 chair line: the script reads location; ADR-007 Ruling 2 item 3, 14d28798)"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/research/' | relative_url }}">← Research</a><a href="{{ '/documents/pywidget/l2-refresh-budget.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
 <div class="page-head"><div class="kicker"><span class="kind grey">Research</span><span>Day 4 · Sun Oct 25</span><span><code>pywidget/docs/research/L2-refresh-budget.md</code></span></div><h1>L2: Refresh budget. What Apple documents, a draft strategy, and the estimator spec</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"><span>By <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a>, Senior iOS engineer</span></div></div>
@@ -15,6 +15,7 @@ Idris, 2026-10-25, desk research only. Sources and tags follow L1 section 0:
 - **[SDK]**: the local iOS 27.1 SDK.
 - **[recalled]**: not re-read today, because developer.apple.com is refused to scripted reads.
 - **[measure]**: needs a device.
+- **[apple-page A#]** (added 2026-10-26, T-0142): Apple's developer page, read signed out on 2026-10-26 01:15-01:17 ET under the Investors' #64 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>; quote, URL and time in pywidget/docs/release/app-review-matrix.md s1d item A#; the saved copy is in research/inbound/apple/developer.apple.com/ (index.tsv). A3 = Keeping a widget up to date, A4 = Accessing location information in widgets, A2 = Describing use of required reason API, A5 = AppShortcutsProvider, A6 = Complying with Encryption Export Regulations.
 
 The ADR comes later, after the L3 benchmarks.
 
@@ -25,23 +26,24 @@ The ADR comes later, after the L3 benchmarks.
 
 | Topic | What it says | Tag | Link (not fetched) |
 |---|---|---|---|
-| Daily budget | A frequently viewed widget typically gets **40 to 70 refreshes a day**, about **one every 15 to 60 minutes**. The budget depends on how often the widget is viewed, so rarely viewed widgets get fewer. The brief's figure matches this as I recall it. | [recalled] | https://developer.apple.com/documentation/widgetkit/keeping-a-widget-up-to-date |
-| Exemptions from the budget | Reloads don't count when the containing app is in the foreground, when it has an active audio or navigation session, when the system locale changes, or when Dynamic Type or an accessibility setting changes. Debugging (Xcode, or WidgetKit Developer Mode) <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> the limits, **so a simulator run says nothing about real refresh rates**. | [recalled] | (same article) |
+| Daily budget | A frequently viewed widget typically gets **40 to 70 refreshes a day**, about **one every 15 to 60 minutes**. The budget depends on how often the widget is viewed, so rarely viewed widgets get fewer. Apple's words: "For a widget the user frequently views, a daily budget typically includes from 40 to 70 refreshes. This rate roughly translates to widget reloads every 15 to 60 minutes". Also on the page: "WidgetKit maintains different budgets for each active widget the user adds"; the 24-hour window is tuned to the user's usage and "doesn't necessarily reset at exactly midnight"; in the first few days ("learning period") a widget "may receive more reloads than normal". | [apple-page A3] (was [recalled]; changed 2026-10-26) | https://developer.apple.com/documentation/widgetkit/keeping-a-widget-up-to-date |
+| Exemptions from the budget | Reloads don't count when the containing app is in the foreground, when it has an active audio or navigation session, when the system locale changes, or when Dynamic Type or an accessibility setting changes. Debugging (Xcode, or WidgetKit Developer Mode) <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> the limits, **so a simulator run says nothing about real refresh rates**. Apple's list ("doesn't count reloads against your widget's budget include when"): the app is in the foreground; it "has an active audio or navigation session"; it is the current Now Playing app; "The widget performs an app intent, such as when the user taps a button or toggles a switch"; "The widget performs an animation"; the system locale changes; "Dynamic Type or Accessibility settings change". StandBy redraws do not count either. | [apple-page A3] for every exemption (changed 2026-10-26); the debugging sentence is not on the page and stays [recalled] | (same article) |
 | Reload policies | `TimelineReloadPolicy.atEnd`, `.never`, `.after(Date)`. A date is a request, not a schedule. | [SDK] WidgetKit interface | https://developer.apple.com/documentation/widgetkit/timelinereloadpolicy |
-| App-triggered reload | `WidgetCenter.reloadTimelines(ofKind:)`, `reloadAllTimelines()`. Calls from the background count against the budget; calls while the app is in the foreground do not. | [SDK] for the API; [recalled] for the accounting | https://developer.apple.com/documentation/widgetkit/widgetcenter |
+| App-triggered reload | `WidgetCenter.reloadTimelines(ofKind:)`, `reloadAllTimelines()`. Calls from the background count against the budget; calls while the app is in the foreground do not. | [SDK] for the API; [apple-page A3] for the foreground half; the background half stays [recalled] (the page lists exemptions, "include when", and never says a background call counts; 2026-10-26) | https://developer.apple.com/documentation/widgetkit/widgetcenter |
 | What is placed | `WidgetCenter.currentConfigurations()` (iOS 18+, async) lists the installed widgets. This is the input to batching and the estimator. | [SDK] | (same) |
-| Push reloads (iOS 26+) | `WidgetPushHandler`, `.pushHandler(_:)`, `WidgetCenter.currentPushInfo`, `WidgetPushInfo.token`. Sent through APNs; budgeted by the system; delivery not guaranteed. | [SDK] for the API; [recalled] for the budget | https://developer.apple.com/documentation/widgetkit/widgetpushhandler |
+| Push reloads (iOS 26+) | `WidgetPushHandler`, `.pushHandler(_:)`, `WidgetCenter.currentPushInfo`, `WidgetPushInfo.token`. Sent through APNs; budgeted by the system; delivery not guaranteed. | [SDK] for the API; [recalled] for the budget (A3 says only that push "doesn't replace timeline updates"; the push page is unread, T-0012, 2026-10-26) | https://developer.apple.com/documentation/widgetkit/widgetpushhandler |
 | BGAppRefreshTask | "launch your app briefly so that you can download data… The system will fulfill this request intelligently based on system conditions and app usage." `earliestBeginDate`: "doesn't guarantee launching the task at the specified date, but only that it won't begin sooner." | [SDK] BGTaskRequest.h | https://developer.apple.com/documentation/backgroundtasks/bgapprefreshtaskrequest |
 | BGProcessingTask | Runs "when conditions are favorable for battery life… within the next two days as long as the user has used your app within the past week." `requiresExternalPower` exists. | [SDK] BGTaskRequest.h | https://developer.apple.com/documentation/backgroundtasks/bgprocessingtaskrequest |
 | BGContinuedProcessingTask (iOS 26) | Continues a task **the user started** (with a fail or queue submission strategy). Queued requests are cancelled if the user removes the app from the app switcher. It is not a periodic refresher. | [SDK] BGTaskRequest.h | https://developer.apple.com/documentation/backgroundtasks/bgcontinuedprocessingtaskrequest |
-| Interactive-widget intent | A tap on `Button(intent:)` runs `perform()` and then reloads that widget. [recalled] This reload is not charged as a system refresh; [measure]. | [recalled] | https://developer.apple.com/documentation/widgetkit/adding-interactivity-to-widgets-and-live-activities |
-| Location in widgets | Under When-In-Use, a reload gets a fix only "within a few minutes of having been seen". | [SDK] CLLocationManager.h | see L1 |
+| Interactive-widget intent | A tap on `Button(intent:)` runs `perform()` and then reloads that widget. This reload is not charged against the budget: "The widget performs an app intent, such as when the user taps a button or toggles a switch." | [apple-page A3] (was [recalled] and [measure]; changed 2026-10-26) | https://developer.apple.com/documentation/widgetkit/adding-interactivity-to-widgets-and-live-activities |
+| Location in widgets | Under When-In-Use, a reload gets a fix only "within a few minutes of having been seen". Apple adds: "For widgets that use Location Services, WidgetKit reloads them after a significant location change happens." Whether that reload counts is not stated. | [SDK] CLLocationManager.h; [apple-page A3] for the significant-change reload | see L1 |
+| Entry spacing | "Your timeline provider should create timeline entries that are at least about 5 minutes apart." WidgetKit "may coalesce reloads across multiple widgets". | [apple-page A3] (new, 2026-10-26) | (same article as the daily budget) |
 
 </div>
 
 
 **Not documented anywhere I could reach:**
-- A per-widget versus per-app split of the budget. My working belief is per widget instance [recalled; measure].
+- ~~A per-widget versus per-app split of the budget. My working belief is per widget instance [recalled; measure].~~ 2026-10-26: documented. Per widget instance: "if the user adds two instances of a configurable sports widget ... each widget has its own budget" [apple-page A3]. So the estimator's placed-instance count does not divide B; it only multiplies the batched runs.
 - A maximum entry count per timeline.
 - The time limit of one `getTimeline` call. L3 measures it.
 
@@ -68,7 +70,7 @@ Inputs, from the script's manifest and static analysis:
 - the number of placed instances (`currentConfigurations()` on device; the user's guess on the web)
 
 Model. Bands, never a single number:
-- `B_hi = 70`, `B_lo = 40` reloads a day for a frequently viewed widget. A rarely viewed widget: `B_lo = 10` (placeholder until the device log calibrates it).
+- `B_hi = 70`, `B_lo = 40` reloads a day for a frequently viewed widget (Apple's "40 to 70 refreshes", [apple-page A3]; checked 2026-10-26, unchanged). A rarely viewed widget: `B_lo = 10` (placeholder until the device log calibrates it).
 - Expected interval: `I_exp = max(requested, 1440 / B)` minutes, shown as a range from `1440/B_hi` to `1440/B_lo` (about 21 to 36 min frequently viewed; worse otherwise).
 - Freshness of the shown value: `I_exp`, plus the sensor penalty (location under When-In-Use: "may not update unless you looked at the widget minutes before"), plus nothing for timer views.
 - With the device log: replace the B bands with the observed median and p90 intervals for this widget kind over 7 days.
@@ -102,6 +104,24 @@ Output card:
 </div>
 
 
+#### 3.2.1 Draft words for PWL003 and the own-widget handler warning (Maren, 2026-10-26 20:04 ET, T-0237; DRAFT, <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>)
+
+Draft copy, not approved. Idris writes the chosen line into the table above and the lint. Voice follows the rows above: one fact, then one instruction, second person, code in backticks, about 20 to 30 words. Word counts by script.
+
+**PWL003** (warning; trigger per the T-0221 chair line: the script reads location; ADR-007 Ruling 2 item 3, 14d28798)
+
+- Recommended (27 words): "A widget's location can be old, or missing. Show `sampled_at` so people can see how old it is, and say \"Location not available\" when `value` is None."
+- Alternative (29 words): "iOS gives widgets a fresh location only now and then, and sometimes not at all. Show `sampled_at`, and show a message when there is no location (`value` is None)."
+- Why the recommended one: it is true whether or not C2-Q1 lands by Day 13. "Only for a few minutes after the widget is seen" (the old row) <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> only for a fix in the extension; under ADR-001 a background app run gets no fix at all (C2 s7, "The trap", `when_in_use_background`). It names no permission, because When In Use is the only grant in v1 and 1.1, so there is nothing to choose. It gives a beginner the words to show, as Apple asks ("indicate that the user's location is not currently available").
+- Not in the message: `unavailable_reason`. It is set on a cached value too, so "when `unavailable_reason` is set" would tell people to hide a usable old location. If the editor has a details link, it can say: "`unavailable_reason` says why the value is not fresh."
+
+**PWL012** (warning; code proposed, next free number; trigger per L5 s5.9 chair note 19:56, Q-T174-2 item 3, 5cb79881: a handler calls `pywidget.widgets.state()` with its own widget's id; module name follows Pernille's Q4)
+
+- Recommended (27 words): "This handler writes its own widget with `pywidget.widgets.state()`. For the keys it changes, that write wins over the `state` you return. Change `state` and return it instead."
+- Alternative (31 words): "Your handler's write to its own widget is applied again after it returns, so it replaces those keys in the `state` you return. Put the change in `state` and return it."
+- Why the recommended one: it names the call the person typed, says what happens in the order they will see it, and the fix uses the handler form in L5 s3.2 (`def log(state, args): ... return state`). "Wins" is the chair note's word.
+- For Idris: the warning should fire on a write, not on a read through the same module; a read is harmless. If the lint cannot tell them apart, say so and I will reword it for any call.
+
 ### 3.3 On-device refresh log
 
 - Each `getTimeline` and each batched run appends one row to the App Group: `ts`, `widget kind`, `instance id`, `trigger` (`system` \| `app_foreground` \| `bg_refresh` \| `intent` \| `shortcut` \| `location_wake` \| `push`), `duration ms`, `peak memory` [L3], `outcome` (`ok`, `timeout`, `oom`, `cache_hit`), `sensors_ok` / `sensors_missing`.
@@ -110,8 +130,10 @@ Output card:
 
 ## 4. Open
 
-- [measure] Budget per instance or per app. Accounting for Shortcuts-triggered and intent-triggered reloads. The `getTimeline` time limit. The rarely-viewed band.
-- [browser] Read the "Keeping a widget up to date" article and the WWDC25 widgets session for the exact exemption list and the push budget wording.
+- [measure] ~~Budget per instance or per app.~~ (per instance, A3, 2026-10-26) Accounting for Shortcuts-triggered reloads (~~and intent-triggered~~: exempt, A3). The `getTimeline` time limit. The rarely-viewed band.
+- [browser] ~~Read the "Keeping a widget up to date" article~~ (read 2026-10-26 01:15:53 ET, matrix s1d A3; exemption list now in section 1) and the WWDC25 widgets session for the push budget wording. Still unread: the push budget page and the WWDC session (T-0012, Wrenna, P3). The debugging-lifts-limits sentence has no source yet.
+- 2026-10-26 (T-0142), for the lint copy: PWL003 ends "or ask for 'Always'". Apple: "For most widgets, requesting When In Use authorization is the right choice" [apple-page A4]. I leave the message as it is; whether we ever suggest Always goes to Ines with C2-Q1 and Maren for the words.
+- Chair line (Ines), 2026-10-26 19:57 ET, T-0221 (ADR-007 Ruling 2 chair line, item 3): PWL003 no longer suggests Always; there is no Always in v1 or 1.1. Its condition becomes "script reads location" (When In Use is the only grant). Its message tells the author to show `sampled_at` and to say when no location is available (Apple: "indicate that the user’s location is not currently available"; C2's `unavailable_reason`). Meaning only; the words are Maren's, and Idris writes them into the row above and the lint. Until then the row stands as written.
 {% endraw %}
 
 </div>

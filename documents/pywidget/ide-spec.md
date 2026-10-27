@@ -63,7 +63,7 @@ Exempt by design: content behind a modal (`data-inactive`), disabled buttons, an
 | Run pill | 34 tall, padding 11/14, `play` 15 + "Run" 15 semibold, `accent` fill (B: gradient). Running: morphs to Stop (`status.danger`, square icon, elapsed `m:ss`), standard 220 ms; Reduce Motion: crossfade 120 ms. ⌘R / ⌘. on iPad. |
 | Status strip | min 36, radius 12, `bg.sunken`; icon 16 + word (semibold, state colour) + detail (secondary). Wraps at AX sizes. Six states in s4. |
 | Run-status bar (editor, keyboard hidden) | Floating, 48 min, pill, 12 from the sides, 30 from the bottom. Same icon/word/detail as the strip, line and column on the right (hidden at AX), console button. Tap opens the console sheet. |
-| Key row | `inputAccessoryView`, 44 tall, `key.bgAlt`. iPhone: Indent (46 wide) · scroller ( ) : = " [ ] { } # _ . , ' + - * / < > ! · Undo · Hide keyboard. Keys 40 × 36, gap 6. A 28-pt fade marks the scroller's edge. Long-press shows alternates above the key (`"` → `"` `'` `"""` `f"`; `(` → `()`; `[` → `[]`), slide to pick. iPad software keyboard: the full set without scrolling plus ← →. Hardware keyboard: no key row. |
+| Key row | `inputAccessoryView`, 44 tall, bar `key.bgAlt`, keys `key.bg`/`key.text`. iPhone: Indent (46 wide) · scroller ( ) : = " [ ] { } # _ . , ' + - * / < > ! · Undo · Hide keyboard. Keys 40 × 36, gap 6. A 28-pt fade marks the scroller's edge. Long-press shows alternates above the key, slide to pick. iPad software keyboard: the full set without scrolling plus ← →. Hardware keyboard: no key row. Rules in s3.1 (ADR-004 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> 4). |
 | Completion | Popover under the caret, 282 wide, rows 32, selected row `accent.soft`, a one-line doc at the foot. Appears in 120 ms with no scale; never animates while typing. |
 | Lint label | At the line's right: `F401 unused` in caption, warning colour on a 12 % warning tint. At AX: a lens line under the code line. Gutter number turns warning colour and bold. |
 | Error lens | Under the failing line: 3 pt left rule `sx.error`, 9 % error tint, `xcircle` + "Type: message" (footnote semibold), then "Raised in …() · run N · Traceback" (caption; Traceback is a link). The line itself takes a 9 % error band. |
@@ -77,10 +77,50 @@ Exempt by design: content behind a modal (`data-inactive`), disabled buttons, an
 </div>
 
 
+### 3.1 Key row rules (T-0232; ADR-004 rulings 3-4, Ines 2026-10-26 20:02 ET)
+
+Maren, 2026-10-26. Under Runestone (ADR-004 option A). Where the section 5 fallback (TextKit 2) differs, it says so.
+
+1. **Typing path.** A key tap calls the engine's `insertText`, never replace-range, so character pairs, skip-over-closing and undo grouping act as if typed. Indent sends `"\t"` (Runestone turns it into the file's indent unit). Undo is the engine's undo.
+2. **Alternates.** `"` → `'` `"""` `f"`. A multi-character alternate inserts both halves with the caret between (`"""|"""`, `f"|"`), one undo step. **No `()` or `[]` alternate under Runestone**: with character pairs on, typing `(` already gives `()`. They return only under the fallback, which has no pairs: there, `(` → `()` and `[` → `[]`, same both-halves rule.
+3. **Size.** 44 pt bar, keys 40 × 36 at every Dynamic Type size; the row does not grow, as the system keyboard does not. Glyphs `codeKey` 17 pt medium. At accessibility text sizes a long-press shows the key in the Large Content Viewer (`UILargeContentViewerInteraction`), except on `"`, whose long-press opens its alternates, drawn at twice `codeKey` there **[recalled: one press cannot drive both; Idris checks in <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G3</span>]**.
+4. **VoiceOver.** Each key is one element, trait `.keyboardKey`, label spoken as a name, never as the glyph:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 3.1 Key row rules (T-0232; ADR-004 rulings 3-4, Ines 2026-10-26 20:02 ET), scrolls sideways" style="--tw:755px" markdown="1">
+
+| Key | Label | Custom actions (alternates) |
+|---|---|---|
+| Indent | "Indent" | none |
+| `(` `)` | "Left parenthesis", "Right parenthesis" | none (fallback: "Insert parentheses" on `(`) |
+| `[` `]` | "Left bracket", "Right bracket" | none (fallback: "Insert brackets" on `[`) |
+| `{` `}` | "Left brace", "Right brace" | none |
+| `:` `=` | "Colon", "Equals" | none |
+| `"` | "Double quote" | "Single quote", "Triple quotes", "F-string" |
+| `'` | "Single quote" | none |
+| `#` `_` | "Hash", "Underscore" | none |
+| `.` `,` | "Period", "Comma" | none |
+| `+` `-` `*` `/` | "Plus", "Minus", "Asterisk", "Slash" | none |
+| `<` `>` `!` | "Less than", "Greater than", "Exclamation mark" | none |
+| Undo | "Undo" | none; dimmed and trait `.notEnabled` when nothing to undo |
+| Hide keyboard | "Hide keyboard" | none |
+
+</div>
+
+
+   Alternates are `UIAccessibilityCustomAction`s because long-press-and-slide cannot be done under VoiceOver; the rotor's Actions list reads them. The scroller is not an element; its keys are, in order, so swiping walks the row. G2 covers the row as well as the text.
+5. **Colour.** Bar `key.bgAlt`, keys `key.bg`, glyphs `key.text`: 4.5:1 on both fills, 7:1 in Increase Contrast (check_tokens.py rows `key.text on key.bg/key.bgAlt`). Pressed key: `key.bgAlt` for 120 ms (no scale; Reduce Motion the same).
+6. **iOS 26 clear-bar rule.** If on iOS 26 the opaque 44 pt bar reads as a slab over the glass keyboard, the bar goes clear (no fill, no hairline) and each key keeps its `key.bg` fill, so `key.text` stays on a token fill and its contrast check still <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>. Never `key.text` on the bare keyboard glass. G3's screenshot decides, one device check, inside the approved tokens (ruling 4); no new approval.
+7. **Hardware keyboard.** Accessory view nil while one is attached, re-read on connect and disconnect (`GCKeyboard` notifications, **[recalled]**). iPad shows no bar with a hardware keyboard; G3 checks it.
+
+### 3.2 Editor colours the engine asks for (T-0232)
+
+Six syntax tokens per set in tokens.json (`syntax.Quill.light`, `syntax.Lumen.dark`; HC sets derived by appearance.py; asset names `Syntax<Key>`): `gutterBackground` (= bg), `gutterHairline` (= `line.hairline`; HC `line.strong`), `currentLineNumber` (= text), `invisibles` (`line.strong` moved to 3:1), `markedText` (= `accent.soft`), `findMatch` (= selection). The current-line gutter band is `currentLine`. Checks: every text role 4.5:1 on `markedText` and `findMatch` (7:1 HC); `gutter` and `currentLineNumber` on `gutterBackground` and `currentLine` (4.5 / 7); invisibles 3:1 on bg, currentLine, selection (4.5 HC). The mockups' current-match outline (`m-cur`, 1.5 pt accent ring) has no Runestone counterpart **[recalled: `HighlightedRange` carries a colour and a corner radius only]**, so with `findMatch` = selection the current match looks like the others; a distinct tint is outside creative/approved.md item 2 and waits on C51 (ops/questions.md).
+
 ## 4. Run states
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 4. Run states, scrolls sideways" style="--tw:894px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 4. Run states, scrolls sideways" style="--tw:894px" markdown="1">
 
 | State | Icon | Colour | Word | Detail |
 |---|---|---|---|---|
@@ -103,11 +143,13 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 3. **Console.** Running opens the sheet at medium and streams output. Reading uses the large detent. `input()` raises the keyboard under the REPL bar.
 4. **Traceback.** The screens show a real traceback. Host CPython 3.9.6 ran the sample at draw time; 3.15 adds `^` markers under the failing expression, which the raw view must keep. "Go to line" opens the editor with the error lens.
 5. **Prompts.** As s3.
-6. **Tour.** Four pages, with Skip on pages 1 to 3. 1: Python on this iPhone (a two-line script, its run and output). 2: your script can ask (a native prompt). 3: the live edit of the free countdown premade. Changing the date redraws the preview as the user types (PROPOSAL-002 s1.3). 4: how to add a widget (iOS adds widgets from the Home Screen; three steps), then "Start writing" or "Open an example". At AX sizes the visual hides and the text and button grow. Shown once; available later in Settings. iPad: a centred page sheet, 560 × 700.
+6. **Tour.** Four pages, with Skip on pages 1 to 3. 1: Python on this iPhone (a two-line script, its run and output). 2: your script can ask (a native prompt). 3: the free countdown premade with a date picker, on the gallery path; changing the date runs a gallery preview and redraws the widget. The page never says "as you type" and does not edit source (T-0173 ruling item 4; needs neither the editor pane nor redraw-as-you-type). 4: how to add a widget (iOS adds widgets from the Home Screen; three steps), then "Start writing" or "Open an example". At AX sizes the visual hides and the text and button grow. Shown once; available later in Settings. iPad: a centred page sheet, 560 × 700.
 7. **Pro.** One non-consumable. The rows come from the flag file, one row per enabled entitlement: `premades`, `themes`, `packages` (PROPOSAL-001 option 3 shows all three; option 2 shows only premades plus the grid of the 9). A row appears only if its feature ships in that build; nothing "coming soon". An "Always free" box lists what is never gated. Under the button: "One-time purchase through the App Store." Restore purchase, Terms and Privacy links. Close is always visible. The price comes from `product.displayPrice`; `[price]` in the frames is a placeholder, and the price is the Investors' call. At AX sizes the body scrolls and the button and its line stay pinned. States (button + one line): loading, ready, buying, pending (Ask to Buy), failed, offline, restored, none found. Purchased screen: "Pro is active", Open the Gallery, Done. No timers, counts or urgency wording (Commandment 6).
-8. **iPad.** `NavigationSplitView`: a floating sidebar (290) with Library, the project tree and Locations; the editor; and a resizable right pane (340 to 430) holding the console or the widget preview (family and mode switches, entry stepper, network-off switch; no "Send to Home Screen": iOS gives an app no way to place a widget, the person adds it from the Home Screen). Divider: 9 wide with a 4 × 44 handle; double-tap resets. The sidebar collapses with ⌃⌘S. Holding ⌘ shows the shortcut list (two columns). Portrait: the console becomes a bottom split. On iPhone the sidebar is the Projects tab and the right pane is the console sheet.
+8. **iPad.** `NavigationSplitView`: a floating sidebar (290) with Library, the project tree and Locations; the editor; and a resizable right pane (340 to 430) holding the console or the widget preview (family and mode switches, entry stepper, "Last run" time; redrawn on Run (⌘R) and on save, never while typing; no "Send to Home Screen": iOS gives an app no way to place a widget, the person adds it from the Home Screen). Divider: 9 wide with a 4 × 44 handle; double-tap resets. The sidebar collapses with ⌃⌘S. Holding ⌘ shows the shortcut list (two columns). Portrait: the console becomes a bottom split. On iPhone the sidebar is the Projects tab and the right pane is the console sheet.
 
-   *Note, 2026-10-26 01:25 ET (Maren, T-0119, from PROPOSAL-003 "Found on the way" 1-2).* "Send to Home Screen" is gone from the preview pane. Sample rows: "Weather card" is now `trip_countdown` (weather is a Shortcut recipe, not a v1 widget: ADR-001 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>, no MET Norway) and "Clean clipboard" reads "Run Script with Input" (a v1 App Intent), not "Share sheet action" (a share extension is 1.1). Changed in `draw_ide.py`; the four affected sheets (A-projects and A-ipad, phone and iPad) are redrawn on design-previews `ide/` (67c22ebc), QA 0 issues. The PNGs in this folder still show the old rows until the IDE screens are redrawn in the approved look.
+   *Note, 2026-10-26 01:25 ET (Maren, T-0119, from PROPOSAL-003 "Found on the way" 1-2).* "Send to Home Screen" is gone from the preview pane. Sample rows: "Weather card" is now `trip_countdown` (weather is a Shortcut recipe, not a v1 widget: ADR-001 ruling, no MET Norway) and "Clean clipboard" reads "Run Script with Input" (a v1 App Intent), not "Share sheet action" (a share extension is 1.1). Changed in `draw_ide.py`; the four affected sheets (A-projects and A-ipad, phone and iPad) are redrawn on design-previews `ide/` (67c22ebc), QA 0 issues. The PNGs in this folder still show the old rows until the IDE screens are redrawn in the approved look.
+
+   *Note, 2026-10-26 19:51 ET (Maren, T-0194, from the T-0173 chair ruling 2026-10-26 02:36, editor-preview-note.md s6).* s5.8: the network-off switch is gone from the preview pane for v1 (ruling item 3: it comes in 1.1 with redraw as you type, item 2); the pane header gains "Last run 9:41" so the frame says when it was drawn. s5.6: tour page 3 is the countdown premade with a date picker (title "Change the date. Watch the widget."; was "Change a line." over an edited source line, captioned "redraws as you type"). The iPad 1 store shot reuses this pane (store/draw_store.py `ipad_split`), so it now shows the pane as part A builds it, and its caption is Ines's "Write a widget and / see how it looks" (PROPOSAL-003 s2.6, ruling item 5). Redrawn: A-tour-phone, A-tour-ipad, A-ipad-phone, A-ipad-ipad, B-tour-phone, B-ipad-phone; qa.json 0 issues on all six (min contrast 4.62); store shots re-rendered to a temp folder, 0 faults, not pushed to design-previews.
 
 ## 6. Open
 

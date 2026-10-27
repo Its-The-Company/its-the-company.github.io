@@ -176,13 +176,32 @@ Two themes, each with light and dark variants, all roles checked at 4.5:1 on the
 </div>
 
 
-Gutter, current line, selection, error and caret are in tokens.json. Highlighting in the mockups uses Python's own `tokenize` module, so the colours fall where a real tokenizer puts them. Quill is calm and low-chroma for long sessions; Lumen is brighter with more hue separation.
+Gutter, current line, selection, error and caret are in tokens.json.
+
+**Editor tokens for the engine (T-0232, 2026-10-26).** Runestone's theme asks for six colours the set lacked; each is an approved token, so they sit inside creative/approved.md item 2. Shipped sets only (Quill light, Lumen dark):
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 7. Editor syntax themes, scrolls sideways" style="--tw:978px" markdown="1">
+
+| Token | Quill light | Lumen dark | From | Floor (std / HC) |
+|---|---|---|---|---|
+| gutterBackground | #FCFBF8 | #0E1120 | bg (the mockups' gutter) | gutter, currentLineNumber 4.5 / 7 on it |
+| gutterHairline | #E3DFD6 | #262C3E | color line.hairline; HC line.strong (#C9C4B8, #394158) | decorative, exempt |
+| currentLineNumber | #1C1B19 | #E6E9F5 | text | 4.5 / 7 on gutterBackground and currentLine |
+| invisibles | #8B867B | #68728B | line.strong moved in OKLCH lightness only to 3:1 (HC #6E695F, #858FA9) | 3 / 4.5 on bg, currentLine, selection |
+| markedText | #E4EBF8 | #2A2350 | color accent.soft | every text role 4.5 / 7 |
+| findMatch | #E3EAF8 | #28234F | selection (as the find state is drawn) | every text role 4.5 / 7 |
+
+</div>
+
+
+Derived fixes, for the next report: invisibles (above), and six dark Increase Contrast roles that moved one step to reach 7:1 on markedText (comment #ACB3D1 to #ACB4D1, keyword #C8A3FD to #C9A4FE, builtin and decorator #FC95B6 to #FC96B7, operator #ADB4CA to #AEB4CB, error #FF96A0 to #FF97A0). check_tokens.py: 1,024 pairs, 0 fails. Open under <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>: a find-match tint distinct from the selection (IDE spec s3.2). Highlighting in the mockups uses Python's own `tokenize` module, so the colours fall where a real tokenizer puts them. Quill is calm and low-chroma for long sessions; Lumen is brighter with more hue separation.
 
 ## 8. Widget template rules (every family, every mode)
 
 ### 8.1 Families (393 pt iPhone; flex to the container, never to these numbers)
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 8.1 Families (393 pt iPhone; flex to the container, never to these numbers), scrolls sideways" style="--tw:812px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 8.1 Families (393 pt iPhone; flex to the container, never to these numbers), scrolls sideways" style="--tw:812px" markdown="1">
 
 | Family | Size | Layout | Content rule |
 |---|---|---|---|
@@ -202,13 +221,13 @@ Common: 16 pt content margins (`contentMargins` default); 11 pt text floor; at m
 
 ### 8.2 Rendering modes
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 8.2 Rendering modes, scrolls sideways" style="--tw:1124px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 8.2 Rendering modes, scrolls sideways" style="--tw:1124px" markdown="1">
 
 | Mode | Where | What the system does | Our rule |
 |---|---|---|---|
 | fullColor | Home Screen default | Our colours | Design here last, not first. |
 | accented | Tinted Home Screen (iOS 18+) and iOS 26 tinted styles | Two groups, both recoloured from the user's tint; background replaced | Only the hero value and its mark take `.widgetAccentable()`; labels stay default. Images declare `widgetAccentedRenderingMode` (`.desaturated` unless the image is the content). |
-| vibrant | Lock Screen, StandBy | Luminance only, over the wallpaper | Use white at three opacities (1.0, 0.66, 0.24 for tracks); no colour meaning. |
+| vibrant | Lock Screen, StandBy | Luminance only, over the wallpaper | Use white at the luminance <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span> in section 8.3 item 2 (text 1.0 and 0.66; marks 1.0 and 0.36; grounds 0.24 and 0.18); no colour meaning. |
 | clear (iOS 26 glass) | Home Screen "Clear" style | Background becomes glass; content rendered light | Same as vibrant; check legibility over a light and a dark wallpaper. |
 
 </div>
@@ -223,24 +242,52 @@ Every premade widget is drawn and checked in all four modes before it ships; the
 In accented, vibrant and clear the system removes the container background, so B's gradient card is gone, and content is repainted by luminance (accented: two tint groups). B's identity in those modes is not its colour. What carries a dark widget:
 
 1. **The SF Pro Rounded hero numeral** (600). It is the one thing that survives every mode, as New York does in light.
-2. **Three luminance levels only:** primary 1.0, secondary 0.66, tracks 0.24 (render.py `ROLE_ALPHA`). Never a fourth level that only colour separates.
+2. **Two text levels, and a short ladder for everything else** (render.py `ROLE_ALPHA`, Swift `TreeToken.roleAlpha`; corrected 2026-10-26 by T-0200, see 8.4): text primary 1.0, text secondary and tertiary 0.66 (tertiary joins secondary, as it does on the full-colour card); value marks 1.0 (`accent`, `status.*`); quiet marks 0.36 (`line.strong`: missed days, past bars); tracks 0.24 (`bg.sunken`); tile grounds and hairlines 0.18 (`accent.soft`, `line.hairline`). The levels are separated by luminance only. Never a level that only colour separates. (v0 said "three levels, 1.0, 0.66, 0.24"; neither renderer ever drew that: text tertiary was 0.5 and the mark and ground steps were not listed.)
 3. **The hero and its mark are the accent group** (`.widgetAccentable()`); labels stay in the default group.
 4. **Nothing means anything by hue or gradient.** Status travels with a symbol or a word; no text sits on meaning carried by the gradient.
 5. **Every paint is a token**, so the system can remap it per mode. No literal colours on Text or Image.
 
-`check_widget_modes.py` reads the 12 premade trees (52 family views) and counts what must be 0: literal colours 0, gradient paints 0, system-family views with no accentable node 0, colour-only status marks 0 (`--strict` fails on any). It also counts two gaps the dark appearance opens in the trees, which are work for the DSL and renderer owners:
+`check_widget_modes.py` reads the 12 premade trees (52 family views) and counts what must be 0: literal colours 0, gradient paints 0, system-family views with no accentable node 0, colour-only status marks 0 (`--strict` fails on any). It also counted two gaps the dark appearance opened in the trees, which were work for the DSL and renderer owners. **Both closed** (checked 2026-10-26 19:46 by T-0200: `serif 0`, `cardbg 0`; the trees carry 27 `design: "display"` fonts and 28 `widgetCard` container paints; Idris's renderer draws both, 238c5e1e, section 8.4):
 
-- **26 hero Text nodes hard-code `design: serif`.** In dark they would draw New York, not the approved rounded face. Needed: an appearance-aware display design in viewtree (for example `"design": "display"`, resolved by the Swift renderer from `colorScheme`: serif in light, rounded in dark), and `pywidget_ui` emitting it for hero numbers.
-- **28 views set `containerBackground` to `bg.surface`.** In dark full colour that draws B's flat surface, not its gradient card. Needed: a `widget.card` paint (gradient `widget.card.start` to `widget.card.end`; solid in light because both stops are `bg.surface`).
+- ~~**26 hero Text nodes hard-code `design: serif`.**~~ In dark they would draw New York, not the approved rounded face. Needed: an appearance-aware display design in viewtree (for example `"design": "display"`, resolved by the Swift renderer from `colorScheme`: serif in light, rounded in dark), and `pywidget_ui` emitting it for hero numbers.
+- ~~**28 views set `containerBackground` to `bg.surface`.**~~ In dark full colour that draws B's flat surface, not its gradient card. Needed: a `widget.card` paint (gradient `widget.card.start` to `widget.card.end`; solid in light because both stops are `bg.surface`).
 
 Preview (approximation of the system, `preview_appearances.py`): `appearances/dark-widget-modes.png` on design-previews, the countdown widget in full colour (mockup card and shipped card), accented, clear on a dark wallpaper and clear on a light wallpaper. Clear on a light wallpaper is where white content is weakest; the system adapts the glass there, and only Idris's device check can say how much.
+
+### 8.4 Renderer check against this spec (T-0200, 2026-10-26 19:46)
+
+Idris's tree renderer (238c5e1e: `Shared/TreePaint.swift`, `TreeView.swift`, `Widget/PyWidget.swift`) compared value by value with sections 2.0, 2.1, 8.2 and 8.3 and with render.py, the drawn reference. Evidence: the code, the asset catalog's colour sets, and pixels read from `ops/site-checks/widget-card/card-{light,dark}.png` (1.5x; card 237 px = 158 pt). No Xcode run.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 8.4 Renderer check against this spec (T-0200, 2026-10-26 19:46), scrolls sideways" data-n="1" style="--tw:1255px" markdown="1">
+
+| # | What | Spec | Renderer draws | Verdict |
+|---|---|---|---|---|
+| 1 | Display face | New York light, SF Pro Rounded dark (2.0) | `design: "display"` resolves through `DisplayFont.spec(.number)` by `colorScheme` | Match. 4x crops: serif "53" light; rounded terminals on "53" and "6:05 PM" dark |
+| 2 | Display weight | hero numbers 500 light, 600 dark (2.0) | medium / semibold when the tree sets no weight; a set weight wins (as render.py) | Match. "A set weight wins" was not written here; accepted and written now |
+| 3 | Display titles (600 / 700) | 2.0 | not reachable from a tree; trees only get the number role | Accepted: widgets carry hero numbers, not screen titles. 2.1's snippet shows the number weights only; `Shared/DisplayFont.swift` holds both roles |
+| 4 | Card stops | light `bg.surface` both stops; dark `#5B33E6` to `#1E1450`; darkHC start `#511ED6` (2.0) | `WidgetCardStart`/`End` from the catalog: light and lightHC `#FFFFFF`/`#FFFFFF` (= `BgSurface`), dark `#5B33E6`/`#1E1450`, darkHC `#511ED6`/`#1E1450` | Match. Light card pixels `#FFFFFF` |
+| 5 | Solid or gradient | solid in light because the stops are equal (8.3) | solid when the resolved stops differ by under 0.002 per channel | Match |
+| 6 | Gradient angle | not stated | 150 degrees, CSS convention (render.py `linear-gradient(150deg)`), CSS line length converted to unit points | **Spec gap, accepted: the card gradient is 150 degrees, start top-left, end bottom-right, line long enough that the corners reach 0% and 100%.** 11 points on the dark small card against that reference: worst 4/255 per channel, every sample darker than the reference (relative luminance 0.93 to 0.99 of it), so white text on it only gains contrast (2.0's 4.77:1 worst holds) |
+| 7 | Text on the card, full colour | "white text" (2.0); mapping not stated | `text.primary` to `widget.onCard.primary`; `text.secondary` and `text.tertiary` to `widget.onCard.secondary`; `line.strong` to `widget.onCard.track`; `accent` to `widget.onCard.accent` (render.py `ONCARD`); only when the container paint is `widgetCard` | **Spec gap, accepted** as the rule: on the card, text has two levels; quiet and accent marks take their 3:1 card tokens (T-0040, T-0147, T-0159) |
+| 8 | Stripped modes, text | 1.0, 0.66 (8.2, 8.3 item 2) | 1.0, 0.66, **0.5** for `text.tertiary` | **Delta, fixed.** Tertiary goes to 0.66: it already joins secondary on the card, and 0.5 was the weakest white over glass. render.py changed in this commit; Swift is T-0219 (Idris). Premade QA, 12 sheets re-rendered to a temp folder: 0 faults; worst text on the stand-in grounds rose: accented dark 4.48 to 6.05, accented light 2.84 to 4.15, clear dark wallpaper 5.07 to 7.56 (dark) and 2.78 to 3.46 (light); full colour unchanged. Clear and vibrant over a light wallpaper stay under 4.5 on the stand-ins (Idris's device check, T-0039) |
+| 9 | Stripped modes, marks and grounds | "tracks 0.24" only | `accent`, `status.*` 1.0; `line.strong` 0.36; `bg.sunken` 0.24; `accent.soft`, `line.hairline` 0.18 | **Spec gap, accepted** as drawn (T-0147's graphics check measured these); written into 8.3 item 2 |
+| 10 | `bg.surface` as a fill, stripped | not stated | white 1.0 (render.py the same; 12 uses, all in the clocks tree) | Known open, not new: clear-mode clock dials read as white discs (T-0159 note). Not changed here |
+| 11 | Literal colours, stripped | none allowed (8.3 item 5) | white at the literal's own alpha (render.py the same) | Match in effect: the trees hold 0 literals |
+| 12 | Light card outline | not stated | none | Accepted. render.py's 1 px `line.hairline` border on light cards is a sheet convention; WidgetKit gives the extension no outline to draw |
+| 13 | Sheet grounds in accented, light | n/a | the Swift sheet shows the extension's output (white at the ladder) on a dark stand-in; render.py simulates the system's tint recolouring on a light stand-in | Sheet-only difference, no fix: what the extension hands WidgetKit is the same in both |
+
+</div>
+
+
+Result: the display design and the `widgetCard` paint are cleared. One fix (row 8, Idris, T-0219); three spec gaps closed by writing the renderer's values in (rows 6, 7, 9). Everything stays inside creative/approved.md item 2 (the approved tokens and faces); row 8 is a contrast fix inside the approved style and is listed here for the next report.
 
 ## 9. Two directions (history: the #60 choice)
 
 The Investors kept both (#60, 2026-10-25 23:59 ET): A is the light appearance, B the dark one (section 2.0). The table and the recommendation below are the proposal as it was put to them; the recommendation for A alone was not taken.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 9. Two directions (history: the #60 choice), scrolls sideways" style="--tw:739px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 9. Two directions (history: the #60 choice), scrolls sideways" style="--tw:739px" markdown="1">
 
 | | A, Paper | B, Studio |
 |---|---|---|
@@ -268,8 +315,8 @@ What B does better: it reads as "creative tool" at a glance and photographs well
 - ~~The Investors choose a direction~~: done, #60 (section 2.0, creative/approved.md item 2).
 - ~~High-contrast palette variants (7:1)~~: done 2026-10-26 (section 2.0).
 - Idris: run `xcodegen generate` in pywidget/ios so `Shared/Theme.xcassets` joins both targets, build, and check in the Simulator: Light, Dark, and both with Increase Contrast (Settings, Accessibility, Display and Text Size). Then the widget family sizes and the four rendering modes, clear on a light wallpaper first (section 8.3).
-- DSL and renderer owners: the display design and the `widget.card` paint (section 8.3), then the premade trees regenerate.
-- For the next report (<span title="Commandment 51: the Investors approve every visual before it ships.">C51</span> visibility, inside the approved style): the dark card start `#A08BFF` to `#5B33E6` (section 2.0), and the Increase Contrast sets.
+- ~~DSL and renderer owners: the display design and the `widget.card` paint (section 8.3), then the premade trees regenerate.~~ Done: trees regenerated (`check_widget_modes.py` serif 0, cardbg 0), renderer 238c5e1e checked value by value 2026-10-26 19:46 (section 8.4); one fix left, T-0219 (Idris, stripped-mode tertiary 0.66).
+- For the next report (C51 visibility, inside the approved style): the dark card start `#A08BFF` to `#5B33E6` (section 2.0), and the Increase Contrast sets.
 - App icon and App Store screenshots: separate C51 proposal in the approved appearances (board line).
 - QA note: both galleries report 1 element past the canvas edge in qa.json (`offcanvas`); no text is clipped (clip 0) and the PNGs show no cut content. Not yet traced.
 {% endraw %}

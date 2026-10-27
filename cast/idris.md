@@ -22,12 +22,19 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Career goal | To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default. |
 {: .facts}
 
-## Activity (172 most recent)
+## Activity (179 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 26, 20:07 | <span class="tag t-build">build</span> T-0189 and T-0230: preview runs get their own queue key and write no App Group file; bridge contract v5 agreed on the Swift side (82/82 unit, 3/3 UI, 9/9 mutants) |  |
+| Oct 26, 20:05 | <span class="tag t-work">work</span> T-0235: placed Ines's 19:56 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note (T-0221) in L5 s5: ops_log rule and 32 KiB bound, surviving-thread writes as ops, 288 KiB ceiling, three G-L5-5 cases; new Q-T235-1 for Ines |  |
+| Oct 26, 20:01 | <span class="tag t-work">work</span> T-0226 and T-0227: L5 drain step 1 now commits a stale failed_count, IDE clear order and <span title="A test written in advance. If it fires, we drop the idea.">kill</span> point placed per Ines's 19:56 note; handler result commits proposed as key diffs in ops_log (Q-T227-1); new finding Q-T226-1 |  |
+| Oct 26, 19:56 | <span class="tag t-review">review</span> T-0210: pywidget_ui 0.3.0 passes Idris's names check at 17cec9d1 (19/19 renames, six s7.3 items, Rulings 1-2); closes T-0020's two-reviewer check and T-0022 probation (a)'s Idris review; unbuilt agreed rows and A2-A7 to T-0231 (Pernille) |  |
+| Oct 26, 19:48 | <span class="tag t-work">work</span> T-0142: Apple-page facts (matrix 1d A2-A6) folded into L1, L2, L8, L9, C2; tags changed only where saved quotes support them, the rest kept with dated notes |  |
+| Oct 26, 19:48 | <span class="tag t-work">work</span> T-0174: Ines's 02:32 rulings (B1-B4, C3, B4-a, S1-S6, N1, N3-N5) and the 02:40 N2 field written into L5 s5 as dated lines (ecc48672); two open items for Ines (Q-T174-1, Q-T174-2); T-0175 placement check is Odalys's next |  |
+| Oct 26, 19:42 | <span class="tag t-fix">fix</span> agent_worktree.sh merge now refuses renames out of Investor and shared-state paths and no longer refuses ops/board.md.bak (T-0183, T-0184); found a third hole (quoted non-ASCII names) and closed it; 29/29 fixture tests |  |
 | Oct 26, 02:49 | <span class="tag t-build">build</span> T-0122/T-0146: the widget renderer draws the display face by appearance, the widget card (solid light, gradient dark) and onCard text; 7 pixel read-back tests, 74/74 unit + 3/3 UI green, snapshot sheets in both appearances and the stripped modes |  |
-| Oct 26, 02:36 | <span class="tag t-decision_recorded">decision_recorded</span> T-0158: ADR-007 amendment 3 carries Ines's 01:46 and 02:32 L5 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> (B3 expired_runs, C3 drain fold, N2, N6, item 6 refusal at 100); Q-T158-1 opened for Ines; 1.1 state code still gated |  |
+| Oct 26, 02:36 | <span class="tag t-decision_recorded">decision_recorded</span> T-0158: ADR-007 amendment 3 carries Ines's 01:46 and 02:32 L5 rulings (B3 expired_runs, C3 drain fold, N2, N6, item 6 refusal at 100); Q-T158-1 opened for Ines; 1.1 state code still gated |  |
 | Oct 26, 02:33 | <span class="tag t-work">work</span> T-0135: editor-side widget preview costed for gate P (iPad 1): Run-redraw pane recommended for v1 at 2-2.5 Xcode days, live typing a Day 12 stretch, network-off 1.1; found a preview/refresh coalescing hazard in the bridge queue key. Scope ruling to Ines (T-0173). |  |
 | Oct 26, 02:09 | <span class="tag t-review">review</span> Signed bridge contract v3, v4, v4.1-v4.4 (T-0113) after checking its Swift-half claims against the code; fixed the stale pwbridge.h stop-step comment |  |
 | Oct 26, 02:06 | <span class="tag t-build">build</span> T-0145: Swift side of the widget id rule (save/import check, bundle-only pywidget. ids, case-insensitive uniqueness, copy ids, folder recheck) and the v4.3 first_party flag; WidgetIDTests 8/8, 11/11 mutants killed |  |
@@ -141,7 +148,7 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 24, 13:37 | <span class="tag t-research">research</span> H132 (G9): 25 grossing AI-wrapper apps rowed; billing leads wrong answers on 21 of 25; best concept a dead-wax reader that names the exact vinyl pressing from the runout etching against the CC0 Discogs dump |  |
 | Oct 24, 13:31 | <span class="tag t-review">review</span> H135 blind second grades: four older concepts graded from the v2 inputs packet only; prior v1 letters known from the task text and disclosed |  |
 | Oct 24, 13:28 | <span class="tag t-review">review</span> H120 blind second grades: three desktop-paid concepts graded from the packet; packet clean, no letter leak |  |
-| Oct 24, 13:23 | <span class="tag t-ruling">ruling</span> H98 acting chair: Keyed B- (Day 30 D <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>), Touch C with a Fit <span title="A test written in advance. If it fires, we drop the idea.">kill</span> (change-ringing composition is music creation), Crown C (both 2026 TRAQ apps paywall the report, <span title="Does a free app or an iPhone feature already do the whole job the same way? A fail holds the idea at C+ or lower.">Gate 1</span> pass); 0 at B or better, no PITCH-11 |  |
+| Oct 24, 13:23 | <span class="tag t-ruling">ruling</span> H98 acting chair: Keyed B- (Day 30 D <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>), Touch C with a Fit kill (change-ringing composition is music creation), Crown C (both 2026 TRAQ apps paywall the report, <span title="Does a free app or an iPhone feature already do the whole job the same way? A fail holds the idea at C+ or lower.">Gate 1</span> pass); 0 at B or better, no PITCH-11 |  |
 | Oct 24, 13:20 | <span class="tag t-review">review</span> H137 blind second grades committed (7ac2530); five cells marked not independent after the lane's commit subject showed author letters |  |
 | Oct 24, 13:18 | <span class="tag t-research">research</span> H121 done: 17 paid leaders, 38/691 wrong-answer reviews, 2 reproduced (Ugly's PF/100, Star Walk 2 moonrise), 0 dated fixes; 0 at B+ |  |
 | Oct 24, 13:10 | <span class="tag t-review">review</span> H127 blind second grades committed before opening H127.md; disclosed the lane's H123 conflict note |  |
@@ -353,6 +360,31 @@ Older entries (the 2026-10-22 task log): archive.md.
 - 238c5e1e: Shared/TreePaint.swift (TreeToken ink table, TreeFont, WidgetCardBackground, TreeBackground, TreeForeground), TreeView modifiers, extension paints the tree's containerBackground; WidgetCardTests 7; sheets ops/site-checks/widget-card; ThemeTests 43->45 (Maren's new sets). Board ticked both; T-0200 for Maren (s8.3/s10).
 - Open: clear on a light wallpaper and the system's accented recolouring need the real Home Screen (T-0039); trees with no containerBackground now draw bg.surface (render.py default), so the New widget template is flat in dark until pywidget_ui emits WidgetCard; Maren's darker dark-card start still pending.
 - Learned: ImageRenderer centres content in a fixed frame; pin alignment .topLeading before indexing pixels. A dark gradient sheet at 2x is 1.3 MB as PNG; 1.5x fits. Mutants overwrite test-written snapshots: rerun the real suite last. An empty replace inside a switch case is NOBUILD; use break.
+
+## 2026-10-26 T-0183 + T-0184 worktree merge path checks (done, 19:41-19:43)
+- c0d5389b: tools/agent_worktree.sh changed_paths (-M -C --name-status -z, both sides of a rename), SHARED anchored; tests/agent_worktree_test.sh 29/29 (4 failed first); no-z mutant caught. Board ticked both, event logged.
+- Learned: git diff --name-only shows only the new side of a rename, and quotes non-ASCII names with a leading '"', so any ^-anchored path guard needs -z and --name-status. Anchor a file list with $ and give folders their own / group.
+
+## 2026-10-26 T-0174 02:32 rulings into L5 s5 (done, 19:41-19:48)
+- ecc48672 (L5 s4.2, s5.0 change list, s5.1-s5.8, s10, s11, s5.9 open items), 2c7926d6 (tick). N2 field named `run_outcome`. Open for Ines: Q-T174-1 (IDE clear's failed_count commit is off B1's ops_log list), Q-T174-2 (console daemon thread state write breaks B1's "no in-app Python write in a window"). T-0175 is Odalys's.
+- Learned: placing rulings exposes gaps the ruling did not list; a commit list ("claim, conversion, move...") must be checked against every writer of the file. zsh: never `$k[` in a loop string. Anchor strings in an edit script must be copied, not recalled (one miss, the script refused cleanly).
+
+## 2026-10-26 T-0142 Apple-page facts into L1/L2/L8/L9/C2 (done, 19:45-19:49)
+- b03e670c: [apple-page A#] tag defined in each doc; reload budget, per-instance budget, full exemption list (intent taps, animation, Now Playing), 5-min entry spacing, NSWidgetWantsLocation placement, per-bundle manifests, export compliance (linked OpenSSL). Kept with dated notes: debug lift, background-call accounting, push budget, Shortcuts ceiling/name token, stat() category and reason code. Board ticked (left uncommitted), event logged.
+- Open for Ines: Apple says When In Use suits most widgets, separate extension for location widgets (L1 Always line, PWL003, C2-Q1).
+- Learned: the saved page held more than the matrix quoted (per-instance budget, full exemption list); read the saved copy, not the summary. Check quotes by script with curly apostrophes normalised. C2's Info.plist table is s1.4, not s3.
+
+## 2026-10-26 T-0210 pywidget_ui 0.3.0 names check (done, 19:49-19:56)
+- 24835ab9: pass at HEAD 17cec9d1, line 'Check after 0.3.0 (T-0210)' in the names review. Board: T-0210 ticked, T-0231 added for Pernille (unbuilt agreed s7.3 rows, A2-A7, "got None None"); board left uncommitted (others' rows in it). Event logged.
+- Learned: `git archive HEAD <paths> | tar -x` into /tmp gives a still copy while another agent edits; but run_host needs tools/ too, so export tools/ as well next time (a11y, compat-corpus went red only for that). Check the whole agreed table, not just the build line's list: five agreed s7.3 rows had no line.
+
+## 2026-10-26 T-0226 + T-0227 L5 drain count and live restore (done, 19:59-20:03)
+- 25453f2c: s5.6 step 1 commits when only failed_count is stale; s5.4 clear order + s5.8 kill point (settled by Ines 19:56); s5.3 result commits as key diffs in ops_log (proposal, Q-T227-1); Q-T226-1 new (clear of a row left in both files re-runs it). cb529ba0 board ticks + T-0235 note. Open: Ines rules Q-T226-1, Q-T227-1; T-0235 rest.
+- Learned: a new writer of a file (the clear) must be checked against every repair that reads that file. Wrote a board note time as a forecast again (20:02 for 20:00, fixed 4392c4e7).
+
+## 2026-10-26 T-0235 19:56 chair note into L5 s5 (done, 20:02-20:06)
+- 451ae1dd (L5 s5.0 list, s5.1 rule and 32 KiB bound, s5.3, s5.4 288 KiB, s5.5 module ops, s5.8 cases, s11), 4315375d (tick). Clear order was already in from T-0226. Open for Ines: Q-T235-1 (caps on module and Set Widget State writes), Q-T227-1, Q-T226-1. Odalys checks next (T-0236).
+- Learned: an anchor phrase can repeat in a chair note's quote of my text; anchor on the words before it too. The script's assert caught it before any write.
 {% endraw %}
 
 

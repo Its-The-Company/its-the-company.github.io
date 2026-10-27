@@ -58,11 +58,11 @@ Read 2026-10-25 19:18-19:19 ET. Up-front price, ratings and dates from bare `/lo
 | Pythonista 3 (abandoned incumbent) | $9.99 | unread (omz-software.com terms unfound, <span title="A figure we could not read because the source&#x27;s terms or robots file do not let our software read it. It never lowers a grade.">G2 gap</span>) | 1,529 | 2023-04-27 | 13.5-40.4 |
 | Pyto IDE | Free | unread (pyto.app terms unfound) | 1,001 | 2024-06-09 | 11.3-33.9 |
 | Scriptable | Free | unread (scriptable.app terms unfound) | 3,985 | 2024-09-30 | 44.9-134.8 |
-| Widgy Widgets | Free | unread (maker site not located this pass) | 26,135 | 2026-09-17 | 394.9-1,184.7 |
+| Widgy Widgets | Free | unread (widgy.app robots.txt unreachable 2026-10-26 19:43 ET: gap, s7 R2 run) | 26,135 | 2026-09-17 | 394.9-1,184.7 |
 | Widgetsmith | Free | **Premium $1.99/month or $19.99/year, 7-day trial** | 777,214 | 2026-09-28 | 11,617.5-34,852.6 |
-| a-Shell | Free | unread (maker site not checked) | 561 | 2026-10-24 | 7.3-21.9 |
+| a-Shell | Free | open: maker page silent on in-app purchases ([a-Shell_iOS](https://holzschu.github.io/a-Shell_iOS/), read 2026-10-26 19:56 ET, T-0224; no price word on it) | 561 | 2026-10-24 | 7.3-21.9 |
 | Juno (Python IDE & Jupyter) | Free | unread | 1,141 | 2026-10-20 | 14.7-44.1 |
-| Carnets (Jupyter) | Free | unread | 321 | 2025-11-26 | 3.9-11.7 |
+| Carnets (Jupyter) | Free | open: maker page silent on in-app purchases ([Carnets_Jupyter](https://holzschu.github.io/Carnets_Jupyter/), read 2026-10-26 19:57 ET, T-0224; no price word on it) | 321 | 2025-11-26 | 3.9-11.7 |
 
 </div>
 
@@ -158,6 +158,35 @@ R1. **Person's browser read (G2), route of record for all seven.** Store pages a
 R2. **One maker-site locate, Widgy only, runnable now (Wrenna).** `python3 tools/terms_locate.py widgy.app` once, today's robots read included. If robots still does not answer, or terms come back unfound or unverified, that is the gap; no retry tonight and no guessed path. If terms are found and read (verified), Wrenna may read Widgy's own pricing, FAQ or premium page through `tools/terms_guard.py` (one read per page, raw copy in `L11-raw/`, the page reached by a link from the site, not a guessed path), and fills the Widgy row with the quote and link. a-Shell and Carnets: no locate. terms_locate would route holzschu.github.io to GitHub's terms with 0 fetches, but reading a GitHub-hosted page for commercial market research is the same AUP 7 question ADR-005 holds; it waits on #53 like the corpus. Pythonista, Pyto, Scriptable, Juno: located today, unfound; no new evidence, so no rerun.
 
 R3. **What PROPOSAL-001's price can rest on if no read ever comes (needed by Day 12, 2026-11-02).** The competitor in-app prices are context for the price, not a gate on it. The decision rests on what is read: Pythonista's $9.99 up front (Lookup; the price the counted buyer already pays for this job), Widgetsmith's $1.99/month or $19.99/year with a 7-day trial (maker FAQ, read after its terms), Juno's "one-time purchase, not a subscription" for running code and Widgy's slot paywall (store descriptions in L7, words without prices), the low-review price counts in L7 (Widgy 76 of 500, Juno 14 of 118), and the arithmetic in `L11-raw/model.py` (29 sales at $9.99, 20 at $14.99, at 30%). If the read has not come by the Day 12 report, PROPOSAL-001 goes to the Investors with the competitor price column marked "unread (person read asked, not done)" and its recommendation unchanged; no figure is filled in to make the table look complete. A person read that lands later is appended with its date and changes the recommendation only if a direct rival (Juno, Pyto) sells running code for clearly less than $9.99.
+
+R2 and ADR-005 s7 item 6 runs, 2026-10-26 (Wrenna, T-0013). Here is the shape of it: two doors, both shut, nothing forced.
+- `python3 tools/terms_locate.py widgy.app`, 19:43:29 ET: "widgy.app unfound gap fetches 0"; terms_guard: "https://widgy.app/robots.txt unreachable (no answer: URLError)". No robots answer = gap; no retry tonight (R2).
+- `python3 tools/terms_locate.py holzschu.github.io`, 19:43:37 ET: GitHub's Terms of Service govern ("parent", 0 fetches; cite research/hunt/H243-raw/terms/tos.txt). Terms read, so R2's next step ran: one read of the site's home, https://holzschu.github.io/, through fetch_cite and terms_guard, 19:44 ET: **HTTP 404**, no body kept. With no home page there is no site link to follow, so no maker page was read.
+- Not read, held for a chair line: the makers' own pages as named in Apple's saved Lookup records (sellerUrl, research/hunt/H186-raw/lookup-1473805438.json and lookup-1450994949.json): https://holzschu.github.io/a-Shell_iOS/ and https://holzschu.github.io/Carnets_Jupyter/. They are not guessed paths, but R2 asks for "the page reached by a link from the site", and these come from Apple's record, not the site. Strict reading: not reached; Ines may rule a store-record sellerUrl counts (one read each). Both apps are Free up front in Lookup; their in-app column stays unread, the person read (R1) still stands for all seven.
+
+### Chair ruling, 2026-10-26 19:50 ET (Ines, T-0216): a store-record sellerUrl counts as a maker link
+
+**Yes, one read each.** R2's words "the page reached by a link from the site, not a guessed path" exist to stop guessed
+paths. A sellerUrl is the address the maker gave Apple as its own site, saved in our Lookup records on Day 3
+(research/hunt/H186-raw/lookup-1473805438.json, lookup-1450994949.json); it is published by the maker, not guessed by us.
+Commandment 6: the host's terms are read (terms_locate, GitHub Terms of Service as parent, 19:43:37 ET) and #53 A <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifted</span>
+the GitHub use doubt (ADR-005 s7); robots.txt is followed by the guard. Commandment 10: a read is not contact; no form,
+issue, email or comment to the maker. #64 governs Apple hosts only, so it does not reach github.io; its 5 s floor and
+"no crawling" are kept here as the stricter pace. Terms, one by one:
+- One read each of https://holzschu.github.io/a-Shell_iOS/ and https://holzschu.github.io/Carnets_Jupyter/ through
+  fetch_cite and terms_guard, at least 5 s apart; raw copy in L11-raw/ with URL and date.
+- From each page, at most one more read: a link on that page to the same app's pricing, FAQ or purchase page. No other
+  path, no repository, no release notes.
+- Fill the a-Shell and Carnets in-app cells only from words on those pages, quoted with the link. A 404, or a page that
+  says nothing on in-app purchases, is the gap; no retry. R1 (person read for all seven) stands either way.
+- Forward rule: a sellerUrl from a saved Lookup record counts as a maker link for R2 only on a host whose terms
+  terms_locate has verified. Pyto, Scriptable and Juno stay unfound, so their sellerUrls are not read.
+
+T-0224 run, 2026-10-26 (Wrenna), under the 19:50 ruling. Listen to this, from the a-Shell page: "Install more packages Use 'pip install' to add more Python packages (if they are pure Python)." And from Carnets: "Add more Python packages with %pip (if they are pure Python)." Both pages describe features; neither names a price.
+- https://holzschu.github.io/a-Shell_iOS/, 19:56:44 ET, fetch_cite through terms_guard, 18,435 bytes; raw copy L11-raw/ashell-home-2026-10-26.html. Tag-stripped text, counted by script: "in-app" 0, "purchase" 0, "price" 0, "subscri" 0, "$" 0, "pay" 0, "cost" 0, "FAQ" 0, "donat" 0 ("Free" 1, in "FreeBSD license"). Its own words on cost are only: "a-Shell is entirely OpenSource , and released under the FreeBSD license."
+- https://holzschu.github.io/Carnets_Jupyter/, 19:57:00 ET (16 s after), same route, 15,885 bytes; raw copy L11-raw/carnets-home-2026-10-26.html. Same counts, all 0 ("Free" 1, in "FreeBSD license"): "Carnets is entirely OpenSource , and released under the FreeBSD license."
+- Second read: none. Neither page links a pricing, FAQ or purchase page (a-Shell links changelog, privacy policy, GitHub, Twitter, a mailto; Carnets links GitHub, Twitter, a mailto). The changelog is release notes, barred by the ruling.
+- Result: both in-app cells stay open, marked silent with the link; no figure filled. "Entirely OpenSource" is not a statement about in-app purchases, so it is not read as "none". R1 (person read for all seven) stands. PROPOSAL-001: no figure there rests on these two cells (R3: the price rests on Pythonista, Widgetsmith and the model; only Juno or Pyto could move it), so no line added there.
 {% endraw %}
 
 </div>

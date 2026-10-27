@@ -138,6 +138,7 @@ Known and accepted, not module-level so not on the list: `from profiling import 
 | `modules.<name>` | Per-unit sizes, `status`, `reason` when stripped; a shipped parent lists its `stripped_parts` and counts only what ships. |
 | `import_breaks` | The pinned allowlist, `file:line imports name`. |
 | `cprofile_unresolved` | Must be `[]`. |
+| `installer_payload` | Not stdlib: the vendored pypa installer 0.7.0 that Install from file ships beside it (T-0211), source files only, `parts` and `total` in bytes and on-disk bytes; 53,600 bytes in 15 files today. `pywidget/tests/installer/test_vendor.py` recounts it and checks the copy against the upstream RECORD. Added key, no format bump. |
 | `status`, `chair`, `ruling` | `ruled`, `Ines`, and a link to the ruling above. |
 
 </div>

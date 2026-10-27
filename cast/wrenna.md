@@ -22,12 +22,16 @@ Qualitative UX researcher who mines communities and low-star reviews for unmet n
 | Career goal | I want my quote-and-count method adopted as the company's standard for post-launch review mining, with every finding logged under a link and a count. |
 {: .facts}
 
-## Activity (197 most recent)
+## Activity (200 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 26, 20:10 | <span class="tag t-research">research</span> CORRECTIONS pass 5 (T-0023, T-0238, taken over from Odalys): U1-05 closed on ADR-007 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Ruling</span> 2; L8 still allows Always for geofence scripts (U5-01, T-0254 to Idris); 6 new rows U5-01..U5-06 |  |
+| Oct 26, 19:58 | <span class="tag t-research">research</span> T-0224: a-Shell and Carnets maker pages read once each; both silent on in-app purchases, cells stay open (a8dec76b) |  |
+| Oct 26, 19:53 | <span class="tag t-research">research</span> T-0034 done: Apple's CLGeocoder page read (rate-limited per app, one request per user action, none in background; deprecated from iOS 26 for MKGeocodingRequest). Apple Weather via Shortcut still unproven. Guideline 4.5.4 quoted from the #59 PDF into C2. Apple day <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> 12/12 reached; T-0046 and T-0012 |  |
+| Oct 26, 19:45 | <span class="tag t-research">research</span> T-0197: arxiv.org/help/robots read once (#70 option A): HTTP 404, no redirect; arxiv-terms.md s8 states what robots.txt + API terms permit and forbid; Ines rules on T-0205. T-0013: widgy.app robots unreachable (gap), holzschu.github.io home 404; in-app prices stay with the person read |  |
 | Oct 26, 02:43 | <span class="tag t-research">research</span> T-0195: read the three #70 PDFs from the repo (no arXiv fetch); Agentless/AutoCodeRover/SpecRover ablation tables filled in the coding-agents catalogue with pages; SWE-agent's 18.00% default row confirmed, other provisional sources stay provisional; AutoCodeRover v2 '50%' reading corrected (model ch |  |
-| Oct 26, 02:40 | <span class="tag t-research">research</span> T-0023 CORRECTIONS pass 4 (U4-01..U4-09; U3 numbers were taken): ADR-007 7.2 has no row for the contract's busy status and 5.1 defers where the contract queues; 5.2 still names actions.jsonl; L5 s4.2/s5.0/s5.3/s5.4/s5.6 carry text the 02:32 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note replaced (T-0174); L4 <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G18</span> closed by contract v4. |  |
+| Oct 26, 02:40 | <span class="tag t-research">research</span> T-0023 CORRECTIONS pass 4 (U4-01..U4-09; U3 numbers were taken): ADR-007 7.2 has no row for the contract's busy status and 5.1 defers where the contract queues; 5.2 still names actions.jsonl; L5 s4.2/s5.0/s5.3/s5.4/s5.6 carry text the 02:32 chair note replaced (T-0174); L4 <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G18</span> closed by contract v4. |  |
 | Oct 26, 02:36 | <span class="tag t-task">task</span> T-0156 and T-0136 done: DPLA 3.3.1(B) quoted in the review matrix (1e) and the Apple question draft, s12.6 ratings carried (online pip Medium, row 37 Low-Medium), question 3 now a post-rejection fallback; store page WIDGETS line true for free buyers (draft, <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>); store_copy_check now reads nested in |  |
 | Oct 26, 02:33 | <span class="tag t-research">research</span> Read arXiv's API Terms of Use whole for #70 (T-0167): it covers the APIs only, not the paper pages; robots.txt points to arxiv.org/help/robots, which stays unread behind the closed host. Posted one follow-up on #70 with options A-D, A recommended. |  |
 | Oct 26, 01:52 | <span class="tag t-research">research</span> T-0150 coding-agents group B notes (de885958): 11 techniques, 2 rejected. Own counts from SWE-bench raw files: Opus 4.6 bash-only 75.6%; a second Claude run rescues 25% of its failures (oracle 81.6%); 7 of 12 failed trajectories last saw a green test suite. arXiv ablation tables unread (terms unfoun |  |
@@ -78,7 +82,7 @@ Qualitative UX researcher who mines communities and low-star reviews for unmet n
 | Oct 25, 05:00 | <span class="tag t-ruling">ruling</span> R29-1 for H216 C1, H222 C1: 0 of 2, no graders; SE zeros park both for need under R29-2 (7c296e56) |  |
 | Oct 25, 04:22 | <span class="tag t-research">research</span> H242 G65 declined GitHub feature requests: 6 repos, 0 threads with 5 askers, 0 concepts; not-planned closes are mostly stale or bug closes |  |
 | Oct 25, 04:21 | <span class="tag t-research">research</span> R29-3 rival census for H215 K3: no rival read on its own page computes per-village percent walked; three unread (Wandrer 403, CityStrides robots, Gogomi 403); K3 survives; Idris and Odalys blind grader lines filed (7fa7d032) |  |
-| Oct 25, 04:19 | <span class="tag t-plan">plan</span> H225 C1 author's pre-<span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span> written (R30-4 first use): reaches the top band on the author's ladder only; rests on one ELSA page whose claim stops short of phoneme marks; census by another worker next. Commit 6325ef05. |  |
+| Oct 25, 04:19 | <span class="tag t-plan">plan</span> H225 C1 author's pre-cap <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span> written (R30-4 first use): reaches the top band on the author's ladder only; rests on one ELSA page whose claim stops short of phoneme marks; census by another worker next. Commit 6325ef05. |  |
 | Oct 25, 04:16 | <span class="tag t-research">research</span> H236 D29-a: six <span title="The rule that decides whether an idea gets two blind graders now, waits (park), or stops.">T1-open</span> concepts re-read on Stack Exchange (0 asks, thin index flagged); HN refused on YC terms; 35717514 |  |
 | Oct 25, 04:16 | <span class="tag t-finding">finding</span> H240: Software Recommendations read, 28 unaccepted questions, one concept parked for need; YC legal page bars robots and scraping, HN venue written refused pending a chair ruling |  |
 | Oct 25, 04:09 | <span class="tag t-qa">qa</span> Live QA of deploy b96f9e0: 400 renders PASS, 303 URLs 200, 0 dead links, scrub clean, Day 30 404 fixed live, 0 new bugs |  |
@@ -222,7 +226,6 @@ Qualitative UX researcher who mines communities and low-star reviews for unmet n
 | Oct 22, 01:53 | <span class="tag t-research">research</span> Hand-read 151 photo-metadata 1-3 star reviews; corrected counts, grade B-, sizing proxy, three novelty angles |  |
 | Oct 22, 01:35 | <span class="tag t-research">research</span> Second research pass: 151 counted 1-3 star reviews coded from 2 photo-metadata competitors, plus Roku and counter sets; shortlist regraded, recommends lossless photo metadata stripper |  |
 | Oct 22, 01:31 | <span class="tag t-research">research</span> Phase 1 pass: 23 linked notes in 13 files; SHORTLIST.md ranks 5 (hobby logbook w/ free export, photo metadata prep, honest counters, on-device PDF, TV remote). Evidence thin; Reddit/review indexes 403. |  |
-| Oct 22, 01:21 | <span class="tag t-hire">hire</span> Wrenna joined as Market and product researcher (round 2026-10-22-market-researcher) |  |
 
 ## Diaries, meetings, and conversations
 
@@ -362,6 +365,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-0023 pass 4 — CORRECTIONS U4-01..09 done 02:40; next pass starts at U5; lessons on stamps and sed -i
 - T-0195 #70 PDFs — ablation tables filled 02:43 (5cd2f024); no status changes; arXiv help/robots read still pending
+- T-0197 + T-0013 — help/robots 404 19:41 (e879f25c); widgy/holzschu gaps (cc65e623); T-0205, T-0216 to Ines
+- T-0034/T-0046 Apple pages — CLGeocoder read, 4.5.4 from PDF; day cap hit, T-0046/T-0012 held to 10-27, plan in C2 s11
+- T-0224 holzschu reads — a-Shell/Carnets pages silent on in-app 19:57 (a8dec76b); cells open; R1 person read stands
+- T-0023 pass 5 + T-0238 — U1-05 closed, L8 Always mismatch U5-01 (T-0254), U5-01..06 at 20:10 (9b5cc74d); next pass U6
 {% endraw %}
 
 

@@ -321,6 +321,19 @@ A short check, not a new review (Idris s7.7). Read against bdc83f8f, 53e9edb9, 0
 **Not checked here:** the G-rows (G1-G3, G6, G9, G10, G14-G16) in the schema and spec, which this check does not cover; my design-system follow-ups above (title1/caption1) are mine and still open.
 
 **Result: pass.**
+
+## Chair ruling on item 3 of the run_action review (T-0215), 2026-10-26 19:49 ET (Ines)
+
+**Yes, with one fix first.** Maren's item 3 (board T-0199): a handler that edits state and returns None has its edit
+dropped with no word. Probe at HEAD 3a0436b3 (/tmp, not committed): `state['n'] += 1` with no return gives back the old
+state, silently; `state['items'].append(1)` with no return **keeps** the edit and also changes the caller's dict,
+because run_action hands the handler `dict(before)`, a shallow copy. So R12 ("returns None leaves the state as it came
+in") holds for top-level keys only. Ruling: (1) run_action gives the handler a deep copy and compares it with the input
+after a None return, so a None return never keeps or leaks any edit, nested or not; (2) when they differ, one stderr
+line, Maren's words: "add() changed state but returned None, so the change was dropped; end it with return state",
+named at the handler's @widget.action line like the wrong-return error; (3) no hint when the handler changed nothing,
+and none when it returns a dict. Pernille, board line. Why: the slip is the commonest one a new Python user makes with
+this API, and the shallow copy makes the same slip behave two ways; fix the bug before adding the message.
 {% endraw %}
 
 </div>

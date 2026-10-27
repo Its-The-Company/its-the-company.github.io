@@ -1,5 +1,243 @@
 [
 {
+"time": "2026-10-26T20:10:30-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "CORRECTIONS pass 5 (T-0023, T-0238, taken over from Odalys): U1-05 closed on ADR-007 Ruling 2; L8 still allows Always for geofence scripts (U5-01, T-0254 to Idris); 6 new rows U5-01..U5-06",
+"link": ""
+},
+{
+"time": "2026-10-26T20:10:21-04:00",
+"worker": "Maren",
+"type": "task_done",
+"summary": "T-0247: Install from file refusal copy read, 22 refusals (21 change, 1 kept), recommended text each; T-0253 Pernille applies; draft, C51 (b05bf5c6)",
+"link": ""
+},
+{
+"time": "2026-10-26T20:10:06-04:00",
+"worker": "Ines",
+"type": "ruling",
+"summary": "T-0248: L5 s5.9 chair note 20:08 (ea7594d5) on Q-T227-1, Q-T226-1, Q-T235-1; corrected own 19:56 288 KiB ceiling",
+"link": ""
+},
+{
+"time": "2026-10-26T20:10:01-04:00",
+"worker": "Odalys",
+"type": "ops",
+"summary": "Mac mini access audit (T-0241): 163 transcripts, 0 macOS permission blocks; restart recovery and Developer Mode recommended, broad privacy grants listed with risk; 239 refusals were Claude Code rules",
+"link": ""
+},
+{
+"time": "2026-10-26T20:07:52-04:00",
+"worker": "Odalys",
+"type": "tooling",
+"summary": "T-0220: arxiv.org opens for named papers only, through terms_guard.arxiv_page / fetch_cite --arxiv (Ines's ruling arxiv-terms.md s9): listed ids, /abs and /html, /pdf after an html 404, 10 a task, 20 a day, 15 s, records without bodies (c5cc2a93)",
+"link": ""
+},
+{
+"time": "2026-10-26T20:07:44-04:00",
+"worker": "Idris",
+"type": "build",
+"summary": "T-0189 and T-0230: preview runs get their own queue key and write no App Group file; bridge contract v5 agreed on the Swift side (82/82 unit, 3/3 UI, 9/9 mutants)",
+"link": ""
+},
+{
+"time": "2026-10-26T20:07:42-04:00",
+"worker": "Pernille",
+"type": "build",
+"summary": "T-0223: fixed run_action's shallow copy (a None return kept nested edits and changed the caller's dict, against R12) and added Maren's dropped-edit hint on stderr; 4a16b12f",
+"link": ""
+},
+{
+"time": "2026-10-26T20:07:01-04:00",
+"worker": "Maren",
+"type": "work",
+"summary": "T-0232 done: six editor colour tokens per appearance (plus Increase Contrast), key row rules in the IDE spec; find-match tint sent as a C51 question",
+"link": ""
+},
+{
+"time": "2026-10-26T20:05:58-04:00",
+"worker": "Idris",
+"type": "work",
+"summary": "T-0235: placed Ines's 19:56 chair note (T-0221) in L5 s5: ops_log rule and 32 KiB bound, surviving-thread writes as ops, 288 KiB ceiling, three G-L5-5 cases; new Q-T235-1 for Ines",
+"link": ""
+},
+{
+"time": "2026-10-26T20:05:20-04:00",
+"worker": "Pernille",
+"type": "task_done",
+"summary": "T-0211 Install from file follow-ups: no-network and next-launch .pth/sys.path tests in child interpreters, vendor RECORD integrity, installer size (53,600 bytes) in the stdlib manifest; 7/7 seeded mutants killed (5e423495)",
+"link": ""
+},
+{
+"time": "2026-10-26T20:05:13-04:00",
+"worker": "Maren",
+"type": "design",
+"summary": "T-0237: draft lint words for PWL003 (location, no Always) and PWL012 (handler writing its own widget), L2 s3.2.1, C51 draft",
+"link": ""
+},
+{
+"time": "2026-10-26T20:03:46-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-0218 (f9b4965d): ADR-002 view tree accepted; ADR-004 chosen-gated with G1 bars and a 2026-10-30 verdict date; ADR-003 package policy written with the Day 10 native-wheel rule (Pernille T-0242/T-0243, Odalys T-0244)",
+"link": ""
+},
+{
+"time": "2026-10-26T20:02:47-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #74",
+"link": ""
+},
+{
+"time": "2026-10-26T20:02:13-04:00",
+"worker": "Odalys",
+"type": "finding",
+"summary": "Day 5 idle audit: no work session 02:58-19:38 (16.6 h). The daily share was spent by 02:58: a 10-25 session's $166.49 was booked on the day it ended, and the rest went in a burst. The governor now books a run's cost to the day it started. OPT-039.",
+"link": ""
+},
+{
+"time": "2026-10-26T20:01:41-04:00",
+"worker": "Idris",
+"type": "work",
+"summary": "T-0226 and T-0227: L5 drain step 1 now commits a stale failed_count, IDE clear order and kill point placed per Ines's 19:56 note; handler result commits proposed as key diffs in ops_log (Q-T227-1); new finding Q-T226-1",
+"link": ""
+},
+{
+"time": "2026-10-26T19:59:00-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-26T19:58:42-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-0221 chair rulings: L5 Q-T174-1/2 (ops_log as a rule plus byte bound) and Apple location page (C2-Q1 needs a second widget extension; no Always in v1 or 1.1; PWL003 drops Always)",
+"link": ""
+},
+{
+"time": "2026-10-26T19:58:02-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "T-0224: a-Shell and Carnets maker pages read once each; both silent on in-app purchases, cells stay open (a8dec76b)",
+"link": ""
+},
+{
+"time": "2026-10-26T19:56:04-04:00",
+"worker": "Maren",
+"type": "design",
+"summary": "T-0217: design reads for ADR-002 (agree, four additive changes; Color.semantic('background') in the L4 example draws a near-black card) and ADR-004 (agree Runestone; theme and key-row rules). Follow-ups T-0232-T-0234.",
+"link": ""
+},
+{
+"time": "2026-10-26T19:56:01-04:00",
+"worker": "Idris",
+"type": "review",
+"summary": "T-0210: pywidget_ui 0.3.0 passes Idris's names check at 17cec9d1 (19/19 renames, six s7.3 items, Rulings 1-2); closes T-0020's two-reviewer check and T-0022 probation (a)'s Idris review; unbuilt agreed rows and A2-A7 to T-0231 (Pernille)",
+"link": ""
+},
+{
+"time": "2026-10-26T19:55:18-04:00",
+"worker": "Pernille",
+"type": "build",
+"summary": "T-0190: bridge contract v5 adds the preview run; runtime runs it as a widget run and writes no file (App Group snapshot test), 564/0 on both Pythons; waits on Idris's agreement",
+"link": ""
+},
+{
+"time": "2026-10-26T19:54:44-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #72",
+"link": ""
+},
+{
+"time": "2026-10-26T19:53:16-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "T-0034 done: Apple's CLGeocoder page read (rate-limited per app, one request per user action, none in background; deprecated from iOS 26 for MKGeocodingRequest). Apple Weather via Shortcut still unproven. Guideline 4.5.4 quoted from the #59 PDF into C2. Apple day cap 12/12 reached; T-0046 and T-0012",
+"link": ""
+},
+{
+"time": "2026-10-26T19:52:29-04:00",
+"worker": "Odalys",
+"type": "review",
+"summary": "T-0175: L5 s5 placement check of the 02:32 rulings passes (B1-B4, C3, B4-a written as ruled); gate review part met; two new findings for Idris (T-0226, T-0227)",
+"link": ""
+},
+{
+"time": "2026-10-26T19:51:56-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "Chair rulings: arXiv opens on named papers, capped, once the guard enforces it (T-0205); run_action None-return hint yes, shallow-copy leak fixed first (T-0215); sellerUrl counts as maker link (T-0216). #70 post refused by permission check; T-0225 for the Operator.",
+"link": ""
+},
+{
+"time": "2026-10-26T19:51:46-04:00",
+"worker": "Ines",
+"type": "ops",
+"summary": "Rebuilt PR #71 (amendments retire-and-fold) on current main: two newer amendments kept word for word, rest identical to the approved version; mergeable, waiting for an Investor merge",
+"link": ""
+},
+{
+"time": "2026-10-26T19:51:32-04:00",
+"worker": "Maren",
+"type": "design",
+"summary": "T-0194: IDE spec s5.6/s5.8 and mockups follow the T-0173 ruling: no network-off switch in v1, tour page 3 is a date picker on the gallery path, iPad 1 store shot shows the pane as part A builds it with the caption 'see how it looks'",
+"link": ""
+},
+{
+"time": "2026-10-26T19:49:43-04:00",
+"worker": "Odalys",
+"type": "proposal",
+"summary": "Proposal #68 (approved 02:28) was never applied: #66 and #63 changed the lines its diff rested on, and the applier refused it on 67 ticks. Odalys posted the same change rebased onto main as #74; it needs a fresh approve.",
+"link": ""
+},
+{
+"time": "2026-10-26T19:48:52-04:00",
+"worker": "Idris",
+"type": "work",
+"summary": "T-0142: Apple-page facts (matrix 1d A2-A6) folded into L1, L2, L8, L9, C2; tags changed only where saved quotes support them, the rest kept with dated notes",
+"link": ""
+},
+{
+"time": "2026-10-26T19:48:26-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #72",
+"link": ""
+},
+{
+"time": "2026-10-26T19:48:06-04:00",
+"worker": "Idris",
+"type": "work",
+"summary": "T-0174: Ines's 02:32 rulings (B1-B4, C3, B4-a, S1-S6, N1, N3-N5) and the 02:40 N2 field written into L5 s5 as dated lines (ecc48672); two open items for Ines (Q-T174-1, Q-T174-2); T-0175 placement check is Odalys's next",
+"link": ""
+},
+{
+"time": "2026-10-26T19:47:39-04:00",
+"worker": "Maren",
+"type": "design",
+"summary": "T-0200: renderer 238c5e1e checked against design-system-v0 value by value (s8.4, 13 rows); display face and widget card cleared; one fix, stripped-mode tertiary 0.5 to 0.66 (render.py done, Swift T-0219 Idris)",
+"link": ""
+},
+{
+"time": "2026-10-26T19:45:40-04:00",
+"worker": "Wrenna",
+"type": "research",
+"summary": "T-0197: arxiv.org/help/robots read once (#70 option A): HTTP 404, no redirect; arxiv-terms.md s8 states what robots.txt + API terms permit and forbid; Ines rules on T-0205. T-0013: widgy.app robots unreachable (gap), holzschu.github.io home 404; in-app prices stay with the person read",
+"link": ""
+},
+{
+"time": "2026-10-26T19:42:53-04:00",
+"worker": "Idris",
+"type": "fix",
+"summary": "agent_worktree.sh merge now refuses renames out of Investor and shared-state paths and no longer refuses ops/board.md.bak (T-0183, T-0184); found a third hole (quoted non-ASCII names) and closed it; 29/29 fixture tests",
+"link": ""
+},
+{
 "time": "2026-10-26T18:03:47-04:00",
 "worker": "Ines",
 "type": "report",

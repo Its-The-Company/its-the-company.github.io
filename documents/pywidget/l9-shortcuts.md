@@ -13,6 +13,7 @@ description: "Recommend iOS 18.0, with iOS 26 additions behind #available. Reaso
 {% raw %}
 Idris, 2026-10-25, Day 4. Brief L9 (Blocking for the C7 Shortcut Lab parts). Same sources and tags as L8-integrations.md:
 **[SDK]** iOS 27.1 SDK, **[CLI]** macOS 27.0.1 `shortcuts` tool run here, **[M]** memory, to be checked in a person's browser.
+- **[apple-page A#]** (added 2026-10-26, T-0142): Apple's developer page, read signed out on 2026-10-26 01:15-01:17 ET under the Investors' #64 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>; quote, URL and time in pywidget/docs/release/app-review-matrix.md s1d item A#; the saved copy is in research/inbound/apple/developer.apple.com/ (index.tsv). A3 = Keeping a widget up to date, A4 = Accessing location information in widgets, A2 = Describing use of required reason API, A5 = AppShortcutsProvider, A6 = Complying with Encryption Export Regulations.
 Evidence: `L8-L9-raw/sdk-checks.txt` (script `L8-L9-raw/bin/sdk_checks.sh`).
 
 ## 1. Verdicts first
@@ -72,7 +73,7 @@ Runtime: 30 seconds unless progress is reported [SDK doc comment]; the intent re
 | **Run Script** | `script: ScriptEntity`; `arguments: [String]` (optional, becomes `sys.argv[1:]`) | `ReturnsValue<String>` & `ProvidesDialog` | Runs the script. Result = the value passed to `shortcuts.set_output(...)`, else stdout. Dialog is the short form for Siri |
 | **Run Script with Input** | `script: ScriptEntity`; `input: [IntentFile]` (files, images, text and URLs arrive as files) [SDK: `IntentFile` iOS 16]; `text: String?` | `ReturnsValue<String>` | Same, with `shortcuts.input()` returning the text and file paths (files copied into the script's temp dir). Structured output: scripts return JSON text; the recipe uses "Get Dictionary from Input" |
 | **Set Widget Data** | `slot: WidgetSlotEntity`; `value: String` (plain text or JSON); `refresh: Bool = true` | `ReturnsValue<String>` (the stored value, read back from the App Group) | Writes the slot into the App Group store, then reads it back and returns what is actually on disk. Then `WidgetCenter.reloadTimelines(ofKind:)` for widgets that use the slot |
-| **Refresh Widget** | `widget: WidgetEntity?` | none | `reloadTimelines(ofKind:)` or `reloadAllTimelines()` [SDK]. Reloads are budgeted by the system [M]; the intent says so in its description |
+| **Refresh Widget** | `widget: WidgetEntity?` | none | `reloadTimelines(ofKind:)` or `reloadAllTimelines()` [SDK]. Reloads are budgeted by the system [apple-page A3, 2026-10-26; was M: 40 to 70 a day for a frequently viewed widget; whether a Shortcuts-triggered reload counts is not stated, L2 s4]; the intent says so in its description |
 | **Get Widget State** | `widget: WidgetEntity` | `ReturnsValue<String>` (JSON: slot values, last timeline date, last script error) | Read-only, from the App Group |
 | Open Script (support) | `target: ScriptEntity` | opens the editor | `OpenIntent` (iOS 16) [SDK] |
 | Choose Script (widget config) | `script: ScriptEntity` | n/a | `WidgetConfigurationIntent` (iOS 17) [SDK] for a configurable "Script Output" widget |
@@ -85,7 +86,7 @@ Why one result type: an intent's `PerformResult` is a fixed type [SDK: `associat
 
 ### 2.4 AppShortcutsProvider
 
-Four App Shortcuts, phrases with the app name token (required [M]): "Run a script in ${applicationName}" (parameterised on `ScriptEntity`, refreshed with `updateAppShortcutParameters()` when scripts change [SDK, iOS 16]), "Refresh my ${applicationName} widgets", "Set widget data in ${applicationName}", "Open ${applicationName} scratchpad". The per-app ceiling on App Shortcuts (I recall 10) is [M].
+Four App Shortcuts, phrases with the app name token (required [M]): "Run a script in ${applicationName}" (parameterised on `ScriptEntity`, refreshed with `updateAppShortcutParameters()` when scripts change [SDK, iOS 16]), "Refresh my ${applicationName} widgets", "Set widget data in ${applicationName}", "Open ${applicationName} scratchpad". The per-app ceiling on App Shortcuts (I recall 10) is [M]. 2026-10-26: the AppShortcutsProvider page states no ceiling on shortcuts or phrases, and nothing on the app name token, so both stay [M] [apple-page A5]. New on that page: "Apple may extract anonymized App Shortcuts data such as localized phrases, display representation values, and the title and description of related intents." `ScriptEntity` display representations are the user's script names, so a parameterised phrase can carry them; for the privacy-label owner (A1: "You are not responsible for disclosing data collected by Apple").
 In-app discovery: `ShortcutsLink` (iOS 16) and `SiriTipView` (iOS 16) [SDK] on the Shortcuts settings page and after a user's first successful script run.
 
 ### 2.5 Tests (written before the intents)
@@ -112,7 +113,7 @@ XCTest on the intent `perform()` with a fake runtime: (1) Set Widget Data return
 
 1. **Entry:** our Share extension accepts files (`public.data`, `public.file-url`) and URLs. What Shortcuts' own share sheet hands to a third-party extension (a file, an iCloud URL, or both) is [M]; the device prototype answers it first.
 2. **File received:** the extension does no parsing (memory, and fragility kept out of the extension). It writes `raw/<sha256>.shortcut` into the App Group with the time, the source app if known, and the name the user confirms (pre-filled from the file name), and returns at once.
-3. **iCloud link received:** stored as a link only. Resolving an icloud.com link to its contents means reading Apple web pages or undocumented endpoints by program, barred by Apple's site terms (<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span>-v2 <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G2a</span>) and undocumented. We never fetch it; the card says "share the file instead: Share → Options → File" (exact menu path [M]).
+3. **iCloud link received:** stored as a link only. Resolving an icloud.com link to its contents means reading Apple web pages or undocumented endpoints by program, barred by Apple's site terms (rulings-v2 <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G2a</span>) and undocumented. We never fetch it; the card says "share the file instead: Share → Options → File" (exact menu path [M]).
 4. **History:** every share is a snapshot; same name plus different hash = a new version; same hash = "unchanged" note. Pure file storage, supported, works even if the parser is gone.
 5. **Parser (isolated):** a separate Swift module `ShortcutFormat` with no dependants except the Lab's views. Input: raw bytes. Output: a versioned model or an explicit `.unsupported(reason)`. Unknown actions become generic blocks showing their identifier. Fixtures: real files shared by people (never generated by us), tested on every iOS beta (brief L9). If it breaks, history and hash-diff keep working.
 6. **Reminder:** the app offers a recipe for a weekly personal automation that sends a notification "Share any changed shortcuts to pywidget". Open device question: whether Shortcuts' own "Get My Shortcuts" action can pass shortcuts as files into "Run Script with Input" [M]. If it can, a user-built automation snapshots everything with public actions only; if not, the reminder is manual.
@@ -138,7 +139,7 @@ XCTest on the intent `perform()` with a fake runtime: (1) Set Widget Data return
 ## 7. Open
 
 - Device: what the Shortcuts share sheet delivers; real file bytes; "Get My Shortcuts" into our intent; 30-second behaviour with CPython start-up.
-- Person's browser checks: App Shortcuts ceiling and phrase rules, Shortcuts share menu path, the signing requirement for imports (brief: "since iOS 15").
+- Person's browser checks: App Shortcuts ceiling and phrase rules, Shortcuts share menu path, the signing requirement for imports (brief: "since iOS 15"). 2026-10-26: the AppShortcutsProvider page gives neither the ceiling nor the phrase rules (A5); the `AppShortcut` and phrase pages are the next single reads (#64).
 - Investors: iCloud account for template links; iOS floor ADR input (install share).
 {% endraw %}
 

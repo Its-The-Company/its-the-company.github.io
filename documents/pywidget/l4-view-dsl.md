@@ -57,7 +57,8 @@ The widget extension never runs Python in v1 (see L3 question in section 12). It
 - `schema` and `version` come first and are the only keys a renderer must understand before deciding whether it can render (section 8).
 - `timeline.entries[].view` is one node tree. An entry may instead carry `views`, a map from family name to node, for designs that differ per family. `view` is the fallback for any family not in `views`.
 - Node: `{"t": <type>, "p": {<props>}, "m": [<modifier>...], "c": [<child>...]}`. `p`, `m`, `c` are optional and omitted when empty. A modifier is `{"m": <name>, ...args}`. Order of `m` is the SwiftUI application order (padding then background differs from background then padding).
-- All dates are ISO 8601 in UTC with a `Z` suffix. All numbers are JSON numbers; points are device-independent points.
+- All dates are ISO 8601 in UTC with a `Z` suffix. All numbers are JSON numbers and every number is finite: JSON has no NaN or Infinity. Where SwiftUI takes `.infinity` (`frame` `maxWidth` and `maxHeight` only) the tree writes the string `"infinity"` (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G9</span>). Points are device-independent points.
+- `timeline.entries` are strictly ascending by `date`; two entries with the same date are rejected (G6). JSON Schema cannot say this, so `pywidget_ui` refuses it at the caller's line and `ui.validate` reports it; a renderer stable-sorts by date and, for equal dates, keeps the first in document order and logs (fixtures: `pywidget/tests/fixtures/renderer-rules/`).
 - Keys are sorted on output so two serializations of the same widget are byte-identical (the web and the phone can diff them).
 
 ## 2. Node catalog, version 1
@@ -67,13 +68,13 @@ The widget extension never runs Python in v1 (see L3 question in section 12). It
 
 | `t` | props `p` | children `c` | SwiftUI | Notes |
 |---|---|---|---|---|
-| `VStack`, `HStack`, `ZStack` | `alignment`, `spacing` | yes | same | alignment names: `leading, center, trailing, top, bottom, topLeading...`, plus `firstTextBaseline, lastTextBaseline` for HStack |
+| `VStack`, `HStack`, `ZStack` | `alignment`, `spacing` (ZStack: `alignment` only) | yes | same | alignment (G3): VStack `leading, center, trailing`; HStack `top, center, bottom, firstTextBaseline, lastTextBaseline`; ZStack the 9 `Alignment` names `topLeading, top, topTrailing, leading, center, trailing, bottomLeading, bottom, bottomTrailing` |
 | `Spacer` | `minLength` | no | Spacer | |
 | `Divider` | | no | Divider | |
 | `Group` | | yes | Group | lets modifiers apply to several children |
 | `Text` | `content` (section 3) | no | Text | the only node that self-updates without a new timeline entry |
 | `Image` | `source` (section 4) | no | Image | symbols, bundled assets, bitmaps |
-| `Gauge` | `value`, `min`, `max`, `style`, `label`, `currentValueLabel`, `minimumValueLabel`, `maximumValueLabel` (each a node or null) | no | Gauge | styles: `accessoryCircular`, `accessoryCircularCapacity`, `accessoryLinear`, `accessoryLinearCapacity`, `linearCapacity` (S:32371, 13066, 19952, 24449, 16258) |
+| `Gauge` | `value`, `min`, `max`, `style`, `label`, `currentValueLabel`, `minimumValueLabel`, `maximumValueLabel` (each a node, left out when absent; G2) | no | Gauge | styles: `accessoryCircular`, `accessoryCircularCapacity`, `accessoryLinear`, `accessoryLinearCapacity`, `linearCapacity` (S:32371, 13066, 19952, 24449, 16258) |
 | `ProgressView` | `value`, `total` or `timerInterval` `{start,end}`, `countsDown`, `label`, `currentValueLabel` | no | ProgressView | `ProgressView(timerInterval:countsDown:label:currentValueLabel:)` S:1493–1501 |
 | `Rectangle`, `RoundedRectangle`, `Circle`, `Capsule`, `Ellipse`, `ContainerRelativeShape` | `cornerRadius`, `cornerStyle` (`circular`/`continuous`), `fill`, `stroke`, `lineWidth` | no | shapes | `fill`/`stroke` take a Paint (section 5) |
 | `Path` | `commands`, `space` (`unit`|`points`), `fill`, `stroke`, `lineWidth`, `lineCap`, `lineJoin`, `evenOdd` | no | Path in GeometryReader | section 5.3 |
@@ -81,7 +82,7 @@ The widget extension never runs Python in v1 (see L3 question in section 12). It
 | `Toggle` | `isOn`, `action`, `args` | yes (label) | `Toggle(isOn:intent:label:)` AI:237 | iOS 17+ |
 | `Link` | `url` | yes (label) | Link | deep link into the app |
 | `AccessoryWidgetBackground` | | no | `AccessoryWidgetBackground` W:622 | Lock Screen only |
-| `When` | `env`, `is` (value or list) | yes (then) + `alt` (else) | resolved by the renderer | section 7; the one conditional. `env` in `family, renderingMode, showsContainerBackground, isLuminanceReduced, colorScheme, dynamicTypeSize` |
+| `When` | `env`, `is` (one value or a non-empty list of values from the key's set; G10) | yes (then) + `alt` (else) | resolved by the renderer | section 7; the one conditional. `env` in `family, renderingMode, showsContainerBackground, isLuminanceReduced, colorScheme, dynamicTypeSize, stale`. Values: family names; `fullColor, accented, vibrant`; `light, dark`; the 12 `DynamicTypeSize` names `xSmall` to `accessibility5`; booleans for `showsContainerBackground`, `isLuminanceReduced` and `stale` |
 
 </div>
 
@@ -110,14 +111,15 @@ Not in v1, on purpose: `Grid`, `LazyVGrid`, `Chart` (Swift Charts works in widge
 ```json
 {"kind": "symbol", "name": "figure.walk", "variableValue": 0.6}
 {"kind": "asset", "name": "logo"}          // bundled in the widget extension: first-party only
-{"kind": "bitmap", "format": "png", "scale": 3, "data": "<base64>" | null, "file": "images/(email withheld)"}
+{"kind": "bitmap", "format": "png", "scale": 3, "file": "images/(email withheld)"}
+{"kind": "bitmap", "format": "png", "scale": 3, "data": "<base64>"}
 ```
 
 The symbol source has no rendering mode; the `symbolRenderingMode` modifier sets it (names review s8 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Ruling</span> 1). `ContainerRelativeShape` (C:18147) is the widget's own corner shape (A1).
 
 
 - `symbol` names are SF Symbols. The renderer validates with `UIImage(systemName:)` and falls back to `questionmark` plus a log line; the Python side ships a symbol-name list for completion.
-- `bitmap` is the Pillow fallback (section 10). `file` is relative to the widget's App Group folder; `data` inline is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at 64 KiB by the serializer (archives of large widgets are slow and WidgetKit limits the archive size; the number is unpublished, the cap is ours).
+- `bitmap` is the Pillow fallback (section 10). It carries exactly one of `data` and `file`, as a string; the other key is absent, never null (G14). `file` is relative to the widget's App Group folder; `data` inline is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at 64 KiB by the serializer (archives of large widgets are slow and WidgetKit limits the archive size; the number is unpublished, the cap is ours).
 - Image-only modifiers: `resizable`, `aspectRatio` (`fit`/`fill`), `imageScale`, `symbolRenderingMode`, `widgetAccentedRenderingMode` with values `fullColor, accented, desaturated, accentedDesaturated` (W:176–179, iOS 18+). On iOS 17 the renderer ignores `widgetAccentedRenderingMode` and the image is tinted whole.
 
 ## 5. Paint, fonts, modifiers
@@ -161,14 +163,18 @@ Gradient points are in unit space of the painted view. `semantic` colors adapt t
 ], "stroke": {...paint}, "lineWidth": 3, "lineCap": "round"}}
 ```
 
+`lineCap` is `butt, round, square` and `lineJoin` is `miter, round, bevel` (G3): `CGLineCap` and `CGLineJoin`, read in `CoreGraphics.framework/Headers/CGPath.h` of the iPhoneOS 27.1 SDK on 2026-10-26 (lines 35-37 `kCGLineCapButt, kCGLineCapRound, kCGLineCapSquare`; lines 27-29 `kCGLineJoinMiter, kCGLineJoinRound, kCGLineJoinBevel`), so no longer [recalled]. `fill` and `stroke` take a paint, `lineWidth` a number, `evenOdd` a boolean (G2).
+
 `space: unit` means coordinates are multiplied by the view's size at render time (the renderer wraps the Path in a GeometryReader); `points` draws as given. Angles are degrees, clockwise positive in screen space, matching SwiftUI's `Path.addArc` with `clockwise: false` meaning increasing angle. Line width is always in points. This is enough for rings, sparklines, bar charts, dials and the gallery.
 
 ### 5.4 Modifier catalog (`m` entries)
 
-Layout: `padding {edges, length}`, `frame {width, height, minWidth, maxWidth, minHeight, maxHeight, alignment}`, `offset {x, y}`, `fixedSize {horizontal, vertical}`, `layoutPriority {value}`.
-Appearance: `foregroundStyle {paint}`, `background {paint | view}`, `overlay {view, alignment}`, `clipShape {shape, cornerRadius, cornerStyle}` (`shape` required, one of the six shape names; `cornerRadius` required for `RoundedRectangle` and written for it only; the Python default is `ContainerRelativeShape`, names review s8 Ruling 2), `opacity {value}`, `rotationEffect {degrees}`, `scaleEffect {x, y}`, `shadow {color, radius, x, y}`, `blendMode {mode}`.
+Every modifier's arguments are typed in the schema (G1): a paint is `$defs/paint`, a view is `$defs/node` and is checked to the bottom (G2), a font is `$defs/font`. `background`, `overlay` and `containerBackground` take exactly one of `paint` and `view`. The widget card paint (`widgetCard`) is allowed in `containerBackground` only (`$defs/containerPaint`). Value sets (G3): alignments are the 9 `Alignment` names; `edges` are `all, horizontal, vertical, top, bottom, leading, trailing`; `blendMode` the 21 SwiftUI `BlendMode` names; `redacted` reasons `placeholder, privacy, invalidated`; `truncationMode` `head, middle, tail`; `multilineTextAlignment` `leading, center, trailing`; `imageScale` `small, medium, large`; `aspectRatio` mode `fit, fill`; `symbolRenderingMode` `monochrome, hierarchical, palette, multicolor`. Objects stay open: a renderer ignores a key it does not know (section 8).
+
+Layout: `padding {edges, length}` (`edges` one name or a non-empty list of different names, SwiftUI's `Edge.Set`; Python writes a string for one name), `frame {width, height, minWidth, maxWidth, minHeight, maxHeight, alignment}` (only `maxWidth` and `maxHeight` take `"infinity"`, G9), `offset {x, y}`, `fixedSize {horizontal, vertical}` (booleans), `layoutPriority {value}`.
+Appearance: `foregroundStyle {paint}`, `background {paint | view, alignment}`, `overlay {paint | view, alignment}`, `clipShape {shape, cornerRadius, cornerStyle}` (`shape` required, one of the six shape names; `cornerRadius` required for `RoundedRectangle` and written for it only; the Python default is `ContainerRelativeShape`, names review s8 Ruling 2), `opacity {value}`, `rotationEffect {degrees}`, `scaleEffect {x, y}`, `shadow {color, radius, x, y}` (`color` a `color` or `semantic`, G17 as the DSL has it), `blendMode {mode}`.
 Text: listed in section 3. Image: listed in section 4.
-Widget-specific: `widgetAccentable {accentable}` (W:1060), `invalidatableContent {}` (S:2785), `widgetURL {url}` (W:617, at most one per tree, renderer takes the first), `containerBackground {paint | view}` (root only, S:15907/15910, iOS 17), `privacySensitive {}`, `redacted {reason}`, `accessibilityLabel {text}`, `accessibilityHidden {}`.
+Widget-specific: `widgetAccentable {accentable}` (W:1060), `invalidatableContent {}` (S:2785), `widgetURL {url}` (W:617, at most one per tree, renderer takes the first), `containerBackground {paint | view}` (root only, S:15907/15910, iOS 17), `privacySensitive {}`, `redacted {reason}`, `accessibilityLabel {text}`, `accessibilityHidden {hidden}`.
 
 Unknown modifier names are **ignored** by the renderer and logged (forward compatibility); unknown node types are replaced by the node's `alt` child if present, else by an empty view and a logged error (section 8).
 
@@ -209,7 +215,7 @@ Container background and StandBy: `containerBackground(_:for: .widget)` (S:15907
 
 Lock Screen accessories and vibrant mode: everything renders as a luminance mask; colors are lost; `AccessoryWidgetBackground` gives the standard pill/circle; `isLuminanceReduced` (Always-On) is an env key for `When`. `Gauge` accessory styles exist only to be used here.
 
-Locations (W:1588–1624): `homeScreen, lockScreen, standBy, iPhoneWidgetsOnMac, watchFace, smartStack, carPlay` with `disfavoredLocations(_:for:)` (W:1631) at configuration time. Not a render-time env value, so not a `When` key; the widget document carries an optional `disfavoredLocations` list.
+Locations (W:1588–1624): `homeScreen, lockScreen, standBy, iPhoneWidgetsOnMac, watchFace, smartStack, carPlay` with `disfavoredLocations(_:for:)` (W:1631) at configuration time. Not a render-time env value, so not a `When` key; the widget document carries an optional `disfavoredLocations` list. G16, same rule as families: the schema keeps all seven (a watch target later); `pywidget_ui` on iOS accepts `homeScreen, lockScreen, standBy, iPhoneWidgetsOnMac, carPlay` and refuses `watchFace` and `smartStack` (`@available(iOS, unavailable)`) at the caller's line. The renderer ignores the watch-only values and applies `carPlay` under `#available(iOS 26)`. The flat list applies to every family the widget declares (SwiftUI's call takes a family list); a per-family form would be a new optional key, additive in 1.1.
 
 Per-family design: the Python author writes `render(ctx)` where `ctx.family` is known at run time and the runtime calls it once per family in `widget.families` and stores the results under `views`. So one Python function, several trees, no runtime branching in the extension beyond `When`.
 
@@ -222,7 +228,8 @@ Per-family design: the Python author writes `render(ctx)` where `ctx.family` is 
 - Conformance: `viewtree.schema.json` is the normative shape; the Swift renderer and the web renderer each ship a fixture suite of documents (`pywidget/tests/fixtures/*.json`, generated by the Python tests) that both must render; L14's pixel-diff runs on that same set.
 - Timelines: `sampled_at` is when Python ran; `stale_after` is seconds after which the renderer overlays a small stale mark (`When(env="stale")` is resolved by the renderer from `now - sampled_at > stale_after`). This is how a widget whose data source stopped shows honesty instead of a frozen number. (`stale` is the one env key computed, not read from SwiftUI.)
 - Reload policy maps 1:1 to `TimelineReloadPolicy` (W:1659–1662): `atEnd`, `never`, `after(date)`.
-- Relevance per entry maps to `TimelineEntryRelevance(score:duration:)` (W:32) for Smart Stack ordering.
+- Relevance per entry maps to `TimelineEntryRelevance(score:duration:)` (W:32) for Smart Stack ordering. `score` is a finite number; `duration` is seconds, 0 or more, optional (WidgetKit's default is 0); Python takes a number or a `timedelta`, as for `stale_after` (G15).
+- Entries are in time order, each date after the one before (s1, G6).
 
 ## 9. Builder blocks compile to the same Python (L17)
 
@@ -305,7 +312,7 @@ Found by Pernille while taking `pywidget_ui` to the v1 DSL package (2026-10-25).
 
 | # | Gap | Where | DSL now | Ask |
 |---|---|---|---|---|
-| <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span> | Modifier arguments have no schema: `$defs/modifier` only checks `m`. `$defs/paint` and `$defs/font` are referenced nowhere, so a wrong paint in `foregroundStyle`, `background`, `containerBackground`, or a wrong font in `font`, passes the schema. | schema `$defs/modifier`, s5.4 | The DSL checks paint and font kinds; the dsl suite validates every modifier's paint and font against `$defs/paint`/`$defs/font` itself. | Add per-modifier argument schemas (`if m == ... then`), at least paint, font, view. |
+| G1 | Modifier arguments have no schema: `$defs/modifier` only checks `m`. `$defs/paint` and `$defs/font` are referenced nowhere, so a wrong paint in `foregroundStyle`, `background`, `containerBackground`, or a wrong font in `font`, passes the schema. | schema `$defs/modifier`, s5.4 | The DSL checks paint and font kinds; the dsl suite validates every modifier's paint and font against `$defs/paint`/`$defs/font` itself. | Add per-modifier argument schemas (`if m == ... then`), at least paint, font, view. |
 | G2 | Nested trees and paints in props are untyped: Gauge and ProgressView labels, `background`/`overlay`/`containerBackground` `view`, shape and Path `fill`/`stroke`. A broken nested node validates. Stack, Spacer, ProgressView and shape props are unconstrained. | schema `$defs/node` | The suite walks nested nodes and validates each against `$defs/node`. | Type them as `$ref` node and paint. |
 | G3 | Value sets missing from spec and schema: stack and frame alignments (s2 lists them with "..."), padding `edges`, `clipShape.shape`, `blendMode.mode`, `redacted.reason`, `truncationMode`, `imageScale`, `multilineTextAlignment`, Path `lineCap`/`lineJoin`, `aspectRatio.mode`, `fixedSize` args, `scaleEffect` args, `frame` fill value. | s2, s5.3, s5.4 | Enforces SwiftUI's sets: VStack leading/center/trailing; HStack top/center/bottom/firstTextBaseline/lastTextBaseline; ZStack and frame the 9 `Alignment` names; edges all/horizontal/vertical/top/bottom/leading/trailing; shapes the 5 shape nodes; 21 `BlendMode` names; reasons placeholder/privacy/invalidated. | Confirm the sets and put them in the schema. |
 | G4 | Gradient stops take `$defs/color` (raw RGB) only, while s5.1 says to hand out semantic names; a semantic stop fails the schema. | schema `$defs/stop`, s5.1 | Raises "stops take ui.Color.rgb colors in view tree v1". | Allow `semantic` in stops (it interacts with Maren's R1)? |
@@ -353,7 +360,9 @@ Board lines T-0019 and T-0020: these nine rows were the last thing between the 0
 
 **What would make this fail.** (1) The DSL and the schema disagree, so a valid script ends in `schema_error`, worst during App Review. Check: every golden and every dsl-suite output validates against the tightened schema (it does today against the DSL's own checks), and one invalid document per row above goes in a shared folder, `pywidget/tests/fixtures/schema-invalid/`, that the Python checker and the Swift validator must both reject. (2) The Swift validator cannot read `if/then` or `oneOf`. That is Idris's call (a JSON Schema library under C4 and C5, or strict `Codable` with the same rules); the shared fixtures are the test either way, and a Codable path means the schema file is the spec and the Swift types must match it.
 
-**Deltas for Pernille (T-0020).** No change to the frozen-name set: nothing added, nothing removed. Behaviour and schema only: G1, G2 schema; G3 schema sets, `edges` list, the CoreGraphics grep; G6 DSL ordering check and spec sentence; G9 spec and frame schema; G10 schema and the closest-name hint in `_one_of`; G14 schema `oneOf` and the serializer drops the null key; G15 schema unit and `timedelta`; G16 DSL rejects the two watch locations. One invalid fixture per row. API.md row 5 and the `edges`, `relevance` and `disfavored_locations` docstrings updated. **For Idris:** the Swift validator rejects every fixture in `schema-invalid/`; the renderer rules in G6 and G16 go in Renderer.v1. **Not ruled here:** G4, G5, G7, G8, G11-G13, G17 (both reviews agree on them; Pernille applies the agreed reading, and any one she finds contested comes to me), and G18 (timeline declaration; open).
+**Deltas for Pernille (T-0020).** No change to the frozen-name set: nothing added, nothing removed. Behaviour and schema only: G1, G2 schema; G3 schema sets, `edges` list, the CoreGraphics grep; G6 DSL ordering check and spec sentence; G9 spec and frame schema; G10 schema and the closest-name hint in `_one_of`; G14 schema `oneOf` and the serializer drops the null key; G15 schema unit and `timedelta`; G16 DSL rejects the two watch locations. One invalid fixture per row. API.md row 5 and the `edges`, `relevance` and `disfavored_locations` docstrings updated. **For Idris:** the Swift validator rejects every fixture in `schema-invalid/`; the renderer rules in G6 and G16 go in Renderer.v1.
+
+**Applied (Pernille, 2026-10-26, T-0209).** Schema: per-modifier argument blocks for every modifier with arguments; nested nodes and paints typed; `$defs/containerPaint` holds the widget card; the G3 sets, `edges` string or list, frame `"infinity"` in max only, `When.is` per key, bitmap `oneOf` with no null, relevance `duration` seconds `minimum 0`, `$defs/location` with all seven. CGPath.h read for cap and join (s5.3). `pywidget_ui`: `padding(edges=)` takes a list; `Timeline` refuses entries out of order or on the same second, and `ui.validate` reports it; "must be one of" errors end in "did you mean ...?" (stdlib `difflib`, case ignored; also the family and `When` errors); the bitmap serializer drops the null key (catalog goldens only); `relevance` `duration` takes a `timedelta`; `Widget(disfavored_locations=)` refuses `watchFace` and `smartStack`; `When(env, [])` is refused, since the schema needs a non-empty list. Fixtures: `pywidget/tests/fixtures/schema-invalid/` (10 documents, one or two per schema row; G6 has no schema form) and `pywidget/tests/fixtures/renderer-rules/` (G6 equal and out-of-order dates, G16 watch locations: the schema accepts them, the renderer handles them as `index.json` says). Each is the `index.json` base plus one JSON Patch operation; `pywidget/tests/dsl/schema_invalid.py` writes them and `test_g_rows.py` checks them. The stdlib checker now refuses a non-finite number. New error texts for Maren: the G6 order message (Ines's wording), the G16 watch-location message, the empty `edges` and `When` lists, and the hint suffix. **Not ruled here:** G4, G5, G7, G8, G11-G13, G17 (both reviews agree on them; Pernille applies the agreed reading, and any one she finds contested comes to me), and G18 (timeline declaration; open).
 
 Ines, CEO
 {% endraw %}

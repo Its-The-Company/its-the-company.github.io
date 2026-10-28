@@ -233,6 +233,132 @@ send a TestFlight build until N1 is fixed or ruled acceptable.
   `restore()` itself.
 
 Counts for this pass: Medium 1 new (N1), Low 1 new (N2); open from the first pass: L2, L3, L4, I1, I3, I5.
+
+## Re-review 2: aab3fe6a (T-0486, N1 and N2) and c3c6876f (T-0485 part 1), T-0490 and T-0493
+
+Reviewer: Pernille, 2026-10-27. Read-only: both diffs, `ProStore.swift` and `ProPaywallView.swift` at each commit,
+`ProStoreTests.swift`, `ProPaywallTests.swift`, `ProPaywallUITests.swift`, and the eight shots in
+`ops/site-checks/pro-paywall-T-0485/` (I opened the AX5 offer and the AX5 landscape footer). Nothing was built or
+run. No finding needed a run to prove it.
+
+### Verdict
+
+N1 and N2 are fixed. Restore can be reached at AX5 in portrait and in landscape, and the legal links are gated.
+There are no High or Medium findings, so no new board lines. Neither commit blocks a TestFlight build. Five Lows
+and two Info notes follow. N3 is the one I would fix before the App Store build, because it is N1 again, in a
+smaller window.
+
+### T-0490: aab3fe6a
+
+**N1: fixed.** `settlePurchase` (`ProStore.swift:188-196`) grants on the transaction in hand only when the read
+just before it said no, and then sets `grantedAhead` and starts the re-reads. Both happen in one main-actor step,
+with no suspension point between `setEntitled(true)` and `startCatchUp()`. `refreshEntitlement` (`:199-207`)
+checks the flag *after* its `await readEntitlements()`. So a read that started before the grant and ends after
+it, from the listener or from the screen's `load()`, is treated as lag and cannot revoke. The first read that
+agrees clears the flag and reloads once. A second read that agrees then sees the flag cleared, and
+`setEntitled(true)` does nothing, so there is no third reload. What I checked on concurrency:
+- Isolation. `ProStore` is `@MainActor`. The catch-up `Task` is created in a main-actor method, so it inherits
+  main-actor isolation. `[weak self]` and the per-iteration `guard let self` mean the store is not held while the
+  task sleeps. `entitlementCatchUp` is `nonisolated(unsafe)` only so that `deinit` can cancel it. That is sound,
+  because the task does not retain the store.
+- Cancellation. `Task.sleep` throws when the task is cancelled, and the task returns. A run that is cancelled in the
+  middle of `refreshEntitlement` finishes that read under whatever flag value is current, and then stops at its
+  next sleep. The guard after the loop stops a cancelled old run from clearing a newer run's flag. Between the
+  end of the loop and that guard there is no suspension point.
+- A second purchase. Pro is a non-consumable, and a new grant-ahead needs `!isEntitled`. During the window a "no"
+  cannot drop the grant, so "cancelled by a newer purchase" cannot actually happen (I1 below). A purchase made
+  while entitled returns `.purchased` and leaves the running window alone. That is correct.
+- A refund or revocation that arrives inside the window is swallowed (N4 below).
+
+Tests. A broken fix fails `testLaggingEntitlementsReloadAgainWhenAReadAgrees` in three ways. Without the lag guard,
+the second `[]` read revokes the grant and the next read restores it, so the test counts 3 reloads instead of 2.
+Without the reload on agreement it counts 1. If the re-reads do not stop at the first agreeing read, it counts 5
+reads instead of 3. `testCatchUpIsBoundedWhenNoReadAgrees` fails if the flag is not cleared after the loop.
+`testStopCancelsTheCatchUp` is weak (N5 below).
+
+**N2: fixed.** `restore()` sets `purchasedLine = nil` before `phase = .restoring` (`ProPaywallView.swift:195`). If a
+restore is cancelled, the line still ends at nil, as it did before this change.
+`testFailedRestoreShowsItsOwnLineOnBothScreens` fails without the change. Info I2 below covers one edge.
+
+#### N3 (Low): if currentEntitlements lags more than about 7.5 s, the second reload never comes
+- Where: `App/Store/ProStore.swift:226-239` (`startCatchUp`), `:199-207`, `:243-247`.
+- Failure: the last re-read happens at 7.5 s. If it still says no, the window ends with `grantedAhead = false` and
+  `isEntitled == true`. Later reads that agree (the Pro screen's `load()`, a listener delivery, Restore) go through
+  `setEntitled(true)`. That call sees no change, so it does not reload. The locked card stays until the next cold
+  launch, or until `.after(1 h)`. This is N1 again in a smaller window. In production StoreKit the lag is usually
+  well under a second, so this is Low.
+- Fix: keep two separate flags. One is "lag tolerated", which closes when the window ends. The other is "reload
+  owed", which stays set until any read agrees. Then the first agreeing read pays the owed reload, however late
+  it comes. Add a test where the reader agrees only on an ordinary `refreshEntitlement()` after the window, and
+  assert 2 reloads.
+
+#### N4 (Low): a refund or revocation that arrives inside the window is dropped, and nothing reads again afterwards
+- Where: `App/Store/ProStore.swift:204` (`guard grants else { return }`), `:211-214` (`handle`), `:236-237`.
+- Failure: Transaction.updates delivers the revoked transaction once, and `handle` finishes it. Its read says no,
+  which looks the same as lag, so it is ignored. When the window ends, the flag clears without a final read. The
+  app's gates then say Pro until the next read (opening the Pro screen, or a relaunch). The extension reads
+  StoreKit itself, so the widgets lock correctly, and the app and widget disagree. A refund within 7.5 s of a
+  purchase is unrealistic in production. It is easy in Xcode's StoreKit testing, and a later test could trip
+  over it.
+- Fix: in `handle(_:)`, a verified transaction for `productID` with a `revocationDate` is not lag. Clear
+  `grantedAhead` before the read, so the ordinary rule applies.
+
+#### N5 (Low): testStopCancelsTheCatchUp still passes with the cancel removed
+- Where: `Tests/ProStoreTests.swift:384-394`; `App/Store/ProStore.swift:132-133`.
+- Failure: `stop()` both cancels the task and clears `grantedAhead`. If the `cancel()` line is deleted, the
+  task wakes after 30 s and finds `grantedAhead == false` at its guard. It returns without reading, so `reads == 1`
+  and the test passes, 30 s slower. If instead the `grantedAhead = false` line is deleted, the test also passes.
+  Each line is covered only by the other.
+- Fix: bound the wait, e.g. assert that `await catchUp.value` returns in under 1 s with a `ContinuousClock`
+  measurement. Add a second assert that, after `stop()`, a lagging `refreshEntitlement()` drops the grant.
+
+#### I1 (Info)
+`startCatchUp`'s "cancelled by a newer purchase" cannot actually happen (see above), and nothing in the app
+calls `ProStore.stop()` (only tests do). The comments at `:85` and `:224-225` describe paths that are never
+taken. That is harmless, but the comment should say so, so that nobody relies on it.
+
+#### I2 (Info)
+N2's announcement depends on SwiftUI seeing `nil` before the new line arrives. If `AppStore.sync()` failed in
+the same frame, `onChange` would see the same string twice and say nothing. It is a round trip to the store
+daemon, so in practice at least one frame passes in between. I would not change anything for this.
+
+### T-0493: c3c6876f
+
+The AX5 offer shot shows the price on the first screen. The pinned bar takes about 41% of a 17e screen and the
+scroll still moves. In the AX5 landscape shot, Restore ends the scroll and nothing is pinned. The code follows
+one rule, `pinsFoot = !(ax && vSize == .compact)` (`ProPaywallView.swift:278`). Restore appears exactly once in
+each of the four combinations of ax and pinsFoot, on both screens (`:295`, `:305`, `:314`, `:484-492`).
+`LegalLinks.items` shows a link only for https with a non-empty host, in the order Terms, then Privacy. The unit
+test covers http, an empty host, mailto and file. The UI test would fail if a link showed with no URL set, if
+Restore were under the bar, if the tap did nothing, or if the price were missing from Buy. Its drag starts at
+half the window height, which lands on the pinned bar if the bar is pinned in landscape at AX5, so the
+landscape case would catch that regression.
+
+#### N6 (Low): the purchased screen's new AX5 layout is not tested or shot
+- Where: `App/Store/ProPaywallView.swift:484-507`; `UITests/ProPaywallUITests.swift:158`.
+- Failure: this commit restructured the purchased screen (`hasDoneButtons`, buttons in the scroll when not
+  pinned, links in the scroll at ax), but the UI test and the shots cover only the offer screen, and the purchased
+  screen only at Large. A later edit could hide Restore there at AX5, as a sheet with Done, or in landscape, and
+  the suite would stay green.
+- Fix: run the same loop once on the purchased screen (buy first, then do the AX5 portrait and landscape cases)
+  and assert that `pro.restore` can be tapped.
+
+#### N7 (Low): nothing fails a release build that ships with no in-app privacy link
+- Where: `App/LegalLinks.swift:12`; `Tests/ProPaywallTests.swift` `testShippedLegalURLsAreUnsetOrHTTPS`.
+- Failure: Guideline 5.1.1(i) asks for a privacy policy link inside the app as well as in App Store Connect. The
+  test accepts `nil` indefinitely. Right now only process holds the line: T-0485 stays `[b]`, plus gate <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G11</span>. If
+  the line is ticked or the gate is skipped, the build goes out without the link.
+- Fix: when the privacy URL is published, make `privacyPolicy` non-optional in the release configuration, or add
+  a release-checklist step that fails when `LegalLinks.items()` has no "privacy" item.
+
+#### I3 (Info)
+The landscape shot is saved in portrait pixels (1170 x 2532) with the content turned sideways, so reviewers
+read it rotated. `save()` (`ProPaywallUITests.swift:233-235`) could rotate the image to match the device
+orientation before writing. Also, all the AX5 evidence comes from an iPhone 17e. Running the AX5 portrait case
+once on the smallest supported iPhone (SE, 667 pt tall) would confirm the pinned bar still leaves room to scroll.
+
+Counts for this pass: High 0, Medium 0. Low 5 new (N3-N7), Info 3 new (I1-I3). N1 and N2 closed. Open from earlier
+passes: L2, L3, L4 and the earlier I1, I3, I5 (this pass's Info notes are numbered separately).
 {% endraw %}
 
 </div>

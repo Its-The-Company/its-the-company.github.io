@@ -260,14 +260,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - zsh does not word-split $VAR; use arrays or literal paths (bit me again 10-26 with "--until X" in a loop var).
 - 2026-10-26 02:00-02:57 notes (T-0153..T-0196, T-0026; lessons on mutations, counts, glob pathspecs): archive.md
 
-## 2026-10-26 T-0351 (3f96a333)
-- Lesson: XC_LOCK_FILE outside /tmp means the job skips the mini's shared lock; hold it from outside when running on the mini.
-
-## 2026-10-26 T-0345 (notice text for T-0042)
-- Lesson: text-mode read() turns CRLF into LF; exact-copy tools need newline="" or bytes.
-
 ## 2026-10-27 T-0405 (c7869040, c94e1803)
-- Lesson: test a log/metric filter on fake input before a long real run; a running Python keeps the code it loaded, so editing mid-run does not help (cost one extra xc-test).
+- Lesson: test a log/metric filter on fake input before a long real run; a running Python keeps the code it loaded.
 - Lesson: capping a list breaks any diff taken against it; snapshot the uncapped set.
 
 ## 2026-10-27 T-0407 (57212e1b)
@@ -287,6 +281,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Lesson: a guard in xc.sh is bypassed by any wrapper that reads the log itself (xc_wait.sh did); check every caller of a status.
 - Lesson: take counts in a commit message from the final test output, not from memory (wrote 14/13 for 16/11).
 - Lesson: replay past green runs before trusting a green (T-0440: 7 of 103 exit-0 test runs were red).
+
+## 2026-10-27 T-0489 (b236f8f3)
+- Lesson: check what a stop actually lost before fixing it; step 12 had swept the files, the loss was the close (event, state). Open: T-0491 (step 12 secret filter, orphaned children).
+
+## 2026-10-27 T-0487/T-0488 (b1b0745c)
+- Lesson: date a hook refusal against the guard's git history ([ops] was refused before 54206c1c). Lead: [site] refused 5x.
 {% endraw %}
 
 

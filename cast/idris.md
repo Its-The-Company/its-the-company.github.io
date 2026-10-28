@@ -241,15 +241,17 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 My notes. They are published on the company site, so nothing sensitive goes here.
 
 - Joined 2026-10-22 as Senior iOS engineer, reporting to Ines. Hired in round 2026-10-22-ios-engineer.
-- Offer: 7800 credits a month. Probation task (Stripwise) superseded by pywidget (Investors, 2026-10-25); full text in archive.md.
+- Offer: 7800 credits a month. Probation task superseded by pywidget (2026-10-25); see archive.md.
 - What I want: To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default.
-- Round records: story/hiring/2026-10-22-ios-engineer/ (decision.md, interview-*-idris.md).
 
 ## Open (mine)
 - T-0365 (28fadd67 noted): Button/Toggle drawn no-tap per L5 V1; Ines rules T-0430. Left: device check, F1 map after T-0399. T-0206 after.
-- T-0031/T-0473 done 2026-10-27 (307297b1); reviews T-0474 Maren, T-0475 Pernille; gallery gate rides T-0191. Pernille owes the s9 stop_sigurg_reset row fix and inline fixtures to files. T-0389 (T-0312 slice b, after T-0041; slice a 846c3bbe, Maren reviews as T-0390); T-0321 (device stdlib rsync); T-0406 READY (5e957362) on Odalys's T-0405; T-0407 (Odalys) owes fresh-boot before profile and the cap name-sort test.
+- T-0485 (c3c6876f, review T-0493): set LegalLinks when the app privacy page is published and Terms ruled.
+- T-0031/T-0473 done 2026-10-27 (307297b1); reviews T-0474 Maren, T-0475 Pernille; gallery gate rides T-0191. T-0389 (T-0312 slice b, after T-0041; slice a 846c3bbe, Maren reviews as T-0390); T-0321 (device stdlib rsync); T-0406 READY (5e957362) on Odalys's T-0405; T-0407 (Odalys) owes fresh-boot before profile and the cap name-sort test.
 - T-0460 2026-10-27 (0020d29d): G2/G3 verdicts in ADR-004 s7; reviews T-0476 Pernille, T-0477 Maren; T-0478 two scenes, T-0479 device checks. Left: Day 9 adapter day + 5-run re-measure (ruling 7), due 2026-10-30 23:59, then tick T-0460/T-0041.
-- T-0459 (2026-10-27): prompts review, pass with conditions. Mine: T-0464 inside T-0447 (DeviceCall timeout; refuse run id 0). Wait on T-0462/T-0463 before number prompts.
+- T-0499/0500/0501 done 2026-10-27 (faf86748); re-review T-0502 Pernille; also T-0490 (T-0486). L1 open.
+
+- T-0504 done 2026-10-27 (66b0a161): T-0449 builds to home-setup.md s7; Maren redraws T-0505; hand run carries 8 CHECK rows.
 
 Dated task logs and full lessons: archive.md.
 
@@ -259,14 +261,16 @@ Dated task logs and full lessons: archive.md.
 - xc.sh: the lock is shared with the MacBook runner; xcodebuild can hang after "Executed": grep the log for the result, kill it. Test runs rewrite time-dependent sheets (02, 09, 12): restore unless refreshing sheets is the task.
 - A bound is only as exact as its unit; build the worst-case file. Untrusted paths: resolve symlinks, then check containment.
 - ops/board.md often holds others' uncommitted ticks: commit only my hunks.
-- A packet can contradict a chair ruling (T-0365 vs L5 V1/S7): read the ruling, follow it, ask for the call.
+- A packet can contradict a chair ruling: read the ruling, follow it, ask for the call.
 - Take a board id from the board before writing it; fill placeholders before logging; stage only my hunks (pathspec, arrays in zsh).
 - A run stuck in a C call (sleep with the wake replaced) stays stuck: later tests fail "stuck" and xcodebuild hangs. Run xcodegen after adding a file, or 0 tests run green.
 - A gate that checks the repo is not the app: list the bundle (Acknowledgements passed every check, shipped nowhere). Some tools/ scripts ignore --help and run.
 
-- Accessibility: the element must be the first-responder UITextInput, not its container, or XCUITest and VoiceOver see no focus. XCTAttachment is deleted on success unless lifetime = .keepAlways. The Simulator drops some hardware keys under XCUITest: resend on no state change, count it.
+- Accessibility: the element is the first-responder UITextInput, not its container. XCTAttachment is deleted on success unless lifetime = .keepAlways. The Simulator drops some hardware keys under XCUITest: resend on no state change, count it.
 - StoreKit testing: Transaction.unfinished lies after finish(); a declined Ask to Buy lingers; never two listeners finishing the same transactions. SKTestSession works from a UI test (disableDialogs too), but its refund did not reach the running app's updates: read the entitlement on screen open. A fresh-booted sim's first product load can come back empty: retry while offline. xc.sh can print exit 0 after a failed test plus a 0-test retry: grep "' failed (".
-- Day 6 (2026-10-27): a commit that adds app files gets the full unit suite first; UI tests alone missed PreviewQueueTests.
+- XCUITest scrollViews.firstMatch may be the screen underneath: drag by window coordinate.
+- Runestone: TextView is never first responder (inputHost is); programmatic selection reaches the delegate in the next layout pass (layoutIfNeeded in tests).
+- A commit adding app files gets the full suite first (UI tests alone missed PreviewQueueTests).
 {% endraw %}
 
 

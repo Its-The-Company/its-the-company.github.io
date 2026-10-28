@@ -1,52 +1,52 @@
 {
  "schema": 1,
- "at": "2026-10-27T22:12:23.080752+00:00",
+ "at": "2026-10-28T00:56:06.159478+00:00",
  "session": {
   "active": true,
-  "kind": "evening",
-  "started": "2026-10-27T18:06:36-04:00"
+  "kind": "work",
+  "started": "2026-10-27T18:13:43-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "ines",
-   "task": "[report] evening",
+   "name": "idris",
+   "task": "[design] T-0504 Idris rules on Home Screen design",
    "model": "opus",
-   "started": "2026-10-27T22:07:52.515Z",
+   "started": "2026-10-28T00:50:34.429Z",
    "seconds": null,
-   "finished": "2026-10-27T22:11:04.676000+00:00"
+   "finished": "2026-10-28T00:55:13.778000+00:00"
   },
   {
-   "name": "worker",
-   "task": "[diary] Idris",
-   "model": "haiku",
-   "started": "2026-10-27T22:06:53.438Z",
+   "name": "maren",
+   "task": "[design] T-0503 Home Screen scripts design slice 2",
+   "model": "opus",
+   "started": "2026-10-28T00:42:51.395Z",
    "seconds": null,
-   "finished": "2026-10-27T22:07:44.160000+00:00"
+   "finished": "2026-10-28T00:50:18.594000+00:00"
   },
   {
-   "name": "worker",
-   "task": "[diary] Maren",
-   "model": "haiku",
-   "started": "2026-10-27T22:06:59.243Z",
+   "name": "maren",
+   "task": "[design] T-0450 Home Screen scripts design slice 1",
+   "model": "opus",
+   "started": "2026-10-28T00:35:54.929Z",
    "seconds": null,
-   "finished": "2026-10-27T22:07:41.032000+00:00"
+   "finished": "2026-10-28T00:42:25.785000+00:00"
   },
   {
-   "name": "worker",
-   "task": "[diary] Pernille",
-   "model": "haiku",
-   "started": "2026-10-27T22:07:05.143Z",
+   "name": "pernille",
+   "task": "[review] T-0502 re-review editor fixes",
+   "model": "opus",
+   "started": "2026-10-28T00:33:38.902Z",
    "seconds": null,
-   "finished": "2026-10-27T22:07:38.266000+00:00"
+   "finished": "2026-10-28T00:35:41.270000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 82,
-  "blocked_count": 52
+  "runnable_count": 84,
+  "blocked_count": 51
  },
  "meter": {
   "five_hour": {
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-27T18:13:02-04:00"
+  "at": "2026-10-27T20:56:48-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -172,13 +172,6 @@
     "o": "c"
    },
    {
-    "w": "Operator",
-    "k": "ops",
-    "t": "Post Ines's T-0205 ruling",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "T-0296 follow-on reminder",
@@ -224,6 +217,27 @@
     "w": "Odalys",
     "k": "tools",
     "t": "NEEDS \"approve\"",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Step 12 of tools/supervisor.sh applies the...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Wording proposal for setup/OPERATIONS.md line 95",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Proposal",
     "s": "next",
     "o": "c"
    },
@@ -417,13 +431,6 @@
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "review",
-    "t": "Dry run of the Day 10 visual fail lists",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Ines",
     "k": "ops",
     "t": "Archive Ines MEMORY.md under 4 KB",
@@ -550,13 +557,6 @@
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "design",
-    "t": "Home Screen scripts design",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Wrenna",
     "k": "research",
     "t": "Home Screen scripts in the review pack",
@@ -606,13 +606,6 @@
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Code review of 0020d29d",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Maren",
     "k": "review",
     "t": "Rule on two key-row choices in 0020d29d",
@@ -634,9 +627,30 @@
     "o": "c"
    },
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Tools/memory_archive.py targets 12000 bytes,...",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Idris",
     "k": "build",
-    "t": "From T-0483 re-review N1",
+    "t": "Paywall Lows from Pernille's Re-review 2",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Home Screen scripts redraws from Idris's...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Rule before T-0449",
     "s": "next",
     "o": "c"
    },
@@ -720,32 +734,32 @@
   ],
   "done": [
    {
-    "w": "Ines",
-    "k": "report",
-    "t": "Evening",
-    "at": "2026-10-27T22:11:04.676000+00:00",
+    "w": "Idris",
+    "k": "design",
+    "t": "T-0504 Idris rules on Home Screen design",
+    "at": "2026-10-28T00:55:13.778000+00:00",
     "o": "c"
    },
    {
-    "w": "Worker",
-    "k": "diary",
-    "t": "Idris",
-    "at": "2026-10-27T22:07:44.160000+00:00",
+    "w": "Maren",
+    "k": "design",
+    "t": "T-0503 Home Screen scripts design slice 2",
+    "at": "2026-10-28T00:50:18.594000+00:00",
     "o": "c"
    },
    {
-    "w": "Worker",
-    "k": "diary",
-    "t": "Maren",
-    "at": "2026-10-27T22:07:41.032000+00:00",
+    "w": "Maren",
+    "k": "design",
+    "t": "T-0450 Home Screen scripts design slice 1",
+    "at": "2026-10-28T00:42:25.785000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 82,
-   "wait": 28,
+   "next": 84,
+   "wait": 27,
    "blocked": 24,
-   "you": 5
+   "you": 4
   }
  },
  "qr": [],

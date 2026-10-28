@@ -278,10 +278,15 @@ The G1 screenshot comparison with `mockups/A-editor.png` / `B-editor.png` is not
   - The engine side passes: two editors on one screen hold two files, typing goes to the focused one, and ⌘Z in one leaves the other untouched (UI test and unit test).
   - The fix is the IDE screen's scene manifest plus a per-scene document, which is a new board line. It is not an adapter fault, and it does not touch ruling 1.
 - **The Simulator dropped some hardware key events under XCUITest.**
-  - What happened: the first key after a relaunch inside one run, and now and then later.
-  - The fix in the test: `press()` resends a key whose state did not change in 1.5 s, at most twice, and prints each resend.
-  - Final iPad run: 0 resends. The run before it: 1 resend.
-  - A late event resent would apply twice, and the exact expectations would catch that.
+  - What happened (corrected 2026-10-27, T-0501, from Pernille's review T-0476 M2): the first key after a relaunch,
+    and also mid-test. Run 165050: ⌘↑ and "b" were each lost three times after `b.tap()` in
+    `testG3TwoEditorsTwoFiles`, a focus hand-off between editors, and that test failed. Run 165622: one ⌘↑ resent in
+    `testG3ArrowsWordLineAndDocumentMoves`, the second key after the warm-up. Run 170828: 0 resends. What changed
+    between those runs is not known.
+  - The earlier claim that a late event resent would apply twice and be caught was only partly true: it holds for
+    typing and ⇥, not for ⌘Z/⇧⌘Z at the end of the undo stack or for ⌘↑/⌘↓/⌘→, which are idempotent.
+  - The test now (T-0501): only the warm-up key in `ipadEditor` may be resent. Any other key that changes nothing in
+    4 s fails the test with the whole state line and a screenshot attached, so a focus bug in the app cannot pass.
   - Whether a person ever loses a first key is part of the device check.
 - **iOS 26 clear-bar question (ruling 4).** It stays a device check, decided on glass. `g2-key-row-iphone.png` shows the opaque bar on the iOS 27 Simulator.
 

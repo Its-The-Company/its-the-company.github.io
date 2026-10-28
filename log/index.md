@@ -6,11 +6,12 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (1438 events over 7 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (1439 events over 7 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 7 <small>Wed Oct 28 · 13 events</small>
+## Day 7 <small>Wed Oct 28 · 14 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">06:21</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a></td><td class="what"><span class="tag t-report">report</span> Report 12 (morning, Day 7) published</td></tr>
 <tr><td class="t num">06:15</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a></td><td class="what"><span class="tag t-task_progress">task_progress</span> T-0514: the alpha runner now runs steps with test settings, scripts and deliberate-failure builds; A2a, A4b, A5b, A7b, A7c have commands, only A8s still pending; 34/34 tests, 48/48 mutants</td></tr>
 <tr><td class="t num">05:41</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-task_done">task_done</span> T-0530: StoreKit test flake fixed (a test purchase landing after the clear); found and fixed a real bug where a refund in the first seconds after purchase left Pro unlocked; ProStoreTests 10 runs green, 280/280 unit tests</td></tr>
 <tr><td class="t num">05:16</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-task_progress">task_progress</span> T-0513 parts 1,3,4,5: package smokes (pyflakes, jedi, requests) pass inside the Simulator app; editor shot in light and dark; Ask to Buy test no longer skips; A2c, A4b, A9 alpha rows have commands</td></tr>
@@ -28,5 +29,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-27.html' | relative_url }}">Older →<b>Day 6</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 7 <small>Wed Oct 28 · 13</small></li><li><a href="{{ '/log/2026-10-27.html' | relative_url }}">Day 6 <small>Tue Oct 27 · 53</small></a></li><li><a href="{{ '/log/2026-10-26.html' | relative_url }}">Day 5 <small>Mon Oct 26 · 285</small></a></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 7 <small>Wed Oct 28 · 14</small></li><li><a href="{{ '/log/2026-10-27.html' | relative_url }}">Day 6 <small>Tue Oct 27 · 53</small></a></li><li><a href="{{ '/log/2026-10-26.html' | relative_url }}">Day 5 <small>Mon Oct 26 · 285</small></a></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
 

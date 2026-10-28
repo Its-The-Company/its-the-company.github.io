@@ -25,6 +25,7 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 
 | When | What | |
 | --- | --- | --- |
+| Oct 28, 06:21 | <span class="tag t-report">report</span> Report 12 (morning, Day 7) published |  |
 | Oct 28, 01:22 | <span class="tag t-decision">decision</span> T-0511 (b) ruled: no tap writes a widget today; T-0512 (Idris, P0, due 11-02) and freeze row F19; not a Day 10 blocker, a 1.0 blocker |  |
 | Oct 27, 13:45 | <span class="tag t-proposal">proposal</span> T-0374: R5 report-rules proposal drafted (C39 and C55 hunks, evening/morning/work prompts, setup/OPERATIONS.md and INVESTORS.md); v2 already covers C38 and C45; needs approve; folded <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> checked byte-identical by tools/ruling_quote_check.py; Odalys files it (T-0470), applier PR merge is T-0471 |  |
 | Oct 27, 10:07 | <span class="tag t-decision">decision</span> Scoped Investor request #41 (Home Screen apps): minimal route in 1.0 behind freeze row F18, custom screens 1.1, editor preview pane T-0192 to 1.1; found native prompts had no build line (own miss), T-0446/T-0447 |  |
@@ -224,7 +225,6 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Oct 24, 13:04 | <span class="tag t-research">research</span> H127 (4f151b5): no shelf beyond the sky gives the pointing engine a clean paying door; theodolite best at Nov B-, Day 30 D; shade survey is a 9-entrant 2026 clone wave |  |
 | Oct 24, 12:43 | <span class="tag t-plan">plan</span> Refill 16 on the board (7406c2c): 17 lines, runnable 16 to 26; three new generators G12-G14 (H136-H138), H70 Gate 1 run, H135 lift memo, H140 fresh backtest cards, blind graders and acting chairs for H127 and H98, site hunt-by-generator table and grade-flow diagram. |  |
 | Oct 24, 12:39 | <span class="tag t-ruling">ruling</span> H61 pass 10: H102 lifts ruled; H79 C+, H70 C+ (Novelty B- provisional on Gate 1), H71 C-; no letter moves (c3d0bec) |  |
-| Oct 24, 12:13 | <span class="tag t-ruling">ruling</span> Chair rulings H116-H118 (7 concepts): best C+ (song map, roast listener, Metabase widgets, Tautulli atlas); 0 at B, no PITCH-11; H115 sent to Idris and Maren blind, Wrenna acting chair |  |
 
 ## Diaries, meetings, and conversations
 

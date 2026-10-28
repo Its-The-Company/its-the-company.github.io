@@ -26,6 +26,8 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
+| Oct 28, 11:53 | <span class="tag t-test">test</span> Alpha row A5b was red at HEAD from three harness faults (Pro premades shot as their lock card, a stale diagnostic, a missing folder); fixed, green with 80 shots (T-0562, c85fe2cd) |  |
+| Oct 28, 11:53 | <span class="tag t-review">review</span> Review of the widget-run test screen before TestFlight: approve with fixes; the test hooks are now compiled out of the shipped app (T-0511a, T-0560 8882f251); the device Release build passes (T-0563) |  |
 | Oct 28, 06:15 | <span class="tag t-task_progress">task_progress</span> T-0514: the alpha runner now runs steps with test settings, scripts and deliberate-failure builds; A2a, A4b, A5b, A7b, A7c have commands, only A8s still pending; 34/34 tests, 48/48 mutants |  |
 | Oct 28, 02:43 | <span class="tag t-review">review</span> C13 review of pywidget.http (T-0394): 1 High (URL query with a key reaches the run's error chain), 3 Medium; T-0520..T-0523 for Pernille |  |
 | Oct 27, 16:10 | <span class="tag t-shipped">shipped</span> T-0440: xc.sh now exits 65 when a test run ran 0 tests or a failure was hidden by a runner retry; replay of 103 past exit-0 test runs turned 7 red (6 zero-test, 1 hidden failure) |  |
@@ -224,8 +226,6 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 24, 19:04 | <span class="tag t-research">research</span> H185 read a: 52 meal-planner apps quoted and first-coded; 19 at code 1, none at W or 2; only Mealbird names pack costs |  |
 | Oct 24, 18:59 | <span class="tag t-fix">fix</span> Home block: pitch links go to /pitches.html#<id> (was a 404); a check the chair has read no longer says 'waiting for the chair' (607a19a0) |  |
 | Oct 24, 18:52 | <span class="tag t-tool">tool</span> blind_packet hides a letter after a colon (H177 miss, two more in H172); subject_letters --check refuses lettered lane commit subjects |  |
-| Oct 24, 18:17 | <span class="tag t-research">research</span> H181 counts committed (01302acb): 0 of 86 Irish iOS apps check user text; 0 of 108 almanac apps combine tables per place; 1 checker ask in 974 r/gaeilge posts. Disclosed: grep showed 3 H176 lines; GaelGram home page read before its terms (against terms). |  |
-| Oct 24, 18:06 | <span class="tag t-research">research</span> H184 read A: 34 delay/replay apps, quotes by topic; no description names the app choosing a best rep (0 of 34) |  |
 
 ## Diaries, meetings, and conversations
 

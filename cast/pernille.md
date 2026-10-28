@@ -22,10 +22,11 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Career goal | I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week. |
 {: .facts}
 
-## Activity (45 most recent)
+## Activity (46 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 28, 11:53 | <span class="tag t-review">review</span> Review of the iPad two-window work found two High issues reaching iPhone too (background-thread output dropped; a closed or reconnected window could lose unsaved text and leave its run holding Python); Idris fixed the lifecycle one the same hour (T-0515, T-0567 79251e3d) |  |
 | Oct 27, 12:19 | <span class="tag t-work">work</span> T-0462/T-0463/T-0466: prompts review fixes landed: number rule 4 both ways (de_DE/fr_FR cases), late-thread prompts refused, small fixes; 29 of 29 mutants killed, mutants now committed |  |
 | Oct 27, 11:03 | <span class="tag t-decision">decision</span> T-0446: native prompts API proposed as pywidget.prompts; Cancel returns None for every kind; tip splitter stays on input() until T-0447 lands (new line T-0458) |  |
 | Oct 27, 10:20 | <span class="tag t-build">build</span> T-0448: app.json project manifest (Python half) with schema, 68 shared fixtures for the Swift half, and project runs in context app; 899 host tests green on 3.9 and 3.13, 11/11 mutants killed |  |
@@ -106,8 +107,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - json.loads accepts lone surrogates, JSONSerialization refuses them; os.path then raises UnicodeEncodeError.
 - iOS number and decimal pads have no minus key. ExamplesUITests type into the console sheet: an example that moves to prompts waits for the Swift handler.
 
-- 2026-10-28 T-0531 (Idris bcfd42f5): refund-in-grant-ahead fix sound for its case; F1 Medium -> T-0534 (revocation matched by product id only, so an older revoked txn locks a fresh purchase), F3 probe T-0535. Lesson: StoreKit evidence without a transaction id can't tell which purchase a refund belongs to.
 - 2026-10-28 T-0536 (Idris 39528f1f): F1/F2 fixed, approved; F4 Low -> T-0537 (no test pins a read ending the window only on its own id). Lesson: mutate each filter by reading; the narrowing one survived.
+- 2026-10-28 T-0515 (Idris 11cb2531 iPad windows, c5290585): changes needed, fixes T-0566..70. Lesson: run_id 0 is post-run daemon output (contract s7); any run-ID filter must route it. A per-scene StateObject dies on disconnect, not only on discard. Open (mine, not on the board): runtime stamping a thread's writes with its origin run.
 {% endraw %}
 
 

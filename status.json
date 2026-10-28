@@ -1,74 +1,74 @@
 {
  "schema": 1,
- "at": "2026-10-28T13:35:29.642770+00:00",
+ "at": "2026-10-28T16:29:05.751279+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-28T06:23:30-04:00"
+  "started": "2026-10-28T09:36:53-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "idris",
-   "task": "[build] T-0516 Idris console input field between input() calls",
-   "model": "sonnet",
-   "started": "2026-10-28T13:01:09.175Z",
+   "task": "[test] T-0567 close() stop test and close-window UI test",
+   "model": "opus",
+   "started": "2026-10-28T16:08:24.284Z",
    "seconds": null,
-   "finished": "2026-10-28T13:34:04.755000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[test] T-0533 Idris C2 replay follow-ups + T-0552 + T-0532",
-   "model": "sonnet",
-   "started": "2026-10-28T12:38:54.686Z",
-   "seconds": null,
-   "finished": "2026-10-28T13:00:51.483000+00:00"
+   "finished": "2026-10-28T16:27:56.282000+00:00"
   },
   {
    "name": "pernille",
-   "task": "[build] T-0548 Pernille 120 s wait for prompting reads",
-   "model": "sonnet",
-   "started": "2026-10-28T12:26:41.164Z",
+   "task": "[review] T-0571 re-review of 79251e3d and db9403be",
+   "model": "opus",
+   "started": "2026-10-28T16:05:24.007Z",
    "seconds": null,
-   "finished": "2026-10-28T12:38:35.860000+00:00"
+   "finished": "2026-10-28T16:08:10.857000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[review] T-0549 Odalys C13 re-review of device fixes ad580920",
+   "name": "idris",
+   "task": "[build] T-0566 run-0 background-thread output",
    "model": "opus",
-   "started": "2026-10-28T12:19:27.706Z",
+   "started": "2026-10-28T15:53:29.673Z",
    "seconds": null,
-   "finished": "2026-10-28T12:26:28.788000+00:00"
+   "finished": "2026-10-28T16:05:10.187000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-0567 + T-0566 console scene lifecycle and run-0 output",
+   "model": "opus",
+   "started": "2026-10-28T15:01:10.456Z",
+   "seconds": null,
+   "finished": "2026-10-28T15:53:10.953000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 94,
+  "runnable_count": 99,
   "blocked_count": 48
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
-   "resets_at": "2026-10-28T14:00:00.165222+00:00",
+   "pct": 11.0,
+   "resets_at": "2026-10-28T13:59:59.582505+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 97.0,
+   "left": 89.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 63.0,
-   "resets_at": "2026-11-01T07:00:00.165243+00:00",
+   "pct": 64.0,
+   "resets_at": "2026-11-01T06:59:59.582529+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 37.0,
+   "left": 36.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T07:00:00.165410+00:00",
+   "resets_at": "2026-11-01T06:59:59.582708+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-28T06:17:37.953211-04:00"
+  "read_at": "2026-10-28T09:36:53.328122-04:00"
  },
  "ui": {
   "week_pct": 0.1,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-28T09:36:07-04:00"
+  "at": "2026-10-28T12:29:49-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -410,13 +410,6 @@
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "ops",
-    "t": "Archive Ines MEMORY.md under 4 KB",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "T-0312 slice b",
@@ -641,12 +634,6 @@
     "o": "c"
    },
    {
-    "k": "review",
-    "t": "Reviewer other than Idris",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "T-0312 slice a HUD",
@@ -703,6 +690,62 @@
     "o": "c"
    },
    {
+    "w": "Idris",
+    "k": "test",
+    "t": "The app pictures T-0546 could not take",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0511",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "The Runestone editor on the main screen",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0515 H2",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0515 M1",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0515 M2",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0515 L1-L3",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0571 re-review N1",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Odalys",
     "k": "tools",
     "t": "App pictures on the site with no Claude",
@@ -710,23 +753,16 @@
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "test",
-    "t": "A screenshot pass so app pictures stay current",
-    "s": "next",
-    "o": "i"
-   },
-   {
-    "w": "code",
-    "k": "design",
-    "t": "Write the app guide v1,...",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Keep the app guide current with no Claude...",
     "s": "next",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Keep the app guide current with no Claude...",
+    "w": "Maren",
+    "k": "design",
+    "t": "Answer the four Open questions at the end of...",
     "s": "next",
     "o": "c"
    },
@@ -804,28 +840,28 @@
   "done": [
    {
     "w": "Idris",
-    "k": "build",
-    "t": "T-0516 Idris console input field between input() calls",
-    "at": "2026-10-28T13:34:04.755000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
     "k": "test",
-    "t": "T-0533 Idris C2 replay follow-ups + T-0552 + T-0532",
-    "at": "2026-10-28T13:00:51.483000+00:00",
+    "t": "T-0567 close() stop test and close-window UI test",
+    "at": "2026-10-28T16:27:56.282000+00:00",
     "o": "c"
    },
    {
     "w": "Pernille",
+    "k": "review",
+    "t": "T-0571 re-review of 79251e3d and db9403be",
+    "at": "2026-10-28T16:08:10.857000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
     "k": "build",
-    "t": "T-0548 Pernille 120 s wait for prompting reads",
-    "at": "2026-10-28T12:38:35.860000+00:00",
+    "t": "T-0566 run-0 background-thread output",
+    "at": "2026-10-28T16:05:10.187000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 94,
+   "next": 99,
    "wait": 23,
    "blocked": 25,
    "you": 5

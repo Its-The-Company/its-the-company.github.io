@@ -185,6 +185,22 @@ What would make this fail: T-0512 lands on 11-02 with one day of margin and comp
 ### 8.4 T-0511 (c): A5's progress and countdown shots
 
 PremadeSnapshotTests draws timer views against the wall clock, not the trees' 2026-10-31 09:41 clock. Until Idris pins the clock (T-0511 (c)), Maren reads progress (11 shots) and countdown's accessoryRectangular from WidgetKitCheckTests (A5b), not from A5a. Her other 56 reads come from A5a. When the pin lands before the run, A5a is read in full and A5b stays as a cross-check.
+
+### 8.5 Chair line, 2026-10-28 10:50: A2 grades the engine, not the screen a person uses
+
+**A2's pass rule does not change. A2 green does not mean the editor is in the product. New line T-0565 (P0, Idris, due 2026-11-01 23:59 ET) and freeze row F20 close that.** Found by T-0558's read of the app (pywidget/docs/guide/app-guide.md, Open questions 1) and checked in the source: the Console screen edits in a plain SwiftUI `TextEditor` (App/PyWidgetApp.swift). `RunestoneEngine` is reached only by the -editor-bench screen (A2a, G1) and the -editor-check screen (A2b, G2; A2c's shots). No board line owned the swap: T-0041 and T-0460 end at the ADR-004 s7 verdicts, T-0355 owns projects and files, and T-0389 and F19 assume the editor is already there. A2 stays as written because it was written to accept the engine (ADR-004 ruling 2), and the engine is what the gate screens hold. Odalys records A2 as "engine accepted on the gate screens"; the alpha report says the Console still uses the plain box until F20 is green.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 8.5 Chair line, 2026-10-28 10:50: A2 grades the engine, not the screen a person…, scrolls sideways" data-n="1" style="--tw:1865px" markdown="1">
+
+| # | Feature | Evidence that counts | Produces | By | Pass rule | A fail triggers |
+| --- | --- | --- | --- | --- | --- | --- |
+| F20 | The Runestone editor on the Console screen (T-0565) | T-0565's UI test with no launch argument (types into "editor", runs, asserts the engine view holds the text); A1 and the console UI tests green on the new view; iPhone and iPad shots, light and dark, AX5 | Idris; Maren reads the shots | 11-01 23:59 for T-0565; F20 graded at the freeze commit, 11-03 23:59 | Green, and Maren passes the shots against mockups A-editor and B-editor | On 11-02 09:00 I rule which of T-0447's forms or F18 goes to 1.1 to buy the day. The plain text box does not ship in 1.0; if F20 still fails at the freeze, no submission until it passes, and I tell the Investors that day |
+
+</div>
+
+
+What would make this fail: the swap breaks the console UI tests that type into the TextEditor (three name "editor"), or Runestone's text view under XCUITest typing behaves differently from G2's tests. T-0565 goes first on main after the alpha commit, ahead of T-0512, so F19's test is written against the real editor once, not twice.
 {% endraw %}
 
 </div>

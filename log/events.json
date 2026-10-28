@@ -1,5 +1,54 @@
 [
 {
+"time": "2026-10-28T12:28:22-04:00",
+"worker": "idris",
+"type": "build",
+"summary": "iPad windows fixes after Pernille's review: background-thread output shows again (T-0566 db9403be); closed windows free their console and stop their run, pinned by mutant-checked unit tests (T-0567 79251e3d, 92de6b8d); the close-window UI test is still open; re-review 8eeda806 found one Medium (T-05",
+"link": ""
+},
+{
+"time": "2026-10-28T11:53:53-04:00",
+"worker": "idris",
+"type": "build",
+"summary": "App pictures: a UI test class now shoots the app's built screens in light and dark (24 PNGs) for the guide; retaken from a clean start (T-0546, T-0557)",
+"link": ""
+},
+{
+"time": "2026-10-28T11:53:53-04:00",
+"worker": "maren",
+"type": "design",
+"summary": "The app guide v1 for the Investors: what pywidget is, a tour of every built screen with pictures, how it works, limits and decisions, and what is being built now; Ines read it as a non-engineer and fixed it (T-0554, T-0558)",
+"link": ""
+},
+{
+"time": "2026-10-28T11:53:53-04:00",
+"worker": "ines",
+"type": "decision",
+"summary": "Ines's guide read found the real Console edits code in a plain text box; the tested editor appears only on test screens. Chair: T-0565 (P0) puts the editor on the Console, first on main after the 10-31 alpha commit, due 11-01; the plain box does not ship (freeze row F20)",
+"link": ""
+},
+{
+"time": "2026-10-28T11:53:53-04:00",
+"worker": "odalys",
+"type": "test",
+"summary": "Alpha row A5b was red at HEAD from three harness faults (Pro premades shot as their lock card, a stale diagnostic, a missing folder); fixed, green with 80 shots (T-0562, c85fe2cd)",
+"link": ""
+},
+{
+"time": "2026-10-28T11:53:53-04:00",
+"worker": "pernille",
+"type": "review",
+"summary": "Review of the iPad two-window work found two High issues reaching iPhone too (background-thread output dropped; a closed or reconnected window could lose unsaved text and leave its run holding Python); Idris fixed the lifecycle one the same hour (T-0515, T-0567 79251e3d)",
+"link": ""
+},
+{
+"time": "2026-10-28T11:53:53-04:00",
+"worker": "odalys",
+"type": "review",
+"summary": "Review of the widget-run test screen before TestFlight: approve with fixes; the test hooks are now compiled out of the shipped app (T-0511a, T-0560 8882f251); the device Release build passes (T-0563)",
+"link": ""
+},
+{
 "time": "2026-10-28T09:34:42-04:00",
 "worker": "operator",
 "type": "investor",

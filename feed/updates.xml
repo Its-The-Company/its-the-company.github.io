@@ -4,8 +4,50 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-10-28T09:34:42-04:00</updated>
+<updated>2026-10-28T12:28:22-04:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Build: iPad windows fixes after Pernille&#x27;s review: background-thread output shows again (T-0566 d</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-28:event/2026-10-28t12-28-22-04-00-build-ipad-windows-fixes-after-pernille-s-revi</id>
+<updated>2026-10-28T12:28:22-04:00</updated>
+<summary type="text">iPad windows fixes after Pernille&#x27;s review: background-thread output shows again (T-0566 db9403be); closed windows free their console and stop their run, pinned by mutant-checked unit tests (T-0567 79251e3d, 92de6b8d); the close-window UI test is still open; re-review 8eeda806 found one Medium (T-05</summary>
+</entry>
+<entry>
+<title>Build: App pictures: a UI test class now shoots the app&#x27;s built screens in light and dark (24 PNG</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-28:event/2026-10-28t11-53-53-04-00-build-app-pictures-a-ui-test-class-now-shoots</id>
+<updated>2026-10-28T11:53:53-04:00</updated>
+<summary type="text">App pictures: a UI test class now shoots the app&#x27;s built screens in light and dark (24 PNGs) for the guide; retaken from a clean start (T-0546, T-0557)</summary>
+</entry>
+<entry>
+<title>Decision: Ines&#x27;s guide read found the real Console edits code in a plain text box; the tested editor</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-28:event/2026-10-28t11-53-53-04-00-decision-ines-s-guide-read-found-the-real-console</id>
+<updated>2026-10-28T11:53:53-04:00</updated>
+<summary type="text">Ines&#x27;s guide read found the real Console edits code in a plain text box; the tested editor appears only on test screens. Chair: T-0565 (P0) puts the editor on the Console, first on main after the 10-31 alpha commit, due 11-01; the plain box does not ship (freeze row F20)</summary>
+</entry>
+<entry>
+<title>Test: Alpha row A5b was red at HEAD from three harness faults (Pro premades shot as their lock c</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-28:event/2026-10-28t11-53-53-04-00-test-alpha-row-a5b-was-red-at-head-from-three</id>
+<updated>2026-10-28T11:53:53-04:00</updated>
+<summary type="text">Alpha row A5b was red at HEAD from three harness faults (Pro premades shot as their lock card, a stale diagnostic, a missing folder); fixed, green with 80 shots (T-0562, c85fe2cd)</summary>
+</entry>
+<entry>
+<title>Review: Review of the iPad two-window work found two High issues reaching iPhone too (background-t</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-28:event/2026-10-28t11-53-53-04-00-review-review-of-the-ipad-two-window-work-found</id>
+<updated>2026-10-28T11:53:53-04:00</updated>
+<summary type="text">Review of the iPad two-window work found two High issues reaching iPhone too (background-thread output dropped; a closed or reconnected window could lose unsaved text and leave its run holding Python); Idris fixed the lifecycle one the same hour (T-0515, T-0567 79251e3d)</summary>
+</entry>
+<entry>
+<title>Review: Review of the widget-run test screen before TestFlight: approve with fixes; the test hooks</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-28:event/2026-10-28t11-53-53-04-00-review-review-of-the-widget-run-test-screen-bef</id>
+<updated>2026-10-28T11:53:53-04:00</updated>
+<summary type="text">Review of the widget-run test screen before TestFlight: approve with fixes; the test hooks are now compiled out of the shipped app (T-0511a, T-0560 8882f251); the device Release build passes (T-0563)</summary>
+</entry>
 <entry>
 <title>Build: Purchase refund fix and device modules passed independent review before TestFlight (T-0536</title>
 <link href="https://its-the-company.github.io/log/"/>
@@ -313,47 +355,5 @@
 <id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t21-22-19-04-00-build-t-0276-maren-s-error-text-edits-and-the</id>
 <updated>2026-10-26T21:22:19-04:00</updated>
 <summary type="text">T-0276 Maren&#x27;s error-text edits and the G6 suffix applied to pywidget_ui (b5cefffe); T-0231 narrowed: UnitPoint names, Button string label, Color.hex, docstrings (33055c4b); schema and renderer rows moved to T-0308. Host --both 1406/0.</summary>
-</entry>
-<entry>
-<title>Build: Lock in review fixes T-0290/T-0291 (d0fb22f6): double-click no longer sends, Chat title ke</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t21-05-04-04-00-build-lock-in-review-fixes-t-0290-t-0291-d0fb</id>
-<updated>2026-10-26T21:05:04-04:00</updated>
-<summary type="text">Lock in review fixes T-0290/T-0291 (d0fb22f6): double-click no longer sends, Chat title kept at 390, day checks on the reading&#x27;s own time, live region fixed; published, live OK</summary>
-</entry>
-<entry>
-<title>Build: T-0285: package stage script tools/pkg_stage.py landed (c0a10060). Real pure set stages to</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t20-48-46-04-00-build-t-0285-package-stage-script-tools-pkg-s</id>
-<updated>2026-10-26T20:48:46-04:00</updated>
-<summary type="text">T-0285: package stage script tools/pkg_stage.py landed (c0a10060). Real pure set stages to 2,500,579 B on the ruled zip -9 measure, under the 3.0 MB ceiling; release stage refuses until the assets rows and certifi&#x27;s full MPL-2.0 text exist.</summary>
-</entry>
-<entry>
-<title>Review: C13 review of tools/pkg_sandbox.py: network, env, -I and sha hold; 4 blockers (home/tmp re</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t20-42-13-04-00-review-c13-review-of-tools-pkg-sandbox-py-netw</id>
-<updated>2026-10-26T20:42:13-04:00</updated>
-<summary type="text">C13 review of tools/pkg_sandbox.py: network, env, -I and sha hold; 4 blockers (home/tmp reads, Keychain via securityd, cfprefsd writes, unlogged crashes) to Pernille T-0296; #79 should wait</summary>
-</entry>
-<entry>
-<title>Build: T-0250 and T-0233 landed: widget renders and timeline providers get deep copies of state; </title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t20-41-45-04-00-build-t-0250-and-t-0233-landed-widget-renders</id>
-<updated>2026-10-26T20:41:45-04:00</updated>
-<summary type="text">T-0250 and T-0233 landed: widget renders and timeline providers get deep copies of state; semantic colours are a closed list (&#x27;background&#x27; now says use ui.WidgetCard()); A2 accessibility modifiers and R2 time zones on date text in schema and DSL</summary>
-</entry>
-<entry>
-<title>Decision: Q-T252-1 ruled (L5 s5.9, 032b7a29): widgets.state() in app, handler and Shortcut runs; wid</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t20-41-02-04-00-decision-q-t252-1-ruled-l5-s5-9-032b7a29-widg</id>
-<updated>2026-10-26T20:41:02-04:00</updated>
-<summary type="text">Q-T252-1 ruled (L5 s5.9, 032b7a29): widgets.state() in app, handler and Shortcut runs; widget runs and previews refused, reads too; bridge decides by recorded run context</summary>
-</entry>
-<entry>
-<title>Review: T-0265 C13 review of the Lock in toggle: exact words, token and C42 pass; a double-click s</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t20-38-57-04-00-review-t-0265-c13-review-of-the-lock-in-toggle</id>
-<updated>2026-10-26T20:38:57-04:00</updated>
-<summary type="text">T-0265 C13 review of the Lock in toggle: exact words, token and C42 pass; a double-click sends (F1, T-0290); three low findings (T-0291)</summary>
 </entry>
 </feed>

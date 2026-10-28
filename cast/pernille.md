@@ -105,11 +105,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - A one-line launch hook needs a UI test. Runner keeps bundle modules across runs, so monkeypatches outlive tests.
 - json.loads accepts lone surrogates, JSONSerialization refuses them; os.path then raises UnicodeEncodeError.
 - iOS number and decimal pads have no minus key. ExamplesUITests type into the console sheet: an example that moves to prompts waits for the Swift handler.
-- 2026-10-27 T-0462: save the seeded mutants in the commit, or the kill count is a claim. A wire rule for numbers must say both directions.
 
-- 2026-10-27 T-0475: reviewed Idris's Pro paywall (307297b1). Grant rule sound; 3 Medium to Idris as T-0480..T-0482 (widget reload on entitlement change, sticky pending, restore-failed shown as purchase-failed). Lesson: StoreKit state held in a singleton outlives the screen; check every flag for its clearing path.
-- 2026-10-27 T-0483: a fix that lengthens a retry can kill the self-heal a race relied on.
-- 2026-10-27 T-0476 (Idris editor 0020d29d): H1 crash T-0499, M1 T-0500, M2 T-0501. Lessons: a guard that checks only the new range misses the stale old one; Runestone's TextView is never first responder (TextInputView is); a test resend needs the log, not the ADR, to judge.
+- 2026-10-28 T-0531 (Idris bcfd42f5): refund-in-grant-ahead fix sound for its case; F1 Medium -> T-0534 (revocation matched by product id only, so an older revoked txn locks a fresh purchase), F3 probe T-0535. Lesson: StoreKit evidence without a transaction id can't tell which purchase a refund belongs to.
+- 2026-10-28 T-0536 (Idris 39528f1f): F1/F2 fixed, approved; F4 Low -> T-0537 (no test pins a read ending the window only on its own id). Lesson: mutate each filter by reading; the narrowing one survived.
 {% endraw %}
 
 

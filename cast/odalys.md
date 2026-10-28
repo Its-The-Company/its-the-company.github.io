@@ -260,16 +260,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - zsh does not word-split $VAR; use arrays or literal paths (bit me again 10-26 with "--until X" in a loop var).
 - 2026-10-26 02:00-02:57 notes (T-0153..T-0196, T-0026; lessons on mutations, counts, glob pathspecs): archive.md
 
-## 2026-10-27 T-0407 (57212e1b)
-- Lesson: editing code can orphan old mutants' find strings; assert every find occurs once before a 8-min mutant run.
-
-## 2026-10-27 T-0411 (5a20fd03)
-- Lesson: a real-tree test that reads generated outputs can pass only because they are stale; assert what the inputs imply, not a fixed list.
-- Lesson: a "bundled" rule must be the stager's own rule (pkg_stage ignores status); the 3.9 fallback TOML reader dropped integers.
-
-## 2026-10-27 T-0409 (review of e80c5d2d)
-- Lesson: os.walk never lists a folder symlink in files; a "no symlinks" gate must check dirs too. Seed one in every packaging review.
-
 ## 2026-10-27 T-0388 (51f957e3)
 - Lesson: a silence measured between timestamped lines overstates it; count XCUITest "t =" steps as output.
 
@@ -286,6 +276,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-28 T-0423 (8b951283)
 - Lesson: no-network proof = sandbox-exec, localhost allow LAST. Runner keeps suppressed __context__. Open: T-0520..23.
+
+## 2026-10-28 T-0529 (c63dd2d8)
+- C13 review, T-0353 Swift: changes requested, 4 Med (T-0539..42), 5 Low (T-0543). Lesson: a containment check must bookmark/open the path it checked, resolved; and a privacy delete tied to a call misses the no-call case.
+- 2026-10-28 T-0544: doc badges shipped (issue #101 site-state; ops/doc-baseline.json is the cutoff; tools/doc_baseline.py reseeds). Python here is 3.9: fromisoformat rejects "Z"; a git log in UTC returned {} until fixed. No node, so JS is tested in Playwright.
+- 2026-10-28 T-0549 (86aebb30): re-review of ad580920, M1-M4 resolved, 6 Lows to T-0550/51. Lesson: check a test drives the production path, not a twin helper.
 {% endraw %}
 
 

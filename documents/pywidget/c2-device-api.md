@@ -281,7 +281,8 @@ location.sample(*, timeout: float = 10, max_age: float | None = 120,
                 stale_after: timedelta = timedelta(minutes=30)) -> Reading[Location]
                                   # requestLocation, iOS 9 [SDK] (one-shot)
 location.last_known() -> Reading[Location] | None
-                                  # the bridge's own cache in the App Group; source="app_cache"
+                                  # the bridge's own cache in the app's Application Support, not the App Group
+                                  # (T-0540); source="app_cache"
 location.updates(*, distance_filter: float = 10) -> Iterator[Reading[Location]]
                                   # app only; LiveOnlyInWidget elsewhere
 
@@ -295,8 +296,9 @@ class Location:
 ```
 
 - **The trap, under ADR-001's execution default.** `isAuthorizedForWidgetUpdates` lets the widget **extension** get a fix "if called upon to refresh within a few minutes of having been seen" [SDK, CLLocationManager.h line 253]. Under ADR-001 the extension does not run Python. The Python widget run happens in the app; when the app is in the background with When In Use, it gets no fix [M]. So in a background widget run, `sample()` returns `last_known()` with `source="app_cache"` and `unavailable_reason="when_in_use_background"`, never a fresh fix and never an error.
-- **C2-Q1 (open, for Ines and the L3/ADR-002 owner).** A Swift-only step in the widget extension's timeline provider could take a one-shot fix when `authorizedForWidgetUpdates` is YES and write it to the App Group (no Python in the extension, so L3's memory reasons hold). Python's next run would read it as `source="refresh"`. It costs `NSWidgetWantsLocation` in the extension and one more code path. The premade "distance to a saved place" widget (ADR-001 C11) is the first thing that needs it. Without it, that widget is honest but often old.
+- **C2-Q1 (open, for Ines and the L3/ADR-002 owner).** A Swift-only step in the widget extension's timeline provider could take a one-shot fix when `authorizedForWidgetUpdates` is YES and write it to the App Group (T-0540: the bridge's own location cache is no longer there, so this would be a new, separate file; no Python in the extension, so L3's memory reasons hold). Python's next run would read it as `source="refresh"`. It costs `NSWidgetWantsLocation` in the extension and one more code path. The premade "distance to a saved place" widget (ADR-001 C11) is the first thing that needs it. Without it, that widget is honest but often old.
 - `CLBackgroundActivitySession` (iOS 17) keeps a When-In-Use app "in use" in the background with the blue indicator, and a new session "may only become active while the app is foregrounded" [SDK]. That is a live-tracking session (a walk), not a widget refresh. Not in v1.
+- **Prompt wait (T-0541, T-0548).** In the app, `sample` and `updates_start` of location, `today`, `history`, `by_day` and `updates_start` of pedometer, and `clipboard.get_text` and `get_texts` can show a system prompt on first use, so Python waits `PERMISSION_WAIT_S` (120 s) for them; for `sample`, `max(120, timeout + 2)`. Elsewhere they keep the 10 s (`timeout + 2` for `sample`), because Swift never prompts there. Contract: bridge-contract s4 v5.3 item 1.
 - `max_age`: if the system's cached fix is younger than this, return it without waking GPS.
 - Errors: `kCLErrorDenied` [SDK] → `PermissionDenied`; `kCLErrorPromptDeclined` ("Authorization request not presented to user" [SDK]) → `PermissionNotDetermined`; `kCLErrorLocationUnknown` ("CL will keep trying" [SDK]) → keep waiting until `timeout`, then `Reading(None, reason="no_fix")`; `kCLErrorNetwork` [SDK] → `Reading(None, reason="network")`. Not determined outside the app → `PermissionNotDetermined`.
 - Default `stale_after` 30 minutes (L1 rule c).
@@ -318,7 +320,7 @@ pedometer.history(start: datetime, end: datetime | None = None) -> Reading[Pedom
     # queryPedometerDataFromDate:toDate:withHandler: "Data is available for up to 7 days" [SDK]
 pedometer.today() -> Reading[PedometerData]                 # local midnight to now
 pedometer.by_day(days: int = 7) -> list[Reading[PedometerData]]   # one query per calendar day
-pedometer.updates() -> Iterator[Reading[PedometerData]]     # startPedometerUpdatesFromDate [SDK]; app only
+pedometer.updates() -> Iterator[Reading[PedometerData]]     # startPedometerUpdatesFromDate [SDK], from local midnight: the day so far; app only
 
 @dataclass(frozen=True)
 class PedometerData:
@@ -357,6 +359,7 @@ keychain.names(*, shared: bool = False) -> list[str]                            
 - **Access group.** The app's default group [SDK: "new items are created in the application's default access group"]. Under ADR-001 the extension does not need secrets. If C2-Q1 or a later ADR moves any fetch into an extension, both targets need a shared `keychain-access-groups` entry (an entitlement in the spike's project).
 - **Never printed.** `repr()` of a secret in the console shows `'••••(12 chars)'`; the run log stores no values. The IDE's variable inspector masks values from `keychain.get`.
 - Size cap: 16 KB per value (our limit; keeps a script from using the Keychain as storage).
+- **Scope without a script id (T-0528, bridge contract s4 v5.3).** The script id is the bridge's record of the run. An editor buffer has none, so there only `shared=True` works; the per-script calls raise `PyWidgetError`. A script whose id is `shared` is refused the per-script scope too, because `shared/<name>` would be the shared scope. Values travel as base64 on the wire.
 - Errors (SecBase.h values [SDK]): `errSecItemNotFound` (−25300) → `KeyError`; `errSecDuplicateItem` (−25299) → handled inside `set` as an update; `errSecInteractionNotAllowed` (−25308; returned "if the item's data is not available until a device unlock occurs" [SDK]) → `DeviceLocked`; `errSecMissingEntitlement` (−34018) → `PyWidgetError` (our bug); `errSecParam` (−50) → `ValueError`.
 
 ## 10. Host-Python stubs (`pywidget/ios/python-stubs/`)

@@ -1,27 +1,51 @@
 {
  "schema": 1,
- "at": "2026-10-28T10:22:09.477189+00:00",
+ "at": "2026-10-28T13:35:29.642770+00:00",
  "session": {
   "active": true,
-  "kind": "morning",
-  "started": "2026-10-28T06:17:40-04:00"
+  "kind": "work",
+  "started": "2026-10-28T06:23:30-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "ines",
-   "task": "[report] morning CEO report",
-   "model": "opus",
-   "started": "2026-10-28T10:17:59.608Z",
+   "name": "idris",
+   "task": "[build] T-0516 Idris console input field between input() calls",
+   "model": "sonnet",
+   "started": "2026-10-28T13:01:09.175Z",
    "seconds": null,
-   "finished": "2026-10-28T10:20:49.105Z"
+   "finished": "2026-10-28T13:34:04.755000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[test] T-0533 Idris C2 replay follow-ups + T-0552 + T-0532",
+   "model": "sonnet",
+   "started": "2026-10-28T12:38:54.686Z",
+   "seconds": null,
+   "finished": "2026-10-28T13:00:51.483000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-0548 Pernille 120 s wait for prompting reads",
+   "model": "sonnet",
+   "started": "2026-10-28T12:26:41.164Z",
+   "seconds": null,
+   "finished": "2026-10-28T12:38:35.860000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[review] T-0549 Odalys C13 re-review of device fixes ad580920",
+   "model": "opus",
+   "started": "2026-10-28T12:19:27.706Z",
+   "seconds": null,
+   "finished": "2026-10-28T12:26:28.788000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 91,
+  "runnable_count": 94,
   "blocked_count": 48
  },
  "meter": {
@@ -63,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-28T06:22:49-04:00"
+  "at": "2026-10-28T09:36:07-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -102,7 +126,7 @@
   {
    "name": "Idris",
    "state": "next",
-   "task": "Idris, P0, L3 device run: CPython cold start, peak and the real extension memory ceiling (allocation ramp,...",
+   "task": "L1/L2 device checks: CMPedometer, CMMotionActivity, HealthKit (locked/unlocked), battery, location inside the widget...",
    "model": null,
    "since": null,
    "next": []
@@ -625,13 +649,6 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "T-0312 slice a",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
     "t": "T-0312 slice a HUD",
     "s": "next",
     "o": "c"
@@ -644,13 +661,6 @@
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "build",
-    "t": "C2 contract mismatches found by T-0353 slice 1",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
     "k": "test",
     "t": "UI flake",
@@ -658,28 +668,65 @@
     "o": "c"
    },
    {
-    "w": "Pernille",
+    "w": "Idris",
+    "k": "test",
+    "t": "From Pernille's T-0536 review of 39528f1f",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
     "k": "build",
-    "t": "C2 notifications and keychain, Python half",
+    "t": "From Odalys's T-0529 review L1-L5",
     "s": "next",
     "o": "c"
    },
    {
-    "k": "review",
-    "t": "Reviewer other than Idris",
+    "w": "Idris",
+    "k": "build",
+    "t": "From Odalys's T-0549 re-review",
     "s": "next",
     "o": "c"
    },
    {
-    "k": "review",
-    "t": "Reviewer other than Idris",
+    "w": "Idris",
+    "k": "build",
+    "t": "From Odalys's T-0549 re-review",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "test",
-    "t": "BridgeTests/testLocationSampleThroughTheBridg...",
+    "t": "Flaky build step",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "App pictures on the site with no Claude",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "A screenshot pass so app pictures stay current",
+    "s": "next",
+    "o": "i"
+   },
+   {
+    "w": "code",
+    "k": "design",
+    "t": "Write the app guide v1,...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Keep the app guide current with no Claude...",
     "s": "next",
     "o": "c"
    },
@@ -756,32 +803,32 @@
   ],
   "done": [
    {
-    "w": "Ines",
-    "k": "report",
-    "t": "Morning CEO report",
-    "at": "2026-10-28T10:20:49.105Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0514 alpha_run hand steps",
-    "at": "2026-10-28T10:14:57.283000+00:00",
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0516 Idris console input field between input() calls",
+    "at": "2026-10-28T13:34:04.755000+00:00",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "test",
-    "t": "T-0530 StoreKit setup flake",
-    "at": "2026-10-28T09:41:07.869000+00:00",
+    "t": "T-0533 Idris C2 replay follow-ups + T-0552 + T-0532",
+    "at": "2026-10-28T13:00:51.483000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "T-0548 Pernille 120 s wait for prompting reads",
+    "at": "2026-10-28T12:38:35.860000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 91,
-   "wait": 24,
-   "blocked": 24,
-   "you": 4
+   "next": 94,
+   "wait": 23,
+   "blocked": 25,
+   "you": 5
   }
  },
  "qr": [],
@@ -789,6 +836,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "task_open"

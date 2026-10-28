@@ -26,6 +26,7 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
+| Oct 28, 07:48 | <span class="tag t-build">build</span> T-0539..T-0542: Odalys's four Medium review findings fixed (files containment, location cache erased on revoke, prompt timing, per-script notification ids); 83/83 device and bridge tests green; re-review T-0549 |  |
 | Oct 28, 05:41 | <span class="tag t-task_done">task_done</span> T-0530: StoreKit test flake fixed (a test purchase landing after the clear); found and fixed a real bug where a refund in the first seconds after purchase left Pro unlocked; ProStoreTests 10 runs green, 280/280 unit tests |  |
 | Oct 28, 05:16 | <span class="tag t-task_progress">task_progress</span> T-0513 parts 1,3,4,5: package smokes (pyflakes, jedi, requests) pass inside the Simulator app; editor shot in light and dark; Ask to Buy test no longer skips; A2c, A4b, A9 alpha rows have commands |  |
 | Oct 28, 04:43 | <span class="tag t-task_done">task_done</span> T-0353: all six device modules (location, pedometer, clipboard, files, notifications, keychain) answer Python scripts through the bridge; 275 unit tests green |  |
@@ -225,7 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 23, 17:46 | <span class="tag t-build">build</span> Netsmith core UnfoldKit in spikes/netsmith: 19/19 XCTests macOS and Simulator; 500-face sphere unfolds to 25 gores, no overlaps, 0.45 s on Simulator |  |
 | Oct 23, 14:30 | <span class="tag t-research">research</span> H24 doors Apple opened: 0 at B+, best C+ (Photos keyword write, iOS 27); doors dated by compiler typecheck |  |
 | Oct 23, 14:02 | <span class="tag t-review">review</span> C13 review of queue.js (6e2d728): safe sinks and token path pass; 8 findings for Odalys, 2 P1 (false Saved on Not before; status not pushed between sessions so saves read Not saved); size cap for Ines |  |
-| Oct 23, 12:34 | <span class="tag t-finding">finding</span> H-I1 bench: Vision document reader drops whole paragraphs on photo pages under one process name only, while reporting success; cause unproven |  |
 
 ## Diaries, meetings, and conversations
 
@@ -261,15 +261,12 @@ Dated task logs and full lessons: archive.md.
 - ops/board.md often holds others' uncommitted ticks: commit only my hunks.
 - A packet can contradict a chair ruling: read the ruling, follow it, ask for the call.
 - Take a board id from the board before writing it; fill placeholders before logging; stage only my hunks (pathspec, arrays in zsh).
-- A run stuck in a C call (sleep with the wake replaced) stays stuck: later tests fail "stuck" and xcodebuild hangs. Run xcodegen after adding a file, or 0 tests run green.
-- A gate that checks the repo is not the app: list the bundle. Some tools/ scripts ignore --help and run.
 
 - Accessibility: the element is the first-responder UITextInput, not its container. XCTAttachment is deleted on success unless lifetime = .keepAlways. The Simulator drops some hardware keys under XCUITest: resend on no state change, count it.
 - StoreKit testing: Transaction.unfinished lies after finish(); declineAskToBuy signs a verified PURCHASE (decline = no transaction; setUp clear lags, T-0513); never two listeners finishing the same transactions. SKTestSession works from a UI test (disableDialogs too), but its refund did not reach the running app's updates: read the entitlement on screen open. A fresh-booted sim's first product load can come back empty: retry while offline. xc.sh can print exit 0 after a failed test plus a 0-test retry: grep "' failed (". clearTransactions() right after buyProduct loses to the still-landing purchase, which then sticks: wait for it in Transaction.all first (T-0530, bcfd42f5; review of ProStore.receive open).
-- XCUITest scrollViews.firstMatch may be the screen underneath: drag by window coordinate.
-- A commit adding app files gets the full suite first (UI tests alone missed PreviewQueueTests).
-- simctl install resets bundle file modes to 0644: a build-phase chmod proves nothing on the Simulator (T-0359).
 - T-0478 2026-10-28 (11cb2531): iPad windows. Per-scene model in a StateObject. Full-screen windowing hides window A: reopen it via openWindow. Review T-0515.
+- T-0534/T-0535 2026-10-28 (01845911, 39528f1f): F3 probe 0/10 stale. Refunds match by transaction id; revocations in hand outvote reads. Hold a fake read open with a continuation to test races. Review T-0536.
+- T-0539..T-0542 2026-10-28 (ad580920): M1-M4 fixed. Foundation drops '..' by text for a missing item: check with realpath. A red test that waits on old behaviour must be bounded (an hour-long fake prompt hung a run). Re-review T-0549.
 {% endraw %}
 
 

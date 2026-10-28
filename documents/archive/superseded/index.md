@@ -14,7 +14,7 @@ description: "Plans and drafts a later decision replaced, kept as they were."
 <div class="ix">
 
 <h2 id="documents">Documents</h2>
-<p class="meta">1 document.</p>
+<p class="meta">1 document, most recently updated first.</p>
 <div class="cards"><a class="card" href="{{ '/documents/company/pre-choice-work.html' | relative_url }}"><span class="meta"><span class="kind blue">Plan</span><span>Ines</span><span>Day 2 · Fri Oct 23</span></span><b>Pre-choice work: what we build before #23 is answered</b><p>Start the app work that every candidate needs. The three candidates on #23 are Netsmith (#11), Ledger (#21) and Plotback (#21). All three are…</p></a></div>
 
 

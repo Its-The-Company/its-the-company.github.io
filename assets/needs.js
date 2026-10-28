@@ -81,7 +81,7 @@ var PO = ['Approve', 'Hold', 'No'].map((k) => ({ key: k, label: k, reply: k.toLo
 function mk(p, tag, cls, text) { return p.appendChild(el(tag, cls, text)); }
 function labels(i) { return (i.labels || []).map((x) => String(x.name || x).toLowerCase()); }
 function inv(l) { return names.indexOf(l) >= 0; }
-function off(i) { var q = labels(i).indexOf('proposal') >= 0; return skip.indexOf(i.number) >= 0 || labels(i).indexOf('main') >= 0 || (P ? !q : q && props.indexOf(i.number) < 0); }
+function off(i) { var q = labels(i).indexOf('proposal') >= 0; return skip.indexOf(i.number) >= 0 || labels(i).indexOf('main') >= 0 || labels(i).indexOf('site-state') >= 0 || (P ? !q : q && props.indexOf(i.number) < 0); }
 function getJ(p) { return S.gh(p).then((r) => { if (!r.ok) throw new Error(S.said(r)); return r.json(); }); }
 function send(method, p, body) {
 var h = S.hdrs(); h['Content-Type'] = 'application/json';

@@ -176,9 +176,29 @@ var more = mk(b, 'button', 'cv-quoted', 'Show the whole message');
 more.type = 'button';
 more.onclick = () => { inner.className = ''; if (parts[1]) md(parts[1], inner); more.hidden = true; };
 }
+copyBtn(m, x.body);
 return m;
 }
-function sysEl(x) { var s = el('div', 'cv-sys'); mk(s, 'span', 'cv-ok', '✓'); put(s, txt('Received ' + clock(x.at))); return s; }
+function copyText(t) {
+var nav = W.navigator, fb = () => {
+var a = document.createElement('textarea'); a.value = t; a.setAttribute('readonly', ''); a.style.cssText = 'position:fixed;top:0;left:0;opacity:0';
+document.body.appendChild(a); a.select(); a.setSelectionRange(0, t.length);
+var ok = false; try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+document.body.removeChild(a); return ok;
+};
+if (nav && nav.clipboard && nav.clipboard.writeText) return nav.clipboard.writeText(t).then(() => true, () => fb());
+return Promise.resolve(fb());
+}
+function copyBtn(m, body) {
+var t = String(body || '').replace(/<!--[\s\S]*?-->/g, '').trim(), b = mk(m, 'button', 'cv-copy', 'Copy'), tm = 0;
+b.type = 'button'; b.setAttribute('aria-label', 'Copy message');
+b.onclick = () => { copyText(t).then((ok) => {
+b.textContent = ok ? 'Copied' : 'Copy failed'; b.setAttribute('aria-label', b.textContent); b.classList.add('on');
+clearTimeout(tm); tm = setTimeout(() => { b.textContent = 'Copy'; b.setAttribute('aria-label', 'Copy message'); b.classList.remove('on'); }, 1500);
+}); };
+return b;
+}
+function sysEl(x) { var s = el('div', 'cv-sys'); mk(s, 'span', 'cv-ok', '✓'); put(s, txt('Received ' + clock(x.at))); copyBtn(s, 'Received ' + clock(x.at)); return s; }
 var log = null, head = null, pin = null, anchor = null, shown = {}, lastDay = '', lastAt = '', waitEl = null, pinObs = null;
 function items(n) {
 var i = issue(n), out = i ? [{ id: 'i' + n, l: login(i), body: i.body, at: i.created_at }] : [];
@@ -312,6 +332,20 @@ function draftKey() { return 'company.draft.' + target(); }
 function saveDraft() { if (cur === null) return; if (ta.value.trim()) LS.setItem(draftKey(), ta.value); else LS.removeItem(draftKey()); }
 function toText() { var n = target(), i = issue(n); return isMain(n) ? 'Chat' : '#' + n + (i ? ' ' + i.title : ''); }
 function canSend() { return !!ta.value.trim() && !S.rejected() && !sending; }
+function dragVerdict(dy, ms) { var d = dy > 0 ? dy : 0; return { y: d, hide: d >= 60 || (d >= 24 && ms > 0 && d / ms >= 0.6) }; }
+var grip = el('div', 'cv-grip'), g0 = null, g0t = 0;
+attr(grip, 'aria-hidden', 'true'); mk(grip, 'span', 'cv-grip-bar');
+function gy(e) { var t = (e.touches && e.touches[0]) || (e.changedTouches && e.changedTouches[0]); return t ? t.clientY : 0; }
+function gripTo(y) { dock.style.transform = y ? 'translateY(' + y + 'px)' : ''; }
+on(grip, 'touchstart', (e) => { g0 = gy(e); g0t = Date.now(); dock.className = 'cv-dock cv-dragging'; });
+on(grip, 'touchmove', (e) => { if (g0 !== null) gripTo(dragVerdict(gy(e) - g0, 1).y); });
+function gripEnd(e, cancel) {
+if (g0 === null) return;
+var v = dragVerdict(gy(e) - g0, Date.now() - g0t); g0 = null; dock.className = 'cv-dock';
+if (v.hide && !cancel) { gripTo(0); doHide(); } else gripTo(0);
+}
+on(grip, 'touchend', (e) => { gripEnd(e, false); });
+on(grip, 'touchcancel', (e) => { gripEnd(e, true); });
 function drawDock() {
 dock.textContent = ''; dock.hidden = (cur || parse()) === 'home';
 if (!composerOn) { mk(dock, 'p', 'muted', 'Sending is off.'); return; }
@@ -323,6 +357,7 @@ var b = mk(dock, 'div', 'cv-bar'); put(b, fake); put(b, barSend); put(dock, out)
 fake.textContent = ta.value.trim() ? ta.value.trim().split('\n')[0] : isMain(target()) ? 'Message the company...' : 'Reply to ' + toText() + '...';
 return;
 }
+put(dock, grip);
 to.textContent = 'To '; mk(to, 'b', null, toText());
 var nm = LS.getItem(NAME); if (nm) mk(to, 'span', null, '· as ' + nm);
 attr(urg, 'aria-pressed', urgentOn ? 'true' : 'false');
@@ -330,7 +365,8 @@ attr(urg, 'aria-pressed', urgentOn ? 'true' : 'false');
 }
 fake.onclick = () => { isOpen = true; drawDock(); if (ta.focus) ta.focus(); };
 barSend.onclick = () => { doSend(); };
-hide.onclick = () => { saveDraft(); if (ta.blur) ta.blur(); isOpen = false; drawDock(); };
+function doHide() { saveDraft(); if (ta.blur) ta.blur(); isOpen = false; drawDock(); }
+hide.onclick = doHide;
 urg.onclick = () => { urgentOn = !urgentOn; attr(urg, 'aria-pressed', urgentOn ? 'true' : 'false'); };
 on(ta, 'input', () => {
 saveDraft(); send.disabled = barSend.disabled = !canSend();
@@ -414,7 +450,8 @@ var n = lastDraw ? 100 : 30, cached = !lastDraw && readAllow();
 Promise.all([cached ? (names = cached.names) : allow(), get(RI + '?state=all&per_page=' + n + '&sort=updated'), get(RI + '/comments?per_page=' + n + '&sort=created&direction=desc')])
 .then((res) => {
 var same = lastDraw && lastDraw[1] === res[1] && lastDraw[2] === res[2] && String(lastDraw[0]) === String(res[0]);
-names = res[0]; issues = res[1].filter((i) => !i.pull_request); comments = res[2] || [];
+names = res[0]; issues = res[1].filter((i) => !i.pull_request && labelsOf(i).indexOf('site-state') < 0);
+comments = (res[2] || []).filter((c) => String(c.body || '').trim().indexOf('<!-- site-state') !== 0);
 if (!lastDraw) { lastDraw = res; select(parse()); } else if (!same) { lastDraw = res; refresh(); }
 onDrawn.splice(0).forEach((f) => { f(); });
 S.feed(issues, allComments(), names, deadlineOf, kindOf, (k, t) => { go(k); if (t && !ta.value.trim()) { ta.value = t; saveDraft(); } isOpen = true; drawDock(); });

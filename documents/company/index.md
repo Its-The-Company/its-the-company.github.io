@@ -14,7 +14,7 @@ description: "How the company works: the Handbook."
 <div class="ix">
 
 <h2 id="documents">Documents</h2>
-<p class="meta">1 document.</p>
+<p class="meta">1 document, most recently updated first.</p>
 <div class="cards"><a class="card" href="{{ '/documents/company/handbook.html' | relative_url }}"><span class="meta"><span class="kind grey">Handbook</span><span>Ines</span><span>Day 1 · Thu Oct 22</span></span><b>Company Handbook</b><p>We have one goal this month: an iOS app that earns $200 in net proceeds by <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span>. Everything below exists to get there with as little ceremony as…</p></a></div>
 
 

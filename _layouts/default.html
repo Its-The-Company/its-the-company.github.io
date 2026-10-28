@@ -210,6 +210,10 @@ img.portrait{width:120px;height:120px;border-radius:var(--r-l);flex:none;margin-
 .pager a b{display:block;margin-top:2px;font-size:var(--fs-2);color:var(--ink)}.pager a:hover{border-color:var(--accent)}.pager .next{grid-column:2;text-align:right}
 .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:var(--s3);margin:10px 0 0}.cards.one{grid-template-columns:minmax(0,1fr)}.day .cards{grid-template-columns:repeat(auto-fill,minmax(300px,1fr))}
 .card{display:flex;flex-direction:column;gap:6px;min-width:0;padding:14px var(--s4);border:1px solid var(--line);border-radius:var(--r-l);background:var(--bg);text-decoration:none;color:inherit}
+/* New-content badges (T-0544): blue is the Investor's own instruction (#41 c6467855207); badges.js adds them, token only. */
+.nb{display:inline-block;min-width:20px;padding:0 6px;border-radius:var(--r-pill);background:#2563eb;color:#fff;font:700 12px/20px var(--font);text-align:center;letter-spacing:0;text-transform:none;vertical-align:middle;white-space:nowrap}
+.card,.btn.fld{position:relative}.card>.nb,.btn.fld>.nb{position:absolute;top:8px;right:8px}.card:has(>.nb) .meta{padding-right:44px}.btn.fld:has(>.nb) b{padding-right:30px}
+.tabs a .nb,.subtabs a .nb{margin-left:6px;font-size:11px;line-height:18px;min-width:18px;padding:0 5px}
 .card:hover{border-color:var(--accent)}.card .meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px;font-size:var(--fs-0);color:var(--muted)}
 .card b{font-size:var(--fs-2);line-height:1.3;text-wrap:balance}.card p{margin:0;font-size:var(--fs-1);line-height:1.45;color:var(--muted)}
 .days{margin:var(--s2) 0 0 6px;padding-left:22px;border-left:2px solid var(--line)}
@@ -486,6 +490,11 @@ nav.subtabs.hometabs .num{font-weight:400}
 .cv-msg.cv-inv .cv-from{justify-content:flex-end}
 .cv-body{padding:var(--s2) var(--s3);border:1px solid var(--co-line);border-radius:var(--r-l);border-top-left-radius:var(--s1);background:var(--co-bg);color:var(--ink);overflow-wrap:anywhere;font-size:var(--fs-1)}
 .cv-inv .cv-body{background:var(--accent);color:var(--accent-ink);border-color:transparent;border-radius:var(--r-l);border-top-right-radius:var(--s1)}
+.cv-copy{justify-self:end;position:relative;margin:0 var(--s1);padding:0 var(--s1);border:0;background:none;color:var(--muted);font:inherit;font-size:var(--fs-0);line-height:1.4;cursor:pointer;border-radius:var(--r-s)}
+.cv-copy::after{content:"";position:absolute;inset:-14px -6px}
+.cv-copy:hover,.cv-copy.on{color:var(--ink);text-decoration:underline}
+.cv-sys .cv-copy{margin:0;color:inherit}
+@media (hover:hover){.cv-copy{opacity:0}.cv-msg:hover .cv-copy,.cv-sys:hover .cv-copy,.cv-copy:focus-visible,.cv-copy.on{opacity:1}}
 .cv-body p,.cv-body ul,.cv-body ol{margin:0 0 var(--s2)}.cv-body>:last-child{margin-bottom:0}
 .cv-body ul,.cv-body ol{padding-left:1.25em}
 .cv-body b.cv-h{display:block;margin:var(--s2) 0 var(--s1)}
@@ -521,6 +530,11 @@ nav.subtabs.hometabs .num{font-weight:400}
 .cv-tool[aria-pressed="true"]{background:var(--hot-bg);color:var(--hot);border-color:transparent}
 .cv-tools .cv-send{margin-left:auto}
 .cv-hide{color:var(--muted)}
+/* T-0547: grab handle, touch screens only; the dock follows the finger and springs back (no animation under Reduce Motion) */
+.cv-grip{display:none}
+@media (pointer:coarse){.cv-grip{display:flex;justify-content:center;align-items:center;height:24px;margin:calc(-1*var(--s2)) calc(-1*var(--s4)) 0;touch-action:none}
+  .cv-grip-bar{width:40px;height:5px;border-radius:var(--r-pill);background:var(--accent)}
+  .cv-dock{transition:transform .18s ease-out}.cv-dock.cv-dragging{transition:none}}
 .cv-dock .cv-state{margin:var(--s1) 0 0;font-size:var(--fs-0);font-weight:600}
 .cv-dock .cv-state:empty{display:none}
 .cv-state.cv-sent{color:var(--ok)}.cv-state.cv-failed{color:var(--hot)}
@@ -701,5 +715,6 @@ summary.cv-sec{display:list-item;cursor:pointer;min-height:44px}
 <footer><span>{{ site.title }}</span>{% if page.url == "/" %}<a href="{{ '/connect.html' | relative_url }}#setup">Investor setup</a>{% endif %}<a href="{{ '/privacy.html' | relative_url }}">Privacy</a><a href="{{ '/support.html' | relative_url }}">Support</a><a href="{{ '/press.html' | relative_url }}">Press kit</a><a href="{{ '/subscribe.html' | relative_url }}">Subscribe (RSS)</a></footer>
 <script src="{{ '/assets/app.js' | relative_url }}"></script>
 <script src="{{ '/assets/swipe.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/badges.js' | relative_url }}"></script>
 </body>
 </html>

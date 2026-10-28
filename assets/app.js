@@ -97,8 +97,8 @@ var w = byId('s-wk'), r = byId('s-wk-r');
 if (w && !r && w.parentNode) { r = add(w.parentNode, 'small'); r.id = 's-wk-r'; }
 if (r) r.textContent = ' ' + tail(m.weekly, 1).slice(1);
 }
-if (q.runnable_count != null) setText('s-ready', String(q.runnable_count));
-if (q.blocked_count != null) setText('s-blocked', String(q.blocked_count));
+setText('s-ready', q.runnable_count); setText('tp-ready', q.runnable_count);
+setText('s-blocked', q.blocked_count); setText('tp-wait', q.blocked_count);
 }
 function taskLine(w) { return (w.task || '') + (w.model ? ' [' + w.model + ']' : '') + (w.started ? ', for ' + ago(w.started) : ''); }
 function renderNow(box, st, source, isPublic) {

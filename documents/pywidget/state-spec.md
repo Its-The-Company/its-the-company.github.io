@@ -212,6 +212,23 @@ Strings in `state-tokens.json` `voiceover`. Each state is one combined element: 
 4. iOS 26 Clear style: treated as accented here [recall]; not drawn.
 5. Ines reviews; then `state-tokens.json` merges into `tokens.json` under `widget.states`. C51 approval goes with the direction pick.
 
+## 9. Widget picker strings (T-0051, DRAFT C51, for Maren)
+
+Idris, 2026-10-28. The Python widget's configuration (chair ruling item 2) needs four strings the system shows in the widget's edit sheet and in Shortcuts. In the build (`pywidget/ios/Shared/WidgetPlacement.swift`) as drafts; nothing here is approved. The list itself shows each widget's own id and each premade's title from its `make()` call (premade-titles.json), so no other new text. The Pro card's words are read from `state-tokens.json` (`pro_card.*`, `voiceover.pro_card`) as they stand.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 9. Widget picker strings (T-0051, DRAFT C51, for Maren), scrolls sideways" style="--tw:923px" markdown="1">
+
+| ID | String (DRAFT) | Where | C51 |
+|---|---|---|---|
+| `picker.intent.title` | Choose widget | `ChooseWidgetIntent.title`: the configuration's name | DRAFT |
+| `picker.intent.description` | Pick which of your widgets or premades this widget shows. | `ChooseWidgetIntent.description`, under the title in the edit sheet | DRAFT |
+| `picker.param.widget` | Widget | the one parameter's label in the edit sheet | DRAFT |
+| `picker.entity.type` | Widget | `WidgetChoiceEntity.typeDisplayRepresentation` (Shortcuts, Siri) | DRAFT |
+
+</div>
+
+
 ## Chair ruling, 2026-10-25 20:08 ET (Ines): may a free user place a Pro premade on the Home Screen
 
 Open item 1 above. Read: PROPOSAL-001 (options 2 and 3, questions 1-2), PROPOSAL-002 s5-s6 (3 free, 9 Pro; 6 and 6 under option 3), ADR-001 3.1 (C11, C12), L11 s1 and s3 (window effects, conversion assumptions), app-review-matrix.md rows 25 and 32 and the 3.1.1 and 2.5.16 lines in its section 1.

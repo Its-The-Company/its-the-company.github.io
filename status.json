@@ -1,45 +1,45 @@
 {
  "schema": 1,
- "at": "2026-10-28T16:29:05.751279+00:00",
+ "at": "2026-10-28T19:39:19.940971+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-28T09:36:53-04:00"
+  "started": "2026-10-28T12:30:41-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "idris",
-   "task": "[test] T-0567 close() stop test and close-window UI test",
+   "task": "[build] T-0051 Pro premade placement",
    "model": "opus",
-   "started": "2026-10-28T16:08:24.284Z",
+   "started": "2026-10-28T19:08:20.535Z",
    "seconds": null,
-   "finished": "2026-10-28T16:27:56.282000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-0571 re-review of 79251e3d and db9403be",
-   "model": "opus",
-   "started": "2026-10-28T16:05:24.007Z",
-   "seconds": null,
-   "finished": "2026-10-28T16:08:10.857000+00:00"
+   "finished": "2026-10-28T19:38:34.612000+00:00"
   },
   {
    "name": "idris",
-   "task": "[build] T-0566 run-0 background-thread output",
-   "model": "opus",
-   "started": "2026-10-28T15:53:29.673Z",
+   "task": "[test] T-0581 alpha A2c appearance failure",
+   "model": "sonnet",
+   "started": "2026-10-28T18:34:09.009Z",
    "seconds": null,
-   "finished": "2026-10-28T16:05:10.187000+00:00"
+   "finished": "2026-10-28T19:07:41.530000+00:00"
   },
   {
    "name": "idris",
-   "task": "[build] T-0567 + T-0566 console scene lifecycle and run-0 output",
-   "model": "opus",
-   "started": "2026-10-28T15:01:10.456Z",
+   "task": "[build] T-0576 T-0579 review fixes batch",
+   "model": "sonnet",
+   "started": "2026-10-28T17:55:59.698Z",
    "seconds": null,
-   "finished": "2026-10-28T15:53:10.953000+00:00"
+   "finished": "2026-10-28T18:33:49.024000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-0575 site Home done/queued panel",
+   "model": "sonnet",
+   "started": "2026-10-28T17:42:09.183Z",
+   "seconds": null,
+   "finished": "2026-10-28T17:54:40.941000+00:00"
   }
  ],
  "queue": {
@@ -50,25 +50,25 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 11.0,
-   "resets_at": "2026-10-28T13:59:59.582505+00:00",
+   "pct": 7.0,
+   "resets_at": "2026-10-28T18:59:59.939052+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 89.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 64.0,
-   "resets_at": "2026-11-01T06:59:59.582529+00:00",
+   "pct": 65.0,
+   "resets_at": "2026-11-01T06:59:59.939083+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 36.0,
+   "left": 35.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T06:59:59.582708+00:00",
+   "resets_at": "2026-11-01T06:59:59.939383+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-28T09:36:53.328122-04:00"
+  "read_at": "2026-10-28T12:30:40.570547-04:00"
  },
  "ui": {
   "week_pct": 0.1,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-28T12:29:49-04:00"
+  "at": "2026-10-28T15:40:22-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -713,20 +713,6 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "T-0515 H2",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0515 M1",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
     "t": "T-0515 M2",
     "s": "next",
     "o": "c"
@@ -742,6 +728,20 @@
     "w": "Idris",
     "k": "build",
     "t": "T-0571 re-review N1",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Two red site tests seen after T-0575",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Independent review",
     "s": "next",
     "o": "c"
    },
@@ -840,23 +840,23 @@
   "done": [
    {
     "w": "Idris",
-    "k": "test",
-    "t": "T-0567 close() stop test and close-window UI test",
-    "at": "2026-10-28T16:27:56.282000+00:00",
+    "k": "build",
+    "t": "T-0051 Pro premade placement",
+    "at": "2026-10-28T19:38:34.612000+00:00",
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-0571 re-review of 79251e3d and db9403be",
-    "at": "2026-10-28T16:08:10.857000+00:00",
+    "w": "Idris",
+    "k": "test",
+    "t": "T-0581 alpha A2c appearance failure",
+    "at": "2026-10-28T19:07:41.530000+00:00",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "T-0566 run-0 background-thread output",
-    "at": "2026-10-28T16:05:10.187000+00:00",
+    "t": "T-0576 T-0579 review fixes batch",
+    "at": "2026-10-28T18:33:49.024000+00:00",
     "o": "c"
    }
   ],

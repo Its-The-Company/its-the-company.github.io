@@ -26,6 +26,7 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
+| Oct 28, 13:09 | <span class="tag t-shipped">shipped</span> T-0567 close-a-running-window UI test green (dropped tap, not the queue); T-0568 one run at a time across iPad windows: refusal line, queued Stop ends at once, Restart tells every window |  |
 | Oct 28, 12:28 | <span class="tag t-build">build</span> iPad windows fixes after Pernille's review: background-thread output shows again (T-0566 db9403be); closed windows free their console and stop their run, pinned by mutant-checked unit tests (T-0567 79251e3d, 92de6b8d); the close-window UI test is still open; re-review 8eeda806 found one Medium (T-05 |  |
 | Oct 28, 11:53 | <span class="tag t-build">build</span> App pictures: a UI test class now shoots the app's built screens in light and dark (24 PNGs) for the guide; retaken from a clean start (T-0546, T-0557) |  |
 | Oct 28, 07:48 | <span class="tag t-build">build</span> T-0539..T-0542: Odalys's four Medium review findings fixed (files containment, location cache erased on revoke, prompt timing, per-script notification ids); 83/83 device and bridge tests green; re-review T-0549 |  |
@@ -225,7 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 23, 20:49 | <span class="tag t-build">build</span> Phone '+' then Send now shows 'Sent as #N' under the dock bar (#37, e5ffe2b); chat.js 10,750 of 10,752 B gz; site_send_test case H fails on either half of the fix removed |  |
 | Oct 23, 19:31 | <span class="tag t-fix">fix</span> Site Send fixed (#37): two bugs, the first mine from chat v3 (native clearTimeout called as a method threw before any POST), then a self-chained promise on the first message to Main; browser test 22/0 (9ab430e). Live after the publish. |  |
 | Oct 23, 18:37 | <span class="tag t-release">release</span> Company > Work page built: each worker's current task and queue, scrubbed, static (92e454e) |  |
-| Oct 23, 17:46 | <span class="tag t-build">build</span> Netsmith core UnfoldKit in spikes/netsmith: 19/19 XCTests macOS and Simulator; 500-face sphere unfolds to 25 gores, no overlaps, 0.45 s on Simulator |  |
 
 ## Diaries, meetings, and conversations
 
@@ -264,9 +264,8 @@ Dated task logs and full lessons: archive.md.
 
 - Accessibility: the element is the first-responder UITextInput, not its container. XCTAttachment is deleted on success unless lifetime = .keepAlways. The Simulator drops some hardware keys under XCUITest: resend on no state change, count it.
 - StoreKit testing: Transaction.unfinished lies after finish(); declineAskToBuy signs a verified PURCHASE (decline = no transaction; setUp clear lags, T-0513); never two listeners finishing the same transactions. SKTestSession works from a UI test (disableDialogs too), but its refund did not reach the running app's updates: read the entitlement on screen open. A fresh-booted sim's first product load can come back empty: retry while offline. xc.sh can print exit 0 after a failed test plus a 0-test retry: grep "' failed (". clearTransactions() right after buyProduct loses to the still-landing purchase, which then sticks: wait for it in Transaction.all first (T-0530, bcfd42f5; review of ProStore.receive open).
-- T-0566 2026-10-28 (db9403be): run-0 output to the window whose run finished last (static weak owner), labelled; mutant-checked. Review T-0571.
-- T-0567 2026-10-28 (79251e3d): models keyed by scene session, freed on discard; UI close test open (an XCUITest tap on a SwiftUI overlay hook never fired its action; WIP patch). stdlib_cut size check counts du blocks and flaked +6.6% once.
 - T-0539..T-0542 2026-10-28 (ad580920): M1-M4 fixed. Foundation drops '..' by text for a missing item: check with realpath. A red test that waits on old behaviour must be bounded (an hour-long fake prompt hung a run). Re-review T-0549.
+- T-0051 slice 1 2026-10-28 (bcff31bf): picker = AppIntentConfiguration + WidgetChoiceQuery; Pro card from state-tokens.json; T-0512 calls ProEntitlement.mayWriteTimeline. Left: card tap route (T-0191), Simulator shots of picker and card, review T-0582. Run the UI suite in two halves to stay under the 10-minute foreground limit.
 {% endraw %}
 
 

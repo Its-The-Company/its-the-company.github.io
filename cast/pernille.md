@@ -107,8 +107,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - json.loads accepts lone surrogates, JSONSerialization refuses them; os.path then raises UnicodeEncodeError.
 - iOS number and decimal pads have no minus key. ExamplesUITests type into the console sheet: an example that moves to prompts waits for the Swift handler.
 
-- 2026-10-28 T-0536 (Idris 39528f1f): F1/F2 fixed, approved; F4 Low -> T-0537 (no test pins a read ending the window only on its own id). Lesson: mutate each filter by reading; the narrowing one survived.
-- 2026-10-28 T-0515 (Idris 11cb2531 iPad windows, c5290585): changes needed, fixes T-0566..70. Lesson: run_id 0 is post-run daemon output (contract s7); any run-ID filter must route it. A per-scene StateObject dies on disconnect, not only on discard. Open (mine, not on the board): runtime stamping a thread's writes with its origin run.
+- 2026-10-28 T-0573 (Idris 463137aa/d6ac94b7/175d3653): approve, fixes T-0576..79 P2. Lesson: an assert-nil right after an event is a race; run the mutant with -test-iterations 10 (4/12 green).
+- Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 {% endraw %}
 
 

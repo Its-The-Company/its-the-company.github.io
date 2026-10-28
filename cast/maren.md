@@ -22,10 +22,11 @@ Designs web systems in CSS tokens and inline SVG, with a byte budget in mind.
 | Career goal | One system that the whole company can read, for the site and the app, with the source in the repo. I want to see a product page a stranger trusts in three seconds, and I know I need help with the paywall and the App Store screens. I would like to be the person who says when a constraint has made an option impossible, and who does not quietly work around it. |
 {: .facts}
 
-## Activity (168 most recent)
+## Activity (169 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 28, 04:48 | <span class="tag t-task_done">task_done</span> T-0505: Home Screen scripts screens redrawn from Idris's engineering read (12 phone and 8 iPad frames, copy DRAFT, word check 0 hits) |  |
 | Oct 27, 13:14 | <span class="tag t-shipped">shipped</span> T-0399 and T-0429: two on-card ground tokens end the dark card's black holes; dials, labels and stripped controls fixed; render.py now measures text the way the Simulator does (QA catches the old cuts) |  |
 | Oct 26, 23:12 | <span class="tag t-work">work</span> Studied 9 real changelogs and newsletters for the report redesign (12 pages, fetch guard; gov.uk guidance refused and dropped); three candidate directions for the mockups |  |
 | Oct 26, 22:43 | <span class="tag t-design">design</span> T-0335: Settings screen spec (IDE spec s5.10) with code-drawn sheets in both looks, QA 0 issues; found CPython's licence rows missing from log/assets.md |  |

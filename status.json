@@ -1,77 +1,77 @@
 {
  "schema": 1,
- "at": "2026-10-28T07:12:56.478103+00:00",
+ "at": "2026-10-28T10:16:17.927164+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-28T00:01:54-04:00"
+  "started": "2026-10-28T03:14:21-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "pernille",
-   "task": "[build] T-0525 http N1 and T-0523 github CI",
-   "model": "sonnet",
-   "started": "2026-10-28T07:02:03.051Z",
-   "seconds": null,
-   "finished": "2026-10-28T07:11:52.757000+00:00"
-  },
-  {
    "name": "odalys",
-   "task": "[review] T-0524 http fixes re-review",
-   "model": "opus",
-   "started": "2026-10-28T06:49:49.675Z",
-   "seconds": null,
-   "finished": "2026-10-28T07:01:51.006000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-0520 http C13 fixes H1 M1 M2",
+   "task": "[tools] T-0514 alpha_run hand steps",
    "model": "sonnet",
-   "started": "2026-10-28T06:44:20.406Z",
+   "started": "2026-10-28T09:41:33.040Z",
    "seconds": null,
-   "finished": "2026-10-28T06:49:31.360000+00:00"
+   "finished": "2026-10-28T10:14:57.283000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[review] T-0423 http.py independent review",
+   "name": "idris",
+   "task": "[test] T-0530 StoreKit setup flake",
    "model": "opus",
-   "started": "2026-10-28T06:35:59.263Z",
+   "started": "2026-10-28T09:16:33.704Z",
    "seconds": null,
-   "finished": "2026-10-28T06:44:00.477000+00:00"
+   "finished": "2026-10-28T09:41:07.869000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[test] T-0513 alpha commands parts 1,3,4,5",
+   "model": "opus",
+   "started": "2026-10-28T08:48:58.753Z",
+   "seconds": null,
+   "finished": "2026-10-28T09:16:11.896000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-0505 Home Screen scripts redraws",
+   "model": "sonnet",
+   "started": "2026-10-28T08:43:50.928Z",
+   "seconds": null,
+   "finished": "2026-10-28T08:48:30.932000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 86,
-  "blocked_count": 50
+  "runnable_count": 91,
+  "blocked_count": 48
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
-   "resets_at": null,
+   "pct": 8.0,
+   "resets_at": "2026-10-28T08:59:59.816612+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 100.0,
+   "left": 92.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 61.0,
-   "resets_at": "2026-11-01T07:00:00.140892+00:00",
+   "pct": 62.0,
+   "resets_at": "2026-11-01T06:59:59.816628+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 39.0,
+   "left": 38.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T07:00:00.141022+00:00",
+   "resets_at": "2026-11-01T06:59:59.816766+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-28T00:01:53.754338-04:00"
+  "read_at": "2026-10-28T03:14:21.456283-04:00"
  },
  "ui": {
-  "week_pct": 0.101,
+  "week_pct": 0.1,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-28T03:13:41-04:00"
+  "at": "2026-10-28T06:16:55-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -599,13 +599,6 @@
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "design",
-    "t": "Home Screen scripts redraws from Idris's...",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Ines",
     "k": "plan",
     "t": "Rule before T-0449",
@@ -671,6 +664,46 @@
     "w": "Idris",
     "k": "build",
     "t": "T-0312 slice a idle REPL bar",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "C2 contract mismatches found by T-0353 slice 1",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "test",
+    "t": "UI flake",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "C2 notifications and keychain, Python half",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "k": "review",
+    "t": "Reviewer other than Idris",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "k": "review",
+    "t": "Reviewer other than Idris",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "BridgeTests/testLocationSampleThroughTheBridg...",
     "s": "next",
     "o": "c"
    },
@@ -747,30 +780,30 @@
   ],
   "done": [
    {
-    "w": "Pernille",
-    "k": "build",
-    "t": "T-0525 http N1 and T-0523 github CI",
-    "at": "2026-10-28T07:11:52.757000+00:00",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
-    "k": "review",
-    "t": "T-0524 http fixes re-review",
-    "at": "2026-10-28T07:01:51.006000+00:00",
+    "k": "tools",
+    "t": "T-0514 alpha_run hand steps",
+    "at": "2026-10-28T10:14:57.283000+00:00",
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "build",
-    "t": "T-0520 http C13 fixes H1 M1 M2",
-    "at": "2026-10-28T06:49:31.360000+00:00",
+    "w": "Idris",
+    "k": "test",
+    "t": "T-0530 StoreKit setup flake",
+    "at": "2026-10-28T09:41:07.869000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "T-0513 alpha commands parts 1,3,4,5",
+    "at": "2026-10-28T09:16:11.896000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 86,
-   "wait": 26,
+   "next": 91,
+   "wait": 24,
    "blocked": 24,
    "you": 4
   }

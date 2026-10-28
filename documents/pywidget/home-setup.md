@@ -2,7 +2,7 @@
 layout: "default"
 title: "Home Screen setup and the Add to Home Screen walkthrough (T-0450 slice 2, T-0503)"
 section: "documents"
-description: "Sheets, drawn by draw_home_setup.py (imports draw_run_screen.py and draw_ide.py; no image model): A-home-phone.png, A-home-ipad.png (light, A Paper), B-home-phone.png, B-home-ipad.png (dark, B Studio). QA\u2026"
+description: "Sheets, drawn by draw_home_setup.py (imports draw_run_screen.py and draw_ide.py; no image model): A-home-phone.png, A-home-ipad.png (light, A Paper), B-home-phone.png, B-home-ipad.png (dark, B Studio); revisions after\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/design/' | relative_url }}">← Design &amp; Specs</a><a href="{{ '/documents/pywidget/home-setup.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
 <div class="page-head"><div class="kicker"><span class="kind grey">Design</span><span>Day 6 · Tue Oct 27</span><span><code>pywidget/docs/design/ide/home-setup.md</code></span></div><h1>Home Screen setup and the Add to Home Screen walkthrough (T-0450 slice 2, T-0503)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"><span>By <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a>, Product and visual designer</span></div></div>
@@ -13,7 +13,7 @@ description: "Sheets, drawn by draw_home_setup.py (imports draw_run_screen.py an
 {% raw %}
 Maren, 2026-10-27. <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Ruling</span>: ADR-001 chair ruling 2026-10-27 10:05, s1 ("Make App" writes `app.json`; a lone script first goes into a new project), s2 (the walkthrough), s3 (container projects only), s5 (the words). Build spec for T-0449; Idris reads it, with [`run-screen.md`](run-screen.html) (slice 1), before building. Layout and behaviour are spec; every string is DRAFT <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>.
 
-Sheets, drawn by `draw_home_setup.py` (imports `draw_run_screen.py` and `draw_ide.py`; no image model): `A-home-phone.png`, `A-home-ipad.png` (light, A Paper), `B-home-phone.png`, `B-home-ipad.png` (dark, B Studio). QA: `qa-home-setup.json` (4 sheets, 28 frames, 0 clipped, truncated, overlapping or under-11 pt texts; min contrast 5.49 light, 6.37 dark; each PNG under 300 KB). Regenerate: `python3 pywidget/docs/design/ide/draw_home_setup.py`; copy table: `--strings`.
+Sheets, drawn by `draw_home_setup.py` (imports `draw_run_screen.py` and `draw_ide.py`; no image model): `A-home-phone.png`, `A-home-ipad.png` (light, A Paper), `B-home-phone.png`, `B-home-ipad.png` (dark, B Studio); revisions after s7 are in s8 (`*-home-rev-*`). QA: `qa-home-setup.json` (4 sheets, 28 frames, 0 clipped, truncated, overlapping or under-11 pt texts; min contrast 5.49 light, 6.37 dark; each PNG under 300 KB). Regenerate: `python3 pywidget/docs/design/ide/draw_home_setup.py`; copy table: `--strings`.
 
 ## 1. The menu item: plain words, no coined name
 
@@ -55,7 +55,7 @@ Each step: a schematic diagram (device outline, grey bars, one accent mark in a 
 | Step | Title (DRAFT) | Line (DRAFT) | What T-0449's hand run checks | Status |
 |---|---|---|---|---|
 | 1 | Open Shortcuts, then tap + | The + at the top starts a new shortcut. | + is at the top of My Shortcuts on iOS 26 (iPhone and iPad); or whether our App Shortcut tile in the PyWidget section has its own Add to Home Screen, which would make steps 1-2 one step | CHECK |
-| 2 | Add the Open action | Search for PyWidget, tap Open, then choose [name] from the list. | the action's real title as the intent shows it ("Open" or "Open [name] in PyWidget"); that the project picker lists only projects with a valid `app.json` | CHECK |
+| 2 | Add the Open action | Search for PyWidget, tap Open Project, then choose [name] from the list. | the action's real title as the intent shows it (built as "Open Project", s7.4); that the project picker lists only projects with a valid `app.json` | CHECK |
 | 3 | Tap the name, then Add to Home Screen | Tap the shortcut's name at the top to see its menu. | where Add to Home Screen sits on iOS 26 (name menu, share sheet or info button) | CHECK |
 | 4 | Pick a name and an icon, then tap Add | Tap the new icon to run [name] from the start. / iOS may show Shortcuts for a moment first. | what a tap on the icon shows (banner, a pass through Shortcuts, or straight to the run screen), ruling s2; the second line is kept, changed or cut by that | CHECK |
 | button | Open Shortcuts | | that opening Shortcuts from the sheet is allowed and works (Shortcuts' URL scheme, or drop the button) | CHECK |
@@ -77,7 +77,7 @@ If the hand run finds a three-step route, cut a step and change "Four steps" in 
 Plain descriptive words only; "app", "apps" and "mini app" never appear in user-facing text (ruling s5). Note "App Store" also fails the check, so no string sends people there. `--strings` checks every string, every filled-in string and the sample names: 0 hits.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 6. Words, scrolls sideways" style="--tw:846px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 6. Words, scrolls sideways" style="--tw:874px" markdown="1">
 
 | ID | String (DRAFT) | Where | C51 |
 |---|---|---|---|
@@ -97,16 +97,19 @@ Plain descriptive words only; "app", "apps" and "mini app" never appear in user-
 | `name.foot` | The title while it runs, and the name in Shortcuts and Spotlight. The Home Screen icon gets its own name when you add it. | section footer | DRAFT |
 | `name.empty` | Enter a name. | under the field when the trimmed name is empty; Save disabled | DRAFT |
 | `name.long` | Use 40 characters or fewer. | under the field past 40 characters; Save disabled | DRAFT |
+| `name.scalars` | This name is too long to save. Remove a few characters or emoji. | under the field when the name is 40 characters or fewer but over 64 Unicode scalars (flags, skin tones); Save disabled (T-0505, s7.2) | DRAFT |
+| `name.banned` | Remove the hidden characters from this name. | under the field when the name <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> a control, zero-width or direction character (a pasted emoji sequence, say); Save disabled (T-0505, s7.2) | DRAFT |
 | `entry.head` | Script to Run | section header | DRAFT |
 | `entry.foot` | Each time it opens, this script runs from the start, in the project folder. | section footer | DRAFT |
-| `entry.one` | The only script in this project. | footer when the project <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> one .py file (the lone-script case) | DRAFT |
+| `entry.one` | The only script in this project. | footer when the project holds one .py file (the lone-script case) | DRAFT |
 | `proj.head` | New Project | section header, lone-script case only | DRAFT |
 | `proj.foot.move` | [file] moves into this folder in Projects. | footer, lone-script case, script on this device | DRAFT |
+| `proj.foot.copy` | A copy of [file] goes into this folder in Projects. The original stays where it is. | footer, lone-script case, script in a folder opened from Files or iCloud Drive (T-0505, s7.3) | DRAFT |
 | `edit.home` | Add to Home Screen… | edit sheet row; opens the walkthrough | DRAFT |
 | `edit.off` | Turn Off Home Screen Opening | edit sheet row, destructive; asks first | DRAFT |
 | `edit.off.foot` | Renaming here does not break an icon already on the Home Screen. | edit sheet footer under the name | DRAFT |
 | `off.title` | Turn off Home Screen opening for [name]? | alert after Turn Off | DRAFT |
-| `off.msg` | Icons for it on the Home Screen will stop working. The project and its files stay. | alert message | DRAFT |
+| `off.msg` | Icons for it on the Home Screen will stop working, and setting it up again does not bring them back. The project and its files stay. | alert message (T-0505: setting up again writes a new id, s7.4) | DRAFT |
 | `off.ok` | Turn Off | alert, destructive; deletes app.json | DRAFT |
 | `off.cancel` | Cancel | alert | DRAFT |
 | `walk.title` | Add to Home Screen | walkthrough sheet title | DRAFT |
@@ -117,18 +120,27 @@ Plain descriptive words only; "app", "apps" and "mini app" never appear in user-
 | `s1.title` | Open Shortcuts, then tap + | step 1 title | DRAFT |
 | `s1.body` | The + at the top starts a new shortcut. | step 1 body | DRAFT |
 | `s2.title` | Add the Open action | step 2 title | DRAFT |
-| `s2.body` | Search for PyWidget, tap Open, then choose [name] from the list. | step 2 body | DRAFT |
+| `s2.body` | Search for PyWidget, tap Open Project, then choose [name] from the list. | step 2 body (T-0505: the action is titled Open Project, home-setup.md s7.4) | DRAFT |
 | `s3.title` | Tap the name, then Add to Home Screen | step 3 title | DRAFT |
 | `s3.body` | Tap the shortcut's name at the top to see its menu. | step 3 body | DRAFT |
 | `s4.title` | Pick a name and an icon, then tap Add | step 4 title | DRAFT |
 | `s4.body` | Tap the new icon to run [name] from the start. | step 4 body | DRAFT |
 | `s4.note` | iOS may show Shortcuts for a moment first. | step 4, second line; kept, changed or cut after T-0449's hand run | DRAFT |
+| `walk.ready.3` | [name] is ready in Shortcuts and Spotlight. Three steps put it on your Home Screen. | three-step variant (only if shortcuts://create-shortcut works): intro after the first Save | DRAFT |
+| `walk.intro.3` | Three steps in Shortcuts put [name] on your Home Screen. | three-step variant: intro from a menu | DRAFT |
+| `s1.alt.title` | Add the Open Project action | three-step variant: step 1 replaces old steps 1 and 2 | DRAFT |
+| `s1.alt.body` | A new shortcut opens. Search for PyWidget, tap Open Project, then choose [name] from the list. | three-step variant: step 1 body | DRAFT |
+| `walk.open.alt` | Start a New Shortcut | three-step variant: bottom button; opens shortcuts://create-shortcut | DRAFT |
+| `menu.edit.running` | Stop the script first. | run screen ⋯ menu: subtitle under the dimmed Edit Script while the run is running or waiting (T-0505, s7.1) | DRAFT |
+| `st.starting` | Starting | run screen status word when a background run holds the queue; detail is st.starting.detail (T-0505, s7.4) | DRAFT |
+| `st.starting.detail` | waiting for a background run | run screen status detail beside Starting | DRAFT |
+| `start.body` | A script is running in the background. [name] starts when it ends. Stop cancels [name]. | run screen body while Starting (T-0505, s7.4) | DRAFT |
 | `walk.open` | Open Shortcuts | walkthrough bottom button, primary; leaves PyWidget for Shortcuts, the sheet stays open | DRAFT |
 
 </div>
 
 
-Word check ('app', 'apps', 'mini app'): 43 strings, hits none
+Word check('app', 'apps', 'mini app'): 55 strings, hits none
 
 ## 7. Engineering read (Idris), 2026-10-27
 
@@ -191,6 +203,33 @@ Moves on this device: I keep the move, with one engineering limit. Anything anot
 ### 7.6 The hand run
 
 T-0504's last part, the five s4 CHECK rows plus the three added here (40-character name, rename then tap, `create-shortcut`), runs inside T-0449's F18 Simulator hand run with a screenshot each. The answers are noted on T-0449. That is T-0449's done line already, so the rows travel with it.
+
+## 8. Redraws after the engineering read (T-0505, Maren, 2026-10-28)
+
+Sheets, same script (`draw_home_setup.py`, no image model, tokens from `../tokens.json`): `A-home-rev-phone.png`, `B-home-rev-phone.png` (8 frames each), `A-home-rev-ipad.png`, `B-home-rev-ipad.png` (4 frames each). QA in `qa-home-setup.json`: 8 sheets, 0 clipped, truncated, overlapping or under-11 pt texts; min contrast 5.49 (phone, light), 5.06 (iPad, light); each PNG under 300 KB. Word check ('app', 'apps', 'mini app') over 55 strings, filled-in strings and sample names: 0 hits. New strings are in the s6 table, all DRAFT C51. The first four sheets are redrawn with the new `s2.body` and `off.msg`.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 8. Redraws after the engineering read (T-0505, Maren, 2026-10-28), scrolls sideways" data-n="3" style="--tw:835px" markdown="1">
+
+| Frame | What | Rules from | Strings |
+|---|---|---|---|
+| phone 11, iPad 2 | Run screen ⋯ menu while running: Edit Script dimmed, subtitle under it; Copy Output and Add to Home Screen stay on | s7.1 | `menu.edit.running` |
+| phone 12 | Name of 39 characters and 67 scalars (flags): its own message, not `name.long` | s7.2 | `name.scalars` |
+| phone 13 | Name with a zero-width space (looks fine, is not): own message | s7.2 | `name.banned` |
+| phone 14, iPad 1 | Setup for a lone script that is a copy: footer says copy | s7.3 | `proj.foot.copy` |
+| phone 15 | Stop-and-open over the editor's console; X is the file name (csv_summary.py) | s7.4 | `confirm.title`, `confirm.msg` (run-screen.md) |
+| phone 16, iPad 3 | Starting: Y's run screen, no Close, Stop at the bottom cancels Y; no alert | s7.4 | `st.starting`, `st.starting.detail`, `start.body` |
+| phone 17, iPad 4 | Three-step walkthrough, kept ready if `shortcuts://create-shortcut` opens a new shortcut: old steps 1 and 2 merge; button reads Start a New Shortcut | s7.4 | `walk.ready.3`, `walk.intro.3`, `s1.alt.*`, `walk.open.alt` |
+| phone 18 | Turn off alert with the longer `off.msg` | s7.4 | `off.msg` |
+
+</div>
+
+
+Notes for build:
+- The Starting status is a new state of the run screen ([`run-screen.md`](run-screen.html) s2 table gains a row: Close no, status Starting, body one explanatory line, bottom Stop). Stop there cancels Y before it starts; X is untouched.
+- Disabled rows in the menu: dimmed title and subtitle, no outline. VoiceOver reads "Edit Script, dimmed, Stop the script first." (needs checking on device).
+- `name.scalars` never states a number, because the reader counts characters and the schema counts scalars. If Idris prefers a different unit, change the string, not the layout.
+- The three-step frames are used only if T-0449's hand run shows `create-shortcut` works. Until then the four-step sheet stands.
 {% endraw %}
 
 </div>

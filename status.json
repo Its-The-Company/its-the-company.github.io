@@ -1,45 +1,45 @@
 {
  "schema": 1,
- "at": "2026-10-28T22:04:24.218456+00:00",
+ "at": "2026-10-28T22:13:55.078793+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-10-28T15:41:13-04:00"
+  "kind": "weekly",
+  "started": "2026-10-28T18:05:53-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "idris",
-   "task": "[build] T-0586 engine after first frame",
-   "model": "opus",
-   "started": "2026-10-28T21:27:52.827Z",
-   "seconds": null,
-   "finished": "2026-10-28T22:03:34.274000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-0593 T-0592 measure, routing switchback",
-   "model": "opus",
-   "started": "2026-10-28T21:12:19.790Z",
-   "seconds": null,
-   "finished": "2026-10-28T21:27:22.754000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[test] T-0513 ProStore flake, T-0586 cold open",
-   "model": "opus",
-   "started": "2026-10-28T20:55:35.441Z",
-   "seconds": null,
-   "finished": "2026-10-28T21:11:58.112000+00:00"
-  },
-  {
    "name": "ines",
-   "task": "[plan] T-0565 landed before alpha ruling",
+   "task": "[report] weekly",
    "model": "opus",
-   "started": "2026-10-28T20:54:28.687Z",
+   "started": "2026-10-28T22:06:54.557Z",
    "seconds": null,
-   "finished": "2026-10-28T20:55:13.905000+00:00"
+   "finished": "2026-10-28T22:12:26.323000+00:00"
+  },
+  {
+   "name": "worker",
+   "task": "[diary] Maren",
+   "model": "haiku",
+   "started": "2026-10-28T22:06:17.995Z",
+   "seconds": null,
+   "finished": "2026-10-28T22:06:41.983000+00:00"
+  },
+  {
+   "name": "worker",
+   "task": "[talk] Idris and Pernille",
+   "model": "haiku",
+   "started": "2026-10-28T22:06:22.382Z",
+   "seconds": null,
+   "finished": "2026-10-28T22:06:41.856000+00:00"
+  },
+  {
+   "name": "worker",
+   "task": "[diary] Idris",
+   "model": "haiku",
+   "started": "2026-10-28T22:06:11.387Z",
+   "seconds": null,
+   "finished": "2026-10-28T22:06:40.526000+00:00"
   }
  ],
  "queue": {
@@ -50,25 +50,25 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 2.0,
-   "resets_at": "2026-10-29T00:00:00.120682+00:00",
+   "pct": 7.0,
+   "resets_at": "2026-10-29T00:00:00.417334+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 98.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 66.0,
-   "resets_at": "2026-11-01T07:00:00.120704+00:00",
+   "pct": 67.0,
+   "resets_at": "2026-11-01T07:00:00.417359+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 34.0,
+   "left": 33.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T07:00:00.120888+00:00",
+   "resets_at": "2026-11-01T07:00:00.417526+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-28T15:41:13.249268-04:00"
+  "read_at": "2026-10-28T18:05:51.296187-04:00"
  },
  "ui": {
   "week_pct": 0.1,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-28T18:05:03-04:00"
+  "at": "2026-10-28T18:14:34-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -944,24 +944,24 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0586 engine after first frame",
-    "at": "2026-10-28T22:03:34.274000+00:00",
+    "w": "Ines",
+    "k": "report",
+    "t": "Weekly",
+    "at": "2026-10-28T22:12:26.323000+00:00",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "T-0593 T-0592 measure, routing switchback",
-    "at": "2026-10-28T21:27:22.754000+00:00",
+    "w": "Worker",
+    "k": "diary",
+    "t": "Maren",
+    "at": "2026-10-28T22:06:41.983000+00:00",
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "test",
-    "t": "T-0513 ProStore flake, T-0586 cold open",
-    "at": "2026-10-28T21:11:58.112000+00:00",
+    "w": "Worker",
+    "k": "talk",
+    "t": "Idris and Pernille",
+    "at": "2026-10-28T22:06:41.856000+00:00",
     "o": "c"
    }
   ],

@@ -1,77 +1,77 @@
 {
  "schema": 1,
- "at": "2026-10-28T00:56:06.159478+00:00",
+ "at": "2026-10-28T07:12:56.478103+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-27T18:13:43-04:00"
+  "started": "2026-10-28T00:01:54-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "idris",
-   "task": "[design] T-0504 Idris rules on Home Screen design",
-   "model": "opus",
-   "started": "2026-10-28T00:50:34.429Z",
+   "name": "pernille",
+   "task": "[build] T-0525 http N1 and T-0523 github CI",
+   "model": "sonnet",
+   "started": "2026-10-28T07:02:03.051Z",
    "seconds": null,
-   "finished": "2026-10-28T00:55:13.778000+00:00"
+   "finished": "2026-10-28T07:11:52.757000+00:00"
   },
   {
-   "name": "maren",
-   "task": "[design] T-0503 Home Screen scripts design slice 2",
+   "name": "odalys",
+   "task": "[review] T-0524 http fixes re-review",
    "model": "opus",
-   "started": "2026-10-28T00:42:51.395Z",
+   "started": "2026-10-28T06:49:49.675Z",
    "seconds": null,
-   "finished": "2026-10-28T00:50:18.594000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-0450 Home Screen scripts design slice 1",
-   "model": "opus",
-   "started": "2026-10-28T00:35:54.929Z",
-   "seconds": null,
-   "finished": "2026-10-28T00:42:25.785000+00:00"
+   "finished": "2026-10-28T07:01:51.006000+00:00"
   },
   {
    "name": "pernille",
-   "task": "[review] T-0502 re-review editor fixes",
-   "model": "opus",
-   "started": "2026-10-28T00:33:38.902Z",
+   "task": "[build] T-0520 http C13 fixes H1 M1 M2",
+   "model": "sonnet",
+   "started": "2026-10-28T06:44:20.406Z",
    "seconds": null,
-   "finished": "2026-10-28T00:35:41.270000+00:00"
+   "finished": "2026-10-28T06:49:31.360000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[review] T-0423 http.py independent review",
+   "model": "opus",
+   "started": "2026-10-28T06:35:59.263Z",
+   "seconds": null,
+   "finished": "2026-10-28T06:44:00.477000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 84,
-  "blocked_count": 51
+  "runnable_count": 86,
+  "blocked_count": 50
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
-   "resets_at": "2026-10-27T23:00:00.125481+00:00",
+   "pct": 0.0,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "left": 90.0,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 59.0,
-   "resets_at": "2026-11-01T07:00:00.125505+00:00",
+   "pct": 61.0,
+   "resets_at": "2026-11-01T07:00:00.140892+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 41.0,
+   "left": 39.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T07:00:00.125665+00:00",
+   "resets_at": "2026-11-01T07:00:00.141022+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-27T18:06:33.755363-04:00"
+  "read_at": "2026-10-28T00:01:53.754338-04:00"
  },
  "ui": {
-  "week_pct": 0.1,
+  "week_pct": 0.101,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -87,22 +87,22 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-27T23:46:14-04:00"
+  "at": "2026-10-28T03:13:41-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
   {
-   "name": "Ines",
+   "name": "Odalys",
    "state": "next",
-   "task": "Ines, P1, alpha checklist fixes from T-0356 (5fdd375e, tools/alpha_rows.tsv): (1) chair line (s0.6): A1 names...",
+   "task": "Odalys, P1, C13 re-review of tools/pkg_sandbox.py after T-0317/T-0311 (8e849e98; notes at the end of...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Odalys",
+   "name": "Ines",
    "state": "next",
-   "task": "Odalys, P1, C13 re-review of tools/pkg_sandbox.py after T-0317/T-0311 (8e849e98; notes at the end of...",
+   "task": "Ines + Odalys, P3, CORRECTIONS pass 3 s3b tags in docs Wrenna does not own (T-0109, 4eb6a81a; quotes and pages in...",
    "model": null,
    "since": null,
    "next": []
@@ -143,13 +143,6 @@
  "tasks": {
   "run": [],
   "open": [
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Alpha checklist fixes from T-0356",
-    "s": "next",
-    "o": "c"
-   },
    {
     "w": "Odalys",
     "k": "review",
@@ -403,20 +396,6 @@
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Premade tree export for the snapshot rows",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Alpha test pack",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Maren",
     "k": "review",
     "t": "Alpha visual reads on 2026-10-31",
@@ -445,13 +424,6 @@
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "review",
-    "t": "Review T-0312 slice a",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "Bridge contract s9",
@@ -462,13 +434,6 @@
     "w": "Idris",
     "k": "build",
     "t": "After T-0391",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "Alpha A5, after T-0391",
     "s": "next",
     "o": "c"
    },
@@ -615,13 +580,6 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "IPad two scenes",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
     "t": "ADR-004 G2/G3 device checks, after a device...",
     "s": "next",
     "o": "c"
@@ -651,6 +609,68 @@
     "w": "Ines",
     "k": "plan",
     "t": "Rule before T-0449",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0507 follow-ups",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0508 follow-ups",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "A person's tap writes the widget",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "Alpha commands the code cannot give yet",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Tools/alpha_run.sh runs the hand steps",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "k": "review",
+    "t": "Reviewer other than Idris",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0312 slice a",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0312 slice a HUD",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0312 slice a idle REPL bar",
     "s": "next",
     "o": "c"
    },
@@ -718,13 +738,6 @@
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "writing",
-    "t": "Report overhaul item 5",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Wrenna",
     "k": "test",
     "t": "Site_qa.py checks for the additions against...",
@@ -734,30 +747,30 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "k": "design",
-    "t": "T-0504 Idris rules on Home Screen design",
-    "at": "2026-10-28T00:55:13.778000+00:00",
+    "w": "Pernille",
+    "k": "build",
+    "t": "T-0525 http N1 and T-0523 github CI",
+    "at": "2026-10-28T07:11:52.757000+00:00",
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "design",
-    "t": "T-0503 Home Screen scripts design slice 2",
-    "at": "2026-10-28T00:50:18.594000+00:00",
+    "w": "Odalys",
+    "k": "review",
+    "t": "T-0524 http fixes re-review",
+    "at": "2026-10-28T07:01:51.006000+00:00",
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "design",
-    "t": "T-0450 Home Screen scripts design slice 1",
-    "at": "2026-10-28T00:42:25.785000+00:00",
+    "w": "Pernille",
+    "k": "build",
+    "t": "T-0520 http C13 fixes H1 M1 M2",
+    "at": "2026-10-28T06:49:31.360000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 84,
-   "wait": 27,
+   "next": 86,
+   "wait": 26,
    "blocked": 24,
    "you": 4
   }

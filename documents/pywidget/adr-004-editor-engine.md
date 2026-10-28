@@ -298,6 +298,57 @@ The G1 screenshot comparison with `mockups/A-editor.png` / `B-editor.png` is not
   - `float` in an annotation draws as text: tree-sitter's query gives no capture there. Maren's call, with `constructor` and decorators (above).
   - The dark appearance (Lumen dark) was not shot in this slice.
 
+### G1 adapter day and re-measure: 2026-10-28 (Idris, T-0460, ruling 7)
+
+**Written before the five runs (ruling 7 items 1 and 4).**
+- **Lead 1, the insert-only cost, found.** A 40 s `sample` of one bench run (a profiling run, its timings void because `sample` stops the process) put 1,135 of 1,650 samples inside `TextInputView.insertText` in `layoutSubviews` -> `inputDelegate.selectionDidChange` -> UIKit's keyboard state manager and assistant bar. Runestone sets `notifyInputDelegateAboutSelectionChangeInLayoutSubviews` on a programmatic selection change and never clears it, so every later layout pass (each typed character) made the keyboard resync. `deleteBackward` clears it, which is why deletes were 9-10 ms. `applyLineChangesToLayoutManager` itself was 232 samples and the incremental parse 62. Fix: our first vendored patch, `scripts/editor/patches/runestone-0001-notify-input-delegate-once.patch` (clear the flag after notifying, as the delegate flag beside it is cleared), applied by `fetch_editor.sh` and named with its hash in `Vendor/Runestone/PIN`. Section 2 allows patches kept in our tree.
+- **Lead 2.** `insertTyped` (the key row) calls the responder's own `insertText` (Runestone's `TextInputView`, the `UIKeyInput` the system keyboard calls), not `TextView.insertText` with its extra `selectionWillChange/DidChange`. The key row and the system keyboard now type through one entry, so the bench times both (ruling 7 item 4).
+- **Lead 3.** `App/Editor/EditorWarmup.swift`: at launch, after the first frame (a key window plus two display refreshes), the app builds one engine, opens six lines of Python, lays it out and drops it. Scheduled from `PyWidgetApp.init` in the shipping branch (not in the unit-test host) and in the `-editor-bench` branch, so the bench's cold open runs in the launch sequence.
+- **Harness change (the only one).** The bench waits for the warm-up to finish, then 5 frames, before its first open, and reports the warm-up's own time (`warmup_ms`: first frame, engine, open, total, main-thread part). Timing, file, keystrokes, positions, focus and wrap are unchanged. `scripts/editor/g1_summary.py` reads the G1RESULT lines from the logs and computes ruling 7's medians; it changes nothing measured.
+- **Suites on this code.** Unit (249 tests) and the console and editor gate UI suites (`AddWidgetTests`, `EditorGateUITests`) through `tools/xc.sh`: all UI tests passed; one unit test, `ProStoreTests.testPendingThenRestoreNothingLeavesBuyEnabled`, timed out on StoreKit testing in the full run (log `xcodebuild-20261028-013240`, which xc.sh then stopped as hung after the last suite) and passed alone with the rest of `ProStoreTests` (14 tests, `-014115`). The editor code does not run in the unit-test host.
+- **One trial run before the commit** (`-013041`, not counted): p95 13.4 / 13.8 / 12.4 ms, cold open 45.6 ms, warm-up 280.6 ms (270.2 on the main thread).
+
+**Verdict on G1 under ruling 7: passed on the Simulator.** Five valid runs, consecutive, on commit `2596a517`, with `pywidget/ios/scripts/editor_bench.sh` unchanged (Release, iPhone 17e Simulator, iOS 27.0, the same file sha256 `6e51c6bf...481b0a`, editor focused, wrap off). Median of the five per-run keystroke p95s: **13.6 / 13.5 / 12.7 ms** (top / middle / end; the slowest position, top, at 13.6, under 16.0). Median of the five cold opens: **54.8 ms** (under 300.0). No run was invalid or replaced: each restored the text byte-equal and passed the pixel check. Raw records, one per run with its log name and the commit: `pywidget/ios/bench/editor-g1-2026-10-28.jsonl`. The numbers below were printed by `python3 -I pywidget/ios/scripts/editor/g1_summary.py` from the five logs.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: G1 adapter day and re-measure: 2026-10-28 (Idris, T-0460, ruling 7), scrolls sideways" style="--tw:1036px" markdown="1">
+
+| Run (log) | Cold open | Warm opens | Keystroke p95 top / mid / end | Insert p95 | Delete p95 | Warm-up total (main thread) |
+| --- | --- | --- | --- | --- | --- | --- |
+| 014246 | 43.3 ms | 26.1-29.5 | 13.1 / 13.9 / 12.6 | 13.1 / 13.9 / 12.6 | 9.8 / 10.0 / 8.7 | 183.5 (174.9) |
+| 014418 | 54.8 | 26.6-48.7 | 14.1 / 13.4 / 13.4 | 13.9 / 13.4 / 13.4 | 32.2 / 9.3 / 8.3 | 96.7 (88.1) |
+| 014521 | 54.1 | 26.7-45.4 | 13.6 / 10.6 / 12.7 | 13.6 / 11.0 / 12.7 | 10.8 / 9.4 / 8.1 | 100.1 (92.7) |
+| 014640 | 56.2 | 26.7-32.0 | 13.3 / 14.3 / 12.5 | 13.3 / 14.3 / 12.4 | 10.2 / 8.7 / 28.0 | 88.5 (81.4) |
+| 014742 (final) | 57.8 | 27.7-44.3 | 13.7 / 13.5 / **25.6** | 13.7 / 13.5 / 25.6 | 11.2 / 8.6 / 8.2 | 111.6 (104.8) |
+
+</div>
+
+
+- **Reported beside the median, deciding nothing (item 3).** Final run: 13.7 / 13.5 / 25.6 ms, cold open 57.8. Worst run per position: 14.1 / 14.3 / 25.6 ms; worst cold open 57.8. The final run's end position is inside the 16-33 band; its p95 is the third-slowest of 40 keystrokes.
+- **The tail is not gone.** The slowest single keystroke per run was 31.7-38.5 ms. A p95 over 40 keystrokes lets two such keystrokes through per position.
+- **Warm-up (item 4).** It ran after the first frame, which came 3.17-3.28 s after process start under XCUITest's launch on the Simulator. It took 88.5-183.5 ms, of which 81.4-174.9 ms was on the main thread, mostly building the first engine (72.9-166.8 ms). That is a one-time stall at launch: a tap in that window waits for it. The cold open's "engine+view" phase fell from 92-253 ms (first measure) to 8.4-9.2 ms.
+- **Unfocused** (no keyboard session, reported only): p95 10.6-13.8 ms at every position except one, 31.7 ms (middle, run 014521).
+- **What this verdict does not cover.** It is Simulator timing on the Mac mini's CPU. The device re-check (ruling 2, T-0479) decides acceptance under this same rule. The key row no longer tells UIKit's keyboard about its taps (the system keyboard is never told about its own); with autocorrection and autocapitalisation off nothing visible depends on it on the Simulator, and the device check should type after a key-row tap to confirm.
+- **Script exit code.** `editor_bench.sh` exited 141 after each of the five passing runs: `ls | head -1` under `pipefail` after the test had finished. Every log ends `** TEST SUCCEEDED **`. Fixed after the fifth run (`sed -n 1p`); nothing measured changed.
+- **Status.** G1 passes on the Simulator; G2 passes what the Simulator shows; G3 fails on two scenes (T-0478). The ADR stays **chosen, gated**.
+
+### G3 two scenes, after the fix: 2026-10-28 (Idris, T-0478)
+
+- **Two scenes, two files: passes on the iPad Air 11-inch (M4) Simulator.** This fixes the finding above. The fix is in the app, not the adapter, and Runestone is untouched.
+- **What changed.**
+  - `Info.plist` declares `UIApplicationSupportsMultipleScenes`, and iPad declares all four orientations.
+  - Each window has its own `ConsoleModel`: its own text, console and run. The Python runtime stays shared, and a run's output goes only to the window that started it. The first window takes the model made at launch, so iPhone's single scene starts as it did before.
+  - A window's file is a `SceneFile`, a reference to a bundled example, and is not a document model. It is the `WindowGroup(for:)` value, so SwiftUI restores it. The scene title is the file name.
+  - On iPad only, More > Open in New Window lists the files.
+- **Evidence.** `UITests/SceneWindowsUITests.swift`, 2 tests, log `xcodebuild-20261028-021431`, screenshots in `pywidget/ios/bench/scenes-2026-10-28/`.
+  - Two windows open, and each is found by its scene title, read back from the `UIWindowScene`.
+  - Typing and ⌘Z in B leave A's text alone. A then comes forward with its edit, and its own ⌘Z and ⇧⌘Z restore it while B stays unchanged.
+  - A window's file comes back after the app is backgrounded, ended and relaunched. Unsaved text does not come back: nothing saves files until T-0355.
+- **Not done.**
+  - Dragging a file out to make a window has no source yet: the IDE has no file list until T-0355's project list. That list also gets Open in New Window as a row context menu.
+  - In iPadOS's full-screen windowing, ⌘` did not bring the covered window forward under XCUITest. The test uses Open in New Window instead, which brings an open file's window forward.
+- **G3 verdict: not written.** Every hardware-keyboard item and two scenes pass on the Simulator. Four items are still open, and the Simulator cannot drive them: trackpad I-beam and drag selection, the command-key overlay as drawn, the Japanese kana keyboard itself (its marked-text path is unit-tested), and dictation. They stay with the device check (T-0479).
+
 ## 8. Licence lines (logged in log/assets.md, Commandments 4-5)
 
 - Runestone, https://github.com/simonbs/Runestone, MIT, Copyright (c) 2021 Simon Støvring.
@@ -356,7 +407,7 @@ Reasons:
 - **Ruling 2 named no statistic.** That gap is mine. "A p95 over 33 ms, or an open over 300 ms after that day" also reads two ways. So I tested this measure against every reading. It lands in the adapter-day band under all of them except worst-run:
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 5: Chair line (Ines), 2026-10-27 11:58 ET (T-0461): G1 first measure, scrolls sideways" style="--tw:740px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: Chair line (Ines), 2026-10-27 11:58 ET (T-0461): G1 first measure, scrolls sideways" style="--tw:740px" markdown="1">
 
 | Reading | Keystroke p95 top / mid / end | Cold open | Outcome |
 | --- | --- | --- | --- |

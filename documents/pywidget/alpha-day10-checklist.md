@@ -35,7 +35,7 @@ Simulator destination for every row: `-project PyWidget.xcodeproj -scheme PyWidg
 
 | # | Feature | Evidence that counts | Produces | By | Pass rule | A fail triggers |
 | --- | --- | --- | --- | --- | --- | --- |
-| A1 | Python runs, with console, `input()`, stop and tracebacks (ADR-001 3.1 C1; Day 7) | `tools/xc.sh $SIM test -only-testing:PyWidgetTests/BridgeTests -only-testing:PyWidgetTests/BridgeSlice2Tests -only-testing:PyWidgetUITests/AddWidgetTests/testConsoleRuns -only-testing:PyWidgetUITests/AddWidgetTests/testInputRoundTrip -only-testing:PyWidgetUITests/AddWidgetTests/testConsoleStripsANSIRewritesProgressAndShowsTheCapNote`, plus a console screenshot attached by testInputRoundTrip | Idris (T-0312 slice a, T-0207); run by Odalys | 10-31 12:00 | 0 failures. testStopLoop, testStopDuringInputIsInterruptedNotEOF and testTracebackCarriesFileAndLineAcrossTwoFiles are among the passing tests. The console shows `Name? Ada`, `Hi Ada`, then `Finished in`. Maren: the input is the T-0312a sheet or REPL bar laid out as in her C5 screens (a layout check, not a polish check) | Alpha fails. No new feature line starts on main until A1 is green. I rule on 11-01 at 09:00 on sending T-0192 to 1.1 to buy the day back |
+| A1 | Python runs, with console, `input()`, stop and tracebacks (ADR-001 3.1 C1; Day 7) | `tools/xc.sh $SIM test -only-testing:PyWidgetTests/BridgeTests -only-testing:PyWidgetUITests/AddWidgetTests/testConsoleRuns -only-testing:PyWidgetUITests/AddWidgetTests/testInputRoundTrip -only-testing:PyWidgetUITests/AddWidgetTests/testConsoleStripsANSIRewritesProgressAndShowsTheCapNote`, plus a console screenshot attached by testInputRoundTrip. (BridgeTests includes its extensions in BridgeSlice2Tests.swift and three other files; chair line s8, 2026-10-28) | Idris (T-0312 slice a, T-0207); run by Odalys | 10-31 12:00 | 0 failures. testStopLoop, testStopDuringInputIsInterruptedNotEOF and testTracebackCarriesFileAndLineAcrossTwoFiles are among the passing tests. The console shows `Name? Ada`, `Hi Ada`, then `Finished in`. Maren: the input is the T-0312a sheet or REPL bar laid out as in her C5 screens (a layout check, not a polish check) | Alpha fails. No new feature line starts on main until A1 is green. I rule on 11-01 at 09:00 on sending T-0192 to 1.1 to buy the day back |
 | A2 | Editor with highlighting (T-0041; Day 8) | T-0041's <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span> numbers file (Release Simulator build through xc.sh, the code-generated 2,000-line file), the G2 and G3 verdicts written in ADR-004 s7, and screenshots of that file in light and dark | Idris; Maren reads | 10-30 23:59 for the verdicts; 10-31 12:00 for the screenshots | ADR-004 Ruling 2 exactly: open under 300 ms; keystroke p95 under 16 ms at the top, middle and end; G2 and G3 pass as s7 writes them. Maren: the screenshots show Quill light and Lumen dark capture colours and nothing unhighlighted past the first screen | As Ruling 2 says: a p95 of 16-33 ms buys one adapter day, and worse fires the s5 fallback. With no verdict by 10-30 23:59, I rule on the numbers in hand on Day 10. On the fallback, A2 passes only if the fallback editor's screenshots meet the same Maren rule by 10-31 18:00 |
 | A3 | A fixture widget on the Simulator Home Screen (Day 8) | `tools/xc.sh $SIM test -only-testing:PyWidgetUITests/AddWidgetTests/testAddWidget`, plus a Home Screen screenshot taken after placement | Idris; run by Odalys | 10-31 12:00 | Test passes. The screenshot shows the widget drawn from the fixture tree, with its fixture text readable, not a placeholder, redacted or error card. Odalys names the fixture string; Maren confirms it is on the image | Alpha fails. By 11-01 18:00 I write the IDE-only build plan (ADR-001 3.3) as a plan only. The cut stays Day 14 |
 | A4 | End to end: a widget written in the app reaches the Home Screen (ADR-001 3.3(b); Day 9) | T-0359 part (c): a widget script carrying a token generated at test start is run in the app and placed on the Home Screen, a screenshot is taken, and the token is printed in the xc.sh log. Also T-0207's tree.json test (v3 item 4) | Idris (T-0207, T-0359) | 10-31 12:00 | The token in the log equals the token on the screenshot, read by Maren. T-0207's test that tree.json equals the finished tree is green | Alpha fails. The T-0207 checkpoint stays as ruled: 10-30 18:00, and that evening I rule on cutting T-0286 or T-0031's restore case. If I cut restore, A7 is graded without it, and restore becomes freeze row F8 |
@@ -126,6 +126,65 @@ Nothing else in the contract changes. Idris may implement `closed_state()` as wr
 
 
 F10 changes by the same ruling: T-0192 is 1.1, so F10 grades T-0193 (tour page 3) only. F9 grades T-0048 without Run as widget and the entry stepper.
+
+## 8. Exact commands, T-0511 (b) and (c) (Ines, 2026-10-28, T-0368). Dated chair lines under s0 item 6; no Day 10 evidence exists yet.
+
+**Conclusion.** Every alpha row now has its command, written from the test names in pywidget/ios at c05a4f08 and checked by `tools/alpha_run.sh --dry-run` (every identifier present). Five steps carry a full command the runner cannot yet execute (T-0514, Odalys). Four have no test yet and go to their owner (T-0513, Idris). T-0511 (b) does not block the Day 10 alpha. It blocks 1.0, and T-0512 closes it.
+
+### 8.1 Commands (tools/alpha_rows.tsv is the run's copy; `$SIM` as in s0)
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 8.1 Commands (tools/alpha_rows.tsv is the run&#x27;s copy; $SIM as in s0), scrolls sideways" data-n="1" style="--tw:772px" markdown="1">
+
+| Row | Step | Command (`tools/xc.sh $SIM ...` from pywidget/ios unless shown) | Last green before tonight's commit (not alpha evidence, s0 item 3) |
+| --- | --- | --- | --- |
+| A1 | A1 | `test -only-testing:PyWidgetTests/BridgeTests -only-testing:PyWidgetUITests/AddWidgetTests/testConsoleRuns -only-testing:PyWidgetUITests/AddWidgetTests/testInputRoundTrip -only-testing:PyWidgetUITests/AddWidgetTests/testConsoleStripsANSIRewritesProgressAndShowsTheCapNote` | Unit suite 249, 1 skipped (xcodebuild-20261028-011245) |
+| A2 | A2a | `pywidget/ios/scripts/editor_bench.sh 'platform=iOS Simulator,name=iPhone 17e'`, five valid runs (ADR-004 ruling 7); it builds the EditorBench scheme in Release with `TEST_RUNNER_PW_EDITOR_BENCH=1` and prints G1RESULT. Runner: T-0514 | Re-measure due Day 9 (T-0460) |
+| A2 | A2b | `test -only-testing:PyWidgetTests/EditorGateTests -only-testing:PyWidgetTests/EditorCaptureMapTests` plus the five `PyWidgetUITests/EditorGateUITests/testG2...` methods. The three testG3 methods skip on an iPhone; G3 is graded from ADR-004 s7 and on iPad in F4 | EditorGateUITests (004447) |
+| A2 | A2c | Light and dark screenshots of the 2,000-line file: **no test shoots both yet**. Owner: Idris, T-0513 (3) | none |
+| A3 | A3 | `test -only-testing:PyWidgetUITests/AddWidgetTests/testAddWidget` | AddWidgetTests (002525) |
+| A4 | A4a | `test -only-testing:PyWidgetTests/BridgeFixtureTests` (T-0207's test: tree.json is the record's bytes, from real runs) | Unit suite (011245) |
+| A4 | A4b | `TEST_RUNNER_SHOT_DIR=<out>/A4b tools/xc.sh $SIM test -only-testing:PyWidgetUITests/WidgetKitCheckTests/testETokenOnTheHomeScreen`. The token test needs SHOT_DIR for its PNGs. Runner: T-0514 | 56d5e7d7 (010856; ops/site-checks/token-e2e/; mutant red 010648) |
+| A5 | A5a | `test -only-testing:PyWidgetTests/PremadeSnapshotTests` (the gate, the design-tree harness and the mutant test); 68 PNGs to ops/site-checks/premade-snapshots/alpha-a5/ | 130201d7 (005412) |
+| A5 | A5b | `TEST_RUNNER_WK_TREES=<wt>/pywidget/tests/widgets/fixtures/premade-trees TEST_RUNNER_SHOT_DIR=<out>/A5b tools/xc.sh $SIM test -only-testing:PyWidgetUITests/WidgetKitCheckTests/testAPremadesInTheExtensionProcess -only-testing:PyWidgetUITests/WidgetKitCheckTests/testDLockScreenAccessories` (see 8.4). Runner: T-0514 | Not run on T-0358's trees |
+| A6 | A6i, A6ii | `python3 pywidget/tests/run_host.py --both examples`; `test -only-testing:PyWidgetUITests/ExamplesUITests` | ExamplesUITests 10/10 (64ecc660) |
+| A7 | A7a | `test` with `-only-testing:` for PyWidgetTests/ProStoreTests, ProStoreCatchUpTests, ProFlagsContractTests (the parity test and two CONTRACT s5 asserts), StoreKitConfigTests (the third s5 assert), ProPaywallTests, and the four ProPaywallUITests methods other than testScreenshotsForReview | Unit suite (011245): testAskToBuyDeclinedGrantsNothing skipped; T-0513 (4) |
+| A7 | A7b | `TEST_RUNNER_PW_PRO_SHOTS=<out>/A7b tools/xc.sh $SIM test -only-testing:PyWidgetUITests/ProPaywallUITests/testScreenshotsForReview`. Runner: T-0514 | |
+| A7 | A7c | In the run's worktree: `cp pywidget/runtime/pro-contract/fixtures/not-json.json pywidget/runtime/pro-flags.json`, then `tools/xc.sh $SIM build` must exit non-zero in the Validate pro-flags.json phase, then `git checkout -- pywidget/runtime/pro-flags.json`. Runner: T-0514 | |
+| A8 | A8, A8s | collect pywidget/packages/sizes.tsv; the import smokes have **no test yet**. Owner: Idris, T-0513 (2), only for packages T-0287 leaves in 1.0 | |
+| A9 | A9 | pyflakes, jedi and requests smokes: **no test yet**. Owner: Idris, T-0513 (1) | |
+| A10 | A10 | `test -only-testing:PyWidgetTests/AppIntentsTests` (testRunScriptWithInputRunsPythonOnTheText, testAppShortcutsListAllThreeIntents among them) | a03be80c (004155) |
+| A11 | A11a-c | `test`; `python3 pywidget/tests/run_host.py --both`; `swift test` in pywidget/ios/Core | Unit suite only (011245) |
+
+</div>
+
+
+A step the runner cannot execute on the day is run by hand at the same commit; that counts (s0 item 1). A step with no command on the day records NOT RUN, and the row has not passed.
+
+### 8.2 Chair line, 2026-10-28: A1, and the skips in A11
+
+- **A1.** The evidence cell named `-only-testing:PyWidgetTests/BridgeSlice2Tests`. No such class exists: BridgeSlice2Tests.swift is an `extension BridgeTests`. Fixed in s1 to `PyWidgetTests/BridgeTests`, which runs its extensions too. The pass rule does not change. This was my error in T-0332.
+- **A11 and the 0-skip floor (s0 item 4).** A bare `test` skips tests by design: they need a runner variable or an iPad. A skip counts against A11 unless its test is on this list, and each one listed runs unskipped in its own row or on the freeze list: WidgetKitCheckTests testAPremadesInTheExtensionProcess, testBBitmapFileFromTheAppGroup, testCToggleOnTheAccentedHomeScreen and testDLockScreenAccessories (A5b and the WidgetKit check); ProPaywallUITests/testScreenshotsForReview (A7b); AcknowledgementsUITests/testAccessibilitySizeSheets and AddWidgetTests/testFloodFrameReport (measurement runs, not gates); EditorBenchUITests/testG1EditorBench (A2a); and the three EditorGateUITests testG3 methods (iPad, F4). ProStoreTests/testAskToBuyDeclinedGrantsNothing is **not** on the list: if it skips, A7 and A11 fail (T-0513 (4)).
+
+### 8.3 Chair line, 2026-10-28: T-0511 (b), a person's tap writes no widget
+
+**Owner Idris, board line T-0512 (P0, due 2026-11-02 23:59 ET). It does not block the Day 10 alpha. It blocks 1.0.** A4 was written to prove ADR-001 3.3(b), and on its words it passes through the -widget-run hook. That shows the pipe from the app to the extension works. It does not show that a person can put a widget on the Home Screen, and that is what the product sells. T-0191's gallery is preview-only by design, and T-0192 is 1.1, so no existing line closes it. A new freeze row does:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 8.3 Chair line, 2026-10-28: T-0511 (b), a person&#x27;s tap writes no widget, scrolls sideways" data-n="1" style="--tw:1646px" markdown="1">
+
+| # | Feature | Evidence that counts | Produces | By | Pass rule | A fail triggers |
+| --- | --- | --- | --- | --- | --- | --- |
+| F19 | A person's tap puts a widget on the Home Screen (T-0512) | A UI test with no -widget-run or other hook: a script with a fresh token is written and saved in the editor, the Python widget is placed and set to it, and the token is read off the extension's pixels; the same for countdown | Idris; Maren reads the shots | 11-02 23:59 | Green at the freeze commit; the shots show the token and countdown's tree | 3.3(b) fails. F1's Day 14 rule reads "A4 and F19 green at the freeze commit" from tonight, so 1.0 is IDE-only, and I take that to the Investors the same day |
+
+</div>
+
+
+What would make this fail: T-0512 lands on 11-02 with one day of margin and competes with T-0353 and T-0051 for main. T-0512 goes first because every premade, free or Pro, depends on it.
+
+### 8.4 T-0511 (c): A5's progress and countdown shots
+
+PremadeSnapshotTests draws timer views against the wall clock, not the trees' 2026-10-31 09:41 clock. Until Idris pins the clock (T-0511 (c)), Maren reads progress (11 shots) and countdown's accessoryRectangular from WidgetKitCheckTests (A5b), not from A5a. Her other 56 reads come from A5a. When the pin lands before the run, A5a is read in full and A5b stays as a cross-check.
 {% endraw %}
 
 </div>

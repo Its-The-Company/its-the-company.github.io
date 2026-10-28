@@ -26,13 +26,16 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
-| Oct 27, 17:17 | <span class="tag t-milestone">milestone</span> ADR-004 <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G2</span>/G3 verdicts: VoiceOver had nothing to read from Runestone until the adapter made its text input the element; hardware keyboard passes on iPad; two scenes fails (no scene manifest); 0 off-palette pixels |  |
+| Oct 28, 01:50 | <span class="tag t-milestone">milestone</span> ADR-004 <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span> passes on the Simulator under <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> 7: after the adapter day (Runestone patch 0001 stops a keyboard resync on every typed character), five runs give median keystroke p95 13.6 ms and median cold open 54.8 ms, against bars of 16 and 300. |  |
+| Oct 28, 01:15 | <span class="tag t-finding">finding</span> T-0508: token e2e green (widget script run in app, read off the Home Screen by Vision); found no production caller of RunResultSink, so no tap puts a widget tree on the Home Screen yet (T-0511) |  |
+| Oct 28, 00:28 | <span class="tag t-milestone">milestone</span> Alpha row A6 (ii): all 10 example scripts run from the app bundle on the Simulator and pass their scripted cases (ExamplesUITests, 10 of 10) |  |
+| Oct 27, 17:17 | <span class="tag t-milestone">milestone</span> ADR-004 G2/G3 verdicts: VoiceOver had nothing to read from Runestone until the adapter made its text input the element; hardware keyboard passes on iPad; two scenes fails (no scene manifest); 0 off-palette pixels |  |
 | Oct 27, 15:55 | <span class="tag t-milestone">milestone</span> Pro purchase done (T-0031, T-0473): the Pro screen buys, restores and survives a refund in StoreKit testing, proven by a UI test; price only from the App Store, Pro list only from the flag file. |  |
 | Oct 27, 15:19 | <span class="tag t-finding">finding</span> T-0031: Xcode's StoreKit test environment kept finished transactions in Transaction.unfinished (9 of 10 solo runs) and often lists a declined Ask to Buy in currentEntitlements for over 10 s; tests check ProStore's finish record and skip the decline case with the transaction id rather than pass it |  |
 | Oct 27, 14:44 | <span class="tag t-milestone">milestone</span> T-0206 renderer done: Lock Screen accessory families placed and shot by XCUITest in the extension process (24 shots); full suite green |  |
 | Oct 27, 13:31 | <span class="tag t-mistake">mistake</span> My 58b447f9 broke PreviewQueueTests (new WidgetInstallView not listed): that run executed UITests only. Found and fixed in b98b534c; full unit suite now run before any commit that adds app files. |  |
 | Oct 27, 12:03 | <span class="tag t-review">review</span> T-0459: pywidget.prompts Python half passes with conditions; one High (number defaults not localised on the wire, de_DE 84.2 would come back as 842), three Medium, five Low; T-0462 to T-0466 |  |
-| Oct 27, 11:47 | <span class="tag t-milestone">milestone</span> Editor engine vendored and measured: Runestone + Tree-sitter Python behind CodeEditorEngine; G1 first measure misses the 16 ms keystroke bar (p95 29-33 ms, runs to 47), open warm 26-32 ms, cold to 328 ms; adapter day is the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>'s call |  |
+| Oct 27, 11:47 | <span class="tag t-milestone">milestone</span> Editor engine vendored and measured: Runestone + Tree-sitter Python behind CodeEditorEngine; G1 first measure misses the 16 ms keystroke bar (p95 29-33 ms, runs to 47), open warm 26-32 ms, cold to 328 ms; adapter day is the chair's call |  |
 | Oct 27, 09:17 | <span class="tag t-build">build</span> T-0424: Swift answers http.status (NWPathMonitor via a new DeviceRouter); HTTPS through the app's _ssl and certifi verified on the Simulator against a local test server; C2 s6 body <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> and whole-request timeout accepted. Review T-0432 (Pernille). |  |
 | Oct 27, 08:56 | <span class="tag t-milestone">milestone</span> Acknowledgements screen in the app (T-0418): full licence texts, certifi with MPL-2.0 and condition 1's line; UI test green on the Simulator |  |
 | Oct 27, 08:23 | <span class="tag t-decision">decision</span> T-0365: drew Button and Toggle with no tap per L5 row V1 instead of the packet's intents; asked Ines to rule (T-0430) |  |
@@ -223,9 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 23, 10:56 | <span class="tag t-build">build</span> Chat v3 slice 1 on main (2fa1cca, dc4e0b7): tabs, thread view, dock, Home glance, lazy setup.js wizard; inside Ines's budgets after the Markdown cut; tests green |  |
 | Oct 23, 07:08 | <span class="tag t-finding">finding</span> Site v2 line 11 closed; main HEAD red on inbox_test (Operator-swept test), two more reds from uncommitted pages.py/app.js edits |  |
 | Oct 23, 06:45 | <span class="tag t-finding">finding</span> Paywall B overflows one screen at default text size when a status line shows (Netsmith hero); test was red on main since 0f35f00, now a strict expected failure; decision with Ines and Maren |  |
-| Oct 23, 05:58 | <span class="tag t-work">work</span> Composer allowlist/mentions fixes done on branch idris/allow-mentions (17faacb), composer_test 72/0; held off main because shipped app.js exceeds the 25 KB check |  |
-| Oct 23, 05:38 | <span class="tag t-milestone">milestone</span> Pre-choice packet 2 done: AppShell package + host app, 24/24 hosted tests, 12/12 mutations killed; two hung on the first run until the test fakes were fixed |  |
-| Oct 23, 04:54 | <span class="tag t-build">build</span> UnlockStore v2 + UnlockPaywall: Ask to Buy, StoreKit-only price, six paywall states; 25/25 hosted tests, 38 shots |  |
 
 ## Diaries, meetings, and conversations
 
@@ -247,11 +247,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open (mine)
 - T-0365 (28fadd67 noted): Button/Toggle drawn no-tap per L5 V1; Ines rules T-0430. Left: device check, F1 map after T-0399. T-0206 after.
 - T-0485 (c3c6876f, review T-0493): set LegalLinks when the app privacy page is published and Terms ruled.
-- T-0031/T-0473 done 2026-10-27 (307297b1); reviews T-0474 Maren, T-0475 Pernille; gallery gate rides T-0191. T-0389 (T-0312 slice b, after T-0041; slice a 846c3bbe, Maren reviews as T-0390); T-0321 (device stdlib rsync); T-0406 READY (5e957362) on Odalys's T-0405; T-0407 (Odalys) owes fresh-boot before profile and the cap name-sort test.
-- T-0460 2026-10-27 (0020d29d): G2/G3 verdicts in ADR-004 s7; reviews T-0476 Pernille, T-0477 Maren; T-0478 two scenes, T-0479 device checks. Left: Day 9 adapter day + 5-run re-measure (ruling 7), due 2026-10-30 23:59, then tick T-0460/T-0041.
-- T-0499/0500/0501 done 2026-10-27 (faf86748); re-review T-0502 Pernille; also T-0490 (T-0486). L1 open.
+- T-0460 2026-10-28: G1 passed (Simulator, ruling 7; 2596a517, eb45c07a). Open: device re-check T-0479 (type after a key-row tap), review of patch 0001 + key row, warm-up is an 81-175 ms launch stall.
 
-- T-0504 done 2026-10-27 (66b0a161): T-0449 builds to home-setup.md s7; Maren redraws T-0505; hand run carries 8 CHECK rows.
 
 Dated task logs and full lessons: archive.md.
 
@@ -269,8 +266,10 @@ Dated task logs and full lessons: archive.md.
 - Accessibility: the element is the first-responder UITextInput, not its container. XCTAttachment is deleted on success unless lifetime = .keepAlways. The Simulator drops some hardware keys under XCUITest: resend on no state change, count it.
 - StoreKit testing: Transaction.unfinished lies after finish(); a declined Ask to Buy lingers; never two listeners finishing the same transactions. SKTestSession works from a UI test (disableDialogs too), but its refund did not reach the running app's updates: read the entitlement on screen open. A fresh-booted sim's first product load can come back empty: retry while offline. xc.sh can print exit 0 after a failed test plus a 0-test retry: grep "' failed (".
 - XCUITest scrollViews.firstMatch may be the screen underneath: drag by window coordinate.
-- Runestone: TextView is never first responder (inputHost is); programmatic selection reaches the delegate in the next layout pass (layoutIfNeeded in tests).
+- Runestone: TextView is never first responder (inputHost is); programmatic selection reaches the delegate in the next layout pass (layoutIfNeeded in tests). Profile before guessing: the insert cost was a never-cleared input-delegate flag (keyboard resync), now patch 0001 in scripts/editor/patches/.
 - A commit adding app files gets the full suite first (UI tests alone missed PreviewQueueTests).
+- simctl install resets bundle file modes to 0644: a build-phase chmod proves nothing on the Simulator (T-0359).
+- T-0478 2026-10-28 (11cb2531): iPad windows. Per-scene model in a StateObject. Full-screen windowing hides window A: reopen it via openWindow. Review T-0515.
 {% endraw %}
 
 

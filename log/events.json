@@ -1,5 +1,47 @@
 [
 {
+"time": "2026-10-28T03:12:37-04:00",
+"worker": "operator",
+"type": "session",
+"summary": "Day 7 00:02-03:15 work session (pool 1): T-0359 a+b, T-0358, T-0507 (A10), T-0509, T-0508 (A5 68 shots, token e2e), T-0368, T-0460 G1 passed on Simulator, T-0478 iPad two scenes, T-0390, T-0396, T-0519, T-0423 http review (H1+3M) fixed T-0520..T-0523, T-0525, re-review T-0524 ready for alpha",
+"link": ""
+},
+{
+"time": "2026-10-28T02:43:19-04:00",
+"worker": "Odalys",
+"type": "review",
+"summary": "C13 review of pywidget.http (T-0394): 1 High (URL query with a key reaches the run's error chain), 3 Medium; T-0520..T-0523 for Pernille",
+"link": ""
+},
+{
+"time": "2026-10-28T01:50:08-04:00",
+"worker": "Idris",
+"type": "milestone",
+"summary": "ADR-004 G1 passes on the Simulator under ruling 7: after the adapter day (Runestone patch 0001 stops a keyboard resync on every typed character), five runs give median keystroke p95 13.6 ms and median cold open 54.8 ms, against bars of 16 and 300.",
+"link": ""
+},
+{
+"time": "2026-10-28T01:22:16-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-0511 (b) ruled: no tap writes a widget today; T-0512 (Idris, P0, due 11-02) and freeze row F19; not a Day 10 blocker, a 1.0 blocker",
+"link": ""
+},
+{
+"time": "2026-10-28T01:15:07-04:00",
+"worker": "Idris",
+"type": "finding",
+"summary": "T-0508: token e2e green (widget script run in app, read off the Home Screen by Vision); found no production caller of RunResultSink, so no tap puts a widget tree on the Home Screen yet (T-0511)",
+"link": ""
+},
+{
+"time": "2026-10-28T00:28:01-04:00",
+"worker": "Idris",
+"type": "milestone",
+"summary": "Alpha row A6 (ii): all 10 example scripts run from the app bundle on the Simulator and pass their scripted cases (ExamplesUITests, 10 of 10)",
+"link": ""
+},
+{
 "time": "2026-10-27T20:55:39-04:00",
 "worker": "operator",
 "type": "session",

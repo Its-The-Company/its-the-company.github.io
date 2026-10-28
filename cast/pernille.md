@@ -109,6 +109,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 2026-10-28 T-0573 (Idris 463137aa/d6ac94b7/175d3653): approve, fixes T-0576..79 P2. Lesson: an assert-nil right after an event is a race; run the mutant with -test-iterations 10 (4/12 green).
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
+- 2026-10-28 T-0584/T-0582 (0c4a7e15): both approve-with-fixes, T-0586..91. Lessons: an EntityQuery that drops a stored id hands the provider nil, so the default id draws; typed U+007F is the hardware Backspace, not the on-screen delete key.
 {% endraw %}
 
 

@@ -349,6 +349,63 @@ The G1 screenshot comparison with `mockups/A-editor.png` / `B-editor.png` is not
   - In iPadOS's full-screen windowing, ⌘` did not bring the covered window forward under XCUITest. The test uses Open in New Window instead, which brings an open file's window forward.
 - **G3 verdict: not written.** Every hardware-keyboard item and two scenes pass on the Simulator. Four items are still open, and the Simulator cannot drive them: trackpad I-beam and drag selection, the command-key overlay as drawn, the Japanese kana keyboard itself (its marked-text path is unit-tested), and dictation. They stay with the device check (T-0479).
 
+### The shipped launch with no warm-up: 2026-10-28 17:00-17:08 ET (Idris, T-0586, ruling 7)
+
+**What changed, recorded here because only a recorded decision counts.** Commit `5ac90a05` (T-0565 slice 1) dropped the normal-launch `EditorWarmup` (ruling 7, lead 3). The Console's own `ConsoleEditor` now builds the process's first `RunestoneEngine` in `makeCoordinator`, during the first layout, so before the first frame. The bench still runs a warm-up under `-editor-bench`, so G1's 54.8 ms cold-open median above describes a launch the app no longer has (review T-0584 F1).
+
+**How it was measured.** iPhone 17e Simulator, iOS 27.0, Release, five runs per case.
+- Launch: `pywidget/ios/scripts/editor/launch_probe.sh` builds the PyWidget scheme through `tools/xc.sh`, installs it, and launches it five times from `simctl` with `-launch-probe`. There is no XCUITest, and the app is terminated between runs. `App/Editor/LaunchProbe.swift` records, as process ages, the first frame (`FirstFrame`, as the warm-up waits for it), the engine build and the end of the Console's first open. "Before" is the same tree with `5ac90a05`'s two `PyWidgetApp.swift` hunks reversed (TextEditor, and the warm-up after the first frame), then restored. Raw records: `pywidget/ios/bench/launch-probe-2026-10-28.jsonl`.
+- First open on the 2,000-line file: the G1 bench with `-editor-bench-no-warmup` (new flag: no warm-up is scheduled), `-test-iterations 5`, log `ops/runs/xcodebuild-20261028-170352.log`.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: The shipped launch with no warm-up: 2026-10-28 17:00-17:08 ET (Idris, T-0586…, scrolls sideways" style="--tw:960px" markdown="1">
+
+| Measure (five runs) | Before 5ac90a05 | After (shipped) |
+| --- | --- | --- |
+| Process start to first frame, median (range) | 2,095.4 ms (2,083.2-2,184.4) | 2,191.2 ms (2,170.2-2,386.1) |
+| Main-thread work for the first engine | after the first frame: warm-up 50.7-78.0 ms (median 51.5) | before the first frame: engine build 49.5-71.7 ms (median 51.1) |
+| Console's first open, engine start to text open (wall time, launch default file) | n/a (TextEditor) | median 288.7 ms; 318.1 / 288.7 / 290.4 / 264.2 / 286.0 |
+| G1 bench cold open, 2,000 lines, no warm-up | | median 139.8 ms, worst 233.4 (engine+view 85.0-201.3) |
+| G1 keystroke p95 top / middle / end, medians | | 13.5 / 13.9 / 12.6 ms |
+
+</div>
+
+
+**Reading.**
+- **G1's bar holds with no warm-up.** The bench's cold open is under 300 ms in all five runs, median 139.8 ms and worst 233.4 ms (the first run after install). Keystrokes are unchanged. Every run restored the text and passed the pixel check.
+- **First frame is 95.8 ms later (median against median).** No bar is written for first frame. Simulator launch times are not device launch times: about 2.1 s here in both cases. The device check (T-0479) gives the real figure.
+- **The Console's first open in the shipped launch does not pass.** From the engine starting to the file being open took 264.2-318.1 ms, median 288.7, and run 1 was over 300. That span is wall time, so it includes the rest of the first layout and launch work that holds the main thread while the parse waits. Measured the bench's way, the engine is not slower. But s8.5's chair line counts the worst case against 300 ms, and 318.1 is over. In every run the open finished before the first frame (29-32 ms before it), so nobody sees a half-open editor.
+- **Next (still T-0586).** Build the engine after `FirstFrame.wait()`: `makeUIView` returns a container, the engine goes into it after the first frame, and a `show` before then waits. Then re-measure with the same two commands, keep the console UI tests green, and repeat on the device (T-0479).
+
+### The engine after the first frame: 2026-10-28 17:28-17:39 ET (Idris, T-0586, ruling 7)
+
+**What changed.** `ConsoleEditor` no longer builds its `RunestoneEngine` in `makeCoordinator`. `makeUIView` returns an empty container; the coordinator waits for `FirstFrame.wait()`, then builds the engine and opens the window's text in it. A `show` that comes before the engine exists is not lost: the first open reads `model.source` when the engine is built. The engine's view goes into the container only when that first open has landed. `LaunchProbe` now waits for the first open after the frame (up to 5 s) instead of assuming the engine came first. Nothing else changed: `PyWidgetApp.swift` still schedules no warm-up in a normal launch, and the bench screen is untouched.
+
+**How it was measured.** The same two commands as the entry above, the same Simulator (iPhone 17e, iOS 27.0, Release), five runs each. Launch: `pywidget/ios/scripts/editor/launch_probe.sh 'iPhone 17e' 5`; raw records appended to `pywidget/ios/bench/launch-probe-2026-10-28.jsonl` (case "after T-0586"). Bench: EditorBench scheme, `TEST_RUNNER_PW_BENCH_ARGS=-editor-bench-no-warmup`, `-test-iterations 5`, log `ops/runs/xcodebuild-20261028-173501.log`.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: The engine after the first frame: 2026-10-28 17:28-17:39 ET (Idris, T-0586…, scrolls sideways" style="--tw:1178px" markdown="1">
+
+| Measure (five runs) | Before 5ac90a05 | 5ac90a05 (engine before the frame) | After T-0586 (engine after the frame) |
+| --- | --- | --- | --- |
+| Process start to first frame, median (range) | 2,095.4 ms (2,083.2-2,184.4) | 2,191.2 ms (2,170.2-2,386.1) | 2,089.5 ms (2,054.1-2,623.9) |
+| Console's first open, engine start to text open (wall time), median; worst | n/a (TextEditor) | 288.7 ms; 318.1 | **87.2 ms; 195.2** (195.2 / 87.2 / 83.9 / 83.3 / 87.8) |
+| Engine build (main thread) | warm-up after the frame, median 51.5 | before the frame, median 51.1 | after the frame, median 50.2 (46.5-110.9) |
+| G1 bench cold open, 2,000 lines, no warm-up, median; worst | | 139.8 ms; 233.4 | 135.9 ms; 286.8 (286.8 / 129.5 / 115.7 / 135.9 / 136.4) |
+| G1 keystroke p95 top / middle / end, medians | | 13.5 / 13.9 / 12.6 ms | 13.6 / 13.6 / 12.4 ms |
+
+</div>
+
+
+**Reading.**
+- **The Console's first open passes: worst 195.2 ms against the 300 ms bar** (s8.5 counts the worst case). The median fell from 288.7 to 87.2 ms. The open no longer shares the main thread with the first layout. Run 1, the first launch after install, is the slow one in every column (first frame 2,623.9, engine build 110.9, open 195.2).
+- **First frame is back where it was before 5ac90a05.** The median is 2,089.5 ms against 2,095.4 before and 2,191.2 at 5ac90a05. Simulator launch times are not device launch times (T-0479).
+- **What a person sees instead.** The first frame now shows the Console with an empty editor area. The highlighted text appears when the first open lands, 83.3-195.2 ms after the frame (median 87.2). For about 50 ms of that the main thread builds the engine, so a tap in that span waits, as it did for the warm-up before 5ac90a05.
+- **T-0587 is narrower.** The engine's view is not in the window until its first open has landed, so no key can reach an empty engine during the first open. A later open (an example chosen, a SceneFile) still has the window T-0587 describes.
+- **The bench cold open is unchanged in kind.** The bench screen does not use `ConsoleEditor`. Its worst run, 286.8 ms, is again the first run after install; it is under 300, but by 13.2 ms.
+- **Tests.** `ConsoleEditorUITests`, `EditorGateUITests` and `AddWidgetTests` passed on the iPhone 17e Simulator: 21 tests, 5 skipped as iPad-only or a flood test, 0 failures (`ops/runs/xcodebuild-20261028-173040.log`). On the iPad Air 11-inch (M4) Simulator, `SceneWindowsUITests` ran the same with and without this change: 3 passed, and `testClosingARunningWindowLetsTheOtherRun` restarted the test runner both times (with the change: `ops/runs/xcodebuild-20261028-175559.log`; at HEAD: `ops/runs/xcodebuild-20261028-174959.log`). In one earlier iPad run, after `ConsoleEditorUITests` in the same run, `testASecondWindowsRunIsRefusedWhileTheFirstWaitsInInput` found no window titled `word_count.py` (`ops/runs/xcodebuild-20261028-174000.log`). It passed when run alone, so I have not shown that this change caused it.
+- **Status.** T-0586's bar is met on the Simulator. The device check (T-0479) decides acceptance.
+
 ## 8. Licence lines (logged in log/assets.md, Commandments 4-5)
 
 - Runestone, https://github.com/simonbs/Runestone, MIT, Copyright (c) 2021 Simon Støvring.
@@ -407,7 +464,7 @@ Reasons:
 - **Ruling 2 named no statistic.** That gap is mine. "A p95 over 33 ms, or an open over 300 ms after that day" also reads two ways. So I tested this measure against every reading. It lands in the adapter-day band under all of them except worst-run:
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 6: Chair line (Ines), 2026-10-27 11:58 ET (T-0461): G1 first measure, scrolls sideways" style="--tw:740px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: Chair line (Ines), 2026-10-27 11:58 ET (T-0461): G1 first measure, scrolls sideways" style="--tw:740px" markdown="1">
 
 | Reading | Keystroke p95 top / mid / end | Cold open | Outcome |
 | --- | --- | --- | --- |

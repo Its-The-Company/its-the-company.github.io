@@ -248,12 +248,14 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0365 (28fadd67 noted): Button/Toggle drawn no-tap per L5 V1; Ines rules T-0430. Left: device check, F1 map after T-0399. T-0206 after.
 - T-0485 (c3c6876f, review T-0493): set LegalLinks when the app privacy page is published and Terms ruled.
 - T-0353 done (abe146d0): notif/keychain wire waits on a Python half; review open.
-- T-0460 2026-10-28: G1 passed (Simulator, ruling 7; 2596a517, eb45c07a). Open: device re-check T-0479 (type after a key-row tap), review of patch 0001 + key row, warm-up is an 81-175 ms launch stall.
+- T-0565 slice 1 2026-10-28 (5ac90a05): Console uses ConsoleEditor (Runestone). Left: shots T-0583, review T-0584, iPad A2c red at HEAD T-0585.
+- T-0586 done 2026-10-28 (158ac8da): engine after FirstFrame, first open worst 195.2 ms; review T-0600. T-0601: iPad SceneWindows runner restart at HEAD. A8s waits T-0287.
 
 
 Dated task logs and full lessons: archive.md.
 
 ## Lessons
+- Before calling a flake open, date its logs against the fixes: all three T-0513 timeouts predated bcfd42f5.
 - Show me the bytes: read pixels back. ImageRenderer draws a yellow placeholder for UIKit-backed system views and nothing for AccessoryWidgetBackground; a black ground hides black ink (check stripped modes over mid grey); the light card equals bg.surface, so "differs" guards bite only in dark.
 - A one-way normalisation rule is half a contract: check the return trip (T-0462). A surviving mutant means a missing test. Prove green against HEAD when others have uncommitted work in the build.
 - xc.sh: the lock is shared with the MacBook runner; xcodebuild can hang after "Executed": grep the log for the result, kill it. Test runs rewrite time-dependent sheets (02, 09, 12): restore unless refreshing sheets is the task.
@@ -262,9 +264,8 @@ Dated task logs and full lessons: archive.md.
 - A packet can contradict a chair ruling: read the ruling, follow it, ask for the call.
 - Take a board id from the board before writing it; fill placeholders before logging; stage only my hunks (pathspec, arrays in zsh).
 
-- Accessibility: the element is the first-responder UITextInput, not its container. XCTAttachment is deleted on success unless lifetime = .keepAlways. The Simulator drops some hardware keys under XCUITest: resend on no state change, count it.
+- Accessibility: the element is the first-responder UITextInput, not its container. XCTAttachment is deleted on success unless lifetime = .keepAlways. The Simulator drops some hardware keys under XCUITest: resend on no state change, count it. typeKey(.delete) reaches no responder at all (not even a UITextField): send typeText("\u{7F}").
 - StoreKit testing: Transaction.unfinished lies after finish(); declineAskToBuy signs a verified PURCHASE (decline = no transaction; setUp clear lags, T-0513); never two listeners finishing the same transactions. SKTestSession works from a UI test (disableDialogs too), but its refund did not reach the running app's updates: read the entitlement on screen open. A fresh-booted sim's first product load can come back empty: retry while offline. xc.sh can print exit 0 after a failed test plus a 0-test retry: grep "' failed (". clearTransactions() right after buyProduct loses to the still-landing purchase, which then sticks: wait for it in Transaction.all first (T-0530, bcfd42f5; review of ProStore.receive open).
-- T-0539..T-0542 2026-10-28 (ad580920): M1-M4 fixed. Foundation drops '..' by text for a missing item: check with realpath. A red test that waits on old behaviour must be bounded (an hour-long fake prompt hung a run). Re-review T-0549.
 - T-0051 slice 1 2026-10-28 (bcff31bf): picker = AppIntentConfiguration + WidgetChoiceQuery; Pro card from state-tokens.json; T-0512 calls ProEntitlement.mayWriteTimeline. Left: card tap route (T-0191), Simulator shots of picker and card, review T-0582. Run the UI suite in two halves to stay under the 10-minute foreground limit.
 {% endraw %}
 

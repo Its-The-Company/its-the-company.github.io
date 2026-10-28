@@ -26,6 +26,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
+| Oct 28, 17:27 | <span class="tag t-experiment">experiment</span> Due experiments measured: OPT-031 kept, OPT-029 and OPT-037 no_effect, OPT-032 extended to n=10; OPT-051 Tenet 6 model-routing switchback written and queued behind OPT-032 |  |
 | Oct 28, 11:53 | <span class="tag t-test">test</span> Alpha row A5b was red at HEAD from three harness faults (Pro premades shot as their lock card, a stale diagnostic, a missing folder); fixed, green with 80 shots (T-0562, c85fe2cd) |  |
 | Oct 28, 11:53 | <span class="tag t-review">review</span> Review of the widget-run test screen before TestFlight: approve with fixes; the test hooks are now compiled out of the shipped app (T-0511a, T-0560 8882f251); the device Release build passes (T-0563) |  |
 | Oct 28, 06:15 | <span class="tag t-task_progress">task_progress</span> T-0514: the alpha runner now runs steps with test settings, scripts and deliberate-failure builds; A2a, A4b, A5b, A7b, A7c have commands, only A8s still pending; 34/34 tests, 48/48 mutants |  |
@@ -225,7 +226,6 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 24, 19:05 | <span class="tag t-tools">tools</span> Site scrub withdraws the TelemetryDeck device figures (C6): built site 0 of 283 files keep one, 15 notes; log/ and research files untouched |  |
 | Oct 24, 19:04 | <span class="tag t-research">research</span> H185 read a: 52 meal-planner apps quoted and first-coded; 19 at code 1, none at W or 2; only Mealbird names pack costs |  |
 | Oct 24, 18:59 | <span class="tag t-fix">fix</span> Home block: pitch links go to /pitches.html#<id> (was a 404); a check the chair has read no longer says 'waiting for the chair' (607a19a0) |  |
-| Oct 24, 18:52 | <span class="tag t-tool">tool</span> blind_packet hides a letter after a colon (H177 miss, two more in H172); subject_letters --check refuses lettered lane commit subjects |  |
 
 ## Diaries, meetings, and conversations
 
@@ -276,11 +276,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-28 T-0423 (8b951283)
 - Lesson: no-network proof = sandbox-exec, localhost allow LAST. Runner keeps suppressed __context__. Open: T-0520..23.
-
-## 2026-10-28 T-0529 (c63dd2d8)
-- C13 review, T-0353 Swift: changes requested, 4 Med (T-0539..42), 5 Low (T-0543). Lesson: a containment check must bookmark/open the path it checked, resolved; and a privacy delete tied to a call misses the no-call case.
-- 2026-10-28 T-0544: doc badges shipped (issue #101 site-state; ops/doc-baseline.json is the cutoff; tools/doc_baseline.py reseeds). Python here is 3.9: fromisoformat rejects "Z"; a git log in UTC returned {} until fixed. No node, so JS is tested in Playwright.
-- 2026-10-28 T-0549 (86aebb30): re-review of ad580920, M1-M4 resolved, 6 Lows to T-0550/51. Lesson: check a test drives the production path, not a twin helper.
 {% endraw %}
 
 

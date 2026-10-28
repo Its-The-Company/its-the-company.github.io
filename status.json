@@ -1,74 +1,74 @@
 {
  "schema": 1,
- "at": "2026-10-28T19:39:19.940971+00:00",
+ "at": "2026-10-28T22:04:24.218456+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-28T12:30:41-04:00"
+  "started": "2026-10-28T15:41:13-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "idris",
-   "task": "[build] T-0051 Pro premade placement",
+   "task": "[build] T-0586 engine after first frame",
    "model": "opus",
-   "started": "2026-10-28T19:08:20.535Z",
+   "started": "2026-10-28T21:27:52.827Z",
    "seconds": null,
-   "finished": "2026-10-28T19:38:34.612000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[test] T-0581 alpha A2c appearance failure",
-   "model": "sonnet",
-   "started": "2026-10-28T18:34:09.009Z",
-   "seconds": null,
-   "finished": "2026-10-28T19:07:41.530000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-0576 T-0579 review fixes batch",
-   "model": "sonnet",
-   "started": "2026-10-28T17:55:59.698Z",
-   "seconds": null,
-   "finished": "2026-10-28T18:33:49.024000+00:00"
+   "finished": "2026-10-28T22:03:34.274000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-0575 site Home done/queued panel",
-   "model": "sonnet",
-   "started": "2026-10-28T17:42:09.183Z",
+   "task": "[ops] T-0593 T-0592 measure, routing switchback",
+   "model": "opus",
+   "started": "2026-10-28T21:12:19.790Z",
    "seconds": null,
-   "finished": "2026-10-28T17:54:40.941000+00:00"
+   "finished": "2026-10-28T21:27:22.754000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[test] T-0513 ProStore flake, T-0586 cold open",
+   "model": "opus",
+   "started": "2026-10-28T20:55:35.441Z",
+   "seconds": null,
+   "finished": "2026-10-28T21:11:58.112000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-0565 landed before alpha ruling",
+   "model": "opus",
+   "started": "2026-10-28T20:54:28.687Z",
+   "seconds": null,
+   "finished": "2026-10-28T20:55:13.905000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 99,
+  "runnable_count": 114,
   "blocked_count": 48
  },
  "meter": {
   "five_hour": {
-   "pct": 7.0,
-   "resets_at": "2026-10-28T18:59:59.939052+00:00",
+   "pct": 2.0,
+   "resets_at": "2026-10-29T00:00:00.120682+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 93.0,
+   "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 65.0,
-   "resets_at": "2026-11-01T06:59:59.939083+00:00",
+   "pct": 66.0,
+   "resets_at": "2026-11-01T07:00:00.120704+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 35.0,
+   "left": 34.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T06:59:59.939383+00:00",
+   "resets_at": "2026-11-01T07:00:00.120888+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-28T12:30:40.570547-04:00"
+  "read_at": "2026-10-28T15:41:13.249268-04:00"
  },
  "ui": {
   "week_pct": 0.1,
@@ -87,14 +87,14 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-28T15:40:22-04:00"
+  "at": "2026-10-28T18:05:03-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
   {
    "name": "Odalys",
    "state": "next",
-   "task": "Odalys, P1, C13 re-review of tools/pkg_sandbox.py after T-0317/T-0311 (8e849e98; notes at the end of...",
+   "task": "Odalys, P1, C13 re-review of tools/pkg_sandbox.py after...",
    "model": null,
    "since": null,
    "next": []
@@ -102,7 +102,7 @@
   {
    "name": "Ines",
    "state": "next",
-   "task": "Ines + Odalys, P3, CORRECTIONS pass 3 s3b tags in docs Wrenna does not own (T-0109, 4eb6a81a; quotes and pages in...",
+   "task": "Ines + Odalys, P3, CORRECTIONS pass 3 s3b tags in docs...",
    "model": null,
    "since": null,
    "next": []
@@ -110,7 +110,7 @@
   {
    "name": "Wrenna",
    "state": "next",
-   "task": "Wrenna, P3, arXiv after T-0220 lands (Ines's ruling research/ops/arxiv-terms.md s9 item 4): one dated line in...",
+   "task": "Wrenna, P3, arXiv after T-0220 lands (Ines's ruling...",
    "model": null,
    "since": null,
    "next": []
@@ -118,7 +118,7 @@
   {
    "name": "Pernille",
    "state": "next",
-   "task": "Pernille, P0, T-0296 follow-on reminder: no real package runs through tools/pkg_sandbox.py until Odalys's four...",
+   "task": "Pernille, P0, T-0296 follow-on reminder: no real package...",
    "model": null,
    "since": null,
    "next": []
@@ -126,7 +126,7 @@
   {
    "name": "Idris",
    "state": "next",
-   "task": "L1/L2 device checks: CMPedometer, CMMotionActivity, HealthKit (locked/unlocked), battery, location inside the widget...",
+   "task": "L1/L2 device checks: CMPedometer, CMMotionActivity,...",
    "model": null,
    "since": null,
    "next": []
@@ -134,7 +134,7 @@
   {
    "name": "Maren",
    "state": "next",
-   "task": "Maren, P1, alpha visual reads on 2026-10-31 (alpha-day10-checklist.md A1, A2, A3, A4, A5, A7): each image from...",
+   "task": "Maren, P1, alpha visual reads on 2026-10-31...",
    "model": null,
    "since": null,
    "next": []
@@ -231,6 +231,55 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Proposal",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "The untested-change backlog",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Lock In vs Spread, measured",
+    "s": "next",
+    "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "OPT-032 at n=10 per arm",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Tools/task_context.py resolves no Investor...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "OPT-051 compliance counter",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Run OPT-051",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Rule on OPT-029",
     "s": "next",
     "o": "c"
    },
@@ -732,16 +781,72 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Two red site tests seen after T-0575",
+    "w": "Maren",
+    "k": "design",
+    "t": "T-0565's screenshots of the Console with the...",
     "s": "next",
     "o": "c"
    },
    {
-    "w": "Pernille",
+    "w": "Idris",
+    "k": "build",
+    "t": "EditorGateUITests.testA2cTwoThousandLineFileI...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0584 F2",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "T-0584 F3",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0582 F1",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "T-0582 F2",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0582 F3",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
     "k": "review",
-    "t": "Independent review",
+    "t": "Ines assigns",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "SceneWindowsUITests.testClosingARunningWindow...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Two red site tests seen after T-0575",
     "s": "next",
     "o": "c"
    },
@@ -841,27 +946,27 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "T-0051 Pro premade placement",
-    "at": "2026-10-28T19:38:34.612000+00:00",
+    "t": "T-0586 engine after first frame",
+    "at": "2026-10-28T22:03:34.274000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "T-0593 T-0592 measure, routing switchback",
+    "at": "2026-10-28T21:27:22.754000+00:00",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "test",
-    "t": "T-0581 alpha A2c appearance failure",
-    "at": "2026-10-28T19:07:41.530000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0576 T-0579 review fixes batch",
-    "at": "2026-10-28T18:33:49.024000+00:00",
+    "t": "T-0513 ProStore flake, T-0586 cold open",
+    "at": "2026-10-28T21:11:58.112000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 99,
+   "next": 114,
    "wait": 23,
    "blocked": 25,
    "you": 5
@@ -875,6 +980,7 @@
   "recent",
   "task_done",
   "task_title",
-  "task_open"
+  "task_open",
+  "lane_task"
  ]
 }

@@ -257,9 +257,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-10-26 02:00-02:57 notes (T-0153..T-0196, T-0026; lessons on mutations, counts, glob pathspecs): archive.md
 
 ## 2026-10-28 T-0492 (cc87b08c)
-- Lesson: setup/OPERATIONS.md mentions amendments, so the applier keeps it approve-only: file it as an issue. Write "Revert rule: ..." on one line (heading alone fails revert_stated).
-
-- 2026-10-29 T-0670 (e6930f10): alpha runs write raw to ops/site-checks/*-bulk (gitignored), track 43.5 MB of 226. Lessons: macOS bash 3.2 + set -u dies on an empty "${A[@]}" (use ${A[@]+"${A[@]}"}); tools/mutants.py copies only tools/ tests/, so pass --also for repo files a test reads; .gitignore can hide a leak from a git-status test, so check the folder too.
 
 - 2026-10-29 T-0683/T-0686 (543734d6): check record loops for `stuck`, not only `finished`; measure worst-case encoding before trusting a size cap. Open: T-0689-0691 (Idris).
 
@@ -269,6 +266,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 2026-10-29 lane reviews T-0704..T-0727 (details in archive.md): list what runs after the last restore and what the restore looks up by name; check values and types, not only keys; never free what a check took out; object.__setattr__ finds a planted `__class__` property first. Open: re-review T-0730 (Pernille, K1).
 - 2026-10-29 T-0731: lane lesson: any frame a planter reaches (the sys.argv hook in _prepare) exposes the runner's f_globals and _S; check every read made before the restore runs. P2 -> T-0732 (Pernille). 3.13 suite: 1 unexplained failure in 3 runs, watch it.
+- 2026-10-29 T-0734 (a5b75783): lane loop closed (ADR-007 item 3 is the bar). Lesson: a later run's LOADED can be sys.modules residency (_keep_module keeps stdlib), not the finder; print sys.modules before blaming the check.
+- 2026-10-29 T-0596 (cb426d2e): OPT-032 closed no_effect; model_routing primary. Lesson: REPAIR_SUBJECT matches feature words (StoreKit restore), so read the list before trusting a repair count.
+- 2026-10-29 T-0362 (6ecc63ec): pkg_sandbox closed, LaunchServices probe -> T-0738 (Ines). Lesson: a signal handler that raises stays armed inside cleanup finally blocks; check what an abort there skips (watchdog told "done").
+- 2026-10-29 T-0742 (418db242): T-0674 approved. Lesson: a UI test's 'placed' check on a shared Simulator must count before/after; 30 old PyWidget widgets sat on the 17e. A3 fix T-0743 (Idris) due before 10-30 dry run.
 {% endraw %}
 
 

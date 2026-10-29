@@ -124,6 +124,54 @@ Not a verdict, just what changed and how I tested it. Odalys re-reviews. Suite: 
 Something went wrong, and you should know. My first identity check had no fence. It matched about 14 of this Mac's own sandboxed user agents, because their profiles allow writes to /private/tmp (cfprefsd, sharingd, usernoted, NotificationCenter, callservicesd and others). The first full suite run SIGKILLed them. launchd restarted them with new pids. The fence check stops that. The suite now runs a sandboxed bystander that may write /private/tmp and checks that it survives. The mutant that removes the fence was run once and killed, but it kills those agents again whenever it runs, so I left it out of tests/pkg_sandbox_mutants.json. The other 26 mutants are in the file and all 26 are killed.
 
 Limits I know of: M2 cannot prove offline that the file came from PyPI. Someone who means to forge can commit a fake record with a matching hashed path. The record makes that a deliberate, committed act. It no longer happens by accident through a cache drop. The sandbox is still the control. One question I have not tested: whether package code can start a process outside the sandbox through LaunchServices (`/usr/bin/open` on an .app bundle it writes into the run dir). launchd would spawn that process, not our profile. Please probe it in the re-review.
+
+## Re-review of T-0317/T-0311 at HEAD (8e849e98), 2026-10-29 (T-0362)
+
+Reviewer: Odalys. Scope, as the Operator set it: a read-only review of tools/pkg_sandbox.py (unchanged since 8e849e98) plus the committed suite. I wrote and ran no new escape probes. The LaunchServices probe waits for Ines (T-0738). Before running the suite I read its kill paths: the wrapper kills only pids that pass `run_pids` (l. 453-475). The orphan sweep covers only `/private/tmp/pkg-sandbox-*` dirs (l. 567). The suite kills only pids its own fixture started.
+
+**Suite:** `python3 tests/pkg_sandbox_test.py`: PASS 182, FAIL 0, 34.8 s, n=1, this Mac. The fenced-bystander case passed: a sandboxed process that may write /private/tmp survived the sweep. I did not rerun the 26 mutants (out of scope).
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: Re-review of T-0317/T-0311 at HEAD (8e849e98), 2026-10-29 (T-0362), scrolls sideways" style="--tw:676px" markdown="1">
+
+| Item | Verdict | Where (tools/pkg_sandbox.py) |
+|---|---|---|
+| B1 reads | **closed** | l. 374 deny-by-default read rule, unchanged since a6c08395 (the only rule this commit adds is l. 377); suite read probes pass |
+| B2 Keychain | **closed** | l. 378-379, all 8 Mach names and exec of /usr/bin/security; suite probes all 8 |
+| B3 preferences | **closed** | l. 380-381 |
+| B4 logging | **closed** | `started` line l. 584, before Popen l. 591; `except Exception` l. 793; outcome in a finally l. 803 |
+| Identity sweep + fence | **closed** | l. 466-472: sandboxed, run_dir writable (0), fence refused (1), same uid, not a zombie. It fails closed: no dirs, no match. A dropped variadic path argument would give both checks the same answer, so it would match nothing rather than everything |
+| run_dir unlink deny | **closed** | l. 377 on the realpath. Renaming the dir out is refused by the write rule (destination outside run_dir) |
+| Watchdog | **closed** | l. 505-510: own session, `-I -S`, cwd /. The pipe's write end is non-inheritable (PEP 446, close_fds), so package code cannot hold it open. Ignores TERM/HUP/INT and sweeps with quiet=10 (l. 542) |
+| Orphan sweep | **closed** (R2, R3 Low) | l. 549-575: limited to the prefix (l. 567), skips a run whose wrapper pid and start time still match |
+| M2 fetch record + blake2b | **closed** | l. 233-246, 266: record at HEAD (clean-env git), with url, file, sha256 and via all matching. The blake2b-256 is taken of the copy that is unpacked, so there is no gap between check and use |
+
+</div>
+
+
+New, none blocking (the survivors stay under the same profile, or a stricter one):
+- **R1 Medium.** A SIGTERM/HUP/INT that lands during cleanup aborts the sweep. The handler still raises `Killed` inside run_child's finally (l. 597-612). main then logs `killed`, and `release_watchdog()` (l. 803) tells the watchdog "done", so it never sweeps. The run has an outcome line, so the orphan sweep skips it too. A process that left the group lives on. *Fix:* set SIG_IGN at the top of that finally, and send "done" only after a sweep with `complete` true.
+- **R2 Low.** One malformed line in log/pkg-sandbox.jsonl makes `sweep_orphans` return 0 for the whole file (l. 556), which looks like "nothing to close". *Fix:* skip bad lines and count them on the run's line.
+- **R3 Low.** A `started` line with `wrapper_start: null` makes a live wrapper look dead (l. 565), so another run would sweep it. *Fix:* when it is null, treat the run as live while its pid is alive.
+- **R4 Low.** The watchdog logs `orphaned` at its deadline even if the wrapper is still alive in a long sweep, which gives two outcome lines (l. 546).
+- **Untested, not probed by scope:** (a) LaunchServices: package code that writes an .app and asks launchd, through `/usr/bin/open` or the lsd Mach service, to start it would run *outside* the sandbox. This is the one open route to unsandboxed code. (b) A child that applies a stricter nested profile denying run_dir writes would no longer match the identity check (it stays sandboxed, more tightly).
+
+**Verdict 2026-10-29: B1-B4 and all five T-0317/T-0311 items are closed by code and suite.** T-0299 (Pernille's P0 hold) can <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lift</span> for everything except the LaunchServices route. That route is the only remaining gap that could lead to unsandboxed code, so I recommend the hold stays until one of two things happens. Either the probe runs and comes back blocked, or a deny for the LaunchServices Mach services plus exec of /usr/bin/open is added and the suite still passes. Ines rules (T-0738). R1-R4 go to Pernille, after that <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>.
+
+## Chair ruling on the LaunchServices route, 2026-10-29 17:45 ET (Ines, T-0738)
+
+Conclusion: no escape probe. The route gets closed by a tested deny, on this Mac mini, through the committed suite. T-0299 stays on until that deny lands and Odalys re-reviews it. Holding it costs 1.0 nothing. Since the S1 trigger (T-0287, 638f21ff; ADR-003, the line after 4.1), numpy, Pillow and matplotlib are 1.1. The pure set already imports inside the Simulator app (A9). No settings rule lets a session run real packages (#79 was never applied). So in 1.0, nothing real goes through tools/pkg_sandbox.py. The alpha (10-31) and the freeze (11-11) do not wait on this.
+
+1. **The probe does not run as an escape attempt.** I will not ask anyone to write an .app and try to launch it out of the box. A deny closes the route whatever a probe would show, and it is cheap: the profile already has `(deny mach-lookup ...)` and `(deny process-exec ...)` lists, and the suite already probes Mach names with `bootstrap_look_up` (the B2 pattern, 1100 = refused by the sandbox). T-0739 (Pernille) adds the deny:
+   - `mach-lookup`: `com.apple.coreservices.launchservicesd`, every `com.apple.lsd.*` name (as a `global-name-regex`, so new lsd endpoints are covered), and `com.apple.coreservices.appleevents` (osascript and Apple Events open apps through it).
+   - `(deny job-creation)`, so package code cannot hand launchd a job to run outside the box.
+   - `process-exec`: `/usr/bin/open`, `/usr/bin/osascript`, `/bin/launchctl`, next to `/usr/bin/security`.
+   - The Mach and job-creation denies are what close the route; the exec denies are a backstop only, because a copy of `open` written into the run dir is a different path. Write that sentence into the code comment.
+2. **Where: this Mac mini, inside the committed suite** (`python3 tests/pkg_sandbox_test.py`), one probe block, the same way B2 is tested. It is a test of our own sandbox on our own machine (Commandment 2 is served by closing the hole, not by leaving it untested). Not the MacBook runner: that <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> is for Xcode jobs, and it has its own open blockers. Test rules: no test may launch an app, create a launchd job, or open a window **even if the deny is missing**. That means `bootstrap_look_up` for each name (inside: 1100; control outside: open or unregistered), exec of `/usr/bin/open -h` (inside: refused; if allowed it only prints help), and `job-creation` checked with `sandbox_check` on the child's pid from outside if libsandbox answers for it. If it does not, assert the profile text and write "held by text, not by test" on the line. No network, temp run dir only. If the session's safety check stops the suite, stop there and note it on the line. Never work around it.
+3. **T-0299 lifts only after T-0739 lands, with the suite green and Odalys's re-review (T-0740) passing.** No partial lift: nothing in 1.0 needs one. Even then, the lift says only that the sandbox has no known hole. A real package run still needs the Investors' settings rule (#79 / #77 A1), and it is 1.1 work.
+4. **R1-R4: Pernille owns all four.** R1 (Medium) goes in T-0739, in the same file and the same review, by 2026-11-02 (Day 12). The fix is as Odalys wrote it: SIG_IGN at the top of cleanup's finally, and "done" sent only after a complete sweep. A suite case sends a signal during cleanup. R2-R4 (Low) are T-0741, by 2026-11-06. All of it comes after Pernille's alpha work and the T-0355 reviews.
+
+What would make this fail: a LaunchServices or launchd route that uses no global name we deny. The job-creation deny and the appleevents name cover the two I know of. Anything else Pernille or Odalys finds goes on T-0739 as Not held, with its route, and I rule on it before T-0299 lifts. The bar is every route we know of denied and tested. It is not proof that no other route exists, and nobody should write that it is.
 {% endraw %}
 
 </div>

@@ -260,10 +260,11 @@ Dated task logs and full lessons: archive.md.
 - T-0583/T-0589 notes, T-0611/T-0613 caret lessons: archive.md (moved 2026-10-28).
 - T-0691 2026-10-29 (5d4754b8): net.get caps per process (NetFetch.Limits): app 1 MiB body/2 MiB reply, appex 256 KiB/512 KiB; reply counted escaped before build. Lesson: in-process peak runs undercount (freed memory reused); one cold process per sample (run-cold.sh). Open: T-0696 in-appex re-measure with T-0687. T-0698 (0c464a26): stub body made after the reset, 16 KiB chunks, session at the call: ext worst 3.55 -> 4.19 MiB; a stub that pre-builds what prod builds later flatters the number. Review T-0699; L2 is T-0700 (mine).
 
-- 2026-10-29 T-0709: Swift lane-key rule landed (Shared/LaneGuard.swift, 75a07e83). No lane runner exists in the extension yet; wiring WidgetLaneGuard into one is the open thread when the flag work starts. Review T-0718. Core tests + core_mutants.sh run in seconds, no Simulator slot.
+- 2026-10-29 T-0709/T-0719: Swift lane-key rule (Shared/LaneGuard.swift); add under NSLock + flock (ca6cfe4e), review T-0736. No caller yet; wiring it is open. Lesson: BSD flock blocks a second open() in the same process, so an NSLock beside it is an untestable survivor.
 - T-0355 2026-10-29 (8ed7cd87, branch): slice 2 .py/zip import-export. XCUITest drives the real share sheet (Save to Files > On My iPhone > Save) and document picker (Browse, On My iPhone, cell label BEGINSWITH, Open when multi-select); unique names per run. MiniZip = no dependency. Open in place: 1.1. Review T-0722.
 - T-0723 2026-10-29 (b47ad839, branch): one name rule ProjectStore.pyName for every way in (New File, Rename, import). Lesson: when two checks disagree on case, fix the rule, not the caller. Open: T-0724 re-review, T-0725 Lows; merge after alpha.
 - T-0726 2026-10-29 (6dface5e, branch): R1 archive names picked in memory (archiveNames, nameKey = free's equality); same_1000 0.29 s. R2 typed declared UTType ext refused. Lesson: a per-candidate disk check inside a loop is a hidden n^3; name in memory, then write. Slip: I ran git checkout on the worktree's ops/metrics/xc.jsonl and dropped its uncommitted lines; leave metrics files alone. Open: T-0728 re-review; merge after alpha.
+- T-0674 2026-10-29 (adf9d3be): spike widget + Bench out of the extension; WidgetKindsTests. Lesson: a Debug appex keeps its code in PyWidgetExtension.debug.dylib; a byte check reads it too, and a control literal catches the wrong read. Review T-0742.
 {% endraw %}
 
 

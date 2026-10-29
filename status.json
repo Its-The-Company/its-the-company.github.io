@@ -1,74 +1,74 @@
 {
  "schema": 1,
- "at": "2026-10-29T20:50:45.746173+00:00",
+ "at": "2026-10-29T22:06:25.485516+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-29T14:07:36-04:00"
+  "started": "2026-10-29T16:52:24-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "pernille",
-   "task": "[build] T-0732 lane _main_dict fix",
+   "name": "odalys",
+   "task": "[review] T-0742 review spike widget removal",
    "model": "opus",
-   "started": "2026-10-29T20:41:19.011Z",
+   "started": "2026-10-29T21:58:31.575Z",
    "seconds": null,
-   "finished": "2026-10-29T20:50:27.680000+00:00"
+   "finished": "2026-10-29T22:05:43.820000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-0674 remove spike widget from extension",
+   "model": "opus",
+   "started": "2026-10-29T21:46:15.769Z",
+   "seconds": null,
+   "finished": "2026-10-29T21:58:08.329000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-0738 LaunchServices probe ruling",
+   "model": "opus",
+   "started": "2026-10-29T21:43:17.391Z",
+   "seconds": null,
+   "finished": "2026-10-29T21:45:56.181000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[review] T-0731 lane K1 re-review",
+   "task": "[review] T-0362 pkg_sandbox C13 re-review",
    "model": "opus",
-   "started": "2026-10-29T20:35:50.863Z",
+   "started": "2026-10-29T21:38:18.178Z",
    "seconds": null,
-   "finished": "2026-10-29T20:41:04.761000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-0730 lane K1 fix",
-   "model": "opus",
-   "started": "2026-10-29T20:29:41.146Z",
-   "seconds": null,
-   "finished": "2026-10-29T20:35:40.157000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[review] T-0727 lane N1 fix re-review",
-   "model": "opus",
-   "started": "2026-10-29T20:22:07.022Z",
-   "seconds": null,
-   "finished": "2026-10-29T20:29:25.758000+00:00"
+   "finished": "2026-10-29T21:42:58.122000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 114,
-  "blocked_count": 48
+  "runnable_count": 110,
+  "blocked_count": 50
  },
  "meter": {
   "five_hour": {
-   "pct": 12.0,
-   "resets_at": "2026-10-29T19:59:59.823707+00:00",
+   "pct": 3.0,
+   "resets_at": "2026-10-30T01:00:00.259846+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 88.0,
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 77.0,
-   "resets_at": "2026-11-01T06:59:59.823730+00:00",
+   "pct": 78.0,
+   "resets_at": "2026-11-01T07:00:00.259864+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 23.0,
+   "left": 22.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T06:59:59.823954+00:00",
+   "resets_at": "2026-11-01T07:00:00.260028+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-29T14:07:35.595508-04:00"
+  "read_at": "2026-10-29T16:52:23.962959-04:00"
  },
  "ui": {
   "week_pct": 0.101,
@@ -87,22 +87,22 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-29T16:51:34-04:00"
+  "at": "2026-10-29T18:07:17-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
   {
-   "name": "Odalys",
+   "name": "Ines",
    "state": "next",
-   "task": "Odalys, P1, C13 re-review of tools/pkg_sandbox.py after T-0317/T-0311 (8e849e98; notes at the end of...",
+   "task": "Ines + Odalys, P3, CORRECTIONS pass 3 s3b tags in docs Wrenna does not own (T-0109, 4eb6a81a; quotes and pages in...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Ines",
+   "name": "Odalys",
    "state": "next",
-   "task": "Ines + Odalys, P3, CORRECTIONS pass 3 s3b tags in docs Wrenna does not own (T-0109, 4eb6a81a; quotes and pages in...",
+   "task": "Odalys, P3, 31 closed-hunt scripts under research/hunt/ call urllib/curl directly, bypassing tools/terms_guard.py...",
    "model": null,
    "since": null,
    "next": []
@@ -118,7 +118,7 @@
   {
    "name": "Pernille",
    "state": "next",
-   "task": "Pernille, P0, T-0296 follow-on reminder: no real package runs through tools/pkg_sandbox.py until Odalys's four...",
+   "task": "Pernille, P2, pkg_sandbox LaunchServices deny + R1 (chair ruling T-0738, end of...",
    "model": null,
    "since": null,
    "next": []
@@ -144,13 +144,6 @@
   "run": [],
   "open": [
    {
-    "w": "Odalys",
-    "k": "review",
-    "t": "C13 re-review of tools/pkg_sandbox.py after...",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Ines",
     "k": "research",
     "t": "CORRECTIONS pass 3 s3b tags in docs Wrenna...",
@@ -161,6 +154,13 @@
     "w": "Odalys",
     "k": "tools",
     "t": "31 closed-hunt scripts under research/hunt/...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Pkg_sandbox LaunchServices deny + R1",
     "s": "next",
     "o": "c"
    },
@@ -217,13 +217,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Proposal",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "OPT-032 at n=10 per arm",
     "s": "next",
     "o": "c"
    },
@@ -580,7 +573,7 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Found by T-0671",
+    "t": "Found by T-0742",
     "s": "next",
     "o": "c"
    },
@@ -825,20 +818,6 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "T-0718 M1",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0718 M2",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
     "t": "T-0722 Lows left after T-0723",
     "s": "next",
     "o": "c"
@@ -851,16 +830,9 @@
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Chair line on the widget lane hardening loop",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "review",
-    "t": "Independent re-review of 829a3f91",
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0736 Lows on ca6cfe4e",
     "s": "next",
     "o": "c"
    },
@@ -944,30 +916,30 @@
   ],
   "done": [
    {
-    "w": "Pernille",
-    "k": "build",
-    "t": "T-0732 lane _main_dict fix",
-    "at": "2026-10-29T20:50:27.680000+00:00",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
     "k": "review",
-    "t": "T-0731 lane K1 re-review",
-    "at": "2026-10-29T20:41:04.761000+00:00",
+    "t": "T-0742 review spike widget removal",
+    "at": "2026-10-29T22:05:43.820000+00:00",
     "o": "c"
    },
    {
-    "w": "Pernille",
+    "w": "Idris",
     "k": "build",
-    "t": "T-0730 lane K1 fix",
-    "at": "2026-10-29T20:35:40.157000+00:00",
+    "t": "T-0674 remove spike widget from extension",
+    "at": "2026-10-29T21:58:08.329000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "T-0738 LaunchServices probe ruling",
+    "at": "2026-10-29T21:45:56.181000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 114,
-   "wait": 23,
+   "next": 110,
+   "wait": 25,
    "blocked": 25,
    "you": 6
   }

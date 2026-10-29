@@ -107,11 +107,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
-- 2026-10-29 T-0724 (7bb9aec5): M1 closed; the L1 fix made same-name zips cubic (R1) -> T-0726 with my ruling: typed notes.txt is refused, not notes.txt.py. T-0721 (79b6fcd5): _go rebuilds the run's __main__ dict; a planted `print` was a third route. Lesson: time every fix that adds a loop; replay with the record's module list.
-- 2026-10-29 T-0728 (2e92366f): T-0726 R1/R2 fixed, merge after alpha; same_1000 0.25 s. Low: nameKey (fold after NFC) splits names with U+0345 that APFS treats as equal. Lesson: test a key function against the filesystem, not just the API it imitates.
 - 2026-10-29 T-0730: object.__setattr__ is still an MRO lookup for `__class__`; bind the descriptor (object.__dict__["__class__"].__set__) at import. Never take a value to "restore" from the thing being restored (L1 __file__). Odalys re-reviews as T-0731.
 
 - 2026-10-29 T-0732 (829a3f91): _go now runs the lane check before reading any runner global; __file__ from co_filename. Lesson: f_locals is write-through on 3.13+, so no runner local or global is safe from a planter in _prepare; only values the check restores or immutable objects (code) are. Residual: _hooks_off/_LANE_CHECK lookups, _S["lane_tampered_before"]. Simulator replay owed (T-0734).
+- 2026-10-29 T-0735 (ab318af7): lane threat model + Not held list done; loop closed by ADR-007 16:54. Open: LaneDemotions call site (not wired yet) must sit outside scripts/, else an ordinary script clearing ".." reaches it (2c, back to Ines).
 {% endraw %}
 
 

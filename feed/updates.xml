@@ -4,8 +4,22 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-10-29T19:28:54-04:00</updated>
+<updated>2026-10-29T19:48:30-04:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Build: T-0751: MacBook runner can now update itself (runner v3): between jobs, only when VERSION </title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-29:event/2026-10-29t19-48-30-04-00-build-t-0751-macbook-runner-can-now-update-it</id>
+<updated>2026-10-29T19:48:30-04:00</updated>
+<summary type="text">T-0751: MacBook runner can now update itself (runner v3): between jobs, only when VERSION rises, checked before an atomic swap, rollback kept; new job kinds still wait for an Investor</summary>
+</entry>
+<entry>
+<title>Review: T-0754 review of the runner self-update: 4 Medium findings (network blip rolls back a good</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-29:event/2026-10-29t19-48-30-04-00-review-t-0754-review-of-the-runner-self-update</id>
+<updated>2026-10-29T19:48:30-04:00</updated>
+<summary type="text">T-0754 review of the runner self-update: 4 Medium findings (network blip rolls back a good release; a hung first check never rolls back; sandbox rules can change unchecked; broken update code can&#x27;t be replaced); fix line T-0755 for Odalys before the re-install</summary>
+</entry>
 <entry>
 <title>Build: T-0684 (a): editor saves widget scripts to widgets/&lt;id&gt;/main.py on the projects branch; re</title>
 <link href="https://its-the-company.github.io/log/"/>
@@ -341,19 +355,5 @@
 <id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t22-58-55-04-00-build-t-0206-slice-the-renderer-draws-every-n</id>
 <updated>2026-10-26T22:58:55-04:00</updated>
 <summary type="text">T-0206 slice: the renderer draws every node and modifier the 12 premades use, in all six families; the tests caught ImageRenderer drawing a yellow placeholder for the system&#x27;s progress bars. 133/133 on the Simulator.</summary>
-</entry>
-<entry>
-<title>Build: T-0340: tour page 3 fixtures for Idris&#x27;s T-0193 UI test, 11 picked dates through the real </title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t22-53-45-04-00-build-t-0340-tour-page-3-fixtures-for-idris-s</id>
-<updated>2026-10-26T22:53:45-04:00</updated>
-<summary type="text">T-0340: tour page 3 fixtures for Idris&#x27;s T-0193 UI test, 11 picked dates through the real runner; the picked event rides in the preview request, so the tour never touches the App Group. Found the first draft&#x27;s no-write probe was hollow (the runner drops modules between runs) and replaced it.</summary>
-</entry>
-<entry>
-<title>Build: T-0339: the build phase&#x27;s stdlib cut now reads the manifest; the bundle check fails on cty</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t22-51-13-04-00-build-t-0339-the-build-phase-s-stdlib-cut-now</id>
-<updated>2026-10-26T22:51:13-04:00</updated>
-<summary type="text">T-0339: the build phase&#x27;s stdlib cut now reads the manifest; the bundle check fails on ctypes and other L12 names, and on sizes more than 5% off (python/lib 10.80 MiB on a host run of the real phase). Idris runs the Simulator build next (T-0052).</summary>
 </entry>
 </feed>

@@ -1,5 +1,19 @@
 [
 {
+"time": "2026-10-29T19:48:30-04:00",
+"worker": "Odalys",
+"type": "build",
+"summary": "T-0751: MacBook runner can now update itself (runner v3): between jobs, only when VERSION rises, checked before an atomic swap, rollback kept; new job kinds still wait for an Investor",
+"link": ""
+},
+{
+"time": "2026-10-29T19:48:30-04:00",
+"worker": "Pernille",
+"type": "review",
+"summary": "T-0754 review of the runner self-update: 4 Medium findings (network blip rolls back a good release; a hung first check never rolls back; sandbox rules can change unchecked; broken update code can't be replaced); fix line T-0755 for Odalys before the re-install",
+"link": ""
+},
+{
 "time": "2026-10-29T19:28:54-04:00",
 "worker": "operator",
 "type": "investor",

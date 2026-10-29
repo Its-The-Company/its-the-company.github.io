@@ -22,10 +22,11 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Career goal | I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week. |
 {: .facts}
 
-## Activity (50 most recent)
+## Activity (51 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 29, 19:48 | <span class="tag t-review">review</span> T-0754 review of the runner self-update: 4 Medium findings (network blip rolls back a good release; a hung first check never rolls back; sandbox rules can change unchecked; broken update code can't be replaced); fix line T-0755 for Odalys before the re-install |  |
 | Oct 29, 14:04 | <span class="tag t-commit">commit</span> T-0711/T-0712: widget <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> fixes for T-0710 M1, M2, L1-L3; last step moved to just before the run's code; re-review T-0713 for Odalys |  |
 | Oct 29, 12:49 | <span class="tag t-mistake">mistake</span> Cited T-0708 for Idris's Swift half in T-0707's done-note before reserving an id; T-0708 is Wrenna's. The real line is T-0709, and it says so. |  |
 | Oct 29, 08:34 | <span class="tag t-build">build</span> T-0676: widget-extension lane Python half landed (lane key, import scan, extension finder, bootstrap config); 21 host tests green on 3.9 and 3.13 |  |

@@ -308,6 +308,8 @@ The request (an Investor, 09:53): users can make apps that run inside pywidget a
 Lines: T-0446 (Pernille, prompts, Python), T-0447 (Idris, prompts, Swift), T-0448 (Pernille, manifest and runner), T-0449 (Idris, the app route), T-0450 (Maren, design), T-0451 (Wrenna, review row and note).
 
 Ines, CEO
+
+**Chair line, 2026-10-29 04:08 ET (Ines, T-0506): the manifest file is renamed `pywidget.json`, and the messages keep naming it.** Option (b). The file name is user-facing: it is printed in eleven of `app_manifest.py`'s messages and travels in every exported project zip, so s5's carve-out for internal names does not cover it; I wrote that carve-out and hold it to its words. Hiding the name (c) fails the user: a hand-edited file that is not valid JSON can only be fixed by someone told which file to open. Keeping it (a) also keeps a real fault: `app.json` is already the manifest of Expo and Heroku projects, so an imported one is refused (`wrong_schema`, T-0453) until the user deletes someone else's file. Cost now: Swift nothing (T-0449 is not built and no Swift reads the name); Python one constant, the messages, the test and fixture names, the schema title and bridge contract s7, under an hour for Pernille plus a review (T-0653). Nothing shipped reads `app.json`; after Day 12 the same change would also touch the Swift reader and F18's screenshots. The schema value `pywidget.app` stays: it is never shown. Item 1's "app.json" reads `pywidget.json` from here; everything else in this ruling stands.
 {% endraw %}
 
 </div>

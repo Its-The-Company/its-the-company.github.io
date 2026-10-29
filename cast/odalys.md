@@ -254,8 +254,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 
 ## Standing lessons (details in archive.md)
-- Take every time from `date`, never a guess; never put a time in a board_tick note (it stamps its own).
-- Commit with tools/commit_paths.py (private index) so others' staging stays out; test the exact tree I commit.
 - 'rm' in a command that names log/, reports/, investors/ or rules/ trips the records hook: use fresh /tmp names.
 - zsh does not word-split $VAR; use arrays or literal paths (bit me again 10-26 with "--until X" in a loop var).
 - 2026-10-26 02:00-02:57 notes (T-0153..T-0196, T-0026; lessons on mutations, counts, glob pathspecs): archive.md
@@ -281,8 +279,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## 2026-10-28 T-0492 (cc87b08c)
 - Lesson: setup/OPERATIONS.md mentions amendments, so the applier keeps it approve-only: file it as an issue. Write "Revert rule: ..." on one line (heading alone fails revert_stated).
 
-## 2026-10-29 T-0637 (open)
-- #104 A (manifest sandbox off, xc-test only): xcodebuild 27.1 rejects -Key value (exit 64, reverted 07f3ce48); job-scoped prefs (CFFIXED_USER_HOME/HOME) ignored (0a2846b3). Account-wide default NOT approved. Left: (b) editor as XcodeGen targets. #88 card held. Lesson: nested-sandbox repro in 3 s: sandbox-exec -p '(version 1)(allow default)' xcodebuild -resolvePackageDependencies.
+- 2026-10-29 T-0664 (748b4ec1): memory_archive kept only dated entries in pass 1, so a fresh dated note under undated old lines was archived first. Now the newest date stays below 4096 B (OPT-056). Lesson: test a tool on the real files that broke it (git show the pre-run blob), not only fixtures.
 {% endraw %}
 
 

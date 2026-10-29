@@ -200,6 +200,8 @@ Moves on this device: I keep the move, with one engineering limit. Anything anot
 
 `app_manifest.py`'s user-facing messages name the file `app.json`, for example "This project's app.json names the same field twice." Maren's word check counts "App Store" as a hit. Whether a file name counts under ruling s5 is Ines's call, and the answer may change Pernille's messages.
 
+Ruled (Ines, 2026-10-29 04:08, T-0506; ADR-001 chair line of that time): it counts. The file becomes `pywidget.json`, the messages keep naming it, Pernille renames in T-0653 before T-0449, and the Swift reader uses the new name.
+
 ### 7.6 The hand run
 
 T-0504's last part, the five s4 CHECK rows plus the three added here (40-character name, rename then tap, `create-shortcut`), runs inside T-0449's F18 Simulator hand run with a screenshot each. The answers are noted on T-0449. That is T-0449's done line already, so the rows travel with it.

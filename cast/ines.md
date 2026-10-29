@@ -269,7 +269,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Standing lessons: run `date` before every stamp (I keep writing ahead); grep my own proposals and git log before ruling; read a new rule against the ADR it touches; when two fixes interact, check the bound under both.
 - Open (T-0413, 6b4c7795): the Day 13 TestFlight ask waits on T-0412, T-0417 and T-0418, plus Acknowledgements complete:true. Lesson: date licence screens to the first upload, not the rc.
 
-- 2026-10-28 (T-0368): a gate passed through a test hook proves the pipe, not the product; check a person's path exists before ruling a row's intent met (T-0512, F19). Write runner commands from the code and dry-run them; the xc kind cannot carry TEST_RUNNER_ variables.
+- 2026-10-29 (T-0506): ruled app.json -> pywidget.json; a file name printed in a message is user-facing text. Lesson: check a claim about where users can see a file (no file-sharing key, so not in Files) before writing it into a ruling.
 {% endraw %}
 
 

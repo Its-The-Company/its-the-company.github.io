@@ -101,17 +101,14 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## Lessons (2026-10-27, T-0416 to T-0448 reviews)
-- App/Runtime is a folder ref: every file ships; only the Acknowledgements phase guards it.
-- HTTPServer.server_bind calls getfqdn (30 s on 3.13); http.client read(n) blocks for n bytes, read1 lets a deadline bite.
-- 3.9.6 Thread.join leaks the tstate lock if a signal handler raises (bpo-45274); exit hangs in threading._shutdown.
-- Pixel tests cannot see a plain-style Button(intent:); policy rules need a source scan plus a mutant.
-- A one-line launch hook needs a UI test. Runner keeps bundle modules across runs, so monkeypatches outlive tests.
-- json.loads accepts lone surrogates, JSONSerialization refuses them; os.path then raises UnicodeEncodeError.
 - Runestone TextInputView.insertText replaces the marked range: any non-keyboard insert must unmarkText() first. A UITextInputDelegate spy needs an @available(iOS 18.4) conversationContext stub.
 - iOS number and decimal pads have no minus key. ExamplesUITests type into the console sheet: an example that moves to prompts waits for the Swift handler.
 
 - T-0414 (ad73c08e): bundled names now beat the script folder (ADR-003 s3.6 item 4). Open: T-0631 activate test, T-0632 stdlib shadow leak + Maren notice.
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
+
+- 2026-10-29 T-0662 (f725bd9b): re-review of T-0355 projects fixes, merge yes. Lesson: String(contentsOf:.utf8) drops a BOM, so byte compares against decoded text give false conflicts. Open: T-0665 (N1, background loses refused-save text) for Idris.
+- 2026-10-29 T-0666 (8ed08f51): T-0665 re-review, merge after alpha yes, 4 Low (stale next-launch note). T-0653 (db243c3c): manifest is pywidget.json; Idris review owed before T-0449. Lesson: a mutation runner killed mid-run leaves its mutation in place; check git status after.
 {% endraw %}
 
 

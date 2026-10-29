@@ -255,12 +255,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 Dated task logs and full lessons: archive.md.
 
 ## Lessons
-- Before calling a flake open, date its logs against the fixes: all three T-0513 timeouts predated bcfd42f5.
-- Show me the bytes: read pixels back. ImageRenderer draws a yellow placeholder for UIKit-backed system views and nothing for AccessoryWidgetBackground; a black ground hides black ink (check stripped modes over mid grey); the light card equals bg.surface, so "differs" guards bite only in dark.
-- A one-way normalisation rule is half a contract: check the return trip (T-0462). A surviving mutant means a missing test. Prove green against HEAD when others have uncommitted work in the build.
-- xc.sh: the lock is shared with the MacBook runner; xcodebuild can hang after "Executed": grep the log for the result, kill it. Test runs rewrite time-dependent sheets (02, 09, 12): restore unless refreshing sheets is the task.
-- A bound is only as exact as its unit; build the worst-case file. Untrusted paths: resolve symlinks, then check containment.
-- A packet can contradict a chair ruling: read the ruling, follow it, ask for the call.
 - Restoring Vendor/ from a clean fetch: rsync --delete drops the Vendor/python symlink; rerun fetch_python.sh (T-0651).
 - Take a board id from the board before writing it; fill placeholders before logging; stage only my hunks (pathspec, arrays in zsh).
 
@@ -270,6 +264,8 @@ Dated task logs and full lessons: archive.md.
 - SKTestSession: a refund sent before the app's StoreKit has read the purchase never arrives (T-0497, 5/5 under -test-iterations); wait for currentEntitlements to list it first. Run new StoreKit tests with -test-iterations 5 before calling them green.
 - T-0051 slice 1 2026-10-28 (bcff31bf): picker = AppIntentConfiguration + WidgetChoiceQuery; Pro card from state-tokens.json; T-0512 calls ProEntitlement.mayWriteTimeline. Left: card tap route (T-0191), Simulator shots of picker and card, review T-0582. Run the UI suite in two halves to stay under the 10-minute foreground limit.
 - T-0583/T-0589 notes, T-0611/T-0613 caret lessons: archive.md (moved 2026-10-28).
+- 2026-10-29 T-0663/T-0660: migration removed at 880ab357 (chair ruling: no shipped build had loose scripts, so nothing to move). Lesson: before writing a migration, ask whether any shipped build ever made that layout. Projects open path is ProjectStore.listing(), read-only; the loose-files test snapshots inode+mtime+bytes and fails if an open writes anything. Test runs rewrite two lockscreen PNGs in app-guide-shots; restore them before committing.
+- 2026-10-29 T-0665 (26a965b0, idris/t0355-projects): refused save now goes to a conflict copy on scene leave (sceneLeftForeground) + next-launch notice in UserDefaults; ProjectsView loops moved into ConsoleModel methods. Pernille reviews as T-0666. Lesson: my first N1 test passed the save for the wrong reason (fileSaved synced the clean window); the mutation run caught it. Always run the test against the old code.
 {% endraw %}
 
 

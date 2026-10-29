@@ -11,28 +11,28 @@ description: "Sheets, drawn by draw_home_setup.py (imports draw_run_screen.py an
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Maren, 2026-10-27. <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Ruling</span>: ADR-001 chair ruling 2026-10-27 10:05, s1 ("Make App" writes `app.json`; a lone script first goes into a new project), s2 (the walkthrough), s3 (container projects only), s5 (the words). Build spec for T-0449; Idris reads it, with [`run-screen.md`](run-screen.html) (slice 1), before building. Layout and behaviour are spec; every string is DRAFT <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>.
+Maren, 2026-10-27. <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Ruling</span>: ADR-001 chair ruling 2026-10-27 10:05, s1 ("Make App" writes the manifest, `pywidget.json` since the chair line of 2026-10-29 04:08, T-0506; a lone script first goes into a new project), s2 (the walkthrough), s3 (container projects only), s5 (the words). Build spec for T-0449; Idris reads it, with [`run-screen.md`](run-screen.html) (slice 1), before building. Layout and behaviour are spec; every string is DRAFT <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>.
 
 Sheets, drawn by `draw_home_setup.py` (imports `draw_run_screen.py` and `draw_ide.py`; no image model): `A-home-phone.png`, `A-home-ipad.png` (light, A Paper), `B-home-phone.png`, `B-home-ipad.png` (dark, B Studio); revisions after s7 are in s8 (`*-home-rev-*`). QA: `qa-home-setup.json` (4 sheets, 28 frames, 0 clipped, truncated, overlapping or under-11 pt texts; min contrast 5.49 light, 6.37 dark; each PNG under 300 KB). Regenerate: `python3 pywidget/docs/design/ide/draw_home_setup.py`; copy table: `--strings`.
 
 ## 1. The menu item: plain words, no coined name
 
 "Make App" is the internal name only (ruling s5). In the interface:
-- No `app.json` yet: **Set Up for Home Screen…** (frame 1).
-- `app.json` exists: **Home Screen Setup…** (same sheet, to change name or script) and **Add to Home Screen…** (the walkthrough).
+- No `pywidget.json` yet: **Set Up for Home Screen…** (frame 1).
+- `pywidget.json` exists: **Home Screen Setup…** (same sheet, to change name or script) and **Add to Home Screen…** (the walkthrough).
 - Where: the long-press menu on a project row and on a lone script row in Projects, and the editor's project menu if T-0355 gives it one. In the drawing only the Home Screen rows are spec; Rename, Share and Delete stand in for T-0355's menu.
 
 Plain words worked: the item says what the user gets, in the words the store page will use ("open a script from your Home Screen"). No coined feature name, so no C51 naming request.
 
 ## 2. Setup sheet
 
-Large sheet on iPhone, 580 pt form sheet on iPad. Title "Home Screen"; Cancel left (writes nothing), Save right (writes `app.json`).
+Large sheet on iPhone, 580 pt form sheet on iPad. Title "Home Screen"; Cancel left (writes nothing), Save right (writes `pywidget.json`).
 1. Intro line (first setup only).
 2. **Name.** Text field, focused on open, clear button. Proposed from the folder name: `_` and `-` to spaces, first letter of each word capitalised (`tip_splitter` → Tip Splitter); a lone script's file name without `.py` (`dice.py` → Dice). Trimmed; 1 to 40 characters (my limit, so titles and Spotlight rows stay one line; Idris may change it). Empty or too long: the field gets a danger outline, a message replaces the footer, Save is disabled (frame 3).
 3. **Script to Run.** Every `.py` file in the project, any depth, relative path under the name; one checkmark. Default: `main.py` if present, else the file open in the editor, else the first in path order. One file only: shown, checked, with the footer "The only script in this project." (frame 5).
-4. Edit mode only (frame 7): **Add to Home Screen…** row (opens the walkthrough) and **Turn Off Home Screen Opening** (destructive, asks first, frame 8; deletes `app.json`; the project and files stay). The name footer changes to "Renaming here does not break an icon already on the Home Screen." That sentence is true only because `id` is written once (ruling s1); if T-0449 finds otherwise, cut it.
+4. Edit mode only (frame 7): **Add to Home Screen…** row (opens the walkthrough) and **Turn Off Home Screen Opening** (destructive, asks first, frame 8; deletes `pywidget.json`; the project and files stay). The name footer changes to "Renaming here does not break an icon already on the Home Screen." That sentence is true only because `id` is written once (ruling s1); if T-0449 finds otherwise, cut it.
 
-Save, first time: write `app.json` (schema `pywidget.app`, version 1, new UUID `id`, `name`, `entry`), then the sheet's content becomes the walkthrough with the "ready" intro (frame 6). Save later: write `name` and `entry` only, keep `id`, close the sheet.
+Save, first time: write `pywidget.json` (schema `pywidget.app`, version 1, new UUID `id`, `name`, `entry`), then the sheet's content becomes the walkthrough with the "ready" intro (frame 6). Save later: write `name` and `entry` only, keep `id`, close the sheet.
 
 ## 3. A lone script
 
@@ -55,7 +55,7 @@ Each step: a schematic diagram (device outline, grey bars, one accent mark in a 
 | Step | Title (DRAFT) | Line (DRAFT) | What T-0449's hand run checks | Status |
 |---|---|---|---|---|
 | 1 | Open Shortcuts, then tap + | The + at the top starts a new shortcut. | + is at the top of My Shortcuts on iOS 26 (iPhone and iPad); or whether our App Shortcut tile in the PyWidget section has its own Add to Home Screen, which would make steps 1-2 one step | CHECK |
-| 2 | Add the Open action | Search for PyWidget, tap Open Project, then choose [name] from the list. | the action's real title as the intent shows it (built as "Open Project", s7.4); that the project picker lists only projects with a valid `app.json` | CHECK |
+| 2 | Add the Open action | Search for PyWidget, tap Open Project, then choose [name] from the list. | the action's real title as the intent shows it (built as "Open Project", s7.4); that the project picker lists only projects with a valid `pywidget.json` | CHECK |
 | 3 | Tap the name, then Add to Home Screen | Tap the shortcut's name at the top to see its menu. | where Add to Home Screen sits on iOS 26 (name menu, share sheet or info button) | CHECK |
 | 4 | Pick a name and an icon, then tap Add | Tap the new icon to run [name] from the start. / iOS may show Shortcuts for a moment first. | what a tap on the icon shows (banner, a pass through Shortcuts, or straight to the run screen), ruling s2; the second line is kept, changed or cut by that | CHECK |
 | button | Open Shortcuts | | that opening Shortcuts from the sheet is allowed and works (Shortcuts' URL scheme, or drop the button) | CHECK |
@@ -81,9 +81,9 @@ Plain descriptive words only; "app", "apps" and "mini app" never appear in user-
 
 | ID | String (DRAFT) | Where | C51 |
 |---|---|---|---|
-| `menu.setup` | Set Up for Home Screen… | project menu (long-press on a project or a lone script; the editor's project menu); no app.json yet | DRAFT |
-| `menu.edit` | Home Screen Setup… | project menu once app.json exists; opens the same sheet to change name or script | DRAFT |
-| `menu.home` | Add to Home Screen… | project menu once app.json exists; opens the walkthrough (also in the run screen's ⋯ menu) | DRAFT |
+| `menu.setup` | Set Up for Home Screen… | project menu (long-press on a project or a lone script; the editor's project menu); no pywidget.json yet | DRAFT |
+| `menu.edit` | Home Screen Setup… | project menu once pywidget.json exists; opens the same sheet to change name or script | DRAFT |
+| `menu.home` | Add to Home Screen… | project menu once pywidget.json exists; opens the walkthrough (also in the run screen's ⋯ menu) | DRAFT |
 | `lone.title` | Put [file] in a new project? | alert on a lone script, before the setup sheet | DRAFT |
 | `lone.msg` | To open from the Home Screen, a script needs a project of its own. [file] moves into a new project folder. | alert message, script in the Projects folder on this device | DRAFT |
 | `lone.msg.copy` | To open from the Home Screen, a script needs a project of its own. A copy of [file] goes into a new project on this [device]; the original stays where it is. | alert message, script in a folder opened from Files or iCloud Drive (ruling s3: container projects only) | DRAFT |
@@ -91,7 +91,7 @@ Plain descriptive words only; "app", "apps" and "mini app" never appear in user-
 | `lone.cancel` | Cancel | alert; nothing moves | DRAFT |
 | `setup.title` | Home Screen | setup sheet title (first setup and later changes) | DRAFT |
 | `setup.cancel` | Cancel | sheet, top left; nothing is written | DRAFT |
-| `setup.save` | Save | sheet, top right; writes app.json; disabled until the name is valid | DRAFT |
+| `setup.save` | Save | sheet, top right; writes pywidget.json; disabled until the name is valid | DRAFT |
 | `setup.intro` | Choose a name and the script to run. Then it can be opened from Shortcuts, Spotlight and your Home Screen. | sheet, first line, first setup only | DRAFT |
 | `name.head` | Name | section header | DRAFT |
 | `name.foot` | The title while it runs, and the name in Shortcuts and Spotlight. The Home Screen icon gets its own name when you add it. | section footer | DRAFT |
@@ -110,7 +110,7 @@ Plain descriptive words only; "app", "apps" and "mini app" never appear in user-
 | `edit.off.foot` | Renaming here does not break an icon already on the Home Screen. | edit sheet footer under the name | DRAFT |
 | `off.title` | Turn off Home Screen opening for [name]? | alert after Turn Off | DRAFT |
 | `off.msg` | Icons for it on the Home Screen will stop working, and setting it up again does not bring them back. The project and its files stay. | alert message (T-0505: setting up again writes a new id, s7.4) | DRAFT |
-| `off.ok` | Turn Off | alert, destructive; deletes app.json | DRAFT |
+| `off.ok` | Turn Off | alert, destructive; deletes pywidget.json | DRAFT |
 | `off.cancel` | Cancel | alert | DRAFT |
 | `walk.title` | Add to Home Screen | walkthrough sheet title | DRAFT |
 | `walk.done` | Done | walkthrough, top right | DRAFT |
@@ -170,8 +170,8 @@ So 40 does not keep every surface on one line. It does keep every surface readab
 
 There are three unit problems the drawing cannot show:
 1. **T-0448's schema <span title="A measured fact that holds a grade below a letter, however good the rest is.">caps</span> `name` at 64 Unicode scalars** (`NAME_MAX`) and bans control, zero-width and direction characters, ZWJ (U+200D) among them. "40 characters" in the field means 40 Swift `Character`s (grapheme clusters). One flag is 2 scalars and a skin-toned emoji is 2, so 40 Characters can exceed 64 scalars. The field is valid only when all of these hold: trimmed, 1 to 40 Characters, at most 64 scalars, no banned scalar. A name over 64 scalars but under 40 Characters needs its own message, because "Use 40 characters or fewer" would be false for it. The same goes for a banned character, for example ZWJ in a pasted emoji. Two new strings, T-0505.
-2. **The Swift reader follows the schema, not the field.** A hand-edited `app.json` with a 60-scalar name still resolves. The 40 limit is an editor rule, so a hand edit inside the schema never makes an icon stop working without a word.
-3. **The folder name is a filesystem name.** 64 scalars at up to 4 UTF-8 bytes each is 256 bytes, which is over the 255-byte limit before " 2" is even added. The folder name is derived separately: `/` and `:` become `-`, a leading `.` is dropped, and it is cut at a grapheme boundary to 200 UTF-8 bytes. `app.json` keeps the full name. Tests: worst-case 64 four-byte scalars, a 40-flag name, and a name that only clashes after the cut.
+2. **The Swift reader follows the schema, not the field.** A hand-edited `pywidget.json` with a 60-scalar name still resolves. The 40 limit is an editor rule, so a hand edit inside the schema never makes an icon stop working without a word.
+3. **The folder name is a filesystem name.** 64 scalars at up to 4 UTF-8 bytes each is 256 bytes, which is over the 255-byte limit before " 2" is even added. The folder name is derived separately: `/` and `:` become `-`, a leading `.` is dropped, and it is cut at a grapheme boundary to 200 UTF-8 bytes. `pywidget.json` keeps the full name. Tests: worst-case 64 four-byte scalars, a 40-flag name, and a name that only clashes after the cut.
 
 Duplicate names are allowed, as the schema allows them. The entity's `DisplayRepresentation` subtitle is the project's folder name, so two projects both called "Dice" are still told apart in the Shortcuts picker ("Dice", "Dice 2").
 
@@ -191,7 +191,7 @@ Moves on this device: I keep the move, with one engineering limit. Anything anot
 - **The Shortcuts and Spotlight list** only updates when the app calls `updateAppShortcutParameters()`. It is called after every Save, rename and Turn Off. Not drawn, none needed.
 - **Open Shortcuts button.** `UIApplication.open` of a `shortcuts://` URL needs no plist entry; only `canOpenURL` would. `shortcuts://create-shortcut` should open a new, empty shortcut. If it does, step 1's "tap +" goes, and the walkthrough becomes three steps (the sheet already takes three). Medium-sure; CHECK, and T-0505 keeps both versions of step 1 ready.
 - **What cannot be done at all, and the design does not try:** an app cannot place an icon, preset the icon's name or image, or learn whether the user added one. The walkthrough cannot show a "done" state, and it does not.
-- **"Renaming here does not break an icon"** holds: the entity resolves by the `app.json` `id`, and the run screen's title is read from `app.json` at each open. The shortcut editor may keep showing the old name until it re-resolves, which is harmless. CHECK: rename, then tap the icon.
+- **"Renaming here does not break an icon"** holds: the entity resolves by the `pywidget.json` `id`, and the run screen's title is read from `pywidget.json` at each open. The shortcut editor may keep showing the old name until it re-resolves, which is harmless. CHECK: rename, then tap the icon.
 - **Turn Off, then Set Up again** writes a new `id`, so old icons stay broken. `off.msg` could say so (optional, T-0505).
 - **Stop and open when X is not a run screen.** The design draws X as another Home Screen script. On the one run queue X can also be (a) an editor console run, or (b) a short background run: a widget refresh, or T-0208's Run Script from Shortcuts. My ruling: in case (a) the same alert appears over the editor, with X as the file name. In case (b) there is no alert: Y's screen opens with a **Starting** status, and Y's run waits its turn. Stop cancels Y. Both need a frame (T-0505).
 - **iPad windows.** If PyWidget has more than one window on iPad, the run screen opens in the active window, and one run at a time holds across windows.

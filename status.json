@@ -1,77 +1,77 @@
 {
  "schema": 1,
- "at": "2026-10-29T11:55:55.104923+00:00",
+ "at": "2026-10-29T14:37:03.143154+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-29T06:46:37-04:00"
+  "started": "2026-10-29T07:57:26-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "pernille",
-   "task": "[design] T-0671 freshness view Pernille",
-   "model": "fable",
-   "started": "2026-10-29T11:52:23.161Z",
-   "seconds": null,
-   "finished": "2026-10-29T11:54:56.482000+00:00"
-  },
-  {
    "name": "idris",
-   "task": "[design] T-0671 freshness view Idris",
-   "model": "fable",
-   "started": "2026-10-29T11:47:41.909Z",
-   "seconds": null,
-   "finished": "2026-10-29T11:51:58.048000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] T-0671 live widget deep search",
-   "model": "fable",
-   "started": "2026-10-29T11:35:22.529Z",
-   "seconds": null,
-   "finished": "2026-10-29T11:47:20.233000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[design] T-0671 freshness view Idris",
+   "task": "[build] T-0691 net.get reply memory cap",
    "model": "opus",
-   "started": "2026-10-29T11:32:58.428Z",
+   "started": "2026-10-29T14:10:44.017Z",
    "seconds": null,
-   "finished": "2026-10-29T11:34:26.010000+00:00"
+   "finished": "2026-10-29T14:36:12.930000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[test] T-0694 lane on device interpreter 3.15",
+   "model": "opus",
+   "started": "2026-10-29T13:51:47.005Z",
+   "seconds": null,
+   "finished": "2026-10-29T14:10:22.373000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-0692 T-0693 lane import gate fixes",
+   "model": "opus",
+   "started": "2026-10-29T13:41:23.650Z",
+   "seconds": null,
+   "finished": "2026-10-29T13:51:31.014000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[review] T-0685 review of lane Python half",
+   "model": "opus",
+   "started": "2026-10-29T13:33:24.589Z",
+   "seconds": null,
+   "finished": "2026-10-29T13:41:08.629000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 106,
-  "blocked_count": 48
+  "runnable_count": 113,
+  "blocked_count": 50
  },
  "meter": {
   "five_hour": {
-   "pct": 1.0,
-   "resets_at": "2026-10-29T14:59:59.692495+00:00",
+   "pct": 10.0,
+   "resets_at": "2026-10-29T14:59:59.753157+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 99.0,
+   "left": 90.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 72.0,
-   "resets_at": "2026-11-01T06:59:59.692514+00:00",
+   "pct": 74.0,
+   "resets_at": "2026-11-01T06:59:59.753177+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 28.0,
+   "left": 26.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 3.0,
-   "resets_at": "2026-11-01T06:59:59.692649+00:00",
+   "pct": 5.0,
+   "resets_at": "2026-11-01T06:59:59.753348+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-29T06:38:01.446789-04:00"
+  "read_at": "2026-10-29T07:57:25.341938-04:00"
  },
  "ui": {
-  "week_pct": 0.1,
+  "week_pct": 0.101,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-29T07:56:36-04:00"
+  "at": "2026-10-29T10:37:52-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -565,13 +565,6 @@
    },
    {
     "w": "Idris",
-    "k": "build",
-    "t": "A person's tap writes the widget",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
     "k": "test",
     "t": "Alpha commands the code cannot give yet",
     "s": "next",
@@ -583,13 +576,6 @@
     "t": "Tools/alpha_run.sh runs the hand steps",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "design",
-    "t": "Widget freshness ruling",
-    "s": "next",
-    "o": "i"
    },
    {
     "w": "Maren",
@@ -789,13 +775,6 @@
    },
    {
     "w": "Idris",
-    "k": "review",
-    "t": "Review of Pernille's T-0653 rename db243c3c",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
     "k": "fix",
     "t": "T-0666 Lows on idris/t0355-projects",
     "s": "next",
@@ -805,6 +784,76 @@
     "w": "Odalys",
     "k": "ops",
     "t": "T-0664 residue",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Extension lane",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Refresh button intent in the extension lane",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "design",
+    "t": "Bound fields, the spec only",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "docs",
+    "t": "After the T-0671 ruling",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0512 remainder",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0677 remainder",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "T-0667 review M1",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Rides with T-0687",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "review",
+    "t": "Independent review of 5d4754b8",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "From T-0694",
     "s": "next",
     "o": "c"
    },
@@ -888,31 +937,31 @@
   ],
   "done": [
    {
-    "w": "Pernille",
-    "k": "design",
-    "t": "T-0671 freshness view Pernille",
-    "at": "2026-10-29T11:54:56.482000+00:00",
-    "o": "i"
-   },
-   {
     "w": "Idris",
-    "k": "design",
-    "t": "T-0671 freshness view Idris",
-    "at": "2026-10-29T11:51:58.048000+00:00",
-    "o": "i"
+    "k": "build",
+    "t": "T-0691 net.get reply memory cap",
+    "at": "2026-10-29T14:36:12.930000+00:00",
+    "o": "c"
    },
    {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "T-0671 live widget deep search",
-    "at": "2026-10-29T11:47:20.233000+00:00",
-    "o": "i"
+    "w": "Pernille",
+    "k": "test",
+    "t": "T-0694 lane on device interpreter 3.15",
+    "at": "2026-10-29T14:10:22.373000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "T-0692 T-0693 lane import gate fixes",
+    "at": "2026-10-29T13:51:31.014000+00:00",
+    "o": "c"
    }
   ],
   "count": {
-   "next": 106,
-   "wait": 22,
-   "blocked": 26,
+   "next": 113,
+   "wait": 23,
+   "blocked": 27,
    "you": 6
   }
  },

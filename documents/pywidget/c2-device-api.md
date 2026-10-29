@@ -114,12 +114,32 @@ The Python modules are thin. Every check (context, permission, scope) is made ag
 
 Calls block the script's thread. The bridge does any main-thread work (prompts, pickers) and returns, or raises `BridgeTimeout` after `timeout` seconds (default 10; in a widget run, <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> by the run's remaining budget). Completion handlers that Apple delivers on its own queues (CMPedometer: "returned on a serial queue" [SDK]) are joined in Swift, never in Python.
 
+### 1.7 The widget-extension <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> (`"lane": "widget"`, behind the flag; T-0676)
+
+ADR-007 chair line 2026-10-29 08:03, item 2, adds a fourth place for one kind of script: a project whose `pywidget.json` says `"lane": "widget"` (default `"app"`) may run **inside the widget extension**, on each budgeted reload, with no app process. The flag is off in code; its default is set from device numbers before the release candidate (ADR-007, same line, items 1 and 5). Everything in 1.1 and section 2 still <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> for `"lane": "app"`, and for every widget when the flag is off or the widget has been demoted.
+
+**Cold-peak target: the extension's cold peak with a lane script <= 15 MB** (0.5 x the recalled ceiling C of about 30 MB; the tiny set measured 11.9-12.1 MB cold on the Simulator, L3). The target holds until the device C is measured (ADR-007 item 5, step 2); then the allowlist below is cut to fit, not the target raised.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 1.7 The widget-extension lane (&quot;lane&quot;: &quot;widget&quot;, behind the flag; T-0676), scrolls sideways" style="--tw:937px" markdown="1">
+
+| | Modules | Who it binds |
+|---|---|---|
+| Allowed (by top-level name) | `json`, `datetime`, `math`, `os` (the tiny set), `re`, `zoneinfo`, `collections`, `itertools`, `string`, `textwrap`, `pywidget`, `pywidget_ui`; plus `__future__` (a compiler directive) | The script's own imports |
+| Never, whoever imports it | `ssl`, `urllib`, `http`, `email`, `sqlite3`, `asyncio`, `ctypes`, `_decimal`, `multiprocessing`, `concurrent`, with their C halves (`_ssl`, `_sqlite3`, `_asyncio`, `_ctypes`, `_multiprocessing`); every native package (`app_packages` is not on the extension's `sys.path`) | Every ordinary import, stdlib included. Deliberate in-process tampering in a run (removing the finder, calling `PathFinder` itself) is not stopped; every reset drops these modules and restores the lane's frozen state, the run's outcome lists any left resident (`never_resident`, widget lane only), and the backstop is demoting that widget to the app lane, as on a memory <span title="A test written in advance. If it fires, we drop the idea.">kill</span> (T-0693) |
+| `pywidget` submodules refused in the lane | `pywidget.http` (ssl, urllib; use `pywidget.net`, T-0677), `pywidget.prompts` (nobody to answer; `decimal`), `pywidget.files` (`pathlib` pulls `urllib.parse`; the app's Documents are not readable from the extension); `pywidget.clipboard`, `pywidget.keychain`, `pywidget.notifications` until T-0675 answers their device calls in the extension | The script's own imports |
+
+</div>
+
+
+Enforced twice with one text, `<name> can't be used in a widget that runs on its own. Remove the import, or set "lane" to "app" in pywidget.json.` (wording for Maren's review): the save-time scan refuses `"lane": "widget"` naming each import and its line, and a `sys.meta_path` finder installed only in the extension process raises `ImportError` with the same text. A script's own sibling modules are refused too: the mirror holds the entry script alone. Imports that allowed modules make for themselves (`typing`, `dataclasses`, `base64`...) load and count against the 15 MB, and so do the few that their C halves make with no Python frame (`_strptime` and `time` from `_datetime`, `_math_integer` from 3.15's `math`; lane.IMPLIED, T-0692). Code: `_pywidget_runtime/lane.py`; tests: `pywidget/tests/bridge/test_lane.py`.
+
 ## 2. Context matrix (summary)
 
 Row cells say what the call does. "BFU" = before first unlock after a restart.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 2. Context matrix (summary), scrolls sideways" style="--tw:1615px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 2. Context matrix (summary), scrolls sideways" style="--tw:1615px" markdown="1">
 
 | Module | App (foreground) | Widget run, foreground | Widget run, background, unlocked | Widget run, locked or BFU | Shortcut |
 |---|---|---|---|---|---|
@@ -257,10 +277,65 @@ class Response:
 - **Local network.** Connecting to a LAN address shows the iOS Local Network prompt and needs `NSLocalNetworkUsageDescription` [M]. Home servers are a common script target, so the string ships in v1.
 - **Widget runs.** HTTP works inside the run's time budget. `timeout` is capped at the time left in the run (BGAppRefreshTask time is short [M]; the intent limit is 30 s [SDK doc comment, L8]). Low Data Mode: `status().value.constrained` lets a script skip big downloads; we do not block them.
 - **Body cap, 10 MiB** (added by T-0394, accepted by Idris 2026-10-27, T-0424). `get` and `post` refuse a body over 10 MiB, before reading it when Content-Length says so. Reason: the body is held whole in memory inside a process that also renders widgets, and 10 MiB is far above any reply a widget can show; a script that needs more uses `requests` or `urllib` directly, which keep no cap.
-- **`timeout` is the whole request** (added by T-0394, accepted by Idris 2026-10-27, T-0424): connecting, every redirect and the body, cut to the run's time left. Reason: a run's budget is wall-clock, and a per-read timeout (as in `requests`) lets a server that drips a byte at a time <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> the run past its budget indefinitely.
+- **`timeout` is the whole request** (added by T-0394, accepted by Idris 2026-10-27, T-0424): connecting, every redirect and the body, cut to the run's time left. Reason: a run's budget is wall-clock, and a per-read timeout (as in `requests`) lets a server that drips a byte at a time hold the run past its budget indefinitely.
 - **`status()`** (T-0424): Swift answers `http.status` with one NWPathMonitor update, then cancels the monitor. Not satisfied, or loopback only, is `"none"`; otherwise Wi-Fi wins over cellular (a path can list both), and any other link (wired Ethernet, or an interface iOS types as other) is `"wired"`. `expensive` and `constrained` are NWPath's own flags. The cases are in `pywidget/tests/device/fixtures/c2_calls.json` (rule 13).
 - **Credentials.** Tokens come from `keychain`, never from source code (brief Section 0). The `requests` session we document reads the token at run time.
 - Errors: `requests` and `urllib` exceptions pass through unchanged from direct use. `http.get` raises `HTTPStatusError(PyWidgetError)` for 4xx/5xx only if `raise_for_status=True`; `Offline`; `TimeoutError`.
+
+## 6a. net (T-0677; the widget-extension lane's network)
+
+ADR-007 chair line 2026-10-29 08:03, item 2: `ssl`, `urllib` and `http` never load in the extension (1.7), so a `"lane": "widget"` script reaches the network through Swift. One code path in both processes: `Shared/NetFetch.swift` (compiled into the app and the extension); the app answers it through `NetCall` in its router, the extension's bridge (T-0675) calls the same `NetFetch.run`.
+
+```python
+from pywidget import net
+
+net.get(url: str, timeout: float = 10, *, headers: dict | None = None) -> Response
+class Response:
+    status: int; headers: dict (case-insensitive look-ups); text: str
+    ok: bool        # 200 <= status < 300
+    def json(self) -> Any
+```
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 6a. net (T-0677; the widget-extension lane&#x27;s network), scrolls sideways" style="--tw:404px" markdown="1">
+
+| Point | Rule |
+|---|---|
+| Wire | `net.get {url, timeout, headers}` -> `{"ok": {status, headers, text}}`, or the bridge's `{"error": {class, message, fix, native}}` (1.3). Device-call timeout = `timeout` + 1 s, so Swift answers first |
+| Scheme | `https://` only, checked in Python and again in Swift (1.5): `ValueError`. A redirect to `http://` is not followed (`PyWidgetError`); at most 5 redirects; one to another host drops `Authorization`, `Cookie`, `Proxy-Authorization` |
+| Timeout | The whole request (a timer, not URLRequest's per-read timeout). Python cuts it to the run's budget minus 0.25 s; Swift cuts it to **3 s inside the extension** (`NetFetch.extensionTimeoutCap`) and 60 s in the app. Running out: `TimeoutError` (a built-in class on the wire, added to the runtime's map for this call) |
+| Body | Text only: the server's charset, else UTF-8, undecodable bytes as U+FFFD. **Body cap 1 MiB in the app, 256 KiB in the extension** (`MAX_BYTES`/`EXTENSION_MAX_BYTES`, `NetFetch.Limits`), refused before reading when Content-Length says more, else as soon as it passes: `PyWidgetError`. **Reply cap 2 MiB in the app, 512 KiB in the extension** (T-0691): the reply carries the text JSON-escaped, so it is counted before it is built (`NetFetch.escapedSize`, an upper bound: a control character 6 bytes, `"` and `\` 2, a U+FFFD 3, slashes not escaped) and checked again once built; over it is `PyWidgetError` "the answer from <host> would be N bytes as text, over the 524288 bytes (512 KiB) pywidget.net passes to Python here..." (host only). See "Memory per call" below |
+| Status | Any status is an answer (`r.ok` to check); nothing raises on 4xx/5xx |
+| Errors | No connection, DNS, lost connection, roaming or data off: `Offline` (a `ConnectionError`), with `.native` = `("NSURLErrorDomain", code)`. Certificate or TLS failure: `PyWidgetError` with `.native`, never `Offline`. Anything else: `PyWidgetError` with `.native` |
+| Privacy | Ephemeral session: no cookie store, no URL cache, nothing on disk. Nothing is logged. Error messages name the host, never the path or query. User-Agent `PyWidget-iOS`. Apple's trust store and ATS apply (unlike `pywidget.http`) |
+| Context | Any run context, no permission. `pywidget.http` stays for the app lane (cache, POST, 10 MiB) |
+
+</div>
+
+
+**Memory per call (T-0691, review T-0686 M1).** The old text here said the body is held "about four times over". That holds for ASCII only: 1 MiB of control bytes is a 6 MiB reply, and 1 MiB of bytes that are not UTF-8 a 3 MiB one, and Python's decode costs about three times the reply again. Measured: peak physical footprint above the footprint at the device call (`ri_interval_max_phys_footprint`, reset when the call reaches Swift), one cold `net.get` per fresh process, through the real bridge, router and `NetFetch` on a stubbed `URLProtocol`. **Measured in the app (the XCTest host on the iPhone 17 Simulator, iOS 27), not in the extension**: the extension cannot run a script before T-0675, so the extension's limits were set in the app (`NetFetch.limits`) on the same code path. T-0687 repeats it inside the extension.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 6a. net (T-0677; the widget-extension lane&#x27;s network), scrolls sideways" data-n="3" style="--tw:822px" markdown="1">
+
+| Limits, body | Body | n | Outcome | Peak MiB, median (min-max) |
+|---|---|---|---|---|
+| old (1 MiB body, reply uncapped), ASCII | 1 MiB | 6 | ok | 4.46 (3.55-6.22) |
+| old, control 0x01 | 1 MiB | 6 | ok | 14.44 (13.84-16.81) |
+| old, binary 0xFF (U+FFFD) | 1 MiB | 6 | ok | 13.73 (12.47-15.03) |
+| extension, empty body | 0 | 6 | ok | 0.38 (0.20-0.91) |
+| extension, ASCII | 256 KiB | 7 | ok | 0.88 (0.59-1.52) |
+| extension, control | 256 KiB | 6 | refused by the reply cap | 0.47 (0.05-0.91) |
+| extension, binary | 256 KiB | 6 | refused by the reply cap | 1.36 (0.48-3.55) |
+| extension, control, longest that passes | 85.25 KiB | 6 | ok | 0.86 (0.34-1.72) |
+| extension, binary, longest that passes | 170.5 KiB | 6 | ok | 1.19 (1.11-3.44) |
+
+</div>
+
+
+So in the extension one `net.get` costs at most 3.55 MiB above the footprint at the call in 37 cold samples (medians 0.4-1.4 MiB), against 12.5-16.8 MiB before for bad bodies. Whether that fits the 15 MB cold-peak target depends on the footprint when the script calls `net.get`; T-0687 measures it there. The app keeps 1 MiB bodies; its reply cap refuses 1 MiB of control or binary bytes (warm in-process numbers for the app limits in the evidence, which undercount because freed memory is reused). Evidence: `pywidget/docs/reviews/t0691-evidence/` (cold.jsonl, cold-table.md, run-cold.sh).
+
+Tests: Python half `pywidget/tests/device/test_net.py` (the bridge stood in; importing `pywidget.net` loads nothing in the lane's never-list); Swift half `ios/Tests/NetFetchTests.swift` on a `URLProtocol` stub, no real network, plus one script through the real bridge and router. The run from inside the extension process waits on T-0675's extension bridge.
 
 ## 7. location (When In Use)
 
@@ -373,7 +448,7 @@ keychain.names(*, shared: bool = False) -> list[str]                            
 ## 11. Open
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 11. Open, scrolls sideways" style="--tw:1044px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 11. Open, scrolls sideways" style="--tw:1044px" markdown="1">
 
 | # | Question | Who | Blocks |
 |---|---|---|---|

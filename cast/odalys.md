@@ -277,9 +277,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## 2026-10-28 T-0492 (cc87b08c)
 - Lesson: setup/OPERATIONS.md mentions amendments, so the applier keeps it approve-only: file it as an issue. Write "Revert rule: ..." on one line (heading alone fails revert_stated).
 
-- 2026-10-29 T-0664 (748b4ec1): memory_archive kept only dated entries in pass 1, so a fresh dated note under undated old lines was archived first. Now the newest date stays below 4096 B (OPT-056). Lesson: test a tool on the real files that broke it (git show the pre-run blob), not only fixtures.
-
 - 2026-10-29 T-0670 (e6930f10): alpha runs write raw to ops/site-checks/*-bulk (gitignored), track 43.5 MB of 226. Lessons: macOS bash 3.2 + set -u dies on an empty "${A[@]}" (use ${A[@]+"${A[@]}"}); tools/mutants.py copies only tools/ tests/, so pass --also for repo files a test reads; .gitignore can hide a leak from a git-status test, so check the folder too.
+
+- 2026-10-29 T-0683/T-0686 (543734d6): check record loops for `stuck`, not only `finished`; measure worst-case encoding before trusting a size cap. Open: T-0689-0691 (Idris).
+
+- 2026-10-29 T-0685 (2e30805b): in-process import guards: probe C-level imports (datetime.strptime), reset persistence (_keep_module, patched class state), and the shipping interpreter (device 3.15.1, lazy_imports=all). Open: T-0692-0694 (Pernille).
 {% endraw %}
 
 

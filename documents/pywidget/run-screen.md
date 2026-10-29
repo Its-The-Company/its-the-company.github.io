@@ -18,7 +18,7 @@ Sheets, drawn by `draw_run_screen.py` (imports `draw_ide.py`, no image model): `
 ## 1. Layout (iPhone)
 
 Full-screen cover, top to bottom:
-1. Navigation bar, 44 pt. Leading: **Close**, only once the run has ended. Centre: the project's name from `app.json`, one line, middle truncation. Trailing: the ⋯ menu, every state.
+1. Navigation bar, 44 pt. Leading: **Close**, only once the run has ended. Centre: the project's name from `pywidget.json`, one line, middle truncation. Trailing: the ⋯ menu, every state.
 2. Status line (the IDE's run strip, same component): icon, word, detail. Every state has an icon and a word, never colour alone.
 3. Console body on `bg.console`, Menlo, console text style (clamps at 32 pt). Scrolls; follows the tail while running. No REPL bar, no editor, no tabs, no file list.
 4. Bottom bar, hairline above. While running or waiting: **Stop**, full width, danger outline. Once ended: **Run Again** (primary) and **Edit** (secondary), side by side; stacked at accessibility sizes. Stop and Run Again share one place, as Run and Stop do in the IDE.
@@ -73,7 +73,7 @@ Plain descriptive words only; the words "app", "apps" and "mini app" never appea
 
 | ID | String (DRAFT) | Where | C51 |
 |---|---|---|---|
-| `nav.title` | [name] | title: the project's name from app.json; one line, truncates in the middle | DRAFT |
+| `nav.title` | [name] | title: the project's name from pywidget.json; one line, truncates in the middle | DRAFT |
 | `nav.close` | Close | top left once the run has ended (finished, failed, stopped); absent while running | DRAFT |
 | `nav.more` | More | accessibility label of the ⋯ button, top right, every state | DRAFT |
 | `st.running` | Running | status line word; detail is the elapsed time, [m:ss] | DRAFT |

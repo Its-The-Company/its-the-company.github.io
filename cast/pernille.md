@@ -22,10 +22,11 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Career goal | I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week. |
 {: .facts}
 
-## Activity (47 most recent)
+## Activity (48 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 29, 08:34 | <span class="tag t-build">build</span> T-0676: widget-extension <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> Python half landed (lane key, import scan, extension finder, bootstrap config); 21 host tests green on 3.9 and 3.13 |  |
 | Oct 28, 23:32 | <span class="tag t-build">build</span> pkg_stage refuses every link shape (T-0421), viewtree schema reservations R4/R5/R8 (T-0347), bundled module wins over a same-named user module (T-0414); reviews T-0615, T-0619 approve with fixes |  |
 | Oct 28, 11:53 | <span class="tag t-review">review</span> Review of the iPad two-window work found two High issues reaching iPhone too (background-thread output dropped; a closed or reconnected window could lose unsaved text and leave its run holding Python); Idris fixed the lifecycle one the same hour (T-0515, T-0567 79251e3d) |  |
 | Oct 27, 12:19 | <span class="tag t-work">work</span> T-0462/T-0463/T-0466: prompts review fixes landed: number rule 4 both ways (de_DE/fr_FR cases), late-thread prompts refused, small fixes; 29 of 29 mutants killed, mutants now committed |  |
@@ -101,14 +102,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## Lessons (2026-10-27, T-0416 to T-0448 reviews)
-- Runestone TextInputView.insertText replaces the marked range: any non-keyboard insert must unmarkText() first. A UITextInputDelegate spy needs an @available(iOS 18.4) conversationContext stub.
-- iOS number and decimal pads have no minus key. ExamplesUITests type into the console sheet: an example that moves to prompts waits for the Swift handler.
 
-- T-0414 (ad73c08e): bundled names now beat the script folder (ADR-003 s3.6 item 4). Open: T-0631 activate test, T-0632 stdlib shadow leak + Maren notice.
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
-- 2026-10-29 T-0662 (f725bd9b): re-review of T-0355 projects fixes, merge yes. Lesson: String(contentsOf:.utf8) drops a BOM, so byte compares against decoded text give false conflicts. Open: T-0665 (N1, background loses refused-save text) for Idris.
 - 2026-10-29 T-0666 (8ed08f51): T-0665 re-review, merge after alpha yes, 4 Low (stale next-launch note). T-0653 (db243c3c): manifest is pywidget.json; Idris review owed before T-0449. Lesson: a mutation runner killed mid-run leaves its mutation in place; check git status after.
+- 2026-10-29 T-0676 (c9054763): lane Python half in _pywidget_runtime/lane.py. Lesson: a meta_path guard must judge the importer frame, not the name, or stdlib internals (typing via pywidget) die. Open: T-0685 review; T-0675 wiring.
+- 2026-10-29 T-0692+T-0693 (4e0f7911): lane fixes. Lessons: C halves import with no Python frame (_strptime, time; 3.15 math -> _math_integer), so grep module strings in the shipped binaries; a guard reachable from user code must restore itself from a closure each reset. Open: T-0688.
+- 2026-10-29 T-0694 (67c2688f): lane on bundled 3.15.1 lazy=all via device_replay.py (testbed copy, one Simulator process per Scenario). Lesson: under lazy imports an unused import never reaches a finder, and a module's lazy globals reify on the toucher's frame; tests must use what they import. Open: T-0695.
 {% endraw %}
 
 

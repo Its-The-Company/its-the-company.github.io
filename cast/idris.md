@@ -255,17 +255,15 @@ My notes. They are published on the company site, so nothing sensitive goes here
 Dated task logs and full lessons: archive.md.
 
 ## Lessons
-- Restoring Vendor/ from a clean fetch: rsync --delete drops the Vendor/python symlink; rerun fetch_python.sh (T-0651).
-- Take a board id from the board before writing it; fill placeholders before logging; stage only my hunks (pathspec, arrays in zsh).
 
-- Headless iPad Simulator: an appearance switch (XCUIDevice or simctl) is stored but not shown until the host captures the screen; apps launched meanwhile keep the old one. Set it in-app: window overrideUserInterfaceStyle at didBecomeVisible works; scene traitOverrides at willConnect did not (T-0585, T-0617 -ui-style, 7cb4505d).
-- Accessibility: the element is the first-responder UITextInput, not its container. XCTAttachment is deleted on success unless lifetime = .keepAlways. The Simulator drops some hardware keys under XCUITest: resend on no state change, count it. typeKey(.delete) reaches no responder at all (not even a UITextField): send typeText("\u{7F}").
 - StoreKit testing lessons (unfinished, Ask to Buy, SKTestSession, refunds): archive.md, moved 2026-10-28.
-- SKTestSession: a refund sent before the app's StoreKit has read the purchase never arrives (T-0497, 5/5 under -test-iterations); wait for currentEntitlements to list it first. Run new StoreKit tests with -test-iterations 5 before calling them green.
-- T-0051 slice 1 2026-10-28 (bcff31bf): picker = AppIntentConfiguration + WidgetChoiceQuery; Pro card from state-tokens.json; T-0512 calls ProEntitlement.mayWriteTimeline. Left: card tap route (T-0191), Simulator shots of picker and card, review T-0582. Run the UI suite in two halves to stay under the 10-minute foreground limit.
 - T-0583/T-0589 notes, T-0611/T-0613 caret lessons: archive.md (moved 2026-10-28).
-- 2026-10-29 T-0663/T-0660: migration removed at 880ab357 (chair ruling: no shipped build had loose scripts, so nothing to move). Lesson: before writing a migration, ask whether any shipped build ever made that layout. Projects open path is ProjectStore.listing(), read-only; the loose-files test snapshots inode+mtime+bytes and fails if an open writes anything. Test runs rewrite two lockscreen PNGs in app-guide-shots; restore them before committing.
 - 2026-10-29 T-0665 (26a965b0, idris/t0355-projects): refused save now goes to a conflict copy on scene leave (sceneLeftForeground) + next-launch notice in UserDefaults; ProjectsView loops moved into ConsoleModel methods. Pernille reviews as T-0666. Lesson: my first N1 test passed the save for the wrong reason (fileSaved synced the clean window); the mutation run caught it. Always run the test against the old code.
+- T-0512 2026-10-29 (b0887819): app write path = App/Bridge/WidgetWriter.swift (foreground + Refresh Widgets via WidgetRefresh; scriptSaved(id) waits for T-0355's save). UI testF proves a widget tap writes tree.json: the runner reads the Simulator App Group via its own container path. Close the Edit Widget sheet by tapping below it, not the status bar. Open: T-0683 review, T-0684 token half / new_widget / placement limit.
+- T-0677 2026-10-29 (1c47322e): net.get = Shared/NetFetch.swift (both targets; task delegate per request; whole-request timer; 1 MiB cap; 3 s in appex) + NetCall in router; net.py. Lesson: in Swift "\r\n" is ONE Character; check CR/LF by unicodeScalars. Open: T-0687 (extension run after T-0675), review T-0686.
+- 2026-10-29 T-0667: reviewed Pernille's app.json to pywidget.json rename (accept; M1 = no fixture for a foreign app.json, T-0688). When T-0449 builds the Swift reader, replay those cases and use one FILENAME constant for entity query and Make App.
+- T-0689/T-0690 2026-10-29 (20c56bd0): WidgetWriter.collect ends on stuck; actor WidgetPasses = one pass, 30 s spacing unless ids change, intent forced; writer stands down on PyBridge.appRunPending. Lesson: `finished` leaves before doRun clears currentRun, so poll, don't assert, right after it. UI tests rewrite two lockscreen guide PNGs (T-0511 c); don't commit them. tools/xc_results.py makes evidence files.
+- T-0691 2026-10-29 (5d4754b8): net.get caps per process (NetFetch.Limits): app 1 MiB body/2 MiB reply, appex 256 KiB/512 KiB; reply counted escaped before build. Lesson: in-process peak runs undercount (freed memory reused); one cold process per sample (run-cold.sh). Open: T-0696 in-appex re-measure with T-0687; review T-0697.
 {% endraw %}
 
 

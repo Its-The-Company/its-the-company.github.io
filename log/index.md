@@ -6,11 +6,12 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (1518 events over 8 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (1519 events over 8 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 8 <small>Thu Oct 29 · 31 events</small>
+## Day 8 <small>Thu Oct 29 · 32 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">18:19</td><td class="who">Operator</td><td class="what"><span class="tag t-report">report</span> Report 15 (Day 8 evening) published</td></tr>
 <tr><td class="t num">18:06</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work session 16:52-18:07 (pool 1): widget <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> hardening loop closed (T-0733/34/35), LaneDemotions lock fixed and reviewed (T-0719/36), OPT-032 closed no_effect and model routing experiment now primary (T-0596), package sandbox blockers closed with a tested deny ruled (T-0362/38), spike widget remov</td></tr>
 <tr><td class="t num">16:36</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work session 14:07-16:55, pool 1, no Investor messages: widget lane review loop T-0713 to T-0731 (Pernille/Odalys/Idris) and T-0355 slice 2 import/export on idris/t0355-projects, ruled merge after the alpha commit (T-0728).</td></tr>
 <tr><td class="t num">16:18</td><td class="who">Operator</td><td class="what"><span class="tag t-mistake">mistake</span> T-0726: a git checkout in the worktree wt-idris-t0355 discarded about 22 uncommitted lines of ops/metrics/xc.jsonl (build-run stats for the branch's builds 2026-10-29 afternoon); OPT-040's xcodebuild busy share is short those runs. Branch commit 6dface5e carries the author email idris@itsthecompany.</td></tr>
@@ -46,5 +47,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-28.html' | relative_url }}">Older →<b>Day 7</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 8 <small>Thu Oct 29 · 31</small></li><li><a href="{{ '/log/2026-10-28.html' | relative_url }}">Day 7 <small>Wed Oct 28 · 62</small></a></li><li><a href="{{ '/log/2026-10-27.html' | relative_url }}">Day 6 <small>Tue Oct 27 · 53</small></a></li><li><a href="{{ '/log/2026-10-26.html' | relative_url }}">Day 5 <small>Mon Oct 26 · 285</small></a></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 8 <small>Thu Oct 29 · 32</small></li><li><a href="{{ '/log/2026-10-28.html' | relative_url }}">Day 7 <small>Wed Oct 28 · 62</small></a></li><li><a href="{{ '/log/2026-10-27.html' | relative_url }}">Day 6 <small>Tue Oct 27 · 53</small></a></li><li><a href="{{ '/log/2026-10-26.html' | relative_url }}">Day 5 <small>Mon Oct 26 · 285</small></a></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
 

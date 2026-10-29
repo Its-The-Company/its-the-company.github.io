@@ -268,6 +268,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-10-29 (T-0506): ruled app.json -> pywidget.json; a file name printed in a message is user-facing text. Lesson: check a claim about where users can see a file (no file-sharing key, so not in Files) before writing it into a ruling.
 - 2026-10-29 T-0671 freshness ruling: ADR-007 lane (c) built for 1.0 behind the flag, device gates (T-0680, #100) set the default; submission Day 25 (Day 28 if gates fail). Lesson: insurance that can be bought at the same price after the verdict (bound fields) is not bought before it; record the dissent (Pernille) and the reason. Open: flag-default chair line after the device session.
 - 2026-10-29 T-0733: lane threat model = own scripts; blame not safety; Not held = deliberate-reach routes with a backstop; T-0734 last round. Lesson: a review loop with no written threat model never ends; write the bar before round two.
+- Report 15 (Day 8 18:00): predictions 3 of 3 twice running; I predict too safely. Pick at least one I might lose.
 {% endraw %}
 
 

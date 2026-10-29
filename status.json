@@ -1,45 +1,45 @@
 {
  "schema": 1,
- "at": "2026-10-29T22:06:25.485516+00:00",
+ "at": "2026-10-29T22:19:21.789775+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-10-29T16:52:24-04:00"
+  "kind": "evening",
+  "started": "2026-10-29T18:08:10-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[review] T-0742 review spike widget removal",
-   "model": "opus",
-   "started": "2026-10-29T21:58:31.575Z",
-   "seconds": null,
-   "finished": "2026-10-29T22:05:43.820000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-0674 remove spike widget from extension",
-   "model": "opus",
-   "started": "2026-10-29T21:46:15.769Z",
-   "seconds": null,
-   "finished": "2026-10-29T21:58:08.329000+00:00"
-  },
-  {
    "name": "ines",
-   "task": "[plan] T-0738 LaunchServices probe ruling",
+   "task": "[report] evening",
    "model": "opus",
-   "started": "2026-10-29T21:43:17.391Z",
+   "started": "2026-10-29T22:09:12.503Z",
    "seconds": null,
-   "finished": "2026-10-29T21:45:56.181000+00:00"
+   "finished": "2026-10-29T22:18:05.725Z"
   },
   {
-   "name": "odalys",
-   "task": "[review] T-0362 pkg_sandbox C13 re-review",
-   "model": "opus",
-   "started": "2026-10-29T21:38:18.178Z",
+   "name": "worker",
+   "task": "[diary] Wrenna",
+   "model": "haiku",
+   "started": "2026-10-29T22:08:36.489Z",
    "seconds": null,
-   "finished": "2026-10-29T21:42:58.122000+00:00"
+   "finished": "2026-10-29T22:09:03.615Z"
+  },
+  {
+   "name": "worker",
+   "task": "[diary] Odalys",
+   "model": "haiku",
+   "started": "2026-10-29T22:08:30.922Z",
+   "seconds": null,
+   "finished": "2026-10-29T22:08:55.146Z"
+  },
+  {
+   "name": "worker",
+   "task": "[diary] Ines",
+   "model": "haiku",
+   "started": "2026-10-29T22:08:27.683Z",
+   "seconds": null,
+   "finished": "2026-10-29T22:08:54.452Z"
   }
  ],
  "queue": {
@@ -50,25 +50,25 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
-   "resets_at": "2026-10-30T01:00:00.259846+00:00",
+   "pct": 6.0,
+   "resets_at": "2026-10-30T00:59:59.972640+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 97.0,
+   "left": 94.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 78.0,
-   "resets_at": "2026-11-01T07:00:00.259864+00:00",
+   "pct": 79.0,
+   "resets_at": "2026-11-01T06:59:59.972662+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 22.0,
+   "left": 21.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T07:00:00.260028+00:00",
+   "resets_at": "2026-11-01T06:59:59.972853+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-29T16:52:23.962959-04:00"
+  "read_at": "2026-10-29T18:08:07.642797-04:00"
  },
  "ui": {
   "week_pct": 0.101,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-29T18:07:17-04:00"
+  "at": "2026-10-29T18:20:07-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -916,24 +916,24 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "k": "review",
-    "t": "T-0742 review spike widget removal",
-    "at": "2026-10-29T22:05:43.820000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0674 remove spike widget from extension",
-    "at": "2026-10-29T21:58:08.329000+00:00",
-    "o": "c"
-   },
-   {
     "w": "Ines",
-    "k": "plan",
-    "t": "T-0738 LaunchServices probe ruling",
-    "at": "2026-10-29T21:45:56.181000+00:00",
+    "k": "report",
+    "t": "Evening",
+    "at": "2026-10-29T22:18:05.725Z",
+    "o": "c"
+   },
+   {
+    "w": "Worker",
+    "k": "diary",
+    "t": "Wrenna",
+    "at": "2026-10-29T22:09:03.615Z",
+    "o": "c"
+   },
+   {
+    "w": "Worker",
+    "k": "diary",
+    "t": "Odalys",
+    "at": "2026-10-29T22:08:55.146Z",
     "o": "c"
    }
   ],

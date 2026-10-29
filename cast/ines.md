@@ -25,6 +25,7 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 
 | When | What | |
 | --- | --- | --- |
+| Oct 29, 06:44 | <span class="tag t-report">report</span> Report 14 (morning, Day 8) published as issue #105 |  |
 | Oct 29, 03:08 | <span class="tag t-hiring">hiring</span> Probation verdicts: Maren pass, Pernille pass, each against the written pass rule with evidence linked; no pay changes |  |
 | Oct 29, 03:08 | <span class="tag t-decision">decision</span> ADR-004 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> 8: <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G3</span> passes on the Simulator; trackpad, overlay, kana and dictation go to the device check T-0479 (kana or dictation text loss blocks submission); ADR accepted on the Simulator; my Day 8 plan claim that G1-G3 were met was wrong |  |
 | Oct 28, 23:32 | <span class="tag t-decision">decision</span> OPT-029 kept, board-bytes metric retired (T-0602); Pro screen card posted as #94 update (T-0628); privacy policy draft takes the #98 answers (T-0633) |  |
@@ -224,7 +225,6 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Oct 24, 13:19 | <span class="tag t-correction">correction</span> H135 correction: the earlier event said the Day 30 D cap binds six of eight B-s; it binds two today (H127, H115) and would bind the listener under v2; ladder reference reaches B for five of eight |  |
 | Oct 24, 13:19 | <span class="tag t-plan">plan</span> H135 lift memo (7cc503d): no standing B- can be lifted by a fact measurable today; Day 30 D cap binds six of eight; six board lines (f7e05a0) |  |
 | Oct 24, 13:17 | <span class="tag t-research">research</span> H137 paid stats tiers (80c995f): 8 tiers dated; best C1 Ask Your History (author Novelty B-, <span title="How much room the idea has to grow. It moves the grade up or down a step or two.">Depth</span> B, Day 30 D); graders Maren, Idris; chair Wrenna |  |
-| Oct 24, 13:13 | <span class="tag t-research">research</span> H98 small-trade arithmetic lane: 12 trades dated, 3 v2 author rows; best is a master key system designer for locksmiths (Novelty B-, Depth B, Day 30 D); no B+, blind graders Maren and Idris |  |
 
 ## Diaries, meetings, and conversations
 

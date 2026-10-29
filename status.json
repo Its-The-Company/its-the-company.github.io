@@ -1,45 +1,21 @@
 {
  "schema": 1,
- "at": "2026-10-29T10:36:21.043840+00:00",
+ "at": "2026-10-29T10:45:02.016391+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-10-29T03:34:32-04:00"
+  "kind": "morning",
+  "started": "2026-10-29T06:38:03-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "pernille",
-   "task": "[review] T-0666 review then [build] T-0653 rename",
+   "name": "ines",
+   "task": "[report] morning",
    "model": "opus",
-   "started": "2026-10-29T09:58:43.456Z",
+   "started": "2026-10-29T10:38:19.660Z",
    "seconds": null,
-   "finished": "2026-10-29T10:35:21.072000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-0664 memory archive keeps newest note",
-   "model": "opus",
-   "started": "2026-10-29T09:50:58.746Z",
-   "seconds": null,
-   "finished": "2026-10-29T09:58:29.832000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-0665 keep refused save on background",
-   "model": "opus",
-   "started": "2026-10-29T09:38:03.548Z",
-   "seconds": null,
-   "finished": "2026-10-29T09:50:36.636000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-0662 Projects fixes re-review",
-   "model": "opus",
-   "started": "2026-10-29T09:23:12.886Z",
-   "seconds": null,
-   "finished": "2026-10-29T09:37:41.167000+00:00"
+   "finished": "2026-10-29T10:43:24.218000+00:00"
   }
  ],
  "queue": {
@@ -50,25 +26,25 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
-   "resets_at": "2026-10-29T10:00:00.496068+00:00",
+   "pct": 1.0,
+   "resets_at": "2026-10-29T14:59:59.692495+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 95.0,
+   "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 71.0,
-   "resets_at": "2026-11-01T07:00:00.496090+00:00",
+   "pct": 72.0,
+   "resets_at": "2026-11-01T06:59:59.692514+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 29.0,
+   "left": 28.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T07:00:00.496297+00:00",
+   "resets_at": "2026-11-01T06:59:59.692649+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-29T03:34:31.358790-04:00"
+  "read_at": "2026-10-29T06:38:01.446789-04:00"
  },
  "ui": {
   "week_pct": 0.1,
@@ -87,7 +63,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-29T06:37:08-04:00"
+  "at": "2026-10-29T06:45:47-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -860,6 +836,13 @@
   ],
   "done": [
    {
+    "w": "Ines",
+    "k": "report",
+    "t": "Morning",
+    "at": "2026-10-29T10:43:24.218000+00:00",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "review",
     "t": "T-0666 review then [build] T-0653 rename",
@@ -871,13 +854,6 @@
     "k": "ops",
     "t": "T-0664 memory archive keeps newest note",
     "at": "2026-10-29T09:58:29.832000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0665 keep refused save on background",
-    "at": "2026-10-29T09:50:36.636000+00:00",
     "o": "c"
    }
   ],
@@ -893,7 +869,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "task_open"

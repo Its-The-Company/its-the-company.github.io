@@ -134,6 +134,15 @@ ADR-007 chair line 2026-10-29 08:03, item 2, adds a fourth place for one kind of
 
 Enforced twice with one text, `<name> can't be used in a widget that runs on its own. Remove the import, or set "lane" to "app" in pywidget.json.` (wording for Maren's review): the save-time scan refuses `"lane": "widget"` naming each import and its line, and a `sys.meta_path` finder installed only in the extension process raises `ImportError` with the same text. A script's own sibling modules are refused too: the mirror holds the entry script alone. Imports that allowed modules make for themselves (`typing`, `dataclasses`, `base64`...) load and count against the 15 MB, and so do the few that their C halves make with no Python frame (`_strptime` and `time` from `_datetime`, `_math_integer` from 3.15's `math`; lane.IMPLIED, T-0692). Code: `_pywidget_runtime/lane.py`; tests: `pywidget/tests/bridge/test_lane.py`.
 
+**The extension's rule for the lane keys (T-0716, for T-0709; review T-0713 M3).** In the widget extension, and only there, a widget-lane `finished` outcome carries three lists, `never_resident`, `lane_tampered` and `lane_tampered_before`, and a Restart (reset) reply carries one, `lane_tampered`. Swift decodes each, and:
+
+1. **Any of those keys missing, or not a list of strings: tampered.** Demote that widget to the app lane (as for `never_resident`) and end the extension process after the reply is handled. This includes an `internal_error` outcome or reply built without them (`_last_resort`, a failed reset): fail closed. The reason: every Python check, the NEVER purge and the keys themselves are gated on one runner value (`_CFG["lane"]`) that a run can change, and no Python value is out of a run's reach, so only Swift can notice the gate is off. With the extension flag off, or in the app process, the keys are absent by design and nothing changes.
+2. **Any list non-empty: demote**, as T-0709 already says. Who is demoted: run outcome `never_resident` and `lane_tampered`, that run's widget; run outcome `lane_tampered_before`, the previous widget run in the same extension process (none: nothing to demote); reset reply `lane_tampered`, the run before the reset.
+3. **`grave_full` in any list** (T-0715): also end the process; the lane keeps what checks take out for the life of the process, and the cap says it is full.
+
+Test fixtures: the scenarios in `pywidget/tests/bridge/test_lane_t0713_rereview.py` (`test_M3_*` records outcomes with the keys missing; `extension_verdict` there is this rule in Python).
+
+
 ## 2. Context matrix (summary)
 
 Row cells say what the call does. "BFU" = before first unlock after a restart.

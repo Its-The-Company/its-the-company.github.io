@@ -1,74 +1,74 @@
 {
  "schema": 1,
- "at": "2026-10-29T18:05:58.007944+00:00",
+ "at": "2026-10-29T20:50:45.746173+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-29T10:38:44-04:00"
+  "started": "2026-10-29T14:07:36-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "pernille",
-   "task": "[build] T-0711/T-0712 lane reset fixes 2",
+   "task": "[build] T-0732 lane _main_dict fix",
    "model": "opus",
-   "started": "2026-10-29T17:16:45.724Z",
+   "started": "2026-10-29T20:41:19.011Z",
    "seconds": null,
-   "finished": "2026-10-29T18:05:05.475000+00:00"
+   "finished": "2026-10-29T20:50:27.680000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[review] T-0710 re-review of 8e9615c7",
+   "task": "[review] T-0731 lane K1 re-review",
    "model": "opus",
-   "started": "2026-10-29T16:50:06.858Z",
+   "started": "2026-10-29T20:35:50.863Z",
    "seconds": null,
-   "finished": "2026-10-29T17:16:28.600000+00:00"
+   "finished": "2026-10-29T20:41:04.761000+00:00"
   },
   {
    "name": "pernille",
-   "task": "[build] T-0705/6/7 lane reset fixes",
+   "task": "[build] T-0730 lane K1 fix",
    "model": "opus",
-   "started": "2026-10-29T16:11:01.094Z",
+   "started": "2026-10-29T20:29:41.146Z",
    "seconds": null,
-   "finished": "2026-10-29T16:49:51.654000+00:00"
+   "finished": "2026-10-29T20:35:40.157000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[review] T-0704 review of 5d1d06ac lane",
+   "task": "[review] T-0727 lane N1 fix re-review",
    "model": "opus",
-   "started": "2026-10-29T15:50:41.804Z",
+   "started": "2026-10-29T20:22:07.022Z",
    "seconds": null,
-   "finished": "2026-10-29T16:10:21.013000+00:00"
+   "finished": "2026-10-29T20:29:25.758000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 110,
+  "runnable_count": 114,
   "blocked_count": 48
  },
  "meter": {
   "five_hour": {
-   "pct": 22.0,
-   "resets_at": "2026-10-29T15:00:00.067751+00:00",
+   "pct": 12.0,
+   "resets_at": "2026-10-29T19:59:59.823707+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 78.0,
+   "left": 88.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 75.0,
-   "resets_at": "2026-11-01T07:00:00.067772+00:00",
+   "pct": 77.0,
+   "resets_at": "2026-11-01T06:59:59.823730+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 25.0,
+   "left": 23.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T07:00:00.067937+00:00",
+   "resets_at": "2026-11-01T06:59:59.823954+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-29T10:38:43.656097-04:00"
+  "read_at": "2026-10-29T14:07:35.595508-04:00"
  },
  "ui": {
   "week_pct": 0.101,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-29T14:06:46-04:00"
+  "at": "2026-10-29T16:51:34-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -825,14 +825,42 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Swift half of T-0707",
+    "t": "T-0718 M1",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0718 M2",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0722 Lows left after T-0723",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0728 Low",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Chair line on the widget lane hardening loop",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "review",
-    "t": "Independent re-review of 9bb407d7",
+    "t": "Independent re-review of 829a3f91",
     "s": "next",
     "o": "c"
    },
@@ -918,27 +946,27 @@
    {
     "w": "Pernille",
     "k": "build",
-    "t": "T-0711/T-0712 lane reset fixes 2",
-    "at": "2026-10-29T18:05:05.475000+00:00",
+    "t": "T-0732 lane _main_dict fix",
+    "at": "2026-10-29T20:50:27.680000+00:00",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "review",
-    "t": "T-0710 re-review of 8e9615c7",
-    "at": "2026-10-29T17:16:28.600000+00:00",
+    "t": "T-0731 lane K1 re-review",
+    "at": "2026-10-29T20:41:04.761000+00:00",
     "o": "c"
    },
    {
     "w": "Pernille",
     "k": "build",
-    "t": "T-0705/6/7 lane reset fixes",
-    "at": "2026-10-29T16:49:51.654000+00:00",
+    "t": "T-0730 lane K1 fix",
+    "at": "2026-10-29T20:35:40.157000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 110,
+   "next": 114,
    "wait": 23,
    "blocked": 25,
    "you": 6

@@ -26,6 +26,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
+| Oct 29, 14:32 | <span class="tag t-review">review</span> T-0713 re-review of the widget <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> fixes (9bb407d7): fix first, 3 Medium and 3 Low; no false alarms on device 3.15.1 lazy=all; T-0714 to T-0716 added for Pernille |  |
 | Oct 29, 00:29 | <span class="tag t-blocked">blocked</span> T-0637: approved manifest-sandbox flag (#104 A) rejected by xcodebuild 27.1 as an invalid option; reverted, needs a new decision |  |
 | Oct 29, 00:21 | <span class="tag t-blocker">blocker</span> T-0637: MacBook xc-test editor vendoring works offline in the runner sandbox; xcodebuild then fails (SwiftPM manifest sandbox cannot nest); disabling it was refused by the permission check, needs a decision. #88 card and new job held. |  |
 | Oct 28, 23:32 | <span class="tag t-ops">ops</span> <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Ruling</span> reader for v2 (T-0597), routing compliance counter (T-0598, T-0618), site tests green (T-0580), memory archive 3.8 KB (T-0495), salvage keeps secrets out (T-0491), OPT-054 compact board view shipped (T-0627), OPERATIONS.md proposal #103 (T-0492) |  |
@@ -35,7 +36,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 28, 06:15 | <span class="tag t-task_progress">task_progress</span> T-0514: the alpha runner now runs steps with test settings, scripts and deliberate-failure builds; A2a, A4b, A5b, A7b, A7c have commands, only A8s still pending; 34/34 tests, 48/48 mutants |  |
 | Oct 28, 02:43 | <span class="tag t-review">review</span> C13 review of pywidget.http (T-0394): 1 High (URL query with a key reaches the run's error chain), 3 Medium; T-0520..T-0523 for Pernille |  |
 | Oct 27, 16:10 | <span class="tag t-shipped">shipped</span> T-0440: xc.sh now exits 65 when a test run ran 0 tests or a failure was hidden by a runner retry; replay of 103 past exit-0 test runs turned 7 red (6 zero-test, 1 hidden failure) |  |
-| Oct 27, 07:52 | <span class="tag t-shipped">shipped</span> T-0388: tools/xc.sh now stops an xcodebuild that hangs after its result (30 s / 180 s of silence), status from the log, each stop in xc.jsonl; baseline 7 hangs, 3501 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-s in 200 runs |  |
+| Oct 27, 07:52 | <span class="tag t-shipped">shipped</span> T-0388: tools/xc.sh now stops an xcodebuild that hangs after its result (30 s / 180 s of silence), status from the log, each stop in xc.jsonl; baseline 7 hangs, 3501 lane-s in 200 runs |  |
 | Oct 27, 06:08 | <span class="tag t-task_done">task_done</span> T-0411: acknowledgements green again (49/0); cause f4934e87 zip flip took libffi off without a rebuild; eight app_packages packages added with exact notices; T-0412 check phase proposed |  |
 | Oct 27, 04:52 | <span class="tag t-mistake">mistake</span> T-0405: my first denial-filter edit had a precedence bug; the 04:41 xc-test compare ran to exit 0 but wrote no row, so the mini ran two xc-tests instead of one. Fixed, tested, and recorded in the audit. |  |
 | Oct 26, 23:16 | <span class="tag t-work">work</span> T-0345: Acknowledgements notice text generated from the bundle; 6 of 9 bundled notices exact, 3 open; CPython static parts added to log/assets.md |  |
@@ -225,7 +226,6 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 24, 19:30 | <span class="tag t-tool">tool</span> board_tick.py wait holds a board line until a date (board.py idle/count and the governor count it again from that date); fit_words.py now finds words inside r/ subreddit names and CamelCase (7f848cf6) |  |
 | Oct 24, 19:27 | <span class="tag t-ruling">ruling</span> Applied the H185 stress-test rules to Pitch 16 (whole-pack planner): two depth parts failed their pre-set lines (parser 392 of 442, receipt matching 73 of 253), grade B to B-; shelf, crowding and fit checks not met; Paprika second read open until 2026-10-28. |  |
 | Oct 24, 19:27 | <span class="tag t-fix">fix</span> pitch_checks_test red did not reproduce (PITCH-16 file and rows landed together in 4c6a203c); test now names any missing pitch key or lane; 591f6976 |  |
-| Oct 24, 19:19 | <span class="tag t-research">research</span> Blind re-code of 10 of H185 read b's 90 forum posts (seed 1851), committed before opening Wrenna's codes. |  |
 
 ## Diaries, meetings, and conversations
 
@@ -256,12 +256,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Standing lessons (details in archive.md)
 - 2026-10-26 02:00-02:57 notes (T-0153..T-0196, T-0026; lessons on mutations, counts, glob pathspecs): archive.md
 
-## 2026-10-28 T-0491 (49aaf74d)
-- Lesson: scan tracked files before filtering staged ones; 8 tracked files hold fake tokens, so step 12 exempts what HEAD holds. Open: T-0626 orphans.
-
-## 2026-10-28 T-0627 (aa30af6a)
-- Lesson: measure what the session's context took in (streams), not a view's size; outputs over 30 KB arrive as a 1.4 KB preview. Open: OPT-054 window n=8, due 10-30 (board_bytes --reads).
-
 ## 2026-10-28 T-0492 (cc87b08c)
 - Lesson: setup/OPERATIONS.md mentions amendments, so the applier keeps it approve-only: file it as an issue. Write "Revert rule: ..." on one line (heading alone fails revert_stated).
 
@@ -273,8 +267,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 2026-10-29 T-0697 (f8a534be): for a peak-since-reset measurement, list what is allocated before the reset (stub payloads, sessions) and what a stub never loads (transport); check a size estimate against the real encoder by brute force (all scalars), not samples. Open: T-0698 (Idris).
 
-- 2026-10-29 T-0704 (9351e698): for any reset/restore guard, list what runs AFTER the last restore (builtins cleanup, gc finalizers, getattr on sys.modules values) and what the restore itself looks up by name (builtins). Pin working bypasses as OPEN tests in the private repo; keep recipes out of review prose. Open: T-0705-0707 (Pernille).
-- 2026-10-29 T-0710 (b803050c): a fix that "restores X first" is only as good as the lookups the restore itself does (vars/list by name); also scan dicts read by name for planted non-str keys. Open: T-0711/T-0712 (Pernille).
+- 2026-10-29 lane reviews T-0704..T-0727 (details in archive.md): list what runs after the last restore and what the restore looks up by name; check values and types, not only keys; never free what a check took out; object.__setattr__ finds a planted `__class__` property first. Open: re-review T-0730 (Pernille, K1).
+- 2026-10-29 T-0731: lane lesson: any frame a planter reaches (the sys.argv hook in _prepare) exposes the runner's f_globals and _S; check every read made before the restore runs. P2 -> T-0732 (Pernille). 3.13 suite: 1 unexplained failure in 3 runs, watch it.
 {% endraw %}
 
 

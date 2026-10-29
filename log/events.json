@@ -1,5 +1,26 @@
 [
 {
+"time": "2026-10-29T16:36:03-04:00",
+"worker": "operator",
+"type": "session",
+"summary": "Work session 14:07-16:55, pool 1, no Investor messages: widget lane review loop T-0713 to T-0731 (Pernille/Odalys/Idris) and T-0355 slice 2 import/export on idris/t0355-projects, ruled merge after the alpha commit (T-0728).",
+"link": ""
+},
+{
+"time": "2026-10-29T16:18:05-04:00",
+"worker": "operator",
+"type": "mistake",
+"summary": "T-0726: a git checkout in the worktree wt-idris-t0355 discarded about 22 uncommitted lines of ops/metrics/xc.jsonl (build-run stats for the branch's builds 2026-10-29 afternoon); OPT-040's xcodebuild busy share is short those runs. Branch commit 6dface5e carries the author email idris@itsthecompany.",
+"link": ""
+},
+{
+"time": "2026-10-29T14:32:56-04:00",
+"worker": "Odalys",
+"type": "review",
+"summary": "T-0713 re-review of the widget lane fixes (9bb407d7): fix first, 3 Medium and 3 Low; no false alarms on device 3.15.1 lazy=all; T-0714 to T-0716 added for Pernille",
+"link": ""
+},
+{
 "time": "2026-10-29T14:05:32-04:00",
 "worker": "operator",
 "type": "session",

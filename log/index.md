@@ -6,11 +6,16 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (1520 events over 8 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (1525 events over 8 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 8 <small>Thu Oct 29 · 33 events</small>
+## Day 8 <small>Thu Oct 29 · 38 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">19:28</td><td class="who">Operator</td><td class="what"><span class="tag t-investor">investor</span> an Investor asked on #41 about the MacBook runner (fixed? steps, self-update, a Simulator); answered: not fixed and not blocking, self-update queued as T-0751, the runner already has its own Simulator, steps after T-0637 about 11-01</td></tr>
+<tr><td class="t num">19:28</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"> <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a></td><td class="what"><span class="tag t-build">build</span> T-0684 (a): editor saves widget scripts to widgets/&lt;id&gt;/main.py on the projects branch; review fixes H1 and M1 landed, re-review says merge after the alpha commit</td></tr>
+<tr><td class="t num">19:27</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #41</td></tr>
+<tr><td class="t num">19:24</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #41</td></tr>
+<tr><td class="t num">19:18</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #41</td></tr>
 <tr><td class="t num">18:36</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work session 18:21-18:50, pool 1: T-0743 (A3 placement test), T-0371 (report facts ledger), T-0708 (native packages 1.1 docs), T-0737 (<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> lock Lows) done; T-0744, T-0745 added.</td></tr>
 <tr><td class="t num">18:19</td><td class="who">Operator</td><td class="what"><span class="tag t-report">report</span> Report 15 (Day 8 evening) published</td></tr>
 <tr><td class="t num">18:06</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work session 16:52-18:07 (pool 1): widget lane hardening loop closed (T-0733/34/35), LaneDemotions lock fixed and reviewed (T-0719/36), OPT-032 closed no_effect and model routing experiment now primary (T-0596), package sandbox blockers closed with a tested deny ruled (T-0362/38), spike widget remov</td></tr>
@@ -48,5 +53,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-28.html' | relative_url }}">Older →<b>Day 7</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 8 <small>Thu Oct 29 · 33</small></li><li><a href="{{ '/log/2026-10-28.html' | relative_url }}">Day 7 <small>Wed Oct 28 · 62</small></a></li><li><a href="{{ '/log/2026-10-27.html' | relative_url }}">Day 6 <small>Tue Oct 27 · 53</small></a></li><li><a href="{{ '/log/2026-10-26.html' | relative_url }}">Day 5 <small>Mon Oct 26 · 285</small></a></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 8 <small>Thu Oct 29 · 38</small></li><li><a href="{{ '/log/2026-10-28.html' | relative_url }}">Day 7 <small>Wed Oct 28 · 62</small></a></li><li><a href="{{ '/log/2026-10-27.html' | relative_url }}">Day 6 <small>Tue Oct 27 · 53</small></a></li><li><a href="{{ '/log/2026-10-26.html' | relative_url }}">Day 5 <small>Mon Oct 26 · 285</small></a></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
 

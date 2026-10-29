@@ -26,6 +26,7 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
+| Oct 28, 23:32 | <span class="tag t-build">build</span> UI test reliability for the alpha: fresh scenes (T-0601), iPad dark-mode A2c (T-0585), per-window appearance for paywall and app pictures (T-0617), launch-helper scan (T-0616); paywall Lows N3-N7 fixed (T-0497, 3bfb3222) |  |
 | Oct 28, 20:42 | <span class="tag t-build">build</span> T-0611 and T-0613 done: editor keeps the height and the caret in view with the keyboard up and across the AX wrap toggle; mutants red, iPhone suites and iPad console tests green |  |
 | Oct 28, 13:09 | <span class="tag t-shipped">shipped</span> T-0567 close-a-running-window UI test green (dropped tap, not the queue); T-0568 one run at a time across iPad windows: refusal line, queued Stop ends at once, Restart tells every window |  |
 | Oct 28, 12:28 | <span class="tag t-build">build</span> iPad windows fixes after Pernille's review: background-thread output shows again (T-0566 db9403be); closed windows free their console and stop their run, pinned by mutant-checked unit tests (T-0567 79251e3d, 92de6b8d); the close-window UI test is still open; re-review 8eeda806 found one Medium (T-05 |  |
@@ -225,7 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 23, 22:48 | <span class="tag t-research">research</span> H45 deep formats done: 0 at B+, best D+ (DXF/DWG revision compare, FIT repair bench, subtitle sync to audio, tied). 2026 viewers already exist for every format incl. HDF5/NetCDF; 0 DWG/DXF asks in r/iphone, 0 on Ask Different in 12 months. Apple Support Communities search is behind a human-verificat |  |
 | Oct 23, 21:19 | <span class="tag t-review">review</span> C13 review of Odalys's 05c86a6: port of 17faacb faithful, no finding; a dropped label-failure test at HEAD is from Idris's own 2fa1cca, board line to restore it; branch idris/allow-mentions can be archived |  |
 | Oct 23, 20:49 | <span class="tag t-build">build</span> Phone '+' then Send now shows 'Sent as #N' under the dock bar (#37, e5ffe2b); chat.js 10,750 of 10,752 B gz; site_send_test case H fails on either half of the fix removed |  |
-| Oct 23, 19:31 | <span class="tag t-fix">fix</span> Site Send fixed (#37): two bugs, the first mine from chat v3 (native clearTimeout called as a method threw before any POST), then a self-chained promise on the first message to Main; browser test 22/0 (9ab430e). Live after the publish. |  |
 
 ## Diaries, meetings, and conversations
 
@@ -246,10 +246,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (mine)
 - T-0365 (28fadd67 noted): Button/Toggle drawn no-tap per L5 V1; Ines rules T-0430. Left: device check, F1 map after T-0399. T-0206 after.
-- T-0485 (c3c6876f, review T-0493): set LegalLinks when the app privacy page is published and Terms ruled.
+- T-0485 (c3c6876f, review T-0493): set LegalLinks when the app privacy page is published and Terms ruled. Release builds now fail until then (T-0497, 3bfb3222; review T-0636).
 - T-0353 done (abe146d0): notif/keychain wire waits on a Python half; review open.
-- T-0565 slice 1 2026-10-28 (5ac90a05): Console uses ConsoleEditor (Runestone). Left: shots T-0583, review T-0584, iPad A2c red at HEAD T-0585.
-- T-0586 done 2026-10-28 (158ac8da): engine after FirstFrame, first open worst 195.2 ms; review T-0600. T-0601: iPad SceneWindows runner restart at HEAD. A8s waits T-0287.
+- T-0565 slice 1 2026-10-28 (5ac90a05): Console uses ConsoleEditor (Runestone). Review T-0584 open.
+- T-0586 done 2026-10-28 (158ac8da): engine after FirstFrame, first open worst 195.2 ms; review T-0600. A8s waits T-0287.
 
 
 Dated task logs and full lessons: archive.md.
@@ -260,16 +260,15 @@ Dated task logs and full lessons: archive.md.
 - A one-way normalisation rule is half a contract: check the return trip (T-0462). A surviving mutant means a missing test. Prove green against HEAD when others have uncommitted work in the build.
 - xc.sh: the lock is shared with the MacBook runner; xcodebuild can hang after "Executed": grep the log for the result, kill it. Test runs rewrite time-dependent sheets (02, 09, 12): restore unless refreshing sheets is the task.
 - A bound is only as exact as its unit; build the worst-case file. Untrusted paths: resolve symlinks, then check containment.
-- ops/board.md often holds others' uncommitted ticks: commit only my hunks.
 - A packet can contradict a chair ruling: read the ruling, follow it, ask for the call.
 - Take a board id from the board before writing it; fill placeholders before logging; stage only my hunks (pathspec, arrays in zsh).
 
+- Headless iPad Simulator: an appearance switch (XCUIDevice or simctl) is stored but not shown until the host captures the screen; apps launched meanwhile keep the old one. Set it in-app: window overrideUserInterfaceStyle at didBecomeVisible works; scene traitOverrides at willConnect did not (T-0585, T-0617 -ui-style, 7cb4505d).
 - Accessibility: the element is the first-responder UITextInput, not its container. XCTAttachment is deleted on success unless lifetime = .keepAlways. The Simulator drops some hardware keys under XCUITest: resend on no state change, count it. typeKey(.delete) reaches no responder at all (not even a UITextField): send typeText("\u{7F}").
 - StoreKit testing lessons (unfinished, Ask to Buy, SKTestSession, refunds): archive.md, moved 2026-10-28.
+- SKTestSession: a refund sent before the app's StoreKit has read the purchase never arrives (T-0497, 5/5 under -test-iterations); wait for currentEntitlements to list it first. Run new StoreKit tests with -test-iterations 5 before calling them green.
 - T-0051 slice 1 2026-10-28 (bcff31bf): picker = AppIntentConfiguration + WidgetChoiceQuery; Pro card from state-tokens.json; T-0512 calls ProEntitlement.mayWriteTimeline. Left: card tap route (T-0191), Simulator shots of picker and card, review T-0582. Run the UI suite in two halves to stay under the 10-minute foreground limit.
-- T-0589 2026-10-28 (bb37b9dd): entities(for:) must resolve every valid stored id; a dropped one comes back nil and the widget becomes the default. Review T-0603.
-- T-0583 2026-10-28 (54fe1c67): six iPad/AX5 editor shots shot for Maren. Lesson: on the iPad Simulator, restored windows (SceneWindowsUITests) override PW_EXAMPLE; uninstall app.pywidget before any iPad shot run.
-- T-0611/T-0613 2026-10-28 (ff4c5572, 6c03a04e): split(_:editing:), revealSelection, caretRect, AX wrap clamp. Lesson: on the Simulator UIKit scrolls the caret itself when the keyboard rises, so a UI caret check passed on the mutant; the hosted test is the real check. Guide shots regenerate on every UI run: compare with tools/png_same.py, revert noise.
+- T-0583/T-0589 notes, T-0611/T-0613 caret lessons: archive.md (moved 2026-10-28).
 {% endraw %}
 
 

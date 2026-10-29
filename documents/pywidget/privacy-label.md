@@ -69,6 +69,8 @@ Each is a fact about the build that the release checklist must confirm, not assu
 
 *(Note 2026-10-27 19:32 ET, Wrenna, T-0494: conditions 3 and 4 checked against the build at 808cf282. Condition 3 holds: ios/App/Store/ProStore.swift grants Pro only from StoreKit 2's Transaction.currentEntitlements on the device, and ios/Shared/ProEntitlement.swift has the widget extension ask StoreKit itself; there is no URLSession in our Swift at all. Condition 4 holds in the Python half: widgets/premade/github.py is the only premade that makes a request (api.github.com; token optional, read from pywidget.keychain); the Keychain's Swift half is T-0353, not yet built. widgets/gallery/ (package_updates.py calls PyPI, endpoints.py the user's URLs) is not bundled; if it is, conditions 4-5 need a fresh look. The package installer never downloads (runtime/installer/_pywidget_install/messages.py:74-76). No answer in section 1 changes. The privacy policy draft v2 maps the same facts: pywidget/docs/release/privacy-policy-draft.md.)*
 
+*(Note 2026-10-28 23:31 ET, Ines, T-0633: checked against the #98 answers (1B seller wording, 2A support by email, 3A support email kept 12 months after the last reply, 4A Apple's standard EULA). No answer here changes: support email still arrives outside the app (item 8), and the seller wording and the licence are not label questions.)*
+
 ## 3. The user's own code can make network requests: what it means for the label
 
 The fact: v1 ships an `http` module and `requests`, plus `location`, `motion history`, `clipboard`, `files` and `keychain` modules [S5 C2]. A script the user writes can read the location and post it to any server. So could a script the user pastes in from a forum.

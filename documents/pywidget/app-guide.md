@@ -11,7 +11,7 @@ description: "What the app is, every screen so far with a picture, how it works 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Last updated: 2026-10-28, describing the app as of commit d06a981f. "pywidget" is the placeholder name; the Investors have not chosen the real one, and this guide says nothing about the icon or the store page.
+Last updated: 2026-10-28, describing the app as of commit d06a981f; the editor section (2.3) and the Console pictures describe the later commits 5ac90a05 and 210a1362, where the real code editor reached the main screen. "pywidget" is the placeholder name; the Investors have not chosen the real one, and this guide says nothing about the icon or the store page.
 
 This guide is for the Investors. It has no code in it. Where a technical word is needed it is explained the first time. Every picture is a real screenshot of the app running on the iPhone Simulator (a program on the Mac that behaves like an iPhone; the clock in the pictures is the Mac's), in light mode and dark mode side by side. The pictures show only the app's own screens, with no personal data.
 
@@ -33,7 +33,7 @@ A short tour is planned for the first launch, with a third page that lets you pi
 
 ### 2.2 The Console: where you write and run
 
-This is the screen the app opens on today. Your script (the text of your program, shown in a monospaced typeface) sits in a text box at the top. At the bottom is the console, a strip of text where the script's output appears. When the app opens, the console says "Python 3.15.1 ready" and how long that took (about 0.2 seconds; 0.21 in this picture). Three buttons sit at the top right: Run, a bin that clears the console, and a "more" button (three dots in a circle). While a script runs, Run turns into Stop. The script in this picture asks for a name and then greets you.
+This is the screen the app opens on today. Your script (the text of your program, shown in a monospaced typeface) sits in the code editor at the top, coloured and with line numbers (section 2.3). At the bottom is the console, a strip of text where the script's output appears. When the app opens, the console says "Python 3.15.1 ready" and how long that took (about 0.2 seconds). Three buttons sit at the top right: Run, a bin that clears the console, and a "more" button (three dots in a circle). While a script runs, Run turns into Stop. The script in this picture asks for a name and then greets you.
 
 <p class="guide-shots"><img src="app-guide-shots/console-default-light.png" alt="The Console with the default script, light" width="195" height="422" loading="lazy"> <img src="app-guide-shots/console-default-dark.png" alt="The Console with the default script, dark" width="195" height="422" loading="lazy"></p>
 
@@ -51,13 +51,13 @@ Behind it: the script is paused, not stopped, until you reply. Stop ends the run
 
 ### 2.3 The editor
 
-Important: the editor shown in these three pictures is not yet the box you type in on the Console screen. The Console screen today uses a plain text box with no colours, no line numbers and no extra key row (you can see this in the Console pictures above). The pictures below come from a separate test screen that <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the new code editor. That editor colours the script by meaning (reserved words, text in quotes, numbers), numbers the lines, and adds a row of extra keys above the keyboard on iPhone for characters that are hard to reach (tab, brackets, colon, equals, quote mark, undo, and a button to hide the keyboard). The pictures were taken by an automatic test:
+Since 28 October 2026 (task T-0565, commit 5ac90a05) the box you type in on the Console screen is the real code editor. It colours the script by meaning (reserved words, text in quotes, numbers), numbers the lines, and adds a row of extra keys above the keyboard on iPhone for characters that are hard to reach (tab, brackets, colon, equals, quote mark, undo, and a button to hide the keyboard). With a hardware keyboard attached, the extra row stays hidden. The first picture is the Console screen itself; the other two come from a separate test screen that <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the same editor. The pictures were taken by an automatic test:
 
 <p class="guide-shots"><img src="app-guide-shots/editor-sample-light.png" alt="Editor with a sample script, light" width="195" height="422" loading="lazy"> <img src="app-guide-shots/editor-sample-dark.png" alt="Editor with a sample script, dark" width="195" height="422" loading="lazy"></p>
 
 <p class="guide-shots"><img src="app-guide-shots/editor-gate-key-row-light.png" alt="Editor with the extra key row, light" width="195" height="422" loading="lazy"> <img src="app-guide-shots/editor-gate-key-row-dark.png" alt="Editor with the extra key row, dark" width="195" height="422" loading="lazy"></p>
 
-Note: the small block of text above the code in the "editor-gate" pictures (the key-row ones, the picture above this note) is the test's own readout, not part of the app. The new editor is due to replace the plain box by 1 November 2026 (T-0565); see Open questions.
+Note: the small block of text above the code in the "editor-gate" pictures (the key-row ones, the picture above this note) is the test's own readout, not part of the app. The Console screen shows the same key row without it.
 
 <p class="guide-shots"><img src="app-guide-shots/editor-gate-sample-light.png" alt="Editor holding the sample used for the editor test, light" width="195" height="422" loading="lazy"> <img src="app-guide-shots/editor-gate-sample-dark.png" alt="Editor holding the sample used for the editor test, dark" width="195" height="422" loading="lazy"></p>
 
@@ -65,7 +65,7 @@ Behind it: the editor is a ready-made open-source component (software others wro
 
 ### 2.4 Ready-made example scripts
 
-The app carries ten example scripts, for instance a tip splitter, a word counter, a unit converter and a password <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">generator</span>. One opens in the text box like any script (the picture shows the start of it; the box scrolls):
+The app carries ten example scripts, for instance a tip splitter, a word counter, a unit converter and a password <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">generator</span>. One opens in the editor like any script (the picture shows the start of it; the box scrolls):
 
 <p class="guide-shots"><img src="app-guide-shots/editor-example-tip-splitter-light.png" alt="The tip splitter example, light" width="195" height="422" loading="lazy"> <img src="app-guide-shots/editor-example-tip-splitter-dark.png" alt="The tip splitter example, dark" width="195" height="422" loading="lazy"></p>
 
@@ -85,11 +85,16 @@ The Pro screen explains what the one purchase unlocks: the seven premade widgets
 
 <p class="guide-shots"><img src="app-guide-shots/pro-offer-light.png" alt="The Pro screen before buying, light" width="195" height="422" loading="lazy"> <img src="app-guide-shots/pro-offer-dark.png" alt="The Pro screen before buying, dark" width="195" height="422" loading="lazy"></p>
 
-After a purchase the screen says "Pro is active" with a green tick. It mentions the Gallery, which does not exist yet (section 2.8):
+After a purchase the screen says "Pro is active" with a green tick. Its line says the Pro premades are "open in the Gallery", and the Gallery does not exist yet (section 2.8). There is no button to it, because the app only shows that button where the Gallery can be reached:
 
 <p class="guide-shots"><img src="app-guide-shots/pro-purchased-light.png" alt="The Pro screen after buying, light" width="195" height="422" loading="lazy"> <img src="app-guide-shots/pro-purchased-dark.png" alt="The Pro screen after buying, dark" width="195" height="422" loading="lazy"></p>
 
 Important: the price shown ($0.99) comes from a stand-in price list used only while testing and is not a proposal. The real price is the Investors' decision (PROPOSAL-001); an answer is needed by Day 12 (2026-11-02). Behind it: the app asks Apple's own purchase system, which charges you and tells the app the result; the app unlocks Pro only when Apple's reply checks out as genuine and the purchase has not been refunded. In this build, the purchase works only against the test file; the real store listing does not exist until the Investors' Apple accounts are ready (membership due Day 7, 2026-10-28; Paid Apps Agreement Day 12, 2026-11-02).
+
+About the Pro words, and why they are not changed now. Every word on the Pro screen is a draft that still needs the Investors' approval (the screen's word file says so on its first line). The style guide approved the app's two looks, not the Pro screen beyond its shared colours and type, so the Pro screen's look and words go to the Investors as one request, with pictures, before anything is sent to Apple (task T-0625: Maren drafts, Ines posts). "Gallery" itself is not new: it is the name of the premade <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span> in the approved mockups, so using it needs no new approval. Renaming it would be a new decision and would go in that request. The two sentences that run ahead of the build:
+
+- "The Pro premades are open in the Gallery" is true only once the Gallery is built (T-0191, Day 12). The alpha on Day 10 is an internal test build, so the line stays for it. If the Gallery is moved to version 1.1 at its check (freeze row F6, 2 November), the line changes to one that does not name it, before the freeze. That is task T-0624, for Maren and Idris.
+- "Put every premade on your Home Screen" is true once a tap puts a widget on the Home Screen (T-0512) and Pro premades can be placed and locked again after a refund (T-0051). If Pro premades are cut from 1.0, the Pro screen drops this headline by itself, because it only shows the parts of Pro that the build switches on.
 
 ### 2.7 Acknowledgements
 
@@ -99,6 +104,8 @@ Open-source software the app is built on requires that its licence notices are s
 
 <p class="guide-shots"><img src="app-guide-shots/acknowledgements-notice-certifi-light.png" alt="One notice page, light" width="195" height="422" loading="lazy"> <img src="app-guide-shots/acknowledgements-notice-certifi-dark.png" alt="One notice page, dark" width="195" height="422" loading="lazy"></p>
 
+One row reads "Mozilla Public License 2.0, full text 2.0". It is meant to be there; the wording is a small slip. certifi (the add-on that holds the list of trusted web certificates, used for secure web addresses) is shared under the Mozilla Public License 2.0, and that licence asks for its full text to travel with the app. certifi's own download carries only a short notice, so the company added the full text as its own entry, marked "part of certifi" (decision ADR-003, Odalys's list of 27 October). certifi's page shows that text too. The slip is in how the list prints a row: name, then version. For a licence the version is already in its name, so "2.0" appears twice, and the row looks like one more package. The fix: such a row drops the version and says "Part of certifi" underneath. It is task T-0623, for Idris, with Odalys checking that the record still matches; the licence duty is met either way.
+
 Behind it: the list is produced automatically from the company's record of every outside piece, so a piece cannot ship without its notice. An automatic check by Odalys compares the two, and a build that fails the check is not sent anywhere (ADR-003, 2026-10-27 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>).
 
 ### 2.8 Screens not built yet
@@ -106,7 +113,7 @@ Behind it: the list is produced automatically from the company's record of every
 These have no picture because the screens do not exist. Each is marked in section 5 with its task and date.
 
 - **Projects and Files**: folders of scripts, scripts that import each other, import and export of .py files and zips, opening a folder from the Files app. Task T-0355.
-- **The premade gallery**: a <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span> of the 12 premade widgets with live previews, where the free ones can be added and Pro ones are previewed. T-0191.
+- **The premade gallery**: a shelf of the 12 premade widgets with live previews, where the free ones can be added and Pro ones are previewed. T-0191.
 - **Widget preview beside the editor**: runs the script you are writing as a widget in every size. T-0192.
 - **Settings**: Acknowledgements, Pro and (only if the Investors approve) an editor theme picker will live here. Specified; T-0042 and T-0272.
 - **Pop-up questions from scripts**: alerts, text and number questions, forms, lists, a short toast message. T-0447.
@@ -158,13 +165,13 @@ Running scripts, the editor, the examples, the Pro screen's wording, Acknowledge
 Each limit has the record it comes from. Records are in pywidget/docs/decisions/ (Documents > Pywidget > Build Plan > Decisions).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 4. Limits and the decisions behind them, scrolls sideways" style="--tw:860px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 4. Limits and the decisions behind them, scrolls sideways" style="--tw:960px" markdown="1">
 
 | Limit | Why | Record |
 | --- | --- | --- |
 | Version 1 is the editor plus a narrow widget engine plus 12 premades. The full brief (web editor, block builder, marketplace and more) is several products. | One engineer and one test slot at a time. A first review of a code-running app is careful and one rejection costs about a week. | ADR-001 |
 | Widget cut line, Day 14 (2026-11-04): widgets ship in 1.0 only if 8 of 12 premades draw correctly in every size and mode, a user-written widget reaches the Home Screen, and the design checks pass. Otherwise 1.0 is the editor only. | Decided in advance so the call is not made under pressure. If cut, Pro has little to sell, which is why the pricing proposal exists. | ADR-001, section 3.3 |
-| Widgets are not live. They show what the app last drew, and Apple decides refreshes: about 40 to 70 a day for a widget you look at often, roughly every 15 to 60 minutes, fewer if you rarely look. | Apple's published budget. The Simulator ignores it, so real numbers need a device. | ADR-007; research note L2 |
+| Widgets are not live. They show what the app last drew, and Apple decides refreshes: about 40 to 70 a day for a widget you look at often, roughly every 15 to 60 minutes, fewer if you rarely look. | Apple's published budget, in Apple's own words on its current developer page "Keeping a widget up to date" (read signed out on 26 October 2026 under the Investors' ruling of that day; the saved copy is in research/inbound/apple/). The page does not tie the figure to an iOS version; it is the page Apple publishes now, and Apple calls it typical, not a promise. The company's team believes test tools on the Mac <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lift</span> the limit, but that sentence is not on Apple's page, so it is a belief, not a fact; only a real phone gives real numbers. | ADR-007; research note L2; App Review notes, item A3 |
 | The widget part never runs Python. | Its memory allowance is small and unmeasured on a phone; running in the app keeps the editor full-size. A hybrid is allowed only if three device tests pass. | ADR-007 |
 | No buttons or toggles inside widgets in the first release; widgets are static pictures that update over time. | Cut to 1.1 to protect the date (the description format already reserves room for them). | ADR-001 section 3.2; ADR-002 |
 | A fixed set of bundled packages in version 1. No online installs and no browsing for packages. Install from a file is a stretch goal that lands by Day 13 or moves to 1.1. | Apple's rules on downloading code carry review risk; the bundled set is checked for licence and size. Compiled add-ons such as NumPy or Pillow ship only if they work on a phone by Day 10. | ADR-003; ADR-006 |
@@ -216,12 +223,7 @@ Status is taken from the task board on 2026-10-28. "Alpha" is Day 10 (2026-10-31
 
 ## Open questions
 
-These are claims or gaps the reviewer could not settle from the decision records or the board. Maren answers them; each answer replaces the line.
-
-1. Answered by Ines (2026-10-28): the new code editor replaces the plain text box on the Console screen by 1 November 2026 (task T-0565, Idris), and the plain box will not ship in version 1.0.
-2. The "Pro is active" screen mentions "the Gallery" and the Pro screen offers to "put every premade on your Home Screen", yet the Gallery (T-0191) and tap-to-place (T-0512) are not built. Is the wording to be changed before the alpha, or only the guide's note?
-3. The Acknowledgements list shows an entry named "Mozilla Public License 2.0, full text 2.0" under Python packages. Is that a deliberate licence entry or a naming slip in the generated list?
-4. The refresh figures in section 4 ("about 40 to 70 a day") come from research note L2, and the guide says only a device can confirm them. Is there any record that the budget is the one Apple publishes for the current iOS?
+None open on 28 October 2026. The four questions raised in review are answered in the text: the editor on the main screen (section 2.3), the Pro and Gallery words (section 2.6), the licence row (section 2.7), and the source of the refresh figures (section 4).
 
 
 <style>.guide-shots{display:flex;gap:.5rem;flex-wrap:wrap}.guide-shots img{max-width:calc(50% - .25rem);height:auto;border:1px solid var(--line);border-radius:12px}</style>

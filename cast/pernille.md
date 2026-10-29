@@ -22,10 +22,11 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Career goal | I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week. |
 {: .facts}
 
-## Activity (46 most recent)
+## Activity (47 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 28, 23:32 | <span class="tag t-build">build</span> pkg_stage refuses every link shape (T-0421), viewtree schema reservations R4/R5/R8 (T-0347), bundled module wins over a same-named user module (T-0414); reviews T-0615, T-0619 approve with fixes |  |
 | Oct 28, 11:53 | <span class="tag t-review">review</span> Review of the iPad two-window work found two High issues reaching iPhone too (background-thread output dropped; a closed or reconnected window could lose unsaved text and leave its run holding Python); Idris fixed the lifecycle one the same hour (T-0515, T-0567 79251e3d) |  |
 | Oct 27, 12:19 | <span class="tag t-work">work</span> T-0462/T-0463/T-0466: prompts review fixes landed: number rule 4 both ways (de_DE/fr_FR cases), late-thread prompts refused, small fixes; 29 of 29 mutants killed, mutants now committed |  |
 | Oct 27, 11:03 | <span class="tag t-decision">decision</span> T-0446: native prompts API proposed as pywidget.prompts; Cancel returns None for every kind; tip splitter stays on input() until T-0447 lands (new line T-0458) |  |
@@ -107,10 +108,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - json.loads accepts lone surrogates, JSONSerialization refuses them; os.path then raises UnicodeEncodeError.
 - iOS number and decimal pads have no minus key. ExamplesUITests type into the console sheet: an example that moves to prompts waits for the Swift handler.
 
+- T-0414 (ad73c08e): bundled names now beat the script folder (ADR-003 s3.6 item 4). Open: T-0631 activate test, T-0632 stdlib shadow leak + Maren notice.
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
-- 2026-10-28 T-0600/T-0609 (158ac8da + four T-0583 fixes): approve-with-fixes x3, approve x2; T-0611 P1, T-0612/13 P2. Lessons: a probe stamp before the view joins the window is not 'on screen'; a fixed-ratio split must know the keyboard is up, and Runestone never re-reveals the caret when its frame shrinks.
-
-- 2026-10-28 T-0603: re-reviewed bb37b9dd (F1 fix). Approved; three Lows in the review doc. Lesson: mayDraw checks the prefix case-sensitively while problem() checks by key. Look for prefix checks done two different ways.
 {% endraw %}
 
 

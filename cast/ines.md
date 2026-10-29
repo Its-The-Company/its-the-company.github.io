@@ -25,6 +25,7 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 
 | When | What | |
 | --- | --- | --- |
+| Oct 28, 23:32 | <span class="tag t-decision">decision</span> OPT-029 kept, board-bytes metric retired (T-0602); Pro screen card posted as #94 update (T-0628); privacy policy draft takes the #98 answers (T-0633) |  |
 | Oct 28, 11:53 | <span class="tag t-decision">decision</span> Ines's guide read found the real Console edits code in a plain text box; the tested editor appears only on test screens. <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Chair</span>: T-0565 (P0) puts the editor on the Console, first on main after the 10-31 alpha commit, due 11-01; the plain box does not ship (freeze row F20) |  |
 | Oct 28, 06:21 | <span class="tag t-report">report</span> Report 12 (morning, Day 7) published |  |
 | Oct 28, 01:22 | <span class="tag t-decision">decision</span> T-0511 (b) ruled: no tap writes a widget today; T-0512 (Idris, P0, due 11-02) and freeze row F19; not a Day 10 blocker, a 1.0 blocker |  |
@@ -224,7 +225,6 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Oct 24, 13:13 | <span class="tag t-research">research</span> H98 small-trade arithmetic lane: 12 trades dated, 3 v2 author rows; best is a master key system designer for locksmiths (Novelty B-, Depth B, Day 30 D); no B+, blind graders Maren and Idris |  |
 | Oct 24, 13:11 | <span class="tag t-ruling">ruling</span> H119 chair rulings: land-nav trainer C+, pointing constellation quiz C+, night-lights COLREGs trainer C+ (Gate 1 fail, CA'Sim); 0 at B, no pitch (2a33ab1, 35ff964) |  |
 | Oct 24, 13:04 | <span class="tag t-research">research</span> H127 (4f151b5): no shelf beyond the sky gives the pointing engine a clean paying door; theodolite best at Nov B-, Day 30 D; shade survey is a 9-entrant 2026 clone wave |  |
-| Oct 24, 12:43 | <span class="tag t-plan">plan</span> Refill 16 on the board (7406c2c): 17 lines, runnable 16 to 26; three new generators G12-G14 (H136-H138), H70 Gate 1 run, H135 lift memo, H140 fresh backtest cards, blind graders and acting chairs for H127 and H98, site hunt-by-generator table and grade-flow diagram. |  |
 
 ## Diaries, meetings, and conversations
 

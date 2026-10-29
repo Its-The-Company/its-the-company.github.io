@@ -1,74 +1,74 @@
 {
  "schema": 1,
- "at": "2026-10-29T01:23:43.370376+00:00",
+ "at": "2026-10-29T03:37:03.215958+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-28T18:15:18-04:00"
+  "started": "2026-10-28T21:25:13-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "idris",
-   "task": "[build] T-0587 no typed keystrokes lost during first open",
+   "task": "[build] T-0634 Terms link to Apple EULA",
    "model": "opus",
-   "started": "2026-10-29T01:11:24.842Z",
+   "started": "2026-10-29T03:32:02.924Z",
    "seconds": null,
-   "finished": "2026-10-29T01:23:00.308000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-0594 untested-change backlog start or drop",
-   "model": "opus",
-   "started": "2026-10-29T01:06:57.585Z",
-   "seconds": null,
-   "finished": "2026-10-29T01:10:58.267000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-0603 review widget placement fix bb37b9dd",
-   "model": "opus",
-   "started": "2026-10-29T01:04:02.033Z",
-   "seconds": null,
-   "finished": "2026-10-29T01:06:39.216000+00:00"
+   "finished": "2026-10-29T03:36:38.470000+00:00"
   },
   {
    "name": "idris",
-   "task": "[build] T-0612 launch probe stamps what a person sees",
+   "task": "[build] T-0497 paywall Lows slice 1",
    "model": "opus",
-   "started": "2026-10-29T00:56:34.100Z",
+   "started": "2026-10-29T02:58:26.289Z",
    "seconds": null,
-   "finished": "2026-10-29T01:03:41.457000+00:00"
+   "finished": "2026-10-29T03:31:34.785000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[release] T-0633 apply answers to privacy policy",
+   "model": "opus",
+   "started": "2026-10-29T03:30:14.458Z",
+   "seconds": null,
+   "finished": "2026-10-29T03:31:27.454000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-0414 cross-run module leak",
+   "model": "opus",
+   "started": "2026-10-29T03:16:37.516Z",
+   "seconds": null,
+   "finished": "2026-10-29T03:29:00.807000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 107,
-  "blocked_count": 48
+  "runnable_count": 103,
+  "blocked_count": 47
  },
  "meter": {
   "five_hour": {
-   "pct": 7.0,
-   "resets_at": "2026-10-29T00:00:00.417334+00:00",
+   "pct": 3.0,
+   "resets_at": "2026-10-29T04:59:59.944774+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 93.0,
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 67.0,
-   "resets_at": "2026-11-01T07:00:00.417359+00:00",
+   "pct": 68.0,
+   "resets_at": "2026-11-01T06:59:59.944794+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 33.0,
+   "left": 32.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T07:00:00.417526+00:00",
+   "resets_at": "2026-11-01T06:59:59.944939+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-28T18:05:51.296187-04:00"
+  "read_at": "2026-10-28T21:25:12.552094-04:00"
  },
  "ui": {
   "week_pct": 0.1,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-28T21:24:25-04:00"
+  "at": "2026-10-28T23:37:49-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -216,20 +216,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Step 12 of tools/supervisor.sh applies the...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Wording proposal for setup/OPERATIONS.md line 95",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Proposal",
     "s": "next",
     "o": "c"
@@ -244,21 +230,7 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Tools/task_context.py resolves no Investor...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "OPT-051 compliance counter",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Rule on OPT-029",
+    "t": "Run_limited orphans",
     "s": "next",
     "o": "c"
    },
@@ -410,13 +382,6 @@
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "build",
-    "t": "The schema half of T-0106",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Projects and Files",
@@ -455,20 +420,6 @@
     "w": "Idris",
     "k": "build",
     "t": "After T-0391",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "ops",
-    "t": "Archive Pernille MEMORY.md under 4 KB",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "From T-0410 review of 6adf11d0",
     "s": "next",
     "o": "c"
    },
@@ -592,30 +543,9 @@
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "review",
-    "t": "Rule on two key-row choices in 0020d29d",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "ADR-004 G2/G3 device checks, after a device...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Tools/memory_archive.py targets 12000 bytes,...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Paywall Lows from Pernille's Re-review 2",
     "s": "next",
     "o": "c"
    },
@@ -734,13 +664,6 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "The Runestone editor on the main screen",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
     "t": "T-0515 M2",
     "s": "next",
     "o": "c"
@@ -756,13 +679,6 @@
     "w": "Idris",
     "k": "build",
     "t": "T-0571 re-review N1",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "EditorGateUITests.testA2cTwoThousandLineFileI...",
     "s": "next",
     "o": "c"
    },
@@ -790,14 +706,77 @@
    {
     "w": "Idris",
     "k": "test",
-    "t": "SceneWindowsUITests.testClosingARunningWindow...",
+    "t": "From T-0347",
     "s": "next",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Two red site tests seen after T-0575",
+    "w": "Idris",
+    "k": "test",
+    "t": "T-0619 F1",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0619 F2",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0564",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "T-0564",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "With T-0624",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "After T-0477",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "From T-0414",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "From T-0414",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Approved",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Re-review of T-0497",
     "s": "next",
     "o": "c"
    },
@@ -812,13 +791,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Keep the app guide current with no Claude...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "Answer the four Open questions at the end of...",
     "s": "next",
     "o": "c"
    },
@@ -897,39 +869,61 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "T-0587 no typed keystrokes lost during first open",
-    "at": "2026-10-29T01:23:00.308000+00:00",
+    "t": "T-0634 Terms link to Apple EULA",
+    "at": "2026-10-29T03:36:38.470000+00:00",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "T-0594 untested-change backlog start or drop",
-    "at": "2026-10-29T01:10:58.267000+00:00",
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0497 paywall Lows slice 1",
+    "at": "2026-10-29T03:31:34.785000+00:00",
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-0603 review widget placement fix bb37b9dd",
-    "at": "2026-10-29T01:06:39.216000+00:00",
+    "w": "Ines",
+    "k": "release",
+    "t": "T-0633 apply answers to privacy policy",
+    "at": "2026-10-29T03:31:27.454000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 107,
-   "wait": 23,
+   "next": 103,
+   "wait": 22,
    "blocked": 25,
    "you": 5
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6487169566",
+   "state": "waiting",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Make sure to include ALL screenshots..."
+  },
+  {
+   "id": "c6487195839",
+   "state": "waiting",
+   "position": 2,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "To clarify, the screenshots in the..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
+  "inbox_title",
   "task_title",
   "task_open"
  ]

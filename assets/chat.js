@@ -113,6 +113,7 @@ var status = mk(setRow, 'span', 'chat-status muted', '');
 var view = mk(col, 'div', 'cv-view');
 if (links) put(col, links);
 var dock = mk(col, 'div', 'cv-dock');
+if (W.ResizeObserver) new W.ResizeObserver(() => { DE.style.setProperty('--cv-dock-fit', 'calc(' + dock.getBoundingClientRect().height + 'px + var(--s2))'); }).observe(dock);
 var jump = mk(col, 'button', 'cv-jump'); jump.type = 'button'; jump.hidden = true;
 jump.onclick = () => { bottom(); jump.hidden = true; markSeen(cur); drawTabs(); };
 function login(x) { return String((x && x.user && x.user.login) || '').toLowerCase(); }

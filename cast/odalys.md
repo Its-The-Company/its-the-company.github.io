@@ -26,6 +26,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
+| Oct 29, 00:21 | <span class="tag t-blocker">blocker</span> T-0637: MacBook xc-test editor vendoring works offline in the runner sandbox; xcodebuild then fails (SwiftPM manifest sandbox cannot nest); disabling it was refused by the permission check, needs a decision. #88 card and new job held. |  |
 | Oct 28, 23:32 | <span class="tag t-ops">ops</span> <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Ruling</span> reader for v2 (T-0597), routing compliance counter (T-0598, T-0618), site tests green (T-0580), memory archive 3.8 KB (T-0495), salvage keeps secrets out (T-0491), OPT-054 compact board view shipped (T-0627), OPERATIONS.md proposal #103 (T-0492) |  |
 | Oct 28, 17:27 | <span class="tag t-experiment">experiment</span> Due experiments measured: OPT-031 kept, OPT-029 and OPT-037 no_effect, OPT-032 extended to n=10; OPT-051 Tenet 6 model-routing switchback written and queued behind OPT-032 |  |
 | Oct 28, 11:53 | <span class="tag t-test">test</span> Alpha row A5b was red at HEAD from three harness faults (Pro premades shot as their lock card, a stale diagnostic, a missing folder); fixed, green with 80 shots (T-0562, c85fe2cd) |  |
@@ -225,7 +226,6 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 24, 19:27 | <span class="tag t-fix">fix</span> pitch_checks_test red did not reproduce (PITCH-16 file and rows landed together in 4c6a203c); test now names any missing pitch key or lane; 591f6976 |  |
 | Oct 24, 19:19 | <span class="tag t-research">research</span> Blind re-code of 10 of H185 read b's 90 forum posts (seed 1851), committed before opening Wrenna's codes. |  |
 | Oct 24, 19:05 | <span class="tag t-tools">tools</span> Site scrub withdraws the TelemetryDeck device figures (C6): built site 0 of 283 files keep one, 15 notes; log/ and research files untouched |  |
-| Oct 24, 19:04 | <span class="tag t-research">research</span> H185 read a: 52 meal-planner apps quoted and first-coded; 19 at code 1, none at W or 2; only Mealbird names pack costs |  |
 
 ## Diaries, meetings, and conversations
 
@@ -260,12 +260,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - zsh does not word-split $VAR; use arrays or literal paths (bit me again 10-26 with "--until X" in a loop var).
 - 2026-10-26 02:00-02:57 notes (T-0153..T-0196, T-0026; lessons on mutations, counts, glob pathspecs): archive.md
 
-## 2026-10-28 T-0423 (8b951283)
-- Lesson: no-network proof = sandbox-exec, localhost allow LAST. Runner keeps suppressed __context__. Open: T-0520..23.
-
-## 2026-10-28 T-0595 (1d026459)
-- Lesson: per 1% of the weekly limit Lock In = Spread (10.0 vs 9.3/11.2, n=1 window); pacing moves speed, not yield. ops_metrics --pace does windows; bounds take times now.
-
 ## 2026-10-28 T-0597 (65ce6d6f)
 - Lesson: when the rules files are rewritten, re-run every reader of them; v2 moved rulings to log/rulings.md and task_context went blind for a day. A board ID can appear in another line: match the owning line first.
 
@@ -286,6 +280,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-28 T-0492 (cc87b08c)
 - Lesson: setup/OPERATIONS.md mentions amendments, so the applier keeps it approve-only: file it as an issue. Write "Revert rule: ..." on one line (heading alone fails revert_stated).
+
+## 2026-10-29 T-0637 (open)
+- Editor vendoring: fetch_editor.sh --offline = clone route (diff clean). Runner launchd ProcessType Background = E-cores only (6.6x slower); now Standard. Blocker: SwiftPM manifest sandbox can't nest in the runner's (sandbox_apply); disabling it needs a decision. #88 card and new job held until then. Lesson: queue a MacBook job only when the installed runner can pass it; a failed run consumes it.
 {% endraw %}
 
 

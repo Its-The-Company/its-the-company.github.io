@@ -1,74 +1,50 @@
 {
  "schema": 1,
- "at": "2026-10-29T03:37:03.215958+00:00",
+ "at": "2026-10-29T04:22:43.994694+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-28T21:25:13-04:00"
+  "started": "2026-10-28T23:38:43-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "idris",
-   "task": "[build] T-0634 Terms link to Apple EULA",
+   "name": "odalys",
+   "task": "[tools] T-0637 MacBook xc-test recipe",
    "model": "opus",
-   "started": "2026-10-29T03:32:02.924Z",
+   "started": "2026-10-29T03:41:04.458Z",
    "seconds": null,
-   "finished": "2026-10-29T03:36:38.470000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-0497 paywall Lows slice 1",
-   "model": "opus",
-   "started": "2026-10-29T02:58:26.289Z",
-   "seconds": null,
-   "finished": "2026-10-29T03:31:34.785000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[release] T-0633 apply answers to privacy policy",
-   "model": "opus",
-   "started": "2026-10-29T03:30:14.458Z",
-   "seconds": null,
-   "finished": "2026-10-29T03:31:27.454000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-0414 cross-run module leak",
-   "model": "opus",
-   "started": "2026-10-29T03:16:37.516Z",
-   "seconds": null,
-   "finished": "2026-10-29T03:29:00.807000+00:00"
+   "finished": "2026-10-29T04:21:15.519000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 103,
-  "blocked_count": 47
+  "runnable_count": 107,
+  "blocked_count": 48
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
-   "resets_at": "2026-10-29T04:59:59.944774+00:00",
+   "pct": 13.0,
+   "resets_at": "2026-10-29T04:59:59.568033+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 97.0,
+   "left": 87.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 68.0,
-   "resets_at": "2026-11-01T06:59:59.944794+00:00",
+   "pct": 70.0,
+   "resets_at": "2026-11-01T06:59:59.568052+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 32.0,
+   "left": 30.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T06:59:59.944939+00:00",
+   "resets_at": "2026-11-01T06:59:59.568175+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-28T21:25:12.552094-04:00"
+  "read_at": "2026-10-28T23:38:42.190379-04:00"
  },
  "ui": {
   "week_pct": 0.1,
@@ -87,7 +63,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-28T23:37:49-04:00"
+  "at": "2026-10-29T00:23:24-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -795,6 +771,34 @@
     "o": "c"
    },
    {
+    "w": "Maren",
+    "k": "tools",
+    "t": "The app guide becomes one living document",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Reports show the design-choice screenshots...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Chat page scroll",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "After T-0638",
+    "s": "next",
+    "o": "i"
+   },
+   {
     "w": "Odalys",
     "k": "tools",
     "t": "Report overhaul item 1a",
@@ -867,6 +871,13 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0637 MacBook xc-test recipe",
+    "at": "2026-10-29T04:21:15.519000+00:00",
+    "o": "c"
+   },
+   {
     "w": "Idris",
     "k": "build",
     "t": "T-0634 Terms link to Apple EULA",
@@ -879,51 +890,21 @@
     "t": "T-0497 paywall Lows slice 1",
     "at": "2026-10-29T03:31:34.785000+00:00",
     "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "release",
-    "t": "T-0633 apply answers to privacy policy",
-    "at": "2026-10-29T03:31:27.454000+00:00",
-    "o": "c"
    }
   ],
   "count": {
-   "next": 103,
+   "next": 107,
    "wait": 22,
-   "blocked": 25,
-   "you": 5
+   "blocked": 26,
+   "you": 6
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6487169566",
-   "state": "waiting",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Make sure to include ALL screenshots..."
-  },
-  {
-   "id": "c6487195839",
-   "state": "waiting",
-   "position": 2,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "To clarify, the screenshots in the..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
-  "inbox_title",
   "task_title",
   "task_open"
  ]

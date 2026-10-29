@@ -1,27 +1,51 @@
 {
  "schema": 1,
- "at": "2026-10-29T10:45:02.016391+00:00",
+ "at": "2026-10-29T11:55:55.104923+00:00",
  "session": {
   "active": true,
-  "kind": "morning",
-  "started": "2026-10-29T06:38:03-04:00"
+  "kind": "work",
+  "started": "2026-10-29T06:46:37-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "ines",
-   "task": "[report] morning",
-   "model": "opus",
-   "started": "2026-10-29T10:38:19.660Z",
+   "name": "pernille",
+   "task": "[design] T-0671 freshness view Pernille",
+   "model": "fable",
+   "started": "2026-10-29T11:52:23.161Z",
    "seconds": null,
-   "finished": "2026-10-29T10:43:24.218000+00:00"
+   "finished": "2026-10-29T11:54:56.482000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[design] T-0671 freshness view Idris",
+   "model": "fable",
+   "started": "2026-10-29T11:47:41.909Z",
+   "seconds": null,
+   "finished": "2026-10-29T11:51:58.048000+00:00"
+  },
+  {
+   "name": "wrenna",
+   "task": "[research] T-0671 live widget deep search",
+   "model": "fable",
+   "started": "2026-10-29T11:35:22.529Z",
+   "seconds": null,
+   "finished": "2026-10-29T11:47:20.233000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[design] T-0671 freshness view Idris",
+   "model": "opus",
+   "started": "2026-10-29T11:32:58.428Z",
+   "seconds": null,
+   "finished": "2026-10-29T11:34:26.010000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 102,
+  "runnable_count": 106,
   "blocked_count": 48
  },
  "meter": {
@@ -63,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-29T06:45:47-04:00"
+  "at": "2026-10-29T07:56:36-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -561,6 +585,34 @@
     "o": "c"
    },
    {
+    "w": "Ines",
+    "k": "design",
+    "t": "Widget freshness ruling",
+    "s": "next",
+    "o": "i"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "After the widget freshness ruling",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Wrenna's...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Found by T-0671",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Idris",
     "k": "build",
     "t": "T-0312 slice a HUD",
@@ -836,29 +888,29 @@
   ],
   "done": [
    {
-    "w": "Ines",
-    "k": "report",
-    "t": "Morning",
-    "at": "2026-10-29T10:43:24.218000+00:00",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
-    "k": "review",
-    "t": "T-0666 review then [build] T-0653 rename",
-    "at": "2026-10-29T10:35:21.072000+00:00",
-    "o": "c"
+    "k": "design",
+    "t": "T-0671 freshness view Pernille",
+    "at": "2026-10-29T11:54:56.482000+00:00",
+    "o": "i"
    },
    {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "T-0664 memory archive keeps newest note",
-    "at": "2026-10-29T09:58:29.832000+00:00",
-    "o": "c"
+    "w": "Idris",
+    "k": "design",
+    "t": "T-0671 freshness view Idris",
+    "at": "2026-10-29T11:51:58.048000+00:00",
+    "o": "i"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "T-0671 live widget deep search",
+    "at": "2026-10-29T11:47:20.233000+00:00",
+    "o": "i"
    }
   ],
   "count": {
-   "next": 102,
+   "next": 106,
    "wait": 22,
    "blocked": 26,
    "you": 6
@@ -869,6 +921,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "task_open"

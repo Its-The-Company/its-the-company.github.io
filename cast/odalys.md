@@ -254,8 +254,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 
 ## Standing lessons (details in archive.md)
-- 'rm' in a command that names log/, reports/, investors/ or rules/ trips the records hook: use fresh /tmp names.
-- zsh does not word-split $VAR; use arrays or literal paths (bit me again 10-26 with "--until X" in a loop var).
 - 2026-10-26 02:00-02:57 notes (T-0153..T-0196, T-0026; lessons on mutations, counts, glob pathspecs): archive.md
 
 ## 2026-10-28 T-0597 (65ce6d6f)
@@ -280,6 +278,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Lesson: setup/OPERATIONS.md mentions amendments, so the applier keeps it approve-only: file it as an issue. Write "Revert rule: ..." on one line (heading alone fails revert_stated).
 
 - 2026-10-29 T-0664 (748b4ec1): memory_archive kept only dated entries in pass 1, so a fresh dated note under undated old lines was archived first. Now the newest date stays below 4096 B (OPT-056). Lesson: test a tool on the real files that broke it (git show the pre-run blob), not only fixtures.
+
+- 2026-10-29 T-0670 (e6930f10): alpha runs write raw to ops/site-checks/*-bulk (gitignored), track 43.5 MB of 226. Lessons: macOS bash 3.2 + set -u dies on an empty "${A[@]}" (use ${A[@]+"${A[@]}"}); tools/mutants.py copies only tools/ tests/, so pass --also for repo files a test reads; .gitignore can hide a leak from a git-status test, so check the folder too.
 {% endraw %}
 
 

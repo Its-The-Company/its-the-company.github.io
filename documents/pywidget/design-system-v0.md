@@ -119,7 +119,7 @@ All system fonts through the OS API; nothing is bundled. SF Mono's own licence (
 </div>
 
 
-Code: editor 15/22 relative to `.body` (user range 11-24, clamps at 32 under AX sizes and soft-wraps with a hanging indent); console 13/19 relative to `.subheadline`; gutter 12 with the editor's leading; extra keys 17 medium.
+Code: editor 15/22 relative to `.body` (user range 11-24, clamps at 32 under AX sizes and soft-wraps at AX1 and up, flush left in 1.0 because Runestone has no hanging indent, T-0583); console 13/19 relative to `.subheadline`; gutter 12 with the editor's leading; extra keys 17 medium.
 
 Dynamic Type: app chrome goes to AX5. Rows switch from horizontal to stacked at AX1 and up (`ViewThatFits`). Widgets clamp at `.xxxLarge`.
 

@@ -108,6 +108,76 @@ Fix lines for Idris: T-0589 (F1, P2), T-0590 (F2, P3), T-0591 (F3, P3).
     and voiceover rows.
   - Make the archive build fail while `pro_card.$status` still says PROPOSED, unless Maren's approval is
     recorded.
+
+## 2026-10-28: T-0603 re-review of bb37b9dd (T-0589, the fix for F1)
+
+Reviewer: Pernille. Author: Idris. I read `git show bb37b9dd` and, on main at 65e6754c, Shared/WidgetPlacement.swift,
+Shared/WidgetID.swift (`problem`, `key`), Shared/ProFlags.swift (`isPremadeLocked`), Shared/ProEntitlement.swift
+(`mayDraw`) and Widget/PyWidget.swift (`TreeProvider`). I did not read the author's notes. No Xcode run: I checked
+the two logs the line names. `xcodebuild-20261028-183522.log` shows 323 tests, 0 failures. `xcodebuild-20261028-183347.log`
+(the bcff31bf rule put back) has the three new tests red: 5 failures at WidgetPlacementTests.swift:69, :86, :87, :104.
+I changed no code.
+
+### Verdict
+
+**Approve.** F1 is fixed. There are no High or Medium findings, so I added no board lines. The three Lows below
+can wait for later work.
+
+### The cases the line asks about
+
+- **Closed state** (`config == nil`). `resolve` (WidgetPlacement.swift:78-82) keeps every `pywidget.premade.*` id that
+  passes `problem(firstParty: true)`. `decide` (:152) then calls `mayDraw`, and `isPremadeLocked` returns true with no
+  config, so every placed premade, free or Pro, entitled or not, draws the Pro card. That holds with and without a
+  tree. `testClosedStatePlacedPremadesResolveAndDrawTheProCard` pins it with `entitled: true`, which is the hard
+  case.
+- **Unlisted premade.** It resolves under its short name. Without Pro it is locked (`freePremades[name] != true`),
+  so it gets the Pro card. With Pro and no tree it gets `.missing`. Both are tested. With Pro and a tree still on
+  disk, see L1.
+- **Folderless own id.** It resolves as own. `document(for:)` returns nil, so `decide` gives `.missing` and the
+  provider shows the error card under the widget's own id, not the New widget. This is tested.
+- **Ids still dropped.** These are ids that fail `problem`: empty, too long, bad characters, a leading dot,
+  `index.json`, `pywidget.<other>`, and any case variant of `pywidget.` (`problem` compares by `key`, which is
+  ASCII lower-case). None of them can be stored by this build. `offered` (:53, :62) only ever offers own ids that
+  pass `problem`, plus `premadePrefix + name`. Dropping them is right. A case variant of the *name*
+  (`pywidget.premade.Habits`) is not dropped. It resolves, and it fails closed: `freePremades` is an exact-key
+  lookup, so it is locked without Pro.
+- **Pro content without Pro.** I found no path through a resolved id. Every resolved premade id goes through
+  `mayDraw` on the configured id and on the tree's own `widget.id` before any tree is drawn. Own ids cannot carry
+  the premade prefix in any case, because `problem` rejects them. `pro` on `.drawn` (:157) still bounds the
+  timeline whenever either id is a Pro premade.
+
+### Findings
+
+#### L1 (Low): with Pro, an unlisted premade with an old tree.json draws its last render indefinitely
+
+- WidgetPlacement.swift:152 with ProEntitlement.swift:74-77. After a build drops a premade from `premadeOrder`, a
+  Pro user's placed copy passes `mayDraw` (unlocked). If `widgets/pywidget.premade.<name>/tree.json` is still in
+  the App Group, `decide` returns `.drawn`. Nothing writes that tree again, so the widget shows the old render, and
+  after `stale_after` the stale state, for as long as it stays placed.
+- This is not a Pro leak, because the person has Pro. But it is untested, and it is a different result from the
+  `.missing` the new test pins for the no-tree case.
+- **Fix:** decide which result is wanted and pin it with a test. If `.missing` is wanted, have the app's premade
+  writer remove output folders for premades that are no longer listed.
+
+#### L2 (Low): `entities(for:)` asks StoreKit for a value the entity throws away
+
+- WidgetPlacement.swift:122 awaits `ProEntitlement.gates()`, which walks `Transaction.currentEntitlements`.
+  `resolve` uses it only for `kind`, and only through `ProGates(config:, entitled: false)` (:76). It needs the
+  config, not the entitlement. `WidgetChoiceEntity.init` (:97-100) then drops `kind` anyway.
+- The extension makes this StoreKit call on every parameter resolution, and calls StoreKit again in
+  `TreeProvider.drawable`. That costs time inside the extension's budget and buys nothing.
+- **Fix:** pass `ProGates(config: ProConfig.bundled(), entitled: false)` in `entities(for:)`, or drop `gates` from
+  `resolve` if `kind` has no reader there.
+
+#### L3 (Low): `mayDraw` tests the premade prefix case-sensitively, while `problem` does not
+
+- ProEntitlement.swift:75 uses `hasPrefix(WidgetID.premadePrefix)`, but WidgetID.swift:90 compares by `key`. If a
+  tree.json carries `widget.id` `PyWidget.premade.habits`, `mayDraw` returns true for it.
+  `ViewTreeDocument` (TreeTimeline.swift:128) does not validate `widget.id` on decode.
+- `resolve` never produces such an id, and the Python side rejects it. So this is defence in depth, not a path
+  that is open today.
+- **Fix:** in `mayDraw`, compare `WidgetID.key(widgetID)` against the prefix, and treat any case variant of the
+  prefix as locked. Add one test.
 {% endraw %}
 
 </div>

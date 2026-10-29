@@ -276,6 +276,14 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-28 T-0423 (8b951283)
 - Lesson: no-network proof = sandbox-exec, localhost allow LAST. Runner keeps suppressed __context__. Open: T-0520..23.
+
+## 2026-10-28 T-0595 (1d026459)
+- Lesson: per 1% of the weekly limit Lock In = Spread (10.0 vs 9.3/11.2, n=1 window); pacing moves speed, not yield. ops_metrics --pace does windows; bounds take times now.
+
+## 2026-10-28 T-0599 (94f86bc6)
+- Two switchbacks can run crossed (switchback.py cross; 4-run cycle o,n,n,o). Open: OPT-051 goes in_flight when model_routing run 1 is recorded; plain stop after OPT-032 promotes it.
+
+- 2026-10-28 T-0594: backlog triage (OPT-053). Drop = status not_an_experiment + verdict "dropped ..." (OPT-033 precedent). Re-check before rebuilding: OPT-044 loss fell to ~4 foreign lines/day without the store. OPT-035 queued behind OPT-032, needs a work.md proposal nobody has written.
 {% endraw %}
 
 

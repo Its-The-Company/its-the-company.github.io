@@ -1,51 +1,51 @@
 {
  "schema": 1,
- "at": "2026-10-28T22:13:55.078793+00:00",
+ "at": "2026-10-29T01:23:43.370376+00:00",
  "session": {
   "active": true,
-  "kind": "weekly",
-  "started": "2026-10-28T18:05:53-04:00"
+  "kind": "work",
+  "started": "2026-10-28T18:15:18-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "ines",
-   "task": "[report] weekly",
+   "name": "idris",
+   "task": "[build] T-0587 no typed keystrokes lost during first open",
    "model": "opus",
-   "started": "2026-10-28T22:06:54.557Z",
+   "started": "2026-10-29T01:11:24.842Z",
    "seconds": null,
-   "finished": "2026-10-28T22:12:26.323000+00:00"
+   "finished": "2026-10-29T01:23:00.308000+00:00"
   },
   {
-   "name": "worker",
-   "task": "[diary] Maren",
-   "model": "haiku",
-   "started": "2026-10-28T22:06:17.995Z",
+   "name": "odalys",
+   "task": "[ops] T-0594 untested-change backlog start or drop",
+   "model": "opus",
+   "started": "2026-10-29T01:06:57.585Z",
    "seconds": null,
-   "finished": "2026-10-28T22:06:41.983000+00:00"
+   "finished": "2026-10-29T01:10:58.267000+00:00"
   },
   {
-   "name": "worker",
-   "task": "[talk] Idris and Pernille",
-   "model": "haiku",
-   "started": "2026-10-28T22:06:22.382Z",
+   "name": "pernille",
+   "task": "[review] T-0603 review widget placement fix bb37b9dd",
+   "model": "opus",
+   "started": "2026-10-29T01:04:02.033Z",
    "seconds": null,
-   "finished": "2026-10-28T22:06:41.856000+00:00"
+   "finished": "2026-10-29T01:06:39.216000+00:00"
   },
   {
-   "name": "worker",
-   "task": "[diary] Idris",
-   "model": "haiku",
-   "started": "2026-10-28T22:06:11.387Z",
+   "name": "idris",
+   "task": "[build] T-0612 launch probe stamps what a person sees",
+   "model": "opus",
+   "started": "2026-10-29T00:56:34.100Z",
    "seconds": null,
-   "finished": "2026-10-28T22:06:40.526000+00:00"
+   "finished": "2026-10-29T01:03:41.457000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 114,
+  "runnable_count": 107,
   "blocked_count": 48
  },
  "meter": {
@@ -87,14 +87,14 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-28T18:14:34-04:00"
+  "at": "2026-10-28T21:24:25-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
   {
    "name": "Odalys",
    "state": "next",
-   "task": "Odalys, P1, C13 re-review of tools/pkg_sandbox.py after...",
+   "task": "Odalys, P1, C13 re-review of tools/pkg_sandbox.py after T-0317/T-0311 (8e849e98; notes at the end of...",
    "model": null,
    "since": null,
    "next": []
@@ -102,7 +102,7 @@
   {
    "name": "Ines",
    "state": "next",
-   "task": "Ines + Odalys, P3, CORRECTIONS pass 3 s3b tags in docs...",
+   "task": "Ines + Odalys, P3, CORRECTIONS pass 3 s3b tags in docs Wrenna does not own (T-0109, 4eb6a81a; quotes and pages in...",
    "model": null,
    "since": null,
    "next": []
@@ -110,7 +110,7 @@
   {
    "name": "Wrenna",
    "state": "next",
-   "task": "Wrenna, P3, arXiv after T-0220 lands (Ines's ruling...",
+   "task": "Wrenna, P3, arXiv after T-0220 lands (Ines's ruling research/ops/arxiv-terms.md s9 item 4): one dated line in...",
    "model": null,
    "since": null,
    "next": []
@@ -118,7 +118,7 @@
   {
    "name": "Pernille",
    "state": "next",
-   "task": "Pernille, P0, T-0296 follow-on reminder: no real package...",
+   "task": "Pernille, P0, T-0296 follow-on reminder: no real package runs through tools/pkg_sandbox.py until Odalys's four...",
    "model": null,
    "since": null,
    "next": []
@@ -126,7 +126,7 @@
   {
    "name": "Idris",
    "state": "next",
-   "task": "L1/L2 device checks: CMPedometer, CMMotionActivity,...",
+   "task": "L1/L2 device checks: CMPedometer, CMMotionActivity, HealthKit (locked/unlocked), battery, location inside the widget...",
    "model": null,
    "since": null,
    "next": []
@@ -134,7 +134,7 @@
   {
    "name": "Maren",
    "state": "next",
-   "task": "Maren, P1, alpha visual reads on 2026-10-31...",
+   "task": "Maren, P1, alpha visual reads on 2026-10-31 (alpha-day10-checklist.md A1, A2, A3, A4, A5, A7): each image from...",
    "model": null,
    "since": null,
    "next": []
@@ -237,20 +237,6 @@
    {
     "w": "Odalys",
     "k": "ops",
-    "t": "The untested-change backlog",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Lock In vs Spread, measured",
-    "s": "next",
-    "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
     "t": "OPT-032 at n=10 per arm",
     "s": "next",
     "o": "c"
@@ -266,13 +252,6 @@
     "w": "Odalys",
     "k": "ops",
     "t": "OPT-051 compliance counter",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Run OPT-051",
     "s": "next",
     "o": "c"
    },
@@ -781,13 +760,6 @@
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "design",
-    "t": "T-0565's screenshots of the Console with the...",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "EditorGateUITests.testA2cTwoThousandLineFileI...",
@@ -796,22 +768,8 @@
    },
    {
     "w": "Idris",
-    "k": "build",
-    "t": "T-0584 F2",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
     "k": "test",
     "t": "T-0584 F3",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0582 F1",
     "s": "next",
     "o": "c"
    },
@@ -826,13 +784,6 @@
     "w": "Idris",
     "k": "build",
     "t": "T-0582 F3",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "review",
-    "t": "Ines assigns",
     "s": "next",
     "o": "c"
    },
@@ -944,29 +895,29 @@
   ],
   "done": [
    {
-    "w": "Ines",
-    "k": "report",
-    "t": "Weekly",
-    "at": "2026-10-28T22:12:26.323000+00:00",
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0587 no typed keystrokes lost during first open",
+    "at": "2026-10-29T01:23:00.308000+00:00",
     "o": "c"
    },
    {
-    "w": "Worker",
-    "k": "diary",
-    "t": "Maren",
-    "at": "2026-10-28T22:06:41.983000+00:00",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "T-0594 untested-change backlog start or drop",
+    "at": "2026-10-29T01:10:58.267000+00:00",
     "o": "c"
    },
    {
-    "w": "Worker",
-    "k": "talk",
-    "t": "Idris and Pernille",
-    "at": "2026-10-28T22:06:41.856000+00:00",
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-0603 review widget placement fix bb37b9dd",
+    "at": "2026-10-29T01:06:39.216000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 114,
+   "next": 107,
    "wait": 23,
    "blocked": 25,
    "you": 5
@@ -980,7 +931,6 @@
   "recent",
   "task_done",
   "task_title",
-  "task_open",
-  "lane_task"
+  "task_open"
  ]
 }

@@ -107,9 +107,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - json.loads accepts lone surrogates, JSONSerialization refuses them; os.path then raises UnicodeEncodeError.
 - iOS number and decimal pads have no minus key. ExamplesUITests type into the console sheet: an example that moves to prompts waits for the Swift handler.
 
-- 2026-10-28 T-0573 (Idris 463137aa/d6ac94b7/175d3653): approve, fixes T-0576..79 P2. Lesson: an assert-nil right after an event is a race; run the mutant with -test-iterations 10 (4/12 green).
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
-- 2026-10-28 T-0584/T-0582 (0c4a7e15): both approve-with-fixes, T-0586..91. Lessons: an EntityQuery that drops a stored id hands the provider nil, so the default id draws; typed U+007F is the hardware Backspace, not the on-screen delete key.
+- 2026-10-28 T-0600/T-0609 (158ac8da + four T-0583 fixes): approve-with-fixes x3, approve x2; T-0611 P1, T-0612/13 P2. Lessons: a probe stamp before the view joins the window is not 'on screen'; a fixed-ratio split must know the keyboard is up, and Runestone never re-reveals the caret when its frame shrinks.
+
+- 2026-10-28 T-0603: re-reviewed bb37b9dd (F1 fix). Approved; three Lows in the review doc. Lesson: mayDraw checks the prefix case-sensitively while problem() checks by key. Look for prefix checks done two different ways.
 {% endraw %}
 
 

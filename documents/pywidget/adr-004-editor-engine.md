@@ -400,11 +400,32 @@ The G1 screenshot comparison with `mockups/A-editor.png` / `B-editor.png` is not
 **Reading.**
 - **The Console's first open passes: worst 195.2 ms against the 300 ms bar** (s8.5 counts the worst case). The median fell from 288.7 to 87.2 ms. The open no longer shares the main thread with the first layout. Run 1, the first launch after install, is the slow one in every column (first frame 2,623.9, engine build 110.9, open 195.2).
 - **First frame is back where it was before 5ac90a05.** The median is 2,089.5 ms against 2,095.4 before and 2,191.2 at 5ac90a05. Simulator launch times are not device launch times (T-0479).
-- **What a person sees instead.** The first frame now shows the Console with an empty editor area. The highlighted text appears when the first open lands, 83.3-195.2 ms after the frame (median 87.2). For about 50 ms of that the main thread builds the engine, so a tap in that span waits, as it did for the warm-up before 5ac90a05.
+- **What a person sees instead.** *(Corrected 2026-10-28 by T-0612, below: the 83.3-195.2 ms span ends at the parse, not at the text on screen.)* The first frame now shows the Console with an empty editor area. The highlighted text appears when the first open lands, 83.3-195.2 ms after the frame (median 87.2). For about 50 ms of that the main thread builds the engine, so a tap in that span waits, as it did for the warm-up before 5ac90a05.
 - **T-0587 is narrower.** The engine's view is not in the window until its first open has landed, so no key can reach an empty engine during the first open. A later open (an example chosen, a SceneFile) still has the window T-0587 describes.
 - **The bench cold open is unchanged in kind.** The bench screen does not use `ConsoleEditor`. Its worst run, 286.8 ms, is again the first run after install; it is under 300, but by 13.2 ms.
 - **Tests.** `ConsoleEditorUITests`, `EditorGateUITests` and `AddWidgetTests` passed on the iPhone 17e Simulator: 21 tests, 5 skipped as iPad-only or a flood test, 0 failures (`ops/runs/xcodebuild-20261028-173040.log`). On the iPad Air 11-inch (M4) Simulator, `SceneWindowsUITests` ran the same with and without this change: 3 passed, and `testClosingARunningWindowLetsTheOtherRun` restarted the test runner both times (with the change: `ops/runs/xcodebuild-20261028-175559.log`; at HEAD: `ops/runs/xcodebuild-20261028-174959.log`). In one earlier iPad run, after `ConsoleEditorUITests` in the same run, `testASecondWindowsRunIsRefusedWhileTheFirstWaitsInInput` found no window titled `word_count.py` (`ops/runs/xcodebuild-20261028-174000.log`). It passed when run alone, so I have not shown that this change caused it.
 - **Status.** T-0586's bar is met on the Simulator. The device check (T-0479) decides acceptance.
+
+**Correction, 2026-10-28, about 21:00 ET (Idris, T-0612, review T-0600 M1).** The sentence above, "the highlighted text appears when the first open lands, 83.3-195.2 ms after the frame (median 87.2)", measured the wrong span. Those figures (kept, as published: 195.2 / 87.2 / 83.9 / 83.3 / 87.8) end when the engine's parse finished, before its view joined the container and was laid out in the window, so the text was not yet on screen. The other end is late too: `first_frame_ms` is taken one display refresh after the first frame was committed (`FirstFrame.wait()`).
+
+*What changed in the probe.* `ConsoleEditor` now calls `container.layoutIfNeeded()` after adding the engine's view, and `LaunchProbe` stamps `first_open_done_ms` on the first display tick after that, when the frame with the text has been committed. The old stamp is kept as `first_open_parsed_ms`, so the earlier records stay comparable through it. (In the records before T-0612, `first_open_done_ms` means the parse's end.) Same command and Simulator as above: `pywidget/ios/scripts/editor/launch_probe.sh 'iPhone 17e' 5`, iPhone 17e, iOS 27.0, Release, five runs at each setting. Raw records: `pywidget/ios/bench/launch-probe-2026-10-28.jsonl` (cases "T-0612 Large/light" and "T-0612 AX5/dark").
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: The engine after the first frame: 2026-10-28 17:28-17:39 ET (Idris, T-0586…, scrolls sideways" style="--tw:960px" markdown="1">
+
+| First frame stamp to ... (five runs) | Large/light | AX5/dark |
+| --- | --- | --- |
+| parse done (`first_open_parsed_ms`, the span s7 published), median; worst | 88.9 ms; 140.5 | 85.2 ms; 129.9 |
+| text laid out and committed (`first_open_done_ms`), median; worst | **116.6 ms; 166.5** (166.5 / 115.0 / 116.7 / 99.9 / 116.6) | **114.8 ms; 164.7** (164.7 / 114.8 / 114.7 / 114.8 / 114.6) |
+| parse done to committed (in-window layout plus waiting for the tick) | 24.9-30.3 ms (median 27.8) | 27.9-34.8 ms (median 31.4) |
+| process start to first frame stamp, median (range) | 2,094.4 ms (2,090.5-2,566.9) | 2,096.4 ms (2,082.5-2,113.2) |
+
+</div>
+
+
+*Corrected sentence.* The first frame shows the Console with an empty editor area (after T-0612 in the editor's own ground, review L1). The highlighted text is laid out and committed 99.9-166.5 ms after the first-frame stamp at Large/light (median 116.6) and 114.6-164.7 ms at AX5/dark (median 114.8). A person sees the empty area for about one refresh longer than that (the stamp comes a refresh after the committed frame, 16.7 ms at the Simulator's 60 Hz), so roughly 117-183 ms at worst on the Simulator.
+
+*Reading.* The step from parse to text on screen is 25-35 ms in every run, a little longer at AX5/dark, where the view's traits rebuild the theme and wrap layout when it joins the window. This run's worst cases (166.5, 164.7, both run 1 after install) are lower than T-0586's 195.2, because the first-run parse was shorter this time (140.5 and 129.9 against 195.2), not because anything got faster: on T-0586's worst run, adding the 25-35 ms measured here would put it near 220-230 ms (an estimate, not a measurement). The 300 ms bar in s8.5 is still met on the Simulator, with less margin than s7 implied. T-0479 must read `first_open_done_ms` (and add a refresh) on the device, not `first_open_parsed_ms`. Also in this change: the container carries `syntaxBg` (L1), and `start()` holds the coordinator weakly (L2). `ConsoleEditorUITests` on the iPhone 17e Simulator: 4 tests, 0 failures (`ops/runs/xcodebuild-20261028-210042.log`).
 
 ## 8. Licence lines (logged in log/assets.md, Commandments 4-5)
 
@@ -464,7 +485,7 @@ Reasons:
 - **Ruling 2 named no statistic.** That gap is mine. "A p95 over 33 ms, or an open over 300 ms after that day" also reads two ways. So I tested this measure against every reading. It lands in the adapter-day band under all of them except worst-run:
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 8: Chair line (Ines), 2026-10-27 11:58 ET (T-0461): G1 first measure, scrolls sideways" style="--tw:740px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: Chair line (Ines), 2026-10-27 11:58 ET (T-0461): G1 first measure, scrolls sideways" style="--tw:740px" markdown="1">
 
 | Reading | Keystroke p95 top / mid / end | Cold open | Outcome |
 | --- | --- | --- | --- |

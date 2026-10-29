@@ -52,7 +52,7 @@ Exempt by design: content behind a modal (`data-inactive`), disabled buttons, an
 - Radii: keys 10, cards 14, banners and strips 12, menus and floating bars 20 to 24 (pill), sheets 28 top corners, alerts 28.
 - Type: the scale in tokens.json. AX3 values used in the frames are Apple's table as I recall it (body 40, headline 40, subheadline 36, footnote 33, caption 32, largeTitle 52). **Idris: confirm them in the Simulator** and correct `TYPE` in draw_ide.py if they differ.
 - Clamps: editor code 32 pt, console code 32 pt, gutter 17 pt, key glyphs 22 pt. Nav bar titles, the tab bar and the keyboard do not scale; they use the system Large Content Viewer.
-- AX1 and up: rows stack (`ViewThatFits`, or `dynamicTypeSize.isAccessibilitySize`), segmented filters become a menu button, file tabs become one file menu, editor soft-wraps with a hanging indent of the line's indent + 2 characters, and floating buttons drop their text label (icon only, label kept for VoiceOver).
+- AX1 and up: rows stack (`ViewThatFits`, or `dynamicTypeSize.isAccessibilitySize`), segmented filters become a menu button, file tabs become one file menu, editor soft-wraps flush left (1.0: no hanging indent, vendored Runestone 0.5.2 has none; T-0583 review, Maren 2026-10-28), and floating buttons drop their text label (icon only, label kept for VoiceOver).
 - Tabular figures on every changing number: run times, elapsed, counts, line and column.
 
 ## 3. Components

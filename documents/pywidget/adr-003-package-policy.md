@@ -344,6 +344,8 @@ T-0243 fills this. The columns are s1's four conditions plus the import cost, wh
 
 The order matters more than s1's "each alone" suggests. matplotlib requires both numpy and Pillow at import, so a Pillow failure takes matplotlib with it, whatever matplotlib's own build does. Pillow does not need numpy.
 
+**S1 trigger, 2026-10-29 12:00 ET (Operator, T-0287):** no Claude Code settings rule permitting pinned-package builds or imports was applied (.claude/settings.json has no tools/pkg_sandbox.py rule; #79 was approved but the applier refused it, 2026-10-27 02:05, and it was not applied by hand). By the S1 table's last row, **numpy, Pillow and matplotlib (with contourpy and kiwisolver) are 1.1**; every row above stays empty and T-0243 closes as 1.1. 4.1's "All three fail" consequences apply: the L13 s6 "needs native code" text drops the three names, matrix row 4 leaves the review notes, T-0286 drops its .so-to-framework step, and the 20 MB native budget comes back. The pure set needs no human check: pyflakes 3.4.0, jedi 0.19.2 and requests 2.32.5 already import inside the Simulator app (alpha row A9, PyWidgetTests/PackageSmokeTests, 155a4f0a). Alpha step A8s records n/a with this line.
+
 ### 4.1 What each outcome means for T-0243 and T-0245
 
 - **numpy passes.** Arrays in the console and in widget scripts, which run in the app process (ADR-007 option b); the extension never carries numpy. For T-0245, nothing new: charts are drawn with DSL path ops, so the node-count <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> has to allow a sparkline drawn as one `Path` with N ops, not N nodes. That is worth a fixture in the render-cost measurement T-0245 waits on.

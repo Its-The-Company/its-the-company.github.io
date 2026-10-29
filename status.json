@@ -1,74 +1,74 @@
 {
  "schema": 1,
- "at": "2026-10-29T14:37:03.143154+00:00",
+ "at": "2026-10-29T18:05:58.007944+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-29T07:57:26-04:00"
+  "started": "2026-10-29T10:38:44-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "idris",
-   "task": "[build] T-0691 net.get reply memory cap",
-   "model": "opus",
-   "started": "2026-10-29T14:10:44.017Z",
-   "seconds": null,
-   "finished": "2026-10-29T14:36:12.930000+00:00"
-  },
-  {
    "name": "pernille",
-   "task": "[test] T-0694 lane on device interpreter 3.15",
+   "task": "[build] T-0711/T-0712 lane reset fixes 2",
    "model": "opus",
-   "started": "2026-10-29T13:51:47.005Z",
+   "started": "2026-10-29T17:16:45.724Z",
    "seconds": null,
-   "finished": "2026-10-29T14:10:22.373000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-0692 T-0693 lane import gate fixes",
-   "model": "opus",
-   "started": "2026-10-29T13:41:23.650Z",
-   "seconds": null,
-   "finished": "2026-10-29T13:51:31.014000+00:00"
+   "finished": "2026-10-29T18:05:05.475000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[review] T-0685 review of lane Python half",
+   "task": "[review] T-0710 re-review of 8e9615c7",
    "model": "opus",
-   "started": "2026-10-29T13:33:24.589Z",
+   "started": "2026-10-29T16:50:06.858Z",
    "seconds": null,
-   "finished": "2026-10-29T13:41:08.629000+00:00"
+   "finished": "2026-10-29T17:16:28.600000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-0705/6/7 lane reset fixes",
+   "model": "opus",
+   "started": "2026-10-29T16:11:01.094Z",
+   "seconds": null,
+   "finished": "2026-10-29T16:49:51.654000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[review] T-0704 review of 5d1d06ac lane",
+   "model": "opus",
+   "started": "2026-10-29T15:50:41.804Z",
+   "seconds": null,
+   "finished": "2026-10-29T16:10:21.013000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 113,
-  "blocked_count": 50
+  "runnable_count": 110,
+  "blocked_count": 48
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
-   "resets_at": "2026-10-29T14:59:59.753157+00:00",
+   "pct": 22.0,
+   "resets_at": "2026-10-29T15:00:00.067751+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 90.0,
+   "left": 78.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 74.0,
-   "resets_at": "2026-11-01T06:59:59.753177+00:00",
+   "pct": 75.0,
+   "resets_at": "2026-11-01T07:00:00.067772+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 26.0,
+   "left": 25.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 5.0,
-   "resets_at": "2026-11-01T06:59:59.753348+00:00",
+   "pct": 6.0,
+   "resets_at": "2026-11-01T07:00:00.067937+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-29T07:57:25.341938-04:00"
+  "read_at": "2026-10-29T10:38:43.656097-04:00"
  },
  "ui": {
   "week_pct": 0.101,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-29T10:37:52-04:00"
+  "at": "2026-10-29T14:06:46-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -564,13 +564,6 @@
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "test",
-    "t": "Alpha commands the code cannot give yet",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Tools/alpha_run.sh runs the hand steps",
@@ -581,13 +574,6 @@
     "w": "Maren",
     "k": "design",
     "t": "After the widget freshness ruling",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Wrenna's...",
     "s": "next",
     "o": "c"
    },
@@ -670,13 +656,6 @@
    },
    {
     "w": "Idris",
-    "k": "build",
-    "t": "T-0515 L1-L3",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
     "k": "test",
     "t": "T-0584 F3",
     "s": "next",
@@ -700,13 +679,6 @@
     "w": "Idris",
     "k": "test",
     "t": "From T-0347",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "T-0619 F1",
     "s": "next",
     "o": "c"
    },
@@ -767,23 +739,9 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0370 follow-up",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "fix",
     "t": "T-0666 Lows on idris/t0355-projects",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "T-0664 residue",
     "s": "next",
     "o": "c"
    },
@@ -809,13 +767,6 @@
     "o": "c"
    },
    {
-    "w": "Wrenna",
-    "k": "docs",
-    "t": "After the T-0671 ruling",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "T-0512 remainder",
@@ -830,13 +781,6 @@
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "build",
-    "t": "T-0667 review M1",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Rides with T-0687",
@@ -844,16 +788,51 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "review",
-    "t": "Independent review of 5d4754b8",
+    "w": "Idris",
+    "k": "build",
+    "t": "From T-0697 L2",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "From T-0699 Lows",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "T-0570 L2 remainder",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Pernille",
+    "k": "test",
+    "t": "T-0694 D6 remainder",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "docs",
+    "t": "From T-0287",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
     "k": "build",
-    "t": "From T-0694",
+    "t": "Swift half of T-0707",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "review",
+    "t": "Independent re-review of 9bb407d7",
     "s": "next",
     "o": "c"
    },
@@ -937,31 +916,31 @@
   ],
   "done": [
    {
-    "w": "Idris",
+    "w": "Pernille",
     "k": "build",
-    "t": "T-0691 net.get reply memory cap",
-    "at": "2026-10-29T14:36:12.930000+00:00",
+    "t": "T-0711/T-0712 lane reset fixes 2",
+    "at": "2026-10-29T18:05:05.475000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "review",
+    "t": "T-0710 re-review of 8e9615c7",
+    "at": "2026-10-29T17:16:28.600000+00:00",
     "o": "c"
    },
    {
     "w": "Pernille",
-    "k": "test",
-    "t": "T-0694 lane on device interpreter 3.15",
-    "at": "2026-10-29T14:10:22.373000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
     "k": "build",
-    "t": "T-0692 T-0693 lane import gate fixes",
-    "at": "2026-10-29T13:51:31.014000+00:00",
+    "t": "T-0705/6/7 lane reset fixes",
+    "at": "2026-10-29T16:49:51.654000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 113,
+   "next": 110,
    "wait": 23,
-   "blocked": 27,
+   "blocked": 25,
    "you": 6
   }
  },

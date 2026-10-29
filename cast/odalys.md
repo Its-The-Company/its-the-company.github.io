@@ -256,18 +256,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Standing lessons (details in archive.md)
 - 2026-10-26 02:00-02:57 notes (T-0153..T-0196, T-0026; lessons on mutations, counts, glob pathspecs): archive.md
 
-## 2026-10-28 T-0597 (65ce6d6f)
-- Lesson: when the rules files are rewritten, re-run every reader of them; v2 moved rulings to log/rulings.md and task_context went blind for a day. A board ID can appear in another line: match the owning line first.
-
-## 2026-10-28 T-0618 (b277c50e)
-- Lesson: board.py parse() strips the T-ID out of "text" (it is in "id"); never regex a T-ID from a parsed line.
-
-## 2026-10-28 T-0580 (04eb6501)
-- Lesson: a fixed px room under a fixed element drifts with content; measure it (ResizeObserver var) and keep max(fixed, measured). Run a red test at the suspect commit's parent before blaming it.
-
-## 2026-10-28 T-0495 (372f91b3)
-- Lesson: read the tool at HEAD before fixing the reported bug (target was already 4000; the real gap was kept lessons). memory_archive pass 2 moves them now.
-
 ## 2026-10-28 T-0491 (49aaf74d)
 - Lesson: scan tracked files before filtering staged ones; 8 tracked files hold fake tokens, so step 12 exempts what HEAD holds. Open: T-0626 orphans.
 
@@ -282,6 +270,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-10-29 T-0683/T-0686 (543734d6): check record loops for `stuck`, not only `finished`; measure worst-case encoding before trusting a size cap. Open: T-0689-0691 (Idris).
 
 - 2026-10-29 T-0685 (2e30805b): in-process import guards: probe C-level imports (datetime.strptime), reset persistence (_keep_module, patched class state), and the shipping interpreter (device 3.15.1, lazy_imports=all). Open: T-0692-0694 (Pernille).
+
+- 2026-10-29 T-0697 (f8a534be): for a peak-since-reset measurement, list what is allocated before the reset (stub payloads, sessions) and what a stub never loads (transport); check a size estimate against the real encoder by brute force (all scalars), not samples. Open: T-0698 (Idris).
+
+- 2026-10-29 T-0704 (9351e698): for any reset/restore guard, list what runs AFTER the last restore (builtins cleanup, gc finalizers, getattr on sys.modules values) and what the restore itself looks up by name (builtins). Pin working bypasses as OPEN tests in the private repo; keep recipes out of review prose. Open: T-0705-0707 (Pernille).
+- 2026-10-29 T-0710 (b803050c): a fix that "restores X first" is only as good as the lookups the restore itself does (vars/list by name); also scan dicts read by name for planted non-str keys. Open: T-0711/T-0712 (Pernille).
 {% endraw %}
 
 

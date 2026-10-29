@@ -264,66 +264,14 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 2026-10-25 entries (privacy drafts, names, App Review matrix v1, store page, L15, CORRECTIONS pass 1, #54 docs, OPS-7 audit, T-0075): archive.md. Standing: grep counts before typing; `date` before every time.
 
-## 2026-10-26 T-0086 Apple question draft extended (1f21be73; board ticked; event logged)
-- Open: DPLA 3.3.1(B) (T-0060); in-app viewing of package source is undesigned; precedent check line is mine too.
-
-## 2026-10-26 T-0061 L6 s8 duties done (81ab40a7 + c79e8921; board ticked; 2 events)
-- Open: TODO(T-0059) share extension scope (ADR-001 says 1.1, L6 s3/s8 say ship) and row 37; 5.1.1(ii) conflict, distance + altitude Pro need location (Ines/Investors); G11 privacy page is the Investors'.
-
-## 2026-10-26 T-0084 Documents folders done (539d66e6; board ticked; event logged)
-- Open: not published (Operator). site_build_unit_test 2 FAILs are app.js budget (not mine). ideas.py/pitches.py links to /documents/#... still land on the index archive line.
-
-## 2026-10-26 T-0089 battery -> Storage done (5bac73b6 + 0d8289be note; board ticked; event logged)
-- Lesson: zsh does not word-split $F; list pathspecs literally in a commit.
-
-## 2026-10-26 T-0085 online-pip precedent check done (bafe5b64; board ticked; event logged)
-- Open: juno.sh, code.thebaselab.com unread (terms gap); whether reviewers saw pip is unknowable from a listing.
-
-## 2026-10-26 T-0095 store free list done (f6bbb744; board ticked; event logged)
-- Open: s8 F4 still says "two Pro premades need location" (stale, outside the line's scope); matrix rows 28/44 citation left to Ines (she was editing).
-
-## 2026-10-26 T-0102 + T-0100 done (651fd31e, 6a771004; both ticked; one event)
-- Lesson: "s8 F4" lives in store-page-draft.md, not the matrix; grep the phrase before trusting a line's file. quote_check needs the PDF text: `swift tools/pdftext.swift <pdf> > txt` first; compare found/missing to HEAD.
-
-## 2026-10-26 T-0023 CORRECTIONS pass 3 done (e80d0bed; recurring line noted, not ticked; event logged)
-- Lessons: footer page = PDF page in the #59 text; /tmp/w3bin/loc.py style (normalise, track page marks) locates a quote fast. Doc quotes in a quote_check section go in italics or they show MISSING. I guessed tool-run times in the header before `date`; corrected before commit.
-
 ## 2026-10-26 T-0109 matrix tags raised (4eb6a81a; board ticked; T-0115 for owners; event logged)
 - Lesson: a ### subsection under a ## counts in quote_check's "## 1b" section; check 1c on its own too.
-
-## 2026-10-26 T-0027 L14 web IDE desk research done (84652ab6; board ticked; event logged)
-- Open (person reads): SF Symbols/SF font licence for web; CloudKit JS terms and private-DB access; hosting terms (Investors).
-
-## 2026-10-26 Apple pages via fetch_cite --apple (903bbc17; T-0012/33/35/132 noted, not ticked; T-0142 Idris facts, T-0143 Odalys bug; event logged)
-- Open: reason codes (85F4.1 unconfirmed) after T-0143, re-read 2026-10-27 with --refresh; Platform version information (store field limits) not read; App Shortcuts ceiling not on AppShortcutsProvider page.
-
-## 2026-10-26 T-0060 DPLA 3.3.1(B) read (b3af7e0b; board ticked; T-0156 follow-up; event logged)
-- Open: T-0156 (matrix tags, Apple question draft line 35).
-
-## 2026-10-26 T-0132 Day 17 submission fields done (0a8ba0cf; board ticked; event logged)
-- Open: App information page (category, content rights), screenshot specs, export-compliance-documentation page: read 2026-10-27.
 
 ## 2026-10-26 T-0149 coding-agents notes A done (c9093324; board ticked; event logged)
 - Lessons: arXiv HTML keeps inline numbers in <math alttext>; strip math and the numbers vanish. Read every row of a table before writing a range (I nearly missed Complexity Trap's fifth row, where masking lost significantly). SWE-bench leaderboards.json gives same-model scaffold gaps directly.
 
-## 2026-10-26 T-0150 coding agents group B done (de885958; board ticked; event logged)
-- Open: arXiv ablation tables (Agentless, ACR, CodeMonkeys figures) need a person read; terms_locate says unfound.
-
 ## 2026-10-26 T-0167 arXiv terms read done (b46cf3a0; board ticked; event logged)
 - Lessons: robots.txt comments can name the governing page; read the comments, not just the rules. terms_guard.reason(url, fetch=False) asks the guard without sending anything. My Lane A breach (5 arXiv pages, T-0149) is recorded in Ines's arxiv-ruling.md.
-
-## 2026-10-26 T-0156 + T-0136 done (94cbc210, 153fa8f0; both ticked; one event)
-- Open: ops/questions.md item 7 pointer may still say "three questions" (gitignored, not touched). Store min/max figures before 02:31 were overcounted by 8/4.
-
-- T-0023 pass 4 — CORRECTIONS U4-01..09 done 02:40; next pass starts at U5; lessons on stamps and sed -i
-- T-0195 #70 PDFs — ablation tables filled 02:43 (5cd2f024); no status changes; arXiv help/robots read still pending
-- T-0197 + T-0013 — help/robots 404 19:41 (e879f25c); widgy/holzschu gaps (cc65e623); T-0205, T-0216 to Ines
-- T-0034/T-0046 Apple pages — CLGeocoder read, 4.5.4 from PDF; day cap hit, T-0046/T-0012 held to 10-27, plan in C2 s11
-- T-0224 holzschu reads — a-Shell/Carnets pages silent on in-app 19:57 (a8dec76b); cells open; R1 person read stands
-- T-0023 pass 5 + T-0238 — U1-05 closed, L8 Always mismatch U5-01 (T-0254), U5-01..06 at 20:10 (9b5cc74d); next pass U6
-- T-0249 launch plan + press kit — drafts c8b9fd2c 20:20; 29 sales at $9.99; reach [open] until a person reads the rooms
-- T-0274 memo alignment — s4/s5/G6 to Ines's memo 20:27 (4c85c8ae); no measured coding/widget conversion in repo; case C open
-- T-0283 fallback cases — s6b C1-C3 20:39 (fd923c7a); tools/store_case.py; two widget leaks gated
 
 ## 2026-10-26 T-0336 what the shelf's buyers complain about paying for (10193c16; board ticked; event logged; 22:25-22:37 ET)
 - T-0494 privacy policy v2 — 98a70759 19:35; card T-0496 to Ines; publish gate on T-0353/T-0047; Keychain survives deletion

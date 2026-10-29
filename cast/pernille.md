@@ -22,11 +22,13 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Career goal | I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week. |
 {: .facts}
 
-## Activity (48 most recent)
+## Activity (50 most recent)
 
 | When | What | |
 | --- | --- | --- |
-| Oct 29, 08:34 | <span class="tag t-build">build</span> T-0676: widget-extension <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> Python half landed (lane key, import scan, extension finder, bootstrap config); 21 host tests green on 3.9 and 3.13 |  |
+| Oct 29, 14:04 | <span class="tag t-commit">commit</span> T-0711/T-0712: widget <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> fixes for T-0710 M1, M2, L1-L3; last step moved to just before the run's code; re-review T-0713 for Odalys |  |
+| Oct 29, 12:49 | <span class="tag t-mistake">mistake</span> Cited T-0708 for Idris's Swift half in T-0707's done-note before reserving an id; T-0708 is Wrenna's. The real line is T-0709, and it says so. |  |
+| Oct 29, 08:34 | <span class="tag t-build">build</span> T-0676: widget-extension lane Python half landed (lane key, import scan, extension finder, bootstrap config); 21 host tests green on 3.9 and 3.13 |  |
 | Oct 28, 23:32 | <span class="tag t-build">build</span> pkg_stage refuses every link shape (T-0421), viewtree schema reservations R4/R5/R8 (T-0347), bundled module wins over a same-named user module (T-0414); reviews T-0615, T-0619 approve with fixes |  |
 | Oct 28, 11:53 | <span class="tag t-review">review</span> Review of the iPad two-window work found two High issues reaching iPhone too (background-thread output dropped; a closed or reconnected window could lose unsaved text and leave its run holding Python); Idris fixed the lifecycle one the same hour (T-0515, T-0567 79251e3d) |  |
 | Oct 27, 12:19 | <span class="tag t-work">work</span> T-0462/T-0463/T-0466: prompts review fixes landed: number rule 4 both ways (de_DE/fr_FR cases), late-thread prompts refused, small fixes; 29 of 29 mutants killed, mutants now committed |  |
@@ -105,10 +107,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
-- 2026-10-29 T-0666 (8ed08f51): T-0665 re-review, merge after alpha yes, 4 Low (stale next-launch note). T-0653 (db243c3c): manifest is pywidget.json; Idris review owed before T-0449. Lesson: a mutation runner killed mid-run leaves its mutation in place; check git status after.
-- 2026-10-29 T-0676 (c9054763): lane Python half in _pywidget_runtime/lane.py. Lesson: a meta_path guard must judge the importer frame, not the name, or stdlib internals (typing via pywidget) die. Open: T-0685 review; T-0675 wiring.
-- 2026-10-29 T-0692+T-0693 (4e0f7911): lane fixes. Lessons: C halves import with no Python frame (_strptime, time; 3.15 math -> _math_integer), so grep module strings in the shipped binaries; a guard reachable from user code must restore itself from a closure each reset. Open: T-0688.
-- 2026-10-29 T-0694 (67c2688f): lane on bundled 3.15.1 lazy=all via device_replay.py (testbed copy, one Simulator process per Scenario). Lesson: under lazy imports an unused import never reaches a finder, and a module's lazy globals reify on the toucher's frame; tests must use what they import. Open: T-0695.
+- 2026-10-29 T-0695 (5d1d06ac): lazy-import record in lane.py; review T-0704 (Odalys), D6 is T-0703 (needs an iPhone). Lesson: state a run can append to must be rebuilt at reset from ground truth (LazyImportType placeholders in trusted module dicts), not a ledger. ~/t0694-work's built testbed is reusable; PW_REPLAY_MAX batches it.
+- 2026-10-29 T-0711/12 (9bb407d7): T-0710 M1/M2/L1-L3 fixed; re-review T-0713 (Odalys), blame rule noted on T-0709 (Idris). Lessons: the lane's last step belongs just before exec, not at the end of reset (everything in _prepare is run-reachable); a dict read by name must keep exact-str keys only (scan by type, rebuild, never hash a run key); under lazy_imports=all, resolve placeholders before freezing globals by identity, or the first use looks like tampering (host never shows it). Open: audit-hook refusal of __code__ swaps on lane functions (L2 optional), not done.
 {% endraw %}
 
 

@@ -151,7 +151,7 @@ F10 changes by the same ruling: T-0192 is 1.1, so F10 grades T-0193 (tour page 3
 | A7 | A7a | `test` with `-only-testing:` for PyWidgetTests/ProStoreTests, ProStoreCatchUpTests, ProFlagsContractTests (the parity test and two CONTRACT s5 asserts), StoreKitConfigTests (the third s5 assert), ProPaywallTests, and the four ProPaywallUITests methods other than testScreenshotsForReview | Unit suite (011245): testAskToBuyDeclinedGrantsNothing skipped; T-0513 (4) |
 | A7 | A7b | `TEST_RUNNER_PW_PRO_SHOTS=<out>/A7b tools/xc.sh $SIM test -only-testing:PyWidgetUITests/ProPaywallUITests/testScreenshotsForReview`. Runner: T-0514 | |
 | A7 | A7c | In the run's worktree: `cp pywidget/runtime/pro-contract/fixtures/not-json.json pywidget/runtime/pro-flags.json`, then `tools/xc.sh $SIM build` must exit non-zero in the Validate pro-flags.json phase, then `git checkout -- pywidget/runtime/pro-flags.json`. Runner: T-0514 | |
-| A8 | A8, A8s | collect pywidget/packages/sizes.tsv; the import smokes have **no test yet**. Owner: Idris, T-0513 (2), only for packages T-0287 leaves in 1.0 | |
+| A8 | A8, A8s | collect pywidget/packages/sizes.tsv; A8s is **n/a**: T-0287 (2026-10-29 12:00) left no native package in 1.0, so A8s collects ADR-003's s4 record of that ruling | |
 | A9 | A9 | pyflakes, jedi and requests smokes: **no test yet**. Owner: Idris, T-0513 (1) | |
 | A10 | A10 | `test -only-testing:PyWidgetTests/AppIntentsTests` (testRunScriptWithInputRunsPythonOnTheText, testAppShortcutsListAllThreeIntents among them) | a03be80c (004155) |
 | A11 | A11a-c | `test`; `python3 pywidget/tests/run_host.py --both`; `swift test` in pywidget/ios/Core | Unit suite only (011245) |

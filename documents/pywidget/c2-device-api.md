@@ -126,7 +126,7 @@ ADR-007 chair line 2026-10-29 08:03, item 2, adds a fourth place for one kind of
 | | Modules | Who it binds |
 |---|---|---|
 | Allowed (by top-level name) | `json`, `datetime`, `math`, `os` (the tiny set), `re`, `zoneinfo`, `collections`, `itertools`, `string`, `textwrap`, `pywidget`, `pywidget_ui`; plus `__future__` (a compiler directive) | The script's own imports |
-| Never, whoever imports it | `ssl`, `urllib`, `http`, `email`, `sqlite3`, `asyncio`, `ctypes`, `_decimal`, `multiprocessing`, `concurrent`, with their C halves (`_ssl`, `_sqlite3`, `_asyncio`, `_ctypes`, `_multiprocessing`); every native package (`app_packages` is not on the extension's `sys.path`) | Every ordinary import, stdlib included. Deliberate in-process tampering in a run (removing the finder, calling `PathFinder` itself) is not stopped; every reset drops these modules and restores the lane's frozen state, the run's outcome lists any left resident (`never_resident`, widget lane only), and the backstop is demoting that widget to the app lane, as on a memory <span title="A test written in advance. If it fires, we drop the idea.">kill</span> (T-0693) |
+| Never, whoever imports it | `ssl`, `urllib`, `http`, `email`, `sqlite3`, `asyncio`, `ctypes`, `_decimal`, `multiprocessing`, `concurrent`, with their C halves (`_ssl`, `_sqlite3`, `_asyncio`, `_ctypes`, `_multiprocessing`); every native package (`app_packages` is not on the extension's `sys.path`) | Every ordinary import, stdlib included. Deliberate in-process tampering in a run (removing the finder, calling `PathFinder` itself) is not stopped; every reset drops these modules and restores the lane's frozen state, the run's outcome lists any left resident (`never_resident`, widget lane only) and what the lane had to put back (`lane_tampered`, T-0707; the reset is checked again as its last step), and the backstop is demoting that widget to the app lane, as on a memory <span title="A test written in advance. If it fires, we drop the idea.">kill</span> (T-0693) |
 | `pywidget` submodules refused in the lane | `pywidget.http` (ssl, urllib; use `pywidget.net`, T-0677), `pywidget.prompts` (nobody to answer; `decimal`), `pywidget.files` (`pathlib` pulls `urllib.parse`; the app's Documents are not readable from the extension); `pywidget.clipboard`, `pywidget.keychain`, `pywidget.notifications` until T-0675 answers their device calls in the extension | The script's own imports |
 
 </div>
@@ -304,7 +304,7 @@ class Response:
 | Wire | `net.get {url, timeout, headers}` -> `{"ok": {status, headers, text}}`, or the bridge's `{"error": {class, message, fix, native}}` (1.3). Device-call timeout = `timeout` + 1 s, so Swift answers first |
 | Scheme | `https://` only, checked in Python and again in Swift (1.5): `ValueError`. A redirect to `http://` is not followed (`PyWidgetError`); at most 5 redirects; one to another host drops `Authorization`, `Cookie`, `Proxy-Authorization` |
 | Timeout | The whole request (a timer, not URLRequest's per-read timeout). Python cuts it to the run's budget minus 0.25 s; Swift cuts it to **3 s inside the extension** (`NetFetch.extensionTimeoutCap`) and 60 s in the app. Running out: `TimeoutError` (a built-in class on the wire, added to the runtime's map for this call) |
-| Body | Text only: the server's charset, else UTF-8, undecodable bytes as U+FFFD. **Body cap 1 MiB in the app, 256 KiB in the extension** (`MAX_BYTES`/`EXTENSION_MAX_BYTES`, `NetFetch.Limits`), refused before reading when Content-Length says more, else as soon as it passes: `PyWidgetError`. **Reply cap 2 MiB in the app, 512 KiB in the extension** (T-0691): the reply carries the text JSON-escaped, so it is counted before it is built (`NetFetch.escapedSize`, an upper bound: a control character 6 bytes, `"` and `\` 2, a U+FFFD 3, slashes not escaped) and checked again once built; over it is `PyWidgetError` "the answer from <host> would be N bytes as text, over the 524288 bytes (512 KiB) pywidget.net passes to Python here..." (host only). See "Memory per call" below |
+| Body | Text only: the server's charset, else UTF-8, undecodable bytes as U+FFFD. **Body cap 1 MiB in the app, 256 KiB in the extension** (`MAX_BYTES`/`EXTENSION_MAX_BYTES`, `NetFetch.Limits`), refused before reading when Content-Length says more, else as soon as it passes: `PyWidgetError`. **Reply cap 2 MiB in the app, 512 KiB in the extension** (T-0691): the reply carries the text JSON-escaped, so it is counted before it is built (`NetFetch.escapedSize`, never below the built size and equal to it for ASCII: `\b \t \n \f \r "` and `\` 2 bytes, any other control character 6, a U+FFFD 3, slashes not escaped; T-0698) and checked again once built; over it is `PyWidgetError` "the answer from <host> would be N bytes as text, over the 524288 bytes (512 KiB) pywidget.net passes to Python here..." (host only). See "Memory per call" below |
 | Status | Any status is an answer (`r.ok` to check); nothing raises on 4xx/5xx |
 | Errors | No connection, DNS, lost connection, roaming or data off: `Offline` (a `ConnectionError`), with `.native` = `("NSURLErrorDomain", code)`. Certificate or TLS failure: `PyWidgetError` with `.native`, never `Offline`. Anything else: `PyWidgetError` with `.native` |
 | Privacy | Ephemeral session: no cookie store, no URL cache, nothing on disk. Nothing is logged. Error messages name the host, never the path or query. User-Agent `PyWidget-iOS`. Apple's trust store and ATS apply (unlike `pywidget.http`) |
@@ -316,24 +316,24 @@ class Response:
 **Memory per call (T-0691, review T-0686 M1).** The old text here said the body is held "about four times over". That holds for ASCII only: 1 MiB of control bytes is a 6 MiB reply, and 1 MiB of bytes that are not UTF-8 a 3 MiB one, and Python's decode costs about three times the reply again. Measured: peak physical footprint above the footprint at the device call (`ri_interval_max_phys_footprint`, reset when the call reaches Swift), one cold `net.get` per fresh process, through the real bridge, router and `NetFetch` on a stubbed `URLProtocol`. **Measured in the app (the XCTest host on the iPhone 17 Simulator, iOS 27), not in the extension**: the extension cannot run a script before T-0675, so the extension's limits were set in the app (`NetFetch.limits`) on the same code path. T-0687 repeats it inside the extension.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 6a. net (T-0677; the widget-extension lane&#x27;s network), scrolls sideways" data-n="3" style="--tw:822px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 6a. net (T-0677; the widget-extension lane&#x27;s network), scrolls sideways" data-n="3" style="--tw:1077px" markdown="1">
 
-| Limits, body | Body | n | Outcome | Peak MiB, median (min-max) |
-|---|---|---|---|---|
-| old (1 MiB body, reply uncapped), ASCII | 1 MiB | 6 | ok | 4.46 (3.55-6.22) |
-| old, control 0x01 | 1 MiB | 6 | ok | 14.44 (13.84-16.81) |
-| old, binary 0xFF (U+FFFD) | 1 MiB | 6 | ok | 13.73 (12.47-15.03) |
-| extension, empty body | 0 | 6 | ok | 0.38 (0.20-0.91) |
-| extension, ASCII | 256 KiB | 7 | ok | 0.88 (0.59-1.52) |
-| extension, control | 256 KiB | 6 | refused by the reply cap | 0.47 (0.05-0.91) |
-| extension, binary | 256 KiB | 6 | refused by the reply cap | 1.36 (0.48-3.55) |
-| extension, control, longest that passes | 85.25 KiB | 6 | ok | 0.86 (0.34-1.72) |
-| extension, binary, longest that passes | 170.5 KiB | 6 | ok | 1.19 (1.11-3.44) |
+| Limits, body | Body | n | Outcome | Peak MiB, median (min-max), T-0698 stub | T-0691 stub (before) |
+|---|---|---|---|---|---|
+| old (1 MiB body, reply uncapped), ASCII | 1 MiB | 6 | ok | 4.61 (3.86-5.52) | 4.46 (3.55-6.22) |
+| old, control 0x01 | 1 MiB | 6 | ok | 15.61 (14.88-17.38) | 14.44 (13.84-16.81) |
+| old, binary 0xFF (U+FFFD) | 1 MiB | 6 | ok | 12.91 (11.22-14.50) | 13.73 (12.47-15.03) |
+| extension, empty body | 0 | 6 | ok | 0.38 (0.28-1.12) | 0.38 (0.20-0.91) |
+| extension, ASCII | 256 KiB | 7 | ok | 1.34 (1.02-1.88) | 0.88 (0.59-1.52) |
+| extension, control | 256 KiB | 6 | refused by the reply cap | 1.32 (0.66-1.52) | 0.47 (0.05-0.91) |
+| extension, binary | 256 KiB | 6 | refused by the reply cap | 3.28 (0.86-4.19) | 1.36 (0.48-3.55) |
+| extension, control, longest that passes | 85.25 KiB | 6 | ok | 1.97 (1.20-2.38) | 0.86 (0.34-1.72) |
+| extension, binary, longest that passes | 170.5 KiB | 6 | ok | 2.26 (1.27-3.34) | 1.19 (1.11-3.44) |
 
 </div>
 
 
-So in the extension one `net.get` costs at most 3.55 MiB above the footprint at the call in 37 cold samples (medians 0.4-1.4 MiB), against 12.5-16.8 MiB before for bad bodies. Whether that fits the 15 MB cold-peak target depends on the footprint when the script calls `net.get`; T-0687 measures it there. The app keeps 1 MiB bodies; its reply cap refuses 1 MiB of control or binary bytes (warm in-process numbers for the app limits in the evidence, which undercount because freed memory is reused). Evidence: `pywidget/docs/reviews/t0691-evidence/` (cold.jsonl, cold-table.md, run-cold.sh).
+So in the extension the largest of 37 cold samples is 4.19 MiB above the footprint at the call (a 256 KiB binary body the reply cap refuses; 3.34 MiB for one that passes), medians 0.4-3.3 MiB, against 11.2-17.4 MiB under the old limits for bad bodies. That is the largest of n samples, not a bound. T-0698 (review T-0697 M1) made the stub closer to a real cold call: the body is made inside `startLoading`, after the reset, and arrives in 16 KiB chunks (so `Data` grows by appends; the stub hands them over in one loop, so several can wait in the queue at once, which errs high), and `NetFetch.session` is made at the call. Before that (T-0691 column) the stub body was allocated before the reset and delivered in one chunk, and the session was made before the reset; the largest extension sample was 3.55 MiB. **Still left out:** the real HTTP/TLS/DNS stack (Network.framework, TLS, connection state), which a URLProtocol stub never loads; a fresh extension pays it on its first request. T-0687 takes at least one sample per body over real transport, in the extension. Until then do not add this delta to a lane script's footprint as if it were the whole cost of `net.get`. Whether a call fits the 15 MB cold-peak target depends on the footprint when the script calls `net.get`; T-0687 measures it there. The app keeps 1 MiB bodies; its reply cap refuses 1 MiB of control or binary bytes (warm in-process numbers for the app limits in the evidence, which undercount because freed memory is reused). Evidence: `pywidget/docs/reviews/t0691-evidence/` (T-0698: cold-t0698.jsonl, cold-t0698-table.md; T-0691: cold.jsonl, cold-table.md; run-cold.sh, summarize.py).
 
 Tests: Python half `pywidget/tests/device/test_net.py` (the bridge stood in; importing `pywidget.net` loads nothing in the lane's never-list); Swift half `ios/Tests/NetFetchTests.swift` on a `URLProtocol` stub, no real network, plus one script through the real bridge and router. The run from inside the extension process waits on T-0675's extension bridge.
 

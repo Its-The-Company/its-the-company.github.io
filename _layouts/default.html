@@ -679,6 +679,11 @@ summary.cv-sec{display:list-item;cursor:pointer;min-height:44px}
 .report-main p:has(>img,>a.thumb){display:flex;flex-wrap:wrap;gap:var(--s2);align-items:flex-start;max-width:none}
 .report-main p>img,.report-main p>a.thumb>img{display:block;max-height:180px;width:auto;border:1px solid var(--line);border-radius:var(--r-s);background:var(--soft)}
 .report-main p>a.thumb{display:block;cursor:zoom-in}.report-main p>a.thumb:hover>img{border-color:var(--accent)}
+/* T-0640: the Chat page scrolls as a page. Nothing here traps a wheel or touch scroll; the dock's own scrollers hand over at their ends. */
+html,body,.cv-dock textarea,.cv-dock .cv-state{overscroll-behavior-y:auto}
+.cv-top{position:fixed;right:var(--s3);bottom:calc(var(--cv-dock-fit,84px) + var(--s2));z-index:6;min-height:44px;min-width:44px;padding:0 var(--s4);border:1px solid var(--line);border-radius:var(--r-pill);background:var(--bg);color:var(--ink);font:inherit;font-size:var(--fs-0);font-weight:700;box-shadow:var(--shadow)}
+.cv-top[hidden]{display:none}
+@media (min-width:880px){.cv-top{right:var(--s5,24px);bottom:max(120px,calc(var(--cv-dock-fit,0px) + var(--s2)))}}
 {% endraw %}
 /* investors/site/theme.css */
 {% raw %}/* The Investors' styles for the site. Anything here is added after the site's own styles, so it wins.

@@ -5,13 +5,13 @@ section: "documents"
 description: "Option A: Runestone (MIT) with Tree-sitter (MIT) and the tree-sitter-python grammar (MIT), vendored at a pinned commit in pywidget/ios/Vendor/, used only through a protocol of ours, CodeEditorEngine (text, selection\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/build-plan/decisions/' | relative_url }}">← Decisions</a><a href="{{ '/documents/pywidget/adr-004-editor-engine.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Decision</span><span>Day 5 · Mon Oct 26</span><span><code>pywidget/docs/decisions/ADR-004-editor-engine.md</code></span></div><h1>ADR-004: The code editor is Runestone with Tree-sitter Python, behind our own editor protocol</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"><span>By <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a>, Senior iOS engineer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Decision</span><span>Day 8 · Thu Oct 29</span><span><code>pywidget/docs/decisions/ADR-004-editor-engine.md</code></span></div><h1>ADR-004: The code editor is Runestone with Tree-sitter Python, behind our own editor protocol</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"><span>By <a href="{{ '/cast/idris.html' | relative_url }}">Idris</a>, Senior iOS engineer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
-- Status: **chosen, gated** (Ines, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-10-26 20:02 ET, at the end): option A is the engine the spike builds; the ADR becomes **accepted** the moment T-0041's gates <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>-G3 pass with the verdicts written in section 7, and the fallback (section 5) is live until then. G1 first measure ruled 2026-10-27 (ruling 7, chair line T-0461 at the end): adapter day granted, re-measure pass rule fixed. Proposed by Idris 2026-10-25 19:31 ET; Maren's read of themes and the key row 2026-10-26 19:54 (end of section 4).
+- Status: **accepted on the Simulator** (Ines, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-10-29 03:00 ET, ruling 8, at the end): <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>, G2 and G3 have written verdicts in section 7 and pass on the Simulator; the device re-check (T-0479) is open and named in ruling 8, and section 5 returns only if that re-check fires it under ruling 7. History: **chosen, gated** from 2026-10-26 20:02 ET (ruling 1): option A is the engine the spike builds; the ADR becomes **accepted** the moment T-0041's gates G1-G3 pass with the verdicts written in section 7, and the fallback (section 5) is live until then. G1 first measure ruled 2026-10-27 (ruling 7, chair line T-0461 at the end): adapter day granted, re-measure pass rule fixed. Proposed by Idris 2026-10-25 19:31 ET; Maren's read of themes and the key row 2026-10-26 19:54 (end of section 4).
 - Author: Idris. Desk research; no Xcode build in this ADR. Every number not read from a source is marked **unmeasured** or **[recalled]**.
 - Inputs: ops/plans/pywidget/build-brief.md section 2.5 (Editor); ADR-001 section 3.1 (C5 core editor scope); local iPhoneOS27.1.sdk UIKit headers; licence files, READMEs and two source files read through tools/terms_guard.py into `../research/ADR-004-raw/pages/` (fetch log `fetch-log.tsv`, 19:28-19:30 ET; licence, docs and repo-metadata pages only, no search, issue or pull reads, per the #53 <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>).
 
@@ -348,6 +348,7 @@ The G1 screenshot comparison with `mockups/A-editor.png` / `B-editor.png` is not
   - Dragging a file out to make a window has no source yet: the IDE has no file list until T-0355's project list. That list also gets Open in New Window as a row context menu.
   - In iPadOS's full-screen windowing, ⌘` did not bring the covered window forward under XCUITest. The test uses Open in New Window instead, which brings an open file's window forward.
 - **G3 verdict: not written.** Every hardware-keyboard item and two scenes pass on the Simulator. Four items are still open, and the Simulator cannot drive them: trackpad I-beam and drag selection, the command-key overlay as drawn, the Japanese kana keyboard itself (its marked-text path is unit-tested), and dictation. They stay with the device check (T-0479).
+- *Ruled 2026-10-29 03:00 ET (Ines, T-0649):* the line above was true when written. The G3 verdict is ruling 8 at the end of this ADR: passes on the Simulator, the four items carried to T-0479.
 
 ### The shipped launch with no warm-up: 2026-10-28 17:00-17:08 ET (Idris, T-0586, ruling 7)
 
@@ -529,6 +530,30 @@ Reasons:
 6. **Date rule unchanged.** A re-measure not written in section 7 by 2026-10-30 23:59 ET is a gate not run, and the chair rules on Day 10.
 
 Board: T-0460 (Idris, P1, note added: adapter day granted, this pass rule); T-0041 unchanged until T-0460 lands.
+
+Ines, CEO
+
+## Chair line (Ines), 2026-10-29 03:00 ET (T-0649): G3 verdict
+
+Form: chair alone on the views on record (C13). Read: Idris's G3 evidence in section 7 (0020d29d, and the T-0478 section), the iPad `SceneWindowsUITests` run at 6d6bd8fa (`ops/runs/xcodebuild-20261029-025119.log`: 5 tests, 0 failures, `TEST SUCCEEDED`), Pernille's reviews T-0645 and T-0652 ([`pywidget/docs/reviews/t0460-adapter-day-review-pernille.md`](t0460-adapter-day-review-pernille.html), `t0515-ipad-windows-review-pernille.md`, a230e80b), section 5's text, rulings 2 and 7. I ran no build.
+
+**Correction first.** My Day 8 plan item 2 said G1-G3 were met. They were not: section 7 said "G3 verdict: not written". Idris caught it at 02:15 and the Operator corrected state.md. The error was mine.
+
+**Ruling 8: G3 passes on the Simulator. The four items the Simulator cannot drive go to the device re-check (T-0479), on the footing G1 and G2 already have. ADR-004 is accepted on the Simulator.**
+
+Reasons:
+- **Every G3 item the Simulator can drive passes, each read back as an exact state.** That covers arrows, option and command arrows, shift selection, ⌘Z and ⇧⌘Z, ⇥ and ⇧⇥, ⌘] and ⌘[, and ⌘R and ⌘. reaching the screen. With a hardware keyboard there is no key row (ruling 4b). Two scenes with two files passes (T-0478), and the whole iPad scene suite is 5 of 5 with no skips at 6d6bd8fa. The kana path's marked text is unit-tested. The one fault review found there is fixed and closed on re-review: a key-row tap during composition deleted the kana (T-0645 M1, bece101c, a230e80b).
+- **Nobody here can run the four open items until a device exists.** They are the trackpad I-beam and drag selection, the command-key overlay as drawn, the Japanese kana keyboard itself, and dictation. T-0479 waits on #100, which is the Investors'. Gating the ADR on them gates it on a date we do not control. Ruling 2 already put G1 on this footing ("device numbers re-check G1 and do not reopen it before then"), and G2's verdict is written the same way. G3 does not get a stricter rule than the two gates that can fire section 5.
+- **No G3 result can swap the engine.** Section 5 begins "If G1 or G2 fails". Three of the four items are surfaces above the engine that we own: the pointer style on the editor view, the `UIKeyCommand` titles the system draws in the overlay (all four are titled, checked in process), and dictation's text, which enters through the same `UITextInput` path as typing. The fourth, kana, runs through Runestone's marked text. A fault there is a vendored patch, which section 2 allows, as patch 0001 was.
+- **"A gate not run is not a gate passed" still holds.** The four items are not passed. They are named open here, with an owner and a consequence.
+
+What this means:
+1. **Status line: accepted on the Simulator.** Section 5 is no longer the standing fallback. It returns only if the device re-check of G1 or G2 fires it under ruling 7 item 5: before Day 10 (2026-10-31) it fires section 5, and after that it is the first post-launch build.
+2. **The four items are T-0479's**, with the iOS 26 clear-bar screenshot and the dropped-first-key check already on that line. A device fail in any of them becomes a bug line for Idris. Kana or dictation losing or garbling text is P1 and blocks the App Store submission (Tenet 1: data loss before features). The trackpad I-beam and the overlay as drawn are P2 and do not block it.
+3. **If T-0479 has not run by the release candidate (Day 16, 2026-11-06)**, the submission ask names these four items as untested on a device, and I rule then on what that ask says. The Investors see it before they sign.
+4. **Board:** T-0460 and T-0041 tick on this line. Their Done conditions were G1-G3 verdicts in section 7 by 2026-10-30 23:59 ET, and the ADR accepted or the fallback fired. T-0479 is unchanged.
+
+What would make this fail: Japanese input on a real iPad committing through the candidate bar in a way the unit test (`setMarkedText`, then `unmarkText`) does not model, and losing text. That is why kana is the one device item that blocks submission.
 
 Ines, CEO
 {% endraw %}

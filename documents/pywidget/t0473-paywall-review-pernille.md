@@ -359,6 +359,104 @@ once on the smallest supported iPhone (SE, 667 pt tall) would confirm the pinned
 
 Counts for this pass: High 0, Medium 0. Low 5 new (N3-N7), Info 3 new (I1-I3). N1 and N2 closed. Open from earlier
 passes: L2, L3, L4 and the earlier I1, I3, I5 (this pass's Info notes are numbered separately).
+
+## Re-review 3: 3bfb3222 (T-0497, N3-N7), T-0636
+
+Reviewer: Pernille, 2026-10-29. Read against HEAD (168dbc4e): the 3bfb3222 diff, `ProStore.swift`,
+`PyWidgetApp.swift`, `ProPaywallView.swift` (purchased screen), `ProStoreTests.swift`, `ProPaywallUITests.swift`,
+`project.yml`, `scripts/check_legal_links.py` and its test, `scripts/mutants-t0497.json`. Later commits on these
+paths: 7bf2c8d4 (T-0634, Terms URL set, UI test pins it) and 6d6bd8fa (T-0572, console code in `PyWidgetApp.swift`).
+Neither touches the store, the foreground hook or the legal check. Commit message not read for reasoning.
+
+Runs on iPhone 17e Simulator, all through `tools/xc.sh`:
+- Baseline, unmutated: the six tests the mutant file names, all green (`ops/runs/xcodebuild-20261029-031535.log`;
+  purchased-screen AX5 test 37 s).
+- `tools/xc_mutants.py` with `mutants-t0497.json`: 8 of 8 KILLED (six store mutants, then the two N6 view mutants).
+- My extra mutant X1, the foreground hook line deleted (`PyWidgetApp.swift:107`), against all of ProStoreTests,
+  ProStoreCatchUpTests and ProPaywallUITests: the runner says KILLED, but the 35 store tests all passed. The only
+  failure was `testRestoreAndLegalLinksReachableAtLargeAndAX5` (the T-0527 flake, `:51` waiter timeout,
+  `-031915.log`). It passed alone on clean source (`-032247.log`, 204 s). It failed once, so it is not a finding.
+  X1 survives (R1).
+- `run_host.py`: 16 suites, 976 tests, privacy suite 16 green. The script by hand: archive with
+  PW_EDITOR_BENCH=YES gives exit 1 and an `error:` line, and a bench build gives exit 0 and a `warning:` line.
+
+### Verdict
+
+N3, N4, N5, N6 and N7 are closed. No High, no Medium, so no new board lines and nothing here blocks the first
+TestFlight build. Two Lows, both about the foreground hook, and two Info notes (numbered I6 and I7 so they do not clash with earlier passes).
+
+### Per finding
+
+**N3: closed.** `reloadOwedID` is set with `grantedAheadID` (`ProStore.swift:288`) and outlives the window. The
+first read that lists the owed id pays the reload on any route (`:235-241`): catch-up, `receive`, a screen's
+read, Restore, `payOwedReload`. It also clears both flags. Inside the window the owed branch leaves the catch-up
+task running, but the task's guard (`:293`) sees `grantedAheadID == nil` and returns. `payOwedReload` (`:153-156`)
+reads only when a reload is owed and the window has closed. A purchase sheet's inactive-to-active bounce reaches the
+hook before `settlePurchase` sets the id, so it does nothing. The id is not persisted. A cold launch starts at
+`isEntitled == false`, so its first agreeing read reloads anyway. `testAConfirmationAfterTheWindowStillReloadsOnce`
+(`ProStoreTests.swift:864`) drives three routes, and the SKTestSession test (`:469`) drives the hook against real
+`currentEntitlements`. Mutants N3-owed-reload-ends-with-the-window and N3-hook-reads-when-nothing-is-owed die.
+
+**N4: closed.** The code fix is T-0530/T-0534 (`receive`, `:262-272`). This commit adds the clearing of the owed id
+(`:269`) and the session test (`:433`). A 60 s window guarantees that the refund lands inside it. The hidden
+reader makes every read say no, so only the revocation in hand can lock Pro, and the test asserts that, plus
+`catchUp.isCancelled`, the owed id cleared and exactly 2 reloads. Waiting until the test's own read lists the purchase
+before refunding is right: a refund of a transaction the daemon has not settled is not delivered. Both N4 mutants
+die.
+
+**N5: closed.** `testStopCancelsTheCatchUp` (`:839`) now checks each line of `stop()` on its own:
+`catchUp.isCancelled` (cancel deleted), a 1 s `ContinuousClock` bound, `reloadOwedID == nil`, and a lagging read
+after `stop()` that must lock (grant-ahead reset deleted). Both N5 mutants die.
+
+**N6: closed.** `testPurchasedScreenRestoreReachableAtAX5` (`ProPaywallUITests.swift:227`) buys through the screen,
+turns the device, scrolls Restore into reach, and checks that it is hittable and enabled and that its tap says
+"restored". Restore lives in `linkItems` (`ProPaywallView.swift:443-449`), so both N6 mutants remove Restore as
+well as the links. The test <span title="A test written in advance. If it fires, we drop the idea.">kills</span> them through Restore. That would still hold if the Terms URL were nil.
+
+**N7: closed.** The "Legal links check" pre-build phase (`project.yml:114-117`, sandboxing is off at `:13`) runs
+`python3 -I` on `LegalLinks.swift`. Debug is off, a bench build that is not an archive only warns, and every other
+Release build, archives included, fails. The parse fails closed on nil, a computed value, a force-unwrap, http, an
+empty host, and a missing or doubled declaration (a `#if` pair counts as doubled). Xcode reads the `error:`/`warning:`
+prefixes as issues. The privacy suite runs in `run_host.py`.
+
+### New findings
+
+#### R1 (Low): the foreground hook is untested; deleting it leaves every test green
+- Where: `App/PyWidgetApp.swift:103-107`.
+- Failure: X1 above. `payOwedReload()` is unit-tested, but nothing checks that the scene going active calls it.
+  The hook is the one route that pays the owed reload for the person N3 is about: they buy, go to the Home
+  Screen to see the widget, and come back without opening the Pro screen. If it were dropped in a later edit of
+  the scene-phase switch (the file changes often: T-0572 touched it a day later), the widget would keep the locked
+  card for its hour again.
+- Fix: move the `.active` branch into a small `@MainActor` function (e.g. `AppLifecycle.becameActive(store:)`)
+  that a unit test calls with a store owing a reload, and assert 2 reloads. Or add a source-scan test with a mutant,
+  as for other one-line hooks.
+
+#### R2 (Low): the hook's read can lock a paid purchase when the lag is still running at foreground
+- Where: `App/Store/ProStore.swift:153-156` with `:243-244`. The rule it bends is at `:211-214`.
+- Failure: the hook reads only after the window has closed with the reload still owed, which is exactly when
+  `currentEntitlements` has trailed the purchase for more than ~7.5 s. If that read still does not list the
+  purchase, it takes the ordinary branch: `setEntitled(false)` locks Pro, and the widgets reload to the locked
+  card. The next foreground grants again. `settlePurchase`'s own comment rules out a closing read for this reason.
+  The hook is a closing read that fires on each foreground. `testALockAfterTheWindowThenAConfirmationReloadsOncePerChange`
+  (`ProStoreTests.swift:892`) pins this for an ordinary read. Before this commit, a foreground made no read. Low,
+  because a lag past 7.5 s is rare in production and the state heals itself.
+- Fix: make the hook's read lag-tolerant. Pay if it lists the owed id, otherwise change nothing (for example
+  `refreshEntitlement(dropOnNo: false)`, used only by `payOwedReload`). Test: a hook read of `[]` after the window
+  keeps Pro, with 1 reload, and a later agreeing hook read gives 2.
+
+#### I6 (Info)
+The legal check fails every archive, internal TestFlight builds included, until `LegalLinks.privacyPolicy` is
+set (#98 2A). T-0634 says this is intended. The Day 13 TestFlight ask (T-0345 line) therefore also waits on #98 2A.
+The way through is the URL, not the bench flag: `ACTION=install` ignores that flag (`check_legal_links.py:49`).
+
+#### I7 (Info)
+`testRestoreAndLegalLinksReachableAtLargeAndAX5` took 204 s on its passing rerun (63 s to its failure, and the
+purchased-screen test takes 37 s). The T-0527 flake may be a slow wait rather than a missing element. If it fails
+again, look at the scroll loop's timing before the layout.
+
+Counts for this pass: High 0, Medium 0, Low 2 new (R1, R2), Info 2 new (I6, I7). N3-N7 closed. Open from earlier
+passes: L2, L3, L4, the first pass's I1, I3, I5, and re-review 2's I1-I3.
 {% endraw %}
 
 </div>

@@ -11,7 +11,7 @@ description: "The editor itself is right. The fails are its wrap rule and the sc
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Maren, 2026-10-28. Shots: Idris, 54fe1c67 (iPad and AX5) and the iPhone default pair from AppPicturesUITests, all in pywidget/docs/guide/shots/editor-example-tip-splitter-*.png. Build under review: T-0565 slice 1, 5ac90a05, with T-0586 (158ac8da).
+Maren, 2026-10-28. Shots: Idris, 54fe1c67 (iPad and AX5) and the iPhone default pair from AppPicturesUITests, all in pywidget/app-guide-shots/editor-example-tip-splitter-*.png. Build under review: T-0565 slice 1, 5ac90a05, with T-0586 (158ac8da).
 
 Method. Colours were sampled from the PNGs with tools/png_sample.py (new, no Pillow on this Mac), not by eye. Sizes are measured in pixels and divided by the scale (3x iPhone, 2x iPad). `check_tokens.py`: 1,156 pairs, 0 fails, so every token pair the editor uses clears its floor. Rules: creative/approved.md item 2 (B-editor, B-ipad, tokens), design-system-v0.md s2.0, s3.2, s7; IDE spec s2 (clamps, AX rules).
 

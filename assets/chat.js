@@ -116,6 +116,10 @@ var dock = mk(col, 'div', 'cv-dock');
 if (W.ResizeObserver) new W.ResizeObserver(() => { DE.style.setProperty('--cv-dock-fit', 'calc(' + dock.getBoundingClientRect().height + 'px + var(--s2))'); }).observe(dock);
 var jump = mk(col, 'button', 'cv-jump'); jump.type = 'button'; jump.hidden = true;
 jump.onclick = () => { bottom(); jump.hidden = true; markSeen(cur); drawTabs(); };
+var topBtn = mk(col, 'button', 'cv-top', 'Top'); topBtn.type = 'button'; topBtn.hidden = true; topBtn.setAttribute('aria-label', 'Scroll to the top of the page');
+topBtn.onclick = () => { if (W.scrollTo) W.scrollTo(0, 0); };
+function topShow() { topBtn.hidden = !(W.scrollY > 240); }
+if (W.addEventListener) { W.addEventListener('scroll', topShow, { passive: true }); topShow(); }
 function login(x) { return String((x && x.user && x.user.login) || '').toLowerCase(); }
 function numOf(c) { return +String(c.issue_url || '').split('/').pop(); }
 function isInv(l) { return names.indexOf(l) >= 0; }

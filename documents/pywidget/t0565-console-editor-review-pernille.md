@@ -113,7 +113,7 @@ Fix lines for Idris: T-0586 (F1, P2), T-0587 (F2, P3), T-0588 (F3, P3).
 - **Cost per keystroke.** Each keystroke compares the whole text in `updateUIView` (:24) and in `onChange` (:45),
   and `changed()` copies the whole text into the accessibility value. That is three full-text copies per key. It
   is fine at today's file sizes. If a 2,000-line file shows keystroke lag on the device, look here first.
-- **For Maren's T-0583 screenshots.** In `docs/guide/shots/console-default-light.png`, the code starts right
+- **For Maren's T-0583 screenshots.** In `pywidget/app-guide-shots/console-default-light.png`, the code starts right
   against the gutter divider, with no inset. That is Maren's call against the mockups, not a code defect.
 {% endraw %}
 

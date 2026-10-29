@@ -95,6 +95,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open
 - Probation (a) and (b): as in the offer line above.
 - T-0448 app.json: F5 (huge int version), F7 (project_missing code) still open; Swift twin T-0449.
+- T-0645 review done (0eba37be): M1 T-0650, M2 T-0651 for Idris. Board edits left uncommitted for the Operator.
 - T-0446 prompts (ac167352), review fixes T-0462/63/66 in 7db9e91d (API v1.1, 61 cases, mutants.json 29/29). Open: Idris reads rule 4; T-0465 HUD progress; T-0458 tip splitter after T-0447.
 
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
@@ -106,6 +107,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Pixel tests cannot see a plain-style Button(intent:); policy rules need a source scan plus a mutant.
 - A one-line launch hook needs a UI test. Runner keeps bundle modules across runs, so monkeypatches outlive tests.
 - json.loads accepts lone surrogates, JSONSerialization refuses them; os.path then raises UnicodeEncodeError.
+- Runestone TextInputView.insertText replaces the marked range: any non-keyboard insert must unmarkText() first. A UITextInputDelegate spy needs an @available(iOS 18.4) conversationContext stub.
 - iOS number and decimal pads have no minus key. ExamplesUITests type into the console sheet: an example that moves to prompts waits for the Swift handler.
 
 - T-0414 (ad73c08e): bundled names now beat the script folder (ADR-003 s3.6 item 4). Open: T-0631 activate test, T-0632 stdlib shadow leak + Maren notice.

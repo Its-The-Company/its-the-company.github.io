@@ -1,50 +1,74 @@
 {
  "schema": 1,
- "at": "2026-10-29T04:22:43.994694+00:00",
+ "at": "2026-10-29T07:32:54.866927+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-28T23:38:43-04:00"
+  "started": "2026-10-29T00:24:14-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] T-0637 MacBook xc-test recipe",
-   "model": "opus",
-   "started": "2026-10-29T03:41:04.458Z",
+   "name": "maren",
+   "task": "[design] T-0643 draw_icons comment fix",
+   "model": "haiku",
+   "started": "2026-10-29T07:31:30.591Z",
    "seconds": null,
-   "finished": "2026-10-29T04:21:15.519000+00:00"
+   "finished": "2026-10-29T07:32:17.253000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-0636 paywall re-review",
+   "model": "opus",
+   "started": "2026-10-29T07:08:38.213Z",
+   "seconds": null,
+   "finished": "2026-10-29T07:31:15.210000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-0649 G3 verdict and T-0646 probation",
+   "model": "opus",
+   "started": "2026-10-29T06:57:37.857Z",
+   "seconds": null,
+   "finished": "2026-10-29T07:08:13.715000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-0652 re-review bece101c and 6d6bd8fa",
+   "model": "sonnet",
+   "started": "2026-10-29T06:55:28.362Z",
+   "seconds": null,
+   "finished": "2026-10-29T06:57:20.626000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 107,
+  "runnable_count": 99,
   "blocked_count": 48
  },
  "meter": {
   "five_hour": {
-   "pct": 13.0,
-   "resets_at": "2026-10-29T04:59:59.568033+00:00",
+   "pct": 15.0,
+   "resets_at": "2026-10-29T04:59:59.871399+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 87.0,
+   "left": 85.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 70.0,
-   "resets_at": "2026-11-01T06:59:59.568052+00:00",
+   "resets_at": "2026-11-01T06:59:59.871417+00:00",
    "used_words": "of your weekly allowance used",
    "left": 30.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-01T06:59:59.568175+00:00",
+   "resets_at": "2026-11-01T06:59:59.871596+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-28T23:38:42.190379-04:00"
+  "read_at": "2026-10-29T00:24:13.522579-04:00"
  },
  "ui": {
   "week_pct": 0.1,
@@ -63,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-29T00:23:24-04:00"
+  "at": "2026-10-29T03:33:39-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -249,13 +273,6 @@
     "w": "Idris",
     "k": "build",
     "t": "C13 check",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "ADR-004 editor spike",
     "s": "next",
     "o": "c"
    },
@@ -486,13 +503,6 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "T-0041 slice b, after slice a",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
     "t": "DeviceCall carries its timeout",
     "s": "next",
     "o": "c"
@@ -640,21 +650,7 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "T-0515 M2",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
     "t": "T-0515 L1-L3",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0571 re-review N1",
     "s": "next",
     "o": "c"
    },
@@ -750,13 +746,6 @@
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Re-review of T-0497",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "App pictures on the site with no Claude",
@@ -772,29 +761,8 @@
    },
    {
     "w": "Maren",
-    "k": "tools",
-    "t": "The app guide becomes one living document",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Reports show the design-choice screenshots...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Chat page scroll",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
     "k": "design",
-    "t": "After T-0638",
+    "t": "\"What you can build\" page in the app guide",
     "s": "next",
     "o": "i"
    },
@@ -871,29 +839,29 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0637 MacBook xc-test recipe",
-    "at": "2026-10-29T04:21:15.519000+00:00",
+    "w": "Maren",
+    "k": "design",
+    "t": "T-0643 draw_icons comment fix",
+    "at": "2026-10-29T07:32:17.253000+00:00",
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0634 Terms link to Apple EULA",
-    "at": "2026-10-29T03:36:38.470000+00:00",
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-0636 paywall re-review",
+    "at": "2026-10-29T07:31:15.210000+00:00",
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0497 paywall Lows slice 1",
-    "at": "2026-10-29T03:31:34.785000+00:00",
+    "w": "Ines",
+    "k": "plan",
+    "t": "T-0649 G3 verdict and T-0646 probation",
+    "at": "2026-10-29T07:08:13.715000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 107,
+   "next": 99,
    "wait": 22,
    "blocked": 26,
    "you": 6
@@ -904,6 +872,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "task_open"

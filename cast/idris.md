@@ -261,6 +261,7 @@ Dated task logs and full lessons: archive.md.
 - xc.sh: the lock is shared with the MacBook runner; xcodebuild can hang after "Executed": grep the log for the result, kill it. Test runs rewrite time-dependent sheets (02, 09, 12): restore unless refreshing sheets is the task.
 - A bound is only as exact as its unit; build the worst-case file. Untrusted paths: resolve symlinks, then check containment.
 - A packet can contradict a chair ruling: read the ruling, follow it, ask for the call.
+- Restoring Vendor/ from a clean fetch: rsync --delete drops the Vendor/python symlink; rerun fetch_python.sh (T-0651).
 - Take a board id from the board before writing it; fill placeholders before logging; stage only my hunks (pathspec, arrays in zsh).
 
 - Headless iPad Simulator: an appearance switch (XCUIDevice or simctl) is stored but not shown until the host captures the screen; apps launched meanwhile keep the old one. Set it in-app: window overrideUserInterfaceStyle at didBecomeVisible works; scene traitOverrides at willConnect did not (T-0585, T-0617 -ui-style, 7cb4505d).

@@ -222,6 +222,53 @@ no test fails without it, so T-0567 stays open.** One new Medium (N1) and three 
   not cover it. Note only.
 - Runtime: the cross-window misroute (a thread's writes carry the current run's ID) is still mine, a Python-side
   origin-run stamp. It is not on the board yet.
+
+## Re-review 2 (T-0652): 6d6bd8fa (T-0572 N1-N3, T-0569 M2)
+
+Reviewer: Pernille. 2026-10-29. Read from `git show 6d6bd8fa`, the tests, `mutants-t0572.json`, and the logs
+(`ops/runs/xcodebuild-20261029-024352` to `-024652`, `-024729`, `-024933`, `-025032`, `-025119`). No Xcode run of my own.
+
+**Verdict: N1, N2, N3 closed. T-0569 (M2) closed. No new High or Medium. Three Lows.**
+
+### N1: closed
+- `discard` removes the model from `models` first, then closes it. If it was the owner, `every.max { lastUsed }`
+  (the models left plus the spare) takes over through `takeBackground()`, which also resets the stretch so the new
+  window prints a fresh label. If nobody is left, the owner is set to nil. `lastUsed` comes from a global counter, so
+  there are no ties. Closing a window that is not the owner changes nothing (checked by test 2).
+- `lastUsed` is set at creation, at run start and at `finished`. A window made but never run counts as used, so a new
+  empty window made after A and B finished would take over before A. Documented in the test; Low, and arguably right.
+- Tests: a unit test with two models, a three-model test for the "most recently used, not newest" and "only the
+  owner's close moves it" and "last close leaves nil" cases, and a real-bridge test with a daemon thread. Mutants
+  killed: no handoff (`-024352`, three tests red), finish does not count as use (`-024432`), stale stretch kept
+  (`-024503`).
+- **L7 (Low): the real-bridge test is timing-bound.** The thread sleeps 3 s. If B's run and discard take longer, the
+  tick prints while A still owns it and the test passes without the handoff; if it lands during B's run, it shows in
+  B (the known cross-window misroute) and the test goes red. The two unit tests carry the proof. Leave it, or raise
+  the sleep to 6 s and the wait to match.
+
+### N2: closed
+`ConsoleModels.init` calls `first?.takeBackground()`. `testTheLaunchModelShowsRunZeroOutputBeforeAnyConsoleRun` is red
+without it (`-024605`).
+
+### N3: closed
+`say` clears `inBackgroundStretch`. `renderBackground` calls `sayLine(label)` and sets the flag after it, so the order
+is right and the label is not lost. `testAnAppLineEndsTheStretchSoTheLabelComesBack` is red without the line
+(`-024534`). Side effect: any app line (an input echo) inside a run-0 stretch makes the label come back. Rare, since
+run 0 exists only between runs.
+
+### T-0569 (M2): closed
+`testEachWindowsRunOutputInputAndSummaryStayInThatWindow` uses the real bridge with two models. A prints, writes to
+stderr and waits in `input()`: B has no `pendingInput`, then A's text and "Finished" show only in A, and B's run shows
+only in B, with one summary each. Mutant "no run-ID routing filter" is red (`-024652`). The first try of that mutant
+(`-024635`) was a compile error ("case label must have an executable statement"), and Idris reran it with a
+different body, which is the right call. The iPhone More-menu test is red against `if true` (`-025032`) and green
+otherwise (`-024933`); on iPad Air 5/5, no skips (`-025119`).
+- **L8 (Low): the input-routing guard and the `finished` summary guard are not mutated separately.** The test would
+  likely catch them (it checks `b.pendingInput` and the summary count), but only the output filter was shown red.
+
+### Still open, not Idris's
+- N4 (own output after a run-0 partial line joins it) stays a note.
+- The Python-side origin-run stamp for a thread's writes (the cross-window misroute) is still mine, not on the board.
 {% endraw %}
 
 </div>

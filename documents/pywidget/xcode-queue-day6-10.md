@@ -29,7 +29,7 @@ Ines, 2026-10-26 22:17 ET, task T-0331. Replaces the <span title="One numbered p
 | 6 | T-0208 App Intents stubs, StoreKit configuration file | alpha | - |
 | 7 | T-0052 stdlib cut build phase, with T-0213's STDLIB_MODE=zip default | alpha | Pernille T-0339 |
 | 7 | **T-0207 bridge Swift half, tree.json write (P1 -> P0)** | alpha | - |
-| 7 | T-0286 ADR-003 B2 Xcode phase (due Day 9 23:59) | alpha | T-0052, T-0285 (done) |
+| 7 | T-0286 ADR-003 B2 Xcode phase (due Day 9 23:59); .so-to-framework step dropped, native packages are 1.1 (ADR-003 s4.1, 638f21ff; T-0708); pure-set smokes only | alpha | T-0052, T-0285 (done) |
 | 8 | T-0041 editor spike, <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>-G3 (verdict by 10-30 23:59, ADR-004 ruling 2) | alpha | T-0207 |
 | 9 | T-0031 Pro purchase in StoreKit testing (Day 9 milestone) | alpha | T-0208, Pernille T-0338, Maren T-0333 |
 | 9 | T-0041 adapter day, only if keystroke p95 is 16-33 ms | alpha | G1 numbers |

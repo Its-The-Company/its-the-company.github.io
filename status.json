@@ -1,74 +1,74 @@
 {
  "schema": 1,
- "at": "2026-10-29T22:19:21.789775+00:00",
+ "at": "2026-10-29T22:37:10.256178+00:00",
  "session": {
   "active": true,
-  "kind": "evening",
-  "started": "2026-10-29T18:08:10-04:00"
+  "kind": "work",
+  "started": "2026-10-29T18:20:55-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "ines",
-   "task": "[report] evening",
-   "model": "opus",
-   "started": "2026-10-29T22:09:12.503Z",
+   "name": "idris",
+   "task": "[build] T-0737 lane-lock Lows",
+   "model": "sonnet",
+   "started": "2026-10-29T22:35:14.094Z",
    "seconds": null,
-   "finished": "2026-10-29T22:18:05.725Z"
+   "finished": "2026-10-29T22:36:20.451000+00:00"
   },
   {
-   "name": "worker",
-   "task": "[diary] Wrenna",
-   "model": "haiku",
-   "started": "2026-10-29T22:08:36.489Z",
+   "name": "wrenna",
+   "task": "[research] T-0708 ADR-003 1.1 docs",
+   "model": "sonnet",
+   "started": "2026-10-29T22:34:17.404Z",
    "seconds": null,
-   "finished": "2026-10-29T22:09:03.615Z"
+   "finished": "2026-10-29T22:34:59.177000+00:00"
   },
   {
-   "name": "worker",
-   "task": "[diary] Odalys",
-   "model": "haiku",
-   "started": "2026-10-29T22:08:30.922Z",
+   "name": "odalys",
+   "task": "[tools] T-0371 report_facts full ledger",
+   "model": "sonnet",
+   "started": "2026-10-29T22:28:35.718Z",
    "seconds": null,
-   "finished": "2026-10-29T22:08:55.146Z"
+   "finished": "2026-10-29T22:33:53.228000+00:00"
   },
   {
-   "name": "worker",
-   "task": "[diary] Ines",
-   "model": "haiku",
-   "started": "2026-10-29T22:08:27.683Z",
+   "name": "idris",
+   "task": "[build] T-0743 A3 placement count",
+   "model": "sonnet",
+   "started": "2026-10-29T22:21:15.279Z",
    "seconds": null,
-   "finished": "2026-10-29T22:08:54.452Z"
+   "finished": "2026-10-29T22:28:08.215000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 110,
+  "runnable_count": 108,
   "blocked_count": 50
  },
  "meter": {
   "five_hour": {
-   "pct": 6.0,
-   "resets_at": "2026-10-30T00:59:59.972640+00:00",
+   "pct": 7.0,
+   "resets_at": "2026-10-30T01:00:00.283409+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 94.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 79.0,
-   "resets_at": "2026-11-01T06:59:59.972662+00:00",
+   "resets_at": "2026-11-01T07:00:00.283431+00:00",
    "used_words": "of your weekly allowance used",
    "left": 21.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T06:59:59.972853+00:00",
+   "resets_at": "2026-11-01T07:00:00.283553+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-29T18:08:07.642797-04:00"
+  "read_at": "2026-10-29T18:20:54.834632-04:00"
  },
  "ui": {
   "week_pct": 0.101,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-29T18:20:07-04:00"
+  "at": "2026-10-29T18:38:01-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -573,13 +573,6 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Found by T-0742",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
     "t": "T-0312 slice a HUD",
     "s": "next",
     "o": "c"
@@ -809,13 +802,6 @@
     "o": "c"
    },
    {
-    "w": "Wrenna",
-    "k": "docs",
-    "t": "From T-0287",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "T-0722 Lows left after T-0723",
@@ -830,9 +816,9 @@
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0736 Lows on ca6cfe4e",
+    "w": "Maren",
+    "k": "docs",
+    "t": "From T-0708",
     "s": "next",
     "o": "c"
    },
@@ -856,13 +842,6 @@
     "t": "\"What you can build\" page in the app guide",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Report overhaul item 1b",
-    "s": "next",
-    "o": "c"
    },
    {
     "w": "Odalys",
@@ -912,33 +891,40 @@
     "t": "Site_qa.py checks for the additions against...",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "From T-0737 L4",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Ines",
-    "k": "report",
-    "t": "Evening",
-    "at": "2026-10-29T22:18:05.725Z",
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0737 lane-lock Lows",
+    "at": "2026-10-29T22:36:20.451000+00:00",
     "o": "c"
    },
    {
-    "w": "Worker",
-    "k": "diary",
-    "t": "Wrenna",
-    "at": "2026-10-29T22:09:03.615Z",
+    "w": "Wrenna",
+    "k": "research",
+    "t": "T-0708 ADR-003 1.1 docs",
+    "at": "2026-10-29T22:34:59.177000+00:00",
     "o": "c"
    },
    {
-    "w": "Worker",
-    "k": "diary",
-    "t": "Odalys",
-    "at": "2026-10-29T22:08:55.146Z",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0371 report_facts full ledger",
+    "at": "2026-10-29T22:33:53.228000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 110,
+   "next": 108,
    "wait": 25,
    "blocked": 25,
    "you": 6
@@ -949,7 +935,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "task_open"

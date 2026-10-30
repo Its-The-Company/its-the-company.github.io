@@ -1,45 +1,21 @@
 {
  "schema": 1,
- "at": "2026-10-30T10:14:33.659788+00:00",
+ "at": "2026-10-30T10:20:51.841094+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-10-30T03:26:39-04:00"
+  "kind": "morning",
+  "started": "2026-10-30T06:16:12-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "pernille",
-   "task": "[review] T-0767 re-review runner fixes R1-R4",
+   "name": "ines",
+   "task": "[report] morning",
    "model": "opus",
-   "started": "2026-10-30T09:19:48.443Z",
+   "started": "2026-10-30T10:16:31.027Z",
    "seconds": null,
-   "finished": "2026-10-30T10:13:52.945000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0766 runner re-review fixes R1 R2",
-   "model": "opus",
-   "started": "2026-10-30T08:20:30.049Z",
-   "seconds": null,
-   "finished": "2026-10-30T09:19:29.389000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-0764 revert two-Xcode-slot sentences",
-   "model": "sonnet",
-   "started": "2026-10-30T08:19:18.058Z",
-   "seconds": null,
-   "finished": "2026-10-30T08:20:16.560000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[release] T-0077 upload.sh up to export",
-   "model": "sonnet",
-   "started": "2026-10-30T08:17:22.264Z",
-   "seconds": null,
-   "finished": "2026-10-30T08:19:05.477000+00:00"
+   "finished": "2026-10-30T10:18:59.016000+00:00"
   }
  ],
  "queue": {
@@ -50,25 +26,25 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
-   "resets_at": "2026-10-30T10:59:59.628133+00:00",
+   "pct": 9.0,
+   "resets_at": "2026-10-30T11:00:00.460190+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 97.0,
+   "left": 91.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 81.0,
-   "resets_at": "2026-11-01T06:59:59.628148+00:00",
+   "pct": 82.0,
+   "resets_at": "2026-11-01T07:00:00.460215+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 19.0,
+   "left": 18.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T06:59:59.628289+00:00",
+   "resets_at": "2026-11-01T07:00:00.460411+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-30T03:26:38.306184-04:00"
+  "read_at": "2026-10-30T06:16:10.398552-04:00"
  },
  "ui": {
   "week_pct": 0.168,
@@ -87,7 +63,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-30T06:15:20-04:00"
+  "at": "2026-10-30T06:21:36-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -951,6 +927,13 @@
   ],
   "done": [
    {
+    "w": "Ines",
+    "k": "report",
+    "t": "Morning",
+    "at": "2026-10-30T10:18:59.016000+00:00",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "review",
     "t": "T-0767 re-review runner fixes R1-R4",
@@ -962,13 +945,6 @@
     "k": "tools",
     "t": "T-0766 runner re-review fixes R1 R2",
     "at": "2026-10-30T09:19:29.389000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "T-0764 revert two-Xcode-slot sentences",
-    "at": "2026-10-30T08:20:16.560000+00:00",
     "o": "c"
    }
   ],
@@ -984,7 +960,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "task_open"

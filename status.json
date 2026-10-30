@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-10-30T02:02:19.634722+00:00",
+ "at": "2026-10-30T03:22:12.363758+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -18,28 +18,28 @@
  "meter": {
   "five_hour": {
    "pct": 0.0,
-   "resets_at": "2026-10-30T05:59:59.987988+00:00",
+   "resets_at": "2026-10-30T06:00:00.064497+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 80.0,
-   "resets_at": "2026-11-01T06:59:59.988013+00:00",
+   "resets_at": "2026-11-01T07:00:00.064519+00:00",
    "used_words": "of your weekly allowance used",
    "left": 20.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T06:59:59.988201+00:00",
+   "resets_at": "2026-11-01T07:00:00.064690+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-29T21:52:51.739151-04:00"
+  "read_at": "2026-10-29T23:14:59.922670-04:00"
  },
  "ui": {
-  "week_pct": 0.128,
-  "five_hour_pct": 0.173,
+  "week_pct": 0.141,
+  "five_hour_pct": 0.263,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -50,11 +50,11 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-29T22:17:19-04:00",
+ "next_tick": "2026-10-29T23:37:11-04:00",
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-29T23:15:04-04:00"
+  "at": "2026-10-29T23:23:45-04:00"
  },
  "next_tick_why": "last_tick",
  "lanes": [
@@ -110,6 +110,12 @@
  "tasks": {
   "run": [],
   "open": [
+   {
+    "k": "build",
+    "t": "P0, Xcode slot",
+    "s": "next",
+    "o": "c"
+   },
    {
     "w": "Ines",
     "k": "research",
@@ -920,37 +926,15 @@
  "qr": [],
  "inbox": [
   {
-   "id": "c6512993011",
+   "id": "c6514150873",
    "state": "waiting",
    "position": 1,
-   "eta": "2026-10-29T22:17:19-04:00",
+   "eta": "2026-10-29T23:37:11-04:00",
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "Both plugged in an UDID added. Try..."
-  },
-  {
-   "id": "c6512997862",
-   "state": "waiting",
-   "position": 2,
-   "eta": "2026-10-29T22:17:19-04:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Both plugged in an UDID added. Try..."
-  },
-  {
-   "id": "c6513115647",
-   "state": "waiting",
-   "position": 3,
-   "eta": "2026-10-29T22:17:19-04:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Answer this now"
+   "title": "What capabilities did we just unlock..."
   }
  ],
  "trimmed": [

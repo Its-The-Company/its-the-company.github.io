@@ -22,10 +22,11 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Career goal | I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week. |
 {: .facts}
 
-## Activity (51 most recent)
+## Activity (52 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 30, 00:26 | <span class="tag t-milestone">milestone</span> First signed device build of pywidget passed the stdlib size check, installed and launched on the test iPhone (T-0756: embedded code signatures were 1,142,784 B of the 1,363,968 B excess) |  |
 | Oct 29, 19:48 | <span class="tag t-review">review</span> T-0754 review of the runner self-update: 4 Medium findings (network blip rolls back a good release; a hung first check never rolls back; sandbox rules can change unchecked; broken update code can't be replaced); fix line T-0755 for Odalys before the re-install |  |
 | Oct 29, 14:04 | <span class="tag t-commit">commit</span> T-0711/T-0712: widget <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> fixes for T-0710 M1, M2, L1-L3; last step moved to just before the run's code; re-review T-0713 for Odalys |  |
 | Oct 29, 12:49 | <span class="tag t-mistake">mistake</span> Cited T-0708 for Idris's Swift half in T-0707's done-note before reserving an id; T-0708 is Wrenna's. The real line is T-0709, and it says so. |  |
@@ -108,10 +109,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
-- 2026-10-29 T-0730: object.__setattr__ is still an MRO lookup for `__class__`; bind the descriptor (object.__dict__["__class__"].__set__) at import. Never take a value to "restore" from the thing being restored (L1 __file__). Odalys re-reviews as T-0731.
-
-- 2026-10-29 T-0732 (829a3f91): _go now runs the lane check before reading any runner global; __file__ from co_filename. Lesson: f_locals is write-through on 3.13+, so no runner local or global is safe from a planter in _prepare; only values the check restores or immutable objects (code) are. Residual: _hooks_off/_LANE_CHECK lookups, _S["lane_tampered_before"]. Simulator replay owed (T-0734).
 - 2026-10-29 T-0735 (ab318af7): lane threat model + Not held list done; loop closed by ADR-007 16:54. Open: LaneDemotions call site (not wired yet) must sit outside scripts/, else an ordinary script clearing ".." reaches it (2c, back to Ines).
+- 2026-10-30 T-0756 (db445845): size rules measure Mach-O without LC_CODE_SIGNATURE (both generator and check); device builds need CODE_SIGN_IDENTITY="Apple Development" (project.yml "-" wins otherwise). Residual model gap: .origin + privacy files (+0.9%).
+- 2026-10-30 T-0759 (7b5a9cc0): caret test checked the caret against the editor's frame and never against the keyboard; the inset-off mutant passed in landscape. Fix is T-0761 (Idris). Lesson: in reviews, run the mutant on both of the test's paths (warm and fresh-boot Simulator).
 {% endraw %}
 
 

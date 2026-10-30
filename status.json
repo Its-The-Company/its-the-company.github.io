@@ -1,45 +1,78 @@
 {
  "schema": 1,
- "at": "2026-10-30T03:47:11.925815+00:00",
+ "at": "2026-10-30T07:25:05.341798+00:00",
  "session": {
   "active": true,
-  "kind": "inbox",
-  "started": "2026-10-29T23:46:41-04:00"
+  "kind": "work",
+  "started": "2026-10-30T00:03:42-04:00"
  },
  "workers": [],
  "who": "",
- "recent": [],
+ "recent": [
+  {
+   "name": "idris",
+   "task": "[test] T-0761 caret-vs-keyboard assert",
+   "model": "opus",
+   "started": "2026-10-30T06:57:34.953Z",
+   "seconds": null,
+   "finished": "2026-10-30T07:24:38.548000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[fix] T-0761 caret-vs-keyboard assert",
+   "model": "opus",
+   "started": "2026-10-30T06:57:27.802Z",
+   "seconds": null,
+   "finished": "2026-10-30T06:57:27.886Z"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-0759 review T-0758 test fix",
+   "model": "opus",
+   "started": "2026-10-30T06:46:43.672Z",
+   "seconds": null,
+   "finished": "2026-10-30T06:57:15.099000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-0758 A11a flaky caret UI test",
+   "model": "opus",
+   "started": "2026-10-30T05:36:55.358Z",
+   "seconds": null,
+   "finished": "2026-10-30T06:46:17.221000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 115,
+  "runnable_count": 118,
   "blocked_count": 50
  },
  "meter": {
   "five_hour": {
    "pct": 1.0,
-   "resets_at": "2026-10-30T05:59:59.906064+00:00",
+   "resets_at": "2026-10-30T06:00:00.003319+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 80.0,
-   "resets_at": "2026-11-01T06:59:59.906086+00:00",
+   "resets_at": "2026-11-01T07:00:00.003337+00:00",
    "used_words": "of your weekly allowance used",
    "left": 20.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T06:59:59.906262+00:00",
+   "resets_at": "2026-11-01T07:00:00.003464+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-29T23:46:40.533889-04:00"
+  "read_at": "2026-10-30T00:03:41.622716-04:00"
  },
  "ui": {
-  "week_pct": 0.157,
-  "five_hour_pct": 0.369,
+  "week_pct": 0.168,
+  "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -54,22 +87,22 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-29T23:47:54-04:00"
+  "at": "2026-10-30T03:25:50-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
   {
-   "name": "Ines",
+   "name": "Odalys",
    "state": "next",
-   "task": "Ines + Odalys, P3, CORRECTIONS pass 3 s3b tags in docs Wrenna does not own (T-0109, 4eb6a81a; quotes and pages in...",
+   "task": "Odalys, P1, overdue experiment measurements...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Odalys",
+   "name": "Ines",
    "state": "next",
-   "task": "Odalys, P3, 31 closed-hunt scripts under research/hunt/ call urllib/curl directly, bypassing tools/terms_guard.py...",
+   "task": "Ines + Odalys, P3, CORRECTIONS pass 3 s3b tags in docs...",
    "model": null,
    "since": null,
    "next": []
@@ -77,7 +110,7 @@
   {
    "name": "Wrenna",
    "state": "next",
-   "task": "Wrenna, P3, arXiv after T-0220 lands (Ines's ruling research/ops/arxiv-terms.md s9 item 4): one dated line in...",
+   "task": "Wrenna, P3, arXiv after T-0220 lands (Ines's ruling...",
    "model": null,
    "since": null,
    "next": []
@@ -85,7 +118,7 @@
   {
    "name": "Pernille",
    "state": "next",
-   "task": "Pernille, P2, pkg_sandbox LaunchServices deny + R1 (chair ruling T-0738, end of...",
+   "task": "Pernille, P2, pkg_sandbox LaunchServices deny + R1...",
    "model": null,
    "since": null,
    "next": []
@@ -93,7 +126,7 @@
   {
    "name": "Idris",
    "state": "next",
-   "task": "L1/L2 device checks: CMPedometer, CMMotionActivity, HealthKit (locked/unlocked), battery, location inside the widget...",
+   "task": "L1/L2 device checks: CMPedometer, CMMotionActivity,...",
    "model": null,
    "since": null,
    "next": []
@@ -101,7 +134,7 @@
   {
    "name": "Maren",
    "state": "next",
-   "task": "Maren, P1, alpha visual reads on 2026-10-31 (alpha-day10-checklist.md A1, A2, A3, A4, A5, A7): each image from...",
+   "task": "Maren, P1, alpha visual reads on 2026-10-31...",
    "model": null,
    "since": null,
    "next": []
@@ -111,8 +144,9 @@
   "run": [],
   "open": [
    {
-    "k": "build",
-    "t": "P0, Xcode slot",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Overdue experiment measurements",
     "s": "next",
     "o": "c"
    },
@@ -530,13 +564,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Tools/alpha_run.sh runs the hand steps",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Maren",
     "k": "design",
     "t": "After the widget freshness ruling",
@@ -817,6 +844,34 @@
     "o": "c"
    },
    {
+    "w": "Idris",
+    "k": "build",
+    "t": "Investor promise",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review of 1a83993f",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Re-review of 0101715f",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "T-0758 follow-up",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Odalys",
     "k": "tools",
     "t": "App pictures on the site with no Claude",
@@ -915,9 +970,32 @@
     "o": "c"
    }
   ],
-  "done": [],
+  "done": [
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "T-0761 caret-vs-keyboard assert",
+    "at": "2026-10-30T07:24:38.548000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "fix",
+    "t": "T-0761 caret-vs-keyboard assert",
+    "at": "2026-10-30T06:57:27.886Z",
+    "o": "c",
+    "x": "failed"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-0759 review T-0758 test fix",
+    "at": "2026-10-30T06:57:15.099000+00:00",
+    "o": "c"
+   }
+  ],
   "count": {
-   "next": 115,
+   "next": 118,
    "wait": 25,
    "blocked": 25,
    "you": 6
@@ -928,7 +1006,10 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
+  "task_done",
   "task_title",
-  "task_open"
+  "task_open",
+  "lane_task"
  ]
 }

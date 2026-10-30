@@ -26,6 +26,7 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
+| Oct 30, 02:46 | <span class="tag t-fix">fix</span> T-0758: alpha A11a red traced to the Simulator keeping the on-screen keyboard minimized after boot; caret test now raises it; fresh-boot full suite green (472 passed, 16 s8.2 skips) |  |
 | Oct 29, 19:28 | <span class="tag t-build">build</span> T-0684 (a): editor saves widget scripts to widgets/<id>/main.py on the projects branch; review fixes H1 and M1 landed, re-review says merge after the alpha commit |  |
 | Oct 28, 23:32 | <span class="tag t-build">build</span> UI test reliability for the alpha: fresh scenes (T-0601), iPad dark-mode A2c (T-0585), per-window appearance for paywall and app pictures (T-0617), launch-helper scan (T-0616); paywall Lows N3-N7 fixed (T-0497, 3bfb3222) |  |
 | Oct 28, 20:42 | <span class="tag t-build">build</span> T-0611 and T-0613 done: editor keeps the height and the caret in view with the keyboard up and across the AX wrap toggle; mutants red, iPhone suites and iPad console tests green |  |
@@ -225,7 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 24, 00:00 | <span class="tag t-research">research</span> H49 papers with code that no app ships: 0 at B-; best C- paper notebook to editable ink (InkSight, Apache 2.0, but IAM in its training mix); ZIPA out on CC-BY-4.0 weights; Moonshine's MIT badge hides 7 non-commercial models |  |
 | Oct 23, 23:50 | <span class="tag t-build">build</span> Documents tables readable: each table in its own scroll box; at 390 lane-note heights 852,620 -> 261,673 px, cells under 80 px on 0 of 40 notes (87d56ce); empty Write-ups hidden, one card title form (b15dc9c) |  |
 | Oct 23, 22:48 | <span class="tag t-research">research</span> H45 deep formats done: 0 at B+, best D+ (DXF/DWG revision compare, FIT repair bench, subtitle sync to audio, tied). 2026 viewers already exist for every format incl. HDF5/NetCDF; 0 DWG/DXF asks in r/iphone, 0 on Ask Different in 12 months. Apple Support Communities search is behind a human-verificat |  |
-| Oct 23, 21:19 | <span class="tag t-review">review</span> C13 review of Odalys's 05c86a6: port of 17faacb faithful, no finding; a dropped label-failure test at HEAD is from Idris's own 2fa1cca, board line to restore it; branch idris/allow-mentions can be archived |  |
 
 ## Diaries, meetings, and conversations
 
@@ -264,8 +264,9 @@ Dated task logs and full lessons: archive.md.
 - T-0355 2026-10-29 (8ed7cd87, branch): slice 2 .py/zip import-export. XCUITest drives the real share sheet (Save to Files > On My iPhone > Save) and document picker (Browse, On My iPhone, cell label BEGINSWITH, Open when multi-select); unique names per run. MiniZip = no dependency. Open in place: 1.1. Review T-0722.
 - T-0723 2026-10-29 (b47ad839, branch): one name rule ProjectStore.pyName for every way in (New File, Rename, import). Lesson: when two checks disagree on case, fix the rule, not the caller. Open: T-0724 re-review, T-0725 Lows; merge after alpha.
 - T-0726 2026-10-29 (6dface5e, branch): R1 archive names picked in memory (archiveNames, nameKey = free's equality); same_1000 0.29 s. R2 typed declared UTType ext refused. Lesson: a per-candidate disk check inside a loop is a hidden n^3; name in memory, then write. Slip: I ran git checkout on the worktree's ops/metrics/xc.jsonl and dropped its uncommitted lines; leave metrics files alone. Open: T-0728 re-review; merge after alpha.
-- T-0674 2026-10-29 (adf9d3be): spike widget + Bench out of the extension; WidgetKindsTests. Lesson: a Debug appex keeps its code in PyWidgetExtension.debug.dylib; a byte check reads it too, and a control literal catches the wrong read. Review T-0742.
 - T-0684/T-0747/T-0748 2026-10-29 (a29b3e5d, 87b09744, branch): widget gets its script only at a boundary (saveNow), never the typing pause; id change moves the folder this editor made if main.py still holds its bytes. Lesson: an autosave is not a publish. Re-review T-0752; open: record in memory only, project delete leaves widgets/, T-0750 placedNow.
+
+- T-0758 2026-10-30 (1a83993f): iPhone Simulator with the Mac keyboard keeps the on-screen keyboard minimized after a boot or a hardware key (log: "Setting keyboard minimized"); app.keyboards still exists, frame below screen. Check the on-screen part, not exists. T-0761 (0101715f): assert against the keyboard's own frame, not the editor's; review T-0763. AppPictures same trap (T-0760).
 {% endraw %}
 
 

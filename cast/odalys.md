@@ -26,6 +26,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
+| Oct 30, 01:36 | <span class="tag t-milestone">milestone</span> Formal alpha dry run at c82ea335: 22 of 23 steps green, A11a one UI test failure (passes alone) filed as T-0758 for Idris; T-0514 ticked. |  |
 | Oct 29, 19:48 | <span class="tag t-build">build</span> T-0751: MacBook runner can now update itself (runner v3): between jobs, only when VERSION rises, checked before an atomic swap, rollback kept; new job kinds still wait for an Investor |  |
 | Oct 29, 14:32 | <span class="tag t-review">review</span> T-0713 re-review of the widget <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> fixes (9bb407d7): fix first, 3 Medium and 3 Low; no false alarms on device 3.15.1 lazy=all; T-0714 to T-0716 added for Pernille |  |
 | Oct 29, 00:29 | <span class="tag t-blocked">blocked</span> T-0637: approved manifest-sandbox flag (#104 A) rejected by xcodebuild 27.1 as an invalid option; reverted, needs a new decision |  |
@@ -225,7 +226,6 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 24, 19:33 | <span class="tag t-fix">fix</span> Home block now finds stress-test rules files: H163 C1, H172 C2 and H177 C1 had shown 'no rules' (7e7cdafe). Funnel test rebuilds when the ledger moves mid-build (d07b00c8). |  |
 | Oct 24, 19:33 | <span class="tag t-tool">tool</span> board_tick.py now refuses a counted done-note on a [research] line while that lane's blind re-code is open; blind packets tell readers not to grep the board or git log (31472425) |  |
 | Oct 24, 19:30 | <span class="tag t-tool">tool</span> board_tick.py wait holds a board line until a date (board.py idle/count and the governor count it again from that date); fit_words.py now finds words inside r/ subreddit names and CamelCase (7f848cf6) |  |
-| Oct 24, 19:27 | <span class="tag t-ruling">ruling</span> Applied the H185 stress-test rules to Pitch 16 (whole-pack planner): two depth parts failed their pre-set lines (parser 392 of 442, receipt matching 73 of 253), grade B to B-; shelf, crowding and fit checks not met; Paprika second read open until 2026-10-28. |  |
 
 ## Diaries, meetings, and conversations
 
@@ -263,10 +263,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-10-29 lane reviews T-0704..T-0727 (details in archive.md): list what runs after the last restore and what the restore looks up by name; check values and types, not only keys; never free what a check took out; object.__setattr__ finds a planted `__class__` property first. Open: re-review T-0730 (Pernille, K1).
 - 2026-10-29 T-0731: lane lesson: any frame a planter reaches (the sys.argv hook in _prepare) exposes the runner's f_globals and _S; check every read made before the restore runs. P2 -> T-0732 (Pernille). 3.13 suite: 1 unexplained failure in 3 runs, watch it.
 - 2026-10-29 T-0734 (a5b75783): lane loop closed (ADR-007 item 3 is the bar). Lesson: a later run's LOADED can be sys.modules residency (_keep_module keeps stdlib), not the finder; print sys.modules before blaming the check.
-- 2026-10-29 T-0596 (cb426d2e): OPT-032 closed no_effect; model_routing primary. Lesson: REPAIR_SUBJECT matches feature words (StoreKit restore), so read the list before trusting a repair count.
-- 2026-10-29 T-0362 (6ecc63ec): pkg_sandbox closed, LaunchServices probe -> T-0738 (Ines). Lesson: a signal handler that raises stays armed inside cleanup finally blocks; check what an abort there skips (watchdog told "done").
 - 2026-10-29 T-0742 (418db242): T-0674 approved. Lesson: a UI test's 'placed' check on a shared Simulator must count before/after; 30 old PyWidget widgets sat on the 17e. A3 fix T-0743 (Idris) due before 10-30 dry run.
 - 2026-10-29 T-0751 (65869142): runner self-update built; review T-0754 (Pernille). Lessons: the rollback must live outside what it swaps (launch.py); plutil -lint rejects JSON (use -convert xml1 -o /dev/null).
+
+- 2026-10-30 T-0514 (014671a2/5f7fe335): formal dry run ticked, 22/23 green, A11a red -> T-0758 (Idris). Lesson: a UI test red only late in the bare suite (passes alone 3/3) is order/state; rerun alone before filing so the owner gets the class.
 {% endraw %}
 
 

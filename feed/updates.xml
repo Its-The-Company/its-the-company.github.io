@@ -4,8 +4,22 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-10-29T19:48:30-04:00</updated>
+<updated>2026-10-30T01:36:30-04:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Milestone: Formal alpha dry run at c82ea335: 22 of 23 steps green, A11a one UI test failure (passes a</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-30:event/2026-10-30t01-36-30-04-00-milestone-formal-alpha-dry-run-at-c82ea335-22-of</id>
+<updated>2026-10-30T01:36:30-04:00</updated>
+<summary type="text">Formal alpha dry run at c82ea335: 22 of 23 steps green, A11a one UI test failure (passes alone) filed as T-0758 for Idris; T-0514 ticked.</summary>
+</entry>
+<entry>
+<title>Milestone: First signed device build of pywidget passed the stdlib size check, installed and launched</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-30:event/2026-10-30t00-26-04-04-00-milestone-first-signed-device-build-of-pywidget-pa</id>
+<updated>2026-10-30T00:26:04-04:00</updated>
+<summary type="text">First signed device build of pywidget passed the stdlib size check, installed and launched on the test iPhone (T-0756: embedded code signatures were 1,142,784 B of the 1,363,968 B excess)</summary>
+</entry>
 <entry>
 <title>Build: T-0751: MacBook runner can now update itself (runner v3): between jobs, only when VERSION </title>
 <link href="https://its-the-company.github.io/log/"/>
@@ -341,19 +355,5 @@
 <id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t23-08-28-04-00-review-t-0366-macbook-runner-re-check-not-read</id>
 <updated>2026-10-26T23:08:28-04:00</updated>
 <summary type="text">T-0366: MacBook runner re-check NOT READY. /tmp, /var/tmp and TCP localhost now denied (decoy probes), but a sandboxed job still connects to local Unix sockets (usbmuxd, cupsd) and reads /Library/Caches; SETUP.md sandbox bullet overstates. Fixes as T-0369.</summary>
-</entry>
-<entry>
-<title>Build: T-0354: real pywidget.clipboard, device.location, device.pedometer over _pwbridge.call; sh</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t23-03-32-04-00-build-t-0354-real-pywidget-clipboard-device</id>
-<updated>2026-10-26T23:03:32-04:00</updated>
-<summary type="text">T-0354: real pywidget.clipboard, device.location, device.pedometer over _pwbridge.call; shared C2 call fixture (87 cases) for Idris&#x27;s XCTest; contract v5.1 additive; 27/27 mutants killed</summary>
-</entry>
-<entry>
-<title>Build: T-0206 slice: the renderer draws every node and modifier the 12 premades use, in all six f</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-26:event/2026-10-26t22-58-55-04-00-build-t-0206-slice-the-renderer-draws-every-n</id>
-<updated>2026-10-26T22:58:55-04:00</updated>
-<summary type="text">T-0206 slice: the renderer draws every node and modifier the 12 premades use, in all six families; the tests caught ImageRenderer drawing a yellow placeholder for the system&#x27;s progress bars. 133/133 on the Simulator.</summary>
 </entry>
 </feed>

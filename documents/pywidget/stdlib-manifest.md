@@ -54,7 +54,7 @@ Shipped: 228 modules and packages from `lib/` and `lib-dynload/`, plus 39 built 
 </div>
 
 
-- Frameworks/ (full) 32.00 MiB against the spike's 32 MB, 0.0%: `Python.framework` without `Headers/` (Xcode drops it on embed) plus one framework per `.so` (the binary and its Info.plist; the code signature is not modelled).
+- Frameworks/ (full) 32.00 MiB against the spike's 32 MB, 0.0%: `Python.framework` without `Headers/` (Xcode drops it on embed) plus one framework per `.so` (the binary and its Info.plist; the code signature is not modelled, and since T-0756 neither side counts it: see s5).
 - All four bundle figures reconcile within 2%, inside the 5% pass condition. The spike's "about 2.1 MB" of test extension modules measures 1.96 MiB (2.06 decimal MB, -6.7% in MiB, -2% in MB). It is a rounded side note, not a bundle total, and the test does not gate on it.
 - The cut saves 0.24 MiB in `python/` (the spike's zip already left out the big packages) and 4.3 MiB in `Frameworks/`, almost all of it `_remote_debugging` (2.1 MB) and the test extensions (2.0 MB).
 - Device `Frameworks/` is 5.4 MiB smaller than the simulator's, because the simulator `Python.framework` is fat (arm64 + x86_64). App Store thinning is not measured.
@@ -98,16 +98,19 @@ v2 carries out the ruling. 30 names stripped: the 29 above plus `profiling.sampl
 ### Sizes, re-measured
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Sizes, re-measured, scrolls sideways" style="--tw:562px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Sizes, re-measured, scrolls sideways" style="--tw:625px" markdown="1">
 
 | Mode | python/ | Frameworks/ |
 |---|---|---|
 | v1 proposed, simulator | 11.89 MiB (12,468,224 B) | 27.71 MiB |
 | **v2 `app`, simulator** | **10.80 MiB (11,321,344 B)** | **27.71 MiB (29,061,120 B)** |
 | **v2 `app_device_arm64`** | **10.80 MiB (11,329,536 B)** | **22.32 MiB (23,404,544 B)** |
+| v2 `app`, simulator, since T-0756 | 10.80 MiB (11,321,344 B) | 27.53 MiB (28,864,512 B) |
 
 </div>
 
+
+- T-0756 (2026-10-30): every Mach-O is now measured without the code signature embedded in it (LC_CODE_SIGNATURE), by the generator and by the build's bundle check alike (`stdlib_cut.signature_bytes`). The device slice is unsigned, so `app_device_arm64` does not move; the Simulator slice is linker-signed, so `app` drops 196,608 B and `full` 233,472 B (Frameworks/ full 31.78 MiB, -0.7% against the spike). A signed device build carried 1,142,784 B of embedded signatures across 52 binaries, which put it 5.8% over before this rule. Not modelled, and inside the 5%: one `<name>.origin` file per extension framework and the three `PrivacyInfo.xcprivacy` (+221,184 B on device). Evidence: `pywidget/tests/stdlib/evidence/t0756-signed-device-size-check.txt`.
 
 - `profiling.sampling` takes 1,146,880 B on disk out of `python/` (462,842 B of pyc and 676,110 B of data, the figures in the ruling). Frameworks/ does not move: the subpackage is pure Python.
 - `profiling` ships at 12,790 B of pyc (`__init__` and `tracing`), as the ruling measured.

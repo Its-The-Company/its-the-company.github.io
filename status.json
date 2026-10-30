@@ -1,74 +1,74 @@
 {
  "schema": 1,
- "at": "2026-10-30T07:25:05.341798+00:00",
+ "at": "2026-10-30T10:14:33.659788+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-30T00:03:42-04:00"
+  "started": "2026-10-30T03:26:39-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "idris",
-   "task": "[test] T-0761 caret-vs-keyboard assert",
-   "model": "opus",
-   "started": "2026-10-30T06:57:34.953Z",
-   "seconds": null,
-   "finished": "2026-10-30T07:24:38.548000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[fix] T-0761 caret-vs-keyboard assert",
-   "model": "opus",
-   "started": "2026-10-30T06:57:27.802Z",
-   "seconds": null,
-   "finished": "2026-10-30T06:57:27.886Z"
-  },
-  {
    "name": "pernille",
-   "task": "[review] T-0759 review T-0758 test fix",
+   "task": "[review] T-0767 re-review runner fixes R1-R4",
    "model": "opus",
-   "started": "2026-10-30T06:46:43.672Z",
+   "started": "2026-10-30T09:19:48.443Z",
    "seconds": null,
-   "finished": "2026-10-30T06:57:15.099000+00:00"
+   "finished": "2026-10-30T10:13:52.945000+00:00"
   },
   {
-   "name": "idris",
-   "task": "[build] T-0758 A11a flaky caret UI test",
+   "name": "odalys",
+   "task": "[tools] T-0766 runner re-review fixes R1 R2",
    "model": "opus",
-   "started": "2026-10-30T05:36:55.358Z",
+   "started": "2026-10-30T08:20:30.049Z",
    "seconds": null,
-   "finished": "2026-10-30T06:46:17.221000+00:00"
+   "finished": "2026-10-30T09:19:29.389000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-0764 revert two-Xcode-slot sentences",
+   "model": "sonnet",
+   "started": "2026-10-30T08:19:18.058Z",
+   "seconds": null,
+   "finished": "2026-10-30T08:20:16.560000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[release] T-0077 upload.sh up to export",
+   "model": "sonnet",
+   "started": "2026-10-30T08:17:22.264Z",
+   "seconds": null,
+   "finished": "2026-10-30T08:19:05.477000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 118,
-  "blocked_count": 50
+  "runnable_count": 115,
+  "blocked_count": 48
  },
  "meter": {
   "five_hour": {
-   "pct": 1.0,
-   "resets_at": "2026-10-30T06:00:00.003319+00:00",
+   "pct": 3.0,
+   "resets_at": "2026-10-30T10:59:59.628133+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 99.0,
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 80.0,
-   "resets_at": "2026-11-01T07:00:00.003337+00:00",
+   "pct": 81.0,
+   "resets_at": "2026-11-01T06:59:59.628148+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 20.0,
+   "left": 19.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T07:00:00.003464+00:00",
+   "resets_at": "2026-11-01T06:59:59.628289+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-30T00:03:41.622716-04:00"
+  "read_at": "2026-10-30T03:26:38.306184-04:00"
  },
  "ui": {
   "week_pct": 0.168,
@@ -87,22 +87,22 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-30T03:25:50-04:00"
+  "at": "2026-10-30T06:15:20-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
   {
-   "name": "Odalys",
+   "name": "Ines",
    "state": "next",
-   "task": "Odalys, P1, overdue experiment measurements...",
+   "task": "Ines + Odalys, P3, CORRECTIONS pass 3 s3b tags in docs Wrenna does not own (T-0109, 4eb6a81a; quotes and pages in...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Ines",
+   "name": "Odalys",
    "state": "next",
-   "task": "Ines + Odalys, P3, CORRECTIONS pass 3 s3b tags in docs...",
+   "task": "Odalys, P3, 31 closed-hunt scripts under research/hunt/ call urllib/curl directly, bypassing tools/terms_guard.py...",
    "model": null,
    "since": null,
    "next": []
@@ -110,7 +110,7 @@
   {
    "name": "Wrenna",
    "state": "next",
-   "task": "Wrenna, P3, arXiv after T-0220 lands (Ines's ruling...",
+   "task": "Wrenna, P3, arXiv after T-0220 lands (Ines's ruling research/ops/arxiv-terms.md s9 item 4): one dated line in...",
    "model": null,
    "since": null,
    "next": []
@@ -118,7 +118,7 @@
   {
    "name": "Pernille",
    "state": "next",
-   "task": "Pernille, P2, pkg_sandbox LaunchServices deny + R1...",
+   "task": "Pernille, P2, pkg_sandbox LaunchServices deny + R1 (chair ruling T-0738, end of...",
    "model": null,
    "since": null,
    "next": []
@@ -126,7 +126,7 @@
   {
    "name": "Idris",
    "state": "next",
-   "task": "L1/L2 device checks: CMPedometer, CMMotionActivity,...",
+   "task": "L1/L2 device checks: CMPedometer, CMMotionActivity, HealthKit (locked/unlocked), battery, location inside the widget...",
    "model": null,
    "since": null,
    "next": []
@@ -134,7 +134,7 @@
   {
    "name": "Maren",
    "state": "next",
-   "task": "Maren, P1, alpha visual reads on 2026-10-31...",
+   "task": "Maren, P1, alpha visual reads on 2026-10-31 (alpha-day10-checklist.md A1, A2, A3, A4, A5, A7): each image from...",
    "model": null,
    "since": null,
    "next": []
@@ -143,13 +143,6 @@
  "tasks": {
   "run": [],
   "open": [
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Overdue experiment measurements",
-    "s": "next",
-    "o": "c"
-   },
    {
     "w": "Ines",
     "k": "research",
@@ -851,20 +844,6 @@
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review of 1a83993f",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Re-review of 0101715f",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "test",
     "t": "T-0758 follow-up",
@@ -909,7 +888,7 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Fix T-0754's review of the runner self-update",
+    "t": "Fix T-0767's re-review of the runner self-update",
     "s": "next",
     "o": "c"
    },
@@ -972,32 +951,31 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "k": "test",
-    "t": "T-0761 caret-vs-keyboard assert",
-    "at": "2026-10-30T07:24:38.548000+00:00",
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-0767 re-review runner fixes R1-R4",
+    "at": "2026-10-30T10:13:52.945000+00:00",
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "fix",
-    "t": "T-0761 caret-vs-keyboard assert",
-    "at": "2026-10-30T06:57:27.886Z",
-    "o": "c",
-    "x": "failed"
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0766 runner re-review fixes R1 R2",
+    "at": "2026-10-30T09:19:29.389000+00:00",
+    "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-0759 review T-0758 test fix",
-    "at": "2026-10-30T06:57:15.099000+00:00",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "T-0764 revert two-Xcode-slot sentences",
+    "at": "2026-10-30T08:20:16.560000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 118,
+   "next": 115,
    "wait": 25,
-   "blocked": 25,
+   "blocked": 23,
    "you": 6
   }
  },
@@ -1009,7 +987,6 @@
   "recent",
   "task_done",
   "task_title",
-  "task_open",
-  "lane_task"
+  "task_open"
  ]
 }

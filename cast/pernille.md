@@ -111,7 +111,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 2026-10-29 T-0735 (ab318af7): lane threat model + Not held list done; loop closed by ADR-007 16:54. Open: LaneDemotions call site (not wired yet) must sit outside scripts/, else an ordinary script clearing ".." reaches it (2c, back to Ines).
 - 2026-10-30 T-0756 (db445845): size rules measure Mach-O without LC_CODE_SIGNATURE (both generator and check); device builds need CODE_SIGN_IDENTITY="Apple Development" (project.yml "-" wins otherwise). Residual model gap: .origin + privacy files (+0.9%).
-- 2026-10-30 T-0759 (7b5a9cc0): caret test checked the caret against the editor's frame and never against the keyboard; the inset-off mutant passed in landscape. Fix is T-0761 (Idris). Lesson: in reviews, run the mutant on both of the test's paths (warm and fresh-boot Simulator).
+- 2026-10-30 T-0759/T-0763 closed (2ddaea8b): run the mutant on both paths (warm, fresh boot). XCUI portrait keyboard minY sits 17 pt below the app's keyboard safe-area top (560 vs 543); landscape agrees (210).
+- 2026-10-30 T-0765 (24b4fd3a): runner re-review, R1 approve-sandbox sha drifts with /tmp launchd folders (fixed inputs needed), R2 no ceiling after confirm; fix T-0766, re-review mine. Mutants: tests/macbook_runner_update_mutants.json via tools/mutants.py (split in halves, <10 min each; kill the M2 orphan).
+- 2026-10-30 T-0767 (dad2c90b, 729bf2b1): runner v5 not ready, R6 Medium: killpg reaches one group; run_limited and job steps use start_new_session, so a stopped poll leaves them alive (probe). Fix T-0768, re-review mine.
 {% endraw %}
 
 

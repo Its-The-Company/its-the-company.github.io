@@ -266,7 +266,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-10-29 T-0742 (418db242): T-0674 approved. Lesson: a UI test's 'placed' check on a shared Simulator must count before/after; 30 old PyWidget widgets sat on the 17e. A3 fix T-0743 (Idris) due before 10-30 dry run.
 - 2026-10-29 T-0751 (65869142): runner self-update built; review T-0754 (Pernille). Lessons: the rollback must live outside what it swaps (launch.py); plutil -lint rejects JSON (use -convert xml1 -o /dev/null).
 
-- 2026-10-30 T-0514 (014671a2/5f7fe335): formal dry run ticked, 22/23 green, A11a red -> T-0758 (Idris). Lesson: a UI test red only late in the bare suite (passes alone 3/3) is order/state; rerun alone before filing so the owner gets the class.
+- 2026-10-30 T-0514 (014671a2/5f7fe335): formal dry run ticked, 22/23 green, A11a red -> T-0758 (Idris). Lesson: a UI test red only late in the bare suite (passes alone 3/3) is order/state; rerun alone before filing so the owner gets the class.- 2026-10-30 T-0755 (aaf46f82): runner self-update fixes; re-review T-0765 (Pernille). Lesson: a rollback guard must tell "the network failed" from "the release failed" (exit 75), and anything compared by hash must have its temp paths replaced first.
+- 2026-10-30 T-0766 (39439a9d): lesson: a hash a human approves must come from fixed inputs only (live /tmp went stale between hold and approval); a release name with a 1 s clock collides after a crash. Open: T-0767 re-review (Pernille), R5, L4.
 {% endraw %}
 
 

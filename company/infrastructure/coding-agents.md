@@ -21,6 +21,10 @@ from those notes, which name the primary file and the conditions; the note and i
 given beside each number so it can be traced. Numbers marked **[here]** were measured in this task on our own records.
 Nothing is "adopted" yet: adoption means it beat its control here (item 4 of the request).
 
+Updated 2026-10-30 (T-0772, Odalys): the table's last column, #4 to #15's decisions and the ledger section below. Text
+not marked with that date is the 2026-10-26 record. Our numbers in the update: `python3 tools/technique_counts.py`, since
+2026-10-28 00:00 (7,938 subagent tool calls, 233 worker calls joined to cost, $344.46). The triage is OPT-060.
+
 ## How to read this
 
 Our five differences (from the request), used in every entry:
@@ -50,6 +54,7 @@ A constraint found while writing the ledger entries: **the switchback slot is si
 tools/switchback.py runs one flag at a time. OPT-030 holds it (started 00:42, `armed: false`, n=0, waiting for its
 diff to land in rules/build_agents.py); OPT-032 and OPT-033 are queued behind it. A new switchback started today
 would start about 10-29 at one day per experiment. See "Process changes this catalogue needs" at the end.
+(2026-10-30: no longer so. A second flag can run crossed since T-0599, and the crossed slot is free since OPT-032 stopped.)
 
 ---
 
@@ -60,21 +65,21 @@ would start about 10-29 at one day per experiment. See "Process changes this cat
 
 | # | Technique | Key number | Status here |
 |---|---|---|---|
-| 1 | One worktree per agent | CAID Commit0-Lite 53.1 / 56.1 / 59.1 (single / shared workspace / worktrees) | designed (OPS-6), ledger OPT-035 proposed |
+| 1 | One worktree per agent | CAID Commit0-Lite 53.1 / 56.1 / 59.1 (single / shared workspace / worktrees) | designed (OPS-6), ledger OPT-035 proposed; queued, waits on a work.md clause not yet written |
 | 2 | Acceptance test written first by an agent that has not seen the fix; reviewer judges from run output | 7 of 12 failed Opus 4.6 runs last saw a green suite (B M4) | no effect (phase 1): OPT-034 offline replay 0 of 8 caught, 7 false alarms (T-0163, 8043f5a8); a re-try needs per-check grading under a new pre-registration |
-| 3 | Stable, lighter standing prompt (memory out of the system prompt) | persona-prefix cache hit 28% without a MEMORY.md commit between spawns, 2% with one (C M7) | testing: OPT-030 in flight, OPT-032 proposed |
-| 4 | Keep main green: run the suites on HEAD every supervisor tick | 4 suites red at HEAD met by 3 tasks on 10-26 (C T11) | ledger OPT-036 proposed |
-| 5 | Keep the evaluator out of the improver's reach | DGM node 114 removed the logging its detector used (D4) | to build (tools/experiments.py) |
-| 6 | Offline replay set from our own finished tasks | Anthropic: "20-50 simple tasks drawn from real failures is a great start" (C T8) | first use inside OPT-034 |
-| 7 | Second attempt on trigger, from a different model or instruction, chosen by tests | another run rescued 25% of Opus 4.6's failures (B M3) | waits on #1 |
-| 8 | Shared claims and findings record; declared write scope | DeLM on Opus 5.5: 2.02x faster; without peer status 0.82-0.87x (D3) | measure first |
-| 9 | Count builds and fix rounds per task (first-try build success) | Aider pass 1 -> pass 2 median +29.4 points over 69 rows (A1) | loop exists; the count does not |
-| 10 | Cap and steer large tool output | **[here]** a 12,000-char Bash cap trims 10.9% of subagent Bash result chars | below what we can detect; parked |
-| 11 | Loop scan, then call-count escalation | resolve rate 87% at <=20 calls, 47% at 76+ (B M2) | offline scan first |
-| 12 | Effort budgets per task kind | Anthropic early research agents spawned 50 subagents for simple queries (D7) | not started |
-| 13 | Premise check before the first edit | decisive error at median step 7 of 27 in failed runs (D6) | not started |
-| 14 | Syntax check after every edit (hook) | SWE-agent 18.0% with lint-guarded edit vs 15.0% without (A2) | proposal later |
-| 15 | Operator completion check (Stop hook) | 1,875 idle agent-minutes in 8 drains (C T4, drain-cost.md) | only if drains persist after T-0133 |
+| 3 | Stable, lighter standing prompt (memory out of the system prompt) | persona-prefix cache hit 28% without a MEMORY.md commit between spawns, 2% with one (C M7) | no effect so far: OPT-030 stopped at n=0, superseded by PR #71; OPT-032 no effect (n=10 per arm, p 0.233) |
+| 4 | Keep main green: run the suites on HEAD every supervisor tick | 4 suites red at HEAD met by 3 tasks on 10-26 (C T11) | dropped untested 10-28 (T-0594): OPT-036's step was never built and its before was never run, so no effect was shown either way |
+| 5 | Keep the evaluator out of the improver's reach | DGM node 114 removed the logging its detector used (D4) | ledger OPT-057 proposed: no usage effect, it protects verdicts; ranked third |
+| 6 | Offline replay set from our own finished tasks | Anthropic: "20-50 simple tasks drawn from real failures is a great start" (C T8) | not trying now: about $103 of the week per 20 tasks x 3, none of it finishing a task, and no technique waits on it. Reopen when a live test needs a replay first |
+| 7 | Second attempt on trigger, from a different model or instruction, chosen by tests | another run rescued 25% of Opus 4.6's failures (B M3) | not trying: about 2x cost on the lines it touches, and it needs #1's worktrees and #2's test, which showed no effect |
+| 8 | Shared claims and findings record; declared write scope | DeLM on Opus 5.5: 2.02x faster; without peer status 0.82-0.87x (D3) | not trying now: 1.01 and 0.75 agents running on average on 10-28 and 10-29, so few overlaps. Reopen on a LOCK IN day or at 3 or more on average |
+| 9 | Count builds and fix rounds per task (first-try build success) | Aider pass 1 -> pass 2 median +29.4 points over 69 rows (A1) | in use: first-try build and fix attempts are charted per session by tools/build_metrics.py (n=36 and n=33) |
+| 10 | Cap and steer large tool output | **[here]** a 12,000-char Bash cap trims 10.9% of subagent Bash result chars | ledger OPT-058 proposed at 8,000 chars; first to ship, after the alpha commit (T-0777) |
+| 11 | Loop scan, then call-count escalation | resolve rate 87% at <=20 calls, 47% at 76+ (B M2) | not trying: the scan ran, 2 repeat calls of 7,938 in 234 threads; no loop to cut |
+| 12 | Effort budgets per task kind | Anthropic early research agents spawned 50 subagents for simple queries (D7) | ledger OPT-059 proposed: OPT-051 sets model and effort, not a budget; ceiling 8.6% of dollars; second to ship (T-0778) |
+| 13 | Premise check before the first edit | decisive error at median step 7 of 27 in failed runs (D6) | not trying: at best about 0.9% of tasks by outside rates, for 1-3 added calls on every task; a net cost |
+| 14 | Syntax check after every edit (hook) | SWE-agent 18.0% with lint-guarded edit vs 15.0% without (A2) | not trying: the count ran, 1 of 210 edits followed by a parser error within 2 calls; a hook needs "approve" |
+| 15 | Operator completion check (Stop hook) | 1,875 idle agent-minutes in 8 drains (C T4, drain-cost.md) | testing the job through OPT-050 (the session-end flag); no Stop hook: 0 of 23 work sessions failed to close |
 
 </div>
 
@@ -224,7 +229,8 @@ would start about 10-29 at one day per experiment. See "Process changes this cat
 - **Cost and risk.** CPU only, about one run.sh per tick. Risk: load on the 16 GB machine slows agents' own runs;
   flaky suites create noise lines (the step must name a suite red twice in a row before adding a line).
 - **Investor-owned?** No (tools/ is company-owned).
-- **Ledger.** OPT-036 (proposed; starts when the step lands).
+- **Ledger.** OPT-036, dropped untested 2026-10-28 (T-0594): the step was not built and its before replay was not run.
+  A new entry may reopen it with that replay written first.
 
 ### 5. Keep the evaluator out of the improver's reach {#t5}
 
@@ -251,6 +257,8 @@ would start about 10-29 at one day per experiment. See "Process changes this cat
 - **Metric.** Not a switchback: a safeguard. Count: verdicts changed by an independent re-grade.
 - **Cost and risk.** Small code change; slower verdicts.
 - **Investor-owned?** No for experiments.py; the packet line is a work.md sentence (proposal).
+- **Decision (T-0772).** Ledger OPT-057, proposed. Before: 4 of 7 closed non-legacy entries that name a tool had one
+  change inside the window. It moves no usage, so it ranks behind #10 and #12.
 
 ### 6. An offline replay set from our own finished tasks {#t6}
 
@@ -272,6 +280,10 @@ would start about 10-29 at one day per experiment. See "Process changes this cat
 - **Metric.** It is the measuring tool for 2, 7, 11, 13. Cost: usage we would otherwise lose. Risk: replays that
   differ from live work (no concurrent agents) overstate gains.
 - **Investor-owned?** No.
+- **Decision (T-0772).** Not trying now. D1 no longer applies this week: the meter read 82% on 10-30 with 2 days left,
+  and each day's share is spent ($185.55 and $173.16 on 10-28 and 10-29). 20 tasks x 3 at the mean $1.72 is about $103,
+  5.3% of the week, with no task finished. OPT-034's replay.py stays as the hand pattern. #2, #7, #11 and #13, which it
+  would measure, are closed or not being tried. Reopen when a live test needs a replay first.
 
 ### 7. A second attempt on trigger, from a different model or instruction, chosen by tests {#t7}
 
@@ -295,6 +307,9 @@ would start about 10-29 at one day per experiment. See "Process changes this cat
   writes one differentiating test if both pass. Start with [tools] and Python runtime lines.
 - **Metric.** Fix attempts per bug; defects found in QA. Cost about 2x on triggered lines only. Risk: merge noise.
 - **Investor-owned?** Yes through #1 (work.md). After #1 and #2.
+- **Decision (T-0772).** Not trying. The binding limit is usage per finished task, and this about doubles the cost of the
+  lines it touches for about +3.5 points (notes-B's estimate). Its selector needs #2's test (no effect, OPT-034) and #1's
+  worktrees (OPT-035 queued). A red review already sends a line back for a second attempt.
 
 ### 8. A shared claims and findings record; declared write scope {#t8}
 
@@ -319,6 +334,10 @@ would start about 10-29 at one day per experiment. See "Process changes this cat
 - **Metric.** Undeclared-path share per task; duplicate-effort tasks per session; orientation calls per thread.
 - **Cost and risk.** Small. Risk: one more record to keep current. **Investor-owned?** No for the tools; the packet
   use rides on OPT-032 or a work.md line.
+- **Decision (T-0772).** Not trying now. The gain is shown for agents running at once, and spreading the day leaves few:
+  1.01 and 0.75 on average on 10-28 and 10-29 (ops_metrics.py --pace). OPT-032 (task packets) showed no effect on
+  orientation calls, and swept board lines fell from 87 in 10 of 34 worker commits on 10-26 to 4 in 2 of 34 on 10-28
+  (OPT-053). Reopen on a LOCK IN day or at 3 or more agents on average.
 
 ### 9. Count builds and fix rounds per task (the Investors' first-try build success) {#t9}
 
@@ -336,6 +355,9 @@ would start about 10-29 at one day per experiment. See "Process changes this cat
   the packet) and exit status per run; tools/ops_metrics.py reports builds per task and first-try success by kind.
 - **Metric.** Instrumentation, not a switchback. Cost: minutes. **Investor-owned?** No (the packet line naming
   TASK_ID is a work.md sentence; until then, match runs to tasks by thread).
+- **Decision (T-0772).** Already does the job. tools/build_metrics.py matches runs to tasks by the Agent description in
+  the stream, so TASK_ID was not needed. Charts: first_try_build (n=36 sessions, centre 0.69), fix_attempts (n=33, centre
+  1.57). review_defects has 4 points, the last on 10-26: a gap in the four build metrics, not in this technique.
 
 ### 10. Cap and steer large tool output {#t10}
 
@@ -349,9 +371,11 @@ would start about 10-29 at one day per experiment. See "Process changes this cat
   binds); a 12,000 cap would cut 481 calls (5.7%) and 2,741,808 of 25,046,718 result chars (10.9%); an 8,000 cap 909
   calls and 21.7%; 218 of the 481 over-12k results (45%) were followed in the same thread by a call with the same
   command word and under half the size (a crude "narrowed anyway" count; same word is not same intent).
-- **Why parked.** Bash results are part of the 61%; a 12k cap would move total subagent input by a few percent at
-  most (my estimate, not measured), below what n=12 sessions per arm can detect (A/A, intro). Kept for the day the
-  switchback slot is free, or folded into #3's ablations.
+- **Why parked (2026-10-26).** Bash results are part of the 61%; a 12k cap would move total subagent input by a few
+  percent at most (my estimate, not measured), below what n=12 sessions per arm can detect (A/A, intro). Kept for the day
+  the switchback slot is free, or folded into #3's ablations.
+- **Decision (T-0772).** Ledger OPT-058, first to ship (T-0777). The slot is free. An 8,000 cap removes 17.7% of Bash
+  result chars (572 of 7,205 calls), about -10% of subagent dollars by estimate. Read per worker call: n=490 per arm.
 - **Investor-owned?** No if exported in tools/supervisor.sh; yes via .claude/settings.json.
 
 ### 11. Loop scan over our transcripts, then call-count escalation {#t11}
@@ -366,6 +390,9 @@ would start about 10-29 at one day per experiment. See "Process changes this cat
   error 3+ times in a thread); only if hits explain real losses, a hook (rules/hooks/, "approve") nudges or a high call
   count triggers #2's review or #7's second attempt.
 - **Metric.** Turn-limit stops; cost per failed task. **Investor-owned?** The scan no; a hook yes.
+- **Decision (T-0772).** Not trying. The scan ran as tools/technique_counts.py: 0 identical failures 3 or more times in a
+  thread, 1 run of the same input 3 or more times in a row, 2 repeat calls of 7,938, 234 threads. OPT-031 closed the
+  turn-limit stops. Reopen if a turn-limit stop returns.
 
 ### 12. Effort budgets per task kind {#t12}
 
@@ -378,6 +405,9 @@ would start about 10-29 at one day per experiment. See "Process changes this cat
 - **Change here.** A table in the packet template by kind (turns, tool calls), set from tools/ops_metrics.py medians
   per kind; persona maxTurns stays the hard cap. **Metric.** Cost per finished task by kind, turn-limit stops.
   **Investor-owned?** work.md (proposal). Low here: we are not over-spawning.
+- **Decision (T-0772).** Ledger OPT-059, second to ship (T-0778). Checked against OPT-051: it sets model and effort, not
+  how far a thread runs, so it does not do this job. 52 of 233 worker calls ran past their kind's P75. Stopping all of them
+  there would save at most 8.6% of dollars, before continuation costs.
 
 ### 13. Premise check before the first edit {#t13}
 
@@ -390,6 +420,9 @@ would start about 10-29 at one day per experiment. See "Process changes this cat
 - **Change here.** Packet line: "Before the first edit, list the 1-3 facts the change depends on and the command or
   file line that confirmed each." **Metric.** Share of tasks with a rework commit within 24 h. **Investor-owned?**
   work.md (proposal). Replayable in #6.
+- **Decision (T-0772).** Not trying. Redo events are 23 per 218 finished tasks (10.5%, 10-28 and 10-29). Outside rates
+  (false premise 30.7%, monitor recall 28.8%, another benchmark) leave about 0.9% of tasks. The line adds 1-3 calls to a
+  median thread of 30. Reopen if the redo share passes 15%.
 
 ### 14. Syntax check after every edit {#t14}
 
@@ -400,6 +433,8 @@ would start about 10-29 at one day per experiment. See "Process changes this cat
 - **Change here.** First count, from ops/runs, Edit/Write results followed by a syntax error; only then a PostToolUse
   hook (py_compile, bash -n, plutil, json, `swiftc -parse` without the Xcode slot). **Investor-owned?** Yes:
   rules/hooks/ and settings, "approve" only.
+- **Decision (T-0772).** Not trying. The count ran: 1 of 210 Edit or Write calls was followed by a parser error within
+  2 calls. Nothing here is worth an "approve".
 
 ### 15. Operator completion check (Stop hook) {#t15}
 
@@ -409,6 +444,10 @@ would start about 10-29 at one day per experiment. See "Process changes this cat
   (log/audit/drain-cost.md); the chain gate was fixed in T-0133 (dc2594b8) and proposal #68 changes the close rule.
 - **Change here.** Only if drains persist after #68 and T-0133: a command Stop hook that blocks while runnable tasks
   exist and the pool is under target. **Investor-owned?** Yes (settings).
+- **Decision (T-0772).** The job is done another way: OPT-050 (in flight) ends each session on ops/session_end.json, and
+  OPT-033 was kept by Investor instruction. 0 of 23 work sessions since 10-27 18:40 failed to close themselves. Idle
+  minutes under a target of 8 no longer measure a loss: the spread pool is the Investors' pace and the day's share is spent.
+  No Stop hook.
 
 ---
 
@@ -458,17 +497,32 @@ would start about 10-29 at one day per experiment. See "Process changes this cat
 
 ## The ledger entries from this catalogue
 
-- **OPT-034** (#2) first experiment: offline replay starts now; live phase only if it passes.
-- **OPT-035** (#1) worktree switchback, transcribed from trial-worktree.md s4; proposed.
-- **OPT-036** (#4) suites on HEAD each tick; proposed, xmr, starts when the supervisor step lands.
-- **OPT-030, OPT-032** (#3) already in the ledger.
+The Techniques page reads this section. A line starting with OPT IDs ties them to a technique, and its status comes from
+the ledger. With no ID, "Not trying" or "Already does the job" records the decision (T-0772).
+
+- **OPT-034** (#2) offline replay: 0 of 8 caught, so no live phase; no effect.
+- **OPT-035** (#1) worktree switchback, transcribed from trial-worktree.md s4; proposed, queued.
+- **OPT-036** (#4) suites on HEAD each tick; dropped untested 2026-10-28 (T-0594).
+- **OPT-030, OPT-032** (#3) OPT-030 stopped at n=0, superseded; OPT-032 no effect.
+- **OPT-057** (#5) metric code held still during a window; proposed.
+- **Not trying** (#6): costs usage and finishes no task; no technique waits on it.
+- **Not trying** (#7): about 2x cost on the lines it touches; needs #1 and #2.
+- **Not trying** (#8): under 1.1 agents at once on average; reopen on a LOCK IN day.
+- **Already does the job** (#9): the first_try_build and fix_attempts charts.
+- **OPT-058** (#10) Bash output cap of 8,000 chars; proposed; first to ship, T-0777.
+- **Not trying** (#11): the scan found 2 repeat calls of 7,938.
+- **OPT-059** (#12) tool-call budget per kind; proposed; second to ship, T-0778.
+- **Not trying** (#13): a net cost at the rates we have.
+- **Not trying** (#14): 1 of 210 edits followed by a parser error.
+- **OPT-050** (#15) the session-end flag does the Stop hook's job; in flight.
 
 ## Process changes this catalogue needs (not techniques)
 
 1. **The switchback slot.** One flag at a time, OPT-030 holding it unarmed since 00:42. Proposal for tools/switchback.py
    (company-owned): concurrent flags on disjoint metrics, each with its own arm sequence from a seeded shuffle, so arms
    are independent rather than in lockstep; and a rule that an unarmed flag older than 6 h yields the slot. Without
-   it, #1 starts about 10-29.
+   it, #1 starts about 10-29. (2026-10-30: crossed flags exist, T-0599; one crossed slot. T-0777 adds an alternating arm
+   rule, because a second crossed4 flag would sit in lockstep with OPT-051.)
 2. **Task-level A/B.** Techniques #2, #7, #13 act per task, not per session. A per-task arm (T-ID parity, assigned at
    dispatch) gives about 4x the sample of a per-session arm. Needs a `design: task_ab:<flag>` form in
    tools/experiments.py and the compare step to read arms from task records.

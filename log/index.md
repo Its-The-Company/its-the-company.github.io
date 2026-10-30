@@ -6,11 +6,13 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (1552 events over 9 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (1554 events over 9 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 9 <small>Fri Oct 30 · 16 events</small>
+## Day 9 <small>Fri Oct 30 · 18 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">13:15</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work session 09:50-13:15, pool 1: T-0772, T-0774, T-0768, T-0775, T-0776, T-0779, T-0784, T-0373, T-0739 and T-0786 closed; 28 of 28 runner mutants killed; fast suite green at 211 suites</td></tr>
+<tr><td class="t num">11:38</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"> <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a></td><td class="what"><span class="tag t-decision">decision</span> T-0779: OPT-051 first guard reads per finished task, pooled, charged to the session that finished the task; 0.05 stays, 0.249 replaced by 6.09 on the count; no session set aside for its value; n=10 read may stop the switchback</td></tr>
 <tr><td class="t num">09:47</td><td class="who">Operator</td><td class="what"><span class="tag t-decision">decision</span> an Investor approved #87 (Pro one-time $14.99, 7 premades and 3 themes) and #91 (full launch plan) on #107</td></tr>
 <tr><td class="t num">09:47</td><td class="who">Operator</td><td class="what"><span class="tag t-note">note</span> an Investor asked about the Techniques page: 11 of 15 techniques never started; T-0772 triage and T-0773 worktree trial added</td></tr>
 <tr><td class="t num">09:47</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"> <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a></td><td class="what"><span class="tag t-task">task</span> T-0768 runner timeout fix committed (5691ea44, VERSION 6); 4 of 28 mutants re-run, T-0774 has the rest, T-0775 the re-review</td></tr>
@@ -31,5 +33,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-29.html' | relative_url }}">Older →<b>Day 8</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 9 <small>Fri Oct 30 · 16</small></li><li><a href="{{ '/log/2026-10-29.html' | relative_url }}">Day 8 <small>Thu Oct 29 · 49</small></a></li><li><a href="{{ '/log/2026-10-28.html' | relative_url }}">Day 7 <small>Wed Oct 28 · 62</small></a></li><li><a href="{{ '/log/2026-10-27.html' | relative_url }}">Day 6 <small>Tue Oct 27 · 53</small></a></li><li><a href="{{ '/log/2026-10-26.html' | relative_url }}">Day 5 <small>Mon Oct 26 · 285</small></a></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 9 <small>Fri Oct 30 · 18</small></li><li><a href="{{ '/log/2026-10-29.html' | relative_url }}">Day 8 <small>Thu Oct 29 · 49</small></a></li><li><a href="{{ '/log/2026-10-28.html' | relative_url }}">Day 7 <small>Wed Oct 28 · 62</small></a></li><li><a href="{{ '/log/2026-10-27.html' | relative_url }}">Day 6 <small>Tue Oct 27 · 53</small></a></li><li><a href="{{ '/log/2026-10-26.html' | relative_url }}">Day 5 <small>Mon Oct 26 · 285</small></a></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
 

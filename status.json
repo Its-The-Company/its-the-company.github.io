@@ -1,53 +1,77 @@
 {
  "schema": 1,
- "at": "2026-10-30T13:48:04.258313+00:00",
+ "at": "2026-10-30T17:15:46.268428+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-30T06:22:23-04:00"
+  "started": "2026-10-30T09:49:45-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "odalys",
-   "task": "[tools] T-0768 runner R6 stopped-poll children",
+   "task": "[tools] T-0786 fast suite reds",
    "model": "opus",
-   "started": "2026-10-30T10:22:59.993Z",
+   "started": "2026-10-30T16:43:34.962Z",
    "seconds": null,
-   "finished": "2026-10-30T13:47:37.933000+00:00"
+   "finished": "2026-10-30T17:14:49.146000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-0739 pkg_sandbox deny and R1",
+   "model": "opus",
+   "started": "2026-10-30T16:18:24.539Z",
+   "seconds": null,
+   "finished": "2026-10-30T16:43:22.911000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-0373 request card, close rules",
+   "model": "opus",
+   "started": "2026-10-30T15:57:01.389Z",
+   "seconds": null,
+   "finished": "2026-10-30T16:17:43.116000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-0784 OPT-051 deciding guard",
+   "model": "opus",
+   "started": "2026-10-30T15:38:18.087Z",
+   "seconds": null,
+   "finished": "2026-10-30T15:56:50.345000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 121,
-  "blocked_count": 49
+  "runnable_count": 119,
+  "blocked_count": 53
  },
  "meter": {
   "five_hour": {
-   "pct": 9.0,
-   "resets_at": "2026-10-30T11:00:00.460190+00:00",
+   "pct": 3.0,
+   "resets_at": "2026-10-30T15:59:59.626888+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 91.0,
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 82.0,
-   "resets_at": "2026-11-01T07:00:00.460215+00:00",
+   "resets_at": "2026-11-01T06:59:59.626908+00:00",
    "used_words": "of your weekly allowance used",
    "left": 18.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T07:00:00.460411+00:00",
+   "resets_at": "2026-11-01T06:59:59.627058+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-30T06:16:10.398552-04:00"
+  "read_at": "2026-10-30T09:49:44.240371-04:00"
  },
  "ui": {
-  "week_pct": 0.168,
+  "week_pct": 0.167,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -63,14 +87,14 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-30T09:48:54-04:00"
+  "at": "2026-10-30T13:16:00-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
   {
    "name": "Ines",
    "state": "next",
-   "task": "Ines + Odalys, P3, CORRECTIONS pass 3 s3b tags in docs Wrenna does not own (T-0109, 4eb6a81a; quotes and pages in...",
+   "task": "Ines + Odalys, P3, CORRECTIONS pass 3 s3b tags in docs...",
    "model": null,
    "since": null,
    "next": []
@@ -78,7 +102,7 @@
   {
    "name": "Odalys",
    "state": "next",
-   "task": "Odalys, P3, 31 closed-hunt scripts under research/hunt/ call urllib/curl directly, bypassing tools/terms_guard.py...",
+   "task": "Odalys, P3, 31 closed-hunt scripts under research/hunt/...",
    "model": null,
    "since": null,
    "next": []
@@ -86,7 +110,7 @@
   {
    "name": "Wrenna",
    "state": "next",
-   "task": "Wrenna, P3, arXiv after T-0220 lands (Ines's ruling research/ops/arxiv-terms.md s9 item 4): one dated line in...",
+   "task": "Wrenna, P3, arXiv after T-0220 lands (Ines's ruling...",
    "model": null,
    "since": null,
    "next": []
@@ -94,7 +118,7 @@
   {
    "name": "Pernille",
    "state": "next",
-   "task": "Pernille, P2, pkg_sandbox LaunchServices deny + R1 (chair ruling T-0738, end of...",
+   "task": "Pernille, P0, T-0296 follow-on reminder: no real package...",
    "model": null,
    "since": null,
    "next": []
@@ -102,7 +126,7 @@
   {
    "name": "Idris",
    "state": "next",
-   "task": "L1/L2 device checks: CMPedometer, CMMotionActivity, HealthKit (locked/unlocked), battery, location inside the widget...",
+   "task": "L1/L2 device checks: CMPedometer, CMMotionActivity,...",
    "model": null,
    "since": null,
    "next": []
@@ -110,7 +134,7 @@
   {
    "name": "Maren",
    "state": "next",
-   "task": "Maren, P1, alpha visual reads on 2026-10-31 (alpha-day10-checklist.md A1, A2, A3, A4, A5, A7): each image from...",
+   "task": "Maren, P1, alpha visual reads on 2026-10-31...",
    "model": null,
    "since": null,
    "next": []
@@ -130,13 +154,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "31 closed-hunt scripts under research/hunt/...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Pkg_sandbox LaunchServices deny + R1",
     "s": "next",
     "o": "c"
    },
@@ -843,13 +860,6 @@
    {
     "w": "Odalys",
     "k": "ops",
-    "t": "Techniques triage",
-    "s": "next",
-    "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
     "t": "Start the worktree trial",
     "s": "next",
     "o": "c"
@@ -892,28 +902,28 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Finish the mutant proof of T-0768",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Re-review of T-0768",
+    "t": "R10 from T-0775's re-review of the runner",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Fix T-0767's re-review of the runner self-update",
+    "t": "R11 from the same review, after the...",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Report overhaul item 6b",
+    "t": "R12 from the same review",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "L4 from the same review",
     "s": "next",
     "o": "c"
    },
@@ -971,22 +981,29 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T-0768 runner R6 stopped-poll children",
-    "at": "2026-10-30T13:47:37.933000+00:00",
+    "t": "T-0786 fast suite reds",
+    "at": "2026-10-30T17:14:49.146000+00:00",
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "report",
-    "t": "Morning",
-    "at": "2026-10-30T10:18:59.016000+00:00",
+    "w": "Pernille",
+    "k": "build",
+    "t": "T-0739 pkg_sandbox deny and R1",
+    "at": "2026-10-30T16:43:22.911000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0373 request card, close rules",
+    "at": "2026-10-30T16:17:43.116000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 121,
-   "wait": 25,
-   "blocked": 24,
+   "next": 119,
+   "wait": 26,
+   "blocked": 27,
    "you": 6
   }
  },
@@ -995,7 +1012,10 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
+  "task_done",
   "task_title",
-  "task_open"
+  "task_open",
+  "lane_task"
  ]
 }

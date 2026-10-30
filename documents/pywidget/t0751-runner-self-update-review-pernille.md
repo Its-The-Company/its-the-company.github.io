@@ -351,6 +351,149 @@ My two R1 mutants (also in /tmp/pernille-probe/t0767/mut_3.json while it lasts),
 {"name": "T-0767 R1 runner: 'ours' reads this Mac's /tmp (old side of the comparison)", "file": "tools/macbook-runner/runner.py", "find": "ours = Runner(scratch, \"self-test\", tmp_roots=(fixture,)).profile(", "replace": "ours = Runner(scratch, \"self-test\").profile("},
 {"name": "T-0767 R1 runner: the fixture is the real /tmp on both sides", "file": "tools/macbook-runner/runner.py", "find": "    root = os.path.join(os.path.realpath(work), LAUNCHD_FIXTURE)\n", "replace": "    return \"/private/tmp\"\n    root = os.path.join(os.path.realpath(work), LAUNCHD_FIXTURE)\n"}
 ```
+
+# Re-review of 5691ea44 (T-0775)
+
+Reviewer: Pernille. Author: Odalys. Date: 2026-10-30. Read: `git show 5691ea44` (launch.py, runner.py, SETUP.md), the
+T-0768 tests, `git diff 5691ea44 HEAD` for the suite, `tools/mutants_slice.py`, `ops/mutants/t0774-progress.tsv` and all
+of `ops/mutants/t0774-output.log`, plus `install.sh`, `tools/xc.sh` and `tools/xc_helpers.py`. Judged on code, tests and
+my own runs only.
+
+## Runs (foreground, /usr/bin/python3 3.9.6, `pgrep -x xcodebuild` and `pgrep -x ibtoold` empty before each)
+
+- `tests/macbook_runner_update_test.py`, once: PASS 125 FAIL 0 (185 s). No `sleep` left behind.
+- `tests/macbook_runner_test.py`: PASS 143 FAIL 0 (14 s). `tests/mutants_slice_test.py`: PASS 16 FAIL 0.
+- Same code: `git diff 5691ea44 HEAD -- tools/macbook-runner tests/macbook_runner_update_mutants.json
+  tests/macbook_runner_test.py` is empty. The sha256 of runner.py and launch.py at HEAD, computed by hand as
+  `code_hash` does, equals the first line of the progress file (`d0eaa98e...`).
+- Sandbox probe (`/tmp/pernille-probe/t0775/probe_sb.py`, not committed): `spawn` of
+  `sandbox-exec -p "(version 1)(allow default)" /bin/sh -c "/bin/sleep 297 & wait"`. sandbox-exec execs in place, so
+  sh keeps the spawned pid, the sleep has that pgid, and `stop_groups` leaves nothing. The T-0768 job test runs
+  `--no-sandbox`, so this was the one R6 path the suite could not show.
+- L4 and R10 probes: below.
+
+**Correction, mine.** My last three runs in this file say the runner suite "stopped ibtoold pid 701" on the Mac mini. It
+did not. Pid 701 is a row in that suite's fake machine (`tests/macbook_runner_test.py:958`, `XC_HELPERS_FAKE`); a real
+`pgrep -x ibtoold` was empty before today's run and the line still printed. Neither suite touched a real ibtoold. I
+reported a side effect that never happened, three times, and it reached the task packets. The update suite prints no
+such line at all.
+
+## Verdict
+
+R6, R7, R8, R9 and R3b are closed. No Medium or High is open. The first thing that broke was not the runner: it was
+my own note, above. The Investors may re-install once the alpha commit is made.
+
+The reason that holds with Lows still open: launch.py is the one file a self-update cannot change, and I found nothing
+against it. R10 and R11 are in runner.py, so their fix reaches the MacBook by self-update with no Investor. R12 and L4
+never reach the MacBook. The update changes no access: `profile()` and `kinds.json` are untouched by 5691ea44, and the
+`(default-tmp-roots ...)` rule is compared text, never run (Commandment 2, 61). Install from main at this code. If a
+later runner commit lands first, it needs its re-review before the install.
+
+## The five findings
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: The five findings, scrolls sideways" data-n="1" style="--tw:477px" markdown="1">
+
+| Finding | Verdict | Why |
+|---|---|---|
+| R6 | Closed | All three stop paths and the job step are tested with real pids, plus TERM during a start. `spawn` is the only start of an own-session child (grep), and the `started groups` mutant shows the tests depend on it. launch.py's SIGKILL now follows every TERM, which covers tools in the poll's own group. The handler has no thread to miss: runner.py has none. |
+| R7 | Closed | The check sits before `run_job`, on launch.py's clock (`time.monotonic`, so a closed lid counts on neither). A poll over the limit starts nothing, and the job runs on a later poll (both tested). Starvation needs 900 s of network or staging on every poll, and deferrals end after 3. |
+| R8 | Closed | `min(job, FALLBACK_JOB_LIMIT_S)`, and `int(Infinity)` falls back. `self_test` already refuses a limit under 60 s, so a release cannot shrink the ceiling to nothing. |
+| R9 | Closed | Part (c) is compared, held with its rule in the diff, and a release that does not report it is refused. Parts (a) and (b) are written down at `runner.py:839`, the "note beside R5" I asked for. The reported value is the candidate's own word, as R5 says. |
+| R3b | Closed | 1200 s against 1080 s (getconf 30, sync 600, sw_vers 30, xcodebuild 120, push 300). `id -Gn` is in `account_problems`, after confirmation, so it is not on this path. SETUP.md says 20 minutes. |
+
+</div>
+
+
+Residual on R7, no action: after the check, a slow path can still use up to 1680 s (archive 300, tar 300, simctl 360,
+shutdown 120, bootstatus 600). 900 + 1680 + 5400 = 7980 s is over the 7200 s ceiling. It needs every tool near its limit
+and a job near its own, on one poll. The job then runs again. Accepted.
+
+## The mutant proof: complete, and I accept it
+
+28 of 28 KILLED on this code. I read every run, not only the first FAIL.
+
+**The 8 kills that crashed after their first FAIL are not a gap.** `killer()` takes the first FAIL, and in all 8 a FAIL
+comes before the Traceback. No kill is Traceback-only, TIMEOUT or a bare exit code. The crash only costs the checks
+after it, which were not what that mutant was for.
+- Five die on the check named for them: M1 first transient rollback, M2, M3 x2, L1. Their Tracebacks are the test
+  indexing a state the mutant broke (`KeyError: 'sha256'`, `'pending'`, a missing file).
+- Two R1 mutants ("self-test reads this Mac's /tmp", "'ours' reads this Mac's /tmp") die at the suite's first update
+  with 31 FAILs. That is the defect itself: the two sides differ, so every release is held.
+- One deserves care: "M4 self-test without --mirror" also dies at the first update, because the old side still demands
+  `staged_version`. So it proves that demand, not the check at `tests/macbook_runner_update_test.py:476`. The R4 mutant
+  covers that mechanism: it dies on its named check, a release with a broken update path refused through "update path".
+  M4 is proved, by a neighbour.
+
+**The lost BASELINE FAILS is not a gap in the kills. It is an open question about the suite.** A flake cannot make these
+kills: each of the 28 first FAILs is the mutant's own check or a direct result of its change. I listed every FAIL in all
+28 runs and found none unrelated. 9 runs reached the end of the suite and 11 stopped at the guard at line 728. So: 0
+stray FAILs in 28 runs, which alone bounds a stray failure at about 10% per run (95%), and only 9 of those reached the
+T-0768 checks. My clean run and the three in the commit message add to that. The cause stays unknown. The pgrep overlap
+is a candidate, not an explanation, and I cannot rule out a real intermittent failure. `tools/mutants.py` now prints the
+tail, so the next one will have a cause.
+
+Not proved by these 28: the `PermissionError` branches in `run_limited` and `_run_steps`, and `OverflowError` in
+`poll_ceiling` (tested, no mutant). All three are one-word excepts. Mutants prove the checks that exist. R10 and R11
+below have no check, so no mutant could find them.
+
+## Low
+
+**R10. A job step over its time limit can leave a child running (probed).** `runner.py:1176-1185` sends TERM to the
+group, and if the leader exits inside the grace it breaks, so the SIGKILL never goes. This is the same hole 5691ea44
+closed in launch.py, one file over. Probe (`Runner._run_steps`, limit 2 s, not committed):
+`/bin/sh -c 'trap "" TERM; echo $$ > PIDFILE; exec /bin/sleep 299' & wait` as the step. Result: status `timeout`,
+`OWN_GROUPS` empty, and the sleep alive after the job ended. I killed it. For `xc.sh` the leader's own trap stops its
+tree (`stop_tree`, TERM then KILL), so xc-test's main step is covered. The `pre` scripts are not. A survivor stays in the
+sandbox, so this is no new access. Fix: always send the SIGKILL to the group after the TERM, with the grace kept for the
+leader, as launch.py does. Test: the probe's step. A mutant that restores the break.
+
+**R11. A stopped job's sandboxed helper survives every later job (read, not probed; needs real Xcode).** A stop runs
+`os._exit`, so `run_job`'s `finally` (`shutdown_simulator`, `stop_helpers`) is skipped. That is right: launch.py gives 5 s.
+But on the next job `before = self.helper_pids()` (`runner.py:1082`) counts the orphan as already there, and
+`stop(exclude=before)` leaves it. `xc.sh` does not clean it either: its T-0343 stop runs only on the machine's own lock,
+and xc-test sets `XC_LOCK_FILE={CACHE}/xc.lock`. So an ibtoold left by a ceiling or a `launchctl bootout` mid-job keeps a
+dead job's profile, and T-0343's failure comes back for every later job in the runner account ("Contents.json couldn't
+be opened"), until that account's session ends. It is rare, visible in the job result, and limited to the runner's
+account. It existed before T-0768, but the new SETUP.md sentence "whatever that run started is stopped with it" now claims
+otherwise: a reparented helper and a booted Simulator are not. Fix: save `before` in state.json as the job starts and
+clear it when the job ends; if the next job finds it still set, use the saved set, so the orphan counts as the old job's.
+Correct the sentence. Test: `XC_HELPERS_FAKE` with a kill between the two jobs.
+
+**R12. `tools/mutants_slice.py`: the record does not fully say what ran.** `code_hash` covers only the mutated files, so
+a change to the suite between slices does not reset the proof. Here it did no harm: the first kill's 124/1 shows the
+poll() fix was already in. And a passing baseline's line goes to stdout only, so `--output` cannot show that each of the
+three scratch runs had a clean one (T-0774's commit records n=1). Fix: hash the suite file named in the command too, and
+append `=== baseline exit 0, N s, <last line>` to `--output`.
+
+## R5 and L4: what they are worth now
+
+**R5: still Low, no action.** `profile(job_dir)` still takes only the folder, so the profile compared and the one
+`_run_steps` writes are the same call. It stays a trigger, not a task: if `profile` ever takes the command or the
+Simulator, one helper must feed both. R9's reported `tmp_roots` sits beside it.
+
+**L4: Low, worth less than I feared, and still worth 30 lines.** This is the path the Investors are about to run by hand,
+so I ran it. Probe: `install.sh` from `stop` on, on a fake HOME, stub `launchctl`, with its account and tool checks cut
+(they refuse any account but the runner's), over the pre-T-0751 layout (bin a folder, config.json, state.json, cache).
+Exit 0, n=1. bin became a link to the new release, all 6 files present, launch.py identical to the repo's, config.json and
+cache kept, state.json keeps `checkin` and gains `installed-by-hand`, bootout then bootstrap in that order, the plist
+passes `plutil -lint` and starts launch.py. A second install over the first also exits 0. So the migration works; the
+account checks at the top were not run. It does not gate the install. A committed test keeps it working the next time
+launch.py needs an install.
+
+## Checked and fine
+
+- `launch.py stop`: the unconditional `p.wait()` after ESRCH or EPERM cannot hang. The leader cannot leave its group, and
+  EPERM means only a zombie is left. A TERM landing while `p.wait(timeout=1)` holds the waitpid lock could block on that
+  path, for microseconds every 50 ms; launchd's own exit timeout ends it.
+- `spawn`'s race: TERM before the flag, inside Popen, between add and clear, and on a failed exec all end with the group
+  killed or no group. Popen returns only after exec, so `setsid` has happened.
+- `poll()` now writing to files weakens nothing: same text back, and the mutant it unblocked now dies on its named check.
+- launch.py's SIGKILL now lands milliseconds after the TERM, so a `git` in the poll's group gets no time to clear a ref
+  lock. A stale lock would fail every sync. The window is the milliseconds git holds a ref lock, and `subprocess.run`'s
+  timeout already had the same exposure. Not a finding.
+- A kind above 4 h would be stopped at the ceiling and re-offered for ever. Today's only kind is 5400 s, and the comment
+  at `launch.py:34` says the limit needs an install. Noted, nothing to do.
 {% endraw %}
 
 </div>

@@ -109,11 +109,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
-- 2026-10-29 T-0735 (ab318af7): lane threat model + Not held list done; loop closed by ADR-007 16:54. Open: LaneDemotions call site (not wired yet) must sit outside scripts/, else an ordinary script clearing ".." reaches it (2c, back to Ines).
-- 2026-10-30 T-0756 (db445845): size rules measure Mach-O without LC_CODE_SIGNATURE (both generator and check); device builds need CODE_SIGN_IDENTITY="Apple Development" (project.yml "-" wins otherwise). Residual model gap: .origin + privacy files (+0.9%).
 - 2026-10-30 T-0759/T-0763 closed (2ddaea8b): run the mutant on both paths (warm, fresh boot). XCUI portrait keyboard minY sits 17 pt below the app's keyboard safe-area top (560 vs 543); landscape agrees (210).
-- 2026-10-30 T-0765 (24b4fd3a): runner re-review, R1 approve-sandbox sha drifts with /tmp launchd folders (fixed inputs needed), R2 no ceiling after confirm; fix T-0766, re-review mine. Mutants: tests/macbook_runner_update_mutants.json via tools/mutants.py (split in halves, <10 min each; kill the M2 orphan).
-- 2026-10-30 T-0767 (dad2c90b, 729bf2b1): runner v5 not ready, R6 Medium: killpg reaches one group; run_limited and job steps use start_new_session, so a stopped poll leaves them alive (probe). Fix T-0768, re-review mine.
+- 2026-10-30 T-0775 (166f2877): runner self-update closed: R1-R9 fixed, re-install fine after the alpha commit. T-0780 to T-0783 (Lows) re-review mine for T-0780/81. launch.py is the one file a self-update cannot change: weigh findings by that.
+- Lesson (T-0775): "ibtoold pid 701" in my three earlier reviews was a test fixture, not a real kill, and it reached the packets. Check a side effect on the real machine (pgrep before and after) before reporting it.
+- 2026-10-30 T-0739 (923c19b6): LaunchServices deny + R1 done; T-0740 next, T-0299 still mine after it. Not held list (CoreSimulator first) is in the T-0739 note, Ines rules. Measured: bare (allow default) already denies job-creation, so sandbox_check answers 1 either way; the control needs an explicit allow.
 {% endraw %}
 
 

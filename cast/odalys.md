@@ -259,14 +259,14 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## 2026-10-28 T-0492 (cc87b08c)
 
 - 2026-10-29 lane reviews T-0704..T-0727 (details in archive.md): list what runs after the last restore and what the restore looks up by name; check values and types, not only keys; never free what a check took out; object.__setattr__ finds a planted `__class__` property first. Open: re-review T-0730 (Pernille, K1).
-- 2026-10-29 T-0731: lane lesson: any frame a planter reaches (the sys.argv hook in _prepare) exposes the runner's f_globals and _S; check every read made before the restore runs. P2 -> T-0732 (Pernille). 3.13 suite: 1 unexplained failure in 3 runs, watch it.
-- 2026-10-29 T-0734 (a5b75783): lane loop closed (ADR-007 item 3 is the bar). Lesson: a later run's LOADED can be sys.modules residency (_keep_module keeps stdlib), not the finder; print sys.modules before blaming the check.
-- 2026-10-29 T-0742 (418db242): T-0674 approved. Lesson: a UI test's 'placed' check on a shared Simulator must count before/after; 30 old PyWidget widgets sat on the 17e. A3 fix T-0743 (Idris) due before 10-30 dry run.
-- 2026-10-29 T-0751 (65869142): runner self-update built; review T-0754 (Pernille). Lessons: the rollback must live outside what it swaps (launch.py); plutil -lint rejects JSON (use -convert xml1 -o /dev/null).
 
-- 2026-10-30 T-0514 (014671a2/5f7fe335): formal dry run ticked, 22/23 green, A11a red -> T-0758 (Idris). Lesson: a UI test red only late in the bare suite (passes alone 3/3) is order/state; rerun alone before filing so the owner gets the class.- 2026-10-30 T-0755 (aaf46f82): runner self-update fixes; re-review T-0765 (Pernille). Lesson: a rollback guard must tell "the network failed" from "the release failed" (exit 75), and anything compared by hash must have its temp paths replaced first.
 - 2026-10-30 T-0766 (39439a9d): lesson: a hash a human approves must come from fixed inputs only (live /tmp went stale between hold and approval); a release name with a 1 s clock collides after a crash. Open: T-0767 re-review (Pernille), R5, L4.
 - 2026-10-30 T-0768 (5691ea44): any code change after a mutant run resets the proof; budget mutants x 3 min first. A kill by timeout is not its check; keep the Traceback's last line. Open: T-0774, T-0775.
+- 2026-10-30 T-0772: Techniques triage (OPT-057..060). Lesson: size a technique's ceiling before its window; #12's looked large until the P75 ceiling came to 8.6%. Open: T-0776 (OPT-051's guard series dead since 10-25), then T-0777, T-0778 after alpha.
+- 2026-10-30 T-0774: 21 of 28 on 5691ea44; resume with tools/mutants_slice.py, ops/mutants/t0774-progress.tsv. Lessons: capture_output waits for any orphan holding the pipes; record each mutant's name as it runs (3 of the earlier 4 were never named, so all re-ran); macOS ps -E hides /bin/sleep's environment.
+- 2026-10-30 T-0776 (e85738b7): OPT-051 guards live. Lesson: when a series goes dead, check its numbers too; start + duration_ms hid 55 of 59 redone (use the run's 'at'). Open: T-0785, first by-origin read; the tool holds it to n=10.
+- 2026-10-30 T-0373 (20eba76a): a date proves a date, not the action: a sweep may not write "default applied" unless a session recorded it (C56). Machine-read dates get their own line ("Takes effect:"); prose dates in live cards would have closed #87's kind. Run a 7-minute suite with output in a file: the red list is lost otherwise.
+- 2026-10-30 T-0786 (37333265): count reds from the exit code, not FAIL lines: a 7th hid behind 'n passed, m failed'. Suite red only after others: look for state they leave (ops/live.json).
 {% endraw %}
 
 

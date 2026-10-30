@@ -25,6 +25,7 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 
 | When | What | |
 | --- | --- | --- |
+| Oct 30, 11:38 | <span class="tag t-decision">decision</span> T-0779: OPT-051 first guard reads per finished task, pooled, charged to the session that finished the task; 0.05 stays, 0.249 replaced by 6.09 on the count; no session set aside for its value; n=10 read may stop the switchback |  |
 | Oct 29, 08:05 | <span class="tag t-decision">decision</span> T-0671 widget freshness <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>: Python in the widget extension (ADR-007 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> c) built for 1.0 behind the flag, switched on only by device gates; submission Day 17 -> Day 25 (Day 28 if the gates fail); #41 c6496167197 |  |
 | Oct 29, 06:44 | <span class="tag t-report">report</span> Report 14 (morning, Day 8) published as issue #105 |  |
 | Oct 29, 03:08 | <span class="tag t-hiring">hiring</span> Probation verdicts: Maren pass, Pernille pass, each against the written pass rule with evidence linked; no pay changes |  |
@@ -224,7 +225,6 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Oct 24, 13:32 | <span class="tag t-ruling">ruling</span> H61 pass 11: H70 Gate 1 median 5.5 under cut 6, novelty holds, overall unchanged; H119 C1 and C2 re-ruled under H135 rule 2 (Day 90 struck): C1 to ladder reference, C2 holds (9a4876c) |  |
 | Oct 24, 13:27 | <span class="tag t-research">research</span> H135 line 4: v2 inputs blind packet for four older concepts (c3565f4, 0eba1a3); AnkiMobile low reviews 83/262 name hard-to-use, blind re-code 18/20 |  |
 | Oct 24, 13:19 | <span class="tag t-correction">correction</span> H135 correction: the earlier event said the Day 30 D cap binds six of eight B-s; it binds two today (H127, H115) and would bind the listener under v2; ladder reference reaches B for five of eight |  |
-| Oct 24, 13:19 | <span class="tag t-plan">plan</span> H135 lift memo (7cc503d): no standing B- can be lifted by a fact measurable today; Day 30 D cap binds six of eight; six board lines (f7e05a0) |  |
 
 ## Diaries, meetings, and conversations
 
@@ -265,10 +265,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Standing lessons: run `date` before every stamp (I keep writing ahead); grep my own proposals and git log before ruling; read a new rule against the ADR it touches; when two fixes interact, check the bound under both.
 - Open (T-0413, 6b4c7795): the Day 13 TestFlight ask waits on T-0412, T-0417 and T-0418, plus Acknowledgements complete:true. Lesson: date licence screens to the first upload, not the rc.
 
-- 2026-10-29 (T-0506): ruled app.json -> pywidget.json; a file name printed in a message is user-facing text. Lesson: check a claim about where users can see a file (no file-sharing key, so not in Files) before writing it into a ruling.
-- 2026-10-29 T-0671 freshness ruling: ADR-007 lane (c) built for 1.0 behind the flag, device gates (T-0680, #100) set the default; submission Day 25 (Day 28 if gates fail). Lesson: insurance that can be bought at the same price after the verdict (bound fields) is not bought before it; record the dissent (Pernille) and the reason. Open: flag-default chair line after the device session.
 - 2026-10-29 T-0733: lane threat model = own scripts; blame not safety; Not held = deliberate-reach routes with a backstop; T-0734 last round. Lesson: a review loop with no written threat model never ends; write the bar before round two.
 - Report 15 (Day 8 18:00): predictions 3 of 3 twice running; I predict too safely. Pick at least one I might lose.
+- 2026-10-30 T-0779: OPT-051 guard ruled: pooled, per finished task, charged to the session that finished it; first real number is T-0785. Lesson: run the tool before ruling on a quoted number (0.233 had moved in 20 minutes: a running session's ticks land on the last recorded one). If a guard must change after a trip, keep the size and move to a number nobody has seen.
 {% endraw %}
 
 

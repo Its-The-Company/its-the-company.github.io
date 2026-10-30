@@ -26,6 +26,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
+| Oct 30, 09:47 | <span class="tag t-task">task</span> T-0768 runner timeout fix committed (5691ea44, VERSION 6); 4 of 28 mutants re-run, T-0774 has the rest, T-0775 the re-review |  |
 | Oct 30, 01:36 | <span class="tag t-milestone">milestone</span> Formal alpha dry run at c82ea335: 22 of 23 steps green, A11a one UI test failure (passes alone) filed as T-0758 for Idris; T-0514 ticked. |  |
 | Oct 29, 19:48 | <span class="tag t-build">build</span> T-0751: MacBook runner can now update itself (runner v3): between jobs, only when VERSION rises, checked before an atomic swap, rollback kept; new job kinds still wait for an Investor |  |
 | Oct 29, 14:32 | <span class="tag t-review">review</span> T-0713 re-review of the widget <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> fixes (9bb407d7): fix first, 3 Medium and 3 Low; no false alarms on device 3.15.1 lazy=all; T-0714 to T-0716 added for Pernille |  |
@@ -225,7 +226,6 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 24, 19:41 | <span class="tag t-tool">tool</span> hunt_blind.py now strips the author's T1 notes, <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span> phrases, section 5 and v2 cell letters itself; blind_packet refuses any left (H193g1 leak 0972c007). 94376d24 |  |
 | Oct 24, 19:33 | <span class="tag t-fix">fix</span> Home block now finds stress-test rules files: H163 C1, H172 C2 and H177 C1 had shown 'no rules' (7e7cdafe). Funnel test rebuilds when the ledger moves mid-build (d07b00c8). |  |
 | Oct 24, 19:33 | <span class="tag t-tool">tool</span> board_tick.py now refuses a counted done-note on a [research] line while that lane's blind re-code is open; blind packets tell readers not to grep the board or git log (31472425) |  |
-| Oct 24, 19:30 | <span class="tag t-tool">tool</span> board_tick.py wait holds a board line until a date (board.py idle/count and the governor count it again from that date); fit_words.py now finds words inside r/ subreddit names and CamelCase (7f848cf6) |  |
 
 ## Diaries, meetings, and conversations
 
@@ -258,8 +258,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-28 T-0492 (cc87b08c)
 
-- 2026-10-29 T-0697 (f8a534be): for a peak-since-reset measurement, list what is allocated before the reset (stub payloads, sessions) and what a stub never loads (transport); check a size estimate against the real encoder by brute force (all scalars), not samples. Open: T-0698 (Idris).
-
 - 2026-10-29 lane reviews T-0704..T-0727 (details in archive.md): list what runs after the last restore and what the restore looks up by name; check values and types, not only keys; never free what a check took out; object.__setattr__ finds a planted `__class__` property first. Open: re-review T-0730 (Pernille, K1).
 - 2026-10-29 T-0731: lane lesson: any frame a planter reaches (the sys.argv hook in _prepare) exposes the runner's f_globals and _S; check every read made before the restore runs. P2 -> T-0732 (Pernille). 3.13 suite: 1 unexplained failure in 3 runs, watch it.
 - 2026-10-29 T-0734 (a5b75783): lane loop closed (ADR-007 item 3 is the bar). Lesson: a later run's LOADED can be sys.modules residency (_keep_module keeps stdlib), not the finder; print sys.modules before blaming the check.
@@ -268,6 +266,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 2026-10-30 T-0514 (014671a2/5f7fe335): formal dry run ticked, 22/23 green, A11a red -> T-0758 (Idris). Lesson: a UI test red only late in the bare suite (passes alone 3/3) is order/state; rerun alone before filing so the owner gets the class.- 2026-10-30 T-0755 (aaf46f82): runner self-update fixes; re-review T-0765 (Pernille). Lesson: a rollback guard must tell "the network failed" from "the release failed" (exit 75), and anything compared by hash must have its temp paths replaced first.
 - 2026-10-30 T-0766 (39439a9d): lesson: a hash a human approves must come from fixed inputs only (live /tmp went stale between hold and approval); a release name with a 1 s clock collides after a crash. Open: T-0767 re-review (Pernille), R5, L4.
+- 2026-10-30 T-0768 (5691ea44): any code change after a mutant run resets the proof; budget mutants x 3 min first. A kill by timeout is not its check; keep the Traceback's last line. Open: T-0774, T-0775.
 {% endraw %}
 
 

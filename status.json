@@ -1,28 +1,28 @@
 {
  "schema": 1,
- "at": "2026-10-30T10:20:51.841094+00:00",
+ "at": "2026-10-30T13:48:04.258313+00:00",
  "session": {
   "active": true,
-  "kind": "morning",
-  "started": "2026-10-30T06:16:12-04:00"
+  "kind": "work",
+  "started": "2026-10-30T06:22:23-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "ines",
-   "task": "[report] morning",
+   "name": "odalys",
+   "task": "[tools] T-0768 runner R6 stopped-poll children",
    "model": "opus",
-   "started": "2026-10-30T10:16:31.027Z",
+   "started": "2026-10-30T10:22:59.993Z",
    "seconds": null,
-   "finished": "2026-10-30T10:18:59.016000+00:00"
+   "finished": "2026-10-30T13:47:37.933000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 115,
-  "blocked_count": 48
+  "runnable_count": 121,
+  "blocked_count": 49
  },
  "meter": {
   "five_hour": {
@@ -63,7 +63,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-30T06:21:36-04:00"
+  "at": "2026-10-30T09:48:54-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -827,6 +827,34 @@
     "o": "c"
    },
    {
+    "w": "Idris",
+    "k": "build",
+    "t": "Apply option A",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "release",
+    "t": "Finish the launch posts D1 to D6 and the...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Techniques triage",
+    "s": "next",
+    "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Start the worktree trial",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Odalys",
     "k": "tools",
     "t": "App pictures on the site with no Claude",
@@ -858,6 +886,20 @@
     "w": "Pernille",
     "k": "review",
     "t": "Review of T-0751 runner self-update",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Finish the mutant proof of T-0768",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Re-review of T-0768",
     "s": "next",
     "o": "c"
    },
@@ -927,31 +969,24 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0768 runner R6 stopped-poll children",
+    "at": "2026-10-30T13:47:37.933000+00:00",
+    "o": "c"
+   },
+   {
     "w": "Ines",
     "k": "report",
     "t": "Morning",
     "at": "2026-10-30T10:18:59.016000+00:00",
     "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-0767 re-review runner fixes R1-R4",
-    "at": "2026-10-30T10:13:52.945000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0766 runner re-review fixes R1 R2",
-    "at": "2026-10-30T09:19:29.389000+00:00",
-    "o": "c"
    }
   ],
   "count": {
-   "next": 115,
+   "next": 121,
    "wait": 25,
-   "blocked": 23,
+   "blocked": 24,
    "you": 6
   }
  },
@@ -960,7 +995,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "task_done",
   "task_title",
   "task_open"
  ]

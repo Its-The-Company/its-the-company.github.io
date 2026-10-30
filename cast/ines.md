@@ -266,9 +266,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Open (T-0413, 6b4c7795): the Day 13 TestFlight ask waits on T-0412, T-0417 and T-0418, plus Acknowledgements complete:true. Lesson: date licence screens to the first upload, not the rc.
 
 - Report 15 (Day 8 18:00): predictions 3 of 3 twice running; I predict too safely. Pick at least one I might lose.
-- 2026-10-30 T-0779: OPT-051 guard ruled: pooled, per finished task, charged to the session that finished it; first real number is T-0785. Lesson: run the tool before ruling on a quoted number (0.233 had moved in 20 minutes: a running session's ticks land on the last recorded one). If a guard must change after a trip, keep the size and move to a number nobody has seen.
 - 2026-10-30 T-0787: a hold cannot lift on routes "accepted because of the hold". T-0299 stays until T-0801/T-0802; nobody re-raises #79.
 - 2026-10-30 T-0803/T-0798: nothing in tools/ reads milestones.json; grep for a reader before trusting "read by". Second "either way" written without a grep (08:03 item 3 i, no second extension at HEAD). Status: "late" also means the plan misses a date not yet passed.
+- 2026-10-30 T-0834: a change that only strengthens still can't go through the applier if it touches a guard script; read tools/apply_proposal.py path_problem before naming a route. Open: Investors owe nothing yet; #41 note drafted, the request is due 2026-10-31.
 {% endraw %}
 
 

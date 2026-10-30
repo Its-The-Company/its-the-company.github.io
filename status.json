@@ -1,53 +1,53 @@
 {
  "schema": 1,
- "at": "2026-10-30T21:54:44.137738+00:00",
+ "at": "2026-10-30T22:06:43.880650+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-30T17:37:58-04:00"
+  "started": "2026-10-30T17:57:06-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "pernille",
-   "task": "[review] T-0827 personal lane independent review",
+   "name": "ines",
+   "task": "[plan] T-0834 triage held guard results",
    "model": "opus",
-   "started": "2026-10-30T21:38:39.411Z",
+   "started": "2026-10-30T21:57:41.673Z",
    "seconds": null,
-   "finished": "2026-10-30T21:53:34.208000+00:00"
+   "finished": "2026-10-30T22:05:36.946000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 131,
+  "runnable_count": 134,
   "blocked_count": 57
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
-   "resets_at": "2026-10-31T01:59:59.608567+00:00",
+   "pct": 4.0,
+   "resets_at": "2026-10-31T02:00:00.026186+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 97.0,
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 86.0,
-   "resets_at": "2026-11-01T06:59:59.608590+00:00",
+   "resets_at": "2026-11-01T07:00:00.026203+00:00",
    "used_words": "of your weekly allowance used",
    "left": 14.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T06:59:59.608814+00:00",
+   "resets_at": "2026-11-01T07:00:00.026345+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-30T17:37:57.355042-04:00"
+  "read_at": "2026-10-30T17:57:05.733117-04:00"
  },
  "ui": {
-  "week_pct": 0.168,
+  "week_pct": 0.167,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -63,7 +63,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-30T17:56:00-04:00"
+  "at": "2026-10-30T18:08:00-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -192,30 +192,22 @@
   ],
   "done": [
    {
+    "w": "Ines",
+    "k": "plan",
+    "t": "T-0834 triage held guard results",
+    "at": "2026-10-30T22:05:36.946000+00:00",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "review",
     "t": "T-0827 personal lane independent review",
     "at": "2026-10-30T21:53:34.208000+00:00",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0825 personal subscription lane",
-    "at": "2026-10-30T21:34:49.192000+00:00",
-    "o": "i"
-   },
-   {
-    "w": "Idris",
-    "k": "review",
-    "t": "T-0823 rating rule review",
-    "at": "2026-10-30T21:26:07.124000+00:00",
-    "o": "c",
-    "x": "killed"
    }
   ],
   "count": {
-   "next": 131,
+   "next": 134,
    "wait": 26,
    "blocked": 31,
    "you": 8
@@ -226,7 +218,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "task_done",
   "task_title",
   "task_open",
   "lane_task",

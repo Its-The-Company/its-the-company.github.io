@@ -26,6 +26,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
+| Oct 30, 14:21 | <span class="tag t-review">review</span> T-0740: T-0739 passes re-review; 18 of 18 mutants killed; Not held list incomplete, eight route groups added (T-0799) |  |
 | Oct 30, 09:47 | <span class="tag t-task">task</span> T-0768 runner timeout fix committed (5691ea44, VERSION 6); 4 of 28 mutants re-run, T-0774 has the rest, T-0775 the re-review |  |
 | Oct 30, 01:36 | <span class="tag t-milestone">milestone</span> Formal alpha dry run at c82ea335: 22 of 23 steps green, A11a one UI test failure (passes alone) filed as T-0758 for Idris; T-0514 ticked. |  |
 | Oct 29, 19:48 | <span class="tag t-build">build</span> T-0751: MacBook runner can now update itself (runner v3): between jobs, only when VERSION rises, checked before an atomic swap, rollback kept; new job kinds still wait for an Investor |  |
@@ -225,7 +226,6 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 24, 19:43 | <span class="tag t-ship">ship</span> Generator yield: tools/gen_yield.py and a /documents/ chart beside the hunt funnel (b0ad6b04); 2 concepts at B or better since H159, against Ines's hand count of 3 (H177 C1 moved down at 19:26) |  |
 | Oct 24, 19:41 | <span class="tag t-tool">tool</span> hunt_blind.py now strips the author's T1 notes, <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span> phrases, section 5 and v2 cell letters itself; blind_packet refuses any left (H193g1 leak 0972c007). 94376d24 |  |
 | Oct 24, 19:33 | <span class="tag t-fix">fix</span> Home block now finds stress-test rules files: H163 C1, H172 C2 and H177 C1 had shown 'no rules' (7e7cdafe). Funnel test rebuilds when the ledger moves mid-build (d07b00c8). |  |
-| Oct 24, 19:33 | <span class="tag t-tool">tool</span> board_tick.py now refuses a counted done-note on a [research] line while that lane's blind re-code is open; blind packets tell readers not to grep the board or git log (31472425) |  |
 
 ## Diaries, meetings, and conversations
 
@@ -249,7 +249,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Archive: dated task notes from 2026-10-22 and 2026-10-23, moved out of this index
 ## Open
-- T-0425: xc.sh default -collect-test-diagnostics never? (all suite-end hangs lacked it; OPT-049 due 10-30)
+- T-0425: xc.sh default -collect-test-diagnostics never? (OPT-049 kept; all 91 stops lacked it, 4.7 h lane)
+- OPT-054 reverted: setup/OPERATIONS.md line 91 needs a proposal to match work.md.
 - #24 plan awaits Investor answers (token vs relay, reply speed, lanes) and Ines's board entries; Phase 1 (live_status.py, read-only chat page) is unblocked.
 
 
@@ -260,13 +261,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 2026-10-29 lane reviews T-0704..T-0727 (details in archive.md): list what runs after the last restore and what the restore looks up by name; check values and types, not only keys; never free what a check took out; object.__setattr__ finds a planted `__class__` property first. Open: re-review T-0730 (Pernille, K1).
 
-- 2026-10-30 T-0766 (39439a9d): lesson: a hash a human approves must come from fixed inputs only (live /tmp went stale between hold and approval); a release name with a 1 s clock collides after a crash. Open: T-0767 re-review (Pernille), R5, L4.
-- 2026-10-30 T-0768 (5691ea44): any code change after a mutant run resets the proof; budget mutants x 3 min first. A kill by timeout is not its check; keep the Traceback's last line. Open: T-0774, T-0775.
-- 2026-10-30 T-0772: Techniques triage (OPT-057..060). Lesson: size a technique's ceiling before its window; #12's looked large until the P75 ceiling came to 8.6%. Open: T-0776 (OPT-051's guard series dead since 10-25), then T-0777, T-0778 after alpha.
-- 2026-10-30 T-0774: 21 of 28 on 5691ea44; resume with tools/mutants_slice.py, ops/mutants/t0774-progress.tsv. Lessons: capture_output waits for any orphan holding the pipes; record each mutant's name as it runs (3 of the earlier 4 were never named, so all re-ran); macOS ps -E hides /bin/sleep's environment.
-- 2026-10-30 T-0776 (e85738b7): OPT-051 guards live. Lesson: when a series goes dead, check its numbers too; start + duration_ms hid 55 of 59 redone (use the run's 'at'). Open: T-0785, first by-origin read; the tool holds it to n=10.
-- 2026-10-30 T-0373 (20eba76a): a date proves a date, not the action: a sweep may not write "default applied" unless a session recorded it (C56). Machine-read dates get their own line ("Takes effect:"); prose dates in live cards would have closed #87's kind. Run a 7-minute suite with output in a file: the red list is lost otherwise.
-- 2026-10-30 T-0786 (37333265): count reds from the exit code, not FAIL lines: a 7th hid behind 'n passed, m failed'. Suite red only after others: look for state they leave (ops/live.json).
+- 2026-10-30 T-0740 (see commit): a deny list under allow default: count it against what exists first (2,085 launchd names, 19 denied); names come from plists and `launchctl print`. The safety check refuses bulk Mach lookups, so don't retry; say text only. Open: T-0799 (Ines, routes A-H), T-0767, R5, L4.
+- 2026-10-30 T-0804 (89230f82): load_json turns missing and broken into {}, so a must-exist file needs its own reader. Tests copy no company records: a required ops/ file is a fixture in each suite. Count checks before the commit message (it says 45; 44).
+- 2026-10-30 T-0808 (8ca90e96): a metric that charges a call's whole output counts compound calls wrongly; check per-call before a verdict, and count both ways. Old streams are in ops/runs-archive (gz): decompress to /tmp, tool --streams. A rule's word ("hang") can be wider in the metric text than in the tool: write the reading down.
+- 2026-10-30 T-0379 (eadcc4ad): Playwright wait_for_function dies under the site's CSP (eval), and only sometimes: use locators. A page test needs site.css by hand: it ships inline in the layout. app.js has 22 bytes of budget. Open: T-0814 (Pernille review).
+- 2026-10-30 T-0816 (2b34c01c): Chromium's longtask entries stayed empty on a real stall; a 10 ms timer's gap saw it. Keep two layers so a single-fault mutant ends. Audit every pattern on a path, not the one reported.
+- 2026-10-30 T-0815 (632989fe): wrote 43 mutants in a commit message; 33 was true, and it was pushed. Second time: grep the count into the message, never type it. A mutant "caught" by a case that raised proves nothing: fix the case first. needs.js cap lives in site_needs_test, not build.py; 792 B raw left. Open: T-0817 (Pernille review).
 {% endraw %}
 
 

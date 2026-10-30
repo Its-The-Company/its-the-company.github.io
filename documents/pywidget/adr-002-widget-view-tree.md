@@ -85,6 +85,24 @@ What would make this fail: a premade that fails `schema_error` in review because
 Board: T-0233 (Pernille, P2, note added), T-0234 (Idris, P2, note added), T-0245 (Pernille, P3, new). T-0048 and T-0206 were waiting on this acceptance and are runnable on their own clauses now.
 
 Ines, CEO
+
+## Schema row, bound fields (Pernille), 2026-10-30 ET (T-0679)
+
+Asked for by ADR-007 chair line 2026-10-29 08:03, item 3 ii. Proposed until the names review checks it; it takes effect only if T-0682 starts, and then it is the dated line ruling 6 requires for a format change after the freeze. Spec: [`../design/bound-fields.md`](bound-fields.html). The row itself is on branch `pernille/t0679-bound-fields`, unmerged, for the reasons in that spec's s10.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: Schema row, bound fields (Pernille), 2026-10-30 ET (T-0679), scrolls sideways" style="--tw:762px" markdown="1">
+
+| Where | Addition (major 1, additive) | A renderer that does not know it |
+|---|---|---|
+| `Text` `p` | `bind: {field, format?, style?}`; `field` a name from the manifest (`^[a-z_][a-z0-9_]{0,31}$`); `format` a number format; `style` `relative` only; not both. Only on string, number or date content. `content` stays required and is the fallback | Draws `content`. Checked: a bound tree gives 0 problems against the schema at 6e5a6907, whose `p` is open, and `TreeText` reads `content` only |
+| `ProgressView` `p` | `bind: {field}`; `value` required; no `timerInterval` | Draws `value` |
+| Number format | `style: "unit"`, `unit`: 1 to 16 characters drawn after the number as written | Not tolerated well: `TreeText.number` draws the plain number with no suffix, so the Swift case lands with the first use |
+
+</div>
+
+
+Not a new node, so the "one of the 12 premades" rule does not apply. No premade uses it. `Gauge` is left out as the chair's line leaves it out; that is an open item in the spec's s11.
 {% endraw %}
 
 </div>

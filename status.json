@@ -1,77 +1,77 @@
 {
  "schema": 1,
- "at": "2026-10-30T17:15:46.268428+00:00",
+ "at": "2026-10-30T20:26:15.817439+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-30T09:49:45-04:00"
+  "started": "2026-10-30T13:17:20-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "odalys",
-   "task": "[tools] T-0786 fast suite reds",
+   "task": "[tools] T-0816 needs.js parser hardening",
    "model": "opus",
-   "started": "2026-10-30T16:43:34.962Z",
+   "started": "2026-10-30T19:57:56.130Z",
    "seconds": null,
-   "finished": "2026-10-30T17:14:49.146000+00:00"
+   "finished": "2026-10-30T20:25:19.735000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-0815 needs.js send-lock fixes",
+   "model": "opus",
+   "started": "2026-10-30T19:33:58.534Z",
+   "seconds": null,
+   "finished": "2026-10-30T19:57:47.281000+00:00"
   },
   {
    "name": "pernille",
-   "task": "[build] T-0739 pkg_sandbox deny and R1",
+   "task": "[review] T-0814 review of the Needs-you panel",
    "model": "opus",
-   "started": "2026-10-30T16:18:24.539Z",
+   "started": "2026-10-30T19:24:10.849Z",
    "seconds": null,
-   "finished": "2026-10-30T16:43:22.911000+00:00"
+   "finished": "2026-10-30T19:33:40.551000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-0373 request card, close rules",
+   "task": "[tools] T-0379 report Needs-you panel",
    "model": "opus",
-   "started": "2026-10-30T15:57:01.389Z",
+   "started": "2026-10-30T19:09:33.808Z",
    "seconds": null,
-   "finished": "2026-10-30T16:17:43.116000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0784 OPT-051 deciding guard",
-   "model": "opus",
-   "started": "2026-10-30T15:38:18.087Z",
-   "seconds": null,
-   "finished": "2026-10-30T15:56:50.345000+00:00"
+   "finished": "2026-10-30T19:23:59.933000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 119,
-  "blocked_count": 53
+  "runnable_count": 130,
+  "blocked_count": 56
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
-   "resets_at": "2026-10-30T15:59:59.626888+00:00",
+   "pct": 4.0,
+   "resets_at": "2026-10-30T20:59:59.763453+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 97.0,
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 82.0,
-   "resets_at": "2026-11-01T06:59:59.626908+00:00",
+   "pct": 83.0,
+   "resets_at": "2026-11-01T06:59:59.763475+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 18.0,
+   "left": 17.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T06:59:59.627058+00:00",
+   "resets_at": "2026-11-01T06:59:59.763652+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-30T09:49:44.240371-04:00"
+  "read_at": "2026-10-30T13:17:19.381787-04:00"
  },
  "ui": {
-  "week_pct": 0.167,
+  "week_pct": 0.166,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-30T13:16:00-04:00"
+  "at": "2026-10-30T16:27:00-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -212,799 +212,36 @@
     "t": "Proposal",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Run_limited orphans",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "One Simulator preview snapshot for the names...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "research",
-    "t": "CORRECTIONS upkeep",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "String Catalog",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "L9 device probe once a device or Simulator...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Unassigned, P2, person's browser checks on...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "C13 check",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Acknowledgements screen",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "ios",
-    "t": "V1 bundle strip",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "ios",
-    "t": "L12 Q3 spike",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Read...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Spike owner, P3, C2 Info.plist strings and...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "plan",
-    "t": "Online-pip 1.1 design note",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Location-declined state for the \"distance to...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "V1 status.json expired_runs",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "L3 follow-ups on the Simulator",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "After T-0041 and only if T-0271 is approved...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "After T-0031",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "The rest of T-0231",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "The notice-text half of T-0042",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "The trigger-rule half of T-0273",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Projects and Files",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "review",
-    "t": "Alpha visual reads on 2026-10-31",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Day 10 alpha verdict",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0312 slice b",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Bridge contract s9",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "After T-0391",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "From T-0410 review of 5a20fd03",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "From T-0416 review of e93d5f36",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "After T-0388",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "From T-0401 review of 40f00baa",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "From T-0401 review of 40f00baa",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "T-0428 open item",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0431 L1",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0431 L2",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0431 L3",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Home Screen scripts, Swift half",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Home Screen scripts in the review pack",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Triage the old ops/questions.md items Report...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "DeviceCall carries its timeout",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "From T-0433's WidgetKit run",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "From T-0433's WidgetKit run",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Applier merges a pull request on \"approve\"...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "ADR-004 G2/G3 device checks, after a device...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Completion and inline errors in the editor",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Settings screen",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0507 follow-ups",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0508 follow-ups",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "After the widget freshness ruling",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0312 slice a HUD",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0312 slice a idle REPL bar",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "test",
-    "t": "UI flake",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "From Pernille's T-0536 review of 39528f1f",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "From Odalys's T-0529 review L1-L5",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "From Odalys's T-0549 re-review",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "From Odalys's T-0549 re-review",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "Flaky build step",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "The app pictures T-0546 could not take",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0511",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "T-0584 F3",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "T-0582 F2",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0582 F3",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "From T-0347",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0619 F2",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0564",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "T-0564",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "With T-0624",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "After T-0477",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "From T-0414",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "From T-0414",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Approved",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "fix",
-    "t": "T-0666 Lows on idris/t0355-projects",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Extension lane",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Refresh button intent in the extension lane",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "design",
-    "t": "Bound fields, the spec only",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0512 remainder",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0677 remainder",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Rides with T-0687",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "From T-0697 L2",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "From T-0699 Lows",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "T-0570 L2 remainder",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "test",
-    "t": "T-0694 D6 remainder",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0722 Lows left after T-0723",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0728 Low",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "docs",
-    "t": "From T-0708",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0746 M2",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0746 M3",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0752 M4",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Investor promise",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "T-0758 follow-up",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Apply option A",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "release",
-    "t": "Finish the launch posts D1 to D6 and the...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Start the worktree trial",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "App pictures on the site with no Claude",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Keep the app guide current with no Claude...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "\"What you can build\" page in the app guide",
-    "s": "next",
-    "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "MacBook runner self-update",
-    "s": "next",
-    "o": "i"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review of T-0751 runner self-update",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "R10 from T-0775's re-review of the runner",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "R11 from the same review, after the...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "R12 from the same review",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "L4 from the same review",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Report overhaul items 2b and 3, after item...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Report overhaul item 6c",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Report overhaul item 7",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Report overhaul item 4c, after the Investors...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Report overhaul item 8",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "test",
-    "t": "Site_qa.py checks for the additions against...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "From T-0737 L4",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T-0786 fast suite reds",
-    "at": "2026-10-30T17:14:49.146000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "T-0739 pkg_sandbox deny and R1",
-    "at": "2026-10-30T16:43:22.911000+00:00",
+    "t": "T-0816 needs.js parser hardening",
+    "at": "2026-10-30T20:25:19.735000+00:00",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T-0373 request card, close rules",
-    "at": "2026-10-30T16:17:43.116000+00:00",
+    "t": "T-0815 needs.js send-lock fixes",
+    "at": "2026-10-30T19:57:47.281000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-0814 review of the Needs-you panel",
+    "at": "2026-10-30T19:33:40.551000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 119,
+   "next": 130,
    "wait": 26,
-   "blocked": 27,
-   "you": 6
+   "blocked": 30,
+   "you": 7
   }
  },
  "qr": [],
@@ -1016,6 +253,7 @@
   "task_done",
   "task_title",
   "task_open",
-  "lane_task"
+  "lane_task",
+  "task_next"
  ]
 }

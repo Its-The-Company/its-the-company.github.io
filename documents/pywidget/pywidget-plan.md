@@ -13,9 +13,11 @@ description: "Goal. Submit version 1.0 on Day 25 (2026-11-15), App Review qualit
 {% raw %}
 Ines, 2026-10-25 19:27 ET. Scope and dated milestones: pywidget/docs/decisions/ADR-001-mvp-and-phasing.md. Money: pywidget/docs/proposals/PROPOSAL-001-v1-paid-tier.md (waiting for the Investors; needed by Day 12). Brief: ops/plans/pywidget/build-brief.md. Every task is a line under "## Build: pywidget" on ops/board.md.
 
-**Goal.** Submit version 1.0 on Day 25 (2026-11-15), App Review quality, with the Investors' approval; Day 28 (2026-11-18) if the extension <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> fails its device gates and bound fields are built (<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note 2026-10-29 below; the Day 17 plan is kept in the table as history). v1 = the IDE (runtime, editor, console, projects, native prompts, Shortcuts) plus a narrow widget engine and 12 premade widgets, with one Pro purchase. Widget cut line on Day 14 (ADR-001 3.3).
+**Goal.** Submit version 1.0 on Day 25 (2026-11-15), App Review quality, with the Investors' approval; Day 28 (2026-11-18) if the extension <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> fails its device gates and bound fields are built (<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note 2026-10-29 below; the Day 17 plan is kept in the table as history). v1 = the IDE (runtime, editor, console, projects, native prompts, Shortcuts) plus a narrow widget engine and 12 premade widgets, with one Pro purchase. Widget cut line on Days 22-23 (test in ADR-001 3.3; moved from Day 14 by the chair note below).
 
 ## Milestones and owners
+
+**History from Day 9 on.** The rows for Days 5-8 stand. The rows for Days 9-17 are the plan of 2026-10-25, kept as written and no longer current: the Day 13 freeze, Day 14 cut line and Day 17 submission were replaced by the table in the chair note of 2026-10-29 08:03 below (Day 21 freeze, Day 25 submission). Current dates and status: ops/milestones.json.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: Milestones and owners, scrolls sideways" data-n="1" style="--tw:769px" markdown="1">

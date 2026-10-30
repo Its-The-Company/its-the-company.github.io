@@ -15,7 +15,7 @@ Last updated: 2026-10-29, describing the app as of commit d06a981f; the editor s
 
 This guide is for the Investors. Apart from section 7, which quotes the functions that draw the icons because the Investors asked for them, it has no code in it. Where a technical word is needed it is explained the first time. Every picture in sections 2 and 5 is a real screenshot of the app running on the iPhone Simulator (a program on the Mac that behaves like an iPhone; the clock in the pictures is the Mac's), in light mode and dark mode side by side. The pictures show only the app's own screens, with no personal data.
 
-**How to read the marks.** "Built" means the screen exists and has a picture here. "Not built yet" means it does not exist; the part called "Being built now" gives each one its task number and date. Dates in this guide: alpha check (the first internal test, run by the team on a test build) Day 10, 2026-10-31; feature freeze (no new features after this) Day 13, 2026-11-03; submission to Apple Day 17, 2026-11-07.
+**How to read the marks.** "Built" means the screen exists and has a picture here. "Not built yet" means it does not exist; the part called "Being built now" gives each one its task number and date. Dates in this guide: alpha check (the first internal test, run by the team on a test build) Day 10, 2026-10-31; feature freeze (no new features after this) Day 21, 2026-11-11; submission to Apple Day 25, 2026-11-15, or Day 28, 2026-11-18, if Python in the widget fails its device tests.
 
 ## 1. What pywidget is, and who it is for
 
@@ -197,8 +197,8 @@ The Investors asked on 29 October 2026 (issue #41) for the freshest widget possi
 | **A. Python in the widget part** (ruled: built for 1.0, switched on by device tests) | Reruns the script every 15 to 60 minutes, whenever iOS wakes the widget, and on a Refresh tap; any logic, any JSON feed | Go faster than Apple's budget; use heavy Python modules; survive a memory overrun (it falls back to the last picture with a badge) | 15 to 60 minutes, 40 to 70 a day; the script gets 2 seconds; memory ceiling unconfirmed until #100; the first device test is whether the widget part can even load Python under a real signature | No | +8 days (submission Day 17 to Day 25, 2026-11-15), plus day-for-day if #100 lands after Day 21 |
 | **B. Declared Swift steps** (building blocks in 1.0; "bound fields" only if A fails) | On every wake-up, fetches one URL and shows named fields, reads today's steps, takes a location fix; no Python | Compute anything (a feed that needs more than "this field" is A's); change colours or layout by rules | Same 15 to 60 minute budget; steps need a device check (T-0011); only declared fields are fresh | No | +3 days on top of A if needed (Day 28, 2026-11-18); alone it would have been about +5 (Day 22) |
 | **Timers in the view** (shipped) | Clocks, countdowns, "updated 4 min ago", progress bars that move by themselves, to the second | Show anything that isn't a function of time | None | No | 0 |
-| **Shortcuts automation** (shipped) | Runs every widget's script fresh at times or events you pick ("7:00", "when I arrive") | Run without a one-time 2 to 3 minute setup | iOS launches the app briefly in the background | Briefly, launched by iOS | 0 |
-| **iOS background refresh** (shipped) | Lets iOS run the app briefly when it chooses | Promise a cadence; often hours | Real cadence only measurable on a phone | Briefly, launched by iOS | 0 |
+| **Shortcuts automation** (in the code; not measured on a phone) | Meant to run every widget's script fresh at times or events you pick ("7:00", "when I arrive") | Run without a one-time 2 to 3 minute setup | Needs iOS to launch the app briefly in the background; the Refresh Widgets action is in the code, but nobody has measured it on a phone from a background launch | Briefly, launched by iOS | 0 |
+| **iOS background refresh** (ruled: built for 1.0, not in the app yet) | Would let iOS run the app briefly when it chooses | Promise a cadence or a time | iOS decides when; how often is known only from a real iPhone (#100) | Briefly, launched by iOS | 0; moves to 1.1 if not in the main code by Day 21 (2026-11-11), or not seen running on a real iPhone by Day 24 (2026-11-14) |
 | **Live Activity, updated by the app** (1.1) | A journey or a run on the Lock Screen and Dynamic Island, updated for minutes at a time while the app works in the background, up to 8 hours | Sit on the Home Screen; last past 12 hours | 4 KB of data; no network inside the activity itself | Yes, intermittently | 0 to 1.0 (3 to 4 days in 1.1) |
 | **Server push** (WidgetKit push, pushed Live Activities) | Event-driven updates | Beat the budget (Apple calls widget push "opportunistic") | Needs a server and Apple push keys: the Investors' spend and sign-up | No | Not planned; needs an Investor decision on a server first |
 | **Keeping the app alive** (audio, decoy activity) | - | - | Breaks App Review rule 2.5.4 | - | Never |
@@ -227,36 +227,37 @@ The seconds-level version of "transit" (a bus arriving) is a Live Activity in 1.
 
 ## 5. Being built now
 
-Status is taken from the task board on 2026-10-28. "Alpha" is Day 10 (2026-10-31); "freeze" is Day 13 (2026-11-03); "submit" is Day 17 (2026-11-07).
+Status is taken from the task board on 2026-10-28; the dates were re-checked on 2026-10-30 against the board, the build plan and the milestones file. "Alpha" is Day 10 (2026-10-31); "freeze" is Day 21 (2026-11-11); "submit" is Day 25 (2026-11-15), or Day 28 (2026-11-18) if Python in the widget fails its device tests.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 5. Being built now, scrolls sideways" style="--tw:989px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 5. Being built now, scrolls sideways" style="--tw:1082px" markdown="1">
 
 | What | What is missing | Task | Date |
 | --- | --- | --- | --- |
 | A tap puts a widget on the Home Screen | Today only test code writes a widget's drawing; neither a premade nor your own script reaches the Home Screen from a tap. The most urgent gap. | T-0512 (P0) | Alpha check |
-| Premade widgets | Code exists; 6 are due for the alpha, 12 by Day 12. Their pictures come from a test that is still being corrected. | T-0191, T-0511 | Day 10 to Day 12 (2026-11-02) |
-| Premade gallery | Not built | T-0191 | Day 12 |
-| Widget preview beside the editor | Not built | T-0192 | Day 12 |
-| Projects and Files | Not built; floor: container projects and .py import and export, "open in place" to 1.1 if late | T-0355 | Freeze (Day 13) |
+| Premade widgets | Code exists; 6 are due for the alpha, 12 by the freeze. Their pictures come from a test that is still being corrected. | T-0191, T-0511 | Day 10 to Day 21 (2026-11-11) |
+| Premade gallery | Not built | T-0191 | Days 16 to 20 (2026-11-06 to 2026-11-10) |
+| Widget preview beside the editor | Not built | T-0192 | Version 1.1 |
+| Projects and Files | Not built; floor: container projects and .py import and export, "open in place" to 1.1 if late | T-0355 | Freeze (Day 21) |
 | Pro placement and refund handling | Free users must not see Pro widgets placed; refunds must lock them again | T-0051 | Freeze |
-| Pop-up questions from scripts | The screen half (alerts, forms, lists, toast) is not built; the Python half is a separate task (T-0446) | T-0447 | Day 12 |
+| Pop-up questions from scripts | The screen half (alerts, forms, lists, toast) is not built; the Python half is a separate task (T-0446) | T-0447 | Freeze (Day 21) |
 | Home Screen scripts and the full-screen run screen | Designed (design notes for the run screen and the setup walkthrough); the app half is not built. Copy is a draft until one hand-run test | T-0449 | Freeze |
-| Settings, with Acknowledgements and Pro moved in | Not built; the "more" menu stands in | T-0042 | Day 14 to 15 |
+| Settings, with Acknowledgements and Pro moved in | Not built; the "more" menu stands in | T-0042 | Days 16 to 20 (2026-11-06 to 2026-11-10) |
 | Editor: screen-reader, text-size and iPad checks | Not run | T-0460, T-0479 | Day 10; real device later |
 | Editor: tappable error lines | Not built | T-0389 | Not dated |
-| Shortcuts actions (Run Script) | Refresh Widgets works; Run Script was a stub and was wired for the alpha check A10; follow-ups open | T-0510 | Alpha |
-| Editor themes in Pro | Waiting for the Investors' approval of a design (<span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>) | T-0272 | Day 12 |
-| First-run tour | Not built | T-0193 | Day 12 |
+| Shortcuts actions (Run Script) | Refresh Widgets is in the code, not measured on a phone from a background launch; Run Script was a stub and was wired for the alpha check A10; follow-ups open | T-0510 | Alpha |
+| Background refresh (iOS runs the app briefly to update widgets) | Added 2026-10-30. Not built: this guide wrongly called it shipped. Moves to 1.1 if not in the main code by Day 21, or not seen running on a real iPhone by Day 24 (ADR-007, chair line 2026-10-30 13:35) | T-0793 | Day 21 (2026-11-11) |
+| Editor themes in Pro | Waiting for the Investors' approval of a design (<span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>) | T-0272 | Freeze (Day 21) |
+| First-run tour | Not built | T-0193 | Freeze (Day 21) |
 | App-rating request after a real success | Rule written; screen not built | T-0273, T-0346 | Not dated |
-| Install from a file | Stretch goal; 1.1 if not done | T-0212 | Day 13 |
+| Install from a file | Stretch goal; 1.1 if not done | T-0212 | Version 1.1 |
 | Pictures not yet taken | iPad two-window view, premade widgets on the Home Screen, permission prompts, and every screen above | T-0556 | Not dated |
 | Pricing answer from the Investors | Needed to set Pro's real price | PROPOSAL-001 | Day 12 |
 | Verdict on the alpha | A written pass or fail per check | T-0361 | 2026-10-31, 23:59 |
-| Feature freeze | After this only fixes | | Day 13 (2026-11-03) |
-| Widget cut line | The call on whether widgets ship in 1.0 | | Day 14 (2026-11-04) |
+| Feature freeze | After this only fixes | | Day 21 (2026-11-11) |
+| Widget cut line | The call on whether widgets ship in 1.0 | | Day 23 (2026-11-13) |
 | Icon, screenshots, store page (need the Investors' approval) | Not part of this guide | | Day 15 (2026-11-05) |
-| Submission to Apple (needs the Investors' approval) | | | Day 17 (2026-11-07) |
+| Submission to Apple (needs the Investors' approval) | | | Day 25 (2026-11-15), or Day 28 (2026-11-18) if Python in the widget fails its device tests |
 
 </div>
 
@@ -577,7 +578,7 @@ Apple draws them **without colour**. The system turns the widget into shades of 
 
 - A person's Python script says which sizes it supports and, for each size, returns a description of what to show: the same "view tree" as for Home Screen widgets. One script can show a full card on the Home Screen and a single ring on the Lock Screen.
 - The Swift renderer draws Lock Screen sizes exactly as it draws Home Screen ones. Apple supplies the monochrome look; the renderer adds Apple's standard Lock Screen pieces, such as the soft circle or pill background and gauge styles made for that space.
-- Freshness is the same as on the Home Screen. Python runs in the app (when it is open, in background refresh, or from a Shortcuts automation), saves the result, and the Lock Screen widget redraws it. Times and countdowns tick by themselves without Python running.
+- Freshness is the same as on the Home Screen. Python runs in the app (when it is open, or from a Shortcuts automation, which is in the code but not measured on a phone), saves the result, and the Lock Screen widget redraws it. Background refresh is planned for 1.0 and is not in the app yet (section 4.1). Times and countdowns tick by themselves without Python running.
 - To add one, the person long-presses the Lock Screen, taps Customize, taps the widget row, and picks pywidget. This is Apple's standard flow.
 
 ### 8.3 Limits worth knowing

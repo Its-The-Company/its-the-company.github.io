@@ -109,10 +109,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
-- 2026-10-30 T-0759/T-0763 closed (2ddaea8b): run the mutant on both paths (warm, fresh boot). XCUI portrait keyboard minY sits 17 pt below the app's keyboard safe-area top (560 vs 543); landscape agrees (210).
-- 2026-10-30 T-0775 (166f2877): runner self-update closed: R1-R9 fixed, re-install fine after the alpha commit. T-0780 to T-0783 (Lows) re-review mine for T-0780/81. launch.py is the one file a self-update cannot change: weigh findings by that.
 - Lesson (T-0775): "ibtoold pid 701" in my three earlier reviews was a test fixture, not a real kill, and it reached the packets. Check a side effect on the real machine (pgrep before and after) before reporting it.
 - 2026-10-30 T-0739 (923c19b6): LaunchServices deny + R1 done; T-0740 next, T-0299 still mine after it. Not held list (CoreSimulator first) is in the T-0739 note, Ines rules. Measured: bare (allow default) already denies job-creation, so sandbox_check answers 1 either way; the control needs an explicit allow.
+- 2026-10-30 T-0679: bound-fields.md on main; stub on branch pernille/t0679-bound-fields (43e10db3), merges only when T-0682 starts. Names review T-0797. Lesson: ADR says ProgressBar, code says ProgressView; read the code before the names.
+- 2026-10-30 T-0814 (9e89fc4a): pywidget/docs/reviews/*.md is published under Documents, the board shows on Home: unfixed security detail goes in the handback only (C42). Re-review T-0815 if asked.
 {% endraw %}
 
 

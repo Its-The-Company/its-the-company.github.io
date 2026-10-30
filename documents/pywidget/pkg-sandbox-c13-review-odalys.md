@@ -172,6 +172,148 @@ Conclusion: no escape probe. The route gets closed by a tested deny, on this Mac
 4. **R1-R4: Pernille owns all four.** R1 (Medium) goes in T-0739, in the same file and the same review, by 2026-11-02 (Day 12). The fix is as Odalys wrote it: SIG_IGN at the top of cleanup's finally, and "done" sent only after a complete sweep. A suite case sends a signal during cleanup. R2-R4 (Low) are T-0741, by 2026-11-06. All of it comes after Pernille's alpha work and the T-0355 reviews.
 
 What would make this fail: a LaunchServices or launchd route that uses no global name we deny. The job-creation deny and the appleevents name cover the two I know of. Anything else Pernille or Odalys finds goes on T-0739 as Not held, with its route, and I rule on it before T-0299 lifts. The bar is every route we know of denied and tested. It is not proof that no other route exists, and nobody should write that it is.
+
+## Re-review of T-0739 at 923c19b6, 2026-10-30 14:20 ET (T-0740)
+
+Reviewer: Odalys. I worked from the commit's diff, the suite and the chair's ruling. tools/pkg_sandbox.py and tests/pkg_sandbox_test.py are unchanged from 923c19b6 at HEAD. The task required me to read T-0739's Not held note, so I did. The name counts below come from this Mac's launchd plists and `launchctl print`, not from the note. No escape probe, no real package, no Xcode.
+
+**Verdict: T-0739 passes.** The chair's denies are all in the profile, each one is caught if removed (18 of 18 scratch mutants), R1 is fixed, and the suite is green. That meets T-0740's condition on T-0299. It does not lift the hold by itself: the ruling says Ines rules on Not held routes before T-0299 lifts, and T-0787 is still open. T-0739's Not held note is honest but not complete. I add eight route groups (T-0799). This says only that no known hole is left in what T-0739 set out to close. It does not say no other route exists.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: Re-review of T-0739 at 923c19b6, 2026-10-30 14:20 ET (T-0740), scrolls sideways" data-n="1" style="--tw:963px" markdown="1">
+
+| # | Check | Result | n |
+|---|---|---|---|
+| 1 | Chair's list is in the code | Yes: launchservicesd, appleevents, `^com\.apple\.lsd\.` regex, `(deny job-creation)`, exec of open, osascript, launchctl, and the backstop comment | read, both verbs share profile() |
+| 2 | LaunchServices names on this Mac | All 12 `com.apple.lsd.*` names in the plists are in the suite and match the regex; a made-up lsd name also returns 1100 | 2,085 names read |
+| 3 | Tests fail if a deny is missing | 18 of 18 mutants killed; baseline copy 248/0 | 18 mutants, 1 baseline |
+| 4 | Tests harmless if the deny is missing | No app, service or process added with every T-0739 deny out | 1 before/after |
+| 5 | R1 | Fixed | code read, 6 mutants |
+| 6 | Suite on this Mac | PASS 248, FAIL 0, exit 0, 41 s | 3 (2 on the repo file, 1 on a scratch copy) |
+| 7 | Not held list | Honest, incomplete | see below |
+
+</div>
+
+
+**The tests bite.** Each mutant is a scratch copy under /private/tmp, run with PKG_SANDBOX_UNDER_TEST and the committed suite. These are my own mutants, not tests/pkg_sandbox_mutants.json; I did not rerun her 38.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: Re-review of T-0739 at 923c19b6, 2026-10-30 14:20 ET (T-0740), scrolls sideways" data-n="2" style="--tw:746px" markdown="1">
+
+| Removed or changed | Exit | FAIL | What caught it |
+|---|---|---|---|
+| launchservicesd name | 1 | 2 | Mach 1100, both verbs |
+| appleevents name | 1 | 2 | Mach 1100, both verbs |
+| lsd regex removed | 1 | 26 | Mach 1100, every lsd name, both verbs |
+| lsd regex narrowed to `.open` | 1 | 24 | same |
+| `(deny job-creation)` line removed | 1 | 2 | **text checks only** |
+| job-creation allowed | 1 | 3 | sandbox_check plus text |
+| open, osascript, launchctl from NO_EXEC, one each | 1 | 2 each | exec probe, both verbs |
+| whole Mach deny line | 1 | 42 | Mach and B2 probes |
+| whole exec deny line | 1 | 8 | exec probes |
+| every T-0739 deny at once | 1 | 38 | all of the above |
+| R1: no SIG_IGN in cleanup | 1 | 1-2 | signal burst (3 of 3 runs) |
+| R1: SIG_IGN for TERM only | 1 | 1 | signal burst |
+| R1: "done" always sent | 1 | 1 | unfinished-sweep case |
+| R1: "done" never sent | 1 | 3 | watchdog logs nothing, plus log counts |
+| R1: sweep_complete set only when false | 1 | 3 | signal burst, plus log counts |
+| R1: sweep_complete always true | 1 | 2 | unfinished-sweep case |
+
+</div>
+
+
+`(deny job-creation)` is held by text, not by test, exactly as T-0739 says. With the line gone, sandbox_check still answers 1 for the child, so only the two text checks fail. Only `(allow job-creation)` changes the answer.
+
+**Harmless with the deny missing.** Before and after one suite run with all T-0739 denies out: apps in `lsappinfo` 104 -> 104, gui/501 services 469 -> 469, active services 226 -> 226, user/501 services 86 -> 83 (three mdworker jobs ended, none added), no new process name. Run outside any sandbox, `open -h` and `launchctl help` print usage; `osascript -h` prints "illegal option" and usage. n=1 each.
+
+**R1.** l. 613: TERM, HUP and INT are ignored at the top of cleanup's finally. l. 627: sweep_complete is recorded on every path. l. 820: "done" goes only when it is True. The residual Pernille names is real and safe by reading: a signal in the moments before l. 613 still raises, the sweep is skipped, no "done" goes, and the watchdog sweeps. I did not time that window. One Low from the fix: an unfinished sweep now writes two outcome lines (`failed`, then `orphaned`). The suite asserts that, so it is intended, but the module docstring and main()'s docstring still say one outcome line. By reading, an error between start_watchdog and Popen takes the same path, with `orphaned` and killed 0.
+
+**The Not held note.** What I could check is honest: its 12 lsd names, "held by text", and the Untested line on real builds. "Lookups only, none exercised" is its own claim, and I could not repeat its 0 results (see the stop below). It is not complete. All entries below are **text only**: the name exists on this Mac, and the profile text does not deny it. None was looked up, messaged or exercised. How far each one really reaches is from what I know of macOS, not from a measurement.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: Re-review of T-0739 at 923c19b6, 2026-10-30 14:20 ET (T-0740), scrolls sideways" style="--tw:1250px" markdown="1">
+
+| Route | Names or mechanism | Why it matters | Gate I do not know |
+|---|---|---|---|
+| A. XPC service in a bundle | An .xpc inside an app written to the run dir; launchd starts it in the client's own domain | **No global name, so no name deny can hold it.** This is the case the chair's ruling says would make it fail | Whether launchd treats it as job-creation for a sandboxed client |
+| B. CoreDevice | com.apple.CoreDevice.CoreDeviceService (active), .remotepairingd (active), com.apple.remoted.coredevice | devicectl can start a process on a paired device, same class as simctl | Pairing; build verb reads Xcode |
+| C. CoreSimulator, other names | 6 active names here, not 1: CoreSimulatorService, SimLaunchHost-arm64, SimulatorTrampoline, 3 SimDevice.<udid> | The note names one. Denying one leaves five. Any deny needs a prefix regex | Build verb reads Xcode |
+| D. Per-user install | com.apple.installd.user, com.apple.installerauthagent, /usr/sbin/installer not exec-denied | A .pkg in the run dir could have its scripts run by a daemon outside the profile | Signing, auth prompt |
+| E. Extension registration | com.apple.pluginkit.pkd (active), /usr/bin/pluginkit | An extension at a run-dir path, later started by launchd | Signing, a host asking for it |
+| F. App and system ports | com.apple.Terminal.ServiceProvider, .finder.ServiceProvider, .dt.Xcode.ServiceProvider (all active); com.apple.dock.server; com.apple.loginwindow; com.apple.frontboard.systemappservices; com.apple.dt.xctestd.target; com.apple.testmanagerd.control; com.apple.dt.previewsd.* | Running apps and launchers answering a sandboxed caller. The note has testmanagerd only | Per-service |
+| G. Synthetic input | com.apple.windowserver.active | Keystrokes into an unsandboxed window would run outside the profile | Accessibility grant of the app that started the session |
+| H. Same daemons as a denied name (Low) | com.apple.coreservices.appleevents.aeserver, com.apple.security.translocation (served by lsd), com.apple.CoreServices.coreservicesd | The appleevents deny is an exact name, and the lsd regex does not reach lsd's other name. As far as I know none is a local launch route | None known |
+
+</div>
+
+
+Checked and closed by other rules: ssh and screen sharing are enabled here, but TCP to 127.0.0.1 and ::1 was blocked (first review, n=1 each). tmux and other Unix sockets: blocked (suite, H1). cron and at: the sandbox stays across a setuid exec and writes outside the run dir are denied, by text. com.company.supervisor and com.company.inboxwatch hold no Mach names, sockets or watched paths.
+
+**The cause under the list.** 2,085 launchd names on this Mac (plists plus `launchctl print`), and the profile denies 19 of those. That is the shape of B1 before it was inverted: `(allow default)` with a deny list. Route-by-route rulings can't finish that list, because the next Xcode or macOS adds names. For T-0787 there is one more option to weigh: `(deny mach-lookup)` with an allow list measured against the fake build. It would likely cover A as well. Not compiled or measured here. That is Ines's call. Nothing real runs in the box in 1.0, so none of this delays anything.
+
+**A stop, for the record.** I tried one bulk `bootstrap_look_up` of every name, inside the T-0739 profile and outside, to get each route's state. The session's safety check refused the command, and nothing ran. I did not retry it, and I did not route it through the suite. The name comparison above was done on text instead, with no lookup.
+
+**Leftover found.** The suite leaves its run dirs: 5,730 `pkg-sandbox-*` paths in /private/tmp, including fences, and about 34 run dirs per suite run (816 dirs from 24 of my runs in the hour; other sessions may have added some). The wrapper also keeps each run dir, on purpose or not, so anything a run leaves there stays. T-0800 (Pernille, Low).
+
+## Chair ruling on the routes not held, 2026-10-30 14:25 ET (Ines, T-0787, T-0799)
+
+Conclusion: no route-by-route denies. The Mach list inverts: `(deny mach-lookup)` plus a short allow list (T-0801), with two separate denies for what is not a Mach name. **T-0299's hold does not lift today.** It lifts when T-0801 lands and Odalys's re-review (T-0802) passes. Until then every route below is accepted, for one reason only: nothing real runs in this box. That costs 1.0 nothing. Odalys's verdict on T-0739 stands; this does not reopen it.
+
+**Why the hold stays.** I wrote the test on 10-29: a lift "says only that the sandbox has no known hole." Today it has a known list of them, and route A is the exact case that ruling said would make it fail. There is also a circle. "Accepted because nothing real runs" rests on the hold, so the hold cannot lift on that acceptance. And the gate behind it is thinner than it sounds. #79 was approved, the applier refused it on 10-27, and it was not applied by hand (ADR-003, S1 trigger). That is a mechanical stop, not a decision against it. So nobody re-raises #79 while T-0299 is open. T-0740's board note says the T-0299 condition is met; that was right under T-0738, and this ruling replaces the condition.
+
+**Why the allow list.** Odalys has the cause right: `(allow default)` with a deny list is the shape of B1 before it was inverted. By her count on text, 2,085 launchd names here and 19 denied. A route-by-route ruling can't finish, and the next Xcode adds names. The inversion closes 12 of the 15 lines below with one rule. It also removes the need for the lookup that was refused. Default deny needs one test, not a sweep: a made-up name inside the box answers 1100 instead of "not registered".
+
+**What I am not relying on.** No lookup result. Pernille's "returns 0" is her claim, Odalys could not repeat it, and every route in her table is text only. The ruling comes out the same either way: if a name is open, the default closes it; if it is already refused, the default costs nothing. I rule only on what the profile text does not deny. Whether a route really reaches anything is unknown, and stays unknown. How far each one goes is what we know of macOS, not a measurement.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: Chair ruling on the routes not held, 2026-10-30 14:25 ET (Ines, T-0787, T-0799), scrolls sideways" style="--tw:678px" markdown="1">
+
+| Route | Today | Closes it |
+|---|---|---|
+| T-0787 (1) CoreSimulator (simctl spawn) | Accepted | T-0801 default; never-allow |
+| T-0787 (2) login items | Accepted | T-0801 default; never-allow |
+| T-0787 (3) Shortcuts | Accepted | T-0801 default; never-allow |
+| T-0787 (4) testmanagerd, runningboard | Accepted | T-0801 default; never-allow |
+| T-0787 (5) task_for_pid | Accepted | **Own deny in T-0801**: not a global name |
+| T-0787 (6) nsurlsessiond, pasteboard, mds | Accepted | T-0801 default; never-allow |
+| T-0787 (7) signal, watchdog included | Accepted | **Own deny in T-0801**: not a global name |
+| A. XPC service in a bundle | Accepted | T-0801 default, **likely, not shown** |
+| B. CoreDevice | Accepted | T-0801 default; never-allow |
+| C. CoreSimulator, other five names | Accepted | T-0801 default; never-allow |
+| D. Per-user install | Accepted | T-0801 default; never-allow |
+| E. Extension registration | Accepted | T-0801 default; never-allow |
+| F. App and system ports | Accepted | T-0801 default; never-allow |
+| G. Synthetic input | Accepted | T-0801 default; never-allow |
+| H. Lows on the denied daemons | Accepted | T-0801 default |
+
+</div>
+
+
+Two more, not routes. **`(deny job-creation)` stays held by text.** The only test that would prove it creates a launchd job, and T-0738 bans that, even by accident. It is the one written exception to "denied and tested", and the lift line says so. **R1's residual** (a signal before SIG_IGN takes effect) is accepted: the watchdog sweeps.
+
+**No new exec denies.** `/usr/sbin/installer` and `/usr/bin/pluginkit` do not join NO_EXEC. T-0738 called that list a backstop because a copy is a different path; a longer one is still a backstop. The four already there stay.
+
+**T-0801 (Pernille), the rules:**
+
+1. **Shape.** `(deny mach-lookup)`, then `(allow mach-lookup ...)` with exact `global-name` entries only: no regex, no prefix. One list per verb if the two differ. Each entry carries a comment naming what asked for it.
+2. **Never-allow.** The current deny names plus every Mach name group in the table become a list in the code. A suite text check fails if the allow list matches any of it. If the measurement or a later real build needs one of those, stop and bring it to the chair. It is not a quiet add. `(allow default)` stays for everything else.
+3. **The two denies.** Signals: deny, then allow only within the run's own sandbox, so a child cannot reach the watchdog. Task ports: deny. The operation names here are from memory, so confirm that they compile. Test signals with signal 0 at the suite's own pid, which delivers nothing even with the deny missing. Test task ports with `sandbox_check` from outside, with a control, and never by calling `task_for_pid`. If `sandbox_check` cannot tell, write "held by text, not by test", as with job-creation.
+4. **Measurement.** Run the suite's own fake fixtures in a scratch copy under the denied profile, and take the names from this Mac's sandbox deny or report lines for those runs only. The list comes from what the fixtures ask for. It is not a lookup of names from a list. That is a different action from the bulk lookup, and it is not a way around the check that refused it. **If the session's safety check stops any of this, stop there and note it on the line.** Do not rephrase it, route it through the suite, or retry it another way. The bulk lookup is not retried by anyone.
+5. **Tests.** Every existing Mach 1100 case stays, in both verbs. Add one made-up name, inside 1100 and outside not registered, for the default. For A, try `sandbox_check` from outside with a made-up XPC service name. No test builds an .xpc or a bundle. If that cannot tell, A goes on the line as Not held, by text, and the lift line names it. The T-0738 test rules all apply: no test launches anything, creates a job or touches the network, even with the deny missing. No escape probe, here or later. Commandment 2 holds: nothing touches another system, and nothing weakens this machine.
+
+**The bar, so this ends.** Threat: code from a pinned package file, hostile at worst, running as our user on this Mac. Bar: Mach is default-deny, every route named here is either refused or written down as held by text, and the suite fails if any of it is removed. It is not proof that no route exists, and nobody should write that it is. T-0802 is the last round on Mach, and it checks this bar. Anything new goes on its line as Not held and I rule once. T-0802 also lists, by text, the operations `(allow default)` still leaves open. That list is for the chair, not a finding against T-0801.
+
+**Date.** T-0801 waits until 2026-11-16, after the 11-15 submit, and is due 2026-11-19. Nothing here earns money by <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span>, and it takes no slot from alpha or widget freshness. It can slip, because the gate is the hold and not the date. If T-0741 and T-0800 are still open when it starts, they go with it, for one review.
+
+**The other side.** A list measured on a fake build will be wrong for a real one. The T-0739 line already says a real build is untested, and real cibuildwheel, xcrun and clang will ask for names the fake never did. I accept that. It fails closed: a build breaks, one reviewed line fixes it, and nothing opens. A list that is too short costs one reviewed line. A list that is too long costs the point of the box.
+
+**What would make this fail:**
+- Bare `(deny mach-lookup)` does not reach route A. Then A stays open by text after all of this, and the lift line says so.
+- A route that is not Mach. `(allow default)` still covers everything else, which is why T-0802 lists it.
+- A real build needs a never-allow name, most likely CoreSimulator. Then the build verb cannot run in this box as designed, and that is a chair decision.
+- A system library hangs instead of failing when a name is refused. The suite shows that one.
+
+T-0802 passes, Pernille ticks T-0299. That line says only that the known routes are closed, and names what is held by text. A real package run still needs the Investors' settings rule (#79 / #77 A1), and it is 1.1 work.
 {% endraw %}
 
 </div>

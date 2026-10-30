@@ -190,7 +190,7 @@ pick.onchange = () => { take(pick.files); pick.value = ''; };
 ta.addEventListener('paste', (ev) => { var fl = ev.clipboardData && ev.clipboardData.files; if (fl && fl.length) { take(fl); if (!ev.clipboardData.getData('text')) ev.preventDefault(); } });
 ta.addEventListener('input', () => { save(); mark(); sync(); });
 function post(withFiles) {
-var text = ta.value.trim(), sent = files.slice(), name = (LS.getItem(S.NAME) || '').replace(/[^A-Za-z0-9 _.-]/g, '').trim().slice(0, 40), links = [], seen = i.comments, out = 0, body;
+var text = ta.value.trim(), sent = withFiles ? files.slice() : [], name = (LS.getItem(S.NAME) || '').replace(/[^A-Za-z0-9 _.-]/g, '').trim().slice(0, 40), links = [], seen = i.comments, out = 0, body;
 fly = 1; sync(); extra.hidden = true; extra.textContent = ''; say('', withFiles && files.length ? 'Saving files...' : 'Sending...');
 function won(c) {
 c = c || {}; fly = 0;

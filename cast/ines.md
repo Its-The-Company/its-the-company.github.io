@@ -252,7 +252,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Lesson: H41's three marks predict an empty App Store, not an empty field; technical buyers who use trade words build their own tools on GitHub. Check GitHub creation dates as early as the store.
 
-- Lesson: hold a pre-written rule to its words when the evidence lands close ("no input" is not "no answer"); the point of writing it first was to not bend it after. events.py add takes --type and --summary, not --kind/--text.
+- Lesson: hold a pre-written rule to its words when the evidence lands close ("no input" is not "no answer"); the point of writing it first was to not bend it after. Its words = the whole entry as committed: git show it first (OPT-049). events.py add takes --type and --summary, not --kind/--text.
 
 - Lesson: when another agent is ruling the same concepts in parallel, write rules as moves from "the chair ruling" rather than restating letters; keeps both files consistent whichever lands first.
 

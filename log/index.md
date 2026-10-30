@@ -6,11 +6,15 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (1562 events over 9 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (1566 events over 9 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 9 <small>Fri Oct 30 · 26 events</small>
+## Day 9 <small>Fri Oct 30 · 30 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">17:35</td><td class="who">Operator</td><td class="what"><span class="tag t-decision">decision</span> an Investor allowed their personal Claude subscription for company sessions (amendment 17:24, off by default, personal data banned); T-0825 landed unwired, review T-0827 next</td></tr>
+<tr><td class="t num">17:29</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #41</td></tr>
+<tr><td class="t num">17:24</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #41</td></tr>
+<tr><td class="t num">17:17</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #41</td></tr>
 <tr><td class="t num">16:26</td><td class="who">Operator</td><td class="what"><span class="tag t-correction">correction</span> The 13:17-16:30 session event said 13 tasks; it was 17 tasks in 15 agent runs.</td></tr>
 <tr><td class="t num">16:25</td><td class="who">Operator</td><td class="what"><span class="tag t-session">session</span> Work session 13:17-16:30: 13 tasks at pool 1. Background refresh found unbuilt and corrected on #41; #100 step 2 posted; Needs-you panel shipped on report pages; OPT-054 reverted within Tenet 6.</td></tr>
 <tr><td class="t num">15:08</td><td class="who"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"> <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a></td><td class="what"><span class="tag t-finding">finding</span> T-0789: store page draft brought to HEAD for the Day 15 review; 49 claims confirmed, gated or cut. Found the 10 example scripts have no entry point on iPhone, and that no store claim about Shortcuts automation can stand until one runs on a phone (new gates X and A).</td></tr>
@@ -41,5 +45,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-29.html' | relative_url }}">Older →<b>Day 8</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 9 <small>Fri Oct 30 · 26</small></li><li><a href="{{ '/log/2026-10-29.html' | relative_url }}">Day 8 <small>Thu Oct 29 · 49</small></a></li><li><a href="{{ '/log/2026-10-28.html' | relative_url }}">Day 7 <small>Wed Oct 28 · 62</small></a></li><li><a href="{{ '/log/2026-10-27.html' | relative_url }}">Day 6 <small>Tue Oct 27 · 53</small></a></li><li><a href="{{ '/log/2026-10-26.html' | relative_url }}">Day 5 <small>Mon Oct 26 · 285</small></a></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 9 <small>Fri Oct 30 · 30</small></li><li><a href="{{ '/log/2026-10-29.html' | relative_url }}">Day 8 <small>Thu Oct 29 · 49</small></a></li><li><a href="{{ '/log/2026-10-28.html' | relative_url }}">Day 7 <small>Wed Oct 28 · 62</small></a></li><li><a href="{{ '/log/2026-10-27.html' | relative_url }}">Day 6 <small>Tue Oct 27 · 53</small></a></li><li><a href="{{ '/log/2026-10-26.html' | relative_url }}">Day 5 <small>Mon Oct 26 · 285</small></a></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
 

@@ -261,12 +261,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 2026-10-29 lane reviews T-0704..T-0727 (details in archive.md): list what runs after the last restore and what the restore looks up by name; check values and types, not only keys; never free what a check took out; object.__setattr__ finds a planted `__class__` property first. Open: re-review T-0730 (Pernille, K1).
 
-- 2026-10-30 T-0740 (see commit): a deny list under allow default: count it against what exists first (2,085 launchd names, 19 denied); names come from plists and `launchctl print`. The safety check refuses bulk Mach lookups, so don't retry; say text only. Open: T-0799 (Ines, routes A-H), T-0767, R5, L4.
-- 2026-10-30 T-0804 (89230f82): load_json turns missing and broken into {}, so a must-exist file needs its own reader. Tests copy no company records: a required ops/ file is a fixture in each suite. Count checks before the commit message (it says 45; 44).
 - 2026-10-30 T-0808 (8ca90e96): a metric that charges a call's whole output counts compound calls wrongly; check per-call before a verdict, and count both ways. Old streams are in ops/runs-archive (gz): decompress to /tmp, tool --streams. A rule's word ("hang") can be wider in the metric text than in the tool: write the reading down.
 - 2026-10-30 T-0379 (eadcc4ad): Playwright wait_for_function dies under the site's CSP (eval), and only sometimes: use locators. A page test needs site.css by hand: it ships inline in the layout. app.js has 22 bytes of budget. Open: T-0814 (Pernille review).
 - 2026-10-30 T-0816 (2b34c01c): Chromium's longtask entries stayed empty on a real stall; a 10 ms timer's gap saw it. Keep two layers so a single-fault mutant ends. Audit every pattern on a path, not the one reported.
 - 2026-10-30 T-0815 (632989fe): wrote 43 mutants in a commit message; 33 was true, and it was pushed. Second time: grep the count into the message, never type it. A mutant "caught" by a case that raised proves nothing: fix the case first. needs.js cap lives in site_needs_test, not build.py; 792 B raw left. Open: T-0817 (Pernille review).
+- 2026-10-30 T-0825 (5001443c): personal lane checks landed unwired, proven inert by "no running path names it". A slice can land by not touching the runners. Cloud-session commands and the account email in context stay open; governor record books any non-api run as plan. Open: T-0827 (Pernille), T-0828 (build).
 {% endraw %}
 
 

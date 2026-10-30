@@ -652,6 +652,41 @@ Read: pywidget/docs/design/bound-fields.md (Pernille, T-0679), all of it; the 08
    - Spec s9 stands: no premade declares `fetch`. One that did would need the Commandment 6 check on that provider's terms, which is not in a 3-day build.
 4. **Limits, for the Investors' list (07:33 rule).** If the lane fails and the contingency ships, none of the 12 premades gets a fresher picture from it. Only a widget a person writes against one public JSON URL, with no key and no computing, moves on a reload. Steps do not. Submission is Day 28. Separately, if T-0053 misses Day 21, location and steps in an extension are 1.1 whether or not the lane passes. This goes in the next #41 update, beside the 13:35 correction.
 5. **Board.** T-0682: strike the steps query, take item 2's size, add item 1's guard. T-0680: item 6 and the BF1 note read as item 2 says. T-0797: Gauge is answered, as item 3 says. Branch `pernille/t0679-bound-fields` stays unmerged and its ADR-002 row stays proposed; it merges only when T-0682 starts. The spec's text is not changed; read it with this line.
+
+## Chair line (Ines), 2026-10-30 17:14 ET: the launch posts drop the refresh number (T-0813)
+
+Read: T-0813, T-0788; launch plan D1, D2, D3, s8 rows 21 and 23; press kit lines 28, 54, 88; store page draft lines 16-17, 203, rows 36 and 38, Q12; the 08:03 and 13:35 lines above; App Guide lines 168, 185, 201-203, 561; Apple's saved page "Keeping a widget up to date" (research/inbound/apple/, read 2026-10-26). Ran at HEAD 825f0368: `git grep` for the number and its wordings over the repo; `Widget/PyWidget.swift` `timeline(for:)` draws the saved document and runs no script. No build run.
+
+**Ruling: the number goes.** D1, D2 and the press kit print no refresh number, in either LANE form, whichever way T-0795 lands. The store page's silence becomes the rule for every launch document. "Cadence stays unclaimed" in 13:35 item 5(c) named T2; this line widens it to any figure for how often a widget changes.
+
+1. **Under LANE-OFF the number describes the wrong thing.** At HEAD a reload draws the saved document; no script runs, so the picture does not change. What moves a widget is an app open, a tap, or an automation. D1 says so, then gives iOS's pace as if it were the widget's. D2 and press kit line 54 sit under W alone, with no sentence saying a script must run. Their reader expects a change every 15 to 60 minutes. If the lane fails and T2 is cut, that widget never changes by itself. Commandment 6 forbids that impression.
+2. **Under LANE-ON it is true of part of the widgets.** Only a `lane: widget` script reruns on a reload. "Anything heavier runs in the app", in the same post.
+3. **Beside T2 it reads as the cadence we said we do not know.** 13:35 item 3: no cadence, no time of day, no promise that it runs. T-0793 can be cut on Day 21 or Day 24, and the 08:03 item 5.7 reload log has not run. T-0791 was this error: a design figure told as what the app does.
+4. **"At best" is ours, and Apple does not say it.** Apple: "For a widget the user frequently views, a daily budget typically includes from 40 to 70 refreshes. This rate roughly translates to widget reloads every 15 to 60 minutes, but it's common for these intervals to vary". And during the learning period "your widget may receive more reloads than normal". So it is a typical range for a well-viewed widget, not a bound. Launch plan row 21 confirmed the range, not the bound. Part of this is mine: my 08:03 paragraph states it flat, without "typically".
+
+**The other side.** R13 says Show HN readers punish an unstated limit, and a number is a limit they can test. Dropping it makes the post vaguer. I accept that. "Not a live feed" states the limit, and a reader tests what the post claims. If a reader asks how often, a person answers with Apple's page and "we have not measured ours". That reply goes in the launch plan for the Investors.
+
+**What replaces it.** One sentence, true under LANE-OFF, LANE-ON, and T2 built or cut: **"A widget shows its script's last run, not a live feed."** "Recent" goes with the number: under LANE-OFF, a widget whose app has not been opened for a week is not recent.
+
+- D1: that sentence replaces "iOS sets the pace, at best every 15 to 60 minutes, so a widget is a recent snapshot, not a live feed."
+- D2: "..., and save Home Screen and Lock Screen widgets, which show the script's last run, not a live feed". "Refresh when iOS lets them" goes.
+- Press kit 28 and 54: the same sentence. Line 88's "such as how often a widget can refresh" becomes "such as that a widget is not live".
+- Store page: line 203's first sentence, line 17, row 36. Q12 is answered and the "says less than the posts" paragraph loses its first sentence.
+- Launch plan row 21: "No number; never 'live'", with this line as its source.
+- "iOS decides" and "iOS sets the pace" survive only inside LANE-ON, which already says "each time iOS wakes the widget". D3's "iOS can still delay the redraw" stays: it is about the redraw.
+- Sentences for Clocks, countdowns and progress bars stay. The drafts go to the Investors on Day 15 with this already in them (T-0821, Wrenna). Waiting for the sweep would show them copy I have ruled against.
+
+**A number comes back only by a new chair line**, with all four: LANE-ON is the final form; the T-0680 reload log on a used phone has a count; the sentence is about `lane: widget` widgets only; and it is Apple's wording, attributed. New store copy also goes through <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>. Otherwise it waits for 1.1. The sweep never restores one.
+
+**What T-0788's Day 24 sweep must check,** at the release candidate's commit, over D1-D6, the press kit, the store page and the review notes:
+
+1. `grep -nE "[0-9]+ (to|-) ?[0-9]+ min|every [0-9]+ ?min|every (few )?hours?|hourly|(reloads|refreshes|times) a day"` finds no refresh figure. Allowed hits: launch plan row 21's history, and `an entry every 15 minutes` in premade source (sun.py, progress.py), which are entries computed in one run, not refresh claims.
+2. After the flag default is ruled, one LANE form is left in each document, and no sentence outside LANE-ON says iOS sets, decides or lets a widget refresh.
+3. "A widget shows its script's last run, not a live feed" is in D1, D2, the press kit and the store page, word for word apart from D2's clause form. No "recent", no "live" as a claim.
+4. T-0795's outcome is read first. Cut or standing, no sentence says the app refreshes in the background and none gives a cadence: 13:35 item 6 stands. A background sentence returns only through C51, not in the sweep.
+5. Failed sentences are deleted, never softened, as T-0788 already says.
+
+Moves no date and no build. T-0821 (Wrenna) carries the edits. Notes on T-0788 and T-0807. The App Guide is not a launch document, so it may keep Apple's range when attributed, with "typically"; where it states the range as what this app does, T-0807 changes it. T-0792's Day 30 range is untouched.
 {% endraw %}
 
 </div>

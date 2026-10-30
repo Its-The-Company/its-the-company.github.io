@@ -44,7 +44,8 @@ function now() { return new Date(Date.now()); }
 function clock(iso) { return new Date(iso).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }); }
 function dayKey(d) { return d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate(); }
 function dayLabel(iso) { var d = new Date(iso); return dayKey(d) === dayKey(now()) ? 'Today' : d.toLocaleDateString([], { weekday: 'short', day: 'numeric', month: 'short' }); }
-function strip(b) { return String(b || '').replace(/<!--[\s\S]*?-->/g, '').replace(/\r/g, '').trim(); }
+var NOTE = /<!--[\s\S]*?(?:-->|$)/g, AS = /<!-- ?as: ?([^>]{1,40}?) ?-->/;
+function strip(b) { return String(b || '').replace(NOTE, '').replace(/\r/g, '').trim(); }
 function stop(ev) { if (ev && ev.preventDefault) ev.preventDefault(); }
 function isReceipt(b) { return /\(automatic receipt\)\s*$/.test(b || ''); }
 function flat(o) { return [].concat.apply([], Object.keys(o).map((k) => o[k])); }
@@ -165,7 +166,7 @@ var t = [].filter.call(bar.querySelectorAll('[role=tab]'), (b) => b.tabIndex ===
 on(W, 'hashchange', () => { var k = parse(); if (String(k) !== String(cur)) select(k); });
 function hue(l) { var h = 0, k; for (k = 0; k < l.length; k++) h = (h * 31 + l.charCodeAt(k)) >>> 0; return 'c' + (h % 6); }
 function sender(l, body) {
-var m = /<!--\s*as:\s*([^>]{1,40}?)\s*-->/.exec(body || ''), inv = isInv(l);
+var m = AS.exec(body || ''), inv = isInv(l);
 var chip = el('span', 'chip sender ' + (inv ? hue(l) : 'company'), inv ? (m ? m[1] : l) : 'Company');
 chip.title = l; return chip;
 }
@@ -195,7 +196,7 @@ if (nav && nav.clipboard && nav.clipboard.writeText) return nav.clipboard.writeT
 return Promise.resolve(fb());
 }
 function copyBtn(m, body) {
-var t = String(body || '').replace(/<!--[\s\S]*?-->/g, '').trim(), b = mk(m, 'button', 'cv-copy', 'Copy'), tm = 0;
+var t = String(body || '').replace(NOTE, '').trim(), b = mk(m, 'button', 'cv-copy', 'Copy'), tm = 0;
 b.type = 'button'; b.setAttribute('aria-label', 'Copy message');
 b.onclick = () => { copyText(t).then((ok) => {
 b.textContent = ok ? 'Copied' : 'Copy failed'; b.setAttribute('aria-label', b.textContent); b.classList.add('on');
@@ -396,7 +397,7 @@ l.forEach((n) => { r[s[n] ? 0 : 1].push(n); });
 return r;
 }
 function mentions(l) { return l.length ? 'Urgent: ' + l.map((n) => '@' + n).join(' ') : ''; }
-function stamp(text, name, cc) { return text.replace(/<!--[\s\S]*?-->/g, '').trim() + (cc ? '\n\n' + cc : '') + (name ? '\n\n<!-- as: ' + name + ' -->' : ''); }
+function stamp(text, name, cc) { return text.replace(NOTE, '').trim() + (cc ? '\n\n' + cc : '') + (name ? '\n\n<!-- as: ' + name + ' -->' : ''); }
 function doSend() {
 if (!composerOn || sending || S.rejected()) return;
 var text = ta.value.trim(), name = cleanName(LS.getItem(NAME)), urgent = urgentOn, n = target(), dk = draftKey();

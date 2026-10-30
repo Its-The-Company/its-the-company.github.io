@@ -5,13 +5,13 @@ section: "documents"
 description: "What the app is, every screen so far with a picture, how it works underneath, the limits and the decisions behind them, and what is still being built."
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/app-guide/' | relative_url }}">← App Guide</a><a href="{{ '/documents/pywidget/app-guide.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind grey">Guide</span><span>Day 8 · Thu Oct 29</span><span><code>pywidget/app-guide.md</code></span></div><h1>The pywidget app guide, version 1</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"><span>By <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a>, Product and visual designer</span></div><p class="meta">Mockup screens are drawn; they go public after creative approval.</p></div>
+<div class="page-head"><div class="kicker"><span class="kind grey">Guide</span><span>Day 9 · Fri Oct 30</span><span><code>pywidget/app-guide.md</code></span></div><h1>The pywidget app guide, version 1</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"><span>By <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a>, Product and visual designer</span></div><p class="meta">Mockup screens are drawn; they go public after creative approval.</p></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Last updated: 2026-10-29, describing the app as of commit d06a981f; the editor section (2.3) and the Console pictures describe the later commits 5ac90a05 and 210a1362, where the real code editor reached the main screen. "pywidget" is the placeholder name; the Investors have not chosen the real one, and the icon, the name and the store page are shown only in section 6, marked as waiting for the Investors.
+Last updated: 2026-10-30 (claims re-checked against the repository at commit d8beb743 and the task board, T-0807); the screens and pictures describe the app as of commit d06a981f; the editor section (2.3) and the Console pictures describe the later commits 5ac90a05 and 210a1362, where the real code editor reached the main screen. "pywidget" is the placeholder name; the Investors have not chosen the real one, and the icon, the name and the store page are shown only in section 6, marked as waiting for the Investors.
 
 This guide is for the Investors. Apart from section 7, which quotes the functions that draw the icons because the Investors asked for them, it has no code in it. Where a technical word is needed it is explained the first time. Every picture in sections 2 and 5 is a real screenshot of the app running on the iPhone Simulator (a program on the Mac that behaves like an iPhone; the clock in the pictures is the Mac's), in light mode and dark mode side by side. The pictures show only the app's own screens, with no personal data.
 
@@ -21,7 +21,7 @@ This guide is for the Investors. Apart from section 7, which quotes the function
 
 pywidget is an iPhone and iPad app where you write and run real Python (a popular programming language, written as lines of text instructions) and can turn the same Python into widgets, the small live tiles on the Home Screen, Lock Screen and StandBy. It is for people who already like to script: they want to try an idea on the phone, automate something small, or put their own information on the Home Screen. It is also for people who would never write code but want a good-looking widget, because the app comes with 12 ready-made ones (called premades), whose source they can open and change.
 
-Running any script is free. A single one-time purchase, called Pro (the name of the paid upgrade), unlocks the seven premade widgets that are not free. There is no account, no server run by the company, no tracking and no subscription (decision record ADR-001, "Version 1 scope and phasing").
+Running any script is free. A single one-time purchase, called Pro (the name of the paid upgrade), unlocks the seven premade widgets that are not free and, once built in, three extra editor themes (section 3.5). The Investors set the price on 2026-10-30: $14.99, once. There is no account, no server run by the company, no tracking and no subscription (decision record ADR-001, "Version 1 scope and phasing").
 
 ## 2. A tour of every screen, in the order a new person meets it
 
@@ -29,7 +29,7 @@ Decision records are named by number, for example ADR-001. The list is in sectio
 
 ### 2.1 First-run tour: not built yet
 
-A short tour is planned for the first launch, with a third page that lets you pick a date and watch a countdown widget redraw. Nothing exists yet. Task T-0193, due Day 12 (2026-11-02).
+A short tour is planned for the first launch, with a third page that lets you pick a date and watch a countdown widget redraw. Nothing exists yet. It comes after the gallery (T-0191); both are planned for Days 16 to 20 (2026-11-06 to 2026-11-10), and the freeze is Day 21. Task T-0193.
 
 ### 2.2 The Console: where you write and run
 
@@ -81,7 +81,7 @@ This is a stopgap. The plan puts these in a Settings screen, which does not exis
 
 ### 2.6 pywidget Pro
 
-The Pro screen explains what the one purchase unlocks: the seven premade widgets that are not free (Habit tracker, Shortcuts launcher, Storage, Day progress, Quote of the day, World clocks, GitHub repository). A box says what stays free: running any Python, the editor and console, projects and files, Shortcuts actions, the device features, your own widgets and the five free premades. A blue button ("Unlock Pro") buys it; a link ("Restore purchase", for people who bought before on another device or after reinstalling) brings an earlier purchase back.
+The Pro screen explains what the one purchase unlocks: the seven premade widgets that are not free (Habit tracker, Shortcuts launcher, Storage, Day progress, Quote of the day, World clocks, GitHub repository). A box says what stays free: running any Python, the editor and console, projects and files, Shortcuts actions, the device features, your own widgets and the five free premades. A blue button ("Unlock Pro") buys it; the extra editor themes are decided as part of Pro but are not yet in the build or on this screen (T-0769, T-0272); a link ("Restore purchase", for people who bought before on another device or after reinstalling) brings an earlier purchase back.
 
 <p class="guide-shots"><img src="app-guide-shots/pro-offer-light.png" alt="The Pro screen before buying, light" width="195" height="422" loading="lazy"> <img src="app-guide-shots/pro-offer-dark.png" alt="The Pro screen before buying, dark" width="195" height="422" loading="lazy"></p>
 
@@ -89,12 +89,12 @@ After a purchase the screen says "Pro is active" with a green tick. Its line say
 
 <p class="guide-shots"><img src="app-guide-shots/pro-purchased-light.png" alt="The Pro screen after buying, light" width="195" height="422" loading="lazy"> <img src="app-guide-shots/pro-purchased-dark.png" alt="The Pro screen after buying, dark" width="195" height="422" loading="lazy"></p>
 
-Important: the price shown ($0.99) comes from a stand-in price list used only while testing and is not a proposal. The real price is the Investors' decision (PROPOSAL-001); an answer is needed by Day 12 (2026-11-02). Behind it: the app asks Apple's own purchase system, which charges you and tells the app the result; the app unlocks Pro only when Apple's reply checks out as genuine and the purchase has not been refunded. In this build, the purchase works only against the test file; the real store listing does not exist until the Investors' Apple accounts are ready (membership due Day 7, 2026-10-28; Paid Apps Agreement Day 12, 2026-11-02).
+Important: the price shown in the app today ($0.99) comes from a stand-in test price list. The Investors decided on 2026-10-30 (issue #87, option A, "approve 87 91"): Pro is one purchase at $14.99, with the 7 Pro premades and the 3 editor themes. That price is not in the app at HEAD; T-0769 puts it in after the alpha commit (2026-10-31 12:00), and the price Apple charges is set in App Store Connect, which is not done. Behind it: the app asks Apple's own purchase system, which charges you and tells the app the result; the app unlocks Pro only when Apple's reply checks out as genuine and the purchase has not been refunded. In this build, the purchase works only against the test file; the real store listing does not exist until the Investors' Apple accounts are ready (membership due Day 7, 2026-10-28; Paid Apps Agreement Day 12, 2026-11-02).
 
 About the Pro words, and why they are not changed now. Every word on the Pro screen is a draft that still needs the Investors' approval (the screen's word file says so on its first line). The style guide approved the app's two looks, not the Pro screen beyond its shared colours and type, so the Pro screen's look and words go to the Investors as one request, with pictures, before anything is sent to Apple (task T-0625: Maren drafts, Ines posts). "Gallery" itself is not new: it is the name of the premade <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span> in the approved mockups, so using it needs no new approval. Renaming it would be a new decision and would go in that request. The two sentences that run ahead of the build:
 
-- "The Pro premades are open in the Gallery" is true only once the Gallery is built (T-0191, Day 12). The alpha on Day 10 is an internal test build, so the line stays for it. If the Gallery is moved to version 1.1 at its check (freeze row F6, 2 November), the line changes to one that does not name it, before the freeze. That is task T-0624, for Maren and Idris.
-- "Put every premade on your Home Screen" is true once a tap puts a widget on the Home Screen (T-0512) and Pro premades can be placed and locked again after a refund (T-0051). If Pro premades are cut from 1.0, the Pro screen drops this headline by itself, because it only shows the parts of Pro that the build switches on.
+- "The Pro premades are open in the Gallery" is true only once the Gallery is built (T-0191; not at HEAD, planned Days 16 to 20). The alpha on Day 10 is an internal test build, so the line stays for it. If the Gallery is moved to version 1.1 at its check (freeze row F6, 2 November), the line changes to one that does not name it, before the freeze. That is task T-0624, for Maren and Idris.
+- "Put every premade on your Home Screen" is true once a tap puts a widget on the Home Screen (T-0512, built 2026-10-29: the app now writes a placed Python widget's picture itself; what remains is T-0684) and Pro premades can be placed and locked again after a refund (T-0051). If Pro premades are cut from 1.0, the Pro screen drops this headline by itself, because it only shows the parts of Pro that the build switches on.
 
 ### 2.7 Acknowledgements
 
@@ -154,7 +154,7 @@ Scripts and widget data stay on the device. The app's own folder holds your scri
 
 ### 3.5 What Pro unlocks and how buying works
 
-Pro is one non-consumable purchase (bought once, not renewed), no subscription. Today it unlocks seven premade widgets; five are free. Pro may also carry editor themes or native packages if the Investors approve them and they pass their checks; the build settings say both are off today. The Pro contents are fixed in the build before it is sent to Apple and are shown in the app; there is no hidden switch that changes what Pro unlocks after release (ADR-001; Apple's App Review rule 2.5.19). Apple handles the payment; the company never sees card details.
+Pro is one non-consumable purchase (bought once, not renewed), no subscription. Decided on 2026-10-30 (#87): one purchase at $14.99, unlocking the seven Pro premade widgets (five are free) and the three editor themes Ember, Fern and Graphite. At HEAD the build's flag file still says pending and themes off, and the theme picker does not exist: T-0769 and T-0272 build that. Native packages are not in Pro and not in 1.0 (version 1.1). The Pro contents are fixed in the build before it is sent to Apple and are shown in the app; there is no hidden switch that changes what Pro unlocks after release (ADR-001; Apple's App Review rule 2.5.19). Apple handles the payment; the company never sees card details.
 
 ### 3.6 What works with no connection
 
@@ -170,11 +170,11 @@ Each limit has the record it comes from. Records are in pywidget/docs/decisions/
 | Limit | Why | Record |
 | --- | --- | --- |
 | Version 1 is the editor plus a narrow widget engine plus 12 premades. The full brief (web editor, block builder, marketplace and more) is several products. | One engineer and one test slot at a time. A first review of a code-running app is careful and one rejection costs about a week. | ADR-001 |
-| Widget cut line, Day 14 (2026-11-04): widgets ship in 1.0 only if 8 of 12 premades draw correctly in every size and mode, a user-written widget reaches the Home Screen, and the design checks pass. Otherwise 1.0 is the editor only. | Decided in advance so the call is not made under pressure. If cut, Pro has little to sell, which is why the pricing proposal exists. | ADR-001, section 3.3 |
-| Home Screen widgets are not live. Apple decides refreshes, and the best any app can do without a server is every 15 to 60 minutes. Until Python in the widget part is proved on a phone, they show what the app last drew. Apple's budget is about 40 to 70 a day for a widget you look at often, roughly every 15 to 60 minutes, fewer if you rarely look. | Apple's published budget, in Apple's own words on its current developer page "Keeping a widget up to date" (read signed out on 26 October 2026 under the Investors' ruling of that day; the saved copy is in research/inbound/apple/). The page does not tie the figure to an iOS version; it is the page Apple publishes now, and Apple calls it typical, not a promise. The company's team believes test tools on the Mac <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lift</span> the limit, but that sentence is not on Apple's page, so it is a belief, not a fact; only a real phone gives real numbers. | ADR-007; research note L2; App Review notes, item A3 |
+| Widget cut line, Days 22 to 23 (2026-11-12 to 2026-11-13; moved from Day 14 on 2026-10-29): widgets ship in 1.0 only if 8 of 12 premades draw correctly in every size and mode, a user-written widget reaches the Home Screen, and the design checks pass. Otherwise 1.0 is the editor only. | Decided in advance so the call is not made under pressure. If cut, Pro has little to sell, which is why the pricing proposal exists. | ADR-001, section 3.3 |
+| Home Screen widgets are not live. Apple decides refreshes; Apple says a widget people look at often typically gets 40 to 70 a day, which roughly translates to every 15 to 60 minutes, though the intervals vary. The company states no refresh number for its widgets. Until Python in the widget part is proved on a phone, they show what the app last drew. Apple gives fewer if you rarely look. | Apple's published budget, in Apple's own words on its current developer page "Keeping a widget up to date" (read signed out on 26 October 2026 under the Investors' ruling of that day; the saved copy is in research/inbound/apple/). The page does not tie the figure to an iOS version; it is the page Apple publishes now, and Apple calls it typical, not a promise. The company's team believes test tools on the Mac <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lift</span> the limit, but that sentence is not on Apple's page, so it is a belief, not a fact; only a real phone gives real numbers. | ADR-007; research note L2; App Review notes, item A3 |
 | Python in the widget part is built for version 1.0 but ships switched on only if it passes tests on a real iPhone. Until then, and if it fails, the widget part never runs Python. | Apple publishes no memory or time limit for the widget part. The figure of about 30 MB is widely reported but not confirmed by Apple or by us. A script that goes over is simply stopped, with no error anyone can see. The switch is set from real-phone numbers before the release candidate, never from the Simulator (the Mac's phone stand-in). Only light scripts run there: a short list of Python modules (dates, maths, JSON, text) is checked when a script is saved and again when it runs. | ADR-007, chair line 2026-10-29 08:03 |
 | No buttons or toggles inside widgets in the first release; widgets are static pictures that update over time. | Cut to 1.1 to protect the date (the description format already reserves room for them). | ADR-001 section 3.2; ADR-002 |
-| A fixed set of bundled packages in version 1. No online installs and no browsing for packages. Install from a file is a stretch goal that lands by Day 13 or moves to 1.1. | Apple's rules on downloading code carry review risk; the bundled set is checked for licence and size. Compiled add-ons such as NumPy, Pillow and matplotlib are not in 1.0: native packages come in 1.1 (ADR-003 s4.1, 638f21ff). | ADR-003; ADR-006 |
+| A fixed set of bundled packages in version 1. No online installs and no browsing for packages. Install from a file is a stretch goal and is not in the app at HEAD (T-0212, class 1.1); it moves to 1.1 if not built. | Apple's rules on downloading code carry review risk; the bundled set is checked for licence and size. Compiled add-ons such as NumPy, Pillow and matplotlib are not in 1.0: native packages come in 1.1 (ADR-003 s4.1, 638f21ff). | ADR-003; ADR-006 |
 | No marketplace, gallery of other people's code, or sharing in the app. The 12 premades are inside the app; any script exports as a readable file. | Apple's rule on apps that run code from other people is unclear and risky. A web gallery comes after approval, an in-app one much later. | ADR-006 |
 | Location only while the app is open; a distance widget may show an old reading, and says when it was taken. | Asking for "always" location in a first review would raise the risk. | ADR-001 (revised table) |
 | No compatibility layer for another app's scripts. | Needs a legal review and a ruling on collecting public scripts, held until the Investors answer. | ADR-005 |
@@ -187,18 +187,18 @@ Each limit has the record it comes from. Records are in pywidget/docs/decisions/
 
 ### 4.1 Widget freshness: the options and their limits
 
-The Investors asked on 29 October 2026 (issue #41) for the freshest widget possible, delay accepted. The ruling is recorded in ADR-007 (chair line of 2026-10-29 08:03). For a Home Screen widget, "every 15 to 60 minutes" is the best any app can do without a server; nothing in iOS 26 or 27 lifts it. This guide does not call options A or B "live". Seconds-level content exists only as timers (time-derived text and bars) and Live Activities (Lock Screen and Dynamic Island). Where a number comes from the Simulator or a widely reported figure rather than a real iPhone, it is marked. The memory ceiling is unconfirmed until a real iPhone is tested (issue #100, signing).
+The Investors asked on 29 October 2026 (issue #41) for the freshest widget possible, delay accepted. The ruling is recorded in ADR-007 (chair line of 2026-10-29 08:03). For a Home Screen widget, Apple's published budget is typically 40 to 70 reloads a day for a widget viewed often, which roughly translates to every 15 to 60 minutes, though the intervals vary (Apple's page, "Keeping a widget up to date"). That is Apple's typical range, not a limit we measured and not a promise; the company prints no refresh number (ADR-007, chair line 2026-10-30 17:14). This guide does not call options A or B "live". Seconds-level content exists only as timers (time-derived text and bars) and Live Activities (Lock Screen and Dynamic Island). Where a number comes from the Simulator or a widely reported figure rather than a real iPhone, it is marked. The memory ceiling is unconfirmed until a real iPhone is tested (issue #100, signing).
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 2: 4.1 Widget freshness: the options and their limits, scrolls sideways" style="--tw:1792px" markdown="1">
 
 | Option | What it does | What it can't do | Limits to know | Needs the app running? | Delay to launch |
 |---|---|---|---|---|---|
-| **A. Python in the widget part** (ruled: built for 1.0, switched on by device tests) | Reruns the script every 15 to 60 minutes, whenever iOS wakes the widget, and on a Refresh tap; any logic, any JSON feed | Go faster than Apple's budget; use heavy Python modules; survive a memory overrun (it falls back to the last picture with a badge) | 15 to 60 minutes, 40 to 70 a day; the script gets 2 seconds; memory ceiling unconfirmed until #100; the first device test is whether the widget part can even load Python under a real signature | No | +8 days (submission Day 17 to Day 25, 2026-11-15), plus day-for-day if #100 lands after Day 21 |
+| **A. Python in the widget part** (ruled: built for 1.0, switched on by device tests) | Reruns the script whenever iOS wakes the widget (Apple's typical range is every 15 to 60 minutes, not a promise) and on a Refresh tap; any logic, any JSON feed | Go faster than Apple's budget; use heavy Python modules; survive a memory overrun (it falls back to the last picture with a badge) | Apple typically gives 40 to 70 reloads a day to a widget people look at often; the script gets 2 seconds; memory ceiling unconfirmed until #100; the first device test is whether the widget part can even load Python under a real signature | No | +8 days (submission Day 17 to Day 25, 2026-11-15), plus day-for-day if #100 lands after Day 21 |
 | **B. Declared Swift steps** (building blocks in 1.0; "bound fields" only if A fails) | On every wake-up, fetches one URL and shows named fields, reads today's steps, takes a location fix; no Python | Compute anything (a feed that needs more than "this field" is A's); change colours or layout by rules | Same 15 to 60 minute budget; steps need a device check (T-0011); only declared fields are fresh | No | +3 days on top of A if needed (Day 28, 2026-11-18); alone it would have been about +5 (Day 22) |
 | **Timers in the view** (shipped) | Clocks, countdowns, "updated 4 min ago", progress bars that move by themselves, to the second | Show anything that isn't a function of time | None | No | 0 |
 | **Shortcuts automation** (in the code; not measured on a phone) | Meant to run every widget's script fresh at times or events you pick ("7:00", "when I arrive") | Run without a one-time 2 to 3 minute setup | Needs iOS to launch the app briefly in the background; the Refresh Widgets action is in the code, but nobody has measured it on a phone from a background launch | Briefly, launched by iOS | 0 |
-| **iOS background refresh** (ruled: built for 1.0, not in the app yet) | Would let iOS run the app briefly when it chooses | Promise a cadence or a time | iOS decides when; how often is known only from a real iPhone (#100) | Briefly, launched by iOS | 0; moves to 1.1 if not in the main code by Day 21 (2026-11-11), or not seen running on a real iPhone by Day 24 (2026-11-14) |
+| **iOS background refresh** (ruled: built for 1.0; not built at HEAD, T-0793; cut check T-0795) | Would let iOS run the app briefly when it chooses | Promise a cadence or a time | iOS decides when; how often is known only from a real iPhone (#100) | Briefly, launched by iOS | 0; moves to 1.1 if not in the main code by Day 21 (2026-11-11), or not seen running on a real iPhone by Day 24 (2026-11-14) |
 | **Live Activity, updated by the app** (1.1) | A journey or a run on the Lock Screen and Dynamic Island, updated for minutes at a time while the app works in the background, up to 8 hours | Sit on the Home Screen; last past 12 hours | 4 KB of data; no network inside the activity itself | Yes, intermittently | 0 to 1.0 (3 to 4 days in 1.1) |
 | **Server push** (WidgetKit push, pushed Live Activities) | Event-driven updates | Beat the budget (Apple calls widget push "opportunistic") | Needs a server and Apple push keys: the Investors' spend and sign-up | No | Not planned; needs an Investor decision on a server first |
 | **Keeping the app alive** (audio, decoy activity) | - | - | Breaks App Review rule 2.5.4 | - | Never |
@@ -216,9 +216,9 @@ If option A fails its device tests, the code stays dormant and the widget is as 
 | Widget | A switched on (passes device tests) | A off (fails them), with bound fields | Today's design |
 |---|---|---|---|
 | **Time** (clock, countdown, day progress) | Live, to the second, no budget used | Same | Same |
-| **Transit, timetable** | One run plans the day; each departure counts down live; the plan refetches itself every 15 to 60 minutes | Same picture; the table refreshes only when the app runs | Same, table from the last app run |
-| **Transit, real-time delays** | New data every 15 to 60 minutes and on a Refresh tap, no app; any feed, parsed in Python | New data every 15 to 60 minutes and on a tap, but only for feeds where the value is a named JSON field | Delay as of the last app run, with "updated N min ago" |
-| **Steps** | Today's count every 15 to 60 minutes and on a tap, plus goal percentage or pace; needs the device check (T-0011) | Today's count every 15 to 60 minutes; the same device check | Count from the last app run |
+| **Transit, timetable** | One run plans the day; each departure counts down live; the plan refetches itself whenever iOS reloads the widget (typically every 15 to 60 minutes by Apple's page; not promised) | Same picture; the table refreshes only when the app runs | Same, table from the last app run |
+| **Transit, real-time delays** | New data when iOS reloads the widget (Apple typically allows 15 to 60 minutes between reloads) and on a Refresh tap, no app; any feed, parsed in Python | New data when iOS reloads the widget, and on a tap, but only for feeds where the value is a named JSON field | Delay as of the last app run, with "updated N min ago" |
+| **Steps** | Today's count when iOS reloads the widget and on a tap, plus goal percentage or pace; needs the device check (T-0011) | Today's count when iOS reloads the widget; the same device check | Count from the last app run |
 
 </div>
 
@@ -234,7 +234,7 @@ Status is taken from the task board on 2026-10-28; the dates were re-checked on 
 
 | What | What is missing | Task | Date |
 | --- | --- | --- | --- |
-| A tap puts a widget on the Home Screen | Today only test code writes a widget's drawing; neither a premade nor your own script reaches the Home Screen from a tap. The most urgent gap. | T-0512 (P0) | Alpha check |
+| A tap puts a widget on the Home Screen | Built 2026-10-29 (T-0512, b0887819): placing a Python widget, changing what it shows, a tap on it, opening the app or Refresh Widgets makes the app run its script and write its picture. Left: the editor's save writes the widget's script and an unset Python widget has no script to run (T-0684, P0); the gallery's Add is T-0191 | T-0684 (P0) | 2026-11-02 |
 | Premade widgets | Code exists; 6 are due for the alpha, 12 by the freeze. Their pictures come from a test that is still being corrected. | T-0191, T-0511 | Day 10 to Day 21 (2026-11-11) |
 | Premade gallery | Not built | T-0191 | Days 16 to 20 (2026-11-06 to 2026-11-10) |
 | Widget preview beside the editor | Not built | T-0192 | Version 1.1 |
@@ -247,16 +247,16 @@ Status is taken from the task board on 2026-10-28; the dates were re-checked on 
 | Editor: tappable error lines | Not built | T-0389 | Not dated |
 | Shortcuts actions (Run Script) | Refresh Widgets is in the code, not measured on a phone from a background launch; Run Script was a stub and was wired for the alpha check A10; follow-ups open | T-0510 | Alpha |
 | Background refresh (iOS runs the app briefly to update widgets) | Added 2026-10-30. Not built: this guide wrongly called it shipped. Moves to 1.1 if not in the main code by Day 21, or not seen running on a real iPhone by Day 24 (ADR-007, chair line 2026-10-30 13:35) | T-0793 | Day 21 (2026-11-11) |
-| Editor themes in Pro | Waiting for the Investors' approval of a design (<span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>) | T-0272 | Freeze (Day 21) |
+| Editor themes in Pro | Designs approved (<span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>, 2026-10-28) and decided as part of Pro (#87, 2026-10-30); the theme picker is not built and the flag file has themes off | T-0272, T-0769 | Freeze (Day 21) |
 | First-run tour | Not built | T-0193 | Freeze (Day 21) |
 | App-rating request after a real success | Rule written; screen not built | T-0273, T-0346 | Not dated |
 | Install from a file | Stretch goal; 1.1 if not done | T-0212 | Version 1.1 |
 | Pictures not yet taken | iPad two-window view, premade widgets on the Home Screen, permission prompts, and every screen above | T-0556 | Not dated |
-| Pricing answer from the Investors | Needed to set Pro's real price | PROPOSAL-001 | Day 12 |
+| Pro's real price in the build and the store | Decided: $14.99 once (#87). The test price list still says $0.99; the price in App Store Connect is set by the Investors' side | T-0769 | After the alpha commit (2026-10-31 12:00) |
 | Verdict on the alpha | A written pass or fail per check | T-0361 | 2026-10-31, 23:59 |
 | Feature freeze | After this only fixes | | Day 21 (2026-11-11) |
 | Widget cut line | The call on whether widgets ship in 1.0 | | Day 23 (2026-11-13) |
-| Icon, screenshots, store page (need the Investors' approval) | Not part of this guide | | Day 15 (2026-11-05) |
+| Icon, screenshots, store page (need the Investors' approval) | Not part of this guide; the icon answer was wanted by 2026-11-02 | | Not re-dated since the plan moved (Day 15 was the earlier plan) |
 | Submission to Apple (needs the Investors' approval) | | | Day 25 (2026-11-15), or Day 28 (2026-11-18) if Python in the widget fails its device tests |
 
 </div>
@@ -272,7 +272,7 @@ Every look-and-feel decision made for the app, with the pictures that exist for 
 
 <p class="guide-shots"><img src="app-guide-shots/design-mockups-A-console.png" alt="Console in Paper (light)" loading="lazy"> <img src="app-guide-shots/design-mockups-B-console.png" alt="Console in Studio (dark)" loading="lazy"></p>
 
-**6.2 The Pro purchase screen: its look and words (issue #94). Approved 2026-10-28.** The screen that offers pywidget Pro, and the small entry points to it. The price and what Pro contains are not part of this approval (issue #87 decides those).
+**6.2 The Pro purchase screen: its look and words (issue #94). Approved 2026-10-28.** The screen that offers pywidget Pro, and the small entry points to it. The price and what Pro contains were not part of this approval; issue #87 decided them on 2026-10-30 (one purchase, $14.99, 7 Pro premades and 3 themes).
 
 <p class="guide-shots"><img src="app-guide-shots/design-ide-A-pro-phone.png" alt="Pro screen, light" loading="lazy"> <img src="app-guide-shots/design-ide-B-pro-phone.png" alt="Pro screen, dark" loading="lazy"></p>
 <p class="guide-shots"><img src="app-guide-shots/design-ide-A-proentry-phone.png" alt="Pro entry point, light" loading="lazy"> <img src="app-guide-shots/design-ide-B-proentry-phone.png" alt="Pro entry point, dark" loading="lazy"></p>
@@ -281,7 +281,7 @@ Every look-and-feel decision made for the app, with the pictures that exist for 
 
 <p class="guide-shots"><img src="app-guide-shots/design-ide-find-options.png" alt="Search-match colour options" loading="lazy"></p>
 
-**6.4 Three extra editor colour themes: Ember, Fern, Graphite (issue #93). Approved 2026-10-28.** Each comes as a light and a dark pair. Whether they are free or part of Pro is not decided here (issue #87).
+**6.4 Three extra editor colour themes: Ember, Fern, Graphite (issue #93). Approved 2026-10-28.** Each comes as a light and a dark pair. They are part of Pro (decided 2026-10-30, issue #87); the theme picker is not built yet (T-0272).
 
 <p class="guide-shots"><img src="app-guide-shots/design-themes-pro-preview.png" alt="The extra editor themes, light and dark" loading="lazy"></p>
 
@@ -295,7 +295,7 @@ Every look-and-feel decision made for the app, with the pictures that exist for 
 <p class="guide-shots"><img src="app-guide-shots/design-icon-png-prompt-light-60.png" alt="Prompt, light" loading="lazy"> <img src="app-guide-shots/design-icon-png-prompt-dark-60.png" alt="Prompt, dark" loading="lazy"> <img src="app-guide-shots/design-icon-png-prompt-tinted-60.png" alt="Prompt, tinted" loading="lazy"></p>
 <p class="guide-shots"><img src="app-guide-shots/design-icon-png-trace-light-60.png" alt="Trace, light" loading="lazy"> <img src="app-guide-shots/design-icon-png-trace-dark-60.png" alt="Trace, dark" loading="lazy"> <img src="app-guide-shots/design-icon-png-trace-tinted-60.png" alt="Trace, tinted" loading="lazy"></p>
 
-**6.7 The App Store screenshots (issue #92, open, same card).** Two layouts are proposed, "Open" (recommended) and "Framed". Gap: the contact sheets for both layouts are not in the main branch of the repository (they are on a separate preview branch, drawn before the card's last changes), so there is no picture here. The real screenshots are taken from the running app after the code freeze on Day 13 (2026-11-03) and shown to the Investors on Day 15 (2026-11-05).
+**6.7 The App Store screenshots (issue #92, open, same card).** Two layouts are proposed, "Open" (recommended) and "Framed". Gap: no contact sheet for either layout is in the repository at HEAD, so there is no picture here. The real screenshots are taken from the running app after the feature freeze (Day 21, 2026-11-11), not on the Day 13 of the earlier plan; the date the Investors review them is not set in the current plan.
 
 **6.8 The app's public name (issue #90, open, answer wanted by 2026-11-02).** Three coined names are on the card (Coilwork is recommended). Gap: there is no picture of the three names. The only picture that exists is of how the placeholder name "pywidget" or "PyWidget" would be written under the icon and in copy (option E on the card).
 
@@ -309,7 +309,7 @@ Every look-and-feel decision made for the app, with the pictures that exist for 
 <p class="guide-shots"><img src="app-guide-shots/design-ide-A-gallery-phone.png" alt="Gallery, light" loading="lazy"> <img src="app-guide-shots/design-ide-B-gallery-phone.png" alt="Gallery, dark" loading="lazy"></p>
 <p class="guide-shots"><img src="app-guide-shots/design-states-states-small.png" alt="Widget states, small size" loading="lazy"></p>
 
-Not design choices and so not listed: the price and Pro contents (issue #87) and the privacy policy facts (issue #98) have no pictures.
+Not design choices and so not listed: the privacy policy facts (issue #98) have no pictures.
 
 ## 7. How the pictures are made in code
 
@@ -578,14 +578,14 @@ Apple draws them **without colour**. The system turns the widget into shades of 
 
 - A person's Python script says which sizes it supports and, for each size, returns a description of what to show: the same "view tree" as for Home Screen widgets. One script can show a full card on the Home Screen and a single ring on the Lock Screen.
 - The Swift renderer draws Lock Screen sizes exactly as it draws Home Screen ones. Apple supplies the monochrome look; the renderer adds Apple's standard Lock Screen pieces, such as the soft circle or pill background and gauge styles made for that space.
-- Freshness is the same as on the Home Screen. Python runs in the app (when it is open, or from a Shortcuts automation, which is in the code but not measured on a phone), saves the result, and the Lock Screen widget redraws it. Background refresh is planned for 1.0 and is not in the app yet (section 4.1). Times and countdowns tick by themselves without Python running.
+- Freshness is the same as on the Home Screen. Python runs in the app (when it is open, or from a Shortcuts automation, which is in the code but not measured on a phone), saves the result, and the Lock Screen widget redraws it. Background refresh is planned for 1.0 and is not built at HEAD (T-0793; cut check T-0795; section 4.1). Times and countdowns tick by themselves without Python running.
 - To add one, the person long-presses the Lock Screen, taps Customize, taps the widget row, and picks pywidget. This is Apple's standard flow.
 
 ### 8.3 Limits worth knowing
 
 - No colour and very little room: one or two short facts at most. Photos turn into muddy silhouettes, so designs use text, symbols and simple shapes.
 - Not interactive in version 1. Tapping opens the app. Buttons are planned for 1.1.
-- iOS rations refreshes, as on the Home Screen: every 15 to 60 minutes at best, so a widget shows its last result and when it was made, not live data (section 4.1). Clocks and timers are the exception.
+- iOS rations refreshes, as on the Home Screen: Apple says a widget people view often typically gets reloads roughly every 15 to 60 minutes, though it varies, so a widget shows its last result and when it was made, not live data (section 4.1). Clocks and timers are the exception.
 - Nobody has yet seen them on a real iPhone. Device testing waits on the signing request (issue #100).
 
 ### 8.4 All twelve premade widgets

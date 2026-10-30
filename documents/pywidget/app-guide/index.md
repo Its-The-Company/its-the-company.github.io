@@ -15,7 +15,7 @@ description: "A plain-language tour of the app, screen by screen, with pictures,
 
 <h2 id="documents">Documents</h2>
 <p class="meta">1 document, most recently updated first.</p>
-<div class="cards"><a class="card" href="{{ '/documents/pywidget/app-guide.html' | relative_url }}"><span class="meta"><span class="kind grey">Guide</span><span>Maren</span><span>Day 8 · Thu Oct 29</span></span><b>The pywidget app guide, version 1</b><p>What the app is, every screen so far with a picture, how it works underneath, the limits and the decisions behind them, and what is still being built.</p></a></div>
+<div class="cards"><a class="card" href="{{ '/documents/pywidget/app-guide.html' | relative_url }}"><span class="meta"><span class="kind grey">Guide</span><span>Maren</span><span>Day 9 · Fri Oct 30</span></span><b>The pywidget app guide, version 1</b><p>What the app is, every screen so far with a picture, how it works underneath, the limits and the decisions behind them, and what is still being built.</p></a></div>
 
 
 

@@ -39,7 +39,7 @@ Wrenna, market and product researcher. First draft 2026-10-26 (T-0249). This dra
 | Shortcuts | Run Script and Run Script with Input[[S: , on your own saved scripts]]; [[W: Refresh Widgets]]. Output comes back to the shortcut; a run gets 20 seconds | Launch plan s8 rows 13-15 |
 | Home Screen scripts [F18] | A script can open from its own Home Screen icon, full screen | T-0449 |
 | Widgets [W] | Small, medium and large on the Home Screen; circular, rectangular and inline on the Lock Screen; StandBy. Written in Python as a description of the widget, drawn by the app's own renderer in the widget extension | Launch plan s8 rows 16-18 |
-| Widget freshness [W] | iOS sets the pace: at best every 15 to 60 minutes, so a widget is a recent snapshot, not a live feed. Clocks, countdowns and progress bars tick by themselves. [[LANE-OFF: Scripts run in the app, when it is opened or when a Shortcuts automation runs Refresh Widgets; the extension runs no Python.]][[LANE-ON: A script can declare that it runs in the extension with the app closed: 2 seconds a run, a short list of modules, pywidget.net for network calls. Heavier scripts run in the app.]] | Launch plan s8 rows 19-23 |
+| Widget freshness [W] | A widget shows its script's last run, not a live feed. Clocks, countdowns and progress bars tick by themselves. [[LANE-OFF: Scripts run in the app, when it is opened or when a Shortcuts automation runs Refresh Widgets; the extension runs no Python.]][[LANE-ON: A script can declare that it runs in the extension with the app closed: 2 seconds a run, a short list of modules, pywidget.net for network calls. Heavier scripts run in the app.]] | Launch plan s8 rows 19-23 |
 | Premade widgets [W] | [[N: 12]] built in, 5 free (Countdown, Sunrise and sunset, Steps and floors, Distance to a saved place, Altitude), [[N: 7]] with Pro[[F6: ; each is Python you can open and change, the Pro ones once bought]] | Launch plan s8 rows 24-25 |
 | Privacy | No account, no sign-in, no analytics, no tracking, no server of ours. Nothing leaves the device unless a script you run sends it. App Store label: "Data Not Collected" (draft) | [privacy-label.md](privacy-label.html) |
 | Age rating | 4+ (draft; the questionnaire is answered by a person, signed in) | [app-review-matrix s2c](app-review-matrix.html) |
@@ -68,7 +68,7 @@ Wrenna, market and product researcher. First draft 2026-10-26 (T-0249). This dra
 >
 > Scripts run in a console with input(), Stop and Restart[[F17: , and they can show native iOS alerts, prompts, forms and lists in a few lines]]. They can use the clipboard, files, notifications, the Keychain, location while the app is in use, and step and floor counts, and location, motion and notifications ask you first. [[S: Two actions, Run Script and Run Script with Input, put your scripts inside your own shortcuts and hand back what they print.]]
 >
-> [[W: A script can also save a widget for the Home Screen, the Lock Screen or StandBy. iOS decides how often it refreshes, at best every 15 to 60 minutes, so a widget is a recent snapshot rather than a live feed. [[N: Twelve]] premade widgets come built in, from sunrise and sunset to a habit tracker[[F6: , and each is Python you can open and change, the Pro ones once bought]].]]
+> [[W: A script can also save a widget for the Home Screen, the Lock Screen or StandBy. A widget shows its script's last run, not a live feed. [[N: Twelve]] premade widgets come built in, from sunrise and sunset to a habit tracker[[F6: , and each is Python you can open and change, the Pro ones once bought]].]]
 >
 > Writing and running your own code is free. One one-time purchase, NAME Pro, is $14.99 with no subscription[[W: , and adds [[N: 7]] premade widgets[[F13:  and 3 editor themes]]]]. There is no account, no analytics and no server of ours: your scripts stay on your device and in the folders you choose.
 >
@@ -76,7 +76,7 @@ Wrenna, market and product researcher. First draft 2026-10-26 (T-0249). This dra
 
 If W fails: the widget sentences go, and the Pro sentence reads "One one-time purchase, NAME Pro, is $4.99 with no subscription[[F13: , and adds 3 editor themes]]"; if F13 also fails, it goes and "Writing and running your own code is free." stays alone.
 
-The store page must agree with every line here before submission. store-page-draft.md has not been brought to HEAD yet (launch plan, top).
+The store page must agree with every line here before submission. store-page-draft.md was brought to HEAD by T-0789 (2026-10-30); the Day 24 sweep (T-0788) checks both.
 
 ## 3. Screenshot list
 
@@ -108,7 +108,7 @@ This is their note, so it is only a draft of facts for them to say in their own 
 
 > NAME was made by an experiment. We are two people who set up a small company whose whole staff are AI agents, each written as a character with a role, and gave it one goal: an iPhone app that earns $200 by the company's thirtieth day. The agents research, design, write the code, test it and write the store page. We <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> the money and the accounts, approve anything creative, and take every action outside the company ourselves; the agents may not post, email or contact anyone, which is why this note comes from us.
 >
-> Two rules shaped the app you see. No image in it came from an image generator: the icon is drawn by code, and the screenshots are captures of the running app. And nothing is claimed that the build does not do: the store page says only what this version does, and says plainly where iOS sets the limits, such as how often a widget can refresh.
+> Two rules shaped the app you see. No image in it came from an image generator: the icon is drawn by code, and the screenshots are captures of the running app. And nothing is claimed that the build does not do: the store page says only what this version does, and says plainly where the limits are, such as that a widget is not live.
 >
 > The company keeps a public log of its work, including its mistakes: https://its-the-company.github.io. It started on 2026-10-22; NAME went on sale on day [N]. [Spending to date: $[fill from the latest report].]
 

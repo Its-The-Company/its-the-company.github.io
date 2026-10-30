@@ -1,77 +1,77 @@
 {
  "schema": 1,
- "at": "2026-10-30T20:26:15.817439+00:00",
+ "at": "2026-10-30T21:35:25.899214+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-30T13:17:20-04:00"
+  "started": "2026-10-30T16:28:36-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "odalys",
-   "task": "[tools] T-0816 needs.js parser hardening",
+   "task": "[tools] T-0825 personal subscription lane",
    "model": "opus",
-   "started": "2026-10-30T19:57:56.130Z",
+   "started": "2026-10-30T21:27:01.362Z",
    "seconds": null,
-   "finished": "2026-10-30T20:25:19.735000+00:00"
+   "finished": "2026-10-30T21:34:49.192000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[review] T-0823 rating rule review",
+   "model": "sonnet",
+   "started": "2026-10-30T21:24:54.304Z",
+   "seconds": null,
+   "finished": "2026-10-30T21:26:07.124000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-0807 app guide at HEAD",
+   "model": "sonnet",
+   "started": "2026-10-30T21:22:17.354Z",
+   "seconds": null,
+   "finished": "2026-10-30T21:24:40.093000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-0815 needs.js send-lock fixes",
-   "model": "opus",
-   "started": "2026-10-30T19:33:58.534Z",
+   "task": "[ops] T-0810 OPERATIONS board-read proposal",
+   "model": "sonnet",
+   "started": "2026-10-30T21:20:52.234Z",
    "seconds": null,
-   "finished": "2026-10-30T19:57:47.281000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-0814 review of the Needs-you panel",
-   "model": "opus",
-   "started": "2026-10-30T19:24:10.849Z",
-   "seconds": null,
-   "finished": "2026-10-30T19:33:40.551000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0379 report Needs-you panel",
-   "model": "opus",
-   "started": "2026-10-30T19:09:33.808Z",
-   "seconds": null,
-   "finished": "2026-10-30T19:23:59.933000+00:00"
+   "finished": "2026-10-30T21:22:08.247000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 130,
-  "blocked_count": 56
+  "runnable_count": 126,
+  "blocked_count": 57
  },
  "meter": {
   "five_hour": {
-   "pct": 4.0,
-   "resets_at": "2026-10-30T20:59:59.763453+00:00",
+   "pct": 15.0,
+   "resets_at": "2026-10-30T21:00:00.332088+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 96.0,
+   "left": 85.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 83.0,
-   "resets_at": "2026-11-01T06:59:59.763475+00:00",
+   "pct": 85.0,
+   "resets_at": "2026-11-01T07:00:00.332112+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 17.0,
+   "left": 15.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T06:59:59.763652+00:00",
+   "resets_at": "2026-11-01T07:00:00.332275+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-30T13:17:19.381787-04:00"
+  "read_at": "2026-10-30T16:28:36.065823-04:00"
  },
  "ui": {
-  "week_pct": 0.166,
+  "week_pct": 0.167,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-30T16:27:00-04:00"
+  "at": "2026-10-30T17:37:00-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -218,30 +218,31 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T-0816 needs.js parser hardening",
-    "at": "2026-10-30T20:25:19.735000+00:00",
-    "o": "c"
+    "t": "T-0825 personal subscription lane",
+    "at": "2026-10-30T21:34:49.192000+00:00",
+    "o": "i"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0815 needs.js send-lock fixes",
-    "at": "2026-10-30T19:57:47.281000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
+    "w": "Idris",
     "k": "review",
-    "t": "T-0814 review of the Needs-you panel",
-    "at": "2026-10-30T19:33:40.551000+00:00",
+    "t": "T-0823 rating rule review",
+    "at": "2026-10-30T21:26:07.124000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "T-0807 app guide at HEAD",
+    "at": "2026-10-30T21:24:40.093000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 130,
+   "next": 126,
    "wait": 26,
-   "blocked": 30,
-   "you": 7
+   "blocked": 31,
+   "you": 8
   }
  },
  "qr": [],

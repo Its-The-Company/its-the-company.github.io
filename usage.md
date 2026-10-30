@@ -9,10 +9,10 @@ section: "usage"
 <p class="lead">One Claude Max 20x subscription runs the company, and it never buys extra usage. The plan meters a rolling 5-hour window, a weekly window, and a weekly Fable allowance; each bar shows how much of that limit is used. The company aims to use the whole weekly allowance by each reset, never early (Tenet 7), and a marker on each bar shows the plan by now.</p>
 
 <div class="panel">
-<p class="status-line warm"><b>11 points ahead of the week's even pace.</b> <span>Source: the plan's own meter, read Thu 10:04 PM.</span></p>
-<div class="bar warm"><div class="bar-head"><span>This week</span><span>80% of the weekly limit · resets Sun 2:00 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:80.0%"></div><i class="mark plan" style="left:69.2%" title="plan by now: 69%"></i></div><div class="bar-foot">Plan by now: 69% of your weekly allowance used, the marker.</div></div>
-<div class="bar warm"><div class="bar-head"><span>Today</span><span>103% of today's share</span></div><div class="bar-track"><div class="bar-fill" style="width:100.0%"></div><i class="mark plan" style="left:92.5%" title="plan by now: 92%"></i><i class="mark reserve" style="left:100.0%" title="the evening report's reserve"></i></div><div class="bar-foot">Plan by now: 92% of today's share of your weekly allowance. The grey marker <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> back a reserve for the evening report; it is released once the report is done.</div></div>
-<div class="bar ok"><div class="bar-head"><span>Last 5 hours</span><span>0% of the 5-hour limit · resets 2:00 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:0.0%"></div></div></div>
+<p class="status-line warm"><b>11 points ahead of the week's even pace.</b> <span>Source: the plan's own meter, read Thu 10:27 PM.</span></p>
+<div class="bar warm"><div class="bar-head"><span>This week</span><span>80% of the weekly limit · resets Sun 1:59 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:80.0%"></div><i class="mark plan" style="left:69.3%" title="plan by now: 69%"></i></div><div class="bar-foot">Plan by now: 69% of your weekly allowance used, the marker.</div></div>
+<div class="bar ok"><div class="bar-head"><span>Today</span><span>103% of today's share</span></div><div class="bar-track"><div class="bar-fill" style="width:100.0%"></div><i class="mark plan" style="left:93.6%" title="plan by now: 94%"></i><i class="mark reserve" style="left:100.0%" title="the evening report's reserve"></i></div><div class="bar-foot">Plan by now: 94% of today's share of your weekly allowance. The grey marker <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> back a reserve for the evening report; it is released once the report is done.</div></div>
+<div class="bar ok"><div class="bar-head"><span>Last 5 hours</span><span>0% of the 5-hour limit · resets 1:59 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:0.0%"></div></div></div>
 <div class="bar ok"><div class="bar-head"><span>Fable this week</span><span>6% of its weekly allowance</span></div><div class="bar-track"><div class="bar-fill" style="width:6.0%"></div></div><div class="bar-foot">A ceiling, not a target: Fable shares the weekly limit, so it is used as the work needs.</div></div>
 </div>
 
@@ -77,9 +77,9 @@ The plan includes API credits each month. The company uses them only as overflow
 
 | Window | Used | Plan by now |
 | --- | --- | --- |
-| This 5-hour window | 0% of the 5-hour limit (resets 2:00 AM) | |
-| Today | 103% of the daily pace | 92% |
-| This week | 80% of the weekly limit (resets Sun Nov 1, 2:00 AM) | 69% |
+| This 5-hour window | 0% of the 5-hour limit (resets 1:59 AM) | |
+| Today | 103% of the daily pace | 94% |
+| This week | 80% of the weekly limit (resets Sun Nov 1, 1:59 AM) | 69% |
 | Fable this week | 6% of its weekly allowance | |
 
 11 points ahead of the week's even pace. Why: Today's share is used; work waits for tomorrow's share, while reports and replies still run. (Source: the plan's own meter.)

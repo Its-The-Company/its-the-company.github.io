@@ -1,31 +1,14 @@
 {
  "schema": 1,
- "at": "2026-10-29T23:49:02.831311+00:00",
+ "at": "2026-10-30T01:10:14.698046+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-10-29T19:30:52-04:00"
+  "kind": "inbox",
+  "started": "2026-10-29T21:09:38-04:00"
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "pernille",
-   "task": "[review] T-0754 runner self-update review",
-   "model": "opus",
-   "started": "2026-10-29T23:43:48.702Z",
-   "seconds": null,
-   "finished": "2026-10-29T23:48:06.143000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0751 MacBook runner self-update",
-   "model": "opus",
-   "started": "2026-10-29T23:31:14.430Z",
-   "seconds": null,
-   "finished": "2026-10-29T23:43:35.925000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -34,28 +17,28 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
-   "resets_at": "2026-10-30T00:59:59.567264+00:00",
+   "pct": 0.0,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "left": 90.0,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 79.0,
-   "resets_at": "2026-11-01T06:59:59.567284+00:00",
+   "pct": 80.0,
+   "resets_at": "2026-11-01T06:59:59.650629+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 21.0,
+   "left": 20.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T06:59:59.567417+00:00",
+   "resets_at": "2026-11-01T06:59:59.650799+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-29T19:30:51.255943-04:00"
+  "read_at": "2026-10-29T21:09:37.302020-04:00"
  },
  "ui": {
-  "week_pct": 0.1,
+  "week_pct": 0.101,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -71,7 +54,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-29T20:54:02-04:00"
+  "at": "2026-10-29T21:11:00-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -940,13 +923,6 @@
     "t": "T-0751 MacBook runner self-update",
     "at": "2026-10-29T23:43:35.925000+00:00",
     "o": "i"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-0752 re-review of 87b09744",
-    "at": "2026-10-29T23:28:29.042000+00:00",
-    "o": "c"
    }
   ],
   "count": {
@@ -961,7 +937,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "task_done",
   "task_title",
   "task_open"
  ]

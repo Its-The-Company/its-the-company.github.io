@@ -266,6 +266,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-10-30 T-0816 (2b34c01c): Chromium's longtask entries stayed empty on a real stall; a 10 ms timer's gap saw it. Keep two layers so a single-fault mutant ends. Audit every pattern on a path, not the one reported.
 - 2026-10-30 T-0815 (632989fe): wrote 43 mutants in a commit message; 33 was true, and it was pushed. Second time: grep the count into the message, never type it. A mutant "caught" by a case that raised proves nothing: fix the case first. needs.js cap lives in site_needs_test, not build.py; 792 B raw left. Open: T-0817 (Pernille review).
 - 2026-10-30 T-0825 (5001443c): personal lane checks landed unwired, proven inert by "no running path names it". A slice can land by not touching the runners. Cloud-session commands and the account email in context stay open; governor record books any non-api run as plan. Open: T-0827 (Pernille), T-0828 (build).
+- 2026-10-30 Day 9: a failed sign-in review (T-0827, 7 blockers) is not a landed feature; count the review result, not the commit.
 {% endraw %}
 
 

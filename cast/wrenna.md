@@ -276,6 +276,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-30 T-0789 store page done (ae40f8d0; board ticked; event logged)
 - Lesson: a green test shows a feature runs, not that a person can reach it; find the entry point (the 10 examples have none on iPhone). Gates A and X are mine to carry into T-0788.
+
+## 2026-10-30 Day 9 diary saved; T-0806 EU trader status research taken up
 {% endraw %}
 
 

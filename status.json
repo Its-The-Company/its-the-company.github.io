@@ -1,77 +1,53 @@
 {
  "schema": 1,
- "at": "2026-10-30T21:35:25.899214+00:00",
+ "at": "2026-10-30T21:54:44.137738+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-30T16:28:36-04:00"
+  "started": "2026-10-30T17:37:58-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] T-0825 personal subscription lane",
+   "name": "pernille",
+   "task": "[review] T-0827 personal lane independent review",
    "model": "opus",
-   "started": "2026-10-30T21:27:01.362Z",
+   "started": "2026-10-30T21:38:39.411Z",
    "seconds": null,
-   "finished": "2026-10-30T21:34:49.192000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[review] T-0823 rating rule review",
-   "model": "sonnet",
-   "started": "2026-10-30T21:24:54.304Z",
-   "seconds": null,
-   "finished": "2026-10-30T21:26:07.124000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-0807 app guide at HEAD",
-   "model": "sonnet",
-   "started": "2026-10-30T21:22:17.354Z",
-   "seconds": null,
-   "finished": "2026-10-30T21:24:40.093000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-0810 OPERATIONS board-read proposal",
-   "model": "sonnet",
-   "started": "2026-10-30T21:20:52.234Z",
-   "seconds": null,
-   "finished": "2026-10-30T21:22:08.247000+00:00"
+   "finished": "2026-10-30T21:53:34.208000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 126,
+  "runnable_count": 131,
   "blocked_count": 57
  },
  "meter": {
   "five_hour": {
-   "pct": 15.0,
-   "resets_at": "2026-10-30T21:00:00.332088+00:00",
+   "pct": 3.0,
+   "resets_at": "2026-10-31T01:59:59.608567+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 85.0,
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 85.0,
-   "resets_at": "2026-11-01T07:00:00.332112+00:00",
+   "pct": 86.0,
+   "resets_at": "2026-11-01T06:59:59.608590+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 15.0,
+   "left": 14.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T07:00:00.332275+00:00",
+   "resets_at": "2026-11-01T06:59:59.608814+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-30T16:28:36.065823-04:00"
+  "read_at": "2026-10-30T17:37:57.355042-04:00"
  },
  "ui": {
-  "week_pct": 0.167,
+  "week_pct": 0.168,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -87,7 +63,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-30T17:37:00-04:00"
+  "at": "2026-10-30T17:56:00-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -216,6 +192,13 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-0827 personal lane independent review",
+    "at": "2026-10-30T21:53:34.208000+00:00",
+    "o": "c"
+   },
+   {
     "w": "Odalys",
     "k": "tools",
     "t": "T-0825 personal subscription lane",
@@ -229,17 +212,10 @@
     "at": "2026-10-30T21:26:07.124000+00:00",
     "o": "c",
     "x": "killed"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "T-0807 app guide at HEAD",
-    "at": "2026-10-30T21:24:40.093000+00:00",
-    "o": "c"
    }
   ],
   "count": {
-   "next": 126,
+   "next": 131,
    "wait": 26,
    "blocked": 31,
    "you": 8
@@ -250,7 +226,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "task_open",

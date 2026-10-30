@@ -105,6 +105,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
+- 2026-10-30 T-0827 personal lane review: FAIL, 7 blockers (87edf472). Re-review is T-0833; rerun ops/runs-archive/t0827-held/ (git-ignored; C42 keeps exact inputs off the review, board and this file). Lesson: run seeded mutants on any fail-closed check first; a test looping over a constant proves nothing, and the CLI exit code was untested.
+
 ## Lessons (2026-10-27, T-0416 to T-0448 reviews)
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.

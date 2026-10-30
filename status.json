@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-10-30T03:22:12.363758+00:00",
+ "at": "2026-10-30T03:47:11.925815+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null
+  "active": true,
+  "kind": "inbox",
+  "started": "2026-10-29T23:46:41-04:00"
  },
  "workers": [],
  "who": "",
@@ -17,29 +17,29 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
-   "resets_at": "2026-10-30T06:00:00.064497+00:00",
+   "pct": 1.0,
+   "resets_at": "2026-10-30T05:59:59.906064+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 100.0,
+   "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 80.0,
-   "resets_at": "2026-11-01T07:00:00.064519+00:00",
+   "resets_at": "2026-11-01T06:59:59.906086+00:00",
    "used_words": "of your weekly allowance used",
    "left": 20.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T07:00:00.064690+00:00",
+   "resets_at": "2026-11-01T06:59:59.906262+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-29T23:14:59.922670-04:00"
+  "read_at": "2026-10-29T23:46:40.533889-04:00"
  },
  "ui": {
-  "week_pct": 0.141,
-  "five_hour_pct": 0.263,
+  "week_pct": 0.157,
+  "five_hour_pct": 0.369,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -50,13 +50,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-29T23:37:11-04:00",
+ "next_tick": null,
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-29T23:30:53-04:00"
+  "at": "2026-10-29T23:47:54-04:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "lanes": [
   {
    "name": "Ines",
@@ -924,23 +924,10 @@
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6514150873",
-   "state": "waiting",
-   "position": 1,
-   "eta": "2026-10-29T23:37:11-04:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "What capabilities did we just unlock..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "inbox_title",
   "task_title",
   "task_open"
  ]

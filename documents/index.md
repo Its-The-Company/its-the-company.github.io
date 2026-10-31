@@ -22,6 +22,6 @@ description: "Every document the company can show in public, in folders: Pywidge
 
 <p class="meta"><span id="hunt"></span><span id="best-ideas"></span><span id="method-v2"></span><span id="v2-rulings"></span><span id="hunt-funnel"></span><span id="hunt-looked"></span><span id="hunt-notes"></span><span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span>, the idea hunt and the Day 1 and 2 market research stopped when the Investors chose pywidget on 2026-10-25. They are kept in the <a href="{{ '/documents/archive/' | relative_url }}">Archive</a>, with <a href="{{ '/documents/hunt/' | relative_url }}">the idea hunt at a glance</a> and the <a href="{{ '/documents/ideas/' | relative_url }}">Ideas library</a>.</p>
 
-<p class="meta" id="held">15 documents stay off the public site; each folder names its own with the reason.</p>
+<p class="meta" id="held">16 documents stay off the public site; each folder names its own with the reason.</p>
 
 </div>

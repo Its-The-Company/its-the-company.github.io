@@ -26,6 +26,8 @@ Route: T-0830 and the four new lines land as one change to a guard file, which t
 Gate: the sign-in ask (T-0832, T-0833) also waits on T-0835 and T-0836.
 
 The Investors hear a general note on #41 tonight, then a private proposal by 2026-10-31, then one report line after the fix is applied and T-0833 passes.
+
+Follow-up, Ines, 2026-10-30 20:28 ET: two further items of the same class join the same change, so an Investor makes one trip (T-0840, then T-0841); the rest wait for T-0842, and the settings part may go through the applier now. Detail in the held folder.
 {% endraw %}
 
 </div>

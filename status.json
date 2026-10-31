@@ -1,74 +1,74 @@
 {
  "schema": 1,
- "at": "2026-10-30T22:19:06.339899+00:00",
+ "at": "2026-10-31T01:56:26.354751+00:00",
  "session": {
   "active": true,
-  "kind": "evening",
-  "started": "2026-10-30T18:09:04-04:00"
+  "kind": "work",
+  "started": "2026-10-30T18:21:26-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "ines",
-   "task": "[report] evening",
+   "name": "pernille",
+   "task": "[review] T-0841 held probes on patched guard",
    "model": "opus",
-   "started": "2026-10-30T22:11:41.657Z",
+   "started": "2026-10-31T01:10:18.417Z",
    "seconds": null,
-   "finished": "2026-10-30T22:16:43.396000+00:00"
+   "finished": "2026-10-31T01:55:37.911000+00:00"
   },
   {
-   "name": "worker",
-   "task": "[diary] Ines",
-   "model": "haiku",
-   "started": "2026-10-30T22:09:20.733Z",
+   "name": "odalys",
+   "task": "[tools] T-0840 guard proposal second pass",
+   "model": "opus",
+   "started": "2026-10-31T00:28:59.146Z",
    "seconds": null,
-   "finished": "2026-10-30T22:11:33.584000+00:00"
+   "finished": "2026-10-31T01:09:50.691000+00:00"
   },
   {
-   "name": "worker",
-   "task": "[diary] Odalys",
-   "model": "haiku",
-   "started": "2026-10-30T22:09:22.828Z",
+   "name": "ines",
+   "task": "[plan] T-0830 chair read of guard proposal",
+   "model": "opus",
+   "started": "2026-10-31T00:21:21.326Z",
    "seconds": null,
-   "finished": "2026-10-30T22:09:51.555000+00:00"
+   "finished": "2026-10-31T00:28:37.769000+00:00"
   },
   {
-   "name": "worker",
-   "task": "[diary] Wrenna",
-   "model": "haiku",
-   "started": "2026-10-30T22:09:24.864Z",
+   "name": "odalys",
+   "task": "[tools] T-0830 guard proposal with T-0835-38",
+   "model": "opus",
+   "started": "2026-10-30T22:44:51.218Z",
    "seconds": null,
-   "finished": "2026-10-30T22:09:50.634000+00:00"
+   "finished": "2026-10-31T00:19:14.698000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 134,
+  "runnable_count": 135,
   "blocked_count": 57
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
-   "resets_at": "2026-10-31T02:00:00.259462+00:00",
+   "pct": 6.0,
+   "resets_at": "2026-10-31T02:00:00.491227+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 95.0,
+   "left": 94.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 86.0,
-   "resets_at": "2026-11-01T07:00:00.259482+00:00",
+   "resets_at": "2026-11-01T07:00:00.491250+00:00",
    "used_words": "of your weekly allowance used",
    "left": 14.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T07:00:00.259643+00:00",
+   "resets_at": "2026-11-01T07:00:00.491447+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-30T18:09:01.855747-04:00"
+  "read_at": "2026-10-30T18:21:26.087859-04:00"
  },
  "ui": {
   "week_pct": 0.167,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-30T18:20:00-04:00"
+  "at": "2026-10-30T21:58:00-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -216,29 +216,29 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-0841 held probes on patched guard",
+    "at": "2026-10-31T01:55:37.911000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0840 guard proposal second pass",
+    "at": "2026-10-31T01:09:50.691000+00:00",
+    "o": "c"
+   },
+   {
     "w": "Ines",
-    "k": "report",
-    "t": "Evening",
-    "at": "2026-10-30T22:16:43.396000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Worker",
-    "k": "diary",
-    "t": "Ines",
-    "at": "2026-10-30T22:11:33.584000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Worker",
-    "k": "diary",
-    "t": "Odalys",
-    "at": "2026-10-30T22:09:51.555000+00:00",
+    "k": "plan",
+    "t": "T-0830 chair read of guard proposal",
+    "at": "2026-10-31T00:28:37.769000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 134,
+   "next": 135,
    "wait": 26,
    "blocked": 31,
    "you": 8

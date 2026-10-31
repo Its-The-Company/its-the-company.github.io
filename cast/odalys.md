@@ -251,22 +251,20 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open
 - T-0425: xc.sh default -collect-test-diagnostics never? (OPT-049 kept; all 91 stops lacked it, 4.7 h lane)
 - OPT-054 reverted: setup/OPERATIONS.md line 91 needs a proposal to match work.md.
+- T-0830, T-0835 to T-0838, T-0840: proposal held in ops/runs-archive/t0827-held/, T-0841 Pernille next, then an Investor's hand-apply. After it lands: OPT entry (false refusals a day, #80 method). T-0842 mine after T-0833.
 - #24 plan awaits Investor answers (token vs relay, reply speed, lanes) and Ines's board entries; Phase 1 (live_status.py, read-only chat page) is unblocked.
 
 
 ## Standing lessons (details in archive.md)
-- 2026-10-26 02:00-02:57 notes (T-0153..T-0196, T-0026; lessons on mutations, counts, glob pathspecs): archive.md
 
-## 2026-10-28 T-0492 (cc87b08c)
 
-- 2026-10-29 lane reviews T-0704..T-0727 (details in archive.md): list what runs after the last restore and what the restore looks up by name; check values and types, not only keys; never free what a check took out; object.__setattr__ finds a planted `__class__` property first. Open: re-review T-0730 (Pernille, K1).
 
-- 2026-10-30 T-0808 (8ca90e96): a metric that charges a call's whole output counts compound calls wrongly; check per-call before a verdict, and count both ways. Old streams are in ops/runs-archive (gz): decompress to /tmp, tool --streams. A rule's word ("hang") can be wider in the metric text than in the tool: write the reading down.
-- 2026-10-30 T-0379 (eadcc4ad): Playwright wait_for_function dies under the site's CSP (eval), and only sometimes: use locators. A page test needs site.css by hand: it ships inline in the layout. app.js has 22 bytes of budget. Open: T-0814 (Pernille review).
-- 2026-10-30 T-0816 (2b34c01c): Chromium's longtask entries stayed empty on a real stall; a 10 ms timer's gap saw it. Keep two layers so a single-fault mutant ends. Audit every pattern on a path, not the one reported.
+- 2026-10-30 T-0840 (42bd6d9d): a guard's except-and-pass makes any crash a bypass: fnmatch raised on a reversed glob and ended the second pass. A path check over words must skip code words and bare stars: replay gave 15 false refusals first. A probe that needs the guard loads it in process, never through the real log. Keep real args out of a rerun line: I overwrote the proposal with dummies and had to rebuild.
 - 2026-10-30 T-0815 (632989fe): wrote 43 mutants in a commit message; 33 was true, and it was pushed. Second time: grep the count into the message, never type it. A mutant "caught" by a case that raised proves nothing: fix the case first. needs.js cap lives in site_needs_test, not build.py; 792 B raw left. Open: T-0817 (Pernille review).
 - 2026-10-30 T-0825 (5001443c): personal lane checks landed unwired, proven inert by "no running path names it". A slice can land by not touching the runners. Cloud-session commands and the account email in context stay open; governor record books any non-api run as plan. Open: T-0827 (Pernille), T-0828 (build).
 - 2026-10-30 Day 9: a failed sign-in review (T-0827, 7 blockers) is not a landed feature; count the review result, not the commit.
+- 2026-10-30 T-0829 (9e2bb285): `def f(path=CONST)` ignores a patched CONST, so a CLI test wrote the real usage file; check git status after a first green run. A thin fake passes everything on a missing field: start clean, add a control row. A stricter test can void a reviewer's harness: baseline first, and say so. Open: T-0839, T-0833 (Pernille).
+- 2026-10-30 T-0835: replay before trusting a guard: first pass refused 637 recorded commands, final 30, because a backtick and a for-loop looked like shells. I dropped a refusal that protected nothing (a script that isn't there can't run) though it turned 3 probe rows green: say PASSES. A ruling's search covered 33 of 210 streams: check the corpus, not only the count. Keep a guard's test rows one-line so mutants can read them.
 {% endraw %}
 
 

@@ -1,77 +1,61 @@
 {
  "schema": 1,
- "at": "2026-10-31T13:46:22.082504+00:00",
+ "at": "2026-10-31T14:23:37.237630+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-31T06:22:00-04:00"
+  "started": "2026-10-31T09:48:51-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "idris",
-   "task": "[build] T-0867 extension crash, suffix review",
-   "model": "opus",
-   "started": "2026-10-31T11:35:55.827Z",
-   "seconds": null,
-   "finished": "2026-10-31T13:45:07.332000+00:00"
-  },
-  {
    "name": "pernille",
-   "task": "[build] T-0860 clocks progress premades",
+   "task": "[review] T-0868 review T-0867 and finish its sweep",
    "model": "opus",
-   "started": "2026-10-31T10:50:27.898Z",
+   "started": "2026-10-31T13:50:03.916Z",
    "seconds": null,
-   "finished": "2026-10-31T11:35:28.078000+00:00"
+   "finished": "2026-10-31T14:22:54.836000+00:00"
   },
   {
-   "name": "idris",
-   "task": "[test] T-0844 shared code at refresh",
-   "model": "opus",
-   "started": "2026-10-31T10:30:08.310Z",
+   "name": "maren",
+   "task": "[design] T-0869 read T-0860 extension shots",
+   "model": "sonnet",
+   "started": "2026-10-31T13:49:14.773Z",
    "seconds": null,
-   "finished": "2026-10-31T10:49:58.064000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-0355 merge route chair ruling",
-   "model": "opus",
-   "started": "2026-10-31T10:23:40.922Z",
-   "seconds": null,
-   "finished": "2026-10-31T10:29:36.240000+00:00"
+   "finished": "2026-10-31T13:49:31.535000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 137,
-  "blocked_count": 60
+  "runnable_count": 138,
+  "blocked_count": 59
  },
  "meter": {
   "five_hour": {
-   "pct": 8.0,
-   "resets_at": "2026-10-31T12:49:59.777798+00:00",
+   "pct": 3.0,
+   "resets_at": "2026-10-31T17:50:00.066799+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 92.0,
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 91.0,
-   "resets_at": "2026-11-01T06:59:59.777814+00:00",
+   "pct": 93.0,
+   "resets_at": "2026-11-01T07:00:00.066850+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 9.0,
+   "left": 7.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T06:59:59.777959+00:00",
+   "resets_at": "2026-11-01T07:00:00.067071+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-31T06:16:01.681281-04:00"
+  "read_at": "2026-10-31T09:48:50.740807-04:00"
  },
  "ui": {
-  "week_pct": 0.167,
+  "week_pct": 0.168,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -87,7 +71,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-31T09:48:00-04:00"
+  "at": "2026-10-31T10:25:00-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -216,30 +200,31 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-0868 review T-0867 and finish its sweep",
+    "at": "2026-10-31T14:22:54.836000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "T-0869 read T-0860 extension shots",
+    "at": "2026-10-31T13:49:31.535000+00:00",
+    "o": "c"
+   },
+   {
     "w": "Idris",
     "k": "build",
     "t": "T-0867 extension crash, suffix review",
     "at": "2026-10-31T13:45:07.332000+00:00",
     "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "T-0860 clocks progress premades",
-    "at": "2026-10-31T11:35:28.078000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "T-0844 shared code at refresh",
-    "at": "2026-10-31T10:49:58.064000+00:00",
-    "o": "c"
    }
   ],
   "count": {
-   "next": 137,
-   "wait": 27,
+   "next": 138,
+   "wait": 26,
    "blocked": 33,
    "you": 8
   }

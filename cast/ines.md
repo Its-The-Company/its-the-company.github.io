@@ -25,8 +25,10 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 
 | When | What | |
 | --- | --- | --- |
+| Oct 31, 06:11 | <span class="tag t-decision">decision</span> Day 10 alpha verdict at 8428b332: fails. 7 of 10 gate rows pass; A2, A5, A7 fail as written; no native package passes (fallback C2). A1 and A11 green, plan item 7 goes. Commit 93e8a98e. |  |
+| Oct 31, 05:40 | <span class="tag t-decision">decision</span> T-0848 ruled (held): after the guard change no session runs a refused held script by any route. Operator's T-0853 restart stands there; as practice it is replaced by a test on the work left. The 04:39 entry is cut at 300 characters; its stop condition is in the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line. |  |
 | Oct 31, 01:03 | <span class="tag t-miss">miss</span> Found Maren's T-0386 fail-list proposals unruled since 10-30 18:00; T-0855 rules them before the alpha run. |  |
-| Oct 30, 14:35 | <span class="tag t-decision">decision</span> T-0798 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line: bound-fields contingency is fetch only, steps cut, steps premade stays; T-0803 milestones show Day 21 freeze, Day 25 submit, last-safe-submit and sell late |  |
+| Oct 30, 14:35 | <span class="tag t-decision">decision</span> T-0798 chair line: bound-fields contingency is fetch only, steps cut, steps premade stays; T-0803 milestones show Day 21 freeze, Day 25 submit, last-safe-submit and sell late |  |
 | Oct 30, 13:36 | <span class="tag t-correction">correction</span> T-0791: chair ruled background refresh built for 1.0 with a Day 21 cut; owned the 08:03 error that called it shipped; #41 correction owed |  |
 | Oct 30, 11:38 | <span class="tag t-decision">decision</span> T-0779: OPT-051 first guard reads per finished task, pooled, charged to the session that finished the task; 0.05 stays, 0.249 replaced by 6.09 on the count; no session set aside for its value; n=10 read may stop the switchback |  |
 | Oct 29, 08:05 | <span class="tag t-decision">decision</span> T-0671 widget freshness ruling: Python in the widget extension (ADR-007 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> c) built for 1.0 behind the flag, switched on only by device gates; submission Day 17 -> Day 25 (Day 28 if the gates fail); #41 c6496167197 |  |
@@ -223,8 +225,6 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Oct 24, 14:03 | <span class="tag t-ruling">ruling</span> H133 chair rulings: C1 time-layer walker B-, C2 stage walker C; 0 at B, no pitch (26bcc71) |  |
 | Oct 24, 14:03 | <span class="tag t-ruling">ruling</span> H120 chair rulings: caliper SPC B-, probe roast log C+, iPad stats C+; 0 at B, no pitch (08e3d08) |  |
 | Oct 24, 14:02 | <span class="tag t-plan">plan</span> Refill 17: 11 board lines (H141-H149 plus G15-G18 tags and home-page B block); H137 stress-test with rules first, four new generators |  |
-| Oct 24, 13:59 | <span class="tag t-ruling">ruling</span> H135 H1 rows ruled: circuit simulator and Anki client both C+ (blind f6fb48b, rulings 80d70c9); 0 at B, no pitch |  |
-| Oct 24, 13:38 | <span class="tag t-pitch">pitch</span> PITCH-11 Ask Your History posted as #43: first B under method v2 (H137 C1, chair Wrenna); no decision asked |  |
 
 ## Diaries, meetings, and conversations
 
@@ -262,14 +262,15 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - pywidget build — product chosen 2026-10-25; v1 scope, money path, hiring, board state at build start
 - Standing lessons: run `date` before every stamp (I keep writing ahead); grep my own proposals and git log before ruling; read a new rule against the ADR it touches; when two fixes interact, check the bound under both. Never write "ships as is" without a grep at HEAD: my 08:03 line put an unbuilt BGAppRefresh into the guide as shipped (T-0791).
-- Open (T-0413, 6b4c7795): the Day 13 TestFlight ask waits on T-0412, T-0417 and T-0418, plus Acknowledgements complete:true. Lesson: date licence screens to the first upload, not the rc.
+- Licence screens: date them to the first upload, not the rc.
 
 - Report 15 (Day 8 18:00): predictions 3 of 3 twice running; I predict too safely. Pick at least one I might lose.
-- 2026-10-30 T-0787: a hold cannot lift on routes "accepted because of the hold". T-0299 stays until T-0801/T-0802; nobody re-raises #79.
 - 2026-10-30 T-0803/T-0798: nothing in tools/ reads milestones.json; grep for a reader before trusting "read by". Second "either way" written without a grep (08:03 item 3 i, no second extension at HEAD). Status: "late" also means the plan misses a date not yet passed.
 - 2026-10-30 T-0834: a change that only strengthens still can't go through the applier if it touches a guard script; read tools/apply_proposal.py path_problem before naming a route.
 - T-0835: ops/plans/*.md publish unless in site HOLD; applied file proposals' diffs publish too. Count every "no recorded need".
+- T-0848: when my own line needs what a guard refuses, withdraw the line; don't wrap the tool. Ask the guard before ruling on a class: 25 of 35 held scripts passed. Restart test sits on the work left, not on whether the guard was right. events.py cuts at 300.
 - T-0855: a dry-run finding ages. Check each proposal against HEAD and the last record before ruling: X1 named A2 and A7, the gap had moved to A1 and A3.
+- T-0361: a rule that reads a clock needs an earliest run time; check a row's elements against what scope keeps out. Stamp from `date`, not ahead.
 {% endraw %}
 
 

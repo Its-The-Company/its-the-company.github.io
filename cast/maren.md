@@ -228,6 +228,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Paywall B status band done 85f0dbd (board 386a3bd): 7 states, button fixed 650 pt, band 0.97 page colour; Idris line added (SwiftUI + plain fit test). Lesson: at 0.92 covered text ghosts in a flat drawing.
 - Kept lessons: before drafting a request card, `gh issue list` for an open one (T-0625 duplicated #94; drafted as its update); never amend in a shared repo; read terms/licences in their own command before any fetch; count claims by script; script the contrast; never stamp a time ahead of `date`; when blind_packet refuses, stop and report line numbers; snapshot sheets use stand-in grounds and frozen timers, so a fail list must say what a snapshot can and cannot show.
 
+- 2026-10-31 T-0360 done (6a407223): 11 fails, clocks small truncation is the real one; Ines rules in T-0361. Lesson: a timer rule must state the run's hour.
 - 2026-10-28 T-0614: F5 closed. Number-vs-cap ink-box method (png_sample load) measures AX line-number centring in one script; 0.0 pt iPhone, 0.5 pt iPad.
 {% endraw %}
 

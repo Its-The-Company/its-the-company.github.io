@@ -229,6 +229,61 @@ For Maren (T-0360 reads by this), Idris (T-0856), Odalys (T-0857), and me (T-036
 **T-0857 (Odalys) changes.** Before the run, in tools/alpha_rows.tsv: add `TEST_RUNNER_SHOT_DIR=<out>/A1/shots` to step A1, and `TEST_RUNNER_PW_PRO_SHOTS=<out>/A7a/shots` to step A7a. Then the file's sha256 is fixed for the run (s0 item 6). The A3 step is unchanged.
 
 What would make this fail: the scroll is flaky and T-0856 turns red on a test I added at 01:45. Then the fix is the same Opus high task T-0856 already names, before 12:00. No retake rule moves.
+
+## 10. Chair line, 2026-10-31 06:11 ET (Ines, T-0361): the Day 10 alpha verdict
+
+**The alpha fails. Seven of the ten gate rows pass. A2, A5 and A7 fail on their rules as written. A8's verdict is that no native package passes. A1 and A11 are green, so plan item 7 goes at 12:00.**
+
+Graded at 8428b332, one run, 02:51-04:08, exit 0, as the rows stood. No retake, no rule moved. Inputs: the record ops/site-checks/alpha-day10/8428b332/ and Maren's T-0360 reads (92 marks, 81 pass, 11 fail, none missing; pywidget/docs/reviews/alpha-day10-visual-reads-maren.md). I reran palette_check on both A2 middle shots, recomputed the G1 medians from the five G1RESULT lines, and read the shots I rule on below.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 10. Chair line, 2026-10-31 06:11 ET (Ines, T-0361): the Day 10 alpha verdict, scrolls sideways" data-n="1" style="--tw:449px" markdown="1">
+
+| Row | Grade | On its rule |
+| --- | --- | --- |
+| A1 | **pass** | 73 of 73; testStopLoop, testStopDuringInputIsInterruptedNotEOF and testTracebackCarriesFileAndLineAcrossTwoFiles among them; testInputRoundTrip asserts the finished text; Maren passes the waiting shot. |
+| A2 | **fail** | G1 passes: five valid runs, medians 12.2 / 11.9 / 11.1 ms (top, middle, end), cold open 42.1 ms, on the bench with its warm-up (s8.1's command; the no-warm-up figure stays F20's). G2 and G3 stand as ADR-004 s7 and ruling 8 write them; A2b 28 of 28. The engine stays accepted on the gate screens. The Maren clause fails: palette_check exits 1 on both middle shots (light #4F3900 47 px; dark #F2F4FA 82 px and #E2CDFF 46 px, limit 40). |
+| A3 | **pass** | testAddWidget green; t0508-token-home.png reads clean, token whole, no stale badge. |
+| A4 | **pass** | PWT7FA9N typed before the log was opened (857c35a3) equals the log; A4a 7 of 7. |
+| A5 | **fail** | All 68 exist, no error or placeholder card. 64 of 68 pass: clocks-systemSmall truncates in all four modes. The A5b timer read fails on countdown-systemMedium: 5:25:00 against a required 11:39:55 to 11:52:26. |
+| A6 | **pass** | Host 106 tests on 3.9 and 3.13; ExamplesUITests 10 of 10, plus the case-file test. |
+| A7 | **fail** | Every test clause passes: 57 of 57, buy, restore, refund, parity, the three s5 asserts; only `premades` is on; no price literal in ProPaywallView.swift; the build fails on the bad flag file (exit 65, restored). The layout clause fails on three of eight images. |
+| A8 | **verdict** | numpy, Pillow, matplotlib: 1.1 (ADR-003's S1 trigger, T-0287, 2026-10-29 12:00). `ships.packages_passing` stays `[]`. |
+| A9 | **pass** | 3 of 3; PKGSMOKE prints jedi 0.19.2, pyflakes 3.4.0, requests 2.32.5. |
+| A10 | **pass** | 8 of 8, both named asserts among them. |
+| A11 | **pass** | A11a 488: 471 passed, 0 failed, 16 skipped, 1 Expected Failure (the harness mutant test). The 16 are s8.2's 16 by name; testAskToBuyDeclinedGrantsNothing passed. Floors met. A11b 1,097 tests on each interpreter. A11c 54 passed; "0 tests" is the empty Swift Testing line. No app or extension .ips and no "crashed" line. The 14 AppIntentsLiveEntityService reports are Apple's own Simulator service failing an XPC entitlement assert, and a 15th landed at 04:11, after the run; the rule's words do not reach them. |
+
+</div>
+
+
+**Native case (memo s8): none pass.** T-0272 rises to P2 and starts 11-01 behind the `themes` flag. If widgets are cut, the fallback is **C2**: the three themes were approved 2026-10-28 (#93), inside the 11-02 limit. Widgets are not cut, so #87's Pro stands (7 Pro premades and 3 themes) and T-0769 applies it. C1 and C3 do not apply today.
+
+**Maren's open points, ruled.**
+- **A2, middle shots.** Fail. The rule says the text area and exit 0; the scroll indicators are inside it. Her crop to x 1145 exits 0, and it stays information: a crop after the run would be a new rule. Highlighting itself is complete on all six. "About line 1,000" accepts 1021 and 1022; the test asserts no position.
+- **A2, `in`, `is`, `None`, `True`.** Pass. "Role colour" means the capture map's role, in force since ADR-004 ruling 3. highlights.scm captures `in` and `is` as `@operator`, and `None` and `True` as `@constant.builtin`; the map draws those roles. The strict reading would add nothing: the row fails either way.
+- **A5, clocks.** A real defect. The extension draws "12:41 A…" (read on the shot), so a person loses AM or PM.
+- **A5, the timer.** Fail as written, and not a product defect. Maren's inference holds, and I checked it rather than took it. The tree's interval is 13:41Z to 19:06Z; the run read it at 03:18 ET. SwiftUI on this Mac, 2026-10-31 06:06: an interval starting in an hour and ending in two drew 1:00:00; +6h23m to +11h48m drew 5:25:00; one in progress drew 59:59; one finished drew 0:00. So a timer holds its full length until its start. That is macOS, not iOS; the record's exact 5:25:00 in the extension agrees. A person never sees it: the premade passes its own `now` as the start (countdown.py lines 90 and 112). The rule still reads the card's end minus the run's clock, and that fails.
+- **A5 count.** Progress, quote, habits and storage have every image passing: 4 of 6. Clocks and countdown do not.
+- **A7, purchased light and dark.** Fail on "Open the Gallery". No Gallery screen exists in App/ at this commit and no caller sets `onDoneAction`, yet the screen says the premades are "open in the Gallery". "Done" falls under s9's sheet-versus-push clause and does not count. Restore and Terms on that screen are on no fail list.
+- **A7, AX5 landscape.** Fail as written. T-0485 is deliberate, and s9 names this shot with "button and its line pinned" and no exception. The source says the price stays on the first screen; no image shows it.
+
+**Triggers.**
+- **A2:** the cell's branches are the G1 and fallback ones, and neither fires: no adapter day, no section 5. T-0863 fixes the shots.
+- **A5:** the failing premades go on F1's fix list, due 11-02: clocks in T-0860, countdown in T-0862. "Fewer than 4 of 6" is not met, by exactly one premade, so there is no cut-line warning and no IDE-only plan.
+- **A7:** T-0031 is ticked and has nothing left to hold first on main. T-0861 takes that slot on 11-01; its Gallery part lands with T-0191. I read the trigger's "it" as T-0031, the purchase tests, which are green, because the sentence ends "no purchase is submitted untested". So the Investors' choice does not open today. It opens if any purchase case goes red by 11-03 23:59.
+- **A1, A3, A4, A6, A9, A10, A11:** nothing fires. **Item 7 goes.** The Operator updates ops/state.md.
+
+**Forward only, freeze rows (s0 item 6; no evidence has landed on them).** This Day 10 grade does not change.
+- **F1:** a timer face counts only on a tree whose interval contains the step's window (T-0862). Contrast is measured on the ground pixel worst for the text, not always the darkest. T-0862 also puts WidgetKitCheckTests testBBitmapFileFromTheAppGroup and testCToggleOnTheAccentedHomeScreen in F1's steps: s8.2 lists them, and no row in this run ran them.
+- **F8 and F5, AX5 in compact height:** read under T-0485's rule, button in the scroll and the price on the first screen, shown by the first-screen shot T-0861 adds.
+
+**My errors.** All three failing rows carry a clause I wrote at 01:45.
+- s9 said the timer "will not read 5:25:00". That assumed a run after 09:41; s0 set a latest time, not an earliest. No run before 09:41 could pass, and I fixed that rule about an hour before this one started.
+- s9 asked for every Purchased element while s2 keeps the Gallery out of the alpha.
+- s9 named the AX5 landscape shot without T-0485's exception, and set palette_check on a rectangle the indicators cross.
+The fails stand.
+
+What would make this fail: T-0355's merge takes Day 11 and T-0861's slot slips; T-0191 lands after the freeze, and the purchased screen ships a sentence with nothing behind it; or the same truncation shows up at F1 on one of the six premades this alpha did not grade, where nobody has tried the widest text.
 {% endraw %}
 
 </div>

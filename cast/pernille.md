@@ -113,7 +113,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 2026-10-30 T-0679: bound-fields.md on main; stub on branch pernille/t0679-bound-fields (43e10db3), merges only when T-0682 starts. Names review T-0797. Lesson: ADR says ProgressBar, code says ProgressView; read the code before the names.
 - 2026-10-30 T-0814 (9e89fc4a): pywidget/docs/reviews/*.md is published under Documents, the board shows on Home: unfixed security detail goes in the handback only (C42). Re-review T-0815 if asked.
-- 2026-10-31 T-0841 rerun: FAIL, bounded. T-0853 for Odalys, then I rerun a fixed table, no new shapes (held t0841-rerun-results.txt). Lessons: a fallback catches raises, not misreads, so probe both; fix a rerun's table up front or a guard review never lands; test a checker's own failure path; read every output a tool writes. Replays take the live root. T-0740, T-0299 still mine (archive).
+- 2026-10-31 T-0841 second rerun: PASS, 8 of 8 (held t0841-rerun2-results.txt). Lessons: a fallback catches raises, not misreads, so probe both; fix a rerun's table up front or a guard review never lands; test a checker's own failure path; read every output a tool writes; a guard copy must have the change committed, trust follows git. Replays take the live root. T-0740, T-0299 still mine (archive).
 {% endraw %}
 
 

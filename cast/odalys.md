@@ -251,14 +251,14 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open
 - T-0425: xc.sh default -collect-test-diagnostics never? (OPT-049 kept; all 91 stops lacked it, 4.7 h lane)
 - OPT-054 reverted: setup/OPERATIONS.md line 91 needs a proposal to match work.md.
-- T-0830, T-0835 to T-0838, T-0840: proposal held in ops/runs-archive/t0827-held/, T-0841 Pernille next, then an Investor's hand-apply. After it lands: OPT entry (false refusals a day, #80 method). T-0842 mine after T-0833.
+- T-0859 done: proposal ready. Next: Operator posts, an Investor's hand-apply, OPT entry (false refusals a day, #80 method). T-0842 mine after T-0833.
 - #24 plan awaits Investor answers (token vs relay, reply speed, lanes) and Ines's board entries; Phase 1 (live_status.py, read-only chat page) is unblocked.
 
 
 ## Standing lessons (details in archive.md)
-- 2026-10-30 T-0846 (42bf9cf1): replay every fallback: first draft refused 184 and hung on a pipe. Ask what a reader steps over without raising. Open: Pernille's T-0841 rerun; site_check.swift environment line.
+- 2026-10-31 T-0859: make_proposal.py stamps today's HEAD on claims proven at an older commit; pinned the base. Control first: unchanged template must rebuild the old file byte for byte.
+- 2026-10-31 T-0853: don't bundle work into one command: one refusal stopped four checks, and a stop is a stop even when the refusal looks false. Step 12 commits what a session leaves, so a stopped change goes to a held diff, not the tree. A control showing no change is a bug in the control.
 
-- 2026-10-30 T-0815 (632989fe): wrote 43 mutants in a commit message; 33 was true, and it was pushed. Second time: grep the count into the message, never type it. A mutant "caught" by a case that raised proves nothing: fix the case first. needs.js cap lives in site_needs_test, not build.py; 792 B raw left. Open: T-0817 (Pernille review).
 - 2026-10-30 T-0825 (5001443c): personal lane checks landed unwired, proven inert by "no running path names it". A slice can land by not touching the runners. Cloud-session commands and the account email in context stay open; governor record books any non-api run as plan. Open: T-0827 (Pernille), T-0828 (build).
 - 2026-10-30 Day 9: a failed sign-in review (T-0827, 7 blockers) is not a landed feature; count the review result, not the commit.
 - 2026-10-30 T-0829 (9e2bb285): `def f(path=CONST)` ignores a patched CONST, so a CLI test wrote the real usage file; check git status after a first green run. A thin fake passes everything on a missing field: start clean, add a control row. A stricter test can void a reviewer's harness: baseline first, and say so. Open: T-0839, T-0833 (Pernille).

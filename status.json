@@ -1,77 +1,77 @@
 {
  "schema": 1,
- "at": "2026-10-31T08:10:01.752419+00:00",
+ "at": "2026-10-31T10:13:36.991716+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-31T00:56:14-04:00"
+  "started": "2026-10-31T04:12:24-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[ops] T-0857 Day 10 alpha run",
-   "model": "sonnet",
-   "started": "2026-10-31T06:51:13.506Z",
-   "seconds": null,
-   "finished": "2026-10-31T08:08:47.388000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[ops] T-0856 A2 shots, name alpha commit",
-   "model": "sonnet",
-   "started": "2026-10-31T05:44:46.828Z",
-   "seconds": null,
-   "finished": "2026-10-31T06:50:22.213000+00:00"
-  },
-  {
    "name": "ines",
-   "task": "[plan] T-0855 rule Maren's alpha proposals",
+   "task": "[plan] T-0361 Day 10 alpha verdict",
    "model": "opus",
-   "started": "2026-10-31T05:38:52.436Z",
+   "started": "2026-10-31T10:02:58.592Z",
    "seconds": null,
-   "finished": "2026-10-31T05:44:27.869000+00:00"
+   "finished": "2026-10-31T10:12:26.827000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[review] T-0360 alpha visual reads",
+   "model": "opus",
+   "started": "2026-10-31T09:48:55.103Z",
+   "seconds": null,
+   "finished": "2026-10-31T10:02:44.349000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-0849 reports daily update only",
-   "model": "sonnet",
-   "started": "2026-10-31T05:03:32.416Z",
+   "task": "[tools] T-0859 proposal wording pass",
+   "model": "opus",
+   "started": "2026-10-31T09:44:01.787Z",
    "seconds": null,
-   "finished": "2026-10-31T05:38:13.186000+00:00"
+   "finished": "2026-10-31T09:47:11.312000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-0833 step 1 held probes",
+   "model": "opus",
+   "started": "2026-10-31T09:41:55.517Z",
+   "seconds": null,
+   "finished": "2026-10-31T09:43:54.588000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 138,
+  "runnable_count": 137,
   "blocked_count": 57
  },
  "meter": {
   "five_hour": {
-   "pct": 9.0,
-   "resets_at": "2026-10-31T07:00:00.114953+00:00",
+   "pct": 0.0,
+   "resets_at": "2026-10-31T12:49:59.953791+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 91.0,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 89.0,
-   "resets_at": "2026-11-01T07:00:00.114971+00:00",
+   "pct": 90.0,
+   "resets_at": "2026-11-01T06:59:59.953828+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 11.0,
+   "left": 10.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T07:00:00.115099+00:00",
+   "resets_at": "2026-11-01T06:59:59.953991+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-31T00:56:13.833059-04:00"
+  "read_at": "2026-10-31T04:12:23.607292-04:00"
  },
  "ui": {
-  "week_pct": 0.167,
+  "week_pct": 0.168,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-31T04:11:00-04:00"
+  "at": "2026-10-31T06:15:00-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -124,17 +124,17 @@
    "next": []
   },
   {
-   "name": "Maren",
+   "name": "Ines",
    "state": "next",
-   "task": "Maren, P1, alpha visual reads on 2026-10-31...",
+   "task": "Ines, P2, triage the old ops/questions.md items Report...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Ines",
+   "name": "Maren",
    "state": "next",
-   "task": "Ines, P1, Day 10 alpha verdict: one chair line at the...",
+   "task": "Maren, P2, from T-0433's WidgetKit run (58b447f9): on a...",
    "model": null,
    "since": null,
    "next": []
@@ -216,29 +216,29 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "T-0857 Day 10 alpha run",
-    "at": "2026-10-31T08:08:47.388000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "ops",
-    "t": "T-0856 A2 shots, name alpha commit",
-    "at": "2026-10-31T06:50:22.213000+00:00",
-    "o": "c"
-   },
-   {
     "w": "Ines",
     "k": "plan",
-    "t": "T-0855 rule Maren's alpha proposals",
-    "at": "2026-10-31T05:44:27.869000+00:00",
+    "t": "T-0361 Day 10 alpha verdict",
+    "at": "2026-10-31T10:12:26.827000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "review",
+    "t": "T-0360 alpha visual reads",
+    "at": "2026-10-31T10:02:44.349000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0859 proposal wording pass",
+    "at": "2026-10-31T09:47:11.312000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 138,
+   "next": 137,
    "wait": 26,
    "blocked": 31,
    "you": 8

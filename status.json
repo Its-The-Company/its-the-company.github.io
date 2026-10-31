@@ -1,58 +1,74 @@
 {
  "schema": 1,
- "at": "2026-10-31T04:53:49.119271+00:00",
+ "at": "2026-10-31T08:10:01.752419+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-30T22:00:54-04:00"
+  "started": "2026-10-31T00:56:14-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "pernille",
-   "task": "[review] T-0841 rerun held probes",
-   "model": "opus",
-   "started": "2026-10-31T03:54:56.274Z",
+   "name": "odalys",
+   "task": "[ops] T-0857 Day 10 alpha run",
+   "model": "sonnet",
+   "started": "2026-10-31T06:51:13.506Z",
    "seconds": null,
-   "finished": "2026-10-31T04:53:03.028000+00:00"
+   "finished": "2026-10-31T08:08:47.388000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[ops] T-0856 A2 shots, name alpha commit",
+   "model": "sonnet",
+   "started": "2026-10-31T05:44:46.828Z",
+   "seconds": null,
+   "finished": "2026-10-31T06:50:22.213000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-0855 rule Maren's alpha proposals",
+   "model": "opus",
+   "started": "2026-10-31T05:38:52.436Z",
+   "seconds": null,
+   "finished": "2026-10-31T05:44:27.869000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-0846 fix held guard proposal faults",
-   "model": "opus",
-   "started": "2026-10-31T02:01:25.775Z",
+   "task": "[tools] T-0849 reports daily update only",
+   "model": "sonnet",
+   "started": "2026-10-31T05:03:32.416Z",
    "seconds": null,
-   "finished": "2026-10-31T03:54:40.483000+00:00"
+   "finished": "2026-10-31T05:38:13.186000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 142,
+  "runnable_count": 138,
   "blocked_count": 57
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
-   "resets_at": null,
+   "pct": 9.0,
+   "resets_at": "2026-10-31T07:00:00.114953+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 100.0,
+   "left": 91.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 88.0,
-   "resets_at": "2026-11-01T07:00:00.194208+00:00",
+   "pct": 89.0,
+   "resets_at": "2026-11-01T07:00:00.114971+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 12.0,
+   "left": 11.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T07:00:00.194410+00:00",
+   "resets_at": "2026-11-01T07:00:00.115099+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-30T22:00:52.769776-04:00"
+  "read_at": "2026-10-31T00:56:13.833059-04:00"
  },
  "ui": {
   "week_pct": 0.167,
@@ -71,30 +87,14 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-31T00:55:00-04:00"
+  "at": "2026-10-31T04:11:00-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
   {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines + Odalys, P3, CORRECTIONS pass 3 s3b tags in docs...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P3, 31 closed-hunt scripts under research/hunt/...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Wrenna",
-   "state": "next",
-   "task": "Wrenna, P3, arXiv after T-0220 lands (Ines's ruling...",
    "model": null,
    "since": null,
    "next": []
@@ -116,9 +116,25 @@
    "next": []
   },
   {
+   "name": "Wrenna",
+   "state": "next",
+   "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Maren",
    "state": "next",
    "task": "Maren, P1, alpha visual reads on 2026-10-31...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P1, Day 10 alpha verdict: one chair line at the...",
    "model": null,
    "since": null,
    "next": []
@@ -127,13 +143,6 @@
  "tasks": {
   "run": [],
   "open": [
-   {
-    "w": "Ines",
-    "k": "research",
-    "t": "CORRECTIONS pass 3 s3b tags in docs Wrenna...",
-    "s": "next",
-    "o": "c"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -196,26 +205,40 @@
     "t": "Proposal",
     "s": "next",
     "o": "c"
-   }
-  ],
-  "done": [
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-0841 rerun held probes",
-    "at": "2026-10-31T04:53:03.028000+00:00",
-    "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T-0846 fix held guard proposal faults",
-    "at": "2026-10-31T03:54:40.483000+00:00",
+    "t": "Run_limited orphans",
+    "s": "next",
+    "o": "c"
+   }
+  ],
+  "done": [
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "T-0857 Day 10 alpha run",
+    "at": "2026-10-31T08:08:47.388000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "ops",
+    "t": "T-0856 A2 shots, name alpha commit",
+    "at": "2026-10-31T06:50:22.213000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "T-0855 rule Maren's alpha proposals",
+    "at": "2026-10-31T05:44:27.869000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 142,
+   "next": 138,
    "wait": 26,
    "blocked": 31,
    "you": 8
@@ -226,6 +249,8 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
+  "task_done",
   "task_title",
   "task_open",
   "lane_task",

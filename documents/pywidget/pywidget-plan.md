@@ -95,6 +95,8 @@ Consequence, reported not decided: 1.0 is on sale around Day 27-28 at best, so t
 ## Rules that bind every line
 
 Human checkpoints (brief section 0): no accounts, spending, contact with Apple or third parties, TestFlight or App Store submission, publishing, pricing, legal terms, or 2.1 changes without the Investors. PROPOSALs for any change to 2.1. One ADR per significant choice. Every outside library and asset logged with its licence (Commandments 4, 5, 9). Every visual drawn by code and approved before it ships (Commandments 9, 51). No scripted reads against a host's terms (Commandment 6); the GitHub hold (#53) stands until a ruling says otherwise.
+
+**Chair line, 2026-10-31 01:03 ET (Ines, T-0852; an Investor, #41 c6539190636).** Document upkeep that doesn't serve the app stops. Recurring passes stop unless a named reader needs them before submission: T-0023, T-0115 and T-0222 have none and stop today; CORRECTIONS.md stays as it stands. 1.1 design notes wait behind the first submission: T-0101 waits until 2026-11-16, the day after Day 25. T-0845 stays: the Investors asked for it and are its reader. Launch documents state only what the code does at that commit. For packets: a new document names its reader and use, or it isn't written.
 {% endraw %}
 
 </div>

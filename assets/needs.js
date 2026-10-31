@@ -78,7 +78,7 @@ var repo = root.getAttribute('data-repo'), RI = '/repos/' + repo + '/issues', LS
 function nums(a) { return (root.getAttribute(a) || '').split(/\s+/).filter(Boolean).map(Number); }
 var named = nums('data-named'), skip = nums('data-skip'), props = nums('data-props'), shut = document.getElementById('needs-closed'), cl = null, cn = 0, cnum = null;
 var P = root.getAttribute('data-mode') === 'proposals', R = root.getAttribute('data-mode') === 'report', show = nums('data-show'), rest = nums('data-rest')[0] || 0;
-var KEEP = P ? ['proposal'] : ['emergency', 'urgent', 'report', 'pitch'], MAXF = 10 * 1048576, names = [];
+var KEEP = P ? ['proposal'] : ['emergency', 'urgent', 'pitch'], MAXF = 10 * 1048576, names = [];
 var PO = ['Approve', 'Hold', 'No'].map((k) => ({ key: k, label: k, reply: k.toLowerCase() }));
 function mk(p, tag, cls, text) { return p.appendChild(el(tag, cls, text)); }
 function labels(i) { return (i.labels || []).map((x) => String(x.name || x).toLowerCase()); }

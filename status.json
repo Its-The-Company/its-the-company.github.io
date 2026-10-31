@@ -1,14 +1,47 @@
 {
  "schema": 1,
- "at": "2026-10-31T20:29:57.197801+00:00",
+ "at": "2026-10-31T22:20:13.760721+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null
+  "active": true,
+  "kind": "evening",
+  "started": "2026-10-31T18:14:09-04:00"
  },
  "workers": [],
  "who": "",
- "recent": [],
+ "recent": [
+  {
+   "name": "ines",
+   "task": "[report] evening",
+   "model": "opus",
+   "started": "2026-10-31T22:15:12.821Z",
+   "seconds": null,
+   "finished": "2026-10-31T22:18:31.499000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[talk] Odalys and Pernille",
+   "model": "haiku",
+   "started": "2026-10-31T22:14:37.813Z",
+   "seconds": null,
+   "finished": "2026-10-31T22:14:57.800000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[diary] Pernille",
+   "model": "haiku",
+   "started": "2026-10-31T22:14:35.761Z",
+   "seconds": null,
+   "finished": "2026-10-31T22:14:56.436000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[diary] Odalys",
+   "model": "haiku",
+   "started": "2026-10-31T22:14:33.293Z",
+   "seconds": null,
+   "finished": "2026-10-31T22:14:54.720000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -18,28 +51,28 @@
  "meter": {
   "five_hour": {
    "pct": 0.0,
-   "resets_at": "2026-10-31T23:10:00.082157+00:00",
+   "resets_at": "2026-10-31T23:09:59.867202+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 99.0,
-   "resets_at": "2026-11-01T07:00:00.082180+00:00",
+   "resets_at": "2026-11-01T06:59:59.867221+00:00",
    "used_words": "of your weekly allowance used",
    "left": 1.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T07:00:00.082340+00:00",
+   "resets_at": "2026-11-01T06:59:59.867382+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-31T16:22:53.710825-04:00"
+  "read_at": "2026-10-31T18:14:07.539217-04:00"
  },
  "ui": {
-  "week_pct": 0.191,
-  "five_hour_pct": 0.071,
+  "week_pct": 0.202,
+  "five_hour_pct": 0.139,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -50,13 +83,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-31T16:44:56-04:00",
+ "next_tick": null,
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-10-31T17:58:00-04:00"
+  "at": "2026-10-31T18:21:00-04:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "lanes": [
   {
    "name": "Odalys",
@@ -181,7 +214,29 @@
     "o": "c"
    }
   ],
-  "done": [],
+  "done": [
+   {
+    "w": "Ines",
+    "k": "report",
+    "t": "Evening",
+    "at": "2026-10-31T22:18:31.499000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "talk",
+    "t": "And Pernille",
+    "at": "2026-10-31T22:14:57.800000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "diary",
+    "t": "Pernille",
+    "at": "2026-10-31T22:14:56.436000+00:00",
+    "o": "c"
+   }
+  ],
   "count": {
    "next": 137,
    "wait": 32,
@@ -190,22 +245,12 @@
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6548740605",
-   "state": "waiting",
-   "position": 1,
-   "eta": "2026-10-31T16:44:56-04:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "approve"
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
+  "task_done",
   "task_title",
   "task_open",
   "lane_task",

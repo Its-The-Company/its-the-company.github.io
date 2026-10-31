@@ -11,7 +11,7 @@ section: "usage"
 <div class="panel">
 <p class="status-line ok"><b>On pace for the week.</b> <span>Source: the plan's own meter, read Sat 6:14 PM.</span></p>
 <div class="bar ok"><div class="bar-head"><span>This week</span><span>99% of the weekly limit · resets Sun 1:59 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:99.0%"></div><i class="mark plan" style="left:95.5%" title="plan by now: 96%"></i></div><div class="bar-foot">Plan by now: 96% of your weekly allowance used, the marker.</div></div>
-<div class="bar warm"><div class="bar-head"><span>Today</span><span>115% of today's share</span></div><div class="bar-track"><div class="bar-fill" style="width:100.0%"></div><i class="mark plan" style="left:76.5%" title="plan by now: 76%"></i><i class="mark reserve" style="left:100.0%" title="the evening report's reserve"></i></div><div class="bar-foot">Plan by now: 76% of today's share of your weekly allowance. The grey marker <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> back a reserve for the evening report; it is released once the report is done.</div></div>
+<div class="bar warm"><div class="bar-head"><span>Today</span><span>115% of today's share</span></div><div class="bar-track"><div class="bar-fill" style="width:100.0%"></div><i class="mark plan" style="left:76.6%" title="plan by now: 77%"></i><i class="mark reserve" style="left:100.0%" title="the evening report's reserve"></i></div><div class="bar-foot">Plan by now: 77% of today's share of your weekly allowance. The grey marker <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> back a reserve for the evening report; it is released once the report is done.</div></div>
 <div class="bar ok"><div class="bar-head"><span>Last 5 hours</span><span>0% of the 5-hour limit · resets 7:09 PM</span></div><div class="bar-track"><div class="bar-fill" style="width:0.5%"></div></div></div>
 <div class="bar ok"><div class="bar-head"><span>Fable this week</span><span>6% of its weekly allowance</span></div><div class="bar-track"><div class="bar-fill" style="width:6.0%"></div></div><div class="bar-foot">A ceiling, not a target: Fable shares the weekly limit, so it is used as the work needs.</div></div>
 </div>
@@ -78,7 +78,7 @@ The plan includes API credits each month. The company uses them only as overflow
 | Window | Used | Plan by now |
 | --- | --- | --- |
 | This 5-hour window | 0% of the 5-hour limit (resets 7:09 PM; the plan's reading plus the runs recorded since) | |
-| Today | 115% of the daily pace | 76% |
+| Today | 115% of the daily pace | 77% |
 | This week | 99% of the weekly limit (resets Sun Nov 1, 1:59 AM) | 96% |
 | Fable this week | 6% of its weekly allowance | |
 

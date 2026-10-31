@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-10-31T18:12:59.318629+00:00",
+ "at": "2026-10-31T20:29:57.197801+00:00",
  "session": {
-  "active": true,
-  "kind": "inbox",
-  "started": "2026-10-31T14:12:29-04:00"
+  "active": false,
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
@@ -18,28 +18,28 @@
  "meter": {
   "five_hour": {
    "pct": 0.0,
-   "resets_at": null,
+   "resets_at": "2026-10-31T23:10:00.082157+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 99.0,
-   "resets_at": "2026-11-01T06:59:59.529509+00:00",
+   "resets_at": "2026-11-01T07:00:00.082180+00:00",
    "used_words": "of your weekly allowance used",
    "left": 1.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T06:59:59.529698+00:00",
+   "resets_at": "2026-11-01T07:00:00.082340+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-31T14:12:28.278241-04:00"
+  "read_at": "2026-10-31T16:22:53.710825-04:00"
  },
  "ui": {
-  "week_pct": 0.18,
-  "five_hour_pct": 0.0,
+  "week_pct": 0.191,
+  "five_hour_pct": 0.071,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -50,13 +50,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-10-31T16:44:56-04:00",
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-10-31T16:22:00-04:00"
+  "at": "2026-10-31T16:32:00-04:00"
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "lanes": [
   {
    "name": "Odalys",
@@ -190,7 +190,19 @@
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6548740605",
+   "state": "waiting",
+   "position": 1,
+   "eta": "2026-10-31T16:44:56-04:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "approve"
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",

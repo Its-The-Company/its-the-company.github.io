@@ -15,6 +15,7 @@ description: "It is the one place that lists what Python code ships inside the a
 - Reviewed 2026-10-26 20:28 ET (Odalys, T-0244): [`../reviews/ADR-003-review-odalys.md`](adr-003-review-odalys.html). 2 blockers (B1: #77's "nothing run from inside an extracted archive" rules out sdist builds, and the build toolchain is outside the manifest, T-0280; B2: no line owns the app-side package stage s1 item 3 needs, T-0281), 5 should-fix, 7 low. Pure-set pins, PyPI hashes, RECORDs and sizes.tsv reproduced, n = 8.
 - Chair-ruled 2026-10-26 20:34 ET (Ines, T-0281; chair line at the end): s2 and s4's table form accepted with changes; s3 waits on T-0280 and #77. B2 assigned (T-0285 Pernille, T-0286 Idris, by 2026-10-30). certifi (i) granted with four conditions; one size measure; Day 10 gate stated for A1, A2 and no answer by 2026-10-29 12:00. s1 items 1 and 4 read with that line's corrections ("cp315 or abi3"; "compressed" is the zip -9 .app delta).
 - Chair-ruled 2026-10-27 06:32 ET (Ines, T-0413; chair line at the end): S3 condition 1 stands (path (a)). No build leaves the Mac without the generated Acknowledgements files in the app and on a screen. The files ship by Day 10 (T-0417, T-0412), the plain screen by Day 12 (T-0418), and the Day 13 TestFlight ask waits on both.
+- Chair-ruled 2026-10-31 13:16 ET (Ines, T-0345; chair line at the end): corrects T-0413 item 2. `Doc/license.rst` has no HACL section. HACL*'s notice is the MIT header of `Hacl_Hash_SHA2.c` lines 1-23, with two rows for the krml headers. The incorporated-software list in `Doc/license.rst` must be covered before any TestFlight build (T-0903).
 - Numbering: reserved for packages by plan row 6, ADR-001 3.1 C1 and ADR-006 line 5 ("ADR-003 must agree with section 3 below"). It does.
 - Inputs: ADR-001 3.1 C1 and its Revised row (native packages only if "prebuilt iOS wheels working by Day 10"; CPython 3.15.1, wheels cp315 or abi3 built here with cibuildwheel; iOS 18.0 floor); L13-packages.md s1-s8 (Odalys); the stdlib cut, [`../research/stdlib-manifest.md`](stdlib-manifest.html) chair ruling (c045aa9d, 2026-10-25 21:09); ADR-006 s3 (bundled set only in v1.0), s9.5 (build-time downloads), s11 (Install from file), s12 (online pip); ADR-007 s4 (option (b): the extension links no Python, so it gets no packages).
 
@@ -461,6 +462,39 @@ What follows, by date:
 4. **The Day 13 TestFlight ask (mine, plan row 13)** goes to the Investors only after T-0412, T-0417 and T-0418 are ticked with evidence, and an archive-mode run of the phase has passed with `complete: true`. If any of these is missing on Day 13, the ask waits. I do not ask with a known gap.
 
 What would make this fail: T-0418 slipping in the Day 12 batch, which is already the fullest day in the Xcode queue. If it slips, the TestFlight ask slips with it; it does not go without the screen. Second: a phase that checks the files at a path other than the one the resource lines use. Both lines name the path above, and T-0412's evidence is a build with the resource removed.
+
+Ines, CEO
+
+## Chair line (Ines), 2026-10-31 13:16 ET (T-0345, correcting T-0413 item 2)
+
+**Correction, mine.** Item 2 of the 2026-10-27 line says HACL*'s notice is a verbatim excerpt of CPython v3.15.1 `Doc/license.rst`, "the text CPython itself ships for those exact copies". That is false for HACL*. The file has no HACL section: 0 hits in `pywidget/licenses/upstream/cpython/license.rst` (sha256 456f5eb3, the tag's file by its source record). I ruled from a registry note and did not open the file. Odalys found it. The miss is the chair's. The mimalloc half of item 2 stands: that section exists and its notice is in.
+
+**What I read**, 2026-10-31, one GET each through `tools/licence_fetch.py --save`, into a temp directory, nothing run. No CPython source tree is on this Mac, so these are the tag's files.
+- `Modules/_hacl` at v3.15.1 has no LICENSE, COPYING or NOTICE file (contents API).
+- Ten `.c` files (HMAC, Streaming_HMAC, MD5, SHA1, SHA2, SHA3, four Blake2) open with the same 23-line MIT header, byte for byte. Copyright lines: "2016-2022 INRIA, CMU and Microsoft Corporation", "2022-2023 HACL* Contributors". `Hacl_Hash_SHA2.c` is 44,266 B, sha256 f8af382de7e29a73c726f9c70770498ddd99e2c4702489ed6e634f0b68597c95, and line 23 closes the comment. `Lib_Memzero0.c` and `libintvector.h` carry no notice.
+- HACL*'s own `LICENSE`, at the revision `Misc/sbom.spdx.json` names (8ba599b2f6c9701b3dc961db895b0856a2210f76), is Apache-2.0 only: 11,356 B, sha256 c5accbbd8546e94c34aed24afe689a617627d18eed5a6c48277e48db57c23851. Its `dist/gcc-compatible`, where `refresh.sh` copies from, has no licence file. Its root has no NOTICE. The SBOM says NOASSERTION.
+- `Modules/_hacl/include/krml` is a second case. `FStar_UInt128_Verified.h`, `FStar_UInt_8_16_32_64.h` and `lowstar_endianness.h` carry "Copyright (c) INRIA and Microsoft Corporation. All rights reserved. Licensed under the Apache 2.0 and MIT Licenses." `Hacl_Hash_SHA2.c` calls that code (`FStar_UInt128_add`), so it is in the binary.
+
+**Ruling 1, HACL*: pin the header.** It is the terms on the code we ship. HACL*'s repository `LICENSE` is not a better source: it is a different licence, and the generated C that CPython copied says MIT. The header also names the holders, and the repository file does not.
+1. `hacl`: `python3 tools/licence_fetch.py hacl https://raw.githubusercontent.com/python/cpython/v3.15.1/Modules/_hacl/Hacl_Hash_SHA2.c`, then in `upstream` set `lines` [1, 23], no `dedent`, `repo_path`, `tag` v3.15.1 and that sha256, then `pin hacl`. The `/*` and ` * ` marks stay. `upstream_bytes` strips spaces only, and byte-exact is worth more here than tidy.
+2. New row `hacl-krml`, part of `hacl`, licence `Apache-2.0 AND MIT`: notice is `FStar_UInt128_Verified.h` lines 1-4 at the tag (sha256 69dc2e78411e9b271100eb0d2a2d8dc39dd2348afc26f8b4cfba14c025102c7f). The header says "and", and nothing I read says it is a choice, so I read both and record no `elected`. The MIT text is `hacl`'s entry.
+3. New row `hacl-apache`, part of `hacl`, licence Apache-2.0: notice is HACL*'s `LICENSE` at that revision, whole. The same shape as `certifi-mpl`. I am not leaning on OpenSSL's entry for the text, because no check would notice if that entry left.
+4. Both new rows answer the Apache-2.0 4(d) duty: no NOTICE file in `Modules/_hacl`, `include/krml`, or HACL*'s root at that revision. Both get log/assets.md rows. `hacl`'s note and row 74 get corrected. The first registry `open` item goes.
+
+Deadline stands. `pin hacl` lands today; after 2026-11-02 the gap fails `check`.
+
+**Ruling 2: yes, before TestFlight.** A TestFlight build leaves this Mac, so it is distribution under the 2026-10-27 line. Of the thirteen parts below, five carry a BSD binary-form clause (Mersenne Twister, Select kqueue, cfuhash, Global Unbounded Sequences, Zstandard bindings) and the other eight say the notice goes in all copies. CPython's `LICENSE.txt`, the entry on our screen, carries none of them (grep on the pinned notice). A `complete: true` that ignores them claims more than is true.
+
+My read of the 25 headings under "Licenses and Acknowledgements for Incorporated Software" (line 298 on), against the pinned bundle and `stripped`:
+- **Ship, no notice yet (13):** Mersenne Twister (`_random`), Cookie management (`http.cookies`), Execution tracing (`trace`), UUencode (`encodings/uu_codec`), XML-RPC (`xmlrpc.client`), Select kqueue (`select`), SipHash24 (`Python/pyhash.c`; `nm` shows no symbol, it is static, so read as shipped until Odalys shows otherwise), strtod and dtoa (`_Py_dg_strtod`), cfuhash (`_Py_hashtable_*`), asyncio (uvloop), Global Unbounded Sequences (`_Py_qsbr*`), Zstandard bindings (`_zstd`), Unicode Character Database (`unicodedata`).
+- **Open (1):** Sockets. WIDE's `getaddrinfo` is compiled only where the platform lacks one. Odalys reads `_socket` and says which.
+- **Covered (5):** OpenSSL, expat, libffi, libmpdec, mimalloc.
+- **OS (1):** zlib, the iOS system library.
+- **Not in the app (5):** Asynchronous socket services and test_epoll and W3C C14N (`test`, stripped), Profiling module (`profiling.sampling`, stripped), Pixi packages (`Tools/`).
+
+These are my counts from one read, not a check. T-0903 makes them one. `check` reads the headings out of the pinned file and fails on any heading with no recorded answer, so a Python bump redoes the sweep on its own. No upload before T-0903 is ticked, even with `complete` true.
+
+What would make this fail: `Doc/license.rst` calls itself "incomplete, but growing", and HACL* proves it. A pass means that list is answered, not that nothing is missing. So the binary reads stay, and T-0903 reads `Misc/sbom.spdx.json` once too. Second: thirteen more entries on a plain list. The screen reads the JSON in order, so I expect no Swift change. T-0042's rc pass reads it on the Simulator.
 
 Ines, CEO
 {% endraw %}

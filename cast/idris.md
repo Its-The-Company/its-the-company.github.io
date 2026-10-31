@@ -259,7 +259,6 @@ Dated task logs and full lessons: archive.md.
 - StoreKit testing lessons (unfinished, Ask to Buy, SKTestSession, refunds): archive.md, moved 2026-10-28.
 - T-0583/T-0589 notes, T-0611/T-0613 caret lessons: archive.md (moved 2026-10-28).
 
-- T-0726 2026-10-29 (6dface5e, branch): R1 archive names picked in memory (archiveNames, nameKey = free's equality); same_1000 0.29 s. R2 typed declared UTType ext refused. Lesson: a per-candidate disk check inside a loop is a hidden n^3; name in memory, then write. Slip: I ran git checkout on the worktree's ops/metrics/xc.jsonl and dropped its uncommitted lines; leave metrics files alone. Open: T-0728 re-review; merge after alpha.
 - T-0684/T-0747/T-0748 2026-10-29 (a29b3e5d, 87b09744, branch): widget gets its script only at a boundary (saveNow), never the typing pause; id change moves the folder this editor made if main.py still holds its bytes. Lesson: an autosave is not a publish. Open: Sent is in memory only, project delete leaves widgets/. T-0684 ticked 2026-10-31 (63104185, b7e90c16): F19 token half green; a green-first test only counts after I remove the call and watch it go red.
 
 - T-0758 2026-10-30 (1a83993f): iPhone Simulator with the Mac keyboard keeps the on-screen keyboard minimized after a boot or a hardware key (log: "Setting keyboard minimized"); app.keyboards still exists, frame below screen. Check the on-screen part, not exists. T-0761 (0101715f): assert against the keyboard's own frame, not the editor's; review T-0763. AppPictures same trap (T-0760).
@@ -267,6 +266,7 @@ Dated task logs and full lessons: archive.md.
 - T-0867 2026-10-31: live text has inf ideal width in the extension; caps in TreeRules. Open: suffix ticking on a device (Simulator shots freeze even the control), review of my fix. Lesson: name a sweep's run time before starting it; slices beat completeness.
 - T-0875 2026-10-31 (760e407d): claims as numbered slots, each O_EXCL, never deleted; reclaim = next slot, so a stale reading can't win (delete-then-create can). Lesson: bash reads a running script by offset; replace a live .sh by rename, never in place (the 11:37 build kept its inode). A loop's unquoted $v is one word in zsh.
 - T-0355 landing 2026-10-31 (12f6157b, idris/t0355-land): 11 commits on cbd4094a; Ines moves main. Lesson: red must name its reason; a missing file threw a bare "noContext" with no line. Unit target about 2 min; a full scheme run is 28.
+- T-0881 2026-10-31 (0aadb129): widget send is check, stage, commit with undo; staging beside widgets/. Open: independent review, RENAME_SWAP on a device, app-guide PNGs get rewritten by the unit target. Lesson: code that puts things back only counts if a sweep fails each step N in turn.
 {% endraw %}
 
 

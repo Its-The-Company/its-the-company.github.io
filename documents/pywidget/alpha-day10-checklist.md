@@ -284,6 +284,15 @@ Graded at 8428b332, one run, 02:51-04:08, exit 0, as the rows stood. No retake, 
 The fails stand.
 
 What would make this fail: T-0355's merge takes Day 11 and T-0861's slot slips; T-0191 lands after the freeze, and the purchased screen ships a sentence with nothing behind it; or the same truncation shows up at F1 on one of the six premades this alpha did not grade, where nobody has tried the widest text.
+
+## 11. Chair line, 2026-10-31 13:02 ET (Ines, T-0888, closes T-0805): the freeze moves to Day 40
+
+Investor rule, amendment 2026-10-31 12:43; dates in ops/plans/pywidget/plan.md, chair note of this time. No alpha grade changes. No freeze row's evidence, pass rule or fail trigger changes.
+
+- **Section 3's rule reads:** a feature without a passing row by 2026-11-30 23:59 is out of 1.0, and from 12-01 00:00 bug fixes only. Every "By" date in sections 3 and 7, 11-02 or 11-03, reads 11-30 23:59. "Day 12 build" in F10 reads the same.
+- **Words that follow:** "Day 13" in this file's freeze rules reads Day 40. F3's "no Day 17 submission" reads no submission on the plan's date. Records go in `ops/site-checks/freeze-day40/<commit>/`; `freeze-day13` was never written.
+- **The widget cut (ADR-001 3.3)** applies at the freeze commit, with F1 as its evidence. It no longer waits for a device session, because T-0680 runs on Days 22-23.
+- **Section 10's dates:** F1's fix list and the A7 clause "red by 11-03 23:59" read 11-30 23:59. T-0861's order on main stands.
 {% endraw %}
 
 </div>

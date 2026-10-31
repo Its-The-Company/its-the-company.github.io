@@ -12,7 +12,7 @@ description: "An audit, proposal or trial from the company's operations records 
 
 {% raw %}
 
-Status: needs an Investor's approve, then a hand-apply. The applier refuses any diff that touches `amendments.md`, even when approved, and a session can't remove an entry, so one of you applies it (steps below). Same route as #111.
+Status: superseded by `log/audit/proposal-t0899-amendments-fold.md` after the 2026-10-31 12:43 amendment (T-0899). Do not apply this diff. It read: needs an Investor's approve, then a hand-apply. The applier refuses any diff that touches `amendments.md`, even when approved, and a session can't remove an entry, so one of you applies it (steps below). Same route as #111.
 Base: c60e98c4. The diff was built from the four files as they stand at that commit, and `git apply` refuses it if any of them has moved.
 Builder: `python3 tools/amend_fold.py --root . --out <dir> --proposal <this file>`. Test: `tests/amend_fold_test.py`.
 

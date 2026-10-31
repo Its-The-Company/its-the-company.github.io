@@ -1,77 +1,77 @@
 {
  "schema": 1,
- "at": "2026-10-31T16:50:01.735835+00:00",
+ "at": "2026-10-31T17:32:58.415989+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-31T11:03:13-04:00"
+  "started": "2026-10-31T12:54:02-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[site] T-0889 drop profit wording, cost page",
-   "model": "opus",
-   "started": "2026-10-31T16:49:17.223Z",
-   "seconds": null,
-   "finished": "2026-10-31T16:49:17.307Z"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0831 file the proposal",
-   "model": "opus",
-   "started": "2026-10-31T16:46:42.715Z",
-   "seconds": null,
-   "finished": "2026-10-31T16:49:01.712000+00:00"
-  },
-  {
    "name": "ines",
-   "task": "[plan] T-0831 chair ruling, Idris's read",
+   "task": "[plan] T-0877 chair ruling on read",
    "model": "opus",
-   "started": "2026-10-31T16:43:39.783Z",
+   "started": "2026-10-31T17:26:39.820Z",
    "seconds": null,
-   "finished": "2026-10-31T16:46:37.018000+00:00"
+   "finished": "2026-10-31T17:31:50.133000+00:00"
   },
   {
-   "name": "idris",
-   "task": "[review] T-0831 independent read, Idris",
+   "name": "pernille",
+   "task": "[review] T-0900 review T-0881 send",
    "model": "opus",
-   "started": "2026-10-31T16:37:11.804Z",
+   "started": "2026-10-31T17:13:23.147Z",
    "seconds": null,
-   "finished": "2026-10-31T16:43:28.439000+00:00"
+   "finished": "2026-10-31T17:28:03.748000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-0785 finish OPT-051 read",
+   "model": "opus",
+   "started": "2026-10-31T17:11:16.220Z",
+   "seconds": null,
+   "finished": "2026-10-31T17:27:20.891000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-0877 non-author diff read",
+   "model": "opus",
+   "started": "2026-10-31T17:23:17.734Z",
+   "seconds": null,
+   "finished": "2026-10-31T17:26:28.338000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 142,
-  "blocked_count": 62
+  "runnable_count": 137,
+  "blocked_count": 66
  },
  "meter": {
   "five_hour": {
-   "pct": 7.0,
-   "resets_at": "2026-10-31T17:49:59.829714+00:00",
+   "pct": 26.0,
+   "resets_at": "2026-10-31T17:50:00.332773+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 93.0,
+   "left": 74.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 93.0,
-   "resets_at": "2026-11-01T06:59:59.829735+00:00",
+   "pct": 96.0,
+   "resets_at": "2026-11-01T07:00:00.332794+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 7.0,
+   "left": 4.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T06:59:59.829925+00:00",
+   "resets_at": "2026-11-01T07:00:00.332952+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-31T11:03:12.455245-04:00"
+  "read_at": "2026-10-31T12:54:01.330789-04:00"
  },
  "ui": {
-  "week_pct": 0.167,
+  "week_pct": 0.166,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-10-31T12:51:00-04:00"
+  "at": "2026-10-31T13:34:00-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -108,6 +108,14 @@
    "next": []
   },
   {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P1, put OPT-051's n=10 read in the Week 2 review...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Idris",
    "state": "next",
    "task": "L1/L2 device checks: CMPedometer, CMMotionActivity,...",
@@ -119,14 +127,6 @@
    "name": "Wrenna",
    "state": "next",
    "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P2, triage the old ops/questions.md items Report...",
    "model": null,
    "since": null,
    "next": []
@@ -216,32 +216,31 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "k": "site",
-    "t": "T-0889 drop profit wording, cost page",
-    "at": "2026-10-31T16:49:17.307Z",
-    "o": "c",
-    "x": "failed"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0831 file the proposal",
-    "at": "2026-10-31T16:49:01.712000+00:00",
+    "w": "Ines",
+    "k": "plan",
+    "t": "T-0877 chair ruling on read",
+    "at": "2026-10-31T17:31:50.133000+00:00",
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "T-0831 chair ruling, Idris's read",
-    "at": "2026-10-31T16:46:37.018000+00:00",
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-0900 review T-0881 send",
+    "at": "2026-10-31T17:28:03.748000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "T-0785 finish OPT-051 read",
+    "at": "2026-10-31T17:27:20.891000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 142,
-   "wait": 30,
-   "blocked": 32,
+   "next": 137,
+   "wait": 32,
+   "blocked": 34,
    "you": 8
   }
  },

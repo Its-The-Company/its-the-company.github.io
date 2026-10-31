@@ -18,7 +18,7 @@ Source of every picture: `draw_ide.py` in this folder (HTML/CSS/SVG rendered by 
 ## 0. What is drawn, and in which direction
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 0. What is drawn, and in which direction, scrolls sideways" style="--tw:809px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 0. What is drawn, and in which direction, scrolls sideways" style="--tw:930px" markdown="1">
 
 | Screen | iPhone sheet (390 pt) | iPad sheet (1180 × 820 pt) |
 |---|---|---|
@@ -32,6 +32,7 @@ Source of every picture: `draw_ide.py` in this folder (HTML/CSS/SVG rendered by 
 | 8 iPad sidebar and split | `A-ipad-phone.png` (phone equivalents) | `A-ipad-ipad.png` |
 | 9 Gallery (s5.9, `draw_gallery.py`) | `A-gallery-phone.png` (B: `B-gallery-phone.png`) | `A-gallery-ipad.png` |
 | 10 Settings (s5.10, `draw_settings.py`) | `A-settings-phone.png` (B: `B-settings-phone.png`) | `A-settings-ipad.png` |
+| 11 Projects as containers (s5.11, `draw_projects.py`) | `A-parts-phone.png` (B: `B-parts-phone.png`) | `A-parts-ipad.png` (B: `B-parts-ipad.png`) |
 
 </div>
 
@@ -140,7 +141,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 
 ## 5. Screen notes
 
-1. **Projects.** Large title (display face), search, filter (All, Scripts, Widgets, Shortcuts), Pinned and Recent cards. Rows show a type tile (38, radius 10), name, one line of detail, and badges. iCloud: a not-downloaded row shows a download glyph and downloads on open. A conflict banner ("2 versions of util.py … Nothing was overwritten. Review") sits above the lists. The New button opens a menu: New script, New widget, New folder, Open a folder…, Import .py or .zip…, Start from an example. Empty state: three actions, no illustration.
+1. **Projects.** *Replaced by s5.11 (T-0843): a project is a container, the filter is All, Scripts, Widgets, Lock Screen, and there is no Pinned section in 1.0. The iCloud and conflict states below stand.* Large title (display face), search, filter (All, Scripts, Widgets, Shortcuts), Pinned and Recent cards. Rows show a type tile (38, radius 10), name, one line of detail, and badges. iCloud: a not-downloaded row shows a download glyph and downloads on open. A conflict banner ("2 versions of util.py … Nothing was overwritten. Review") sits above the lists. The New button opens a menu: New script, New widget, New folder, Open a folder…, Import .py or .zip…, Start from an example. Empty state: three actions, no illustration.
 2. **Editor.** Nav: back, project name, Run, ⋯. File tabs as chips, 30 tall. Gutter right-aligned, current line `sx.currentLine`. Find and replace is the system find interaction: every match on `sx.selection`, the current match outlined in accent, "2 of 4".
 3. **Console.** Running opens the sheet at medium and streams output. Reading uses the large detent. `input()` raises the keyboard under the REPL bar.
 4. **Traceback.** The screens show a real traceback. Host CPython 3.9.6 ran the sample at draw time; 3.15 adds `^` markers under the failing expression, which the raw view must keep. "Go to line" opens the editor with the error lens.
@@ -308,7 +309,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 
    *Open for Idris (T-0031):* (a) the restore-in-progress state 3b is my addition to the eight; (b) in C1 a free user's `import numpy` needs a console line that points to Pro, not a pop-up; not drawn, Ines rules on it with the C1 case; (c) the purchased screen in C1 has no button, only Done.
 
-8. **iPad.** `NavigationSplitView`: a floating sidebar (290) with Library, the project tree and Locations; the editor; and a resizable right pane (340 to 430) holding the console or the widget preview (family and mode switches, entry stepper, "Last run" time; redrawn on Run (⌘R) and on save, never while typing; no "Send to Home Screen": iOS gives an app no way to place a widget, the person adds it from the Home Screen). Divider: 9 wide with a 4 × 44 handle; double-tap resets. The sidebar collapses with ⌃⌘S. Holding ⌘ shows the shortcut list (two columns). Portrait: the console becomes a bottom split. On iPhone the sidebar is the Projects tab and the right pane is the console sheet.
+8. **iPad.** *Library list and project tree: see s5.11.10.* `NavigationSplitView`: a floating sidebar (290) with Library, the project tree and Locations; the editor; and a resizable right pane (340 to 430) holding the console or the widget preview (family and mode switches, entry stepper, "Last run" time; redrawn on Run (⌘R) and on save, never while typing; no "Send to Home Screen": iOS gives an app no way to place a widget, the person adds it from the Home Screen). Divider: 9 wide with a 4 × 44 handle; double-tap resets. The sidebar collapses with ⌃⌘S. Holding ⌘ shows the shortcut list (two columns). Portrait: the console becomes a bottom split. On iPhone the sidebar is the Projects tab and the right pane is the console sheet.
 
    *Note, 2026-10-26 01:25 ET (Maren, T-0119, from PROPOSAL-003 "Found on the way" 1-2).* "Send to Home Screen" is gone from the preview pane. Sample rows: "Weather card" is now `trip_countdown` (weather is a Shortcut recipe, not a v1 widget: ADR-001 ruling, no MET Norway) and "Clean clipboard" reads "Run Script with Input" (a v1 App Intent), not "Share sheet action" (a share extension is 1.1). Changed in `draw_ide.py`; the four affected sheets (A-projects and A-ipad, phone and iPad) are redrawn on design-previews `ide/` (67c22ebc), QA 0 issues. The PNGs in this folder still show the old rows until the IDE screens are redrawn in the approved look.
 
@@ -548,6 +549,183 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 
 
    **10.8 C51.** The layout is inside approved item 2; the copy is not, so the strings go to the Investors with these sheets (ops/questions.md, For the next report). *Open:* (a) review-notes-draft and store-page-draft say "Restore Purchases"; the app says `link.restore` "Restore purchase". The notes must quote the app, so they change when the string is approved. (b) There is no row that opens the app's page in iOS Settings, where location, motion and notifications are turned back on. The device-module `.fix` texts (C2-device-api) point there by words. A row would be cheap, but no build line asks for one, so Ines rules on it before I draw it.
+
+11. **Projects as containers.** **Strings DRAFT C51.** Maren, 2026-10-31 (T-0843, an Investor on #41 c6536766504 and c6538547501; T-0887; the save rule of T-0866 is 11.7). Replaces s5.1's filter, type tiles, Pinned section and New menu, and s5.8's Library list. Layout and colour stay inside the approved tokens (creative/approved.md item 2); only the words wait on C51. Sheets: `A-parts-phone.png` (A Paper, light, 19 frames), `B-parts-phone.png` (B Studio, dark, the same 19), `A-parts-ipad.png`, `B-parts-ipad.png` (7 frames each), drawn by `draw_projects.py`, which imports draw_ide.py's frames and QA. **QA** (`qa-projects.json`): 52 frames, 0 clipped, 0 truncated, 0 text over text, 0 under 11 pt, 0 contrast fails; 1,829 text nodes checked, lowest 4.86:1, 19 skipped on B's glass. Bytes 272,940 / 297,147 / 284,997 / 292,502, each under 300 KB. Word check over 59 strings: 0 hits for "app".
+
+   **11.1 The model.** A project is a folder, as T-0355 built it (`Documents/Scripts/<project>/`). Its files are its parts. There is no new record on disk: the code is the record, so Files, zip export and a rename stay as they are. A small reader, `ProjectParts`, sorts the files each time a list loads, using T-0748's Python scan. First match wins:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 16: 5. Screen notes, scrolls sideways" style="--tw:724px" markdown="1">
+
+   | Part | Rule | Opens |
+   |---|---|---|
+   | **Widget** | `declaredID` finds a `Widget(` id in the file (T-0748). Its claim is the `families=` list, read the same way; no list means `["systemSmall"]`, the API's default | the editor, with Run and the preview |
+   | **Script** | `pywidget.json` names it as `entry` | the editor |
+   | **Shared** | another project file imports it (`import x`, `from x import`), or its first line is `# shared` | the editor; Run stays there, so nothing is lost |
+   | **Script** | everything else | the editor |
+
+</div>
+
+
+   The sort is for showing only. Sending a project never reads an import line (T-0844), so a wrong row cannot break a run. `.py` files directly in the project are parts; other files and folders stay out of the lists in 1.0 but travel with the project (11.7).
+
+   **11.2 The tab bar is settled: Projects, Gallery, Console, Settings.** Settings stays fourth, so s5.10 reads true. The third tab was drawn "Docs" in the #60 mockups and in `tabbar()`, and s5 never named it. No docs screen exists, `ops/v1_scope.json` has no row and the store page cut it (row 13), so it cannot hold a tab. Console holds it: the REPL bar, the run strip and the last run's output, with no project needed. These are built (`ReplBar`, `ConsoleTextView`); they lose their home when the editor moves inside the Projects stack. It shows the same transcript as the console sheet, one per window. The change from the approved mockup is one tab, drawn in the same tokens; it goes to the Investors on #41 with frame 14, which renders the three options. Gallery keeps the second tab under that name until T-0870 is ruled; a rename to Explore changes one word. `draw_ide.py`'s `tabbar()` now says Console; the older sheets show Docs until they are next redrawn (owed, Maren). **There is no build line for the tab bar**: at HEAD Projects is pushed from a toolbar. 11.12 counts it.
+
+   **11.3 The Projects tab** (frames 1-5, 18). Large title, search over projects and files, the filter, then one list. The filter draws at 13 pt, the system control's size: at 15 pt "Lock Screen" does not fit a quarter of 358 pt. From AX1 it is a menu button. Newest change first; Pinned waits (it needs a record, and 1.0 has none).
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 17: 5. Screen notes, scrolls sideways" style="--tw:739px" markdown="1">
+
+   | View | Shows | Row |
+   |---|---|---|
+   | All | every project | name, "Changed …", up to 4 part tiles (24 pt, radius 7) then "+n"; opens the project screen |
+   | Scripts | every Script part | file name, project name, Shortcuts chip (11.6); opens the editor |
+   | Widgets | every Widget part | file name, project name, a chip for each claim; opens the editor |
+   | Lock Screen | Widget parts that claim a Lock Screen size | file name, project name, a chip per size claimed; opens the editor |
+
+</div>
+
+
+   Shared files are in All and the project screen, and search finds them. **One change to the #41 sketch:** it says a part appears in each view it claims. I read Widgets as every widget, because a list called Widgets that hides a Lock Screen widget reads as a bug. So a Lock Screen-only part is in Widgets and Lock Screen. Back from a part returns to the view it came from. Long-press adds Show in Project. Empty views use the words in 11.13, no illustration. The New button opens a menu: New Project, Import Project…, Start from an Example (T-0811's iPhone entry; the Scripts and Widgets views keep the same menu).
+
+   **11.4 The project screen** (frames 6-8). Replaces `ProjectFilesView`. Back to Projects, ⋯ (Rename, Import Files…, Export as Zip, Delete, as built). Large title, "Changed …", then groups Scripts, Widgets, Shared, each only if it has rows; three equal buttons Add Script, Add Widget, Add Shared; then the Home Screen group. Rows are 64 tall: tile 38, file name in mono, one line. The line says what the part does: a Widget's claim, a Shared file's users. Swipe and long-press keep Rename, Share, Delete. A status line appears only when something is wrong (frame 8, 11.7). At AX sizes the tiles and chevrons hide and the buttons stack.
+
+   **11.5 One Widget part, Where It Shows** (frames 9, 11, 12). A Lock Screen widget is a size of a widget, so one part claims Home Screen, Lock Screen or both. Two parts share code through a Shared file when the layouts differ. The claim chip under the nav bar (`Home Screen + Lock Screen`, or the one it claims) opens **Where It Shows**, also on the row's long-press: a switch per place and cards for Small, Medium, Large, Circular, Rectangular, Inline. A change edits the `families=` list in the file as one undoable edit; the sheet holds no state of its own. Turning a place on selects its first size (Small, Rectangular); the last size cannot be turned off. If `families=` is not a plain list of string literals, the switches do not show and the sheet offers `where.goto`. **A limit, said plainly:** `TreeWidget` declares every family in one kind (`TreeFamilies.supported`), so a claim cannot hide a size in iOS's own widget gallery. A person can place a Lock Screen widget and choose a script that claims only Home Screen. Idris: check what the tree draws then; the claim should also filter the Edit Widget picker if the entity query can read the family **[recall]**. If it cannot, the unclaimed size needs a card in state-spec.
+
+   **11.6 Shortcuts and Make App.** Shortcuts is something a Script part can do, not a part type, not a filter and not a tab: iOS gives no way to list or edit a person's shortcuts (L9). The Script row says `row.sc` "Runs from Shortcuts"; the flat view carries `chip.sc`. **Both appear only once T-0790 lists plain scripts in the Run Script picker**; until then the picker holds widgets only and the words would be false, so no row says it. Make App (T-0449) is the Home Screen group at the foot of the project screen, in home-setup.md's words: `menu.setup` before `pywidget.json` exists, then `menu.edit` with "Opens trip.py" and `menu.home`. The entry's row says `row.home`. home-setup.md s1's long-press menu keeps them too. The group shows only in builds with T-0449.
+
+   **11.7 What a project save does (T-0866; decision, Maren).** **A project saves as one thing: at a boundary, if anything in the project changed, every Widget part in it gets the whole project, then one refresh.** Idris builds it with T-0881.
+   1. **When.** T-0747's boundaries only (Run, opening a file, Projects, a rename or delete, close, leaving the foreground), after every window has saved. Never at the pause in typing. "Changed" is a list of path, size and date for the project, compared with the list kept from the last send (`widgets/<id>/.sent.json`), so a saved sibling, a new, renamed, deleted or imported file, a fresh template and a file a script wrote all count.
+   2. **What goes.** Everything in the project folder at any depth: `.py` files, package folders, data files. Not links (refused by name, as T-0844), hidden files, `__pycache__` or `pywidget.json`. The widget's own file lands as `main.py`; a project file called `main.py` stays out, as T-0844.
+   3. **What goes away.** A path on the last `.sent.json` and not in this send is removed. `tree.json`, `status.json` and anything else the folder holds are not on that list and are not touched.
+   4. **Budget.** `MiniZip.Limits`, 4 MiB a file and 32 MiB a project, checked from file attributes before any read (T-0881 L2). Over it, the send is refused and names the file.
+   5. **All or nothing, per widget.** T-0881's rule: a refusal leaves that widget's folder as it was. One widget's refusal does not stop the others.
+   6. **Refresh.** One `scriptSaved(id)` per widget per send, the open file's widget first, on the run queue. A widget file not open in an editor is sent from disk; T-0747's id tracking stays with the open editor.
+   7. **A word to the person.** The widget's row carries the result (frame 8). A refusal is `st.notsent` with the reason, and the console says it. A refresh that fails after a real send is `st.fail` from `status.json`; a tap opens the file at that line. A good send clears both. Two parts with one id show `st.clash`.
+   8. **`import main` stays impossible** for a widget whose file is not `main.py`: at refresh, `main` is the widget's own script, and changing that means changing the runner's contract for one rare case. The reader sees the import and shows `st.main` on the row and in the console. Templates name the file `widget.py`, so nobody walks into it.
+   9. **Tests at 31b0ccf1.** `testEditedSiblingReachesTheWidgetOnlyWithItsScript`, `testRemovedSiblingStaysInTheWidget` and `testPackageFolderDoesNotReachTheWidget` invert, and so does T-0865's data file probe. `testImportOfTheProjectMainPyDoesNotReachTheWidget` stays and gains the row line.
+
+   F3: no new row. "One file importing another" is true for widgets only with this rule; add one case, edit only a sibling, leave the editor, the widget's tree changes.
+
+   **11.8 What New Project holds (T-0887; for Idris to build).** New Project stops being an alert. It is a sheet (frame 10): Name, then Start with **Widget** (default) or **Script**; Create opens the project screen. Keep the `projectName` and `confirmName` identifiers.
+   - **Widget** writes one file, `widget.py`: the bytes of `pywidget/templates/new_widget.py`, bundled, with line 17's id and name filled in. Id: the project name lower-cased, each run of anything outside `a-z0-9` becoming `_`, trimmed; empty becomes `widget`; if the id is `new_widget` (held, T-0684), fails `WidgetID.problem`, or its key is already in `library.ids()`, append `_2`, `_3`. Name: the project name as a Python string literal, `\` and `"` escaped, control characters dropped. `families` stays `["systemSmall"]`. Creating it counts as a change (11.7 item 1), so the widget reaches the Edit Widget picker the first time the person leaves the project, with no edit.
+   - **Script** writes `main.py`: `ProjectStore.template`, unchanged.
+   - **One file, not all three parts.** A widget in every project adds a picker entry for projects that never wanted one, and a shared file nobody imports explains nothing. Widget is the default because a widget on the Home Screen is the first thing pywidget promises (state-spec, "View on New Project").
+   - **Add Widget** (frame 11) writes `<name slug>.py`, the same template, with `families` from the sheet: Home Screen `systemSmall`, Lock Screen `accessoryRectangular`. **Add Script** writes `script.py`, next free name, with the Hello line. **Add Shared** writes `shared.py`, next free name, so:
+
+     ```python
+     # shared
+     # Code here can be imported by every script and widget in this project:
+     #     import shared
+
+
+     def greeting():
+         return "Hello"
+     ```
+   - **Done:** a UI test: New Project with the default, back out, the part is in Widgets, `widgets/<id>/main.py` exists and a run draws. A unit test: a list of hostile names (`"`, `\`, a newline, emoji only, `New widget`, a name already used) each gives a file whose `declaredID` is set, not held, and which Python accepts. Pernille confirms the template's API. The template's words are C51 with the rest.
+
+   **11.9 Blocks \| Code, 1.2. Nothing of this ships in 1.0, not even dormant (2.5.19).** Frames 15-17 and iPad 6, for L17's recommendation, which Ines has not ruled on. A Builder widget is a Widget part: same project, same rows, same claim. The file pair (`trip_card.py` and `trip_card.blocks.json`) is one row. Add Widget gains Start with Blocks or Code. **The switch sits under the nav bar on iPhone, full width, and in the toolbar on iPad, where the file chips sit.** It shows only on a widget that has a blocks document: blocks compile one way (L17 s4), so a code widget has no blocks side and shows no dead switch. Blocks side: the preview well with the claim chip, then the block list. Code side: the compiled Python, read-only, the selected block's line marked, `b.ro` and `b.edit` at the foot.
+
+   **11.10 iPad** (frames 1-7). s5.8's sidebar, with Library now All Projects, Scripts, Widgets, Lock Screen, Gallery, Console, Examples; the Shortcuts row goes. Settings stays at the foot. The tree lists a project's parts directly, with the kind's glyph. Locations stay under the tree as s5.8 and are not drawn. The project screen is two columns, Scripts and Shared, Widgets and Home Screen; one column in portrait at AX sizes. A Library row and the filter are the same state. An open Widget part keeps s5.8's preview pane; the claim chip sits under the toolbar. Where It Shows is a 540 form sheet.
+
+   **11.11 Accessibility.** Project row, one element: "Trip Tracker, 1 script, 1 widget, 1 shared file, changed 2 minutes ago". Part row, one element: "trip_card.py, widget, Home Screen and Lock Screen", then any status line. In a flat view the project name follows the file name. Tiles and chips are hidden behind their row's label. Shape and words carry every state (warn and x-circle glyphs, never colour alone). Filter: one segmented control, a menu from AX1. Where It Shows: each switch and size card one element, trait selected; the size cards are a group under their switch. Reduce Motion: standard push and sheet only. iPhone at AX3 is frames 18-19, iPad portrait frame 7.
+
+   **11.12 Size and date.** Read from main at c0b05d85 (`App/Projects`, `PyWidgetApp.swift`, `Tests`), not from a build and not measured. Idris has not checked it; his read is the first hour of the work. Yardstick: T-0355's 1,266 lines of `App/Projects` went from first commit to landing in about 2.4 days with two reviews (10-29 04:06 to 10-31 12:42).
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 18: import shared, scrolls sideways" data-n="2" style="--tw:692px" markdown="1">
+
+   | Work | Days | Note |
+   |---|---|---|
+   | `ProjectParts` reader over T-0748's scan, with tests | 0.5 | new |
+   | iPhone tab bar: `TabView`, editor inside the Projects stack, Console tab; T-0355's UI test paths move | 1.0 | new; **no board line today**, needed by T-0191 and T-0657 anyway |
+   | Projects list: All, three flat views, search | 0.75 | replaces `ProjectsView`'s list |
+   | Project screen: groups, buttons, Home Screen group, status lines | 0.75 | replaces `ProjectFilesView` |
+   | New Project, Add Widget, Where It Shows, `families=` edit | 0.75 | new |
+   | Templates (11.8) | 0.25 | T-0887 |
+   | iPad sidebar and project screen, on top of F4's sidebar | 0.5 | new |
+   | Review and its fix round | 0.5 | new |
+   | **New work** | **5.0** | |
+   | T-0866 save rule (11.7) | 1.0 | on the board |
+   | T-0881 staged send | 0.5 | on the board |
+   | **Total** | **6.5** | |
+
+</div>
+
+
+   Not counted: T-0790 and T-0449, which have their own lines, and 1.2's Builder. **Date effect: Day 60 (2026-12-20) does not move.** The 5.0 new days go on the Nov 6-10 list; the working freeze (Day 21) and submit (Day 25) stand until Ines redraws the plan, and that redraw places them.
+
+   **11.13 Strings** (`draw_projects.py --strings`). Every one is DRAFT C51. `menu.setup`, `menu.edit` and `menu.home` are home-setup.md's.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 19: import shared, scrolls sideways" style="--tw:839px" markdown="1">
+
+   | ID | String (DRAFT) | Where | C51 |
+   |---|---|---|---|
+   | `tab.console` | Console | third tab (iPhone); Library row (iPad) | DRAFT |
+   | `f.all` | All | Projects filter: one row per project | DRAFT |
+   | `f.scripts` | Scripts | Projects filter: every Script part, naming its project | DRAFT |
+   | `f.widgets` | Widgets | Projects filter: every Widget part, naming its project | DRAFT |
+   | `f.lock` | Lock Screen | Projects filter: Widget parts that claim the Lock Screen | DRAFT |
+   | `f.menu` | Showing: [view] | the filter at AX sizes (menu button) | DRAFT |
+   | `search` | Search projects and files | Projects search field | DRAFT |
+   | `new` | New | floating button on the Projects tab; opens the menu in s5.11.2 | DRAFT |
+   | `new.t` | New Project | sheet title; menu row | DRAFT |
+   | `new.name` | Name | New Project sheet, field label | DRAFT |
+   | `new.start` | Start with | New Project sheet, section label | DRAFT |
+   | `new.widget` | Widget | New Project sheet, the default | DRAFT |
+   | `new.script` | Script | New Project sheet | DRAFT |
+   | `new.foot.w` | Makes widget.py. Add a script or shared code later. | New Project sheet footer, Widget chosen | DRAFT |
+   | `new.foot.s` | Makes main.py. Add a widget or shared code later. | New Project sheet footer, Script chosen | DRAFT |
+   | `new.create` | Create | sheet button | DRAFT |
+   | `new.cancel` | Cancel | sheet button | DRAFT |
+   | `g.scripts` | Scripts | project screen group | DRAFT |
+   | `g.widgets` | Widgets | project screen group | DRAFT |
+   | `g.shared` | Shared | project screen group | DRAFT |
+   | `g.home` | Home Screen | project screen group, Make App lives here (T-0449); rows are home-setup.md's menu.setup, menu.edit, menu.home | DRAFT |
+   | `add.script` | Add Script | project screen button | DRAFT |
+   | `add.widget` | Add Widget | project screen button; sheet title | DRAFT |
+   | `add.shared` | Add Shared | project screen button; writes shared.py, or the next free name | DRAFT |
+   | `row.sc` | Runs from Shortcuts | Script row; shown only once T-0790 lists plain scripts in the Run Script picker | DRAFT |
+   | `row.home` | Opens from the Home Screen | the Script row that pywidget.json names as its entry | DRAFT |
+   | `row.used` | Used by [a] and [b] | Shared row; or Used by [a], or Used by [n] files | DRAFT |
+   | `row.unused` | Not imported yet | Shared row, nothing imports it | DRAFT |
+   | `chip.sc` | Shortcuts | chip on a Script row in the flat view (same rule as row.sc) | DRAFT |
+   | `claim.home` | Home Screen | claim, chip and line | DRAFT |
+   | `claim.lock` | Lock Screen | claim, chip and line | DRAFT |
+   | `claim.both` | Home Screen + Lock Screen | claim line on a Widget row; a chip in the editor | DRAFT |
+   | `fam.small` | Small | Where It Shows | DRAFT |
+   | `fam.medium` | Medium | Where It Shows | DRAFT |
+   | `fam.large` | Large | Where It Shows | DRAFT |
+   | `fam.circ` | Circular | Where It Shows | DRAFT |
+   | `fam.rect` | Rectangular | Where It Shows | DRAFT |
+   | `fam.inline` | Inline | Where It Shows | DRAFT |
+   | `where.t` | Where It Shows | sheet title; opened from the claim chip in the editor and from a Widget row's menu | DRAFT |
+   | `where.done` | Done | sheet button; the edit is already in the file | DRAFT |
+   | `where.foot` | Saved in [file], line [n], as families=. | sheet footer | DRAFT |
+   | `where.one` | One widget, one script, one layout per size. To show something else on the Lock Screen, add a second widget. | sheet footer, second line | DRAFT |
+   | `where.code` | This widget sets its sizes in code. | sheet, when families= is not a plain list of names | DRAFT |
+   | `where.goto` | Go to Line [n] | sheet button in that case; the switches do not show | DRAFT |
+   | `st.fail` | Last refresh failed: [Error], line [n] | Widget row, danger; tap opens the file at that line | DRAFT |
+   | `st.notsent` | Not sent: [reason] | Widget row, warning; the widget keeps what it had | DRAFT |
+   | `st.big` | Over the 32 MB a widget can carry: [file] | the [reason] when the project is over budget | DRAFT |
+   | `st.clash` | Same id as [file] in [project]; the later save wins | Widget row, warning | DRAFT |
+   | `st.main` | A widget can’t import main.py; move that code to another file | Widget row and console line, warning | DRAFT |
+   | `empty.scripts` | No scripts yet | Scripts view, empty | DRAFT |
+   | `empty.widgets` | No widgets yet | Widgets view, empty | DRAFT |
+   | `empty.lock` | No Lock Screen widgets yet | Lock Screen view, empty | DRAFT |
+   | `empty.lock.b` | Open a widget and tap its Home Screen chip to add the Lock Screen. | Lock Screen view, empty, under the title | DRAFT |
+   | `b.blocks` | Blocks | 1.2: the switch in a Builder widget's screen | DRAFT |
+   | `b.code` | Code | 1.2: the switch | DRAFT |
+   | `b.start` | Start with | 1.2: Add Widget sheet | DRAFT |
+   | `b.add` | Add Block | 1.2: foot of the block list | DRAFT |
+   | `b.edit` | Edit as Code | 1.2: Code side, the one action that leaves blocks | DRAFT |
+   | `b.ro` | Written by your blocks. Read-only. | 1.2: Code side, the line above the action | DRAFT |
+
+</div>
+
+
+   **11.14 C51 and open.** The layout is inside approved item 2; the words go to the Investors with these sheets. *Open:* (a) T-0654 lets a window keep a deleted file's text as unsaved scratch. When the editor moves inside the Projects stack, back would lose that text; Idris, offer Save to `Recovered` there, and tell me if a screen is needed. (b) 11.5's check of an unclaimed size. (c) T-0790's answer sets whether 11.6's Shortcuts words ship. (d) A-projects-*, A-ipad-* and every sheet with a tab bar show the older filter or Docs until redrawn (owed, Maren).
 
 ## 6. Open
 

@@ -11,7 +11,7 @@ description: "The founder&#x27;s marketplace (2.1) is three things: a place to p
 <div class="doc-body" markdown="1">
 
 {% raw %}
-- Status: **accepted by the CEO as <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>, 2026-10-25 19:57 ET.** **Section 10 re-opened 2026-10-26 by its own clause (T-0085 precedent check) and ruled in section 12** (online pip back on the 1.1 plan, gated only on the DPLA 3.3.1(B) read; v1 unchanged). **12.6 (2026-10-26 01:45): the read met (i); online pip is on the 1.1 plan, rated Medium; v1 unchanged.** Two board decisions: "v1 scope from L6 s7" (P0) and "L12 Q1" (P2). Neither changes a founder decision in brief 2.1; section 5 says when one would. **Re-opened 2026-10-25 by its own clause (L6 primary read, df971700) and ruled again: section 10** (online pip leaves 1.1; v1 scope unchanged).
+- Status: **accepted by the CEO as <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>, 2026-10-25 19:57 ET.** **Section 2 re-ruled 2026-10-31 in section 13 (T-0870, the Explore tab): S0, S1, S1b, S3a, S2, S3b; 1.0 scope unchanged.** **Section 10 re-opened 2026-10-26 by its own clause (T-0085 precedent check) and ruled in section 12** (online pip back on the 1.1 plan, gated only on the DPLA 3.3.1(B) read; v1 unchanged). **12.6 (2026-10-26 01:45): the read met (i); online pip is on the 1.1 plan, rated Medium; v1 unchanged.** Two board decisions: "v1 scope from L6 s7" (P0) and "L12 Q1" (P2). Neither changes a founder decision in brief 2.1; section 5 says when one would. **Re-opened 2026-10-25 by its own clause (L6 primary read, df971700) and ruled again: section 10** (online pip leaves 1.1; v1 scope unchanged).
 - Author and chair: Ines (CEO). Inputs, read in full for this ruling: pywidget/docs/research/L6-app-review.md (s3, s4, s6, s7; Wrenna), L12-security.md (s0, s6, s7, s12, s13; Odalys), L13-packages.md (s4, s5; Odalys), ADR-001 (with its 19:36 Revised section), PROPOSAL-001 (both files), PROPOSAL-002 s6, ops/plans/pywidget/build-brief.md (s0, 2.1, 2.3, L15), ops/plans/pywidget/plan.md.
 - Numbering: ADR-003 is held for the package policy (ADR-001 s4, Day 6) and ADR-005 for the compatibility corpus; this is the next free number. ADR-003 must agree with section 3 below.
 - Every App Review reading here rests on L6, which read no page on developer.apple.com (ruling 'P2 terms'). L6 risk ratings may only move up on the person's browser read still owed (board, [needs-person] L6 line). This ADR is re-opened if that read raises any rating it cites. (Note, 2026-10-25, section 10: the read arrived through #59 for the guidelines and the Mini Apps page, it raised online pip to Medium-High, and section 10 rules on it. DPLA 3.3.1(B) is still unread (T-0060); the clause stays live for that read.)
@@ -27,6 +27,8 @@ The constraint above both: v1 is submitted Day 17 (2026-11-07), Day 20 is the la
 What would make this fail: anything marketplace-shaped in the v1 binary, or a revenue plan that waits for Apple.
 
 ## 2. Ruling 1: the marketplace ships in stages; none of it before Day 30 earns
+
+*(Note 2026-10-31 13:14 ET, section 13: this table is re-ruled there. S3 splits into S3a and S3b, S2 moves behind S3a, S1b is new, and the dates follow the plan of 2026-10-31 13:02. The table is kept as the 2026-10-25 record.)*
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: 2. Ruling 1: the marketplace ships in stages; none of it before Day 30 earns, scrolls sideways" style="--tw:1449px" markdown="1">
@@ -336,6 +338,104 @@ Chair: Ines. Input: Wrenna's T-0060 (b3af7e0b; L6 s1 row "DPLA 3.3.1(B)" and s9)
 **What would make this fail.** A reviewer reads 2.5.2 alone and rejects the 1.1 update. Cost: one 1.1 update, never v1 (12.3's mitigation holds). Apple's question 3 (section 10.3) becomes a fallback after a rejection, not a step before submission (questions item 13).
 
 **Board.** T-0156 noted (rating changes and the review-note rule for Wrenna); T-0101 noted (its T-0060 gate is cleared; conditions 10-11). T-0060 was ticked by the Operator.
+
+Ines, CEO
+
+## 13. Chair line 2026-10-31 13:14 ET (Ines, T-0870): the Explore tab; section 2 re-ruled
+
+Chair, alone. Input: an Investor, #41 c6544328475, 2026-10-31 09:59: "there will be an Explore tab, where users can view the premades and any projects created by other users. They can preview them and install them if they want them. Installed widgets can be edited directly by the user if they choose". Read for this: L6 s1-s4, s6; L12 s6-s8, s10, s13; L17 s0, s5, s6; matrix s3(b); the Apple draft; IDE spec s5.9; plan chair note 13:02; the code at c3709b04. Apple's words below are L6's verbatim quotes. No new fetches. Text that rests on L6's listing snippets or on my memory says so.
+
+**Ruling. Explore can exist, and the shape is right. In 1.0 it is the Gallery of our premades. In the app, other people's work is Builder documents only. Other people's Python doesn't enter the app unless Apple approves it, and I promise it nowhere.** Stages replace the table in section 2. S0-S3 keep their meaning, so every citation of them still reads true; S3 splits in two. Section 2's dates are replaced by the plan (2026-10-31 13:02). Its rule stands in 1.0 terms: nothing here goes ahead of a 1.0 line, and nothing marketplace-shaped enters the 1.0 binary.
+
+### 13.1 The stages
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 13.1 The stages, scrolls sideways" style="--tw:1746px" markdown="1">
+
+| Stage | What the person gets | Release | Size (engineer-weeks; all unmeasured) | Backend | Needs from the Investors |
+| --- | --- | --- | --- | --- | --- |
+| S0, Gallery | The 12 premades in the binary: preview, add, Open source into an editable copy of their own (13.6). The Explore tab's first-party half, and the one that stays first-party forever: new premades come by app update, because downloading them is the self-hosted bundle row (L6 s3) | 1.0, Day 55 | T-0191, plus about 0.1 for the copy | None | Nothing |
+| S1, web gallery, first-party | Our site shows free premades and examples as readable source: copy, or download a `.py`, bring it in through Files | After 1.0 is approved | T-0050, about 0.4 | None | Approval to publish (s5) |
+| S1b, documents by file (new) | A Builder document saved to Files or the share sheet; the other person opens it the way they open a `.py`. The app downloads nothing and hosts nothing | 1.2, inside the Builder | 0.5 on the Builder's 6.75 (L17 s5) | None | Nothing |
+| S3a, Explore, Builder documents | The tab as the Investor drew it, for block documents: browse, preview, install, edit, publish, report | 1.3. Earliest spring 2027, my judgment. No date until 13.5 has an answer | About 8, range 6 to 12: tab, preview, install 2.5; publish and sign-in 1; records, queue, removal list 2; desk tool 1; report, block, age 1; privacy, terms, notes 0.5 | CloudKit public database first (13.4) | 13.7 items 2-5 |
+| S2, community web gallery, Python | Other people's Python on our site, under the L12 s8.2 checks. Import by file into the local tier | After S3a, and only if S1b and S3a show people sharing | About 5 on S3a's backend, plus a desk that reads code | Web sign-in; own service likely | Staff for code review; legal |
+| S3b, Explore, Python | Other people's Python in the tab, in a separate process (M2) | No date. Not planned | At least 10, not sized | All of the above | Apple's answer; S3b's gate below |
+
+</div>
+
+
+**S2 moves behind S3a.** That reverses section 2's order, and the reason is moderation. A document carries text; a Python item carries a program someone has to read. S3a builds the desk on the easy load first, and the people who want Python now already have what every rival's users have: GitHub, Reddit and a file (L6 s2). S3a no longer waits for the web IDE (Phase 3), since it needs no web tier. Whether 1.3 goes ahead of Phase 3 is ruled when 1.2 ships.
+
+### 13.2 What Apple's text allows
+
+- **Other people's Python, in a tab: High, unchanged (L6 s3, marketplace row).** 2.5.2 bars apps that "download, install, or execute code which introduces or changes features or functionality of the app" (p. 18); the one download exception is educational, and we don't claim it (10.2). 4.7 allows software outside the binary "specifically HTML5 and JavaScript mini apps and mini games, streaming games, chatbots, and plug-ins" (p. 39), and the Mini Apps page wants "another language approved by Apple" (MAPP p. 2). 4.7.2 bars native APIs "without prior permission from Apple" (p. 39).
+- **Pip's clearance doesn't carry over.** 12.6 passed 3.3.1(B)(c), "does not create a store or storefront for other Applications", on these words: "one named project per Install press, no list, no search, no browsing". Explore is a list, a search and browsing. That reason is gone here, so the pass is too.
+- **Preview is the hard edge.** Previewing a Python item before installing it is executing downloaded code. 2.5.2's verb is "execute". A live tile on a stranger's Python is S3b with no install step, and a screenshot in its place is an uploaded image to moderate.
+- **Builder documents: Medium, unsettled (matrix s3(b)).** 1.2.1 is the better fit: "content within the app itself" and "treated as user-generated content by App Review" (p. 7), and every behaviour is already in the reviewed binary. Against it, the compiler's output is Python that runs, a gallery may read as a storefront, and Widgy is one precedent, read from listing text, of layouts that compile to no general language. It is the only in-app route the text leaves open. It isn't cleared.
+- **The other side, argued.** Python is the product, and a documents-only Explore leaves out the people who write it. I said too much about precedent once already: 14 apps overturned my pip reading (12.1). The answer is that L6 s2 found no in-app gallery of user-made general code, but it read six apps and T-0085 didn't ask that question. So Wrenna runs the same check for this shape before the Apple question goes (13.5). If a current app ships it, S3b's rating gets read again. Until then it stands.
+
+**S3b's gate.** All of: T-0044 passes; Apple approves Python as a language and gives 4.7.2 permission for what it touches; 4.7.1, 4.7.4 and 4.7.5 are built; section 4 stands, so never in the app's process. If Apple refuses, L6 s6 is the fallback and section 2's PROPOSAL is written then.
+
+### 13.3 What keeps a document a document (S3a; each goes in its ADR with a test)
+
+1. **A published item is the `*.blocks.json` alone.** Checked against the schema at publish and again at install. The `.py` never travels; the receiving device compiles with its own reviewed compiler (section 4). An item the author has changed in code can't publish.
+2. **No block takes code or an expression.** A formula is a language, and a code block is M1 by another door.
+3. **No native capability and no author-set network host at S3a.** No location or motion block, no free URL, until Apple answers on 4.7.2. Preview runs on sample data, not the person's: this differs from T-0191's rule because the content isn't ours (4.7.3, if 4.7 is held to apply).
+4. **Text and system glyphs only.** No uploaded images, fonts or preview pictures. Tiles draw on the device. This keeps the filter to text, which we can do.
+5. **Edit.** An installed item is the person's own copy, and they edit it in blocks. Opening its Python makes it a local project (L12 s6.1). The author's later changes never overwrite it.
+6. **Explore and online pip never land in the same update** (12.3).
+7. **Browsing, installing and reporting need no account** (5.1.1(v)). Only publishing signs in.
+8. **No money moves.** Free to browse, free to publish. Paid items, tips and payouts are their own PROPOSAL (L6 s3 rates payouts Medium; 3.1.1 and 3.1.3(g) bind them).
+
+### 13.4 Moderation and backend
+
+**Guideline 1.2 (pp. 6-7) sets four duties, and "It is your responsibility to remove content that violates this guideline".** S3a meets them this way:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 13.4 Moderation and backend, scrolls sideways" style="--tw:640px" markdown="1">
+
+| Duty | S3a |
+| --- | --- |
+| "A method for filtering objectionable material from being posted" | Nothing is public until cleared. An automatic text filter (L12 s10 word list), then a person or worker clears the queue. Banned areas (Commandment 7) are refused like objectionable content |
+| "A mechanism to report offensive content and timely responses" | Report on every item and creator page, L12 s10's reasons. Apple gives no time; the 24 hours is a forum anecdote. We hold to 24 hours anyway, weekends too |
+| "The ability to block abusive users" | Block hides a creator for that person. Three upheld takedowns close publishing (L12 s10) |
+| "Published contact information" | A support address in the app and on the page |
+
+</div>
+
+
+Removal is a signed list read at launch and at most daily. It only ever hides or stops, never turns anything on, and is named in the review notes (L6 s3, <span title="A test written in advance. If it fires, we drop the idea.">kill</span> switch row; 2.5.19). 1.2.1(a) adds an age duty. With nothing above the rating allowed, the filter carries most of it, but I don't expect the 4+ reading (matrix s2c) to survive a public gallery, and Commandment 7 keeps us away from children under 13. The S3a ADR owes a person's read of the questionnaire and a ruling on the Declared Age Range API. Publishing also moves the App Privacy label off its current reading and needs a privacy policy rewrite.
+
+**Who staffs it is the real cost.** About 15 to 30 minutes a day, every day, at launch volume (my judgment; no data). Commandment 10 keeps customer support with the Investors until they hand it over; workers can't start contact with anyone. So the desk is the Investors, or a worker they name under that clause. My recommendation is a worker clears the queue and reports, the Investors hold appeals and legal notices, and creator messages are transactional wording they approve once.
+
+**Backend: CloudKit public database first.** It sits under the Apple membership, so no new vendor, no new account and no server to run [recall; L11 s4 quotas unread]; sign-in is the person's iCloud. The brief doubted it for "moderation, search and payouts". S3a has no payouts and small search, and moderation is a status field and a desk tool, so that objection is weaker here. Open: quotas, CloudKit's role limits on who can approve, and a person signing in to deploy schema. A one-page read under the #64 ruling answers the first two at S3a's ADR. If it fails, a new account and a paid service go to the Investors as a request (Commandment 50). Release signing (L12 s7) was written for code; whether tier B needs it, given 13.3 item 1, is ruled in the S3a ADR. No iCloud entitlement enters any build before S3a's: an unused one in 1.0 is the dormant shape 2.5.19 names.
+
+### 13.5 When to ask Apple
+
+Section 5's recommendation stands and gets sharper. **Ask question 1 of the draft once 1.0 is approved and the Builder runs in TestFlight, before any S3a backend work.** By then we have something real to describe, and the answer decides eight weeks. Question 2 waits for T-0044. Asking is the Investors' act (Commandments 10, 50). If Apple calls documents code, S3a stops and L6 s6 holds. If Apple doesn't answer, S3a goes ahead only if the Investors choose to take that risk, as its own update with its own notes. Two repairs first: ops/questions.md no longer holds section 5's item 7, so T-0870's follow-up line now carries the ask; and the draft says the compiler works "from templates in the binary" where L17 s5 builds from `ast` nodes. Nothing false goes to Apple, so Wrenna corrects it against the real compiler before it's sent.
+
+### 13.6 What changes in 1.0 now
+
+**Scope: nothing. One behaviour gets pinned down, and no hook is owed.** Checked at c3709b04:
+
+- **Nothing to strip.** No marketplace code in pywidget/ios or pywidget/runtime; the app's entitlements hold the App Group only. The review note (L6 s5, "no in-app gallery, store or sharing of other people's code in this version") stays true and stays in. L10's `MARKETPLACE` flag isn't needed in 1.0, since there is nothing to compile out.
+- **`pywidget.json` already keeps unknown keys** (app_manifest.py, `extra`), so later builds can add `kind`, `blocks` and an origin without a version bump.
+- **L17 V3 is no longer a freeze item.** Nothing in the app reads manifest.schema.json; host tests read its capability list only. Adding `blocks` is a paper change for 1.2.
+- **L17 V6 is not met and isn't needed.** At HEAD a project holds `.py` files only; import skips other types and names them, and export writes `.py` only (ProjectTransfer.swift). L17 feared a 1.0 install dropping a person's blocks, but a 1.0 install can't hold them. A 1.2 zip opened on 1.0 loses its blocks in that copy, says so, and the zip keeps them.
+- **L17 V4 is no longer a freeze item.** `__version__` is already public and agreed (API.md), so 1.2's compiled output can test it itself. L17's other reservations are unchanged.
+- **The one gap.** The Investor's "edited directly by the user" is the only Explore behaviour that belongs in 1.0, and PROPOSAL-002 s6 already promises it ("Free premades open as editable source"). But T-0191's Done doesn't test it, nothing under App/Projects names a premade, and a premade imports `_premade` from its own folder (Premades.swift), so a plain copy in a project fails on its first line. New line for Idris, inside T-0191's slot: this pins an existing promise, adds no feature and pushes nothing, so the plan's widening test doesn't apply. A refunded Pro buyer keeps the copy they made; "source included" is the sale, and that's accepted.
+- **The word stays "Gallery" in 1.0.** Renaming touches `done.gallery` and its tests and buys nothing. The tab's name is a <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span> question when S3a lands.
+- **T-0050 changes:** free premades and examples only. Section 2 said "the premade sources", which would put Pro source on the open web (state-spec s6: locked tiles have no source path).
+
+### 13.7 What needs the Investors
+
+Nothing today, and nothing here holds up 1.0. Later, in order: (1) publishing S1, at 1.0's approval; (2) asking Apple, at 13.5's point; (3) who staffs the desk (L12 Q5); (4) legal: terms with a content licence, the notice process and any agent fee (L12 s10); (5) the CloudKit sign-in, or a new account if it fails (Commandment 50). Each goes as its own request when reached.
+
+### 13.8 What would make this fail
+
+Apple calls documents code after we build (13.5 puts the question first). Nobody publishes (S1b measures sharing by file, for free, before a backend exists). The gallery fills with other people's logos and names (L12 s10's IP route; the first month's load may beat my 15 to 30 minutes). Documents prove too weak for what people want to share: then the pressure lands on S3b, and the answer there is still Apple's.
+
+**Consequences.** L17 s0 item 4 now allows S1b: the 1.2 Builder still has no gallery and no fetch, but a document the person brings through the picker is theirs. L17 V3, V4 and V6 read as 13.6. L12 s6.1 tier B reads with 13.3. Board: follow-up lines added, T-0050 noted. Commandment 58: no outside text here gave an instruction.
 
 Ines, CEO
 {% endraw %}

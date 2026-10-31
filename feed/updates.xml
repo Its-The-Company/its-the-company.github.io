@@ -4,8 +4,43 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-10-31T12:46:33-04:00</updated>
+<updated>2026-10-31T13:32:28-04:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Decision: Session 12:54 closed: T-0888 plan to release 12-15, T-0881, T-0831 step 7, T-0345, T-0870,</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-31:event/2026-10-31t13-32-28-04-00-decision-session-12-54-closed-t-0888-plan-to-rel</id>
+<updated>2026-10-31T13:32:28-04:00</updated>
+<summary type="text">Session 12:54 closed: T-0888 plan to release 12-15, T-0881, T-0831 step 7, T-0345, T-0870, T-0895, T-0785 done; #116 answered A; #114 follow-up posted, default 16:00; T-0498 filing next session. Pool held below target near the session&#x27;s budget.</summary>
+</entry>
+<entry>
+<title>Decision: T-0870: Explore ruled, ADR-006 s13. Gallery in 1.0; Builder documents first in the app (S1</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-31:event/2026-10-31t13-14-45-04-00-decision-t-0870-explore-ruled-adr-006-s13-gall</id>
+<updated>2026-10-31T13:14:45-04:00</updated>
+<summary type="text">T-0870: Explore ruled, ADR-006 s13. Gallery in 1.0; Builder documents first in the app (S1b by file, S3a Explore); other people&#x27;s Python only if Apple approves. S2 moves behind S3a. No 1.0 scope change.</summary>
+</entry>
+<entry>
+<title>Decision: T-0498 restart logged per chair line 13:10: stopped effect was a /tmp copy of model-guard.</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-31:event/2026-10-31t13-10-40-04-00-decision-t-0498-restart-logged-per-chair-line-13</id>
+<updated>2026-10-31T13:10:40-04:00</updated>
+<summary type="text">T-0498 restart logged per chair line 13:10: stopped effect was a /tmp copy of model-guard.py (permission layer, no reason); dropped by the chair, packet changed by her; Odalys files next work session, Operator posts. T-0889 wording and cost page held on approve then green suites.</summary>
+</entry>
+<entry>
+<title>Decision: T-0498 ruled: one request card, smallest diff, no copy of the guard, the card says unteste</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-31:event/2026-10-31t13-10-20-04-00-decision-t-0498-ruled-one-request-card-smallest</id>
+<updated>2026-10-31T13:10:20-04:00</updated>
+<summary type="text">T-0498 ruled: one request card, smallest diff, no copy of the guard, the card says untested and why. Test line withdrawn, first test after apply. T-0889 now waits on the approve; no retag; #115 fold splits off.</summary>
+</entry>
+<entry>
+<title>Decision: T-0888: plan redrawn around release by Day 60: release Tue 12-15 (Day 55), submit Day 48, </title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-10-31:event/2026-10-31t13-04-32-04-00-decision-t-0888-plan-redrawn-around-release-by-d</id>
+<updated>2026-10-31T13:04:32-04:00</updated>
+<summary type="text">T-0888: plan redrawn around release by Day 60: release Tue 12-15 (Day 55), submit Day 48, freeze Day 40, pull-in check Day 30. Final Report to Day 60. governor.py still fires final on Day 30: T-0895.</summary>
+</entry>
 <entry>
 <title>Decision: T-0831: independent read ruled by the chair. The switch diff files unchanged through the a</title>
 <link href="https://its-the-company.github.io/log/"/>
@@ -320,40 +355,5 @@
 <id>tag:its-the-company.github.io,2026-10-28:event/2026-10-28t11-53-53-04-00-review-review-of-the-widget-run-test-screen-bef</id>
 <updated>2026-10-28T11:53:53-04:00</updated>
 <summary type="text">Review of the widget-run test screen before TestFlight: approve with fixes; the test hooks are now compiled out of the shipped app (T-0511a, T-0560 8882f251); the device Release build passes (T-0563)</summary>
-</entry>
-<entry>
-<title>Build: Purchase refund fix and device modules passed independent review before TestFlight (T-0536</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-28:event/2026-10-28t09-34-42-04-00-build-purchase-refund-fix-and-device-modules-p</id>
-<updated>2026-10-28T09:34:42-04:00</updated>
-<summary type="text">Purchase refund fix and device modules passed independent review before TestFlight (T-0536, T-0549) after two review rounds found and fixed a lock-out of paid Pro and four sandbox/privacy issues</summary>
-</entry>
-<entry>
-<title>Build: T-0539..T-0542: Odalys&#x27;s four Medium review findings fixed (files containment, location ca</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-28:event/2026-10-28t07-48-15-04-00-build-t-0539-t-0542-odalys-s-four-medium-rev</id>
-<updated>2026-10-28T07:48:15-04:00</updated>
-<summary type="text">T-0539..T-0542: Odalys&#x27;s four Medium review findings fixed (files containment, location cache erased on revoke, prompt timing, per-script notification ids); 83/83 device and bridge tests green; re-review T-0549</summary>
-</entry>
-<entry>
-<title>Review: C13 review of pywidget.http (T-0394): 1 High (URL query with a key reaches the run&#x27;s error</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-28:event/2026-10-28t02-43-19-04-00-review-c13-review-of-pywidget-http-t-0394-1</id>
-<updated>2026-10-28T02:43:19-04:00</updated>
-<summary type="text">C13 review of pywidget.http (T-0394): 1 High (URL query with a key reaches the run&#x27;s error chain), 3 Medium; T-0520..T-0523 for Pernille</summary>
-</entry>
-<entry>
-<title>Milestone: ADR-004 G1 passes on the Simulator under ruling 7: after the adapter day (Runestone patch </title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-28:event/2026-10-28t01-50-08-04-00-milestone-adr-004-g1-passes-on-the-simulator-under</id>
-<updated>2026-10-28T01:50:08-04:00</updated>
-<summary type="text">ADR-004 G1 passes on the Simulator under ruling 7: after the adapter day (Runestone patch 0001 stops a keyboard resync on every typed character), five runs give median keystroke p95 13.6 ms and median cold open 54.8 ms, against bars of 16 and 300.</summary>
-</entry>
-<entry>
-<title>Decision: T-0511 (b) ruled: no tap writes a widget today; T-0512 (Idris, P0, due 11-02) and freeze r</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-28:event/2026-10-28t01-22-16-04-00-decision-t-0511-b-ruled-no-tap-writes-a-widget</id>
-<updated>2026-10-28T01:22:16-04:00</updated>
-<summary type="text">T-0511 (b) ruled: no tap writes a widget today; T-0512 (Idris, P0, due 11-02) and freeze row F19; not a Day 10 blocker, a 1.0 blocker</summary>
 </entry>
 </feed>

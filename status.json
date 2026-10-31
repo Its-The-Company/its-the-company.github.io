@@ -1,29 +1,29 @@
 {
  "schema": 1,
- "at": "2026-10-31T14:23:37.237630+00:00",
+ "at": "2026-10-31T15:00:44.301111+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-31T09:48:51-04:00"
+  "started": "2026-10-31T10:33:35-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "pernille",
-   "task": "[review] T-0868 review T-0867 and finish its sweep",
+   "name": "ines",
+   "task": "[plan] T-0831 chair ruling on guard refusal",
    "model": "opus",
-   "started": "2026-10-31T13:50:03.916Z",
+   "started": "2026-10-31T14:48:41.702Z",
    "seconds": null,
-   "finished": "2026-10-31T14:22:54.836000+00:00"
+   "finished": "2026-10-31T14:59:16.418000+00:00"
   },
   {
-   "name": "maren",
-   "task": "[design] T-0869 read T-0860 extension shots",
-   "model": "sonnet",
-   "started": "2026-10-31T13:49:14.773Z",
+   "name": "odalys",
+   "task": "[tools] T-0831 personal lane switch and T-0832 setup text",
+   "model": "opus",
+   "started": "2026-10-31T14:37:14.316Z",
    "seconds": null,
-   "finished": "2026-10-31T13:49:31.535000+00:00"
+   "finished": "2026-10-31T14:48:06.538000+00:00"
   }
  ],
  "queue": {
@@ -34,28 +34,28 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
-   "resets_at": "2026-10-31T17:50:00.066799+00:00",
+   "pct": 4.0,
+   "resets_at": "2026-10-31T17:50:00.277528+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 97.0,
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 93.0,
-   "resets_at": "2026-11-01T07:00:00.066850+00:00",
+   "resets_at": "2026-11-01T07:00:00.277550+00:00",
    "used_words": "of your weekly allowance used",
    "left": 7.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T07:00:00.067071+00:00",
+   "resets_at": "2026-11-01T07:00:00.277688+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-31T09:48:50.740807-04:00"
+  "read_at": "2026-10-31T10:33:33.936397-04:00"
  },
  "ui": {
-  "week_pct": 0.168,
+  "week_pct": 0.167,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -69,9 +69,9 @@
  },
  "next_tick": null,
  "lock_in": {
-  "on": false,
+  "on": true,
   "pool": 1,
-  "at": "2026-10-31T10:25:00-04:00"
+  "at": "2026-10-31T11:02:00-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -200,32 +200,24 @@
   ],
   "done": [
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-0868 review T-0867 and finish its sweep",
-    "at": "2026-10-31T14:22:54.836000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "T-0869 read T-0860 extension shots",
-    "at": "2026-10-31T13:49:31.535000+00:00",
+    "w": "Ines",
+    "k": "plan",
+    "t": "T-0831 chair ruling on guard refusal",
+    "at": "2026-10-31T14:59:16.418000+00:00",
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0867 extension crash, suffix review",
-    "at": "2026-10-31T13:45:07.332000+00:00",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0831 personal lane switch and T-0832 setup text",
+    "at": "2026-10-31T14:48:06.538000+00:00",
     "o": "c"
    }
   ],
   "count": {
    "next": 138,
-   "wait": 26,
-   "blocked": 33,
+   "wait": 28,
+   "blocked": 31,
    "you": 8
   }
  },
@@ -234,7 +226,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "task_done",
   "task_title",
   "task_open",
   "lane_task",

@@ -15,7 +15,7 @@ T-0825 and T-0826, Odalys, 2026-10-30. Investor instructions: #41 c6533646392, c
 
 ## Where this stands
 
-Built tonight: the lane's checks (`tools/personal_lane.py`, tests in `tools/test_personal_lane.py`, 43 fakes-only cases). Nothing runs them: `tools/supervisor.sh` and `tools/governor.py` are unchanged, and a test fails the day either names the lane. That is why it is safe beside the alpha.
+Built tonight: the lane's checks (`rules/personal_lane.py`, tests in `tools/test_personal_lane.py`, 43 fakes-only cases). Nothing runs them: `tools/supervisor.sh` and `tools/governor.py` are unchanged, and a test fails the day either names the lane. That is why it is safe beside the alpha.
 
 Not built: the supervisor and governor wiring, the second tick, the worktree, the guard proposal. Those are on the board, after Pernille's review. The lane can't run today, and no Investor step is needed yet.
 
@@ -55,9 +55,10 @@ Commandment 6 can't be excepted. The amendment records the account owner's readi
 | Claude Design | `DesignSync` removed. No docs page read for it; removed because it reaches the account. | Closed for the tool. |
 | Artifacts, push and file sending to the owner's devices | `Artifact`, `PushNotification`, `SendUserFile`, `ShareOnboardingGuide` removed. Remote Control off by setting. | Closed. |
 | Claude.ai chat history, Projects, claude.ai memory | The docs pages read name no terminal tool or setting that loads them; the memory page doesn't mention claude.ai or the account. That is an absence in what I read, not a statement that they can't be reached. The init check covers what a session loads, not what Anthropic might add. | Believed closed; not proven. Pernille should try to break this. |
-| Cloud sessions (`--cloud`, `--teleport`) | No setting found for a consumer account: the docs give an organization policy only. They need a command run in a session, so the guard proposal has to refuse them for this lane. | **Open.** Must close before sign-in. |
+| Cloud sessions (`--cloud`, `--teleport`) | No setting found for a consumer account: the docs give an organization policy only. They need a command run in a session, so the security guard allows only a short known-good list of Claude Code commands. | Closed for commands the guard can read. |
 | A nested `claude` command run from a session | It inherits the profile, and the profile's own settings hold the ban, which is why the ban is in the profile and not only on the flags. | Closed for connectors and sync. |
 | The account's email address | **Can't be closed.** This session's context carries a `userEmail` line, and I expect a session on this profile to carry that account's address. That is a guess about the source; no setting found removes it (`IS_DEMO` only hides it from the header and `/status`). | **Open.** The Investor must accept this in writing, or the lane stays off. Measure it on the first real session. |
+| The login token on the Mac | It lands in the macOS Keychain of the account that signs in, which is the company's macOS account, `thecompany`, the account every company process runs as. Mode 700 on the profile folder does nothing between processes of one user. The company's guards keep sessions from it; macOS doesn't. A second macOS user, made by an Investor, is the only option that puts the operating system between them. | **Open.** The Investor chooses before any sign-in: accept this in writing, or a second macOS user. |
 | Local files in the profile | The guard proposal must cover the profile directory before sign-in. Preflight refuses until the guard names it. | Waiting on the proposal. |
 | Usage credits on the account | At a limit they would bill the owner's card. Preflight refuses unless the reading says they are off; unknown counts as on. | Closed. |
 
@@ -111,14 +112,14 @@ Needs an Investor's "approve" (Commandment 59: anything in `investors/`). Checke
 
 Evidence: the amendment of 2026-10-30 17:24. Predicted effect: none, because the value is false. Revert rule: remove the line. The Investors turn the lane on by changing `false` to `true`, and off by changing it back.
 
-A second proposal is still to write: the security guard and permission rules must cover the profile directory and refuse cloud-session commands on this lane. Preflight refuses until the guard names the profile.
+The security guard and permission rules cover the profile directory and refuse cloud-session commands. Preflight asks the real guard on the profile's own path and refuses unless every case answers as it must.
 
 ## What stays open
 
 1. Pernille's independent review, before any Investor is asked to sign in.
 2. Wiring: supervisor, governor `record`, per-account meter read, second tick, worktree, claims, push path.
 3. The guard proposal, and closing cloud-session commands.
-4. The Investor's written acceptance of the email address in context.
+4. The Investor's written acceptance of the email address in context, and the choice on where the login token sits: accept it in the company's macOS account, or a second macOS user made by an Investor. A second user changes the sign-in steps and the wiring, and neither has been planned yet.
 5. First real session: measure what the init event and context actually show, and whether auto mode and hooks behave on a fresh profile (the smoke test, on that profile).
 6. Whether Commandment 2's "personal data" also covers the account's own name; I found no place it reaches a session, but I can't check this without a real session.
 
@@ -128,6 +129,8 @@ A second proposal is still to write: the security guard and permission rules mus
 
 **What you're agreeing to.** Company sessions run on your personal Claude account alongside the company's. They use your plan's limits, so what they spend isn't available to you until your limits reset, even after you switch off. Your connected services, your synced skills and the cloud parts of your account are turned off for these sessions. Your email address can't be hidden from them: please reply that you accept this, or tell us to stop here. Anthropic's terms are your reading, recorded in `amendments.md`. If Anthropic objects or restricts the account, the company stops using it at once.
 
+**Where your login sits.** Your password stays with Anthropic. What stays on the Mac mini is a login token: signing in saves it in the macOS Keychain of the account you sign in from. In the steps below that is the company's macOS account, `thecompany`, the same account every company program runs under. So macOS doesn't keep the token apart from company sessions; the company's own guards do. We haven't tested whether macOS would ask before giving that entry to a program in the same account, because the test would mean touching your login. If you want macOS itself to keep them apart, an Investor can create a second macOS user for the lane. Only an Investor can do that, and it changes these steps. We'll ask you to choose one before any sign-in, and nothing below should be done until you have.
+
 **Before you start, on claude.ai, signed in as you:**
 
 1. Open Settings > Usage and check that usage credits are off. The lane won't start otherwise.
@@ -136,9 +139,9 @@ A second proposal is still to write: the security guard and permission rules mus
 **Sign in, once, on the Mac mini:**
 
 1. Open Terminal in the company's macOS account, at the company's folder.
-2. Run `python3 tools/personal_lane.py init --dir ~/.claude-personal`. This writes the ban's settings before you sign in. It prints nothing.
+2. Run `python3 rules/personal_lane.py init --dir ~/.claude-personal`. This writes the ban's settings before you sign in. It prints nothing.
 3. Run `CLAUDE_CONFIG_DIR=~/.claude-personal claude auth login`. A browser window opens on Anthropic's own sign-in page.
-4. Sign in with your personal account and approve. Your password goes only to Anthropic. The company never sees it, and it never leaves that page.
+4. Sign in with your personal account and approve. Your password goes only to Anthropic. The company never sees it, and it never leaves that page. The login token lands in the Keychain of this macOS account, as "Where your login sits" says.
 5. Run `CLAUDE_CONFIG_DIR=~/.claude-personal claude auth status` to confirm it worked. It shows your account in your own Terminal; please don't paste the output anywhere.
 6. Close Terminal.
 
@@ -150,7 +153,12 @@ A second proposal is still to write: the security guard and permission rules mus
 
 **If something goes wrong.** If a session on your account reports a sign-in, policy or account problem, the lane stops itself and an emergency issue opens here. It stays stopped until you tell us to go on.
 
-**To remove it for good.** Turn the switch off, then on the Mac mini run `CLAUDE_CONFIG_DIR=~/.claude-personal claude auth logout`, and tell us. You can also sign out of all devices from your Claude account settings.
+**To remove it for good.** Turn the switch off, then in Terminal in the company's macOS account on the Mac mini:
+
+1. Run `CLAUDE_CONFIG_DIR=~/.claude-personal claude auth logout`. Do this first: the Keychain entry is tied to the folder.
+2. Run `CLAUDE_CONFIG_DIR=~/.claude-personal claude auth status` and check that it no longer shows your account. No login has been made on this profile yet, so we haven't seen this step on a real one. If it still shows your account, stop here and tell us.
+3. Run `rm -rf ~/.claude-personal`. This deletes the profile folder: its settings and its session history. With the folder gone, the lane can't start, whatever the switch says.
+4. Tell us. You can also sign out of all devices from your Claude account settings.
 {% endraw %}
 
 </div>

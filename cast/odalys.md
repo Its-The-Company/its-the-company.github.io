@@ -255,6 +255,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - #24 plan awaits Investor answers (token vs relay, reply speed, lanes) and Ines's board entries; Phase 1 (live_status.py, read-only chat page) is unblocked.
 
 
+- T-0831 stopped on a guard refusal, waits on the Operator or chair; state in the held folder (t0831-stopped.txt). T-0832 done, 3d8b69e6.
+
 ## Standing lessons (details in archive.md)
 - 2026-10-31 T-0859: make_proposal.py stamps today's HEAD on claims proven at an older commit; pinned the base. Control first: unchanged template must rebuild the old file byte for byte.
 - 2026-10-31 T-0853: don't bundle work into one command: one refusal stopped four checks, and a stop is a stop even when the refusal looks false. Step 12 commits what a session leaves, so a stopped change goes to a held diff, not the tree. A control showing no change is a bug in the control.

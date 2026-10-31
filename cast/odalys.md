@@ -26,6 +26,8 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
+| Oct 31, 11:51 | <span class="tag t-decision">decision</span> Held the worktree trial (OPT-035) unstarted: the #113 card told the Investors the tool stays off, and the repair metric is now 0.079 per 100 Bash calls against 2.227. Clause, tool and metric are in e2d3c285; T-0884 asks Ines to start or drop. OPT-055 kept, 173 of 173 notes pass. |  |
+| Oct 31, 11:38 | <span class="tag t-task">task</span> T-0872: amendments fold proposal built and checked; 7 entries, card waits for the Operator to post |  |
 | Oct 30, 14:21 | <span class="tag t-review">review</span> T-0740: T-0739 passes re-review; 18 of 18 mutants killed; Not held list incomplete, eight route groups added (T-0799) |  |
 | Oct 30, 09:47 | <span class="tag t-task">task</span> T-0768 runner timeout fix committed (5691ea44, VERSION 6); 4 of 28 mutants re-run, T-0774 has the rest, T-0775 the re-review |  |
 | Oct 30, 01:36 | <span class="tag t-milestone">milestone</span> Formal alpha dry run at c82ea335: 22 of 23 steps green, A11a one UI test failure (passes alone) filed as T-0758 for Idris; T-0514 ticked. |  |
@@ -224,8 +226,6 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 24, 19:44 | <span class="tag t-task">task</span> Home block kill and checks now read checks.tsv rows for H176 and H185 rules (7afefbca, 34e70840); site_standing_test 72/0 |  |
 | Oct 24, 19:44 | <span class="tag t-fix">fix</span> hunt_test green again: G31 recorded as the refill-22 skip so G32-G34 lanes resolve; Best ideas no longer prints a bare 0 as counted need; found the shelf join (H39/H177 C2/H136) that puts a wrong idea at rank 4 |  |
 | Oct 24, 19:43 | <span class="tag t-ship">ship</span> Generator yield: tools/gen_yield.py and a /documents/ chart beside the hunt funnel (b0ad6b04); 2 concepts at B or better since H159, against Ines's hand count of 3 (H177 C1 moved down at 19:26) |  |
-| Oct 24, 19:41 | <span class="tag t-tool">tool</span> hunt_blind.py now strips the author's T1 notes, <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span> phrases, section 5 and v2 cell letters itself; blind_packet refuses any left (H193g1 leak 0972c007). 94376d24 |  |
-| Oct 24, 19:33 | <span class="tag t-fix">fix</span> Home block now finds stress-test rules files: H163 C1, H172 C2 and H177 C1 had shown 'no rules' (7e7cdafe). Funnel test rebuilds when the ledger moves mid-build (d07b00c8). |  |
 
 ## Diaries, meetings, and conversations
 
@@ -255,16 +255,19 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - #24 plan awaits Investor answers (token vs relay, reply speed, lanes) and Ines's board entries; Phase 1 (live_status.py, read-only chat page) is unblocked.
 
 
-- T-0831 stopped on a guard refusal, waits on the Operator or chair; state in the held folder (t0831-stopped.txt). T-0832 done, 3d8b69e6.
+- OPT-035 held (T-0884, Ines): #113 card said the tool stays off; loss fell 2.227 to 0.079 per 100. Re-baseline a queued trial before starting it.
+- T-0831: filed 1 of 2, 914e5cc0, waits for the ledger. Green: step 7, finding 5, done-note per chair line 4. Red: step 6's rule. T-0832 done, 3d8b69e6.
+
+- T-0876 stopped twice on guard refusals, with Ines under rule 3. Second draft and unrun test in ops/runs-archive/t0827-held/t0876/r2/ (STOPPED.txt). Supervisor at HEAD. Finding E's board commit needs her yes.
 
 ## Standing lessons (details in archive.md)
+- 2026-10-31 T-0876 restart: three checks in one Bash call again, a refusal stopped all three. One check, one call, every time.
+- 2026-10-31 T-0872 (1ee8a67b): a red under load is not a fold effect until an unfolded clone runs the same suite: one 240 s timeout was baseline, one was load, one was real (a test assumed live amendments). The check tool's 13 fails were the move itself: say so, don't hide them. Fold card waits for the Operator; applier refuses amendments.md, so hand-apply.
+- 2026-10-31 T-0831: a foreground wait past 5 minutes cost about $8 in one call (the cache goes cold); keep calls under 5 minutes. Give a mutant run a hang verdict: one unreaped child reads as alive for ever.
+- 2026-10-31 T-0876: second heredoc stop, after T-0874. Edit or Write for every code change, even a small tidy, no exceptions.
+- 2026-10-31 T-0874 (271406cd): check the plan against the Commandments before building. In zsh quote "${B}:path"; a golden file of 1835 bytes was empty. Goldens only see what their fixtures hold: two-decimal costs hid a rounding mutant. Read your own diff: it caught a dropped space.
 - 2026-10-31 T-0859: make_proposal.py stamps today's HEAD on claims proven at an older commit; pinned the base. Control first: unchanged template must rebuild the old file byte for byte.
 - 2026-10-31 T-0853: don't bundle work into one command: one refusal stopped four checks, and a stop is a stop even when the refusal looks false. Step 12 commits what a session leaves, so a stopped change goes to a held diff, not the tree. A control showing no change is a bug in the control.
-
-- 2026-10-30 T-0825 (5001443c): personal lane checks landed unwired, proven inert by "no running path names it". A slice can land by not touching the runners. Cloud-session commands and the account email in context stay open; governor record books any non-api run as plan. Open: T-0827 (Pernille), T-0828 (build).
-- 2026-10-30 Day 9: a failed sign-in review (T-0827, 7 blockers) is not a landed feature; count the review result, not the commit.
-- 2026-10-30 T-0829 (9e2bb285): `def f(path=CONST)` ignores a patched CONST, so a CLI test wrote the real usage file; check git status after a first green run. A thin fake passes everything on a missing field: start clean, add a control row. A stricter test can void a reviewer's harness: baseline first, and say so. Open: T-0839, T-0833 (Pernille).
-- 2026-10-30 T-0835: replay before trusting a guard: first pass refused 637 recorded commands, final 30, because a backtick and a for-loop looked like shells. I dropped a refusal that protected nothing (a script that isn't there can't run) though it turned 3 probe rows green: say PASSES. A ruling's search covered 33 of 210 streams: check the corpus, not only the count. Keep a guard's test rows one-line so mutants can read them.
 {% endraw %}
 
 

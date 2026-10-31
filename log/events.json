@@ -1,5 +1,180 @@
 [
 {
+"time": "2026-10-31T12:49:45-04:00",
+"worker": "operator",
+"type": "session",
+"summary": "Day 10 session 11:03-12:50: #114 approved; T-0355 landed, T-0684, T-0862, T-0865, T-0874, T-0875 done; T-0831 filed 1 of 2; T-0833 guard half pass; T-0876 blocked on #116 after a permission denial; #115 fold opened, needs a rebuild; Investors moved the goal to release by Day 60.",
+"link": ""
+},
+{
+"time": "2026-10-31T12:46:33-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-0831: independent read ruled by the chair. The switch diff files unchanged through the applier, no Investor step. Details held, Commandment 42.",
+"link": ""
+},
+{
+"time": "2026-10-31T12:45:19-04:00",
+"worker": "operator",
+"type": "decision",
+"summary": "Investor ruling 12:43 (#41): no 30-day deadline or $200 target; release by Day 60, movable; profit shown on its own site page. In amendments.md. ETA given on #41: usage sharing not live by 2 PM, estimate Monday 11-02; #115's diff needs a rebuild.",
+"link": ""
+},
+{
+"time": "2026-10-31T12:44:14-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-10-31T12:43:30-04:00",
+"worker": "operator",
+"type": "milestone",
+"summary": "T-0684 done (freeze row F19): a script saved in the editor reaches the widget, tested on main with the landing in place; 499 unit tests green. Maren chose the Choose a widget card, built.",
+"link": ""
+},
+{
+"time": "2026-10-31T12:42:57-04:00",
+"worker": "operator",
+"type": "guard-refusal",
+"summary": "T-0684 note: a guard refused an Agent call's description in Idris's run; he retagged it [design]. Nothing lost. Logged for the chair's tally; the retag was a reword under T-0848 rule 1, so workers are reminded a refusal stops the item.",
+"link": ""
+},
+{
+"time": "2026-10-31T12:15:40-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-0831 second read ruled: the yes stands, the closes are working review only after a routing error. One test-file change, full rerun, a new read by Idris. Nothing filed, 0 of 2. No Investor step. Held: t0831-chair-line-3.txt.",
+"link": ""
+},
+{
+"time": "2026-10-31T12:02:01-04:00",
+"worker": "operator",
+"type": "milestone",
+"summary": "T-0355 landed on main at bb97ff95 by the local copy the Investors approved on #113: 11 commits, 490 unit tests and both Projects UI tests green on the landing copy. Seven unrelated commits on main share no file with it and have not been run together with it yet.",
+"link": ""
+},
+{
+"time": "2026-10-31T11:57:16-04:00",
+"worker": "operator",
+"type": "blocker",
+"summary": "T-0876 restart not sent: Claude Code's permission layer denied the worker call with no reason given. Not retried, reworded, split or done another way. T-0876 stops; T-0878 and T-0880 wait. An Investor decides.",
+"link": ""
+},
+{
+"time": "2026-10-31T11:57:09-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-0884: OPT-035 worktree trial dropped, never started. Repair metric 0.079 per 100 Bash calls (n=20) against 2.227 at design (n=128); holds at 10+ agents (0.054). Clause and queue entry removed, tool stays off, T-0885 reads the reopen rule 2026-11-07.",
+"link": ""
+},
+{
+"time": "2026-10-31T11:56:46-04:00",
+"worker": "operator",
+"type": "decision",
+"summary": "Ines's stop at 11:51 logged: one Bash read was denied by the permission layer, not the guard; not retried, and no line of her ruling rests on it. Her three unrelated reads stand, not overruled. T-0876 restarts once on her ruling; any refusal ends it and it waits for the Investor trip.",
+"link": ""
+},
+{
+"time": "2026-10-31T11:55:54-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-0876 ruled: restarts once, supervisor stays at HEAD until the proof is green. Land takes a lane path list on main, pywidget first. Finding E accepted, one board-only commit per failure. Held line t0876-chair-line.txt. One read of mine denied by permissions, not retried.",
+"link": ""
+},
+{
+"time": "2026-10-31T11:51:31-04:00",
+"worker": "Odalys",
+"type": "decision",
+"summary": "Held the worktree trial (OPT-035) unstarted: the #113 card told the Investors the tool stays off, and the repair metric is now 0.079 per 100 Bash calls against 2.227. Clause, tool and metric are in e2d3c285; T-0884 asks Ines to start or drop. OPT-055 kept, 173 of 173 notes pass.",
+"link": ""
+},
+{
+"time": "2026-10-31T11:46:34-04:00",
+"worker": "operator",
+"type": "guard-refusal",
+"summary": "T-0876 second refusal: the security guard refused a call with bash -n, chmod and a grep on the push-path script (reads or changes Keychain secrets). Nothing ran, no retry. Supervisor back at HEAD. Goes to Ines under T-0848 rule 3.",
+"link": ""
+},
+{
+"time": "2026-10-31T11:45:36-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-0831 step 5 ruled: five changes to the switch diff before filing, second read on changed lines, full rerun. Nothing filed, 0 of 2 filings used, no Investor step expected. Held: t0831-chair-line-2.txt.",
+"link": ""
+},
+{
+"time": "2026-10-31T11:38:26-04:00",
+"worker": "Odalys",
+"type": "task",
+"summary": "T-0872: amendments fold proposal built and checked; 7 entries, card waits for the Operator to post",
+"link": ""
+},
+{
+"time": "2026-10-31T11:35:25-04:00",
+"worker": "operator",
+"type": "decision",
+"summary": "T-0876 restart under T-0848 rule 2. Stopped effect: reading or changing Keychain secrets. Dropped: the job touches no Keychain and the held draft has no such text. Job still does its packet, by Edit and Write only. Second refusal goes to Ines. The packet's ban on naming Investor-owned paths was too ",
+"link": ""
+},
+{
+"time": "2026-10-31T11:34:53-04:00",
+"worker": "operator",
+"type": "guard-refusal",
+"summary": "T-0876 stopped: the security guard refused a Bash heredoc edit of tools/personal_land.sh (reads or changes Keychain secrets). Nothing ran; the worker did not retry. Supervisor unchanged; draft held. The packet had barred heredocs.",
+"link": ""
+},
+{
+"time": "2026-10-31T11:26:39-04:00",
+"worker": "operator",
+"type": "decision",
+"summary": "T-0874 restart under T-0848 rule 2. Stopped effect: a Bash call starting a Claude session. Dropped: this job starts none (the meter run is T-0878) and puts no such command in any Bash call. Job still does its packet. Second refusal goes to Ines. Usage line in percentages (C39).",
+"link": ""
+},
+{
+"time": "2026-10-31T11:26:18-04:00",
+"worker": "operator",
+"type": "guard-refusal",
+"summary": "T-0874 stopped: the security guard refused a Bash heredoc holding the governor edit (starts another Claude session outside the governor). Nothing ran; tools unchanged. Not reworded. Counted against the guard's false-refusal tally only if the chair says so.",
+"link": ""
+},
+{
+"time": "2026-10-31T11:19:22-04:00",
+"worker": "operator",
+"type": "correction",
+"summary": "Corrected the 11:04 #114 reply on the issue: the breakage run has not started, takes about 3 hours after the switch lands, and rows it can't reach stay could not test. Ines's reading of the approval (attacks on a copy count) stated there for the Investors to correct.",
+"link": ""
+},
+{
+"time": "2026-10-31T11:18:52-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-0833 chair ruling: five held questions ruled once, nothing ran. The work stays inside #114 as approved; anything needing more stays open as could not test. Next step waits on T-0831. Full line held, Commandment 42.",
+"link": ""
+},
+{
+"time": "2026-10-31T11:13:06-04:00",
+"worker": "operator",
+"type": "check",
+"summary": "T-0833 guard half PASS: hash and cmp match, 473 rows FAIL 0, guard_probe refused with the Keychain line, decoy Read and Edit refused. Those refusals were declared as expected and stay out of the false-refusal tally. Two Write rows could not be tested.",
+"link": ""
+},
+{
+"time": "2026-10-31T11:06:17-04:00",
+"worker": "operator",
+"type": "decision",
+"summary": "#114 approved by an Investor 11:02: Pernille and Odalys may use the held test method for T-0831 and T-0833 only, fake folders, one logged line per run, until the sign-in verdict. Guard unchanged. Issue closed. T-0833's declared refusal and decoy tries are expected and stay out of the tally.",
+"link": ""
+},
+{
+"time": "2026-10-31T11:03:11-04:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #114",
+"link": ""
+},
+{
 "time": "2026-10-31T11:00:27-04:00",
 "worker": "operator",
 "type": "session",

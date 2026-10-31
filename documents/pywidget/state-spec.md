@@ -287,6 +287,39 @@ Deltas:
 **What needs the Investors.** Which premades are free is part of PROPOSAL-002 s6 and of Pro's contents in PROPOSAL-001, both human checkpoints. The company builds to its default until they change it (PROPOSAL-002 status line), so this does not block work. ops/questions.md item 10 asks them to confirm the new split for the next report; no issue opened. If they put either premade back in Pro, the matrix row 42 risk (Medium) returns with it, and the report says so.
 
 Ines, CEO
+
+## Ruling, 2026-10-31 12:25 ET (Maren, with Idris, T-0684 part b, F19): what a just-placed, unset Python widget shows
+
+**Option B, with one change: the card is drawn by the extension, never by Python, and it never reads a file.** An unset widget (id `new_widget`, no choice made in Edit Widget) draws one fixed "Choose a widget" card. Why: it is the only option that is right at placement, before the app has run once (iOS tells the app nothing, ADR-007 s5.1), and it hands no script a quiet takeover of every unset widget (A's third cost). Smallest version that still reads: one verb, one instruction. The fallback line "No view for this size" stays for a real missing file on a chosen widget; it is not this state. Not decided here: a widget that is set to a choice whose folder has no render yet; that is a separate state and needs its own line.
+
+**Card grammar.** Follows the Pro card (s3.2): centred, whole-widget, no corner slot, no name line (the id `new_widget` is never shown), `text.primary` headline, `text.secondary` caption and glyph. It is not a fault, so the glyph is `text.secondary`, never `status.warning` or `status.danger`. Glyph: `square.dashed` [recall, Idris confirms the name]; accented: the glyph alone is accentable; vibrant: white 1.0. Layout per family: ProCardView's `content` switch with the name line removed.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: Ruling, 2026-10-31 12:25 ET (Maren, with Idris, T-0684 part b, F19): what a…, scrolls sideways" style="--tw:676px" markdown="1">
+
+| ID | Family | Copy (DRAFT, C51) |
+|---|---|---|
+| `unset.small` | systemSmall | glyph, "Choose a widget", "Touch and hold, then Edit Widget" |
+| `unset.medium` | systemMedium | glyph, "Choose a widget", "Touch and hold this widget, then tap Edit Widget." |
+| `unset.large` | systemLarge, systemExtraLarge | same words as medium; large and extra large stay mostly empty, as on the Pro card |
+| `unset.circular` | accessoryCircular | glyph above "Choose" |
+| `unset.rect` | accessoryRectangular | glyph + "Choose a widget", one line at the top |
+| `unset.inline` | accessoryInline | glyph + "Choose a widget" (15 chars) |
+| `unset.voiceover` | all | "pywidget. Not set to a widget yet. Touch and hold, then choose Edit Widget. Double-tap to open pywidget." |
+
+</div>
+
+
+- **"Choose a widget" is the picker's own title** (`picker.intent.title` is "Choose widget", s9): one verb in both places. If Ines or the Investors change the s9 string, this headline follows it.
+- **Lock Screen carries no instruction line**: editing a Lock Screen widget starts in Customize, not a touch-and-hold on the widget, and a wrong instruction is worse than a short card.
+- **No "Tap to open" on this card**, the one departure from the card grammar: a second instruction would compete with the one that matters. The card is still the tap target.
+- **Tap:** just the app. `widgetURL` with no route; nothing to open to, since no widget id is set. The foreground is the useful part: it lets the app write for any widget the person has chosen since. Small: `widgetURL`; medium and larger: the whole card.
+- **Words never used:** error, fail, "No view", a price or a sales word, "App Store", the id `new_widget`. `check_states.py` should cover the new strings with the Pro card's rules plus the id.
+- **Cost, stated plainly:** one drawn card, six layouts (small, medium, large and extra large share words). No file, no Python, no timeline entry. Redrawing is a sheet for the check scripts (`states-unset.png`), not done in this ruling.
+
+**As built (Idris, 2026-10-31, T-0684).** `square.dashed` is a real symbol (unit test). A shipped build decides from the configuration alone and reads no file, as ruled. One difference, Debug only: the `-widget-run` and `-widget-install` test hooks write `widgets/new_widget`, and the WidgetKit checks place unset widgets to draw those trees, so in Debug an unset widget with a tree there draws it; no shipped path writes that folder. WidgetKit needs a timeline, so the card is one entry that never reloads, with no tree. Words are in `state-tokens.json` (`unset.*`, voiceover `unset`) and `check_states.py` carries the rules asked for above. Lock Screen families are checked by a rendered unit test, not on a device Lock Screen.
+
+**View on New Project (not part of this ruling, no change now).** It should stop writing `print("Hello from main.py")` and write a short widget template that declares `Widget()` with the project's own id, so the first save, place and choose shows something on the Home Screen. `templates/new_widget.py` is the likely source, with its refused `new_widget` id replaced; it stays unbundled for now. The script content is Pernille's API and the copy is for the Investors (C51), so this needs its own line. Until then the Hello line stays. I did not read the template file for this ruling.
 {% endraw %}
 
 </div>

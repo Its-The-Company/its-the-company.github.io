@@ -1,58 +1,74 @@
 {
  "schema": 1,
- "at": "2026-10-31T15:00:44.301111+00:00",
+ "at": "2026-10-31T16:50:01.735835+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-10-31T10:33:35-04:00"
+  "started": "2026-10-31T11:03:13-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "ines",
-   "task": "[plan] T-0831 chair ruling on guard refusal",
+   "name": "odalys",
+   "task": "[site] T-0889 drop profit wording, cost page",
    "model": "opus",
-   "started": "2026-10-31T14:48:41.702Z",
+   "started": "2026-10-31T16:49:17.223Z",
    "seconds": null,
-   "finished": "2026-10-31T14:59:16.418000+00:00"
+   "finished": "2026-10-31T16:49:17.307Z"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-0831 personal lane switch and T-0832 setup text",
+   "task": "[tools] T-0831 file the proposal",
    "model": "opus",
-   "started": "2026-10-31T14:37:14.316Z",
+   "started": "2026-10-31T16:46:42.715Z",
    "seconds": null,
-   "finished": "2026-10-31T14:48:06.538000+00:00"
+   "finished": "2026-10-31T16:49:01.712000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-0831 chair ruling, Idris's read",
+   "model": "opus",
+   "started": "2026-10-31T16:43:39.783Z",
+   "seconds": null,
+   "finished": "2026-10-31T16:46:37.018000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[review] T-0831 independent read, Idris",
+   "model": "opus",
+   "started": "2026-10-31T16:37:11.804Z",
+   "seconds": null,
+   "finished": "2026-10-31T16:43:28.439000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 138,
-  "blocked_count": 59
+  "runnable_count": 142,
+  "blocked_count": 62
  },
  "meter": {
   "five_hour": {
-   "pct": 4.0,
-   "resets_at": "2026-10-31T17:50:00.277528+00:00",
+   "pct": 7.0,
+   "resets_at": "2026-10-31T17:49:59.829714+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 96.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 93.0,
-   "resets_at": "2026-11-01T07:00:00.277550+00:00",
+   "resets_at": "2026-11-01T06:59:59.829735+00:00",
    "used_words": "of your weekly allowance used",
    "left": 7.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T07:00:00.277688+00:00",
+   "resets_at": "2026-11-01T06:59:59.829925+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-31T10:33:33.936397-04:00"
+  "read_at": "2026-10-31T11:03:12.455245-04:00"
  },
  "ui": {
   "week_pct": 0.167,
@@ -71,7 +87,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-10-31T11:02:00-04:00"
+  "at": "2026-10-31T12:51:00-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -200,24 +216,32 @@
   ],
   "done": [
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "T-0831 chair ruling on guard refusal",
-    "at": "2026-10-31T14:59:16.418000+00:00",
-    "o": "c"
+    "w": "Odalys",
+    "k": "site",
+    "t": "T-0889 drop profit wording, cost page",
+    "at": "2026-10-31T16:49:17.307Z",
+    "o": "c",
+    "x": "failed"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T-0831 personal lane switch and T-0832 setup text",
-    "at": "2026-10-31T14:48:06.538000+00:00",
+    "t": "T-0831 file the proposal",
+    "at": "2026-10-31T16:49:01.712000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "T-0831 chair ruling, Idris's read",
+    "at": "2026-10-31T16:46:37.018000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 138,
-   "wait": 28,
-   "blocked": 31,
+   "next": 142,
+   "wait": 30,
+   "blocked": 32,
    "you": 8
   }
  },
@@ -226,6 +250,8 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
+  "task_done",
   "task_title",
   "task_open",
   "lane_task",

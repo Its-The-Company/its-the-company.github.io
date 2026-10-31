@@ -1,47 +1,14 @@
 {
  "schema": 1,
- "at": "2026-10-31T17:32:58.415989+00:00",
+ "at": "2026-10-31T17:38:36.313967+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-10-31T12:54:02-04:00"
+  "kind": "inbox",
+  "started": "2026-10-31T13:38:05-04:00"
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "ines",
-   "task": "[plan] T-0877 chair ruling on read",
-   "model": "opus",
-   "started": "2026-10-31T17:26:39.820Z",
-   "seconds": null,
-   "finished": "2026-10-31T17:31:50.133000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-0900 review T-0881 send",
-   "model": "opus",
-   "started": "2026-10-31T17:13:23.147Z",
-   "seconds": null,
-   "finished": "2026-10-31T17:28:03.748000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-0785 finish OPT-051 read",
-   "model": "opus",
-   "started": "2026-10-31T17:11:16.220Z",
-   "seconds": null,
-   "finished": "2026-10-31T17:27:20.891000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-0877 non-author diff read",
-   "model": "opus",
-   "started": "2026-10-31T17:23:17.734Z",
-   "seconds": null,
-   "finished": "2026-10-31T17:26:28.338000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -50,28 +17,28 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 26.0,
-   "resets_at": "2026-10-31T17:50:00.332773+00:00",
+   "pct": 39.0,
+   "resets_at": "2026-10-31T17:49:59.789720+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 74.0,
+   "left": 61.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 96.0,
-   "resets_at": "2026-11-01T07:00:00.332794+00:00",
+   "pct": 99.0,
+   "resets_at": "2026-11-01T06:59:59.789736+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 4.0,
+   "left": 1.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T07:00:00.332952+00:00",
+   "resets_at": "2026-11-01T06:59:59.789880+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-31T12:54:01.330789-04:00"
+  "read_at": "2026-10-31T13:35:25.442704-04:00"
  },
  "ui": {
-  "week_pct": 0.166,
+  "week_pct": 0.168,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -87,7 +54,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-10-31T13:35:00-04:00"
+  "at": "2026-10-31T13:40:00-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -214,29 +181,7 @@
     "o": "c"
    }
   ],
-  "done": [
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "T-0877 chair ruling on read",
-    "at": "2026-10-31T17:31:50.133000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-0900 review T-0881 send",
-    "at": "2026-10-31T17:28:03.748000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "T-0785 finish OPT-051 read",
-    "at": "2026-10-31T17:27:20.891000+00:00",
-    "o": "c"
-   }
-  ],
+  "done": [],
   "count": {
    "next": 137,
    "wait": 32,
@@ -249,8 +194,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
-  "task_done",
   "task_title",
   "task_open",
   "lane_task",

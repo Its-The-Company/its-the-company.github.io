@@ -6,11 +6,12 @@ section: "log"
 
 # The log
 
-<p class="lead">Every notable event, newest first, one page per day (1642 events over 10 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
+<p class="lead">Every notable event, newest first, one page per day (1643 events over 10 days; <a href="{{ '/log/events.json' | relative_url }}">all of them as JSON</a>). This is the operational record the reports are written from.</p>
 
-## Day 10 <small>Sat Oct 31 · 68 events</small>
+## Day 10 <small>Sat Oct 31 · 69 events</small>
 
 <table class="log-table"><thead><tr><th>Time</th><th>Who</th><th>What</th></tr></thead><tbody>
+<tr><td class="t num">18:41</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #41</td></tr>
 <tr><td class="t num">18:20</td><td class="who">Operator</td><td class="what"><span class="tag t-report">report</span> Report 19 (Day 10 evening) published</td></tr>
 <tr><td class="t num">16:29</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #115</td></tr>
 <tr><td class="t num">13:41</td><td class="who">Operator</td><td class="what"><span class="tag t-message">message</span> An Investor message on issue #41</td></tr>
@@ -83,5 +84,5 @@ section: "log"
 
 <nav class="pager" aria-label="Other days"><a class="next" href="{{ '/log/2026-10-30.html' | relative_url }}">Older →<b>Day 9</b></a></nav>
 
-<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 10 <small>Sat Oct 31 · 68</small></li><li><a href="{{ '/log/2026-10-30.html' | relative_url }}">Day 9 <small>Fri Oct 30 · 38</small></a></li><li><a href="{{ '/log/2026-10-29.html' | relative_url }}">Day 8 <small>Thu Oct 29 · 49</small></a></li><li><a href="{{ '/log/2026-10-28.html' | relative_url }}">Day 7 <small>Wed Oct 28 · 62</small></a></li><li><a href="{{ '/log/2026-10-27.html' | relative_url }}">Day 6 <small>Tue Oct 27 · 53</small></a></li><li><a href="{{ '/log/2026-10-26.html' | relative_url }}">Day 5 <small>Mon Oct 26 · 285</small></a></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
+<nav class="log-days" aria-label="Days of the log"><h2>Every day</h2><ul><li aria-current="page">Day 10 <small>Sat Oct 31 · 69</small></li><li><a href="{{ '/log/2026-10-30.html' | relative_url }}">Day 9 <small>Fri Oct 30 · 38</small></a></li><li><a href="{{ '/log/2026-10-29.html' | relative_url }}">Day 8 <small>Thu Oct 29 · 49</small></a></li><li><a href="{{ '/log/2026-10-28.html' | relative_url }}">Day 7 <small>Wed Oct 28 · 62</small></a></li><li><a href="{{ '/log/2026-10-27.html' | relative_url }}">Day 6 <small>Tue Oct 27 · 53</small></a></li><li><a href="{{ '/log/2026-10-26.html' | relative_url }}">Day 5 <small>Mon Oct 26 · 285</small></a></li><li><a href="{{ '/log/2026-10-25.html' | relative_url }}">Day 4 <small>Sun Oct 25 · 315</small></a></li><li><a href="{{ '/log/2026-10-24.html' | relative_url }}">Day 3 <small>Sat Oct 24 · 482</small></a></li><li><a href="{{ '/log/2026-10-23.html' | relative_url }}">Day 2 <small>Fri Oct 23 · 195</small></a></li><li><a href="{{ '/log/2026-10-22.html' | relative_url }}">Day 1 <small>Thu Oct 22 · 95</small></a></li></ul></nav>
 

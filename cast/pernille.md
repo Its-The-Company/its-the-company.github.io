@@ -22,10 +22,11 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Career goal | I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week. |
 {: .facts}
 
-## Activity (52 most recent)
+## Activity (53 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Oct 31, 07:35 | <span class="tag t-finding">finding</span> T-0860: in WidgetKit's extension a live date Text fills its row; fixed_size() on one above a ProgressView crashed the extension (LayoutSubview.place, run of 06:57), so a user script can reach it. Not fixed here. |  |
 | Oct 30, 00:26 | <span class="tag t-milestone">milestone</span> First signed device build of pywidget passed the stdlib size check, installed and launched on the test iPhone (T-0756: embedded code signatures were 1,142,784 B of the 1,363,968 B excess) |  |
 | Oct 29, 19:48 | <span class="tag t-review">review</span> T-0754 review of the runner self-update: 4 Medium findings (network blip rolls back a good release; a hung first check never rolls back; sandbox rules can change unchecked; broken update code can't be replaced); fix line T-0755 for Odalys before the re-install |  |
 | Oct 29, 14:04 | <span class="tag t-commit">commit</span> T-0711/T-0712: widget <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> fixes for T-0710 M1, M2, L1-L3; last step moved to just before the run's code; re-review T-0713 for Odalys |  |
@@ -105,8 +106,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
-- 2026-10-30 T-0827 personal lane review: FAIL, 7 blockers (87edf472). Re-review is T-0833; rerun ops/runs-archive/t0827-held/ (git-ignored; C42 keeps exact inputs off the review, board and this file). Lesson: run seeded mutants on any fail-closed check first; a test looping over a constant proves nothing, and the CLI exit code was untested.
-
 ## Lessons (2026-10-27, T-0416 to T-0448 reviews)
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
@@ -114,6 +113,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-10-30 T-0679: bound-fields.md on main; stub on branch pernille/t0679-bound-fields (43e10db3), merges only when T-0682 starts. Names review T-0797. Lesson: ADR says ProgressBar, code says ProgressView; read the code before the names.
 - 2026-10-30 T-0814 (9e89fc4a): pywidget/docs/reviews/*.md is published under Documents, the board shows on Home: unfixed security detail goes in the handback only (C42). Re-review T-0815 if asked.
 - 2026-10-31 T-0841 second rerun: PASS, 8 of 8 (held t0841-rerun2-results.txt). Lessons: a fallback catches raises, not misreads, so probe both; fix a rerun's table up front or a guard review never lands; test a checker's own failure path; read every output a tool writes; a guard copy must have the change committed, trust follows git. Replays take the live root. T-0740, T-0299 still mine (archive).
+- 2026-10-31 T-0860 (e616b3a6): in WidgetKit's extension a live date Text fills its row; fixed_size on it crashed the extension. Words after it go in Text suffix. Open: Maren's read, Idris on suffix, the crash. Tree experiments need no rebuild: 12 files in a temp dir, id new_widget, pads claim accessoryInline.
 {% endraw %}
 
 

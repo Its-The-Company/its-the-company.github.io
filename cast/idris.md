@@ -26,6 +26,7 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
+| Oct 31, 09:44 | <span class="tag t-finding">finding</span> T-0867: live date text has an infinite ideal width in the extension, so fixed_size crashed it; accepted huge numbers crashed or blanked it too. Fixed and tested on the classes; the full 231-case sweep was not run. Whether a date inside suffix keeps ticking needs a device. |  |
 | Oct 30, 02:46 | <span class="tag t-fix">fix</span> T-0758: alpha A11a red traced to the Simulator keeping the on-screen keyboard minimized after boot; caret test now raises it; fresh-boot full suite green (472 passed, 16 s8.2 skips) |  |
 | Oct 29, 19:28 | <span class="tag t-build">build</span> T-0684 (a): editor saves widget scripts to widgets/<id>/main.py on the projects branch; review fixes H1 and M1 landed, re-review says merge after the alpha commit |  |
 | Oct 28, 23:32 | <span class="tag t-build">build</span> UI test reliability for the alpha: fresh scenes (T-0601), iPad dark-mode A2c (T-0585), per-window appearance for paywall and app pictures (T-0617), launch-helper scan (T-0616); paywall Lows N3-N7 fixed (T-0497, 3bfb3222) |  |
@@ -225,7 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 24, 01:01 | <span class="tag t-research">research</span> H58: RoomPlan returns walls, doors, windows, openings, floors, 16 object kinds but no ceiling; Atmos planner depth B; E hand-marked only; LiDAR (figure withdrawn: source terms, see H159 corrections) of top-10 iPhones (TelemetryDeck, estimate) |  |
 | Oct 24, 00:00 | <span class="tag t-research">research</span> H49 papers with code that no app ships: 0 at B-; best C- paper notebook to editable ink (InkSight, Apache 2.0, but IAM in its training mix); ZIPA out on CC-BY-4.0 weights; Moonshine's MIT badge hides 7 non-commercial models |  |
 | Oct 23, 23:50 | <span class="tag t-build">build</span> Documents tables readable: each table in its own scroll box; at 390 lane-note heights 852,620 -> 261,673 px, cells under 80 px on 0 of 40 notes (87d56ce); empty Write-ups hidden, one card title form (b15dc9c) |  |
-| Oct 23, 22:48 | <span class="tag t-research">research</span> H45 deep formats done: 0 at B+, best D+ (DXF/DWG revision compare, FIT repair bench, subtitle sync to audio, tied). 2026 viewers already exist for every format incl. HDF5/NetCDF; 0 DWG/DXF asks in r/iphone, 0 on Ask Different in 12 months. Apple Support Communities search is behind a human-verificat |  |
 
 ## Diaries, meetings, and conversations
 
@@ -258,7 +258,6 @@ Dated task logs and full lessons: archive.md.
 
 - StoreKit testing lessons (unfinished, Ask to Buy, SKTestSession, refunds): archive.md, moved 2026-10-28.
 - T-0583/T-0589 notes, T-0611/T-0613 caret lessons: archive.md (moved 2026-10-28).
-- T-0691 2026-10-29 (5d4754b8): net.get caps per process (NetFetch.Limits): app 1 MiB body/2 MiB reply, appex 256 KiB/512 KiB; reply counted escaped before build. Lesson: in-process peak runs undercount (freed memory reused); one cold process per sample (run-cold.sh). Open: T-0696 in-appex re-measure with T-0687. T-0698 (0c464a26): stub body made after the reset, 16 KiB chunks, session at the call: ext worst 3.55 -> 4.19 MiB; a stub that pre-builds what prod builds later flatters the number. Review T-0699; L2 is T-0700 (mine).
 
 - 2026-10-29 T-0709/T-0719: Swift lane-key rule (Shared/LaneGuard.swift); add under NSLock + flock (ca6cfe4e), review T-0736. No caller yet; wiring it is open. Lesson: BSD flock blocks a second open() in the same process, so an NSLock beside it is an untestable survivor.
 - T-0355 2026-10-29 (8ed7cd87, branch): slice 2 .py/zip import-export. XCUITest drives the real share sheet (Save to Files > On My iPhone > Save) and document picker (Browse, On My iPhone, cell label BEGINSWITH, Open when multi-select); unique names per run. MiniZip = no dependency. Open in place: 1.1. Review T-0722.
@@ -267,6 +266,8 @@ Dated task logs and full lessons: archive.md.
 - T-0684/T-0747/T-0748 2026-10-29 (a29b3e5d, 87b09744, branch): widget gets its script only at a boundary (saveNow), never the typing pause; id change moves the folder this editor made if main.py still holds its bytes. Lesson: an autosave is not a publish. Re-review T-0752; open: record in memory only, project delete leaves widgets/, T-0750 placedNow.
 
 - T-0758 2026-10-30 (1a83993f): iPhone Simulator with the Mac keyboard keeps the on-screen keyboard minimized after a boot or a hardware key (log: "Setting keyboard minimized"); app.keyboards still exists, frame below screen. Check the on-screen part, not exists. T-0761 (0101715f): assert against the keyboard's own frame, not the editor's; review T-0763. AppPictures same trap (T-0760).
+- T-0844 2026-10-31 (31b0ccf1, branch): a widget send copies the project's .py files, main.py last. Open: a sibling edit alone or a removal doesn't reach the widget (pinned). Lesson: a save that sends one file's text can't see what its neighbours did.
+- T-0867 2026-10-31: live text has inf ideal width in the extension; caps in TreeRules. Open: suffix ticking on a device (Simulator shots freeze even the control), review of my fix. Lesson: name a sweep's run time before starting it; slices beat completeness.
 {% endraw %}
 
 

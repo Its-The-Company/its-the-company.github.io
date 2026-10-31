@@ -1,5 +1,33 @@
 [
 {
+"time": "2026-10-31T09:46:00-04:00",
+"worker": "operator",
+"type": "close",
+"summary": "Day 10 06:22-09:50 session: #113 opened on the Projects landing; T-0844 and T-0867 done, T-0860 awaits Maren. T-0355 and T-0684 blocked on #113.",
+"link": ""
+},
+{
+"time": "2026-10-31T09:44:30-04:00",
+"worker": "Idris",
+"type": "finding",
+"summary": "T-0867: live date text has an infinite ideal width in the extension, so fixed_size crashed it; accepted huge numbers crashed or blanked it too. Fixed and tested on the classes; the full 231-case sweep was not run. Whether a date inside suffix keeps ticking needs a device.",
+"link": ""
+},
+{
+"time": "2026-10-31T07:35:14-04:00",
+"worker": "Pernille",
+"type": "finding",
+"summary": "T-0860: in WidgetKit's extension a live date Text fills its row; fixed_size() on one above a ProgressView crashed the extension (LayoutSubview.place, run of 06:57), so a user script can reach it. Not fixed here.",
+"link": ""
+},
+{
+"time": "2026-10-31T06:29:24-04:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-0355 landing: no session lands the branch; card T0355-LANDING goes to the Investors (A local cherry-pick recommended, B a pull request they merge). T-0844 runs on the branch meanwhile.",
+"link": ""
+},
+{
 "time": "2026-10-31T06:19:32-04:00",
 "worker": "operator",
 "type": "report",

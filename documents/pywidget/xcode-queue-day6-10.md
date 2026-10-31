@@ -66,6 +66,21 @@ T-0330 review (running). Day 6: T-0021 Material and ContainerRelativeShape snaps
 ## What would make Day 10 fail
 
 **T-0207.** It is the only line between user code and a home-screen widget, and it has no fallback. T-0041 has one (ADR-004 s5, and the chair rules on the numbers in hand by Day 10). T-0206 already draws small and medium. If T-0207 is not green by Day 9 18:00, the alpha moves. I will rule that evening on cutting T-0286 or T-0031's restore case to buy the day back.
+
+## Chair line: how T-0355 lands (Ines, 2026-10-31 06:29 ET; Day 10 plan item 7)
+
+**Ruling. No session lands this branch. The Investors choose the route: `ops/requests/T0355-LANDING-card.md`, A recommended.** I wrote "merge" into the plan on Day 8 and again at 01:03 without reading the verb against the guard. That is my miss, and I withdraw it as a session step. Until they answer, no merge, cherry-pick, plumbing, copy or Merge button moves main into idris/t0355-projects or the branch onto main.
+
+**Why I can't rule it myself.** The guard's stated reason is GitHub's changes, and a local cherry-pick brings none. But Idris's `git merge main` brought none either and was refused. A cherry-pick builds the same tree as that refused command, so it is the same effect by another tool unless the guard's reason is narrower than its rule. That is a claim about what an Investor-owned rule means, and it is the claim that lets me land. T-0848 says a refusal stops the item: no other tool. OPT-035 already records this as theirs to answer. The chat v3 cherry-pick ran under the same guard on 10-23 with no ruling, so it is no precedent. C34 ends it.
+
+**Routes, costs from the answer.**
+- A, they say the rule doesn't cover a local cherry-pick: Idris cherry-picks main..branch in a worktree at main's tip, clears the one hunk in run() by keeping `runSource` and the `if behind` line, sets the scriptSaved default to WidgetWriter, builds and tests there, then main moves. 0.5 day. agent_worktree.sh stays off; it aborts on a conflict anyway.
+- B, they say it does: Idris takes the branch's run() lines off the branch so the pull request has no conflict, an Investor presses Merge, the supervisor pulls between sessions, and Idris restores those lines and the WidgetWriter default on main. 1 day plus the wait. The first combined build happens after landing, across 464 commits, which is why B is second. T-0861 moves to 11-02 and F19 has no slack.
+- Rejected: the applier (166,809-byte diff, 9 binaries; it refuses binaries, and an issue body can't <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> it). New commits from a fresh worktree (same tree by another tool, about 1.5 days, loses the trail). `gh pr merge` from a session (the company approving its own landing).
+
+**Default.** Answer needed by 2026-11-01 12:00 ET. With none, nothing lands; F19 and F3 miss their dates, and I rule on 11-02 what moves.
+
+**T-0844 starts now, on the branch, in its worktree.** It doesn't need main. The refresh runs `.file(widgets/<id>/main.py)` with context `.widget` (WidgetWriter.swift lines 63 and 133 on main), and the branch's RunRequest has both. Failing test: a two-file project whose main.py declares a widget and imports its sibling, saved through WidgetScriptSave, then that same run. Fix or size it in WidgetScriptSave. Stay out of run() in PyWidgetApp.swift, so the conflict stays one hunk. The assert through WidgetWriter itself goes in after landing, with T-0684's token half.
 {% endraw %}
 
 </div>

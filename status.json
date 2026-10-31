@@ -1,45 +1,21 @@
 {
  "schema": 1,
- "at": "2026-10-31T10:13:36.991716+00:00",
+ "at": "2026-10-31T10:19:38.954681+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-10-31T04:12:24-04:00"
+  "kind": "morning",
+  "started": "2026-10-31T06:16:03-04:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "ines",
-   "task": "[plan] T-0361 Day 10 alpha verdict",
+   "task": "CEO writes 06:00 morning report",
    "model": "opus",
-   "started": "2026-10-31T10:02:58.592Z",
+   "started": "2026-10-31T10:16:26.739Z",
    "seconds": null,
-   "finished": "2026-10-31T10:12:26.827000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[review] T-0360 alpha visual reads",
-   "model": "opus",
-   "started": "2026-10-31T09:48:55.103Z",
-   "seconds": null,
-   "finished": "2026-10-31T10:02:44.349000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0859 proposal wording pass",
-   "model": "opus",
-   "started": "2026-10-31T09:44:01.787Z",
-   "seconds": null,
-   "finished": "2026-10-31T09:47:11.312000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-0833 step 1 held probes",
-   "model": "opus",
-   "started": "2026-10-31T09:41:55.517Z",
-   "seconds": null,
-   "finished": "2026-10-31T09:43:54.588000+00:00"
+   "finished": "2026-10-31T10:18:08.958000+00:00"
   }
  ],
  "queue": {
@@ -50,28 +26,28 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
-   "resets_at": "2026-10-31T12:49:59.953791+00:00",
+   "pct": 8.0,
+   "resets_at": "2026-10-31T12:49:59.777798+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 100.0,
+   "left": 92.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 90.0,
-   "resets_at": "2026-11-01T06:59:59.953828+00:00",
+   "pct": 91.0,
+   "resets_at": "2026-11-01T06:59:59.777814+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 10.0,
+   "left": 9.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 6.0,
-   "resets_at": "2026-11-01T06:59:59.953991+00:00",
+   "resets_at": "2026-11-01T06:59:59.777959+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-31T04:12:23.607292-04:00"
+  "read_at": "2026-10-31T06:16:01.681281-04:00"
  },
  "ui": {
-  "week_pct": 0.168,
+  "week_pct": 0.167,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -87,7 +63,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-10-31T06:15:00-04:00"
+  "at": "2026-10-31T06:21:00-04:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -217,6 +193,12 @@
   "done": [
    {
     "w": "Ines",
+    "t": "CEO writes 06:00 morning report",
+    "at": "2026-10-31T10:18:08.958000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
     "k": "plan",
     "t": "T-0361 Day 10 alpha verdict",
     "at": "2026-10-31T10:12:26.827000+00:00",
@@ -227,13 +209,6 @@
     "k": "review",
     "t": "T-0360 alpha visual reads",
     "at": "2026-10-31T10:02:44.349000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0859 proposal wording pass",
-    "at": "2026-10-31T09:47:11.312000+00:00",
     "o": "c"
    }
   ],
@@ -249,7 +224,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "task_open",

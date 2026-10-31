@@ -256,10 +256,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 
 ## Standing lessons (details in archive.md)
+- 2026-10-30 T-0846 (42bf9cf1): replay every fallback: first draft refused 184 and hung on a pipe. Ask what a reader steps over without raising. Open: Pernille's T-0841 rerun; site_check.swift environment line.
 
-
-
-- 2026-10-30 T-0840 (42bd6d9d): a guard's except-and-pass makes any crash a bypass: fnmatch raised on a reversed glob and ended the second pass. A path check over words must skip code words and bare stars: replay gave 15 false refusals first. A probe that needs the guard loads it in process, never through the real log. Keep real args out of a rerun line: I overwrote the proposal with dummies and had to rebuild.
 - 2026-10-30 T-0815 (632989fe): wrote 43 mutants in a commit message; 33 was true, and it was pushed. Second time: grep the count into the message, never type it. A mutant "caught" by a case that raised proves nothing: fix the case first. needs.js cap lives in site_needs_test, not build.py; 792 B raw left. Open: T-0817 (Pernille review).
 - 2026-10-30 T-0825 (5001443c): personal lane checks landed unwired, proven inert by "no running path names it". A slice can land by not touching the runners. Cloud-session commands and the account email in context stay open; governor record books any non-api run as plan. Open: T-0827 (Pernille), T-0828 (build).
 - 2026-10-30 Day 9: a failed sign-in review (T-0827, 7 blockers) is not a landed feature; count the review result, not the commit.

@@ -1,66 +1,33 @@
 {
  "schema": 1,
- "at": "2026-11-01T20:54:43.743794+00:00",
+ "at": "2026-11-01T21:22:45.084730+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-01T14:23:12-05:00"
+  "kind": "inbox",
+  "started": "2026-11-01T16:22:19-05:00"
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "ines",
-   "task": "[plan] T-0944 second-refusal chair ruling",
-   "model": "opus",
-   "started": "2026-11-01T20:51:28.425Z",
-   "seconds": null,
-   "finished": "2026-11-01T20:53:44.513000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-0944 Home redo, restarted",
-   "model": "opus",
-   "started": "2026-11-01T19:37:19.041Z",
-   "seconds": null,
-   "finished": "2026-11-01T20:51:07.710000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-0675 next extension lane slice",
-   "model": "opus",
-   "started": "2026-11-01T19:25:36.560Z",
-   "seconds": null,
-   "finished": "2026-11-01T20:06:24.552000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-0948 60-day timeline on Home",
-   "model": "opus",
-   "started": "2026-11-01T19:31:36.618Z",
-   "seconds": null,
-   "finished": "2026-11-01T19:53:12.272000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 152,
+  "runnable_count": 153,
   "blocked_count": 62
  },
  "meter": {
   "five_hour": {
-   "pct": 13.0,
-   "resets_at": "2026-11-01T22:00:00.275756+00:00",
+   "pct": 26.0,
+   "resets_at": "2026-11-01T21:59:59.882902+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 87.0,
+   "left": 74.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 12.0,
-   "resets_at": "2026-11-08T07:00:00.275774+00:00",
+   "pct": 14.0,
+   "resets_at": "2026-11-08T06:59:59.882922+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 88.0,
+   "left": 86.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -68,7 +35,7 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-01T14:23:11.957093-05:00"
+  "read_at": "2026-11-01T16:22:18.048178-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -84,12 +51,22 @@
   "words": "of this week's allowance"
  },
  "next_tick": null,
- "personal": {},
- "api_credits": [],
+ "personal": {
+  "week_pct": 0.14,
+  "usage_pct": 1.0,
+  "work_pct": 21.4
+ },
+ "api_credits": [
+  {
+   "name": "company",
+   "used_usd": 0,
+   "total_usd": 200.0
+  }
+ ],
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-01T16:05:00-05:00"
+  "at": "2026-11-01T16:24:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -240,7 +217,7 @@
    }
   ],
   "count": {
-   "next": 152,
+   "next": 153,
    "wait": 28,
    "blocked": 34,
    "you": 8
@@ -251,7 +228,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "task_open",

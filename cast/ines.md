@@ -257,6 +257,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0910: a read closes nothing; say what is new (moment, env, leftovers), close that in bytes. A plan section publishes: grep HOLD (mine, this line's kin). Stop pre-writing stamps (07:52 for 07:49). "147 pass" was FAIL 10: read the stream. The applier files a red in every parent as old.
 - T-0833 line 5: "nothing else, by reading" needs the constants under the code too (lane 486). A gate word I bend after evidence: say so, one named row. Investors moved the run three times in 15 min: rule the live item first.
 - T-0833 line 6: count a number before setting it in a sentence (236 had no source). Before a verdict repeats an old line, check it hasn't closed (T-0842).
+- T-0880 line 2: nobody set `lanes ok`: 0 lines, tick silent. Run the read-only command first.
 - T-0908: my own search term in a /tmp script was a stopped effect, refused, while ruling on Odalys. Read a scratch script against the stopped lines before starting it. An order for rows and mutants needs a route to run them: T-0915 had none.
 {% endraw %}
 

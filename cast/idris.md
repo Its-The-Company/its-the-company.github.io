@@ -26,6 +26,7 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
+| Nov 1, 10:57 | <span class="tag t-milestone">milestone</span> Python ran inside the real widget extension for the first time on the Simulator, app closed (T-0675 slice 3): start about 70 ms, peak 25 MB, Debug and warm. |  |
 | Oct 31, 09:44 | <span class="tag t-finding">finding</span> T-0867: live date text has an infinite ideal width in the extension, so fixed_size crashed it; accepted huge numbers crashed or blanked it too. Fixed and tested on the classes; the full 231-case sweep was not run. Whether a date inside suffix keeps ticking needs a device. |  |
 | Oct 30, 02:46 | <span class="tag t-fix">fix</span> T-0758: alpha A11a red traced to the Simulator keeping the on-screen keyboard minimized after boot; caret test now raises it; fresh-boot full suite green (472 passed, 16 s8.2 skips) |  |
 | Oct 29, 19:28 | <span class="tag t-build">build</span> T-0684 (a): editor saves widget scripts to widgets/<id>/main.py on the projects branch; review fixes H1 and M1 landed, re-review says merge after the alpha commit |  |
@@ -225,7 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 24, 01:26 | <span class="tag t-research">research</span> H51b Atmos gap fixtures: 5 r/hometheater rooms through 4 free calculators; a wrong or impossible answer in 2 of 5 (sloped ceiling, seat on back wall), 0 of 5 by the pre-fixed rule; 3-of-5 bar not met, novelty stays B. TheaterCalc not run (Cloudflare check). |  |
 | Oct 24, 01:01 | <span class="tag t-research">research</span> H58: RoomPlan returns walls, doors, windows, openings, floors, 16 object kinds but no ceiling; Atmos planner depth B; E hand-marked only; LiDAR (figure withdrawn: source terms, see H159 corrections) of top-10 iPhones (TelemetryDeck, estimate) |  |
 | Oct 24, 00:00 | <span class="tag t-research">research</span> H49 papers with code that no app ships: 0 at B-; best C- paper notebook to editable ink (InkSight, Apache 2.0, but IAM in its training mix); ZIPA out on CC-BY-4.0 weights; Moonshine's MIT badge hides 7 non-commercial models |  |
-| Oct 23, 23:50 | <span class="tag t-build">build</span> Documents tables readable: each table in its own scroll box; at 390 lane-note heights 852,620 -> 261,673 px, cells under 80 px on 0 of 40 notes (87d56ce); empty Write-ups hidden, one card title form (b15dc9c) |  |
 
 ## Diaries, meetings, and conversations
 
@@ -254,16 +254,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 Dated task logs and full lessons: archive.md.
 
-- T-0675 slice 2 2026-11-01 (177a8391): getTimeline lane behind the flag; Python not yet started in a real extension. Rest: dated note on the line.
+- T-0675 slice 3 2026-11-01 (892fd52e): Python ran in the real extension, Simulator, flag forced (WK_LANE=1). Rest: dated note on the line. Open: Pernille reviews lane.py compiled root; ADR's index.json doesn't exist, .lane-demoted.json does.
 
 ## Lessons
 
-- 2026-11-01: on Python 3.9+, Popen.send_signal polls first, so it reaps. A child you must not reap gets os.kill. Read the stdlib, not the name.
-
 - StoreKit testing lessons (unfinished, Ask to Buy, SKTestSession, refunds): archive.md, moved 2026-10-28.
 - T-0583/T-0589 notes, T-0611/T-0613 caret lessons: archive.md (moved 2026-10-28).
-
-- T-0684/T-0747/T-0748 2026-10-29 (a29b3e5d, 87b09744, branch): widget gets its script only at a boundary (saveNow), never the typing pause; id change moves the folder this editor made if main.py still holds its bytes. Lesson: an autosave is not a publish. Open: Sent is in memory only, project delete leaves widgets/. T-0684 ticked 2026-10-31 (63104185, b7e90c16): F19 token half green; a green-first test only counts after I remove the call and watch it go red.
 
 - T-0758 2026-10-30 (1a83993f): iPhone Simulator with the Mac keyboard keeps the on-screen keyboard minimized after a boot or a hardware key (log: "Setting keyboard minimized"); app.keyboards still exists, frame below screen. Check the on-screen part, not exists. T-0761 (0101715f): assert against the keyboard's own frame, not the editor's; review T-0763. AppPictures same trap (T-0760).
 - T-0844 2026-10-31 (31b0ccf1, branch): a widget send copies the project's .py files, main.py last. Open: a sibling edit alone or a removal doesn't reach the widget (pinned). Lesson: a save that sends one file's text can't see what its neighbours did.

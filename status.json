@@ -1,66 +1,33 @@
 {
  "schema": 1,
- "at": "2026-11-01T14:31:24.958414+00:00",
+ "at": "2026-11-01T15:08:49.699802+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-01T08:48:44-05:00"
+  "active": false,
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[build] T-0675 extension lane slice 3",
-   "model": "opus",
-   "started": "2026-11-01T14:28:11.398Z",
-   "seconds": null,
-   "finished": "2026-11-01T14:30:46.707000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-0675 extension lane slice 2",
-   "model": "opus",
-   "started": "2026-11-01T13:53:27.003Z",
-   "seconds": null,
-   "finished": "2026-11-01T14:27:51.769000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-0833 tick after verdict post",
-   "model": "sonnet",
-   "started": "2026-11-01T14:15:33.292Z",
-   "seconds": null,
-   "finished": "2026-11-01T14:16:00.370000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[review] T-0833 chair reads verdict before post",
-   "model": "opus",
-   "started": "2026-11-01T14:11:50.599Z",
-   "seconds": null,
-   "finished": "2026-11-01T14:15:02.507000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 140,
-  "blocked_count": 63
+  "runnable_count": 146,
+  "blocked_count": 61
  },
  "meter": {
   "five_hour": {
-   "pct": 13.0,
-   "resets_at": "2026-11-01T16:59:59.864035+00:00",
+   "pct": 17.0,
+   "resets_at": "2026-11-01T17:00:00.450383+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 87.0,
+   "left": 83.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 6.0,
-   "resets_at": "2026-11-08T06:59:59.864055+00:00",
+   "pct": 7.0,
+   "resets_at": "2026-11-08T07:00:00.450407+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 94.0,
+   "left": 93.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -68,7 +35,7 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-01T08:48:43.464777-05:00"
+  "read_at": "2026-11-01T10:04:13.138555-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -83,13 +50,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-01T10:23:49-05:00",
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-01T09:33:00-05:00"
+  "at": "2026-11-01T11:10:00-05:00"
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "lanes": [
   {
    "name": "Odalys",
@@ -214,44 +181,32 @@
     "o": "c"
    }
   ],
-  "done": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0675 extension lane slice 3",
-    "at": "2026-11-01T14:30:46.707000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0675 extension lane slice 2",
-    "at": "2026-11-01T14:27:51.769000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-0833 tick after verdict post",
-    "at": "2026-11-01T14:16:00.370000+00:00",
-    "o": "c"
-   }
-  ],
+  "done": [],
   "count": {
-   "next": 140,
+   "next": 146,
    "wait": 27,
-   "blocked": 36,
+   "blocked": 34,
    "you": 8
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6559745242",
+   "state": "waiting",
+   "position": 1,
+   "eta": "2026-11-01T10:23:49-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "This is done! Reply with the sign-in..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
-  "task_done",
+  "inbox_title",
   "task_title",
   "task_open",
   "lane_task",

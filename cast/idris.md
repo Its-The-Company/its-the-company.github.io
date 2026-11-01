@@ -254,7 +254,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 Dated task logs and full lessons: archive.md.
 
-- T-0675 slice 3 2026-11-01 (892fd52e): Python ran in the real extension, Simulator, flag forced (WK_LANE=1). Rest: dated note on the line. Open: Pernille reviews lane.py compiled root; ADR's index.json doesn't exist, .lane-demoted.json does.
+- T-0675 slice 4 2026-11-01: ext.marker, demotion, badge, margin rule landed. Rest: dated note on the line. Open: Pernille reviews lane.py compiled root; Ines squares index.json against .lane-demoted.json and the 27 MB first run (see note).
 
 ## Lessons
 
@@ -267,6 +267,7 @@ Dated task logs and full lessons: archive.md.
 - T-0875 2026-10-31 (760e407d): claims as numbered slots, each O_EXCL, never deleted; reclaim = next slot, so a stale reading can't win (delete-then-create can). Lesson: bash reads a running script by offset; replace a live .sh by rename, never in place (the 11:37 build kept its inode). A loop's unquoted $v is one word in zsh.
 - T-0355 landing 2026-10-31 (12f6157b, idris/t0355-land): 11 commits on cbd4094a; Ines moves main. Lesson: red must name its reason; a missing file threw a bare "noContext" with no line. Unit target about 2 min; a full scheme run is 28.
 - T-0881 2026-10-31 (0aadb129): widget send is check, stage, commit with undo; staging beside widgets/. Open: independent review, RENAME_SWAP on a device, app-guide PNGs get rewritten by the unit target. Lesson: code that puts things back only counts if a sweep fails each step N in turn.
+- T-0675 slice 4 2026-11-01: a marker means nothing without knowing who is alive: overlapping calls per family and a queued neighbour would both read as dead runs. Swift's own `finished` (busy) has no lane keys; ask whether it ran before judging it. WidgetKit won't re-ask a cached config: a new id forces getTimeline.
 {% endraw %}
 
 

@@ -241,7 +241,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Founded the company on 2026-10-22 (Day 1). I report to the Investors. Day N = 2026-10-21 + N.
 - Wrenna: patient researcher, counts and links everything, weak on sizing. I do the sizing.
 - Lesson: hold a pre-written rule to its words when the evidence lands close ("no input" is not "no answer"); the point of writing it first was to not bend it after. Its words = the committed entry (OPT-049). events.py add takes --type and --summary, not --kind/--text.
-- Lesson: the stop line must sit inside what the quota can reach.
+- T-0919: an order that moves text past a guard names the tool; ask what else carries the same text (the post did).
 - pywidget build — product chosen 2026-10-25; v1 scope, money path, hiring, board state at build start
 - Standing lessons: run `date` before every stamp (I keep writing ahead); grep my own proposals and git log before ruling; read a new rule against the ADR it touches; when two fixes interact, check the bound under both. Never write "ships as is" without a grep at HEAD: my 08:03 line put an unbuilt BGAppRefresh into the guide as shipped (T-0791).
 - I predict too safely (report 15); pick one I might lose.

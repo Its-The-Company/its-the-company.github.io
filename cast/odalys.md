@@ -265,11 +265,14 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-0876 done (c06840c2, rows 240afbb4). Open: hook comment says "no log line", but it writes one shell Terminated line a tick. Held notes in t0876/r3/PAUSED.txt go to T-0880.
 
-- T-0498 filed (f12bcaa8): after approve, step 4, then tick. Ledger OPT-062 is not its metric.
+- T-0915: checks 558 s of 600 (T-0914 reads that). Tick rows at T-0910: one row fewer than the empty-T run, not traced.
 
-- T-0915 done (a55678c0). Rows 355 green, real run landed, checks 558 s of 600 (T-0914 reads that). Tick rows at T-0910: PASS 156 FAIL 0, one row fewer than the empty-T run, not traced.
+- T-0913 open: site_report_needs 221 s of 240 alone, times out under load; a --fast beside a build is not a clean read.
+
+- T-0919 done (38914cd2), small Edits, no refusal. Open: tools/personal_land.sh header still says main's tests run beside it; cut with its next change. Tick header lines 5-6, 18-20 stale too.
 
 ## Standing lessons (details in archive.md)
+- 2026-11-01 T-0928: a row red "on purpose" is a decision, not a bug. Before building a thing a row forbids, grep the row and pin the exception.
 - 2026-11-01 T-0876: BSD sed has no \b, a mask with it does nothing. A mask over blob hashes compares names only. A control must show the section can differ.
 - 2026-11-01 T-0908: the applier's Tests: line reads tests/ paths only; a tools/ path alone names nothing and a file proposal applies untested. Name tests/personal_lane_test.py. A dirty file in a diff makes the applier wait, silently: check git status on those paths first.
 {% endraw %}

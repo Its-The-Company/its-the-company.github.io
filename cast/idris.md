@@ -254,6 +254,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 Dated task logs and full lessons: archive.md.
 
+- T-0675 slice 1 2026-11-01 (5e8bd766): bridge in Shared/Bridge/, extension compiles it, flag off, nothing starts it. Rest and review: dated note on the line.
+
 ## Lessons
 
 - 2026-11-01: on Python 3.9+, Popen.send_signal polls first, so it reaps. A child you must not reap gets os.kill. Read the stdlib, not the name.

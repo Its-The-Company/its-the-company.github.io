@@ -1,56 +1,64 @@
 {
  "schema": 1,
- "at": "2026-11-01T11:42:47.297750+00:00",
+ "at": "2026-11-01T12:54:21.928285+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-01T06:16:24-05:00"
+  "started": "2026-11-01T06:46:59-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
+   "name": "odalys",
+   "task": "[tools] T-0910 plan edit and tick rows",
+   "model": "opus",
+   "started": "2026-11-01T12:50:30.018Z",
+   "seconds": null,
+   "finished": "2026-11-01T12:54:03.926000+00:00"
+  },
+  {
    "name": "ines",
-   "task": "[plan] T-0879 exclusion ruling",
+   "task": "[plan] T-0910 chair read of results",
    "model": "opus",
-   "started": "2026-11-01T11:39:25.658Z",
+   "started": "2026-11-01T12:37:34.191Z",
    "seconds": null,
-   "finished": "2026-11-01T11:42:20.087000+00:00"
+   "finished": "2026-11-01T12:50:16.390000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[tools] T-0879 step 2 fixes",
+   "name": "ines",
+   "task": "[plan] T-0833 speed-up chair ruling",
    "model": "opus",
-   "started": "2026-11-01T11:31:09.281Z",
+   "started": "2026-11-01T12:41:45.806Z",
    "seconds": null,
-   "finished": "2026-11-01T11:39:16.983000+00:00"
+   "finished": "2026-11-01T12:48:48.441000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[tools] T-0878 resume breaks and file",
+   "name": "pernille",
+   "task": "[review] T-0879 second delta read",
    "model": "opus",
-   "started": "2026-11-01T11:17:29.442Z",
+   "started": "2026-11-01T12:41:16.306Z",
    "seconds": null,
-   "finished": "2026-11-01T11:30:49.566000+00:00"
+   "finished": "2026-11-01T12:44:51.422000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 137,
-  "blocked_count": 68
+  "runnable_count": 141,
+  "blocked_count": 66
  },
  "meter": {
   "five_hour": {
-   "pct": 21.0,
-   "resets_at": "2026-11-01T12:00:00.323050+00:00",
+   "pct": 23.0,
+   "resets_at": "2026-11-01T11:59:59.825878+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 79.0,
+   "left": 77.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 4.0,
-   "resets_at": "2026-11-08T07:00:00.323074+00:00",
+   "resets_at": "2026-11-08T06:59:59.825897+00:00",
    "used_words": "of your weekly allowance used",
    "left": 96.0,
    "left_words": "of your weekly allowance left"
@@ -60,7 +68,7 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-01T06:10:09.194153-05:00"
+  "read_at": "2026-11-01T06:46:58.399509-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -79,7 +87,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-01T06:44:00-05:00"
+  "at": "2026-11-01T07:56:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -152,6 +160,27 @@
    {
     "w": "Odalys",
     "k": "tools",
+    "t": "After the lane",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Opus high, under T-0908, before T-0880 starts",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "After the lane",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
     "t": "31 closed-hunt scripts under research/hunt/...",
     "s": "next",
     "o": "c"
@@ -183,56 +212,35 @@
     "t": "MacBook runner follow-ups",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Runner rule",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0330 H3 residue",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "NEEDS \"approve\"",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0910 plan edit and tick rows",
+    "at": "2026-11-01T12:54:03.926000+00:00",
+    "o": "c"
+   },
+   {
     "w": "Ines",
     "k": "plan",
-    "t": "T-0879 exclusion ruling",
-    "at": "2026-11-01T11:42:20.087000+00:00",
+    "t": "T-0910 chair read of results",
+    "at": "2026-11-01T12:50:16.390000+00:00",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0879 step 2 fixes",
-    "at": "2026-11-01T11:39:16.983000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0878 resume breaks and file",
-    "at": "2026-11-01T11:30:49.566000+00:00",
+    "w": "Ines",
+    "k": "plan",
+    "t": "T-0833 speed-up chair ruling",
+    "at": "2026-11-01T12:48:48.441000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 137,
-   "wait": 31,
-   "blocked": 37,
+   "next": 141,
+   "wait": 30,
+   "blocked": 36,
    "you": 9
   }
  },
@@ -241,6 +249,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "task_open",

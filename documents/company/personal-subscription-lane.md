@@ -153,6 +153,24 @@ T-0828's guard proposal still carries one item from the worktree design. It is n
 - **Items 4 to 6 of "What stays open"** are per account. Each Investor answers for their own account, and each account's first session is measured on its own. If an Investor picks the second macOS user, that account's setup stops until it is planned; the other account is not held up.
 - **Fable.** The tick sets `COMPANY_BILLING=personal` and `COMPANY_FABLE_OK=false`, so the guard's Fable refusal holds as designed.
 
+### Product branches at landing (T-0910, finding B)
+
+**Naming.** A board line names checks: `tests/<name>_test.sh` or `.py`, `land:host`, `land:xc`. The tick passes them to `ready`, and the marker holds `test <name>`, `test host`, `test xc`. A line that names none of them stays on its branch, as before.
+
+**What runs.** After the rebase, in the worktree. `host` is all of `pywidget/tests/run_host.py --both`. `xc` is `xcodegen`, then the whole `PyWidgetTests` target through the worktree's `tools/xc.sh`. Neither takes a narrower form. The paths add a floor whatever the line named: anything under `ios`, `runtime`, `python`, `widgets`, `templates`, `packages` or `examples` runs both, and a `.py` under `pywidget/tests/` runs `host`.
+
+**A branch can't edit what checks it.** The lane list stays `pywidget`, and pywidget holds its own tests, so land has a third check beside owned paths and the lane list, before and after the rebase. A branch can't change or remove an existing test, fixture or `pywidget/ios/scripts/` file, and can't touch `project.yml`, `Vendor/`, a generated project, an `.xcconfig` or a test plan. `tests/`, `tools/` and `tests/run.sh` stay main's by the lane list.
+
+**A branch's new tests.** A new test file is allowed, and it runs at landing with the rest. `run_host.py` finds it, and `xcodegen` takes it into the target with `project.yml` unchanged, which a real run showed: 509 tests, the new one passed. Red holds the branch. Main's tests run beside it every time. A task that must change an existing test goes to a company session, and its branch is held with the file named.
+
+**Xcode at landing.** One task at a time, by xc.sh's machine lock. No claims folder refuses the branch, because xc.sh can run past a lock it can't hold without one. Another task on the lock is not a fault: the branch goes back, the marker stays, no board line, and the next tick tries again.
+
+**Measured, 2026-11-01, one real detached worktree.** A build from nothing plus 508 tests: 189 s. Warm, 509 tests: 134 s. `host`: 280 s, 2,222 tests. Together 414-469 s of `LAND_TEST_SECONDS` 600, on a quiet machine, n = 1 each. The whole scheme with UI tests took 1266-1696 s (n = 4), so UI tests aren't a landing check.
+
+**What that run found.** A real test run rewrites 49 tracked files, under `ops/` and `pywidget/app-guide-shots/`. Before T-0910 land would have held every session that tested, for uncommitted changes. Land and `setup` now put those two paths back, and nothing else.
+
+**Limits.** `pywidget/ios/Core`'s own `swift test` and UI tests aren't landing checks yet. The rest is in the held folder, Commandment 42, for T-0880.
+
 ### The split
 
 Order: T-0831 lands, then T-0877, then T-0878. T-0874, T-0875 and T-0876 can start now: they touch different files, none needs `rules/personal_lane.py`, and each lands inert. T-0833 stays the gate on any sign-in ask. T-0828's own rule on the alpha commit still applies to landing.
@@ -278,7 +296,7 @@ The security guard and permission rules cover the profile directory and refuse c
 
 **Turn it on and off.** Each account has its own switch and its own mode.
 
-1. Comment "approve" on the proposal the Operator posts. That adds both accounts' switches, set to off, and both modes, set to Spread.
+1. Comment "approve" on the trip card the Operator posts, then make the one trip it describes, at a Terminal on the Mac mini. The approve alone changes nothing: the trip's commit adds both accounts' switches, set to off, and both modes, set to Spread.
 2. To turn your account on, commit `personal_lane_a` as `true` in `investors/billing.json` at GitHub. It lands at the company's next pull. The supervisor pulls at the start of each tick, every 15 minutes, and no tick starts while a session runs; a session can run up to 150 minutes. If the pull keeps failing, the lane stays off and says the switch is off while GitHub shows it on. A site button may replace this later; it will let you pick the account and the mode.
 3. To pick the mode, set `personal_lane_a_lock_in`. `false` is Spread: sessions keep to an even daily share of your week. `true` is Lock In: no daily share, so one session at a time uses what is left of your week. Your 5-hour hold at 90% and your weekly limit hold in both. The mode stays as you set it until you change it; unlike the company's Lock In, it doesn't end at midnight.
 4. To turn your account off, commit `personal_lane_a` as `false` at GitHub. No pull is needed. A change made only on the Mac stops the lane at once but may not last, because a pull can keep GitHub's version, so the off is a commit at GitHub. No new session starts. A running session stops at most 8 minutes after the commit reaches GitHub, or about 10 if every git call hangs (the design's limits, 480 s and about 600 s). Measured once each at the real timings, with a stand-in for GitHub on this Mac and a stand-in session, and the off commit landing just after a check: 301 seconds for a session that obeys the stop signal, 420 seconds for one that ignores it. The other account isn't affected.

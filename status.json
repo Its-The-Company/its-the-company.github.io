@@ -1,66 +1,66 @@
 {
  "schema": 1,
- "at": "2026-11-01T17:53:54.328606+00:00",
+ "at": "2026-11-01T18:36:09.632921+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-01T11:11:48-05:00"
+  "started": "2026-11-01T12:56:32-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "odalys",
-   "task": "[tools] T-0913 two red suites on main",
+   "task": "[tools] T-0934 tick side changes",
    "model": "opus",
-   "started": "2026-11-01T17:16:04.557Z",
+   "started": "2026-11-01T18:29:26.377Z",
    "seconds": null,
-   "finished": "2026-11-01T17:53:37.087000+00:00"
+   "finished": "2026-11-01T18:34:53.143000+00:00"
   },
   {
-   "name": "idris",
-   "task": "[build] T-0675 ext.marker and margin rule",
+   "name": "ines",
+   "task": "[plan] T-0934 refusals and proposal ruling",
    "model": "opus",
-   "started": "2026-11-01T17:03:41.665Z",
+   "started": "2026-11-01T18:29:18.671Z",
    "seconds": null,
-   "finished": "2026-11-01T17:46:39.018000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0909 sweep closes only on newer answers",
-   "model": "opus",
-   "started": "2026-11-01T17:11:55.706Z",
-   "seconds": null,
-   "finished": "2026-11-01T17:15:56.684000+00:00"
+   "finished": "2026-11-01T18:33:18.668000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[ops] T-0911 measure OPT-045 and OPT-046",
+   "task": "[tools] T-0934 first-run trip evidence",
    "model": "opus",
-   "started": "2026-11-01T17:03:47.766Z",
+   "started": "2026-11-01T18:11:52.942Z",
    "seconds": null,
-   "finished": "2026-11-01T17:11:43.264000+00:00"
+   "finished": "2026-11-01T18:28:44.419000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-0889 wording and cost page",
+   "model": "opus",
+   "started": "2026-11-01T17:58:27.907Z",
+   "seconds": null,
+   "finished": "2026-11-01T18:25:17.444000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 145,
-  "blocked_count": 61
+  "runnable_count": 143,
+  "blocked_count": 62
  },
  "meter": {
   "five_hour": {
-   "pct": 28.0,
-   "resets_at": "2026-11-01T16:59:59.636100+00:00",
+   "pct": 4.0,
+   "resets_at": "2026-11-01T22:00:00.395658+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 72.0,
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 9.0,
-   "resets_at": "2026-11-08T06:59:59.636125+00:00",
+   "pct": 10.0,
+   "resets_at": "2026-11-08T07:00:00.395682+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 91.0,
+   "left": 90.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -68,7 +68,7 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-01T11:11:47.257353-05:00"
+  "read_at": "2026-11-01T12:56:31.995210-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-01T12:55:00-05:00"
+  "at": "2026-11-01T13:37:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -159,13 +159,6 @@
    },
    {
     "w": "Odalys",
-    "k": "site",
-    "t": "Before T-0916",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "tools",
     "t": "First run on one account, after sign-in",
     "s": "next",
@@ -212,34 +205,41 @@
     "t": "MacBook panel under Home > Issues, after...",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "MacBook runner follow-ups",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T-0913 two red suites on main",
-    "at": "2026-11-01T17:53:37.087000+00:00",
+    "t": "T-0934 tick side changes",
+    "at": "2026-11-01T18:34:53.143000+00:00",
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0675 ext.marker and margin rule",
-    "at": "2026-11-01T17:46:39.018000+00:00",
+    "w": "Ines",
+    "k": "plan",
+    "t": "T-0934 refusals and proposal ruling",
+    "at": "2026-11-01T18:33:18.668000+00:00",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T-0909 sweep closes only on newer answers",
-    "at": "2026-11-01T17:15:56.684000+00:00",
+    "t": "T-0934 first-run trip evidence",
+    "at": "2026-11-01T18:28:44.419000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 145,
-   "wait": 27,
+   "next": 143,
+   "wait": 28,
    "blocked": 34,
    "you": 8
   }

@@ -250,7 +250,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Archive: dated task notes from 2026-10-22 and 2026-10-23, moved out of this index
 ## Open
 - T-0345 done (edd0b7c2). T-0903 next, mine: no upload before it. Lesson: a registry claim I never read is a guess; T-0413 ruled on one. Read it before it reaches a ruling.
-- T-0916 turns the site button on, after T-0880. A done-note shows on Home: while a gate is off, its Plain promises nothing.
+- T-0916 and T-0920 done (81d4c9d0). Investors need Contents: read and write. tools/site/build.py's other hunks are T-0889's.
+- T-0889 done (31f80342). setup/SITE.md still lists the money tile and bar, no Cost page: needs a proposal.
 - T-0425: xc.sh default -collect-test-diagnostics never? (OPT-049 kept; all 91 stops lacked it, 4.7 h lane)
 - OPT-054 reverted: setup/OPERATIONS.md line 91 needs a proposal to match work.md.
 - OPT-051 n=10 gap 0.0192, clear; gap_pooled 0.07 trips beside it. No board line owns the n=20 read yet.
@@ -259,19 +260,18 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 
 - OPT-035 held (T-0884, Ines): #113 card said the tool stays off; loss fell 2.227 to 0.079 per 100. Re-baseline a queued trial before starting it.
-- T-0920 waits for T-0880 to close; T-0919 stays Ines's.
 - A packet naming one held file means that file. A row red before and after a fix tests nothing: trace its feed. T-0921: a count from two tried paths is no census (14 was 17); classify every line by shape.
 - Lesson: measure a grep's reach before excluding from it. A pgrep -f wait matches its own shell: wait on the PID.
 
 - T-0876 done (c06840c2, rows 240afbb4). Open: hook comment says "no log line", but it writes one shell Terminated line a tick. Held notes in t0876/r3/PAUSED.txt go to T-0880.
 
-- T-0915: checks 558 s of 600 (T-0914 reads that). Tick rows at T-0910: one row fewer than the empty-T run, not traced.
-
 - T-0913 open: site_report_needs 221 s of 240 alone, times out under load; a --fast beside a build is not a clean read.
 
-- T-0919 done (38914cd2), small Edits, no refusal. Open: tools/personal_land.sh header still says main's tests run beside it; cut with its next change. Tick header lines 5-6, 18-20 stale too.
+- Stale headers: personal_land.sh (main's tests beside it), tick lines 5-6, 18-20. Cut with the next change.
 
 ## Standing lessons (details in archive.md)
+- 2026-11-01 T-0934: a check that returns early hides what stands behind it. Fill the field in a copy; it reads them all.
+- 2026-11-01 T-0920: Home runs through Liquid, so free text needs braces as entities: a stray {% stops the build. Red a site name against site_qa too.
 - 2026-11-01 T-0928: a row red "on purpose" is a decision, not a bug. Before building a thing a row forbids, grep the row and pin the exception.
 - 2026-11-01 T-0876: BSD sed has no \b, a mask with it does nothing. A mask over blob hashes compares names only. A control must show the section can differ.
 - 2026-11-01 T-0908: the applier's Tests: line reads tests/ paths only; a tools/ path alone names nothing and a file proposal applies untested. Name tests/personal_lane_test.py. A dirty file in a diff makes the applier wait, silently: check git status on those paths first.

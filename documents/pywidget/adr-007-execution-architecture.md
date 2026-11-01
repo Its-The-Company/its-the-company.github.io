@@ -689,6 +689,36 @@ Read: T-0813, T-0788; launch plan D1, D2, D3, s8 rows 21 and 23; press kit lines
 5. Failed sentences are deleted, never softened, as T-0788 already says.
 
 Moves no date and no build. T-0821 (Wrenna) carries the edits. Notes on T-0788 and T-0807. The App Guide is not a launch document, so it may keep Apple's range when attributed, with "typically"; where it states the range as what this app does, T-0807 changes it. T-0792's Day 30 range is untouched.
+
+## Chair line (Ines), 2026-11-01 13:03 ET: the lane's store and margin, T-0675 slice 4 (T-0939)
+
+Read: f2656577 (ExtensionLane.swift, LaneGuard.swift), bench/t0675-lane-extension.txt, sections 6 and 7.2, the 08:03 and 16:54 lines, amendment 2 item 1, Idris's slice 4 note (the one view, C13). Ran at HEAD 88564671: `git grep` for the names below, and the arithmetic on the bench lines. No build run. The flag stays off. Moves no date.
+
+**1. The store stays `.lane-demoted.json`.** Nothing at HEAD reads or writes `index.json`; `WidgetID.indexName` has no caller. The list is what exists: tamper demotions already land there, T-0719 locked it, T-0733 and C2 1.7 name it, and an unreadable list fails closed. A second home for one fact would need a merge rule and buy nothing.
+
+- Read every "`lane=app` in `index.json`" (7.2 row (c), 08:03 item 2, 8.3, T-0675) as "the id joins `.lane-demoted.json`". A script's declared lane stays in `pywidget.json`.
+- Row (c)'s trigger is 08:03's, as slice 4 built it: a marker found, so killed or stuck. An error or a budget stop came back and stays in the lane.
+- `index.json` stays a reserved name. The rows that still name it are not ruled here; T-0793 brings the loop breaker's `background=false` back to me.
+- This is the dated line amendment 2 item 1 asks for. `widgets/` gains `.lane-demoted.json` and `.lane-demoted.lock`; the leading dot is the reserved id. The extension's write list gains those two and `widgets/<id>/ext.marker`, `lane-peak` and `lane-refused`.
+- `widgets/<id>/lane-peak`: decimal bytes, the run's peak above the process's baseline, atomic, written by the extension, read only by the margin rule. A run that did not raise the process's lifetime peak leaves it alone: that figure is a neighbour's, and a neighbour's peak must not demote this widget (16:54 item 1). Saving new script text deletes `lane-peak` and `lane-refused`, because a new script is a first run.
+- All three files stay outside `scripts/<id>/`, the condition T-0720's bullet sets for the list. Pernille adds them to "Not held" when she reviews the lane.py change.
+
+**2. The margin stays 2 x. Three things around it change, for the lane only.** The app's first-run 27 MB stands, because the app runs heavy scripts. Idris's view: 27 cannot fit. Agreed, and the problem goes further than first runs.
+
+- **First run: 18 MB, not 27.** 27 is 2 x the heavy run, and the lane forbids heavy imports. A first run assumes a 9 MB peak: the lane's own run, 8.7 MB above baseline in both slices 3 and 4, rounded up. At C = 30 that needs a process at 12 MB or less at the start; 27 needed 3. It also agrees with the gate. Taking B as the footprint at the run's start, G1 (peak + B <= 0.5 C) gives headroom >= 0.5 C + peak >= 2 x peak, so a phone that passes G1 passes this. With 27, a phone could pass G1 and still refuse every first run.
+- **Warm residue counts once.** `os_proc_available_memory()` has already taken it off, and that is all s6's "counting the warm residue" needs. As built it also sits in `lane-peak`. On slice 3's numbers at C = 30, a warm process holds 23.5 MB, so headroom 6.5 against a need of 17.4: refused, though the 25.4 peak it already reached fits. <span title="How many people show, in their own words, that they want this.">Need</span> = 2 x (peak - residue), never below 0, where residue = footprint now - baseline and peak is `lane-peak`, or 9 MB with none. Same case: 2 x (8.7 - 6.7) = 4 MB, and it runs. That 4 is arithmetic. No warm second run is in the bench yet.
+- **A refusal is not a failure.** This changes s6's "demotion" for a refusal. Nothing ran, so nothing failed, and as built one refusal is a permanent demotion with a badge. It is now `oom_guard`, as in the app's row: skipped, cached tree, stale clock, no badge, `lane-refused` down. A refusal in a later process demotes: the lane cannot hold this widget on this phone, and T1-T3 can. It must be a later process because WidgetKit asks per family, so two refusals in one reload prove nothing. A run that completes clears the file. A found marker still demotes at once.
+
+Considered and rejected: no margin on a first run, marker alone. A kill costs every neighbour in that reload, and what a widget shows during a kill is unmeasured (08:03 item 5.3). Also rejected: measuring the first run in the app. Its baseline is unmeasured, and its lifetime peak is not the lane's.
+
+**What would make this fail.** Slice 3 entered at 16.7 MB, which leaves 13.3 at C = 30, so 18 refuses. That is Debug in a process 52 s old, not a phone. It would fail G1 too (25.4 > 15), so gate and rule give one answer: the lane stays off under 08:03 items 5 and 6.
+
+**What changes the numbers.**
+- The Steps and countdown run: if a lane premade's cold peak above baseline exceeds 9 MB, the assumed peak becomes that figure, rounded up.
+- T-0680: the device's largest lane premade cold peak replaces 9 in the chair line that sets the flag default. C stays out of the code.
+- 2 x changes only if T-0680 sees a run pass the margin and die, or a refusal of a run that fits. Either comes back to me. Demotions from refusals count in 08:03 item 6's 1 in 20.
+
+**Board.** Notes on T-0675 (slice order), T-0680 and T-0793.
 {% endraw %}
 
 </div>

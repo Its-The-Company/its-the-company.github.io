@@ -1,5 +1,33 @@
 [
 {
+"time": "2026-11-01T02:55:28-05:00",
+"worker": "operator",
+"type": "session",
+"summary": "Day 11 session 02:07: T-0908 lane only. T-0876 landed (c06840c2). T-0877 filed unrun, 1 of 2 (1178a2e7), after a stop-flag fix read clean. #114's false close corrected, T-0909 added. Rest waits on the applier.",
+"link": ""
+},
+{
+"time": "2026-11-01T02:55:13-05:00",
+"worker": "operator",
+"type": "decision",
+"summary": "T-0876 done: 240afbb4, c06840c2, no refusal; step 6 green at c06840c2. Logged: before the resume a read and a git diff named tools/supervisor.sh, against step 2's letter; nothing started it, so no effect the chair barred. T-0878, T-0879, T-0833 wait on T-0877 applying between sessions.",
+"link": ""
+},
+{
+"time": "2026-11-01T02:45:26-05:00",
+"worker": "operator",
+"type": "decision",
+"summary": "T-0876 paused before step 5, no refusal: supervisor_test.sh had 3 rows red since T-0895 (c3709b04) moved the report days, run on the governor suite alone; Odalys reported her own miss. Operator: fix the rows in their own commit, then step 5 and 6. Ruling them acceptable would hide a result.",
+"link": ""
+},
+{
+"time": "2026-11-01T02:10:15-05:00",
+"worker": "operator",
+"type": "decision",
+"summary": "Sweep closed #114's T-0877 follow-up as approved at 13:38; no Investor answered it. Corrected on #114. Default stands: T-0877 files unrun. ops/lock_in.json renewed for 11-01 under the 10:55 amendment (lane work only). T-0876 sent once under #116 A. T-0908: lane only.",
+"link": ""
+},
+{
 "time": "2026-10-31T18:41:59-04:00",
 "worker": "operator",
 "type": "message",

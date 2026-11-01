@@ -1,67 +1,100 @@
 {
  "schema": 1,
- "at": "2026-10-31T22:42:18.243113+00:00",
+ "at": "2026-11-01T07:55:41.400853+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-01T02:07:42-05:00"
  },
  "workers": [],
  "who": "",
- "recent": [],
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-0876 fix rows, finish push path",
+   "model": "opus",
+   "started": "2026-11-01T07:45:23.634Z",
+   "seconds": null,
+   "finished": "2026-11-01T07:54:48.604000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-0876 personal lane push path",
+   "model": "opus",
+   "started": "2026-11-01T07:09:52.019Z",
+   "seconds": null,
+   "finished": "2026-11-01T07:44:51.036000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-0877 file the lane proposal",
+   "model": "opus",
+   "started": "2026-11-01T07:30:11.839Z",
+   "seconds": null,
+   "finished": "2026-11-01T07:33:11.584000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-0877 stop flag lines read",
+   "model": "opus",
+   "started": "2026-11-01T07:26:09.246Z",
+   "seconds": null,
+   "finished": "2026-11-01T07:29:58.241000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 138,
-  "blocked_count": 66
+  "runnable_count": 139,
+  "blocked_count": 65
  },
  "meter": {
   "five_hour": {
-   "pct": 1.0,
-   "resets_at": "2026-10-31T23:10:00.304736+00:00",
+   "pct": 0.0,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "left": 99.0,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 99.0,
-   "resets_at": "2026-11-01T07:00:00.304757+00:00",
+   "pct": 0.0,
+   "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 1.0,
+   "left": 100.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 6.0,
-   "resets_at": "2026-11-01T07:00:00.304885+00:00",
+   "pct": 0.0,
+   "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-10-31T18:38:31.971583-04:00"
+  "read_at": "2026-11-01T02:07:41.953552-05:00"
  },
  "ui": {
-  "week_pct": 0.202,
-  "five_hour_pct": 0.139,
+  "week_pct": 0.0,
+  "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
   },
   "warn": false,
   "over": false,
-  "coverage": 1.0,
+  "coverage": null,
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-10-31T18:57:17-04:00",
+ "next_tick": null,
  "lock_in": {
-  "on": false,
+  "on": true,
   "pool": 1,
-  "at": "2026-11-01T01:51:00-05:00"
+  "at": "2026-11-01T02:57:00-05:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "lanes": [
   {
    "name": "Odalys",
    "state": "next",
-   "task": "Odalys, P3, 31 closed-hunt scripts under research/hunt/...",
+   "task": "Odalys, P0, personal lane before anything else...",
    "model": null,
    "since": null,
    "next": []
@@ -110,6 +143,20 @@
  "tasks": {
   "run": [],
   "open": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal lane before anything else",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "After the lane",
+    "s": "next",
+    "o": "c"
+   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -165,71 +212,45 @@
     "t": "NEEDS \"approve\"",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Proposal",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Run_limited orphans",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Ines",
-    "k": "report",
-    "t": "Evening",
-    "at": "2026-10-31T22:18:31.499000+00:00",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0876 fix rows, finish push path",
+    "at": "2026-11-01T07:54:48.604000+00:00",
     "o": "c"
    },
    {
     "w": "Odalys",
-    "k": "talk",
-    "t": "And Pernille",
-    "at": "2026-10-31T22:14:57.800000+00:00",
+    "k": "tools",
+    "t": "T-0876 personal lane push path",
+    "at": "2026-11-01T07:44:51.036000+00:00",
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "diary",
-    "t": "Pernille",
-    "at": "2026-10-31T22:14:56.436000+00:00",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0877 file the lane proposal",
+    "at": "2026-11-01T07:33:11.584000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 138,
-   "wait": 32,
+   "next": 139,
+   "wait": 31,
    "blocked": 34,
    "you": 8
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6550112438",
-   "state": "waiting",
-   "position": 1,
-   "eta": "2026-10-31T18:57:17-04:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "when the usage restarts tomorrow,..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
-  "inbox_title",
   "task_title",
   "task_open",
   "lane_task",

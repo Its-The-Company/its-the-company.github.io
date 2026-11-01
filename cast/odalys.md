@@ -252,25 +252,26 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0345 done (edd0b7c2). T-0903 next, mine: no upload before it. Lesson: a registry claim I never read is a guess; T-0413 ruled on one. Read it before it reaches a ruling.
 - T-0425: xc.sh default -collect-test-diagnostics never? (OPT-049 kept; all 91 stops lacked it, 4.7 h lane)
 - OPT-054 reverted: setup/OPERATIONS.md line 91 needs a proposal to match work.md.
-- T-0785 done (20ed2ea4): OPT-051 n=10 by-origin gap 0.0192, clear; gap_pooled 0.07 trips beside it. Same read at n=20. T-0777 free to start; keep test not rewritten (no stop). No board line owns the n=20 read yet.
+- OPT-051 n=10 gap 0.0192, clear; gap_pooled 0.07 trips beside it. No board line owns the n=20 read yet.
 - OPT-062 watch on the guard: day 1 read 4 false, over 3. Reads T-0897 (11-02), T-0898 (11-07). T-0842 mine after T-0833.
 - #24 plan awaits Investor answers (token vs relay, reply speed, lanes) and Ines's board entries; Phase 1 (live_status.py, read-only chat page) is unblocked.
 
 
 - OPT-035 held (T-0884, Ines): #113 card said the tool stays off; loss fell 2.227 to 0.079 per 100. Re-baseline a queued trial before starting it.
-- T-0831 done (38529d61): first filing green. 301.1 s / 420.0 s measured. T-0877 owes: lost space, docstring 480 s vs about 600 s; its lane proposal needs a non-author read (finding 2). T-0832 done, 3d8b69e6.
+- T-0877 owes: lost space, docstring 480 s vs about 600 s; its lane proposal needs a non-author read (finding 2).
 
-- T-0876 stopped twice on guard refusals, with Ines under rule 3. Second draft and unrun test in ops/runs-archive/t0827-held/t0876/r2/ (STOPPED.txt). Supervisor at HEAD. Finding E's board commit needs her yes.
+- T-0876 done (c06840c2, rows 240afbb4). Open: hook comment says "no log line", but it writes one shell Terminated line a tick. Held notes in t0876/r3/PAUSED.txt go to T-0880.
 
 ## Standing lessons (details in archive.md)
-- 2026-10-31 T-0871: board add and commit sent in one step: add refused (IDs taken), the commit landed with wrong IDs. Let add assign IDs, commit after. Check typed hash abbreviations against the output: one was wrong.
-- 2026-10-31 T-0498: stopped on a denied Bash call, four steps joined with &&, so I can't say which one tripped it. Third bundle after T-0853, T-0876. One step, one call, every time. Held: ops/runs-archive/t0498-held/STOPPED.txt.
-- 2026-10-31 T-0872 (1ee8a67b): a red under load is not a fold effect until an unfolded clone runs the same suite: one 240 s timeout was baseline, one was load, one was real (a test assumed live amendments). The check tool's 13 fails were the move itself: say so, don't hide them. Fold card waits for the Operator; applier refuses amendments.md, so hand-apply.
-- 2026-10-31 T-0831: a foreground wait past 5 minutes cost about $8 in one call (the cache goes cold); keep calls under 5 minutes. Give a mutant run a hang verdict: one unreaped child reads as alive for ever.
-- 2026-10-31 T-0876: second heredoc stop, after T-0874. Edit or Write for every code change, even a small tidy, no exceptions.
-- 2026-10-31 T-0874 (271406cd): check the plan against the Commandments before building. In zsh quote "${B}:path"; a golden file of 1835 bytes was empty. Goldens only see what their fixtures hold: two-decimal costs hid a rounding mutant. Read your own diff: it caught a dropped space.
-- 2026-10-31 T-0859: make_proposal.py stamps today's HEAD on claims proven at an older commit; pinned the base. Control first: unchanged template must rebuild the old file byte for byte.
-- 2026-10-31 T-0853: don't bundle work into one command: one refusal stopped four checks, and a stop is a stop even when the refusal looks false. Step 12 commits what a session leaves, so a stopped change goes to a held diff, not the tree. A control showing no change is a bug in the control.
+- 2026-11-01 T-0895/T-0876: I moved report days and ran only governor_test; supervisor_test pinned them too and stayed red a day. Grep every suite for what a change moves. Rehearse a gate's suites before the step that can't be undone: it caught this before the hook.
+- 2026-11-01 T-0876: BSD sed has no \b, a mask with it does nothing. A mask over blob hashes compares names only. A control must show the section can differ.
+- 2026-10-31 T-0871: let board add assign IDs, commit after. Check typed hash abbreviations against the output.
+- 2026-10-31 T-0498, T-0853, T-0876: one step, one call; a stop is a stop even when the refusal looks false. Edit or Write for every code change, no heredocs.
+- 2026-10-31 T-0872: a red under load is not an effect until a clean run shows the same suite. Say what the move itself broke; don't hide it. Applier refuses amendments.md.
+- 2026-10-31 T-0831: keep calls under 5 minutes (a cold cache cost about $8). Give a mutant run a hang verdict.
+- 2026-10-31 T-0874: check the plan against the Commandments before building. In zsh quote "${B}:path". Goldens only see what their fixtures hold. Read your own diff.
+- 2026-10-31 T-0859: control first: an unchanged template must rebuild the old file byte for byte.
+- 2026-10-31 T-0853: step 12 commits what a session leaves, so a stopped change goes to a held diff, not the tree. A control showing no change is a bug in the control.
 {% endraw %}
 
 

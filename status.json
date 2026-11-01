@@ -1,66 +1,66 @@
 {
  "schema": 1,
- "at": "2026-11-01T18:36:09.632921+00:00",
+ "at": "2026-11-01T19:20:40.359455+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-01T12:56:32-05:00"
+  "started": "2026-11-01T13:38:48-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "odalys",
-   "task": "[tools] T-0934 tick side changes",
+   "task": "[tools] T-0934 log why session stopped",
    "model": "opus",
-   "started": "2026-11-01T18:29:26.377Z",
+   "started": "2026-11-01T19:00:05.905Z",
    "seconds": null,
-   "finished": "2026-11-01T18:34:53.143000+00:00"
+   "finished": "2026-11-01T19:19:49.572000+00:00"
   },
   {
-   "name": "ines",
-   "task": "[plan] T-0934 refusals and proposal ruling",
+   "name": "idris",
+   "task": "[build] T-0675 lane margin ruling code",
    "model": "opus",
-   "started": "2026-11-01T18:29:18.671Z",
+   "started": "2026-11-01T18:45:04.702Z",
    "seconds": null,
-   "finished": "2026-11-01T18:33:18.668000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0934 first-run trip evidence",
-   "model": "opus",
-   "started": "2026-11-01T18:11:52.942Z",
-   "seconds": null,
-   "finished": "2026-11-01T18:28:44.419000+00:00"
+   "finished": "2026-11-01T19:10:29.641000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[site] T-0889 wording and cost page",
-   "model": "opus",
-   "started": "2026-11-01T17:58:27.907Z",
+   "task": "[tools] T-0940 suite timeouts under load",
+   "model": "sonnet",
+   "started": "2026-11-01T18:45:17.183Z",
    "seconds": null,
-   "finished": "2026-11-01T18:25:17.444000+00:00"
+   "finished": "2026-11-01T19:02:32.231000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-0943 tick header comment",
+   "model": "haiku",
+   "started": "2026-11-01T18:45:10.148Z",
+   "seconds": null,
+   "finished": "2026-11-01T18:45:38.678000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 143,
+  "runnable_count": 144,
   "blocked_count": 62
  },
  "meter": {
   "five_hour": {
-   "pct": 4.0,
-   "resets_at": "2026-11-01T22:00:00.395658+00:00",
+   "pct": 10.0,
+   "resets_at": "2026-11-01T22:00:00.037869+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 96.0,
+   "left": 90.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 10.0,
-   "resets_at": "2026-11-08T07:00:00.395682+00:00",
+   "pct": 11.0,
+   "resets_at": "2026-11-08T07:00:00.037888+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 90.0,
+   "left": 89.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -68,7 +68,7 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-01T12:56:31.995210-05:00"
+  "read_at": "2026-11-01T13:38:47.700817-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-01T13:37:00-05:00"
+  "at": "2026-11-01T14:22:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -218,27 +218,27 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T-0934 tick side changes",
-    "at": "2026-11-01T18:34:53.143000+00:00",
+    "t": "T-0934 log why session stopped",
+    "at": "2026-11-01T19:19:49.572000+00:00",
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "T-0934 refusals and proposal ruling",
-    "at": "2026-11-01T18:33:18.668000+00:00",
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0675 lane margin ruling code",
+    "at": "2026-11-01T19:10:29.641000+00:00",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T-0934 first-run trip evidence",
-    "at": "2026-11-01T18:28:44.419000+00:00",
+    "t": "T-0940 suite timeouts under load",
+    "at": "2026-11-01T19:02:32.231000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 143,
+   "next": 144,
    "wait": 28,
    "blocked": 34,
    "you": 8
@@ -249,7 +249,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "task_open",

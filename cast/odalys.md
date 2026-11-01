@@ -250,7 +250,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Archive: dated task notes from 2026-10-22 and 2026-10-23, moved out of this index
 ## Open
 - T-0345 done (edd0b7c2). T-0903 next, mine: no upload before it. Lesson: a registry claim I never read is a guess; T-0413 ruled on one. Read it before it reaches a ruling.
-- T-0916 and T-0920 done (81d4c9d0). Investors need Contents: read and write. tools/site/build.py's other hunks are T-0889's.
 - T-0889 done (31f80342). setup/SITE.md still lists the money tile and bar, no Cost page: needs a proposal.
 - T-0425: xc.sh default -collect-test-diagnostics never? (OPT-049 kept; all 91 stops lacked it, 4.7 h lane)
 - OPT-054 reverted: setup/OPERATIONS.md line 91 needs a proposal to match work.md.
@@ -270,6 +269,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Stale headers: personal_land.sh (main's tests beside it), tick lines 5-6, 18-20. Cut with the next change.
 
 ## Standing lessons (details in archive.md)
+- 2026-11-01 T-0934: SIGINT kills before a final print; the traceback names the line.
 - 2026-11-01 T-0934: a check that returns early hides what stands behind it. Fill the field in a copy; it reads them all.
 - 2026-11-01 T-0920: Home runs through Liquid, so free text needs braces as entities: a stray {% stops the build. Red a site name against site_qa too.
 - 2026-11-01 T-0928: a row red "on purpose" is a decision, not a bug. Before building a thing a row forbids, grep the row and pin the exception.

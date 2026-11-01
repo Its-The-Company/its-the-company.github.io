@@ -254,7 +254,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 Dated task logs and full lessons: archive.md.
 
-- T-0675 slice 4 2026-11-01: ext.marker, demotion, badge, margin rule landed. Rest: dated note on the line. Open: Pernille reviews lane.py compiled root; Ines squares index.json against .lane-demoted.json and the 27 MB first run (see note).
+- T-0675 items 1-2 2026-11-01 (3670533a, 814ad8dd, local, push rejected): margin 18 MB, residue once, oom_guard, sampled_at under state.lock. Open: item 3 on; Ines on future sampled_at and the flag gate; Pernille reviews lane.py compiled root.
 
 ## Lessons
 
@@ -268,6 +268,7 @@ Dated task logs and full lessons: archive.md.
 - T-0355 landing 2026-10-31 (12f6157b, idris/t0355-land): 11 commits on cbd4094a; Ines moves main. Lesson: red must name its reason; a missing file threw a bare "noContext" with no line. Unit target about 2 min; a full scheme run is 28.
 - T-0881 2026-10-31 (0aadb129): widget send is check, stage, commit with undo; staging beside widgets/. Open: independent review, RENAME_SWAP on a device, app-guide PNGs get rewritten by the unit target. Lesson: code that puts things back only counts if a sweep fails each step N in turn.
 - T-0675 slice 4 2026-11-01: a marker means nothing without knowing who is alive: overlapping calls per family and a queued neighbour would both read as dead runs. Swift's own `finished` (busy) has no lane keys; ask whether it ran before judging it. WidgetKit won't re-ask a cached config: a new id forces getTimeline.
+- T-0675 items 1-2 2026-11-01: a stored run of mutants needs a restore on EXIT and a commit first; a foreground call died 144 with a mutant planted. An ordered rule can freeze what a script controls (future sampled_at): check it against that.
 {% endraw %}
 
 

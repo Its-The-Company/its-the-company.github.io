@@ -1,45 +1,21 @@
 {
  "schema": 1,
- "at": "2026-11-01T11:07:30.019279+00:00",
+ "at": "2026-11-01T11:13:54.009898+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-01T02:59:47-05:00"
+  "kind": "morning",
+  "started": "2026-11-01T06:10:11-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] T-0878 Odalys last fix, breaks",
-   "model": "opus",
-   "started": "2026-11-01T10:18:40.483Z",
-   "seconds": null,
-   "finished": "2026-11-01T11:06:19.601000+00:00"
-  },
-  {
    "name": "ines",
-   "task": "[plan] T-0878 Ines rules delta read",
-   "model": "opus",
-   "started": "2026-11-01T10:14:51.106Z",
+   "task": "CEO writes the 6:00 a.m. report",
+   "model": "",
+   "started": "2026-11-01T11:10:33.244Z",
    "seconds": null,
-   "finished": "2026-11-01T10:18:31.386000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[review] T-0878 Idris delta read",
-   "model": "opus",
-   "started": "2026-11-01T10:05:00.689Z",
-   "seconds": null,
-   "finished": "2026-11-01T10:14:43.302000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-0878 Ines clock correction",
-   "model": "opus",
-   "started": "2026-11-01T10:05:21.564Z",
-   "seconds": null,
-   "finished": "2026-11-01T10:05:57.122000+00:00"
+   "finished": "2026-11-01T11:12:09.949000+00:00"
   }
  ],
  "queue": {
@@ -50,17 +26,17 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
-   "resets_at": "2026-11-01T11:59:59.924962+00:00",
+   "pct": 21.0,
+   "resets_at": "2026-11-01T12:00:00.323050+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 95.0,
+   "left": 79.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 1.0,
-   "resets_at": "2026-11-08T06:59:59.924986+00:00",
+   "pct": 4.0,
+   "resets_at": "2026-11-08T07:00:00.323074+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 99.0,
+   "left": 96.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -68,7 +44,7 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-01T02:59:46.539917-05:00"
+  "read_at": "2026-11-01T06:10:09.194153-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -87,7 +63,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-01T06:09:00-05:00"
+  "at": "2026-11-01T06:15:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -216,24 +192,9 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0878 Odalys last fix, breaks",
-    "at": "2026-11-01T11:06:19.601000+00:00",
-    "o": "c"
-   },
-   {
     "w": "Ines",
-    "k": "plan",
-    "t": "T-0878 Ines rules delta read",
-    "at": "2026-11-01T10:18:31.386000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "review",
-    "t": "T-0878 Idris delta read",
-    "at": "2026-11-01T10:14:43.302000+00:00",
+    "t": "CEO writes the 6:00 a.m",
+    "at": "2026-11-01T11:12:09.949000+00:00",
     "o": "c"
    }
   ],
@@ -249,8 +210,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
-  "task_done",
   "task_title",
   "task_open",
   "lane_task",

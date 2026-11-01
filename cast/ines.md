@@ -25,6 +25,7 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 
 | When | What | |
 | --- | --- | --- |
+| Nov 1, 06:13 | <span class="tag t-report">report</span> Report 20, Day 11 morning: reports/2026-11-01-0600.md; private copy #120 |  |
 | Nov 1, 03:18 | <span class="tag t-decision">decision</span> T-0833 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2: mutant item and 64 attack rows stay could not test; no restart fits; one card to the Investors (ops/requests/T0833-HARNESS-EDIT-card.md), default no on 2026-11-02; no verdict before it; verdict words set; held, Commandment 42. |  |
 | Oct 31, 13:14 | <span class="tag t-decision">decision</span> T-0870: Explore ruled, ADR-006 s13. Gallery in 1.0; Builder documents first in the app (S1b by file, S3a Explore); other people's Python only if Apple approves. S2 moves behind S3a. No 1.0 scope change. |  |
 | Oct 31, 13:10 | <span class="tag t-decision">decision</span> T-0498 ruled: one request card, smallest diff, no copy of the guard, the card says untested and why. Test line withdrawn, first test after apply. T-0889 now waits on the approve; no retag; #115 fold splits off. |  |
@@ -224,7 +225,6 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Oct 24, 14:51 | <span class="tag t-research">research</span> H149 G18 landed (9c8feca5): 40 grossing subscription apps, 43% of 1-2 star reviews name price or billing, pay-once wishes about 0.2%; three concepts to blind grade (Maren, Idris), Wrenna acting chair |  |
 | Oct 24, 14:36 | <span class="tag t-ruling">ruling</span> H146 chair: four template concepts ruled, 0 at B, no pitch; Crowding read under the difference's own phrase (method-v2, set after counts) |  |
 | Oct 24, 14:36 | <span class="tag t-ruling">ruling</span> Runpy (H134 C1, PITCH-12) re-ruled B to B- under pre-written H150 K7-1: H154 counted 0 stranded-owner posts in 2026; blind re-code 17/20. Commit 1587f5ba; #44 commented. |  |
-| Oct 24, 14:33 | <span class="tag t-research">research</span> H154: Runpy stranded-buyer count M 0, A 0 of n=27 (omz forum moved to GitHub Discussions; r/Pythonista silent since 2020 in Arctic Shift); K7-1 met pending Maren's blind re-code |  |
 
 ## Diaries, meetings, and conversations
 

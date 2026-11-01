@@ -258,18 +258,17 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 
 - OPT-035 held (T-0884, Ines): #113 card said the tool stays off; loss fell 2.227 to 0.079 per 100. Re-baseline a queued trial before starting it.
-- T-0877 owes: lost space, docstring 480 s vs about 600 s; its lane proposal needs a non-author read (finding 2).
+- T-0878: start from t0878/resume.txt. 26 of 31 breaks, 0 survivors, next 27; then run.sh, filing, 0 of 2 used. No further read: T-0880 has that delta.
 
 - T-0876 done (c06840c2, rows 240afbb4). Open: hook comment says "no log line", but it writes one shell Terminated line a tick. Held notes in t0876/r3/PAUSED.txt go to T-0880.
 
+- T-0498 filed (f12bcaa8): after approve, step 4, then tick. Ledger OPT-062 is not its metric.
+
 ## Standing lessons (details in archive.md)
+- 2026-11-01 T-0878: this shell is zsh: an unquoted $P doesn't split. Edit can drop a trailing space, so end old and new on a word. Bash -n before a run.
+- 2026-11-01 T-0878: before running a test that copies tools out of the checkout, grep every copied file for what a stopped effect names. I checked only the lane and found governor after about 30 runs. Not refused is not fine, and landing a test can clear it, so ask first. A count I state needs a reading behind it. In place edits by script broke my own Edit-or-Write line again.
 - 2026-11-01 T-0895/T-0876: I moved report days and ran only governor_test; supervisor_test pinned them too and stayed red a day. Grep every suite for what a change moves. Rehearse a gate's suites before the step that can't be undone: it caught this before the hook.
 - 2026-11-01 T-0876: BSD sed has no \b, a mask with it does nothing. A mask over blob hashes compares names only. A control must show the section can differ.
-- 2026-10-31 T-0871: let board add assign IDs, commit after. Check typed hash abbreviations against the output.
-- 2026-10-31 T-0498, T-0853, T-0876: one step, one call; a stop is a stop even when the refusal looks false. Edit or Write for every code change, no heredocs.
-- 2026-10-31 T-0872: a red under load is not an effect until a clean run shows the same suite. Say what the move itself broke; don't hide it. Applier refuses amendments.md.
-- 2026-10-31 T-0831: keep calls under 5 minutes (a cold cache cost about $8). Give a mutant run a hang verdict.
-- 2026-10-31 T-0874: check the plan against the Commandments before building. In zsh quote "${B}:path". Goldens only see what their fixtures hold. Read your own diff.
 - 2026-10-31 T-0859: control first: an unchanged template must rebuild the old file byte for byte.
 - 2026-10-31 T-0853: step 12 commits what a session leaves, so a stopped change goes to a held diff, not the tree. A control showing no change is a bug in the control.
 {% endraw %}

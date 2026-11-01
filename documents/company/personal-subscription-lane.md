@@ -173,6 +173,51 @@ Order: T-0831 lands, then T-0877, then T-0878. T-0874, T-0875 and T-0876 can sta
 </div>
 
 
+### The tick's launchd job: draft, not loaded
+
+T-0878, Odalys, 2026-11-01. Text only. Nothing here is installed or loaded, and T-0879's trip carries it. One file per account, one letter each: `com.company.personal-tick.a.plist`, then `b` by changing `__ID__`. It is the company supervisor's template with six differences, and each has a reason:
+
+1. **Own label and argument.** One job per account, `tools/personal_tick.sh <id>`, so neither account waits for the other.
+2. **No `RunAtLoad`.** Loading a job starts nothing; the first run comes one interval later. The supervisor's job runs at load because it has work to do at once. This one does nothing until an Investor's switch says so.
+3. **Its own log, `ops/runs/personal-tick-__ID__.log`.** Same folder as the other templates, so an installer learns no new token (chair, T-0879). git ignores that folder. The tick prints nothing while the switch is off.
+4. **`PATH` is the only variable.** The tick sets the lane's own variables itself. A key in the job's environment would be refused by preflight.
+5. **The interval is 900 s, the supervisor's.** launchd starts no second run of a job still running, so a session of any length holds the next tick. With the switch off a tick is one local read of `investors/billing.json` and no fetch.
+6. **`ExitTimeOut` is 150 s.** launchd's default is 20 s, and then it <span title="A test written in advance. If it fires, we drop the idea.">kills</span> the whole group. A stop has to give the session its 120 s from SIGTERM to SIGKILL, and the keeper its 10 s after that.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.company.personal-tick.__ID__</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>__REPO__/tools/personal_tick.sh</string>
+    <string>__ID__</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>__REPO__</string>
+  <key>StartInterval</key>
+  <integer>900</integer>
+  <key>ExitTimeOut</key>
+  <integer>150</integer>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>__PATH__</string>
+  </dict>
+  <key>StandardOutPath</key>
+  <string>__REPO__/ops/runs/personal-tick-__ID__.log</string>
+  <key>StandardErrorPath</key>
+  <string>__REPO__/ops/runs/personal-tick-__ID__.log</string>
+</dict>
+</plist>
+```
+
+`__REPO__` must be the main checkout: the tick refuses a worktree, and M5's local half of the switch reads the tree the code runs from. `__PATH__` is the supervisor's value.
+
 ## Draft proposal, not filed
 
 Needs an Investor's "approve" (Commandment 59: anything in `investors/`). Checked with `git apply --check` at c60e98c4. T-0879 files it.

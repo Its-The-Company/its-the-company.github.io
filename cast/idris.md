@@ -256,6 +256,8 @@ Dated task logs and full lessons: archive.md.
 
 ## Lessons
 
+- 2026-11-01: on Python 3.9+, Popen.send_signal polls first, so it reaps. A child you must not reap gets os.kill. Read the stdlib, not the name.
+
 - StoreKit testing lessons (unfinished, Ask to Buy, SKTestSession, refunds): archive.md, moved 2026-10-28.
 - T-0583/T-0589 notes, T-0611/T-0613 caret lessons: archive.md (moved 2026-10-28).
 

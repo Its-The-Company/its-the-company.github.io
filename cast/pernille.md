@@ -110,13 +110,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
-- 2026-10-30 T-0679: bound-fields.md on main; stub on branch pernille/t0679-bound-fields (43e10db3), merges only when T-0682 starts. Names review T-0797. Lesson: ADR says ProgressBar, code says ProgressView; read the code before the names.
-- 2026-10-30 T-0814 (9e89fc4a): pywidget/docs/reviews/*.md is published under Documents, the board shows on Home: unfixed security detail goes in the handback only (C42). Re-review T-0815 if asked.
-- 2026-10-31 T-0841 rerun: PASS, 8 of 8. Lessons: a fallback catches raises, not misreads; fix a rerun's table up front; test a checker's own failure path; read every output a tool writes; a guard copy must have the change committed. T-0740, T-0299 still mine (archive).
-- 2026-10-31 T-0862 (a35a4d00): never state a step's result before reading its output, even mid-run.
-- 2026-10-31: on an independent read, open a packet's chair file alone and check its first line before reading anything else.
-- 2026-10-31 T-0886 (ce660a22): T-0684 pass. Lesson: tests that share a Simulator inherit each other's folders; check what state a test really starts in, not what its comment says. Maren's unset VoiceOver row is open (T-0891).
 - 2026-10-31 T-0900: a host `swiftc` harness plus an hdiutil APFS image reaches a real full disk with no Xcode. rename and RENAME_SWAP end ENOSPC too, so undo fails with the step it undoes: count a failure's cause, not two failures. Stubs in pywidget/docs/reviews/t0881-t0900-evidence/. Macs have no `timeout`.
+- 2026-11-01 T-0833 lane half: stopped, no verdict, with Ines (held state file). Lessons: a catch-all that prints "held" hides a crash, so count rows by what they reached, not the last line; after a refusal the Write tool that would land the same text is the way round, not the fix.
 - 2026-10-31 T-0860 (e616b3a6): in WidgetKit's extension a live date Text fills its row; fixed_size on it crashed the extension. Words after it go in Text suffix. Open: Maren's read, Idris on suffix, the crash. Tree experiments need no rebuild: 12 files in a temp dir, id new_widget, pads claim accessoryInline.
 {% endraw %}
 

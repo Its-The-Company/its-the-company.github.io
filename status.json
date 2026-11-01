@@ -1,66 +1,66 @@
 {
  "schema": 1,
- "at": "2026-11-01T07:55:41.400853+00:00",
+ "at": "2026-11-01T11:07:30.019279+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-01T02:07:42-05:00"
+  "started": "2026-11-01T02:59:47-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "odalys",
-   "task": "[tools] T-0876 fix rows, finish push path",
+   "task": "[tools] T-0878 Odalys last fix, breaks",
    "model": "opus",
-   "started": "2026-11-01T07:45:23.634Z",
+   "started": "2026-11-01T10:18:40.483Z",
    "seconds": null,
-   "finished": "2026-11-01T07:54:48.604000+00:00"
+   "finished": "2026-11-01T11:06:19.601000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[tools] T-0876 personal lane push path",
+   "name": "ines",
+   "task": "[plan] T-0878 Ines rules delta read",
    "model": "opus",
-   "started": "2026-11-01T07:09:52.019Z",
+   "started": "2026-11-01T10:14:51.106Z",
    "seconds": null,
-   "finished": "2026-11-01T07:44:51.036000+00:00"
+   "finished": "2026-11-01T10:18:31.386000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[tools] T-0877 file the lane proposal",
+   "name": "idris",
+   "task": "[review] T-0878 Idris delta read",
    "model": "opus",
-   "started": "2026-11-01T07:30:11.839Z",
+   "started": "2026-11-01T10:05:00.689Z",
    "seconds": null,
-   "finished": "2026-11-01T07:33:11.584000+00:00"
+   "finished": "2026-11-01T10:14:43.302000+00:00"
   },
   {
-   "name": "pernille",
-   "task": "[review] T-0877 stop flag lines read",
+   "name": "ines",
+   "task": "[plan] T-0878 Ines clock correction",
    "model": "opus",
-   "started": "2026-11-01T07:26:09.246Z",
+   "started": "2026-11-01T10:05:21.564Z",
    "seconds": null,
-   "finished": "2026-11-01T07:29:58.241000+00:00"
+   "finished": "2026-11-01T10:05:57.122000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 139,
-  "blocked_count": 65
+  "runnable_count": 137,
+  "blocked_count": 68
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
-   "resets_at": null,
+   "pct": 5.0,
+   "resets_at": "2026-11-01T11:59:59.924962+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 100.0,
+   "left": 95.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 0.0,
-   "resets_at": "2026-11-08T07:00:00+00:00",
+   "pct": 1.0,
+   "resets_at": "2026-11-08T06:59:59.924986+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 100.0,
+   "left": 99.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -68,7 +68,7 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-01T02:07:41.953552-05:00"
+  "read_at": "2026-11-01T02:59:46.539917-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-01T02:57:00-05:00"
+  "at": "2026-11-01T06:09:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -218,30 +218,30 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T-0876 fix rows, finish push path",
-    "at": "2026-11-01T07:54:48.604000+00:00",
+    "t": "T-0878 Odalys last fix, breaks",
+    "at": "2026-11-01T11:06:19.601000+00:00",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0876 personal lane push path",
-    "at": "2026-11-01T07:44:51.036000+00:00",
+    "w": "Ines",
+    "k": "plan",
+    "t": "T-0878 Ines rules delta read",
+    "at": "2026-11-01T10:18:31.386000+00:00",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0877 file the lane proposal",
-    "at": "2026-11-01T07:33:11.584000+00:00",
+    "w": "Idris",
+    "k": "review",
+    "t": "T-0878 Idris delta read",
+    "at": "2026-11-01T10:14:43.302000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 139,
+   "next": 137,
    "wait": 31,
-   "blocked": 34,
-   "you": 8
+   "blocked": 37,
+   "you": 9
   }
  },
  "qr": [],

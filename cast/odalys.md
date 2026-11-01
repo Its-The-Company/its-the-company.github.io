@@ -258,7 +258,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 
 - OPT-035 held (T-0884, Ines): #113 card said the tool stays off; loss fell 2.227 to 0.079 per 100. Re-baseline a queued trial before starting it.
-- T-0878: start from t0878/resume.txt. 26 of 31 breaks, 0 survivors, next 27; then run.sh, filing, 0 of 2 used. No further read: T-0880 has that delta.
+- T-0878 filed (638e51f5). T-0879 step 2 done (222a9e62); item 3 after it lands, from its state file. Lesson: measure a grep's reach before excluding from it; words can trip a test.
 
 - T-0876 done (c06840c2, rows 240afbb4). Open: hook comment says "no log line", but it writes one shell Terminated line a tick. Held notes in t0876/r3/PAUSED.txt go to T-0880.
 

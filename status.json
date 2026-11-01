@@ -1,21 +1,37 @@
 {
  "schema": 1,
- "at": "2026-11-01T11:13:54.009898+00:00",
+ "at": "2026-11-01T11:42:47.297750+00:00",
  "session": {
   "active": true,
-  "kind": "morning",
-  "started": "2026-11-01T06:10:11-05:00"
+  "kind": "work",
+  "started": "2026-11-01T06:16:24-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "ines",
-   "task": "CEO writes the 6:00 a.m. report",
-   "model": "",
-   "started": "2026-11-01T11:10:33.244Z",
+   "task": "[plan] T-0879 exclusion ruling",
+   "model": "opus",
+   "started": "2026-11-01T11:39:25.658Z",
    "seconds": null,
-   "finished": "2026-11-01T11:12:09.949000+00:00"
+   "finished": "2026-11-01T11:42:20.087000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-0879 step 2 fixes",
+   "model": "opus",
+   "started": "2026-11-01T11:31:09.281Z",
+   "seconds": null,
+   "finished": "2026-11-01T11:39:16.983000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-0878 resume breaks and file",
+   "model": "opus",
+   "started": "2026-11-01T11:17:29.442Z",
+   "seconds": null,
+   "finished": "2026-11-01T11:30:49.566000+00:00"
   }
  ],
  "queue": {
@@ -63,7 +79,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-01T06:15:00-05:00"
+  "at": "2026-11-01T06:44:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -193,8 +209,23 @@
   "done": [
    {
     "w": "Ines",
-    "t": "CEO writes the 6:00 a.m",
-    "at": "2026-11-01T11:12:09.949000+00:00",
+    "k": "plan",
+    "t": "T-0879 exclusion ruling",
+    "at": "2026-11-01T11:42:20.087000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0879 step 2 fixes",
+    "at": "2026-11-01T11:39:16.983000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0878 resume breaks and file",
+    "at": "2026-11-01T11:30:49.566000+00:00",
     "o": "c"
    }
   ],
@@ -210,6 +241,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "task_done",
   "task_title",
   "task_open",
   "lane_task",

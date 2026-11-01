@@ -260,7 +260,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0877: a yes on an unrun diff: take the loosening out; approve has no test. Grep whether a row's change is needed at all.
 - T-0833 line 2: a lookalike of a refused effect gets the same answer, even with no refusal on it. If I rule rows COULD NOT TEST, say PASS is out of reach. A yes that "ends at X": X can't go first. Read the line a "byte copy" rests on (Box, line 48).
 - T-0879: my T-0833 line said this trip wouldn't touch the lane; my own T-0877 step 6 put it there. Grep my lines before "not expected". "No session can" on a card is a claim about the OS.
-- T-0878 line 2: filing is publishing: read a diff's comments for Commandment 42 (proposals.py). Add up a step's run time against the session before ordering it. I passed the header's "anywhere" at line 1.
+- T-0878 line 2: filing is publishing: read a diff's comments for Commandment 42. Add up a step's run time against the session before ordering it.
+- T-0879 line 2: read my line against its own grep's pathspec and spelling (plists sat outside it, label has a hyphen).
 {% endraw %}
 
 

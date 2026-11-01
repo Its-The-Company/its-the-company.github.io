@@ -1,14 +1,47 @@
 {
  "schema": 1,
- "at": "2026-11-01T22:41:47.593287+00:00",
+ "at": "2026-11-01T23:08:26.556086+00:00",
  "session": {
   "active": true,
-  "kind": "inbox",
-  "started": "2026-11-01T17:40:58-05:00"
+  "kind": "evening",
+  "started": "2026-11-01T18:00:10-05:00"
  },
  "workers": [],
  "who": "",
- "recent": [],
+ "recent": [
+  {
+   "name": "ines",
+   "task": "[report] evening",
+   "model": "opus",
+   "started": "2026-11-01T23:01:02.793Z",
+   "seconds": null,
+   "finished": "2026-11-01T23:07:03.876Z"
+  },
+  {
+   "name": "worker",
+   "task": "[diary] Ines",
+   "model": "haiku",
+   "started": "2026-11-01T23:00:30.976Z",
+   "seconds": null,
+   "finished": "2026-11-01T23:00:50.008000+00:00"
+  },
+  {
+   "name": "worker",
+   "task": "[diary] Idris",
+   "model": "haiku",
+   "started": "2026-11-01T23:00:28.175Z",
+   "seconds": null,
+   "finished": "2026-11-01T23:00:48.684000+00:00"
+  },
+  {
+   "name": "worker",
+   "task": "[talk] Idris and Odalys",
+   "model": "haiku",
+   "started": "2026-11-01T23:00:35.743Z",
+   "seconds": null,
+   "finished": "2026-11-01T23:00:46.898000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -18,14 +51,14 @@
  "meter": {
   "five_hour": {
    "pct": 0.0,
-   "resets_at": null,
+   "resets_at": "2026-11-02T03:40:00.491335+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 14.0,
-   "resets_at": "2026-11-08T07:00:00.117060+00:00",
+   "resets_at": "2026-11-08T07:00:00.491355+00:00",
    "used_words": "of your weekly allowance used",
    "left": 86.0,
    "left_words": "of your weekly allowance left"
@@ -35,11 +68,11 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-01T17:40:57.724670-05:00"
+  "read_at": "2026-11-01T18:00:08.350770-05:00"
  },
  "ui": {
-  "week_pct": 0.028,
-  "five_hour_pct": 0.0,
+  "week_pct": 0.044,
+  "five_hour_pct": 0.096,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -66,7 +99,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-01T17:45:00-05:00"
+  "at": "2026-11-01T18:10:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -193,7 +226,29 @@
     "o": "c"
    }
   ],
-  "done": [],
+  "done": [
+   {
+    "w": "Ines",
+    "k": "report",
+    "t": "Evening",
+    "at": "2026-11-01T23:07:03.876Z",
+    "o": "c"
+   },
+   {
+    "w": "Worker",
+    "k": "diary",
+    "t": "Ines",
+    "at": "2026-11-01T23:00:50.008000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Worker",
+    "k": "diary",
+    "t": "Idris",
+    "at": "2026-11-01T23:00:48.684000+00:00",
+    "o": "c"
+   }
+  ],
   "count": {
    "next": 158,
    "wait": 28,
@@ -202,10 +257,23 @@
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6564986495",
+   "state": "in_progress",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "LOCK IN"
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
+  "task_done",
   "task_title",
   "task_open",
   "lane_task",

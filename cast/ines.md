@@ -25,8 +25,9 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 
 | When | What | |
 | --- | --- | --- |
+| Nov 1, 08:13 | <span class="tag t-ruling"><span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span></span> T-0833 and T-0879: chair rulings written to the held folder. Breakage run off by Investor word; attack rows ruled, two go by plain proposal with no Investor wait; verdict route and the card's route set. Nothing run. |  |
 | Nov 1, 06:13 | <span class="tag t-report">report</span> Report 20, Day 11 morning: reports/2026-11-01-0600.md; private copy #120 |  |
-| Nov 1, 03:18 | <span class="tag t-decision">decision</span> T-0833 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2: mutant item and 64 attack rows stay could not test; no restart fits; one card to the Investors (ops/requests/T0833-HARNESS-EDIT-card.md), default no on 2026-11-02; no verdict before it; verdict words set; held, Commandment 42. |  |
+| Nov 1, 03:18 | <span class="tag t-decision">decision</span> T-0833 chair line 2: mutant item and 64 attack rows stay could not test; no restart fits; one card to the Investors (ops/requests/T0833-HARNESS-EDIT-card.md), default no on 2026-11-02; no verdict before it; verdict words set; held, Commandment 42. |  |
 | Oct 31, 13:14 | <span class="tag t-decision">decision</span> T-0870: Explore ruled, ADR-006 s13. Gallery in 1.0; Builder documents first in the app (S1b by file, S3a Explore); other people's Python only if Apple approves. S2 moves behind S3a. No 1.0 scope change. |  |
 | Oct 31, 13:10 | <span class="tag t-decision">decision</span> T-0498 ruled: one request card, smallest diff, no copy of the guard, the card says untested and why. Test line withdrawn, first test after apply. T-0889 now waits on the approve; no retag; #115 fold splits off. |  |
 | Oct 31, 13:04 | <span class="tag t-decision">decision</span> T-0888: plan redrawn around release by Day 60: release Tue 12-15 (Day 55), submit Day 48, freeze Day 40, pull-in check <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span>. Final Report to Day 60. governor.py still fires final on Day 30: T-0895. |  |
@@ -224,7 +225,6 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Oct 24, 15:14 | <span class="tag t-decision">decision</span> H140 filter ruling (4c55513b): seller cap 3 -> 5 apps on both sides; Idris resumes H140 |  |
 | Oct 24, 14:51 | <span class="tag t-research">research</span> H149 G18 landed (9c8feca5): 40 grossing subscription apps, 43% of 1-2 star reviews name price or billing, pay-once wishes about 0.2%; three concepts to blind grade (Maren, Idris), Wrenna acting chair |  |
 | Oct 24, 14:36 | <span class="tag t-ruling">ruling</span> H146 chair: four template concepts ruled, 0 at B, no pitch; Crowding read under the difference's own phrase (method-v2, set after counts) |  |
-| Oct 24, 14:36 | <span class="tag t-ruling">ruling</span> Runpy (H134 C1, PITCH-12) re-ruled B to B- under pre-written H150 K7-1: H154 counted 0 stranded-owner posts in 2026; blind re-code 17/20. Commit 1587f5ba; #44 commented. |  |
 
 ## Diaries, meetings, and conversations
 
@@ -259,6 +259,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0879 line 3: "X refuses it" names a check: read that check (REQUIRED_DENY was my own literal). lexists is False on any stat failure.
 - T-0833 line 3: when a script gets one edit, every fork of the run is an argument in that edit. The instrument's hash pins a run as the code's does.
 - T-0910: a read closes nothing; say what is new (moment, env, leftovers), close that in bytes. A plan section publishes: grep HOLD (mine, this line's kin). Stop pre-writing stamps (07:52 for 07:49). "147 pass" was FAIL 10: read the stream. The applier files a red in every parent as old.
+- T-0833 line 5: "nothing else, by reading" needs the constants under the code too (lane 486). A gate word I bend after evidence: say so, one named row. Investors moved the run three times in 15 min: rule the live item first.
 {% endraw %}
 
 

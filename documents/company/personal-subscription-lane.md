@@ -132,6 +132,8 @@ T-0828, first slice, Odalys, 2026-10-31. Amendments of 2026-10-31 10:50, 10:52 a
 
 **The button (T-0847).** The page and the built site hold only `a` and `b`. The names come from `investors/personal_accounts.json`, shaped `{"a": "<label>", "b": "<label>"}`, read by the Contents API with the Investor's saved token after the page has loaded. An Investor commits that file by hand: a proposal's diff shows on Company > Infrastructure, so it never goes through the applier. No file, and the button says "Account a". A test greps the built site for the labels. Enabling writes the account's two keys in one commit.
 
+Built 2026-11-01, ahead of T-0828 and T-0833 by the Operator's scope change (#41 c6558264415), and off: `LIVE = False` in `tools/site/personal.py` is the one gate, and with it False the site ships no tile, no script and no `assets/personal.js` (`tests/site_personal_test.py`, with the gate-on build as its control). The state for a reader without a token comes from the build's local `origin/main`, so it is as old as the last build; a token holder reads GitHub. Mode changes only at enabling, so a live account changes mode by off, then on.
+
 ### 2. Is a second folder covered? By reading; the guard was not asked
 
 Yes, if the folders nest as above. No guard change and no settings change for a second account.
@@ -297,9 +299,18 @@ The security guard and permission rules cover the profile directory and refuse c
 **Turn it on and off.** Each account has its own switch and its own mode.
 
 1. Comment "approve" on the trip card the Operator posts, then make the one trip it describes, at a Terminal on the Mac mini. The approve alone changes nothing: the trip's commit adds both accounts' switches, set to off, and both modes, set to Spread.
-2. To turn your account on, commit `personal_lane_a` as `true` in `investors/billing.json` at GitHub. It lands at the company's next pull. The supervisor pulls at the start of each tick, every 15 minutes, and no tick starts while a session runs; a session can run up to 150 minutes. If the pull keeps failing, the lane stays off and says the switch is off while GitHub shows it on. A site button may replace this later; it will let you pick the account and the mode.
+2. To turn your account on, commit `personal_lane_a` as `true` in `investors/billing.json` at GitHub. It lands at the company's next pull. The supervisor pulls at the start of each tick, every 15 minutes, and no tick starts while a session runs; a session can run up to 150 minutes. If the pull keeps failing, the lane stays off and says the switch is off while GitHub shows it on. A site button for this and for step 4 is built and stays off until the lane's review passes; see "The site button" below. These steps keep working either way.
 3. To pick the mode, set `personal_lane_a_lock_in`. `false` is Spread: sessions keep to an even daily share of your week. `true` is Lock In: no daily share, so one session at a time uses what is left of your week. Your 5-hour hold at 90% and your weekly limit hold in both. The mode stays as you set it until you change it; unlike the company's Lock In, it doesn't end at midnight.
 4. To turn your account off, commit `personal_lane_a` as `false` at GitHub. No pull is needed. A change made only on the Mac stops the lane at once but may not last, because a pull can keep GitHub's version, so the off is a commit at GitHub. No new session starts. A running session stops at most 8 minutes after the commit reaches GitHub, or about 10 if every git call hangs (the design's limits, 480 s and about 600 s). Measured once each at the real timings, with a stand-in for GitHub on this Mac and a stand-in session, and the off commit landing just after a check: 301 seconds for a session that obeys the stop signal, 420 seconds for one that ignores it. The other account isn't affected.
+
+**The site button.** Not live yet: the Operator says so on #41 when it is. Until then the site shows none of this.
+
+1. Your saved site token needs Contents: read and write. The key the site's setup makes has Contents: read, so change that key on GitHub first (Settings, Developer settings, your token). Without it the button says so and sends nothing.
+2. Home, Overview, with your token: each account shows On or Off. To turn yours on, pick Spread or Lock In, tap Turn on, and tap again within 5 seconds. To turn it off, tap Turn off twice. To change the mode, turn it off and on again.
+3. Each change is one commit to `investors/billing.json` from your own GitHub account, the same keys as steps 2 to 4 above, with the same timings. Off needs only that file, so it works when on has failed.
+4. The button doesn't check which account is yours. Turn on only your own; each account runs only after its owner agrees and signs in.
+5. The rows say "Account a" and "Account b" unless you add names. To add them, one of you commits `investors/personal_accounts.json` at GitHub, shaped `{"a": "<name>", "b": "<name>"}`. The names load in your browser with your token and never reach the public site. Don't send that file through a proposal: a proposal's diff is published.
+6. Without a token, a reader sees the state on a wide screen and no button.
 
 PAUSE and STOP stop every account as well as the company.
 

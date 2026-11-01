@@ -1,66 +1,66 @@
 {
  "schema": 1,
- "at": "2026-11-01T12:54:21.928285+00:00",
+ "at": "2026-11-01T13:44:48.563848+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-01T06:46:59-05:00"
+  "started": "2026-11-01T07:56:56-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "odalys",
-   "task": "[tools] T-0910 plan edit and tick rows",
+   "task": "[tools] T-0915 land follow-on",
    "model": "opus",
-   "started": "2026-11-01T12:50:30.018Z",
+   "started": "2026-11-01T12:59:32.105Z",
    "seconds": null,
-   "finished": "2026-11-01T12:54:03.926000+00:00"
+   "finished": "2026-11-01T13:44:23.802000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-0847 lane on/off button",
+   "model": "opus",
+   "started": "2026-11-01T13:03:46.038Z",
+   "seconds": null,
+   "finished": "2026-11-01T13:21:58.124000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-0833 lane fix proposal",
+   "model": "opus",
+   "started": "2026-11-01T13:14:08.503Z",
+   "seconds": null,
+   "finished": "2026-11-01T13:17:37.276000+00:00"
   },
   {
    "name": "ines",
-   "task": "[plan] T-0910 chair read of results",
+   "task": "[plan] T-0908 rule read-3 and slots",
    "model": "opus",
-   "started": "2026-11-01T12:37:34.191Z",
+   "started": "2026-11-01T12:59:18.758Z",
    "seconds": null,
-   "finished": "2026-11-01T12:50:16.390000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-0833 speed-up chair ruling",
-   "model": "opus",
-   "started": "2026-11-01T12:41:45.806Z",
-   "seconds": null,
-   "finished": "2026-11-01T12:48:48.441000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-0879 second delta read",
-   "model": "opus",
-   "started": "2026-11-01T12:41:16.306Z",
-   "seconds": null,
-   "finished": "2026-11-01T12:44:51.422000+00:00"
+   "finished": "2026-11-01T13:13:47.777000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
   "runnable_count": 141,
-  "blocked_count": 66
+  "blocked_count": 64
  },
  "meter": {
   "five_hour": {
-   "pct": 23.0,
-   "resets_at": "2026-11-01T11:59:59.825878+00:00",
+   "pct": 7.0,
+   "resets_at": "2026-11-01T16:59:59.805551+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 77.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 4.0,
-   "resets_at": "2026-11-08T06:59:59.825897+00:00",
+   "pct": 6.0,
+   "resets_at": "2026-11-08T06:59:59.805573+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 96.0,
+   "left": 94.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -68,7 +68,7 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-01T06:46:58.399509-05:00"
+  "read_at": "2026-11-01T07:56:55.451305-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-01T07:56:00-05:00"
+  "at": "2026-11-01T08:46:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -167,13 +167,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Opus high, under T-0908, before T-0880 starts",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "After the lane",
     "s": "next",
     "o": "c"
@@ -212,35 +205,42 @@
     "t": "MacBook runner follow-ups",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Runner rule",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T-0910 plan edit and tick rows",
-    "at": "2026-11-01T12:54:03.926000+00:00",
+    "t": "T-0915 land follow-on",
+    "at": "2026-11-01T13:44:23.802000+00:00",
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "T-0910 chair read of results",
-    "at": "2026-11-01T12:50:16.390000+00:00",
+    "w": "Odalys",
+    "k": "site",
+    "t": "T-0847 lane on/off button",
+    "at": "2026-11-01T13:21:58.124000+00:00",
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "T-0833 speed-up chair ruling",
-    "at": "2026-11-01T12:48:48.441000+00:00",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0833 lane fix proposal",
+    "at": "2026-11-01T13:17:37.276000+00:00",
     "o": "c"
    }
   ],
   "count": {
    "next": 141,
    "wait": 30,
-   "blocked": 36,
+   "blocked": 34,
    "you": 9
   }
  },

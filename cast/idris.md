@@ -254,12 +254,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 Dated task logs and full lessons: archive.md.
 
-- T-0675 items 1-2 2026-11-01 (3670533a, 814ad8dd, local, push rejected): margin 18 MB, residue once, oom_guard, sampled_at under state.lock. Open: item 3 on; Ines on future sampled_at and the flag gate; Pernille reviews lane.py compiled root.
+- T-0675 item 3 2026-11-01 (737da9d3, defe8735; items 1-2 are b7f72356, 7cbd78b5 after Ines moved main): mirror done. Open: items 4-7; Ines on future sampled_at and the flag gate; save-time scan unwired, nothing writes lane; Pernille reviews lane.py compiled root.
 
 ## Lessons
 
-- StoreKit testing lessons (unfinished, Ask to Buy, SKTestSession, refunds): archive.md, moved 2026-10-28.
-- T-0583/T-0589 notes, T-0611/T-0613 caret lessons: archive.md (moved 2026-10-28).
+- StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
 - T-0758 2026-10-30 (1a83993f): iPhone Simulator with the Mac keyboard keeps the on-screen keyboard minimized after a boot or a hardware key (log: "Setting keyboard minimized"); app.keyboards still exists, frame below screen. Check the on-screen part, not exists. T-0761 (0101715f): assert against the keyboard's own frame, not the editor's; review T-0763. AppPictures same trap (T-0760).
 - T-0844 2026-10-31 (31b0ccf1, branch): a widget send copies the project's .py files, main.py last. Open: a sibling edit alone or a removal doesn't reach the widget (pinned). Lesson: a save that sends one file's text can't see what its neighbours did.
@@ -269,6 +268,7 @@ Dated task logs and full lessons: archive.md.
 - T-0881 2026-10-31 (0aadb129): widget send is check, stage, commit with undo; staging beside widgets/. Open: independent review, RENAME_SWAP on a device, app-guide PNGs get rewritten by the unit target. Lesson: code that puts things back only counts if a sweep fails each step N in turn.
 - T-0675 slice 4 2026-11-01: a marker means nothing without knowing who is alive: overlapping calls per family and a queued neighbour would both read as dead runs. Swift's own `finished` (busy) has no lane keys; ask whether it ran before judging it. WidgetKit won't re-ask a cached config: a new id forces getTimeline.
 - T-0675 items 1-2 2026-11-01: a stored run of mutants needs a restore on EXIT and a commit first; a foreground call died 144 with a mutant planted. An ordered rule can freeze what a script controls (future sampled_at): check it against that.
+- T-0675 item 3 2026-11-01: inside the Simulator a lookup keeps case but a new name collides, even on a Mac disk that ignores case: measure from a test, not the shell. An undo on a commit's last step can't run: delete it.
 {% endraw %}
 
 

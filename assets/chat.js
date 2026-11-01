@@ -294,15 +294,14 @@ if (frac != null) {
 put(b, txt(' ')); mk(b, 'span', 'cv-sub', sub);
 mk(mk(a, 'div', 'cv-meter'), 'i').style.width = Math.max(0, Math.min(100, 100 * frac || 0)).toFixed(1) + '%';
 } else if (sub) mk(a, 'span', 'cv-sub', sub);
-return b;
 }
 function glance() {
-var g = el('div', 'cv-glance'), st = (S.status && S.status()) || {}, ws = st.workers || [];
-tile(g, D('company'), 'Day', D('day'), 'of ' + D('days'), D('day') / D('days'));
+var g = el('div', 'cv-glance');
+tile(g, D('company'), 'Day', D('day'));
 S.tiles(g, tile, D('usage'));
 if (S.lockTile) S.lockTile(g);
-var b = tile(g, D('company'), 'Right now', ws.length + ' at work', st.who || 'No worker call is running');
-b.parentNode.className += ' cv-live'; if (ws.length) b.insertBefore(el('span', 'cv-dot'), b.firstChild);
+S.added(g, tile, D('usage'));
+if (S.endTile) S.endTile(g);
 return g;
 }
 function due(d) {
@@ -468,7 +467,7 @@ status.textContent = 'Updated ' + clock(now().toISOString()) + '.';
 }
 var sig = '';
 if (S.onStatus) S.onStatus.push((st) => {
-var s = JSON.stringify([st.meter, st.ui, (st.workers || []).map((w) => w.name), st.session]);
+var s = JSON.stringify([st.meter, st.personal, st.api_credits, st.session]);
 if (s === sig || !lastDraw) return; sig = s;
 [].slice.call(document.querySelectorAll ? document.querySelectorAll('.cv-glance') : []).forEach((g) => { g.parentNode.replaceChild(glance(), g); });
 waitLine();

@@ -4,12 +4,12 @@
 var S = window.CompanySite, D = document, fixed = D.getElementById('personal');
 if (!S || !fixed || !S.getToken()) return;
 var repo = fixed.getAttribute('data-repo'), BILL = 'investors/billing.json', MAX = 40;
-var boxes = [], warn = '';
-var WHAT = 'On: company sessions use that account’s own limits until it is turned off. Spread keeps to an even daily share of the week. Lock In has no daily share; the 5-hour hold and the weekly limit still apply. A name shows on the public site. Each change is a commit from your GitHub account, so your token needs Contents: read and write.';
+var boxes = [], warn = '', opened = false;
+var WHAT = 'On: company sessions use that account’s own limits until it is turned off. Spread keeps to an even daily share of the week. Lock In has no daily share; the 5-hour hold and the weekly limit still apply. Each bar shows about what this project used, then about what was used elsewhere. A name shows on the public site. Each change is a commit from your GitHub account, so your token needs Contents: read and write.';
 function clean(n) { return typeof n === 'string' ? Array.from(n.replace(/\s+/g, ' ').replace(/\p{C}/gu, '').trim()).slice(0, MAX).join('').trim() : ''; }
 var accts = fixed.getAttribute('data-state').split(' ').map((x) => {
 var p = x.split(':');
-return { id: p[0], on: p[1] === '1' ? true : p[1] === '0' ? false : null, lock: p[2] === '1', pick: p[2] === '1', chose: 0, name: clean(fixed.getAttribute('data-name-' + p[0])), draft: null, arm: 0, armWhat: '', armWas: null, armT: 0, busy: 0, note: '' };
+return { id: p[0], on: p[1] === '1' ? true : p[1] === '0' ? false : null, lock: p[2] === '1', pick: p[2] === '1', chose: 0, name: clean(fixed.getAttribute('data-name-' + p[0])), draft: null, edit: 0, arm: 0, armWhat: '', armWas: null, armT: 0, busy: 0, note: '' };
 });
 function key(a) { return 'personal_lane_' + a.id; }
 function lockKey(a) { return key(a) + '_lock_in'; }
@@ -104,30 +104,52 @@ function saveName(a) {
 if (a.busy || S.rejected()) return;
 a.arm = 0; clearTimeout(a.armT);
 var n = clean(a.draft === null ? a.name : a.draft);
-run(a, () => setName(a, n).then((m) => { a.draft = null; return m; }));
+run(a, () => setName(a, n).then((m) => { a.draft = null; a.edit = 0; return m; }));
 }
 function held(e) { if (e.repeat && e.key === 'Enter') e.preventDefault(); }  // L3: a held key is one tap
+function et(t) { return new Date(t).toLocaleString('en-US', { timeZone: 'America/New_York', weekday: 'short', hour: 'numeric', minute: '2-digit' }) + ' ET'; }
+function meter(b, label, w, none) {
+b.bar.hidden = !w; b.bar.style.display = w ? 'flex' : 'none';
+if (!w) { b.head.textContent = none; return; }
+var p = Math.min(w.project_pct, w.pct), o = w.pct - p;
+b.head.textContent = label + ' ' + Math.round(w.pct) + '%' + (w.resets_at ? ', resets ' + et(w.resets_at) : '') + ': about ' + Math.round(p) + '% this project, about ' + Math.round(o) + '% elsewhere';
+b.mine.style.width = p.toFixed(1) + '%'; b.rest.style.width = o.toFixed(1) + '%';
+}
+function meters(w) {
+var ms = ((S.status() || {}).personal || {}).meters, r = ms && ms[w.a.id];
+var none = !ms ? 'Waiting for the live status.' : 'no reading yet';
+meter(w.m5, '5-hour', r && r.five, none);
+w.mw.box.hidden = !r; w.mw.box.style.display = r ? 'block' : 'none';
+if (r) meter(w.mw, 'Week', r.week, none);
+w.read.textContent = r ? 'Read ' + S.ago(r.at) + ' ago.' : '';
+}
 function draw() {
 var no = S.rejected();
 boxes = boxes.filter((x) => (x.box.isConnected ? (x.in = 1) : !x.in));
 boxes.forEach((x) => {
 x.warn.textContent = warn;
+x.count.textContent = accts.some((a) => a.on === null) ? ' Not known' : ' ' + accts.filter((a) => a.on).length + ' of ' + accts.length + ' on';
 x.rows.forEach((w) => {
+meters(w);
 var a = w.a, off = a.on === false, name = a.name || 'Account ' + a.id;
 var armP = a.arm && a.armWhat === 'power', armM = a.arm && a.armWhat === 'mode', next = mode(!a.lock), wait = a.busy ? 'true' : 'false';
 w.name.textContent = name;
 w.state.textContent = a.on === null ? ' Not known' : a.on ? ' On, ' + mode(a.lock) : ' Off';
 w.btn.textContent = (armP ? 'Tap again to turn ' : 'Turn ') + (off ? 'on' : 'off');
 w.mode.textContent = (armM ? 'Tap again to switch to ' : 'Switch to ') + next;
-[w.btn, w.mode, w.save].forEach((b) => { b.setAttribute('aria-disabled', wait); });
+[w.btn, w.mode, w.save, w.edit].forEach((b) => { b.setAttribute('aria-disabled', wait); });
 w.btn.setAttribute('aria-label', w.btn.textContent + ': ' + name);
 w.mode.setAttribute('aria-label', w.mode.textContent + ': ' + name);
 w.save.setAttribute('aria-label', 'Save name for ' + name);
+w.edit.setAttribute('aria-label', 'Edit name: ' + name);
+w.edit.setAttribute('aria-expanded', a.edit ? 'true' : 'false');
 w.btn.hidden = no;
 w.sel.hidden = no || !off;
 w.mode.hidden = no || a.on !== true;
-w.names.hidden = no;
-w.names.style.display = no ? 'none' : 'flex';
+w.edit.hidden = no;
+var named = !no && a.edit;
+w.names.hidden = !named;
+w.names.style.display = named ? 'flex' : 'none';
 w.sel.value = a.pick ? 'lock' : 'spread';
 w.sel.setAttribute('aria-label', 'Mode for ' + name);
 w.input.setAttribute('aria-label', 'Name for ' + name);
@@ -138,14 +160,27 @@ w.note.textContent = a.note || (armP ? 'Tap again within 5 seconds to turn ' + (
 });
 });
 }
-function mount(g, before) {
-var box = D.createElement('div'); box.className = 'cv-tile cv-personal'; box.style.gridColumn = '1/-1'; g.insertBefore(box, before || null);
-mk(box, 'small', null, 'Personal accounts');
-mk(box, 'span', 'cv-sub', WHAT);
-var x = { box: box, warn: mk(box, 'span', 'cv-sub'), rows: accts.map((a) => {
+function bar(row) {
+var box = mk(row, 'span'), b = { box: box, head: mk(box, 'span', 'cv-sub'), bar: mk(box, 'span', 'cv-meter') };
+box.style.display = b.head.style.display = 'block';
+b.mine = mk(b.bar, 'i'); b.rest = mk(b.bar, 'i'); b.rest.style.background = 'var(--muted)';
+return b;
+}
+function mount(g) {
+var box = D.createElement('details'); box.className = 'cv-tile cv-personal'; box.style.gridColumn = '1/-1'; box.style.display = 'block'; box.open = opened;
+box.ontoggle = () => { opened = box.open; };
+g.appendChild(box);
+var sum = mk(box, 'summary');
+mk(sum, 'small', null, 'Personal Accounts');
+mk(box, 'span', 'cv-sub', WHAT).style.display = 'block';
+var x = { box: box, count: mk(sum, 'span', 'cv-sub'), warn: mk(box, 'span', 'cv-sub'), rows: accts.map((a) => {
 var row = mk(box, 'p'), w = { a: a, name: mk(row, 'strong'), state: mk(row, 'span') };
 w.name.style.overflowWrap = 'anywhere';
 mk(row, 'span', null, ' ');
+w.edit = mk(row, 'button', 'btn cv-pedit', 'Edit'); w.edit.type = 'button'; w.edit.style.padding = '0 8px'; w.edit.style.fontSize = 'var(--fs-0)';
+w.edit.onclick = () => { if (a.busy || S.rejected()) return; a.edit = a.edit ? 0 : 1; a.draft = null; draw(); if (a.edit) w.input.focus(); };
+w.m5 = bar(row); w.mw = bar(row);
+w.read = mk(row, 'span', 'cv-sub'); w.read.style.display = 'block';
 w.sel = mk(row, 'select', 'field'); w.sel.style.width = 'auto';
 [['spread', 'Spread'], ['lock', 'Lock In']].forEach((o) => { mk(w.sel, 'option', null, o[1]).value = o[0]; });
 w.sel.onchange = () => { a.pick = w.sel.value === 'lock'; a.chose = 1; a.arm = 0; clearTimeout(a.armT); draw(); };
@@ -164,10 +199,10 @@ return w;
 }) };
 boxes.push(x); draw();
 }
-var lockTile = S.lockTile;
-S.lockTile = (g, before) => { if (lockTile) lockTile(g, before); mount(g, before); };
-[].slice.call(D.querySelectorAll('.cv-glance')).forEach((g) => { if (!g.querySelector('.cv-personal')) mount(g, g.querySelector('.cv-live')); });
+S.endTile = mount;
+[].slice.call(D.querySelectorAll('.cv-glance')).forEach((g) => { if (!g.querySelector('.cv-personal')) mount(g); });
 if (S.onReject) S.onReject.push(draw);
+if (S.onStatus) S.onStatus.push(draw);
 D.addEventListener('visibilitychange', () => { if (!D.hidden && !S.rejected() && !accts.some((a) => a.busy)) load(); });
 load();
 })();

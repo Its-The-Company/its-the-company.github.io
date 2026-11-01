@@ -1,66 +1,66 @@
 {
  "schema": 1,
- "at": "2026-11-01T19:20:40.359455+00:00",
+ "at": "2026-11-01T20:54:43.743794+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-01T13:38:48-05:00"
+  "started": "2026-11-01T14:23:12-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] T-0934 log why session stopped",
+   "name": "ines",
+   "task": "[plan] T-0944 second-refusal chair ruling",
    "model": "opus",
-   "started": "2026-11-01T19:00:05.905Z",
+   "started": "2026-11-01T20:51:28.425Z",
    "seconds": null,
-   "finished": "2026-11-01T19:19:49.572000+00:00"
+   "finished": "2026-11-01T20:53:44.513000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-0944 Home redo, restarted",
+   "model": "opus",
+   "started": "2026-11-01T19:37:19.041Z",
+   "seconds": null,
+   "finished": "2026-11-01T20:51:07.710000+00:00"
   },
   {
    "name": "idris",
-   "task": "[build] T-0675 lane margin ruling code",
+   "task": "[build] T-0675 next extension lane slice",
    "model": "opus",
-   "started": "2026-11-01T18:45:04.702Z",
+   "started": "2026-11-01T19:25:36.560Z",
    "seconds": null,
-   "finished": "2026-11-01T19:10:29.641000+00:00"
+   "finished": "2026-11-01T20:06:24.552000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-0940 suite timeouts under load",
-   "model": "sonnet",
-   "started": "2026-11-01T18:45:17.183Z",
+   "task": "[site] T-0948 60-day timeline on Home",
+   "model": "opus",
+   "started": "2026-11-01T19:31:36.618Z",
    "seconds": null,
-   "finished": "2026-11-01T19:02:32.231000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-0943 tick header comment",
-   "model": "haiku",
-   "started": "2026-11-01T18:45:10.148Z",
-   "seconds": null,
-   "finished": "2026-11-01T18:45:38.678000+00:00"
+   "finished": "2026-11-01T19:53:12.272000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 144,
+  "runnable_count": 150,
   "blocked_count": 62
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
-   "resets_at": "2026-11-01T22:00:00.037869+00:00",
+   "pct": 13.0,
+   "resets_at": "2026-11-01T22:00:00.275756+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 90.0,
+   "left": 87.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 11.0,
-   "resets_at": "2026-11-08T07:00:00.037888+00:00",
+   "pct": 12.0,
+   "resets_at": "2026-11-08T07:00:00.275774+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 89.0,
+   "left": 88.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -68,7 +68,7 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-01T13:38:47.700817-05:00"
+  "read_at": "2026-11-01T14:23:11.957093-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -84,13 +84,23 @@
   "words": "of this week's allowance"
  },
  "next_tick": null,
+ "personal": {},
+ "api_credits": [],
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-01T14:22:00-05:00"
+  "at": "2026-11-01T15:56:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P1: the product share is under Tenet 1's line....",
+   "model": null,
+   "since": null,
+   "next": []
+  },
   {
    "name": "Odalys",
    "state": "next",
@@ -102,15 +112,7 @@
   {
    "name": "Pernille",
    "state": "next",
-   "task": "Pernille, P1, read the lane.py change in 892fd52e...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P1, put OPT-051's n=10 read in the Week 2 review...",
+   "task": "Pernille, P0, T-0296 follow-on reminder: no real package...",
    "model": null,
    "since": null,
    "next": []
@@ -144,6 +146,13 @@
   "run": [],
   "open": [
    {
+    "w": "Ines",
+    "k": "plan",
+    "t": "The product share is under Tenet 1's line",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Odalys",
     "k": "tools",
     "t": "Personal lane before anything else",
@@ -153,21 +162,7 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "After the lane",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "First run on one account, after sign-in",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Read the lane.py change in 892fd52e",
     "s": "next",
     "o": "c"
    },
@@ -212,33 +207,40 @@
     "t": "MacBook runner follow-ups",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Runner rule",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
+    "w": "Ines",
+    "k": "plan",
+    "t": "T-0944 second-refusal chair ruling",
+    "at": "2026-11-01T20:53:44.513000+00:00",
+    "o": "c"
+   },
+   {
     "w": "Odalys",
-    "k": "tools",
-    "t": "T-0934 log why session stopped",
-    "at": "2026-11-01T19:19:49.572000+00:00",
+    "k": "site",
+    "t": "T-0944 Home redo, restarted",
+    "at": "2026-11-01T20:51:07.710000+00:00",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "T-0675 lane margin ruling code",
-    "at": "2026-11-01T19:10:29.641000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0940 suite timeouts under load",
-    "at": "2026-11-01T19:02:32.231000+00:00",
-    "o": "c"
+    "t": "T-0675 next extension lane slice",
+    "at": "2026-11-01T20:06:24.552000+00:00",
+    "o": "i"
    }
   ],
   "count": {
-   "next": 144,
+   "next": 150,
    "wait": 28,
    "blocked": 34,
    "you": 8
@@ -249,6 +251,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "task_open",

@@ -49,9 +49,8 @@ function clock(iso) { return iso ? new Date(iso).toLocaleTimeString([], { hour: 
 function setText(id, text) { var e = byId(id); if (e && text != null) e.textContent = text; }
 function when(iso, wk) { return iso ? new Date(iso).toLocaleString([], { weekday: wk && 'short', hour: 'numeric', minute: '2-digit', timeZone: 'America/New_York' }) + ' ET' : ''; }
 function tail(m, wk) { var r = when(m.resets_at, wk); return (m.left != null ? ' · ' + Math.round(m.left) + '% left' : '') + (r ? ' · resets ' + r : ''); }
-function pts(x) { return String(+(+x).toFixed(x < 1 ? 2 : 1)); }
 function meters(st) {
-var box = el('div'), m = st.meter || {}, ui = st.ui || {};
+var box = el('div'), m = st.meter || {};
 [['5-hour', m.five_hour], ['Week', m.weekly, 1]].forEach(function (x) {
 var v = x[1]; if (!v || v.pct == null) return;
 var d = add(box, 'div', 'meter'), p = add(d, 'p'), t = add(d, 'div', 'bar-track');
@@ -61,22 +60,24 @@ add(p, 'span', 'muted', tail(v, x[2]).slice(1));
 t.setAttribute('role', 'img'); t.setAttribute('aria-label', Math.round(v.pct) + '% ' + v.used_words);
 add(t, 'div', 'bar-fill').style.width = Math.max(0, Math.min(100, v.pct)) + '%';
 });
-if (ui.week_pct != null) {
-var u = add(box, 'p', 'meta', 'Running the site: about ' + pts(ui.week_pct) + '% ' + ui.words
-+ (ui.five_hour_pct != null ? ' and ' + pts(ui.five_hour_pct) + '% of your 5-hour allowance' : '')
-+ (ui.over ? ' (over its cap: chat replies are batched)' : ui.warn ? ' (near its cap: chat replies are batched)' : '')
-+ (ui.show_coverage ? '; cost measured for ' + Math.round(100 * ui.coverage) + ' in 100 runs' : '') + '.');
-if (ui.warn || ui.over) u.style.color = 'var(--warm)';
-}
 return box;
 }
 function tiles(g, tile, href) {
-var st = lastSt || {}, m = st.meter || {}, ui = st.ui || {};
+var st = lastSt || {}, m = st.meter || {};
 [['5-hour', m.five_hour], ['Week', m.weekly, 1]].forEach(function (x) {
 var v = x[1] || {};
 tile(g, href, x[0] + ' usage', v.pct != null ? Math.round(v.pct) + '%' : '?', (v.used_words || 'not read yet') + tail(v, x[2]), v.pct != null ? v.pct / 100 : null);
 });
-if (ui.week_pct != null) tile(g, href, 'Running the site', pts(ui.week_pct) + '%', ui.words + ' (about)');
+}
+function pts(x) { return String(+(+x).toFixed(x < 1 ? 2 : 1)); }
+function added(g, tile, h) {
+var st = lastSt || {}, p = st.personal || {}, w = p.week_pct;
+function sh(v, x) { return v != null ? pts(v) + '% of ' + x : x + ': no reading yet'; }
+tile(g, h, 'Added by personal accounts', w != null ? pts(w) + '%' : 'no reading yet', w != null ? "of this week's allowance" : '');
+(st.api_credits || []).forEach((r) => {
+tile(g, h, r.name === 'company' ? 'API credits' : 'Personal key ' + r.name, '$' + r.used_usd.toFixed(2), 'of $' + r.total_usd + ' used so far', r.used_usd / r.total_usd);
+});
+tile(g, h, 'Personal share, this week', sh(p.work_pct, 'work'), sh(p.usage_pct, 'usage'));
 }
 function list(items, fmt) { var ul = el('ul'); items.forEach(function (x) { add(ul, 'li', null, fmt(x)); }); return ul; }
 var toggled = false;
@@ -383,7 +384,7 @@ show();
 window.CompanySite = { API: API, KEY: KEY, NAME: NAME, ALLOW: ALLOW, NO_TOKEN: NO_TOKEN, el: el, byId: byId, on: on, later: later, stop: stop,
 getToken: getToken, setToken: setToken, tokenStore: tokenStore, hdrs: hdrs, gh: gh, said: said, ago: ago, checkAuth: checkAuth, parseAllow: parseAllow,
 onDrawn: onDrawn, onReject: onReject, rejected: function () { return rejected; },
-status: function () { return lastSt; }, onStatus: onStatus, tiles: tiles, feed: feed };
+status: function () { return lastSt; }, onStatus: onStatus, tiles: tiles, added: added, feed: feed };
 var n = byId('now-panel'); if (n) nowPanel(n);
 var c = byId('chat-root'), t = byId('token-root');
 function load(src) { var s = document.createElement('script'); s.src = src; (document.head || document.body).appendChild(s); }

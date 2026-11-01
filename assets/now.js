@@ -2,7 +2,7 @@
 (() => {
 'use strict';
 var S = window.CompanySite; if (!S || !S.getToken()) return;
-var D = document, W = window, el = S.el, ago = S.ago, pub = null, on = false, all = {}, sig = '', bs = '', br = null, sec = null, jump = 0;
+var D = document, W = window, el = S.el, ago = S.ago, pub = null, on = false, all = {}, sig = '', bs = '', br = null, sec = null, lk = null, jump = 0;
 function mk(p, t, c, x) { return p.appendChild(el(t, c, x)); }
 function at(e, k, v) { e.setAttribute(k, v); return e; }
 function cap(s) { s = String(s || ''); return s.charAt(0).toUpperCase() + s.slice(1); }
@@ -35,6 +35,10 @@ mk(br, 'p', 'cv-bm', !st.at ? 'No status read yet.' : (pub === false ? 'Live cop
 function work(o) { var r = Q('#chat-root'); return ((r && r.getAttribute('data-company')) || '/company/') + 'work.html' + (o ? '#' + String(o).toLowerCase() : ''); }
 function tiles() {
 QA('.cv-live').forEach(x => { at(at(at(x, 'role', 'button'), 'aria-controls', 'cv-brief'), 'aria-expanded', String(on)); });
+}
+function linkText(st) {
+var w = 'Right now: ' + (st.workers || []).length + ' at work' + (st.who ? ', ' + st.who : '');
+if (lk.firstChild.textContent !== w) lk.firstChild.textContent = w;
 }
 function toggle() {
 on = !on; place();
@@ -83,11 +87,17 @@ group('d', 'Just finished', t.done || [], 3);
 function place() {
 var st = stt(), col = Q('.cv-col'), gs = QA('.cv-glance'), g, home, tab, z;
 if (!st || !col) return;
-if (!br) { br = at(el('div', 'cv-brief'), 'id', 'cv-brief'); sec = at(at(el('section', 'cv-tasks'), 'id', 'cv-tasks'), 'aria-label', 'Tasks'); }
+if (!br) {
+br = at(el('div', 'cv-brief'), 'id', 'cv-brief'); sec = at(at(el('section', 'cv-tasks'), 'id', 'cv-tasks'), 'aria-label', 'Tasks');
+lk = el('p', 'meta cv-brieflink'); mk(lk, 'a', 'cv-live').href = '#cv-brief';
+}
+linkText(st);
 tiles();
 g = gs[0];
 br.hidden = !on || !g;
-if (g && br.previousSibling !== g) g.parentNode.insertBefore(br, g.nextSibling);
+lk.hidden = !g;
+if (g && lk.previousSibling !== g) g.parentNode.insertBefore(lk, g.nextSibling);
+if (g && br.previousSibling !== lk) g.parentNode.insertBefore(br, lk.nextSibling);
 tab = Q('.cv-tabs [role=tab]'); home = !!tab && tab.getAttribute('aria-selected') === 'true';
 sec.hidden = !home;
 var q = col.querySelector('.cv-queue'), d = col.querySelector('.cv-dock'), b4 = q || d;

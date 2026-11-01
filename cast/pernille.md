@@ -113,6 +113,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-11-01 T-0833 lane half lessons: a catch-all that prints "held" hides a crash, so count rows by what they reached, not the last line; after a refusal the Write tool that would land the same text is the way round, not the fix.
 - 2026-11-01 T-0833: verdict written, held on what ran; tick only after Ines reads and the Operator posts. Print every refusal, not the first. Recount any number going public, even a chair's. A runner that opens its output "w" erases the run a repeat is compared to: copy first.
 - 2026-11-01 T-0880 LANE: HOLD, detail held. Lesson: review who can edit what obeys a check, not only the check. Held folder is git-ignored: never commit it.
+- 2026-11-01 T-0935 lane.py pass. Open: T-0952 (chair), T-0956 mine (replay on zip). Lessons: `-I` drops PYTHONHOME, so a passing suite may not be on the layout you built; `widgets/<id>/` is an app-lane script's folder; a reserved ID can still collide, grep before citing.
 - 2026-11-01 T-0880 LAND: HOLD, detail held; I owe a delta read on any change to the six pinned files before either switch. Lesson: one probe per call, a guard refusal stops everything in it. In zsh quote "$r:path": :t is a modifier.
 {% endraw %}
 

@@ -168,7 +168,7 @@ footer a{color:inherit}
 .seg.project{background:var(--accent)}.seg.reports{background:var(--ok)}.seg.meetings{background:var(--warm)}.seg.hiring{background:var(--pink)}.seg.talk{background:var(--hot)}
 .legend{font-size:var(--fs-0);color:var(--muted);display:flex;flex-wrap:wrap;gap:4px var(--s4)}.legend .seg{width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:middle}
 .strip{display:grid;grid-template-columns:1fr;gap:4px 18px;background:var(--bg);border:1px solid var(--line);border-radius:var(--r-m);padding:var(--s3) var(--s4);margin:0 0 var(--s4);font-size:var(--fs-1)}
-.strip .row{display:flex;align-items:center;gap:var(--s3)}.strip .bar{flex:1;margin:4px 0}.strip .track{flex:1}
+.strip .row{display:flex;align-items:center;gap:var(--s3)}.strip .bar{flex:1;margin:4px 0}.strip .track{flex:1;gap:1px}
 /* Portraits: tools/portrait.py draws the tile. In dark mode the SVG itself turns its tile dark and lifts the shape
    (Maren, section 9 fix 3); --portrait only fills the box while the image loads. */
 img.portrait,.cast img,.person img,img.avatar,.now-cards .card img{background:var(--portrait);filter:var(--portrait-filter)}
@@ -368,6 +368,26 @@ section.now h3{margin:0 0 var(--s1)}
 /* Company > People: where the company is, above the cast. Log: the list of days, the current one marked (slice 6). */
 .where{margin:var(--s4) 0 var(--s5);box-shadow:var(--shadow)}.where h2{margin:0 0 var(--s2);font-size:var(--fs-3)}
 .where .latest{color:var(--ink)}
+/* The day timeline (tools/site/timeline.py, T-0948): ten days to a row, so a row starts on Day 1, 11, 21. Colour is never
+   alone: each cell has its number and a mark, planned days are dashed, today has a ring. Pairs from the contrast table. */
+.tl-lead{margin:0 0 var(--s1)}
+.tl-grid{list-style:none;display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:3px;margin:var(--s3) 0;padding:0}
+.tl-grid li{display:flex;flex-direction:column;align-items:center;justify-content:center;height:38px;min-width:0;border-radius:6px;font-size:12px;line-height:1.3}
+.tl-grid li b{font-weight:700}.tl-grid li span{font-weight:700}.tl-grid li.tl-plan b{font-weight:400}
+.tl-research{background:var(--amber-bg);color:var(--amber-fg)}.tl-decided{background:var(--pink-bg);color:var(--pink-fg)}
+.tl-build{background:var(--blue-bg);color:var(--blue-fg)}.tl-beta{background:var(--green-bg);color:var(--green-fg)}
+.tl-submit{background:var(--hot-bg);color:var(--hot)}.tl-review{background:var(--grey-bg);color:var(--grey-fg)}
+.tl-release{background:var(--accent);color:var(--accent-ink)}.tl-margin{background:var(--bg);color:var(--muted)}.tl-open{background:var(--bg);color:var(--muted)}
+.tl-plan{border:1px dashed currentColor}
+.tl-grid li.tl-today,.tl-sw.tl-today{outline:2px solid var(--ink);outline-offset:1px;position:relative;z-index:1}
+.tl-key{list-style:none;margin:var(--s2) 0;padding:0;max-width:27rem}
+.tl-key li{display:grid;grid-template-columns:24px minmax(0,1fr) auto;align-items:center;gap:var(--s2);padding:2px 0;font-size:var(--fs-0)}
+.tl-sw{display:flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:6px;font-size:12px;font-weight:700}
+.tl-marks{margin:var(--s2) 0 0}
+.where h3{margin:var(--s4) 0 var(--s1);font-size:var(--fs-1)}
+.tl-steps{list-style:none;margin:0 0 var(--s2);padding:0;max-width:27rem}
+.tl-steps li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 var(--s2);align-items:baseline;padding:3px 0;border-bottom:1px solid var(--line);font-size:var(--fs-0)}
+.tl-steps li:last-child{border-bottom:0}.tl-when{color:var(--muted)}.tl-when b{color:var(--ink)}.tl-what{grid-column:1/-1;color:var(--ink)}
 .log-table td.t{white-space:nowrap;color:var(--muted)}.log-table td.who{white-space:nowrap}.log-table td.who img{width:20px;height:20px;vertical-align:-5px;border-radius:5px}
 @media (max-width:540px){.log-table thead{display:none}.log-table tbody,.log-table tr,.log-table td{display:block}
 .log-table tr{display:grid;grid-template-columns:auto 1fr;gap:2px var(--s3);padding:var(--s2) 0;border-bottom:1px solid var(--line)}

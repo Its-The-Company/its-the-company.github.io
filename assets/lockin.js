@@ -74,7 +74,7 @@ S.lockHead = (h) => {
 var box = mk(h, 'span', 'cv-lockbar'), x = { box: box, t: mk(box, 'small', 'meta cv-lockstate') };
 button(x, box);
 };
-[].slice.call(D.querySelectorAll('.cv-glance')).forEach((g) => { if (!g.querySelector('.cv-lock')) S.lockTile(g, g.querySelector('.cv-live')); });
+[].slice.call(D.querySelectorAll('.cv-glance')).forEach((g) => { if (!g.querySelector('.cv-lock')) S.lockTile(g, g.children[3]); });  // after Day, 5-hour and Week
 [].slice.call(D.querySelectorAll('.cv-view > .cv-head')).forEach((h) => { if (!h.querySelector('.chip') && !h.querySelector('.cv-lockbar')) S.lockHead(h); });
 if (S.onReject) S.onReject.push(() => { tiles.forEach((x) => { if (x.btn) x.btn.hidden = x.note.hidden = true; }); });
 if (S.onStatus) S.onStatus.push(draw);

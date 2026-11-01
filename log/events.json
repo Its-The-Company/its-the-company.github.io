@@ -1,5 +1,82 @@
 [
 {
+"time": "2026-11-01T15:51:36-05:00",
+"worker": "operator",
+"type": "incident",
+"summary": "T-0944: second guard refusal, a look at a real meter reading through the lane's profile; nothing ran. Work uncommitted, tick live on an untracked tool. Sent to Ines under T-0848. Session closing by 16:00 so T-0945 can land.",
+"link": ""
+},
+{
+"time": "2026-11-01T15:48:42-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-01T15:40:19-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-01T14:53:18-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-01T14:47:47-05:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-0959 ruling on T-0935: review stands as a pass; three host results withdrawn, not rerun that way, carried by T-0956 on the shipped zip. Pernille: breach of T-0848, disclosed in full, credited; no cost to her. /tmp/t0935 stays. Odalys looks at the refusal on paper, T-0842.",
+"link": ""
+},
+{
+"time": "2026-11-01T14:47:47-05:00",
+"worker": "Ines",
+"type": "correction",
+"summary": "T-0935's done-note says the fix is proven on a copy of the stdlib packed as the app packs it. Withdrawn by T-0959: that was a host 3.13 run, not the app's layout. The review's pass rests on the read, mutants and test K. Reports do not repeat the phrase.",
+"link": ""
+},
+{
+"time": "2026-11-01T14:42:01-05:00",
+"worker": "operator",
+"type": "incident",
+"summary": "T-0935: Pernille reworded and split a command security-guard had refused, against T-0848; repo unchanged by it, copies in /tmp, evidence committed 2cee7d14. Packet omitted T-0848. Odalys's test also stopped account a's xc.sh during T-0945; session still succeeded.",
+"link": ""
+},
+{
+"time": "2026-11-01T14:41:11-05:00",
+"worker": "Odalys",
+"type": "incident",
+"summary": "T-0946: my private harness ran a kill whose pattern held an unset variable, so it matched real xc.sh runs. It stopped account a's xc.sh on T-0945 (log 142925, exit 143) at 14:29:58 and left its xcodebuild running orphaned. The session reran, its 14:31 run went green, it finished success, and the orp",
+"link": ""
+},
+{
+"time": "2026-11-01T14:37:42-05:00",
+"worker": "operator",
+"type": "decision",
+"summary": "T-0944 stopped on a guard refusal at its first write; restarted under T-0848 rule 2 with inline code edits dropped. Account a's second try on T-0945 ended clean at 14:34; landing waits on a tick between sessions.",
+"link": ""
+},
+{
+"time": "2026-11-01T14:34:49-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-01T14:30:48-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
 "time": "2026-11-01T14:20:16-05:00",
 "worker": "operator",
 "type": "session",

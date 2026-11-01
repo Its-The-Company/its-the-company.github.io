@@ -259,16 +259,16 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 
 - OPT-035 held (T-0884, Ines): #113 card said the tool stays off; loss fell 2.227 to 0.079 per 100. Re-baseline a queued trial before starting it.
-- T-0878 ticked. T-0879 chair line 3 fixes done, trip diff 19736a3a; Pernille's one read, then the verdict. Lesson: measure a grep's reach before excluding from it. A pgrep -f wait matches its own shell: wait on the PID.
+- T-0878 ticked. T-0879 chair line 4 steps 1-4 done, trip diff e902013f; step 5 after T-0833's verdict. Lesson: measure a grep's reach before excluding from it. A pgrep -f wait matches its own shell: wait on the PID.
 
 - T-0876 done (c06840c2, rows 240afbb4). Open: hook comment says "no log line", but it writes one shell Terminated line a tick. Held notes in t0876/r3/PAUSED.txt go to T-0880.
 
 - T-0498 filed (f12bcaa8): after approve, step 4, then tick. Ledger OPT-062 is not its metric.
 
-- T-0915 done (a55678c0). Rows 355 green, real run landed, checks 558 s of 600 (T-0914 reads that). Ines rules on my two runs over dirty text. Tick rows at T-0910: PASS 156 FAIL 0, one row fewer than the empty-T run, not traced.
+- T-0915 done (a55678c0). Rows 355 green, real run landed, checks 558 s of 600 (T-0914 reads that). Tick rows at T-0910: PASS 156 FAIL 0, one row fewer than the empty-T run, not traced.
 
 ## Standing lessons (details in archive.md)
-- 2026-11-01 T-0915: tests/run.sh over a dirty file; the ruling was in the line I read first. Before any run: git status on tools and tests. Dirty: the suite direct, or commit first.
+- 2026-11-01 T-0915: tests/run.sh over a dirty file; the ruling was in the line I read first. Before any run: git status on tools and tests. Until T-0880, Ines 09:01: dirty lane-road tool, no suite, direct or not. Land rows: commit, gate, suite; never after a refusal.
 - 2026-11-01 T-0895/T-0876: I moved report days and ran only governor_test; supervisor_test pinned them too and stayed red a day. Grep every suite for what a change moves. Rehearse a gate's suites before the step that can't be undone: it caught this before the hook.
 - 2026-11-01 T-0876: BSD sed has no \b, a mask with it does nothing. A mask over blob hashes compares names only. A control must show the section can differ.
 - 2026-11-01 T-0908: the applier's Tests: line reads tests/ paths only; a tools/ path alone names nothing and a file proposal applies untested. Name tests/personal_lane_test.py. A dirty file in a diff makes the applier wait, silently: check git status on those paths first.

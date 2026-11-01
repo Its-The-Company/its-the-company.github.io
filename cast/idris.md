@@ -254,7 +254,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 Dated task logs and full lessons: archive.md.
 
-- T-0675 slice 1 2026-11-01 (5e8bd766): bridge in Shared/Bridge/, extension compiles it, flag off, nothing starts it. Rest and review: dated note on the line.
+- T-0675 slice 2 2026-11-01 (177a8391): getTimeline lane behind the flag; Python not yet started in a real extension. Rest: dated note on the line.
 
 ## Lessons
 

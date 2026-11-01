@@ -111,9 +111,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
 - 2026-10-31 T-0900: a host `swiftc` harness plus an hdiutil APFS image reaches a real full disk with no Xcode. rename and RENAME_SWAP end ENOSPC too, so undo fails with the step it undoes: count a failure's cause, not two failures. Stubs in pywidget/docs/reviews/t0881-t0900-evidence/. Macs have no `timeout`.
-- 2026-11-01 T-0833 lane half: Investor yes on #119, nothing started yet, resume point in the held state file. Stays serial: load can read as a kill. Lessons: a catch-all that prints "held" hides a crash, so count rows by what they reached, not the last line; after a refusal the Write tool that would land the same text is the way round, not the fix.
+- 2026-11-01 T-0833 lane half lessons: a catch-all that prints "held" hides a crash, so count rows by what they reached, not the last line; after a refusal the Write tool that would land the same text is the way round, not the fix.
 - 2026-10-31 T-0860 (e616b3a6): in WidgetKit's extension a live date Text fills its row; fixed_size on it crashed the extension. Words after it go in Text suffix. Open: Maren's read, Idris on suffix, the crash. Tree experiments need no rebuild: 12 files in a temp dir, id new_widget, pads claim accessoryInline.
-- 2026-11-01 T-0833: port landed, all rows answered, three read HOLE, with Ines; state file holds it. Print every refusal, not the first.
+- 2026-11-01 T-0833: verdict written, held on what ran; tick only after Ines reads and the Operator posts. Print every refusal, not the first. Recount any number going public, even a chair's. A runner that opens its output "w" erases the run a repeat is compared to: copy first. Open: T-0880 reading, I saw the T-0908 line.
 {% endraw %}
 
 

@@ -1,64 +1,64 @@
 {
  "schema": 1,
- "at": "2026-11-01T13:44:48.563848+00:00",
+ "at": "2026-11-01T14:31:24.958414+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-01T07:56:56-05:00"
+  "started": "2026-11-01T08:48:44-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] T-0915 land follow-on",
+   "name": "idris",
+   "task": "[build] T-0675 extension lane slice 3",
    "model": "opus",
-   "started": "2026-11-01T12:59:32.105Z",
+   "started": "2026-11-01T14:28:11.398Z",
    "seconds": null,
-   "finished": "2026-11-01T13:44:23.802000+00:00"
+   "finished": "2026-11-01T14:30:46.707000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[site] T-0847 lane on/off button",
+   "name": "idris",
+   "task": "[build] T-0675 extension lane slice 2",
    "model": "opus",
-   "started": "2026-11-01T13:03:46.038Z",
+   "started": "2026-11-01T13:53:27.003Z",
    "seconds": null,
-   "finished": "2026-11-01T13:21:58.124000+00:00"
+   "finished": "2026-11-01T14:27:51.769000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[tools] T-0833 lane fix proposal",
-   "model": "opus",
-   "started": "2026-11-01T13:14:08.503Z",
+   "name": "pernille",
+   "task": "[review] T-0833 tick after verdict post",
+   "model": "sonnet",
+   "started": "2026-11-01T14:15:33.292Z",
    "seconds": null,
-   "finished": "2026-11-01T13:17:37.276000+00:00"
+   "finished": "2026-11-01T14:16:00.370000+00:00"
   },
   {
    "name": "ines",
-   "task": "[plan] T-0908 rule read-3 and slots",
+   "task": "[review] T-0833 chair reads verdict before post",
    "model": "opus",
-   "started": "2026-11-01T12:59:18.758Z",
+   "started": "2026-11-01T14:11:50.599Z",
    "seconds": null,
-   "finished": "2026-11-01T13:13:47.777000+00:00"
+   "finished": "2026-11-01T14:15:02.507000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 141,
-  "blocked_count": 64
+  "runnable_count": 140,
+  "blocked_count": 63
  },
  "meter": {
   "five_hour": {
-   "pct": 7.0,
-   "resets_at": "2026-11-01T16:59:59.805551+00:00",
+   "pct": 13.0,
+   "resets_at": "2026-11-01T16:59:59.864035+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 93.0,
+   "left": 87.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 6.0,
-   "resets_at": "2026-11-08T06:59:59.805573+00:00",
+   "resets_at": "2026-11-08T06:59:59.864055+00:00",
    "used_words": "of your weekly allowance used",
    "left": 94.0,
    "left_words": "of your weekly allowance left"
@@ -68,7 +68,7 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-01T07:56:55.451305-05:00"
+  "read_at": "2026-11-01T08:48:43.464777-05:00"
  },
  "ui": {
   "week_pct": 0.0,
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-01T08:46:00-05:00"
+  "at": "2026-11-01T09:33:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -216,32 +216,33 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0915 land follow-on",
-    "at": "2026-11-01T13:44:23.802000+00:00",
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0675 extension lane slice 3",
+    "at": "2026-11-01T14:30:46.707000+00:00",
+    "o": "c",
+    "x": "killed"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0675 extension lane slice 2",
+    "at": "2026-11-01T14:27:51.769000+00:00",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "site",
-    "t": "T-0847 lane on/off button",
-    "at": "2026-11-01T13:21:58.124000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-0833 lane fix proposal",
-    "at": "2026-11-01T13:17:37.276000+00:00",
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-0833 tick after verdict post",
+    "at": "2026-11-01T14:16:00.370000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 141,
-   "wait": 30,
-   "blocked": 34,
-   "you": 9
+   "next": 140,
+   "wait": 27,
+   "blocked": 36,
+   "you": 8
   }
  },
  "qr": [],

@@ -253,13 +253,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0878: "only live files" holds per runner: trace a test under tests/run.sh too (T = kit copy). Grep what already does what my line names (5a0aabc1: governor).
 - T-0345: my T-0413 line ruled "verbatim from Doc/license.rst" off a registry note; the file had no HACL section. Open the cited file before ruling on it. A list that calls itself incomplete can't prove coverage.
 - T-0833 line 2: a lookalike of a refused effect gets the same answer, even with no refusal on it. If I rule rows COULD NOT TEST, say PASS is out of reach. A yes that "ends at X": X can't go first. Read the line a "byte copy" rests on (Box, line 48).
-- T-0879: my T-0833 line said this trip wouldn't touch the lane; my own T-0877 step 6 put it there. Grep my lines before "not expected". "No session can" on a card is a claim about the OS.
 - T-0878 line 2: filing is publishing: read a diff's comments for Commandment 42. Add up a step's run time against the session before ordering it.
-- T-0879 line 2: read my line against its own grep's pathspec and spelling (plists sat outside it, label has a hyphen).
-- T-0879 line 3: "X refuses it" names a check: read that check (REQUIRED_DENY was my own literal). lexists is False on any stat failure.
-- T-0833 line 3: when a script gets one edit, every fork of the run is an argument in that edit. The instrument's hash pins a run as the code's does.
 - T-0910: a read closes nothing; say what is new (moment, env, leftovers), close that in bytes. A plan section publishes: grep HOLD (mine, this line's kin). Stop pre-writing stamps (07:52 for 07:49). "147 pass" was FAIL 10: read the stream. The applier files a red in every parent as old.
 - T-0833 line 5: "nothing else, by reading" needs the constants under the code too (lane 486). A gate word I bend after evidence: say so, one named row. Investors moved the run three times in 15 min: rule the live item first.
+- T-0833 line 6: count a number before setting it in a sentence (236 had no source). Before a verdict repeats an old line, check it hasn't closed (T-0842).
+- T-0908: my own search term in a /tmp script was a stopped effect, refused, while ruling on Odalys. Read a scratch script against the stopped lines before starting it. An order for rows and mutants needs a route to run them: T-0915 had none.
 {% endraw %}
 
 

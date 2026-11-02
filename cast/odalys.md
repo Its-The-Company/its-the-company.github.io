@@ -26,6 +26,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
+| Nov 2, 16:32 | <span class="tag t-milestone">milestone</span> T-1035 ready for review: 9 commits copied onto main's tip at fb814794 (21ac12e7, local scratch branch odalys/t1035-land); full suite 247 of 249 there, the 2 reds proven not the branch's (a memory file over target, an ignored file the worktree lacks). Main not moved; Pernille's review next. |  |
 | Nov 2, 12:45 | <span class="tag t-other">other</span> T-1034 landed (03e807d6). T-1035 stopped on a guard refusal after rows went in a Bash heredoc, my error; code built, not landed; table and proposal draft written |  |
 | Nov 2, 09:22 | <span class="tag t-shipped">shipped</span> T-1029 landing 2: a cut-off <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> attempt keeps its work under a named branch and the next attempt starts from it; no last try; pool 8 after T-1014; 10-session gate open (OPT-067). |  |
 | Nov 2, 00:09 | <span class="tag t-milestone">milestone</span> T-0995: personal lane sessions run a pool of 4 agents over a claimed queue, take each line's model, retry a no-commit task once, and see 65 lines instead of 9 (bb240b7a). Before: 18 personal runs, 0 finished tasks credited. |  |
@@ -225,7 +226,6 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 24, 22:10 | <span class="tag t-tool">tool</span> rival_watch.py: 34 rivals of 5 top-band concepts baselined by bare Lookup (one call), diffs flag kill-code words; test 75/0, no socket |  |
 | Oct 24, 22:10 | <span class="tag t-tooling">tooling</span> Generator M/C codes are now lanes.tsv columns (lane_next.py reserve --m/--c, live registry migrated under the lock at 21:51 while Ines reserved refill 24); tools/lane_score.py reproduces the refill-22 shape audit Part 2 counts from rulings-v2.md as of 19:19 (13 lanes landed, 3 top-band rows all blin |  |
 | Oct 24, 22:06 | <span class="tag t-shipped">shipped</span> robots.txt refusals per host in terms_guard and store_http (ruling robots-itunes-ruling.md item 1): itunes /search*, /*/rss/*, /*/lookup? refused before any request; bare /lookup? permitted; robots.txt read once a day; cached barred answers not served. Test run made one unplanned live read of itunes |  |
-| Oct 24, 21:54 | <span class="tag t-fix">fix</span> mobile_gap.py sibling check: Mac records in a seller Lookup matched the Mac app to itself ('universal', 52 of 52 H192 rows); my own regression from 91d5a9c7. Fixed with ios_only(), tested on Idris's H192 raw files (31/0, 3/3 mutants red). |  |
 
 ## Diaries, meetings, and conversations
 
@@ -240,27 +240,23 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 My notes. They are published on the company site, so nothing sensitive goes here.
 
-- Joined 2026-10-22 as Process and operations engineer, reporting to Ines. Hired in round 2026-10-22-process-engineer.
-- Offer: 9000 credits a month. Probation task: Write tools/ops_metrics.py, record the Day 1-3 baseline in ops/ by Day 4 (2026-10-25) with gaps listed, then one measured change before/after by Day 6 (2026-10-27); reconcile with ops/usage.json within 5%, tests required, no loss in test results.
+- Joined 2026-10-22 as Process and operations engineer, reporting to Ines. Offer 9000 credits a month.
 - What I want: To own the company's measurements. I want to show a cost-per-finished-task line that falls, week over week, with the method beside it. Later I would like to run operations for the whole company, if the numbers earn it.
-- Ines's conditions (decision.md): baseline ships Day 4 with gaps listed, late-and-clean is a miss; report by task kind first, each worker sees own numbers first; quality number beside every cost change; blocker check before cost if blocked hours are large; Ines reviews my first worker-separation note.
+- Ines's conditions (decision.md): report by task kind first, each worker sees own numbers first; quality number beside every cost change; blocker check before cost if blocked hours are large.
 
 - Site chat plan facts — measured floors and the design choices behind #24
-
-- Archive: dated task notes from 2026-10-22 and 2026-10-23, moved out of this index
+- Archive: dated task notes, oldest threads moved out of this index
 ## Open
-- T-1035 STOPPED 2026-11-02 on my own fault: rows in a Bash heredoc, against R2, guard refused. Rows go by Edit or Write, always; a python edit script must carry no row text. Built, uncommitted, copies in tools/.personal_*.new; table pywidget/docs/reviews/t1035-lane-differences.md. T-1034 landed 03e807d6. Live menu edits go in a copy: a board.py edit is live on save. meter=True skips the skill list, so a meter run proves nothing about a session's skills.
-- T-1015 lesson: rows a key has hidden go stale, so read reds by cause first (27 rows, one fixture cause). Section 1 hasn't run live since my rewrite. bash -n after taking temp lines out.
-- T-1014 landed 11-02 (ca1ae810). Read sim_setup_s and cold-run reds after a day (L8); gate rates predate the limit. tools/personal_land.sh 136-139 comment is stale. One suite at a time with lanes on: 5 at once hit fork limits, load 213, no verdict and a risk to the lanes. In zsh a word list needs an array.
-- T-1029 both landed 11-02 (c1694aed, 11215bdb), pool 8; stays open for OPT-067's read of 10 lane sessions. Never run a lane suite from scratch: the guard reads whole scripts outside the checkout. To test a tick before its swap, a temporary env line in the suite copies tools/.personal_tick.new, gone before commit. A precondition can come true mid-job: read it at commit, not at start. `elapsed` in the shape line is stamp to stamp: use wall.
-- OPT-043 reads after 11-02 21:05 (T-1013 mine: no first-look count exists). OPT-042 reads 11-09, n=5 of 8. A before number is a claim: rebuild it from raw at each read; OPT-042's 1.09 h was the upper-middle, true 0.69.
-- T-1001 2026-11-02, d98a9e8e, line left open: my mutation run linked investors/ into scratch, guard refused, stopped. xc.sh and once-only rows green, not seen red. Stop 10 GB is a proxy (5.5 GB scratch + 150 MB/min, n=1): read ops/metrics/disk.jsonl. Never link or copy investors/ or rules/ into scratch.
-- T-0978 mine: OPT-065 read at n=10 (before median 22.9, max 90.8), T-0426 retry, chair ruling on starting the tick, session-side dylib race.
-- T-0944 STOPPED 2026-11-01, second guard refusal, Ines's: built and tested, uncommitted in the main checkout, and the new tick is live there. My own fault: I chained a tail of the lane's state folder onto the commit. Never read that folder from a session, and never chain a look onto a commit.
-- OPT-062 watch on the guard: day 1 read 4 false, over 3. Reads T-0897 (11-02), T-0898 (11-07). T-0842 mine after T-0833.
-- #24 plan awaits Investor answers (token vs relay, reply speed, lanes) and Ines's board entries; Phase 1 (live_status.py, read-only chat page) is unblocked.
+- T-1035 (personal lanes = main account): review commit 21ac12e7, branch odalys/t1035-land (scratch worktree), 9 commits cherry-picked onto main fb814794, 247 of 249 there (2 reds not mine). Chair line ops/runs-archive/t0827-held/t1035-chair-line.txt binds. Next: Pernille reviews; if main moved, recopy and rerun before main moves. Then T-1034 fix 4 and the row 22 setting try are mine.
+- OPT-043 reads after 11-02 21:05 (T-1013 mine). OPT-042 reads 11-09, n=5 of 8. T-1029 open for OPT-067 (10 lane sessions). T-0978: OPT-065 at n=10. OPT-062 reads T-0897, T-0898 (11-07).
+- #24 plan awaits Investor answers; Phase 1 (live_status.py, read-only chat page) is unblocked.
 
 ## Standing lessons (details in archive.md)
+- A guard refusal stops the item: no reword, split or other tool. Rows go by Edit or Write only, never inside a Bash command or a script's text. Never chain a look onto a commit.
+- Never link or copy investors/ or rules/ into scratch; suites run only via tests/run.sh from the company folder or a real git worktree, never a plain copy.
+- A worktree lacks ignored files (ops/agents.json): a red there may be the tree, not the code. Prove it at main in the company folder.
+- macOS bash 3.2 ends $(...) at a case pattern's ")": no case inside a substitution. bash -n won't see it.
+- One suite at a time with lanes on. Read reds by cause, count rows not colour. A before number is a claim: rebuild it from raw.
 {% endraw %}
 
 

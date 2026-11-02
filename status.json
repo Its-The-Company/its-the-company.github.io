@@ -1,52 +1,66 @@
 {
  "schema": 1,
- "at": "2026-11-02T12:50:41.119505+00:00",
+ "at": "2026-11-02T16:39:06.000891+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-02T06:55:05-05:00"
+  "started": "2026-11-02T07:54:45-05:00"
  },
- "workers": [
-  {
-   "name": "pernille",
-   "task": "[review] T-1014 independent review",
-   "model": "opus",
-   "started": "2026-11-02T12:19:47.001Z",
-   "seconds": 1854,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Pernille",
+ "workers": [],
+ "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] T-1014 one Xcode limit restart",
+   "name": "idris",
+   "task": "[build] T-0642 finish go/no-go",
    "model": "opus",
-   "started": "2026-11-02T11:56:06.050Z",
+   "started": "2026-11-02T14:29:01.763Z",
    "seconds": null,
-   "finished": "2026-11-02T12:19:27.006000+00:00"
+   "finished": "2026-11-02T16:38:05.315000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[test] T-1015 lane suite sections",
+   "model": "opus",
+   "started": "2026-11-02T14:25:32.404Z",
+   "seconds": null,
+   "finished": "2026-11-02T15:10:16.608000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-1029 review landing 2",
+   "model": "opus",
+   "started": "2026-11-02T14:25:12.053Z",
+   "seconds": null,
+   "finished": "2026-11-02T14:46:45.269000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-0642 editor without SwiftPM spike",
+   "model": "opus",
+   "started": "2026-11-02T13:51:46.717Z",
+   "seconds": null,
+   "finished": "2026-11-02T14:23:59.764000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 163,
-  "blocked_count": 88
+  "runnable_count": 149,
+  "blocked_count": 106
  },
  "meter": {
   "five_hour": {
-   "pct": 11.0,
-   "resets_at": "2026-11-02T13:39:59.952741+00:00",
+   "pct": 15.0,
+   "resets_at": "2026-11-02T13:40:00.047031+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 89.0,
+   "left": 85.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 19.0,
-   "resets_at": "2026-11-08T06:59:59.952761+00:00",
+   "pct": 20.0,
+   "resets_at": "2026-11-08T07:00:00.047050+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 81.0,
+   "left": 80.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -54,10 +68,10 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-02T06:47:12.651046-05:00"
+  "read_at": "2026-11-02T07:54:43.756072-05:00"
  },
  "ui": {
-  "week_pct": 0.697,
+  "week_pct": 0.712,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -71,217 +85,145 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 4.76,
-  "usage_pct": 20.0,
-  "work_pct": 71.4,
-  "read_at": "2026-11-02T12:53:00+00:00",
+  "week_pct": 4.86,
+  "usage_pct": 19.6,
+  "work_pct": 70.0,
+  "read_at": "2026-11-02T16:42:00+00:00",
   "running": [
    {
-    "lane": "a3",
-    "task": "T-0039",
+    "lane": "a",
+    "task": "T-0032",
     "w": "Idris",
     "k": "build",
-    "t": "C13 check",
-    "at": "2026-11-02T05:21:44-05:00",
+    "t": "L9 device probe once a device or Simulator is free",
+    "at": "2026-11-02T09:39:01-05:00",
     "n": "Evan"
    },
    {
-    "lane": "a3",
-    "task": "T-0063",
+    "lane": "a",
+    "task": "T-0043",
+    "w": "Idris",
+    "k": "ios",
+    "t": "V1 bundle strip",
+    "at": "2026-11-02T09:39:01-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-0449",
     "w": "Idris",
     "k": "build",
-    "t": "Location-declined state for the \"distance to a saved place\" premade",
-    "at": "2026-11-02T05:21:44-05:00",
+    "t": "Home Screen scripts, Swift half",
+    "at": "2026-11-02T09:39:01-05:00",
     "n": "Evan"
    },
    {
-    "lane": "a3",
-    "task": "T-0392",
-    "w": "Pernille",
-    "k": "build",
-    "t": "Bridge contract s9",
-    "at": "2026-11-02T05:21:44-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-0444",
+    "lane": "a",
+    "task": "T-0464",
     "w": "Idris",
     "k": "build",
-    "t": "T-0431 L2",
-    "at": "2026-11-02T05:21:44-05:00",
+    "t": "DeviceCall carries its timeout",
+    "at": "2026-11-02T09:39:01-05:00",
     "n": "Evan"
    },
    {
-    "lane": "a3",
-    "task": "T-0553",
+    "lane": "a",
+    "task": "T-0511",
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0508 follow-ups",
+    "at": "2026-11-02T09:39:01-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-0769",
+    "w": "Idris",
+    "k": "build",
+    "t": "Apply option A",
+    "at": "2026-11-02T09:39:01-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-0790",
+    "w": "Idris",
+    "k": "build",
+    "t": "From T-0770",
+    "at": "2026-11-02T09:39:01-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-0866",
+    "w": "Idris",
+    "k": "build",
+    "t": "Shared code left from T-0844",
+    "at": "2026-11-02T09:39:01-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-0906",
+    "w": "Idris",
+    "k": "build",
+    "t": "From T-0900's review of T-0881",
+    "at": "2026-11-02T09:39:01-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-0891",
+    "w": "Idris",
+    "k": "build",
+    "t": "From T-0886 M1",
+    "at": "2026-11-02T09:39:01-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-0892",
     "w": "Idris",
     "k": "test",
-    "t": "Flaky build step",
-    "at": "2026-11-02T05:21:44-05:00",
+    "t": "Xcode slot, from T-0886 M2",
+    "at": "2026-11-02T09:39:01-05:00",
     "n": "Evan"
    },
    {
-    "lane": "a3",
-    "task": "T-0588",
-    "w": "Idris",
-    "k": "test",
-    "t": "T-0584 F3",
-    "at": "2026-11-02T05:21:44-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-0590",
-    "w": "Idris",
-    "k": "test",
-    "t": "T-0582 F2",
-    "at": "2026-11-02T05:21:44-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "b",
-    "task": "T-0198",
-    "w": "Idris",
-    "k": "build",
-    "t": "V1 status.json expired_runs",
-    "at": "2026-11-02T07:49:54-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-0213",
-    "w": "Idris",
-    "k": "build",
-    "t": "L3 follow-ups on the Simulator",
-    "at": "2026-11-02T07:49:54-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-0273",
-    "w": "Idris",
-    "k": "build",
-    "t": "After T-0031",
-    "at": "2026-11-02T07:49:54-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
+    "lane": "a",
     "task": "T-0309",
     "w": "Pernille",
     "k": "build",
     "t": "The rest of T-0231",
-    "at": "2026-11-02T07:49:54-05:00",
-    "n": "Jeremy"
+    "at": "2026-11-02T09:39:01-05:00",
+    "n": "Evan"
    },
    {
-    "lane": "b",
+    "lane": "a",
     "task": "T-0427",
     "w": "Idris",
     "k": "build",
     "t": "From T-0401 review of 40f00baa",
-    "at": "2026-11-02T07:49:54-05:00",
-    "n": "Jeremy"
+    "at": "2026-11-02T09:39:01-05:00",
+    "n": "Evan"
    },
    {
-    "lane": "b",
+    "lane": "a",
     "task": "T-0479",
     "w": "Idris",
     "k": "build",
     "t": "ADR-004 G2/G3 device checks, after a device exists",
-    "at": "2026-11-02T07:49:54-05:00",
-    "n": "Jeremy"
+    "at": "2026-11-02T09:39:01-05:00",
+    "n": "Evan"
    },
    {
-    "lane": "b",
-    "task": "T-0510",
+    "lane": "a",
+    "task": "T-0622",
     "w": "Idris",
     "k": "build",
-    "t": "T-0507 follow-ups",
-    "at": "2026-11-02T07:49:54-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-0556",
-    "w": "Idris",
-    "k": "test",
-    "t": "The app pictures T-0546 could not take",
-    "at": "2026-11-02T07:49:54-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-0749",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0746 M2",
-    "at": "2026-11-02T07:52:24-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-0863",
-    "w": "Idris",
-    "k": "test",
-    "t": "From alpha row A2",
-    "at": "2026-11-02T07:52:24-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-0953",
-    "w": "Idris",
-    "k": "build",
-    "t": "From T-0935 L1 and T-0737 L3",
-    "at": "2026-11-02T07:52:24-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-0974",
-    "w": "Idris",
-    "k": "build",
-    "t": "From T-0903",
-    "at": "2026-11-02T07:52:24-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-0044",
-    "w": "Idris",
-    "k": "ios",
-    "t": "L12 Q3 spike",
-    "at": "2026-11-02T07:52:24-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-0047",
-    "w": "Idris",
-    "k": "build",
-    "t": "Spike owner, P3, C2 Info.plist strings and privacy manifest",
-    "at": "2026-11-02T07:52:24-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-0591",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0582 F3",
-    "at": "2026-11-02T07:52:24-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-0630",
-    "w": "Idris",
-    "k": "build",
-    "t": "After T-0477",
-    "at": "2026-11-02T07:52:24-05:00",
-    "n": "Jeremy"
+    "t": "T-0619 F2",
+    "at": "2026-11-02T09:39:01-05:00",
+    "n": "Evan"
    }
   ]
  },
@@ -293,26 +235,17 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
-  "gate": "open",
-  "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
+  "free_gb": 18,
+  "gate": "closed",
+  "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-02T07:53:00-05:00"
+  "at": "2026-11-02T11:42:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-1014 independent review",
-   "model": "opus",
-   "since": "2026-11-02T12:19:47.001Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Odalys",
    "state": "next",
@@ -325,6 +258,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P1, from T-0985: deny entries for the slot...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P0, T-0296 follow-on reminder: no real package...",
    "model": null,
    "since": null,
    "next": []
@@ -355,17 +296,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-1014 independent review",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-02T12:19:47.001Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -431,33 +362,41 @@
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "L9 device probe once a device or Simulator...",
+    "w": "Wrenna",
+    "k": "research",
+    "t": "Unassigned, P2, person's browser checks on...",
     "s": "next",
     "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-1014 one Xcode limit restart",
-    "at": "2026-11-02T12:19:27.006000+00:00",
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0642 finish go/no-go",
+    "at": "2026-11-02T16:38:05.315000+00:00",
     "o": "c"
    },
    {
-    "w": "Ines",
-    "t": "CEO writes morning report",
-    "at": "2026-11-02T11:50:00.656000+00:00",
+    "w": "Odalys",
+    "k": "test",
+    "t": "T-1015 lane suite sections",
+    "at": "2026-11-02T15:10:16.608000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-1029 review landing 2",
+    "at": "2026-11-02T14:46:45.269000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 163,
-   "wait": 28,
-   "blocked": 60,
-   "you": 11
+   "next": 149,
+   "wait": 31,
+   "blocked": 75,
+   "you": 12
   }
  },
  "qr": [],
@@ -465,6 +404,8 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
+  "task_done",
   "task_title",
   "task_open",
   "lane_task",

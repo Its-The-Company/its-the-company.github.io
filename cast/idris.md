@@ -250,6 +250,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0353 done (abe146d0): notif/keychain wire waits on a Python half; review open.
 - T-0565 slice 1 2026-10-28 (5ac90a05): Console uses ConsoleEditor (Runestone). Review T-0584 open.
 - T-0586 done 2026-10-28 (158ac8da): engine after FirstFrame, first open worst 195.2 ms; review T-0600. A8s waits T-0287.
+- T-0642 done 2026-11-02 (5dfa2f40, go): branch idris/t0642-plain-targets 03177eef waits review; scratch gone. testProgressSmall red on HEAD stops xc-test on any commit; Metadata.appintents diff unread.
 
 
 Dated task logs and full lessons: archive.md.
@@ -260,13 +261,12 @@ Dated task logs and full lessons: archive.md.
 
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
-- T-0875 2026-10-31 (760e407d): claims as numbered slots, each O_EXCL, never deleted; reclaim = next slot, so a stale reading can't win (delete-then-create can). Lesson: bash reads a running script by offset; replace a live .sh by rename, never in place (the 11:37 build kept its inode). A loop's unquoted $v is one word in zsh.
-- T-0355 landing 2026-10-31 (12f6157b, idris/t0355-land): 11 commits on cbd4094a; Ines moves main. Lesson: red must name its reason; a missing file threw a bare "noContext" with no line. Unit target about 2 min; a full scheme run is 28.
-- T-0881 2026-10-31 (0aadb129): widget send is check, stage, commit with undo; staging beside widgets/. Open: independent review, RENAME_SWAP on a device, app-guide PNGs get rewritten by the unit target. Lesson: code that puts things back only counts if a sweep fails each step N in turn.
 - T-0675 slice 4 2026-11-01: a marker means nothing without knowing who is alive: overlapping calls per family and a queued neighbour would both read as dead runs. Swift's own `finished` (busy) has no lane keys; ask whether it ran before judging it. WidgetKit won't re-ask a cached config: a new id forces getTimeline.
 - T-0675 items 1-2 2026-11-01: a stored run of mutants needs a restore on EXIT and a commit first; a foreground call died 144 with a mutant planted. An ordered rule can freeze what a script controls (future sampled_at): check it against that.
 - T-0675 mutants 2026-11-02: xc_mutants prints exit 75 (a run that never started) as SURVIVED; three false survivors. Plant in a clone, never in main while a queue runs. Say a verdict only after reading it: I called kills ahead of the file four times.
 - T-0675 item 3 2026-11-01: inside the Simulator a lookup keeps case but a new name collides, even on a Mac disk that ignores case: measure from a test, not the shell. An undo on a commit's last step can't run: delete it.
+- T-1030 recut 2026-11-02: removing a function, grep stored mutants' find text, not the file name: Core/mutants-t0719.json names Sources/PyWidgetCore/ and my triage missed it. Remove a worktree before a retry: branch -D fails on a checked-out name.
+- T-0642 2026-11-02: a smaller binary is a claim: list what left (compile lines, nm) before calling it good. A failure list needs HEAD in the same folder and the same device: four of mine were /tmp against /private/tmp. Keep the HEAD build until the diff is read; I deleted mine for disk and lost one answer.
 - T-0675 mirror bug 2026-11-01 (f8142681): my item 3 deleted files.shared data, because scripts/<id> had two owners and a review would have come later. Lesson: before a rename over a folder, grep who else writes it. -only-testing on a class misses tests in an extension of another class: read the count. Renaming a constant: run the whole unit target before the commit, not after.
 {% endraw %}
 

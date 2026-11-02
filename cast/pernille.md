@@ -101,7 +101,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open
 - Probation (a) and (b): as in the offer line above.
 - T-0448 app.json: F5 (huge int version), F7 (project_missing code) still open; Swift twin T-0449.
-- T-0645 review done (0eba37be): M1 T-0650, M2 T-0651 for Idris. Board edits left uncommitted for the Operator.
+- Mine: `_wire.want_time` hands back naive datetimes; after T-0953 lands, lane.py:173 and C2:121 "waits with no bound".
 - T-0446 prompts (ac167352), review fixes T-0462/63/66 in 7db9e91d (API v1.1, 61 cases, mutants.json 29/29). Open: Idris reads rule 4; T-0465 HUD progress; T-0458 tip splitter after T-0447.
 
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
@@ -115,6 +115,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-11-01 T-0880 LANE: HOLD, detail held. Lesson: review who can edit what obeys a check, not only the check. Held folder is git-ignored: never commit it.
 - 2026-11-01 T-0935 lane.py pass. Open: T-0952 (chair), T-0956 mine (replay on zip). Lessons: `-I` drops PYTHONHOME, so a passing suite may not be on the layout you built; `widgets/<id>/` is an app-lane script's folder; a reserved ID can still collide, grep before citing.
 - 2026-11-01 T-0880 LAND: HOLD, detail held; I owe a delta read on any change to the six pinned files before either switch. Lesson: one probe per call, a guard refusal stops everything in it. In zsh quote "$r:path": :t is a modifier.
+- 2026-11-02 T-1030: read the contract too. DPLA Attachment 6 bars stored MapKit coordinates and results with no map. PDF text: osascript PDFKit. Nothing gates mutants: recount `find`s.
 {% endraw %}
 
 

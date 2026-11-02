@@ -442,6 +442,50 @@ Read: 0020d29d, `g2-key-row-iphone.png` and `g2-key-row-ipad.png`, `EditorKeyRow
 - **Checks for the build.** A UI test at AX XXXL: long-press `(` and the viewer shows; slide to `)` and lift, and the text gains `)`; long-press `"` and the menu shows three rows; pick "F-string" and the text gains `f""` with the caret between. Screenshot both. VoiceOver on a device (T-0479 list): the menu rows' speech.
 - **Found while reading the screens, not one of the two questions.** `g2-key-row-ipad.png` draws the iPhone row (a scroller cut off after `'`). IDE spec s3 says an iPad with the software keyboard gets the full set without scrolling, plus ← →. `EditorKeyRow.swift` has no iPad branch. The gate screen forces the row on, so this screenshot is not what an iPad user sees today. But with no hardware keyboard, an iPad would show this. Same build line.
 
+### T-0642 go/no-go, the editor as plain XcodeGen targets: 2026-11-02 11:50 ET (Idris)
+
+**Go.** Branch `idris/t0642-plain-targets`, commit 03177eef, ready for review, not on main. Runestone, TreeSitter and TreeSitterLanguages build as five static libraries and two resource bundles with SwiftPM's names. No `Package.swift` runs, so nothing asks for the sandbox macOS refuses inside the runner's, and no sandbox was loosened. What the spike has not shown: that the runner's xc-test passes. That was not run, and one test stops it on every commit (below).
+
+All of this is the Mac mini, Xcode 27.1 27A9275, cold in a new derived-data folder. Nothing here was measured on the MacBook's 27.2.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: T-0642 go/no-go, the editor as plain XcodeGen targets: 2026-11-02 11:50 ET…, scrolls sideways" style="--tw:607px" markdown="1">
+
+| Cold build | HEAD (8701e80d) | Spike (03177eef) | Difference |
+| --- | --- | --- | --- |
+| Debug, build-for-testing | 51 s | 59 s | +8 s |
+| Release (EditorBench) | 68 s | 68 s | 0 |
+| Debug app | 82,616 KB | 82,248 KB | -368 KB |
+| Release app | 56,988 KB | 56,832 KB | -156 KB (-0.3%) |
+| Release binary | 7,682,560 B | 7,520,352 B | -162,208 B (-2.1%) |
+
+</div>
+
+
+The times are n=1 each, spike first, so the spike paid for the cold disk. HEAD took 76 s and 79 s this morning with the same commands, and the spike's first Debug compile took 51 s, so I read the times as no difference. The sizes are not noise. The app size matches the 08:54 figures to the KB; the binary came out 1,936 B larger than at 08:56, and I did not read why.
+
+*No SwiftPM.* Both spike logs: 0 lines for swiftpm, Resolve Package or Package.swift. All 11 `packageProductDependencies` in the project are empty. `fetch_editor.sh` gives the same files by clone, `--tarballs` and `--offline` (`diff -r`), and `--offline` is the runner's route.
+
+*Why the binary shrank, so nobody assumes something fell out.* The package compiled for iOS 15 and the plain targets for the app's iOS 18. That is the one difference in the compile lines that can change code (same `-O -whole-module-optimization`, same C flags apart from warnings), and it fits what changed: `__text` is 48,480 B smaller and `UIMenuItem` leaves the binary. Ten type and conformance records differ: SwiftPM's two `BundleFinder` classes, `NSStringEnumerationOptions` and its conformances, `StaticString`, `UIMenuItem`. No other Runestone or TreeSitter type is missing.
+
+*Bundle diff, by content, not by file bytes.* Same 20 and 3 files. 17 of 17 `.strings` hold the same entries (text in HEAD, compiled in the spike). `Assets.car`, 52 renditions, same. `.xcprivacy` and both `.scm` files byte-identical. Info.plist: same keys, one value, `MinimumOSVersion` 18.0 against 15.0. The app's own `Assets.car` reads the same. **Not explained:** `Metadata.appintents` differs in its `actions` block, and I deleted the HEAD build to free disk before reading why. No path is in it. A reviewer should diff that file from two fresh Release builds.
+
+*Tests on the spike.* Editor: 25 of 25 unit tests (EditorGateTests 19, EditorCaptureMapTests 4, ConsoleEditorOpenTests 2). UI: ConsoleEditorUITests and EditorGateUITests, 10 passed, 4 skipped (the iPad hardware-keyboard G3 tests, skipped by design on an iPhone), 0 failed.
+
+The whole unit target, 677 tests, was not green. Run 1, the first test run on that Simulator: 18 failed, 12 of them ProStoreTests stalling 30 s on StoreKit and one notification test, "Source is not authorized". Run 2, same device, load average above 100: 5 failed, 672 passed, every StoreKit test green. Those 5:
+
+- **Four are my folder, not the code.** ExtensionBridgeTests (2), ExtensionRuntimeTests (1), WidgetKindsTests (1). `#filePath` says /tmp and FileManager says /private/tmp, so a name comes out `Shared//Shared/...`. HEAD fails the same four in the same folder. A checkout outside /tmp does not have this, and the runner works under its home.
+- **One is real and already on main.** `PremadeSnapshotTests.testProgressSmallReadsItsTimeLeftInOneLine` fails on HEAD too. It wants " min left" and reads "1 day, 9 hr left". The fixture is dated 2026-10-31 and the rendered countdown looks tied to the real clock; that is my reading, not proved.
+
+**What else stops xc-test once this is on main:**
+
+1. That snapshot test. Certain, on any commit, until T-0860's owner fixes the test.
+2. A new Simulator. The runner makes its own device, and run 1 above is what a first run looked like here. n=1, and HEAD has no such sample, so this is neither shown to be the spike's nor shown not to be.
+3. ProStoreTests is uneven when filtered: the same 31-test filter failed 3 of them on HEAD and 1 on the spike (`testAskToBuyDeclinedGrantsNothing` both times), though all passed in the whole target.
+4. Not run on the spike: the sandboxed job, the UI suite beyond the editor's two classes, and `archive`, which plain static targets have never been through. The disk gate shut again at 17.7 GB before the first of these. 27.2 is also unmeasured.
+
+**Needed to land.** Review by someone other than me, including `archive` and the intents diff. Odalys's sandboxed proof need not wait for main: `tools/runner_profile_compare.py 03177eef new` takes any commit in the repository, so it tests the sandbox on the mini now. Two old `itsthecompany-runner` devices sit there; delete them first to sample item 2. Its job lock skips xc.sh's disk gate, so read the gate by hand before starting it. Only the real MacBook job needs main. After landing, the runner profile's rule for SwiftPM's cache has no use left. The MacBook's xc-test stays red until item 1 is fixed, and that fix does not depend on this branch.
+
 ## 8. Licence lines (logged in log/assets.md, Commandments 4-5)
 
 - Runestone, https://github.com/simonbs/Runestone, MIT, Copyright (c) 2021 Simon Støvring.
@@ -500,7 +544,7 @@ Reasons:
 - **Ruling 2 named no statistic.** That gap is mine. "A p95 over 33 ms, or an open over 300 ms after that day" also reads two ways. So I tested this measure against every reading. It lands in the adapter-day band under all of them except worst-run:
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 9: Chair line (Ines), 2026-10-27 11:58 ET (T-0461): G1 first measure, scrolls sideways" style="--tw:740px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: Chair line (Ines), 2026-10-27 11:58 ET (T-0461): G1 first measure, scrolls sideways" style="--tw:740px" markdown="1">
 
 | Reading | Keystroke p95 top / mid / end | Cold open | Outcome |
 | --- | --- | --- | --- |

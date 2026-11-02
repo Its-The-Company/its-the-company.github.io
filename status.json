@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 133,
+  "runnable_count": 134,
   "blocked_count": 87
  },
  "meter": {
@@ -55,8 +55,18 @@
   "week_pct": 0.64,
   "usage_pct": 3.8,
   "work_pct": 40.0,
-  "read_at": "2026-11-02T02:16:00+00:00",
-  "running": []
+  "read_at": "2026-11-02T02:25:00+00:00",
+  "running": [
+   {
+    "lane": "b",
+    "task": "T-0537",
+    "w": "Idris",
+    "k": "test",
+    "t": "From Pernille's T-0536 review of 39528f1f",
+    "at": "2026-11-01T21:25:22-05:00",
+    "n": "Jeremy"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -68,7 +78,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-01T21:16:00-05:00"
+  "at": "2026-11-01T21:25:00-05:00"
  },
  "next_tick_why": "last_tick",
  "lanes": [
@@ -197,7 +207,7 @@
   ],
   "done": [],
   "count": {
-   "next": 133,
+   "next": 134,
    "wait": 27,
    "blocked": 60,
    "you": 10

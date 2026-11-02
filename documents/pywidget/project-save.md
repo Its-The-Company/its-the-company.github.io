@@ -115,6 +115,10 @@ The case passes only after T-0866 lands. s5.11.12 said 1.0 day. s3 adds about 0.
 - **The remade folder (T-0900).** A run in flight during a move remakes `widgets/wea/` with only `tree.json` (RunResultSink.swift:94). Make that folder only for a premade id.
 - **Deleting the Widget part itself is not one of the four, and is open.** Its folder stays, so a placed widget keeps drawing a script that no longer exists, with no mark. Check it. My rule: treat it as T-0747's move with no destination. The folder goes, the console says so, and the placed widget has no script until the person chooses one in Edit Widget.
 - **A limit, said plainly.** A change made in Files while the app is not running reaches the widget at the next boundary after the app runs. iOS gives no hook before that, so the widget carries no mark until then.
+
+## 7. A refused save and the copy (T-0355 notes, T-0666 L3)
+
+When a save is refused (autosave paused after "Not Now", or another window saved the file meanwhile) and the scene leaves the foreground, the text goes to a copy (`main (conflict).py`) and the editor opens that copy. "Inactive" counts as leaving: pulling down Control Center or the notification list does it. So "Not Now" lasts only until the next glance at Control Center, and a tester will say "my file changed name". That is intended, the safe side: iOS may end the app after the scene leaves the foreground without another call, and the text must be on disk by then. The console says where the text went. The next launch names the copy only while it exists: a rename or delete of the copy, or of its project, in any window updates or drops that note (T-0668, L1).
 {% endraw %}
 
 </div>

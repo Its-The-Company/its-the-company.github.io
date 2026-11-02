@@ -22,10 +22,11 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Career goal | I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week. |
 {: .facts}
 
-## Activity (53 most recent)
+## Activity (54 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Nov 2, 12:52 | <span class="tag t-review">review</span> T-1045 delta read: go to land the plain editor targets; my F4 was wrong (dead stripping does apply), corrected in the review; the archive stays unproven until #98 2A |  |
 | Oct 31, 07:35 | <span class="tag t-finding">finding</span> T-0860: in WidgetKit's extension a live date Text fills its row; fixed_size() on one above a ProgressView crashed the extension (LayoutSubview.place, run of 06:57), so a user script can reach it. Not fixed here. |  |
 | Oct 30, 00:26 | <span class="tag t-milestone">milestone</span> First signed device build of pywidget passed the stdlib size check, installed and launched on the test iPhone (T-0756: embedded code signatures were 1,142,784 B of the 1,363,968 B excess) |  |
 | Oct 29, 19:48 | <span class="tag t-review">review</span> T-0754 review of the runner self-update: 4 Medium findings (network blip rolls back a good release; a hung first check never rolls back; sandbox rules can change unchecked; broken update code can't be replaced); fix line T-0755 for Odalys before the re-install |  |
@@ -110,12 +111,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
-- 2026-11-01 T-0833 lane half lessons: a catch-all that prints "held" hides a crash, so count rows by what they reached, not the last line; after a refusal the Write tool that would land the same text is the way round, not the fix.
-- 2026-11-01 T-0833: verdict written, held on what ran; tick only after Ines reads and the Operator posts. Print every refusal, not the first. Recount any number going public, even a chair's. A runner that opens its output "w" erases the run a repeat is compared to: copy first.
 - 2026-11-01 T-0880 LANE: HOLD, detail held. Lesson: review who can edit what obeys a check, not only the check. Held folder is git-ignored: never commit it.
 - 2026-11-01 T-0935 lane.py pass. Open: T-0952 (chair), T-0956 mine (replay on zip). Lessons: `-I` drops PYTHONHOME, so a passing suite may not be on the layout you built; `widgets/<id>/` is an app-lane script's folder; a reserved ID can still collide, grep before citing.
 - 2026-11-01 T-0880 LAND: HOLD, detail held; I owe a delta read on any change to the six pinned files before either switch. Lesson: one probe per call, a guard refusal stops everything in it. In zsh quote "$r:path": :t is a modifier.
 - 2026-11-02 T-1030: read the contract too. DPLA Attachment 6 bars stored MapKit coordinates and results with no map. PDF text: osascript PDFKit. Nothing gates mutants: recount `find`s.
+- 2026-11-02 T-1045: my F4 was wrong and cost Idris a commit: SDKSettings.plist DefaultProperties outranks xcspec defaults, so read the link line before saying a flag is absent. Mine: T-1048 stdlib size stop unexplained, my check; T-1047 upload.sh identity.
 {% endraw %}
 
 

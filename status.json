@@ -1,66 +1,66 @@
 {
  "schema": 1,
- "at": "2026-11-02T16:39:06.000891+00:00",
+ "at": "2026-11-02T18:05:04.749084+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-02T07:54:45-05:00"
+  "started": "2026-11-02T11:44:04-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "idris",
-   "task": "[build] T-0642 finish go/no-go",
+   "name": "ines",
+   "task": "[plan] T-1035 chair ruling on guard refusal",
    "model": "opus",
-   "started": "2026-11-02T14:29:01.763Z",
+   "started": "2026-11-02T17:57:12.217Z",
    "seconds": null,
-   "finished": "2026-11-02T16:38:05.315000+00:00"
+   "finished": "2026-11-02T18:03:24.259000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[test] T-1015 lane suite sections",
+   "task": "[tools] T-1034 T-1035 lanes same as main, retry fix",
    "model": "opus",
-   "started": "2026-11-02T14:25:32.404Z",
+   "started": "2026-11-02T16:46:32.795Z",
    "seconds": null,
-   "finished": "2026-11-02T15:10:16.608000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-1029 review landing 2",
-   "model": "opus",
-   "started": "2026-11-02T14:25:12.053Z",
-   "seconds": null,
-   "finished": "2026-11-02T14:46:45.269000+00:00"
+   "finished": "2026-11-02T17:55:55.473000+00:00"
   },
   {
    "name": "idris",
-   "task": "[build] T-0642 editor without SwiftPM spike",
-   "model": "opus",
-   "started": "2026-11-02T13:51:46.717Z",
+   "task": "[build] T-0445 acknowledgements test by id",
+   "model": "sonnet",
+   "started": "2026-11-02T17:52:34.956Z",
    "seconds": null,
-   "finished": "2026-11-02T14:23:59.764000+00:00"
+   "finished": "2026-11-02T17:53:39.589000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-1045 delta read of T-0642 branch",
+   "model": "opus",
+   "started": "2026-11-02T17:39:58.537Z",
+   "seconds": null,
+   "finished": "2026-11-02T17:52:10.980000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 149,
-  "blocked_count": 106
+  "runnable_count": 153,
+  "blocked_count": 107
  },
  "meter": {
   "five_hour": {
-   "pct": 15.0,
-   "resets_at": "2026-11-02T13:40:00.047031+00:00",
+   "pct": 20.0,
+   "resets_at": "2026-11-02T18:40:00.480282+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 85.0,
+   "left": 80.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 20.0,
-   "resets_at": "2026-11-08T07:00:00.047050+00:00",
+   "pct": 23.0,
+   "resets_at": "2026-11-08T07:00:00.480306+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 80.0,
+   "left": 77.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -68,10 +68,10 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-02T07:54:43.756072-05:00"
+  "read_at": "2026-11-02T11:44:03.171785-05:00"
  },
  "ui": {
-  "week_pct": 0.712,
+  "week_pct": 0.697,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -85,147 +85,11 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 4.86,
-  "usage_pct": 19.6,
-  "work_pct": 70.0,
-  "read_at": "2026-11-02T16:42:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-0032",
-    "w": "Idris",
-    "k": "build",
-    "t": "L9 device probe once a device or Simulator is free",
-    "at": "2026-11-02T09:39:01-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0043",
-    "w": "Idris",
-    "k": "ios",
-    "t": "V1 bundle strip",
-    "at": "2026-11-02T09:39:01-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0449",
-    "w": "Idris",
-    "k": "build",
-    "t": "Home Screen scripts, Swift half",
-    "at": "2026-11-02T09:39:01-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0464",
-    "w": "Idris",
-    "k": "build",
-    "t": "DeviceCall carries its timeout",
-    "at": "2026-11-02T09:39:01-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0511",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0508 follow-ups",
-    "at": "2026-11-02T09:39:01-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0769",
-    "w": "Idris",
-    "k": "build",
-    "t": "Apply option A",
-    "at": "2026-11-02T09:39:01-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0790",
-    "w": "Idris",
-    "k": "build",
-    "t": "From T-0770",
-    "at": "2026-11-02T09:39:01-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0866",
-    "w": "Idris",
-    "k": "build",
-    "t": "Shared code left from T-0844",
-    "at": "2026-11-02T09:39:01-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0906",
-    "w": "Idris",
-    "k": "build",
-    "t": "From T-0900's review of T-0881",
-    "at": "2026-11-02T09:39:01-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0891",
-    "w": "Idris",
-    "k": "build",
-    "t": "From T-0886 M1",
-    "at": "2026-11-02T09:39:01-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0892",
-    "w": "Idris",
-    "k": "test",
-    "t": "Xcode slot, from T-0886 M2",
-    "at": "2026-11-02T09:39:01-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0309",
-    "w": "Pernille",
-    "k": "build",
-    "t": "The rest of T-0231",
-    "at": "2026-11-02T09:39:01-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0427",
-    "w": "Idris",
-    "k": "build",
-    "t": "From T-0401 review of 40f00baa",
-    "at": "2026-11-02T09:39:01-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0479",
-    "w": "Idris",
-    "k": "build",
-    "t": "ADR-004 G2/G3 device checks, after a device exists",
-    "at": "2026-11-02T09:39:01-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0622",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0619 F2",
-    "at": "2026-11-02T09:39:01-05:00",
-    "n": "Evan"
-   }
-  ]
+  "week_pct": 4.76,
+  "usage_pct": 17.2,
+  "work_pct": 68.6,
+  "read_at": "2026-11-02T18:06:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -235,14 +99,14 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
-  "gate": "closed",
-  "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
+  "free_gb": 13,
+  "gate": "open",
+  "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-02T11:42:00-05:00"
+  "at": "2026-11-02T13:06:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -371,31 +235,31 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0642 finish go/no-go",
-    "at": "2026-11-02T16:38:05.315000+00:00",
+    "w": "Ines",
+    "k": "plan",
+    "t": "T-1035 chair ruling on guard refusal",
+    "at": "2026-11-02T18:03:24.259000+00:00",
     "o": "c"
    },
    {
     "w": "Odalys",
-    "k": "test",
-    "t": "T-1015 lane suite sections",
-    "at": "2026-11-02T15:10:16.608000+00:00",
+    "k": "tools",
+    "t": "T-1034 T-1035 lanes same as main, retry fix",
+    "at": "2026-11-02T17:55:55.473000+00:00",
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-1029 review landing 2",
-    "at": "2026-11-02T14:46:45.269000+00:00",
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0445 acknowledgements test by id",
+    "at": "2026-11-02T17:53:39.589000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 149,
+   "next": 153,
    "wait": 31,
-   "blocked": 75,
+   "blocked": 76,
    "you": 12
   }
  },

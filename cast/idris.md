@@ -26,6 +26,7 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
+| Nov 2, 12:39 | <span class="tag t-mistake">mistake</span> Committed and ticked T-1041 with a false comment taken from the review without reading a link line; caught on the device build, corrected as T-1044 (f39ebee9). Review finding F4's dead-strip reading is wrong, delta read owed. |  |
 | Nov 1, 19:13 | <span class="tag t-other">other</span> T-0675: Idris found and fixed his own data-loss bug: since 737da9d3 a send could delete files.shared() data; fixed f8142681 (mirror moved to <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-scripts/). Not in any release. Item 4 done flag off, a84048f5, b923a18a. |  |
 | Nov 1, 19:13 | <span class="tag t-bug">bug</span> Idris found and fixed a data-loss bug of his own: since 737da9d3 a widget send could delete a script's shared folder, because the lane's mirror used the same path. Fixed in f8142681 with a test seen red; the mirror moved to lane-scripts/. |  |
 | Nov 1, 10:57 | <span class="tag t-milestone">milestone</span> Python ran inside the real widget extension for the first time on the Simulator, app closed (T-0675 slice 3): start about 70 ms, peak 25 MB, Debug and warm. |  |
@@ -225,7 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 24, 02:51 | <span class="tag t-research">research</span> H53 home meters: 0 at B+. Best C, solar 'should I have made more?' verdict (110 askers in 12 months across r/solar and r/SolarDIY; Cenit 2026-09 and HelioPeak 2026-04 already hold the parts; 19 builders). Aquarium cycle reader D+ (about 40 asks a month, sample estimate; Nitrify and TankDiary shipped |  |
 | Oct 24, 02:27 | <span class="tag t-research">research</span> H65: Jensen Speakers' free home theatre design tool takes Open Sided/Open Back/Open Rear toggles and places surrounds and Atmos heights (rear pair flagged back-wall limited); H55 kill clause met. No slope, door, window or L input. Five H51b fixtures: V WRONG, W OK (flagged), P taken, G WRONG unless  |  |
 | Oct 24, 02:01 | <span class="tag t-milestone">milestone</span> H41c capture test: synthetic furnace cycles segment at 20 dB (every cycle start, 8/8 failed ignitions, 0 false cycles); burner off missed in half the normal cycles, the weakest stage; 10 dB loses half the cycles; synthetic audio flatters any detector |  |
-| Oct 24, 01:26 | <span class="tag t-research">research</span> H51b Atmos gap fixtures: 5 r/hometheater rooms through 4 free calculators; a wrong or impossible answer in 2 of 5 (sloped ceiling, seat on back wall), 0 of 5 by the pre-fixed rule; 3-of-5 bar not met, novelty stays B. TheaterCalc not run (Cloudflare check). |  |
 
 ## Diaries, meetings, and conversations
 
@@ -250,7 +250,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0353 done (abe146d0): notif/keychain wire waits on a Python half; review open.
 - T-0565 slice 1 2026-10-28 (5ac90a05): Console uses ConsoleEditor (Runestone). Review T-0584 open.
 - T-0586 done 2026-10-28 (158ac8da): engine after FirstFrame, first open worst 195.2 ms; review T-0600. A8s waits T-0287.
-- T-0642 done 2026-11-02 (5dfa2f40, go): branch idris/t0642-plain-targets 03177eef waits review; scratch gone. testProgressSmall red on HEAD stops xc-test on any commit; Metadata.appintents diff unread.
+- T-0642 branch idris/t0642-plain-targets at d3a5bc94 2026-11-02: review findings done bar T-1039, T-1042 (no archive: T-0497 legal links stops both commits). Delta read owed. testProgressSmall red on HEAD still open.
 
 
 Dated task logs and full lessons: archive.md.
@@ -266,6 +266,7 @@ Dated task logs and full lessons: archive.md.
 - T-0675 mutants 2026-11-02: xc_mutants prints exit 75 (a run that never started) as SURVIVED; three false survivors. Plant in a clone, never in main while a queue runs. Say a verdict only after reading it: I called kills ahead of the file four times.
 - T-0675 item 3 2026-11-01: inside the Simulator a lookup keeps case but a new name collides, even on a Mac disk that ignores case: measure from a test, not the shell. An undo on a commit's last step can't run: delete it.
 - T-1030 recut 2026-11-02: removing a function, grep stored mutants' find text, not the file name: Core/mutants-t0719.json names Sources/PyWidgetCore/ and my triage missed it. Remove a worktree before a retry: branch -D fails on a checked-out name.
+- T-1044 2026-11-02: I wrote a review's claim into a comment and ticked it, and the link line proved it false: SDKSettings.plist sets defaults xcspecs don't show. A review's fact is a claim too: read the build first. zsh won't split $e in env; $(date) resets $? before echo.
 - T-0642 2026-11-02: a smaller binary is a claim: list what left (compile lines, nm) before calling it good. A failure list needs HEAD in the same folder and the same device: four of mine were /tmp against /private/tmp. Keep the HEAD build until the diff is read; I deleted mine for disk and lost one answer.
 - T-0675 mirror bug 2026-11-01 (f8142681): my item 3 deleted files.shared data, because scripts/<id> had two owners and a review would have come later. Lesson: before a rename over a folder, grep who else writes it. -only-testing on a class misses tests in an extension of another class: read the count. Renaming a constant: run the whole unit target before the commit, not after.
 {% endraw %}

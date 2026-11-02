@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-02T03:32:19.262873+00:00",
+ "at": "2026-11-02T04:25:20.705777+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null
+  "active": true,
+  "kind": "inbox",
+  "started": "2026-11-01T23:24:24-05:00"
  },
  "workers": [],
  "who": "",
@@ -12,22 +12,22 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 140,
+  "runnable_count": 145,
   "blocked_count": 87
  },
  "meter": {
   "five_hour": {
-   "pct": 15.0,
-   "resets_at": "2026-11-02T03:39:59.609781+00:00",
+   "pct": 1.0,
+   "resets_at": "2026-11-02T08:40:00.047496+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 85.0,
+   "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 16.0,
-   "resets_at": "2026-11-08T06:59:59.609804+00:00",
+   "pct": 17.0,
+   "resets_at": "2026-11-08T07:00:00.047514+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 84.0,
+   "left": 83.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -35,11 +35,11 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-01T22:22:50.370961-05:00"
+  "read_at": "2026-11-01T23:24:23.700629-05:00"
  },
  "ui": {
-  "week_pct": 0.168,
-  "five_hour_pct": 0.875,
+  "week_pct": 0.403,
+  "five_hour_pct": 1.347,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -50,22 +50,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-01T22:47:18-05:00",
+ "next_tick": null,
  "personal": {
-  "week_pct": 0.78,
-  "usage_pct": 4.6,
-  "work_pct": 47.8,
-  "read_at": "2026-11-02T04:06:00+00:00",
-  "running": [
-   {
-    "lane": "a2",
-    "task": "T-0811",
-    "w": "Idris",
-    "k": "build",
-    "t": "After the alpha commit",
-    "at": "2026-11-01T23:05:50-05:00"
-   }
-  ]
+  "week_pct": 1.3,
+  "usage_pct": 7.1,
+  "work_pct": 57.1,
+  "read_at": "2026-11-02T04:27:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -77,9 +68,9 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-01T23:06:00-05:00"
+  "at": "2026-11-01T23:27:00-05:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "lanes": [
   {
    "name": "Odalys",
@@ -164,7 +155,7 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Lanes take P0/P1 lines first and more...",
+    "t": "Personal lanes mirror the main lane",
     "s": "next",
     "o": "c"
    },
@@ -204,43 +195,27 @@
     "o": "c"
    }
   ],
-  "done": [],
+  "done": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0985 personal lanes multi-agent",
+    "at": "2026-11-02T04:04:33.278Z",
+    "o": "c"
+   }
+  ],
   "count": {
-   "next": 140,
+   "next": 145,
    "wait": 27,
    "blocked": 60,
    "you": 10
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6568372234",
-   "state": "received",
-   "position": 1,
-   "eta": "2026-11-01T22:47:18-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Start the main lane agent..."
-  },
-  {
-   "id": "c6568380379",
-   "state": "received",
-   "position": 2,
-   "eta": "2026-11-01T22:47:18-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Ok and ideally use the remainder of..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "inbox_title",
   "task_title",
   "task_open",
   "lane_task",

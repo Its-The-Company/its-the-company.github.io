@@ -1,64 +1,64 @@
 {
  "schema": 1,
- "at": "2026-11-02T23:03:52.312957+00:00",
+ "at": "2026-11-02T23:21:48.110415+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-02T16:36:11-05:00"
+  "kind": "evening",
+  "started": "2026-11-02T18:06:41-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "pernille",
-   "task": "[build] T-1143 editor completion budget redesign",
+   "name": "ines",
+   "task": "[report] evening",
    "model": "opus",
-   "started": "2026-11-02T22:21:31.241Z",
+   "started": "2026-11-02T23:07:34.552Z",
    "seconds": null,
-   "finished": "2026-11-02T23:03:33.125000+00:00"
+   "finished": "2026-11-02T23:13:22.388000+00:00"
   },
   {
-   "name": "idris",
-   "task": "[build] T-1050 land t0642 plain targets branch",
-   "model": "opus",
-   "started": "2026-11-02T22:17:36.293Z",
+   "name": "worker",
+   "task": "[diary] Pernille",
+   "model": "haiku",
+   "started": "2026-11-02T23:07:02.618Z",
    "seconds": null,
-   "finished": "2026-11-02T22:59:18.455000+00:00"
+   "finished": "2026-11-02T23:07:27.890000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[tools] T-1071 site data.py overflow label",
-   "model": "opus",
-   "started": "2026-11-02T21:37:48.853Z",
+   "name": "worker",
+   "task": "[diary] Ines",
+   "model": "haiku",
+   "started": "2026-11-02T23:06:58.916Z",
    "seconds": null,
-   "finished": "2026-11-02T22:52:56.683000+00:00"
+   "finished": "2026-11-02T23:07:23.297000+00:00"
   },
   {
-   "name": "pernille",
-   "task": "[build] T-1121 city list staged",
-   "model": "sonnet",
-   "started": "2026-11-02T22:08:27.716Z",
+   "name": "worker",
+   "task": "[diary] Odalys",
+   "model": "haiku",
+   "started": "2026-11-02T23:07:00.684Z",
    "seconds": null,
-   "finished": "2026-11-02T22:52:06.026000+00:00"
+   "finished": "2026-11-02T23:07:21.097000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 171,
+  "runnable_count": 172,
   "blocked_count": 106
  },
  "meter": {
   "five_hour": {
    "pct": 9.0,
-   "resets_at": "2026-11-02T23:40:00.251013+00:00",
+   "resets_at": "2026-11-02T23:40:00.499016+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 91.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 26.0,
-   "resets_at": "2026-11-08T07:00:00.251038+00:00",
+   "resets_at": "2026-11-08T07:00:00.499033+00:00",
    "used_words": "of your weekly allowance used",
    "left": 74.0,
    "left_words": "of your weekly allowance left"
@@ -68,7 +68,7 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-02T16:36:10.865889-05:00"
+  "read_at": "2026-11-02T18:06:38.280848-05:00"
  },
  "ui": {
   "week_pct": 0.692,
@@ -86,27 +86,27 @@
  "next_tick": null,
  "personal": {
   "week_pct": 9.22,
-  "usage_pct": 25.9,
-  "work_pct": 70.1,
-  "read_at": "2026-11-02T23:05:00+00:00",
+  "usage_pct": 22.8,
+  "work_pct": 69.1,
+  "read_at": "2026-11-02T23:23:00+00:00",
   "running": []
  },
  "api_credits": [
   {
    "name": "company",
-   "used_usd": 8.42,
+   "used_usd": 100.54,
    "total_usd": 200.0
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 12,
   "gate": "closed",
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
  },
  "lock_in": {
   "on": true,
   "pool": 12,
-  "at": "2026-11-02T18:05:00-05:00"
+  "at": "2026-11-02T18:23:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -235,42 +235,63 @@
   ],
   "done": [
    {
-    "w": "Pernille",
-    "k": "build",
-    "t": "T-1143 editor completion budget redesign",
-    "at": "2026-11-02T23:03:33.125000+00:00",
-    "o": "c",
-    "x": "killed"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-1050 land t0642 plain targets branch",
-    "at": "2026-11-02T22:59:18.455000+00:00",
+    "w": "Ines",
+    "k": "report",
+    "t": "Evening",
+    "at": "2026-11-02T23:13:22.388000+00:00",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-1071 site data.py overflow label",
-    "at": "2026-11-02T22:52:56.683000+00:00",
+    "w": "Worker",
+    "k": "diary",
+    "t": "Pernille",
+    "at": "2026-11-02T23:07:27.890000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Worker",
+    "k": "diary",
+    "t": "Ines",
+    "at": "2026-11-02T23:07:23.297000+00:00",
     "o": "i"
    }
   ],
   "count": {
-   "next": 171,
+   "next": 172,
    "wait": 29,
    "blocked": 77,
    "you": 12
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6590721743",
+   "state": "in_progress",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "The Mac Mini only holds code for the..."
+  },
+  {
+   "id": "c6590744880",
+   "state": "in_progress",
+   "position": 2,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "A"
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
+  "inbox_title",
   "task_title",
   "task_open",
   "lane_task",

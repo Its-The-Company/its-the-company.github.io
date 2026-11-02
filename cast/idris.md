@@ -254,7 +254,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 Dated task logs and full lessons: archive.md.
 
-- T-0675 2026-11-01 (a84048f5, f8142681, b923a18a): T-0961 item 2 and item 4 done, on local main. Open: run scripts/mutants-t0675-premades.json, then items 5-7; Ines on lane.json (Steps draws unavailable in the lane) and on scripts/<id> reading lane-scripts/<id>; T-0972 after item 7.
+- T-0675 2026-11-02: premade mutants 10/10 killed, failure lines read. Open: items 5-7 once 20 GB is free (test L draft in scratch, unrun); T-0972 after item 7.
 
 ## Lessons
 
@@ -265,6 +265,7 @@ Dated task logs and full lessons: archive.md.
 - T-0881 2026-10-31 (0aadb129): widget send is check, stage, commit with undo; staging beside widgets/. Open: independent review, RENAME_SWAP on a device, app-guide PNGs get rewritten by the unit target. Lesson: code that puts things back only counts if a sweep fails each step N in turn.
 - T-0675 slice 4 2026-11-01: a marker means nothing without knowing who is alive: overlapping calls per family and a queued neighbour would both read as dead runs. Swift's own `finished` (busy) has no lane keys; ask whether it ran before judging it. WidgetKit won't re-ask a cached config: a new id forces getTimeline.
 - T-0675 items 1-2 2026-11-01: a stored run of mutants needs a restore on EXIT and a commit first; a foreground call died 144 with a mutant planted. An ordered rule can freeze what a script controls (future sampled_at): check it against that.
+- T-0675 mutants 2026-11-02: xc_mutants prints exit 75 (a run that never started) as SURVIVED; three false survivors. Plant in a clone, never in main while a queue runs. Say a verdict only after reading it: I called kills ahead of the file four times.
 - T-0675 item 3 2026-11-01: inside the Simulator a lookup keeps case but a new name collides, even on a Mac disk that ignores case: measure from a test, not the shell. An undo on a commit's last step can't run: delete it.
 - T-0675 mirror bug 2026-11-01 (f8142681): my item 3 deleted files.shared data, because scripts/<id> had two owners and a review would have come later. Lesson: before a rename over a folder, grep who else writes it. -only-testing on a class misses tests in an extension of another class: read the count. Renaming a constant: run the whole unit target before the commit, not after.
 {% endraw %}

@@ -17,7 +17,7 @@ issues: "1"
 
 <h2>Not written up yet</h2>
 <p class="meta">Open issues the company has not put in plain words yet.</p>
-<ul class="list needs" data-group="new"><li class="ny ny-new" data-nums="127"><span class="tag emergency">Emergency</span> <span class="ref">#127</span><span class="ny-q">Emergency: the Mac mini disk is full and company work has stopped</span><span class="ny-r">An Emergency: the Investors must act; the company cannot clear it alone.</span><div class="ny-box"></div></li></ul>
+<ul class="list needs" data-group="new"><li class="ny ny-new" data-nums="129"><span class="tag urgent">Urgent</span> <span class="ref">#129</span><span class="ny-q">Action: update Xcode on your MacBook Pro</span><span class="ny-r">Blocked work waits on the Investors' answer; other work goes on meanwhile.</span><div class="ny-box"></div></li></ul>
 
 <div id="needs-closed"></div>
 

@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-02T03:23:15.871119+00:00",
+ "at": "2026-11-02T03:28:24.564875+00:00",
  "session": {
-  "active": true,
-  "kind": "inbox",
-  "started": "2026-11-01T22:22:51-05:00"
+  "active": false,
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 138,
+  "runnable_count": 141,
   "blocked_count": 87
  },
  "meter": {
@@ -38,8 +38,8 @@
   "read_at": "2026-11-01T22:22:50.370961-05:00"
  },
  "ui": {
-  "week_pct": 0.145,
-  "five_hour_pct": 0.733,
+  "week_pct": 0.157,
+  "five_hour_pct": 0.806,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -50,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-01T22:43:20-05:00",
  "personal": {
   "week_pct": 0.78,
   "usage_pct": 4.6,
   "work_pct": 47.8,
-  "read_at": "2026-11-02T03:25:00+00:00",
+  "read_at": "2026-11-02T03:31:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -87,9 +87,9 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-01T22:25:00-05:00"
+  "at": "2026-11-01T22:31:00-05:00"
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "lanes": [
   {
    "name": "Odalys",
@@ -216,17 +216,30 @@
   ],
   "done": [],
   "count": {
-   "next": 138,
+   "next": 141,
    "wait": 27,
    "blocked": 60,
    "you": 10
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6568339632",
+   "state": "received",
+   "position": 1,
+   "eta": "2026-11-01T22:43:20-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Great! While you\u2019re at it, repair..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
+  "inbox_title",
   "task_title",
   "task_open",
   "lane_task",

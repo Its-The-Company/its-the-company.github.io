@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-02T19:56:43.320032+00:00",
+ "at": "2026-11-02T20:35:04.159291+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-02T13:28:44-05:00"
+  "started": "2026-11-02T15:22:38-05:00"
  },
  "workers": [],
  "who": "",
@@ -13,54 +13,30 @@
    "name": "odalys",
    "task": "[tools] T-1035 lane parity finish",
    "model": "opus",
-   "started": "2026-11-02T18:30:20.330Z",
+   "started": "2026-11-02T20:25:50.016Z",
    "seconds": null,
-   "finished": "2026-11-02T19:56:00.107000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-1071 overflow wording fix",
-   "model": "opus",
-   "started": "2026-11-02T19:17:43.672Z",
-   "seconds": null,
-   "finished": "2026-11-02T19:22:34.846000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[test] T-1068 run the date test fix",
-   "model": "opus",
-   "started": "2026-11-02T19:06:43.514Z",
-   "seconds": null,
-   "finished": "2026-11-02T19:20:38.742000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-1063 API credits now",
-   "model": "opus",
-   "started": "2026-11-02T18:56:50.695Z",
-   "seconds": null,
-   "finished": "2026-11-02T19:17:28.009000+00:00"
+   "finished": "2026-11-02T20:34:48.484000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 171,
+  "runnable_count": 178,
   "blocked_count": 108
  },
  "meter": {
   "five_hour": {
-   "pct": 34.0,
-   "resets_at": "2026-11-02T18:40:00.488756+00:00",
+   "pct": 9.0,
+   "resets_at": "2026-11-02T23:40:00.360299+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 66.0,
+   "left": 91.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 25.0,
-   "resets_at": "2026-11-08T07:00:00.488777+00:00",
+   "pct": 26.0,
+   "resets_at": "2026-11-08T07:00:00.360318+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 75.0,
+   "left": 74.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -68,10 +44,10 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-02T13:28:42.235150-05:00"
+  "read_at": "2026-11-02T15:22:37.003402-05:00"
  },
  "ui": {
-  "week_pct": 0.708,
+  "week_pct": 0.692,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -85,10 +61,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 9.18,
-  "usage_pct": 26.9,
-  "work_pct": 72.6,
-  "read_at": "2026-11-02T19:58:00+00:00",
+  "week_pct": 9.22,
+  "usage_pct": 26.2,
+  "work_pct": 72.3,
+  "read_at": "2026-11-02T20:37:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -99,14 +75,14 @@
   }
  ],
  "disk": {
-  "free_gb": 26,
+  "free_gb": 22,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 12,
-  "at": "2026-11-02T14:58:00-05:00"
+  "at": "2026-11-02T15:37:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -238,26 +214,12 @@
     "w": "Odalys",
     "k": "tools",
     "t": "T-1035 lane parity finish",
-    "at": "2026-11-02T19:56:00.107000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-1071 overflow wording fix",
-    "at": "2026-11-02T19:22:34.846000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "T-1068 run the date test fix",
-    "at": "2026-11-02T19:20:38.742000+00:00",
+    "at": "2026-11-02T20:34:48.484000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 171,
+   "next": 178,
    "wait": 32,
    "blocked": 76,
    "you": 12
@@ -268,8 +230,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
-  "task_done",
   "task_title",
   "task_open",
   "lane_task",

@@ -26,6 +26,7 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
+| Nov 2, 13:57 | <span class="tag t-incident">incident</span> T-1051: every full Xcode run has been red since 2026-11-02 00:00: a progress test reads the wall clock against a fixed fixture date. My 1.7 GB worktree took the disk to 9.3 GB and my hand-run gate check wrote the low note, so the gate stays closed until 20 GB. Fix on <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/a at 8d14163f, not yet ru |  |
 | Nov 2, 12:39 | <span class="tag t-mistake">mistake</span> Committed and ticked T-1041 with a false comment taken from the review without reading a link line; caught on the device build, corrected as T-1044 (f39ebee9). Review finding F4's dead-strip reading is wrong, delta read owed. |  |
 | Nov 1, 19:13 | <span class="tag t-other">other</span> T-0675: Idris found and fixed his own data-loss bug: since 737da9d3 a send could delete files.shared() data; fixed f8142681 (mirror moved to <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-scripts/). Not in any release. Item 4 done flag off, a84048f5, b923a18a. |  |
 | Nov 1, 19:13 | <span class="tag t-bug">bug</span> Idris found and fixed a data-loss bug of his own: since 737da9d3 a widget send could delete a script's shared folder, because the lane's mirror used the same path. Fixed in f8142681 with a test seen red; the mirror moved to lane-scripts/. |  |
@@ -116,7 +117,7 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 25, 19:23 | <span class="tag t-research">research</span> pywidget L1 sensor matrix and L2 refresh-budget research landed (eccc753f): iOS 26 widget push exists in the SDK; When-In-Use widgets get location only if seen minutes before; 2 brief corrections |  |
 | Oct 25, 06:53 | <span class="tag t-research">research</span> H277 G88 TVmaze watch-list: 3 <span title="One product idea inside a lane. C1 is the lane&#x27;s first idea.">concepts</span> (catch-up planner, people graph, runtime/gap), rival, demand and <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> G2; 53 of 80 calls; seed 50 resolved to Money Heist: Korea |  |
 | Oct 25, 06:51 | <span class="tag t-research">research</span> H274 G85 OpenAlex papers-first: 0 seeds read (gate); OpenAlex terms unfound on api, docs and help hosts; 0 of 40 calls |  |
-| Oct 25, 06:49 | <span class="tag t-ruling">ruling</span> H272 <span title="The rule that decides whether an idea gets two blind graders now, waits (park), or stops.">T1</span> (acting chair): C1 Paper Day <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> for no computation (town-and-date lookup); lane row upholds S1 fail, S2 <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>, S3 one-title pass; typed /plans path a slip with no request; no graders |  |
+| Oct 25, 06:49 | <span class="tag t-ruling">ruling</span> H272 <span title="The rule that decides whether an idea gets two blind graders now, waits (park), or stops.">T1</span> (acting chair): C1 Paper Day parked for no computation (town-and-date lookup); lane row upholds S1 fail, S2 <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>, S3 one-title pass; typed /plans path a slip with no request; no graders |  |
 | Oct 25, 06:48 | <span class="tag t-research">research</span> S33-2 SE reads: H233 C1 0 asks (parks), H245 C2 musicfans control failed (gap), H245 C3 0 asks (parks); quota 192 to 173 |  |
 | Oct 25, 06:47 | <span class="tag t-research">research</span> H267 G77 expired patents: <span title="A figure we could not read because the source&#x27;s terms or robots file do not let our software read it. It never lowers a grade.">G2 gap</span> at preflight, all six patent hosts gated (USPTO ODP key/challenge, PatentsView unreachable, no terms located for ppubs or Google Patents); 0 concepts, 8 of 20 fetches |  |
 | Oct 25, 06:42 | <span class="tag t-research">research</span> H266 G78 instrument substitution: 9 instruments, 0 concepts; preflight used 12 of 20 fetches, 4 terms gaps, export.arxiv.org robots disallows /; Photone ($5/month) holds the phone PAR slot |  |
@@ -225,7 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 24, 03:30 | <span class="tag t-research">research</span> H62 attic, insulation and ventilation: 1,318 asks a year hand-coded across r/Insulation, r/Roofing, r/HomeImprovement; 120-body sample: 15% need a calculation (all arithmetic: 1/150 vent rule, depth x R, dew point), 30% a building-science rule, 19% a photo judgement. Best C- attic check-up; free man |  |
 | Oct 24, 02:51 | <span class="tag t-research">research</span> H53 home meters: 0 at B+. Best C, solar 'should I have made more?' verdict (110 askers in 12 months across r/solar and r/SolarDIY; Cenit 2026-09 and HelioPeak 2026-04 already hold the parts; 19 builders). Aquarium cycle reader D+ (about 40 asks a month, sample estimate; Nitrify and TankDiary shipped |  |
 | Oct 24, 02:27 | <span class="tag t-research">research</span> H65: Jensen Speakers' free home theatre design tool takes Open Sided/Open Back/Open Rear toggles and places surrounds and Atmos heights (rear pair flagged back-wall limited); H55 kill clause met. No slope, door, window or L input. Five H51b fixtures: V WRONG, W OK (flagged), P taken, G WRONG unless  |  |
-| Oct 24, 02:01 | <span class="tag t-milestone">milestone</span> H41c capture test: synthetic furnace cycles segment at 20 dB (every cycle start, 8/8 failed ignitions, 0 false cycles); burner off missed in half the normal cycles, the weakest stage; 10 dB loses half the cycles; synthetic audio flatters any detector |  |
 
 ## Diaries, meetings, and conversations
 
@@ -250,7 +250,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0353 done (abe146d0): notif/keychain wire waits on a Python half; review open.
 - T-0565 slice 1 2026-10-28 (5ac90a05): Console uses ConsoleEditor (Runestone). Review T-0584 open.
 - T-0586 done 2026-10-28 (158ac8da): engine after FirstFrame, first open worst 195.2 ms; review T-0600. A8s waits T-0287.
-- T-0642 branch idris/t0642-plain-targets at d3a5bc94 2026-11-02: review findings done bar T-1039, T-1042 (no archive: T-0497 legal links stops both commits). Delta read owed. testProgressSmall red on HEAD still open.
+- T-0642 branch idris/t0642-plain-targets at d3a5bc94 2026-11-02: review findings done bar T-1039, T-1042 (no archive: T-0497 legal links stops both commits). Delta read owed. testProgressSmall: T-1051.
+- T-1068 2026-11-02: unit test green; WidgetKitCheckTests progress reading unseen: pywidget-wk-check draws Needs Pro (no entitlement), cause on the old device unproven.
 
 
 Dated task logs and full lessons: archive.md.
@@ -261,7 +262,6 @@ Dated task logs and full lessons: archive.md.
 
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
-- T-0675 slice 4 2026-11-01: a marker means nothing without knowing who is alive: overlapping calls per family and a queued neighbour would both read as dead runs. Swift's own `finished` (busy) has no lane keys; ask whether it ran before judging it. WidgetKit won't re-ask a cached config: a new id forces getTimeline.
 - T-0675 items 1-2 2026-11-01: a stored run of mutants needs a restore on EXIT and a commit first; a foreground call died 144 with a mutant planted. An ordered rule can freeze what a script controls (future sampled_at): check it against that.
 - T-0675 mutants 2026-11-02: xc_mutants prints exit 75 (a run that never started) as SURVIVED; three false survivors. Plant in a clone, never in main while a queue runs. Say a verdict only after reading it: I called kills ahead of the file four times.
 - T-0675 item 3 2026-11-01: inside the Simulator a lookup keeps case but a new name collides, even on a Mac disk that ignores case: measure from a test, not the shell. An undo on a commit's last step can't run: delete it.

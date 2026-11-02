@@ -116,6 +116,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-11-01 T-0880 LAND: HOLD, detail held; I owe a delta read on any change to the six pinned files before either switch. Lesson: one probe per call, a guard refusal stops everything in it. In zsh quote "$r:path": :t is a modifier.
 - 2026-11-02 T-1030: read the contract too. DPLA Attachment 6 bars stored MapKit coordinates and results with no map. PDF text: osascript PDFKit. Nothing gates mutants: recount `find`s.
 - 2026-11-02 T-1045: my F4 was wrong and cost Idris a commit: SDKSettings.plist DefaultProperties outranks xcspec defaults, so read the link line before saying a flag is absent. Mine: T-1048 stdlib size stop unexplained, my check; T-1047 upload.sh identity.
+- 2026-11-02 T-1046: git --since=<date> fills in the clock time; give 00:00. Name no lane profile path in a call.
 {% endraw %}
 
 

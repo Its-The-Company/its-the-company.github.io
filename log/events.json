@@ -1,5 +1,103 @@
 [
 {
+"time": "2026-11-02T14:56:17-05:00",
+"worker": "operator",
+"type": "session",
+"summary": "Answered 5 Investor messages. API credits now run work sessions (T-1063). Date test red since midnight fixed on main (T-1068); a and a3 retries queued. Disk #136 closed at 22 GB. T-1046 go with fixes. T-1035 not done, off main at 49ffac0b, 3 reds unread.",
+"link": ""
+},
+{
+"time": "2026-11-02T14:50:27-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-02T14:39:17-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-02T14:39:17-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "Lock in turned on by an Investor",
+"link": ""
+},
+{
+"time": "2026-11-02T14:06:08-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-02T14:05:19-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #136",
+"link": ""
+},
+{
+"time": "2026-11-02T13:58:57-05:00",
+"worker": "operator",
+"type": "guard-refusal",
+"summary": "T-1051: guard refused Idris's rebase of parked/a ('brings GitHub's changes in during a session'). T-1046: guard refused Pernille's ls of the lane profile, dropped by her. Decision: both effects dropped, neither retried. Second refusal on T-1046 goes to Ines.",
+"link": ""
+},
+{
+"time": "2026-11-02T13:57:44-05:00",
+"worker": "Idris",
+"type": "incident",
+"summary": "T-1051: every full Xcode run has been red since 2026-11-02 00:00: a progress test reads the wall clock against a fixed fixture date. My 1.7 GB worktree took the disk to 9.3 GB and my hand-run gate check wrote the low note, so the gate stays closed until 20 GB. Fix on parked/a at 8d14163f, not yet ru",
+"link": ""
+},
+{
+"time": "2026-11-02T13:55:39-05:00",
+"worker": "operator",
+"type": "guard-refusal",
+"summary": "Operator's own read for #41 c6585581612 had a look-up of the company key in the same call; the security guard refused the whole call. Decision: that effect is dropped, no session checks the key. The other reads go on without it; the supervisor's own check stays the only one.",
+"link": ""
+},
+{
+"time": "2026-11-02T13:54:59-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-02T13:49:24-05:00",
+"worker": "operator",
+"type": "guard-refusal",
+"summary": "T-1046: protect-records refused Pernille's edge-case script (scratch only, none ran). Decision: that effect is dropped, no repro by any route; her findings stay marked by reading, unreproduced; the job still does its packet. A second refusal goes to Ines.",
+"link": ""
+},
+{
+"time": "2026-11-02T13:47:04-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-02T13:31:08-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-02T13:26:26-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #135",
+"link": ""
+},
+{
 "time": "2026-11-02T13:04:47-05:00",
 "worker": "Operator",
 "type": "session",

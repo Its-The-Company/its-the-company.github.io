@@ -254,7 +254,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0944 STOPPED 2026-11-01, second guard refusal, Ines's: built and tested, uncommitted in the main checkout, and the new tick is live there. My own fault: I chained a tail of the lane's state folder onto the commit. Never read that folder from a session, and never chain a look onto a commit.
 - T-0941 reuses governor.api_credits; it must write usage's api_key_days. T-0944 left setup/SITE.md's Home list stale too.
 - 2026-11-01 T-0944: a trap's function must be defined before the first exit; a row passed on "command not found". /bin/bash 3.2: $? in an EXIT trap after a TERM is 0, so set a flag in a TERM trap.
-- T-0903 done (9b7cb092). Lesson: a registry claim I never read is a guess; T-0413 ruled on one, and the chair's libffi and SipHash reads fell the same way. A static symbol's absence proves nothing: disassemble the caller. zsh does not split "$N": use an array.
+- T-0903 lesson: a claim I never read is a guess. Static symbol absent proves nothing: disassemble the caller.
+- T-0985 open (dba5aade, 3 slots/account): working-now display, MacBook routing, REQUIRED_DENY slot names (proposal). Edit a script a live bash runs only by os.replace.
 - setup/SITE.md lists the money tile and bar, no Cost page, the old timeline, no Working now: needs a proposal.
 - T-0977 (mine, P0, then T-0971 closes): live_status carries personal.running; a push between main sessions. T-0969 edit list stopped at tools/site, so the live feed split out. personal_claims list overstates: use the tick log.
 - OPT-054 reverted: setup/OPERATIONS.md line 91 needs a proposal to match work.md.

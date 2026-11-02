@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-02T03:28:24.564875+00:00",
+ "at": "2026-11-02T03:32:19.262873+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 141,
+  "runnable_count": 140,
   "blocked_count": 87
  },
  "meter": {
@@ -38,8 +38,8 @@
   "read_at": "2026-11-01T22:22:50.370961-05:00"
  },
  "ui": {
-  "week_pct": 0.157,
-  "five_hour_pct": 0.806,
+  "week_pct": 0.168,
+  "five_hour_pct": 0.875,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -50,30 +50,20 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-01T22:43:20-05:00",
+ "next_tick": "2026-11-01T22:47:18-05:00",
  "personal": {
   "week_pct": 0.78,
   "usage_pct": 4.6,
   "work_pct": 47.8,
-  "read_at": "2026-11-02T03:31:00+00:00",
+  "read_at": "2026-11-02T04:06:00+00:00",
   "running": [
    {
-    "lane": "a",
-    "task": "T-0725",
+    "lane": "a2",
+    "task": "T-0811",
     "w": "Idris",
     "k": "build",
-    "t": "T-0722 Lows left after T-0723",
-    "at": "2026-11-01T22:12:40-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "b",
-    "task": "T-0668",
-    "w": "Idris",
-    "k": "fix",
-    "t": "T-0666 Lows on idris/t0355-projects",
-    "at": "2026-11-01T21:53:45-05:00",
-    "n": "Jeremy"
+    "t": "After the alpha commit",
+    "at": "2026-11-01T23:05:50-05:00"
    }
   ]
  },
@@ -87,7 +77,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-01T22:31:00-05:00"
+  "at": "2026-11-01T23:06:00-05:00"
  },
  "next_tick_why": "last_tick",
  "lanes": [
@@ -216,7 +206,7 @@
   ],
   "done": [],
   "count": {
-   "next": 141,
+   "next": 140,
    "wait": 27,
    "blocked": 60,
    "you": 10
@@ -225,15 +215,26 @@
  "qr": [],
  "inbox": [
   {
-   "id": "c6568339632",
+   "id": "c6568372234",
    "state": "received",
    "position": 1,
-   "eta": "2026-11-01T22:43:20-05:00",
+   "eta": "2026-11-01T22:47:18-05:00",
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "Great! While you\u2019re at it, repair..."
+   "title": "Start the main lane agent..."
+  },
+  {
+   "id": "c6568380379",
+   "state": "received",
+   "position": 2,
+   "eta": "2026-11-01T22:47:18-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Ok and ideally use the remainder of..."
   }
  ],
  "trimmed": [

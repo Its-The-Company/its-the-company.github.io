@@ -2,7 +2,7 @@
 (() => {
 'use strict';
 var S = window.CompanySite; if (!S || !S.getToken()) return;
-var D = document, W = window, el = S.el, ago = S.ago, pub = null, on = false, all = {}, sig = '', bs = '', br = null, sec = null, lk = null, jump = 0;
+var D = document, W = window, el = S.el, ago = S.ago, pub = null, on = false, all = {}, sig = '', bs = '', rs = '', br = null, sec = null, lk = null, run = null, jump = 0;
 function mk(p, t, c, x) { return p.appendChild(el(t, c, x)); }
 function at(e, k, v) { e.setAttribute(k, v); return e; }
 function cap(s) { s = String(s || ''); return s.charAt(0).toUpperCase() + s.slice(1); }
@@ -12,18 +12,16 @@ function et(t, wk) { var d = new Date(t); return isNaN(d) ? '' : d.toLocaleStrin
 function lvl(m, e) { return m ? cap(m) + (e ? ', ' + e + ' effort' : '') : ''; }
 function dot(a) { return a.filter(x => x).join(' · '); }
 function stt() { return (S.status && S.status()) || null; }
-function stale(st) { return pub !== false && Date.now() - Date.parse(st.at) > 12e4; }
+function stale(st) { return S.lane.old(st, pub !== false); }
 function brief() {
 var st = stt() || {}, t = st.tasks || {}, c = t.count || {}, m = st.meter || {}, f = m.five_hour || {}, k = m.weekly || {},
-run = t.run || [], old = !st.at || stale(st), hl = Q('.where .latest'), p, a, n = st.next_tick && et(st.next_tick);
+rows = S.lane.main(st, pub !== false).concat(S.lane.rows(st)), old = !st.at || stale(st), hl = Q('.where .latest'), p, a, n = st.next_tick && et(st.next_tick);
 br.textContent = '';
 if (hl) mk(br, 'p', 'cv-bp', String(hl.textContent || '').split('. ')[0].replace(/\.$/, '') + '.');
-if (!old) {
-run.slice(0, 3).forEach(r => { mk(br, 'p', 'cv-bm', dot([r.w, lvl(r.m, r.e), r.at && ago(r.at)])); mk(br, 'p', 'cv-bt', r.t || ''); });
-if (!run.length) mk(br, 'p', null, st.session && st.session.active ? 'No worker call is running.' + (n ? ' The next tick is at ' + n + '.' : '')
+rows.slice(0, 3).forEach(r => { mk(br, 'p', 'cv-bm', dot([r.w, r.lane && S.lane.word(r), lvl(r.m, r.e), r.at && ago(r.at)])); mk(br, 'p', 'cv-bt', r.t || ''); });
+if (!old && !rows.length) mk(br, 'p', null, st.session && st.session.active ? 'No worker call is running.' + (n ? ' The next tick is at ' + n + '.' : '')
 : 'No session is running.' + (n ? ' The next one starts at ' + n + '.' : ''));
-}
-if (t.count) mk(br, 'p', 'cv-bc', (!old && run.length > 3 ? run.length + ' running · ' : '') + (c.next || 0) + ' ready · ' + ((c.wait || 0) + (c.blocked || 0)) + ' waiting or blocked');
+if (t.count) mk(br, 'p', 'cv-bc', (rows.length > 3 ? rows.length + ' running · ' : '') + (c.next || 0) + ' ready · ' + ((c.wait || 0) + (c.blocked || 0)) + ' waiting or blocked');
 mk(br, 'p', 'cv-bc', '5-hour ' + (f.pct != null ? Math.round(f.pct) + '% used' + (f.resets_at ? ', resets ' + et(f.resets_at) : '') : 'not read yet')
 + (k.pct != null ? ' · week ' + Math.round(k.pct) + '%' : ''));
 p = mk(br, 'p', 'cv-bl'); a = mk(p, 'a', null, 'All tasks ↓'); a.href = '#cv-tasks';
@@ -37,7 +35,9 @@ function tiles() {
 QA('.cv-live').forEach(x => { at(at(at(x, 'role', 'button'), 'aria-controls', 'cv-brief'), 'aria-expanded', String(on)); });
 }
 function linkText(st) {
-var w = 'Right now: ' + (st.workers || []).length + ' at work' + (st.who ? ', ' + st.who : '');
+var ls = S.lane.rows(st), old = stale(st), n = (old ? 0 : (st.workers || []).length) + ls.length,
+names = (!old && st.who ? [st.who] : []).concat(ls.map(r => r.w || S.lane.word(r))),
+w = n || !old || !st.at ? 'Right now: ' + n + ' at work' + (names.length ? ', ' + names.join(', ') : '') : 'Right now: last status ' + ago(st.at) + ' ago';
 if (lk.firstChild.textContent !== w) lk.firstChild.textContent = w;
 }
 function toggle() {
@@ -54,8 +54,7 @@ a.href = work(r.w);
 mk(a, 'b', 'tk-t', r.t || '');
 m = mk(a, 'span', 'tk-m');
 if (r.o === 'i') { mk(m, 'span', 'chip chat', 'Investor ask' + (r.i ? ' #' + r.i : '')); m.appendChild(D.createTextNode(' ')); }
-m.appendChild(D.createTextNode(dot(g === 'r' ? [r.w, lvl(r.m, r.e), r.at && ago(r.at)]
-: g === 'w' ? [r.w, r.s === 'blocked' ? 'blocked' : 'waiting', r.y ? 'waits on the Investors' : '']
+m.appendChild(D.createTextNode(dot(g === 'w' ? [r.w, r.s === 'blocked' ? 'blocked' : 'waiting', r.y ? 'waits on the Investors' : '']
 : g === 'd' ? [r.w, r.at && ago(r.at) + ' ago', END[r.x]] : [r.w, r.k])));
 if (g === 'n' && p[1] >= 2) {
 m.appendChild(D.createTextNode(' · ' + p[0] + ' of ' + p[1] + ' done '));
@@ -79,7 +78,6 @@ var t = st.tasks || {}, op = t.open || [], c = t.count || {};
 sec.textContent = '';
 mk(mk(sec, 'h2', 'cv-sec', 'Tasks '), 'span', 'cv-count', String((c.next || 0) + (c.wait || 0) + (c.blocked || 0)));
 if (!st.tasks) { mk(sec, 'p', 'muted', 'The task list arrives with the next status.'); return; }
-if (!stale(st)) group('r', 'Working now', (t.run || []).slice(0, 8), 8);
 group('n', 'Ready', op.filter(r => r.s === 'next'), 5, 0, c.next);
 group('w', 'Waiting or blocked', op.filter(r => r.s !== 'next'), 0, 'Show N waiting or blocked', (c.wait || 0) + (c.blocked || 0));
 group('d', 'Just finished', t.done || [], 3);
@@ -90,6 +88,7 @@ if (!st || !col) return;
 if (!br) {
 br = at(el('div', 'cv-brief'), 'id', 'cv-brief'); sec = at(at(el('section', 'cv-tasks'), 'id', 'cv-tasks'), 'aria-label', 'Tasks');
 lk = el('p', 'meta cv-brieflink'); mk(lk, 'a', 'cv-live').href = '#cv-brief';
+run = at(at(el('section', 'cv-running'), 'id', 'cv-running'), 'aria-label', 'Working now');
 }
 linkText(st);
 tiles();
@@ -98,14 +97,18 @@ br.hidden = !on || !g;
 lk.hidden = !g;
 if (g && lk.previousSibling !== g) g.parentNode.insertBefore(lk, g.nextSibling);
 if (g && br.previousSibling !== lk) g.parentNode.insertBefore(br, lk.nextSibling);
+run.hidden = !g;
+if (g && run.previousSibling !== br) g.parentNode.insertBefore(run, br.nextSibling);
 tab = Q('.cv-tabs [role=tab]'); home = !!tab && tab.getAttribute('aria-selected') === 'true';
 sec.hidden = !home;
 var q = col.querySelector('.cv-queue'), d = col.querySelector('.cv-dock'), b4 = q || d;
 if (b4 && sec.nextSibling !== b4) col.insertBefore(sec, b4);
 var mn = Math.floor(Date.now() / 6e4);
-z = JSON.stringify([st.at, st.tasks && st.tasks.run, st.tasks && st.tasks.count, st.meter, st.session, st.next_tick, pub, mn]);
+z = JSON.stringify([st.at, st.tasks && st.tasks.run, st.tasks && st.tasks.count, st.meter, st.session, st.next_tick, st.personal, pub, mn]);
 if (on && !br.hidden && z !== bs) { bs = z; brief(); }
 if (!on) bs = '';
+z = JSON.stringify([st.at, st.tasks && st.tasks.run, st.personal, st.session, st.next_tick, pub, mn]);
+if (g && z !== rs) { rs = z; S.lane.draw(run, st, pub !== false); }
 z = JSON.stringify([home, st.tasks, pub, all, stale(st), mn]);
 if (home && z !== sig) { sig = z; tasks(st); }
 if (home && jump) { jump = 0; sec.scrollIntoView({ block: 'start' }); }

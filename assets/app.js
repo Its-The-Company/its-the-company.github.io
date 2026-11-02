@@ -77,7 +77,7 @@ tile(g, h, 'Added by personal accounts', w != null ? pts(w) + '%' : 'no reading 
 (st.api_credits || []).forEach((r) => {
 tile(g, h, r.name === 'company' ? 'API credits' : 'Personal key ' + r.name, '$' + r.used_usd.toFixed(2), 'of $' + r.total_usd + ' used so far', r.used_usd / r.total_usd);
 });
-tile(g, h, 'Personal share, this week', sh(p.work_pct, 'work'), sh(p.usage_pct, 'usage'));
+tile(g, h, 'Personal share, this week', sh(p.usage_pct, 'usage'));
 }
 function list(items, fmt) { var ul = el('ul'); items.forEach(function (x) { add(ul, 'li', null, fmt(x)); }); return ul; }
 var toggled = false;
@@ -104,8 +104,8 @@ setText('s-blocked', q.blocked_count); setText('tp-wait', q.blocked_count);
 function taskLine(w) { return (w.task || '') + (w.model ? ' [' + w.model + ']' : '') + (w.started ? ', for ' + ago(w.started) : ''); }
 function renderNow(box, st, source, isPublic) {
 var s = st.session || {}, ws = st.workers || [];
-var stale = isPublic && Date.now() - Date.parse(st.at) > 12e4;
-var headLine = stale ? 'Status from the site build ' + ago(st.at) + ' ago.'
+var stale = Date.now() - Date.parse(st.at) > (isPublic ? 12e4 : 42e4);
+var headLine = stale ? (isPublic ? 'Status from the site build ' : 'Last status ') + ago(st.at) + ' ago.'
 : s.active ? 'A ' + (s.kind || 'work') + ' session is running' + (s.started ? ' (started ' + ago(s.started) + ' ago).' : '.') : 'No session is running; one starts each tick.';
 var head = box.querySelector ? box.querySelector('.now-head') : null;
 var body = box.querySelector ? box.querySelector('.now-body') : null;

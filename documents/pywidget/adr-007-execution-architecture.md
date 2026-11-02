@@ -719,6 +719,64 @@ Considered and rejected: no margin on a first run, marker alone. A kill costs ev
 - 2 x changes only if T-0680 sees a run pass the margin and die, or a refusal of a run that fits. Either comes back to me. Demotions from refusals count in 08:03 item 6's 1 in 20.
 
 **Board.** Notes on T-0675 (slice order), T-0680 and T-0793.
+
+## Chair line (Ines), 2026-11-01 18:17 ET: three questions before T-0675 item 4 (T-0961)
+
+Read: Idris's T-0675 notes of 14:12 and 15:06, 08:03 item 2, 13:03 item 1, RunResultSink.swift, and `git grep` for `check_project`, `scan_source` and the manifest's writers. No build run. The flag stays off. Moves no date.
+
+**1. A `sampled_at` past the phone's clock holds nothing: stands, as built (814ad8dd).** A date no later run can beat freezes the widget for good, and the rule exists to keep the picture fresh, not to obey a date. Idris changes no code. The same trap waits in 08:03's Refresh rule: `getTimeline` reruns only when `sampled_at` is older than the minimum interval, and a future date would never be. That rule isn't built. T-0678 treats a future date as old.
+
+**2. The flag gate stays, and the rule narrows: a tree holds only if it landed during this run.** With the flag off there is one writer, and flag off must read as today (08:03 item 6). With it on, the refusal in question is a second freeze: an edit with an older hard-coded date is refused on every run, for good. The rule is there for two runs that overlap. A tree written before my run began is history, not a race.
+
+- New rule, replacing 08:03 item 2's first clause: a writer does not replace a tree whose `sampled_at` is newer than its own, not past the clock, and whose `tree.json` modification date is strictly after this run's start.
+- It follows that no script can freeze its widget: a refused run means another writer landed during it, and the next run writes.
+- Rejected: a save that clears `tree.json`, because the widget loses its last good picture. Rejected: a marker the save drops, because a run in flight across the save beats it, and a date that goes backward with no edit stays frozen.
+- What it costs: a script that passes an older reading's date as `sampled_at` (offline, cached) now replaces a fresher tree once no run overlaps. The tree carries its true date and the stale mark follows it. The next online run fixes it. A frozen widget has no next run, so I take this cost.
+- Idris, before item 4: `RunInfo` carries the run's start, set where `runContexts` is filled in PyBridge; `isOlder` takes it and reads the modification date inside the lock. Tests: a tree from before the start holds nothing (the edit case), a newer tree from during the run holds, a tie holds nothing. A planted mutant for each.
+
+**3. Banned imports failing at run time is safe, and not good enough to open. It does not block item 4; it blocks the flag default.** An error run stays in the lane on its cached tree, so 16:54's floor holds. But a person would see a picture that never updates and no reason why. Nothing else in the lane matters to a person either if no script of theirs can reach it: a new project holds `main.py` and no manifest, and `app_manifest.write` has no Swift caller.
+
+- A person never types `lane`. 08:03 item 1 promises no setup. The send decides, in T-0972, which is mine to order and Idris's to build after item 7.
+- One scanner: the send runs `lane.py`'s scan in the app's Python. No Swift port, because a second scanner can disagree with the finder.
+- Clean entry: `lane: widget`. Banned import: `app`, the send still succeeds, and one line names the import and says the widget updates when the app runs. This softens 08:03's "refuses": the lane is refused, never the save. A hand-typed `lane: widget` over a banned import gets the same line and no mirror, and its key stays as typed.
+- What would make this fail: writing a manifest into a plain project may change how it opens (contract s7 "Project run", Make App). Idris checks that first. Any change a person can see comes back to me.
+- The finder stays as the second check, for imports the scan can't see.
+- Item 4 now: whatever marks a premade for the lane, a host test runs `lane.scan_source` on each one, so no premade reaches the finder.
+
+**Board.** Notes on T-0675 and T-0678. New T-0972.
+
+## Chair line (Ines), 2026-11-01 18:38 ET: a run from before the send (T-0973)
+
+Read: project-save.md s2, s3 and s4 (24d2e25b), the 18:17 line's item 2, RunResultSink.swift, LaneMirror.swift, `takeTurn` in ExtensionLane.swift, `remember` and `enqueueBackground` in PyBridge.swift, WidgetStateLock. No build run. The flag stays off. Moves no date.
+
+**Not accepted. Maren's check goes in, with four additions.** Call the old extension run E and the save's refresh A. Under the 18:17 rule:
+
+- E sampled earlier than A: no gap. E landing during A is replaced. E landing after A is refused.
+- E sampled later than A (a slow start, or a hard-coded date): E lands during A and A is refused, or E lands after A and replaces the new picture. The person saw the new work, and it goes back with no mark.
+- A cut off by iOS (project-save s3): no date is needed. E lands alone after `sent_at`, so no clock, and the catch-up at the next active skips it, because the tree isn't older than the send. That is the route the doc calls likeliest, and s4 doesn't name it.
+
+So "it never shows old work bare" fails in the case people will hit. The fix needs one read that the clock trigger already makes.
+
+**New rule, flag on, in the sink, inside the lock, before `isOlder`:** a run writes no tree if it started before the folder's `sent_at` and that `sent_at` is not past the clock. 18:17 item 2 stands beneath it for runs of the same work. A tree landing after `sent_at` is now new work, which is what the clock trigger assumes.
+
+1. **Not past the clock.** s4's "it freezes nothing" holds only while the clock doesn't move. Set a phone back after a send and every run starts "before" it. Same trap as 18:17 item 1, same answer. A stop now needs start < `sent_at` <= now, so the next run starts at or past `sent_at` and writes. A tie writes. A missing or unreadable `.sent.json` holds nothing.
+2. **A stopped run writes no `status.json`.** s3 lets a good run clear the marks, so an E that ran fine would clear A's failed badge. Outcome `.noTree("before the send")`, no reload. It came back, so `takeTurn` clears its marker and judges it as it does any `noTree`.
+3. **The stamp.** `sent_at` is the last write to the staged folder, before any rename of the commit, at `Date`'s full precision. Rounded up it stops A itself. A run that starts during the renames passes with old code, because LaneMirror swaps last. I accept that: the window is the few renames, not 4 s, T-0865 L1 already lives there, and the next run heals it.
+4. **The rename goes under `state.lock`, flag on.** This answers s2 item 6. A run holding the lock can read the old `sent_at` and land in the new folder if the swap doesn't wait. The send holds the lock for that one rename, never for staging (0xdead10cc, T-0737 L3). If the 0.5 s wait fails, that widget's send is a refusal and the next boundary retries it (s2 item 2).
+
+**Why this isn't the marker I rejected at 18:17.** That marker had to outlast a run in flight, and the run beat it. This asks the run in flight when it started.
+
+**What would make this fail: A stopped by its own check. It can't be.** `started` is set when the bridge takes the run, A is queued after the rename, and a pending refresh A coalesces into takes a new `started` (`remember(newer)`). A run queued before the send and begun after it reads the new code and is stopped. That loses one run, on the safe side.
+
+**18:17's sentence now reads:** a refused run means another writer landed during it or a send came after it began, and the next run writes. Still no script can freeze its widget.
+
+**What it costs.** One extension run's work in the window, thrown away. The widget shows its last picture with the clock until A lands. If A was cut off, that is s3's row "Refresh cut off by iOS", as written.
+
+**Flag off:** no check, as 08:03 item 6 says. There is one writer and A queues behind any run in flight, so old work bare needs an app run in flight at the send and A then cut off. I accept that while the flag is off.
+
+**Tests,** each with a planted mutant: started before `sent_at`, later `sampled_at`, cached tree's bytes and date unchanged, no reload, `status.json` unchanged; a tie writes; `sent_at` past the clock writes; missing or unreadable `.sent.json` writes; flag off writes; a pending run from before the send, coalesced after it, writes.
+
+**Board.** Note on T-0866: item 3 only, which adds nothing to its 1.5 days or to F3. New T-0976, Idris: the rest, after T-0866, before the chair line that sets the flag default (T-0680).
 {% endraw %}
 
 </div>

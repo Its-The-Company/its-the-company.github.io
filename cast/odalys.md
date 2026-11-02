@@ -249,30 +249,22 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Archive: dated task notes from 2026-10-22 and 2026-10-23, moved out of this index
 ## Open
+- T-0978 mine: OPT-065 read at n=10 (before median 22.9, max 90.8), T-0426 retry, chair ruling on starting the tick, session-side dylib race.
+- T-0963 open: no rules/ checkout in any clone, for good (Operator). Governor done. guard_test:518 ==50 needs ==200. 4 personal_land rows red run after governor and guard, green alone (n=1 each): suspect shared $T/repo; pair not run. A second reading in a moving tree is not a repeat: check status first.
 - T-0944 STOPPED 2026-11-01, second guard refusal, Ines's: built and tested, uncommitted in the main checkout, and the new tick is live there. My own fault: I chained a tail of the lane's state folder onto the commit. Never read that folder from a session, and never chain a look onto a commit.
 - T-0941 reuses governor.api_credits; it must write usage's api_key_days. T-0944 left setup/SITE.md's Home list stale too.
 - 2026-11-01 T-0944: a trap's function must be defined before the first exit; a row passed on "command not found". /bin/bash 3.2: $? in an EXIT trap after a TERM is 0, so set a flag in a TERM trap.
-- T-0345 done (edd0b7c2). T-0903 next, mine: no upload before it. Lesson: a registry claim I never read is a guess; T-0413 ruled on one. Read it before it reaches a ruling.
-- setup/SITE.md lists the money tile and bar, no Cost page, no T-0948 timeline: needs a proposal.
-- T-0425: xc.sh default -collect-test-diagnostics never? (OPT-049 kept; all 91 stops lacked it, 4.7 h lane)
+- T-0903 done (9b7cb092). Lesson: a registry claim I never read is a guess; T-0413 ruled on one, and the chair's libffi and SipHash reads fell the same way. A static symbol's absence proves nothing: disassemble the caller. zsh does not split "$N": use an array.
+- setup/SITE.md lists the money tile and bar, no Cost page, the old timeline, no Working now: needs a proposal.
+- T-0977 (mine, P0, then T-0971 closes): live_status carries personal.running; a push between main sessions. T-0969 edit list stopped at tools/site, so the live feed split out. personal_claims list overstates: use the tick log.
 - OPT-054 reverted: setup/OPERATIONS.md line 91 needs a proposal to match work.md.
-- OPT-051 n=10 gap 0.0192, clear; gap_pooled 0.07 trips beside it. No board line owns the n=20 read yet.
 - OPT-062 watch on the guard: day 1 read 4 false, over 3. Reads T-0897 (11-02), T-0898 (11-07). T-0842 mine after T-0833.
 - #24 plan awaits Investor answers (token vs relay, reply speed, lanes) and Ines's board entries; Phase 1 (live_status.py, read-only chat page) is unblocked.
 
-
-- OPT-035 held (T-0884, Ines): #113 card said the tool stays off; loss fell 2.227 to 0.079 per 100. Re-baseline a queued trial before starting it.
-- A packet naming one held file means that file. A row red before and after a fix tests nothing: trace its feed. T-0921: a count from two tried paths is no census (14 was 17); classify every line by shape.
-- Lesson: measure a grep's reach before excluding from it. A pgrep -f wait matches its own shell: wait on the PID.
-
-- T-0876 done (c06840c2, rows 240afbb4). Open: hook comment says "no log line", but it writes one shell Terminated line a tick. Held notes in t0876/r3/PAUSED.txt go to T-0880.
-
-- T-0913 open: site_report_needs 221 s of 240 alone, times out under load; a --fast beside a build is not a clean read.
-- Stale headers: personal_land.sh (main's tests beside it), tick lines 5-6, 18-20. Cut with the next change.
-
 ## Standing lessons (details in archive.md)
-- 2026-11-01 T-0946: a kill pattern built from a variable becomes a tool-name kill when it's empty; mine hit account a's xc.sh. Kill guarded PIDs only.
-- 2026-11-01 T-0948: `a; b; commit` commits past a red. Gate with &&, or read the run first.
+- 2026-11-01 T-0970: Xcode keeps about 6 build logs; macOS `log show --predicate 'process == "..."'` kept the 17:38 run. A skip that repeats means diff the environment: PATH alone re-ran 13 links. Read a suite's "red on purpose" comment before building past it.
+- 2026-11-01 T-0971: a launchd KeepAlive process keeps the code it started with: check `ps -o lstart` before trusting a fix (watcher ran 10-23 code for 9 days). main's tools/ are live: a bad edit to inbox.py is a broken poll within 15 s.
+- T-0971 open: OPT-064 reads at n=30 messages; a message during a land or report still waits for it. tools/inbox_gap.py wraps governor.py because my limits excluded it; one governor line is the cleaner home.
 {% endraw %}
 
 

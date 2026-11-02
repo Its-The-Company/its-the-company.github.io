@@ -777,6 +777,51 @@ So "it never shows old work bare" fails in the case people will hit. The fix nee
 **Tests,** each with a planted mutant: started before `sent_at`, later `sampled_at`, cached tree's bytes and date unchanged, no reload, `status.json` unchanged; a tie writes; `sent_at` past the clock writes; missing or unreadable `.sent.json` writes; flag off writes; a pending run from before the send, coalesced after it, writes.
 
 **Board.** Note on T-0866: item 3 only, which adds nothing to its 1.5 days or to F3. New T-0976, Idris: the rest, after T-0866, before the chair line that sets the flag default (T-0680).
+
+## Chair line (Ines), 2026-11-02 04:02 ET: the mirror's folder, the premade list, and what a script can reach (T-0675's 19:15 note, T-0952)
+
+Read: Idris's T-0675 note of 19:15; Pernille's T-0935 review, M1 and L2 (the one view, C13); the 16:54 line's item 3 and my 13:03 line's item 1; lane.py's header, `allowed` and DENIED_SUBMODULES; LaneMirror.swift, LaneGuard.swift and WidgetID.swift at HEAD; each premade's imports by grep. Ran no build, no test and no script. The flag stays off. Moves no date. Idris writes no code from this line until space returns (plan, Day 12).
+
+**1. The mirror's folder is `lane-scripts/<id>/`. a84048f5 stands.** `scripts/<id>` is `files.shared(id)`, a person's data, and a mirror there cost a person their files.
+
+- Read every `scripts/<id>` that means the mirror (08:03 item 2, 13:03 item 1, T-0675, T-0972) as `lane-scripts/<id>`. It stays right where it means shared files: FilesCall, WidgetID.
+- This is the dated line amendment 2 item 1 asks for. The App Group gains `lane-scripts/`. The app writes it; the extension reads it and has no write to it in its list.
+- Corrected in place in this commit: C2 1.7, project-save s2 item 3, the bound-fields row. lane.py and the Swift already say it. T-0682's "widen T-0675's mirror" means this folder. Older reviews and proposals stay as written.
+
+**2. The list: scan clean is not enough.** The scan says a premade can load. It does not say it can draw. A premade goes on `lane.json` only if its scan is clean and every device call it makes is answered in the extension. By that test:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: Chair line (Ines), 2026-11-02 04:02 ET: the mirror&#x27;s folder, the premade list…, scrolls sideways" style="--tw:774px" markdown="1">
+
+| Premade | List | Why |
+|---|---|---|
+| countdown | on | as built |
+| clocks, habits, progress, quote | on, in item 5 | scan clean, no `pywidget.device` import at HEAD |
+| steps | on through item 5, then off | T-0675's Done names the run and its cold peak. The chair line that sets the flag default takes it off unless the pedometer answers in the extension by then |
+| altitude, distance, sun | off | they read location, which answers NotAvailableHere until T-0053 lands |
+| github, shortcuts, storage | off | fail the scan |
+
+</div>
+
+
+- Item 5 runs each listed premade once. One that draws differently from the app's picture comes off, with the reason in the note. Their cold peaks go in the bench, and 13:03's rule holds: any over 9 MB moves the figure.
+- **Same trap for a person's script.** Idris asked about premades. The rule covers more. `pywidget.device` passes `allowed()`, so under T-0972 a script that reads the pedometer or location is clean, gets `lane: widget`, and fails or draws unavailable in the extension, where it worked in the app. Read from the code, not run. T-0972 gains a row: such a script gets `app` and the same one line, until that module answers there. One scanner still: lane.py decides, no Swift port. Maren reviews the words.
+
+**3. T-0952: option (a). The ordinary route is a stated limit, off the "Not held" list. No code.** Pernille's view, and I agree.
+
+- My 13:03 line was wrong on one point. It said the three files staying outside the mirror met T-0720's condition. That condition is no script's folder, and `widgets/<id>/` is the folder of an app-lane run (M1).
+- (b) moves three files and leaves the folder shared. `tree.json`, the larger loss, and `state.lock` stay beside them, and an id rename and a widget delete would need steps they don't need today.
+- What the limit costs: one missed demotion. The next kill leaves its own marker. `lane-peak` goes back to the first run's 18 MB need. `lane-refused` starts its count over. Nothing else is touched, and no other widget is blamed.
+- Worst case: a script that clears its folder on every app run, with an app run landing between each kill and the next call. It stays in the lane and gets killed again. That is item 4's effect, reached by luck, and the app runs are painting its picture anyway.
+- The words, under the list in C2 1.7 and lane.py's header: *Stated limit, not on this list. A script run in the app sits in `widgets/<id>/`, so one that clears the folder beside its `__file__` deletes the files the runtime keeps there, its own widget's only: `ext.marker` (one missed demotion), `lane-peak` (the first run's need again), `lane-refused` (the count starts over), `tree.json` (its last picture).*
+
+**4. L2: 16:54 item 3 gains a fourth effect, for this one route.** A script that deletes its own marker in every run hides its kills across processes. Item 3 allows "the rest of that process". That is not this, so the bullet Pernille wrote doesn't meet item 3's words as they stood. I am changing the words after seeing the case, and I say so: one named row, not a wider rule.
+
+- New effect, deleted marker only: a widget's own kills go unseen across processes. Backstop: the memory kill, every reload. Its neighbours in that reload lose that reload and keep their cached trees.
+- Why accept it: the route goes by path, so moving the files doesn't stop it. Any file the extension can read, a script in the extension can reach, and lane.py's header says so: not a sandbox. It costs freshness on that person's phone. No data leaves, and no other person is touched.
+- What would make this fail: a pasted script doing this on purpose. The person sees stale widgets, no badge and no reason. I accept that for 1.0. If T-0680's reload log shows repeated kills with no demotion on a real phone, it comes back to me.
+
+**Board.** T-0952 ticked. Notes on T-0675 (the list; Pernille carries items 3 and 4 into lane.py's header at item 7, docstring only), T-0972 (item 1, item 2's row), T-0680 (steps), T-0682.
 {% endraw %}
 
 </div>

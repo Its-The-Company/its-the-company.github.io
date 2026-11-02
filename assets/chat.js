@@ -301,6 +301,8 @@ tile(g, D('company'), 'Day', D('day'));
 S.tiles(g, tile, D('usage'));
 if (S.lockTile) S.lockTile(g);
 S.added(g, tile, D('usage'));
+var dk = (S.status() || {}).disk;
+tile(g, D('company'), 'Disk free', dk ? dk.free_gb + ' GB' : 'no reading yet', dk ? dk.words : 'on the Mac mini');
 if (S.endTile) S.endTile(g);
 return g;
 }

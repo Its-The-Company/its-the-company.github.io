@@ -32,7 +32,7 @@ Pernille, 2026-10-30, T-0679. Status: **spec finished; names not yet reviewed.**
 | `NetFetch` run from inside the extension | **Not run.** T-0687 (a) waits on T-0675's bridge | Unverified, s7 |
 | `PedometerCall` | Real, app only (`DeviceRouter`, `App/Device/`) | The query must move to Shared or be rewritten for the extension |
 | Second widget extension | **Does not exist.** `project.yml` has one `app-extension` target; T-0053 is open; no `NSWidgetWantsLocation` | `sensors` depends on a target nobody has built. See s10 |
-| App Group mirror of the manifest | `scripts/<id>/` exists as the scripts' shared folder (`FilesCall`). The save-time mirror of T-0675 is not built, and it covers `lane: widget` only | T-0682 widens the mirror, s5 |
+| App Group mirror of the manifest | `scripts/<id>/` is the scripts' shared folder (`FilesCall`), not the mirror. T-0675's save-time mirror is `lane-scripts/<id>/` (ADR-007 2026-11-02 line, item 1), and it covers `lane: widget` only | T-0682 widens the mirror, s5 |
 | Bound trees against the HEAD schema | Run: a tree with `p.bind` on `Text` and `ProgressView` gives 0 problems (`schema_check.py`, HEAD schema) | The row is additive. A build without it draws `content` |
 | Renderer on an unknown number style | `TreeText.number` falls to plain decimal, no suffix | `Number.unit` needs its Swift case before any tree uses it |
 

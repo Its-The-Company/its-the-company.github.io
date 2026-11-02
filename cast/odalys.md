@@ -249,21 +249,21 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Archive: dated task notes from 2026-10-22 and 2026-10-23, moved out of this index
 ## Open
+- T-1001 2026-11-02, d98a9e8e, line left open: my mutation run linked investors/ into scratch, guard refused, stopped. xc.sh and once-only rows green, not seen red. Stop 10 GB is a proxy (5.5 GB scratch + 150 MB/min, n=1): read ops/metrics/disk.jsonl. Never link or copy investors/ or rules/ into scratch.
 - T-0978 mine: OPT-065 read at n=10 (before median 22.9, max 90.8), T-0426 retry, chair ruling on starting the tick, session-side dylib race.
 - T-0963 open: no rules/ checkout in any clone, for good (Operator). Governor done. guard_test:518 ==50 needs ==200. 4 personal_land rows red run after governor and guard, green alone (n=1 each): suspect shared $T/repo; pair not run. A second reading in a moving tree is not a repeat: check status first.
 - T-0944 STOPPED 2026-11-01, second guard refusal, Ines's: built and tested, uncommitted in the main checkout, and the new tick is live there. My own fault: I chained a tail of the lane's state folder onto the commit. Never read that folder from a session, and never chain a look onto a commit.
 - T-0941 reuses governor.api_credits; it must write usage's api_key_days. T-0944 left setup/SITE.md's Home list stale too.
-- 2026-11-01 T-0944: a trap's function must be defined before the first exit; a row passed on "command not found". /bin/bash 3.2: $? in an EXIT trap after a TERM is 0, so set a flag in a TERM trap.
 - T-0903 lesson: a claim I never read is a guess. Static symbol absent proves nothing: disassemble the caller.
 - T-0985, T-0995 done 11-02 (bb240b7a, 55582f2f): pool of 4/session, retry once, menu 9->65. Before: 18 personal runs, 0 finished credited; read again after a day. Slot denies -> Ines T-0997: the guard refuses even a scratch copy of the lane rules. The tick's "session on" line is parsed by tools/site/running.py: change both. Edit a script a live bash runs only by os.replace.
 - setup/SITE.md lists the money tile and bar, no Cost page, the old timeline, no Working now: needs a proposal.
-- T-0977 (mine, P0, then T-0971 closes): live_status carries personal.running; a push between main sessions. T-0969 edit list stopped at tools/site, so the live feed split out. personal_claims list overstates: use the tick log.
+- T-0977 done 11-02 (d6928f04), OPT-066 reads n=288 status_push rows. Lane rows are a queue of 8, at most 4 run: count can overstate 2x. Main-session loops started before it push without running until they end.
 - OPT-054 reverted: setup/OPERATIONS.md line 91 needs a proposal to match work.md.
 - OPT-062 watch on the guard: day 1 read 4 false, over 3. Reads T-0897 (11-02), T-0898 (11-07). T-0842 mine after T-0833.
 - #24 plan awaits Investor answers (token vs relay, reply speed, lanes) and Ines's board entries; Phase 1 (live_status.py, read-only chat page) is unblocked.
 
 ## Standing lessons (details in archive.md)
-- T-0971 open: OPT-064 reads at n=30 messages; a message during a land or report still waits for it. tools/inbox_gap.py wraps governor.py because my limits excluded it; one governor line is the cleaner home.
+- T-0971 open on cause only: 2 of 15 waited 33 min, an inbox session ran a worker in the foreground before replying (22:32, T-0985). OPT-064 reads at n=30; land and report waits are T-0975. tools/inbox_gap.py wraps governor.py because my limits excluded it; one governor line is the cleaner home.
 {% endraw %}
 
 

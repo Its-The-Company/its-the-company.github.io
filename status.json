@@ -1,40 +1,64 @@
 {
  "schema": 1,
- "at": "2026-11-02T05:10:21.777149+00:00",
+ "at": "2026-11-02T09:14:30.475352+00:00",
  "session": {
   "active": true,
-  "kind": "inbox",
-  "started": "2026-11-01T23:36:35-05:00"
+  "kind": "work",
+  "started": "2026-11-02T03:02:39-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "odalys",
-   "task": "[tools] T-0995 personal lane pool",
-   "model": "opus",
-   "started": "2026-11-02T04:36:59.846Z",
+   "task": "[tools] T-0971 T-1004 inbox sentence, name wrap",
+   "model": "sonnet",
+   "started": "2026-11-02T09:04:10.196Z",
    "seconds": null,
-   "finished": "2026-11-02T05:09:59.899Z"
+   "finished": "2026-11-02T09:13:29.625000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-0952 chair slot, T-0675 rulings",
+   "model": "opus",
+   "started": "2026-11-02T08:54:11.783Z",
+   "seconds": null,
+   "finished": "2026-11-02T09:03:43.635000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-0977 live personal lanes on Overview",
+   "model": "opus",
+   "started": "2026-11-02T08:37:08.721Z",
+   "seconds": null,
+   "finished": "2026-11-02T08:53:47.981000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-1001 disk gate and early warning",
+   "model": "opus",
+   "started": "2026-11-02T08:09:01.674Z",
+   "seconds": null,
+   "finished": "2026-11-02T08:36:29.417000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 142,
-  "blocked_count": 87
+  "runnable_count": 144,
+  "blocked_count": 88
  },
  "meter": {
   "five_hour": {
-   "pct": 1.0,
-   "resets_at": "2026-11-02T08:39:59.858355+00:00",
+   "pct": 4.0,
+   "resets_at": "2026-11-02T08:39:59.593602+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 99.0,
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 17.0,
-   "resets_at": "2026-11-08T06:59:59.858373+00:00",
+   "resets_at": "2026-11-08T06:59:59.593623+00:00",
    "used_words": "of your weekly allowance used",
    "left": 83.0,
    "left_words": "of your weekly allowance left"
@@ -44,11 +68,11 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-01T23:36:34.487985-05:00"
+  "read_at": "2026-11-02T03:02:38.267574-05:00"
  },
  "ui": {
-  "week_pct": 0.425,
-  "five_hour_pct": 1.475,
+  "week_pct": 0.705,
+  "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -61,156 +85,11 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 1.3,
-  "usage_pct": 7.1,
-  "work_pct": 57.1,
-  "read_at": "2026-11-02T05:14:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-0032",
-    "w": "Idris",
-    "k": "build",
-    "t": "L9 device probe once a device or Simulator is free",
-    "at": "2026-11-02T00:04:36-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0043",
-    "w": "Idris",
-    "k": "ios",
-    "t": "V1 bundle strip",
-    "at": "2026-11-02T00:04:36-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0449",
-    "w": "Idris",
-    "k": "build",
-    "t": "Home Screen scripts, Swift half",
-    "at": "2026-11-02T00:04:36-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0464",
-    "w": "Idris",
-    "k": "build",
-    "t": "DeviceCall carries its timeout",
-    "at": "2026-11-02T00:04:36-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0511",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0508 follow-ups",
-    "at": "2026-11-02T00:04:36-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0678",
-    "w": "Idris",
-    "k": "build",
-    "t": "Refresh button intent in the extension lane",
-    "at": "2026-11-02T00:04:36-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0696",
-    "w": "Idris",
-    "k": "build",
-    "t": "Rides with T-0687",
-    "at": "2026-11-02T00:04:36-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-0757",
-    "w": "Idris",
-    "k": "build",
-    "t": "Investor promise",
-    "at": "2026-11-02T00:04:36-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-0039",
-    "w": "Idris",
-    "k": "build",
-    "t": "C13 check",
-    "at": "2026-11-02T00:09:36-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-0198",
-    "w": "Idris",
-    "k": "build",
-    "t": "V1 status.json expired_runs",
-    "at": "2026-11-02T00:09:36-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-0213",
-    "w": "Idris",
-    "k": "build",
-    "t": "L3 follow-ups on the Simulator",
-    "at": "2026-11-02T00:09:36-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-0273",
-    "w": "Idris",
-    "k": "build",
-    "t": "After T-0031",
-    "at": "2026-11-02T00:09:36-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-0309",
-    "w": "Pernille",
-    "k": "build",
-    "t": "The rest of T-0231",
-    "at": "2026-11-02T00:09:36-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-0395",
-    "w": "Idris",
-    "k": "build",
-    "t": "After T-0391",
-    "at": "2026-11-02T00:09:36-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-0427",
-    "w": "Idris",
-    "k": "build",
-    "t": "From T-0401 review of 40f00baa",
-    "at": "2026-11-02T00:09:36-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-0479",
-    "w": "Idris",
-    "k": "build",
-    "t": "ADR-004 G2/G3 device checks, after a device exists",
-    "at": "2026-11-02T00:09:36-05:00",
-    "n": "Evan"
-   }
-  ]
+  "week_pct": 2.82,
+  "usage_pct": 13.8,
+  "work_pct": 68.3,
+  "read_at": "2026-11-02T09:15:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -219,10 +98,15 @@
    "total_usd": 200.0
   }
  ],
+ "disk": {
+  "free_gb": 4.8,
+  "gate": "closed",
+  "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
+ },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-02T00:14:00-05:00"
+  "at": "2026-11-02T04:15:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -321,6 +205,18 @@
     "o": "c"
    },
    {
+    "k": "test",
+    "t": "Ines to assign, P1, OPT-042 overdue read",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "k": "test",
+    "t": "Ines to assign, P1, OPT-043 overdue read",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Idris",
     "k": "test",
     "t": "One Simulator preview snapshot for the names...",
@@ -333,36 +229,36 @@
     "t": "String Catalog",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "L9 device probe once a device or Simulator...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Unassigned, P2, person's browser checks on...",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T-0995 personal lane pool",
-    "at": "2026-11-02T05:09:59.899Z",
+    "t": "T-0971 T-1004 inbox sentence, name wrap",
+    "at": "2026-11-02T09:13:29.625000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "T-0952 chair slot, T-0675 rulings",
+    "at": "2026-11-02T09:03:43.635000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-0977 live personal lanes on Overview",
+    "at": "2026-11-02T08:53:47.981000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 142,
+   "next": 144,
    "wait": 27,
-   "blocked": 60,
-   "you": 10
+   "blocked": 61,
+   "you": 11
   }
  },
  "qr": [],
@@ -370,6 +266,8 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
+  "task_done",
   "task_title",
   "task_open",
   "lane_task",

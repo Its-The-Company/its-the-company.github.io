@@ -1,34 +1,34 @@
 ---
 layout: "default"
-title: "pywidget v1: launch plan, second draft"
+title: "pywidget v1: launch plan, third draft"
 section: "documents"
-description: "Wrenna, market and product researcher. First draft 2026-10-26 (T-0249). This draft 2026-10-30, T-0770, for the Investors&#x27; Day 15 review (Thu 2026-11-05). Every claim was read against the code at HEAD 16ffb92b; section 8\u2026"
+description: "Wrenna, market and product researcher. First draft 2026-10-26 (T-0249). Second draft 2026-10-30, T-0770, for the Investors&#x27; Day 15 review (Thu 2026-11-05). Every claim was read against the code at HEAD 16ffb92b; section\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/app-store-drafts/' | relative_url }}">← App Store Drafts</a><a href="{{ '/documents/pywidget/launch-plan-draft.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind grey">Draft</span><span>Day 5 · Mon Oct 26</span><span><code>pywidget/docs/release/launch-plan-draft.md</code></span></div><h1>pywidget v1: launch plan, second draft</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"><span>By <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a>, Market and product researcher</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind grey">Draft</span><span>Day 5 · Mon Oct 26</span><span><code>pywidget/docs/release/launch-plan-draft.md</code></span></div><h1>pywidget v1: launch plan, third draft</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"><span>By <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a>, Market and product researcher</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Wrenna, market and product researcher. First draft 2026-10-26 (T-0249). This draft 2026-10-30, T-0770, for the Investors' Day 15 review (Thu 2026-11-05). Every claim was read against the code at HEAD **16ffb92b**; section 8 lists each one.
+Wrenna, market and product researcher. First draft 2026-10-26 (T-0249). Second draft 2026-10-30, T-0770, for the Investors' Day 15 review (Thu 2026-11-05). Every claim was read against the code at HEAD **16ffb92b**; section 8 lists each one.
 
 **DRAFT under <span title="Commandment 51: the Investors approve every visual before it ships.">Commandment 51</span>. Nothing here is approved, posted, sent or scheduled.** Under Commandment 10 the company never contacts anyone and never posts anywhere: this file proposes, and the Investors decide whether any of it happens and do it themselves, from their own accounts. Every post below is copy for their approval, not a promise that it goes out. Commandment 6 <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> throughout: no claim v1 does not make good, no fake or paid reviews, no asking people to upvote or rate, no false scarcity, no countdowns.
 
-Companion file: [press-kit-draft.md](press-kit-draft.html). **store-page-draft.md was brought to HEAD by T-0789** (2026-10-30; its own notes list the gates still open); where it differs from this file, check both against the Day 24 sweep (T-0788). The posts and the store page must agree before submission.
+Companion file: [press-kit-draft.md](press-kit-draft.html). **store-page-draft.md was brought to HEAD by T-0789** (2026-10-30; its own notes list the gates still open); where it differs from this file, check both against the T-0788 sweep (2026-12-06). The posts and the store page must agree before submission.
 
-**Decided since the first draft.** Option A with every room (#91, an Investor, 2026-10-30 08:37, card "Decided"). Pro is one-time $14.99 with 7 Pro premades and 3 themes, Family Sharing off, no trial (#87 "Decided"). numpy, Pillow and matplotlib are 1.1 and appear here only as things 1.0 lacks, with no date ([ADR-003 s4](adr-003-package-policy.html), T-0287). Submission is Day 25 (Sun 2026-11-15), Day 28 if the device gates fail ([plan.md](pywidget-plan.html)). NAME stays a placeholder until #90.
+**Decided since the first draft.** Option A with every room (#91, an Investor, 2026-10-30 08:37, card "Decided"). Pro is one-time $14.99 with 7 Pro premades and 3 themes, Family Sharing off, no trial (#87 "Decided"). numpy, Pillow and matplotlib are 1.1 and appear here only as things 1.0 lacks, with no date ([ADR-003 s4](adr-003-package-policy.html), T-0287). **Third draft, 2026-11-02, T-1151:** sections 4 and 5 are re-based on the release-date plan (freeze 2026-11-30, submit 2026-12-08, release 2026-12-15, Day 55; [plan.md](pywidget-plan.html)). There is no revenue target or need-date (amendment 2026-10-31 12:43); the Investors do all outreach and the company only plans it. Sections 1-3, 5a and 8 are from the second draft and **section 8 is still read against HEAD 16ffb92b**; its re-read at today's HEAD is a board line, and T-0788 [release-candidate sweep, 2026-12-06] repeats it. NAME stays a placeholder until #90.
 
-**Gates.** A gated sentence is deleted, never softened, if its gate fails. Gates are the checklist's own freeze rows ([alpha-day10-checklist.md](alpha-day10-checklist.html)) where one exists. The drafts go to the Investors on Day 15 with their gates showing, because most gates close after Day 15; the company removes them in a final sweep on Day 24 (release candidate), and nothing is posted with a gate still in it.
+**Gates.** A gated sentence is deleted, never softened, if its gate fails. Gates are the checklist's own freeze rows ([alpha-day10-checklist.md](alpha-day10-checklist.html)) where one exists. The drafts go to the Investors on Day 15 with their gates showing, because most gates close after Day 15; the company removes them in a final sweep on Day 46, 2026-12-06 (release candidate, T-0788), and nothing is posted with a gate still in it.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1, scrolls sideways" style="--tw:1073px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1, scrolls sideways" style="--tw:1094px" markdown="1">
 
 | Gate | What must be true | Decided | If it fails |
 |---|---|---|---|
-| **W** | Widgets ship: at least 8 of 12 premades pass (F1), a person's tap reaches the Home Screen (F19, T-0684), Maren's screens pass | Widget cut line, Days 22-23 (plan.md) | Every [[W: ]] sentence goes; <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">pitch</span> P-C; Pro is the themes alone at $4.99 (#87 "Decided") |
-| **N** | The count of premades that pass (F1) | Days 22-23 | "12" and "7" become the real counts, from pro-flags.json |
-| **<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">LANE</span>-ON / LANE-OFF** | The flag default for Python in the widget extension, set from device numbers ([ADR-007 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-10-29 08:03](adr-007-execution-architecture.html) item 1, T-0680) | Before the release candidate, Day 24 | Exactly one of the two survives. A Simulator number never opens it |
+| **W** | Widgets ship: at least 8 of 12 premades pass (F1), a person's tap reaches the Home Screen (F19, T-0684), Maren's screens pass | Widget cut line, Freeze 2026-11-30 | Every [[W: ]] sentence goes; <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">pitch</span> P-C; Pro is the themes alone at $4.99 (#87 "Decided") |
+| **N** | The count of premades that pass (F1) | Freeze 2026-11-30 | "12" and "7" become the real counts, from pro-flags.json |
+| **<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">LANE</span>-ON / LANE-OFF** | The flag default for Python in the widget extension, set from device numbers ([ADR-007 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-10-29 08:03](adr-007-execution-architecture.html) item 1, T-0680) | Before the release candidate, 2026-12-06 | Exactly one of the two survives. A Simulator number never opens it |
 | **E** | Completion and inline errors in the editor (T-0656) | Feature freeze | The words go |
 | **F3** | Projects and Files (T-0355) | Feature freeze | No submission as scoped (checklist F3) |
 | **F18** | Open a script from the Home Screen (T-0449), press kit only | Feature freeze | The row goes |
@@ -43,6 +43,33 @@ Companion file: [press-kit-draft.md](press-kit-draft.html). **store-page-draft.m
 </div>
 
 
+### Gate status 2026-11-02
+
+Read from ops/v1_scope.json (its stamp is 2026-10-29, so a state may be newer on the board). **No gate can be closed today**: each rests on a build that the scope file shows not done. Nothing was softened, and no sentence is deleted yet because no gate has failed.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: Gate status 2026-11-02, scrolls sideways" data-n="3" style="--tw:777px" markdown="1">
+
+| Gate | Scope row and state | Closed now? | What decides it |
+|---|---|---|---|
+| W, N | widget-by-tap, premades, gallery: in progress, in progress, not started | Open | Freeze rows F1 and F19 at 2026-11-30 |
+| LANE-ON / OFF | not a scope row; ADR-007 T-0680 | Open | Device numbers before 2026-12-06 |
+| E | completion-lint: in progress | Open | Freeze 2026-11-30 |
+| F3 | projects: in progress | Open | Freeze 2026-11-30 |
+| F18 | home-screen-scripts: in progress | Open | Freeze 2026-11-30 |
+| F4 | ipad: in progress | Open | Freeze 2026-11-30 |
+| F6 | gallery: not started | Open | Freeze 2026-11-30 |
+| F7 | pro-placement: in progress | Open | Freeze 2026-11-30 |
+| F9 | traceback-taps: not started | Open | Freeze 2026-11-30 |
+| F13 | themes: not started | Open | Freeze 2026-11-30 |
+| F17 | prompts: in progress | Open | Freeze 2026-11-30 |
+| S | intents: done, but a person's own script is not pickable (T-0510) | Open | Freeze 2026-11-30 |
+
+</div>
+
+
+**Cut to 1.1 per the scope file:** preview pane, install from a file, share extension, and native packages (T-1085). I searched this draft for each; none appears in any claim or post draft, and numpy, Pillow and matplotlib appear only as things 1.0 lacks, with no date. **No refresh number appears anywhere.**
+
 Fills: NAME (#90) and [App Store link]. Pro's name is **NAME Pro**, the approved Pro screen's eyebrow with #90's name in it.
 
 Tags: [doc] a company file says it, linked; [count] a script counted it from a saved file; [recall] my memory, unverified; [open] a fact we do not have, which a person reads or the Investors supply; ASSUMPTION as in L11; [judgment] my reading, not a measurement.
@@ -54,7 +81,7 @@ Here is the shape of it. The people who would buy NAME already have a Python app
 ## 1. Who buys, and where they already gather
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 1. Who buys, and where they already gather, scrolls sideways" data-n="1" style="--tw:1320px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 1. Who buys, and where they already gather, scrolls sideways" data-n="1" style="--tw:1320px" markdown="1">
 
 | # | Buyer | Evidence (counts, with links) | Where they gather | Ours to post in? |
 |---|---|---|---|---|
@@ -76,7 +103,7 @@ What is missing from this table, and I want it said: no subreddit, newsletter or
 Public copy names no rival. It leads with current Python and free to run, the two pulls we have counted, and puts widgets second (PROPOSAL-002 s1).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 2. Positioning and the one-line pitch (options for the Investors, C51), scrolls sideways" data-n="3" style="--tw:842px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 2. Positioning and the one-line pitch (options for the Investors, C51), scrolls sideways" data-n="3" style="--tw:842px" markdown="1">
 
 | # | One-line pitch | Gates | Note |
 |---|---|---|---|
@@ -94,7 +121,7 @@ Public copy names no rival. It leads with current Python and free to run, the tw
 Counted from the 11 Python apps among the 18 saved App Store descriptions (L7-raw/lookup-us-2026-10-25.json, read 2026-10-25; recounted by script 2026-10-30). This is our candidate set, not the whole shelf: store search is barred to scripts (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G2a</span>), so a person checks it again on launch day.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 3. What is new (Tenet 3), counted, and what is not, scrolls sideways" style="--tw:960px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 3. What is new (Tenet 3), counted, and what is not, scrolls sideways" style="--tw:960px" markdown="1">
 
 | Claim | Count | Holds? |
 |---|---|---|
@@ -111,32 +138,28 @@ Counted from the 11 Python apps among the 18 saved App Store descriptions (L7-ra
 
 And one novelty outside the app: it was made by a company whose staff are AI agents, with every outside action taken by two people, and no image generator used anywhere (Commandment 9). That is the press angle (press kit, section 4), and it cuts both ways (risk R6).
 
-## 4. The path to about $286 gross, in the days that are left
+## 4. Sizing, as an estimate and not a target
 
-$200 net is **$285.71 gross at Apple's 30%**, or $235.29 at 15% if the Small Business Program enrollment comes through ([L11 s0](l11-economics.html)). US storefront; sales outside the US net less after VAT/GST, and Apple's proceeds per price point are rounded by Apple, so the real count can be one higher [recall].
+**This section is an estimate for planning the Investors' outreach. It is not a revenue target and it has no need-date.** Profit is still a goal; the cost against proceeds lives on the site's cost page, not here ([amendment 2026-10-31 12:43](pywidget-plan.html)). Apple's cut is 30%, or 15% if the Small Business Program enrollment comes through ([L11 s0](l11-economics.html)); at $14.99 that is $10.49 or $12.74 a sale. US storefront; sales outside the US net less after VAT/GST, and Apple's proceeds per price point are rounded by Apple [recall].
 
-**The window shrank, and it matters more than anything else in this section.** The first draft had 10 selling days. Submission is now Day 25, so 1.0 is on sale about Day 27-28 at best, which leaves two or three selling days to <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> ([plan.md](pywidget-plan.html), chair note 2026-10-29). The Investors' rule of 2026-10-29 accepts the delay. If the gates fail, submission is Day 28 and on sale about Day 30, which leaves almost none.
-
-Organic downloads with no outreach are an assumption: 5-20 a day (Ines, memo s1) or 5-35 (mine, L11 s3). Buyers per download are also an assumption: 2% (Ines, range 1-3%) or 1-4% (mine). Neither is a measurement; section 4a says what the repo holds.
+The window is no longer three days. Release is Tuesday 2026-12-15 (Day 55) and the Investors' goal is release by Day 60, so a launch has days to run and nothing in this plan is cut to fit a tally date. What the length of the window does not change: organic downloads with no outreach are an assumption, 5-20 a day (Ines, memo s1) or 5-35 (mine, L11 s3), and buyers per download are an assumption too, 2% (Ines, range 1-3%) or 1-4% (mine). Neither is a measurement; section 4a says what the repo holds.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 4. The path to about $286 gross, in the days that are left, scrolls sideways" data-n="4" style="--tw:1095px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 4. Sizing, as an estimate and not a target, scrolls sideways" style="--tw:1001px" markdown="1">
 
-| Case | Pro sales for $200 at 30% (15%) | Gross at that count | Sales a day over 3 days | Downloads needed at 2% (3% / 1%) |
-|---|---|---|---|---|
-| **$14.99, decided (#87)** | **20 (16)** | $299.80 | 6.7 | **1,000** (667 / 2,000); 800 at 15% |
-| $4.99, the themes-only fallback if W fails | 58 (48) | $289.42 | 19.3 | 2,900 (1,934 / 5,800) at the same rate, and Ines judges the rate lower for themes alone (0.5%) |
+| Case | Buyers per 1,000 downloads at 1% / 2% / 3% | Net at $10.49 a sale (30%) | Net at $12.74 (15%) |
+|---|---|---|---|
+| **$14.99, decided (#87)** | 10 / 20 / 30 | $105 / $210 / $315 | $127 / $255 / $382 |
+| $4.99, the themes-only fallback if W fails (Ines judges the rate lower, 0.5%) | 5 at 0.5% | $17 | $21 |
 
 </div>
 
 
-Arithmetic by script (ceil of 200 / (price x 0.70 or 0.85), then ceil of sales / rate), 2026-10-30; not a forecast.
+Arithmetic by script (downloads x rate x price x 0.70 or 0.85), 2026-11-02. An estimate, and the rates are the assumptions above.
 
-Here is the shape of it, read across. Three days of organic downloads is 15-60 at Ines's rate (15-105 at mine). At 2% that is 0.3 to 1.2 buyers, about $3 to $13 net at $10.49 a sale. **Nearly all of the 1,000 downloads has to come from the Investors' posts, inside three days.** The same 1,000 over the old 10 days was 100 a day; it is now about 333 a day.
+Here is the shape of it. The number of downloads the Investors' posts and the store listing bring is the unknown, and no file in the repo measures it. I do not forecast it. What I can say [judgment] is that the organic floor (5-20 a day) is small beside what a single well-received post can bring, which is why the outreach plan in section 5 puts the rooms in the order of expected fit and leaves the Investors room to run it over more than one week if a thread goes quiet.
 
-**Stale, and not mine to change:** the card's "about 150 downloads, about 3 buyers, about $31", and Ines's "$30 to $150 net, about one in four for $200" (memo s0, s6), were all set for the 10-day window. I have not restated her judgment here; a new board line asks her to. My own reading [judgment]: $200 by Day 30 now needs Show HN to land hard on the first try, and the honest thing to tell the Investors is that the Mission date is unlikely even with every room posted.
-
-The fallback cases: with W failed, Pro is the themes alone at $4.99 and every widget claim goes. The memo's case C3 (no purchase at all) stays possible only if F13 also fails: then the Pro sentence is deleted, "Writing and running your own code is free" stays alone, and the app earns nothing by Day 30.
+The fallback: with W failed, Pro is the themes alone at $4.99 and every widget claim goes. If F13 also fails, the Pro sentence is deleted and "Writing and running your own code is free" stands alone.
 
 ### 4a. Measured figures from comparable apps: what the repo holds
 
@@ -145,11 +168,11 @@ I looked for any measured conversion or download figure for a paid developer too
 What the repo does hold is a few launch posts in which developers reported their own numbers ([H173 s4-s5](../hunt/h173.html), raw posts in research/hunt/H173-raw/). Each figure is the poster's own claim, not verified. All were read through Arctic Shift on 2026-10-24, a route barred since then pending #53, so they are reused from the saved file, terms-unverified, and nothing was read again. None is a Python or widget app.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 4a. Measured figures from comparable apps: what the repo holds, scrolls sideways" style="--tw:1236px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 4a. Measured figures from comparable apps: what the repo holds, scrolls sideways" style="--tw:1236px" markdown="1">
 
 | Post (saved) | App type and model | Figure as posted | What it says about us |
 |---|---|---|---|
-| [r/iOSProgramming 1v7vvb3](https://www.reddit.com/r/iOSProgramming/comments/1v7vvb3/), 2026-07-27 | **10 paid-up-front developer and media tools** (a Redis GUI, an SFTP client, a web-IDE client, video tools, a Markdown editor) | "10+ sales", "Total revenue: ~$70" over 2 months; "Zero ratings"; best app 4 sales on 263 product page views | The closest comparable we hold: developer tools with no audience and no ratings sold about one unit per app in two months. Closer to case A than to 20 sales |
+| [r/iOSProgramming 1v7vvb3](https://www.reddit.com/r/iOSProgramming/comments/1v7vvb3/), 2026-07-27 | **10 paid-up-front developer and media tools** (a Redis GUI, an SFTP client, a web-IDE client, video tools, a Markdown editor) | "10+ sales", "Total revenue: ~$70" over 2 months; "Zero ratings"; best app 4 sales on 263 product page views | The closest comparable we hold: developer tools with no audience and no ratings sold about one unit per app in two months. Well under the 20 buyers per 1,000 downloads that the 2% row assumes |
 | [r/SideProject 1tczn4a](https://www.reddit.com/r/SideProject/comments/1tczn4a/), 2026-05-14 | habit app, free with a purchase | 60 downloads, 1 paying user, $16, about 2 months | 1 of 60 is 1.7%, inside Ines's 1-3%; one buyer is not a rate |
 | [r/SideProject 1s56udi](https://www.reddit.com/r/SideProject/comments/1s56udi/), 2026-03-27 | fitness app, free with in-app purchases and a trial, paid ads run | first 20 days: 305 downloads, 59 in-app purchases, $99; "Day 7 download-to-paid 3.13%" | At the top of Ines's range, with paid ads, a trial, a mailing list and 100 TestFlight users beforehand, none of which we have |
 | [r/SideProject 1to4awo](https://www.reddit.com/r/SideProject/comments/1to4awo/), 2026-05-26 | Reflect, free with optional premium | ~27 downloads in 12 days with no audience, 5 ratings | About 2 a day, below the 5-20 a day Ines plans on: organic reach with no posts can be smaller than both our ranges |
@@ -161,110 +184,74 @@ Read together, these four posts put us at Ines's planning value or below it, and
 
 How each sale would arrive, by source (proposal for what to watch, not a forecast): App Store search for "python" terms (keywords kw-a to kw-c, store page s4), the launch-day posts (section 5), and word of mouth from buyers who are happy. Only the first runs without anyone posting. The Investors can read the split in App Store Connect's analytics (sign-in; theirs) and paste it into a report; the company does not read it.
 
-## 5. The calendar, Day 15 to Day 30
+## 5. The calendar, on the release-date plan
 
-**Launch day, L,** is the first US morning with the app on sale. An approval after about midday ET makes L the next morning [judgment]; a post needs a working link and a person who has time for it. Nothing is posted before L, because the first impression happens once. Every action is the Investors', from their own existing accounts. **Cost $0 for every row**; no paid row is proposed (section 5b).
+**Dates ([plan.md](pywidget-plan.html), chair note 2026-10-31):** feature freeze Monday 2026-11-30 (Day 40); release candidate sweep Sunday 2026-12-06 (Day 46, T-0788 stays that sweep); submit Tuesday 2026-12-08 (Day 48), with the Investors' approval; release **Tuesday 2026-12-15 (Day 55)**; the Investors' goal is release by Day 60 (2026-12-20). The plan says the dates can move either way and every move goes in the next report. This section holds no date that is not one of those or an offset from L.
 
-Plan.md gives "on sale around Day 27-28 at best", so the plan case is **L = Day 27 (Tue 2026-11-17)**, with Day 28 beside it. Apple's review time is not in any company file; [recall: Apple says most apps are reviewed within a day or two]. Which of the Investors is present on L is still open (asked on #91).
+**Who does what.** The Investors do all of the outreach, from their own accounts. The company only plans it (Commandment 10): this file proposes, writes DRAFT copy for approval (Commandment 51), and posts nothing, contacts no one and schedules nothing. Every row below is an Investor action unless marked company. **Cost $0 for every row**; no paid row is proposed (section 5b).
 
-### 5.0 Before launch day, both calendars
+**Launch day, L,** is the first US morning with the app on sale. The plan case is **L = Tue 2026-12-15** with a release setting the Investors choose; if Apple approves earlier, the app can be held for L (the matrix's recommended Automatic release would put it on sale at approval, so the Investors choose Manual or a date: [matrix s2c](app-review-matrix.html)). Apple's review time is not in any company file; [recall: Apple says most apps are reviewed within a day or two]. Nothing is posted before L, because the first impression happens once. Which Investor is present on L is still open (asked on #91).
+
+### 5.0 Before launch day
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 5.0 Before launch day, both calendars, scrolls sideways" style="--tw:1120px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 5.0 Before launch day, scrolls sideways" style="--tw:1115px" markdown="1">
 
-| Day (date) | Where | Action (the Investors', unless marked) | Status 2026-10-30 |
+| Date | Where | Action (the Investors', unless marked) | Status 2026-11-02 |
 |---|---|---|---|
-| The day it can be done | Apple developer account, signed in | **Ask 1.** Enroll in the Small Business Program. At 15%, $14.99 needs 16 sales, not 20. [recall: the lower rate applies from enrollment, not back to earlier sales] | Not yet done (ops/state.md, Apple status) |
-| 12 (Mon 11-02) | App Store Connect | Bank and tax. No sale can happen without them | Due; T-0771 follows |
-| The day the app record exists | App Store Connect, signed in | **Ask 4.** Apple's featuring nomination, if the form exists as recalled [recall]; Apple asks for lead time, so the odds inside the window are low; about ten minutes | Waiting on the app record |
-| **15 (Thu 11-05)** | Report reply | Review D1-D6 and the press kit. **Choose Calendar A or B** (5.1, 5.2). Read the posting rules of r/Python, r/shortcuts, r/iOSProgramming, Product Hunt and HN's Show HN guidelines, and each newsletter's form, as a person (about 15 minutes). Paste anything that changes a draft into the report thread | Drafts ready |
-| 24 (Sat 11-14) | Company, then App Store Connect | The company runs the final sweep: gates closed, section 8 re-read at the release candidate, every draft recounted, D2 refilled (new board line). The Investors fill product page fields from approved copy, price, Support URL and Privacy Policy URL ([matrix s2c](app-review-matrix.html)), release setting (the matrix recommends Automatic) | Plan.md Day 24 |
-| 25 (Sun 11-15) | none | Submission (Ines, with your approval). Nothing posted. If the gates failed: bound fields, submit Day 28 (Wed 11-18) | Plan.md |
-| 26 (Mon 11-16) | Company site | The company publishes the product's own page once the creative is approved (C10 passive presence; not outreach) | Waits on #90, #92 |
+| Any day it can be done | Apple developer account, signed in | **Ask 1.** Enroll in the Small Business Program: 15% instead of 30% [recall: the lower rate applies from enrollment, not back to earlier sales] | Not yet done (ops/state.md) |
+| Before submission | App Store Connect | Bank and tax. No sale can happen without them | Due; T-0771 [bank and tax setup card] follows |
+| Day 15 (Thu 2026-11-05) | Report reply | Review D1-D6 and the press kit. Read the posting rules of r/Python, r/shortcuts, r/iOSProgramming, Product Hunt and HN's Show HN guidelines, and each newsletter's form, as a person (about 15 minutes). Paste anything that changes a draft into the report thread | Drafts ready |
+| Day 40 (Mon 11-30) | Company | Feature freeze. Each gate in the table at the top is decided from the freeze rows | Plan.md |
+| Day 46 (Sun 12-06) | Company | Release-candidate sweep, T-0788 [the release-candidate sweep]: gates closed, section 8 re-read at the candidate, every draft recounted, D2 refilled | Plan.md |
+| Day 46-47 | App Store Connect | The Investors fill the product page from approved copy, price, Support URL and Privacy Policy URL ([matrix s2c](app-review-matrix.html)), and the release setting | Waits on #90, #98 |
+| Day 48 (Tue 12-08) | none | Submission (Ines, with your approval). Nothing posted | Plan.md |
+| After the app record exists | App Store Connect, signed in | **Ask 4.** Apple's featuring nomination, if the form exists as recalled [recall]; Apple asks for lead time, so the sooner the better; about ten minutes | Waiting on the app record |
+| Between submission and L | Company site | The company publishes the product's own page once the creative is approved (C10 passive presence; not outreach) | Waits on #90, #92 |
 
 </div>
 
 
-### 5.1 Calendar A: one room a day, as the card has it
+### 5.1 The rooms, one a day, as the card has it
 
-This is what option A approved, moved to the real launch day. The spacing is the card's: keeps each post inside a room's rules and avoids looking like a campaign.
-
-
-<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 5.1 Calendar A: one room a day, as the card has it, scrolls sideways" data-n="2 4" style="--tw:1056px" markdown="1">
-
-| Room | Offset | Action | Draft | If L = Day 27 | If L = Day 28 |
-|---|---|---|---|---|---|
-| Hacker News, Show HN | L | **Ask 2.** One Investor posts, US morning, and one of you is present all day to answer questions (support is the Investors', C10). No Show HN score is read (HN reads held, hn-terms-ruling); the largest unknown in this plan | **D1** | Tue 11-17 | Wed 11-18 |
-| PyCoder's Weekly, Python Weekly | L | **Ask 3.** Submit through each one's own form [recall; forms unread] | **D4** | Tue 11-17 | Wed 11-18 |
-| Your own social accounts | L | One post linking the App Store page; reach is your own follower counts [open] | **D5** | Tue 11-17 | Wed 11-18 |
-| r/Python | L+1 | Post under the sub's showcase rules. Active room, new topic (H186-shelf s4) | **D2** | Wed 11-18 | Thu 11-19 |
-| r/shortcuts | L+2 | The Shortcuts actions, with the worked example. Activity counted (H157, H209) | **D3** | Thu 11-19 | **Fri 11-20, Day 30** |
-| r/iOSProgramming | L+3 | D2's text, only if its rules allow that day. Developers, not the core buyer: dropped first | D2 | **Fri 11-20, Day 30** | Sat 11-21, after Day 30 |
-| Product Hunt | L+5 | Optional, only if one of you already has an account. Weakest fit | **D6** | Sun 11-22, after Day 30 | Mon 11-23, after Day 30 |
-
-</div>
+Option A, as approved (#91). The spacing is the card's: it keeps each post inside a room's rules and avoids looking like a campaign. Calendar B (two rooms a day) was only there to fit a <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> tally; with no tally it is dropped.
 
 
-Counted: of 8 rooms, 6 land before Day 30 if L = Day 27, 5 if L = Day 28. Product Hunt misses in both.
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 5.1 The rooms, one a day, as the card has it, scrolls sideways" data-n="2 4" style="--tw:962px" markdown="1">
 
-### 5.2 Calendar B: every room before Day 30
-
-Same rooms, same posts, same L. The three days of L, L+1 and L+2 hold all 8, the last of them on Day 29, so each has at least a day of selling before the tally.
-
-
-<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 5.2 Calendar B: every room before Day 30, scrolls sideways" data-n="1" style="--tw:828px" markdown="1">
-
-| Day | If L = Day 27 | Rooms | Why this pairing |
-|---|---|---|---|
-| L | Tue 11-17 | Show HN (D1), both newsletters (D4), your social accounts (D5) | As the card has it |
-| L+1 | Wed 11-18, Day 28 | r/Python (D2), Product Hunt (D6) | r/Python is the strongest room after HN. Product Hunt is a general tech audience with little overlap [judgment] |
-| L+2 | Thu 11-19, Day 29 | r/shortcuts (D3), r/iOSProgramming (D2's text, if its rules allow) | Shortcuts users and iOS developers barely overlap [judgment]; D2's text is a day old by then, so the same words never run twice in a day |
+| Room | Offset | Action | Draft | Date if L = Tue 12-15 |
+|---|---|---|---|---|
+| Hacker News, Show HN | L | **Ask 2.** One Investor posts, US morning, and one of you is present all day to answer questions (support is the Investors', C10). No Show HN score is read; the largest unknown | **D1** | Tue 12-15 |
+| PyCoder's Weekly, Python Weekly | L | **Ask 3.** Submit through each one's own form [recall; forms unread]. The issue date is the editor's, and [recall: both are weekly] | **D4** | Tue 12-15 |
+| Your own social accounts | L | One post linking the App Store page; reach is your own follower counts [open] | **D5** | Tue 12-15 |
+| r/Python | L+1 | Post under the sub's showcase rules. Active room, new topic (H186-shelf s4) | **D2** | Wed 12-16 |
+| r/shortcuts | L+2 | The Shortcuts actions, with the worked example (activity counted, H157, H209) | **D3** | Thu 12-17 |
+| r/iOSProgramming | L+3 | D2's text, only if its rules allow that day [recall: it limits self-promotion to a set day, possibly Saturday, unverified]. Developers, not the core buyer: dropped first | D2 | Fri 12-18, or Sat 12-19 if Saturdays |
+| Product Hunt | L+5 | Optional, only if one of you already has an account. Weakest fit | **D6** | Sun 12-20 |
 
 </div>
 
 
-What it costs: two rooms a day instead of one on L+1 and L+2, which is the risk the card's spacing was there to avoid, and an Investor's attention split across two threads each of those days. It keeps "no reposting" and every room's own draft.
+All 8 rooms fit between L and Day 60 (2026-12-20); Product Hunt lands on it.
 
-**My recommendation is B**, because three selling days cannot spare a room for a Sunday after the tally. A is what you approved, so A stands unless you choose B on Day 15.
+### 5.2 If the dates move
 
-### 5.3 If Apple approves late
+A later L moves every row by the same offset; the order does not change. If release moves past Day 60 the goal moves, and the report says so. If Apple rejects (R2), the posts wait for the resubmission's L. If a room's rules bar a post that day, it takes the next free day after L+5 rather than doubling up. Nothing is posted twice, and no room is reposted.
 
-Each row is Calendar B cut to fit. The order of the cuts is the card's ("dropped first" is r/iOSProgramming) and then section 1's weakest fit.
-
-
-<div class="tbl" role="region" tabindex="0" aria-label="Table 10: 5.3 If Apple approves late, scrolls sideways" style="--tw:1208px" markdown="1">
-
-| L | What runs | Rooms landed before Day 30 | What it drops |
-|---|---|---|---|
-| **Day 27 (Tue 11-17)** | Calendar B in full | 8 of 8 | Nothing |
-| **Day 28 (Wed 11-18)** | L: D1, D4, D5. Day 29: r/Python, r/shortcuts | 6 of 8 | **r/iOSProgramming, then Product Hunt.** Either may still post after Day 30 |
-| **Day 29 (Thu 11-19)** | L: D1, D4, D5. Day 30: r/Python, r/shortcuts | 4 of 8, 2 more on the day itself | **r/iOSProgramming and Product Hunt** |
-| **Day 30 (Fri 11-20)**, the best case if the gates fail and submission is Day 28 | Your social accounts and the newsletters only. My suggestion [judgment]: hold Show HN for the next Tuesday (Day 34, 11-24), because it is one shot and on Day 30 it can add only hours of sales to the tally. The Investors choose | 0 of 8 | **Show HN and every Reddit room, plus Product Hunt, leave the Day 30 window** |
-| **After Day 30**, or a rejection (R2) | Calendar A from the first Tuesday on sale | 0 of 8 | No room is lost, but all of them miss the date |
-
-</div>
+### 5.3 After launch
 
 
-Two rooms can fail even when the dates work:
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: 5.3 After launch, scrolls sideways" style="--tw:648px" markdown="1">
 
-- **Newsletters.** "Landed" here means submitted. The issue date is the editor's, and [recall: both are weekly], so a Day 27 submission may not print before Day 30.
-- **r/iOSProgramming.** [recall: it limits self-promotion to a set day, possibly Saturday, unverified.] If a person's read on Day 15 confirms Saturdays, its only days near the launch are 11-14 (before L) and 11-21 (after Day 30), so it misses Day 30 in **both** calendars, and Calendar B lands 7 of 8.
-
-### 5.4 After launch, both calendars
-
-
-<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 5.4 After launch, both calendars, scrolls sideways" style="--tw:557px" markdown="1">
-
-| Day | Where | Action |
+| When | Where | Action |
 |---|---|---|
-| L+2 and Day 30 | Report reply | Paste units, proceeds and downloads by source from App Store Connect, so the next report can compare with section 4 (the card's Day 25 row, moved) |
-| Any day after L | Same rooms | **Only if there is real news** (a 1.0.1 that fixes what launch-day users reported, a new premade): one follow-up, in the thread already started, not a new post. No reposting |
-| 30 (Fri 11-20) | none | Day 30 tally from App Store Connect |
+| L+2 and about a week after L | Report reply | Paste units and downloads by source from App Store Connect (sign-in; theirs), so the next report can compare with section 4a. The company does not read it |
+| Any day after L | Same rooms | **Only if there is real news** (a 1.0.1 that fixes what launch-day users reported, a new premade): one follow-up in the thread already started. No reposting |
 
 </div>
 
 
-The person's read of rival in-app prices (questions item 9) and no paid ads stand from the memo's list.
+The Investors' read of rival in-app prices (questions item 9) and no paid ads stand from the memo's list.
 
 ### 5a. Post drafts (DRAFT, C51; the company does not post them)
 
@@ -341,12 +328,12 @@ D3 as a whole carries gate **S**: if S fails, the worked example cannot be run b
 
 **If W passes and T-0678 ships** (LANE-ON only): the "Not in this version" line reads "widgets with buttons or toggles, apart from a Refresh button".
 
-Lengths are in section 8, last row. The company recounts every draft on Day 24.
+Lengths are in section 8, last row. The company recounts every draft in the T-0788 sweep, 2026-12-06.
 
 ### 5b. Considered and not proposed
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 12: 5b. Considered and not proposed, scrolls sideways" style="--tw:640px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 5b. Considered and not proposed, scrolls sideways" style="--tw:640px" markdown="1">
 
 | Option | Why not |
 |---|---|
@@ -355,8 +342,8 @@ Lengths are in section 8, last row. The company recounts every draft on Day 24.
 | Asking friends, family or followers to rate or review | Commandment 6: no fake or solicited-for-show reviews. Ratings come only from Apple's own in-app prompt, a product decision (Ines, Idris), shown after a successful run, never tied to a reward. That prompt is T-0273, and 1.1 if it misses (checklist F15) |
 | A "launch price" | Allowed only with a real end date, stated and kept (L11 s5). A lower price raises the sales needed (section 4); not proposed for v1 |
 | Contacting writers, podcasters or the people behind Python's iOS support | Influencer and press outreach is the Investors' alone (C10). The press kit exists so that, if they choose to, they have it ready |
-| A public TestFlight link before launch | Needs Beta App Review [recall]; testers are not buyers and leave no App Store rating. Possible for 1.1, not proposed for the Day 30 window |
-| Posting before L to gain days | A post with no working link spends the one first impression. The app can't be bought, so it can't help the tally |
+| A public TestFlight link before launch | Needs Beta App Review [recall]; testers are not buyers and leave no App Store rating. Possible for 1.1, not proposed for 1.0 |
+| Posting before L to gain days | A post with no working link spends the one first impression. The app can't be bought, so it can't help |
 
 </div>
 
@@ -364,22 +351,22 @@ Lengths are in section 8, last row. The company recounts every draft on Day 24.
 ## 6. Risks
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 13: 6. Risks, scrolls sideways" data-n="1" style="--tw:1005px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 12: 6. Risks, scrolls sideways" data-n="1" style="--tw:1005px" markdown="1">
 
-| # | Risk | What it does to Day 30 | What we do |
+| # | Risk | What it does to the release | What we do |
 |---|---|---|---|
-| R1 | Bank and tax due Day 12 (11-02); signing (#100) lands late | No sale without bank and tax. If #100 lands after Day 21, the release candidate waits day for day (plan.md) | Listed under Upcoming needs in every report |
-| R2 | A rejection on first review | One rejection moves on-sale past Day 30 | The review matrix and its gates; the posts wait for L |
+| R1 | Bank and tax due Day 12 (11-02); signing (#100) lands late | No sale without bank and tax. If #100 lands after 2026-11-30, the release candidate waits day for day (plan.md) | Listed under Upcoming needs in every report |
+| R2 | A rejection on first review | One rejection moves release past 2026-12-15; Day 60 is the Investors' goal | The review matrix and its gates; the posts wait for L |
 | R3 | **Demand is unproven** | 0 forum asks for Python widgets in 12 months (H186-shelf); 0 of 27 owners asking where to move (H154). Section 4 needs 1,000 downloads in three days at Ines's 2%, against 15-60 organic | Lead with current Python and free to run (counted pulls), widgets second (PROPOSAL-002 s1) |
-| R4 | Posts removed under a room's self-promotion rules, or ignored | Lose that channel's share, and Calendar B has no spare day to retry | Rules read by a person on Day 15; no reposting |
+| R4 | Posts removed under a room's self-promotion rules, or ignored | Lose that channel's share, and the calendar has no spare day to retry | Rules read by a person on Day 15; no reposting |
 | R5 | The one Show HN chance goes badly | The largest reach is a single shot [open] | Plain post, limits stated, an Investor answers questions on the day |
 | R6 | "Built by AI" turns readers away, or brings scrutiny | Either way it is the true story; hiding it is not an option (Commandment 35) | Say it once, plainly; the app's quality and the no-AI-art rule answer the "slop" worry (#10 direction) |
 | R7 | A claim outruns the build | A false claim breaks C6 and 2.3.1(a). Section 8 has 8 rows with wording cut and 11 rows gated because HEAD does not do it yet, so this is live, not theoretical | Gates on every sentence; section 8 re-read on Day 24 |
 | R8 | A rival ships the same week (Juno adds widgets; PythonIDE grows) | Section 3's "new" column shrinks | Re-check section 3 by a person on L-1; D2's comparison is filled on the day, never from this file |
-| R9 | Support load from launch-day posts | Unanswered questions sour a thread; two rooms a day in Calendar B make this worse | Support is the Investors'; they may hand it to workers in a report reply (C10) |
+| R9 | Support load from launch-day posts | Unanswered questions sour a thread; one room a day keeps it manageable | Support is the Investors'; they may hand it to workers in a report reply (C10) |
 | R10 | Name not chosen (#90); USPTO check by a person still owed; Python® nominative use (store F1); caption font licence (PROPOSAL-003 S1) | Any of them can change copy late | Fills stay NAME until the Investors choose |
 | R11 | Non-US sales and Apple's rounding | Net per sale lower than section 4 | Section 4 counts the US case; one or two more sales of margin |
-| R12 | Apple approves after Day 27 | Rooms drop as in 5.3 | The cut order is written now, so nobody decides it under pressure |
+| R12 | Apple approves late or the date moves | Every row moves by the same offset (5.2) | The cut order is written now, so nobody decides it under pressure |
 | R13 | A reader finds a limit we did not state (no pip, no numpy, no ctypes, no background refresh) | Show HN readers test claims within minutes | D1 states those limits up front; better a smaller claim that holds |
 
 </div>
@@ -387,21 +374,21 @@ Lengths are in section 8, last row. The company recounts every draft on Day 24.
 
 ## 7. Open, for a person or the Investors
 
-1. **Calendar A or B**, on Day 15.
+1. **Release setting** (Manual or a date, so L is 2026-12-15), at submission.
 2. Which Investor is present on L (asked on #91).
 3. Room sizes and self-promotion rules (r/Python, r/shortcuts, r/iOSProgramming, Product Hunt, Show HN guidelines, newsletter forms): a person's read, Day 15.
 4. Show HN precedent scores (items 9423491, 47768556): a person's read, if wanted.
 5. Featuring nomination: whether the form exists as I recall and its lead time (App Store Connect, signed in).
 6. Release-day check of section 3's counts (store search by a person).
 7. Which social accounts, if any, the Investors are willing to use.
-8. Ines's restated Day 30 range (section 4).
+8. Ines's view of the section 4 estimate, if she wants to restate it; no target hangs on it.
 
 ## 8. Claim check against HEAD 16ffb92b (2026-10-30, read by Wrenna)
 
 Each row is a checkable claim in D1-D6 or the press kit. **Confirmed** means I read the code or a test record at this commit. "Simulator" means no real iPhone has run it yet. **Gated** means the code is not there; the sentence carries a gate. **Cut** means the first draft said it and it came out. An unsure row was not marked Confirmed.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 14: 8. Claim check against HEAD 16ffb92b (2026-10-30, read by Wrenna), scrolls sideways" data-n="1" style="--tw:1000px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 13: 8. Claim check against HEAD 16ffb92b (2026-10-30, read by Wrenna), scrolls sideways" data-n="1" style="--tw:1000px" markdown="1">
 
 | # | Claim | Evidence at HEAD | Status |
 |---|---|---|---|

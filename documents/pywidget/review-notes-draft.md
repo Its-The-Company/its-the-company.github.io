@@ -25,20 +25,20 @@ Wrenna, 2026-10-25, started 19:57 ET; revised 20:01 ET for ADR-006 (<span title=
 [App Name] is a Python development environment for iPhone and iPad. Users write and run their own Python scripts, and a script can draw a home screen or Lock Screen widget.
 
 HOW CODE RUNS
-The app runs code from only two sources: (1) Python the user types or pastes[T-0355: , or opens from their own files (app storage, or a Files folder they pick)], and (2) the example scripts and premade widgets compiled into this build. The app does not download, install or execute code from our servers or from other users. There is no store, sharing or import-from-URL of other people's code; [T-0191: the only in-app gallery shows our own premade widgets, compiled into this build. ]The example scripts open in the editor, where the user can read and edit them before they run.[T-0191: Each premade's source opens in the app, the Pro ones once bought.] A user's own script may make network requests the user writes (standard library or requests); the app itself never fetches code.
+The app runs code from only two sources: (1) Python the user types or pastes[T-0355: , or opens from their own files (app storage, or a Files folder they pick)], and (2) the example scripts and premade widgets compiled into this build. The app does not download or run code from our servers or other users. There is no store, sharing or import-from-URL of others' code; [T-0191: the only in-app gallery shows our own premade widgets, compiled into this build. ]Examples open in the editor, where the user can read and edit them before they run.[T-0191: Each premade's source opens in the app, the Pro ones once bought.] A user's own script may make network requests it writes; the app itself never fetches code.
 
 RUNTIME
-CPython [3.15.1] and its standard library are bundled in the app. Bundled packages: [requests, jedi, pyflakes]. Compiled packages such as numpy are not in this version. Native modules are signed frameworks inside the bundle. No package installer is included in this version.
+CPython [3.15.1] and its standard library are bundled in the app. Bundled packages: [requests, jedi, pyflakes]. Compiled packages such as numpy are not in this version, and there is no package installer. Native modules are signed frameworks inside the bundle.
 [G1: Python reaches iOS features only through a fixed set of Swift functions we wrote on public APIs. The ctypes module and the Objective-C runtime bridge are removed from the build, so scripts cannot call native APIs directly.]
 
 DEVICE FEATURES
-Scripts can use: clipboard, files, local notifications, location (When In Use only), motion history (steps, floors, distance), and the Keychain for the user's own secrets. Location and motion are asked the first time a user's script needs them, with a purpose string, and notifications through the system prompt; the app stays fully usable if any is refused. The Files picker, clipboard and Keychain have no prompt of their own. There is no HealthKit, contacts, photos or calendar access.
+Scripts can use: clipboard, files, local notifications, location (When In Use only), motion history (steps, floors, distance), and the Keychain for the user's own secrets. Location and motion are asked the first time a script needs them, with a purpose string, and notifications through the system prompt; the app stays usable if any is refused. Files, clipboard and Keychain have no prompt. There is no HealthKit, contacts, photos or calendar access.
 
 WIDGETS [G5: delete this section if widgets are cut]
-A script can describe a widget with our Python view library. Python runs in the main app (in the foreground, in background app refresh, or from the Refresh Widgets Shortcuts action) and saves the result; [<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">LANE</span>-OFF: the widget extension only draws it and runs no code.] Background refresh is used only to update the user's widgets. Twelve premade widgets ship in the build. The GitHub status widget calls GitHub's public API from the device; it works without an account, and an optional personal token stays in the Keychain.
+A script can describe a widget with our Python view library. Python runs in the main app (foreground, background app refresh, or the Refresh Widgets Shortcuts action) and saves the result; [<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">LANE</span>-OFF: the widget extension only draws it and runs no code.] Background refresh is used only to update the user's widgets. Twelve premade widgets ship in the build. The GitHub status widget calls GitHub's public API from the device; it works without an account, and an optional personal token stays in the Keychain.
 
 SHORTCUTS
-App Intents: Run Script, Run Script with Input, Refresh Widgets. They run one of the user's widget scripts[T-0790: , or any script from the user's library]; the input is data passed to that script, not code.
+App Intents: Run Script, Run Script with Input, Refresh Widgets. They run one of the user's widget scripts[T-0790: , or any script from the user's library]; the input is data passed to that script, not code.[T-0449: A user can build a Shortcut that opens one of their own projects; nothing is downloaded, shared or offered.]
 
 IN-APP PURCHASE
 One non-consumable, "[Pro name]", unlocks [contents - G6]. More > pywidget Pro shows it and has a Restore purchase link[T-0657: ; Settings > Pro shows it too]. The free app is complete for writing and running your own Python.
@@ -47,7 +47,7 @@ PRIVACY
 No account, no sign-in, no server, no analytics, no tracking. Scripts, widgets and logs stay on the device and in folders the user chooses.
 
 NO HIDDEN FEATURES
-There are no hidden, dormant or server-enabled features. Everything in the app is reachable from the screens listed below, and the build contains no code paths for features that are not described here.
+There are no hidden, dormant or server-enabled features. The build has no code paths for features not described here.
 
 DEMO (no account needed)
 1. [iPad: More > Open in New Window > tip_splitter.py > Run.][T-0811: iPhone: [Examples entry] > tip_splitter.py > Run.] It asks three questions with input() and prints the result.
@@ -68,6 +68,7 @@ DEMO (no account needed)
 | WIDGETS section, demo step 4, and every premade mention in HOW CODE RUNS ("and premade widgets", "including our examples and premade widgets", the gallery clause) | G5 Day 14 cut line (matrix 2a claim B) |
 | T-0355 bracket (opens from their own files) | T-0355 Projects and Files on main; fails: the bracket goes |
 | T-0191 brackets (gallery clause, premade source) | T-0191 gallery screen on main; fails: the brackets go, and the premade source cannot be claimed |
+| T-0449 bracket (SHORTCUTS, Home Screen route) | T-0449 on main and freeze row F18 green by 2026-11-03 23:59 (matrix row 46, gate G13); fails: the bracket goes and the code leaves the build. The words "app" and "mini app" never name a user's project |
 | T-0790 bracket | T-0790 picker lists any script; fails: the bracket goes |
 | T-0657 bracket (Settings > Pro) | T-0657 Settings screen on main (freeze row F8); fails: the bracket goes |
 | T-0811 bracket (iPhone path to the examples) | T-0811 on main; fails: only the iPad path stays, and the page and the notes say iPad |
@@ -129,6 +130,10 @@ Count at draft time, with every bracket still in: 3,578 characters, 3,578 bytes,
 Recount 2026-10-25 20:01 ET after the ADR-006 revision (G10 brackets added), same command: 3,781 characters, 3,781 bytes, all ASCII, with both G10 brackets in. Only one is kept at paste: 3,713 if Install from file ships, 3,597 if not (by script, each bracket removed in turn). Worst case leaves 287 for the other fills; the Pro paragraph (G6) is the one to watch.
 
 Recount 2026-10-30 (T-0812), same command, every bracket still in: 3997 characters, 3997 bytes, ascii=True; with every T-bracket deleted, 3563. Other brackets (G1, G5, G6, G9, LANE-OFF) are filled or deleted at paste; the Pro paragraph (G6) is the one to watch.
+
+Recount 2026-11-02 (T-0451, Wrenna), same method (text between the markers, by script), after the T-0449 bracket (the Home Screen sentence, 118 characters with its brackets): every bracket still in: 4115 characters, 4115 bytes, ascii=True, **115 over the 4,000 limit**; with every T-bracket deleted, 3590; with only the T-0449 bracket deleted, 3998. So the limit holds only if the bracket text left in at paste is trimmed (the Pro paragraph, G6, and the placeholders are filled or cut then), or a T-bracket's gate fails. Open: whoever pastes the notes trims about 115 characters, and the count is rerun after the fill; I have not cut another team's sentence.
+
+Trim 2026-11-02 (T-1084, Wrenna): repetition cut, no fact removed. Worst case, every bracket and label in: 3890 characters, 3890 bytes, ascii, so 110 left for bracket edits. Check: `python3 tools/store_copy_check.py pywidget/docs/release/review-notes-draft.md --notes` (fails over 4,000 characters or bytes; seen red at 4114 on the T-0451 text).
 {% endraw %}
 
 </div>

@@ -124,8 +124,8 @@ Triggers:
 1. **At install.** The resolver finds only platform wheels (no `any` wheel), or only an sdist that declares extension modules or a non-pure build backend.
 2. **At import.** `ModuleNotFoundError` for a name in a shipped table of the top native packages (import name to distribution name: `cv2` to opencv-python, `sklearn` to scikit-learn, `scipy`, `lxml`, `pydantic_core`, ...), or an `ImportError` from a `.so` that is not a framework.
 
-Draft text (Maren owns the final wording). *(Note 2026-10-29, Wrenna, T-0708: the sentence "Bundled native packages: numpy, Pillow, matplotlib." is dropped; those three are 1.1 per ADR-003 s4.1 "All three fail", 638f21ff.)*
-> **scipy needs native code that isn't in this version of the app.** iOS only runs compiled code that ships inside the app, so it can't be installed here. [Request this package] [Why?]
+Final text (Maren, T-0744, 2026-11-02). It names no bundled native package and promises no date: in 1.0 the only compiled code is Python itself, and numpy, Pillow and matplotlib are 1.1 (ADR-003 s4.1, 638f21ff; T-0708). The first line carries the package name from the shipped table; the second matches the installer refuse text in `_pywidget_install/messages.py` ("compiled code that comes with the app"), which names no package either.
+> **scipy needs compiled code that isn't in this version of the app.** iOS runs only the compiled code that comes with the app, so this package can't be added here. For a pure-Python package, look for a file whose name ends in py3-none-any.whl. [Request this package] [Why?]
 
 "Request" goes into a local list the user can share. No network call without consent.
 

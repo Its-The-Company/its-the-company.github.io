@@ -2,7 +2,7 @@
 layout: "default"
 title: "pywidget.prompts: native prompts from scripts (API v1)"
 section: "documents"
-description: "Code: pywidget/ios/App/Runtime/pywidget/prompts.py, stub prompts.pyi beside it. Wire: pywidget/tests/prompts/fixtures/prompt_calls.json (61 cases, written by prompt_calls_build.py; its rules are the wire contract). Host\u2026"
+description: "hud() stays text, symbol and seconds in v1. No progress argument and no way to update a HUD in place; a progress HUD is a 1.1 item and would need a wire change and its cases first. The IDE sheet&#x27;s HUD frame is redrawn\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/design/' | relative_url }}">← Design &amp; Specs</a><a href="{{ '/documents/pywidget/api.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
 <div class="page-head"><div class="kicker"><span class="kind grey">Design</span><span>Day 6 · Tue Oct 27</span><span><code>pywidget/docs/design/prompts/API.md</code></span></div><h1>pywidget.prompts: native prompts from scripts (API v1)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
@@ -128,6 +128,10 @@ The wire is the fixture's `rules` (10 of them) and cases. The points that are Sw
 
 - v1, 2026-10-27 (T-0446): every kind, cancel rule, context refusal, wire and 50 shared cases.
 - v1.1, 2026-10-27 (T-0462, T-0463, T-0466 after Idris's review T-0459): rule 4 both ways, with `de_DE` and `fr_FR` cases and `locale_numbers`; a call with no run going on is refused; `text()` and `number()` take `done`; number defaults never have an exponent; Swift's refusal carries Python's fix line; cases for a negative minimum and a runner-level preview refusal; the mutants are committed in `pywidget/tests/prompts/mutants.json`. 61 cases.
+
+## Decision, T-0465 (Maren, 2026-11-02)
+
+`hud()` stays text, symbol and seconds in v1. No `progress` argument and no way to update a HUD in place; a progress HUD is a 1.1 item and would need a wire change and its cases first. The IDE sheet's HUD frame is redrawn as `hud("Saved", symbol="done")` (draw_ide.py, spec s3 HUD row). No change to prompts.py, so nothing for Pernille to build; T-0447 builds the HUD as drawn.
 {% endraw %}
 
 </div>

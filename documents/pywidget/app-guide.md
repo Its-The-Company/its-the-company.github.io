@@ -195,7 +195,7 @@ The Investors asked on 29 October 2026 (issue #41) for the freshest widget possi
 | Option | What it does | What it can't do | Limits to know | Needs the app running? | Delay to launch |
 |---|---|---|---|---|---|
 | **A. Python in the widget part** (ruled: built for 1.0, switched on by device tests) | Reruns the script whenever iOS wakes the widget (Apple's typical range is every 15 to 60 minutes, not a promise) and on a Refresh tap; any logic, any JSON feed | Go faster than Apple's budget; use heavy Python modules; survive a memory overrun (it falls back to the last picture with a badge) | Apple typically gives 40 to 70 reloads a day to a widget people look at often; the script gets 2 seconds; memory ceiling unconfirmed until #100; the first device test is whether the widget part can even load Python under a real signature | No | +8 days (submission Day 17 to Day 25, 2026-11-15), plus day-for-day if #100 lands after Day 21 |
-| **B. Declared Swift steps** (building blocks in 1.0; "bound fields" only if A fails) | On every wake-up, fetches one URL and shows named fields, reads today's steps, takes a location fix; no Python | Compute anything (a feed that needs more than "this field" is A's); change colours or layout by rules | Same 15 to 60 minute budget; steps need a device check (T-0011); only declared fields are fresh | No | +3 days on top of A if needed (Day 28, 2026-11-18); alone it would have been about +5 (Day 22) |
+| **B. Declared Swift steps** (building blocks in 1.0; "bound fields" only if A fails) | On every wake-up, fetches one URL and shows named fields; no Python. (Steps and a location fix in the widget part were cut from 1.0 on 2026-10-30 14:35 unless a second widget target lands by Day 21; ADR-007.) | Compute anything (a feed that needs more than "this field" is A's); change colours or layout by rules | Same 15 to 60 minute budget; only declared fields are fresh; public URLs with no key | No | +3 days on top of A if needed (Day 28, 2026-11-18); alone it would have been about +5 (Day 22) |
 | **Timers in the view** (shipped) | Clocks, countdowns, "updated 4 min ago", progress bars that move by themselves, to the second | Show anything that isn't a function of time | None | No | 0 |
 | **Shortcuts automation** (in the code; not measured on a phone) | Meant to run every widget's script fresh at times or events you pick ("7:00", "when I arrive") | Run without a one-time 2 to 3 minute setup | Needs iOS to launch the app briefly in the background; the Refresh Widgets action is in the code, but nobody has measured it on a phone from a background launch | Briefly, launched by iOS | 0 |
 | **iOS background refresh** (ruled: built for 1.0; not built at HEAD, T-0793; cut check T-0795) | Would let iOS run the app briefly when it chooses | Promise a cadence or a time | iOS decides when; how often is known only from a real iPhone (#100) | Briefly, launched by iOS | 0; moves to 1.1 if not in the main code by Day 21 (2026-11-11), or not seen running on a real iPhone by Day 24 (2026-11-14) |
@@ -218,19 +218,39 @@ If option A fails its device tests, the code stays dormant and the widget is as 
 | **Time** (clock, countdown, day progress) | Live, to the second, no budget used | Same | Same |
 | **Transit, timetable** | One run plans the day; each departure counts down live; the plan refetches itself whenever iOS reloads the widget (typically every 15 to 60 minutes by Apple's page; not promised) | Same picture; the table refreshes only when the app runs | Same, table from the last app run |
 | **Transit, real-time delays** | New data when iOS reloads the widget (Apple typically allows 15 to 60 minutes between reloads) and on a Refresh tap, no app; any feed, parsed in Python | New data when iOS reloads the widget, and on a tap, but only for feeds where the value is a named JSON field | Delay as of the last app run, with "updated N min ago" |
-| **Steps** | Today's count when iOS reloads the widget and on a tap, plus goal percentage or pace; needs the device check (T-0011) | Today's count when iOS reloads the widget; the same device check | Count from the last app run |
+| **Steps** | Same as today: the count is read by the app, so it moves when the app runs. Reading steps inside the widget part needs a second widget target that is not built (T-0053) and is 1.1 if it misses Day 21 (ADR-007, 2026-10-30 14:35) | Same as today (steps were cut from the bound-fields build) | Count from the last app run |
 
 </div>
 
 
 The seconds-level version of "transit" (a bus arriving) is a Live Activity in 1.1, on the Lock Screen, for the hour of the journey.
 
+### 4.3 How fresh is a widget: five examples
+
+A widget gets fresh in two different ways. A **redraw** shows a picture that already exists; iOS can do it without the app, and it brings no new facts. **New data** needs a script to run, and in 1.0 as built only the app runs scripts. This table updates the answer the company gave the Investors on issue #41 (the comment of 2026-10-29, Day 9) to the ruling in ADR-007 (chair lines 2026-10-29 08:03, 2026-11-01 18:17 and 2026-11-01 18:38). Marks: **works in v1** means the repository's code backs it; **planned** means not built; **[unverified]** means no phone has shown it (issue #100, signing).
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 4.3 How fresh is a widget: five examples, scrolls sideways" style="--tw:1243px" markdown="1">
+
+| Widget | Redraw or new data? | What starts an app run | What the ruling puts where |
+| --- | --- | --- | --- |
+| **Time** (clock, countdown, day progress) | Redraw only. iOS animates the time text and bars itself, so nothing is fetched. | None needed. | **1.0, works in v1**: World clocks and Countdown do this. Live to the second, no budget used. |
+| **Transit, by timetable** | Both. One run fetches the day's departures and plans a row of pictures; each is a redraw and counts down live. The plan itself is new data. | You open the app; a Shortcuts automation; background refresh (planned, T-0793, not built). With the widget-part lane on, iOS's own reload reruns the plan too. | **1.0, works in v1**: the plan and the countdowns (section 9.1). The lane is built behind a flag that is **off** in the code at HEAD and is set only from real-phone numbers [unverified]. Background refresh: planned for 1.0, moves to 1.1 if not on main by Day 21 (2026-11-11). |
+| **Transit, real-time delays** | New data. A redraw shows the delay as of the last run. | The same as timetable. With the lane on: each iOS reload (typically every 15 to 60 minutes, Apple's range, not a promise) and each Refresh tap, with no app. | **1.0 today**: the delay as of the last app run, with "updated N min ago". **1.0 if the lane passes its phone tests**: fetch in the widget part through `pywidget.net` (built, flag off). If it fails: only a feed that is one named field of public JSON, no key (bound fields, built only then, submission Day 28). **1.1**: Refresh tap fetching without opening the app (iOS 27 and later [unverified]); Live Activity for the hour of a journey. |
+| **Steps** | New data. The phone's step counter is read by the app, not the widget part. | You open the app; a Shortcuts automation; background refresh (planned). | **1.0**: the count from the last app run, in every outcome. Steps in the widget part were cut on 2026-10-30 14:35: it needs a second widget target (T-0053) that is not at HEAD, and it is **1.1** if it misses Day 21 [unverified]. |
+| **Weather** | New data from a public feed. A forecast changes slowly, so a redraw an hour old is usually fine. | The same as real-time transit. A fixed city works with any of them; "where I am" uses the last location the app read. | **1.0 today**: as of the last app run. **1.0 if the lane passes**: refetched on iOS's reload. No weather premade is in the app at HEAD (checked by search); a person writes it [unverified until a phone]. |
+
+</div>
+
+
+Three things hold for every row. Nothing here is "live" except time and timers; the widget-part lane is Apple's 15 to 60 minute rhythm at best. The send chooses a script's lane, a person never types it: a script that imports something the widget part forbids stays on the app lane and is told so in one line (ADR-007, 2026-11-01 18:17). A run that began before the person's latest send writes nothing, so old work never lands over new (2026-11-01 18:38; built in T-0976, flag on only). If the lane fails or the flag stays off, every row above falls back to "as of the last app run, with a badge".
+
 ## 5. Being built now
 
 Status is taken from the task board on 2026-10-28; the dates were re-checked on 2026-10-30 against the board, the build plan and the milestones file. "Alpha" is Day 10 (2026-10-31); "freeze" is Day 21 (2026-11-11); "submit" is Day 25 (2026-11-15), or Day 28 (2026-11-18) if Python in the widget fails its device tests.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 5. Being built now, scrolls sideways" style="--tw:1082px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 5. Being built now, scrolls sideways" style="--tw:1082px" markdown="1">
 
 | What | What is missing | Task | Date |
 | --- | --- | --- | --- |
@@ -597,7 +617,7 @@ All twelve premade widgets offer at least one Lock Screen size (the `FAMILIES` l
 The code that made them is the test `testLockScreenGuideRenders` in `pywidget/ios/Tests/PremadeSnapshotTests.swift`. It calls no image-making AI. To remake them: `tools/xc.sh -project PyWidget.xcodeproj -scheme PyWidget -destination "platform=iOS Simulator,name=iPhone 17e" test -only-testing:PyWidgetTests/PremadeSnapshotTests/testLockScreenGuideRenders`, run in `pywidget/ios/`. The pictures are in `pywidget/app-guide-shots/lockscreen/`.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 8.4 All twelve premade widgets, scrolls sideways" style="--tw:502px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 8.4 All twelve premade widgets, scrolls sideways" style="--tw:502px" markdown="1">
 
 | Premade | Circular | Rectangular | Inline |
 |---|---|---|---|
@@ -616,6 +636,124 @@ The code that made them is the test `testLockScreenGuideRenders` in `pywidget/io
 
 </div>
 
+
+## 9. What you can build
+
+Written 2026-11-02 (T-0647) from the answer the company gave Investor an Investor on issue #41, and checked against the repository on that date. Nothing here was run on a real iPhone: that waits on #100. Marks used below: **works in v1** means the code and a test in the repository back it (named in each line); **[unverified]** means a widely reported figure, or a claim I could not confirm in the code today; **planned 1.1**, **later** and **out of reach** are as in section 4. The Simulator pictures in section 8.4 are the only renders used; this section adds none.
+
+### 9.1 Refresh, and the refresh button
+
+A widget's Python runs in the app, and the widget then redraws the saved result. A run starts when:
+
+- **You open the app.** Works in v1 (the run script writes the widget's picture; section 5, T-0512).
+- **A Shortcuts automation runs "Refresh Widgets"**, for example at 7:00 or on arriving at work. Works in v1: the app registers that action (`RefreshWidgetsIntent` in `ios/App/Intents/RunScriptIntents.swift`). Whether an automation fires on time is [unverified] until a device run.
+- **iOS's own background refresh, about every 15 minutes or more.** [unverified]. I found no background-task code in the app today, so treat it as planned, not built. iOS decides when, and may not run it.
+- **A pre-planned schedule of pictures.** A script can hand iOS several future pictures at least about 5 minutes apart (Apple). The World clocks and Countdown premades do this (`clocks.py`, `countdown.py`; `tests/widgets/test_clocks_after_horizon.py`).
+
+Apple's budget is about 40 to 70 refreshes a day for a widget you look at often [unverified]. Clocks and timers tick without using any of it.
+
+**A refresh button inside a widget is planned 1.1.** Apple says a tap on a widget button does not use the refresh budget. On iOS 27 and later, a tap may run the script in the background without opening the app [unverified, still to be tested on a device]. On iOS 18 to 26 a tap can change the widget's saved state at once with no Python (tick a habit, move a counter), but fetching new data means opening the app. Today's widgets have no buttons: the Habit tracker's rows open the app instead (`habits.py`, "no widget buttons in v1"). Detail: [`docs/research/L5-interactivity.md`](l5-interactivity.html).
+
+A background run gets seconds, not minutes: about 30 seconds [unverified]. Plan a script to fetch and summarise, not to grind.
+
+### 9.2 Memory
+
+- The widget itself gets a small allowance, about 30 MB [unverified, the usual figure]. So pywidget never runs Python inside the widget (ADR-007); the widget only draws a saved description. Measured on the Simulator: 7.7 MB with nothing running.
+- Python runs in the app, which has far more room. A script loading networking, SSL, SQLite and decimal maths peaked at 18.5 MB on the Simulator (a measurement, not a phone figure). Memory is not the ceiling for scripts. Time is.
+- The widget's memory limits what it can draw: long timelines and big pictures. Text, symbols, gauges and shapes cost almost nothing.
+
+### 9.3 What a script can reach
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 9.3 What a script can reach, scrolls sideways" style="--tw:640px" markdown="1">
+
+| Reach | Status |
+|---|---|
+| The internet: web APIs, JSON, pages whose terms allow it | Works in v1, during app runs. The GitHub premade fetches through the app's http helper and keeps the last reading when offline (`github.py`; `tests/widgets/test_http_bundle.py`). |
+| Files kept in pywidget: CSV, JSON, text, SQLite | Works in v1 (the CSV summary and word count examples). |
+| Files from the Files app or iCloud Drive | Import a copy: works in v1 [unverified on a device]. Link a live folder: planned 1.1. |
+| Location, steps, notifications, clipboard | Works in v1 with the person's permission, in the app and never in the widget (section 3.3). Real sensors [unverified] until a device run. |
+| Shortcuts in and out | Works in v1 for running a script from Shortcuts (section 3.3); passing input and returning a result back is [unverified]. |
+| numpy, Pillow, matplotlib | Not in 1.0. Planned for 1.1. |
+| Calendar, Reminders, Health, contacts, photos | Later. Each needs its own permission and review. |
+| Other apps' private data, constant background tracking, live streams, code downloaded and run unseen | Out of reach. iOS refuses it, or App Review does (Guideline 2.5.2). |
+
+</div>
+
+
+### 9.4 The list of widgets you could build
+
+Sample scripts: `widgets/premade/` (12, shipped inside the app), `widgets/gallery/` (15 reference designs), `examples/` (10 plain scripts). Tests: `tests/widgets/`, `tests/examples/`. I checked that each file exists. I did not re-run the tests for this section.
+
+**Live information from the web**
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 9.4 The list of widgets you could build, scrolls sideways" style="--tw:960px" markdown="1">
+
+| Idea | Status | Sample |
+|---|---|---|
+| GitHub repository: stars, open issues, last push | Works in v1 | `widgets/premade/github.py` |
+| "Is my site up?": status code and time for three URLs, with the stale mark after 15 minutes | Works in v1 as a script check; the widget is a reference design | `examples/http_status.py`, `widgets/gallery/endpoints.py` |
+| Python package updates, from PyPI once a day | Reference design, planned | `widgets/gallery/package_updates.py` |
+| Weather from a free API, drawn your own way | Works in v1 as a script [unverified, no weather sample exists]; the planned picture is yours to design | none yet |
+| Transit departures as a pre-planned schedule | Later; no sample | none |
+| News headlines from an RSS feed, API quota meters | Works in v1 as a script [unverified]; no sample | none |
+
+</div>
+
+
+**Your own files and data**
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 9.4 The list of widgets you could build, scrolls sideways" style="--tw:960px" markdown="1">
+
+| Idea | Status | Sample |
+|---|---|---|
+| Habit tracker with streaks (Pro) | Works in v1 as rows that open the app; tap-to-check buttons planned 1.1 | `widgets/premade/habits.py` |
+| Cards to review, reading progress | Reference designs, planned | `widgets/gallery/review_due.py`, `reading.py` |
+| A CSV column as a sparkline | Reference design; the summary script works in v1 | `widgets/gallery/sparkline.py`, `examples/csv_summary.py` |
+| Pinned note, a random quote of the day | Works in v1 (quote premade); pinned note is a reference design | `widgets/premade/quote.py`, `widgets/gallery/pinned_note.py` |
+| Last lines your script printed | Reference design | `widgets/gallery/script_output.py` |
+| A small SQLite log written to by Shortcuts or an NFC tag | Works in v1 for the file part [unverified for the trigger]; no sample | none |
+
+</div>
+
+
+**Calculation and time**
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: 9.4 The list of widgets you could build, scrolls sideways" style="--tw:960px" markdown="1">
+
+| Idea | Status | Sample |
+|---|---|---|
+| Countdowns to your events | Works in v1 | `widgets/premade/countdown.py` |
+| World clocks | Works in v1 | `widgets/premade/clocks.py` |
+| Sunrise and sunset, from location | Works in v1 [unverified, needs a device for location] | `widgets/premade/sun.py` |
+| Day progress rings | Works in v1 | `widgets/premade/progress.py` |
+| Moon phase, month at a glance, binary clock, number of the day, word and character of the day | Reference designs | `widgets/gallery/moon.py`, `month.py`, `binary_clock.py`, `number_day.py`, `word.py`, `character.py` |
+| Date and unit maths, tip splitting, dice | Works in v1 as scripts | `examples/date_calculator.py`, `unit_converter.py`, `tip_splitter.py`, `dice_roller.py` |
+
+</div>
+
+
+**Device and place**
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 9.4 The list of widgets you could build, scrolls sideways" style="--tw:877px" markdown="1">
+
+| Idea | Status | Sample |
+|---|---|---|
+| Steps and floors toward a goal | Works in v1 [unverified on a real phone] | `widgets/premade/steps.py` |
+| Altitude, distance to a saved place | Works in v1 [unverified on a real phone] | `widgets/premade/altitude.py`, `distance.py` |
+| Storage left | Works in v1 | `widgets/premade/storage.py` |
+| Shortcuts launcher | Works in v1 | `widgets/premade/shortcuts.py` |
+
+</div>
+
+
+**Planned 1.1:** counters, toggles, next-page cycling, and a refresh button (fresh data on iOS 27 and later); a focus timer that counts down (`widgets/gallery/focus_timer.py`, a 1.1 reference). **Later:** Live Activities on the Lock Screen and Dynamic Island, and full-screen Home Screen tools beyond the console. **Charts:** native sparklines and gauges are in the renderer now; matplotlib pictures wait on the package decision, and look flatter on the tinted Lock Screen.
+
+**Out of reach, whatever the version:** second-by-second live data in a widget, except clocks and timers; anything running all the time in the background; other apps' private data; scripts downloaded from the internet and run without the person writing or pasting them.
 
 ## Open questions
 

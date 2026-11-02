@@ -822,6 +822,60 @@ Read: Idris's T-0675 note of 19:15; Pernille's T-0935 review, M1 and L2 (the one
 - What would make this fail: a pasted script doing this on purpose. The person sees stale widgets, no badge and no reason. I accept that for 1.0. If T-0680's reload log shows repeated kills with no demotion on a real phone, it comes back to me.
 
 **Board.** T-0952 ticked. Notes on T-0675 (the list; Pernille carries items 3 and 4 into lane.py's header at item 7, docstring only), T-0972 (item 1, item 2's row), T-0680 (steps), T-0682.
+
+## Chair line (Ines), 2026-11-02 17:15 ET: the Activity screen's run log, 7.5 and the App Group layout (T-1138)
+
+Read: Maren's IDE spec s5.12, items 12.1, 12.5, 12.8 and 12.13 (9a83415c); 5.2's layout, 7.2 and 7.5 above; amendment 1 item 5; the 02:40 line; the 08:03 line's two-writer bullet; my 04:02 line, item 3; LaneGuard.swift's `state.lock` comment (Core, line 200 on); PROPOSAL-002 s5; board lines T-0048, T-0198, T-0793, T-0866, T-0906. Ran no build, no test and no script. Moves no date.
+
+**Ruling: yes.** Each widget run keeps its output and traceback for 14 days. PROPOSAL-002 s5 promised "each run's stdout, stderr and traceback", and that promise is the point of the screen. A screen that keeps only the latest traceback breaks it. Most of the work is pure Foundation, so the host can carry it and Idris's Xcode slot gets the smallest possible part.
+
+**1. Layout. This supersedes `log/runs.jsonl` in 5.2 and 7.5.** One shared file under a lock held per widget does not work. `state.lock` is `widgets/<id>/state.lock`, so two widgets appending to one shared file hold two different locks, and a prune that rewrites the file races the other widget's append. The log is therefore kept per widget:
+
+- `log/widgets/<id>/runs.jsonl`: one row per run of that widget.
+- `log/widgets/<id>/out/<row>.json`: that run's output and error (Maren's `log/runs/<row>.json`, moved).
+- `log/console.jsonl`: one row per console run, under `log/console.lock`.
+- A widget's row, its detail file and its `status.json` are written under that widget's `state.lock`, in that order, in one hold.
+- The log stays outside `widgets/<id>/`. A save swaps that whole folder in one rename (T-0906), and a script in the app can clear the folder beside its `__file__` (04:02 item 3). Either would wipe a log kept inside it.
+
+**2. Row keys.** These are 7.5's keys plus Maren's new ones, and every one is accepted: `row` (a UUID; it names the detail file), `ts`, `kind` (`widget` or `console`), `id`, `trigger` (L2's values, amendment 1's reserved values, plus `editor_save`), `lane` (`app` or `widget`), `outcome` (7.2's words), `error_type`, `file`, `line` (the innermost `user` frame of the contract s8 `error`, or the `syntax` position), `duration_ms`, `peak_mb`, `headroom`, `run_id`, `backgrounded` (true or absent), `sensors`, `detail` (true when a detail file was written). A reader shows an unknown key, trigger or outcome as text and never fails (amendment 1 item 5).
+- **12.13 (c), closed:** rows are keyed by `row`. `run_id` stays Swift's per-launch counter, and nothing compares it across launches. Idris does not need to answer it.
+
+**3. Who writes each key: Swift, every one. The Python runner writes nothing in `log/` or in `status.json`.** A person's code runs in that interpreter, so a Python writer would let a script write its own log. Python's part is what it already sends: `bridge-outcome/1` (`duration_s`, the `error` with its frames, the syntax position) and the stdout and stderr records. No Python task comes from this line.
+- App runs: the app's run sink writes the row, the detail file and `status.json` in one hold (T-1140).
+- `killed` rows: launch recovery writes them from the crash marker and the job record (T-1140; T-0198's `expired_runs` test decides `status.json`, not the row).
+- `tree_too_large`: the app writes the row when it reads `render-fault.json` at the next launch (T-1140).
+- Extension-lane runs: the extension's runner calls the same Core store under the same lock (T-0675's flock bullet, which now means these per-widget files; the flag stays off in Release).
+- `peak_mb` comes from `task_info` around the run, in the app (T-1140). `trigger` comes from the job record.
+- `status.json`'s five strip keys (`last_outcome`, `failing_since`, `error_type`, `line`, `ts`) come from T-0866's smallest writer. T-1140 writes the row beside it and does not build a second writer.
+
+**4. What is kept.**
+- **Widget run** (any trigger, either lane): a row and, unless the outcome is `deferred`, `busy` or `oom_guard`, a detail file. Those three ran nothing, so they get a row only.
+- **Console run** (Run, the REPL, a Shortcut running a plain script): a row only, with `kind=console`, the project name as `id`, and no `file`, `line` or output. The console already shows its output, and Copy all is the way to keep it. The console's "Runs log" reads these rows, and they stay 7.5's evidence for section 6. The Activity screen never lists them.
+- **Gallery previews:** nothing. They never write the App Group (T-0191).
+- **The widget itself** never reads `log/`. The Lock Screen is public. The card keeps 7.1's words from `status.json` only: type and file on medium and larger, the line on the Lock Screen.
+
+**5. Bounds.**
+- **Age:** a row older than 14 × 24 h by `ts` is deleted, and its detail file with it. The prune is an atomic rewrite under the lock. It runs at launch, and on an append only when the file's first row is past 14 days or the file is over its cap. Otherwise an append is a single `O_APPEND` write.
+- **Detail file:** at most 24 KiB. Output keeps the last 16 KiB, cut at a line boundary and on a UTF-8 boundary, with `cut: true`. The error gets 8 KiB: the message whole (the bridge caps it at 4 KiB), then `text` and frames trimmed from the outer end to fit. The innermost user frame is always kept.
+- **Per widget:** details are kept for the newest 100 rows, and older ones are deleted (the row stays and shows `d.nokept`). `runs.jsonl` is at most 1 MiB, oldest rows first. The worst case is about 3.4 MiB.
+- **Whole `log/`:** at most 24 MiB. At launch, if `log/` is over the cap, the oldest detail files across all widgets are deleted until it is under. Rows stay, with `d.nokept`. `console.jsonl` is at most 512 KiB.
+- **Clear Activity** deletes `log/widgets/<id>/` and nothing else (12.1 item 6). A widget id with no row inside 14 days loses its folder at the launch prune.
+
+**6. Privacy.**
+- On device only, in the App Group, with the container's default protection class. T2 and the extension write while the phone is locked, so a stricter class would lose rows.
+- Not excluded from backup. The log is in the person's own iCloud or computer backup, like their scripts, and nowhere else.
+- Never sent. No network code reads `log/`, there is no analytics, and the privacy label stays "no data collected". It leaves the device only through Export on the share sheet, which the person taps (12.7), from a temporary file deleted when the sheet closes. Deleting the app deletes it all.
+- Output can hold anything a script prints. That is why it stays on the device, why the widget never shows it, and why Export goes through a person's tap.
+
+**7. The freeze (2026-11-30 23:59) and the one Xcode slot.**
+- T-1139 (host, Pernille) holds the codec, the outcome-to-row mapping, the cutter, the retention planner, the file store with its flock (as LaneGuard does), and 12.7's export text. All of it is tested by `swift test` on the host, with no Xcode slot. Due 2026-11-05 23:59.
+- T-1140 (Swift, Idris) is the wiring and one Simulator run. My estimate from the code is 1 day plus review, and Idris corrects it at start. It goes after T-1139 and T-0866's `status.json`, and before T-0048 builds the screen. It is on main by 2026-11-20 23:59.
+- **Cut:** if T-1140 is not on main by 11-20, the Activity screen moves to 1.1 with it, and F9 keeps the four error states (my T-0331 order). The refusal path in 12.8 does not ship, because a screen that drops output and traceback without saying so breaks s5.
+- What would make this fail: T-0866's writer slips, and T-1140 waits on it. If T-0866 is not on main by 11-16, T-1140 writes the five strip keys itself, and T-0866 adopts that writer.
+
+**8. s5.12 changes.** These are words only, and the layout and drawing stand. 12.8 names `log/widgets/<id>/out/<row>.json` and the per-widget `runs.jsonl`. `d.nokept` also covers the 24 MiB trim. Console rows are not listed. 12.13 (a) and (c) are closed (T-1141).
+
+**Board.** New lines: T-1139 (host half, Pernille), T-1140 (Swift half, Idris), T-1141 (12.8 words, Maren) and T-1142 (review of T-1139, Odalys). T-1138 is ticked.
 {% endraw %}
 
 </div>

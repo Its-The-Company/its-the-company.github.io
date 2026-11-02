@@ -11,7 +11,7 @@ description: "Since T-0414 (ADR-003 s3.6 item 4) a file beside a script that has
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Pernille, 2026-11-02. DRAFT copy (<span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>), not approved. The Operator hands this to Maren; nothing visible ships until she signs the words.
+Pernille, 2026-11-02. DRAFT copy (<span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>). Maren decided the words on 2026-11-02 (below); the line is on for console runs since T-1111.
 
 ## What happens now
 
@@ -44,8 +44,8 @@ Voice as in your installer read ([`installer-messages-maren.md`](installer-messa
 
 ## Where it stands in the code
 
-- Built and tested, switched off: `runner._note_passed_over`, gated by a bootstrap config key `passed_over_note` that the app does not send. The draft words are `runner._NOTE`. Host tests: `ConsoleNoteTests` and `NoteOffByDefaultTests` in `pywidget/tests/bridge/test_runner_t0632.py` (3.9.6 and 3.13.18).
-- Why off, and not only for your words: an existing test, `CrossRunResolutionTests.test_audit_probe_shadowing_folder_then_plain_folder` (`pywidget/tests/bridge/test_runner.py` line 628), asserts a silent console for exactly this case. It was written for T-0414 before any note existed. My <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> for this task may not change an existing test, so switching the note on is a follow-up row: change that one assertion to expect the signed line, and send `passed_over_note: true` from the app's bootstrap config (Idris's half, `RuntimeConfig`) or flip the default in `runner.bootstrap`.
+- Built, tested and on since T-1111: `runner._note_passed_over`, gated by a bootstrap config key `passed_over_note` (on unless the key is false). The draft words are `runner._NOTE`. Host tests: `ConsoleNoteTests` and `NoteOnByDefaultTests` in `pywidget/tests/bridge/test_runner_t0632.py` (3.9.6 and 3.13.18).
+- Why it was off: an existing test, `CrossRunResolutionTests.test_audit_probe_shadowing_folder_then_plain_folder` (`pywidget/tests/bridge/test_runner.py` line 628), asserts a silent console for exactly this case. It was written for T-0414 before any note existed. My <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> for this task may not change an existing test, so switching it on was a follow-up row, T-1111: that assertion now expects the line, and the default in `runner.bootstrap` is on.
 - Nothing here departs from `creative/approved.md` that I can see: it is console text that reports a fact, drawn in the existing stderr style. If question 3 ends in a new style, that part goes to the Investors as C51 asks.
 
 ## Maren's decision, 2026-11-02

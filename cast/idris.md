@@ -26,6 +26,8 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
+| Nov 2, 17:24 | <span class="tag t-finding">finding</span> T-1137: LaneGuardTests signal 6 was PromptsCodecTests (uncommitted, main checkout) aborting on as!; buffered output misplaced it. Side finding: T-1121's scratch mutation run lacks pywidget/tests/fixtures, so WidgetIDTests crashes every run and mutation_check counts each mutant KILLED. |  |
+| Nov 2, 17:17 | <span class="tag t-test">test</span> T-1072: WidgetKit check drew Needs Pro because the check never held Pro; tests A and D now buy it in an SKTestSession; progress reads 14 hr, 19 min left |  |
 | Nov 2, 13:57 | <span class="tag t-incident">incident</span> T-1051: every full Xcode run has been red since 2026-11-02 00:00: a progress test reads the wall clock against a fixed fixture date. My 1.7 GB worktree took the disk to 9.3 GB and my hand-run gate check wrote the low note, so the gate stays closed until 20 GB. Fix on <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/a at 8d14163f, not yet ru |  |
 | Nov 2, 12:39 | <span class="tag t-mistake">mistake</span> Committed and ticked T-1041 with a false comment taken from the review without reading a link line; caught on the device build, corrected as T-1044 (f39ebee9). Review finding F4's dead-strip reading is wrong, delta read owed. |  |
 | Nov 1, 19:13 | <span class="tag t-other">other</span> T-0675: Idris found and fixed his own data-loss bug: since 737da9d3 a send could delete files.shared() data; fixed f8142681 (mirror moved to <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-scripts/). Not in any release. Item 4 done flag off, a84048f5, b923a18a. |  |
@@ -224,8 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 24, 05:42 | <span class="tag t-research">research</span> H73 walk time: D+, 35 asks in four venues, both Day 3 gates fail (17 of 29 settled free; 0.34-0.43 builders per asker); TrailTime already plans with own measured pace; HealthKit route yes; own-fit spike reads 2-5% short, cause not found |  |
 | Oct 24, 05:04 | <span class="tag t-research">research</span> H72 which show is at my level: 0 at B+, best D+ ranker; 35 level-named asks/yr in 5 subs, 0 of 30 bodies give a word count; free-answer and builder gates fail; Migaku already covers 11 languages; no subtitle source clears terms for a catalogue |  |
 | Oct 24, 03:30 | <span class="tag t-research">research</span> H62 attic, insulation and ventilation: 1,318 asks a year hand-coded across r/Insulation, r/Roofing, r/HomeImprovement; 120-body sample: 15% need a calculation (all arithmetic: 1/150 vent rule, depth x R, dew point), 30% a building-science rule, 19% a photo judgement. Best C- attic check-up; free man |  |
-| Oct 24, 02:51 | <span class="tag t-research">research</span> H53 home meters: 0 at B+. Best C, solar 'should I have made more?' verdict (110 askers in 12 months across r/solar and r/SolarDIY; Cenit 2026-09 and HelioPeak 2026-04 already hold the parts; 19 builders). Aquarium cycle reader D+ (about 40 asks a month, sample estimate; Nitrify and TankDiary shipped |  |
-| Oct 24, 02:27 | <span class="tag t-research">research</span> H65: Jensen Speakers' free home theatre design tool takes Open Sided/Open Back/Open Rear toggles and places surrounds and Atmos heights (rear pair flagged back-wall limited); H55 kill clause met. No slope, door, window or L input. Five H51b fixtures: V WRONG, W OK (flagged), P taken, G WRONG unless  |  |
 
 ## Diaries, meetings, and conversations
 
@@ -250,8 +250,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0353 done (abe146d0): notif/keychain wire waits on a Python half; review open.
 - T-0565 slice 1 2026-10-28 (5ac90a05): Console uses ConsoleEditor (Runestone). Review T-0584 open.
 - T-0586 done 2026-10-28 (158ac8da): engine after FirstFrame, first open worst 195.2 ms; review T-0600. A8s waits T-0287.
-- T-0642 branch idris/t0642-plain-targets at d3a5bc94 2026-11-02: review findings done bar T-1039, T-1042 (no archive: T-0497 legal links stops both commits). Delta read owed. testProgressSmall: T-1051.
-- T-1068 2026-11-02: unit test green; WidgetKitCheckTests progress reading unseen: pywidget-wk-check draws Needs Pro (no entitlement), cause on the old device unproven.
+- T-1050 2026-11-02: T-0642 copied onto main 10db8d59 as idris/t1050-land 2fd4070c (T-1050-idris/wt, vendored, xcodeproj made); branch suites green. Left: PyWidgetTests + UI there when disk gate (20 GB) opens, then copy to main, note T-1116. T-1038 dd-* deleted.
+- T-1148 done 2026-11-02 (186e9027): WidgetStatus in Shared, 26/26 mutants; review T-1155. Open: run_id per-launch can collide in expired_runs (noted on T-1140).
+- T-1068/T-1072 done 2026-11-02 (10db8d59): WK check buys Pro in SKTestSession; progress read. Review open. 17e's old Pro unexplained.
 
 
 Dated task logs and full lessons: archive.md.
@@ -262,12 +263,11 @@ Dated task logs and full lessons: archive.md.
 
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
-- T-0675 items 1-2 2026-11-01: a stored run of mutants needs a restore on EXIT and a commit first; a foreground call died 144 with a mutant planted. An ordered rule can freeze what a script controls (future sampled_at): check it against that.
-- T-0675 mutants 2026-11-02: xc_mutants prints exit 75 (a run that never started) as SURVIVED; three false survivors. Plant in a clone, never in main while a queue runs. Say a verdict only after reading it: I called kills ahead of the file four times.
 - T-0675 item 3 2026-11-01: inside the Simulator a lookup keeps case but a new name collides, even on a Mac disk that ignores case: measure from a test, not the shell. An undo on a commit's last step can't run: delete it.
 - T-1030 recut 2026-11-02: removing a function, grep stored mutants' find text, not the file name: Core/mutants-t0719.json names Sources/PyWidgetCore/ and my triage missed it. Remove a worktree before a retry: branch -D fails on a checked-out name.
 - T-1044 2026-11-02: I wrote a review's claim into a comment and ticked it, and the link line proved it false: SDKSettings.plist sets defaults xcspecs don't show. A review's fact is a claim too: read the build first. zsh won't split $e in env; $(date) resets $? before echo.
 - T-0642 2026-11-02: a smaller binary is a claim: list what left (compile lines, nm) before calling it good. A failure list needs HEAD in the same folder and the same device: four of mine were /tmp against /private/tmp. Keep the HEAD build until the diff is read; I deleted mine for disk and lost one answer.
+- T-1137 2026-11-02: swift test's "signal" line prints where xctest's buffered stdout was cut, not in the crashed suite. Read the .ips or the unfinished test (tools/swift_test_head.py); never full-run the shared main tree.
 - T-0675 mirror bug 2026-11-01 (f8142681): my item 3 deleted files.shared data, because scripts/<id> had two owners and a review would have come later. Lesson: before a rename over a folder, grep who else writes it. -only-testing on a class misses tests in an extension of another class: read the count. Renaming a constant: run the whole unit target before the commit, not after.
 {% endraw %}
 

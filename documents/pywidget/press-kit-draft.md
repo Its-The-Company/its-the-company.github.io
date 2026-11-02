@@ -1,11 +1,11 @@
 ---
 layout: "default"
-title: "pywidget v1: press kit, second draft"
+title: "pywidget v1: press kit, second draft (cut to 1.0 scope, T-1152, 2026-11-02)"
 section: "documents"
 description: "Wrenna, market and product researcher. First draft 2026-10-26 (T-0249). This draft 2026-10-30, T-0770, for the Investors&#x27; Day 15 review (Thu 2026-11-05). Companion: launch-plan-draft.md; its section 8 is the claim check\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/app-store-drafts/' | relative_url }}">← App Store Drafts</a><a href="{{ '/documents/pywidget/press-kit-draft.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind grey">Draft</span><span>Day 5 · Mon Oct 26</span><span><code>pywidget/docs/release/press-kit-draft.md</code></span></div><h1>pywidget v1: press kit, second draft</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"><span>By <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a>, Market and product researcher</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind grey">Draft</span><span>Day 5 · Mon Oct 26</span><span><code>pywidget/docs/release/press-kit-draft.md</code></span></div><h1>pywidget v1: press kit, second draft (cut to 1.0 scope, T-1152, 2026-11-02)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"><span>By <a href="{{ '/cast/wrenna.html' | relative_url }}">Wrenna</a>, Market and product researcher</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -27,7 +27,7 @@ Wrenna, market and product researcher. First draft 2026-10-26 (T-0249). This dra
 | Platforms | iPhone and iPad (one universal app), iOS 18.0 or later | `pywidget/ios/project.yml` |
 | Price | Free to download and to run your own code. One one-time purchase, NAME Pro, $14.99 in the US. No subscription, no trial. Family Sharing is off. | #87 "Decided" |
 | What Pro adds | [[W: [[N: 7]] premade widgets (Habit tracker, Shortcuts launcher, Storage, Day progress, Quote of the day, World clocks, GitHub repository)]][[F13: and 3 editor themes (Ember, Fern, Graphite), each light and dark with a high-contrast set]] | #87, #93; `pywidget/runtime/pro-flags.json`; creative/approved.md items 4-5. If W fails, Pro is the themes alone at $4.99 |
-| Release date | [date on sale] | Submission Day 25 (2026-11-15), Day 28 if the device gates fail; on sale about Day 27-28 at best ([plan.md](pywidget-plan.html)) |
+| Release date | [date on sale] | Release goal Day 60 (2026-12-20), movable; the Investors set the date ([plan.md](pywidget-plan.html)) |
 | Python | CPython 3.15 (3.15.1, python.org's own iOS build) with the standard library, minus what iOS can't run or the build removes (ctypes, tkinter, curses, venv and a few more). requests built in. | Launch plan s8 rows 1-3 |
 | Not bundled | numpy, Pillow, matplotlib and every other compiled package. No pip and no online installer | Launch plan s8 row 4. Stated as absent, with no date |
 | Editor | Syntax colours, line numbers, a coding key row on iPhone[[E: , completion and inline errors]][[F9: , tracebacks that open the failing line]][[T-0635: , find]]. On iPad, one file per window[[F4: , a sidebar, a split editor and keyboard shortcuts]] | Launch plan s8 rows 5-8, 32-33 |
@@ -51,6 +51,10 @@ Wrenna, market and product researcher. First draft 2026-10-26 (T-0249). This dra
 
 </div>
 
+
+## 1b. Scope map (T-1152)
+
+State is `ops/v1_scope.json` as_of 2026-10-29. Rows: runtime, editor, intents, device-modules, widget-engine, examples, pure-packages, pro are done and stated plainly where the fact sheet says so. completion-lint (E), traceback-taps (F9), projects (F3), prompts (F17), home-screen-scripts (F18), widget-by-tap and premades (W, N), pro-placement (F7), settings (F8), themes (F13), ipad (F4) are not done and keep their gate form. preview-pane, install-from-file and share-extension are cut to 1.1 and sit under Not in 1.0. Full claim-by-claim table: store-page-draft.md section 10.
 
 ## 2. Descriptions
 
@@ -83,22 +87,24 @@ The store page must agree with every line here before submission. store-page-dra
 From Maren's [PROPOSAL-003](proposal-003-icon-and-screenshots.html) and its card (#92, not approved), layout Open (recommended), files on the design-previews branch at `store/open/` (commit 5e73e4c8; a private repository, so the links do not open for anyone outside: approved images are copied to the public site before any press use, C42). **All are placeholders drawn from the IDE spec** and carry a "PROPOSAL · placeholder UI" line. The shipped set is captured from the app after the freeze (2.3.3). Captions are drafts; the Investors choose. The list below takes the card's changes.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 3. Screenshot list, scrolls sideways" style="--tw:1262px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 3. Screenshot list, scrolls sideways" style="--tw:1159px" markdown="1">
 
-| # | File | Screen | Caption | Gate and notes |
+| # | Capture id | Screen (v1_scope row, state) | Caption | Gate and notes |
 |---|---|---|---|---|
-| 1 | iphone-69-1-editor.png | Editor with the sample script, after a run (light) | Python® 3.15, / on your iPhone | none |
-| 2 | iphone-69-2-home.png | Home Screen with the 5 free premades (dark) | Your Python, / on your Home Screen | W |
-| 3 | iphone-69-3-widget-code.png | A widget's source above its preview (light) | Open a premade, / change its Python | W, F6. The preview pane is 1.1, so the capture shows the widget another way (Maren) |
-| 4 | iphone-69-4-console.png | Console: run output (dark) | Run it, and see / what it made | The placeholder draws a table; HEAD has no table output and no board line for one, so the capture will not show it |
-| 5 | iphone-69-5-traceback.png | Traceback, your frames first (light) | Errors that take / you to the line | **F9.** Today the caption is not true |
-| 6 | iphone-69-6-forms.png | Native form from a script (dark) | Native forms from / a few lines of code | **F17.** Sample form is the password generator (T-0137) |
-| 7 | iphone-69-7-lock.png (optional) | Lock Screen with free premades (dark) | And on your / Lock Screen | W |
-| iPad 1 | **out** | The editor's live widget preview moved to 1.1, so this shot would show a feature 1.0 lacks | | Maren proposes a replacement (card) |
-| iPad 2 | ipad-13-2-console.png | Editor and console side by side (dark) | Editor and console, / side by side | F4 |
+| 1 | 1-editor | Editor after a run (editor, done) | Python® 3.15, / on your iPhone | none |
+| 2 | 2-home | Home Screen with widgets (widget-by-tap, in progress) | Your Python, / on your Home Screen | W; waits on T-0512; free premades only |
+| 3 | 3-widget-code | Editor on a widget's source (editor, premades) | Every widget is / Python you can edit | W, F6; no preview pane (1.1) |
+| 4 | 4-console | Console with table output (runtime, done) | Run it, and see / what it made | none |
+| 5 | 5-traceback | Failed run, folded traceback (traceback-taps, not started) | Errors that take / you to the line | **F9**; frames wait on T-0389; caption false until then |
+| 6 | 6-forms | Native form sheet (prompts, in progress) | Native forms from / a few lines of code | **F17**; waits on T-0447 |
+| 7 | 7-lock | Lock Screen widgets (widget-by-tap, in progress), optional | And on your / Lock Screen | W; waits on T-0512 |
+| iPad 1 | 1-split | Sidebar, editor, shortcut list (ipad, in progress) | A sidebar, a split, / and your keyboard (new words, Investors to confirm) | F4; waits on T-0556 |
+| iPad 2 | 2-console | Editor and console side by side (ipad, runtime) | Editor and console, / side by side | F4; waits on T-0556 |
 
 </div>
 
+
+Source: Maren's [capture list](capture-list.html) (T-1125, 64a67a8b), shot for shot; ids and screens are hers. No premade on any shot is Pro (guideline 2.3.2), so no shot needs a Pro mark. Today's frames are code-drawn and marked PROPOSAL; the shipped set is Simulator captures (Commandment 9). Install from file and the share extension are on no shot.
 
 Also for a press folder, once approved: the icon at 1024 px (#92; Indent recommended, PROPOSAL-003 part 1; files `icon/<direction>-light|dark|tinted-1024.png` on the same branch). No photographs, no device renders of Apple hardware (layout Open draws none), nothing from an image generator (Commandment 9).
 
@@ -106,7 +112,7 @@ Also for a press folder, once approved: the icon at 1024 px (#92; Indent recomme
 
 This is their note, so it is only a draft of facts for them to say in their own words. Each fill is checked on the day it is sent.
 
-> NAME was made by an experiment. We are two people who set up a small company whose whole staff are AI agents, each written as a character with a role, and gave it one goal: an iPhone app that earns $200 by the company's thirtieth day. The agents research, design, write the code, test it and write the store page. We <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> the money and the accounts, approve anything creative, and take every action outside the company ourselves; the agents may not post, email or contact anyone, which is why this note comes from us.
+> NAME was made by an experiment. We are two people who set up a small company whose whole staff are AI agents, each written as a character with a role, and gave it one goal: an iPhone app released by the company's sixtieth day. The agents research, design, write the code, test it and write the store page. We <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> the money and the accounts, approve anything creative, and take every action outside the company ourselves; the agents may not post, email or contact anyone, which is why this note comes from us.
 >
 > Two rules shaped the app you see. No image in it came from an image generator: the icon is drawn by code, and the screenshots are captures of the running app. And nothing is claimed that the build does not do: the store page says only what this version does, and says plainly where the limits are, such as that a widget is not live.
 >

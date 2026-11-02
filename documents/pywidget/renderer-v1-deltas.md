@@ -188,7 +188,7 @@ render.py's text widths are narrower than SwiftUI's. Its "0 truncations" QA pass
 
 **Map for Idris (T-0433 item 2), `TreePaint.onCard`:** `bg.sunken` -> asset `WidgetOnCardGround` (token `widget.onCard.ground`), `accent.soft` -> asset `WidgetOnCardSoft` (token `widget.onCard.soft`). Full colour on the `widgetCard` paint only, like the four rows already there. Values (light, dark, lightHC, darkHC): ground `#EEEBE4`, `rgba(255,255,255,0.28)`, `#EEEBE4`, `rgba(255,255,255,0.28)`; soft `#E4EBF8`, `rgba(0,0,0,0.24)`, `#E4EBF8`, `rgba(0,0,0,0.24)`. Both colour sets are in `ios/Shared/Theme.xcassets` (appearance.py export). `WidgetCardTests` line 160 expects `bg.sunken` on the card to stay `BgSunken`; it changes to `WidgetOnCardGround`.
 
-**Toggle in stripped modes (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G2</span>), for `TreeToggle`:** on: the track keeps its accent group at opacity 0.5, the knob draws in the default group at 1.0; off: track `bg.sunken` 0.24, knob 0.9 (unchanged). The knob shadow stays full colour only (Swift already does this; render.py now matches, Pernille R4).
+**Toggle in stripped modes (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G2</span>), for `TreeToggle`:** on: the track keeps its accent group at opacity 0.5 (superseded by T-0468 below: 0.3), the knob draws in the default group at 1.0; off: track `bg.sunken` 0.24, knob 0.9 (unchanged). The knob shadow stays full colour only (Swift already does this; render.py now matches, Pernille R4).
 
 What changed, by fail:
 
@@ -202,6 +202,18 @@ What changed, by fail:
 - G1: the Pause pill draws solid accent in full colour and accent at 0.4 when stripped (`When renderingMode`), under a 1.0 label.
 
 Checks: check_widget_modes 0 on every count; check_tokens 0 fails (1156 pairs); render.py QA 0 faults on 12 premade and 15 gallery sheets, 0 card mark or text faults. Sheets on design-previews `widgets/premade/` and `widgets/gallery/`. The Simulator sheets are still the check that counts: Idris redraws them after the map.
+
+## T-0468: Toggle and Button in accented and vibrant (Maren, 2026-11-02)
+
+Idris's T-0467 run (05f29962) shows the Button labels reading and the knob present, but on the Tinted Home Screen the on track (accent group at 0.5) is light grey and the white knob sits on it at 1.6 to 2:1 (white 1.0 over a track of 0.5 white on a ground of sRGB 0.45 to 0.6). Rule, for `TreeToggle` when `widgetRenderingMode` is not `fullColor`:
+
+1. **On: track 0.3 in the accent group, knob 1.0 in the default group** (was 0.5). Knob against track: 3.7:1 on a ground of sRGB 0.30, 2.6:1 at 0.45, 5.3:1 at 0.15; at 0.5 it was 2.4, 2.0 and 3.1. The knob's trailing position still carries the state where the ground is bright (above about 0.40 the ratio is under 3:1; a limit, not a fail).
+2. **Off: unchanged** (track `base_fg` 0.24, knob 0.9, leading).
+3. **General form:** in these modes a control's moving part draws at 1.0 in the default group and its track at 0.3 or less in the accent group when on.
+4. **Button capsule label** (G1 stands, confirmed by the run): the label draws in the default group at 1.0 over a capsule in the accent group at 0.4. A capsule must never be 1.0 under a 1.0 label in these modes.
+5. No ring, no black ink: luminance layers only add in accented, so a dark outline would be re-tinted by the system.
+
+Line for Idris (board): TreeNodes.swift `TreeToggle` non-fullColor on-track opacity 0.5 -> 0.3; nothing else. Sheet: `render.py` already draws it (line 710), the drawn sheet (gallery 09, accented and clear panels) is a preview; the device pair is Idris's reshot after the change (wk-gallery-09-toggle-{on,off}-accented-systemMedium.png).
 {% endraw %}
 
 </div>

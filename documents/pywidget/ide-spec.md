@@ -18,7 +18,7 @@ Source of every picture: `draw_ide.py` in this folder (HTML/CSS/SVG rendered by 
 ## 0. What is drawn, and in which direction
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 0. What is drawn, and in which direction, scrolls sideways" style="--tw:930px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: 0. What is drawn, and in which direction, scrolls sideways" style="--tw:960px" markdown="1">
 
 | Screen | iPhone sheet (390 pt) | iPad sheet (1180 × 820 pt) |
 |---|---|---|
@@ -33,6 +33,7 @@ Source of every picture: `draw_ide.py` in this folder (HTML/CSS/SVG rendered by 
 | 9 Gallery (s5.9, `draw_gallery.py`) | `A-gallery-phone.png` (B: `B-gallery-phone.png`) | `A-gallery-ipad.png` |
 | 10 Settings (s5.10, `draw_settings.py`) | `A-settings-phone.png` (B: `B-settings-phone.png`) | `A-settings-ipad.png` |
 | 11 Projects as containers (s5.11, `draw_projects.py`) | `A-parts-phone.png` (B: `B-parts-phone.png`) | `A-parts-ipad.png` (B: `B-parts-ipad.png`) |
+| 12 Activity (s5.12, `draw_activity.py`) | `A-activity-phone.png` (B: `B-activity-phone.png`) | `A-activity-ipad.png` (B: `B-activity-ipad.png`) |
 
 </div>
 
@@ -74,7 +75,7 @@ Exempt by design: content behind a modal (`data-inactive`), disabled buttons, an
 | REPL bar | 48 min, pill, `>>>` in accent mono. When `input()` waits it becomes the input field: accent 1.5 border, an `input()` chip, the text, and a send button (accent circle). Return also sends. |
 | Output blocks | Run separator (caption, hairlines: "run 14 · 9:40"); stdout in console mono; tables and plots in cards (radius 14) with a caption label above ("console.table · 3 rows"). VoiceOver summaries as design-system-v0 s6. |
 | Traceback card | Exception type (headline, danger) and message (body). "Your code · innermost first": one row per user frame (function, file and line, the code line highlighted); the frame nearest the error carries a "Start here" tag and a 8 % danger tint. Library frames fold into one row ("1 frame in the standard library (mean, statistics.py)"), which expands on tap. Actions: Go to line N (primary), Copy, Share. Structured / Raw switch: raw is exactly what CPython printed, selectable, with bundle paths shortened to `‹stdlib›/` and user paths made project-relative. |
-| HUD | Floating capsule under the status bar, never blocks input. Progress: spinner + text + 4 pt bar. Done: tick + text, dismisses after 1.5 s (Reduce Motion: no slide). |
+| HUD | Floating capsule under the status bar, never blocks input. One call is one HUD: `hud(text, symbol=None, seconds=1.5)` (text, symbol `done`/`failed`/`info`/none, 0.5 to 10 s). Drawn: tick + text, dismisses by itself after `seconds` (Reduce Motion: no slide). **No progress bar and no update in place in v1** (T-0465, decided 2026-11-02: option (a)); a spinner-and-bar HUD is 1.1 and needs a wire change first, so it is not drawn. |
 | Prompts | System components with our tint: `.alert` (destructive button in danger), alerts with a text or number field (keyboard type matches: `.decimalPad` for decimals), `.confirmationDialog` for 2 to 6 choices, a sheet with `Form` (Cancel / Done) for forms, and a searchable `List` sheet for long or multiple picks. At AX sizes the system stacks alert buttons. iPad: forms and lists as centred form sheets (540 wide), alerts centred. The calls under each frame are illustrations; the `pywidget.ui` API is Idris's. |
 
 </div>
@@ -120,10 +121,34 @@ Maren, 2026-10-26. Under Runestone (ADR-004 option A). Where the section 5 fallb
 
 Six syntax tokens per set in tokens.json (`syntax.Quill.light`, `syntax.Lumen.dark`; HC sets derived by appearance.py; asset names `Syntax<Key>`): `gutterBackground` (= bg), `gutterHairline` (= `line.hairline`; HC `line.strong`), `currentLineNumber` (= text), `invisibles` (`line.strong` moved to 3:1), `markedText` (= `accent.soft`), `findMatch` (= selection). The current-line gutter band is `currentLine`. Checks: every text role 4.5:1 on `markedText` and `findMatch` (7:1 HC); `gutter` and `currentLineNumber` on `gutterBackground` and `currentLine` (4.5 / 7); invisibles 3:1 on bg, currentLine, selection (4.5 HC). The mockups' current-match outline (`m-cur`, 1.5 pt accent ring) has no Runestone counterpart **[recalled: `HighlightedRange` carries a colour and a corner radius only]**, so with `findMatch` = selection the current match looks like the others; a distinct tint is outside creative/approved.md item 2 and waits on C51 (ops/questions.md).
 
+### 3.3 Completion and lint states (T-1106, for T-0656; **DRAFT C51**, inside approved items)
+
+Message shape is `pywidget_tooling/editor.py` (T-1101): `complete()` returns `mode` "jedi" or "fallback" (+ `reason`), items with `label`, `kind`, `detail` always "" and `replace`; `diagnostics()` returns `code` (a pyflakes class name such as `UnusedImport`), `message` (pyflakes text), `severity`, sorted by line then column. **Two corrections to the s3 table above:** (1) the module never returns a flake8 code, so the label is the `code` as words, sentence case (`UnusedImport` becomes "Unused import"), not `F401 unused`; the earlier frames keep the old text until Idris builds from this section. (2) `detail` is "", so the popover's one-line doc has no source; it shows only in jedi mode if Idris adds a docstring call, and 1.0 ships without it.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 3.3 Completion and lint states (T-1106, for T-0656; DRAFT C51, inside approved…, scrolls sideways" style="--tw:851px" markdown="1">
+
+| State | Rule | Frame |
+|---|---|---|
+| Fallback, keywords and builtins | `mode` "fallback" (reasons budget, cold, unavailable, error: the user is never told which). Same popover, same rows, same 120 ms. The doc line is replaced by the foot `cmp.basic`. No spinner, no retry button, no banner. Next keystroke asks jedi again (cold ends once `warm()` returns). | s3.3 sheet "complete", frame 1 |
+| Fallback, module members | After `name.` where `name` is an imported module already loaded: its public names, kinds from the module (function, class, module, statement). Not loaded: no rows (next row). | frame 2 |
+| No completions | `items` empty: **nothing is drawn.** No empty popover, no "no results" row, no haptic, no VoiceOver announcement. An open popover closes when the last row goes. | frame 3 |
+| Two or more messages, one line | The label shows the first message by column, then a divider and `+N` (N is the rest). One gutter number in warning colour. Tap (44 pt target) opens a lens under the line: heading `lint.sheet.h`, then one row per message, `message` word for word. Tap again or edit the line closes it. Order is the module's. | "lint" sheet, frames 4, 5 |
+| Label on a line too long for the screen | Decided on save, never while typing: if the line's text width + 8 pt + the label's width is more than the visible code width, the label does not draw and its message sits in a lens under the line (the AX mechanism, one path). A line wider than the screen on its own scrolls as before; the squiggle stays, the lens is pinned to the left edge. | frame 6 |
+| Label at AX sizes, iPad | AX1 and up: no inline label at all. The lens replaces it, one row per message, `message` in full, wrapping; two or more adds the heading. Code soft-wraps flush left (s2); the lens margin follows the gutter. Portrait at AX3 is drawn; landscape follows the same rule. | "lint-ipad" sheet, frames 7, 8 |
+| VoiceOver | Label: `va.lint` (one message) or `va.lint.n`; hint `va.lint.hint`. Popover rows are the system's list; the foot reads `va.cmp.basic`. | text only |
+
+</div>
+
+
+Strings (`python3 pywidget/docs/design/ide/draw_complete.py --strings`; all **DRAFT**): `cmp.basic` "Basic suggestions"; `lint.more` "+{n}"; `lint.sheet.h` "{n} messages on line {line}"; `va.lint` "Warning, {label}, line {line}. {message}"; `va.lint.n` "{n} warnings, line {line}. {first}. Double-tap to read all."; `va.lint.hint` "Opens the messages for this line."; `va.cmp.basic` "Basic suggestions". C6 word check: none banned.
+
+Sheets: `A-` and `B-` `complete-phone.png`, `lint-phone.png`, `lint-ipad.png`; QA in `qa-complete.json` (8 frames per appearance, 0 clipped, 0 truncated, 0 overlap, 0 under 11 pt, 0 contrast fails, lowest 4.98:1). Source `draw_complete.py`. Not run: the sample messages were not compared to the module's output, because pyflakes does not import on the host Python (`--strings` prints the check as unchecked); Idris's UI test should assert the label text from a real `diagnostics()` answer.
+
 ## 4. Run states
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 4. Run states, scrolls sideways" style="--tw:894px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 4. Run states, scrolls sideways" style="--tw:894px" markdown="1">
 
 | State | Icon | Colour | Word | Detail |
 |---|---|---|---|---|
@@ -152,7 +177,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **7.1 What ships, by flag file.** One non-consumable (placeholder id `app.pywidget.pro`). Rows appear in this order, one per entitlement that is on; a row is on only if its feature ships in that build (2.5.19: nothing dormant, nothing "coming"). The headline follows the first row.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 5. Screen notes, scrolls sideways" style="--tw:1403px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 5. Screen notes, scrolls sideways" style="--tw:1403px" markdown="1">
 
    | Variant (flag file) | Rows | Headline | "Always free" box | Purchased line / button | Sheet frame |
    |---|---|---|---|---|---|
@@ -172,7 +197,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **7.2 Entry points and where each lands** (A/B-proentry-phone). Never a pop-up, never on launch, never after an error.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 5. Screen notes, scrolls sideways" style="--tw:1365px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 5. Screen notes, scrolls sideways" style="--tw:1365px" markdown="1">
 
    | Entry | Shown when | Tap lands on | After purchase | Close / back returns to |
    |---|---|---|---|---|
@@ -189,7 +214,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **7.3 Redline** (iPhone 390 pt; iPad form sheet 560 × 700). Spacing and type tokens from tokens.json; colours by role, never hex in Swift.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 5. Screen notes, scrolls sideways" style="--tw:1152px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 5. Screen notes, scrolls sideways" style="--tw:1152px" markdown="1">
 
    | Element | Size and position | Type | Colour tokens |
    |---|---|---|---|
@@ -213,7 +238,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **7.4 Purchase states** (sheet frame 7). The button and its line; StoreKit 2 names in brackets.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 5. Screen notes, scrolls sideways" data-n="1" style="--tw:1519px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 5. Screen notes, scrolls sideways" data-n="1" style="--tw:1519px" markdown="1">
 
    | # | State | Button | Line | Tappable | Price shown |
    |---|---|---|---|---|---|
@@ -242,7 +267,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **7.6 Strings.** Every string is **DRAFT C51**: the paywall's look and copy are outside approved item 2 and go to the Investors with these sheets (ops/questions.md). Generated by `draw_ide.py --pro-strings` from `PRO_STR`, the same table the frames draw from; if a string changes, regenerate this table.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 5. Screen notes, scrolls sideways" style="--tw:860px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: 5. Screen notes, scrolls sideways" style="--tw:860px" markdown="1">
 
    | ID | String | Where | C51 |
    |---|---|---|---|
@@ -320,7 +345,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **9.1 Tiers come from the flag file, never from code.** `pywidget/runtime/pro-flags.json` (T-0338), read through the contract's `resolve()`: a premade is locked when `premades.on && tier != "free" && !entitled` (contract s4 rule 5: an unlisted premade counts as Pro). Today's file: Free (5) countdown, sun, steps, distance, altitude; Pro (7) habits, shortcuts, storage, progress, quote, clocks, github, in premade.py order. No count is drawn anywhere; the sections list whatever the file says.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 10: 5. Screen notes, scrolls sideways" style="--tw:640px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 5. Screen notes, scrolls sideways" style="--tw:640px" markdown="1">
 
    | Flag file says | Gallery shows |
    |---|---|
@@ -345,7 +370,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **9.4 Tile states** (frame 5, "Tile states"; one at a time, first match wins):
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 5. Screen notes, scrolls sideways" data-n="1" style="--tw:1143px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 12: 5. Screen notes, scrolls sideways" data-n="1" style="--tw:1143px" markdown="1">
 
    | # | State | When | Well | Line / button |
    |---|---|---|---|---|
@@ -360,7 +385,11 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 </div>
 
 
+   **Rerun over a live tile (T-1135).** A rerun on return to the foreground (9.3) never leaves state 7 while an earlier good tree is kept: the well keeps the last good tree, no spinner, no `st.loading`, no caption change, and the new tree replaces it when the run lands. Row 1 (spinner) shows only when the tile has no good result this session. A rerun that fails or goes offline keeps the last good tree and says nothing; the tile is Failed or Offline only with no result kept. This is the caller's duty in `GalleryTileRule.tile(...)` (hook below): while a rerun is in flight or after it fails, pass the kept result as `.good`, never `.inFlight`, `.failed` or `.offline`. The rule needs no change: it takes `run` as given, and 9.3 already says a result kept from earlier in the session is passed as `.good`.
+
    "Sample data" is the honesty rule here: whenever the well shows anything other than the user's own run, the chip says so. The caption "Live preview" appears only in state 7.
+
+   **9.4 hook (T-1103, Pernille; for T-0191 and T-0901).** The gallery asks one pure function per tile and draws its answer; it decides no state itself: `GalleryTileRule.tile(locked: gates.isPremadeLocked(id), run:, grant:)` in `pywidget/ios/App/GalleryTileRule.swift` (in Core, `swift test`). `run` is `.notRun`, `.inFlight(milliseconds:)` (from when the tile asked, queue wait included), `.failed`, `.offline`, `.empty` or `.good`; `grant` is `.notNeeded`, `.notAsked`, `.granted` or `.declined`. It returns `state` (the seven rows above, numbered), `showsSpinner` and `actions` (`mayPreview`, `mayAdd`, `mayOpenSource`; the last two follow the lock alone, so a locked tile previews and has no add or `src`). Two things the caller owes: hold the run of a premade whose grant is not asked or is declined (pass `.notRun`), or its failure would hide the Allow or Settings button behind row 2; and pass a result kept from earlier in the session as `.good`, so `.offline` means none. With nothing matched (no run, or 300 ms or less in flight) the answer is Loading with `showsSpinner` false: the outline only. The file's header lists the six decisions.
 
    **9.5 Detail sheet** (frames 6-7; iPad: centred 540 form sheet, sheet frame 2). Phone: sheet, large detent. Header: name (title 3), tier chip, Done. Well 358 × 390 on phone, 508 × 390 on iPad: every claimed family at 100%. Family chips under it (wrap; selected = `text.primary` fill). "What it shows" and "Uses" (one line each, `about.*`), then the caption. Foot, pinned: free or entitled: `pro:e.add` (primary) and `src` (secondary); locked: `pro:e.unlock` with the lock glyph, which lands on the Pro screen as s5.7.2 entry 1 draws it (T-0333; not redrawn here). The state of 9.4 carries into the sheet unchanged.
 
@@ -382,7 +411,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **9.11 Strings** (`draw_gallery.py --strings`; `pro:` ids are s5.7's, read from `PRO_STR` so the two screens cannot drift). Every one is DRAFT C51: no copy guide is approved.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 12: 5. Screen notes, scrolls sideways" style="--tw:853px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 13: 5. Screen notes, scrolls sideways" style="--tw:853px" markdown="1">
 
    | ID | String | Where | C51 |
    |---|---|---|---|
@@ -410,8 +439,8 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | `st.perm.loc` | {name} needs your location to show yours. | tile line, permission not asked yet | DRAFT |
    | `st.allow.motion` | Allow Motion & Fitness | tile button; the tap raises the system prompt | DRAFT |
    | `st.allow.loc` | Allow Location | tile button; the tap raises the system prompt | DRAFT |
-   | `st.off.loc` | Location is off for pywidget. | tile line, permission declined (T-0063) | DRAFT |
-   | `st.off.motion` | Motion & Fitness is off for pywidget. | tile line, permission declined | DRAFT |
+   | `st.off.loc` | Location is off for PyWidget. | tile line, permission declined (T-0063) | DRAFT |
+   | `st.off.motion` | Motion & Fitness is off for PyWidget. | tile line, permission declined | DRAFT |
    | `st.settings` | Open Settings | tile button, declined | DRAFT |
    | `st.offline` | You’re offline. This shows sample data. | tile line, network premade with no network | DRAFT |
    | `st.empty` | No data yet, so this shows sample data. | tile line, nothing to show yet | DRAFT |
@@ -426,20 +455,20 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | `add.lock1` | Touch and hold the Lock Screen, then tap Customize. | add sheet step 1, Lock Screen families [recall] | DRAFT |
    | `add.lock2` | Tap the widget area and choose pywidget. | add sheet step 2, Lock Screen [recall] | DRAFT |
    | `add.lock3` | Tap the widget, then choose {name}. | add sheet step 3, Lock Screen | DRAFT |
-   | `add.foot` | iOS adds widgets from the Home Screen and Lock Screen; an app can’t place one. | add sheet footer | DRAFT |
+   | `add.foot` | iOS adds widgets from the Home Screen and Lock Screen; PyWidget can’t place one. | add sheet footer | DRAFT |
    | `pro:e.unlock` | Unlock with Pro | owned by s5.7 (T-0333); used here | DRAFT |
    | `pro:e.add` | Add widget | owned by s5.7 (T-0333); used here | DRAFT |
    | `pro:e.caption` | Live preview. Source opens with Pro. | owned by s5.7 (T-0333); used here | DRAFT |
    | `about.countdown` | Days to a date you choose. / The clock and the dates you save. | detail sheet, What it shows / Uses | DRAFT |
    | `about.sun` | Sunrise and sunset for a place you save. / A saved place; worked out on this iPhone. | detail sheet, What it shows / Uses | DRAFT |
    | `about.steps` | Today’s steps and floors. / Motion & Fitness, asked once. | detail sheet, What it shows / Uses | DRAFT |
-   | `about.distance` | How far you are from a saved place. / Your location while you use the app, asked once. | detail sheet, What it shows / Uses | DRAFT |
-   | `about.altitude` | Your altitude, with its accuracy. / Your location while you use the app, asked once. | detail sheet, What it shows / Uses | DRAFT |
-   | `about.habits` | A week of the habits you log. / What you log in the app. | detail sheet, What it shows / Uses | DRAFT |
+   | `about.distance` | How far you are from a saved place. / Your location while PyWidget is open, asked once. | detail sheet, What it shows / Uses | DRAFT |
+   | `about.altitude` | Your altitude, with its accuracy. / Your location while PyWidget is open, asked once. | detail sheet, What it shows / Uses | DRAFT |
+   | `about.habits` | A week of the habits you log. / What you log in PyWidget. | detail sheet, What it shows / Uses | DRAFT |
    | `about.shortcuts` | Your shortcuts, one tap away. / The shortcut names you pick. | detail sheet, What it shows / Uses | DRAFT |
-   | `about.storage` | Free space on this iPhone. / The storage figure iOS gives the app. | detail sheet, What it shows / Uses | DRAFT |
+   | `about.storage` | Free space on this iPhone. / The storage figure iOS gives PyWidget. | detail sheet, What it shows / Uses | DRAFT |
    | `about.progress` | How much of the day has gone. / The clock. | detail sheet, What it shows / Uses | DRAFT |
-   | `about.quote` | A public-domain quote each day. / A list inside the app. | detail sheet, What it shows / Uses | DRAFT |
+   | `about.quote` | A public-domain quote each day. / A list inside PyWidget. | detail sheet, What it shows / Uses | DRAFT |
    | `about.clocks` | The time in the places you pick. / The clock and time zones. | detail sheet, What it shows / Uses | DRAFT |
    | `about.github` | Stars, issues and checks for a repository. / GitHub, over the network; your token if you add one. | detail sheet, What it shows / Uses | DRAFT |
 
@@ -453,7 +482,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **10.1 Rows in v1.** Order top to bottom. A row exists only if its feature ships in that build (2.5.19).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 13: 5. Screen notes, scrolls sideways" style="--tw:1337px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 14: 5. Screen notes, scrolls sideways" style="--tw:1337px" markdown="1">
 
    | Group | Row (string id) | Shown when | Tap | Build line |
    |---|---|---|---|---|
@@ -478,7 +507,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **10.2 States.**
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 14: 5. Screen notes, scrolls sideways" style="--tw:640px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 15: 5. Screen notes, scrolls sideways" style="--tw:640px" markdown="1">
 
    | State | What shows |
    |---|---|
@@ -496,6 +525,8 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 </div>
 
 
+   **10.2 hook (T-1103, Pernille; for T-0657).** The Pro group asks `SettingsProRowRule.row(Facts(sellsPro: gates.sellsPro, entitlementRead:, entitled: store.isEntitled, purchasePending:, restore:))` in `pywidget/ios/App/SettingsProRowRule.swift` (in Core, `swift test`) and draws `showsProRow`, `showsRestore`, `detail` (string id `e.settings.off`, `e.settings.on`, `set.pro.pending`, or nil for an empty detail), `restoring` (disabled, spinner, `btn.restoring`) and `footer` (`ln.restored`, `ln.none`, `set.restore.failed`, or nil). The screen keeps three facts ProStore does not: `entitlementRead` (false until its first entitlement read returns), `purchasePending` (the Pro screen's last `PurchaseOutcome` was `.pending`), and `restore` (`.idle`, `.running`, `.finished(result)` with `RestoreOutcome` mapped case for case; set back to `.idle` when Settings is left). Entitled outranks pending; not read yet outranks both; a cancelled restore shows nothing; `unavailable` shows `set.restore.failed`. The Editor group, the URLs and Acknowledgements are not in it.
+
    **10.3 Editor theme picker** (frame 6; iPad frame 2). The free pair first (`set.theme.default`, swatch in `Quill`/`Lumen` for the frame's appearance), then `entitlements.themes.items` in file order by name (PROPOSAL-004 draft ids Ember, Fern, Graphite; only the approved ones appear). Rows 60 tall; swatch 120 wide in the theme's own colours (themes-pro/themes.json), hidden at AX sizes. Not entitled: each Pro row carries the Pro chip and pushes the Pro screen (s5.7.2 last row); back from a purchase returns to the picker and the next tap applies. Entitled: the chosen row has the check. The choice is a theme id in the app's `UserDefaults` (not the App Group; the widget extension draws no editor) and applies at once to open editors through the adapter (ADR-004 ruling 3). Footer `e.theme.foot` until Pro is active, then `set.theme.foot.on`.
 
    **10.4 Acknowledgements** (frames 7, 8, 10). Intro `set.ack.intro`, then the groups and rows of T-0345's resource file (group, name, version, licence name, full text) in its order; Swift hard-codes none of them. Row: name and version (body), licence name under it (footnote, secondary), chevron. Notice page: name (title3), licence name, then the full text in body type, `textSelection(.enabled)`, reflowed at every size; never monospaced, never truncated. Drawn from the logs today: Python (CPython 3.15.1 PSF-2.0; OpenSSL 3.5.9 Apache-2.0; xz 5.6.4 0BSD; zstd 1.5.7 BSD-3-Clause), Editor (Runestone, TreeSitterLanguages, Tree-sitter, tree-sitter-python, all MIT), Package installer (installer 0.7.0, MIT). **Found while drawing, for T-0345 (Odalys) and Idris:** (a) CPython and its static libraries are logged only in `log/software.md`, not `log/assets.md`, so a T-0345 script that reads assets.md rows would leave out the largest notice; Commandment 5 puts code libraries in assets.md, so I recommend Idris adds the rows there. (b) SQLite, libffi, bzip2, mpdecimal and zlib have no licence text read yet (software.md), and Tree-sitter's `lib/src/unicode/LICENSE` is unread (assets.md); each needs a row and its text before the release candidate. (c) Any package that ships under ADR-003 adds its row then.
@@ -512,7 +543,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **10.7 Strings.** Generated by `draw_settings.py --strings` from `SET_STR` and the s5.7 ids it reuses (one string per meaning across both screens). Working name "pywidget" as elsewhere; question item 8's answer is one find-and-replace.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 15: 5. Screen notes, scrolls sideways" style="--tw:874px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 16: 5. Screen notes, scrolls sideways" style="--tw:874px" markdown="1">
 
    | ID | String | Where | C51 |
    |---|---|---|---|
@@ -555,7 +586,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **11.1 The model.** A project is a folder, as T-0355 built it (`Documents/Scripts/<project>/`). Its files are its parts. There is no new record on disk: the code is the record, so Files, zip export and a rename stay as they are. A small reader, `ProjectParts`, sorts the files each time a list loads, using T-0748's Python scan. First match wins:
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 16: 5. Screen notes, scrolls sideways" style="--tw:724px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 17: 5. Screen notes, scrolls sideways" style="--tw:724px" markdown="1">
 
    | Part | Rule | Opens |
    |---|---|---|
@@ -574,7 +605,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **11.3 The Projects tab** (frames 1-5, 18). Large title, search over projects and files, the filter, then one list. The filter draws at 13 pt, the system control's size: at 15 pt "Lock Screen" does not fit a quarter of 358 pt. From AX1 it is a menu button. Newest change first; Pinned waits (it needs a record, and 1.0 has none).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 17: 5. Screen notes, scrolls sideways" style="--tw:739px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 18: 5. Screen notes, scrolls sideways" style="--tw:739px" markdown="1">
 
    | View | Shows | Row |
    |---|---|---|
@@ -633,7 +664,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **11.12 Size and date.** Read from main at c0b05d85 (`App/Projects`, `PyWidgetApp.swift`, `Tests`), not from a build and not measured. Idris has not checked it; his read is the first hour of the work. Yardstick: T-0355's 1,266 lines of `App/Projects` went from first commit to landing in about 2.4 days with two reviews (10-29 04:06 to 10-31 12:42).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 18: import shared, scrolls sideways" data-n="2" style="--tw:692px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 19: import shared, scrolls sideways" data-n="2" style="--tw:692px" markdown="1">
 
    | Work | Days | Note |
    |---|---|---|
@@ -658,7 +689,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **11.13 Strings** (`draw_projects.py --strings`). Every one is DRAFT C51. `menu.setup`, `menu.edit` and `menu.home` are home-setup.md's.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 19: import shared, scrolls sideways" style="--tw:839px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 20: import shared, scrolls sideways" style="--tw:839px" markdown="1">
 
    | ID | String (DRAFT) | Where | C51 |
    |---|---|---|---|
@@ -726,6 +757,191 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 
 
    **11.14 C51 and open.** The layout is inside approved item 2; the words go to the Investors with these sheets. *Open:* (a) T-0654 lets a window keep a deleted file's text as unsaved scratch. When the editor moves inside the Projects stack, back would lose that text; Idris, offer Save to `Recovered` there, and tell me if a screen is needed. (b) 11.5's check of an unclaimed size. (c) T-0790's answer sets whether 11.6's Shortcuts words ship. (d) A-projects-*, A-ipad-* and every sheet with a tab bar show the older filter or Docs until redrawn (owed, Maren).
+
+12. **Activity, one widget's runs.** **Strings DRAFT C51.** Maren, 2026-11-02 (T-1104), for Idris's T-0048 (freeze row F9). Reads: PROPOSAL-002 s5 Logs row and its chair note (2026-10-26 02:36), state-spec s2 (the badge slot), s3 and s3.1 (cards and taps), s3.3 "What the tap opens" (1.1), ADR-007 7.1, 7.2 and 7.5, bridge-contract s7 and s8. Layout and colour stay inside the approved tokens (creative/approved.md item 2); only the words wait on C51. Sheets: `A-activity-phone.png` (A Paper, light, 12 frames), `B-activity-phone.png` (B Studio, dark, the same 12), `A-activity-ipad.png`, `B-activity-ipad.png` (4 frames each), drawn by `draw_activity.py`, which imports draw_ide.py's frames and QA and changes nothing there. The failed run is real: host CPython 3.9.6 runs the sample `trip_card.py` at draw time against a stand-in for the runner, and the finished run is the same script on good data. **QA** (`qa-activity.json`): 32 frames, 0 issues: 0 clipped, 0 truncated, 0 text over text, 0 under 11 pt, 0 contrast fails; 814 text nodes checked, lowest 4.86:1, 0 skipped. Bytes 298,657 / 285,505 / 263,632 / 283,283, each under 300 KB. Word check over 71 strings: 0 hits for "app".
+
+   **12.1 What it is, and what it is not.** One screen per widget id: every run of that widget in the last 14 days, newest first, each with its output and traceback. v1 holds the list, the Failed filter, the run detail, Export through the share sheet, and Clear Activity. **Not in v1:** "Run as widget" and the entry stepper (1.1 with T-0192, Ines 2026-10-27 10:05, T-0441); the network-off switch (1.1, chair note 2026-10-26 02:36); interval statistics and trigger shares (1.1, PROPOSAL-002 s5); the taps-off banner and "Clear {n} failed runs" (1.1 with L5's `state.json`, 12.9). **Never:** a traceback, a message or any output on a widget. The app shows them here; a widget shows at most the type, the file and the line (state-spec s3). Rows come from widget runs only (`context: .widget`), from every trigger. A preview run writes no row (contract v5, s5.9.3). Neither does a console run of the same file (the console shows it) or a `getTimeline` row (L2 s3.3 `system`, estimator data for 1.1).
+
+   **12.2 Ways in, and the one route.**
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 21: import shared, scrolls sideways" style="--tw:888px" markdown="1">
+
+   | From | Opens on | How |
+   |---|---|---|
+   | Widget editor ⋯ menu, `menu.activity` (frame 1); a Widget row's long-press menu (s5.11.4) | All | push |
+   | Badge slot, medium and larger (state-spec s2) | Failed | `pywidget://open?widget=<id>&view=activity&show=failed` |
+   | Small widget with the badge, when the script set no `widgetURL` (s2) | Failed | the same |
+   | Too-big card (s3.1) | All | `pywidget://open?widget=<id>&view=activity` |
+   | Error card (s3) | not here: the editor at the line | `pywidget://open?widget=<id>&line=<n>`, unchanged |
+   | 1.1 taps off (s3.3) | Failed, with s3.3's banner | the badge route |
+
+</div>
+
+
+   **One route answers s3.1 and s3.3** ("must become one route, Idris names it"): `pywidget://open?widget=<id>&view=activity`, with an optional `show=failed`. Any other `show` value opens All. It is unsigned because it only opens a screen (L5 s7.2). The id is checked with `WidgetID.problem` before use (contract v4.2 Swift item 4). At HEAD there is no `onOpenURL` anywhere in `App/` (grep, 2026-11-02), so T-0048 adds the handler for both routes. The stack is Projects → project → widget editor → Activity, so Back always goes to the widget's editor, and a link from a cold launch builds the same path. A deleted or renamed widget still opens Activity on the rows kept under its id, titled with the id: `act.open` hides and the strip adds `st.gone`. An id with no rows opens the empty state.
+
+   **12.3 iPhone layout** (frames 2, 3, 6-8). A pushed screen. Nav: back with the widget's file name (the system truncates it if it must), the title `nav.title`, and a share button (`nav.export`) at the trailing end, hidden when there are no rows. Below that, one scroll view with 16 pt margins, top to bottom:
+   1. **Status strip** (the s3 component), read from `status.json`: `st.fail` in `status.danger` with `failing_since`, type and line; `st.ok` in `status.success` with the last run's time; `st.big` in `status.warning`; `st.none` in `text.secondary`. It says what the widget shows now, so it matches the badge.
+   2. **Primary button**, only while failing: `act.open`, which opens the editor at that line by the error card's route. In the too-big state it is `act.open.big`. One primary per screen.
+   3. **Filter**: a segmented control, `f.all` and `f.failed` followed by the count of failed rows in 14 days (no count at 0). Not drawn in the empty state. The badge route selects Failed.
+   4. **The 14-day note** `note` (footnote, secondary). From AX1 it moves below Clear Activity, so the rows come sooner.
+   5. **Day groups**: an eyebrow (`day.today`, `day.yday`, then the locale's short weekday and date, e.g. "Fri, Oct 30") over a card of rows, newest first.
+   6. **Clear Activity** (`clear`, `status.danger`), in its own card under the last group, hidden with no rows. It asks first (frame 10, `clear.t`, `clear.m`, `clear.ok` destructive, `clear.no`). It deletes this widget's rows and their output, nothing else: `status.json`, `tree.json` and the badge stay, and the next run decides the badge.
+
+   **Row:** at least 60 tall. A 20 pt glyph at the leading edge, 14 pt from the top. Line 1: the reason (body) and, trailing on the same baseline, the time (subheadline, secondary, tabular). Line 2 (footnote, secondary): trigger · duration. The duration is left out where none was measured (`deferred`, `busy`, `killed`). Then a chevron. A tap opens the run detail. No swipe-to-delete in v1: Clear is the one removal (the smallest version). **<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">Lane</span>:** a row whose `lane` is `widget` carries the chip `lane.widget` after line 2. The extension lane flag is off in every Release build (`LaneGuard.swift:16`), so in v1 no row ever shows it and no app-lane row carries a chip, because the app is the default. The detail's "Ran in" fact always names the lane.
+
+   **12.4 Outcomes.** Glyph, reason and filter for each value `status.json` and the row can hold (ADR-007 7.2, plus `busy` from `WidgetRunOutcome.Kind` at HEAD):
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 22: import shared, scrolls sideways" data-n="4" style="--tw:1125px" markdown="1">
+
+   | Outcome | Glyph and colour | Row reason | In Failed | Detail adds |
+   |---|---|---|---|---|
+   | `ok` | `checkmark.circle.fill`, `status.success` | `o.ok` | no | output |
+   | `error` | `xmark.circle.fill`, `status.danger` | `o.error` with the bridge's type (`TreeTooLarge`, `WidgetChoiceError`, `SyntaxError`, `SystemExit` pass through), or Swift's own: `NoTree` → `o.notree`, `schema_error` → `o.schema`, `InternalError` → `o.internal` | yes | output, traceback card (no frames for `SyntaxError`: the s3 caret rule) |
+   | `timeout` | as error | `o.timeout` | yes | the frame executing at the stop (7.3) |
+   | `stuck` | as error | `o.stuck` | yes | the frame, if known |
+   | `killed` | as error | `o.killed` | yes | `d.killed.bg` with `backgrounded`, else `d.killed.mem` |
+   | `tree_too_large` | s3.1's glyph, `status.warning` | `o.big` | yes | `d.big`; the output of the run that made the tree |
+   | `expired` | `clock`, `text.secondary` | `o.expired` | no | output so far |
+   | `deferred`, `busy` | `clock`, `text.secondary` | `o.waited` | no | nothing ran |
+   | `oom_guard` | `clock`, `text.secondary` | `o.lowmem` | no | nothing ran |
+   | `entitlement_lost` | no row: not a run | | | |
+
+</div>
+
+
+   **The Failed set is exactly ADR-007 7.1 rows 3 and 4** (error card and badge), so the list the badge opens always holds the run that set it. Not-failed rows sit in grey and never turn the strip red.
+
+   **12.5 Run detail** (frames 4, 5, 12; the iPad's right column). Nav title `d.title` (e.g. "Today, 4:40 PM"). Its share button exports this one run in 12.7's format, as `trip_card-run-2026-11-02-1640.txt`. Header: a 28 pt glyph, the reason (title 3), then `d.failed` · trigger for a failed run, or the trigger alone. **Facts** card: `d.by`, `d.took`, `d.where` (`[appname]`, or `d.where.w` for the extension lane), `d.mem` (hidden when the peak is unknown). At AX sizes each fact stacks label over value. **Output** (`d.out`): console mono on `bg.console`, stdout and stderr in write order. stderr is not tinted, because the traceback has its own card. The traceback's own text is left out here, since the card shows it. Empty: `d.noout`; cut: `d.cut` as the first line; older than the newest 100: `d.nokept`. **Traceback** (`d.tb`): the s3 Traceback card, built from the same view the console uses: type, message, `d.yours`, `d.start` on the innermost user frame, library frames folded into `d.lib`, Structured / Raw. Then `d.goto` (primary) and `d.copy` (the traceback text). If the file's modification date is later than the run's `ts`, Go to Line still jumps to the line but shows `d.changed` and draws no column underline (contract s8 "Stale positions"; `run_id` cannot be compared across launches, 12.8).
+
+   **12.6 iPad** (iPad sheet). Activity takes the content column in place of the editor and its right pane. Landscape: the list is 400 pt wide with a hairline on its right, and the selected run fills the rest (frame 1). The newest row in the current filter is selected on open, and the selected row is `accent.soft`. The nav is 50 tall with 20 pt margins. Export is a popover on the share button (frame 2). The empty state is centred, 520 pt wide (frame 3). Portrait and Split View narrower than 700 pt: one column, at most 680 pt, centred, where a row pushes the run as on iPhone (frame 4, AX5). Back returns to the editor with its pane as it was.
+
+   **12.7 Type, numbers, Export.**
+   - Tabular figures on times, durations and counts. A number never breaks from its unit or its word ("0.05 s", "line 13", "3:58 PM" take a no-break space; draw_activity.py's `keep()`).
+   - Times use the locale's short time style. Days: Today, Yesterday, then the short weekday and date. Durations: two decimals under 1 s, one decimal from 1 s. Memory: whole MB.
+   - **Export is the share sheet and nothing else** (PROPOSAL-002 s5): `ShareLink`/`UIActivityViewController` with one file written to the temporary folder and deleted when the sheet closes. There is no mail composer, no upload and no "send to developer". Nothing leaves the device without that tap, which matches the privacy label draft (no data collected). The file is plain UTF-8 text named `x.file` (`trip_card-activity-2026-11-02.txt`, or `trip_card-failed-runs-2026-11-02.txt` with Failed on). It holds the runs the list shows, newest first. First line: `[appname] activity: <id> (<project>)`. Second line: the export time, the run count and the date range, with the device's UTC offset. Then one block per run: an ISO time with offset, outcome, reason, trigger, lane, duration and peak MB on one line, then `--- output` and the kept output, then `--- traceback` and the error's `text` (contract s8, bundle paths already shortened). A row whose output is gone says so in one line.
+
+   **12.8 Data: what the screen reads, and what HEAD holds** (a6b390ba..b11fe55b, read 2026-11-02). **Neither file exists yet.** `status.json` is named only in comments (`RunResultSink.swift:9`, `:140`; project-save.md, opening list), and `log/runs.jsonl` "when they exist" (`LaneGuard.swift:203`). No product screen starts a `.widget` run yet (`WidgetRunView.swift:10`), T2 is not built (ADR-007 5.1), and nothing keeps a run's output after the console shows it. So this table is the build list, not a reading of files that exist:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 23: import shared, scrolls sideways" style="--tw:846px" markdown="1">
+
+   | Screen field | File and key | At HEAD |
+   |---|---|---|
+   | strip state, failing since | `widgets/<id>/status.json`: `last_outcome`, `failing_since`, `error_type`, `line`, `ts` | not written; T-0866 writes the smallest version (project-save.md s3 item 1), T-0198 adds `expired_runs` |
+   | time | row `ts` in `log/widgets/<id>/runs.jsonl` (one file per widget; 7.5) | no row writer |
+   | outcome | row `outcome`, 7.2's words | `WidgetRunOutcome.Kind`: `ok`, `error`, `timeout`, `stuck`, `busy`; nothing yet produces `killed`, `expired`, `deferred`, `oom_guard` or `tree_too_large` |
+   | reason type | row `error_type` (**new**; 7.5 has none) | `WidgetRunOutcome.errorType` exists |
+   | line, file | row `line`, `file` (**new**): the innermost `user` frame of the contract s8 `error`, or the `syntax` position | in `bridge-outcome/1`; `WidgetRunOutcome` carries no line |
+   | trigger | row `trigger`: L2's values plus **`editor_save`** (new; a save is <span title="The rule that decides whether an idea gets two blind graders now, waits (park), or stops.">T1</span> but reads differently) | no trigger recorded |
+   | lane | row `lane`, `app` or `widget` (**new**) | flag off in Release |
+   | duration | row `duration_ms` from `duration_s` | in `bridge-outcome/1` |
+   | memory peak | row `peak_mb` (7.5) | not sampled |
+   | killed copy | row `backgrounded`, true or absent (**new**) | in the crash marker (contract s7) |
+   | output, traceback | `log/widgets/<id>/out/<row>.json` (**new**; ADR-007 chair line 2026-11-02 17:15): `output` as `[stream, text]` pairs, the last 16 KiB cut at a line boundary, with `cut: true`; `error` as the bridge sent it (message at most 4 KiB, at most 100 frames, `text` for Copy and Export); the whole file at most 24 KiB; none for `deferred`, `busy` or `oom_guard` | stdout and stderr records exist during the run only |
+
+</div>
+
+
+   **Row key.** `run_id` is Swift's increasing counter (contract s3), and the contract does not say it survives a relaunch. So each row carries `row`, a UUID, and the detail file is named by it. If Idris makes `run_id` unique across launches, key by that and drop `row`. **Retention:** rows older than 14 × 24 h, and their detail files, are deleted at launch and before each append. Details are kept for the newest 100 rows per widget and older ones are deleted (the row stays, with `d.nokept`). If `log/` passes 24 MiB, the oldest detail files across all widgets are deleted at launch until it is under, rows stay, and those rows also say `d.nokept`. `d.nokept` reads "Only recent runs keep it", true for both the 100-row cut and the 24 MiB trim. Worst case is about 3.4 MiB per widget. A widget's row, its detail file and its `status.json` are written in that order in one hold of that widget's `state.lock` (LaneGuard.swift:203's rule); `runs.jsonl` is per widget because one shared file would sit under many locks. Console runs write rows to `log/console.jsonl` and are **not listed in Activity**. **Ruled (Ines, ADR-007 chair line 2026-11-02 17:15, T-1138):** yes; the new keys and the per-widget log layout are accepted, Swift writes every key, and the detail kept is what this table says. The refusal path is gone, and the screen may claim each run's stdout, stderr and traceback for 14 days.
+
+   **12.9 1.1, so the build leaves room.** When L5 ships, s3.3's banner sits above the strip, and its "Clear {n} failed runs" replaces `act.open` as the second action under it. Its rows read `failed.jsonl`. The route and the Failed filter do not change.
+
+   **12.10 Accessibility.**
+   - **VoiceOver order:** Back, title, Export; the strip as one element ("Failing since 3:58 PM. ValueError, line 13."); the primary button; the filter (the system segmented control); the 14-day note; then for each day its header (trait `.isHeader`, so the rotor's Headings jumps by day) and its rows; Clear Activity last.
+   - **A row is one element.** Label: "4:40 PM. Failed. ValueError, line 13." for a failed run, "Finished" or the not-failed reason otherwise. Value: trigger and duration ("Background refresh, 0.06 seconds"). Hint: "Opens the run." The glyph is hidden; its meaning is in the label. The lane chip, when shown, joins the value.
+   - **Detail order:** the header, each fact as one element (label and value), the output as one text view the reader can move through by line, then the traceback card in s3's order and its two buttons.
+   - **Dynamic Type to AX5** (frames 11 and 12, iPad frame 4): from AX1 the filter is a menu button (`f.menu`), a row stacks time over reason over trigger and duration, glyphs grow with the text, buttons wrap and go full width, facts stack, and console text clamps at 32 pt (s2). The nav title and the share button do not scale; they use the Large Content Viewer.
+   - **Colour:** no state is told by colour alone. Glyph shape and the reason word carry it, and a failed row reads apart from a waited one in grey. Contrast is measured in QA above; Increase Contrast uses the tokens' 7:1 pairs.
+   - **Motion:** only the system push and sheet, so Reduce Motion needs nothing of ours.
+
+   **12.11 What T-0048 shows in the Simulator** (its done condition, for this screen): iPhone and iPad, light and dark: All while failing; Failed from the badge route; a failed run's detail; a finished run with output; working; Failed with none; no runs; the share sheet; the Clear alert; AX5 list and detail. Plus one row of each outcome in 12.4 that a fixture can make (`ok`, `error`, `timeout`, `NoTree`, `deferred` at least).
+
+   **12.12 Strings** (from `draw_activity.py --strings`; `[appname]` is `CFBundleDisplayName`, read at run time):
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 24: import shared, scrolls sideways" style="--tw:839px" markdown="1">
+
+   | ID | String (DRAFT) | Where | C51 |
+   |---|---|---|---|
+   | `nav.title` | Activity | nav title; the back button carries the widget's file name | DRAFT |
+   | `nav.export` | Export | accessibility label of the share button, top right; opens the share sheet | DRAFT |
+   | `menu.activity` | Activity | row in the widget editor's ⋯ menu and in a Widget row's long-press menu | DRAFT |
+   | `note` | Runs from the last 14 days. Kept on this [device], never sent anywhere. | under the filter; [device] is iPhone or iPad | DRAFT |
+   | `f.all` | All | filter | DRAFT |
+   | `f.failed` | Failed | filter; the count follows in the segment, e.g. Failed 5 | DRAFT |
+   | `f.menu` | Showing: [view] | the filter at AX1 and up (menu button), as s5.11's f.menu | DRAFT |
+   | `st.ok` | Working | status strip word; detail st.ok.d | DRAFT |
+   | `st.ok.d` | Last run [time] | status strip detail | DRAFT |
+   | `st.fail` | Failing | status strip word, status.danger; detail st.fail.d | DRAFT |
+   | `st.fail.d` | since [time] · [Error], line [n] | status strip detail; [time] is failing_since | DRAFT |
+   | `st.big` | Too big to draw | status strip word, status.warning (state-spec s3.1) | DRAFT |
+   | `st.big.d` | The script ran fine · [time] | status strip detail | DRAFT |
+   | `st.none` | Not run yet | status strip word, text.secondary | DRAFT |
+   | `st.gone` | File not found | appended to the strip detail when the widget's file is gone; the primary button hides | DRAFT |
+   | `act.open` | Open [file] at Line [n] | primary button while failing (one primary per screen) | DRAFT |
+   | `act.open.big` | Open [file] | primary button in the too-big state; there is no line | DRAFT |
+   | `day.today` | Today | day header | DRAFT |
+   | `day.yday` | Yesterday | day header; older days are the short date, e.g. Fri, Oct 30 | DRAFT |
+   | `o.ok` | Finished | row reason, outcome ok | DRAFT |
+   | `o.error` | [Error], line [n] | row reason, outcome error (no line known: [Error] alone) | DRAFT |
+   | `o.notree` | No widget drawn | row reason, error type NoTree (the script ended or exited 0 before it built its widget) | DRAFT |
+   | `o.schema` | View could not be read | row reason, error type schema_error (the tree failed the schema) | DRAFT |
+   | `o.internal` | Internal error | row reason, error type InternalError | DRAFT |
+   | `o.timeout` | Took too long | row reason, outcome timeout | DRAFT |
+   | `o.stuck` | Would not stop | row reason, outcome stuck | DRAFT |
+   | `o.killed` | Closed while it ran | row reason, outcome killed | DRAFT |
+   | `o.big` | Too big to draw | row reason, tree_too_large | DRAFT |
+   | `o.expired` | Cut short by iOS | row reason, outcome expired (not a failure) | DRAFT |
+   | `o.waited` | Waited for the next run | row reason, outcome deferred or busy (not a failure) | DRAFT |
+   | `o.lowmem` | Skipped: memory was low | row reason, outcome oom_guard (not a failure) | DRAFT |
+   | `t.open` | When [appname] opened | trigger app_foreground (T1) | DRAFT |
+   | `t.save` | After a save | trigger editor_save (T1 from the editor's save) | DRAFT |
+   | `t.bg` | Background refresh | trigger bg_refresh (T2) | DRAFT |
+   | `t.sc` | From Shortcuts | trigger shortcut (T3 Refresh Widgets, T4 Run Script) | DRAFT |
+   | `lane.widget` | In widget | chip on a row that ran in the extension lane; only when the lane flag is on | DRAFT |
+   | `clear` | Clear Activity | last row of the list, status.danger | DRAFT |
+   | `clear.t` | Clear Activity? | alert title | DRAFT |
+   | `clear.m` | Every run of [widget] and its output is deleted from this [device]. The widget keeps what it shows. | alert message | DRAFT |
+   | `clear.ok` | Clear | alert, destructive | DRAFT |
+   | `clear.no` | Cancel | alert | DRAFT |
+   | `empty.t` | No runs yet | empty state title (All) | DRAFT |
+   | `empty.b` | Each time [widget] runs, it shows here: when [appname] opens, after a save, when iOS refreshes it, or from Shortcuts. | empty state body; drop 'when iOS refreshes it' from any build without T2 | DRAFT |
+   | `emptyf.t` | No failed runs | empty state title (Failed) | DRAFT |
+   | `emptyf.b` | None in the last 14 days. | empty state body (Failed) | DRAFT |
+   | `d.killed.bg` | iOS closed [appname] in the background. | run detail line under the header, killed with backgrounded (ADR-007 7.2 copy) | DRAFT |
+   | `d.killed.mem` | Closed while it ran, possibly out of memory. | run detail line, killed without backgrounded (ADR-007 7.2 copy) | DRAFT |
+   | `d.big` | Its view is more than a widget can hold in memory. The script ran fine. | run detail line, tree_too_large (state-spec s3.1) | DRAFT |
+   | `d.changed` | This file changed since the run. | shown with Go to Line when the file is newer than the run (contract s8) | DRAFT |
+   | `d.title` | [day], [time] | run detail nav title, e.g. Today, 4:40 PM | DRAFT |
+   | `d.failed` | Failed | run detail, word under the reason for a failed run | DRAFT |
+   | `d.by` | Started by | run detail fact | DRAFT |
+   | `d.took` | Took | run detail fact; seconds, two decimals under 1 s, one above | DRAFT |
+   | `d.where` | Ran in | run detail fact: [appname], or The widget (lane) | DRAFT |
+   | `d.where.w` | The widget | value of Ran in for an extension-lane run | DRAFT |
+   | `d.mem` | Memory peak | run detail fact, MB; hidden when unknown | DRAFT |
+   | `d.out` | Output | run detail section; stdout and stderr in write order | DRAFT |
+   | `d.noout` | Nothing was printed. | run detail, Output section, empty | DRAFT |
+   | `d.cut` | Output cut to its last 16 KB. | run detail, first line of a cut output | DRAFT |
+   | `d.nokept` | Output no longer kept. Only recent runs keep it. | run detail, Output section, for an older row | DRAFT |
+   | `d.tb` | Traceback | run detail section | DRAFT |
+   | `d.yours` | Your code · innermost first | traceback card label, as the s3 traceback card | DRAFT |
+   | `d.lib` | [n] frames in the standard library | folded row; expands on tap | DRAFT |
+   | `d.start` | Start here | tag on the innermost user frame | DRAFT |
+   | `d.goto` | Go to Line [n] | run detail primary | DRAFT |
+   | `d.copy` | Copy | run detail; copies the traceback text | DRAFT |
+   | `x.file` | [widget]-activity-[date].txt | export file name; with Failed on: [widget]-failed-runs-[date].txt | DRAFT |
+   | `x.run` | [widget]-run-[date]-[hhmm].txt | file name when one run is exported from its detail | DRAFT |
+   | `a11y.row` | [time]. [state]. [reason]. | VoiceOver label of a row; [state] is Failed for a failed run, left out otherwise | DRAFT |
+   | `a11y.hint` | Opens the run. | VoiceOver hint of a row | DRAFT |
+   | `x.kind` | Plain Text · [size] | share sheet header line (system) | DRAFT |
+
+</div>
+
+
+   **12.13 C51 and open.** The layout is inside approved item 2; the words go to the Investors with these sheets. *Open:* (a) Closed: Ines ruled yes on the ADR-007 7.5 chair line, 2026-11-02 17:15 (T-1138; per-widget `log/widgets/<id>/`). (b) Idris: glyph names in 12.4 are recalled, confirm them; the too-big glyph is drawn as a triangle stand-in and ships as s3.1's. (c) Closed: rows are keyed by `row`; `run_id` stays a per-launch counter and is never compared across launches (same chair line). (d) `empty.b` names background refresh; a build without T2 drops that clause.
 
 ## 6. Open
 

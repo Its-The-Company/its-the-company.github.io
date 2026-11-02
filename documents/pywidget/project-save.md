@@ -119,6 +119,25 @@ The case passes only after T-0866 lands. s5.11.12 said 1.0 day. s3 adds about 0.
 ## 7. A refused save and the copy (T-0355 notes, T-0666 L3)
 
 When a save is refused (autosave paused after "Not Now", or another window saved the file meanwhile) and the scene leaves the foreground, the text goes to a copy (`main (conflict).py`) and the editor opens that copy. "Inactive" counts as leaving: pulling down Control Center or the notification list does it. So "Not Now" lasts only until the next glance at Control Center, and a tester will say "my file changed name". That is intended, the safe side: iOS may end the app after the scene leaves the foreground without another call, and the text must be on disk by then. The console says where the text went. The next launch names the copy only while it exists: a rename or delete of the copy, or of its project, in any window updates or drops that note (T-0668, L1).
+
+### 7.1 Wording fix (T-1115, T-0996 L1; strings DRAFT C51)
+
+Ruling s5 keeps "app" out of user-facing text. The next-launch line said "when the app left the screen". And "Autosave is paused until you save a copy." followed by "Saved your text as ..." read as a contradiction: the second line never said the pause was over. Plain words, 0 hits for "app" in all four strings; "PyWidget" passes the word check (it is the product's name, as in home-setup.md s2).
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 7.1 Wording fix (T-1115, T-0996 L1; strings DRAFT C51), scrolls sideways" style="--tw:930px" markdown="1">
+
+| Where | Old | New |
+|---|---|---|
+| `recoveredHead` | A save was refused when the app left the screen, so your text was saved as  | A save was refused when you left PyWidget, so your text was saved as  |
+| `recoveredLine` (head, then `folder/file`) | ... (open it from Projects). | unchanged tail: ... (open it from Projects). |
+| `autosavePaused` | Autosave is paused until you save a copy. | Autosave is paused. Save a copy to turn it back on. |
+| `saveCopy()` say line | Saved your text as p/main (conflict).py. | Saved your text as p/main (conflict).py. Autosave is on again. |
+
+</div>
+
+
+The last row keeps the old text as its prefix, so ProjectStoreTests line 439 (`contains`) still passes. Notes stored by an older build keep the old head and will not follow a later move (Pernille, T-0996); harmless, one launch.
 {% endraw %}
 
 </div>

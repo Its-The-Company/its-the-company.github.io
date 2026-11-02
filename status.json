@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-02T02:33:24.610467+00:00",
+ "at": "2026-11-02T02:37:12.580427+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null
+  "active": true,
+  "kind": "inbox",
+  "started": "2026-11-01T21:36:48-05:00"
  },
  "workers": [],
  "who": "",
@@ -17,15 +17,15 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 14.0,
-   "resets_at": "2026-11-02T03:40:00.456120+00:00",
+   "pct": 15.0,
+   "resets_at": "2026-11-02T03:39:59.706958+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 86.0,
+   "left": 85.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 16.0,
-   "resets_at": "2026-11-08T07:00:00.456146+00:00",
+   "resets_at": "2026-11-08T06:59:59.706980+00:00",
    "used_words": "of your weekly allowance used",
    "left": 84.0,
    "left_words": "of your weekly allowance left"
@@ -35,11 +35,11 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-01T21:25:24.130243-05:00"
+  "read_at": "2026-11-01T21:36:47.489294-05:00"
  },
  "ui": {
-  "week_pct": 0.105,
-  "five_hour_pct": 0.465,
+  "week_pct": 0.118,
+  "five_hour_pct": 0.544,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -50,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-01T21:48:24-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 0.68,
   "usage_pct": 4.1,
   "work_pct": 42.9,
-  "read_at": "2026-11-02T02:35:00+00:00",
+  "read_at": "2026-11-02T02:39:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -65,15 +65,6 @@
     "t": "From Odalys's T-0549 re-review",
     "at": "2026-11-01T21:26:52-05:00",
     "n": "Evan"
-   },
-   {
-    "lane": "b",
-    "task": "T-0537",
-    "w": "Idris",
-    "k": "test",
-    "t": "From Pernille's T-0536 review of 39528f1f",
-    "at": "2026-11-01T21:25:22-05:00",
-    "n": "Jeremy"
    }
   ]
  },
@@ -87,9 +78,9 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-01T21:35:00-05:00"
+  "at": "2026-11-01T21:39:00-05:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "lanes": [
   {
    "name": "Odalys",
@@ -167,6 +158,13 @@
    {
     "w": "Odalys",
     "k": "tools",
+    "t": "Personal lanes may use Xcode and do...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
     "t": "Lanes take P0/P1 lines first and more...",
     "s": "next",
     "o": "c"
@@ -205,13 +203,6 @@
     "t": "L9 device probe once a device or Simulator...",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Unassigned, P2, person's browser checks on...",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [],
@@ -223,23 +214,10 @@
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6567666149",
-   "state": "received",
-   "position": 1,
-   "eta": "2026-11-01T21:48:24-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Lanes should be allowed to use Xcode..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "inbox_title",
   "task_title",
   "task_open",
   "lane_task",

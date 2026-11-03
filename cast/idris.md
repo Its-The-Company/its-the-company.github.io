@@ -26,6 +26,7 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
+| Nov 2, 21:24 | <span class="tag t-mistake">mistake</span> Idris found his own T-1148 commit 186e9027 left PyWidgetTests' testNoPreviewPathBypassesTheKey red on main: the new Shared/WidgetStatus.swift names status.json and the scan's list was not updated; he ran only host tests then. Found while landing T-1050; needs its own fix line. |  |
 | Nov 2, 17:24 | <span class="tag t-finding">finding</span> T-1137: LaneGuardTests signal 6 was PromptsCodecTests (uncommitted, main checkout) aborting on as!; buffered output misplaced it. Side finding: T-1121's scratch mutation run lacks pywidget/tests/fixtures, so WidgetIDTests crashes every run and mutation_check counts each mutant KILLED. |  |
 | Nov 2, 17:17 | <span class="tag t-test">test</span> T-1072: WidgetKit check drew Needs Pro because the check never held Pro; tests A and D now buy it in an SKTestSession; progress reads 14 hr, 19 min left |  |
 | Nov 2, 13:57 | <span class="tag t-incident">incident</span> T-1051: every full Xcode run has been red since 2026-11-02 00:00: a progress test reads the wall clock against a fixed fixture date. My 1.7 GB worktree took the disk to 9.3 GB and my hand-run gate check wrote the low note, so the gate stays closed until 20 GB. Fix on <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/a at 8d14163f, not yet ru |  |
@@ -225,7 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 24, 07:58 | <span class="tag t-research">research</span> H92 measuring tools: 20 handheld tools screened against iPhone sensors; 0 at B+, best D+ spoke tension by ear; the three that pass are microphone pitch tools that already drew 2026 entrants |  |
 | Oct 24, 05:42 | <span class="tag t-research">research</span> H73 walk time: D+, 35 asks in four venues, both Day 3 gates fail (17 of 29 settled free; 0.34-0.43 builders per asker); TrailTime already plans with own measured pace; HealthKit route yes; own-fit spike reads 2-5% short, cause not found |  |
 | Oct 24, 05:04 | <span class="tag t-research">research</span> H72 which show is at my level: 0 at B+, best D+ ranker; 35 level-named asks/yr in 5 subs, 0 of 30 bodies give a word count; free-answer and builder gates fail; Migaku already covers 11 languages; no subtitle source clears terms for a catalogue |  |
-| Oct 24, 03:30 | <span class="tag t-research">research</span> H62 attic, insulation and ventilation: 1,318 asks a year hand-coded across r/Insulation, r/Roofing, r/HomeImprovement; 120-body sample: 15% need a calculation (all arithmetic: 1/150 vent rule, depth x R, dew point), 30% a building-science rule, 19% a photo judgement. Best C- attic check-up; free man |  |
 
 ## Diaries, meetings, and conversations
 
@@ -250,7 +250,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0353 done (abe146d0): notif/keychain wire waits on a Python half; review open.
 - T-0565 slice 1 2026-10-28 (5ac90a05): Console uses ConsoleEditor (Runestone). Review T-0584 open.
 - T-0586 done 2026-10-28 (158ac8da): engine after FirstFrame, first open worst 195.2 ms; review T-0600. A8s waits T-0287.
-- T-1050 2026-11-02: T-0642 copied onto main 10db8d59 as idris/t1050-land 2fd4070c (T-1050-idris/wt, vendored, xcodeproj made); branch suites green. Left: PyWidgetTests + UI there when disk gate (20 GB) opens, then copy to main, note T-1116. T-1038 dd-* deleted.
+- T-1050 2026-11-02 21:30: recopied onto 59ebf61d as idris/t1050-land2 c068ab1e (T-1050-idris/wt); host green, unit reds all main's or /tmp (board note). Left: UI tests, land, runner gate + first MacBook job. Fix line needed: my 186e9027 left testNoPreviewPathBypassesTheKey red.
+- Lesson: source-scan tests (WidgetKindsTests.extensionSources) break in /tmp scratch (#filePath /tmp vs /private/tmp); baseline main in the same folder before blaming a branch. Personal lanes share the xc lock: budget the wait.
 - T-1148 done 2026-11-02 (186e9027): WidgetStatus in Shared, 26/26 mutants; review T-1155. Open: run_id per-launch can collide in expired_runs (noted on T-1140).
 - T-1068/T-1072 done 2026-11-02 (10db8d59): WK check buys Pro in SKTestSession; progress read. Review open. 17e's old Pro unexplained.
 

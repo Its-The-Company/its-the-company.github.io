@@ -8,7 +8,7 @@ function at(e, k, v) { e.setAttribute(k, v); return e; }
 function cap(s) { s = String(s || ''); return s.charAt(0).toUpperCase() + s.slice(1); }
 function Q(s) { return D.querySelector(s); }
 function QA(s) { return [].slice.call(D.querySelectorAll(s)); }
-function et(t, wk) { var d = new Date(t); return isNaN(d) ? '' : d.toLocaleString('en-US', { timeZone: 'America/New_York', weekday: wk ? 'short' : undefined, hour: 'numeric', minute: '2-digit' }) + ' ET'; }
+function et(t) { return S.lane.et(t); }
 function lvl(m, e) { return m ? cap(m) + (e ? ', ' + e + ' effort' : '') : ''; }
 function dot(a) { return a.filter(x => x).join(' · '); }
 function stt() { return (S.status && S.status()) || null; }
@@ -35,9 +35,8 @@ function tiles() {
 QA('.cv-live').forEach(x => { at(at(at(x, 'role', 'button'), 'aria-controls', 'cv-brief'), 'aria-expanded', String(on)); });
 }
 function linkText(st) {
-var ls = S.lane.rows(st), old = stale(st), n = (old ? 0 : (st.workers || []).length) + ls.length,
-names = (!old && st.who ? [st.who] : []).concat(ls.map(r => r.w || S.lane.word(r))),
-w = n || !old || !st.at ? 'Right now: ' + n + ' at work' + (names.length ? ', ' + names.join(', ') : '') : 'Right now: last status ' + ago(st.at) + ' ago';
+var x = S.lane.line(st, pub !== false, 1),
+w = 'Right now: ' + (x || (stale(st) && st.at ? 'last status ' + ago(st.at) + ' ago' : '0 at work'));
 if (lk.firstChild.textContent !== w) lk.firstChild.textContent = w;
 }
 function toggle() {
@@ -47,15 +46,14 @@ if (on && d && !br.hidden) { a = br.getBoundingClientRect(); b = d.getBoundingCl
 }
 D.addEventListener('click', e => { var t = e.target.closest && e.target.closest('.cv-live'); if (t) { e.preventDefault(); toggle(); } });
 D.addEventListener('keydown', e => { var t = e.key === ' ' && e.target.closest && e.target.closest('.cv-live'); if (t) { e.preventDefault(); toggle(); } });
-var END = { limit: 'stopped at its turn limit', failed: 'failed', killed: 'stopped', cancelled: 'stopped' };
 function row(ul, r, g) {
 var a = mk(mk(ul, 'li'), 'a', 'tk-r'), m, p = r.p || [];
 a.href = work(r.w);
 mk(a, 'b', 'tk-t', r.t || '');
 m = mk(a, 'span', 'tk-m');
 if (r.o === 'i') { mk(m, 'span', 'chip chat', 'Investor ask' + (r.i ? ' #' + r.i : '')); m.appendChild(D.createTextNode(' ')); }
-m.appendChild(D.createTextNode(dot(g === 'w' ? [r.w, r.s === 'blocked' ? 'blocked' : 'waiting', r.y ? 'waits on the Investors' : '']
-: g === 'd' ? [r.w, r.at && ago(r.at) + ' ago', END[r.x]] : [r.w, r.k])));
+m.appendChild(D.createTextNode(dot(g === 'w' ? [r.w, r.why || (r.y ? 'waits on the Investors' : r.s === 'blocked' ? 'blocked' : 'waiting')]
+: g === 'd' ? [r.w, r.at && 'done ' + ago(r.at) + ' ago'] : [r.w, r.k])));
 if (g === 'n' && p[1] >= 2) {
 m.appendChild(D.createTextNode(' · ' + p[0] + ' of ' + p[1] + ' done '));
 mk(mk(m, 'span', 'cv-meter tk-p'), 'i').style.width = Math.round(100 * p[0] / p[1]) + '%';
@@ -78,9 +76,9 @@ var t = st.tasks || {}, op = t.open || [], c = t.count || {};
 sec.textContent = '';
 mk(mk(sec, 'h2', 'cv-sec', 'Tasks '), 'span', 'cv-count', String((c.next || 0) + (c.wait || 0) + (c.blocked || 0)));
 if (!st.tasks) { mk(sec, 'p', 'muted', 'The task list arrives with the next status.'); return; }
-group('n', 'Ready', op.filter(r => r.s === 'next'), 5, 0, c.next);
-group('w', 'Waiting or blocked', op.filter(r => r.s !== 'next'), 0, 'Show N waiting or blocked', (c.wait || 0) + (c.blocked || 0));
-group('d', 'Just finished', t.done || [], 3);
+group('n', 'Next up', op.filter(r => r.s === 'next'), 5, 0, c.next);
+group('d', 'Done', t.done || [], 3);
+group('w', 'Blocked / waiting', op.filter(r => r.s !== 'next'), 3, 0, (c.wait || 0) + (c.blocked || 0));
 }
 function place() {
 var st = stt(), col = Q('.cv-col'), gs = QA('.cv-glance'), g, home, tab, z;

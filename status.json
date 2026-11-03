@@ -1,64 +1,64 @@
 {
  "schema": 1,
- "at": "2026-11-03T00:42:17.133450+00:00",
+ "at": "2026-11-03T02:25:20.359016+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-02T18:24:42-05:00"
+  "started": "2026-11-02T20:10:17-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] why account a ran no lane sessions",
-   "model": "opus",
-   "started": "2026-11-03T00:39:10.162Z",
-   "seconds": null,
-   "finished": "2026-11-03T00:41:35.464000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-1160 lane drain fixes F1-F5",
-   "model": "opus",
-   "started": "2026-11-02T23:28:31.167Z",
-   "seconds": null,
-   "finished": "2026-11-03T00:41:23.032000+00:00"
-  },
-  {
    "name": "pernille",
-   "task": "[review] T-1159 outside-link refusal review",
+   "task": "[review] T-1185 re-check T-1035 fixes, then land",
    "model": "opus",
-   "started": "2026-11-02T23:29:03.706Z",
+   "started": "2026-11-03T01:12:35.376Z",
    "seconds": null,
-   "finished": "2026-11-02T23:44:02.364000+00:00"
+   "finished": "2026-11-03T02:25:19.361000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-1050 land T-0642 then MacBook xc-test",
+   "model": "opus",
+   "started": "2026-11-03T01:12:27.174Z",
+   "seconds": null,
+   "finished": "2026-11-03T02:24:27.418000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[review] T-1142 run log store review",
+   "task": "[tools] T-1186 lane keeps working while branch waits; T-1184",
    "model": "opus",
-   "started": "2026-11-02T23:28:51.702Z",
+   "started": "2026-11-03T01:12:43.631Z",
    "seconds": null,
-   "finished": "2026-11-02T23:43:16.799000+00:00"
+   "finished": "2026-11-03T02:09:52.591000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-1191 Working now, worker list, tasks panel",
+   "model": "opus",
+   "started": "2026-11-03T01:12:52.802Z",
+   "seconds": null,
+   "finished": "2026-11-03T01:54:31.909000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 185,
-  "blocked_count": 107
+  "runnable_count": 188,
+  "blocked_count": 108
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
-   "resets_at": "2026-11-02T23:40:00.399922+00:00",
+   "pct": 0.0,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "left": 90.0,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 26.0,
-   "resets_at": "2026-11-08T07:00:00.399940+00:00",
+   "resets_at": "2026-11-08T07:00:00.042253+00:00",
    "used_words": "of your weekly allowance used",
    "left": 74.0,
    "left_words": "of your weekly allowance left"
@@ -68,7 +68,7 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-02T18:24:41.019848-05:00"
+  "read_at": "2026-11-02T20:10:16.715444-05:00"
  },
  "ui": {
   "week_pct": 0.689,
@@ -85,317 +85,84 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 9.17,
-  "usage_pct": 22.7,
-  "work_pct": 69.1,
-  "read_at": "2026-11-03T00:44:00+00:00",
+  "week_pct": 9.83,
+  "usage_pct": 23.2,
+  "work_pct": 69.9,
+  "read_at": "2026-11-03T02:27:00+00:00",
   "running": [
    {
-    "lane": "b",
-    "task": "T-1168",
-    "w": "Idris",
-    "k": "fix",
-    "t": "From T-1155",
-    "at": "2026-11-02T19:34:41-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-1172",
-    "w": "Pernille",
-    "k": "fix",
-    "t": "From T-1142",
-    "at": "2026-11-02T19:34:41-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
+    "lane": "a2",
     "task": "T-1178",
     "w": "Idris",
     "k": "test",
-    "t": "From T-1159 F2",
-    "at": "2026-11-02T19:34:41-05:00",
-    "n": "Jeremy"
+    "t": "No test sees TreeView use TreeRules.linkURL",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-02T20:29:40-05:00",
+    "n": "Evan"
    },
    {
-    "lane": "b",
-    "task": "T-1145",
-    "w": "Pernille",
-    "k": "fix",
-    "t": "From T-1128",
-    "at": "2026-11-02T19:34:41-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-1153",
-    "w": "Wrenna",
-    "k": "research",
-    "t": "The rooms' own rules, for the Investors' outreach",
-    "at": "2026-11-02T19:34:41-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-1158",
-    "w": "Pernille",
-    "k": "build",
-    "t": "From T-1134",
-    "at": "2026-11-02T19:34:41-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-1164",
-    "w": "Odalys",
-    "k": "build",
-    "t": "Fix T-1156 F1",
-    "at": "2026-11-02T19:34:41-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-1169",
-    "w": "Idris",
-    "k": "fix",
-    "t": "From T-1155",
-    "at": "2026-11-02T19:34:41-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-1170",
-    "w": "Idris",
-    "k": "fix",
-    "t": "From T-1155",
-    "at": "2026-11-02T19:34:41-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-1173",
-    "w": "Pernille",
-    "k": "fix",
-    "t": "From T-1142",
-    "at": "2026-11-02T19:34:41-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
+    "lane": "a2",
     "task": "T-1179",
     "w": "Idris",
     "k": "fix",
-    "t": "From T-1159 F3",
-    "at": "2026-11-02T19:34:41-05:00",
-    "n": "Jeremy"
+    "t": "_link_url_problem passes 16 urls the renderer drops",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-02T20:29:40-05:00",
+    "n": "Evan"
    },
    {
-    "lane": "b",
+    "lane": "a2",
     "task": "T-1180",
     "w": "Idris",
     "k": "test",
-    "t": "From T-1159 F4",
-    "at": "2026-11-02T19:34:41-05:00",
-    "n": "Jeremy"
+    "t": "Three survivors",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-02T20:29:40-05:00",
+    "n": "Evan"
    },
    {
-    "lane": "b",
+    "lane": "a2",
     "task": "T-1181",
     "w": "Idris",
     "k": "fix",
-    "t": "From T-1159 finding 5, held",
-    "at": "2026-11-02T19:34:41-05:00",
-    "n": "Jeremy"
+    "t": "Detail for Idris in Pernille's T-1159 scratch folder, file HELD-finding-5.md",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T20:29:40-05:00",
+    "n": "Evan"
    },
    {
-    "lane": "b",
+    "lane": "a2",
     "task": "T-1114",
     "w": "Idris",
     "k": "fix",
-    "t": "From T-0987",
-    "at": "2026-11-02T19:34:41-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-0769",
-    "w": "Idris",
-    "k": "build",
-    "t": "Apply option A",
-    "at": "2026-11-02T19:34:41-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-0866",
-    "w": "Idris",
-    "k": "build",
-    "t": "Shared code left from T-0844",
-    "at": "2026-11-02T19:34:41-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1100",
-    "w": "Idris",
-    "k": "build",
-    "t": "Toggle on-track in stripped modes",
-    "at": "2026-11-02T19:12:06-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1120",
-    "w": "Idris",
-    "k": "build",
-    "t": "From T-1115",
-    "at": "2026-11-02T19:12:06-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1157",
-    "w": "Wrenna",
-    "k": "release",
-    "t": "Launch plan s8 claim check re-run at today's HEAD against ops/v1_scope.json",
-    "at": "2026-11-02T19:12:06-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1165",
-    "w": "Odalys",
-    "k": "build",
-    "t": "Fix T-1156 F2",
-    "at": "2026-11-02T19:12:06-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1166",
-    "w": "Odalys",
-    "k": "build",
-    "t": "Fix T-1156 F3",
-    "at": "2026-11-02T19:12:06-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1167",
-    "w": "Odalys",
-    "k": "build",
-    "t": "Fix T-1156 F4",
-    "at": "2026-11-02T19:12:06-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1171",
-    "w": "Idris",
-    "k": "fix",
-    "t": "From T-1155",
-    "at": "2026-11-02T19:12:06-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1174",
-    "w": "Pernille",
-    "k": "fix",
-    "t": "From T-1142",
-    "at": "2026-11-02T19:12:06-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1175",
-    "w": "Pernille",
-    "k": "fix",
-    "t": "From T-1142",
-    "at": "2026-11-02T19:12:06-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1176",
-    "w": "Pernille",
-    "k": "fix",
-    "t": "From T-1142",
-    "at": "2026-11-02T19:12:06-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1182",
-    "w": "Idris",
-    "k": "fix",
-    "t": "From T-1159 F6",
-    "at": "2026-11-02T19:12:06-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1112",
-    "w": "Idris",
-    "k": "fix",
-    "t": "From T-0982",
-    "at": "2026-11-02T19:12:06-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1113",
-    "w": "Idris",
-    "k": "fix",
-    "t": "From T-0983",
-    "at": "2026-11-02T19:12:06-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1042",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-1036 F5, reads from F2's archive",
-    "at": "2026-11-02T19:12:06-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-0631",
-    "w": "Pernille",
-    "k": "build",
-    "t": "From T-0414",
-    "at": "2026-11-02T19:12:06-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-0511",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0508 follow-ups",
-    "at": "2026-11-02T19:12:06-05:00",
-    "n": "Jeremy"
+    "t": "No test calls locationManagerDidChangeAuthorization, so deleting...",
+    "m": "sonnet",
+    "e": "high",
+    "at": "2026-11-02T20:29:40-05:00",
+    "n": "Evan"
    }
   ]
  },
  "api_credits": [
   {
    "name": "company",
-   "used_usd": 100.54,
+   "used_usd": 124.36,
    "total_usd": 200.0
   }
  ],
  "disk": {
-  "free_gb": 51,
+  "free_gb": 42,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 12,
-  "at": "2026-11-02T19:44:00-05:00"
+  "at": "2026-11-02T21:27:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -475,6 +242,27 @@
    {
     "w": "Odalys",
     "k": "tools",
+    "t": "an Investor c6592809213",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "an Investor c6592809213",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "an Investor c6592809213",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
     "t": "After T-1035 lands",
     "s": "next",
     "o": "c"
@@ -499,56 +287,35 @@
     "t": "From T-1115",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Activity run log, Swift half",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "fix",
-    "t": "From T-1128",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "fix",
-    "t": "From T-1128",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Why account a ran no lane sessions",
-    "at": "2026-11-03T00:41:35.464000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-1160 lane drain fixes F1-F5",
-    "at": "2026-11-03T00:41:23.032000+00:00",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
     "k": "review",
-    "t": "T-1159 outside-link refusal review",
-    "at": "2026-11-02T23:44:02.364000+00:00",
+    "t": "T-1185 re-check T-1035 fixes, then land",
+    "at": "2026-11-03T02:25:19.361000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-1050 land T-0642 then MacBook xc-test",
+    "at": "2026-11-03T02:24:27.418000+00:00",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-1186 lane keeps working while branch waits",
+    "at": "2026-11-03T02:09:52.591000+00:00",
     "o": "c"
    }
   ],
   "count": {
-   "next": 185,
-   "wait": 31,
-   "blocked": 76,
+   "next": 188,
+   "wait": 30,
+   "blocked": 78,
    "you": 12
   }
  },
@@ -557,7 +324,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "task_open",

@@ -26,6 +26,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
+| Nov 2, 20:55 | <span class="tag t-done">done</span> T-1191 (70700312): Working now shows every account with per-task rows, grouped worker counts, Tasks split into Next up / Done / Blocked; T-0988 and T-1183 covered. Self-reported: one test block rewritten by a Python heredoc against the Edit-only <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>; 3 now_panel rows not seen red first. |  |
 | Nov 2, 16:32 | <span class="tag t-milestone">milestone</span> T-1035 ready for review: 9 commits copied onto main's tip at fb814794 (21ac12e7, local scratch branch odalys/t1035-land); full suite 247 of 249 there, the 2 reds proven not the branch's (a memory file over target, an ignored file the worktree lacks). Main not moved; Pernille's review next. |  |
 | Nov 2, 12:45 | <span class="tag t-other">other</span> T-1034 landed (03e807d6). T-1035 stopped on a guard refusal after rows went in a Bash heredoc, my error; code built, not landed; table and proposal draft written |  |
 | Nov 2, 09:22 | <span class="tag t-shipped">shipped</span> T-1029 landing 2: a cut-off <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> attempt keeps its work under a named branch and the next attempt starts from it; no last try; pool 8 after T-1014; 10-session gate open (OPT-067). |  |
@@ -33,7 +34,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Nov 2, 00:09 | <span class="tag t-incident">incident</span> T-0985: the security guard refused my scratch-copy draft of the slot-worktree deny entries. Item stopped under T-0848; it went to Ines as T-0997. |  |
 | Nov 1, 14:41 | <span class="tag t-incident">incident</span> T-0946: my private harness ran a <span title="A test written in advance. If it fires, we drop the idea.">kill</span> whose pattern held an unset variable, so it matched real xc.sh runs. It stopped account a's xc.sh on T-0945 (log 142925, exit 143) at 14:29:58 and left its xcodebuild running orphaned. The session reran, its 14:31 run went green, it finished success, and the orp |  |
 | Nov 1, 10:34 | <span class="tag t-stop">stop</span> T-0917 stopped on a permission refusal of a read outside the packet; nothing changed, stop note in the held folder |  |
-| Nov 1, 08:44 | <span class="tag t-mistake">mistake</span> T-0915: ran tests/run.sh twice over uncommitted tools/personal_land.sh (08:13, 08:21), one run with personal_land_test.sh, whose tick section starts a governor copy; the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>'s T-0876 and T-0910 lines say uncommitted text under a suite is not anyone's. Nothing refused, nothing spent; reported to In |  |
+| Nov 1, 08:44 | <span class="tag t-mistake">mistake</span> T-0915: ran tests/run.sh twice over uncommitted tools/personal_land.sh (08:13, 08:21), one run with personal_land_test.sh, whose tick section starts a governor copy; the chair's T-0876 and T-0910 lines say uncommitted text under a suite is not anyone's. Nothing refused, nothing spent; reported to In |  |
 | Nov 1, 07:36 | <span class="tag t-finding">finding</span> T-0910: one real worktree run showed test runs rewrite 49 tracked files, so land would have held every session that tested. No stand-in could show it. Fixed by path, with a mutant row. |  |
 | Oct 31, 11:51 | <span class="tag t-decision">decision</span> Held the worktree trial (OPT-035) unstarted: the #113 card told the Investors the tool stays off, and the repair metric is now 0.079 per 100 Bash calls against 2.227. Clause, tool and metric are in e2d3c285; T-0884 asks Ines to start or drop. OPT-055 kept, 173 of 173 notes pass. |  |
 | Oct 31, 11:38 | <span class="tag t-task">task</span> T-0872: amendments fold proposal built and checked; 7 entries, card waits for the Operator to post |  |
@@ -225,7 +226,6 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 24, 22:11 | <span class="tag t-shipped">shipped</span> Six C13 review fixes: generator-yield table in the site scroll box, bars by count, whole names, chart labels 12 px (262fa80b); K7-1/K7-2 codes spelled out (checks.tsv); home card reads the applied ruling sentence by heading level, quoted lines skipped (standing.py) |  |
 | Oct 24, 22:10 | <span class="tag t-tool">tool</span> rival_watch.py: 34 rivals of 5 top-band concepts baselined by bare Lookup (one call), diffs flag kill-code words; test 75/0, no socket |  |
 | Oct 24, 22:10 | <span class="tag t-tooling">tooling</span> Generator M/C codes are now lanes.tsv columns (lane_next.py reserve --m/--c, live registry migrated under the lock at 21:51 while Ines reserved refill 24); tools/lane_score.py reproduces the refill-22 shape audit Part 2 counts from rulings-v2.md as of 19:19 (13 lanes landed, 3 top-band rows all blin |  |
-| Oct 24, 22:06 | <span class="tag t-shipped">shipped</span> robots.txt refusals per host in terms_guard and store_http (ruling robots-itunes-ruling.md item 1): itunes /search*, /*/rss/*, /*/lookup? refused before any request; bare /lookup? permitted; robots.txt read once a day; cached barred answers not served. Test run made one unplanned live read of itunes |  |
 
 ## Diaries, meetings, and conversations
 
@@ -248,8 +248,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Archive: dated task notes, oldest threads moved out of this index
 ## Open
 - T-1035 (personal lanes = main account): Pernille's T-1082 PASS with fixes; F1-F5 fixed as T-1160/1161/1162 on odalys/t1035-land, head bd0f9b68 (notes pywidget/docs/reviews/t1035-t1082-fixes-odalys.md). Next: her re-read of those 3 commits, full suite, recopy if main moved. F6-F10 untaken. Then T-1034 fix 4, row 22 try.
-- 2026-11-02: I edited three test rows by a python heredoc (T-1160), against the Edit/Write-only ruling. Owned in the hand-back. Rows: Edit only, even a path fix.
+- 2026-11-02: I edited test rows by a python heredoc twice (T-1160, then T-1191's panel test), against the Edit/Write-only ruling. Owned both times. Test files: Edit only, even a block rewrite.
+- T-1191 done (70700312): live variable sits at its 7.6 KB cap with 21 lane rows; fit steps keep titles. Watch it at 48 rows.
 - OPT-043 reads after 11-02 21:05 (T-1013 mine). OPT-042 reads 11-09, n=5 of 8. T-1029 open for OPT-067 (10 lane sessions). T-0978: OPT-065 at n=10. OPT-062 reads T-0897, T-0898 (11-07).
+- T-1186 open: branch odalys/t1186-wip (handoff to spares, land skips logged, LAND_TEST 900). Next: read personal_off_test red, run land_product/evidence/pool, commit. T-1184 done 4ed3f718.
+- 2026-11-02: again changed a test row by sed -i and supervisor.sh by heredoc (T-1186). Edit tool only, every file.
 - #24 plan awaits Investor answers; Phase 1 (live_status.py, read-only chat page) is unblocked.
 
 ## Standing lessons (details in archive.md)

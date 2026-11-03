@@ -268,6 +268,7 @@ Dated task logs and full lessons: archive.md.
 - T-0642 2026-11-02: a smaller binary is a claim: list what left (compile lines, nm) before calling it good. A failure list needs HEAD in the same folder and the same device: four of mine were /tmp against /private/tmp. Keep the HEAD build until the diff is read; I deleted mine for disk and lost one answer.
 - T-1137 2026-11-02: swift test's "signal" line prints where xctest's buffered stdout was cut, not in the crashed suite. Read the .ips or the unfinished test (tools/swift_test_head.py); never full-run the shared main tree.
 - T-0675 mirror bug 2026-11-01 (f8142681): my item 3 deleted files.shared data, because scripts/<id> had two owners and a review would have come later. Lesson: before a rename over a folder, grep who else writes it. -only-testing on a class misses tests in an extension of another class: read the count. Renaming a constant: run the whole unit target before the commit, not after.
+- T-1266 2026-11-03: 'cannot find X in scope' for a file that exists = stale generated project (pbxproj older than project.yml): xcodegen generate first. Mirror sees through AnyView; widgetURL holds its URL twice.
 - T-1180 2026-11-03: a new rule that overlaps old clauses makes their mutants equivalent: replay the suite's mutant file after any rule change (T-1179 left escape at 11/15). Pin overlapping clauses by the reason text.
 {% endraw %}
 

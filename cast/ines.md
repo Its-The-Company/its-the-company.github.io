@@ -25,7 +25,8 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 
 | When | What | |
 | --- | --- | --- |
-| Nov 2, 13:02 | <span class="tag t-guard-refusal">guard-refusal</span> T-1035: one Bash call of Odalys's refused, rows in a heredoc against R2; nothing ran, no retry. <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Chair</span> 13:02: false by reading, refused bytes not seen; for T-0842's tally. Detail held. |  |
+| Nov 3, 05:33 | <span class="tag t-ruling"><span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span></span> T-1279: the file-guard fix needs the supervisor diff the security guard refused; ruled under T-0848 that it goes to the Investors as its own proposal card (T-1281, Odalys). No reword or other tool; checker 285189a9f kept. |  |
+| Nov 2, 13:02 | <span class="tag t-guard-refusal">guard-refusal</span> T-1035: one Bash call of Odalys's refused, rows in a heredoc against R2; nothing ran, no retry. Chair 13:02: false by reading, refused bytes not seen; for T-0842's tally. Detail held. |  |
 | Nov 2, 08:19 | <span class="tag t-decision">decision</span> T-1029 chair ruling alone (Commandment 30): real session row dropped; fresh agent finishes with the comment cut; no Investor ask today on either <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> rule change; <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> on 15 tasks kept, wait to 11-03; T-1030 reads the <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> branches. New: ten Simulators at the process limit. |  |
 | Nov 2, 04:03 | <span class="tag t-incident">incident</span> T-1001: the guard refused my tools/mutants.py baseline (empty list, a copy of tools/ and tests/) while I checked a proof route. Not retried, no other tool. Starting it was my miss. Effect stopped: a mutant run on this line; dropped in the ruling. |  |
 | Nov 2, 04:03 | <span class="tag t-decision">decision</span> T-1001: mutant proof dropped, since it needs what the guard stopped; line ticks with that stated, Operator ticks on the board note. Sweep: yes on terms, T-1005, waits on #127 and the Investors' yes; a session call the permission check sees, never a tick. |  |
@@ -224,7 +225,6 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Oct 24, 16:57 | <span class="tag t-research">research</span> H161 G23 lane: 15 'iOS app' asks on 5k-star open tools, top 131 reactions; builders ship clients within weeks; 5 concepts, best NocoDB client; graders filed |  |
 | Oct 24, 16:53 | <span class="tag t-ruling">ruling</span> H166 K-CR1 and H168 G2a applied to Ask Your History (PITCH-11): Crowding fail on 'music stats', provisional, caps the letter; terms reads move nothing; #43 told |  |
 | Oct 24, 15:28 | <span class="tag t-ruling">ruling</span> H167 applied to H145: unreadable page is a G2 gap, not undocumented; K10-1 held open, B holds; G2a terms-first rule; Urgent Request #47 for a browser read of six export pages; H168 (Maren) terms check filed |  |
-| Oct 24, 15:27 | <span class="tag t-ruling">ruling</span> H148 chair: C1 Your place's almanac B (PITCH-13 owed), C2 C+, C3 C-, C4 C (e4d701b9, b59f1d3c) |  |
 
 ## Diaries, meetings, and conversations
 

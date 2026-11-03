@@ -1,5 +1,54 @@
 [
 {
+"time": "2026-11-03T06:09:48-05:00",
+"worker": "operator",
+"type": "session",
+"summary": "05:08 work session (pool 1): OPT-051 closed no_effect, routing back on the 2026-10-23 rule; guard undo of the Investors' fold found and raised (#148, proposal #149); T-1193, T-1266 (+review T-1282), T-1283 done; plain-English reply on #41.",
+"link": ""
+},
+{
+"time": "2026-11-03T05:54:50-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-03T05:35:56-05:00",
+"worker": "operator",
+"type": "request",
+"summary": "Posted Odalys's proposal #149: the Investors approve and apply the file-guard fix by hand (the security guard refused the company building it, T-0848). T-1279 and T-1281 wait on #149.",
+"link": ""
+},
+{
+"time": "2026-11-03T05:33:24-05:00",
+"worker": "Ines",
+"type": "ruling",
+"summary": "T-1279: the file-guard fix needs the supervisor diff the security guard refused; ruled under T-0848 that it goes to the Investors as its own proposal card (T-1281, Odalys). No reword or other tool; checker 285189a9f kept.",
+"link": ""
+},
+{
+"time": "2026-11-03T05:30:51-05:00",
+"worker": "operator",
+"type": "refusal",
+"summary": "T-1279: the security guard refused Odalys's command building the file-guard fix's supervisor diff ('starts another Claude session outside the governor'). Stopped under T-0848; design and tests committed (285189a9f), no proposal posted; sent to Ines for a ruling.",
+"link": ""
+},
+{
+"time": "2026-11-03T05:12:50-05:00",
+"worker": "odalys",
+"type": "decision",
+"summary": "OPT-051 closed no_effect: Tenet 6 table not kept (new 38.13 vs old 34.64 finished per 100 USD, +10%, p 0.37, n=30 per arm; a session-limit guard tripped); model_routing switchback stopped, sessions back on the 2026-10-23 rule; for the next report",
+"link": ""
+},
+{
+"time": "2026-11-03T05:12:28-05:00",
+"worker": "operator",
+"type": "request",
+"summary": "At 03:48 the file guard undid the Investors' amendments fold (#143) and records-guard fix (#144), which an Investor made on the Mac mini during a session (a95befeb7). It left amendments.md with uncommitted edits, so both personal accounts stopped (#146, #147). Asked the Investors to re-apply (#148);",
+"link": ""
+},
+{
 "time": "2026-11-03T05:04:54-05:00",
 "worker": "Odalys",
 "type": "work",

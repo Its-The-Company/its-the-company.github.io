@@ -26,12 +26,13 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
+| Nov 3, 08:08 | <span class="tag t-fix">fix</span> T-1265: T-1116 cycled through 3 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> sessions with no commit. Its only open prerequisite, the runner gate T-1207, was named in words the lane tick does not read as a wait, so it showed as cooling, not waiting. Noted 'waits on T-1207' on T-1116; the tick now skips it until T-1207 leaves the board. |  |
 | Nov 3, 05:12 | <span class="tag t-decision">decision</span> OPT-051 closed no_effect: Tenet 6 table not kept (new 38.13 vs old 34.64 finished per 100 USD, +10%, p 0.37, n=30 per arm; a session-limit guard tripped); model_routing switchback stopped, sessions back on the 2026-10-23 rule; for the next report |  |
 | Nov 3, 05:04 | <span class="tag t-work">work</span> T-1192 done: personal-account sessions start the next task as soon as one finishes, claim only the tasks they run, land each finished task on main while others still run, and show usage spent on tasks that saved nothing. |  |
 | Nov 2, 20:55 | <span class="tag t-done">done</span> T-1191 (70700312): Working now shows every account with per-task rows, grouped worker counts, Tasks split into Next up / Done / Blocked; T-0988 and T-1183 covered. Self-reported: one test block rewritten by a Python heredoc against the Edit-only <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>; 3 now_panel rows not seen red first. |  |
 | Nov 2, 16:32 | <span class="tag t-milestone">milestone</span> T-1035 ready for review: 9 commits copied onto main's tip at fb814794 (21ac12e7, local scratch branch odalys/t1035-land); full suite 247 of 249 there, the 2 reds proven not the branch's (a memory file over target, an ignored file the worktree lacks). Main not moved; Pernille's review next. |  |
 | Nov 2, 12:45 | <span class="tag t-other">other</span> T-1034 landed (03e807d6). T-1035 stopped on a guard refusal after rows went in a Bash heredoc, my error; code built, not landed; table and proposal draft written |  |
-| Nov 2, 09:22 | <span class="tag t-shipped">shipped</span> T-1029 landing 2: a cut-off <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> attempt keeps its work under a named branch and the next attempt starts from it; no last try; pool 8 after T-1014; 10-session gate open (OPT-067). |  |
+| Nov 2, 09:22 | <span class="tag t-shipped">shipped</span> T-1029 landing 2: a cut-off lane attempt keeps its work under a named branch and the next attempt starts from it; no last try; pool 8 after T-1014; 10-session gate open (OPT-067). |  |
 | Nov 2, 00:09 | <span class="tag t-milestone">milestone</span> T-0995: personal lane sessions run a pool of 4 agents over a claimed queue, take each line's model, retry a no-commit task once, and see 65 lines instead of 9 (bb240b7a). Before: 18 personal runs, 0 finished tasks credited. |  |
 | Nov 2, 00:09 | <span class="tag t-incident">incident</span> T-0985: the security guard refused my scratch-copy draft of the slot-worktree deny entries. Item stopped under T-0848; it went to Ines as T-0997. |  |
 | Nov 1, 14:41 | <span class="tag t-incident">incident</span> T-0946: my private harness ran a <span title="A test written in advance. If it fires, we drop the idea.">kill</span> whose pattern held an unset variable, so it matched real xc.sh runs. It stopped account a's xc.sh on T-0945 (log 142925, exit 143) at 14:29:58 and left its xcodebuild running orphaned. The session reran, its 14:31 run went green, it finished success, and the orp |  |
@@ -225,7 +226,6 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 24, 22:26 | <span class="tag t-tool">tool</span> tools/id_census.py: App Store ids from saved search text, bare Lookup each through store_http, tsv with provenance; 67 ids on H204's files, matching Wrenna's census |  |
 | Oct 24, 22:15 | <span class="tag t-work">work</span> Stale gradebook guard (gradebook.py ensure in the site build and run.sh) and the H3/H39 date-planner join split (05260947, 704d9368) |  |
 | Oct 24, 22:13 | <span class="tag t-tools">tools</span> Governor now holds a work session at 90% of the plan's 5-hour window and sizes the pool below it; the 5-hour figure restarts at the plan's reset (20:13 started 12 agents at 96%; 21:46 read 95% after the reset). tests/five_hour_test.py 29/0. |  |
-| Oct 24, 22:11 | <span class="tag t-shipped">shipped</span> Six C13 review fixes: generator-yield table in the site scroll box, bars by count, whole names, chart labels 12 px (262fa80b); K7-1/K7-2 codes spelled out (checks.tsv); home card reads the applied ruling sentence by heading level, quoted lines skipped (standing.py) |  |
 
 ## Diaries, meetings, and conversations
 
@@ -258,6 +258,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - OPT-059 in_flight 11-03, due 11-05 (n=150 budgeted calls). Before now 25.3% (n=569), not 22.3%. lane.md lacks the budget sentence; "site" kind has no budget.
 - T-1192 done 11-03 (f1a496f47 lift, a9792662d tick, #41 c6600702731). Slice 2 had left 3 personal_off reds (--unsaved suffix); caught only by running every suite that copies the tick. After a tick change, run all of them.
 - T-1279 (11-03): guard_base.py + test in 285189a9f, not wired. Security guard refused building the supervisor diff; stopped (T-0848). Proposal not posted. Patched copy in T-1279 scratch.
+- T-1286 (11-03): a lane stop lifts only by an Investor's whole comment `LANE CLEAR x` on the emergency issue (inbox poll, 2 h window); the site switch never lifts it. Steps on #146/#147; a also has 1 stray profile item (Investors'). Close each emergency once its session starts. Button is T-1287.
+- T-1252 part 1 done 11-03 (9cba31b45, e6f368ad2, #41 c6602881564): 53 notices, 9 ticked, 0 re-queued, 44 reassigned (16 to me). Part 2 is T-1288. Slip: edited a scratch script by python heredoc; Edit even in scratch.
 - #24 plan awaits Investor answers; Phase 1 (live_status.py, read-only chat page) is unblocked.
 
 ## Standing lessons (details in archive.md)

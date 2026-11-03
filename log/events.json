@@ -1,5 +1,124 @@
 [
 {
+"time": "2026-11-03T08:09:12-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #152",
+"link": ""
+},
+{
+"time": "2026-11-03T08:08:28-05:00",
+"worker": "Odalys",
+"type": "fix",
+"summary": "T-1265: T-1116 cycled through 3 lane sessions with no commit. Its only open prerequisite, the runner gate T-1207, was named in words the lane tick does not read as a wait, so it showed as cooling, not waiting. Noted 'waits on T-1207' on T-1116; the tick now skips it until T-1207 leaves the board.",
+"link": ""
+},
+{
+"time": "2026-11-03T08:07:54-05:00",
+"worker": "Idris",
+"type": "finding",
+"summary": "T-1263: T-0550 cycled because lanes could claim it: the T-1184 Xcode gate read only the owner parenthesis and T-0550 names Idris at its head, so needs_xcode said no; lanes then released it untouched (parked commits 40ee547c, 18ec989c, fd2e8505 hold no T-0550 work). Odalys's gate fix 7d134648 (T-1261",
+"link": ""
+},
+{
+"time": "2026-11-03T08:06:39-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #148",
+"link": ""
+},
+{
+"time": "2026-11-03T08:06:38-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #149",
+"link": ""
+},
+{
+"time": "2026-11-03T08:03:38-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #148",
+"link": ""
+},
+{
+"time": "2026-11-03T07:59:31-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #151",
+"link": ""
+},
+{
+"time": "2026-11-03T07:58:06-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #146",
+"link": ""
+},
+{
+"time": "2026-11-03T07:58:06-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "A personal account's stop was lifted by an Investor",
+"link": ""
+},
+{
+"time": "2026-11-03T07:54:52-05:00",
+"worker": "operator",
+"type": "investor",
+"summary": "an Investor approved #145 (personal API keys); the T-1194 code is re-queued to land (parked/a3, failed once on an unrelated render test). an Investor approved #149 (file-guard fix); it waits on a hand apply at the Mac mini.",
+"link": ""
+},
+{
+"time": "2026-11-03T07:54:52-05:00",
+"worker": "operator",
+"type": "guard",
+"summary": "Security guard refused two Operator attempts for an Investor's #146 asks: removing the telemetry folder in account a's profile, and preparing the rules/personal_lane.py diff. Both stopped (T-0848); Evan removed the folder by hand; the one-line edit was posted on #146; T-1291 goes to Ines.",
+"link": ""
+},
+{
+"time": "2026-11-03T07:54:02-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #146",
+"link": ""
+},
+{
+"time": "2026-11-03T07:53:43-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #146",
+"link": ""
+},
+{
+"time": "2026-11-03T07:46:59-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #146",
+"link": ""
+},
+{
+"time": "2026-11-03T07:32:26-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #149",
+"link": ""
+},
+{
+"time": "2026-11-03T06:23:43-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-03T06:20:47-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #145",
+"link": ""
+},
+{
 "time": "2026-11-03T06:18:09-05:00",
 "worker": "operator",
 "type": "report",

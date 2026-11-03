@@ -1,51 +1,18 @@
 {
  "schema": 1,
- "at": "2026-11-03T05:35:40.567934+00:00",
+ "at": "2026-11-03T05:41:30.947773+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-03T00:19:36-05:00"
+  "started": "2026-11-03T00:40:15-05:00"
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[review] T-1173 review of 2fb673d3",
-   "model": "opus",
-   "started": "2026-11-03T05:33:18.321Z",
-   "seconds": null,
-   "finished": "2026-11-03T05:35:17.766000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[review] T-1168 review of cca2320b",
-   "model": "opus",
-   "started": "2026-11-03T05:31:57.842Z",
-   "seconds": null,
-   "finished": "2026-11-03T05:33:41.698000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[test] T-1173 pin launch prune lock",
-   "model": "opus",
-   "started": "2026-11-03T05:28:16.851Z",
-   "seconds": null,
-   "finished": "2026-11-03T05:33:07.935000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[review] T-1145 review of 8261e2b5",
-   "model": "opus",
-   "started": "2026-11-03T05:30:51.122Z",
-   "seconds": null,
-   "finished": "2026-11-03T05:32:20.176000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 176,
+  "runnable_count": 179,
   "blocked_count": 108
  },
  "meter": {
@@ -58,7 +25,7 @@
   },
   "weekly": {
    "pct": 26.0,
-   "resets_at": "2026-11-08T06:59:59.762736+00:00",
+   "resets_at": "2026-11-08T06:59:59.700080+00:00",
    "used_words": "of your weekly allowance used",
    "left": 74.0,
    "left_words": "of your weekly allowance left"
@@ -68,7 +35,7 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-03T00:19:33.764760-05:00"
+  "read_at": "2026-11-03T00:40:13.370593-05:00"
  },
  "ui": {
   "week_pct": 0.689,
@@ -86,9 +53,9 @@
  "next_tick": null,
  "personal": {
   "week_pct": 10.96,
-  "usage_pct": 23.7,
-  "work_pct": 68.8,
-  "read_at": "2026-11-03T05:38:00+00:00",
+  "usage_pct": 23.5,
+  "work_pct": 67.9,
+  "read_at": "2026-11-03T05:44:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -442,6 +409,94 @@
     "n": "Jeremy"
    },
    {
+    "lane": "b2",
+    "task": "T-1211",
+    "w": "Operator",
+    "k": "ops",
+    "t": "Amendments.md is 14.8 KB, past the 4 KB line",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T00:43:24-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b2",
+    "task": "T-1227",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "OPT-051 measurement overdue",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-03T00:43:24-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b2",
+    "task": "T-0956",
+    "w": "Pernille",
+    "k": "build",
+    "t": "Replay the lane suites in the Simulator with the zipped stdlib and lazy imports",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T00:43:24-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b2",
+    "task": "T-0629",
+    "w": "Maren",
+    "k": "design",
+    "t": "If F6 moves the Gallery",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-03T00:43:24-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b2",
+    "task": "T-0760",
+    "w": "Idris",
+    "k": "test",
+    "t": "T-0758 follow-up",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-03T00:43:24-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b2",
+    "task": "T-0882",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "After an Investor applies the T-0872 fold",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-03T00:43:24-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b2",
+    "task": "T-1226",
+    "w": "Pernille",
+    "k": "test",
+    "t": "Flaky host test seen in T-1173's full swift test run",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T00:43:24-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b2",
+    "task": "T-1028",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "After T-0642 goes and the first MacBook xc-test passes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T00:43:24-05:00",
+    "n": "Jeremy"
+   },
+   {
     "lane": "b3",
     "task": "T-0956",
     "w": "Pernille",
@@ -536,19 +591,19 @@
  "api_credits": [
   {
    "name": "company",
-   "used_usd": 179.87,
+   "used_usd": 184.78,
    "total_usd": 200.0
   }
  ],
  "disk": {
-  "free_gb": 25,
+  "free_gb": 27,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-03T00:38:00-05:00"
+  "at": "2026-11-03T00:44:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -693,7 +748,7 @@
    }
   ],
   "count": {
-   "next": 176,
+   "next": 179,
    "wait": 30,
    "blocked": 78,
    "you": 12
@@ -704,7 +759,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",

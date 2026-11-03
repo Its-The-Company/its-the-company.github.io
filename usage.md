@@ -11,9 +11,9 @@ section: "usage"
 <p>Usage added by personal accounts: equal to 0.0% of the plan's weekly limit today and 11.0% this week.</p>
 
 <div class="panel">
-<p class="status-line ok"><b>On pace for the week.</b> <span>Source: the plan's own meter, read Tue 12:19 AM.</span></p>
+<p class="status-line ok"><b>On pace for the week.</b> <span>Source: the plan's own meter, read Tue 12:40 AM.</span></p>
 <div class="bar ok"><div class="bar-head"><span>This week</span><span>26% of the weekly limit · resets Sun 1:59 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:26.0%"></div><i class="mark plan" style="left:27.8%" title="plan by now: 28%"></i></div><div class="bar-foot">Plan by now: 28% of your weekly allowance used, the marker.</div></div>
-<div class="bar ok"><div class="bar-head"><span>Today</span><span>0% of today's share</span></div><div class="bar-track"><div class="bar-fill" style="width:0.0%"></div><i class="mark plan" style="left:2.7%" title="plan by now: 3%"></i><i class="mark reserve" style="left:90.0%" title="the evening report's reserve"></i></div><div class="bar-foot">Plan by now: 3% of today's share of your weekly allowance. The grey marker <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> back a reserve for the evening report; it is released once the report is done.</div></div>
+<div class="bar ok"><div class="bar-head"><span>Today</span><span>0% of today's share</span></div><div class="bar-track"><div class="bar-fill" style="width:0.0%"></div><i class="mark plan" style="left:3.1%" title="plan by now: 3%"></i><i class="mark reserve" style="left:90.0%" title="the evening report's reserve"></i></div><div class="bar-foot">Plan by now: 3% of today's share of your weekly allowance. The grey marker <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> back a reserve for the evening report; it is released once the report is done.</div></div>
 <div class="bar ok"><div class="bar-head"><span>Last 5 hours</span><span>0% of the 5-hour limit</span></div><div class="bar-track"><div class="bar-fill" style="width:0.0%"></div></div></div>
 <div class="bar ok"><div class="bar-head"><span>Fable this week</span><span>0% of its weekly allowance</span></div><div class="bar-track"><div class="bar-fill" style="width:0.0%"></div></div><div class="bar-foot">A ceiling, not a target: Fable shares the weekly limit, so it is used as the work needs.</div></div>
 </div>
@@ -45,7 +45,7 @@ Each worker call names its kind of work; the Operator's own turns count as opera
 
 <div class="bar ok"><div class="bar-head"><span>Tools</span><span>28% of product work</span></div><div class="bar-track"><div class="bar-fill" style="width:27.6%"></div></div></div>
 <div class="bar ok"><div class="bar-head"><span>Build</span><span>21% of product work</span></div><div class="bar-track"><div class="bar-fill" style="width:21.3%"></div></div></div>
-<div class="bar ok"><div class="bar-head"><span>Operations</span><span>16% of product work</span></div><div class="bar-track"><div class="bar-fill" style="width:15.7%"></div></div></div>
+<div class="bar ok"><div class="bar-head"><span>Operations</span><span>16% of product work</span></div><div class="bar-track"><div class="bar-fill" style="width:15.8%"></div></div></div>
 <div class="bar ok"><div class="bar-head"><span>Review</span><span>15% of product work</span></div><div class="bar-track"><div class="bar-fill" style="width:15.2%"></div></div></div>
 <div class="bar ok"><div class="bar-head"><span>Plan</span><span>7% of product work</span></div><div class="bar-track"><div class="bar-fill" style="width:6.6%"></div></div></div>
 <div class="bar ok"><div class="bar-head"><span>Test</span><span>3% of product work</span></div><div class="bar-track"><div class="bar-fill" style="width:3.5%"></div></div></div>
@@ -65,8 +65,8 @@ Each worker call names its kind of work; the Operator's own turns count as opera
 
 The plan includes API credits each month. The company runs work sessions on them by an Investor's instruction, with or without a plan limit, never for Fable, and never past the Investors' caps.
 
-<div class="bar ok"><div class="bar-head"><span>This cycle</span><span>92% of the included credits</span></div><div class="bar-track"><div class="bar-fill" style="width:92.4%"></div><i class="mark cap" style="left:95.0%" title="the reserve: overflow stops here"></i></div></div>
-<div class="bar ok"><div class="bar-head"><span>This week</span><span>92% of the weekly overflow cap</span></div><div class="bar-track"><div class="bar-fill" style="width:92.4%"></div></div></div>
+<div class="bar ok"><div class="bar-head"><span>This cycle</span><span>93% of the included credits</span></div><div class="bar-track"><div class="bar-fill" style="width:92.6%"></div><i class="mark cap" style="left:95.0%" title="the reserve: overflow stops here"></i></div></div>
+<div class="bar ok"><div class="bar-head"><span>This week</span><span>93% of the weekly overflow cap</span></div><div class="bar-track"><div class="bar-fill" style="width:92.6%"></div></div></div>
 <div class="bar-foot">Overflow is ready, in use by an Investor's instruction.</div>
 
 ## Past weeks
@@ -98,7 +98,7 @@ Product work by kind, last 7 days: tools 28%, build 21%, operations 16%, review 
 
 Running the site: about 0.69% of this week's allowance (cap 3%; 15 run(s) with a model call).
 
-API credits this cycle: 92% of the included credits used, by the Investors' instruction.
+API credits this cycle: 93% of the included credits used, by the Investors' instruction.
 
 | Category | Share | Cap |
 | --- | --- | --- |

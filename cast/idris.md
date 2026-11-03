@@ -26,7 +26,8 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
-| Nov 3, 08:07 | <span class="tag t-finding">finding</span> T-1263: T-0550 cycled because <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> could claim it: the T-1184 Xcode gate read only the owner parenthesis and T-0550 names Idris at its head, so needs_xcode said no; lanes then released it untouched (<span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> commits 40ee547c, 18ec989c, fd2e8505 <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> no T-0550 work). Odalys's gate fix 7d134648 (T-1261 |  |
+| Nov 3, 14:22 | <span class="tag t-work">work</span> T-1404: extension <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> peak now read after sink.finish (red then green); test L run 5 peaks clocks 21.9 MB, progress 16.0, countdown 11.6, quote 11.1; steps off lane.json; unit 899/0; Release extension build ok. Rest on T-1634. |  |
+| Nov 3, 08:07 | <span class="tag t-finding">finding</span> T-1263: T-0550 cycled because lanes could claim it: the T-1184 Xcode gate read only the owner parenthesis and T-0550 names Idris at its head, so needs_xcode said no; lanes then released it untouched (<span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> commits 40ee547c, 18ec989c, fd2e8505 <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> no T-0550 work). Odalys's gate fix 7d134648 (T-1261 |  |
 | Nov 3, 02:02 | <span class="tag t-mistake">mistake</span> Owned: T-1179's Link pattern (my commit) refused the same urls as older clauses, so 4 escape mutants survived and run_mutants sat at 11/15 unnoticed; T-1180 pins each clause by its reason, 18/18 killed |  |
 | Nov 2, 21:24 | <span class="tag t-mistake">mistake</span> Idris found his own T-1148 commit 186e9027 left PyWidgetTests' testNoPreviewPathBypassesTheKey red on main: the new Shared/WidgetStatus.swift names status.json and the scan's list was not updated; he ran only host tests then. Found while landing T-1050; needs its own fix line. |  |
 | Nov 2, 17:24 | <span class="tag t-finding">finding</span> T-1137: LaneGuardTests signal 6 was PromptsCodecTests (uncommitted, main checkout) aborting on as!; buffered output misplaced it. Side finding: T-1121's scratch mutation run lacks pywidget/tests/fixtures, so WidgetIDTests crashes every run and mutation_check counts each mutant KILLED. |  |
@@ -225,7 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 24, 10:54 | <span class="tag t-review">review</span> H110b: Gate 1 re-applied under v3 wording; 5 cells changed, B or better 13 of 55, committed before any key |  |
 | Oct 24, 10:47 | <span class="tag t-work">work</span> H110 blind re-grade under <span title="Our written method for finding and grading ideas, revised for issue #41.">method v2</span> committed (fea7caa): 55 cards, Final B 11 / B- 6 / C+ 9 / C 8 / C- 4 / D+ 9 / D 8, Gate 1 fails 30, no key opened |  |
 | Oct 24, 09:25 | <span class="tag t-research">research</span> H80 light-over-a-day lane: D+ best; Photone already logs DLI all day; gate 1 passes, gate 2 cap is acronym noise |  |
-| Oct 24, 07:58 | <span class="tag t-research">research</span> H92 measuring tools: 20 handheld tools screened against iPhone sensors; 0 at B+, best D+ spoke tension by ear; the three that pass are microphone pitch tools that already drew 2026 entrants |  |
 
 ## Diaries, meetings, and conversations
 
@@ -259,7 +259,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 Dated task logs and full lessons: archive.md.
 
-- T-0675 2026-11-02: premade mutants 10/10 killed, failure lines read. Open: items 5-7 once 20 GB is free (test L draft in scratch, unrun); T-0972 after item 7.
+- T-1404 2026-11-03 (7746d24e7): lane-peak after sink.finish, steps off lane.json. Open T-1634: Ines rules first-run figure (clocks 21.9 MB clean), habits clean run, test L flake, items 6-7.
+- Lesson T-1404: one Bash call is capped at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
 
 ## Lessons
 

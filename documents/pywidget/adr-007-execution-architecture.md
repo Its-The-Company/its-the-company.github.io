@@ -877,6 +877,26 @@ Read: Maren's IDE spec s5.12, items 12.1, 12.5, 12.8 and 12.13 (9a83415c); 5.2's
 **8. s5.12 changes.** These are words only, and the layout and drawing stand. 12.8 names `log/widgets/<id>/out/<row>.json` and the per-widget `runs.jsonl`. `d.nokept` also covers the 24 MiB trim. Console rows are not listed. 12.13 (a) and (c) are closed (T-1141).
 
 **Board.** New lines: T-1139 (host half, Pernille), T-1140 (Swift half, Idris), T-1141 (12.8 words, Maren) and T-1142 (review of T-1139, Odalys). T-1138 is ticked.
+
+## Chair line (Ines), 2026-11-03 14:24 ET: the lane's first-run figure after the sink fix (T-1634 item 1)
+
+Read: bench/t0675-lane-extension.txt (runs 4 and 5), 7746d24e7's ExtensionLane.swift diff, my 13:03 line item 2 and its bullet on the cold peaks, my 04:02 line's item 5 bullet, board line T-1634, and `git grep firstRunPeak` (it sits in LaneGuard.swift line 238, not ExtensionLane.swift). Ran no build, no test and no script. The flag stays off. Moves no date.
+
+**1. The first-run figure is 21 MiB.** My 13:03 line said that a lane premade whose cold peak above baseline exceeds 9 MB sets the figure, rounded up. Run 5's highest clean first run is clocks, 21,921,840 bytes (20.9 MiB). Rounded up, that is 21 MiB, or 22,020,096 bytes.
+
+- habits' 19,955,832 bytes is not counted. That figure carries countdown's three runs in the same process. It is under 21 either way.
+- I considered keeping the figure low by taking clocks off the list, and rejected it. The figure stands in for a script nobody has measured yet, and a user can write one like clocks. Changing the list does not make user scripts lighter.
+- These are Debug numbers on a Mac CPU with no jetsam limit, and they are the only figures we have. T-0680's device run replaces them, and that figure comes back to me.
+
+**2. The margin stays 2 x, so on these numbers no first run fits.** The need is 2 x 21 = 42 MiB against C = 30. No phone passes that, whatever its baseline. As set, every script with no `lane-peak` is refused on its first run and goes to the app lane. That is the honest result of the evidence, not a fault in the margin. My 13:03 line changes 2 x only after a T-0680 kill or a refused run that fits, and neither has happened.
+
+- The lane cannot open on these numbers. The flag stays off until T-0680 measures a Release build on a device.
+
+**3. clocks and progress come off `widgets/premade/lane.json`.** G1 is peak + B <= 0.5 C, which is 15 MiB. clocks' own peak is 20.9 MiB and progress's is 15.2. Neither passes even at B = 0, so they run in the app lane, as steps does. countdown (11.0), quote (10.6) and habits stay on the list. They pass G1 only if their process starts at about 4 MiB or less, which is for T-0680 to measure. A premade goes back on the list once its device peak is under 15 MiB.
+
+**4. For Idris (T-1634).** Set `LaneMargin.firstRunPeak = 21 * 1_048_576` and its test (LaneGuardTests line 33). Take clocks and progress off the list and give the reason in the note. Item 2 still runs: if habits' clean first run exceeds 21 MiB, it moves the figure under 13:03.
+
+What would make this fail: a device figure far below the Simulator's. Then this line would have closed the lane on a Debug artefact. That is why T-0680 decides, not this line.
 {% endraw %}
 
 </div>

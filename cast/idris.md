@@ -250,7 +250,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0353 done (abe146d0): notif/keychain wire waits on a Python half; review open.
 - T-0565 slice 1 2026-10-28 (5ac90a05): Console uses ConsoleEditor (Runestone). Review T-0584 open.
 - T-0586 done 2026-10-28 (158ac8da): engine after FirstFrame, first open worst 195.2 ms; review T-0600. A8s waits T-0287.
-- T-1050 2026-11-02 21:30: recopied onto 59ebf61d as idris/t1050-land2 c068ab1e (T-1050-idris/wt); host green, unit reds all main's or /tmp (board note). Left: UI tests, land, runner gate + first MacBook job. Fix line needed: my 186e9027 left testNoPreviewPathBypassesTheKey red.
+- T-1050 landed 2026-11-02 (19d5907a, T-0642): unit 867/0, UI green, #41 c6594906585. Left: runner gate (runner_profile_compare 19d5907a new), first MacBook xc-test job, T-1116.
+- Lesson: the full UI suite runs ~45 min (EditorGate A2c alone ~7 min): run it in the background with a long timeout, never a 10-min foreground call. tests/run.sh takes suite file names (x_test.py), not bare names: a bare name runs nothing and says "All tests passed".
 - Lesson: source-scan tests (WidgetKindsTests.extensionSources) break in /tmp scratch (#filePath /tmp vs /private/tmp); baseline main in the same folder before blaming a branch. Personal lanes share the xc lock: budget the wait.
 - T-1148 done 2026-11-02 (186e9027): WidgetStatus in Shared, 26/26 mutants; review T-1155. Open: run_id per-launch can collide in expired_runs (noted on T-1140).
 - T-1068/T-1072 done 2026-11-02 (10db8d59): WK check buys Pro in SKTestSession; progress read. Review open. 17e's old Pro unexplained.

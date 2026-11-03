@@ -1,51 +1,51 @@
 {
  "schema": 1,
- "at": "2026-11-03T02:25:20.359016+00:00",
+ "at": "2026-11-03T03:47:46.877800+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-02T20:10:17-05:00"
+  "started": "2026-11-02T21:36:33-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "pernille",
-   "task": "[review] T-1185 re-check T-1035 fixes, then land",
+   "name": "odalys",
+   "task": "[tools] T-1192 lane continuous refill",
    "model": "opus",
-   "started": "2026-11-03T01:12:35.376Z",
+   "started": "2026-11-03T03:17:58.843Z",
    "seconds": null,
-   "finished": "2026-11-03T02:25:19.361000+00:00"
+   "finished": "2026-11-03T03:47:03.009000+00:00"
   },
   {
    "name": "idris",
-   "task": "[build] T-1050 land T-0642 then MacBook xc-test",
+   "task": "[build] T-1050 land plain targets",
    "model": "opus",
-   "started": "2026-11-03T01:12:27.174Z",
+   "started": "2026-11-03T02:52:06.946Z",
    "seconds": null,
-   "finished": "2026-11-03T02:24:27.418000+00:00"
+   "finished": "2026-11-03T03:45:43.813000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-1186 lane keeps working while branch waits; T-1184",
-   "model": "opus",
-   "started": "2026-11-03T01:12:43.631Z",
+   "task": "[tools] OPT-043 verdict read",
+   "model": "sonnet",
+   "started": "2026-11-03T03:18:08.216Z",
    "seconds": null,
-   "finished": "2026-11-03T02:09:52.591000+00:00"
+   "finished": "2026-11-03T03:19:58.812000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[site] T-1191 Working now, worker list, tasks panel",
+   "name": "pernille",
+   "task": "[tools] T-1035 land lane parity",
    "model": "opus",
-   "started": "2026-11-03T01:12:52.802Z",
+   "started": "2026-11-03T02:37:28.810Z",
    "seconds": null,
-   "finished": "2026-11-03T01:54:31.909000+00:00"
+   "finished": "2026-11-03T03:18:31.349000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 188,
+  "runnable_count": 189,
   "blocked_count": 108
  },
  "meter": {
@@ -58,7 +58,7 @@
   },
   "weekly": {
    "pct": 26.0,
-   "resets_at": "2026-11-08T07:00:00.042253+00:00",
+   "resets_at": "2026-11-08T07:00:00.273687+00:00",
    "used_words": "of your weekly allowance used",
    "left": 74.0,
    "left_words": "of your weekly allowance left"
@@ -68,7 +68,7 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-02T20:10:16.715444-05:00"
+  "read_at": "2026-11-02T21:36:32.363532-05:00"
  },
  "ui": {
   "week_pct": 0.689,
@@ -85,10 +85,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 9.83,
-  "usage_pct": 23.2,
-  "work_pct": 69.9,
-  "read_at": "2026-11-03T02:27:00+00:00",
+  "week_pct": 10.39,
+  "usage_pct": 23.5,
+  "work_pct": 69.3,
+  "read_at": "2026-11-03T03:49:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -99,7 +99,8 @@
     "m": "sonnet",
     "e": "medium",
     "at": "2026-11-02T20:29:40-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a2",
@@ -121,7 +122,8 @@
     "m": "sonnet",
     "e": "medium",
     "at": "2026-11-02T20:29:40-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a2",
@@ -132,7 +134,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-02T20:29:40-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a2",
@@ -143,26 +146,27 @@
     "m": "sonnet",
     "e": "high",
     "at": "2026-11-02T20:29:40-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    }
   ]
  },
  "api_credits": [
   {
    "name": "company",
-   "used_usd": 124.36,
+   "used_usd": 149.26,
    "total_usd": 200.0
   }
  ],
  "disk": {
-  "free_gb": 42,
+  "free_gb": 35,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 12,
-  "at": "2026-11-02T21:27:00-05:00"
+  "at": "2026-11-02T22:49:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -228,92 +232,86 @@
    {
     "w": "Odalys",
     "k": "tools",
+    "t": "A personal-lane session refills continuously...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "After T-1050 landed T-0642",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "T-0296 follow-on reminder",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Extension lane",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-1035 independent review",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Lanes get the main account's access,...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Re-check only the fixes for your T-1082...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Lane sessions lose work",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
     "t": "First run on one account, after sign-in",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Finish T-0921",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "an Investor c6592809213",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "an Investor c6592809213",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "an Investor c6592809213",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "After T-1035 lands",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "an Investor c6589434651",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "From T-1105",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "From T-1115",
     "s": "next",
     "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-1185 re-check T-1035 fixes, then land",
-    "at": "2026-11-03T02:25:19.361000+00:00",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-1050 land T-0642 then MacBook xc-test",
-    "at": "2026-11-03T02:24:27.418000+00:00",
-    "o": "c"
+    "w": "Idris+pernille",
+    "t": "The app's code editor and other Swift parts now build as plain Xcode targets, without the nested...",
+    "at": "2026-11-02T22:45:00-05:00"
    },
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "T-1186 lane keeps working while branch waits",
-    "at": "2026-11-03T02:09:52.591000+00:00",
-    "o": "c"
+    "t": "The guard that blocks deleting records now almost never blocks harmless commands: about 0.3...",
+    "at": "2026-11-02T22:19:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "A personal account no longer sits idle while its finished work waits to be merged: the waiting...",
+    "at": "2026-11-02T22:17:00-05:00"
    }
   ],
   "count": {
-   "next": 188,
+   "next": 189,
    "wait": 30,
    "blocked": 78,
    "you": 12
@@ -324,8 +322,10 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
+  "done_text",
   "task_open",
   "lane_task",
   "task_next"

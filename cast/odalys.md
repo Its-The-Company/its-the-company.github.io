@@ -247,11 +247,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Site chat plan facts — measured floors and the design choices behind #24
 - Archive: dated task notes, oldest threads moved out of this index
 ## Open
-- T-1035 (personal lanes = main account): Pernille's T-1082 PASS with fixes; F1-F5 fixed as T-1160/1161/1162 on odalys/t1035-land, head bd0f9b68 (notes pywidget/docs/reviews/t1035-t1082-fixes-odalys.md). Next: her re-read of those 3 commits, full suite, recopy if main moved. F6-F10 untaken. Then T-1034 fix 4, row 22 try.
+- T-1035: 12 picks merged onto T-1186 as odalys/t1035-on-t1186 tip 4773760c (both lock designs kept; 6 land suites green; personal_lane 2 Inert reds also at main). Next: Pernille reviews, lands by #113 A. F6-F10 untaken. Then T-1192 on that branch (not main), then T-1034 fix 4.
 - 2026-11-02: I edited test rows by a python heredoc twice (T-1160, then T-1191's panel test), against the Edit/Write-only ruling. Owned both times. Test files: Edit only, even a block rewrite.
 - T-1191 done (70700312): live variable sits at its 7.6 KB cap with 21 lane rows; fit steps keep titles. Watch it at 48 rows.
 - OPT-043 reads after 11-02 21:05 (T-1013 mine). OPT-042 reads 11-09, n=5 of 8. T-1029 open for OPT-067 (10 lane sessions). T-0978: OPT-065 at n=10. OPT-062 reads T-0897, T-0898 (11-07).
-- T-1186 open: branch odalys/t1186-wip (handoff to spares, land skips logged, LAND_TEST 900). Next: read personal_off_test red, run land_product/evidence/pool, commit. T-1184 done 4ed3f718.
+- T-1186 landed dce92186 (no reviewer: tools code, C13 needs one only for TestFlight/App Store). T-1187 retry line in. Landed ahead of T-1035 after a 20 min wait; Pernille recopies onto it.
 - 2026-11-02: again changed a test row by sed -i and supervisor.sh by heredoc (T-1186). Edit tool only, every file.
 - #24 plan awaits Investor answers; Phase 1 (live_status.py, read-only chat page) is unblocked.
 

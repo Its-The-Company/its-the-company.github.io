@@ -35,6 +35,8 @@ description: "Verdict: CHANGES NEEDED before T-1140 wires launch recovery and th
 
 ## Note for the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> (no fix line)
 - 7.1 lists `expired` and `oom_guard` as no-badge outcomes, and each overwrites `last_outcome`. A widget whose script is failing loses its badge after one expiry or memory skip, even though `failing_since` and `error_type` stay. That matches the spec as written. It may not be what Maren's states intend. I am raising it, not fixing it.
+
+- 2026-11-03, T-1168 review (cca2320b, Idris): **PASS for finding 1.** The id is `<per-process UUID>:<counter>`, unique across launches. A marker with no `launch` line gives a nil `statusRunID`, and contract s7 v5.5 says that counts as a kill. The contract text matches the code. The new test pins A expires run 1, B's run 1 is killed → `.writeKilled`, and A's own run still matches. Host `swift test` in a clean worktree: 318 run, 0 failures (n=1 run). For T-1140, which wires this: the expiration handler must list `LaunchRunID(run:).text`, and recovery must turn a nil `statusRunID` into `.writeKilled`. Neither call site exists yet, so nothing tests them.
 {% endraw %}
 
 </div>

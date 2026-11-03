@@ -1,40 +1,56 @@
 {
  "schema": 1,
- "at": "2026-11-03T20:21:46.764300+00:00",
+ "at": "2026-11-03T21:01:57.549151+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-03T14:29:51-05:00"
+  "started": "2026-11-03T15:28:08-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "idris",
-   "task": "[build] T-1634 extension lane items 2-4",
+   "name": "odalys",
+   "task": "[tools] T-1029 lane retries and silent ticks",
    "model": "opus",
-   "started": "2026-11-03T19:31:29.969Z",
+   "started": "2026-11-03T20:56:54.127Z",
    "seconds": null,
-   "finished": "2026-11-03T20:20:11.368000+00:00"
+   "finished": "2026-11-03T21:01:08.773000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-1207 runner gate pass bar ruling",
+   "model": "opus",
+   "started": "2026-11-03T20:54:30.546Z",
+   "seconds": null,
+   "finished": "2026-11-03T20:55:55.196000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-1207 runner gate last two failures",
+   "model": "opus",
+   "started": "2026-11-03T20:33:51.269Z",
+   "seconds": null,
+   "finished": "2026-11-03T20:54:15.406000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 227,
+  "runnable_count": 232,
   "blocked_count": 117
  },
  "meter": {
   "five_hour": {
-   "pct": 11.0,
-   "resets_at": "2026-11-03T20:59:59.760841+00:00",
+   "pct": 13.0,
+   "resets_at": "2026-11-03T20:59:59.707614+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 89.0,
+   "left": 87.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 31.0,
-   "resets_at": "2026-11-08T06:59:59.760864+00:00",
+   "resets_at": "2026-11-08T06:59:59.707635+00:00",
    "used_words": "of your weekly allowance used",
    "left": 69.0,
    "left_words": "of your weekly allowance left"
@@ -44,10 +60,10 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-03T14:29:48.543260-05:00"
+  "read_at": "2026-11-03T15:28:06.462779-05:00"
  },
  "ui": {
-  "week_pct": 0.686,
+  "week_pct": 0.681,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -61,53 +77,54 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 18.81,
-  "usage_pct": 31.6,
-  "work_pct": 68.6,
-  "read_at": "2026-11-03T20:26:00+00:00",
+  "week_pct": 18.68,
+  "usage_pct": 31.5,
+  "work_pct": 68.0,
+  "read_at": "2026-11-03T21:04:00+00:00",
   "running": [
    {
-    "lane": "a",
-    "task": "T-1276",
-    "w": "Odalys",
+    "lane": "b",
+    "task": "T-1646",
+    "w": "Idris",
     "k": "tools",
-    "t": "Personal account b3 stopped on T-1065+T-1066+T-1248",
+    "t": "Personal branch personal/a5 did not land",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-03T15:18:13-05:00",
-    "n": "Evan"
+    "at": "2026-11-03T16:00:06-05:00",
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
-    "task": "T-1642",
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-0675 item 7, independent review of the extension lane's Python side:...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T15:24:39-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1640",
-    "w": "Maren",
-    "k": "tools",
-    "t": "Personal account a2 stopped on T-1633+T-1635",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T15:17:05-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1641",
+    "task": "T-1481",
     "w": "Odalys",
     "k": "tools",
-    "t": "Look at T-1395",
+    "t": "Look at T-1420",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-03T15:17:05-05:00",
+    "at": "2026-11-03T16:00:06-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b2",
+    "task": "T-1653",
+    "w": "Operator",
+    "k": "tools",
+    "t": "P1, from T-1029",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T16:02:24-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b2",
+    "task": "T-1654",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal account b3 stopped on T-1480",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T16:02:24-05:00",
     "n": "Jeremy"
    }
   ]
@@ -120,14 +137,14 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 17,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-03T15:26:00-05:00"
+  "at": "2026-11-03T16:04:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -200,20 +217,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "After T-1050 landed T-0642",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "fix",
-    "t": "Runner.py profile allows...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Continues T-1252 part",
     "s": "next",
     "o": "c"
@@ -249,7 +252,21 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Lane sessions lose work",
+    "t": "First run on one account, after sign-in",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "A path for the two personal API keys",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "After T-1035 lands",
     "s": "next",
     "o": "c"
    }
@@ -257,22 +274,22 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "The Simulator warm-up work (T-1467: warm a new test device before its first job) clashed with...",
-    "at": "2026-11-03T15:21:00-05:00"
+    "t": "Both last pieces were already on main since 2 November: a task that keeps failing now waits...",
+    "at": "2026-11-03T16:00:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "A widget's first run now assumes 21 MiB, as Ines ruled; two heavy premades leave the widget...",
-    "at": "2026-11-03T15:19:00-05:00"
+    "w": "Odalys+ines",
+    "t": "The Investors' MacBook can now run our app's tests inside its safety sandbox. The last 3...",
+    "at": "2026-11-03T15:55:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "The widget's memory meter now counts the moment the widget's picture is saved, so the measured...",
-    "at": "2026-11-03T14:22:00-05:00"
+    "w": "Odalys",
+    "t": "Sessions on the Investors' personal Claude accounts no longer lose their agents' work 10 minutes...",
+    "at": "2026-11-03T15:32:00-05:00"
    }
   ],
   "count": {
-   "next": 227,
+   "next": 232,
    "wait": 33,
    "blocked": 84,
    "you": 15

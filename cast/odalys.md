@@ -253,7 +253,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - OPT-043 reads after 11-02 21:05 (T-1013 mine). OPT-042 reads 11-09, n=5 of 8. T-1029 open for OPT-067 (10 lane sessions). T-0978: OPT-065 at n=10. OPT-062 reads T-0897, T-0898 (11-07).
 - T-1186 landed dce92186 (no reviewer: tools code, C13 needs one only for TestFlight/App Store). T-1187 retry line in. Landed ahead of T-1035 after a 20 min wait; Pernille recopies onto it.
 - 2026-11-02: again changed a test row by sed -i and supervisor.sh by heredoc (T-1186). Edit tool only, every file.
-- T-1201 gate at 19d5907a failed (exit 65, 0 tests): profile denies file-read-xattr in job folder. Fix T-1207, then approve-sandbox on #41, then first MacBook job, then T-1116.
+- T-1207 (11-03): gate r7 at 096b2b76 had 3 reds. The 2 UI reds pass alone both ways (unsandboxed n=1, sandboxed n=2), so they are flakes; the bridge red is T-1466. No profile change. Pass bar (fails unsandboxed too, or passes when rerun alone) needs Ines; then T-1201, then T-1116.
 - 2026-11-03 T-0778: third slip, technique_counts.py edited by a python heredoc. Before any edit, pick Edit; no "many replacements" excuse.
 - OPT-059 in_flight 11-03, due 11-05 (n=150 budgeted calls). Before now 25.3% (n=569), not 22.3%. lane.md lacks the budget sentence; "site" kind has no budget.
 - T-1192 done 11-03 (f1a496f47 lift, a9792662d tick, #41 c6600702731). Slice 2 had left 3 personal_off reds (--unsaved suffix); caught only by running every suite that copies the tick. After a tick change, run all of them.
@@ -262,7 +262,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-1252 part 1 done 11-03 (9cba31b45, e6f368ad2, #41 c6602881564): 53 notices, 9 ticked, 0 re-queued, 44 reassigned (16 to me). Part 2 is T-1288. Slip: edited a scratch script by python heredoc; Edit even in scratch.
 - T-1288 (11-03): board_stale.py + test (24/24 green) + supervisor step 12a1, uncommitted in lane a, copies in T-1288 scratch. Guard refused the run that did git show of supervisor.sh; stopped. Live board: 0 of 210 flagged. Second guard stop near supervisor.sh (after T-1279).
 - T-1425 (11-03, f0aeae494): Evidence may not cite ops/lane-outbox/. Slip: ran board_tick_test.py bare in lane b; it queued 4 real records, burned T-1429. tests/run.sh only.
-- T-1029 (11-03, cf2e7e359): sessions end by -p's 10 min background ceiling (17 of 60). Fix CLAUDE_CODE_PRINT_BG_WAIT_CEILING_MS=0 on holder launch + pool row, both in T-1029 scratch; guard refused bash -n of the copy (third stop near lane files). Install is T-1484 (Operator). Back-of-line, no-task log unchecked.
+- T-1029 ticked 11-03 (0740ff93d): cause was -p's 10 min background ceiling (17 of 60); fix installed by Operator as T-1484 (88bb11d4a). Back-of-line and no-task log were already in 11215bdba. Before/after read is T-1653 (Operator, after 10 sessions). Check main before redoing an item.
 - #24 plan awaits Investor answers; Phase 1 (live_status.py, read-only chat page) is unblocked.
 
 ## Standing lessons (details in archive.md)

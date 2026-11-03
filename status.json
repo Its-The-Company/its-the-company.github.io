@@ -1,50 +1,58 @@
 {
  "schema": 1,
- "at": "2026-11-03T08:48:36.759559+00:00",
+ "at": "2026-11-03T10:05:03.067365+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-03T01:06:43-05:00"
+  "started": "2026-11-03T03:52:22-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "pernille",
-   "task": "[review] T-1244 review T-1178/T-1180",
+   "name": "odalys",
+   "task": "[tools] T-1192 slice 3 in-session landing",
    "model": "opus",
-   "started": "2026-11-03T07:03:56.165Z",
+   "started": "2026-11-03T09:25:58.333Z",
    "seconds": null,
-   "finished": "2026-11-03T08:48:07.636000+00:00"
+   "finished": "2026-11-03T10:04:38.529000+00:00"
   },
   {
-   "name": "idris",
-   "task": "[test] T-1178 link-rule tests (+T-1180)",
+   "name": "odalys",
+   "task": "[tools] T-1192 slice 2 lane landing",
    "model": "opus",
-   "started": "2026-11-03T06:07:50.371Z",
+   "started": "2026-11-03T09:14:05.812Z",
    "seconds": null,
-   "finished": "2026-11-03T07:02:44.710000+00:00"
+   "finished": "2026-11-03T09:25:45.176000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-1192 lane continuous refill",
+   "model": "opus",
+   "started": "2026-11-03T08:53:48.237Z",
+   "seconds": null,
+   "finished": "2026-11-03T09:13:50.341000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 188,
-  "blocked_count": 108
+  "runnable_count": 193,
+  "blocked_count": 109
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
-   "resets_at": null,
+   "pct": 5.0,
+   "resets_at": "2026-11-03T10:59:59.647225+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 100.0,
+   "left": 95.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 26.0,
-   "resets_at": "2026-11-08T07:00:00.346563+00:00",
+   "pct": 27.0,
+   "resets_at": "2026-11-08T06:59:59.647245+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 74.0,
+   "left": 73.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -52,10 +60,10 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-03T01:06:41.174740-05:00"
+  "read_at": "2026-11-03T03:52:21.259771-05:00"
  },
  "ui": {
-  "week_pct": 0.689,
+  "week_pct": 0.695,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -69,57 +77,11 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 11.36,
-  "usage_pct": 24.1,
-  "work_pct": 65.1,
-  "read_at": "2026-11-03T08:51:00+00:00",
-  "running": [
-   {
-    "lane": "b3",
-    "task": "T-1065",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Tools/personal_tick.sh:591 counts a mention as done, and...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T03:05:56-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-1066",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "A requeue clears one account while done, tries, tried and resumed are read...",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-03T03:05:56-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1248",
-    "k": "tools",
-    "t": "Personal account b stopped on T-1192+T-1083+T-0956+T-1062+T-1049+T-1195: the...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T03:05:56-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-0042",
-    "w": "Idris",
-    "k": "build",
-    "t": "Acknowledgements screen",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T03:05:56-05:00",
-    "n": "Jeremy"
-   }
-  ]
+  "week_pct": 11.46,
+  "usage_pct": 23.7,
+  "work_pct": 64.4,
+  "read_at": "2026-11-03T10:07:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -129,14 +91,14 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
+  "free_gb": 14,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-03T03:51:00-05:00"
+  "at": "2026-11-03T05:07:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -209,13 +171,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "A personal-lane session refills continuously...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "After T-1050 landed T-0642",
     "s": "next",
     "o": "c"
@@ -261,29 +216,36 @@
     "t": "Company > Infrastructure gets a...",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "A path for the two personal API keys",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Pernille",
-    "t": "Checked Idris's two test fixes for the rule that keeps widget taps inside the app; both work,...",
-    "at": "2026-11-03T03:47:00-05:00"
+    "w": "Odalys",
+    "t": "Personal-account sessions now start the next task the moment one finishes, claim only what they...",
+    "at": "2026-11-03T05:04:00-05:00"
    },
    {
     "w": "Operator",
-    "t": "The Investors approved and applied the fold of all 18 standing rulings into the Commandments'...",
-    "at": "2026-11-03T02:15:00-05:00"
+    "t": "Nothing to retry: the one parked commit (53b09f2d: LANE CLEAR, the lane's all-clear word,...",
+    "at": "2026-11-03T04:00:00-05:00"
    },
    {
-    "w": "Idris+pernille",
-    "t": "A web reply in an odd text encoding no longer crashes a script with an unexplained error; it now...",
-    "at": "2026-11-03T02:06:00-05:00"
+    "w": "Pernille",
+    "t": "Checked Idris's two test fixes for the rule that keeps widget taps inside the app; both work,...",
+    "at": "2026-11-03T03:47:00-05:00"
    }
   ],
   "count": {
-   "next": 188,
+   "next": 193,
    "wait": 30,
-   "blocked": 78,
+   "blocked": 79,
    "you": 12
   }
  },

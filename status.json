@@ -1,40 +1,48 @@
 {
  "schema": 1,
- "at": "2026-11-03T22:02:44.403388+00:00",
+ "at": "2026-11-03T22:17:43.173228+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-03T16:17:05-05:00"
+  "started": "2026-11-03T17:08:06-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "idris",
-   "task": "[build] T-1170 T-1169 loop breaker key and expiry mutex",
+   "task": "[build] T-1140 Activity run log Swift half",
    "model": "opus",
-   "started": "2026-11-03T21:19:45.267Z",
+   "started": "2026-11-03T22:10:05.868Z",
    "seconds": null,
-   "finished": "2026-11-03T22:01:58.580000+00:00"
+   "finished": "2026-11-03T22:16:47.100000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[ops] T-1288 chair ruling on guard stop",
+   "model": "opus",
+   "started": "2026-11-03T22:10:15.857Z",
+   "seconds": null,
+   "finished": "2026-11-03T22:13:13.213000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 216,
-  "blocked_count": 119
+  "runnable_count": 215,
+  "blocked_count": 120
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
-   "resets_at": "2026-11-04T01:59:59.737003+00:00",
+   "pct": 2.0,
+   "resets_at": "2026-11-04T01:59:59.558076+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 100.0,
+   "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 32.0,
-   "resets_at": "2026-11-08T06:59:59.737027+00:00",
+   "resets_at": "2026-11-08T06:59:59.558098+00:00",
    "used_words": "of your weekly allowance used",
    "left": 68.0,
    "left_words": "of your weekly allowance left"
@@ -44,10 +52,10 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-03T16:17:04.490438-05:00"
+  "read_at": "2026-11-03T17:08:04.589998-05:00"
  },
  "ui": {
-  "week_pct": 0.698,
+  "week_pct": 0.691,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -61,10 +69,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 25.42,
-  "usage_pct": 37.8,
-  "work_pct": 78.6,
-  "read_at": "2026-11-03T22:06:00+00:00",
+  "week_pct": 25.18,
+  "usage_pct": 37.6,
+  "work_pct": 78.2,
+  "read_at": "2026-11-03T22:20:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -88,6 +96,62 @@
     "at": "2026-11-03T16:21:46-05:00",
     "n": "Evan",
     "d": 1
+   },
+   {
+    "lane": "a2",
+    "task": "T-1662",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Read T-0543 at 5accafbe, by someone other than its author",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T17:14:37-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a2",
+    "task": "T-1663",
+    "w": "Idris",
+    "k": "tools",
+    "t": "Personal branch personal/b did not land",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T17:14:37-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-1667",
+    "w": "Operator",
+    "k": "tools",
+    "t": "Personal branch personal/a4 did not land",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T17:14:37-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-1640",
+    "w": "Maren",
+    "k": "tools",
+    "t": "Personal account a2 stopped on T-1633+T-1635",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T17:19:09-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-1641",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Look at T-1395",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T17:19:09-05:00",
+    "n": "Evan"
    },
    {
     "lane": "b",
@@ -134,14 +198,14 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 12,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-03T17:06:00-05:00"
+  "at": "2026-11-03T17:20:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -212,13 +276,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Continues T-1252 part",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "T-0296 follow-on reminder",
@@ -266,30 +323,37 @@
     "t": "Activity run log, Swift half",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Three calls Idris's build lines wait on,...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "When iOS stops a background widget run, the note that says 'we stopped it, not the script' can...",
-    "at": "2026-11-03T17:01:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The rule that pauses a widget's background refresh after two crashes now reads each run once...",
-    "at": "2026-11-03T17:01:00-05:00"
+    "w": "Odalys+ines",
+    "t": "A new check flags board tasks that are still open although their work is already done or...",
+    "at": "2026-11-03T17:12:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "The inbox had skipped one Investor comment on the costing request because it held an unusual...",
-    "at": "2026-11-03T16:18:00-05:00"
+    "t": "The parked a3 work (six tasks, none yet on main) changes the lane's tick and its land check, so...",
+    "at": "2026-11-03T17:10:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "When iOS stops a background widget run, the note that says 'we stopped it, not the script' can...",
+    "at": "2026-11-03T17:01:00-05:00"
    }
   ],
   "count": {
-   "next": 216,
+   "next": 215,
    "wait": 35,
-   "blocked": 84,
-   "you": 15
+   "blocked": 85,
+   "you": 16
   }
  },
  "qr": [],

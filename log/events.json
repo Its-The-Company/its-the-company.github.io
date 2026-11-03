@@ -1,5 +1,19 @@
 [
 {
+"time": "2026-11-03T17:17:06-05:00",
+"worker": "operator",
+"type": "session",
+"summary": "17:08 work session (pool 2): Ines ruled T-1288 and landed board_stale.py (bcbfec138); supervisor wiring asked on #158; Idris landed T-1140 slice 1 (0cfa6404b), rest on T-1669",
+"link": ""
+},
+{
+"time": "2026-11-03T17:13:00-05:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-1288 chair ruling: the guard stopped reads of tools/supervisor.sh (Keychain lines), not board_stale. Landed Odalys's board_stale.py without the wiring (bcbfec138, 24/24, 0 of 249 flagged); wiring is request T-1668; T-1252 open until it lands. Replied #41.",
+"link": ""
+},
+{
 "time": "2026-11-03T17:02:23-05:00",
 "worker": "Idris",
 "type": "task",
@@ -193,6 +207,13 @@
 "worker": "operator",
 "type": "message",
 "summary": "A personal account's stop was lifted by an Investor",
+"link": ""
+},
+{
+"time": "2026-11-03T11:00:41-05:00",
+"worker": "Odalys",
+"type": "guard_refusal",
+"summary": "T-1433: security guard refused the local rebase of parked/a3/20261103-105620-51921 onto main (read as bringing GitHub changes in); item stopped, no other tool tried. Branch also changes the tick and the land check (T-1209 hold), so it is left for a company session.",
 "link": ""
 },
 {

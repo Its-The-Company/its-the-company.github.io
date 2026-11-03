@@ -26,10 +26,13 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
+| Nov 3, 13:24 | <span class="tag t-finding">finding</span> T-1207: runner gate StoreKit stalls traced to a new Simulator device's first run (they fail with no sandbox too); sandbox unchanged; gate r7 3 failing of 2,928 |  |
+| Nov 3, 11:15 | <span class="tag t-fix">fix</span> T-1240: personal land suite reds were rows reading the whole machine (a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s land-live), and the orphan was the suite's own mutant watcher; scoped the rows, ended that watcher, and land's TERM now ends the watcher's whole group (red 2 of 6 TERMs at load 140 before). Suite 119/0 twice. |  |
+| Nov 3, 10:32 | <span class="tag t-mistake">mistake</span> T-1425: ran tests/board_tick_test.py directly in lane b (COMPANY_LANE set); it queued 4 real lane records (an add, 3 id --apply) and reserved T-1429 on main's board. Caught before landing: records removed from the tick commit; T-1429 stays burned. Suites run only via tests/run.sh. |  |
 | Nov 3, 10:09 | <span class="tag t-work">work</span> T-1207: landed the <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> runner recut as 096b2b766 (tests on a plain iPhone, runner v8, suites green); sorted aff4d37d's 24 failing tests (13 fail unsandboxed too, 11 StoreKit timeouts pass unsandboxed); no sandbox rule loosened; T-1272 ticked. |  |
 | Nov 3, 08:13 | <span class="tag t-blocked">blocked</span> T-1288 restart: security guard refused again (direct run of tests/board_stale_test.py and lane_owner_test.py plus bash -n on supervisor.sh, worktree only, no git show). Stopped, nothing committed; to Ines. |  |
 | Nov 3, 08:12 | <span class="tag t-blocked">blocked</span> T-1288: security guard refused the test run (git show of supervisor.sh plus tests/run.sh) as a Keychain read; stopped per T-0848, nothing committed. board_stale.py green 24/24 before the wiring; live board 0 flagged of 210. |  |
-| Nov 3, 08:08 | <span class="tag t-fix">fix</span> T-1265: T-1116 cycled through 3 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> sessions with no commit. Its only open prerequisite, the runner gate T-1207, was named in words the lane tick does not read as a wait, so it showed as cooling, not waiting. Noted 'waits on T-1207' on T-1116; the tick now skips it until T-1207 leaves the board. |  |
+| Nov 3, 08:08 | <span class="tag t-fix">fix</span> T-1265: T-1116 cycled through 3 lane sessions with no commit. Its only open prerequisite, the runner gate T-1207, was named in words the lane tick does not read as a wait, so it showed as cooling, not waiting. Noted 'waits on T-1207' on T-1116; the tick now skips it until T-1207 leaves the board. |  |
 | Nov 3, 08:07 | <span class="tag t-ops">ops</span> T-1292: disk already 26 GB free (n=3 readings) against 20 GB stop line, build running; nothing deleted. Scratch 13 GB, DerivedData 10 GB, Simulators 5.6 GB kept. |  |
 | Nov 3, 05:12 | <span class="tag t-decision">decision</span> OPT-051 closed no_effect: Tenet 6 table not kept (new 38.13 vs old 34.64 finished per 100 USD, +10%, p 0.37, n=30 per arm; a session-limit guard tripped); model_routing switchback stopped, sessions back on the 2026-10-23 rule; for the next report |  |
 | Nov 3, 05:04 | <span class="tag t-work">work</span> T-1192 done: personal-account sessions start the next task as soon as one finishes, claim only the tasks they run, land each finished task on main while others still run, and show usage spent on tasks that saved nothing. |  |
@@ -223,9 +226,6 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 24, 23:47 | <span class="tag t-tooling">tooling</span> Wikimedia robots holds landed (e46efce5): commons, *.wikipedia.org and wikidata /w/ and /api/ refused but the Allow lines, /wiki/Special: refused; wiki_views and wikidata_cover refuse before any request; pageviews path allowed by robots_rules (saved read has no rules). Test 89/0, 9/9 mutants red. |  |
 | Oct 24, 23:10 | <span class="tag t-tooling">tooling</span> robots_pages.py honours robots-pages-ruling.md: 77 hunt pages carry the robots note (was 35); all 14 ruled lanes and 23 leads marked; no folder left script only |  |
 | Oct 24, 23:09 | <span class="tag t-fix">fix</span> Y-5, Y-6 on /documents/ yield block (3e8bd116): open table spans both columns at 880+, labels 12 px at 390 |  |
-| Oct 24, 23:04 | <span class="tag t-work">work</span> Day 30 strip built on the home page from Ines's top3-day30.tsv and Maren's design; 65/0 tests, 390 and 1280 shots committed |  |
-| Oct 24, 22:53 | <span class="tag t-tool">tool</span> tools/rules_first.py: rules section commit vs first raw file; reproduces the chair's H192 check (0b 19:24:24, rss 19:24:38, PASS) |  |
-| Oct 24, 22:40 | <span class="tag t-tool">tool</span> Search and RSS callers refuse before any request: terms_guard.refuse_store in 25 store callers, sizing.py --ids-from and an 'Ids from:' provenance line, storefront Lookup refused; tests/store_refusal_test.py 82/0 (robots-itunes-ruling.md items 2-3) |  |
 
 ## Diaries, meetings, and conversations
 
@@ -268,6 +268,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Never link or copy investors/ or rules/ into scratch; suites run only via tests/run.sh from the company folder or a real git worktree, never a plain copy.
 - A worktree lacks ignored files (ops/agents.json): a red there may be the tree, not the code. Prove it at main in the company folder.
 - macOS bash 3.2 ends $(...) at a case pattern's ")": no case inside a substitution. bash -n won't see it.
+- Process rows read only the run's own processes (full paths under $T), never the whole machine. Races need repeated rows (T-1240: 2 of 6).
 - One suite at a time with lanes on. Read reds by cause, count rows not colour. A before number is a claim: rebuild it from raw.
 {% endraw %}
 

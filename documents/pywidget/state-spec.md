@@ -14,6 +14,7 @@ description: "A failed run also means old data, so the badge outranks the stale 
 Maren, 2026-10-25. Status: **proposal** (<span title="Commandment 51: the Investors approve every visual before it ships.">Commandment 51</span>; nothing approved). Source: PROPOSAL-002 s5 (error states on the widget) and s6 (premades: live preview, Pro lock, source after purchase). Direction A shown; every colour is a role from `../tokens.json`, so direction B is a token swap.
 
 Files (all in this folder):
+- `draw_refresh.py`, `states-refresh.png`, `refresh-qa.json`: s10 Refresh and age (T-1434, draft C51).
 - `state-tokens.json`: priority, slot geometry, SF Symbol names, role per mode, surfaces per family, copy strings, VoiceOver strings. Single source for the drawings and for the build.
 - `draw_states.py`: draws the six sheets and writes `qa.json`. Imports the shared widget drawings from `../mockups/draw.py`. Headless Chromium, no image model.
 - `check_states.py`: runs `../check_tokens.py` (336 pairs, 0 fails), then 71 state pairs (60 token pairs, 11 mockup approximations), 0 fails, plus the copy rules of s3.1 and s3.2, the stale rule of s1 (`>=`, absent means never) and "Double-tap" in every VoiceOver string. Closest: vibrant white 0.66 on the accessory background, 5.30:1.
@@ -209,8 +210,27 @@ Strings in `state-tokens.json` `voiceover`. Each state is one combined element: 
 9. The five sheets drawn before 21:10 caption the stale mark "now − sampled_at > stale_after". The drawn state is unchanged by Ruling 3, so they were not redrawn; `draw_states.py` now writes "now ≥ sampled_at + stale_after", and the next redraw carries it. s1 is the rule.
 7. The too-large glyph name and the `view=activity` route are [recall] and proposed; Idris confirms both. Dark extra large is not drawn on the two new sheets (same layout as light on dark tokens, dropped to keep the PNG under 300 KB); the dark token pairs are checked.
 8. The too-large card is decided per render; `render-fault.json` is the record for the app, not a sticky state. When a smaller tree arrives and passes the rule, the card goes without the app clearing anything. Idris confirms the renderer reads it that way.
-4. iOS 26 Clear style: treated as accented here [recall]; not drawn.
+4. iOS 26 Clear style: treated as accented here [recall]; not drawn. *T-1438, 2026-11-03 (Maren):* still open. Clear is drawn as an approximation on every premade sheet (render.py CLEAR row), and the accent group is now drawn on `widgets/modes-accented.png` and `states-accented.png`; whether Clear reports `.accented` and honours the group needs Apple's widget HIG page, whose fetch moved to T-1443 (the 12-a-day cap was spent on 11-03).
 5. Ines reviews; then `state-tokens.json` merges into `tokens.json` under `widget.states`. C51 approval goes with the direction pick.
+
+### 8.1 T-1438 accented pass (Maren, 2026-11-03, DRAFT C51)
+
+Sheets: `widgets/modes-accented.png` (12 premades small and medium, the free five at their accessory families, gallery 07 Run heatmap) and `states-accented.png` (the 8 premade states at small and medium), drawn by `widgets/draw_modes.py` through render.py. Each row has accented light, accented dark and a group map (accent group magenta, default grey). `check_widget_modes.py --strict`: 12 trees, 52 views, all must-be-zero counts 0.
+
+Colour alone (the brief named heatmap, progress, habits):
+- 06 Habits: passes. Done is a filled disc, not done a ring: a shape cue in every mode. The today ring is only 0.5 pt heavier, and a done today loses it; minor, not proposed.
+- 09 Day progress: passes. Every bar has its percent in text.
+- 03 Steps: passes. Today's bar is last and has its day letter; the hero carries the number.
+- Gallery 07 Run heatmap (an L4 gallery design, not a premade): fails. Four steps by luminance alone; stripped, white at 0.18 / 0.36 / 0.66 / 1.00, adjacent steps 1.81:1 to 2.57:1 on the two grounds drawn (sheet footer). The total and Today count carry the number; the grid does not.
+
+10. Heatmap steps need a second cue. Proposed: size per step (0 runs a 35% square, 1-2 55%, 3-5 80%, 6+ full), centred in the cell, so a level reads by size where luminance fails.
+11. 08 Storage medium, stale: the top-trailing "Last read 1:52 PM" runs under the s2 corner slot (QA: outside the margin, three panels). 04 Distance medium's top-trailing stamp only just clears it.
+12. The stale glyph draws in the default group on these sheets (render.py `stale_slot`); s4 says it takes `.widgetAccentable()`. The spec stands; render.py is mine to correct, and Idris's build should follow s4.
+13. Renderer checks, mine: 07 Shortcuts medium marks its 4 tile glyphs accentable in the tree, but the group map appears to draw them grey; 04 Distance small in accented dark draws "2..." here, while qa.json for the main sheets has no truncation and QA_JS did not flag it. Either is the renderer until Idris's Simulator shows otherwise.
+
+Proposed build lines (for Ines to place; not built, not on the board):
+- B5 (Pernille, P2): `widgets/gallery/run_heatmap.py` `cell()`: frame each step at its own size (0.35, 0.55, 0.8, 1.0 of `size`) inside a fixed `size` frame; legend uses the same cells. Check: `render.py --set gallery 07` and `draw_modes.py`, heatmap row readable in the group map; contrast table unchanged.
+- B6 (Pernille, P2): `premade.py` storage and distance, systemMedium: when `ctx.stale`, move the top-trailing stamp to the footer or give the header 22 pt trailing space. Check: `draw_modes.py`, states sheet faults 0.
 
 ## 9. Widget picker strings (T-0051, DRAFT C51, for Maren)
 
@@ -228,6 +248,69 @@ Idris, 2026-10-28. The Python widget's configuration (chair ruling item 2) needs
 
 </div>
 
+
+## 10. Refresh and age (T-1434, DRAFT C51, NOT APPROVED)
+
+Maren, 2026-11-03 11:23 ET. Freshness as the person sees it: the control that asks for new data, the moment while it runs, the line that says how old the picture is, and what a refresh clears. Written ahead of T-0678 (the Refresh intent), so the intent builds to it. Every word below and on the sheet is draft UI text (C51) and goes with the next creative batch. Sheet: `states-refresh.png` (335,190 B, 1x), drawn by `draw_refresh.py` (no image model; stand-in glyph paths for the named SF Symbols; copy in its `COPY`, the single source until approval). QA in `refresh-qa.json`: 0 clipped, 0 truncated, 0 text over text, 0 slot over text, 0 slot over the button, 0 tap areas outside the widget, 0 cut times; 32 contrast pairs, 0 under the floor. `check_states.py` now reads it (its section 8) and fails on any fault.
+
+Frames: before tap (stale: read 1:52 PM, now 2:46 PM, stale after 45 min), pending, refreshed, refresh failed; systemSmall and systemMedium in light and dark full colour and in accented, at xxxLarge (widgets clamp there); one light row at Large; accessoryRectangular in vibrant. Large and extra large take the medium bottom row unchanged and are not drawn.
+
+**The constraint, said once.** The Lock Screen families meet vibrant only (s4), so "full colour and accented" cannot be drawn for accessoryRectangular, and Buttons are inert there (L5 s9, [recall], Idris confirms), so the Lock Screen has no refresh control and no pending frame. Its "pending" cell is the before frame, captioned.
+
+### (a) The control: a named refresh, not `@widget.action`
+
+- **Authors get `ui.RefreshButton()`** (proposed, B1). It writes a Button whose action is the reserved name `pywidget.refresh`, with no entry in `actions` and no handler. The renderer maps it to T-0678's Refresh intent.
+- **Why not `@widget.action`.** An action is "state in, new state out" (L5 R12): it runs the author's handler, counts against the taps-off rule (s3.3), and every author would draw a different glyph for the same job. A refresh changes no state; it asks the runtime to fetch with `force` and rerun (bound-fields s5 "Refresh button"), one run per tap. One name, one glyph, one behaviour, so a person learns it once across every widget.
+- **Glyph:** `arrow.clockwise` [recall; Idris confirms the name], in the default group (not accentable: in accented mode the tint belongs to the data). Colour `text.secondary` (`widget.onCard.secondary` on the dark card). Size follows `footnote` to the xxxLarge clamp (13 to 19 pt).
+- **Shape and slot, Home Screen (small, medium, large, extra large):** a 32 pt circle (`bg.sunken` light; white 0.16 on the dark card; white 0.14 accented), bottom-trailing corner of the content area, 44 × 44 pt tap area centred on it (QA: inside the widget in every frame). Bottom-trailing because top-trailing is the state slot (s2) and the two must never meet (QA 0 overlaps). Contrast (`refresh-qa.json`): glyph on its circle 5.95:1 or more (light 5.95, dark 6.13 small and 6.35 medium, accented 6.27; floor 3:1); age line 6.80:1 or more (floor 4.5:1). Same size in every family: it is a control, not decoration.
+- **Placement is the author's, the slot is the default.** `RefreshButton()` can sit anywhere in a layout; the premades and the New-widget template put it in the bottom row with the age line, and that is what the sheet draws.
+- **Accessory families (circular, rectangular, inline):** none. The whole widget opens the app (`widgetURL`), and the app's run refreshes the widget on its next reload. The renderer draws nothing for a `RefreshButton` there, not a dead glyph (B2).
+- **Under taps off (s3.3):** the refresh reruns the failing script, so it is treated like a handler node: drawn as a `Link` to the failed runs.
+- **VoiceOver:** label "Refresh"; while pending, value "Refreshing".
+
+### (b) Between tap and new tree
+
+- **Default `invalidatableContent`** (the modifier is in the schema; the renderer adds it, B2): on the age line, and on every node whose value is bound to a field (bound-fields s5), since those are what a refresh replaces. Nothing else by default; an author marks other nodes with `.invalidatable_content()`.
+- **Not on** the refresh glyph (it should look as it did: the tap registered, the thing is working), the labels, or the corner slot. Never the whole widget: a fully redacted widget reads as blank, and s1 forbids a blank widget.
+- **The slot holds** during pending: the stale clock and the badge stay until a new tree says otherwise (d).
+- **A second tap while pending does nothing new:** T-0678's rerun rule runs once per tap and skips a tree younger than the minimum interval.
+- The sheet's dimming (opacity 0.38) is a stand-in for the system's own effect [recall: a dim and pulse]; it is not a contrast claim. Idris confirms the look in the Simulator under T-0678.
+
+### (c) One age line
+
+- **Words:** "Updated {time}" today; "Updated {weekday}" for the last six days; "Updated {date}" (short numeric, locale) before that. `{time}` is `Text(date, style: .time)`, so 12- or 24-hour follows the person's setting. "Last read" retires: it is a second wording for the same fact, and it reads as a sensor term on a fetch.
+- **One string, one colour, in every state.** Stale does not change the words or the colour (`text.secondary`); the clock in the slot is the stale signal, in one place. The present premade stamp adds `exclamationmark.circle` in `status.warning` when stale: that is the error badge's glyph saying something else, and it is what pushed the T-0469 row under the slot. It goes (B4).
+- **Which time:** the oldest value shown: the earliest `at` among the bound fields the tree draws, else `sampled_at` (B3). The line never claims a newer picture than the oldest number on it.
+- **Truncation priority (settles T-0469's class of bug):** the time never truncates, wraps or scales (`fixedSize`, priority highest); the word "Updated" drops whole, never ellipsised (ViewThatFits: "Updated 1:52 PM", else "1:52 PM"); a title in the same row truncates before the age line loses its word. And the age line never sits in the top row: the top-trailing 24 pt is the slot's. In T-0469's terms: Storage medium moves its stamp to the bottom row.
+- **Measured (SF, regular, `caption2`):** "Updated 1:52 PM" 138.1 pt at xxxLarge (17 pt), 89.4 pt at Large (11 pt); "1:52 PM" 64.4 pt. Room beside the button: small 78 pt, medium 251 pt. So **small shows the short form even at Large type**; medium and up show the full line at every size. The short form sits next to the refresh arrow, which labels it; VoiceOver always reads the full "Updated at 1:52 PM". Risk, stated: a bare time can be read as the clock. If Wrenna's read test shows that, small drops the circle fill (bare glyph, 44 pt tap area kept), which gives 97 pt at Large (13 pt glyph, 6 pt gap) and fits the full line there; at xxxLarge small still shows the short form.
+- **Lock Screen rectangular:** the third line, white 0.66, 13 pt: "Updated 1:52 PM" fits the 142 pt line (QA full form in every frame).
+
+### (d) What a refresh clears
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: (d) What a refresh clears, scrolls sideways" style="--tw:1187px" markdown="1">
+
+| After the tap | Error badge | Stale clock | Age line |
+|---|---|---|---|
+| New tree written, run succeeded | clears (newest run succeeded, s1 row 4) | clears if no bound field is still past its limit (both clocks, bound-fields s6) | the new time |
+| Script failed, timed out, or the forced fetch failed | **shows** on the last good render (outranks the clock, s1) | stays under it | unchanged: the last good time |
+| Bound field missed but the script ran | none | stays for that field until its value arrives | that field's old time |
+
+</div>
+
+
+- A refresh tap is the person asking "is this current?", so a failed refresh must answer, with the badge. A **scheduled** reload whose fetch fails stays silent (no badge), as now: the stale mark covers it when it matters. The refresh intent writes a failed run row when its own forced fetch fails (B5).
+- Both marks clear in the same reload that carries the new tree; nothing in the app has to clear them.
+
+### Proposed build lines (for Ines to place; not built, not on the board)
+
+- **B1 (DSL, Pernille):** `ui.RefreshButton()` writes `{"t": "Button", "p": {"action": "pywidget.refresh"}}` with the `arrow.clockwise` label; `@widget.action` refuses names starting `pywidget.`; `ui.validate` and the schema accept a Button whose action is `pywidget.refresh` with no `actions` entry. Test: a tree with it validates in Python and Swift.
+- **B2 (renderer, Idris, with T-0678):** map `pywidget.refresh` to the Refresh intent; draw the 32 pt circle and 44 pt tap area; add `invalidatableContent` to the age node and bound-field nodes; draw nothing for it in accessory families; under taps off, the s3.3 branch.
+- **B3 (DSL and renderer):** an age node, `ui.Updated()`, that the renderer resolves to the oldest shown time and draws as `ViewThatFits` of the two forms in (c), with the full accessibility label.
+- **B4 (premades, owner of `widgets/premade.py`):** `stamp()` becomes `ui.Updated()` in the bottom row; the stale branch ("Last read", warning glyph) goes. Closes T-0469 with Idris's reshoot.
+- **B5 (runtime, Idris):** the refresh intent writes a failed run row when its forced fetch fails, so s1 row 4 shows the badge; scheduled reloads do not.
+
+Open: glyph names and the Lock Screen inertness (Idris, [recall]); the system's pending look (Idris, Simulator, under T-0678); the small-widget short form (Wrenna's read test, if Ines wants one); C51 with the next creative batch.
 
 ## Chair ruling, 2026-10-25 20:08 ET (Ines): may a free user place a Pro premade on the Home Screen
 
@@ -295,7 +378,7 @@ Ines, CEO
 **Card grammar.** Follows the Pro card (s3.2): centred, whole-widget, no corner slot, no name line (the id `new_widget` is never shown), `text.primary` headline, `text.secondary` caption and glyph. It is not a fault, so the glyph is `text.secondary`, never `status.warning` or `status.danger`. Glyph: `square.dashed` [recall, Idris confirms the name]; accented: the glyph alone is accentable; vibrant: white 1.0. Layout per family: ProCardView's `content` switch with the name line removed.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 7: Ruling, 2026-10-31 12:25 ET (Maren, with Idris, T-0684 part b, F19): what a…, scrolls sideways" style="--tw:676px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: Ruling, 2026-10-31 12:25 ET (Maren, with Idris, T-0684 part b, F19): what a…, scrolls sideways" style="--tw:676px" markdown="1">
 
 | ID | Family | Copy (DRAFT, C51) |
 |---|---|---|

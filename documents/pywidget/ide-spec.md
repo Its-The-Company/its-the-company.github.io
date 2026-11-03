@@ -52,15 +52,48 @@ Exempt by design: content behind a modal (`data-inactive`), disabled buttons, an
 
 - Margins 16 (iPhone), 20 (iPad). Spacing steps 4, 8, 12, 16, 20, 24, 32. Rows at least 44 tall. Every hit target 44 × 44, even where the drawn control is smaller (Run pill 34, key 40 × 36, Stop chip 28).
 - Radii: keys 10, cards 14, banners and strips 12, menus and floating bars 20 to 24 (pill), sheets 28 top corners, alerts 28.
-- Type: the scale in tokens.json. AX3 values used in the frames are Apple's table as I recall it (body 40, headline 40, subheadline 36, footnote 33, caption 32, largeTitle 52). **Idris: confirm them in the Simulator** and correct `TYPE` in draw_ide.py if they differ.
+- Type: the scale in tokens.json. AX3 values used in the frames are Apple's table as I recall it (body 40, headline 40, subheadline 36, footnote 33, caption 32, largeTitle 52); xxxLarge likewise (body 23, callout 22, subheadline 21, footnote 19, caption 18 and 17, largeTitle 40; `TYPE_XXXL` in draw_ide.py). T-1437 tried the one HIG typography fetch on 2026-11-03 through tools/fetch_cite.py --apple; it was refused by the 12-a-day Apple <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>, so the numbers are still recalled. **Idris: confirm them in the Simulator**, or the fetch is retried on the next ET day, and correct `TYPE` and `TYPE_XXXL` if they differ.
 - Clamps: editor code 32 pt, console code 32 pt, gutter 17 pt, key glyphs 22 pt. Nav bar titles, the tab bar and the keyboard do not scale; they use the system Large Content Viewer.
 - AX1 and up: rows stack (`ViewThatFits`, or `dynamicTypeSize.isAccessibilitySize`), segmented filters become a menu button, file tabs become one file menu, editor soft-wraps flush left (1.0: no hanging indent, vendored Runestone 0.5.2 has none; T-0583 review, Maren 2026-10-28), and floating buttons drop their text label (icon only, label kept for VoiceOver).
 - Tabular figures on every changing number: run times, elapsed, counts, line and column.
 
+### 2.1 Dynamic Type per 1.0 screen (T-1437)
+
+Sheets: `ide/A-ax-<screen>-phone.png` (A Paper, light) and `ide/B-ax-<screen>-phone.png` (B Studio, dark), each screen at xxxLarge (no AX layout) and AX3 (AX layout), drawn by `python3 draw_ide.py --ax`; scripted QA in `ide/qa-ax.json`. Sizes are the recalled ones above. Large Content Viewer (LCV) = the system's long-press magnifier for bars that do not scale.
+
+The projects and Pro rows were read from the sheets by eye; the other seven rows give the s2 rules the code draws plus the scripted QA count, not an eye check of every frame. Ines or Idris: open the sheet before building from a row.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 2.1 Dynamic Type per 1.0 screen (T-1437), scrolls sideways" style="--tw:1678px" markdown="1">
+
+| Screen | Wraps | Truncates | Stacks (AX1 and up) | Large Content Viewer | QA (xxxL / AX3) |
+|---|---|---|---|---|---|
+| editor | code soft-wraps flush left; code 20 pt at xxxL, clamps 32 at AX3; gutter 16, then 17 | nothing in the code; file tab names in the tab strip | file tabs become one file menu; run pill drops its label | nav bar, tab bar, key row (keys clamp 22) | 0 / 0 |
+| console | output lines wrap; console code 18 pt at xxxL, 31 at AX3 | nothing | header actions drop labels, icon only | nav bar, sheet grabber | 0 / 0 |
+| traceback | message and frame lines wrap in full | nothing; the exception name never truncates | Structured / Raw toggle stays two segments | nav bar | 0 / 0 |
+| settings | row titles and values wrap | nothing | value moves under the title | nav bar, tab bar | 0 / 0 |
+| Pro | headline, row text, the line under the button | nothing; the button wraps to two lines at AX3 and the price stays whole (C6) | links move into the scrolling body at AX3; only the button and its line stay pinned | close button | 1 / 0 in A, 2 / 0 in B: at xxxL the body scrolls under the pinned footer, which is about two-fifths of the screen (B2) |
+| projects | names and dates wrap | at xxxL the four-segment filter truncates "Lock S..." (B1) | filter becomes "Showing: All" menu; part tiles go under the date; New drops its label | tab bar | 1 / 0 (the truncation) |
+| Activity | reason and time wrap | nothing | filter is a menu; time over reason (layout drawn for AX5 in draw_activity.py) | nav bar | 0 / 0 |
+| prompts | alert title and message wrap; form labels wrap | nothing | alert buttons stack at AX3; form rows put the field under its label | sheet nav bar | 0 / 0 |
+| tour | title and body wrap | nothing | the visual hides at AX3; text and button grow; Skip stays | none | 0 / 0 |
+
+</div>
+
+
+Contrast (T-1437, 2026-11-03): `check_tokens.py --themes themes-pro/themes.json` checked 1,936 pairs (app light, dark and both Increase Contrast sets, 205 each; Pro themes Ember, Fern, Graphite, 65 a set), 0 fails; closest app pair line.strong on bg.raised in darkHC at 3.00 (min 3.0). Rendered frames: lowest text contrast 4.80 (A prompts). No token changed, no hue question for the Investors.
+
+Build lines proposed for Idris (Ines places them; not on the board):
+
+- **B1 Projects filter.** Use the "Showing:" menu whenever the four segments do not fit (`ViewThatFits` over the segmented `Picker` and the menu), not only at `isAccessibilitySize`. Check: xxxLarge on a 390 pt phone shows the menu and no "..." segment.
+- **B2 Pro footer.** From `.xxxLarge` up, pin only the buy button and its line; Restore, Terms and Privacy move to the end of the scrolling body (as at AX3). Check: at xxxLarge the pinned footer is under a third of the screen and every link is reachable by scroll.
+- **B3 Pro button.** The label has no line limit and no scale-down; it wraps. Check: AX3 shows "[price]" whole.
+- **B4 Bars.** Nav titles, the tab bar, the key row and the close button keep their size and set `accessibilityShowsLargeContentViewer`. Check: long-press on a tab at AX3 shows the viewer.
+
 ## 3. Components
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 3. Components, scrolls sideways" style="--tw:624px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 3. Components, scrolls sideways" style="--tw:624px" markdown="1">
 
 | Component | Spec |
 |---|---|
@@ -91,7 +124,7 @@ Maren, 2026-10-26. Under Runestone (ADR-004 option A). Where the section 5 fallb
 4. **VoiceOver.** Each key is one element, trait `.keyboardKey`, label spoken as a name, never as the glyph:
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 3.1 Key row rules (T-0232; ADR-004 rulings 3-4, Ines 2026-10-26 20:02 ET), scrolls sideways" style="--tw:755px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 3.1 Key row rules (T-0232; ADR-004 rulings 3-4, Ines 2026-10-26 20:02 ET), scrolls sideways" style="--tw:755px" markdown="1">
 
 | Key | Label | Custom actions (alternates) |
 |---|---|---|
@@ -126,7 +159,7 @@ Six syntax tokens per set in tokens.json (`syntax.Quill.light`, `syntax.Lumen.da
 Message shape is `pywidget_tooling/editor.py` (T-1101): `complete()` returns `mode` "jedi" or "fallback" (+ `reason`), items with `label`, `kind`, `detail` always "" and `replace`; `diagnostics()` returns `code` (a pyflakes class name such as `UnusedImport`), `message` (pyflakes text), `severity`, sorted by line then column. **Two corrections to the s3 table above:** (1) the module never returns a flake8 code, so the label is the `code` as words, sentence case (`UnusedImport` becomes "Unused import"), not `F401 unused`; the earlier frames keep the old text until Idris builds from this section. (2) `detail` is "", so the popover's one-line doc has no source; it shows only in jedi mode if Idris adds a docstring call, and 1.0 ships without it.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 3.3 Completion and lint states (T-1106, for T-0656; DRAFT C51, inside approved…, scrolls sideways" style="--tw:851px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 3.3 Completion and lint states (T-1106, for T-0656; DRAFT C51, inside approved…, scrolls sideways" style="--tw:851px" markdown="1">
 
 | State | Rule | Frame |
 |---|---|---|
@@ -148,7 +181,7 @@ Sheets: `A-` and `B-` `complete-phone.png`, `lint-phone.png`, `lint-ipad.png`; Q
 ## 4. Run states
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 4. Run states, scrolls sideways" style="--tw:894px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 4. Run states, scrolls sideways" style="--tw:894px" markdown="1">
 
 | State | Icon | Colour | Word | Detail |
 |---|---|---|---|---|
@@ -177,7 +210,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **7.1 What ships, by flag file.** One non-consumable (placeholder id `app.pywidget.pro`). Rows appear in this order, one per entitlement that is on; a row is on only if its feature ships in that build (2.5.19: nothing dormant, nothing "coming"). The headline follows the first row.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 5. Screen notes, scrolls sideways" style="--tw:1403px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 5. Screen notes, scrolls sideways" style="--tw:1403px" markdown="1">
 
    | Variant (flag file) | Rows | Headline | "Always free" box | Purchased line / button | Sheet frame |
    |---|---|---|---|---|---|
@@ -197,7 +230,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **7.2 Entry points and where each lands** (A/B-proentry-phone). Never a pop-up, never on launch, never after an error.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 5. Screen notes, scrolls sideways" style="--tw:1365px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 5. Screen notes, scrolls sideways" style="--tw:1365px" markdown="1">
 
    | Entry | Shown when | Tap lands on | After purchase | Close / back returns to |
    |---|---|---|---|---|
@@ -214,7 +247,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **7.3 Redline** (iPhone 390 pt; iPad form sheet 560 × 700). Spacing and type tokens from tokens.json; colours by role, never hex in Swift.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 5. Screen notes, scrolls sideways" style="--tw:1152px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 5. Screen notes, scrolls sideways" style="--tw:1152px" markdown="1">
 
    | Element | Size and position | Type | Colour tokens |
    |---|---|---|---|
@@ -238,7 +271,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **7.4 Purchase states** (sheet frame 7). The button and its line; StoreKit 2 names in brackets.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 5. Screen notes, scrolls sideways" data-n="1" style="--tw:1519px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: 5. Screen notes, scrolls sideways" data-n="1" style="--tw:1519px" markdown="1">
 
    | # | State | Button | Line | Tappable | Price shown |
    |---|---|---|---|---|---|
@@ -267,7 +300,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **7.6 Strings.** Every string is **DRAFT C51**: the paywall's look and copy are outside approved item 2 and go to the Investors with these sheets (ops/questions.md). Generated by `draw_ide.py --pro-strings` from `PRO_STR`, the same table the frames draw from; if a string changes, regenerate this table.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 10: 5. Screen notes, scrolls sideways" style="--tw:860px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 5. Screen notes, scrolls sideways" style="--tw:860px" markdown="1">
 
    | ID | String | Where | C51 |
    |---|---|---|---|
@@ -330,7 +363,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 
    **7.7 C51 question.** A (recommended): approve the Pro screen as drawn, headline by variant (`h.premades`, `h.packages`, `h.themes`). B: as A, with the plain headline `h.optB` "What Pro adds." in every variant (frame 8). C: neither; the company redraws. Not asked here: the price (`[price]` stays a placeholder, the Investors' call), which premades are Pro (questions item 10), and the theme pairs themselves (PROPOSAL-004).
 
-   *Note, 2026-10-27 (Maren, T-0474, review of T-0473 and 0d5658e5):* rulings in pywidget/docs/reviews/t0473-pro-screen-design-maren.md. Changed here: chips carry no glyph; state 4 keeps the priced Buy; state 5b added; `btn.pending` dropped (no screen shows it); final `ln.pending` and `ln.restoreFailed`; the state line is read after the button, not as its hint; a 72-character <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> on lines. The Pro sheets (A/B-pro-phone, A-pro-ipad) are owed a redraw from draw_ide.py with these changes.
+   *Note, 2026-10-27 (Maren, T-0474, review of T-0473 and 0d5658e5):* rulings in pywidget/docs/reviews/t0473-pro-screen-design-maren.md. Changed here: chips carry no glyph; state 4 keeps the priced Buy; state 5b added; `btn.pending` dropped (no screen shows it); final `ln.pending` and `ln.restoreFailed`; the state line is read after the button, not as its hint; a 72-character cap on lines. The Pro sheets (A/B-pro-phone, A-pro-ipad) are owed a redraw from draw_ide.py with these changes.
 
    *Open for Idris (T-0031):* (a) the restore-in-progress state 3b is my addition to the eight; (b) in C1 a free user's `import numpy` needs a console line that points to Pro, not a pop-up; not drawn, Ines rules on it with the C1 case; (c) the purchased screen in C1 has no button, only Done.
 
@@ -345,7 +378,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **9.1 Tiers come from the flag file, never from code.** `pywidget/runtime/pro-flags.json` (T-0338), read through the contract's `resolve()`: a premade is locked when `premades.on && tier != "free" && !entitled` (contract s4 rule 5: an unlisted premade counts as Pro). Today's file: Free (5) countdown, sun, steps, distance, altitude; Pro (7) habits, shortcuts, storage, progress, quote, clocks, github, in premade.py order. No count is drawn anywhere; the sections list whatever the file says.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 5. Screen notes, scrolls sideways" style="--tw:640px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 12: 5. Screen notes, scrolls sideways" style="--tw:640px" markdown="1">
 
    | Flag file says | Gallery shows |
    |---|---|
@@ -370,7 +403,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **9.4 Tile states** (frame 5, "Tile states"; one at a time, first match wins):
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 12: 5. Screen notes, scrolls sideways" data-n="1" style="--tw:1143px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 13: 5. Screen notes, scrolls sideways" data-n="1" style="--tw:1143px" markdown="1">
 
    | # | State | When | Well | Line / button |
    |---|---|---|---|---|
@@ -411,7 +444,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **9.11 Strings** (`draw_gallery.py --strings`; `pro:` ids are s5.7's, read from `PRO_STR` so the two screens cannot drift). Every one is DRAFT C51: no copy guide is approved.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 13: 5. Screen notes, scrolls sideways" style="--tw:853px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 14: 5. Screen notes, scrolls sideways" style="--tw:853px" markdown="1">
 
    | ID | String | Where | C51 |
    |---|---|---|---|
@@ -482,7 +515,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **10.1 Rows in v1.** Order top to bottom. A row exists only if its feature ships in that build (2.5.19).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 14: 5. Screen notes, scrolls sideways" style="--tw:1337px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 15: 5. Screen notes, scrolls sideways" style="--tw:1337px" markdown="1">
 
    | Group | Row (string id) | Shown when | Tap | Build line |
    |---|---|---|---|---|
@@ -507,7 +540,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **10.2 States.**
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 15: 5. Screen notes, scrolls sideways" style="--tw:640px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 16: 5. Screen notes, scrolls sideways" style="--tw:640px" markdown="1">
 
    | State | What shows |
    |---|---|
@@ -543,7 +576,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **10.7 Strings.** Generated by `draw_settings.py --strings` from `SET_STR` and the s5.7 ids it reuses (one string per meaning across both screens). Working name "pywidget" as elsewhere; question item 8's answer is one find-and-replace.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 16: 5. Screen notes, scrolls sideways" style="--tw:874px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 17: 5. Screen notes, scrolls sideways" style="--tw:874px" markdown="1">
 
    | ID | String | Where | C51 |
    |---|---|---|---|
@@ -586,7 +619,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **11.1 The model.** A project is a folder, as T-0355 built it (`Documents/Scripts/<project>/`). Its files are its parts. There is no new record on disk: the code is the record, so Files, zip export and a rename stay as they are. A small reader, `ProjectParts`, sorts the files each time a list loads, using T-0748's Python scan. First match wins:
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 17: 5. Screen notes, scrolls sideways" style="--tw:724px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 18: 5. Screen notes, scrolls sideways" style="--tw:724px" markdown="1">
 
    | Part | Rule | Opens |
    |---|---|---|
@@ -605,7 +638,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **11.3 The Projects tab** (frames 1-5, 18). Large title, search over projects and files, the filter, then one list. The filter draws at 13 pt, the system control's size: at 15 pt "Lock Screen" does not fit a quarter of 358 pt. From AX1 it is a menu button. Newest change first; Pinned waits (it needs a record, and 1.0 has none).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 18: 5. Screen notes, scrolls sideways" style="--tw:739px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 19: 5. Screen notes, scrolls sideways" style="--tw:739px" markdown="1">
 
    | View | Shows | Row |
    |---|---|---|
@@ -664,7 +697,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **11.12 Size and date.** Read from main at c0b05d85 (`App/Projects`, `PyWidgetApp.swift`, `Tests`), not from a build and not measured. Idris has not checked it; his read is the first hour of the work. Yardstick: T-0355's 1,266 lines of `App/Projects` went from first commit to landing in about 2.4 days with two reviews (10-29 04:06 to 10-31 12:42).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 19: import shared, scrolls sideways" data-n="2" style="--tw:692px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 20: import shared, scrolls sideways" data-n="2" style="--tw:692px" markdown="1">
 
    | Work | Days | Note |
    |---|---|---|
@@ -689,7 +722,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **11.13 Strings** (`draw_projects.py --strings`). Every one is DRAFT C51. `menu.setup`, `menu.edit` and `menu.home` are home-setup.md's.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 20: import shared, scrolls sideways" style="--tw:839px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 21: import shared, scrolls sideways" style="--tw:839px" markdown="1">
 
    | ID | String (DRAFT) | Where | C51 |
    |---|---|---|---|
@@ -765,7 +798,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **12.2 Ways in, and the one route.**
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 21: import shared, scrolls sideways" style="--tw:888px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 22: import shared, scrolls sideways" style="--tw:888px" markdown="1">
 
    | From | Opens on | How |
    |---|---|---|
@@ -794,7 +827,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **12.4 Outcomes.** Glyph, reason and filter for each value `status.json` and the row can hold (ADR-007 7.2, plus `busy` from `WidgetRunOutcome.Kind` at HEAD):
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 22: import shared, scrolls sideways" data-n="4" style="--tw:1125px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 23: import shared, scrolls sideways" data-n="4" style="--tw:1125px" markdown="1">
 
    | Outcome | Glyph and colour | Row reason | In Failed | Detail adds |
    |---|---|---|---|---|
@@ -826,7 +859,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **12.8 Data: what the screen reads, and what HEAD holds** (a6b390ba..b11fe55b, read 2026-11-02). **Neither file exists yet.** `status.json` is named only in comments (`RunResultSink.swift:9`, `:140`; project-save.md, opening list), and `log/runs.jsonl` "when they exist" (`LaneGuard.swift:203`). No product screen starts a `.widget` run yet (`WidgetRunView.swift:10`), T2 is not built (ADR-007 5.1), and nothing keeps a run's output after the console shows it. So this table is the build list, not a reading of files that exist:
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 23: import shared, scrolls sideways" style="--tw:846px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 24: import shared, scrolls sideways" style="--tw:846px" markdown="1">
 
    | Screen field | File and key | At HEAD |
    |---|---|---|
@@ -862,7 +895,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **12.12 Strings** (from `draw_activity.py --strings`; `[appname]` is `CFBundleDisplayName`, read at run time):
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 24: import shared, scrolls sideways" style="--tw:839px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 25: import shared, scrolls sideways" style="--tw:839px" markdown="1">
 
    | ID | String (DRAFT) | Where | C51 |
    |---|---|---|---|
@@ -945,7 +978,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 
 ## 6. Open
 
-- AX3 sizes are recalled, not read from Apple (developer.apple.com is person-read only); Simulator check by Idris.
+- AX3 and xxxLarge sizes are recalled, not read from Apple. T-1437's one HIG typography fetch was refused on 2026-11-03 (fetch_cite --apple day cap, 12 a day); per T-0848 it was not retried. Open until a fetch on a later ET day or Idris's Simulator check.
 - iOS 26 alert, sheet and tab bar shapes are drawn as I understand them; the system draws the real ones and wins.
 - Copy uses the working name "pywidget"; the name is the Investors' call.
 - Direction A or B: the Investors' pick (C51). Nothing here ships until it is approved.

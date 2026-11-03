@@ -22,10 +22,11 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Career goal | I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week. |
 {: .facts}
 
-## Activity (56 most recent)
+## Activity (57 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Nov 3, 11:35 | <span class="tag t-build">build</span> T-1439: ui.RefreshButton (reserved pywidget.refresh) and ui.Updated age node in the DSL and schema; prefix mutants caught (ebb68f4b1) |  |
 | Nov 2, 18:02 | <span class="tag t-build">build</span> T-1143: the editor's time limit moves to Swift's timer (OverBudget); prime() ends the asyncio livelock; 62 host tests, 20/20 mutants |  |
 | Nov 2, 17:46 | <span class="tag t-shipped">shipped</span> T-1139: Activity run log host half landed, 55 host tests, 38/38 mutants killed |  |
 | Nov 2, 12:52 | <span class="tag t-review">review</span> T-1045 delta read: go to land the plain editor targets; my F4 was wrong (dead stripping does apply), corrected in the review; the archive stays unproven until #98 2A |  |

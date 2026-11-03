@@ -1,5 +1,180 @@
 [
 {
+"time": "2026-11-03T13:29:23-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-03T13:28:02-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #79",
+"link": ""
+},
+{
+"time": "2026-11-03T13:26:36-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #148",
+"link": ""
+},
+{
+"time": "2026-11-03T13:25:43-05:00",
+"worker": "operator",
+"type": "session",
+"summary": "10:14 work session closed (3.2 h; lands waiting). Investor asks on #79, #153, #41 answered; runner gate r7 2,928 tests/3 red, v8 sandbox needs no change; disk 8.3 to 36 GB; T-1240, T-1434, T-1437, T-1438, T-1439 done; T-1432 remote approve with lane b.",
+"link": ""
+},
+{
+"time": "2026-11-03T13:25:43-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #155",
+"link": ""
+},
+{
+"time": "2026-11-03T13:24:52-05:00",
+"worker": "Odalys",
+"type": "finding",
+"summary": "T-1207: runner gate StoreKit stalls traced to a new Simulator device's first run (they fail with no sandbox too); sandbox unchanged; gate r7 3 failing of 2,928",
+"link": ""
+},
+{
+"time": "2026-11-03T11:47:18-05:00",
+"worker": "Maren",
+"type": "design",
+"summary": "T-1438: accented sheets with the accent group marked; heatmap fails colour-alone (1.81-2.57:1 steps), B5-B6 proposed; Clear item moved to T-1443",
+"link": ""
+},
+{
+"time": "2026-11-03T11:42:29-05:00",
+"worker": "Ines",
+"type": "plan",
+"summary": "Placed Maren's T-1437 build lines: T-1444 Pro footer pins only the buy button from xxxLarge (B2, B3 as its check), T-1445 Large Content Viewer on key row, close button, bars (B4); B1 dropped, filter unbuilt.",
+"link": ""
+},
+{
+"time": "2026-11-03T11:40:13-05:00",
+"worker": "Maren",
+"type": "design",
+"summary": "T-1437: xxxLarge and AX3 sheets for nine 1.0 screens (A and B), spec s2.1, contrast 1,936 pairs 0 fails; HIG fetch refused by Apple day cap, s6 item 1 open",
+"link": ""
+},
+{
+"time": "2026-11-03T11:35:22-05:00",
+"worker": "Pernille",
+"type": "build",
+"summary": "T-1439: ui.RefreshButton (reserved pywidget.refresh) and ui.Updated age node in the DSL and schema; prefix mutants caught (ebb68f4b1)",
+"link": ""
+},
+{
+"time": "2026-11-03T11:26:55-05:00",
+"worker": "Ines",
+"type": "plan",
+"summary": "Placed Maren's s10 refresh lines: T-1439 DSL nodes, T-1440 renderer, T-1441 premades; B5 and the Lock Screen check folded into T-0678; T-0469 is now the reshoot. Small widget shows the time alone at Large type.",
+"link": ""
+},
+{
+"time": "2026-11-03T11:24:42-05:00",
+"worker": "Maren",
+"type": "design",
+"summary": "T-1434: state-spec s10 Refresh and age drafted and drawn (states-refresh.png, QA 0 faults); five proposed build lines for Ines",
+"link": ""
+},
+{
+"time": "2026-11-03T11:18:40-05:00",
+"worker": "Ines",
+"type": "plan",
+"summary": "Refilled Maren's board with five design lines: freshness states (T-1434, Opus), three calls Idris waits on (T-1435), system-shown strings (T-1436), Dynamic Type and contrast pass (T-1437), accented and Clear modes (T-1438).",
+"link": ""
+},
+{
+"time": "2026-11-03T11:15:12-05:00",
+"worker": "Odalys",
+"type": "fix",
+"summary": "T-1240: personal land suite reds were rows reading the whole machine (a lane's land-live), and the orphan was the suite's own mutant watcher; scoped the rows, ended that watcher, and land's TERM now ends the watcher's whole group (red 2 of 6 TERMs at load 140 before). Suite 119/0 twice.",
+"link": ""
+},
+{
+"time": "2026-11-03T11:08:28-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #154",
+"link": ""
+},
+{
+"time": "2026-11-03T11:08:28-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "A personal account's stop was lifted by an Investor",
+"link": ""
+},
+{
+"time": "2026-11-03T10:49:21-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-03T10:45:32-05:00",
+"worker": "operator",
+"type": "investor",
+"summary": "#153 (disk): on an Investor's instruction cleared space, 8.3 to 36 GB free: Xcode caches, six finished scratch checkouts (uncommitted files saved), tvOS runtime, iPhone symbols, package caches. #41: an Investor pre-approved any change that makes the runner work; approve-sandbox command posted (v8, d238a",
+"link": ""
+},
+{
+"time": "2026-11-03T10:42:04-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-03T10:42:01-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #153",
+"link": ""
+},
+{
+"time": "2026-11-03T10:40:27-05:00",
+"worker": "operator",
+"type": "investor",
+"summary": "#41: an Investor asked if the MacBook runner works (prioritize). Online, idle, v6; never finished a test run; v8 (Xcode 27 sandbox fix) held for approve-sandbox. Freed ~15 GB of build caches (disk 8.3 to 23 GB) and started the Mac mini gate at 096b2b766 at 10:40.",
+"link": ""
+},
+{
+"time": "2026-11-03T10:36:47-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-03T10:32:11-05:00",
+"worker": "Odalys",
+"type": "mistake",
+"summary": "T-1425: ran tests/board_tick_test.py directly in lane b (COMPANY_LANE set); it queued 4 real lane records (an add, 3 id --apply) and reserved T-1429 on main's board. Caught before landing: records removed from the tick commit; T-1429 stays burned. Suites run only via tests/run.sh.",
+"link": ""
+},
+{
+"time": "2026-11-03T10:24:22-05:00",
+"worker": "operator",
+"type": "investor",
+"summary": "#79: an Investor approved the package-sandbox proposal and asked for it corrected; corrected diff (new file, no rename) in ops/requests/PROPOSAL-079-v2.patch, suite 253/0; the two permission lines need an Investor's hand (applier refuses allow rules); T-1428 waits on #79",
+"link": ""
+},
+{
+"time": "2026-11-03T10:21:10-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #79",
+"link": ""
+},
+{
 "time": "2026-11-03T10:09:57-05:00",
 "worker": "operator",
 "type": "session",

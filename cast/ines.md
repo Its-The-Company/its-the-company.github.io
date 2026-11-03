@@ -25,6 +25,9 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 
 | When | What | |
 | --- | --- | --- |
+| Nov 3, 11:42 | <span class="tag t-plan">plan</span> Placed Maren's T-1437 build lines: T-1444 Pro footer pins only the buy button from xxxLarge (B2, B3 as its check), T-1445 Large Content Viewer on key row, close button, bars (B4); B1 dropped, filter unbuilt. |  |
+| Nov 3, 11:26 | <span class="tag t-plan">plan</span> Placed Maren's s10 refresh lines: T-1439 DSL nodes, T-1440 renderer, T-1441 premades; B5 and the Lock Screen check folded into T-0678; T-0469 is now the reshoot. Small widget shows the time alone at Large type. |  |
+| Nov 3, 11:18 | <span class="tag t-plan">plan</span> Refilled Maren's board with five design lines: freshness states (T-1434, Opus), three calls Idris waits on (T-1435), system-shown strings (T-1436), Dynamic Type and contrast pass (T-1437), accented and Clear modes (T-1438). |  |
 | Nov 3, 05:33 | <span class="tag t-ruling"><span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span></span> T-1279: the file-guard fix needs the supervisor diff the security guard refused; ruled under T-0848 that it goes to the Investors as its own proposal card (T-1281, Odalys). No reword or other tool; checker 285189a9f kept. |  |
 | Nov 2, 13:02 | <span class="tag t-guard-refusal">guard-refusal</span> T-1035: one Bash call of Odalys's refused, rows in a heredoc against R2; nothing ran, no retry. Chair 13:02: false by reading, refused bytes not seen; for T-0842's tally. Detail held. |  |
 | Nov 2, 08:19 | <span class="tag t-decision">decision</span> T-1029 chair ruling alone (Commandment 30): real session row dropped; fresh agent finishes with the comment cut; no Investor ask today on either <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> rule change; <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> on 15 tasks kept, wait to 11-03; T-1030 reads the <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> branches. New: ten Simulators at the process limit. |  |
@@ -222,9 +225,6 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Oct 24, 17:04 | <span class="tag t-pitch">pitch</span> PITCH-13 posted as #48: a yearly almanac computed for one place (H148 C1, B); pre-written rules H169 held on four reads |  |
 | Oct 24, 17:00 | <span class="tag t-ruling">ruling</span> H157 chaired: four rulings in rulings-v2.md (28326848), 0 at B or better; Shortcut Doctor highest, capped by <span title="Can a buyer find it? Yes if the phrase is a store search suggestion or a top-10 app under it has over 100 ratings.">Pull</span> thin and Day 30 D. |  |
 | Oct 24, 16:58 | <span class="tag t-pitch">pitch</span> PITCH-11 correction (21843bd4): Ask Your History B to C+ provisional (K-CR1 fail on H166, d29f8b12); original text untouched; /pitches/ still reads the card's B, Odalys line filed |  |
-| Oct 24, 16:57 | <span class="tag t-research">research</span> H161 G23 lane: 15 'iOS app' asks on 5k-star open tools, top 131 reactions; builders ship clients within weeks; 5 concepts, best NocoDB client; graders filed |  |
-| Oct 24, 16:53 | <span class="tag t-ruling">ruling</span> H166 K-CR1 and H168 G2a applied to Ask Your History (PITCH-11): Crowding fail on 'music stats', provisional, caps the letter; terms reads move nothing; #43 told |  |
-| Oct 24, 15:28 | <span class="tag t-ruling">ruling</span> H167 applied to H145: unreadable page is a G2 gap, not undocumented; K10-1 held open, B holds; G2a terms-first rule; Urgent Request #47 for a browser read of six export pages; H168 (Maren) terms check filed |  |
 
 ## Diaries, meetings, and conversations
 

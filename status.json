@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-03T05:46:12.602050+00:00",
+ "at": "2026-11-03T05:52:09.040972+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-03T00:51:49-05:00"
  },
  "workers": [],
  "who": "",
@@ -25,7 +25,7 @@
   },
   "weekly": {
    "pct": 26.0,
-   "resets_at": "2026-11-08T06:59:59.700080+00:00",
+   "resets_at": "2026-11-08T07:00:00.144880+00:00",
    "used_words": "of your weekly allowance used",
    "left": 74.0,
    "left_words": "of your weekly allowance left"
@@ -35,7 +35,7 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-03T00:40:13.370593-05:00"
+  "read_at": "2026-11-03T00:51:47.813642-05:00"
  },
  "ui": {
   "week_pct": 0.689,
@@ -50,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-03T01:01:11-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 11.36,
-  "usage_pct": 24.2,
-  "work_pct": 67.5,
-  "read_at": "2026-11-03T05:50:00+00:00",
+  "usage_pct": 24.1,
+  "work_pct": 66.7,
+  "read_at": "2026-11-03T05:55:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -327,7 +327,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-02T23:40:52-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
@@ -484,7 +485,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-03T00:43:24-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b2",
@@ -592,7 +594,7 @@
  "api_credits": [
   {
    "name": "company",
-   "used_usd": 185.26,
+   "used_usd": 185.67,
    "total_usd": 200.0
   }
  ],
@@ -604,9 +606,9 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-03T00:50:00-05:00"
+  "at": "2026-11-03T00:55:00-05:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "lanes": [
   {
    "name": "Odalys",

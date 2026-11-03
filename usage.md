@@ -11,23 +11,23 @@ section: "usage"
 <p>Usage added by personal accounts: equal to 0.4% of the plan's weekly limit today and 11.4% this week.</p>
 
 <div class="panel">
-<p class="status-line ok"><b>On pace for the week.</b> <span>Source: the plan's own meter, read Tue 12:40 AM.</span></p>
-<div class="bar ok"><div class="bar-head"><span>This week</span><span>26% of the weekly limit · resets Sun 1:59 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:26.0%"></div><i class="mark plan" style="left:27.9%" title="plan by now: 28%"></i></div><div class="bar-foot">Plan by now: 28% of your weekly allowance used, the marker.</div></div>
-<div class="bar ok"><div class="bar-head"><span>Today</span><span>0% of today's share</span></div><div class="bar-track"><div class="bar-fill" style="width:0.0%"></div><i class="mark plan" style="left:3.5%" title="plan by now: 4%"></i><i class="mark reserve" style="left:90.0%" title="the evening report's reserve"></i></div><div class="bar-foot">Plan by now: 4% of today's share of your weekly allowance. The grey marker <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> back a reserve for the evening report; it is released once the report is done.</div></div>
+<p class="status-line ok"><b>On pace for the week.</b> <span>Source: the plan's own meter, read Tue 12:51 AM.</span></p>
+<div class="bar ok"><div class="bar-head"><span>This week</span><span>26% of the weekly limit · resets Sun 2:00 AM</span></div><div class="bar-track"><div class="bar-fill" style="width:26.0%"></div><i class="mark plan" style="left:27.9%" title="plan by now: 28%"></i></div><div class="bar-foot">Plan by now: 28% of your weekly allowance used, the marker.</div></div>
+<div class="bar ok"><div class="bar-head"><span>Today</span><span>0% of today's share</span></div><div class="bar-track"><div class="bar-fill" style="width:0.0%"></div><i class="mark plan" style="left:3.8%" title="plan by now: 4%"></i><i class="mark reserve" style="left:90.0%" title="the evening report's reserve"></i></div><div class="bar-foot">Plan by now: 4% of today's share of your weekly allowance. The grey marker <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> back a reserve for the evening report; it is released once the report is done.</div></div>
 <div class="bar ok"><div class="bar-head"><span>Last 5 hours</span><span>0% of the 5-hour limit</span></div><div class="bar-track"><div class="bar-fill" style="width:0.0%"></div></div></div>
 <div class="bar ok"><div class="bar-head"><span>Fable this week</span><span>0% of its weekly allowance</span></div><div class="bar-track"><div class="bar-fill" style="width:0.0%"></div></div><div class="bar-foot">A ceiling, not a target: Fable shares the weekly limit, so it is used as the work needs.</div></div>
 </div>
 
 ## Why
 
-- 2.5 h this week ran on API credits by the Investors' instruction.
+- 3 h this week ran on API credits by the Investors' instruction.
 
 ## This week, hour by hour
 
 What the run loop was doing in each hour of the pacing week.
 
 <div class="week-strip" role="img" aria-label="This week, hour by hour"><div class="wrow head"><span></span><span>0</span><span></span><span></span><span></span><span></span><span></span><span>6</span><span></span><span></span><span></span><span></span><span></span><span>12</span><span></span><span></span><span></span><span></span><span></span><span>18</span><span></span><span></span><span></span><span></span><span></span></div><div class="wrow"><span>Sun</span><i class="h out"></i><i class="h out"></i><i class="h c-work" title="Sun 2:00 · working"></i><i class="h c-offline" title="Sun 3:00 · no tick: offline or stopped"></i><i class="h c-offline" title="Sun 4:00 · no tick: offline or stopped"></i><i class="h c-offline" title="Sun 5:00 · no tick: offline or stopped"></i><i class="h c-work" title="Sun 6:00 · working"></i><i class="h c-work" title="Sun 7:00 · working"></i><i class="h c-work" title="Sun 8:00 · working"></i><i class="h c-paused" title="Sun 9:00 · paused"></i><i class="h c-work" title="Sun 10:00 · working"></i><i class="h c-work" title="Sun 11:00 · working"></i><i class="h c-work" title="Sun 12:00 · working"></i><i class="h c-work" title="Sun 13:00 · working"></i><i class="h c-work" title="Sun 14:00 · working"></i><i class="h c-offline" title="Sun 15:00 · no tick: offline or stopped"></i><i class="h c-work" title="Sun 16:00 · working"></i><i class="h c-work" title="Sun 17:00 · working"></i><i class="h c-work" title="Sun 18:00 · working"></i><i class="h c-share_spent" title="Sun 19:00 · today's share used"></i><i class="h c-work" title="Sun 20:00 · working"></i><i class="h c-work" title="Sun 21:00 · working"></i><i class="h c-work" title="Sun 22:00 · working"></i><i class="h c-work" title="Sun 23:00 · working"></i></div><div class="wrow"><span>Mon</span><i class="h c-work" title="Mon 0:00 · working"></i><i class="h c-work" title="Mon 1:00 · working"></i><i class="h c-offline" title="Mon 2:00 · no tick: offline or stopped"></i><i class="h c-work" title="Mon 3:00 · working"></i><i class="h c-work" title="Mon 4:00 · working"></i><i class="h c-offline" title="Mon 5:00 · no tick: offline or stopped"></i><i class="h c-work" title="Mon 6:00 · working"></i><i class="h c-work" title="Mon 7:00 · working"></i><i class="h c-offline" title="Mon 8:00 · no tick: offline or stopped"></i><i class="h c-offline" title="Mon 9:00 · no tick: offline or stopped"></i><i class="h c-offline" title="Mon 10:00 · no tick: offline or stopped"></i><i class="h c-work" title="Mon 11:00 · working"></i><i class="h c-offline" title="Mon 12:00 · no tick: offline or stopped"></i><i class="h c-work" title="Mon 13:00 · working"></i><i class="h c-offline" title="Mon 14:00 · no tick: offline or stopped"></i><i class="h c-api_now" title="Mon 15:00 · on API credits by the Investors' instruction"></i><i class="h c-api_now" title="Mon 16:00 · on API credits by the Investors' instruction"></i><i class="h c-offline" title="Mon 17:00 · no tick: offline or stopped"></i><i class="h c-work" title="Mon 18:00 · working"></i><i class="h c-offline" title="Mon 19:00 · no tick: offline or stopped"></i><i class="h c-api_now" title="Mon 20:00 · on API credits by the Investors' instruction"></i><i class="h c-api_now" title="Mon 21:00 · on API credits by the Investors' instruction"></i><i class="h c-offline" title="Mon 22:00 · no tick: offline or stopped"></i><i class="h c-api_now" title="Mon 23:00 · on API credits by the Investors' instruction"></i></div><div class="wrow"><span>Tue</span><i class="h c-api_now" title="Tue 0:00 · on API credits by the Investors' instruction"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i><i class="h future"></i></div></div>
-<div class="legend hours"><span><i class="h c-work"></i>working 10 h</span><span><i class="h c-api_now"></i>on API credits by the Investors' instruction 2.5 h</span><span><i class="h c-paused"></i>paused 0.5 h</span><span><i class="h c-share_spent"></i>today's share used 7 h</span><span><i class="h c-offline"></i>no tick: offline or stopped 27 h</span></div>
+<div class="legend hours"><span><i class="h c-work"></i>working 10 h</span><span><i class="h c-api_now"></i>on API credits by the Investors' instruction 3 h</span><span><i class="h c-paused"></i>paused 0.5 h</span><span><i class="h c-share_spent"></i>today's share used 7 h</span><span><i class="h c-offline"></i>no tick: offline or stopped 27 h</span></div>
 
 ## Where the usage went, last 7 days
 
@@ -65,8 +65,8 @@ Each worker call names its kind of work; the Operator's own turns count as opera
 
 The plan includes API credits each month. The company runs work sessions on them by an Investor's instruction, with or without a plan limit, never for Fable, and never past the Investors' caps.
 
-<div class="bar ok"><div class="bar-head"><span>This cycle</span><span>93% of the included credits</span></div><div class="bar-track"><div class="bar-fill" style="width:92.8%"></div><i class="mark cap" style="left:95.0%" title="the reserve: overflow stops here"></i></div></div>
-<div class="bar ok"><div class="bar-head"><span>This week</span><span>93% of the weekly overflow cap</span></div><div class="bar-track"><div class="bar-fill" style="width:92.8%"></div></div></div>
+<div class="bar ok"><div class="bar-head"><span>This cycle</span><span>93% of the included credits</span></div><div class="bar-track"><div class="bar-fill" style="width:93.0%"></div><i class="mark cap" style="left:95.0%" title="the reserve: overflow stops here"></i></div></div>
+<div class="bar ok"><div class="bar-head"><span>This week</span><span>93% of the weekly overflow cap</span></div><div class="bar-track"><div class="bar-fill" style="width:93.0%"></div></div></div>
 <div class="bar-foot">Overflow is ready, in use by an Investor's instruction.</div>
 
 ## Past weeks
@@ -82,10 +82,10 @@ The plan includes API credits each month. The company runs work sessions on them
 | --- | --- | --- |
 | This 5-hour window | 0% of the 5-hour limit | |
 | Today | 0% of the daily pace | 4% |
-| This week | 26% of the weekly limit (resets Sun Nov 8, 1:59 AM) | 28% |
+| This week | 26% of the weekly limit (resets Sun Nov 8, 2:00 AM) | 28% |
 | Fable this week | 0% of its weekly allowance | |
 
-On pace for the week. Why: 2.5 h this week ran on API credits by the Investors' instruction. (Source: the plan's own meter.)
+On pace for the week. Why: 3 h this week ran on API credits by the Investors' instruction. (Source: the plan's own meter.)
 
 | Model | Share of this week's usage |
 | --- | --- |

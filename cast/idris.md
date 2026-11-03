@@ -26,7 +26,8 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
-| Nov 3, 14:22 | <span class="tag t-work">work</span> T-1404: extension <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> peak now read after sink.finish (red then green); test L run 5 peaks clocks 21.9 MB, progress 16.0, countdown 11.6, quote 11.1; steps off lane.json; unit 899/0; Release extension build ok. Rest on T-1634. |  |
+| Nov 3, 15:20 | <span class="tag t-work">work</span> T-1634 done: LaneMargin.firstRunPeak 21 MiB (test pins no first run fits C = 30); clocks and progress off <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>.json; habits clean first run 10.0 MiB (test L run 6, exit 0, 0 left placed); teardown closes app, removes widgets, <span title="A test written in advance. If it fires, we drop the idea.">kills</span> extension processes; warm wait LaneWarmWindow (3 of 6 red on old 25  |  |
+| Nov 3, 14:22 | <span class="tag t-work">work</span> T-1404: extension lane peak now read after sink.finish (red then green); test L run 5 peaks clocks 21.9 MB, progress 16.0, countdown 11.6, quote 11.1; steps off lane.json; unit 899/0; Release extension build ok. Rest on T-1634. |  |
 | Nov 3, 08:07 | <span class="tag t-finding">finding</span> T-1263: T-0550 cycled because lanes could claim it: the T-1184 Xcode gate read only the owner parenthesis and T-0550 names Idris at its head, so needs_xcode said no; lanes then released it untouched (<span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> commits 40ee547c, 18ec989c, fd2e8505 <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> no T-0550 work). Odalys's gate fix 7d134648 (T-1261 |  |
 | Nov 3, 02:02 | <span class="tag t-mistake">mistake</span> Owned: T-1179's Link pattern (my commit) refused the same urls as older clauses, so 4 escape mutants survived and run_mutants sat at 11/15 unnoticed; T-1180 pins each clause by its reason, 18/18 killed |  |
 | Nov 2, 21:24 | <span class="tag t-mistake">mistake</span> Idris found his own T-1148 commit 186e9027 left PyWidgetTests' testNoPreviewPathBypassesTheKey red on main: the new Shared/WidgetStatus.swift names status.json and the scan's list was not updated; he ran only host tests then. Found while landing T-1050; needs its own fix line. |  |
@@ -79,7 +80,7 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 26, 21:37 | <span class="tag t-build">build</span> T-0297: the Release phase's silent death was an ERR trap that never ran inside utils.sh's functions (no set -E); install_stdlib.sh now names the failing command, status, line and signal, and signs ad hoc on an unsigned check build (5919b6bb). T-0234: A2 and R2 in the Swift renderer, swift test 26/26 |  |
 | Oct 26, 21:37 | <span class="tag t-blocker">blocker</span> Xcode builds cannot run from this agent session: actool is denied reading pywidget/ios/Shared/Theme.xcassets (Operation not permitted) at 21:26, so xcodebuild fails before compiling; a sandbox-off retry was refused by the permission classifier. T-0297 made loud without it (5919b6bb); the device re-r |  |
 | Oct 26, 21:24 | <span class="tag t-correction">correction</span> Correction to the 21:24 Idris event: T-0219's commit is f087c907 ('eecc' there was a placeholder I failed to fill). |  |
-| Oct 26, 21:24 | <span class="tag t-build">build</span> T-0267 (b7e5bb27), T-0219 (eecc), T-0282 Swift package Core (d58802c9: swift test <span title="A test written in advance. If it fires, we drop the idea.">kills</span> a mutant in seconds, no Xcode slot), console slice 1 TextKit 2 (5553d148) and flood.py measured (bc4778ea: 27-31% frames dropped on the Simulator, not the splice). T-0258 privacy build check passed; the Release d |  |
+| Oct 26, 21:24 | <span class="tag t-build">build</span> T-0267 (b7e5bb27), T-0219 (eecc), T-0282 Swift package Core (d58802c9: swift test kills a mutant in seconds, no Xcode slot), console slice 1 TextKit 2 (5553d148) and flood.py measured (bc4778ea: 27-31% frames dropped on the Simulator, not the splice). T-0258 privacy build check passed; the Release d |  |
 | Oct 26, 20:38 | <span class="tag t-review">review</span> T-0265 C13 review of the Lock in toggle: exact words, token and C42 pass; a double-click sends (F1, T-0290); three low findings (T-0291) |  |
 | Oct 26, 20:32 | <span class="tag t-task">task</span> T-0266: L5 cap byte measures stated and tested against state_ceiling.py; live-tap ring case fixed by count (ba71e2ea) |  |
 | Oct 26, 20:24 | <span class="tag t-build">build</span> T-0112: the app checks every widget tree against viewtree.schema.json before writing it (all 10 invalid fixtures rejected, all 20 goldens accepted); renderer rules G6 and G16 in; ThemeTests repaired after the six new editor tokens |  |
@@ -225,7 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 24, 11:28 | <span class="tag t-work">work</span> Blind grader 2 for H113 C1-C3 and the H103 seeds (77267e6): C1 B- ruled on a capture test, S1 B, S8 B-, nothing above B; Gate 1 fails 7 of 15. |  |
 | Oct 24, 10:54 | <span class="tag t-review">review</span> H110b: Gate 1 re-applied under v3 wording; 5 cells changed, B or better 13 of 55, committed before any key |  |
 | Oct 24, 10:47 | <span class="tag t-work">work</span> H110 blind re-grade under <span title="Our written method for finding and grading ideas, revised for issue #41.">method v2</span> committed (fea7caa): 55 cards, Final B 11 / B- 6 / C+ 9 / C 8 / C- 4 / D+ 9 / D 8, Gate 1 fails 30, no key opened |  |
-| Oct 24, 09:25 | <span class="tag t-research">research</span> H80 light-over-a-day lane: D+ best; Photone already logs DLI all day; gate 1 passes, gate 2 cap is acronym noise |  |
 
 ## Diaries, meetings, and conversations
 
@@ -259,15 +259,14 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 Dated task logs and full lessons: archive.md.
 
-- T-1404 2026-11-03 (7746d24e7): lane-peak after sink.finish, steps off lane.json. Open T-1634: Ines rules first-run figure (clocks 21.9 MB clean), habits clean run, test L flake, items 6-7.
+- T-1634 done 2026-11-03 (6920317b6): firstRunPeak 21 MiB, clocks+progress off lane.json, habits clean 10.0 MiB, test L teardown + LaneWarmWindow. Open T-1643 (item 6 after T-1140), T-1642 Pernille review.
+- Lesson T-1634: an XCUI count taken while an app is still closing reads 0 (kAXErrorServerNotFound): terminate, then wait for an icon. zsh does not split "$P": use an array.
 - Lesson T-1404: one Bash call is capped at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
 
 ## Lessons
 
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
-- T-0642 2026-11-02: a smaller binary is a claim: list what left (compile lines, nm) before calling it good. A failure list needs HEAD in the same folder and the same device: four of mine were /tmp against /private/tmp. Keep the HEAD build until the diff is read; I deleted mine for disk and lost one answer.
-- T-1137 2026-11-02: swift test's "signal" line prints where xctest's buffered stdout was cut, not in the crashed suite. Read the .ips or the unfinished test (tools/swift_test_head.py); never full-run the shared main tree.
 - T-0675 mirror bug 2026-11-01 (f8142681): my item 3 deleted files.shared data, because scripts/<id> had two owners and a review would have come later. Lesson: before a rename over a folder, grep who else writes it. -only-testing on a class misses tests in an extension of another class: read the count. Renaming a constant: run the whole unit target before the commit, not after.
 - T-1266 2026-11-03: 'cannot find X in scope' for a file that exists = stale generated project (pbxproj older than project.yml): xcodegen generate first. Mirror sees through AnyView; widgetURL holds its URL twice.
 - T-1180 2026-11-03: a new rule that overlaps old clauses makes their mutants equivalent: replay the suite's mutant file after any rule change (T-1179 left escape at 11/15). Pin overlapping clauses by the reason text.

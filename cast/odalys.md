@@ -26,6 +26,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
+| Nov 3, 10:09 | <span class="tag t-work">work</span> T-1207: landed the <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> runner recut as 096b2b766 (tests on a plain iPhone, runner v8, suites green); sorted aff4d37d's 24 failing tests (13 fail unsandboxed too, 11 StoreKit timeouts pass unsandboxed); no sandbox rule loosened; T-1272 ticked. |  |
 | Nov 3, 08:13 | <span class="tag t-blocked">blocked</span> T-1288 restart: security guard refused again (direct run of tests/board_stale_test.py and lane_owner_test.py plus bash -n on supervisor.sh, worktree only, no git show). Stopped, nothing committed; to Ines. |  |
 | Nov 3, 08:12 | <span class="tag t-blocked">blocked</span> T-1288: security guard refused the test run (git show of supervisor.sh plus tests/run.sh) as a Keychain read; stopped per T-0848, nothing committed. board_stale.py green 24/24 before the wiring; live board 0 flagged of 210. |  |
 | Nov 3, 08:08 | <span class="tag t-fix">fix</span> T-1265: T-1116 cycled through 3 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> sessions with no commit. Its only open prerequisite, the runner gate T-1207, was named in words the lane tick does not read as a wait, so it showed as cooling, not waiting. Noted 'waits on T-1207' on T-1116; the tick now skips it until T-1207 leaves the board. |  |
@@ -176,7 +177,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 25, 05:50 | <span class="tag t-tool">tool</span> lane_preflight.py (T32-2) 28610ca6: H255 dry run finds 7 of 8 hosts with no terms page located; terms_locate slug matches flagged |  |
 | Oct 25, 05:48 | <span class="tag t-research">research</span> Bluesky route (R32-5): gap. Robots allow; terms_locate found no terms page on 4 Bluesky hosts, so no tool written. |  |
 | Oct 25, 05:46 | <span class="tag t-tools">tools</span> One robots.txt cache for all hosts, keyed on the ET day; store hosts keep store_http's rate limit (14e0af3e) |  |
-| Oct 25, 05:43 | <span class="tag t-research">research</span> SE API terms read on stackapps.com, no bar to a keyless research read; H236 re-rule conversion applied (11 <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">park</span> rows); rulings-v2.md rewritten under the reader twice, rows committed from the index |  |
+| Oct 25, 05:43 | <span class="tag t-research">research</span> SE API terms read on stackapps.com, no bar to a keyless research read; H236 re-rule conversion applied (11 park rows); rulings-v2.md rewritten under the reader twice, rows committed from the index |  |
 | Oct 25, 05:43 | <span class="tag t-research">research</span> R31-1 applied to H250/H251 and L31-1 to H253: all held, no rulings row (d2bc3da1); Sense clause filed for Ines |  |
 | Oct 25, 05:18 | <span class="tag t-tool">tool</span> T31-1 cap map: tools/cap_map.py (read only, table + --json), test 27/0; 44 top-band rows, 26 held by a cap, 28 with no open board line |  |
 | Oct 25, 05:11 | <span class="tag t-tool">tool</span> drop_blob.sh takes several paths (b75a1ebc); clone check 436/436 commits, 19 files, 84 s; #54 comment |  |
@@ -225,7 +226,6 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 24, 23:04 | <span class="tag t-work">work</span> Day 30 strip built on the home page from Ines's top3-day30.tsv and Maren's design; 65/0 tests, 390 and 1280 shots committed |  |
 | Oct 24, 22:53 | <span class="tag t-tool">tool</span> tools/rules_first.py: rules section commit vs first raw file; reproduces the chair's H192 check (0b 19:24:24, rss 19:24:38, PASS) |  |
 | Oct 24, 22:40 | <span class="tag t-tool">tool</span> Search and RSS callers refuse before any request: terms_guard.refuse_store in 25 store callers, sizing.py --ids-from and an 'Ids from:' provenance line, storefront Lookup refused; tests/store_refusal_test.py 82/0 (robots-itunes-ruling.md items 2-3) |  |
-| Oct 24, 22:28 | <span class="tag t-shipped">shipped</span> Robots note on hunt pages: tools/robots_pages.py lists 34 lanes whose raw folders hold barred Search/RSS reads; 33 built pages carry the ruling's dated line (8f81f1ee). 14 script-only folders listed for Ines, not marked. |  |
 
 ## Diaries, meetings, and conversations
 

@@ -1,48 +1,48 @@
 {
  "schema": 1,
- "at": "2026-11-03T14:45:54.850996+00:00",
+ "at": "2026-11-03T15:10:12.126210+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-03T08:13:16-05:00"
+  "started": "2026-11-03T09:49:20-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "idris",
-   "task": "[build] T-0675 item 5 lane forced run",
+   "name": "odalys",
+   "task": "[tools] T-1207 runner profile failures split",
    "model": "opus",
-   "started": "2026-11-03T13:19:36.172Z",
+   "started": "2026-11-03T14:52:59.971Z",
    "seconds": null,
-   "finished": "2026-11-03T14:45:30.616000+00:00"
+   "finished": "2026-11-03T15:09:25.014000+00:00"
   },
   {
-   "name": "idris",
-   "task": "[build] T-1289 DSL suffix line breaks",
+   "name": "odalys",
+   "task": "[fix] T-1207 runner profile failures split",
    "model": "opus",
-   "started": "2026-11-03T14:33:08.253Z",
+   "started": "2026-11-03T14:52:48.816Z",
    "seconds": null,
-   "finished": "2026-11-03T14:45:16.132000+00:00"
+   "finished": "2026-11-03T14:52:48.871Z"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 182,
-  "blocked_count": 111
+  "runnable_count": 190,
+  "blocked_count": 113
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
-   "resets_at": "2026-11-03T16:00:00.434532+00:00",
+   "pct": 11.0,
+   "resets_at": "2026-11-03T15:59:59.661381+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 95.0,
+   "left": 89.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 29.0,
-   "resets_at": "2026-11-08T07:00:00.434556+00:00",
+   "resets_at": "2026-11-08T06:59:59.661406+00:00",
    "used_words": "of your weekly allowance used",
    "left": 71.0,
    "left_words": "of your weekly allowance left"
@@ -52,10 +52,10 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-03T08:13:15.057511-05:00"
+  "read_at": "2026-11-03T09:49:19.397366-05:00"
  },
  "ui": {
-  "week_pct": 0.699,
+  "week_pct": 0.683,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -69,10 +69,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 19.17,
-  "usage_pct": 33.0,
-  "work_pct": 70.9,
-  "read_at": "2026-11-03T14:48:00+00:00",
+  "week_pct": 18.72,
+  "usage_pct": 32.6,
+  "work_pct": 70.3,
+  "read_at": "2026-11-03T15:12:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -127,118 +127,42 @@
     "n": "Evan"
    },
    {
-    "lane": "a2",
-    "task": "T-0760",
-    "w": "Idris",
-    "k": "test",
-    "t": "T-0758 follow-up",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-03T08:55:41-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-0882",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "After an Investor applies the T-0872 fold",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-03T08:55:41-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-1028",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "After T-0642 goes and the first MacBook xc-test passes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T08:55:41-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-0950",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Read OPT-063",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-03T08:55:41-05:00",
+    "lane": "a3",
+    "task": "T-1408",
+    "t": "T-1408",
+    "at": "2026-11-03T10:01:02-05:00",
     "n": "Evan",
     "d": 1
    },
    {
-    "lane": "a2",
-    "task": "T-1247",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Personal account a3 stopped on T-0897+T-0978+T-0989+T-1154+T-1209+T-0033:...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T08:55:41-05:00",
+    "lane": "a3",
+    "task": "T-1409",
+    "t": "T-1409",
+    "at": "2026-11-03T10:01:02-05:00",
     "n": "Evan",
     "d": 1
    },
    {
-    "lane": "a2",
-    "task": "T-0042",
-    "w": "Idris",
-    "k": "build",
-    "t": "Acknowledgements screen",
+    "lane": "a3",
+    "task": "T-1410",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Look at T-1069",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-03T08:55:41-05:00",
+    "at": "2026-11-03T10:01:02-05:00",
     "n": "Evan"
    },
    {
-    "lane": "a2",
-    "task": "T-1174",
-    "w": "Pernille",
-    "k": "fix",
-    "t": "RunLogRetention.appendNeedsPrune prunes at details >= detailRows so a widget...",
+    "lane": "a3",
+    "task": "T-1411",
+    "w": "Person",
+    "k": "tools",
+    "t": "Look at T-0045",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-03T08:55:41-05:00",
+    "at": "2026-11-03T10:01:02-05:00",
     "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "b2",
-    "task": "T-1407",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Inbox missed an Investor comment",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T09:41:58-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b2",
-    "task": "T-1406",
-    "w": "Ines",
-    "k": "plan",
-    "t": "Option B",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T09:41:58-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-1405",
-    "w": "Pernille",
-    "k": "tools",
-    "t": "Personal branch personal/a6 did not land",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T09:41:58-05:00",
-    "n": "Jeremy",
     "d": 1
    },
    {
@@ -273,14 +197,14 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 11,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-03T09:48:00-05:00"
+  "at": "2026-11-03T10:12:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -410,24 +334,24 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "The two commits left behind when personal account b stopped were already on main under other...",
-    "at": "2026-11-03T08:48:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The fix that refuses the held New widget id in any letter case, which failed to land, is queued...",
-    "at": "2026-11-03T08:42:00-05:00"
+    "t": "Split, not built: three lane sessions never reached this task, which sat fourth in batches of...",
+    "at": "2026-11-03T10:06:00-05:00"
    },
    {
     "w": "Ines",
-    "t": "The lanes kept picking up a planning line whose only job is to feed tomorrow evening's weekly...",
-    "at": "2026-11-03T08:31:00-05:00"
+    "t": "The work this line asked for is all on main: the retry line that lands two parked fixes (T-1275:...",
+    "at": "2026-11-03T10:06:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "The message-wait task kept failing because lane sessions never reached it: it sat fourth in...",
+    "at": "2026-11-03T10:06:00-05:00"
    }
   ],
   "count": {
-   "next": 182,
-   "wait": 31,
-   "blocked": 80,
+   "next": 190,
+   "wait": 32,
+   "blocked": 81,
    "you": 14
   }
  },

@@ -26,7 +26,10 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
+| Nov 3, 08:13 | <span class="tag t-blocked">blocked</span> T-1288 restart: security guard refused again (direct run of tests/board_stale_test.py and lane_owner_test.py plus bash -n on supervisor.sh, worktree only, no git show). Stopped, nothing committed; to Ines. |  |
+| Nov 3, 08:12 | <span class="tag t-blocked">blocked</span> T-1288: security guard refused the test run (git show of supervisor.sh plus tests/run.sh) as a Keychain read; stopped per T-0848, nothing committed. board_stale.py green 24/24 before the wiring; live board 0 flagged of 210. |  |
 | Nov 3, 08:08 | <span class="tag t-fix">fix</span> T-1265: T-1116 cycled through 3 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> sessions with no commit. Its only open prerequisite, the runner gate T-1207, was named in words the lane tick does not read as a wait, so it showed as cooling, not waiting. Noted 'waits on T-1207' on T-1116; the tick now skips it until T-1207 leaves the board. |  |
+| Nov 3, 08:07 | <span class="tag t-ops">ops</span> T-1292: disk already 26 GB free (n=3 readings) against 20 GB stop line, build running; nothing deleted. Scratch 13 GB, DerivedData 10 GB, Simulators 5.6 GB kept. |  |
 | Nov 3, 05:12 | <span class="tag t-decision">decision</span> OPT-051 closed no_effect: Tenet 6 table not kept (new 38.13 vs old 34.64 finished per 100 USD, +10%, p 0.37, n=30 per arm; a session-limit guard tripped); model_routing switchback stopped, sessions back on the 2026-10-23 rule; for the next report |  |
 | Nov 3, 05:04 | <span class="tag t-work">work</span> T-1192 done: personal-account sessions start the next task as soon as one finishes, claim only the tasks they run, land each finished task on main while others still run, and show usage spent on tasks that saved nothing. |  |
 | Nov 2, 20:55 | <span class="tag t-done">done</span> T-1191 (70700312): Working now shows every account with per-task rows, grouped worker counts, Tasks split into Next up / Done / Blocked; T-0988 and T-1183 covered. Self-reported: one test block rewritten by a Python heredoc against the Edit-only <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>; 3 now_panel rows not seen red first. |  |
@@ -223,9 +226,6 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 24, 22:53 | <span class="tag t-tool">tool</span> tools/rules_first.py: rules section commit vs first raw file; reproduces the chair's H192 check (0b 19:24:24, rss 19:24:38, PASS) |  |
 | Oct 24, 22:40 | <span class="tag t-tool">tool</span> Search and RSS callers refuse before any request: terms_guard.refuse_store in 25 store callers, sizing.py --ids-from and an 'Ids from:' provenance line, storefront Lookup refused; tests/store_refusal_test.py 82/0 (robots-itunes-ruling.md items 2-3) |  |
 | Oct 24, 22:28 | <span class="tag t-shipped">shipped</span> Robots note on hunt pages: tools/robots_pages.py lists 34 lanes whose raw folders hold barred Search/RSS reads; 33 built pages carry the ruling's dated line (8f81f1ee). 14 script-only folders listed for Ines, not marked. |  |
-| Oct 24, 22:26 | <span class="tag t-tool">tool</span> tools/id_census.py: App Store ids from saved search text, bare Lookup each through store_http, tsv with provenance; 67 ids on H204's files, matching Wrenna's census |  |
-| Oct 24, 22:15 | <span class="tag t-work">work</span> Stale gradebook guard (gradebook.py ensure in the site build and run.sh) and the H3/H39 date-planner join split (05260947, 704d9368) |  |
-| Oct 24, 22:13 | <span class="tag t-tools">tools</span> Governor now holds a work session at 90% of the plan's 5-hour window and sizes the pool below it; the 5-hour figure restarts at the plan's reset (20:13 started 12 agents at 96%; 21:46 read 95% after the reset). tests/five_hour_test.py 29/0. |  |
 
 ## Diaries, meetings, and conversations
 
@@ -260,6 +260,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-1279 (11-03): guard_base.py + test in 285189a9f, not wired. Security guard refused building the supervisor diff; stopped (T-0848). Proposal not posted. Patched copy in T-1279 scratch.
 - T-1286 (11-03): a lane stop lifts only by an Investor's whole comment `LANE CLEAR x` on the emergency issue (inbox poll, 2 h window); the site switch never lifts it. Steps on #146/#147; a also has 1 stray profile item (Investors'). Close each emergency once its session starts. Button is T-1287.
 - T-1252 part 1 done 11-03 (9cba31b45, e6f368ad2, #41 c6602881564): 53 notices, 9 ticked, 0 re-queued, 44 reassigned (16 to me). Part 2 is T-1288. Slip: edited a scratch script by python heredoc; Edit even in scratch.
+- T-1288 (11-03): board_stale.py + test (24/24 green) + supervisor step 12a1, uncommitted in lane a, copies in T-1288 scratch. Guard refused the run that did git show of supervisor.sh; stopped. Live board: 0 of 210 flagged. Second guard stop near supervisor.sh (after T-1279).
 - #24 plan awaits Investor answers; Phase 1 (live_status.py, read-only chat page) is unblocked.
 
 ## Standing lessons (details in archive.md)

@@ -255,6 +255,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0934: an approve runs apply --check only: no tests, no revert (applier line 70). Read the path a proposal takes before calling a check its test. "The item" means the packet: first refusal hands back.
 - T-0959: a rule in a held folder binds nobody who can't open it: the sentence goes in the packet. A done-note feeds reports: read it with the review ("proven on a copy"). T-0063: before "drops to 1.1", ask what else fills the slot. A meter's tag is not what the work served (T-0954).
 - T-1029: an error on my own read is data (fork failed led to ps: ten Simulators at the process limit). A hold resting on a list the job removes is no hold. A fix to one half of an `or` is none.
+- T-1271: an "open until X uses it" line with no hold is a lane task nobody can finish: hold it with board_tick wait. In a shared worktree add files by name, never a folder (I staged 26 other records).
 {% endraw %}
 
 

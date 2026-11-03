@@ -4,8 +4,15 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-03T05:12:50-05:00</updated>
+<updated>2026-11-03T08:13:21-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Decision: T-1288 restart under T-0848: the guard refused copying HEAD&#x27;s tools/supervisor.sh into scr</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-11-03:event/2026-11-03t08-13-21-05-00-decision-t-1288-restart-under-t-0848-the-guard-r</id>
+<updated>2026-11-03T08:13:21-05:00</updated>
+<summary type="text">T-1288 restart under T-0848: the guard refused copying HEAD&#x27;s tools/supervisor.sh into scratch (git show HEAD:tools/supervisor.sh &gt; scratch, read as a Keychain effect). Restart drops that effect: no copy of supervisor.sh anywhere, tests run in the worktree only. Same packet; a second refusal stops i</summary>
+</entry>
 <entry>
 <title>Decision: OPT-051 closed no_effect: Tenet 6 table not kept (new 38.13 vs old 34.64 finished per 100 </title>
 <link href="https://its-the-company.github.io/log/"/>
@@ -348,12 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-01:event/2026-11-01t02-55-13-05-00-decision-t-0876-done-240afbb4-c06840c2-no-refu</id>
 <updated>2026-11-01T02:55:13-05:00</updated>
 <summary type="text">T-0876 done: 240afbb4, c06840c2, no refusal; step 6 green at c06840c2. Logged: before the resume a read and a git diff named tools/supervisor.sh, against step 2&#x27;s letter; nothing started it, so no effect the chair barred. T-0878, T-0879, T-0833 wait on T-0877 applying between sessions.</summary>
-</entry>
-<entry>
-<title>Decision: T-0876 paused before step 5, no refusal: supervisor_test.sh had 3 rows red since T-0895 (c</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-11-01:event/2026-11-01t02-45-26-05-00-decision-t-0876-paused-before-step-5-no-refusal</id>
-<updated>2026-11-01T02:45:26-05:00</updated>
-<summary type="text">T-0876 paused before step 5, no refusal: supervisor_test.sh had 3 rows red since T-0895 (c3709b04) moved the report days, run on the governor suite alone; Odalys reported her own miss. Operator: fix the rows in their own commit, then step 5 and 6. Ruling them acceptable would hide a result.</summary>
 </entry>
 </feed>

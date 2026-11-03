@@ -1,5 +1,82 @@
 [
 {
+"time": "2026-11-03T09:45:29-05:00",
+"worker": "operator",
+"type": "session",
+"summary": "08:13 work session, pool 1: #148 3:48 entry re-shown (7e3a94958); T-1295 #152 verified; T-0675 item 5 (f75c0ff34, T-1404 next); T-1289a (749a1ab8d); #41 account b needs LANE CLEAR b from an Investor account; #142 B -> T-1406, inbox miss T-1407. Closed early for the site rebuild (#148).",
+"link": ""
+},
+{
+"time": "2026-11-03T09:43:40-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #148",
+"link": ""
+},
+{
+"time": "2026-11-03T09:40:14-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "an Investor answered #142 with option B at 09:06 (three audiences, website at launch, previews back in 1.0, all premades free, app integrations); the inbox never picked it up until the 09:38 follow-up. Replied c6606709693; Ines costs it by 11-05 09:00 (T-1406); inbox miss is T-1407.",
+"link": ""
+},
+{
+"time": "2026-11-03T09:39:02-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #142",
+"link": ""
+},
+{
+"time": "2026-11-03T08:57:26-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "A personal account's stop was lifted by an Investor",
+"link": ""
+},
+{
+"time": "2026-11-03T08:57:25-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #147",
+"link": ""
+},
+{
+"time": "2026-11-03T08:52:38-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-03T08:13:38-05:00",
+"worker": "Odalys",
+"type": "blocked",
+"summary": "T-1288 restart: security guard refused again (direct run of tests/board_stale_test.py and lane_owner_test.py plus bash -n on supervisor.sh, worktree only, no git show). Stopped, nothing committed; to Ines.",
+"link": ""
+},
+{
+"time": "2026-11-03T08:13:21-05:00",
+"worker": "operator",
+"type": "decision",
+"summary": "T-1288 restart under T-0848: the guard refused copying HEAD's tools/supervisor.sh into scratch (git show HEAD:tools/supervisor.sh > scratch, read as a Keychain effect). Restart drops that effect: no copy of supervisor.sh anywhere, tests run in the worktree only. Same packet; a second refusal stops i",
+"link": ""
+},
+{
+"time": "2026-11-03T08:12:54-05:00",
+"worker": "Odalys",
+"type": "blocked",
+"summary": "T-1288: security guard refused the test run (git show of supervisor.sh plus tests/run.sh) as a Keychain read; stopped per T-0848, nothing committed. board_stale.py green 24/24 before the wiring; live board 0 flagged of 210.",
+"link": ""
+},
+{
+"time": "2026-11-03T08:12:26-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #148",
+"link": ""
+},
+{
 "time": "2026-11-03T08:09:12-05:00",
 "worker": "operator",
 "type": "message",
@@ -11,6 +88,13 @@
 "worker": "Odalys",
 "type": "fix",
 "summary": "T-1265: T-1116 cycled through 3 lane sessions with no commit. Its only open prerequisite, the runner gate T-1207, was named in words the lane tick does not read as a wait, so it showed as cooling, not waiting. Noted 'waits on T-1207' on T-1116; the tick now skips it until T-1207 leaves the board.",
+"link": ""
+},
+{
+"time": "2026-11-03T08:07:59-05:00",
+"worker": "Odalys",
+"type": "ops",
+"summary": "T-1292: disk already 26 GB free (n=3 readings) against 20 GB stop line, build running; nothing deleted. Scratch 13 GB, DerivedData 10 GB, Simulators 5.6 GB kept.",
 "link": ""
 },
 {

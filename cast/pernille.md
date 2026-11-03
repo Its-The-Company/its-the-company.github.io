@@ -115,7 +115,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
-- 2026-11-02 T-1082: T-1035 PASS with fixes, T-1160-62 for Odalys; I re-read on fix. Full suite >20 min under load: run subsets of under 10 min. Guard blocks any git rebase, scratch repos too.
+- 2026-11-02 T-1082: T-1035 PASS with fixes, T-1160-62 for Odalys; I re-read on fix. Full suite >20 min under load: run subsets of under 10 min. Guard blocks any git rebase, scratch repos too (cost the T-1035 landing 11-02: when main moves, cherry-pick fresh into a new worktree, never rebase).
 - 2026-11-02 T-1046: git --since=<date> fills in the clock time; give 00:00. Name no lane profile path in a call.
 - 2026-11-02 T-1032: pre-check URLs with terms_guard.reason() (reads robots only, sends nothing) before fetching. download.geonames.org and query.wikidata.org/sparql are robots-barred; simplemaps 403.
 - Open (from T-1045): T-1048 stdlib size stop unexplained, my check; T-1047 upload.sh identity.

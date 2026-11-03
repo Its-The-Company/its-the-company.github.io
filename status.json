@@ -1,51 +1,51 @@
 {
  "schema": 1,
- "at": "2026-11-03T03:47:46.877800+00:00",
+ "at": "2026-11-03T04:58:57.755430+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-02T21:36:33-05:00"
+  "started": "2026-11-02T23:05:08-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "odalys",
-   "task": "[tools] T-1192 lane continuous refill",
+   "task": "[tools] T-1207 runner profile allows xattr reads",
    "model": "opus",
-   "started": "2026-11-03T03:17:58.843Z",
+   "started": "2026-11-03T04:11:55.399Z",
    "seconds": null,
-   "finished": "2026-11-03T03:47:03.009000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-1050 land plain targets",
-   "model": "opus",
-   "started": "2026-11-03T02:52:06.946Z",
-   "seconds": null,
-   "finished": "2026-11-03T03:45:43.813000+00:00"
+   "finished": "2026-11-03T04:58:18.002000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] OPT-043 verdict read",
-   "model": "sonnet",
-   "started": "2026-11-03T03:18:08.216Z",
+   "task": "[tools] T-1209 held finding from T-1035 review",
+   "model": "opus",
+   "started": "2026-11-03T04:39:58.568Z",
    "seconds": null,
-   "finished": "2026-11-03T03:19:58.812000+00:00"
+   "finished": "2026-11-03T04:57:20.054000+00:00"
   },
   {
    "name": "pernille",
-   "task": "[tools] T-1035 land lane parity",
+   "task": "[review] T-1035 land merge branch",
    "model": "opus",
-   "started": "2026-11-03T02:37:28.810Z",
+   "started": "2026-11-03T04:06:01.614Z",
    "seconds": null,
-   "finished": "2026-11-03T03:18:31.349000+00:00"
+   "finished": "2026-11-03T04:30:34.787000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-1208 status_update_test clock reds",
+   "model": "sonnet",
+   "started": "2026-11-03T04:24:52.575Z",
+   "seconds": null,
+   "finished": "2026-11-03T04:27:13.533000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 189,
+  "runnable_count": 177,
   "blocked_count": 108
  },
  "meter": {
@@ -58,7 +58,7 @@
   },
   "weekly": {
    "pct": 26.0,
-   "resets_at": "2026-11-08T07:00:00.273687+00:00",
+   "resets_at": "2026-11-08T07:00:00.053677+00:00",
    "used_words": "of your weekly allowance used",
    "left": 74.0,
    "left_words": "of your weekly allowance left"
@@ -68,7 +68,7 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-02T21:36:32.363532-05:00"
+  "read_at": "2026-11-02T23:05:07.710683-05:00"
  },
  "ui": {
   "week_pct": 0.689,
@@ -85,88 +85,556 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 10.39,
-  "usage_pct": 23.5,
-  "work_pct": 69.3,
-  "read_at": "2026-11-03T03:49:00+00:00",
+  "week_pct": 10.96,
+  "usage_pct": 24.1,
+  "work_pct": 69.6,
+  "read_at": "2026-11-03T05:02:00+00:00",
   "running": [
    {
-    "lane": "a2",
-    "task": "T-1178",
-    "w": "Idris",
-    "k": "test",
-    "t": "No test sees TreeView use TreeRules.linkURL",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-02T20:29:40-05:00",
-    "n": "Evan",
-    "d": 1
+    "lane": "a",
+    "task": "T-0908",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal lane before anything else",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:36:27-05:00",
+    "n": "Evan"
    },
    {
-    "lane": "a2",
-    "task": "T-1179",
-    "w": "Idris",
+    "lane": "a",
+    "task": "T-1201",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "After T-1050 landed T-0642",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:36:27-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-1207",
+    "w": "Odalys",
     "k": "fix",
-    "t": "_link_url_problem passes 16 urls the renderer drops",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-02T20:29:40-05:00",
+    "t": "Runner.py profile allows file-read-data/file-write* in the job folder and...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:36:27-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-0299",
+    "w": "Pernille",
+    "k": "build",
+    "t": "T-0296 follow-on reminder",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:36:27-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-1035",
+    "t": "T-1035",
+    "at": "2026-11-02T23:36:27-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-1029",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Lane sessions lose work",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:36:27-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-0934",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "First run on one account, after sign-in",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:36:27-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-1194",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "A path for the two personal API keys",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:36:27-05:00",
     "n": "Evan"
    },
    {
     "lane": "a2",
-    "task": "T-1180",
-    "w": "Idris",
-    "k": "test",
-    "t": "Three survivors",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-02T20:29:40-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a2",
-    "task": "T-1181",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Detail for Idris in Pernille's T-1159 scratch folder, file HELD-finding-5.md",
+    "task": "T-1116",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "\"make sure the macbook runner is being leveraged for Xcode checks so we...",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-02T20:29:40-05:00",
+    "at": "2026-11-02T23:39:11-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-0777",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Catalogue, first to ship",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:39:11-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-0778",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Catalogue, second to ship",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:39:11-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-0904",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Put OPT-051's n=10 read in the Week 2 review",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:39:11-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-0788",
+    "w": "Wrenna",
+    "k": "release",
+    "t": "Final sweep of the launch posts and press kit on Day 24",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-02T23:39:11-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-0825",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal subscription lane",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:39:11-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-0868",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Independent review of T-0867 at 811521cf",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:39:11-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-0944",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Home redo",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-02T23:39:11-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-1030",
+    "w": "Idris",
+    "k": "ops",
+    "t": "Parked lane work from the 08:09 stops",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:41:46-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-0897",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Read the revert watch at day 3",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-02T23:41:46-05:00",
     "n": "Evan",
     "d": 1
    },
    {
-    "lane": "a2",
-    "task": "T-1114",
-    "w": "Idris",
-    "k": "fix",
-    "t": "No test calls locationManagerDidChangeAuthorization, so deleting...",
-    "m": "sonnet",
+    "lane": "a3",
+    "task": "T-0978",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Lane follow-up to T-0970/T-0951 at da1476ff",
+    "m": "opus",
     "e": "high",
-    "at": "2026-11-02T20:29:40-05:00",
+    "at": "2026-11-02T23:41:46-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-0989",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal account in Lock In mode turns itself off automatically once that...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:41:46-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-1154",
+    "w": "Ines",
+    "k": "plan",
+    "t": "The C51 voice card",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:41:46-05:00",
     "n": "Evan",
     "d": 1
+   },
+   {
+    "lane": "a3",
+    "task": "T-1209",
+    "t": "T-1209",
+    "at": "2026-11-02T23:41:46-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-0033",
+    "w": "Wrenna",
+    "k": "research",
+    "t": "Unassigned, P2, person's browser checks on developer.apple.com for the [M]...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:41:46-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a3",
+    "task": "T-0042",
+    "w": "Idris",
+    "k": "build",
+    "t": "Acknowledgements screen",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:41:46-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "b",
+    "task": "T-1192",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "A personal-lane session refills continuously instead of in blocking batches:...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:40:52-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1083",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "After T-1035 lands",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:40:52-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-0956",
+    "w": "Pernille",
+    "k": "build",
+    "t": "Replay the lane suites in the Simulator with the zipped stdlib and lazy imports",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:40:52-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b",
+    "task": "T-0975",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Follow-up to T-0971",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:40:52-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1069",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "After T-1035 lands, land keeps what a red run needs",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:40:52-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1062",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "After T-1035 lands",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:40:52-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1049",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-1034 fix 4 after T-1035 lands",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:40:52-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1195",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-1185 F5 follow-up",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:40:52-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b2",
+    "task": "T-1030",
+    "w": "Idris",
+    "k": "ops",
+    "t": "Parked lane work from the 08:09 stops",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:43:31-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b2",
+    "task": "T-0042",
+    "w": "Idris",
+    "k": "build",
+    "t": "Acknowledgements screen",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:43:31-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b2",
+    "task": "T-0045",
+    "k": "research",
+    "t": "Person, P2, name checks",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:43:31-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b2",
+    "task": "T-0259",
+    "w": "Idris",
+    "k": "research",
+    "t": "On 2026-10-27",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:43:31-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b2",
+    "task": "T-0337",
+    "w": "Wrenna",
+    "k": "research",
+    "t": "Confirm or correct the revenue-gap memo's five [recall] tags from single...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:43:31-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b2",
+    "task": "T-0425",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Every suite-end hang so far was a failing test run without...",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-02T23:43:31-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b2",
+    "task": "T-0457",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Triage the old ops/questions.md items Report 10 dropped without a card",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:43:31-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b2",
+    "task": "T-0624",
+    "w": "Maren",
+    "k": "design",
+    "t": "On F6's verdict",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-02T23:43:31-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-0956",
+    "w": "Pernille",
+    "k": "build",
+    "t": "Replay the lane suites in the Simulator with the zipped stdlib and lazy imports",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:45:59-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-0629",
+    "w": "Maren",
+    "k": "design",
+    "t": "If F6 moves the Gallery",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-02T23:45:59-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-0760",
+    "w": "Idris",
+    "k": "test",
+    "t": "T-0758 follow-up",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-02T23:45:59-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-0851",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Split pywidget/app-guide.md",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-02T23:45:59-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-0882",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "After an Investor applies the T-0872 fold",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-02T23:45:59-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-0890",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Outreach plan for the Investors once the build nears release",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:45:59-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-0914",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "After the lane",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-02T23:45:59-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-1028",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "After T-0642 goes and the first MacBook xc-test passes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-02T23:45:59-05:00",
+    "n": "Jeremy"
    }
   ]
  },
  "api_credits": [
   {
    "name": "company",
-   "used_usd": 149.26,
+   "used_usd": 162.6,
    "total_usd": 200.0
   }
  ],
  "disk": {
-  "free_gb": 35,
+  "free_gb": 24,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
-  "on": true,
-  "pool": 12,
-  "at": "2026-11-02T22:49:00-05:00"
+  "on": false,
+  "pool": 1,
+  "at": "2026-11-03T00:02:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -244,6 +712,13 @@
     "o": "c"
    },
    {
+    "w": "Odalys",
+    "k": "fix",
+    "t": "Runner.py profile allows...",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "build",
     "t": "T-0296 follow-on reminder",
@@ -254,27 +729,6 @@
     "w": "Idris",
     "k": "build",
     "t": "Extension lane",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-1035 independent review",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Lanes get the main account's access,...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Re-check only the fixes for your T-1082...",
     "s": "next",
     "o": "c"
    },
@@ -291,27 +745,41 @@
     "t": "First run on one account, after sign-in",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Company > Infrastructure gets a...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "A path for the two personal API keys",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Idris+pernille",
-    "t": "The app's code editor and other Swift parts now build as plain Xcode targets, without the nested...",
-    "at": "2026-11-02T22:45:00-05:00"
+    "w": "Odalys",
+    "t": "A low-risk finding from the independent review of the personal-account code is now fixed, with...",
+    "at": "2026-11-02T23:57:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "The guard that blocks deleting records now almost never blocks harmless commands: about 0.3...",
-    "at": "2026-11-02T22:19:00-05:00"
+    "w": "Pernille",
+    "t": "Pernille's independent review passed three fixes to how finished personal-account work is...",
+    "at": "2026-11-02T23:43:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "A personal account no longer sits idle while its finished work waits to be merged: the waiting...",
-    "at": "2026-11-02T22:17:00-05:00"
+    "w": "Odalys+pernille",
+    "t": "The personal Claude accounts now get the same access and settings as the main account and can...",
+    "at": "2026-11-02T23:39:00-05:00"
    }
   ],
   "count": {
-   "next": 189,
+   "next": 177,
    "wait": 30,
    "blocked": 78,
    "you": 12

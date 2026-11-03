@@ -253,6 +253,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - OPT-043 reads after 11-02 21:05 (T-1013 mine). OPT-042 reads 11-09, n=5 of 8. T-1029 open for OPT-067 (10 lane sessions). T-0978: OPT-065 at n=10. OPT-062 reads T-0897, T-0898 (11-07).
 - T-1186 landed dce92186 (no reviewer: tools code, C13 needs one only for TestFlight/App Store). T-1187 retry line in. Landed ahead of T-1035 after a 20 min wait; Pernille recopies onto it.
 - 2026-11-02: again changed a test row by sed -i and supervisor.sh by heredoc (T-1186). Edit tool only, every file.
+- T-1201 gate at 19d5907a failed (exit 65, 0 tests): profile denies file-read-xattr in job folder. Fix T-1207, then approve-sandbox on #41, then first MacBook job, then T-1116.
 - #24 plan awaits Investor answers; Phase 1 (live_status.py, read-only chat page) is unblocked.
 
 ## Standing lessons (details in archive.md)

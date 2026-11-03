@@ -383,12 +383,14 @@ Lengths are in section 8, last row. The company recounts every draft in the T-07
 7. Which social accounts, if any, the Investors are willing to use.
 8. Ines's view of the section 4 estimate, if she wants to restate it; no target hangs on it.
 
-## 8. Claim check against HEAD 16ffb92b (2026-10-30, read by Wrenna)
+## 8. Claim check against HEAD 48335d51 (2026-11-02, read by Wrenna; third draft, T-1157)
+
+Third draft. Re-read at 48335d51 against ops/v1_scope.json (stamp 2026-10-29). The previous run (T-1151) was at 16ffb92b; 913 commits sit between. The three that could change a claim were read: 13e22c7d and 1dd147b5 (widget links) change no row, and c2c05ea7 (editor checks, pywidget_tooling/editor.py plus tests) changes row 7 not at all, since no Swift file calls it. Rows 19, 20 and 38 were re-read and carry a note; row 40 is new. Every other row's evidence file, count and status was rechecked and stands: 3.15.1, 30 stripped names, no background-mode code, no NavigationSplitView, no prompt handler in DeviceRouter, 12 premade scripts, 10 examples, iOS 18.0, find on, `family_sharing` false. All gates stay open until the 2026-11-30 freeze.
 
 Each row is a checkable claim in D1-D6 or the press kit. **Confirmed** means I read the code or a test record at this commit. "Simulator" means no real iPhone has run it yet. **Gated** means the code is not there; the sentence carries a gate. **Cut** means the first draft said it and it came out. An unsure row was not marked Confirmed.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 13: 8. Claim check against HEAD 16ffb92b (2026-10-30, read by Wrenna), scrolls sideways" data-n="1" style="--tw:1000px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 13: 8. Claim check against HEAD 48335d51 (2026-11-02, read by Wrenna; third draft…, scrolls sideways" data-n="1" style="--tw:1000px" markdown="1">
 
 | # | Claim | Evidence at HEAD | Status |
 |---|---|---|---|
@@ -410,8 +412,8 @@ Each row is a checkable claim in D1-D6 or the press kit. **Confirmed** means I r
 | 16 | Home Screen small, medium, large; Lock Screen circular, rectangular, inline | `Shared/TreeNodes.swift` `TreeFamilies.supported`; App Guide s8.4 renders | Confirmed as renders, under W. "Nobody has yet seen them on a real iPhone" (App Guide 8.3) |
 | 17 | StandBy | Follows from `.systemSmall`; no test names it | Under W; the device session must look at it |
 | 18 | A person places a widget and sees their script | T-0512 runs placed widgets on foreground; user-script save is T-0684, due at F19 | **Gated W** |
-| 19 | The extension runs no Python, draws a saved tree | `Widget/PyWidget.swift`; T-0675 not landed | True today: **Gated LANE-OFF**, because it stops being true if the lane ships. First draft stated it flat |
-| 20 | Script reruns in the extension, 2 s, short module list | ADR-007 chair line items 1-2; `_pywidget_runtime/lane.py`; Swift half T-0675 held | **Gated LANE-ON** |
+| 19 | The extension runs no Python, draws a saved tree | `Widget/PyWidget.swift`; T-0675 not landed | True today: **Gated LANE-OFF**, because it stops being true if the lane ships. First draft stated it flat. Third draft: code to run Python in the extension now exists behind a flag, default off; "runs no Python" is true of what a person gets only while the flag is off |
+| 20 | Script reruns in the extension, 2 s, short module list | ADR-007 chair line items 1-2; `_pywidget_runtime/lane.py`; Swift half T-0675 held | **Gated LANE-ON.** Since 16ffb92b T-0675 slices 1 to 4 landed (the bridge in Shared/Bridge/, getTimeline running a lane script, the 2 s budget, demotion); the board still holds T-0675 open with the flag default off, so the claim is still unproven on a phone |
 | 21 | No number; never "live" (was: every 15 to 60 minutes at best, dropped by the chair line 2026-10-30 17:14) | ADR-007 chair line 2026-10-30 17:14 (T-0813); Apple's page (research/inbound/apple/, 2026-10-26) | Apple calls 15 to 60 minutes typical, not a bound, and at HEAD a reload runs no script. Reply if a reader asks how often: Apple's page says a well-viewed widget typically gets 40 to 70 reloads a day; we have not measured ours |
 | 22 | Clocks, countdowns, progress bars tick by themselves | `Shared/TreeView.swift:477` `Text(timerInterval:)`, `.timer` | Confirmed, Simulator |
 | 23 | Runs in **background refresh** | No `BGTaskScheduler`, `.backgroundTask` or `UIBackgroundModes` anywhere in App, Shared or Info.plist; no board line. App Guide 4.1 calls it "shipped" | **Cut.** Not in any draft. New board line, for Ines to rule |
@@ -429,8 +431,9 @@ Each row is a checkable claim in D1-D6 or the press kit. **Confirmed** means I r
 | 35 | 10 example scripts; word_count's output in D3 | 10 files in `pywidget/examples`; row A6ii, 11 of 11; output run by me on the Mac with `python3 -I`. A person reaches them only on iPad ("Open in New Window", `App/PyWidgetApp.swift:671`); on iPhone the one path is `PW_EXAMPLE`, UI tests only (`App/SceneFile.swift:16`), and the T-0355 branch adds no list (read at 6f3cade5, T-0789) | Files and output confirmed, not yet in Shortcuts. **Gated X** on the store page; D3's worked example needs the same path, and the Day 24 sweep carries it |
 | 36 | Public log at its-the-company.github.io | `site.json` | Confirmed. "Code anyone can read" **Cut**: the company repository is private |
 | 37 | Comparison 2, none, 3.14 | Recount of L7-raw/lookup-us-2026-10-25.json, 2026-10-30; PythonIDE says "widgets", Pyto says Home Screen | Confirmed for the saved file only; refilled on the day |
-| 38 | Interactive widgets not in 1.0 | ADR-001 3.2; T-0430 refused a Button; Refresh button only under the lane (T-0678) | Confirmed |
+| 38 | Interactive widgets not in 1.0 | ADR-001 3.2; T-0430 refused a Button; Refresh button only under the lane (T-0678) | Confirmed. Third draft: widget links go only to pywidget:// (T-1134, T-1179; the renderer drops other URLs), so no sentence may say a widget can open a web page |
 | 39 | Lengths, with the longest name (Coilwork) and gates passed | D1 title 78 characters; D5 244 with a 39-character link; D6 tagline 51. If W fails: title 50, tagline 43 | Counted by script; recounted Day 24 |
+| 40 | A widget's tap or link opens a web page or any other app (not claimed in any draft) | `TreeRules.linkURL`, `pywidget_ui` validate; tests `LinkRuleTests.swift`, `test_escape.py`, `test_gallery_urls.py` | **Cut** if ever written: links reach pywidget:// only. Nothing in D1-D6 says otherwise |
 
 </div>
 {% endraw %}

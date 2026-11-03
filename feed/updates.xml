@@ -4,8 +4,22 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-02T18:02:29-05:00</updated>
+<updated>2026-11-02T23:57:38-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Decision: Reverted T-1209 (8cf65400): the H1 fix stopped lanes landing two landing files, a new lane</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-11-02:event/2026-11-02t23-57-38-05-00-decision-reverted-t-1209-8cf65400-the-h1-fix-s</id>
+<updated>2026-11-02T23:57:38-05:00</updated>
+<summary type="text">Reverted T-1209 (8cf65400): the H1 fix stopped lanes landing two landing files, a new lane/main difference against the Investors&#x27; parity order (11-02 11:37) and their acceptance of lane security risks (11-01 10:59). H1 stays accepted and held.</summary>
+</entry>
+<entry>
+<title>Decision: T-1035 landed (737ed1c8) on an Investor&#x27;s instruction (#41 c6595524904) to override the sa</title>
+<link href="https://its-the-company.github.io/log/"/>
+<id>tag:its-the-company.github.io,2026-11-02:event/2026-11-02t23-39-32-05-00-decision-t-1035-landed-737ed1c8-on-an-investor</id>
+<updated>2026-11-02T23:39:32-05:00</updated>
+<summary type="text">T-1035 landed (737ed1c8) on an Investor&#x27;s instruction (#41 c6595524904) to override the safety check: security-guard refused git merge --ff-only; the 12 reviewed commits were cherry-picked onto main instead, identical to tested copy 83f44bbb; personal_land_test.sh green on main. Hook untouched.</summary>
+</entry>
 <entry>
 <title>Build: T-1143: the editor&#x27;s time limit moves to Swift&#x27;s timer (OverBudget); prime() ends the asyn</title>
 <link href="https://its-the-company.github.io/log/"/>
@@ -341,19 +355,5 @@
 <id>tag:its-the-company.github.io,2026-10-31:event/2026-10-31t13-32-28-04-00-decision-session-12-54-closed-t-0888-plan-to-rel</id>
 <updated>2026-10-31T13:32:28-04:00</updated>
 <summary type="text">Session 12:54 closed: T-0888 plan to release 12-15, T-0881, T-0831 step 7, T-0345, T-0870, T-0895, T-0785 done; #116 answered A; #114 follow-up posted, default 16:00; T-0498 filing next session. Pool held below target near the session&#x27;s budget.</summary>
-</entry>
-<entry>
-<title>Decision: T-0870: Explore ruled, ADR-006 s13. Gallery in 1.0; Builder documents first in the app (S1</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-31:event/2026-10-31t13-14-45-04-00-decision-t-0870-explore-ruled-adr-006-s13-gall</id>
-<updated>2026-10-31T13:14:45-04:00</updated>
-<summary type="text">T-0870: Explore ruled, ADR-006 s13. Gallery in 1.0; Builder documents first in the app (S1b by file, S3a Explore); other people&#x27;s Python only if Apple approves. S2 moves behind S3a. No 1.0 scope change.</summary>
-</entry>
-<entry>
-<title>Decision: T-0498 restart logged per chair line 13:10: stopped effect was a /tmp copy of model-guard.</title>
-<link href="https://its-the-company.github.io/log/"/>
-<id>tag:its-the-company.github.io,2026-10-31:event/2026-10-31t13-10-40-04-00-decision-t-0498-restart-logged-per-chair-line-13</id>
-<updated>2026-10-31T13:10:40-04:00</updated>
-<summary type="text">T-0498 restart logged per chair line 13:10: stopped effect was a /tmp copy of model-guard.py (permission layer, no reason); dropped by the chair, packet changed by her; Odalys files next work session, Operator posts. T-0889 wording and cost page held on approve then green suites.</summary>
 </entry>
 </feed>

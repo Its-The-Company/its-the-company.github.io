@@ -1,5 +1,82 @@
 [
 {
+"time": "2026-11-02T23:57:38-05:00",
+"worker": "Operator",
+"type": "decision",
+"summary": "Reverted T-1209 (8cf65400): the H1 fix stopped lanes landing two landing files, a new lane/main difference against the Investors' parity order (11-02 11:37) and their acceptance of lane security risks (11-01 10:59). H1 stays accepted and held.",
+"link": ""
+},
+{
+"time": "2026-11-02T23:54:03-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-02T23:46:22-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-02T23:44:23-05:00",
+"worker": "Operator",
+"type": "ops",
+"summary": "Disk cleanup on an Investor's ask (#41 c6595631484, standing permission 11-02 18:04): 15 GB to 22 GB free; 4 landed worktrees removed, 2 idle Simulators erased, 15 finished scratch folders deleted; DerivedData and booted Simulators kept. Asked 'approve sweep' for T-1005 on #41 c6595663406.",
+"link": ""
+},
+{
+"time": "2026-11-02T23:41:49-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-02T23:39:32-05:00",
+"worker": "Operator",
+"type": "decision",
+"summary": "T-1035 landed (737ed1c8) on an Investor's instruction (#41 c6595524904) to override the safety check: security-guard refused git merge --ff-only; the 12 reviewed commits were cherry-picked onto main instead, identical to tested copy 83f44bbb; personal_land_test.sh green on main. Hook untouched.",
+"link": ""
+},
+{
+"time": "2026-11-02T23:33:23-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-02T23:31:26-05:00",
+"worker": "Operator",
+"type": "session",
+"summary": "23:05 work session on API credits: 14 board lines landed (fixes in the editor, link rules, rating store, run log tests, site notes, status post). T-1201 runner gate failed on a sandbox rule, T-1207 fixing it. T-1035 review passed but not landed: guard refused a rebase. Two an Investor questions answer",
+"link": ""
+},
+{
+"time": "2026-11-02T23:31:26-05:00",
+"worker": "Operator",
+"type": "mistake",
+"summary": "Operator sent T-1158, T-1179 and T-1164 without the lane claim step; lane-b and lane-a2 held them since 19:05-20:29 with no lane session working them. All three landed on main; told an Investor on #41 (c6595366166). Main session leaves lane-able lines to the lanes.",
+"link": ""
+},
+{
+"time": "2026-11-02T23:20:19-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-02T23:19:12-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
 "time": "2026-11-02T22:47:34-05:00",
 "worker": "operator",
 "type": "session",

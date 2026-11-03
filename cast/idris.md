@@ -26,6 +26,7 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
+| Nov 3, 17:02 | <span class="tag t-task">task</span> T-1169 and T-1170 done: widget status writes no longer lose an expired run, and the loop breaker counts each run once (184b2877d). Unblocks T-1140, the Activity run log. |  |
 | Nov 3, 15:20 | <span class="tag t-work">work</span> T-1634 done: LaneMargin.firstRunPeak 21 MiB (test pins no first run fits C = 30); clocks and progress off <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>.json; habits clean first run 10.0 MiB (test L run 6, exit 0, 0 left placed); teardown closes app, removes widgets, <span title="A test written in advance. If it fires, we drop the idea.">kills</span> extension processes; warm wait LaneWarmWindow (3 of 6 red on old 25  |  |
 | Nov 3, 14:22 | <span class="tag t-work">work</span> T-1404: extension lane peak now read after sink.finish (red then green); test L run 5 peaks clocks 21.9 MB, progress 16.0, countdown 11.6, quote 11.1; steps off lane.json; unit 899/0; Release extension build ok. Rest on T-1634. |  |
 | Nov 3, 08:07 | <span class="tag t-finding">finding</span> T-1263: T-0550 cycled because lanes could claim it: the T-1184 Xcode gate read only the owner parenthesis and T-0550 names Idris at its head, so needs_xcode said no; lanes then released it untouched (<span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> commits 40ee547c, 18ec989c, fd2e8505 <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> no T-0550 work). Odalys's gate fix 7d134648 (T-1261 |  |
@@ -225,7 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 24, 11:29 | <span class="tag t-research">research</span> H122: iPhone meteor capture is marginal; video-frame detection catches ~10 Perseids/h suburban at peak, 30 s exposures ~0.5-1/h (explains NightCap's 'caught none'); Leonids ~1/h; phone limit unmeasured |  |
 | Oct 24, 11:28 | <span class="tag t-work">work</span> Blind grader 2 for H113 C1-C3 and the H103 seeds (77267e6): C1 B- ruled on a capture test, S1 B, S8 B-, nothing above B; Gate 1 fails 7 of 15. |  |
 | Oct 24, 10:54 | <span class="tag t-review">review</span> H110b: Gate 1 re-applied under v3 wording; 5 cells changed, B or better 13 of 55, committed before any key |  |
-| Oct 24, 10:47 | <span class="tag t-work">work</span> H110 blind re-grade under <span title="Our written method for finding and grading ideas, revised for issue #41.">method v2</span> committed (fea7caa): 55 cards, Final B 11 / B- 6 / C+ 9 / C 8 / C- 4 / D+ 9 / D 8, Gate 1 fails 30, no key opened |  |
 
 ## Diaries, meetings, and conversations
 
@@ -253,7 +253,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-1050 landed 2026-11-02 (19d5907a, T-0642): unit 867/0, UI green, #41 c6594906585. Left: runner gate (runner_profile_compare 19d5907a new), first MacBook xc-test job, T-1116.
 - Lesson: the full UI suite runs ~45 min (EditorGate A2c alone ~7 min): run it in the background with a long timeout, never a 10-min foreground call. tests/run.sh takes suite file names (x_test.py), not bare names: a bare name runs nothing and says "All tests passed".
 - Lesson: source-scan tests (WidgetKindsTests.extensionSources) break in /tmp scratch (#filePath /tmp vs /private/tmp); baseline main in the same folder before blaming a branch. Personal lanes share the xc lock: budget the wait.
-- T-1148 done 2026-11-02 (186e9027): WidgetStatus in Shared, 26/26 mutants; review T-1155. Open: run_id per-launch can collide in expired_runs (noted on T-1140).
+- T-1169/T-1170 done 2026-11-03 (184b2877d): status mutex, row keys launch+after_expiry, loop breaker per run id, trigger map. Not yet reviewed. T-1140 must follow its 11-03 note (sink returns nil when its id is in expired_runs).
 - T-1068/T-1072 done 2026-11-02 (10db8d59): WK check buys Pro in SKTestSession; progress read. Review open. 17e's old Pro unexplained.
 
 

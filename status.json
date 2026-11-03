@@ -1,58 +1,42 @@
 {
  "schema": 1,
- "at": "2026-11-03T21:01:57.549151+00:00",
+ "at": "2026-11-03T22:02:44.403388+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-03T15:28:08-05:00"
+  "started": "2026-11-03T16:17:05-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] T-1029 lane retries and silent ticks",
+   "name": "idris",
+   "task": "[build] T-1170 T-1169 loop breaker key and expiry mutex",
    "model": "opus",
-   "started": "2026-11-03T20:56:54.127Z",
+   "started": "2026-11-03T21:19:45.267Z",
    "seconds": null,
-   "finished": "2026-11-03T21:01:08.773000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-1207 runner gate pass bar ruling",
-   "model": "opus",
-   "started": "2026-11-03T20:54:30.546Z",
-   "seconds": null,
-   "finished": "2026-11-03T20:55:55.196000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-1207 runner gate last two failures",
-   "model": "opus",
-   "started": "2026-11-03T20:33:51.269Z",
-   "seconds": null,
-   "finished": "2026-11-03T20:54:15.406000+00:00"
+   "finished": "2026-11-03T22:01:58.580000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 232,
-  "blocked_count": 117
+  "runnable_count": 216,
+  "blocked_count": 119
  },
  "meter": {
   "five_hour": {
-   "pct": 13.0,
-   "resets_at": "2026-11-03T20:59:59.707614+00:00",
+   "pct": 0.0,
+   "resets_at": "2026-11-04T01:59:59.737003+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 87.0,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 31.0,
-   "resets_at": "2026-11-08T06:59:59.707635+00:00",
+   "pct": 32.0,
+   "resets_at": "2026-11-08T06:59:59.737027+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 69.0,
+   "left": 68.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -60,10 +44,10 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-03T15:28:06.462779-05:00"
+  "read_at": "2026-11-03T16:17:04.490438-05:00"
  },
  "ui": {
-  "week_pct": 0.681,
+  "week_pct": 0.698,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -77,55 +61,68 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 18.68,
-  "usage_pct": 31.5,
-  "work_pct": 68.0,
-  "read_at": "2026-11-03T21:04:00+00:00",
+  "week_pct": 25.42,
+  "usage_pct": 37.8,
+  "work_pct": 78.6,
+  "read_at": "2026-11-03T22:06:00+00:00",
   "running": [
    {
+    "lane": "a",
+    "task": "T-1647",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Tests/run.sh --fast on main by 2026-11-04 02:11 ET, the day the T-1211...",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-03T16:21:46-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-1648",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Proposal",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-03T16:21:46-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
     "lane": "b",
-    "task": "T-1646",
-    "w": "Idris",
+    "task": "T-1658",
+    "w": "Maren",
     "k": "tools",
-    "t": "Personal branch personal/a5 did not land",
+    "t": "Personal account a3 stopped on T-1644+T-1396",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-03T16:00:06-05:00",
+    "at": "2026-11-03T16:36:04-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1660",
+    "w": "Idris",
+    "k": "review",
+    "t": "Read T-0950+T-1247+T-1174 at 6058fe73, by someone other than its author",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T16:36:04-05:00",
     "n": "Jeremy",
     "d": 1
    },
    {
     "lane": "b",
-    "task": "T-1481",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Look at T-1420",
+    "task": "T-1661",
+    "w": "Idris",
+    "k": "review",
+    "t": "Read T-1257+T-1416+T-1417+T-1418 at 271db470, by someone other than its author",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-03T16:00:06-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-1653",
-    "w": "Operator",
-    "k": "tools",
-    "t": "P1, from T-1029",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T16:02:24-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-1654",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Personal account b3 stopped on T-1480",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T16:02:24-05:00",
-    "n": "Jeremy"
+    "at": "2026-11-03T16:36:04-05:00",
+    "n": "Jeremy",
+    "d": 1
    }
   ]
  },
@@ -137,14 +134,14 @@
   }
  ],
  "disk": {
-  "free_gb": 17,
+  "free_gb": 13,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
-  "pool": 1,
-  "at": "2026-11-03T16:04:00-05:00"
+  "pool": 2,
+  "at": "2026-11-03T17:06:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -222,20 +219,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Remote approval for the MacBook runner",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Inbox missed an Investor comment",
-    "s": "next",
-    "o": "i"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "T-0296 follow-on reminder",
@@ -269,28 +252,42 @@
     "t": "After T-1035 lands",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "\"make sure the macbook runner is being...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Activity run log, Swift half",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Odalys",
-    "t": "Both last pieces were already on main since 2 November: a task that keeps failing now waits...",
-    "at": "2026-11-03T16:00:00-05:00"
+    "w": "Idris",
+    "t": "When iOS stops a background widget run, the note that says 'we stopped it, not the script' can...",
+    "at": "2026-11-03T17:01:00-05:00"
    },
    {
-    "w": "Odalys+ines",
-    "t": "The Investors' MacBook can now run our app's tests inside its safety sandbox. The last 3...",
-    "at": "2026-11-03T15:55:00-05:00"
+    "w": "Idris",
+    "t": "The rule that pauses a widget's background refresh after two crashes now reads each run once...",
+    "at": "2026-11-03T17:01:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "Sessions on the Investors' personal Claude accounts no longer lose their agents' work 10 minutes...",
-    "at": "2026-11-03T15:32:00-05:00"
+    "t": "The inbox had skipped one Investor comment on the costing request because it held an unusual...",
+    "at": "2026-11-03T16:18:00-05:00"
    }
   ],
   "count": {
-   "next": 232,
-   "wait": 33,
+   "next": 216,
+   "wait": 35,
    "blocked": 84,
    "you": 15
   }

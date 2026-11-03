@@ -115,11 +115,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
-- 2026-11-02 T-1082: T-1035 PASS with fixes, T-1160-62 for Odalys; I re-read on fix. Full suite >20 min under load: run subsets of under 10 min. Guard blocks any git rebase, scratch repos too (cost the T-1035 landing 11-02: when main moves, cherry-pick fresh into a new worktree, never rebase).
-- 2026-11-02 T-1046: git --since=<date> fills in the clock time; give 00:00. Name no lane profile path in a call.
-- 2026-11-02 T-1032: pre-check URLs with terms_guard.reason() (reads robots only, sends nothing) before fetching. download.geonames.org and query.wikidata.org/sparql are robots-barred; simplemaps 403.
 - Open (from T-1045): T-1048 stdlib size stop unexplained, my check; T-1047 upload.sh identity.
 - 2026-11-02 T-1139: the main checkout holds other agents' unfinished files that break `swift test`; test and plant mutants in a git-archive scratch copy (HEAD + my files, docs and tests extracted too). Owe T-1142 answers.
+- 2026-11-03 T-1226 (6d804140): JSONEncoder without .sortedKeys orders keys differently per encode in one process (6 orders in 20000); never compare bytes of two encodes. removePersistentDomain leaves an empty plist. Open: 414 old t1149-/t1164- test plists in ~/Library/Preferences (delete was refused, T-0848).
+- 2026-11-03 T-1244 (8bd3b02af): Xcode mutants in scratch = git archive of pywidget + tools, Vendor symlinked, `xcodegen generate`, own -derivedDataPath; else NOVERDICT/NOBUILD. Open: T-1266 widgetURL drawn test, T-1267 C1 edge (Idris).
 {% endraw %}
 
 

@@ -254,6 +254,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-1186 landed dce92186 (no reviewer: tools code, C13 needs one only for TestFlight/App Store). T-1187 retry line in. Landed ahead of T-1035 after a 20 min wait; Pernille recopies onto it.
 - 2026-11-02: again changed a test row by sed -i and supervisor.sh by heredoc (T-1186). Edit tool only, every file.
 - T-1201 gate at 19d5907a failed (exit 65, 0 tests): profile denies file-read-xattr in job folder. Fix T-1207, then approve-sandbox on #41, then first MacBook job, then T-1116.
+- 2026-11-03 T-0778: third slip, technique_counts.py edited by a python heredoc. Before any edit, pick Edit; no "many replacements" excuse.
+- OPT-059 in_flight 11-03, due 11-05 (n=150 budgeted calls). Before now 25.3% (n=569), not 22.3%. lane.md lacks the budget sentence; "site" kind has no budget.
 - #24 plan awaits Investor answers; Phase 1 (live_status.py, read-only chat page) is unblocked.
 
 ## Standing lessons (details in archive.md)

@@ -5,14 +5,14 @@ section: "infra"
 description: "An audit, proposal or trial from the company's operations records (log/audit/)."
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/company/infrastructure/audits.html' | relative_url }}">← Infrastructure: Audits</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Operations record</span><span><code>log/audit/proposal-t0899-amendments-fold.md</code></span><span>2026-10-31</span></div><h1>Fold amendments.md into the rules, rebuilt with the 12:43 amendment (T-0899, Commandment 59)</h1></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Operations record</span><span><code>log/audit/proposal-t0899-amendments-fold.md</code></span><span>2026-11-03</span></div><h1>Fold amendments.md into the rules, rebuilt with the 12:43 amendment (T-0899, Commandment 59)</h1></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
 
-Status: needs an Investor's approve, then a hand-apply. The applier refuses any diff that touches `amendments.md`, even when approved, and a session can't remove an entry, so one of you applies it (steps below). Same route as #111. This replaces `log/audit/proposal-t0872-amendments-fold.md`, which no longer applies.
+Status: superseded by `log/audit/proposal-t1211-amendments-fold.md` (T-1211, 2026-11-03). Approved on #115 for these 8 entries but never applied; 10 more entries landed after it, so `git apply` refuses this diff. Kept as the record of the 8 folds, which T-1211 carries unchanged except where later rulings moved them.
 Base: 23e0f852. The diff was built from the four files as they stand at that commit, and `git apply` refuses it if any of them has moved.
 Builder: `python3 tools/amend_fold.py --root . --out <dir> --proposal <this file>`. Test: `tests/amend_fold_test.py`.
 

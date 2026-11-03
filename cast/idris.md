@@ -26,6 +26,7 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
+| Nov 3, 02:02 | <span class="tag t-mistake">mistake</span> Owned: T-1179's Link pattern (my commit) refused the same urls as older clauses, so 4 escape mutants survived and run_mutants sat at 11/15 unnoticed; T-1180 pins each clause by its reason, 18/18 killed |  |
 | Nov 2, 21:24 | <span class="tag t-mistake">mistake</span> Idris found his own T-1148 commit 186e9027 left PyWidgetTests' testNoPreviewPathBypassesTheKey red on main: the new Shared/WidgetStatus.swift names status.json and the scan's list was not updated; he ran only host tests then. Found while landing T-1050; needs its own fix line. |  |
 | Nov 2, 17:24 | <span class="tag t-finding">finding</span> T-1137: LaneGuardTests signal 6 was PromptsCodecTests (uncommitted, main checkout) aborting on as!; buffered output misplaced it. Side finding: T-1121's scratch mutation run lacks pywidget/tests/fixtures, so WidgetIDTests crashes every run and mutation_check counts each mutant KILLED. |  |
 | Nov 2, 17:17 | <span class="tag t-test">test</span> T-1072: WidgetKit check drew Needs Pro because the check never held Pro; tests A and D now buy it in an SKTestSession; progress reads 14 hr, 19 min left |  |
@@ -225,7 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 24, 09:25 | <span class="tag t-research">research</span> H80 light-over-a-day lane: D+ best; Photone already logs DLI all day; gate 1 passes, gate 2 cap is acronym noise |  |
 | Oct 24, 07:58 | <span class="tag t-research">research</span> H92 measuring tools: 20 handheld tools screened against iPhone sensors; 0 at B+, best D+ spoke tension by ear; the three that pass are microphone pitch tools that already drew 2026 entrants |  |
 | Oct 24, 05:42 | <span class="tag t-research">research</span> H73 walk time: D+, 35 asks in four venues, both Day 3 gates fail (17 of 29 settled free; 0.34-0.43 builders per asker); TrailTime already plans with own measured pace; HealthKit route yes; own-fit spike reads 2-5% short, cause not found |  |
-| Oct 24, 05:04 | <span class="tag t-research">research</span> H72 which show is at my level: 0 at B+, best D+ ranker; 35 level-named asks/yr in 5 subs, 0 of 30 bodies give a word count; free-answer and builder gates fail; Migaku already covers 11 languages; no subtitle source clears terms for a catalogue |  |
 
 ## Diaries, meetings, and conversations
 
@@ -265,12 +265,10 @@ Dated task logs and full lessons: archive.md.
 
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
-- T-0675 item 3 2026-11-01: inside the Simulator a lookup keeps case but a new name collides, even on a Mac disk that ignores case: measure from a test, not the shell. An undo on a commit's last step can't run: delete it.
-- T-1030 recut 2026-11-02: removing a function, grep stored mutants' find text, not the file name: Core/mutants-t0719.json names Sources/PyWidgetCore/ and my triage missed it. Remove a worktree before a retry: branch -D fails on a checked-out name.
-- T-1044 2026-11-02: I wrote a review's claim into a comment and ticked it, and the link line proved it false: SDKSettings.plist sets defaults xcspecs don't show. A review's fact is a claim too: read the build first. zsh won't split $e in env; $(date) resets $? before echo.
 - T-0642 2026-11-02: a smaller binary is a claim: list what left (compile lines, nm) before calling it good. A failure list needs HEAD in the same folder and the same device: four of mine were /tmp against /private/tmp. Keep the HEAD build until the diff is read; I deleted mine for disk and lost one answer.
 - T-1137 2026-11-02: swift test's "signal" line prints where xctest's buffered stdout was cut, not in the crashed suite. Read the .ips or the unfinished test (tools/swift_test_head.py); never full-run the shared main tree.
 - T-0675 mirror bug 2026-11-01 (f8142681): my item 3 deleted files.shared data, because scripts/<id> had two owners and a review would have come later. Lesson: before a rename over a folder, grep who else writes it. -only-testing on a class misses tests in an extension of another class: read the count. Renaming a constant: run the whole unit target before the commit, not after.
+- T-1180 2026-11-03: a new rule that overlaps old clauses makes their mutants equivalent: replay the suite's mutant file after any rule change (T-1179 left escape at 11/15). Pin overlapping clauses by the reason text.
 {% endraw %}
 
 

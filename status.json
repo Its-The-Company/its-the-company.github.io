@@ -1,66 +1,42 @@
 {
  "schema": 1,
- "at": "2026-11-03T11:09:57.872821+00:00",
+ "at": "2026-11-03T11:18:21.107229+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-03T05:08:11-05:00"
+  "kind": "morning",
+  "started": "2026-11-03T06:13:07-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] T-1283 plain tamper entry wording",
+   "name": "ines",
+   "task": "CEO writes 06:00 morning report",
    "model": "opus",
-   "started": "2026-11-03T10:56:51.106Z",
+   "started": "2026-11-03T11:13:24.852Z",
    "seconds": null,
-   "finished": "2026-11-03T11:09:26.112000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-1282 review of T-1266",
-   "model": "opus",
-   "started": "2026-11-03T10:49:37.206Z",
-   "seconds": null,
-   "finished": "2026-11-03T10:56:27.695000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[test] T-1266 TreeView widgetURL test",
-   "model": "opus",
-   "started": "2026-11-03T10:42:59.914Z",
-   "seconds": null,
-   "finished": "2026-11-03T10:49:18.575000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-1193 lanes section on Infrastructure",
-   "model": "opus",
-   "started": "2026-11-03T10:36:15.456Z",
-   "seconds": null,
-   "finished": "2026-11-03T10:42:31.505000+00:00"
+   "finished": "2026-11-03T11:16:41.995000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 185,
+  "runnable_count": 186,
   "blocked_count": 110
  },
  "meter": {
   "five_hour": {
-   "pct": 8.0,
-   "resets_at": "2026-11-03T10:59:59.661117+00:00",
+   "pct": 0.0,
+   "resets_at": "2026-11-03T15:59:59.599836+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 92.0,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 27.0,
-   "resets_at": "2026-11-08T06:59:59.661137+00:00",
+   "pct": 28.0,
+   "resets_at": "2026-11-08T06:59:59.599857+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 73.0,
+   "left": 72.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -68,10 +44,10 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-03T05:08:10.402749-05:00"
+  "read_at": "2026-11-03T06:13:05.192727-05:00"
  },
  "ui": {
-  "week_pct": 0.684,
+  "week_pct": 0.691,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -85,10 +61,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 18.76,
-  "usage_pct": 33.8,
-  "work_pct": 72.2,
-  "read_at": "2026-11-03T11:12:00+00:00",
+  "week_pct": 18.96,
+  "usage_pct": 33.4,
+  "work_pct": 71.6,
+  "read_at": "2026-11-03T11:20:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -99,14 +75,14 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 14,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-03T06:12:00-05:00"
+  "at": "2026-11-03T06:20:00-05:00"
  },
  "next_tick_why": "session",
  "lanes": [
@@ -251,7 +227,7 @@
    }
   ],
   "count": {
-   "next": 185,
+   "next": 186,
    "wait": 30,
    "blocked": 80,
    "you": 14
@@ -262,7 +238,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",

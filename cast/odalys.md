@@ -247,7 +247,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Site chat plan facts — measured floors and the design choices behind #24
 - Archive: dated task notes, oldest threads moved out of this index
 ## Open
-- T-1035 (personal lanes = main account): review commit 21ac12e7, branch odalys/t1035-land (scratch worktree), 9 commits cherry-picked onto main fb814794, 247 of 249 there (2 reds not mine). Chair line ops/runs-archive/t0827-held/t1035-chair-line.txt binds. Next: Pernille reviews; if main moved, recopy and rerun before main moves. Then T-1034 fix 4 and the row 22 setting try are mine.
+- T-1035 (personal lanes = main account): Pernille's T-1082 PASS with fixes; F1-F5 fixed as T-1160/1161/1162 on odalys/t1035-land, head bd0f9b68 (notes pywidget/docs/reviews/t1035-t1082-fixes-odalys.md). Next: her re-read of those 3 commits, full suite, recopy if main moved. F6-F10 untaken. Then T-1034 fix 4, row 22 try.
+- 2026-11-02: I edited three test rows by a python heredoc (T-1160), against the Edit/Write-only ruling. Owned in the hand-back. Rows: Edit only, even a path fix.
 - OPT-043 reads after 11-02 21:05 (T-1013 mine). OPT-042 reads 11-09, n=5 of 8. T-1029 open for OPT-067 (10 lane sessions). T-0978: OPT-065 at n=10. OPT-062 reads T-0897, T-0898 (11-07).
 - #24 plan awaits Investor answers; Phase 1 (live_status.py, read-only chat page) is unblocked.
 

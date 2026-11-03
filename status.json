@@ -1,37 +1,45 @@
 {
  "schema": 1,
- "at": "2026-11-03T23:13:39.386666+00:00",
+ "at": "2026-11-03T23:24:47.919574+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null
+  "active": true,
+  "kind": "evening",
+  "started": "2026-11-03T18:16:49-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] T-1195 check_links link escape fix",
+   "name": "ines",
+   "task": "[report] weekly",
    "model": "opus",
-   "started": "2026-11-03T22:35:22.727Z",
+   "started": "2026-11-03T23:17:47.034Z",
    "seconds": null,
-   "finished": "2026-11-03T23:08:54.188000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-1678 run-log work review",
-   "model": "opus",
-   "started": "2026-11-03T22:59:53.846Z",
-   "seconds": null,
-   "finished": "2026-11-03T23:07:58.320000+00:00"
+   "finished": "2026-11-03T23:22:15.762000+00:00"
   },
   {
    "name": "idris",
-   "task": "[build] T-1669 RunLogRecorder wiring slice",
-   "model": "opus",
-   "started": "2026-11-03T22:35:14.655Z",
+   "task": "[diary] Idris",
+   "model": "haiku",
+   "started": "2026-11-03T23:17:07.039Z",
    "seconds": null,
-   "finished": "2026-11-03T22:59:10.176000+00:00"
+   "finished": "2026-11-03T23:17:37.306000+00:00"
+  },
+  {
+   "name": "general-purpose",
+   "task": "[talk] Idris and Pernille",
+   "model": "haiku",
+   "started": "2026-11-03T23:17:19.322Z",
+   "seconds": null,
+   "finished": "2026-11-03T23:17:37.065000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[diary] Odalys",
+   "model": "haiku",
+   "started": "2026-11-03T23:17:15.027Z",
+   "seconds": null,
+   "finished": "2026-11-03T23:17:34.109000+00:00"
   }
  ],
  "queue": {
@@ -42,15 +50,15 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 4.0,
-   "resets_at": "2026-11-04T02:00:00.199337+00:00",
+   "pct": 6.0,
+   "resets_at": "2026-11-04T02:00:00.184678+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 96.0,
+   "left": 94.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 32.0,
-   "resets_at": "2026-11-08T07:00:00.199354+00:00",
+   "resets_at": "2026-11-08T07:00:00.184694+00:00",
    "used_words": "of your weekly allowance used",
    "left": 68.0,
    "left_words": "of your weekly allowance left"
@@ -60,10 +68,10 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-03T17:32:31.890351-05:00"
+  "read_at": "2026-11-03T18:16:42.064918-05:00"
  },
  "ui": {
-  "week_pct": 0.687,
+  "week_pct": 0.678,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -75,12 +83,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-03T17:47:32-05:00",
+ "next_tick": null,
  "personal": {
-  "week_pct": 25.34,
+  "week_pct": 25.01,
   "usage_pct": 37.5,
   "work_pct": 77.7,
-  "read_at": "2026-11-03T23:14:00+00:00",
+  "read_at": "2026-11-03T23:28:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -94,38 +102,6 @@
     "n": "Evan"
    },
    {
-    "lane": "a2",
-    "task": "T-1662",
-    "t": "T-1662",
-    "at": "2026-11-03T17:14:37-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a2",
-    "task": "T-1663",
-    "w": "Idris",
-    "k": "tools",
-    "t": "Personal branch personal/b did not land",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T17:14:37-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a2",
-    "task": "T-1667",
-    "w": "Operator",
-    "k": "tools",
-    "t": "Personal branch personal/a4 did not land",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T17:14:37-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
     "lane": "a3",
     "task": "T-1395",
     "w": "Odalys",
@@ -135,41 +111,6 @@
     "e": "high",
     "at": "2026-11-03T17:51:42-05:00",
     "n": "Evan"
-   },
-   {
-    "lane": "b",
-    "task": "T-1658",
-    "w": "Maren",
-    "k": "tools",
-    "t": "Personal account a3 stopped on T-1644+T-1396",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T16:36:04-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-1660",
-    "w": "Idris",
-    "k": "review",
-    "t": "Read T-0950+T-1247+T-1174 at 6058fe73, by someone other than its author",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T16:36:04-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b",
-    "task": "T-1661",
-    "w": "Idris",
-    "k": "review",
-    "t": "Read T-1257+T-1416+T-1417+T-1418 at 271db470, by someone other than its author",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T16:36:04-05:00",
-    "n": "Jeremy",
-    "d": 1
    }
   ]
  },
@@ -181,16 +122,16 @@
   }
  ],
  "disk": {
-  "free_gb": 11,
-  "gate": "open",
-  "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
+  "free_gb": 12,
+  "gate": "closed",
+  "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-03T18:14:00-05:00"
+  "at": "2026-11-03T18:28:00-05:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "lanes": [
   {
    "name": "Odalys",
@@ -344,6 +285,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",

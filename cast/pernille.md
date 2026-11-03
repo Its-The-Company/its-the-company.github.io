@@ -117,9 +117,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
 - Open (from T-1045): T-1048 stdlib size stop unexplained, my check; T-1047 upload.sh identity.
-- 2026-11-02 T-1139: the main checkout holds other agents' unfinished files that break `swift test`; test and plant mutants in a git-archive scratch copy (HEAD + my files, docs and tests extracted too). Owe T-1142 answers.
-- 2026-11-03 T-1226 (6d804140): JSONEncoder without .sortedKeys orders keys differently per encode in one process (6 orders in 20000); never compare bytes of two encodes. removePersistentDomain leaves an empty plist. Open: 414 old t1149-/t1164- test plists in ~/Library/Preferences (delete was refused, T-0848).
 - 2026-11-03 T-1244 (8bd3b02af): Xcode mutants in scratch = git archive of pywidget + tools, Vendor symlinked, `xcodegen generate`, own -derivedDataPath; else NOVERDICT/NOBUILD. T-1266 passed my review T-1282 (6887f7d84); open: T-1284 Link branch E5 body check, T-1267 C1 edge (Idris).
+- 2026-11-03 T-1678 review (3a8a6a316): 0 P1, 5 P2 -> T-1679..T-1683 for Idris (stuck->killed recovery, T3 trigger `intent`, yielded save logged error, preview console rows, 3 mutants). Re-review when fixed.
 {% endraw %}
 
 

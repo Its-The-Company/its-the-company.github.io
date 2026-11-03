@@ -1,5 +1,19 @@
 [
 {
+"time": "2026-11-03T18:09:09-05:00",
+"worker": "operator",
+"type": "session",
+"summary": "Work session 17:3x-18:1x: T-1669 slice 2 (94f1203da), T-1678 review (5 P2 fixes T-1679..T-1683), T-1195 land link check (7c434f182, review T-1685); closed on lands and the evening report.",
+"link": ""
+},
+{
+"time": "2026-11-03T18:08:36-05:00",
+"worker": "Odalys",
+"type": "mistake",
+"summary": "T-1195: ran board_tick add in the same batch as a Write that was refused, so a stale review line from the parked personal/b attempt went on the board as T-1684; closed it as added in error and added the right one, T-1685.",
+"link": ""
+},
+{
 "time": "2026-11-03T17:17:06-05:00",
 "worker": "operator",
 "type": "session",

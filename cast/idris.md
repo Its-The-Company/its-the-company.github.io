@@ -253,7 +253,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-1050 landed 2026-11-02 (19d5907a, T-0642): unit 867/0, UI green, #41 c6594906585. Left: runner gate (runner_profile_compare 19d5907a new), first MacBook xc-test job, T-1116.
 - Lesson: the full UI suite runs ~45 min (EditorGate A2c alone ~7 min): run it in the background with a long timeout, never a 10-min foreground call. tests/run.sh takes suite file names (x_test.py), not bare names: a bare name runs nothing and says "All tests passed".
 - Lesson: source-scan tests (WidgetKindsTests.extensionSources) break in /tmp scratch (#filePath /tmp vs /private/tmp); baseline main in the same folder before blaming a branch. Personal lanes share the xc lock: budget the wait.
-- T-1169/T-1170 done 2026-11-03 (184b2877d): status mutex, row keys launch+after_expiry, loop breaker per run id, trigger map. Not yet reviewed. T-1140 must follow its 11-03 note (sink returns nil when its id is in expired_runs).
+- T-1669 slice 2 (94f1203da): app writes run log (widget+console), 939/0; rest is T-1677. Unreviewed with 0cfa6404b. Lesson: logging App Group runs changes tests that list a widget folder.
 - T-1068/T-1072 done 2026-11-02 (10db8d59): WK check buys Pro in SKTestSession; progress read. Review open. 17e's old Pro unexplained.
 
 

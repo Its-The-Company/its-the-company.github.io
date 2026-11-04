@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T15:48:46.783091+00:00",
+ "at": "2026-11-04T15:51:49.027066+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,35 @@
  },
  "workers": [
   {
-   "name": "ines",
-   "task": "[plan] T-2065 T-0848 decision on T-2052",
-   "model": "opus",
-   "started": "2026-11-04T15:45:08.049Z",
-   "seconds": 218,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "idris",
    "task": "[build] T-2113 3B52.1 required-reason decision",
    "model": "opus",
    "started": "2026-11-04T15:45:17.470Z",
-   "seconds": 209,
+   "seconds": 391,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-2116 rebuild fold diff",
+   "model": "opus",
+   "started": "2026-11-04T15:49:38.617Z",
+   "seconds": 130,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Ines, Idris",
- "recent": [],
+ "who": "Idris, Odalys",
+ "recent": [
+  {
+   "name": "ines",
+   "task": "[plan] T-2065 T-0848 decision on T-2052",
+   "model": "opus",
+   "started": "2026-11-04T15:45:08.049Z",
+   "seconds": null,
+   "finished": "2026-11-04T15:49:23.644000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -74,7 +83,7 @@
   "week_pct": 37.43,
   "usage_pct": 39.3,
   "work_pct": 77.6,
-  "read_at": "2026-11-04T15:48:00+00:00",
+  "read_at": "2026-11-04T15:51:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -209,39 +218,6 @@
     "at": "2026-11-04T07:39:00-05:00",
     "n": "Jeremy",
     "d": 1
-   },
-   {
-    "lane": "b2",
-    "task": "T-1728",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-1714's continuation, Xcode lane",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T08:18:27-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-0622",
-    "w": "Idris",
-    "k": "build",
-    "t": "One appearance flag",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-04T08:18:27-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-0309",
-    "w": "Pernille",
-    "k": "build",
-    "t": "The rest of T-0231",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-04T08:18:27-05:00",
-    "n": "Jeremy"
    },
    {
     "lane": "b3",
@@ -399,7 +375,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T10:48:00-05:00"
+  "at": "2026-11-04T10:51:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -408,15 +384,6 @@
   "at": "2026-11-04T10:42:14.257789-05:00"
  },
  "lanes": [
-  {
-   "name": "Ines",
-   "state": "running",
-   "task": "[plan] T-2065 T-0848 decision on T-2052",
-   "model": "opus",
-   "since": "2026-11-04T15:45:08.049Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "running",
@@ -428,8 +395,17 @@
   },
   {
    "name": "Odalys",
+   "state": "running",
+   "task": "[ops] T-2116 rebuild fold diff",
+   "model": "opus",
+   "since": "2026-11-04T15:49:38.617Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Ines",
    "state": "next",
-   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -462,21 +438,21 @@
  "tasks": {
   "run": [
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "T-2065 T-0848 decision on T-2052",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T15:45:08.049Z",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "T-2113 3B52.1 required-reason decision",
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T15:45:17.470Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "T-2116 rebuild fold diff",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T15:49:38.617Z",
     "o": "c"
    }
   ],
@@ -489,9 +465,9 @@
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "T-0848 decision for T-2052",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-2052 restart on the T-0848 route",
     "s": "next",
     "o": "c"
    },
@@ -554,6 +530,11 @@
   ],
   "done": [
    {
+    "w": "Ines",
+    "t": "The reports-on-time fix can go ahead without touching the protected supervisor script: the...",
+    "at": "2026-11-04T10:49:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "Both planted-bug checks for the stop-button fix were run; one was caught by the tests and one...",
     "at": "2026-11-04T10:27:00-05:00"
@@ -562,11 +543,6 @@
     "w": "Odalys",
     "t": "Account a stopped itself because a tiny allowance check was cut off while starting on a busy...",
     "at": "2026-11-04T10:18:00-05:00"
-   },
-   {
-    "w": "Wrenna",
-    "t": "The privacy policy's source notes now point at the real code for Keychain, location, steps,...",
-    "at": "2026-11-04T09:42:00-05:00"
    }
   ],
   "count": {
@@ -590,12 +566,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "10:48 AM",
+  "lanes": 2,
+  "total": 4,
+  "at": "10:51 AM",
   "why": "",
-  "at_iso": "2026-11-04T15:48:00+00:00",
+  "at_iso": "2026-11-04T15:51:00+00:00",
   "started": "10:42 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:42 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:48 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:42 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:51 AM ET</p></section>"
  }
 }

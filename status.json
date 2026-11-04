@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T22:14:43.323172+00:00",
+ "at": "2026-11-04T22:17:47.976984+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[build] T-2211 extension lane runner fix",
    "model": "opus",
    "started": "2026-11-04T21:31:18.771Z",
-   "seconds": 2604,
+   "seconds": 2789,
    "finished": null,
    "effort": "high"
   },
@@ -21,12 +21,21 @@
    "task": "[build] T-0657 Settings screen",
    "model": "opus",
    "started": "2026-11-04T21:31:27.924Z",
-   "seconds": 2595,
+   "seconds": 2780,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2080 land parked lane-a P0 work",
+   "model": "opus",
+   "started": "2026-11-04T22:14:50.205Z",
+   "seconds": 177,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2",
+ "who": "Idris x2, Odalys",
  "recent": [
   {
    "name": "odalys",
@@ -48,7 +57,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 361,
+  "runnable_count": 360,
   "blocked_count": 122
  },
  "meter": {
@@ -91,7 +100,7 @@
   "week_pct": 36.85,
   "usage_pct": 38.2,
   "work_pct": 76.3,
-  "read_at": "2026-11-04T22:14:00+00:00",
+  "read_at": "2026-11-04T22:17:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -289,7 +298,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T17:14:00-05:00"
+  "at": "2026-11-04T17:17:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -309,11 +318,12 @@
   },
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-2080 land parked lane-a P0 work",
+   "model": "opus",
+   "since": "2026-11-04T22:14:50.205Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -366,6 +376,15 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T21:31:27.924Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-2080 land parked lane-a P0 work",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T22:14:50.205Z",
     "o": "c"
    }
   ],
@@ -444,6 +463,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "The Mac test runner can now run one chosen test file instead of the whole suite and reports...",
+    "at": "2026-11-04T17:16:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "When the company's external drive stays plugged in but stops answering, jobs that need a scratch...",
     "at": "2026-11-04T17:13:00-05:00"
    },
@@ -451,15 +475,10 @@
     "w": "Odalys",
     "t": "The two chart rebuilds that ran in the pause between every pair of work sessions now run at most...",
     "at": "2026-11-04T16:58:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Jeremy's lane (lane b) started its work session at 3:57 PM, after the old usage reading stopped...",
-    "at": "2026-11-04T16:49:00-05:00"
    }
   ],
   "count": {
-   "next": 361,
+   "next": 360,
    "wait": 37,
    "blocked": 85,
    "you": 16
@@ -478,13 +497,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 2,
-  "total": 4,
-  "at": "5:14 PM",
+  "total": 5,
+  "at": "5:17 PM",
   "why": "",
-  "at_iso": "2026-11-04T22:14:00+00:00",
+  "at_iso": "2026-11-04T22:17:00+00:00",
   "started": "4:28 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:14 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:17 PM ET</p></section>"
  }
 }

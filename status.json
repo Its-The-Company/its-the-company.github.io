@@ -1,31 +1,14 @@
 {
  "schema": 1,
- "at": "2026-11-04T18:45:19.443795+00:00",
+ "at": "2026-11-04T18:50:38.010476+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-04T12:53:40-05:00"
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[site] T-2077 site overhaul stage 2 live",
-   "model": "opus",
-   "started": "2026-11-04T17:56:16.332Z",
-   "seconds": null,
-   "finished": "2026-11-04T18:44:41.482000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-1854 extension status and run rows",
-   "model": "opus",
-   "started": "2026-11-04T17:56:27.211Z",
-   "seconds": null,
-   "finished": "2026-11-04T18:32:32.996000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -34,17 +17,17 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
-   "resets_at": "2026-11-04T22:20:00.053023+00:00",
+   "pct": 5.0,
+   "resets_at": "2026-11-04T22:19:59.650234+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 100.0,
+   "left": 95.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 49.0,
-   "resets_at": "2026-11-08T07:00:00.053056+00:00",
+   "pct": 50.0,
+   "resets_at": "2026-11-08T06:59:59.650321+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 51.0,
+   "left": 50.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -52,10 +35,10 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-04T12:53:32.857292-05:00"
+  "read_at": "2026-11-04T13:50:35.848752-05:00"
  },
  "ui": {
-  "week_pct": 0.683,
+  "week_pct": 0.69,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -69,10 +52,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 37.0,
-  "usage_pct": 38.7,
-  "work_pct": 77.0,
-  "read_at": "2026-11-04T18:49:00+00:00",
+  "week_pct": 37.4,
+  "usage_pct": 38.5,
+  "work_pct": 76.7,
+  "read_at": "2026-11-04T18:50:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -468,21 +451,17 @@
   }
  ],
  "disk": {
-  "free_gb": 4.9,
+  "free_gb": 5.9,
   "gate": "closed",
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T13:49:00-05:00"
+  "at": "2026-11-04T13:50:00-05:00"
  },
  "next_tick_why": "session",
- "pool": {
-  "why": "Behind the week: 49% used with 50% of the week past, so the pool is sized to catch up",
-  "n": 2,
-  "at": "2026-11-04T12:53:35.237661-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -647,10 +626,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "1:49 PM",
+  "at": "1:50 PM",
   "why": "",
-  "at_iso": "2026-11-04T18:49:00+00:00",
+  "at_iso": "2026-11-04T18:50:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:50 PM ET</p></section>"
  }
 }

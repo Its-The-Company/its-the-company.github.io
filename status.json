@@ -1,23 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-04T23:13:38.359724+00:00",
+ "at": "2026-11-04T23:15:16.390709+00:00",
  "session": {
   "active": true,
   "kind": "weekly",
   "started": "2026-11-04T18:10:37-05:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[report] weekly",
    "model": "opus",
    "started": "2026-11-04T23:10:55.007Z",
-   "seconds": 163,
-   "finished": null
+   "seconds": null,
+   "finished": "2026-11-04T23:13:41.211000+00:00"
   }
  ],
- "who": "Odalys",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -64,7 +64,7 @@
   "week_pct": 37.35,
   "usage_pct": 37.7,
   "work_pct": 75.7,
-  "read_at": "2026-11-04T23:13:00+00:00",
+  "read_at": "2026-11-04T23:15:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -344,7 +344,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T18:13:00-05:00"
+  "at": "2026-11-04T18:15:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -355,10 +355,10 @@
  "lanes": [
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[report] weekly",
-   "model": "opus",
-   "since": "2026-11-04T23:10:55.007Z",
+   "state": "next",
+   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -403,16 +403,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "report",
-    "t": "Weekly",
-    "m": "opus",
-    "at": "2026-11-04T23:10:55.007Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -522,13 +513,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 3,
-  "total": 4,
-  "at": "6:13 PM",
+  "total": 3,
+  "at": "6:15 PM",
   "why": "",
-  "at_iso": "2026-11-04T23:13:00+00:00",
-  "started": "6:10 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 6:10 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:13 PM ET</p></section>"
+  "at_iso": "2026-11-04T23:15:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:15 PM ET</p></section>"
  }
 }

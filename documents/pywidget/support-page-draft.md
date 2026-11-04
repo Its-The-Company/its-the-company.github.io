@@ -83,6 +83,23 @@ Nothing of yours goes to us. There is no account, no sign-in, no server of ours,
 
 Source: privacy policy draft v3 (`pywidget/docs/release/privacy-policy-draft.md`, "The short version", "Your scripts and the network"); `ios/Privacy/App/PrivacyInfo.xcprivacy` (tracking false, no tracking domains, no collected data types). The Apple analytics line is [recall] in that draft, not confirmed. Run history (T-1150, 2026-11-02): this answer stays true as written. Once T-1140 ships, add after "stay on your device": "Each widget's recent runs, with what they printed and any error, are kept on your device for 14 days and never sent to us." Held, not in the answer today, because no build keeps a run history yet.
 
+### 11. How do I write and run my first script? (DRAFT, T-1760, <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>)
+
+Open pywidget. The editor is the first thing you work in: type or paste Python, then tap **Run**. What your script prints, and any error, shows in the console below the editor. Tap **Stop** if it runs too long. The app saves your text as you type and before each run, so a run always uses what you see. Ten example scripts ship with the app (for example a tip splitter, a dice roller and a word count) if you would rather start from one. [unverified on a phone]
+
+
+
+### 12. Where are my scripts kept, and how do I move them to another device? (DRAFT, T-1760, C51)
+
+Your scripts live on your device, in the app's own Scripts folder, grouped in projects. Nothing is uploaded. To move a project: open **Projects**, touch and hold a project (or open it) and choose **Export as Zip**. That makes `name.zip` with your `.py` files inside, which you can send to your other device with the share sheet. On the other device, open **Projects**, choose **Import Project…** and pick the zip. Inside a project, **Import Files…** adds single `.py` files, and **Share…** sends one file. There is no iCloud sync: a move is a copy you make yourself. Deleting a project removes its files from the device and cannot be undone. [unverified on a phone]
+
+
+
+### 13. What is the little badge in the corner of my widget? (DRAFT, T-1760, C51)
+
+A small clock means the picture is older than your script allowed (`stale_after`). A red circle with an exclamation mark means the last run was stopped; the widget keeps showing the last good picture under it. If a widget has failed before it ever drew a good picture, it should show a card that says "Script error" with a line number and "Tap to open", but that card is not in this build, so this page does not promise it. To clear either mark, open pywidget and run the script again [unverified on a phone]. See also question 4.
+
+
 ---
 
 ## Claim-check table (commit 1cde09ab)

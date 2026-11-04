@@ -117,8 +117,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
 - Open (from T-1045): T-1048 stdlib size stop unexplained, my check; T-1047 upload.sh identity.
-- 2026-11-04 T-1904 (03a3210f8): T-0866 slice 1 review, approve with changes; F1 T-1928, F2 T-1929 (removals can name run files), Lows T-1930..33. Slip: commit swept others' uncommitted board edits (T-1466 note, T-1927); check `git diff ops/board.md` first, as the index-blob lesson says.
-- 2026-11-04 T-1915 (491ef9836): T-1859 review, approve w/ changes; T-1946..48 to Idris. Lesson: when others' uncommitted edits break `swift test` in the shared tree, `git worktree add --detach /tmp/x HEAD` runs it with fixtures; remove after.
+- 2026-11-04 T-2019 (bba05e3e2): 5bfc91948 notif helper approve w/ changes; F1-F4 = T-2026..29. Lesson: MacBook result.json has only the last 60 lines (no skipped names); full log stays on the runner in jobs/<id>/src/ops/runs. Runner Simulator is reused, so permission state carries between jobs.
 {% endraw %}
 
 

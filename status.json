@@ -1,40 +1,64 @@
 {
  "schema": 1,
- "at": "2026-11-04T07:34:03.281339+00:00",
+ "at": "2026-11-04T10:54:53.920569+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-04T01:48:52-05:00"
+  "started": "2026-11-04T02:37:53-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] T-1752 report format land",
+   "name": "idris",
+   "task": "[build] T-2037 gather consumed by early-exit turn",
    "model": "opus",
-   "started": "2026-11-04T06:50:25.595Z",
+   "started": "2026-11-04T10:18:42.662Z",
    "seconds": null,
-   "finished": "2026-11-04T07:33:34.368000+00:00"
+   "finished": "2026-11-04T10:54:03.581000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-2038 review of T-2020 test fixes",
+   "model": "opus",
+   "started": "2026-11-04T10:23:52.956Z",
+   "seconds": null,
+   "finished": "2026-11-04T10:26:11.381000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-2020 two red unit tests on main",
+   "model": "opus",
+   "started": "2026-11-04T08:39:09.592Z",
+   "seconds": null,
+   "finished": "2026-11-04T10:23:37.897000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-2036 review of owed-longest rule",
+   "model": "opus",
+   "started": "2026-11-04T10:15:27.196Z",
+   "seconds": null,
+   "finished": "2026-11-04T10:18:29.290000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 304,
+  "runnable_count": 312,
   "blocked_count": 118
  },
  "meter": {
   "five_hour": {
-   "pct": 42.0,
-   "resets_at": "2026-11-04T06:59:59.626464+00:00",
+   "pct": 0.0,
+   "resets_at": "2026-11-04T12:20:00.115168+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 58.0,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 43.0,
-   "resets_at": "2026-11-08T06:59:59.626484+00:00",
+   "resets_at": "2026-11-08T07:00:00.115188+00:00",
    "used_words": "of your weekly allowance used",
    "left": 57.0,
    "left_words": "of your weekly allowance left"
@@ -44,10 +68,10 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-04T01:48:51.260868-05:00"
+  "read_at": "2026-11-04T02:37:52.447752-05:00"
  },
  "ui": {
-  "week_pct": 0.684,
+  "week_pct": 0.682,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -61,10 +85,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 34.09,
-  "usage_pct": 39.3,
-  "work_pct": 78.7,
-  "read_at": "2026-11-04T07:36:00+00:00",
+  "week_pct": 33.98,
+  "usage_pct": 39.2,
+  "work_pct": 78.3,
+  "read_at": "2026-11-04T10:57:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -75,20 +99,20 @@
   }
  ],
  "disk": {
-  "free_gb": 21,
+  "free_gb": 11,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T02:36:00-05:00"
+  "at": "2026-11-04T05:57:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
-  "why": "Behind the week: 43% used with 43% of the week past, so the pool is sized to catch up",
-  "n": 2,
-  "at": "2026-11-04T01:48:51.535624-05:00"
+  "why": "Behind the week: 44% used with 45% of the week past, so the pool is sized to catch up",
+  "n": 3,
+  "at": "2026-11-04T02:37:52.721634-05:00"
  },
  "lanes": [
   {
@@ -118,7 +142,7 @@
   {
    "name": "Pernille",
    "state": "next",
-   "task": "Pernille, P1, independent review (Commandment 13) of...",
+   "task": "Pernille, P2, Run heatmap levels by size, not brightness...",
    "model": null,
    "since": null,
    "next": []
@@ -207,32 +231,32 @@
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Independent review",
+    "w": "Idris",
+    "k": "build",
+    "t": "Refresh control and age line in the renderer",
     "s": "next",
     "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Odalys",
-    "t": "From the 06:00 report on, each report is titled Day N: Morning/Evening Report with a short...",
-    "at": "2026-11-04T02:32:00-05:00"
+    "w": "Idris",
+    "t": "Fixed a case where one home-screen widget could go without ever refreshing when a locked Pro...",
+    "at": "2026-11-04T05:53:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "The evening session no longer writes worker diaries or private conversations, and the reports...",
-    "at": "2026-11-04T02:32:00-05:00"
+    "w": "Pernille",
+    "t": "Checked Idris's repair of two app self-checks. Both now catch what they should, but one still...",
+    "at": "2026-11-04T05:25:00-05:00"
    },
    {
-    "w": "Operator",
-    "t": "This bundle of follow-ups is closed because each part now has its own task: T-0560 (test hooks...",
-    "at": "2026-11-04T01:32:00-05:00"
+    "w": "Idris",
+    "t": "Two app checks that had gone red are green again: one had not been told about a new file that...",
+    "at": "2026-11-04T05:22:00-05:00"
    }
   ],
   "count": {
-   "next": 304,
+   "next": 312,
    "wait": 33,
    "blocked": 85,
    "you": 15
@@ -243,6 +267,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",

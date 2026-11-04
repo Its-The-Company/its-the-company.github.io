@@ -245,35 +245,36 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open (mine)
 - T-0365 (28fadd67 noted): Button/Toggle drawn no-tap per L5 V1; Ines rules T-0430. Left: device check, F1 map after T-0399. T-0206 after.
 - T-0485 (c3c6876f, review T-0493): set LegalLinks when the app privacy page is published and Terms ruled. Release builds now fail until then (T-0497, 3bfb3222; review T-0636).
-- T-1050 landed 2026-11-02 (19d5907a, T-0642): unit 867/0, UI green, #41 c6594906585. Left: runner gate (runner_profile_compare 19d5907a new), first MacBook xc-test job, T-1116.
 - Lesson: the full UI suite runs ~45 min (EditorGate A2c alone ~7 min): run it in the background with a long timeout, never a 10-min foreground call. tests/run.sh takes suite file names (x_test.py), not bare names: a bare name runs nothing and says "All tests passed".
 - T-1669 slice 2 (94f1203da): app writes run log; rest is T-1677. T-1678 fixes all on Simulator 2026-11-03 (55/0): T-1716 landed d21a36896, T-1696 d074ebd44 (mutant killed). Independent review of both still due before TestFlight.
 - Lesson T-1693: Simulator scratch on Company SSD (spaced path) needs two scratch-only patches: quote utils.sh's .fwork redirect; acknowledgements.py misreads otool's "(architecture arm64):" line (real bug, reported). Build filters with tools/xc_file_tests.py, never file names; `build test` in one xc.sh call gets hang-stopped after BUILD SUCCEEDED.
 - Lesson T-1678: a test that checks a marker's text is not a test of what recovery does with it. Test the consumer.
 
-
 Dated task logs and full lessons: archive.md.
-
-- Lesson T-1404: one Bash call is capped at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
 
 - Lesson T-1714: a rule green on the host means nothing until something writes it and something reads it: grep both call sites first.
 
 - Lesson T-0426: grep the code for a task's ID before starting; a board line can stay open after the work landed.
 
-- AgeLine: T-1910/1911/1946 done 6edcfd497 (takes AgeLine.Field, filters "--" itself; 53/53 mutants); review T-1983 Pernille. Note on T-1440 says how to call it.
-- Lesson T-1946: NSTimeZone.default moves Calendar().timeZone, not TimeZone.current. Assert the fixture moved.
+- AgeLine: T-1910/1911/1946 6edcfd497; review T-1983 F1-F3 fixed e573b6450 (t1793 56/56). Left: T-1440 must pass one `now` to face rule, drawnAt, line (noted).
+- Lesson T-1946/T-2011: NSTimeZone.default moves Calendar().timeZone, not TimeZone.current; for .current set TZ + NSTimeZone.resetSystemTimeZone(). Assert the fixture moved.
 - Lesson T-1859: a scratch copy of pywidget/ios lacks repo-level fixtures (tests/prompts): mutants there, full suite in the real tree.
 
 - T-0675 item 7 slice 2026-11-03 (dd26184c2): app+extension privacy manifests fixed (app was failing the Release scan). Open: Swift-half review has no task (asked Ines); privacy_scan wired to no build.
 - Lesson: a flag compiled out of Release hides its required-reason APIs from the binary scan; test the sources each target compiles.
 
-- T-1466 2026-11-04: stopped, no commit. Lanes held the Mac mini lock (xc.sh exit 75 after 1800 s); patch in scratch, fresh device A013E98E, board T-1927. Check lock waiters before a local build.
+
+- Lane turn order: T-2037 473495460 (gather taken at the wait, burst flag); review T-2043 Pernille; MacBook J-20261104-0553-xc-test at 47349546 unread. orphan-mark test's 1.4 s bound fails under load ~180 (thin margin, noted in bench).
+- Lesson T-2016: tools/xc_mutants.py plants each old behaviour back as the red record; a timing test needs margins both sides of the constant.
+- Lesson T-1851: zsh never splits `$F`; pass xc_file_tests filters as ${=F}. Local xc.sh after others' commits: `xcodegen generate` first (xcodeproj is ignored, goes stale).
+
+- T-2020 22b1a3176 (two main reds; review T-2038 Pernille). Lesson: a schema row landing before its renderer turns the drawn-set test red; exempt by equality naming the drawing task, never by subtraction.
 
 ## Lessons
 
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
-- Lesson T-1882: `swift test --filter` takes the XCTest class (RunLogExportTests), not the file (RunLogTests); a filter matching nothing ran zero tests, so mutation_check showed every mutant "SURVIVED". Run the filter once alone first and check "Executed N". A Core scratch copy needs App/ too (11 Sources symlinks point there).
+- Lesson T-2023: scratch builds cleanly as $D/pywidget/ios with pywidget/* , tests, tools symlinked in, opened via a /tmp symlink (no spaced-path patches). LaneGuard.swift is also in Core: `swift build` there.
 {% endraw %}
 
 

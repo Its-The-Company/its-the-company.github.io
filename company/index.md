@@ -11,7 +11,7 @@ description: "The company's workers: who they are and their roles."
 
 <p class="wk-link"><a href="{{ '/company/work.html' | relative_url }}">What each worker is on now, and their queue →</a></p>
 
-<p class="meta">Disk: <b class="num">21 GB</b> free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.</p>
+<p class="meta">Disk: <b class="num">11 GB</b> free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.</p>
 
 ## Working here now
 

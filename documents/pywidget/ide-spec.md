@@ -845,26 +845,42 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 
    **Row:** at least 60 tall. A 20 pt glyph at the leading edge, 14 pt from the top. Line 1: the reason (body) and, trailing on the same baseline, the time (subheadline, secondary, tabular). Line 2 (footnote, secondary): trigger · duration. The duration is left out where none was measured (`deferred`, `busy`, `killed`). Then a chevron. A tap opens the run detail. No swipe-to-delete in v1: Clear is the one removal (the smallest version). **<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">Lane</span>:** a row whose `lane` is `widget` carries the chip `lane.widget` after line 2. The extension lane flag is off in every Release build (`LaneGuard.swift:16`), so in v1 no row ever shows it and no app-lane row carries a chip, because the app is the default. The detail's "Ran in" fact always names the lane.
 
-   **12.4 Outcomes.** Glyph, reason and filter for each value `status.json` and the row can hold (ADR-007 7.2, plus `busy` from `WidgetRunOutcome.Kind` at HEAD):
+   **12.4 Outcomes** (T-1798, Maren, 2026-11-04; read at HEAD 09645bfb8 from `RunOutcomeWord` in RunRow.swift, WidgetStatus.swift, Shared/Bridge/WidgetRunLog.swift, Shared/ExtensionLane.swift and RunLogRecorder; supersedes the T-1104 table). Every word the code writes on a row, with its glyph, row reason and filter. The filter reads `RunOutcomeWord.failed`. Strings DRAFT C51. Frames 13-18: `A-activity-outcomes-phone.png`, `B-activity-outcomes-phone.png`.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 24: import shared, scrolls sideways" data-n="4" style="--tw:1125px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 24: import shared, scrolls sideways" style="--tw:1374px" markdown="1">
 
-   | Outcome | Glyph and colour | Row reason | In Failed | Detail adds |
+   | Outcome (writer) | Glyph and colour | Row reason | In Failed | Detail line / adds |
    |---|---|---|---|---|
-   | `ok` | `checkmark.circle.fill`, `status.success` | `o.ok` | no | output |
-   | `error` | `xmark.circle.fill`, `status.danger` | `o.error` with the bridge's type (`TreeTooLarge`, `WidgetChoiceError`, `SyntaxError`, `SystemExit` pass through), or Swift's own: `NoTree` → `o.notree`, `schema_error` → `o.schema`, `InternalError` → `o.internal` | yes | output, traceback card (no frames for `SyntaxError`: the s3 caret rule) |
-   | `timeout` | as error | `o.timeout` | yes | the frame executing at the stop (7.3) |
-   | `stuck` | as error | `o.stuck` | yes | the frame, if known |
-   | `killed` | as error | `o.killed` | yes | `d.killed.bg` with `backgrounded`, else `d.killed.mem` |
-   | `tree_too_large` | s3.1's glyph, `status.warning` | `o.big` | yes | `d.big`; the output of the run that made the tree |
-   | `expired` | `clock`, `text.secondary` | `o.expired` | no | output so far |
-   | `deferred`, `busy` | `clock`, `text.secondary` | `o.waited` | no | nothing ran |
-   | `oom_guard` | `clock`, `text.secondary` | `o.lowmem` | no | nothing ran |
-   | `entitlement_lost` | no row: not a run | | | |
+   | `ok` (both lanes) | `checkmark.circle.fill`, `status.success` | `o.ok` | no | output |
+   | `error` (both lanes) | `xmark.circle.fill`, `status.danger` | `o.error` with the bridge's type, or `NoTree` → `o.notree`, `schema_error` → `o.schema`, `InternalError` → `o.internal` | yes | output, traceback card |
+   | `timeout` | as error | `o.timeout` | yes | the frame at the stop |
+   | `stuck` (run, or launch recovery) | as error | `o.stuck` | yes | the frame, if known |
+   | `killed` (launch recovery) | as error | `o.killed` | yes | `d.killed.bg` with `backgrounded`, else `d.killed.mem` |
+   | `killed`, `lane_outcome=demoted`, `reason=marker` (widget) | as error | `o.killed` | yes | `d.moved.kill`, then the 12.4.3 card |
+   | `tree_too_large` (recordRenderFaults; no trigger) | s3.1's glyph, `status.warning` | `o.big`, line 2 `t.draw` | yes | `d.big`; Started by hides |
+   | `deferred`, editor_save yielded to Run (T-1681, no error named) | `clock`, `text.secondary` | `o.waited` | no | `d.wait.run`, `d.noran` (frame 15) |
+   | `deferred`, `lane_outcome=late`, `reason=no_time` | as above | `o.waited` | no | `d.wait.time`, `d.noran` |
+   | `deferred`, `lane_outcome=late`, `reason=gave_way` | as above | `o.waited` | no | `d.wait.turn`, `d.noran` |
+   | `deferred`, `lane_outcome=closed` | as above | `o.waited` | no | `d.wait.stop`, `d.noran` |
+   | `busy` | as above | `o.waited` | no | `d.wait.busy`, `d.noran` |
+   | `oom_guard`, `lane_outcome=oom_guard` | `clock`, `text.secondary` | `o.lowmem` | no | `d.mem.skip`, `d.noran` (frame 14) |
+   | `oom_guard`, `lane_outcome=demoted`, `reason=refused` | as above | `o.moved` | no | `d.moved.mem`, `d.noran`, the 12.4.3 card (frame 18, AX5) |
+   | any word with `lane_outcome=deadline` | the word's own | the word's own | the word's | `d.late.show` first (frame 17) |
+   | `expired` | `clock`, `text.secondary` | `o.expired` | no | **never written at HEAD**: `recordExpiry` has no caller (T2 not built) |
+   | `conflict` | | | | **never written**: reserved word only |
+   | `entitlement_lost` | no row: not a run (a locked premade logs nothing) | | | |
 
 </div>
 
+
+   **The oom_guard badge (T-1714).** From the second skip in a row, `status.json` badges a stale picture, but no oom_guard row is in Failed (nothing in the script failed). So while `last_outcome` is `oom_guard` with the badge, the strip reads `st.mem` · `st.mem.d` in `status.warning`, and `show=failed` opens **All**, so the badge's screen always holds the rows that set it (frame 13). Every other state keeps 12.2's route. Idris: confirm in T-0048.
+
+   **12.4.1 Triggers** (line 2 and Started by). Written at HEAD: `app_foreground` → `t.open`; `editor_save` → `t.save`; `shortcut` → `t.sc` (T-1716, the Refresh Widgets intent); `system` → `t.sys` (every in-widget turn, and a run whose bridge info has none); no trigger → `t.draw` (too-big rows only). Recovery rows carry the crashed run's trigger. **Never written at HEAD:** `bg_refresh` (`t.bg`, which frames 2-11 still show in their sample rows), `intent`, `location_wake`, `push`, `widget_action`, `control`, `deep_link`.
+
+   **12.4.2 In-widget rows.** The extension writes `deferred`, `killed`, `oom_guard`, its runs' own words, and `lane_outcome=deadline`. Each carries `lane.widget` on line 2 and `d.where.w` as Ran in. The lane flag is off in Release (LaneGuard.swift:16), so v1 shows none of them.
+
+   **12.4.3 Lifting a move (T-1643, not built).** Where: a card `lift.t` under the status strip while the widget is moved to [appname] (frame 16), and the same card on the row that moved it (frame 18). What it says: `lift.wait` until a run in [appname] ends `ok`; then `lift.b` and one secondary button `lift.go`. The tap is the person's say-so: `LaneDemotions` drops the id and the body becomes `lift.done`, with no button. If it fails in the widget again, it moves back by the usual rule and the card returns. No alert: the <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lift</span> is easy to undo.
 
    **The Failed set is exactly ADR-007 7.1 rows 3 and 4** (error card and badge), so the list the badge opens always holds the run that set it. Not-failed rows sit in grey and never turn the strip red.
 

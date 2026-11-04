@@ -33,43 +33,24 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Offer: 7800 credits a month. Probation task superseded by pywidget (2026-10-25); see archive.md.
 - What I want: To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default.
 
+Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
+
 ## Open (mine)
-- T-0365 (28fadd67 noted): Button/Toggle drawn no-tap per L5 V1; Ines rules T-0430. Left: device check, F1 map after T-0399. T-0206 after.
-- T-0485 (c3c6876f, review T-0493): set LegalLinks when the app privacy page is published and Terms ruled. Release builds now fail until then (T-0497, 3bfb3222; review T-0636).
-- Lesson: the full UI suite runs ~45 min (EditorGate A2c alone ~7 min): run it in the background with a long timeout, never a 10-min foreground call. tests/run.sh takes suite file names (x_test.py), not bare names: a bare name runs nothing and says "All tests passed".
-- T-1669 slice 2 (94f1203da): app writes run log; rest is T-1677. T-1678 fixes all on Simulator 2026-11-03 (55/0): T-1716 landed d21a36896, T-1696 d074ebd44 (mutant killed). Independent review of both still due before TestFlight.
-- Lesson T-1693: Simulator scratch on Company SSD (spaced path) needs two scratch-only patches: quote utils.sh's .fwork redirect; acknowledgements.py misreads otool's "(architecture arm64):" line (real bug, reported). Build filters with tools/xc_file_tests.py, never file names; `build test` in one xc.sh call gets hang-stopped after BUILD SUCCEEDED.
-- Lesson T-1678: a test that checks a marker's text is not a test of what recovery does with it. Test the consumer.
-
-Dated task logs and full lessons: archive.md.
-
-- Lesson T-1714: a rule green on the host means nothing until something writes it and something reads it: grep both call sites first.
-
-- Lesson T-0426: grep the code for a task's ID before starting; a board line can stay open after the work landed.
-
-- AgeLine: T-1910/1911/1946 6edcfd497; review T-1983 F1-F3 fixed e573b6450 (t1793 56/56). Left: T-1440 must pass one `now` to face rule, drawnAt, line (noted).
-- Lesson T-1946/T-2011: NSTimeZone.default moves Calendar().timeZone, not TimeZone.current; for .current set TZ + NSTimeZone.resetSystemTimeZone(). Assert the fixture moved.
-- Lesson T-1859: a scratch copy of pywidget/ios lacks repo-level fixtures (tests/prompts): mutants there, full suite in the real tree.
-
-- T-0675 item 7 slice 2026-11-03 (dd26184c2): app+extension privacy manifests fixed (app was failing the Release scan). Open: Swift-half review has no task (asked Ines); privacy_scan wired to no build.
-- Lesson: a flag compiled out of Release hides its required-reason APIs from the binary scan; test the sources each target compiles.
-
-
-- Lesson T-2053: a swap mutant must keep the test's hold hook between the swapped lines; a hook after both lets the mutant survive. Committing ops/board.md sweeps other <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span>' uncommitted ticks in.
-- Lesson T-2016: tools/xc_mutants.py plants each old behaviour back as the red record; a timing test needs margins both sides of the constant.
-- Lesson T-1851: zsh never splits `$F`; pass xc_file_tests filters as ${=F}. Local xc.sh after others' commits: `xcodegen generate` first (xcodeproj is ignored, goes stale).
-
-- T-2020 22b1a3176 (two main reds; review T-2038 Pernille). Lesson: a schema row landing before its renderer turns the drawn-set test red; exempt by equality naming the drawing task, never by subtraction.
-
-- T-1854/T-2035 0e756d6cc (lane rows via RunLogRecorder) committed untested: disk gate 75 all session. T-2176 runs it, T-2177 Pernille reviews. Locked logs nothing (my call, flagged).
+- T-0365 (28fadd67): Button/Toggle no-tap per L5 V1; Ines rules T-0430. Left: device check, F1 map after T-0399. T-0206 after.
+- T-0485 (c3c6876f, review T-0493): set LegalLinks when app privacy page is published and Terms ruled; Release builds fail until then (T-0497, 3bfb3222; review T-0636).
+- T-1669/T-1678: T-1716 d21a36896, T-1696 d074ebd44 landed (Simulator 55/0); independent review of both due before TestFlight.
+- AgeLine T-1910/1911/1946 6edcfd497; review T-1983 fixed e573b6450. Left: T-1440 pass one `now` to face rule, drawnAt, line.
+- T-0675 item 7 (dd26184c2): privacy manifests fixed. Open: Swift-half review has no task (asked Ines); privacy_scan wired to no build.
+- <span title="How many people show, in their own words, that they want this.">Need</span> independent review before TestFlight: T-1852 0448468a9 (closed <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>, 5/5 mutants); T-2135 guard round 2 91cc14f20; T-1854/T-2035 0e756d6cc committed untested (T-2176 runs it, T-2177 Pernille reviews; Locked logs nothing, my call).
+- T-0657 Settings 036c854f uncompiled (lock stuck, #175); T-2225 holds the rest: runner job J-20261104-1728-xc-test, shots, Maren's read, review.
 
 ## Lessons
-
-- StoreKit, T-0583/T-0589, caret lessons: archive.md.
-
-- T-1852 0448468a9 (closed lane after stuck, 5/5 mutants): needs an independent review before the (c) flag. Lesson: board_tick takes one commit and one repo path as Evidence; a macbook-results job file is not one, so cite the job id in Detail.
-
-- T-0657 Settings 036c854f, uncompiled (lock stuck, #175); T-2225 holds the rest: runner job J-20261104-1728-xc-test, shots, Maren's read, review. Lesson: `xc.sh | tail` shows tail's exit 0 on a lock refusal; read pipestatus. git pull is hook-blocked in session: commit by pathspec, push only.
+- Guards: git pull is hook-blocked in session: commit by pathspec, push only. `xc.sh | tail` shows tail's exit 0 on a lock refusal: read pipestatus. Committing ops/board.md sweeps other lanes' uncommitted ticks in. board_tick takes one commit and one repo path as Evidence; cite a macbook-results job id in Detail.
+- Tests: full UI suite ~45 min: run in background with long timeout. tests/run.sh takes suite file names (x_test.py); a bare name runs nothing and says "All tests passed". Build filters with tools/xc_file_tests.py, ${=F} in zsh; `build test` in one xc.sh call gets hang-stopped. After others' commits run `xcodegen generate` first.
+- Simulator scratch on the Company SSD (spaced path, T-1693): quote utils.sh's .fwork redirect; acknowledgements.py misreads otool's "(architecture arm64):" line (reported). Scratch copy of pywidget/ios lacks tests/prompts: mutants there, full suite in the real tree (T-1859).
+- Test the consumer, not the marker text (T-1678). A rule green on host means nothing until something writes and reads it: grep both sites (T-1714). A flag compiled out of Release hides its APIs from the binary scan: test sources each target compiles.
+- Mutants: keep the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> hook between swapped lines (T-2053); xc_mutants.py plants old behaviour as the red record, timing tests need margins both sides (T-2016). A schema row landing before its renderer reddens the drawn-set test: exempt by equality naming the drawing task (T-2020).
+- grep the code for a task's ID before starting (T-0426). Calendar().timeZone follows NSTimeZone.default, not TimeZone.current: set TZ + NSTimeZone.resetSystemTimeZone() and assert the fixture moved (T-1946/T-2011). Cleaning text for a consumer that cleans again with a cruder regex reopens the hole (T-2135).
 {% endraw %}
 
 

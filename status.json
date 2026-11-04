@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T15:57:57.795472+00:00",
+ "at": "2026-11-04T16:00:59.407053+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,34 @@
  },
  "workers": [
   {
-   "name": "pernille",
-   "task": "[review] T-2118 3B52.1 manifest review",
-   "model": "opus",
-   "started": "2026-11-04T15:54:19.948Z",
-   "seconds": 217,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[tools] T-2117 reports-on-time restart",
    "model": "opus",
    "started": "2026-11-04T15:55:21.128Z",
-   "seconds": 156,
+   "seconds": 338,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-2119 _ssl framework 3B52.1 manifest",
+   "model": "opus",
+   "started": "2026-11-04T16:00:23.920Z",
+   "seconds": 35,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille, Odalys",
+ "who": "Odalys, Idris",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-2118 3B52.1 manifest review",
+   "model": "opus",
+   "started": "2026-11-04T15:54:19.948Z",
+   "seconds": null,
+   "finished": "2026-11-04T16:00:09.609000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[ops] T-2116 rebuild fold diff",
@@ -56,7 +64,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 339,
+  "runnable_count": 340,
   "blocked_count": 123
  },
  "meter": {
@@ -99,138 +107,8 @@
   "week_pct": 37.43,
   "usage_pct": 39.3,
   "work_pct": 77.6,
-  "read_at": "2026-11-04T15:57:00+00:00",
-  "running": [
-   {
-    "lane": "b",
-    "task": "T-1781",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "After T-1752/T-1778",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T07:39:00-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-2060",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-1858 continued, item",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T07:39:00-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b",
-    "task": "T-2061",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-1858 continued, item",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T07:39:00-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-1861",
-    "w": "Idris",
-    "k": "build",
-    "t": "The widget's refresh button must write run rows with trigger intent, not...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T07:39:00-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-1947",
-    "t": "T-1947",
-    "at": "2026-11-04T07:39:00-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b",
-    "task": "T-1991",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Host-only, no Xcode, before T-1905",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T07:39:00-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-2039",
-    "k": "fix",
-    "t": "P1, BridgeTests/testStopLoop red once on the MacBook",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T07:39:00-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-2051",
-    "w": "Idris",
-    "k": "fix",
-    "t": "T-2039 continuation",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T07:39:00-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-2054",
-    "w": "Idris",
-    "k": "fix",
-    "t": "MarkStuck's \"stuck\"",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T07:39:00-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-2055",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Br_write/br_emit",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T07:39:00-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-2056",
-    "w": "Idris",
-    "k": "test",
-    "t": "Neither T-2039 test reaches the window between the run's finished being...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T07:39:00-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-1735",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Experiment ids chosen inside a lane collide with main's",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T07:39:00-05:00",
-    "n": "Jeremy"
-   }
-  ]
+  "read_at": "2026-11-04T16:01:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -247,7 +125,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T10:57:00-05:00"
+  "at": "2026-11-04T11:01:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -256,15 +134,6 @@
   "at": "2026-11-04T10:42:14.257789-05:00"
  },
  "lanes": [
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-2118 3B52.1 manifest review",
-   "model": "opus",
-   "since": "2026-11-04T15:54:19.948Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Odalys",
    "state": "running",
@@ -276,16 +145,25 @@
   },
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-2119 _ssl framework 3B52.1 manifest",
+   "model": "opus",
+   "since": "2026-11-04T16:00:23.920Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P2, Run heatmap levels by size, not brightness...",
    "model": null,
    "since": null,
    "next": []
@@ -310,21 +188,21 @@
  "tasks": {
   "run": [
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-2118 3B52.1 manifest review",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T15:54:19.948Z",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "T-2117 reports-on-time restart",
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T15:55:21.128Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-2119 _ssl framework 3B52.1 manifest",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T16:00:23.920Z",
     "o": "c"
    }
   ],
@@ -402,6 +280,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "Checked that Python now tells Apple it may read details of files the person picks; that is...",
+    "at": "2026-11-04T10:59:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The approved rules clean-up failed to apply because its file had changed since; it is rebuilt on...",
     "at": "2026-11-04T10:54:00-05:00"
@@ -410,15 +293,10 @@
     "w": "Idris",
     "t": "Python, which runs people's scripts, now tells Apple it may read details of files the person...",
     "at": "2026-11-04T10:52:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "The reports-on-time fix can go ahead without touching the protected supervisor script: the...",
-    "at": "2026-11-04T10:49:00-05:00"
    }
   ],
   "count": {
-   "next": 339,
+   "next": 340,
    "wait": 37,
    "blocked": 86,
    "you": 16
@@ -438,12 +316,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "10:57 AM",
+  "lanes": 0,
+  "total": 2,
+  "at": "11:01 AM",
   "why": "",
-  "at_iso": "2026-11-04T15:57:00+00:00",
+  "at_iso": "2026-11-04T16:01:00+00:00",
   "started": "10:42 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:42 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:57 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:42 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:01 AM ET</p></section>"
  }
 }

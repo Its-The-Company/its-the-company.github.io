@@ -25,7 +25,7 @@ issues: "5"
 
 <h2>Not written up yet</h2>
 <p class="meta">Open issues the company has not put in plain words yet.</p>
-<ul class="list needs" data-group="new"><li class="ny ny-new" data-nums="165"><span class="tag urgent">Urgent</span> <span class="ref">#165</span><span class="ny-q">Decision: may the company read the plain-text copy of Apple's design guideline pages, one page at a time?</span><span class="ny-r">Blocked work waits on the Investors' answer; other work goes on meanwhile.</span><div class="ny-box"></div></li></ul>
+<ul class="list needs" data-group="new"><li class="ny ny-new" data-nums="167"><span class="tag emergency">Emergency</span> <span class="ref">#167</span><span class="ny-q">The Mac mini's disk is nearly full and new work has stopped</span><span class="ny-r">An Emergency: the Investors must act; the company cannot clear it alone.</span><div class="ny-box"></div></li></ul>
 
 <div id="tamper-root" data-repo="Its-The-Company/itsthecompany" hidden></div>
 <script defer src="{{ '/assets/tamper.js' | relative_url }}"></script>

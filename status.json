@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T22:26:55.112025+00:00",
+ "at": "2026-11-04T22:29:59.897339+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,16 +12,7 @@
    "task": "[build] T-2211 extension lane runner fix",
    "model": "opus",
    "started": "2026-11-04T21:31:18.771Z",
-   "seconds": 3336,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-0657 Settings screen",
-   "model": "opus",
-   "started": "2026-11-04T21:31:27.924Z",
-   "seconds": 3327,
+   "seconds": 3521,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +21,16 @@
    "task": "[tools] T-2080 land parked lane-a P0 work",
    "model": "opus",
    "started": "2026-11-04T22:14:50.205Z",
-   "seconds": 724,
+   "seconds": 909,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-0657 Settings screen",
+   "model": "opus",
+   "started": "2026-11-04T21:31:27.924Z",
+   "seconds": 3511,
    "finished": null,
    "effort": "high"
   }
@@ -57,7 +57,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 360,
+  "runnable_count": 359,
   "blocked_count": 123
  },
  "meter": {
@@ -100,7 +100,7 @@
   "week_pct": 36.85,
   "usage_pct": 38.2,
   "work_pct": 76.3,
-  "read_at": "2026-11-04T22:26:00+00:00",
+  "read_at": "2026-11-04T22:30:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -298,7 +298,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T17:26:00-05:00"
+  "at": "2026-11-04T17:30:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -399,13 +399,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Personal lane stops lift themselves",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Personal branches land about half the time",
     "s": "next",
     "o": "i"
@@ -458,27 +451,34 @@
     "t": "Refresh control and age line in the renderer",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-1669 rest",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Odalys",
+    "t": "When a lane trips its usage stop, the stop now lifts by itself at the next tick, as the...",
+    "at": "2026-11-04T17:29:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "The stopped session's three finished pieces (a code review, a queued retry, board records) are...",
+    "at": "2026-11-04T17:27:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The disk cleanup tool no longer thinks Xcode is building just because some command line mentions...",
     "at": "2026-11-04T17:22:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "When a lane stops, the tasks it never started now go back to the other lanes instead of staying...",
-    "at": "2026-11-04T17:19:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The Mac test runner can now run one chosen test file instead of the whole suite and reports...",
-    "at": "2026-11-04T17:16:00-05:00"
    }
   ],
   "count": {
-   "next": 360,
+   "next": 359,
    "wait": 38,
    "blocked": 85,
    "you": 16
@@ -500,10 +500,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "5:26 PM",
+  "at": "5:30 PM",
   "why": "",
-  "at_iso": "2026-11-04T22:26:00+00:00",
+  "at_iso": "2026-11-04T22:30:00+00:00",
   "started": "4:28 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:26 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:30 PM ET</p></section>"
  }
 }

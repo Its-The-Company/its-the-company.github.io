@@ -1,18 +1,37 @@
 {
  "schema": 1,
- "at": "2026-11-04T17:53:38.367902+00:00",
+ "at": "2026-11-04T17:56:44.363699+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-04T12:53:40-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[site] T-2077 site overhaul stage 2 live",
+   "model": "opus",
+   "started": "2026-11-04T17:56:16.332Z",
+   "seconds": 28,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-1854 extension status and run rows",
+   "model": "opus",
+   "started": "2026-11-04T17:56:27.211Z",
+   "seconds": 17,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys, Idris",
  "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 343,
+  "runnable_count": 342,
   "blocked_count": 123
  },
  "meter": {
@@ -55,7 +74,7 @@
   "week_pct": 37.0,
   "usage_pct": 38.7,
   "work_pct": 77.0,
-  "read_at": "2026-11-04T17:53:00+00:00",
+  "read_at": "2026-11-04T17:56:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -72,11 +91,7 @@
    {
     "lane": "a",
     "task": "T-2150",
-    "w": "Operator",
-    "k": "ops",
-    "t": "FIRST in the next session, after the fold has applied",
-    "m": "opus",
-    "e": "high",
+    "t": "T-2150",
     "at": "2026-11-04T12:23:07-05:00",
     "n": "Evan"
    },
@@ -272,7 +287,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T12:25:48-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a2",
@@ -462,26 +478,32 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T12:53:00-05:00"
+  "at": "2026-11-04T12:56:00-05:00"
  },
  "next_tick_why": "session",
- "pool": null,
+ "pool": {
+  "why": "Behind the week: 49% used with 49% of the week past, so the pool is sized to catch up",
+  "n": 2,
+  "at": "2026-11-04T12:53:35.237661-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[site] T-2077 site overhaul stage 2 live",
+   "model": "opus",
+   "since": "2026-11-04T17:56:16.332Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-1854 extension status and run rows",
+   "model": "opus",
+   "since": "2026-11-04T17:56:27.211Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -517,19 +539,31 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "T-2077 site overhaul stage 2 live",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T17:56:16.332Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-1854 extension status and run rows",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T17:56:27.211Z",
+    "o": "c"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
     "k": "ops",
     "t": "After T-1752/T-1778",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Operator",
-    "k": "ops",
-    "t": "FIRST in the next session, after the fold...",
     "s": "next",
     "o": "c"
    },
@@ -588,9 +622,21 @@
     "t": "T-1669 rest",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Site overhaul build, after Maren's spec line...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Operator",
+    "t": "The Investor's 12:14 instruction that a personal lane's stops lift themselves is now a standing...",
+    "at": "2026-11-04T12:55:00-05:00"
+   },
    {
     "w": "Idris",
     "t": "When a widget script freezes inside the widget extension, the extension now stops running...",
@@ -600,15 +646,10 @@
     "w": "Odalys+pernille",
     "t": "Pressing Approve on the site a second time no longer adds the same rule to the Investors' file...",
     "at": "2026-11-04T12:20:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The check that stops a bad sync from overwriting the Investors' amendment file is now written...",
-    "at": "2026-11-04T12:17:00-05:00"
    }
   ],
   "count": {
-   "next": 343,
+   "next": 342,
    "wait": 37,
    "blocked": 86,
    "you": 16
@@ -627,13 +668,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 3,
-  "total": 3,
-  "at": "12:53 PM",
+  "total": 5,
+  "at": "12:56 PM",
   "why": "",
-  "at_iso": "2026-11-04T17:53:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:53 PM ET</p></section>"
+  "at_iso": "2026-11-04T17:56:00+00:00",
+  "started": "12:53 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:56 PM ET</p></section>"
  }
 }

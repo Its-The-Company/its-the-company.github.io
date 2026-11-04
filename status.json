@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T22:39:10.626183+00:00",
+ "at": "2026-11-04T22:42:12.682090+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[build] T-2211 extension lane runner fix",
    "model": "opus",
    "started": "2026-11-04T21:31:18.771Z",
-   "seconds": 4071,
+   "seconds": 4253,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[build] T-0657 Settings screen",
    "model": "opus",
    "started": "2026-11-04T21:31:27.924Z",
-   "seconds": 4062,
+   "seconds": 4244,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[tools] T-2221 runner single-file check",
    "model": "opus",
    "started": "2026-11-04T22:30:53.741Z",
-   "seconds": 496,
+   "seconds": 678,
    "finished": null,
    "effort": "high"
   }
@@ -108,8 +108,85 @@
   "week_pct": 36.85,
   "usage_pct": 38.2,
   "work_pct": 76.3,
-  "read_at": "2026-11-04T22:39:00+00:00",
+  "read_at": "2026-11-04T22:42:00+00:00",
   "running": [
+   {
+    "lane": "b",
+    "task": "T-2222",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Answered A",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T17:40:02-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2189",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Read ops/runs/supervisor.log",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T17:40:02-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2209",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "A recut tool, from T-2096",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T17:40:02-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2220",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal branch personal/a6 did not land",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T17:40:02-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2223",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal account b2 stopped on T-2096+T-2204",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T17:40:02-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1728",
+    "w": "Idris",
+    "k": "build",
+    "t": "T-1714's continuation, Xcode lane",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T17:40:02-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-0309",
+    "w": "Pernille",
+    "k": "build",
+    "t": "The rest of T-0231",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-04T17:40:02-05:00",
+    "n": "Jeremy"
+   },
    {
     "lane": "b2",
     "task": "T-2176",
@@ -306,7 +383,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T17:39:00-05:00"
+  "at": "2026-11-04T17:42:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -506,12 +583,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 2,
-  "total": 5,
-  "at": "5:39 PM",
+  "lanes": 3,
+  "total": 6,
+  "at": "5:42 PM",
   "why": "",
-  "at_iso": "2026-11-04T22:39:00+00:00",
+  "at_iso": "2026-11-04T22:42:00+00:00",
   "started": "4:28 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:39 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:42 PM ET</p></section>"
  }
 }

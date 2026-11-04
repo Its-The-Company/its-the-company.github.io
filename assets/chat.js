@@ -44,6 +44,7 @@ function now() { return new Date(Date.now()); }
 function clock(iso) { return new Date(iso).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }); }
 function dayKey(d) { return d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate(); }
 function dayLabel(iso) { var d = new Date(iso); return dayKey(d) === dayKey(now()) ? 'Today' : d.toLocaleDateString([], { weekday: 'short', day: 'numeric', month: 'short' }); }
+function newestPages(count) { var p = Math.ceil((+count || 0) / 100); return p > 1 ? [p - 1, p] : [1]; }
 var NOTE = /<!--[\s\S]*?(?:-->|$)/g, AS = /<!-- ?as: ?([^>]{1,40}?) ?-->/;
 function strip(b) { return String(b || '').replace(NOTE, '').replace(/\r/g, '').trim(); }
 function stop(ev) { if (ev && ev.preventDefault) ev.preventDefault(); }
@@ -275,12 +276,11 @@ if (at) { bottom(); markSeen(cur); } else { jump.textContent = '↓ ' + nw.lengt
 }
 function readThread(n) {
 if (!issue(n)) get(RI + '/' + n).then((i) => { extra[n] = i; if (cur === n) { drawTabs(); drawView(true); } }, () => {});
-var have = threads[n], i = issue(n), path = RI + '/' + n + '/comments?per_page=100';
-if (have && have.length) path += '&since=' + have[have.length - 1].created_at;
-else if (i && i.comments > 100) path += '&page=' + Math.ceil(i.comments / 100);
-return get(path).then((list) => {
+var have = threads[n], i = issue(n), base = RI + '/' + n + '/comments?per_page=100';
+var paths = have && have.length ? [base + '&since=' + have[have.length - 1].created_at] : newestPages(i && i.comments).map((p) => p > 1 ? base + '&page=' + p : base);
+return Promise.all(paths.map((p) => get(p))).then((lists) => {
 var by = {}, first = !have;
-(have || []).concat(list || []).forEach((c) => { by[c.id] = c; });
+(have || []).concat(comments.filter((c) => numOf(c) === n)).concat([].concat.apply([], lists.map((l) => l || []))).forEach((c) => { by[c.id] = c; });
 threads[n] = Object.keys(by).map((k) => by[k]).sort(byAt);
 if (cur !== n) return;
 if (first) drawView(true); else update();

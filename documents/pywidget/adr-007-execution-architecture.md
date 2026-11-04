@@ -897,6 +897,46 @@ Read: bench/t0675-lane-extension.txt (runs 4 and 5), 7746d24e7's ExtensionLane.s
 **4. For Idris (T-1634).** Set `LaneMargin.firstRunPeak = 21 * 1_048_576` and its test (LaneGuardTests line 33). Take clocks and progress off the list and give the reason in the note. Item 2 still runs: if habits' clean first run exceeds 21 MiB, it moves the figure under 13:03.
 
 What would make this fail: a device figure far below the Simulator's. Then this line would have closed the lane on a Debug artefact. That is why T-0680 decides, not this line.
+
+## Chair line (Ines), 2026-11-03 19:51 ET: two run-file effects outside 16:54 item 3 (T-1650, from T-1642)
+
+Read: Pernille's T-1642 review, M1 and L2 (the one view, C13); lane.py's Not held bullet for the three run files and its stated limit; the 16:54 line, items 2a and 3; my 04:02 line, items 3 and 4; my 14:24 line, item 2; at HEAD, ExtensionLane.swift `takeTurn` and `refused`, LaneGuard.swift `LaneRunFiles`, WidgetStatus.swift `oomGuard` and `showsBadge`, TreeTimeline.swift's stale mark. Ran grep and git grep only: no build, no test, no script. The flag stays off. Moves no date.
+
+**1. `lane-peak` written low: a named row, as 04:02 item 4 was.** 16:54 item 3 gains one more effect, for this route only.
+
+- Route: a script writes a smaller number into its own or another widget's `lane-peak` by its path in the App Group. Effect: the margin lets through a run it would refuse, so at worst one memory kill, and the other widgets in that reload lose it and keep their cached trees. Backstop: the marker stays down after the kill, and the next turn demotes the widget to the app lane. A demoted widget never reaches the margin again, so writing the file again changes nothing. With a deleted marker as well, it is 04:02 item 4's row, already accepted.
+- Why a row and not a fix: it ends at the marker, as item 3 asks of every row, and it needs a deliberate write of a number into a runtime file. No ordinary script does that. Clearing the folder in the app (04:02 item 3) deletes the file instead, and a missing file reads as the 21 MiB first-run figure, which on today's numbers refuses every widget (14:24 item 2).
+- As at 04:02: I am changing item 3's words after seeing the case, and I say so. One named row, not a wider rule.
+
+**2. `lane-refused` deleted between refusals: a fix line, not a row.** Item 3 "may not list ... a break in 2a", and this is one. The widget is skipped as `oom_guard` for as long as the deleting goes on, and it shows its old picture with no badge. A tree that declares `stale_after` gets the clock mark (TreeTimeline); a tree without it shows nothing. In both cases the person has no reason. Held to its words, item 3 can't list it.
+
+- What decides the form is a reading at HEAD, not the tampering. `refused` demotes only on a refusal recorded by another process. Inside one extension process every refusal is `oom_guard` again, with no badge, for as long as that process lives. So an ordinary script can sit on a stale picture with no badge, with nobody deleting anything. That is worse than the case I was asked about, and widget freshness is the product's promise.
+- So the fix goes in the badge, not in the count. A refusal count kept outside `widgets/<id>/` would close the app-side route (a script clearing its folder, 04:02 item 3). It would not close a lane script writing by path (whatever the extension can read, a lane script can reach, 04:02 item 4), and it would do nothing for the one-process case. A badge on repeated `oom_guard` covers all three.
+- The rule: a new `oom_guard_since` in status.json, set by the first `oom_guard` and kept by later ones (as `deferred_since` is), cleared by any other outcome. `showsBadge` is true for `oom_guard` when `oom_guard_since` is earlier than this write: from the second refusal in a row. The first stays unbadged, because one skipped reload is not a stale picture. It uses the existing badge, with no new mark and no new copy. If the Activity screen wants a word for it, that word is a DRAFT under C51, for Maren.
+- What this does not close: status.json itself. If it sits in `widgets/<id>/`, a script that deletes it drops every badge, this one included, and 04:02's stated limit does not list it. Pernille checks where it sits. Then she either adds it to the stated limit with its effect or brings it back to me.
+- Cost: about half a day for Idris plus a review, inside T-0675's lane days. It blocks the flag default, not item 4 and not a date. With the disk under its line, the test runs when space returns.
+
+**3. What would make this fail.** An extension process that lives for hours and refuses the whole time. The badge then sits on a widget whose only fault is memory, with no traceback behind it. That is honest, because the picture is stale. T-0680's reload log will show how often it happens. If it happens often, the badge's wording comes back to me. The rule does not.
+
+**Board.** T-1650 ticked. New T-1714 (Idris, P1): the badge. New T-1715 (Pernille, P2, after T-1714): the bullet, C2 1.7, status.json.
+
+## Chair line (Ines), 2026-11-03 20:00 ET: status.json deleted by path between refusals (T-1717, from T-1715)
+
+Read: Pernille's note on T-1715 and her 6c056284a (lane.py Not held bullet and stated limit, C2 1.7); my 19:51 line, item 2; the 16:54 line, items 2a and 3; my 04:02 line, items 3 and 4; at HEAD, WidgetStatus.swift `oomGuard`, `carried` and `showsBadge`, WidgetStatusStore `read`. Ran grep only: no build, no test, no script. The flag stays off. Moves no date.
+
+**Ruling: neither option. A missing status.json reads as a refusal already under way, so the badge comes from the first refusal after it.** One branch inside T-1714.
+
+- Why not a named row: it is the same break in 2a as 19:51 item 2, a stale picture with no badge for as long as the deleting goes on. Item 3 may not list a break in 2a. I held `lane-refused` to those words an hour ago, and this case gets the same answer. A row would also leave T-1714's backstop one file deletion away from nothing.
+- Why not a streak kept outside `widgets/<id>/`: it does not close the route. Whatever the extension reads, a lane script can reach (04:02 item 4), so a script that deletes status.json by path deletes the new file by path too. It would cost a second file, its own lock and its cleanup on widget delete, and give the badge two sources of truth. It closes only the app-side folder clear, and that clear also deletes `tree.json`, so there is no stale picture to badge.
+- The rule for Idris: `oomGuard` on a missing status (`old` is nil) sets `oom_guard_since` earlier than this write (`Date.distantPast`; if that does not round trip through the stamp, the write's `ts` minus one second, and the test checks the badge, not the value). `showsBadge` is unchanged from 19:51: true for `oom_guard` when `oom_guard_since` is earlier than `ts`, and only with a tree. Deleting status.json between every two refusals then badges every refusal after a deletion.
+- Who else this badges: nobody honest. `showsBadge` needs a tree. A widget's first run is refused on today's numbers (14:24 item 2), but it has no tree yet, so it shows the placeholder as today. A tree with no status.json beside it comes only from a deletion, or from a first status write that failed after a good tree write. In both the picture is stale and the person has no reason, so the badge is honest. It is the rule 19:51 item 1 already uses: a missing `lane-peak` reads as the first run's 21 MiB, the safe figure.
+- Cost: one branch and two tests inside T-1714's half day. Nothing new for Maren: same badge, no new copy.
+
+**Not closed here.** status.json *written* by path with a made-up outcome (any widget's, by a lane script) drops every badge, not this one only. No Not held bullet and no stated limit names it. It is not a T-1714 question. New T-1720 (Pernille, P2): find whether a backstop exists (the next status write is Swift's, after the run), then write it as a bullet or bring it back to me.
+
+**What would make this fail.** A status write that fails often on the device while tree writes succeed. Then good widgets would carry a badge at their first refusal. I have no device figure for that. If T-0680's device runs show status writes failing, the fallback comes back to me. The rule does not.
+
+**Board.** T-1717 ticked. T-1714 gains the nil branch and its test. New T-1720 (Pernille, P2).
 {% endraw %}
 
 </div>

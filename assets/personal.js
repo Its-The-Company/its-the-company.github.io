@@ -5,7 +5,7 @@ var S = window.CompanySite, D = document, fixed = D.getElementById('personal');
 if (!S || !fixed || !S.getToken()) return;
 var repo = fixed.getAttribute('data-repo'), BILL = 'investors/billing.json', MAX = 40;
 var boxes = [], warn = '', opened = false;
-var WHAT = 'On: company sessions use that account’s own limits until it is turned off. Spread keeps to an even daily share of the week. Lock In has no daily share; the 5-hour hold and the weekly limit still apply. Each bar shows about what this project used, then about what was used elsewhere. A name shows on the public site. Each change is a commit from your GitHub account, so your token needs Contents: read and write. Turning an account off and on never lifts a stop: when an account has stopped itself, Lift stop posts LANE CLEAR and its letter on its open emergency issue, as a comment from your GitHub account.';
+var WHAT = 'Each bar: this project, then other use.';
 function clean(n) { return typeof n === 'string' ? Array.from(n.replace(/\s+/g, ' ').replace(/\p{C}/gu, '').trim()).slice(0, MAX).join('').trim() : ''; }
 var accts = fixed.getAttribute('data-state').split(' ').map((x) => {
 var p = x.split(':');
@@ -131,8 +131,18 @@ function meter(b, label, w, none) {
 b.bar.hidden = !w; b.bar.style.display = w ? 'flex' : 'none';
 if (!w) { b.head.textContent = none; return; }
 var p = Math.min(w.project_pct, w.pct), o = w.pct - p;
-b.head.textContent = label + ' ' + Math.round(w.pct) + '%' + (w.resets_at ? ', resets ' + et(w.resets_at) : '') + ': about ' + Math.round(p) + '% this project, about ' + Math.round(o) + '% elsewhere';
+b.head.textContent = label + ' ' + Math.round(w.pct) + '%' + (w.resets_at ? ', resets ' + et(w.resets_at) : '') + ': about ' + Math.round(p) + '% this project, about ' + Math.round(o) + '% other use' + split(p, w.pct);
 b.mine.style.width = p.toFixed(1) + '%'; b.rest.style.width = o.toFixed(1) + '%';
+}
+function split(p, all) {
+if (!(all > 0)) return '';
+var s = Math.round(100 * p / all);
+return ' (' + s + '% / ' + (100 - s) + '% of its use)';
+}
+function total() {
+var ms = ((S.status() || {}).personal || {}).meters, p = 0, all = 0, n = 0;
+accts.forEach((a) => { var r = ms && ms[a.id]; if (r && r.week) { p += Math.min(r.week.project_pct, r.week.pct); all += r.week.pct; n++; } });
+return n ? 'All accounts, this week: ' + (all > 0 ? Math.round(100 * p / all) + '% this project, ' + (100 - Math.round(100 * p / all)) + '% other use' : 'nothing used yet') + (n < accts.length ? ' (' + n + ' of ' + accts.length + ' read)' : '') + '.' : '';
 }
 function meters(w) {
 var ms = ((S.status() || {}).personal || {}).meters, r = ms && ms[w.a.id];
@@ -147,6 +157,7 @@ var no = S.rejected();
 boxes = boxes.filter((x) => (x.box.isConnected ? (x.in = 1) : !x.in));
 boxes.forEach((x) => {
 x.warn.textContent = warn;
+x.total.textContent = total();
 x.count.textContent = accts.some((a) => a.on === null) ? ' Not known' : ' ' + accts.filter((a) => a.on).length + ' of ' + accts.length + ' on';
 x.rows.forEach((w) => {
 meters(w);
@@ -196,7 +207,7 @@ g.appendChild(box);
 var sum = mk(box, 'summary');
 mk(sum, 'small', null, 'Personal Accounts');
 mk(box, 'span', 'cv-sub', WHAT).style.display = 'block';
-var x = { box: box, count: mk(sum, 'span', 'cv-sub'), warn: mk(box, 'span', 'cv-sub'), rows: accts.map((a) => {
+var x = { box: box, count: mk(sum, 'span', 'cv-sub'), total: mk(box, 'span', 'cv-sub'), warn: mk(box, 'span', 'cv-sub'), rows: accts.map((a) => {
 var row = mk(box, 'p'), w = { a: a, name: mk(row, 'strong'), state: mk(row, 'span') };
 w.name.style.overflowWrap = 'anywhere';
 mk(row, 'span', null, ' ');

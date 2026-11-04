@@ -117,9 +117,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
 - Open (from T-1045): T-1048 stdlib size stop unexplained, my check; T-1047 upload.sh identity.
-- 2026-11-03 T-1244 (8bd3b02af): Xcode mutants in scratch = git archive of pywidget + tools, Vendor symlinked, `xcodegen generate`, own -derivedDataPath; else NOVERDICT/NOBUILD. T-1266 passed my review T-1282 (6887f7d84); open: T-1284 Link branch E5 body check, T-1267 C1 edge (Idris).
-- 2026-11-03 T-1678 review (3a8a6a316): 0 P1, 5 P2 -> T-1679..T-1683 for Idris (stuck->killed recovery, T3 trigger `intent`, yielded save logged error, preview console rows, 3 mutants). Re-review when fixed.
-- 2026-11-03 T-1694 (9492c294e): F1/F4/F5 closed; open T-1696 (Idris: PyBridge stuck marker line untested). T-1685 (94ab29761): check_links not sound, T-1697 (Odalys, P1, detail only in ops/reviews/, unpublished). Lesson: a symlink guard that trusts git trees misses ignored on-disk links (Vendor/python); allow-list tracked dirs instead. Core mutants need `cp -RL` (Sources are symlinks).
+- 2026-11-03 T-0632 ticked (e04d50671): work had landed 11-02; board line was stale. Lesson: `git log --grep T-XXXX` before building any re-issued line.
+- 2026-11-03 T-1708 (884ec6151): 6a21d9820 sound, 247/0; M1/M2 survive -> T-1722/T-1723 (Odalys, P2). Lesson: when a rule has two parts, each refusal row must break only one part (put a tracked decoy at the lexical end), or each part hides the other's mutant.
+- 2026-11-03 T-1720 (0cdc82a28): status.json forged by path has no backstop, to Ines as T-1725 (P1). Lesson: the lane writes no status.json at HEAD; check a planned backstop has a writer before calling it one.
+- 2026-11-03 T-1175/T-1176 (a26e7ccab): host mutants = `git archive HEAD pywidget/ios` + my files, `cp -RL` Core, `--filter "RunLog|RunDetail"`, `python3 -u`; check baseline first (shared tree had another agent's unbuilt edits; full suite in scratch fails 18 on outside fixtures, so equal-count "kills" are fake).
 {% endraw %}
 
 

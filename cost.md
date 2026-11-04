@@ -10,9 +10,9 @@ section: "cost"
 
 | Figure | Amount |
 | --- | --- |
-| Total cost to date | $619.00 |
+| Total cost to date | $767.00 |
 | Net proceeds to date | $0.00 |
-| Profit to date | -$619.00 |
+| Profit to date | -$767.00 |
 {: .facts}
 
 <p>The app is not on sale yet, so there are no proceeds yet.</p>
@@ -26,3 +26,4 @@ section: "cost"
 | before Day 1 | Mac mini (M1, 16 GB) | $320.00 | One-time |
 | before Day 1 | Claude Max (20x), month 1 | $200.00 | Monthly |
 | before Day 1 | Apple Developer Program | $99.00 | Yearly |
+| 2026-11-03 | 1 TB external SSD (Company SSD) | $148.00 | One-time; price posted by an Investor, https://github |

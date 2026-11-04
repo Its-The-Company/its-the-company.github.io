@@ -53,11 +53,15 @@ if (!m.length && !l.length) return null;
 return (o ? 'main account last read ' + ago(st.at) + ' ago' : m.length + ' at work on the main account') + (ss ? ', ' + pl(l.length, 'task') + ' in ' + pl(ss, 'personal session') : '')
 + (names ? ' · ' + who(m.map(r => r.w).concat(l.map(r => r.w || word(r)))) : '');
 }
+function pool(st) {
+var p = st.pool || {}, w = String(p.why || '').replace(/\.$/, '');
+return w && p.n > 0 ? ' ' + w + ', up to ' + pl(p.n, 'agent') + ' at once.' : '';
+}
 function words(st, isPub) {
 var w = line(st, isPub);
-if (w) return w.charAt(0).toUpperCase() + w.slice(1) + '.';
-return old(st, isPub) ? (isPub ? 'Status from the site build ' : 'Last status ') + ago(st.at) + ' ago.'
-: (st.session || {}).active ? 'A session is running; no worker call right now.' : 'No session is running.';
+if (old(st, isPub)) return w ? w.charAt(0).toUpperCase() + w.slice(1) + '.' : (isPub ? 'Status from the site build ' : 'Last status ') + ago(st.at) + ' ago.';
+if (w) return w.charAt(0).toUpperCase() + w.slice(1) + '.' + pool(st);
+return (st.session || {}).active ? 'A session is running; no worker call right now.' + pool(st) : 'No session is running.';
 }
 function fromBuild(st) {
 var p = st.personal || {}, box = S.byId('now-panel');

@@ -253,8 +253,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-1050 landed 2026-11-02 (19d5907a, T-0642): unit 867/0, UI green, #41 c6594906585. Left: runner gate (runner_profile_compare 19d5907a new), first MacBook xc-test job, T-1116.
 - Lesson: the full UI suite runs ~45 min (EditorGate A2c alone ~7 min): run it in the background with a long timeout, never a 10-min foreground call. tests/run.sh takes suite file names (x_test.py), not bare names: a bare name runs nothing and says "All tests passed".
 - Lesson: source-scan tests (WidgetKindsTests.extensionSources) break in /tmp scratch (#filePath /tmp vs /private/tmp); baseline main in the same folder before blaming a branch. Personal lanes share the xc lock: budget the wait.
-- T-1669 slice 2 (94f1203da): app writes run log; rest is T-1677. Pernille review t1678: F1/F4/F5 fixed 3130a21e5 (host 362/0, mutants-t1683 13/13); Simulator T-1693; F2/F3 (T-1680/T-1681) open.
+- T-1669 slice 2 (94f1203da): app writes run log; rest is T-1677. T-1678 fixes all on Simulator 2026-11-03 (55/0): T-1716 landed d21a36896, T-1696 d074ebd44 (mutant killed). Independent review of both still due before TestFlight.
+- Lesson T-1693: Simulator scratch on Company SSD (spaced path) needs two scratch-only patches: quote utils.sh's .fwork redirect; acknowledgements.py misreads otool's "(architecture arm64):" line (real bug, reported). Build filters with tools/xc_file_tests.py, never file names; `build test` in one xc.sh call gets hang-stopped after BUILD SUCCEEDED.
 - Lesson T-1678: a test that checks a marker's text is not a test of what recovery does with it. Test the consumer.
+- Lesson T-1681: a hand mutant goes in a scratch copy of ios/ (Core+Shared+App+Tests/Core: the core sources link into App), never the shared checkout.
 - T-1068/T-1072 done 2026-11-02 (10db8d59): WK check buys Pro in SKTestSession; progress read. Review open. 17e's old Pro unexplained.
 
 
@@ -264,12 +266,13 @@ Dated task logs and full lessons: archive.md.
 - Lesson T-1634: an XCUI count taken while an app is still closing reads 0 (kAXErrorServerNotFound): terminate, then wait for an icon. zsh does not split "$P": use an array.
 - Lesson T-1404: one Bash call is capped at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
 
+- T-1714 done 2026-11-03 (87d4ec6bd): oom_guard_since, 16/16 mutants. Open T-1728 (lane writes oom_guard, once per reload), review open. Deferred keeps it: my reading.
+- Lesson T-1714: a rule green on the host means nothing until something writes it and something reads it: grep both call sites first.
+
 ## Lessons
 
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
-- T-0675 mirror bug 2026-11-01 (f8142681): my item 3 deleted files.shared data, because scripts/<id> had two owners and a review would have come later. Lesson: before a rename over a folder, grep who else writes it. -only-testing on a class misses tests in an extension of another class: read the count. Renaming a constant: run the whole unit target before the commit, not after.
-- T-1266 2026-11-03: 'cannot find X in scope' for a file that exists = stale generated project (pbxproj older than project.yml): xcodegen generate first. Mirror sees through AnyView; widgetURL holds its URL twice.
 - T-1180 2026-11-03: a new rule that overlaps old clauses makes their mutants equivalent: replay the suite's mutant file after any rule change (T-1179 left escape at 11/15). Pin overlapping clauses by the reason text.
 {% endraw %}
 

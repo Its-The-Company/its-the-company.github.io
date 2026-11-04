@@ -225,29 +225,70 @@ Colour alone (the brief named heatmap, progress, habits):
 
 10. Heatmap steps need a second cue. Proposed: size per step (0 runs a 35% square, 1-2 55%, 3-5 80%, 6+ full), centred in the cell, so a level reads by size where luminance fails.
 11. 08 Storage medium, stale: the top-trailing "Last read 1:52 PM" runs under the s2 corner slot (QA: outside the margin, three panels). 04 Distance medium's top-trailing stamp only just clears it.
-12. The stale glyph draws in the default group on these sheets (render.py `stale_slot`); s4 says it takes `.widgetAccentable()`. The spec stands; render.py is mine to correct, and Idris's build should follow s4.
-13. Renderer checks, mine: 07 Shortcuts medium marks its 4 tile glyphs accentable in the tree, but the group map appears to draw them grey; 04 Distance small in accented dark draws "2..." here, while qa.json for the main sheets has no truncation and QA_JS did not flag it. Either is the renderer until Idris's Simulator shows otherwise.
+12. CLOSED 2026-11-03 (T-1454). The stale glyph drew in the default group; `stale_slot()` in render.py now sets `accent = True` on the glyph's paint context (the glyph alone, as s4 says; s4 unchanged). It is magenta in the group map: 10 of 10 stale slots on states-accented.png (`rgba(214,36,110)`, counted by script; the accented light and dark panels take the tint as before). modes-accented.png draws no stale rows. Landed on main 2026-11-03 20:16 from <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/a3/20261103-193553-92775 by applying files (the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> refused it as changed outside its worktree). Full colour ignores the flag, so those sheets are unchanged. The error badge and taps-off glyph are not drawn by `stale_slot()`; they are renderer-drawn cards and were not in the grey list. Idris's build still follows s4.
+13. CLOSED 2026-11-03 (T-1454). (a) 07 Shortcuts medium: not a renderer fault. The group-map HTML for the 4 tiles carries 4 magenta glyphs (`rgba(214,36,110)`); only the tile labels are grey, because the tree marks the glyph alone, not the label. Read as grey on the first pass; redrawn sheet shows magenta glyphs. (b) 04 Distance small, accented dark: the renderer was at fault. The dark face is the rounded one, 68 px wide against a 67 px slot, and `SCALE_JS` ignored overflow under 2 px (`+ 1`), so the text neither scaled nor fitted and CSS drew the ellipsis; QA_JS shares that tolerance, so it did not flag it. `SCALE_JS` now scales on any overflow (44 px to 43.35 px; "2.1" whole on the redrawn sheet). QA_JS keeps its +1 tolerance. Checks after the redraw: `draw_modes.py` modes sheet faults 0, states sheet faults 3 (the known item 11 stamp under the corner slot, unchanged); `check_widget_modes.py --strict` and `check_states.py` green.
 
 Proposed build lines (for Ines to place; not built, not on the board):
 - B5 (Pernille, P2): `widgets/gallery/run_heatmap.py` `cell()`: frame each step at its own size (0.35, 0.55, 0.8, 1.0 of `size`) inside a fixed `size` frame; legend uses the same cells. Check: `render.py --set gallery 07` and `draw_modes.py`, heatmap row readable in the group map; contrast table unchanged.
 - B6 (Pernille, P2): `premade.py` storage and distance, systemMedium: when `ctx.stale`, move the top-trailing stamp to the footer or give the header 22 pt trailing space. Check: `draw_modes.py`, states sheet faults 0.
 
-## 9. Widget picker strings (T-0051, DRAFT C51, for Maren)
+## 9. Words iOS shows outside the app (T-0051, T-1436, DRAFT C51, NOT APPROVED)
 
-Idris, 2026-10-28. The Python widget's configuration (chair ruling item 2) needs four strings the system shows in the widget's edit sheet and in Shortcuts. In the build (`pywidget/ios/Shared/WidgetPlacement.swift`) as drafts; nothing here is approved. The list itself shows each widget's own id and each premade's title from its `make()` call (premade-titles.json), so no other new text. The Pro card's words are read from `state-tokens.json` (`pro_card.*`, `voiceover.pro_card`) as they stand.
+Idris, 2026-10-28 (the four picker strings, in `pywidget/ios/Shared/WidgetPlacement.swift`); Maren, 2026-11-03 (every other string in the build, the final DRAFT words, the lengths). Nothing here is approved: it goes with the next creative batch (C51). Mock: `system-strings.png` (211,099 B, 1x; Add Widget sheet and Edit Widget sheet in light and dark, App Shortcuts tiles in light and dark; labelled PROPOSAL), drawn by `draw_system_strings.py` (no image model; the sheets, greys, blue and the system's own words are stand-ins from [recall] of iOS 18, not Apple art), QA in `system-strings-qa.json`: 15 strings measured, 0 over budget, 0 clipped, 4 stand-in text pairs 4.5:1 or more per mode. `COPY` in the script is the single source until approval.
+
+**What is in the build** (grep of `pywidget/ios` for `configurationDisplayName`, `.description(`, `AppShortcut`, `static let title`, `@Parameter(title:`, `typeDisplayRepresentation`): one widget kind (`PyTreeWidget`; `WidgetKindsTests` refuses another), four App Intents (Choose widget, Refresh Widgets, Run Script, Run Script with Input), two entity types, three App Shortcuts. The premades are rows in the picker, not kinds, so there is no per-premade gallery entry and no separate Lock Screen picker string: the Lock Screen picker reads the same kind name and description. There is no Control or Live Activity string.
+
+**The name.** No string below carries the product name. Two do today ("Asks iOS to redraw your PyWidget widgets", "Runs a PyWidget script"); both lose it, because iOS prints the app's name beside the action already and the name is the Investors' call. The three phrases that need it use the system token (`\(.applicationName)`), so a rename changes nothing here. The table shows the token as `{app}`; the mock draws the working name.
+
+**Length.** Apple states no character limit for any of these [recall; I did not fetch a page]. Budgets are mine: the sheet at 375 pt (iPhone SE), 20 pt margins, so 335 pt of text; an Edit Widget row label 150 pt; a Shortcuts tile title 132 pt on two lines; each string must fit its line count at the default type size. Widths are one line at the surface size, measured in SF by `draw_system_strings.py`. At accessibility sizes every one of these wraps further; the sheets scroll, so no budget is claimed there.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 9. Widget picker strings (T-0051, DRAFT C51, for Maren), scrolls sideways" style="--tw:923px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 9. Words iOS shows outside the app (T-0051, T-1436, DRAFT C51, NOT APPROVED), scrolls sideways" data-n="3" style="--tw:1737px" markdown="1">
 
-| ID | String (DRAFT) | Where | C51 |
-|---|---|---|---|
-| `picker.intent.title` | Choose widget | `ChooseWidgetIntent.title`: the configuration's name | DRAFT |
-| `picker.intent.description` | Pick which of your widgets or premades this widget shows. | `ChooseWidgetIntent.description`, under the title in the edit sheet | DRAFT |
-| `picker.param.widget` | Widget | the one parameter's label in the edit sheet | DRAFT |
-| `picker.entity.type` | Widget | `WidgetChoiceEntity.typeDisplayRepresentation` (Shortcuts, Siri) | DRAFT |
+| ID | String (DRAFT) | Chars | One line at | Budget | Where it lives | Was |
+|---|---|---|---|---|---|---|
+| `kind.name` | Python widget | 13 | 120.9 pt (17 pt semibold) | 1 line in 335 pt | `Widget/PyWidget.swift` `.configurationDisplayName`; Add Widget gallery, Lock Screen picker, Edit Widget header | same |
+| `kind.description` | Shows one of your widgets or a premade. | 39 | 292.4 pt (15 pt) | 2 lines in 335 pt; fits on 1 | `Widget/PyWidget.swift` `.description(`; under the name in the gallery and the Lock Screen picker | "Draws your script's widget." |
+| `picker.intent.title` | Choose a widget | 15 | 139.0 pt | 1 line in 335 pt | `Shared/WidgetPlacement.swift` `ChooseWidgetIntent.title` | "Choose widget" |
+| `picker.intent.description` | Pick one of your widgets or a premade widget. | 45 | 327.9 pt (15 pt) | 2 lines in 335 pt; fits on 1, 7 pt to spare | `ChooseWidgetIntent.description`, under the name in the Edit Widget sheet | "Pick which of your widgets or premades this widget shows." |
+| `picker.param.widget` | Widget | 6 | 57.3 pt | 1 line in 150 pt | `@Parameter(title: "Widget")`, the row label in Edit Widget | same |
+| `picker.entity.type` | Widget | 6 | 57.3 pt | 1 line in 150 pt | `WidgetChoiceEntity.typeDisplayRepresentation` (Shortcuts, Siri) | same |
+| `refresh.title` | Refresh Widgets | 15 | 138.6 pt | 1 line in 335 pt | `Shared/RefreshWidgetsIntent.swift` `title` | same |
+| `refresh.description` | Runs your widgets again and asks iOS to redraw them. iOS limits how often widgets refresh, so the update can be delayed. | 120 | 864.5 pt (15 pt) | 3 lines in 335 pt; fits in 3 | `RefreshWidgetsIntent.description` | "Asks iOS to redraw your PyWidget widgets. ..." |
+| `run.title` | Run Script | 10 | 87.3 pt | 1 line in 335 pt | `App/Intents/RunScriptIntents.swift` `RunScriptIntent.title` | same |
+| `run.description` | Runs one of your scripts and returns what it prints. | 52 | 358.0 pt (15 pt) | 2 lines in 335 pt; fits in 2 | `RunScriptIntent.description` | "Runs a PyWidget script and returns what it prints." |
+| `runinput.title` | Run Script with Input | 21 | 175.7 pt | 1 line in 335 pt | `RunScriptWithInputIntent.title` | same |
+| `runinput.description` | Runs one of your scripts with text as its input and returns what it prints. | 75 | 504.4 pt (15 pt) | 3 lines in 335 pt; fits in 2 | `RunScriptWithInputIntent.description` | "Runs a PyWidget script with text as its input ..." |
+| `tile.refresh` | Refresh Widgets | 15 | 122.3 pt (15 pt semibold) | 2 lines in 132 pt; fits on 1 | `AppShortcut(... shortTitle:)`, the Shortcuts tile and Spotlight | same |
+| `tile.run` | Run Script | 10 | 77.0 pt | 2 lines in 132 pt; fits on 1 | `AppShortcut(... shortTitle:)` | same |
+| `tile.runinput` | Run Script with Input | 21 | 155.0 pt | 2 lines in 132 pt; fits in 2 | `AppShortcut(... shortTitle:)` | same |
 
 </div>
 
+
+Parameter labels and the entity type stay as they are and are listed so a grep finds them: `Script` (`ScriptEntity.typeDisplayRepresentation` and both intents' script parameter), `Arguments`, `Input`. Their only change is none.
+
+**Phrases** (`AppShortcutsProvider`; each carries the app token once, which iOS requires [recall]; no limit on phrase count or length is stated on Apple's page, L9 s2.4):
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 9. Words iOS shows outside the app (T-0051, T-1436, DRAFT C51, NOT APPROVED), scrolls sideways" style="--tw:585px" markdown="1">
+
+| Shortcut | Phrases (DRAFT) | Was |
+|---|---|---|
+| Run Script | "Run a script in {app}", "Run a {app} script" | same |
+| Run Script with Input | "Run a script with input in {app}", "Run a {app} script with input" | first only |
+| Refresh Widgets | "Refresh my {app} widgets", "Refresh {app} widgets" | first only |
+
+</div>
+
+
+The second phrases are new so each shortcut has the two ways a person says it that Run Script already has; no new capability.
+
+**Reasons, once each.** *Choose a widget* gains its "a": the Choose a widget card says it (ruling 2026-10-31 12:25), and the card's headline follows this string, so the two must be one. *Python widget* stays: it names what the kind draws, and renaming a kind buys nothing. *Gallery description* no longer says "script's": a person who places a premade has no script. *Premade* stays the word (the store page draft uses it). *"your widgets"* in the Refresh text is honest: T-0512 runs every placed widget's script before the reload. *"PyWidget"* leaves the two descriptions: see The name.
+
+**Open (Idris, Simulator, under the build line).** Which of `kind.description` and `picker.intent.description` the Edit Widget sheet shows, and whether `picker.intent.title` shows anywhere there [recall: both uncertain]; if iOS shows only one, the mock's Edit sheet is redrawn to match. Whether the Lock Screen picker shows the gallery's description. The tile's real width.
+
+**Proposed build line (for Ines to place; queued on the board as T-1442):** swap the strings in the table in `Widget/PyWidget.swift`, `Shared/WidgetPlacement.swift`, `Shared/RefreshWidgetsIntent.swift`, `App/Intents/RunScriptIntents.swift`; add the two phrases; no other change. Test: a unit test reads `COPY` from `system-strings-qa.json` or the table and fails if a Swift string differs, or if any of the four files holds "PyWidget" in a user-facing literal. WidgetKit Simulator shots of the Add Widget sheet, Edit Widget sheet and Shortcuts tiles beside the mock.
 
 ## 10. Refresh and age (T-1434, DRAFT C51, NOT APPROVED)
 
@@ -288,7 +329,7 @@ Frames: before tap (stale: read 1:52 PM, now 2:46 PM, stale after 45 min), pendi
 ### (d) What a refresh clears
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 7: (d) What a refresh clears, scrolls sideways" style="--tw:1187px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: (d) What a refresh clears, scrolls sideways" style="--tw:1187px" markdown="1">
 
 | After the tap | Error badge | Stale clock | Age line |
 |---|---|---|---|
@@ -378,7 +419,7 @@ Ines, CEO
 **Card grammar.** Follows the Pro card (s3.2): centred, whole-widget, no corner slot, no name line (the id `new_widget` is never shown), `text.primary` headline, `text.secondary` caption and glyph. It is not a fault, so the glyph is `text.secondary`, never `status.warning` or `status.danger`. Glyph: `square.dashed` [recall, Idris confirms the name]; accented: the glyph alone is accentable; vibrant: white 1.0. Layout per family: ProCardView's `content` switch with the name line removed.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 8: Ruling, 2026-10-31 12:25 ET (Maren, with Idris, T-0684 part b, F19): what a…, scrolls sideways" style="--tw:676px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: Ruling, 2026-10-31 12:25 ET (Maren, with Idris, T-0684 part b, F19): what a…, scrolls sideways" style="--tw:888px" markdown="1">
 
 | ID | Family | Copy (DRAFT, C51) |
 |---|---|---|
@@ -388,12 +429,14 @@ Ines, CEO
 | `unset.circular` | accessoryCircular | glyph above "Choose" |
 | `unset.rect` | accessoryRectangular | glyph + "Choose a widget", one line at the top |
 | `unset.inline` | accessoryInline | glyph + "Choose a widget" (15 chars) |
-| `unset.voiceover` | all | "pywidget. Not set to a widget yet. Touch and hold, then choose Edit Widget. Double-tap to open pywidget." |
+| `unset.voiceover` | Home Screen families (`system*`) | "pywidget. Not set to a widget yet. Touch and hold, then choose Edit Widget. Double-tap to open pywidget." |
+| `unset.voiceover.lock` (token `voiceover.unset_lock`; T-0891, DRAFT C51, 2026-11-03) | Lock Screen families (`accessory*`) | "pywidget. Not set to a widget yet. Double-tap to open pywidget." |
 
 </div>
 
 
-- **"Choose a widget" is the picker's own title** (`picker.intent.title` is "Choose widget", s9): one verb in both places. If Ines or the Investors change the s9 string, this headline follows it.
+- **"Choose a widget" is the picker's own title** (`picker.intent.title`, s9; it read "Choose widget" when this was ruled and is "Choose a widget" in the T-1436 draft): one verb in both places. If Ines or the Investors change the s9 string, this headline follows it.
+- **Lock Screen VoiceOver matches what the card shows (T-0891, T-0886 M1).** The card has no instruction line there, so the spoken label has none either: `voiceover.unset_lock`, picked by `family.hasPrefix("accessory")`. It is the Home Screen line without its touch-and-hold sentence, and it names no other route (Customize, Edit Widget): the Lock Screen path is [recall] and unread on a device, and a wrong instruction is worse than a short card. Smallest version that still reads: state, then tap. 0 hits for "touch", "hold", "app" and "Edit".
 - **Lock Screen carries no instruction line**: editing a Lock Screen widget starts in Customize, not a touch-and-hold on the widget, and a wrong instruction is worse than a short card.
 - **No "Tap to open" on this card**, the one departure from the card grammar: a second instruction would compete with the one that matters. The card is still the tap target.
 - **Tap:** just the app. `widgetURL` with no route; nothing to open to, since no widget id is set. The foreground is the useful part: it lets the app write for any widget the person has chosen since. Small: `widgetURL`; medium and larger: the whole card.

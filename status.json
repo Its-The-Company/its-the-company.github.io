@@ -1,64 +1,64 @@
 {
  "schema": 1,
- "at": "2026-11-04T00:33:29.335626+00:00",
+ "at": "2026-11-04T01:56:44.450289+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-03T18:40:59-05:00"
+  "started": "2026-11-03T19:41:41-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "odalys",
-   "task": "[tools] T-1697 close the check_links gap",
+   "task": "[ops] T-1228 T-1689 T-1698 T-1699 T-1706 T-1700 T-1638 land parked lane work",
    "model": "opus",
-   "started": "2026-11-04T00:07:16.824Z",
+   "started": "2026-11-04T01:04:58.920Z",
    "seconds": null,
-   "finished": "2026-11-04T00:32:47.390000+00:00"
+   "finished": "2026-11-04T01:55:19.723000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-1037 move scratch to external SSD",
+   "task": "[tools] T-1724 personal lanes catch-up pacing",
    "model": "opus",
-   "started": "2026-11-03T23:58:12.882Z",
+   "started": "2026-11-04T01:06:45.072Z",
    "seconds": null,
-   "finished": "2026-11-04T00:25:53.179000+00:00"
+   "finished": "2026-11-04T01:53:29.403000+00:00"
   },
   {
-   "name": "pernille",
-   "task": "[review] T-1685 T-1694 two independent reviews",
+   "name": "idris",
+   "task": "[test] T-1693 T-1696 T-1716 Simulator runs",
    "model": "opus",
-   "started": "2026-11-03T23:52:09.537Z",
+   "started": "2026-11-04T01:01:46.112Z",
    "seconds": null,
-   "finished": "2026-11-04T00:06:42.505000+00:00"
+   "finished": "2026-11-04T01:44:18.984000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[ops] T-1695 name the session event at close",
+   "task": "[tools] T-1718 T-1719 lane menu fixes",
    "model": "opus",
-   "started": "2026-11-03T23:54:20.467Z",
+   "started": "2026-11-04T01:03:41.537Z",
    "seconds": null,
-   "finished": "2026-11-03T23:57:49.160000+00:00"
+   "finished": "2026-11-04T01:35:58.328000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 233,
-  "blocked_count": 120
+  "runnable_count": 209,
+  "blocked_count": 121
  },
  "meter": {
   "five_hour": {
-   "pct": 7.0,
-   "resets_at": "2026-11-04T02:00:00.028058+00:00",
+   "pct": 11.0,
+   "resets_at": "2026-11-04T01:59:59.949187+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 93.0,
+   "left": 89.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 33.0,
-   "resets_at": "2026-11-08T07:00:00.028075+00:00",
+   "resets_at": "2026-11-08T06:59:59.949206+00:00",
    "used_words": "of your weekly allowance used",
    "left": 67.0,
    "left_words": "of your weekly allowance left"
@@ -68,10 +68,10 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-03T18:40:57.943604-05:00"
+  "read_at": "2026-11-03T19:41:39.801470-05:00"
  },
  "ui": {
-  "week_pct": 0.697,
+  "week_pct": 0.682,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -85,11 +85,145 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 26.73,
-  "usage_pct": 38.4,
-  "work_pct": 78.3,
-  "read_at": "2026-11-04T00:36:00+00:00",
-  "running": []
+  "week_pct": 26.14,
+  "usage_pct": 38.0,
+  "work_pct": 77.9,
+  "read_at": "2026-11-04T02:00:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-1737",
+    "t": "T-1737",
+    "at": "2026-11-03T20:43:58-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-1735",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Experiment ids chosen inside a lane collide with main's",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T20:33:18-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-1736",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Continuation of T-1689 batch",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T20:33:18-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-1733",
+    "w": "Operator",
+    "k": "ops",
+    "t": "Bundle ops/proposals/2026-11-03-worker-rule-7-c42.md",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T20:33:18-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-1734",
+    "w": "Operator",
+    "k": "ops",
+    "t": "Carry out the answer on T-1393's card",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-03T20:33:18-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-1731",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal_land_test.sh nears its 360 s cap at ordinary load",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T20:33:18-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-1455",
+    "w": "Pernille",
+    "k": "build",
+    "t": "Run heatmap levels by size, not brightness alone",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-03T20:33:18-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a2",
+    "task": "T-1729",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Independent review of T-1714",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T20:33:18-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a2",
+    "task": "T-1730",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Two metric_series.py mutants in tests/guards_by_arm_mutants.json survive",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-03T20:33:18-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a3",
+    "task": "T-1742",
+    "w": "Maren",
+    "k": "tools",
+    "t": "Personal branch personal/a4 did not land",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T20:53:14-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a3",
+    "task": "T-1743",
+    "w": "Idris",
+    "k": "tools",
+    "t": "Personal branch personal/a5 did not land",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T20:53:14-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a3",
+    "task": "T-1744",
+    "w": "Maren",
+    "k": "tools",
+    "t": "Personal branch personal/a6 did not land",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T20:53:14-05:00",
+    "n": "Evan"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -99,16 +233,17 @@
   }
  ],
  "disk": {
-  "free_gb": 17,
-  "gate": "closed",
-  "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
+  "free_gb": 21,
+  "gate": "open",
+  "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
-  "pool": 3,
-  "at": "2026-11-03T19:36:00-05:00"
+  "pool": 2,
+  "at": "2026-11-03T21:00:00-05:00"
  },
  "next_tick_why": "session",
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -127,14 +262,6 @@
    "next": []
   },
   {
-   "name": "Wrenna",
-   "state": "next",
-   "task": "Wrenna, P2, the rooms' own rules, for the Investors'...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
@@ -143,17 +270,25 @@
    "next": []
   },
   {
-   "name": "Pernille",
+   "name": "Maren",
    "state": "next",
-   "task": "Pernille, P3, from T-1142...",
+   "task": "Maren, P2, from T-1437 (b72f2da7f): not before...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Maren",
+   "name": "Pernille",
    "state": "next",
-   "task": "Maren, P1, three calls Idris's build lines wait on, each...",
+   "task": "Pernille, P2, Run heatmap levels by size, not brightness...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Wrenna",
+   "state": "next",
+   "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
    "model": null,
    "since": null,
    "next": []
@@ -193,13 +328,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "\"We should be matching usage across the...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "First run on one account, after sign-in",
     "s": "next",
     "o": "c"
@@ -231,29 +359,36 @@
     "t": "Activity run log, Swift half",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Refresh control and age line in the renderer",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Odalys",
-    "t": "Tightened the landing tool's rule for file shortcuts (symbolic links) in the app folder, so a...",
-    "at": "2026-11-03T19:32:00-05:00"
+    "w": "Odalys+operator",
+    "t": "The last part of the clean-up of personal-lane work that never reached main is now in: test...",
+    "at": "2026-11-03T20:55:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "A personal account set aside finished work because its commits carried the original task's...",
-    "at": "2026-11-03T19:25:00-05:00"
+    "t": "A personal account set to Spread that has fallen behind its own week now runs up to 12 agents...",
+    "at": "2026-11-03T20:53:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "A stalled helper session left finished work on a side branch; it changes the helpers' own...",
-    "at": "2026-11-03T19:25:00-05:00"
+    "w": "Idris",
+    "t": "The test for a script stuck in native code now checks that the app writes down the stuck state...",
+    "at": "2026-11-03T20:43:00-05:00"
    }
   ],
   "count": {
-   "next": 233,
-   "wait": 35,
-   "blocked": 85,
+   "next": 209,
+   "wait": 37,
+   "blocked": 84,
    "you": 16
   }
  },

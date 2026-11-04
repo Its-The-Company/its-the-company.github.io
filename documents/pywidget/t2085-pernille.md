@@ -37,9 +37,12 @@ committed tooling cannot run.
 
 ## Mutants
 
-- Tests/mutants-t1850.json on the Simulator (iPhone 17e), tools/xc_mutants.py: not finished at wrap-up. Mutant 1
-  (old-body-zero-passes-everywhere) ran; mutant 2 (zero-refuses-everywhere) was planted and building/testing when the
-  session ended, about 17 minutes in. No verdict is claimed here for any of the three; continuation line T-2100.
+- Tests/mutants-t1850.json on the Simulator, tools/xc_mutants.py, rerun under T-2100 at 504703ed2's code (HEAD
+  ce2ca3e1a, detached scratch worktree; no change under pywidget/ios between the two): 3/3 KILLED.
+  old-body-zero-passes-everywhere 4 failure lines, zero-refuses-everywhere 7, zero-falls-to-need 10; xc_mutants exit 0.
+  The first attempt queued 600 s on the shared xcodebuild lock behind other <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span>, came back WAITED on mutant 1 (no
+  verdict) and was stopped (exit 130); the rerun used XC_LOCK_WAIT=3000. Raw output: company-scratch/T-2100-pernille/
+  run.txt (first attempt) and run2.txt (rerun).
 - Core/mutants-t1850.json on the host: as committed it does not run (M2). With the paths made package-relative, in a
   scratch copy of pywidget/ios: baseline 54 green; 5/5 KILLED (zero-passes-everywhere 4 failures,
   zero-refuses-everywhere 2, zero-falls-to-need 3, device-reads-zero-as-unknown 1, default-ignores-build 1).
@@ -72,7 +75,7 @@ and the two mutants that only the host can <span title="A test written in advanc
 builds the device branch) have no runnable record. Fix: drop the `pywidget/ios/Core/` prefix on all five entries and
 rerun; I did that in scratch and got 5/5 killed, so this is a file fix, not a test gap.
 
-### L1 (Low). The <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s wiring to the build's answer is untestable anywhere we run tests
+### L1 (Low). The lane's wiring to the build's answer is untestable anywhere we run tests
 
 ExtensionLane.swift:210; ExtensionLaneTests.swift:51 and :595.
 

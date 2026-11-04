@@ -50,9 +50,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-1776 stage 1a a91c27239 (spec 3330e8176, T-1775 ticked). Next T-2072 (bell everywhere: app.js 13 B left; /chat/ page; badge colour), T-2073-2075 stages 2-4. Usage/Cost checks in site_test.sh parked under "T-1776 stage 2" comments.
 
+- T-2184 done 89c20a937 (11-04): disk_sweep covers $TMPDIR leftovers (4.0 -> 18.9 GB). Stale-meter fix: ops/proposals/2026-11-04-personal-meter-own-reset.md, draft, approve-only, waits on an issue. Guard refuses cp of rules/ files to scratch. Committed others' uncommitted board/events lines in 1de2f5792: run git diff --cached first, every commit.
+
 ## Standing lessons (details in archive.md)
 
-- T-2077 11-04 dd9b97334: new Home keeps Controls card + hidden #now-panel carrier (app.js status loop needs it). Q1,Q2 still off. Next T-2178 (P0, ETA 11-05): patch ops/plans/t2077-q1q2-on.patch, then site_personal + site_dash_probe. Run site suites at --jobs 3 max (site_test.sh rewrites ops/scoreboard.json). Lesson: a scripted edit put a comment over live arguments; diff every scripted edit.
+- T-2171 done c62fab3e2 (11-04): tools/disk_sweep.py hourly from supervisor.sh 1b; first pass SSD +61.1 GB, internal +1.8 GB (still 7.6). Guard refuses running supervisor_test.sh and even bash -n on supervisor.sh (keychain rule): don't try. Open: disk_overflow.xcode_busy uses pgrep -f, reads busy whenever a lane prompt names xcodebuild; switch to pgrep -x. Next T-2060 (Simulators ~20 GB).
 {% endraw %}
 
 

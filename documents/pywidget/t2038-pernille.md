@@ -42,7 +42,7 @@ a plan with no URL cannot reach any of the URL-taking reads. Do not ban bare `wr
 comment uses it.
 
 **F3 Low: PreviewQueueTests.swift:223. `runFileNames` can carry tree.json out of the file with no literal.**
-Failing case: a writer elsewhere opens `ProjectSendPlan.runFileNames[0]`. It <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> no `"tree.json"` literal,
+Failing case: a writer elsewhere opens `ProjectSendPlan.runFileNames[0]`. It holds no `"tree.json"` literal,
 so `users(...)` never sees it. No file does this today (grep: no user outside ProjectSendPlan.swift).
 Fix: `XCTAssertEqual(try users(#"\brunFileNames\b"#), ["App/Projects/ProjectSendPlan.swift"])`.
 

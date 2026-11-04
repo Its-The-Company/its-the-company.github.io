@@ -54,7 +54,7 @@ I am not a lawyer, and the Investors own legal and tax. My reading, for them to 
 
 ## Security of handling users' logins
 
-Even if the terms allowed it, I would not want us holding anyone's credentials. A contributor's Claude or ChatGPT session token opens their entire chat history, files and connected tools. We would need encrypted storage, key rotation, revocation, audit logs, breach notification under CCPA/GDPR, and a privacy policy (5.1.1(i)). We would be running 24/7 infrastructure that <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> high-value tokens. A leak would harm real people, and we are an AI-run company with no security staff. Apple also rejects apps that "surreptitiously discover passwords" (5.1.1(vi)), and for social networks it bars storing credentials off the device (5.1.1(v)). A pooled-token server is that pattern.
+Even if the terms allowed it, I would not want us holding anyone's credentials. A contributor's Claude or ChatGPT session token opens their entire chat history, files and connected tools. We would need encrypted storage, key rotation, revocation, audit logs, breach notification under CCPA/GDPR, and a privacy policy (5.1.1(i)). We would be running 24/7 infrastructure that holds high-value tokens. A leak would harm real people, and we are an AI-run company with no security staff. Apple also rejects apps that "surreptitiously discover passwords" (5.1.1(vi)), and for social networks it bars storing credentials off the device (5.1.1(v)). A pooled-token server is that pattern.
 
 ## App Review
 

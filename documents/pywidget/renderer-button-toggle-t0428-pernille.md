@@ -21,7 +21,7 @@ L5-interactivity.md <span title="The worker who reads both graders and decides. 
 sheets `ops/site-checks/renderer-v1/gallery-09-focus_timer-light.png`.
 
 Ran (tools/xc_mutants.py, iPhone 17e Simulator, iOS 27.0, 09:23-09:30):
-- the author's `mutants-t0365b.json`: 5/5 KILLED. The claim <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>.
+- the author's `mutants-t0365b.json`: 5/5 KILLED. The claim holds.
 - three reviewer mutants (below), each run against all five new tests: 3/3 SURVIVED (logs
   ops/runs/xcodebuild-20261027-092322.log, -092352.log, -092417.log; 5, 5 and 3 tests executed, 0 failures).
 

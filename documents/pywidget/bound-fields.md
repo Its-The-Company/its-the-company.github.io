@@ -67,7 +67,7 @@ Two more keys in `pywidget.json`, beside `lane`, in schema `pywidget.app` versio
 | `fetch.fields` | 1 to 8 entries. Key: `^[a-z_][a-z0-9_]{0,31}$`. Value: a path, below | A small <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> keeps `fetch.json` small; 8 is my number, not a measurement |
 | `fetch.max_age_s` | Integer, 60 to 86,400 | Precedent is T-0053's `max_age`: younger than this and no request is made. It also sets when a value counts as stale (s6). It is not a schedule |
 | `sensors` | Unique list from a closed set; `["steps"]` is the set | A later sensor is one enum word and one gate |
-| A field named `steps` while `sensors` <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> `steps` | Refused | Fields and sensors share one namespace, so `bind="steps"` means one thing |
+| A field named `steps` while `sensors` holds `steps` | Refused | Fields and sensors share one namespace, so `bind="steps"` means one thing |
 | `lane: widget` with `fetch` or `sensors` | Refused at save | Such a script has `net.get` and the pedometer. Two routes to one number is a bug farm |
 
 </div>

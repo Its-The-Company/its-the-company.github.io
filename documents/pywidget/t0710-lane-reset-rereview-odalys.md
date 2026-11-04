@@ -90,7 +90,7 @@ looked up by name in the builtins dict, and the run has just had the chance to c
   not a memory one.
 - **Fix:**
   1. At runner import, bind `builtins.__dict__` and the few builtins `_reset`/`reset` call after the lane step.
-  2. Restore builtins without calling any run-made key's `__hash__`/`__eq__`: <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> `tuple(b.items())` until the next
+  2. Restore builtins without calling any run-made key's `__hash__`/`__eq__`: hold `tuple(b.items())` until the next
      reset, then `b.clear()` and `b.update(snap["builtins"])`.
   3. Optional: let the lane's check compare the builtins dict with the snapshot by identity and report `builtins`.
 - **Tests:** `OpenTests.test_OPEN_F1_*` (3).

@@ -79,7 +79,7 @@ Flip the two tests.
 target. Its `__del__` never ran across 2 runs, a Restart and 1 more run (n=1 per interpreter, all three).
 The next widget run is then the likely memory <span title="A test written in advance. If it fires, we drop the idea.">kill</span>, and T-0693 demotes the widget that was running.
 Planted values that no check scans can already keep memory resident by other routes, so this is not unique to T-0715.
-It does make every reported tamper <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> its memory permanently.
+It does make every reported tamper hold its memory permanently.
 The cheapest mitigation is in Swift: end the extension process on any demotion, not only on rule 1 or 3.
 That also limits N1 to one innocent run per process.
 Reproducer: `test_OPEN_N2_grave_pins_memory_for_the_process_without_grave_full`. On the replay pass, `freed` is

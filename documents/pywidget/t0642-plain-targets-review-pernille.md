@@ -15,7 +15,7 @@ Pernille, 2026-11-02. Independent review, Commandment 13. Base 8701e80d; main is
 
 **Superseded for d3a5bc94: see "Delta read, 2026-11-02" at the end. F4 below was wrong.**
 
-**Verdict: NO-GO to land 03177eef as it stands.** The design <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>. The first thing that broke was a host test, and the second problem is that no plain target has ever been built for a device. Land when F1 and F4 are fixed and the one Xcode run behind F2 and F3 comes back clean. Nothing here needs a redesign.
+**Verdict: NO-GO to land 03177eef as it stands.** The design holds. The first thing that broke was a host test, and the second problem is that no plain target has ever been built for a device. Land when F1 and F4 are fixed and the one Xcode run behind F2 and F3 comes back clean. Nothing here needs a redesign.
 
 How it was read: no Xcode build and no Simulator. `git archive` of both commits into scratch, `xcodegen generate` on each, the two `project.pbxproj` files compared target by target, Xcode 27.1's own `.xcspec` files, the app copies still on this disk (all SwiftPM builds), and the host tests. `tools/acknowledgements.py`, its test, `macbook_runner_test.py` and `test_bundle_runtime.py` ran on the branch in scratch.
 

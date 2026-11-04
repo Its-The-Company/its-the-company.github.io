@@ -50,7 +50,7 @@ sentence disagree. The `line()` plumbing passes `staleAfterSet` through, and two
 ## Findings
 
 **F1 (Medium, board T-1910): the field-selection half of "Which time" has no code and no test.** The doc comment says
-`boundFieldTimes` <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> only fields drawn with a value, and that the caller maps `stale_after` to a Bool. At
+`boundFieldTimes` holds only fields drawn with a value, and that the caller maps `stale_after` to a Bool. At
 c9a18c0cf nothing outside the tests calls `AgeLine.time` or `AgeLine.line` (grep over `pywidget/ios`, Swift,
 excluding Tests and AgeLine.swift: no hits). So:
 - Example 6 is tested by passing `bound: []` by hand. That exercises the empty-fields fallback, not the

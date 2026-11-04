@@ -118,7 +118,7 @@ F2. The two readers should share one rule.
 
 **Nine tasks, all from one session.** Account a, 13:23:04 to 13:48:45, exit 0, 12 queued, 2 finished, is the only session
 that has ended on T-1034's code: it landed at 12:19, and a running tick keeps the file it started with. No tick has read
-the menu since, so neither log <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> a "cooling" line yet: a's last line is "its branch waits to land" at 13:49:15,
+the menu since, so neither log holds a "cooling" line yet: a's last line is "its branch waits to land" at 13:49:15,
 which exits at line 334.
 
 

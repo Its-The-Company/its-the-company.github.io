@@ -17,7 +17,7 @@ and `pywidget/ios/Tests/mutants-t1266.json` (S5, S6). It answers my F1 / S5 in [
 
 **Verdict: pass with notes.** F1 is closed: the widgetURL path at `pywidget/ios/Shared/TreeView.swift:414` now has a
 test that sees it, the control is real, and every E5 refused row goes through it. One Low finding (F1 below) is against
-the older Link test from T-1178, not this commit; it becomes T-1284 for Idris, and it does not <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> TestFlight.
+the older Link test from T-1178, not this commit; it becomes T-1284 for Idris, and it does not hold TestFlight.
 
 ## What I ran
 

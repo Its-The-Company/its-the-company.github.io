@@ -73,7 +73,7 @@ What has to exist for this, none of it at HEAD:
 3. **Time to finish.** The refreshes run inside `beginBackgroundTask`. On expiry: stop, then one timeline reload so the clock draws. Apple's page exempts reloads only while the app is in the foreground, so this one counts against the budget; once per cut-off is the price of saying so (keeping-a-widget-up-to-date, research/inbound/apple).
 4. **The widget's own check.** State-spec s1 gains triggers, order unchanged:
    - Row 4, badge: `status.json` says the newest run failed. It reuses `e.badged`, which today means demoted only.
-   - Row 5, clock: as now, or `status.json` <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> a refusal, or `tree.json` is older than `.sent.json`'s `sent_at`.
+   - Row 5, clock: as now, or `status.json` holds a refusal, or `tree.json` is older than `.sent.json`'s `sent_at`.
    - The check lives in `getTimeline`, so it holds with the app gone.
 5. **Catch-up.** At the next active, any widget whose tree is older than its send runs once, outside `WidgetPasses.spacing`.
 

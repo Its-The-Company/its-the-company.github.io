@@ -46,7 +46,7 @@ So, for our floor (iOS 18.0, ADR-001 3.1):
 </div>
 
 
-Consequences: L4 s6's "or in the app if `openAppWhenRun`" is wrong (3). ADR-007's T5 "app process" <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> only on iOS 27+ by explicit opt-in; on 18-26 a Python handler cannot be reached from a widget tap without opening the app, unless we misuse `LiveActivityIntent`. I reject that: ARG p.18 2.5.4 says apps "may only use background services for their intended purposes: VoIP, audio playback, location, task completion, local notifications, etc.", and a Live Activity intent that starts no Live Activity is not its intended purpose. Both docs get a dated fix (s15). The design below works on 18-26 without Python in the extension, and gets faster on 27.
+Consequences: L4 s6's "or in the app if `openAppWhenRun`" is wrong (3). ADR-007's T5 "app process" holds only on iOS 27+ by explicit opt-in; on 18-26 a Python handler cannot be reached from a widget tap without opening the app, unless we misuse `LiveActivityIntent`. I reject that: ARG p.18 2.5.4 says apps "may only use background services for their intended purposes: VoIP, audio playback, location, task completion, local notifications, etc.", and a Live Activity intent that starts no Live Activity is not its intended purpose. Both docs get a dated fix (s15). The design below works on 18-26 without Python in the extension, and gets faster on 27.
 
 ## 1. What the platform allows (and what it does not)
 

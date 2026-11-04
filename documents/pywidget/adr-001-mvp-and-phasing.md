@@ -28,7 +28,7 @@ What would make this fail: trying to ship the brief. A code-running app gets a c
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: 2. Options considered, scrolls sideways" style="--tw:1600px" markdown="1">
 
-| Option | What v1 <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> | By Day 17-20 | Earns by Day 30 | Verdict |
+| Option | What v1 holds | By Day 17-20 | Earns by Day 30 | Verdict |
 | --- | --- | --- | --- | --- |
 | A. The brief's Phase 1 as written | C1, C2, full C5, C4 with every family and interactivity, C7 basics, about 10 widgets and 10 scripts | Not at review quality. C5 alone (editor, REPL, debugger, packages, iPad multi-window) is weeks; C4 is blocked by L1-L5 | Nothing (billing is Phase 4) | Rejected |
 | B. IDE only | C1, C5 core, C7 Run Script | Yes, with margin | Nothing under 2.1 (base app free, no marketplace to pay for) | Rejected as the plan; kept as the fallback if widgets miss the cut line |

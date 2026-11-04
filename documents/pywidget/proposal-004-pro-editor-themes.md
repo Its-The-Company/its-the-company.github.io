@@ -36,7 +36,7 @@ Each pair is a light and a dark set that follows the system appearance, as the f
 
 ## Rules every pair keeps
 
-- **Syntax keys only.** Each set <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> exactly the 22 keys of the shipped `Syntax*` colour sets. No new token names, so the adapter takes a theme as data (ADR-004 ruling 3) and Swift holds no hex.
+- **Syntax keys only.** Each set holds exactly the 22 keys of the shipped `Syntax*` colour sets. No new token names, so the adapter takes a theme as data (ADR-004 ruling 3) and Swift holds no hex.
 - **Contrast.** `python3 pywidget/docs/design/check_tokens.py --themes themes-pro/themes.json`: 1,804 pairs, **0 fails** (780 of them the drafts: 65 per set, 12 sets). Every text role 4.5:1 on bg, current line, selection, IME marked text and find match; line numbers 4.5:1 on the gutter and the current line; caret and invisibles 3:1. Closest standard pair: invisibles on selection 3.20:1 (floor 3.0).
 - **7:1 sets.** Derived, not picked: `appearance.syntax_hc`, the method the free pair uses (lightness moves only, hue kept). 6 to 13 colours move per set; every text role reaches 7:1, caret and invisibles 4.5:1. The gutter hairline moves to 3:1 on its own page (the free pair takes the app's line colour instead).
 - **Control.** `python3 themes-pro/themes_pro.py check` runs the check, then a broken copy with three planted faults (a 2.2:1 comment in Ember light, an extra key in Fern dark, a vanishing caret in Graphite dark). Result: exit 1, all three caught, nothing else flagged.

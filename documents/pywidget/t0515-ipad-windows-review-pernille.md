@@ -18,7 +18,7 @@ Files: `pywidget/ios/App/PyWidgetApp.swift`, `App/SceneFile.swift`, `App/Info.pl
 
 **Verdict: changes needed before this goes to TestFlight.** The scene manifest, the per-window model, the
 undo separation and the title are sound. The run-ID filter breaks a contract rule on the iPhone path too (H1).
-A discarded window leaks its model and can orphan a run that <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the one interpreter (H2). The second-window
+A discarded window leaks its model and can orphan a run that holds the one interpreter (H2). The second-window
 Run queues without telling anyone (M1). The headline claim, output routed by run ID, has no test (M2).
 
 ## High

@@ -25,7 +25,7 @@ the Reduce Motion no-slide rule. Position under the nav chrome accepted.
 
 1. **No touch.** `HUDView` ends in `.allowsHitTesting(false)` on the whole subtree (ReplBar.swift:81).
 2. **Reduce Motion.** `.transition(reduceMotion ? .opacity : .move(edge: .top).combined(with: .opacity))`
-   (ReplBar.swift:76). The no-slide rule <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>.
+   (ReplBar.swift:76). The no-slide rule holds.
 3. **Announcement.** `showHUD` posts the HUD's own text (PyWidgetApp.swift:736) through a seam
    `static var announce` (:731) whose default is the same `AccessibilityNotification.Announcement(...).post()` call
    as before. The seam is main-actor typed, the tests restore it with `defer`. No production change in behaviour.

@@ -37,7 +37,7 @@ Clean, with the check behind each:
 - **A5b-inputs cannot pass empty.** A script step is valid only on exit 0 and a kept line (`run_script`, alpha_run.sh line 212). The line
   prints after all 12 trees are written, under `set -eu`. If the step fails, alpha_run's `mkdir -p` still makes the empty folders, and
   testA fails on `files.count == 12`. It does not skip, because WK_TREES is set.
-- **The timer tree <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> at any clock.** n=326 clocks over 2026-11-02 to 11-04, 11-30 and the year's end: 0 bad. Each has one timer on
+- **The timer tree holds at any clock.** n=326 clocks over 2026-11-02 to 11-04, 11-30 and the year's end: 0 bad. Each has one timer on
   systemMedium, start at the floored minute, end 5:25:00 later, and the kept line prints that end. This is wider than the fixture test,
   which has one clock.
 - **Order holds.** inputs, flags, A5b, restore. tools/xc.sh and project.yml set no parallel, retry or random order, so A places the

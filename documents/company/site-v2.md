@@ -55,7 +55,7 @@ Desktop (from 880 px): two columns. Left (wider): composer over conversation. Ri
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: 2.2 The four nav items, scrolls sideways" style="--tw:993px" markdown="1">
 
-| Tab | URL | What it <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> | Data it reads |
+| Tab | URL | What it holds | Data it reads |
 |---|---|---|---|
 | Home | `/` | Section 2.1 | Build time: `ops/scoreboard.json`, `ops/state.json`, `ops/usage.json`, `reports/*.md` (latest), the public open-request list via `gh` (scrubbed, titles and "#N" only), worker registry. Runtime: `status.json` (public); with a token, the `COMPANY_STATUS` variable and `api.github.com` issues and comments (private repo, the Investor's own token, never the company's). |
 | Reports | `/reports/` and `/reports/<date-slug>/` | Newest first, full archive, permanent links unchanged (C46). Each report page keeps the C44 notice and the badge. | `reports/*.md`, `_posts/` |

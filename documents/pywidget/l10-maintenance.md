@@ -21,7 +21,7 @@ The predecessor died by staying on old iOS and Python versions. The plan below i
 Local CI design:
 - **Runner:** a launchd agent on the Mac mini runs `tools/pywidget_ci.sh` (to write), which calls `tools/xc.sh` for Xcode builds and tests (short summaries, never raw logs) and host `python3 -m pytest` for the Python parts.
 - **Triggers:** (a) every commit touching `pywidget/` (a post-commit hook queues a job; no network); (b) nightly full matrix; (c) on demand.
-- **Lock:** one Xcode/Simulator job at a time. A lock file that names the holder (today Idris <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the Simulator by hand) prevents CI from stealing a running spike.
+- **Lock:** one Xcode/Simulator job at a time. A lock file that names the holder (today Idris holds the Simulator by hand) prevents CI from stealing a running spike.
 - **Output:** `ops/ci/pywidget/<date>.jsonl`, one line per job: commit, job, duration, pass, fail, skip, wall time, queue wait. That gives a before number for every pipeline change (my measurement rule) and feeds `tools/ops_metrics.py`.
 - **Alerting:** a red nightly matrix or wheel rebuild adds one line to the board through `board_tick.py add`. No pages, no outreach.
 

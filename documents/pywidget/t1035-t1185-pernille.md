@@ -18,7 +18,7 @@ F4+F5). I read the code and the test rows. I did not read the reasoning in the a
 
 All five fixes close the finding they were written for. One has a gap, F5: the lexical bypass shown below. It is
 Low, because no main-checkout tool writes inside pywidget/, so I raised it as a follow-up line (T-1195) and did not
-<span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> the land for it. It is not a refusal to land.
+hold the land for it. It is not a refusal to land.
 
 ## Per finding
 

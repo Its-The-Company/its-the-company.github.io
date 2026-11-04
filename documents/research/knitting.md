@@ -13,7 +13,7 @@ description: "&quot;every time I want to do changes, zoom-in the picture or get 
 {% raw %}
 Listen to this: "I assumed the application would take the chart and put it into a pattern format but it didn't so I had to go through the chart on my iPad and manually count and write out" (Knitting Chart, 2 star, "Not good for large projects"). What are they doing instead? Counting by hand, with the app open beside them.
 
-**Method.** I read every 1-3 star review in the three files, one by one, and coded each against five themes. Strict means the review states the problem in its own words; I did not count a review because a regex word matched. A review can carry several themes. The files <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> review text cut at about 300 characters, so a theme that sits past the cut is missed: these counts are floors. Passive reading only; nothing was posted or contacted.
+**Method.** I read every 1-3 star review in the three files, one by one, and coded each against five themes. Strict means the review states the problem in its own words; I did not count a review because a regex word matched. A review can carry several themes. The files hold review text cut at about 300 characters, so a theme that sits past the cut is missed: these counts are floors. Passive reading only; nothing was posted or contacted.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1, scrolls sideways" data-n="3" style="--tw:1010px" markdown="1">

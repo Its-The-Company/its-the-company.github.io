@@ -24,7 +24,7 @@ same run. Its select-all resend fired once: `T-0565 RESEND select-all attempt 1:
 I found no lost edit after the first open, no loop, and no crossing between windows. The fixes are a launch cost
 that nobody has measured in the configuration we ship, a small window at launch where typing is dropped, and a
 test gap on the on-screen keyboard's delete key. None of them changes what a person sees in the common case, so
-none of them <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> TestFlight. F1 needs numbers before the App Store.
+none of them holds TestFlight. F1 needs numbers before the App Store.
 
 Fix lines for Idris: T-0586 (F1, P2), T-0587 (F2, P3), T-0588 (F3, P3).
 

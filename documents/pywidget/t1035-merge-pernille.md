@@ -43,7 +43,7 @@ in `tools/` and `ops/prompts/`, not `rules/`, each with its reason in the table.
 
 ## Commandment 2: the personal-data ban
 
-<span title="What keeps an idea below the top: the cap that applies to it now.">Holds</span>. Nothing in the range touches `rules/personal_lane.py`, the start check, the stream check or the keeper. The
+Holds. Nothing in the range touches `rules/personal_lane.py`, the start check, the stream check or the keeper. The
 landing a tick starts (`land_now`) runs with every name in the lane's own environment unset (`ENV_OFF`, built from the
 same `.env` the session gets), and a land's host and Xcode checks still start from `env -i`. `tests/run.sh` unsets
 `COMPANY_LANE`, so a suite never queues records. The Investor-owned list a branch is checked against is read from

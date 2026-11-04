@@ -42,7 +42,7 @@ Anthropic's consumer terms and the OpenAI Usage Policies and Service Terms were 
 ## 1. App Review Guidelines (primary, verbatim from the saved page)
 
 **Third-party AI and personal data, 5.1.2(i):** "You must clearly disclose where personal data will be shared with third parties, including with third-party AI, and obtain explicit permission before doing so." Also: "Unless otherwise permitted by law, you may not use, transmit, or share someone's personal data without first obtaining their permission. You must provide access to information about how and where the data will be used."
-- Applies to us: a user's scripts and prompts can <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> personal data (location, calendar and contact values the widget reads). So the feature needs a first-use consent screen that names the provider and says what is sent, and it must be off until the person turns it on. Consent must be explicit, not buried in the terms.
+- Applies to us: a user's scripts and prompts can hold personal data (location, calendar and contact values the widget reads). So the feature needs a first-use consent screen that names the provider and says what is sent, and it must be off until the person turns it on. Consent must be explicit, not buried in the terms.
 - 5.1.2(ii): data collected for one purpose may not be repurposed without further consent. Send only what the person chose to send.
 - 5.1.1(ii): "Paid functionality must not be dependent on or require a user to grant access to this data." So Pro must not hinge on the AI consent, and the AI consent must not gate the rest of Pro.
 - 5.1.1(i): the privacy policy must say what data goes where, and how to revoke consent.

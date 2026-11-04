@@ -26,7 +26,7 @@ folder beside the worktree (`t1160-red.txt`, `t1161-red.txt`, `t1162-red*.txt`, 
 - `file_failed` treats a record gone before `os.replace` as nobody's to name; it no longer raises and stops the drain.
 - `.claimed/` is in `.gitignore`.
 - Rows: two drains at once on six records, each replayed once and neither prints anything; a dead drain's claim kept,
-  not replayed; a record that vanishes mid-replay; land with nothing ready doesn't drain while another <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the lock,
+  not replayed; a record that vanishes mid-replay; land with nothing ready doesn't drain while another holds the lock,
   and drains once after.
 
 ## F2: two holders of `.landing` (T-1160)

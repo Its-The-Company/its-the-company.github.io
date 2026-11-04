@@ -50,7 +50,7 @@ Fix: in the test's loop, also move the process zone itself: `setenv("TZ", z.iden
 Fix: give the cleared field in `testAFieldClearedByDeclaredHasNoAge` an `until: tonight` (or add a second one with it), and commit the mutant.
 
 ### F3. Low. Two meanings of `now` for the same face.
-`AgeLine.swift:51` says `now` "is the entry's date". `WidgetFaceRule.swift:53` (`Facts.now`, the clock the stale mark reads) says "the entry's date, or now if that is later". `Field.drawnAt` (line 39) says the drawing asks it too, "so the face and the line agree". That only <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> if T-1440 passes the same `now` to both. If WidgetKit draws an entry late, after a `steps` field's `until`, the face's rule says "--" while the line, at the entry date, still dates `steps`.
+`AgeLine.swift:51` says `now` "is the entry's date". `WidgetFaceRule.swift:53` (`Facts.now`, the clock the stale mark reads) says "the entry's date, or now if that is later". `Field.drawnAt` (line 39) says the drawing asks it too, "so the face and the line agree". That only holds if T-1440 passes the same `now` to both. If WidgetKit draws an entry late, after a `steps` field's `until`, the face's rule says "--" while the line, at the entry date, still dates `steps`.
 Fix: one sentence in the `time`/`line` doc saying `now` is the same moment as `WidgetFaceRule.Facts.now`. Also add an acceptance item to T-1440: one `now` feeds the face rule, `drawnAt` and `AgeLine.line`.
 
 ## Not in scope, noted

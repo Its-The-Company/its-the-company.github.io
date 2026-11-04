@@ -59,7 +59,7 @@ Key: S small, M medium, L large, circ accessoryCircular, rect accessoryRectangul
 | 10 | 01 Countdown | inline | dark | pass | Same. |
 | 11 | 02 Sun | S | light | pass | New York time hero; when stripped, the arc's past part is 1.0 and its future part 0.24. The sheet's time zone is not judged. |
 | 12 | 02 Sun | S | dark | fail | F1: the remaining arc is `bg.sunken` #06070C, 1.4:1 on the card. |
-| 13 | 02 Sun | M | light | pass | Hero left, arc right, sunrise and dusk times aligned; 16 pt margins <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>. |
+| 13 | 02 Sun | M | light | pass | Hero left, arc right, sunrise and dusk times aligned; 16 pt margins hold. |
 | 14 | 02 Sun | M | dark | fail | F1: same black arc. |
 | 15 | 02 Sun | circ | light | stand-in | AccessoryWidgetBackground. The "6:00" label is white in vibrant (fixed in bf5bce68). |
 | 16 | 02 Sun | circ | dark | stand-in | AccessoryWidgetBackground. |

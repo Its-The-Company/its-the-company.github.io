@@ -15,7 +15,7 @@ Maren, 2026-11-02, T-1132. No copy card existed: `grep -rl "copy card"` under py
 
 ## What C51 covers here (read this first)
 
-`creative/approved.md` <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> **no copy guide and no voice**. Its only approved words are item 4, the Pro screen's headlines and "Pro is active" lines (pro-strings.json). s9.11 says so itself: "no copy guide is approved". So the honest split is by kind, not by "inside the voice":
+`creative/approved.md` holds **no copy guide and no voice**. Its only approved words are item 4, the Pro screen's headlines and "Pro is active" lines (pro-strings.json). s9.11 says so itself: "no copy guide is approved". So the honest split is by kind, not by "inside the voice":
 
 - **Class W (approved words):** reuses an approved string or an Apple label. Needs nothing. Listed so nobody sends it.
 - **Class F (functional label):** a one-word control label (Cancel, Done, Copy, Stop, Save). Apple's conventions, no identity in it. I read these as needing nothing; Ines to confirm that reading.

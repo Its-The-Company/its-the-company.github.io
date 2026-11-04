@@ -101,7 +101,7 @@ Every meeting has a stated purpose and ends with decisions and action items, eac
 
 New hires are offered within the band in their role brief. Every specialist we hire is a top professional (Commandment 14), so offers start at band C unless the brief says otherwise.
 
-**Reviews.** I <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> a review with each worker at the end of each week they've worked (Days 7, 14, 21, 28) and after their probation task. A review is a short written record (`story/reviews/<name>-day<N>.md`, kind `memo`). It rates four areas from 1 to 5, and every rating cites evidence: commits, finished tasks, test results, revenue movement, Investor feedback.
+**Reviews.** I hold a review with each worker at the end of each week they've worked (Days 7, 14, 21, 28) and after their probation task. A review is a short written record (`story/reviews/<name>-day<N>.md`, kind `memo`). It rates four areas from 1 to 5, and every rating cites evidence: commits, finished tasks, test results, revenue movement, Investor feedback.
 
 1. **Shipped work.** Finished, tested tasks on the board, and their quality.
 2. **Impact on the target.** How the work moved us toward $200 by Day 30.

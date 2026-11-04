@@ -46,7 +46,7 @@ Subtitle (25/30): `Unfold 3D models to paper`
 Keyword field (96/100): `pattern,template,foam,cosplay,armor,eva,obj,stl,pdf,printable,fold,cut,lowpoly,craft,helmet,usdz`
 Check output: no spaces, no repeats, no word already in title or subtitle. PASS.
 
-Why these: "unfold" is a word no result carries (n=0 of 20 titles), "papercraft" belongs in the title because 7 of 9 results <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> it and a search for it should find us. "foam", "cosplay", "armor", "eva" serve the cosplay group (n=0 competing pattern tools in 18 results) at no title cost. File types go in the field because viewers own them in titles.
+Why these: "unfold" is a word no result carries (n=0 of 20 titles), "papercraft" belongs in the title because 7 of 9 results hold it and a search for it should find us. "foam", "cosplay", "armor", "eva" serve the cosplay group (n=0 competing pattern tools in 18 results) at no title cost. File types go in the field because viewers own them in titles.
 
 Not decided here: "pepakura" is another product's name (no Pepakura iOS app found, n=7); putting competitor names in metadata is a Guideline 2.3.7 risk, so it stays out. Apple matches singular and plural, so `models` is not repeated.
 

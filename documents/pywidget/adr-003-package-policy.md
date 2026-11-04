@@ -154,7 +154,7 @@ The bundle is read-only and nothing in the bootstrap sets `pycache_prefix` today
 ### 2.4 Licence findings
 
 1. **certifi is MPL-2.0, which the s0 allowlist does not name.** requests cannot import without it (`requests/certs.py:14`). Mozilla's root list is MPL-2.0 whichever package carries it, so swapping packages does not escape it. Options:
-   - (i) An allowlist exception for MPL-2.0 files shipped unmodified and as source (`cacert.pem` and `.py`, never sourceless `.pyc`), with a notice on the Acknowledgements screen. That meets Commandment 5 (commercial use, attribution, a log row). MPL's file-level copyleft is met by shipping the source, which is what the bundle <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>.
+   - (i) An allowlist exception for MPL-2.0 files shipped unmodified and as source (`cacert.pem` and `.py`, never sourceless `.pyc`), with a notice on the Acknowledgements screen. That meets Commandment 5 (commercial use, attribution, a log row). MPL's file-level copyleft is met by shipping the source, which is what the bundle holds.
    - (ii) Drop certifi, which drops requests and changes ADR-001 3.1 C1. That needs its own ruling.
    - (iii) Use Apple's trust store through the bridge (`SecTrust`) instead of a CA file. There is no MPL text, and user-installed roots would work, but it is new Swift plus an `ssl` hook that CPython does not provide. It is 1.1 at best.
 

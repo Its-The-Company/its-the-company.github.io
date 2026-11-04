@@ -39,7 +39,7 @@ No Xcode run; the Swift tests in the evidence are Idris's (16 NetFetch cases plu
 Accept for the app (TestFlight). M1 gates the extension <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> (T-0675/T-0687), not this commit: in the app the
 memory is there. Lows are optional.
 
-What <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>:
+What holds:
 - https only, in Python (net.py:94) and again in Swift (NetFetch.swift:58), and for every redirect hop
   (NetFetch.swift:251). ATS applies on top. A redirect to http:// is never requested (tested).
 - At most 5 redirects (count checked before following, NetFetch.swift:250-258).

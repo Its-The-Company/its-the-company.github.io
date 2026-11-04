@@ -29,7 +29,7 @@ Draft copy, not approved. Source: `pywidget/runtime/installer/_pywidget_install/
    - Recommended (20): "{file} couldn't be opened. It may be damaged or only partly downloaded. Download it again and pick the new copy."
 
 3. **too_many_files**. Now has no action. The likely cause for a beginner is a zipped project folder (a `.git` or a virtual environment inside).
-   - Recommended (25): "{file} <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> {count} files, more than the {limit} pywidget can add from one package. If you zipped a whole project, zip only the package folder."
+   - Recommended (25): "{file} holds {count} files, more than the {limit} pywidget can add from one package. If you zipped a whole project, zip only the package folder."
    - Format the limit with a thousands separator, `{limit:,}`: "20,000", not "20000". Same for `{count}`.
 
 4. **too_big**. Same gap, same likely cause.

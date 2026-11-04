@@ -58,7 +58,7 @@ another transaction of the same product, so it cannot catch this.
 Fix (Idris): put the transaction id (and originalID) into `EntitlementEvidence`. Have `settlePurchase`
 record the id it granted ahead on, and have `receive` end the grant-ahead only for a verified revocation of
 that id. Test: grant ahead on id 2, receive a verified revoked id 1 of the same product, and assert that Pro
-<span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> and the catch-up still runs. Then receive a verified revoked id 2 and assert that it locks.
+holds and the catch-up still runs. Then receive a verified revoked id 2 and assert that it locks.
 
 ### F2, Low: a refund that arrives before the grant-ahead starts leaves Pro granted
 

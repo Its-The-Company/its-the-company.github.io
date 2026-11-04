@@ -48,7 +48,7 @@ Run on the placeholder archive:
 ```
 tools/upload.sh --archive [local folder] --out [local folder]
 ```
-Output: `** EXPORT SUCCEEDED **`, exit 0, no prompt, no Investor sign-in needed. Folder <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> Placeholder.ipa, DistributionSummary.plist, Packaging.log, ExportOptions.plist (method app-store-connect, destination export, team 9VYY4TNQ75, automatic signing).
+Output: `** EXPORT SUCCEEDED **`, exit 0, no prompt, no Investor sign-in needed. Folder holds Placeholder.ipa, DistributionSummary.plist, Packaging.log, ExportOptions.plist (method app-store-connect, destination export, team 9VYY4TNQ75, automatic signing).
 
 Signing of the app inside the .ipa (`codesign -dvv`, redacted): Identifier=app.pywidget.placeholder; Authority=Apple Distribution: <account holder> (9VYY4TNQ75), then Apple Worldwide Developer Relations CA, Apple Root CA; TeamIdentifier=9VYY4TNQ75; `codesign --verify --strict` passes.
 

@@ -51,7 +51,7 @@ P's turn is made with `gathers = true`, `a`'s with `false`. P's gate answers `fa
 `.locked`. `a`'s turn starts at once, looks once (`givesWay`, gather zero), `o` has not asked yet, so `a` runs its
 whole budget; `o` is late by time and its mark is rewritten, so the 24 h rule never expires it. Every reload repeats
 this: `o` never runs. This is T-2030 F1's starvation back, through F2's fix. Before f501acb86 every turn gathered,
-so `a` would have waited for `o`. The same <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> whenever the burst's first caller ends early for any reason; a locked
+so `a` would have waited for `o`. The same holds whenever the burst's first caller ends early for any reason; a locked
 premade is the common one, since it comes back on every reload.
 
 Suggested fix: decide at the gather, not at the queue. Keep a burst flag under `lock`, e.g. `gathered`, reset to

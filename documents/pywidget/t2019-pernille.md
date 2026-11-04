@@ -35,7 +35,7 @@ PERMISSION_WAIT_S" stall. The red log says otherwise. At ops/runs/xcodebuild-202
 **F1 (Medium): the green proof rests on a skip count, and nobody has named the test that skips.**
 J-20261104-0240-xc-test/result.json: `BridgeTests ... Executed 110 tests, with 1 test skipped`.
 The argument goes: 2157 had 1 skip while the notification test failed, so that skip belongs to some other test;
-0240 still has 1, so the notification test did not skip. That <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> only if the same other test skipped in both
+0240 still has 1, so the notification test did not skip. That holds only if the same other test skipped in both
 runs. Three BridgeTests can skip on a Simulator. `testNetGetPeakFootprintByBody` skips only if the
 `FootprintInterval` symbols are missing (fixed for a given runtime). `testPedometerOnTheSimulatorIsUnsupported`
 skips only on hardware. `testLocationSampleThroughTheBridge` (DeviceModulesTests.swift:519) depends on xc.sh's

@@ -23,7 +23,7 @@ them. I changed no code.
 **Approve with fixes** (F1 P2, F2 P3, F3 P3). The rules are right for the paths the tests cover: what the picker
 offers, the lock decision, purchase, refund and restore, and the timeline-write hook. F1 is a real gap in
 "never lose the widget". It shows only when the bundled flag file is not trusted at run time, or when a later build
-drops a premade or an own widget's folder disappears. It does not draw Pro content for free, so it does not <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>
+drops a premade or an own widget's folder disappears. It does not draw Pro content for free, so it does not hold
 TestFlight. It should land before the App Store.
 
 Fix lines for Idris: T-0589 (F1, P2), T-0590 (F2, P3), T-0591 (F3, P3).

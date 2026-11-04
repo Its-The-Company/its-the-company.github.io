@@ -26,7 +26,7 @@ The tree is as committed.
 | Commit | Verdict |
 |---|---|
 | 463137aa (T-0567 close-a-running-window UI test) | **Approve.** |
-| d6ac94b7 (T-0568 one run at a time across windows) | **Approve with fixes** (F1, F2, F3). The code is correct as far as I can read it. The fixes are a test that does not reliably pin its claim, copy that Maren has not seen, and two Restart lines that no test checks. None of them changes the binary's behaviour, so none of them <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> TestFlight. |
+| d6ac94b7 (T-0568 one run at a time across windows) | **Approve with fixes** (F1, F2, F3). The code is correct as far as I can read it. The fixes are a test that does not reliably pin its claim, copy that Maren has not seen, and two Restart lines that no test checks. None of them changes the binary's behaviour, so none of them holds TestFlight. |
 | 175d3653 (T-0574 bounded StoreKit waits) | **Approve with fixes** (F4). `bounded()` is sound, but the commit's "every StoreKit read, purchase and restore" is not true yet. |
 
 </div>
@@ -134,7 +134,7 @@ good. It is harmless because IDs are never reused.
   word_count waits in `input()`, so this cannot happen here, and the assertion holds either way. The author's
   mutant (close() without stop()) is red, and the test is green in `-123523` and `-123958`.
 - The `discard` log line records only the session ID and run number, with no user data.
-- My T-0569 hermeticity point still applies: "window A holds word_count, or whatever file the launch restored".
+- My T-0569 hermeticity point still applies: "window A <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> word_count, or whatever file the launch restored".
 
 ## Questions the task asked
 - **Refusal line against s7.4:** it names the other window's file and never queues, so it is the agreed interim.

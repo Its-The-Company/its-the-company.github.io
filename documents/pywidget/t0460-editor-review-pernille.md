@@ -80,7 +80,7 @@ itself is sound, and nothing in it is private Apple API. No retain cycles.
     focus change. A first-responder or focus bug in the app would look exactly like a Simulator drop, and the resend
     turns it green.
 - **The ADR's safety claim is only partly true.** "A late event resent would apply twice, and the exact expectations
-  would catch that." That <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> for ⇥ and typing. It does not hold for ⌘Z/⇧⌘Z at the end of the undo stack (sample
+  would catch that." That holds for ⇥ and typing. It does not hold for ⌘Z/⇧⌘Z at the end of the undo stack (sample
   opens with no undo history), or for ⌘↑/⌘↓/⌘→ (idempotent): doubled, they still meet the expectation.
 - **Also.** Each `state()` read waits up to 10 s for the label and costs about 1.2 s in these logs, so the "1.5 s" window
   holds one or two reads.

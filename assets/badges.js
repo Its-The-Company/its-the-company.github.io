@@ -54,7 +54,7 @@ var m = /^\/documents\/(.*?)\/?$/.exec(local(a.getAttribute('href'))); if (m) pu
 [].slice.call(D.querySelectorAll('header.site .tabs a[href], nav[aria-label="Company"] a[href]')).forEach((a) => {
 var p = local(a.getAttribute('href')), top = !!a.closest('header.site');
 if (top && p === '/reports/') put(a, under(fresh.filter((d) => d.f === 'reports'), ''));
-else if ((top && p === '/company/') || (!top && p === '/documents/')) put(a, under(fresh, ''));
+else if ((top && p === '/reports/') || (!top && p === '/documents/')) put(a, under(fresh, ''));
 });
 }
 function opened() {

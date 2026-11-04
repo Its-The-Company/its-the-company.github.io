@@ -25,7 +25,7 @@ none of them asks for a change).
    (N=1 per interpreter; T-0732's 2176 plus my 6 per interpreter). Simulator iPhone 17, bundled
    3.15.1, `lazy_imports=all`: 28 scenarios (t0713 re-review including CleanTests, t0721,
    t0727, t0731, t0734), one testbed process each through tools/xc.sh, replay OK (N=1). This
-   is the replay T-0732 owed. T-0732's flipped P1 and P2 <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> on the device.
+   is the replay T-0732 owed. T-0732's flipped P1 and P2 hold on the device.
 2. (ii) **Every residual needs deliberate reach** (a frame walk into `_prepare` and a rebound
    runner name or `_S` value, both listed in item 2c). None is an ordinary-script route. None
    breaks 2a, 2b or 2d. All are **Not held**.

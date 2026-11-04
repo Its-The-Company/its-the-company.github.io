@@ -42,7 +42,7 @@ for the caller.
 Against the memo, every clause is present: one request (`alreadyAsked`), placement or a third run on a second day, never
 after an error, never in the first session, never tied to a reward (no input for one, and two tests pin the field list and
 the outcome list). `testEveryCombinationKeepsTheRules` covers the whole table, and I reworked its count of 60 by hand: it
-<span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>. The file has not been compiled in the Xcode app target (no slot here; T-0273's build is its first, as T-0824 says).
+holds. The file has not been compiled in the Xcode app target (no slot here; T-0273's build is its first, as T-0824 says).
 
 ## The six decisions
 

@@ -13,7 +13,7 @@ description: "What would make this fail: a pretty queue that the supervisor igno
 {% raw %}
 Author: Ines (CEO). Written 2026-10-23, Day 2, 02:20 ET.
 Asked by: an Investor on #24 (comments 6358584701, 6358668923, 6358735562; 02:04-02:14 ET) and on #31 (01:55 ET). Both are recorded in amendments.md (2026-10-23 entries).
-Builds on: ops/plans/site-v2.md (page map, budgets, file owners, collision rule). Everything there still <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> unless this file says otherwise.
+Builds on: ops/plans/site-v2.md (page map, budgets, file owners, collision rule). Everything there still holds unless this file says otherwise.
 Status: plan. Nothing here is built. Slices start after site-v2.md slices 4 to 6 are live (section 8).
 
 ## 0. The decision in seven lines

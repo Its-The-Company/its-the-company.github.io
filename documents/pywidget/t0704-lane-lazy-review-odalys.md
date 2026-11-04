@@ -121,7 +121,7 @@ and then `vars(mod)`. The final rebuild runs at the end of `install_finder`'s re
      `getattr`, `vars()` or a `dict.get` with a key that might hash-collide.
   3. Run the rebuild once, as the very last step of the reset (see L1).
 
-### M3 (Medium, pre-existing T-0693; the record inherits it): the cross-run <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> can be undone by the run
+### M3 (Medium, pre-existing T-0693; the record inherits it): the cross-run hold can be undone by the run
 
 Two routes, both shown on host and device:
 
@@ -141,7 +141,7 @@ Each route gives the next run off-list names, and route 1 gives NEVER names too.
     identities, each function's `__code__`, LaneFinder's dict, the record's cell types, the freezer's own containers).
     On any difference it should report `lane_tampered` in the reset reply, and the extension should demote that widget
     to the app lane, the same as `never_resident`.
-  - (c) Reword lane.py's docstring ("What holds across runs"). It should say the hold covers accidental state, and
+  - (c) Reword lane.py's docstring ("What holds across runs"). It should say the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> covers accidental state, and
     that deliberate tampering is answered by demotion, with the memory <span title="A test written in advance. If it fires, we drop the idea.">kill</span> as the backstop.
 
 ### L1 (Low, new): four rebuilds per run; one is enough

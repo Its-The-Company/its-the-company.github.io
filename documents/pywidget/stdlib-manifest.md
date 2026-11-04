@@ -64,7 +64,7 @@ Shipped: 228 modules and packages from `lib/` and `lib-dynload/`, plus 39 built 
 `test_stdlib_manifest.py` proves `pywidget_ui` and the 10 example scripts need nothing stripped, two ways:
 
 1. **Dynamic.** A child interpreter (`-I`) puts a meta-path finder first that raises `ModuleNotFoundError` for any stripped name, then imports `pywidget_ui` and executes each example as a module. All 11 load; no stripped module was loaded before the finder; probes for `ctypes`, `_ctypes`, `curses` and `test.support` are refused, so the finder is live.
-2. **Static.** Every import statement in those files, including imports inside functions, names a module the 3.15.1 runtime ships (manifest `shipped` plus `builtin`). The host's own stdlib differs from 3.15's, so this is the check that <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> for the device.
+2. **Static.** Every import statement in those files, including imports inside functions, names a module the 3.15.1 runtime ships (manifest `shipped` plus `builtin`). The host's own stdlib differs from 3.15's, so this is the check that holds for the device.
 
 Seeded mutation: moving `socket` from shipped to stripped fails both checks (`http_status.py`).
 

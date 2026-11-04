@@ -113,7 +113,7 @@ Contrast numbers come from pixel sampling (`tools/png_small.read_rgb`, darkest a
 
 ## What I did not do
 
-All six rows are covered. I graded one premade (countdown) of six on the A5 sheets; the other five sheets are in `renderer-v1/` and use the same stand-ins, so the wording findings <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> for them, but their image verdicts are not done. I did not run `palette_check.swift` or `check_widget_modes.py`.
+All six rows are covered. I graded one premade (countdown) of six on the A5 sheets; the other five sheets are in `renderer-v1/` and use the same stand-ins, so the wording findings hold for them, but their image verdicts are not done. I did not run `palette_check.swift` or `check_widget_modes.py`.
 {% endraw %}
 
 </div>

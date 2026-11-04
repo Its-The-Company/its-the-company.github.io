@@ -14,7 +14,7 @@ description: "Against: pywidget/docs/research/C2-device-api.md 1.7, &quot;The ex
 Against: pywidget/docs/research/C2-device-api.md 1.7, "The extension's rule for the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> keys" (rules 1-3).
 Read: Shared/LaneGuard.swift (Core symlink checked: same file), Tests/Core/LaneGuardTests.swift,
 Core/mutants-t0709.json, the evidence file. Not read: done-note, author notes. The evidence file
-(t0709-evidence/test-results.txt) <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> a one-line header and test output only, no author reasoning.
+(t0709-evidence/test-results.txt) holds a one-line header and test output only, no author reasoning.
 
 ## Baseline (re-run by me)
 

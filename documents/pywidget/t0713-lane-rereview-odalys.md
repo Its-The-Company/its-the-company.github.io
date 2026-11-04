@@ -37,10 +37,10 @@ What the fixes got right:
 
 What is still open:
 
-- The step's central claim does not <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>. The last step is not the last thing before the run's code: three channels
+- The step's central claim does not hold. The last step is not the last thing before the run's code: three channels
   run a run's code after it (M1).
 - The lane's own `grave` makes every later run report tampering it did not do (M2).
-- One value the hold covers switches every check off, because the checks are gated on it (M3).
+- One value the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> covers switches every check off, because the checks are gated on it (M3).
 
 Severity scale, unchanged from T-0704 and T-0710: the lane is a memory guard, not a sandbox. The worst outcome is a
 widget over the extension's memory, killed. With T-0709 as planned, a second outcome counts too: an innocent widget is

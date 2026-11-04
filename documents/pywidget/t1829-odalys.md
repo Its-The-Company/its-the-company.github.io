@@ -16,7 +16,7 @@ bridge contract s8, from the diff, the fixtures and one `swift test`. Author not
 
 ## Verdict
 
-**Approve with changes.** The rule is correct for what the five fixtures cover, and the path rule <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>.
+**Approve with changes.** The rule is correct for what the five fixtures cover, and the path rule holds.
 Two P2 gaps should be closed before T-0389 draws the card: the repeat count is wrong after the runtime's
 100-frame cut (F1), and a SyntaxError raised while importing a project module goes to the wrong line (F2).
 

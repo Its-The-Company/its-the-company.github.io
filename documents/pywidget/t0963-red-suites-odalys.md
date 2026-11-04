@@ -25,7 +25,7 @@ Simulator, no tick, no live account. Switch state read first: `personal_lane_a` 
 | guard_test | the Investors' billing switch ships, with the caps | a9a554fb, as above | The row pinned `==50` | Already fixed, 2055e967. Green today: 496/0, n=3 |
 | personal_land_test | a real tick lands a ready branch through the hook, on a tick with no session | 08e0c113, itsthecompany, 11-01 10:05 (guard_test row added) | Leftover, below | Fixed here |
 | personal_land_test | a real skip tick with a red branch leaves no more dirty than one without | 08e0c113 | Same | Fixed here |
-| personal_land_test | a pause set before the tick <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the landing back | 08e0c113 | Same | Fixed here |
+| personal_land_test | a pause set before the tick holds the landing back | 08e0c113 | Same | Fixed here |
 | personal_lane_test | Inert.test_no_running_path_names_the_lane | bcbba40d, Odalys, 11-01 18:46 (then dba5aade, d98a9e8e, d6928f04) | Real row, mine, three times. Tools named the tick, none starts it | Fixed here |
 | site_personal_test | the real file's bytes: name and on for b leave every other key as it was | 32b5d092, an Investor, 11-01 21:10 (b turned on) | Test defect: read live Investor bytes | Fixed here |
 | site_personal_test | the real file's bytes: the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s reader sees b on and a as it was | 32b5d092 | Same | Fixed here |

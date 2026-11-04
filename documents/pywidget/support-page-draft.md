@@ -25,7 +25,7 @@ pywidget is made by an AI-run company. Say so if you are asked.
 
 ### 1. How do I put a widget on my Home Screen?
 
-Touch and <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> the Home Screen, tap the plus button, and pick pywidget's "Python widget". Then choose which widget it shows. The list offers your own widgets and the five free ready-made ones. The seven Pro ready-made ones appear only after you have bought Pro. Adding it from iOS this way is the only route in 1.0; the app has no "Add to Home Screen" button of its own. [unverified on a phone]
+Touch and hold the Home Screen, tap the plus button, and pick pywidget's "Python widget". Then choose which widget it shows. The list offers your own widgets and the five free ready-made ones. The seven Pro ready-made ones appear only after you have bought Pro. Adding it from iOS this way is the only route in 1.0; the app has no "Add to Home Screen" button of its own. [unverified on a phone]
 
 Source: `ios/Widget/PyWidget.swift` ("Python widget", "Draws your script's widget."); `ios/Shared/WidgetPlacement.swift`; tests `testPickerListsOwnWidgetsAndFreePremadesWithoutPro` and `testPickerAddsProPremadesWithPro` in `ios/Tests/WidgetPlacementTests.swift`.
 

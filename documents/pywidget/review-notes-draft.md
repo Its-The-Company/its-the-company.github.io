@@ -15,7 +15,7 @@ Wrenna, 2026-10-25, started 19:57 ET; revised 20:01 ET for ADR-006 (<span title=
 
 ## How to use this draft
 
-- The notes field <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> 4,000 (one guide says 4,000 bytes; matrix section 1). The text between the markers below is plain ASCII, so characters and bytes are the same. Count it with the command at the end before pasting.
+- The notes field holds 4,000 (one guide says 4,000 bytes; matrix section 1). The text between the markers below is plain ASCII, so characters and bytes are the same. Count it with the command at the end before pasting.
 - Square brackets are filled at submission. A bracketed sentence with a gate (G1-G9, matrix section 4) is **deleted** if its gate fails, never softened or kept "for now". The notes must match the build exactly (2.3.1, 2.5.19).
 - Use the App Store name the Investors choose in place of [App Name].
 

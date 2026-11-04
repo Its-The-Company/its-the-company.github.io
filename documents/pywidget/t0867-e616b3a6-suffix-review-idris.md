@@ -79,7 +79,7 @@ Verdict: approved, one finding fixed here, one check open.
 
 - Names: `suffix` is plain and the row in API.md is right. Additive inside major 1 (L4 s8). A renderer that does not know
   it drops the word and still draws.
-- Renderer: the branch is right. `timeZone` and `suffix` cannot meet: the schema and DSL <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> them to different styles.
+- Renderer: the branch is right. `timeZone` and `suffix` cannot meet: the schema and DSL hold them to different styles.
 - **Medium, fixed here:** a newline in `suffix` passed the DSL and `ui.validate`, then the schema refused the tree, so a user
   got a bare schema_error. The DSL now refuses it with a sentence. The test failed first (3 subtests).
 - **Low, for Pernille:** LIBRARY_VERSION stays 0.3.0 with a new public keyword, and `generator.version` will not tell the two

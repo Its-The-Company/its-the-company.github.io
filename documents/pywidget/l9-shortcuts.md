@@ -127,7 +127,7 @@ XCTest on the intent `perform()` with a fake runtime: (1) Set Widget Data return
 |---|---|---|---|
 | History (snapshots on share) | Feasible, supported | Share extension, App Group | v1 of Shortcut Lab |
 | Diff, hash level ("changed since") | Feasible, supported | History | v1 |
-| Diff, action level | Feasible, fragile | Parser | after flow view <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> through one iOS beta cycle |
+| Diff, action level | Feasible, fragile | Parser | after flow view holds through one iOS beta cycle |
 | Flow view | Feasible, fragile | AEA container fact [M] + undocumented schema | later; gated on the "show me the bytes" device test |
 | Lint | Not recommended now | Parser + guessed semantics | revisit with real user files |
 | Reminder automation | Feasible (notification recipe); bulk snapshot unverified | "Get My Shortcuts" behaviour [M] | v1 recipe |

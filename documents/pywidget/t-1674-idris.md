@@ -14,7 +14,7 @@ description: "Reader: Idris. Date: 2026-11-03. Read the diff and the code it tou
 Reader: Idris. Date: 2026-11-03. Read the diff and the code it touches, not the reasoning in T-1642-pernille.md
 (only its finding IDs, to avoid duplicates).
 
-**Verdict: <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> with fixes.** Two doc fixes made here (F1, F2). One small hardening goes on the board (T-1677). The
+**Verdict: holds with fixes.** Two doc fixes made here (F1, F2). One small hardening goes on the board (T-1677). The
 two open LaneRunFiles cases stay with T-1650 (Ines), and are not repeated here, except for one fact added to it (F4).
 
 **Disclosure.** `compiled_stdlib_root` and its use in `install_finder` are mine (892fd52ef, T-0675). T-1642 changed no

@@ -118,7 +118,7 @@ Seeds: https://itunes.apple.com/search?term=watch+timegrapher&entity=software&co
 
 ## Limits, stated plainly
 - No search-volume data: counts show competition, not demand. A term with zero titles may be empty because nobody searches it.
-- Subtitles are not in the public API; I read titles only. A competitor's subtitle may already <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> a word I call open.
+- Subtitles are not in the public API; I read titles only. A competitor's subtitle may already hold a word I call open.
 - Rankings are not checked (that needs a signed-in store session or a paid tool). Lengths were verified by script on 2026-10-22.
 - Descriptions are not indexed by App Store search; they are a signal of what the competition talks about, not of what ranks.
 {% endraw %}

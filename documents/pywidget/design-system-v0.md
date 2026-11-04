@@ -54,7 +54,7 @@ One code path draws both: in light the gradient's second stop equals the first a
 ### 2.1 Exports
 
 - **Asset catalog** `pywidget/ios/Shared/Theme.xcassets`: 43 colour sets (27 in `Theme/`, 16 in `Syntax/` prefixed `Syntax`), each with four appearances: Any, Dark, Any + High Contrast, Dark + High Contrast. Names are UpperCamel of the token (`text.primary` to `TextPrimary`, `accent.2` to `Accent2`). It compiles with `actool` (iOS 18, iPhone and iPad) with no warnings: 172 colour renditions, 4 per name. `Shared/` is a source path of both the app and the widget extension in `project.yml`, so after `xcodegen generate` both targets get it. Xcode's generated asset symbols then give `Color(.textPrimary)`, `Color(.syntaxKeyword)` and so on. No set is named `AccentColor`, so the system tint is untouched until we choose to set it.
-- **CSS** `tokens.css` (5,281 B): `:root` <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> light; `prefers-color-scheme: dark` holds dark; `prefers-contrast: more` holds the 7:1 sets. Includes `--font-display` per appearance, the type scale, space and radius. Never names SF Mono.
+- **CSS** `tokens.css` (5,281 B): `:root` holds light; `prefers-color-scheme: dark` holds dark; `prefers-contrast: more` holds the 7:1 sets. Includes `--font-display` per appearance, the type scale, space and radius. Never names SF Mono.
 - **Display face by appearance (Swift, for Idris):**
 
 ```swift

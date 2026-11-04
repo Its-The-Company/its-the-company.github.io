@@ -11,7 +11,7 @@ description: "Gap that matters: I cannot say which packages ship cp315 iOS wheel
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Odalys, 2026-10-25 19:25 ET. Research and pipeline design only; nothing built, no Xcode or Simulator run (Idris <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> them).
+Odalys, 2026-10-25 19:25 ET. Research and pipeline design only; nothing built, no Xcode or Simulator run (Idris holds them).
 Feeds: the package-policy ADR (owner to be named by Ines), L3 (Idris), L6 (Wrenna). Wrenna's L6 is the authority on App Review; every App Review statement here defers to it.
 
 ## 0. Method and what I could not read

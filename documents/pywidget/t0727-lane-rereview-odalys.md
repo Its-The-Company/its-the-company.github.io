@@ -71,7 +71,7 @@ the step, not from what `_prepare` set. An exact-str `__file__` planted into an 
 has none) is kept and not named; one planted into a file run replaces the real path silently.
 No code runs; a script that opens files beside `__file__` reads the planter's path.
 `test_OPEN_L1_planted_file_passes_as_what_prepare_made`: probe prints `/tmp/planted.py`, both
-reports empty. Fix: <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> the path `_prepare` set (it is in `_S["main_path"]` for file sources;
+reports empty. Fix: hold the path `_prepare` set (it is in `_S["main_path"]` for file sources;
 an editor run has no `__file__`) and compare.
 
 ## Verdict

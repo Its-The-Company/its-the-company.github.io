@@ -19,7 +19,7 @@ copy of HEAD a309af8b in my scratch folder; Swift (`swift test` and the Xcode mu
 ## Verdict: PASS WITH FINDINGS
 
 Both fixes do what F2 and F4 asked, and every mutant I planted against them died where it should. Nothing in the E5
-rows is weaker: four rows were added, none moved, and the `except` is narrower. Idris's Swift S2/S3 claim <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>; those
+rows is weaker: four rows were added, none moved, and the `except` is narrower. Idris's Swift S2/S3 claim holds; those
 mutants are equivalent, and I can show why. What broke first was a sibling of F2 that my own F2 fix text left out: the
 renderer's `widgetURL` path goes through the same gate, and nothing in TreeNodesTests sees it (F1, my mutant S5 lived
 through all 27 tests). Two findings: one Medium, one Low. F1 should land before TestFlight, as F2 did.

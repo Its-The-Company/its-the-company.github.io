@@ -32,7 +32,7 @@ Fix lines for Idris: F1 T-1177, F2 T-1178, F3 T-1179, F4 T-1180, finding 5 T-118
 | Check | Result |
 |---|---|
 | `run_host.py dsl escape widgets --both` | 712 tests (356 on each of 3.9, 3.13), 0 failed |
-| Author's escape mutants, `run_mutants.py` | 15 of 15 KILLED (claim <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>) |
+| Author's escape mutants, `run_mutants.py` | 15 of 15 KILLED (claim holds) |
 | Author's Core mutants `mutants-t1134.json`, `swift test --filter LinkRuleTests` only | 4 of 4 KILLED (claim holds, and by LinkRuleTests alone) |
 | Three Python mutants of mine, against dsl + escape + widgets | 3 of 3 SURVIVED (F4) |
 | Control: author's `E5-link-rule-accepts-any-scheme`, same command | KILLED (the harness works) |

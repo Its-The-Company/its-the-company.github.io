@@ -21,7 +21,7 @@ fixes the two-widget case it was built for, but three widgets in step still star
 that no reload answers slows every turn for up to 24 h (F2). Neither is a crash or data loss. Both should land before
 the (c) flag, as T-2025 was meant to.
 
-## What I checked, and what <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>
+## What I checked, and what holds
 
 - **T-2023.** The new test has c's first caller answer `.deadline` before 4.3 s while the joiner gets `.wrote`. The
   "answer on the shared due" mutant is killed. b being `.deadline` is right: I had that wrong in my sketch.

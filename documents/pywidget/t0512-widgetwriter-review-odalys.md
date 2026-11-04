@@ -25,7 +25,7 @@ shown from the code paths, with line numbers at b0887819.
 Accept with changes. M1 before the TestFlight build (a hung App Intent is visible in Shortcuts and is the
 kind of hang App Review sees). M2 before the App Store build. Lows are optional.
 
-What <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>, checked against the board line:
+What holds, checked against the board line:
 - Pro gate before any run: `mayWrite(id)` is the first statement of `run` (WidgetWriter.swift:112); a locked
   premade returns `.skipped("locked")` before the source is read, Python is started or anything is queued.
 - Source rules: a premade id resolves only through `Premades.named`, which lists regular, non-symlink `.py`

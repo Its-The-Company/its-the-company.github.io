@@ -19,7 +19,7 @@ Shared/LaneGuard.swift, Shared/Bridge/RunResultSink.swift (lines 20-137), App/Pr
 App/Projects/WidgetScriptSave.swift (send's mirror path), Widget/PyWidget.swift (provider), Shared/WidgetPlacement.swift
 (Pro gate), the two PrivacyInfo.xcprivacy diffs. All paths below are under pywidget/ios/.
 
-No Xcode run (Idris <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the slot). Host tests run: pywidget/tests/privacy/test_manifest_sources.py (4 OK) and
+No Xcode run (Idris holds the slot). Host tests run: pywidget/tests/privacy/test_manifest_sources.py (4 OK) and
 pywidget/tests/bridge/test_lane.py (OK). One fact checked in the SDK: the os/proc.h header comment on
 `os_proc_available_memory` (iPhoneOS.sdk, lines 80-82).
 

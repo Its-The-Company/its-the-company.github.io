@@ -48,7 +48,7 @@ Two window effects every model carries:
 
 ## 2. Competitor pricing benchmark (allowed routes only)
 
-Read 2026-10-25 19:18-19:19 ET. Up-front price, ratings and dates from bare `/lookup?country=us&id=` through `tools/store_http.py` (`L11-raw/lookup-us-2026-10-25.tsv`); implied downloads from `tools/sizing.py` at 33-100 downloads per rating (`L11-raw/sizing-2026-10-25.txt`). In-app purchase prices are not in Lookup; store pages are barred (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G2a</span>, #53 <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>), so an IAP price is read only from the maker's own site after its terms are read (`L11-raw/preflight.txt`).
+Read 2026-10-25 19:18-19:19 ET. Up-front price, ratings and dates from bare `/lookup?country=us&id=` through `tools/store_http.py` (`L11-raw/lookup-us-2026-10-25.tsv`); implied downloads from `tools/sizing.py` at 33-100 downloads per rating (`L11-raw/sizing-2026-10-25.txt`). In-app purchase prices are not in Lookup; store pages are barred (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G2a</span>, #53 hold), so an IAP price is read only from the maker's own site after its terms are read (`L11-raw/preflight.txt`).
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 2: 2. Competitor pricing benchmark (allowed routes only), scrolls sideways" style="--tw:1067px" markdown="1">

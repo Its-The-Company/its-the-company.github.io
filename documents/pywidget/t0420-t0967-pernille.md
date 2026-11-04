@@ -42,7 +42,7 @@ What the line asked (from my T-0416 review of e93d5f36): `Premades.named` and `f
 
 ## Not run
 
-Swift tests need Xcode; Idris <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the slot, so I ran none. The test file reads correct against the code.
+Swift tests need Xcode; Idris holds the slot, so I ran none. The test file reads correct against the code.
 {% endraw %}
 
 </div>

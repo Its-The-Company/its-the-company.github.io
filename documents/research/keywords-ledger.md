@@ -47,7 +47,7 @@ Subtitle (27/30): `Stats from your own exports`
 Keyword field (99/100): `music,movies,tv,shows,history,year,review,charts,import,csv,private,offline,songs,plays,diary,binge`
 Check output: no spaces, no repeats, none in title or subtitle. PASS.
 
-Deliberately left out of the field: service and app names (Spotify, Netflix, Letterboxd, stats.fm, Apple Music). Guideline 2.3.7 bars other companies' trademarks and app names in metadata; whether the description may say "reads your Spotify export" is a call for the Investors to take (Commandment 58 area), not mine. "Wrapped" is Spotify's mark; left out. "stats" is in the subtitle because 14 of 18 stats-<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> titles <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> it (n=18), which we cannot avoid, but "exports" is the word nobody holds.
+Deliberately left out of the field: service and app names (Spotify, Netflix, Letterboxd, stats.fm, Apple Music). Guideline 2.3.7 bars other companies' trademarks and app names in metadata; whether the description may say "reads your Spotify export" is a call for the Investors to take (Commandment 58 area), not mine. "Wrapped" is Spotify's mark; left out. "stats" is in the subtitle because 14 of 18 stats-<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> titles hold it (n=18), which we cannot avoid, but "exports" is the word nobody holds.
 
 ## Raw tables
 ### `music listening history` (top 7 of requested 10, US iTunes Search, 2026-10-23)

@@ -24,7 +24,7 @@ The first thing that breaks is not the write. The write is fine. It is the mappi
 ## Verdict: fix first
 
 One High and three Mediums. The atomic write, the refusal order, "refused project save writes nothing" and
-"scriptSaved once per writing save" all <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>, and the tests for those would fail on the bugs they name. The High
+"scriptSaved once per writing save" all hold, and the tests for those would fail on the bugs they name. The High
 puts permanent junk widgets into the Home Screen picker during ordinary typing, starting with the first thing the held-id
 message tells a new user to do.
 
@@ -105,7 +105,7 @@ M1's fix tokenizes, these come out right at no extra cost.
 `isSymlink` check (`WidgetScriptSave.swift:65`) deleted: `.isRegularFileKey` is false on a link, so `:68` refuses
 it too, only with a different message. Assert the message if the link wording matters. `heldID` (`:36`) duplicates
 main's `WidgetWriter.unsetWidgetID` (`WidgetWriter.swift:35`). At the merge, one should be defined from the other,
-so the hold and the extension's unset id cannot drift.
+so the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> and the extension's unset id cannot drift.
 
 ## What holds
 

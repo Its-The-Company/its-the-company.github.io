@@ -269,7 +269,7 @@ no session while work was waiting; that is allowance the week can't get back.
 3. **The board doubled in three days.** At work-session start it was 161 KB on 2026-11-01 and 337 KB on 2026-11-03
    (n=51 readings); 312 open lines and 85 waiting ones. Every session and many tools read it; the view a session
    reads was 22 KB at the median (n=72). Fix: a weekly pass that closes duplicates and lines already done, and a
-   cap on how many open lines one workstream may <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>.
+   cap on how many open lines one workstream may hold.
 4. **The MacBook runner is slow per answer.** Its one passing app test run took 2,506 s (42 minutes); the same full run on the Mac mini took 1,266 to 1,696 s (n=4, `tools/personal_land.sh:26-27`); the runner's job runs both the unit and the UI tests (`tools/macbook-runner/kinds.json:4-6`). It only runs commits
    already on main, so a red is found after landing. Fix: send the runner the unit tests first (134 to 189 s
    locally) and the long UI run only once a day.

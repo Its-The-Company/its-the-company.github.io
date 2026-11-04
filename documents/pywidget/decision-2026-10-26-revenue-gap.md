@@ -21,7 +21,7 @@ description: "On organic reach, the $200 target is unlikely at any price. My mos
 
 What changes:
 1. **Price recommendation moves from $9.99 to $14.99, one-time.** I owned the $9.99 suggestion in PROPOSAL-001 s5; I am withdrawing it (section 2).
-2. **Pro <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> premades and editor themes, not packages,** while widgets ship. Packages move into Pro only if widgets are cut on Day 14. Pre-ruled here, so Day 14 is not decided under pressure (section 3).
+2. **Pro holds premades and editor themes, not packages,** while widgets ship. Packages move into Pro only if widgets are cut on Day 14. Pre-ruled here, so Day 14 is not decided under pressure (section 3).
 3. **No trial, Family Sharing off, one review prompt after a real success** (section 3).
 4. **Seven asks of the Investors,** two of them new: Small Business Program on the day the membership activates, and the newsletter submissions moved to launch day (section 4).
 5. **Submission stays Day 17 (Sat 2026-11-07).** No earlier date is realistic (section 5).

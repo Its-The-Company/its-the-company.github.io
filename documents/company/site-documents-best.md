@@ -43,7 +43,7 @@ Five rows at the top of `/documents/`, above Write-ups and the hunt cards. A str
 Measured on research/hunt/*.md at 02:50 ET: 42 tables carry an Overall column; 13 of them have a counted column (69 rows); 29 have none. The phrase is read, never written, in this order, from the idea's origin row:
 
 1. **Counted column.** The first header (lower-cased) containing `counted`, `hand-read`, `hand-counted` or `demand`. Today that matches "Counted need (hand-read, links in H39-raw)", "Counted buyer", "Displaced buyer (counted, dated)", "Asks for a tool (12 months, hand-counted)", "Demand, hand-read (links)", "Tool asks, 12 months, 6 sites (hand-read)". In the cell:
-   - the first `**bold**` span, if it <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> a digit (8 of 69 rows open this way, e.g. H31 "43 disputed damage claims in a year");
+   - the first `**bold**` span, if it holds a digit (8 of 69 rows open this way, e.g. H31 "43 disputed damage claims in a year");
    - else the text up to the first `; `, `. ` or `, e.g`; then, if a `(` is left open, cut before it;
    - links reduced to their text, `**` removed.
 2. **Need column with words.** A header that is `need` or starts `need (`: the text after the letter, outer brackets removed, if it holds a digit (H6 "B (993 reviews on the top 4 gigs)" gives "993 reviews on the top 4 gigs").

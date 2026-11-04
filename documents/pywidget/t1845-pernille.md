@@ -19,7 +19,7 @@ Reviewer: Pernille, 2026-11-03. Independent (Commandment 13): I judged from the 
 
 ## Evidence (run by me)
 
-- `swift test` in pywidget/ios/Core, run once in a clean scratch tree made with `git archive 236f04d9f` (pywidget/ios, tests, docs, python), because the shared checkout <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> other agents' unbuilt edits to AgeLine and StaleEntryPlan: **432 tests, 0 failures**. All 9 RefreshOutcomeRuleTests passed. The commit message says 445. That count probably included suites that are uncommitted in the shared tree. This is not a defect, but the number cannot be checked at the commit.
+- `swift test` in pywidget/ios/Core, run once in a clean scratch tree made with `git archive 236f04d9f` (pywidget/ios, tests, docs, python), because the shared checkout holds other agents' unbuilt edits to AgeLine and StaleEntryPlan: **432 tests, 0 failures**. All 9 RefreshOutcomeRuleTests passed. The commit message says 445. That count probably included suites that are uncommitted in the shared tree. This is not a defect, but the number cannot be checked at the commit.
 - `mutants-t1794.json` in the same scratch tree, one mutant at a time, `swift test --filter RefreshOutcomeRuleTests`. Each `find` string matches exactly once. Results are in the Mutants line below.
 
 ## The two choices Idris asked about

@@ -117,7 +117,7 @@ and fix the comment at :144-145 so it does not promise a reload time.
 ### F4. Low: a refresh from a later reload joins a queued turn that still carries the earlier caller's deadline
 
 ExtensionLane.swift:111-117. The comment at :111 says "a second family joins within the same reload". Nothing makes
-that true. `inFlight[id]` <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the turn from the moment it is queued. Any later `refresh(id)` joins it, including one
+that true. `inFlight[id]` holds the turn from the moment it is queued. Any later `refresh(id)` joins it, including one
 from the next reload seconds later.
 
 Failing case: x, y and z are queued at 0 s, and x and y run 1.5 s each. z's caller asks at 0.1 s (`due` 4.1). A new

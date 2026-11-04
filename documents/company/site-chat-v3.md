@@ -87,7 +87,7 @@ Top to bottom: site header (four tabs, unchanged), C44 notice (unchanged, always
    - Unread means newer than `company.seen.<N>`, which is set when that thread's tab is viewed with the log scrolled to the bottom, or when it opens to the latest exchange.
 4. **All conversations**: the existing filters (All, Urgent, Reports, <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span>, Chat) as compact rows (chip, `#N`, title, time). A tap opens a tab.
 
-Phone height with sample data: 1,447 px (frame 1, full). The first screen <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the tiles plus the top Needs you row.
+Phone height with sample data: 1,447 px (frame 1, full). The first screen holds the tiles plus the top Needs you row.
 
 ## 2. Desktop, 1280 px (frames 9, 9d, 10, 10d)
 From 880 px the page uses two columns, `minmax(0,1fr) var(--side)`:

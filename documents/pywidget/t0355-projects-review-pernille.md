@@ -52,7 +52,7 @@ Fix, two parts:
    does not write. It keeps the text, says so, and offers to save a copy (`main (conflict).py`). This one check
    also covers scripts.
 2. A rename or delete goes to every model through `ConsoleModels.app`, the registry `liveRun(besides:)` already
-   uses, not just to `model`. The other option is that `openProjectFile` refuses a file another window <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>.
+   uses, not just to `model`. The other option is that `openProjectFile` refuses a file another window holds.
 
 Tests that catch it: the two probes below, moved into ProjectStoreTests.
 

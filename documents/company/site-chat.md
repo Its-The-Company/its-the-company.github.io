@@ -64,7 +64,7 @@ Constraints from the task packet: Commandments 2, 3, 6, 10, 42, 50, 52 to 57; id
 
 **What is realistic**
 
-1. A chat view over issues: yes. `api.github.com` supports CORS from any origin with an `Authorization` header (GitHub REST docs, "Using CORS and JSONP"). A static page on `its-the-company.github.io` can read and write issues in the private company repo with a token the Investor <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> in their own browser.
+1. A chat view over issues: yes. `api.github.com` supports CORS from any origin with an `Authorization` header (GitHub REST docs, "Using CORS and JSONP"). A static page on `its-the-company.github.io` can read and write issues in the private company repo with a token the Investor holds in their own browser.
 2. Live worker status at zero tokens: yes. Every session already writes `stream-json` to `ops/runs/<time>-work.jsonl` as it runs, and each worker call appears there as an `Agent` tool use with `subagent_type`, `model`, `description` and a timestamp (checked on `20261022-200547-work.jsonl`, 14 calls). A script can tail that file and publish "Idris: [build] Ledger parser spike, opus, since 20:12" without a model call.
 3. Usage limits at zero tokens: yes, already done. The supervisor reads the plan's own meter (`claude -p "/usage"`, a local command, no model call) at most every 10 minutes and the usage page shows it.
 4. Queue view: yes. `ops/board.md` is a text file; a runnable task is a `- [ ]` line, a blocked one `- [b]`.

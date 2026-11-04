@@ -18,7 +18,7 @@ tests 18/0 over 6 iterations. The MacBook full suite on this commit is still to 
 
 **Verdict: approve with changes.** Three findings, all Low. None blocks the commit.
 
-## What I checked, and what <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>
+## What I checked, and what holds
 
 - **F1 (T-2015).** `turnNeedsSeconds = budget + 2 * stopRepeatSeconds` = 2.5 s. The doc comment says this is a stopgap
   and names the measurement (T-2021). `testTheADRsNumbers` pins the value, and that is the right kind of test for a

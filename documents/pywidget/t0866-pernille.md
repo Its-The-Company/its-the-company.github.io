@@ -50,7 +50,7 @@ From the project: never. The plan reads a listing and returns names; every remov
 
 ### F1 (Medium): a link added to an unchanged project is refused with `changed == false`
 
-`list` <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> files only (line 117 skips links after setting the refusal), so a link is invisible to the change signal. P1: same files as the last send plus a link gives `refusal = .link`, `changed = false`. s2 item 2 tells the caller to send only when the list differs. If it does, the person never sees the word, and no later boundary retries the send. The doc comment (lines 8-9) and the message in `testLinkIsRefusedByName` ("a refused widget's list still differs") are true in that test only because its listing also drops `pywidget.json`.
+`list` holds files only (line 117 skips links after setting the refusal), so a link is invisible to the change signal. P1: same files as the last send plus a link gives `refusal = .link`, `changed = false`. s2 item 2 tells the caller to send only when the list differs. If it does, the person never sees the word, and no later boundary retries the send. The doc comment (lines 8-9) and the message in `testLinkIsRefusedByName` ("a refused widget's list still differs") are true in that test only because its listing also drops `pywidget.json`.
 
 Fix: carry links in the change signal (put `.link` entries in `list`, or force `changed` to true whenever there is a refusal), and test the case where the link is the only difference.
 

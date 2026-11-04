@@ -1,80 +1,52 @@
 {
  "schema": 1,
- "at": "2026-11-04T12:33:36.640644+00:00",
+ "at": "2026-11-04T14:07:35.906892+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-04T07:15:14-05:00"
+  "active": false,
+  "kind": "",
+  "started": null
  },
- "workers": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-2052 reports on time",
-   "model": "opus",
-   "started": "2026-11-04T12:22:18.536Z",
-   "seconds": 678,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-2058 live running count on the site",
-   "model": "opus",
-   "started": "2026-11-04T12:22:27.486Z",
-   "seconds": 669,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2053 free Simulator space, run mutants",
-   "model": "opus",
-   "started": "2026-11-04T12:30:11.060Z",
-   "seconds": 205,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x2, Idris",
+ "workers": [],
+ "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] T-1858 SSD overflow, disk back to 20 GB",
-   "model": "opus",
-   "started": "2026-11-04T12:18:51.120Z",
-   "seconds": null,
-   "finished": "2026-11-04T12:29:04.231000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-2050 report format check",
-   "model": "opus",
-   "started": "2026-11-04T12:16:05.189Z",
-   "seconds": null,
-   "finished": "2026-11-04T12:21:35.416000+00:00"
-  },
-  {
    "name": "pernille",
-   "task": "[review] T-2049 review of 55e3fb63f",
+   "task": "[review] T-2085 review of 504703ed2",
    "model": "opus",
-   "started": "2026-11-04T12:16:23.444Z",
+   "started": "2026-11-04T13:41:20.896Z",
    "seconds": null,
-   "finished": "2026-11-04T12:21:28.494000+00:00"
+   "finished": "2026-11-04T14:02:10.208000+00:00"
   },
   {
-   "name": "idris",
-   "task": "[build] T-2051 stop-loop fix proof",
+   "name": "odalys",
+   "task": "[site] T-2076 overhaul stages behind switches",
    "model": "opus",
-   "started": "2026-11-04T12:16:15.396Z",
+   "started": "2026-11-04T13:24:23.322Z",
    "seconds": null,
-   "finished": "2026-11-04T12:18:11.976000+00:00"
+   "finished": "2026-11-04T14:01:27.483000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-1899 why lane branches fail at landing",
+   "model": "opus",
+   "started": "2026-11-04T13:55:41.689Z",
+   "seconds": null,
+   "finished": "2026-11-04T14:01:02.956000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-1804 applier proposal for approvable changes",
+   "model": "opus",
+   "started": "2026-11-04T13:08:51.418Z",
+   "seconds": null,
+   "finished": "2026-11-04T13:55:01.639000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 325,
-  "blocked_count": 119
+  "runnable_count": 340,
+  "blocked_count": 123
  },
  "meter": {
   "five_hour": {
@@ -111,13 +83,312 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-04T07:30:13-05:00",
  "personal": {
   "week_pct": 34.67,
-  "usage_pct": 38.8,
-  "work_pct": 77.7,
-  "read_at": "2026-11-04T12:35:00+00:00",
-  "running": []
+  "usage_pct": 38.0,
+  "work_pct": 77.4,
+  "read_at": "2026-11-04T14:07:00+00:00",
+  "running": [
+   {
+    "lane": "b",
+    "task": "T-1781",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "After T-1752/T-1778",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T07:39:00-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b",
+    "task": "T-2060",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-1858 continued, item",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T07:39:00-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b",
+    "task": "T-2061",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-1858 continued, item",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T07:39:00-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b",
+    "task": "T-1861",
+    "w": "Idris",
+    "k": "build",
+    "t": "The widget's refresh button must write run rows with trigger intent, not...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T07:39:00-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1947",
+    "t": "T-1947",
+    "at": "2026-11-04T07:39:00-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b",
+    "task": "T-1991",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Host-only, no Xcode, before T-1905",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T07:39:00-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b",
+    "task": "T-2039",
+    "k": "fix",
+    "t": "P1, BridgeTests/testStopLoop red once on the MacBook",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T07:39:00-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2051",
+    "w": "Idris",
+    "k": "fix",
+    "t": "T-2039 continuation",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T07:39:00-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2054",
+    "w": "Idris",
+    "k": "fix",
+    "t": "MarkStuck's \"stuck\"",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T07:39:00-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2055",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Br_write/br_emit",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T07:39:00-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2056",
+    "w": "Idris",
+    "k": "test",
+    "t": "Neither T-2039 test reaches the window between the run's finished being...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T07:39:00-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1735",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Experiment ids chosen inside a lane collide with main's",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T07:39:00-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b2",
+    "task": "T-1728",
+    "w": "Idris",
+    "k": "build",
+    "t": "T-1714's continuation, Xcode lane",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T08:18:27-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b2",
+    "task": "T-0622",
+    "w": "Idris",
+    "k": "build",
+    "t": "One appearance flag",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-04T08:18:27-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b2",
+    "task": "T-0309",
+    "w": "Pernille",
+    "k": "build",
+    "t": "The rest of T-0231",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-04T08:18:27-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2076",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Build T-1776 stages 2-4 now",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T09:04:34-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2097",
+    "w": "Idris",
+    "k": "build",
+    "t": "Nobody has read os_proc_available_memory() inside the widget extension on a...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T09:04:34-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2100",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Continuation of T-2085",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T09:04:34-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2077",
+    "w": "Odalys",
+    "k": "site",
+    "t": "T-2076 continuation",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T09:04:34-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2087",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Repost the amendments fold",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T09:04:34-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2098",
+    "w": "Idris",
+    "k": "build",
+    "t": "Core/mutants-t1850.json paths carry a pywidget/ios/Core/ prefix, so...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T09:04:34-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2079",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal branch personal/b4 did not land",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T09:04:34-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2089",
+    "w": "Maren",
+    "k": "tools",
+    "t": "Personal branch personal/a5 did not land",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T09:04:34-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2090",
+    "w": "Ines",
+    "k": "tools",
+    "t": "Personal account a stopped on T-2065+T-2064+T-2053+T-2066+T-1733+T-1734: the...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T09:04:34-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2091",
+    "w": "Idris",
+    "k": "tools",
+    "t": "Personal account a3 stopped on...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T09:04:34-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2092",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal account a stopped on T-1872+T-1918+T-1979",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T09:04:34-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2096",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal account a2 stopped on T-1995+T-2000+T-2045",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T09:04:34-05:00",
+    "n": "Jeremy"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -127,39 +398,33 @@
   }
  ],
  "disk": {
-  "free_gb": 27,
+  "free_gb": 17,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T07:35:00-05:00"
+  "at": "2026-11-04T09:07:00-05:00"
  },
- "next_tick_why": "session",
- "pool": {
-  "why": "Behind the week: 45% used with 46% of the week past, so the pool is sized to catch up",
-  "n": 3,
-  "at": "2026-11-04T07:15:13.515772-05:00"
- },
+ "next_tick_why": "last_tick",
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-2052 reports on time",
-   "model": "opus",
-   "since": "2026-11-04T12:22:18.536Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P0, personal lane before anything else...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-2053 free Simulator space, run mutants",
-   "model": "opus",
-   "since": "2026-11-04T12:30:11.060Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -170,17 +435,17 @@
    "next": []
   },
   {
-   "name": "Maren",
+   "name": "Pernille",
    "state": "next",
-   "task": "Maren, P2, from T-1437 (b72f2da7f): not before...",
+   "task": "Pernille, P2, Run heatmap levels by size, not brightness...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Pernille",
+   "name": "Maren",
    "state": "next",
-   "task": "Pernille, P2, Run heatmap levels by size, not brightness...",
+   "task": "Maren, P2, the design copy follows T-1441, so the stale...",
    "model": null,
    "since": null,
    "next": []
@@ -195,35 +460,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-2052 reports on time",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:22:18.536Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "T-2058 live running count on the site",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:22:27.486Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-2053 free Simulator space, run mutants",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:30:11.060Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -240,16 +477,9 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "T-1781 item 3",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-1858 continued, Emergency not yet cleared",
+    "w": "Ines",
+    "k": "plan",
+    "t": "T-0848 decision for T-2052",
     "s": "next",
     "o": "c"
    },
@@ -294,30 +524,37 @@
     "t": "Activity run log, Swift half",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Refresh control and age line in the renderer",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Pernille",
-    "t": "Reviewed the fix for the stop-button test that failed on the MacBook. The fix is sound for its...",
-    "at": "2026-11-04T07:21:00-05:00"
+    "t": "Checked Idris's fix that stops a widget script starting on a phone already out of memory; the...",
+    "at": "2026-11-04T09:01:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "The 06:00 report met most of the Investors' new format but had a summary point with no section,...",
-    "at": "2026-11-04T07:21:00-05:00"
+    "w": "Idris",
+    "t": "On a real phone, a widget's Python script no longer starts when the system reports the extension...",
+    "at": "2026-11-04T08:38:00-05:00"
    },
    {
-    "w": "Pernille",
-    "t": "Checked Idris's fix that makes sure a widget owed a refresh gets its turn even when a locked Pro...",
-    "at": "2026-11-04T06:04:00-05:00"
+    "w": "Operator",
+    "t": "The Preferences sweep card was answered A on issue 155 by an Investor; the 414 old test files were...",
+    "at": "2026-11-04T08:31:00-05:00"
    }
   ],
   "count": {
-   "next": 325,
-   "wait": 35,
-   "blocked": 84,
-   "you": 15
+   "next": 340,
+   "wait": 37,
+   "blocked": 86,
+   "you": 16
   }
  },
  "qr": [],
@@ -325,6 +562,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -333,13 +571,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
-  "lanes": 0,
+  "main": 0,
+  "lanes": 3,
   "total": 3,
-  "at": "7:35 AM",
+  "at": "9:07 AM",
   "why": "",
-  "at_iso": "2026-11-04T12:35:00+00:00",
-  "started": "7:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:35 AM ET</p></section>"
+  "at_iso": "2026-11-04T14:07:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:07 AM ET</p></section>"
  }
 }

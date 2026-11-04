@@ -52,7 +52,7 @@ swiftc -O -o /tmp/t0722/probe MiniZip.swift ProjectStore.swift ProjectTransfer.s
 **M1. An upper-case `.PY` file is imported, then hidden. It is never listed, exported or deletable, and it blocks
 its own name.** `importFile` and `importZip` accept the extension with `pathExtension.lowercased() == "py"`.
 `ProjectStore.files(in:)` lists only `pathExtension == "py"` (case-sensitive). So the file is written to disk but
-the app never shows it. `free()` compares names without case, so the hidden file still <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> its name.
+the app never shows it. `free()` compares names without case, so the hidden file still holds its name.
 - `upper_ext.zip` (`trip/MAIN.PY`, `trip/Helper.Py`): import succeeds, project "trip" is created with
   `files=0 skipped=[]`. Both files are on disk; the project shows empty.
 - `upper_ext_mixed.zip` (`trip/main.py`, `trip/TOOL.PY`): `files=["main.py"]`, `TOOL.PY` is on disk and unlisted,

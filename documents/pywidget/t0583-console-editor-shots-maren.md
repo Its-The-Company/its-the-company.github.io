@@ -91,7 +91,7 @@ Maren. Shots re-shot by Idris in 210a1362 after T-0604 (2f7428c8), T-0605 (eed16
 </div>
 
 
-The dark ruling <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> as built. The navy editor sits between near-black canvas and console, and the hairline marks the edge.
+The dark ruling holds as built. The navy editor sits between near-black canvas and console, and the hairline marks the edge.
 
 ### Per image
 

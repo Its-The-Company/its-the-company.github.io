@@ -52,19 +52,40 @@ Exempt by design: content behind a modal (`data-inactive`), disabled buttons, an
 
 - Margins 16 (iPhone), 20 (iPad). Spacing steps 4, 8, 12, 16, 20, 24, 32. Rows at least 44 tall. Every hit target 44 × 44, even where the drawn control is smaller (Run pill 34, key 40 × 36, Stop chip 28).
 - Radii: keys 10, cards 14, banners and strips 12, menus and floating bars 20 to 24 (pill), sheets 28 top corners, alerts 28.
-- Type: the scale in tokens.json. AX3 values used in the frames are Apple's table as I recall it (body 40, headline 40, subheadline 36, footnote 33, caption 32, largeTitle 52); xxxLarge likewise (body 23, callout 22, subheadline 21, footnote 19, caption 18 and 17, largeTitle 40; `TYPE_XXXL` in draw_ide.py). T-1437 tried the one HIG typography fetch on 2026-11-03 through tools/fetch_cite.py --apple; it was refused by the 12-a-day Apple <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>. T-1443 fetched the page on 2026-11-04 00:05 ET (research/inbound/apple/developer.apple.com/design_human-interface-guidelines_typography-fd378311.html, 18,161 B): it is a JavaScript shell with no type tables, only a link to a Markdown copy (typography.md). The Markdown fetch was denied by the session's permission check, and I did not work around it. The numbers are still recalled. **Idris: confirm them in the Simulator**, or the fetch is retried on the next ET day, and correct `TYPE` and `TYPE_XXXL` if they differ.
+- Type: the scale in tokens.json. The AX3 and xxxLarge sizes in the frames are Apple's iOS tables, read on 2026-11-04 07:44 ET (T-1443) from the HIG typography page's Markdown copy, https://developer.apple.com/design/human-interface-guidelines/typography.md, saved as `research/inbound/apple/developer.apple.com/design_human-interface-guidelines_typography.md-ac22ffc4.html` (sections "#### xxxLarge" and "#### AX3"). Size / leading in points:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 2. Shared numbers, scrolls sideways" style="--tw:374px" markdown="1">
+
+  | Style | Large | xxxLarge | AX3 |
+  |---|---|---|---|
+  | Large Title | 34 / 41 | 40 / 48 | 52 / 61 |
+  | Title 1 | 28 / 34 | 34 / 41 | 48 / 57 |
+  | Title 2 | 22 / 28 | 28 / 34 | 44 / 52 |
+  | Title 3 | 20 / 25 | 26 / 32 | 43 / 51 |
+  | Headline, Body | 17 / 22 | 23 / 29 | 40 / 48 |
+  | Callout | 16 / 21 | 22 / 28 | 38 / 46 |
+  | Subhead | 15 / 20 | 21 / 28 | 36 / 43 |
+  | Footnote | 13 / 18 | 19 / 24 | 33 / 40 |
+  | Caption 1 | 12 / 16 | 18 / 23 | 32 / 39 |
+  | Caption 2 | 11 / 13 | 17 / 22 | 29 / 35 |
+
+</div>
+
+
+  Against the recalled values (T-1437), AX3 Title 1, 2 and 3 were wrong (43, 39, 37; Apple 48, 44, 43), and eight leadings were 1 to 7 pt off (AX3 Title 1-3, Callout, Caption 1 and 2; xxxLarge Large Title and Subhead). Every other size matched. `TYPE` and `TYPE_XXXL` in draw_ide.py now carry Apple's numbers; code, console code, gutter and key glyphs are ours, derived as before. All sheets were redrawn on 2026-11-04 (main and `--ax`); the scripted QA counts did not change.
 - Clamps: editor code 32 pt, console code 32 pt, gutter 17 pt, key glyphs 22 pt. Nav bar titles, the tab bar and the keyboard do not scale; they use the system Large Content Viewer.
 - AX1 and up: rows stack (`ViewThatFits`, or `dynamicTypeSize.isAccessibilitySize`), segmented filters become a menu button, file tabs become one file menu, editor soft-wraps flush left (1.0: no hanging indent, vendored Runestone 0.5.2 has none; T-0583 review, Maren 2026-10-28), and floating buttons drop their text label (icon only, label kept for VoiceOver).
 - Tabular figures on every changing number: run times, elapsed, counts, line and column.
 
 ### 2.1 Dynamic Type per 1.0 screen (T-1437)
 
-Sheets: `ide/A-ax-<screen>-phone.png` (A Paper, light) and `ide/B-ax-<screen>-phone.png` (B Studio, dark), each screen at xxxLarge (no AX layout) and AX3 (AX layout), drawn by `python3 draw_ide.py --ax`; scripted QA in `ide/qa-ax.json`. Sizes are the recalled ones above. Large Content Viewer (LCV) = the system's long-press magnifier for bars that do not scale.
+Sheets: `ide/A-ax-<screen>-phone.png` (A Paper, light) and `ide/B-ax-<screen>-phone.png` (B Studio, dark), each screen at xxxLarge (no AX layout) and AX3 (AX layout), drawn by `python3 draw_ide.py --ax`; scripted QA in `ide/qa-ax.json`. Sizes are Apple's (s2 table, read 2026-11-04, T-1443). Large Content Viewer (LCV) = the system's long-press magnifier for bars that do not scale.
 
 The projects and Pro rows were read from the sheets by eye; the other seven rows give the s2 rules the code draws plus the scripted QA count, not an eye check of every frame. Ines or Idris: open the sheet before building from a row.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 2.1 Dynamic Type per 1.0 screen (T-1437), scrolls sideways" style="--tw:1678px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 2.1 Dynamic Type per 1.0 screen (T-1437), scrolls sideways" style="--tw:1678px" markdown="1">
 
 | Screen | Wraps | Truncates | Stacks (AX1 and up) | Large Content Viewer | QA (xxxL / AX3) |
 |---|---|---|---|---|---|
@@ -93,7 +114,7 @@ Build lines proposed for Idris (Ines places them; not on the board):
 ## 3. Components
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 3. Components, scrolls sideways" style="--tw:624px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 3. Components, scrolls sideways" style="--tw:624px" markdown="1">
 
 | Component | Spec |
 |---|---|
@@ -124,7 +145,7 @@ Maren, 2026-10-26. Under Runestone (ADR-004 option A). Where the section 5 fallb
 4. **VoiceOver.** Each key is one element, trait `.keyboardKey`, label spoken as a name, never as the glyph:
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 3.1 Key row rules (T-0232; ADR-004 rulings 3-4, Ines 2026-10-26 20:02 ET), scrolls sideways" style="--tw:755px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 3.1 Key row rules (T-0232; ADR-004 rulings 3-4, Ines 2026-10-26 20:02 ET), scrolls sideways" style="--tw:755px" markdown="1">
 
 | Key | Label | Custom actions (alternates) |
 |---|---|---|
@@ -147,7 +168,7 @@ Maren, 2026-10-26. Under Runestone (ADR-004 option A). Where the section 5 fallb
 
    Alternates are `UIAccessibilityCustomAction`s because long-press-and-slide cannot be done under VoiceOver; the rotor's Actions list reads them. The scroller is not an element; its keys are, in order, so swiping walks the row. <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G2</span> covers the row as well as the text.
 5. **Colour.** Bar `key.bgAlt`, keys `key.bg`, glyphs `key.text`: 4.5:1 on both fills, 7:1 in Increase Contrast (check_tokens.py rows `key.text on key.bg/key.bgAlt`). Pressed key: `key.bgAlt` for 120 ms (no scale; Reduce Motion the same).
-6. **iOS 26 clear-bar rule.** If on iOS 26 the opaque 44 pt bar reads as a slab over the glass keyboard, the bar goes clear (no fill, no hairline) and each key keeps its `key.bg` fill, so `key.text` stays on a token fill and its contrast check still <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>. Never `key.text` on the bare keyboard glass. G3's screenshot decides, one device check, inside the approved tokens (ruling 4); no new approval.
+6. **iOS 26 clear-bar rule.** If on iOS 26 the opaque 44 pt bar reads as a slab over the glass keyboard, the bar goes clear (no fill, no hairline) and each key keeps its `key.bg` fill, so `key.text` stays on a token fill and its contrast check still holds. Never `key.text` on the bare keyboard glass. G3's screenshot decides, one device check, inside the approved tokens (ruling 4); no new approval.
 7. **Hardware keyboard.** Accessory view nil while one is attached, re-read on connect and disconnect (`GCKeyboard` notifications, **[recalled]**). iPad shows no bar with a hardware keyboard; G3 checks it.
 
 ### 3.2 Editor colours the engine asks for (T-0232)
@@ -159,7 +180,7 @@ Six syntax tokens per set in tokens.json (`syntax.Quill.light`, `syntax.Lumen.da
 Message shape is `pywidget_tooling/editor.py` (T-1101): `complete()` returns `mode` "jedi" or "fallback" (+ `reason`), items with `label`, `kind`, `detail` always "" and `replace`; `diagnostics()` returns `code` (a pyflakes class name such as `UnusedImport`), `message` (pyflakes text), `severity`, sorted by line then column. **Two corrections to the s3 table above:** (1) the module never returns a flake8 code, so the label is the `code` as words, sentence case (`UnusedImport` becomes "Unused import"), not `F401 unused`; the earlier frames keep the old text until Idris builds from this section. (2) `detail` is "", so the popover's one-line doc has no source; it shows only in jedi mode if Idris adds a docstring call, and 1.0 ships without it.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 5: 3.3 Completion and lint states (T-1106, for T-0656; DRAFT C51, inside approved…, scrolls sideways" style="--tw:851px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 3.3 Completion and lint states (T-1106, for T-0656; DRAFT C51, inside approved…, scrolls sideways" style="--tw:851px" markdown="1">
 
 | State | Rule | Frame |
 |---|---|---|
@@ -181,7 +202,7 @@ Sheets: `A-` and `B-` `complete-phone.png`, `lint-phone.png`, `lint-ipad.png`; Q
 ## 4. Run states
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 6: 4. Run states, scrolls sideways" style="--tw:894px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 4. Run states, scrolls sideways" style="--tw:894px" markdown="1">
 
 | State | Icon | Colour | Word | Detail |
 |---|---|---|---|---|
@@ -210,7 +231,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **7.1 What ships, by flag file.** One non-consumable (placeholder id `app.pywidget.pro`). Rows appear in this order, one per entitlement that is on; a row is on only if its feature ships in that build (2.5.19: nothing dormant, nothing "coming"). The headline follows the first row.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 7: 5. Screen notes, scrolls sideways" style="--tw:1403px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 5. Screen notes, scrolls sideways" style="--tw:1403px" markdown="1">
 
    | Variant (flag file) | Rows | Headline | "Always free" box | Purchased line / button | Sheet frame |
    |---|---|---|---|---|---|
@@ -230,7 +251,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **7.2 Entry points and where each lands** (A/B-proentry-phone). Never a pop-up, never on launch, never after an error.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 8: 5. Screen notes, scrolls sideways" style="--tw:1365px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 5. Screen notes, scrolls sideways" style="--tw:1365px" markdown="1">
 
    | Entry | Shown when | Tap lands on | After purchase | Close / back returns to |
    |---|---|---|---|---|
@@ -247,7 +268,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **7.3 Redline** (iPhone 390 pt; iPad form sheet 560 × 700). Spacing and type tokens from tokens.json; colours by role, never hex in Swift.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 9: 5. Screen notes, scrolls sideways" style="--tw:1152px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: 5. Screen notes, scrolls sideways" style="--tw:1152px" markdown="1">
 
    | Element | Size and position | Type | Colour tokens |
    |---|---|---|---|
@@ -271,7 +292,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **7.4 Purchase states** (sheet frame 7). The button and its line; StoreKit 2 names in brackets.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 10: 5. Screen notes, scrolls sideways" data-n="1" style="--tw:1519px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 5. Screen notes, scrolls sideways" data-n="1" style="--tw:1519px" markdown="1">
 
    | # | State | Button | Line | Tappable | Price shown |
    |---|---|---|---|---|---|
@@ -300,7 +321,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **7.6 Strings.** Every string is **DRAFT C51**: the paywall's look and copy are outside approved item 2 and go to the Investors with these sheets (ops/questions.md). Generated by `draw_ide.py --pro-strings` from `PRO_STR`, the same table the frames draw from; if a string changes, regenerate this table.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 5. Screen notes, scrolls sideways" style="--tw:860px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 12: 5. Screen notes, scrolls sideways" style="--tw:860px" markdown="1">
 
    | ID | String | Where | C51 |
    |---|---|---|---|
@@ -363,7 +384,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 
    **7.7 C51 question.** A (recommended): approve the Pro screen as drawn, headline by variant (`h.premades`, `h.packages`, `h.themes`). B: as A, with the plain headline `h.optB` "What Pro adds." in every variant (frame 8). C: neither; the company redraws. Not asked here: the price (`[price]` stays a placeholder, the Investors' call), which premades are Pro (questions item 10), and the theme pairs themselves (PROPOSAL-004).
 
-   *Note, 2026-10-27 (Maren, T-0474, review of T-0473 and 0d5658e5):* rulings in pywidget/docs/reviews/t0473-pro-screen-design-maren.md. Changed here: chips carry no glyph; state 4 keeps the priced Buy; state 5b added; `btn.pending` dropped (no screen shows it); final `ln.pending` and `ln.restoreFailed`; the state line is read after the button, not as its hint; a 72-character cap on lines. The Pro sheets (A/B-pro-phone, A-pro-ipad) are owed a redraw from draw_ide.py with these changes.
+   *Note, 2026-10-27 (Maren, T-0474, review of T-0473 and 0d5658e5):* rulings in pywidget/docs/reviews/t0473-pro-screen-design-maren.md. Changed here: chips carry no glyph; state 4 keeps the priced Buy; state 5b added; `btn.pending` dropped (no screen shows it); final `ln.pending` and `ln.restoreFailed`; the state line is read after the button, not as its hint; a 72-character <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> on lines. The Pro sheets (A/B-pro-phone, A-pro-ipad) are owed a redraw from draw_ide.py with these changes.
 
    *Open for Idris (T-0031):* (a) the restore-in-progress state 3b is my addition to the eight; (b) in C1 a free user's `import numpy` needs a console line that points to Pro, not a pop-up; not drawn, Ines rules on it with the C1 case; (c) the purchased screen in C1 has no button, only Done.
 
@@ -378,7 +399,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **9.1 Tiers come from the flag file, never from code.** `pywidget/runtime/pro-flags.json` (T-0338), read through the contract's `resolve()`: a premade is locked when `premades.on && tier != "free" && !entitled` (contract s4 rule 5: an unlisted premade counts as Pro). Today's file: Free (5) countdown, sun, steps, distance, altitude; Pro (7) habits, shortcuts, storage, progress, quote, clocks, github, in premade.py order. No count is drawn anywhere; the sections list whatever the file says.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 12: 5. Screen notes, scrolls sideways" style="--tw:640px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 13: 5. Screen notes, scrolls sideways" style="--tw:640px" markdown="1">
 
    | Flag file says | Gallery shows |
    |---|---|
@@ -403,7 +424,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **9.4 Tile states** (frame 5, "Tile states"; one at a time, first match wins):
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 13: 5. Screen notes, scrolls sideways" data-n="1" style="--tw:1143px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 14: 5. Screen notes, scrolls sideways" data-n="1" style="--tw:1143px" markdown="1">
 
    | # | State | When | Well | Line / button |
    |---|---|---|---|---|
@@ -444,7 +465,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **9.11 Strings** (`draw_gallery.py --strings`; `pro:` ids are s5.7's, read from `PRO_STR` so the two screens cannot drift). Every one is DRAFT C51: no copy guide is approved.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 14: 5. Screen notes, scrolls sideways" style="--tw:853px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 15: 5. Screen notes, scrolls sideways" style="--tw:853px" markdown="1">
 
    | ID | String | Where | C51 |
    |---|---|---|---|
@@ -515,7 +536,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **10.1 Rows in v1.** Order top to bottom. A row exists only if its feature ships in that build (2.5.19).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 15: 5. Screen notes, scrolls sideways" style="--tw:1337px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 16: 5. Screen notes, scrolls sideways" style="--tw:1337px" markdown="1">
 
    | Group | Row (string id) | Shown when | Tap | Build line |
    |---|---|---|---|---|
@@ -540,7 +561,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **10.2 States.**
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 16: 5. Screen notes, scrolls sideways" style="--tw:640px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 17: 5. Screen notes, scrolls sideways" style="--tw:640px" markdown="1">
 
    | State | What shows |
    |---|---|
@@ -576,7 +597,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **10.7 Strings.** Generated by `draw_settings.py --strings` from `SET_STR` and the s5.7 ids it reuses (one string per meaning across both screens). Working name "pywidget" as elsewhere; question item 8's answer is one find-and-replace.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 17: 5. Screen notes, scrolls sideways" style="--tw:874px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 18: 5. Screen notes, scrolls sideways" style="--tw:874px" markdown="1">
 
    | ID | String | Where | C51 |
    |---|---|---|---|
@@ -619,7 +640,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **11.1 The model.** A project is a folder, as T-0355 built it (`Documents/Scripts/<project>/`). Its files are its parts. There is no new record on disk: the code is the record, so Files, zip export and a rename stay as they are. A small reader, `ProjectParts`, sorts the files each time a list loads, using T-0748's Python scan. First match wins:
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 18: 5. Screen notes, scrolls sideways" style="--tw:724px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 19: 5. Screen notes, scrolls sideways" style="--tw:724px" markdown="1">
 
    | Part | Rule | Opens |
    |---|---|---|
@@ -638,7 +659,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **11.3 The Projects tab** (frames 1-5, 18). Large title, search over projects and files, the filter, then one list. The filter draws at 13 pt, the system control's size: at 15 pt "Lock Screen" does not fit a quarter of 358 pt. From AX1 it is a menu button. Newest change first; Pinned waits (it needs a record, and 1.0 has none).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 19: 5. Screen notes, scrolls sideways" style="--tw:739px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 20: 5. Screen notes, scrolls sideways" style="--tw:739px" markdown="1">
 
    | View | Shows | Row |
    |---|---|---|
@@ -697,7 +718,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **11.12 Size and date.** Read from main at c0b05d85 (`App/Projects`, `PyWidgetApp.swift`, `Tests`), not from a build and not measured. Idris has not checked it; his read is the first hour of the work. Yardstick: T-0355's 1,266 lines of `App/Projects` went from first commit to landing in about 2.4 days with two reviews (10-29 04:06 to 10-31 12:42).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 20: import shared, scrolls sideways" data-n="2" style="--tw:692px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 21: import shared, scrolls sideways" data-n="2" style="--tw:692px" markdown="1">
 
    | Work | Days | Note |
    |---|---|---|
@@ -722,7 +743,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **11.13 Strings** (`draw_projects.py --strings`). Every one is DRAFT C51. `menu.setup`, `menu.edit` and `menu.home` are home-setup.md's.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 21: import shared, scrolls sideways" style="--tw:839px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 22: import shared, scrolls sideways" style="--tw:839px" markdown="1">
 
    | ID | String (DRAFT) | Where | C51 |
    |---|---|---|---|
@@ -798,7 +819,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **12.2 Ways in, and the one route.**
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 22: import shared, scrolls sideways" style="--tw:888px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 23: import shared, scrolls sideways" style="--tw:888px" markdown="1">
 
    | From | Opens on | How |
    |---|---|---|
@@ -827,7 +848,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **12.4 Outcomes.** Glyph, reason and filter for each value `status.json` and the row can hold (ADR-007 7.2, plus `busy` from `WidgetRunOutcome.Kind` at HEAD):
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 23: import shared, scrolls sideways" data-n="4" style="--tw:1125px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 24: import shared, scrolls sideways" data-n="4" style="--tw:1125px" markdown="1">
 
    | Outcome | Glyph and colour | Row reason | In Failed | Detail adds |
    |---|---|---|---|---|
@@ -866,7 +887,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **12.8 Data: what the screen reads, and what HEAD holds** (a6b390ba..b11fe55b, read 2026-11-02). **Neither file exists yet.** `status.json` is named only in comments (`RunResultSink.swift:9`, `:140`; project-save.md, opening list), and `log/runs.jsonl` "when they exist" (`LaneGuard.swift:203`). No product screen starts a `.widget` run yet (`WidgetRunView.swift:10`), T2 is not built (ADR-007 5.1), and nothing keeps a run's output after the console shows it. So this table is the build list, not a reading of files that exist:
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 24: import shared, scrolls sideways" style="--tw:846px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 25: import shared, scrolls sideways" style="--tw:846px" markdown="1">
 
    | Screen field | File and key | At HEAD |
    |---|---|---|
@@ -902,7 +923,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **12.12 Strings** (from `draw_activity.py --strings`; `[appname]` is `CFBundleDisplayName`, read at run time):
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 25: import shared, scrolls sideways" style="--tw:846px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 26: import shared, scrolls sideways" style="--tw:846px" markdown="1">
 
    | ID | String (DRAFT) | Where | C51 |
    |---|---|---|---|
@@ -998,7 +1019,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 
 ## 6. Open
 
-- AX3 and xxxLarge sizes are recalled, not read from Apple. T-1437's fetch was refused on 2026-11-03 (day cap). T-1443's fetch on 2026-11-04 saved a JavaScript shell with no tables (s2); the page's own Markdown copy (typography.md) was denied by the permission check and not retried. Open until the Investors allow one typography.md fetch, or Idris reads the sizes in the Simulator.
+- ~~AX3 and xxxLarge sizes are recalled, not read from Apple.~~ Closed 2026-11-04 (T-1443): read from Apple's typography.md (`research/inbound/apple/developer.apple.com/design_human-interface-guidelines_typography.md-ac22ffc4.html`); three AX3 title sizes and eight leadings corrected, sheets redrawn (s2).
 - iOS 26 alert, sheet and tab bar shapes are drawn as I understand them; the system draws the real ones and wins.
 - Copy uses the working name "pywidget"; the name is the Investors' call.
 - Direction A or B: the Investors' pick (C51). Nothing here ships until it is approved.

@@ -49,7 +49,7 @@ L4 a failed run's sample leaves the results file.
 
 ## Not run
 
-Swift tests need Xcode; Idris <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the slot. run-cold.sh checked on the host as above.
+Swift tests need Xcode; Idris holds the slot. run-cold.sh checked on the host as above.
 {% endraw %}
 
 </div>

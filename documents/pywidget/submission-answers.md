@@ -29,7 +29,7 @@ The app is not in any banned area: not finance, medical, legal, gambling, adult 
 
 Scale in AGE: 4+, 9+, 13+, 16+, 18+, Unrated ("An Unrated app can't be published on the App Store"). Categories and wording are quoted from AGE; the form's exact question text was not read, so match each row to the question that carries the same label.
 
-**Draft result: 4+.** It <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> only while every row below stays "None" or "No". AGE places Unrestricted Web Access at 16+; that is the one row with a live question (row 1).
+**Draft result: 4+.** It holds only while every row below stays "None" or "No". AGE places Unrestricted Web Access at 16+; that is the one row with a live question (row 1).
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: 1. Age rating, scrolls sideways" data-n="1" style="--tw:1241px" markdown="1">

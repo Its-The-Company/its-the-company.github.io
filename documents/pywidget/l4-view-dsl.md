@@ -11,7 +11,7 @@ description: "The widget extension never runs Python in v1 (see L3 question in s
 <div class="doc-body" markdown="1">
 
 {% raw %}
-<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">Lane</span>: L4 (brief Section 5, blocking C4, C6, C8, C13). Author: Idris. Date: 2026-10-25 (Day 4). Status: spec, no renderer yet (no Xcode in this task; another task <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the Simulator).
+<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">Lane</span>: L4 (brief Section 5, blocking C4, C6, C8, C13). Author: Idris. Date: 2026-10-25 (Day 4). Status: spec, no renderer yet (no Xcode in this task; another task holds the Simulator).
 
 Companion files:
 - [`pywidget/docs/decisions/ADR-002-widget-view-tree.md`](adr-002-widget-view-tree.html) (proposed)

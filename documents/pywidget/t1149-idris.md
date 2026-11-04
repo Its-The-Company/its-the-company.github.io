@@ -61,7 +61,7 @@ empty file, a newer version and the repair on the next update. The gap is in wha
 **F1 (P2), a read that fails is treated as a fresh install, and the next update overwrites the real record.**
 `RatingFactsStore.file` reads with `try? Data(contentsOf:)`, so any read error is `nil`, and `decode(nil)` is a
 fresh ledger. `update` then writes it back. Probe P1: an asked record (sessionIndex 5) in a file set to mode 0200;
-`load()` gives alreadyAsked false, sessionIndex 0; after one `update { sessionStarted() }` the file on disk <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>
+`load()` gives alreadyAsked false, sessionIndex 0; after one `update { sessionStarted() }` the file on disk holds
 alreadyAsked false, sessionIndex 1. The one request is forgotten and a second can be made. On the device the same
 shape is the UserDefaults store read before first unlock (a prewarmed launch), which returns no data. iOS's own
 yearly <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> on the sheet limits the harm to a nag, not a rejection, but it is the case decision 7 exists to prevent.

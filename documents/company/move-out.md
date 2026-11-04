@@ -11,7 +11,7 @@ description: "A tamper entry (tools/tamper_note.py, shown on Needs you) offers &
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Owner: Odalys. From #54 c6406649834 (an Investor, 2026-10-25 22:08 ET): Investor-owned files <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> rules the company
+Owner: Odalys. From #54 c6406649834 (an Investor, 2026-10-25 22:08 ET): Investor-owned files hold rules the company
 cannot edit; they should not hold settings that hold back the company's work. Written 2026-10-25 22:25 ET.
 
 ## When the choice appears

@@ -15,7 +15,7 @@ Ines, 2026-11-04 00:39 ET. Question from T-1894 (Odalys; pywidget/docs/reviews/t
 
 ## Decision
 
-Option A. No automatic fallback. As built in 799cb51c4 and 4818b80d8: `route` warns "runner silent since", `status` and `wait` name a silent runner, and a job past push lag + poll + the limit per job is called overdue with exit 1. Running here stays the worker's own choice with `XC_LOCAL=1`. This <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> for one week, to 2026-11-11.
+Option A. No automatic fallback. As built in 799cb51c4 and 4818b80d8: `route` warns "runner silent since", `status` and `wait` name a silent runner, and a job past push lag + poll + the limit per job is called overdue with exit 1. Running here stays the worker's own choice with `XC_LOCAL=1`. This holds for one week, to 2026-11-11.
 
 ## Why
 

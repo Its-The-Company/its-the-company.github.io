@@ -37,7 +37,7 @@ developer.apple.com is read only by a person's browser (ruling 'P2 terms', resea
 
 | Tag | Meaning | May it raise a risk rating or justify a "go"? |
 |---|---|---|
-| [G2a-held] | Read by script from Apple's page on 2026-10-24, before the ruling (research/hunt/inbox-41-python-runner.md) | No. It may lower or <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> a reading only |
+| [G2a-held] | Read by script from Apple's page on 2026-10-24, before the ruling (research/hunt/inbox-41-python-runner.md) | No. It may lower or hold a reading only |
 | [snippet] | Words in a web-search result (from the search provider, not Apple's servers); link given | Substance yes, exact current wording no |
 | [paraphrase] | Secondary source's restatement | Substance only, with care |
 | [recall] | My working memory of the guideline; no source this session | No. Treated as a question for the person read |

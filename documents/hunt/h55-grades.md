@@ -19,7 +19,7 @@ Started 00:35 ET, written 00:39 ET (`date` in the same command). Board line H-P1
 
 Before opening research/hunt/H39-raw/h51a-codes.txt I drew my own 15 of Wrenna's 60 bodies (`random.seed(5501)`, `random.sample` over h51a-bodies.jsonl) and coded them from the text alone (no photos opened), with the H50a letters: rows 9 P, 81 N (removed), 94 A, 149 N, 156 N, 183 U, 203 N (small room, cubbies: N by the rule), 219 W, 239 E, 319 N, 340 R, 470 G, 493 P, 501 V, 518 W. Named: 9 of 15 (60%), the same share she reports for 60.
 
-Then her codes: 13 of 15 agree letter for letter. The two that differ, 156 and 183, are both rows she coded G from a photo (floor-height glazing read from a plan label; a window where the left surround goes) and I coded N and U from text alone, because I did not open photos. Both are in the nine photo-only rows she names in her sensitivity cut, and the share without those nine is her 27 of 60 (45%, interval 33-58%), still over the one-third bar. Her count <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>. Nothing in the 15 bodies read as an instruction to us.
+Then her codes: 13 of 15 agree letter for letter. The two that differ, 156 and 183, are both rows she coded G from a photo (floor-height glazing read from a plan label; a window where the left surround goes) and I coded N and U from text alone, because I did not open photos. Both are in the nine photo-only rows she names in her sensitivity cut, and the share without those nine is her 27 of 60 (45%, interval 33-58%), still over the one-third bar. Her count holds. Nothing in the 15 bodies read as an instruction to us.
 
 ## Grades
 

@@ -76,7 +76,7 @@ T-0330 review (running). Day 6: T-0021 Material and ContainerRelativeShape snaps
 **Routes, costs from the answer.**
 - A, they say the rule doesn't cover a local cherry-pick: Idris cherry-picks main..branch in a worktree at main's tip, clears the one hunk in run() by keeping `runSource` and the `if behind` line, sets the scriptSaved default to WidgetWriter, builds and tests there, then main moves. 0.5 day. agent_worktree.sh stays off; it aborts on a conflict anyway.
 - B, they say it does: Idris takes the branch's run() lines off the branch so the pull request has no conflict, an Investor presses Merge, the supervisor pulls between sessions, and Idris restores those lines and the WidgetWriter default on main. 1 day plus the wait. The first combined build happens after landing, across 464 commits, which is why B is second. T-0861 moves to 11-02 and F19 has no slack.
-- Rejected: the applier (166,809-byte diff, 9 binaries; it refuses binaries, and an issue body can't <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> it). New commits from a fresh worktree (same tree by another tool, about 1.5 days, loses the trail). `gh pr merge` from a session (the company approving its own landing).
+- Rejected: the applier (166,809-byte diff, 9 binaries; it refuses binaries, and an issue body can't hold it). New commits from a fresh worktree (same tree by another tool, about 1.5 days, loses the trail). `gh pr merge` from a session (the company approving its own landing).
 
 **Default.** Answer needed by 2026-11-01 12:00 ET. With none, nothing lands; F19 and F3 miss their dates, and I rule on 11-02 what moves.
 

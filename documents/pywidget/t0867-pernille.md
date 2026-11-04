@@ -16,7 +16,7 @@ dc126fda has landed since (pywidget_ui 0.4.0, LIBRARY_VERSION bumped for e616b3a
 "bump LIBRARY_VERSION (Low)" item is already done: `LIBRARY_VERSION = "0.4.0"` at pywidget_ui/__init__.py:32.
 
 **Verdict: approve.** The fix does what it says on the two crash classes it names (live text with an infinite ideal
-width; numbers past what SwiftUI can <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>), the host tests pin each clamp, and the device-side check now fails a run
+width; numbers past what SwiftUI can hold), the host tests pin each clamp, and the device-side check now fails a run
 on an extension crash the runner never sees. Five findings, none blocking; F1, F2 and F5 go to Idris as board lines.
 
 ## What I read

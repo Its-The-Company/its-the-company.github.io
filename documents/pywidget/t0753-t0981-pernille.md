@@ -17,7 +17,7 @@ Commit: f27f834f (Idris). Not mine. Line from my T-0752 re-review, M4.
 
 What the line asked: a widget run of the old id that ends after send moved weather -> tide must not bring back
 widgets/weather/ (tree.json, no main.py). Sink writes only into an existing folder for a user id and creates
-only for a bundle premade, or the move waits for/drops the run; a test: send weather, <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> its run, change id,
+only for a bundle premade, or the move waits for/drops the run; a test: send weather, hold its run, change id,
 finish the run, no widgets/weather.
 
 ## What I checked

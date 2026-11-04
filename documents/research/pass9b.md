@@ -21,7 +21,7 @@ Here is the shape of it. The accuracy complaint is real, it is counted, and it s
 
 - **Music accuracy: PASS.** The complaint shows up outside stats.fm for Apple Music.
 - **TV, film, YouTube and cross-service: NOT SHOWN.** It has 0 counted asks. There are builders and one workaround script.
-- **Grade: B- <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> for a music-first Ledger.** It drops to C+ if the headline is "every service". My recommendation is to lead with music. Netflix and YouTube go in as included extras, not as the reason to buy.
+- **Grade: B- holds for a music-first Ledger.** It drops to C+ if the headline is "every service". My recommendation is to lead with music. Netflix and YouTube go in as included extras, not as the reason to buy.
 
 ## 1. Counted reviews (Apple RSS, US, most recent, pages 1-10, fetched 2026-10-22)
 

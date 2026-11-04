@@ -76,6 +76,8 @@ function seen(st, isPub) {
 var e = S.byId('now-words');
 if (!isPub) fromBuild(st);
 if (e) e.textContent = words(st, isPub);
+var c = st.agents_now, b = S.byId('agents-now');
+if (c && c.html && b) b.outerHTML = c.html;
 }
 S.onStatus.unshift(seen);
 if (S.status()) seen(S.status(), true);

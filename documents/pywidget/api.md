@@ -41,7 +41,7 @@ fix: Check prompts.available() first and use a default value when it is False.
 
 A widget run started from the Refresh button in PyWidget is still a widget run: refused. Swift checks the context again (C2 1.5) and answers the same error, with the same `fix` line, if a call ever reaches it.
 
-**No run going on** (T-0463): the runner clears the run context when a run ends. A thread that outlives its run (a daemon thread still asking after the script's main code returned) gets `NotAvailableHere` with `.context` `""`, and nothing is sent; Python checks once before the flush and again after it <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the input lock, so a run that ends while a thread waits for the lock is refused too. Before this, such a call went out with run id 0, which no Stop can wake, and held the input lock for up to 86,400 s, so the next run's `input()` waited behind it.
+**No run going on** (T-0463): the runner clears the run context when a run ends. A thread that outlives its run (a daemon thread still asking after the script's main code returned) gets `NotAvailableHere` with `.context` `""`, and nothing is sent; Python checks once before the flush and again after it holds the input lock, so a run that ends while a thread waits for the lock is refused too. Before this, such a call went out with run id 0, which no Stop can wake, and held the input lock for up to 86,400 s, so the next run's `input()` waited behind it.
 
 ```
 prompts.alert can't show anything: the run that asked has ended.

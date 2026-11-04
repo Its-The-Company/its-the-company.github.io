@@ -17,7 +17,7 @@ Read: `pywidget/python/pywidget_ui/API.md` (130 rows, all proposed, 5769e9c9), `
 
 ## 0. Verdict
 
-**Not ready to freeze. Ready after 11 renames (2 of them in the schema), 8 questions ruled, and the schema tightened (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>-G3, G6, G7, G9, G10, G14-G16) before v1 freezes.** The engine side is sound: every node maps to a public SwiftUI or WidgetKit API I found in the SDK, and no node costs more than the extension can carry, if two renderer rules <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> (Path as a `Shape`, a pixel <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> on bitmaps; s4).
+**Not ready to freeze. Ready after 11 renames (2 of them in the schema), 8 questions ruled, and the schema tightened (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>-G3, G6, G7, G9, G10, G14-G16) before v1 freezes.** The engine side is sound: every node maps to a public SwiftUI or WidgetKit API I found in the SDK, and no node costs more than the extension can carry, if two renderer rules hold (Path as a `Shape`, a pixel <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> on bitmaps; s4).
 
 Two of the renames are my own slips in L4 s4 and the schema I wrote: `accentedRenderingMode` is not Apple's name (the modifier is `widgetAccentedRenderingMode`, W:189), and `AccessoryBackground` is not Apple's name (`AccessoryWidgetBackground`, W:622). Both are schema names, so they are the expensive ones: after the freeze they cost a major version.
 

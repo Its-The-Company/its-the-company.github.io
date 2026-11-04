@@ -47,7 +47,7 @@ Pernille's five uncertain names, answered under this rule: `foreground` rename, 
 | `LIBRARY_VERSION` | keep | Also set `__version__ = LIBRARY_VERSION`; that is where Python users look. |
 | `NODE_TYPES` | keep | |
 | `MODIFIERS` | keep | |
-| `FAMILIES` | rename to `ALL_FAMILIES` | It <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> `accessoryCorner`, which is watchOS-only. The short, obvious name should be the list that works. |
+| `FAMILIES` | rename to `ALL_FAMILIES` | It holds `accessoryCorner`, which is watchOS-only. The short, obvious name should be the list that works. |
 | `IOS_FAMILIES` | rename to `FAMILIES` | The list a `Widget` may declare. |
 | `ENV_KEYS` | keep | Add value sets per key, see <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G10</span>. |
 | `GAUGE_STYLES` | keep | |

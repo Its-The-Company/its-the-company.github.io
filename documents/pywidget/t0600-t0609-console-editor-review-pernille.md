@@ -40,7 +40,7 @@ The `word_count.py` miss in `-174000.log` did not come back in this run. One gre
 </div>
 
 
-None of these crashes, loses typed text, or gives App Review a reason to reject. Nothing here <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the alpha
+None of these crashes, loses typed text, or gives App Review a reason to reject. Nothing here holds the alpha
 build. M3 is the one alpha testers will notice first, so I set it at P1. The other two Mediums are P2.
 
 Fix lines for Idris: T-0611 (M3, P1), T-0612 (M1, P2), T-0613 (M2, P2).

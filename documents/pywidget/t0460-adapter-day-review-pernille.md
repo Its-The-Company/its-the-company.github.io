@@ -130,7 +130,7 @@ Reviewer: Pernille. 2026-10-29. Read from `git show bece101c`, the vendored `unm
   `TextInputView.unmarkText` (Vendor, line 1734) the characters stay, `markedRange` goes to nil, the keyboard gets one
   selection notification, and the editor gets `textInputViewDidChange`. So `insertText` then replaces the plain
   selection, which sits after the kana. The notification fires only while composing, so the L3 point (a key-row tap
-  tells the keyboard nothing) still <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> for ordinary taps.
+  tells the keyboard nothing) still holds for ordinary taps.
 - The test asserts `"x = か()\n"`, caret 6, `markedTextRange == nil`, and one `undo()` back to `"x = か\n"`. Red before
   the fix (`-022836`: `"x = ()\n"`, caret 5), green after (`-023257`, `-023646`).
 - Undo grouping: the test closes Runestone's typing group with `endUndoGrouping()` before the tap, which is the case

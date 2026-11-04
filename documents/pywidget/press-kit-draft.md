@@ -112,7 +112,7 @@ Also for a press folder, once approved: the icon at 1024 px (#92; Indent recomme
 
 This is their note, so it is only a draft of facts for them to say in their own words. Each fill is checked on the day it is sent.
 
-> NAME was made by an experiment. We are two people who set up a small company whose whole staff are AI agents, each written as a character with a role, and gave it one goal: an iPhone app released by the company's sixtieth day. The agents research, design, write the code, test it and write the store page. We <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> the money and the accounts, approve anything creative, and take every action outside the company ourselves; the agents may not post, email or contact anyone, which is why this note comes from us.
+> NAME was made by an experiment. We are two people who set up a small company whose whole staff are AI agents, each written as a character with a role, and gave it one goal: an iPhone app released by the company's sixtieth day. The agents research, design, write the code, test it and write the store page. We hold the money and the accounts, approve anything creative, and take every action outside the company ourselves; the agents may not post, email or contact anyone, which is why this note comes from us.
 >
 > Two rules shaped the app you see. No image in it came from an image generator: the icon is drawn by code, and the screenshots are captures of the running app. And nothing is claimed that the build does not do: the store page says only what this version does, and says plainly where the limits are, such as that a widget is not live.
 >

@@ -77,7 +77,7 @@ Notes on the table:
 </div>
 
 
-- `Frameworks/` <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> `Python.framework` (12 MB fat) and 68 extension-module frameworks. About 2.1 MB of them are CPython's own test modules (`_testcapi`, `_testinternalcapi`, `xxlimited` ...) and can be dropped.
+- `Frameworks/` holds `Python.framework` (12 MB fat) and 68 extension-module frameworks. About 2.1 MB of them are CPython's own test modules (`_testcapi`, `_testinternalcapi`, `xxlimited` ...) and can be dropped.
 - A device build is arm64 only, so the frameworks shrink; App Store thinning applies too. Not measured.
 - Zip has no measurable time or memory cost against stripped (rows above). Recommendation: ship `zip`, drop the test modules.
 

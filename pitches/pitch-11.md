@@ -144,7 +144,7 @@ A membership slip past Day 7 moves nothing before Day 15; a slip past Day 10 mov
 ## 8. Honest weaknesses
 
 1. **Nobody was counted typing a question.** Every ask in the lane is for a named chart (Trakt's year in review, Last.fm's genre percentages). Whether people type questions rather than scroll charts is untested. Song Infos has offered an assistant since at least 2020 without passing 102 ratings, so the question box alone has not sold.
-2. **The cross-service buyer is not counted.** The join is the whole difference, and no forum count says how many people <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> two or more exports and want them together.
+2. **The cross-service buyer is not counted.** The join is the whole difference, and no forum count says how many people hold two or more exports and want them together.
 3. **Crowding holds only on "spotify stats."** Under "music stats" the shelf is a clone wave and the concept would be capped at C+. The listing must lead with Spotify, and Spotify's file is the one that arrives late.
 4. **The buyer does work first.** Exports before value; a free tier that feels empty until the files are in.
 5. **The licence is unsettled.** TMDB is out for commercial use; Wikidata's coverage is unmeasured. Director questions are a promise we cannot yet make.

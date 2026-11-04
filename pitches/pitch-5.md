@@ -55,7 +55,7 @@ I read the current App Review Guidelines in full for 4.1, 4.2, 4.3(a), 2.3.1, 2.
 - **5.6.1 and 5.6.3: ratings stay clean.** Review prompts only through Apple's API, once, after a finished level. The Investors' followers are never asked to rate it up or push it on the charts; that would be discovery fraud.
 - **2.3.1 and our Commandment 2: "built from real days" must be literally true.** Each level carries the log lines it was built from (its tasks, times and amendments come from `log/events.jsonl`, the board archive and `amendments.md`). The scores against "the real company" use the real times. If a fact is not in the log, it is not in a level.
 - **2.5.2: new days are data, not code.** New days arrive in app updates, or as level data the existing engine reads (with the size disclosed first, per 4.2.3). Never downloaded code.
-- **4.3(a) and 4.1(c):** one app <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> every day, never one app per week; no other company's brand or model name in the app name or icon.
+- **4.3(a) and 4.1(c):** one app holds every day, never one app per week; no other company's brand or model name in the app name or icon.
 
 Verdict: Guideline risk is low to medium, and lower than Scope's 4.3 risk. The live mode is where 4.2 bites, so it stays small.
 

@@ -36,7 +36,7 @@ commit; F1 should land before any of these PNGs goes to App Store Connect.
 
 ## 2. The pixel checks: they prove the appearance, with three gaps
 
-What <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>:
+What holds:
 
 - Measured shares, all 68 shots across iPad Pro 11-inch (M5) and iPhone 17e: light 0.004 to 0.192 (worst:
   pro-phone-light-ax5-offer), dark 0.911 to 0.996 (worst: pro-phone-dark-large-offer, pro-offer-dark). Against the

@@ -41,7 +41,7 @@ design gap that the fix leaves in place (it was there before the fix too).
   and runs 1 s; o is late. That matches the bench's red run on f501acb86 (a .wrote, o .late). Mutants 2 and 3 are
   traced the same way and their named tests are the right ones.
 
-## F1 (Low): the red test <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the old bug only within 15 ms of slack
+## F1 (Low): the red test holds the old bug only within 15 ms of slack
 
 `Tests/ExtensionLaneTests.swift:530-537` (P's gate sleeps 20 ms; a at 5 ms; o at 45 ms).
 

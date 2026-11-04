@@ -112,7 +112,7 @@ Row anatomy:
 
 - **Problem.** After "+" and Send, `go(N)` opens the new tab. On a phone the dock folds to its bar, and the state line is drawn only in the open dock, so it never shows.
 - **Decision.** The bar shows the state line too, under the pill, for its usual 8 s.
-- **Why not the head.** The sticky head <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the kind chip, `#N`, the title and the deadline. At 390 a confirmation there would push the title to an ellipsis.
+- **Why not the head.** The sticky head holds the kind chip, `#N`, the title and the deadline. At 390 a confirmation there would push the title to an ellipsis.
 - **Change** (Idris, chat.js `drawDock`):
   - In the bar branch, add `put(dock, out);` after `put(b, barSend);`.
   - The bar placeholder's two "Message the company..." branches collapse into one: `target() === 'new' || isMain(target()) ? 'Message the company...' : ...`.

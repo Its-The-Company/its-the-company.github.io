@@ -30,7 +30,7 @@ VERSION), `tests/macbook_runner_update_test.py`. Judged on code and tests only.
 The swap itself is sound. The release is staged in a temp folder inside `releases/`, renamed into place,
 and both links are replaced with symlink + `os.replace`. Only 6 named paths come out of `git archive`, all
 regular files, with a 4 MB <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>. `launch.py` sits outside every release and only `install.sh` writes it.
-The kind <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> works and is tested. The off switch and both Pauses hold. Nothing outside `<work>` is
+The kind hold works and is tested. The off switch and both Pauses hold. Nothing outside `<work>` is
 touched. But the rollback only covers one failure mode (the first poll exits non-zero), and it confuses a
 bad network with a bad release. The "same sandbox rules" requirement is not enforced. Four Medium
 findings, so T-0751 is not ticked. The fix line is T-0755.
@@ -162,7 +162,7 @@ Investor is asked again with the same one-line diff. It fails closed, so no acce
 promise of one approval per change.
 Fix: build the compared profile from fixed inputs on both sides. In the self-test (`runner.py:1195`) and for
 "ours" (`runner.py:721`), set `own_launchd_folders` to one placeholder folder (and keep `PLACEHOLDER` for the
-scratch path), then compare and hash that. Test: the probe above. Create launchd-named folders between the hold
+scratch path), then compare and hash that. Test: the probe above. Create launchd-named folders between the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>
 and the approval, and the approved sha256 must install. Also key the hold (`runner.py:550-553`) on the
 release's file contents (for example `git rev-parse <commit>:tools/macbook-runner` plus the xc_helpers.py blob),
 not on the main commit. Today every company commit makes a held release go through a full stage and two

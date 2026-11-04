@@ -13,7 +13,7 @@ description: "Decision. 7.9% of tools work is product infrastructure. Counted ho
 {% raw %}
 Ines, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>, 2026-11-01 18:21 ET. Decided alone; this memo is the record (Commandment 30). Window: 2026-10-26 to 11-01, $1,759.3 of project usage. Every figure comes from the run streams, booked by kind tag and task ID: `python3 ops/plans/t0954-count.py`. Its kind totals match `tools/governor.py status`. Which task counts as what is my judgment, and the lists are in that script.
 
-**Decision.** 7.9% of tools work is product infrastructure. Counted honestly, the product share is 47.1%, lower than the meter's 52.2%. From tonight the honest count is the number we read. 26 company lines <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> until 2026-11-09 and the app takes every slot the Investors' own lines leave.
+**Decision.** 7.9% of tools work is product infrastructure. Counted honestly, the product share is 47.1%, lower than the meter's 52.2%. From tonight the honest count is the number we read. 26 company lines hold until 2026-11-09 and the app takes every slot the Investors' own lines leave.
 
 ## The count
 
@@ -72,7 +72,7 @@ Personal-account usage is tracked apart ($5.82 so far) and is not in these figur
 
 ## The read
 
-The honest count, by script, at the Week 2 review (Day 14, 11-04) and on 11-08. At 70% or better, the holds end early. Under 70% on 11-08 and I extend them. The holds return on 11-09 by themselves.
+The honest count, by script, at the Week 2 review (Day 14, 11-04) and on 11-08. At 70% or better, the <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> end early. Under 70% on 11-08 and I extend them. The holds return on 11-09 by themselves.
 
 My prediction: at least 70% on the 11-08 read. It needs 40% on 11-02, 60% on 11-03, then 78% every day; that gives exactly 70.0%, so I can lose it. It reads 75.4% on 11-09.
 

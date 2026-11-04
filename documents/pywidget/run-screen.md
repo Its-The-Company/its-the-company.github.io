@@ -96,7 +96,7 @@ Plain descriptive words only; the words "app", "apps" and "mini app" never appea
 | `confirm.msg` | [X] is still running. Stopping it ends this run. | alert message | DRAFT |
 | `confirm.cancel` | Cancel | alert, keeps [X] running; [Y] is not opened | DRAFT |
 | `confirm.ok` | Stop and Open | alert, destructive style; stops [X], then opens [Y] and starts its run | DRAFT |
-| `busy.line` | [X] is running in another window. Stop it there, then run here. | console line when Run is tapped while another window's run <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> Python; [X] is that window's file name, "Another script" when it has none; nothing runs or queues (the interim until the confirm.* alert, home-setup s7.4, T-0505). Code: ConsoleModel.busyLine | DRAFT |
+| `busy.line` | [X] is running in another window. Stop it there, then run here. | console line when Run is tapped while another window's run holds Python; [X] is that window's file name, "Another script" when it has none; nothing runs or queues (the interim until the confirm.* alert, home-setup s7.4, T-0505). Code: ConsoleModel.busyLine | DRAFT |
 | `restart.other` | Restart stops [X] in another window. | console line in the window that tapped Restart, said after Restart happened and only when it stopped a run in another window; [X] is that window's file name | DRAFT |
 | `restart.told` | Restart in [Y] stopped this run. | console line in the window whose run Restart stopped; [Y] is the file name of the window that tapped Restart ("another window" when it has none) | DRAFT |
 | `a11y.stop` | Stop [name] | accessibility label of Stop | DRAFT |

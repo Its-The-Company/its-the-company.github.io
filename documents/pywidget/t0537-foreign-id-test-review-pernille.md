@@ -22,7 +22,7 @@ Verdict: PASS
   `git checkout`; `git diff` on pywidget/ios/App is empty. The sources live in pywidget/ios/App/Store, not Sources.
 
 ## Done-line check
-- tx(3) listed, tx(2) not: asserted (reload stays 1, Pro <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>).
+- tx(3) listed, tx(2) not: asserted (reload stays 1, Pro holds).
 - receive(tx(3, revoked)): Pro holds, `catchUp.isCancelled` false, no reload, reads == 3 (pins the scripted order).
 - tx(2) read ends the window: reloads go 1 to 2, and a further read stays at 2.
 - Deterministic: injected reader, 30 s catch-up delay never elapses, task cancelled and awaited at the end, no clock or I/O.

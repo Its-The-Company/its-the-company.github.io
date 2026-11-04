@@ -17,7 +17,7 @@ HEAD). Read: `git show 6ce0b3410`; bridge-contract s4 items 5 and 7; runtime `py
 written and were not reviewed; Xcode not run.
 
 **Verdict: passes with fixes.** The Python floor and length checks match item 7's values and fire before any call
-is sent. Two Low defects (a test that does not <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> the boundary, a wrong error for a non-str `thread`) and one
+is sent. Two Low defects (a test that does not hold the boundary, a wrong error for a non-str `thread`) and one
 Medium in the contract: the per-run <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> as written does not deliver what item 7 says it does.
 
 ## Tests run

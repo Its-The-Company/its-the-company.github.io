@@ -104,7 +104,7 @@ times (2056 files x 2 tables). Stage run under `sandbox-exec (deny network*)`: e
 
 Notes, no line: the script comment says the stdlib strip check runs "after the last write", but CopySwiftLibs
 runs after the phase (run 1 order). It copies only Swift runtime libraries, never under python/ or
-app_packages/, so the claim <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> for those two; reword it to say so when the file is next touched. The layout test checks the denylist at the top path component only;
+app_packages/, so the claim holds for those two; reword it to say so when the file is next touched. The layout test checks the denylist at the top path component only;
 nested names are caught by the RECORD comparison instead. Both fine as they are.
 
 ## Clean-up

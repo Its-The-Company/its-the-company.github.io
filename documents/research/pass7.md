@@ -93,7 +93,7 @@ Detail that matters to us: **Export to CSV and Excel is a Large-plan feature** (
 
 Listen to this: "A superb tool for seated events! ... especially for fundraising events. What a delight to be able to share proposed plans with committee members" (Seated, 2022-01-18). And: "Seat maker really helped me with the planning of my dinner party" (Seat Maker, 2025-07-25). Non-wedding use is real: named non-wedding occasions (15 reviews) outnumber weddings (12) in this sample. But they are small parties, birthdays and dinners, not holiday parties or galas.
 
-Review months, all 90: Jan 10, Feb 9, Mar 5, Apr 8, May 4, Jun 6, Jul 16, Aug 7, Sep 14, Oct 4, **Nov 3, Dec 4**. November and December <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> 7 of 90 (8%), below the even share of 15%. A review date is not an event date, and the RSS sample is small, so this is weak. It does not show a November rise.
+Review months, all 90: Jan 10, Feb 9, Mar 5, Apr 8, May 4, Jun 6, Jul 16, Aug 7, Sep 14, Oct 4, **Nov 3, Dec 4**. November and December hold 7 of 90 (8%), below the even share of 15%. A review date is not an event date, and the RSS sample is small, so this is weak. It does not show a November rise.
 
 **b. The Better Seater thread** (https://news.ycombinator.com/item?id=38845650, 106 comments, all read by keyword then by hand). Non-wedding needs: 38846516 (tried to write a general "banquet hall/dinner/wedding" solver), 38846964 (classroom placement), 38851619 ("We would use this in a corporate environment, for networking dinners etc."), and one piece of advice to sell to hotel group-events planners (38853535). **Holiday party or gala: 0 of 106.**
 

@@ -30,7 +30,7 @@ For context only: `_pywidget_runtime/runner.py` (how a run's error is recorded),
 run's error record and traceback. M1 to M3 should be fixed before Day 10 too, or accepted in writing by Ines.
 Everything else is Low.
 
-What <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> (each one checked, not assumed):
+What holds (each one checked, not assumed):
 
 1. Nothing is printed except the one plain-http warning. No URL, header or body goes to stdout or stderr.
    That is in the code (http.py:174-179 is the only print) and tested (test file :470-476).

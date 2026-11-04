@@ -19,7 +19,7 @@ Method: real bypass attempts through the test harness (`test_runner.Scenario`, t
 
 ## Verdict
 
-**Accept with three Medium follow-ups before the flag can default on.** None of them blocks T-0675 from starting. The scan, the lane key, `mirror_entry` and the no-.pyc rule <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>. The finder does its job on ordinary imports: `import`, `__import__`, `importlib.import_module`, `importlib.__import__`, `exec('import x')`, `__import__(..., fromlist=['http'])` and a `builtins.__import__` swap are all refused with the scan's text. Three problems remain:
+**Accept with three Medium follow-ups before the flag can default on.** None of them blocks T-0675 from starting. The scan, the lane key, `mirror_entry` and the no-.pyc rule hold. The finder does its job on ordinary imports: `import`, `__import__`, `importlib.import_module`, `importlib.__import__`, `exec('import x')`, `__import__(..., fromlist=['http'])` and a `builtins.__import__` swap are all refused with the scan's text. Three problems remain:
 1. It refuses an ordinary call on an allowed module (`datetime.strptime`).
 2. It does not hold "whoever imports it" across a reset.
 3. Its evidence does not cover the 3.15 lazy-import interpreter it runs on.

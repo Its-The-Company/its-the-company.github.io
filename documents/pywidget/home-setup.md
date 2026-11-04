@@ -98,7 +98,7 @@ Plain descriptive words only; "app", "apps" and "mini app" never appear in user-
 | `name.empty` | Enter a name. | under the field when the trimmed name is empty; Save disabled | DRAFT |
 | `name.long` | Use 40 characters or fewer. | under the field past 40 characters; Save disabled | DRAFT |
 | `name.scalars` | This name is too long to save. Remove a few characters or emoji. | under the field when the name is 40 characters or fewer but over 64 Unicode scalars (flags, skin tones); Save disabled (T-0505, s7.2) | DRAFT |
-| `name.banned` | Remove the hidden characters from this name. | under the field when the name <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> a control, zero-width or direction character (a pasted emoji sequence, say); Save disabled (T-0505, s7.2) | DRAFT |
+| `name.banned` | Remove the hidden characters from this name. | under the field when the name holds a control, zero-width or direction character (a pasted emoji sequence, say); Save disabled (T-0505, s7.2) | DRAFT |
 | `entry.head` | Script to Run | section header | DRAFT |
 | `entry.foot` | Each time it opens, this script runs from the start, in the project folder. | section footer | DRAFT |
 | `entry.one` | The only script in this project. | footer when the project holds one .py file (the lone-script case) | DRAFT |

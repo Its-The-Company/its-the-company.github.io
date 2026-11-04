@@ -161,7 +161,7 @@ Reviewer: Pernille, 2026-10-27. Read-only: both diffs, the current `ProStore.swi
 ### Verdict
 
 M1, M2 and M3 are fixed as asked, and so are L1 and I4. Every new test would fail on the old code. The
-state table <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span>. The main actor is respected: `ProStore` and `PaywallModel` are `@MainActor`, and
+state table holds. The main actor is respected: `ProStore` and `PaywallModel` are `@MainActor`, and
 `reloadWidgets` is a `@MainActor` closure called only from `setEntitled`. One new Medium (N1) comes from the
 M1 fix itself. It is the purchase case of M1, narrowed but not closed. It goes to Idris as T-0486. I would not
 send a TestFlight build until N1 is fixed or ruled acceptable.

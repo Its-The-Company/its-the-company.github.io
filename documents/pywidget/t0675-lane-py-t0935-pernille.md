@@ -89,7 +89,7 @@ It is not true that a host can't see this. Run with the stdlib as a sourceless z
 
 ## "Not held" (chair line 13:03, item 1)
 
-Added to both places the list lives, as T-0720's route was (16:54 item 5): lane.py's header, which <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> the full list, and C2 1.7, which carries the routes since T-0731. `.lane-demoted.json` was already there. New bullets: `.lane-demoted.lock`, and `ext.marker`, `lane-peak`, `lane-refused` together. My only lane.py edits are those docstring texts and L3: no code.
+Added to both places the list lives, as T-0720's route was (16:54 item 5): lane.py's header, which holds the full list, and C2 1.7, which carries the routes since T-0731. `.lane-demoted.json` was already there. New bullets: `.lane-demoted.lock`, and `ext.marker`, `lane-peak`, `lane-refused` together. My only lane.py edits are those docstring texts and L3: no code.
 
 ## Appendix: mutants
 

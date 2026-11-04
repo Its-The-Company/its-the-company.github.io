@@ -32,7 +32,7 @@ item, removing the callback line turns a test red.
    `cacheLock`; `store` checks the flag under the same lock. Any `store` lands either before the flag (then deleted
    by `forgetCache`) or after it (refused). No window. Test covers revoke, late fix, grant.
 3. **R5.** `isExcludedFromBackup` set on `Application Support/pywidget/device/` after every write. That folder
-   <span title="What keeps an idea below the top: the cap that applies to it now.">holds</span> only `location.json`, so nothing else is pulled out of backups. Test covers remade folder.
+   holds only `location.json`, so nothing else is pulled out of backups. Test covers remade folder.
 4. **R6 explanation of `LocationCacheGuard.app`**: given in the test's comment; acceptable.
 5. **07:41 cause** is in the commit's done-note (tests in the tree before their fixes, ad580920). Accepted.
 6. **Green.** All five `LocationCacheFollowUpTests` passed in ops/runs/xcodebuild-20261102-093615.log (test case

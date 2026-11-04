@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T20:56:07.893819+00:00",
+ "at": "2026-11-04T20:59:09.559521+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[build] T-2176 extension lane run on runner",
    "model": "opus",
    "started": "2026-11-04T19:01:49.224Z",
-   "seconds": 6858,
+   "seconds": 7040,
    "finished": null,
    "effort": "high"
   }
@@ -39,7 +39,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 354,
+  "runnable_count": 355,
   "blocked_count": 122
  },
  "meter": {
@@ -82,7 +82,7 @@
   "week_pct": 37.4,
   "usage_pct": 38.5,
   "work_pct": 76.7,
-  "read_at": "2026-11-04T20:56:00+00:00",
+  "read_at": "2026-11-04T20:59:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -222,6 +222,50 @@
     "at": "2026-11-04T14:47:41-05:00",
     "n": "Evan",
     "d": 1
+   },
+   {
+    "lane": "b",
+    "task": "T-2195",
+    "w": "Operator",
+    "k": "ops",
+    "t": "First thing next session",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T15:57:11-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2079",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal branch personal/b4 did not land",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T15:57:11-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2191",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal branch personal/a6 did not land",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T15:57:11-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2202",
+    "w": "Maren",
+    "k": "tools",
+    "t": "Personal branch personal/a did not land",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T15:57:11-05:00",
+    "n": "Jeremy"
    }
   ]
  },
@@ -233,14 +277,14 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 15,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T15:56:00-05:00"
+  "at": "2026-11-04T15:59:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -401,7 +445,7 @@
    }
   ],
   "count": {
-   "next": 354,
+   "next": 355,
    "wait": 37,
    "blocked": 85,
    "you": 16
@@ -421,12 +465,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 1,
-  "total": 2,
-  "at": "3:56 PM",
+  "lanes": 2,
+  "total": 3,
+  "at": "3:59 PM",
   "why": "",
-  "at_iso": "2026-11-04T20:56:00+00:00",
+  "at_iso": "2026-11-04T20:59:00+00:00",
   "started": "1:50 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:50 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:56 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:50 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:59 PM ET</p></section>"
  }
 }

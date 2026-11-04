@@ -6,7 +6,11 @@ if (f.action === 'add') return cur === null ? f.after : (cur === f.after ? false
 if (cur === null) return null;
 if (f.action === 'delete') return sha === f.base_sha ? '' : null;
 if (sha === f.base_sha) return f.after;
-if (f.old === '' && f.post === '') return cur + (cur && !/\n$/.test(cur) ? '\n' : '') + f['new'];
+if (f.old === '' && f.post === '') {
+var add = f['new'].replace(/\n$/, '');
+if (!add || ('\n' + cur + '\n').indexOf('\n' + add + '\n') >= 0) return false;
+return cur + (cur && !/\n$/.test(cur) ? '\n' : '') + f['new'];
+}
 var k = f.pre + f.old + f.post, i = cur.indexOf(k);
 if (!k || i < 0 || cur.indexOf(k, i + 1) >= 0) return null;
 return cur.slice(0, i) + f.pre + f['new'] + f.post + cur.slice(i + k.length);
@@ -52,10 +56,20 @@ return r.json();
 });
 }
 function done() { try { return JSON.parse(localStorage.getItem(DONE) || '[]'); } catch (e) { return []; } }
+function hide(id) { var d = done(); if (d.indexOf(id) < 0) d.push(id); localStorage.setItem(DONE, JSON.stringify(d.slice(-50))); }
+function record(id) { return 'ops/tamper/decided/' + id + '.json'; }
 function decide(id, how, extra) {
 var rec = Object.assign({ id: id, decision: how, at: new Date().toISOString() }, extra || {});
-return write('ops/tamper/decided/' + id + '.json', 'Investor: ' + how + ' the change a session tried (' + id + ')', JSON.stringify(rec, null, 1) + '\n')
-.then(() => { var d = done(); d.push(id); localStorage.setItem(DONE, JSON.stringify(d.slice(-50))); });
+return read(record(id)).then((c) => write(record(id), 'Investor: ' + how + ' the change a session tried (' + id + ')', JSON.stringify(rec, null, 1) + '\n', c.sha))
+.then(() => hide(id));
+}
+var ALREADY = 'Already approved; nothing written', SAID = { approve: 'Already approved and applied; nothing written. To undo it, edit the file by hand', moved: 'Already moved out by the company; nothing written' };
+function unless(id, mine, go) {
+return read(record(id)).then((c) => {
+var d = '';
+try { d = JSON.parse(c.text).decision; } catch (e) {}
+return d === 'approve' ? d : d === 'move-out' ? read('ops/tamper/moved/' + id + '.json').then((m) => m.text === null ? '' : 'moved') : '';
+}).then((a) => a ? (hide(id), a === mine ? ALREADY : SAID[a]) : go());
 }
 function entry(id) {
 return read('ops/tamper/' + id + '.json').then((e) => {
@@ -64,7 +78,7 @@ return JSON.parse(e.text);
 });
 }
 T.exact = (id) => entry(id).then((e) => { var m = {}; e.files.forEach((f) => { if (f.diff) m[f.path] = f.diff; }); return m; });
-T.approve = (id) => entry(id).then((e) => {
+T.approve = (id) => unless(id, 'approve', () => entry(id).then((e) => {
 var fs = e.files.filter((f) => f.appliable), out = [], skip = [];
 return fs.reduce((p, f) => p.then(() => read(f.path).then((c) => {
 var t = next(f, c.text, c.sha);
@@ -74,13 +88,14 @@ return write(f.path, 'Investor approves the change a session tried (' + id + '):
 .then((r) => { out.push(f.path); return r; });
 })), Promise.resolve()).then(() => {
 if (skip.length && !out.length) throw new Error(skip.join(', ') + ' changed on GitHub where the session changed it; edit it by hand');
-return decide(id, 'approve', { applied: out, skipped: skip }).then(() => out.length + ' file' + (out.length === 1 ? '' : 's') + ' changed from your account' +
+return decide(id, 'approve', { applied: out, skipped: skip }).then(() => !out.length && !skip.length ? 'The change is already in place on GitHub; no file written, your decision recorded.' :
+out.length + ' file' + (out.length === 1 ? '' : 's') + ' changed from your account' +
 (skip.length ? '; not applied (changed on GitHub since): ' + skip.join(', ') : '') + '. The Mac mini takes it in at its next tick.');
 });
-});
-T.disapprove = (id) => decide(id, 'disapprove').then(() => 'Kept out. Nothing changed.');
-T.moveOut = (id, comment) => decide(id, 'move-out', { comment: String(comment || '') })
-.then(() => 'Recorded. The company moves the setting to its own file under ops/settings/ and its tools read that first; your file stays as it is.');
+}));
+T.disapprove = (id) => unless(id, '', () => decide(id, 'disapprove').then(() => 'Kept out. Nothing changed.'));
+T.moveOut = (id, comment) => unless(id, '', () => decide(id, 'move-out', { comment: String(comment || '') })
+.then(() => 'Recorded. The company moves the setting to its own file under ops/settings/ and its tools read that first; your file stays as it is.'));
 T.mount = (box) => {
 var id = box.getAttribute('data-tamper'), li = box.closest('li'), st = S.el('p', 'meta', '');
 if (done().indexOf(id) >= 0) { if (li) li.hidden = true; return; }
@@ -103,7 +118,7 @@ var args = a[3]();
 if (!args) return;
 each(box, 'button', (x) => { x.disabled = true; });
 st.textContent = 'Working...';
-fn.apply(null, args).then((m) => { st.textContent = a[1] + ': ' + m; }, (err) => {
+fn.apply(null, args).then((m) => { st.textContent = /^Already /.test(m) ? m : a[1] + ': ' + m; }, (err) => {
 st.textContent = 'Not done: ' + err.message + '.';
 each(box, 'button', (x) => { x.disabled = false; });
 });

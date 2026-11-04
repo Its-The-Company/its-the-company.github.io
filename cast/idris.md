@@ -65,7 +65,7 @@ Dated task logs and full lessons: archive.md.
 
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
-- T-2119 4947c6e39: _ssl and _hashlib declare 3B52.1 (review T-2121 Pernille open). Lesson: a "no route" verdict on a statically linked lib needs its call graph (otool -tV), not a reading of its job; OpenSSL's OPENSSL_CONF autoload hands scripts a path.
+- T-1852 0448468a9 (closed lane after stuck, 5/5 mutants): needs an independent review before the (c) flag. Lesson: board_tick takes one commit and one repo path as Evidence; a macbook-results job file is not one, so cite the job id in Detail.
 {% endraw %}
 
 

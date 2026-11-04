@@ -1,24 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-04T17:25:44.320884+00:00",
+ "at": "2026-11-04T17:32:08.972690+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-04T11:25:15-05:00"
+  "active": false,
+  "kind": "",
+  "started": null
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-2051 close out, then T-1852",
    "model": "opus",
    "started": "2026-11-04T17:01:20.779Z",
-   "seconds": 1463,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-04T17:26:19.867000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[ops] T-2148 diff and T-1803 site Approve",
@@ -42,14 +40,6 @@
    "started": "2026-11-04T17:01:09.959Z",
    "seconds": null,
    "finished": "2026-11-04T17:01:10.010Z"
-  },
-  {
-   "name": "idris",
-   "task": "[test] T-2066 stop-order mutant fix",
-   "model": "opus",
-   "started": "2026-11-04T16:52:14.459Z",
-   "seconds": null,
-   "finished": "2026-11-04T17:00:48.772000+00:00"
   }
  ],
  "queue": {
@@ -93,12 +83,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-04T11:40:13-05:00",
  "personal": {
   "week_pct": 36.99,
-  "usage_pct": 39.1,
-  "work_pct": 77.3,
-  "read_at": "2026-11-04T17:25:00+00:00",
+  "usage_pct": 38.7,
+  "work_pct": 77.0,
+  "read_at": "2026-11-04T17:32:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -109,7 +99,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T12:23:07-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a",
@@ -175,7 +166,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T12:23:07-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a",
@@ -231,6 +223,250 @@
     "e": "high",
     "at": "2026-11-04T12:23:07-05:00",
     "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-2134",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "52 lane branches since 2026-11-01 were parked before landing because the...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:25:48-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-2149",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "A lane-stop emergency must stay open while its stop flag stands",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:25:48-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-1735",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Experiment ids chosen inside a lane collide with main's",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:25:48-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a2",
+    "task": "T-2152",
+    "w": "Idris",
+    "k": "review",
+    "t": "Review of 80804f361",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:25:48-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-2122",
+    "w": "Ines",
+    "k": "plan",
+    "t": "When session_end.py stops a work session at close_by, the committed...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:25:48-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a2",
+    "task": "T-2141",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Before the first TestFlight upload",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:25:48-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-2147",
+    "w": "Pernille",
+    "k": "test",
+    "t": "StaleEntryPlanTests never has sampled_at ahead of now, so mutant guard let...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:25:48-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-2101",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-1858 follow-up",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:25:48-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-2106",
+    "w": "Idris",
+    "k": "tools",
+    "t": "Personal account b3 stopped on T-2026+T-2063",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:25:48-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-2123",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal branch personal/b5 did not land",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:25:48-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-2124",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal account b2 stopped",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:25:48-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-2125",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal account b3 stopped",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:25:48-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-2153",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Independent review",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:27:06-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-2126",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal account b stopped",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:27:06-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-2072",
+    "w": "Odalys",
+    "k": "site",
+    "t": "T-1776 stage 1 rest",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:27:06-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-1736",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Continuation of T-1689 batch",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:27:06-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-1930",
+    "w": "Idris",
+    "k": "build",
+    "t": "Host-only, no Xcode, with T-1929",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:27:06-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-1931",
+    "w": "Idris",
+    "k": "build",
+    "t": "Host-only, no Xcode, with T-1929",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:27:06-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-1972",
+    "w": "Idris",
+    "k": "build",
+    "t": "With T-1882 / B5",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:27:06-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-1977",
+    "w": "Idris",
+    "k": "build",
+    "t": "Host only, by Day 20",
+    "m": "opus",
+    "e": "medium",
+    "at": "2026-11-04T12:27:06-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-1978",
+    "w": "Pernille",
+    "k": "review",
+    "t": "By Day 22",
+    "m": "opus",
+    "e": "medium",
+    "at": "2026-11-04T12:27:06-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-0622",
+    "w": "Idris",
+    "k": "build",
+    "t": "One appearance flag",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-04T12:27:06-05:00",
+    "n": "Evan"
    }
   ]
  },
@@ -242,35 +478,30 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 12,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T12:25:00-05:00"
+  "at": "2026-11-04T12:32:00-05:00"
  },
- "next_tick_why": "session",
- "pool": {
-  "why": "Behind the week: 49% used with 49% of the week past, so the pool is sized to catch up",
-  "n": 2,
-  "at": "2026-11-04T11:25:13.919972-05:00"
- },
+ "next_tick_why": "last_tick",
+ "pool": null,
  "lanes": [
-  {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-2051 close out, then T-1852",
-   "model": "opus",
-   "since": "2026-11-04T17:01:20.779Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
    "model": null,
    "since": null,
    "next": []
@@ -309,17 +540,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-2051 close out, then T-1852",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T17:01:20.779Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -394,6 +615,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "When a widget script freezes inside the widget extension, the extension now stops running...",
+    "at": "2026-11-04T12:25:00-05:00"
+   },
+   {
     "w": "Odalys+pernille",
     "t": "Pressing Approve on the site a second time no longer adds the same rule to the Investors' file...",
     "at": "2026-11-04T12:20:00-05:00"
@@ -402,11 +628,6 @@
     "w": "Odalys",
     "t": "The check that stops a bad sync from overwriting the Investors' amendment file is now written...",
     "at": "2026-11-04T12:17:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Checked Pernille's rule that puts the stale clock on a widget at the right moment: it is correct...",
-    "at": "2026-11-04T12:03:00-05:00"
    }
   ],
   "count": {
@@ -430,13 +651,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
-  "lanes": 1,
-  "total": 2,
-  "at": "12:25 PM",
+  "main": 0,
+  "lanes": 3,
+  "total": 3,
+  "at": "12:32 PM",
   "why": "",
-  "at_iso": "2026-11-04T17:25:00+00:00",
-  "started": "11:25 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 11:25 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:25 PM ET</p></section>"
+  "at_iso": "2026-11-04T17:32:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:32 PM ET</p></section>"
  }
 }

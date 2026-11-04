@@ -52,6 +52,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Open (from T-1045): T-1048 stdlib size stop unexplained, my check; T-1047 upload.sh identity.
 - T-2049 (c4cb49a0d): g_run_id stays set from Python's finished until pw_rt_run returns; records stamped then follow finished. T-2055 ties to my T-0515 H1 item.
 - T-2118 (dee4c3e7b): FAIL narrow on 3B52.1; lesson: each lib-dynload .so is its own bundle with upstream's manifest (_ssl stats, C617.1 only); check every bundle, not just Python.framework. Fixes T-2119/T-2120.
+- T-2133 (152648a8f): App guard fixes 2b77b0dc5; fix lines T-2135..T-2140 (Idris). Lesson: when a fix stops blanking strings, check every later regex for string-blindness (COMMENTS ate code after "file://"). Mutant runner: load the author's module and swap MUTANTS/MUST_NAME.
 - 2026-11-04 T-2019 (bba05e3e2): 5bfc91948 notif helper approve w/ changes; F1-F4 = T-2026..29. Lesson: MacBook result.json has only the last 60 lines (no skipped names); full log stays on the runner in jobs/<id>/src/ops/runs. Runner Simulator is reused, so permission state carries between jobs.
 {% endraw %}
 

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T18:08:48.413337+00:00",
+ "at": "2026-11-04T18:09:59.304164+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[site] T-2077 site overhaul stage 2 live",
    "model": "opus",
    "started": "2026-11-04T17:56:16.332Z",
-   "seconds": 752,
+   "seconds": 822,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[build] T-1854 extension status and run rows",
    "model": "opus",
    "started": "2026-11-04T17:56:27.211Z",
-   "seconds": 741,
+   "seconds": 812,
    "finished": null,
    "effort": "high"
   }
@@ -74,7 +74,7 @@
   "week_pct": 37.0,
   "usage_pct": 38.7,
   "work_pct": 77.0,
-  "read_at": "2026-11-04T18:08:00+00:00",
+  "read_at": "2026-11-04T18:12:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -472,14 +472,14 @@
   }
  ],
  "disk": {
-  "free_gb": 10,
+  "free_gb": 8.4,
   "gate": "closed",
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T13:08:00-05:00"
+  "at": "2026-11-04T13:12:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -657,11 +657,23 @@
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6638252935",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Make sure that unneeded files are..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -672,10 +684,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "1:08 PM",
+  "at": "1:12 PM",
   "why": "",
-  "at_iso": "2026-11-04T18:08:00+00:00",
+  "at_iso": "2026-11-04T18:12:00+00:00",
   "started": "12:53 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:08 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:12 PM ET</p></section>"
  }
 }

@@ -89,13 +89,14 @@ return r.json();
 }).then((list) => {
 var hit = (Array.isArray(list) ? list : []).filter((i) => i && !i.pull_request && i.state === 'open' && i.title === title
 && (i.labels || []).some((l) => String((l && l.name) || l).toLowerCase() === 'emergency')).sort((x, y) => y.number - x.number)[0];
-if (!hit) return 'No open “' + title + '” issue, so nothing sent.';
+if (!hit) return 'Nothing sent: account ' + a.id + ' has no open stop issue, so no trip is holding it.';
 var h = S.hdrs(); h['Content-Type'] = 'application/json';
 return fetch(S.API + '/repos/' + repo + '/issues/' + hit.number + '/comments', { method: 'POST', headers: h,
 body: JSON.stringify({ body: 'LANE CLEAR ' + a.id }) }).then(S.checkAuth, () => null).then((r) => {
 if (!r) return 'No answer from GitHub. The comment may have landed: look on #' + hit.number + ' before you tap again.';
 if (!r.ok) throw new Error(S.said(r) + (r.status === 403 || r.status === 404 ? ' (does the token have Issues: read and write?)' : ''));
-return 'Sent LANE CLEAR ' + a.id + ' on #' + hit.number + '. The company lifts the stop when it next reads its inbox and replies there.';
+return 'Sent LANE CLEAR ' + a.id + ' on #' + hit.number + ' at ' + new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
++ '. The inbox lifts the stop within minutes and replies on #' + hit.number + ' with what it did.';
 });
 });
 }

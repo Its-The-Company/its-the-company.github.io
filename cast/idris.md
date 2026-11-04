@@ -68,6 +68,8 @@ Dated task logs and full lessons: archive.md.
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
 - T-1852 0448468a9 (closed lane after stuck, 5/5 mutants): needs an independent review before the (c) flag. Lesson: board_tick takes one commit and one repo path as Evidence; a macbook-results job file is not one, so cite the job id in Detail.
+
+- T-0657 Settings 036c854f, uncompiled (lock stuck, #175); T-2225 holds the rest: runner job J-20261104-1728-xc-test, shots, Maren's read, review. Lesson: `xc.sh | tail` shows tail's exit 0 on a lock refusal; read pipestatus. git pull is hook-blocked in session: commit by pathspec, push only.
 {% endraw %}
 
 

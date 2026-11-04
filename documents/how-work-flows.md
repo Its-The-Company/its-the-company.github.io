@@ -262,6 +262,8 @@ no session while work was waiting; that is allowance the week can't get back.
    it starts the next one. Cost: 132 rebuilds, median 55 s, 2.3 hours in total in 3 days. Between sessions that
    chained (n=61) the main account sat idle a median of 271 s, 7.7 hours in total; the rebuilds were up to 30% of it.
    Fix: start the next session first and rebuild the charts beside it, or once an hour.
+   Done (T-1898, OPT-078): each rebuild now runs at most once an hour. Measured before: 71 of 72 chained gaps
+   held a rebuild, median 121 s each. The after number comes from tools/flow_costs.py once 40 gaps have passed.
 2. **A third of lane work fails at landing.** Of 21 lane branches that reached landing, 14 landed, 6 failed their
    tests and 1 could not be read. Each failure is a whole lane session whose result waits for a retry. Fix: before a
    lane marks a branch ready, replay it on the newest main and run the same check landing will run; record why each

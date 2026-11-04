@@ -13,7 +13,7 @@ description: "Verdict: approve. F1 and F2 are fixed, the fixes are tested, and e
 {% raw %}
 Pernille, 2026-11-04. Independent review (Commandment 13) of eede17e9b against my T-1904 findings F1 and F2 (pywidget/docs/reviews/t0866-pernille.md). I judged from the diff, my probes and the runs below, not the author's notes.
 
-**Verdict: approve.** F1 and F2 are fixed, the fixes are tested, and every new branch has a mutant that the suite <span title="A test written in advance. If it fires, we drop the idea.">kills</span>. P1, P4 and P8 now do what T-1904 asked for. I found no High or Medium finding. Two Low findings follow. One of them (L1) is older than this commit but sits next to the new fence. The changes stay host-only, and nothing calls the plan until T-1905.
+**Verdict: approve.** F1 and F2 are fixed, the fixes are tested, and every new branch has a mutant that the suite <span title="A test written in advance. If it fires, we drop the idea.">kills</span>. P1, P4 and P8 now do what T-1904 asked for. I found no High or Medium finding. Two Low findings follow, each with a fix line for Idris (T-2154, T-2155). One of them (L1) is older than this commit but sits next to the new fence. The changes stay host-only, and nothing calls the plan until T-1905.
 
 ## What I ran
 
@@ -55,11 +55,11 @@ Pernille, 2026-11-04. Independent review (Commandment 13) of eede17e9b against m
 
 `place` keeps a top-level project `main.py` out only when it is a single part (line 108). The run-name refusal (lines 128-129) checks the top-level part against `runKeys`, which does not include main.py. So P17, a project folder `main.py/` holding `a.py`, plans copies `main.py/a.py` and `main.py`. No disk can hold a folder and a file of the same name in one directory. On a case-insensitive disk, `Main.py/` (P14) collides in the same way. With T-0906's staging, the send fails at disk time with an error instead of a refusal by name, and the widget keeps its old folder, so no data is lost. The new fence (line 145, `kept = runKeys ∪ main.py`) is now wider than the refusal set, so anything sent under such a folder is never removed after the person deletes it (P14b).
 
-Fix: refuse by name any entry whose top-level part has the key of main.py and that is not the widget's own file, which means using `kept` in the refusal at line 129 as well. Then the refusal set and the removal fence are the same set, and the leftover cannot arise. The input is rare; fold it into T-1905 or the next slice. No board line, because it is Low.
+Fix: refuse by name any entry whose top-level part has the key of main.py and that is not the widget's own file, which means using `kept` in the refusal at line 129 as well. Then the refusal set and the removal fence are the same set, and the leftover cannot arise. The input is rare; fold it into T-1905 or the next slice. Fix line: **T-2154** (Idris).
 
 ### L2 (Low, file:line ProjectSendPlan.swift:16-20): the fenced leftover is not mentioned where the fence is described
 
-P13: a project file carried before its name was reserved (the doc names `state.json`, reserved for S7) is refused by name while it exists. After the person renames it, the fence leaves the old copy in widgets/<id>/, where the runtime will read it as its own file. Leaving it there is the right choice: the plan cannot tell the project's old copy from a file the runtime wrote later, and deleting the runtime's file would be the worse error. The doc comment says the fence holds "even when an older record carried it", but not that the old copy stays in the widget folder. Add half a sentence, so that whoever reserves the next name (S7) knows to clear or migrate an old project copy.
+P13: a project file carried before its name was reserved (the doc names `state.json`, reserved for S7) is refused by name while it exists. After the person renames it, the fence leaves the old copy in widgets/<id>/, where the runtime will read it as its own file. Leaving it there is the right choice: the plan cannot tell the project's old copy from a file the runtime wrote later, and deleting the runtime's file would be the worse error. The doc comment says the fence holds "even when an older record carried it", but not that the old copy stays in the widget folder. Add half a sentence, so that whoever reserves the next name (S7) knows to clear or migrate an old project copy. Fix line: **T-2155** (Idris).
 
 ## Notes, no line
 

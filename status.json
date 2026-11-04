@@ -1,24 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-04T22:48:21.383784+00:00",
+ "at": "2026-11-04T22:51:23.198201+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-04T16:28:59-05:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-2211 extension lane runner fix",
    "model": "opus",
    "started": "2026-11-04T21:31:18.771Z",
-   "seconds": 4622,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-04T22:51:06.954000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2221 runner single-file check",
@@ -42,21 +40,13 @@
    "started": "2026-11-04T22:14:50.205Z",
    "seconds": null,
    "finished": "2026-11-04T22:30:21.199000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2219 SSD hang fallback",
-   "model": "opus",
-   "started": "2026-11-04T22:01:37.827Z",
-   "seconds": null,
-   "finished": "2026-11-04T22:13:55.034000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
   "runnable_count": 365,
-  "blocked_count": 123
+  "blocked_count": 124
  },
  "meter": {
   "five_hour": {
@@ -98,7 +88,7 @@
   "week_pct": 36.85,
   "usage_pct": 38.2,
   "work_pct": 76.3,
-  "read_at": "2026-11-04T22:48:00+00:00",
+  "read_at": "2026-11-04T22:51:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -109,7 +99,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T17:40:02-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
@@ -377,7 +368,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T17:48:00-05:00"
+  "at": "2026-11-04T17:51:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -387,18 +378,17 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-2211 extension lane runner fix",
-   "model": "opus",
-   "since": "2026-11-04T21:31:18.771Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
    "model": null,
    "since": null,
    "next": []
@@ -437,17 +427,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-2211 extension lane runner fix",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T21:31:18.771Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -539,7 +519,7 @@
   ],
   "count": {
    "next": 365,
-   "wait": 38,
+   "wait": 39,
    "blocked": 85,
    "you": 16
   }
@@ -558,13 +538,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 3,
-  "total": 4,
-  "at": "5:48 PM",
+  "total": 3,
+  "at": "5:51 PM",
   "why": "",
-  "at_iso": "2026-11-04T22:48:00+00:00",
+  "at_iso": "2026-11-04T22:51:00+00:00",
   "started": "4:28 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:48 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:51 PM ET</p></section>"
  }
 }

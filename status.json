@@ -1,18 +1,55 @@
 {
  "schema": 1,
- "at": "2026-11-04T22:55:19.272227+00:00",
+ "at": "2026-11-04T22:58:20.381205+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-04T17:55:19-05:00"
  },
- "workers": [],
- "who": "",
- "recent": [],
+ "workers": [
+  {
+   "name": "pernille",
+   "task": "[review] T-2177 ExtensionLane run-log review",
+   "model": "opus",
+   "started": "2026-11-04T22:56:36.495Z",
+   "seconds": 103,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[review] T-1801 names review Python half",
+   "model": "opus",
+   "started": "2026-11-04T22:56:44.754Z",
+   "seconds": 95,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-1798 Activity outcome words",
+   "model": "opus",
+   "started": "2026-11-04T22:58:12.864Z",
+   "seconds": 7,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Pernille, Idris, Maren",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[ops] T-2226 archive worker memories",
+   "model": "sonnet",
+   "started": "2026-11-04T22:56:51.711Z",
+   "seconds": null,
+   "finished": "2026-11-04T22:57:57.574000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 365,
+  "runnable_count": 364,
   "blocked_count": 124
  },
  "meter": {
@@ -55,7 +92,7 @@
   "week_pct": 36.84,
   "usage_pct": 37.8,
   "work_pct": 76.0,
-  "read_at": "2026-11-04T22:55:00+00:00",
+  "read_at": "2026-11-04T22:58:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -335,11 +372,42 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T17:55:00-05:00"
+  "at": "2026-11-04T17:58:00-05:00"
  },
  "next_tick_why": "session",
- "pool": null,
+ "pool": {
+  "why": "Behind the week: 51% used with 52% of the week past, so the pool is sized to catch up",
+  "n": 3,
+  "at": "2026-11-04T17:55:18.733940-05:00"
+ },
  "lanes": [
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-2177 ExtensionLane run-log review",
+   "model": "opus",
+   "since": "2026-11-04T22:56:36.495Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[review] T-1801 names review Python half",
+   "model": "opus",
+   "since": "2026-11-04T22:56:44.754Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[design] T-1798 Activity outcome words",
+   "model": "opus",
+   "since": "2026-11-04T22:58:12.864Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Odalys",
    "state": "next",
@@ -349,33 +417,9 @@
    "next": []
   },
   {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P2, Run heatmap levels by size, not brightness...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, the design copy follows T-1441, so the stale...",
    "model": null,
    "since": null,
    "next": []
@@ -390,7 +434,35 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-2177 ExtensionLane run-log review",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T22:56:36.495Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "review",
+    "t": "T-1801 names review Python half",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T22:56:44.754Z",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "T-1798 Activity outcome words",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T22:58:12.864Z",
+    "o": "c"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -466,6 +538,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "Two staff memory files were over the 4 KB size limit; old notes moved to their archives and the...",
+    "at": "2026-11-04T17:57:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "When a lane trips its usage stop, the stop now lifts by itself at the next tick, as the...",
     "at": "2026-11-04T17:29:00-05:00"
    },
@@ -473,15 +550,10 @@
     "w": "Odalys",
     "t": "The stopped session's three finished pieces (a code review, a queued retry, board records) are...",
     "at": "2026-11-04T17:27:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The disk cleanup tool no longer thinks Xcode is building just because some command line mentions...",
-    "at": "2026-11-04T17:22:00-05:00"
    }
   ],
   "count": {
-   "next": 365,
+   "next": 364,
    "wait": 39,
    "blocked": 85,
    "you": 16
@@ -500,13 +572,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 3,
   "lanes": 3,
-  "total": 3,
-  "at": "5:55 PM",
+  "total": 6,
+  "at": "5:58 PM",
   "why": "",
-  "at_iso": "2026-11-04T22:55:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:55 PM ET</p></section>"
+  "at_iso": "2026-11-04T22:58:00+00:00",
+  "started": "5:55 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:55 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:58 PM ET</p></section>"
  }
 }

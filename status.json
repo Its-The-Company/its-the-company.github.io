@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T21:56:32.829999+00:00",
+ "at": "2026-11-04T21:59:34.104276+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[build] T-2211 extension lane runner fix",
    "model": "opus",
    "started": "2026-11-04T21:31:18.771Z",
-   "seconds": 1514,
+   "seconds": 1695,
    "finished": null,
    "effort": "high"
   },
@@ -21,26 +21,26 @@
    "task": "[build] T-0657 Settings screen",
    "model": "opus",
    "started": "2026-11-04T21:31:27.924Z",
-   "seconds": 1504,
+   "seconds": 1686,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris x2",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-1898 land parked chart-rebuild change",
    "model": "opus",
    "started": "2026-11-04T21:31:36.526Z",
-   "seconds": 1496,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-04T21:59:14.149000+00:00"
   }
  ],
- "who": "Idris x2, Odalys",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 362,
+  "runnable_count": 361,
   "blocked_count": 122
  },
  "meter": {
@@ -83,7 +83,7 @@
   "week_pct": 36.85,
   "usage_pct": 38.2,
   "work_pct": 76.3,
-  "read_at": "2026-11-04T21:56:00+00:00",
+  "read_at": "2026-11-04T21:59:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -193,7 +193,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T16:56:00-05:00"
+  "at": "2026-11-04T16:59:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -213,12 +213,11 @@
   },
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-1898 land parked chart-rebuild change",
-   "model": "opus",
-   "since": "2026-11-04T21:31:36.526Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -271,15 +270,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T21:31:27.924Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-1898 land parked chart-rebuild change",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T21:31:36.526Z",
     "o": "c"
    }
   ],
@@ -357,6 +347,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The two chart rebuilds that ran in the pause between every pair of work sessions now run at most...",
+    "at": "2026-11-04T16:58:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "Jeremy's lane (lane b) started its work session at 3:57 PM, after the old usage reading stopped...",
     "at": "2026-11-04T16:49:00-05:00"
@@ -365,15 +360,10 @@
     "w": "Odalys",
     "t": "The fix for a red site test (T-2063: a stale checksum in the lanes page test) is still needed...",
     "at": "2026-11-04T16:49:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Checked Idris's fix to how a widget project is sent to the widget: refused sends now count as...",
-    "at": "2026-11-04T16:44:00-05:00"
    }
   ],
   "count": {
-   "next": 362,
+   "next": 361,
    "wait": 37,
    "blocked": 85,
    "you": 16
@@ -392,13 +382,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 2,
-  "total": 5,
-  "at": "4:56 PM",
+  "total": 4,
+  "at": "4:59 PM",
   "why": "",
-  "at_iso": "2026-11-04T21:56:00+00:00",
+  "at_iso": "2026-11-04T21:59:00+00:00",
   "started": "4:28 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:56 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:59 PM ET</p></section>"
  }
 }

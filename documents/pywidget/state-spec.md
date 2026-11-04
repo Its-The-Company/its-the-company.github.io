@@ -373,6 +373,26 @@ Frames: before tap (stale: read 1:52 PM, now 2:46 PM, stale after 45 min), pendi
 - A refresh tap is the person asking "is this current?", so a failed refresh must answer, with the badge. A **scheduled** reload whose fetch fails stays silent (no badge), as now: the stale mark covers it when it matters. The refresh intent writes a failed run row when its own forced fetch fails (B5).
 - Both marks clear in the same reload that carries the new tree; nothing in the app has to clear them.
 
+**Decisions, T-1863 (Maren, 2026-11-03, from Pernille's review T-1845 F2-F4, [`pywidget/docs/reviews/t1845-pernille.md`](t1845-pernille.html)).** The words are draft UI text (C51) and go with the next creative batch.
+
+1. **Shortcuts stay silent (F4).** A `shortcut` run whose forced fetch fails writes no failed row and shows no badge, like a scheduled reload. Why a person would agree: the row cannot tell a Siri request from an automation, and the automation is the common case. A red mark left by a 7 a.m. run you never watched greets you as a fault that had passed before you looked, and no tap of yours caused it. The widget still does not claim fresh numbers: the age line keeps the old time, and the stale mark comes once a field is past its limit. If iOS ever lets the row tell a person's request from an automation, this decision is reopened. `control` and `widget_action` (reserved, things a person taps) stay silent until their own lines decide (T-1862 item 3). No code change: `isRefreshTap` and `testOnlyTheRefreshTapAsks` already say this.
+2. **Row 3 can happen on a tap, and it does not badge (F3).** A forced fetch **came back** when it gave a 2xx JSON body (`fetched_at` moved, bound-fields s5). If that body lacks a bound field's path, or carries it as a value that counts as missing (bound-fields s4: wrong type, `null`, `bad_value`), or a sensor field is refused (`no_permission`, `unavailable`), the tap is row 3: the run row is `ok`, no badge, the stale mark stays for that field while it is past its limit, and the age line shows that field's old time, because (c) takes the oldest shown time. Why no badge: the tap was answered. The source replied, and the next tap gets the same reply, so a badge here would be one no tap can clear, and people learn to ignore a mark like that. The age line still says the old time, which is the honest answer. A forced fetch **failed** (row 2, badge) only when this attempt set fetch.json's `error` to `offline`, `timeout`, `http_status`, `too_large`, `tls` or `not_json` and gave no body. In the rule this is `forcedFetchOK: true` for "came back" and `false` for "failed"; `ageMoves: true` means this run's time is offered to (c), and (c) picks the missed field's older time (T-1862 item 2). The rule does not change; B5 maps fetch.json onto `forcedFetchOK` this way (T-1882).
+3. **What run detail says for a refresh whose script ran but whose forced fetch failed (F2).** The row is `error` with T-1862's token as `error_type` (proposed `FetchFailed`); it has no file, line or traceback.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 10: (d) What a refresh clears, scrolls sideways" style="--tw:724px" markdown="1">
+
+| Key | Text | Where |
+|---|---|---|
+| `o.fetch` | Could not get new data | Activity row reason and run detail header, `error_type` = `RefreshOutcomeRule.fetchErrorType` (12.4, 12.5) |
+| `t.tap` | From the widget | trigger `intent`, the widget's Refresh button: row line 2 and the run detail header (12.4's trigger words have none for it today) |
+| `d.fetch` | The script ran fine, but new data did not arrive. The widget keeps its last good numbers until a refresh gets through. | run detail line under the header, beside `d.big` |
+
+</div>
+
+
+The header then reads "Could not get new data", "Failed · From the widget". Why these words: the person tapped Refresh and the badge sent them here. The first thing they need is that their script is not broken, so they do not go hunting through code. The second is that the numbers on the widget are old, and what clears the badge. There is no Traceback card and no Go to Line, because there is no line. The Output card shows the script's own output as usual. **Not in v1: the cause** ("no connection", "no answer in time"). The row has no key for fetch.json's code, and fetch.json keeps only the latest attempt, so an older run's detail would show another run's cause. Adding the cause needs a RunRow key (ADR-007 7.5), which is a schema change; it comes back as its own line if people ask for it.
+
 ### Proposed build lines (for Ines to place; not built, not on the board)
 
 - **B1 (DSL, Pernille):** `ui.RefreshButton()` writes `{"t": "Button", "p": {"action": "pywidget.refresh"}}` with the `arrow.clockwise` label; `@widget.action` refuses names starting `pywidget.`; `ui.validate` and the schema accept a Button whose action is `pywidget.refresh` with no `actions` entry. Test: a tree with it validates in Python and Swift.
@@ -449,7 +469,7 @@ Ines, CEO
 **Card grammar.** Follows the Pro card (s3.2): centred, whole-widget, no corner slot, no name line (the id `new_widget` is never shown), `text.primary` headline, `text.secondary` caption and glyph. It is not a fault, so the glyph is `text.secondary`, never `status.warning` or `status.danger`. Glyph: `square.dashed` [recall, Idris confirms the name]; accented: the glyph alone is accentable; vibrant: white 1.0. Layout per family: ProCardView's `content` switch with the name line removed.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 10: Ruling, 2026-10-31 12:25 ET (Maren, with Idris, T-0684 part b, F19): what a…, scrolls sideways" style="--tw:888px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 11: Ruling, 2026-10-31 12:25 ET (Maren, with Idris, T-0684 part b, F19): what a…, scrolls sideways" style="--tw:888px" markdown="1">
 
 | ID | Family | Copy (DRAFT, C51) |
 |---|---|---|

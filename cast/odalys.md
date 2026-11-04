@@ -258,16 +258,15 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - #24 awaits Investors; Phase 1 (live_status.py, read-only chat) unblocked.
 - After a tick change, run every suite that copies the tick (T-1192: 3 personal_off reds caught only that way).
 
-- T-1781 items 1-2 done (39709f8ba, board 709ccd4f5): list ops/requests/t1781-approvable.md + Keychain card, both for the Operator to post. Item 3 is T-1804 (after fold T-1777). T-1805 done 8e60885fd.
 - Lesson 11-03: never state a suite result before reading its output file.
-- T-1808 done (3f5539c73): 6 compare job folders now in SSD company-scratch/T-1808-odalys; a scratch sweep of finished tasks could take them, so check before any sweep.
+- T-1860 done 378a16dd6: documents/how-work-flows.md + tools/flow_costs.py (rerun for before numbers). Mine next: T-1898 charts off the gap (P1), T-1899 lane reds (P1), T-1900-1902.
 
 ## Standing lessons (details in archive.md)
 - Never link or copy investors/ or rules/ into scratch; suites run only via tests/run.sh from the company folder or a real git worktree, never a plain copy.
 - A worktree lacks ignored files (ops/agents.json): a red there may be the tree, not the code. Prove it at main in the company folder.
 - macOS bash 3.2 ends $(...) at a case pattern's ")": no case inside a substitution. bash -n won't see it.
 - Process rows read only the run's own processes (full paths under $T), never the whole machine. Races need repeated rows (T-1240: 2 of 6).
-- One suite at a time with lanes on. Read reds by cause, count rows not colour. A before number is a claim: rebuild it from raw.
+- One suite at a time with lanes on; check ps for other run.sh first (T-1867: land suite timed out at 943 s, load 1022, 4 other runs). Read reds by cause, count rows not colour. A before number is a claim: rebuild it from raw.
 - A suite that passed at night and stalls by midday: look for a fixed date in a fixture against a wall-clock window first (T-1688: PAUSE stamp vs inbox 2 h window).
 - Scratch may hold an old attempt's files (T-1195: stale review.txt became T-1684). Never batch a step that reads a file with the Write that makes it.
 - A file another worker is editing mid-task (lanes.py, retry list): commit my hunks as a blob of HEAD+mine, not the path. Recheck diff --cached stat just before commit.

@@ -1,5 +1,26 @@
 [
 {
+"time": "2026-11-04T01:26:00-05:00",
+"worker": "operator",
+"type": "session",
+"summary": "23:49-01:2x work session: 26 worker calls, pool 7-12, load up to 1000. Landed traceback fold, AgeLine DST and field rules, FetchFailed rule and run-log words, ProjectSendPlan and review fixes, v1 reservations, xc_route fixes, lane tick fix, how-work-flows page; rulings T-1913, T-1973; #165 opened; T",
+"link": ""
+},
+{
+"time": "2026-11-04T00:39:40-05:00",
+"worker": "Ines",
+"type": "decision",
+"summary": "T-1913: no local Xcode fallback when the MacBook runner is silent; warn and call jobs overdue, XC_LOCAL=1 stays the worker's choice. Revisit 2026-11-11 if more than 2 jobs a week go overdue (T-1918 counts).",
+"link": ""
+},
+{
+"time": "2026-11-04T00:09:40-05:00",
+"worker": "Maren",
+"type": "blocker",
+"summary": "T-1443: Apple HIG pages are JavaScript shells; the Markdown copy fetch was denied by the permission check, so Dynamic Type sizes stay recalled",
+"link": ""
+},
+{
 "time": "2026-11-03T23:29:33-05:00",
 "worker": "operator",
 "type": "session",

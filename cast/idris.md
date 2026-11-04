@@ -256,25 +256,26 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 Dated task logs and full lessons: archive.md.
 
-- T-1634 done 2026-11-03 (6920317b6): firstRunPeak 21 MiB, clocks+progress off lane.json, habits clean 10.0 MiB, test L teardown + LaneWarmWindow. Open T-1643 (item 6 after T-1140), T-1642 Pernille review.
 - Lesson T-1404: one Bash call is capped at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
 
-- T-1714 done 2026-11-03 (87d4ec6bd): oom_guard_since, 16/16 mutants. T-1728 stopped 2026-11-03 (d8d903e76): WidgetKit gives no reload id; options to Ines on T-1751 (my lean: per-family repeat). Review open. Deferred keeps it: my reading.
 - Lesson T-1714: a rule green on the host means nothing until something writes it and something reads it: grep both call sites first.
 
-- T-0427 done 2026-11-03 (1c54294a): review T-1809 Pernille. T-0426 was already on main (d78d1c4c, T-0980 PASS), only its tick was missing. T-1059 tick refused (bare ID in Plain): left open.
 - Lesson T-0426: grep the code for a task's ID before starting; a board line can stay open after the work landed.
 
-- T-1793/T-1840 2026-11-03: AgeLine which-time now the stale mark's clocks (c9a18c0cf, 29/29 mutants); review T-1865 Pernille. T-1440 must pass staleAfterSet and only value-drawn fields.
+- AgeLine: T-1910/1911/1946 done 6edcfd497 (takes AgeLine.Field, filters "--" itself; 53/53 mutants); review T-1983 Pernille. Note on T-1440 says how to call it.
+- Lesson T-1946: NSTimeZone.default moves Calendar().timeZone, not TimeZone.current. Assert the fixture moved.
+- Lesson T-1859: a scratch copy of pywidget/ios lacks repo-level fixtures (tests/prompts): mutants there, full suite in the real tree.
 
 - T-0675 item 7 slice 2026-11-03 (dd26184c2): app+extension privacy manifests fixed (app was failing the Release scan). Open: Swift-half review has no task (asked Ines); privacy_scan wired to no build.
 - Lesson: a flag compiled out of Release hides its required-reason APIs from the binary scan; test the sources each target compiles.
+
+- T-1466 2026-11-04: stopped, no commit. Lanes held the Mac mini lock (xc.sh exit 75 after 1800 s); patch in scratch, fresh device A013E98E, board T-1927. Check lock waiters before a local build.
 
 ## Lessons
 
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
-- T-1180 2026-11-03: a new rule that overlaps old clauses makes their mutants equivalent: replay the suite's mutant file after any rule change (T-1179 left escape at 11/15). Pin overlapping clauses by the reason text.
+- Lesson T-1882: `swift test --filter` takes the XCTest class (RunLogExportTests), not the file (RunLogTests); a filter matching nothing ran zero tests, so mutation_check showed every mutant "SURVIVED". Run the filter once alone first and check "Executed N". A Core scratch copy needs App/ too (11 Sources symlinks point there).
 {% endraw %}
 
 

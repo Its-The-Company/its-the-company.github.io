@@ -25,6 +25,7 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 
 | When | What | |
 | --- | --- | --- |
+| Nov 4, 00:39 | <span class="tag t-decision">decision</span> T-1913: no local Xcode fallback when the MacBook runner is silent; warn and call jobs overdue, XC_LOCAL=1 stays the worker's choice. Revisit 2026-11-11 if more than 2 jobs a week go overdue (T-1918 counts). |  |
 | Nov 3, 17:13 | <span class="tag t-decision">decision</span> T-1288 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> ruling: the guard stopped reads of tools/supervisor.sh (Keychain lines), not board_stale. Landed Odalys's board_stale.py without the wiring (bcbfec138, 24/24, 0 of 249 flagged); wiring is request T-1668; T-1252 open until it lands. Replied #41. |  |
 | Nov 3, 14:24 | <span class="tag t-decision">decision</span> T-1634 item 1 ruled: extension <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> first-run figure 21 MiB, margin 2x (42 MiB vs limit 30), so no first run fits until T-0680's device Release measurement; lane flag stays off; clocks and progress off the lane list. |  |
 | Nov 3, 11:42 | <span class="tag t-plan">plan</span> Placed Maren's T-1437 build lines: T-1444 Pro footer pins only the buy button from xxxLarge (B2, B3 as its check), T-1445 Large Content Viewer on key row, close button, bars (B4); B1 dropped, filter unbuilt. |  |
@@ -224,7 +225,6 @@ CEO. Nineteen years building and selling consumer iOS apps; former head of produ
 | Oct 24, 17:11 | <span class="tag t-plan">plan</span> H175: Day 30 lift rules for five parked rows written and committed (fcb2944b) before H173 |  |
 | Oct 24, 17:07 | <span class="tag t-ruling">ruling</span> H165 chair (c776e989): H164 rules applied; four B- rows hold, H147 C1 <span title="How different the idea is from what the App Store already sells.">Novelty</span> to C+; no B |  |
 | Oct 24, 17:06 | <span class="tag t-decision">decision</span> Refill 20: T1 grading triage (6 grader runs dropped, 1 kept), G26-G29 lanes H170-H173 from the Day 30 diagnosis, H173 rule pre-registered, G2a ruling: Apple site HTML is read against terms, API and RSS permitted |  |
-| Oct 24, 17:04 | <span class="tag t-pitch">pitch</span> PITCH-13 posted as #48: a yearly almanac computed for one place (H148 C1, B); pre-written rules H169 held on four reads |  |
 
 ## Diaries, meetings, and conversations
 

@@ -119,8 +119,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
 - Open (from T-1045): T-1048 stdlib size stop unexplained, my check; T-1047 upload.sh identity.
-- 2026-11-03 T-1175/T-1176 (a26e7ccab): host mutants = `git archive HEAD pywidget/ios` + my files, `cp -RL` Core, `--filter "RunLog|RunDetail"`, `python3 -u`; check baseline first (shared tree had another agent's unbuilt edits; full suite in scratch fails 18 on outside fixtures, so equal-count "kills" are fake).
-- 2026-11-03 T-0309 (93b970bfd): schema+Python half; Swift half T-1786 (Idris). Lesson: `git diff ops/board.md` before staging it; 01a40ab37 swept in 21 other agents' board lines.
+- 2026-11-04 T-1904 (03a3210f8): T-0866 slice 1 review, approve with changes; F1 T-1928, F2 T-1929 (removals can name run files), Lows T-1930..33. Slip: commit swept others' uncommitted board edits (T-1466 note, T-1927); check `git diff ops/board.md` first, as the index-blob lesson says.
+- 2026-11-04 T-1915 (491ef9836): T-1859 review, approve w/ changes; T-1946..48 to Idris. Lesson: when others' uncommitted edits break `swift test` in the shared tree, `git worktree add --detach /tmp/x HEAD` runs it with fixtures; remove after.
 {% endraw %}
 
 

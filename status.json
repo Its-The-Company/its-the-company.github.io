@@ -1,66 +1,66 @@
 {
  "schema": 1,
- "at": "2026-11-04T04:43:57.704648+00:00",
+ "at": "2026-11-04T06:30:48.115340+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-03T23:49:28-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "idris",
-   "task": "[build] T-1466 notification bridge test",
-   "model": "opus",
-   "started": "2026-11-04T04:00:38.447Z",
-   "seconds": null,
-   "finished": "2026-11-04T04:39:14.393000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-1841 to T-1844 TracebackFold fixes",
-   "model": "opus",
-   "started": "2026-11-04T04:03:34.796Z",
-   "seconds": null,
-   "finished": "2026-11-04T04:39:09.634000+00:00"
-  },
-  {
    "name": "odalys",
-   "task": "[tools] T-1116 MacBook runner as Xcode default",
+   "task": "[tools] T-1064 lane tick retry fixes",
    "model": "opus",
-   "started": "2026-11-04T03:09:04.040Z",
+   "started": "2026-11-04T04:55:57.121Z",
    "seconds": null,
-   "finished": "2026-11-04T04:37:42.648000+00:00"
+   "finished": "2026-11-04T06:25:52.966000+00:00"
   },
   {
    "name": "idris",
-   "task": "[test] T-1267 pin the C1 range top",
+   "task": "[build] T-1910 AgeLine field selection",
    "model": "opus",
-   "started": "2026-11-04T03:35:06.545Z",
+   "started": "2026-11-04T05:53:51.383Z",
    "seconds": null,
-   "finished": "2026-11-04T04:37:24.725000+00:00"
+   "finished": "2026-11-04T06:18:43.161000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-1928 ProjectSendPlan review fixes",
+   "model": "opus",
+   "started": "2026-11-04T05:58:18.029Z",
+   "seconds": null,
+   "finished": "2026-11-04T06:15:37.613000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-1882 run log refresh strings",
+   "model": "opus",
+   "started": "2026-11-04T05:48:42.969Z",
+   "seconds": null,
+   "finished": "2026-11-04T06:11:08.411000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 278,
+  "runnable_count": 302,
   "blocked_count": 118
  },
  "meter": {
   "five_hour": {
-   "pct": 6.0,
-   "resets_at": "2026-11-04T07:00:00.341450+00:00",
+   "pct": 26.0,
+   "resets_at": "2026-11-04T07:00:00.465279+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 94.0,
+   "left": 74.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 37.0,
-   "resets_at": "2026-11-08T07:00:00.341476+00:00",
+   "pct": 40.0,
+   "resets_at": "2026-11-08T07:00:00.465300+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 63.0,
+   "left": 60.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -68,10 +68,10 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-03T22:04:44.365997-05:00"
+  "read_at": "2026-11-03T23:49:18.190985-05:00"
  },
  "ui": {
-  "week_pct": 0.682,
+  "week_pct": 0.678,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -83,589 +83,153 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-03T22:19:44-05:00",
+ "next_tick": null,
  "personal": {
-  "week_pct": 26.16,
-  "usage_pct": 34.4,
-  "work_pct": 76.7,
-  "read_at": "2026-11-04T04:46:00+00:00",
+  "week_pct": 25.99,
+  "usage_pct": 33.2,
+  "work_pct": 76.4,
+  "read_at": "2026-11-04T06:31:00+00:00",
   "running": [
    {
-    "lane": "a2",
-    "task": "T-1442",
+    "lane": "a",
+    "task": "T-1677",
     "w": "Idris",
     "k": "build",
-    "t": "Swap the words iOS shows outside the app for the T-1436 DRAFT strings",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-03T23:11:59-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-1786",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0309 Swift half",
+    "t": "T-1669 rest",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-03T23:11:59-05:00",
+    "at": "2026-11-04T00:21:05-05:00",
     "n": "Evan"
    },
    {
-    "lane": "a2",
-    "task": "T-0561",
-    "w": "Idris",
-    "k": "build",
-    "t": "Tests/PreviewQueueTests.swift:203 allows only App/WidgetRunView.swift to...",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-03T23:11:59-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-0620",
-    "w": "Idris",
-    "k": "test",
-    "t": "Viewtree.schema.json now carries the L5 R4/R5 reservations",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:11:59-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-0635",
-    "w": "Idris",
-    "k": "build",
-    "t": "Approved",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-03T23:11:59-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-0894",
-    "w": "Idris",
-    "k": "test",
-    "t": "Xcode slot, from T-0886 L4-L5",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:11:59-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-1048",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-1045 new finding, Xcode slot",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:11:59-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-1289",
-    "w": "Idris",
-    "k": "build",
-    "t": "Text suffix still takes a line break",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:11:59-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-1290",
-    "w": "Idris",
-    "k": "build",
-    "t": "Every Xcode run rewrites wall-clock snapshot PNGs",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:11:59-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-1672",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Bridge-contract s4 item 7",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:11:59-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-1758",
+    "lane": "a",
+    "task": "T-1867",
     "w": "Odalys",
-    "k": "build",
-    "t": "Host-only, no Xcode",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:11:59-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-1664",
-    "w": "Pernille",
     "k": "test",
-    "t": "TestAppendDropsAnAddedRowPastFourteenDaysLikeAnyOther has both rows aged, so...",
+    "t": "Continuation of T-1116",
     "m": "sonnet",
     "e": "medium",
-    "at": "2026-11-03T23:11:59-05:00",
+    "at": "2026-11-04T00:21:05-05:00",
     "n": "Evan"
    },
    {
-    "lane": "a3",
-    "task": "T-1850",
-    "w": "Idris",
-    "k": "build",
-    "t": "The margin rule reads headroom 0 as unknown and passes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:15:08-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-1851",
-    "w": "Idris",
-    "k": "build",
-    "t": "A queued lane turn writes ext.marker and runs after its own getTimeline answered",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:15:08-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-1852",
-    "w": "Idris",
-    "k": "build",
-    "t": "After a stuck lane run the extension carries on and every later run there is...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:15:08-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-1853",
-    "w": "Idris",
-    "k": "plan",
-    "t": "T-0680's device gate session cannot run the lane as built",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:15:08-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-1854",
-    "w": "Idris",
-    "k": "build",
-    "t": "The extension writes no status.json and no run row",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:15:08-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-1856",
+    "lane": "a",
+    "task": "T-1898",
     "w": "Odalys",
-    "k": "review",
-    "t": "Independent review",
+    "k": "tools",
+    "t": "Start the next session before the chart rebuilds",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-03T23:15:08-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-0389",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0312 slice b",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:15:08-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-0656",
-    "w": "Idris",
-    "k": "build",
-    "t": "Completion and inline errors in the editor",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:15:08-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-0657",
-    "w": "Idris",
-    "k": "build",
-    "t": "Settings screen",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:15:08-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-0861",
-    "w": "Idris",
-    "k": "build",
-    "t": "The three red paywall images",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:15:08-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-1039",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-1036 F2, before landing idris/t0642-plain-targets, Xcode slot: nothing...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:15:08-05:00",
+    "at": "2026-11-04T00:21:05-05:00",
     "n": "Evan",
     "d": 1
    },
    {
-    "lane": "a3",
-    "task": "T-1117",
-    "w": "Idris",
-    "k": "build",
-    "t": "The 6 rows marked gap in the Swift",
+    "lane": "a",
+    "task": "T-1899",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Why a third of lane branches fail at landing",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T00:21:05-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a",
+    "task": "T-1900",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Board size",
+    "m": "sonnet",
+    "e": "high",
+    "at": "2026-11-04T00:21:05-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a",
+    "task": "T-1901",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "MacBook runner",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T00:21:05-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a",
+    "task": "T-1895",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-1878 review L1+L2",
     "m": "sonnet",
     "e": "medium",
-    "at": "2026-11-03T23:15:08-05:00",
+    "at": "2026-11-04T00:21:05-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a",
+    "task": "T-1896",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-1878 review L3",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-04T00:21:05-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a",
+    "task": "T-1897",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-1878 review L4, predates T-1116",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-04T00:21:05-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a",
+    "task": "T-1902",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Parked branches",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-04T00:21:05-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a",
+    "task": "T-1671",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Ios/App/Runtime/pywidget/notifications.py:87 calls _limits with thread...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T00:21:05-05:00",
     "n": "Evan"
    },
    {
-    "lane": "b",
-    "task": "T-1812",
+    "lane": "a",
+    "task": "T-1689",
     "w": "Pernille",
     "k": "tools",
-    "t": "Personal branch personal/b did not land",
+    "t": "Personal branch personal/a2 did not land",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-03T22:46:34-05:00",
-    "n": "Jeremy",
+    "at": "2026-11-04T00:21:05-05:00",
+    "n": "Evan",
     "d": 1
-   },
-   {
-    "lane": "b",
-    "task": "T-1815",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Personal account b3 stopped on T-1770+T-1771+T-1772+T-1773+T-1774: the...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T22:46:34-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b",
-    "task": "T-1816",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Personal account a2 stopped",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T22:46:34-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b",
-    "task": "T-1763",
-    "w": "Maren",
-    "k": "tools",
-    "t": "Personal branch personal/b4 did not land",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T22:46:34-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b2",
-    "task": "T-1858",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "The SSD as the Mac mini's standing overflow",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:29:46-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-1652",
-    "w": "Idris",
-    "k": "fix",
-    "t": "TestISavedScriptReachesTheHomeScreen and...",
-    "m": "opus",
-    "e": "medium",
-    "at": "2026-11-03T23:29:46-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-1839",
-    "w": "Idris",
-    "k": "build",
-    "t": "Wire tools/privacy_scan.py --release into the Release build",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:29:46-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-1855",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-1838 F6-F8",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:29:46-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-1857",
-    "w": "Pernille",
-    "k": "test",
-    "t": "WidgetFaceRuleTests never tests an entitled Pro premade past row 2",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:29:46-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-0025",
-    "w": "Idris",
-    "k": "build",
-    "t": "String Catalog",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:29:46-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-1847",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Xcode build runs",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-03T23:29:46-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-1848",
-    "w": "Idris",
-    "k": "build",
-    "t": "Test_stop_still_reaches_atexit",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:29:46-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-0272",
-    "w": "Idris",
-    "k": "build",
-    "t": "After T-0041 and only if T-0271 is approved by Day 12",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:29:46-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-0443",
-    "w": "Idris",
-    "k": "build",
-    "t": "CPython's release table and MPL sections 6-7",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:29:46-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-0623",
-    "w": "Idris",
-    "k": "build",
-    "t": "An Acknowledgements row for a part_of entry reads \"Mozilla Public License...",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-03T23:29:46-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-1241",
-    "w": "Idris",
-    "k": "fix",
-    "t": "From T-0987",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-03T23:29:46-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-0389",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0312 slice b",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:10:53-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-0656",
-    "w": "Idris",
-    "k": "build",
-    "t": "Completion and inline errors in the editor",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:10:53-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-0657",
-    "w": "Idris",
-    "k": "build",
-    "t": "Settings screen",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:10:53-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-0861",
-    "w": "Idris",
-    "k": "build",
-    "t": "The three red paywall images",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:10:53-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1039",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-1036 F2, before landing idris/t0642-plain-targets, Xcode slot: nothing...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:10:53-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1728",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-1714's continuation, Xcode lane",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:10:53-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1117",
-    "w": "Idris",
-    "k": "build",
-    "t": "The 6 rows marked gap in the Swift",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-03T23:10:53-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1284",
-    "w": "Idris",
-    "k": "test",
-    "t": "TestRefusedDestinationsDrawNoLink",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-03T23:10:53-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1652",
-    "w": "Idris",
-    "k": "fix",
-    "t": "TestISavedScriptReachesTheHomeScreen and...",
-    "m": "opus",
-    "e": "medium",
-    "at": "2026-11-03T23:10:53-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1839",
-    "w": "Idris",
-    "k": "build",
-    "t": "Wire tools/privacy_scan.py --release into the Release build",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:10:53-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1846",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Runner side of the test report",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:10:53-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-0025",
-    "w": "Idris",
-    "k": "build",
-    "t": "String Catalog",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T23:10:53-05:00",
-    "n": "Jeremy"
    }
   ]
  },
@@ -678,16 +242,20 @@
  ],
  "disk": {
   "free_gb": 16,
-  "gate": "open",
-  "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
+  "gate": "closed",
+  "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
  },
  "lock_in": {
-  "on": true,
-  "pool": 2,
-  "at": "2026-11-03T23:46:00-05:00"
+  "on": false,
+  "pool": 1,
+  "at": "2026-11-04T01:31:00-05:00"
  },
- "next_tick_why": "last_tick",
- "pool": null,
+ "next_tick_why": "session",
+ "pool": {
+  "why": "On the week's line (43% used, 43% past), so today's work is spread until midnight",
+  "n": 1,
+  "at": "2026-11-03T23:49:18.892837-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
@@ -714,17 +282,17 @@
    "next": []
   },
   {
-   "name": "Maren",
+   "name": "Pernille",
    "state": "next",
-   "task": "Maren, P2, from T-1437 (b72f2da7f): not before...",
+   "task": "Pernille, P1, independent review (Commandment 13) of...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Pernille",
+   "name": "Maren",
    "state": "next",
-   "task": "Pernille, P2, Run heatmap levels by size, not brightness...",
+   "task": "Maren, P2, the design copy follows T-1441, so the stale...",
    "model": null,
    "since": null,
    "next": []
@@ -814,25 +382,25 @@
   ],
   "done": [
    {
-    "w": "Pernille",
-    "t": "The note at the top of the error-sample generator no longer claims the newer Python prints its...",
-    "at": "2026-11-03T23:38:00-05:00"
+    "w": "Odalys",
+    "t": "The personal lanes no longer ask a person to look at a task just because a session was cut off...",
+    "at": "2026-11-04T01:25:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "The check that stops widgets opening unsafe links now has a test for the last invisible control...",
-    "at": "2026-11-03T23:37:00-05:00"
+    "t": "The widget's 'Updated' line now ignores any value the widget shows as '--', so it can never...",
+    "at": "2026-11-04T01:18:00-05:00"
    },
    {
-    "w": "Pernille",
-    "t": "Checked Idris's rule for what a widget shows after a refresh: it matches the design, but the...",
-    "at": "2026-11-03T23:31:00-05:00"
+    "w": "Idris",
+    "t": "Fixed a test note that quoted the wrong text width; the shortest weekday form ('Mon') was...",
+    "at": "2026-11-04T01:18:00-05:00"
    }
   ],
   "count": {
-   "next": 278,
-   "wait": 34,
-   "blocked": 84,
+   "next": 302,
+   "wait": 33,
+   "blocked": 85,
    "you": 15
   }
  },

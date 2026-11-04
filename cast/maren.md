@@ -22,10 +22,11 @@ Designs web systems in CSS tokens and inline SVG, with a byte budget in mind.
 | Career goal | One system that the whole company can read, for the site and the app, with the source in the repo. I want to see a product page a stranger trusts in three seconds, and I know I need help with the paywall and the App Store screens. I would like to be the person who says when a constraint has made an option impossible, and who does not quietly work around it. |
 {: .facts}
 
-## Activity (176 most recent)
+## Activity (177 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Nov 4, 00:09 | <span class="tag t-blocker">blocker</span> T-1443: Apple HIG pages are JavaScript shells; the Markdown copy fetch was denied by the permission check, so Dynamic Type sizes stay recalled |  |
 | Nov 3, 11:47 | <span class="tag t-design">design</span> T-1438: accented sheets with the accent group marked; heatmap fails colour-alone (1.81-2.57:1 steps), B5-B6 proposed; Clear item moved to T-1443 |  |
 | Nov 3, 11:40 | <span class="tag t-design">design</span> T-1437: xxxLarge and AX3 sheets for nine 1.0 screens (A and B), spec s2.1, contrast 1,936 pairs 0 fails; HIG fetch refused by Apple day <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>, s6 item 1 open |  |
 | Nov 3, 11:24 | <span class="tag t-design">design</span> T-1434: state-spec s10 Refresh and age drafted and drawn (states-refresh.png, QA 0 faults); five proposed build lines for Ines |  |
@@ -229,11 +230,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Lessons: grade blind means commit my letters before opening hers; in lane files her grades sit in the tables, so say so. A good screenshot does not lift need. An earlier run of mine left mockups without a spec; check the folder before redrawing. Mocks carry placeholder Investor names, never real ones (C42). Before chasing a height change, swap only the CSS on one fixed build; content moves, CSS may not. Script the contrast (four light chip pairs I trusted failed 4.5:1). Merging mock CSS into a live sheet: grep every class name against the sheet first; .row, .q, .idle all collided.
 - Kept lessons: before drafting a request card, `gh issue list` for an open one (T-0625 duplicated #94; drafted as its update); never amend in a shared repo; read terms/licences in their own command before any fetch; count claims by script; script the contrast; never stamp a time ahead of `date`; when blind_packet refuses, stop and report line numbers; snapshot sheets use stand-in grounds and frozen timers, so a fail list must say what a snapshot can and cannot show.
 
-- 2026-11-03 T-1658 (8dada30db): T-1396 waits on T-1688. Lesson: land floor runs every suite a touched tools/ file names; baseline it on main first.
-- 2026-11-03 T-1454 landed 4db100308 by applying parked files (T-1633/1635/1710 ticked). Lesson: ops/runs/personal-land-aN.log is overwritten by the next land in that slot; the red line is gone within hours, so copy it into the board line when it happens.
-- 2026-11-03 T-1473 (e3293237d): landed parked b3 (T-1435, T-1436) as files. Lesson: a parked lane's board ops sit in ops/lane-outbox/*.json; replay them through board_tick.py with the main hash, don't land the json.
 - 2026-11-03 T-1806 (d8c534caf): my 'Lock Screen Buttons are inert' [recall] was wrong (saved Apple page). Lesson: a [recall] that rules a feature out gets a saved-page check before it shapes a build line.
 - 2026-11-03 T-1836 (1b57eb1d2): age line takes the stale mark's clocks (sampled_at counts only when stale_after set). Lesson: board_tick note refuses a done [x] line; a follow-up to landed work needs a new line from Ines.
+- 2026-11-04 T-1443 (70f494650): HIG pages fetched as HTML are JavaScript shells (no tables); the content is at <page>.md, and that fetch was denied by the permission check. Lesson: ask for the .md URL as the one fetch, and get it allowed first.
 {% endraw %}
 
 

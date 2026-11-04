@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T20:16:09.621277+00:00",
+ "at": "2026-11-04T20:19:07.341018+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[build] T-2176 extension lane run on runner",
    "model": "opus",
    "started": "2026-11-04T19:01:49.224Z",
-   "seconds": 4460,
+   "seconds": 4638,
    "finished": null,
    "effort": "high"
   }
@@ -39,7 +39,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 353,
+  "runnable_count": 352,
   "blocked_count": 122
  },
  "meter": {
@@ -82,7 +82,7 @@
   "week_pct": 37.4,
   "usage_pct": 38.5,
   "work_pct": 76.7,
-  "read_at": "2026-11-04T20:16:00+00:00",
+  "read_at": "2026-11-04T20:19:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -179,11 +179,7 @@
    {
     "lane": "a2",
     "task": "T-2089",
-    "w": "Maren",
-    "k": "tools",
-    "t": "Personal branch personal/a5 did not land",
-    "m": "opus",
-    "e": "high",
+    "t": "T-2089",
     "at": "2026-11-04T14:47:41-05:00",
     "n": "Evan",
     "d": 1
@@ -359,7 +355,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T15:16:00-05:00"
+  "at": "2026-11-04T15:19:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -504,6 +500,11 @@
   ],
   "done": [
    {
+    "w": "Maren",
+    "t": "Two finished pieces of work whose test runs went red for reasons outside their own changes are...",
+    "at": "2026-11-04T15:17:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The Mac mini's drive had 4 GB free, too little for Jeremy's lane; old test leftovers went to the...",
     "at": "2026-11-04T14:36:00-05:00"
@@ -512,15 +513,10 @@
     "w": "Odalys",
     "t": "Finished work folders and safe caches are now cleaned off both the SSD and the Mac mini every...",
     "at": "2026-11-04T14:00:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The new Home page now keeps the Investors' lock-in and personal-lanes controls and live status...",
-    "at": "2026-11-04T13:44:00-05:00"
    }
   ],
   "count": {
-   "next": 353,
+   "next": 352,
    "wait": 37,
    "blocked": 85,
    "you": 16
@@ -542,10 +538,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "3:16 PM",
+  "at": "3:19 PM",
   "why": "",
-  "at_iso": "2026-11-04T20:16:00+00:00",
+  "at_iso": "2026-11-04T20:19:00+00:00",
   "started": "1:50 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:50 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:16 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:50 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:19 PM ET</p></section>"
  }
 }

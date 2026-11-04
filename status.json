@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T18:39:27.799932+00:00",
+ "at": "2026-11-04T18:42:30.369288+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[site] T-2077 site overhaul stage 2 live",
    "model": "opus",
    "started": "2026-11-04T17:56:16.332Z",
-   "seconds": 2591,
+   "seconds": 2774,
    "finished": null,
    "effort": "high"
   }
@@ -32,7 +32,7 @@
   "runnable": [],
   "blocked": [],
   "runnable_count": 347,
-  "blocked_count": 123
+  "blocked_count": 122
  },
  "meter": {
   "five_hour": {
@@ -74,16 +74,12 @@
   "week_pct": 37.0,
   "usage_pct": 38.7,
   "work_pct": 77.0,
-  "read_at": "2026-11-04T18:39:00+00:00",
+  "read_at": "2026-11-04T18:42:00+00:00",
   "running": [
    {
     "lane": "a",
     "task": "T-1781",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "After T-1752/T-1778",
-    "m": "opus",
-    "e": "high",
+    "t": "T-1781",
     "at": "2026-11-04T12:23:07-05:00",
     "n": "Evan",
     "d": 1
@@ -473,14 +469,14 @@
   }
  ],
  "disk": {
-  "free_gb": 6.9,
+  "free_gb": 6.0,
   "gate": "closed",
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T13:39:00-05:00"
+  "at": "2026-11-04T13:42:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -554,13 +550,6 @@
   "open": [
    {
     "w": "Odalys",
-    "k": "ops",
-    "t": "After T-1752/T-1778",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "tools",
     "t": "Personal lane stops lift themselves",
     "s": "next",
@@ -621,29 +610,36 @@
     "t": "T-1669 rest",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Site overhaul build, after Maren's spec line...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Every hand-work ask of the last week is listed on with its route to a site Approve; the...",
+    "at": "2026-11-04T13:41:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "An Approve on the site now applies changes to the Investors' files, the safety guards and...",
+    "at": "2026-11-04T13:41:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "The Investor's 12:14 instruction that a personal lane's stops lift themselves is now a standing...",
     "at": "2026-11-04T12:55:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "When a widget script freezes inside the widget extension, the extension now stops running...",
-    "at": "2026-11-04T12:25:00-05:00"
-   },
-   {
-    "w": "Odalys+pernille",
-    "t": "Pressing Approve on the site a second time no longer adds the same rule to the Investors' file...",
-    "at": "2026-11-04T12:20:00-05:00"
    }
   ],
   "count": {
    "next": 347,
    "wait": 37,
-   "blocked": 86,
+   "blocked": 85,
    "you": 16
   }
  },
@@ -663,10 +659,10 @@
   "main": 1,
   "lanes": 3,
   "total": 4,
-  "at": "1:39 PM",
+  "at": "1:42 PM",
   "why": "",
-  "at_iso": "2026-11-04T18:39:00+00:00",
+  "at_iso": "2026-11-04T18:42:00+00:00",
   "started": "12:53 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:39 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:42 PM ET</p></section>"
  }
 }

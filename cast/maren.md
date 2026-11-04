@@ -229,10 +229,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Lessons: grade blind means commit my letters before opening hers; in lane files her grades sit in the tables, so say so. A good screenshot does not lift need. An earlier run of mine left mockups without a spec; check the folder before redrawing. Mocks carry placeholder Investor names, never real ones (C42). Before chasing a height change, swap only the CSS on one fixed build; content moves, CSS may not. Script the contrast (four light chip pairs I trusted failed 4.5:1). Merging mock CSS into a live sheet: grep every class name against the sheet first; .row, .q, .idle all collided.
 - Kept lessons: before drafting a request card, `gh issue list` for an open one (T-0625 duplicated #94; drafted as its update); never amend in a shared repo; read terms/licences in their own command before any fetch; count claims by script; script the contrast; never stamp a time ahead of `date`; when blind_packet refuses, stop and report line numbers; snapshot sheets use stand-in grounds and frozen timers, so a fail list must say what a snapshot can and cannot show.
 
-- 2026-11-03 T-1434 done (89e7f5a95): state-spec s10 Refresh and age. Open: B1-B5 build lines for Ines; small widget shows bare time even at Large (read-test risk). Lesson: I typed contrast figures before reading the qa json; paste from the file.
+- 2026-11-03 T-1434 done (89e7f5a95): state-spec s10 Refresh and age. Open: B1-B5 build lines for Ines; small widget shows bare time even at Large (read-test risk). Lesson: paste contrast figures from the qa json.
 - 2026-11-03 T-1437 done (b72f2da7f): spec s2.1 + 18 AX sheets (draw_ide.py --ax). Open: HIG typography fetch refused by Apple day cap (12/day); s6 item 1 waits a later ET day or Idris's Simulator; B1-B4 for Ines. Lesson: check the Apple day cap before planning a fetch-first task.
 
-- 2026-11-03 T-1438 done (4301c7f76): draw_modes.py accented sheets + group map; s8.1 items 10-13 (mine: render.py stale glyph group, 07 medium glyphs, 04 '2...'); B5-B6 for Ines. Lesson: zsh does not split $VAR; use arrays for pathspecs.
+- 2026-11-03 T-1658 (8dada30db): T-1454 line queued; T-1396 waits on T-1688. Lesson: land floor runs every suite a touched tools/ file names; baseline it on main first.
 {% endraw %}
 
 

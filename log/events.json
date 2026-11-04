@@ -1,5 +1,33 @@
 [
 {
+"time": "2026-11-03T19:33:02-05:00",
+"worker": "operator",
+"type": "session",
+"summary": "18:40-19:45 work session: pool 2 then lock-in. Idris 3130a21e5 run-log fixes (T-1679/82/83), Pernille reviews T-1694 and T-1685 (P1 fixed by Odalys T-1697 6a21d9820), OPT-050 kept, T-1695 close-step event fix (OPT-070), T-1037 scratch to the SSD (18 GB free). Replied #159 and #41; amendment 89bd7ddb",
+"link": ""
+},
+{
+"time": "2026-11-03T19:25:27-05:00",
+"worker": "Odalys",
+"type": "task",
+"summary": "T-1037: new scratch goes to the Company SSD; 64 old folders moved by verified copy, main disk 16.2 -> 18.3 GB free; 7 worktrees stay (git refuses cross-disk move); guard refused rm of /Volumes/Company SSD/t1037-probe (left for a person)",
+"link": ""
+},
+{
+"time": "2026-11-03T19:17:07-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #41",
+"link": ""
+},
+{
+"time": "2026-11-03T18:55:03-05:00",
+"worker": "operator",
+"type": "message",
+"summary": "An Investor message on issue #159",
+"link": ""
+},
+{
 "time": "2026-11-03T18:24:37-05:00",
 "worker": "operator",
 "type": "report",

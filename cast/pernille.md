@@ -119,6 +119,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Open (from T-1045): T-1048 stdlib size stop unexplained, my check; T-1047 upload.sh identity.
 - 2026-11-03 T-1244 (8bd3b02af): Xcode mutants in scratch = git archive of pywidget + tools, Vendor symlinked, `xcodegen generate`, own -derivedDataPath; else NOVERDICT/NOBUILD. T-1266 passed my review T-1282 (6887f7d84); open: T-1284 Link branch E5 body check, T-1267 C1 edge (Idris).
 - 2026-11-03 T-1678 review (3a8a6a316): 0 P1, 5 P2 -> T-1679..T-1683 for Idris (stuck->killed recovery, T3 trigger `intent`, yielded save logged error, preview console rows, 3 mutants). Re-review when fixed.
+- 2026-11-03 T-1694 (9492c294e): F1/F4/F5 closed; open T-1696 (Idris: PyBridge stuck marker line untested). T-1685 (94ab29761): check_links not sound, T-1697 (Odalys, P1, detail only in ops/reviews/, unpublished). Lesson: a symlink guard that trusts git trees misses ignored on-disk links (Vendor/python); allow-list tracked dirs instead. Core mutants need `cp -RL` (Sources are symlinks).
 {% endraw %}
 
 

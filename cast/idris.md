@@ -253,7 +253,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-1050 landed 2026-11-02 (19d5907a, T-0642): unit 867/0, UI green, #41 c6594906585. Left: runner gate (runner_profile_compare 19d5907a new), first MacBook xc-test job, T-1116.
 - Lesson: the full UI suite runs ~45 min (EditorGate A2c alone ~7 min): run it in the background with a long timeout, never a 10-min foreground call. tests/run.sh takes suite file names (x_test.py), not bare names: a bare name runs nothing and says "All tests passed".
 - Lesson: source-scan tests (WidgetKindsTests.extensionSources) break in /tmp scratch (#filePath /tmp vs /private/tmp); baseline main in the same folder before blaming a branch. Personal lanes share the xc lock: budget the wait.
-- T-1669 slice 2 (94f1203da): app writes run log (widget+console), 939/0; rest is T-1677. Unreviewed with 0cfa6404b. Lesson: logging App Group runs changes tests that list a widget folder.
+- T-1669 slice 2 (94f1203da): app writes run log; rest is T-1677. Pernille review t1678: F1/F4/F5 fixed 3130a21e5 (host 362/0, mutants-t1683 13/13); Simulator T-1693; F2/F3 (T-1680/T-1681) open.
+- Lesson T-1678: a test that checks a marker's text is not a test of what recovery does with it. Test the consumer.
 - T-1068/T-1072 done 2026-11-02 (10db8d59): WK check buys Pro in SKTestSession; progress read. Review open. 17e's old Pro unexplained.
 
 

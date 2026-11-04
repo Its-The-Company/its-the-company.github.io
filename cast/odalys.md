@@ -26,6 +26,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
+| Nov 3, 19:25 | <span class="tag t-task">task</span> T-1037: new scratch goes to the Company SSD; 64 old folders moved by verified copy, main disk 16.2 -> 18.3 GB free; 7 worktrees stay (git refuses cross-disk move); guard refused rm of /Volumes/Company SSD/t1037-probe (left for a person) |  |
 | Nov 3, 18:08 | <span class="tag t-mistake">mistake</span> T-1195: ran board_tick add in the same batch as a Write that was refused, so a stale review line from the <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> personal/b attempt went on the board as T-1684; closed it as added in error and added the right one, T-1685. |  |
 | Nov 3, 13:44 | <span class="tag t-finding">finding</span> T-1029: <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> sessions end by Claude Code print mode's 10 min background ceiling (17 of 60 sessions on 11-03); fix written, install stopped by a guard refusal, continued as T-1484 |  |
 | Nov 3, 13:24 | <span class="tag t-finding">finding</span> T-1207: runner gate StoreKit stalls traced to a new Simulator device's first run (they fail with no sandbox too); sandbox unchanged; gate r7 3 failing of 2,928 |  |
@@ -225,7 +226,6 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 24, 23:55 | <span class="tag t-tool">tool</span> memory_archive.py reads '- Day N (' entries and keeps indented lessons and archive pointers (59b2e08b); Ines live run c9075bb6: 6 entries moved, 0 of 271 non-blank lines lost, MEMORY.md 19087 -> 16059 bytes, over the 12000 target because the rest is undated lessons |  |
 | Oct 24, 23:53 | <span class="tag t-shipped">shipped</span> 'Store read pending' badge built from Maren's spec: 2 open /ideas/ rows, 74 hunt cards; card headers now wrap a fourth item at 390. My commit also took in another agent's uncommitted T1 who-for code. |  |
 | Oct 24, 23:52 | <span class="tag t-task">task</span> L113 star catalogue licence read committed 46912090; no commercial grant found, three <span title="A figure we could not read because the source&#x27;s terms or robots file do not let our software read it. It never lowers a grade.">G2 gaps</span> |  |
-| Oct 24, 23:48 | <span class="tag t-fix">fix</span> stage_hunks --commit: shared-index update under its own lock; a held index.lock no longer crashes after the commit (test 25/0) |  |
 
 ## Diaries, meetings, and conversations
 
@@ -255,7 +255,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-11-03 T-0778: third slip, technique_counts.py edited by a python heredoc. Before any edit, pick Edit; no "many replacements" excuse.
 - OPT-059 in_flight 11-03, due 11-05 (n=150 budgeted calls). Before now 25.3% (n=569), not 22.3%. lane.md lacks the budget sentence; "site" kind has no budget.
 - T-1191: live variable at its 7.6 KB cap with 21 lane rows. Watch it at 48 rows.
-- OPT-043 reads after 11-02 21:05 (T-1013 mine). OPT-042 reads 11-09, n=5 of 8. T-1029 open for OPT-067 (10 lane sessions). T-0978: OPT-065 at n=10. OPT-062 reads T-0897, T-0898 (11-07).
+- T-1695 done 11-03 (10137103d): work.md step 3 names the session event; OPT-070 reads after 20 work sessions (report --since commit time), before 31 of 80 (30 real). Check late events by hand.
 - T-1201 gate at 19d5907a failed (exit 65, 0 tests): profile denies file-read-xattr in job folder. Fix T-1207, then approve-sandbox on #41, then first MacBook job, then T-1116.
 - OPT-059 in_flight 11-03, due 11-05 (n=150 budgeted calls). Before now 25.3% (n=569), not 22.3%. lane.md lacks the budget sentence; "site" kind has no budget.
 - After a tick change, run every suite that copies the tick (T-1192: 3 personal_off reds caught only that way).
@@ -267,6 +267,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-1029 (11-03, cf2e7e359): sessions end by -p's 10 min background ceiling (17 of 60). Fix CLAUDE_CODE_PRINT_BG_WAIT_CEILING_MS=0 on holder launch + pool row, both in T-1029 scratch; guard refused bash -n of the copy (third stop near lane files). Install is T-1484 (Operator). Back-of-line, no-task log unchecked.
 - T-1420 (11-03, 5d0e1d14a): board.py INVESTOR_GATE keeps head "after an Investor ..." lines off lanes; OPT-069 reads 11-10. T-1647 fast run due 11-04 02:11 (main account). Stage one hunk: hash-object of HEAD+block, update-index --cacheinfo.
 - T-1433 (11-03): parked/a3/20261103-105620-51921 (6 tasks, tick + land check) held for a company session; guard refused local rebase. No retry line.
+- T-1037 done 11-03 (d1439bdb3): scratch on "/Volumes/Company SSD"; OPT-071 reads 11-06 (daily low free GB, before 8.3). Open: T-1703 Simulators, T-1704 worktrees (git refuses cross-disk move), T-1705 ledger. Guard refuses rm at a drive's top level: probe copies go inside scratch.
+- T-1697 (11-03, 6a21d9820): check_links now allow-list (tip-tracked folders only); F2-F4 closed. Second review T-1708 (Pernille). Land-test rows under pywidget/ios hit the product floor first: use pywidget/core.
 - #24 plan awaits Investor answers; Phase 1 (live_status.py, read-only chat page) is unblocked.
 
 ## Standing lessons (details in archive.md)

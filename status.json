@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T15:45:12.152480+00:00",
+ "at": "2026-11-04T15:48:46.783091+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,17 +12,26 @@
    "task": "[plan] T-2065 T-0848 decision on T-2052",
    "model": "opus",
    "started": "2026-11-04T15:45:08.049Z",
-   "seconds": 4,
+   "seconds": 218,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-2113 3B52.1 required-reason decision",
+   "model": "opus",
+   "started": "2026-11-04T15:45:17.470Z",
+   "seconds": 209,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Ines",
+ "who": "Ines, Idris",
  "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 339,
+  "runnable_count": 340,
   "blocked_count": 123
  },
  "meter": {
@@ -65,7 +74,7 @@
   "week_pct": 37.43,
   "usage_pct": 39.3,
   "work_pct": 77.6,
-  "read_at": "2026-11-04T15:45:00+00:00",
+  "read_at": "2026-11-04T15:48:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -383,14 +392,14 @@
   }
  ],
  "disk": {
-  "free_gb": 11,
+  "free_gb": 13,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T10:45:00-05:00"
+  "at": "2026-11-04T10:48:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -409,17 +418,18 @@
    "effort": "high"
   },
   {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-2113 3B52.1 required-reason decision",
+   "model": "opus",
+   "since": "2026-11-04T15:45:17.470Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
    "model": null,
    "since": null,
    "next": []
@@ -459,6 +469,15 @@
     "e": "high",
     "at": "2026-11-04T15:45:08.049Z",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-2113 3B52.1 required-reason decision",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T15:45:17.470Z",
+    "o": "c"
    }
   ],
   "open": [
@@ -473,6 +492,13 @@
     "w": "Ines",
     "k": "plan",
     "t": "T-0848 decision for T-2052",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Not applied",
     "s": "next",
     "o": "c"
    },
@@ -524,13 +550,6 @@
     "t": "T-1669 rest",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Site overhaul build, after Maren's spec line...",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -551,7 +570,7 @@
    }
   ],
   "count": {
-   "next": 339,
+   "next": 340,
    "wait": 37,
    "blocked": 86,
    "you": 16
@@ -570,13 +589,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 3,
-  "total": 4,
-  "at": "10:45 AM",
+  "total": 5,
+  "at": "10:48 AM",
   "why": "",
-  "at_iso": "2026-11-04T15:45:00+00:00",
+  "at_iso": "2026-11-04T15:48:00+00:00",
   "started": "10:42 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:42 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:45 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:42 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:48 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T22:11:43.048948+00:00",
+ "at": "2026-11-04T22:14:43.323172+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[build] T-2211 extension lane runner fix",
    "model": "opus",
    "started": "2026-11-04T21:31:18.771Z",
-   "seconds": 2424,
+   "seconds": 2604,
    "finished": null,
    "effort": "high"
   },
@@ -21,22 +21,21 @@
    "task": "[build] T-0657 Settings screen",
    "model": "opus",
    "started": "2026-11-04T21:31:27.924Z",
-   "seconds": 2415,
+   "seconds": 2595,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris x2",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-2219 SSD hang fallback",
    "model": "opus",
    "started": "2026-11-04T22:01:37.827Z",
-   "seconds": 605,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris x2, Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-04T22:13:55.034000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-1898 land parked chart-rebuild change",
@@ -49,7 +48,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 362,
+  "runnable_count": 361,
   "blocked_count": 122
  },
  "meter": {
@@ -92,7 +91,7 @@
   "week_pct": 36.85,
   "usage_pct": 38.2,
   "work_pct": 76.3,
-  "read_at": "2026-11-04T22:11:00+00:00",
+  "read_at": "2026-11-04T22:14:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -290,12 +289,12 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T17:11:00-05:00"
+  "at": "2026-11-04T17:14:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
   "why": "Behind the week: 50% used with 52% of the week past, so the pool is sized to catch up",
-  "n": 3,
+  "n": 4,
   "at": "2026-11-04T16:28:57.996123-05:00"
  },
  "lanes": [
@@ -310,12 +309,11 @@
   },
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-2219 SSD hang fallback",
-   "model": "opus",
-   "since": "2026-11-04T22:01:37.827Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -369,15 +367,6 @@
     "e": "high",
     "at": "2026-11-04T21:31:27.924Z",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-2219 SSD hang fallback",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T22:01:37.827Z",
-    "o": "c"
    }
   ],
   "open": [
@@ -408,13 +397,6 @@
     "t": "Make landing a merge queue as published...",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "A mounted SSD that doesn't answer must not...",
-    "s": "next",
-    "o": "c"
    },
    {
     "w": "Pernille",
@@ -450,9 +432,21 @@
     "t": "Activity run log, Swift half",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Refresh control and age line in the renderer",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "When the company's external drive stays plugged in but stops answering, jobs that need a scratch...",
+    "at": "2026-11-04T17:13:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "The two chart rebuilds that ran in the pause between every pair of work sessions now run at most...",
@@ -462,15 +456,10 @@
     "w": "Operator",
     "t": "Jeremy's lane (lane b) started its work session at 3:57 PM, after the old usage reading stopped...",
     "at": "2026-11-04T16:49:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The fix for a red site test (T-2063: a stale checksum in the lanes page test) is still needed...",
-    "at": "2026-11-04T16:49:00-05:00"
    }
   ],
   "count": {
-   "next": 362,
+   "next": 361,
    "wait": 37,
    "blocked": 85,
    "you": 16
@@ -489,13 +478,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 2,
-  "total": 5,
-  "at": "5:11 PM",
+  "total": 4,
+  "at": "5:14 PM",
   "why": "",
-  "at_iso": "2026-11-04T22:11:00+00:00",
+  "at_iso": "2026-11-04T22:14:00+00:00",
   "started": "4:28 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:11 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:14 PM ET</p></section>"
  }
 }

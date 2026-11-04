@@ -1,47 +1,14 @@
 {
  "schema": 1,
- "at": "2026-11-04T22:52:01.158918+00:00",
+ "at": "2026-11-04T22:55:19.272227+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-04T16:28:59-05:00"
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[build] T-2211 extension lane runner fix",
-   "model": "opus",
-   "started": "2026-11-04T21:31:18.771Z",
-   "seconds": null,
-   "finished": "2026-11-04T22:51:06.954000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2221 runner single-file check",
-   "model": "opus",
-   "started": "2026-11-04T22:30:53.741Z",
-   "seconds": null,
-   "finished": "2026-11-04T22:44:28.664000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-0657 Settings screen",
-   "model": "opus",
-   "started": "2026-11-04T21:31:27.924Z",
-   "seconds": null,
-   "finished": "2026-11-04T22:44:02.700000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2080 land parked lane-a P0 work",
-   "model": "opus",
-   "started": "2026-11-04T22:14:50.205Z",
-   "seconds": null,
-   "finished": "2026-11-04T22:30:21.199000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -50,17 +17,17 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
-   "resets_at": "2026-11-04T22:20:00.108155+00:00",
+   "pct": 3.0,
+   "resets_at": "2026-11-05T03:19:59.644054+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 90.0,
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 50.0,
-   "resets_at": "2026-11-08T07:00:00.108183+00:00",
+   "pct": 51.0,
+   "resets_at": "2026-11-08T06:59:59.644077+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 50.0,
+   "left": 49.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -68,7 +35,7 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-04T16:28:57.726517-05:00"
+  "read_at": "2026-11-04T17:55:18.488181-05:00"
  },
  "ui": {
   "week_pct": 0.68,
@@ -85,10 +52,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 36.85,
-  "usage_pct": 38.2,
-  "work_pct": 76.3,
-  "read_at": "2026-11-04T22:54:00+00:00",
+  "week_pct": 36.84,
+  "usage_pct": 37.8,
+  "work_pct": 76.0,
+  "read_at": "2026-11-04T22:55:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -368,14 +335,10 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T17:54:00-05:00"
+  "at": "2026-11-04T17:55:00-05:00"
  },
  "next_tick_why": "session",
- "pool": {
-  "why": "Behind the week: 51% used with 52% of the week past, so the pool is sized to catch up",
-  "n": 3,
-  "at": "2026-11-04T16:28:57.996123-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -529,7 +492,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -541,10 +503,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "5:54 PM",
+  "at": "5:55 PM",
   "why": "",
-  "at_iso": "2026-11-04T22:54:00+00:00",
+  "at_iso": "2026-11-04T22:55:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:54 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:55 PM ET</p></section>"
  }
 }

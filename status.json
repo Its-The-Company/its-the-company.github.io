@@ -1,13 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-04T18:50:38.010476+00:00",
+ "at": "2026-11-04T18:53:44.718795+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-04T13:50:38-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2171 standing two-drive sweep",
+   "model": "opus",
+   "started": "2026-11-04T18:52:54.266Z",
+   "seconds": 50,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -55,7 +65,7 @@
   "week_pct": 37.4,
   "usage_pct": 38.5,
   "work_pct": 76.7,
-  "read_at": "2026-11-04T18:50:00+00:00",
+  "read_at": "2026-11-04T18:53:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -187,148 +197,6 @@
     "n": "Evan"
    },
    {
-    "lane": "a2",
-    "task": "T-2134",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "52 lane branches since 2026-11-01 were parked before landing because the...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:25:48-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a2",
-    "task": "T-2149",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "A lane-stop emergency must stay open while its stop flag stands",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:25:48-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-1735",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Experiment ids chosen inside a lane collide with main's",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:25:48-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a2",
-    "task": "T-2152",
-    "w": "Idris",
-    "k": "review",
-    "t": "Review of 80804f361",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:25:48-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a2",
-    "task": "T-2122",
-    "w": "Ines",
-    "k": "plan",
-    "t": "When session_end.py stops a work session at close_by, the committed...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:25:48-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a2",
-    "task": "T-2141",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Before the first TestFlight upload",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:25:48-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a2",
-    "task": "T-2147",
-    "w": "Pernille",
-    "k": "test",
-    "t": "StaleEntryPlanTests never has sampled_at ahead of now, so mutant guard let...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:25:48-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a2",
-    "task": "T-2101",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-1858 follow-up",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:25:48-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a2",
-    "task": "T-2106",
-    "w": "Idris",
-    "k": "tools",
-    "t": "Personal account b3 stopped on T-2026+T-2063",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:25:48-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a2",
-    "task": "T-2123",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Personal branch personal/b5 did not land",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:25:48-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a2",
-    "task": "T-2124",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Personal account b2 stopped",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:25:48-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-2125",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Personal account b3 stopped",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:25:48-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
     "lane": "a3",
     "task": "T-2153",
     "w": "Pernille",
@@ -458,18 +326,23 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T13:50:00-05:00"
+  "at": "2026-11-04T13:53:00-05:00"
  },
  "next_tick_why": "session",
- "pool": null,
+ "pool": {
+  "why": "On the week's line (50% used, 50% past), so today's work is spread until midnight",
+  "n": 1,
+  "at": "2026-11-04T13:50:36.449716-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-2171 standing two-drive sweep",
+   "model": "opus",
+   "since": "2026-11-04T18:52:54.266Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Idris",
@@ -513,7 +386,17 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-2171 standing two-drive sweep",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T18:52:54.266Z",
+    "o": "i"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -611,7 +494,18 @@
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6639240479",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Is the macbook runner working fully now?"
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -623,13 +517,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
-  "lanes": 3,
+  "main": 1,
+  "lanes": 2,
   "total": 3,
-  "at": "1:50 PM",
+  "at": "1:53 PM",
   "why": "",
-  "at_iso": "2026-11-04T18:50:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:50 PM ET</p></section>"
+  "at_iso": "2026-11-04T18:53:00+00:00",
+  "started": "1:50 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:50 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:53 PM ET</p></section>"
  }
 }

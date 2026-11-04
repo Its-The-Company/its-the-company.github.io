@@ -1,28 +1,80 @@
 {
  "schema": 1,
- "at": "2026-11-04T12:11:36.405892+00:00",
+ "at": "2026-11-04T12:33:36.640644+00:00",
  "session": {
   "active": true,
-  "kind": "morning",
-  "started": "2026-11-04T07:07:44-05:00"
+  "kind": "work",
+  "started": "2026-11-04T07:15:14-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2052 reports on time",
+   "model": "opus",
+   "started": "2026-11-04T12:22:18.536Z",
+   "seconds": 678,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-2058 live running count on the site",
+   "model": "opus",
+   "started": "2026-11-04T12:22:27.486Z",
+   "seconds": 669,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-2053 free Simulator space, run mutants",
+   "model": "opus",
+   "started": "2026-11-04T12:30:11.060Z",
+   "seconds": 205,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys x2, Idris",
  "recent": [
   {
-   "name": "maren",
-   "task": "[report] morning",
+   "name": "odalys",
+   "task": "[tools] T-1858 SSD overflow, disk back to 20 GB",
    "model": "opus",
-   "started": "2026-11-04T12:08:05.815Z",
+   "started": "2026-11-04T12:18:51.120Z",
    "seconds": null,
-   "finished": "2026-11-04T12:09:33.939000+00:00"
+   "finished": "2026-11-04T12:29:04.231000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-2050 report format check",
+   "model": "opus",
+   "started": "2026-11-04T12:16:05.189Z",
+   "seconds": null,
+   "finished": "2026-11-04T12:21:35.416000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-2049 review of 55e3fb63f",
+   "model": "opus",
+   "started": "2026-11-04T12:16:23.444Z",
+   "seconds": null,
+   "finished": "2026-11-04T12:21:28.494000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-2051 stop-loop fix proof",
+   "model": "opus",
+   "started": "2026-11-04T12:16:15.396Z",
+   "seconds": null,
+   "finished": "2026-11-04T12:18:11.976000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 318,
-  "blocked_count": 118
+  "runnable_count": 325,
+  "blocked_count": 119
  },
  "meter": {
   "five_hour": {
@@ -64,7 +116,7 @@
   "week_pct": 34.67,
   "usage_pct": 38.8,
   "work_pct": 77.7,
-  "read_at": "2026-11-04T12:14:00+00:00",
+  "read_at": "2026-11-04T12:35:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -75,37 +127,39 @@
   }
  ],
  "disk": {
-  "free_gb": 11,
-  "gate": "closed",
-  "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
+  "free_gb": 27,
+  "gate": "open",
+  "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T07:14:00-05:00"
+  "at": "2026-11-04T07:35:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
   "why": "Behind the week: 45% used with 46% of the week past, so the pool is sized to catch up",
   "n": 3,
-  "at": "2026-11-04T07:07:40.564253-05:00"
+  "at": "2026-11-04T07:15:13.515772-05:00"
  },
  "lanes": [
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P0, personal lane before anything else...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-2052 reports on time",
+   "model": "opus",
+   "since": "2026-11-04T12:22:18.536Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-2053 free Simulator space, run mutants",
+   "model": "opus",
+   "since": "2026-11-04T12:30:11.060Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -141,7 +195,35 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-2052 reports on time",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:22:18.536Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "T-2058 live running count on the site",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:22:27.486Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-2053 free Simulator space, run mutants",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T12:30:11.060Z",
+    "o": "c"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -166,8 +248,8 @@
    },
    {
     "w": "Odalys",
-    "k": "ops",
-    "t": "Check the 2026-11-04 06:00 report",
+    "k": "tools",
+    "t": "T-1858 continued, Emergency not yet cleared",
     "s": "next",
     "o": "c"
    },
@@ -217,23 +299,23 @@
   "done": [
    {
     "w": "Pernille",
-    "t": "Checked Idris's fix that makes sure a widget owed a refresh gets its turn even when a locked Pro...",
-    "at": "2026-11-04T06:04:00-05:00"
+    "t": "Reviewed the fix for the stop-button test that failed on the MacBook. The fix is sound for its...",
+    "at": "2026-11-04T07:21:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "Fixed a case where one home-screen widget could go without ever refreshing when a locked Pro...",
-    "at": "2026-11-04T05:53:00-05:00"
+    "w": "Odalys",
+    "t": "The 06:00 report met most of the Investors' new format but had a summary point with no section,...",
+    "at": "2026-11-04T07:21:00-05:00"
    },
    {
     "w": "Pernille",
-    "t": "Checked Idris's repair of two app self-checks. Both now catch what they should, but one still...",
-    "at": "2026-11-04T05:25:00-05:00"
+    "t": "Checked Idris's fix that makes sure a widget owed a refresh gets its turn even when a locked Pro...",
+    "at": "2026-11-04T06:04:00-05:00"
    }
   ],
   "count": {
-   "next": 318,
-   "wait": 34,
+   "next": 325,
+   "wait": 35,
    "blocked": 84,
    "you": 15
   }
@@ -249,5 +331,15 @@
   "task_open",
   "lane_task",
   "task_next"
- ]
+ ],
+ "agents_now": {
+  "main": 3,
+  "lanes": 0,
+  "total": 3,
+  "at": "7:35 AM",
+  "why": "",
+  "at_iso": "2026-11-04T12:35:00+00:00",
+  "started": "7:15 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:35 AM ET</p></section>"
+ }
 }

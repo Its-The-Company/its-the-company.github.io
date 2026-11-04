@@ -1,13 +1,41 @@
 {
  "schema": 1,
- "at": "2026-11-04T21:28:58.564854+00:00",
+ "at": "2026-11-04T21:32:02.959740+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-04T16:28:59-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[build] T-2211 extension lane runner fix",
+   "model": "opus",
+   "started": "2026-11-04T21:31:18.771Z",
+   "seconds": 44,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-0657 Settings screen",
+   "model": "opus",
+   "started": "2026-11-04T21:31:27.924Z",
+   "seconds": 35,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-1898 land parked chart-rebuild change",
+   "model": "opus",
+   "started": "2026-11-04T21:31:36.526Z",
+   "seconds": 26,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris x2, Odalys",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -55,7 +83,7 @@
   "week_pct": 36.85,
   "usage_pct": 38.2,
   "work_pct": 76.3,
-  "read_at": "2026-11-04T21:29:00+00:00",
+  "read_at": "2026-11-04T21:32:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -164,26 +192,32 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T16:29:00-05:00"
+  "at": "2026-11-04T16:32:00-05:00"
  },
  "next_tick_why": "session",
- "pool": null,
+ "pool": {
+  "why": "Behind the week: 50% used with 51% of the week past, so the pool is sized to catch up",
+  "n": 3,
+  "at": "2026-11-04T16:28:57.996123-05:00"
+ },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
-   "model": null,
-   "since": null,
-   "next": []
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-2211 extension lane runner fix",
+   "model": "opus",
+   "since": "2026-11-04T21:31:18.771Z",
+   "next": [],
+   "effort": "high"
   },
   {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-1898 land parked chart-rebuild change",
+   "model": "opus",
+   "since": "2026-11-04T21:31:36.526Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -219,7 +253,35 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-2211 extension lane runner fix",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T21:31:18.771Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0657 Settings screen",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T21:31:27.924Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-1898 land parked chart-rebuild change",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T21:31:36.526Z",
+    "o": "c"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -317,23 +379,11 @@
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6642518101",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Thank you! What is the cause for why..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -341,13 +391,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 3,
   "lanes": 2,
-  "total": 2,
-  "at": "4:29 PM",
+  "total": 5,
+  "at": "4:32 PM",
   "why": "",
-  "at_iso": "2026-11-04T21:29:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:29 PM ET</p></section>"
+  "at_iso": "2026-11-04T21:32:00+00:00",
+  "started": "4:28 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:32 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T22:42:12.682090+00:00",
+ "at": "2026-11-04T22:45:16.189075+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,31 +12,29 @@
    "task": "[build] T-2211 extension lane runner fix",
    "model": "opus",
    "started": "2026-11-04T21:31:18.771Z",
-   "seconds": 4253,
+   "seconds": 4437,
    "finished": null,
    "effort": "high"
+  }
+ ],
+ "who": "Idris",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2221 runner single-file check",
+   "model": "opus",
+   "started": "2026-11-04T22:30:53.741Z",
+   "seconds": null,
+   "finished": "2026-11-04T22:44:28.664000+00:00"
   },
   {
    "name": "idris",
    "task": "[build] T-0657 Settings screen",
    "model": "opus",
    "started": "2026-11-04T21:31:27.924Z",
-   "seconds": 4244,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-04T22:44:02.700000+00:00"
   },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2221 runner single-file check",
-   "model": "opus",
-   "started": "2026-11-04T22:30:53.741Z",
-   "seconds": 678,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris x2, Odalys",
- "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-2080 land parked lane-a P0 work",
@@ -52,20 +50,12 @@
    "started": "2026-11-04T22:01:37.827Z",
    "seconds": null,
    "finished": "2026-11-04T22:13:55.034000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-1898 land parked chart-rebuild change",
-   "model": "opus",
-   "started": "2026-11-04T21:31:36.526Z",
-   "seconds": null,
-   "finished": "2026-11-04T21:59:14.149000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 362,
+  "runnable_count": 365,
   "blocked_count": 123
  },
  "meter": {
@@ -108,7 +98,7 @@
   "week_pct": 36.85,
   "usage_pct": 38.2,
   "work_pct": 76.3,
-  "read_at": "2026-11-04T22:42:00+00:00",
+  "read_at": "2026-11-04T22:45:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -130,7 +120,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T17:40:02-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
@@ -141,7 +132,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T17:40:02-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
@@ -152,7 +144,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T17:40:02-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
@@ -383,7 +376,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T17:42:00-05:00"
+  "at": "2026-11-04T17:45:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -403,12 +396,11 @@
   },
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-2221 runner single-file check",
-   "model": "opus",
-   "since": "2026-11-04T22:30:53.741Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -452,24 +444,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T21:31:18.771Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0657 Settings screen",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T21:31:27.924Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-2221 runner single-file check",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T22:30:53.741Z",
     "o": "c"
    }
   ],
@@ -563,7 +537,7 @@
    }
   ],
   "count": {
-   "next": 362,
+   "next": 365,
    "wait": 38,
    "blocked": 85,
    "you": 16
@@ -574,6 +548,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -582,13 +557,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 1,
   "lanes": 3,
-  "total": 6,
-  "at": "5:42 PM",
+  "total": 4,
+  "at": "5:45 PM",
   "why": "",
-  "at_iso": "2026-11-04T22:42:00+00:00",
+  "at_iso": "2026-11-04T22:45:00+00:00",
   "started": "4:28 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:42 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:45 PM ET</p></section>"
  }
 }

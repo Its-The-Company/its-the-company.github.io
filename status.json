@@ -1,66 +1,33 @@
 {
  "schema": 1,
- "at": "2026-11-04T15:23:48.882883+00:00",
+ "at": "2026-11-04T15:42:14.991424+00:00",
  "session": {
-  "active": false,
+  "active": true,
   "kind": "",
   "started": null
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[ops] T-2108 lane a stop",
-   "model": "opus",
-   "started": "2026-11-04T14:30:37.340Z",
-   "seconds": null,
-   "finished": "2026-11-04T15:18:55.733000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] T-2112 policy evidence column",
-   "model": "opus",
-   "started": "2026-11-04T14:40:55.292Z",
-   "seconds": null,
-   "finished": "2026-11-04T14:42:30.779000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-2109 privacy findings owners",
-   "model": "opus",
-   "started": "2026-11-04T14:39:35.807Z",
-   "seconds": null,
-   "finished": "2026-11-04T14:40:36.703000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] T-1800 privacy label vs code",
-   "model": "opus",
-   "started": "2026-11-04T14:30:44.011Z",
-   "seconds": null,
-   "finished": "2026-11-04T14:39:17.068000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 340,
+  "runnable_count": 339,
   "blocked_count": 123
  },
  "meter": {
   "five_hour": {
-   "pct": 13.0,
-   "resets_at": "2026-11-04T17:20:00.191780+00:00",
+   "pct": 16.0,
+   "resets_at": "2026-11-04T17:20:00.326132+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 87.0,
+   "left": 84.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 47.0,
-   "resets_at": "2026-11-08T07:00:00.191805+00:00",
+   "pct": 48.0,
+   "resets_at": "2026-11-08T07:00:00.326155+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 53.0,
+   "left": 52.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -68,10 +35,10 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-04T09:23:30.865016-05:00"
+  "read_at": "2026-11-04T10:42:13.863557-05:00"
  },
  "ui": {
-  "week_pct": 0.682,
+  "week_pct": 0.691,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -83,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-04T09:38:31-05:00",
+ "next_tick": null,
  "personal": {
-  "week_pct": 36.95,
+  "week_pct": 37.43,
   "usage_pct": 39.3,
   "work_pct": 77.6,
-  "read_at": "2026-11-04T15:26:00+00:00",
+  "read_at": "2026-11-04T15:42:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -277,7 +244,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T09:04:34-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b3",
@@ -405,16 +373,16 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
+  "free_gb": 11,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T10:26:00-05:00"
+  "at": "2026-11-04T10:42:00-05:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "pool": null,
  "lanes": [
   {
@@ -542,6 +510,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "Both planted-bug checks for the stop-button fix were run; one was caught by the tests and one...",
+    "at": "2026-11-04T10:27:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Account a stopped itself because a tiny allowance check was cut off while starting on a busy...",
     "at": "2026-11-04T10:18:00-05:00"
@@ -550,15 +523,10 @@
     "w": "Wrenna",
     "t": "The privacy policy's source notes now point at the real code for Keychain, location, steps,...",
     "at": "2026-11-04T09:42:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "The privacy label is still correct, but the privacy policy and its notes lag the built app....",
-    "at": "2026-11-04T09:40:00-05:00"
    }
   ],
   "count": {
-   "next": 340,
+   "next": 339,
    "wait": 37,
    "blocked": 86,
    "you": 16
@@ -580,10 +548,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "10:26 AM",
+  "at": "10:42 AM",
   "why": "",
-  "at_iso": "2026-11-04T15:26:00+00:00",
+  "at_iso": "2026-11-04T15:42:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:26 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:42 AM ET</p></section>"
  }
 }

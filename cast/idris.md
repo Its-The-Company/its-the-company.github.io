@@ -65,7 +65,7 @@ Dated task logs and full lessons: archive.md.
 
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
-- Lesson T-1850: xc.sh sends a run with uncommitted paths to the MacBook runner (exit 2); XC_LOCAL=1 for the Mac mini. xc_mutants plants in the shared tree, so a host `swift test` meanwhile tests the mutant. Mutants run past one tool call's 10+10 min: one mutant per call.
+- T-2119 4947c6e39: _ssl and _hashlib declare 3B52.1 (review T-2121 Pernille open). Lesson: a "no route" verdict on a statically linked lib needs its call graph (otool -tV), not a reading of its job; OpenSSL's OPENSSL_CONF autoload hands scripts a path.
 {% endraw %}
 
 

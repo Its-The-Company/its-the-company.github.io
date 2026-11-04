@@ -1,33 +1,30 @@
 {
  "schema": 1,
- "at": "2026-11-04T16:13:05.954551+00:00",
+ "at": "2026-11-04T16:15:34.044374+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-04T10:42:15-05:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-2117 reports-on-time restart",
    "model": "opus",
    "started": "2026-11-04T15:55:21.128Z",
-   "seconds": 1064,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-04T16:14:41.892000+00:00"
   },
   {
    "name": "idris",
    "task": "[build] T-2120 widen app privacy guard",
    "model": "opus",
    "started": "2026-11-04T16:06:32.490Z",
-   "seconds": 393,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-04T16:14:10.376000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-2119 _ssl framework 3B52.1 manifest",
@@ -43,28 +40,12 @@
    "started": "2026-11-04T15:54:19.948Z",
    "seconds": null,
    "finished": "2026-11-04T16:00:09.609000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-2116 rebuild fold diff",
-   "model": "opus",
-   "started": "2026-11-04T15:49:38.617Z",
-   "seconds": null,
-   "finished": "2026-11-04T15:55:00.871000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2113 3B52.1 required-reason decision",
-   "model": "opus",
-   "started": "2026-11-04T15:45:17.470Z",
-   "seconds": null,
-   "finished": "2026-11-04T15:53:11.579000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 340,
+  "runnable_count": 339,
   "blocked_count": 123
  },
  "meter": {
@@ -107,7 +88,7 @@
   "week_pct": 37.43,
   "usage_pct": 39.3,
   "work_pct": 77.6,
-  "read_at": "2026-11-04T16:13:00+00:00",
+  "read_at": "2026-11-04T16:17:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -125,7 +106,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T11:13:00-05:00"
+  "at": "2026-11-04T11:17:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -136,21 +117,19 @@
  "lanes": [
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-2117 reports-on-time restart",
-   "model": "opus",
-   "since": "2026-11-04T15:55:21.128Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-2120 widen app privacy guard",
-   "model": "opus",
-   "since": "2026-11-04T16:06:32.490Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -186,38 +165,12 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-2117 reports-on-time restart",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T15:55:21.128Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-2120 widen app privacy guard",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T16:06:32.490Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
     "k": "ops",
     "t": "After T-1752/T-1778",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-2052 restart on the T-0848 route",
     "s": "next",
     "o": "c"
    },
@@ -276,27 +229,34 @@
     "t": "Site overhaul build, after Maren's spec line...",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "T-1776 stage 1 rest",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "When a report is due, a work session still running is now stopped about 10 minutes later, its...",
+    "at": "2026-11-04T11:14:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "The check that keeps the app's privacy declaration honest about files a person picks now reads...",
+    "at": "2026-11-04T11:13:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "Two of Python's built-in parts (secure connections and hashing) can read details of files a...",
     "at": "2026-11-04T11:05:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Checked that Python now tells Apple it may read details of files the person picks; that is...",
-    "at": "2026-11-04T10:59:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The approved rules clean-up failed to apply because its file had changed since; it is rebuilt on...",
-    "at": "2026-11-04T10:54:00-05:00"
    }
   ],
   "count": {
-   "next": 340,
+   "next": 339,
    "wait": 37,
    "blocked": 86,
    "you": 16
@@ -316,13 +276,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 0,
   "lanes": 0,
-  "total": 2,
-  "at": "11:13 AM",
-  "why": "",
-  "at_iso": "2026-11-04T16:13:00+00:00",
-  "started": "10:42 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:42 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:13 AM ET</p></section>"
+  "total": 0,
+  "at": "11:17 AM",
+  "why": "Between sessions: no session is running. Last check 10:42 AM ET.",
+  "at_iso": "2026-11-04T16:17:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:17 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 10:42 AM ET.</p></section>"
  }
 }

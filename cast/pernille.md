@@ -22,10 +22,11 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Career goal | I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week. |
 {: .facts}
 
-## Activity (57 most recent)
+## Activity (58 most recent)
 
 | When | What | |
 | --- | --- | --- |
+| Nov 3, 21:57 | <span class="tag t-build">build</span> T-0309 schema + Python half landed (tracking, content_transition, tint, Widget description, A5 clamp note); Swift half split to T-1786 for Idris. Board commit 01a40ab37 also swept in 21 other agents' uncommitted board lines (content unchanged, authored as Pernille). |  |
 | Nov 3, 11:35 | <span class="tag t-build">build</span> T-1439: ui.RefreshButton (reserved pywidget.refresh) and ui.Updated age node in the DSL and schema; prefix mutants caught (ebb68f4b1) |  |
 | Nov 2, 18:02 | <span class="tag t-build">build</span> T-1143: the editor's time limit moves to Swift's timer (OverBudget); prime() ends the asyncio livelock; 62 host tests, 20/20 mutants |  |
 | Nov 2, 17:46 | <span class="tag t-shipped">shipped</span> T-1139: Activity run log host half landed, 55 host tests, 38/38 mutants killed |  |
@@ -117,10 +118,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
 - Open (from T-1045): T-1048 stdlib size stop unexplained, my check; T-1047 upload.sh identity.
-- 2026-11-03 T-0632 ticked (e04d50671): work had landed 11-02; board line was stale. Lesson: `git log --grep T-XXXX` before building any re-issued line.
-- 2026-11-03 T-1708 (884ec6151): 6a21d9820 sound, 247/0; M1/M2 survive -> T-1722/T-1723 (Odalys, P2). Lesson: when a rule has two parts, each refusal row must break only one part (put a tracked decoy at the lexical end), or each part hides the other's mutant.
-- 2026-11-03 T-1720 (0cdc82a28): status.json forged by path has no backstop, to Ines as T-1725 (P1). Lesson: the lane writes no status.json at HEAD; check a planned backstop has a writer before calling it one.
 - 2026-11-03 T-1175/T-1176 (a26e7ccab): host mutants = `git archive HEAD pywidget/ios` + my files, `cp -RL` Core, `--filter "RunLog|RunDetail"`, `python3 -u`; check baseline first (shared tree had another agent's unbuilt edits; full suite in scratch fails 18 on outside fixtures, so equal-count "kills" are fake).
+- 2026-11-03 T-0309 (93b970bfd): schema+Python half; Swift half T-1786 (Idris). Lesson: `git diff ops/board.md` before staging it; 01a40ab37 swept in 21 other agents' board lines.
 {% endraw %}
 
 

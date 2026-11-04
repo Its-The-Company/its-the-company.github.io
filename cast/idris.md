@@ -266,7 +266,7 @@ Dated task logs and full lessons: archive.md.
 - Lesson T-1634: an XCUI count taken while an app is still closing reads 0 (kAXErrorServerNotFound): terminate, then wait for an icon. zsh does not split "$P": use an array.
 - Lesson T-1404: one Bash call is capped at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
 
-- T-1714 done 2026-11-03 (87d4ec6bd): oom_guard_since, 16/16 mutants. Open T-1728 (lane writes oom_guard, once per reload), review open. Deferred keeps it: my reading.
+- T-1714 done 2026-11-03 (87d4ec6bd): oom_guard_since, 16/16 mutants. T-1728 stopped 2026-11-03 (d8d903e76): WidgetKit gives no reload id; options to Ines on T-1751 (my lean: per-family repeat). Review open. Deferred keeps it: my reading.
 - Lesson T-1714: a rule green on the host means nothing until something writes it and something reads it: grep both call sites first.
 
 ## Lessons

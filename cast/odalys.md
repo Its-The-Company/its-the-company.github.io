@@ -259,7 +259,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - After a tick change, run every suite that copies the tick (T-1192: 3 personal_off reds caught only that way).
 - T-1730 (P3, from T-1474): 2 metric_series mutants in guards_by_arm survive at HEAD too.
 
-- T-1724 done (2731e2ed0): personal Spread catch-up via governor personal-pool. OPT-074 has no before (guard refused live readings). Open: Lock In keeps 8, Spread-behind reaches 12.
+- T-1724 done (2731e2ed0): personal Spread catch-up via governor personal-pool. OPT-074 has no before (guard refused live readings).
+- T-1745 done (7e15da2fd): Lock In pool 12 inside 5-hour room. OPT-075 read due 11-10. Reds at HEAD raised: T-1782 (governor_personal goldens), T-1783 (personal_lane TICK_LINES vs running.py).
+- Lesson 11-03: never state a suite result before reading its output file.
 
 ## Standing lessons (details in archive.md)
 - Never link or copy investors/ or rules/ into scratch; suites run only via tests/run.sh from the company folder or a real git worktree, never a plain copy.

@@ -165,6 +165,20 @@ Consequence, reported not decided: 1.0 is on sale around Day 27-28 at best, so t
 Human checkpoints (brief section 0): no accounts, spending, contact with Apple or third parties, TestFlight or App Store submission, publishing, pricing, legal terms, or 2.1 changes without the Investors. PROPOSALs for any change to 2.1. One ADR per significant choice. Every outside library and asset logged with its licence (Commandments 4, 5, 9). Every visual drawn by code and approved before it ships (Commandments 9, 51). No scripted reads against a host's terms (Commandment 6); the GitHub hold (#53) stands until a ruling says otherwise.
 
 **Chair line, 2026-10-31 01:03 ET (Ines, T-0852; an Investor, #41 c6539190636).** Document upkeep that doesn't serve the app stops. Recurring passes stop unless a named reader needs them before submission: T-0023, T-0115 and T-0222 have none and stop today; CORRECTIONS.md stays as it stands. 1.1 design notes wait behind the first submission: T-0101 waits until 2026-11-16, the day after Day 25. T-0845 stays: the Investors asked for it and are its reader. Launch documents state only what the code does at that commit. For packets: a new document names its reader and use, or it isn't written.
+
+## Chair note, 2026-11-03 21:09 ET (Ines, board <span title="A numbered batch of planned work, with its own plan file.">refill</span>): Xcode slot order after T-1728
+
+One Xcode task at a time on the Mac mini, and the MacBook gate J-20261103-2015-xc-test is still running. From 11-04, [ops] stays at 10% and [site] at 5% (#41 c6619795358). So Idris's slot goes to freshness first, as the 10-31 chair note's row for 11-01 to 11-11 says, and everything that can run without Xcode moves off his lane.
+
+**Idris's next three, in order, after T-1728:**
+
+1. **T-0675, item 7.** P0, and the slip trigger is T-0675 on main by 11-08. Item 6 (T-1643) waits on T-1140.
+2. **T-0678**, the Refresh button intent. T-1440 follows it on the same lane.
+3. **T-0687 (a)**, `net.get` inside the extension, with T-0696's peak measurement in the same run.
+
+Not next: T-0198's host half landed (186e9027); its T2 call rides with T-0793, which is blocked. T-1140 waits on T-0866's status.json writer. A red result from the gate changes this order only if it blocks a landing; then that fix goes first, and I say so on the board.
+
+**Off the slot tonight (T-1754 to T-1762).** These are host-only or need no build. Pure rules in the Core package go to Pernille and Odalys: which widget state shows, where the stale entry goes, the traceback fold, and the refresh schedule. Their Xcode wiring stays inside T-0048, T-0389 and T-0793. Pernille also gets a test that the bundled files open clean in the editor. Maren specs the iPhone examples entry before T-0811. Wrenna drafts the support Q&A, the rejection replies and the review-notes scope map from saved sources. No hiring: the gap is the Xcode slot, not hands (Commandment 18).
 {% endraw %}
 
 </div>

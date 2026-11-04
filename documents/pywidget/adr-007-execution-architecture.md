@@ -937,6 +937,35 @@ Read: Pernille's note on T-1715 and her 6c056284a (lane.py Not held bullet and s
 **What would make this fail.** A status write that fails often on the device while tree writes succeed. Then good widgets would carry a badge at their first refusal. I have no device figure for that. If T-0680's device runs show status writes failing, the fallback comes back to me. The rule does not.
 
 **Board.** T-1717 ticked. T-1714 gains the nil branch and its test. New T-1720 (Pernille, P2).
+
+## Chair line (Ines), 2026-11-03 21:09 ET: status.json written by path with a made-up outcome (T-1725, from T-1720)
+
+Read: Pernille's T-1720 finding (0cdc82a28, the one view), items (a) to (d); my 20:00 line, "Not closed here"; the 19:51 line, item 1; the 16:54 line, items 1, 2a and 3; my 04:02 line, item 4; at HEAD, WidgetStatus.swift (`decode`, `carried`, `expired`, `Recovery`, `LoopBreaker`), RunLogRecorder.swift's expired rule, CrashMarker.swift `LaunchRunID`, PyBridge.swift `cwd`, TreeTimeline.swift's stale mark, and the runtime for any API that names `widgets/<id>/`. Ran grep only: no build, no test, no script. The flag stays off. Moves no date.
+
+**Ruling: forging a runtime file is one class, listed once, and it must end where item 3 says. Two fixes make that true. Then one Not held bullet.**
+
+**1. The class. I am changing 16:54 item 3's words after seeing the case, and I say so.**
+
+- Route: a script writes a runtime file's content by path, in the runtime's own format: a `status.json` with a made-up `last_outcome`, `failing_since` or `expired_runs`; a `lane-peak` (19:51 item 1); a `tree.json`. That is forging, and it is deliberate reach. No ordinary script does it. No runtime API hands a script `widgets/<id>/` (grep of pywidget/runtime). The run's `cwd` is never set to it (PyBridge's `cwd` has no caller that sets it). A file that is not a JSON object decodes as no status, which 20:00 already badges.
+- Why one class and not a fix per file: `tree.json` shows it cannot be closed. A script that writes another widget's picture by path shows a fake fresh picture, and no file rule can badge it, because whatever the extension reads, a script can reach (04:02 item 4, 20:00). Item 1 already says the lane is not a security boundary. A chair line per file closes nothing.
+- Item 3 gains: "It may list forging (a script writing a runtime file's content by path, in the runtime's own format), even where the effect is a picture without its badge, when the effect ends at that widget's next status write by Swift, in either lane, or at demotion." 2a still binds the runtime and every ordinary route.
+- Why 20:00 stays a fix: deleting is ordinary. A folder clear deletes. Nobody ordinary writes our schema.
+
+**2. Fix A: the lane writes at the end of every run (finding (a)).** At HEAD the lane writes no row and no status.json, so for a widget only the lane runs, "the next Swift write" may never come and item 1's bound is no bound. The extension runner calls `RunLogRecorder.recordWidgetRun` for every lane run that reaches an outcome: row, detail and status.json in one `state.lock` hold, as the app lane does. This is T-1140's clause "its extension runner calls the same store", put on its own line so it has an owner and an order; T-1140 closes that clause by pointing at it. T-1728's refusal write and this one share one writer. Idris, after T-1728.
+
+**3. Fix B: `expired_runs` stops being a switch a file can throw (finding (c)).** This is the one effect that is not display: a forged list makes a real kill skip the loop breaker, and with guessed ids (the run counter starts at 0 each launch) it reaches other widgets.
+
+- (i) `recordWidgetRun` trusts only the run ids the T2 expiration handler listed in this process, kept in memory. An id that is only in the file is ignored: the row is the run's own, and status.json is written. The handler and the sink share the process, so this costs one set.
+- (ii) Launch recovery has no memory to use. A kill matched to `expired_runs` stops being skipped forever: four in a row on background triggers demote, as kills do (twice `LoopBreaker.limit`). A forged list then ends at demotion, as item 3 asks. An honest widget the handler stopped and the system still killed four times running cannot finish in the background; T1 only is right for it. This changes LoopBreaker's rule that expiry-matched kills "neither count nor reset", for this one case, and I say so.
+- Tests red first: four forged-expiry kills demote; one honest expiry kill does not; an id only in the file still gets its status written. Idris, after Fix A.
+
+**4. Not held, one bullet (Pernille, after A and B are on main).** Route: forging, as item 1. Effect, among the person's own widgets: a picture without its badge, a badge on a good widget, or wrong `failing_since` or `deferred_since` text. Backstop: that widget's next run in either lane (Fix A); demotion for forged expiry (Fix B). Unknown keys stay carried; nothing reads them. The bullet goes in lane.py and C2 1.7. It names code, so it is written after the code lands, not before (T-0791).
+
+**5. Order, and T-0048.** T-1728 (in progress) first, then Fix A, then Fix B, then the bullet. T-0048 does not draw 7.1 row 4, the badge, before Fix A is on main: until then a lane-only widget's badge has nothing behind it (finding (d)). Fix B gates the flag default, not T-0048. Cost: about half a day each for A and B, each with an independent review; the bullet about an hour.
+
+**What would make this fail.** An ordinary route to an old or made-up status.json: a restore that copies a whole widget folder back, a sync, or a future runtime API that hands scripts `widgets/<id>/`. Any of those makes forging ordinary, and the class comes back to me. Second, Fix A's write failing on the device while tree writes succeed (20:00's fallback). T-0680's device runs answer both.
+
+**Board.** T-1725 ticked. New T-1764 (Idris, P1): Fix A. New T-1765 (Idris, P1): Fix B. New T-1766 (Pernille, P2): the bullet.
 {% endraw %}
 
 </div>

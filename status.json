@@ -1,66 +1,66 @@
 {
  "schema": 1,
- "at": "2026-11-04T01:56:44.450289+00:00",
+ "at": "2026-11-04T02:58:32.703337+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-03T19:41:41-05:00"
+  "started": "2026-11-03T21:01:58-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[ops] T-1228 T-1689 T-1698 T-1699 T-1706 T-1700 T-1638 land parked lane work",
+   "name": "pernille",
+   "task": "[build] T-0309 schema rows, Python half",
    "model": "opus",
-   "started": "2026-11-04T01:04:58.920Z",
+   "started": "2026-11-04T02:04:44.179Z",
    "seconds": null,
-   "finished": "2026-11-04T01:55:19.723000+00:00"
+   "finished": "2026-11-04T02:58:05.667000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-1724 personal lanes catch-up pacing",
+   "task": "[tools] T-1745 Lock In full pool for lanes",
    "model": "opus",
-   "started": "2026-11-04T01:06:45.072Z",
+   "started": "2026-11-04T02:05:05.659Z",
    "seconds": null,
-   "finished": "2026-11-04T01:53:29.403000+00:00"
+   "finished": "2026-11-04T02:52:52.831000+00:00"
   },
   {
-   "name": "idris",
-   "task": "[test] T-1693 T-1696 T-1716 Simulator runs",
+   "name": "ines",
+   "task": "[plan] T-1725 status.json backstop ruling",
    "model": "opus",
-   "started": "2026-11-04T01:01:46.112Z",
+   "started": "2026-11-04T02:04:50.379Z",
    "seconds": null,
-   "finished": "2026-11-04T01:44:18.984000+00:00"
+   "finished": "2026-11-04T02:10:46.832000+00:00"
   },
   {
-   "name": "odalys",
-   "task": "[tools] T-1718 T-1719 lane menu fixes",
+   "name": "ines",
+   "task": "[plan] refill board with non-Xcode product work",
    "model": "opus",
-   "started": "2026-11-04T01:03:41.537Z",
+   "started": "2026-11-04T02:04:59.674Z",
    "seconds": null,
-   "finished": "2026-11-04T01:35:58.328000+00:00"
+   "finished": "2026-11-04T02:10:11.865000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 209,
-  "blocked_count": 121
+  "runnable_count": 236,
+  "blocked_count": 120
  },
  "meter": {
   "five_hour": {
-   "pct": 11.0,
-   "resets_at": "2026-11-04T01:59:59.949187+00:00",
+   "pct": 0.0,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "left": 89.0,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 33.0,
-   "resets_at": "2026-11-08T06:59:59.949206+00:00",
+   "pct": 36.0,
+   "resets_at": "2026-11-08T07:00:00.113243+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 67.0,
+   "left": 64.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -68,10 +68,10 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-03T19:41:39.801470-05:00"
+  "read_at": "2026-11-03T21:01:55.207998-05:00"
  },
  "ui": {
-  "week_pct": 0.682,
+  "week_pct": 0.681,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -85,18 +85,11 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 26.14,
-  "usage_pct": 38.0,
-  "work_pct": 77.9,
-  "read_at": "2026-11-04T02:00:00+00:00",
+  "week_pct": 26.11,
+  "usage_pct": 36.4,
+  "work_pct": 77.5,
+  "read_at": "2026-11-04T03:03:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-1737",
-    "t": "T-1737",
-    "at": "2026-11-03T20:43:58-05:00",
-    "n": "Evan"
-   },
    {
     "lane": "a2",
     "task": "T-1735",
@@ -106,7 +99,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-03T20:33:18-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a2",
@@ -117,7 +111,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-03T20:33:18-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a2",
@@ -189,39 +184,126 @@
     "d": 1
    },
    {
-    "lane": "a3",
-    "task": "T-1742",
-    "w": "Maren",
+    "lane": "b2",
+    "task": "T-1750",
+    "w": "Odalys",
     "k": "tools",
-    "t": "Personal branch personal/a4 did not land",
+    "t": "Personal branch personal/b3 did not land",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-03T20:53:14-05:00",
-    "n": "Evan",
+    "at": "2026-11-03T21:23:56-05:00",
+    "n": "Jeremy",
     "d": 1
    },
    {
-    "lane": "a3",
-    "task": "T-1743",
-    "w": "Idris",
-    "k": "tools",
-    "t": "Personal branch personal/a5 did not land",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-03T20:53:14-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a3",
-    "task": "T-1744",
+    "lane": "b2",
+    "task": "T-1763",
     "w": "Maren",
     "k": "tools",
-    "t": "Personal branch personal/a6 did not land",
+    "t": "Personal branch personal/b4 did not land",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-03T20:53:14-05:00",
-    "n": "Evan"
+    "at": "2026-11-03T21:23:56-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b2",
+    "task": "T-1703",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Simulators on the SSD, measured first",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T21:23:56-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b2",
+    "task": "T-1485",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "A \"personal branch",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T21:23:56-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-1778",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stop writing workers' diaries and private conversations",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T21:59:46-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-1775",
+    "w": "Maren",
+    "k": "design",
+    "t": "Site overhaul spec",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T21:59:46-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-1776",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Site overhaul build, after Maren's spec line above",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T21:59:46-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-1777",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Amendments.md is 5,149 bytes, over Commandment 59's 4 KB line after the...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T21:59:46-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-1780",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Approve on the site's Issues page did nothing for file-guard entry...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T21:59:46-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-1782",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Tests/governor_personal_test.py is red at HEAD",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T21:59:46-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-1783",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Tests/personal_lane_test.py is red at HEAD",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-03T21:59:46-05:00",
+    "n": "Jeremy"
    }
   ]
  },
@@ -233,17 +315,21 @@
   }
  ],
  "disk": {
-  "free_gb": 21,
+  "free_gb": 13,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
-  "pool": 2,
-  "at": "2026-11-03T21:00:00-05:00"
+  "pool": 3,
+  "at": "2026-11-03T22:03:00-05:00"
  },
  "next_tick_why": "session",
- "pool": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight",
+  "n": 12,
+  "at": "2026-11-03T21:01:56.030981-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
@@ -312,6 +398,27 @@
     "o": "c"
    },
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Report format",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stop writing workers' diaries and private...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "After T-1752/T-1778",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "build",
     "t": "T-0296 follow-on reminder",
@@ -345,49 +452,28 @@
     "t": "After T-1035 lands",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "\"make sure the macbook runner is being...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Activity run log, Swift half",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Refresh control and age line in the renderer",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Odalys+operator",
-    "t": "The last part of the clean-up of personal-lane work that never reached main is now in: test...",
-    "at": "2026-11-03T20:55:00-05:00"
+    "w": "Odalys",
+    "t": "The Investors' MacBook ran the app's full test suite in its safety sandbox and every test...",
+    "at": "2026-11-03T21:57:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "A personal account set to Spread that has fallen behind its own week now runs up to 12 agents...",
-    "at": "2026-11-03T20:53:00-05:00"
+    "t": "A personal account the Investors set to full speed (Lock In) now runs up to 12 helpers at once...",
+    "at": "2026-11-03T21:52:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "The test for a script stuck in native code now checks that the app writes down the stuck state...",
-    "at": "2026-11-03T20:43:00-05:00"
+    "w": "Ines",
+    "t": "Decided how the app handles a script that fakes a widget's status file: treat it as deliberate,...",
+    "at": "2026-11-03T21:10:00-05:00"
    }
   ],
   "count": {
-   "next": 209,
-   "wait": 37,
+   "next": 236,
+   "wait": 36,
    "blocked": 84,
    "you": 16
   }

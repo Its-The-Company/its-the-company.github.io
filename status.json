@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T19:18:12.119612+00:00",
+ "at": "2026-11-04T19:21:15.003799+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,12 +12,21 @@
    "task": "[build] T-2176 extension lane run on runner",
    "model": "opus",
    "started": "2026-11-04T19:01:49.224Z",
-   "seconds": 982,
+   "seconds": 1165,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2184 lane b restart: disk, stale meter",
+   "model": "opus",
+   "started": "2026-11-04T19:18:43.113Z",
+   "seconds": 151,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris",
+ "who": "Idris, Odalys",
  "recent": [
   {
    "name": "odalys",
@@ -31,7 +40,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 348,
+  "runnable_count": 349,
   "blocked_count": 122
  },
  "meter": {
@@ -74,7 +83,7 @@
   "week_pct": 37.4,
   "usage_pct": 38.5,
   "work_pct": 76.7,
-  "read_at": "2026-11-04T19:18:00+00:00",
+  "read_at": "2026-11-04T19:21:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -330,14 +339,14 @@
   }
  ],
  "disk": {
-  "free_gb": 3.7,
+  "free_gb": 5.7,
   "gate": "closed",
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T14:18:00-05:00"
+  "at": "2026-11-04T14:21:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -357,11 +366,12 @@
   },
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-2184 lane b restart: disk, stale meter",
+   "model": "opus",
+   "since": "2026-11-04T19:18:43.113Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -406,6 +416,15 @@
     "e": "high",
     "at": "2026-11-04T19:01:49.224Z",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-2184 lane b restart",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T19:18:43.113Z",
+    "o": "i"
    }
   ],
   "open": [
@@ -422,6 +441,13 @@
     "t": "Personal lane stops lift themselves",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Jeremy's lane",
+    "s": "next",
+    "o": "i"
    },
    {
     "w": "Pernille",
@@ -471,13 +497,6 @@
     "t": "T-1669 rest",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Site overhaul build, after Maren's spec line...",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -498,30 +517,18 @@
    }
   ],
   "count": {
-   "next": 348,
+   "next": 349,
    "wait": 37,
    "blocked": 85,
    "you": 16
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6639766264",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Looks like Jeremy's lane's 5hr usage..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -529,13 +536,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 2,
-  "total": 3,
-  "at": "2:18 PM",
+  "total": 4,
+  "at": "2:21 PM",
   "why": "",
-  "at_iso": "2026-11-04T19:18:00+00:00",
+  "at_iso": "2026-11-04T19:21:00+00:00",
   "started": "1:50 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:50 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:18 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:50 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:21 PM ET</p></section>"
  }
 }

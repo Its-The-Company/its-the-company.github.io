@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T21:59:34.104276+00:00",
+ "at": "2026-11-04T22:02:34.922935+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[build] T-2211 extension lane runner fix",
    "model": "opus",
    "started": "2026-11-04T21:31:18.771Z",
-   "seconds": 1695,
+   "seconds": 1876,
    "finished": null,
    "effort": "high"
   },
@@ -21,12 +21,21 @@
    "task": "[build] T-0657 Settings screen",
    "model": "opus",
    "started": "2026-11-04T21:31:27.924Z",
-   "seconds": 1686,
+   "seconds": 1866,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2219 SSD hang fallback",
+   "model": "opus",
+   "started": "2026-11-04T22:01:37.827Z",
+   "seconds": 57,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2",
+ "who": "Idris x2, Odalys",
  "recent": [
   {
    "name": "odalys",
@@ -40,7 +49,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 361,
+  "runnable_count": 362,
   "blocked_count": 122
  },
  "meter": {
@@ -83,7 +92,7 @@
   "week_pct": 36.85,
   "usage_pct": 38.2,
   "work_pct": 76.3,
-  "read_at": "2026-11-04T21:59:00+00:00",
+  "read_at": "2026-11-04T22:02:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -193,7 +202,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T16:59:00-05:00"
+  "at": "2026-11-04T17:02:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -213,11 +222,12 @@
   },
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-2219 SSD hang fallback",
+   "model": "opus",
+   "since": "2026-11-04T22:01:37.827Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -271,6 +281,15 @@
     "e": "high",
     "at": "2026-11-04T21:31:27.924Z",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-2219 SSD hang fallback",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T22:01:37.827Z",
+    "o": "c"
    }
   ],
   "open": [
@@ -301,6 +320,13 @@
     "t": "Make landing a merge queue as published...",
     "s": "next",
     "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "A mounted SSD that doesn't answer must not...",
+    "s": "next",
+    "o": "c"
    },
    {
     "w": "Pernille",
@@ -336,13 +362,6 @@
     "t": "Activity run log, Swift half",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Refresh control and age line in the renderer",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -363,7 +382,7 @@
    }
   ],
   "count": {
-   "next": 361,
+   "next": 362,
    "wait": 37,
    "blocked": 85,
    "you": 16
@@ -382,13 +401,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 2,
-  "total": 4,
-  "at": "4:59 PM",
+  "total": 5,
+  "at": "5:02 PM",
   "why": "",
-  "at_iso": "2026-11-04T21:59:00+00:00",
+  "at_iso": "2026-11-04T22:02:00+00:00",
   "started": "4:28 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:59 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:02 PM ET</p></section>"
  }
 }

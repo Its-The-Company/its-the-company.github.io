@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T20:19:07.341018+00:00",
+ "at": "2026-11-04T20:22:15.353033+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[build] T-2176 extension lane run on runner",
    "model": "opus",
    "started": "2026-11-04T19:01:49.224Z",
-   "seconds": 4638,
+   "seconds": 4826,
    "finished": null,
    "effort": "high"
   }
@@ -39,7 +39,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 352,
+  "runnable_count": 353,
   "blocked_count": 122
  },
  "meter": {
@@ -82,7 +82,7 @@
   "week_pct": 37.4,
   "usage_pct": 38.5,
   "work_pct": 76.7,
-  "read_at": "2026-11-04T20:19:00+00:00",
+  "read_at": "2026-11-04T20:22:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -355,7 +355,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T15:19:00-05:00"
+  "at": "2026-11-04T15:22:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -442,6 +442,13 @@
     "o": "c"
    },
    {
+    "w": "Operator",
+    "k": "ops",
+    "t": "First thing next session",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "build",
     "t": "T-0296 follow-on reminder",
@@ -489,13 +496,6 @@
     "t": "T-1669 rest",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Site overhaul build, after Maren's spec line...",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -516,7 +516,7 @@
    }
   ],
   "count": {
-   "next": 352,
+   "next": 353,
    "wait": 37,
    "blocked": 85,
    "you": 16
@@ -538,10 +538,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "3:19 PM",
+  "at": "3:22 PM",
   "why": "",
-  "at_iso": "2026-11-04T20:19:00+00:00",
+  "at_iso": "2026-11-04T20:22:00+00:00",
   "started": "1:50 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:50 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:19 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:50 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:22 PM ET</p></section>"
  }
 }

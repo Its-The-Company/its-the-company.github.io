@@ -1,24 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-04T18:42:30.369288+00:00",
+ "at": "2026-11-04T18:45:19.443795+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-04T12:53:40-05:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[site] T-2077 site overhaul stage 2 live",
    "model": "opus",
    "started": "2026-11-04T17:56:16.332Z",
-   "seconds": 2774,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-04T18:44:41.482000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-1854 extension status and run rows",
@@ -74,7 +72,7 @@
   "week_pct": 37.0,
   "usage_pct": 38.7,
   "work_pct": 77.0,
-  "read_at": "2026-11-04T18:42:00+00:00",
+  "read_at": "2026-11-04T18:49:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -191,7 +189,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T12:23:07-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a",
@@ -469,14 +468,14 @@
   }
  ],
  "disk": {
-  "free_gb": 6.0,
+  "free_gb": 4.9,
   "gate": "closed",
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T13:42:00-05:00"
+  "at": "2026-11-04T13:49:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -487,12 +486,11 @@
  "lanes": [
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[site] T-2077 site overhaul stage 2 live",
-   "model": "opus",
-   "since": "2026-11-04T17:56:16.332Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
@@ -536,18 +534,15 @@
   }
  ],
  "tasks": {
-  "run": [
+  "run": [],
+  "open": [
    {
     "w": "Odalys",
     "k": "site",
-    "t": "T-2077 site overhaul stage 2 live",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T17:56:16.332Z",
+    "t": "T-2077 continuation",
+    "s": "next",
     "o": "c"
-   }
-  ],
-  "open": [
+   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -610,16 +605,14 @@
     "t": "T-1669 rest",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Site overhaul build, after Maren's spec line...",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "The new Home page now keeps the Investors' lock-in and personal-lanes controls and live status...",
+    "at": "2026-11-04T13:44:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "Every hand-work ask of the last week is listed on with its route to a site Approve; the...",
@@ -629,11 +622,6 @@
     "w": "Odalys",
     "t": "An Approve on the site now applies changes to the Investors' files, the safety guards and...",
     "at": "2026-11-04T13:41:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "The Investor's 12:14 instruction that a personal lane's stops lift themselves is now a standing...",
-    "at": "2026-11-04T12:55:00-05:00"
    }
   ],
   "count": {
@@ -656,13 +644,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 3,
-  "total": 4,
-  "at": "1:42 PM",
+  "total": 3,
+  "at": "1:49 PM",
   "why": "",
-  "at_iso": "2026-11-04T18:42:00+00:00",
-  "started": "12:53 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:42 PM ET</p></section>"
+  "at_iso": "2026-11-04T18:49:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:49 PM ET</p></section>"
  }
 }

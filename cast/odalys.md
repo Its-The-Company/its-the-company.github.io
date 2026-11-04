@@ -46,14 +46,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-1860 done 378a16dd6: documents/how-work-flows.md + tools/flow_costs.py (rerun for before numbers). Mine next: T-1898 charts off the gap (P1), T-1900-1902, T-2134 (52 unclean-end <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parks</span>).
 - T-1899 done c8cc80d80: tools/lane_landcheck.py + lane.md step; red land logs now kept stamped. OPT-077 read n=80 or 11-11 (before 59/164 = 36.0%). personal_land.sh refuses inside a session (CLAUDECODE): lane tools must not call it.
 - T-1858 11-04: item 2 a1c8a0337 (disk_overflow.py). Open T-2060 (item 1 + spaced path), T-2061 (item 3), T-2062 (#167: 18.1 GB, CoreSimulator/Devices 17 GB needs a word). Manifest on SSD overflow-2026-11-04-odalys/MANIFEST.tsv; ops/runs-archive is now a symlink there.
-- #169 fold rebuilt T-2116 (707620aab): needs a fresh approve (applier refuses any body edit after an approve). Lesson: any body edit costs the Investors a re-approve; rebuild and ask in one go.
-- T-1804 [b] on #172 (194fcba03, applier diff in log/audit, red 16/82 green 82/82). After approve: repost #169 with its diff inline, a Tests: line, an undo rule and a "Proposal" title (is_proposal reads only that). #137 env stays refused.
+- T-1781 done 00b912ab7 (11-04). #172 applied d52a521e0a: Approve now applies investors/, amendments.md, guards, settings grants. #169 fold: an Investor closed it twice after approve, applier takes only open issues: unapplied, T-1777 waits. T-2156 mine waits on #164. Lesson: a body edit after approve costs a re-approve.
 
 - T-1776 stage 1a a91c27239 (spec 3330e8176, T-1775 ticked). Next T-2072 (bell everywhere: app.js 13 B left; /chat/ page; badge colour), T-2073-2075 stages 2-4. Usage/Cost checks in site_test.sh parked under "T-1776 stage 2" comments.
 
 ## Standing lessons (details in archive.md)
 
-- T-2076 11-04: stage 2 (Home) built in tools/site/home_look.py behind switches.py Q1/Q2 (#170 approved, item 6), held off: 7 site_test Home checks to re-point first (run with SITE_LOOK=Q1,Q2).
+- T-2077 11-04 dd9b97334: new Home keeps Controls card + hidden #now-panel carrier (app.js status loop needs it). Q1,Q2 still off. Next T-2178 (P0, ETA 11-05): patch ops/plans/t2077-q1q2-on.patch, then site_personal + site_dash_probe. Run site suites at --jobs 3 max (site_test.sh rewrites ops/scoreboard.json). Lesson: a scripted edit put a comment over live arguments; diff every scripted edit.
 {% endraw %}
 
 

@@ -61,6 +61,8 @@ Dated task logs and full lessons: archive.md.
 
 - T-2020 22b1a3176 (two main reds; review T-2038 Pernille). Lesson: a schema row landing before its renderer turns the drawn-set test red; exempt by equality naming the drawing task, never by subtraction.
 
+- T-1854/T-2035 0e756d6cc (lane rows via RunLogRecorder) committed untested: disk gate 75 all session. T-2176 runs it, T-2177 Pernille reviews. Locked logs nothing (my call, flagged).
+
 ## Lessons
 
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.

@@ -725,12 +725,12 @@ html,body,.cv-dock textarea,.cv-dock .cv-state{overscroll-behavior-y:auto}
 </div></header>
 <div class="wrap notice-row">
 {% if site.announcement and site.announcement != "" %}<p class="notice announce">{{ site.announcement }}</p>{% endif %}
-{% if page.section == "reports" or page.section == "documents" or page.section == "pitches" or page.section == "infra" %}<nav class="subtabs" aria-label="Reports">
+{% unless page.chips %}{% if page.section == "reports" or page.section == "documents" or page.section == "pitches" or page.section == "infra" %}<nav class="subtabs" aria-label="Reports">
 <a href="{{ '/reports/' | relative_url }}"{% if page.section == "reports" %} aria-current="page"{% endif %}>Reports</a>
 <a href="{{ '/documents/' | relative_url }}"{% if page.section == "documents" %} aria-current="page"{% endif %}>Documents</a>
 <a href="{{ '/company/infrastructure.html' | relative_url }}"{% if page.section == "infra" %} aria-current="page"{% endif %}>Infrastructure</a>
 <a href="{{ '/pitches.html' | relative_url }}"{% if page.section == "pitches" %} aria-current="page"{% endif %}>Pitches</a>
-</nav>{% endif %}
+</nav>{% endif %}{% endunless %}
 </div>
 <main id="main"{% if page.url == "/" %} class="home"{% endif %}{% if page.section == "reports" %} class="ix"{% endif %}>
 {{ content }}

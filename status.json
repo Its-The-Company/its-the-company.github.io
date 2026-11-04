@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T19:36:30.569441+00:00",
+ "at": "2026-11-04T19:39:32.951960+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,21 @@
    "task": "[build] T-2176 extension lane run on runner",
    "model": "opus",
    "started": "2026-11-04T19:01:49.224Z",
-   "seconds": 2081,
+   "seconds": 2263,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-2184 lane b restart: disk, stale meter",
    "model": "opus",
    "started": "2026-11-04T19:18:43.113Z",
-   "seconds": 1067,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-04T19:37:11.310000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2171 standing two-drive sweep",
@@ -40,7 +39,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 349,
+  "runnable_count": 350,
   "blocked_count": 122
  },
  "meter": {
@@ -83,139 +82,8 @@
   "week_pct": 37.4,
   "usage_pct": 38.5,
   "work_pct": 76.7,
-  "read_at": "2026-11-04T19:36:00+00:00",
+  "read_at": "2026-11-04T19:39:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-1781",
-    "t": "T-1781",
-    "at": "2026-11-04T12:23:07-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-2150",
-    "t": "T-2150",
-    "at": "2026-11-04T12:23:07-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-2151",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Personal lane stops lift themselves",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:23:07-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-2060",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-1858 continued, item",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:23:07-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-2061",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-1858 continued, item",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:23:07-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-1861",
-    "w": "Idris",
-    "k": "build",
-    "t": "The widget's refresh button must write run rows with trigger intent, not...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:23:07-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-1991",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Host-only, no Xcode, before T-1905",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:23:07-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-2054",
-    "w": "Idris",
-    "k": "fix",
-    "t": "MarkStuck's \"stuck\"",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:23:07-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-2055",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Br_write/br_emit",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:23:07-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-2056",
-    "w": "Idris",
-    "k": "test",
-    "t": "Neither T-2039 test reaches the window between the run's finished being...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:23:07-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-2080",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Recut T-1846",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:23:07-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-2115",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "A stopped lane's claims",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T12:23:07-05:00",
-    "n": "Evan",
-    "d": 1
-   },
    {
     "lane": "a3",
     "task": "T-2153",
@@ -346,7 +214,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T14:36:00-05:00"
+  "at": "2026-11-04T14:39:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -366,12 +234,11 @@
   },
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-2184 lane b restart: disk, stale meter",
-   "model": "opus",
-   "since": "2026-11-04T19:18:43.113Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -416,15 +283,6 @@
     "e": "high",
     "at": "2026-11-04T19:01:49.224Z",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-2184 lane b restart",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T19:18:43.113Z",
-    "o": "i"
    }
   ],
   "open": [
@@ -441,13 +299,6 @@
     "t": "Personal lane stops lift themselves",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Jeremy's lane",
-    "s": "next",
-    "o": "i"
    },
    {
     "w": "Pernille",
@@ -497,9 +348,21 @@
     "t": "T-1669 rest",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Site overhaul build, after Maren's spec line...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "The Mac mini's drive had 4 GB free, too little for Jeremy's lane; old test leftovers went to the...",
+    "at": "2026-11-04T14:36:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "Finished work folders and safe caches are now cleaned off both the SSD and the Mac mini every...",
@@ -509,15 +372,10 @@
     "w": "Odalys",
     "t": "The new Home page now keeps the Investors' lock-in and personal-lanes controls and live status...",
     "at": "2026-11-04T13:44:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Every hand-work ask of the last week is listed on with its route to a site Approve; the...",
-    "at": "2026-11-04T13:41:00-05:00"
    }
   ],
   "count": {
-   "next": 349,
+   "next": 350,
    "wait": 37,
    "blocked": 85,
    "you": 16
@@ -536,13 +394,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
-  "lanes": 2,
-  "total": 4,
-  "at": "2:36 PM",
+  "main": 1,
+  "lanes": 1,
+  "total": 2,
+  "at": "2:39 PM",
   "why": "",
-  "at_iso": "2026-11-04T19:36:00+00:00",
+  "at_iso": "2026-11-04T19:39:00+00:00",
   "started": "1:50 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:50 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:36 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:50 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:39 PM ET</p></section>"
  }
 }

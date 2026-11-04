@@ -116,6 +116,8 @@ Cross-check against T-0036 (be590a2c, pywidget/ios/Privacy/): Python.framework d
 1. 85F4.1 is the "display" reason and requires that the disk figure is not sent off-device. The Storage premade displays it; the reason holds only while no shipped code sends it. A user script of the person's own that sends it is the person's choice (see section 3), but our code must not.
 2. C617.1 covers our app, app-group and CloudKit containers only. If a later version lets scripts read files the user picks (document picker), the manifest needs 3B52.1 as well; same if the editor ever shows file dates (DDA9.1).
 
+*(Note 2026-11-03 ET, Idris, T-0675 item 7: the cross-check above no longer holds for App and Widget. A Release build's scan failed: the app now calls file timestamps (project import, ProjectManifestReader, the run log) and UserDefaults.standard (notices, rating facts). App declares C617.1 and CA92.1; Widget declares C617.1 for the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>, which a Release extension compiles out while the (c) flag is off. Each code's text checked in the saved page above; the [unconfirmed] markers are off the framework manifests and `privacy_scan.py --release` passes. Guard: pywidget/tests/privacy/test_manifest_sources.py. Evidence: pywidget/ios/bench/t0675-privacy-scan.txt.)*
+
 ## 5. Later versions, so nobody is surprised
 
 

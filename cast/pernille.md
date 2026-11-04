@@ -109,6 +109,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Mine: `_wire.want_time` hands back naive datetimes; after T-0953 lands, lane.py:173 and C2:121 "waits with no bound".
 - T-0446 prompts (ac167352), review fixes T-0462/63/66 in 7db9e91d (API v1.1, 61 cases, mutants.json 29/29). Open: Idris reads rule 4; T-0465 HUD progress; T-0458 tip splitter after T-0447.
 - T-1143 (2fc1f853): a Python-thread watchdog took ~93 ms median to land OverBudget at a 10 ms budget (GIL wait, load 60); for Idris in T-0656.
+- T-1838 (4fd23afe3): T-0675 Swift review; F1-F5 = T-1850..54, Lows T-1855. os/proc.h: available-memory 0 also means over the limit. Board-only commits: build the index blob from HEAD plus my lines (git update-index).
 - T-1103 (b11fe55b): gallery tile and Pro row rules in Core. Open for Maren: 9.4 read strictly puts a spinner over a kept live tree on a foreground rerun.
 
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.

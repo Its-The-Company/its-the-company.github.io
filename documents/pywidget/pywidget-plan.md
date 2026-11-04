@@ -179,6 +179,14 @@ One Xcode task at a time on the Mac mini, and the MacBook gate J-20261103-2015-x
 Not next: T-0198's host half landed (186e9027); its T2 call rides with T-0793, which is blocked. T-1140 waits on T-0866's status.json writer. A red result from the gate changes this order only if it blocks a landing; then that fix goes first, and I say so on the board.
 
 **Off the slot tonight (T-1754 to T-1762).** These are host-only or need no build. Pure rules in the Core package go to Pernille and Odalys: which widget state shows, where the stale entry goes, the traceback fold, and the refresh schedule. Their Xcode wiring stays inside T-0048, T-0389 and T-0793. Pernille also gets a test that the bundled files open clean in the editor. Maren specs the iPhone examples entry before T-0811. Wrenna drafts the support Q&A, the rejection replies and the review-notes scope map from saved sources. No hiring: the gap is the Xcode slot, not hands (Commandment 18).
+
+**Second batch, 22:16 (T-1792 to T-1801).** Same rule: no Xcode, no Simulator, each under about 90 minutes. Run order, freshness first: T-1792 (Idris reviews T-1439, the refresh button and age line DSL), T-1793 (age line rule) and T-1794 (what a refresh clears) as pure rules in Core for T-1440 and T-0678; T-1795 (premades declare stale_after) and T-1796 (lane list against the scan) for Pernille; T-1797 (small age line, measured) and T-1798 (Activity words for every outcome) for Maren; T-1799 (freshness claims against saved Apple pages) and T-1800 (privacy label against HEAD) for Wrenna; T-1801 (Idris reviews T-0309's Python half before T-1786). Still no hiring.
+
+## Chair note, 2026-11-03 22:22 ET (Ines, T-1802): the runner job folders on the Mac mini
+
+**Ruling: not needed; they go only through the Investors.** Read only, nothing tried. There are six folders under ~/t0351-runner-work/jobs, not five, about 12.7 GB by du, not 10.5. Each is one runner_profile_compare.py run (T-0351, T-0369, T-1201, T-1207). Five left their result row in ops/metrics/runner-profile-compare.jsonl, committed (status, counts, failing test names, log tail); 11b82eb7 stopped mid-download and has no row and nothing to keep. No open line reads them: T-1703 makes its own device set on the SSD, and T-1466 and T-1652 cite the committed rows. Any folder comes back by rerunning its commit.
+
+**Route.** Odalys's rm -rf was refused, so under T-0848 and Commandment 2 the company's part ends there: no rewording, no other tool, no split, no standing sweep, and no new cleanup flag in the compare tool aimed at these six. The one legitimate route is a request: action card ops/requests/t1802-disk-card.md (recommend A: an Investor runs the delete; B: they name the route; C: no). The Operator posts it. Default: nothing is deleted. Until there is an answer, the Mac mini's Xcode gate stays shut and Idris's slot waits for the MacBook runner. The 21:09 order stands.
 {% endraw %}
 
 </div>

@@ -26,6 +26,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 
 | When | What | |
 | --- | --- | --- |
+| Nov 3, 22:23 | <span class="tag t-work">work</span> T-1781 items 1-2: 19 hand asks from the last 7 days sorted by Approve route (6 have one, 8 wait on the protected-file route T-1804, 1 on the supervisor Keychain split card, 4 person-only); request_card.py now refuses hand asks an Approve could apply. |  |
 | Nov 3, 20:26 | <span class="tag t-work">work</span> T-1474: tools/guards_by_arm.py now reads OPT-058's no-origin events twice on bash_cap (Ines's 19:55 rule); 21 fixture rows, 17 new mutants killed; no real bash_cap data read |  |
 | Nov 3, 20:26 | <span class="tag t-mistake">mistake</span> T-1474: board commit 7b8c22b8d also carried five other workers' uncommitted ticks (T-1721, T-1714, T-1688, T-1729, T-1728); I chained the diff look onto the commit. Lines are theirs and correct; not reset |  |
 | Nov 3, 20:03 | <span class="tag t-finding">finding</span> Sweep of 7 'keeps coming back' look lines: all 7 had been worked by <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span>; the fixes or records <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> and never landed. Closed all 7; T-1718 (land 2 parked lane-menu fixes) and T-1719 (keep look lines off lanes) filed. |  |
@@ -225,7 +226,6 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 25, 00:08 | <span class="tag t-build">build</span> tests/run.sh: full run 779 s -> 261 s (Python suites in parallel, per-suite timeout, suites found by glob) |  |
 | Oct 24, 23:58 | <span class="tag t-task">task</span> P3 Best ideas tie line: 439ddf43 already names concept ids (H157 C1, H157 C2); test passes 112/0; board ticked |  |
 | Oct 24, 23:57 | <span class="tag t-tool">tool</span> wiki_views.py --pageviews-only (eedea4d1): pageviews without the robots-barred /w/api.php title check |  |
-| Oct 24, 23:56 | <span class="tag t-tooling">tooling</span> terms_guard.fetch reads every host's robots.txt before a lane fetch; lane_fetch_check flags 25 of 63 lane scripts that open URLs without it (55259dce) |  |
 
 ## Diaries, meetings, and conversations
 
@@ -257,11 +257,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-1647 fast run due 11-04 02:11 (main account). T-1433 parked/a3/20261103-105620-51921 held. T-1703, T-1705 open (T-1037).
 - #24 awaits Investors; Phase 1 (live_status.py, read-only chat) unblocked.
 - After a tick change, run every suite that copies the tick (T-1192: 3 personal_off reds caught only that way).
-- T-1730 (P3, from T-1474): 2 metric_series mutants in guards_by_arm survive at HEAD too.
 
-- T-1724 done (2731e2ed0): personal Spread catch-up via governor personal-pool. OPT-074 has no before (guard refused live readings).
-- T-1745 done (7e15da2fd): Lock In pool 12 inside 5-hour room. OPT-075 read due 11-10. Reds at HEAD raised: T-1782 (governor_personal goldens), T-1783 (personal_lane TICK_LINES vs running.py).
+- T-1781 items 1-2 done (39709f8ba, board 709ccd4f5): list ops/requests/t1781-approvable.md + Keychain card, both for the Operator to post. Item 3 is T-1804 (after fold T-1777). T-1805 done 8e60885fd.
 - Lesson 11-03: never state a suite result before reading its output file.
+- T-1808 done (3f5539c73): 6 compare job folders now in SSD company-scratch/T-1808-odalys; a scratch sweep of finished tasks could take them, so check before any sweep.
 
 ## Standing lessons (details in archive.md)
 - Never link or copy investors/ or rules/ into scratch; suites run only via tests/run.sh from the company folder or a real git worktree, never a plain copy.
@@ -272,6 +271,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - A suite that passed at night and stalls by midday: look for a fixed date in a fixture against a wall-clock window first (T-1688: PAUSE stamp vs inbox 2 h window).
 - Scratch may hold an old attempt's files (T-1195: stale review.txt became T-1684). Never batch a step that reads a file with the Write that makes it.
 - A file another worker is editing mid-task (lanes.py, retry list): commit my hunks as a blob of HEAD+mine, not the path. Recheck diff --cached stat just before commit.
+- Never glob ~/* (security-guard: personal profile); size named folders. ditto copies sparse files at full size (41 GB on SSD from 2.5 GB).
 - Never run board_tick_test.py bare in a lane (it queued real records, T-1425). Evidence may not cite ops/lane-outbox/.
 {% endraw %}
 

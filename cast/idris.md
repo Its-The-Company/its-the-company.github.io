@@ -26,6 +26,7 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 
 | When | What | |
 | --- | --- | --- |
+| Nov 3, 23:07 | <span class="tag t-shipped">shipped</span> T-1794: RefreshOutcomeRule (state-spec s10 d) landed, 236f04d9f; 16/16 mutants killed; review T-1845 Pernille |  |
 | Nov 3, 17:02 | <span class="tag t-task">task</span> T-1169 and T-1170 done: widget status writes no longer lose an expired run, and the loop breaker counts each run once (184b2877d). Unblocks T-1140, the Activity run log. |  |
 | Nov 3, 15:20 | <span class="tag t-work">work</span> T-1634 done: LaneMargin.firstRunPeak 21 MiB (test pins no first run fits C = 30); clocks and progress off <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>.json; habits clean first run 10.0 MiB (test L run 6, exit 0, 0 left placed); teardown closes app, removes widgets, <span title="A test written in advance. If it fires, we drop the idea.">kills</span> extension processes; warm wait LaneWarmWindow (3 of 6 red on old 25  |  |
 | Nov 3, 14:22 | <span class="tag t-work">work</span> T-1404: extension lane peak now read after sink.finish (red then green); test L run 5 peaks clocks 21.9 MB, progress 16.0, countdown 11.6, quote 11.1; steps off lane.json; unit 899/0; Release extension build ok. Rest on T-1634. |  |
@@ -225,7 +226,6 @@ Idris is 38 and spent eleven years in imaging software, the last six as the engi
 | Oct 24, 11:37 | <span class="tag t-research">research</span> H123: plate solving a night frame ~0.05-0.1 deg (estimate; 36-46 stars to +4 in the main camera field; tetra3/cedar-solve Apache-2.0, astrometry.net GPL-3 not usable), compass 1-3 deg after calibration with 13-25 deg outliers, skyline-to-DEM 80% within 5 deg (GLO-30 free licence, ~40 MB tiles) |  |
 | Oct 24, 11:29 | <span class="tag t-research">research</span> H122: iPhone meteor capture is marginal; video-frame detection catches ~10 Perseids/h suburban at peak, 30 s exposures ~0.5-1/h (explains NightCap's 'caught none'); Leonids ~1/h; phone limit unmeasured |  |
 | Oct 24, 11:28 | <span class="tag t-work">work</span> Blind grader 2 for H113 C1-C3 and the H103 seeds (77267e6): C1 B- ruled on a capture test, S1 B, S8 B-, nothing above B; Gate 1 fails 7 of 15. |  |
-| Oct 24, 10:54 | <span class="tag t-review">review</span> H110b: Gate 1 re-applied under v3 wording; 5 cells changed, B or better 13 of 55, committed before any key |  |
 
 ## Diaries, meetings, and conversations
 
@@ -247,27 +247,28 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open (mine)
 - T-0365 (28fadd67 noted): Button/Toggle drawn no-tap per L5 V1; Ines rules T-0430. Left: device check, F1 map after T-0399. T-0206 after.
 - T-0485 (c3c6876f, review T-0493): set LegalLinks when the app privacy page is published and Terms ruled. Release builds now fail until then (T-0497, 3bfb3222; review T-0636).
-- T-0353 done (abe146d0): notif/keychain wire waits on a Python half; review open.
-- T-0565 slice 1 2026-10-28 (5ac90a05): Console uses ConsoleEditor (Runestone). Review T-0584 open.
-- T-0586 done 2026-10-28 (158ac8da): engine after FirstFrame, first open worst 195.2 ms; review T-0600. A8s waits T-0287.
 - T-1050 landed 2026-11-02 (19d5907a, T-0642): unit 867/0, UI green, #41 c6594906585. Left: runner gate (runner_profile_compare 19d5907a new), first MacBook xc-test job, T-1116.
 - Lesson: the full UI suite runs ~45 min (EditorGate A2c alone ~7 min): run it in the background with a long timeout, never a 10-min foreground call. tests/run.sh takes suite file names (x_test.py), not bare names: a bare name runs nothing and says "All tests passed".
-- Lesson: source-scan tests (WidgetKindsTests.extensionSources) break in /tmp scratch (#filePath /tmp vs /private/tmp); baseline main in the same folder before blaming a branch. Personal lanes share the xc lock: budget the wait.
 - T-1669 slice 2 (94f1203da): app writes run log; rest is T-1677. T-1678 fixes all on Simulator 2026-11-03 (55/0): T-1716 landed d21a36896, T-1696 d074ebd44 (mutant killed). Independent review of both still due before TestFlight.
 - Lesson T-1693: Simulator scratch on Company SSD (spaced path) needs two scratch-only patches: quote utils.sh's .fwork redirect; acknowledgements.py misreads otool's "(architecture arm64):" line (real bug, reported). Build filters with tools/xc_file_tests.py, never file names; `build test` in one xc.sh call gets hang-stopped after BUILD SUCCEEDED.
 - Lesson T-1678: a test that checks a marker's text is not a test of what recovery does with it. Test the consumer.
-- Lesson T-1681: a hand mutant goes in a scratch copy of ios/ (Core+Shared+App+Tests/Core: the core sources link into App), never the shared checkout.
-- T-1068/T-1072 done 2026-11-02 (10db8d59): WK check buys Pro in SKTestSession; progress read. Review open. 17e's old Pro unexplained.
 
 
 Dated task logs and full lessons: archive.md.
 
 - T-1634 done 2026-11-03 (6920317b6): firstRunPeak 21 MiB, clocks+progress off lane.json, habits clean 10.0 MiB, test L teardown + LaneWarmWindow. Open T-1643 (item 6 after T-1140), T-1642 Pernille review.
-- Lesson T-1634: an XCUI count taken while an app is still closing reads 0 (kAXErrorServerNotFound): terminate, then wait for an icon. zsh does not split "$P": use an array.
 - Lesson T-1404: one Bash call is capped at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
 
 - T-1714 done 2026-11-03 (87d4ec6bd): oom_guard_since, 16/16 mutants. T-1728 stopped 2026-11-03 (d8d903e76): WidgetKit gives no reload id; options to Ines on T-1751 (my lean: per-family repeat). Review open. Deferred keeps it: my reading.
 - Lesson T-1714: a rule green on the host means nothing until something writes it and something reads it: grep both call sites first.
+
+- T-0427 done 2026-11-03 (1c54294a): review T-1809 Pernille. T-0426 was already on main (d78d1c4c, T-0980 PASS), only its tick was missing. T-1059 tick refused (bare ID in Plain): left open.
+- Lesson T-0426: grep the code for a task's ID before starting; a board line can stay open after the work landed.
+
+- T-1793/T-1840 2026-11-03: AgeLine which-time now the stale mark's clocks (c9a18c0cf, 29/29 mutants); review T-1865 Pernille. T-1440 must pass staleAfterSet and only value-drawn fields.
+
+- T-0675 item 7 slice 2026-11-03 (dd26184c2): app+extension privacy manifests fixed (app was failing the Release scan). Open: Swift-half review has no task (asked Ines); privacy_scan wired to no build.
+- Lesson: a flag compiled out of Release hides its required-reason APIs from the binary scan; test the sources each target compiles.
 
 ## Lessons
 

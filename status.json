@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T22:29:59.897339+00:00",
+ "at": "2026-11-04T22:33:05.272096+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,16 +12,7 @@
    "task": "[build] T-2211 extension lane runner fix",
    "model": "opus",
    "started": "2026-11-04T21:31:18.771Z",
-   "seconds": 3521,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2080 land parked lane-a P0 work",
-   "model": "opus",
-   "started": "2026-11-04T22:14:50.205Z",
-   "seconds": 909,
+   "seconds": 3706,
    "finished": null,
    "effort": "high"
   },
@@ -30,13 +21,30 @@
    "task": "[build] T-0657 Settings screen",
    "model": "opus",
    "started": "2026-11-04T21:31:27.924Z",
-   "seconds": 3511,
+   "seconds": 3697,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2221 runner single-file check",
+   "model": "opus",
+   "started": "2026-11-04T22:30:53.741Z",
+   "seconds": 131,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Idris x2, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2080 land parked lane-a P0 work",
+   "model": "opus",
+   "started": "2026-11-04T22:14:50.205Z",
+   "seconds": null,
+   "finished": "2026-11-04T22:30:21.199000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2219 SSD hang fallback",
@@ -57,7 +65,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 359,
+  "runnable_count": 360,
   "blocked_count": 123
  },
  "meter": {
@@ -100,7 +108,7 @@
   "week_pct": 36.85,
   "usage_pct": 38.2,
   "work_pct": 76.3,
-  "read_at": "2026-11-04T22:30:00+00:00",
+  "read_at": "2026-11-04T22:33:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -298,7 +306,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T17:30:00-05:00"
+  "at": "2026-11-04T17:33:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -319,9 +327,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-2080 land parked lane-a P0 work",
+   "task": "[tools] T-2221 runner single-file check",
    "model": "opus",
-   "since": "2026-11-04T22:14:50.205Z",
+   "since": "2026-11-04T22:30:53.741Z",
    "next": [],
    "effort": "high"
   },
@@ -381,10 +389,10 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T-2080 land parked lane-a P0 work",
+    "t": "T-2221 runner single-file check",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-04T22:14:50.205Z",
+    "at": "2026-11-04T22:30:53.741Z",
     "o": "c"
    }
   ],
@@ -409,6 +417,13 @@
     "t": "Make landing a merge queue as published...",
     "s": "next",
     "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-2080 end to end",
+    "s": "next",
+    "o": "c"
    },
    {
     "w": "Pernille",
@@ -451,13 +466,6 @@
     "t": "Refresh control and age line in the renderer",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-1669 rest",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -478,7 +486,7 @@
    }
   ],
   "count": {
-   "next": 359,
+   "next": 360,
    "wait": 38,
    "blocked": 85,
    "you": 16
@@ -500,10 +508,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "5:30 PM",
+  "at": "5:33 PM",
   "why": "",
-  "at_iso": "2026-11-04T22:30:00+00:00",
+  "at_iso": "2026-11-04T22:33:00+00:00",
   "started": "4:28 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:30 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:28 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:33 PM ET</p></section>"
  }
 }

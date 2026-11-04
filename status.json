@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T18:59:50.287551+00:00",
+ "at": "2026-11-04T19:02:55.144645+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,17 +8,26 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[tools] T-2171 standing two-drive sweep",
+   "name": "idris",
+   "task": "[build] T-2176 extension lane run on runner",
    "model": "opus",
-   "started": "2026-11-04T18:52:54.266Z",
-   "seconds": 416,
+   "started": "2026-11-04T19:01:49.224Z",
+   "seconds": 65,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys",
- "recent": [],
+ "who": "Idris",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2171 standing two-drive sweep",
+   "model": "opus",
+   "started": "2026-11-04T18:52:54.266Z",
+   "seconds": null,
+   "finished": "2026-11-04T19:01:15.243000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -65,7 +74,7 @@
   "week_pct": 37.4,
   "usage_pct": 38.5,
   "work_pct": 76.7,
-  "read_at": "2026-11-04T18:59:00+00:00",
+  "read_at": "2026-11-04T19:02:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -319,35 +328,35 @@
   }
  ],
  "disk": {
-  "free_gb": 5.9,
+  "free_gb": 7.6,
   "gate": "closed",
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T13:59:00-05:00"
+  "at": "2026-11-04T14:02:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
-  "why": "On the week's line (50% used, 50% past), so today's work is spread until midnight",
-  "n": 1,
+  "why": "Behind the week: 50% used with 50% of the week past, so the pool is sized to catch up",
+  "n": 2,
   "at": "2026-11-04T13:50:36.449716-05:00"
  },
  "lanes": [
   {
-   "name": "Odalys",
+   "name": "Idris",
    "state": "running",
-   "task": "[tools] T-2171 standing two-drive sweep",
+   "task": "[build] T-2176 extension lane run on runner",
    "model": "opus",
-   "since": "2026-11-04T18:52:54.266Z",
+   "since": "2026-11-04T19:01:49.224Z",
    "next": [],
    "effort": "high"
   },
   {
-   "name": "Idris",
+   "name": "Odalys",
    "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
    "model": null,
    "since": null,
    "next": []
@@ -388,13 +397,13 @@
  "tasks": {
   "run": [
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-2171 standing two-drive sweep",
+    "w": "Idris",
+    "k": "build",
+    "t": "T-2176 extension lane run on runner",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-04T18:52:54.266Z",
-    "o": "i"
+    "at": "2026-11-04T19:01:49.224Z",
+    "o": "c"
    }
   ],
   "open": [
@@ -411,13 +420,6 @@
     "t": "Personal lane stops lift themselves",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "A standing cleanup of both drives",
-    "s": "next",
-    "o": "i"
    },
    {
     "w": "Pernille",
@@ -467,9 +469,21 @@
     "t": "T-1669 rest",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Site overhaul build, after Maren's spec line...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "Finished work folders and safe caches are now cleaned off both the SSD and the Mac mini every...",
+    "at": "2026-11-04T14:00:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "The new Home page now keeps the Investors' lock-in and personal-lanes controls and live status...",
@@ -478,11 +492,6 @@
    {
     "w": "Odalys",
     "t": "Every hand-work ask of the last week is listed on with its route to a site Approve; the...",
-    "at": "2026-11-04T13:41:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "An Approve on the site now applies changes to the Investors' files, the safety guards and...",
     "at": "2026-11-04T13:41:00-05:00"
    }
   ],
@@ -509,10 +518,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "1:59 PM",
+  "at": "2:02 PM",
   "why": "",
-  "at_iso": "2026-11-04T18:59:00+00:00",
+  "at_iso": "2026-11-04T19:02:00+00:00",
   "started": "1:50 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:50 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:59 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:50 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:02 PM ET</p></section>"
  }
 }

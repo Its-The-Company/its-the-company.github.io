@@ -158,6 +158,69 @@ Apple expects answers to be kept current; when practices change, the answers in 
 3. Whether a first-party widget calling an outside API with the user's own token (GitHub) needs any disclosure. Read 2026-10-26: A1 is silent (s0a item 6). Stays low-medium.
 4. ~~Whether crash reports and App Analytics that Apple shares from users who opted in are outside the label.~~ Closed 2026-10-26: "You are not responsible for disclosing data collected by Apple." (A1, s0a item 4).
 5. Required-reason API categories and reason codes for the manifest. Closed 2026-10-27 (T-0155, section 4a): values read from Apple's reasons page; T-0036's codes match.
+
+## 8. Label against the code at HEAD (T-1800, Wrenna, 2026-11-04 09:37 ET, HEAD bbeb56e97)
+
+No label row changes here (that is a decision; the findings went to Ines as one board line). Paths are under pywidget/ios/ unless they start with widgets/ or tests/. Greps run 2026-11-04 on App, Shared, Widget, Core/Sources and StoreKit, comment lines dropped.
+
+### 8a. What pywidget/tests/privacy already checks (all three files pass at HEAD)
+
+- **test_privacy_scan.py** (8 tests, synthetic bundles): `scripts/privacy_scan.py` fails a framework without a manifest, a missing or empty reason, an `[unconfirmed]` code in Release, and an .app or .appex whose manifest has `NSPrivacyTracking` not false or `NSPrivacyCollectedDataTypes` not an empty array (privacy_scan.py:154-157). This is the only automated guard on label row 1.
+- **test_manifest_sources.py** (4 tests): each target's own Swift and C sources call no required-reason API its manifest does not declare (App: C617.1, CA92.1; Widget: C617.1), including the extension lane a Release build compiles out.
+- **test_check_legal_links.py** (8 tests): a Release or archive build fails without an https privacy URL in App/LegalLinks.swift (label row 4).
+- **Not checked by any test:** what code sends off the device. That rests on `tools/privacy_prepublish_grep.py` (run today: "clean: 0 hits" with NetFetch.swift excepted; `--policy` check: "ok: policy names the run log") and on reading, below.
+
+### 8b. Every kind of data the app or its extensions touch
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 8b. Every kind of data the app or its extensions touch, scrolls sideways" style="--tw:1201px" markdown="1">
+
+| Data | Where (file:line) | Can it leave the device? | Label row that covers it |
+|---|---|---|---|
+| Location | App/Device/LocationCall.swift:287 (CLLocationManager), :317 requestWhenInUseAuthorization (no Always key: project.yml:206-207 sets When In Use and temporary full accuracy only); last fix cached in the app's Application Support, :419-437 | Only if the person's own script sends it (8b row "Network fetch") | s1 rows 1-2 via condition 6 and s3. Premades sun.py, distance.py, altitude.py import no network module |
+| Steps, distance, floors | App/Device/PedometerCall.swift:205-232 (CMPedometer); purpose string project.yml:209 | Only by the person's script | Condition 6, s3; steps.py has no network import |
+| Network fetch, app | Shared/NetFetch.swift:214-225 (ephemeral URLSession: no cookie, no cache, nothing logged, s1-12); called only from Shared/Bridge/NetCall.swift:15 for `pywidget.net.get`, registered at App/Device/DeviceRouter.swift:21; Python side App/Runtime/pywidget/net.py:10 and http.py (Python sockets, urllib, requests also usable, http.py:25-31) | **Yes**, to the URL the script names. Cross-host redirects drop Authorization, Cookie and Proxy-Authorization (NetFetch.swift:339-341; http.py:24) | s3 (the user's code), conditions 1, 2 and 7 (no SDK, no server of ours, no web view: WKWebView, SFSafariViewController grep 0) |
+| Network fetch, widget extension | Shared/Bridge/LaneDevice.swift:16 routes `net.get` to the same NetCall; the extension lane runs only lane.json's premades (countdown, habits, quote; widgets/premade/lane.json), none of which imports a network module | Only for a person's own lane script | s3 |
+| GitHub premade | widgets/premade/github.py:23 and :27 (api.github.com only), :36-38 (token from the Keychain as a Bearer header, optional), :64 and :84 (the two GETs) | **Yes**, to GitHub only: repo names, the optional token, the IP address | Condition 4 |
+| http cache | App/Runtime/pywidget/http.py:16-21: `cache_for` keeps the last good answer in the script's shared folder, never the request headers | No | Condition 6's on-device rule (s0a item 2). Not named in the policy (finding F5) |
+| Network status | App/Device/NetworkStatusCall.swift:65 (NWPathMonitor reads the link type) | No | s0a item 2 |
+| Local notifications | App/Device/NotificationsCall.swift:85 requestAuthorization, :304 local center; PyWidgetApp.swift:19 presenter. No remote-notification registration and no aps-environment entitlement (grep 0; both entitlement files hold only the App Group) | No | s0a item 2 |
+| Clipboard | App/Device/ClipboardCall.swift:26-28, :94 (scripts); App/PyWidgetApp.swift:747 (the console's Copy button) | Only by the person's script | s3 |
+| Files and bookmarks | App/Device/FilesCall.swift:379 (document picker, asCopy false), :302 and :313 (security-scoped bookmarks, kept in Application Support, :181 and :233); App/Projects/ProjectsView.swift:81 and :233 (fileImporter for .zip and .py), :52, :213, :225 (ShareLink export); App/Projects/ProjectTransfer.swift:182 | Export only by the person's tap on the share sheet | s0a item 2, s3. Manifest caveat s4a item 2 is now live (finding F3) |
+| Keychain secrets | App/Device/KeychainCall.swift:108-109 (kSecAttrSynchronizable false), :135 (AfterFirstUnlockThisDeviceOnly), :125-172 SecItem calls | Only where the person's script sends a secret (github.py sends its token to GitHub). Never synced to iCloud Keychain | Condition 4, s3 |
+| Crash marker | Shared/Bridge/CrashMarker.swift:3-5 and :40 (a file in Caches, plus faulthandler's file, only while a run is in Python); read back at launch by Shared/RunLog/RunLogRecorder.swift:153 and App/PyWidgetApp.swift:596 | No. No crash SDK; Apple's own crash reports are Apple's (s0a item 4) | Condition 1 and s1 row 2 (no Diagnostics) |
+| App Group run log | App/PyWidgetApp.swift:260 (`runLog = .appGroup`), :790 (console rows); App/Bridge/WidgetWriter.swift:66 (widget rows); Shared/RunLog/RunLogRecorder.swift:31 (App Group container), :162 (prune). Shared/RunLog/RunLogExport.swift:21 builds the export text, but nothing in App calls it, and there is no Activity screen | No: no network code reads it, and export is not reachable yet | Condition 9 (its text "not built at this HEAD" is stale: finding F1) |
+| UserDefaults | App/PyWidgetApp.swift:449 and App/SceneFile.swift:43 (notices seen); App/RatingFactsLedger.swift:202 (rating facts: session days and last outcome). `requestReview` is named only in comments (App/RatingRequestRule.swift), so no rating sheet is asked for at HEAD | No | s0a item 2. Rating facts are on-device usage facts, not in the policy (F5) |
+| Purchase entitlement | App/Store/ProStore.swift:13-19 (Transaction.currentEntitlements and Transaction.updates on the device) | No; payment is Apple's | Condition 3 |
+| App Shortcuts | App/Intents/RunScriptIntents.swift:205-217 (AppShortcutsProvider: Run Script, Run Script with Input, Refresh Widgets) | Apple may extract anonymized phrases and titles (Apple's AppShortcutsProvider page, policy-draft held row) | s0a item 4 (Apple's own collection): no label change. Policy finding F2 |
+| Links out | Shared/TreeView.swift:163 (a widget's Link opens its URL); App/Store/ProPaywallView.swift:451 (legal links); the one hard-coded host in our Swift is www.apple.com | The open web, by the person's tap | Condition 7 |
+| Bench log | App/Bench.swift:6, :78-81 (bench.jsonl in the App Group, only under the -bench launch argument) | No | s0a item 2 |
+
+</div>
+
+
+### 8c. Every label row, and the code that makes it true
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: 8c. Every label row, and the code that makes it true, scrolls sideways" style="--tw:860px" markdown="1">
+
+| Label row (s1) | The code that makes it true at HEAD | Holds? |
+|---|---|---|
+| Data collected: **No** | Privacy/App/PrivacyInfo.xcprivacy and Privacy/Widget/PrivacyInfo.xcprivacy: `NSPrivacyCollectedDataTypes` and `NSPrivacyTrackingDomains` empty, enforced by scripts/privacy_scan.py:154-157. The only outbound path is NetFetch (8b), which carries only what a script asks for to the host it names; no SDK, no server of ours, no web view; premade traffic is github.py to GitHub only | Yes |
+| Data types: **None** | Conditions 1-9 checked in 8b: 1 (no SDK: grep), 2 (no host of ours in Swift), 3 (ProStore.swift:13-19), 4 (github.py, KeychainCall.swift, NetFetch.swift:339-341), 5 (no WeatherKit, no weather premade), 6 (LocationCall.swift:317, :437; PedometerCall.swift; no CLGeocoder or MapKit, prepublish grep 0), 7 (no web view), 8 (support email outside the app), 9 (run log local) | Yes; condition 9's wording is stale (F1) |
+| Tracking: **No** | `NSPrivacyTracking` false in both manifests; no ATTrackingManager, no advertisingIdentifier (grep 0) | Yes |
+| Privacy policy URL: **Required** | App/LegalLinks.swift privacyPolicy nil until published; tests/privacy/test_check_legal_links.py fails a Release build without an https URL | Not yet true by design: blocked on the SLOT 2A address and publishing |
+
+</div>
+
+
+### 8d. Findings (no label row is wrong; four documents and one manifest lag the code)
+
+- **F1. Condition 9 and the policy's run-history rows are behind the build.** The app now writes the run log (94f1203da, T-1669 slice 2). Condition 9's "not built at this HEAD" and the policy source row "[planned: T-1140]" are stale. The other way round: the policy's "It leaves your device only if you export it from the share sheet" and "tap Clear on a widget's Activity screen" describe screens that do not exist yet (RunLogExport.text has no caller). Publish gate 2a still applies to those two sentences.
+- **F2. An AppShortcutsProvider ships** (RunScriptIntents.swift:205). Publish gate 3 says to add the held sentence once it does, and the policy's "Shortcuts" section names only Refresh. Policy only; the label does not change (Apple's own collection).
+- **F3. The document picker ships, and the manifest caveat in s4a item 2 is now live.** Scripts can open files outside our containers (FilesCall.swift:379, bookmarks :302). Python.framework declares only C617.1, which covers our own containers; if a script stats a picked file, Apple's 3B52.1 ("files or directories the user granted access to") is the matching reason. Manifest question for Idris, not a label row.
+- **F4. The policy's source table marks as [planned: T-0353, T-0047] what is now built:** Keychain (KeychainCall.swift), location, pedometer, clipboard, files, notifications, and both purpose strings (project.yml:206, :209). Publish gate 2's cut list for T-0353 no longer applies. Its "v1 dropped ... no file picker exists" row is stale too: project import and export are built (ProjectsView.swift:81, :52). Each policy sentence still reads true; the evidence column is out of date.
+- **F5. On-device stores the policy does not name:** the cached last location fix (LocationCall.swift:419-437; the purpose string at project.yml:206 says so), http `cache_for` answers (http.py:16-21), rating facts (RatingFactsLedger.swift:202), and the crash marker (CrashMarker.swift:40). None leaves the device, so the label holds. "What stays on your device" would be more complete if it named the location reading and cached web answers.
 {% endraw %}
 
 </div>

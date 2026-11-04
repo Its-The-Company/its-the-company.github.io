@@ -1,24 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-04T15:15:57.972941+00:00",
+ "at": "2026-11-04T15:23:48.882883+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-04T09:23:32-05:00"
+  "active": false,
+  "kind": "",
+  "started": null
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[ops] T-2108 lane a stop",
    "model": "opus",
    "started": "2026-11-04T14:30:37.340Z",
-   "seconds": 2720,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-04T15:18:55.733000+00:00"
+  },
   {
    "name": "wrenna",
    "task": "[research] T-2112 policy evidence column",
@@ -85,12 +83,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-04T09:38:31-05:00",
  "personal": {
   "week_pct": 36.95,
-  "usage_pct": 39.5,
-  "work_pct": 78.0,
-  "read_at": "2026-11-04T15:16:00+00:00",
+  "usage_pct": 39.3,
+  "work_pct": 77.6,
+  "read_at": "2026-11-04T15:26:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -414,23 +412,18 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T10:16:00-05:00"
+  "at": "2026-11-04T10:26:00-05:00"
  },
- "next_tick_why": "session",
- "pool": {
-  "why": "Behind the week: 47% used with 48% of the week past, so the pool is sized to catch up",
-  "n": 2,
-  "at": "2026-11-04T09:23:31.225951-05:00"
- },
+ "next_tick_why": "last_tick",
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[ops] T-2108 lane a stop",
-   "model": "opus",
-   "since": "2026-11-04T14:30:37.340Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
@@ -474,29 +467,12 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "T-2108 lane a stop",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T14:30:37.340Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
     "k": "ops",
     "t": "After T-1752/T-1778",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Emergency",
     "s": "next",
     "o": "c"
    },
@@ -555,9 +531,21 @@
     "t": "T-1669 rest",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Site overhaul build, after Maren's spec line...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "Account a stopped itself because a tiny allowance check was cut off while starting on a busy...",
+    "at": "2026-11-04T10:18:00-05:00"
+   },
    {
     "w": "Wrenna",
     "t": "The privacy policy's source notes now point at the real code for Keychain, location, steps,...",
@@ -567,11 +555,6 @@
     "w": "Ines",
     "t": "The privacy label is still correct, but the privacy policy and its notes lag the built app....",
     "at": "2026-11-04T09:40:00-05:00"
-   },
-   {
-    "w": "Wrenna",
-    "t": "The App Store privacy label still matches the app: nothing the app touches is sent to us, but...",
-    "at": "2026-11-04T09:38:00-05:00"
    }
   ],
   "count": {
@@ -594,13 +577,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 3,
-  "total": 4,
-  "at": "10:16 AM",
+  "total": 3,
+  "at": "10:26 AM",
   "why": "",
-  "at_iso": "2026-11-04T15:16:00+00:00",
-  "started": "9:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:16 AM ET</p></section>"
+  "at_iso": "2026-11-04T15:26:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:26 AM ET</p></section>"
  }
 }

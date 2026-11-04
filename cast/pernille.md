@@ -10,8 +10,6 @@ section: "cast"
 
 Cross-compiles C extensions and wheels for platforms they were never written for, with a size budget and a licence list.
 
-<div class="mood"><div><span class="mood-word lv0 big">No mood recorded yet</span></div></div>
-
 | Fact | Detail |
 | --- | --- |
 | Portrait | superformula curve, seeded by the name |
@@ -85,7 +83,7 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 | Oct 25, 20:12 | <span class="tag t-design">design</span> C1 bridge contract page drafted for Idris's review: threads/GIL table, _pwbridge calls, stop <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span> (5.0 s deadline, then quit and reopen), restart keeps the interpreter, sequenced output, UTF-16 traceback columns, 30 shared fixtures |  |
 | Oct 25, 20:00 | <span class="tag t-hire">hire</span> Pernille joined as Python runtime engineer (round 2026-10-25-python-runtime-engineer) |  |
 
-## Diaries, meetings, and conversations
+## Records
 
 <ul class="recs"><li><a class="rec" href="{{ '/story/hiring/2026-10-25-python-runtime-engineer/decision.html' | relative_url }}"><span class="kind grey">Memo</span><b>Decision, Python runtime engineer</b><span class="avatars"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><img class="avatar" src="{{ '/assets/portraits/teodor.svg' | relative_url }}" alt="Teodor" title="Teodor"><img class="avatar" src="{{ '/assets/portraits/ruairi.svg' | relative_url }}" alt="Ruairi" title="Ruairi"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"></span><time>Day 4 · 19:59</time></a></li><li><a class="rec" href="{{ '/story/hiring/2026-10-25-python-runtime-engineer/interview-idris-pernille.html' | relative_url }}"><span class="kind blue">Interview</span><b>Panel interview, Pernille (Python runtime engineer), Idris</b><span class="avatars"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"></span><time>Day 4 · 19:56</time></a></li><li><a class="rec" href="{{ '/story/hiring/2026-10-25-python-runtime-engineer/interview-ines-pernille.html' | relative_url }}"><span class="kind blue">Interview</span><b>Interview, Pernille (Python runtime engineer)</b><span class="avatars"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"></span><time>Day 4 · 19:35</time></a></li></ul>
 

@@ -1,66 +1,42 @@
 {
  "schema": 1,
- "at": "2026-11-04T06:30:48.115340+00:00",
+ "at": "2026-11-04T07:34:03.281339+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-03T23:49:28-05:00"
+  "started": "2026-11-04T01:48:52-05:00"
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "odalys",
-   "task": "[tools] T-1064 lane tick retry fixes",
+   "task": "[tools] T-1752 report format land",
    "model": "opus",
-   "started": "2026-11-04T04:55:57.121Z",
+   "started": "2026-11-04T06:50:25.595Z",
    "seconds": null,
-   "finished": "2026-11-04T06:25:52.966000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-1910 AgeLine field selection",
-   "model": "opus",
-   "started": "2026-11-04T05:53:51.383Z",
-   "seconds": null,
-   "finished": "2026-11-04T06:18:43.161000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-1928 ProjectSendPlan review fixes",
-   "model": "opus",
-   "started": "2026-11-04T05:58:18.029Z",
-   "seconds": null,
-   "finished": "2026-11-04T06:15:37.613000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-1882 run log refresh strings",
-   "model": "opus",
-   "started": "2026-11-04T05:48:42.969Z",
-   "seconds": null,
-   "finished": "2026-11-04T06:11:08.411000+00:00"
+   "finished": "2026-11-04T07:33:34.368000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 302,
+  "runnable_count": 304,
   "blocked_count": 118
  },
  "meter": {
   "five_hour": {
-   "pct": 26.0,
-   "resets_at": "2026-11-04T07:00:00.465279+00:00",
+   "pct": 42.0,
+   "resets_at": "2026-11-04T06:59:59.626464+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 74.0,
+   "left": 58.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 40.0,
-   "resets_at": "2026-11-08T07:00:00.465300+00:00",
+   "pct": 43.0,
+   "resets_at": "2026-11-08T06:59:59.626484+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 60.0,
+   "left": 57.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -68,10 +44,10 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-03T23:49:18.190985-05:00"
+  "read_at": "2026-11-04T01:48:51.260868-05:00"
  },
  "ui": {
-  "week_pct": 0.678,
+  "week_pct": 0.684,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -85,153 +61,11 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 25.99,
-  "usage_pct": 33.2,
-  "work_pct": 76.4,
-  "read_at": "2026-11-04T06:31:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-1677",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-1669 rest",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T00:21:05-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-1867",
-    "w": "Odalys",
-    "k": "test",
-    "t": "Continuation of T-1116",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-04T00:21:05-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-1898",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Start the next session before the chart rebuilds",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T00:21:05-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-1899",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Why a third of lane branches fail at landing",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T00:21:05-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-1900",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Board size",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-04T00:21:05-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-1901",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "MacBook runner",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T00:21:05-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-1895",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-1878 review L1+L2",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-04T00:21:05-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-1896",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-1878 review L3",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-04T00:21:05-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-1897",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-1878 review L4, predates T-1116",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-04T00:21:05-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-1902",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Parked branches",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-04T00:21:05-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-1671",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Ios/App/Runtime/pywidget/notifications.py:87 calls _limits with thread...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T00:21:05-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-1689",
-    "w": "Pernille",
-    "k": "tools",
-    "t": "Personal branch personal/a2 did not land",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T00:21:05-05:00",
-    "n": "Evan",
-    "d": 1
-   }
-  ]
+  "week_pct": 34.09,
+  "usage_pct": 39.3,
+  "work_pct": 78.7,
+  "read_at": "2026-11-04T07:36:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -241,20 +75,20 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
-  "gate": "closed",
-  "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
+  "free_gb": 21,
+  "gate": "open",
+  "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T01:31:00-05:00"
+  "at": "2026-11-04T02:36:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
-  "why": "On the week's line (43% used, 43% past), so today's work is spread until midnight",
-  "n": 1,
-  "at": "2026-11-03T23:49:18.892837-05:00"
+  "why": "Behind the week: 43% used with 43% of the week past, so the pool is sized to catch up",
+  "n": 2,
+  "at": "2026-11-04T01:48:51.535624-05:00"
  },
  "lanes": [
   {
@@ -318,20 +152,6 @@
    },
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "Report format",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop writing workers' diaries and private...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "ops",
     "t": "After T-1752/T-1778",
     "s": "next",
@@ -378,27 +198,41 @@
     "t": "After T-1035 lands",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Activity run log, Swift half",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Independent review",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Odalys",
-    "t": "The personal lanes no longer ask a person to look at a task just because a session was cut off...",
-    "at": "2026-11-04T01:25:00-05:00"
+    "t": "From the 06:00 report on, each report is titled Day N: Morning/Evening Report with a short...",
+    "at": "2026-11-04T02:32:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "The widget's 'Updated' line now ignores any value the widget shows as '--', so it can never...",
-    "at": "2026-11-04T01:18:00-05:00"
+    "w": "Odalys",
+    "t": "The evening session no longer writes worker diaries or private conversations, and the reports...",
+    "at": "2026-11-04T02:32:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "Fixed a test note that quoted the wrong text width; the shortest weekday form ('Mon') was...",
-    "at": "2026-11-04T01:18:00-05:00"
+    "w": "Operator",
+    "t": "This bundle of follow-ups is closed because each part now has its own task: T-0560 (test hooks...",
+    "at": "2026-11-04T01:32:00-05:00"
    }
   ],
   "count": {
-   "next": 302,
+   "next": 304,
    "wait": 33,
    "blocked": 85,
    "you": 15
@@ -409,7 +243,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",

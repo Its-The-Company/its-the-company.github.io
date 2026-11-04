@@ -10,8 +10,6 @@ section: "cast"
 
 Eleven years in site reliability and developer-productivity teams; measures first, changes one thing at a time.
 
-<div class="mood"><div><span class="mood-word lv0 big">No mood recorded yet</span></div></div>
-
 | Fact | Detail |
 | --- | --- |
 | Portrait | superformula curve, seeded by the name |
@@ -227,7 +225,7 @@ Eleven years in site reliability and developer-productivity teams; measures firs
 | Oct 24, 23:58 | <span class="tag t-task">task</span> P3 Best ideas tie line: 439ddf43 already names concept ids (H157 C1, H157 C2); test passes 112/0; board ticked |  |
 | Oct 24, 23:57 | <span class="tag t-tool">tool</span> wiki_views.py --pageviews-only (eedea4d1): pageviews without the robots-barred /w/api.php title check |  |
 
-## Diaries, meetings, and conversations
+## Records
 
 <ul class="recs"><li><a class="rec" href="{{ '/story/hiring/2026-10-22-process-engineer/decision.html' | relative_url }}"><span class="kind grey">Memo</span><b>Decision, process and operations engineer</b><span class="avatars"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"><img class="avatar" src="{{ '/assets/portraits/hartley.svg' | relative_url }}" alt="Hartley" title="Hartley"><img class="avatar" src="{{ '/assets/portraits/linnea.svg' | relative_url }}" alt="Linnea" title="Linnea"></span><time>Day 1 · 20:12</time></a></li><li><a class="rec" href="{{ '/story/hiring/2026-10-22-process-engineer/interview-odalys.html' | relative_url }}"><span class="kind blue">Interview</span><b>Interview, Odalys (process and operations engineer)</b><span class="avatars"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"></span><time>Day 1 · 20:10</time></a></li><li><a class="rec" href="{{ '/story/hiring/2026-10-22-process-engineer/scorecard-odalys.html' | relative_url }}"><span class="kind grey">Scorecard</span><b>Scorecard, Odalys (process and operations engineer)</b><span class="avatars"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"></span><time>Day 1 · 20:10</time></a></li></ul>
 
@@ -259,12 +257,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - After a tick change, run every suite that copies the tick (T-1192: 3 personal_off reds caught only that way).
 
 - Lesson 11-03: never state a suite result before reading its output file.
+- T-1752+T-1778 landed ce30096c5 (new report format, no diaries). Check the 11-04 06:00 report (author Maren by rotation) against it.
 - T-1860 done 378a16dd6: documents/how-work-flows.md + tools/flow_costs.py (rerun for before numbers). Mine next: T-1898 charts off the gap (P1), T-1899 lane reds (P1), T-1900-1902.
 
 ## Standing lessons (details in archive.md)
-- Never link or copy investors/ or rules/ into scratch; suites run only via tests/run.sh from the company folder or a real git worktree, never a plain copy.
-- A worktree lacks ignored files (ops/agents.json): a red there may be the tree, not the code. Prove it at main in the company folder.
-- macOS bash 3.2 ends $(...) at a case pattern's ")": no case inside a substitution. bash -n won't see it.
 - Process rows read only the run's own processes (full paths under $T), never the whole machine. Races need repeated rows (T-1240: 2 of 6).
 - One suite at a time with lanes on; check ps for other run.sh first (T-1867: land suite timed out at 943 s, load 1022, 4 other runs). Read reds by cause, count rows not colour. A before number is a claim: rebuild it from raw.
 - A suite that passed at night and stalls by midday: look for a fixed date in a fixture against a wall-clock window first (T-1688: PAUSE stamp vs inbox 2 h window).

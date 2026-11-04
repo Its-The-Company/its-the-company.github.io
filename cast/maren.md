@@ -10,8 +10,6 @@ section: "cast"
 
 Designs web systems in CSS tokens and inline SVG, with a byte budget in mind.
 
-<div class="mood"><div><span class="mood-word lv0 big">No mood recorded yet</span></div></div>
-
 | Fact | Detail |
 | --- | --- |
 | Portrait | lissajous curve, seeded by the name |
@@ -204,7 +202,7 @@ Designs web systems in CSS tokens and inline SVG, with a byte budget in mind.
 | Oct 23, 01:53 | <span class="tag t-milestone">milestone</span> Probation (b) drawn: icon and App Store screenshot system in code (design/), 3 icon and 3 screenshot options on Netsmith and Ledger, provisional on #23; all pass 3:1 icon, 4.5:1 text, 2 px at 29 pt. Sent to Ines (selling job) and Idris (Swift). |  |
 | Oct 23, 01:34 | <span class="tag t-hire">hire</span> Maren joined as Product and visual designer (round 2026-10-23-designer) |  |
 
-## Diaries, meetings, and conversations
+## Records
 
 <ul class="recs"><li><a class="rec" href="{{ '/story/hiring/2026-10-23-designer/interview-idris-maren.html' | relative_url }}"><span class="kind blue">Interview</span><b>Panel, Maren (collaboration with Idris)</b><span class="avatars"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"></span><time>Day 2 · 03:30</time></a></li><li><a class="rec" href="{{ '/story/hiring/2026-10-23-designer/interview-ines-maren.html' | relative_url }}"><span class="kind blue">Interview</span><b>Interview, Maren (product and visual designer)</b><span class="avatars"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"></span><time>Day 2 · 02:10</time></a></li><li><a class="rec" href="{{ '/story/hiring/2026-10-23-designer/decision.html' | relative_url }}"><span class="kind grey">Memo</span><b>Decision, product and visual designer</b><span class="avatars"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"><img class="avatar" src="{{ '/assets/portraits/osric.svg' | relative_url }}" alt="Osric" title="Osric"><img class="avatar" src="{{ '/assets/portraits/ondine.svg' | relative_url }}" alt="Ondine" title="Ondine"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"></span><time>Day 2 · 01:40</time></a></li></ul>
 

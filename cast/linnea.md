@@ -10,8 +10,6 @@ section: "cast"
 
 Ran operations and internal tooling for a small remote studio; writes the hand-offs people actually read.
 
-<div class="mood"><div><span class="mood-word lv0 big">No mood recorded yet</span></div></div>
-
 | Fact | Detail |
 | --- | --- |
 | Portrait | superformula curve, seeded by the name |
@@ -23,6 +21,6 @@ Ran operations and internal tooling for a small remote studio; writes the hand-o
 
 Nothing logged yet.
 
-## Diaries, meetings, and conversations
+## Records
 
 <ul class="recs"><li><a class="rec" href="{{ '/story/hiring/2026-10-22-process-engineer/decision.html' | relative_url }}"><span class="kind grey">Memo</span><b>Decision, process and operations engineer</b><span class="avatars"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"><img class="avatar" src="{{ '/assets/portraits/hartley.svg' | relative_url }}" alt="Hartley" title="Hartley"><img class="avatar" src="{{ '/assets/portraits/linnea.svg' | relative_url }}" alt="Linnea" title="Linnea"></span><time>Day 1 · 20:12</time></a></li><li><a class="rec" href="{{ '/story/hiring/2026-10-22-process-engineer/interview-linnea.html' | relative_url }}"><span class="kind blue">Interview</span><b>Interview, Linnea (process and operations engineer)</b><span class="avatars"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><img class="avatar" src="{{ '/assets/portraits/linnea.svg' | relative_url }}" alt="Linnea" title="Linnea"></span><time>Day 1 · 20:10</time></a></li></ul>

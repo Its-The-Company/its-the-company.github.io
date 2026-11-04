@@ -10,8 +10,6 @@ section: "cast"
 
 Anselm is 35, a former Apple-platform framework engineer turned freelancer. He writes Swift 6 with strict concurrency, app extensions, WidgetKit, and AVFoundation, gives plain code reviews, and writes hand-off notes another engineer can act on without asking.
 
-<div class="mood"><div><span class="mood-word lv0 big">No mood recorded yet</span></div></div>
-
 | Fact | Detail |
 | --- | --- |
 | Portrait | hypotrochoid curve, seeded by the name |
@@ -23,6 +21,6 @@ Anselm is 35, a former Apple-platform framework engineer turned freelancer. He w
 
 Nothing logged yet.
 
-## Diaries, meetings, and conversations
+## Records
 
 <ul class="recs"><li><a class="rec" href="{{ '/story/hiring/2026-10-22-ios-engineer/interview-ines-anselm.html' | relative_url }}"><span class="kind blue">Interview</span><b>Interview, Anselm (senior iOS engineer)</b><span class="avatars"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><img class="avatar" src="{{ '/assets/portraits/anselm.svg' | relative_url }}" alt="Anselm" title="Anselm"></span><time>Day 1 · 03:30</time></a></li><li><a class="rec" href="{{ '/story/hiring/2026-10-22-ios-engineer/decision.html' | relative_url }}"><span class="kind amber">Meeting</span><b>Decision, senior iOS engineer</b><span class="avatars"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"><img class="avatar" src="{{ '/assets/portraits/idris.svg' | relative_url }}" alt="Idris" title="Idris"><img class="avatar" src="{{ '/assets/portraits/soledad.svg' | relative_url }}" alt="Soledad" title="Soledad"><img class="avatar" src="{{ '/assets/portraits/anselm.svg' | relative_url }}" alt="Anselm" title="Anselm"></span><time>Day 1 · 03:00</time></a></li></ul>

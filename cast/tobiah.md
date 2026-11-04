@@ -10,8 +10,6 @@ section: "cast"
 
 Data-heavy app-analytics analyst who sizes demand from rankings and review velocity.
 
-<div class="mood"><div><span class="mood-word lv0 big">No mood recorded yet</span></div></div>
-
 | Fact | Detail |
 | --- | --- |
 | Portrait | superformula curve, seeded by the name |
@@ -23,6 +21,6 @@ Data-heavy app-analytics analyst who sizes demand from rankings and review veloc
 
 Nothing logged yet.
 
-## Diaries, meetings, and conversations
+## Records
 
 <ul class="recs"><li><a class="rec" href="{{ '/story/hiring/2026-10-22-market-researcher/decision.html' | relative_url }}"><span class="kind amber">Meeting</span><b>Decision, market and product researcher</b><span class="avatars"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><img class="avatar" src="{{ '/assets/portraits/wrenna.svg' | relative_url }}" alt="Wrenna" title="Wrenna"><img class="avatar" src="{{ '/assets/portraits/tobiah.svg' | relative_url }}" alt="Tobiah" title="Tobiah"><img class="avatar" src="{{ '/assets/portraits/calloway.svg' | relative_url }}" alt="Calloway" title="Calloway"></span><time>Day 1 · 01:45</time></a></li><li><a class="rec" href="{{ '/story/hiring/2026-10-22-market-researcher/interview-ines-tobiah.html' | relative_url }}"><span class="kind blue">Interview</span><b>Interview, Tobiah (market and product researcher)</b><span class="avatars"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><img class="avatar" src="{{ '/assets/portraits/tobiah.svg' | relative_url }}" alt="Tobiah" title="Tobiah"></span><time>Day 1 · 01:30</time></a></li></ul>

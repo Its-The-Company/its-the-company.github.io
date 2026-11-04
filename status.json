@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T14:41:59.015936+00:00",
+ "at": "2026-11-04T14:45:01.152360+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,21 @@
    "task": "[ops] T-2108 lane a stop",
    "model": "opus",
    "started": "2026-11-04T14:30:37.340Z",
-   "seconds": 681,
+   "seconds": 863,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
   {
    "name": "wrenna",
    "task": "[research] T-2112 policy evidence column",
    "model": "opus",
    "started": "2026-11-04T14:40:55.292Z",
-   "seconds": 63,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Wrenna",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-04T14:42:30.779000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-2109 privacy findings owners",
@@ -48,7 +47,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 341,
+  "runnable_count": 340,
   "blocked_count": 123
  },
  "meter": {
@@ -91,7 +90,7 @@
   "week_pct": 36.95,
   "usage_pct": 39.5,
   "work_pct": 78.0,
-  "read_at": "2026-11-04T14:42:00+00:00",
+  "read_at": "2026-11-04T14:45:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -413,7 +412,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T09:42:00-05:00"
+  "at": "2026-11-04T09:45:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -428,15 +427,6 @@
    "task": "[ops] T-2108 lane a stop",
    "model": "opus",
    "since": "2026-11-04T14:30:37.340Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Wrenna",
-   "state": "running",
-   "task": "[research] T-2112 policy evidence column",
-   "model": "opus",
-   "since": "2026-11-04T14:40:55.292Z",
    "next": [],
    "effort": "high"
   },
@@ -471,6 +461,14 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Wrenna",
+   "state": "next",
+   "task": "Wrenna, P1, from T-2109 (T-1800 F1, F2, F5;...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
@@ -482,15 +480,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T14:30:37.340Z",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "T-2112 policy evidence column",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T14:40:55.292Z",
     "o": "c"
    }
   ],
@@ -568,6 +557,11 @@
   ],
   "done": [
    {
+    "w": "Wrenna",
+    "t": "The privacy policy's source notes now point at the real code for Keychain, location, steps,...",
+    "at": "2026-11-04T09:42:00-05:00"
+   },
+   {
     "w": "Ines",
     "t": "The privacy label is still correct, but the privacy policy and its notes lag the built app....",
     "at": "2026-11-04T09:40:00-05:00"
@@ -576,15 +570,10 @@
     "w": "Wrenna",
     "t": "The App Store privacy label still matches the app: nothing the app touches is sent to us, but...",
     "at": "2026-11-04T09:38:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The request to fold the Investors' recent rulings into the rules was rewritten so one Approve on...",
-    "at": "2026-11-04T09:26:00-05:00"
    }
   ],
   "count": {
-   "next": 341,
+   "next": 340,
    "wait": 37,
    "blocked": 86,
    "you": 16
@@ -603,13 +592,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 3,
-  "total": 5,
-  "at": "9:42 AM",
+  "total": 4,
+  "at": "9:45 AM",
   "why": "",
-  "at_iso": "2026-11-04T14:42:00+00:00",
+  "at_iso": "2026-11-04T14:45:00+00:00",
   "started": "9:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:42 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:45 AM ET</p></section>"
  }
 }

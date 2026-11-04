@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-04T14:26:31.583110+00:00",
+ "at": "2026-11-04T14:28:48.263171+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 338,
+  "runnable_count": 339,
   "blocked_count": 123
  },
  "meter": {
@@ -55,7 +55,7 @@
   "week_pct": 36.95,
   "usage_pct": 39.5,
   "work_pct": 78.0,
-  "read_at": "2026-11-04T14:26:00+00:00",
+  "read_at": "2026-11-04T14:29:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -345,7 +345,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T09:04:34-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b3",
@@ -356,7 +357,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T09:04:34-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    }
   ]
  },
@@ -375,7 +377,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T09:26:00-05:00"
+  "at": "2026-11-04T09:29:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -444,6 +446,13 @@
     "o": "c"
    },
    {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Emergency",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Ines",
     "k": "plan",
     "t": "T-0848 decision for T-2052",
@@ -498,13 +507,6 @@
     "t": "T-1669 rest",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Site overhaul build, after Maren's spec line...",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -525,7 +527,7 @@
    }
   ],
   "count": {
-   "next": 338,
+   "next": 339,
    "wait": 37,
    "blocked": 86,
    "you": 16
@@ -547,10 +549,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "9:26 AM",
+  "at": "9:29 AM",
   "why": "",
-  "at_iso": "2026-11-04T14:26:00+00:00",
+  "at_iso": "2026-11-04T14:29:00+00:00",
   "started": "9:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:26 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:29 AM ET</p></section>"
  }
 }

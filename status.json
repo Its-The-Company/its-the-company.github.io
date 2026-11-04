@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-04T14:23:31.922915+00:00",
+ "at": "2026-11-04T14:26:31.583110+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-04T09:23:32-05:00"
  },
  "workers": [],
  "who": "",
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 341,
+  "runnable_count": 338,
   "blocked_count": 123
  },
  "meter": {
@@ -55,7 +55,7 @@
   "week_pct": 36.95,
   "usage_pct": 39.5,
   "work_pct": 78.0,
-  "read_at": "2026-11-04T14:23:00+00:00",
+  "read_at": "2026-11-04T14:26:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -271,11 +271,7 @@
    {
     "lane": "b3",
     "task": "T-2087",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Repost the amendments fold",
-    "m": "opus",
-    "e": "high",
+    "t": "T-2087",
     "at": "2026-11-04T09:04:34-05:00",
     "n": "Jeremy",
     "d": 1
@@ -379,15 +375,19 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T09:23:00-05:00"
+  "at": "2026-11-04T09:26:00-05:00"
  },
  "next_tick_why": "session",
- "pool": null,
+ "pool": {
+  "why": "Behind the week: 47% used with 47% of the week past, so the pool is sized to catch up",
+  "n": 2,
+  "at": "2026-11-04T09:23:31.225951-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
    "state": "next",
-   "task": "Odalys, P0, personal lane before anything else...",
+   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
    "model": null,
    "since": null,
    "next": []
@@ -438,13 +438,6 @@
   "open": [
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "Personal lane before anything else",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "ops",
     "t": "After T-1752/T-1778",
     "s": "next",
@@ -468,13 +461,6 @@
     "w": "Idris",
     "k": "build",
     "t": "Extension lane",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "First run on one account, after sign-in",
     "s": "next",
     "o": "c"
    },
@@ -505,50 +491,52 @@
     "t": "Refresh control and age line in the renderer",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-1669 rest",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Site overhaul build, after Maren's spec line...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Odalys",
-    "t": "The parked fix for test-result reporting on the Mac runner was not retried, because it now...",
-    "at": "2026-11-04T09:23:00-05:00"
+    "t": "The request to fold the Investors' recent rulings into the rules was rewritten so one Approve on...",
+    "at": "2026-11-04T09:26:00-05:00"
    },
    {
-    "w": "Pernille",
-    "t": "Checked Idris's fix that stops a widget script starting on a phone already out of memory; the...",
-    "at": "2026-11-04T09:01:00-05:00"
+    "w": "Operator",
+    "t": "Closed as finished: this was the Investors' order of Oct 31 to build the personal-account lane...",
+    "at": "2026-11-04T09:25:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "On a real phone, a widget's Python script no longer starts when the system reports the extension...",
-    "at": "2026-11-04T08:38:00-05:00"
+    "w": "Operator",
+    "t": "Closed as finished: the first company run on a personal account worked on Nov 1 (account a, exit...",
+    "at": "2026-11-04T09:25:00-05:00"
    }
   ],
   "count": {
-   "next": 341,
+   "next": 338,
    "wait": 37,
    "blocked": 86,
    "you": 16
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6633098521",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "What is the \"personal lane before..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -559,10 +547,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "9:23 AM",
+  "at": "9:26 AM",
   "why": "",
-  "at_iso": "2026-11-04T14:23:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:23 AM ET</p></section>"
+  "at_iso": "2026-11-04T14:26:00+00:00",
+  "started": "9:23 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:26 AM ET</p></section>"
  }
 }

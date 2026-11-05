@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T09:26:11.887280+00:00",
+ "at": "2026-11-05T09:29:06.547831+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,20 +8,11 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[release] T-2563 upload tool fixes F1-F6",
-   "model": "opus",
-   "started": "2026-11-05T09:12:44.772Z",
-   "seconds": 807,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[tools] T-2556 supervisor test reds",
    "model": "opus",
    "started": "2026-11-05T09:12:51.423Z",
-   "seconds": 800,
+   "seconds": 975,
    "finished": null,
    "effort": "high"
   },
@@ -30,17 +21,35 @@
    "task": "[build] T-2537 land parked fixes, slice 1",
    "model": "opus",
    "started": "2026-11-05T09:13:01.408Z",
-   "seconds": 790,
+   "seconds": 965,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[release] T-2566 re-review upload fixes",
+   "model": "opus",
+   "started": "2026-11-05T09:27:36.663Z",
+   "seconds": 89,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2, Odalys",
- "recent": [],
+ "who": "Odalys, Idris, Pernille",
+ "recent": [
+  {
+   "name": "idris",
+   "task": "[release] T-2563 upload tool fixes F1-F6",
+   "model": "opus",
+   "started": "2026-11-05T09:12:44.772Z",
+   "seconds": null,
+   "finished": "2026-11-05T09:27:20.210000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 435,
+  "runnable_count": 432,
   "blocked_count": 125
  },
  "meter": {
@@ -83,7 +92,7 @@
   "week_pct": 51.58,
   "usage_pct": 42.8,
   "work_pct": 74.2,
-  "read_at": "2026-11-05T09:26:00+00:00",
+  "read_at": "2026-11-05T09:29:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -115,7 +124,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T04:26:00-05:00"
+  "at": "2026-11-05T04:29:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -124,15 +133,6 @@
   "at": "2026-11-05T04:10:47.062964-05:00"
  },
  "lanes": [
-  {
-   "name": "Idris",
-   "state": "running",
-   "task": "[release] T-2563 upload tool fixes F1-F6",
-   "model": "opus",
-   "since": "2026-11-05T09:12:44.772Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Odalys",
    "state": "running",
@@ -143,17 +143,27 @@
    "effort": "high"
   },
   {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-2537 land parked fixes, slice 1",
+   "model": "opus",
+   "since": "2026-11-05T09:13:01.408Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Pernille",
+   "state": "running",
+   "task": "[release] T-2566 re-review upload fixes",
+   "model": "opus",
+   "since": "2026-11-05T09:27:36.663Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Ines",
    "state": "next",
-   "task": "Pernille, P2, no Xcode, after T-1440 lands (Idris review...",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -178,15 +188,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "release",
-    "t": "Keep the internal-build record in the real repository only",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T09:12:44.772Z",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Fix the seven red rows in the supervisor tests",
@@ -202,6 +203,15 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T09:13:01.408Z",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "release",
+    "t": "Check the second round of upload tool fixes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T09:27:36.663Z",
     "o": "c"
    }
   ],
@@ -249,20 +259,6 @@
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "release",
-    "t": "Keep the internal-build record in the real...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "release",
-    "t": "Refuse an upload built from uncommitted code",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
     "k": "release",
     "t": "Check the second round of upload tool fixes",
@@ -275,27 +271,41 @@
     "t": "Run Python widget scripts inside the widget...",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stop personal sessions taking more tasks...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Record each widget run in the app's activity log",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Odalys",
-    "t": "Checked the error-trace fixes. Two need more work: a long loop between several functions can...",
-    "at": "2026-11-05T03:49:00-05:00"
+    "w": "Idris",
+    "t": "The record of builds that may only go to our own testers now has to live in the company's real...",
+    "at": "2026-11-05T04:27:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "two of three parked fixes were redone on the current code (test results count as green only when...",
-    "at": "2026-11-05T03:49:00-05:00"
+    "w": "Idris",
+    "t": "An upload to App Store Connect is now refused if the code has unsaved or uncommitted changes,...",
+    "at": "2026-11-05T04:27:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "the tool that reads a test run's result now calls it green only when the run passed, exited...",
-    "at": "2026-11-05T03:48:00-05:00"
+    "w": "Idris",
+    "t": "The message telling the Investors a test build is ready is now written only for a build that...",
+    "at": "2026-11-05T04:27:00-05:00"
    }
   ],
   "count": {
-   "next": 435,
+   "next": 432,
    "wait": 38,
    "blocked": 87,
    "you": 19
@@ -317,10 +327,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "4:26 AM",
+  "at": "4:29 AM",
   "why": "",
-  "at_iso": "2026-11-05T09:26:00+00:00",
+  "at_iso": "2026-11-05T09:29:00+00:00",
   "started": "4:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:26 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:29 AM ET</p></section>"
  }
 }

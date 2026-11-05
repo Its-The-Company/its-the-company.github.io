@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T19:06:53.484931+00:00",
+ "at": "2026-11-05T19:09:59.741578+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2634 land merges on MacBook in parallel",
    "model": "opus",
    "started": "2026-11-05T18:32:53.686Z",
-   "seconds": 2039,
+   "seconds": 2226,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2570 retry unmerged parked work",
    "model": "opus",
    "started": "2026-11-05T18:33:25.639Z",
-   "seconds": 2007,
+   "seconds": 2194,
    "finished": null,
    "effort": "high"
   },
@@ -30,16 +30,7 @@
    "task": "[tools] T-2675 charter suite reds comparison",
    "model": "opus",
    "started": "2026-11-05T18:33:34.547Z",
-   "seconds": 1998,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[test] T-2663 privacy check file-scan tests",
-   "model": "opus",
-   "started": "2026-11-05T18:34:03.791Z",
-   "seconds": 1969,
+   "seconds": 2185,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[build] T-1677 record last run report at launch",
    "model": "opus",
    "started": "2026-11-05T18:37:36.900Z",
-   "seconds": 1756,
+   "seconds": 1942,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[build] T-2567 traceback fold fixes, tick T-2413",
    "model": "opus",
    "started": "2026-11-05T18:38:29.185Z",
-   "seconds": 1704,
+   "seconds": 1890,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +57,7 @@
    "task": "[build] T-2486 stuck state must not freeze Restart",
    "model": "opus",
    "started": "2026-11-05T18:51:03.787Z",
-   "seconds": 949,
+   "seconds": 1135,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +66,7 @@
    "task": "[tools] T-2692 applier pin uses GitHub's copy",
    "model": "opus",
    "started": "2026-11-05T18:59:57.708Z",
-   "seconds": 415,
+   "seconds": 602,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +75,7 @@
    "task": "[test] T-2628 Files export/import UI test failure",
    "model": "opus",
    "started": "2026-11-05T19:03:23.431Z",
-   "seconds": 210,
+   "seconds": 396,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +84,7 @@
    "task": "[build] T-2696 Settings screen design fixes",
    "model": "opus",
    "started": "2026-11-05T19:04:53.863Z",
-   "seconds": 119,
+   "seconds": 305,
    "finished": null,
    "effort": "high"
   },
@@ -102,13 +93,29 @@
    "task": "[release] T-2702 land internal-only upload setting",
    "model": "opus",
    "started": "2026-11-05T19:06:06.638Z",
-   "seconds": 46,
+   "seconds": 233,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x3, Ines, Idris x6, Pernille",
+ "who": "Odalys x3, Ines, Idris x5, Pernille",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[test] T-2663 privacy check file-scan tests",
+   "model": "opus",
+   "started": "2026-11-05T18:34:03.791Z",
+   "seconds": null,
+   "finished": "2026-11-05T19:09:49.859000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2466 fix three red tool suites",
+   "model": "opus",
+   "started": "2026-11-05T18:41:11.554Z",
+   "seconds": null,
+   "finished": "2026-11-05T19:07:57.767000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-2690 review last changes before test build",
@@ -124,28 +131,12 @@
    "started": "2026-11-05T18:55:22.147Z",
    "seconds": null,
    "finished": "2026-11-05T19:04:34.613000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2695 personal accounts run their own sessions",
-   "model": "opus",
-   "started": "2026-11-05T18:58:09.544Z",
-   "seconds": null,
-   "finished": "2026-11-05T19:03:06.432000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2466 fix three red tool suites",
-   "model": "opus",
-   "started": "2026-11-05T18:41:11.554Z",
-   "seconds": null,
-   "finished": "2026-11-05T19:01:35.201000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 432,
+  "runnable_count": 431,
   "blocked_count": 129
  },
  "meter": {
@@ -188,7 +179,7 @@
   "week_pct": 58.5,
   "usage_pct": 45.5,
   "work_pct": 71.9,
-  "read_at": "2026-11-05T19:07:00+00:00",
+  "read_at": "2026-11-05T19:10:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -309,7 +300,7 @@
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-05T14:07:00-05:00"
+  "at": "2026-11-05T14:10:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -339,9 +330,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[test] T-2663 privacy check file-scan tests",
+   "task": "[build] T-1677 record last run report at launch",
    "model": "opus",
-   "since": "2026-11-05T18:34:03.791Z",
+   "since": "2026-11-05T18:37:36.900Z",
    "next": [],
    "effort": "high"
   },
@@ -402,15 +393,6 @@
    },
    {
     "w": "Idris",
-    "k": "test",
-    "t": "Privacy check flags a runaway file scan first",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T18:34:03.791Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
     "k": "build",
     "t": "Finish recording the last run report at launch",
     "m": "opus",
@@ -443,6 +425,15 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T18:59:57.708Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "The Files export and import UI test fails",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T19:03:23.431Z",
     "o": "c"
    }
   ],
@@ -521,22 +512,22 @@
   "done": [
    {
     "w": "Pernille",
-    "t": "Checked the last code before the first test build. A phone-test build cannot be uploaded, but...",
-    "at": "2026-11-05T14:05:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The personal accounts were being held to one session each because work was landing slowly; now...",
-    "at": "2026-11-05T14:02:00-05:00"
+    "t": "When a crash comes from very deep recursion, the error card now counts the hidden frames as one...",
+    "at": "2026-11-05T14:09:00-05:00"
    },
    {
     "w": "Pernille",
-    "t": "Checked the new way to apply a very large approved change. It is not safe yet: it can apply a...",
-    "at": "2026-11-05T13:56:00-05:00"
+    "t": "A syntax mistake in text the script runs itself, or in a library, no longer leaves the error...",
+    "at": "2026-11-05T14:09:00-05:00"
+   },
+   {
+    "w": "Pernille",
+    "t": "Checked the last code before the first test build. A phone-test build cannot be uploaded, but...",
+    "at": "2026-11-05T14:05:00-05:00"
    }
   ],
   "count": {
-   "next": 432,
+   "next": 431,
    "wait": 42,
    "blocked": 87,
    "you": 19
@@ -556,13 +547,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 11,
+  "main": 10,
   "lanes": 4,
-  "total": 15,
-  "at": "2:07 PM",
+  "total": 14,
+  "at": "2:10 PM",
   "why": "",
-  "at_iso": "2026-11-05T19:07:00+00:00",
+  "at_iso": "2026-11-05T19:10:00+00:00",
   "started": "1:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>15</b> agents running now</p><p class=\"an-sub\">Main session 11, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:07 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>14</b> agents running now</p><p class=\"an-sub\">Main session 10, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:10 PM ET</p></section>"
  }
 }

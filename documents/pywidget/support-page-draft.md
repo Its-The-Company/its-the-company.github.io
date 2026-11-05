@@ -85,7 +85,8 @@ Source: privacy policy draft v3 (`pywidget/docs/release/privacy-policy-draft.md`
 
 ### 11. How do I write and run my first script? (DRAFT, T-1760, <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>)
 
-Open pywidget. The editor is the first thing you work in: type or paste Python, then tap **Run**. What your script prints, and any error, shows in the console below the editor. Tap **Stop** if it runs too long. The app saves your text as you type and before each run, so a run always uses what you see. Ten example scripts ship with the app (for example a tip splitter, a dice roller and a word count) if you would rather start from one. [unverified on a phone]
+Open pywidget. The editor is the first thing you work in: type or paste Python, then tap **Run**. What your script prints, and any error, shows in the console below the editor. Tap **Stop** if it runs too long. Text typed straight into the editor is scratch and is not saved. To keep a script, tap **Projects**, make a **New Project**, then a **New File** in it. A file in a project is saved when you pause typing, before each Run, and when you leave the app, so a run always uses what you see. Ten example scripts ship with the app (for example a tip splitter, a dice roller and a word count). [unverified on a phone]
+
 
 
 

@@ -25,7 +25,7 @@ Wrenna, 2026-10-25, started 19:57 ET; revised 20:01 ET for ADR-006 (<span title=
 [App Name] is a Python development environment for iPhone and iPad. Users write and run their own Python scripts, and a script can draw a home screen or Lock Screen widget.
 
 HOW CODE RUNS
-The app runs code from only two sources: (1) Python the user types or pastes[T-0355: , or opens from their own files (app storage, or a Files folder they pick)], and (2) the example scripts and premade widgets compiled into this build. The app does not download or run code from our servers or other users. There is no store, sharing or import-from-URL of others' code; [T-0191: the only in-app gallery shows our own premade widgets, compiled into this build. ]Examples open in the editor, where the user can read and edit them before they run.[T-0191: Each premade's source opens in the app, the Pro ones once bought.] A user's own script may make network requests it writes; the app itself never fetches code.
+The app runs code from only two sources: (1) Python the user types or pastes[T-0355: , or opens from their own files (app storage, or a Files folder they pick)], and (2) the example scripts and premade widgets compiled into this build. The app does not download or run code from our servers or other users. There is no store, sharing or import-from-URL of others' code; [T-0191: the only in-app gallery shows our own premade widgets, compiled into this build. ]Examples open in the editor, where the user can read and edit them before they run.[T-0901: Premades open as editable copies.] A user's own script may make network requests it writes; the app itself never fetches code.
 
 RUNTIME
 CPython [3.15.1] and its standard library are bundled in the app. Bundled packages: [requests, jedi, pyflakes]. Compiled packages such as numpy are not in this version, and there is no package installer. Native modules are signed frameworks inside the bundle.
@@ -35,13 +35,13 @@ DEVICE FEATURES
 Scripts can use: clipboard, files, local notifications, location (When In Use only), motion history (steps, floors, distance), and the Keychain for the user's own secrets. Location and motion are asked the first time a script needs them, with a purpose string, and notifications through the system prompt; the app stays usable if any is refused. Files, clipboard and Keychain have no prompt. There is no HealthKit, contacts, photos or calendar access.
 
 WIDGETS [G5: delete this section if widgets are cut]
-A script can describe a widget with our Python view library. Python runs in the main app (foreground, background app refresh, or the Refresh Widgets Shortcuts action) and saves the result; [<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">LANE</span>-OFF: the widget extension only draws it and runs no code.] Background refresh is used only to update the user's widgets. Twelve premade widgets ship in the build. The GitHub status widget calls GitHub's public API from the device; it works without an account, and an optional personal token stays in the Keychain.
+A script can describe a widget with our Python view library. Python runs in the main app (foreground, background app refresh, or the Refresh Widgets Shortcuts action) and saves the result; [<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">LANE</span>-OFF: the widget extension only draws it and runs no code.] Background refresh is used only to update the user's widgets.[T-2373: Pro unlocks it.][6b, T-0795 cut: drop this; Pro is themes.] Twelve premade widgets ship in the build[T-2372: , all free]. The GitHub status widget calls GitHub's public API from the device; it works without an account, and an optional personal token stays in the Keychain.
 
 SHORTCUTS
 App Intents: Run Script, Run Script with Input, Refresh Widgets. They run one of the user's widget scripts[T-0790: , or any script from the user's library]; the input is data passed to that script, not code.[T-0449: A user can build a Shortcut that opens one of their own projects; nothing is downloaded, shared or offered.]
 
 IN-APP PURCHASE
-One non-consumable, "[Pro name]", unlocks [contents - G6]. More > pywidget Pro shows it and has a Restore purchase link[T-0657: ; Settings > Pro shows it too]. The free app is complete for writing and running your own Python.
+One non-consumable, "[Pro name]", unlocks [G6: [T-2373: background refresh and ][T-0272: editor themes]]. More > pywidget Pro shows it and has a Restore purchase link[T-0657: ; Settings > Pro shows it too]. The free app is complete for writing and running your own Python.
 
 PRIVACY
 No account, no sign-in, no server, no analytics, no tracking. Scripts, widgets and logs stay on the device and in folders the user chooses.
@@ -135,47 +135,55 @@ Recount 2026-11-02 (T-0451, Wrenna), same method (text between the markers, by s
 
 Trim 2026-11-02 (T-1084, Wrenna): repetition cut, no fact removed. Worst case, every bracket and label in: 3890 characters, 3890 bytes, ascii, so 110 left for bracket edits. Check: `python3 tools/store_copy_check.py pywidget/docs/release/review-notes-draft.md --notes` (fails over 4,000 characters or bytes; seen red at 4114 on the T-0451 text).
 
-## Scope map (T-1762, Wrenna, 2026-11-03): each claim against ops/v1_scope.json
+Recount 2026-11-04 (T-2397, Wrenna), tools/store_copy_check.py --notes, every bracket in: 3993 characters, 3993 bytes, of 4,000 (was 3,890). Changed for B-staged 6a (#142): (a) the T-0191 bracket "the Pro ones once bought" is gone, replaced by [T-0901: Premades open as editable copies.]; (b) "Twelve premade widgets" gains [T-2372: , all free]; (c) the background refresh sentence gains [T-2373: Pro unlocks it.] with the 6b fallback beside it (if T-0795 cuts refresh, the sentence goes and Pro is themes only); (d) [contents - G6] now reads [G6: [T-2373: background refresh and ][T-0272: editor themes]]. Nothing at HEAD changed: no entitlement check on refresh and no theme picker were found (scope map rows below), so every new claim is bracketed. Seven characters of headroom: the next added bracket needs a cut first.
 
-Format as store-page-draft.md section 10. State is the file's (as_of 2026-10-29); the open line is from `grep "^- \[ \]" ops/board.md` on 2026-11-03. Freeze is 2026-11-30. A claim whose row is not done is deleted whole if its gate fails (see "Gates" above); no row is softened. At risk = the demo step or sentence fails if the line does not land.
+## Scope map (T-1762, Wrenna, 2026-11-04 22:10 ET): each claim and demo step against ops/v1_scope.json
+
+Form as store-page-draft.md section 10. Scope is the B-staged re-plan (#142; ops/plans/pywidget/plan.md chair note 2026-11-04, Ines T-2354; ops/v1_scope.json as_of 2026-11-04T22:03). "Open line" is from `grep "^- \[.\]" ops/board.md` at 22:10 ET; "done" means the row is done and no line is needed, with the path. Source read at HEAD 858c96cfe, no build run. Where HEAD and a row disagree, HEAD is written here and the row goes to Ines (T-2381, T-2396). Freeze is 2026-11-30. A bracket whose line misses is deleted whole, never softened. This replaces the 2026-11-03 table, which was read against the old scope.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Scope map (T-1762, Wrenna, 2026-11-03): each claim against ops/v1_scope.json, scrolls sideways" style="--tw:1570px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Scope map (T-1762, Wrenna, 2026-11-04 22:10 ET): each claim and demo step…, scrolls sideways" style="--tw:1869px" markdown="1">
 
-| Notes claim or demo step | v1_scope row | State | Open line that finishes it | Risk |
-|---|---|---|---|---|
-| Intro: write and run Python, CPython and stdlib bundled | runtime | done | none | no |
-| Bundled packages: requests, jedi, pyflakes; no numpy, no installer | pure-packages, native-packages, install-from-file | done; in progress (absent); cut to 1.1 | none for the sentence (stated as absent) | no |
-| G1: ctypes and ObjC bridge removed | bundle-strip | in progress | T-0043 (strip, Idris); release-build check is gate G8 | yes: sentence is deleted if the check fails |
-| HOW CODE RUNS: types or pastes; examples open in the editor | editor, examples | done; done | none | no |
-| T-0355 bracket: opens from their own files | projects | in progress | T-0753 (re-review of the T-0355 branch); no open T-0355 line, slice 1 is on idris/t0355-projects | yes: bracket goes if not on main |
-| T-0191 brackets: own-premade gallery; premade source opens in the app | gallery, premades | not started; in progress | T-0191 (gallery), T-0901 (open source), T-0051 (Pro placement), T-0624 (Maren's cut text if the gallery goes to 1.1) | yes: brackets go, source claim cannot be made |
-| Device features: clipboard, files, notifications, location, motion, Keychain | device-modules | done | none (P3 review follow-ups only) | no |
-| Native alerts and prompts (not in the notes today; demo step 1 relies on input() only) | prompts | in progress | T-0447 (Swift), T-0458 (tip splitter on prompts) | no for the notes; yes if step 1 text changes to native prompts |
-| WIDGETS: Python describes a widget, main app runs it, extension draws | widget-engine | done | T-0675 (extension lane), T-0511 and T-0561 (WidgetRunView review) | LANE-OFF sentence yes: set by the Day 24 flag ruling |
-| Background refresh sentence | widget-engine | done | T-0795 is [b] blocked; T-1758 (host-only, feeds T-0793) | yes: unchecked in code; left whole for Ines |
-| Twelve premade widgets; GitHub status calls the public API | premades | in progress | T-0358 fixtures landed; all 12 through the checks is freeze row F1 (due 2026-11-02, no open line found); T-0306 (gallery Simulator check) | yes: count "twelve" holds only if F1 is green |
-| SHORTCUTS: Run Script, Run Script with Input, Refresh Widgets | intents | done | none | no |
-| T-0790 bracket: any script from the library | intents | done (for widget ids) | T-0790 (picker lists any script), T-0510 (Run intents follow-ups) | yes: bracket goes |
-| T-0449 bracket: Shortcut opens a user's project | home-screen-scripts | in progress | T-0449 (Swift half); freeze row F18 by 2026-11-03 23:59 | yes: bracket goes and the code leaves the build |
-| IN-APP PURCHASE: one non-consumable, Restore in More > pywidget Pro | pro | done | none; Pro name and contents are Investor gate G6 | no (G6 is a human gate) |
-| T-0657 bracket: Settings > Pro | settings | not started | T-0657 (Settings screen, freeze row F8) | yes: bracket goes |
-| Pro locked until bought (implied by "Pro ones once bought") | pro-placement | in progress | T-0051, T-0861 (paywall images, no Gallery screen) | yes |
-| PRIVACY: no account, no server, no analytics | privacy | in progress | label and policy link: gate G11 (human); no open build line | no for the sentence |
-| NO HIDDEN FEATURES | bundle-strip | in progress | T-0043 plus G8 release-build check | yes, same as G1 |
-| Demo 1, iPad: More > Open in New Window > tip_splitter.py > Run | examples, ipad | done; in progress | none for the iPad path (sidebar and split: freeze row F4) | no on iPad |
-| Demo 1, iPhone: [Examples entry] > tip_splitter.py > Run | examples | done (files); no iPhone entry | T-1759 (Maren designs the entry), then T-0811 (Idris builds it, Xcode slot); T-1757 (bundled files open clean in the editor) | **yes, highest: no iPhone route exists at HEAD**; if T-0811 misses, the notes and page say iPad only |
-| Demo 2: type print("hello") in the editor, Run | editor, runtime | done | none | no |
-| Demo 3 (G9): pedometer.today(), Allow Motion | device-modules | done | none; purpose strings are gate G9 (human) | no |
-| Demo 4 (G5): Add Python widget, choose Sunrise | widget-by-tap, premades | in progress | T-0512 (P0, freeze row F19, no open line found), T-0757 (signed-device promise after T-0684 and T-0191), T-0675 | yes: if a tap does not place the widget the step is deleted with the WIDGETS section |
-| Demo 4 follow-on: open the premade's source | gallery | not started | T-0191, T-0901 | yes: T-0191 bracket |
-| Demo 5: More > pywidget Pro, see and test the purchase | pro | done | none; the App Store Connect product is gate G7 (human) | no |
-| Not in the notes, by design: preview pane, install from file, share extension, themes, traceback taps, completion, rating, a11y | preview-pane, install-from-file, share-extension, themes, traceback-taps, completion-lint, rating, a11y | cut to 1.1; not started or in progress | T-0656 (completion), T-0389 (traceback), T-0032 (share stub probe) | no: nothing in the notes claims them |
+| Notes claim or demo step | v1_scope row | Row state | HEAD 858c96cfe | Open line that finishes it, or done path | At risk for 11-30 |
+|---|---|---|---|---|---|
+| Intro and RUNTIME: write and run Python; CPython and stdlib bundled | runtime | done | as row | done: ops/site-checks/alpha-rehearsal-2026-10-29/423fbf49/INDEX.md row A1 | no |
+| Bundled packages: requests, jedi, pyflakes | pure-packages | done | as row | done: same INDEX.md row A9 | no |
+| "Compiled packages such as numpy are not in this version, and there is no package installer" | native-packages, install-from-file | cut to 1.2 (B-staged); cut to 1.1 | none staged | done: stated as absent, which is true; no date for 1.2 goes in the notes | no |
+| G1: ctypes and the ObjC bridge removed; Swift-only reach | bundle-strip | in progress | denylist is a build rule; no Release archive checked (ruling R2) | T-0043 (strip, Simulator escape run), G8, and T-2320 (b) puts the sentence behind that bracket | **yes**: out of the notes until T-0043 and G8 pass |
+| HOW CODE RUNS: types or pastes; examples open in the editor | editor, examples | done; done | as rows | done: App/PyWidgetApp.swift:584, :632 | no |
+| T-0355 bracket: "opens from their own files" | projects | in progress (stale) | ProjectsView with Import Files and Import Project ships (App/Projects/ProjectsView.swift; More > Projects, App/PyWidgetApp.swift:1028) | T-2381 (Ines marks the row); the bracket may stay on HEAD's evidence | no, on HEAD |
+| T-0191 bracket: the only in-app gallery shows our own premades | gallery | not started (stale) | GalleryView reachable from More > Gallery (App/PyWidgetApp.swift:1055), slice 1 eab3728af | T-2267, T-2268 (T-0191's rest), T-2372 (all-free <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span>); row state to Ines, T-2396 | **yes**: bracket goes if T-0191 misses |
+| T-0191 bracket: "Each premade's source opens in the app, the Pro ones once bought" | gallery, pro-placement | not started; not started (B-staged) | no Open source action found | T-0901 (open as editable copy, free); **"the Pro ones once bought" is wrong under 6a (no Pro premade in 1.0): flagged for removal**, T-2397 (a) | **yes** |
+| Device features: clipboard, files, notifications, location, motion, Keychain | device-modules | done | as row | done: T-0353 abe146d0, T-0354 a779625e (P3 follow-ups only) | no |
+| WIDGETS: Python describes a widget, the main app runs it, the extension draws | widget-engine | done | as row | done: INDEX.md rows A3, A4a, A4b | no |
+| LANE-OFF bracket: the extension runs no code | widget-engine | done | lane code and the Python link sit in the Release extension (ruling R1) | T-2317 (lane out of the Release extension), then G8; T-2320 (a) | **yes** |
+| Background refresh sentence | pro-placement | not started (B-staged) | no entitlement check on refresh; refresh itself blocked | T-0793 [b], T-2373 (Pro gates refresh, 6a), T-0795 [b] cut check 11-12; wording T-2397 (c) | **yes**: if T-0795 cuts refresh, the sentence goes and Pro is themes only (6b) |
+| Twelve premade widgets; GitHub status calls the public API | premades, gallery | in progress; not started | 12 files in widgets/premade | T-2268 (every premade through the Simulator), T-2372 (all free); "all free" wording T-2397 (b) | yes: "twelve" holds only if all 12 pass |
+| SHORTCUTS: Run Script, Run Script with Input, Refresh Widgets | intents | done | App/Intents/RunScriptIntents.swift:207-215 | done: INDEX.md row A10 | no |
+| T-0790 bracket: "or any script from the user's library" | intents | done (widget ids only) | picker lists widgets/<id> only | T-0790, T-0510 | yes: bracket goes |
+| T-0449 bracket: a Shortcut opens one of the user's projects | home-screen-scripts | in progress | no Open intent on main (ruling R3) | **G13 fired 2026-11-03 23:59: the feature is 1.1; flagged for removal**, T-2320 (c) | **yes: remove** |
+| Locked premades in Shortcuts (not in the notes; reply row 40(a)) | pro-placement | not started (B-staged) | ShortcutRun.source never checks the lock (ruling R3) | T-2316 (check stays, locked set empty in 1.0) | no for the notes |
+| IN-APP PURCHASE: one non-consumable; Restore at More > pywidget Pro | pro | done | Pro button label "pywidget Pro" (App/Store/pro-strings.json e.settings), shown only if sellsPro (App/PyWidgetApp.swift:1061) | done: INDEX.md rows A7a-c; product is gate G7 (human) | no |
+| "[contents - G6]" | pro-placement, themes | not started (B-staged); not started | Settings has a themes flag; no theme picker found | G6 (Investors: name); contents now background refresh plus themes: T-2373, T-0272; wording T-2397 (d) | yes: each item named only if its line lands |
+| T-0657 bracket: "Settings > Pro shows it too" | settings | not started (stale) | SettingsView with Pro row and Restore purchase, More > Settings (App/PyWidgetApp.swift:1057); T-2225 3/3 green | T-0657 still open; row state to Ines, T-2396 | low: built at HEAD |
+| PRIVACY: no account, no server, no analytics | privacy | in progress | as row | label and policy link: gate G11 (human); T-0047 [b] | no for the sentence |
+| NO HIDDEN FEATURES: "no code paths for features not described" | bundle-strip | in progress | lane code in the Release extension (ruling R1) | T-2317, G8; T-2320 (a) puts it behind G8 with the fallback "Nothing is switched on at runtime or from a server." | **yes** |
+| Demo 1, iPad: More > Open in New Window > tip_splitter.py > Run | examples, ipad | done; in progress | App/PyWidgetApp.swift:1045-1051, iPad only | done: examples row; iPad layout F4 is not this step | no |
+| Demo 1, iPhone: [Examples entry] > tip_splitter.py > Run | examples | done (files) | **no iPhone entry**: Open in New Window needs supportsMultipleWindows; no examples list in Projects or Gallery | T-1759 (Maren, where it lives), T-0811 (Idris builds it), T-1757 | **yes, highest**: if T-0811 misses, the notes and page say iPad only |
+| Demo 1 text: three questions with input() | examples, prompts | done; in progress | tip_splitter.py uses input() | done for input(); T-0447, T-0458 would change the text if the example moves to native prompts | no, unless T-0458 lands |
+| Demo 2: type print("hello") in the editor, Run | editor, runtime | done | Run in the toolbar (App/PyWidgetApp.swift:1036) | done | no |
+| Demo 3 (G9): pedometer.today(), Allow Motion | device-modules | done | as row | done; purpose strings gate G9 (human) | no |
+| Demo 4 (G5): add Python widget, Edit Widget > Sunrise | widget-by-tap, premades | in progress (stale) | T-0512 ticked 2251c18e3; T-0684 landed, review pass ce660a229 | T-0757 (signed-device promise), T-2268 (Sunrise through the checks); row state to Ines, T-2396 | yes, until T-0757 shows it on a device |
+| Demo 4 follow-on: open its source | gallery | not started | no Open source action found | T-0901, T-2268 | **yes**: T-0191 bracket |
+| Demo 5: More > pywidget Pro, see and test the purchase | pro | done | as IN-APP PURCHASE row | done; G7 (human) | no |
+| In 1.0 now, not in the notes: preview pane and Run as widget; internet examples; Shortcut recipes; small website | preview-pane, internet-draw, shortcut-recipes, website-premades | in 1.0 (B-staged); not started (x3) | not built | T-0192, T-0048; T-2375; T-2376; T-0050. A notes sentence or demo step for any of them is added only after its line is on main | no: the notes claim none |
+| Moved out of 1.0: Builder, own AI keys, web projects, widget buttons, advanced libraries, Control Center, install from file, share extension | (versions 1.1, 1.2) | 1.1 or 1.2 | not in the build | none for 1.0 (T-2377, T-2378 hold them). The notes name only numpy as absent; **no demo step uses any of them**, so none is flagged beyond the T-0449 bracket | no |
+| Not in the notes, by design: themes, traceback taps, completion, rating, a11y, tour | themes, traceback-taps, completion-lint, rating, a11y, tour | not started or in progress | not checked here | T-0272, T-0389, T-0656, T-0273, T-0025, T-0193 | no |
 
 </div>
 
 
-Read for the freeze: demo steps 1 (iPhone) and 4 are the two at risk, and the T-0191, T-0449, T-0657 and T-0790 brackets each need their line on main. Demo steps 2, 3 and 5 depend on no open build line. This table adds no claim to the notes text; the count of the text between the markers is unchanged.
+Read for the freeze: demo step 1 on iPhone (T-0811) is still the step most at risk; demo step 4 and its source follow-on hang on T-0757, T-2268 and T-0901. Two brackets are flagged for removal now, not at the freeze: the T-0449 Home Screen sentence (G13 fired, 1.1; T-2320 (c)) and "the Pro ones once bought" (no Pro premade in 1.0; T-2397 (a)). The ctypes, "no code paths" and LANE-OFF sentences wait on T-0043, T-2317 and G8. Demo steps 2, 3 and 5 depend on no open build line. This table changes no sentence between the markers; the count is unchanged.
 {% endraw %}
 
 </div>

@@ -37,15 +37,22 @@ Pro mark, guideline 2.3.2: an image that shows paid content must say so. Every p
 ## iPad 13-inch landscape (2752 x 2064), 2 shots
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 2: iPad 13-inch landscape (2752 x 2064), 2 shots, scrolls sideways" data-n="5" style="--tw:999px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: iPad 13-inch landscape (2752 x 2064), 2 shots, scrolls sideways" style="--tw:1176px" markdown="1">
 
 | id | 1.0 screen | Reached in the Simulator | Premade or example on screen | Pro mark |
 |---|---|---|---|---|
-| 1-split | Sidebar, editor and the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>-Command shortcut list (ipad) | iPad destination: sidebar and editor are in the app; the shortcut list needs a held Command key; the iPad run waits on T-0556 [iPad pictures] | csv_summary (example) | none |
+| 1-split | Sidebar, editor and the widget preview pane (ipad, previews) | iPad destination: sidebar and editor are in the app; the preview pane waits on T-0192 part A [editor preview pane]; the iPad run waits on T-0556 [iPad pictures] | Countdown source with its preview (free premade) | none; free only |
 | 2-console | Editor and console side by side (ipad, runtime) | SceneWindowsUITests and AppPicturesUITests on an iPad destination; T-0572 [iPad console] is done; the pictures wait on T-0556 | csv_summary (example) | none |
 
 </div>
 
+
+## Changes, T-2374 (c) (Maren, 2026-11-04): the iPad preview shot comes back
+
+- B-staged (#142, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note 2026-11-04 22:03 ET item 5) puts the editor preview pane back in 1.0 (T-0192 part A). So **iPad 1-split** gets its preview column back, the layout it had before ADR-001's cut: sidebar, editor, and the widget preview pane beside it, in A Paper light. The editor holds the Countdown premade's source (was csv_summary), so the pane has a widget to show. Caption back to **"Write a widget and / see how it looks"** (DRAFT C51; it is true again). "A sidebar, a split, / and your keyboard" retires; the shortcut list drops out of the set.
+- **Where on the store page:** iPad slot 1, first of the two iPad shots, ahead of 2-console. On the page (store-page-draft.md, Wrenna's file, not edited here) it is the shot behind the description's iPad sentence ("On iPad: a sidebar, a split editor"), which can now add the preview. Gate: T-0192 part A on main; if the Fallback in the chair note moves the preview pane to 1.1, this shot reverts to the shortcut-list version above and its caption.
+- iPhone 3-widget-code is unchanged in this task (code only). The same pane could come back under it on iPhone; that is a choice for the Day 41 packet, not drawn.
+- `draw_store.py` still draws the shortcut-list frame; its 1-split entry is redrawn on the continuation line (T-2374 continuation, board).
 
 ## Changes in this task
 

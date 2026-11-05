@@ -107,6 +107,7 @@ Failure behaviour (input to the ADR, not yet a spec): every extension run gets a
 
 - Device run on the oldest supported phone: cold start, peak, and the real ceiling by allocation ramp. Needs a device and signing (Apple membership pending, due Day 7, 2026-10-28).
 - Frozen-modules measurement; a Release-build run.
+- T-1853 (2026-11-04): the device session's Release build runs the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> with a record-only margin under `PYWIDGET_LANE_GATE`; how <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>-G3 get their numbers: `docs/decisions/gate-session-build.md`.
 - Execution ADR (ADR-003) and failure-mode spec, from section 5.
 - Logged: CPython 3.15.1 iOS XCframework and the libraries linked into its modules in `log/software.md`.
 {% endraw %}

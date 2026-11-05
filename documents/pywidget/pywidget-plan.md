@@ -187,6 +187,48 @@ Not next: T-0198's host half landed (186e9027); its T2 call rides with T-0793, w
 **Ruling: not needed; they go only through the Investors.** Read only, nothing tried. There are six folders under ~/t0351-runner-work/jobs, not five, about 12.7 GB by du, not 10.5. Each is one runner_profile_compare.py run (T-0351, T-0369, T-1201, T-1207). Five left their result row in ops/metrics/runner-profile-compare.jsonl, committed (status, counts, failing test names, log tail); 11b82eb7 stopped mid-download and has no row and nothing to keep. No open line reads them: T-1703 makes its own device set on the SSD, and T-1466 and T-1652 cite the committed rows. Any folder comes back by rerunning its commit.
 
 **Route.** Odalys's rm -rf was refused, so under T-0848 and Commandment 2 the company's part ends there: no rewording, no other tool, no split, no standing sweep, and no new cleanup flag in the compare tool aimed at these six. The one legitimate route is a request: action card ops/requests/t1802-disk-card.md (recommend A: an Investor runs the delete; B: they name the route; C: no). The Operator posts it. Default: nothing is deleted. Until there is an answer, the Mac mini's Xcode gate stays shut and Idris's slot waits for the MacBook runner. The 21:09 order stands.
+
+## Chair note, 2026-11-04 22:03 ET (Ines, T-2354): version 1.0 re-planned around B-staged (#142)
+
+Investor an Investor chose **B-staged** on #142 (c6648346528, 2026-11-04 21:50) from the costing card of 2026-11-03 14:49. Decided alone, as chair; this note is the record (Commandment 30). The dates in the 2026-10-31 note stand; this note changes what 1.0 holds and what comes after it.
+
+**Reading of the answer.** "B-staged" came without "6a" or "6b". The card recommended B-staged with 6a, so 6a is the plan: the internet is free in scripts, the editor and every premade; a widget that keeps itself fresh from the internet in the background is Pro. One word from the Investors switches it to 6b (Pro = themes only). Said plainly on #142.
+
+**Version 1.0, release Tuesday 2026-12-15 (holds).**
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 6: Chair note, 2026-11-04 22:03 ET (Ines, T-2354): version 1.0 re-planned around…, scrolls sideways" style="--tw:1129px" markdown="1">
+
+| Item | What 1.0 holds | Lines | Cost |
+| --- | --- | --- | --- |
+| 3, internet | Internet from Python is the draw. Store text and first-run tour lead with it; two or three examples use public data, each source's terms read first (Apple 5.2.2, Commandment 6). "Live" means "keeps itself fresh through the day" (Apple gives a widget 40 to 70 refreshes a day), never second by second. Offline behaviour stays | T-2375 (Wrenna), Maren half a day | 1 to 2 days, none of Idris's |
+| 5, previews | Back in 1.0 without the pull-in check: the editor preview pane (T-0192 part A), "Run as widget" and the step-through of planned updates (T-0048). Maren brings the iPad screenshot back | T-0192, T-0048 (Idris), T-2374 (Maren) | 2.5 Idris days, 0.5 Maren |
+| 6, all premades free (6a) | All 12 premades free; no Pro premade in 1.0. Replaces #107's 5 free and 7 Pro and PROPOSAL-002 s6's 3 and 9. Pro in 1.0 = background refresh of a widget (the extension lane's T-0793 path runs only while entitled; a free user's internet widget updates when the app opens or a Shortcut runs) plus the themes (#93). A premade that uses background refresh carries a badge along the lines of "Live with Pro"; a free user's badged widget shows a plain "Pro" state, no offer, no price (Apple 4.4); no Pro feature may need a permission (5.1.1(ii)). Pro stays $14.99 one-time (#87). The Pro screen lists only what the build has: advanced libraries are 1.2 and remixing others' work is later, so neither is on it. Opening a premade as your own editable copy stays free (T-0901). T-2316 stands: the entitlement check on a Shortcut run of a locked premade stays as code and the locked set is empty in 1.0; external TestFlight still waits on it (T-2311) | T-2372 (Idris, gallery and placement), T-2373 (Idris, Pro check on background refresh), T-2374 (Maren, badge and PRO_STR), T-2375 (Wrenna, Pro screen and store copy) | 2.5 Idris days, 1 Maren, in Wrenna's 2 |
+| 8, integrations | Shortcuts are the bridge, as Apple allows (2.5.1, 2.5.2): three ready-made Shortcut recipes that pass another app's data into a script whose widget shows it. Store text says "works with your apps through Shortcuts", never "integrates other apps' widgets". The Control Center button stays 1.1 | T-2376 (Pernille with Wrenna) | 1 day, none of Idris's |
+| Small website | Card item 2(a): the free premades and examples as readable code with copy and download buttons; no accounts, no server, no link that makes the app fetch code. Built by Day 46 (12-06); published only after the Investors' OK at 1.0's approval | T-0050 (Odalys, now P1, Maren's layout) | 2 days, none of Idris's |
+
+</div>
+
+
+**Fallbacks, written before the evidence.** If the 11-12/13 device test fails and T-0682's 3.5 days run, the slack is gone: the update step-through (T-0048's stepper) moves to 1.1 first, then the preview pane; the release date does not move, and I say so in that day's report. If T-0795's cut check removes background refresh from 1.0, T-2373 is superseded and Pro falls to 6b (themes only, #87's fallback); every premade stays free either way.
+
+**After 1.0.**
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 7: Chair note, 2026-11-04 22:03 ET (Ines, T-2354): version 1.0 re-planned around…, scrolls sideways" style="--tw:960px" markdown="1">
+
+| Version | Holds | Needs from the Investors first |
+| --- | --- | --- |
+| 1.1, target early March 2027 (about 9 weeks of iOS work after 12-15) | The drag-and-drop Builder (L17, about 6.75 weeks); building with your own AI key (T-0845 note, 1.5 to 2 weeks); Control Center button; install from file; Share extension; whatever the fallbacks above moved | A person's read of OpenAI's terms; whether to ask App Review the AI question before 1.1 is submitted |
+| 1.2 | "See my projects" on the web (CloudKit JS, 2 to 4 weeks); widget buttons (about 2 weeks); advanced libraries numpy, Pillow, matplotlib (ADR-003; #79's settings rule applied first, then Pernille 3 to 5 days) | The CloudKit web token; any hosting cost |
+| Later, after Apple is asked | Sharing and remixing other people's work (ADR-006, T-0902), in whatever form Apple allows | Asking Apple (outreach is theirs); who staffs moderation; the legal terms for shared content |
+
+</div>
+
+
+**Date effect.** 1.0 gains about 4 of Idris's days (previews 2.5, all-free gallery and the Pro check 1.5) against the 5 days of slack in the 10-31 note; about one day is left. The site and copy work falls outside his lane. Dec 15 holds. The pull-in check (Day 30) stays as written, but with one day of slack it has no room to move release in by seven days; I expect the table to stand and will report the check anyway. Nothing B-staged moved out of 1.0 gets built for 1.0: Builder, AI keys, web projects, buttons, advanced libraries, sharing.
+
+What would make this fail: the device test fails and the previews go again; background refresh misses 1.0 and Pro at launch is themes only; a free app with a thin Pro sells little, which is the price of a clean first submission.
 {% endraw %}
 
 </div>

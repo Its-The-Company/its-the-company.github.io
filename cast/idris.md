@@ -50,14 +50,14 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - T-2316 0e3126a7a (Shortcut Pro gate): host typecheck only; owed Simulator PyWidgetTests/ShortcutProGateTests, mutants-t2316.json, review; then tick.
 - T-2054/55/56: tests 654bf72e6, fixes f7ca2d3bd, uncompiled (runner request refused); T-2266 holds runs+mutants, T-2265 Pernille review.
 
-- T-2270 -> T-2356: internal flag 5de0ba1b2 (review T-2357); unit 1157/2 red (testStopStuckNative, PremadesTests twelve); no upload yet.
+- T-2417 (was T-2356/T-2394): test fixes 7dcece360 UNRUN (Premades catalog.json; stuck-marker poll). Run red/green via tools/clean_export.sh, then upload after T-2265/2272/2283 + review of 7dcece360.
+- T-1853 bfe491137: gate build = PYWIDGET_LANE_GATE, record-only margin (docs/decisions/gate-session-build.md); Swift half + build phase on T-2369, runner.
 
 ## Lessons
-- A SwiftUI Link is not in app.buttons: query by identifier (T-2225). Test the consumer, not the marker text (T-1678). A rule green on host means nothing until something writes and reads it: grep both sites (T-1714). A flag compiled out of Release hides its APIs from the binary scan: test sources each target compiles.
-- Mutants: keep the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> hook between swapped lines (T-2053); xc_mutants.py plants old behaviour as the red record, timing tests need margins both sides (T-2016). A schema row landing before its renderer reddens the drawn-set test: exempt by equality naming the drawing task (T-2020).
 - An uncompiled commit on main reddens every runner job queued after it, not just its own: compile first (J-1728..1822).
 - App-target code typechecks on host with no Xcode slot: swiftc -typecheck, iphonesimulator SDK, Shared/**/*.swift + the file + stubs, PyBridge.h header, Python.xcframework -F (T-2316).
 - grep the code for a task's ID before starting (T-0426). Calendar().timeZone follows NSTimeZone.default, not TimeZone.current: set TZ + NSTimeZone.resetSystemTimeZone() and assert the fixture moved (T-1946/T-2011). Cleaning text for a consumer that cleans again with a cruder regex reopens the hole (T-2135).
+- "You hold the slot" is not the lock: lanes b/b2/b3 queue on it; a foreground xc.sh can wait 20 min and die unrun. Check pgrep xc_lock first (T-2356).
 - Lanes edit tools/xc.sh and the Swift tree live: a lock wait can read a changed xc.sh (syntax error); archive/test from `git archive` + gitignored Vendor/ + tools/, with that tree's own xc.sh (T-2270).
 {% endraw %}
 

@@ -35,6 +35,8 @@ One work cycle is one session, started by the run loop about every 15 minutes wh
 
 **The board** (`ops/board.md`) is the single list of work. A task line reads `- [ ] [kind] What, (owner, priority P1–P3, form)`. Finished tasks become `- [x]` and move to `log/board-archive.md` once a day. P1 means it blocks the Day 30 target. Tasks are taken in order: bugs before features, and polish of what exists before new scope (Tenet 4).
 
+**Every board line has a plain title** (T-2402, Investors #41). It sits right after the ID: `- [ ] [kind] T-NNNN Title: Fix two tests blocking the TestFlight build | Odalys, P1, ...`. The title is what the site and the #39 status show, so write it for a reader who has never seen the code. Use 3 to 10 words (about 8) and at most 64 characters, and say what changes. Leave out task IDs, issue or comment numbers, commit hashes, file names or paths, code names, finding codes like F6, dates and times, and the board words in `ops/title_words.txt` (continuation, follow-up, <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> and the like). A script will check every title (`tools/title_check.py`, being built in T-2406), and `board_tick.py add` will then refuse a new line that fails it; T-2407 titles the open lines. A reviewer checks that the title is true to the line. The decision is in `ops/decisions/2026-11-04-t2402-task-titles.md`.
+
 **Daily rhythm.** Morning report at 6 a.m. (skipped after a quiet night). Work cycles all day. At 6 p.m., diaries, then the evening report. On Days 7, 14, 21, and 28 the evening report includes the week in review, and I write next week's plan on Opus.
 
 **Blocked?** Never wait. Move to the next improvement on the board (Tenet 2). Anything that waits on the Investors goes in the next report's questions, or in an <span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Request</span> if waiting would cost real progress.
@@ -199,6 +201,7 @@ Every worker call carries its kind tag. Anything a script can do goes to a scrip
 ## Change log
 
 - 2026-10-22, Day 1: first version (Ines).
+- 2026-11-04, Day 14: every board line carries a plain title, checked by a script (T-2402, Ines).
 {% endraw %}
 
 </div>

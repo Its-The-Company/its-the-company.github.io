@@ -303,6 +303,8 @@ if (S.lockTile) S.lockTile(g);
 S.added(g, tile, D('usage'));
 var dk = (S.status() || {}).disk;
 tile(g, D('company'), 'Disk free', dk ? dk.free_gb + ' GB' : 'no reading yet', dk ? dk.words : 'on the Mac mini');
+var sd = dk && dk.ssd;
+tile(g, D('company'), 'SSD free', !sd ? 'no reading yet' : !sd.mounted ? 'not mounted' : sd.free_gb != null ? sd.free_gb + ' GB' : 'no reading', 'the Company SSD');
 if (S.endTile) S.endTile(g);
 return g;
 }

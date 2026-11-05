@@ -80,23 +80,35 @@ if (clean(o[nameKey(a)]) === n) return 'That name is already saved; nothing sent
 if (n) o[nameKey(a)] = n; else delete o[nameKey(a)];
 }, a.id + ' name', 'Saved on GitHub. Readers without a token see it after the next site build.');
 }
+function perm(r) { return r.status === 403 || r.status === 404 ? ' (does the token have Issues: read and write?)' : ''; }
 function lift(a) {
 if (!/^[a-z]$/.test(a.id)) return Promise.resolve('That account has no letter LANE CLEAR can name; nothing sent.');
-var title = 'Personal account ' + a.id + ' stopped itself';
-return S.gh('/repos/' + repo + '/issues?state=open&labels=emergency&per_page=100').then((r) => {
+var title = 'Personal account ' + a.id + ' stopped itself', h = S.hdrs();
+h['Content-Type'] = 'application/json';
+return S.gh('/repos/' + repo + '/issues?state=all&labels=emergency&per_page=100').then((r) => {
 if (!r.ok) throw new Error(S.said(r));
 return r.json();
 }).then((list) => {
-var hit = (Array.isArray(list) ? list : []).filter((i) => i && !i.pull_request && i.state === 'open' && i.title === title
-&& (i.labels || []).some((l) => String((l && l.name) || l).toLowerCase() === 'emergency')).sort((x, y) => y.number - x.number)[0];
-if (!hit) return 'Nothing sent: account ' + a.id + ' has no open stop issue, so no trip is holding it.';
-var h = S.hdrs(); h['Content-Type'] = 'application/json';
+var mine = (Array.isArray(list) ? list : []).filter((i) => i && !i.pull_request && i.title === title
+&& (i.labels || []).some((l) => String((l && l.name) || l).toLowerCase() === 'emergency')).sort((x, y) => y.number - x.number);
+var hit = mine.filter((i) => i.state === 'open')[0] || mine[0];
+if (!hit) return 'Nothing sent: account ' + a.id + ' has no stop issue, so no trip is holding it.';
+var reopen = hit.state === 'open' ? Promise.resolve(true) : fetch(S.API + '/repos/' + repo + '/issues/' + hit.number, { method: 'PATCH',
+headers: h, body: JSON.stringify({ state: 'open' }) }).then(S.checkAuth, () => null).then((r) => {
+if (!r) return null;
+if (!r.ok) throw new Error('#' + hit.number + ' could not be reopened: ' + S.said(r) + perm(r));
+return false;
+});
+return reopen.then((was) => {
+if (was === null) return 'No answer from GitHub while reopening #' + hit.number + '; nothing else sent. Look on #' + hit.number + ' before you tap again.';
+var said = was ? '' : 'Reopened #' + hit.number + '. ';
 return fetch(S.API + '/repos/' + repo + '/issues/' + hit.number + '/comments', { method: 'POST', headers: h,
 body: JSON.stringify({ body: 'LANE CLEAR ' + a.id }) }).then(S.checkAuth, () => null).then((r) => {
-if (!r) return 'No answer from GitHub. The comment may have landed: look on #' + hit.number + ' before you tap again.';
-if (!r.ok) throw new Error(S.said(r) + (r.status === 403 || r.status === 404 ? ' (does the token have Issues: read and write?)' : ''));
-return 'Sent LANE CLEAR ' + a.id + ' on #' + hit.number + ' at ' + new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
+if (!r) return said + 'No answer from GitHub. The comment may have landed: look on #' + hit.number + ' before you tap again.';
+if (!r.ok) throw new Error(said + S.said(r) + perm(r));
+return said + 'Sent LANE CLEAR ' + a.id + ' on #' + hit.number + ' at ' + new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
 + '. The inbox lifts the stop within minutes and replies on #' + hit.number + ' with what it did.';
+});
 });
 });
 }
@@ -191,7 +203,7 @@ var v = a.draft === null ? a.name : a.draft;
 if (w.input.value !== v) w.input.value = v;
 w.note.textContent = a.note || (armP ? 'Tap again within 5 seconds to turn ' + (off ? 'on, ' + mode(a.pick) : 'off') + '.'
 : armM ? 'Tap again within 5 seconds to switch to ' + next + '.'
-: armL ? 'Tap again within 5 seconds to post LANE CLEAR ' + a.id + ' on its open “Personal account ' + a.id + ' stopped itself” issue.' : '');
+: armL ? 'Tap again within 5 seconds to post LANE CLEAR ' + a.id + ' on its newest “Personal account ' + a.id + ' stopped itself” issue (reopened if closed).' : '');
 });
 });
 }

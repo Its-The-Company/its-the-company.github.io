@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T07:08:42.409624+00:00",
+ "at": "2026-11-05T07:11:56.328756+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2483 applier chain T-2476 T-2484",
    "model": "opus",
    "started": "2026-11-05T06:50:51.255Z",
-   "seconds": 1071,
+   "seconds": 1265,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[build] T-0675 extension lane next slice",
    "model": "opus",
    "started": "2026-11-05T06:56:14.651Z",
-   "seconds": 747,
+   "seconds": 941,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[release] T-2319 stdlib ctypes host check",
    "model": "opus",
    "started": "2026-11-05T06:57:31.560Z",
-   "seconds": 670,
+   "seconds": 864,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +39,7 @@
    "task": "[test] T-2147 stale entry plan test gap",
    "model": "opus",
    "started": "2026-11-05T06:58:38.463Z",
-   "seconds": 603,
+   "seconds": 797,
    "finished": null,
    "effort": "high"
   },
@@ -48,40 +48,55 @@
    "task": "[build] T-2514 reset restores unraisablehook",
    "model": "opus",
    "started": "2026-11-05T07:00:40.789Z",
-   "seconds": 481,
+   "seconds": 675,
    "finished": null,
    "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2517 queue all parked finished work",
+   "model": "opus",
+   "started": "2026-11-05T07:09:33.075Z",
+   "seconds": 143,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-1741 memory badge ruling",
+   "model": "opus",
+   "started": "2026-11-05T07:09:50.807Z",
+   "seconds": 125,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys x2, Idris, Pernille x3, Ines",
+ "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-2342 review Idris 45c9a7b18",
+   "model": "opus",
+   "started": "2026-11-05T07:08:08.381Z",
+   "seconds": null,
+   "finished": "2026-11-05T07:10:39.507000+00:00"
   },
   {
    "name": "maren",
    "task": "[design] T-1759 examples entry on iPhone",
    "model": "opus",
    "started": "2026-11-05T07:01:23.328Z",
-   "seconds": 439,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-05T07:08:45.568000+00:00"
   },
   {
    "name": "pernille",
    "task": "[review] T-1729 OOM guard status review",
    "model": "opus",
    "started": "2026-11-05T07:05:19.683Z",
-   "seconds": 202,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-05T07:08:44.940000+00:00"
   },
-  {
-   "name": "pernille",
-   "task": "[review] T-2342 review Idris 45c9a7b18",
-   "model": "opus",
-   "started": "2026-11-05T07:08:08.381Z",
-   "seconds": 34,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Idris, Pernille x5, Maren",
- "recent": [
   {
    "name": "pernille",
    "task": "[review] T-2045 review T-1670 before TestFlight",
@@ -89,36 +104,12 @@
    "started": "2026-11-05T07:01:16.989Z",
    "seconds": null,
    "finished": "2026-11-05T07:07:45.676000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-2234 activity strings and frames",
-   "model": "opus",
-   "started": "2026-11-05T06:57:37.115Z",
-   "seconds": null,
-   "finished": "2026-11-05T07:05:00.966000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] T-2409 USGS example scripts check",
-   "model": "opus",
-   "started": "2026-11-05T06:57:43.412Z",
-   "seconds": null,
-   "finished": "2026-11-05T07:01:43.538000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-1989 run log export review",
-   "model": "opus",
-   "started": "2026-11-05T06:58:31.857Z",
-   "seconds": null,
-   "finished": "2026-11-05T07:00:55.234000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 431,
+  "runnable_count": 434,
   "blocked_count": 124
  },
  "meter": {
@@ -161,7 +152,7 @@
   "week_pct": 49.11,
   "usage_pct": 41.6,
   "work_pct": 74.6,
-  "read_at": "2026-11-05T07:08:00+00:00",
+  "read_at": "2026-11-05T07:11:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -453,18 +444,18 @@
   }
  ],
  "disk": {
-  "free_gb": 44,
+  "free_gb": 43,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 759
+   "free_gb": 757
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T02:08:00-05:00"
+  "at": "2026-11-05T02:11:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -501,18 +492,18 @@
    "effort": "high"
   },
   {
-   "name": "Maren",
+   "name": "Ines",
    "state": "running",
-   "task": "[design] T-1759 examples entry on iPhone",
+   "task": "[plan] T-1741 memory badge ruling",
    "model": "opus",
-   "since": "2026-11-05T07:01:23.328Z",
+   "since": "2026-11-05T07:09:50.807Z",
    "next": [],
    "effort": "high"
   },
   {
-   "name": "Ines",
+   "name": "Maren",
    "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
+   "task": "Maren, P3, no Xcode: continuation of T-2234 (1f2df5a56)....",
    "model": null,
    "since": null,
    "next": []
@@ -574,34 +565,32 @@
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "design",
-    "t": "T-1759 examples entry on iPhone",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Queue every parked branch that holds finished work",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-05T07:01:23.328Z",
+    "at": "2026-11-05T07:09:33.075Z",
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-1729 OOM guard status review",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Rule on the memory badge after a failed run",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-05T07:05:19.683Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-2342 review Idris 45c9a7b18",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T07:08:08.381Z",
+    "at": "2026-11-05T07:09:50.807Z",
     "o": "c"
    }
   ],
   "open": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Queue every parked branch that holds...",
+    "s": "next",
+    "o": "c"
+   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -664,16 +653,14 @@
     "t": "Record each widget run in the app's activity log",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Refresh control and age line in the renderer",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Pernille",
+    "t": "A second engineer checked Idris's fixes to how a project is copied into a widget; they hold,...",
+    "at": "2026-11-05T02:10:00-05:00"
+   },
    {
     "w": "Pernille",
     "t": "The new memory-warning badge code is correct and its tests catch every planted bug. Two gaps...",
@@ -683,15 +670,10 @@
     "w": "Maren",
     "t": "The 10 example scripts that come with the app now have a drawn home on iPhone, inside the...",
     "at": "2026-11-05T02:07:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Checked Idris's new test T-1670 (notification limits test): the longest allowed title, body and...",
-    "at": "2026-11-05T02:07:00-05:00"
    }
   ],
   "count": {
-   "next": 431,
+   "next": 434,
    "wait": 38,
    "blocked": 86,
    "you": 18
@@ -711,13 +693,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 8,
+  "main": 7,
   "lanes": 2,
-  "total": 10,
-  "at": "2:08 AM",
+  "total": 9,
+  "at": "2:11 AM",
   "why": "",
-  "at_iso": "2026-11-05T07:08:00+00:00",
+  "at_iso": "2026-11-05T07:11:00+00:00",
   "started": "1:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 8, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:08 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 7, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:11 AM ET</p></section>"
  }
 }

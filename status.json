@@ -1,66 +1,60 @@
 {
  "schema": 1,
- "at": "2026-11-05T14:16:25.436378+00:00",
+ "at": "2026-11-05T14:21:27.727479+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-05T08:58:02-05:00"
+  "started": "2026-11-05T09:18:25-05:00"
  },
- "workers": [],
- "who": "",
- "recent": [
+ "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-2622 MacBook runs jobs in parallel",
+   "task": "[tools] T-2635 lane settings check proposal",
    "model": "opus",
-   "started": "2026-11-05T13:59:09.129Z",
-   "seconds": null,
-   "finished": "2026-11-05T14:15:20.627000+00:00"
+   "started": "2026-11-05T14:19:14.356Z",
+   "seconds": 133,
+   "finished": null,
+   "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-2479 restart Evan's personal lane",
+   "task": "[tools] T-2630 finish one dispatcher wiring",
    "model": "opus",
-   "started": "2026-11-05T13:59:16.528Z",
-   "seconds": null,
-   "finished": "2026-11-05T14:07:31.438000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2625 red tests from the full suite",
-   "model": "opus",
-   "started": "2026-11-05T13:59:24.016Z",
-   "seconds": null,
-   "finished": "2026-11-05T14:01:57.253000+00:00"
+   "started": "2026-11-05T14:19:21.778Z",
+   "seconds": 125,
+   "finished": null,
+   "effort": "high"
   }
  ],
+ "who": "Odalys x2",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 427,
+  "runnable_count": 428,
   "blocked_count": 128
  },
  "meter": {
   "five_hour": {
    "pct": 1.0,
-   "resets_at": "2026-11-05T16:09:59.849198+00:00",
+   "resets_at": "2026-11-05T16:10:00.168721+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 59.0,
-   "resets_at": "2026-11-08T06:59:59.849219+00:00",
+   "resets_at": "2026-11-08T07:00:00.168738+00:00",
    "used_words": "of your weekly allowance used",
    "left": 41.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 1.0,
-   "resets_at": "2026-11-08T06:59:59.849352+00:00",
+   "resets_at": "2026-11-08T07:00:00.168866+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-05T08:58:01.442974-05:00"
+  "read_at": "2026-11-05T09:18:23.836587-05:00"
  },
  "ui": {
   "week_pct": 0.689,
@@ -79,8 +73,8 @@
  "personal": {
   "week_pct": 51.55,
   "usage_pct": 42.7,
-  "work_pct": 73.1,
-  "read_at": "2026-11-05T14:16:00+00:00",
+  "work_pct": 72.9,
+  "read_at": "2026-11-05T14:21:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -91,7 +85,7 @@
   },
   {
    "name": "a",
-   "used_usd": 87.46,
+   "used_usd": 94.23,
    "total_usd": 100.0
   },
   {
@@ -112,22 +106,23 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T09:16:00-05:00"
+  "at": "2026-11-05T09:21:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
   "why": "On the API credits by the Investors' instruction, so the full pool runs",
   "n": 12,
-  "at": "2026-11-05T08:58:01.719381-05:00"
+  "at": "2026-11-05T09:18:24.263594-05:00"
  },
  "lanes": [
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, after T-1035 lands (personal-account...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-2635 lane settings check proposal",
+   "model": "opus",
+   "since": "2026-11-05T14:19:14.356Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Idris",
@@ -171,7 +166,26 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal accounts start unless a setting could spend money",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T14:19:14.356Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Finish wiring the one dispatcher",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T14:19:21.778Z",
+    "o": "c"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -262,18 +276,30 @@
    }
   ],
   "count": {
-   "next": 427,
+   "next": 428,
    "wait": 41,
    "blocked": 87,
    "you": 20
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6660323677",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Can the personal accounts run now?..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -281,13 +307,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 0,
-  "total": 0,
-  "at": "9:16 AM",
-  "why": "Between sessions: no session is running. Last check 8:58 AM ET.",
-  "at_iso": "2026-11-05T14:16:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:16 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 8:58 AM ET.</p></section>"
+  "total": 2,
+  "at": "9:21 AM",
+  "why": "",
+  "at_iso": "2026-11-05T14:21:00+00:00",
+  "started": "9:18 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:18 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:21 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T07:31:01.879487+00:00",
+ "at": "2026-11-05T07:34:08.298116+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,16 +12,7 @@
    "task": "[build] T-0675 extension lane next slice",
    "model": "opus",
    "started": "2026-11-05T06:56:14.651Z",
-   "seconds": 2087,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[release] T-2319 stdlib ctypes host check",
-   "model": "opus",
-   "started": "2026-11-05T06:57:31.560Z",
-   "seconds": 2010,
+   "seconds": 2273,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +21,7 @@
    "task": "[tools] T-2517 queue all parked finished work",
    "model": "opus",
    "started": "2026-11-05T07:09:33.075Z",
-   "seconds": 1288,
+   "seconds": 1475,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +30,7 @@
    "task": "[tools] T-2525 sweep keeps unapplied folds open",
    "model": "opus",
    "started": "2026-11-05T07:25:40.084Z",
-   "seconds": 321,
+   "seconds": 508,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[tools] T-2323 reports inside work session",
    "model": "opus",
    "started": "2026-11-05T07:25:49.109Z",
-   "seconds": 312,
+   "seconds": 499,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[build] T-2518 error badge through memory refusal",
    "model": "opus",
    "started": "2026-11-05T07:27:55.728Z",
-   "seconds": 186,
+   "seconds": 372,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +57,7 @@
    "task": "[build] T-2382 T-2383 T-2384 send plan fixes",
    "model": "opus",
    "started": "2026-11-05T07:28:02.007Z",
-   "seconds": 179,
+   "seconds": 366,
    "finished": null,
    "effort": "high"
   },
@@ -75,13 +66,29 @@
    "task": "[test] T-2515 notification boundary mutants",
    "model": "opus",
    "started": "2026-11-05T07:29:11.214Z",
-   "seconds": 110,
+   "seconds": 297,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x4, Pernille, Odalys x3",
+ "who": "Idris x4, Odalys x3",
  "recent": [
+  {
+   "name": "wrenna",
+   "task": "[release] T-2527 release drafts cite interp check",
+   "model": "opus",
+   "started": "2026-11-05T07:32:36.378Z",
+   "seconds": null,
+   "finished": "2026-11-05T07:33:56.661000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[release] T-2319 stdlib ctypes host check",
+   "model": "opus",
+   "started": "2026-11-05T06:57:31.560Z",
+   "seconds": null,
+   "finished": "2026-11-05T07:31:57.533000+00:00"
+  },
   {
    "name": "idris",
    "task": "[fix] T-2515 notification boundary mutants",
@@ -97,22 +104,6 @@
    "started": "2026-11-05T07:13:58.415Z",
    "seconds": null,
    "finished": "2026-11-05T07:28:42.202000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-2514 reset restores unraisablehook",
-   "model": "opus",
-   "started": "2026-11-05T07:00:40.789Z",
-   "seconds": null,
-   "finished": "2026-11-05T07:27:38.963000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2483 applier chain T-2476 T-2484",
-   "model": "opus",
-   "started": "2026-11-05T06:50:51.255Z",
-   "seconds": null,
-   "finished": "2026-11-05T07:24:28.949000+00:00"
   }
  ],
  "queue": {
@@ -161,7 +152,7 @@
   "week_pct": 49.11,
   "usage_pct": 41.6,
   "work_pct": 74.6,
-  "read_at": "2026-11-05T07:31:00+00:00",
+  "read_at": "2026-11-05T07:34:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -266,7 +257,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T01:43:35-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a",
@@ -461,14 +453,14 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 755
+   "free_gb": 754
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T02:31:00-05:00"
+  "at": "2026-11-05T02:34:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -487,15 +479,6 @@
    "effort": "high"
   },
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[release] T-2319 stdlib ctypes host check",
-   "model": "opus",
-   "since": "2026-11-05T06:57:31.560Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-2517 queue all parked finished work",
@@ -508,6 +491,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P2, no Xcode, after T-1440 lands (Idris review...",
    "model": null,
    "since": null,
    "next": []
@@ -538,15 +529,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T06:56:14.651Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "release",
-    "t": "T-2319 stdlib ctypes host check",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T06:57:31.560Z",
     "o": "c"
    },
    {
@@ -678,19 +660,19 @@
   ],
   "done": [
    {
-    "w": "Maren",
-    "t": "At the largest text size, the card that lets a person move a widget back from the app to the...",
-    "at": "2026-11-05T02:28:00-05:00"
+    "w": "Wrenna",
+    "t": "The App Review drafts cited old line numbers in the script that strips ctypes (a module that can...",
+    "at": "2026-11-05T02:33:00-05:00"
    },
    {
     "w": "Pernille",
-    "t": "Restarting a script now also undoes any change it made to how Python reports errors it has to...",
-    "at": "2026-11-05T02:27:00-05:00"
+    "t": "The build now opens the Python interpreter file itself and fails if the risky ctypes module...",
+    "at": "2026-11-05T02:31:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "Proposals the Investors approve can now be applied while a work session is running, instead of...",
-    "at": "2026-11-05T02:24:00-05:00"
+    "w": "Maren",
+    "t": "At the largest text size, the card that lets a person move a widget back from the app to the...",
+    "at": "2026-11-05T02:28:00-05:00"
    }
   ],
   "count": {
@@ -714,13 +696,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 8,
+  "main": 7,
   "lanes": 2,
-  "total": 10,
-  "at": "2:31 AM",
+  "total": 9,
+  "at": "2:34 AM",
   "why": "",
-  "at_iso": "2026-11-05T07:31:00+00:00",
+  "at_iso": "2026-11-05T07:34:00+00:00",
   "started": "1:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 8, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:31 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 7, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:34 AM ET</p></section>"
  }
 }

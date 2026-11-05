@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-05T00:48:34.290770+00:00",
+ "at": "2026-11-05T00:51:36.366679+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-04T19:48:34-05:00"
  },
  "workers": [],
  "who": "",
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 375,
+  "runnable_count": 376,
   "blocked_count": 124
  },
  "meter": {
@@ -55,7 +55,7 @@
   "week_pct": 37.04,
   "usage_pct": 37.5,
   "work_pct": 75.4,
-  "read_at": "2026-11-05T00:48:00+00:00",
+  "read_at": "2026-11-05T00:51:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -207,10 +207,14 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T19:48:00-05:00"
+  "at": "2026-11-04T19:51:00-05:00"
  },
  "next_tick_why": "session",
- "pool": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight",
+  "n": 12,
+  "at": "2026-11-04T19:48:33.738314-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
@@ -353,7 +357,7 @@
    }
   ],
   "count": {
-   "next": 375,
+   "next": 376,
    "wait": 38,
    "blocked": 86,
    "you": 16
@@ -362,31 +366,30 @@
  "qr": [],
  "inbox": [
   {
-   "id": "c6646397447",
-   "state": "waiting",
+   "id": "c6646481186",
+   "state": "received",
    "position": 1,
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "Describe step by step instructions..."
+   "title": "approve"
   },
   {
-   "id": "c6646423048",
-   "state": "waiting",
+   "id": "c6646486031",
+   "state": "received",
    "position": 2,
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "supervisor.sh only has the word..."
+   "title": "approve"
   }
  ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -397,10 +400,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "7:48 PM",
+  "at": "7:51 PM",
   "why": "",
-  "at_iso": "2026-11-05T00:48:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:48 PM ET</p></section>"
+  "at_iso": "2026-11-05T00:51:00+00:00",
+  "started": "7:48 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 7:48 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:51 PM ET</p></section>"
  }
 }

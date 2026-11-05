@@ -28,7 +28,7 @@ Wrenna, market and product researcher. First draft 2026-10-26 (T-0249). This dra
 | Price | Free to download and to run your own code. One one-time purchase, NAME Pro, $14.99 in the US. No subscription, no trial. Family Sharing is off. | #87 "Decided" |
 | What Pro adds | [[W: [[N: 7]] premade widgets (Habit tracker, Shortcuts launcher, Storage, Day progress, Quote of the day, World clocks, GitHub repository)]][[F13: and 3 editor themes (Ember, Fern, Graphite), each light and dark with a high-contrast set]] | #87, #93; `pywidget/runtime/pro-flags.json`; creative/approved.md items 4-5. If W fails, Pro is the themes alone at $4.99 |
 | Release date | [date on sale] | Release goal Day 60 (2026-12-20), movable; the Investors set the date ([plan.md](pywidget-plan.html)) |
-| Python | CPython 3.15 (3.15.1, python.org's own iOS build) with the standard library, minus what iOS can't run or the build removes (ctypes, tkinter, curses, venv and a few more). requests built in. | Launch plan s8 rows 1-3 |
+| Python | CPython 3.15 (3.15.1, python.org's own iOS build) with the standard library, minus what iOS can't run or the build removes ([T-0043 Simulator run + <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G8</span>: ctypes, ]tkinter, curses, venv and a few more). requests built in. | Launch plan s8 rows 1-3 |
 | Not bundled | numpy, Pillow, matplotlib and every other compiled package. No pip and no online installer | Launch plan s8 row 4. Stated as absent, with no date |
 | Editor | Syntax colours, line numbers, a coding key row on iPhone[[E: , completion and inline errors]][[F9: , tracebacks that open the failing line]][[T-0635: , find]]. On iPad, one file per window[[F4: , a sidebar, a split editor and keyboard shortcuts]] | Launch plan s8 rows 5-8, 32-33 |
 | Console | input(), Stop, Restart, Copy All, and how long each run took | Launch plan s8 row 9 |
@@ -37,7 +37,6 @@ Wrenna, market and product researcher. First draft 2026-10-26 (T-0249). This dra
 | Projects [F3] | Folders of scripts, one file importing another, .py and zip import and export | T-0355 |
 | Examples | 10 example scripts | `pywidget/examples/` |
 | Shortcuts | Run Script and Run Script with Input[[S: , on your own saved scripts]]; [[W: Refresh Widgets]]. Output comes back to the shortcut; a run gets 20 seconds | Launch plan s8 rows 13-15 |
-| Home Screen scripts [F18] | A script can open from its own Home Screen icon, full screen | T-0449 |
 | Widgets [W] | Small, medium and large on the Home Screen; circular, rectangular and inline on the Lock Screen; StandBy. Written in Python as a description of the widget, drawn by the app's own renderer in the widget extension | Launch plan s8 rows 16-18 |
 | Widget freshness [W] | A widget shows its script's last run, not a live feed. Clocks, countdowns and progress bars tick by themselves. [[LANE-OFF: Scripts run in the app, when it is opened or when a Shortcuts automation runs Refresh Widgets; the extension runs no Python.]][[LANE-ON: A script can declare that it runs in the extension with the app closed: 2 seconds a run, a short list of modules, pywidget.net for network calls. Heavier scripts run in the app.]] | Launch plan s8 rows 19-23 |
 | Premade widgets [W] | [[N: 12]] built in, 5 free (Countdown, Sunrise and sunset, Steps and floors, Distance to a saved place, Altitude), [[N: 7]] with Pro[[F6: ; each is Python you can open and change, the Pro ones once bought]] | Launch plan s8 rows 24-25 |
@@ -54,7 +53,7 @@ Wrenna, market and product researcher. First draft 2026-10-26 (T-0249). This dra
 
 ## 1b. Scope map (T-1152)
 
-State is `ops/v1_scope.json` as_of 2026-10-29. Rows: runtime, editor, intents, device-modules, widget-engine, examples, pure-packages, pro are done and stated plainly where the fact sheet says so. completion-lint (E), traceback-taps (F9), projects (F3), prompts (F17), home-screen-scripts (F18), widget-by-tap and premades (W, N), pro-placement (F7), settings (F8), themes (F13), ipad (F4) are not done and keep their gate form. preview-pane, install-from-file and share-extension are cut to 1.1 and sit under Not in 1.0. Full claim-by-claim table: store-page-draft.md section 10.
+State is `ops/v1_scope.json` as_of 2026-10-29. Rows: runtime, editor, intents, device-modules, widget-engine, examples, pure-packages, pro are done and stated plainly where the fact sheet says so. completion-lint (E), traceback-taps (F9), projects (F3), prompts (F17), home-screen-scripts (F18, 1.1 since G13 fired 2026-11-03 23:59, so no press-kit row), widget-by-tap and premades (W, N), pro-placement (F7), settings (F8), themes (F13), ipad (F4) are not done and keep their gate form. preview-pane, install-from-file and share-extension are cut to 1.1 and sit under Not in 1.0. Full claim-by-claim table: store-page-draft.md section 10.
 
 ## 2. Descriptions
 
@@ -76,7 +75,7 @@ State is `ops/v1_scope.json` as_of 2026-10-29. Rows: runtime, editor, intents, d
 >
 > Writing and running your own code is free. One one-time purchase, NAME Pro, is $14.99 with no subscription[[W: , and adds [[N: 7]] premade widgets[[F13:  and 3 editor themes]]]]. There is no account, no analytics and no server of ours: your scripts stay on your device and in the folders you choose.
 >
-> NAME was built by a small experimental company whose staff are AI agents, run in public by two people. No image in the app or on its store page came from an image <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">generator</span>.
+> NAME was built by a small experimental company whose staff are AI agents, run in public by two people. No image in the app or on its store page came from an image generator.
 
 If W fails: the widget sentences go, and the Pro sentence reads "One one-time purchase, NAME Pro, is $4.99 with no subscription[[F13: , and adds 3 editor themes]]"; if F13 also fails, it goes and "Writing and running your own code is free." stays alone.
 

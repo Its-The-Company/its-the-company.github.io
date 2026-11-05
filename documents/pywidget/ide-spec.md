@@ -34,6 +34,7 @@ Source of every picture: `draw_ide.py` in this folder (HTML/CSS/SVG rendered by 
 | 10 Settings (s5.10, `draw_settings.py`) | `A-settings-phone.png` (B: `B-settings-phone.png`) | `A-settings-ipad.png` |
 | 11 Projects as containers (s5.11, `draw_projects.py`) | `A-parts-phone.png` (B: `B-parts-phone.png`) | `A-parts-ipad.png` (B: `B-parts-ipad.png`) |
 | 12 Activity (s5.12, `draw_activity.py`) | `A-activity-phone.png` (B: `B-activity-phone.png`) | `A-activity-ipad.png` (B: `B-activity-ipad.png`) |
+| 13 Examples on iPhone (s5.13, `draw_examples.py`) | `A-examples-phone.png` (B: `B-examples-phone.png`; AX5: `A-ax-examples-phone.png`) | none (s5.11.10 sidebar row) |
 
 </div>
 
@@ -681,7 +682,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 </div>
 
 
-   Shared files are in All and the project screen, and search finds them. **One change to the #41 sketch:** it says a part appears in each view it claims. I read Widgets as every widget, because a list called Widgets that hides a Lock Screen widget reads as a bug. So a Lock Screen-only part is in Widgets and Lock Screen. Back from a part returns to the view it came from. Long-press adds Show in Project. Empty views use the words in 11.13, no illustration. The New button opens a menu: New Project, Import Project…, Start from an Example (T-0811's iPhone entry; the Scripts and Widgets views keep the same menu).
+   Shared files are in All and the project screen, and search finds them. **One change to the #41 sketch:** it says a part appears in each view it claims. I read Widgets as every widget, because a list called Widgets that hides a Lock Screen widget reads as a bug. So a Lock Screen-only part is in Widgets and Lock Screen. Back from a part returns to the view it came from. Long-press adds Show in Project. Empty views use the words in 11.13, no illustration. The New button opens a menu: New Project, Import Project…, Open an Example (T-0811's iPhone entry, s5.13; the Scripts and Widgets views keep the same menu).
 
    **11.4 The project screen** (frames 6-8). Replaces `ProjectFilesView`. Back to Projects, ⋯ (Rename, Import Files…, Export as Zip, Delete, as built). Large title, "Changed …", then groups Scripts, Widgets, Shared, each only if it has rows; three equal buttons Add Script, Add Widget, Add Shared; then the Home Screen group. Rows are 64 tall: tile 38, file name in mono, one line. The line says what the part does: a Widget's claim, a Shared file's users. Swipe and long-press keep Rename, Share, Delete. A status line appears only when something is wrong (frame 8, 11.7). At AX sizes the tiles and chevrons hide and the buttons stack.
 
@@ -886,11 +887,11 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 
    **The oom_guard badge (T-1714).** From the second skip in a row, `status.json` badges a stale picture, but no oom_guard row is in Failed (nothing in the script failed). So while `last_outcome` is `oom_guard` with the badge, the strip reads `st.mem` · `st.mem.d` in `status.warning`, and `show=failed` opens **All**, so the badge's screen always holds the rows that set it (frame 13). Every other state keeps 12.2's route. Idris: confirm in T-0048.
 
-   **12.4.1 Triggers** (line 2 and Started by). Written at HEAD: `app_foreground` → `t.open`; `editor_save` → `t.save`; `shortcut` → `t.sc` (T-1716, the Refresh Widgets intent); `system` → `t.sys` (every in-widget turn, and a run whose bridge info has none); no trigger → `t.draw` (too-big rows only). Recovery rows carry the crashed run's trigger. **Never written at HEAD:** `bg_refresh` (`t.bg`, which frames 2-11 still show in their sample rows), `intent`, `location_wake`, `push`, `widget_action`, `control`, `deep_link`.
+   **12.4.1 Triggers** (line 2 and Started by). Written at HEAD: `app_foreground` → `t.open`; `editor_save` → `t.save`; `shortcut` → `t.sc` (T-1716, the Refresh Widgets intent); `system` → `t.sys` (every in-widget turn, and a run whose bridge info has none); no trigger → `t.draw` (too-big rows only). Recovery rows carry the crashed run's trigger. **Never written at HEAD:** `bg_refresh` (`t.bg`, T2 only; since T-2234 no frame shows it: frames 2-11 use the app lane's `t.open`, `t.save` and `t.sc`, so they hold with the lane flag off, and the in-widget `t.sys` rows are frames 13-18), `intent`, `location_wake`, `push`, `widget_action`, `control`, `deep_link`.
 
    **12.4.2 In-widget rows.** The extension writes `deferred`, `killed`, `oom_guard`, its runs' own words, and `lane_outcome=deadline`. Each carries `lane.widget` on line 2 and `d.where.w` as Ran in. The lane flag is off in Release (LaneGuard.swift:16), so v1 shows none of them.
 
-   **12.4.3 Lifting a move (T-1643, not built).** Where: a card `lift.t` under the status strip while the widget is moved to [appname] (frame 16), and the same card on the row that moved it (frame 18). What it says: `lift.wait` until a run in [appname] ends `ok`; then `lift.b` and one secondary button `lift.go`. The tap is the person's say-so: `LaneDemotions` drops the id and the body becomes `lift.done`, with no button. If it fails in the widget again, it moves back by the usual rule and the card returns. No alert: the <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lift</span> is easy to undo.
+   **12.4.3 Lifting a move (T-1643, not built).** Where: a card `lift.t` under the status strip while the widget is moved to [appname] (frame 16), and the same card on the row that moved it (frame 18). What it says: `lift.wait` until a run in [appname] ends `ok`; then `lift.b` and one secondary button `lift.go`. The tap is the person's say-so: `LaneDemotions` drops the id and the body becomes `lift.done`, with no button. If it fails in the widget again, it moves back by the usual rule and the card returns. No alert: the <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lift</span> is easy to undo. *At AX5* (T-2239, Maren, 2026-11-05; frame 18): the card shortens; the frame does not just scroll to the button. A card whose button sits a scroll below its title asks the person to hold a sentence in mind across a swipe, and the button is the whole point of the card. Three cuts, none of them truncation: (1) from AX1 the widget glyph hides and the title and body take the full card width, the Apple pattern of dropping a leading decorative glyph at accessibility sizes; (2) `lift.b` loses its middle sentence, which only repeated the button, at every size, not an AX-only string; (3) `lift.go` drops "Again", so it wraps to two lines at AX5, not three. Drawn at AX5 on a 390 pt phone the card is about 715 pt against about 740 pt of scroll view, so title, body and button sit on one screen (frame 18, scrolled 700 pt). Nothing is clamped or cut: on a shorter phone (667 pt tall) the card still runs past the screen and scrolls, as all Dynamic Type content does; the frame proves the 390 x 844 case only, and AX5 sizes are the recalled table (13.7 (c)). The Simulator check in 12.11 covers it.
 
    **The Failed set is exactly ADR-007 7.1 rows 3 and 4** (error card and badge), so the list the badge opens always holds the run that set it. Not-failed rows sit in grey and never turn the strip red.
 
@@ -938,7 +939,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
 
    **12.10 Accessibility.**
    - **VoiceOver order:** Back, title, Export; the strip as one element ("Failing since 3:58 PM. ValueError, line 13."); the primary button; the filter (the system segmented control); the 14-day note; then for each day its header (trait `.isHeader`, so the rotor's Headings jumps by day) and its rows; Clear Activity last.
-   - **A row is one element.** Label: "4:40 PM. Failed. ValueError, line 13." for a failed run, "Finished" or the not-failed reason otherwise. Value: trigger and duration ("Background refresh, 0.06 seconds"). Hint: "Opens the run." The glyph is hidden; its meaning is in the label. The lane chip, when shown, joins the value.
+   - **A row is one element.** Label: "4:40 PM. Failed. ValueError, line 13." for a failed run, "Finished" or the not-failed reason otherwise. Value: trigger and duration ("When [appname] opened, 0.06 seconds"). Hint: "Opens the run." The glyph is hidden; its meaning is in the label. The lane chip, when shown, joins the value.
    - **Detail order:** the header, each fact as one element (label and value), the output as one text view the reader can move through by line, then the traceback card in s3's order and its two buttons.
    - **Dynamic Type to AX5** (frames 11 and 12, iPad frame 4): from AX1 the filter is a menu button (`f.menu`), a row stacks time over reason over trigger and duration, glyphs grow with the text, buttons wrap and go full width, facts stack, and console text clamps at 32 pt (s2). The nav title and the share button do not scale; they use the Large Content Viewer.
    - **Colour:** no state is told by colour alone. Glyph shape and the reason word carry it, and a failed row reads apart from a waited one in grey. Contrast is measured in QA above; Increase Contrast uses the tokens' 7:1 pairs.
@@ -986,7 +987,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | `o.lowmem` | Skipped: memory was low | row reason, outcome oom_guard (not a failure) | DRAFT |
    | `t.open` | When [appname] opened | trigger app_foreground (T1) | DRAFT |
    | `t.save` | After a save | trigger editor_save (T1 from the editor's save) | DRAFT |
-   | `t.bg` | Background refresh | trigger bg_refresh (T2) | DRAFT |
+   | `t.bg` | Background refresh | trigger bg_refresh (T2 only: never written at HEAD, so no frame shows it) | DRAFT |
    | `t.sc` | From Shortcuts | trigger shortcut (T3 Refresh Widgets, T4 Run Script) | DRAFT |
    | `lane.widget` | In widget | chip on a row that ran in the extension lane; only when the lane flag is on | DRAFT |
    | `clear` | Clear Activity | last row of the list, status.danger | DRAFT |
@@ -1037,11 +1038,75 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | `a11y.row` | [time]. [state]. [reason]. | VoiceOver label of a row; [state] is Failed for a failed run, left out otherwise | DRAFT |
    | `a11y.hint` | Opens the run. | VoiceOver hint of a row | DRAFT |
    | `x.kind` | Plain Text · [size] | share sheet header line (system) | DRAFT |
+   | `t.sys` | When iOS updated it | trigger system: iOS asked the widget for a new picture (the in-widget runs) | DRAFT |
+   | `t.draw` | While drawing | line 2 of a tree_too_large row, which carries no trigger; Started by hides | DRAFT |
+   | `st.mem` | Skipped | status strip word, status.warning, while status.json badges from oom_guard (T-1714) | DRAFT |
+   | `st.mem.d` | Not enough memory since [time] | status strip detail; [time] is oom_guard_since | DRAFT |
+   | `o.moved` | Moved to [appname] | row reason, oom_guard with lane_outcome demoted (not a failure) | DRAFT |
+   | `d.noran` | Nothing ran, so nothing was printed. | run detail, Output section, for deferred, busy and oom_guard | DRAFT |
+   | `d.wait.time` | Too little time was left in this update. It runs at the next one. | deferred, lane_outcome late, reason no_time | DRAFT |
+   | `d.wait.turn` | Another widget had waited longer, so it went first. | deferred, lane_outcome late, reason gave_way | DRAFT |
+   | `d.wait.stop` | Another widget would not stop, so this one waits for the next update. | deferred, lane_outcome closed | DRAFT |
+   | `d.wait.run` | You pressed Run, so your run went first. This one runs again after it. | deferred, trigger editor_save (T-1681: a save run a Run stopped) | DRAFT |
+   | `d.wait.busy` | Another run was still going. This one waits for the next update. | busy | DRAFT |
+   | `d.mem.skip` | There was not enough free memory to run it safely. The widget kept its last picture. | oom_guard, lane_outcome oom_guard | DRAFT |
+   | `d.moved.mem` | Not enough memory, twice. It runs in [appname] from now on, where there is more room. | oom_guard, lane_outcome demoted, reason refused | DRAFT |
+   | `d.moved.kill` | Its last run never finished. It runs in [appname] from now on. | killed, lane_outcome demoted, reason marker | DRAFT |
+   | `d.late.show` | This finished after the widget had to show a picture. The new one shows at the next update. | any row with lane_outcome deadline | DRAFT |
+   | `lift.t` | Runs in [appname] for now | T-1643 card: under the strip while the widget is moved, and on the row that moved it | DRAFT |
+   | `lift.b` | It ran without a problem in [appname]. If it fails in the widget again, it moves back. | T-1643 card body after an ok run in [appname] | DRAFT |
+   | `lift.wait` | Once it runs without a problem here, you can try it in the widget again. | T-1643 card body before that ok run; no button | DRAFT |
+   | `lift.go` | Try in the Widget | T-1643 card button, secondary; the one say-so that lifts the move | DRAFT |
+   | `lift.done` | Back in the widget from the next update. | T-1643 card body after the tap; the button hides | DRAFT |
 
 </div>
 
 
    **12.13 C51 and open.** The layout is inside approved item 2; the words go to the Investors with these sheets. *Open:* (a) Closed: Ines ruled yes on the ADR-007 7.5 chair line, 2026-11-02 17:15 (T-1138; per-widget `log/widgets/<id>/`). (b) Idris: glyph names in 12.4 are recalled, confirm them; the too-big glyph is drawn as a triangle stand-in and ships as s3.1's. (c) Closed: rows are keyed by `row`; `run_id` stays a per-launch counter and is never compared across launches (same chair line). (d) `empty.b` names background refresh; a build without T2 drops that clause.
+
+13. **Examples on iPhone.** **Strings DRAFT C51.** Maren, 2026-11-03 (T-1759), for Idris's T-0811; recovered on main 2026-11-05 from <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> c2a2f112f and redrawn against today's draw_ide.py (same bytes). The 10 bundled examples have an iPad path (s5.11.10's sidebar row) and no iPhone path, so the store page's examples sentence and review-notes demo step 1 fail on an iPhone. Layout and colour stay inside the approved tokens (creative/approved.md item 2); only the words wait on C51. Sheets: `A-examples-phone.png` (A Paper, light, 5 frames), `B-examples-phone.png` (B Studio, dark, the same 5), `A-ax-examples-phone.png` (A light, AX5, 3 frames), drawn by `draw_examples.py`, which imports draw_ide.py's and draw_projects.py's pieces and QA and changes nothing there. The rows are read from the 10 files in `pywidget/examples/` at draw time. **QA** (`qa.json`, rows `A-examples-phone`, `B-examples-phone`, `A-ax-examples-phone`): 13 frames, 0 clipped, 0 truncated, 0 text over text, 0 under 11 pt, 0 contrast fails; 475 text nodes checked, lowest 5.03:1, 3 skipped on B's glass menu. Bytes 292,453 / 295,790 / 182,865, each under 300 KB. Word check over 14 strings: 0 hits for "app".
+
+   **13.1 Where they live: inside the Projects tab, no new tab.** The tab bar is settled (11.2). On iPad the Library rows map to iPhone like this: All to Lock Screen are the filter, Gallery and Console are tabs, and Examples had no home. It gets one in the Projects `NavigationStack`, one screen with three ways in:
+   - **(a) A row after the projects** (frame 1). The All view ends with its own inset group holding one row: book tile, `ex.row`, `ex.row.sub`, chevron; it pushes the Examples screen. All view only: Scripts, Widgets and Lock Screen list the person's own parts. With no projects, the empty state keeps its actions and this group sits under them.
+   - **(b) The New menu** (frame 2): New Project, Import Project…, a divider, then `ex.menu` with `ex.menu.sub`. It pushes the same screen. This path needs no scrolling, so it is the one the review notes give.
+   - **(c) Tour page 4's "Open an example"** (s5.6) pushes the same screen on the Projects tab.
+
+   Not chosen: a fifth filter segment (four already need 13 pt to fit 358 pt, 11.3, and an example is not one of the person's parts); a bare glyph in the nav bar (a stranger has to guess it); a Gallery section (the Gallery holds widgets with previews, s5.9, and if F6 moves T-0191 to 1.1 the path goes with it). Apple's pattern throughout: a `List` row that pushes inside the tab's stack, and a `Menu` with a `Section` divider. Back returns to Projects with the filter as it was.
+
+   **13.2 The Examples screen** (frame 3). Pushed, back "Projects". Large title `ex.title`, then `ex.intro` (footnote, secondary). One inset group, one 64 pt row per file in `BundledExamples.names()` order: script tile 38, title (headline), one line (footnote, secondary), chevron. **Title and line come from the example's first docstring line:** the text before the first ": " is the title, the rest is the line with its first letter capitalised. With no colon (`dice_roller.py`) the title is the file name with underscores as spaces, first letter capitalised, and the line is the whole first line. Add `BundledExamples.summary(name) -> (title, line)` and a unit test over all 10. Footer `ex.foot`. No search: 10 rows. Bottom `contentInset` clears the floating tab bar.
+
+   **13.3 An example open** (frames 4 and 5). A row pushes the editor as the iPad path opens an example (`SceneFile` example, `BundledExamples.runSource`, as built): back "Examples", the file name as title, Run, ⋯. Under the nav bar, the `ex.chip` chip and `ex.note`. No file tabs (one file). Run runs the bundle's file while the text is unedited, else the editor's text (as built). The ⋯ menu starts with `ex.save`. **Save as Project** makes a project named after the title (next free name: " 2", " 3"), holding one file with the example's file name and the editor's text, so it sorts as a Script part (11.1). The project's editor replaces the example in the stack. Nothing is written to the bundle. **Back with the text unedited goes straight back. Back after an edit shows a confirmation dialog** (frame 5): `ex.dlg.t`, `ex.dlg.m`, then Save as Project, Discard Changes (destructive), Cancel. An edit is never dropped without asking. Switching tabs keeps the stack, so the text survives that.
+
+   **13.4 Accessibility** (AX5 sheet). Examples row, one element: "Examples, 10 scripts that run as they are", button. An example row, one element: "Tip splitter. Share a bill, tip included, between several people.", button. Tiles are hidden behind the row's label. From AX1 the tiles hide and the lines wrap, and the chip stands above the note. Where the AX5 frame differs from s2 (the Run pill keeps its label; `code_view` draws a hanging indent), the build follows s2: the pill drops its label and code wraps flush left. Reduce Motion: standard push and dialog only. AX5 sizes are draw_run_screen.py's recalled table: T-1443 read AX3 and xxxLarge from Apple, not AX5 (13.7 (c)).
+
+   **13.5 For T-0811.** Identifiers: `examplesRow`, `newMenu.openExample`, `example.<stem>` (for example `example.tip_splitter`), `example.saveAsProject`. UI test on iPhone: Projects tab, New, Open an Example, `example.tip_splitter`, Run; the console shows the first `input()` prompt ("Bill amount:"). Unit test: `summary` over the 10 files. iPad is unchanged: the sidebar's Examples row (11.10) shows this screen in the content column. Review-notes demo step 1 then reads "iPhone: Projects > New > Open an Example > Tip splitter > Run" (T-0811's bracket there). The store page sentence ("10 example scripts to start from") is true on both devices once this lands.
+
+   **13.6 Strings** (`draw_examples.py --strings`). Every one is DRAFT C51.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 27: import shared, scrolls sideways" style="--tw:825px" markdown="1">
+
+   | ID | String (DRAFT) | Where | C51 |
+   |---|---|---|---|
+   | `ex.row` | Examples | Projects tab, All view: the one row of the group after the projects | DRAFT |
+   | `ex.row.sub` | [n] scripts that run as they are | the row's second line; [n] is the bundle's count | DRAFT |
+   | `ex.menu` | Open an Example | New menu, last row, after a divider (replaces s5.11.3's 'Start from an Example') | DRAFT |
+   | `ex.menu.sub` | [n] scripts | New menu row subtitle | DRAFT |
+   | `ex.title` | Examples | screen title, pushed on the Projects stack | DRAFT |
+   | `ex.intro` | Scripts that come with pywidget. Open one to read it and run it. | Examples screen, the line under the title | DRAFT |
+   | `ex.foot` | Change one as much as you like. To keep your changes, save it as a project. | Examples screen, footer of the list | DRAFT |
+   | `ex.chip` | Example | editor, chip under the nav bar | DRAFT |
+   | `ex.note` | Changes are not kept unless you save it as a project. | editor, the line beside the chip | DRAFT |
+   | `ex.save` | Save as Project | editor ⋯ menu, first row; the dialog's first button | DRAFT |
+   | `ex.dlg.t` | Keep your changes? | dialog on Back from an edited example | DRAFT |
+   | `ex.dlg.m` | [file] is an example, so your edits are not saved on their own. | dialog message | DRAFT |
+   | `ex.discard` | Discard Changes | dialog, destructive | DRAFT |
+   | `ex.cancel` | Cancel | dialog | DRAFT |
+
+</div>
+
+
+   **13.7 C51 and open.** The layout is inside approved item 2; the words go to the Investors with these sheets. *Open:* (a) Idris: check what the iPad window does today when an edited example closes; if it drops the edit, 13.3's dialog applies there too. (b) The review notes and store page brackets are filled when T-0811 lands, not before. (c) Read the AX5 column from the same typography.md copy T-1443 used and redraw the AX sheet if it differs; the Simulator wins either way. (d) The examples' own docstrings make two weak rows: Dice roller repeats its title in its line, and Text cleaner's line says "chat app" (the word check covers our strings, not the bundle's). Rewording those docstrings is a runtime edit, not this spec's.
 
 ## 6. Open
 

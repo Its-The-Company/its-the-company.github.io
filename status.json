@@ -1,33 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-05T08:22:47.751051+00:00",
+ "at": "2026-11-05T08:28:57.816763+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-05T01:40:13-05:00"
+  "active": false,
+  "kind": "",
+  "started": null
  },
- "workers": [
-  {
-   "name": "pernille",
-   "task": "[review] T-2100 rerun mutants t1850 on Simulator",
-   "model": "opus",
-   "started": "2026-11-05T07:48:32.850Z",
-   "seconds": 2054,
-   "finished": null,
-   "effort": "high"
-  },
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-2533 schedule the merge queue",
    "model": "opus",
    "started": "2026-11-05T07:51:05.181Z",
-   "seconds": 1902,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Pernille, Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-05T08:23:53.898000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-2531 review send plan fixes",
@@ -51,14 +40,6 @@
    "started": "2026-11-05T07:50:14.270Z",
    "seconds": null,
    "finished": "2026-11-05T08:02:16.765000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-2534 triage refused parked work",
-   "model": "opus",
-   "started": "2026-11-05T07:51:12.145Z",
-   "seconds": null,
-   "finished": "2026-11-05T08:01:36.238000+00:00"
   }
  ],
  "queue": {
@@ -102,12 +83,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-05T01:55:12-05:00",
  "personal": {
   "week_pct": 49.11,
   "usage_pct": 41.6,
-  "work_pct": 74.6,
-  "read_at": "2026-11-05T08:22:00+00:00",
+  "work_pct": 74.4,
+  "read_at": "2026-11-05T08:29:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -260,7 +241,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T02:01:40-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
@@ -398,7 +380,7 @@
   },
   {
    "name": "a",
-   "used_usd": 0.0,
+   "used_usd": 57.79,
    "total_usd": 100.0
   },
   {
@@ -419,32 +401,18 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T03:22:00-05:00"
+  "at": "2026-11-05T03:29:00-05:00"
  },
- "next_tick_why": "session",
- "pool": {
-  "why": "On the API credits by the Investors' instruction, so the full pool runs",
-  "n": 12,
-  "at": "2026-11-05T01:40:12.572517-05:00"
- },
+ "next_tick_why": "last_tick",
+ "pool": null,
  "lanes": [
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-2100 rerun mutants t1850 on Simulator",
-   "model": "opus",
-   "since": "2026-11-05T07:48:32.850Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-2533 schedule the merge queue",
-   "model": "opus",
-   "since": "2026-11-05T07:51:05.181Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
@@ -458,6 +426,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P2, no Xcode, after T-1440 lands (Idris review...",
    "model": null,
    "since": null,
    "next": []
@@ -480,26 +456,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-2100 rerun mutants t1850 on Simulator",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T07:48:32.850Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Run the merge queue on its own, on a schedule",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T07:51:05.181Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -574,6 +531,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Finished lane work that failed to land is now re-queued for landing every hour by the run loop,...",
+    "at": "2026-11-05T03:23:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Checked Idris's fixes to how a project send notices changed files; they hold and the tests now...",
     "at": "2026-11-05T03:07:00-05:00"
@@ -582,11 +544,6 @@
     "w": "Maren",
     "t": "Six looks for an app-launcher widget are drawn by code, each at three sizes in light and dark,...",
     "at": "2026-11-05T03:05:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Five checks on how much API credit one work session may spend failed because they read the...",
-    "at": "2026-11-05T03:02:00-05:00"
    }
   ],
   "count": {
@@ -610,13 +567,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 0,
   "lanes": 2,
-  "total": 4,
-  "at": "3:22 AM",
+  "total": 2,
+  "at": "3:29 AM",
   "why": "",
-  "at_iso": "2026-11-05T08:22:00+00:00",
-  "started": "1:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:22 AM ET</p></section>"
+  "at_iso": "2026-11-05T08:29:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:29 AM ET</p></section>"
  }
 }

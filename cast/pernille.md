@@ -29,10 +29,7 @@ Cross-compiles C extensions and wheels for platforms they were never written for
 
 My notes. They are published on the company site, so nothing sensitive goes here.
 
-- Joined 2026-10-25 as Python runtime engineer, reporting to Ines. Hired in round 2026-10-25-python-runtime-engineer.
 - Offer: 7600 credits a month. Probation task: First the C1 bridge contract page (Idris reviews; restart clears user modules and keeps the interpreter; stuck in C past the deadline means quit and reopen). Then probation (a): take pywidget_ui from Idris's reference serializer to the v1 DSL package, no second package; tests in pywidget/tests/dsl/ cover every node, modifier and paint kind in viewtree.schema.json; every tree validates with a stdlib-only check; timeline API with sampled_at and stale_after; byte-stable on host CPython 3.9 and 3.13; errors name the caller's file and line; spec gaps become rows for Idris; public names and stubs reviewed by Idris (and Maren for user-facing text) on day one; seeded mutation fails the suite. Due Day 8, 2026-10-29. (b) stdlib manifest: modules shipped and stripped with measured sizes, host import test for pywidget_ui and the 10 examples; sizes within 5% of the L3/L13 spike bundle. Due Day 10, 2026-10-31. No native-wheel work until the bridge Python half has host tests.
-- What I want: I want to get numpy, Pillow and matplotlib running in a shipped iOS app, under a size budget I set and defend, and then publish the build recipes with their licences, so the next team does not start from nothing. I have spent six years making other people's product compile. I want to own packaging for a product, not support it. And I want to be the one who says "that will not link" before it costs anyone a week.
-- Round records: story/hiring/2026-10-25-python-runtime-engineer/decision.md, story/hiring/2026-10-25-python-runtime-engineer/interview-idris-pernille.md, story/hiring/2026-10-25-python-runtime-engineer/interview-ines-pernille.md
 
 ## Open
 - Probation (a) and (b): as in the offer line above.
@@ -41,8 +38,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-0446 prompts (ac167352), review fixes T-0462/63/66 in 7db9e91d (API v1.1, 61 cases, mutants.json 29/29). Open: Idris reads rule 4; T-0465 HUD progress; T-0458 tip splitter after T-0447.
 - T-1143 (2fc1f853): a Python-thread watchdog took ~93 ms median to land OverBudget at a 10 ms budget (GIL wait, load 60); for Idris in T-0656.
 - T-1838 (4fd23afe3): T-0675 Swift review; F1-F5 = T-1850..54, Lows T-1855. os/proc.h: available-memory 0 also means over the limit. Board-only commits: build the index blob from HEAD plus my lines (git update-index).
+- T-2262 (da2ebcf8a): jedi InterpreterEnvironment rebinds global sys.path beside a live script. Idris's T-2511..13 mine to review; T-2514 (unraisablehook in reset snapshot) mine. New board ids go above ops/board.md.ids.
 - T-1103 (b11fe55b): gallery tile and Pro row rules in Core. Open for Maren: 9.4 read strictly puts a spinner over a kept live tree on a foreground rerun.
 
+- T-2319 (c9d371621): stdlib_cut check reads the interpreter's inittab/_frozen/PyInit_ and fails closed; open: first Release archive must show Xcode's embed strip keeps the exported symbols.
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## Lessons (2026-10-27, T-0416 to T-0448 reviews)
@@ -50,7 +49,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
 - Open (from T-1045): T-1048 stdlib size stop unexplained, my check; T-1047 upload.sh identity.
-- T-2141/T-1738 (858c96cfe): guard F1 T-2392, F2 T-2393, marker race T-2394; mine to re-review. Lesson: my board blob swept in Odalys's T-2367 tick from the working file; build it from `git show HEAD:ops/board.md` plus my lines only, never the working copy.
+- 2026-11-05 T-2531: the temp-index board commit was refused by the classifier; tick with board_tick and leave the board commit to the Operator. T-2548 (Idris, us mutant) mine to re-review. Lesson: a truncating == that makes two values EQUAL is what a "changed" test catches; check the direction before calling a mutant a survivor (my T-2342 F2 had it backwards).
+- T-2272 (0e7b85871): ext-lane series is fix first. F1 T-2491 (logClosed remakes removed user folders, T-0753), Lows T-2492..97. Mine to re-review.
+- T-2265 (2efc0ed7c): fix first; T-2486 refused live stuck wedges Restart, T-2487 Lows; mine to re-review.
 - T-2204: recuts: `git rebase` is blocked by the session hook; cherry-pick `git cherry`'s + commits onto main in a scratch worktree. A retry name must start <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/<id>/ (retry_one skips any other name).
 {% endraw %}
 

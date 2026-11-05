@@ -2,7 +2,7 @@
 layout: "default"
 title: "Bound fields: the spec for the contingency"
 section: "documents"
-description: "One sentence. The person&#x27;s manifest names one public JSON URL and the fields to pull from it; on each reload the widget extension fetches it with no Python, keeps those few values in data/&lt;id&gt;/fetch.json, and the\u2026"
+description: "One sentence. The person&#x27;s manifest names one public JSON URL and the fields to pull from it; on each reload the widget extension fetches it with no Python, keeps those few values in data/&lt;id&gt;/fields.json, and the\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/design/' | relative_url }}">← Design &amp; Specs</a><a href="{{ '/documents/pywidget/bound-fields.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
 <div class="page-head"><div class="kicker"><span class="kind grey">Design</span><span>Day 9 · Fri Oct 30</span><span><code>pywidget/docs/design/bound-fields.md</code></span></div><h1>Bound fields: the spec for the contingency</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
@@ -13,7 +13,7 @@ description: "One sentence. The person&#x27;s manifest names one public JSON URL
 {% raw %}
 Pernille, 2026-10-30, T-0679. Status: **spec finished; names not yet reviewed.** Nothing here is built. The build is T-0682, held until T-0680's verdict: it starts only if the extension <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> fails its gates after one cut and re-run (ADR-007 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-10-29 08:03, items 3 ii and 6). If the lane passes, none of this ships in 1.0.
 
-**One sentence.** The person's manifest names one public JSON URL and the fields to pull from it; on each reload the widget extension fetches it with no Python, keeps those few values in `data/<id>/fetch.json`, and the renderer puts them into the `Text` and `ProgressView` nodes marked `bind`, so those numbers can move without the app running. Everything else in the picture stays as old as the last app run.
+**One sentence.** The person's manifest names one public JSON URL and the fields to pull from it; on each reload the widget extension fetches it with no Python, keeps those few values in `data/<id>/fields.json`, and the renderer puts them into the `Text` and `ProgressView` nodes marked `bind`, so those numbers can move without the app running. Everything else in the picture stays as old as the last app run.
 
 **What it is not.** It cannot compute: no arithmetic, no conditions, no colour that turns red at 10 minutes. A feed that needs more than a path is the lane's job or the app lane's. No statement here says how often a reload comes; that belongs to Apple's budget and to item 7 of the 08:03 session.
 
@@ -41,7 +41,7 @@ Pernille, 2026-10-30, T-0679. Status: **spec finished; names not yet reviewed.**
 
 ## 1. Scope
 
-In: the two manifest keys, the `bind` attribute and its formats, the file the extension writes, the reload steps, the stale rule, the gates. Out: a Python API that reads `fetch.json`, more than one URL per widget, headers or POST, any computed value, `Gauge` and `Path` (open item in s11), location as a bound value.
+In: the two manifest keys, the `bind` attribute and its formats, the file the extension writes, the reload steps, the stale rule, the gates. Out: a Python API that reads `fields.json`, more than one URL per widget, headers or POST, any computed value, `Gauge` and `Path` (open item in s11), location as a bound value.
 
 ## 2. The manifest
 
@@ -65,7 +65,7 @@ Two more keys in `pywidget.json`, beside `lane`, in schema `pywidget.app` versio
 | Key | Rule | Why |
 |---|---|---|
 | `fetch.url` | `https://`, at most 2,048 bytes, same check as `NetFetch.parse`. A literal: **no templating of any kind** | Nothing from the device can reach a URL through this path, s9 |
-| `fetch.fields` | 1 to 8 entries. Key: `^[a-z_][a-z0-9_]{0,31}$`. Value: a path, below | A small <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> keeps `fetch.json` small; 8 is my number, not a measurement |
+| `fetch.fields` | 1 to 8 entries. Key: `^[a-z_][a-z0-9_]{0,31}$`. Value: a path, below | A small <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> keeps `fields.json` small; 8 is my number, not a measurement |
 | `fetch.max_age` | Integer seconds, 60 to 86,400 | Precedent is T-0053's `max_age`: younger than this and no request is made. It also sets when a value counts as stale (s6). It is not a schedule |
 | `sensors` | Unique list from a closed set; `["steps"]` is the set | A later sensor is one enum word and one gate |
 | `location` | Its own top-level key, `{"max_age": seconds}`, T-0053's declaration; **not** a `sensors` word (T-0797, both reviewers) | Every word in `sensors` is a name `bind` can use, and location is not bindable (s1); it also carries its own `max_age`, which a list entry cannot hold. Its range and refusal code are T-0053's |
@@ -94,7 +94,7 @@ So `$.a.b`, `$.a[0].b`, `$['odd-key'].b`; at most 128 bytes. Not supported: `*`,
 ```python
 ui.Text("--", bind="next", format=ui.Number.suffix(" min"))   # "12 min"
 ui.Text("--", bind="temp", format=ui.Number.decimal(1))        # "21.5"
-ui.Text("--", bind="updated", style="relative")                # time since it, ticks by itself
+ui.Text("--", bind="updated", style="relative")                # the time between now and it, ticks by itself
 ui.Text("--", bind="line")                                     # "42", as text
 ui.ProgressView(0, total=10000, bind="steps")
 ```
@@ -127,13 +127,13 @@ A value of the wrong type, `null`, a bool, an object or an array counts as missi
 
 **DSL rules.** `bind` takes a field name. `Text`: `format` or `style="relative"`, not both; `time_zone` refused (a bound time is in the phone's zone); a `datetime` fallback implies `style="relative"`. `ProgressView`: `value` required (it is the fallback), no `.timer` form. `Text.timer`, `Text` state content and every other node take no `bind`. `accessibility_value` on a bound node is refused: a fixed string would go out of date beside a moving number. The renderer speaks the value it drew.
 
-## 4. `data/<id>/fetch.json`
+## 4. `data/<id>/fields.json`
 
 `<id>` is the id of `widgets/<id>/`. New top-level folder in the App Group.
 
 ```json
 {
-  "schema": "pywidget.fetch", "version": 1,
+  "schema": "pywidget.fields", "version": 1,
   "declared": {"url": "...", "fields": {"next": "$.arrivals[0].minutes"}, "max_age": 600},
   "attempted_at": "2026-11-20T14:05:00Z",
   "fetched_at": "2026-11-20T14:05:00Z",
@@ -160,10 +160,10 @@ In `getTimeline`, with the lane flag off. Never a failure path: any step that fa
 
 1. No `tree.json`: T6 as today, no step.
 2. Read the manifest from the App Group mirror. T-0682 widens T-0675's rule: the app mirrors every widget with `fetch` or `sensors`, not only `lane: widget`, in the same directory `rename`. Missing or bad: step 7.
-3. Load `fetch.json`; apply the `declared` rule.
+3. Load `fields.json`; apply the `declared` rule.
 4. A fetch is due if `fetched_at` is absent, or `max_age` old or more, or in the future (a moved clock), and `attempted_at` is at least 60 s old. A path that misses does not make it due again, so one broken path cannot cost a request on every reload.
 5. In parallel, under one wall-clock limit of 3 s (`NetFetch.extensionTimeoutCap`): the fetch through `NetFetch.run` with the extension's limits and no added headers; the `steps` query for widgets that declare it, only if `CMPedometer.isStepCountingAvailable()` and `authorizationStatus` is authorized. A status outside 200-299 is `http_status`. A body that is not a JSON object or array is `not_json`. A path that misses leaves that field's old value and its old `at`, and the other fields update.
-6. Write `fetch.json` if anything changed.
+6. Write `fields.json` if anything changed.
 7. Resolve the bound values once, into the timeline entries. The renderer reads no file. Build entries as ADR-007 7.4, adding s6's stale and `until` entries.
 
 **Refresh button.** T-0678's intent runs steps 2 to 6 with `force`, which skips step 4's test. The reload after it finds a young value and makes no request, so a tap costs one request. If it fails, `attempted_at` stops that reload repeating it inside 60 s.
@@ -246,9 +246,9 @@ BF1-BF3 need no bound-fields code and belong in T-0680's one session: they are i
 
 - A fetch is a request the person wrote, to a server the person chose. privacy-label.md s3 covers this: it does not change the label, and it belongs in the privacy policy's "Your scripts and the network", which already says so. Apple's page is silent on user-chosen servers (s0a item 6), so this is our reading, not Apple's ruling, as there.
 - The person's IP address and `User-Agent: PyWidget-iOS` reach that server. Nothing else: ephemeral session, no cookie, no cache, no added header.
-- **`url` is a literal, so steps and location cannot leave through this path.** Steps stay in `fetch.json` on the device (condition 6). If a later version templates the URL, this section is reopened before anything else.
-- `fetch.json` holds only the declared values and goes when the widget goes.
-- `url` sits as plain text in `pywidget.json`, its mirror and `fetch.json`. The shape has no headers, so it is for public URLs. A key put in a query string is not protected. If this ships the guide must say so; the route for a secret is a script using `pywidget.keychain`.
+- **`url` is a literal, so steps and location cannot leave through this path.** Steps stay in `fields.json` on the device (condition 6). If a later version templates the URL, this section is reopened before anything else.
+- `fields.json` holds only the declared values and goes when the widget goes.
+- `url` sits as plain text in `pywidget.json`, its mirror and `fields.json`. The shape has no headers, so it is for public URLs. A key put in a query string is not protected. If this ships the guide must say so; the route for a secret is a script using `pywidget.keychain`.
 
 **A premade that declares `fetch` is a different case.** Then the company chose the server. Condition 5 needs a fresh answer, that provider's terms need the Commandment 6 check, and `tools/terms_guard.py` gets a row. No premade declares `fetch` under this spec.
 
@@ -266,7 +266,7 @@ BF1-BF3 need no bound-fields code and belong in T-0680's one session: they are i
 
 **T-0682's real size.** The 3-day build in 08:03 item 3 rests on my 10-30 view, which said the pedometer waits on T-0011 and priced no target. (a) `fetch` alone, in the current extension: 3 days stands, plus my half-day for the manifest check and the name check. (b) `sensors` needs the second extension, and T-0053 has not built it. If it is missing when T-0682 starts, `steps` costs that target as well, not estimated here. `fetch` can ship without `steps`.
 
-**ADR-007 needs one dated line before T-0682 writes anything.** Amendment 2 item 1 says the extension writes only `wants-run`, `location/last.json` and `state.json`. `data/<id>/fetch.json` joins that list, with `data/` in the 5.2 layout. That line is the chair's.
+**ADR-007 needs one dated line before T-0682 writes anything.** Amendment 2 item 1 says the extension writes only `wants-run`, `location/last.json` and `state.json`. `data/<id>/fields.json` joins that list, with `data/` in the 5.2 layout. That line is the chair's.
 
 **ADR-002 ruling 6:** after the Day 21 feature freeze a format change needs a dated line. The row in ADR-002 is it, if the build happens.
 
@@ -274,9 +274,9 @@ BF1-BF3 need no bound-fields code and belong in T-0680's one session: they are i
 
 Idris and Maren, as usual. Reviewers get the branch, not my reasoning. The names:
 
-- `bind` on `Text` and `ProgressView`, `Number.unit(suffix, fraction_digits=0)`; `bind` and `field` in the tree; `fetch`, `fields`, `max_age_s`, `sensors` in the manifest; `fetch.json`, `data/`. **Reviewed in T-0797** (Idris d42943f56, Maren a1ae66a48), applied in T-1753: `Number.suffix(text, fraction_digits=0)`, tree `{"style": "suffix", "suffix": ...}`; `max_age` (seconds, no suffix, as `stale_after` and `location.sample(max_age=)`); `location` its own key. Open for one ruling from Ines: `fetch.json` (Maren keeps) against `fields.json` (Idris: it also holds `steps`), and the 7 DRAFT error texts. This spec keeps `fetch.json` until that ruling.
+- `bind` on `Text` and `ProgressView`, `Number.unit(suffix, fraction_digits=0)`; `bind` and `field` in the tree; `fetch`, `fields`, `max_age_s`, `sensors` in the manifest; `fields.json`, `data/`. **Reviewed in T-0797** (Idris d42943f56, Maren a1ae66a48), applied in T-1753: `Number.suffix(text, fraction_digits=0)`, tree `{"style": "suffix", "suffix": ...}`; `max_age` (seconds, no suffix, as `stale_after` and `location.sample(max_age=)`); `location` its own key. Ruled by Ines in T-2461 (ops/decisions/2026-11-05-t2461-bound-fields-names.md): the file is `fields.json` (Idris: it also holds `steps`; Maren had kept `fetch.json`), schema `pywidget.fields`, and the 7 error texts take the ruling's wording (applied in T-2463).
 - `Number.unit(" min")` writes its own space. Literal and one rule, against `Number.unit("min")` adding a space and needing an escape for `°`. Maren decides. (The suffix check now refuses only C0 controls, DEL, U+2028 and U+2029, the schema's set; T-1753.)
-- All new error texts are DRAFT under <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>, for Maren.
+- The 7 new error texts were DRAFT under <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>, for Maren; T-2461 ruled their wording and T-2463 applied it on the branch (the DRAFT markers are off).
 - **Gauge.** The steps premade's tree has 2 `Gauge`, 5 `Path`, 2 `ProgressView`. `bind` reaches only the last of those: the ring and the week chart would not move. The chair's line says `Text` and `ProgressView`. `Gauge` is one more row if the reviewers and the chair want it; `Path` is computed geometry and cannot be bound.
 - `style` is `relative` only, as the chair listed. `time` ("next at 14:05") is one enum word.
 - T-0053's `location` declaration has no key yet. Should it be `sensors: ["location"]` with no bindable value, or its own key? Idris. **Answered (T-0797): its own key, `"location": {"max_age": 900}`**, s2.

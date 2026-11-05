@@ -59,14 +59,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-10-30 Day 9 diary saved; T-0806 EU trader status research taken up
 
-## 2026-11-03 T-1799 freshness ledger done (ac0bec43b; board ticked; T-1806 Maren, T-1807 Ines; event logged)
-- Lessons: copy a hash from git output, never type one (board_tick refused a made-up hash). Board ids go fast; check the next free one just before `add`. The BGAppRefresh 15 min floor is our rule, not Apple's.
-
-## 2026-11-04 T-1761 rejection replies draft (dcdf5aa0c); T-2309-T-2311 for Ines; tick refused, left for Operator
-- Lesson: gloss every T-id in a done-note Plain, ranges too ("T-2309 (board task)"); the check refuses and a refusal stops the item.
-
 ## 2026-11-04 T-2375 B-staged copy done (74f431444; ticked; continuation T-2409; push refused, non-fast-forward)
 - Lessons: store desc worst case is 4000/4000 (Coilwork): cut before adding. terms_guard refuses a robots.txt that redirects to a new host; that stops the source. An id can go between grep and add: let add pick it.
+
+## 2026-11-05 T-2535 app launcher note (62a569b29); tick refused (Plain 302 > 280), left for Operator
+- Lessons: count the Plain field with `len()` before board_tick. Gumroad terms forbid automated access: its pages stay unread.
 {% endraw %}
 
 

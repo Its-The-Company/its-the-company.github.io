@@ -1,58 +1,41 @@
 {
  "schema": 1,
- "at": "2026-11-05T03:56:59.134757+00:00",
+ "at": "2026-11-05T04:11:57.356741+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-04T22:35:17-05:00"
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-2418 applier option-letter approve",
-   "model": "opus",
-   "started": "2026-11-05T03:45:51.600Z",
-   "seconds": null,
-   "finished": "2026-11-05T03:56:19.729000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-2420 fold amendments request",
-   "model": "opus",
-   "started": "2026-11-05T03:45:59.384Z",
-   "seconds": null,
-   "finished": "2026-11-05T03:50:58.969000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 407,
+  "runnable_count": 415,
   "blocked_count": 124
  },
  "meter": {
   "five_hour": {
    "pct": 1.0,
-   "resets_at": "2026-11-05T08:19:59.682230+00:00",
+   "resets_at": "2026-11-05T08:19:59.960466+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 58.0,
-   "resets_at": "2026-11-08T06:59:59.682252+00:00",
+   "resets_at": "2026-11-08T06:59:59.960489+00:00",
    "used_words": "of your weekly allowance used",
    "left": 42.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 1.0,
-   "resets_at": "2026-11-08T06:59:59.682398+00:00",
+   "resets_at": "2026-11-08T06:59:59.960650+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-04T22:35:16.433313-05:00"
+  "read_at": "2026-11-04T23:11:55.913990-05:00"
  },
  "ui": {
   "week_pct": 0.678,
@@ -69,10 +52,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 36.73,
-  "usage_pct": 35.2,
-  "work_pct": 74.2,
-  "read_at": "2026-11-05T03:57:00+00:00",
+  "week_pct": 45.8,
+  "usage_pct": 40.3,
+  "work_pct": 75.5,
+  "read_at": "2026-11-05T04:11:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -393,7 +376,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T22:37:52-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b3",
@@ -478,30 +462,36 @@
  "api_credits": [
   {
    "name": "company",
-   "used_usd": 186.85,
+   "used_usd": 191.2,
    "total_usd": 200.0
+  },
+  {
+   "name": "a",
+   "used_usd": 0,
+   "total_usd": 100.0
+  },
+  {
+   "name": "b",
+   "used_usd": 0,
+   "total_usd": 100.0
   }
  ],
  "disk": {
-  "free_gb": 48,
+  "free_gb": 47,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 765
+   "free_gb": 764
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T22:57:00-05:00"
+  "at": "2026-11-04T23:11:00-05:00"
  },
  "next_tick_why": "session",
- "pool": {
-  "why": "On the API credits by the Investors' instruction, so the full pool runs",
-  "n": 12,
-  "at": "2026-11-04T22:35:16.784804-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -629,33 +619,55 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "The change that lets lane stops clear themselves failed only because its checks ran past the...",
+    "at": "2026-11-04T23:11:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "The hourly disk cleanup ran on its own for the first time at 16:28 and freed 2 GB; a test now...",
+    "at": "2026-11-04T23:11:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "Wrote the proposal that lets an Investor's one-letter answer like \"A\" count as approve when...",
     "at": "2026-11-04T22:56:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "Tonight's six Investor rulings, which pushed amendments.md past its 4 KB line, are drafted into...",
-    "at": "2026-11-04T22:50:00-05:00"
-   },
-   {
-    "w": "Odalys+operator",
-    "t": "The Investors' two personal API keys ($100 each) can now run company work: the code to pick a...",
-    "at": "2026-11-04T22:45:00-05:00"
    }
   ],
   "count": {
-   "next": 407,
+   "next": 415,
    "wait": 37,
    "blocked": 87,
    "you": 18
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6649323509",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Is Evan's account still not working?..."
+  },
+  {
+   "id": "c6649371105",
+   "state": "received",
+   "position": 2,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "approve"
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -666,10 +678,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "10:57 PM",
+  "at": "11:11 PM",
   "why": "",
-  "at_iso": "2026-11-05T03:57:00+00:00",
+  "at_iso": "2026-11-05T04:11:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:57 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:11 PM ET</p></section>"
  }
 }

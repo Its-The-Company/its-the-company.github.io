@@ -1,47 +1,14 @@
 {
  "schema": 1,
- "at": "2026-11-05T02:01:06.298034+00:00",
+ "at": "2026-11-05T02:04:52.043045+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-04T19:58:08-05:00"
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[build] T-2225 Settings screen compile",
-   "model": "opus",
-   "started": "2026-11-05T01:03:48.282Z",
-   "seconds": null,
-   "finished": "2026-11-05T01:57:38.089000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-2257 applier standing permission",
-   "model": "opus",
-   "started": "2026-11-05T01:04:34.281Z",
-   "seconds": null,
-   "finished": "2026-11-05T01:40:59.818000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-2156 supervisor changes after split",
-   "model": "opus",
-   "started": "2026-11-05T01:04:50.883Z",
-   "seconds": null,
-   "finished": "2026-11-05T01:39:47.040000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-2178 site Q1/Q2 go-live",
-   "model": "opus",
-   "started": "2026-11-05T01:04:57.103Z",
-   "seconds": null,
-   "finished": "2026-11-05T01:39:18.943000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -50,17 +17,17 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 7.0,
-   "resets_at": "2026-11-05T03:19:59.578499+00:00",
+   "pct": 15.0,
+   "resets_at": "2026-11-05T03:20:00.151452+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 93.0,
+   "left": 85.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 52.0,
-   "resets_at": "2026-11-08T06:59:59.578522+00:00",
+   "pct": 53.0,
+   "resets_at": "2026-11-08T07:00:00.151476+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 48.0,
+   "left": 47.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -68,10 +35,10 @@
    "resets_at": "2026-11-08T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-04T19:48:33.471647-05:00"
+  "read_at": "2026-11-04T21:04:51.013216-05:00"
  },
  "ui": {
-  "week_pct": 0.684,
+  "week_pct": 0.679,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -85,10 +52,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 37.04,
+  "week_pct": 36.78,
   "usage_pct": 37.0,
   "work_pct": 74.8,
-  "read_at": "2026-11-05T02:03:00+00:00",
+  "read_at": "2026-11-05T02:04:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -396,21 +363,17 @@
   }
  ],
  "disk": {
-  "free_gb": 51,
+  "free_gb": 50,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T21:03:00-05:00"
+  "at": "2026-11-04T21:04:00-05:00"
  },
  "next_tick_why": "session",
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight",
-  "n": 12,
-  "at": "2026-11-04T19:58:07.685993-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -585,7 +548,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "inbox_title",
   "task_title",
@@ -598,10 +560,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "9:03 PM",
+  "at": "9:04 PM",
   "why": "",
-  "at_iso": "2026-11-05T02:03:00+00:00",
+  "at_iso": "2026-11-05T02:04:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:03 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:04 PM ET</p></section>"
  }
 }

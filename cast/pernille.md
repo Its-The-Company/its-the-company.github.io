@@ -34,10 +34,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open
 - Probation (a) and (b): as in the offer line above.
 - T-0448 app.json: F5 (huge int version), F7 (project_missing code) still open; Swift twin T-0449.
-- Mine: `_wire.want_time` hands back naive datetimes; after T-0953 lands, <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>.py:173 and C2:121 "waits with no bound".
+- Mine: `_wire.want_time` hands back naive datetimes; <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>.py:173 and C2:122 "waits with no bound" now stale (bound landed in T-1855; my L3 in t1855 review, T-2665 Idris M1).
 - T-0446 prompts (ac167352), review fixes T-0462/63/66 in 7db9e91d (API v1.1, 61 cases, mutants.json 29/29). Open: Idris reads rule 4; T-0465 HUD progress; T-0458 tip splitter after T-0447.
 - T-1143 (2fc1f853): a Python-thread watchdog took ~93 ms median to land OverBudget at a 10 ms budget (GIL wait, load 60); for Idris in T-0656.
-- T-1838 (4fd23afe3): T-0675 Swift review; F1-F5 = T-1850..54, Lows T-1855. os/proc.h: available-memory 0 also means over the limit. Board-only commits: build the index blob from HEAD plus my lines (git update-index).
+- T-1838 (4fd23afe3): T-0675 Swift review; F1-F5 = T-1850..54, Lows T-1855. os/proc.h: available-memory 0 also means over the limit. Board-only commit via git update-index was refused by the classifier (T-2412, 11-05): leave the tick in the tree for the Operator.
 - T-2262 (da2ebcf8a): jedi InterpreterEnvironment rebinds global sys.path beside a live script. Idris's T-2511..13 mine to review; T-2514 (unraisablehook in reset snapshot) mine. New board ids go above ops/board.md.ids.
 - T-1103 (b11fe55b): gallery tile and Pro row rules in Core. Open for Maren: 9.4 read strictly puts a spinner over a kept live tree on a foreground rerun.
 
@@ -51,6 +51,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Open (from T-1045): T-1048 stdlib size stop unexplained, my check; T-1047 upload.sh identity.
 - T-2584 (f5c19da1e): t2581 upload review, no Medium+; Lows on T-2588 (Idris, P3), mine to re-review. Lesson: probe both tools of a pair with the same input (pin CRLF split them).
 - T-2605 (f5e096990, runner 14): runner job sandbox lists launchd folders at write time, so xcodebuild parallel Simulator clones can't reach testmanagerd (0 tests). Re-enabling parallel needs an approve-sandbox. Cont. T-2609.
+- T-2412 (1712ff298): load-robust timing = bound plus the run's own lag (a 1 s answer timed before/after), skip past a <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>, self-check cap vs dead-deadline wait.
 - T-2204: recuts: `git rebase` is blocked by the session hook; cherry-pick `git cherry`'s + commits onto main in a scratch worktree. A retry name must start <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/<id>/ (retry_one skips any other name).
 {% endraw %}
 

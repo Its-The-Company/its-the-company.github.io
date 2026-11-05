@@ -1,18 +1,51 @@
 {
  "schema": 1,
- "at": "2026-11-05T16:55:00.352773+00:00",
+ "at": "2026-11-05T18:08:43.343959+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-05T11:53:43-05:00"
+  "active": false,
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
- "recent": [],
+ "recent": [
+  {
+   "name": "ines",
+   "task": "[plan] T-2660 one-page charter draft",
+   "model": "opus",
+   "started": "2026-11-05T17:00:35.388Z",
+   "seconds": null,
+   "finished": "2026-11-05T18:05:11.795000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2426 file guard re-applies amendments",
+   "model": "opus",
+   "started": "2026-11-05T17:01:22.089Z",
+   "seconds": null,
+   "finished": "2026-11-05T17:26:50.209000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-2297 Home live session facts",
+   "model": "opus",
+   "started": "2026-11-05T17:01:44.486Z",
+   "seconds": null,
+   "finished": "2026-11-05T17:12:56.779000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-2480 Chat/Usage/Lock In mockup",
+   "model": "opus",
+   "started": "2026-11-05T17:01:13.937Z",
+   "seconds": null,
+   "finished": "2026-11-05T17:12:43.949000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 428,
+  "runnable_count": 429,
   "blocked_count": 129
  },
  "meter": {
@@ -50,12 +83,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-05T12:12:58-05:00",
  "personal": {
   "week_pct": 58.8,
-  "usage_pct": 46.0,
-  "work_pct": 72.4,
-  "read_at": "2026-11-05T16:56:00+00:00",
+  "usage_pct": 45.5,
+  "work_pct": 71.9,
+  "read_at": "2026-11-05T18:09:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -66,7 +99,7 @@
   },
   {
    "name": "a",
-   "used_usd": 98.22,
+   "used_usd": 98.73,
    "total_usd": 100.0
   },
   {
@@ -76,25 +109,21 @@
   }
  ],
  "disk": {
-  "free_gb": 27,
+  "free_gb": 23,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 715
+   "free_gb": 713
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T11:56:00-05:00"
+  "at": "2026-11-05T13:09:00-05:00"
  },
- "next_tick_why": "session",
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight",
-  "n": 12,
-  "at": "2026-11-05T11:53:33.452693-05:00"
- },
+ "next_tick_why": "last_tick",
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -221,44 +250,34 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "A device-module test now uses its own standalone wait object, so a slow earlier run can no...",
-    "at": "2026-11-05T11:08:00-05:00"
+    "w": "Ines",
+    "t": "A one-page charter to replace the Commandments is drafted and sent to the Investors as one...",
+    "at": "2026-11-05T13:04:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "The notification-permission reads in the device-module tests now give up after 10 seconds...",
-    "at": "2026-11-05T11:08:00-05:00"
+    "w": "Odalys",
+    "t": "A finished branch was held because an Investor changed a rules file while its tests ran; its...",
+    "at": "2026-11-05T12:50:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "The check that every node the premade widgets use gets drawn passes again, after the design...",
-    "at": "2026-11-05T11:08:00-05:00"
+    "w": "Odalys",
+    "t": "Five finished pieces of work from a stopped session (board updates, a design redraw, a new bug...",
+    "at": "2026-11-05T12:50:00-05:00"
    }
   ],
   "count": {
-   "next": 428,
+   "next": 429,
    "wait": 42,
    "blocked": 87,
    "you": 19
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6663797776",
-   "state": "in_progress",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Keep it for now"
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -270,10 +289,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "11:56 AM",
-  "why": "Between sessions: no session is running. Last check 11:53 AM ET.",
-  "at_iso": "2026-11-05T16:56:00+00:00",
+  "at": "1:09 PM",
+  "why": "Between sessions: no session is running. Last check 11:57 AM ET.",
+  "at_iso": "2026-11-05T18:09:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:56 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 11:53 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:09 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 11:57 AM ET.</p></section>"
  }
 }

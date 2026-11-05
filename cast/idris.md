@@ -41,7 +41,7 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - T-1669/T-1678: T-1716 d21a36896, T-1696 d074ebd44 landed (Simulator 55/0); independent review of both due before TestFlight.
 - AgeLine T-1910/1911/1946 6edcfd497, T-1983 e573b6450, T-1948 nextChange 1c2e7b6cd (unreviewed). Left: T-1440 pass one `now` to face rule, drawnAt, line; timeline entries from nextChange.
 - T-0675: reviewed (T-1838, F1-F5 = T-1850..1854). Mutants refreshed 93e78d6ac. Tick waits on a green full suite (testNoPreviewPathBypassesTheKey, T-2456 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>) and T-1643. t0189 mutant finds re-pointed in scratch only.
-- Extension-lane fixes 0e756d6cc/ed1e3805f/9286dd56a untested (J-1740/1822 died compiling my 036c854f SettingsView); T-2271 reruns after T-2225; review T-2272 (Pernille). Also unreviewed: T-1852 0448468a9, T-2135 91cc14f20.
+- Extension-lane fixes: ExtensionLaneTests green in full suite J-20261105-0803 (642ca104); T-2228 ticked. T-2229 open for F2 mutant (T-2271 (3), local slot); review T-2272 (Pernille). Also unreviewed: T-1852 0448468a9, T-2135 91cc14f20.
 - T-0656 slice 1 06c77dbdc on main UNBUILT (xc.sh runner call refused by classifier); T-2261 continues, T-2262 Pernille's runtime read.
 - T-0191 gallery slice 1 eab3728af (App/Gallery, catalog bundled) uncompiled: classifier refused the xc.sh route call; T-2267 run+mutant+review, T-2268 rest.
 - T-0657 Settings: green at 477813574 (T-2225, local 3/0); full suite J-20261104-2056-xc-test; waits on T-2282 Maren read, T-2283 review.

@@ -44,6 +44,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 2026-11-05 T-1759 (716ca91e3): parked c2a2f112f brought to main (spec s5.13, draw_examples.py). Lesson: a redraw-everything commit can sweep in stray untracked sheets (1f2df5a56 took a 363 KB A-examples-phone.png); check `git show --stat` for names no spec row owns. Open: AX5 column still recalled.
 - 2026-11-05 T-2536 (e827fe27d): six launcher options in pywidget/docs/design/launcher/, recommend Pegboard; open: Investor pick on #41, Wrenna's direct-launch device test. Lesson: tap-area bboxes overlap on a ring before circles do; check rects.
+- 2026-11-05 T-2480 (d5b00016e, ee0836841): HTML/CSS mockup ops/site-checks/t2480/ with T-2469 folded in; build T-2667 (Odalys) on parked 7fd8e58d4. Lesson: a strict CSP meta in a mockup catches inline styles; run a scripted text-contrast pass, it caught `.cmp span` beating `.send` (1.04:1).
 {% endraw %}
 
 

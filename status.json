@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T19:22:15.489760+00:00",
+ "at": "2026-11-05T19:25:19.164780+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,34 +9,32 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-2634 land merges on MacBook in parallel",
-   "model": "opus",
-   "started": "2026-11-05T18:32:53.686Z",
-   "seconds": 2961,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[tools] T-2570 retry unmerged parked work",
    "model": "opus",
    "started": "2026-11-05T18:33:25.639Z",
-   "seconds": 2929,
+   "seconds": 3113,
    "finished": null,
    "effort": "high"
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2634 land merges on MacBook in parallel",
+   "model": "opus",
+   "started": "2026-11-05T18:32:53.686Z",
+   "seconds": null,
+   "finished": "2026-11-05T19:25:07.673000+00:00"
   },
   {
    "name": "ines",
    "task": "[tools] T-2675 charter suite reds comparison",
    "model": "opus",
    "started": "2026-11-05T18:33:34.547Z",
-   "seconds": 2920,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x2, Ines",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-05T19:23:03.957000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2692 applier pin uses GitHub's copy",
@@ -52,22 +50,6 @@
    "started": "2026-11-05T19:03:23.431Z",
    "seconds": null,
    "finished": "2026-11-05T19:18:24.736000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2486 stuck state must not freeze Restart",
-   "model": "opus",
-   "started": "2026-11-05T18:51:03.787Z",
-   "seconds": null,
-   "finished": "2026-11-05T19:15:44.449000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-1677 record last run report at launch",
-   "model": "opus",
-   "started": "2026-11-05T18:37:36.900Z",
-   "seconds": null,
-   "finished": "2026-11-05T19:11:18.988000+00:00"
   }
  ],
  "queue": {
@@ -116,7 +98,7 @@
   "week_pct": 58.5,
   "usage_pct": 45.5,
   "work_pct": 71.9,
-  "read_at": "2026-11-05T19:22:00+00:00",
+  "read_at": "2026-11-05T19:25:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -229,7 +211,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T14:12:32-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b2",
@@ -306,7 +289,7 @@
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-05T14:22:00-05:00"
+  "at": "2026-11-05T14:25:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -318,18 +301,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-2634 land merges on MacBook in parallel",
+   "task": "[tools] T-2570 retry unmerged parked work",
    "model": "opus",
-   "since": "2026-11-05T18:32:53.686Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Ines",
-   "state": "running",
-   "task": "[tools] T-2675 charter suite reds comparison",
-   "model": "opus",
-   "since": "2026-11-05T18:33:34.547Z",
+   "since": "2026-11-05T18:33:25.639Z",
    "next": [],
    "effort": "high"
   },
@@ -337,6 +311,14 @@
    "name": "Idris",
    "state": "next",
    "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -371,28 +353,10 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Test each waiting merge on the MacBook at once",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T18:32:53.686Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Retry finished work that could not be merged",
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T18:33:25.639Z",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "tools",
-    "t": "Compare the charter suite reds against an unchanged copy",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T18:33:34.547Z",
     "o": "c"
    }
   ],
@@ -415,6 +379,13 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Personal accounts start unless a setting...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Finish testing and measure the MacBook land...",
     "s": "next",
     "o": "c"
    },
@@ -459,16 +430,14 @@
     "t": "Run Python widget scripts inside the widget...",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop personal sessions taking more tasks...",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "The last red land test is green again: the land now passes the test-only lock setting through to...",
+    "at": "2026-11-05T14:24:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "a large approved change now applies only from the copy the Investors can read on GitHub; an...",
@@ -477,11 +446,6 @@
    {
     "w": "Odalys",
     "t": "an approved proposal that hides a change or its file pointer inside an HTML comment, which...",
-    "at": "2026-11-05T14:18:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "a proposal that points to a large change file must be plain text, so no code block can show the...",
     "at": "2026-11-05T14:18:00-05:00"
    }
   ],
@@ -506,13 +470,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 1,
   "lanes": 5,
-  "total": 8,
-  "at": "2:22 PM",
+  "total": 6,
+  "at": "2:25 PM",
   "why": "",
-  "at_iso": "2026-11-05T19:22:00+00:00",
+  "at_iso": "2026-11-05T19:25:00+00:00",
   "started": "1:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 3, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 2:22 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 2:25 PM ET</p></section>"
  }
 }

@@ -41,7 +41,7 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - T-1669/T-1678: T-1716 d21a36896, T-1696 d074ebd44 landed (Simulator 55/0); independent review of both due before TestFlight.
 - AgeLine T-1910/1911/1946 6edcfd497; review T-1983 fixed e573b6450. Left: T-1440 pass one `now` to face rule, drawnAt, line.
 - T-0675 item 7 (dd26184c2): privacy manifests fixed. Open: Swift-half review has no task (asked Ines); privacy_scan wired to no build.
-- <span title="How many people show, in their own words, that they want this.">Need</span> independent review before TestFlight: T-1852 0448468a9 (closed <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>, 5/5 mutants); T-2135 guard round 2 91cc14f20; T-1854/T-2035 0e756d6cc committed untested (T-2176 runs it, T-2177 Pernille reviews; Locked logs nothing, my call).
+- <span title="How many people show, in their own words, that they want this.">Need</span> independent review before TestFlight: T-1852 0448468a9 (closed <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>, 5/5 mutants); T-2135 guard round 2 91cc14f20; T-1854/T-2035 0e756d6cc committed untested (T-2177 passed with fixes; F1/F2 fixed 9286dd56a uncompiled, T-2237 reads J-20261104-1822 + F2 mutant; F3-F5 = T-2230..2232).
 - T-0657 Settings 036c854f uncompiled (lock stuck, #175); T-2225 holds the rest: runner job J-20261104-1728-xc-test, shots, Maren's read, review.
 
 ## Lessons

@@ -3,17 +3,17 @@ layout: "default"
 title: "Issues"
 section: "requests"
 permalink: "/issues/"
-issues: "6"
+issues: "4"
 ---
 
 # Issues
 
 <style>.ny-box{flex-basis:100%}.ny-box:empty{display:none}.ny-ask{margin:var(--s2) 0;color:var(--muted)}.ny-ask pre{white-space:pre-wrap;font:inherit;margin:var(--s1) 0 0;padding:var(--s2);border-radius:var(--r-s);background:var(--soft-2);max-height:24em;overflow:auto}.ny-opts{display:flex;flex-wrap:wrap;gap:var(--s2);margin:var(--s2) 0}.ny-opts .cv-tool{text-align:left;white-space:normal;max-width:100%}.ny-box .cv-tool[aria-pressed=true]{background:var(--accent);color:var(--accent-ink);border-color:transparent}.ny-form textarea{width:100%;box-sizing:border-box;min-height:5em;font:inherit;padding:var(--s2);border:1px solid var(--line);border-radius:var(--r-s);background:var(--bg);color:var(--ink)}.ny-files{display:flex;flex-wrap:wrap;gap:var(--s1);margin:var(--s1) 0;padding:0;list-style:none}.ny-files li{border:0!important;padding:0 var(--s2)!important;background:var(--soft-2);border-radius:var(--r-pill);font-size:var(--fs-0)}.ny-bar{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2);margin-top:var(--s2)}.ny-bar .ny-send{margin-left:auto}ul.needs:has(.ny-imgs){max-width:none}ul.needs:has(.ny-imgs) .ny-box>:not(.ny-imgs),ul.needs:has(.ny-imgs) .ny-q,ul.needs:has(.ny-imgs) .ny-r{max-width:var(--measure)}.ny-imgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,12em),1fr));gap:var(--s3);margin:var(--s2) 0}.ny-col{display:flex;flex-direction:column;gap:var(--s1);min-width:0}.ny-key{margin:0;font-weight:600}.ny-pic img{display:block;max-width:100%;max-height:75vh;margin:0 auto;border:1px solid var(--line);border-radius:var(--r-s)}.ny-col .cv-tool{align-self:flex-start;margin-top:auto}.ny-done{color:var(--green-fg)}.ny-warn{color:var(--hot)}.ny-live:empty{display:none}.ny-shut{margin-top:var(--s3)}.ny-closed{margin-top:var(--s5)}.ny-closed>summary{min-height:44px}.ny-closed>summary h2{display:inline;margin:0}.ny-th{flex-basis:100%;min-width:0;margin:0}.ny-th>summary{min-height:44px}.ny-t{display:block;margin-top:var(--s1)}.ny-msg{margin:var(--s2) 0;padding:var(--s2);border-radius:var(--r-s);background:var(--soft-2)}.ny-msg.ny-inv{background:none;border:1px solid var(--line)}.ny-msg p{margin:0}.ny-msg pre{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;margin:var(--s1) 0 0}</style>
 
-<p class="lead">6 things the company needs from the Investors; 1 is a one-word decision. Answer each one here: tap an option or write a reply, add files if you need to, and send.</p>
+<p class="lead">4 things the company needs from the Investors; 1 is a one-word decision. Answer each one here: tap an option or write a reply, add files if you need to, and send.</p>
 
 <p class="meta" id="needs-anon">With your GitHub token saved (<a href="{{ '/connect.html' | relative_url }}">Connect</a>), each request shows the company's question, its options as buttons and a reply box, a Close button, and the closed issues with their replies. Without it this page shows titles only.</p>
-<div id="needs-root" data-repo="Its-The-Company/itsthecompany" data-named="13 19 29 32 33 36 38 41 42 51 53 54 55 56 57 58 59 60" data-props="178 174 164" data-skip="39 41"></div>
+<div id="needs-root" data-repo="Its-The-Company/itsthecompany" data-named="13 19 29 32 33 36 38 41 42 51 53 54 55 56 57 58 59 60" data-props="181 164" data-skip="39 41"></div>
 
 <h2>Quick decisions</h2>
 <p class="meta">One word settles each.</p>
@@ -21,11 +21,11 @@ issues: "6"
 
 <h2>Proposals that need an approve</h2>
 <p class="meta">Changes to the company's own rules and tools that cannot apply on their own. Reply approve, hold or no. Those that applied automatically are on Company &gt; Infrastructure.</p>
-<ul class="list needs" data-group="proposal"><li class="ny" data-nums="178"><span class="tag report">Waiting on you</span> <span class="ref">#178</span><span class="ny-q">Proposal: let sessions run the stuck-process stopper (#176)</span><div class="ny-box"></div></li><li class="ny" data-nums="174"><span class="tag report">Waiting on you</span> <span class="ref">#174</span><span class="ny-q">Proposal: let a personal <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> restart as soon as its 5-hour usage window resets</span><div class="ny-box"></div></li><li class="ny" data-nums="164"><span class="tag report">Waiting on you</span> <span class="ref">#164</span><span class="ny-q">Action: move the supervisor script's Keychain lines into a small file you own, once, so every later change to the script goes through Approve</span><div class="ny-box"></div></li></ul>
+<ul class="list needs" data-group="proposal"><li class="ny" data-nums="181"><span class="tag report">Waiting on you</span> <span class="ref">#181</span><span class="ny-q">Proposal: a question after your approve no longer cancels it (#174)</span><div class="ny-box"></div></li><li class="ny" data-nums="164"><span class="tag report">Waiting on you</span> <span class="ref">#164</span><span class="ny-q">Action: move the supervisor script's Keychain lines into a small file you own, once, so every later change to the script goes through Approve</span><div class="ny-box"></div></li></ul>
 
 <h2>Not written up yet</h2>
 <p class="meta">Open issues the company has not put in plain words yet.</p>
-<ul class="list needs" data-group="new"><li class="ny ny-new" data-nums="175"><span class="tag urgent">Urgent</span> <span class="ref">#175</span><span class="ny-q">Action: unplug and replug the Company SSD on the Mac mini</span><span class="ny-r">Blocked work waits on the Investors' answer; other work goes on meanwhile.</span><div class="ny-box"></div></li><li class="ny ny-new" data-nums="176"><span class="tag urgent">Urgent</span> <span class="ref">#176</span><span class="ny-q">May the company stop its own stuck processes?</span><span class="ny-r">Blocked work waits on the Investors' answer; other work goes on meanwhile.</span><div class="ny-box"></div></li></ul>
+<ul class="list needs" data-group="new"><li class="ny ny-new" data-nums="175"><span class="tag urgent">Urgent</span> <span class="ref">#175</span><span class="ny-q">Action: unplug and replug the Company SSD on the Mac mini</span><span class="ny-r">Blocked work waits on the Investors' answer; other work goes on meanwhile.</span><div class="ny-box"></div></li></ul>
 
 <div id="tamper-root" data-repo="Its-The-Company/itsthecompany" hidden></div>
 <script defer src="{{ '/assets/tamper.js' | relative_url }}"></script>

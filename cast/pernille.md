@@ -49,10 +49,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
 - Open (from T-1045): T-1048 stdlib size stop unexplained, my check; T-1047 upload.sh identity.
-- 2026-11-05 T-2531: the temp-index board commit was refused by the classifier; tick with board_tick and leave the board commit to the Operator. T-2548 (Idris, us mutant) mine to re-review. Lesson: a truncating == that makes two values EQUAL is what a "changed" test catches; check the direction before calling a mutant a survivor (my T-2342 F2 had it backwards).
 - T-2272 (0e7b85871): ext-lane series is fix first. F1 T-2491 (logClosed remakes removed user folders, T-0753), Lows T-2492..97. Mine to re-review.
 - T-2265 (2efc0ed7c): fix first; T-2486 refused live stuck wedges Restart, T-2487 Lows; mine to re-review.
-- T-2413 (a1be5a77c): upload.sh fix first; T-2563..65 Idris, T-2566 my re-review (scratch T-2413-pernille demo.sh, mutants.sh). Lesson: "main checkout" = git dir == common dir also holds for a clone.
+- T-2566 (6ac7f4fb6): upload tools ship, first --internal upload cleared; Lows F7-F9 on T-2581 (Idris, P2). Scratch T-2566-pernille bin/demo.sh, mutants.py (each mutant in its own copy). Lessons: "main checkout" = git dir == common dir also holds for a clone; a pair of belt-and-braces checks shows as two survivors, so run the double mutant before calling either a gap.
 - T-2204: recuts: `git rebase` is blocked by the session hook; cherry-pick `git cherry`'s + commits onto main in a scratch worktree. A retry name must start <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/<id>/ (retry_one skips any other name).
 {% endraw %}
 

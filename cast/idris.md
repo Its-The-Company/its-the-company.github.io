@@ -46,17 +46,18 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - T-0191 gallery slice 1 eab3728af (App/Gallery, catalog bundled) uncompiled: classifier refused the xc.sh route call; T-2267 run+mutant+review, T-2268 rest.
 - T-0657 Settings: green at 477813574 (T-2225, local 3/0); full suite J-20261104-2056-xc-test; waits on T-2282 Maren read, T-2283 review.
 
-- T-2301/T-2312..2314 45c9a7b18 reviewed (T-2342); its F1-F3 fixed in 29d961005 (T-2382..2384, Core 545/0, mutants 14/14); review T-2531 (Pernille); T-2302 app compile.
 - T-2316 0e3126a7a (Shortcut Pro gate): host typecheck only; owed Simulator PyWidgetTests/ShortcutProGateTests, mutants-t2316.json, review; then tick.
 - T-2054/55/56: tests 654bf72e6, fixes f7ca2d3bd, uncompiled (runner request refused); T-2266 holds runs+mutants, T-2265 Pernille review.
 
 - T-2456 (after T-2417/T-2394, ticked 2026-11-04): two red tests green on runner J-20261104-2341-xc-test. Left: full suite -2 (runner on battery), stuck x5 + mutants-t1696 on local slot, reviews; then Operator uploads.
 - T-1853/T-2369 3f55ca3ff: gate switch + record-only margin + build phase, 159/0 local; review T-2464 (Pernille). Release gate build still stops at legal links (T-0485). Never write the gate condition's name in any ios/ file but Swift #if/comments, .md, or the gate script: the scan fails it.
 
+- T-2583 cc5c7c277 (prompt placement, T-2576 F1/F2): Desk+Placement 19/0 local; Pernille re-reviews. Real UIKit drop never reproduced (iOS 26 queues).
+
 ## Lessons
-- "You hold the slot" is not the lock: lanes b/b2/b3 queue on it; a foreground xc.sh can wait 20 min and die unrun. Check pgrep xc_lock first (T-2356).
-- A scratch copy of ios/Core runs whole-package green only with tests/, docs/design/ beside ios/ and pywidget/docs/design/states/ above it (T-2382).
 - Lanes edit tools/xc.sh and the Swift tree live: a lock wait can read a changed xc.sh (syntax error); archive/test from `git archive` + gitignored Vendor/ + tools/, with that tree's own xc.sh (T-2270).
+- awk compares split() parts as numbers (07 = 7e0 = 7): force text with `x ""`. To prove a commit check, stub git to claim success; filters and skip-worktree behave differently per command (T-2581 d4933f9dd).
+- T-2563..2565 2a86da9a2 (ledger in company repo only, --upload clean-tree + PWSourceCommit, ask needs upload exit 0): re-review T-2566 (Pernille). --upload must run on a clean clone; main always has dirty ops/.
 {% endraw %}
 
 

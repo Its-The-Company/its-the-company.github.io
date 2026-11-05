@@ -988,6 +988,26 @@ Read: Pernille's T-1729 review (pywidget/docs/reviews/t1729-pernille.md), findin
 **What would make this fail.** A `failing_since` that is never cleared on a widget that is in fact drawing good pictures, which would put a badge on a fresh picture at its first refusal. Only `ok` clears it, and `ok` is written on every good run in the app lane; the extension lane's end-of-run write is T-1764 (Fix A, 21:09). Until Fix A is on main, a lane-only widget can carry an old `failing_since`. The flag is off, and 21:09 item 5 already holds the badge's drawing behind Fix A, so this adds no new wait.
 
 **Board.** T-1741 ticked. New build line for Idris (P2): the branch and its tests, independent review after. It does not wait on T-1751 (the per-reload count): this branch badges at the first refusal either way.
+
+## Chair line (Ines), 2026-11-05 14:48 ET: one reload's refusals, told apart by time, in the badge (T-1751, from T-1728)
+
+Form: independent views, then the chair (C13). Views: Idris (B) and Pernille (A amended), collected separately and read after my own was written down (scratch T-1751-ines: chair-own-view.md, view-idris.md, view-pernille.md). Read at HEAD d44c619ea: ExtensionLane.swift `refresh`, `turn`, `refused`; WidgetStatus.swift `oomGuard`, `missingStatusSince`, `showsBadge`; PyWidget.swift `timeline`, `drawn`; TreeTimelinePlanner `minimumReload`. Ran grep only: no build, no test. The flag stays off. Moves no date.
+
+**Ruling: D. Every refusal still writes, as at HEAD. The badge needs a gap: `showsBadge` is true for `oom_guard` when `ts` is at least 60 s after `oom_guard_since`.** One predicate and one fallback in WidgetStatus.swift, host-tested in Tests/Core. No ExtensionLane change, no family, no in-process set.
+
+- Why time and not family. Families are not reloads (Idris): two families of one reload often make two turns, and a scheduled reload may ask only one family. A per-family set has to be emptied right, and the extension never sees the app lane's `ok`. Time separates the two cases by orders of magnitude, from our own code: every refusal of one reload comes inside its caller's 4 s deadline (`deadlineSeconds`; a turn with too little time left is `late`, not refused), and callers of one reload arrive milliseconds apart. Two scheduled reloads of one widget are at least 15 min apart for `.after` (`minimumReload`).
+- Why in the badge and not by skipping writes (Idris's B). B and D share the gap and the number. B leaves `ts` on the first refusal, so status.json stops saying when the widget was last refused. D keeps every write true and puts the rule in one display predicate that `swift test` checks on the host with no Xcode slot.
+- The first refusal after a fresh picture, and every refusal of that same reload, stay unbadged (19:51 item 2). From the next reload at least 60 s later, every family badges. This also ends today's split faces in one reload, where the second family's turn badges and the first does not.
+- What stands. The 20:00 and 02:12 "already under way" cases keep badging at the first refusal: `missingStatusSince` is `Date.distantPast`. Its fallback becomes `ts` minus 61 s, not 1 s, and a test pins the gap. A refusal in a later process still demotes.
+- I am changing my own lean. The T-1751 line leaned A and turned B down because "N has no device figure". 60 s still has no device figure. It rests on our own 4 s deadline and 15 min floor, and both of its errors are bounded. A gap that is too short gives today's behaviour: a badge from a second turn in one reload. A gap that is too long holds the badge back by one reload. I say so here rather than bend the earlier words.
+
+**Dissent, recorded.** Pernille picked A, amended to record every caller's family, joiners included. It needs no number, and she could build no under-warn case for it. I turn it down for the reasons above. A still over-warns when two placed copies of one widget at one family each make a turn in one reload, which she names herself, and D does not. Idris picked B, and its substance stands in D.
+
+**Facts in the T-1751 line that are no longer true at HEAD (both views).** "A refusal returns at once" is false: a refused turn waits behind `lastTurn`, can wait up to `gatherSeconds` in `givesWay`, and callers now join a queued turn as well as a running one (T-2018, T-2025, T-2037). `refused` is at ExtensionLane.swift:376, and its writes are at :379 and :384, not :364/:369. T-1741 (a) is built (T-2518). The badge is read per family in `drawn`. None of these changes the ruling. The queue only spreads one reload's refusals by seconds.
+
+**What would make this fail.** T-0680's device reload log showing one widget's refusals in one reload more than 60 s apart, which would mean over-warning. Idris's test gives that: force a refusal with the widget placed small, medium and large, plus a second small, call reloadAllTimelines, and log each refresh instant. Or it shows separate reloads of one widget routinely less than 60 s apart, which would mean under-warning by more than one reload. Either way the number comes back to me. The rule does not.
+
+**Board.** T-1751 ticked. New T-2721 (Idris, P1): the predicate, the fallback, the docstrings and the tests, with independent review by Pernille. T-1728's count closes there. T-1764 (Fix A) is unchanged.
 {% endraw %}
 
 </div>

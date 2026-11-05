@@ -54,6 +54,66 @@ Already lines, not repeated here: one dispatcher for every account (T-2471), one
 ## Order
 
 S1 (Odalys, after T-2467 (a)) and S3 (Ines) start now and in parallel; S2 goes into T-2471's dispatcher as it is built; S4 (Odalys) last. Each is built in one go and measured afterwards: S1 by tools/land_stats.py's land rate, S2 by the share of commits touching pywidget/, S3 by open lines and board bytes, S4 by the supervisor log's session start times.
+
+## S3 result (Ines, 2026-11-05 14:47, T-2617): measured, list ruled, archive waits on a tool
+
+**Not archived yet.** Neither tools/board_tick.py nor tools/board.py can move an open line ('- [ ]' or '- [b]') off the board with a pointer: board.py's archive modes move only finished lines and prose. The packet says to stop there rather than write the board from a script, so nothing left the board. The missing mode is lined for Odalys as T-2718 ("Archive open board lines and bring them back").
+
+**Before (2026-11-05 14:46 ET, ops/board.md at ae7405d10 plus the working tree):** 571 open lines, 486,432 bytes. Of those, 287 are [tools], [site] or [ops] (253 / 21 / 13). The S3 row above said 461 lines and 412 KB; the board grew 110 lines and 74 KB since that row was written.
+
+**After (Odalys, 2026-11-05 14:55 ET, T-2718, tools/board.py archive-open, commit 99fba693f):** the 25 left the board for log/board-archive-s3-2026-11-05.md, 25 lines and 12,262 bytes, each verbatim with its heading, date, reason and restore command; one pointer line (line 140) names the file and the IDs. The board had grown since 14:46, so the counts at the apply are: before 572 open lines, 500,022 bytes; after 547 open lines, 488,122 bytes (pointer included): 25 open lines (4.4%) and 11,900 bytes (2.4%) less. None was claimed, P0 or named by an open product line when the checks ran again under the board lock. Bring one back: `python3 tools/board.py restore-open <T-ID>` (dry run; add --apply).
+
+**How the list was made.** Every open [tools], [site] or [ops] line, minus each of these (counts are for those 287 lines):
+- younger than three days: an ID above T-1061, the highest ID on the board at its last commit before 2026-11-02 14:50 ET (177bd6b42, 13:28): 226 lines;
+- P0: 1;
+- Investor-requested by its own text (an Investor, #41, a from: ID or a comment ID): 26;
+- claimed (tools/personal_claims.py list, 25 claims): 0 left after the cuts above;
+- blocking a product line (its ID named in any open line that is not [tools], [site] or [ops]): 0 left after the cuts above;
+- under a heading that records a specific Investor request (the site pictures, the app guide, the app guide in one place, the report overhaul): 7 more.
+
+Two of my rulings set the list. Each can be argued, so they are written here:
+1. The headings "Build: pywidget ..." and "Continuous operations improvement ..." record the Investors' general mandate, not a request for any one line under them. A line under them is not Investor-requested for that reason alone.
+2. T-0885 and T-0898 stay on the board. They are dated reads (2026-11-07) that close the open optimization entries OPT-035 and OPT-062. Archiving them two days before they fall due would leave those trials with no verdict.
+
+**The 25 to archive** (ID, kind, bytes, title):
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: S3 result (Ines, 2026-11-05 14:47, T-2617): measured, list ruled, archive waits…, scrolls sideways" data-n="3" style="--tw:547px" markdown="1">
+
+| ID | kind | bytes | title |
+|---|---|---|---|
+| T-0305 | ops | 501 | Measure the task store change when it applies |
+| T-0169 | tools | 445 | Make old research scripts obey the fetch rules |
+| T-0324 | tools | 796 | Narrow the Xcode sandbox profile from a deny log |
+| T-0320 | tools | 359 | Add runner install tests and a stale check-in alarm |
+| T-0344 | tools | 395 | Stop the runner running Xcode in the Mac mini account |
+| T-0626 | tools | 635 | Find processes left running after a stopped session |
+| T-0425 | tools | 472 | Add the no-diagnostics flag to test runs by default |
+| T-0822 | tools | 670 | Put a time limit on stalled Xcode test runs |
+| T-0839 | tools | 547 | Deny leftover local tools in the personal profile |
+| T-0858 | tools | 1092 | Update the operations guide to match the amendments |
+| T-0905 | ops | 403 | Read the model routing test at twenty runs per arm |
+| T-0914 | tools | 533 | Run the core Swift tests when work lands |
+| T-1049 | tools | 308 | Add the no-text rule with a closed word list |
+| T-0071 | tools | 646 | Finish Odalys's probation measurement work |
+| T-0078 | tools | 410 | Read the Claude Code changelog each week |
+| T-0079 | tools | 505 | Review the message watcher after five days |
+| T-0966 | tools | 418 | Retry finished work whose tests were red |
+| T-0978 | tools | 929 | Read the personal wait numbers at ten samples |
+| T-0991 | tools | 428 | Retry finished work whose tests were cut off |
+| T-0999 | tools | 356 | Retry finished work that had no way to land |
+| T-1008 | tools | 362 | Retry finished work that had no way to land again |
+| T-1056 | tools | 202 | Look at a task that ended with no commit |
+| T-1057 | tools | 432 | Retry finished work that named no check |
+| T-1058 | tools | 211 | Look at a second task that ended with no commit |
+| T-1060 | tools | 207 | Look at a third task that ended with no commit |
+
+</div>
+
+
+**What this means for S3.** The three-day rule is too small to fix the problem. Most of the board's [tools] weight is younger than three days: 226 of 287 lines. Getting the board down to the release path needs a second cut, and it should be by kind and priority (for example, P2 and P3 [tools] lines younger than three days that block no product line), not by age. That is my call to make once this first cut has run and been measured. I am not lining it before then.
+
+**Pointer and restore.** When the mode runs, each archived line goes to log/board-archive-s3-2026-11-05.md under its heading. The archive records the date, the reason ("S3 cut, T-2617") and the command that restores it. One pointer line stays on the board naming the archive file and the IDs.
 {% endraw %}
 
 </div>

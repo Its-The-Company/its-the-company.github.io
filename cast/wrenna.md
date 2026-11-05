@@ -64,6 +64,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-11-05 T-2535 app launcher note (62a569b29); tick refused (Plain 302 > 280), left for Operator
 - Lessons: count the Plain field with `len()` before board_tick. Gumroad terms forbid automated access: its pages stay unread.
+
+## 2026-11-05 T-2409 E1 earthquakes example (c678b3723); T-2723 Simulator check open; E2 held
+- Lesson: build an example's test on one saved real response, and test that the docstring matches it. Adding a script to pywidget/examples breaks the Swift "exactly N" tests: edit them in the same commit.
 {% endraw %}
 
 

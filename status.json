@@ -1,24 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-05T20:06:48.842077+00:00",
+ "at": "2026-11-05T20:08:01.943139+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-05T14:39:32-05:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-2625 T-2627 test fixes check",
    "model": "opus",
    "started": "2026-11-05T19:42:16.956Z",
-   "seconds": 1471,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-05T20:07:29.232000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2713 land checks finish",
@@ -42,14 +40,6 @@
    "started": "2026-11-05T19:49:00.137Z",
    "seconds": null,
    "finished": "2026-11-05T19:57:40.266000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-2667 new Home Chat Usage",
-   "model": "opus",
-   "started": "2026-11-05T19:41:41.707Z",
-   "seconds": null,
-   "finished": "2026-11-05T19:57:10.248000+00:00"
   }
  ],
  "queue": {
@@ -98,7 +88,7 @@
   "week_pct": 58.1,
   "usage_pct": 44.3,
   "work_pct": 71.6,
-  "read_at": "2026-11-05T20:06:00+00:00",
+  "read_at": "2026-11-05T20:08:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -196,7 +186,7 @@
   }
  ],
  "disk": {
-  "free_gb": 21,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -207,7 +197,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T15:06:00-05:00"
+  "at": "2026-11-05T15:08:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -217,18 +207,17 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-2625 T-2627 test fixes check",
-   "model": "opus",
-   "since": "2026-11-05T19:42:16.956Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
    "model": null,
    "since": null,
    "next": []
@@ -267,17 +256,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "A widget safety test still expects the old build switch",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T19:42:16.956Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -388,13 +367,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 3,
-  "total": 4,
-  "at": "3:06 PM",
+  "total": 3,
+  "at": "3:08 PM",
   "why": "",
-  "at_iso": "2026-11-05T20:06:00+00:00",
-  "started": "2:39 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:39 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:06 PM ET</p></section>"
+  "at_iso": "2026-11-05T20:08:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:08 PM ET</p></section>"
  }
 }

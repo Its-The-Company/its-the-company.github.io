@@ -68,6 +68,28 @@ These come from the iOS 26 system `List`. Settings should follow Apple's convent
 - The Pro glyph is `sparkles`, not the frames' lock. A lock next to "Active" would look locked.
 
 Apple conventions met: Restore Purchases sits on the Settings screen next to the product (App Review 3.1.1), the large title is used, rows that open the web carry the up-right arrow, and the version is at the foot.
+
+## Recheck, 2026-11-05 14:50 (code read of 1e1ff0619)
+
+Maren. Idris's fix for T-2696..T-2700 is commit 1e1ff0619. At 14:43 it was on `personal/b2`, `b5`, `b6` and two <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> branches, not on main or origin/main. `ops/jobs/` has no job at that commit; the newest Settings job is J-20261105-1335 (T-2456) at 92b062d47. The shots in `ops/site-checks/settings-T-2225/` are still build 47781357. **No new shot exists, so every finding below is confirmed by reading the code only.** No build or Simulator was run.
+
+The MacBook run cannot produce the shots. `testScreenshotsForReview` and the new `testProRowAtXXXLargeWithPendingForReview` skip unless `TEST_RUNNER_PW_SETTINGS_SHOTS` is set. `tools/xc_route.py:139` keeps any `TEST_RUNNER_*` run local ("settings the runner can't carry"). The MacBook run gives the green tests. The PNGs need one run on the local Mac mini slot with that variable set, at a build that holds 1e1ff0619, saved to a new folder (`ops/site-checks/settings-T-2696/`).
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Recheck, 2026-11-05 14:50 (code read of 1e1ff0619), scrolls sideways" data-n="1" style="--tw:764px" markdown="1">
+
+| # | Board | Code read | Shot still needed to pass |
+|---|---|---|---|
+| F1 | T-2696 | **Passes by reading.** `settingsRow()` = `listRowBackground(bgSurface)` + `listRowSeparatorTint(lineHairline)`, on all six row kinds: Pro, Restore, theme, tour, each web link, Acknowledgements. `SettingsLookTests` pins #151926 / #262C3E in dark. | Dark: #151926 at (1000,760) and a #262C3E separator. |
+| F2 | T-2697 | **Passes by reading.** All three Section headers go through `header(_:)`, which sets `text.secondary`. The Pro group has no header, in the design or the code. The test pins #5C5850 and at least 4.5:1 on the canvas in both appearances. | Light: #5C5850 in the "About" header box. |
+| F3 | T-2698 | **Right in intent, unproven in two cases.** App-wide `UINavigationBar.appearance(for:)` per style, serif 600 in light and rounded 700 in dark (DisplayFont.spec, approved item 2), ink `text.primary`. Large and inline titles are both set. The scroll edge stays nil, so the system's transparent look keeps the same title attributes. Two risks a fresh-launch shot cannot show: (1) the ink is resolved to a fixed colour per style. If a bar that is already on screen does not pick up the other style's proxy when the user switches Light/Dark, the dark title is drawn #1C1B19 on #0A0C13. (2) A text-size change re-sets only the proxies, so a bar already on screen keeps the old size. New line T-2715. | Light and dark: the serif / rounded title in #1C1B19 / #EEF0F8, plus T-2715's shots. |
+| F4 | T-2699 | **Passes by reading.** Restore uses `SettingsRowLabel` with `arrow.down.to.line`, the same 30 pt `accent.soft` tile, title in `accent`, no trailing mark, the spinner kept at the trailing edge (`busy`), and the row disabled while it runs. From AX1 the tile hides on every row, so the titles still line up. | Light: Restore title x equals the Pro title x (about 226 px). |
+| F5 | T-2700 | **Passes by reading.** `ViewThatFits(in: .horizontal)` tries the one-line HStack at its ideal width, then falls back to the stacked layout (s5.10.6). The AX path is unchanged. The new UI test shoots xxxLarge with "Not purchased" and with Ask to Buy's "Waiting for approval". | Both xxxLarge shots: each status is whole, either beside the title or under it. |
+
+</div>
+
+
+Result: **T-2282 stays open.** It does not pass until the shots exist. Four of the five fixes read as correct. F3 also needs T-2715.
 {% endraw %}
 
 </div>

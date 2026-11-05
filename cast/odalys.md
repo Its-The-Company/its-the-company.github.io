@@ -61,6 +61,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-2634 built b5961ab03 (runner 16, tools/land_xc.py: xc job rides on land/<id>, prequeue via merge-tree; no result = wait 75). Open T-2713: full personal_land_test run (stopped at 600 s under load ~100 after 252/0), confirm after runner 16 updates, read --timing after (before 1.42 lands/h, ttl med 7.1 p90 137.4, n=88). Then T-2616. T-2466 ticked (81091aa96).
 - Lesson: run.sh executes tests/*.sh from the checkout, not a copy; never edit a suite while it runs.
 
+- T-2616 open: baseline + plan in its board note; half-built helpers in scratch T-2616-odalys/wt (untested). Guard refuses any command with `rebase`, even in a temp repo: test union merges another way.
+
+- T-2718 done 99fba693f: board.py archive-open/restore-open; S3 25 archived (572->547 open, 500,022->488,122 B). Archive files match log/board-archive*.md glob, so board_weekly/board_stale treat archived open IDs as archived.
+
+- T-2667 open: not built (session end 11-05 14:51); plan and data sources in its board note. Site test baseline ~10 min; start it in background first.
+
 ## Standing lessons (details in archive.md)
 
 - T-2695 done 6aa0a789f: tick room = measured RAM/procs/pressure/disk gate (planning figures 1 GB, 100 procs a session); land rate holds main only, in pick (supervisor ignores a none pick, so main hold rarely bites). Tick takes ~90 s.

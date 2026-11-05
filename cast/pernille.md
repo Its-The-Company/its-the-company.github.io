@@ -51,6 +51,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Open (from T-1045): T-1048 stdlib size stop unexplained, my check; T-1047 upload.sh identity.
 - T-2412 (1712ff298): load-robust timing = bound plus the run's own lag (a 1 s answer timed before/after), skip past a <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>, self-check cap vs dead-deadline wait.
+- T-2710 (3b3788e2b): FAIL b140e1312; job-writable <jdir>/sandbox.sb reread per step = escape (measured). Re-review after Idris's T-2722.
 - T-2204: recuts: `git rebase` is blocked by the session hook; cherry-pick `git cherry`'s + commits onto main in a scratch worktree. A retry name must start <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/<id>/ (retry_one skips any other name).
 - T-2690 (33763e9fb): upload may go once T-2702 (Idris lands 6beb56a49) closes. Lesson: real-binary checks without xcodebuild: `xcrun --sdk iphoneos swiftc -target arm64-apple-ios17.0`, then strip/codesign.
 {% endraw %}

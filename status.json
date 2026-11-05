@@ -1,28 +1,27 @@
 {
  "schema": 1,
- "at": "2026-11-05T15:20:22.766383+00:00",
+ "at": "2026-11-05T15:21:46.777598+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-05T09:52:38-05:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[test] T-1867 rerun personal land suite",
    "model": "opus",
    "started": "2026-11-05T14:54:08.338Z",
-   "seconds": 1574,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-05T15:21:21.405000+00:00"
   }
  ],
- "who": "Odalys",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 432,
+  "runnable_count": 431,
   "blocked_count": 129
  },
  "meter": {
@@ -65,7 +64,7 @@
   "week_pct": 51.55,
   "usage_pct": 42.7,
   "work_pct": 72.6,
-  "read_at": "2026-11-05T15:20:00+00:00",
+  "read_at": "2026-11-05T15:27:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -204,143 +203,6 @@
     "at": "2026-11-05T09:29:06-05:00",
     "n": "Evan",
     "d": 1
-   },
-   {
-    "lane": "a3",
-    "task": "T-2548",
-    "w": "Idris",
-    "k": "build",
-    "t": "Make the send check test prove its timing fix",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T09:32:38-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-2443",
-    "w": "Idris",
-    "k": "review",
-    "t": "Read T-2235 at 8159bb54, by someone other than its author",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T09:32:38-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a3",
-    "task": "T-2445",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Personal account b stopped on...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T09:32:38-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a3",
-    "task": "T-2446",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Personal account b3 stopped on T-2249+T-2250+T-2251+T-1455+T-1729+T-1730:...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T09:32:38-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-2447",
-    "w": "Pernille",
-    "k": "tools",
-    "t": "Personal account b3 stopped on T-2265+T-2261+T-2262+T-2268+T-2272: the...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T09:32:38-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a3",
-    "task": "T-2448",
-    "w": "Pernille",
-    "k": "tools",
-    "t": "Personal account b2 stopped on T-1989+T-1993",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T09:32:38-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-2449",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Personal account b3 stopped on...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T09:32:38-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-2450",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "A lane record main refused",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T09:32:38-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a3",
-    "task": "T-2477",
-    "w": "Idris",
-    "k": "tools",
-    "t": "Retry finished work that could not be merged",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T09:32:38-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a3",
-    "task": "T-2519",
-    "w": "Pernille",
-    "k": "tools",
-    "t": "Retry finished work that could not be merged",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T09:32:38-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-2553",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retry finished work that could not be merged",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T09:32:38-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-2554",
-    "w": "Pernille",
-    "k": "tools",
-    "t": "Retry finished work that could not be merged",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T09:32:38-05:00",
-    "n": "Evan"
    },
    {
     "lane": "b",
@@ -636,14 +498,14 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 718
+   "free_gb": 715
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T10:20:00-05:00"
+  "at": "2026-11-05T10:27:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -654,12 +516,11 @@
  "lanes": [
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[test] T-1867 rerun personal land suite",
-   "model": "opus",
-   "since": "2026-11-05T14:54:08.338Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
@@ -703,17 +564,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "test",
-    "t": "T-1867 rerun personal land suite",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T14:54:08.338Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -804,18 +655,30 @@
    }
   ],
   "count": {
-   "next": 432,
+   "next": 431,
    "wait": 42,
    "blocked": 87,
    "you": 19
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6661761095",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "I approve. For everything else, the..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -823,13 +686,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
-  "lanes": 4,
-  "total": 5,
-  "at": "10:20 AM",
+  "main": 0,
+  "lanes": 3,
+  "total": 3,
+  "at": "10:27 AM",
   "why": "",
-  "at_iso": "2026-11-05T15:20:00+00:00",
-  "started": "9:52 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:52 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:20 AM ET</p></section>"
+  "at_iso": "2026-11-05T15:27:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:27 AM ET</p></section>"
  }
 }

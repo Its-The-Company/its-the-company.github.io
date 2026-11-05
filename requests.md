@@ -13,7 +13,7 @@ issues: "3"
 <p class="lead">3 things the company needs from the Investors; 2 are one-word decisions. Answer each one here: tap an option or write a reply, add files if you need to, and send.</p>
 
 <p class="meta" id="needs-anon">With your GitHub token saved (<a href="{{ '/connect.html' | relative_url }}">Connect</a>), each request shows the company's question, its options as buttons and a reply box, a Close button, and the closed issues with their replies. Without it this page shows titles only.</p>
-<div id="needs-root" data-repo="Its-The-Company/itsthecompany" data-named="13 19 29 32 33 36 38 41 42 51 53 54 55 56 57 58 59 60" data-props="192" data-skip="39 41 197"></div>
+<div id="needs-root" data-repo="Its-The-Company/itsthecompany" data-named="13 19 29 32 33 36 38 41 42 51 53 54 55 56 57 58 59 60" data-props="192" data-skip="39 41"></div>
 
 <h2>Quick decisions</h2>
 <p class="meta">One word settles each.</p>

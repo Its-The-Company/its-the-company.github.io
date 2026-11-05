@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T00:02:21.659508+00:00",
+ "at": "2026-11-05T00:05:26.133248+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[test] T-1857 WidgetFaceRule entitled-Pro tests and three mutants",
    "model": "opus",
    "started": "2026-11-04T23:24:08.862Z",
-   "seconds": 2292,
+   "seconds": 2477,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[ops] T-2134 measure lane branches parked on unclean session ends",
    "model": "opus",
    "started": "2026-11-04T23:25:07.244Z",
-   "seconds": 2234,
+   "seconds": 2418,
    "finished": null,
    "effort": "high"
   }
@@ -56,7 +56,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 368,
+  "runnable_count": 371,
   "blocked_count": 124
  },
  "meter": {
@@ -99,8 +99,140 @@
   "week_pct": 37.35,
   "usage_pct": 37.7,
   "work_pct": 75.7,
-  "read_at": "2026-11-05T00:02:00+00:00",
+  "read_at": "2026-11-05T00:05:00+00:00",
   "running": [
+   {
+    "lane": "b",
+    "task": "T-2240",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "A lane record main refused",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T19:05:03-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2241",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal account b3 stopped on T-2210+T-2185",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T19:05:03-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2242",
+    "w": "Idris",
+    "k": "tools",
+    "t": "Personal account b2 stopped on T-2214",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T19:05:03-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2243",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "A lane record main refused",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T19:05:03-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1445",
+    "w": "Idris",
+    "k": "build",
+    "t": "Large Content Viewer on the bars that do not grow",
+    "m": "sonnet",
+    "e": "high",
+    "at": "2026-11-04T19:05:03-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1996",
+    "w": "Idris",
+    "k": "tools",
+    "t": "Personal account a2 stopped on...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T19:05:03-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1997",
+    "w": "Idris",
+    "k": "tools",
+    "t": "Personal account a3 stopped on...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T19:05:03-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1999",
+    "w": "Idris",
+    "k": "tools",
+    "t": "Personal branch personal/a did not land",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T19:05:03-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1854",
+    "w": "Idris",
+    "k": "build",
+    "t": "The extension writes no status.json and no run row",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T19:05:03-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1117",
+    "w": "Idris",
+    "k": "build",
+    "t": "The 6 rows marked gap in the Swift",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-04T19:05:03-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1284",
+    "w": "Idris",
+    "k": "test",
+    "t": "TestRefusedDestinationsDrawNoLink",
+    "m": "sonnet",
+    "e": "high",
+    "at": "2026-11-04T19:05:03-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1243",
+    "w": "Idris",
+    "k": "fix",
+    "t": "From T-0983",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-04T19:05:03-05:00",
+    "n": "Jeremy"
+   },
    {
     "lane": "b2",
     "task": "T-2237",
@@ -333,11 +465,7 @@
    {
     "lane": "b3",
     "task": "T-2235",
-    "w": "Pernille",
-    "k": "build",
-    "t": "T-0309-F1 Pernille, P2, from T-1801",
-    "m": "opus",
-    "e": "high",
+    "t": "T-2235",
     "at": "2026-11-04T18:25:40-05:00",
     "n": "Jeremy",
     "d": 1
@@ -382,7 +510,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-04T19:02:00-05:00"
+  "at": "2026-11-04T19:05:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -537,6 +665,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "tint is now tested to refuse the widget card in the Python writer, the schema and validate()....",
+    "at": "2026-11-04T19:04:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The MacBook test runner now runs version 11, which can run one test class instead of the whole...",
     "at": "2026-11-04T18:52:00-05:00"
@@ -545,15 +678,10 @@
     "w": "Pernille",
     "t": "Ten tasks' work from one account's lane could not join the main line because two tasks added...",
     "at": "2026-11-04T18:52:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Ines's notes file was 16 bytes from its size limit; three older lines moved unchanged to her...",
-    "at": "2026-11-04T18:20:00-05:00"
    }
   ],
   "count": {
-   "next": 368,
+   "next": 371,
    "wait": 38,
    "blocked": 86,
    "you": 16
@@ -585,12 +713,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 2,
-  "total": 4,
-  "at": "7:02 PM",
+  "lanes": 3,
+  "total": 5,
+  "at": "7:05 PM",
   "why": "",
-  "at_iso": "2026-11-05T00:02:00+00:00",
+  "at_iso": "2026-11-05T00:05:00+00:00",
   "started": "6:16 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:16 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:02 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:16 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:05 PM ET</p></section>"
  }
 }

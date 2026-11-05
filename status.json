@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T02:19:10.440165+00:00",
+ "at": "2026-11-05T02:24:09.298239+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[release] T-2270 first TestFlight build",
    "model": "opus",
    "started": "2026-11-05T02:07:06.614Z",
-   "seconds": 723,
+   "seconds": 1022,
    "finished": null,
    "effort": "high"
   },
@@ -21,16 +21,7 @@
    "task": "[site] T-2276 new Home live",
    "model": "opus",
    "started": "2026-11-05T02:07:22.070Z",
-   "seconds": 708,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[test] T-2274 governor red rows",
-   "model": "opus",
-   "started": "2026-11-05T02:07:27.820Z",
-   "seconds": 702,
+   "seconds": 1007,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +30,7 @@
    "task": "[tools] T-2210 personal land rate",
    "model": "opus",
    "started": "2026-11-05T02:07:39.381Z",
-   "seconds": 691,
+   "seconds": 989,
    "finished": null,
    "effort": "high"
   },
@@ -48,16 +39,7 @@
    "task": "[tools] T-2278 machine collector",
    "model": "opus",
    "started": "2026-11-05T02:07:53.572Z",
-   "seconds": 676,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[test] T-1848 atexit stop test",
-   "model": "opus",
-   "started": "2026-11-05T02:08:21.576Z",
-   "seconds": 648,
+   "seconds": 975,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +48,7 @@
    "task": "[build] T-1948 AgeLine next date change",
    "model": "opus",
    "started": "2026-11-05T02:13:12.134Z",
-   "seconds": 358,
+   "seconds": 657,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +57,7 @@
    "task": "[review] T-2299 review of 40c73fa22",
    "model": "opus",
    "started": "2026-11-05T02:15:36.851Z",
-   "seconds": 213,
+   "seconds": 512,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +66,7 @@
    "task": "[build] T-1977 reserve When p.held",
    "model": "opus",
    "started": "2026-11-05T02:17:07.639Z",
-   "seconds": 122,
+   "seconds": 421,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +75,7 @@
    "task": "[ops] T-2304 land no longer ends session",
    "model": "opus",
    "started": "2026-11-05T02:17:41.043Z",
-   "seconds": 89,
+   "seconds": 388,
    "finished": null,
    "effort": "high"
   },
@@ -102,22 +84,64 @@
    "task": "[tools] T-2303 queue-only runner command",
    "model": "opus",
    "started": "2026-11-05T02:18:31.046Z",
-   "seconds": 39,
+   "seconds": 338,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "wrenna",
+   "task": "[release] T-1761 rejection reply drafts",
+   "model": "opus",
+   "started": "2026-11-05T02:21:31.839Z",
+   "seconds": 157,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-1979 xc_route review + T-0309 check",
+   "model": "opus",
+   "started": "2026-11-05T02:22:04.596Z",
+   "seconds": 124,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-1901 runner unit-first kind card",
+   "task": "[ops] T-2306 deep workflow analysis",
    "model": "opus",
-   "started": "2026-11-05T02:18:39.013Z",
-   "seconds": 31,
+   "started": "2026-11-05T02:23:19.698Z",
+   "seconds": 49,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x3, Odalys x7, Pernille x2",
+ "who": "Idris x3, Odalys x6, Pernille x2, Wrenna",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-1901 runner unit-first kind card",
+   "model": "opus",
+   "started": "2026-11-05T02:18:39.013Z",
+   "seconds": null,
+   "finished": "2026-11-05T02:22:33.890000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[test] T-1848 atexit stop test",
+   "model": "opus",
+   "started": "2026-11-05T02:08:21.576Z",
+   "seconds": null,
+   "finished": "2026-11-05T02:21:45.458000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[test] T-2274 governor red rows",
+   "model": "opus",
+   "started": "2026-11-05T02:07:27.820Z",
+   "seconds": null,
+   "finished": "2026-11-05T02:21:08.493000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-1930 run file names test",
@@ -125,36 +149,12 @@
    "started": "2026-11-05T02:08:15.673Z",
    "seconds": null,
    "finished": "2026-11-05T02:17:20.538000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-2269 find refused runner commands (read-only)",
-   "model": "opus",
-   "started": "2026-11-05T02:10:21.786Z",
-   "seconds": null,
-   "finished": "2026-11-05T02:17:17.374000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-2298 session changeover idle time",
-   "model": "opus",
-   "started": "2026-11-05T02:07:47.025Z",
-   "seconds": null,
-   "finished": "2026-11-05T02:17:08.558000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-2279 Machine bubble + task lifecycle",
-   "model": "opus",
-   "started": "2026-11-05T02:08:01.024Z",
-   "seconds": null,
-   "finished": "2026-11-05T02:16:34.041000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 389,
+  "runnable_count": 391,
   "blocked_count": 124
  },
  "meter": {
@@ -197,7 +197,7 @@
   "week_pct": 36.78,
   "usage_pct": 37.0,
   "work_pct": 74.8,
-  "read_at": "2026-11-05T02:21:00+00:00",
+  "read_at": "2026-11-05T02:24:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -513,7 +513,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T21:21:00-05:00"
+  "at": "2026-11-04T21:24:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -543,9 +543,18 @@
   {
    "name": "Pernille",
    "state": "running",
-   "task": "[test] T-1848 atexit stop test",
+   "task": "[review] T-2299 review of 40c73fa22",
    "model": "opus",
-   "since": "2026-11-05T02:08:21.576Z",
+   "since": "2026-11-05T02:15:36.851Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Wrenna",
+   "state": "running",
+   "task": "[release] T-1761 rejection reply drafts",
+   "model": "opus",
+   "since": "2026-11-05T02:21:31.839Z",
    "next": [],
    "effort": "high"
   },
@@ -561,14 +570,6 @@
    "name": "Maren",
    "state": "next",
    "task": "Maren, P2, the design copy follows T-1441, so the stale...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Wrenna",
-   "state": "next",
-   "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
    "model": null,
    "since": null,
    "next": []
@@ -596,15 +597,6 @@
    },
    {
     "w": "Odalys",
-    "k": "test",
-    "t": "T-2274 governor red rows",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T02:07:27.820Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "tools",
     "t": "T-2210 personal land rate",
     "m": "opus",
@@ -619,15 +611,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T02:07:53.572Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "test",
-    "t": "T-1848 atexit stop test",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T02:08:21.576Z",
     "o": "c"
    },
    {
@@ -646,6 +629,24 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T02:15:36.851Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-1977 reserve When p.held",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T02:17:07.639Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "T-2304 land no longer ends session",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T02:17:41.043Z",
     "o": "c"
    }
   ],
@@ -677,13 +678,6 @@
     "t": "Make landing a merge queue as published...",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "test",
-    "t": "Tests/governor_personal_test.py has 2 red...",
-    "s": "next",
-    "o": "c"
    },
    {
     "w": "Pernille",
@@ -719,27 +713,34 @@
     "t": "Activity run log, Swift half",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Refresh control and age line in the renderer",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Odalys",
-    "t": "Found why the company's sessions could not send test runs to the MacBook: the test script can...",
-    "at": "2026-11-04T21:18:00-05:00"
+    "t": "Measured the MacBook test runs: the full suite takes about 38 minutes and the quick unit tests...",
+    "at": "2026-11-04T21:23:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "A new test now writes a widget's own files into a test folder and checks a project can never...",
-    "at": "2026-11-04T21:17:00-05:00"
+    "w": "Pernille",
+    "t": "The test for pressing Stop while a script's exit handlers run now also checks that the next...",
+    "at": "2026-11-04T21:21:00-05:00"
    },
    {
-    "w": "Maren",
-    "t": "Drew how the site will show both machines (memory, disk, Simulators, test queues) and a Task...",
-    "at": "2026-11-04T21:16:00-05:00"
+    "w": "Odalys",
+    "t": "A governor check was red because my 11-03 week-line change added three fields to its output and...",
+    "at": "2026-11-04T21:20:00-05:00"
    }
   ],
   "count": {
-   "next": 389,
+   "next": 391,
    "wait": 39,
    "blocked": 85,
    "you": 17
@@ -762,10 +763,10 @@
   "main": 12,
   "lanes": 3,
   "total": 15,
-  "at": "9:21 PM",
+  "at": "9:24 PM",
   "why": "",
-  "at_iso": "2026-11-05T02:21:00+00:00",
+  "at_iso": "2026-11-05T02:24:00+00:00",
   "started": "9:04 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>15</b> agents running now</p><p class=\"an-sub\">Main session 12, started 9:04 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:21 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>15</b> agents running now</p><p class=\"an-sub\">Main session 12, started 9:04 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:24 PM ET</p></section>"
  }
 }

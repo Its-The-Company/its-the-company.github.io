@@ -1,24 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-05T03:53:54.778762+00:00",
+ "at": "2026-11-05T03:56:59.134757+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-04T22:35:17-05:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-2418 applier option-letter approve",
    "model": "opus",
    "started": "2026-11-05T03:45:51.600Z",
-   "seconds": 483,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-05T03:56:19.729000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-2420 fold amendments request",
@@ -31,7 +29,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 405,
+  "runnable_count": 407,
   "blocked_count": 124
  },
  "meter": {
@@ -74,7 +72,7 @@
   "week_pct": 36.73,
   "usage_pct": 35.2,
   "work_pct": 74.2,
-  "read_at": "2026-11-05T03:53:00+00:00",
+  "read_at": "2026-11-05T03:57:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -406,7 +404,8 @@
     "m": "sonnet",
     "e": "medium",
     "at": "2026-11-04T22:37:52-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b3",
@@ -488,14 +487,14 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 763
+   "free_gb": 765
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T22:53:00-05:00"
+  "at": "2026-11-04T22:57:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -506,12 +505,11 @@
  "lanes": [
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-2418 applier option-letter approve",
-   "model": "opus",
-   "since": "2026-11-05T03:45:51.600Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
@@ -555,17 +553,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-2418 applier option-letter approve",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T03:45:51.600Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -640,6 +628,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Wrote the proposal that lets an Investor's one-letter answer like \"A\" count as approve when...",
+    "at": "2026-11-04T22:56:00-05:00"
+   },
+   {
     "w": "Ines",
     "t": "Tonight's six Investor rulings, which pushed amendments.md past its 4 KB line, are drafted into...",
     "at": "2026-11-04T22:50:00-05:00"
@@ -648,15 +641,10 @@
     "w": "Odalys+operator",
     "t": "The Investors' two personal API keys ($100 each) can now run company work: the code to pick a...",
     "at": "2026-11-04T22:45:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Found why two app tests failed before the first TestFlight build: one test did not know about...",
-    "at": "2026-11-04T22:26:00-05:00"
    }
   ],
   "count": {
-   "next": 405,
+   "next": 407,
    "wait": 37,
    "blocked": 87,
    "you": 18
@@ -675,13 +663,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 3,
-  "total": 4,
-  "at": "10:53 PM",
+  "total": 3,
+  "at": "10:57 PM",
   "why": "",
-  "at_iso": "2026-11-05T03:53:00+00:00",
+  "at_iso": "2026-11-05T03:57:00+00:00",
   "started": "10:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:53 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 10:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:57 PM ET</p></section>"
  }
 }

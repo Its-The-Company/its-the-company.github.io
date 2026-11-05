@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T10:12:19.432633+00:00",
+ "at": "2026-11-05T10:15:22.203528+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,25 +9,24 @@
  "workers": [
   {
    "name": "idris",
-   "task": "[release] T-2581 upload tool low findings",
-   "model": "opus",
-   "started": "2026-11-05T09:40:23.716Z",
-   "seconds": 1915,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
    "task": "[build] T-2583 prompt alert presentation fix",
    "model": "opus",
    "started": "2026-11-05T09:42:10.574Z",
-   "seconds": 1808,
+   "seconds": 1991,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2",
+ "who": "Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[release] T-2581 upload tool low findings",
+   "model": "opus",
+   "started": "2026-11-05T09:40:23.716Z",
+   "seconds": null,
+   "finished": "2026-11-05T10:13:14.610000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[ops] T-2249 parked lane branches verdict",
@@ -51,20 +50,12 @@
    "started": "2026-11-05T09:35:24.502Z",
    "seconds": null,
    "finished": "2026-11-05T09:41:52.293000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2582 personal account permission parity",
-   "model": "opus",
-   "started": "2026-11-05T09:38:55.927Z",
-   "seconds": null,
-   "finished": "2026-11-05T09:39:01.095Z"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 428,
+  "runnable_count": 427,
   "blocked_count": 126
  },
  "meter": {
@@ -107,7 +98,7 @@
   "week_pct": 51.58,
   "usage_pct": 42.8,
   "work_pct": 74.2,
-  "read_at": "2026-11-05T10:12:00+00:00",
+  "read_at": "2026-11-05T10:15:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -139,7 +130,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T05:12:00-05:00"
+  "at": "2026-11-05T05:15:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -151,9 +142,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[release] T-2581 upload tool low findings",
+   "task": "[build] T-2583 prompt alert presentation fix",
    "model": "opus",
-   "since": "2026-11-05T09:40:23.716Z",
+   "since": "2026-11-05T09:42:10.574Z",
    "next": [],
    "effort": "high"
   },
@@ -200,15 +191,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Idris",
-    "k": "release",
-    "t": "Tidy the upload tools after the second review",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T09:40:23.716Z",
-    "o": "c"
-   },
    {
     "w": "Idris",
     "k": "build",
@@ -293,23 +275,23 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The upload tools now accept only the company's one named main folder, and a build can only be...",
+    "at": "2026-11-05T05:13:00-05:00"
+   },
+   {
+    "w": "Operator",
+    "t": "The second branch that would not land failed on the same broken test as T-1673 (the first one);...",
+    "at": "2026-11-05T05:13:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The question whether finished work on badly ended lane sessions should still merge is answered:...",
     "at": "2026-11-05T04:49:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Work stranded when a lane session ended badly no longer needs its own rescue rule: the hourly...",
-    "at": "2026-11-05T04:49:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The supervisor's test suite was red because its throwaway copy picked up the company's live...",
-    "at": "2026-11-05T04:43:00-05:00"
    }
   ],
   "count": {
-   "next": 428,
+   "next": 427,
    "wait": 38,
    "blocked": 88,
    "you": 19
@@ -329,13 +311,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "5:12 AM",
+  "total": 1,
+  "at": "5:15 AM",
   "why": "",
-  "at_iso": "2026-11-05T10:12:00+00:00",
+  "at_iso": "2026-11-05T10:15:00+00:00",
   "started": "4:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:12 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 4:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:15 AM ET</p></section>"
  }
 }

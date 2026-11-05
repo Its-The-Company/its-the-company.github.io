@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T03:19:30.578701+00:00",
+ "at": "2026-11-05T03:22:31.784489+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,15 +12,7 @@
    "task": "[release] T-2356 TestFlight red tests",
    "model": "opus",
    "started": "2026-11-05T02:58:31.483Z",
-   "seconds": 1259,
-   "finished": null
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2353 land-rate continuation",
-   "model": "opus",
-   "started": "2026-11-05T02:58:52.536Z",
-   "seconds": 1238,
+   "seconds": 1440,
    "finished": null
   },
   {
@@ -28,28 +20,36 @@
    "task": "[tools] T-2149 lane-stop issue stays open",
    "model": "opus",
    "started": "2026-11-05T02:59:16.435Z",
-   "seconds": 1214,
+   "seconds": 1395,
    "finished": null
+  }
+ ],
+ "who": "Idris, Odalys",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2353 land-rate continuation",
+   "model": "opus",
+   "started": "2026-11-05T02:58:52.536Z",
+   "seconds": null,
+   "finished": "2026-11-05T03:21:51.136000+00:00"
   },
   {
    "name": "idris",
    "task": "[release] T-2370 internal archive mark and ledger",
    "model": "opus",
    "started": "2026-11-05T03:05:31.886Z",
-   "seconds": 838,
-   "finished": null
+   "seconds": null,
+   "finished": "2026-11-05T03:20:20.428000+00:00"
   },
   {
    "name": "pernille",
    "task": "[test] T-1757 bundled files open clean",
    "model": "opus",
    "started": "2026-11-05T03:12:28.533Z",
-   "seconds": 422,
-   "finished": null
-  }
- ],
- "who": "Idris x2, Odalys x2, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-05T03:20:07.164000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-2392 privacy guard closure gaps",
@@ -57,36 +57,12 @@
    "started": "2026-11-05T03:11:06.000Z",
    "seconds": null,
    "finished": "2026-11-05T03:19:06.739000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-2400 new Home replaces old",
-   "model": "opus",
-   "started": "2026-11-05T03:16:27.088Z",
-   "seconds": null,
-   "finished": "2026-11-05T03:19:06.227000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2404 amendments watch fold-aware",
-   "model": "opus",
-   "started": "2026-11-05T03:16:32.350Z",
-   "seconds": null,
-   "finished": "2026-11-05T03:18:51.259000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-2408 Live-with-Pro chip ruling",
-   "model": "opus",
-   "started": "2026-11-05T03:17:17.336Z",
-   "seconds": null,
-   "finished": "2026-11-05T03:18:44.667000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 405,
+  "runnable_count": 404,
   "blocked_count": 124
  },
  "meter": {
@@ -129,7 +105,7 @@
   "week_pct": 36.84,
   "usage_pct": 36.0,
   "work_pct": 74.5,
-  "read_at": "2026-11-05T03:19:00+00:00",
+  "read_at": "2026-11-05T03:22:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -446,7 +422,7 @@
   }
  ],
  "disk": {
-  "free_gb": 52,
+  "free_gb": 51,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -457,7 +433,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T22:19:00-05:00"
+  "at": "2026-11-04T22:22:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -477,23 +453,23 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-2353 land-rate continuation",
+   "task": "[tools] T-2149 lane-stop issue stays open",
    "model": "opus",
-   "since": "2026-11-05T02:58:52.536Z",
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[test] T-1757 bundled files open clean",
-   "model": "opus",
-   "since": "2026-11-05T03:12:28.533Z",
+   "since": "2026-11-05T02:59:16.435Z",
    "next": []
   },
   {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P2, Run heatmap levels by size, not brightness...",
    "model": null,
    "since": null,
    "next": []
@@ -528,33 +504,9 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "T-2353 land-rate continuation",
-    "m": "opus",
-    "at": "2026-11-05T02:58:52.536Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "T-2149 lane-stop issue stays open",
     "m": "opus",
     "at": "2026-11-05T02:59:16.435Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "release",
-    "t": "T-2370 internal archive mark and ledger",
-    "m": "opus",
-    "at": "2026-11-05T03:05:31.886Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "test",
-    "t": "T-1757 bundled files open clean",
-    "m": "opus",
-    "at": "2026-11-05T03:12:28.533Z",
     "o": "c"
    }
   ],
@@ -567,6 +519,13 @@
     "o": "i"
    },
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Continues T-2353 after 40f7afcee, P0",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "build",
     "t": "T-0296 follow-on reminder",
@@ -574,30 +533,16 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Continues the land-rate task after e8489970c, P0",
+    "w": "Pernille",
+    "k": "release",
+    "t": "Independent review",
     "s": "next",
-    "o": "i"
+    "o": "c"
    },
    {
     "w": "Idris",
     "k": "release",
     "t": "T-2270 continuation",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "release",
-    "t": "An --internal archive is unmarked and...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "release",
-    "t": "App Store Connect can't mark an...",
     "s": "next",
     "o": "c"
    },
@@ -628,27 +573,34 @@
     "t": "After T-1035 lands",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Activity run log, Swift half",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Odalys",
-    "t": "The check that watches the Investors' rule changes no longer cries wolf about six rulings that...",
-    "at": "2026-11-04T22:18:00-05:00"
+    "t": "The site's Lift stop button now works even when the stop's issue was closed early: it reopens...",
+    "at": "2026-11-04T22:22:00-05:00"
    },
    {
-    "w": "Ines",
-    "t": "Ruled that any widget kept fresh in the background is a Pro feature, wherever its data comes...",
-    "at": "2026-11-04T22:18:00-05:00"
+    "w": "Odalys",
+    "t": "The land test suite is green again (its red rows came from the test clock and a moved Keychain...",
+    "at": "2026-11-04T22:21:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "The check that keeps the App Store privacy label true now follows a picked file through every...",
-    "at": "2026-11-04T22:18:00-05:00"
+    "t": "An internal-test build is now marked inside the archive and the upload tool refuses to send it...",
+    "at": "2026-11-04T22:20:00-05:00"
    }
   ],
   "count": {
-   "next": 405,
+   "next": 404,
    "wait": 37,
    "blocked": 87,
    "you": 18
@@ -668,13 +620,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 5,
+  "main": 2,
   "lanes": 3,
-  "total": 8,
-  "at": "10:19 PM",
+  "total": 5,
+  "at": "10:22 PM",
   "why": "",
-  "at_iso": "2026-11-05T03:19:00+00:00",
+  "at_iso": "2026-11-05T03:22:00+00:00",
   "started": "9:55 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:55 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:19 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:55 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:22 PM ET</p></section>"
  }
 }

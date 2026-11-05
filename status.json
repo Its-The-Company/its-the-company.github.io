@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T08:44:36.131895+00:00",
+ "at": "2026-11-05T08:47:39.476653+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,20 +8,11 @@
  },
  "workers": [
   {
-   "name": "pernille",
-   "task": "[release] T-2413 review upload tools",
-   "model": "opus",
-   "started": "2026-11-05T08:37:18.834Z",
-   "seconds": 437,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[tools] T-2556 supervisor test reds",
    "model": "opus",
    "started": "2026-11-05T08:37:26.135Z",
-   "seconds": 429,
+   "seconds": 613,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +21,7 @@
    "task": "[tools] T-2414 close or retry parked work",
    "model": "opus",
    "started": "2026-11-05T08:37:33.456Z",
-   "seconds": 422,
+   "seconds": 606,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +30,7 @@
    "task": "[build] T-2537 land five parked fixes",
    "model": "opus",
    "started": "2026-11-05T08:37:47.438Z",
-   "seconds": 408,
+   "seconds": 592,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[tools] T-2542 land parked verdict fixes",
    "model": "opus",
    "started": "2026-11-05T08:37:53.216Z",
-   "seconds": 402,
+   "seconds": 586,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[build] T-2548 send check mutant",
    "model": "opus",
    "started": "2026-11-05T08:37:58.789Z",
-   "seconds": 397,
+   "seconds": 580,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +57,7 @@
    "task": "[build] T-2539 sort parked snapshots",
    "model": "opus",
    "started": "2026-11-05T08:41:01.055Z",
-   "seconds": 215,
+   "seconds": 398,
    "finished": null,
    "effort": "high"
   },
@@ -75,13 +66,30 @@
    "task": "[review] T-1872 traceback runner review",
    "model": "opus",
    "started": "2026-11-05T08:42:12.586Z",
-   "seconds": 143,
+   "seconds": 326,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[release] T-2563 upload tool fixes",
+   "model": "opus",
+   "started": "2026-11-05T08:46:56.226Z",
+   "seconds": 43,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille, Odalys x4, Idris x3",
+ "who": "Odalys x4, Idris x4",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[release] T-2413 review upload tools",
+   "model": "opus",
+   "started": "2026-11-05T08:37:18.834Z",
+   "seconds": null,
+   "finished": "2026-11-05T08:46:36.141000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-2545 write ruling (restart)",
@@ -105,20 +113,12 @@
    "started": "2026-11-05T08:38:07.490Z",
    "seconds": null,
    "finished": "2026-11-05T08:40:07.168000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2543 Gumroad no-fetch rule",
-   "model": "sonnet",
-   "started": "2026-11-05T08:38:11.334Z",
-   "seconds": null,
-   "finished": "2026-11-05T08:40:04.375000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 429,
+  "runnable_count": 433,
   "blocked_count": 125
  },
  "meter": {
@@ -161,7 +161,7 @@
   "week_pct": 49.11,
   "usage_pct": 41.6,
   "work_pct": 74.4,
-  "read_at": "2026-11-05T08:44:00+00:00",
+  "read_at": "2026-11-05T08:47:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -476,7 +476,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T03:44:00-05:00"
+  "at": "2026-11-05T03:47:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -485,15 +485,6 @@
   "at": "2026-11-05T03:35:18.803677-05:00"
  },
  "lanes": [
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[release] T-2413 review upload tools",
-   "model": "opus",
-   "since": "2026-11-05T08:37:18.834Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Odalys",
    "state": "running",
@@ -521,6 +512,14 @@
    "next": []
   },
   {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P2, no Xcode, after T-1440 lands (Idris review...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Maren",
    "state": "next",
    "task": "Maren+Odalys, P1, Investor an Investor c6651474906 (01:33...",
@@ -539,15 +538,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Pernille",
-    "k": "release",
-    "t": "Review the fixes to the build upload tools",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T08:37:18.834Z",
-    "o": "c"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -610,6 +600,15 @@
     "e": "high",
     "at": "2026-11-05T08:42:12.586Z",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "release",
+    "t": "Keep the internal-build record in the real repository only",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T08:46:56.226Z",
+    "o": "c"
    }
   ],
   "open": [
@@ -657,29 +656,29 @@
    },
    {
     "w": "Idris",
+    "k": "release",
+    "t": "Keep the internal-build record in the real...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "release",
+    "t": "Refuse an upload built from uncommitted code",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "release",
+    "t": "Check the second round of upload tool fixes",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
     "k": "build",
     "t": "Run Python widget scripts inside the widget...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop personal sessions taking more tasks...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Record each widget run in the app's activity log",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Refresh control and age line in the renderer",
     "s": "next",
     "o": "c"
    }
@@ -702,7 +701,7 @@
    }
   ],
   "count": {
-   "next": 429,
+   "next": 433,
    "wait": 38,
    "blocked": 87,
    "you": 19
@@ -725,10 +724,10 @@
   "main": 8,
   "lanes": 2,
   "total": 10,
-  "at": "3:44 AM",
+  "at": "3:47 AM",
   "why": "",
-  "at_iso": "2026-11-05T08:44:00+00:00",
+  "at_iso": "2026-11-05T08:47:00+00:00",
   "started": "3:35 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 8, started 3:35 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:44 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 8, started 3:35 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:47 AM ET</p></section>"
  }
 }

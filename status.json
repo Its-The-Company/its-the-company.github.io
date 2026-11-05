@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T18:57:48.678500+00:00",
+ "at": "2026-11-05T19:00:54.887820+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2634 land merges on MacBook in parallel",
    "model": "opus",
    "started": "2026-11-05T18:32:53.686Z",
-   "seconds": 1494,
+   "seconds": 1681,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2570 retry unmerged parked work",
    "model": "opus",
    "started": "2026-11-05T18:33:25.639Z",
-   "seconds": 1463,
+   "seconds": 1649,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[tools] T-2675 charter suite reds comparison",
    "model": "opus",
    "started": "2026-11-05T18:33:34.547Z",
-   "seconds": 1454,
+   "seconds": 1640,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +39,7 @@
    "task": "[test] T-2663 privacy check file-scan tests",
    "model": "opus",
    "started": "2026-11-05T18:34:03.791Z",
-   "seconds": 1424,
+   "seconds": 1611,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +48,7 @@
    "task": "[build] T-1677 record last run report at launch",
    "model": "opus",
    "started": "2026-11-05T18:37:36.900Z",
-   "seconds": 1211,
+   "seconds": 1397,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +57,7 @@
    "task": "[build] T-2567 traceback fold fixes, tick T-2413",
    "model": "opus",
    "started": "2026-11-05T18:38:29.185Z",
-   "seconds": 1159,
+   "seconds": 1345,
    "finished": null,
    "effort": "high"
   },
@@ -66,16 +66,7 @@
    "task": "[tools] T-2466 fix three red tool suites",
    "model": "opus",
    "started": "2026-11-05T18:41:11.554Z",
-   "seconds": 997,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-1140 activity log run sink",
-   "model": "opus",
-   "started": "2026-11-05T18:49:12.105Z",
-   "seconds": 516,
+   "seconds": 1183,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +75,7 @@
    "task": "[build] T-2486 stuck state must not freeze Restart",
    "model": "opus",
    "started": "2026-11-05T18:51:03.787Z",
-   "seconds": 404,
+   "seconds": 591,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +84,7 @@
    "task": "[review] T-2690 review last changes before test build",
    "model": "opus",
    "started": "2026-11-05T18:55:02.990Z",
-   "seconds": 165,
+   "seconds": 351,
    "finished": null,
    "effort": "high"
   },
@@ -102,13 +93,39 @@
    "task": "[design] T-2282 check Settings screen against design",
    "model": "opus",
    "started": "2026-11-05T18:55:22.147Z",
-   "seconds": 146,
+   "seconds": 332,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2695 personal accounts run their own sessions",
+   "model": "opus",
+   "started": "2026-11-05T18:58:09.544Z",
+   "seconds": 165,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2692 applier pin uses GitHub's copy",
+   "model": "opus",
+   "started": "2026-11-05T18:59:57.708Z",
+   "seconds": 57,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x3, Ines, Idris x4, Pernille x2, Maren",
+ "who": "Odalys x5, Ines, Idris x3, Pernille x2, Maren",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-1140 activity log run sink",
+   "model": "opus",
+   "started": "2026-11-05T18:49:12.105Z",
+   "seconds": null,
+   "finished": "2026-11-05T18:59:46.522000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-2678 review applier pinned-diff change",
@@ -132,20 +149,12 @@
    "started": "2026-11-05T18:48:04.523Z",
    "seconds": null,
    "finished": "2026-11-05T18:53:45.636000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[fix] T-2486 stuck state must not freeze Restart",
-   "model": "opus",
-   "started": "2026-11-05T18:50:54.764Z",
-   "seconds": null,
-   "finished": "2026-11-05T18:50:54.856Z"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 427,
+  "runnable_count": 428,
   "blocked_count": 129
  },
  "meter": {
@@ -188,7 +197,7 @@
   "week_pct": 58.5,
   "usage_pct": 45.5,
   "work_pct": 71.9,
-  "read_at": "2026-11-05T18:57:00+00:00",
+  "read_at": "2026-11-05T19:01:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -225,14 +234,14 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 705
+   "free_gb": 697
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-05T13:57:00-05:00"
+  "at": "2026-11-05T14:01:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -363,10 +372,10 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Record each widget run in the app's activity log",
+    "t": "Stuck state must not freeze Restart",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-05T18:49:12.105Z",
+    "at": "2026-11-05T18:51:03.787Z",
     "o": "c"
    }
   ],
@@ -414,6 +423,13 @@
     "o": "c"
    },
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Let every enabled personal account run its...",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Idris",
     "k": "build",
     "t": "Run Python widget scripts inside the widget...",
@@ -431,13 +447,6 @@
     "w": "Idris",
     "k": "build",
     "t": "Record each widget run in the app's activity log",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Add a refresh control and age line to widgets",
     "s": "next",
     "o": "c"
    }
@@ -460,7 +469,7 @@
    }
   ],
   "count": {
-   "next": 427,
+   "next": 428,
    "wait": 42,
    "blocked": 87,
    "you": 19
@@ -480,13 +489,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 11,
+  "main": 12,
   "lanes": 1,
-  "total": 12,
-  "at": "1:57 PM",
+  "total": 13,
+  "at": "2:01 PM",
   "why": "",
-  "at_iso": "2026-11-05T18:57:00+00:00",
+  "at_iso": "2026-11-05T19:01:00+00:00",
   "started": "1:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>12</b> agents running now</p><p class=\"an-sub\">Main session 11, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:57 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>13</b> agents running now</p><p class=\"an-sub\">Main session 12, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:01 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T18:54:41.607408+00:00",
+ "at": "2026-11-05T18:57:48.678500+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2634 land merges on MacBook in parallel",
    "model": "opus",
    "started": "2026-11-05T18:32:53.686Z",
-   "seconds": 1307,
+   "seconds": 1494,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2570 retry unmerged parked work",
    "model": "opus",
    "started": "2026-11-05T18:33:25.639Z",
-   "seconds": 1275,
+   "seconds": 1463,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[tools] T-2675 charter suite reds comparison",
    "model": "opus",
    "started": "2026-11-05T18:33:34.547Z",
-   "seconds": 1267,
+   "seconds": 1454,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +39,7 @@
    "task": "[test] T-2663 privacy check file-scan tests",
    "model": "opus",
    "started": "2026-11-05T18:34:03.791Z",
-   "seconds": 1237,
+   "seconds": 1424,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +48,7 @@
    "task": "[build] T-1677 record last run report at launch",
    "model": "opus",
    "started": "2026-11-05T18:37:36.900Z",
-   "seconds": 1024,
+   "seconds": 1211,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +57,7 @@
    "task": "[build] T-2567 traceback fold fixes, tick T-2413",
    "model": "opus",
    "started": "2026-11-05T18:38:29.185Z",
-   "seconds": 972,
+   "seconds": 1159,
    "finished": null,
    "effort": "high"
   },
@@ -66,16 +66,7 @@
    "task": "[tools] T-2466 fix three red tool suites",
    "model": "opus",
    "started": "2026-11-05T18:41:11.554Z",
-   "seconds": 810,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-2678 review applier pinned-diff change",
-   "model": "opus",
-   "started": "2026-11-05T18:47:57.394Z",
-   "seconds": 404,
+   "seconds": 997,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +75,7 @@
    "task": "[build] T-1140 activity log run sink",
    "model": "opus",
    "started": "2026-11-05T18:49:12.105Z",
-   "seconds": 329,
+   "seconds": 516,
    "finished": null,
    "effort": "high"
   },
@@ -93,13 +84,39 @@
    "task": "[build] T-2486 stuck state must not freeze Restart",
    "model": "opus",
    "started": "2026-11-05T18:51:03.787Z",
-   "seconds": 217,
+   "seconds": 404,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-2690 review last changes before test build",
+   "model": "opus",
+   "started": "2026-11-05T18:55:02.990Z",
+   "seconds": 165,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-2282 check Settings screen against design",
+   "model": "opus",
+   "started": "2026-11-05T18:55:22.147Z",
+   "seconds": 146,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x3, Ines, Idris x4, Pernille x2",
+ "who": "Odalys x3, Ines, Idris x4, Pernille x2, Maren",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-2678 review applier pinned-diff change",
+   "model": "opus",
+   "started": "2026-11-05T18:47:57.394Z",
+   "seconds": null,
+   "finished": "2026-11-05T18:56:22.718000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-2662 lane gate archive check",
@@ -123,20 +140,12 @@
    "started": "2026-11-05T18:50:54.764Z",
    "seconds": null,
    "finished": "2026-11-05T18:50:54.856Z"
-  },
-  {
-   "name": "idris",
-   "task": "[release] T-2456 first TestFlight build checks",
-   "model": "opus",
-   "started": "2026-11-05T18:33:43.690Z",
-   "seconds": null,
-   "finished": "2026-11-05T18:50:31.207000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 424,
+  "runnable_count": 427,
   "blocked_count": 129
  },
  "meter": {
@@ -179,7 +188,7 @@
   "week_pct": 58.5,
   "usage_pct": 45.5,
   "work_pct": 71.9,
-  "read_at": "2026-11-05T18:54:00+00:00",
+  "read_at": "2026-11-05T18:57:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -223,7 +232,7 @@
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-05T13:54:00-05:00"
+  "at": "2026-11-05T13:57:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -270,11 +279,12 @@
   },
   {
    "name": "Maren",
-   "state": "next",
-   "task": "Maren+Odalys, P1, Investor an Investor c6651474906 (01:33...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[design] T-2282 check Settings screen against design",
+   "model": "opus",
+   "since": "2026-11-05T18:55:22.147Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Wrenna",
@@ -351,12 +361,12 @@
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check the new way to apply a large approved change",
+    "w": "Idris",
+    "k": "build",
+    "t": "Record each widget run in the app's activity log",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-05T18:47:57.394Z",
+    "at": "2026-11-05T18:49:12.105Z",
     "o": "c"
    }
   ],
@@ -434,6 +444,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "Checked the new way to apply a very large approved change. It is not safe yet: it can apply a...",
+    "at": "2026-11-05T13:56:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "A test build of the phone app made for one memory experiment can no longer be packaged for...",
     "at": "2026-11-05T13:54:00-05:00"
@@ -442,15 +457,10 @@
     "w": "Odalys",
     "t": "The tool that writes questions for the Investors now refuses any question that is not about...",
     "at": "2026-11-05T13:53:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The tool that applies Investor-approved changes can now apply one too long for a GitHub issue,...",
-    "at": "2026-11-05T13:46:00-05:00"
    }
   ],
   "count": {
-   "next": 424,
+   "next": 427,
    "wait": 42,
    "blocked": 87,
    "you": 19
@@ -470,13 +480,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 10,
+  "main": 11,
   "lanes": 1,
-  "total": 11,
-  "at": "1:54 PM",
+  "total": 12,
+  "at": "1:57 PM",
   "why": "",
-  "at_iso": "2026-11-05T18:54:00+00:00",
+  "at_iso": "2026-11-05T18:57:00+00:00",
   "started": "1:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>11</b> agents running now</p><p class=\"an-sub\">Main session 10, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:54 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>12</b> agents running now</p><p class=\"an-sub\">Main session 11, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:57 PM ET</p></section>"
  }
 }

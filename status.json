@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T18:48:40.522701+00:00",
+ "at": "2026-11-05T18:51:41.636924+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2634 land merges on MacBook in parallel",
    "model": "opus",
    "started": "2026-11-05T18:32:53.686Z",
-   "seconds": 946,
+   "seconds": 1127,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2570 retry unmerged parked work",
    "model": "opus",
    "started": "2026-11-05T18:33:25.639Z",
-   "seconds": 914,
+   "seconds": 1095,
    "finished": null,
    "effort": "high"
   },
@@ -30,16 +30,7 @@
    "task": "[tools] T-2675 charter suite reds comparison",
    "model": "opus",
    "started": "2026-11-05T18:33:34.547Z",
-   "seconds": 905,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[release] T-2456 first TestFlight build checks",
-   "model": "opus",
-   "started": "2026-11-05T18:33:43.690Z",
-   "seconds": 896,
+   "seconds": 1087,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[build] T-2662 lane gate archive check",
    "model": "opus",
    "started": "2026-11-05T18:33:57.889Z",
-   "seconds": 882,
+   "seconds": 1063,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[test] T-2663 privacy check file-scan tests",
    "model": "opus",
    "started": "2026-11-05T18:34:03.791Z",
-   "seconds": 876,
+   "seconds": 1057,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +57,7 @@
    "task": "[build] T-1677 record last run report at launch",
    "model": "opus",
    "started": "2026-11-05T18:37:36.900Z",
-   "seconds": 663,
+   "seconds": 844,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +66,7 @@
    "task": "[build] T-2567 traceback fold fixes, tick T-2413",
    "model": "opus",
    "started": "2026-11-05T18:38:29.185Z",
-   "seconds": 611,
+   "seconds": 792,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +75,7 @@
    "task": "[tools] T-2466 fix three red tool suites",
    "model": "opus",
    "started": "2026-11-05T18:41:11.554Z",
-   "seconds": 448,
+   "seconds": 630,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +84,7 @@
    "task": "[review] T-2678 review applier pinned-diff change",
    "model": "opus",
    "started": "2026-11-05T18:47:57.394Z",
-   "seconds": 43,
+   "seconds": 224,
    "finished": null,
    "effort": "high"
   },
@@ -102,13 +93,47 @@
    "task": "[tools] T-2460 approvals only where Investors said",
    "model": "opus",
    "started": "2026-11-05T18:48:04.523Z",
-   "seconds": 35,
+   "seconds": 217,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-1140 activity log run sink",
+   "model": "opus",
+   "started": "2026-11-05T18:49:12.105Z",
+   "seconds": 149,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-2486 stuck state must not freeze Restart",
+   "model": "opus",
+   "started": "2026-11-05T18:51:03.787Z",
+   "seconds": 37,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x4, Ines, Idris x4, Pernille x2",
+ "who": "Odalys x4, Ines, Idris x5, Pernille x2",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[fix] T-2486 stuck state must not freeze Restart",
+   "model": "opus",
+   "started": "2026-11-05T18:50:54.764Z",
+   "seconds": null,
+   "finished": "2026-11-05T18:50:54.856Z"
+  },
+  {
+   "name": "idris",
+   "task": "[release] T-2456 first TestFlight build checks",
+   "model": "opus",
+   "started": "2026-11-05T18:33:43.690Z",
+   "seconds": null,
+   "finished": "2026-11-05T18:50:31.207000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-2661 widget memory verdict and demotion",
@@ -124,28 +149,12 @@
    "started": "2026-11-05T18:45:12.150Z",
    "seconds": null,
    "finished": "2026-11-05T18:47:19.616000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2672 applier reads pinned diff file",
-   "model": "opus",
-   "started": "2026-11-05T18:33:11.090Z",
-   "seconds": null,
-   "finished": "2026-11-05T18:47:15.028000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-1440 widget refresh control and age",
-   "model": "opus",
-   "started": "2026-11-05T18:34:10.891Z",
-   "seconds": null,
-   "finished": "2026-11-05T18:44:42.383000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 425,
+  "runnable_count": 426,
   "blocked_count": 129
  },
  "meter": {
@@ -188,7 +197,7 @@
   "week_pct": 58.5,
   "usage_pct": 45.5,
   "work_pct": 71.9,
-  "read_at": "2026-11-05T18:48:00+00:00",
+  "read_at": "2026-11-05T18:51:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -232,7 +241,7 @@
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-05T13:48:00-05:00"
+  "at": "2026-11-05T13:51:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -262,9 +271,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[release] T-2456 first TestFlight build checks",
+   "task": "[build] T-2662 lane gate archive check",
    "model": "opus",
-   "since": "2026-11-05T18:33:43.690Z",
+   "since": "2026-11-05T18:33:57.889Z",
    "next": [],
    "effort": "high"
   },
@@ -325,15 +334,6 @@
    },
    {
     "w": "Idris",
-    "k": "release",
-    "t": "Last checks before the first test build",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T18:33:43.690Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
     "k": "build",
     "t": "Close a second way to archive the phone test build",
     "m": "opus",
@@ -367,6 +367,15 @@
     "e": "high",
     "at": "2026-11-05T18:38:29.185Z",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix three red tool test suites",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T18:41:11.554Z",
+    "o": "c"
    }
   ],
   "open": [
@@ -395,6 +404,13 @@
     "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "release",
+    "t": "Review the last changes before the first...",
     "s": "next",
     "o": "c"
    },
@@ -432,13 +448,6 @@
     "t": "Add a refresh control and age line to widgets",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Finish recording the last run report at launch",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -459,7 +468,7 @@
    }
   ],
   "count": {
-   "next": 425,
+   "next": 426,
    "wait": 42,
    "blocked": 87,
    "you": 19
@@ -479,13 +488,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 11,
+  "main": 12,
   "lanes": 1,
-  "total": 12,
-  "at": "1:48 PM",
+  "total": 13,
+  "at": "1:51 PM",
   "why": "",
-  "at_iso": "2026-11-05T18:48:00+00:00",
+  "at_iso": "2026-11-05T18:51:00+00:00",
   "started": "1:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>12</b> agents running now</p><p class=\"an-sub\">Main session 11, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:48 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>13</b> agents running now</p><p class=\"an-sub\">Main session 12, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:51 PM ET</p></section>"
  }
 }

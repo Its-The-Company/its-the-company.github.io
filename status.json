@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T03:16:25.897830+00:00",
+ "at": "2026-11-05T03:19:30.578701+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[release] T-2356 TestFlight red tests",
    "model": "opus",
    "started": "2026-11-05T02:58:31.483Z",
-   "seconds": 1074,
+   "seconds": 1259,
    "finished": null
   },
   {
@@ -20,7 +20,7 @@
    "task": "[tools] T-2353 land-rate continuation",
    "model": "opus",
    "started": "2026-11-05T02:58:52.536Z",
-   "seconds": 1053,
+   "seconds": 1238,
    "finished": null
   },
   {
@@ -28,15 +28,7 @@
    "task": "[tools] T-2149 lane-stop issue stays open",
    "model": "opus",
    "started": "2026-11-05T02:59:16.435Z",
-   "seconds": 1029,
-   "finished": null
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2061 both disks in disk_free",
-   "model": "opus",
-   "started": "2026-11-05T02:59:21.685Z",
-   "seconds": 1024,
+   "seconds": 1214,
    "finished": null
   },
   {
@@ -44,31 +36,7 @@
    "task": "[release] T-2370 internal archive mark and ledger",
    "model": "opus",
    "started": "2026-11-05T03:05:31.886Z",
-   "seconds": 654,
-   "finished": null
-  },
-  {
-   "name": "wrenna",
-   "task": "[release] T-2375 store copy for B-staged",
-   "model": "opus",
-   "started": "2026-11-05T03:09:47.275Z",
-   "seconds": 398,
-   "finished": null
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-2374 Live-with-Pro badge",
-   "model": "opus",
-   "started": "2026-11-05T03:10:43.054Z",
-   "seconds": 342,
-   "finished": null
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2392 privacy guard closure gaps",
-   "model": "opus",
-   "started": "2026-11-05T03:11:06.000Z",
-   "seconds": 319,
+   "seconds": 838,
    "finished": null
   },
   {
@@ -76,57 +44,49 @@
    "task": "[test] T-1757 bundled files open clean",
    "model": "opus",
    "started": "2026-11-05T03:12:28.533Z",
-   "seconds": 237,
-   "finished": null
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-2402 plain task titles rule",
-   "model": "opus",
-   "started": "2026-11-05T03:13:21.912Z",
-   "seconds": 183,
+   "seconds": 422,
    "finished": null
   }
  ],
- "who": "Idris x3, Odalys x3, Wrenna, Maren, Pernille, Ines",
+ "who": "Idris x2, Odalys x2, Pernille",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] T-2368 MacBook runner parallel jobs",
+   "name": "idris",
+   "task": "[build] T-2392 privacy guard closure gaps",
    "model": "opus",
-   "started": "2026-11-05T03:04:33.677Z",
+   "started": "2026-11-05T03:11:06.000Z",
    "seconds": null,
-   "finished": "2026-11-05T03:15:50.657000+00:00"
+   "finished": "2026-11-05T03:19:06.739000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-2380 applier false Applied fix",
+   "task": "[site] T-2400 new Home replaces old",
    "model": "opus",
-   "started": "2026-11-05T03:05:49.765Z",
+   "started": "2026-11-05T03:16:27.088Z",
    "seconds": null,
-   "finished": "2026-11-05T03:15:38.580000+00:00"
+   "finished": "2026-11-05T03:19:06.227000+00:00"
   },
   {
-   "name": "wrenna",
-   "task": "[release] T-2397 review notes to new plan",
+   "name": "odalys",
+   "task": "[tools] T-2404 amendments watch fold-aware",
    "model": "opus",
-   "started": "2026-11-05T03:12:23.309Z",
+   "started": "2026-11-05T03:16:32.350Z",
    "seconds": null,
-   "finished": "2026-11-05T03:15:07.380000+00:00"
+   "finished": "2026-11-05T03:18:51.259000+00:00"
   },
   {
    "name": "ines",
-   "task": "[plan] T-2385 bell port route and T-2381",
+   "task": "[plan] T-2408 Live-with-Pro chip ruling",
    "model": "opus",
-   "started": "2026-11-05T03:09:53.935Z",
+   "started": "2026-11-05T03:17:17.336Z",
    "seconds": null,
-   "finished": "2026-11-05T03:13:02.791000+00:00"
+   "finished": "2026-11-05T03:18:44.667000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 408,
+  "runnable_count": 405,
   "blocked_count": 124
  },
  "meter": {
@@ -169,7 +129,7 @@
   "week_pct": 36.84,
   "usage_pct": 36.0,
   "work_pct": 74.5,
-  "read_at": "2026-11-05T03:16:00+00:00",
+  "read_at": "2026-11-05T03:19:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -252,7 +212,8 @@
     "m": "sonnet",
     "e": "medium",
     "at": "2026-11-04T20:02:28-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
@@ -402,7 +363,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T21:47:16-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b3",
@@ -495,7 +457,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T22:16:00-05:00"
+  "at": "2026-11-04T22:19:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -521,22 +483,6 @@
    "next": []
   },
   {
-   "name": "Wrenna",
-   "state": "running",
-   "task": "[release] T-2375 store copy for B-staged",
-   "model": "opus",
-   "since": "2026-11-05T03:09:47.275Z",
-   "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[design] T-2374 Live-with-Pro badge",
-   "model": "opus",
-   "since": "2026-11-05T03:10:43.054Z",
-   "next": []
-  },
-  {
    "name": "Pernille",
    "state": "running",
    "task": "[test] T-1757 bundled files open clean",
@@ -546,10 +492,26 @@
   },
   {
    "name": "Ines",
-   "state": "running",
-   "task": "[plan] T-2402 plain task titles rule",
-   "model": "opus",
-   "since": "2026-11-05T03:13:21.912Z",
+   "state": "next",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P2, the design copy follows T-1441, so the stale...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Wrenna",
+   "state": "next",
+   "task": "Wrenna, P2, note wording (Ines rulings T-2309, T-2310,...",
+   "model": null,
+   "since": null,
    "next": []
   }
  ],
@@ -580,14 +542,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-2061 both disks in disk_free",
-    "m": "opus",
-    "at": "2026-11-05T02:59:21.685Z",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "release",
     "t": "T-2370 internal archive mark and ledger",
@@ -596,27 +550,11 @@
     "o": "c"
    },
    {
-    "w": "Wrenna",
-    "k": "release",
-    "t": "T-2375 store copy for B-staged",
+    "w": "Pernille",
+    "k": "test",
+    "t": "T-1757 bundled files open clean",
     "m": "opus",
-    "at": "2026-11-05T03:09:47.275Z",
-    "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "T-2374 Live-with-Pro badge",
-    "m": "opus",
-    "at": "2026-11-05T03:10:43.054Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-2392 privacy guard closure gaps",
-    "m": "opus",
-    "at": "2026-11-05T03:11:06.000Z",
+    "at": "2026-11-05T03:12:28.533Z",
     "o": "c"
    }
   ],
@@ -694,23 +632,23 @@
   ],
   "done": [
    {
-    "w": "Maren",
-    "t": "Drew how the one premade that refreshes from the internet is marked: a 'Live with Pro' chip in...",
-    "at": "2026-11-04T22:16:00-05:00"
-   },
-   {
-    "w": "Ines+operator",
-    "t": "The permission line that lets sessions free a stuck build slot is now in the settings; Evan...",
-    "at": "2026-11-04T22:15:00-05:00"
-   },
-   {
     "w": "Odalys",
-    "t": "The tool that applies approved proposals no longer marks one as done just because another commit...",
-    "at": "2026-11-04T22:15:00-05:00"
+    "t": "The check that watches the Investors' rule changes no longer cries wolf about six rulings that...",
+    "at": "2026-11-04T22:18:00-05:00"
+   },
+   {
+    "w": "Ines",
+    "t": "Ruled that any widget kept fresh in the background is a Pro feature, wherever its data comes...",
+    "at": "2026-11-04T22:18:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "The check that keeps the App Store privacy label true now follows a picked file through every...",
+    "at": "2026-11-04T22:18:00-05:00"
    }
   ],
   "count": {
-   "next": 408,
+   "next": 405,
    "wait": 37,
    "blocked": 87,
    "you": 18
@@ -726,16 +664,17 @@
   "task_title",
   "done_text",
   "task_open",
+  "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 10,
+  "main": 5,
   "lanes": 3,
-  "total": 13,
-  "at": "10:16 PM",
+  "total": 8,
+  "at": "10:19 PM",
   "why": "",
-  "at_iso": "2026-11-05T03:16:00+00:00",
+  "at_iso": "2026-11-05T03:19:00+00:00",
   "started": "9:55 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>13</b> agents running now</p><p class=\"an-sub\">Main session 10, started 9:55 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:16 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:55 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:19 PM ET</p></section>"
  }
 }

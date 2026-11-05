@@ -48,9 +48,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-2398 stopped at land (classifier refusal); branch lane/t2398-bell e09247c10 waits Ines. composer_test red on main since T-2400.
 - T-1900 done c23d5ff06: board.py similar (report only; supervisor 12a1 -> ops/runs/board-similar.log). Board size is open lines (411 of 447 KB), not missed archives. <span title="A measured fact that holds a grade below a letter, however good the rest is.">Cap</span> proposal ops/plans/board-cap.md waits Ines; read 7 days after it lands (before 421898 B, 446 open, 90 waiting).
 
-- T-2479 open: lane settings-key refusal lives in rules/personal_lane.py (approve-only); proposal #196 (untested: scratch copy of rules/ refused). Tick only after a lane-a session runs, then reply #41. supervisor 68aaffc49: credits_out chains at once.
+- T-2637 done 75a1a8b91 (T-2479 ticked): merge_queue flooded personal_retry.txt (340 live); each slot took a retry and exited, no session. Gate: retry <=1/h/account when tasks exist. Open: backlog drains slowly; tune merge_queue feed. personal_off_test 62 fails pre-exist on HEAD.
 
 - T-2622 done b01841913: runner 15, up to 6 jobs at once (slots per check-in RAM/8 GB, procs/200; planning figures, unmeasured), land/* commits accepted. OPT-091 read n=30 jobs or 11-12 (tools/job_waits.py; before median 23.9, p90 120.9 min, n=25). T-2634 = T-2621 remainder (personal_land.sh push/queue/wait, land-live parallel host checks). OPT-076 dup renumbered OPT-092. Pre-existing stale mutants: "admin allowed", "check-in without Xcode".
+
+- T-2630 done 33e957369: dispatcher ON 11-05 09:39 (ops/dispatch.json); supervisor Operator sessions take pick --kind operator. T-2641 cut split after 11-07; T-2642 stats +24h/+7d. Main-plan worktrees not done.
 
 ## Standing lessons (details in archive.md)
 

@@ -1,13 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-05T06:43:17.992282+00:00",
+ "at": "2026-11-05T06:46:18.738930+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-05T01:40:13-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2467 merge queue real run",
+   "model": "opus",
+   "started": "2026-11-05T06:44:40.848Z",
+   "seconds": 97,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -55,8 +65,141 @@
   "week_pct": 49.11,
   "usage_pct": 41.6,
   "work_pct": 74.6,
-  "read_at": "2026-11-05T06:43:00+00:00",
-  "running": []
+  "read_at": "2026-11-05T06:46:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-2479",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Restart Evan's account and avoid credit gaps",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T01:43:35-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-2456",
+    "w": "Idris",
+    "k": "release",
+    "t": "Last checks before the first test build",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T01:43:35-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-2460",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Ask for approval only where the Investors said",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T01:43:35-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-2466",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix three red tool test suites",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T01:43:35-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-2468",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Measure the tool-call budget experiment",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T01:43:35-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-2480",
+    "w": "Maren",
+    "k": "site",
+    "t": "Simplify Chat, Usage and Lock In on the site",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T01:43:35-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-2469",
+    "w": "Maren",
+    "k": "design",
+    "t": "Redesign Home around the task stages",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T01:43:35-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-2470",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "One shared queue for all Simulator test work",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T01:43:35-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-2471",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Send each task to the account with most usage left",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T01:43:35-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-2472",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Find and make the biggest simplifications",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T01:43:35-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-2316",
+    "w": "Idris",
+    "k": "release",
+    "t": "Swift, before T-2270's external stage",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T01:43:35-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-2407",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Write plain titles for all open board tasks",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T01:43:35-05:00",
+    "n": "Evan"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -87,7 +230,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T01:43:00-05:00"
+  "at": "2026-11-05T01:46:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -98,11 +241,12 @@
  "lanes": [
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, after T-1035 lands (personal-account...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-2467 merge queue real run",
+   "model": "opus",
+   "since": "2026-11-05T06:44:40.848Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Idris",
@@ -146,7 +290,17 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Finish the queue that merges finished work",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T06:44:40.848Z",
+    "o": "c"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -244,33 +398,11 @@
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6651588180",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Remove everything in the Chat page..."
-  },
-  {
-   "id": "c6651598348",
-   "state": "received",
-   "position": 2,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Tasks should also not be on the Chat..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -278,13 +410,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "1:43 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-05T06:43:00+00:00",
+  "main": 1,
+  "lanes": 1,
+  "total": 2,
+  "at": "1:46 AM",
+  "why": "",
+  "at_iso": "2026-11-05T06:46:00+00:00",
   "started": "1:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:43 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:46 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T07:27:58.449368+00:00",
+ "at": "2026-11-05T07:31:01.879487+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[build] T-0675 extension lane next slice",
    "model": "opus",
    "started": "2026-11-05T06:56:14.651Z",
-   "seconds": 1903,
+   "seconds": 2087,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[release] T-2319 stdlib ctypes host check",
    "model": "opus",
    "started": "2026-11-05T06:57:31.560Z",
-   "seconds": 1826,
+   "seconds": 2010,
    "finished": null,
    "effort": "high"
   },
@@ -30,16 +30,7 @@
    "task": "[tools] T-2517 queue all parked finished work",
    "model": "opus",
    "started": "2026-11-05T07:09:33.075Z",
-   "seconds": 1105,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-2239 lift card at AX5",
-   "model": "opus",
-   "started": "2026-11-05T07:13:58.415Z",
-   "seconds": 840,
+   "seconds": 1288,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[tools] T-2525 sweep keeps unapplied folds open",
    "model": "opus",
    "started": "2026-11-05T07:25:40.084Z",
-   "seconds": 138,
+   "seconds": 321,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[tools] T-2323 reports inside work session",
    "model": "opus",
    "started": "2026-11-05T07:25:49.109Z",
-   "seconds": 129,
+   "seconds": 312,
    "finished": null,
    "effort": "high"
   },
@@ -66,13 +57,47 @@
    "task": "[build] T-2518 error badge through memory refusal",
    "model": "opus",
    "started": "2026-11-05T07:27:55.728Z",
-   "seconds": 2,
+   "seconds": 186,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-2382 T-2383 T-2384 send plan fixes",
+   "model": "opus",
+   "started": "2026-11-05T07:28:02.007Z",
+   "seconds": 179,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[test] T-2515 notification boundary mutants",
+   "model": "opus",
+   "started": "2026-11-05T07:29:11.214Z",
+   "seconds": 110,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2, Pernille, Odalys x3, Maren",
+ "who": "Idris x4, Pernille, Odalys x3",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[fix] T-2515 notification boundary mutants",
+   "model": "opus",
+   "started": "2026-11-05T07:29:04.637Z",
+   "seconds": null,
+   "finished": "2026-11-05T07:29:04.724Z"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-2239 lift card at AX5",
+   "model": "opus",
+   "started": "2026-11-05T07:13:58.415Z",
+   "seconds": null,
+   "finished": "2026-11-05T07:28:42.202000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[build] T-2514 reset restores unraisablehook",
@@ -88,28 +113,12 @@
    "started": "2026-11-05T06:50:51.255Z",
    "seconds": null,
    "finished": "2026-11-05T07:24:28.949000+00:00"
-  },
-  {
-   "name": "general-purpose",
-   "task": "[ops] Pernille memory file under 4 KB",
-   "model": "sonnet",
-   "started": "2026-11-05T07:14:03.661Z",
-   "seconds": null,
-   "finished": "2026-11-05T07:14:57.718000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-1741 memory badge ruling",
-   "model": "opus",
-   "started": "2026-11-05T07:09:50.807Z",
-   "seconds": null,
-   "finished": "2026-11-05T07:13:23.899000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 431,
+  "runnable_count": 429,
   "blocked_count": 124
  },
  "meter": {
@@ -152,7 +161,7 @@
   "week_pct": 49.11,
   "usage_pct": 41.6,
   "work_pct": 74.6,
-  "read_at": "2026-11-05T07:28:00+00:00",
+  "read_at": "2026-11-05T07:31:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -359,7 +368,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T02:01:40-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
@@ -447,7 +457,7 @@
   }
  ],
  "disk": {
-  "free_gb": 41,
+  "free_gb": 42,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -458,7 +468,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T02:28:00-05:00"
+  "at": "2026-11-05T02:31:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -495,18 +505,17 @@
    "effort": "high"
   },
   {
-   "name": "Maren",
-   "state": "running",
-   "task": "[design] T-2239 lift card at AX5",
-   "model": "opus",
-   "since": "2026-11-05T07:13:58.415Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren+Odalys, P1, Investor an Investor c6651474906 (01:33...",
    "model": null,
    "since": null,
    "next": []
@@ -550,15 +559,6 @@
     "o": "c"
    },
    {
-    "w": "Maren",
-    "k": "design",
-    "t": "Fit the lift card at the largest text size",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T07:13:58.415Z",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Keep approved folds open until they apply",
@@ -583,6 +583,24 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T07:27:55.728Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Treat a missing file change time as changed",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T07:28:02.007Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "Keep the notification limit checks tested",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T07:29:11.214Z",
     "o": "c"
    }
   ],
@@ -660,6 +678,11 @@
   ],
   "done": [
    {
+    "w": "Maren",
+    "t": "At the largest text size, the card that lets a person move a widget back from the app to the...",
+    "at": "2026-11-05T02:28:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Restarting a script now also undoes any change it made to how Python reports errors it has to...",
     "at": "2026-11-05T02:27:00-05:00"
@@ -668,15 +691,10 @@
     "w": "Odalys",
     "t": "Proposals the Investors approve can now be applied while a work session is running, instead of...",
     "at": "2026-11-05T02:24:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The parked fix that stops the proposal applier from mistaking one proposal's commit for...",
-    "at": "2026-11-05T02:14:00-05:00"
    }
   ],
   "count": {
-   "next": 431,
+   "next": 429,
    "wait": 38,
    "blocked": 86,
    "you": 18
@@ -696,13 +714,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 7,
+  "main": 8,
   "lanes": 2,
-  "total": 9,
-  "at": "2:28 AM",
+  "total": 10,
+  "at": "2:31 AM",
   "why": "",
-  "at_iso": "2026-11-05T07:28:00+00:00",
+  "at_iso": "2026-11-05T07:31:00+00:00",
   "started": "1:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 7, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:28 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 8, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:31 AM ET</p></section>"
  }
 }

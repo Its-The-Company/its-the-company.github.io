@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T03:50:51.942839+00:00",
+ "at": "2026-11-05T03:53:54.778762+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,22 @@
    "task": "[tools] T-2418 applier option-letter approve",
    "model": "opus",
    "started": "2026-11-05T03:45:51.600Z",
-   "seconds": 300,
+   "seconds": 483,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
   {
    "name": "ines",
    "task": "[plan] T-2420 fold amendments request",
    "model": "opus",
    "started": "2026-11-05T03:45:59.384Z",
-   "seconds": 292,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-05T03:50:58.969000+00:00"
   }
  ],
- "who": "Odalys, Ines",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -74,7 +74,7 @@
   "week_pct": 36.73,
   "usage_pct": 35.2,
   "work_pct": 74.2,
-  "read_at": "2026-11-05T03:50:00+00:00",
+  "read_at": "2026-11-05T03:53:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -495,7 +495,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T22:50:00-05:00"
+  "at": "2026-11-04T22:53:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -514,18 +514,17 @@
    "effort": "high"
   },
   {
-   "name": "Ines",
-   "state": "running",
-   "task": "[plan] T-2420 fold amendments request",
-   "model": "opus",
-   "since": "2026-11-05T03:45:59.384Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -564,15 +563,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T03:45:51.600Z",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "T-2420 fold amendments request",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T03:45:59.384Z",
     "o": "c"
    }
   ],
@@ -650,6 +640,11 @@
   ],
   "done": [
    {
+    "w": "Ines",
+    "t": "Tonight's six Investor rulings, which pushed amendments.md past its 4 KB line, are drafted into...",
+    "at": "2026-11-04T22:50:00-05:00"
+   },
+   {
     "w": "Odalys+operator",
     "t": "The Investors' two personal API keys ($100 each) can now run company work: the code to pick a...",
     "at": "2026-11-04T22:45:00-05:00"
@@ -658,11 +653,6 @@
     "w": "Idris",
     "t": "Found why two app tests failed before the first TestFlight build: one test did not know about...",
     "at": "2026-11-04T22:26:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The site's Lift stop button now works even when the stop's issue was closed early: it reopens...",
-    "at": "2026-11-04T22:22:00-05:00"
    }
   ],
   "count": {
@@ -685,13 +675,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 3,
-  "total": 5,
-  "at": "10:50 PM",
+  "total": 4,
+  "at": "10:53 PM",
   "why": "",
-  "at_iso": "2026-11-05T03:50:00+00:00",
+  "at_iso": "2026-11-05T03:53:00+00:00",
   "started": "10:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:50 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:53 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T18:39:34.076213+00:00",
+ "at": "2026-11-05T18:42:39.351108+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,16 +12,7 @@
    "task": "[tools] T-2634 land merges on MacBook in parallel",
    "model": "opus",
    "started": "2026-11-05T18:32:53.686Z",
-   "seconds": 400,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2615 finish one dispatcher",
-   "model": "opus",
-   "started": "2026-11-05T18:33:02.286Z",
-   "seconds": 391,
+   "seconds": 585,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +21,7 @@
    "task": "[tools] T-2672 applier reads pinned diff file",
    "model": "opus",
    "started": "2026-11-05T18:33:11.090Z",
-   "seconds": 382,
+   "seconds": 568,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +30,7 @@
    "task": "[tools] T-2570 retry unmerged parked work",
    "model": "opus",
    "started": "2026-11-05T18:33:25.639Z",
-   "seconds": 368,
+   "seconds": 553,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[tools] T-2675 charter suite reds comparison",
    "model": "opus",
    "started": "2026-11-05T18:33:34.547Z",
-   "seconds": 359,
+   "seconds": 544,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[release] T-2456 first TestFlight build checks",
    "model": "opus",
    "started": "2026-11-05T18:33:43.690Z",
-   "seconds": 350,
+   "seconds": 535,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +57,7 @@
    "task": "[build] T-2661 widget memory verdict and demotion",
    "model": "opus",
    "started": "2026-11-05T18:33:51.144Z",
-   "seconds": 342,
+   "seconds": 528,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +66,7 @@
    "task": "[build] T-2662 lane gate archive check",
    "model": "opus",
    "started": "2026-11-05T18:33:57.889Z",
-   "seconds": 336,
+   "seconds": 521,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +75,7 @@
    "task": "[test] T-2663 privacy check file-scan tests",
    "model": "opus",
    "started": "2026-11-05T18:34:03.791Z",
-   "seconds": 330,
+   "seconds": 515,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +84,7 @@
    "task": "[build] T-1440 widget refresh control and age",
    "model": "opus",
    "started": "2026-11-05T18:34:10.891Z",
-   "seconds": 323,
+   "seconds": 508,
    "finished": null,
    "effort": "high"
   },
@@ -102,7 +93,7 @@
    "task": "[build] T-1677 record last run report at launch",
    "model": "opus",
    "started": "2026-11-05T18:37:36.900Z",
-   "seconds": 117,
+   "seconds": 302,
    "finished": null,
    "effort": "high"
   },
@@ -111,13 +102,30 @@
    "task": "[build] T-2567 traceback fold fixes, tick T-2413",
    "model": "opus",
    "started": "2026-11-05T18:38:29.185Z",
-   "seconds": 64,
+   "seconds": 250,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2466 fix three red tool suites",
+   "model": "opus",
+   "started": "2026-11-05T18:41:11.554Z",
+   "seconds": 87,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x4, Ines, Idris x6, Pernille",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2615 finish one dispatcher",
+   "model": "opus",
+   "started": "2026-11-05T18:33:02.286Z",
+   "seconds": null,
+   "finished": "2026-11-05T18:40:59.003000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2669 renumber duplicate OPT-077",
@@ -189,7 +197,7 @@
   "week_pct": 58.5,
   "usage_pct": 45.5,
   "work_pct": 71.9,
-  "read_at": "2026-11-05T18:39:00+00:00",
+  "read_at": "2026-11-05T18:42:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -214,14 +222,14 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 711
+   "free_gb": 708
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-05T13:39:00-05:00"
+  "at": "2026-11-05T13:42:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -297,15 +305,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Build the one dispatcher for every account",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T18:33:02.286Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Apply a large approved change from a pinned file",
     "m": "opus",
     "e": "high",
@@ -356,6 +355,15 @@
     "e": "high",
     "at": "2026-11-05T18:33:57.889Z",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "Privacy check flags a runaway file scan first",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T18:34:03.791Z",
+    "o": "c"
    }
   ],
   "open": [
@@ -365,13 +373,6 @@
     "t": "Run every lane's merge tests on the MacBook...",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Build the one dispatcher for every account",
-    "s": "next",
-    "o": "i"
    },
    {
     "w": "Odalys",
@@ -428,9 +429,21 @@
     "t": "Add a refresh control and age line to widgets",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Finish recording the last run report at launch",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "The one dispatcher that hands tasks to every account is built and on. It had started nothing...",
+    "at": "2026-11-05T13:40:00-05:00"
+   },
    {
     "w": "Pernille",
     "t": "The upload tools passed their second review: all six problems found in the first review are...",
@@ -440,11 +453,6 @@
     "w": "Odalys",
     "t": "Two experiments in the company's improvement log shared one number, so the log's own check...",
     "at": "2026-11-05T13:37:00-05:00"
-   },
-   {
-    "w": "Idris+pernille",
-    "t": "The automatic check for two finished changes ran out of time on a busy machine with every test...",
-    "at": "2026-11-05T13:19:00-05:00"
    }
   ],
   "count": {
@@ -470,10 +478,10 @@
   "main": 12,
   "lanes": 0,
   "total": 12,
-  "at": "1:39 PM",
+  "at": "1:42 PM",
   "why": "",
-  "at_iso": "2026-11-05T18:39:00+00:00",
+  "at_iso": "2026-11-05T18:42:00+00:00",
   "started": "1:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>12</b> agents running now</p><p class=\"an-sub\">Main session 12, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:39 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>12</b> agents running now</p><p class=\"an-sub\">Main session 12, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:42 PM ET</p></section>"
  }
 }

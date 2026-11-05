@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T06:52:25.157565+00:00",
+ "at": "2026-11-05T06:56:24.597435+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,19 +9,10 @@
  "workers": [
   {
    "name": "pernille",
-   "task": "[review] T-2265 Pernille concurrency review",
-   "model": "opus",
-   "started": "2026-11-05T06:50:25.072Z",
-   "seconds": 120,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
    "task": "[review] T-2272 Pernille extension-lane review",
    "model": "opus",
    "started": "2026-11-05T06:50:33.417Z",
-   "seconds": 111,
+   "seconds": 351,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +21,7 @@
    "task": "[review] T-2283 Odalys Settings screen review",
    "model": "opus",
    "started": "2026-11-05T06:50:40.570Z",
-   "seconds": 104,
+   "seconds": 344,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +30,7 @@
    "task": "[tools] T-2483 applier chain T-2476 T-2484",
    "model": "opus",
    "started": "2026-11-05T06:50:51.255Z",
-   "seconds": 93,
+   "seconds": 333,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[tools] T-2481 rebase machine tracking",
    "model": "opus",
    "started": "2026-11-05T06:50:57.404Z",
-   "seconds": 87,
+   "seconds": 327,
    "finished": null,
    "effort": "high"
   },
@@ -57,34 +48,7 @@
    "task": "[build] T-2463 file name and error text ruling",
    "model": "opus",
    "started": "2026-11-05T06:51:05.376Z",
-   "seconds": 79,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-2247 on-phone session request",
-   "model": "opus",
-   "started": "2026-11-05T06:51:12.832Z",
-   "seconds": 72,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "wrenna",
-   "task": "[release] T-2482 redo review-note wording",
-   "model": "opus",
-   "started": "2026-11-05T06:51:18.676Z",
-   "seconds": 66,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[test] T-2266 queue runner job bridge tests",
-   "model": "opus",
-   "started": "2026-11-05T06:51:26.934Z",
-   "seconds": 58,
+   "seconds": 319,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +57,7 @@
    "task": "[research] T-2262 editor tooling runtime read",
    "model": "opus",
    "started": "2026-11-05T06:51:33.944Z",
-   "seconds": 51,
+   "seconds": 290,
    "finished": null,
    "effort": "high"
   },
@@ -102,26 +66,86 @@
    "task": "[ops] T-2277 confirm applied",
    "model": "opus",
    "started": "2026-11-05T06:52:00.418Z",
-   "seconds": 24,
+   "seconds": 264,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-2282 Settings screen read",
+   "model": "opus",
+   "started": "2026-11-05T06:53:39.363Z",
+   "seconds": 165,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-2352 workflow page ruling, key lanes",
+   "model": "opus",
+   "started": "2026-11-05T06:54:53.604Z",
+   "seconds": 90,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-0675 extension lane next slice",
+   "model": "opus",
+   "started": "2026-11-05T06:56:14.651Z",
+   "seconds": 9,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-2475 delete refusal ruling",
+   "model": "opus",
+   "started": "2026-11-05T06:56:19.945Z",
+   "seconds": 4,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille x4, Odalys x4, Ines, Wrenna, Idris",
+ "who": "Pernille x3, Odalys x4, Maren, Ines x2, Idris",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] T-2467 merge queue real run",
+   "name": "pernille",
+   "task": "[review] T-2265 Pernille concurrency review",
    "model": "opus",
-   "started": "2026-11-05T06:44:40.848Z",
+   "started": "2026-11-05T06:50:25.072Z",
    "seconds": null,
-   "finished": "2026-11-05T06:49:44.435000+00:00"
+   "finished": "2026-11-05T06:56:22.043000+00:00"
+  },
+  {
+   "name": "wrenna",
+   "task": "[release] T-2320 rest of release drafts",
+   "model": "opus",
+   "started": "2026-11-05T06:53:53.618Z",
+   "seconds": null,
+   "finished": "2026-11-05T06:55:46.667000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-2247 on-phone session request",
+   "model": "opus",
+   "started": "2026-11-05T06:51:12.832Z",
+   "seconds": null,
+   "finished": "2026-11-05T06:54:36.619000+00:00"
+  },
+  {
+   "name": "wrenna",
+   "task": "[release] T-2482 redo review-note wording",
+   "model": "opus",
+   "started": "2026-11-05T06:51:18.676Z",
+   "seconds": null,
+   "finished": "2026-11-05T06:53:37.254000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 427,
+  "runnable_count": 433,
   "blocked_count": 124
  },
  "meter": {
@@ -164,7 +188,7 @@
   "week_pct": 49.11,
   "usage_pct": 41.6,
   "work_pct": 74.6,
-  "read_at": "2026-11-05T06:53:00+00:00",
+  "read_at": "2026-11-05T06:56:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -243,7 +267,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T01:43:35-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a",
@@ -277,7 +302,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T01:43:35-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a",
@@ -299,7 +325,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T01:43:35-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    }
   ]
  },
@@ -325,14 +352,14 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 762
+   "free_gb": 758
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T01:53:00-05:00"
+  "at": "2026-11-05T01:56:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -344,9 +371,9 @@
   {
    "name": "Pernille",
    "state": "running",
-   "task": "[review] T-2265 Pernille concurrency review",
+   "task": "[review] T-2272 Pernille extension-lane review",
    "model": "opus",
-   "since": "2026-11-05T06:50:25.072Z",
+   "since": "2026-11-05T06:50:33.417Z",
    "next": [],
    "effort": "high"
   },
@@ -360,36 +387,36 @@
    "effort": "high"
   },
   {
-   "name": "Ines",
+   "name": "Maren",
    "state": "running",
-   "task": "[plan] T-2247 on-phone session request",
+   "task": "[design] T-2282 Settings screen read",
    "model": "opus",
-   "since": "2026-11-05T06:51:12.832Z",
+   "since": "2026-11-05T06:53:39.363Z",
    "next": [],
    "effort": "high"
   },
   {
-   "name": "Wrenna",
+   "name": "Ines",
    "state": "running",
-   "task": "[release] T-2482 redo review-note wording",
+   "task": "[plan] T-2352 workflow page ruling, key lanes",
    "model": "opus",
-   "since": "2026-11-05T06:51:18.676Z",
+   "since": "2026-11-05T06:54:53.604Z",
    "next": [],
    "effort": "high"
   },
   {
    "name": "Idris",
    "state": "running",
-   "task": "[test] T-2266 queue runner job bridge tests",
+   "task": "[build] T-0675 extension lane next slice",
    "model": "opus",
-   "since": "2026-11-05T06:51:26.934Z",
+   "since": "2026-11-05T06:56:14.651Z",
    "next": [],
    "effort": "high"
   },
   {
-   "name": "Maren",
+   "name": "Wrenna",
    "state": "next",
-   "task": "Maren, P2, no Xcode: after T-1798 (cae4d466e). (a)...",
+   "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
    "model": null,
    "since": null,
    "next": []
@@ -397,15 +424,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-2265 Pernille concurrency review",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T06:50:25.072Z",
-    "o": "c"
-   },
    {
     "w": "Pernille",
     "k": "review",
@@ -452,21 +470,30 @@
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "T-2247 on-phone session request",
+    "w": "Pernille",
+    "k": "research",
+    "t": "T-2262 editor tooling runtime read",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-05T06:51:12.832Z",
-    "o": "i"
+    "at": "2026-11-05T06:51:33.944Z",
+    "o": "c"
    },
    {
-    "w": "Wrenna",
-    "k": "release",
-    "t": "Redo the note wording on top of the newer drafts",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "T-2277 confirm applied",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-05T06:51:18.676Z",
+    "at": "2026-11-05T06:52:00.418Z",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "T-2282 Settings screen read",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T06:53:39.363Z",
     "o": "c"
    }
   ],
@@ -544,23 +571,23 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "t": "The new Home now replaces the old one: one Home page with Progress (including total cost), the...",
-    "at": "2026-11-05T01:18:00-05:00"
+    "w": "Pernille",
+    "t": "I reviewed Idris's fix for the order of messages at the end of a script run. The ordering is...",
+    "at": "2026-11-05T01:56:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "Finished lane work now lands one task at a time; a test that only ran out of time is retried...",
-    "at": "2026-11-05T00:48:00-05:00"
+    "w": "Wrenna",
+    "t": "The draft answers to Apple's reviewers, the press kit and the review checklist now hold back the...",
+    "at": "2026-11-05T01:55:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "Every board task can now carry a short plain-English title that a script checks; the site's task...",
-    "at": "2026-11-05T00:39:00-05:00"
+    "w": "Ines",
+    "t": "Asked Jeremy for one session with his iPhone 15 at the Mac mini (Nov 12-13, or this weekend) to...",
+    "at": "2026-11-05T01:54:00-05:00"
    }
   ],
   "count": {
-   "next": 427,
+   "next": 433,
    "wait": 38,
    "blocked": 86,
    "you": 18
@@ -571,6 +598,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -582,10 +610,10 @@
   "main": 11,
   "lanes": 1,
   "total": 12,
-  "at": "1:53 AM",
+  "at": "1:56 AM",
   "why": "",
-  "at_iso": "2026-11-05T06:53:00+00:00",
+  "at_iso": "2026-11-05T06:56:00+00:00",
   "started": "1:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>12</b> agents running now</p><p class=\"an-sub\">Main session 11, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:53 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>12</b> agents running now</p><p class=\"an-sub\">Main session 11, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:56 AM ET</p></section>"
  }
 }

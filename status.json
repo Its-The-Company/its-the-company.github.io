@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T07:11:56.328756+00:00",
+ "at": "2026-11-05T07:18:16.169500+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2483 applier chain T-2476 T-2484",
    "model": "opus",
    "started": "2026-11-05T06:50:51.255Z",
-   "seconds": 1265,
+   "seconds": 1644,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[build] T-0675 extension lane next slice",
    "model": "opus",
    "started": "2026-11-05T06:56:14.651Z",
-   "seconds": 941,
+   "seconds": 1321,
    "finished": null,
    "effort": "high"
   },
@@ -30,16 +30,7 @@
    "task": "[release] T-2319 stdlib ctypes host check",
    "model": "opus",
    "started": "2026-11-05T06:57:31.560Z",
-   "seconds": 864,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[test] T-2147 stale entry plan test gap",
-   "model": "opus",
-   "started": "2026-11-05T06:58:38.463Z",
-   "seconds": 797,
+   "seconds": 1244,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[build] T-2514 reset restores unraisablehook",
    "model": "opus",
    "started": "2026-11-05T07:00:40.789Z",
-   "seconds": 675,
+   "seconds": 1055,
    "finished": null,
    "effort": "high"
   },
@@ -57,22 +48,46 @@
    "task": "[tools] T-2517 queue all parked finished work",
    "model": "opus",
    "started": "2026-11-05T07:09:33.075Z",
-   "seconds": 143,
+   "seconds": 523,
    "finished": null,
    "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-2239 lift card at AX5",
+   "model": "opus",
+   "started": "2026-11-05T07:13:58.415Z",
+   "seconds": 257,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys x2, Idris, Pernille x2, Maren",
+ "recent": [
+  {
+   "name": "general-purpose",
+   "task": "[ops] Pernille memory file under 4 KB",
+   "model": "sonnet",
+   "started": "2026-11-05T07:14:03.661Z",
+   "seconds": null,
+   "finished": "2026-11-05T07:14:57.718000+00:00"
   },
   {
    "name": "ines",
    "task": "[plan] T-1741 memory badge ruling",
    "model": "opus",
    "started": "2026-11-05T07:09:50.807Z",
-   "seconds": 125,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x2, Idris, Pernille x3, Ines",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-05T07:13:23.899000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[test] T-2147 stale entry plan test gap",
+   "model": "opus",
+   "started": "2026-11-05T06:58:38.463Z",
+   "seconds": null,
+   "finished": "2026-11-05T07:13:05.193000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-2342 review Idris 45c9a7b18",
@@ -80,36 +95,12 @@
    "started": "2026-11-05T07:08:08.381Z",
    "seconds": null,
    "finished": "2026-11-05T07:10:39.507000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-1759 examples entry on iPhone",
-   "model": "opus",
-   "started": "2026-11-05T07:01:23.328Z",
-   "seconds": null,
-   "finished": "2026-11-05T07:08:45.568000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-1729 OOM guard status review",
-   "model": "opus",
-   "started": "2026-11-05T07:05:19.683Z",
-   "seconds": null,
-   "finished": "2026-11-05T07:08:44.940000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-2045 review T-1670 before TestFlight",
-   "model": "opus",
-   "started": "2026-11-05T07:01:16.989Z",
-   "seconds": null,
-   "finished": "2026-11-05T07:07:45.676000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 434,
+  "runnable_count": 432,
   "blocked_count": 124
  },
  "meter": {
@@ -152,7 +143,7 @@
   "week_pct": 49.11,
   "usage_pct": 41.6,
   "work_pct": 74.6,
-  "read_at": "2026-11-05T07:11:00+00:00",
+  "read_at": "2026-11-05T07:18:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -345,7 +336,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T02:01:40-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
@@ -448,14 +440,14 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 757
+   "free_gb": 755
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T02:11:00-05:00"
+  "at": "2026-11-05T02:18:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -492,18 +484,18 @@
    "effort": "high"
   },
   {
-   "name": "Ines",
+   "name": "Maren",
    "state": "running",
-   "task": "[plan] T-1741 memory badge ruling",
+   "task": "[design] T-2239 lift card at AX5",
    "model": "opus",
-   "since": "2026-11-05T07:09:50.807Z",
+   "since": "2026-11-05T07:13:58.415Z",
    "next": [],
    "effort": "high"
   },
   {
-   "name": "Maren",
+   "name": "Ines",
    "state": "next",
-   "task": "Maren, P3, no Xcode: continuation of T-2234 (1f2df5a56)....",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -548,15 +540,6 @@
    },
    {
     "w": "Pernille",
-    "k": "test",
-    "t": "T-2147 stale entry plan test gap",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T06:58:38.463Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
     "k": "build",
     "t": "Reset puts back sys.unraisablehook",
     "m": "opus",
@@ -574,12 +557,12 @@
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Rule on the memory badge after a failed run",
+    "w": "Maren",
+    "k": "design",
+    "t": "Fit the lift card at the largest text size",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-05T07:09:50.807Z",
+    "at": "2026-11-05T07:13:58.415Z",
     "o": "c"
    }
   ],
@@ -657,23 +640,23 @@
   ],
   "done": [
    {
-    "w": "Pernille",
-    "t": "A second engineer checked Idris's fixes to how a project is copied into a widget; they hold,...",
-    "at": "2026-11-05T02:10:00-05:00"
+    "w": "Odalys",
+    "t": "The parked fix that stops the proposal applier from mistaking one proposal's commit for...",
+    "at": "2026-11-05T02:14:00-05:00"
    },
    {
-    "w": "Pernille",
-    "t": "The new memory-warning badge code is correct and its tests catch every planted bug. Two gaps...",
-    "at": "2026-11-05T02:08:00-05:00"
+    "w": "Odalys",
+    "t": "A rule fold the Investors approved in advance no longer stalls because an Investor asked a...",
+    "at": "2026-11-05T02:14:00-05:00"
    },
    {
-    "w": "Maren",
-    "t": "The 10 example scripts that come with the app now have a drawn home on iPhone, inside the...",
-    "at": "2026-11-05T02:07:00-05:00"
+    "w": "Ines",
+    "t": "Ruled what a widget shows when its script failed and the memory guard then skips it: the error...",
+    "at": "2026-11-05T02:13:00-05:00"
    }
   ],
   "count": {
-   "next": 434,
+   "next": 432,
    "wait": 38,
    "blocked": 86,
    "you": 18
@@ -693,13 +676,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 7,
+  "main": 6,
   "lanes": 2,
-  "total": 9,
-  "at": "2:11 AM",
+  "total": 8,
+  "at": "2:18 AM",
   "why": "",
-  "at_iso": "2026-11-05T07:11:00+00:00",
+  "at_iso": "2026-11-05T07:18:00+00:00",
   "started": "1:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 7, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:11 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 6, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:18 AM ET</p></section>"
  }
 }

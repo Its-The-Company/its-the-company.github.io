@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T19:54:43.103743+00:00",
+ "at": "2026-11-05T19:57:45.350537+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,43 +12,7 @@
    "task": "[tools] T-2713 land checks finish",
    "model": "opus",
    "started": "2026-11-05T19:41:25.704Z",
-   "seconds": 797,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-2667 new Home Chat Usage",
-   "model": "opus",
-   "started": "2026-11-05T19:41:41.707Z",
-   "seconds": 781,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-2711 applier fixes re-review",
-   "model": "opus",
-   "started": "2026-11-05T19:41:58.106Z",
-   "seconds": 764,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2718 archive open board lines",
-   "model": "opus",
-   "started": "2026-11-05T19:48:38.681Z",
-   "seconds": 364,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2721 memory-skip badge rule D",
-   "model": "opus",
-   "started": "2026-11-05T19:49:00.137Z",
-   "seconds": 342,
+   "seconds": 979,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +21,7 @@
    "task": "[tools] T-2722 runner sandbox profile fix",
    "model": "opus",
    "started": "2026-11-05T19:50:49.226Z",
-   "seconds": 233,
+   "seconds": 416,
    "finished": null,
    "effort": "high"
   },
@@ -66,51 +30,51 @@
    "task": "[build] T-2625 T-2627 test fixes check",
    "model": "opus",
    "started": "2026-11-05T19:42:16.956Z",
-   "seconds": 746,
+   "seconds": 928,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x3, Pernille, Idris x3",
+ "who": "Odalys, Idris x2",
  "recent": [
   {
    "name": "idris",
-   "task": "[test] T-2266 stuck-signal mutants local",
+   "task": "[build] T-2721 memory-skip badge rule D",
    "model": "opus",
-   "started": "2026-11-05T19:42:11.335Z",
+   "started": "2026-11-05T19:49:00.137Z",
    "seconds": null,
-   "finished": "2026-11-05T19:54:23.647000+00:00"
+   "finished": "2026-11-05T19:57:40.266000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[review] T-2705 traceback card fixes review",
+   "task": "[site] T-2667 new Home Chat Usage",
    "model": "opus",
-   "started": "2026-11-05T19:47:27.854Z",
+   "started": "2026-11-05T19:41:41.707Z",
    "seconds": null,
-   "finished": "2026-11-05T19:53:43.055000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] T-2409 USGS feed example scripts",
-   "model": "opus",
-   "started": "2026-11-05T19:47:33.169Z",
-   "seconds": null,
-   "finished": "2026-11-05T19:53:37.660000+00:00"
+   "finished": "2026-11-05T19:57:10.248000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-2616 land first try",
+   "task": "[tools] T-2718 archive open board lines",
    "model": "opus",
-   "started": "2026-11-05T19:41:30.707Z",
+   "started": "2026-11-05T19:48:38.681Z",
    "seconds": null,
-   "finished": "2026-11-05T19:53:20.888000+00:00"
+   "finished": "2026-11-05T19:56:17.841000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-2711 applier fixes re-review",
+   "model": "opus",
+   "started": "2026-11-05T19:41:58.106Z",
+   "seconds": null,
+   "finished": "2026-11-05T19:56:13.427000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 440,
-  "blocked_count": 131
+  "runnable_count": 429,
+  "blocked_count": 119
  },
  "meter": {
   "five_hour": {
@@ -152,7 +116,7 @@
   "week_pct": 58.1,
   "usage_pct": 44.3,
   "work_pct": 71.6,
-  "read_at": "2026-11-05T19:54:00+00:00",
+  "read_at": "2026-11-05T19:57:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -225,11 +189,7 @@
    {
     "lane": "b3",
     "task": "T-1728",
-    "w": "Idris",
-    "k": "build",
-    "t": "Write widget status from the extension at each run",
-    "m": "opus",
-    "e": "high",
+    "t": "T-1728",
     "at": "2026-11-05T14:03:06-05:00",
     "n": "Jeremy"
    }
@@ -257,14 +217,14 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 690
+   "free_gb": 692
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T14:54:00-05:00"
+  "at": "2026-11-05T14:57:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -283,15 +243,6 @@
    "effort": "high"
   },
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-2711 applier fixes re-review",
-   "model": "opus",
-   "since": "2026-11-05T19:41:58.106Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "running",
    "task": "[build] T-2625 T-2627 test fixes check",
@@ -304,6 +255,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P2, no Xcode, after T-1440 lands (Idris review...",
    "model": null,
    "since": null,
    "next": []
@@ -337,48 +296,12 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Build the new Home, Chat and Usage pages",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T19:41:41.707Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Recheck the large-change apply fixes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T19:41:58.106Z",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "A widget safety test still expects the old build switch",
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T19:42:16.956Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Archive open board lines and bring them back",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T19:48:38.681Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Badge a memory skip only after a second reload",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T19:49:00.137Z",
     "o": "c"
    },
    {
@@ -465,25 +388,25 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "t": "Checked Pernille's fixes to the error card. It no longer invents a repeat count for functions...",
-    "at": "2026-11-05T14:53:00-05:00"
+    "w": "Idris",
+    "t": "When memory is too tight and a widget is skipped, its warning mark now waits until it is skipped...",
+    "at": "2026-11-05T14:57:00-05:00"
    },
    {
-    "w": "Ines+idris+pernille",
-    "t": "When memory is too tight and a widget is skipped, it now shows its warning mark only once it has...",
-    "at": "2026-11-05T14:48:00-05:00"
+    "w": "Idris",
+    "t": "The count of skipped updates this task was to add is now done another way, by time in the...",
+    "at": "2026-11-05T14:57:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "A safety test for the personal accounts failed because it was written before the new task...",
-    "at": "2026-11-05T14:47:00-05:00"
+    "t": "Old open tasks can now be moved off the task board into a dated archive and brought back exactly...",
+    "at": "2026-11-05T14:56:00-05:00"
    }
   ],
   "count": {
-   "next": 440,
+   "next": 429,
    "wait": 43,
-   "blocked": 88,
+   "blocked": 76,
    "you": 19
   }
  },
@@ -501,13 +424,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 7,
+  "main": 3,
   "lanes": 3,
-  "total": 10,
-  "at": "2:54 PM",
+  "total": 6,
+  "at": "2:57 PM",
   "why": "",
-  "at_iso": "2026-11-05T19:54:00+00:00",
+  "at_iso": "2026-11-05T19:57:00+00:00",
   "started": "2:39 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 7, started 2:39 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 2:54 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:39 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 2:57 PM ET</p></section>"
  }
 }

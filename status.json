@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-05T15:52:54.719918+00:00",
+ "at": "2026-11-05T15:57:16.105105+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-05T10:49:53-05:00"
+  "active": false,
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
@@ -67,12 +67,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-05T11:04:34-05:00",
  "personal": {
   "week_pct": 54.81,
   "usage_pct": 44.3,
-  "work_pct": 72.6,
-  "read_at": "2026-11-05T15:52:00+00:00",
+  "work_pct": 72.4,
+  "read_at": "2026-11-05T15:59:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -119,6 +119,28 @@
     "n": "Evan"
    },
    {
+    "lane": "a2",
+    "task": "T-2594",
+    "w": "Idris",
+    "k": "build",
+    "t": "Read the test run for the hung widget fix",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T10:53:18-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-2586",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Find why merges stop without a conflict and fix it",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T10:53:18-05:00",
+    "n": "Evan"
+   },
+   {
     "lane": "a3",
     "task": "T-2647",
     "w": "Pernille",
@@ -127,7 +149,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T10:36:20-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a3",
@@ -294,7 +317,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T10:02:38-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
@@ -362,7 +386,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T09:29:28-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b3",
@@ -479,7 +504,7 @@
   },
   {
    "name": "a",
-   "used_usd": 96.74,
+   "used_usd": 97.7,
    "total_usd": 100.0
   },
   {
@@ -489,7 +514,7 @@
   }
  ],
  "disk": {
-  "free_gb": 27,
+  "free_gb": 29,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -500,14 +525,10 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T10:52:00-05:00"
+  "at": "2026-11-05T10:59:00-05:00"
  },
- "next_tick_why": "session",
- "pool": {
-  "why": "On the API credits by the Investors' instruction, so the full pool runs",
-  "n": 12,
-  "at": "2026-11-05T10:49:34.523321-05:00"
- },
+ "next_tick_why": "last_tick",
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -670,12 +691,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 4,
-  "total": 4,
-  "at": "10:52 AM",
+  "lanes": 5,
+  "total": 5,
+  "at": "10:59 AM",
   "why": "",
-  "at_iso": "2026-11-05T15:52:00+00:00",
-  "started": "10:49 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 10:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:52 AM ET</p></section>"
+  "at_iso": "2026-11-05T15:59:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:59 AM ET</p></section>"
  }
 }

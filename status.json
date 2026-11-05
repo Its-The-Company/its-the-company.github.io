@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T02:11:02.952918+00:00",
+ "at": "2026-11-05T02:14:03.611203+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[release] T-2270 first TestFlight build",
    "model": "opus",
    "started": "2026-11-05T02:07:06.614Z",
-   "seconds": 236,
+   "seconds": 416,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[site] T-2276 new Home live",
    "model": "opus",
    "started": "2026-11-05T02:07:22.070Z",
-   "seconds": 220,
+   "seconds": 401,
    "finished": null,
    "effort": "high"
   },
@@ -30,16 +30,7 @@
    "task": "[test] T-2274 governor red rows",
    "model": "opus",
    "started": "2026-11-05T02:07:27.820Z",
-   "seconds": 215,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[test] T-2281 site proposals red",
-   "model": "opus",
-   "started": "2026-11-05T02:07:33.021Z",
-   "seconds": 209,
+   "seconds": 395,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[tools] T-2210 personal land rate",
    "model": "opus",
    "started": "2026-11-05T02:07:39.381Z",
-   "seconds": 203,
+   "seconds": 384,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[ops] T-2298 session changeover idle time",
    "model": "opus",
    "started": "2026-11-05T02:07:47.025Z",
-   "seconds": 195,
+   "seconds": 376,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +57,7 @@
    "task": "[tools] T-2278 machine collector",
    "model": "opus",
    "started": "2026-11-05T02:07:53.572Z",
-   "seconds": 189,
+   "seconds": 370,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +66,7 @@
    "task": "[design] T-2279 Machine bubble + task lifecycle",
    "model": "opus",
    "started": "2026-11-05T02:08:01.024Z",
-   "seconds": 181,
+   "seconds": 362,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +75,7 @@
    "task": "[build] T-1931 T-1933 ProjectSendPlan paths",
    "model": "opus",
    "started": "2026-11-05T02:08:08.973Z",
-   "seconds": 173,
+   "seconds": 354,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +84,7 @@
    "task": "[build] T-1930 run file names test",
    "model": "opus",
    "started": "2026-11-05T02:08:15.673Z",
-   "seconds": 167,
+   "seconds": 347,
    "finished": null,
    "effort": "high"
   },
@@ -102,7 +93,7 @@
    "task": "[test] T-1848 atexit stop test",
    "model": "opus",
    "started": "2026-11-05T02:08:21.576Z",
-   "seconds": 161,
+   "seconds": 342,
    "finished": null,
    "effort": "high"
   },
@@ -111,13 +102,30 @@
    "task": "[ops] T-2269 find refused runner commands (read-only)",
    "model": "opus",
    "started": "2026-11-05T02:10:21.786Z",
-   "seconds": 41,
+   "seconds": 221,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-1948 AgeLine next date change",
+   "model": "opus",
+   "started": "2026-11-05T02:13:12.134Z",
+   "seconds": 51,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x3, Odalys x7, Maren, Pernille",
+ "who": "Idris x4, Odalys x6, Maren, Pernille",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[test] T-2281 site proposals red",
+   "model": "opus",
+   "started": "2026-11-05T02:07:33.021Z",
+   "seconds": null,
+   "finished": "2026-11-05T02:12:55.924000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[ops] T-2269 runner-queue refusals + T-2277",
@@ -130,7 +138,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 392,
+  "runnable_count": 391,
   "blocked_count": 124
  },
  "meter": {
@@ -173,7 +181,7 @@
   "week_pct": 36.78,
   "usage_pct": 37.0,
   "work_pct": 74.8,
-  "read_at": "2026-11-05T02:11:00+00:00",
+  "read_at": "2026-11-05T02:14:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -276,7 +284,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T20:02:28-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
@@ -482,14 +491,14 @@
   }
  ],
  "disk": {
-  "free_gb": 50,
+  "free_gb": 51,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T21:11:00-05:00"
+  "at": "2026-11-04T21:14:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -582,15 +591,6 @@
    },
    {
     "w": "Odalys",
-    "k": "test",
-    "t": "T-2281 site proposals red",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T02:07:33.021Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "tools",
     "t": "T-2210 personal land rate",
     "m": "opus",
@@ -623,6 +623,15 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T02:08:01.024Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-1931 T-1933 ProjectSendPlan paths",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T02:08:08.973Z",
     "o": "c"
    }
   ],
@@ -700,6 +709,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The site's proposals test was red because it still checked the old Home tab row and the old...",
+    "at": "2026-11-04T21:12:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The Settings screen now builds and its three Simulator tests pass, including restoring a...",
     "at": "2026-11-04T20:57:00-05:00"
@@ -708,15 +722,10 @@
     "w": "Odalys",
     "t": "The step that applies changes between sessions can now add a permission for one of our own tools...",
     "at": "2026-11-04T20:40:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Superseded: the Investors gave standing permission (amendment 2026-11-04 20:00), so and land...",
-    "at": "2026-11-04T20:40:00-05:00"
    }
   ],
   "count": {
-   "next": 392,
+   "next": 391,
    "wait": 39,
    "blocked": 85,
    "you": 17
@@ -738,10 +747,10 @@
   "main": 12,
   "lanes": 3,
   "total": 15,
-  "at": "9:11 PM",
+  "at": "9:14 PM",
   "why": "",
-  "at_iso": "2026-11-05T02:11:00+00:00",
+  "at_iso": "2026-11-05T02:14:00+00:00",
   "started": "9:04 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>15</b> agents running now</p><p class=\"an-sub\">Main session 12, started 9:04 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:11 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>15</b> agents running now</p><p class=\"an-sub\">Main session 12, started 9:04 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:14 PM ET</p></section>"
  }
 }

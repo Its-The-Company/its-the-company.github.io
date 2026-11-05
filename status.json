@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T10:40:32.532848+00:00",
+ "at": "2026-11-05T10:43:36.257329+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[review] T-2585 prompt alert re-review",
    "model": "opus",
    "started": "2026-11-05T10:28:49.098Z",
-   "seconds": 703,
+   "seconds": 887,
    "finished": null,
    "effort": "high"
   },
@@ -21,16 +21,7 @@
    "task": "[review] T-2584 upload tool fixes review",
    "model": "opus",
    "started": "2026-11-05T10:28:54.699Z",
-   "seconds": 697,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2414 close or retry unmerged work",
-   "model": "opus",
-   "started": "2026-11-05T10:29:01.199Z",
-   "seconds": 691,
+   "seconds": 881,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +30,7 @@
    "task": "[tools] T-2060 SSD default for big writes",
    "model": "opus",
    "started": "2026-11-05T10:29:19.955Z",
-   "seconds": 672,
+   "seconds": 856,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[build] T-2228 stuck lane killed row",
    "model": "opus",
    "started": "2026-11-05T10:29:27.249Z",
-   "seconds": 665,
+   "seconds": 849,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[site] T-2398 bell commits onto main",
    "model": "opus",
    "started": "2026-11-05T10:29:34.237Z",
-   "seconds": 658,
+   "seconds": 842,
    "finished": null,
    "effort": "high"
   },
@@ -66,13 +57,21 @@
    "task": "[build] T-2041 T-2042 send-plan test fences",
    "model": "opus",
    "started": "2026-11-05T10:30:59.813Z",
-   "seconds": 572,
+   "seconds": 756,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille x2, Odalys x3, Idris x2",
+ "who": "Pernille x2, Odalys x2, Idris x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2414 close or retry unmerged work",
+   "model": "opus",
+   "started": "2026-11-05T10:29:01.199Z",
+   "seconds": null,
+   "finished": "2026-11-05T10:41:37.657000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2217 proposal title on cards",
@@ -93,7 +92,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 403,
+  "runnable_count": 402,
   "blocked_count": 126
  },
  "meter": {
@@ -136,7 +135,7 @@
   "week_pct": 51.58,
   "usage_pct": 42.8,
   "work_pct": 73.9,
-  "read_at": "2026-11-05T10:40:00+00:00",
+  "read_at": "2026-11-05T10:43:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -157,7 +156,7 @@
   }
  ],
  "disk": {
-  "free_gb": 31,
+  "free_gb": 33,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -168,7 +167,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T05:40:00-05:00"
+  "at": "2026-11-05T05:43:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -189,9 +188,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-2414 close or retry unmerged work",
+   "task": "[tools] T-2060 SSD default for big writes",
    "model": "opus",
-   "since": "2026-11-05T10:29:01.199Z",
+   "since": "2026-11-05T10:29:19.955Z",
    "next": [],
    "effort": "high"
   },
@@ -252,15 +251,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Close or retry the work that never merged",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T10:29:01.199Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "T-2060 SSD default for big writes",
     "m": "opus",
     "e": "high",
@@ -300,13 +290,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Restart Evan's account and avoid credit gaps",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Close or retry the work that never merged",
     "s": "next",
     "o": "c"
    },
@@ -365,27 +348,34 @@
     "t": "T-1669 rest",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Site overhaul build, after Maren's spec line...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Odalys",
+    "t": "Big build folders already go to the external SSD, but the SSD started freezing and two builds...",
+    "at": "2026-11-05T05:43:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "Stuck work that never merged is now sorted by a tool: 22 'did not land' notices whose work is...",
+    "at": "2026-11-05T05:40:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "This parked work is already on main (1 commit(s) checked), so the 'did not land' notice is closed.",
     "at": "2026-11-05T05:40:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "This parked branch held a second design for the tool that closes or retries stuck work. The...",
-    "at": "2026-11-05T05:40:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "A request card that carries a code change now goes out titled \"Proposal:\", so the step that...",
-    "at": "2026-11-05T05:37:00-05:00"
    }
   ],
   "count": {
-   "next": 403,
+   "next": 402,
    "wait": 38,
    "blocked": 88,
    "you": 19
@@ -404,13 +394,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 7,
+  "main": 6,
   "lanes": 0,
-  "total": 7,
-  "at": "5:40 AM",
+  "total": 6,
+  "at": "5:43 AM",
   "why": "",
-  "at_iso": "2026-11-05T10:40:00+00:00",
+  "at_iso": "2026-11-05T10:43:00+00:00",
   "started": "5:25 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 7, started 5:25 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:40 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 6, started 5:25 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:43 AM ET</p></section>"
  }
 }

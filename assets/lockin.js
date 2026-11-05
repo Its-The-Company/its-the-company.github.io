@@ -17,6 +17,7 @@ pool: fixed ? parseInt(fixed.getAttribute('data-pool'), 10) : 0 };
 function mk(p, t, c, x) { var e = p.appendChild(D.createElement(t)); if (c) e.className = c; if (x) e.textContent = x; return e; }
 function draw() {
 var k = now(), on = k.on, n = k.pool;
+var lp = D.getElementById('lk-lockpace'); if (lp) lp.hidden = !on;
 if (sent !== null && sent === on) { sent = null; clearTimeout(sentT); }
 tiles = tiles.filter((x) => x.box === fixed || (x.box.isConnected ? (x.in = 1) : !x.in));
 tiles.forEach((x) => {

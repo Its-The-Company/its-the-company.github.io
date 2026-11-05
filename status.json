@@ -1,64 +1,51 @@
 {
  "schema": 1,
- "at": "2026-11-05T00:53:33.432021+00:00",
+ "at": "2026-11-05T02:01:06.298034+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-04T19:48:34-05:00"
+  "started": "2026-11-04T19:58:08-05:00"
  },
- "workers": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-2248 Lock In ignores daily share",
-   "model": "opus",
-   "started": "2026-11-05T00:53:04.975Z",
-   "seconds": 28,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-2178 site go-live Q1 Q2",
-   "model": "opus",
-   "started": "2026-11-05T00:53:11.021Z",
-   "seconds": 22,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-2252 re-propose and",
-   "model": "opus",
-   "started": "2026-11-05T00:53:19.123Z",
-   "seconds": 14,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2237 extension lane fixes verify",
-   "model": "opus",
-   "started": "2026-11-05T00:53:24.973Z",
-   "seconds": 8,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x3, Idris",
+ "workers": [],
+ "who": "",
  "recent": [
   {
    "name": "idris",
-   "task": "[fix] T-2054 bridge stuck/unstuck ordering",
+   "task": "[build] T-2225 Settings screen compile",
    "model": "opus",
-   "started": "2026-11-05T00:53:31.322Z",
+   "started": "2026-11-05T01:03:48.282Z",
    "seconds": null,
-   "finished": "2026-11-05T00:53:31.366Z"
+   "finished": "2026-11-05T01:57:38.089000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-2257 applier standing permission",
+   "model": "opus",
+   "started": "2026-11-05T01:04:34.281Z",
+   "seconds": null,
+   "finished": "2026-11-05T01:40:59.818000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-2156 supervisor changes after split",
+   "model": "opus",
+   "started": "2026-11-05T01:04:50.883Z",
+   "seconds": null,
+   "finished": "2026-11-05T01:39:47.040000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-2178 site Q1/Q2 go-live",
+   "model": "opus",
+   "started": "2026-11-05T01:04:57.103Z",
+   "seconds": null,
+   "finished": "2026-11-05T01:39:18.943000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 376,
+  "runnable_count": 390,
   "blocked_count": 124
  },
  "meter": {
@@ -99,141 +86,304 @@
  "next_tick": null,
  "personal": {
   "week_pct": 37.04,
-  "usage_pct": 37.5,
-  "work_pct": 75.4,
-  "read_at": "2026-11-05T00:53:00+00:00",
+  "usage_pct": 37.0,
+  "work_pct": 74.8,
+  "read_at": "2026-11-05T02:03:00+00:00",
   "running": [
    {
     "lane": "b",
-    "task": "T-2240",
+    "task": "T-2253",
     "w": "Odalys",
     "k": "tools",
-    "t": "A lane record main refused",
+    "t": "Personal branch personal/b6 did not land",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-04T19:05:03-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-2241",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Personal account b3 stopped on T-2210+T-2185",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T19:05:03-05:00",
+    "at": "2026-11-04T20:02:28-05:00",
     "n": "Jeremy",
     "d": 1
    },
    {
     "lane": "b",
-    "task": "T-2242",
-    "w": "Idris",
-    "k": "tools",
-    "t": "Personal account b2 stopped on T-2214",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T19:05:03-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-2243",
+    "task": "T-2254",
     "w": "Odalys",
     "k": "tools",
-    "t": "A lane record main refused",
+    "t": "Personal account b3 stopped on...",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-04T19:05:03-05:00",
-    "n": "Jeremy"
+    "at": "2026-11-04T20:02:28-05:00",
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
-    "task": "T-1445",
+    "task": "T-2255",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal account b2 stopped on T-2217+T-2212+T-2154+T-2155",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:02:28-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b",
+    "task": "T-1855",
     "w": "Idris",
     "k": "build",
-    "t": "Large Content Viewer on the bars that do not grow",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-04T19:05:03-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-1996",
-    "w": "Idris",
-    "k": "tools",
-    "t": "Personal account a2 stopped on...",
+    "t": "T-1838 F6-F8",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-04T19:05:03-05:00",
+    "at": "2026-11-04T20:02:28-05:00",
     "n": "Jeremy"
    },
    {
     "lane": "b",
-    "task": "T-1997",
-    "w": "Idris",
-    "k": "tools",
-    "t": "Personal account a3 stopped on...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T19:05:03-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-1999",
-    "w": "Idris",
-    "k": "tools",
-    "t": "Personal branch personal/a did not land",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T19:05:03-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-1854",
+    "task": "T-0272",
     "w": "Idris",
     "k": "build",
-    "t": "The extension writes no status.json and no run row",
+    "t": "After T-0041 and only if T-0271 is approved by Day 12",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-04T19:05:03-05:00",
+    "at": "2026-11-04T20:02:28-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b",
+    "task": "T-0443",
+    "w": "Idris",
+    "k": "build",
+    "t": "CPython's release table and MPL sections 6-7",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:02:28-05:00",
     "n": "Jeremy"
    },
    {
     "lane": "b",
-    "task": "T-1117",
+    "task": "T-0623",
     "w": "Idris",
     "k": "build",
-    "t": "The 6 rows marked gap in the Swift",
+    "t": "An Acknowledgements row for a part_of entry reads \"Mozilla Public License...",
     "m": "sonnet",
     "e": "medium",
-    "at": "2026-11-04T19:05:03-05:00",
+    "at": "2026-11-04T20:02:28-05:00",
     "n": "Jeremy"
    },
    {
     "lane": "b",
-    "task": "T-1284",
-    "w": "Idris",
-    "k": "test",
-    "t": "TestRefusedDestinationsDrawNoLink",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-04T19:05:03-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-1243",
+    "task": "T-1241",
     "w": "Idris",
     "k": "fix",
-    "t": "From T-0983",
+    "t": "From T-0987",
     "m": "sonnet",
     "e": "medium",
-    "at": "2026-11-04T19:05:03-05:00",
+    "at": "2026-11-04T20:02:28-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1294",
+    "w": "Idris",
+    "k": "fix",
+    "t": "WidgetKitCheckTests testGLiveTextSizedToItsIdeal fails the 231-case sweep on...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:02:28-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1652",
+    "w": "Idris",
+    "k": "fix",
+    "t": "TestISavedScriptReachesTheHomeScreen and...",
+    "m": "opus",
+    "e": "medium",
+    "at": "2026-11-04T20:02:28-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1839",
+    "w": "Idris",
+    "k": "build",
+    "t": "Wire tools/privacy_scan.py --release into the Release build",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:02:28-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b2",
+    "task": "T-1989",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Independent review",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:06:18-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b2",
+    "task": "T-1993",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-1064 rest",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:06:18-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b2",
+    "task": "T-2041",
+    "w": "Idris",
+    "k": "build",
+    "t": "PreviewQueueTests.swift:230 fence check passes when ProjectSendPlan's one...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:06:18-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2265",
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-2054/T-2055/T-2056 Pernille, P1",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:33:33-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b3",
+    "task": "T-2266",
+    "w": "Idris",
+    "k": "test",
+    "t": "T-2054/T-2055/T-2056 Idris, P1, continuation",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:33:33-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2260",
+    "w": "Idris",
+    "k": "fix",
+    "t": "The closed lane's exit",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:33:33-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2261",
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0656 continuation",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:33:33-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2262",
+    "w": "Pernille",
+    "k": "runtime",
+    "t": "For T-0656",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:33:33-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b3",
+    "task": "T-2268",
+    "w": "Idris",
+    "k": "build",
+    "t": "T-0191 continuation B",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:33:33-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b3",
+    "task": "T-2271",
+    "w": "Idris",
+    "k": "build",
+    "t": "Continuation of T-2227 and T-2237",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:33:33-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2272",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Independent review before TestFlight of Idris's extension-lane fix series:...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:33:33-05:00",
+    "n": "Jeremy",
+    "d": 1
+   },
+   {
+    "lane": "b3",
+    "task": "T-2040",
+    "k": "fix",
+    "t": "P2, ProPaywallUITests/testRestoreAndLegalLinksReachableAtLargeAndAX5 red...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:33:33-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2021",
+    "w": "Idris",
+    "k": "build",
+    "t": "Before the",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:33:33-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2027",
+    "w": "Idris",
+    "k": "build",
+    "t": "J-20261104-0240 ran on the runner's reused Simulator, which 2157's late...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:33:33-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2044",
+    "w": "Idris",
+    "k": "build",
+    "t": "The orphan-mark timing test in Tests/ExtensionLaneTests.swift has a 1.4 s...",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T20:33:33-05:00",
     "n": "Jeremy"
    }
   ]
@@ -246,39 +396,37 @@
   }
  ],
  "disk": {
-  "free_gb": 54,
+  "free_gb": 51,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T19:53:00-05:00"
+  "at": "2026-11-04T21:03:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
   "why": "Locked in for today by an Investor: full speed until midnight",
   "n": 12,
-  "at": "2026-11-04T19:48:33.738314-05:00"
+  "at": "2026-11-04T19:58:07.685993-05:00"
  },
  "lanes": [
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-2248 Lock In ignores daily share",
-   "model": "opus",
-   "since": "2026-11-05T00:53:04.975Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-2237 extension lane fixes verify",
-   "model": "opus",
-   "since": "2026-11-05T00:53:24.973Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -314,45 +462,15 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-2248 Lock In ignores daily share",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T00:53:04.975Z",
-    "o": "c"
-   },
+  "run": [],
+  "open": [
    {
     "w": "Odalys",
     "k": "site",
-    "t": "T-2178 site go-live Q1 Q2",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T00:53:11.021Z",
+    "t": "T-2178 continuation",
+    "s": "next",
     "o": "c"
    },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "T-2252 re-propose and",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T00:53:19.123Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-2237 extension lane fixes verify",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T00:53:24.973Z",
-    "o": "c"
-   }
-  ],
-  "open": [
    {
     "w": "Odalys",
     "k": "site",
@@ -373,6 +491,20 @@
     "t": "Make landing a merge queue as published...",
     "s": "next",
     "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "test",
+    "t": "Tests/governor_personal_test.py has 2 red...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Three Idris tasks on 11-04 20:0x-20:1x",
+    "s": "next",
+    "o": "c"
    },
    {
     "w": "Pernille",
@@ -401,90 +533,61 @@
     "t": "After T-1035 lands",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Activity run log, Swift half",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Refresh control and age line in the renderer",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-1669 rest",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Pernille",
-    "t": "The widget's state rules now have a test proving a paying user's broken Pro widget still shows...",
-    "at": "2026-11-04T19:38:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "tint is now tested to refuse the widget card in the Python writer, the schema and validate()....",
-    "at": "2026-11-04T19:04:00-05:00"
+    "w": "Idris",
+    "t": "The Settings screen now builds and its three Simulator tests pass, including restoring a...",
+    "at": "2026-11-04T20:57:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "The MacBook test runner now runs version 11, which can run one test class instead of the whole...",
-    "at": "2026-11-04T18:52:00-05:00"
+    "t": "The step that applies changes between sessions can now add a permission for one of our own tools...",
+    "at": "2026-11-04T20:40:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "Superseded: the Investors gave standing permission (amendment 2026-11-04 20:00), so and land...",
+    "at": "2026-11-04T20:40:00-05:00"
    }
   ],
   "count": {
-   "next": 376,
-   "wait": 38,
-   "blocked": 86,
-   "you": 16
+   "next": 390,
+   "wait": 39,
+   "blocked": 85,
+   "you": 17
   }
  },
  "qr": [],
  "inbox": [
   {
-   "id": "c6646481186",
-   "state": "waiting",
+   "id": "c6647520496",
+   "state": "received",
    "position": 1,
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "approve"
+   "title": "How long does each session last? Has..."
   },
   {
-   "id": "c6646486031",
-   "state": "waiting",
+   "id": "c6647528449",
+   "state": "received",
    "position": 2,
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "approve"
-  },
-  {
-   "id": "c6646508269",
-   "state": "waiting",
-   "position": 3,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Is this working now"
+   "title": "Also, why does work need to be..."
   }
  ],
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -493,12 +596,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "7:53 PM",
+  "lanes": 3,
+  "total": 3,
+  "at": "9:03 PM",
   "why": "",
-  "at_iso": "2026-11-05T00:53:00+00:00",
+  "at_iso": "2026-11-05T02:03:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:53 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:03 PM ET</p></section>"
  }
 }

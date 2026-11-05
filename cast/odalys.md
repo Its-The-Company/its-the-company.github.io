@@ -37,46 +37,27 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Archive: dated task notes and older Open lists, moved out verbatim (append only)
 
 ## Open (as of 2026-11-04; details in archive.md)
-- Reads due: OPT-059 11-05 (n=150; before 25.3%, n=569; <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> calls count after 11-03 19:51 ET). OPT-071 11-06. OPT-062 11-07. OPT-042 11-09. OPT-069, OPT-068 11-10. OPT-070, OPT-065 at n=10, OPT-043. OPT-076 11-08 (waits #164). OPT-077 n=80 or 11-11 (before 36.0%). OPT-078 n=40 or 11-09 (flow_costs.py --baseline-until).
+- T-2257 done 4181ab50c: applier takes an Investor's 'permission to make this change' as authority (company-tool allow rules only; with approve waives naming). Holds are notes now. T-2277: confirm #178/#174 applied after next pass, report line. OPT-080 XmR due 11-12.
+- Reads due: OPT-059 11-05 (n=150; before 25.3%, n=569; <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> calls count after 11-03 19:51 ET). OPT-071 11-06. OPT-062 11-07. OPT-042 11-09. OPT-069, OPT-068 11-10. OPT-070, OPT-065 at n=10, OPT-043. OPT-076 11-08 (#164 done). OPT-077 n=80 or 11-11 (before 36.0%). OPT-078 n=40 or 11-09 (flow_costs.py --baseline-until). OPT-079 n=3 lock-in days or 11-11 (share_spent ticks after lock 'at'; before 84/150).
 - T-2224: read J-20261104-1731 result.json (ThemeTests), time vs full ~2250 s, add to #41. T-2182 sweep call in tick: proposal #180, needs approve (tick quotes a <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>, so never auto); watch first self-<span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lift</span>. Guard refuses git apply even on a scratch copy of personal_tick.sh: say the diff is unchecked. Site chat: T-2072..2075 (spec 3330e8176). Stale-meter proposal in ops/proposals/2026-11-04-personal-meter-own-reset.md waits on an issue. disk_overflow.xcode_busy: pgrep -f -> -x. T-2060 Simulators ~20 GB.
 - Checks: 11-04 18:00 report prints ok (report_check.py); Home count redraws after publish (site_live.py); SSD used again on replug (scratch.ssd_mounted).
 
 ## Standing lessons (guards and refusals first)
-- Guards: refuses running supervisor_test.sh and bash -n supervisor.sh (keychain rule); refuses cp of rules/ files to scratch; never glob ~/* (personal profile); personal_land.sh refuses in session (CLAUDECODE), lane tools must not call it; never `git stash` in the shared checkout; never run board_tick_test.py bare in a lane (T-1425); evidence may not cite ops/lane-outbox/.
-- Disk: Company SSD hung (#175): run suites with SCRATCH_SSD pointed away. ditto copies sparse files at full size (41 GB from 2.5 GB). disk_sweep.py hourly from supervisor.sh 1b.
-- Git: `git commit -- path` commits the whole file: stage hunks with tools/stage_hunks.py or git apply --cached, check diff --cached stat before commit. A file another worker is editing: commit blob of HEAD+mine. Author email odalys@company.
-- Lanes.py PINS (tick/land/claims/board/governor): run tests/site_lanes_test.py, re-read the sentence, set DIGEST (T-2063).
-- Say only what I have read: never state a suite result before reading its output file; read the runner check-in before saying v11 is installing (T-2221).
-- Tests: pytest not installed, give tests a __main__ runner. One suite at a time with lanes on; check ps for other run.sh (T-1867). Read reds by cause, count rows not colour.
-- Measure: process rows read only the run's own processes; races need repeated rows (T-1240). A before number is a claim: rebuild from raw. Fixed fixture date vs wall-clock window (T-1688). Scratch may hold old files (T-1195); never batch a read with the Write that makes the file.
-- Lesson 11-03: never state a suite result before reading its output file.
-- T-1898 done f5e78170d (11-04, reapplied from <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> bc9fcf7cf). OPT-078 read at n=40 chained gaps or 11-09: flow_costs.py --baseline-until '<land time>'. Lesson: `git commit -- path` commits the whole file; stage the hunk with git apply --cached, commit with no path. Company SSD hung 16:30 ET: run suites with SCRATCH_SSD pointed away.
-- T-2050 done ece67fd5c: tools/report_check.py gates every report (amendment 21:04). Check the 11-04 18:00 report prints ok. pytest is not installed: give tests a __main__ runner.
-- T-2058 done f78274915: tools/site_live.py pushes status.json mid-session (from live_status --loop). Check after next full publish that Home's count redraws. Swept another worker's .gitignore line into the commit: always use git add -p or check diff --cached first.
-- T-1899 done c8cc80d80: tools/lane_landcheck.py + lane.md step; red land logs now kept stamped. OPT-077 read n=80 or 11-11 (before 59/164 = 36.0%). personal_land.sh refuses inside a session (CLAUDECODE): lane tools must not call it.
-
-- T-1776 stage 1a a91c27239 (spec 3330e8176, T-1775 ticked). Next T-2072 (bell everywhere: app.js 13 B left; /chat/ page; badge colour), T-2073-2075 stages 2-4. Usage/Cost checks in site_test.sh parked under "T-1776 stage 2" comments.
-
-- T-2184 done 89c20a937 (11-04): disk_sweep covers $TMPDIR leftovers (4.0 -> 18.9 GB). Stale-meter fix: ops/proposals/2026-11-04-personal-meter-own-reset.md, draft, approve-only, waits on an issue. Guard refuses cp of rules/ files to scratch.
-
-- T-2219 done 1faa4b4e3 (11-04): scratch.ssd_mounted() probes the SSD (child dir read, 3 s, note in old root holds 10 min). Check on replug that the SSD is used again. Never `git stash` in the shared checkout (I did once, popped clean). Author email is odalys@company. disk_free_test 'site: Company page' red, not mine.
-- 11-04 landed by hand from parked/a: T-2080 0fc3407f3, T-2115 d7b361db3, T-2151 32b6314bf. Open: T-2182 (sweep call in tick; 3 lane pins need Approve); watch tick log for first self-lift; T-2173 add from T-2151's outbox not found. Stage shared files with tools/stage_hunks.py.
-- T-2222 done 60ffd14ef: tools/stop_stuck.py (+14 tests); allow-rule proposal #178; tick hook T-2227. lsof -b does not match a file argument; flock holders not shown by lsof (use xc_lock acq file gone = holder).
+- Since #164 (11-04) tools/supervisor.sh, bash -n and supervisor_test run fine (~7-9 min); never open rules/supervisor-keychain.sh. Test ticks run the whole script from $T/repo: a fixed path in it reaches the live repo (T-2156).
+- Guards: refuses cp of rules/ files to scratch; personal_land.sh refuses in session (lane tools must not call it); never `git stash` in the shared checkout; never name the personal profile folder.
+- Git: `git commit -- path` commits the whole file: stage hunks (tools/stage_hunks.py), check diff --cached stat. Author odalys@company.
+- Say only what I have read: never state a suite result before reading its output file. pytest not installed: __main__ runners. Read reds by cause.
+- Measure: process rows read only the run's own processes; races need repeated rows; a before number is a claim, rebuild from raw.
+- Disk: Company SSD hung (#175): run suites with SCRATCH_SSD pointed away.
 
 ## Standing lessons (details in archive.md)
 
-- T-2171 done c62fab3e2 (11-04): tools/disk_sweep.py hourly from supervisor.sh 1b; first pass SSD +61.1 GB, internal +1.8 GB (still 7.6). Guard refuses running supervisor_test.sh and even bash -n on supervisor.sh (keychain rule): don't try. Open: disk_overflow.xcode_busy uses pgrep -f, reads busy whenever a lane prompt names xcodebuild; switch to pgrep -x. Next T-2060 (Simulators ~20 GB).
-- Process rows read only the run's own processes (full paths under $T), never the whole machine. Races need repeated rows (T-1240: 2 of 6).
-- One suite at a time with lanes on; check ps for other run.sh first (T-1867: land suite timed out at 943 s, load 1022, 4 other runs). Read reds by cause, count rows not colour. A before number is a claim: rebuild it from raw.
 - A suite that passed at night and stalls by midday: look for a fixed date in a fixture against a wall-clock window first (T-1688: PAUSE stamp vs inbox 2 h window).
 - Scratch may hold an old attempt's files (T-1195: stale review.txt became T-1684). Never batch a step that reads a file with the Write that makes it.
 - A file another worker is editing mid-task (lanes.py, retry list): commit my hunks as a blob of HEAD+mine, not the path. Recheck diff --cached stat just before commit.
 - Never glob ~/* (security-guard: personal profile); size named folders. ditto copies sparse files at full size (41 GB on SSD from 2.5 GB).
 - Never run board_tick_test.py bare in a lane (it queued real records, T-1425). Evidence may not cite ops/lane-outbox/.
 - Touching a function in tools/site/lanes.py PINS (tick/land/claims/board/governor): run tests/site_lanes_test.py, re-read the sentence, set DIGEST (T-2063: my cd15cd6e3 left it red).
-- T-2077 11-04 dd9b97334: new Home keeps Controls card + hidden #now-panel carrier (app.js status loop needs it). Q1,Q2 still off. Next T-2178 (P0, ETA 11-05): patch ops/plans/t2077-q1q2-on.patch, then site_personal + site_dash_probe. Run site suites at --jobs 3 max (site_test.sh rewrites ops/scoreboard.json). Lesson: a scripted edit put a comment over live arguments; diff every scripted edit.
-- T-2076 11-04: stage 2 (Home) built in tools/site/home_look.py behind switches.py Q1/Q2 (#170 approved, item 6), held off: 7 site_test Home checks to re-point first (run with SITE_LOOK=Q1,Q2).
-- T-2151 done 78d81ab16 (11-04): stops lift themselves (personal_tick.sh auto_lift). Check the tick log for the first live self-lift. T-2173 add is still queued in the outbox: drop or tick it once it lands.
 {% endraw %}
 
 

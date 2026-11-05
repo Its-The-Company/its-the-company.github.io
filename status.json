@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T14:58:45.800026+00:00",
+ "at": "2026-11-05T15:01:31.688979+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[test] T-1867 rerun personal land suite",
    "model": "opus",
    "started": "2026-11-05T14:54:08.338Z",
-   "seconds": 277,
+   "seconds": 443,
    "finished": null,
    "effort": "high"
   }
@@ -22,7 +22,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 430,
+  "runnable_count": 432,
   "blocked_count": 129
  },
  "meter": {
@@ -65,7 +65,7 @@
   "week_pct": 51.55,
   "usage_pct": 42.7,
   "work_pct": 72.6,
-  "read_at": "2026-11-05T14:58:00+00:00",
+  "read_at": "2026-11-05T15:02:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -201,7 +201,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T09:29:06-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a3",
@@ -339,6 +340,138 @@
     "e": "high",
     "at": "2026-11-05T09:32:38-05:00",
     "n": "Evan"
+   },
+   {
+    "lane": "b",
+    "task": "T-2639",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Old unmerged work drains too slowly",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T10:02:38-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2643",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "A personal account safety test fails on main",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T10:02:38-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2580",
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Retry finished work that could not be merged",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T10:02:38-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2591",
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Retry finished work that could not be merged",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T10:02:38-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2592",
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Retry finished work that could not be merged",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T10:02:38-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2593",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Retry finished work that could not be merged",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T10:02:38-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2613",
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Retry finished work that could not be merged",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T10:02:38-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2614",
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Retry finished work that could not be merged",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T10:02:38-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2619",
+    "w": "Idris",
+    "k": "tools",
+    "t": "Retry finished work that could not be merged",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T10:02:38-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2620",
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Retry finished work that could not be merged",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T10:02:38-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2623",
+    "w": "Idris",
+    "k": "tools",
+    "t": "Retry finished work that could not be merged",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T10:02:38-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-2624",
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Retry finished work that could not be merged",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T10:02:38-05:00",
+    "n": "Jeremy"
    },
    {
     "lane": "b3",
@@ -508,7 +641,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T09:58:00-05:00"
+  "at": "2026-11-05T10:02:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -669,7 +802,7 @@
    }
   ],
   "count": {
-   "next": 430,
+   "next": 432,
    "wait": 42,
    "blocked": 87,
    "you": 19
@@ -689,12 +822,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 3,
-  "total": 4,
-  "at": "9:58 AM",
+  "lanes": 4,
+  "total": 5,
+  "at": "10:02 AM",
   "why": "",
-  "at_iso": "2026-11-05T14:58:00+00:00",
+  "at_iso": "2026-11-05T15:02:00+00:00",
   "started": "9:52 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:52 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:58 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:52 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:02 AM ET</p></section>"
  }
 }

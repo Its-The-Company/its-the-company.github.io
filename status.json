@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T02:17:07.729227+00:00",
+ "at": "2026-11-05T02:19:10.440165+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[release] T-2270 first TestFlight build",
    "model": "opus",
    "started": "2026-11-05T02:07:06.614Z",
-   "seconds": 601,
+   "seconds": 723,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[site] T-2276 new Home live",
    "model": "opus",
    "started": "2026-11-05T02:07:22.070Z",
-   "seconds": 585,
+   "seconds": 708,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[test] T-2274 governor red rows",
    "model": "opus",
    "started": "2026-11-05T02:07:27.820Z",
-   "seconds": 579,
+   "seconds": 702,
    "finished": null,
    "effort": "high"
   },
@@ -39,16 +39,7 @@
    "task": "[tools] T-2210 personal land rate",
    "model": "opus",
    "started": "2026-11-05T02:07:39.381Z",
-   "seconds": 568,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-2298 session changeover idle time",
-   "model": "opus",
-   "started": "2026-11-05T02:07:47.025Z",
-   "seconds": 560,
+   "seconds": 691,
    "finished": null,
    "effort": "high"
   },
@@ -57,16 +48,7 @@
    "task": "[tools] T-2278 machine collector",
    "model": "opus",
    "started": "2026-11-05T02:07:53.572Z",
-   "seconds": 554,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-1930 run file names test",
-   "model": "opus",
-   "started": "2026-11-05T02:08:15.673Z",
-   "seconds": 532,
+   "seconds": 676,
    "finished": null,
    "effort": "high"
   },
@@ -75,16 +57,7 @@
    "task": "[test] T-1848 atexit stop test",
    "model": "opus",
    "started": "2026-11-05T02:08:21.576Z",
-   "seconds": 526,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-2269 find refused runner commands (read-only)",
-   "model": "opus",
-   "started": "2026-11-05T02:10:21.786Z",
-   "seconds": 405,
+   "seconds": 648,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +66,7 @@
    "task": "[build] T-1948 AgeLine next date change",
    "model": "opus",
    "started": "2026-11-05T02:13:12.134Z",
-   "seconds": 235,
+   "seconds": 358,
    "finished": null,
    "effort": "high"
   },
@@ -102,7 +75,7 @@
    "task": "[review] T-2299 review of 40c73fa22",
    "model": "opus",
    "started": "2026-11-05T02:15:36.851Z",
-   "seconds": 90,
+   "seconds": 213,
    "finished": null,
    "effort": "high"
   },
@@ -111,13 +84,64 @@
    "task": "[build] T-1977 reserve When p.held",
    "model": "opus",
    "started": "2026-11-05T02:17:07.639Z",
-   "seconds": 0,
+   "seconds": 122,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-2304 land no longer ends session",
+   "model": "opus",
+   "started": "2026-11-05T02:17:41.043Z",
+   "seconds": 89,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2303 queue-only runner command",
+   "model": "opus",
+   "started": "2026-11-05T02:18:31.046Z",
+   "seconds": 39,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-1901 runner unit-first kind card",
+   "model": "opus",
+   "started": "2026-11-05T02:18:39.013Z",
+   "seconds": 31,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x4, Odalys x6, Pernille x2",
+ "who": "Idris x3, Odalys x7, Pernille x2",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-1930 run file names test",
+   "model": "opus",
+   "started": "2026-11-05T02:08:15.673Z",
+   "seconds": null,
+   "finished": "2026-11-05T02:17:20.538000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-2269 find refused runner commands (read-only)",
+   "model": "opus",
+   "started": "2026-11-05T02:10:21.786Z",
+   "seconds": null,
+   "finished": "2026-11-05T02:17:17.374000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-2298 session changeover idle time",
+   "model": "opus",
+   "started": "2026-11-05T02:07:47.025Z",
+   "seconds": null,
+   "finished": "2026-11-05T02:17:08.558000+00:00"
+  },
   {
    "name": "maren",
    "task": "[design] T-2279 Machine bubble + task lifecycle",
@@ -125,36 +149,12 @@
    "started": "2026-11-05T02:08:01.024Z",
    "seconds": null,
    "finished": "2026-11-05T02:16:34.041000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-1931 T-1933 ProjectSendPlan paths",
-   "model": "opus",
-   "started": "2026-11-05T02:08:08.973Z",
-   "seconds": null,
-   "finished": "2026-11-05T02:15:20.422000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[test] T-2281 site proposals red",
-   "model": "opus",
-   "started": "2026-11-05T02:07:33.021Z",
-   "seconds": null,
-   "finished": "2026-11-05T02:12:55.924000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-2269 runner-queue refusals + T-2277",
-   "model": "opus",
-   "started": "2026-11-05T02:07:15.418Z",
-   "seconds": null,
-   "finished": "2026-11-05T02:08:22.612Z"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 391,
+  "runnable_count": 389,
   "blocked_count": 124
  },
  "meter": {
@@ -197,7 +197,7 @@
   "week_pct": 36.78,
   "usage_pct": 37.0,
   "work_pct": 74.8,
-  "read_at": "2026-11-05T02:17:00+00:00",
+  "read_at": "2026-11-05T02:21:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -506,14 +506,14 @@
   }
  ],
  "disk": {
-  "free_gb": 51,
+  "free_gb": 50,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T21:17:00-05:00"
+  "at": "2026-11-04T21:21:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -614,29 +614,11 @@
    },
    {
     "w": "Odalys",
-    "k": "ops",
-    "t": "T-2298 session changeover idle time",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T02:07:47.025Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "tools",
     "t": "T-2278 machine collector",
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T02:07:53.572Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-1930 run file names test",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T02:08:15.673Z",
     "o": "c"
    },
    {
@@ -646,6 +628,24 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T02:08:21.576Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-1948 AgeLine next date change",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T02:13:12.134Z",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-2299 review of 40c73fa22",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T02:15:36.851Z",
     "o": "c"
    }
   ],
@@ -686,13 +686,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Three Idris tasks on 11-04 20:0x-20:1x",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "T-0296 follow-on reminder",
@@ -719,27 +712,34 @@
     "t": "After T-1035 lands",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Activity run log, Swift half",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Maren",
-    "t": "Drew how the site will show both machines (memory, disk, Simulators, test queues) and a Task...",
-    "at": "2026-11-04T21:16:00-05:00"
-   },
-   {
     "w": "Odalys",
-    "t": "Measured the idle time between work sessions (35 changes, typical gap 11 minutes) and found half...",
-    "at": "2026-11-04T21:16:00-05:00"
+    "t": "Found why the company's sessions could not send test runs to the MacBook: the test script can...",
+    "at": "2026-11-04T21:18:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "A project file whose listed path is malformed (it starts with a slash, or has an empty, dot or...",
-    "at": "2026-11-04T21:15:00-05:00"
+    "t": "A new test now writes a widget's own files into a test folder and checks a project can never...",
+    "at": "2026-11-04T21:17:00-05:00"
+   },
+   {
+    "w": "Maren",
+    "t": "Drew how the site will show both machines (memory, disk, Simulators, test queues) and a Task...",
+    "at": "2026-11-04T21:16:00-05:00"
    }
   ],
   "count": {
-   "next": 391,
+   "next": 389,
    "wait": 39,
    "blocked": 85,
    "you": 17
@@ -750,6 +750,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -761,10 +762,10 @@
   "main": 12,
   "lanes": 3,
   "total": 15,
-  "at": "9:17 PM",
+  "at": "9:21 PM",
   "why": "",
-  "at_iso": "2026-11-05T02:17:00+00:00",
+  "at_iso": "2026-11-05T02:21:00+00:00",
   "started": "9:04 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>15</b> agents running now</p><p class=\"an-sub\">Main session 12, started 9:04 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:17 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>15</b> agents running now</p><p class=\"an-sub\">Main session 12, started 9:04 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:21 PM ET</p></section>"
  }
 }

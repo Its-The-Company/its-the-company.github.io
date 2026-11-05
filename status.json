@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T07:52:41.635877+00:00",
+ "at": "2026-11-05T07:58:14.534859+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[review] T-2530 review error badge fix",
    "model": "opus",
    "started": "2026-11-05T07:48:25.831Z",
-   "seconds": 255,
+   "seconds": 588,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[review] T-2100 rerun mutants t1850 on Simulator",
    "model": "opus",
    "started": "2026-11-05T07:48:32.850Z",
-   "seconds": 248,
+   "seconds": 581,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[tools] T-2532 governor API credit test rows",
    "model": "opus",
    "started": "2026-11-05T07:50:14.270Z",
-   "seconds": 147,
+   "seconds": 480,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +39,7 @@
    "task": "[review] T-2531 review send plan fixes",
    "model": "opus",
    "started": "2026-11-05T07:50:20.157Z",
-   "seconds": 141,
+   "seconds": 474,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +48,7 @@
    "task": "[tools] T-2533 schedule the merge queue",
    "model": "opus",
    "started": "2026-11-05T07:51:05.181Z",
-   "seconds": 96,
+   "seconds": 429,
    "finished": null,
    "effort": "high"
   },
@@ -57,12 +57,30 @@
    "task": "[plan] T-2534 triage refused parked work",
    "model": "opus",
    "started": "2026-11-05T07:51:12.145Z",
-   "seconds": 89,
+   "seconds": 422,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "wrenna",
+   "task": "[research] T-2535 app launcher widget feasibility",
+   "model": "opus",
+   "started": "2026-11-05T07:54:15.555Z",
+   "seconds": 238,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-2536 six app launcher options",
+   "model": "opus",
+   "started": "2026-11-05T07:54:23.679Z",
+   "seconds": 230,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille x3, Odalys x2, Ines",
+ "who": "Pernille x3, Odalys x2, Ines, Wrenna, Maren",
  "recent": [
   {
    "name": "odalys",
@@ -143,7 +161,7 @@
   "week_pct": 49.11,
   "usage_pct": 41.6,
   "work_pct": 74.6,
-  "read_at": "2026-11-05T07:55:00+00:00",
+  "read_at": "2026-11-05T07:58:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -451,7 +469,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T02:55:00-05:00"
+  "at": "2026-11-05T02:58:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -488,25 +506,27 @@
    "effort": "high"
   },
   {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "name": "Wrenna",
+   "state": "running",
+   "task": "[research] T-2535 app launcher widget feasibility",
+   "model": "opus",
+   "since": "2026-11-05T07:54:15.555Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Maren",
-   "state": "next",
-   "task": "Maren+Odalys, P1, Investor an Investor c6651474906 (01:33...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[design] T-2536 six app launcher options",
+   "model": "opus",
+   "since": "2026-11-05T07:54:23.679Z",
+   "next": [],
+   "effort": "high"
   },
   {
-   "name": "Wrenna",
+   "name": "Idris",
    "state": "next",
-   "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
    "model": null,
    "since": null,
    "next": []
@@ -566,6 +586,24 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T07:51:12.145Z",
+    "o": "c"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "Check what an app launcher widget can do on iPhone",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T07:54:15.555Z",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Draw six options for the app launcher widget",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T07:54:23.679Z",
     "o": "c"
    }
   ],
@@ -679,13 +717,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 6,
+  "main": 8,
   "lanes": 2,
-  "total": 8,
-  "at": "2:55 AM",
+  "total": 10,
+  "at": "2:58 AM",
   "why": "",
-  "at_iso": "2026-11-05T07:55:00+00:00",
+  "at_iso": "2026-11-05T07:58:00+00:00",
   "started": "1:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 6, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:55 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 8, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:58 AM ET</p></section>"
  }
 }

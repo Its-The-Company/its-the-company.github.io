@@ -1,74 +1,41 @@
 {
  "schema": 1,
- "at": "2026-11-05T08:28:57.816763+00:00",
+ "at": "2026-11-05T08:35:19.537482+00:00",
  "session": {
-  "active": false,
+  "active": true,
   "kind": "",
   "started": null
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-2533 schedule the merge queue",
-   "model": "opus",
-   "started": "2026-11-05T07:51:05.181Z",
-   "seconds": null,
-   "finished": "2026-11-05T08:23:53.898000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-2531 review send plan fixes",
-   "model": "opus",
-   "started": "2026-11-05T07:50:20.157Z",
-   "seconds": null,
-   "finished": "2026-11-05T08:08:14.305000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-2536 six app launcher options",
-   "model": "opus",
-   "started": "2026-11-05T07:54:23.679Z",
-   "seconds": null,
-   "finished": "2026-11-05T08:05:19.006000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2532 governor API credit test rows",
-   "model": "opus",
-   "started": "2026-11-05T07:50:14.270Z",
-   "seconds": null,
-   "finished": "2026-11-05T08:02:16.765000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 433,
+  "runnable_count": 434,
   "blocked_count": 125
  },
  "meter": {
   "five_hour": {
-   "pct": 2.0,
-   "resets_at": "2026-11-05T08:19:59.762526+00:00",
+   "pct": 0.0,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "left": 98.0,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 59.0,
-   "resets_at": "2026-11-08T06:59:59.762547+00:00",
+   "resets_at": "2026-11-08T06:59:59.634842+00:00",
    "used_words": "of your weekly allowance used",
    "left": 41.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 1.0,
-   "resets_at": "2026-11-08T06:59:59.762760+00:00",
+   "resets_at": "2026-11-08T06:59:59.635023+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-05T01:35:05.634041-05:00"
+  "read_at": "2026-11-05T03:35:18.369872-05:00"
  },
  "ui": {
   "week_pct": 0.69,
@@ -83,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-05T01:55:12-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 49.11,
   "usage_pct": 41.6,
   "work_pct": 74.4,
-  "read_at": "2026-11-05T08:29:00+00:00",
+  "read_at": "2026-11-05T08:35:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -218,7 +185,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T01:43:35-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a",
@@ -390,20 +358,20 @@
   }
  ],
  "disk": {
-  "free_gb": 37,
+  "free_gb": 35,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 749
+   "free_gb": 750
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T03:29:00-05:00"
+  "at": "2026-11-05T03:35:00-05:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "pool": null,
  "lanes": [
   {
@@ -547,7 +515,7 @@
    }
   ],
   "count": {
-   "next": 433,
+   "next": 434,
    "wait": 38,
    "blocked": 87,
    "you": 19
@@ -558,7 +526,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -570,10 +537,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "3:29 AM",
+  "at": "3:35 AM",
   "why": "",
-  "at_iso": "2026-11-05T08:29:00+00:00",
+  "at_iso": "2026-11-05T08:35:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:29 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:35 AM ET</p></section>"
  }
 }

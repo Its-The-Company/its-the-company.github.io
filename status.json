@@ -1,18 +1,132 @@
 {
  "schema": 1,
- "at": "2026-11-05T02:58:13.372631+00:00",
+ "at": "2026-11-05T03:01:13.496863+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-04T21:55:12-05:00"
  },
- "workers": [],
- "who": "",
- "recent": [],
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[release] T-2356 TestFlight red tests",
+   "model": "opus",
+   "started": "2026-11-05T02:58:31.483Z",
+   "seconds": 162,
+   "finished": null
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-2357 internal-TestFlight flag review",
+   "model": "opus",
+   "started": "2026-11-05T02:58:38.584Z",
+   "seconds": 154,
+   "finished": null
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-2354 B-staged 1.0 re-plan",
+   "model": "fable",
+   "started": "2026-11-05T02:58:46.042Z",
+   "seconds": 147,
+   "finished": null
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2353 land-rate continuation",
+   "model": "opus",
+   "started": "2026-11-05T02:58:52.536Z",
+   "seconds": 140,
+   "finished": null
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2333 xc_route dirty-path name",
+   "model": "opus",
+   "started": "2026-11-05T02:58:58.386Z",
+   "seconds": 135,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-2340 DSL held-null and envKey pins",
+   "model": "opus",
+   "started": "2026-11-05T02:59:04.338Z",
+   "seconds": 129,
+   "finished": null
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-2072 bell on every page",
+   "model": "opus",
+   "started": "2026-11-05T02:59:11.144Z",
+   "seconds": 122,
+   "finished": null
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2149 lane-stop issue stays open",
+   "model": "opus",
+   "started": "2026-11-05T02:59:16.435Z",
+   "seconds": 117,
+   "finished": null
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2061 both disks in disk_free",
+   "model": "opus",
+   "started": "2026-11-05T02:59:21.685Z",
+   "seconds": 111,
+   "finished": null
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2222 stop_stuck.py tool",
+   "model": "opus",
+   "started": "2026-11-05T02:59:28.189Z",
+   "seconds": 105,
+   "finished": null
+  },
+  {
+   "name": "idris",
+   "task": "[plan] T-1853 device-gate Release switch",
+   "model": "opus",
+   "started": "2026-11-05T02:59:33.934Z",
+   "seconds": 99,
+   "finished": null
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-2141 privacy guard and T-1738 reviews",
+   "model": "opus",
+   "started": "2026-11-05T03:00:11.177Z",
+   "seconds": 62,
+   "finished": null
+  }
+ ],
+ "who": "Idris x3, Pernille x2, Ines, Odalys x6",
+ "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-2347 nextchange mutant and doc",
+   "model": "opus",
+   "started": "2026-11-05T02:59:48.003Z",
+   "seconds": null,
+   "finished": "2026-11-05T03:00:40.916000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[fix] T-2347 nextchange mutant and doc",
+   "model": "opus",
+   "started": "2026-11-05T02:59:38.949Z",
+   "seconds": null,
+   "finished": "2026-11-05T02:59:39.024Z"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 404,
+  "runnable_count": 402,
   "blocked_count": 123
  },
  "meter": {
@@ -55,7 +169,7 @@
   "week_pct": 36.84,
   "usage_pct": 36.0,
   "work_pct": 74.5,
-  "read_at": "2026-11-05T02:58:00+00:00",
+  "read_at": "2026-11-05T03:01:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -102,7 +216,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T20:02:28-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
@@ -158,7 +273,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T20:02:28-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
@@ -365,14 +481,14 @@
   }
  ],
  "disk": {
-  "free_gb": 49,
+  "free_gb": 50,
   "gate": "open",
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T21:58:00-05:00"
+  "at": "2026-11-04T22:01:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -382,35 +498,35 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, an Investor c6592809213 (2026-11-02 20:16) and...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[release] T-2356 TestFlight red tests",
+   "model": "opus",
+   "since": "2026-11-05T02:58:31.483Z",
    "next": []
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P2, Run heatmap levels by size, not brightness...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[review] T-2357 internal-TestFlight flag review",
+   "model": "opus",
+   "since": "2026-11-05T02:58:38.584Z",
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "running",
+   "task": "[plan] T-2354 B-staged 1.0 re-plan",
+   "model": "fable",
+   "since": "2026-11-05T02:58:46.042Z",
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-2353 land-rate continuation",
+   "model": "opus",
+   "since": "2026-11-05T02:58:52.536Z",
    "next": []
   },
   {
@@ -431,7 +547,72 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "release",
+    "t": "T-2356 TestFlight red tests",
+    "m": "opus",
+    "at": "2026-11-05T02:58:31.483Z",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-2357 internal-TestFlight flag review",
+    "m": "opus",
+    "at": "2026-11-05T02:58:38.584Z",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "T-2354 B-staged 1.0 re-plan",
+    "m": "fable",
+    "at": "2026-11-05T02:58:46.042Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-2353 land-rate continuation",
+    "m": "opus",
+    "at": "2026-11-05T02:58:52.536Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-2333 xc_route dirty-path name",
+    "m": "opus",
+    "at": "2026-11-05T02:58:58.386Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-2340 DSL held-null and envKey pins",
+    "m": "opus",
+    "at": "2026-11-05T02:59:04.338Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "T-2072 bell on every page",
+    "m": "opus",
+    "at": "2026-11-05T02:59:11.144Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-2149 lane-stop issue stays open",
+    "m": "opus",
+    "at": "2026-11-05T02:59:16.435Z",
+    "o": "c"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -506,23 +687,23 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The test record no longer claims one planted bug was harmless; Pernille's Toronto 1919 test...",
+    "at": "2026-11-04T22:00:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "The comment on the widget's next-refresh rule now says it assumes local dates never run...",
+    "at": "2026-11-04T22:00:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "A request for the repository to itself now always ends a work session, whatever its wording, and...",
-    "at": "2026-11-04T21:51:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The session-end tests now check that a push GitHub refuses and a file over 100 MB still end a...",
-    "at": "2026-11-04T21:51:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Only a real JSON false now turns off the land gate; text like \"false\", 0 or null keep the old...",
     "at": "2026-11-04T21:51:00-05:00"
    }
   ],
   "count": {
-   "next": 404,
+   "next": 402,
    "wait": 38,
    "blocked": 85,
    "you": 16
@@ -539,12 +720,43 @@
     "done": 0
    },
    "title": "Why is Evan's account not running?"
+  },
+  {
+   "id": "c6648450527",
+   "state": "received",
+   "position": 2,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Is the Macbook runner working and..."
+  },
+  {
+   "id": "c6648456474",
+   "state": "received",
+   "position": 3,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Please keep us updated on any steps..."
+  },
+  {
+   "id": "c6648466243",
+   "state": "received",
+   "position": 4,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Is the size of the Main chat causing..."
   }
  ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -552,13 +764,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 12,
   "lanes": 3,
-  "total": 3,
-  "at": "9:58 PM",
+  "total": 15,
+  "at": "10:01 PM",
   "why": "",
-  "at_iso": "2026-11-05T02:58:00+00:00",
+  "at_iso": "2026-11-05T03:01:00+00:00",
   "started": "9:55 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:55 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:58 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>15</b> agents running now</p><p class=\"an-sub\">Main session 12, started 9:55 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:01 PM ET</p></section>"
  }
 }

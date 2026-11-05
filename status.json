@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T07:58:14.534859+00:00",
+ "at": "2026-11-05T08:01:19.746411+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,19 +9,10 @@
  "workers": [
   {
    "name": "pernille",
-   "task": "[review] T-2530 review error badge fix",
-   "model": "opus",
-   "started": "2026-11-05T07:48:25.831Z",
-   "seconds": 588,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
    "task": "[review] T-2100 rerun mutants t1850 on Simulator",
    "model": "opus",
    "started": "2026-11-05T07:48:32.850Z",
-   "seconds": 581,
+   "seconds": 766,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +21,7 @@
    "task": "[tools] T-2532 governor API credit test rows",
    "model": "opus",
    "started": "2026-11-05T07:50:14.270Z",
-   "seconds": 480,
+   "seconds": 665,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +30,7 @@
    "task": "[review] T-2531 review send plan fixes",
    "model": "opus",
    "started": "2026-11-05T07:50:20.157Z",
-   "seconds": 474,
+   "seconds": 659,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[tools] T-2533 schedule the merge queue",
    "model": "opus",
    "started": "2026-11-05T07:51:05.181Z",
-   "seconds": 429,
+   "seconds": 614,
    "finished": null,
    "effort": "high"
   },
@@ -57,16 +48,7 @@
    "task": "[plan] T-2534 triage refused parked work",
    "model": "opus",
    "started": "2026-11-05T07:51:12.145Z",
-   "seconds": 422,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] T-2535 app launcher widget feasibility",
-   "model": "opus",
-   "started": "2026-11-05T07:54:15.555Z",
-   "seconds": 238,
+   "seconds": 607,
    "finished": null,
    "effort": "high"
   },
@@ -75,13 +57,29 @@
    "task": "[design] T-2536 six app launcher options",
    "model": "opus",
    "started": "2026-11-05T07:54:23.679Z",
-   "seconds": 230,
+   "seconds": 416,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille x3, Odalys x2, Ines, Wrenna, Maren",
+ "who": "Pernille x2, Odalys x2, Ines, Maren",
  "recent": [
+  {
+   "name": "wrenna",
+   "task": "[research] T-2535 app launcher widget feasibility",
+   "model": "opus",
+   "started": "2026-11-05T07:54:15.555Z",
+   "seconds": null,
+   "finished": "2026-11-05T08:01:17.318000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-2530 review error badge fix",
+   "model": "opus",
+   "started": "2026-11-05T07:48:25.831Z",
+   "seconds": null,
+   "finished": "2026-11-05T07:59:07.129000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2517 queue all parked finished work",
@@ -97,28 +95,12 @@
    "started": "2026-11-05T07:28:02.007Z",
    "seconds": null,
    "finished": "2026-11-05T07:49:58.423000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2323 reports inside work session",
-   "model": "opus",
-   "started": "2026-11-05T07:25:49.109Z",
-   "seconds": null,
-   "finished": "2026-11-05T07:49:49.387000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2518 error badge through memory refusal",
-   "model": "opus",
-   "started": "2026-11-05T07:27:55.728Z",
-   "seconds": null,
-   "finished": "2026-11-05T07:48:00.268000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 428,
+  "runnable_count": 432,
   "blocked_count": 124
  },
  "meter": {
@@ -161,7 +143,7 @@
   "week_pct": 49.11,
   "usage_pct": 41.6,
   "work_pct": 74.6,
-  "read_at": "2026-11-05T07:58:00+00:00",
+  "read_at": "2026-11-05T08:01:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -458,7 +440,7 @@
   }
  ],
  "disk": {
-  "free_gb": 39,
+  "free_gb": 37,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -469,7 +451,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T02:58:00-05:00"
+  "at": "2026-11-05T03:01:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -481,9 +463,9 @@
   {
    "name": "Pernille",
    "state": "running",
-   "task": "[review] T-2530 review error badge fix",
+   "task": "[review] T-2100 rerun mutants t1850 on Simulator",
    "model": "opus",
-   "since": "2026-11-05T07:48:25.831Z",
+   "since": "2026-11-05T07:48:32.850Z",
    "next": [],
    "effort": "high"
   },
@@ -506,15 +488,6 @@
    "effort": "high"
   },
   {
-   "name": "Wrenna",
-   "state": "running",
-   "task": "[research] T-2535 app launcher widget feasibility",
-   "model": "opus",
-   "since": "2026-11-05T07:54:15.555Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Maren",
    "state": "running",
    "task": "[design] T-2536 six app launcher options",
@@ -530,19 +503,18 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Wrenna",
+   "state": "next",
+   "task": "Wrenna, P1, Investor an Investor c6652747463 (02:53 11-05;...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check the badge kept through a memory refusal",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T07:48:25.831Z",
-    "o": "c"
-   },
    {
     "w": "Pernille",
     "k": "review",
@@ -586,15 +558,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T07:51:12.145Z",
-    "o": "c"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Check what an app launcher widget can do on iPhone",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T07:54:15.555Z",
     "o": "c"
    },
    {
@@ -681,23 +644,23 @@
   ],
   "done": [
    {
+    "w": "Ines",
+    "t": "Sorted the 234 pieces of finished work the overnight merge sweep could not land, by task: 144...",
+    "at": "2026-11-05T03:01:00-05:00"
+   },
+   {
+    "w": "Pernille",
+    "t": "Checked Idris's fix that keeps the error mark on a widget whose script failed when the memory...",
+    "at": "2026-11-05T02:58:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Finished work left on 257 parked branches is now listed, and 255 pieces (222 tasks) are queued...",
     "at": "2026-11-05T02:50:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "when a morning or evening report falls due during a work session, that session now writes it...",
-    "at": "2026-11-05T02:49:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "When the app cannot read a file's change time, it now resends the widget once rather than...",
-    "at": "2026-11-05T02:49:00-05:00"
    }
   ],
   "count": {
-   "next": 428,
+   "next": 432,
    "wait": 38,
    "blocked": 86,
    "you": 18
@@ -717,13 +680,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 8,
+  "main": 6,
   "lanes": 2,
-  "total": 10,
-  "at": "2:58 AM",
+  "total": 8,
+  "at": "3:01 AM",
   "why": "",
-  "at_iso": "2026-11-05T07:58:00+00:00",
+  "at_iso": "2026-11-05T08:01:00+00:00",
   "started": "1:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 8, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:58 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 6, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:01 AM ET</p></section>"
  }
 }

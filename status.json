@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T07:05:44.307675+00:00",
+ "at": "2026-11-05T07:08:42.409624+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2483 applier chain T-2476 T-2484",
    "model": "opus",
    "started": "2026-11-05T06:50:51.255Z",
-   "seconds": 893,
+   "seconds": 1071,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[build] T-0675 extension lane next slice",
    "model": "opus",
    "started": "2026-11-05T06:56:14.651Z",
-   "seconds": 569,
+   "seconds": 747,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[release] T-2319 stdlib ctypes host check",
    "model": "opus",
    "started": "2026-11-05T06:57:31.560Z",
-   "seconds": 492,
+   "seconds": 670,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +39,7 @@
    "task": "[test] T-2147 stale entry plan test gap",
    "model": "opus",
    "started": "2026-11-05T06:58:38.463Z",
-   "seconds": 425,
+   "seconds": 603,
    "finished": null,
    "effort": "high"
   },
@@ -48,16 +48,7 @@
    "task": "[build] T-2514 reset restores unraisablehook",
    "model": "opus",
    "started": "2026-11-05T07:00:40.789Z",
-   "seconds": 303,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-2045 review T-1670 before TestFlight",
-   "model": "opus",
-   "started": "2026-11-05T07:01:16.989Z",
-   "seconds": 267,
+   "seconds": 481,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +57,7 @@
    "task": "[design] T-1759 examples entry on iPhone",
    "model": "opus",
    "started": "2026-11-05T07:01:23.328Z",
-   "seconds": 260,
+   "seconds": 439,
    "finished": null,
    "effort": "high"
   },
@@ -75,13 +66,30 @@
    "task": "[review] T-1729 OOM guard status review",
    "model": "opus",
    "started": "2026-11-05T07:05:19.683Z",
-   "seconds": 24,
+   "seconds": 202,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-2342 review Idris 45c9a7b18",
+   "model": "opus",
+   "started": "2026-11-05T07:08:08.381Z",
+   "seconds": 34,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys, Idris, Pernille x5, Maren",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-2045 review T-1670 before TestFlight",
+   "model": "opus",
+   "started": "2026-11-05T07:01:16.989Z",
+   "seconds": null,
+   "finished": "2026-11-05T07:07:45.676000+00:00"
+  },
   {
    "name": "maren",
    "task": "[design] T-2234 activity strings and frames",
@@ -105,20 +113,12 @@
    "started": "2026-11-05T06:58:31.857Z",
    "seconds": null,
    "finished": "2026-11-05T07:00:55.234000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[research] T-2262 editor tooling runtime read",
-   "model": "opus",
-   "started": "2026-11-05T06:51:33.944Z",
-   "seconds": null,
-   "finished": "2026-11-05T07:00:25.748000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 432,
+  "runnable_count": 431,
   "blocked_count": 124
  },
  "meter": {
@@ -161,7 +161,7 @@
   "week_pct": 49.11,
   "usage_pct": 41.6,
   "work_pct": 74.6,
-  "read_at": "2026-11-05T07:05:00+00:00",
+  "read_at": "2026-11-05T07:08:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -453,18 +453,18 @@
   }
  ],
  "disk": {
-  "free_gb": 45,
+  "free_gb": 44,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 761
+   "free_gb": 759
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T02:05:00-05:00"
+  "at": "2026-11-05T02:08:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -574,15 +574,6 @@
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-2045 review T-1670 before TestFlight",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T07:01:16.989Z",
-    "o": "c"
-   },
-   {
     "w": "Maren",
     "k": "design",
     "t": "T-1759 examples entry on iPhone",
@@ -598,6 +589,15 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T07:05:19.683Z",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-2342 review Idris 45c9a7b18",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T07:08:08.381Z",
     "o": "c"
    }
   ],
@@ -675,23 +675,23 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "The new memory-warning badge code is correct and its tests catch every planted bug. Two gaps...",
+    "at": "2026-11-05T02:08:00-05:00"
+   },
+   {
     "w": "Maren",
-    "t": "The Activity screen's copy table now lists all 104 draft strings, the sample screens no longer...",
-    "at": "2026-11-05T02:04:00-05:00"
+    "t": "The 10 example scripts that come with the app now have a drawn home on iPhone, inside the...",
+    "at": "2026-11-05T02:07:00-05:00"
    },
    {
     "w": "Pernille",
-    "t": "Pernille checked Idris's new Activity words for a Refresh tap whose fresh data did not arrive;...",
-    "at": "2026-11-05T02:00:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "The rule that a due report is written inside the running work session, not by stopping work, was...",
-    "at": "2026-11-05T01:59:00-05:00"
+    "t": "Checked Idris's new test T-1670 (notification limits test): the longest allowed title, body and...",
+    "at": "2026-11-05T02:07:00-05:00"
    }
   ],
   "count": {
-   "next": 432,
+   "next": 431,
    "wait": 38,
    "blocked": 86,
    "you": 18
@@ -714,10 +714,10 @@
   "main": 8,
   "lanes": 2,
   "total": 10,
-  "at": "2:05 AM",
+  "at": "2:08 AM",
   "why": "",
-  "at_iso": "2026-11-05T07:05:00+00:00",
+  "at_iso": "2026-11-05T07:08:00+00:00",
   "started": "1:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 8, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:05 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 8, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:08 AM ET</p></section>"
  }
 }

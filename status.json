@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T07:21:46.883970+00:00",
+ "at": "2026-11-05T07:24:54.517170+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,20 +8,11 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[tools] T-2483 applier chain T-2476 T-2484",
-   "model": "opus",
-   "started": "2026-11-05T06:50:51.255Z",
-   "seconds": 1855,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "idris",
    "task": "[build] T-0675 extension lane next slice",
    "model": "opus",
    "started": "2026-11-05T06:56:14.651Z",
-   "seconds": 1532,
+   "seconds": 1719,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +21,7 @@
    "task": "[release] T-2319 stdlib ctypes host check",
    "model": "opus",
    "started": "2026-11-05T06:57:31.560Z",
-   "seconds": 1455,
+   "seconds": 1642,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +30,7 @@
    "task": "[build] T-2514 reset restores unraisablehook",
    "model": "opus",
    "started": "2026-11-05T07:00:40.789Z",
-   "seconds": 1266,
+   "seconds": 1453,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[tools] T-2517 queue all parked finished work",
    "model": "opus",
    "started": "2026-11-05T07:09:33.075Z",
-   "seconds": 733,
+   "seconds": 921,
    "finished": null,
    "effort": "high"
   },
@@ -57,13 +48,21 @@
    "task": "[design] T-2239 lift card at AX5",
    "model": "opus",
    "started": "2026-11-05T07:13:58.415Z",
-   "seconds": 468,
+   "seconds": 656,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2, Idris, Pernille x2, Maren",
+ "who": "Idris, Pernille x2, Odalys, Maren",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2483 applier chain T-2476 T-2484",
+   "model": "opus",
+   "started": "2026-11-05T06:50:51.255Z",
+   "seconds": null,
+   "finished": "2026-11-05T07:24:28.949000+00:00"
+  },
   {
    "name": "general-purpose",
    "task": "[ops] Pernille memory file under 4 KB",
@@ -87,20 +86,12 @@
    "started": "2026-11-05T06:58:38.463Z",
    "seconds": null,
    "finished": "2026-11-05T07:13:05.193000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-2342 review Idris 45c9a7b18",
-   "model": "opus",
-   "started": "2026-11-05T07:08:08.381Z",
-   "seconds": null,
-   "finished": "2026-11-05T07:10:39.507000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 432,
+  "runnable_count": 431,
   "blocked_count": 124
  },
  "meter": {
@@ -143,7 +134,7 @@
   "week_pct": 49.11,
   "usage_pct": 41.6,
   "work_pct": 74.6,
-  "read_at": "2026-11-05T07:21:00+00:00",
+  "read_at": "2026-11-05T07:24:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -448,7 +439,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T02:21:00-05:00"
+  "at": "2026-11-05T02:24:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -457,15 +448,6 @@
   "at": "2026-11-05T01:40:12.572517-05:00"
  },
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-2483 applier chain T-2476 T-2484",
-   "model": "opus",
-   "since": "2026-11-05T06:50:51.255Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "running",
@@ -481,6 +463,15 @@
    "task": "[release] T-2319 stdlib ctypes host check",
    "model": "opus",
    "since": "2026-11-05T06:57:31.560Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-2517 queue all parked finished work",
+   "model": "opus",
+   "since": "2026-11-05T07:09:33.075Z",
    "next": [],
    "effort": "high"
   },
@@ -512,15 +503,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Check whether the proposal-commit naming fix is already on main",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T06:50:51.255Z",
-    "o": "c"
-   },
    {
     "w": "Idris",
     "k": "build",
@@ -642,6 +624,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "Proposals the Investors approve can now be applied while a work session is running, instead of...",
+    "at": "2026-11-05T02:24:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The parked fix that stops the proposal applier from mistaking one proposal's commit for...",
     "at": "2026-11-05T02:14:00-05:00"
    },
@@ -649,15 +636,10 @@
     "w": "Odalys",
     "t": "A rule fold the Investors approved in advance no longer stalls because an Investor asked a...",
     "at": "2026-11-05T02:14:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "Ruled what a widget shows when its script failed and the memory guard then skips it: the error...",
-    "at": "2026-11-05T02:13:00-05:00"
    }
   ],
   "count": {
-   "next": 432,
+   "next": 431,
    "wait": 38,
    "blocked": 86,
    "you": 18
@@ -677,13 +659,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 6,
+  "main": 5,
   "lanes": 2,
-  "total": 8,
-  "at": "2:21 AM",
+  "total": 7,
+  "at": "2:24 AM",
   "why": "",
-  "at_iso": "2026-11-05T07:21:00+00:00",
+  "at_iso": "2026-11-05T07:24:00+00:00",
   "started": "1:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 6, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:21 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 5, started 1:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:24 AM ET</p></section>"
  }
 }

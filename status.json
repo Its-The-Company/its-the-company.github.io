@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T02:45:42.336124+00:00",
+ "at": "2026-11-05T02:48:46.565459+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,86 +12,59 @@
    "task": "[release] T-2270 first TestFlight build",
    "model": "opus",
    "started": "2026-11-05T02:07:06.614Z",
-   "seconds": 2315,
+   "seconds": 2499,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-2210 personal land rate",
+   "task": "[ops] T-2349 stale needs_repo and text match",
    "model": "opus",
-   "started": "2026-11-05T02:07:39.381Z",
-   "seconds": 2282,
+   "started": "2026-11-05T02:48:01.205Z",
+   "seconds": 45,
    "finished": null,
    "effort": "high"
+  }
+ ],
+ "who": "Idris, Odalys",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[site] T-2297 session facts on Home",
+   "model": "opus",
+   "started": "2026-11-05T02:47:56.095Z",
+   "seconds": null,
+   "finished": "2026-11-05T02:48:08.263000+00:00"
   },
   {
    "name": "pernille",
    "task": "[review] T-1979 xc_route review + T-0309 check",
    "model": "opus",
    "started": "2026-11-05T02:22:04.596Z",
-   "seconds": 1417,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-05T02:47:37.077000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2210 personal land rate",
+   "model": "opus",
+   "started": "2026-11-05T02:07:39.381Z",
+   "seconds": null,
+   "finished": "2026-11-05T02:47:10.224000+00:00"
   },
   {
    "name": "pernille",
    "task": "[review] T-2321 review of session_end change",
    "model": "opus",
    "started": "2026-11-05T02:36:06.122Z",
-   "seconds": 576,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-2334 review of AgeLine.nextChange",
-   "model": "opus",
-   "started": "2026-11-05T02:36:42.714Z",
-   "seconds": 539,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Odalys, Pernille x3",
- "recent": [
-  {
-   "name": "maren",
-   "task": "[design] T-2307 workflow diagrams redesign",
-   "model": "opus",
-   "started": "2026-11-05T02:34:24.489Z",
    "seconds": null,
-   "finished": "2026-11-05T02:45:19.030000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-2276 new Home live",
-   "model": "opus",
-   "started": "2026-11-05T02:07:22.070Z",
-   "seconds": null,
-   "finished": "2026-11-05T02:43:21.897000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-2322 T-2324 drop CEO step, approve-only ends",
-   "model": "opus",
-   "started": "2026-11-05T02:34:32.780Z",
-   "seconds": null,
-   "finished": "2026-11-05T02:43:06.372000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2305 unit-first runner routing",
-   "model": "opus",
-   "started": "2026-11-05T02:30:41.736Z",
-   "seconds": null,
-   "finished": "2026-11-05T02:43:05.985000+00:00"
+   "finished": "2026-11-05T02:46:35.581000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 403,
+  "runnable_count": 404,
   "blocked_count": 123
  },
  "meter": {
@@ -134,7 +107,7 @@
   "week_pct": 36.78,
   "usage_pct": 37.0,
   "work_pct": 74.8,
-  "read_at": "2026-11-05T02:45:00+00:00",
+  "read_at": "2026-11-05T02:48:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -299,138 +272,134 @@
    },
    {
     "lane": "b3",
-    "task": "T-2265",
-    "w": "Pernille",
+    "task": "T-2277",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Follow-up of T-2257",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T21:47:16-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2297",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Investor an Investor c6647520496",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T21:47:16-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2308",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Investor an Investor c6647932583",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T21:47:16-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2329",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Check ops/proposals/2026-11-04-reports-inside-work-session.md",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T21:47:16-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2330",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Machine and task tracking, step 1 continued",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T21:47:16-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2346",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Investor an Investor c6648227019",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T21:47:16-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2352",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Two open points from Maren T-2307",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T21:47:16-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2282",
+    "w": "Maren",
+    "k": "design",
+    "t": "Screen read of the Settings screen",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-04T21:47:16-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2283",
+    "w": "Odalys",
     "k": "review",
-    "t": "T-2054/T-2055/T-2056 Pernille, P1",
+    "t": "Independent review",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-04T20:33:33-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-2266",
-    "w": "Idris",
-    "k": "test",
-    "t": "T-2054/T-2055/T-2056 Idris, P1, continuation",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T20:33:33-05:00",
+    "at": "2026-11-04T21:47:16-05:00",
     "n": "Jeremy"
    },
    {
     "lane": "b3",
-    "task": "T-2260",
-    "w": "Idris",
-    "k": "fix",
-    "t": "The closed lane's exit",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T20:33:33-05:00",
+    "task": "T-2275",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Odalys's MEMORY.md is 8.4 KB, over Commandment 16's 4 KB",
+    "m": "haiku",
+    "e": "low",
+    "at": "2026-11-04T21:47:16-05:00",
     "n": "Jeremy"
    },
    {
     "lane": "b3",
-    "task": "T-2261",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0656 continuation",
+    "task": "T-2280",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Machine and task tracking, step 3, after the two lines above",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-04T20:33:33-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-2262",
-    "w": "Pernille",
-    "k": "runtime",
-    "t": "For T-0656",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T20:33:33-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-2268",
-    "w": "Idris",
-    "k": "build",
-    "t": "T-0191 continuation B",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T20:33:33-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-2271",
-    "w": "Idris",
-    "k": "build",
-    "t": "Continuation of T-2227 and T-2237",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T20:33:33-05:00",
+    "at": "2026-11-04T21:47:16-05:00",
     "n": "Jeremy"
    },
    {
     "lane": "b3",
-    "task": "T-2272",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Independent review before TestFlight of Idris's extension-lane fix series:...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T20:33:33-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-2040",
-    "k": "fix",
-    "t": "P2, ProPaywallUITests/testRestoreAndLegalLinksReachableAtLargeAndAX5 red...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T20:33:33-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-2021",
+    "task": "T-2302",
     "w": "Idris",
     "k": "build",
-    "t": "Before the",
+    "t": "Xcode queue",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-04T20:33:33-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-2027",
-    "w": "Idris",
-    "k": "build",
-    "t": "J-20261104-0240 ran on the runner's reused Simulator, which 2157's late...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T20:33:33-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-2044",
-    "w": "Idris",
-    "k": "build",
-    "t": "The orphan-mark timing test in Tests/ExtensionLaneTests.swift has a 1.4 s...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T20:33:33-05:00",
+    "at": "2026-11-04T21:47:16-05:00",
     "n": "Jeremy"
    }
   ]
@@ -450,7 +419,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T21:45:00-05:00"
+  "at": "2026-11-04T21:48:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -471,18 +440,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-2210 personal land rate",
+   "task": "[ops] T-2349 stale needs_repo and text match",
    "model": "opus",
-   "since": "2026-11-05T02:07:39.381Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-1979 xc_route review + T-0309 check",
-   "model": "opus",
-   "since": "2026-11-05T02:22:04.596Z",
+   "since": "2026-11-05T02:48:01.205Z",
    "next": [],
    "effort": "high"
   },
@@ -490,6 +450,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P2, Run heatmap levels by size, not brightness...",
    "model": null,
    "since": null,
    "next": []
@@ -524,49 +492,15 @@
    },
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "T-2210 personal land rate",
+    "k": "ops",
+    "t": "T-2349 stale needs_repo and text match",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-05T02:07:39.381Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-1979 xc_route review + T-0309 check",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T02:22:04.596Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-2321 review of session_end change",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T02:36:06.122Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-2334 review of AgeLine.nextChange",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T02:36:42.714Z",
+    "at": "2026-11-05T02:48:01.205Z",
     "o": "c"
    }
   ],
   "open": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Personal branches land about half the time",
-    "s": "next",
-    "o": "i"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -580,6 +514,13 @@
     "t": "T-0296 follow-on reminder",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Continues the land-rate task after e8489970c, P0",
+    "s": "next",
+    "o": "i"
    },
    {
     "w": "Idris",
@@ -633,23 +574,23 @@
   ],
   "done": [
    {
-    "w": "Maren",
-    "t": "The Infrastructure page's workflow diagrams are redesigned to be drawn from the code's own map,...",
-    "at": "2026-11-04T21:45:00-05:00"
+    "w": "Pernille",
+    "t": "I reviewed Odalys's change to the tool that sends iPhone test runs to the MacBook; it works, but...",
+    "at": "2026-11-04T21:47:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "Stage 2 of the site redesign is on: Home folds Usage, Money and Work into its bubbles and...",
-    "at": "2026-11-04T21:43:00-05:00"
+    "t": "A new script counts how many lane branches reach main each day and why the rest do not (45% on...",
+    "at": "2026-11-04T21:47:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "Home now shows the new layout the Investors approved in (four summary bubbles, Team, Running,...",
-    "at": "2026-11-04T21:43:00-05:00"
+    "w": "Pernille",
+    "t": "The Python side of five new widget options (a description, letter spacing, a counting number...",
+    "at": "2026-11-04T21:47:00-05:00"
    }
   ],
   "count": {
-   "next": 403,
+   "next": 404,
    "wait": 38,
    "blocked": 85,
    "you": 16
@@ -669,13 +610,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 5,
+  "main": 2,
   "lanes": 3,
-  "total": 8,
-  "at": "9:45 PM",
+  "total": 5,
+  "at": "9:48 PM",
   "why": "",
-  "at_iso": "2026-11-05T02:45:00+00:00",
+  "at_iso": "2026-11-05T02:48:00+00:00",
   "started": "9:04 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:04 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:45 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:04 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:48 PM ET</p></section>"
  }
 }

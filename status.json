@@ -1,18 +1,27 @@
 {
  "schema": 1,
- "at": "2026-11-05T06:35:06.454852+00:00",
+ "at": "2026-11-05T06:38:08.488930+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-05T01:35:06-05:00"
  },
  "workers": [],
  "who": "",
- "recent": [],
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2479 diagnose Evan lane not starting",
+   "model": "sonnet",
+   "started": "2026-11-05T06:37:14.414Z",
+   "seconds": null,
+   "finished": "2026-11-05T06:37:58.299000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 422,
+  "runnable_count": 424,
   "blocked_count": 124
  },
  "meter": {
@@ -55,7 +64,7 @@
   "week_pct": 49.11,
   "usage_pct": 41.6,
   "work_pct": 74.9,
-  "read_at": "2026-11-05T06:35:00+00:00",
+  "read_at": "2026-11-05T06:38:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -87,10 +96,14 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-05T01:35:00-05:00"
+  "at": "2026-11-05T01:38:00-05:00"
  },
  "next_tick_why": "session",
- "pool": null,
+ "pool": {
+  "why": "On the API credits by the Investors' instruction, so the full pool runs",
+  "n": 12,
+  "at": "2026-11-05T01:35:05.906395-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
@@ -144,6 +157,13 @@
  "tasks": {
   "run": [],
   "open": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Restart Evan's account and avoid credit gaps",
+    "s": "next",
+    "o": "c"
+   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -206,13 +226,6 @@
     "t": "Refresh control and age line in the renderer",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-1669 rest",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -233,40 +246,18 @@
    }
   ],
   "count": {
-   "next": 422,
+   "next": 424,
    "wait": 38,
    "blocked": 86,
    "you": 18
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6651405639",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Why is nothing running"
-  },
-  {
-   "id": "c6651474906",
-   "state": "received",
-   "position": 2,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "The Chat page shouldn't have..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -277,10 +268,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "1:35 AM",
+  "at": "1:38 AM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-05T06:35:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:35 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "at_iso": "2026-11-05T06:38:00+00:00",
+  "started": "1:35 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 1:35 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:38 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T18:42:39.351108+00:00",
+ "at": "2026-11-05T18:45:39.283680+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2634 land merges on MacBook in parallel",
    "model": "opus",
    "started": "2026-11-05T18:32:53.686Z",
-   "seconds": 585,
+   "seconds": 765,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2672 applier reads pinned diff file",
    "model": "opus",
    "started": "2026-11-05T18:33:11.090Z",
-   "seconds": 568,
+   "seconds": 748,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[tools] T-2570 retry unmerged parked work",
    "model": "opus",
    "started": "2026-11-05T18:33:25.639Z",
-   "seconds": 553,
+   "seconds": 733,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +39,7 @@
    "task": "[tools] T-2675 charter suite reds comparison",
    "model": "opus",
    "started": "2026-11-05T18:33:34.547Z",
-   "seconds": 544,
+   "seconds": 724,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +48,7 @@
    "task": "[release] T-2456 first TestFlight build checks",
    "model": "opus",
    "started": "2026-11-05T18:33:43.690Z",
-   "seconds": 535,
+   "seconds": 715,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +57,7 @@
    "task": "[build] T-2661 widget memory verdict and demotion",
    "model": "opus",
    "started": "2026-11-05T18:33:51.144Z",
-   "seconds": 528,
+   "seconds": 708,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +66,7 @@
    "task": "[build] T-2662 lane gate archive check",
    "model": "opus",
    "started": "2026-11-05T18:33:57.889Z",
-   "seconds": 521,
+   "seconds": 701,
    "finished": null,
    "effort": "high"
   },
@@ -75,16 +75,7 @@
    "task": "[test] T-2663 privacy check file-scan tests",
    "model": "opus",
    "started": "2026-11-05T18:34:03.791Z",
-   "seconds": 515,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-1440 widget refresh control and age",
-   "model": "opus",
-   "started": "2026-11-05T18:34:10.891Z",
-   "seconds": 508,
+   "seconds": 695,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +84,7 @@
    "task": "[build] T-1677 record last run report at launch",
    "model": "opus",
    "started": "2026-11-05T18:37:36.900Z",
-   "seconds": 302,
+   "seconds": 482,
    "finished": null,
    "effort": "high"
   },
@@ -102,7 +93,7 @@
    "task": "[build] T-2567 traceback fold fixes, tick T-2413",
    "model": "opus",
    "started": "2026-11-05T18:38:29.185Z",
-   "seconds": 250,
+   "seconds": 430,
    "finished": null,
    "effort": "high"
   },
@@ -111,13 +102,30 @@
    "task": "[tools] T-2466 fix three red tool suites",
    "model": "opus",
    "started": "2026-11-05T18:41:11.554Z",
-   "seconds": 87,
+   "seconds": 267,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[test] T-2266 stuck-signal tests on MacBook",
+   "model": "opus",
+   "started": "2026-11-05T18:45:12.150Z",
+   "seconds": 27,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x4, Ines, Idris x6, Pernille",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-1440 widget refresh control and age",
+   "model": "opus",
+   "started": "2026-11-05T18:34:10.891Z",
+   "seconds": null,
+   "finished": "2026-11-05T18:44:42.383000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2615 finish one dispatcher",
@@ -141,14 +149,6 @@
    "started": "2026-11-05T18:36:55.172Z",
    "seconds": null,
    "finished": "2026-11-05T18:37:22.380000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2603 presenter queue and retry fixes",
-   "model": "opus",
-   "started": "2026-11-05T18:34:17.367Z",
-   "seconds": null,
-   "finished": "2026-11-05T18:36:30.127000+00:00"
   }
  ],
  "queue": {
@@ -197,7 +197,7 @@
   "week_pct": 58.5,
   "usage_pct": 45.5,
   "work_pct": 71.9,
-  "read_at": "2026-11-05T18:42:00+00:00",
+  "read_at": "2026-11-05T18:45:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -222,14 +222,14 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 708
+   "free_gb": 707
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-05T13:42:00-05:00"
+  "at": "2026-11-05T13:45:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -467,6 +467,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -478,10 +479,10 @@
   "main": 12,
   "lanes": 0,
   "total": 12,
-  "at": "1:42 PM",
+  "at": "1:45 PM",
   "why": "",
-  "at_iso": "2026-11-05T18:42:00+00:00",
+  "at_iso": "2026-11-05T18:45:00+00:00",
   "started": "1:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>12</b> agents running now</p><p class=\"an-sub\">Main session 12, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:42 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>12</b> agents running now</p><p class=\"an-sub\">Main session 12, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:45 PM ET</p></section>"
  }
 }

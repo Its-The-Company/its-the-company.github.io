@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T09:41:46.662735+00:00",
+ "at": "2026-11-05T09:44:48.196051+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,35 +8,51 @@
  },
  "workers": [
   {
+   "name": "idris",
+   "task": "[release] T-2581 upload tool low findings",
+   "model": "opus",
+   "started": "2026-11-05T09:40:23.716Z",
+   "seconds": 264,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-2583 prompt alert presentation fix",
+   "model": "opus",
+   "started": "2026-11-05T09:42:10.574Z",
+   "seconds": 157,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-2249 parked lane branches verdict",
+   "model": "opus",
+   "started": "2026-11-05T09:44:20.366Z",
+   "seconds": 27,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris x2, Odalys",
+ "recent": [
+  {
    "name": "odalys",
    "task": "[tools] T-2556 supervisor test reds",
    "model": "opus",
    "started": "2026-11-05T09:12:51.423Z",
-   "seconds": 1735,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-05T09:44:02.314000+00:00"
   },
   {
    "name": "pernille",
    "task": "[review] T-2576 review five parked fixes",
    "model": "opus",
    "started": "2026-11-05T09:35:24.502Z",
-   "seconds": 382,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-05T09:41:52.293000+00:00"
   },
-  {
-   "name": "idris",
-   "task": "[release] T-2581 upload tool low findings",
-   "model": "opus",
-   "started": "2026-11-05T09:40:23.716Z",
-   "seconds": 82,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Pernille, Idris",
- "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-2582 personal account permission parity",
@@ -52,28 +68,12 @@
    "started": "2026-11-05T09:36:55.949Z",
    "seconds": null,
    "finished": "2026-11-05T09:38:13.392000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[release] T-2566 re-review upload fixes",
-   "model": "opus",
-   "started": "2026-11-05T09:27:36.663Z",
-   "seconds": null,
-   "finished": "2026-11-05T09:36:19.812000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2537 land parked fixes, slice 1",
-   "model": "opus",
-   "started": "2026-11-05T09:13:01.408Z",
-   "seconds": null,
-   "finished": "2026-11-05T09:35:02.324000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 431,
+  "runnable_count": 430,
   "blocked_count": 126
  },
  "meter": {
@@ -116,7 +116,7 @@
   "week_pct": 51.58,
   "usage_pct": 42.8,
   "work_pct": 74.2,
-  "read_at": "2026-11-05T09:41:00+00:00",
+  "read_at": "2026-11-05T09:44:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -148,7 +148,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T04:41:00-05:00"
+  "at": "2026-11-05T04:44:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -157,24 +157,6 @@
   "at": "2026-11-05T04:10:47.062964-05:00"
  },
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-2556 supervisor test reds",
-   "model": "opus",
-   "since": "2026-11-05T09:12:51.423Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-2576 review five parked fixes",
-   "model": "opus",
-   "since": "2026-11-05T09:35:24.502Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "running",
@@ -185,9 +167,26 @@
    "effort": "high"
   },
   {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[ops] T-2249 parked lane branches verdict",
+   "model": "opus",
+   "since": "2026-11-05T09:44:20.366Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P2, no Xcode, after T-1440 lands (Idris review...",
    "model": null,
    "since": null,
    "next": []
@@ -212,30 +211,30 @@
  "tasks": {
   "run": [
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Fix the seven red rows in the supervisor tests",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T09:12:51.423Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the five landed parked fixes before TestFlight",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T09:35:24.502Z",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "release",
     "t": "Tidy the upload tools after the second review",
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T09:40:23.716Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Prompt alerts never vanish unseen when UIKit drops them",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T09:42:10.574Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "T-2249 parked lane branches verdict",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T09:44:20.366Z",
     "o": "c"
    }
   ],
@@ -313,6 +312,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The supervisor's test suite was red because its throwaway copy picked up the company's live...",
+    "at": "2026-11-05T04:43:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Checked the five fixes moved onto main before TestFlight. Four can ship; the script-prompt alert...",
     "at": "2026-11-05T04:41:00-05:00"
@@ -321,15 +325,10 @@
     "w": "Odalys",
     "t": "Evan's account lane runs again; the profile check no longer flags any stray item, so nothing...",
     "at": "2026-11-05T04:38:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The second check of the build upload tools passed: all six earlier problems are fixed and...",
-    "at": "2026-11-05T04:36:00-05:00"
    }
   ],
   "count": {
-   "next": 431,
+   "next": 430,
    "wait": 38,
    "blocked": 88,
    "you": 19
@@ -352,10 +351,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "4:41 AM",
+  "at": "4:44 AM",
   "why": "",
-  "at_iso": "2026-11-05T09:41:00+00:00",
+  "at_iso": "2026-11-05T09:44:00+00:00",
   "started": "4:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:41 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:44 AM ET</p></section>"
  }
 }

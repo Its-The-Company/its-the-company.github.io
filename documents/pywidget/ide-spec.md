@@ -326,21 +326,25 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | ID | String | Where | C51 |
    |---|---|---|---|
    | `eyebrow` | pywidget Pro | Pro screen, above the headline | DRAFT |
-   | `h.premades` | Put every premade on your Home Screen. | headline when `premades` is on | DRAFT |
-   | `h.packages` | Scientific packages for your own scripts. | headline when `packages` leads (C1) | DRAFT |
+   | `h.premades` | Put every premade on your Home Screen. | RETIRING with T-2372/T-2373 (B-staged 1.0 has no Pro premade; packages are 1.2): kept only while the build's flag-file row still reads it, never drawn on the 1.0 screen; headline when `premades` is on | DRAFT |
+   | `h.packages` | Scientific packages for your own scripts. | RETIRING with T-2372/T-2373 (B-staged 1.0 has no Pro premade; packages are 1.2): kept only while the build's flag-file row still reads it, never drawn on the 1.0 screen; headline when `packages` leads (C1) | DRAFT |
+   | `h.refresh` | Widgets that keep themselves fresh. | 1.0 headline when `refresh` leads (T-2375 s4b; gate BR: drops whole if T-0795 cuts background refresh; row kind arrives with T-2373) | DRAFT |
    | `h.themes` | More editor themes, light and dark. | headline when only `themes` is on (C2) | DRAFT |
    | `h.optB` | What Pro adds. | headline, option B (C51 question) | DRAFT |
    | `sub` | One purchase, no subscription. | under the headline | DRAFT |
-   | `row.premades.t` | Pro premade widgets | row title | DRAFT |
-   | `row.premades.l` | Add them to your Home Screen, Lock Screen and StandBy, and open their source to change them. | row line | DRAFT |
+   | `row.premades.t` | Pro premade widgets | RETIRING with T-2372/T-2373 (B-staged 1.0 has no Pro premade; packages are 1.2): kept only while the build's flag-file row still reads it, never drawn on the 1.0 screen; row title | DRAFT |
+   | `row.premades.l` | Add them to your Home Screen, Lock Screen and StandBy, and open their source to change them. | RETIRING with T-2372/T-2373 (B-staged 1.0 has no Pro premade; packages are 1.2): kept only while the build's flag-file row still reads it, never drawn on the 1.0 screen; row line | DRAFT |
+   | `row.refresh.t` | Background refresh | 1.0 row title (gate BR) | DRAFT |
+   | `row.refresh.l` | Widgets that use it update through the day with the app closed. iOS decides when. | 1.0 row line (gate BR); any widget that declares background refresh, not only internet ones (T-2408 ruling); no figure (T-2375 s2) | DRAFT |
    | `row.themes.t` | Editor themes: Ember, Fern and Graphite | row title (names follow PROPOSAL-004's approval) | DRAFT |
    | `row.themes.l` | Each in light and dark, with a high-contrast set. | row line | DRAFT |
-   | `row.packages.t` | NumPy and Pillow | row title: the packages that pass ADR-003's gate, s1 order | DRAFT |
-   | `row.packages.l` | Bundled in the app, so import works offline with nothing to install. | row line | DRAFT |
+   | `row.packages.t` | NumPy and Pillow | RETIRING with T-2372/T-2373 (B-staged 1.0 has no Pro premade; packages are 1.2): kept only while the build's flag-file row still reads it, never drawn on the 1.0 screen; row title: the packages that pass ADR-003's gate, s1 order | DRAFT |
+   | `row.packages.l` | Bundled in the app, so import works offline with nothing to install. | RETIRING with T-2372/T-2373 (B-staged 1.0 has no Pro premade; packages are 1.2): kept only while the build's flag-file row still reads it, never drawn on the 1.0 screen; row line | DRAFT |
    | `free.eye` | Always free | box title | DRAFT |
-   | `free.base` | Running any Python, the editor and console, projects and files, Shortcuts actions and the device modules | box text, every build | DRAFT |
-   | `free.widgets` | , your own widgets and the free premades | box text, appended when widgets ship | DRAFT |
-   | `free.packages` | , and NumPy and Pillow | box text, appended when packages ship free (widgets ship) | DRAFT |
+   | `free.base` | Running any Python, internet from your scripts, the editor and console, projects and files, Shortcuts actions and the device modules | box text, every build | DRAFT |
+   | `free.widgets` | , your own widgets and the free premades | RETIRING with T-2372/T-2373 (B-staged 1.0 has no Pro premade; packages are 1.2): kept only while the build's flag-file row still reads it, never drawn on the 1.0 screen; box text, appended when widgets ship | DRAFT |
+   | `free.all` | , your own widgets and every premade, updated when you open the app or a Shortcut runs | box text, appended in place of free.widgets once no premade is locked (T-2372; ProPaywallView picks it from the flag file) | DRAFT |
+   | `free.packages` | , and NumPy and Pillow | RETIRING with T-2372/T-2373 (B-staged 1.0 has no Pro premade; packages are 1.2): kept only while the build's flag-file row still reads it, never drawn on the 1.0 screen; box text, appended when packages ship free (widgets ship) | DRAFT |
    | `btn.loading` | Loading price… | button, loading (disabled) | DRAFT |
    | `btn.ready` | Unlock Pro · [price] | button, ready; [price] = product.displayPrice | DRAFT |
    | `btn.buying` | Waiting for the App Store… | button, buying (disabled) | DRAFT |
@@ -364,15 +368,19 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | `link.privacy` | Privacy Policy | footer link | DRAFT |
    | `close` | Close | VoiceOver label of the close button | DRAFT |
    | `done.t` | Pro is active | purchased screen title | DRAFT |
-   | `done.premades` | Thank you. The Pro premades are open in the Gallery, source included. | purchased screen, premades on | DRAFT |
-   | `done.packages` | Thank you. NumPy and Pillow are ready to import in any script. | purchased screen, C1 | DRAFT |
+   | `done.premades` | Thank you. The Pro premades are open in the Gallery, source included. | RETIRING with T-2372/T-2373 (B-staged 1.0 has no Pro premade; packages are 1.2): kept only while the build's flag-file row still reads it, never drawn on the 1.0 screen; purchased screen, premades on | DRAFT |
+   | `done.packages` | Thank you. NumPy and Pillow are ready to import in any script. | RETIRING with T-2372/T-2373 (B-staged 1.0 has no Pro premade; packages are 1.2): kept only while the build's flag-file row still reads it, never drawn on the 1.0 screen; purchased screen, C1 | DRAFT |
+   | `done.refresh` | Thank you. Your widgets refresh in the background through the day, as iOS allows. | 1.0 purchased screen, refresh leads (gate BR) | DRAFT |
    | `done.themes` | Thank you. The new themes are in Settings, under Editor theme. | purchased screen, C2 | DRAFT |
-   | `done.gallery` | Open the Gallery | purchased screen button, premades on | DRAFT |
+   | `done.gallery` | Open the Gallery | RETIRING with T-2372/T-2373 (B-staged 1.0 has no Pro premade; packages are 1.2): kept only while the build's flag-file row still reads it, never drawn on the 1.0 screen; purchased screen button, premades on | DRAFT |
    | `done.theme` | Choose a theme | purchased screen button, C2 | DRAFT |
    | `done.done` | Done | purchased screen, second action | DRAFT |
-   | `e.unlock` | Unlock with Pro | Pro premade detail sheet, in the Add button's place; gallery Pro section header (state-spec s6) | DRAFT |
+   | `e.unlock` | Unlock with Pro | 1.0: the locked set is empty, so no premade shows it; the code stays for T-2316's locked Shortcut run. Pro premade detail sheet, in the Add button's place; gallery Pro section header (state-spec s6) | DRAFT |
    | `e.add` | Add widget | the same button once Pro is active: opens tour page 4's three steps | DRAFT |
-   | `e.caption` | Live preview. Source opens with Pro. | locked tile and detail sheet caption (state-spec s6) | DRAFT |
+   | `e.caption` | Live preview on your data. | premade tile and detail sheet caption; the old 'Source opens with Pro' contradicted T-0901 (opening a copy is free) | DRAFT |
+   | `e.live` | Live with Pro | gallery chip, free user, on every premade that declares background refresh: GitHub repository, Storage, the 60-minute premade (T-2408 ruling; live-pro/spec.md). C51 question: Wrenna's 'Fresh with Pro' (T-2375 s4c) | DRAFT |
+   | `e.live.on` | Live | the same chip once Pro is active | DRAFT |
+   | `e.pro` | Pro | a free user's background-refresh widget on the Home Screen: the plain word, no offer, no price (Apple 4.4) | DRAFT |
    | `e.settings` | pywidget Pro | Settings row title | DRAFT |
    | `e.settings.off` | Not purchased | Settings row detail | DRAFT |
    | `e.settings.on` | Active | Settings row detail once purchased | DRAFT |
@@ -512,7 +520,9 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | `add.foot` | iOS adds widgets from the Home Screen and Lock Screen; PyWidget can’t place one. | add sheet footer | DRAFT |
    | `pro:e.unlock` | Unlock with Pro | owned by s5.7 (T-0333); used here | DRAFT |
    | `pro:e.add` | Add widget | owned by s5.7 (T-0333); used here | DRAFT |
-   | `pro:e.caption` | Live preview. Source opens with Pro. | owned by s5.7 (T-0333); used here | DRAFT |
+   | `pro:e.caption` | Live preview on your data. | owned by s5.7 (T-0333); used here | DRAFT |
+   | `pro:e.live` | Live with Pro | owned by s5.7 (T-0333); used here | DRAFT |
+   | `pro:e.live.on` | Live | owned by s5.7 (T-0333); used here | DRAFT |
    | `about.countdown` | Days to a date you choose. / The clock and the dates you save. | detail sheet, What it shows / Uses | DRAFT |
    | `about.sun` | Sunrise and sunset for a place you save. / A saved place; worked out on this iPhone. | detail sheet, What it shows / Uses | DRAFT |
    | `about.steps` | Today’s steps and floors. / Motion & Fitness, asked once. | detail sheet, What it shows / Uses | DRAFT |

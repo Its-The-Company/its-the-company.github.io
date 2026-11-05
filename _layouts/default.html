@@ -717,7 +717,7 @@ html,body,.cv-dock textarea,.cv-dock .cv-state{overscroll-behavior-y:auto}
 <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
 <nav class="tabs" aria-label="Sections">
 <a href="{{ '/' | relative_url }}"{% if page.section == "home" %} aria-current="page"{% endif %}>Home</a>
-<a href="{{ '/' | relative_url }}#t=main" data-chat-tab>Chat</a>
+<a href="{{ '/chat/' | relative_url }}" data-chat-tab{% if page.section == "chat" %} aria-current="page"{% endif %}>Chat</a>
 <a href="{{ '/issues/' | relative_url }}" data-issues{% if page.section == "requests" %} aria-current="page"{% endif %}>Issues{% if page.issues %} <span class="nb">{{ page.issues }}</span>{% endif %}</a>
 <a href="{{ '/reports/' | relative_url }}"{% if page.section == "reports" or page.section == "documents" or page.section == "pitches" or page.section == "infra" %} aria-current="page"{% endif %}>Reports</a>
 </nav>

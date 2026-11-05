@@ -98,8 +98,8 @@ if (W.history && 'scrollRestoration' in W.history) W.history.scrollRestoration =
 if (!LS.getItem('company.seen0')) LS.setItem('company.seen0', now().toISOString());
 var seen0 = LS.getItem('company.seen0'), isDesk = !!(W.matchMedia && W.matchMedia('(min-width:880px)').matches);
 var Q = (s) => document.querySelector ? document.querySelector(s) : null;
-var main = byId('main'), stripEl = byId('strip'), links = Q('main > .links'), aside = Q('main > .aside'), tog = Q('.now-toggle'), where = Q('main .where');
-var homeRow = Q('nav.hometabs'), issuesA = homeRow && homeRow.querySelector('[data-issues]');
+var main = byId('main'), stripEl = byId('strip'), links = Q('main > .links'), aside = Q('main > .aside'), tog = Q('.now-toggle');
+var homeRow = Q('nav.hometabs');
 [byId('composer'), byId('urgent'), aside, tog, homeRow].forEach((x) => { if (x) x.hidden = true; });
 var col = el('div', 'cv-col');
 if (main) { main.insertBefore(col, stripEl || main.firstChild); main.className = 'cv-desk'; }
@@ -134,34 +134,32 @@ function allComments() { var by = {}; comments.concat(flat(threads)).forEach((c)
 function seen(n) { var s = LS.getItem('company.seen.' + n); return s && s > seen0 ? s : seen0; }
 function unread(n) { return msgsOf(n).filter((c) => !isInv(login(c)) && !isReceipt(c.body) && c.created_at > seen(n)).length; }
 function markSeen(n) { var l = msgsOf(n); if (typeof n === 'number' && l.length) LS.setItem('company.seen.' + n, l[l.length - 1].created_at); }
-function parse() { var m = /^#t=(\w+)/.exec((W.location && W.location.hash) || ''); return m ? m[1] : 'home'; }
+function parse() { var m = /^#t=(\w+)/.exec((W.location && W.location.hash) || ''); return m ? m[1] : 'main'; }
 function go(k) { if (k === 'main') k = mainN() || k; var h = '#t=' + k; if (W.location && W.location.hash !== h) W.location.hash = h; if (String(k) !== String(cur)) select(k); }
 function select(k) {
 if (k === 'main') k = mainN() || k;
-if (k !== 'home' && k !== 'main') { k = +k; if (!(k > 0)) k = 'home'; }
+if (k !== 'main') { k = +k; if (!(k > 0)) k = 'main'; }
 saveDraft(); cur = k; limit = 30; jump.hidden = true; isOpen = isDesk || (isMain(k) && composerOn); drawTabs(); drawView(true); drawDock();
-if (k === 'home') { if (W.scrollTo) W.scrollTo(0, 0); } else bottom();
+bottom();
 if (isDesk && composerOn && isMain(k) && ta.focus) ta.focus();
 }
-function keys() { return ['home', mainN() || 'main']; }
+function keys() { return [mainN() || 'main']; }
 function drawTabs() {
 scroller.textContent = '';
 keys().forEach((k) => {
-var b = mk(scroller, 'button', 'cv-tab'), sel = (k === 'home') === (cur === 'home'), u = typeof k === 'number' ? unread(k) : 0;
+var b = mk(scroller, 'button', 'cv-tab'), sel = true, u = typeof k === 'number' ? unread(k) : 0;
 b.type = 'button'; attr(b, 'role', 'tab'); attr(b, 'aria-selected', sel ? 'true' : 'false'); b.tabIndex = sel ? 0 : -1;
-mk(b, 'span', 'cv-t', k === 'home' ? 'Overview' : 'Chat');
+mk(b, 'span', 'cv-t', 'Chat');
 if (u) attr(mk(b, 'span', 'cv-badge', String(u)), 'aria-label', u + ' new');
 b.onclick = () => { go(k); };
 b.k = k;
-if (k === 'home' && issuesA) { var a = mk(scroller, 'a', 'cv-tab cv-link'); a.href = issuesA.href; mk(a, 'span', 'cv-t', 'Issues');
-var c = issuesA.querySelector('.num'); if (c) mk(a, 'span', 'cv-n', c.textContent); }
 });
 var h = bar.offsetHeight, de = DE;
 if (h && de && de.style) de.style.setProperty('--cv-tabs-h', h + 'px');
 }
 bar.onkeydown = (ev) => {
 if (ev.key !== 'ArrowLeft' && ev.key !== 'ArrowRight') return;
-stop(ev); go(cur === 'home' ? 'main' : 'home');
+stop(ev); go('main');
 var t = [].filter.call(bar.querySelectorAll('[role=tab]'), (b) => b.tabIndex === 0)[0]; if (t) t.focus();
 };
 on(W, 'hashchange', () => { var k = parse(); if (String(k) !== String(cur)) select(k); });
@@ -287,27 +285,6 @@ if (first) drawView(true); else update();
 drawTabs();
 }, () => {});
 }
-function tile(g, href, label, big, sub, frac) {
-var a = mk(g, 'a', 'cv-tile'), b; a.href = href;
-mk(a, 'small', null, label); b = mk(a, 'b', null, big);
-if (frac != null) {
-put(b, txt(' ')); mk(b, 'span', 'cv-sub', sub);
-mk(mk(a, 'div', 'cv-meter'), 'i').style.width = Math.max(0, Math.min(100, 100 * frac || 0)).toFixed(1) + '%';
-} else if (sub) mk(a, 'span', 'cv-sub', sub);
-}
-function glance() {
-var g = el('div', 'cv-glance');
-tile(g, D('company'), 'Day', D('day'));
-S.tiles(g, tile, D('usage'));
-if (S.lockTile) S.lockTile(g);
-S.added(g, tile, D('usage'));
-var dk = (S.status() || {}).disk;
-tile(g, D('company'), 'Disk free', dk ? dk.free_gb + ' GB' : 'no reading yet', dk ? dk.words : 'on the Mac mini');
-var sd = dk && dk.ssd;
-tile(g, D('company'), 'SSD free', !sd ? 'no reading yet' : !sd.mounted ? 'not mounted' : sd.free_gb != null ? sd.free_gb + ' GB' : 'no reading', 'the Company SSD');
-if (S.endTile) S.endTile(g);
-return g;
-}
 function due(d) {
 if (!d || !d.t) return null;
 var e = el('span', 'cv-due' + (d.t - Date.now() < 864e5 ? ' cv-soon' : ''), new Date(d.t).toLocaleString([], { weekday: 'short', hour: 'numeric', minute: '2-digit' }));
@@ -315,11 +292,7 @@ attr(e, 'data-t', new Date(d.t).toISOString()); e.title = 'Deadline: ' + d.text;
 }
 function drawView(open) {
 view.textContent = ''; log = head = anchor = null;
-var home = cur === 'home' || (cur == null && parse() === 'home');
-if (stripEl) stripEl.hidden = home;
-if (!lastDraw && (!home || S.rejected())) { var p = mk(view, 'p', 'muted', S.rejected() ? NO_TOKEN + ' ' : 'Loading...'); if (S.rejected()) mk(p, 'a', null, 'Change the token').href = tokenLink.href; if (!home) return; }
-if (home) { put(view, glance()); if (where) put(view, where); return; }
-if (where && aside) put(aside, where);
+if (!lastDraw) { var p = mk(view, 'p', 'muted', S.rejected() ? NO_TOKEN + ' ' : 'Loading...'); if (S.rejected()) mk(p, 'a', null, 'Change the token').href = tokenLink.href; return; }
 if (cur === 'main') {
 mk(mk(view, 'div', 'cv-head'), 'h2', null, toText());
 return;
@@ -355,7 +328,7 @@ if (v.hide && !cancel) { gripTo(0); doHide(); } else gripTo(0);
 on(grip, 'touchend', (e) => { gripEnd(e, false); });
 on(grip, 'touchcancel', (e) => { gripEnd(e, true); });
 function drawDock() {
-dock.textContent = ''; dock.hidden = (cur || parse()) === 'home';
+dock.textContent = ''; dock.hidden = false;
 if (!composerOn) { mk(dock, 'p', 'muted', 'Sending is off.'); return; }
 ta.value = LS.getItem(draftKey()) || '';
 barSend.disabled = send.disabled = !canSend();
@@ -451,7 +424,7 @@ return names;
 });
 });
 }
-function refresh() { drawTabs(); if (cur === 'home') drawView(false); else update(); }
+function refresh() { drawTabs(); update(); }
 function load() {
 if (document.hidden && lastDraw) return;
 var n = lastDraw ? 100 : 30, cached = !lastDraw && readAllow();
@@ -473,7 +446,6 @@ var sig = '';
 if (S.onStatus) S.onStatus.push((st) => {
 var s = JSON.stringify([st.meter, st.personal, st.api_credits, st.session]);
 if (s === sig || !lastDraw) return; sig = s;
-[].slice.call(document.querySelectorAll ? document.querySelectorAll('.cv-glance') : []).forEach((g) => { g.parentNode.replaceChild(glance(), g); });
 waitLine();
 });
 drawView(false); drawDock();

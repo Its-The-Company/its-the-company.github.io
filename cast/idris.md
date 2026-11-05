@@ -50,10 +50,11 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - T-2316 0e3126a7a (Shortcut Pro gate): host typecheck only; owed Simulator PyWidgetTests/ShortcutProGateTests, mutants-t2316.json, review; then tick.
 - T-2054/55/56: tests 654bf72e6, fixes f7ca2d3bd, uncompiled (runner request refused); T-2266 holds runs+mutants, T-2265 Pernille review.
 
-- T-2417 (was T-2356/T-2394): test fixes 7dcece360 UNRUN (Premades catalog.json; stuck-marker poll). Run red/green via tools/clean_export.sh, then upload after T-2265/2272/2283 + review of 7dcece360.
-- T-1853 bfe491137: gate build = PYWIDGET_LANE_GATE, record-only margin (docs/decisions/gate-session-build.md); Swift half + build phase on T-2369, runner.
+- T-2456 (after T-2417/T-2394, ticked 2026-11-04): two red tests green on runner J-20261104-2341-xc-test. Left: full suite -2 (runner on battery), stuck x5 + mutants-t1696 on local slot, reviews; then Operator uploads.
+- T-1853/T-2369 3f55ca3ff: gate switch + record-only margin + build phase, 159/0 local; review T-2464 (Pernille). Release gate build still stops at legal links (T-0485). Never write the gate condition's name in any ios/ file but Swift #if/comments, .md, or the gate script: the scan fails it.
 
 ## Lessons
+- MacBook runner: xc-test only (no -test-iterations, no mutants); result at origin/macbook-results:ops/jobs/<J>/result.json; xc_route.py status <J>.
 - An uncompiled commit on main reddens every runner job queued after it, not just its own: compile first (J-1728..1822).
 - App-target code typechecks on host with no Xcode slot: swiftc -typecheck, iphonesimulator SDK, Shared/**/*.swift + the file + stubs, PyBridge.h header, Python.xcframework -F (T-2316).
 - grep the code for a task's ID before starting (T-0426). Calendar().timeZone follows NSTimeZone.default, not TimeZone.current: set TZ + NSTimeZone.resetSystemTimeZone() and assert the fixture moved (T-1946/T-2011). Cleaning text for a consumer that cleans again with a cruder regex reopens the hole (T-2135).

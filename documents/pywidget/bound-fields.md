@@ -34,7 +34,7 @@ Pernille, 2026-10-30, T-0679. Status: **spec finished; names not yet reviewed.**
 | Second widget extension | **Does not exist.** `project.yml` has one `app-extension` target; T-0053 is open; no `NSWidgetWantsLocation` | `sensors` depends on a target nobody has built. See s10 |
 | App Group mirror of the manifest | `scripts/<id>/` is the scripts' shared folder (`FilesCall`), not the mirror. T-0675's save-time mirror is `lane-scripts/<id>/` (ADR-007 2026-11-02 line, item 1), and it covers `lane: widget` only | T-0682 widens the mirror, s5 |
 | Bound trees against the HEAD schema | Run: a tree with `p.bind` on `Text` and `ProgressView` gives 0 problems (`schema_check.py`, HEAD schema) | The row is additive. A build without it draws `content` |
-| Renderer on an unknown number style | `TreeText.number` falls to plain decimal, no suffix | `Number.unit` needs its Swift case before any tree uses it |
+| Renderer on an unknown number style | `TreeText.number` falls to plain decimal, no suffix | `Number.suffix` needs its Swift case before any tree uses it |
 
 </div>
 
@@ -52,9 +52,10 @@ Two more keys in `pywidget.json`, beside `lane`, in schema `pywidget.app` versio
   "fetch": {
     "url": "https://api.example.com/departures?stop=4021",
     "fields": {"next": "$.arrivals[0].minutes", "line": "$.arrivals[0].route"},
-    "max_age_s": 600
+    "max_age": 600
   },
-  "sensors": ["steps"]
+  "sensors": ["steps"],
+  "location": {"max_age": 900}
 }
 ```
 
@@ -65,8 +66,9 @@ Two more keys in `pywidget.json`, beside `lane`, in schema `pywidget.app` versio
 |---|---|---|
 | `fetch.url` | `https://`, at most 2,048 bytes, same check as `NetFetch.parse`. A literal: **no templating of any kind** | Nothing from the device can reach a URL through this path, s9 |
 | `fetch.fields` | 1 to 8 entries. Key: `^[a-z_][a-z0-9_]{0,31}$`. Value: a path, below | A small <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> keeps `fetch.json` small; 8 is my number, not a measurement |
-| `fetch.max_age_s` | Integer, 60 to 86,400 | Precedent is T-0053's `max_age`: younger than this and no request is made. It also sets when a value counts as stale (s6). It is not a schedule |
+| `fetch.max_age` | Integer seconds, 60 to 86,400 | Precedent is T-0053's `max_age`: younger than this and no request is made. It also sets when a value counts as stale (s6). It is not a schedule |
 | `sensors` | Unique list from a closed set; `["steps"]` is the set | A later sensor is one enum word and one gate |
+| `location` | Its own top-level key, `{"max_age": seconds}`, T-0053's declaration; **not** a `sensors` word (T-0797, both reviewers) | Every word in `sensors` is a name `bind` can use, and location is not bindable (s1); it also carries its own `max_age`, which a list entry cannot hold. Its range and refusal code are T-0053's |
 | A field named `steps` while `sensors` holds `steps` | Refused | Fields and sensors share one namespace, so `bind="steps"` means one thing |
 | `lane: widget` with `fetch` or `sensors` | Refused at save | Such a script has `net.get` and the pedometer. Two routes to one number is a bug farm |
 
@@ -90,7 +92,7 @@ So `$.a.b`, `$.a[0].b`, `$['odd-key'].b`; at most 128 bytes. Not supported: `*`,
 ## 3. The tree and the DSL
 
 ```python
-ui.Text("--", bind="next", format=ui.Number.unit(" min"))     # "12 min"
+ui.Text("--", bind="next", format=ui.Number.suffix(" min"))   # "12 min"
 ui.Text("--", bind="temp", format=ui.Number.decimal(1))        # "21.5"
 ui.Text("--", bind="updated", style="relative")                # time since it, ticks by itself
 ui.Text("--", bind="line")                                     # "42", as text
@@ -101,7 +103,7 @@ Tree: `p.bind` beside `content`, never instead of it.
 
 ```json
 {"t": "Text", "p": {"content": {"kind": "string", "value": "--"},
-                    "bind": {"field": "next", "format": {"style": "unit", "unit": " min", "fractionDigits": 0}}}}
+                    "bind": {"field": "next", "format": {"style": "suffix", "suffix": " min", "fractionDigits": 0}}}}
 {"t": "ProgressView", "p": {"value": 0, "total": 10000, "bind": {"field": "steps"}}}
 ```
 
@@ -113,7 +115,7 @@ Why this shape and not a new content kind: `content` stays required, so the node
 | `bind` holds | The field's JSON value | Drawn as |
 |---|---|---|
 | `format` (decimal, percent, currency) | number, or a string of the form `-?[0-9]+(\.[0-9]+)?` | The existing `TreeText.number` path |
-| `format` (`unit`) | same | That number, then the text exactly as written, 1 to 16 characters. `" min"` keeps its space, `"°"` has none. The number follows the locale; the text is not translated |
+| `format` (`suffix`) | same | That number, then the text exactly as written, 1 to 16 characters, no line breaks or control characters (no-break spaces U+00A0 and U+202F and joined emoji are allowed). `" min"` keeps its space, `"°"` has none. The number follows the locale; the text is not translated |
 | `style: "relative"` | ISO 8601 with a zone, or Unix seconds | `Text(date, style: .relative)`, the same path as a date `Text`; the system ticks it, no reload needed |
 | neither | string, or number | The string verbatim (`Text(verbatim:)`: a feed is not markdown or a localization key), at most 256 scalars, then cut; a number by the plain decimal path |
 | `ProgressView` | number or numeric string | Replaces `value`, clamped to 0...`total` |
@@ -132,7 +134,7 @@ A value of the wrong type, `null`, a bool, an object or an array counts as missi
 ```json
 {
   "schema": "pywidget.fetch", "version": 1,
-  "declared": {"url": "...", "fields": {"next": "$.arrivals[0].minutes"}, "max_age_s": 600},
+  "declared": {"url": "...", "fields": {"next": "$.arrivals[0].minutes"}, "max_age": 600},
   "attempted_at": "2026-11-20T14:05:00Z",
   "fetched_at": "2026-11-20T14:05:00Z",
   "error": null,
@@ -159,7 +161,7 @@ In `getTimeline`, with the lane flag off. Never a failure path: any step that fa
 1. No `tree.json`: T6 as today, no step.
 2. Read the manifest from the App Group mirror. T-0682 widens T-0675's rule: the app mirrors every widget with `fetch` or `sensors`, not only `lane: widget`, in the same directory `rename`. Missing or bad: step 7.
 3. Load `fetch.json`; apply the `declared` rule.
-4. A fetch is due if `fetched_at` is absent, or `max_age_s` old or more, or in the future (a moved clock), and `attempted_at` is at least 60 s old. A path that misses does not make it due again, so one broken path cannot cost a request on every reload.
+4. A fetch is due if `fetched_at` is absent, or `max_age` old or more, or in the future (a moved clock), and `attempted_at` is at least 60 s old. A path that misses does not make it due again, so one broken path cannot cost a request on every reload.
 5. In parallel, under one wall-clock limit of 3 s (`NetFetch.extensionTimeoutCap`): the fetch through `NetFetch.run` with the extension's limits and no added headers; the `steps` query for widgets that declare it, only if `CMPedometer.isStepCountingAvailable()` and `authorizationStatus` is authorized. A status outside 200-299 is `http_status`. A body that is not a JSON object or array is `not_json`. A path that misses leaves that field's old value and its old `at`, and the other fields update.
 6. Write `fetch.json` if anything changed.
 7. Resolve the bound values once, into the timeline entries. The renderer reads no file. Build entries as ADR-007 7.4, adding s6's stale and `until` entries.
@@ -168,7 +170,7 @@ In `getTimeline`, with the lane flag off. Never a failure path: any step that fa
 
 **In-app preview.** Draws `content`. The app does not fetch for the preview.
 
-**Widget instances.** The cache is per id, so two placed copies share one file and, inside `max_age_s`, one request.
+**Widget instances.** The cache is per id, so two placed copies share one file and, inside `max_age`, one request.
 
 ## 6. Missing and stale
 
@@ -185,7 +187,7 @@ In `getTimeline`, with the lane flag off. Never a failure path: any step that fa
 </div>
 
 
-A field's age limit is `max_age_s`; for `steps`, a constant `SENSOR_MAX_AGE_S` = 3,600 (L1's default for steps; tune from T-0680, not a measurement).
+A field's age limit is `fetch.max_age`; for `steps`, a constant `SENSOR_MAX_AGE_S` = 3,600 (L1's default for steps; tune from T-0680, not a measurement).
 
 **Two clocks, earliest wins.** T(tree) = `sampled_at + stale_after`, unchanged (ADR-007 7.4). T(field) = the earliest `at + limit` among fields this tree binds and that have a value. The provider uses `min(T(tree), T(field))`, and inserts its synthetic entry there, and one more at each `until`. `When("stale")` resolves to the same flag. Threat-model floor (16:54 line, 2a): a stale picture always carries its mark.
 
@@ -250,7 +252,7 @@ BF1-BF3 need no bound-fields code and belong in T-0680's one session: they are i
 
 **A premade that declares `fetch` is a different case.** Then the company chose the server. Condition 5 needs a fresh answer, that provider's terms need the Commandment 6 check, and `tools/terms_guard.py` gets a row. No premade declares `fetch` under this spec.
 
-**Commandment 6, the rest.** The app ships no URL list and does not crawl: one public URL per widget, the person's own request. At most one request per `max_age_s` (floor 60 s) while it succeeds, at most one a minute while it fails, plus taps. A 429 is `http_status`; the old value stays and nothing retries before the next reload.
+**Commandment 6, the rest.** The app ships no URL list and does not crawl: one public URL per widget, the person's own request. At most one request per `max_age` (floor 60 s) while it succeeds, at most one a minute while it fails, plus taps. A 429 is `http_status`; the old value stays and nothing retries before the next reload.
 
 **App Review.** No code runs in the extension and a path is not code. L20 row 6 rates this low on the Ruling 2 precedent. `CMPedometer` with no Motion string in the right place would be a rejection, which is why BF1 asks.
 
@@ -258,9 +260,9 @@ BF1-BF3 need no bound-fields code and belong in T-0680's one session: they are i
 
 **Main now:** this file and one dated row in ADR-002. Docs only.
 
-**Branch `pernille/t0679-bound-fields`, pushed, not merged:** `viewtree.schema.json` (`numberFormat`, `fieldName`, `textBind`, the `Text` and `ProgressView` rows), `pywidget_ui` (`bind`, `Number.unit`, `validate`), `__init__.pyi`, API.md rows, `tests/dsl/test_bind.py` (24 tests). Host suites on the branch: 2,242 tests on 3.9 and 3.13, 0 failed suites. 18 seeded mutants, 18 killed: one survived the first run because a test was too loose, and the test was tightened.
+**Branch `pernille/t0679-bound-fields`, pushed, not merged:** `viewtree.schema.json` (`numberFormat`, `fieldName`, `textBind`, the `Text` and `ProgressView` rows), `pywidget_ui` (`bind`, `Number.suffix`, `validate`), `__init__.pyi`, API.md rows, `tests/dsl/test_bind.py` (27 tests since T-1753, 81ef0a5b5). Host suites on the branch: 2,248 tests on 3.9 and 3.13, 0 failed suites (2026-11-05). 18 seeded mutants, 18 killed: one survived the first run because a test was too loose, and the test was tightened.
 
-**Why it is off main, and stays off.** Alpha rows A4 to A6 run the bundled schema (`RunResultSink`, `ViewTreeSchema`) and `pywidget_ui`, so this change would sit under the alpha commit: code freeze applies. **The freeze lifting does not change the answer.** A public `bind=` that nothing fills is a parameter that does nothing, and `Number.unit` draws without its suffix until Swift has the case. Idris's objection, accepted at 08:03 item 3, is a public surface kept for ever for a path Python covers. So the branch merges **only when T-0682 starts**, and if the lane passes it does not merge in 1.0. It will drift; rebasing it is part of T-0682.
+**Why it is off main, and stays off.** Alpha rows A4 to A6 run the bundled schema (`RunResultSink`, `ViewTreeSchema`) and `pywidget_ui`, so this change would sit under the alpha commit: code freeze applies. **The freeze lifting does not change the answer.** A public `bind=` that nothing fills is a parameter that does nothing, and `Number.suffix` draws without its suffix until Swift has the case. Idris's objection, accepted at 08:03 item 3, is a public surface kept for ever for a path Python covers. So the branch merges **only when T-0682 starts**, and if the lane passes it does not merge in 1.0. It will drift; rebasing it is part of T-0682.
 
 **T-0682's real size.** The 3-day build in 08:03 item 3 rests on my 10-30 view, which said the pedometer waits on T-0011 and priced no target. (a) `fetch` alone, in the current extension: 3 days stands, plus my half-day for the manifest check and the name check. (b) `sensors` needs the second extension, and T-0053 has not built it. If it is missing when T-0682 starts, `steps` costs that target as well, not estimated here. `fetch` can ship without `steps`.
 
@@ -272,12 +274,12 @@ BF1-BF3 need no bound-fields code and belong in T-0680's one session: they are i
 
 Idris and Maren, as usual. Reviewers get the branch, not my reasoning. The names:
 
-- `bind` on `Text` and `ProgressView`, `Number.unit(suffix, fraction_digits=0)`; `bind` and `field` in the tree; `fetch`, `fields`, `max_age_s`, `sensors` in the manifest; `fetch.json`, `data/`.
-- `Number.unit(" min")` writes its own space. Literal and one rule, against `Number.unit("min")` adding a space and needing an escape for `°`. Maren decides.
+- `bind` on `Text` and `ProgressView`, `Number.unit(suffix, fraction_digits=0)`; `bind` and `field` in the tree; `fetch`, `fields`, `max_age_s`, `sensors` in the manifest; `fetch.json`, `data/`. **Reviewed in T-0797** (Idris d42943f56, Maren a1ae66a48), applied in T-1753: `Number.suffix(text, fraction_digits=0)`, tree `{"style": "suffix", "suffix": ...}`; `max_age` (seconds, no suffix, as `stale_after` and `location.sample(max_age=)`); `location` its own key. Open for one ruling from Ines: `fetch.json` (Maren keeps) against `fields.json` (Idris: it also holds `steps`), and the 7 DRAFT error texts. This spec keeps `fetch.json` until that ruling.
+- `Number.unit(" min")` writes its own space. Literal and one rule, against `Number.unit("min")` adding a space and needing an escape for `°`. Maren decides. (The suffix check now refuses only C0 controls, DEL, U+2028 and U+2029, the schema's set; T-1753.)
 - All new error texts are DRAFT under <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>, for Maren.
 - **Gauge.** The steps premade's tree has 2 `Gauge`, 5 `Path`, 2 `ProgressView`. `bind` reaches only the last of those: the ring and the week chart would not move. The chair's line says `Text` and `ProgressView`. `Gauge` is one more row if the reviewers and the chair want it; `Path` is computed geometry and cannot be bound.
 - `style` is `relative` only, as the chair listed. `time` ("next at 14:05") is one enum word.
-- T-0053's `location` declaration has no key yet. Should it be `sensors: ["location"]` with no bindable value, or its own key? Idris.
+- T-0053's `location` declaration has no key yet. Should it be `sensors: ["location"]` with no bindable value, or its own key? Idris. **Answered (T-0797): its own key, `"location": {"max_age": 900}`**, s2.
 {% endraw %}
 
 </div>

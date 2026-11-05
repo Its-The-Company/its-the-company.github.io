@@ -1,24 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-05T06:23:28.374561+00:00",
+ "at": "2026-11-05T06:24:57.900586+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-04T23:46:29-05:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "ines",
    "task": "[plan] T-2473 rebuild fold with 01:07 entry",
    "model": "opus",
    "started": "2026-11-05T06:19:42.163Z",
-   "seconds": 226,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Ines",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-05T06:23:51.902000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[site] T-2400 new Home replaces old",
@@ -42,14 +40,6 @@
    "started": "2026-11-05T04:54:00.284Z",
    "seconds": null,
    "finished": "2026-11-05T05:39:23.563000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-2459 rebuild fold proposal",
-   "model": "opus",
-   "started": "2026-11-05T05:33:28.519Z",
-   "seconds": null,
-   "finished": "2026-11-05T05:36:51.185000+00:00"
   }
  ],
  "queue": {
@@ -98,7 +88,7 @@
   "week_pct": 46.59,
   "usage_pct": 40.3,
   "work_pct": 74.9,
-  "read_at": "2026-11-05T06:23:00+00:00",
+  "read_at": "2026-11-05T06:27:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -130,7 +120,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-05T01:23:00-05:00"
+  "at": "2026-11-05T01:27:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -139,15 +129,6 @@
   "at": "2026-11-04T23:46:28.789772-05:00"
  },
  "lanes": [
-  {
-   "name": "Ines",
-   "state": "running",
-   "task": "[plan] T-2473 rebuild fold with 01:07 entry",
-   "model": "opus",
-   "since": "2026-11-05T06:19:42.163Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Odalys",
    "state": "next",
@@ -160,6 +141,14 @@
    "name": "Idris",
    "state": "next",
    "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -190,17 +179,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "T-2473 rebuild fold with 01:07 entry",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T06:19:42.163Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -311,13 +290,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "1:23 AM",
-  "why": "",
-  "at_iso": "2026-11-05T06:23:00+00:00",
-  "started": "11:46 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 11:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:23 AM ET</p></section>"
+  "total": 0,
+  "at": "1:27 AM",
+  "why": "Between sessions: no session is running. Last check 11:46 PM ET.",
+  "at_iso": "2026-11-05T06:27:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:27 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 11:46 PM ET.</p></section>"
  }
 }

@@ -56,7 +56,7 @@ Those whose widget refreshes from the internet in the background (the T-0793 pat
 
 - Large and extra large: GitHub repository ships small, medium and rectangular only, so no premade in `LIVE` has them. The strip rule is the same at every size.
 - Accented and vibrant Home Screen modes: the word takes the system's text treatment like the age line; draw them if a second `LIVE` premade has a large family.
-- (b) PRO_STR: Wrenna's words (T-2375 s4-s5) were not in the repo at 2026-11-04 when this was drawn; a continuation line holds it.
+- (b) PRO_STR: Wrenna's words (T-2375 s4-s5) were not in the repo at 2026-11-04 when this was drawn; a continuation line holds it. Done in T-2405: PRO_STR (ide/draw_ide.py) carries `e.live` "Live with Pro", `e.live.on` "Live" and `e.pro` "Pro" for every premade that declares background refresh (Ruling below), plus the 1.0 Pro screen keys `h.refresh`, `row.refresh.*`, `done.refresh`, `free.all`; the premade and package keys are marked RETIRING until T-2372/T-2373 change the flag-file rows.
 
 ## Ruling
 

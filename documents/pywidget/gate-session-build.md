@@ -71,6 +71,19 @@ Three layers. The first two are on main with this decision. The third comes with
 3. **Wiring (continuation).** check_lane_gate.py becomes a build phase on the app and widget targets in project.yml,
    next to check_legal_links.py. The project is regenerated, and the gate script is written, run once, and checked.
 
+## The Swift half (T-2369)
+
+- `WidgetLane.extensionFlag` and `LaneMargin.recordOnly` (`Shared/LaneGuard.swift`) read the condition. `ExtensionLane`
+  takes `recordOnly` (default `LaneMargin.recordOnly`, so tests inject it), reads headroom, last peak and residue once,
+  and refuses only when the margin says no and the build enforces.
+- One change from item 2's wording: the row's `headroom` is its existing column (RunRow, chair line 2026-11-02 17:15),
+  whole MiB rounded down, or `unknown` for 0. An int under that key reads back as MiB, so bytes there would be read as
+  MiB. The exact figure goes under `headroom_bytes` (absent when unknown). `need` and `residue` are bytes, as decided.
+  The keys appear only on a record-only build's run rows; the shipping rows are unchanged.
+- `check_lane_gate.py` is a pre-build phase on PyWidget and PyWidgetExtension. `scripts/gate_session_build.sh` builds
+  Release for the phone by default (own DerivedData, `build/dd-gate`). A Release build also stops at the legal links
+  check until T-0485 sets the privacy URL, as every Release build does.
+
 ## How G1-G3 get their numbers in the gate build
 
 The order is T-0680's: item 2 first, so C and B exist before any lane run.

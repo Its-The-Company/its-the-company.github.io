@@ -1,47 +1,14 @@
 {
  "schema": 1,
- "at": "2026-11-05T03:27:41.989128+00:00",
+ "at": "2026-11-05T03:35:17.483039+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-04T21:55:12-05:00"
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[release] T-2356 TestFlight red tests",
-   "model": "opus",
-   "started": "2026-11-05T02:58:31.483Z",
-   "seconds": null,
-   "finished": "2026-11-05T03:26:52.466000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2149 lane-stop issue stays open",
-   "model": "opus",
-   "started": "2026-11-05T02:59:16.435Z",
-   "seconds": null,
-   "finished": "2026-11-05T03:22:37.311000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2353 land-rate continuation",
-   "model": "opus",
-   "started": "2026-11-05T02:58:52.536Z",
-   "seconds": null,
-   "finished": "2026-11-05T03:21:51.136000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[release] T-2370 internal archive mark and ledger",
-   "model": "opus",
-   "started": "2026-11-05T03:05:31.886Z",
-   "seconds": null,
-   "finished": "2026-11-05T03:20:20.428000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -50,28 +17,28 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 33.0,
-   "resets_at": "2026-11-05T03:20:00.540369+00:00",
+   "pct": 1.0,
+   "resets_at": "2026-11-05T08:19:59.682230+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 67.0,
+   "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 56.0,
-   "resets_at": "2026-11-08T07:00:00.540397+00:00",
+   "pct": 58.0,
+   "resets_at": "2026-11-08T06:59:59.682252+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 44.0,
+   "left": 42.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 0.0,
-   "resets_at": "2026-11-08T07:00:00+00:00",
+   "pct": 1.0,
+   "resets_at": "2026-11-08T06:59:59.682398+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-04T21:55:09.771833-05:00"
+  "read_at": "2026-11-04T22:35:16.433313-05:00"
  },
  "ui": {
-  "week_pct": 0.68,
+  "week_pct": 0.678,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -85,10 +52,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 36.84,
-  "usage_pct": 36.0,
-  "work_pct": 74.5,
-  "read_at": "2026-11-05T03:30:00+00:00",
+  "week_pct": 36.73,
+  "usage_pct": 35.2,
+  "work_pct": 74.2,
+  "read_at": "2026-11-05T03:35:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -219,181 +186,6 @@
     "at": "2026-11-04T20:02:28-05:00",
     "n": "Jeremy",
     "d": 1
-   },
-   {
-    "lane": "b2",
-    "task": "T-1989",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Independent review",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T20:06:18-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b2",
-    "task": "T-1993",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-1064 rest",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T20:06:18-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b2",
-    "task": "T-2041",
-    "w": "Idris",
-    "k": "build",
-    "t": "PreviewQueueTests.swift:230 fence check passes when ProjectSendPlan's one...",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T20:06:18-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-2277",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Follow-up of T-2257",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T21:47:16-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-2297",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Investor an Investor c6647520496",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T21:47:16-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-2308",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Investor an Investor c6647932583",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T21:47:16-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-2329",
-    "w": "Ines",
-    "k": "plan",
-    "t": "Check ops/proposals/2026-11-04-reports-inside-work-session.md",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T21:47:16-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-2330",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Machine and task tracking, step 1 continued",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T21:47:16-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-2346",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Investor an Investor c6648227019",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T21:47:16-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-2352",
-    "w": "Ines",
-    "k": "plan",
-    "t": "Two open points from Maren T-2307",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T21:47:16-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-2282",
-    "w": "Maren",
-    "k": "design",
-    "t": "Screen read of the Settings screen",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T21:47:16-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-2283",
-    "w": "Odalys",
-    "k": "review",
-    "t": "Independent review",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T21:47:16-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-2275",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Odalys's MEMORY.md is 8.4 KB, over Commandment 16's 4 KB",
-    "m": "haiku",
-    "e": "low",
-    "at": "2026-11-04T21:47:16-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-2280",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Machine and task tracking, step 3, after the two lines above",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T21:47:16-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-2302",
-    "w": "Idris",
-    "k": "build",
-    "t": "Xcode queue",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T21:47:16-05:00",
-    "n": "Jeremy"
    }
   ]
  },
@@ -416,14 +208,10 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T22:30:00-05:00"
+  "at": "2026-11-04T22:35:00-05:00"
  },
  "next_tick_why": "session",
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight",
-  "n": 12,
-  "at": "2026-11-04T21:55:10.360209-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -583,12 +371,31 @@
     "done": 0
    },
    "title": "The Scope is either \"Organization\"..."
+  },
+  {
+   "id": "c6648940379",
+   "state": "received",
+   "position": 2,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "done! Use these credits ASAP and..."
+  },
+  {
+   "id": "c6648946279",
+   "state": "received",
+   "position": 3,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "We added both key-a and key-b"
   }
  ],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "inbox_title",
   "task_title",
@@ -599,12 +406,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "10:30 PM",
+  "lanes": 1,
+  "total": 1,
+  "at": "10:35 PM",
   "why": "",
-  "at_iso": "2026-11-05T03:30:00+00:00",
+  "at_iso": "2026-11-05T03:35:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:30 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:35 PM ET</p></section>"
  }
 }

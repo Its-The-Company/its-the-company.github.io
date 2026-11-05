@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T02:39:32.372276+00:00",
+ "at": "2026-11-05T02:42:37.203817+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[release] T-2270 first TestFlight build",
    "model": "opus",
    "started": "2026-11-05T02:07:06.614Z",
-   "seconds": 1945,
+   "seconds": 2130,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[site] T-2276 new Home live",
    "model": "opus",
    "started": "2026-11-05T02:07:22.070Z",
-   "seconds": 1930,
+   "seconds": 2115,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[tools] T-2210 personal land rate",
    "model": "opus",
    "started": "2026-11-05T02:07:39.381Z",
-   "seconds": 1912,
+   "seconds": 2097,
    "finished": null,
    "effort": "high"
   },
@@ -39,16 +39,7 @@
    "task": "[review] T-1979 xc_route review + T-0309 check",
    "model": "opus",
    "started": "2026-11-05T02:22:04.596Z",
-   "seconds": 1047,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-1978 review of R2a When held",
-   "model": "opus",
-   "started": "2026-11-05T02:28:34.305Z",
-   "seconds": 658,
+   "seconds": 1232,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[tools] T-2305 unit-first runner routing",
    "model": "opus",
    "started": "2026-11-05T02:30:41.736Z",
-   "seconds": 530,
+   "seconds": 715,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +57,7 @@
    "task": "[design] T-2307 workflow diagrams redesign",
    "model": "opus",
    "started": "2026-11-05T02:34:24.489Z",
-   "seconds": 307,
+   "seconds": 492,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +66,7 @@
    "task": "[ops] T-2322 T-2324 drop CEO step, approve-only ends",
    "model": "opus",
    "started": "2026-11-05T02:34:32.780Z",
-   "seconds": 299,
+   "seconds": 484,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +75,7 @@
    "task": "[review] T-2321 review of session_end change",
    "model": "opus",
    "started": "2026-11-05T02:36:06.122Z",
-   "seconds": 206,
+   "seconds": 391,
    "finished": null,
    "effort": "high"
   },
@@ -93,13 +84,21 @@
    "task": "[review] T-2334 review of AgeLine.nextChange",
    "model": "opus",
    "started": "2026-11-05T02:36:42.714Z",
-   "seconds": 169,
+   "seconds": 354,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Odalys x4, Pernille x4, Maren",
+ "who": "Idris, Odalys x4, Pernille x3, Maren",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-1978 review of R2a When held",
+   "model": "opus",
+   "started": "2026-11-05T02:28:34.305Z",
+   "seconds": null,
+   "finished": "2026-11-05T02:40:00.414000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-2316 Pro check on Shortcuts run",
@@ -123,20 +122,12 @@
    "started": "2026-11-05T02:13:12.134Z",
    "seconds": null,
    "finished": "2026-11-05T02:36:23.494000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2278 machine collector",
-   "model": "opus",
-   "started": "2026-11-05T02:07:53.572Z",
-   "seconds": null,
-   "finished": "2026-11-05T02:35:54.020000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 403,
+  "runnable_count": 406,
   "blocked_count": 124
  },
  "meter": {
@@ -179,7 +170,7 @@
   "week_pct": 36.78,
   "usage_pct": 37.0,
   "work_pct": 74.8,
-  "read_at": "2026-11-05T02:39:00+00:00",
+  "read_at": "2026-11-05T02:42:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -495,7 +486,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T21:39:00-05:00"
+  "at": "2026-11-04T21:42:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -596,15 +587,6 @@
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "T-1978 review of R2a When held",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T02:28:34.305Z",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "T-2305 unit-first runner routing",
@@ -629,6 +611,15 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T02:34:32.780Z",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "T-2321 review of session_end change",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T02:36:06.122Z",
     "o": "c"
    }
   ],
@@ -722,19 +713,31 @@
    }
   ],
   "count": {
-   "next": 403,
+   "next": 406,
    "wait": 39,
    "blocked": 85,
    "you": 17
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6648227019",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "By \"only a real pending approval..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -742,13 +745,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 10,
+  "main": 9,
   "lanes": 3,
-  "total": 13,
-  "at": "9:39 PM",
+  "total": 12,
+  "at": "9:42 PM",
   "why": "",
-  "at_iso": "2026-11-05T02:39:00+00:00",
+  "at_iso": "2026-11-05T02:42:00+00:00",
   "started": "9:04 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>13</b> agents running now</p><p class=\"an-sub\">Main session 10, started 9:04 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:39 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>12</b> agents running now</p><p class=\"an-sub\">Main session 9, started 9:04 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:42 PM ET</p></section>"
  }
 }

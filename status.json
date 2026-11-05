@@ -1,31 +1,14 @@
 {
  "schema": 1,
- "at": "2026-11-05T15:57:16.105105+00:00",
+ "at": "2026-11-05T16:05:52.381261+00:00",
  "session": {
-  "active": false,
+  "active": true,
   "kind": "",
   "started": null
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[build] T-2028 T-2029 bound notification test waits",
-   "model": "sonnet",
-   "started": "2026-11-05T15:51:53.471Z",
-   "seconds": null,
-   "finished": "2026-11-05T15:52:28.161Z"
-  },
-  {
-   "name": "idris",
-   "task": "[test] T-2626 runner result check",
-   "model": "sonnet",
-   "started": "2026-11-05T15:51:00.573Z",
-   "seconds": null,
-   "finished": "2026-11-05T15:51:28.615Z"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -35,24 +18,24 @@
  "meter": {
   "five_hour": {
    "pct": 1.0,
-   "resets_at": "2026-11-05T16:09:59.611681+00:00",
+   "resets_at": "2026-11-05T16:10:00.303693+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 59.0,
-   "resets_at": "2026-11-08T06:59:59.611707+00:00",
+   "resets_at": "2026-11-08T07:00:00.303711+00:00",
    "used_words": "of your weekly allowance used",
    "left": 41.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 1.0,
-   "resets_at": "2026-11-08T06:59:59.611935+00:00",
+   "resets_at": "2026-11-08T07:00:00.303895+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-05T10:49:33.569660-05:00"
+  "read_at": "2026-11-05T11:05:32.252607-05:00"
  },
  "ui": {
   "week_pct": 0.689,
@@ -67,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-05T11:04:34-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 54.81,
   "usage_pct": 44.3,
   "work_pct": 72.4,
-  "read_at": "2026-11-05T15:59:00+00:00",
+  "read_at": "2026-11-05T16:05:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -105,7 +88,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T10:51:09-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a",
@@ -518,16 +502,16 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 716
+   "free_gb": 714
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T10:59:00-05:00"
+  "at": "2026-11-05T11:05:00-05:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "pool": null,
  "lanes": [
   {
@@ -693,10 +677,10 @@
   "main": 0,
   "lanes": 5,
   "total": 5,
-  "at": "10:59 AM",
+  "at": "11:05 AM",
   "why": "",
-  "at_iso": "2026-11-05T15:59:00+00:00",
+  "at_iso": "2026-11-05T16:05:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:59 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:05 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T03:47:50.108802+00:00",
+ "at": "2026-11-05T03:50:51.942839+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2418 applier option-letter approve",
    "model": "opus",
    "started": "2026-11-05T03:45:51.600Z",
-   "seconds": 118,
+   "seconds": 300,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[plan] T-2420 fold amendments request",
    "model": "opus",
    "started": "2026-11-05T03:45:59.384Z",
-   "seconds": 110,
+   "seconds": 292,
    "finished": null,
    "effort": "high"
   }
@@ -31,7 +31,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 406,
+  "runnable_count": 405,
   "blocked_count": 124
  },
  "meter": {
@@ -74,7 +74,7 @@
   "week_pct": 36.73,
   "usage_pct": 35.2,
   "work_pct": 74.2,
-  "read_at": "2026-11-05T03:47:00+00:00",
+  "read_at": "2026-11-05T03:50:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -227,7 +227,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T22:35:28-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b2",
@@ -238,7 +239,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T22:35:28-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b2",
@@ -482,18 +484,18 @@
   }
  ],
  "disk": {
-  "free_gb": 49,
+  "free_gb": 48,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 764
+   "free_gb": 763
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T22:47:00-05:00"
+  "at": "2026-11-04T22:50:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -664,7 +666,7 @@
    }
   ],
   "count": {
-   "next": 406,
+   "next": 405,
    "wait": 37,
    "blocked": 87,
    "you": 18
@@ -686,10 +688,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "10:47 PM",
+  "at": "10:50 PM",
   "why": "",
-  "at_iso": "2026-11-05T03:47:00+00:00",
+  "at_iso": "2026-11-05T03:50:00+00:00",
   "started": "10:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:47 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:50 PM ET</p></section>"
  }
 }

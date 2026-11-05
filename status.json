@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T03:41:53.501393+00:00",
+ "at": "2026-11-05T03:44:47.213285+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 404,
+  "runnable_count": 407,
   "blocked_count": 124
  },
  "meter": {
@@ -55,7 +55,7 @@
   "week_pct": 36.73,
   "usage_pct": 35.2,
   "work_pct": 74.2,
-  "read_at": "2026-11-05T03:41:00+00:00",
+  "read_at": "2026-11-05T03:44:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -317,7 +317,8 @@
     "m": "sonnet",
     "e": "medium",
     "at": "2026-11-04T22:35:28-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b3",
@@ -460,18 +461,18 @@
   }
  ],
  "disk": {
-  "free_gb": 48,
+  "free_gb": 49,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 769
+   "free_gb": 768
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T22:41:00-05:00"
+  "at": "2026-11-04T22:44:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -621,70 +622,18 @@
    }
   ],
   "count": {
-   "next": 404,
+   "next": 407,
    "wait": 37,
    "blocked": 87,
    "you": 18
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6648859425",
-   "state": "in_progress",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "The Scope is either \"Organization\"..."
-  },
-  {
-   "id": "c6648940379",
-   "state": "in_progress",
-   "position": 2,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "done! Use these credits ASAP and..."
-  },
-  {
-   "id": "c6648946279",
-   "state": "in_progress",
-   "position": 3,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "We added both key-a and key-b"
-  },
-  {
-   "id": "c6648996659",
-   "state": "received",
-   "position": 4,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "A, although the number of simulators..."
-  },
-  {
-   "id": "c6649022366",
-   "state": "received",
-   "position": 5,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "approve"
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -695,10 +644,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "10:41 PM",
+  "at": "10:44 PM",
   "why": "",
-  "at_iso": "2026-11-05T03:41:00+00:00",
+  "at_iso": "2026-11-05T03:44:00+00:00",
   "started": "10:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 10:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:41 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 10:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:44 PM ET</p></section>"
  }
 }

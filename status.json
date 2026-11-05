@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-05T16:05:52.381261+00:00",
+ "at": "2026-11-05T16:08:58.015174+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-05T11:05:53-05:00"
  },
  "workers": [],
  "who": "",
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 430,
+  "runnable_count": 427,
   "blocked_count": 129
  },
  "meter": {
@@ -55,7 +55,7 @@
   "week_pct": 54.81,
   "usage_pct": 44.3,
   "work_pct": 72.4,
-  "read_at": "2026-11-05T16:05:00+00:00",
+  "read_at": "2026-11-05T16:08:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -201,7 +201,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T10:36:20-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "b",
@@ -417,7 +418,8 @@
     "m": "sonnet",
     "e": "medium",
     "at": "2026-11-05T09:29:28-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b3",
@@ -509,10 +511,14 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T11:05:00-05:00"
+  "at": "2026-11-05T11:08:00-05:00"
  },
  "next_tick_why": "session",
- "pool": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight",
+  "n": 12,
+  "at": "2026-11-05T11:05:33.013690-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
@@ -640,22 +646,22 @@
   "done": [
    {
     "w": "Idris",
-    "t": "an independent check confirmed that the three new tests stopping the widget card from being used...",
-    "at": "2026-11-05T10:49:00-05:00"
+    "t": "A device-module test now uses its own standalone wait object, so a slow earlier run can no...",
+    "at": "2026-11-05T11:08:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "When an Investor message is waiting as a morning or evening report falls due, the company now...",
-    "at": "2026-11-05T10:33:00-05:00"
+    "w": "Idris",
+    "t": "The notification-permission reads in the device-module tests now give up after 10 seconds...",
+    "at": "2026-11-05T11:08:00-05:00"
    },
    {
-    "w": "Operator",
-    "t": "The finished review of the build upload tools could not merge because one test on main was...",
-    "at": "2026-11-05T09:54:00-05:00"
+    "w": "Idris",
+    "t": "The check that every node the premade widgets use gets drawn passes again, after the design...",
+    "at": "2026-11-05T11:08:00-05:00"
    }
   ],
   "count": {
-   "next": 430,
+   "next": 427,
    "wait": 42,
    "blocked": 87,
    "you": 19
@@ -677,10 +683,10 @@
   "main": 0,
   "lanes": 5,
   "total": 5,
-  "at": "11:05 AM",
+  "at": "11:08 AM",
   "why": "",
-  "at_iso": "2026-11-05T16:05:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:05 AM ET</p></section>"
+  "at_iso": "2026-11-05T16:08:00+00:00",
+  "started": "11:05 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:08 AM ET</p></section>"
  }
 }

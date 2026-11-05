@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T05:46:46.150346+00:00",
+ "at": "2026-11-05T05:49:50.649107+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,25 +9,24 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-2216 landing merge queue",
-   "model": "opus",
-   "started": "2026-11-05T04:54:12.399Z",
-   "seconds": 3153,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[site] T-2400 new Home replaces old",
    "model": "opus",
    "started": "2026-11-05T04:54:06.016Z",
-   "seconds": 3160,
+   "seconds": 3344,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2",
+ "who": "Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2216 landing merge queue",
+   "model": "opus",
+   "started": "2026-11-05T04:54:12.399Z",
+   "seconds": null,
+   "finished": "2026-11-05T05:48:50.280000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2406 plain task titles",
@@ -51,21 +50,13 @@
    "started": "2026-11-05T04:53:54.357Z",
    "seconds": null,
    "finished": "2026-11-05T05:33:16.674000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2453 every lane answers Investors",
-   "model": "opus",
-   "started": "2026-11-05T04:53:49.733Z",
-   "seconds": null,
-   "finished": "2026-11-05T05:32:08.688000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
   "runnable_count": 413,
-  "blocked_count": 123
+  "blocked_count": 124
  },
  "meter": {
   "five_hour": {
@@ -107,7 +98,7 @@
   "week_pct": 46.59,
   "usage_pct": 40.3,
   "work_pct": 74.9,
-  "read_at": "2026-11-05T05:46:00+00:00",
+  "read_at": "2026-11-05T05:49:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -128,18 +119,18 @@
   }
  ],
  "disk": {
-  "free_gb": 45,
+  "free_gb": 46,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 760
+   "free_gb": 761
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-05T00:46:00-05:00"
+  "at": "2026-11-05T00:49:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -208,25 +199,9 @@
     "e": "high",
     "at": "2026-11-05T04:54:06.016Z",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "T-2216 landing merge queue",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T04:54:12.399Z",
-    "o": "c"
    }
   ],
   "open": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Title: Turn landing finished work into a...",
-    "s": "next",
-    "o": "i"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -289,9 +264,21 @@
     "t": "T-1669 rest",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Site overhaul build, after Maren's spec line...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "Finished lane work now lands one task at a time; a test that only ran out of time is retried...",
+    "at": "2026-11-05T00:48:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "Every board task can now carry a short plain-English title that a script checks; the site's task...",
@@ -301,16 +288,11 @@
     "w": "Ines",
     "t": "The proposal that writes the Investors' twelve recent instructions into the rulebook was rebuilt...",
     "at": "2026-11-05T00:36:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The tool that applies approved rule changes now applies two kinds the Investors pre-approved,...",
-    "at": "2026-11-05T00:32:00-05:00"
    }
   ],
   "count": {
    "next": 413,
-   "wait": 37,
+   "wait": 38,
    "blocked": 86,
    "you": 18
   }
@@ -329,13 +311,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "12:46 AM",
+  "total": 1,
+  "at": "12:49 AM",
   "why": "",
-  "at_iso": "2026-11-05T05:46:00+00:00",
+  "at_iso": "2026-11-05T05:49:00+00:00",
   "started": "11:46 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:46 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 11:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:49 AM ET</p></section>"
  }
 }

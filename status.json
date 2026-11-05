@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T04:39:00.530293+00:00",
+ "at": "2026-11-05T04:41:48.141445+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 415,
+  "runnable_count": 419,
   "blocked_count": 124
  },
  "meter": {
@@ -55,7 +55,7 @@
   "week_pct": 45.8,
   "usage_pct": 40.3,
   "work_pct": 75.2,
-  "read_at": "2026-11-05T04:39:00+00:00",
+  "read_at": "2026-11-05T04:44:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T23:39:00-05:00"
+  "at": "2026-11-04T23:44:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -191,6 +191,20 @@
     "o": "c"
    },
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Evan's lane",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "One account's 5-hour limit pauses only its...",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Idris",
     "k": "build",
     "t": "Extension lane",
@@ -201,20 +215,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "After T-1035 lands",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Activity run log, Swift half",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Refresh control and age line in the renderer",
     "s": "next",
     "o": "c"
    }
@@ -237,80 +237,18 @@
    }
   ],
   "count": {
-   "next": 415,
+   "next": 419,
    "wait": 37,
    "blocked": 87,
    "you": 18
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6649323509",
-   "state": "in_progress",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Is Evan's account still not working?..."
-  },
-  {
-   "id": "c6649371105",
-   "state": "in_progress",
-   "position": 2,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "approve"
-  },
-  {
-   "id": "c6649529283",
-   "state": "waiting",
-   "position": 3,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "This and other requests like this..."
-  },
-  {
-   "id": "c6649596327",
-   "state": "waiting",
-   "position": 4,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Also the fact that Jeremy's account..."
-  },
-  {
-   "id": "c6649615785",
-   "state": "waiting",
-   "position": 5,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "All lanes should also be able to..."
-  },
-  {
-   "id": "c6649742502",
-   "state": "received",
-   "position": 6,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Status check on the TestFlight build?"
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -321,10 +259,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "11:39 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-05T04:39:00+00:00",
-  "started": "11:14 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:14 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:39 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "at": "11:44 PM",
+  "why": "Between sessions: no session is running. Last check 11:14 PM ET.",
+  "at_iso": "2026-11-05T04:44:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:44 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 11:14 PM ET.</p></section>"
  }
 }

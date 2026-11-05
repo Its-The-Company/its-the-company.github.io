@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T18:36:32.318357+00:00",
+ "at": "2026-11-05T18:39:34.076213+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2634 land merges on MacBook in parallel",
    "model": "opus",
    "started": "2026-11-05T18:32:53.686Z",
-   "seconds": 218,
+   "seconds": 400,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2615 finish one dispatcher",
    "model": "opus",
    "started": "2026-11-05T18:33:02.286Z",
-   "seconds": 210,
+   "seconds": 391,
    "finished": null,
    "effort": "high"
   },
@@ -30,16 +30,7 @@
    "task": "[tools] T-2672 applier reads pinned diff file",
    "model": "opus",
    "started": "2026-11-05T18:33:11.090Z",
-   "seconds": 201,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2669 renumber duplicate OPT-077",
-   "model": "opus",
-   "started": "2026-11-05T18:33:17.287Z",
-   "seconds": 195,
+   "seconds": 382,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[tools] T-2570 retry unmerged parked work",
    "model": "opus",
    "started": "2026-11-05T18:33:25.639Z",
-   "seconds": 186,
+   "seconds": 368,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[tools] T-2675 charter suite reds comparison",
    "model": "opus",
    "started": "2026-11-05T18:33:34.547Z",
-   "seconds": 177,
+   "seconds": 359,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +57,7 @@
    "task": "[release] T-2456 first TestFlight build checks",
    "model": "opus",
    "started": "2026-11-05T18:33:43.690Z",
-   "seconds": 168,
+   "seconds": 350,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +66,7 @@
    "task": "[build] T-2661 widget memory verdict and demotion",
    "model": "opus",
    "started": "2026-11-05T18:33:51.144Z",
-   "seconds": 161,
+   "seconds": 342,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +75,7 @@
    "task": "[build] T-2662 lane gate archive check",
    "model": "opus",
    "started": "2026-11-05T18:33:57.889Z",
-   "seconds": 154,
+   "seconds": 336,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +84,7 @@
    "task": "[test] T-2663 privacy check file-scan tests",
    "model": "opus",
    "started": "2026-11-05T18:34:03.791Z",
-   "seconds": 148,
+   "seconds": 330,
    "finished": null,
    "effort": "high"
   },
@@ -102,13 +93,47 @@
    "task": "[build] T-1440 widget refresh control and age",
    "model": "opus",
    "started": "2026-11-05T18:34:10.891Z",
-   "seconds": 141,
+   "seconds": 323,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-1677 record last run report at launch",
+   "model": "opus",
+   "started": "2026-11-05T18:37:36.900Z",
+   "seconds": 117,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-2567 traceback fold fixes, tick T-2413",
+   "model": "opus",
+   "started": "2026-11-05T18:38:29.185Z",
+   "seconds": 64,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x5, Ines, Idris x5",
+ "who": "Odalys x4, Ines, Idris x6, Pernille",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2669 renumber duplicate OPT-077",
+   "model": "opus",
+   "started": "2026-11-05T18:33:17.287Z",
+   "seconds": null,
+   "finished": "2026-11-05T18:37:52.311000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-1905 send project files in one swap",
+   "model": "opus",
+   "started": "2026-11-05T18:36:55.172Z",
+   "seconds": null,
+   "finished": "2026-11-05T18:37:22.380000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-2603 presenter queue and retry fixes",
@@ -121,7 +146,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 427,
+  "runnable_count": 425,
   "blocked_count": 129
  },
  "meter": {
@@ -164,7 +189,7 @@
   "week_pct": 58.5,
   "usage_pct": 45.5,
   "work_pct": 71.9,
-  "read_at": "2026-11-05T18:36:00+00:00",
+  "read_at": "2026-11-05T18:39:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -196,7 +221,7 @@
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-05T13:36:00-05:00"
+  "at": "2026-11-05T13:39:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -234,11 +259,12 @@
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P2, no Xcode, after T-1440 lands (Idris review...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-2567 traceback fold fixes, tick T-2413",
+   "model": "opus",
+   "since": "2026-11-05T18:38:29.185Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Maren",
@@ -289,15 +315,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Give the second OPT-077 experiment its own number",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T18:33:17.287Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Retry finished work that could not be merged",
     "m": "opus",
     "e": "high",
@@ -329,6 +346,15 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T18:33:51.144Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Close a second way to archive the phone test build",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T18:33:57.889Z",
     "o": "c"
    }
   ],
@@ -369,13 +395,6 @@
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "release",
-    "t": "Review the fixes to the build upload tools",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "release",
     "t": "Last checks before the first test build",
@@ -402,27 +421,34 @@
     "t": "Record each widget run in the app's activity log",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Add a refresh control and age line to widgets",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "The upload tools passed their second review: all six problems found in the first review are...",
+    "at": "2026-11-05T13:38:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "Two experiments in the company's improvement log shared one number, so the log's own check...",
+    "at": "2026-11-05T13:37:00-05:00"
+   },
+   {
     "w": "Idris+pernille",
     "t": "The automatic check for two finished changes ran out of time on a busy machine with every test...",
-    "at": "2026-11-05T13:19:00-05:00"
-   },
-   {
-    "w": "Operator+pernille",
-    "t": "Two lanes each wrote one line at the end of the same retry list, and that clash held a finished...",
-    "at": "2026-11-05T13:19:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Checked that the held lane work (a review, a retry-list fix and a timing note) is all on the...",
     "at": "2026-11-05T13:19:00-05:00"
    }
   ],
   "count": {
-   "next": 427,
+   "next": 425,
    "wait": 42,
    "blocked": 87,
    "you": 19
@@ -441,13 +467,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 11,
+  "main": 12,
   "lanes": 0,
-  "total": 11,
-  "at": "1:36 PM",
+  "total": 12,
+  "at": "1:39 PM",
   "why": "",
-  "at_iso": "2026-11-05T18:36:00+00:00",
+  "at_iso": "2026-11-05T18:39:00+00:00",
   "started": "1:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>11</b> agents running now</p><p class=\"an-sub\">Main session 11, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:36 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>12</b> agents running now</p><p class=\"an-sub\">Main session 12, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:39 PM ET</p></section>"
  }
 }

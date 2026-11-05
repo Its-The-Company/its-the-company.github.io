@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T09:35:37.233801+00:00",
+ "at": "2026-11-05T09:38:41.570184+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,16 +12,7 @@
    "task": "[tools] T-2556 supervisor test reds",
    "model": "opus",
    "started": "2026-11-05T09:12:51.423Z",
-   "seconds": 1365,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[release] T-2566 re-review upload fixes",
-   "model": "opus",
-   "started": "2026-11-05T09:27:36.663Z",
-   "seconds": 480,
+   "seconds": 1550,
    "finished": null,
    "effort": "high"
   },
@@ -30,13 +21,29 @@
    "task": "[review] T-2576 review five parked fixes",
    "model": "opus",
    "started": "2026-11-05T09:35:24.502Z",
-   "seconds": 12,
+   "seconds": 197,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Pernille x2",
+ "who": "Odalys, Pernille",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2403 stray profile item check",
+   "model": "opus",
+   "started": "2026-11-05T09:36:55.949Z",
+   "seconds": null,
+   "finished": "2026-11-05T09:38:13.392000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[release] T-2566 re-review upload fixes",
+   "model": "opus",
+   "started": "2026-11-05T09:27:36.663Z",
+   "seconds": null,
+   "finished": "2026-11-05T09:36:19.812000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-2537 land parked fixes, slice 1",
@@ -100,7 +107,7 @@
   "week_pct": 51.58,
   "usage_pct": 42.8,
   "work_pct": 74.2,
-  "read_at": "2026-11-05T09:35:00+00:00",
+  "read_at": "2026-11-05T09:38:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -132,7 +139,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T04:35:00-05:00"
+  "at": "2026-11-05T04:38:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -153,9 +160,9 @@
   {
    "name": "Pernille",
    "state": "running",
-   "task": "[release] T-2566 re-review upload fixes",
+   "task": "[review] T-2576 review five parked fixes",
    "model": "opus",
-   "since": "2026-11-05T09:27:36.663Z",
+   "since": "2026-11-05T09:35:24.502Z",
    "next": [],
    "effort": "high"
   },
@@ -205,15 +212,6 @@
    },
    {
     "w": "Pernille",
-    "k": "release",
-    "t": "Check the second round of upload tool fixes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T09:27:36.663Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
     "k": "review",
     "t": "Review the five landed parked fixes before TestFlight",
     "m": "opus",
@@ -259,20 +257,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Name the stray item in a personal account's...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "release",
-    "t": "Check the second round of upload tool fixes",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Run Python widget scripts inside the widget...",
@@ -292,22 +276,36 @@
     "t": "Record each widget run in the app's activity log",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Refresh control and age line in the renderer",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "T-1669 rest",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Evan's account lane runs again; the profile check no longer flags any stray item, so nothing...",
+    "at": "2026-11-05T04:38:00-05:00"
+   },
+   {
+    "w": "Pernille",
+    "t": "The second check of the build upload tools passed: all six earlier problems are fixed and...",
+    "at": "2026-11-05T04:36:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "Widgets can now space their letters, animate changing numbers, and tint controls and bars, and...",
-    "at": "2026-11-05T04:34:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "A script's on-screen prompt now goes away when its wait time runs out or its run ends, and a...",
-    "at": "2026-11-05T04:34:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "On the Lock Screen, the Choose a widget card no longer tells VoiceOver users to touch and hold,...",
     "at": "2026-11-05T04:34:00-05:00"
    }
   ],
@@ -331,13 +329,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "4:35 AM",
+  "total": 2,
+  "at": "4:38 AM",
   "why": "",
-  "at_iso": "2026-11-05T09:35:00+00:00",
+  "at_iso": "2026-11-05T09:38:00+00:00",
   "started": "4:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:35 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:38 AM ET</p></section>"
  }
 }

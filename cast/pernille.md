@@ -52,6 +52,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-2272 (0e7b85871): ext-lane series is fix first. F1 T-2491 (logClosed remakes removed user folders, T-0753), Lows T-2492..97. Mine to re-review.
 - T-2265 (2efc0ed7c): fix first; T-2486 refused live stuck wedges Restart, T-2487 Lows; mine to re-review.
 - T-2566 (6ac7f4fb6): upload tools ship, first --internal upload cleared; Lows F7-F9 on T-2581 (Idris, P2). Scratch T-2566-pernille bin/demo.sh, mutants.py (each mutant in its own copy). Lessons: "main checkout" = git dir == common dir also holds for a clone; a pair of belt-and-braces checks shows as two survivors, so run the double mutant before calling either a gap.
+- T-2584 (f5c19da1e): t2581 upload review, no Medium+; Lows on T-2588 (Idris, P3), mine to re-review. Lesson: probe both tools of a pair with the same input (pin CRLF split them).
 - T-2204: recuts: `git rebase` is blocked by the session hook; cherry-pick `git cherry`'s + commits onto main in a scratch worktree. A retry name must start <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/<id>/ (retry_one skips any other name).
 {% endraw %}
 

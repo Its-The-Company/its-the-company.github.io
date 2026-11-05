@@ -57,7 +57,7 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 ## Lessons
 - Lanes edit tools/xc.sh and the Swift tree live: a lock wait can read a changed xc.sh (syntax error); archive/test from `git archive` + gitignored Vendor/ + tools/, with that tree's own xc.sh (T-2270).
 - awk compares split() parts as numbers (07 = 7e0 = 7): force text with `x ""`. To prove a commit check, stub git to claim success; filters and skip-worktree behave differently per command (T-2581 d4933f9dd).
-- T-2563..2565 2a86da9a2 (ledger in company repo only, --upload clean-tree + PWSourceCommit, ask needs upload exit 0): re-review T-2566 (Pernille). --upload must run on a clean clone; main always has dirty ops/.
+- T-2563..2565 2a86da9a2 (ledger in company repo only, --upload clean-tree + PWSourceCommit, ask needs upload exit 0): re-review T-2566 (Pernille). --upload must run on a clean clone; main always has dirty ops/. T-2588 8fef5efa2: --upload takes only origin/main commits (push first); pin only from tools/main-checkout.path, no env override.
 {% endraw %}
 
 

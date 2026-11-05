@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T19:57:45.350537+00:00",
+ "at": "2026-11-05T20:00:46.455281+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,35 +8,33 @@
  },
  "workers": [
   {
+   "name": "idris",
+   "task": "[build] T-2625 T-2627 test fixes check",
+   "model": "opus",
+   "started": "2026-11-05T19:42:16.956Z",
+   "seconds": 1109,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris",
+ "recent": [
+  {
    "name": "odalys",
    "task": "[tools] T-2713 land checks finish",
    "model": "opus",
    "started": "2026-11-05T19:41:25.704Z",
-   "seconds": 979,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-05T19:59:40.686000+00:00"
   },
   {
    "name": "idris",
    "task": "[tools] T-2722 runner sandbox profile fix",
    "model": "opus",
    "started": "2026-11-05T19:50:49.226Z",
-   "seconds": 416,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-05T19:58:22.422000+00:00"
   },
-  {
-   "name": "idris",
-   "task": "[build] T-2625 T-2627 test fixes check",
-   "model": "opus",
-   "started": "2026-11-05T19:42:16.956Z",
-   "seconds": 928,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Idris x2",
- "recent": [
   {
    "name": "idris",
    "task": "[build] T-2721 memory-skip badge rule D",
@@ -52,28 +50,12 @@
    "started": "2026-11-05T19:41:41.707Z",
    "seconds": null,
    "finished": "2026-11-05T19:57:10.248000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2718 archive open board lines",
-   "model": "opus",
-   "started": "2026-11-05T19:48:38.681Z",
-   "seconds": null,
-   "finished": "2026-11-05T19:56:17.841000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-2711 applier fixes re-review",
-   "model": "opus",
-   "started": "2026-11-05T19:41:58.106Z",
-   "seconds": null,
-   "finished": "2026-11-05T19:56:13.427000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 429,
+  "runnable_count": 430,
   "blocked_count": 119
  },
  "meter": {
@@ -116,7 +98,7 @@
   "week_pct": 58.1,
   "usage_pct": 44.3,
   "work_pct": 71.6,
-  "read_at": "2026-11-05T19:57:00+00:00",
+  "read_at": "2026-11-05T20:00:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -224,7 +206,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T14:57:00-05:00"
+  "at": "2026-11-05T15:00:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -234,15 +216,6 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-2713 land checks finish",
-   "model": "opus",
-   "since": "2026-11-05T19:41:25.704Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "running",
    "task": "[build] T-2625 T-2627 test fixes check",
@@ -250,6 +223,14 @@
    "since": "2026-11-05T19:42:16.956Z",
    "next": [],
    "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -287,30 +268,12 @@
  "tasks": {
   "run": [
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Finish testing and measure the MacBook land checks",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T19:41:25.704Z",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "A widget safety test still expects the old build switch",
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T19:42:16.956Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "tools",
-    "t": "Move runner job sandbox files out of reach",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T19:50:49.226Z",
     "o": "c"
    }
   ],
@@ -379,9 +342,9 @@
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Run Python widget scripts inside the widget...",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Re-review the runner job sandbox fix",
     "s": "next",
     "o": "c"
    }
@@ -404,7 +367,7 @@
    }
   ],
   "count": {
-   "next": 429,
+   "next": 430,
    "wait": 43,
    "blocked": 76,
    "you": 19
@@ -424,13 +387,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 1,
   "lanes": 3,
-  "total": 6,
-  "at": "2:57 PM",
+  "total": 4,
+  "at": "3:00 PM",
   "why": "",
-  "at_iso": "2026-11-05T19:57:00+00:00",
+  "at_iso": "2026-11-05T20:00:00+00:00",
   "started": "2:39 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:39 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 2:57 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:39 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:00 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T03:01:13.496863+00:00",
+ "at": "2026-11-05T03:04:17.079623+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[release] T-2356 TestFlight red tests",
    "model": "opus",
    "started": "2026-11-05T02:58:31.483Z",
-   "seconds": 162,
+   "seconds": 345,
    "finished": null
   },
   {
@@ -20,7 +20,7 @@
    "task": "[review] T-2357 internal-TestFlight flag review",
    "model": "opus",
    "started": "2026-11-05T02:58:38.584Z",
-   "seconds": 154,
+   "seconds": 338,
    "finished": null
   },
   {
@@ -28,7 +28,7 @@
    "task": "[plan] T-2354 B-staged 1.0 re-plan",
    "model": "fable",
    "started": "2026-11-05T02:58:46.042Z",
-   "seconds": 147,
+   "seconds": 331,
    "finished": null
   },
   {
@@ -36,7 +36,7 @@
    "task": "[tools] T-2353 land-rate continuation",
    "model": "opus",
    "started": "2026-11-05T02:58:52.536Z",
-   "seconds": 140,
+   "seconds": 324,
    "finished": null
   },
   {
@@ -44,15 +44,7 @@
    "task": "[tools] T-2333 xc_route dirty-path name",
    "model": "opus",
    "started": "2026-11-05T02:58:58.386Z",
-   "seconds": 135,
-   "finished": null
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2340 DSL held-null and envKey pins",
-   "model": "opus",
-   "started": "2026-11-05T02:59:04.338Z",
-   "seconds": 129,
+   "seconds": 318,
    "finished": null
   },
   {
@@ -60,7 +52,7 @@
    "task": "[site] T-2072 bell on every page",
    "model": "opus",
    "started": "2026-11-05T02:59:11.144Z",
-   "seconds": 122,
+   "seconds": 305,
    "finished": null
   },
   {
@@ -68,7 +60,7 @@
    "task": "[tools] T-2149 lane-stop issue stays open",
    "model": "opus",
    "started": "2026-11-05T02:59:16.435Z",
-   "seconds": 117,
+   "seconds": 300,
    "finished": null
   },
   {
@@ -76,7 +68,7 @@
    "task": "[tools] T-2061 both disks in disk_free",
    "model": "opus",
    "started": "2026-11-05T02:59:21.685Z",
-   "seconds": 111,
+   "seconds": 295,
    "finished": null
   },
   {
@@ -84,7 +76,7 @@
    "task": "[tools] T-2222 stop_stuck.py tool",
    "model": "opus",
    "started": "2026-11-05T02:59:28.189Z",
-   "seconds": 105,
+   "seconds": 288,
    "finished": null
   },
   {
@@ -92,7 +84,7 @@
    "task": "[plan] T-1853 device-gate Release switch",
    "model": "opus",
    "started": "2026-11-05T02:59:33.934Z",
-   "seconds": 99,
+   "seconds": 283,
    "finished": null
   },
   {
@@ -100,12 +92,20 @@
    "task": "[review] T-2141 privacy guard and T-1738 reviews",
    "model": "opus",
    "started": "2026-11-05T03:00:11.177Z",
-   "seconds": 62,
+   "seconds": 245,
    "finished": null
   }
  ],
- "who": "Idris x3, Pernille x2, Ines, Odalys x6",
+ "who": "Idris x2, Pernille x2, Ines, Odalys x6",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-2340 DSL held-null and envKey pins",
+   "model": "opus",
+   "started": "2026-11-05T02:59:04.338Z",
+   "seconds": null,
+   "finished": "2026-11-05T03:04:04.987000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-2347 nextchange mutant and doc",
@@ -169,7 +169,7 @@
   "week_pct": 36.84,
   "usage_pct": 36.0,
   "work_pct": 74.5,
-  "read_at": "2026-11-05T03:01:00+00:00",
+  "read_at": "2026-11-05T03:04:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -388,7 +388,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T21:47:16-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b3",
@@ -483,12 +484,13 @@
  "disk": {
   "free_gb": 50,
   "gate": "open",
+  "ssd": null,
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T22:01:00-05:00"
+  "at": "2026-11-04T22:04:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -589,14 +591,6 @@
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "T-2340 DSL held-null and envKey pins",
-    "m": "opus",
-    "at": "2026-11-05T02:59:04.338Z",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
     "k": "site",
     "t": "T-2072 bell on every page",
@@ -610,6 +604,14 @@
     "t": "T-2149 lane-stop issue stays open",
     "m": "opus",
     "at": "2026-11-05T02:59:16.435Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-2061 both disks in disk_free",
+    "m": "opus",
+    "at": "2026-11-05T02:59:21.685Z",
     "o": "c"
    }
   ],
@@ -657,6 +659,13 @@
     "o": "c"
    },
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Evan's personal lane",
+    "s": "next",
+    "o": "i"
+   },
+   {
     "w": "Idris",
     "k": "build",
     "t": "Extension lane",
@@ -676,30 +685,23 @@
     "t": "After T-1035 lands",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Activity run log, Swift half",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Idris",
-    "t": "The test record no longer claims one planted bug was harmless; Pernille's Toronto 1919 test...",
-    "at": "2026-11-04T22:00:00-05:00"
+    "t": "The schema now has a test that refuses a widget whose 'held' flag is null, the slip a Python...",
+    "at": "2026-11-04T22:03:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "The comment on the widget's next-refresh rule now says it assumes local dates never run...",
-    "at": "2026-11-04T22:00:00-05:00"
+    "t": "A new test checks that the preview renderer reads every environment key the schema allows, so a...",
+    "at": "2026-11-04T22:03:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "A request for the repository to itself now always ends a work session, whatever its wording, and...",
-    "at": "2026-11-04T21:51:00-05:00"
+    "w": "Idris",
+    "t": "The test record no longer claims one planted bug was harmless; Pernille's Toronto 1919 test...",
+    "at": "2026-11-04T22:00:00-05:00"
    }
   ],
   "count": {
@@ -710,53 +712,11 @@
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6648420765",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Why is Evan's account not running?"
-  },
-  {
-   "id": "c6648450527",
-   "state": "received",
-   "position": 2,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Is the Macbook runner working and..."
-  },
-  {
-   "id": "c6648456474",
-   "state": "received",
-   "position": 3,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Please keep us updated on any steps..."
-  },
-  {
-   "id": "c6648466243",
-   "state": "received",
-   "position": 4,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Is the size of the Main chat causing..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -764,13 +724,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 12,
+  "main": 11,
   "lanes": 3,
-  "total": 15,
-  "at": "10:01 PM",
+  "total": 14,
+  "at": "10:04 PM",
   "why": "",
-  "at_iso": "2026-11-05T03:01:00+00:00",
+  "at_iso": "2026-11-05T03:04:00+00:00",
   "started": "9:55 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>15</b> agents running now</p><p class=\"an-sub\">Main session 12, started 9:55 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:01 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>14</b> agents running now</p><p class=\"an-sub\">Main session 11, started 9:55 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:04 PM ET</p></section>"
  }
 }

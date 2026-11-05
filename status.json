@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T10:49:45.431644+00:00",
+ "at": "2026-11-05T10:52:48.689525+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,16 +12,7 @@
    "task": "[review] T-2585 prompt alert re-review",
    "model": "opus",
    "started": "2026-11-05T10:28:49.098Z",
-   "seconds": 1256,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-1900 board size pass",
-   "model": "opus",
-   "started": "2026-11-05T10:45:51.541Z",
-   "seconds": 233,
+   "seconds": 1439,
    "finished": null,
    "effort": "high"
   },
@@ -30,13 +21,21 @@
    "task": "[test] T-2590 composer test crash",
    "model": "opus",
    "started": "2026-11-05T10:46:18.138Z",
-   "seconds": 207,
+   "seconds": 390,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille, Odalys x2",
+ "who": "Pernille, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[ops] T-1900 board size pass",
+   "model": "opus",
+   "started": "2026-11-05T10:45:51.541Z",
+   "seconds": null,
+   "finished": "2026-11-05T10:52:47.391000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-2041 T-2042 send-plan test fences",
@@ -60,20 +59,12 @@
    "started": "2026-11-05T10:29:27.249Z",
    "seconds": null,
    "finished": "2026-11-05T10:47:16.652000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-2398 bell commits onto main",
-   "model": "opus",
-   "started": "2026-11-05T10:29:34.237Z",
-   "seconds": null,
-   "finished": "2026-11-05T10:45:38.421000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 409,
+  "runnable_count": 408,
   "blocked_count": 127
  },
  "meter": {
@@ -116,7 +107,7 @@
   "week_pct": 51.58,
   "usage_pct": 42.8,
   "work_pct": 73.9,
-  "read_at": "2026-11-05T10:49:00+00:00",
+  "read_at": "2026-11-05T10:52:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -137,7 +128,7 @@
   }
  ],
  "disk": {
-  "free_gb": 35,
+  "free_gb": 34,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -148,7 +139,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T05:49:00-05:00"
+  "at": "2026-11-05T05:52:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -169,9 +160,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[ops] T-1900 board size pass",
+   "task": "[test] T-2590 composer test crash",
    "model": "opus",
-   "since": "2026-11-05T10:45:51.541Z",
+   "since": "2026-11-05T10:46:18.138Z",
    "next": [],
    "effort": "high"
   },
@@ -217,15 +208,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T10:28:49.098Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "T-1900 board size pass",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T10:45:51.541Z",
     "o": "c"
    },
    {
@@ -312,6 +294,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Finished tasks were moved off the task board (447 KB to 422 KB), a nightly report now lists open...",
+    "at": "2026-11-05T05:52:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Checked the third round of fixes to the tool that sends test builds to Apple. Nothing serious...",
     "at": "2026-11-05T05:44:00-05:00"
@@ -320,15 +307,10 @@
     "w": "Odalys",
     "t": "Big build folders already go to the external SSD, but the SSD started freezing and two builds...",
     "at": "2026-11-05T05:43:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Stuck work that never merged is now sorted by a tool: 22 'did not land' notices whose work is...",
-    "at": "2026-11-05T05:40:00-05:00"
    }
   ],
   "count": {
-   "next": 409,
+   "next": 408,
    "wait": 38,
    "blocked": 89,
    "you": 19
@@ -348,13 +330,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "5:49 AM",
+  "total": 2,
+  "at": "5:52 AM",
   "why": "",
-  "at_iso": "2026-11-05T10:49:00+00:00",
+  "at_iso": "2026-11-05T10:52:00+00:00",
   "started": "5:25 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:25 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:49 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:25 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:52 AM ET</p></section>"
  }
 }

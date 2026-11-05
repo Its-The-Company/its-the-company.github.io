@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T13:47:55.829079+00:00",
+ "at": "2026-11-05T13:50:59.857443+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,21 @@
    "task": "[tools] T-2615 build one dispatcher",
    "model": "opus",
    "started": "2026-11-05T13:26:09.296Z",
-   "seconds": 1306,
+   "seconds": 1490,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
   {
    "name": "pernille",
    "task": "[review] T-2609 prompt alert tests on MacBook",
    "model": "opus",
    "started": "2026-11-05T13:26:16.596Z",
-   "seconds": 1299,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-05T13:50:12.017000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-2603 T-2604 prompt alert fixes",
@@ -40,7 +39,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 417,
+  "runnable_count": 423,
   "blocked_count": 127
  },
  "meter": {
@@ -83,7 +82,7 @@
   "week_pct": 51.55,
   "usage_pct": 42.7,
   "work_pct": 73.4,
-  "read_at": "2026-11-05T13:47:00+00:00",
+  "read_at": "2026-11-05T13:51:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -115,7 +114,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T08:47:00-05:00"
+  "at": "2026-11-05T08:51:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -134,15 +133,6 @@
    "effort": "high"
   },
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-2609 prompt alert tests on MacBook",
-   "model": "opus",
-   "since": "2026-11-05T13:26:16.596Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
@@ -154,6 +144,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P2, no Xcode, after T-1440 lands (Idris review...",
    "model": null,
    "since": null,
    "next": []
@@ -185,15 +183,6 @@
     "e": "high",
     "at": "2026-11-05T13:26:09.296Z",
     "o": "i"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check the prompt alert tests pass on the MacBook",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T13:26:16.596Z",
-    "o": "c"
    }
   ],
   "open": [
@@ -217,6 +206,13 @@
     "t": "Build the one dispatcher for every account",
     "s": "next",
     "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Let the MacBook run several test jobs at once",
+    "s": "next",
+    "o": "c"
    },
    {
     "w": "Pernille",
@@ -259,34 +255,27 @@
     "t": "Record each widget run in the app's activity log",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Refresh control and age line in the renderer",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Ines",
-    "t": "Ines designed one program that sends every task to whichever account has the most usage left, so...",
-    "at": "2026-11-05T08:25:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "Ines listed four big simplifications: land finished work on the first try, product work first, a...",
-    "at": "2026-11-05T08:25:00-05:00"
+    "w": "Pernille",
+    "t": "The MacBook test machine runs the whole test set again instead of zero tests; the remaining...",
+    "at": "2026-11-05T08:50:00-05:00"
    },
    {
     "w": "Pernille",
-    "t": "Checked Idris's fix to how the upload tools find the main checkout and refuse unpushed code; it...",
-    "at": "2026-11-05T08:16:00-05:00"
+    "t": "The full app test run on the MacBook finished: 1332 tests ran, the prompt alert tests passed,...",
+    "at": "2026-11-05T08:50:00-05:00"
+   },
+   {
+    "w": "Ines",
+    "t": "Ines designed one program that sends every task to whichever account has the most usage left, so...",
+    "at": "2026-11-05T08:25:00-05:00"
    }
   ],
   "count": {
-   "next": 417,
+   "next": 423,
    "wait": 40,
    "blocked": 87,
    "you": 19
@@ -305,13 +294,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "8:47 AM",
+  "total": 1,
+  "at": "8:51 AM",
   "why": "",
-  "at_iso": "2026-11-05T13:47:00+00:00",
+  "at_iso": "2026-11-05T13:51:00+00:00",
   "started": "8:23 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:47 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 8:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:51 AM ET</p></section>"
  }
 }

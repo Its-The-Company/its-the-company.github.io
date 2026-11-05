@@ -52,6 +52,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Open (from T-1045): T-1048 stdlib size stop unexplained, my check; T-1047 upload.sh identity.
 - 2026-11-04 T-2019 (bba05e3e2): 5bfc91948 notif helper approve w/ changes; F1-F4 = T-2026..29. Lesson: MacBook result.json has only the last 60 lines (no skipped names); full log stays on the runner in jobs/<id>/src/ops/runs. Runner Simulator is reused, so permission state carries between jobs.
 - T-2100: with lanes busy, xc_mutants' 600 s lock wait gives WAITED; set XC_LOCK_WAIT=3000. Mutant runs go in a detached scratch worktree (copy Vendor/, xcodegen).
+- T-1978: another worker's commit can carry my board_tick add lines first; check HEAD for them before building the board blob (I duplicated T-2340/41, fixed f1b6648aa).
 - T-2204: recuts: `git rebase` is blocked by the session hook; cherry-pick `git cherry`'s + commits onto main in a scratch worktree. A retry name must start <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/<id>/ (retry_one skips any other name).
 {% endraw %}
 

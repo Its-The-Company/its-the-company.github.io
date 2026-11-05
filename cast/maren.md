@@ -45,6 +45,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - 2026-11-03 T-1806 (d8c534caf): my 'Lock Screen Buttons are inert' [recall] was wrong (saved Apple page). Lesson: a [recall] that rules a feature out gets a saved-page check before it shapes a build line.
 - 2026-11-03 T-1836 (1b57eb1d2): age line takes the stale mark's clocks (sampled_at counts only when stale_after set). Lesson: board_tick note refuses a done [x] line; a follow-up to landed work needs a new line from Ines.
 - 2026-11-04 T-1443 (89e3796c0): HIG pages as HTML are JS shells; fetch_cite --apple takes the <page>.md copy (allowed since the 06:26 amendment). My recalled AX3 Title 1-3 were 5-6 pt small. Lesson: a recalled table gets read from Apple before sheets ship.
+- 2026-11-04 T-2307 (9cc58aaca): Workflow page spec pywidget/docs/design/site/workflow.md, frames drawn from the real workflow-graph.json; linked to Task lifecycle, not merged. Lesson: a shared input (the graph) can change mid-task (T-2322 landed while I drew); read it at draw time and mark 'Changed today' instead of drawing a ghost. Open: Ines to read <span title="Our grade scale, nine steps: D, D+, C-, C, C+, B-, B, B+, A. An idea&#x27;s ladder is the letter it reaches before any cap.">ladder</span>/node boxes as C51 or not; T-2308 builds.
 {% endraw %}
 
 

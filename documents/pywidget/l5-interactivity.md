@@ -812,6 +812,7 @@ Each row is cheap now and a breaking change later. Owners named; none of these i
 |---|---|---|---|
 | R1 | Renderer: a Text whose `content.kind` it does not know draws `content.fallback` if present, else empty | 1.1 `state` text on a v1 renderer degrades to the render-time value | Idris (renderer) |
 | R2 | Renderer: an unknown `When` env renders `otherwise` | `state.*` and `pending` on v1 | Idris |
+| R2a | Schema and renderer (T-1977, chair 2026-11-04 01:05, s15): `When` takes an optional `p.held: bool`. On an env v1 does not read, v1 draws the children if `held` is JSON `true`, else `otherwise`; on a v1 env key `held` is ignored. The 1.1 DSL always writes `held` on a `When` on `state.*`, from the saved state when it drew the widget | a v1 renderer shows the face the widget had when drawn, as R1 and R3 do | Idris (v1, T-1977); Pernille (1.1 DSL writes `held`) |
 | R3 | Renderer: v1 draws `Button`/`Toggle` as their label (Toggle with its `isOn` snapshot), not interactive, and ignores unknown props (`isOnState`) | no interactive buttons in v1 (ADR-001), and 1.1 trees still draw | Idris |
 | R4 | Schema: `actions.*` stops requiring `handler` (any of `handler`, `ops`); entries keep allowing extra keys | ops-only actions are valid v1-major documents | Idris (schema; after Pernille's rename pass lands) |
 | R5 | Schema: `When.env` accepts the pattern `^state\.[a-z_][a-z0-9_]{0,31}$` and `pending`; Text `content` allows `{"kind": "state", ...}`; Button/Toggle `p` allow `isOnState` | v1 validators accept 1.1 documents (L4 s8 additive) | Idris |
@@ -959,6 +960,9 @@ Reasons. (1) The three rows should promise the same thing: a v1 app shows the fa
 What would make this fail: a 1.1 package that forgets `held` (v1 shows `otherwise`, which is no worse than today); `held` changing a `When` on a v1 key (a bug; T-1977's fixture case with a v1 key and `held` true catches it); `pending` with `held` true (1.1 writes no `held` on `pending`, since nothing is pending when the widget is drawn, so v1 shows `otherwise`, which Pernille judged correct).
 
 Revert rule. (a) If T-1977 and T-1978 are not both ticked by Day 36 (2026-11-26), R2a is dropped before the freeze: `held` comes out of the schema and the renderers, and one sentence goes under R2 instead: "v1 shows the `otherwise` branch for a `When` on `state.*`; 1.1 authors design for it." No half-reserved field freezes. (b) If Idris's step 1 or Pernille's review shows the shape is wrong, the chair rules again before the build lands. (c) If 1.1's design moves `When` on saved state out of the renderer, R2a is released and 1.1 stops writing `held`.
+
+**Idris's view (T-1977 step 1), 2026-11-04:** I agree. My R2 row and the T-0105 comment chose `otherwise` without weighing R3's `isOn` snapshot; Pernille's F1 is right that a saved bool is the same promise as `fallback` and `isOn`, and it can be dropped later but never added later.
+Two limits I build in: only JSON `true` counts as held (a `1` or `"true"` reads as missing in both renderers, since Foundation bridges 1 to `Bool` and Python's `True == 1`), and the guard's call in `TreeView.swift` is app-target code, so host `swift test` proves `TreeRules` only; the app compile and the Simulator twins ride T-1925.
 
 ## 16. Fixes to other documents (2026-10-26, this task)
 

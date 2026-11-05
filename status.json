@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T09:38:41.570184+00:00",
+ "at": "2026-11-05T09:41:46.662735+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2556 supervisor test reds",
    "model": "opus",
    "started": "2026-11-05T09:12:51.423Z",
-   "seconds": 1550,
+   "seconds": 1735,
    "finished": null,
    "effort": "high"
   },
@@ -21,13 +21,30 @@
    "task": "[review] T-2576 review five parked fixes",
    "model": "opus",
    "started": "2026-11-05T09:35:24.502Z",
-   "seconds": 197,
+   "seconds": 382,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[release] T-2581 upload tool low findings",
+   "model": "opus",
+   "started": "2026-11-05T09:40:23.716Z",
+   "seconds": 82,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Pernille",
+ "who": "Odalys, Pernille, Idris",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2582 personal account permission parity",
+   "model": "opus",
+   "started": "2026-11-05T09:38:55.927Z",
+   "seconds": null,
+   "finished": "2026-11-05T09:39:01.095Z"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2403 stray profile item check",
@@ -51,21 +68,13 @@
    "started": "2026-11-05T09:13:01.408Z",
    "seconds": null,
    "finished": "2026-11-05T09:35:02.324000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[release] T-2563 upload tool fixes F1-F6",
-   "model": "opus",
-   "started": "2026-11-05T09:12:44.772Z",
-   "seconds": null,
-   "finished": "2026-11-05T09:27:20.210000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 432,
-  "blocked_count": 125
+  "runnable_count": 431,
+  "blocked_count": 126
  },
  "meter": {
   "five_hour": {
@@ -107,7 +116,7 @@
   "week_pct": 51.58,
   "usage_pct": 42.8,
   "work_pct": 74.2,
-  "read_at": "2026-11-05T09:38:00+00:00",
+  "read_at": "2026-11-05T09:41:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -139,7 +148,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T04:38:00-05:00"
+  "at": "2026-11-05T04:41:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -168,11 +177,12 @@
   },
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[release] T-2581 upload tool low findings",
+   "model": "opus",
+   "since": "2026-11-05T09:40:23.716Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -217,6 +227,15 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T09:35:24.502Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "release",
+    "t": "Tidy the upload tools after the second review",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T09:40:23.716Z",
     "o": "c"
    }
   ],
@@ -294,6 +313,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "Checked the five fixes moved onto main before TestFlight. Four can ship; the script-prompt alert...",
+    "at": "2026-11-05T04:41:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Evan's account lane runs again; the profile check no longer flags any stray item, so nothing...",
     "at": "2026-11-05T04:38:00-05:00"
@@ -302,17 +326,12 @@
     "w": "Pernille",
     "t": "The second check of the build upload tools passed: all six earlier problems are fixed and...",
     "at": "2026-11-05T04:36:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Widgets can now space their letters, animate changing numbers, and tint controls and bars, and...",
-    "at": "2026-11-05T04:34:00-05:00"
    }
   ],
   "count": {
-   "next": 432,
+   "next": 431,
    "wait": 38,
-   "blocked": 87,
+   "blocked": 88,
    "you": 19
   }
  },
@@ -321,6 +340,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -329,13 +349,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 0,
-  "total": 2,
-  "at": "4:38 AM",
+  "total": 3,
+  "at": "4:41 AM",
   "why": "",
-  "at_iso": "2026-11-05T09:38:00+00:00",
+  "at_iso": "2026-11-05T09:41:00+00:00",
   "started": "4:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:38 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 4:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:41 AM ET</p></section>"
  }
 }

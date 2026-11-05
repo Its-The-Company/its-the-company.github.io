@@ -1,13 +1,122 @@
 {
  "schema": 1,
- "at": "2026-11-05T04:52:36.983338+00:00",
+ "at": "2026-11-05T04:55:39.049183+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-04T23:46:29-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[release] T-2417 TestFlight tests",
+   "model": "opus",
+   "started": "2026-11-05T04:53:33.080Z",
+   "seconds": 125,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2451 loosen Evan's lane check",
+   "model": "opus",
+   "started": "2026-11-05T04:53:39.769Z",
+   "seconds": 119,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2452 per-lane 5-hour limit",
+   "model": "opus",
+   "started": "2026-11-05T04:53:44.891Z",
+   "seconds": 114,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2453 every lane answers Investors",
+   "model": "opus",
+   "started": "2026-11-05T04:53:49.733Z",
+   "seconds": 109,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2454 fold standing approval",
+   "model": "opus",
+   "started": "2026-11-05T04:53:54.357Z",
+   "seconds": 104,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2406 plain task titles",
+   "model": "opus",
+   "started": "2026-11-05T04:54:00.284Z",
+   "seconds": 98,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-2400 new Home replaces old",
+   "model": "opus",
+   "started": "2026-11-05T04:54:06.016Z",
+   "seconds": 93,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2216 landing merge queue",
+   "model": "opus",
+   "started": "2026-11-05T04:54:12.399Z",
+   "seconds": 86,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-2427 refresh fold diff",
+   "model": "opus",
+   "started": "2026-11-05T04:54:18.274Z",
+   "seconds": 80,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-2405 Pro screen copy",
+   "model": "opus",
+   "started": "2026-11-05T04:54:22.233Z",
+   "seconds": 76,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-2369 gate switch Swift half",
+   "model": "opus",
+   "started": "2026-11-05T04:54:51.993Z",
+   "seconds": 47,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[test] T-1796 lane list vs scan drift test",
+   "model": "opus",
+   "started": "2026-11-05T04:54:55.052Z",
+   "seconds": 43,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris x2, Odalys x7, Ines, Maren, Pernille",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -55,7 +164,7 @@
   "week_pct": 46.59,
   "usage_pct": 40.3,
   "work_pct": 74.9,
-  "read_at": "2026-11-05T04:52:00+00:00",
+  "read_at": "2026-11-05T04:55:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -87,7 +196,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T23:52:00-05:00"
+  "at": "2026-11-04T23:55:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -97,44 +206,49 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, after T-1035 lands (personal-account...",
-   "model": null,
-   "since": null,
-   "next": []
+   "name": "Idris",
+   "state": "running",
+   "task": "[release] T-2417 TestFlight tests",
+   "model": "opus",
+   "since": "2026-11-05T04:53:33.080Z",
+   "next": [],
+   "effort": "high"
   },
   {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-2451 loosen Evan's lane check",
+   "model": "opus",
+   "since": "2026-11-05T04:53:39.769Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
-   "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P2, Run heatmap levels by size, not brightness...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[plan] T-2427 refresh fold diff",
+   "model": "opus",
+   "since": "2026-11-05T04:54:18.274Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, the design copy follows T-1441, so the stale...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[design] T-2405 Pro screen copy",
+   "model": "opus",
+   "since": "2026-11-05T04:54:22.233Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[test] T-1796 lane list vs scan drift test",
+   "model": "opus",
+   "since": "2026-11-05T04:54:55.052Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Wrenna",
@@ -146,7 +260,80 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "release",
+    "t": "T-2417 TestFlight tests",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T04:53:33.080Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-2451 loosen Evan's lane check",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T04:53:39.769Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-2452 per-lane 5-hour limit",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T04:53:44.891Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-2453 every lane answers Investors",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T04:53:49.733Z",
+    "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-2454 fold standing approval",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T04:53:54.357Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-2406 plain task titles",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T04:54:00.284Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "T-2400 new Home replaces old",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T04:54:06.016Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "T-2216 landing merge queue",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T04:54:12.399Z",
+    "o": "c"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -256,13 +443,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 12,
   "lanes": 0,
-  "total": 0,
-  "at": "11:52 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-05T04:52:00+00:00",
+  "total": 12,
+  "at": "11:55 PM",
+  "why": "",
+  "at_iso": "2026-11-05T04:55:00+00:00",
   "started": "11:46 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 11:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:52 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>12</b> agents running now</p><p class=\"an-sub\">Main session 12, started 11:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:55 PM ET</p></section>"
  }
 }

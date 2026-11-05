@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T02:07:58.263993+00:00",
+ "at": "2026-11-05T02:11:02.952918+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,16 +12,7 @@
    "task": "[release] T-2270 first TestFlight build",
    "model": "opus",
    "started": "2026-11-05T02:07:06.614Z",
-   "seconds": 51,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-2269 runner-queue refusals + T-2277",
-   "model": "opus",
-   "started": "2026-11-05T02:07:15.418Z",
-   "seconds": 42,
+   "seconds": 236,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +21,7 @@
    "task": "[site] T-2276 new Home live",
    "model": "opus",
    "started": "2026-11-05T02:07:22.070Z",
-   "seconds": 36,
+   "seconds": 220,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +30,7 @@
    "task": "[test] T-2274 governor red rows",
    "model": "opus",
    "started": "2026-11-05T02:07:27.820Z",
-   "seconds": 30,
+   "seconds": 215,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[test] T-2281 site proposals red",
    "model": "opus",
    "started": "2026-11-05T02:07:33.021Z",
-   "seconds": 25,
+   "seconds": 209,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[tools] T-2210 personal land rate",
    "model": "opus",
    "started": "2026-11-05T02:07:39.381Z",
-   "seconds": 18,
+   "seconds": 203,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +57,7 @@
    "task": "[ops] T-2298 session changeover idle time",
    "model": "opus",
    "started": "2026-11-05T02:07:47.025Z",
-   "seconds": 11,
+   "seconds": 195,
    "finished": null,
    "effort": "high"
   },
@@ -75,13 +66,67 @@
    "task": "[tools] T-2278 machine collector",
    "model": "opus",
    "started": "2026-11-05T02:07:53.572Z",
-   "seconds": 4,
+   "seconds": 189,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-2279 Machine bubble + task lifecycle",
+   "model": "opus",
+   "started": "2026-11-05T02:08:01.024Z",
+   "seconds": 181,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-1931 T-1933 ProjectSendPlan paths",
+   "model": "opus",
+   "started": "2026-11-05T02:08:08.973Z",
+   "seconds": 173,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-1930 run file names test",
+   "model": "opus",
+   "started": "2026-11-05T02:08:15.673Z",
+   "seconds": 167,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[test] T-1848 atexit stop test",
+   "model": "opus",
+   "started": "2026-11-05T02:08:21.576Z",
+   "seconds": 161,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-2269 find refused runner commands (read-only)",
+   "model": "opus",
+   "started": "2026-11-05T02:10:21.786Z",
+   "seconds": 41,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Odalys x7",
- "recent": [],
+ "who": "Idris x3, Odalys x7, Maren, Pernille",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[ops] T-2269 runner-queue refusals + T-2277",
+   "model": "opus",
+   "started": "2026-11-05T02:07:15.418Z",
+   "seconds": null,
+   "finished": "2026-11-05T02:08:22.612Z"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -128,7 +173,7 @@
   "week_pct": 36.78,
   "usage_pct": 37.0,
   "work_pct": 74.8,
-  "read_at": "2026-11-05T02:08:00+00:00",
+  "read_at": "2026-11-05T02:11:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -334,7 +379,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-04T20:33:33-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b3",
@@ -443,7 +489,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T21:08:00-05:00"
+  "at": "2026-11-04T21:11:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -464,9 +510,27 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[ops] T-2269 runner-queue refusals + T-2277",
+   "task": "[site] T-2276 new Home live",
    "model": "opus",
-   "since": "2026-11-05T02:07:15.418Z",
+   "since": "2026-11-05T02:07:22.070Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[design] T-2279 Machine bubble + task lifecycle",
+   "model": "opus",
+   "since": "2026-11-05T02:08:01.024Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[test] T-1848 atexit stop test",
+   "model": "opus",
+   "since": "2026-11-05T02:08:21.576Z",
    "next": [],
    "effort": "high"
   },
@@ -474,22 +538,6 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P2, Run heatmap levels by size, not brightness...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P2, the design copy follows T-1441, so the stale...",
    "model": null,
    "since": null,
    "next": []
@@ -512,15 +560,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T02:07:06.614Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "T-2269 runner-queue refusals + T-2277",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T02:07:15.418Z",
     "o": "c"
    },
    {
@@ -575,6 +614,15 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T02:07:53.572Z",
+    "o": "c"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "T-2279 Machine bubble + task lifecycle",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T02:08:01.024Z",
     "o": "c"
    }
   ],
@@ -687,13 +735,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 8,
+  "main": 12,
   "lanes": 3,
-  "total": 11,
-  "at": "9:08 PM",
+  "total": 15,
+  "at": "9:11 PM",
   "why": "",
-  "at_iso": "2026-11-05T02:08:00+00:00",
+  "at_iso": "2026-11-05T02:11:00+00:00",
   "started": "9:04 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>11</b> agents running now</p><p class=\"an-sub\">Main session 8, started 9:04 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:08 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>15</b> agents running now</p><p class=\"an-sub\">Main session 12, started 9:04 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:11 PM ET</p></section>"
  }
 }

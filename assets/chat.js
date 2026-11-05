@@ -86,6 +86,11 @@ function splitQuote(b) {
 var t = strip(b), m = /^On [^\n]{4,200}(?:\n[^\n]{0,200})?wrote:\s*$/m.exec(t);
 return m && m.index ? [t.slice(0, m.index), t.slice(m.index)] : [t, ''];
 }
+function repoLink(href, repo) {
+var m = /^https?:\/\/(?:github\.com\/([^/]+\/[^/]+)\/(blob|tree|raw)|raw\.githubusercontent\.com\/([^/]+\/[^/]+))\/([^/?#]+)\/([^?#]+)/.exec(href || '');
+if (!m || !repo || (m[1] || m[3]).toLowerCase() !== repo.toLowerCase() || /(^|\/)(\.|%2e){1,2}(\/|$)/i.test(m[5])) return null;
+return { ref: m[4], path: m[5].replace(/\/+$/, ''), dir: m[2] === 'tree' };
+}
 function long(t) { return t.split('\n').reduce((n, l) => n + Math.max(1, Math.ceil(l.length / 40)), 0) > 6; }
 function chat(root) {
 if (!getToken()) return;
@@ -93,6 +98,13 @@ var repo = root.getAttribute('data-repo'), RI = '/repos/' + repo + '/issues', co
 function D(k) { return root.getAttribute('data-' + k) || ''; }
 var etags = {}, cache = {}, names = [], issues = [], extra = {}, comments = [], threads = {}, lastDraw = null;
 if (D('queue')) (document.head || root).appendChild(Object.assign(el('script'), { src: D('queue') }));
+on(root, 'click', (e) => {
+var a = e.target.closest && e.target.closest('a'), f = a && D('peek') && repoLink(a.href, repo);
+if (!f || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+stop(e); f.url = a.href; f.repo = repo;
+if (S.peek) return S.peek(f);
+var q = S.peekQ; S.peekQ = f; if (!q) (document.head || root).appendChild(Object.assign(el('script'), { src: D('peek') }));
+});
 var cur = null, limit = 30;
 if (W.history && 'scrollRestoration' in W.history) W.history.scrollRestoration = 'manual';
 if (!LS.getItem('company.seen0')) LS.setItem('company.seen0', now().toISOString());

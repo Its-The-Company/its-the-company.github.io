@@ -431,6 +431,11 @@ ul.q{list-style:none;margin:0;padding:0;display:grid;gap:var(--s2)}
 .sheet{position:fixed;inset:auto 0 0;padding:var(--s4);border-radius:var(--r-l) var(--r-l) 0 0;box-shadow:0 0 0 100vmax #0007}
 @media (min-width:880px){.sheet{inset:15vh auto auto 50%;width:520px;margin-left:-260px;border-radius:var(--r-l)}}
 .sheet fieldset{border:0;margin:0 0 var(--s3);padding:0}.sheet legend{font-weight:700}
+/* T-2608: the repo file viewer (peek.js), a sheet with a scrolling body */
+.peek{z-index:20;display:flex;flex-direction:column;gap:var(--s3);max-height:85vh;background:var(--bg);color:var(--ink)}.peek .acts{align-items:center}
+.peek-name{flex:1 1 100%;font-size:var(--fs-0);overflow-wrap:anywhere}.peek-in{overflow:auto;min-height:0}.peek-in img{display:block;max-width:100%;height:auto;margin:0 auto}
+.peek-in pre{margin:0;padding:var(--s2);border-radius:var(--r-s);background:var(--soft-2);font:var(--fs-0)/1.45 var(--mono);white-space:pre-wrap;overflow-wrap:anywhere}
+@media (min-width:880px){.peek{inset:6vh auto auto 50%;width:min(860px,92vw);margin-left:calc(min(860px,92vw)/-2)}}
 .opts{display:flex;flex-wrap:wrap;gap:var(--s1)}
 .opts label{flex:1;padding:var(--s2) var(--s3);border:1px solid var(--line);border-radius:var(--r-s);font-weight:600;text-align:center;white-space:nowrap}
 .opts .cd{flex-basis:100%;text-align:left}

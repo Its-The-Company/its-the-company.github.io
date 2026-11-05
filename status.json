@@ -1,27 +1,51 @@
 {
  "schema": 1,
- "at": "2026-11-05T11:21:09.104651+00:00",
+ "at": "2026-11-05T13:20:19.968899+00:00",
  "session": {
-  "active": true,
-  "kind": "morning",
-  "started": "2026-11-05T06:17:57-05:00"
+  "active": false,
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "pernille",
-   "task": "Write the 6:00 a.m. report",
+   "task": "[review] T-2606 upload pin fixes review",
    "model": "opus",
-   "started": "2026-11-05T11:18:14.495Z",
+   "started": "2026-11-05T13:00:03.395Z",
    "seconds": null,
-   "finished": "2026-11-05T11:19:28.746000+00:00"
+   "finished": "2026-11-05T13:16:26.976000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2607 stalled session watch",
+   "model": "opus",
+   "started": "2026-11-05T12:59:45.951Z",
+   "seconds": null,
+   "finished": "2026-11-05T13:14:29.163000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-2608 chat links via token",
+   "model": "opus",
+   "started": "2026-11-05T12:59:55.006Z",
+   "seconds": null,
+   "finished": "2026-11-05T13:09:04.777000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-2468 measure OPT-059",
+   "model": "opus",
+   "started": "2026-11-05T13:00:17.770Z",
+   "seconds": null,
+   "finished": "2026-11-05T13:07:09.682000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 409,
+  "runnable_count": 412,
   "blocked_count": 127
  },
  "meter": {
@@ -59,12 +83,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-05T06:42:01-05:00",
  "personal": {
   "week_pct": 51.58,
-  "usage_pct": 42.8,
-  "work_pct": 73.6,
-  "read_at": "2026-11-05T11:24:00+00:00",
+  "usage_pct": 42.7,
+  "work_pct": 73.4,
+  "read_at": "2026-11-05T13:20:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -75,7 +99,7 @@
   },
   {
    "name": "a",
-   "used_usd": 78.79,
+   "used_usd": 87.46,
    "total_usd": 100.0
   },
   {
@@ -85,25 +109,21 @@
   }
  ],
  "disk": {
-  "free_gb": 34,
+  "free_gb": 36,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 738
+   "free_gb": 737
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T06:24:00-05:00"
+  "at": "2026-11-05T08:20:00-05:00"
  },
- "next_tick_why": "session",
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight",
-  "n": 12,
-  "at": "2026-11-05T06:17:52.553627-05:00"
- },
+ "next_tick_why": "last_tick",
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -230,25 +250,25 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "The upload tools now read the saved main-folder path the same way, ignore a test-only override,...",
-    "at": "2026-11-05T06:14:00-05:00"
-   },
-   {
     "w": "Pernille",
-    "t": "Checked the fix that stops a Python prompt waiting on an alert nobody sees. The bookkeeping...",
-    "at": "2026-11-05T05:59:00-05:00"
+    "t": "Checked Idris's fix to how the upload tools find the main checkout and refuse unpushed code; it...",
+    "at": "2026-11-05T08:16:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "The site's chat test stopped partway through since the chat moved to its own page, so the newer...",
-    "at": "2026-11-05T05:59:00-05:00"
+    "t": "When a work session freezes on a call that never answers, the run loop now ends it after 12...",
+    "at": "2026-11-05T08:14:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "A link the company posts in Chat to a file in its private repository now opens inside the Chat...",
+    "at": "2026-11-05T08:08:00-05:00"
    }
   ],
   "count": {
-   "next": 409,
-   "wait": 38,
-   "blocked": 89,
+   "next": 412,
+   "wait": 40,
+   "blocked": 87,
    "you": 19
   }
  },
@@ -257,6 +277,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -268,10 +289,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "6:24 AM",
-  "why": "Between sessions: no session is running. Last check 6:17 AM ET.",
-  "at_iso": "2026-11-05T11:24:00+00:00",
+  "at": "8:20 AM",
+  "why": "Between sessions: no session is running. Last check 6:27 AM ET.",
+  "at_iso": "2026-11-05T13:20:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:24 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 6:17 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:20 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 6:27 AM ET.</p></section>"
  }
 }

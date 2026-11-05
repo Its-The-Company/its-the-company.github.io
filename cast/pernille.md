@@ -41,6 +41,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-2262 (da2ebcf8a): jedi InterpreterEnvironment rebinds global sys.path beside a live script. Idris's T-2511..13 mine to review; T-2514 (unraisablehook in reset snapshot) mine. New board ids go above ops/board.md.ids.
 - T-1103 (b11fe55b): gallery tile and Pro row rules in Core. Open for Maren: 9.4 read strictly puts a spinner over a kept live tree on a foreground rerun.
 
+- T-2567/68 (233f2ab88): cut flag frames_cut_repeats + syntax only for user files; review owed. T-2413 ticked (t2566 ship).
 - T-2319 (c9d371621): stdlib_cut check reads the interpreter's inittab/_frozen/PyInit_ and fails closed; open: first Release archive must show Xcode's embed strip keeps the exported symbols.
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
@@ -49,10 +50,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
 - Open (from T-1045): T-1048 stdlib size stop unexplained, my check; T-1047 upload.sh identity.
-- T-2584 (f5c19da1e): t2581 upload review, no Medium+; Lows on T-2588 (Idris, P3), mine to re-review. Lesson: probe both tools of a pair with the same input (pin CRLF split them).
-- T-2605 (f5e096990, runner 14): runner job sandbox lists launchd folders at write time, so xcodebuild parallel Simulator clones can't reach testmanagerd (0 tests). Re-enabling parallel needs an approve-sandbox. Cont. T-2609.
 - T-2412 (1712ff298): load-robust timing = bound plus the run's own lag (a 1 s answer timed before/after), skip past a <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>, self-check cap vs dead-deadline wait.
 - T-2204: recuts: `git rebase` is blocked by the session hook; cherry-pick `git cherry`'s + commits onto main in a scratch worktree. A retry name must start <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/<id>/ (retry_one skips any other name).
+- T-2690 (33763e9fb): upload may go once T-2702 (Idris lands 6beb56a49) closes. Lesson: real-binary checks without xcodebuild: `xcrun --sdk iphoneos swiftc -target arm64-apple-ios17.0`, then strip/codesign.
 {% endraw %}
 
 

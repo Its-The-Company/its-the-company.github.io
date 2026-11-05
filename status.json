@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T06:20:23.838165+00:00",
+ "at": "2026-11-05T06:23:28.374561+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,25 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[site] T-2400 new Home replaces old",
-   "model": "opus",
-   "started": "2026-11-05T04:54:06.016Z",
-   "seconds": 5177,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "ines",
    "task": "[plan] T-2473 rebuild fold with 01:07 entry",
    "model": "opus",
    "started": "2026-11-05T06:19:42.163Z",
-   "seconds": 41,
+   "seconds": 226,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Ines",
+ "who": "Ines",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[site] T-2400 new Home replaces old",
+   "model": "opus",
+   "started": "2026-11-05T04:54:06.016Z",
+   "seconds": null,
+   "finished": "2026-11-05T06:20:27.684000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2216 landing merge queue",
@@ -51,20 +50,12 @@
    "started": "2026-11-05T05:33:28.519Z",
    "seconds": null,
    "finished": "2026-11-05T05:36:51.185000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2454 fold standing approval",
-   "model": "opus",
-   "started": "2026-11-05T04:53:54.357Z",
-   "seconds": null,
-   "finished": "2026-11-05T05:33:16.674000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 418,
+  "runnable_count": 420,
   "blocked_count": 124
  },
  "meter": {
@@ -107,7 +98,7 @@
   "week_pct": 46.59,
   "usage_pct": 40.3,
   "work_pct": 74.9,
-  "read_at": "2026-11-05T06:20:00+00:00",
+  "read_at": "2026-11-05T06:23:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -139,7 +130,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-05T01:20:00-05:00"
+  "at": "2026-11-05T01:23:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -149,15 +140,6 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[site] T-2400 new Home replaces old",
-   "model": "opus",
-   "since": "2026-11-05T04:54:06.016Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Ines",
    "state": "running",
    "task": "[plan] T-2473 rebuild fold with 01:07 entry",
@@ -165,6 +147,14 @@
    "since": "2026-11-05T06:19:42.163Z",
    "next": [],
    "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Title: Stop personal sessions taking more tasks than...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
@@ -201,15 +191,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "T-2400 new Home replaces old",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T04:54:06.016Z",
-    "o": "c"
-   },
    {
     "w": "Ines",
     "k": "plan",
@@ -310,7 +291,7 @@
    }
   ],
   "count": {
-   "next": 418,
+   "next": 420,
    "wait": 38,
    "blocked": 86,
    "you": 18
@@ -330,13 +311,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "1:20 AM",
+  "total": 1,
+  "at": "1:23 AM",
   "why": "",
-  "at_iso": "2026-11-05T06:20:00+00:00",
+  "at_iso": "2026-11-05T06:23:00+00:00",
   "started": "11:46 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:20 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 11:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:23 AM ET</p></section>"
  }
 }

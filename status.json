@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T08:38:25.562778+00:00",
+ "at": "2026-11-05T08:40:37.076655+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[release] T-2413 review upload tools",
    "model": "opus",
    "started": "2026-11-05T08:37:18.834Z",
-   "seconds": 66,
+   "seconds": 198,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2556 supervisor test reds",
    "model": "opus",
    "started": "2026-11-05T08:37:26.135Z",
-   "seconds": 59,
+   "seconds": 190,
    "finished": null,
    "effort": "high"
   },
@@ -30,16 +30,7 @@
    "task": "[tools] T-2414 close or retry parked work",
    "model": "opus",
    "started": "2026-11-05T08:37:33.456Z",
-   "seconds": 52,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-2545 rule on guard refusal edit",
-   "model": "opus",
-   "started": "2026-11-05T08:37:39.789Z",
-   "seconds": 45,
+   "seconds": 183,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[build] T-2537 land five parked fixes",
    "model": "opus",
    "started": "2026-11-05T08:37:47.438Z",
-   "seconds": 38,
+   "seconds": 169,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[tools] T-2542 land parked verdict fixes",
    "model": "opus",
    "started": "2026-11-05T08:37:53.216Z",
-   "seconds": 32,
+   "seconds": 163,
    "finished": null,
    "effort": "high"
   },
@@ -66,44 +57,50 @@
    "task": "[build] T-2548 send check mutant",
    "model": "opus",
    "started": "2026-11-05T08:37:58.789Z",
-   "seconds": 26,
+   "seconds": 158,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Pernille, Odalys x3, Idris x2",
+ "recent": [
   {
-   "name": "pernille",
-   "task": "[review] T-2540 rerun results to review",
-   "model": "sonnet",
-   "started": "2026-11-05T08:38:03.057Z",
-   "seconds": 22,
-   "finished": null,
-   "effort": "high"
+   "name": "ines",
+   "task": "[plan] T-2545 rule on guard refusal edit",
+   "model": "opus",
+   "started": "2026-11-05T08:37:39.789Z",
+   "seconds": null,
+   "finished": "2026-11-05T08:40:30.815000+00:00"
   },
   {
    "name": "wrenna",
    "task": "[research] T-2541 land parked Apple reads",
    "model": "sonnet",
    "started": "2026-11-05T08:38:07.490Z",
-   "seconds": 18,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-05T08:40:07.168000+00:00"
   },
   {
    "name": "odalys",
    "task": "[tools] T-2543 Gumroad no-fetch rule",
    "model": "sonnet",
    "started": "2026-11-05T08:38:11.334Z",
-   "seconds": 14,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-05T08:40:04.375000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-2540 rerun results to review",
+   "model": "sonnet",
+   "started": "2026-11-05T08:38:03.057Z",
+   "seconds": null,
+   "finished": "2026-11-05T08:38:43.171000+00:00"
   }
  ],
- "who": "Pernille x2, Odalys x4, Ines, Idris x2, Wrenna",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 434,
+  "runnable_count": 429,
   "blocked_count": 125
  },
  "meter": {
@@ -146,7 +143,7 @@
   "week_pct": 49.11,
   "usage_pct": 41.6,
   "work_pct": 74.4,
-  "read_at": "2026-11-05T08:38:00+00:00",
+  "read_at": "2026-11-05T08:41:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -450,18 +447,18 @@
   }
  ],
  "disk": {
-  "free_gb": 35,
+  "free_gb": 37,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 750
+   "free_gb": 744
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T03:38:00-05:00"
+  "at": "2026-11-05T03:41:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -489,15 +486,6 @@
    "effort": "high"
   },
   {
-   "name": "Ines",
-   "state": "running",
-   "task": "[plan] T-2545 rule on guard refusal edit",
-   "model": "opus",
-   "since": "2026-11-05T08:37:39.789Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "running",
    "task": "[build] T-2537 land five parked fixes",
@@ -507,18 +495,25 @@
    "effort": "high"
   },
   {
-   "name": "Wrenna",
-   "state": "running",
-   "task": "[research] T-2541 land parked Apple reads",
-   "model": "sonnet",
-   "since": "2026-11-05T08:38:07.490Z",
-   "next": [],
-   "effort": "high"
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Maren",
    "state": "next",
    "task": "Maren+Odalys, P1, Investor an Investor c6651474906 (01:33...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Wrenna",
+   "state": "next",
+   "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
    "model": null,
    "since": null,
    "next": []
@@ -554,15 +549,6 @@
     "o": "c"
    },
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Rule on a test edit made after a guard refusal",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T08:37:39.789Z",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Land five parked product fixes the sweep could not merge",
@@ -587,15 +573,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T08:37:58.789Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Add the rerun test results to the memory review",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-05T08:38:03.057Z",
     "o": "c"
    }
   ],
@@ -674,22 +651,22 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "Finished lane work that failed to land is now re-queued for landing every hour by the run loop,...",
-    "at": "2026-11-05T03:23:00-05:00"
+    "t": "Our fetch tools now refuse to read Gumroad, because its terms forbid automated access, the same...",
+    "at": "2026-11-05T03:39:00-05:00"
    },
    {
-    "w": "Pernille",
-    "t": "Checked Idris's fixes to how a project send notices changed files; they hold and the tests now...",
-    "at": "2026-11-05T03:07:00-05:00"
+    "w": "Wrenna",
+    "t": "The Apple App Shortcuts pages the phrase rule and ceiling rest on are now saved on main with...",
+    "at": "2026-11-05T03:39:00-05:00"
    },
    {
-    "w": "Maren",
-    "t": "Six looks for an app-launcher widget are drawn by code, each at three sizes in light and dark,...",
-    "at": "2026-11-05T03:05:00-05:00"
+    "w": "Wrenna",
+    "t": "Three parked Apple page reads (App Shortcuts, device API facts, revenue-gap recall checks) are...",
+    "at": "2026-11-05T03:39:00-05:00"
    }
   ],
   "count": {
-   "next": 434,
+   "next": 429,
    "wait": 38,
    "blocked": 87,
    "you": 19
@@ -708,13 +685,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 10,
+  "main": 6,
   "lanes": 2,
-  "total": 12,
-  "at": "3:38 AM",
+  "total": 8,
+  "at": "3:41 AM",
   "why": "",
-  "at_iso": "2026-11-05T08:38:00+00:00",
+  "at_iso": "2026-11-05T08:41:00+00:00",
   "started": "3:35 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>12</b> agents running now</p><p class=\"an-sub\">Main session 10, started 3:35 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:38 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 6, started 3:35 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:41 AM ET</p></section>"
  }
 }

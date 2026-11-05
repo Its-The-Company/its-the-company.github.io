@@ -22,6 +22,7 @@ Host stubs: `pywidget/ios/python-stubs/` (section 10).
   - **[SDK]**: declaration, availability or doc comment read in the iOS 27.1 SDK header named.
   - **[M]**: from memory, not in the SDK headers. A person checks it in a browser on developer.apple.com, or a device run settles it, before code depends on it.
   - **[apple-page A#]** (added 2026-10-26, T-0142): Apple's developer page, read signed out on 2026-10-26 01:15-01:17 ET under the Investors' #64 ruling; quote, URL and time in pywidget/docs/release/app-review-matrix.md s1d item A#; the saved copy is in research/inbound/apple/developer.apple.com/ (index.tsv). A3 = Keeping a widget up to date, A4 = Accessing location information in widgets, A2 = Describing use of required reason API, A5 = AppShortcutsProvider, A6 = Complying with Encryption Export Regulations.
+  - **[apple-page P#]** (added 2026-11-03, T-0046 slice 2): one of the 12 Apple pages Wrenna read signed out on 2026-11-03 01:21-01:23 ET under the #64 ruling (tools/fetch_cite.py --apple); P1-P12 and their saved copies are listed in section 11's 2026-11-03 note.
 - Passed is not the same as correct. An [SDK] tag proves the symbol exists at that iOS version. It does not prove it behaves the same in a background run or on a locked phone. Every "widget run" cell below is a device question until the L1/L3 prototypes run.
 
 ## 1. Rules shared by all seven modules
@@ -97,8 +98,8 @@ Native codes are mapped in each module section. The original code is kept in `.n
 |---|---|---|---|---|
 | `NSLocationWhenInUseUsageDescription` | App | location | "Your scripts and widgets use your location only when they ask for it. pywidget never sends it anywhere; your own script decides what to do with it." | [SDK] CLLocationManager.h, requestWhenInUseAuthorization comment (line 484) |
 | `NSLocationTemporaryUsageDescriptionDictionary` (entry `ScriptLocation`) | App | location | "This script asked for your precise location for this session." | [SDK] CLLocationManager.h lines 547-555 |
-| `NSMotionUsageDescription` | App | pedometer | "Your scripts and widgets read your step, distance and floor counts from the last seven days." | [M] key name not in the CoreMotion headers |
-| `NSLocalNetworkUsageDescription` | App | http | "Your scripts can talk to devices on your own network, such as a home server." | [M] |
+| `NSMotionUsageDescription` | App | pedometer | "Your scripts and widgets read your step, distance and floor counts from the last seven days." | [apple-page P7] key name read. Apple: "This key is required if your app uses APIs that access the device's motion data, including ... CMPedometer ... If you don't include this key, your app will crash when it attempts to access motion data." |
+| `NSLocalNetworkUsageDescription` | App | http | "Your scripts can talk to devices on your own network, such as a home server." | [apple-page P6] key read: "Any app that uses the local network, directly or indirectly, should include this description. This includes ... direct unicast or multicast connections to local hosts." |
 | `NSWidgetWantsLocation` | Widget extension | location, only if C2-Q1 is adopted | (boolean) | [SDK] symbol `_kCLCommonNSWidgetWantsLocationKey` exported in CoreLocation.tbd (pass 2). This confirms L1's "[recalled key name]". Placement [apple-page A4, 2026-10-26]: the key goes in the widget extension's Info.plist (as this row has it), the purpose strings in the app's; the extension gets location only "for a short period of time after the widget is visible". Apple advises a separate extension for location widgets so only they prompt. Nothing on the page covers the app's own background runs, so section 7's background rule stays [M] |
 
 </div>
@@ -169,7 +170,7 @@ Row cells say what the call does. "BFU" = before first unlock after a restart.
 | Module | App (foreground) | Widget run, foreground | Widget run, background, unlocked | Widget run, locked or BFU | Shortcut |
 |---|---|---|---|---|---|
 | clipboard | Read (system paste prompt [M]), write | Same as app | `NotAvailableHere` (policy; background pasteboard access is restricted [M]) | `NotAvailableHere` | `NotAvailableHere` (Shortcuts has its own clipboard actions; pass text as input) |
-| files | Documents, shared, picker, bookmarks | Documents, shared, bookmarks | Same, no picker | Our files: readable after first unlock (we set `CompleteUntilFirstUserAuthentication`, [SDK] constant). BFU: `DeviceLocked` [M] | No picker |
+| files | Documents, shared, picker, bookmarks | Documents, shared, bookmarks | Same, no picker | Our files: readable after first unlock (we set `CompleteUntilFirstUserAuthentication`, [SDK] constant). BFU: `DeviceLocked` (files are "inaccessible until the first time the user unlocks the device" [apple-page P11]; which error Python sees is a device check [M]) | No picker |
 | notifications | Request, schedule, list, cancel, badge | Schedule if authorized | Schedule if authorized [M] | Same [M] | Schedule if authorized |
 | http | Yes | Yes | Yes, inside the run budget [M] | Yes; Keychain-held tokens follow section 9 | Yes, inside 30 s |
 | location | One-shot, live updates, full-accuracy request | One-shot (`source="live"`) | **No fix under When In Use** [M]: returns `last_known()` with `source="app_cache"`, reason `"when_in_use_background"` (see C2-Q1) | Same | Foreground only; background as left |
@@ -186,14 +187,16 @@ Wraps `UIPasteboard.generalPasteboard` [SDK]. App context only in v1.
 ```python
 from pywidget import clipboard
 
-clipboard.has_text() -> bool                     # hasStrings, iOS 10 [SDK]; no paste prompt [M]
+clipboard.has_text() -> bool                     # hasStrings, iOS 10 [SDK]; no paste prompt [apple-page P1]
 clipboard.has_url() -> bool                      # hasURLs, iOS 10 [SDK]
 clipboard.has_image() -> bool                    # hasImages, iOS 10 [SDK]
 clipboard.detect(patterns=("url", "number", "search")) -> set[str]
                                                  # detectPatternsForPatterns, iOS 14 [SDK]; patterns ProbableWebURL,
-                                                 # Number, ProbableWebSearch [SDK]; inspects without reading [M: no prompt]
+                                                 # Number, ProbableWebSearch [SDK]; inspects without reading [apple-page P1: no prompt]
 clipboard.get_text() -> str | None               # .string [SDK]; shows the system paste prompt when the content came
-                                                 # from another app (iOS 16+) [M]
+                                                 # from another app (iOS 16+) [M: P1 says only that the system
+                                                 # "notifies the user" without user intent, since iOS 14; the
+                                                 # iOS 16 prompt's form is a device check, C2-Q3]
 clipboard.get_texts() -> list[str]               # .strings [SDK]
 clipboard.set_text(text: str, *, local_only: bool = False, expires_in: float | None = None) -> None
                                                  # setItems:options: with UIPasteboardOptionLocalOnly /
@@ -231,10 +234,10 @@ files.forget(name: str) -> None
 ```
 
 - **iOS bookmarks are plain bookmarks.** `NSURLBookmarkCreationWithSecurityScope` is macOS only (CORRECTIONS.md, L8); on iOS the scope rides on the picked URL and is restored by `startAccessingSecurityScopedResource` after resolving [SDK NSURL.h doc comments]. If resolution reports the bookmark stale, the bridge re-creates it silently and keeps the name.
-- **Protection class.** The bridge creates `documents()` and `shared()` with `NSFileProtectionCompleteUntilFirstUserAuthentication` [SDK constant], so widget runs on a locked phone can read them. The system default for app files is the same class [M]; we set it explicitly rather than trust a default.
+- **Protection class.** The bridge creates `documents()` and `shared()` with `NSFileProtectionCompleteUntilFirstUserAuthentication` [SDK constant], so widget runs on a locked phone can read them. The system default for app files is the same class [apple-page P11: "Complete until first user authentication. (Default)"]; we set it explicitly rather than trust a default.
 - **Widget data size.** `shared()` is what the extension reads to render. The renderer only reads view trees and images the app wrote; the 'stale image' and memory rules come from L3 and ADR-002.
 - **Coordinated reads** for iCloud Drive files use `NSFileCoordinator` in the bridge [SDK], because a file in iCloud may be a placeholder that is not downloaded yet [M]. `open_bookmark` downloads on demand with the run's timeout.
-- **Privacy manifest.** CPython calls `stat()` everywhere; Apple counts file-timestamp reads as a required-reason API [M]. The app's privacy manifest must declare the file-timestamp category with the "inside the app container / user-picked files" reason [M]. Flag to whoever writes the manifest (L13 already flags OpenSSL's). 2026-10-26 [apple-page A2]: "For each executable or dynamic library in an app that uses a required reason API, the bundle that includes the executable or dynamic library needs to include a privacy manifest file that reports the API." So the app's manifest is not enough: the CPython framework and every native extension framework that calls one needs its own (T-0036). "Starting May 1, 2024, apps that don't describe their use of required reason API in their privacy manifest file aren't accepted by App Store Connect." Still [M]: that `stat()` is in the file-timestamp category, and the reason code (the key pages are unread; Maren's 85F4.1 is unconfirmed).
+- **Privacy manifest.** CPython calls `stat()` everywhere; Apple counts file-timestamp reads as a required-reason API [M]. The app's privacy manifest must declare the file-timestamp category with the "inside the app container / user-picked files" reason [M]. Flag to whoever writes the manifest (L13 already flags OpenSSL's). 2026-10-26 [apple-page A2]: "For each executable or dynamic library in an app that uses a required reason API, the bundle that includes the executable or dynamic library needs to include a privacy manifest file that reports the API." So the app's manifest is not enough: the CPython framework and every native extension framework that calls one needs its own (T-0036). "Starting May 1, 2024, apps that don't describe their use of required reason API in their privacy manifest file aren't accepted by App Store Connect." 2026-11-03 (Wrenna, T-0046), from T-0035's saved reasons page (research/inbound/apple/developer.apple.com/tutorials_data_documentation_bundleresources_app-privacy-configuration_nsprivacyaccessedap-c6661a81.json, fetched 2026-10-27 02:39 ET; no new fetch): the file-timestamp reasons are **C617.1** ("timestamps, size, or other metadata of files inside the app container, app group container, or the app's CloudKit container") and **3B52.1** ("files or directories that the user specifically granted access to, such as using a document picker"). **Correction: 85F4.1 is a disk-space reason** ("display disk space information to the person using the device"), not a file-timestamp one; do not declare it for `stat()`. Still [M]: the category key's exact name and that `stat()` is on Apple's list of file-timestamp APIs (neither is in the saved pages).
 - Errors: `PermissionError` from the OS passes through outside the sandbox; `KeyError` for an unknown bookmark name; `NotAvailableHere` for `pick` outside the app; `DeviceLocked` when a read fails before first unlock (EPERM on a protected file maps to it only if `context.mode != "app"`).
 
 ## 5. notifications (local only)
@@ -265,13 +268,13 @@ notifications.set_badge(count: int) -> None       # setBadgeCount:withCompletion
 ```
 
 - **Exactly one of `at` or `after`.** Neither raises `ValueError`. The native `UNErrorCodeNotificationInvalidNoDate` (1400) [SDK] maps to `ValueError` too.
-- **Repeats.** A repeating time-interval trigger must be at least 60 seconds [M]; we only offer calendar repeats ("hourly" = minute matches; "daily" = hour and minute; "weekly" = weekday, hour, minute) and refuse `repeat` with `after`, so the limit never bites.
-- **Pending cap.** iOS keeps at most 64 pending local notifications per app and drops the rest silently [M]. The bridge counts before adding and raises `TooManyPending(PyWidgetError)` at 64 across all scripts, with each script's share in `pending()`. It does not let iOS drop silently. Show me the bytes: after every `schedule`, the bridge reads `getPendingNotificationRequests` back and raises if the id is missing.
-- **Levels.** Time Sensitive needs an entitlement (`UNAuthorizationOptionTimeSensitive` is deprecated: "Use time-sensitive entitlement" [SDK]) and Critical needs Apple's approval [M]. Neither in v1; `passive` and active only.
+- **Repeats.** A repeating time-interval trigger must be at least 60 seconds [apple-page P2: "If this parameter is true, the value in the timeInterval parameter must be 60 seconds or greater."]; we only offer calendar repeats ("hourly" = minute matches; "daily" = hour and minute; "weekly" = weekday, hour, minute) and refuse `repeat` with `after`, so the limit never bites.
+- **Pending cap.** iOS keeps at most 64 pending local notifications per app and drops the rest silently [M; no Apple page found yet, 2026-11-03]. The bridge counts before adding and raises `TooManyPending(PyWidgetError)` at 64 across all scripts, with each script's share in `pending()`. It does not let iOS drop silently. Show me the bytes: after every `schedule`, the bridge reads `getPendingNotificationRequests` back and raises if the id is missing.
+- **Levels.** Time Sensitive needs an entitlement (`UNAuthorizationOptionTimeSensitive` is deprecated: "Use time-sensitive entitlement" [SDK]) and Critical needs Apple's approval [apple-page P4: an entitlement; "To request this entitlement for your app, fill out the request form"]. Neither in v1; `passive` and active only.
 - **Tapping a notification** opens pywidget to that script's page. It never runs the script by itself (L12 rule: nothing runs code without the user's tap). `open_script=False` gives a plain notification.
-- Not in v1: location triggers (`UNLocationNotificationTrigger` [SDK] needs location beyond When In Use for background use [M]), attachments, actions.
+- Not in v1: location triggers (`UNLocationNotificationTrigger` [SDK]; **corrected 2026-11-03** [apple-page P3]: it needs only When In Use, not more: "your app must have authorization to use Core Location and must have when-in-use permissions. (Because the system actually monitors the regions, you don't need to request always permissions for your app)." It stays out of v1 for scope, not authorization), attachments, actions.
 - Errors: `UNErrorCodeNotificationsNotAllowed` (1) [SDK] → `PermissionDenied`; status not determined outside the app → `PermissionNotDetermined`; `UNErrorCodeBadgeInputInvalid` (1600) [SDK] → `ValueError`.
-- Review note: notifications must not be used for marketing by us [M, Guideline 4.5.4]. User scripts schedule only for their own user.
+- Review note: notifications must not be used for marketing by us [primary, Guideline 4.5.4 p. 38; read 2026-10-26, see section 11: 4.5.4 names Push Notifications, so this rule is our own, stricter policy for local ones]. User scripts schedule only for their own user.
 
 ## 6. http
 
@@ -286,7 +289,7 @@ http.post(url: str, *, json=None, data=None, headers=None, timeout: float = 10) 
 http.get_json(url: str, **kw) -> Any
 http.status() -> Reading[NetworkStatus]
     # NetworkStatus(kind="wifi"|"cellular"|"wired"|"none", expensive: bool, constrained: bool)
-    # one-shot NWPathMonitor read in the bridge [M]
+    # one-shot NWPathMonitor read in the bridge [apple-page P12: start(queue:), currentPath, cancel()]
 
 class Response:
     status: int; headers: dict; text: str; content: bytes
@@ -298,9 +301,9 @@ class Response:
 - **Cache.** With `cache_for=seconds`, a good response is stored in `files.shared()`; when the network fails, `get` returns the stored body with `source="cache"` and its original `sampled_at`, so the widget can show "from 2 h ago" (L1 rule b). Without `cache_for`, offline raises `Offline(PyWidgetError, ConnectionError)`.
 - **TLS.** CPython's `ssl` uses the OpenSSL built with the interpreter and certifi's CA list (L13), not Apple's trust store. User-installed root certificates and Apple's revocation checks therefore do not apply to Python requests [M]. Document it in the module help.
 - **Export compliance** (2026-10-26, [apple-page A6]). `ITSAppUsesNonExemptEncryption` is answered for the app "including any third-party libraries it links against", and "encryption that's built into the operating system" is the typical exempt case. CPython's OpenSSL is a linked library, not the OS's, so it is part of the answer. We do not add the key to Info.plist until the Investors answer (matrix s2c).
-- **ATS.** App Transport Security governs URLSession and CFNetwork; CPython uses BSD sockets, which ATS does not cover [M]. Policy: plain `http://` works and prints a one-line console warning. We do not add ATS exceptions to Info.plist.
-- **Local network.** Connecting to a LAN address shows the iOS Local Network prompt and needs `NSLocalNetworkUsageDescription` [M]. Home servers are a common script target, so the string ships in v1.
-- **Widget runs.** HTTP works inside the run's time budget. `timeout` is capped at the time left in the run (BGAppRefreshTask time is short [M]; the intent limit is 30 s [SDK doc comment, L8]). Low Data Mode: `status().value.constrained` lets a script skip big downloads; we do not block them.
+- **ATS.** App Transport Security governs URLSession and CFNetwork; CPython uses BSD sockets, which ATS does not cover [apple-page P5, partly: "ATS requires that all HTTP connections made with the URL Loading System, typically using the URLSession class, use HTTPS". The page names the URL Loading System and says nothing of BSD sockets; that sockets are outside ATS stays [M] until a device run sends plain http from Python]. Policy: plain `http://` works and prints a one-line console warning. We do not add ATS exceptions to Info.plist.
+- **Local network.** Connecting to a LAN address shows the iOS Local Network prompt and needs `NSLocalNetworkUsageDescription` [apple-page P6: "requesting access to the local network"; covers "direct unicast or multicast connections to local hosts"]. Home servers are a common script target, so the string ships in v1.
+- **Widget runs.** HTTP works inside the run's time budget. `timeout` is capped at the time left in the run (BGAppRefreshTask time is short [apple-page P10: "a short task"; Apple gives no figure]; the intent limit is 30 s [SDK doc comment, L8]). Low Data Mode: `status().value.constrained` lets a script skip big downloads; we do not block them.
 - **Body cap, 10 MiB** (added by T-0394, accepted by Idris 2026-10-27, T-0424). `get` and `post` refuse a body over 10 MiB, before reading it when Content-Length says so. Reason: the body is held whole in memory inside a process that also renders widgets, and 10 MiB is far above any reply a widget can show; a script that needs more uses `requests` or `urllib` directly, which keep no cap.
 - **`timeout` is the whole request** (added by T-0394, accepted by Idris 2026-10-27, T-0424): connecting, every redirect and the body, cut to the run's time left. Reason: a run's budget is wall-clock, and a per-read timeout (as in `requests`) lets a server that drips a byte at a time hold the run past its budget indefinitely.
 - **`status()`** (T-0424): Swift answers `http.status` with one NWPathMonitor update, then cancels the monitor. Not satisfied, or loopback only, is `"none"`; otherwise Wi-Fi wins over cellular (a path can list both), and any other link (wired Ethernet, or an interface iOS types as other) is `"wired"`. `expensive` and `constrained` are NWPath's own flags. The cases are in `pywidget/tests/device/fixtures/c2_calls.json` (rule 13).
@@ -390,8 +393,8 @@ location.updates(*, distance_filter: float = 10) -> Iterator[Reading[Location]]
 class Location:
     latitude: float; longitude: float
     horizontal_accuracy: float        # metres; larger under reduced accuracy
-    altitude: float | None            # metres; [M] (CLLocation fields not found in the 27.1 ObjC headers; read the
-    vertical_accuracy: float | None   #   Swift interface or the docs before relying on field names)
+    altitude: float | None            # metres; [apple-page P8] CLLocation has altitude, verticalAccuracy,
+    vertical_accuracy: float | None   #   horizontalAccuracy, speed, course, coordinate, timestamp (and ellipsoidalAltitude, floor)
     speed: float | None; course: float | None
 ```
 
@@ -429,15 +432,15 @@ class PedometerData:
     distance_m: float | None                      # distance (nullable) [SDK]
     floors_up: int | None; floors_down: int | None  # floorsAscended, floorsDescended (nullable) [SDK]
     average_active_pace: float | None             # seconds per metre, iOS 10 (nullable) [SDK]
-    current_pace: float | None                    # iOS 9; meaningful in live updates only [M]
-    current_cadence: float | None                 # steps per second, iOS 9; live updates only [M]
+    current_pace: float | None                    # seconds per metre [apple-page P9]; iOS 9; live updates only [M]
+    current_cadence: float | None                 # steps per second [apple-page P9], iOS 9; live updates only [M]
 ```
 
 - **Seven days.** `start` older than seven days raises `ValueError("pedometer history covers the last 7 days")` before calling Apple. `by_day(days>7)` raises the same. We do not clamp quietly.
 - **Nullable fields stay None.** A device without a barometer has no floors; we never fill in 0. `available()` lets the widget say "floors not counted on this iPhone".
 - `sampled_at` = the query's `end`; `source="history"` (or `"live"` from `updates()`); default `stale_after` 60 minutes (L1). The system history can lag the present by minutes [M].
 - **Simulator.** Step counting is unavailable in the Simulator [M]; tests use the host stubs, and the real reads need a device (L1 device checks line).
-- Errors, from the CMError enum order in CMError.h (CMErrorNULL = 100, then +1 each) [SDK]: `CMErrorMotionActivityNotAvailable` (104) and `CMErrorNotAvailable` (109) → `Unsupported`; `CMErrorMotionActivityNotAuthorized` (105) and `CMErrorNotAuthorized` (111) → `PermissionDenied`; `CMErrorMotionActivityNotEntitled` (106) and `CMErrorNotEntitled` (110) → `PyWidgetError` (our bug: missing usage string); `CMErrorInvalidParameter` (107) → `ValueError`. Which code a pedometer query returns on denial is a device check [M].
+- Errors, from the CMError enum order in CMError.h (CMErrorNULL = 100, then +1 each) [SDK]: `CMErrorMotionActivityNotAvailable` (104) and `CMErrorNotAvailable` (109) → `Unsupported`; `CMErrorMotionActivityNotAuthorized` (105) and `CMErrorNotAuthorized` (111) → `PermissionDenied`; `CMErrorMotionActivityNotEntitled` (106) and `CMErrorNotEntitled` (110) → `PyWidgetError` (our bug; **corrected 2026-11-03**: a missing `NSMotionUsageDescription` does not return this code, the app "will crash when it attempts to access motion data" [apple-page P7], so the string must ship before any pedometer call); `CMErrorInvalidParameter` (107) → `ValueError`. Which code a pedometer query returns on denial is a device check [M].
 
 ## 9. keychain (the user's own secrets)
 
@@ -493,6 +496,27 @@ keychain.names(*, shared: bool = False) -> list[str]                            
 2026-10-26 19:52 ET (Wrenna, T-0046): **Guideline 4.5.4 read** [primary], from the Investors' #59 PDF of the App Review Guidelines (research/inbound/App Review Guidelines - Apple Developer.pdf, sha256 a33b8f22..., p. 38; no fetch). Apple: "Push Notifications must not be required for the app to function, and should not be used to send sensitive personal or confidential information. Push Notifications should not be used for promotions or direct marketing purposes unless customers have explicitly opted in to receive them via consent language displayed in your app’s UI, and you provide a method in your app for a user to opt out from receiving such messages." Tag change for section 5's review note: [M, Guideline 4.5.4] -> [primary, 4.5.4 p. 38], with one correction for the owner: the guideline's words name Push Notifications, and v1 sends none (local only). So it does not bar marketing by local notification outright; it bars push marketing without opt-in consent and an in-app opt-out. Our "no marketing by us" rule is our own policy, stricter than 4.5.4, and worth keeping. Main text left to Idris.
 
 2026-10-26 19:52 ET (Wrenna, T-0046): the other 23 items are not read yet. The company's Apple day cap (12 pages, terms_guard.APPLE_DAY_CAP) had 1 page left at 19:48 and T-0034 took it (CLGeocoder, L16). Page plan for 2026-10-27, one page per group, .md copies: UIPasteboard (paste prompt, nil-on-deny, `detect`, background access); UNTimeIntervalNotificationTrigger (60 s repeat); UNLocationNotificationTrigger (authorization); the critical-alerts entitlement page; NSAppTransportSecurity (ATS scope); NSLocalNetworkUsageDescription; NSMotionUsageDescription; CLLocation (field names); CMPedometerData (pace and cadence). Second wave if the day allows: NWPathMonitor, BGAppRefreshTask, file protection default. These stay [M] whatever the pages say, because a device run or a non-Apple source settles them: pedometer history lag, Simulator step counting, pedometer denial code, no background fix under When In Use (C2-Q3), CPython TLS vs Apple's trust store (CPython's own docs, not an Apple fact). The required-reason category and code wait on T-0035's refresh of the reasons page. The 64-pending figure is not on any page I can name yet; it stays [M] until one is found.
+
+2026-11-03 01:21-01:23 ET (Wrenna, T-0046 slice 2): the C2 s11 page plan, all 12 pages, fetched signed out with `tools/fetch_cite.py --apple` under the #64 ruling (the day cap is now used: 12/12). Saved copies in research/inbound/apple/developer.apple.com/:
+- P1 UIPasteboard: documentation_uikit_uipasteboard.md-fd7eea9e.html
+- P2 UNTimeIntervalNotificationTrigger init(timeInterval:repeats:): documentation_usernotifications_untimeintervalnotificationtrigger_init_timeinterval_repeat-091d670f.html
+- P3 UNLocationNotificationTrigger: documentation_usernotifications_unlocationnotificationtrigger.md-74832410.html
+- P4 Critical Alerts entitlement: documentation_bundleresources_entitlements_com.apple.developer.usernotifications.critical--df2ede46.html
+- P5 NSAppTransportSecurity: documentation_bundleresources_information-property-list_nsapptransportsecurity.md-d70c7d7e.html
+- P6 NSLocalNetworkUsageDescription: documentation_bundleresources_information-property-list_nslocalnetworkusagedescription.md-2f73fce7.html
+- P7 NSMotionUsageDescription: documentation_bundleresources_information-property-list_nsmotionusagedescription.md-9047b631.html
+- P8 CLLocation: documentation_corelocation_cllocation.md-c8e398a6.html
+- P9 CMPedometerData: documentation_coremotion_cmpedometerdata.md-12ff9aeb.html
+- P10 BGAppRefreshTask: documentation_backgroundtasks_bgapprefreshtask.md-3e39cb49.html
+- P11 Encrypting your app's files: documentation_uikit_encrypting-your-app-s-files.md-e4352cf0.html
+- P12 NWPathMonitor: documentation_network_nwpathmonitor.md-88dc4bd1.html
+
+Where each listed item stands now (tags changed in place above):
+- **Read:** `detect` and `has_text` without a prompt (P1); default file protection class (P11); 60-second repeat minimum (P2); Critical alerts by request form (P4); NWPathMonitor one-shot read (P12); Local Network prompt and key (P6); BGAppRefreshTask "a short task", no figure (P10); CLLocation field names (P8); `NSMotionUsageDescription` (P7); file-timestamp reason codes C617.1 and 3B52.1 (T-0035's saved reasons page, section 4); Guideline 4.5.4 (2026-10-26, above).
+- **Corrected:** location triggers need only When In Use (P3, section 5); a missing `NSMotionUsageDescription` crashes the app rather than returning a NotEntitled code (P7, section 8); 85F4.1 is a disk-space reason, not a file-timestamp one (section 4).
+- **Partly read, rest [M]:** paste prompt (P1 says the system "notifies the user" without user intent, since iOS 14; the iOS 16 prompt's form is a device check); ATS scope (P5 names the URL Loading System; that BSD sockets fall outside it is not on the page, device check); required-reason category key name and `stat()` on Apple's API list (not in the saved pages); pace and cadence (P9 gives units; "live updates only" is not on the class page).
+- **Still [M], next slice T-1235:** background pasteboard access (not on P1); iCloud placeholders; 64 pending notifications (no page named yet); pace and cadence "live only" (currentPace and currentCadence member pages); required-reason category key and API list (NSPrivacyAccessedAPITypes page).
+- **Stay [M], not an Apple-page fact:** nil-on-deny, pedometer prompt on first query, pedometer history lag, Simulator step counting, pedometer denial code, no background fix under When In Use (all device checks, C2-Q3); CPython TLS vs Apple's trust store (CPython's docs).
 
 ## Chair (Ines), 2026-10-25 21:16 ET: C2 and L12 names, and C2-Q5
 

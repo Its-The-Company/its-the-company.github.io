@@ -494,6 +494,26 @@ Wrenna, 2026-10-26, 20:05 to 20:10 ET by `date` (board T-0023 and T-0238, both t
 
 
 Not in this pass: any web read; any test run; L11 (mine); the design files changed tonight (tokens, appearance, IDE spec), which are outside the L-docs and ADRs this pass covers.
+
+## T-0337: the revenue-gap memo's [recall] tags against Apple's own pages (Wrenna, 2026-11-02)
+
+Wrenna, 2026-11-02, 23:49 to 23:52 ET by `date`. Memo: [DECISION-2026-10-26-revenue-gap.md](decision-2026-10-26-revenue-gap.html) (its end now carries the "Recall checks" note with each quote). Pages fetched signed out through `tools/fetch_cite.py --apple --task T-0337` under the #64 ruling, saved with URL and date in research/inbound/apple/ (index.tsv). T-0155's page (the reason-codes data file) was already read intact on 2026-10-27 (4a824552), so nothing was fetched for it. Five T-0337 requests were made; the company's day cap of 12 stopped the sixth at 23:51, so two claims are still open (below). Nothing here edits the memo's body; the rows are for its owner (Ines, chair of the memo).
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 18: T-0337: the revenue-gap memo&#x27;s [recall] tags against Apple&#x27;s own pages (Wrenna…, scrolls sideways" data-n="1" style="--tw:1325px" markdown="1">
+
+| Row | Memo line | Claim as recalled | What Apple's page says (URL, fetched ET) | Result |
+|---|---|---|---|---|
+| R1 | s4 item 1 (line 63); also launch-plan-draft line 146 | "the lower rate applies from enrollment, not back to the first sale, so the date matters" | "When will my adjusted proceeds go into effect? Your proceeds will be adjusted fifteen (15) days after the end of the fiscal calendar month in which your enrollment is approved. For example, if your enrollment is approved on February 10, 2022, your proceeds are adjusted starting March 14, 2022." Also: to enroll you must "Review and accept the latest Paid Apps agreement". (developer.apple.com/app-store/small-business-program/, 2026-11-02 23:49:13) | **Corrected.** Not back-dated, as recalled, but it does not start at enrollment either: it starts 15 days after the end of the fiscal month in which enrollment is *approved*, so the lag is about two to six weeks. For the 15% rate to cover sales from the 2026-12-15 release (ops/state.md line 4), the approval has to fall in an Apple fiscal month that ends by about 2026-11-30 (Apple's fiscal calendar not read). Enrollment also needs the Paid Apps agreement accepted first. Board note to Ines. |
+| R2 | s3 Family Sharing row (line 55) | "once Family Sharing is turned on for a purchase it cannot be turned off" | "Keep in mind that once you turn on Family Sharing for an In-App Purchases in App Store Connect, you can't turn it off." (developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/turn-on-family-sharing-for-in-app-purchases, 2026-11-02 23:50:11) | **[apple-page]**, confirmed as recalled. "Off at launch" stands. My first request for this claim (23:49:37) used a guessed path under manage-in-app-purchases/ and got Apple's "Page Not Found" with HTTP 200; it is saved as fetched and counted against the cap. The right path came from the help sidebar in a page saved on 2026-10-26. |
+| R5 | s4 item 4 (line 66); also launch-plan-draft line 153 | "in App Store Connect; Apple asks for lead time" | "To nominate your app to be featured, whether it's a new launch or an exciting update, submit your plans through App Store Connect." Types include "App Launch: Tell us about the launch or pre-order of your new app or game." "Tip: To ensure operational efficiency, we recommend submitting plans as early as possible, with a minimum lead time of 3 weeks." (developer.apple.com/help/app-store-connect/manage-featuring-nominations/nominate-your-app-for-featuring, 2026-11-02 23:50:51) | **[apple-page]**, confirmed, and the lead time now has a number: **at least 3 weeks**. The steps start "In Apps, select the app", so the app record (#100) comes first. For a 2026-12-15 release that means submitting by about 2026-11-24. "If the form exists as recalled" can be struck by the owner: it exists. In the same board note to Ines. |
+
+</div>
+
+
+Still open (the cap stopped them; T-0337 is not ticked):
+- **R3, requestReview's display limits and the HIG's timing advice** (s3 rating-prompt row, line 56). Not fetched. Next: the HIG ratings-and-reviews page through its data file, developer.apple.com/tutorials/data/design/human-interface-guidelines/ratings-and-reviews.json (the HTML is a script shell), refused at 23:51 by the day cap.
+- **R4, an in-app purchase cannot go to review without the Paid Apps Agreement** (s5, line 77). Read developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/submit-an-in-app-purchase (2026-11-02 23:50:28): it says nothing about the agreement, so the claim is **not confirmed** by that page and stays [recall]. It does say something the memo's plan needs: "The first consumable, non-consumable, auto-renewable subscription, and non-renewing subscription In-App Purchase of each type must be submitted with a new app version", so the Pro purchase goes to review with the version, not before it. Next page, if the board allows a second for this claim: configure-in-app-purchase-settings/overview-for-configuring-in-app-purchases (path from the same sidebar).
 {% endraw %}
 
 </div>

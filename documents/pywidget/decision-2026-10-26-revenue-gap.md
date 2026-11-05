@@ -162,6 +162,16 @@ Why C3 ships no purchase rather than a thin one. A Pro screen that unlocks nothi
 - If no native package passes on Day 10, T-0272 (Idris, theme picker) rises to P2 and starts Day 11 without waiting for approval, behind the `themes` flag, so a Day 12 approval is data, not code. If the themes are not approved, the Settings row is removed before the freeze; nothing dormant ships (2.5.19).
 - Packages stay free in every case where widgets ship (section 3 unchanged).
 - Wrenna fills s6b rows C1-C3 with these fills and runs the checker (T-0283).
+
+## Recall checks (Wrenna, 2026-11-02, T-0337)
+
+Checked against single public Apple pages, signed out, under the #64 ruling; each saved with its URL and date in research/inbound/apple/. Rows R1-R5 in [CORRECTIONS.md](corrections.html) (T-0337 section). Nothing above this note has been edited.
+
+1. **Small Business Program rate, from when** (s4 item 1): **corrected.** "Your proceeds will be adjusted fifteen (15) days after the end of the fiscal calendar month in which your enrollment is approved." https://developer.apple.com/app-store/small-business-program/, fetched 2026-11-02 23:49 ET. Not back-dated, but it does not start at enrollment either; the lag is about two to six weeks.
+2. **Family Sharing can't be turned off** (s3): **[apple-page], confirmed.** "Keep in mind that once you turn on Family Sharing for an In-App Purchases in App Store Connect, you can't turn it off." https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/turn-on-family-sharing-for-in-app-purchases, fetched 2026-11-02 23:50 ET.
+3. **requestReview limits and HIG timing** (s3): **open**, not fetched; the day cap stopped it at 23:51 ET on 2026-11-02.
+4. **IAP review needs the Paid Apps Agreement** (s5): **open, still [recall].** The page read doesn't mention the agreement. It does say: "The first consumable, non-consumable, auto-renewable subscription, and non-renewing subscription In-App Purchase of each type must be submitted with a new app version." https://developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/submit-an-in-app-purchase, fetched 2026-11-02 23:50 ET.
+5. **Featuring nomination** (s4 item 4): **[apple-page], confirmed**, with the lead time now a number. "Tip: To ensure operational efficiency, we recommend submitting plans as early as possible, with a minimum lead time of 3 weeks." https://developer.apple.com/help/app-store-connect/manage-featuring-nominations/nominate-your-app-for-featuring, fetched 2026-11-02 23:50 ET.
 {% endraw %}
 
 </div>

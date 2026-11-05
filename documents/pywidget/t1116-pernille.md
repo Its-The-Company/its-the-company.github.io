@@ -69,13 +69,13 @@ runner idle at <yesterday>" on every look, for as long as they keep looking. Tha
 when a fetch fails. (d) `route` may fall back to the local path, under the lock, when the check-in is stale, if the
 storage reason allows it. Odalys and Ines decide that. Tests for (a)-(c).
 
-**L1 (Low): `state` trusts `status` alone.** `code = 0 if st == "passed"` ignores `exit`, and it ignores a totals line
+**L1 (Low, fixed T-1895, redone T-2542): `state` trusts `status` alone.** `code = 0 if st == "passed"` ignores `exit`, and it ignores a totals line
 that reports failures. The runner sets `status` from the exit code today, so this cannot happen now. But a result with
 `status: passed` and `exit: 65`, or with `xc.sh: tests: ... 3 failures`, would read green. Fix: green only when
 `status == "passed"`, `exit == 0`, and any own totals line reports 0 failures. Anything else exits 1 and names the
 mismatch.
 
-**L2 (Low): exit 75 now means three things, and the lane path has no dedup.** A caller cannot tell "queued, go read
+**L2 (Low, fixed T-1895, redone T-2542): exit 75 now means three things, and the lane path has no dedup.** A caller cannot tell "queued, go read
 `xc_route.py wait`" apart from "lock or disk busy, try again" by the exit code alone. tools/xc_wait.sh turns 75 into 1.
 In the main checkout, `queued_job` stops a retry from adding a second job. In a lane, every call returns before that
 check, so each `xc.sh ... test` adds another outbox record. A worker who retries on 75, as they have learned to for the
@@ -83,7 +83,7 @@ lock, lands N full-suite jobs of about 42 min each. Fix: dedup the lane outbox's
 fixed stdout marker (`xc.sh: queued J-...` or `xc.sh: queued (lane)`) on the queued path, so a script can tell the cases
 apart.
 
-**L3 (Low): gaps in the tests.** The suite has no case for: an unreadable result, a refused result, a failing
+**L3 (Low): gaps in the tests.** *Fixed T-1896, redone T-2542 (tests/xc_route_test.py: unreadable, refused, create-failure fallback, lane-outbox create, early stop in wait; L1 cases by T-1895; a mutant that drops the green check fails 3 cases).* The suite has no case for: an unreadable result, a refused result, a failing
 `jobs.py create` (the fallback to the local path), the lane-outbox path, an ahead-of-origin HEAD (M1), a stale check-in
 (M2), or `passed` with a non-zero exit (L1). Add them with the fixes. Seed mutants: delete the `"not pushed"` early stop
 in `wait`; flip `QUEUED` to `LOCAL` in the create-failed branch.

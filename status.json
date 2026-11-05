@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T08:47:39.476653+00:00",
+ "at": "2026-11-05T08:49:37.213641+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2556 supervisor test reds",
    "model": "opus",
    "started": "2026-11-05T08:37:26.135Z",
-   "seconds": 613,
+   "seconds": 731,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2414 close or retry parked work",
    "model": "opus",
    "started": "2026-11-05T08:37:33.456Z",
-   "seconds": 606,
+   "seconds": 723,
    "finished": null,
    "effort": "high"
   },
@@ -30,16 +30,7 @@
    "task": "[build] T-2537 land five parked fixes",
    "model": "opus",
    "started": "2026-11-05T08:37:47.438Z",
-   "seconds": 592,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2542 land parked verdict fixes",
-   "model": "opus",
-   "started": "2026-11-05T08:37:53.216Z",
-   "seconds": 586,
+   "seconds": 709,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[build] T-2548 send check mutant",
    "model": "opus",
    "started": "2026-11-05T08:37:58.789Z",
-   "seconds": 580,
+   "seconds": 698,
    "finished": null,
    "effort": "high"
   },
@@ -57,16 +48,7 @@
    "task": "[build] T-2539 sort parked snapshots",
    "model": "opus",
    "started": "2026-11-05T08:41:01.055Z",
-   "seconds": 398,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[review] T-1872 traceback runner review",
-   "model": "opus",
-   "started": "2026-11-05T08:42:12.586Z",
-   "seconds": 326,
+   "seconds": 516,
    "finished": null,
    "effort": "high"
   },
@@ -75,13 +57,38 @@
    "task": "[release] T-2563 upload tool fixes",
    "model": "opus",
    "started": "2026-11-05T08:46:56.226Z",
-   "seconds": 43,
+   "seconds": 160,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-2567 traceback fold fixes",
+   "model": "opus",
+   "started": "2026-11-05T08:49:30.200Z",
+   "seconds": 7,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x4, Idris x4",
+ "who": "Odalys x2, Idris x4, Pernille",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[review] T-1872 traceback runner review",
+   "model": "opus",
+   "started": "2026-11-05T08:42:12.586Z",
+   "seconds": null,
+   "finished": "2026-11-05T08:49:11.451000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2542 land parked verdict fixes",
+   "model": "opus",
+   "started": "2026-11-05T08:37:53.216Z",
+   "seconds": null,
+   "finished": "2026-11-05T08:49:09.041000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[release] T-2413 review upload tools",
@@ -97,28 +104,12 @@
    "started": "2026-11-05T08:40:53.904Z",
    "seconds": null,
    "finished": "2026-11-05T08:41:03.504Z"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-2545 rule on guard refusal edit",
-   "model": "opus",
-   "started": "2026-11-05T08:37:39.789Z",
-   "seconds": null,
-   "finished": "2026-11-05T08:40:30.815000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] T-2541 land parked Apple reads",
-   "model": "sonnet",
-   "started": "2026-11-05T08:38:07.490Z",
-   "seconds": null,
-   "finished": "2026-11-05T08:40:07.168000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 433,
+  "runnable_count": 431,
   "blocked_count": 125
  },
  "meter": {
@@ -161,152 +152,8 @@
   "week_pct": 49.11,
   "usage_pct": 41.6,
   "work_pct": 74.4,
-  "read_at": "2026-11-05T08:47:00+00:00",
+  "read_at": "2026-11-05T08:52:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-2479",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Restart Evan's account and avoid credit gaps",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T01:43:35-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-2456",
-    "w": "Idris",
-    "k": "release",
-    "t": "Last checks before the first test build",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T01:43:35-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-2460",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Ask for approval only where the Investors said",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T01:43:35-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-2466",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Fix three red tool test suites",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T01:43:35-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-2468",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Measure the tool-call budget experiment",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T01:43:35-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-2480",
-    "w": "Maren",
-    "k": "site",
-    "t": "Simplify Chat, Usage and Lock In on the site",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T01:43:35-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-2469",
-    "w": "Maren",
-    "k": "design",
-    "t": "Redesign Home around the task stages",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T01:43:35-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-2470",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "One shared queue for all Simulator test work",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T01:43:35-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-2471",
-    "w": "Ines",
-    "k": "plan",
-    "t": "Send each task to the account with most usage left",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T01:43:35-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-2472",
-    "w": "Ines",
-    "k": "plan",
-    "t": "Find and make the biggest simplifications",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T01:43:35-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-2316",
-    "w": "Idris",
-    "k": "release",
-    "t": "Swift, before T-2270's external stage",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T01:43:35-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-2407",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Write plain titles for all open board tasks",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T01:43:35-05:00",
-    "n": "Evan",
-    "d": 1
-   },
    {
     "lane": "b",
     "task": "T-2486",
@@ -469,14 +316,14 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 744
+   "free_gb": 743
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T03:47:00-05:00"
+  "at": "2026-11-05T03:52:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -504,17 +351,18 @@
    "effort": "high"
   },
   {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[build] T-2567 traceback fold fixes",
+   "model": "opus",
+   "since": "2026-11-05T08:49:30.200Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P2, no Xcode, after T-1440 lands (Idris review...",
    "model": null,
    "since": null,
    "next": []
@@ -566,15 +414,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Land three parked test-verdict and licence-list fixes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T08:37:53.216Z",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Make the send check test prove its timing fix",
@@ -593,21 +432,21 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "review",
-    "t": "T-1872 traceback runner review",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T08:42:12.586Z",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "release",
     "t": "Keep the internal-build record in the real repository only",
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T08:46:56.226Z",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Count a deep-recursion cut only when every dropped frame repeats",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T08:49:30.200Z",
     "o": "c"
    }
   ],
@@ -686,22 +525,22 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "Our fetch tools now refuse to read Gumroad, because its terms forbid automated access, the same...",
-    "at": "2026-11-05T03:39:00-05:00"
+    "t": "Checked the error-trace fixes. Two need more work: a long loop between several functions can...",
+    "at": "2026-11-05T03:49:00-05:00"
    },
    {
-    "w": "Wrenna",
-    "t": "The Apple App Shortcuts pages the phrase rule and ceiling rest on are now saved on main with...",
-    "at": "2026-11-05T03:39:00-05:00"
+    "w": "Odalys",
+    "t": "two of three parked fixes were redone on the current code (test results count as green only when...",
+    "at": "2026-11-05T03:49:00-05:00"
    },
    {
-    "w": "Wrenna",
-    "t": "Three parked Apple page reads (App Shortcuts, device API facts, revenue-gap recall checks) are...",
-    "at": "2026-11-05T03:39:00-05:00"
+    "w": "Odalys",
+    "t": "the tool that reads a test run's result now calls it green only when the run passed, exited...",
+    "at": "2026-11-05T03:48:00-05:00"
    }
   ],
   "count": {
-   "next": 433,
+   "next": 431,
    "wait": 38,
    "blocked": 87,
    "you": 19
@@ -721,13 +560,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 8,
-  "lanes": 2,
-  "total": 10,
-  "at": "3:47 AM",
+  "main": 0,
+  "lanes": 1,
+  "total": 1,
+  "at": "3:52 AM",
   "why": "",
-  "at_iso": "2026-11-05T08:47:00+00:00",
-  "started": "3:35 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 8, started 3:35 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:47 AM ET</p></section>"
+  "at_iso": "2026-11-05T08:52:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:52 AM ET</p></section>"
  }
 }

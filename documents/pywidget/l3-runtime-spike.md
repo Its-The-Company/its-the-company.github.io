@@ -29,6 +29,19 @@ Idris, 2026-10-25 (runs 19:29-20:07 ET). Board line "[build] Idris, P0, L3/L13 C
 - Extension runs (`scripts/bench_widget.sh`): two PyWidget widgets placed on the Home Screen by the UI test `AddWidgetTests.testAddWidget`; per run, <span title="A test written in advance. If it fires, we drop the idea.">kill</span> the extension process, launch the app with `-reload` (it calls `WidgetCenter.reloadAllTimelines()` once its scene is active), wait for the extension's `getTimeline` line. 6 cold runs per mode. With two widgets, a reload sometimes gives a second call in the same process: that is the "warm" row (n = 1 per mode).
 - "Cold" means a new process. The host's file cache stays warm, so cold-from-disk on a phone will be slower.
 - Build: Debug, `iphonesimulator`, arm64 + x86_64; iPhone 17e simulator, iOS 27.0, on the Mac mini (Apple silicon). Device, Release and the oldest supported device were not available.
+- **Device session rest reading and the 0-rule (T-0680 item 2; T-2097, from T-2085 M1).** Since 504703ed2 a 0 from
+  `os_proc_available_memory()` inside the widget extension refuses, then demotes, every <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> widget, and no one has read
+  that call in the extension on a phone. The gate build (Release, device, `PYWIDGET_LANE_GATE` on the xcodebuild line,
+  s8 of T-1853's plan; T-1988 builds the switch's guards) writes one row per extension process to the App Group's
+  `lane-rest.jsonl`, at the top of the first getTimeline, before any lane decision and with the flag on or off
+  (`Shared/LaneRestBench.swift`): `available_bytes` and `available_mb`, task_vm_info's `limit_remaining_bytes`,
+  `footprint_mb`, `process`, `bundle`, `pid`. The forced Simulator run writes the same row (0 there, no jetsam limit).
+  **Rule:** the (c) flag stays shut until the rows whose `bundle` is the widget extension's read `available_bytes` > 0 in
+  every one of n >= 6 cold processes on the oldest supported phone. A row from the app's bundle does not count. One 0
+  at rest: no flag default from this session; the margin's headroom moves to another source (`limit_remaining_bytes`, if
+  it read non-zero in the same rows) through a new build line and an independent review, never by reading 0 as room.
+  Release builds stop at the legal links check until T-0485 lands; check before the session whether the gate line
+  needs the editor bench's exemption (`PW_EDITOR_BENCH=YES`) [not tried].
 
 ## 3. Benchmark table (medians of n, max in brackets)
 
@@ -107,7 +120,7 @@ Failure behaviour (input to the ADR, not yet a spec): every extension run gets a
 
 - Device run on the oldest supported phone: cold start, peak, and the real ceiling by allocation ramp. Needs a device and signing (Apple membership pending, due Day 7, 2026-10-28).
 - Frozen-modules measurement; a Release-build run.
-- T-1853 (2026-11-04): the device session's Release build runs the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> with a record-only margin under `PYWIDGET_LANE_GATE`; how <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>-G3 get their numbers: `docs/decisions/gate-session-build.md`.
+- T-1853 (2026-11-04): the device session's Release build runs the lane with a record-only margin under `PYWIDGET_LANE_GATE`; how <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>-G3 get their numbers: `docs/decisions/gate-session-build.md`.
 - Execution ADR (ADR-003) and failure-mode spec, from section 5.
 - Logged: CPython 3.15.1 iOS XCframework and the libraries linked into its modules in `log/software.md`.
 {% endraw %}

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T18:51:41.636924+00:00",
+ "at": "2026-11-05T18:54:41.607408+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2634 land merges on MacBook in parallel",
    "model": "opus",
    "started": "2026-11-05T18:32:53.686Z",
-   "seconds": 1127,
+   "seconds": 1307,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2570 retry unmerged parked work",
    "model": "opus",
    "started": "2026-11-05T18:33:25.639Z",
-   "seconds": 1095,
+   "seconds": 1275,
    "finished": null,
    "effort": "high"
   },
@@ -30,16 +30,7 @@
    "task": "[tools] T-2675 charter suite reds comparison",
    "model": "opus",
    "started": "2026-11-05T18:33:34.547Z",
-   "seconds": 1087,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2662 lane gate archive check",
-   "model": "opus",
-   "started": "2026-11-05T18:33:57.889Z",
-   "seconds": 1063,
+   "seconds": 1267,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[test] T-2663 privacy check file-scan tests",
    "model": "opus",
    "started": "2026-11-05T18:34:03.791Z",
-   "seconds": 1057,
+   "seconds": 1237,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[build] T-1677 record last run report at launch",
    "model": "opus",
    "started": "2026-11-05T18:37:36.900Z",
-   "seconds": 844,
+   "seconds": 1024,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +57,7 @@
    "task": "[build] T-2567 traceback fold fixes, tick T-2413",
    "model": "opus",
    "started": "2026-11-05T18:38:29.185Z",
-   "seconds": 792,
+   "seconds": 972,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +66,7 @@
    "task": "[tools] T-2466 fix three red tool suites",
    "model": "opus",
    "started": "2026-11-05T18:41:11.554Z",
-   "seconds": 630,
+   "seconds": 810,
    "finished": null,
    "effort": "high"
   },
@@ -84,16 +75,7 @@
    "task": "[review] T-2678 review applier pinned-diff change",
    "model": "opus",
    "started": "2026-11-05T18:47:57.394Z",
-   "seconds": 224,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2460 approvals only where Investors said",
-   "model": "opus",
-   "started": "2026-11-05T18:48:04.523Z",
-   "seconds": 217,
+   "seconds": 404,
    "finished": null,
    "effort": "high"
   },
@@ -102,7 +84,7 @@
    "task": "[build] T-1140 activity log run sink",
    "model": "opus",
    "started": "2026-11-05T18:49:12.105Z",
-   "seconds": 149,
+   "seconds": 329,
    "finished": null,
    "effort": "high"
   },
@@ -111,13 +93,29 @@
    "task": "[build] T-2486 stuck state must not freeze Restart",
    "model": "opus",
    "started": "2026-11-05T18:51:03.787Z",
-   "seconds": 37,
+   "seconds": 217,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x4, Ines, Idris x5, Pernille x2",
+ "who": "Odalys x3, Ines, Idris x4, Pernille x2",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-2662 lane gate archive check",
+   "model": "opus",
+   "started": "2026-11-05T18:33:57.889Z",
+   "seconds": null,
+   "finished": "2026-11-05T18:54:41.010000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2460 approvals only where Investors said",
+   "model": "opus",
+   "started": "2026-11-05T18:48:04.523Z",
+   "seconds": null,
+   "finished": "2026-11-05T18:53:45.636000+00:00"
+  },
   {
    "name": "idris",
    "task": "[fix] T-2486 stuck state must not freeze Restart",
@@ -133,28 +131,12 @@
    "started": "2026-11-05T18:33:43.690Z",
    "seconds": null,
    "finished": "2026-11-05T18:50:31.207000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2661 widget memory verdict and demotion",
-   "model": "opus",
-   "started": "2026-11-05T18:33:51.144Z",
-   "seconds": null,
-   "finished": "2026-11-05T18:48:32.311000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[test] T-2266 stuck-signal tests on MacBook",
-   "model": "opus",
-   "started": "2026-11-05T18:45:12.150Z",
-   "seconds": null,
-   "finished": "2026-11-05T18:47:19.616000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 426,
+  "runnable_count": 424,
   "blocked_count": 129
  },
  "meter": {
@@ -197,7 +179,7 @@
   "week_pct": 58.5,
   "usage_pct": 45.5,
   "work_pct": 71.9,
-  "read_at": "2026-11-05T18:51:00+00:00",
+  "read_at": "2026-11-05T18:54:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -234,14 +216,14 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 707
+   "free_gb": 705
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-05T13:51:00-05:00"
+  "at": "2026-11-05T13:54:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -271,9 +253,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[build] T-2662 lane gate archive check",
+   "task": "[test] T-2663 privacy check file-scan tests",
    "model": "opus",
-   "since": "2026-11-05T18:33:57.889Z",
+   "since": "2026-11-05T18:34:03.791Z",
    "next": [],
    "effort": "high"
   },
@@ -334,15 +316,6 @@
    },
    {
     "w": "Idris",
-    "k": "build",
-    "t": "Close a second way to archive the phone test build",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T18:33:57.889Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
     "k": "test",
     "t": "Privacy check flags a runaway file scan first",
     "m": "opus",
@@ -375,6 +348,15 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T18:41:11.554Z",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check the new way to apply a large approved change",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T18:47:57.394Z",
     "o": "c"
    }
   ],
@@ -452,23 +434,23 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "A test build of the phone app made for one memory experiment can no longer be packaged for...",
+    "at": "2026-11-05T13:54:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "The tool that writes questions for the Investors now refuses any question that is not about...",
+    "at": "2026-11-05T13:53:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The tool that applies Investor-approved changes can now apply one too long for a GitHub issue,...",
     "at": "2026-11-05T13:46:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The one dispatcher that hands tasks to every account is built and on. It had started nothing...",
-    "at": "2026-11-05T13:40:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The upload tools passed their second review: all six problems found in the first review are...",
-    "at": "2026-11-05T13:38:00-05:00"
    }
   ],
   "count": {
-   "next": 426,
+   "next": 424,
    "wait": 42,
    "blocked": 87,
    "you": 19
@@ -488,13 +470,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 12,
+  "main": 10,
   "lanes": 1,
-  "total": 13,
-  "at": "1:51 PM",
+  "total": 11,
+  "at": "1:54 PM",
   "why": "",
-  "at_iso": "2026-11-05T18:51:00+00:00",
+  "at_iso": "2026-11-05T18:54:00+00:00",
   "started": "1:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>13</b> agents running now</p><p class=\"an-sub\">Main session 12, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:51 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>11</b> agents running now</p><p class=\"an-sub\">Main session 10, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:54 PM ET</p></section>"
  }
 }

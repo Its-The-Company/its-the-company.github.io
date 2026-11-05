@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T05:19:20.744135+00:00",
+ "at": "2026-11-05T05:22:23.414360+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2452 per-lane 5-hour limit",
    "model": "opus",
    "started": "2026-11-05T04:53:44.891Z",
-   "seconds": 1535,
+   "seconds": 1718,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2453 every lane answers Investors",
    "model": "opus",
    "started": "2026-11-05T04:53:49.733Z",
-   "seconds": 1531,
+   "seconds": 1713,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[tools] T-2454 fold standing approval",
    "model": "opus",
    "started": "2026-11-05T04:53:54.357Z",
-   "seconds": 1526,
+   "seconds": 1709,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +39,7 @@
    "task": "[tools] T-2406 plain task titles",
    "model": "opus",
    "started": "2026-11-05T04:54:00.284Z",
-   "seconds": 1520,
+   "seconds": 1703,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +48,7 @@
    "task": "[site] T-2400 new Home replaces old",
    "model": "opus",
    "started": "2026-11-05T04:54:06.016Z",
-   "seconds": 1514,
+   "seconds": 1697,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +57,7 @@
    "task": "[tools] T-2216 landing merge queue",
    "model": "opus",
    "started": "2026-11-05T04:54:12.399Z",
-   "seconds": 1508,
+   "seconds": 1691,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +66,7 @@
    "task": "[build] T-2369 gate switch Swift half",
    "model": "opus",
    "started": "2026-11-05T04:54:51.993Z",
-   "seconds": 1468,
+   "seconds": 1651,
    "finished": null,
    "effort": "high"
   },
@@ -75,22 +75,21 @@
    "task": "[tools] T-2457 repost runner split proposal",
    "model": "opus",
    "started": "2026-11-05T04:58:01.297Z",
-   "seconds": 1279,
+   "seconds": 1462,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys x7, Idris",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-2462 fix failing lane safety test",
    "model": "opus",
    "started": "2026-11-05T05:13:01.300Z",
-   "seconds": 379,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x8, Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-05T05:21:50.549000+00:00"
+  },
   {
    "name": "maren",
    "task": "[design] T-1456 storage sheet design copy",
@@ -114,20 +113,12 @@
    "started": "2026-11-05T04:53:39.769Z",
    "seconds": null,
    "finished": "2026-11-05T05:12:43.276000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-1753 bound-fields suffix fix",
-   "model": "opus",
-   "started": "2026-11-05T04:58:47.861Z",
-   "seconds": null,
-   "finished": "2026-11-05T05:10:07.111000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 417,
+  "runnable_count": 416,
   "blocked_count": 124
  },
  "meter": {
@@ -170,7 +161,7 @@
   "week_pct": 46.59,
   "usage_pct": 40.3,
   "work_pct": 74.9,
-  "read_at": "2026-11-05T05:19:00+00:00",
+  "read_at": "2026-11-05T05:22:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -202,7 +193,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-05T00:19:00-05:00"
+  "at": "2026-11-05T00:22:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -353,13 +344,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Title: Fix the safety test already failing |...",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "T-0296 follow-on reminder",
@@ -407,9 +391,21 @@
     "t": "After T-1035 lands",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Activity run log, Swift half",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "A safety test that checks nothing starts the personal lanes by accident was failing because...",
+    "at": "2026-11-05T00:21:00-05:00"
+   },
    {
     "w": "Maren",
     "t": "The widget design drawings now say 'Updated 1:52 PM' at the bottom of every widget instead of...",
@@ -419,27 +415,34 @@
     "w": "Ines",
     "t": "The file that keeps a widget's live values is now called fields.json, because it holds step...",
     "at": "2026-11-05T00:13:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Posted the fix for Evan's stalled account a as proposal: an unexpected file in an account's...",
-    "at": "2026-11-05T00:12:00-05:00"
    }
   ],
   "count": {
-   "next": 417,
+   "next": 416,
    "wait": 37,
    "blocked": 87,
    "you": 18
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6650434314",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Make sure that total cost..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -447,13 +450,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 9,
+  "main": 8,
   "lanes": 0,
-  "total": 9,
-  "at": "12:19 AM",
+  "total": 8,
+  "at": "12:22 AM",
   "why": "",
-  "at_iso": "2026-11-05T05:19:00+00:00",
+  "at_iso": "2026-11-05T05:22:00+00:00",
   "started": "11:46 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 9, started 11:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:19 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 8, started 11:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:22 AM ET</p></section>"
  }
 }

@@ -1,18 +1,46 @@
 {
  "schema": 1,
- "at": "2026-11-05T13:23:40.014837+00:00",
+ "at": "2026-11-05T13:26:43.150199+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-05T08:23:40-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2615 build one dispatcher",
+   "model": "opus",
+   "started": "2026-11-05T13:26:09.296Z",
+   "seconds": 33,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-2609 prompt alert tests on MacBook",
+   "model": "opus",
+   "started": "2026-11-05T13:26:16.596Z",
+   "seconds": 26,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-2603 T-2604 prompt alert fixes",
+   "model": "opus",
+   "started": "2026-11-05T13:26:24.227Z",
+   "seconds": 18,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys, Pernille, Idris",
  "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 412,
+  "runnable_count": 414,
   "blocked_count": 127
  },
  "meter": {
@@ -55,7 +83,7 @@
   "week_pct": 51.55,
   "usage_pct": 42.7,
   "work_pct": 73.4,
-  "read_at": "2026-11-05T13:23:00+00:00",
+  "read_at": "2026-11-05T13:26:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -87,39 +115,46 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T08:23:00-05:00"
+  "at": "2026-11-05T08:26:00-05:00"
  },
  "next_tick_why": "session",
- "pool": null,
+ "pool": {
+  "why": "On the API credits by the Investors' instruction, so the full pool runs",
+  "n": 12,
+  "at": "2026-11-05T08:23:39.404375-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, after T-1035 lands (personal-account...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-2615 build one dispatcher",
+   "model": "opus",
+   "since": "2026-11-05T13:26:09.296Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-2609 prompt alert tests on MacBook",
+   "model": "opus",
+   "since": "2026-11-05T13:26:16.596Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-2603 T-2604 prompt alert fixes",
+   "model": "opus",
+   "since": "2026-11-05T13:26:24.227Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P2, no Xcode, after T-1440 lands (Idris review...",
    "model": null,
    "since": null,
    "next": []
@@ -142,7 +177,35 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Build the one dispatcher for every account",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T13:26:09.296Z",
+    "o": "i"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check the prompt alert tests pass on the MacBook",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T13:26:16.596Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "A withdrawn prompt alert never appears later",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T13:26:24.227Z",
+    "o": "c"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -150,6 +213,13 @@
     "t": "Restart Evan's account and avoid credit gaps",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Build the one dispatcher for every account",
+    "s": "next",
+    "o": "i"
    },
    {
     "w": "Pernille",
@@ -206,57 +276,38 @@
     "t": "T-1669 rest",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Site overhaul build, after Maren's spec line...",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
    {
+    "w": "Ines",
+    "t": "Ines designed one program that sends every task to whichever account has the most usage left, so...",
+    "at": "2026-11-05T08:25:00-05:00"
+   },
+   {
+    "w": "Ines",
+    "t": "Ines listed four big simplifications: land finished work on the first try, product work first, a...",
+    "at": "2026-11-05T08:25:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Checked Idris's fix to how the upload tools find the main checkout and refuse unpushed code; it...",
     "at": "2026-11-05T08:16:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "When a work session freezes on a call that never answers, the run loop now ends it after 12...",
-    "at": "2026-11-05T08:14:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "A link the company posts in Chat to a file in its private repository now opens inside the Chat...",
-    "at": "2026-11-05T08:08:00-05:00"
    }
   ],
   "count": {
-   "next": 412,
+   "next": 414,
    "wait": 40,
    "blocked": 87,
    "you": 19
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6659043450",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Give me an update on Ines' \"big..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -264,13 +315,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 3,
   "lanes": 0,
-  "total": 0,
-  "at": "8:23 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-05T13:23:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:23 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 3,
+  "at": "8:26 AM",
+  "why": "",
+  "at_iso": "2026-11-05T13:26:00+00:00",
+  "started": "8:23 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:23 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:26 AM ET</p></section>"
  }
 }

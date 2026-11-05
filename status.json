@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T00:35:46.787949+00:00",
+ "at": "2026-11-05T00:38:50.538323+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,25 @@
  },
  "workers": [
   {
-   "name": "pernille",
-   "task": "[test] T-1857 WidgetFaceRule entitled-Pro tests and three mutants",
-   "model": "opus",
-   "started": "2026-11-04T23:24:08.862Z",
-   "seconds": 4297,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[ops] T-2134 measure lane branches parked on unclean session ends",
    "model": "opus",
    "started": "2026-11-04T23:25:07.244Z",
-   "seconds": 4239,
+   "seconds": 4423,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille, Odalys",
+ "who": "Odalys",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[test] T-1857 WidgetFaceRule entitled-Pro tests and three mutants",
+   "model": "opus",
+   "started": "2026-11-04T23:24:08.862Z",
+   "seconds": null,
+   "finished": "2026-11-05T00:38:27.412000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[ops] T-2182 stopped-lane sweep in the lane tick, as a proposal",
@@ -56,7 +55,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 371,
+  "runnable_count": 370,
   "blocked_count": 124
  },
  "meter": {
@@ -99,7 +98,7 @@
   "week_pct": 37.35,
   "usage_pct": 37.7,
   "work_pct": 75.7,
-  "read_at": "2026-11-05T00:35:00+00:00",
+  "read_at": "2026-11-05T00:38:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -511,7 +510,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-04T19:35:00-05:00"
+  "at": "2026-11-04T19:38:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -520,15 +519,6 @@
   "at": "2026-11-04T18:16:44.198950-05:00"
  },
  "lanes": [
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[test] T-1857 WidgetFaceRule entitled-Pro tests and...",
-   "model": "opus",
-   "since": "2026-11-04T23:24:08.862Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Odalys",
    "state": "running",
@@ -555,6 +545,14 @@
    "next": []
   },
   {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P2, Run heatmap levels by size, not brightness...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Maren",
    "state": "next",
    "task": "Maren, P2, the design copy follows T-1441, so the stale...",
@@ -573,15 +571,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Pernille",
-    "k": "test",
-    "t": "T-1857 WidgetFaceRule entitled-Pro tests and three mutants",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-04T23:24:08.862Z",
-    "o": "c"
-   },
    {
     "w": "Odalys",
     "k": "ops",
@@ -667,6 +656,11 @@
   "done": [
    {
     "w": "Pernille",
+    "t": "The widget's state rules now have a test proving a paying user's broken Pro widget still shows...",
+    "at": "2026-11-04T19:38:00-05:00"
+   },
+   {
+    "w": "Pernille",
     "t": "tint is now tested to refuse the widget card in the Python writer, the schema and validate()....",
     "at": "2026-11-04T19:04:00-05:00"
    },
@@ -674,15 +668,10 @@
     "w": "Odalys",
     "t": "The MacBook test runner now runs version 11, which can run one test class instead of the whole...",
     "at": "2026-11-04T18:52:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Ten tasks' work from one account's lane could not join the main line because two tasks added...",
-    "at": "2026-11-04T18:52:00-05:00"
    }
   ],
   "count": {
-   "next": 371,
+   "next": 370,
    "wait": 38,
    "blocked": 86,
    "you": 16
@@ -709,6 +698,46 @@
     "done": 0
    },
    "title": "Would it be practical or helpful in..."
+  },
+  {
+   "id": "c6646266110",
+   "state": "received",
+   "position": 3,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "approve"
+  },
+  {
+   "id": "c6646270326",
+   "state": "received",
+   "position": 4,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "approve"
+  },
+  {
+   "id": "c6646279540",
+   "state": "received",
+   "position": 5,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "done"
+  },
+  {
+   "id": "c6646282593",
+   "state": "received",
+   "position": 6,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "approve"
   }
  ],
  "trimmed": [
@@ -723,13 +752,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 3,
-  "total": 5,
-  "at": "7:35 PM",
+  "total": 4,
+  "at": "7:38 PM",
   "why": "",
-  "at_iso": "2026-11-05T00:35:00+00:00",
+  "at_iso": "2026-11-05T00:38:00+00:00",
   "started": "6:16 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:16 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:35 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 6:16 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:38 PM ET</p></section>"
  }
 }

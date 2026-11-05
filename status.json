@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T19:13:02.949176+00:00",
+ "at": "2026-11-05T19:16:03.756494+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2634 land merges on MacBook in parallel",
    "model": "opus",
    "started": "2026-11-05T18:32:53.686Z",
-   "seconds": 2409,
+   "seconds": 2590,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2570 retry unmerged parked work",
    "model": "opus",
    "started": "2026-11-05T18:33:25.639Z",
-   "seconds": 2377,
+   "seconds": 2558,
    "finished": null,
    "effort": "high"
   },
@@ -30,16 +30,7 @@
    "task": "[tools] T-2675 charter suite reds comparison",
    "model": "opus",
    "started": "2026-11-05T18:33:34.547Z",
-   "seconds": 2368,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2486 stuck state must not freeze Restart",
-   "model": "opus",
-   "started": "2026-11-05T18:51:03.787Z",
-   "seconds": 1319,
+   "seconds": 2549,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[tools] T-2692 applier pin uses GitHub's copy",
    "model": "opus",
    "started": "2026-11-05T18:59:57.708Z",
-   "seconds": 785,
+   "seconds": 966,
    "finished": null,
    "effort": "high"
   },
@@ -57,13 +48,21 @@
    "task": "[test] T-2628 Files export/import UI test failure",
    "model": "opus",
    "started": "2026-11-05T19:03:23.431Z",
-   "seconds": 579,
+   "seconds": 760,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x3, Ines, Idris x2",
+ "who": "Odalys x3, Ines, Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-2486 stuck state must not freeze Restart",
+   "model": "opus",
+   "started": "2026-11-05T18:51:03.787Z",
+   "seconds": null,
+   "finished": "2026-11-05T19:15:44.449000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-1677 record last run report at launch",
@@ -87,20 +86,12 @@
    "started": "2026-11-05T18:38:29.185Z",
    "seconds": null,
    "finished": "2026-11-05T19:10:10.837000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[release] T-2702 land internal-only upload setting",
-   "model": "opus",
-   "started": "2026-11-05T19:06:06.638Z",
-   "seconds": null,
-   "finished": "2026-11-05T19:10:05.290000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 436,
+  "runnable_count": 437,
   "blocked_count": 129
  },
  "meter": {
@@ -143,8 +134,42 @@
   "week_pct": 58.5,
   "usage_pct": 45.5,
   "work_pct": 71.9,
-  "read_at": "2026-11-05T19:13:00+00:00",
+  "read_at": "2026-11-05T19:16:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-2701",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Read the first queued runner job, then count a week",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T14:13:23-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a",
+    "task": "T-2266",
+    "w": "Idris",
+    "k": "test",
+    "t": "Run the stuck-signal tests on the MacBook",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T14:13:23-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-2271",
+    "w": "Idris",
+    "k": "build",
+    "t": "Fix extension tests that failed on the runner",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T14:13:23-05:00",
+    "n": "Evan"
+   },
    {
     "lane": "a2",
     "task": "T-2604",
@@ -210,7 +235,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T14:12:32-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b2",
@@ -298,18 +324,18 @@
   }
  ],
  "disk": {
-  "free_gb": 21,
+  "free_gb": 22,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 693
+   "free_gb": 691
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-05T14:13:00-05:00"
+  "at": "2026-11-05T14:16:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -339,9 +365,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[build] T-2486 stuck state must not freeze Restart",
+   "task": "[test] T-2628 Files export/import UI test failure",
    "model": "opus",
-   "since": "2026-11-05T18:51:03.787Z",
+   "since": "2026-11-05T19:03:23.431Z",
    "next": [],
    "effort": "high"
   },
@@ -397,15 +423,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T18:33:34.547Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Stuck state must not freeze Restart",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T18:51:03.787Z",
     "o": "c"
    },
    {
@@ -517,7 +534,7 @@
    }
   ],
   "count": {
-   "next": 436,
+   "next": 437,
    "wait": 42,
    "blocked": 87,
    "you": 19
@@ -537,13 +554,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 6,
-  "lanes": 5,
+  "main": 5,
+  "lanes": 6,
   "total": 11,
-  "at": "2:13 PM",
+  "at": "2:16 PM",
   "why": "",
-  "at_iso": "2026-11-05T19:13:00+00:00",
+  "at_iso": "2026-11-05T19:16:00+00:00",
   "started": "1:30 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>11</b> agents running now</p><p class=\"an-sub\">Main session 6, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 2:13 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>11</b> agents running now</p><p class=\"an-sub\">Main session 5, started 1:30 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 2:16 PM ET</p></section>"
  }
 }

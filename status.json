@@ -1,74 +1,41 @@
 {
  "schema": 1,
- "at": "2026-11-05T06:24:57.900586+00:00",
+ "at": "2026-11-05T06:35:06.454852+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-04T23:46:29-05:00"
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "ines",
-   "task": "[plan] T-2473 rebuild fold with 01:07 entry",
-   "model": "opus",
-   "started": "2026-11-05T06:19:42.163Z",
-   "seconds": null,
-   "finished": "2026-11-05T06:23:51.902000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-2400 new Home replaces old",
-   "model": "opus",
-   "started": "2026-11-05T04:54:06.016Z",
-   "seconds": null,
-   "finished": "2026-11-05T06:20:27.684000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2216 landing merge queue",
-   "model": "opus",
-   "started": "2026-11-05T04:54:12.399Z",
-   "seconds": null,
-   "finished": "2026-11-05T05:48:50.280000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2406 plain task titles",
-   "model": "opus",
-   "started": "2026-11-05T04:54:00.284Z",
-   "seconds": null,
-   "finished": "2026-11-05T05:39:23.563000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 420,
+  "runnable_count": 422,
   "blocked_count": 124
  },
  "meter": {
   "five_hour": {
-   "pct": 1.0,
-   "resets_at": "2026-11-05T08:20:00.503475+00:00",
+   "pct": 2.0,
+   "resets_at": "2026-11-05T08:19:59.762526+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 99.0,
+   "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 59.0,
-   "resets_at": "2026-11-08T07:00:00.503496+00:00",
+   "resets_at": "2026-11-08T06:59:59.762547+00:00",
    "used_words": "of your weekly allowance used",
    "left": 41.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 1.0,
-   "resets_at": "2026-11-08T07:00:00.503645+00:00",
+   "resets_at": "2026-11-08T06:59:59.762760+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-04T23:46:28.452384-05:00"
+  "read_at": "2026-11-05T01:35:05.634041-05:00"
  },
  "ui": {
   "week_pct": 0.69,
@@ -85,10 +52,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 46.59,
-  "usage_pct": 40.3,
+  "week_pct": 49.11,
+  "usage_pct": 41.6,
   "work_pct": 74.9,
-  "read_at": "2026-11-05T06:27:00+00:00",
+  "read_at": "2026-11-05T06:35:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -104,7 +71,7 @@
   },
   {
    "name": "b",
-   "used_usd": 1.15,
+   "used_usd": 54.38,
    "total_usd": 100.0
   }
  ],
@@ -113,26 +80,22 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 761
+   "free_gb": 762
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-05T01:27:00-05:00"
+  "at": "2026-11-05T01:35:00-05:00"
  },
  "next_tick_why": "session",
- "pool": {
-  "why": "On the API credits by the Investors' instruction, so the full pool runs",
-  "n": 12,
-  "at": "2026-11-04T23:46:28.789772-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
    "state": "next",
-   "task": "Title: Stop personal sessions taking more tasks than...",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
    "model": null,
    "since": null,
    "next": []
@@ -184,49 +147,56 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Title: Close or retry the work that never...",
+    "t": "Close or retry the work that never merged",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Pernille",
     "k": "build",
-    "t": "Title: Keep real packages out until the...",
+    "t": "Keep real packages out until the sandbox is...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "release",
+    "t": "Review the fixes to the build upload tools",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "release",
-    "t": "Title: Last checks before the first test...",
+    "t": "Last checks before the first test build",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Title: Name the stray item in a personal...",
+    "t": "Name the stray item in a personal account's...",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "Title: Run Python widget scripts inside the...",
+    "t": "Run Python widget scripts inside the widget...",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Title: Stop personal sessions taking more...",
+    "t": "Stop personal sessions taking more tasks...",
     "s": "next",
     "o": "c"
    },
    {
     "w": "Idris",
     "k": "build",
-    "t": "Title: Record each widget run in the app's...",
+    "t": "Record each widget run in the app's activity log",
     "s": "next",
     "o": "c"
    },
@@ -241,13 +211,6 @@
     "w": "Idris",
     "k": "build",
     "t": "T-1669 rest",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Site overhaul build, after Maren's spec line...",
     "s": "next",
     "o": "c"
    }
@@ -270,19 +233,40 @@
    }
   ],
   "count": {
-   "next": 420,
+   "next": 422,
    "wait": 38,
    "blocked": 86,
    "you": 18
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6651405639",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Why is nothing running"
+  },
+  {
+   "id": "c6651474906",
+   "state": "received",
+   "position": 2,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "The Chat page shouldn't have..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -293,10 +277,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "1:27 AM",
-  "why": "Between sessions: no session is running. Last check 11:46 PM ET.",
-  "at_iso": "2026-11-05T06:27:00+00:00",
+  "at": "1:35 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-05T06:35:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:27 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 11:46 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:35 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

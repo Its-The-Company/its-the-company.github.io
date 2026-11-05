@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T14:01:05.164619+00:00",
+ "at": "2026-11-05T14:04:09.435988+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2622 MacBook runs jobs in parallel",
    "model": "opus",
    "started": "2026-11-05T13:59:09.129Z",
-   "seconds": 116,
+   "seconds": 300,
    "finished": null,
    "effort": "high"
   },
@@ -21,22 +21,22 @@
    "task": "[tools] T-2479 restart Evan's personal lane",
    "model": "opus",
    "started": "2026-11-05T13:59:16.528Z",
-   "seconds": 108,
+   "seconds": 292,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys x2",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-2625 red tests from the full suite",
    "model": "opus",
    "started": "2026-11-05T13:59:24.016Z",
-   "seconds": 101,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-05T14:01:57.253000+00:00"
   }
  ],
- "who": "Odalys x2, Idris",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -83,7 +83,7 @@
   "week_pct": 51.55,
   "usage_pct": 42.7,
   "work_pct": 73.1,
-  "read_at": "2026-11-05T14:01:00+00:00",
+  "read_at": "2026-11-05T14:04:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -115,7 +115,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-05T09:01:00-05:00"
+  "at": "2026-11-05T09:04:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -135,12 +135,11 @@
   },
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-2625 red tests from the full suite",
-   "model": "opus",
-   "since": "2026-11-05T13:59:24.016Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -193,15 +192,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T13:59:16.528Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "A widget safety test still expects the old build switch",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T13:59:24.016Z",
     "o": "c"
    }
   ],
@@ -314,13 +304,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "9:01 AM",
+  "total": 2,
+  "at": "9:04 AM",
   "why": "",
-  "at_iso": "2026-11-05T14:01:00+00:00",
+  "at_iso": "2026-11-05T14:04:00+00:00",
   "started": "8:58 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:01 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:04 AM ET</p></section>"
  }
 }

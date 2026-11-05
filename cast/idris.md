@@ -54,6 +54,8 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 
 - T-2583 cc5c7c277 (prompt placement, T-2576 F1/F2): Desk+Placement 19/0 local; Pernille re-reviews. Real UIKit drop never reproduced (iOS 26 queues).
 
+- T-2625/26/27 08cba95a7 (gate pin + design-ahead Updated; shipped premade-trees checked fully drawn): unqueued, needs push; then runner_queue the 3 classes, tick.
+
 ## Lessons
 - Lanes edit tools/xc.sh and the Swift tree live: a lock wait can read a changed xc.sh (syntax error); archive/test from `git archive` + gitignored Vendor/ + tools/, with that tree's own xc.sh (T-2270).
 - awk compares split() parts as numbers (07 = 7e0 = 7): force text with `x ""`. To prove a commit check, stub git to claim success; filters and skip-worktree behave differently per command (T-2581 d4933f9dd).

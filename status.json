@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-05T05:16:07.813551+00:00",
+ "at": "2026-11-05T05:19:20.744135+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2452 per-lane 5-hour limit",
    "model": "opus",
    "started": "2026-11-05T04:53:44.891Z",
-   "seconds": 1342,
+   "seconds": 1535,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2453 every lane answers Investors",
    "model": "opus",
    "started": "2026-11-05T04:53:49.733Z",
-   "seconds": 1338,
+   "seconds": 1531,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[tools] T-2454 fold standing approval",
    "model": "opus",
    "started": "2026-11-05T04:53:54.357Z",
-   "seconds": 1333,
+   "seconds": 1526,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +39,7 @@
    "task": "[tools] T-2406 plain task titles",
    "model": "opus",
    "started": "2026-11-05T04:54:00.284Z",
-   "seconds": 1327,
+   "seconds": 1520,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +48,7 @@
    "task": "[site] T-2400 new Home replaces old",
    "model": "opus",
    "started": "2026-11-05T04:54:06.016Z",
-   "seconds": 1321,
+   "seconds": 1514,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +57,7 @@
    "task": "[tools] T-2216 landing merge queue",
    "model": "opus",
    "started": "2026-11-05T04:54:12.399Z",
-   "seconds": 1315,
+   "seconds": 1508,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +66,7 @@
    "task": "[build] T-2369 gate switch Swift half",
    "model": "opus",
    "started": "2026-11-05T04:54:51.993Z",
-   "seconds": 1275,
+   "seconds": 1468,
    "finished": null,
    "effort": "high"
   },
@@ -75,16 +75,7 @@
    "task": "[tools] T-2457 repost runner split proposal",
    "model": "opus",
    "started": "2026-11-05T04:58:01.297Z",
-   "seconds": 1086,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-1456 storage sheet design copy",
-   "model": "opus",
-   "started": "2026-11-05T04:59:01.193Z",
-   "seconds": 1026,
+   "seconds": 1279,
    "finished": null,
    "effort": "high"
   },
@@ -93,13 +84,21 @@
    "task": "[tools] T-2462 fix failing lane safety test",
    "model": "opus",
    "started": "2026-11-05T05:13:01.300Z",
-   "seconds": 186,
+   "seconds": 379,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x8, Idris, Maren",
+ "who": "Odalys x8, Idris",
  "recent": [
+  {
+   "name": "maren",
+   "task": "[design] T-1456 storage sheet design copy",
+   "model": "opus",
+   "started": "2026-11-05T04:59:01.193Z",
+   "seconds": null,
+   "finished": "2026-11-05T05:17:05.982000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-2461 bound fields naming ruling",
@@ -123,20 +122,12 @@
    "started": "2026-11-05T04:58:47.861Z",
    "seconds": null,
    "finished": "2026-11-05T05:10:07.111000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-1455 heatmap levels by size",
-   "model": "opus",
-   "started": "2026-11-05T04:58:43.123Z",
-   "seconds": null,
-   "finished": "2026-11-05T05:10:05.619000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 418,
+  "runnable_count": 417,
   "blocked_count": 124
  },
  "meter": {
@@ -179,7 +170,7 @@
   "week_pct": 46.59,
   "usage_pct": 40.3,
   "work_pct": 74.9,
-  "read_at": "2026-11-05T05:16:00+00:00",
+  "read_at": "2026-11-05T05:19:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -204,14 +195,14 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 758
+   "free_gb": 755
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-05T00:16:00-05:00"
+  "at": "2026-11-05T00:19:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -239,15 +230,6 @@
    "effort": "high"
   },
   {
-   "name": "Maren",
-   "state": "running",
-   "task": "[design] T-1456 storage sheet design copy",
-   "model": "opus",
-   "since": "2026-11-05T04:59:01.193Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
@@ -259,6 +241,14 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P2, no Xcode, after T-1440 lands (Idris review...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P2, no Xcode: after T-1798 (cae4d466e). (a)...",
    "model": null,
    "since": null,
    "next": []
@@ -421,6 +411,11 @@
   ],
   "done": [
    {
+    "w": "Maren",
+    "t": "The widget design drawings now say 'Updated 1:52 PM' at the bottom of every widget instead of...",
+    "at": "2026-11-05T00:16:00-05:00"
+   },
+   {
     "w": "Ines",
     "t": "The file that keeps a widget's live values is now called fields.json, because it holds step...",
     "at": "2026-11-05T00:13:00-05:00"
@@ -429,15 +424,10 @@
     "w": "Odalys",
     "t": "Posted the fix for Evan's stalled account a as proposal: an unexpected file in an account's...",
     "at": "2026-11-05T00:12:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The Script runs gallery widget now draws busier days as bigger squares, not only darker ones, so...",
-    "at": "2026-11-05T00:09:00-05:00"
    }
   ],
   "count": {
-   "next": 418,
+   "next": 417,
    "wait": 37,
    "blocked": 87,
    "you": 18
@@ -457,13 +447,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 10,
+  "main": 9,
   "lanes": 0,
-  "total": 10,
-  "at": "12:16 AM",
+  "total": 9,
+  "at": "12:19 AM",
   "why": "",
-  "at_iso": "2026-11-05T05:16:00+00:00",
+  "at_iso": "2026-11-05T05:19:00+00:00",
   "started": "11:46 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 10, started 11:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:16 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 9, started 11:46 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:19 AM ET</p></section>"
  }
 }

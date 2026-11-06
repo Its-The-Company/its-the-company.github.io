@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T01:20:13.048980+00:00",
+ "at": "2026-11-06T01:23:14.414156+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2830 spares on demand",
    "model": "opus",
    "started": "2026-11-06T00:25:43.225Z",
-   "seconds": 3269,
+   "seconds": 3451,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2833 idle alarm",
    "model": "opus",
    "started": "2026-11-06T00:25:57.429Z",
-   "seconds": 3255,
+   "seconds": 3436,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[tools] T-2725 T-2726 applier pin and fence",
    "model": "opus",
    "started": "2026-11-06T00:26:11.478Z",
-   "seconds": 3241,
+   "seconds": 3422,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +39,7 @@
    "task": "[tools] T-2675 charter suite compare",
    "model": "opus",
    "started": "2026-11-06T00:26:32.127Z",
-   "seconds": 3220,
+   "seconds": 3402,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +48,7 @@
    "task": "[build] T-2724 traceback trim honest",
    "model": "opus",
    "started": "2026-11-06T00:26:55.942Z",
-   "seconds": 3197,
+   "seconds": 3378,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +57,7 @@
    "task": "[tools] T-2839 land stuck lane work",
    "model": "opus",
    "started": "2026-11-06T00:36:26.557Z",
-   "seconds": 2626,
+   "seconds": 2807,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +66,7 @@
    "task": "[site] T-2667 new Home Chat Usage pages",
    "model": "opus",
    "started": "2026-11-06T00:43:08.348Z",
-   "seconds": 2224,
+   "seconds": 2406,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +75,7 @@
    "task": "[review] T-2847 completion import path fix",
    "model": "opus",
    "started": "2026-11-06T00:48:26.055Z",
-   "seconds": 1906,
+   "seconds": 2088,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +84,7 @@
    "task": "[tools] T-2849 adaptive agent pool",
    "model": "opus",
    "started": "2026-11-06T00:56:34.630Z",
-   "seconds": 1418,
+   "seconds": 1599,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +93,7 @@
    "task": "[release] T-2456 last checks first build",
    "model": "opus",
    "started": "2026-11-06T00:26:26.427Z",
-   "seconds": 3226,
+   "seconds": 3407,
    "finished": null,
    "effort": "high"
   }
@@ -136,7 +136,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 447,
+  "runnable_count": 448,
   "blocked_count": 121
  },
  "meter": {
@@ -179,7 +179,7 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T01:20:00+00:00",
+  "read_at": "2026-11-06T01:23:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -280,18 +280,18 @@
   }
  ],
  "disk": {
-  "free_gb": 19,
+  "free_gb": 18,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 658
+   "free_gb": 657
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-05T20:20:00-05:00"
+  "at": "2026-11-05T20:23:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -519,19 +519,31 @@
    }
   ],
   "count": {
-   "next": 447,
+   "next": 448,
    "wait": 45,
    "blocked": 76,
    "you": 19
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6674088956",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Prioritize TestFlight XCode runs if..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -542,10 +554,10 @@
   "main": 10,
   "lanes": 4,
   "total": 14,
-  "at": "8:20 PM",
+  "at": "8:23 PM",
   "why": "",
-  "at_iso": "2026-11-06T01:20:00+00:00",
+  "at_iso": "2026-11-06T01:23:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>14</b> agents running now</p><p class=\"an-sub\">Main session 10, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 8:20 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>14</b> agents running now</p><p class=\"an-sub\">Main session 10, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 8:23 PM ET</p></section>"
  }
 }

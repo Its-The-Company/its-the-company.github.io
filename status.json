@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T20:49:46.941537+00:00",
+ "at": "2026-11-06T20:52:53.379128+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,34 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[tools] T-2727 applier refusals on all paths",
+   "name": "pernille",
+   "task": "[review] T-3105 internal gate build review",
    "model": "opus",
-   "started": "2026-11-06T20:19:04.640Z",
-   "seconds": 1842,
+   "started": "2026-11-06T20:30:43.676Z",
+   "seconds": 1329,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "pernille",
-   "task": "[review] T-3105 internal gate build review",
+   "task": "[review] T-2711 re-review proposal applier",
    "model": "opus",
-   "started": "2026-11-06T20:30:43.676Z",
-   "seconds": 1143,
+   "started": "2026-11-06T20:50:43.638Z",
+   "seconds": 129,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Pernille",
+ "who": "Pernille x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2727 applier refusals on all paths",
+   "model": "opus",
+   "started": "2026-11-06T20:19:04.640Z",
+   "seconds": null,
+   "finished": "2026-11-06T20:49:56.485000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-2851 land measurement build",
@@ -56,7 +64,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 399,
+  "runnable_count": 400,
   "blocked_count": 121
  },
  "meter": {
@@ -99,7 +107,7 @@
   "week_pct": 63.66,
   "usage_pct": 41.2,
   "work_pct": 69.0,
-  "read_at": "2026-11-06T20:49:00+00:00",
+  "read_at": "2026-11-06T20:52:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -167,7 +175,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T15:13:45-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
@@ -198,53 +207,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T15:13:45-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b2",
-    "task": "T-3100",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Skip an API key that has run out of credit",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T15:13:44-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3101",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Write file guard notices in plain words",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T15:13:44-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b2",
-    "task": "T-2996",
-    "w": "Ines",
-    "k": "tools",
-    "t": "Decide who frees a stuck build slot",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T15:13:44-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b2",
-    "task": "T-3018",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retry finished work that could not be merged",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T15:13:44-05:00",
     "n": "Jeremy",
     "d": 1
    },
@@ -290,18 +252,18 @@
   }
  ],
  "disk": {
-  "free_gb": 11,
+  "free_gb": 12,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 525
+   "free_gb": 522
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T15:49:00-05:00"
+  "at": "2026-11-06T15:52:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -312,15 +274,6 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-2727 applier refusals on all paths",
-   "model": "opus",
-   "since": "2026-11-06T20:19:04.640Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Pernille",
    "state": "running",
    "task": "[review] T-3105 internal gate build review",
@@ -328,6 +281,14 @@
    "since": "2026-11-06T20:30:43.676Z",
    "next": [],
    "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
@@ -365,21 +326,21 @@
  "tasks": {
   "run": [
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Same refusals on the auto, standing and file paths",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T20:19:04.640Z",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
     "k": "review",
     "t": "Review the internal-only gate build",
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T20:30:43.676Z",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Recheck the large-change apply fixes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T20:50:43.638Z",
     "o": "c"
    }
   ],
@@ -473,30 +434,18 @@
    }
   ],
   "count": {
-   "next": 399,
+   "next": 400,
    "wait": 42,
    "blocked": 79,
    "you": 20
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6695106661",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Do you see any problems with this..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -505,12 +454,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 6,
-  "total": 8,
-  "at": "3:49 PM",
+  "lanes": 5,
+  "total": 7,
+  "at": "3:52 PM",
   "why": "",
-  "at_iso": "2026-11-06T20:49:00+00:00",
+  "at_iso": "2026-11-06T20:52:00+00:00",
   "started": "3:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 3:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 3:52 PM ET</p></section>"
  }
 }

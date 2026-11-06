@@ -1,58 +1,14 @@
 {
  "schema": 1,
- "at": "2026-11-06T20:43:36.477622+00:00",
+ "at": "2026-11-06T20:46:40.732834+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-06T15:09:46-05:00"
+  "kind": "",
+  "started": null
  },
- "workers": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-2727 applier refusals on all paths",
-   "model": "opus",
-   "started": "2026-11-06T20:19:04.640Z",
-   "seconds": 1471,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-3105 internal gate build review",
-   "model": "opus",
-   "started": "2026-11-06T20:30:43.676Z",
-   "seconds": 772,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Pernille",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[build] T-2851 land measurement build",
-   "model": "opus",
-   "started": "2026-11-06T20:14:22.401Z",
-   "seconds": null,
-   "finished": "2026-11-06T20:35:02.474000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[test] T-2843 TreeNodes weekday test",
-   "model": "opus",
-   "started": "2026-11-06T20:14:39.987Z",
-   "seconds": null,
-   "finished": "2026-11-06T20:17:55.671000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[bug] T-2843 TreeNodes weekday test",
-   "model": "opus",
-   "started": "2026-11-06T20:14:31.364Z",
-   "seconds": null,
-   "finished": "2026-11-06T20:14:31.413Z"
-  }
- ],
+ "workers": [],
+ "who": "",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -99,7 +55,7 @@
   "week_pct": 63.66,
   "usage_pct": 41.2,
   "work_pct": 69.0,
-  "read_at": "2026-11-06T20:43:00+00:00",
+  "read_at": "2026-11-06T20:46:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -144,7 +100,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T15:14:29-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a3",
@@ -289,7 +246,7 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 11,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -300,33 +257,19 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T15:43:00-05:00"
+  "at": "2026-11-06T15:46:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Spread: 19% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 9 (held: all signals under their lines, a raise waits 30 minutes a step)",
-  "n": 2,
-  "at": "2026-11-06T15:09:36.417095-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-2727 applier refusals on all paths",
-   "model": "opus",
-   "since": "2026-11-06T20:19:04.640Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-3105 internal gate build review",
-   "model": "opus",
-   "since": "2026-11-06T20:30:43.676Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
@@ -340,6 +283,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -362,26 +313,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Same refusals on the auto, standing and file paths",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T20:19:04.640Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the internal-only gate build",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T20:30:43.676Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -479,11 +411,23 @@
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6695106661",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Do you see any problems with this..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -491,13 +435,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 0,
   "lanes": 6,
-  "total": 8,
-  "at": "3:43 PM",
+  "total": 6,
+  "at": "3:46 PM",
   "why": "",
-  "at_iso": "2026-11-06T20:43:00+00:00",
-  "started": "3:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 3:43 PM ET</p></section>"
+  "at_iso": "2026-11-06T20:46:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 3:46 PM ET</p></section>"
  }
 }

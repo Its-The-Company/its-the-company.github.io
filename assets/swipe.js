@@ -3,14 +3,14 @@
 var x, y, t, on = false;
 var NO = 'input,textarea,select,button,[contenteditable],pre,code,table,.subtabs,.cv-dock,.cv-tabs,.filters';
 function order() {
-var top = [].slice.call(document.querySelectorAll('nav.tabs a')), sub = [].filter.call(document.querySelectorAll('nav.subtabs a'), function (a) { return !a.hidden; }), i;
-if (sub.length) {
-for (i = 0; i < top.length; i++) if (top[i].getAttribute('aria-current')) break;
-if (i < top.length) top.splice.apply(top, [i, 1].concat([].slice.call(sub)));
-}
+var top = [].slice.call(document.querySelectorAll('nav.tabs a'));
+[].forEach.call(document.querySelectorAll('nav.subtabs'), function (n) {
+var sub = [].filter.call(n.querySelectorAll('a'), function (a) { return !a.hidden; }), i = top.length;
+while (i-- && !top[i].getAttribute('aria-current'));
+if (i >= 0 && sub.length) top.splice.apply(top, [i, 1].concat(sub));
+});
 var seen = {};
-top = top.filter(function (a) { var h = a.getAttribute('href'); if (seen[h]) return false; seen[h] = 1; return true; });
-return top;
+return top.filter(function (a) { var h = a.getAttribute('href'); if (seen[h]) return false; seen[h] = 1; return true; });
 }
 function scrolls(el) {
 for (; el && el !== document.body; el = el.parentElement) {

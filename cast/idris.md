@@ -46,7 +46,8 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - T-2628: xc.sh why-lines a89496cfa (unpushed); runner 17 jobs-root sandbox b140e1312 + T-2722 fix 97744ee22 on idris/t2628-runner-jobs-root; re-review T-2730 (Pernille), then one Investor approve-sandbox.
 - Lesson T-2710: a file the unsandboxed side rereads (profile, log) must live outside the job's writable area or be read through a held fd. UI test cause still unread: needs a run after a89496cfa is pushed and T-2709 lands.
 
-- T-2054/T-2055 (2026-11-06): fix on main f7ca2d3bd+2a6ae60bb; green J-20261106-0722. Six mutants on land/idris-t2054 pending: `tools/land_mutants.py status --id idris-t2054`; tick both on 6 KILLED, then land_xc.py drop. Review T-3077 (Pernille).
+- T-2054/T-2055/T-3097 done 2026-11-06 (dc5e9a4b9). land/idris-t2054 and land/idris-t3097 still up: land_xc.py drop refuses mutant ids (tool gap).
+- Lesson T-1048: a stdlib size flake is APFS over-allocating the streamed zip under concurrent writes (not bytes). Fix is Pernille's call.
 - Lesson: no local Xcode slot -> tools/land_mutants.py runs xc mutants on the runner via land/<id>.
 
 ## Lessons

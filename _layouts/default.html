@@ -503,12 +503,9 @@ nav.subtabs.hometabs .num{font-weight:400}
   padding:var(--s2) var(--s4);background:var(--page);border-bottom:1px solid var(--line)}
 .cv-head{margin-top:var(--s2)}
 .cv-head h2{flex:1;min-width:0;margin:0;font-size:var(--fs-2);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-/* Lock in in the Chat head (T-0291): the title keeps its width; the bar shrinks; the send note wraps under the button. */
-.cv-head:has(.cv-lockbar) h2{flex:1 0 auto}
-.cv-lockbar{flex:0 1 auto;min-width:0;display:flex;flex-wrap:wrap;align-items:center;justify-content:flex-end;gap:2px var(--s2)}
-.cv-lockbar .cv-locknote:not(:empty){flex-basis:100%;text-align:right}
+/* T-3080: Chat's head is bare: no title, no Lock In; it only holds the pinned question, sticky, while that shows. */
+.cv-head.cv-bare,html .cv-head.cv-bare{margin:0;padding:0;border-bottom:0;background:none}
 .btn[aria-disabled=true]{opacity:.6;cursor:default}
-@media (max-width:879px){.cv-lockbar .cv-lockstate{display:none}}
 /* The pinned question: shown only when the latest Investor message has scrolled above the head. */
 .cv-pin{display:flex;gap:var(--s2);align-items:baseline;width:100%;margin:0;padding:6px var(--s3);border:0;border-left:3px solid var(--accent);
   background:var(--accent-soft);color:var(--ink);font:inherit;font-size:var(--fs-0);text-align:left;cursor:pointer}
@@ -648,10 +645,9 @@ summary.cv-sec{display:list-item;cursor:pointer;min-height:44px}
 .cv-tabs{overflow:visible}
 .cv-scroll{display:flex;gap:var(--s1);flex:1;min-width:0;overflow-x:auto;scrollbar-width:none}
 .cv-scroll::-webkit-scrollbar{display:none}
-.cv-set{margin:var(--s1) 0 0}
-.cv-set .chat-status{font-size:var(--fs-0)}
-/* R-4: a middle dot before the status ('Updated 11:14 AM.', the 401 line), only when it has text */
-.cv-set .chat-status:not(:empty)::before{content:'· '}
+/* T-3080: the "Updated" time sits at the bottom of the chat, under the last message and above the box. */
+.cv-upd{margin:var(--s2) 0 0;text-align:center}
+.cv-upd:empty{display:none}
 /* Render check fixes (Idris, tools/site_v3_qa.py): on a phone the fixed dock covered the footer's last row, so the
    room for the dock goes under the footer, not under main; on desktop the tiles show once, in the side. */
 @media (max-width:879px){main.cv-desk,main.cv-desk.cv-open{padding-bottom:0}

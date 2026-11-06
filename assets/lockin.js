@@ -74,10 +74,6 @@ mk(box, 'small', null, 'Lock in');
 var x = { box: box, b: mk(box, 'b'), t: mk(box, 'span', 'cv-sub') };
 button(x, mk(box, 'p'));
 };
-S.lockHead = (h) => {
-var box = mk(h, 'span', 'cv-lockbar'), x = { box: box, t: mk(box, 'small', 'meta cv-lockstate') };
-button(x, box);
-};
 if (fx) { if (fixed.hasAttribute('data-btn')) button(fx, fixed); else tiles.push(fx); }
 S.lockSet = (on) => { if (!S.rejected() && sent === null && now().on !== on) send(); };
 if (S.onReject) S.onReject.push(() => { tiles.forEach((x) => { if (x.btn) x.btn.hidden = x.note.hidden = true; }); });

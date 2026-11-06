@@ -110,7 +110,7 @@ var q = S.peekQ; S.peekQ = f; if (!q) (document.head || root).appendChild(Object
 var cur = null, limit = 30;
 if (W.history && 'scrollRestoration' in W.history) W.history.scrollRestoration = 'manual';
 if (!LS.getItem('company.seen0')) LS.setItem('company.seen0', now().toISOString());
-var seen0 = LS.getItem('company.seen0'), isDesk = !!(W.matchMedia && W.matchMedia('(min-width:880px)').matches);
+var isDesk = !!(W.matchMedia && W.matchMedia('(min-width:880px)').matches);
 var Q = (s) => document.querySelector ? document.querySelector(s) : null;
 var main = byId('main'), stripEl = byId('strip'), links = Q('main > .links'), aside = Q('main > .aside'), tog = Q('.now-toggle');
 var homeRow = Q('nav.hometabs');
@@ -119,14 +119,11 @@ var col = el('div', 'cv-col');
 if (main) { main.insertBefore(col, stripEl || main.firstChild); main.className = 'cv-desk'; }
 else put(root, col);
 if (stripEl) put(col, stripEl);
-var bar = mk(col, 'div', 'cv-tabs'), scroller = mk(bar, 'div', 'cv-scroll');
-attr(bar, 'role', 'tablist'); attr(bar, 'aria-label', 'Conversations');
-var setRow = mk(col, 'p', 'meta cv-set'), setL = mk(setRow, 'a', null, 'Settings'); setL.href = (D('connect') || 'connect.html') + '#name';
-put(setRow, txt(' · '));
-var tokenLink = mk(setRow, 'a', 'meta', 'Token connected · change'); tokenLink.href = D('connect') || 'connect.html';
-put(setRow, txt(' '));
-var status = mk(setRow, 'span', 'chat-status muted', '');
+var connect = D('connect') || 'connect.html';
+if (DE && DE.style) DE.style.setProperty('--cv-tabs-h', '0px');  // the sticky head has no tab row above it now
 var view = mk(col, 'div', 'cv-view');
+var status = mk(col, 'p', 'meta chat-status muted cv-upd', '');
+function noToken() { status.textContent = NO_TOKEN + ' '; mk(status, 'a', null, 'Change the token').href = connect; }
 if (links) put(col, links);
 var dock = mk(col, 'div', 'cv-dock');
 if (W.ResizeObserver) new W.ResizeObserver(() => { DE.style.setProperty('--cv-dock-fit', 'calc(' + dock.getBoundingClientRect().height + 'px + var(--s2))'); }).observe(dock);
@@ -145,8 +142,6 @@ function mainN() { var i = issues.concat(flat(extra)).filter((x) => x.state === 
 function byAt(a, b) { return a.created_at < b.created_at ? -1 : a.created_at > b.created_at ? 1 : 0; }
 function msgsOf(n) { return threads[n] || comments.filter((c) => numOf(c) === n).sort(byAt); }
 function allComments() { var by = {}; comments.concat(flat(threads)).forEach((c) => { by[c.id] = c; }); return Object.keys(by).map((k) => by[k]); }
-function seen(n) { var s = LS.getItem('company.seen.' + n); return s && s > seen0 ? s : seen0; }
-function unread(n) { return msgsOf(n).filter((c) => !isInv(login(c)) && !isReceipt(c.body) && c.created_at > seen(n)).length; }
 function markSeen(n) { var l = msgsOf(n); if (typeof n === 'number' && l.length) LS.setItem('company.seen.' + n, l[l.length - 1].created_at); }
 function parse() { var m = /^#t=(\w+)/.exec((W.location && W.location.hash) || ''); return m ? m[1] : 'main'; }
 function go(k) { if (k === 'main') k = mainN() || k; var h = '#t=' + k; if (W.location && W.location.hash !== h) W.location.hash = h; if (String(k) !== String(cur)) select(k); }
@@ -157,25 +152,7 @@ saveDraft(); cur = k; limit = 30; jump.hidden = true; isOpen = isDesk || (isMain
 bottom();
 if (isDesk && composerOn && isMain(k) && ta.focus) ta.focus();
 }
-function keys() { return [mainN() || 'main']; }
-function drawTabs() {
-scroller.textContent = '';
-keys().forEach((k) => {
-var b = mk(scroller, 'button', 'cv-tab'), sel = true, u = typeof k === 'number' ? unread(k) : 0;
-b.type = 'button'; attr(b, 'role', 'tab'); attr(b, 'aria-selected', sel ? 'true' : 'false'); b.tabIndex = sel ? 0 : -1;
-mk(b, 'span', 'cv-t', 'Chat');
-if (u) attr(mk(b, 'span', 'cv-badge', String(u)), 'aria-label', u + ' new');
-b.onclick = () => { go(k); };
-b.k = k;
-});
-var h = bar.offsetHeight, de = DE;
-if (h && de && de.style) de.style.setProperty('--cv-tabs-h', h + 'px');
-}
-bar.onkeydown = (ev) => {
-if (ev.key !== 'ArrowLeft' && ev.key !== 'ArrowRight') return;
-stop(ev); go('main');
-var t = [].filter.call(bar.querySelectorAll('[role=tab]'), (b) => b.tabIndex === 0)[0]; if (t) t.focus();
-};
+function drawTabs() {}
 on(W, 'hashchange', () => { var k = parse(); if (String(k) !== String(cur)) select(k); });
 function hue(l) { var h = 0, k; for (k = 0; k < l.length; k++) h = (h * 31 + l.charCodeAt(k)) >>> 0; return 'c' + (h % 6); }
 function sender(l, body) {
@@ -234,11 +211,12 @@ return put(log, !isInv(x.l) && isReceipt(x.body) ? sysEl(x) : msgEl(x, clamp));
 }
 function drawThread(open) {
 var n = cur, i = issue(n), k = i ? kindOf(i) : 'chat', m0 = isMain(n), d = i && k === 'urgent' && !m0 ? deadlineOf(i) : null;
-head = mk(view, 'div', 'cv-head');
-if (!m0) { mk(head, 'span', 'chip ' + k, KINDS[k]); mk(head, 'span', 'meta', '#' + n); }
+head = mk(view, 'div', 'cv-head' + (m0 ? ' cv-bare' : ''));
+if (!m0) {
+mk(head, 'span', 'chip ' + k, KINDS[k]); mk(head, 'span', 'meta', '#' + n);
 mk(head, 'h2', null, i ? ttl(i) + (i.state === 'closed' ? ' (closed)' : '') : 'Loading...');
-if (!m0) mk(head, 'a', 'meta', '← Chat').href = '#t=main';
-else if (S.lockHead) S.lockHead(head);  // the Lock in toggle (#41 c6430213838), lockin.js
+mk(head, 'a', 'meta', '← Chat').href = '#t=main';
+}
 if (d) put(head, d.t ? due(d) : el('span', 'cv-due', d.text));
 pin = mk(head, 'button', 'cv-pin'); pin.type = 'button'; pin.hidden = true;
 log = mk(view, 'div', 'cv-log'); shown = {}; lastDay = ''; waitEl = null; anchor = null;
@@ -255,7 +233,7 @@ waitLine();
 if (open) position();
 if (!threads[n] || !i) readThread(n);
 }
-function headH() { return (bar.offsetHeight || 0) + (head ? head.offsetHeight || 0 : 0); }
+function headH() { return head ? head.offsetHeight || 0 : 0; }
 function bottom() { if (W.scrollTo && DE) W.scrollTo(0, DE.scrollHeight); }
 function toMsg(a) { W.scrollTo(0, a.getBoundingClientRect().top + W.scrollY - headH() - 8); }
 function nearBottom() { var de = DE; return !de || !W.innerHeight || de.scrollHeight - (W.scrollY + W.innerHeight) < 200; }
@@ -310,11 +288,8 @@ attr(e, 'data-t', new Date(d.t).toISOString()); e.title = 'Deadline: ' + d.text;
 }
 function drawView(open) {
 view.textContent = ''; log = head = anchor = null;
-if (!lastDraw) { var p = mk(view, 'p', 'muted', S.rejected() ? NO_TOKEN + ' ' : 'Loading...'); if (S.rejected()) mk(p, 'a', null, 'Change the token').href = tokenLink.href; return; }
-if (cur === 'main') {
-mk(mk(view, 'div', 'cv-head'), 'h2', null, toText());
-return;
-}
+if (!lastDraw) { var p = mk(view, 'p', 'muted', S.rejected() ? NO_TOKEN + ' ' : 'Loading...'); if (S.rejected()) mk(p, 'a', null, 'Change the token').href = connect; return; }
+if (cur === 'main') return;  // no Chat issue yet: nothing above the box until the first message (T-3080)
 drawThread(open);
 }
 var isOpen = isDesk, sending = false;
@@ -453,7 +428,7 @@ if (cached) allow().then((a) => { if (String(a) !== String(cached.names)) refres
 if (typeof cur === 'number' && threads[cur] && n === 100) readThread(cur);
 status.textContent = 'Updated ' + clock(now().toISOString()) + '.';
 })
-.catch((e) => { status.textContent = S.rejected() ? NO_TOKEN : 'Could not load the threads: ' + e.message + '.'; });
+.catch((e) => { if (S.rejected()) noToken(); else status.textContent = 'Could not load the threads: ' + e.message + '.'; });
 }
 var sig = '';
 if (S.onStatus) S.onStatus.push((st) => {
@@ -466,8 +441,8 @@ var loadTimer = setInterval(load, 30000);
 on(document, 'visibilitychange', () => { if (!document.hidden && !S.rejected()) load(); });
 on(W, 'pageshow', (e) => { if (e.persisted && !S.rejected()) load(); });
 onReject.push(() => {
-clearInterval(loadTimer); send.disabled = barSend.disabled = true; tokenLink.textContent = 'Token rejected · change';
-status.textContent = NO_TOKEN; var u = byId('urgent'); if (u) u.hidden = false; if (!lastDraw) drawView(false);
+clearInterval(loadTimer); send.disabled = barSend.disabled = true;
+noToken(); var u = byId('urgent'); if (u) u.hidden = false; if (!lastDraw) drawView(false);
 });
 load();
 }

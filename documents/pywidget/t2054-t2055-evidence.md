@@ -62,6 +62,20 @@ T-2055 (pwbridge.c emit_for_run, br_write, br_emit):
 Still possible: a write that starts between runs is run 0, as before; a daemon thread of A that starts a new write
 while B is live is stamped B. C cannot tell whose thread it is; that is outside M2 and not claimed here.
 Lock order is `lock -> g_qlock` only; `g_qlock` never calls out, and nothing waits on the GIL under `lock`.
+
+## Mutant 5 rerun (T-3097, 2026-11-06)
+
+T-3077 H1: J-20261106-0833-mut-idris-t2054-5 (done-run-only) had no verdict; its build stopped at the stdlib size
+check (+8.4%, T-1048) before any test ran. Rerun alone from mutants-t2055.json on base 32388e712, land/idris-t3097:
+- J-20261106-1318-mut-idris-t3097-2, commit fd6e85cdd (pwbridge.c:350 `if (0) return 0;`): KILLED, 81.9 s, 1 executed,
+  1 failing: `BridgeTests/testParkedWriterOfAnEndedRunQueuesNothing`, BridgeSlice2Tests.swift:206,
+  `("[PyWidget.Record.Kind.stdout]") is not equal to ("[]") - nothing of A's after A's finished (S5)`.
+  That is the case the line exists for: A's parked writer woke after B's run and its stdout got through.
+- Same batch, -1 write-plain: KILLED again (2 listed failing). -3 emit-plain: queued.
+Six of six mutants now have a <span title="A test written in advance. If it fires, we drop the idea.">kill</span>. `python3 tools/land_mutants.py status --id idris-t3097`.
+
+T-1048 cause (same evidence run): APFS over-allocates a zip streamed by zipfile when other writers share the disk;
+reproduced 16/16 with 8 concurrent writers, 0/16 when the same zip is written in one write. Board note on T-1048.
 {% endraw %}
 
 </div>

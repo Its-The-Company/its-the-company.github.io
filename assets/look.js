@@ -68,18 +68,19 @@ function draw(st,isPub){var l=S.lane.main(st,isPub).concat(S.lane.rows(st).filte
 l.forEach(function(r){var t=String(r.t||r.task||''),id=r.task||(t.match(/\bT-\d+/)||[''])[0],k=id||nm(t),s=(L.st||{})[id],m;if(r.w)o[String(r.w).toLowerCase()]=1;if(!k||seen[k])return;seen[k]=1;
 m=r.at?Math.round((now-Date.parse(r.at))/6e4):NaN;u.push({id:id,t:nm(r.t||r.task),w:[r.w],m:r.m,min:m>=0?m:-1,s:s?s[0]:r.k==='review'?'review':'coding',n:s?s[1]:''})});
 items=u;render();wk=document.getElementById('lk-working');if(wk)wk.textContent=Object.keys(o).length+' working';idle(st)}
-(function(){var W={tests:{testq:1,testing:1},merge:{mergeq:1,merging:1}},st=L.st||{};
+(function(){var W={tests:{testq:1},merge:{mergeq:1}},st=L.st||{};
 [].forEach.call(document.querySelectorAll('#lk-wq a[data-wq]'),function(a){var w=W[a.getAttribute('data-wq')]||{},n=0,b=a.querySelector('b');
 Object.keys(st).forEach(function(k){if(st[k]&&w[st[k][0]])n++});if(b)b.textContent=n})})();
 render();if(S&&S.onStatus&&S.lane){S.onStatus.push(draw);if(S.status&&S.status())draw(S.status(),true)}});
-// T-2940: Queued folds behind a button at the top of its list; the one Lock In dropdown in Usage (main account, all lanes or
+// T-2940: Queued (and T-3094 the Merge queue) folds behind a button at the top of its list: rows past data-max carry lk-fold; the one Lock In dropdown in Usage (main account, all lanes or
 // any subset) posts through lockin.js (S.lockSet: LOCK IN / UNLOCK on the Chat issue) and personal.js (S.laneLock: the lane's
 // own lock key, in the file the Lanes switches write). A token holder only; each send takes two taps, as every other Lock In button does.
-document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,q=document.getElementById('lk-q'),qb=document.getElementById('lk-q-more'),qa=false,
-d=document.getElementById('lk-lockmenu'),mx;
+document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,d=document.getElementById('lk-lockmenu');
 function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;p.appendChild(e);return e}
-if(q&&qb){mx=+q.getAttribute('data-max')||4;var n=q.children.length,pq=function(){q.classList.toggle('lk-qshort',!qa);qb.hidden=n<=mx;qb.setAttribute('aria-expanded',qa);qb.textContent=qa?'Show fewer ▴':'Show '+(n-mx)+' more ▾'};
-qb.onclick=function(){qa=!qa;pq()};pq()}
+[['lk-q','lk-q-more'],['lk-mq','lk-mq-more']].forEach(function(k){var q=document.getElementById(k[0]),qb=document.getElementById(k[1]),qa=false,mx,n;if(!q||!qb)return;
+mx=+q.getAttribute('data-max')||4;n=q.children.length;[].forEach.call(q.children,function(c,i){c.classList.toggle('lk-fold',i>=mx)});
+function pq(){q.classList.toggle('lk-qshort',!qa);qb.hidden=n<=mx;qb.setAttribute('aria-expanded',qa);qb.textContent=qa?'Show fewer ▴':'Show '+(n-mx)+' more ▾'}
+qb.onclick=function(){qa=!qa;pq()};pq()});
 if(!d||!S||!S.getToken||!S.getToken())return;d.hidden=false;
 var box=d.querySelector('div'),arm=null,armT=0,tm,note;
 function build(){var p=document.getElementById('personal'),st=(p&&p.getAttribute('data-state')||'').split(' ').filter(Boolean),rows=[['All lanes','all'],['Main account','main']],cb={},b;

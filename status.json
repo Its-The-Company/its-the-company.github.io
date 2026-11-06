@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T17:19:02.419396+00:00",
+ "at": "2026-11-06T17:22:08.004880+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,12 +12,21 @@
    "task": "[tools] T-3084 machine records out of git",
    "model": "opus",
    "started": "2026-11-06T15:45:41.106Z",
-   "seconds": 5601,
+   "seconds": 5786,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-2977 main site test green",
+   "model": "opus",
+   "started": "2026-11-06T17:19:20.550Z",
+   "seconds": 167,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys",
+ "who": "Odalys x2",
  "recent": [
   {
    "name": "odalys",
@@ -90,7 +99,7 @@
   "week_pct": 64.37,
   "usage_pct": 41.9,
   "work_pct": 69.7,
-  "read_at": "2026-11-06T17:19:00+00:00",
+  "read_at": "2026-11-06T17:22:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -122,7 +131,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T12:19:00-05:00"
+  "at": "2026-11-06T12:22:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -192,6 +201,15 @@
     "e": "high",
     "at": "2026-11-06T15:45:41.106Z",
     "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Make main's site test green again",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T17:19:20.550Z",
+    "o": "c"
    }
   ],
   "open": [
@@ -303,13 +321,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 0,
-  "total": 1,
-  "at": "12:19 PM",
+  "total": 2,
+  "at": "12:22 PM",
   "why": "",
-  "at_iso": "2026-11-06T17:19:00+00:00",
+  "at_iso": "2026-11-06T17:22:00+00:00",
   "started": "10:44 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:44 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:19 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:44 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:22 PM ET</p></section>"
  }
 }

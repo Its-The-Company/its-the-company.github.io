@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T18:35:16.129134+00:00",
+ "at": "2026-11-06T18:38:17.619899+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,33 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[test] T-3097 rerun mutant 5",
+   "name": "pernille",
+   "task": "[build] T-1048 stdlib zip size check flake",
    "model": "opus",
-   "started": "2026-11-06T18:13:52.212Z",
-   "seconds": 1283,
+   "started": "2026-11-06T18:37:22.559Z",
+   "seconds": 55,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Pernille",
+ "recent": [
   {
    "name": "odalys",
    "task": "[site] T-3009 Running shows only active agents",
    "model": "opus",
    "started": "2026-11-06T18:28:56.833Z",
-   "seconds": 379,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-06T18:38:16.533000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[test] T-3097 rerun mutant 5",
+   "model": "opus",
+   "started": "2026-11-06T18:13:52.212Z",
+   "seconds": null,
+   "finished": "2026-11-06T18:36:55.867000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[site] T-3094 merge queue Show More on Home",
@@ -43,28 +50,12 @@
    "started": "2026-11-06T18:08:15.941Z",
    "seconds": null,
    "finished": "2026-11-06T18:13:34.992000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-3080 Chat page shows only the chat",
-   "model": "opus",
-   "started": "2026-11-06T17:27:53.537Z",
-   "seconds": null,
-   "finished": "2026-11-06T18:08:07.905000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3093 site test on site-code lands",
-   "model": "opus",
-   "started": "2026-11-06T17:33:01.280Z",
-   "seconds": null,
-   "finished": "2026-11-06T18:07:46.859000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 400,
+  "runnable_count": 397,
   "blocked_count": 121
  },
  "meter": {
@@ -107,7 +98,7 @@
   "week_pct": 64.37,
   "usage_pct": 41.9,
   "work_pct": 69.7,
-  "read_at": "2026-11-06T18:35:00+00:00",
+  "read_at": "2026-11-06T18:38:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -139,7 +130,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T13:35:00-05:00"
+  "at": "2026-11-06T13:38:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -150,35 +141,34 @@
  },
  "lanes": [
   {
-   "name": "Idris",
+   "name": "Pernille",
    "state": "running",
-   "task": "[test] T-3097 rerun mutant 5",
+   "task": "[build] T-1048 stdlib zip size check flake",
    "model": "opus",
-   "since": "2026-11-06T18:13:52.212Z",
+   "since": "2026-11-06T18:37:22.559Z",
    "next": [],
    "effort": "high"
   },
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[site] T-3009 Running shows only active agents",
-   "model": "opus",
-   "since": "2026-11-06T18:28:56.833Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Ines",
    "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Pernille",
+   "name": "Idris",
    "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -203,22 +193,13 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "test",
-    "t": "Rerun the late-record check whose build failed",
+    "w": "Pernille",
+    "k": "build",
+    "t": "Find why the stdlib size check fails sometimes",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-06T18:13:52.212Z",
+    "at": "2026-11-06T18:37:22.559Z",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Show only active agents under Running on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T18:28:56.833Z",
-    "o": "i"
    }
   ],
   "open": [
@@ -295,23 +276,23 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "The still-unlanded work from lane a2's stopped session goes back for one more landing try, cut...",
-    "at": "2026-11-06T13:32:00-05:00"
+    "w": "Odalys",
+    "t": "Home's Running now counts only tasks an agent is working on; finished work waiting for tests or...",
+    "at": "2026-11-06T13:38:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "Lane a3's one unlanded design note goes back for a landing try; everything else from that...",
-    "at": "2026-11-06T13:32:00-05:00"
+    "t": "The app's stuck and unstuck signals can no longer arrive in the wrong order around a run's end;...",
+    "at": "2026-11-06T13:36:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "No retry line was needed: the only work this stopped session held was a retry request that a...",
-    "at": "2026-11-06T13:32:00-05:00"
+    "t": "Output from a finished script can no longer leak into the next run's log; code reviewed, full...",
+    "at": "2026-11-06T13:36:00-05:00"
    }
   ],
   "count": {
-   "next": 400,
+   "next": 397,
    "wait": 42,
    "blocked": 79,
    "you": 20
@@ -331,13 +312,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "1:35 PM",
+  "total": 1,
+  "at": "1:38 PM",
   "why": "",
-  "at_iso": "2026-11-06T18:35:00+00:00",
+  "at_iso": "2026-11-06T18:38:00+00:00",
   "started": "10:44 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:44 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:35 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:44 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:38 PM ET</p></section>"
  }
 }

@@ -249,6 +249,11 @@ return w;
 boxes.push(x); draw();
 }
 S.endTile = mount;
+S.laneLock = (ids, lock) => commit((o) => {
+var c = 0;
+ids.forEach((i) => { var k = 'personal_lane_' + i + '_lock_in'; if ((o[k] === true) !== lock) { o[k] = lock; c = 1; } });
+if (!c) return 'Already ' + mode(lock) + '; nothing sent.';
+}, ids.join(', ') + ' ' + mode(lock), 'Saved on GitHub. A running session keeps its mode; the next session takes the new one.');
 [].slice.call(D.querySelectorAll('.cv-glance')).forEach((g) => { if (!g.querySelector('.cv-personal')) mount(g); });
 if (S.onReject) S.onReject.push(draw);
 if (S.onStatus) S.onStatus.push(draw);

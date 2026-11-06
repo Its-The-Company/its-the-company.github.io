@@ -99,28 +99,8 @@ Dated task logs and full lessons: archive.md.
 - Lesson T-2710: a file the unsandboxed side rereads (profile, log) must live outside the job's writable area or be read through a held fd. UI test cause still unread: needs a run after a89496cfa is pushed and T-2709 lands.
 
 ## Lessons
-- Never commit ops/board.md by path after a board_tick refusal: it carries other lanes' live board edits (b1f5af5e5, 2026-11-05).
-- T-2563..2565 2a86da9a2 (ledger in company repo only, --upload clean-tree + PWSourceCommit, ask needs upload exit 0): re-review T-2566 (Pernille). --upload must run on a clean clone; main always has dirty ops/. T-2588 8fef5efa2: --upload takes only origin/main commits (push first); pin only from tools/main-checkout.path, no env override.
-- MacBook runner: xc-test only (no -test-iterations, no mutants); result at origin/macbook-results:ops/jobs/<J>/result.json; xc_route.py status <J>.
-- An uncompiled commit on main reddens every runner job queued after it, not just its own: compile first (J-1728..1822).
-- App-target code typechecks on host with no Xcode slot: swiftc -typecheck, iphonesimulator SDK, Shared/**/*.swift + the file + stubs, PyBridge.h header, Python.xcframework -F (T-2316).
-- grep the code for a task's ID before starting (T-0426). Calendar().timeZone follows NSTimeZone.default, not TimeZone.current: set TZ + NSTimeZone.resetSystemTimeZone() and assert the fixture moved (T-1946/T-2011). Cleaning text for a consumer that cleans again with a cruder regex reopens the hole (T-2135).
-- "You hold the slot" is not the lock: lanes b/b2/b3 queue on it; a foreground xc.sh can wait 20 min and die unrun. Check pgrep xc_lock first (T-2356).
-- Lanes edit tools/xc.sh and the Swift tree live: a lock wait can read a changed xc.sh (syntax error); archive/test from `git archive` + gitignored Vendor/ + tools/, with that tree's own xc.sh (T-2270).
 
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
-
-- T-1852 0448468a9 (closed lane after stuck, 5/5 mutants): needs an independent review before the (c) flag. Lesson: board_tick takes one commit and one repo path as Evidence; a macbook-results job file is not one, so cite the job id in Detail.
-- Lesson T-2053: a mutant that reorders code must move the test seam (Debug hook) with it, or it survives without testing anything. A SURVIVED first asks: is the mutant the real old code?
-
-- T-1861 fe0149caf: T-0678's button must call WidgetWriter.refreshButton (intent rows); mutants-t1861.json unrun. Lock queue can pass 30 min: XC_LOCK_WAIT=3000.
-- Lesson T-2053: a mutant that reorders code must move the test seam (Debug hook) with it, or it survives without testing anything. A SURVIVED first asks: is the mutant the real old code?
-
-- T-1861 fe0149caf: T-0678's button must call WidgetWriter.refreshButton (intent rows); mutants-t1861.json unrun. Lock queue can pass 30 min: XC_LOCK_WAIT=3000.
-- Lesson T-1677: untested work in a shared lane worktree blocks others (dirty tree stops runner routing): keep it on a side ref (temp GIT_INDEX_FILE + commit-tree + update-ref refs/wip/...), restore the files. zsh does not split $VAR: use a bash array.
-
-- T-2511 02134c594 (jedi never rebinds sys.path; get_module_info swapped it too, review missed it): review T-2847 (Pernille). Lesson: a test that undoes a patch restores what was there, never the fix, or it hides mutants from later tests.
-- T-2906 (2026-11-05): Indent icon + build 2, 0b5b102cf on main; e3583213c (94cebc4c0+it) verified, not sent. Lesson: upload.sh --upload needs a commit ON origin/main, so "old tested sha + my fix" can't ship; plan the source commit as a pushed main commit and test that. Continuation T-2918.
 
 - T-2853 cf0f59ceb (badge via demotion after 2nd-process refusal): green J-20261105-2326-xc-test (91/0); mutant J-...-2326-xc-test-2 rides land/idris-t2853 (7c0d0db93), result pending; then Pernille review, drop the ref, tick.
 {% endraw %}

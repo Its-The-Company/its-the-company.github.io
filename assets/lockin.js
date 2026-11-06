@@ -79,6 +79,7 @@ var box = mk(h, 'span', 'cv-lockbar'), x = { box: box, t: mk(box, 'small', 'meta
 button(x, box);
 };
 if (fx) { if (fixed.hasAttribute('data-btn')) button(fx, fixed); else tiles.push(fx); }
+S.lockSet = (on) => { if (!S.rejected() && sent === null && now().on !== on) send(); };
 if (S.onReject) S.onReject.push(() => { tiles.forEach((x) => { if (x.btn) x.btn.hidden = x.note.hidden = true; }); });
 if (S.onStatus) S.onStatus.push(draw);
 draw();

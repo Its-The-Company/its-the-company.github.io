@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src 'self' https://api.github.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; base-uri 'self'; form-action 'self' https://github.com">
 <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
 <meta name="description" content="{{ page.description | default: site.description }}">
@@ -97,6 +97,20 @@ header.site .brand{font-weight:800;font-size:var(--fs-3);letter-spacing:-.01em;t
 .tabs a[aria-current]{background:var(--head-ink);color:var(--head-bg);font-weight:700;box-shadow:inset 0 -3px 0 var(--tab-mark)}
 .tabs a:focus-visible{outline-color:var(--head-ink)}
 @media (min-width:880px){.tabs{flex:0 1 460px;margin-left:auto}}
+/* T-2940 (friesevan #41 c6678446926): on phones the bar stays at the top while the page scrolls; the notch and the Home Screen
+   web app's status bar are cleared by the safe-area inset (the viewport says viewport-fit=cover). --hdr-h is its height, for
+   the chat's own sticky rows under it. The logo slot is a place only: no logo until the Investors choose one (T-2941, C51). */
+header.site .logo-slot{display:inline-block;width:var(--logo-w,0);height:var(--logo-h,0);flex:none}
+@media (max-width:879px){
+  header.site{position:sticky;top:0;z-index:30;border-bottom:1px solid var(--head-line)}
+  header.site .wrap{gap:var(--s1) var(--s3);padding-bottom:var(--s2)}
+  header.site details.info summary{width:36px;height:36px}
+:root{--hdr-h:calc(131px + env(safe-area-inset-top))}
+  html .cv-tabs{top:var(--hdr-h)}html .cv-head{top:calc(var(--hdr-h) + var(--cv-tabs-h,57px))}
+  .lk-home [id]{scroll-margin-top:calc(var(--hdr-h) + var(--s2))}
+  header.site .brand{order:0;flex:1 1 auto}header.site details.info{order:1;margin-left:0}header.site .tabs{order:2;flex:1 1 100%}
+  header.site .wrap{padding-top:calc(var(--s3) + env(safe-area-inset-top));padding-left:max(var(--s4),env(safe-area-inset-left));padding-right:max(var(--s4),env(safe-area-inset-right))}
+}
 /* T-1776: About as an info icon (four-sections.md 2, C44): a <details>, so it opens without script */
 details.info{position:relative;order:2;margin-left:auto}details.info:has(~ .bell){margin-left:0}@media (min-width:880px){details.info{margin-left:0}}details.info summary{list-style:none;cursor:pointer;width:44px;height:44px;box-sizing:border-box;display:grid;place-items:center;border:1px solid var(--head-line);border-radius:var(--r-m);font:italic 700 var(--fs-2) Georgia,serif;color:var(--head-ink)}details.info summary::-webkit-details-marker{display:none}.infop{position:absolute;right:0;top:52px;z-index:20;width:min(300px,80vw);padding:var(--s3);background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:var(--r-m);font-size:13px}.infop p{margin:0 0 var(--s2)}
 @media (max-width:440px){.tabs a{padding:var(--s2) var(--s1)}}
@@ -719,7 +733,7 @@ html,body,.cv-dock textarea,.cv-dock .cv-state{overscroll-behavior-y:auto}
 <body>
 <a class="skip" href="#main">Skip to the content</a>
 <header class="site"><div class="wrap">
-<a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+<a class="brand" href="{{ '/' | relative_url }}"><span class="logo-slot" aria-hidden="true"></span>{{ site.title }}</a>
 <nav class="tabs" aria-label="Sections">
 <a href="{{ '/' | relative_url }}"{% if page.section == "home" %} aria-current="page"{% endif %}>Home</a>
 <a href="{{ '/chat/' | relative_url }}" data-chat-tab{% if page.section == "chat" %} aria-current="page"{% endif %}>Chat</a>

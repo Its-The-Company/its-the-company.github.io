@@ -52,13 +52,14 @@ if(flt){flt.textContent='';[['all','All',items.length]].concat(ST.filter(functio
 var b=mk(flt,'button','lk-ch');b.type='button';b.setAttribute('aria-pressed',fl===c[0]);if(c[0]!=='all')mark(b,c[0]);b.appendChild(document.createTextNode(c[1]+' '));mk(b,'small','',String(c[2]));
 b.onclick=function(){fl=c[0];render()}})}
 box.textContent='';v=items.filter(function(x){return fl==='all'||x.s===fl}).sort(order);v.forEach(card);if(!items.length)mk(box,'p','','Nothing running.');
-box.classList.toggle('lk-short',!all);mo=document.getElementById('lk-run-more');
+box.classList.toggle('lk-short',!all);
+['lk-run-more','lk-run-more-top'].forEach(function(k){mo=document.getElementById(k);
 if(mo){mo.hidden=v.length<=3;mo.textContent='';mo.classList.toggle('lk-o3',!all&&v.length<=4);mo.setAttribute('aria-expanded',all);
-if(all)mo.textContent='Show fewer ▴';else{mk(mo,'span','lk-m4','Show '+(v.length-4)+' more ▾');mk(mo,'span','lk-m3','Show '+(v.length-3)+' more ▾')}}
+if(all)mo.textContent='Show fewer ▴';else{mk(mo,'span','lk-m4','Show '+(v.length-4)+' more ▾');mk(mo,'span','lk-m3','Show '+(v.length-3)+' more ▾')}}});
 so=document.getElementById('lk-sort');if(so){so.textContent='Sort: stage, '+(up?'first first':'last first')+' ▾';so.setAttribute('aria-pressed',up)}
 c=document.getElementById('lk-run-n');if(c)c.textContent=items.length}
 var so=document.getElementById('lk-sort'),mo=document.getElementById('lk-run-more');
-if(so)so.onclick=function(){up=!up;render()};if(mo)mo.onclick=function(){all=!all;try{localStorage.setItem(K,all?'1':'0')}catch(e){}render()};
+if(so)so.onclick=function(){up=!up;render()};['lk-run-more','lk-run-more-top'].forEach(function(k){var m=document.getElementById(k);if(m)m.onclick=function(){all=!all;try{localStorage.setItem(K,all?'1':'0')}catch(e){}render()}});
 // T-2833: the idle alarm (no work session for 15+ minutes while work is allowed) follows every status too.
 function idle(st){var q=st.idle,sf=document.getElementById('lk-sf'),ie=document.getElementById('lk-idle');if(sf&&!ie){ie=document.createElement('p');ie.id='lk-idle';ie.className='meta lk-idle';sf.insertBefore(ie,sf.firstChild)}
 if(ie){if(q&&q.why&&q.since){var mn=Math.max(0,Math.round((Date.now()-Date.parse(q.since))/6e4));ie.textContent='No work session for '+(mn>=60?Math.floor(mn/60)+' h '+(mn%60)+' m':mn+' min')+' while work is allowed: '+q.why+'.'+(q.healed&&q.healed.length?' Done: '+q.healed.join('; ')+'.':'');ie.hidden=false}else ie.hidden=true}}
@@ -69,3 +70,28 @@ m=r.at?Math.round((now-Date.parse(r.at))/6e4):NaN;u.push({id:id,t:nm(r.t||r.task
 (L.q||[]).forEach(function(x){if(seen[x.id])return;seen[x.id]=1;u.push(Object.assign({},x,{min:x.min>=0?x.min+late:-1}))});
 items=u;render();wk=document.getElementById('lk-working');if(wk)wk.textContent=Object.keys(o).length+' working';idle(st)}
 render();if(S&&S.onStatus&&S.lane){S.onStatus.push(draw);if(S.status&&S.status())draw(S.status(),true)}});
+// T-2940: Queued folds behind a button at the top of its list; the one Lock In dropdown in Usage (main account, all lanes or
+// any subset) posts through lockin.js (S.lockSet: LOCK IN / UNLOCK on the Chat issue) and personal.js (S.laneLock: the lane's
+// own lock key, in the file the Lanes switches write). A token holder only; each send takes two taps, as every other Lock In button does.
+document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,q=document.getElementById('lk-q'),qb=document.getElementById('lk-q-more'),qa=false,
+d=document.getElementById('lk-lockmenu'),mx;
+function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;p.appendChild(e);return e}
+if(q&&qb){mx=+q.getAttribute('data-max')||4;var n=q.children.length,pq=function(){q.classList.toggle('lk-qshort',!qa);qb.hidden=n<=mx;qb.setAttribute('aria-expanded',qa);qb.textContent=qa?'Show fewer ▴':'Show '+(n-mx)+' more ▾'};
+qb.onclick=function(){qa=!qa;pq()};pq()}
+if(!d||!S||!S.getToken||!S.getToken())return;d.hidden=false;
+var box=d.querySelector('div'),arm=null,armT=0,tm,note;
+function build(){var p=document.getElementById('personal'),st=(p&&p.getAttribute('data-state')||'').split(' ').filter(Boolean),rows=[['All lanes','all'],['Main account','main']],cb={},b;
+st.forEach(function(x){var a=x.split(':');if(a[1]==='1'&&/^[a-z0-9]$/.test(a[0]))rows.push(['Account '+a[0].toUpperCase(),a[0]])});
+box.textContent='';box.className='lk-lm';
+rows.forEach(function(r){var l=mk(box,'label'),i=mk(l,'input');i.type='checkbox';cb[r[1]]=i;l.appendChild(document.createTextNode(r[0]));
+i.onchange=function(){if(r[1]==='all')Object.keys(cb).forEach(function(k){if(k!=='main')cb[k].checked=i.checked});arm=null}});
+b=mk(box,'div','lk-lb');note=mk(box,'small','meta');note.setAttribute('role','status');
+[['Lock In',true,'lk-lgo'],['Spread',false,'lk-lsp']].forEach(function(o){var bt=mk(b,'button','btn '+o[2],o[0]);bt.type='button';
+bt.onclick=function(){var t=Date.now(),ids=Object.keys(cb).filter(function(k){return k!=='all'&&k!=='main'&&cb[k].checked}),m=cb.main.checked;
+if(!m&&!ids.length){note.textContent='Pick the main account or a lane first.';return}
+if(arm!==o[1]){arm=o[1];armT=t;clearTimeout(tm);tm=setTimeout(function(){arm=null;note.textContent=''},5000);note.textContent='Tap again within 5 seconds to '+(o[1]?'lock in':'spread')+'.';return}
+if(t-armT<400)return;arm=null;clearTimeout(tm);note.textContent='Sending...';
+if(m&&S.lockSet)S.lockSet(o[1]);
+if(ids.length&&S.laneLock)S.laneLock(ids,o[1]).then(function(w){note.textContent=w},function(e){note.textContent='Not sent: '+(e&&e.message?e.message:'network error')+'.'});
+else note.textContent=ids.length?'Lanes are not available here.':'Sent. This changes when the company reads it, usually within 15 minutes.'}})}
+d.addEventListener('toggle',function(){if(d.open)build()})});

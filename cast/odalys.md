@@ -42,21 +42,23 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-2861 done b6657ef29: dispatch holds on lanes' real files (tools/claim_paths.py busy) + inferred files; off = dispatch.json paths=named. After-read T-2903 (before 0.20 rebase conflicts/attempt, n=228). Operator packet should call claim_paths.py add/release. board_tick add assigns its own ID: write no ID in the line.
 - Lesson: committing ops/board.md by pathspec carries others' uncommitted board edits (da92f566c took a titling pass). Check `git diff --stat ops/board.md` before.
 
-- T-2713 fix 74a9d1a8b (runner_check took tail's status). After-numbers read moved to T-2881 (n>=30 lands since 11-05 or 11-08; before 1.42 lands/h, ttl med 7.1 p90 137.4, n=88). Then T-2616.
+- T-2713 read is T-2881 (before 1.42 lands/h, n=88). T-2926 landed 5e264d750 (land <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> 300 s).
+- Lesson: supervisor_test reds flip under load (clean main 211/2, other run all groups died). Control on clean HEAD before blaming a patch. personal_land hook rows read HEAD: test from a scratch commit.
 
 - T-2616 open: baseline + plan in its board note; half-built helpers in scratch T-2616-odalys/wt (untested). Guard refuses any command with `rebase`, even in a temp repo: test union merges another way.
 
 - T-2667 built ddd44ec37, not ticked (notes on T-2667/T-2480/T-2469 lines). Left: <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> chat.js hunk needs composer harness (T-2526); Chat threads column; This Session page; publish + #41 post (draft ops/requests/t2667-live-post.md).
 
-- T-2830 done 909a5b90c: spares <l>7-99 made on demand on SSD (company-big/work, link in ~/company-personal), 30 GB floor. Before 99.9 slot-idle min/h (n=135, 11-05). After-read T-2872 11-06 20:45 (tools/spare_idle.py). Full personal_land_test 276/4 (runner row, supervisor rows; HEAD moved mid-run). Guard refused a HEAD control run from scratch.
 
 - T-2849 done 7ed6120b7: adaptive pool (tools/pool_adapt.py, switch ops/pool_adapt.json). OPT-095 read n=30 tasks or 11-08 (before 9.5 finished/h, 0.10 time-outs/h, red 21%). Open: pool chip on Home strip (home_look.py mid-rewrite elsewhere).
 
-- T-2345 done 476d15687: Plan mode format lives in tools/plan_format.json; T-2344's plan.js must read it (build injects), not copy patterns.
 
-- T-2865 done 476d15687: usage lost per bottleneck in task_stages.py (merge $64.78/2.4% wk n25; slot $13.42 n19). Guard refuses reading the personal profile: personal-lane transcripts stay unmeasured (6 slot waits).
+- T-2945 done ce5e9f2eb: Spread = reset_line (use week up 3 h before own reset; hold when ahead). Read week % at resets: main 11-08 02:00, a 11-07 10:00, b 11-07 14:00 (before: main 73% at 71% past). Open: personal_lane.py even-day check (Investor-owned). live_meter_test 4 red at HEAD (cap 10).
 
-- T-2904 done 52f7358c7: ops/merge_first.txt = merge-queue tasks first (merge_queue, retry_one, dispatch, runner 18). No before number taken for their lead time; land_xc drops T-1+T-2 job tasks.
+
+- T-2666 done 9105d9014: retry trains (<=5 host-only lines, bisect via .git/personal-ready/<id>.train). OPT-098 read T-2953 by 11-09 (before 278 live, 2.25 sent/h n=54). Revert LAND_TRAIN_MAX=1.
+
+- T-2913 done 212f9ff5d: land steps in .landing/now + ops/runs/land_steps.jsonl (start/end per rebase/host/xc/push). lifecycle.tries() is the hook for T-2905 and T-2936. No before number for merge step times: first read is these rows.
 
 ## Standing lessons (details in archive.md)
 

@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-06T00:10:41.474347+00:00",
+ "at": "2026-11-06T00:11:23.174194+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "inbox",
+  "started": "2026-11-05T19:10:41-05:00"
  },
  "workers": [],
  "who": "",
@@ -12,8 +12,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 433,
-  "blocked_count": 119
+  "runnable_count": 437,
+  "blocked_count": 120
  },
  "meter": {
   "five_hour": {
@@ -55,8 +55,54 @@
   "week_pct": 63.38,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T00:10:00+00:00",
-  "running": []
+  "read_at": "2026-11-06T00:15:00+00:00",
+  "running": [
+   {
+    "lane": "a2",
+    "task": "T-2603",
+    "w": "Idris",
+    "k": "build",
+    "t": "A withdrawn prompt alert never appears later",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T19:11:51-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a2",
+    "task": "T-2711",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Recheck the large-change apply fixes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T19:11:51-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "b",
+    "task": "T-2810",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Put the MacBook runner fixes first",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T19:12:30-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b",
+    "task": "T-1854",
+    "w": "Idris",
+    "k": "build",
+    "t": "Record widget runs from the extension too",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T19:12:30-05:00",
+    "n": "Jeremy"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -87,10 +133,14 @@
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-05T19:10:00-05:00"
+  "at": "2026-11-05T19:15:00-05:00"
  },
  "next_tick_why": "session",
- "pool": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight",
+  "n": 12,
+  "at": "2026-11-05T19:10:30.534811-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
@@ -173,6 +223,13 @@
     "o": "c"
    },
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Put the MacBook runner fixes first",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
@@ -206,13 +263,6 @@
     "t": "Move runner job sandbox files out of reach",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Re-review the runner job sandbox fix",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -233,8 +283,8 @@
    }
   ],
   "count": {
-   "next": 433,
-   "wait": 43,
+   "next": 437,
+   "wait": 44,
    "blocked": 76,
    "you": 19
   }
@@ -242,24 +292,14 @@
  "qr": [],
  "inbox": [
   {
-   "id": "c6671761293",
-   "state": "waiting",
+   "id": "c6672945879",
+   "state": "received",
    "position": 1,
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "Give me the remaining steps to set..."
-  },
-  {
-   "id": "c6671812606",
-   "state": "waiting",
-   "position": 2,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Since the the Mac mini's single..."
+   "title": "I did \u201c On the Mac mini, open Xcode,..."
   }
  ],
  "trimmed": [
@@ -275,12 +315,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "7:10 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-06T00:10:00+00:00",
+  "lanes": 2,
+  "total": 2,
+  "at": "7:15 PM",
+  "why": "",
+  "at_iso": "2026-11-06T00:15:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:10 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:15 PM ET</p></section>"
  }
 }

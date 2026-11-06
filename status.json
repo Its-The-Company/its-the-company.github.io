@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-06T11:26:27.736943+00:00",
+ "at": "2026-11-06T11:29:28.768687+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-06T06:26:28-05:00"
  },
  "workers": [],
  "who": "",
@@ -55,19 +55,8 @@
   "week_pct": 64.29,
   "usage_pct": 43.0,
   "work_pct": 70.6,
-  "read_at": "2026-11-06T11:26:00+00:00",
+  "read_at": "2026-11-06T11:29:00+00:00",
   "running": [
-   {
-    "lane": "a2",
-    "task": "T-2044",
-    "w": "Idris",
-    "k": "build",
-    "t": "Widen the timing margin of a flaky widget test",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T02:40:52-05:00",
-    "n": "Evan"
-   },
    {
     "lane": "b",
     "task": "T-2875",
@@ -180,11 +169,15 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T06:26:00-05:00"
+  "at": "2026-11-06T06:29:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: 25% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 18 of 23 lands failed in 3 hours (12 red); 19 of 11 finished tasks were...",
+  "n": 2,
+  "at": "2026-11-06T06:26:18.173041-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
@@ -336,21 +329,20 @@
  "qr": [],
  "inbox": [
   {
-   "id": "c6683722336",
+   "id": "c6683765806",
    "state": "received",
    "position": 1,
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "Elaborate on what this means. What..."
+   "title": "What\u2019s going on with TestFlight"
   }
  ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -359,12 +351,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 4,
-  "total": 4,
-  "at": "6:26 AM",
+  "lanes": 3,
+  "total": 3,
+  "at": "6:29 AM",
   "why": "",
-  "at_iso": "2026-11-06T11:26:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:26 AM ET</p></section>"
+  "at_iso": "2026-11-06T11:29:00+00:00",
+  "started": "6:26 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 6:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:29 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T02:58:07.461469+00:00",
+ "at": "2026-11-06T03:01:09.460958+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[release] T-2456 last checks first build",
    "model": "opus",
    "started": "2026-11-06T00:26:26.427Z",
-   "seconds": 9101,
+   "seconds": 9283,
    "finished": null,
    "effort": "high"
   }
@@ -98,7 +98,7 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T02:58:00+00:00",
+  "read_at": "2026-11-06T03:01:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -179,6 +179,17 @@
     "n": "Evan"
    },
    {
+    "lane": "b",
+    "task": "T-2027",
+    "w": "Idris",
+    "k": "build",
+    "t": "Re-run the notification test on a fresh Simulator",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T21:58:49-05:00",
+    "n": "Jeremy"
+   },
+   {
     "lane": "b3",
     "task": "T-2871",
     "w": "Odalys",
@@ -231,7 +242,7 @@
  "lock_in": {
   "on": true,
   "pool": 7,
-  "at": "2026-11-05T21:58:00-05:00"
+  "at": "2026-11-05T22:01:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -414,12 +425,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 4,
-  "total": 5,
-  "at": "9:58 PM",
+  "lanes": 5,
+  "total": 6,
+  "at": "10:01 PM",
   "why": "",
-  "at_iso": "2026-11-06T02:58:00+00:00",
+  "at_iso": "2026-11-06T03:01:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:58 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:01 PM ET</p></section>"
  }
 }

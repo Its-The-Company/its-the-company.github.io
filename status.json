@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T14:34:54.970192+00:00",
+ "at": "2026-11-06T14:37:59.040038+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,25 +9,33 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-3071 merge queue root causes",
+   "task": "[site] T-3078 Issues badge and answered section",
    "model": "opus",
-   "started": "2026-11-06T14:11:32.049Z",
-   "seconds": 1402,
+   "started": "2026-11-06T14:20:31.025Z",
+   "seconds": 1048,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[site] T-3078 Issues badge and answered section",
+   "task": "[tools] T-3079 parallel land checks",
    "model": "opus",
-   "started": "2026-11-06T14:20:31.025Z",
-   "seconds": 863,
+   "started": "2026-11-06T14:36:30.806Z",
+   "seconds": 88,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3071 merge queue root causes",
+   "model": "opus",
+   "started": "2026-11-06T14:11:32.049Z",
+   "seconds": null,
+   "finished": "2026-11-06T14:35:41.220000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3063 move fallback scratch to SSD",
@@ -83,7 +91,7 @@
   "week_pct": 64.1,
   "usage_pct": 42.4,
   "work_pct": 69.9,
-  "read_at": "2026-11-06T14:34:00+00:00",
+  "read_at": "2026-11-06T14:37:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -115,7 +123,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T09:34:00-05:00"
+  "at": "2026-11-06T09:37:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -128,9 +136,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-3071 merge queue root causes",
+   "task": "[site] T-3078 Issues badge and answered section",
    "model": "opus",
-   "since": "2026-11-06T14:11:32.049Z",
+   "since": "2026-11-06T14:20:31.025Z",
    "next": [],
    "effort": "high"
   },
@@ -179,20 +187,20 @@
   "run": [
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "Fix the root causes of merge queue slowdowns",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T14:11:32.049Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "site",
     "t": "Keep the Issues badge current and show answered issues clearly",
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T14:20:31.025Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Land several finished branches at once and read OPT-101",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T14:36:30.806Z",
     "o": "c"
    }
   ],
@@ -293,18 +301,7 @@
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6687320822",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Done! Added to Github"
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -319,10 +316,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "9:34 AM",
+  "at": "9:37 AM",
   "why": "",
-  "at_iso": "2026-11-06T14:34:00+00:00",
+  "at_iso": "2026-11-06T14:37:00+00:00",
   "started": "9:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:34 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:37 AM ET</p></section>"
  }
 }

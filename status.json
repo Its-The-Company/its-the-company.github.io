@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T08:23:54.656576+00:00",
+ "at": "2026-11-06T08:26:57.993460+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[site] T-2940 pin phone top bar, tidy Home panels",
    "model": "sonnet",
    "started": "2026-11-06T07:33:55.544Z",
-   "seconds": 2999,
+   "seconds": 3182,
    "finished": null,
    "effort": "medium"
   },
@@ -21,7 +21,7 @@
    "task": "[release] T-2918 fix red test, upload build 2",
    "model": "opus",
    "started": "2026-11-06T08:10:49.345Z",
-   "seconds": 785,
+   "seconds": 968,
    "finished": null
   }
  ],
@@ -98,8 +98,19 @@
   "week_pct": 63.02,
   "usage_pct": 43.2,
   "work_pct": 71.9,
-  "read_at": "2026-11-06T08:23:00+00:00",
+  "read_at": "2026-11-06T08:26:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-2409",
+    "w": "Wrenna",
+    "k": "release",
+    "t": "Check the USGS earthquake feed before building on it",
+    "m": "opus",
+    "e": "medium",
+    "at": "2026-11-06T03:24:15-05:00",
+    "n": "Evan"
+   },
    {
     "lane": "a2",
     "task": "T-2044",
@@ -109,6 +120,28 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T02:40:52-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-2663",
+    "w": "Idris",
+    "k": "ios",
+    "t": "Privacy check flags a runaway file scan first",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T03:24:05-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a3",
+    "task": "T-2664",
+    "w": "Idris",
+    "k": "ios",
+    "t": "Privacy check tests pin the newest file-scan rules",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T03:24:05-05:00",
     "n": "Evan"
    },
    {
@@ -165,7 +198,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T03:23:00-05:00"
+  "at": "2026-11-06T03:26:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -355,12 +388,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 2,
-  "total": 4,
-  "at": "3:23 AM",
+  "lanes": 4,
+  "total": 6,
+  "at": "3:26 AM",
   "why": "",
-  "at_iso": "2026-11-06T08:23:00+00:00",
+  "at_iso": "2026-11-06T08:26:00+00:00",
   "started": "12:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:23 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:26 AM ET</p></section>"
  }
 }

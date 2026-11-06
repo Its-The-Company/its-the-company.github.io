@@ -1,14 +1,57 @@
 {
  "schema": 1,
- "at": "2026-11-06T13:49:23.478357+00:00",
+ "at": "2026-11-06T13:52:28.476889+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-06T08:15:53-05:00"
  },
- "workers": [],
- "who": "",
- "recent": [],
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[build] T-2054 T-2055 bridge run-end signal order",
+   "model": "opus",
+   "started": "2026-11-06T13:27:40.649Z",
+   "seconds": 1487,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2467 merge queue: main-green check and land rate",
+   "model": "opus",
+   "started": "2026-11-06T13:21:54.550Z",
+   "seconds": null,
+   "finished": "2026-11-06T13:43:27.012000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[fix] T-2054 T-2055 bridge run-end signal order",
+   "model": "opus",
+   "started": "2026-11-06T13:27:30.609Z",
+   "seconds": null,
+   "finished": "2026-11-06T13:27:30.693Z"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-1440 widget refresh control and age line",
+   "model": "opus",
+   "started": "2026-11-06T13:17:57.979Z",
+   "seconds": null,
+   "finished": "2026-11-06T13:27:02.189000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[test] T-2961 fix two red suites on main",
+   "model": "opus",
+   "started": "2026-11-06T13:17:24.790Z",
+   "seconds": null,
+   "finished": "2026-11-06T13:21:30.267000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -55,7 +98,7 @@
   "week_pct": 63.88,
   "usage_pct": 42.6,
   "work_pct": 70.1,
-  "read_at": "2026-11-06T13:49:00+00:00",
+  "read_at": "2026-11-06T13:52:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -87,24 +130,29 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T08:49:00-05:00"
+  "at": "2026-11-06T08:52:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: 24% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 17 of 25 lands failed in 3 hours (11 red))",
+  "n": 2,
+  "at": "2026-11-06T08:15:43.486375-05:00"
+ },
  "lanes": [
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-2054 T-2055 bridge run-end signal order",
+   "model": "opus",
+   "since": "2026-11-06T13:27:40.649Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P1, after T-1035 lands (personal-account...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
    "model": null,
    "since": null,
    "next": []
@@ -143,7 +191,17 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Fix the order of the stuck and finished signals",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T13:27:40.649Z",
+    "o": "c"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -253,13 +311,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 0,
-  "total": 0,
-  "at": "8:49 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-06T13:49:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:49 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 1,
+  "at": "8:52 AM",
+  "why": "",
+  "at_iso": "2026-11-06T13:52:00+00:00",
+  "started": "8:15 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 8:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:52 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T02:03:10.293753+00:00",
+ "at": "2026-11-06T02:06:09.322338+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,20 +8,11 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[release] T-2456 last checks first build",
-   "model": "opus",
-   "started": "2026-11-06T00:26:26.427Z",
-   "seconds": 5803,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[tools] T-2831 cap pre-session merge step",
    "model": "opus",
    "started": "2026-11-06T01:42:43.456Z",
-   "seconds": 1226,
+   "seconds": 1405,
    "finished": null,
    "effort": "high"
   },
@@ -30,12 +21,30 @@
    "task": "[site] T-2667 new Home Chat Usage pages",
    "model": "opus",
    "started": "2026-11-06T00:43:08.348Z",
-   "seconds": 4801,
+   "seconds": 4980,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[release] T-2456 last checks first build",
+   "model": "opus",
+   "started": "2026-11-06T00:26:26.427Z",
+   "seconds": 5982,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-2491 ruling: does it gate TestFlight",
+   "model": "opus",
+   "started": "2026-11-06T02:06:09.153Z",
+   "seconds": 0,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Odalys x2",
+ "who": "Odalys x2, Idris, Ines",
  "recent": [
   {
    "name": "odalys",
@@ -73,7 +82,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 428,
+  "runnable_count": 427,
   "blocked_count": 120
  },
  "meter": {
@@ -116,7 +125,7 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T02:03:00+00:00",
+  "read_at": "2026-11-06T02:06:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -150,17 +159,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T19:45:17-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-2260",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Make closed widget turns draw their timeline",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T19:58:53-05:00",
     "n": "Evan"
    },
    {
@@ -273,7 +271,7 @@
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-05T21:03:00-05:00"
+  "at": "2026-11-05T21:06:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -303,11 +301,12 @@
   },
   {
    "name": "Ines",
-   "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[plan] T-2491 ruling: does it gate TestFlight",
+   "model": "opus",
+   "since": "2026-11-06T02:06:09.153Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Pernille",
@@ -361,6 +360,15 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T01:42:43.456Z",
+    "o": "c"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Stop the stuck extension from recreating deleted widget folders",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T02:06:09.153Z",
     "o": "c"
    }
   ],
@@ -438,6 +446,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "When Python hangs and the app cannot report it in the usual way, the app now still knows it is...",
+    "at": "2026-11-05T21:04:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "A personal account now fails its start check on a settings entry only if that entry could spend...",
     "at": "2026-11-05T20:59:00-05:00"
@@ -446,15 +459,10 @@
     "w": "Odalys",
     "t": "The number of agents working at once now adjusts itself: it rises one at a time while the...",
     "at": "2026-11-05T20:52:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "When no work session has run for 15 minutes while work is allowed, the machine now says why in...",
-    "at": "2026-11-05T20:42:00-05:00"
    }
   ],
   "count": {
-   "next": 428,
+   "next": 427,
    "wait": 45,
    "blocked": 75,
    "you": 19
@@ -474,13 +482,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
-  "lanes": 5,
+  "main": 4,
+  "lanes": 4,
   "total": 8,
-  "at": "9:03 PM",
+  "at": "9:06 PM",
   "why": "",
-  "at_iso": "2026-11-06T02:03:00+00:00",
+  "at_iso": "2026-11-06T02:06:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 9:03 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 4, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:06 PM ET</p></section>"
  }
 }

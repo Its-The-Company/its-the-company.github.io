@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T14:31:51.592893+00:00",
+ "at": "2026-11-06T14:34:54.970192+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-3071 merge queue root causes",
    "model": "opus",
    "started": "2026-11-06T14:11:32.049Z",
-   "seconds": 1219,
+   "seconds": 1402,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[site] T-3078 Issues badge and answered section",
    "model": "opus",
    "started": "2026-11-06T14:20:31.025Z",
-   "seconds": 680,
+   "seconds": 863,
    "finished": null,
    "effort": "high"
   }
@@ -83,7 +83,7 @@
   "week_pct": 64.1,
   "usage_pct": 42.4,
   "work_pct": 69.9,
-  "read_at": "2026-11-06T14:31:00+00:00",
+  "read_at": "2026-11-06T14:34:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -115,7 +115,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T09:31:00-05:00"
+  "at": "2026-11-06T09:34:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -242,9 +242,9 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Fix the root causes of merge queue slowdowns",
+    "t": "Land several finished branches at once and...",
     "s": "next",
-    "o": "c"
+    "o": "i"
    },
    {
     "w": "Pernille",
@@ -271,6 +271,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "Finished work now stops failing to merge for reasons that were not its own: lost spare folders,...",
+    "at": "2026-11-06T09:34:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The extra spare copies cut the time work slots sat idle from about 100 to 2 minutes an hour...",
     "at": "2026-11-06T08:45:00-05:00"
    },
@@ -278,11 +283,6 @@
     "w": "Pernille",
     "t": "Two test suites that block every lane from landing now pass on a fresh copy of the code; one...",
     "at": "2026-11-06T08:21:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "Three code-drawn logo options for the site's top bar were drawn and previewed on phone and...",
-    "at": "2026-11-06T08:17:00-05:00"
    }
   ],
   "count": {
@@ -293,7 +293,18 @@
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6687320822",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Done! Added to Github"
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -308,10 +319,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "9:31 AM",
+  "at": "9:34 AM",
   "why": "",
-  "at_iso": "2026-11-06T14:31:00+00:00",
+  "at_iso": "2026-11-06T14:34:00+00:00",
   "started": "9:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:31 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:34 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T08:20:50.309221+00:00",
+ "at": "2026-11-06T08:23:54.656576+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[site] T-2940 pin phone top bar, tidy Home panels",
    "model": "sonnet",
    "started": "2026-11-06T07:33:55.544Z",
-   "seconds": 2814,
+   "seconds": 2999,
    "finished": null,
    "effort": "medium"
   },
@@ -21,7 +21,7 @@
    "task": "[release] T-2918 fix red test, upload build 2",
    "model": "opus",
    "started": "2026-11-06T08:10:49.345Z",
-   "seconds": 600,
+   "seconds": 785,
    "finished": null
   }
  ],
@@ -55,8 +55,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 460,
-  "blocked_count": 119
+  "runnable_count": 462,
+  "blocked_count": 120
  },
  "meter": {
   "five_hour": {
@@ -98,44 +98,8 @@
   "week_pct": 63.02,
   "usage_pct": 43.2,
   "work_pct": 71.9,
-  "read_at": "2026-11-06T08:20:00+00:00",
+  "read_at": "2026-11-06T08:23:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-2895",
-    "w": "Odalys",
-    "k": "test",
-    "t": "Re-point the four Home checks in the site suite",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-06T01:30:54-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-2710",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the widened runner job sandbox",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T01:30:54-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-0760",
-    "w": "Idris",
-    "k": "test",
-    "t": "Share the keyboard fix across app picture tests",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-06T01:30:54-05:00",
-    "n": "Evan",
-    "d": 1
-   },
    {
     "lane": "a2",
     "task": "T-2044",
@@ -190,7 +154,7 @@
   }
  ],
  "disk": {
-  "free_gb": 19,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -201,7 +165,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T03:20:00-05:00"
+  "at": "2026-11-06T03:23:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -371,10 +335,10 @@
    }
   ],
   "count": {
-   "next": 460,
+   "next": 462,
    "wait": 43,
-   "blocked": 76,
-   "you": 19
+   "blocked": 77,
+   "you": 20
   }
  },
  "qr": [],
@@ -391,12 +355,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "3:20 AM",
+  "lanes": 2,
+  "total": 4,
+  "at": "3:23 AM",
   "why": "",
-  "at_iso": "2026-11-06T08:20:00+00:00",
+  "at_iso": "2026-11-06T08:23:00+00:00",
   "started": "12:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:20 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:23 AM ET</p></section>"
  }
 }

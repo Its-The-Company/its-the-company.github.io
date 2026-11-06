@@ -755,6 +755,8 @@ html,body,.cv-dock textarea,.cv-dock .cv-state{overscroll-behavior-y:auto}
 .pq-a{margin:var(--s2) 0 0;font-size:var(--fs-1)}
 .pq .ny-bar{margin-top:0}
 .pq .ny-bar .meta{margin:0}
+/* T-3010: an answered block, said lines in the reply's bubble; a note under its answer, muted. */
+.pq-said small{display:block;color:var(--muted)}
 {% endraw %}
 /* investors/site/theme.css */
 {% raw %}/* The Investors' styles for the site. Anything here is added after the site's own styles, so it wins.
@@ -768,7 +770,7 @@ html,body,.cv-dock textarea,.cv-dock .cv-state{overscroll-behavior-y:auto}
 <nav class="tabs" aria-label="Sections">
 <a href="{{ '/' | relative_url }}"{% if page.section == "home" %} aria-current="page"{% endif %}>Home</a>
 <a href="{{ '/chat/' | relative_url }}" data-chat-tab{% if page.section == "chat" %} aria-current="page"{% endif %}>Chat</a>
-<a href="{{ '/issues/' | relative_url }}" data-issues{% if page.section == "requests" %} aria-current="page"{% endif %}>Issues{% if page.issues %} <span class="nb">{{ page.issues }}</span>{% endif %}</a>
+<a href="{{ '/issues/' | relative_url }}" data-issues{% if page.section == "requests" %} aria-current="page"{% endif %}>Issues{% if page.issues %} <span class="nb"{% if page.issues_at %} title="{{ page.issues }} waiting on the Investors at the site build, {{ page.issues_at }}"{% endif %}>{{ page.issues }}</span>{% endif %}</a>
 <a href="{{ '/reports/' | relative_url }}"{% if page.section == "reports" or page.section == "documents" or page.section == "pitches" or page.section == "infra" %} aria-current="page"{% endif %}>Reports</a>
 </nav>
 <details class="info"><summary title="About" aria-label="About this site">i</summary><div class="infop"><p>{{ site.disclosure }}</p><a href="{{ '/about.html' | relative_url }}">About the company</a></div></details>
@@ -789,5 +791,6 @@ html,body,.cv-dock textarea,.cv-dock .cv-state{overscroll-behavior-y:auto}
 <script src="{{ '/assets/app.js' | relative_url }}"></script>
 <script src="{{ '/assets/swipe.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/badges.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/issuecount.js' | relative_url }}" data-count="{{ '/issues.json' | relative_url }}"></script>
 </body>
 </html>

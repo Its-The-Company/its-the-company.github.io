@@ -38,7 +38,7 @@ if (m && m[1] !== m[2]) { add(m[1], m[1], m[1]); add(m[2], m[2], m[2]); }
 return out;
 }
 function isReceipt(b) { return /\(automatic receipt\)\s*$/.test(b || ''); }
-function who(c) { return String((c && c.user && c.user.login) || '').toLowerCase(); }
+function who(c) { var u = c && (c.user || c.author); return String((u && u.login) || '').toLowerCase(); }
 function pickAsk(issue, cs, inv, repo) {
 var co = [], last = -1;
 cs.forEach((c, i) => { if (inv(who(c))) last = i; else if (!isReceipt(c.body)) co.push({ c: c, i: i }); });
@@ -46,7 +46,7 @@ var after = co.filter((x) => x.i > last), pool = after.length ? after : co, hit 
 for (var k = pool.length - 1; k >= 0 && !hit; k--) if (options(pool[k].c.body).length) hit = pool[k];
 if (!hit && after.length) hit = after[after.length - 1];
 var src = hit ? hit.c : issue, opts = options(src && src.body);
-return { body: (src && src.body) || '', imgs: images(src && src.body, repo), at: (src && src.created_at) || '', opts: opts, answered: !!hit && last > hit.i, lastInv: last >= 0 ? cs[last] : null };
+return { src: src, body: (src && src.body) || '', imgs: images(src && src.body, repo), at: (src && src.created_at) || '', opts: opts, answered: !!hit && last > hit.i, lastInv: last >= 0 ? cs[last] : null };
 }
 var START = /^[ \t]*(?:#{1,4}[ \t]+(?:\*\*|__)?(?:Option[ \t]+)?\(?([A-Fa-f])\)?(?:\*\*|__)?[ \t]*(?:$|[.:,\u2014-])|(?:[-*+][ \t]+)?(?:(?:\*\*|__)[ \t]*)?\(?([A-Fa-f])(?:[ \t]+\([^)\n]{1,30}\))?(?:\*\*|__)?[ \t]*[.):,\u2014-])/;
 var IMG = /!\[([^\]]{0,400})\]\(\s*<?([^)\s>]{1,400})>?(?:\s[^)]{0,400})?\)|<img\b([^>]{0,800})>/gi;
@@ -69,7 +69,8 @@ if (w) out.push({ key: key, alt: clean(m[2] ? m[1] : (/\balt=["']([^"']*)/i.exec
 });
 return out;
 }
-window.CompanyNeeds = { options: options, pickAsk: pickAsk, images: images };
+function answered(i, last, inv) { return last ? isReceipt(last.body) || inv(who(last)) : inv(who(i)); }
+window.CompanyNeeds = { options: options, pickAsk: pickAsk, images: images, answered: answered };
 var S = window.CompanySite, root = document.getElementById('needs-root');
 if (!S || !root || !S.getToken()) return;
 var anon = document.getElementById('needs-anon'); if (anon) anon.hidden = true;
@@ -128,14 +129,114 @@ img.src = u; img.alt = im.alt || im.path; a.textContent = ''; a.appendChild(img)
 if (x !== 'svg') { a.href = u; a.target = '_blank'; a.title = 'Open full size'; }
 }, (e) => { a.className = 'meta ny-warn'; a.textContent = (im.alt || im.path) + ': ' + e.message + '.'; });
 }
-function box(li, n, i, ask, re) {
+var FEN = /^ {0,3}(`{3,}|~{3,})/, HEAD = /^ {0,3}(#{1,6})(?:[ \t]|$)/, RULE = /^ {0,3}([-*_])[ \t]*(?:\1[ \t]*){2,}$/, QUO = /^ {0,3}>[ \t]?/,
+ITEM = /^( {0,12})([-*+]|\d{1,9}[.)])(?:[ \t]+|$)/, TASK = /^\[([ xX])\][ \t]+/, ALIGN = /^:?-{1,}:?$/, ENT = { amp: '&', lt: '<', gt: '>', quot: '"', '#39': "'", apos: "'", nbsp: ' ' };
+var INL = new RegExp(['\\\\([\\\\`*_{}\\[\\]()#+\\-.!|~<>])', '`([^`\\n]{1,2000})`',
+'(!?)\\[([^\\[\\]\\n]{0,500})\\]\\(<?([^()\\s<>]{1,800})>?(?:[ \\t]{1,9}"[^"\\n]{0,200}")?\\)',
+'\\*\\*([^*\\n]{1,500})\\*\\*', '__([^_\\n]{1,500})__(?!\\w)', '~~([^~\\n]{1,500})~~', '\\*([^*\\s][^*\\n]{0,500})\\*', '_([^_\\s][^_\\n]{0,500})_(?!\\w)',
+'(<br[ \\t]*\\/?>)', '<img\\b([^<>\\n]{0,800})>', '(<\\/?(?:details|summary|sub|sup|b|i|em|strong|kbd|p|div|span|u|ins|del|small|center|picture|source)\\b[^<>\\n]{0,200}>)',
+'(https?:\\/\\/[^\\s<>"\'\\[\\]]{1,800})', '#(\\d{1,6})\\b', '&(amp|lt|gt|quot|#39|apos|nbsp);'].join('|'), 'g');
+function lead(x) { return x.search(/\S|$/); }
+function href(a, u) { a.href = u; a.target = '_blank'; a.rel = 'noopener'; return a; }
+function inl(p, s, pics, d) {
+var at = 0, m, T = (t) => { if (t) p.appendChild(document.createTextNode(t)); };
+function nest(box, t) { var k = INL.lastIndex; if (d < 3) inl(box, t, pics, d + 1); else box.textContent = t; INL.lastIndex = k; return box; }
+INL.lastIndex = 0;
+while ((m = INL.exec(s))) {
+var i = m.index, pre = s.charAt(i - 1), w;
+T(s.slice(at, i)); at = INL.lastIndex;
+if ((m[7] != null || m[10] != null || m[15] != null) && /[\w&\/]/.test(pre)) { T(m[0].charAt(0)); INL.lastIndex = at = i + 1; continue; }
+if (m[1] != null) T(m[1]);
+else if (m[2] != null) mk(p, 'code', null, m[2]);
+else if (m[4] != null) {
+if (m[3]) {
+w = where(m[5], repo);
+if (w && pics) pic(p, { alt: clean(m[4]), path: w.path, ref: w.ref });
+else if (/^https?:\/\//i.test(m[5])) href(mk(p, 'a', null, 'Image' + (m[4] ? ': ' + clean(m[4]) : '')), m[5]);
+else T(m[0]);
+} else if (/^https?:\/\//i.test(m[5]) || /^#[\w-]{1,80}$/.test(m[5])) nest(href(mk(p, 'a'), m[5]), m[4]);
+else nest(p, m[4]);
+} else if (m[6] || m[7]) nest(mk(p, 'strong'), m[6] || m[7]);
+else if (m[8]) nest(mk(p, 'del'), m[8]);
+else if (m[9] || m[10]) nest(mk(p, 'em'), m[9] || m[10]);
+else if (m[11]) mk(p, 'br');
+else if (m[12] != null) {
+var src = (/\bsrc=["']?([^"'\s>]{1,800})/i.exec(m[12]) || [])[1], alt = (/\balt=["']([^"']{0,400})/i.exec(m[12]) || [])[1] || '';
+w = src && where(src, repo);
+if (w && pics) pic(p, { alt: alt, path: w.path, ref: w.ref }); else if (/^https?:\/\//i.test(src || '')) href(mk(p, 'a', null, 'Image' + (alt ? ': ' + alt : '')), src); else T(m[0]);
+} else if (m[13]) { /* a formatting tag: dropped, its text kept */ }
+else if (m[14]) { var u = m[14].replace(/[.,;:!?)]+$/, ''); href(mk(p, 'a', null, u), u); INL.lastIndex = at = i + u.length; }
+else if (m[15]) href(mk(p, 'a', null, '#' + m[15]), 'https://github.com/' + repo + '/issues/' + m[15]);
+else T(ENT[m[16]]);
+}
+T(s.slice(at));
+}
+function cells(l) { var t = l.trim().replace(/^\|/, '').replace(/\\\|/g, '\u0001'), e = t.length; if (t.charAt(e - 1) === '|') t = t.slice(0, e - 1); return t.split('|').map((c) => c.replace(/\u0001/g, '|').trim()); }
+function md(box, text, pics, d) {
+d = d || 0;
+var L = String(text || '').replace(NOTE, '').replace(/\r/g, '').split('\n'), i = 0, para = null, m;
+function starts(x) { return FEN.test(x) || HEAD.test(x) || QUO.test(x) || RULE.test(x) || ITEM.test(x); }
+while (i < L.length) {
+var ln = L[i];
+if (!ln.trim()) { para = null; i++; continue; }
+if ((m = FEN.exec(ln))) {
+var f = m[1], body = [], close = f.charAt(0) === '`' ? /^ {0,3}(`{3,})[ \t]*$/ : /^ {0,3}(~{3,})[ \t]*$/, c;
+for (i++; i < L.length && !((c = close.exec(L[i])) && c[1].length >= f.length); i++) body.push(L[i]);
+i++; mk(mk(box, 'pre'), 'code', null, body.join('\n')); para = null; continue;
+}
+if ((m = HEAD.exec(ln))) {
+var t = ln.slice(m[0].length).trim(), e = t.length;
+while (e && t.charAt(e - 1) === '#') e--;
+if (!e || /\s/.test(t.charAt(e - 1))) t = t.slice(0, e).trim();
+inl(mk(box, 'h' + Math.min(6, m[1].length + 2)), t, pics, 0); para = null; i++; continue;
+}
+if (RULE.test(ln)) { mk(box, 'hr'); para = null; i++; continue; }
+if (d < 6 && QUO.test(ln)) {
+var q = [];
+while (i < L.length && QUO.test(L[i])) q.push(L[i++].replace(QUO, ''));
+md(mk(box, 'blockquote'), q.join('\n'), pics, d + 1); para = null; continue;
+}
+if (ln.indexOf('|') >= 0 && i + 1 < L.length && L[i + 1].indexOf('-') >= 0) {
+var hd = cells(ln), al = cells(L[i + 1]);
+if (al.length === hd.length && al.every((x) => ALIGN.test(x))) {
+var tb = mk(mk(mk(box, 'div', 'tbl'), 'table'), 'tbody'), row = (r, tag) => { var tr = mk(tb, 'tr'); hd.forEach((_, k) => { var x = mk(tr, tag), a = al[k]; inl(x, r[k] || '', pics, 0); x.style.textAlign = /^:.*:$/.test(a) ? 'center' : /:$/.test(a) ? 'right' : ''; }); };
+row(hd, 'th');
+for (i += 2; i < L.length && L[i].trim() && L[i].indexOf('|') >= 0; i++) row(cells(L[i]), 'td');
+para = null; continue;
+}
+}
+if (d < 6 && (m = ITEM.exec(ln))) {
+var ord = /\d/.test(m[2]), base = m[1].length, list = mk(box, ord ? 'ol' : 'ul');
+if (ord && parseInt(m[2], 10) !== 1) list.start = parseInt(m[2], 10);
+while (i < L.length && (m = ITEM.exec(L[i])) && m[1].length <= base + 1 && /\d/.test(m[2]) === ord && !RULE.test(L[i])) {
+var it = [L[i].slice(m[0].length)], wd = m[0].length;
+for (i++; i < L.length; i++) {
+var x = L[i];
+if (!x.trim()) { var j = i; while (j < L.length && !L[j].trim()) j++; if (j < L.length && lead(L[j]) > base + 1) { it.push(''); continue; } break; }
+if (lead(x) > base + 1) it.push(x.slice(Math.min(lead(x), wd)));
+else if (starts(x)) break;
+else it.push(x.trim());
+}
+var li = mk(list, 'li'), tk = TASK.exec(it[0]);
+if (tk) it[0] = it[0].slice(tk[0].length);
+md(li, it.join('\n'), pics, d + 1);
+if (tk) {
+var cb = el('input'), at = li.firstChild && li.firstChild.tagName === 'P' ? li.firstChild : li;
+cb.type = 'checkbox'; cb.disabled = true; cb.checked = tk[1] !== ' '; cb.setAttribute('aria-label', cb.checked ? 'Done' : 'Not done');
+at.insertBefore(cb, at.firstChild); li.className = 'ny-task';
+}
+}
+para = null; continue;
+}
+if (para) mk(para, 'br'); else para = mk(box, 'p');
+inl(para, ln.trim(), pics, 0); i++;
+}
+return box;
+}
+function box(li, n, i, ask, re, cs, onSent) {
 var b = li.querySelector('.ny-box') || li.appendChild(el('div', 'ny-box')), files = [], dk = 'company.draft.' + n, head = '', btns = [], fly = 0, doubt = null;
 b.textContent = '';
-if (ask.body) {
-var a = mk(b, 'details', 'ny-ask'), s = mk(a, 'summary', null, 'The company asks' + (ask.at ? ' (' + when(ask.at) + ')' : ''));
-s.title = 'The question this reply answers'; mk(a, 'pre', null, plain(ask.body));
-if (!ask.opts.length) a.open = true;
-}
+if (cs) talk(b, i, cs, ask);
 if (ask.answered && ask.lastInv) mk(b, 'p', 'meta ny-done', 'You answered ' + when(ask.lastInv.created_at) + ': "' + plain(ask.lastInv.body).slice(0, 80) + '". The company closes the issue once it has read it.');
 var cols = {}, grid = (ask.imgs || []).length ? mk(b, 'div', 'ny-imgs') : null;
 (ask.imgs || []).forEach((im) => {
@@ -199,6 +300,7 @@ if (v === text) ta.value = ''; else if (text && v.indexOf(text + '\n') === 0) ta
 files = files.filter((f) => sent.indexOf(f) < 0); drawFiles(); save(); mark();
 say(' ny-done', (re ? 'Reopened #' + n + ' and sent ' : 'Sent ') + when(c.created_at || Date.now()) + (links.length ? ' with ' + links.length + ' file' + (links.length > 1 ? 's' : '') : '') + '. The company reads it within minutes and closes the issue once it is settled.' + (ta.value.trim() || files.length ? ' What is still in the box has not been sent.' : ''));
 if (re && c.created_at) re(c);
+if (onSent) onSent();
 }
 function lost(e) {
 fly = 0; sync();
@@ -242,14 +344,33 @@ ns.reduce((p, n) => p.then(() => send('PATCH', RI + '/' + n, { state: 'closed', 
 if (!r.ok) throw new Error(scope(r));
 return r.json();
 }).then((x) => { if (cl) cRow(x, 1); })), Promise.resolve()).then(() => {
-li.hidden = true; fold(); live.textContent = 'Closed ' + t + '. It is under Closed issues below.';
+li.hidden = true; fold(); tally(); live.textContent = 'Closed ' + t + '. It is under Closed issues below.';
 }, (e) => { c.disabled = false; st.className = 'meta ny-warn'; st.textContent = 'Not closed: ' + e.message + '.'; });
 };
 }
-function tell(p, x) {
-var l = who(x), a = /<!-- ?as: ?([^>]{1,40}?) ?-->/.exec(x.body || ''), m = mk(p, 'div', 'ny-msg' + (inv(l) ? ' ny-inv' : ''));
-mk(m, 'p', 'meta', (inv(l) ? (a ? a[1] : l) : 'Company') + ' \u00b7 ' + day(x.created_at));
-mk(m, 'pre', null, plain(x.body).replace(/[\w.+-]{1,64}@[\w-]+(?:\.[\w-]+)+/g, '[email]') || '(no text)');
+function tell(p, x, ask) {
+var l = who(x), a = /<!-- ?as: ?([^>]{1,40}?) ?-->/.exec(x.body || ''), m = mk(p, 'div', 'ny-msg' + (inv(l) ? ' ny-inv' : '') + (ask ? ' ny-ask' : '')),
+h = mk(m, 'p', 'meta', (inv(l) ? (a ? a[1] : l) : 'Company') + ' \u00b7 ' + day(x.created_at));
+if (ask) { h.appendChild(document.createTextNode(' ')); mk(h, 'span', 'tag ny-tag-q', 'Your reply answers this'); }
+var t = String(x.body || '').replace(NOTE, '').replace(/[\w.+-]{1,64}@[\w-]+(?:\.[\w-]+)+/g, '[email]').trim();
+md(mk(m, 'div', 'md'), t || '(no text)', !(ask && ask.imgs && ask.imgs.length));
+return m;
+}
+function talk(p, i, cs, ask) {
+var t = mk(p, 'div', 'ny-msgs'), all = [i].concat(cs), k0 = ask && ask.src ? all.indexOf(ask.src) : -1, hid = [], more = null;
+if (i.comments > 100) mk(t, 'p', 'meta', 'Earlier replies are on GitHub; the latest 100 follow.');
+all.forEach((x, k) => {
+var m = tell(t, x, k === k0 ? ask : null);
+if (all.length > 5 && k > 0 && k < all.length - 3 && k !== k0) { m.hidden = true; hid.push(m); }
+if (k === 0 && all.length > 5) more = mk(t, 'button', 'cv-tool ny-more-msgs');
+});
+if (more) {
+if (!hid.length) more.remove(); else {
+more.type = 'button'; more.textContent = 'Show ' + hid.length + ' earlier repl' + (hid.length === 1 ? 'y' : 'ies');
+more.onclick = () => { hid.forEach((m) => { m.hidden = false; }); more.remove(); };
+}
+}
+return t;
 }
 function cRow(i, top) {
 var li = el('li', 'ny ny-cl'), d = mk(li, 'details', 'ny-th'), s = mk(d, 'summary'), k = KEEP.concat('chat').filter((x) => labels(i).indexOf(x) >= 0)[0];
@@ -259,14 +380,36 @@ var t = mk(d, 'div', 'ny-msgs');
 d.addEventListener('toggle', () => {
 if (!d.open || d.got) return; d.got = 1; t.textContent = 'Reading #' + i.number + '...';
 thread(i).then((cs) => {
-t.textContent = ''; tell(t, i);
-if (i.comments > 100) mk(t, 'p', 'meta', 'Earlier replies are on GitHub; the latest 100 follow.');
-cs.forEach((c) => tell(t, c));
-box(d, i.number, i, { opts: [] }, (c) => { tell(t, c); on.textContent = ' reopened ' + day(c.created_at); });
+t.textContent = ''; var th = talk(t, i, cs, null);
+box(d, i.number, i, { opts: [] }, (c) => { tell(th, c); on.textContent = ' reopened ' + day(c.created_at); });
 }, (e) => { d.got = 0; t.textContent = 'Could not read #' + i.number + ': ' + e.message + '.'; });
 });
 if (top) cl.insertBefore(li, cl.firstChild); else cl.appendChild(li);
 cnum.textContent = String(++cn);
+}
+var ROWS = [], ansU = null, ansN = null;
+function place(x, ans, quiet) {
+x.ans = ans;
+if (ans && !R) {
+if (!ansU) {
+var sec = el('section', 'ny-ans-sec'), h = mk(sec, 'h2', null, 'Answered, waiting on the company ');
+h.id = 'ny-ans-h'; sec.setAttribute('aria-labelledby', h.id); ansN = mk(h, 'span', 'num ny-count', '0');
+mk(sec, 'p', 'meta', 'You have replied to these. The company reads your reply and closes the issue; they do not count in the Issues badge. You can still add to one or close it.');
+ansU = mk(sec, 'ul', 'list needs'); ansU.setAttribute('data-group', 'answered');
+(shut ? shut.parentNode : root).insertBefore(sec, shut);
+}
+if (!x[0].querySelector('.ny-tag-ans')) { x[0].insertBefore(document.createTextNode(' '), x[0].firstChild); x[0].insertBefore(el('span', 'tag ny-tag-ans', '\u2713 Answered'), x[0].firstChild); }
+x[0].classList.add('ny-ans'); ansU.appendChild(x[0]);
+Array.prototype.forEach.call(ansU.parentNode.children, (e) => { e.hidden = false; });
+fold();
+}
+if (!quiet) tally();
+}
+function tally() {
+var n = rest, a = 0;
+ROWS.forEach((x) => { if (!x[0].hidden) { if (x.ans) a++; else n++; } });
+if (ansN) ansN.textContent = String(a);
+if (!R && !P && window.IssueCount) window.IssueCount.put(n, a);
 }
 function fold() {
 Array.prototype.forEach.call(document.querySelectorAll('ul[data-group]'), (ul) => {
@@ -302,10 +445,17 @@ if (R) {
 var n = rows.length + rest; document.getElementById('needs-count').textContent = n + ' request' + (n === 1 ? ' is' : 's are') + ' open.';
 if (rest) { var more = mk(mk(root, 'p', 'meta'), 'a', null, rest + ' more on Issues'); more.href = root.getAttribute('data-requests'); }
 }
+ROWS = rows;
+var wait = rows.length, done = () => { if (!--wait) tally(); };
+if (!wait) tally();
 rows.forEach((x) => {
 var i = open[x[1]], b = x[0].querySelector('.ny-box') || x[0].appendChild(el('div', 'ny-box'));
 b.textContent = 'Reading the question...';
-thread(i).then((cs) => { var a = pickAsk(i, cs, inv, repo); if ((P || labels(i).indexOf('proposal') >= 0) && !(a.opts || []).length) a.opts = PO; box(x[0], x[1], i, a); if (!R) closer(x[0], x[2]); }, (e) => { b.textContent = 'Could not read #' + x[1] + ': ' + e.message + '.'; });
+thread(i).then((cs) => {
+var a = pickAsk(i, cs, inv, repo); if ((P || labels(i).indexOf('proposal') >= 0) && !(a.opts || []).length) a.opts = PO;
+box(x[0], x[1], i, a, null, cs, () => place(x, true)); if (!R) closer(x[0], x[2]);
+place(x, answered(i, cs[cs.length - 1] || null, inv), true); done();
+}, (e) => { b.textContent = 'Could not read #' + x[1] + ': ' + e.message + '.'; done(); });
 });
 }, (e) => { mk(root, 'p', 'meta ny-warn', 'Could not read the open requests: ' + e.message + '.' + (R ? '' : ' The list below is as built.')); });
 if (shut) al.then(() => getJ(RI + '?state=closed&per_page=100&sort=updated')).then((l) => {

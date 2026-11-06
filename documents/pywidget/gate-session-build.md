@@ -50,26 +50,86 @@ in Release:
 the margin and dies, and any refusal of a run that fits." In the gate build, a `margin=fits` run that is killed is the
 first case, and a `margin=would_refuse` run that finishes is the second. An enforcing margin can record only the first.
 
-## How it never ships
+## How it never reaches anyone but internal testers
 
-Three layers. The first two are on main with this decision. The third comes with the Swift half.
+T-2851 changes this section. an Investor chose TestFlight over a phone sitting (#192 c6673876442), so the gate build now
+has one way off a Mac: internal TestFlight, through `scripts/gate_session_build.sh --testflight`, which runs
+`tools/upload.sh --project ... --internal --upload --gate-session SETTING`. Before T-2851 the rule was "never archive
+it". It is now "never archive it but this way".
 
-1. **Host test** `pywidget/tests/widgets/test_lane_gate_flag.py` (19 tests, mutants in
-   `pywidget/tests/widgets/mutants-t1853.json`). It scans `pywidget/ios` (project.yml, the .pbxproj, every
-   .xcscheme, xcconfigs, scripts, sources; not Vendor/ or build/), `tools/` (xc.sh, upload.sh) and `.github/`.
-   The condition may appear only:
+**What stops a gate build reaching external testers or App Review, plainly:**
+
+1. **App Store Connect, and only App Store Connect, holds the line after the upload.** `--internal` writes
+   `testFlightInternalTestingOnly` = true into ExportOptions.plist, and upload.sh reads it back before any xcodebuild
+   call (T-2702). `xcodebuild -help` says of the key: "When enabled, this build cannot be distributed via external
+   TestFlight or the App Store." App Review is on the App Store's side of that line. No gate build reaches Apple from
+   upload.sh without the key: the mark on the binary makes it refuse every other path (layer 3). What has been seen of
+   the key so far is that sentence, not the screen; see "What is left".
+2. **The ledger.** Every gate upload commits two rows to `ops/testflight-internal.tsv` naming the build, with "gate
+   session build" in the note. `tools/testflight_ledger.py check` is the submission step before any App Review or
+   external group ask, and it stops on that build number. It is a step someone must run, not a wall.
+
+Nothing on the phone or in the binary refuses external testers by itself: once a build were in an external group, it
+would run. That is why the upload is the place that decides.
+
+**The layers on this Mac.** Each still holds, with T-2851's change stated.
+
+1. **Host test** `pywidget/tests/widgets/test_lane_gate_flag.py` (mutants in `pywidget/tests/widgets/mutants-t1853.json`,
+   `mutants-t2662.json`, `mutants-t2851.json`). It scans `pywidget/ios` (project.yml, the .pbxproj, every .xcscheme,
+   xcconfigs, scripts, sources; not Vendor/ or build/), `tools/` (xc.sh, upload.sh) and `.github/`. The condition may
+   appear only:
    - in `#if`/`#elseif` lines or comments in Swift. `Package.swift` gets no exception: a `.define` there is caught.
    - in Markdown, in Python tests, and in the checker itself;
-   - in `ios/scripts/gate_session_build.sh`, the one file allowed to put it on an xcodebuild line. That file may
-     contain no `archive`, `-exportArchive` or `install` word.
+   - in `ios/scripts/gate_session_build.sh`, the one file allowed to name it. That file may contain no `archive`,
+     `-exportArchive` or `install` word, and (T-2851) any line that runs upload.sh must carry both `--internal` and
+     `--upload`. upload.sh itself still may not name the condition: it takes it from the gate script as `--gate-session`.
    Planted trees prove that a scheme, project.yml, an xcconfig, upload.sh, a Package.swift define, a gate script that
-   archives, and two offenders at once are all caught.
-2. **Build-phase check** `pywidget/ios/scripts/check_lane_gate.py`, the same file the test drives. With the
-   condition set, it fails an archive (`ACTION=install`) and any build with `PW_INTERNAL_TESTFLIGHT=YES` (T-2270's
-   upload path). A plain build passes with a warning. This catches an archive line typed by hand, which no repository
-   scan can see.
-3. **Wiring (continuation).** check_lane_gate.py becomes a build phase on the app and widget targets in project.yml,
-   next to check_legal_links.py. The project is regenerated, and the gate script is written, run once, and checked.
+   archives, a gate script that runs upload.sh without either word, and two offenders at once are all caught.
+2. **Build-phase check** `pywidget/ios/scripts/check_lane_gate.py`, the same file the test drives, a pre-build phase on
+   the app and the extension. With the condition set, it fails an archive (`ACTION=install`), unless the line carries
+   `PW_INTERNAL_TESTFLIGHT=YES`, which upload.sh sets only for `--internal` and clears from the caller's shell. T-2851
+   turned this rule over: that setting used to fail the build, and is now the one pass. So an archive line typed by hand
+   with the condition still fails, but one typed with both settings does not (see "What is left" below).
+3. **upload.sh reads what was compiled.** A gate build holds `LaneGateMark` in both executables (T-2662), however the
+   condition was set. On every archive it exports:
+   - marked, no `--internal`: refused, in T-2662's words, before any export call or ledger row. Unchanged.
+   - marked, `--internal` with no `--upload`: refused. An .ipa in a folder can go by Transporter or Organizer, and nothing
+     has shown the internal-only key would stay with it (T-2702's note), so a gate build gets no such .ipa.
+   - marked, `--archive --internal --upload`: only an archive upload.sh itself marked `PWInternalTestFlightOnly`.
+   - `--gate-session` needs `--project`, `--internal` and `--upload`, takes exactly one condition, and refuses an archive
+     that comes out unmarked: asked for is not compiled.
+
+**What is left, stated so nobody assumes otherwise:**
+
+- **T-2691 is open.** The `--product` post-build phase is not in project.yml, so an Organizer archive gets layer 2 but
+  not a read of its binary. `product_verdict` already follows T-2851's rule, so T-2691 needs no change of rule.
+- **Organizer with both settings typed by hand.** Layer 3 is the only check that reads the binary, and Organizer never
+  runs upload.sh. Someone who sets the condition and `PW_INTERNAL_TESTFLIGHT=YES` in Xcode by hand, archives, and uploads
+  through Organizer with internal-only unticked gets past every layer on this Mac. T-2691 would not stop it either. The
+  company's uploads go through upload.sh; this is a human path, and it needs a person doing all three on purpose.
+- **Apple's key is unproven end to end.** Whether App Store Connect shows the build internal-only has to be read there,
+  by the Investors (T-2702's note: "App Store Connect must show the build internal before any group gets it"). The first
+  gate upload's check is that page. The first upload is T-2456, after #200.
+- **`LaneGateMark`'s text still says "never archive or upload this build".** That is now loose, and kept on purpose:
+  changing the text would let any archive that holds the old words pass upload.sh as a plain build.
+
+## Export measurements (T-2851)
+
+Settings gets one row in this build, "Export measurements", above About. It runs `MeasurementExport.collect`
+(`App/Settings/MeasurementExport.swift`) and opens the share sheet with:
+
+- `lane-rest.jsonl` (LaneRestBench, T-2097);
+- every widget's `runs.jsonl`, as `runs-<id>.jsonl` (every widget's own file has the same name), killed rows and their
+  margin figures included (T-2661). Rows are kept 14 days or 1 MiB a widget (RunLogRetention), so three days fit;
+- `manifest.json`: app version and build, phone model, system, time, whether the lane is on and the margin record-only,
+  and what was copied (bytes, rows), missing, or failed, so a thin export can be told from a thin session.
+
+Files are copied whole and read back. **The row cannot leak by these rules, held by `RowTests`:** the row, its title
+and its share sheet are inside `#if PYWIDGET_LANE_GATE`; the collector is inside `#if PYWIDGET_LANE_GATE || DEBUG`, so the
+unit target tests it on every run and a plain Release build does not hold it; the title is in no string file, because
+those are copied into every build. `SettingsUITests.testExportMeasurementsRowOnlyInTheGateBuild` is the same test both
+ways: run plainly it proves the row absent, and with the condition on the xcodebuild line it proves the row drawn and the
+share sheet open.
 
 ## The Swift half (T-2369)
 
@@ -82,7 +142,8 @@ Three layers. The first two are on main with this decision. The third comes with
   The keys appear only on a record-only build's run rows; the shipping rows are unchanged.
 - `check_lane_gate.py` is a pre-build phase on PyWidget and PyWidgetExtension. `scripts/gate_session_build.sh` builds
   Release for the phone by default (own DerivedData, `build/dd-gate`). A Release build also stops at the legal links
-  check until T-0485 sets the privacy URL, as every Release build does.
+  check until T-0485 sets the privacy URL, as every Release build does; `--testflight` does not, because
+  `PW_INTERNAL_TESTFLIGHT=YES` turns that check into a warning, as on every internal build.
 
 ## How G1-G3 get their numbers in the gate build
 

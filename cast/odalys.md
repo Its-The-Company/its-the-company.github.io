@@ -68,7 +68,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-2460 done ca8e02928: approve cards need part-1 'Kind: security|real-world|creative' (else refused, make it directly). Applier untouched by <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>. Sweep: 5 open asks kept. inbox_lanes_test 2 fails pre-exist (apply_proposal not copied).
 
-- T-2692..94 done 8fc88addb: pin read from fetched origin/main (HEAD blob identical), pinned body plain text, <!-- refused on approve path. Re-review T-2711 (Pernille). Open: inline diff with ' {0,3}```' content line; auto/standing paths don't refuse <!--.
+- T-2692..94 done 8fc88addb: pin read from fetched origin/main (HEAD blob identical), pinned body plain text, <!-- refused on approve path. Re-review T-2711 (Pernille). T-2725/26 42f942baf, T-2727 29c45aff5 (shown_blocks on every inline path, pinned body no raw HTML): waits Pernille's re-review, gates #198.
 - T-2634 built b5961ab03 (runner 16, tools/land_xc.py: xc job rides on land/<id>, prequeue via merge-tree; no result = wait 75). Open T-2713: full personal_land_test run (stopped at 600 s under load ~100 after 252/0), confirm after runner 16 updates, read --timing after (before 1.42 lands/h, ttl med 7.1 p90 137.4, n=88). Then T-2616. T-2466 ticked (81091aa96).
 - Lesson: run.sh executes tests/*.sh from the checkout, not a copy; never edit a suite while it runs.
 

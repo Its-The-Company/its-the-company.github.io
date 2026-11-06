@@ -1,66 +1,14 @@
 {
  "schema": 1,
- "at": "2026-11-06T21:08:10.995831+00:00",
+ "at": "2026-11-06T21:14:19.380708+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-06T15:09:46-05:00"
+  "kind": "",
+  "started": null
  },
- "workers": [
-  {
-   "name": "pernille",
-   "task": "[review] T-3105 internal gate build review",
-   "model": "opus",
-   "started": "2026-11-06T20:30:43.676Z",
-   "seconds": 2247,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-2711 re-review proposal applier",
-   "model": "opus",
-   "started": "2026-11-06T20:50:43.638Z",
-   "seconds": 1047,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Pernille x2",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-2727 applier refusals on all paths",
-   "model": "opus",
-   "started": "2026-11-06T20:19:04.640Z",
-   "seconds": null,
-   "finished": "2026-11-06T20:49:56.485000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2851 land measurement build",
-   "model": "opus",
-   "started": "2026-11-06T20:14:22.401Z",
-   "seconds": null,
-   "finished": "2026-11-06T20:35:02.474000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[test] T-2843 TreeNodes weekday test",
-   "model": "opus",
-   "started": "2026-11-06T20:14:39.987Z",
-   "seconds": null,
-   "finished": "2026-11-06T20:17:55.671000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[bug] T-2843 TreeNodes weekday test",
-   "model": "opus",
-   "started": "2026-11-06T20:14:31.364Z",
-   "seconds": null,
-   "finished": "2026-11-06T20:14:31.413Z"
-  }
- ],
+ "workers": [],
+ "who": "",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -105,9 +53,9 @@
  "next_tick": null,
  "personal": {
   "week_pct": 63.66,
-  "usage_pct": 41.2,
-  "work_pct": 69.0,
-  "read_at": "2026-11-06T21:08:00+00:00",
+  "usage_pct": 41.0,
+  "work_pct": 68.8,
+  "read_at": "2026-11-06T21:17:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -146,35 +94,13 @@
    },
    {
     "lane": "a2",
-    "task": "T-2642",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Read the dispatcher's numbers at one day and one week",
+    "task": "T-2601",
+    "w": "Idris",
+    "k": "build",
+    "t": "Prove the tightened widget safety checks",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-06T16:05:25-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3114",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Build Home's In flight tab and its subtabs",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T16:05:25-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3061",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Final 24-hour read of waiting time after extra spare copies",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-06T16:05:25-05:00",
+    "at": "2026-11-06T16:16:24-05:00",
     "n": "Evan"
    },
    {
@@ -289,32 +215,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 512
+   "free_gb": 499
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T16:08:00-05:00"
+  "at": "2026-11-06T16:17:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Spread: 19% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 9 (held: all signals under their lines, a raise waits 30 minutes a step)",
-  "n": 2,
-  "at": "2026-11-06T15:09:36.417095-05:00"
- },
+ "pool": null,
  "lanes": [
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-3105 internal gate build review",
-   "model": "opus",
-   "since": "2026-11-06T20:30:43.676Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Odalys",
    "state": "next",
@@ -340,6 +253,14 @@
    "next": []
   },
   {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Maren",
    "state": "next",
    "task": "Maren+Odalys, P1, Investor an Investor c6651474906 (01:33...",
@@ -357,26 +278,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the internal-only gate build",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T20:30:43.676Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Recheck the large-change apply fixes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T20:50:43.638Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -474,11 +376,23 @@
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6695632816",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Is \"Parked\" treated differently from..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -486,13 +400,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 0,
   "lanes": 6,
-  "total": 8,
-  "at": "4:08 PM",
+  "total": 6,
+  "at": "4:17 PM",
   "why": "",
-  "at_iso": "2026-11-06T21:08:00+00:00",
-  "started": "3:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 4:08 PM ET</p></section>"
+  "at_iso": "2026-11-06T21:17:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 4:17 PM ET</p></section>"
  }
 }

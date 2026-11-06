@@ -53,6 +53,8 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 ## Lessons
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 - T-2853 cf0f59ceb (badge via demotion after 2nd-process refusal): green J-20261105-2326-xc-test (91/0); mutant J-...-2326-xc-test-2 rides land/idris-t2853 (7c0d0db93), result pending; then Pernille review, drop the ref, tick.
+- T-2851 46ab6c49a on main (unpushed): review T-3105 (Pernille), upload build 3 T-3106 (mine), read T-3107. Full suite owed after push; land-ref push for a pre-push run was classifier-refused.
+- Lesson T-2851: a fresh device's first ProStoreTests run stalls the same 12 (T-1467): rerun, don't chase.
 {% endraw %}
 
 

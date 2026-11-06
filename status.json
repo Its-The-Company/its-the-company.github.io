@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T00:42:55.660402+00:00",
+ "at": "2026-11-06T00:46:03.810397+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2830 spares on demand",
    "model": "opus",
    "started": "2026-11-06T00:25:43.225Z",
-   "seconds": 1032,
+   "seconds": 1220,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2833 idle alarm",
    "model": "opus",
    "started": "2026-11-06T00:25:57.429Z",
-   "seconds": 1018,
+   "seconds": 1206,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[tools] T-2725 T-2726 applier pin and fence",
    "model": "opus",
    "started": "2026-11-06T00:26:11.478Z",
-   "seconds": 1004,
+   "seconds": 1192,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +39,7 @@
    "task": "[release] T-2456 last checks first build",
    "model": "opus",
    "started": "2026-11-06T00:26:26.427Z",
-   "seconds": 989,
+   "seconds": 1177,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +48,7 @@
    "task": "[tools] T-2675 charter suite compare",
    "model": "opus",
    "started": "2026-11-06T00:26:32.127Z",
-   "seconds": 983,
+   "seconds": 1171,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +57,7 @@
    "task": "[build] T-2511 completion sys.path fix",
    "model": "opus",
    "started": "2026-11-06T00:26:38.277Z",
-   "seconds": 977,
+   "seconds": 1165,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +66,7 @@
    "task": "[build] T-2376 Shortcut recipes",
    "model": "opus",
    "started": "2026-11-06T00:26:45.329Z",
-   "seconds": 970,
+   "seconds": 1158,
    "finished": null,
    "effort": "high"
   },
@@ -75,16 +75,7 @@
    "task": "[build] T-2724 traceback trim honest",
    "model": "opus",
    "started": "2026-11-06T00:26:55.942Z",
-   "seconds": 959,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[build] T-1758 refresh schedule rule",
-   "model": "opus",
-   "started": "2026-11-06T00:30:38.040Z",
-   "seconds": 737,
+   "seconds": 1147,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +84,7 @@
    "task": "[tools] T-2839 land stuck lane work",
    "model": "opus",
    "started": "2026-11-06T00:36:26.557Z",
-   "seconds": 389,
+   "seconds": 577,
    "finished": null,
    "effort": "high"
   },
@@ -102,13 +93,39 @@
    "task": "[review] T-2840 refresh failure check",
    "model": "opus",
    "started": "2026-11-06T00:38:33.031Z",
-   "seconds": 262,
+   "seconds": 450,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-2667 new Home Chat Usage pages",
+   "model": "opus",
+   "started": "2026-11-06T00:43:08.348Z",
+   "seconds": 175,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[design] T-2846 refresh schedule ruling",
+   "model": "opus",
+   "started": "2026-11-06T00:45:37.160Z",
+   "seconds": 26,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x5, Idris x2, Ines, Pernille x3",
+ "who": "Odalys x5, Idris x2, Ines x2, Pernille x3",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[build] T-1758 refresh schedule rule",
+   "model": "opus",
+   "started": "2026-11-06T00:30:38.040Z",
+   "seconds": null,
+   "finished": "2026-11-06T00:45:11.991000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-2728 memory-skip badge gap",
@@ -132,20 +149,12 @@
    "started": "2026-11-06T00:25:50.481Z",
    "seconds": null,
    "finished": "2026-11-06T00:35:28.345000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2704 merge queue worker branches",
-   "model": "opus",
-   "started": "2026-11-06T00:26:03.928Z",
-   "seconds": null,
-   "finished": "2026-11-06T00:30:17.619000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 437,
+  "runnable_count": 438,
   "blocked_count": 120
  },
  "meter": {
@@ -188,8 +197,41 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T00:43:00+00:00",
+  "read_at": "2026-11-06T00:46:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-2716",
+    "w": "Idris",
+    "k": "fix",
+    "t": "Clear the stuck banner when Python comes back",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T19:45:17-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-2302",
+    "w": "Idris",
+    "k": "build",
+    "t": "Compile and test the widget folder name change",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T19:45:17-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-2317",
+    "w": "Idris",
+    "k": "release",
+    "t": "Compile the widget refresh code out of Release",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T19:45:17-05:00",
+    "n": "Evan"
+   },
    {
     "lane": "a2",
     "task": "T-1764",
@@ -244,7 +286,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T19:12:30-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
@@ -322,7 +365,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-05T19:43:00-05:00"
+  "at": "2026-11-05T19:46:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -533,6 +576,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The app now has a tested rule for when to ask iOS to refresh widgets in the background next: at...",
+    "at": "2026-11-05T19:45:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "The memory-skip badge now waits 60 seconds, so one widget refresh asking for several sizes no...",
     "at": "2026-11-05T19:42:00-05:00"
@@ -541,15 +589,10 @@
     "w": "Idris",
     "t": "Not needed any more: the parked fix for one shared refresh-failure check was put straight onto...",
     "at": "2026-11-05T19:38:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The app now uses one check to decide that a widget refresh failed to get new data, so a...",
-    "at": "2026-11-05T19:37:00-05:00"
    }
   ],
   "count": {
-   "next": 437,
+   "next": 438,
    "wait": 44,
    "blocked": 76,
    "you": 19
@@ -560,6 +603,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -568,13 +612,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 11,
-  "lanes": 4,
-  "total": 15,
-  "at": "7:43 PM",
+  "main": 12,
+  "lanes": 5,
+  "total": 17,
+  "at": "7:46 PM",
   "why": "",
-  "at_iso": "2026-11-06T00:43:00+00:00",
+  "at_iso": "2026-11-06T00:46:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>15</b> agents running now</p><p class=\"an-sub\">Main session 11, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:43 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>17</b> agents running now</p><p class=\"an-sub\">Main session 12, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:46 PM ET</p></section>"
  }
 }

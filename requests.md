@@ -13,11 +13,11 @@ issues: "2"
 <p class="lead">2 things the company needs from the Investors. Answer each one here: tap an option or write a reply, add files if you need to, and send.</p>
 
 <p class="meta" id="needs-anon">With your GitHub token saved (<a href="{{ '/connect.html' | relative_url }}">Connect</a>), each request shows the company's question, its options as buttons and a reply box, a Close button, and the closed issues with their replies. Without it this page shows titles only.</p>
-<div id="needs-root" data-repo="Its-The-Company/itsthecompany" data-named="13 19 29 32 33 36 38 41 42 51 53 54 55 56 57 58 59 60" data-props="202" data-skip="39 41"></div>
+<div id="needs-root" data-repo="Its-The-Company/itsthecompany" data-named="13 19 29 32 33 36 38 41 42 51 53 54 55 56 57 58 59 60" data-props="205" data-skip="39 41"></div>
 
 <h2>Proposals that need an approve</h2>
 <p class="meta">Changes to the company's own rules and tools that cannot apply on their own. Reply approve, hold or no. Those that applied automatically are on Company &gt; Infrastructure.</p>
-<ul class="list needs" data-group="proposal"><li class="ny" data-nums="202"><span class="tag report">Waiting on you</span> <span class="ref">#202</span><span class="ny-q">Proposal: Let Spread <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> run ahead of the old daily share</span><div class="ny-box"></div></li></ul>
+<ul class="list needs" data-group="proposal"><li class="ny" data-nums="205"><span class="tag report">Waiting on you</span> <span class="ref">#205</span><span class="ny-q">Proposal: Turn on the check that keeps a hung Company SSD from stopping the company</span><div class="ny-box"></div></li></ul>
 
 <h2>Not written up yet</h2>
 <p class="meta">Open issues the company has not put in plain words yet.</p>

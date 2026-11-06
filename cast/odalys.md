@@ -39,28 +39,24 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open (as of 2026-11-04; details in archive.md)
 - Reads due: OPT-059 11-05 (n=150; before 25.3%, n=569; <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> calls count after 11-03 19:51 ET). OPT-071 11-06. OPT-062 11-07. OPT-042 11-09. OPT-069, OPT-068 11-10. OPT-070, OPT-065 at n=10, OPT-043. OPT-076 11-08 (#164 done). OPT-077 n=80 or 11-11 (before 36.0%). OPT-078 n=40 or 11-09 (flow_costs.py --baseline-until). OPT-079 n=3 lock-in days or 11-11 (share_spent ticks after lock 'at'; before 84/150).
 
-- T-2861 done b6657ef29: dispatch holds on lanes' real files (tools/claim_paths.py busy) + inferred files; off = dispatch.json paths=named. After-read T-2903 (before 0.20 rebase conflicts/attempt, n=228). Operator packet should call claim_paths.py add/release. board_tick add assigns its own ID: write no ID in the line.
 - Lesson: committing ops/board.md by pathspec carries others' uncommitted board edits (da92f566c took a titling pass). Check `git diff --stat ops/board.md` before.
 
-- T-2713 read is T-2881 (before 1.42 lands/h, n=88). T-2926 landed 5e264d750 (land <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> 300 s).
 - Lesson: supervisor_test reds flip under load (clean main 211/2, other run all groups died). Control on clean HEAD before blaming a patch. personal_land hook rows read HEAD: test from a scratch commit.
 
-- T-2616 open: baseline + plan in its board note; half-built helpers in scratch T-2616-odalys/wt (untested). Guard refuses any command with `rebase`, even in a temp repo: test union merges another way.
-
+- T-2616 0c17c3781 (not ticked): first try on via ops/land_first_try.json. Left: land_fold.py fold --apply (118->23), other land suites not re-run. OPT-099 read 11-08 (before 23% landed n=118, 0.89 lands/h).
 - T-2667 built ddd44ec37, not ticked (notes on T-2667/T-2480/T-2469 lines). Left: <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> chat.js hunk needs composer harness (T-2526); Chat threads column; This Session page; publish + #41 post (draft ops/requests/t2667-live-post.md).
-
 
 - T-2849 done 7ed6120b7: adaptive pool (tools/pool_adapt.py, switch ops/pool_adapt.json). OPT-095 read n=30 tasks or 11-08 (before 9.5 finished/h, 0.10 time-outs/h, red 21%). Open: pool chip on Home strip (home_look.py mid-rewrite elsewhere).
 
-
-- T-2945 done ce5e9f2eb: Spread = reset_line (use week up 3 h before own reset; hold when ahead). Read week % at resets: main 11-08 02:00, a 11-07 10:00, b 11-07 14:00 (before: main 73% at 71% past). Open: personal_lane.py even-day check (Investor-owned). live_meter_test 4 red at HEAD (cap 10).
-
+- T-2945 done ce5e9f2eb: Spread = reset_line (use week up 3 h before own reset; hold when ahead). Read week % at resets: main 11-08 02:00, a 11-07 10:00, b 11-07 14:00 (before: main 73% at 71% past). Open: personal_lane.py even-day check (Investor-owned). live_meter_test 4 red at HEAD (<span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> 10).
 
 - T-2666 done 9105d9014: retry trains (<=5 host-only lines, bisect via .git/personal-ready/<id>.train). OPT-098 read T-2953 by 11-09 (before 278 live, 2.25 sent/h n=54). Revert LAND_TRAIN_MAX=1.
 
-- T-2913 done 212f9ff5d: land steps in .landing/now + ops/runs/land_steps.jsonl (start/end per rebase/host/xc/push). lifecycle.tries() is the hook for T-2905 and T-2936. No before number for merge step times: first read is these rows.
-
 - T-2344 b7ee44511: plan.js 2,556/2,560 gz (proposed; Ines confirms). Open: row 'N questions waiting' needs T-2667 threads column.
+
+- T-2999 built 710fa0793, not ticked: ssd_guard hook not registered (my Edit of .claude/settings.json refused, folder denied). Operator adds `ssd_guard.py --entry`. Then read stalls.jsonl cause counts (before: 5 of 5 ssd on 11-06).
+
+- T-2936 done 2c18d9469: Bottlenecks split (merge_queue/checks/onto/fix) from land_steps.jsonl. First clean read after Sat 11-07 03:55 (unsplit 801 h drops out). Before: one merge row 740.06 h n 121.
 
 ## Standing lessons (details in archive.md)
 

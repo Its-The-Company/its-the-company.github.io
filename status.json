@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T02:36:51.123070+00:00",
+ "at": "2026-11-06T02:39:51.341650+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[release] T-2456 last checks first build",
    "model": "opus",
    "started": "2026-11-06T00:26:26.427Z",
-   "seconds": 7824,
+   "seconds": 8004,
    "finished": null,
    "effort": "high"
   }
@@ -98,7 +98,7 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T02:36:00+00:00",
+  "read_at": "2026-11-06T02:39:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -131,6 +131,28 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T21:19:58-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-2870",
+    "w": "Idris",
+    "k": "build",
+    "t": "Close the small gaps left in the completion import guard",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T21:38:42-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-2494",
+    "w": "Idris",
+    "k": "build",
+    "t": "Finish the widget's log write before the extension quits",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T21:38:42-05:00",
     "n": "Evan"
    },
    {
@@ -244,7 +266,7 @@
   }
  ],
  "disk": {
-  "free_gb": 17,
+  "free_gb": 12,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -254,8 +276,8 @@
  },
  "lock_in": {
   "on": true,
-  "pool": 5,
-  "at": "2026-11-05T21:36:00-05:00"
+  "pool": 6,
+  "at": "2026-11-05T21:39:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -438,12 +460,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 4,
-  "total": 5,
-  "at": "9:36 PM",
+  "lanes": 5,
+  "total": 6,
+  "at": "9:39 PM",
   "why": "",
-  "at_iso": "2026-11-06T02:36:00+00:00",
+  "at_iso": "2026-11-06T02:39:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:36 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 9:39 PM ET</p></section>"
  }
 }

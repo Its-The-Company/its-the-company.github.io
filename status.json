@@ -1,47 +1,14 @@
 {
  "schema": 1,
- "at": "2026-11-06T04:10:44.718467+00:00",
+ "at": "2026-11-06T04:18:38.133778+00:00",
  "session": {
-  "active": false,
+  "active": true,
   "kind": "",
   "started": null
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "ines",
-   "task": "[plan] T-2456 ruling: Files UI test gate",
-   "model": "opus",
-   "started": "2026-11-06T03:07:02.444Z",
-   "seconds": null,
-   "finished": "2026-11-06T03:09:11.228000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[release] T-2456 last checks first build",
-   "model": "opus",
-   "started": "2026-11-06T00:26:26.427Z",
-   "seconds": null,
-   "finished": "2026-11-06T03:06:44.028000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-2667 new Home Chat Usage pages",
-   "model": "opus",
-   "started": "2026-11-06T00:43:08.348Z",
-   "seconds": null,
-   "finished": "2026-11-06T02:33:48.759000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2831 cap pre-session merge step",
-   "model": "opus",
-   "started": "2026-11-06T01:42:43.456Z",
-   "seconds": null,
-   "finished": "2026-11-06T02:19:42.881000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -50,29 +17,29 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 1.0,
-   "resets_at": "2026-11-06T04:40:00.319370+00:00",
+   "pct": 38.0,
+   "resets_at": "2026-11-06T04:40:00.342756+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 99.0,
+   "left": 62.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 65.0,
-   "resets_at": "2026-11-08T07:00:00.319390+00:00",
+   "pct": 71.0,
+   "resets_at": "2026-11-08T07:00:00.342780+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 35.0,
+   "left": 29.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 1.0,
-   "resets_at": "2026-11-08T07:00:00.319519+00:00",
+   "resets_at": "2026-11-08T07:00:00.342951+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-05T19:24:26.030586-05:00"
+  "read_at": "2026-11-05T23:18:21.165382-05:00"
  },
  "ui": {
-  "week_pct": 0.7,
-  "five_hour_pct": 0.097,
+  "week_pct": 0.698,
+  "five_hour_pct": 0.093,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -83,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-05T19:39:26-05:00",
+ "next_tick": null,
  "personal": {
-  "week_pct": 63.3,
+  "week_pct": 63.12,
   "usage_pct": 43.8,
   "work_pct": 72.2,
-  "read_at": "2026-11-06T04:13:00+00:00",
+  "read_at": "2026-11-06T04:19:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -187,7 +154,7 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 14,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -197,10 +164,10 @@
  },
  "lock_in": {
   "on": true,
-  "pool": 2,
-  "at": "2026-11-05T23:13:00-05:00"
+  "pool": 3,
+  "at": "2026-11-05T23:19:00-05:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
  "pool": null,
  "lanes": [
@@ -357,18 +324,26 @@
    "id": "c6676612212",
    "state": "received",
    "position": 1,
-   "eta": "2026-11-05T19:39:26-05:00",
    "tasks": {
     "open": 0,
     "done": 0
    },
    "title": "The Always Approve is imminent!! Lmk..."
+  },
+  {
+   "id": "c6676697175",
+   "state": "received",
+   "position": 2,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "done"
   }
  ],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "inbox_title",
   "task_title",
@@ -381,10 +356,10 @@
   "main": 0,
   "lanes": 5,
   "total": 5,
-  "at": "11:13 PM",
+  "at": "11:19 PM",
   "why": "",
-  "at_iso": "2026-11-06T04:13:00+00:00",
+  "at_iso": "2026-11-06T04:19:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:13 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:19 PM ET</p></section>"
  }
 }

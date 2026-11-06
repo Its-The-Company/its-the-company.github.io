@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T12:36:36.785158+00:00",
+ "at": "2026-11-06T12:39:40.312920+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[site] T-2977 site test green, then T-3009",
    "model": "opus",
    "started": "2026-11-06T12:34:52.080Z",
-   "seconds": 104,
+   "seconds": 288,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2616 first-try landing rest",
    "model": "opus",
    "started": "2026-11-06T12:35:01.393Z",
-   "seconds": 95,
+   "seconds": 278,
    "finished": null,
    "effort": "high"
   }
@@ -74,7 +74,7 @@
   "week_pct": 64.13,
   "usage_pct": 42.7,
   "work_pct": 70.3,
-  "read_at": "2026-11-06T12:36:00+00:00",
+  "read_at": "2026-11-06T12:39:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -177,7 +177,7 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 14,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -188,7 +188,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T07:36:00-05:00"
+  "at": "2026-11-06T07:39:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -366,11 +366,23 @@
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6685013188",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "A On Fri, Nov 6, 2026 at 7:33 AM..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -381,10 +393,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "7:36 AM",
+  "at": "7:39 AM",
   "why": "",
-  "at_iso": "2026-11-06T12:36:00+00:00",
+  "at_iso": "2026-11-06T12:39:00+00:00",
   "started": "7:33 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:36 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:39 AM ET</p></section>"
  }
 }

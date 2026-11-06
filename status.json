@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T22:17:28.953645+00:00",
+ "at": "2026-11-06T22:21:10.534531+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,30 @@
    "task": "[review] T-3133 run log review",
    "model": "opus",
    "started": "2026-11-06T22:13:55.634Z",
-   "seconds": 213,
+   "seconds": 434,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[ops] T-3134 trim worker memory files",
-   "model": "sonnet",
-   "started": "2026-11-06T22:15:07.946Z",
-   "seconds": 141,
+   "task": "[tools] T-3015 hung SSD recovery",
+   "model": "opus",
+   "started": "2026-11-06T22:21:04.944Z",
+   "seconds": 5,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Pernille, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[ops] T-3134 trim worker memory files",
+   "model": "sonnet",
+   "started": "2026-11-06T22:15:07.946Z",
+   "seconds": null,
+   "finished": "2026-11-06T22:20:46.539000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3123 restart after dry key",
@@ -51,20 +59,12 @@
    "started": "2026-11-06T21:28:31.922Z",
    "seconds": null,
    "finished": "2026-11-06T22:05:33.354000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-1854 extension run rows",
-   "model": "opus",
-   "started": "2026-11-06T21:40:51.284Z",
-   "seconds": null,
-   "finished": "2026-11-06T22:04:48.109000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 397,
+  "runnable_count": 396,
   "blocked_count": 121
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 63.9,
   "usage_pct": 41.0,
   "work_pct": 68.8,
-  "read_at": "2026-11-06T22:18:00+00:00",
+  "read_at": "2026-11-06T22:21:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -209,7 +209,8 @@
     "m": "sonnet",
     "e": "medium",
     "at": "2026-11-06T15:13:45-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b3",
@@ -253,7 +254,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T17:18:00-05:00"
+  "at": "2026-11-06T17:21:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -275,9 +276,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[ops] T-3134 trim worker memory files",
-   "model": "sonnet",
-   "since": "2026-11-06T22:15:07.946Z",
+   "task": "[tools] T-3015 hung SSD recovery",
+   "model": "opus",
+   "since": "2026-11-06T22:21:04.944Z",
    "next": [],
    "effort": "high"
   },
@@ -327,11 +328,11 @@
    },
    {
     "w": "Odalys",
-    "k": "ops",
-    "t": "Trim Odalys's and Pernille's memory files",
-    "m": "sonnet",
+    "k": "tools",
+    "t": "Bring a hung SSD back without a person",
+    "m": "opus",
     "e": "high",
-    "at": "2026-11-06T22:15:07.946Z",
+    "at": "2026-11-06T22:21:04.944Z",
     "o": "c"
    }
   ],
@@ -410,6 +411,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "Each worker's memory file is read on every call, so two had grown past the 4 KB limit; they are...",
+    "at": "2026-11-06T17:20:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "When an API key runs dry mid-session, the next session now starts without first waiting up to...",
     "at": "2026-11-06T17:14:00-05:00"
    },
@@ -417,15 +423,10 @@
     "w": "Odalys",
     "t": "An Investor message no longer waits on a stopped session or on housekeeping: every running lane...",
     "at": "2026-11-06T17:05:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The dispatcher's first day is measured: the share of product work and the landing rate both...",
-    "at": "2026-11-06T17:05:00-05:00"
    }
   ],
   "count": {
-   "next": 397,
+   "next": 396,
    "wait": 42,
    "blocked": 79,
    "you": 20
@@ -449,10 +450,10 @@
   "main": 2,
   "lanes": 5,
   "total": 7,
-  "at": "5:18 PM",
+  "at": "5:21 PM",
   "why": "",
-  "at_iso": "2026-11-06T22:18:00+00:00",
+  "at_iso": "2026-11-06T22:21:00+00:00",
   "started": "4:25 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 5:18 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 5:21 PM ET</p></section>"
  }
 }

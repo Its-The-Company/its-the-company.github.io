@@ -1,18 +1,46 @@
 {
  "schema": 1,
- "at": "2026-11-06T21:52:32.367238+00:00",
+ "at": "2026-11-06T21:56:22.236828+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-06T16:25:07-05:00"
  },
- "workers": [],
- "who": "",
- "recent": [],
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3117 Investor replies in 5 min",
+   "model": "opus",
+   "started": "2026-11-06T21:28:31.922Z",
+   "seconds": 1670,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-1854 extension run rows",
+   "model": "opus",
+   "started": "2026-11-06T21:40:51.284Z",
+   "seconds": 930,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys, Idris",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3100 skip empty API keys",
+   "model": "opus",
+   "started": "2026-11-06T21:28:40.424Z",
+   "seconds": null,
+   "finished": "2026-11-06T21:40:24.711000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 398,
+  "runnable_count": 399,
   "blocked_count": 121
  },
  "meter": {
@@ -55,7 +83,7 @@
   "week_pct": 63.9,
   "usage_pct": 41.0,
   "work_pct": 68.8,
-  "read_at": "2026-11-06T21:53:00+00:00",
+  "read_at": "2026-11-06T21:56:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -88,7 +116,8 @@
     "m": "sonnet",
     "e": "medium",
     "at": "2026-11-06T16:50:00-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
@@ -187,7 +216,7 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -198,27 +227,33 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T16:53:00-05:00"
+  "at": "2026-11-06T16:56:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: 18% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (cut a step: load 30.6 a core is over 10)",
+  "n": 2,
+  "at": "2026-11-06T16:24:45.132512-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P0, FIRST (an Investor c6695632816 asked 16:08...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-3117 Investor replies in 5 min",
+   "model": "opus",
+   "since": "2026-11-06T21:28:31.922Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-1854 extension run rows",
+   "model": "opus",
+   "since": "2026-11-06T21:40:51.284Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -254,7 +289,26 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Answer every Investor message within five minutes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T21:28:31.922Z",
+    "o": "i"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Record widget runs from the extension too",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T21:40:51.284Z",
+    "o": "c"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -345,7 +399,7 @@
    }
   ],
   "count": {
-   "next": 398,
+   "next": 399,
    "wait": 42,
    "blocked": 79,
    "you": 20
@@ -364,13 +418,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 5,
-  "total": 5,
-  "at": "4:53 PM",
+  "total": 7,
+  "at": "4:56 PM",
   "why": "",
-  "at_iso": "2026-11-06T21:53:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 4:53 PM ET</p></section>"
+  "at_iso": "2026-11-06T21:56:00+00:00",
+  "started": "4:25 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 4:56 PM ET</p></section>"
  }
 }

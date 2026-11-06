@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T04:34:29.021729+00:00",
+ "at": "2026-11-06T04:37:34.260981+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,16 +12,7 @@
    "task": "[tools] T-2831 cap pre-session merge",
    "model": "opus",
    "started": "2026-11-06T04:22:15.682Z",
-   "seconds": 733,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2861 dispatch file overlap guard",
-   "model": "opus",
-   "started": "2026-11-06T04:22:19.635Z",
-   "seconds": 729,
+   "seconds": 918,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +21,7 @@
    "task": "[build] T-2852 widget refresh ask function",
    "model": "opus",
    "started": "2026-11-06T04:22:23.986Z",
-   "seconds": 725,
+   "seconds": 910,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +30,7 @@
    "task": "[tools] T-2855 code-drawn report visuals",
    "model": "opus",
    "started": "2026-11-06T04:22:33.248Z",
-   "seconds": 715,
+   "seconds": 901,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[tools] T-2865 bottleneck usage on Home",
    "model": "opus",
    "started": "2026-11-06T04:22:37.587Z",
-   "seconds": 711,
+   "seconds": 896,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[build] T-2853 demoted widget badge test",
    "model": "opus",
    "started": "2026-11-06T04:22:48.562Z",
-   "seconds": 700,
+   "seconds": 885,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +57,7 @@
    "task": "[tools] T-2345 Plan mode company side",
    "model": "opus",
    "started": "2026-11-06T04:25:05.302Z",
-   "seconds": 563,
+   "seconds": 748,
    "finished": null,
    "effort": "high"
   },
@@ -75,13 +66,21 @@
    "task": "[test] T-2902 refresh schedule test gaps",
    "model": "opus",
    "started": "2026-11-06T04:29:14.206Z",
-   "seconds": 314,
+   "seconds": 500,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x7, Idris",
+ "who": "Odalys x6, Idris",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2861 dispatch file overlap guard",
+   "model": "opus",
+   "started": "2026-11-06T04:22:19.635Z",
+   "seconds": null,
+   "finished": "2026-11-06T04:35:56.737000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-2845 refresh schedule review",
@@ -145,7 +144,7 @@
   "week_pct": 63.12,
   "usage_pct": 43.8,
   "work_pct": 72.2,
-  "read_at": "2026-11-06T04:34:00+00:00",
+  "read_at": "2026-11-06T04:37:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -270,14 +269,14 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 622
+   "free_gb": 585
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
-  "pool": 5,
-  "at": "2026-11-05T23:34:00-05:00"
+  "pool": 6,
+  "at": "2026-11-05T23:37:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -347,15 +346,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T04:22:15.682Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Keep parallel tasks out of the files others change",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T04:22:19.635Z",
     "o": "c"
    },
    {
@@ -487,6 +477,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Parallel tasks are now kept apart by the files each lane is really changing, and by likely files...",
+    "at": "2026-11-05T23:35:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Checked the rule that picks when the app wakes in the background to refresh widgets: it is...",
     "at": "2026-11-05T23:28:00-05:00"
@@ -495,11 +490,6 @@
     "w": "Idris",
     "t": "The widget safety test that could pass when it should fail now goes red: both planted faults, a...",
     "at": "2026-11-05T23:25:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The fix that stops side-by-side jobs on the MacBook from steering the runner's own writes passed...",
-    "at": "2026-11-05T23:24:00-05:00"
    }
   ],
   "count": {
@@ -510,11 +500,23 @@
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6677001798",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "All tasks that improve the merge..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -522,13 +524,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 8,
+  "main": 7,
   "lanes": 5,
-  "total": 13,
-  "at": "11:34 PM",
+  "total": 12,
+  "at": "11:37 PM",
   "why": "",
-  "at_iso": "2026-11-06T04:34:00+00:00",
+  "at_iso": "2026-11-06T04:37:00+00:00",
   "started": "11:18 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>13</b> agents running now</p><p class=\"an-sub\">Main session 8, started 11:18 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:34 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>12</b> agents running now</p><p class=\"an-sub\">Main session 7, started 11:18 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:37 PM ET</p></section>"
  }
 }

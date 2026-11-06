@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T11:50:46.469949+00:00",
+ "at": "2026-11-06T11:53:48.869329+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,30 @@
    "task": "[tools] T-2616 land on first try",
    "model": "opus",
    "started": "2026-11-06T11:32:02.665Z",
-   "seconds": 1123,
+   "seconds": 1306,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-2905 merge fixes as Coding",
+   "task": "[site] T-2936 Bottlenecks split",
    "model": "opus",
-   "started": "2026-11-06T11:48:40.180Z",
-   "seconds": 126,
+   "started": "2026-11-06T11:52:32.863Z",
+   "seconds": 76,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2905 merge fixes as Coding",
+   "model": "opus",
+   "started": "2026-11-06T11:48:40.180Z",
+   "seconds": null,
+   "finished": "2026-11-06T11:52:17.246000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2999 SSD hang guard",
@@ -40,7 +48,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 477,
+  "runnable_count": 476,
   "blocked_count": 123
  },
  "meter": {
@@ -83,7 +91,7 @@
   "week_pct": 64.29,
   "usage_pct": 43.0,
   "work_pct": 70.6,
-  "read_at": "2026-11-06T11:50:00+00:00",
+  "read_at": "2026-11-06T11:53:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -175,7 +183,7 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -186,7 +194,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T06:50:00-05:00"
+  "at": "2026-11-06T06:53:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -259,11 +267,11 @@
    },
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "Show merge fixes as Coding on Home",
+    "k": "site",
+    "t": "Split the Bottlenecks panel by the new merge steps",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-06T11:48:40.180Z",
+    "at": "2026-11-06T11:52:32.863Z",
     "o": "c"
    }
   ],
@@ -342,8 +350,8 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "Closed with its continuation T-2713 (MacBook land checks: the MacBook tests finished work...",
-    "at": "2026-11-06T06:31:00-05:00"
+    "t": "When a task's merge is refused and its owner commits a fix, Home now shows that fix time as...",
+    "at": "2026-11-06T06:52:00-05:00"
    },
    {
     "w": "Odalys",
@@ -352,12 +360,12 @@
    },
    {
     "w": "Odalys",
-    "t": "The MacBook now runs the iPhone tests for finished work waiting to merge, and falls back to the...",
+    "t": "Closed with its continuation T-2713 (MacBook land checks: the MacBook tests finished work...",
     "at": "2026-11-06T06:31:00-05:00"
    }
   ],
   "count": {
-   "next": 477,
+   "next": 476,
    "wait": 43,
    "blocked": 80,
    "you": 20
@@ -379,10 +387,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "6:50 AM",
+  "at": "6:53 AM",
   "why": "",
-  "at_iso": "2026-11-06T11:50:00+00:00",
+  "at_iso": "2026-11-06T11:53:00+00:00",
   "started": "6:26 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:50 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:53 AM ET</p></section>"
  }
 }

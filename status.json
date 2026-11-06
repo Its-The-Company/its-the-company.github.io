@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T01:41:49.042827+00:00",
+ "at": "2026-11-06T01:44:50.657618+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,19 +9,10 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-2833 idle alarm",
-   "model": "opus",
-   "started": "2026-11-06T00:25:57.429Z",
-   "seconds": 4551,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[site] T-2667 new Home Chat Usage pages",
    "model": "opus",
    "started": "2026-11-06T00:43:08.348Z",
-   "seconds": 3520,
+   "seconds": 3702,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +21,7 @@
    "task": "[tools] T-2849 adaptive agent pool",
    "model": "opus",
    "started": "2026-11-06T00:56:34.630Z",
-   "seconds": 2714,
+   "seconds": 2896,
    "finished": null,
    "effort": "high"
   },
@@ -39,22 +30,38 @@
    "task": "[release] T-2456 last checks first build",
    "model": "opus",
    "started": "2026-11-06T00:26:26.427Z",
-   "seconds": 4522,
+   "seconds": 4704,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2831 cap pre-session merge step",
+   "model": "opus",
+   "started": "2026-11-06T01:42:43.456Z",
+   "seconds": 127,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys x3, Idris",
+ "recent": [
   {
    "name": "pernille",
    "task": "[review] T-2868 approval tool security fixes",
    "model": "opus",
    "started": "2026-11-06T01:32:34.063Z",
-   "seconds": 554,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x3, Idris, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-06T01:42:51.830000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2833 idle alarm",
+   "model": "opus",
+   "started": "2026-11-06T00:25:57.429Z",
+   "seconds": null,
+   "finished": "2026-11-06T01:42:25.676000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-2847 completion import path fix",
@@ -70,22 +77,6 @@
    "started": "2026-11-06T00:36:26.557Z",
    "seconds": null,
    "finished": "2026-11-06T01:40:56.606000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2830 spares on demand",
-   "model": "opus",
-   "started": "2026-11-06T00:25:43.225Z",
-   "seconds": null,
-   "finished": "2026-11-06T01:35:32.340000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[tools] T-2675 charter suite compare",
-   "model": "opus",
-   "started": "2026-11-06T00:26:32.127Z",
-   "seconds": null,
-   "finished": "2026-11-06T01:35:02.991000+00:00"
   }
  ],
  "queue": {
@@ -134,7 +125,7 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T01:41:00+00:00",
+  "read_at": "2026-11-06T01:44:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -290,7 +281,7 @@
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-05T20:41:00-05:00"
+  "at": "2026-11-05T20:44:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -301,15 +292,6 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-2833 idle alarm",
-   "model": "opus",
-   "since": "2026-11-06T00:25:57.429Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "running",
    "task": "[release] T-2456 last checks first build",
@@ -319,11 +301,11 @@
    "effort": "high"
   },
   {
-   "name": "Pernille",
+   "name": "Odalys",
    "state": "running",
-   "task": "[review] T-2868 approval tool security fixes",
+   "task": "[site] T-2667 new Home Chat Usage pages",
    "model": "opus",
-   "since": "2026-11-06T01:32:34.063Z",
+   "since": "2026-11-06T00:43:08.348Z",
    "next": [],
    "effort": "high"
   },
@@ -331,6 +313,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P2, no Xcode, after T-1440 lands (Idris review...",
    "model": null,
    "since": null,
    "next": []
@@ -354,15 +344,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Raise an idle alarm when no session runs",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T00:25:57.429Z",
-    "o": "c"
-   },
    {
     "w": "Idris",
     "k": "release",
@@ -391,23 +372,16 @@
     "o": "c"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Recheck the approval tool's two security fixes",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Cap the merge step before a session at five minutes",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-06T01:32:34.063Z",
+    "at": "2026-11-06T01:42:43.456Z",
     "o": "c"
    }
   ],
   "open": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Raise an idle alarm when no session runs",
-    "s": "next",
-    "o": "c"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -470,22 +444,29 @@
     "t": "Move runner job sandbox files out of reach",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Re-review the runner job sandbox fix",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Odalys",
+    "t": "When no work session has run for 15 minutes while work is allowed, the machine now says why in...",
+    "at": "2026-11-05T20:42:00-05:00"
+   },
+   {
+    "w": "Pernille",
+    "t": "The approval tool now applies only the exact diff an Investor saw, and refuses a diff that would...",
+    "at": "2026-11-05T20:42:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The 16 batches of finished work stuck on clashes today are all sorted: three pieces are queued...",
-    "at": "2026-11-05T20:39:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "This stuck batch of finished work was sorted task by task: three pieces are queued to land, work...",
-    "at": "2026-11-05T20:39:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "This stuck batch of finished work was sorted task by task: three pieces are queued to land, work...",
     "at": "2026-11-05T20:39:00-05:00"
    }
   ],
@@ -510,13 +491,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 5,
+  "main": 4,
   "lanes": 5,
-  "total": 10,
-  "at": "8:41 PM",
+  "total": 9,
+  "at": "8:44 PM",
   "why": "",
-  "at_iso": "2026-11-06T01:41:00+00:00",
+  "at_iso": "2026-11-06T01:44:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 5, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 8:41 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 4, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 8:44 PM ET</p></section>"
  }
 }

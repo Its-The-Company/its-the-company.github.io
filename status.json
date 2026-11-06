@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T22:55:38.608818+00:00",
+ "at": "2026-11-06T22:58:42.917929+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,33 @@
  },
  "workers": [
   {
+   "name": "pernille",
+   "task": "[review] T-3142 run marker re-review",
+   "model": "opus",
+   "started": "2026-11-06T22:57:34.136Z",
+   "seconds": 68,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Pernille",
+ "recent": [
+  {
    "name": "odalys",
    "task": "[tools] T-2587 Simulator devices to SSD",
    "model": "opus",
    "started": "2026-11-06T22:46:40.658Z",
-   "seconds": 537,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-06T22:57:52.611000+00:00"
   },
   {
    "name": "idris",
    "task": "[build] T-3138 run detail from tail",
    "model": "opus",
    "started": "2026-11-06T22:50:20.417Z",
-   "seconds": 318,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-06T22:57:17.213000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-3137 Shortcut cancel row",
@@ -43,28 +50,12 @@
    "started": "2026-11-06T22:21:04.944Z",
    "seconds": null,
    "finished": "2026-11-06T22:46:10.011000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3135 T-3136 run marker fixes",
-   "model": "opus",
-   "started": "2026-11-06T22:23:54.073Z",
-   "seconds": null,
-   "finished": "2026-11-06T22:40:43.868000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-3133 run log review",
-   "model": "opus",
-   "started": "2026-11-06T22:13:55.634Z",
-   "seconds": null,
-   "finished": "2026-11-06T22:23:38.815000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 403,
+  "runnable_count": 402,
   "blocked_count": 121
  },
  "meter": {
@@ -107,7 +98,7 @@
   "week_pct": 63.9,
   "usage_pct": 41.0,
   "work_pct": 68.8,
-  "read_at": "2026-11-06T22:55:00+00:00",
+  "read_at": "2026-11-06T22:58:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -141,7 +132,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T17:36:31-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a2",
@@ -225,14 +217,14 @@
   "gate": "closed",
   "ssd": {
    "mounted": true,
-   "free_gb": 500
+   "free_gb": 499
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T17:55:00-05:00"
+  "at": "2026-11-06T17:58:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -243,35 +235,34 @@
  },
  "lanes": [
   {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-3142 run marker re-review",
+   "model": "opus",
+   "since": "2026-11-06T22:57:34.136Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-2587 Simulator devices to SSD",
-   "model": "opus",
-   "since": "2026-11-06T22:46:40.658Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-3138 run detail from tail",
-   "model": "opus",
-   "since": "2026-11-06T22:50:20.417Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Ines",
    "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Pernille",
+   "name": "Idris",
    "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -296,21 +287,12 @@
  "tasks": {
   "run": [
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop the SSD hangs, then finish SSD defaults",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Re-review keeping the run marker until the row",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-06T22:46:40.658Z",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Build the run's detail from the output's tail only",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T22:50:20.417Z",
+    "at": "2026-11-06T22:57:34.136Z",
     "o": "c"
    }
   ],
@@ -389,6 +371,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "When a script prints a great deal, the app now keeps only the last 24 KiB of what it printed...",
+    "at": "2026-11-06T17:57:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "When Shortcuts cancels a script run, for its time limit or because the person stopped it, the...",
     "at": "2026-11-06T17:49:00-05:00"
    },
@@ -396,15 +383,10 @@
     "w": "Odalys",
     "t": "When the company's external drive stops answering, the Mac mini now unmounts and remounts it by...",
     "at": "2026-11-06T17:45:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Two lanes adding experiment records at once could weave them into each other and break the...",
-    "at": "2026-11-06T17:41:00-05:00"
    }
   ],
   "count": {
-   "next": 403,
+   "next": 402,
    "wait": 42,
    "blocked": 79,
    "you": 20
@@ -425,13 +407,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 2,
-  "total": 4,
-  "at": "5:55 PM",
+  "total": 3,
+  "at": "5:58 PM",
   "why": "",
-  "at_iso": "2026-11-06T22:55:00+00:00",
+  "at_iso": "2026-11-06T22:58:00+00:00",
   "started": "4:25 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:55 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:58 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T23:04:48.935657+00:00",
+ "at": "2026-11-06T23:07:39.779231+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,42 @@
  },
  "workers": [
   {
+   "name": "ines",
+   "task": "[report] evening",
+   "model": "opus",
+   "started": "2026-11-06T23:05:11.652Z",
+   "seconds": 148,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-3146 T-3147 marker follow-ups",
+   "model": "opus",
+   "started": "2026-11-06T23:07:32.987Z",
+   "seconds": 6,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Ines, Idris",
+ "recent": [
+  {
    "name": "pernille",
    "task": "[review] T-3142 run marker re-review",
    "model": "opus",
    "started": "2026-11-06T22:57:34.136Z",
-   "seconds": 434,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-06T23:07:17.724000+00:00"
   },
   {
    "name": "odalys",
    "task": "[tools] T-2587 move finished folders to SSD",
    "model": "opus",
    "started": "2026-11-06T22:59:17.149Z",
-   "seconds": 331,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Pernille, Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-06T23:04:56.579000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2587 Simulator devices to SSD",
@@ -43,28 +59,12 @@
    "started": "2026-11-06T22:50:20.417Z",
    "seconds": null,
    "finished": "2026-11-06T22:57:17.213000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3137 Shortcut cancel row",
-   "model": "opus",
-   "started": "2026-11-06T22:43:03.393Z",
-   "seconds": null,
-   "finished": "2026-11-06T22:50:05.097000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3015 hung SSD recovery",
-   "model": "opus",
-   "started": "2026-11-06T22:21:04.944Z",
-   "seconds": null,
-   "finished": "2026-11-06T22:46:10.011000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 403,
+  "runnable_count": 402,
   "blocked_count": 121
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 63.9,
   "usage_pct": 41.0,
   "work_pct": 68.8,
-  "read_at": "2026-11-06T23:04:00+00:00",
+  "read_at": "2026-11-06T23:07:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -153,7 +153,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T17:36:31-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a3",
@@ -249,22 +250,14 @@
    {
     "lane": "b3",
     "task": "T-3135",
-    "w": "Idris",
-    "k": "build",
-    "t": "Keep the run marker until the run's row is written",
-    "m": "opus",
-    "e": "high",
+    "t": "T-3135",
     "at": "2026-11-06T18:03:56-05:00",
     "n": "Jeremy"
    },
    {
     "lane": "b3",
     "task": "T-3136",
-    "w": "Idris",
-    "k": "build",
-    "t": "Delete the last launch's marker only after recovery",
-    "m": "opus",
-    "e": "high",
+    "t": "T-3136",
     "at": "2026-11-06T18:03:56-05:00",
     "n": "Jeremy"
    },
@@ -310,7 +303,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T18:04:00-05:00"
+  "at": "2026-11-06T18:07:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -321,35 +314,35 @@
  },
  "lanes": [
   {
-   "name": "Pernille",
+   "name": "Ines",
    "state": "running",
-   "task": "[review] T-3142 run marker re-review",
+   "task": "[report] evening",
    "model": "opus",
-   "since": "2026-11-06T22:57:34.136Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-2587 move finished folders to SSD",
-   "model": "opus",
-   "since": "2026-11-06T22:59:17.149Z",
+   "since": "2026-11-06T23:05:11.652Z",
    "next": [],
    "effort": "high"
   },
   {
    "name": "Idris",
+   "state": "running",
+   "task": "[build] T-3146 T-3147 marker follow-ups",
+   "model": "opus",
+   "since": "2026-11-06T23:07:32.987Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
    "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Ines",
+   "name": "Pernille",
    "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
+   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -374,21 +367,21 @@
  "tasks": {
   "run": [
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Re-review keeping the run marker until the row",
+    "w": "Ines",
+    "k": "report",
+    "t": "Evening",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-06T22:57:34.136Z",
+    "at": "2026-11-06T23:05:11.652Z",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop the SSD hangs, then finish SSD defaults",
+    "w": "Idris",
+    "k": "build",
+    "t": "Settle a left marker whose widget folder is gone",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-06T22:59:17.149Z",
+    "at": "2026-11-06T23:07:32.987Z",
     "o": "c"
    }
   ],
@@ -466,23 +459,23 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "When a script prints a great deal, the app now keeps only the last 24 KiB of what it printed...",
-    "at": "2026-11-06T17:57:00-05:00"
+    "w": "Idris+pernille",
+    "t": "A widget run's crash record is now kept until its log row is saved, so a kill in that gap still...",
+    "at": "2026-11-06T18:07:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "When Shortcuts cancels a script run, for its time limit or because the person stopped it, the...",
-    "at": "2026-11-06T17:49:00-05:00"
+    "w": "Idris+pernille",
+    "t": "The last launch's crash record is now deleted only after its killed row is written, so a second...",
+    "at": "2026-11-06T18:07:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "When the company's external drive stops answering, the Mac mini now unmounts and remounts it by...",
-    "at": "2026-11-06T17:45:00-05:00"
+    "w": "Pernille",
+    "t": "The fixes that keep a run's crash record until its log row is saved work; two small follow-ups...",
+    "at": "2026-11-06T18:07:00-05:00"
    }
   ],
   "count": {
-   "next": 403,
+   "next": 402,
    "wait": 42,
    "blocked": 79,
    "you": 20
@@ -490,12 +483,24 @@
  },
  "qr": [],
  "reply": null,
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6698015227",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "I have a few questions: 1. if a test..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -506,10 +511,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "6:04 PM",
+  "at": "6:07 PM",
   "why": "",
-  "at_iso": "2026-11-06T23:04:00+00:00",
+  "at_iso": "2026-11-06T23:07:00+00:00",
   "started": "4:25 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:04 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:07 PM ET</p></section>"
  }
 }

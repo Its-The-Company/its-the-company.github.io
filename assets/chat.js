@@ -462,6 +462,8 @@ waitLine();
 });
 drawView(false); drawDock();
 var loadTimer = setInterval(load, 30000);
+on(document, 'visibilitychange', () => { if (!document.hidden && !S.rejected()) load(); });
+on(W, 'pageshow', (e) => { if (e.persisted && !S.rejected()) load(); });
 onReject.push(() => {
 clearInterval(loadTimer); send.disabled = barSend.disabled = true; tokenLink.textContent = 'Token rejected · change';
 status.textContent = NO_TOKEN; var u = byId('urgent'); if (u) u.hidden = false; if (!lastDraw) drawView(false);

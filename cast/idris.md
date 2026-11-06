@@ -120,6 +120,9 @@ Dated task logs and full lessons: archive.md.
 - Lesson T-1677: untested work in a shared lane worktree blocks others (dirty tree stops runner routing): keep it on a side ref (temp GIT_INDEX_FILE + commit-tree + update-ref refs/wip/...), restore the files. zsh does not split $VAR: use a bash array.
 
 - T-2511 02134c594 (jedi never rebinds sys.path; get_module_info swapped it too, review missed it): review T-2847 (Pernille). Lesson: a test that undoes a patch restores what was there, never the fix, or it hides mutants from later tests.
+- T-2906 (2026-11-05): Indent icon + build 2, 0b5b102cf on main; e3583213c (94cebc4c0+it) verified, not sent. Lesson: upload.sh --upload needs a commit ON origin/main, so "old tested sha + my fix" can't ship; plan the source commit as a pushed main commit and test that. Continuation T-2918.
+
+- T-2853 cf0f59ceb (badge via demotion after 2nd-process refusal): green J-20261105-2326-xc-test (91/0); mutant J-...-2326-xc-test-2 rides land/idris-t2853 (7c0d0db93), result pending; then Pernille review, drop the ref, tick.
 {% endraw %}
 
 

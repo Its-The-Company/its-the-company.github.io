@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T08:26:57.993460+00:00",
+ "at": "2026-11-06T08:30:01.462951+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[site] T-2940 pin phone top bar, tidy Home panels",
    "model": "sonnet",
    "started": "2026-11-06T07:33:55.544Z",
-   "seconds": 3182,
+   "seconds": 3365,
    "finished": null,
    "effort": "medium"
   },
@@ -21,7 +21,7 @@
    "task": "[release] T-2918 fix red test, upload build 2",
    "model": "opus",
    "started": "2026-11-06T08:10:49.345Z",
-   "seconds": 968,
+   "seconds": 1152,
    "finished": null
   }
  ],
@@ -55,7 +55,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 462,
+  "runnable_count": 466,
   "blocked_count": 120
  },
  "meter": {
@@ -98,7 +98,7 @@
   "week_pct": 63.02,
   "usage_pct": 43.2,
   "work_pct": 71.9,
-  "read_at": "2026-11-06T08:26:00+00:00",
+  "read_at": "2026-11-06T08:30:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -109,7 +109,8 @@
     "m": "opus",
     "e": "medium",
     "at": "2026-11-06T03:24:15-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a2",
@@ -166,6 +167,39 @@
     "e": "high",
     "at": "2026-11-06T00:29:17-05:00",
     "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2723",
+    "w": "Idris",
+    "k": "test",
+    "t": "Run the new earthquakes example in the Simulator",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-06T03:27:08-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2953",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Read whether retry trains shrink the waiting list",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T03:27:08-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-1992",
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Review how cut sessions count as tries",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T03:27:08-05:00",
+    "n": "Jeremy"
    }
   ]
  },
@@ -187,18 +221,18 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 530
+   "free_gb": 523
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T03:26:00-05:00"
+  "at": "2026-11-06T03:30:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -368,7 +402,7 @@
    }
   ],
   "count": {
-   "next": 462,
+   "next": 466,
    "wait": 43,
    "blocked": 77,
    "you": 20
@@ -388,12 +422,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 4,
-  "total": 6,
-  "at": "3:26 AM",
+  "lanes": 5,
+  "total": 7,
+  "at": "3:30 AM",
   "why": "",
-  "at_iso": "2026-11-06T08:26:00+00:00",
+  "at_iso": "2026-11-06T08:30:00+00:00",
   "started": "12:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:26 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 3:30 AM ET</p></section>"
  }
 }

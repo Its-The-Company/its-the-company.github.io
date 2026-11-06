@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T02:18:27.064404+00:00",
+ "at": "2026-11-06T02:21:29.210900+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,19 +9,10 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-2831 cap pre-session merge step",
-   "model": "opus",
-   "started": "2026-11-06T01:42:43.456Z",
-   "seconds": 2143,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[site] T-2667 new Home Chat Usage pages",
    "model": "opus",
    "started": "2026-11-06T00:43:08.348Z",
-   "seconds": 5718,
+   "seconds": 5900,
    "finished": null,
    "effort": "high"
   },
@@ -30,13 +21,21 @@
    "task": "[release] T-2456 last checks first build",
    "model": "opus",
    "started": "2026-11-06T00:26:26.427Z",
-   "seconds": 6720,
+   "seconds": 6902,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2, Idris",
+ "who": "Odalys, Idris",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2831 cap pre-session merge step",
+   "model": "opus",
+   "started": "2026-11-06T01:42:43.456Z",
+   "seconds": null,
+   "finished": "2026-11-06T02:19:42.881000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-2491 ruling: does it gate TestFlight",
@@ -60,14 +59,6 @@
    "started": "2026-11-06T01:32:34.063Z",
    "seconds": null,
    "finished": "2026-11-06T01:42:51.830000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2833 idle alarm",
-   "model": "opus",
-   "started": "2026-11-06T00:25:57.429Z",
-   "seconds": null,
-   "finished": "2026-11-06T01:42:25.676000+00:00"
   }
  ],
  "queue": {
@@ -116,8 +107,41 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T02:18:00+00:00",
+  "read_at": "2026-11-06T02:21:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-2853",
+    "w": "Idris",
+    "k": "build",
+    "t": "Test the badge after a second refusal demotes a widget",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T21:19:58-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-2869",
+    "w": "Idris",
+    "k": "build",
+    "t": "Test completion with the stdlib as compiled-only files",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T21:19:58-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-1764",
+    "w": "Idris",
+    "k": "build",
+    "t": "Write each widget run record when the run ends",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T21:19:58-05:00",
+    "n": "Evan"
+   },
    {
     "lane": "a2",
     "task": "T-2855",
@@ -127,7 +151,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T21:07:27-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a2",
@@ -138,7 +163,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T21:07:27-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a3",
@@ -208,17 +234,6 @@
     "at": "2026-11-05T19:12:30-05:00",
     "n": "Jeremy",
     "d": 1
-   },
-   {
-    "lane": "b2",
-    "task": "T-2041",
-    "w": "Idris",
-    "k": "build",
-    "t": "Fix a test that passes when it should fail",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T19:35:28-05:00",
-    "n": "Jeremy"
    }
   ]
  },
@@ -240,18 +255,18 @@
   }
  ],
  "disk": {
-  "free_gb": 17,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 640
+   "free_gb": 638
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 5,
-  "at": "2026-11-05T21:18:00-05:00"
+  "at": "2026-11-05T21:21:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -331,15 +346,6 @@
     "e": "high",
     "at": "2026-11-06T00:43:08.348Z",
     "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Cap the merge step before a session at five minutes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T01:42:43.456Z",
-    "o": "c"
    }
   ],
   "open": [
@@ -452,13 +458,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 4,
-  "total": 7,
-  "at": "9:18 PM",
+  "total": 6,
+  "at": "9:21 PM",
   "why": "",
-  "at_iso": "2026-11-06T02:18:00+00:00",
+  "at_iso": "2026-11-06T02:21:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:18 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:21 PM ET</p></section>"
  }
 }

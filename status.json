@@ -1,57 +1,14 @@
 {
  "schema": 1,
- "at": "2026-11-06T18:38:17.619899+00:00",
+ "at": "2026-11-06T18:41:18.509511+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-06T10:44:28-05:00"
+  "kind": "",
+  "started": null
  },
- "workers": [
-  {
-   "name": "pernille",
-   "task": "[build] T-1048 stdlib zip size check flake",
-   "model": "opus",
-   "started": "2026-11-06T18:37:22.559Z",
-   "seconds": 55,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Pernille",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[site] T-3009 Running shows only active agents",
-   "model": "opus",
-   "started": "2026-11-06T18:28:56.833Z",
-   "seconds": null,
-   "finished": "2026-11-06T18:38:16.533000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[test] T-3097 rerun mutant 5",
-   "model": "opus",
-   "started": "2026-11-06T18:13:52.212Z",
-   "seconds": null,
-   "finished": "2026-11-06T18:36:55.867000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-3094 merge queue Show More on Home",
-   "model": "opus",
-   "started": "2026-11-06T18:08:39.246Z",
-   "seconds": null,
-   "finished": "2026-11-06T18:28:39.993000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-3077 stuck-order evidence review",
-   "model": "opus",
-   "started": "2026-11-06T18:08:15.941Z",
-   "seconds": null,
-   "finished": "2026-11-06T18:13:34.992000+00:00"
-  }
- ],
+ "workers": [],
+ "who": "",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -98,7 +55,7 @@
   "week_pct": 64.37,
   "usage_pct": 41.9,
   "work_pct": 69.7,
-  "read_at": "2026-11-06T18:38:00+00:00",
+  "read_at": "2026-11-06T18:41:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -130,25 +87,12 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T13:38:00-05:00"
+  "at": "2026-11-06T13:41:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Spread: 20% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 32 of 41 lands failed in 3 hours (2 red))",
-  "n": 2,
-  "at": "2026-11-06T10:44:17.748396-05:00"
- },
+ "pool": null,
  "lanes": [
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[build] T-1048 stdlib zip size check flake",
-   "model": "opus",
-   "since": "2026-11-06T18:37:22.559Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Odalys",
    "state": "next",
@@ -174,6 +118,14 @@
    "next": []
   },
   {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Maren",
    "state": "next",
    "task": "Maren+Odalys, P1, Investor an Investor c6651474906 (01:33...",
@@ -191,17 +143,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Find why the stdlib size check fails sometimes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T18:37:22.559Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -303,7 +245,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -312,13 +253,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "1:38 PM",
-  "why": "",
-  "at_iso": "2026-11-06T18:38:00+00:00",
-  "started": "10:44 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:44 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:38 PM ET</p></section>"
+  "total": 0,
+  "at": "1:41 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-06T18:41:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:41 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

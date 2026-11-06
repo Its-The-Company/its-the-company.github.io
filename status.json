@@ -1,57 +1,14 @@
 {
  "schema": 1,
- "at": "2026-11-06T15:26:37.662782+00:00",
+ "at": "2026-11-06T15:29:39.462785+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-06T09:10:33-05:00"
+  "kind": "",
+  "started": null
  },
- "workers": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-3079 parallel land checks",
-   "model": "opus",
-   "started": "2026-11-06T14:36:30.806Z",
-   "seconds": 3006,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[ops] T-3064 fix OPT-087 entry",
-   "model": "opus",
-   "started": "2026-11-06T15:12:58.422Z",
-   "seconds": null,
-   "finished": "2026-11-06T15:14:25.564000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-3078 Issues badge and answered section",
-   "model": "opus",
-   "started": "2026-11-06T14:20:31.025Z",
-   "seconds": null,
-   "finished": "2026-11-06T15:12:43.657000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3071 merge queue root causes",
-   "model": "opus",
-   "started": "2026-11-06T14:11:32.049Z",
-   "seconds": null,
-   "finished": "2026-11-06T14:35:41.220000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3063 move fallback scratch to SSD",
-   "model": "opus",
-   "started": "2026-11-06T14:11:40.151Z",
-   "seconds": null,
-   "finished": "2026-11-06T14:20:14.707000+00:00"
-  }
- ],
+ "workers": [],
+ "who": "",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -98,7 +55,7 @@
   "week_pct": 64.1,
   "usage_pct": 42.4,
   "work_pct": 69.9,
-  "read_at": "2026-11-06T15:26:00+00:00",
+  "read_at": "2026-11-06T15:29:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -119,35 +76,30 @@
   }
  ],
  "disk": {
-  "free_gb": 22,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 488
+   "free_gb": 489
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T10:26:00-05:00"
+  "at": "2026-11-06T10:29:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Spread: 22% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 43 of 49 lands failed in 3 hours (10 red))",
-  "n": 2,
-  "at": "2026-11-06T09:10:24.094210-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-3079 parallel land checks",
-   "model": "opus",
-   "since": "2026-11-06T14:36:30.806Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
@@ -191,17 +143,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Land several finished branches at once and read OPT-101",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T14:36:30.806Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -269,12 +211,17 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Land several finished branches at once and...",
+    "t": "Read the merge queue fixes and post the...",
     "s": "next",
     "o": "i"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "The merge queue now tests up to four finished branches at the same time instead of one after...",
+    "at": "2026-11-06T10:27:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "The experiment ledger check failed because one entry, OPT-087 (applying approved proposals...",
@@ -284,11 +231,6 @@
     "w": "Odalys",
     "t": "The Issues badge now counts, live from GitHub, only the issues still waiting on the Investors;...",
     "at": "2026-11-06T10:12:00-05:00"
-   },
-   {
-    "w": "Idris+operator",
-    "t": "Build 2 of the app, with the approved icon, was uploaded to Apple for internal TestFlight...",
-    "at": "2026-11-06T09:47:00-05:00"
    }
   ],
   "count": {
@@ -311,13 +253,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "10:26 AM",
-  "why": "",
-  "at_iso": "2026-11-06T15:26:00+00:00",
-  "started": "9:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:26 AM ET</p></section>"
+  "total": 0,
+  "at": "10:29 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-06T15:29:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:29 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

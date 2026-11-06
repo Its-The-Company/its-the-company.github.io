@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T01:29:28.807630+00:00",
+ "at": "2026-11-06T01:32:37.172971+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2830 spares on demand",
    "model": "opus",
    "started": "2026-11-06T00:25:43.225Z",
-   "seconds": 3825,
+   "seconds": 4013,
    "finished": null,
    "effort": "high"
   },
@@ -21,16 +21,7 @@
    "task": "[tools] T-2833 idle alarm",
    "model": "opus",
    "started": "2026-11-06T00:25:57.429Z",
-   "seconds": 3811,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2725 T-2726 applier pin and fence",
-   "model": "opus",
-   "started": "2026-11-06T00:26:11.478Z",
-   "seconds": 3797,
+   "seconds": 3999,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +30,7 @@
    "task": "[tools] T-2675 charter suite compare",
    "model": "opus",
    "started": "2026-11-06T00:26:32.127Z",
-   "seconds": 3776,
+   "seconds": 3965,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[build] T-2724 traceback trim honest",
    "model": "opus",
    "started": "2026-11-06T00:26:55.942Z",
-   "seconds": 3752,
+   "seconds": 3941,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[tools] T-2839 land stuck lane work",
    "model": "opus",
    "started": "2026-11-06T00:36:26.557Z",
-   "seconds": 3182,
+   "seconds": 3370,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +57,7 @@
    "task": "[site] T-2667 new Home Chat Usage pages",
    "model": "opus",
    "started": "2026-11-06T00:43:08.348Z",
-   "seconds": 2780,
+   "seconds": 2968,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +66,7 @@
    "task": "[review] T-2847 completion import path fix",
    "model": "opus",
    "started": "2026-11-06T00:48:26.055Z",
-   "seconds": 2462,
+   "seconds": 2651,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +75,7 @@
    "task": "[tools] T-2849 adaptive agent pool",
    "model": "opus",
    "started": "2026-11-06T00:56:34.630Z",
-   "seconds": 1974,
+   "seconds": 2162,
    "finished": null,
    "effort": "high"
   },
@@ -93,13 +84,30 @@
    "task": "[release] T-2456 last checks first build",
    "model": "opus",
    "started": "2026-11-06T00:26:26.427Z",
-   "seconds": 3782,
+   "seconds": 3970,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-2868 approval tool security fixes",
+   "model": "opus",
+   "started": "2026-11-06T01:32:34.063Z",
+   "seconds": 3,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x6, Ines, Pernille x2, Idris",
+ "who": "Odalys x5, Ines, Pernille x3, Idris",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2725 T-2726 applier pin and fence",
+   "model": "opus",
+   "started": "2026-11-06T00:26:11.478Z",
+   "seconds": null,
+   "finished": "2026-11-06T01:32:06.272000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2860 release priority on Xcode lock",
@@ -123,20 +131,12 @@
    "started": "2026-11-06T00:56:42.912Z",
    "seconds": null,
    "finished": "2026-11-06T01:07:35.478000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-2376 Shortcut recipes",
-   "model": "opus",
-   "started": "2026-11-06T00:26:45.329Z",
-   "seconds": null,
-   "finished": "2026-11-06T01:05:47.715000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 445,
+  "runnable_count": 446,
   "blocked_count": 120
  },
  "meter": {
@@ -179,7 +179,7 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T01:29:00+00:00",
+  "read_at": "2026-11-06T01:32:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -291,7 +291,7 @@
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-05T20:29:00-05:00"
+  "at": "2026-11-05T20:32:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -375,15 +375,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Pin the approved commit, not the tip",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T00:26:11.478Z",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "release",
     "t": "Last checks before the first test build",
@@ -427,6 +418,15 @@
     "e": "high",
     "at": "2026-11-06T00:43:08.348Z",
     "o": "i"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review completion keeping a running script's import path",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T00:48:26.055Z",
+    "o": "c"
    }
   ],
   "open": [
@@ -503,14 +503,14 @@
   ],
   "done": [
    {
-    "w": "Operator",
-    "t": "Withdrawn, not needed: the Investors are replacing the amendments file with a one-page charter,...",
-    "at": "2026-11-05T20:29:00-05:00"
+    "w": "Odalys",
+    "t": "An approved long diff now applies only from the exact saved version the Investor's link showed,...",
+    "at": "2026-11-05T20:31:00-05:00"
    },
    {
-    "w": "Operator",
-    "t": "Withdrawn, not needed: the Investors are replacing the amendments file with a one-page charter,...",
-    "at": "2026-11-05T20:29:00-05:00"
+    "w": "Odalys",
+    "t": "A proposed change whose text would break GitHub's display of the change, hiding lines from the...",
+    "at": "2026-11-05T20:31:00-05:00"
    },
    {
     "w": "Operator",
@@ -519,7 +519,7 @@
    }
   ],
   "count": {
-   "next": 445,
+   "next": 446,
    "wait": 45,
    "blocked": 75,
    "you": 19
@@ -542,10 +542,10 @@
   "main": 10,
   "lanes": 4,
   "total": 14,
-  "at": "8:29 PM",
+  "at": "8:32 PM",
   "why": "",
-  "at_iso": "2026-11-06T01:29:00+00:00",
+  "at_iso": "2026-11-06T01:32:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>14</b> agents running now</p><p class=\"an-sub\">Main session 10, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 8:29 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>14</b> agents running now</p><p class=\"an-sub\">Main session 10, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 8:32 PM ET</p></section>"
  }
 }

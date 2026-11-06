@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T17:00:48.374175+00:00",
+ "at": "2026-11-06T17:03:54.622064+00:00",
  "session": {
   "active": true,
   "kind": "",
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 407,
+  "runnable_count": 405,
   "blocked_count": 121
  },
  "meter": {
@@ -55,7 +55,7 @@
   "week_pct": 64.37,
   "usage_pct": 41.9,
   "work_pct": 69.7,
-  "read_at": "2026-11-06T17:00:00+00:00",
+  "read_at": "2026-11-06T17:03:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -87,7 +87,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T12:00:00-05:00"
+  "at": "2026-11-06T12:03:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -218,23 +218,23 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The widget's background runner now writes its run history and status; the remaining test runs...",
+    "at": "2026-11-06T12:03:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "The test run this step waited for came back and named the one failing check in the widget's...",
+    "at": "2026-11-06T12:03:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Not built, as the plan says: the replay of the real merge attempts found that capping each...",
     "at": "2026-11-06T11:44:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "A replay of yesterday's real merge attempts says today's three land changes should raise...",
-    "at": "2026-11-06T11:43:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The experiment ledger's check passes again: two pairs of entries that shared a number now each...",
-    "at": "2026-11-06T11:43:00-05:00"
    }
   ],
   "count": {
-   "next": 407,
+   "next": 405,
    "wait": 42,
    "blocked": 79,
    "you": 20
@@ -256,10 +256,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "12:00 PM",
+  "at": "12:03 PM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-06T17:00:00+00:00",
+  "at_iso": "2026-11-06T17:03:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:00 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:03 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

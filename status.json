@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T06:02:01.254317+00:00",
+ "at": "2026-11-06T06:05:02.704563+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[release] T-2918 send build 2 to TestFlight",
    "model": "opus",
    "started": "2026-11-06T05:41:25.753Z",
-   "seconds": 1235,
+   "seconds": 1416,
    "finished": null
   }
  ],
@@ -21,7 +21,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 449,
+  "runnable_count": 450,
   "blocked_count": 120
  },
  "meter": {
@@ -64,8 +64,30 @@
   "week_pct": 63.02,
   "usage_pct": 43.2,
   "work_pct": 71.9,
-  "read_at": "2026-11-06T06:02:00+00:00",
+  "read_at": "2026-11-06T06:05:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-2874",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Refuse a lone carriage return in an inline diff",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T01:03:07-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-2853",
+    "w": "Idris",
+    "k": "build",
+    "t": "Test the badge after a second refusal demotes a widget",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T01:03:07-05:00",
+    "n": "Evan"
+   },
    {
     "lane": "a2",
     "task": "T-2905",
@@ -223,18 +245,18 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 13,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 571
+   "free_gb": 572
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-06T01:02:00-05:00"
+  "at": "2026-11-06T01:05:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -394,7 +416,7 @@
    }
   ],
   "count": {
-   "next": 449,
+   "next": 450,
    "wait": 44,
    "blocked": 76,
    "you": 19
@@ -414,12 +436,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 4,
-  "total": 5,
-  "at": "1:02 AM",
+  "lanes": 5,
+  "total": 6,
+  "at": "1:05 AM",
   "why": "",
-  "at_iso": "2026-11-06T06:02:00+00:00",
+  "at_iso": "2026-11-06T06:05:00+00:00",
   "started": "12:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:02 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 1:05 AM ET</p></section>"
  }
 }

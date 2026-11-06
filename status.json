@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-06T10:38:47.302415+00:00",
+ "at": "2026-11-06T10:41:47.827532+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-06T05:35:45-05:00"
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
@@ -55,7 +55,7 @@
   "week_pct": 64.38,
   "usage_pct": 43.1,
   "work_pct": 71.0,
-  "read_at": "2026-11-06T10:38:00+00:00",
+  "read_at": "2026-11-06T10:41:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -149,18 +149,6 @@
     "e": "high",
     "at": "2026-11-06T05:17:12-05:00",
     "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-1100",
-    "w": "Idris",
-    "k": "build",
-    "t": "Dim the Toggle track in stripped color modes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T04:43:53-05:00",
-    "n": "Jeremy",
-    "d": 1
    }
   ]
  },
@@ -186,27 +174,18 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 511
+   "free_gb": 510
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T05:38:00-05:00"
+  "at": "2026-11-06T05:41:00-05:00"
  },
  "next_tick_why": "session",
- "idle": {
-  "since": "2026-11-06T05:14:55-05:00",
-  "minutes": 23,
-  "why": "a tick has spent 1 min on steps before the session",
-  "healed": []
- },
- "pool": {
-  "why": "Spread: 25% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 15 of 18 lands failed in 3 hours (11 red); 16 of 20 finished tasks were...",
-  "n": 2,
-  "at": "2026-11-06T05:35:34.706777-05:00"
- },
+ "idle": null,
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -369,12 +348,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 6,
-  "total": 6,
-  "at": "5:38 AM",
+  "lanes": 5,
+  "total": 5,
+  "at": "5:41 AM",
   "why": "",
-  "at_iso": "2026-11-06T10:38:00+00:00",
-  "started": "5:35 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0, started 5:35 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 5:38 AM ET</p></section>"
+  "at_iso": "2026-11-06T10:41:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 5:41 AM ET</p></section>"
  }
 }

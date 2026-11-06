@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T12:45:42.272098+00:00",
+ "at": "2026-11-06T12:48:47.297056+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[site] T-2977 site test green, then T-3009",
    "model": "opus",
    "started": "2026-11-06T12:34:52.080Z",
-   "seconds": 650,
+   "seconds": 835,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2616 first-try landing rest",
    "model": "opus",
    "started": "2026-11-06T12:35:01.393Z",
-   "seconds": 640,
+   "seconds": 825,
    "finished": null,
    "effort": "high"
   }
@@ -31,7 +31,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 385,
+  "runnable_count": 384,
   "blocked_count": 123
  },
  "meter": {
@@ -74,7 +74,7 @@
   "week_pct": 64.13,
   "usage_pct": 42.7,
   "work_pct": 70.3,
-  "read_at": "2026-11-06T12:45:00+00:00",
+  "read_at": "2026-11-06T12:48:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -85,17 +85,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T06:38:15-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-1243",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Fix a should-fix accessibility point in the copy message",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-06T07:05:48-05:00",
     "n": "Evan"
    },
    {
@@ -188,7 +177,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T07:45:00-05:00"
+  "at": "2026-11-06T07:48:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -343,6 +332,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Finished work now merges on the first try more often: it runs only the checks it touches, a...",
+    "at": "2026-11-06T07:48:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "Folded into T-3018 (the one retry line for personal/b), so the board keeps one notice per lane...",
     "at": "2026-11-06T07:45:00-05:00"
@@ -351,15 +345,10 @@
     "w": "Operator",
     "t": "Folded into T-3019 (the one retry line for personal/b2), so the board keeps one notice per lane...",
     "at": "2026-11-06T07:45:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Folded into T-3020 (the one retry line for personal/b3), so the board keeps one notice per lane...",
-    "at": "2026-11-06T07:45:00-05:00"
    }
   ],
   "count": {
-   "next": 385,
+   "next": 384,
    "wait": 43,
    "blocked": 80,
    "you": 20
@@ -379,12 +368,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 4,
-  "total": 6,
-  "at": "7:45 AM",
+  "lanes": 3,
+  "total": 5,
+  "at": "7:48 AM",
   "why": "",
-  "at_iso": "2026-11-06T12:45:00+00:00",
+  "at_iso": "2026-11-06T12:48:00+00:00",
   "started": "7:33 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:45 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:48 AM ET</p></section>"
  }
 }

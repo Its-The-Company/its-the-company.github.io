@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T12:39:40.312920+00:00",
+ "at": "2026-11-06T12:42:41.138786+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[site] T-2977 site test green, then T-3009",
    "model": "opus",
    "started": "2026-11-06T12:34:52.080Z",
-   "seconds": 288,
+   "seconds": 469,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2616 first-try landing rest",
    "model": "opus",
    "started": "2026-11-06T12:35:01.393Z",
-   "seconds": 278,
+   "seconds": 459,
    "finished": null,
    "effort": "high"
   }
@@ -31,7 +31,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 480,
+  "runnable_count": 485,
   "blocked_count": 123
  },
  "meter": {
@@ -74,7 +74,7 @@
   "week_pct": 64.13,
   "usage_pct": 42.7,
   "work_pct": 70.3,
-  "read_at": "2026-11-06T12:39:00+00:00",
+  "read_at": "2026-11-06T12:42:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -188,7 +188,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T07:39:00-05:00"
+  "at": "2026-11-06T07:42:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -292,6 +292,20 @@
     "o": "c"
    },
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Keep Xcode build files on the internal disk only",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Let the Xcode lock pass over a frozen build",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
@@ -325,20 +339,6 @@
     "t": "Stop personal sessions taking more tasks...",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Record each widget run in the app's activity log",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Add a refresh control and age line to widgets",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -359,30 +359,18 @@
    }
   ],
   "count": {
-   "next": 480,
+   "next": 485,
    "wait": 43,
    "blocked": 80,
    "you": 20
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6685013188",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "A On Fri, Nov 6, 2026 at 7:33 AM..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -393,10 +381,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "7:39 AM",
+  "at": "7:42 AM",
   "why": "",
-  "at_iso": "2026-11-06T12:39:00+00:00",
+  "at_iso": "2026-11-06T12:42:00+00:00",
   "started": "7:33 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:39 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:33 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:42 AM ET</p></section>"
  }
 }

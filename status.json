@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T06:17:12.357665+00:00",
+ "at": "2026-11-06T06:20:12.546817+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[release] T-2918 send build 2 to TestFlight",
    "model": "opus",
    "started": "2026-11-06T05:41:25.753Z",
-   "seconds": 2146,
+   "seconds": 2326,
    "finished": null
   }
  ],
@@ -21,7 +21,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 452,
+  "runnable_count": 454,
   "blocked_count": 120
  },
  "meter": {
@@ -64,7 +64,7 @@
   "week_pct": 63.02,
   "usage_pct": 43.2,
   "work_pct": 71.9,
-  "read_at": "2026-11-06T06:17:00+00:00",
+  "read_at": "2026-11-06T06:20:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -259,7 +259,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-06T01:17:00-05:00"
+  "at": "2026-11-06T01:20:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -374,6 +374,13 @@
    },
    {
     "w": "Odalys",
+    "k": "tools",
+    "t": "Use each account's weekly limit up before it...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
     "k": "site",
     "t": "Make Chat only the chat and live on phones",
     "s": "next",
@@ -390,13 +397,6 @@
     "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "tools",
-    "t": "Parallel runner jobs share one asset helper",
     "s": "next",
     "o": "c"
    }
@@ -419,7 +419,7 @@
    }
   ],
   "count": {
-   "next": 452,
+   "next": 454,
    "wait": 44,
    "blocked": 76,
    "you": 19
@@ -441,10 +441,10 @@
   "main": 1,
   "lanes": 5,
   "total": 6,
-  "at": "1:17 AM",
+  "at": "1:20 AM",
   "why": "",
-  "at_iso": "2026-11-06T06:17:00+00:00",
+  "at_iso": "2026-11-06T06:20:00+00:00",
   "started": "12:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 1:17 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 1:20 AM ET</p></section>"
  }
 }

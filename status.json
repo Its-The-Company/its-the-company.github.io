@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T23:48:48.909440+00:00",
+ "at": "2026-11-06T23:51:15.450043+00:00",
  "session": {
   "active": true,
   "kind": "",
@@ -55,7 +55,7 @@
   "week_pct": 63.9,
   "usage_pct": 41.0,
   "work_pct": 68.8,
-  "read_at": "2026-11-06T23:48:00+00:00",
+  "read_at": "2026-11-06T23:52:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -78,39 +78,6 @@
     "e": "high",
     "at": "2026-11-06T18:13:14-05:00",
     "n": "Evan"
-   },
-   {
-    "lane": "b",
-    "task": "T-3062",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Keep work moving when the Company SSD stops answering",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T18:24:39-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-3132",
-    "w": "Idris",
-    "k": "build",
-    "t": "Confirm the activity log works on the Simulator",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T18:24:39-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b",
-    "task": "T-2056",
-    "w": "Idris",
-    "k": "test",
-    "t": "Add tests for the end of a run",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T18:24:39-05:00",
-    "n": "Jeremy"
    },
    {
     "lane": "b2",
@@ -184,14 +151,14 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 465
+   "free_gb": 461
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T18:48:00-05:00"
+  "at": "2026-11-06T18:52:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -322,6 +289,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The tightened checks that keep a widget's preview from reading or writing files, and keep its...",
+    "at": "2026-11-06T18:48:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "A test that fails at random on the same code now has a stated line and a tool that checks it;...",
     "at": "2026-11-06T18:48:00-05:00"
@@ -329,11 +301,6 @@
    {
     "w": "Idris+pernille",
     "t": "A widget run's crash record is now kept until its log row is saved, so a kill in that gap still...",
-    "at": "2026-11-06T18:07:00-05:00"
-   },
-   {
-    "w": "Idris+pernille",
-    "t": "The last launch's crash record is now deleted only after its killed row is written, so a second...",
     "at": "2026-11-06T18:07:00-05:00"
    }
   ],
@@ -346,23 +313,11 @@
  },
  "qr": [],
  "reply": null,
- "inbox": [
-  {
-   "id": "c6698887096",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Explain how new tasks are sorted in..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -371,12 +326,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 4,
-  "total": 4,
-  "at": "6:48 PM",
+  "lanes": 3,
+  "total": 3,
+  "at": "6:52 PM",
   "why": "",
-  "at_iso": "2026-11-06T23:48:00+00:00",
+  "at_iso": "2026-11-06T23:52:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:48 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:52 PM ET</p></section>"
  }
 }

@@ -1,51 +1,18 @@
 {
  "schema": 1,
- "at": "2026-11-05T20:08:01.943139+00:00",
+ "at": "2026-11-06T00:07:57.287925+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-05T14:39:32-05:00"
+  "active": false,
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[build] T-2625 T-2627 test fixes check",
-   "model": "opus",
-   "started": "2026-11-05T19:42:16.956Z",
-   "seconds": null,
-   "finished": "2026-11-05T20:07:29.232000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2713 land checks finish",
-   "model": "opus",
-   "started": "2026-11-05T19:41:25.704Z",
-   "seconds": null,
-   "finished": "2026-11-05T19:59:40.686000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[tools] T-2722 runner sandbox profile fix",
-   "model": "opus",
-   "started": "2026-11-05T19:50:49.226Z",
-   "seconds": null,
-   "finished": "2026-11-05T19:58:22.422000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2721 memory-skip badge rule D",
-   "model": "opus",
-   "started": "2026-11-05T19:49:00.137Z",
-   "seconds": null,
-   "finished": "2026-11-05T19:57:40.266000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 431,
+  "runnable_count": 433,
   "blocked_count": 119
  },
  "meter": {
@@ -83,90 +50,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-05T14:54:21-05:00",
  "personal": {
   "week_pct": 58.1,
-  "usage_pct": 44.3,
-  "work_pct": 71.6,
-  "read_at": "2026-11-05T20:08:00+00:00",
-  "running": [
-   {
-    "lane": "a2",
-    "task": "T-2604",
-    "w": "Idris",
-    "k": "build",
-    "t": "The alert retry never shows the same alert twice",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T14:04:30-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-2260",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Make closed widget turns draw their timeline",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T14:04:30-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-2230",
-    "w": "Idris",
-    "k": "build",
-    "t": "Mark the widget deadline outcome reliably",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T14:04:30-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a3",
-    "task": "T-2231",
-    "w": "Idris",
-    "k": "build",
-    "t": "Stop locked premade widgets writing run rows",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T14:04:30-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-2661",
-    "w": "Idris",
-    "k": "build",
-    "t": "Keep the memory verdict on a killed widget run",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T14:03:06-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-2676",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T14:03:06-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-1728",
-    "t": "T-1728",
-    "at": "2026-11-05T14:03:06-05:00",
-    "n": "Jeremy"
-   }
-  ]
+  "usage_pct": 43.8,
+  "work_pct": 71.4,
+  "read_at": "2026-11-06T00:08:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -186,25 +76,21 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 12,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 691
+   "free_gb": 688
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
-  "pool": 1,
-  "at": "2026-11-05T15:08:00-05:00"
+  "pool": 2,
+  "at": "2026-11-05T19:08:00-05:00"
  },
- "next_tick_why": "session",
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight",
-  "n": 12,
-  "at": "2026-11-05T14:39:21.836311-05:00"
- },
+ "next_tick_why": "last_tick",
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -347,19 +233,42 @@
    }
   ],
   "count": {
-   "next": 431,
+   "next": 433,
    "wait": 43,
    "blocked": 76,
    "you": 19
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6671761293",
+   "state": "waiting",
+   "position": 1,
+   "eta": "2026-11-05T14:54:21-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Give me the remaining steps to set..."
+  },
+  {
+   "id": "c6671812606",
+   "state": "waiting",
+   "position": 2,
+   "eta": "2026-11-05T14:54:21-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Since the the Mac mini's single..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -368,12 +277,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "3:08 PM",
-  "why": "",
-  "at_iso": "2026-11-05T20:08:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "7:08 PM",
+  "why": "Between sessions: no session is running. Last check 2:39 PM ET.",
+  "at_iso": "2026-11-06T00:08:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:08 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:08 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 2:39 PM ET.</p></section>"
  }
 }

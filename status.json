@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T20:15:49.922702+00:00",
+ "at": "2026-11-06T20:18:55.932041+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,21 @@
    "task": "[build] T-2851 land measurement build",
    "model": "opus",
    "started": "2026-11-06T20:14:22.401Z",
-   "seconds": 87,
+   "seconds": 273,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris",
+ "recent": [
   {
    "name": "odalys",
    "task": "[test] T-2843 TreeNodes weekday test",
    "model": "opus",
    "started": "2026-11-06T20:14:39.987Z",
-   "seconds": 69,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-06T20:17:55.671000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[bug] T-2843 TreeNodes weekday test",
@@ -40,7 +39,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 396,
+  "runnable_count": 395,
   "blocked_count": 121
  },
  "meter": {
@@ -83,7 +82,7 @@
   "week_pct": 63.66,
   "usage_pct": 41.2,
   "work_pct": 69.0,
-  "read_at": "2026-11-06T20:15:00+00:00",
+  "read_at": "2026-11-06T20:18:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -154,11 +153,7 @@
    {
     "lane": "b",
     "task": "T-2881",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Read the MacBook land check after numbers",
-    "m": "opus",
-    "e": "high",
+    "t": "T-2881",
     "at": "2026-11-06T15:13:45-05:00",
     "n": "Jeremy",
     "d": 1
@@ -183,7 +178,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T15:13:45-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b2",
@@ -216,7 +212,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T15:13:44-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b2",
@@ -282,7 +279,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T15:15:00-05:00"
+  "at": "2026-11-06T15:18:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -303,12 +300,11 @@
   },
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[test] T-2843 TreeNodes weekday test",
-   "model": "opus",
-   "since": "2026-11-06T20:14:39.987Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -353,15 +349,6 @@
     "e": "high",
     "at": "2026-11-06T20:14:22.401Z",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "test",
-    "t": "Fix the TreeNodes weekday test that fails runs and lands",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T20:14:39.987Z",
-    "o": "c"
    }
   ],
   "open": [
@@ -369,13 +356,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Find what holds the MacBook runner on its...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "bug",
-    "t": "Fix the TreeNodes weekday test that fails...",
     "s": "next",
     "o": "c"
    },
@@ -434,27 +414,34 @@
     "t": "Parallel runner jobs share one asset helper",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "tools",
+    "t": "Move runner job sandbox files out of reach",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Odalys",
+    "t": "The MacBook land check did not speed up landing: lands per hour fell from 1.42 to 1.19 and 25...",
+    "at": "2026-11-06T15:17:00-05:00"
+   },
+   {
+    "w": "Odalys+idris",
+    "t": "The weekday test was wrong, not the widget: it measured its expected text in the wrong time...",
+    "at": "2026-11-06T15:17:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "Four site test suites that were already failing on main now pass: three tests were out of date...",
     "at": "2026-11-06T14:10:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The stdlib size check no longer fails at random. The zip is now written to disk in one go, and...",
-    "at": "2026-11-06T14:05:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "The task board now reads 'not before <date>' anywhere in a line, so T-1443 (one Apple page...",
-    "at": "2026-11-06T13:55:00-05:00"
    }
   ],
   "count": {
-   "next": 396,
+   "next": 395,
    "wait": 42,
    "blocked": 79,
    "you": 20
@@ -473,13 +460,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 6,
-  "total": 8,
-  "at": "3:15 PM",
+  "total": 7,
+  "at": "3:18 PM",
   "why": "",
-  "at_iso": "2026-11-06T20:15:00+00:00",
+  "at_iso": "2026-11-06T20:18:00+00:00",
   "started": "3:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 3:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 3:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 3:18 PM ET</p></section>"
  }
 }

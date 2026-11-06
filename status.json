@@ -1,18 +1,27 @@
 {
  "schema": 1,
- "at": "2026-11-06T00:11:23.174194+00:00",
+ "at": "2026-11-06T00:22:30.046622+00:00",
  "session": {
   "active": true,
-  "kind": "inbox",
-  "started": "2026-11-05T19:10:41-05:00"
+  "kind": "evening",
+  "started": "2026-11-05T19:17:46-05:00"
  },
  "workers": [],
  "who": "",
- "recent": [],
+ "recent": [
+  {
+   "name": "wrenna",
+   "task": "[report] evening",
+   "model": "opus",
+   "started": "2026-11-06T00:18:02.630Z",
+   "seconds": null,
+   "finished": "2026-11-06T00:20:15.633000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 437,
+  "runnable_count": 438,
   "blocked_count": 120
  },
  "meter": {
@@ -38,8 +47,8 @@
   "read_at": "2026-11-05T19:10:30.196846-05:00"
  },
  "ui": {
-  "week_pct": 0.685,
-  "five_hour_pct": 0.0,
+  "week_pct": 0.7,
+  "five_hour_pct": 0.097,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -55,7 +64,7 @@
   "week_pct": 63.38,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T00:15:00+00:00",
+  "read_at": "2026-11-06T00:23:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -122,24 +131,24 @@
   }
  ],
  "disk": {
-  "free_gb": 12,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 688
+   "free_gb": 687
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
-  "pool": 2,
-  "at": "2026-11-05T19:15:00-05:00"
+  "pool": 3,
+  "at": "2026-11-05T19:23:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
   "why": "Locked in for today by an Investor: full speed until midnight",
   "n": 12,
-  "at": "2026-11-05T19:10:30.534811-05:00"
+  "at": "2026-11-05T19:17:29.920141-05:00"
  },
  "lanes": [
   {
@@ -197,6 +206,27 @@
    {
     "w": "Odalys",
     "k": "tools",
+    "t": "Never let a waiting merge block new lane work",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stop merge clashes in append-only record files",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Raise an idle alarm when no session runs",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
     "t": "Run every lane's merge tests on the MacBook...",
     "s": "next",
     "o": "c"
@@ -242,27 +272,6 @@
     "t": "Last checks before the first test build",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Let the merge queue take reviewed worker...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "tools",
-    "t": "Parallel runner jobs share one asset helper",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "tools",
-    "t": "Move runner job sandbox files out of reach",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -283,30 +292,18 @@
    }
   ],
   "count": {
-   "next": 437,
+   "next": 438,
    "wait": 44,
    "blocked": 76,
    "you": 19
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6672945879",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "I did \u201c On the Mac mini, open Xcode,..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -317,10 +314,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "7:15 PM",
+  "at": "7:23 PM",
   "why": "",
-  "at_iso": "2026-11-06T00:15:00+00:00",
+  "at_iso": "2026-11-06T00:23:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:23 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T01:51:01.444359+00:00",
+ "at": "2026-11-06T01:54:06.631221+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,20 +8,11 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[tools] T-2849 adaptive agent pool",
-   "model": "opus",
-   "started": "2026-11-06T00:56:34.630Z",
-   "seconds": 3266,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "idris",
    "task": "[release] T-2456 last checks first build",
    "model": "opus",
    "started": "2026-11-06T00:26:26.427Z",
-   "seconds": 5075,
+   "seconds": 5260,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +21,7 @@
    "task": "[tools] T-2831 cap pre-session merge step",
    "model": "opus",
    "started": "2026-11-06T01:42:43.456Z",
-   "seconds": 497,
+   "seconds": 683,
    "finished": null,
    "effort": "high"
   },
@@ -39,13 +30,21 @@
    "task": "[site] T-2667 new Home Chat Usage pages",
    "model": "opus",
    "started": "2026-11-06T00:43:08.348Z",
-   "seconds": 4073,
+   "seconds": 4258,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x3, Idris",
+ "who": "Idris, Odalys x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2849 adaptive agent pool",
+   "model": "opus",
+   "started": "2026-11-06T00:56:34.630Z",
+   "seconds": null,
+   "finished": "2026-11-06T01:52:27.632000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-2868 approval tool security fixes",
@@ -69,20 +68,12 @@
    "started": "2026-11-06T00:48:26.055Z",
    "seconds": null,
    "finished": "2026-11-06T01:41:10.790000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2839 land stuck lane work",
-   "model": "opus",
-   "started": "2026-11-06T00:36:26.557Z",
-   "seconds": null,
-   "finished": "2026-11-06T01:40:56.606000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 427,
+  "runnable_count": 426,
   "blocked_count": 120
  },
  "meter": {
@@ -125,7 +116,7 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T01:51:00+00:00",
+  "read_at": "2026-11-06T01:54:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -270,18 +261,18 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
+  "free_gb": 18,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 650
+   "free_gb": 652
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 4,
-  "at": "2026-11-05T20:51:00-05:00"
+  "at": "2026-11-05T20:54:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -361,15 +352,6 @@
     "e": "high",
     "at": "2026-11-06T00:43:08.348Z",
     "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Run more agents at once where the machine allows",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T00:56:34.630Z",
-    "o": "c"
    },
    {
     "w": "Odalys",
@@ -456,6 +438,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "The number of agents working at once now adjusts itself: it rises one at a time while the...",
+    "at": "2026-11-05T20:52:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "When no work session has run for 15 minutes while work is allowed, the machine now says why in...",
     "at": "2026-11-05T20:42:00-05:00"
    },
@@ -463,15 +450,10 @@
     "w": "Pernille",
     "t": "The approval tool now applies only the exact diff an Investor saw, and refuses a diff that would...",
     "at": "2026-11-05T20:42:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The 16 batches of finished work stuck on clashes today are all sorted: three pieces are queued...",
-    "at": "2026-11-05T20:39:00-05:00"
    }
   ],
   "count": {
-   "next": 427,
+   "next": 426,
    "wait": 45,
    "blocked": 75,
    "you": 19
@@ -491,13 +473,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 3,
   "lanes": 5,
-  "total": 9,
-  "at": "8:51 PM",
+  "total": 8,
+  "at": "8:54 PM",
   "why": "",
-  "at_iso": "2026-11-06T01:51:00+00:00",
+  "at_iso": "2026-11-06T01:54:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 4, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 8:51 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 8:54 PM ET</p></section>"
  }
 }

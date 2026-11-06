@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "at": "2026-11-06T11:16:50.631567+00:00",
+ "at": "2026-11-06T11:21:23.589925+00:00",
  "session": {
-  "active": false,
+  "active": true,
   "kind": "",
   "started": null
  },
@@ -17,25 +17,25 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 0.0,
-   "resets_at": "2026-11-06T14:39:59.615588+00:00",
+   "pct": 1.0,
+   "resets_at": "2026-11-06T14:39:59.755818+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 100.0,
+   "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 75.0,
-   "resets_at": "2026-11-08T06:59:59.615611+00:00",
+   "resets_at": "2026-11-08T06:59:59.755837+00:00",
    "used_words": "of your weekly allowance used",
    "left": 25.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 1.0,
-   "resets_at": "2026-11-08T06:59:59.615766+00:00",
+   "resets_at": "2026-11-08T06:59:59.756010+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-06T05:55:44.299268-05:00"
+  "read_at": "2026-11-06T06:21:10.439768-05:00"
  },
  "ui": {
   "week_pct": 0.711,
@@ -50,24 +50,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-06T06:10:44-05:00",
+ "next_tick": null,
  "personal": {
-  "week_pct": 64.36,
+  "week_pct": 64.29,
   "usage_pct": 43.0,
   "work_pct": 70.6,
-  "read_at": "2026-11-06T11:17:00+00:00",
+  "read_at": "2026-11-06T11:21:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-1284",
-    "w": "Idris",
-    "k": "test",
-    "t": "Test that unsafe links in tree views draw no link",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-06T05:21:24-05:00",
-    "n": "Evan"
-   },
    {
     "lane": "a2",
     "task": "T-2044",
@@ -190,12 +179,12 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T06:17:00-05:00"
+  "at": "2026-11-06T06:21:00-05:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": {
   "since": "2026-11-06T05:57:26-05:00",
-  "minutes": 19,
+  "minutes": 23,
   "why": "a tick has spent 21 min on steps before the session",
   "healed": []
  },
@@ -362,12 +351,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 5,
-  "total": 5,
-  "at": "6:17 AM",
+  "lanes": 4,
+  "total": 4,
+  "at": "6:21 AM",
   "why": "",
-  "at_iso": "2026-11-06T11:17:00+00:00",
+  "at_iso": "2026-11-06T11:21:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 6:17 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:21 AM ET</p></section>"
  }
 }

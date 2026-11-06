@@ -1,70 +1,18 @@
 {
  "schema": 1,
- "at": "2026-11-06T18:53:30.958548+00:00",
+ "at": "2026-11-06T18:56:35.156391+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-06T10:44:28-05:00"
+  "kind": "",
+  "started": null
  },
- "workers": [
-  {
-   "name": "pernille",
-   "task": "[build] T-1048 stdlib zip size check flake",
-   "model": "opus",
-   "started": "2026-11-06T18:37:22.559Z",
-   "seconds": 968,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[test] T-3096 fix site suites red on main",
-   "model": "opus",
-   "started": "2026-11-06T18:38:33.738Z",
-   "seconds": 897,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Pernille, Odalys",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[site] T-3009 Running shows only active agents",
-   "model": "opus",
-   "started": "2026-11-06T18:28:56.833Z",
-   "seconds": null,
-   "finished": "2026-11-06T18:38:16.533000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[test] T-3097 rerun mutant 5",
-   "model": "opus",
-   "started": "2026-11-06T18:13:52.212Z",
-   "seconds": null,
-   "finished": "2026-11-06T18:36:55.867000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-3094 merge queue Show More on Home",
-   "model": "opus",
-   "started": "2026-11-06T18:08:39.246Z",
-   "seconds": null,
-   "finished": "2026-11-06T18:28:39.993000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-3077 stuck-order evidence review",
-   "model": "opus",
-   "started": "2026-11-06T18:08:15.941Z",
-   "seconds": null,
-   "finished": "2026-11-06T18:13:34.992000+00:00"
-  }
- ],
+ "workers": [],
+ "who": "",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 397,
+  "runnable_count": 396,
   "blocked_count": 121
  },
  "meter": {
@@ -107,7 +55,7 @@
   "week_pct": 64.37,
   "usage_pct": 41.9,
   "work_pct": 69.7,
-  "read_at": "2026-11-06T18:53:00+00:00",
+  "read_at": "2026-11-06T18:56:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -139,33 +87,19 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T13:53:00-05:00"
+  "at": "2026-11-06T13:56:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Spread: 19% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 32 of 41 lands failed in 3 hours (2 red))",
-  "n": 2,
-  "at": "2026-11-06T10:44:17.748396-05:00"
- },
+ "pool": null,
  "lanes": [
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[build] T-1048 stdlib zip size check flake",
-   "model": "opus",
-   "since": "2026-11-06T18:37:22.559Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
-   "state": "running",
-   "task": "[test] T-3096 fix site suites red on main",
-   "model": "opus",
-   "since": "2026-11-06T18:38:33.738Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
@@ -179,6 +113,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -201,26 +143,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Find why the stdlib size check fails sometimes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T18:37:22.559Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "test",
-    "t": "Fix four site test suites already failing on main",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T18:38:33.738Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -295,6 +218,11 @@
   ],
   "done": [
    {
+    "w": "Maren",
+    "t": "The task board now reads 'not before <date>' anywhere in a line, so T-1443 (one Apple page...",
+    "at": "2026-11-06T13:55:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Home's Running now counts only tasks an agent is working on; finished work waiting for tests or...",
     "at": "2026-11-06T13:38:00-05:00"
@@ -303,15 +231,10 @@
     "w": "Idris",
     "t": "The app's stuck and unstuck signals can no longer arrive in the wrong order around a run's end;...",
     "at": "2026-11-06T13:36:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Output from a finished script can no longer leak into the next run's log; code reviewed, full...",
-    "at": "2026-11-06T13:36:00-05:00"
    }
   ],
   "count": {
-   "next": 397,
+   "next": 396,
    "wait": 42,
    "blocked": 79,
    "you": 20
@@ -322,7 +245,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -331,13 +253,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 0,
   "lanes": 0,
-  "total": 2,
-  "at": "1:53 PM",
-  "why": "",
-  "at_iso": "2026-11-06T18:53:00+00:00",
-  "started": "10:44 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:44 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:53 PM ET</p></section>"
+  "total": 0,
+  "at": "1:56 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-06T18:56:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:56 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

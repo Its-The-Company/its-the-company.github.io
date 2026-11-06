@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T13:37:10.718126+00:00",
+ "at": "2026-11-06T13:40:15.654660+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2467 merge queue: main-green check and land rate",
    "model": "opus",
    "started": "2026-11-06T13:21:54.550Z",
-   "seconds": 916,
+   "seconds": 1101,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[build] T-2054 T-2055 bridge run-end signal order",
    "model": "opus",
    "started": "2026-11-06T13:27:40.649Z",
-   "seconds": 570,
+   "seconds": 755,
    "finished": null,
    "effort": "high"
   }
@@ -99,7 +99,7 @@
   "week_pct": 63.88,
   "usage_pct": 42.6,
   "work_pct": 70.1,
-  "read_at": "2026-11-06T13:37:00+00:00",
+  "read_at": "2026-11-06T13:40:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -111,42 +111,6 @@
     "e": "high",
     "at": "2026-11-06T06:38:15-05:00",
     "n": "Evan"
-   },
-   {
-    "lane": "b",
-    "task": "T-2875",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Match the pinned permalink as GitHub renders it",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T04:54:07-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b",
-    "task": "T-2859",
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Check the recipe steps against Apple's Shortcuts guide",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T04:54:07-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b",
-    "task": "T-1723",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Add a test row for the last-step link rule",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T04:54:07-05:00",
-    "n": "Jeremy",
-    "d": 1
    },
    {
     "lane": "b2",
@@ -187,18 +151,18 @@
   }
  ],
  "disk": {
-  "free_gb": 9.5,
+  "free_gb": 10.0,
   "gate": "closed",
   "ssd": {
-   "mounted": true,
-   "free_gb": 505
+   "mounted": false,
+   "free_gb": null
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T08:37:00-05:00"
+  "at": "2026-11-06T08:40:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -390,12 +354,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "8:37 AM",
+  "lanes": 2,
+  "total": 4,
+  "at": "8:40 AM",
   "why": "",
-  "at_iso": "2026-11-06T13:37:00+00:00",
+  "at_iso": "2026-11-06T13:40:00+00:00",
   "started": "8:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:37 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:40 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T00:36:54.206791+00:00",
+ "at": "2026-11-06T00:39:58.798215+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2830 spares on demand",
    "model": "opus",
    "started": "2026-11-06T00:25:43.225Z",
-   "seconds": 670,
+   "seconds": 855,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2833 idle alarm",
    "model": "opus",
    "started": "2026-11-06T00:25:57.429Z",
-   "seconds": 656,
+   "seconds": 841,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[tools] T-2725 T-2726 applier pin and fence",
    "model": "opus",
    "started": "2026-11-06T00:26:11.478Z",
-   "seconds": 642,
+   "seconds": 827,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +39,7 @@
    "task": "[review] T-2728 memory-skip badge gap",
    "model": "opus",
    "started": "2026-11-06T00:26:18.580Z",
-   "seconds": 635,
+   "seconds": 820,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +48,7 @@
    "task": "[release] T-2456 last checks first build",
    "model": "opus",
    "started": "2026-11-06T00:26:26.427Z",
-   "seconds": 627,
+   "seconds": 812,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +57,7 @@
    "task": "[tools] T-2675 charter suite compare",
    "model": "opus",
    "started": "2026-11-06T00:26:32.127Z",
-   "seconds": 622,
+   "seconds": 806,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +66,7 @@
    "task": "[build] T-2511 completion sys.path fix",
    "model": "opus",
    "started": "2026-11-06T00:26:38.277Z",
-   "seconds": 615,
+   "seconds": 800,
    "finished": null,
    "effort": "high"
   },
@@ -75,16 +75,7 @@
    "task": "[build] T-2376 Shortcut recipes",
    "model": "opus",
    "started": "2026-11-06T00:26:45.329Z",
-   "seconds": 608,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2263 shared refresh failure check",
-   "model": "opus",
-   "started": "2026-11-06T00:26:50.627Z",
-   "seconds": 603,
+   "seconds": 793,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +84,7 @@
    "task": "[build] T-2724 traceback trim honest",
    "model": "opus",
    "started": "2026-11-06T00:26:55.942Z",
-   "seconds": 598,
+   "seconds": 782,
    "finished": null,
    "effort": "high"
   },
@@ -102,7 +93,7 @@
    "task": "[build] T-1758 refresh schedule rule",
    "model": "opus",
    "started": "2026-11-06T00:30:38.040Z",
-   "seconds": 376,
+   "seconds": 560,
    "finished": null,
    "effort": "high"
   },
@@ -111,13 +102,30 @@
    "task": "[tools] T-2839 land stuck lane work",
    "model": "opus",
    "started": "2026-11-06T00:36:26.557Z",
-   "seconds": 27,
+   "seconds": 212,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-2840 refresh failure check",
+   "model": "opus",
+   "started": "2026-11-06T00:38:33.031Z",
+   "seconds": 85,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x5, Pernille x3, Idris x3, Ines",
+ "who": "Odalys x5, Pernille x4, Idris x2, Ines",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-2263 shared refresh failure check",
+   "model": "opus",
+   "started": "2026-11-06T00:26:50.627Z",
+   "seconds": null,
+   "finished": "2026-11-06T00:38:01.418000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2832 union merge for records",
@@ -138,7 +146,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 438,
+  "runnable_count": 437,
   "blocked_count": 120
  },
  "meter": {
@@ -181,20 +189,8 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T00:36:00+00:00",
+  "read_at": "2026-11-06T00:40:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-1828",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retry work that touched protected files",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T19:33:56-05:00",
-    "n": "Evan",
-    "d": 1
-   },
    {
     "lane": "b",
     "task": "T-2810",
@@ -282,7 +278,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-05T19:36:00-05:00"
+  "at": "2026-11-05T19:40:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -493,23 +489,23 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "Not needed any more: the parked fix for one shared refresh-failure check was put straight onto...",
+    "at": "2026-11-05T19:38:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "The app now uses one check to decide that a widget refresh failed to get new data, so a...",
+    "at": "2026-11-05T19:37:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Record files that only ever gain lines (the Apple page index, the merge queue ledgers, the jsonl...",
     "at": "2026-11-05T19:34:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The merge queue no longer makes a broken branch name for a worker's branch; it parks it under a...",
-    "at": "2026-11-05T19:30:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "One real test job, the app's theme tests, was queued for the MacBook test computer with the new...",
-    "at": "2026-11-05T19:10:00-05:00"
    }
   ],
   "count": {
-   "next": 438,
+   "next": 437,
    "wait": 44,
    "blocked": 76,
    "you": 19
@@ -529,12 +525,12 @@
  ],
  "agents_now": {
   "main": 12,
-  "lanes": 4,
-  "total": 16,
-  "at": "7:36 PM",
+  "lanes": 3,
+  "total": 15,
+  "at": "7:40 PM",
   "why": "",
-  "at_iso": "2026-11-06T00:36:00+00:00",
+  "at_iso": "2026-11-06T00:40:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>16</b> agents running now</p><p class=\"an-sub\">Main session 12, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:36 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>15</b> agents running now</p><p class=\"an-sub\">Main session 12, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:40 PM ET</p></section>"
  }
 }

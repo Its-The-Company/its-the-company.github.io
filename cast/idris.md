@@ -34,7 +34,7 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 
 ## Open (mine)
 - T-1669/T-1678: T-1716 d21a36896, T-1696 d074ebd44 landed (Simulator 55/0); independent review of both due before TestFlight.
-- T-1440 43be07d86 (unpushed): Updated + RefreshButton drawn, typecheck + host 57/0. Owed: MacBook TreeNodesTests/PremadeSnapshot/TreeTimeline/AgeLine; then T-0678 tap, nextChange entries, shots, review.
+- T-1440: drawn (43be07d86) green in full suite J-20261105-2106; age-turn entries 50f493ec1 on land/idris-t1440, run J-20261106-0826 (job commit 32388e712 needs main push). Owed: T-0678 tap/Link, shots (check .after(now) reload), review.
 - T-0485 (c3c6876f, review T-0493): set LegalLinks when the app privacy page is published and Terms ruled. Release builds now fail until then (T-0497, 3bfb3222; review T-0636).
 - Lesson: the full UI suite runs ~45 min (EditorGate A2c alone ~7 min): run it in the background with a long timeout, never a 10-min foreground call. tests/run.sh takes suite file names (x_test.py), not bare names: a bare name runs nothing and says "All tests passed".
 - Lesson T-1678: a test that checks a marker's text is not a test of what recovery does with it. Test the consumer.
@@ -45,6 +45,9 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - Lesson T-1714: a rule green on the host means nothing until something writes it and something reads it: grep both call sites first.
 - T-2628: xc.sh why-lines a89496cfa (unpushed); runner 17 jobs-root sandbox b140e1312 + T-2722 fix 97744ee22 on idris/t2628-runner-jobs-root; re-review T-2730 (Pernille), then one Investor approve-sandbox.
 - Lesson T-2710: a file the unsandboxed side rereads (profile, log) must live outside the job's writable area or be read through a held fd. UI test cause still unread: needs a run after a89496cfa is pushed and T-2709 lands.
+
+- T-2054/T-2055 (2026-11-06): fix on main f7ca2d3bd+2a6ae60bb; green J-20261106-0722. Six mutants on land/idris-t2054 pending: `tools/land_mutants.py status --id idris-t2054`; tick both on 6 KILLED, then land_xc.py drop. Review T-3077 (Pernille).
+- Lesson: no local Xcode slot -> tools/land_mutants.py runs xc mutants on the runner via land/<id>.
 
 ## Lessons
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.

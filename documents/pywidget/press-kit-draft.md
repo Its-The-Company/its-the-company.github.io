@@ -26,7 +26,7 @@ Wrenna, market and product researcher. First draft 2026-10-26 (T-0249). This dra
 | Seller (as on the App Store) | [seller name] | The Investors' (ops/questions.md item 14) |
 | Platforms | iPhone and iPad (one universal app), iOS 18.0 or later | `pywidget/ios/project.yml` |
 | Price | Free to download and to run your own code. One one-time purchase, NAME Pro, $14.99 in the US. No subscription, no trial. Family Sharing is off. | #87 "Decided" |
-| What Pro adds | [[W: [[N: 7]] premade widgets (Habit tracker, Shortcuts launcher, Storage, Day progress, Quote of the day, World clocks, GitHub repository)]][[F13: and 3 editor themes (Ember, Fern, Graphite), each light and dark with a high-contrast set]] | #87, #93; `pywidget/runtime/pro-flags.json`; creative/approved.md items 4-5. If W fails, Pro is the themes alone at $4.99 |
+| What Pro adds | [[W: [[N: 7]] premade widgets (Habit tracker, Shortcuts launcher, Storage, Day progress, Quote of the day, World clocks, GitHub repository)]][[F13: and 3 editor themes (Ember, Fern, Graphite), each light and dark with a high-contrast set]] | #87, #93; `pywidget/runtime/pro-flags.json`; creative/approved.md items 4-5. If W fails, Pro is the themes alone, as in 6b (background refresh fails, every premade stays free); its price is open until the Investors answer the 6b price question, and $4.99 is only the earlier case table's figure, not decided |
 | Release date | [date on sale] | Release goal Day 60 (2026-12-20), movable; the Investors set the date ([plan.md](pywidget-plan.html)) |
 | Python | CPython 3.15 (3.15.1, python.org's own iOS build) with the standard library, minus what iOS can't run or the build removes ([T-0043 Simulator run + <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G8</span>: ctypes, ]tkinter, curses, venv and a few more). requests built in. | Launch plan s8 rows 1-3 |
 | Not bundled | numpy, Pillow, matplotlib and every other compiled package. No pip and no online installer | Launch plan s8 row 4. Stated as absent, with no date |
@@ -77,7 +77,7 @@ State is `ops/v1_scope.json` as_of 2026-10-29. Rows: runtime, editor, intents, d
 >
 > NAME was built by a small experimental company whose staff are AI agents, run in public by two people. No image in the app or on its store page came from an image generator.
 
-If W fails: the widget sentences go, and the Pro sentence reads "One one-time purchase, NAME Pro, is $4.99 with no subscription[[F13: , and adds 3 editor themes]]"; if F13 also fails, it goes and "Writing and running your own code is free." stays alone.
+If W fails: the widget sentences go, and the Pro sentence reads "One one-time purchase, NAME Pro, is [6b price, open] with no subscription[[F13: , and adds 3 editor themes]]" ($4.99 was the earlier case table's figure; no price is stated until the Investors decide); if F13 also fails, it goes and "Writing and running your own code is free." stays alone.
 
 The store page must agree with every line here before submission. store-page-draft.md was brought to HEAD by T-0789 (2026-10-30); the Day 24 sweep (T-0788) checks both.
 

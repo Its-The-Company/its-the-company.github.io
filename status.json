@@ -1,24 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-06T14:01:32.939288+00:00",
+ "at": "2026-11-06T14:02:19.836328+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-06T08:15:53-05:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-2054 T-2055 bridge run-end signal order",
    "model": "opus",
    "started": "2026-11-06T13:27:40.649Z",
-   "seconds": 2032,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-06T14:01:50.443000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2467 merge queue: main-green check and land rate",
@@ -42,14 +40,6 @@
    "started": "2026-11-06T13:17:57.979Z",
    "seconds": null,
    "finished": "2026-11-06T13:27:02.189000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[test] T-2961 fix two red suites on main",
-   "model": "opus",
-   "started": "2026-11-06T13:17:24.790Z",
-   "seconds": null,
-   "finished": "2026-11-06T13:21:30.267000+00:00"
   }
  ],
  "queue": {
@@ -98,7 +88,7 @@
   "week_pct": 63.88,
   "usage_pct": 42.6,
   "work_pct": 70.1,
-  "read_at": "2026-11-06T14:01:00+00:00",
+  "read_at": "2026-11-06T14:06:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -130,7 +120,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T09:01:00-05:00"
+  "at": "2026-11-06T09:06:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -141,18 +131,17 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-2054 T-2055 bridge run-end signal order",
-   "model": "opus",
-   "since": "2026-11-06T13:27:40.649Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
    "model": null,
    "since": null,
    "next": []
@@ -191,17 +180,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Fix the order of the stuck and finished signals",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T13:27:40.649Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -303,6 +282,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -311,13 +291,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "9:01 AM",
-  "why": "",
-  "at_iso": "2026-11-06T14:01:00+00:00",
-  "started": "8:15 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 8:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:01 AM ET</p></section>"
+  "total": 0,
+  "at": "9:06 AM",
+  "why": "Between sessions: no session is running. Last check 8:15 AM ET.",
+  "at_iso": "2026-11-06T14:06:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:06 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 8:15 AM ET.</p></section>"
  }
 }

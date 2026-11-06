@@ -26,7 +26,7 @@ Companion file: [press-kit-draft.md](press-kit-draft.html). **store-page-draft.m
 
 | Gate | What must be true | Decided | If it fails |
 |---|---|---|---|
-| **W** | Widgets ship: at least 8 of 12 premades pass (F1), a person's tap reaches the Home Screen (F19, T-0684), Maren's screens pass | Widget cut line, Freeze 2026-11-30 | Every [[W: ]] sentence goes; <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">pitch</span> P-C; Pro is the themes alone at $4.99 (#87 "Decided") |
+| **W** | Widgets ship: at least 8 of 12 premades pass (F1), a person's tap reaches the Home Screen (F19, T-0684), Maren's screens pass | Widget cut line, Freeze 2026-11-30 | Every [[W: ]] sentence goes; <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">pitch</span> P-C; Pro is the themes alone, as in 6b, with no price stated (open: see section 4; $4.99 was the 2026-10-30 figure for widgets cut, Ines T-0888, and is not decided) |
 | **N** | The count of premades that pass (F1) | Freeze 2026-11-30 | "12" and "7" become the real counts, from pro-flags.json |
 | **<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">LANE</span>-ON / LANE-OFF** | The flag default for Python in the widget extension, set from device numbers ([ADR-007 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-10-29 08:03](adr-007-execution-architecture.html) item 1, T-0680) | Before the release candidate, 2026-12-06 | Exactly one of the two survives. A Simulator number never opens it |
 | **E** | Completion and inline errors in the editor (T-0656) | Feature freeze | The words go |
@@ -150,7 +150,7 @@ The window is no longer three days. Release is Tuesday 2026-12-15 (Day 55) and t
 | Case | Buyers per 1,000 downloads at 1% / 2% / 3% | Net at $10.49 a sale (30%) | Net at $12.74 (15%) |
 |---|---|---|---|
 | **$14.99, decided (#87)** | 10 / 20 / 30 | $105 / $210 / $315 | $127 / $255 / $382 |
-| $4.99, the themes-only fallback if W fails (Ines judges the rate lower, 0.5%) | 5 at 0.5% | $17 | $21 |
+| $4.99, the earlier case table's figure for a themes-only Pro (widgets cut; Ines judges the rate lower, 0.5%). **Not a decided 6b price** | 5 at 0.5% | $17 | $21 |
 
 </div>
 
@@ -159,7 +159,7 @@ Arithmetic by script (downloads x rate x price x 0.70 or 0.85), 2026-11-02. An e
 
 Here is the shape of it. The number of downloads the Investors' posts and the store listing bring is the unknown, and no file in the repo measures it. I do not forecast it. What I can say [judgment] is that the organic floor (5-20 a day) is small beside what a single well-received post can bring, which is why the outreach plan in section 5 puts the rooms in the order of expected fit and leaves the Investors room to run it over more than one week if a thread goes quiet.
 
-The fallback: with W failed, Pro is the themes alone at $4.99 and every widget claim goes. If F13 also fails, the Pro sentence is deleted and "Writing and running your own code is free" stands alone.
+The fallback: since #142 (B-staged) the themes-only form is **6b**: background refresh fails (gate BR), Pro is the 3 themes alone, and every premade stays free; widgets are not cut. The price of that Pro is the Investors' to answer in the Day 41 packet ([t2375-internet-copy.md](t2375-internet-copy.html) s6); no price is decided, and $4.99 above is only the earlier case table's figure (it applied if widgets were cut, Ines T-0888). If W itself fails, every widget claim goes and Pro is the themes alone on the same open price. If F13 also fails, the Pro sentence is deleted and "Writing and running your own code is free" stands alone.
 
 ### 4a. Measured figures from comparable apps: what the repo holds
 
@@ -325,7 +325,7 @@ D3 as a whole carries gate **S**: if S fails, the worked example cannot be run b
 > Tagline: Python 3.15 on iPhone, with your scripts as widgets
 > First comment: D4's paragraph.
 
-**If W fails.** D1 title: "Show HN: NAME – Python 3.15 on iPhone and iPad". D1's Pro line: "One one-time purchase, NAME Pro, is $4.99 with no subscription[[F13: , and adds 3 editor themes]]"; if F13 also fails, delete it and keep "Writing and running your own code is free." D2's clause becomes "one one-time purchase, $4.99, adds 3 editor themes" on the same terms. D6 tagline: "Python 3.15 on iPhone and iPad, free to run". The "Not in this version" line drops "widgets with buttons or toggles" and adds "widgets".
+**If W fails.** D1 title: "Show HN: NAME – Python 3.15 on iPhone and iPad". D1's Pro line: "One one-time purchase, NAME Pro, is [6b price, open] with no subscription[[F13: , and adds 3 editor themes]]"; if F13 also fails, delete it and keep "Writing and running your own code is free." D2's clause becomes "one one-time purchase, [6b price, open], adds 3 editor themes" on the same terms. The earlier drafts had $4.99 here; it stays out of a post until the Investors answer the 6b price question, and nothing is posted with the bracket in it. D6 tagline: "Python 3.15 on iPhone and iPad, free to run". The "Not in this version" line drops "widgets with buttons or toggles" and adds "widgets".
 
 **If W passes and T-0678 ships** (LANE-ON only): the "Not in this version" line reads "widgets with buttons or toggles, apart from a Refresh button".
 

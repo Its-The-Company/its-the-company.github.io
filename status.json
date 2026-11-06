@@ -1,13 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-06T05:40:42.562244+00:00",
+ "at": "2026-11-06T05:43:44.368549+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-06T00:40:43-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[release] T-2918 send build 2 to TestFlight",
+   "model": "opus",
+   "started": "2026-11-06T05:41:25.753Z",
+   "seconds": 138,
+   "finished": null
+  }
+ ],
+ "who": "Idris",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -55,7 +64,7 @@
   "week_pct": 63.02,
   "usage_pct": 43.2,
   "work_pct": 71.9,
-  "read_at": "2026-11-06T05:40:00+00:00",
+  "read_at": "2026-11-06T05:43:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -122,7 +131,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T00:30:09-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "b",
@@ -166,7 +176,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T00:29:17-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b2",
@@ -243,24 +254,28 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-06T00:40:00-05:00"
+  "at": "2026-11-06T00:43:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "On the week's line (73% used, 71% past), so today's work is spread until midnight; the machine allows 10 (cut a step: load 28.8 a core is over 10; 14 of 16 lands failed in 3 hours (9 red))",
+  "n": 1,
+  "at": "2026-11-06T00:40:28.628201-05:00"
+ },
  "lanes": [
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[release] T-2918 send build 2 to TestFlight",
+   "model": "opus",
+   "since": "2026-11-06T05:41:25.753Z",
+   "next": []
+  },
   {
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P1, after T-1035 lands (personal-account...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
    "model": null,
    "since": null,
    "next": []
@@ -299,7 +314,16 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "release",
+    "t": "Send build 2 (with the app icon) to TestFlight",
+    "m": "opus",
+    "at": "2026-11-06T05:41:25.753Z",
+    "o": "c"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -409,13 +433,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 5,
-  "total": 5,
-  "at": "12:40 AM",
+  "total": 6,
+  "at": "12:43 AM",
   "why": "",
-  "at_iso": "2026-11-06T05:40:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 12:40 AM ET</p></section>"
+  "at_iso": "2026-11-06T05:43:00+00:00",
+  "started": "12:40 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 12:43 AM ET</p></section>"
  }
 }

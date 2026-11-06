@@ -1,47 +1,14 @@
 {
  "schema": 1,
- "at": "2026-11-06T05:33:50.209741+00:00",
+ "at": "2026-11-06T05:40:42.562244+00:00",
  "session": {
-  "active": false,
+  "active": true,
   "kind": "",
   "started": null
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[site] T-2915 Chat only, live on phones",
-   "model": "opus",
-   "started": "2026-11-06T05:04:03.619Z",
-   "seconds": null,
-   "finished": "2026-11-06T05:28:25.780000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2831 cap pre-session merge",
-   "model": "opus",
-   "started": "2026-11-06T04:22:15.682Z",
-   "seconds": null,
-   "finished": "2026-11-06T05:27:57.937000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2904 merge-queue work lands first",
-   "model": "opus",
-   "started": "2026-11-06T04:38:11.473Z",
-   "seconds": null,
-   "finished": "2026-11-06T05:20:05.083000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2853 demoted widget badge test",
-   "model": "opus",
-   "started": "2026-11-06T04:22:48.562Z",
-   "seconds": null,
-   "finished": "2026-11-06T05:09:21.948000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -50,28 +17,28 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 38.0,
-   "resets_at": "2026-11-06T04:40:00.342756+00:00",
+   "pct": 7.0,
+   "resets_at": "2026-11-06T09:40:00.373052+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 62.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 71.0,
-   "resets_at": "2026-11-08T07:00:00.342780+00:00",
+   "pct": 73.0,
+   "resets_at": "2026-11-08T07:00:00.373072+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 29.0,
+   "left": 27.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 1.0,
-   "resets_at": "2026-11-08T07:00:00.342951+00:00",
+   "resets_at": "2026-11-08T07:00:00.373201+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-05T23:18:21.165382-05:00"
+  "read_at": "2026-11-06T00:40:28.156966-05:00"
  },
  "ui": {
-  "week_pct": 0.698,
+  "week_pct": 0.697,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -83,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-05T23:33:21-05:00",
+ "next_tick": null,
  "personal": {
-  "week_pct": 63.12,
+  "week_pct": 63.02,
   "usage_pct": 43.2,
   "work_pct": 71.9,
-  "read_at": "2026-11-06T05:34:00+00:00",
+  "read_at": "2026-11-06T05:40:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -121,7 +88,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T00:30:09-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a2",
@@ -275,9 +243,9 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-06T00:34:00-05:00"
+  "at": "2026-11-06T00:40:00-05:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
  "pool": null,
  "lanes": [
@@ -433,7 +401,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -445,10 +412,10 @@
   "main": 0,
   "lanes": 5,
   "total": 5,
-  "at": "12:34 AM",
+  "at": "12:40 AM",
   "why": "",
-  "at_iso": "2026-11-06T05:34:00+00:00",
+  "at_iso": "2026-11-06T05:40:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 12:34 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 12:40 AM ET</p></section>"
  }
 }

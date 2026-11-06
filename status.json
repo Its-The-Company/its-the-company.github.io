@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T18:10:50.066428+00:00",
+ "at": "2026-11-06T18:13:50.251810+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,25 @@
  },
  "workers": [
   {
-   "name": "pernille",
-   "task": "[review] T-3077 stuck-order evidence review",
-   "model": "opus",
-   "started": "2026-11-06T18:08:15.941Z",
-   "seconds": 154,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[site] T-3094 merge queue Show More on Home",
    "model": "opus",
    "started": "2026-11-06T18:08:39.246Z",
-   "seconds": 130,
+   "seconds": 311,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille, Odalys",
+ "who": "Odalys",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-3077 stuck-order evidence review",
+   "model": "opus",
+   "started": "2026-11-06T18:08:15.941Z",
+   "seconds": null,
+   "finished": "2026-11-06T18:13:34.992000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[site] T-3080 Chat page shows only the chat",
@@ -51,20 +50,12 @@
    "started": "2026-11-06T17:25:18.567Z",
    "seconds": null,
    "finished": "2026-11-06T17:32:16.703000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3084 machine records out of git",
-   "model": "opus",
-   "started": "2026-11-06T15:45:41.106Z",
-   "seconds": null,
-   "finished": "2026-11-06T17:27:26.106000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 403,
+  "runnable_count": 404,
   "blocked_count": 121
  },
  "meter": {
@@ -107,7 +98,7 @@
   "week_pct": 64.37,
   "usage_pct": 41.9,
   "work_pct": 69.7,
-  "read_at": "2026-11-06T18:10:00+00:00",
+  "read_at": "2026-11-06T18:13:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -132,14 +123,14 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 529
+   "free_gb": 531
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T13:10:00-05:00"
+  "at": "2026-11-06T13:13:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -149,15 +140,6 @@
   "at": "2026-11-06T10:44:17.748396-05:00"
  },
  "lanes": [
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-3077 stuck-order evidence review",
-   "model": "opus",
-   "since": "2026-11-06T18:08:15.941Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Odalys",
    "state": "running",
@@ -184,6 +166,14 @@
    "next": []
   },
   {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Maren",
    "state": "next",
    "task": "Maren+Odalys, P1, Investor an Investor c6651474906 (01:33...",
@@ -202,15 +192,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the stuck-order and late-record evidence independently",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T18:08:15.941Z",
-    "o": "c"
-   },
    {
     "w": "Odalys",
     "k": "site",
@@ -295,6 +276,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "Checked Idris's proof that the stuck and late-output fixes work. The code is right, but one of...",
+    "at": "2026-11-06T13:13:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The Chat page now shows only the messages and the box to write one; the Chat tab, the Settings...",
     "at": "2026-11-06T13:08:00-05:00"
@@ -303,15 +289,10 @@
     "w": "Odalys",
     "t": "A change to the company site's code now always runs the site's own test before it lands, so a...",
     "at": "2026-11-06T13:07:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Xcode builds that the MacBook test machine can do now go there instead of taking the Mac mini's...",
-    "at": "2026-11-06T12:50:00-05:00"
    }
   ],
   "count": {
-   "next": 403,
+   "next": 404,
    "wait": 42,
    "blocked": 79,
    "you": 20
@@ -331,13 +312,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "1:10 PM",
+  "total": 1,
+  "at": "1:13 PM",
   "why": "",
-  "at_iso": "2026-11-06T18:10:00+00:00",
+  "at_iso": "2026-11-06T18:13:00+00:00",
   "started": "10:44 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:44 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:10 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:44 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:13 PM ET</p></section>"
  }
 }

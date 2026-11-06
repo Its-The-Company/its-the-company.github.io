@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T00:46:03.810397+00:00",
+ "at": "2026-11-06T00:49:13.045089+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2830 spares on demand",
    "model": "opus",
    "started": "2026-11-06T00:25:43.225Z",
-   "seconds": 1220,
+   "seconds": 1409,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2833 idle alarm",
    "model": "opus",
    "started": "2026-11-06T00:25:57.429Z",
-   "seconds": 1206,
+   "seconds": 1395,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[tools] T-2725 T-2726 applier pin and fence",
    "model": "opus",
    "started": "2026-11-06T00:26:11.478Z",
-   "seconds": 1192,
+   "seconds": 1381,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +39,7 @@
    "task": "[release] T-2456 last checks first build",
    "model": "opus",
    "started": "2026-11-06T00:26:26.427Z",
-   "seconds": 1177,
+   "seconds": 1366,
    "finished": null,
    "effort": "high"
   },
@@ -48,16 +48,7 @@
    "task": "[tools] T-2675 charter suite compare",
    "model": "opus",
    "started": "2026-11-06T00:26:32.127Z",
-   "seconds": 1171,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2511 completion sys.path fix",
-   "model": "opus",
-   "started": "2026-11-06T00:26:38.277Z",
-   "seconds": 1165,
+   "seconds": 1360,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +57,7 @@
    "task": "[build] T-2376 Shortcut recipes",
    "model": "opus",
    "started": "2026-11-06T00:26:45.329Z",
-   "seconds": 1158,
+   "seconds": 1347,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +66,7 @@
    "task": "[build] T-2724 traceback trim honest",
    "model": "opus",
    "started": "2026-11-06T00:26:55.942Z",
-   "seconds": 1147,
+   "seconds": 1337,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +75,7 @@
    "task": "[tools] T-2839 land stuck lane work",
    "model": "opus",
    "started": "2026-11-06T00:36:26.557Z",
-   "seconds": 577,
+   "seconds": 766,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +84,7 @@
    "task": "[review] T-2840 refresh failure check",
    "model": "opus",
    "started": "2026-11-06T00:38:33.031Z",
-   "seconds": 450,
+   "seconds": 640,
    "finished": null,
    "effort": "high"
   },
@@ -102,7 +93,7 @@
    "task": "[site] T-2667 new Home Chat Usage pages",
    "model": "opus",
    "started": "2026-11-06T00:43:08.348Z",
-   "seconds": 175,
+   "seconds": 364,
    "finished": null,
    "effort": "high"
   },
@@ -111,13 +102,39 @@
    "task": "[design] T-2846 refresh schedule ruling",
    "model": "opus",
    "started": "2026-11-06T00:45:37.160Z",
-   "seconds": 26,
+   "seconds": 215,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2848 report wins and failures",
+   "model": "opus",
+   "started": "2026-11-06T00:48:18.967Z",
+   "seconds": 54,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-2847 completion import path fix",
+   "model": "opus",
+   "started": "2026-11-06T00:48:26.055Z",
+   "seconds": 46,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x5, Idris x2, Ines x2, Pernille x3",
+ "who": "Odalys x6, Idris, Ines x2, Pernille x4",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-2511 completion sys.path fix",
+   "model": "opus",
+   "started": "2026-11-06T00:26:38.277Z",
+   "seconds": null,
+   "finished": "2026-11-06T00:47:33.838000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[build] T-1758 refresh schedule rule",
@@ -141,20 +158,12 @@
    "started": "2026-11-06T00:26:50.627Z",
    "seconds": null,
    "finished": "2026-11-06T00:38:01.418000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2832 union merge for records",
-   "model": "opus",
-   "started": "2026-11-06T00:25:50.481Z",
-   "seconds": null,
-   "finished": "2026-11-06T00:35:28.345000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 438,
+  "runnable_count": 439,
   "blocked_count": 120
  },
  "meter": {
@@ -197,7 +206,7 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T00:46:00+00:00",
+  "read_at": "2026-11-06T00:49:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -354,18 +363,18 @@
   }
  ],
  "disk": {
-  "free_gb": 21,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 673
+   "free_gb": 666
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-05T19:46:00-05:00"
+  "at": "2026-11-05T19:49:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -475,15 +484,6 @@
     "o": "c"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Stop completion changing the import path under a running script",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T00:26:38.277Z",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "Make three Shortcut recipes that feed scripts",
@@ -499,6 +499,15 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T00:26:55.942Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Land the stuck personal-account work one task at a time",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T00:36:26.557Z",
     "o": "c"
    }
   ],
@@ -576,6 +585,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "Typing in the editor while a script runs no longer swaps the script's module search path, so the...",
+    "at": "2026-11-05T19:46:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The app now has a tested rule for when to ask iOS to refresh widgets in the background next: at...",
     "at": "2026-11-05T19:45:00-05:00"
@@ -584,15 +598,10 @@
     "w": "Pernille",
     "t": "The memory-skip badge now waits 60 seconds, so one widget refresh asking for several sizes no...",
     "at": "2026-11-05T19:42:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Not needed any more: the parked fix for one shared refresh-failure check was put straight onto...",
-    "at": "2026-11-05T19:38:00-05:00"
    }
   ],
   "count": {
-   "next": 438,
+   "next": 439,
    "wait": 44,
    "blocked": 76,
    "you": 19
@@ -612,13 +621,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 12,
+  "main": 13,
   "lanes": 5,
-  "total": 17,
-  "at": "7:46 PM",
+  "total": 18,
+  "at": "7:49 PM",
   "why": "",
-  "at_iso": "2026-11-06T00:46:00+00:00",
+  "at_iso": "2026-11-06T00:49:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>17</b> agents running now</p><p class=\"an-sub\">Main session 12, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:46 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>18</b> agents running now</p><p class=\"an-sub\">Main session 13, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:49 PM ET</p></section>"
  }
 }

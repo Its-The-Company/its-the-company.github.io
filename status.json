@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T00:52:16.469320+00:00",
+ "at": "2026-11-06T00:55:20.455433+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2830 spares on demand",
    "model": "opus",
    "started": "2026-11-06T00:25:43.225Z",
-   "seconds": 1593,
+   "seconds": 1777,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2833 idle alarm",
    "model": "opus",
    "started": "2026-11-06T00:25:57.429Z",
-   "seconds": 1579,
+   "seconds": 1763,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[tools] T-2725 T-2726 applier pin and fence",
    "model": "opus",
    "started": "2026-11-06T00:26:11.478Z",
-   "seconds": 1564,
+   "seconds": 1748,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +39,7 @@
    "task": "[release] T-2456 last checks first build",
    "model": "opus",
    "started": "2026-11-06T00:26:26.427Z",
-   "seconds": 1550,
+   "seconds": 1734,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +48,7 @@
    "task": "[tools] T-2675 charter suite compare",
    "model": "opus",
    "started": "2026-11-06T00:26:32.127Z",
-   "seconds": 1544,
+   "seconds": 1728,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +57,7 @@
    "task": "[build] T-2376 Shortcut recipes",
    "model": "opus",
    "started": "2026-11-06T00:26:45.329Z",
-   "seconds": 1531,
+   "seconds": 1715,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +66,7 @@
    "task": "[build] T-2724 traceback trim honest",
    "model": "opus",
    "started": "2026-11-06T00:26:55.942Z",
-   "seconds": 1520,
+   "seconds": 1704,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +75,7 @@
    "task": "[tools] T-2839 land stuck lane work",
    "model": "opus",
    "started": "2026-11-06T00:36:26.557Z",
-   "seconds": 949,
+   "seconds": 1133,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +84,7 @@
    "task": "[review] T-2840 refresh failure check",
    "model": "opus",
    "started": "2026-11-06T00:38:33.031Z",
-   "seconds": 823,
+   "seconds": 1007,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +93,7 @@
    "task": "[site] T-2667 new Home Chat Usage pages",
    "model": "opus",
    "started": "2026-11-06T00:43:08.348Z",
-   "seconds": 548,
+   "seconds": 732,
    "finished": null,
    "effort": "high"
   },
@@ -102,7 +102,7 @@
    "task": "[design] T-2846 refresh schedule ruling",
    "model": "opus",
    "started": "2026-11-06T00:45:37.160Z",
-   "seconds": 399,
+   "seconds": 583,
    "finished": null,
    "effort": "high"
   },
@@ -111,7 +111,7 @@
    "task": "[tools] T-2848 report wins and failures",
    "model": "opus",
    "started": "2026-11-06T00:48:18.967Z",
-   "seconds": 237,
+   "seconds": 421,
    "finished": null,
    "effort": "high"
   },
@@ -120,7 +120,7 @@
    "task": "[review] T-2847 completion import path fix",
    "model": "opus",
    "started": "2026-11-06T00:48:26.055Z",
-   "seconds": 230,
+   "seconds": 414,
    "finished": null,
    "effort": "high"
   }
@@ -163,7 +163,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 441,
+  "runnable_count": 442,
   "blocked_count": 120
  },
  "meter": {
@@ -206,7 +206,7 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T00:52:00+00:00",
+  "read_at": "2026-11-06T00:55:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -239,51 +239,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-05T19:45:17-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-1764",
-    "w": "Idris",
-    "k": "build",
-    "t": "Write each widget run record when the run ends",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T19:40:10-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-2054",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Fix the order of the stuck and finished signals",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T19:40:10-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a2",
-    "task": "T-2055",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Stop old run records leaking into the next run",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T19:40:10-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-2056",
-    "w": "Idris",
-    "k": "test",
-    "t": "Add tests for the end of a run",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T19:40:10-05:00",
     "n": "Evan"
    },
    {
@@ -363,18 +318,18 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 666
+   "free_gb": 663
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-05T19:52:00-05:00"
+  "at": "2026-11-05T19:55:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -602,7 +557,7 @@
    }
   ],
   "count": {
-   "next": 441,
+   "next": 442,
    "wait": 44,
    "blocked": 76,
    "you": 19
@@ -611,14 +566,14 @@
  "qr": [],
  "inbox": [
   {
-   "id": "c6673622582",
+   "id": "c6673668773",
    "state": "received",
    "position": 1,
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "Would the TestFlight setup remove..."
+   "title": "Great! Could we even have it..."
   }
  ],
  "trimmed": [
@@ -635,12 +590,12 @@
  ],
  "agents_now": {
   "main": 13,
-  "lanes": 5,
-  "total": 18,
-  "at": "7:52 PM",
+  "lanes": 4,
+  "total": 17,
+  "at": "7:55 PM",
   "why": "",
-  "at_iso": "2026-11-06T00:52:00+00:00",
+  "at_iso": "2026-11-06T00:55:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>18</b> agents running now</p><p class=\"an-sub\">Main session 13, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 7:52 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>17</b> agents running now</p><p class=\"an-sub\">Main session 13, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:55 PM ET</p></section>"
  }
 }

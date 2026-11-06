@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T04:43:42.138545+00:00",
+ "at": "2026-11-06T04:46:50.032362+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,16 +12,7 @@
    "task": "[tools] T-2831 cap pre-session merge",
    "model": "opus",
    "started": "2026-11-06T04:22:15.682Z",
-   "seconds": 1286,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[build] T-2852 widget refresh ask function",
-   "model": "opus",
-   "started": "2026-11-06T04:22:23.986Z",
-   "seconds": 1278,
+   "seconds": 1474,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +21,7 @@
    "task": "[tools] T-2855 code-drawn report visuals",
    "model": "opus",
    "started": "2026-11-06T04:22:33.248Z",
-   "seconds": 1268,
+   "seconds": 1456,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +30,7 @@
    "task": "[tools] T-2865 bottleneck usage on Home",
    "model": "opus",
    "started": "2026-11-06T04:22:37.587Z",
-   "seconds": 1264,
+   "seconds": 1452,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[build] T-2853 demoted widget badge test",
    "model": "opus",
    "started": "2026-11-06T04:22:48.562Z",
-   "seconds": 1253,
+   "seconds": 1441,
    "finished": null,
    "effort": "high"
   },
@@ -57,16 +48,7 @@
    "task": "[tools] T-2345 Plan mode company side",
    "model": "opus",
    "started": "2026-11-06T04:25:05.302Z",
-   "seconds": 1116,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[test] T-2902 refresh schedule test gaps",
-   "model": "opus",
-   "started": "2026-11-06T04:29:14.206Z",
-   "seconds": 867,
+   "seconds": 1304,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +57,7 @@
    "task": "[tools] T-2904 merge-queue work lands first",
    "model": "opus",
    "started": "2026-11-06T04:38:11.473Z",
-   "seconds": 330,
+   "seconds": 518,
    "finished": null,
    "effort": "high"
   },
@@ -84,13 +66,29 @@
    "task": "[release] T-2906 placeholder icon and re-upload",
    "model": "opus",
    "started": "2026-11-06T04:42:08.300Z",
-   "seconds": 93,
+   "seconds": 281,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x7, Idris x2",
+ "who": "Odalys x5, Idris x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[build] T-2852 widget refresh ask function",
+   "model": "opus",
+   "started": "2026-11-06T04:22:23.986Z",
+   "seconds": null,
+   "finished": "2026-11-06T04:46:45.525000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[test] T-2902 refresh schedule test gaps",
+   "model": "opus",
+   "started": "2026-11-06T04:29:14.206Z",
+   "seconds": null,
+   "finished": "2026-11-06T04:46:14.073000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2861 dispatch file overlap guard",
@@ -106,14 +104,6 @@
    "started": "2026-11-06T04:22:28.835Z",
    "seconds": null,
    "finished": "2026-11-06T04:29:00.417000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-2730 runner jobs re-review",
-   "model": "opus",
-   "started": "2026-11-06T04:22:42.336Z",
-   "seconds": null,
-   "finished": "2026-11-06T04:24:43.743000+00:00"
   }
  ],
  "queue": {
@@ -162,7 +152,7 @@
   "week_pct": 63.12,
   "usage_pct": 43.8,
   "work_pct": 72.2,
-  "read_at": "2026-11-06T04:43:00+00:00",
+  "read_at": "2026-11-06T04:46:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -293,8 +283,8 @@
  },
  "lock_in": {
   "on": true,
-  "pool": 8,
-  "at": "2026-11-05T23:43:00-05:00"
+  "pool": 9,
+  "at": "2026-11-05T23:46:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -368,15 +358,6 @@
    },
    {
     "w": "Odalys",
-    "k": "build",
-    "t": "Read each widget's refresh ask from its saved timeline",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T04:22:23.986Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "tools",
     "t": "Code-drawn visuals in reports, from the facts file",
     "m": "opus",
@@ -413,20 +394,20 @@
    },
    {
     "w": "Odalys",
-    "k": "test",
-    "t": "Test long refresh asks in the schedule rule",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T04:29:14.206Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "tools",
     "t": "Land merge-queue improvements first",
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T04:38:11.473Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "release",
+    "t": "Give the first test build a placeholder icon",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T04:42:08.300Z",
     "o": "c"
    }
   ],
@@ -505,18 +486,18 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "The app now works out, from each placed widget's own saved timeline, when it next wants a...",
+    "at": "2026-11-05T23:46:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "The refresh-schedule rule's tests now check that a widget asking for a daily refresh gets...",
+    "at": "2026-11-05T23:46:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "Parallel tasks are now kept apart by the files each lane is really changing, and by likely files...",
     "at": "2026-11-05T23:35:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Checked the rule that picks when the app wakes in the background to refresh widgets: it is...",
-    "at": "2026-11-05T23:28:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The widget safety test that could pass when it should fail now goes red: both planted faults, a...",
-    "at": "2026-11-05T23:25:00-05:00"
    }
   ],
   "count": {
@@ -531,6 +512,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -539,13 +521,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 9,
+  "main": 7,
   "lanes": 5,
-  "total": 14,
-  "at": "11:43 PM",
+  "total": 12,
+  "at": "11:46 PM",
   "why": "",
-  "at_iso": "2026-11-06T04:43:00+00:00",
+  "at_iso": "2026-11-06T04:46:00+00:00",
   "started": "11:18 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>14</b> agents running now</p><p class=\"an-sub\">Main session 9, started 11:18 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:43 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>12</b> agents running now</p><p class=\"an-sub\">Main session 7, started 11:18 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:46 PM ET</p></section>"
  }
 }

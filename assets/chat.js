@@ -46,6 +46,8 @@ function dayKey(d) { return d.getFullYear() + '-' + d.getMonth() + '-' + d.getDa
 function dayLabel(iso) { var d = new Date(iso); return dayKey(d) === dayKey(now()) ? 'Today' : d.toLocaleDateString([], { weekday: 'short', day: 'numeric', month: 'short' }); }
 function newestPages(count) { var p = Math.ceil((+count || 0) / 100); return p > 1 ? [p - 1, p] : [1]; }
 var NOTE = /<!--[\s\S]*?(?:-->|$)/g, AS = /<!-- ?as: ?([^>]{1,40}?) ?-->/;
+var PTAG = '<!-- plan-mode v1 -->';
+function isPlan(b) { return /^<!-- plan-mode v1 -->[ \t]*$/m.test(String(b || '').replace(/\r/g, '')); }
 function strip(b) { return String(b || '').replace(NOTE, '').replace(/\r/g, '').trim(); }
 function stop(ev) { if (ev && ev.preventDefault) ev.preventDefault(); }
 function isReceipt(b) { return /\(automatic receipt\)\s*$/.test(b || ''); }
@@ -182,8 +184,8 @@ var chip = el('span', 'chip sender ' + (inv ? hue(l) : 'company'), inv ? (m ? m[
 chip.title = l; return chip;
 }
 function msgEl(x, clamp) {
-var inv = isInv(x.l), m = el('div', 'cv-msg' + (inv ? ' cv-inv' : '')), from = mk(m, 'div', 'cv-from');
-put(from, sender(x.l, x.body)); mk(from, 'span', null, clock(x.at));
+var inv = isInv(x.l), pm = isPlan(x.body), m = el('div', 'cv-msg' + (inv ? ' cv-inv' : '') + (pm ? ' cv-plan' : '')), from = mk(m, 'div', 'cv-from');
+put(from, sender(x.l, x.body)); if (pm) mk(from, 'span', 'cv-pm', 'Plan mode'); mk(from, 'span', null, clock(x.at));
 var b = mk(m, 'div', 'cv-body'), parts = splitQuote(x.body), inner = mk(b, 'div');
 md(parts[0], inner);
 clamp = clamp && long(parts[0]);
@@ -194,6 +196,10 @@ more.type = 'button';
 more.onclick = () => { inner.className = ''; if (parts[1]) md(parts[1], inner); more.hidden = true; };
 }
 copyBtn(m, x.body);
+if (!inv && String(x.body || '').indexOf('<!-- plan-questions v1 -->') >= 0) {
+if (S.plan) S.plan(m, b, x);
+else { (S.planQ = S.planQ || []).push([m, b, x]); if (!S.planL && D('plan')) { S.planL = 1; (document.head || root).appendChild(Object.assign(el('script'), { src: D('plan') })); } }
+}
 return m;
 }
 function copyText(t) {
@@ -311,17 +317,20 @@ return;
 }
 drawThread(open);
 }
-var isOpen = isDesk, urgentOn = false, sending = false;
+var isOpen = isDesk, sending = false;
 var fake = el('button', 'cv-fake'), barSend = el('button', 'cv-send', '↑'), to = el('div', 'cv-to');
 var ta = el('textarea'), tools = el('div', 'cv-tools'), out = el('p', 'cv-state', '');
-var urg = mk(tools, 'button', 'cv-tool', '! Urgent'), hide = mk(tools, 'button', 'cv-tool cv-hide', 'Hide ⌄'), send = mk(tools, 'button', 'cv-send', '↑');
-[fake, barSend, urg, hide, send].forEach((b) => { b.type = 'button'; });
+var pmb = mk(tools, 'button', 'cv-tool cv-pmb', 'Plan mode'), hide = mk(tools, 'button', 'cv-tool cv-hide', 'Hide ⌄'), send = mk(tools, 'button', 'cv-send', '↑');
+var hint = el('p', 'cv-hint', 'Plan mode: the company reads the code, the board and past decisions first, then replies with questions to tap. Slower than chat, and it uses more of the week.');
+[fake, barSend, pmb, hide, send].forEach((b) => { b.type = 'button'; });
 attr(barSend, 'aria-label', 'Send'); attr(send, 'aria-label', 'Send'); attr(hide, 'aria-label', 'Hide the composer');
 ta.rows = 3; attr(ta, 'aria-label', 'Message'); ta.placeholder = 'Handled as if typed into Claude Code.';
 attr(out, 'role', 'status');
 function isMain(k) { return k === 'main' || (k > 0 && k === mainN()); }
 function target() { return typeof cur === 'number' ? cur : mainN() || 'main'; }
 function draftKey() { return 'company.draft.' + target(); }
+function pOn() { return LS.getItem(draftKey() + '.plan') === '1'; }
+function dc(x) { dock.className = 'cv-dock' + (pOn() ? ' cv-plan' : '') + (x || ''); }
 function saveDraft() { if (cur === null) return; if (ta.value.trim()) LS.setItem(draftKey(), ta.value); else LS.removeItem(draftKey()); }
 function toText() { var n = target(), i = issue(n); return isMain(n) ? 'Chat' : '#' + n + (i ? ' ' + i.title : ''); }
 function canSend() { return !!ta.value.trim() && !S.rejected() && !sending; }
@@ -330,11 +339,11 @@ var grip = el('div', 'cv-grip'), g0 = null, g0t = 0;
 attr(grip, 'aria-hidden', 'true'); mk(grip, 'span', 'cv-grip-bar');
 function gy(e) { var t = (e.touches && e.touches[0]) || (e.changedTouches && e.changedTouches[0]); return t ? t.clientY : 0; }
 function gripTo(y) { dock.style.transform = y ? 'translateY(' + y + 'px)' : ''; }
-on(grip, 'touchstart', (e) => { g0 = gy(e); g0t = Date.now(); dock.className = 'cv-dock cv-dragging'; });
+on(grip, 'touchstart', (e) => { g0 = gy(e); g0t = Date.now(); dc(' cv-dragging'); });
 on(grip, 'touchmove', (e) => { if (g0 !== null) gripTo(dragVerdict(gy(e) - g0, 1).y); });
 function gripEnd(e, cancel) {
 if (g0 === null) return;
-var v = dragVerdict(gy(e) - g0, Date.now() - g0t); g0 = null; dock.className = 'cv-dock';
+var v = dragVerdict(gy(e) - g0, Date.now() - g0t); g0 = null; dc();
 if (v.hide && !cancel) { gripTo(0); doHide(); } else gripTo(0);
 }
 on(grip, 'touchend', (e) => { gripEnd(e, false); });
@@ -342,7 +351,7 @@ on(grip, 'touchcancel', (e) => { gripEnd(e, true); });
 function drawDock() {
 dock.textContent = ''; dock.hidden = false;
 if (!composerOn) { mk(dock, 'p', 'muted', 'Sending is off.'); return; }
-ta.value = LS.getItem(draftKey()) || '';
+ta.value = LS.getItem(draftKey()) || ''; dc();
 barSend.disabled = send.disabled = !canSend();
 if (main) main.className = 'cv-desk' + (isOpen ? ' cv-open' : '');
 if (!isOpen) {
@@ -351,16 +360,18 @@ fake.textContent = ta.value.trim() ? ta.value.trim().split('\n')[0] : isMain(tar
 return;
 }
 put(dock, grip);
+var p = pOn(), nm = LS.getItem(NAME);
 to.textContent = 'To '; mk(to, 'b', null, toText());
-var nm = LS.getItem(NAME); if (nm) mk(to, 'span', null, '· as ' + nm);
-attr(urg, 'aria-pressed', urgentOn ? 'true' : 'false');
-[to, ta, tools, out].forEach((x) => { put(dock, x); });
+if (p) { put(to, txt(' ')); mk(to, 'span', 'cv-pm', 'Plan mode'); }
+if (nm) mk(to, 'span', null, '· as ' + nm);
+attr(pmb, 'aria-pressed', p ? 'true' : 'false'); hint.hidden = !p;
+[to, ta, tools, hint, out].forEach((x) => { put(dock, x); });
 }
 fake.onclick = () => { isOpen = true; drawDock(); if (ta.focus) ta.focus(); };
 barSend.onclick = () => { doSend(); };
 function doHide() { saveDraft(); if (ta.blur) ta.blur(); isOpen = false; drawDock(); }
 hide.onclick = doHide;
-urg.onclick = () => { urgentOn = !urgentOn; attr(urg, 'aria-pressed', urgentOn ? 'true' : 'false'); };
+pmb.onclick = () => { var k = draftKey() + '.plan'; if (pOn()) LS.removeItem(k); else LS.setItem(k, '1'); drawDock(); };
 on(ta, 'input', () => {
 saveDraft(); send.disabled = barSend.disabled = !canSend();
 if (/failed/.test(out.className)) state('', '');
@@ -377,33 +388,21 @@ return fetch(API + path, { method: 'POST', headers: h, body: JSON.stringify(body
 .then(checkAuth).then((r) => { if (!r.ok) throw new Error(said(r) + (r.status === 403 || r.status === 404 ? ' (does the token have Issues: read and write?)' : '')); return r.json(); });
 }
 function cleanName(n) { return (n || '').replace(/[^A-Za-z0-9 _.-]/g, '').trim().slice(0, 40); }
-function splitNames(l) {
-var s = {}, r = [[], []];
-issues.concat(allComments()).forEach((x) => { s[login(x)] = 1; });
-l.forEach((n) => { r[s[n] ? 0 : 1].push(n); });
-return r;
-}
-function mentions(l) { return l.length ? 'Urgent: ' + l.map((n) => '@' + n).join(' ') : ''; }
-function stamp(text, name, cc) { return text.replace(NOTE, '').trim() + (cc ? '\n\n' + cc : '') + (name ? '\n\n<!-- as: ' + name + ' -->' : ''); }
+function stamp(text, name, p) { return text.replace(NOTE, '').trim() + (p ? '\n\n' + PTAG : '') + (name ? '\n\n<!-- as: ' + name + ' -->' : ''); }
 function doSend() {
 if (!composerOn || sending || S.rejected()) return;
-var text = ta.value.trim(), name = cleanName(LS.getItem(NAME)), urgent = urgentOn, n = target(), dk = draftKey();
+var text = ta.value.trim(), name = cleanName(LS.getItem(NAME)), p = pOn(), n = target(), dk = draftKey();
 if (!text) { state('failed', 'Write a message first.', 4000); return; }
 sending = true; send.disabled = barSend.disabled = true; state('', 'Sending...');
-var warn = '', w0 = (!urgent || names.length) ? Promise.resolve(names) : allow();
+var w0 = Promise.resolve();
 var who = n === 'main' ? get(RI + '?labels=main').then((l) => { if (l && l[0]) extra[n = l[0].number] = l[0]; return w0; }) : w0;
-who.then((l) => {
-var w = splitNames(urgent ? l : []), cc = urgent ? mentions(w[0]) : '';
-if (urgent) warn = (cc ? '' : ' No one was mentioned.') + (w[1].length ? ' Not mentioned (no post here yet): ' + w[1].join(', ') + '.' : '');
-if (typeof n !== 'number') return post(RI, { title: 'Chat', body: stamp(text, name, cc), labels: ['chat', 'main'].concat(urgent ? ['urgent'] : []) });
-return post(RI + '/' + n + '/comments', { body: stamp(text, name, cc) }).then((r) => {
-return urgent ? post(RI + '/' + n + '/labels', { labels: ['urgent'] })
-.then(() => r, (e) => { warn = ' The urgent label was not added (' + e.message + ')' + (cc ? '; the mentions were sent.' : '.') + warn; return r; }) : r;
-});
+who.then(() => {
+if (typeof n !== 'number') return post(RI, { title: 'Chat', body: stamp(text, name, p), labels: ['chat', 'main'] });
+return post(RI + '/' + n + '/comments', { body: stamp(text, name, p) });
 }).then((r) => {
-LS.removeItem(dk); ta.value = ''; urgentOn = false;
+LS.removeItem(dk); LS.removeItem(dk + '.plan'); ta.value = '';
 var made = typeof n !== 'number' && r.number;
-state('sent', 'Sent' + (made ? ' as #' + r.number : '') + '. A receipt follows within a tick.' + warn, warn ? 15000 : 8000);
+state('sent', 'Sent' + (made ? ' as #' + r.number : '') + '. A receipt follows within a tick.', 8000);
 etags = {}; sending = false;
 if (made) { extra[r.number] = r; threads[r.number] = []; go(r.number); }
 else { if (r.id && threads[n]) threads[n].push(r); else if (r.id) comments.unshift(r); if (cur !== n) go(n); else { update(); drawDock(); } }
@@ -413,6 +412,8 @@ state('failed', 'Not sent: ' + e.message + '. Your text is kept; tap Send to ret
 }).then(() => { sending = false; send.disabled = barSend.disabled = !canSend(); });
 }
 send.onclick = (ev) => { stop(ev); doSend(); };
+S.planCtx = { md: md, items: () => items(cur), isInv: isInv, clock: clock, name: () => cleanName(LS.getItem(NAME)),
+send: (t) => post(RI + '/' + cur + '/comments', { body: t }).then((r) => { if (threads[cur]) threads[cur].push(r); else comments.unshift(r); update(); return r; }) };
 function get(path) {
 return gh(path, { etag: etags[path] }).then((r) => {
 if (r.status === 304) return cache[path];

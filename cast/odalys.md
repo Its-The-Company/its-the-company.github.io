@@ -60,6 +60,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-2913 done 212f9ff5d: land steps in .landing/now + ops/runs/land_steps.jsonl (start/end per rebase/host/xc/push). lifecycle.tries() is the hook for T-2905 and T-2936. No before number for merge step times: first read is these rows.
 
+- T-2344 b7ee44511: plan.js 2,556/2,560 gz (proposed; Ines confirms). Open: row 'N questions waiting' needs T-2667 threads column.
+
 ## Standing lessons (details in archive.md)
 
 - T-2839 done e12344992: 16 parks sorted. Lesson: a withdrawal comment that leaves the retry line live loops forever (a3 re-parked 10x); grep the live line after any withdraw. git-clean picks into log/optimizations.md can reuse taken OPT ids or land inside another block: run tools/experiments.py check before queueing.

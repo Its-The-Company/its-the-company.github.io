@@ -724,6 +724,37 @@ html,body,.cv-dock textarea,.cv-dock .cv-state{overscroll-behavior-y:auto}
 .report-quote blockquote{margin:0;font-size:var(--fs-3);font-style:italic}.report-quote blockquote p{margin:0}
 .report-quote figcaption{margin-top:var(--s1);font-size:var(--fs-1);color:var(--muted)}
 .rchart{margin:var(--s3) 0}.rchart figcaption{font-weight:600;margin-bottom:var(--s2)}
+/* The Issues page's option, note and Send rules (needs.js box()), shared with Chat's Plan mode cards (T-2344). */
+.ny-opts{display:flex;flex-wrap:wrap;gap:var(--s2);margin:var(--s2) 0}.ny-opts .cv-tool{text-align:left;white-space:normal;max-width:100%}
+.ny-box .cv-tool[aria-pressed=true]{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.ny-form textarea{width:100%;box-sizing:border-box;min-height:5em;font:inherit;padding:var(--s2);border:1px solid var(--line);border-radius:var(--r-s);background:var(--bg);color:var(--ink)}
+.ny-bar{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2);margin-top:var(--s2)}.ny-bar .ny-send{margin-left:auto}
+.ny-done{color:var(--green-fg)}.ny-warn{color:var(--hot)}
+/* Plan mode in Chat (T-2344; Maren's spec and rules ops/site-checks/t2343/spec.md, plan.css): pink marks a plan,
+   blue stays "you"; existing tokens only. */
+.cv-tools .cv-pmb[aria-pressed=true]{background:var(--pink-bg);color:var(--pink-fg);border-color:var(--pink)}
+.cv-tools .cv-pmb[aria-pressed=true]::before{content:"\2713"}
+.cv-dock.cv-plan textarea,.cv-dock.cv-plan .cv-fake{border-color:var(--pink)}
+.cv-hint{margin:var(--s2) 0 0;font-size:var(--fs-0);color:var(--muted)}
+.cv-pm{display:inline-flex;align-items:center;padding:0 var(--s2);border-radius:var(--r-pill);background:var(--pink-bg);color:var(--pink-fg);font-size:var(--fs-0);font-weight:700;line-height:1.6;white-space:nowrap}
+.cv-plan.cv-inv .cv-body{background:var(--pink-bg);color:var(--pink-fg);border-color:var(--pink)}
+.cv-plan.cv-inv .cv-body a{color:inherit}
+.cv-plan:not(.cv-inv) .cv-body{border-left:4px solid var(--pink)}
+.cv-msg.cv-ask{width:100%;max-width:min(100%,40rem)}
+.pq{display:grid;gap:var(--s3);margin-top:var(--s2)}
+.pq-q{min-width:0;padding:var(--s3);border:1px solid var(--line);border-radius:var(--r-m);background:var(--bg)}
+.pq-n{margin:0;font-size:var(--fs-0);font-weight:700;color:var(--pink-fg)}
+.pq-t{margin:var(--s1) 0 0;font-size:var(--fs-2);font-weight:700;line-height:var(--lh-tight)}
+.pq-why{margin:var(--s1) 0 0;font-size:var(--fs-0);color:var(--muted)}
+.pq .ny-opts{margin:var(--s3) 0 var(--s2)}
+.pq .cv-tool[aria-pressed=true]::before{content:"\2713"}
+.pq .cv-tool:disabled{cursor:default}
+.pq .ny-opts .cv-tool{flex-wrap:wrap;column-gap:6px;row-gap:0;padding-top:var(--s1);padding-bottom:var(--s1)}
+.pq-rec{flex-basis:100%;font-weight:400}
+.pq .ny-form textarea{min-height:2.75em}
+.pq-a{margin:var(--s2) 0 0;font-size:var(--fs-1)}
+.pq .ny-bar{margin-top:0}
+.pq .ny-bar .meta{margin:0}
 {% endraw %}
 /* investors/site/theme.css */
 {% raw %}/* The Investors' styles for the site. Anything here is added after the site's own styles, so it wins.

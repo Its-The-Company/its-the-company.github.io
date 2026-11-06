@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T00:27:40.407709+00:00",
+ "at": "2026-11-06T00:30:43.114129+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2830 spares on demand",
    "model": "opus",
    "started": "2026-11-06T00:25:43.225Z",
-   "seconds": 117,
+   "seconds": 299,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2832 union merge for records",
    "model": "opus",
    "started": "2026-11-06T00:25:50.481Z",
-   "seconds": 109,
+   "seconds": 292,
    "finished": null,
    "effort": "high"
   },
@@ -30,16 +30,7 @@
    "task": "[tools] T-2833 idle alarm",
    "model": "opus",
    "started": "2026-11-06T00:25:57.429Z",
-   "seconds": 102,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2704 merge queue worker branches",
-   "model": "opus",
-   "started": "2026-11-06T00:26:03.928Z",
-   "seconds": 96,
+   "seconds": 285,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[tools] T-2725 T-2726 applier pin and fence",
    "model": "opus",
    "started": "2026-11-06T00:26:11.478Z",
-   "seconds": 88,
+   "seconds": 271,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[review] T-2728 memory-skip badge gap",
    "model": "opus",
    "started": "2026-11-06T00:26:18.580Z",
-   "seconds": 81,
+   "seconds": 264,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +57,7 @@
    "task": "[release] T-2456 last checks first build",
    "model": "opus",
    "started": "2026-11-06T00:26:26.427Z",
-   "seconds": 73,
+   "seconds": 256,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +66,7 @@
    "task": "[tools] T-2675 charter suite compare",
    "model": "opus",
    "started": "2026-11-06T00:26:32.127Z",
-   "seconds": 68,
+   "seconds": 250,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +75,7 @@
    "task": "[build] T-2511 completion sys.path fix",
    "model": "opus",
    "started": "2026-11-06T00:26:38.277Z",
-   "seconds": 62,
+   "seconds": 244,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +84,7 @@
    "task": "[build] T-2376 Shortcut recipes",
    "model": "opus",
    "started": "2026-11-06T00:26:45.329Z",
-   "seconds": 55,
+   "seconds": 237,
    "finished": null,
    "effort": "high"
   },
@@ -102,7 +93,7 @@
    "task": "[build] T-2263 shared refresh failure check",
    "model": "opus",
    "started": "2026-11-06T00:26:50.627Z",
-   "seconds": 49,
+   "seconds": 232,
    "finished": null,
    "effort": "high"
   },
@@ -111,13 +102,31 @@
    "task": "[build] T-2724 traceback trim honest",
    "model": "opus",
    "started": "2026-11-06T00:26:55.942Z",
-   "seconds": 44,
+   "seconds": 227,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[build] T-1758 refresh schedule rule",
+   "model": "opus",
+   "started": "2026-11-06T00:30:38.040Z",
+   "seconds": 5,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x5, Pernille x3, Idris x3, Ines",
- "recent": [],
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2704 merge queue worker branches",
+   "model": "opus",
+   "started": "2026-11-06T00:26:03.928Z",
+   "seconds": null,
+   "finished": "2026-11-06T00:30:17.619000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -164,7 +173,7 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T00:27:00+00:00",
+  "read_at": "2026-11-06T00:30:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -209,18 +218,18 @@
   }
  ],
  "disk": {
-  "free_gb": 21,
+  "free_gb": 23,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 685
+   "free_gb": 684
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-05T19:27:00-05:00"
+  "at": "2026-11-05T19:30:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -314,15 +323,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Let the merge queue take reviewed worker branches",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T00:26:03.928Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Pin the approved commit, not the tip",
     "m": "opus",
     "e": "high",
@@ -354,6 +354,15 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T00:26:32.127Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Stop completion changing the import path under a running script",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T00:26:38.277Z",
     "o": "c"
    }
   ],
@@ -431,6 +440,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The merge queue no longer makes a broken branch name for a worker's branch; it parks it under a...",
+    "at": "2026-11-05T19:30:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "One real test job, the app's theme tests, was queued for the MacBook test computer with the new...",
     "at": "2026-11-05T19:10:00-05:00"
@@ -438,11 +452,6 @@
    {
     "w": "Idris",
     "t": "When memory is too tight and a widget is skipped, its warning mark now waits until it is skipped...",
-    "at": "2026-11-05T14:57:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The count of skipped updates this task was to add is now done another way, by time in the...",
     "at": "2026-11-05T14:57:00-05:00"
    }
   ],
@@ -469,10 +478,10 @@
   "main": 12,
   "lanes": 1,
   "total": 13,
-  "at": "7:27 PM",
+  "at": "7:30 PM",
   "why": "",
-  "at_iso": "2026-11-06T00:27:00+00:00",
+  "at_iso": "2026-11-06T00:30:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>13</b> agents running now</p><p class=\"an-sub\">Main session 12, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:27 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>13</b> agents running now</p><p class=\"an-sub\">Main session 12, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:30 PM ET</p></section>"
  }
 }

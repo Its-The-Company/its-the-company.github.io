@@ -1,13 +1,31 @@
 {
  "schema": 1,
- "at": "2026-11-06T07:31:28.700970+00:00",
+ "at": "2026-11-06T07:35:02.619953+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-06T00:40:43-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2926 finish the merge step time cap",
+   "model": "opus",
+   "started": "2026-11-06T07:33:45.343Z",
+   "seconds": 77,
+   "finished": null
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-2940 pin phone top bar, tidy Home panels",
+   "model": "sonnet",
+   "started": "2026-11-06T07:33:55.544Z",
+   "seconds": 67,
+   "finished": null,
+   "effort": "medium"
+  }
+ ],
+ "who": "Odalys x2",
  "recent": [
   {
    "name": "odalys",
@@ -29,7 +47,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 458,
+  "runnable_count": 459,
   "blocked_count": 120
  },
  "meter": {
@@ -72,7 +90,7 @@
   "week_pct": 63.02,
   "usage_pct": 43.2,
   "work_pct": 71.9,
-  "read_at": "2026-11-06T07:32:00+00:00",
+  "read_at": "2026-11-06T07:35:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -108,30 +126,6 @@
     "e": "medium",
     "at": "2026-11-06T01:30:54-05:00",
     "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-2923",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Give joined-ID land jobs merge-first priority",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T01:30:57-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a2",
-    "task": "T-2208",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop the landing time limit cutting checks off",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T01:30:57-05:00",
-    "n": "Evan",
-    "d": 1
    },
    {
     "lane": "a3",
@@ -270,7 +264,7 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -281,22 +275,22 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T02:32:00-05:00"
+  "at": "2026-11-06T02:35:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Spread: 27% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 10 (cut a step: load 28.8 a core is over 10; 14 of 16 lands failed in 3 hours (9 red))",
+  "why": "Spread: 26% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 10 (cut a step: load 28.8 a core is over 10; 14 of 16 lands failed in 3 hours (9 red))",
   "n": 2,
   "at": "2026-11-06T00:40:28.628201-05:00"
  },
  "lanes": [
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, after T-1035 lands (personal-account...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[tools] T-2926 finish the merge step time cap",
+   "model": "opus",
+   "since": "2026-11-06T07:33:45.343Z",
    "next": []
   },
   {
@@ -341,7 +335,25 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Finish the five-minute cap on the merge step",
+    "m": "opus",
+    "at": "2026-11-06T07:33:45.343Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Pin the phone top bar and tidy Home's panels",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-06T07:33:55.544Z",
+    "o": "i"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -432,7 +444,7 @@
    }
   ],
   "count": {
-   "next": 458,
+   "next": 459,
    "wait": 44,
    "blocked": 76,
    "you": 19
@@ -451,13 +463,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
-  "lanes": 6,
-  "total": 6,
-  "at": "2:32 AM",
+  "main": 2,
+  "lanes": 5,
+  "total": 7,
+  "at": "2:35 AM",
   "why": "",
-  "at_iso": "2026-11-06T07:32:00+00:00",
+  "at_iso": "2026-11-06T07:35:00+00:00",
   "started": "12:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 2:32 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 2:35 AM ET</p></section>"
  }
 }

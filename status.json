@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T21:05:10.542460+00:00",
+ "at": "2026-11-06T21:08:10.995831+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[review] T-3105 internal gate build review",
    "model": "opus",
    "started": "2026-11-06T20:30:43.676Z",
-   "seconds": 2066,
+   "seconds": 2247,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[review] T-2711 re-review proposal applier",
    "model": "opus",
    "started": "2026-11-06T20:50:43.638Z",
-   "seconds": 866,
+   "seconds": 1047,
    "finished": null,
    "effort": "high"
   }
@@ -107,7 +107,7 @@
   "week_pct": 63.66,
   "usage_pct": 41.2,
   "work_pct": 69.0,
-  "read_at": "2026-11-06T21:05:00+00:00",
+  "read_at": "2026-11-06T21:08:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -142,6 +142,39 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T15:14:33-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-2642",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Read the dispatcher's numbers at one day and one week",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T16:05:25-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3114",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Build Home's In flight tab and its subtabs",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T16:05:25-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3061",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Final 24-hour read of waiting time after extra spare copies",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-06T16:05:25-05:00",
     "n": "Evan"
    },
    {
@@ -263,7 +296,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T16:05:00-05:00"
+  "at": "2026-11-06T16:08:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -454,12 +487,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 5,
-  "total": 7,
-  "at": "4:05 PM",
+  "lanes": 6,
+  "total": 8,
+  "at": "4:08 PM",
   "why": "",
-  "at_iso": "2026-11-06T21:05:00+00:00",
+  "at_iso": "2026-11-06T21:08:00+00:00",
   "started": "3:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 4:05 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 4:08 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T20:28:11.326216+00:00",
+ "at": "2026-11-06T20:31:19.049831+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,34 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-2851 land measurement build",
-   "model": "opus",
-   "started": "2026-11-06T20:14:22.401Z",
-   "seconds": 828,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[tools] T-2727 applier refusals on all paths",
    "model": "opus",
    "started": "2026-11-06T20:19:04.640Z",
-   "seconds": 546,
+   "seconds": 734,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-3105 internal gate build review",
+   "model": "opus",
+   "started": "2026-11-06T20:30:43.676Z",
+   "seconds": 35,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Odalys",
+ "who": "Odalys, Pernille",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-2851 land measurement build",
+   "model": "opus",
+   "started": "2026-11-06T20:14:22.401Z",
+   "seconds": null,
+   "finished": "2026-11-06T20:29:58.220000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[test] T-2843 TreeNodes weekday test",
@@ -48,7 +56,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 395,
+  "runnable_count": 398,
   "blocked_count": 121
  },
  "meter": {
@@ -91,7 +99,7 @@
   "week_pct": 63.66,
   "usage_pct": 41.2,
   "work_pct": 69.0,
-  "read_at": "2026-11-06T20:28:00+00:00",
+  "read_at": "2026-11-06T20:31:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -289,7 +297,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T15:28:00-05:00"
+  "at": "2026-11-06T15:31:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -300,15 +308,6 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-2851 land measurement build",
-   "model": "opus",
-   "since": "2026-11-06T20:14:22.401Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-2727 applier refusals on all paths",
@@ -318,17 +317,26 @@
    "effort": "high"
   },
   {
-   "name": "Ines",
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-3105 internal gate build review",
+   "model": "opus",
+   "since": "2026-11-06T20:30:43.676Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
    "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Pernille",
+   "name": "Ines",
    "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -353,21 +361,21 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Let a TestFlight build take the phone measurements",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T20:14:22.401Z",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Same refusals on the auto, standing and file paths",
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T20:19:04.640Z",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review the internal-only gate build",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T20:30:43.676Z",
     "o": "c"
    }
   ],
@@ -423,45 +431,45 @@
    },
    {
     "w": "Pernille",
+    "k": "review",
+    "t": "Review the internal-only gate build",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Send build 3 to internal TestFlight",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "tools",
-    "t": "Parallel runner jobs share one asset helper",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "tools",
-    "t": "Move runner job sandbox files out of reach",
     "s": "next",
     "o": "c"
    }
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The finished work this retry notice was for (the TestFlight measurement build, T-2851: its...",
+    "at": "2026-11-06T15:29:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "The finished work this retry notice was for (the TestFlight measurement build, T-2851: its...",
+    "at": "2026-11-06T15:29:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The MacBook land check did not speed up landing: lands per hour fell from 1.42 to 1.19 and 25...",
     "at": "2026-11-06T15:17:00-05:00"
-   },
-   {
-    "w": "Odalys+idris",
-    "t": "The weekday test was wrong, not the widget: it measured its expected text in the wrong time...",
-    "at": "2026-11-06T15:17:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Four site test suites that were already failing on main now pass: three tests were out of date...",
-    "at": "2026-11-06T14:10:00-05:00"
    }
   ],
   "count": {
-   "next": 395,
+   "next": 398,
    "wait": 42,
    "blocked": 79,
    "you": 20
@@ -483,10 +491,10 @@
   "main": 2,
   "lanes": 6,
   "total": 8,
-  "at": "3:28 PM",
+  "at": "3:31 PM",
   "why": "",
-  "at_iso": "2026-11-06T20:28:00+00:00",
+  "at_iso": "2026-11-06T20:31:00+00:00",
   "started": "3:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 3:28 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 3:31 PM ET</p></section>"
  }
 }

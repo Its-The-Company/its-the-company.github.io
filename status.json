@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T04:46:50.032362+00:00",
+ "at": "2026-11-06T04:49:52.609886+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2831 cap pre-session merge",
    "model": "opus",
    "started": "2026-11-06T04:22:15.682Z",
-   "seconds": 1474,
+   "seconds": 1656,
    "finished": null,
    "effort": "high"
   },
@@ -21,16 +21,7 @@
    "task": "[tools] T-2855 code-drawn report visuals",
    "model": "opus",
    "started": "2026-11-06T04:22:33.248Z",
-   "seconds": 1456,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2865 bottleneck usage on Home",
-   "model": "opus",
-   "started": "2026-11-06T04:22:37.587Z",
-   "seconds": 1452,
+   "seconds": 1639,
    "finished": null,
    "effort": "high"
   },
@@ -39,16 +30,7 @@
    "task": "[build] T-2853 demoted widget badge test",
    "model": "opus",
    "started": "2026-11-06T04:22:48.562Z",
-   "seconds": 1441,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2345 Plan mode company side",
-   "model": "opus",
-   "started": "2026-11-06T04:25:05.302Z",
-   "seconds": 1304,
+   "seconds": 1624,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +39,7 @@
    "task": "[tools] T-2904 merge-queue work lands first",
    "model": "opus",
    "started": "2026-11-06T04:38:11.473Z",
-   "seconds": 518,
+   "seconds": 701,
    "finished": null,
    "effort": "high"
   },
@@ -66,13 +48,38 @@
    "task": "[release] T-2906 placeholder icon and re-upload",
    "model": "opus",
    "started": "2026-11-06T04:42:08.300Z",
-   "seconds": 281,
+   "seconds": 464,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-2907 refresh asks review",
+   "model": "opus",
+   "started": "2026-11-06T04:47:04.371Z",
+   "seconds": 168,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x5, Idris x2",
+ "who": "Odalys x3, Idris x2, Pernille",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2865 bottleneck usage on Home",
+   "model": "opus",
+   "started": "2026-11-06T04:22:37.587Z",
+   "seconds": null,
+   "finished": "2026-11-06T04:48:55.947000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2345 Plan mode company side",
+   "model": "opus",
+   "started": "2026-11-06T04:25:05.302Z",
+   "seconds": null,
+   "finished": "2026-11-06T04:48:48.036000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[build] T-2852 widget refresh ask function",
@@ -88,29 +95,13 @@
    "started": "2026-11-06T04:29:14.206Z",
    "seconds": null,
    "finished": "2026-11-06T04:46:14.073000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2861 dispatch file overlap guard",
-   "model": "opus",
-   "started": "2026-11-06T04:22:19.635Z",
-   "seconds": null,
-   "finished": "2026-11-06T04:35:56.737000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-2845 refresh schedule review",
-   "model": "opus",
-   "started": "2026-11-06T04:22:28.835Z",
-   "seconds": null,
-   "finished": "2026-11-06T04:29:00.417000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 438,
-  "blocked_count": 121
+  "runnable_count": 437,
+  "blocked_count": 120
  },
  "meter": {
   "five_hour": {
@@ -152,7 +143,7 @@
   "week_pct": 63.12,
   "usage_pct": 43.8,
   "work_pct": 72.2,
-  "read_at": "2026-11-06T04:46:00+00:00",
+  "read_at": "2026-11-06T04:49:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -218,7 +209,8 @@
     "m": "sonnet",
     "e": "medium",
     "at": "2026-11-05T22:37:58-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b3",
@@ -273,18 +265,18 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 14,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 584
+   "free_gb": 582
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 9,
-  "at": "2026-11-05T23:46:00-05:00"
+  "at": "2026-11-05T23:49:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -313,17 +305,18 @@
    "effort": "high"
   },
   {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-2907 refresh asks review",
+   "model": "opus",
+   "since": "2026-11-06T04:47:04.371Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P2, no Xcode, after T-1440 lands (Idris review...",
    "model": null,
    "since": null,
    "next": []
@@ -366,30 +359,12 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Show the usage each bottleneck wastes, beside its time",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T04:22:37.587Z",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Test the badge after a second refusal demotes a widget",
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T04:22:48.562Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Teach the company side to handle Plan mode messages",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T04:25:05.302Z",
     "o": "c"
    },
    {
@@ -408,6 +383,15 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T04:42:08.300Z",
+    "o": "c"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review how each widget's refresh ask is read",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T04:47:04.371Z",
     "o": "c"
    }
   ],
@@ -486,23 +470,23 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "When an Investor presses Plan mode in Chat, the company now sees that the message is a plan...",
+    "at": "2026-11-05T23:48:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "Home's Bottlenecks box now shows how much Claude usage each kind of wait cost, beside the hours:...",
+    "at": "2026-11-05T23:48:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The app now works out, from each placed widget's own saved timeline, when it next wants a...",
     "at": "2026-11-05T23:46:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The refresh-schedule rule's tests now check that a widget asking for a daily refresh gets...",
-    "at": "2026-11-05T23:46:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Parallel tasks are now kept apart by the files each lane is really changing, and by likely files...",
-    "at": "2026-11-05T23:35:00-05:00"
    }
   ],
   "count": {
-   "next": 438,
-   "wait": 45,
+   "next": 437,
+   "wait": 44,
    "blocked": 76,
    "you": 19
   }
@@ -521,13 +505,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 7,
+  "main": 6,
   "lanes": 5,
-  "total": 12,
-  "at": "11:46 PM",
+  "total": 11,
+  "at": "11:49 PM",
   "why": "",
-  "at_iso": "2026-11-06T04:46:00+00:00",
+  "at_iso": "2026-11-06T04:49:00+00:00",
   "started": "11:18 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>12</b> agents running now</p><p class=\"an-sub\">Main session 7, started 11:18 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:46 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>11</b> agents running now</p><p class=\"an-sub\">Main session 6, started 11:18 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:49 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T20:55:58.687670+00:00",
+ "at": "2026-11-06T20:59:04.799447+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[review] T-3105 internal gate build review",
    "model": "opus",
    "started": "2026-11-06T20:30:43.676Z",
-   "seconds": 1515,
+   "seconds": 1701,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[review] T-2711 re-review proposal applier",
    "model": "opus",
    "started": "2026-11-06T20:50:43.638Z",
-   "seconds": 315,
+   "seconds": 501,
    "finished": null,
    "effort": "high"
   }
@@ -107,7 +107,7 @@
   "week_pct": 63.66,
   "usage_pct": 41.2,
   "work_pct": 69.0,
-  "read_at": "2026-11-06T20:56:00+00:00",
+  "read_at": "2026-11-06T20:59:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -143,18 +143,6 @@
     "e": "high",
     "at": "2026-11-06T15:14:33-05:00",
     "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-2271",
-    "w": "Idris",
-    "k": "build",
-    "t": "Fix extension tests that failed on the runner",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T15:14:29-05:00",
-    "n": "Evan",
-    "d": 1
    },
    {
     "lane": "a3",
@@ -212,6 +200,17 @@
     "d": 1
    },
    {
+    "lane": "b2",
+    "task": "T-3100",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Skip an API key that has run out of credit",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T15:56:24-05:00",
+    "n": "Jeremy"
+   },
+   {
     "lane": "b3",
     "task": "T-3081",
     "w": "Idris",
@@ -253,18 +252,18 @@
   }
  ],
  "disk": {
-  "free_gb": 12,
+  "free_gb": 15,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 522
+   "free_gb": 515
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T15:56:00-05:00"
+  "at": "2026-11-06T15:59:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -457,10 +456,10 @@
   "main": 2,
   "lanes": 5,
   "total": 7,
-  "at": "3:56 PM",
+  "at": "3:59 PM",
   "why": "",
-  "at_iso": "2026-11-06T20:56:00+00:00",
+  "at_iso": "2026-11-06T20:59:00+00:00",
   "started": "3:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 3:56 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 3:59 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T08:30:01.462951+00:00",
+ "at": "2026-11-06T08:33:02.485226+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,25 +8,32 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[site] T-2940 pin phone top bar, tidy Home panels",
-   "model": "sonnet",
-   "started": "2026-11-06T07:33:55.544Z",
-   "seconds": 3365,
-   "finished": null,
-   "effort": "medium"
-  },
-  {
    "name": "idris",
    "task": "[release] T-2918 fix red test, upload build 2",
    "model": "opus",
    "started": "2026-11-06T08:10:49.345Z",
-   "seconds": 1152,
+   "seconds": 1333,
+   "finished": null
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2913 show the real merge steps on Home",
+   "model": "opus",
+   "started": "2026-11-06T08:32:49.176Z",
+   "seconds": 13,
    "finished": null
   }
  ],
- "who": "Odalys, Idris",
+ "who": "Idris, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[site] T-2940 pin phone top bar, tidy Home panels",
+   "model": "sonnet",
+   "started": "2026-11-06T07:33:55.544Z",
+   "seconds": null,
+   "finished": "2026-11-06T08:31:46.121000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2926 finish the merge step time cap",
@@ -55,7 +62,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 466,
+  "runnable_count": 465,
   "blocked_count": 120
  },
  "meter": {
@@ -98,7 +105,7 @@
   "week_pct": 63.02,
   "usage_pct": 43.2,
   "work_pct": 71.9,
-  "read_at": "2026-11-06T08:30:00+00:00",
+  "read_at": "2026-11-06T08:33:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -232,7 +239,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T03:30:00-05:00"
+  "at": "2026-11-06T03:33:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -243,20 +250,19 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[site] T-2940 pin phone top bar, tidy Home panels",
-   "model": "sonnet",
-   "since": "2026-11-06T07:33:55.544Z",
-   "next": [],
-   "effort": "medium"
-  },
-  {
    "name": "Idris",
    "state": "running",
    "task": "[release] T-2918 fix red test, upload build 2",
    "model": "opus",
    "since": "2026-11-06T08:10:49.345Z",
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-2913 show the real merge steps on Home",
+   "model": "opus",
+   "since": "2026-11-06T08:32:49.176Z",
    "next": []
   },
   {
@@ -295,21 +301,20 @@
  "tasks": {
   "run": [
    {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Pin the phone top bar and tidy Home's panels",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-06T07:33:55.544Z",
-    "o": "i"
-   },
-   {
     "w": "Idris",
     "k": "release",
     "t": "Send build 2 (with the app icon) to TestFlight",
     "m": "opus",
     "at": "2026-11-06T08:10:49.345Z",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Show the real merge steps on Home",
+    "m": "opus",
+    "at": "2026-11-06T08:32:49.176Z",
+    "o": "i"
    }
   ],
   "open": [
@@ -387,6 +392,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "Home's top bar now stays pinned on phones, Usage has one Lock In dropdown (main, all lanes or...",
+    "at": "2026-11-06T03:31:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The merge step that runs before each work session now stops after five minutes instead of...",
     "at": "2026-11-06T03:09:00-05:00"
    },
@@ -394,15 +404,10 @@
     "w": "Odalys",
     "t": "Landed under T-2926: the pre-session merge step is capped at five minutes, and a land waiting on...",
     "at": "2026-11-06T03:09:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "In Spread mode each Claude account now paces itself to use up its own weekly limit 3 hours...",
-    "at": "2026-11-06T02:30:00-05:00"
    }
   ],
   "count": {
-   "next": 466,
+   "next": 465,
    "wait": 43,
    "blocked": 77,
    "you": 20
@@ -424,10 +429,10 @@
   "main": 2,
   "lanes": 5,
   "total": 7,
-  "at": "3:30 AM",
+  "at": "3:33 AM",
   "why": "",
-  "at_iso": "2026-11-06T08:30:00+00:00",
+  "at_iso": "2026-11-06T08:33:00+00:00",
   "started": "12:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 3:30 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 3:33 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T11:47:42.618573+00:00",
+ "at": "2026-11-06T11:50:46.469949+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,12 +12,21 @@
    "task": "[tools] T-2616 land on first try",
    "model": "opus",
    "started": "2026-11-06T11:32:02.665Z",
-   "seconds": 939,
+   "seconds": 1123,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2905 merge fixes as Coding",
+   "model": "opus",
+   "started": "2026-11-06T11:48:40.180Z",
+   "seconds": 126,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys",
+ "who": "Odalys x2",
  "recent": [
   {
    "name": "odalys",
@@ -32,7 +41,7 @@
   "runnable": [],
   "blocked": [],
   "runnable_count": 477,
-  "blocked_count": 122
+  "blocked_count": 123
  },
  "meter": {
   "five_hour": {
@@ -74,7 +83,7 @@
   "week_pct": 64.29,
   "usage_pct": 43.0,
   "work_pct": 70.6,
-  "read_at": "2026-11-06T11:47:00+00:00",
+  "read_at": "2026-11-06T11:50:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -86,18 +95,6 @@
     "e": "high",
     "at": "2026-11-06T06:38:15-05:00",
     "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-1832",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retry work from a session that did not end cleanly",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T06:43:27-05:00",
-    "n": "Evan",
-    "d": 1
    },
    {
     "lane": "b",
@@ -178,18 +175,18 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 14,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 508
+   "free_gb": 507
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T06:47:00-05:00"
+  "at": "2026-11-06T06:50:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -259,6 +256,15 @@
     "e": "high",
     "at": "2026-11-06T11:32:02.665Z",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Show merge fixes as Coding on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T11:48:40.180Z",
+    "o": "c"
    }
   ],
   "open": [
@@ -280,13 +286,6 @@
     "w": "Odalys",
     "k": "site",
     "t": "Make Chat only the chat and live on phones",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop a hung Company SSD from ending whole...",
     "s": "next",
     "o": "c"
    },
@@ -331,6 +330,13 @@
     "t": "Record each widget run in the app's activity log",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Add a refresh control and age line to widgets",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
@@ -353,7 +359,7 @@
   "count": {
    "next": 477,
    "wait": 43,
-   "blocked": 79,
+   "blocked": 80,
    "you": 20
   }
  },
@@ -370,13 +376,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
-  "lanes": 4,
+  "main": 2,
+  "lanes": 3,
   "total": 5,
-  "at": "6:47 AM",
+  "at": "6:50 AM",
   "why": "",
-  "at_iso": "2026-11-06T11:47:00+00:00",
+  "at_iso": "2026-11-06T11:50:00+00:00",
   "started": "6:26 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 6:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:47 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:50 AM ET</p></section>"
  }
 }

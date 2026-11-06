@@ -1,23 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-06T07:28:39.006891+00:00",
+ "at": "2026-11-06T07:31:28.700970+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-06T00:40:43-05:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-2945 pace each account to its own reset",
    "model": "opus",
    "started": "2026-11-06T06:37:41.704Z",
-   "seconds": 3057,
-   "finished": null
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-06T07:31:01.250000+00:00"
+  },
   {
    "name": "idris",
    "task": "[release] T-2918 send build 2 to TestFlight",
@@ -30,7 +29,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 459,
+  "runnable_count": 458,
   "blocked_count": 120
  },
  "meter": {
@@ -73,7 +72,7 @@
   "week_pct": 63.02,
   "usage_pct": 43.2,
   "work_pct": 71.9,
-  "read_at": "2026-11-06T07:28:00+00:00",
+  "read_at": "2026-11-06T07:32:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -282,7 +281,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T02:28:00-05:00"
+  "at": "2026-11-06T02:32:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -294,10 +293,10 @@
  "lanes": [
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-2945 pace each account to its own reset",
-   "model": "opus",
-   "since": "2026-11-06T06:37:41.704Z",
+   "state": "next",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -342,16 +341,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Use each account's weekly limit up before it resets",
-    "m": "opus",
-    "at": "2026-11-06T06:37:41.704Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -397,13 +387,6 @@
    },
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "Use each account's weekly limit up before it...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "site",
     "t": "Make Chat only the chat and live on phones",
     "s": "next",
@@ -422,9 +405,21 @@
     "t": "Keep real packages out until the sandbox is...",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "tools",
+    "t": "Parallel runner jobs share one asset helper",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "In Spread mode each Claude account now paces itself to use up its own weekly limit 3 hours...",
+    "at": "2026-11-06T02:30:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "Work that speeds up the merge queue is now listed in one file, and the queue, the lanes'...",
@@ -434,15 +429,10 @@
     "w": "Idris",
     "t": "The app now carries the approved Indent icon in every size Apple requires, so Apple will no...",
     "at": "2026-11-06T00:07:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Checked how each widget asks the phone for its next background refresh. The rules match the...",
-    "at": "2026-11-05T23:55:00-05:00"
    }
   ],
   "count": {
-   "next": 459,
+   "next": 458,
    "wait": 44,
    "blocked": 76,
    "you": 19
@@ -461,13 +451,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 6,
-  "total": 7,
-  "at": "2:28 AM",
+  "total": 6,
+  "at": "2:32 AM",
   "why": "",
-  "at_iso": "2026-11-06T07:28:00+00:00",
+  "at_iso": "2026-11-06T07:32:00+00:00",
   "started": "12:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 2:28 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 2:32 AM ET</p></section>"
  }
 }

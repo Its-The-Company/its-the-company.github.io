@@ -1,30 +1,13 @@
 {
  "schema": 1,
- "at": "2026-11-06T09:43:40.120478+00:00",
+ "at": "2026-11-06T09:46:41.865031+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-06T04:25:24-05:00"
+  "kind": "runs",
+  "started": null
  },
- "workers": [
-  {
-   "name": "idris",
-   "task": "[release] T-2918 upload build 2 to TestFlight",
-   "model": "opus",
-   "started": "2026-11-06T09:26:41.854Z",
-   "seconds": 1018,
-   "finished": null
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-2977 make main's site test green",
-   "model": "opus",
-   "started": "2026-11-06T09:30:36.055Z",
-   "seconds": 784,
-   "finished": null
-  }
- ],
- "who": "Idris, Odalys",
+ "workers": [],
+ "who": "",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -72,7 +55,7 @@
   "week_pct": 64.55,
   "usage_pct": 43.1,
   "work_pct": 71.5,
-  "read_at": "2026-11-06T09:43:00+00:00",
+  "read_at": "2026-11-06T09:46:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -106,6 +89,17 @@
     "e": "high",
     "at": "2026-11-06T04:38:50-05:00",
     "n": "Jeremy"
+   },
+   {
+    "lane": "b3",
+    "task": "T-1100",
+    "w": "Idris",
+    "k": "build",
+    "t": "Dim the Toggle track in stripped color modes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T04:43:53-05:00",
+    "n": "Jeremy"
    }
   ]
  },
@@ -138,30 +132,26 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T04:43:00-05:00"
+  "at": "2026-11-06T04:46:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Spread: 25% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (cut a step: 18 of 19 lands failed in 3 hours (15 red); 14 of 47 finished tasks were...",
-  "n": 2,
-  "at": "2026-11-06T04:25:14.276476-05:00"
- },
+ "pool": null,
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[release] T-2918 upload build 2 to TestFlight",
-   "model": "opus",
-   "since": "2026-11-06T09:26:41.854Z",
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[site] T-2977 make main's site test green",
-   "model": "opus",
-   "since": "2026-11-06T09:30:36.055Z",
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
    "next": []
   },
   {
@@ -198,24 +188,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "release",
-    "t": "Send build 2 (with the app icon) to TestFlight",
-    "m": "opus",
-    "at": "2026-11-06T09:26:41.854Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Make main's site test green again",
-    "m": "opus",
-    "at": "2026-11-06T09:30:36.055Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -325,13 +298,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "4:43 AM",
+  "main": 0,
+  "lanes": 4,
+  "total": 4,
+  "at": "4:46 AM",
   "why": "",
-  "at_iso": "2026-11-06T09:43:00+00:00",
-  "started": "4:25 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:43 AM ET</p></section>"
+  "at_iso": "2026-11-06T09:46:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 4:46 AM ET</p></section>"
  }
 }

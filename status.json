@@ -1,18 +1,37 @@
 {
  "schema": 1,
- "at": "2026-11-06T21:27:34.550903+00:00",
+ "at": "2026-11-06T21:31:15.462923+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-06T16:25:07-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3117 Investor replies in 5 min",
+   "model": "opus",
+   "started": "2026-11-06T21:28:31.922Z",
+   "seconds": 163,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3100 skip empty API keys",
+   "model": "opus",
+   "started": "2026-11-06T21:28:40.424Z",
+   "seconds": 155,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys x2",
  "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 401,
+  "runnable_count": 402,
   "blocked_count": 121
  },
  "meter": {
@@ -55,7 +74,7 @@
   "week_pct": 63.9,
   "usage_pct": 41.0,
   "work_pct": 68.8,
-  "read_at": "2026-11-06T21:28:00+00:00",
+  "read_at": "2026-11-06T21:31:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -160,6 +179,28 @@
     "d": 1
    },
    {
+    "lane": "b2",
+    "task": "T-3114",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Build Home's In flight tab and its subtabs",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T16:28:58-05:00",
+    "n": "Jeremy"
+   },
+   {
+    "lane": "b2",
+    "task": "T-1117",
+    "w": "Idris",
+    "k": "build",
+    "t": "Make the app's spoken labels read correctly for VoiceOver",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-06T16:28:58-05:00",
+    "n": "Jeremy"
+   },
+   {
     "lane": "b3",
     "task": "T-3081",
     "w": "Idris",
@@ -201,18 +242,18 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 11,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 499
+   "free_gb": 498
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T16:28:00-05:00"
+  "at": "2026-11-06T16:31:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -224,11 +265,12 @@
  "lanes": [
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P0, FIRST (an Investor c6695632816 asked 16:08...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-3117 Investor replies in 5 min",
+   "model": "opus",
+   "since": "2026-11-06T21:28:31.922Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Idris",
@@ -272,7 +314,26 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Answer every Investor message within five minutes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T21:28:31.922Z",
+    "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Skip an API key that has run out of credit",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T21:28:40.424Z",
+    "o": "c"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -363,7 +424,7 @@
    }
   ],
   "count": {
-   "next": 401,
+   "next": 402,
    "wait": 42,
    "blocked": 79,
    "you": 20
@@ -382,13 +443,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
-  "lanes": 5,
-  "total": 5,
-  "at": "4:28 PM",
+  "main": 2,
+  "lanes": 6,
+  "total": 8,
+  "at": "4:31 PM",
   "why": "",
-  "at_iso": "2026-11-06T21:28:00+00:00",
+  "at_iso": "2026-11-06T21:31:00+00:00",
   "started": "4:25 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 4:28 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 4:31 PM ET</p></section>"
  }
 }

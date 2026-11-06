@@ -118,6 +118,8 @@ Dated task logs and full lessons: archive.md.
 
 - T-1861 fe0149caf: T-0678's button must call WidgetWriter.refreshButton (intent rows); mutants-t1861.json unrun. Lock queue can pass 30 min: XC_LOCK_WAIT=3000.
 - Lesson T-1677: untested work in a shared lane worktree blocks others (dirty tree stops runner routing): keep it on a side ref (temp GIT_INDEX_FILE + commit-tree + update-ref refs/wip/...), restore the files. zsh does not split $VAR: use a bash array.
+
+- T-2511 02134c594 (jedi never rebinds sys.path; get_module_info swapped it too, review missed it): review T-2847 (Pernille). Lesson: a test that undoes a patch restores what was there, never the fix, or it hides mutants from later tests.
 {% endraw %}
 
 

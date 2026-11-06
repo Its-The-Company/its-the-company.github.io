@@ -13,4 +13,4 @@ issues: "1"
 
 <section class="convo" id="urgent" aria-label="Conversation"><div class="filters" id="filters" role="group" aria-label="Show" hidden></div><div class="threads" id="threads"></div></section>
 
-<script defer src="{{ '/assets/lanes.js' | relative_url }}"></script><script defer src="{{ '/assets/lockin.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/lanes.js' | relative_url }}"></script>

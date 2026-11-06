@@ -44,6 +44,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-2473: the applier's standing path holds a fold forever once any Investor comments on its issue (even "anything needed?"). Read the issue's comments before saying "applies by itself"; fix is T-2476.
 - T-2589: a route whose last step is a lane path (lane_take --done) must name the lane worktree as the place, or the session hand-makes the queue input and gets refused. merge_queue reads <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/ refs only.
 - T-2617: an Investor request can live in the section heading, not the line; check headings. Partial board commit: git diff -U0, keep my hunks, git apply --cached --unidiff-zero.
+- T-2846: when views split on a display rule, grep what actually draws it first (showsBadge had no caller; the demoted list already badged). Board notes on others' uncommitted lines stay unstaged.
 {% endraw %}
 
 

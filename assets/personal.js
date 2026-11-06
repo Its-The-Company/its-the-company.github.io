@@ -4,7 +4,7 @@
 var S = window.CompanySite, D = document, fixed = D.getElementById('personal');
 if (!S || !fixed || !S.getToken()) return;
 var repo = fixed.getAttribute('data-repo'), BILL = 'investors/billing.json', MAX = 40;
-var boxes = [], warn = '', opened = false;
+var boxes = [], warn = '', opened = true;
 var WHAT = 'Each bar: this project, then other use.';
 function clean(n) { return typeof n === 'string' ? Array.from(n.replace(/\s+/g, ' ').replace(/\p{C}/gu, '').trim()).slice(0, MAX).join('').trim() : ''; }
 var accts = fixed.getAttribute('data-state').split(' ').map((x) => {

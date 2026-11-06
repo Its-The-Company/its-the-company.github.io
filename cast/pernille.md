@@ -41,8 +41,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-2262 (da2ebcf8a): jedi InterpreterEnvironment rebinds global sys.path beside a live script. Idris's T-2511..13 mine to review; T-2514 (unraisablehook in reset snapshot) mine. New board ids go above ops/board.md.ids.
 - T-1103 (b11fe55b): gallery tile and Pro row rules in Core. Open for Maren: 9.4 read strictly puts a spinner over a kept live tree on a foreground rerun.
 
-- T-2567/68 (233f2ab88): cut flag frames_cut_repeats + syntax only for user files; review owed. T-2413 ticked (t2566 ship).
+- T-2724: runtime sends frames_cut_at; RunDetail trim drops next to the cut, counts all. Open: ADR-007 says "outer end", Ines <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note.
 - T-2319 (c9d371621): stdlib_cut check reads the interpreter's inittab/_frozen/PyInit_ and fails closed; open: first Release archive must show Xcode's embed strip keeps the exported symbols.
+- T-2376 (4b123c9b1): Shortcut recipes in widgets/recipes/ (premade/*.py all ship as tiles); device pywidget.context = mode only. Open: T-2857 e2e.
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## Lessons (2026-10-27, T-0416 to T-0448 reviews)

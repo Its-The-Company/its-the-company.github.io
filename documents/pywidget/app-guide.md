@@ -673,9 +673,9 @@ A background run gets seconds, not minutes: about 30 seconds [unverified]. Plan 
 | Files kept in pywidget: CSV, JSON, text, SQLite | Works in v1 (the CSV summary and word count examples). |
 | Files from the Files app or iCloud Drive | Import a copy: works in v1 [unverified on a device]. Link a live folder: planned 1.1. |
 | Location, steps, notifications, clipboard | Works in v1 with the person's permission, in the app and never in the widget (section 3.3). Real sensors [unverified] until a device run. |
-| Shortcuts in and out | Works in v1 for running a script from Shortcuts (section 3.3); passing input and returning a result back is [unverified]. |
+| Shortcuts in and out | Works in v1 for running a script from Shortcuts (section 3.3). Passing input and returning a result back is in the code; three recipes use it (section 9.5); [unverified] until the end-to-end run. |
 | numpy, Pillow, matplotlib | Not in 1.0. Planned for 1.1. |
-| Calendar, Reminders, Health, contacts, photos | Later. Each needs its own permission and review. |
+| Calendar, Reminders, Health, contacts, photos | Read by PyWidget itself: later, each with its own permission and review. Calendar and Reminders through a Shortcut, with no PyWidget permission: section 9.5. |
 | Other apps' private data, constant background tracking, live streams, code downloaded and run unseen | Out of reach. iOS refuses it, or App Review does (Guideline 2.5.2). |
 
 </div>
@@ -683,7 +683,7 @@ A background run gets seconds, not minutes: about 30 seconds [unverified]. Plan 
 
 ### 9.4 The list of widgets you could build
 
-Sample scripts: `widgets/premade/` (12, shipped inside the app), `widgets/gallery/` (15 reference designs), `examples/` (10 plain scripts). Tests: `tests/widgets/`, `tests/examples/`. I checked that each file exists. I did not re-run the tests for this section.
+Sample scripts: `widgets/premade/` (12, shipped inside the app), `widgets/gallery/` (15 reference designs), `examples/` (10 plain scripts), `widgets/recipes/` (3 Shortcut recipes, not yet in the app; section 9.5). Tests: `tests/widgets/`, `tests/examples/`. I checked that each file exists. I did not re-run the tests for this section.
 
 **Live information from the web**
 
@@ -754,6 +754,47 @@ Sample scripts: `widgets/premade/` (12, shipped inside the app), `widgets/galler
 **Planned 1.1:** counters, toggles, next-page cycling, and a refresh button (fresh data on iOS 27 and later); a focus timer that counts down (`widgets/gallery/focus_timer.py`, a 1.1 reference). **Later:** Live Activities on the Lock Screen and Dynamic Island, and full-screen Home Screen tools beyond the console. **Charts:** native sparklines and gauges are in the renderer now; matplotlib pictures wait on the package decision, and look flatter on the tinted Lock Screen.
 
 **Out of reach, whatever the version:** second-by-second live data in a widget, except clocks and timers; anything running all the time in the background; other apps' private data; scripts downloaded from the internet and run without the person writing or pasting them.
+
+### 9.5 Shortcut recipes: other apps' data in a widget
+
+Written 2026-11-05 (T-2376, Pernille). PyWidget cannot read another app's data, and should not try: iOS keeps each app's data to itself, and App Review rejects apps that reach past that (Guidelines 2.5.1 and 2.5.2). The Shortcuts app is the bridge Apple provides. A Shortcut reads the data with Apple's own actions (the Shortcuts app asks you for that permission, not PyWidget), then hands it to a PyWidget script as plain text with **Run Script with Input**. The script saves the text in its own folder, the one the widget part reads, and **Refresh Widgets** redraws the widget. PyWidget never sees your calendar or reminders, only the text the Shortcut sends. Nothing leaves the iPhone.
+
+The three scripts are in `pywidget/widgets/recipes/` (`next_event.py`, `reminders_today.py`, `pinned_share.py`). Each one does two jobs. Run from Shortcuts, it saves what came in and answers with one line, such as "Saved: Book club". Run as a widget, it draws what was saved. The host tests (`pywidget/tests/widgets/test_shortcut_recipes.py`, 20 tests, Python 3.9 and 3.13) feed each script its Shortcut's sample text and check the widget picture in every size.
+
+**What is not proved yet.** Nobody has run these Shortcuts. The end-to-end run, in the Simulator or on the Investors' iPhone, is Idris's board line (T-2857). The action names below are Apple's as of iOS 17 and 18, written from memory and not checked on a device. The app does not offer these scripts as ready-made starting points yet; that is part of the same board line. Until then, each script goes in as your own widget, saved under the name in its `ui.Widget(...)` line (`next_event`, `reminders_today`, `pinned_share`). Whether the name has to match exactly is [unverified].
+
+**Recipe 1: Next event (Calendar).** The widget shows your next event, its time and place, and how long until it starts. It changes by itself when the event starts ("Until 8:00 PM") and when it ends.
+
+1. In Shortcuts, make a new shortcut called "Next event".
+2. Add **Get Upcoming Events**, set it to 1 event, from all calendars.
+3. Add **Text** and type four lines, putting each value in from the event (tap the event, then pick the detail): `Title:` then Title; `Starts:` then Start Date; `Ends:` then End Date; `Location:` then Location. For each date, tap it, choose **Date Format: ISO 8601**, and turn on **Include ISO 8601 Time**. The script refuses other date formats and says why, so the widget never shows a misread time.
+4. Add **Run Script with Input** (PyWidget). Script: next_event. Input: the Text.
+5. Add **Refresh Widgets** (PyWidget).
+6. Optional: in Automation, make a personal automation (for example, Time of Day, 7:00, daily) that runs "Next event". The widget shows "Updated" with the time of the last run, and marks itself out of date after 12 hours, because the calendar can change at any time.
+
+With no upcoming event, the widget says "No upcoming events".
+
+**Recipe 2: Due today (Reminders).** The widget shows how many reminders are due today and the first few by name.
+
+1. Make a new shortcut called "Due today".
+2. Add **Find Reminders**. Filters: Is Completed is No, and Due Date is Today. Sort by Due Date.
+3. Add **Combine Text**: combine the Reminders with New Lines (one title per line).
+4. Add **Run Script with Input** (PyWidget). Script: reminders_today. Input: the Combined Text.
+5. Add **Refresh Widgets** (PyWidget).
+6. Optional: a daily automation at 7:00, as in recipe 1.
+
+At midnight the widget stops calling the list today's and says "New day" until the Shortcut runs again. A widget cannot ask Reminders itself; only the Shortcut can.
+
+**Recipe 3: Pinned (any app's Share button).** Select some text in Notes, Mail or Safari, or share a web page, tap Share, and pick "Pin to widget". The widget shows the text, or for a link, the site's name and the address.
+
+1. Make a new shortcut called "Pin to widget". In its details, turn on **Show in Share Sheet**, and set it to receive Text and URLs.
+2. The shortcut starts with **Receive Text and URLs input from Share Sheet**; set "If there's no input" to Stop and Respond.
+3. Add **Run Script with Input** (PyWidget). Script: pinned_share. Input: Shortcut Input.
+4. Add **Refresh Widgets** (PyWidget).
+
+An empty share is refused and the old pin stays. The pin keeps up to 1,000 characters. A link is shown, never opened or fetched.
+
+**Limits.** A run from Shortcuts has 20 seconds (bridge contract). If PyWidget is busy with another script, the Shortcut stops with "PyWidget is already running a script". When the iPhone has not been unlocked since it started, the script cannot open its folder and the Shortcut reports that. iOS decides when a widget redraws, so Refresh Widgets can take a moment.
 
 ## Open questions
 

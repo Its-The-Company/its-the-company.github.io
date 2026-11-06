@@ -21,11 +21,14 @@ var lp = D.getElementById('lk-lockpace'); if (lp) lp.hidden = !on;
 if (sent !== null && sent === on) { sent = null; clearTimeout(sentT); }
 tiles = tiles.filter((x) => x.box === fixed || (x.box.isConnected ? (x.in = 1) : !x.in));
 tiles.forEach((x) => {
-if (x.b) x.b.textContent = on ? 'Locked in' : 'Spread';
+var pill = x.box === fixed && fixed.hasAttribute('data-btn');
+if (pill) x.box.classList.toggle('on', on);
+if (x.b) x.b.textContent = on ? 'Locked in' : (pill ? 'Lock In' : 'Spread');
 x.t.textContent = on ? 'Locked in for today: full speed until midnight'
 : 'Work is spread over the day' + (n > 0 ? ' (about ' + n + (n === 1 ? ' agent)' : ' agents)') : '');
 if (!x.btn) return;
-x.btn.textContent = arm ? (on ? 'Tap again to unlock' : 'Tap again to lock in') : (on ? 'Unlock' : 'Lock in');
+x.btn.textContent = arm ? (on ? 'Tap again to unlock' : 'Tap again to lock in') : pill ? (on ? 'Locked in' : 'Lock In') : (on ? 'Unlock' : 'Lock in');
+if (pill) x.btn.setAttribute('aria-pressed', on ? 'true' : 'false');
 x.btn.setAttribute('aria-disabled', sent !== null ? 'true' : 'false');
 x.note.textContent = err || (sent !== null ? (posted ? 'Sent. This changes when the company reads it, usually within 15 minutes.' : 'Sending...')
 : arm ? (on ? 'Tap again within 5 seconds to unlock.' : 'Tap again within 5 seconds to lock in.') : '');
@@ -57,7 +60,7 @@ arm = 0; clearTimeout(armT);
 if (now().on !== armOn) { draw(); return; }
 send();
 }
-if (fixed) tiles.push({ box: fixed, b: fixed.querySelector('b'), t: fixed.querySelector('span') });
+var fx = fixed && { box: fixed, b: fixed.querySelector('b'), t: fixed.querySelector('span') };
 function button(x, row) {
 if (S.getToken() && repo && !S.rejected()) {
 x.btn = mk(row, 'button', 'btn'); x.btn.type = 'button'; x.btn.onclick = tap;
@@ -75,8 +78,7 @@ S.lockHead = (h) => {
 var box = mk(h, 'span', 'cv-lockbar'), x = { box: box, t: mk(box, 'small', 'meta cv-lockstate') };
 button(x, box);
 };
-[].slice.call(D.querySelectorAll('.cv-glance')).forEach((g) => { if (!g.querySelector('.cv-lock')) S.lockTile(g, g.children[3]); });  // after Day, 5-hour and Week
-[].slice.call(D.querySelectorAll('.cv-view > .cv-head')).forEach((h) => { if (!h.querySelector('.chip') && !h.querySelector('.cv-lockbar')) S.lockHead(h); });
+if (fx) { if (fixed.hasAttribute('data-btn')) button(fx, fixed); else tiles.push(fx); }
 if (S.onReject) S.onReject.push(() => { tiles.forEach((x) => { if (x.btn) x.btn.hidden = x.note.hidden = true; }); });
 if (S.onStatus) S.onStatus.push(draw);
 draw();

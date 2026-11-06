@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T01:10:44.788759+00:00",
+ "at": "2026-11-06T01:13:53.004895+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2830 spares on demand",
    "model": "opus",
    "started": "2026-11-06T00:25:43.225Z",
-   "seconds": 2701,
+   "seconds": 2889,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2833 idle alarm",
    "model": "opus",
    "started": "2026-11-06T00:25:57.429Z",
-   "seconds": 2687,
+   "seconds": 2875,
    "finished": null,
    "effort": "high"
   },
@@ -30,16 +30,7 @@
    "task": "[tools] T-2725 T-2726 applier pin and fence",
    "model": "opus",
    "started": "2026-11-06T00:26:11.478Z",
-   "seconds": 2673,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[release] T-2456 last checks first build",
-   "model": "opus",
-   "started": "2026-11-06T00:26:26.427Z",
-   "seconds": 2658,
+   "seconds": 2861,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[tools] T-2675 charter suite compare",
    "model": "opus",
    "started": "2026-11-06T00:26:32.127Z",
-   "seconds": 2652,
+   "seconds": 2840,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[build] T-2724 traceback trim honest",
    "model": "opus",
    "started": "2026-11-06T00:26:55.942Z",
-   "seconds": 2628,
+   "seconds": 2817,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +57,7 @@
    "task": "[tools] T-2839 land stuck lane work",
    "model": "opus",
    "started": "2026-11-06T00:36:26.557Z",
-   "seconds": 2058,
+   "seconds": 2246,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +66,7 @@
    "task": "[site] T-2667 new Home Chat Usage pages",
    "model": "opus",
    "started": "2026-11-06T00:43:08.348Z",
-   "seconds": 1656,
+   "seconds": 1844,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +75,7 @@
    "task": "[review] T-2847 completion import path fix",
    "model": "opus",
    "started": "2026-11-06T00:48:26.055Z",
-   "seconds": 1338,
+   "seconds": 1526,
    "finished": null,
    "effort": "high"
   },
@@ -93,31 +84,38 @@
    "task": "[tools] T-2849 adaptive agent pool",
    "model": "opus",
    "started": "2026-11-06T00:56:34.630Z",
-   "seconds": 850,
+   "seconds": 1038,
    "finished": null,
    "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[release] T-2456 last checks first build",
+   "model": "opus",
+   "started": "2026-11-06T00:26:26.427Z",
+   "seconds": 2846,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys x6, Ines, Pernille x2, Idris",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2860 release priority on Xcode lock",
+   "model": "opus",
+   "started": "2026-11-06T01:07:10.548Z",
+   "seconds": null,
+   "finished": "2026-11-06T01:11:15+00:00"
   },
   {
    "name": "odalys",
    "task": "[tools] T-2854 inbox waiter held messages",
    "model": "opus",
    "started": "2026-11-06T01:00:04.381Z",
-   "seconds": 640,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-06T01:11:12.180000+00:00"
   },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2860 release priority on Xcode lock",
-   "model": "opus",
-   "started": "2026-11-06T01:07:10.548Z",
-   "seconds": 214,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x8, Idris, Ines, Pernille x2",
- "recent": [
   {
    "name": "maren",
    "task": "[design] T-2343 Plan mode in Chat",
@@ -133,28 +131,12 @@
    "started": "2026-11-06T00:26:45.329Z",
    "seconds": null,
    "finished": "2026-11-06T01:05:47.715000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2848 report wins and failures",
-   "model": "opus",
-   "started": "2026-11-06T00:48:18.967Z",
-   "seconds": null,
-   "finished": "2026-11-06T01:01:29.574000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-2840 refresh failure check",
-   "model": "opus",
-   "started": "2026-11-06T00:38:33.031Z",
-   "seconds": null,
-   "finished": "2026-11-06T00:59:45.378000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 447,
+  "runnable_count": 446,
   "blocked_count": 120
  },
  "meter": {
@@ -197,7 +179,7 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T01:10:00+00:00",
+  "read_at": "2026-11-06T01:14:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -277,29 +259,6 @@
     "e": "high",
     "at": "2026-11-05T19:35:28-05:00",
     "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-2696",
-    "w": "Idris",
-    "k": "build",
-    "t": "Give the dark Settings cards the design's surface colour",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T19:35:27-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-2697",
-    "w": "Idris",
-    "k": "build",
-    "t": "Make the light Settings group headers readable",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T19:35:27-05:00",
-    "n": "Jeremy"
    }
   ]
  },
@@ -321,18 +280,18 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 661
+   "free_gb": 658
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-05T20:10:00-05:00"
+  "at": "2026-11-05T20:14:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -544,23 +503,23 @@
   ],
   "done": [
    {
-    "w": "Maren",
-    "t": "Chat's Plan mode is designed: a Plan mode button replaces Urgent, plan messages get their own...",
-    "at": "2026-11-05T20:07:00-05:00"
+    "w": "Odalys",
+    "t": "A restarted inbox waiter no longer wakes a session for a message another lane is already...",
+    "at": "2026-11-05T20:11:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "Reports drop the long item-by-item check against the last plan; one short section now says what...",
-    "at": "2026-11-05T20:01:00-05:00"
+    "t": "Release checks for the TestFlight build can now jump the Xcode queue: a run marked...",
+    "at": "2026-11-05T20:11:00-05:00"
    },
    {
-    "w": "Pernille",
-    "t": "The check that tells a failed widget refresh from a real script error now uses all of its rule...",
-    "at": "2026-11-05T19:59:00-05:00"
+    "w": "Maren",
+    "t": "Chat's Plan mode is designed: a Plan mode button replaces Urgent, plan messages get their own...",
+    "at": "2026-11-05T20:07:00-05:00"
    }
   ],
   "count": {
-   "next": 447,
+   "next": 446,
    "wait": 44,
    "blocked": 76,
    "you": 19
@@ -580,13 +539,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 12,
-  "lanes": 5,
-  "total": 17,
-  "at": "8:10 PM",
+  "main": 10,
+  "lanes": 4,
+  "total": 14,
+  "at": "8:14 PM",
   "why": "",
-  "at_iso": "2026-11-06T01:10:00+00:00",
+  "at_iso": "2026-11-06T01:14:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>17</b> agents running now</p><p class=\"an-sub\">Main session 12, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 8:10 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>14</b> agents running now</p><p class=\"an-sub\">Main session 10, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 8:14 PM ET</p></section>"
  }
 }

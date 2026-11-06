@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T06:35:34.857880+00:00",
+ "at": "2026-11-06T06:38:40.326843+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,16 +8,25 @@
  },
  "workers": [
   {
+   "name": "odalys",
+   "task": "[tools] T-2945 pace each account to its own reset",
+   "model": "opus",
+   "started": "2026-11-06T06:37:41.704Z",
+   "seconds": 58,
+   "finished": null
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
+  {
    "name": "idris",
    "task": "[release] T-2918 send build 2 to TestFlight",
    "model": "opus",
    "started": "2026-11-06T05:41:25.753Z",
-   "seconds": 3249,
-   "finished": null
+   "seconds": null,
+   "finished": "2026-11-06T06:36:01.569000+00:00"
   }
  ],
- "who": "Idris",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -64,7 +73,7 @@
   "week_pct": 63.02,
   "usage_pct": 43.2,
   "work_pct": 71.9,
-  "read_at": "2026-11-06T06:35:00+00:00",
+  "read_at": "2026-11-06T06:38:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -223,7 +232,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-06T01:35:00-05:00"
+  "at": "2026-11-06T01:38:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -234,17 +243,17 @@
  },
  "lanes": [
   {
-   "name": "Idris",
+   "name": "Odalys",
    "state": "running",
-   "task": "[release] T-2918 send build 2 to TestFlight",
+   "task": "[tools] T-2945 pace each account to its own reset",
    "model": "opus",
-   "since": "2026-11-06T05:41:25.753Z",
+   "since": "2026-11-06T06:37:41.704Z",
    "next": []
   },
   {
-   "name": "Odalys",
+   "name": "Idris",
    "state": "next",
-   "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
    "model": null,
    "since": null,
    "next": []
@@ -285,11 +294,11 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "release",
-    "t": "Send build 2 (with the app icon) to TestFlight",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Use each account's weekly limit up before it resets",
     "m": "opus",
-    "at": "2026-11-06T05:41:25.753Z",
+    "at": "2026-11-06T06:37:41.704Z",
     "o": "c"
    }
   ],
@@ -405,10 +414,10 @@
   "main": 1,
   "lanes": 5,
   "total": 6,
-  "at": "1:35 AM",
+  "at": "1:38 AM",
   "why": "",
-  "at_iso": "2026-11-06T06:35:00+00:00",
+  "at_iso": "2026-11-06T06:38:00+00:00",
   "started": "12:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 1:35 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 1:38 AM ET</p></section>"
  }
 }

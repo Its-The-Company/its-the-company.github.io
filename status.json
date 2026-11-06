@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T06:29:29.436195+00:00",
+ "at": "2026-11-06T06:32:34.773128+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[release] T-2918 send build 2 to TestFlight",
    "model": "opus",
    "started": "2026-11-06T05:41:25.753Z",
-   "seconds": 2883,
+   "seconds": 3069,
    "finished": null
   }
  ],
@@ -21,7 +21,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 454,
+  "runnable_count": 455,
   "blocked_count": 120
  },
  "meter": {
@@ -64,8 +64,75 @@
   "week_pct": 63.02,
   "usage_pct": 43.2,
   "work_pct": 71.9,
-  "read_at": "2026-11-06T06:29:00+00:00",
+  "read_at": "2026-11-06T06:32:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-2895",
+    "w": "Odalys",
+    "k": "test",
+    "t": "Re-point the four Home checks in the site suite",
+    "m": "sonnet",
+    "e": "high",
+    "at": "2026-11-06T01:30:54-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-2710",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review the widened runner job sandbox",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T01:30:54-05:00",
+    "n": "Evan",
+    "d": 1
+   },
+   {
+    "lane": "a",
+    "task": "T-0760",
+    "w": "Idris",
+    "k": "test",
+    "t": "Share the keyboard fix across app picture tests",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-06T01:30:54-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-2923",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Give joined-ID land jobs merge-first priority",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T01:30:57-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-2208",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stop the landing time limit cutting checks off",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T01:30:57-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "b",
+    "task": "T-2327",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Log the session end check only when its answer changes",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-06T01:32:17-05:00",
+    "n": "Jeremy"
+   },
    {
     "lane": "b2",
     "task": "T-2858",
@@ -155,7 +222,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-06T01:29:00-05:00"
+  "at": "2026-11-06T01:32:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -315,7 +382,7 @@
    }
   ],
   "count": {
-   "next": 454,
+   "next": 455,
    "wait": 44,
    "blocked": 76,
    "you": 19
@@ -335,12 +402,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 2,
-  "total": 3,
-  "at": "1:29 AM",
+  "lanes": 5,
+  "total": 6,
+  "at": "1:32 AM",
   "why": "",
-  "at_iso": "2026-11-06T06:29:00+00:00",
+  "at_iso": "2026-11-06T06:32:00+00:00",
   "started": "12:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:29 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 1:32 AM ET</p></section>"
  }
 }

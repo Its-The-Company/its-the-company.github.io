@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T18:07:48.827630+00:00",
+ "at": "2026-11-06T18:10:50.066428+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,17 +8,34 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[site] T-3080 Chat page shows only the chat",
+   "name": "pernille",
+   "task": "[review] T-3077 stuck-order evidence review",
    "model": "opus",
-   "started": "2026-11-06T17:27:53.537Z",
-   "seconds": 2395,
+   "started": "2026-11-06T18:08:15.941Z",
+   "seconds": 154,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-3094 merge queue Show More on Home",
+   "model": "opus",
+   "started": "2026-11-06T18:08:39.246Z",
+   "seconds": 130,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys",
+ "who": "Pernille, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[site] T-3080 Chat page shows only the chat",
+   "model": "opus",
+   "started": "2026-11-06T17:27:53.537Z",
+   "seconds": null,
+   "finished": "2026-11-06T18:08:07.905000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3093 site test on site-code lands",
@@ -42,14 +59,6 @@
    "started": "2026-11-06T15:45:41.106Z",
    "seconds": null,
    "finished": "2026-11-06T17:27:26.106000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-2977 main site test green",
-   "model": "opus",
-   "started": "2026-11-06T17:19:20.550Z",
-   "seconds": null,
-   "finished": "2026-11-06T17:24:47.600000+00:00"
   }
  ],
  "queue": {
@@ -98,7 +107,7 @@
   "week_pct": 64.37,
   "usage_pct": 41.9,
   "work_pct": 69.7,
-  "read_at": "2026-11-06T18:07:00+00:00",
+  "read_at": "2026-11-06T18:10:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -130,7 +139,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T13:07:00-05:00"
+  "at": "2026-11-06T13:10:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -141,11 +150,20 @@
  },
  "lanes": [
   {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-3077 stuck-order evidence review",
+   "model": "opus",
+   "since": "2026-11-06T18:08:15.941Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Odalys",
    "state": "running",
-   "task": "[site] T-3080 Chat page shows only the chat",
+   "task": "[site] T-3094 merge queue Show More on Home",
    "model": "opus",
-   "since": "2026-11-06T17:27:53.537Z",
+   "since": "2026-11-06T18:08:39.246Z",
    "next": [],
    "effort": "high"
   },
@@ -161,14 +179,6 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -193,12 +203,21 @@
  "tasks": {
   "run": [
    {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Remove the controls above the chat on the Chat page",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review the stuck-order and late-record evidence independently",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-06T17:27:53.537Z",
+    "at": "2026-11-06T18:08:15.941Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Show every merge queue item on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T18:08:39.246Z",
     "o": "c"
    }
   ],
@@ -228,13 +247,6 @@
     "w": "Odalys",
     "k": "site",
     "t": "Make Chat only the chat and live on phones",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Remove the controls above the chat on the...",
     "s": "next",
     "o": "c"
    },
@@ -272,9 +284,21 @@
     "t": "Parallel runner jobs share one asset helper",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "tools",
+    "t": "Move runner job sandbox files out of reach",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "The Chat page now shows only the messages and the box to write one; the Chat tab, the Settings...",
+    "at": "2026-11-06T13:08:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "A change to the company site's code now always runs the site's own test before it lands, so a...",
@@ -283,11 +307,6 @@
    {
     "w": "Odalys",
     "t": "Xcode builds that the MacBook test machine can do now go there instead of taking the Mac mini's...",
-    "at": "2026-11-06T12:50:00-05:00"
-   },
-   {
-    "w": "Operator+idris+odalys+pernille",
-    "t": "The MacBook test machine's fixes are done and reviewed: side-by-side jobs up to six, its safety...",
     "at": "2026-11-06T12:50:00-05:00"
    }
   ],
@@ -312,13 +331,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 0,
-  "total": 1,
-  "at": "1:07 PM",
+  "total": 2,
+  "at": "1:10 PM",
   "why": "",
-  "at_iso": "2026-11-06T18:07:00+00:00",
+  "at_iso": "2026-11-06T18:10:00+00:00",
   "started": "10:44 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:44 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:07 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:44 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:10 PM ET</p></section>"
  }
 }

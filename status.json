@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T11:44:39.210004+00:00",
+ "at": "2026-11-06T11:47:42.618573+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,29 +9,29 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-2999 SSD hang guard",
-   "model": "opus",
-   "started": "2026-11-06T11:31:51.941Z",
-   "seconds": 767,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[tools] T-2616 land on first try",
    "model": "opus",
    "started": "2026-11-06T11:32:02.665Z",
-   "seconds": 756,
+   "seconds": 939,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2",
- "recent": [],
+ "who": "Odalys",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2999 SSD hang guard",
+   "model": "opus",
+   "started": "2026-11-06T11:31:51.941Z",
+   "seconds": null,
+   "finished": "2026-11-06T11:47:08.908000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 476,
+  "runnable_count": 477,
   "blocked_count": 122
  },
  "meter": {
@@ -74,7 +74,7 @@
   "week_pct": 64.29,
   "usage_pct": 43.0,
   "work_pct": 70.6,
-  "read_at": "2026-11-06T11:44:00+00:00",
+  "read_at": "2026-11-06T11:47:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -96,7 +96,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T06:43:27-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "b",
@@ -188,7 +189,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T06:44:00-05:00"
+  "at": "2026-11-06T06:47:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -201,9 +202,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-2999 SSD hang guard",
+   "task": "[tools] T-2616 land on first try",
    "model": "opus",
-   "since": "2026-11-06T11:31:51.941Z",
+   "since": "2026-11-06T11:32:02.665Z",
    "next": [],
    "effort": "high"
   },
@@ -250,15 +251,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop a hung Company SSD from ending whole sessions",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T11:31:51.941Z",
-    "o": "c"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -359,7 +351,7 @@
    }
   ],
   "count": {
-   "next": 476,
+   "next": 477,
    "wait": 43,
    "blocked": 79,
    "you": 20
@@ -378,13 +370,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 4,
-  "total": 6,
-  "at": "6:44 AM",
+  "total": 5,
+  "at": "6:47 AM",
   "why": "",
-  "at_iso": "2026-11-06T11:44:00+00:00",
+  "at_iso": "2026-11-06T11:47:00+00:00",
   "started": "6:26 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:44 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 6:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:47 AM ET</p></section>"
  }
 }

@@ -1,14 +1,66 @@
 {
  "schema": 1,
- "at": "2026-11-06T19:02:36.957398+00:00",
+ "at": "2026-11-06T19:05:39.533698+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-06T10:44:28-05:00"
  },
- "workers": [],
- "who": "",
- "recent": [],
+ "workers": [
+  {
+   "name": "pernille",
+   "task": "[build] T-1048 stdlib zip size check flake",
+   "model": "opus",
+   "started": "2026-11-06T18:37:22.559Z",
+   "seconds": 1696,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[test] T-3096 fix site suites red on main",
+   "model": "opus",
+   "started": "2026-11-06T18:38:33.738Z",
+   "seconds": 1625,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Pernille, Odalys",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[site] T-3009 Running shows only active agents",
+   "model": "opus",
+   "started": "2026-11-06T18:28:56.833Z",
+   "seconds": null,
+   "finished": "2026-11-06T18:38:16.533000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[test] T-3097 rerun mutant 5",
+   "model": "opus",
+   "started": "2026-11-06T18:13:52.212Z",
+   "seconds": null,
+   "finished": "2026-11-06T18:36:55.867000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-3094 merge queue Show More on Home",
+   "model": "opus",
+   "started": "2026-11-06T18:08:39.246Z",
+   "seconds": null,
+   "finished": "2026-11-06T18:28:39.993000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-3077 stuck-order evidence review",
+   "model": "opus",
+   "started": "2026-11-06T18:08:15.941Z",
+   "seconds": null,
+   "finished": "2026-11-06T18:13:34.992000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -55,7 +107,7 @@
   "week_pct": 64.37,
   "usage_pct": 41.9,
   "work_pct": 69.7,
-  "read_at": "2026-11-06T19:02:00+00:00",
+  "read_at": "2026-11-06T19:05:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -87,19 +139,33 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T14:02:00-05:00"
+  "at": "2026-11-06T14:05:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: 19% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 32 of 41 lands failed in 3 hours (2 red))",
+  "n": 2,
+  "at": "2026-11-06T10:44:17.748396-05:00"
+ },
  "lanes": [
   {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[build] T-1048 stdlib zip size check flake",
+   "model": "opus",
+   "since": "2026-11-06T18:37:22.559Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, after T-1035 lands (personal-account...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[test] T-3096 fix site suites red on main",
+   "model": "opus",
+   "since": "2026-11-06T18:38:33.738Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Idris",
@@ -113,14 +179,6 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -143,7 +201,26 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Find why the stdlib size check fails sometimes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T18:37:22.559Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "test",
+    "t": "Fix four site test suites already failing on main",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T18:38:33.738Z",
+    "o": "c"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -245,6 +322,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -253,13 +331,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 0,
-  "total": 0,
-  "at": "2:02 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-06T19:02:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:02 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 2,
+  "at": "2:05 PM",
+  "why": "",
+  "at_iso": "2026-11-06T19:05:00+00:00",
+  "started": "10:44 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:44 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:05 PM ET</p></section>"
  }
 }

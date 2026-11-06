@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T08:08:38.828463+00:00",
+ "at": "2026-11-06T08:11:40.955172+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,24 +9,32 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-2926 finish the merge step time cap",
-   "model": "opus",
-   "started": "2026-11-06T07:33:45.343Z",
-   "seconds": 2093,
-   "finished": null
-  },
-  {
-   "name": "odalys",
    "task": "[site] T-2940 pin phone top bar, tidy Home panels",
    "model": "sonnet",
    "started": "2026-11-06T07:33:55.544Z",
-   "seconds": 2083,
+   "seconds": 2265,
    "finished": null,
    "effort": "medium"
+  },
+  {
+   "name": "idris",
+   "task": "[release] T-2918 fix red test, upload build 2",
+   "model": "opus",
+   "started": "2026-11-06T08:10:49.345Z",
+   "seconds": 51,
+   "finished": null
   }
  ],
- "who": "Odalys x2",
+ "who": "Odalys, Idris",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2926 finish the merge step time cap",
+   "model": "opus",
+   "started": "2026-11-06T07:33:45.343Z",
+   "seconds": null,
+   "finished": "2026-11-06T08:10:22.676000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2945 pace each account to its own reset",
@@ -47,8 +55,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 461,
-  "blocked_count": 120
+  "runnable_count": 460,
+  "blocked_count": 119
  },
  "meter": {
   "five_hour": {
@@ -90,7 +98,7 @@
   "week_pct": 63.02,
   "usage_pct": 43.2,
   "work_pct": 71.9,
-  "read_at": "2026-11-06T08:08:00+00:00",
+  "read_at": "2026-11-06T08:11:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -161,41 +169,6 @@
     "e": "high",
     "at": "2026-11-06T00:29:17-05:00",
     "n": "Jeremy"
-   },
-   {
-    "lane": "b3",
-    "task": "T-2851",
-    "w": "Idris",
-    "k": "build",
-    "t": "Let a TestFlight build take the phone measurements",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T23:24:10-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-2055",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Stop old run records leaking into the next run",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T23:24:10-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b3",
-    "task": "T-2056",
-    "w": "Idris",
-    "k": "test",
-    "t": "Add tests for the end of a run",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T23:24:10-05:00",
-    "n": "Jeremy"
    }
   ]
  },
@@ -221,14 +194,14 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 536
+   "free_gb": 532
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T03:08:00-05:00"
+  "at": "2026-11-06T03:11:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -241,17 +214,18 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-2926 finish the merge step time cap",
-   "model": "opus",
-   "since": "2026-11-06T07:33:45.343Z",
-   "next": []
+   "task": "[site] T-2940 pin phone top bar, tidy Home panels",
+   "model": "sonnet",
+   "since": "2026-11-06T07:33:55.544Z",
+   "next": [],
+   "effort": "medium"
   },
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[release] T-2918 fix red test, upload build 2",
+   "model": "opus",
+   "since": "2026-11-06T08:10:49.345Z",
    "next": []
   },
   {
@@ -291,30 +265,23 @@
   "run": [
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "Finish the five-minute cap on the merge step",
-    "m": "opus",
-    "at": "2026-11-06T07:33:45.343Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "site",
     "t": "Pin the phone top bar and tidy Home's panels",
     "m": "sonnet",
     "e": "medium",
     "at": "2026-11-06T07:33:55.544Z",
     "o": "i"
+   },
+   {
+    "w": "Idris",
+    "k": "release",
+    "t": "Send build 2 (with the app icon) to TestFlight",
+    "m": "opus",
+    "at": "2026-11-06T08:10:49.345Z",
+    "o": "c"
    }
   ],
   "open": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Finish the five-minute cap on the merge step",
-    "s": "next",
-    "o": "c"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -377,28 +344,35 @@
     "t": "Parallel runner jobs share one asset helper",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "tools",
+    "t": "Move runner job sandbox files out of reach",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Odalys",
-    "t": "In Spread mode each Claude account now paces itself to use up its own weekly limit 3 hours...",
-    "at": "2026-11-06T02:30:00-05:00"
+    "t": "The merge step that runs before each work session now stops after five minutes instead of...",
+    "at": "2026-11-06T03:09:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "Work that speeds up the merge queue is now listed in one file, and the queue, the lanes'...",
-    "at": "2026-11-06T00:19:00-05:00"
+    "t": "Landed under T-2926: the pre-session merge step is capped at five minutes, and a land waiting on...",
+    "at": "2026-11-06T03:09:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "The app now carries the approved Indent icon in every size Apple requires, so Apple will no...",
-    "at": "2026-11-06T00:07:00-05:00"
+    "w": "Odalys",
+    "t": "In Spread mode each Claude account now paces itself to use up its own weekly limit 3 hours...",
+    "at": "2026-11-06T02:30:00-05:00"
    }
   ],
   "count": {
-   "next": 461,
-   "wait": 44,
+   "next": 460,
+   "wait": 43,
    "blocked": 76,
    "you": 19
   }
@@ -417,12 +391,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 4,
-  "total": 6,
-  "at": "3:08 AM",
+  "lanes": 3,
+  "total": 5,
+  "at": "3:11 AM",
   "why": "",
-  "at_iso": "2026-11-06T08:08:00+00:00",
+  "at_iso": "2026-11-06T08:11:00+00:00",
   "started": "12:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:08 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:11 AM ET</p></section>"
  }
 }

@@ -1,42 +1,14 @@
 {
  "schema": 1,
- "at": "2026-11-06T21:46:25.607431+00:00",
+ "at": "2026-11-06T21:49:29.689559+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-06T16:25:07-05:00"
+  "kind": "",
+  "started": null
  },
- "workers": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-3117 Investor replies in 5 min",
-   "model": "opus",
-   "started": "2026-11-06T21:28:31.922Z",
-   "seconds": 1073,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-1854 extension run rows",
-   "model": "opus",
-   "started": "2026-11-06T21:40:51.284Z",
-   "seconds": 334,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Idris",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-3100 skip empty API keys",
-   "model": "opus",
-   "started": "2026-11-06T21:28:40.424Z",
-   "seconds": null,
-   "finished": "2026-11-06T21:40:24.711000+00:00"
-  }
- ],
+ "workers": [],
+ "who": "",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -83,7 +55,7 @@
   "week_pct": 63.9,
   "usage_pct": 41.0,
   "work_pct": 68.8,
-  "read_at": "2026-11-06T21:46:00+00:00",
+  "read_at": "2026-11-06T21:49:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -106,46 +78,6 @@
     "e": "high",
     "at": "2026-11-06T15:14:29-05:00",
     "n": "Evan"
-   },
-   {
-    "lane": "b",
-    "task": "T-3069",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Merging work goes next after TestFlight",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T15:13:45-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b",
-    "task": "T-2881",
-    "t": "T-2881",
-    "at": "2026-11-06T15:13:45-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b",
-    "task": "T-3092",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Repair the experiment ledger that merges split apart",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T15:13:45-05:00",
-    "n": "Jeremy",
-    "d": 1
-   },
-   {
-    "lane": "b",
-    "task": "T-2903",
-    "t": "T-2903",
-    "at": "2026-11-06T15:13:45-05:00",
-    "n": "Jeremy",
-    "d": 1
    },
    {
     "lane": "b2",
@@ -211,44 +143,38 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 14,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 495
+   "free_gb": 491
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T16:46:00-05:00"
+  "at": "2026-11-06T16:49:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Spread: 18% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (cut a step: load 30.6 a core is over 10)",
-  "n": 2,
-  "at": "2026-11-06T16:24:45.132512-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-3117 Investor replies in 5 min",
-   "model": "opus",
-   "since": "2026-11-06T21:28:31.922Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P0, FIRST (an Investor c6695632816 asked 16:08...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-1854 extension run rows",
-   "model": "opus",
-   "since": "2026-11-06T21:40:51.284Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -284,26 +210,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Answer every Investor message within five minutes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T21:28:31.922Z",
-    "o": "i"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Record widget runs from the extension too",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T21:40:51.284Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -413,13 +320,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
-  "lanes": 5,
-  "total": 7,
-  "at": "4:46 PM",
+  "main": 0,
+  "lanes": 4,
+  "total": 4,
+  "at": "4:49 PM",
   "why": "",
-  "at_iso": "2026-11-06T21:46:00+00:00",
-  "started": "4:25 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 4:46 PM ET</p></section>"
+  "at_iso": "2026-11-06T21:49:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 4:49 PM ET</p></section>"
  }
 }

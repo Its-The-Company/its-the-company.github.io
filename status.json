@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T23:10:53.113456+00:00",
+ "at": "2026-11-06T23:14:00.907020+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,34 @@
  },
  "workers": [
   {
-   "name": "ines",
-   "task": "[report] evening",
+   "name": "idris",
+   "task": "[build] T-3146 T-3147 marker follow-ups",
    "model": "opus",
-   "started": "2026-11-06T23:05:11.652Z",
-   "seconds": 341,
+   "started": "2026-11-06T23:07:32.987Z",
+   "seconds": 387,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "idris",
-   "task": "[build] T-3146 T-3147 marker follow-ups",
+   "task": "[build] T-3149 premade widgets no view",
    "model": "opus",
-   "started": "2026-11-06T23:07:32.987Z",
-   "seconds": 200,
+   "started": "2026-11-06T23:12:28.163Z",
+   "seconds": 92,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Ines, Idris",
+ "who": "Idris x2",
  "recent": [
+  {
+   "name": "ines",
+   "task": "[report] evening",
+   "model": "opus",
+   "started": "2026-11-06T23:05:11.652Z",
+   "seconds": null,
+   "finished": "2026-11-06T23:11:46.578000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-3142 run marker re-review",
@@ -51,20 +59,12 @@
    "started": "2026-11-06T22:46:40.658Z",
    "seconds": null,
    "finished": "2026-11-06T22:57:52.611000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3138 run detail from tail",
-   "model": "opus",
-   "started": "2026-11-06T22:50:20.417Z",
-   "seconds": null,
-   "finished": "2026-11-06T22:57:17.213000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 403,
+  "runnable_count": 405,
   "blocked_count": 121
  },
  "meter": {
@@ -107,8 +107,30 @@
   "week_pct": 63.9,
   "usage_pct": 41.0,
   "work_pct": 68.8,
-  "read_at": "2026-11-06T23:10:00+00:00",
+  "read_at": "2026-11-06T23:14:00+00:00",
   "running": [
+   {
+    "lane": "a2",
+    "task": "T-3111",
+    "w": "Idris",
+    "k": "bug",
+    "t": "Fix the widget timeline test that fails Xcode lands",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T18:13:14-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a2",
+    "task": "T-2027",
+    "w": "Idris",
+    "k": "build",
+    "t": "Re-run the notification test on a fresh Simulator",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T18:13:14-05:00",
+    "n": "Evan"
+   },
    {
     "lane": "a3",
     "task": "T-2950",
@@ -278,7 +300,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T18:10:00-05:00"
+  "at": "2026-11-06T18:14:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -288,15 +310,6 @@
   "at": "2026-11-06T16:24:45.132512-05:00"
  },
  "lanes": [
-  {
-   "name": "Ines",
-   "state": "running",
-   "task": "[report] evening",
-   "model": "opus",
-   "since": "2026-11-06T23:05:11.652Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "running",
@@ -310,6 +323,14 @@
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -342,15 +363,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Ines",
-    "k": "report",
-    "t": "Evening",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T23:05:11.652Z",
-    "o": "c"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Settle a left marker whose widget folder is gone",
@@ -358,6 +370,15 @@
     "e": "high",
     "at": "2026-11-06T23:07:32.987Z",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Fix premade widgets drawing no view on iPhone",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T23:12:28.163Z",
+    "o": "i"
    }
   ],
   "open": [
@@ -450,7 +471,7 @@
    }
   ],
   "count": {
-   "next": 403,
+   "next": 405,
    "wait": 42,
    "blocked": 79,
    "you": 20
@@ -458,24 +479,12 @@
  },
  "qr": [],
  "reply": null,
- "inbox": [
-  {
-   "id": "c6698089724",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "It appears that each of the..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -484,12 +493,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 4,
-  "total": 6,
-  "at": "6:10 PM",
+  "lanes": 5,
+  "total": 7,
+  "at": "6:14 PM",
   "why": "",
-  "at_iso": "2026-11-06T23:10:00+00:00",
+  "at_iso": "2026-11-06T23:14:00+00:00",
   "started": "4:25 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:10 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 6:14 PM ET</p></section>"
  }
 }

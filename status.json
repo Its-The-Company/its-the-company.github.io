@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T03:55:20.406010+00:00",
+ "at": "2026-11-06T03:58:23.644718+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -45,8 +45,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 434,
-  "blocked_count": 120
+  "runnable_count": 433,
+  "blocked_count": 121
  },
  "meter": {
   "five_hour": {
@@ -88,7 +88,7 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T03:55:00+00:00",
+  "read_at": "2026-11-06T03:58:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -198,7 +198,7 @@
  "lock_in": {
   "on": true,
   "pool": 12,
-  "at": "2026-11-05T22:55:00-05:00"
+  "at": "2026-11-05T22:58:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -297,13 +297,6 @@
    },
    {
     "w": "Idris",
-    "k": "release",
-    "t": "Last checks before the first test build",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
     "k": "tools",
     "t": "Parallel runner jobs share one asset helper",
     "s": "next",
@@ -329,6 +322,13 @@
     "t": "Run Python widget scripts inside the widget...",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stop personal sessions taking more tasks...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
@@ -349,9 +349,9 @@
    }
   ],
   "count": {
-   "next": 434,
+   "next": 433,
    "wait": 45,
-   "blocked": 75,
+   "blocked": 76,
    "you": 19
   }
  },
@@ -372,10 +372,10 @@
   "main": 0,
   "lanes": 5,
   "total": 5,
-  "at": "10:55 PM",
+  "at": "10:58 PM",
   "why": "",
-  "at_iso": "2026-11-06T03:55:00+00:00",
+  "at_iso": "2026-11-06T03:58:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:55 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:58 PM ET</p></section>"
  }
 }

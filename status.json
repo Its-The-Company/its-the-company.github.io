@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T00:30:43.114129+00:00",
+ "at": "2026-11-06T00:33:50.046471+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2830 spares on demand",
    "model": "opus",
    "started": "2026-11-06T00:25:43.225Z",
-   "seconds": 299,
+   "seconds": 486,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2832 union merge for records",
    "model": "opus",
    "started": "2026-11-06T00:25:50.481Z",
-   "seconds": 292,
+   "seconds": 479,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[tools] T-2833 idle alarm",
    "model": "opus",
    "started": "2026-11-06T00:25:57.429Z",
-   "seconds": 285,
+   "seconds": 472,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +39,7 @@
    "task": "[tools] T-2725 T-2726 applier pin and fence",
    "model": "opus",
    "started": "2026-11-06T00:26:11.478Z",
-   "seconds": 271,
+   "seconds": 458,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +48,7 @@
    "task": "[review] T-2728 memory-skip badge gap",
    "model": "opus",
    "started": "2026-11-06T00:26:18.580Z",
-   "seconds": 264,
+   "seconds": 451,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +57,7 @@
    "task": "[release] T-2456 last checks first build",
    "model": "opus",
    "started": "2026-11-06T00:26:26.427Z",
-   "seconds": 256,
+   "seconds": 443,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +66,7 @@
    "task": "[tools] T-2675 charter suite compare",
    "model": "opus",
    "started": "2026-11-06T00:26:32.127Z",
-   "seconds": 250,
+   "seconds": 437,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +75,7 @@
    "task": "[build] T-2511 completion sys.path fix",
    "model": "opus",
    "started": "2026-11-06T00:26:38.277Z",
-   "seconds": 244,
+   "seconds": 431,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +84,7 @@
    "task": "[build] T-2376 Shortcut recipes",
    "model": "opus",
    "started": "2026-11-06T00:26:45.329Z",
-   "seconds": 237,
+   "seconds": 424,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +93,7 @@
    "task": "[build] T-2263 shared refresh failure check",
    "model": "opus",
    "started": "2026-11-06T00:26:50.627Z",
-   "seconds": 232,
+   "seconds": 419,
    "finished": null,
    "effort": "high"
   },
@@ -102,7 +102,7 @@
    "task": "[build] T-2724 traceback trim honest",
    "model": "opus",
    "started": "2026-11-06T00:26:55.942Z",
-   "seconds": 227,
+   "seconds": 414,
    "finished": null,
    "effort": "high"
   },
@@ -111,7 +111,7 @@
    "task": "[build] T-1758 refresh schedule rule",
    "model": "opus",
    "started": "2026-11-06T00:30:38.040Z",
-   "seconds": 5,
+   "seconds": 192,
    "finished": null,
    "effort": "high"
   }
@@ -173,8 +173,19 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T00:30:00+00:00",
+  "read_at": "2026-11-06T00:34:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-1828",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Retry work that touched protected files",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T19:33:56-05:00",
+    "n": "Evan"
+   },
    {
     "lane": "b",
     "task": "T-2810",
@@ -229,7 +240,7 @@
  "lock_in": {
   "on": true,
   "pool": 3,
-  "at": "2026-11-05T19:30:00-05:00"
+  "at": "2026-11-05T19:34:00-05:00"
  },
  "next_tick_why": "session",
  "pool": {
@@ -476,12 +487,12 @@
  ],
  "agents_now": {
   "main": 12,
-  "lanes": 1,
-  "total": 13,
-  "at": "7:30 PM",
+  "lanes": 2,
+  "total": 14,
+  "at": "7:34 PM",
   "why": "",
-  "at_iso": "2026-11-06T00:30:00+00:00",
+  "at_iso": "2026-11-06T00:34:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>13</b> agents running now</p><p class=\"an-sub\">Main session 12, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:30 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>14</b> agents running now</p><p class=\"an-sub\">Main session 12, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:34 PM ET</p></section>"
  }
 }

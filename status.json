@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T05:58:58.463427+00:00",
+ "at": "2026-11-06T06:02:01.254317+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[release] T-2918 send build 2 to TestFlight",
    "model": "opus",
    "started": "2026-11-06T05:41:25.753Z",
-   "seconds": 1052,
+   "seconds": 1235,
    "finished": null
   }
  ],
@@ -21,7 +21,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 448,
+  "runnable_count": 449,
   "blocked_count": 120
  },
  "meter": {
@@ -64,30 +64,8 @@
   "week_pct": 63.02,
   "usage_pct": 43.2,
   "work_pct": 71.9,
-  "read_at": "2026-11-06T05:59:00+00:00",
+  "read_at": "2026-11-06T06:02:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-2872",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Measure waiting time after extra spare copies",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T00:24:58-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-2344",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Build the Plan mode button and answers on the site",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T00:24:58-05:00",
-    "n": "Evan"
-   },
    {
     "lane": "a2",
     "task": "T-2905",
@@ -121,7 +99,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T00:30:09-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a2",
@@ -255,7 +234,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-06T00:59:00-05:00"
+  "at": "2026-11-06T01:02:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -415,30 +394,18 @@
    }
   ],
   "count": {
-   "next": 448,
+   "next": 449,
    "wait": 44,
    "blocked": 76,
    "you": 19
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6678126068",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Thank you! Also, make sure the..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -447,12 +414,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 5,
-  "total": 6,
-  "at": "12:59 AM",
+  "lanes": 4,
+  "total": 5,
+  "at": "1:02 AM",
   "why": "",
-  "at_iso": "2026-11-06T05:59:00+00:00",
+  "at_iso": "2026-11-06T06:02:00+00:00",
   "started": "12:40 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 12:59 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:40 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:02 AM ET</p></section>"
  }
 }

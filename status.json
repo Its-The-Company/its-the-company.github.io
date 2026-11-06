@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T05:24:36.704392+00:00",
+ "at": "2026-11-06T05:27:44.321067+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[site] T-2915 Chat only, live on phones",
    "model": "opus",
    "started": "2026-11-06T05:04:03.619Z",
-   "seconds": 1233,
+   "seconds": 1420,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-2831 cap pre-session merge",
    "model": "opus",
    "started": "2026-11-06T04:22:15.682Z",
-   "seconds": 3741,
+   "seconds": 3928,
    "finished": null,
    "effort": "high"
   }
@@ -107,8 +107,30 @@
   "week_pct": 63.12,
   "usage_pct": 43.8,
   "work_pct": 72.2,
-  "read_at": "2026-11-06T05:24:00+00:00",
+  "read_at": "2026-11-06T05:27:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-2872",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Measure waiting time after extra spare copies",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T00:24:58-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-2344",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Build the Plan mode button and answers on the site",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T00:24:58-05:00",
+    "n": "Evan"
+   },
    {
     "lane": "a2",
     "task": "T-2870",
@@ -207,18 +229,18 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 578
+   "free_gb": 576
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-06T00:24:00-05:00"
+  "at": "2026-11-06T00:27:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -410,12 +432,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "12:24 AM",
+  "lanes": 4,
+  "total": 6,
+  "at": "12:27 AM",
   "why": "",
-  "at_iso": "2026-11-06T05:24:00+00:00",
+  "at_iso": "2026-11-06T05:27:00+00:00",
   "started": "11:18 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:18 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:24 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:18 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:27 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T02:55:03.627592+00:00",
+ "at": "2026-11-06T02:58:07.461469+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[release] T-2456 last checks first build",
    "model": "opus",
    "started": "2026-11-06T00:26:26.427Z",
-   "seconds": 8917,
+   "seconds": 9101,
    "finished": null,
    "effort": "high"
   }
@@ -98,8 +98,19 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T02:55:00+00:00",
+  "read_at": "2026-11-06T02:58:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-2853",
+    "w": "Idris",
+    "k": "build",
+    "t": "Test the badge after a second refusal demotes a widget",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-05T21:56:06-05:00",
+    "n": "Evan"
+   },
    {
     "lane": "a2",
     "task": "T-2870",
@@ -209,18 +220,18 @@
   }
  ],
  "disk": {
-  "free_gb": 17,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 640
+   "free_gb": 638
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
-  "pool": 6,
-  "at": "2026-11-05T21:55:00-05:00"
+  "pool": 7,
+  "at": "2026-11-05T21:58:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -403,12 +414,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 3,
-  "total": 4,
-  "at": "9:55 PM",
+  "lanes": 4,
+  "total": 5,
+  "at": "9:58 PM",
   "why": "",
-  "at_iso": "2026-11-06T02:55:00+00:00",
+  "at_iso": "2026-11-06T02:58:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:55 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 9:58 PM ET</p></section>"
  }
 }

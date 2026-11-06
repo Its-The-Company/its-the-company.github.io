@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T04:40:34.858454+00:00",
+ "at": "2026-11-06T04:43:42.138545+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2831 cap pre-session merge",
    "model": "opus",
    "started": "2026-11-06T04:22:15.682Z",
-   "seconds": 1099,
+   "seconds": 1286,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[build] T-2852 widget refresh ask function",
    "model": "opus",
    "started": "2026-11-06T04:22:23.986Z",
-   "seconds": 1090,
+   "seconds": 1278,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[tools] T-2855 code-drawn report visuals",
    "model": "opus",
    "started": "2026-11-06T04:22:33.248Z",
-   "seconds": 1081,
+   "seconds": 1268,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +39,7 @@
    "task": "[tools] T-2865 bottleneck usage on Home",
    "model": "opus",
    "started": "2026-11-06T04:22:37.587Z",
-   "seconds": 1077,
+   "seconds": 1264,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +48,7 @@
    "task": "[build] T-2853 demoted widget badge test",
    "model": "opus",
    "started": "2026-11-06T04:22:48.562Z",
-   "seconds": 1066,
+   "seconds": 1253,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +57,7 @@
    "task": "[tools] T-2345 Plan mode company side",
    "model": "opus",
    "started": "2026-11-06T04:25:05.302Z",
-   "seconds": 929,
+   "seconds": 1116,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +66,7 @@
    "task": "[test] T-2902 refresh schedule test gaps",
    "model": "opus",
    "started": "2026-11-06T04:29:14.206Z",
-   "seconds": 680,
+   "seconds": 867,
    "finished": null,
    "effort": "high"
   },
@@ -75,12 +75,21 @@
    "task": "[tools] T-2904 merge-queue work lands first",
    "model": "opus",
    "started": "2026-11-06T04:38:11.473Z",
-   "seconds": 143,
+   "seconds": 330,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[release] T-2906 placeholder icon and re-upload",
+   "model": "opus",
+   "started": "2026-11-06T04:42:08.300Z",
+   "seconds": 93,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x7, Idris",
+ "who": "Odalys x7, Idris x2",
  "recent": [
   {
    "name": "odalys",
@@ -110,7 +119,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 436,
+  "runnable_count": 438,
   "blocked_count": 121
  },
  "meter": {
@@ -153,7 +162,7 @@
   "week_pct": 63.12,
   "usage_pct": 43.8,
   "work_pct": 72.2,
-  "read_at": "2026-11-06T04:41:00+00:00",
+  "read_at": "2026-11-06T04:43:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -278,14 +287,14 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 585
+   "free_gb": 584
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
-  "pool": 7,
-  "at": "2026-11-05T23:41:00-05:00"
+  "pool": 8,
+  "at": "2026-11-05T23:43:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -423,6 +432,13 @@
   ],
   "open": [
    {
+    "w": "Idris",
+    "k": "release",
+    "t": "Put the approved app icon in the build so...",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Odalys",
     "k": "tools",
     "t": "Run every lane's merge tests on the MacBook...",
@@ -458,6 +474,13 @@
     "o": "c"
    },
    {
+    "w": "Idris",
+    "k": "release",
+    "t": "Give the first test build a placeholder icon",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
@@ -475,20 +498,6 @@
     "w": "Idris",
     "k": "tools",
     "t": "Move runner job sandbox files out of reach",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Run Python widget scripts inside the widget...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop personal sessions taking more tasks...",
     "s": "next",
     "o": "c"
    }
@@ -511,7 +520,7 @@
    }
   ],
   "count": {
-   "next": 436,
+   "next": 438,
    "wait": 45,
    "blocked": 76,
    "you": 19
@@ -530,13 +539,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 8,
+  "main": 9,
   "lanes": 5,
-  "total": 13,
-  "at": "11:41 PM",
+  "total": 14,
+  "at": "11:43 PM",
   "why": "",
-  "at_iso": "2026-11-06T04:41:00+00:00",
+  "at_iso": "2026-11-06T04:43:00+00:00",
   "started": "11:18 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>13</b> agents running now</p><p class=\"an-sub\">Main session 8, started 11:18 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:41 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>14</b> agents running now</p><p class=\"an-sub\">Main session 9, started 11:18 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:43 PM ET</p></section>"
  }
 }

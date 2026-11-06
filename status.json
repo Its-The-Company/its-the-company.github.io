@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T03:20:01.798499+00:00",
+ "at": "2026-11-06T03:24:49.270969+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -88,41 +88,8 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T03:20:00+00:00",
+  "read_at": "2026-11-06T03:25:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-2409",
-    "w": "Wrenna",
-    "k": "release",
-    "t": "Check the USGS earthquake feed before building on it",
-    "m": "opus",
-    "e": "medium",
-    "at": "2026-11-05T22:13:26-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-2870",
-    "w": "Idris",
-    "k": "build",
-    "t": "Close the small gaps left in the completion import guard",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T21:38:42-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a2",
-    "task": "T-2494",
-    "w": "Idris",
-    "k": "build",
-    "t": "Finish the widget's log write before the extension quits",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-05T21:38:42-05:00",
-    "n": "Evan"
-   },
    {
     "lane": "a3",
     "task": "T-2713",
@@ -171,14 +138,14 @@
     "d": 1
    },
    {
-    "lane": "b",
-    "task": "T-2027",
+    "lane": "b3",
+    "task": "T-2021",
     "w": "Idris",
     "k": "build",
-    "t": "Re-run the notification test on a fresh Simulator",
+    "t": "Measure the widget time budget before setting it",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-05T21:58:49-05:00",
+    "at": "2026-11-05T22:20:44-05:00",
     "n": "Jeremy"
    }
   ]
@@ -201,18 +168,18 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
+  "free_gb": 15,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 635
+   "free_gb": 633
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": true,
   "pool": 8,
-  "at": "2026-11-05T22:20:00-05:00"
+  "at": "2026-11-05T22:25:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -384,12 +351,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 4,
-  "total": 4,
-  "at": "10:20 PM",
+  "lanes": 2,
+  "total": 2,
+  "at": "10:25 PM",
   "why": "",
-  "at_iso": "2026-11-06T03:20:00+00:00",
+  "at_iso": "2026-11-06T03:25:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 10:20 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:25 PM ET</p></section>"
  }
 }

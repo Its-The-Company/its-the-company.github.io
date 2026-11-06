@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T04:37:34.260981+00:00",
+ "at": "2026-11-06T04:40:34.858454+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-2831 cap pre-session merge",
    "model": "opus",
    "started": "2026-11-06T04:22:15.682Z",
-   "seconds": 918,
+   "seconds": 1099,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[build] T-2852 widget refresh ask function",
    "model": "opus",
    "started": "2026-11-06T04:22:23.986Z",
-   "seconds": 910,
+   "seconds": 1090,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[tools] T-2855 code-drawn report visuals",
    "model": "opus",
    "started": "2026-11-06T04:22:33.248Z",
-   "seconds": 901,
+   "seconds": 1081,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +39,7 @@
    "task": "[tools] T-2865 bottleneck usage on Home",
    "model": "opus",
    "started": "2026-11-06T04:22:37.587Z",
-   "seconds": 896,
+   "seconds": 1077,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +48,7 @@
    "task": "[build] T-2853 demoted widget badge test",
    "model": "opus",
    "started": "2026-11-06T04:22:48.562Z",
-   "seconds": 885,
+   "seconds": 1066,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +57,7 @@
    "task": "[tools] T-2345 Plan mode company side",
    "model": "opus",
    "started": "2026-11-06T04:25:05.302Z",
-   "seconds": 748,
+   "seconds": 929,
    "finished": null,
    "effort": "high"
   },
@@ -66,12 +66,21 @@
    "task": "[test] T-2902 refresh schedule test gaps",
    "model": "opus",
    "started": "2026-11-06T04:29:14.206Z",
-   "seconds": 500,
+   "seconds": 680,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2904 merge-queue work lands first",
+   "model": "opus",
+   "started": "2026-11-06T04:38:11.473Z",
+   "seconds": 143,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x6, Idris",
+ "who": "Odalys x7, Idris",
  "recent": [
   {
    "name": "odalys",
@@ -101,7 +110,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 434,
+  "runnable_count": 436,
   "blocked_count": 121
  },
  "meter": {
@@ -128,7 +137,7 @@
  },
  "ui": {
   "week_pct": 0.698,
-  "five_hour_pct": 0.093,
+  "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -144,7 +153,7 @@
   "week_pct": 63.12,
   "usage_pct": 43.8,
   "work_pct": 72.2,
-  "read_at": "2026-11-06T04:37:00+00:00",
+  "read_at": "2026-11-06T04:41:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -275,8 +284,8 @@
  },
  "lock_in": {
   "on": true,
-  "pool": 6,
-  "at": "2026-11-05T23:37:00-05:00"
+  "pool": 7,
+  "at": "2026-11-05T23:41:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -401,6 +410,15 @@
     "e": "high",
     "at": "2026-11-06T04:29:14.206Z",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Land merge-queue improvements first",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T04:38:11.473Z",
+    "o": "c"
    }
   ],
   "open": [
@@ -429,6 +447,13 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Put the MacBook runner fixes first",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Land merge-queue improvements first",
     "s": "next",
     "o": "c"
    },
@@ -466,13 +491,6 @@
     "t": "Stop personal sessions taking more tasks...",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Record each widget run in the app's activity log",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -493,30 +511,18 @@
    }
   ],
   "count": {
-   "next": 434,
+   "next": 436,
    "wait": 45,
    "blocked": 76,
    "you": 19
   }
  },
  "qr": [],
- "inbox": [
-  {
-   "id": "c6677001798",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "All tasks that improve the merge..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -524,13 +530,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 7,
+  "main": 8,
   "lanes": 5,
-  "total": 12,
-  "at": "11:37 PM",
+  "total": 13,
+  "at": "11:41 PM",
   "why": "",
-  "at_iso": "2026-11-06T04:37:00+00:00",
+  "at_iso": "2026-11-06T04:41:00+00:00",
   "started": "11:18 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>12</b> agents running now</p><p class=\"an-sub\">Main session 7, started 11:18 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:37 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>13</b> agents running now</p><p class=\"an-sub\">Main session 8, started 11:18 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 11:41 PM ET</p></section>"
  }
 }

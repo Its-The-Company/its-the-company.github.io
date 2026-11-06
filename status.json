@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T23:42:05.406915+00:00",
+ "at": "2026-11-06T23:45:48.357580+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[build] T-3149 premade widgets no view",
    "model": "opus",
    "started": "2026-11-06T23:12:28.163Z",
-   "seconds": 1777,
+   "seconds": 2000,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-3148 rerun only changed checks",
    "model": "opus",
    "started": "2026-11-06T23:32:55.613Z",
-   "seconds": 549,
+   "seconds": 772,
    "finished": null,
    "effort": "high"
   }
@@ -64,7 +64,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 406,
+  "runnable_count": 407,
   "blocked_count": 121
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 63.9,
   "usage_pct": 41.0,
   "work_pct": 68.8,
-  "read_at": "2026-11-06T23:42:00+00:00",
+  "read_at": "2026-11-06T23:45:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -289,7 +289,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T18:42:00-05:00"
+  "at": "2026-11-06T18:45:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -461,7 +461,7 @@
    }
   ],
   "count": {
-   "next": 406,
+   "next": 407,
    "wait": 42,
    "blocked": 79,
    "you": 20
@@ -469,24 +469,12 @@
  },
  "qr": [],
  "reply": null,
- "inbox": [
-  {
-   "id": "c6698789995",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "The widget troubleshooting worked! A..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -497,10 +485,10 @@
   "main": 2,
   "lanes": 5,
   "total": 7,
-  "at": "6:42 PM",
+  "at": "6:45 PM",
   "why": "",
-  "at_iso": "2026-11-06T23:42:00+00:00",
+  "at_iso": "2026-11-06T23:45:00+00:00",
   "started": "4:25 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 6:42 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 6:45 PM ET</p></section>"
  }
 }

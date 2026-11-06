@@ -1,24 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-06T03:07:16.800702+00:00",
+ "at": "2026-11-06T03:10:54.397773+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-05T19:24:39-05:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "ines",
    "task": "[plan] T-2456 ruling: Files UI test gate",
    "model": "opus",
    "started": "2026-11-06T03:07:02.444Z",
-   "seconds": 14,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Ines",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-06T03:09:11.228000+00:00"
+  },
   {
    "name": "idris",
    "task": "[release] T-2456 last checks first build",
@@ -42,20 +40,12 @@
    "started": "2026-11-06T01:42:43.456Z",
    "seconds": null,
    "finished": "2026-11-06T02:19:42.881000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-2491 ruling: does it gate TestFlight",
-   "model": "opus",
-   "started": "2026-11-06T02:06:09.153Z",
-   "seconds": null,
-   "finished": "2026-11-06T02:08:04.988000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 431,
+  "runnable_count": 432,
   "blocked_count": 120
  },
  "meter": {
@@ -98,7 +88,7 @@
   "week_pct": 63.3,
   "usage_pct": 45.8,
   "work_pct": 72.4,
-  "read_at": "2026-11-06T03:07:00+00:00",
+  "read_at": "2026-11-06T03:10:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -242,7 +232,7 @@
  "lock_in": {
   "on": true,
   "pool": 7,
-  "at": "2026-11-05T22:07:00-05:00"
+  "at": "2026-11-05T22:10:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -252,15 +242,6 @@
   "at": "2026-11-05T19:24:26.356019-05:00"
  },
  "lanes": [
-  {
-   "name": "Ines",
-   "state": "running",
-   "task": "[plan] T-2456 ruling: Files UI test gate",
-   "model": "opus",
-   "since": "2026-11-06T03:07:02.444Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Odalys",
    "state": "next",
@@ -273,6 +254,14 @@
    "name": "Idris",
    "state": "next",
    "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -303,17 +292,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Last checks before the first test build",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T03:07:02.444Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -404,7 +383,7 @@
    }
   ],
   "count": {
-   "next": 431,
+   "next": 432,
    "wait": 45,
    "blocked": 75,
    "you": 19
@@ -424,13 +403,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 5,
-  "total": 6,
-  "at": "10:07 PM",
+  "total": 5,
+  "at": "10:10 PM",
   "why": "",
-  "at_iso": "2026-11-06T03:07:00+00:00",
+  "at_iso": "2026-11-06T03:10:00+00:00",
   "started": "7:24 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:07 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:24 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:10 PM ET</p></section>"
  }
 }

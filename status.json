@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T05:18:08.638891+00:00",
+ "at": "2026-11-06T05:21:34.910592+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,34 +9,33 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-2831 cap pre-session merge",
+   "task": "[site] T-2915 Chat only, live on phones",
    "model": "opus",
-   "started": "2026-11-06T04:22:15.682Z",
-   "seconds": 3352,
+   "started": "2026-11-06T05:04:03.619Z",
+   "seconds": 1051,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2831 cap pre-session merge",
+   "model": "opus",
+   "started": "2026-11-06T04:22:15.682Z",
+   "seconds": 3559,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys x2",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-2904 merge-queue work lands first",
    "model": "opus",
    "started": "2026-11-06T04:38:11.473Z",
-   "seconds": 2397,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-06T05:20:05.083000+00:00"
   },
-  {
-   "name": "odalys",
-   "task": "[site] T-2915 Chat only, live on phones",
-   "model": "opus",
-   "started": "2026-11-06T05:04:03.619Z",
-   "seconds": 845,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x3",
- "recent": [
   {
    "name": "idris",
    "task": "[build] T-2853 demoted widget badge test",
@@ -60,20 +59,12 @@
    "started": "2026-11-06T04:47:04.371Z",
    "seconds": null,
    "finished": "2026-11-06T04:55:39.432000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2855 code-drawn report visuals",
-   "model": "opus",
-   "started": "2026-11-06T04:22:33.248Z",
-   "seconds": null,
-   "finished": "2026-11-06T04:53:14.844000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 440,
+  "runnable_count": 443,
   "blocked_count": 120
  },
  "meter": {
@@ -116,7 +107,7 @@
   "week_pct": 63.12,
   "usage_pct": 43.8,
   "work_pct": 72.2,
-  "read_at": "2026-11-06T05:18:00+00:00",
+  "read_at": "2026-11-06T05:21:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -216,7 +207,7 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 13,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -227,12 +218,12 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-06T00:18:00-05:00"
+  "at": "2026-11-06T00:21:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "On the week's line (72% used, 70% past), so today's work is spread until midnight; the machine allows 11 (cut a step: load 11.8 a core is over 10; 1 check ran out of time in the last hour; 13 of...",
+  "why": "On the week's line (73% used, 70% past), so today's work is spread until midnight; the machine allows 11 (cut a step: load 11.8 a core is over 10; 1 check ran out of time in the last hour; 13 of...",
   "n": 1,
   "at": "2026-11-05T23:18:21.668821-05:00"
  },
@@ -300,15 +291,6 @@
    },
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "Land merge-queue improvements first",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T04:38:11.473Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "site",
     "t": "Make Chat only the chat and live on phones",
     "m": "opus",
@@ -348,13 +330,6 @@
    },
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "Land merge-queue improvements first",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "site",
     "t": "Show the real merge steps on Home",
     "s": "next",
@@ -387,9 +362,21 @@
     "t": "Parallel runner jobs share one asset helper",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "tools",
+    "t": "Move runner job sandbox files out of reach",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "Work that speeds up the merge queue is now listed in one file, and the queue, the lanes'...",
+    "at": "2026-11-06T00:19:00-05:00"
+   },
    {
     "w": "Idris",
     "t": "The app now carries the approved Indent icon in every size Apple requires, so Apple will no...",
@@ -399,15 +386,10 @@
     "w": "Pernille",
     "t": "Checked how each widget asks the phone for its next background refresh. The rules match the...",
     "at": "2026-11-05T23:55:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Reports can now show a small picture of the work by area, done and next, drawn by the site's own...",
-    "at": "2026-11-05T23:53:00-05:00"
    }
   ],
   "count": {
-   "next": 440,
+   "next": 443,
    "wait": 44,
    "blocked": 76,
    "you": 19
@@ -427,13 +409,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 3,
-  "total": 6,
-  "at": "12:18 AM",
+  "total": 5,
+  "at": "12:21 AM",
   "why": "",
-  "at_iso": "2026-11-06T05:18:00+00:00",
+  "at_iso": "2026-11-06T05:21:00+00:00",
   "started": "11:18 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 11:18 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:18 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:18 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:21 AM ET</p></section>"
  }
 }

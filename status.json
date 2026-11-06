@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T22:58:42.917929+00:00",
+ "at": "2026-11-06T23:01:46.646286+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,12 +12,21 @@
    "task": "[review] T-3142 run marker re-review",
    "model": "opus",
    "started": "2026-11-06T22:57:34.136Z",
-   "seconds": 68,
+   "seconds": 252,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2587 move finished folders to SSD",
+   "model": "opus",
+   "started": "2026-11-06T22:59:17.149Z",
+   "seconds": 149,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille",
+ "who": "Pernille, Odalys",
  "recent": [
   {
    "name": "odalys",
@@ -98,7 +107,7 @@
   "week_pct": 63.9,
   "usage_pct": 41.0,
   "work_pct": 68.8,
-  "read_at": "2026-11-06T22:58:00+00:00",
+  "read_at": "2026-11-06T23:01:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -224,7 +233,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T17:58:00-05:00"
+  "at": "2026-11-06T18:01:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -245,11 +254,12 @@
   },
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, after T-1035 lands (personal-account...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-2587 move finished folders to SSD",
+   "model": "opus",
+   "since": "2026-11-06T22:59:17.149Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Idris",
@@ -293,6 +303,15 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T22:57:34.136Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stop the SSD hangs, then finish SSD defaults",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T22:59:17.149Z",
     "o": "c"
    }
   ],
@@ -407,13 +426,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 2,
-  "total": 3,
-  "at": "5:58 PM",
+  "total": 4,
+  "at": "6:01 PM",
   "why": "",
-  "at_iso": "2026-11-06T22:58:00+00:00",
+  "at_iso": "2026-11-06T23:01:00+00:00",
   "started": "4:25 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:58 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:01 PM ET</p></section>"
  }
 }

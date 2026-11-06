@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T22:49:32.811683+00:00",
+ "at": "2026-11-06T22:52:38.038359+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,34 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-3137 Shortcut cancel row",
-   "model": "opus",
-   "started": "2026-11-06T22:43:03.393Z",
-   "seconds": 389,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[tools] T-2587 Simulator devices to SSD",
    "model": "opus",
    "started": "2026-11-06T22:46:40.658Z",
-   "seconds": 172,
+   "seconds": 357,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-3138 run detail from tail",
+   "model": "opus",
+   "started": "2026-11-06T22:50:20.417Z",
+   "seconds": 137,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Odalys",
+ "who": "Odalys, Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-3137 Shortcut cancel row",
+   "model": "opus",
+   "started": "2026-11-06T22:43:03.393Z",
+   "seconds": null,
+   "finished": "2026-11-06T22:50:05.097000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3015 hung SSD recovery",
@@ -51,20 +59,12 @@
    "started": "2026-11-06T22:13:55.634Z",
    "seconds": null,
    "finished": "2026-11-06T22:23:38.815000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-3134 trim worker memory files",
-   "model": "sonnet",
-   "started": "2026-11-06T22:15:07.946Z",
-   "seconds": null,
-   "finished": "2026-11-06T22:20:46.539000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 404,
+  "runnable_count": 403,
   "blocked_count": 121
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 63.9,
   "usage_pct": 41.0,
   "work_pct": 68.8,
-  "read_at": "2026-11-06T22:49:00+00:00",
+  "read_at": "2026-11-06T22:52:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -232,7 +232,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T17:49:00-05:00"
+  "at": "2026-11-06T17:52:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -243,20 +243,20 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-3137 Shortcut cancel row",
-   "model": "opus",
-   "since": "2026-11-06T22:43:03.393Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-2587 Simulator devices to SSD",
    "model": "opus",
    "since": "2026-11-06T22:46:40.658Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-3138 run detail from tail",
+   "model": "opus",
+   "since": "2026-11-06T22:50:20.417Z",
    "next": [],
    "effort": "high"
   },
@@ -296,21 +296,21 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Log a Shortcut run that Shortcuts cancels",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T22:43:03.393Z",
-    "o": "c"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Stop the SSD hangs, then finish SSD defaults",
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T22:46:40.658Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Build the run's detail from the output's tail only",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T22:50:20.417Z",
     "o": "c"
    }
   ],
@@ -388,6 +388,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "When Shortcuts cancels a script run, for its time limit or because the person stopped it, the...",
+    "at": "2026-11-06T17:49:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "When the company's external drive stops answering, the Mac mini now unmounts and remounts it by...",
     "at": "2026-11-06T17:45:00-05:00"
@@ -396,15 +401,10 @@
     "w": "Odalys",
     "t": "Two lanes adding experiment records at once could weave them into each other and break the...",
     "at": "2026-11-06T17:41:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Eight stuck batches of finished work are sorted: three are already in the product, two are sent...",
-    "at": "2026-11-06T17:31:00-05:00"
    }
   ],
   "count": {
-   "next": 404,
+   "next": 403,
    "wait": 42,
    "blocked": 79,
    "you": 20
@@ -428,10 +428,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "5:49 PM",
+  "at": "5:52 PM",
   "why": "",
-  "at_iso": "2026-11-06T22:49:00+00:00",
+  "at_iso": "2026-11-06T22:52:00+00:00",
   "started": "4:25 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:52 PM ET</p></section>"
  }
 }

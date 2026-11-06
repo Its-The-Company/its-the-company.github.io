@@ -26,7 +26,8 @@ if(!ms)return;var r=ms[a]||null,p=set(row,'five',r&&r.five,5);set(row,'week',r&&
 var pz=document.getElementById('lk-pz');if(pz&&ms){pz.hidden=false;pz.querySelector('b').textContent=z}}
 S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});
 // T-2667 (T-2469, friesevan #41 c6650882035): Running follows every status, from lanes.js's sources (the main account's tasks,
-// then each personal row not done), plus the tasks the build saw in a test or merge queue (data-life). Each task's stage
+// then each personal row not done); T-3009: only those (an agent at work now). The tasks the build saw in a test or merge
+// stage are counted apart in #lk-wq (Waiting for tests, Waiting to merge), from data-life's stages. Each task's stage
 // comes from the build's machine records, else Review for a review task, else Coding. Sorted by stage (last first, or first
 // first), filtered by a chip, four cards (three at 390) before Show more; the choice is kept in localStorage.
 document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,box=document.getElementById('lk-run');if(!box)return;
@@ -63,12 +64,13 @@ if(so)so.onclick=function(){up=!up;render()};['lk-run-more','lk-run-more-top'].f
 // T-2833: the idle alarm (no work session for 15+ minutes while work is allowed) follows every status too.
 function idle(st){var q=st.idle,sf=document.getElementById('lk-sf'),ie=document.getElementById('lk-idle');if(sf&&!ie){ie=document.createElement('p');ie.id='lk-idle';ie.className='meta lk-idle';sf.insertBefore(ie,sf.firstChild)}
 if(ie){if(q&&q.why&&q.since){var mn=Math.max(0,Math.round((Date.now()-Date.parse(q.since))/6e4));ie.textContent='No work session for '+(mn>=60?Math.floor(mn/60)+' h '+(mn%60)+' m':mn+' min')+' while work is allowed: '+q.why+'.'+(q.healed&&q.healed.length?' Done: '+q.healed.join('; ')+'.':'');ie.hidden=false}else ie.hidden=true}}
-function draw(st,isPub){var l=S.lane.main(st,isPub).concat(S.lane.rows(st).filter(function(r){return!r.d})),seen={},u=[],now=Date.now(),o={},wk,
-late=L.at?Math.max(0,Math.round((now-L.at)/6e4)):0;
+function draw(st,isPub){var l=S.lane.main(st,isPub).concat(S.lane.rows(st).filter(function(r){return!r.d})),seen={},u=[],now=Date.now(),o={},wk;
 l.forEach(function(r){var t=String(r.t||r.task||''),id=r.task||(t.match(/\bT-\d+/)||[''])[0],k=id||nm(t),s=(L.st||{})[id],m;if(r.w)o[String(r.w).toLowerCase()]=1;if(!k||seen[k])return;seen[k]=1;
 m=r.at?Math.round((now-Date.parse(r.at))/6e4):NaN;u.push({id:id,t:nm(r.t||r.task),w:[r.w],m:r.m,min:m>=0?m:-1,s:s?s[0]:r.k==='review'?'review':'coding',n:s?s[1]:''})});
-(L.q||[]).forEach(function(x){if(seen[x.id])return;seen[x.id]=1;u.push(Object.assign({},x,{min:x.min>=0?x.min+late:-1}))});
 items=u;render();wk=document.getElementById('lk-working');if(wk)wk.textContent=Object.keys(o).length+' working';idle(st)}
+(function(){var W={tests:{testq:1,testing:1},merge:{mergeq:1,merging:1}},st=L.st||{};
+[].forEach.call(document.querySelectorAll('#lk-wq a[data-wq]'),function(a){var w=W[a.getAttribute('data-wq')]||{},n=0,b=a.querySelector('b');
+Object.keys(st).forEach(function(k){if(st[k]&&w[st[k][0]])n++});if(b)b.textContent=n})})();
 render();if(S&&S.onStatus&&S.lane){S.onStatus.push(draw);if(S.status&&S.status())draw(S.status(),true)}});
 // T-2940: Queued folds behind a button at the top of its list; the one Lock In dropdown in Usage (main account, all lanes or
 // any subset) posts through lockin.js (S.lockSet: LOCK IN / UNLOCK on the Chat issue) and personal.js (S.laneLock: the lane's

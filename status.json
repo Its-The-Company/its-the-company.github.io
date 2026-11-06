@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "at": "2026-11-06T10:02:52.223272+00:00",
+ "at": "2026-11-06T10:14:15.772620+00:00",
  "session": {
-  "active": false,
+  "active": true,
   "kind": "",
   "started": null
  },
@@ -12,33 +12,33 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 475,
+  "runnable_count": 473,
   "blocked_count": 120
  },
  "meter": {
   "five_hour": {
-   "pct": 15.0,
-   "resets_at": "2026-11-06T09:39:59.976912+00:00",
+   "pct": 0.0,
+   "resets_at": "2026-11-06T14:40:00.224664+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 85.0,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 75.0,
-   "resets_at": "2026-11-08T06:59:59.976933+00:00",
+   "resets_at": "2026-11-08T07:00:00.224687+00:00",
    "used_words": "of your weekly allowance used",
    "left": 25.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 1.0,
-   "resets_at": "2026-11-08T06:59:59.977115+00:00",
+   "resets_at": "2026-11-08T07:00:00.224862+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-06T04:25:13.896857-05:00"
+  "read_at": "2026-11-06T05:14:04.936773-05:00"
  },
  "ui": {
-  "week_pct": 0.713,
+  "week_pct": 0.712,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -50,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-06T04:40:14-05:00",
+ "next_tick": null,
  "personal": {
-  "week_pct": 64.55,
+  "week_pct": 64.41,
   "usage_pct": 43.1,
   "work_pct": 71.2,
-  "read_at": "2026-11-06T10:04:00+00:00",
+  "read_at": "2026-11-06T10:14:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -100,7 +100,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T04:49:47-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "b",
@@ -111,7 +112,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T04:54:07-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
@@ -134,7 +136,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T04:54:07-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b2",
@@ -156,7 +159,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T04:43:53-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    }
   ]
  },
@@ -178,7 +182,7 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -189,13 +193,13 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T05:04:00-05:00"
+  "at": "2026-11-06T05:14:00-05:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": {
   "since": "2026-11-06T04:41:00-05:00",
-  "minutes": 21,
-  "why": "a tick has spent 36 min on steps before the session",
+  "minutes": 33,
+  "why": "a tick has spent 5 min on steps before the session",
   "healed": []
  },
  "pool": null,
@@ -325,23 +329,23 @@
   ],
   "done": [
    {
+    "w": "Idris+operator",
+    "t": "The App Store privacy check now reports a runaway file scan before anything else, so a scan that...",
+    "at": "2026-11-06T05:09:00-05:00"
+   },
+   {
+    "w": "Idris+operator",
+    "t": "The privacy check's tests now hold its newest file-scan rules, so switching any of those rules...",
+    "at": "2026-11-06T05:09:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Home's Merging card now names the change being merged and its step, split into the checks that...",
     "at": "2026-11-06T03:52:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Home's top bar now stays pinned on phones, Usage has one Lock In dropdown (main, all lanes or...",
-    "at": "2026-11-06T03:31:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The merge step that runs before each work session now stops after five minutes instead of...",
-    "at": "2026-11-06T03:09:00-05:00"
    }
   ],
   "count": {
-   "next": 475,
+   "next": 473,
    "wait": 43,
    "blocked": 77,
    "you": 20
@@ -363,10 +367,10 @@
   "main": 0,
   "lanes": 6,
   "total": 6,
-  "at": "5:04 AM",
+  "at": "5:14 AM",
   "why": "",
-  "at_iso": "2026-11-06T10:04:00+00:00",
+  "at_iso": "2026-11-06T10:14:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 5:04 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 5:14 AM ET</p></section>"
  }
 }

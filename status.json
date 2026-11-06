@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T17:22:08.004880+00:00",
+ "at": "2026-11-06T17:25:09.294942+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,21 @@
    "task": "[tools] T-3084 machine records out of git",
    "model": "opus",
    "started": "2026-11-06T15:45:41.106Z",
-   "seconds": 5786,
+   "seconds": 5968,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
   {
    "name": "odalys",
    "task": "[site] T-2977 main site test green",
    "model": "opus",
    "started": "2026-11-06T17:19:20.550Z",
-   "seconds": 167,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-06T17:24:47.600000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3090 automatic merge-first list",
@@ -99,7 +98,7 @@
   "week_pct": 64.37,
   "usage_pct": 41.9,
   "work_pct": 69.7,
-  "read_at": "2026-11-06T17:22:00+00:00",
+  "read_at": "2026-11-06T17:25:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -120,7 +119,7 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -131,7 +130,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T12:22:00-05:00"
+  "at": "2026-11-06T12:25:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -201,15 +200,6 @@
     "e": "high",
     "at": "2026-11-06T15:45:41.106Z",
     "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Make main's site test green again",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T17:19:20.550Z",
-    "o": "c"
    }
   ],
   "open": [
@@ -217,13 +207,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Put the MacBook runner fixes first",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Make main's site test green again",
     "s": "next",
     "o": "c"
    },
@@ -282,9 +265,21 @@
     "t": "Parallel runner jobs share one asset helper",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "tools",
+    "t": "Move runner job sandbox files out of reach",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "The website's main test is green again (93 of 93): its Home checks now match the Home the...",
+    "at": "2026-11-06T12:24:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "Tasks that speed up merging now go to the front of the queue by themselves: each new board line...",
@@ -293,11 +288,6 @@
    {
     "w": "Idris",
     "t": "The widget's background runner now writes its run history and status; the remaining test runs...",
-    "at": "2026-11-06T12:03:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The test run this step waited for came back and named the one failing check in the widget's...",
     "at": "2026-11-06T12:03:00-05:00"
    }
   ],
@@ -321,13 +311,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "12:22 PM",
+  "total": 1,
+  "at": "12:25 PM",
   "why": "",
-  "at_iso": "2026-11-06T17:22:00+00:00",
+  "at_iso": "2026-11-06T17:25:00+00:00",
   "started": "10:44 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:44 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:22 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:44 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:25 PM ET</p></section>"
  }
 }

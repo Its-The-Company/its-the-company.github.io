@@ -1,18 +1,37 @@
 {
  "schema": 1,
- "at": "2026-11-06T13:15:53.031450+00:00",
+ "at": "2026-11-06T13:18:55.474722+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-06T08:15:53-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "pernille",
+   "task": "[test] T-2961 fix two red suites on main",
+   "model": "opus",
+   "started": "2026-11-06T13:17:24.790Z",
+   "seconds": 90,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-1440 widget refresh control and age line",
+   "model": "opus",
+   "started": "2026-11-06T13:17:57.979Z",
+   "seconds": 57,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Pernille, Idris",
  "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 388,
+  "runnable_count": 387,
   "blocked_count": 123
  },
  "meter": {
@@ -55,7 +74,7 @@
   "week_pct": 63.88,
   "usage_pct": 42.6,
   "work_pct": 70.1,
-  "read_at": "2026-11-06T13:15:00+00:00",
+  "read_at": "2026-11-06T13:18:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -199,17 +218,39 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T08:15:00-05:00"
+  "at": "2026-11-06T08:18:00-05:00"
  },
  "next_tick_why": "session",
  "idle": {
   "since": "2026-11-06T07:49:44-05:00",
-  "minutes": 26,
+  "minutes": 29,
   "why": "a tick has spent 5 min on steps before the session",
   "healed": []
  },
- "pool": null,
+ "pool": {
+  "why": "Spread: 24% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 17 of 25 lands failed in 3 hours (11 red))",
+  "n": 2,
+  "at": "2026-11-06T08:15:43.486375-05:00"
+ },
  "lanes": [
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[test] T-2961 fix two red suites on main",
+   "model": "opus",
+   "since": "2026-11-06T13:17:24.790Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-1440 widget refresh control and age line",
+   "model": "opus",
+   "since": "2026-11-06T13:17:57.979Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Odalys",
    "state": "next",
@@ -219,25 +260,9 @@
    "next": []
   },
   {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -260,7 +285,26 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Pernille",
+    "k": "test",
+    "t": "Fix two Python suites red on clean main",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T13:17:24.790Z",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Add a refresh control and age line to widgets",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T13:17:57.979Z",
+    "o": "c"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -335,6 +379,11 @@
   ],
   "done": [
    {
+    "w": "Maren",
+    "t": "Three code-drawn logo options for the site's top bar were drawn and previewed on phone and...",
+    "at": "2026-11-06T08:17:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "The review of the change that lets MacBook test jobs run side by side is closed as a pass: each...",
     "at": "2026-11-06T08:12:00-05:00"
@@ -343,15 +392,10 @@
     "w": "Odalys",
     "t": "A stopped lane session had queued the a3 account's held work (T-1433: a board note, an event and...",
     "at": "2026-11-06T08:10:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Account b's stopped session left work that was either already queued (T-1451: lanes skip Swift...",
-    "at": "2026-11-06T08:10:00-05:00"
    }
   ],
   "count": {
-   "next": 388,
+   "next": 387,
    "wait": 43,
    "blocked": 80,
    "you": 20
@@ -370,13 +414,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 5,
-  "total": 5,
-  "at": "8:15 AM",
+  "total": 7,
+  "at": "8:18 AM",
   "why": "",
-  "at_iso": "2026-11-06T13:15:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 8:15 AM ET</p></section>"
+  "at_iso": "2026-11-06T13:18:00+00:00",
+  "started": "8:15 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:15 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 8:18 AM ET</p></section>"
  }
 }

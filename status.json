@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T22:11:58.115203+00:00",
+ "at": "2026-11-06T22:14:58.639712+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,33 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-1140 app activity run log",
+   "name": "pernille",
+   "task": "[review] T-3133 run log review",
    "model": "opus",
-   "started": "2026-11-06T22:05:12.435Z",
-   "seconds": 405,
+   "started": "2026-11-06T22:13:55.634Z",
+   "seconds": 63,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Pernille",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-3123 restart after dry key",
    "model": "opus",
    "started": "2026-11-06T22:05:46.967Z",
-   "seconds": 371,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-06T22:14:42.797000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-1140 app activity run log",
+   "model": "opus",
+   "started": "2026-11-06T22:05:12.435Z",
+   "seconds": null,
+   "finished": "2026-11-06T22:13:13.930000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3117 Investor replies in 5 min",
@@ -43,20 +50,12 @@
    "started": "2026-11-06T21:40:51.284Z",
    "seconds": null,
    "finished": "2026-11-06T22:04:48.109000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3100 skip empty API keys",
-   "model": "opus",
-   "started": "2026-11-06T21:28:40.424Z",
-   "seconds": null,
-   "finished": "2026-11-06T21:40:24.711000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 395,
+  "runnable_count": 397,
   "blocked_count": 121
  },
  "meter": {
@@ -99,7 +98,7 @@
   "week_pct": 63.9,
   "usage_pct": 41.0,
   "work_pct": 68.8,
-  "read_at": "2026-11-06T22:11:00+00:00",
+  "read_at": "2026-11-06T22:15:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -144,7 +143,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T16:50:00-05:00",
-    "n": "Jeremy"
+    "n": "Jeremy",
+    "d": 1
    },
    {
     "lane": "b",
@@ -244,7 +244,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T17:11:00-05:00"
+  "at": "2026-11-06T17:15:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -255,35 +255,34 @@
  },
  "lanes": [
   {
-   "name": "Idris",
+   "name": "Pernille",
    "state": "running",
-   "task": "[build] T-1140 app activity run log",
+   "task": "[review] T-3133 run log review",
    "model": "opus",
-   "since": "2026-11-06T22:05:12.435Z",
+   "since": "2026-11-06T22:13:55.634Z",
    "next": [],
    "effort": "high"
   },
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-3123 restart after dry key",
-   "model": "opus",
-   "since": "2026-11-06T22:05:46.967Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Ines",
    "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Pernille",
+   "name": "Idris",
    "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -308,21 +307,12 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Record each widget run in the app's activity log",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review how the app records widget runs",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-06T22:05:12.435Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Restart main at once after a dry key",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T22:05:46.967Z",
+    "at": "2026-11-06T22:13:55.634Z",
     "o": "c"
    }
   ],
@@ -401,6 +391,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "When an API key runs dry mid-session, the next session now starts without first waiting up to...",
+    "at": "2026-11-06T17:14:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "An Investor message no longer waits on a stopped session or on housekeeping: every running lane...",
     "at": "2026-11-06T17:05:00-05:00"
    },
@@ -408,15 +403,10 @@
     "w": "Odalys",
     "t": "The dispatcher's first day is measured: the share of product work and the landing rate both...",
     "at": "2026-11-06T17:05:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Every way a widget run in the home-screen widget can end now leaves a row in the activity log...",
-    "at": "2026-11-06T17:04:00-05:00"
    }
   ],
   "count": {
-   "next": 395,
+   "next": 397,
    "wait": 42,
    "blocked": 79,
    "you": 20
@@ -428,6 +418,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -436,13 +427,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 5,
-  "total": 7,
-  "at": "5:11 PM",
+  "total": 6,
+  "at": "5:15 PM",
   "why": "",
-  "at_iso": "2026-11-06T22:11:00+00:00",
+  "at_iso": "2026-11-06T22:15:00+00:00",
   "started": "4:25 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 5:11 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 1, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 5:15 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T22:46:28.634701+00:00",
+ "at": "2026-11-06T22:49:32.811683+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,12 +12,21 @@
    "task": "[build] T-3137 Shortcut cancel row",
    "model": "opus",
    "started": "2026-11-06T22:43:03.393Z",
-   "seconds": 205,
+   "seconds": 389,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2587 Simulator devices to SSD",
+   "model": "opus",
+   "started": "2026-11-06T22:46:40.658Z",
+   "seconds": 172,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris",
+ "who": "Idris, Odalys",
  "recent": [
   {
    "name": "odalys",
@@ -98,7 +107,7 @@
   "week_pct": 63.9,
   "usage_pct": 41.0,
   "work_pct": 68.8,
-  "read_at": "2026-11-06T22:46:00+00:00",
+  "read_at": "2026-11-06T22:49:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -120,7 +129,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T17:36:31-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a2",
@@ -215,14 +225,14 @@
   "gate": "closed",
   "ssd": {
    "mounted": true,
-   "free_gb": 485
+   "free_gb": 500
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T17:46:00-05:00"
+  "at": "2026-11-06T17:49:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -243,11 +253,12 @@
   },
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, after T-1035 lands (personal-account...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-2587 Simulator devices to SSD",
+   "model": "opus",
+   "since": "2026-11-06T22:46:40.658Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -291,6 +302,15 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T22:43:03.393Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stop the SSD hangs, then finish SSD defaults",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T22:46:40.658Z",
     "o": "c"
    }
   ],
@@ -405,13 +425,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 2,
-  "total": 3,
-  "at": "5:46 PM",
+  "total": 4,
+  "at": "5:49 PM",
   "why": "",
-  "at_iso": "2026-11-06T22:46:00+00:00",
+  "at_iso": "2026-11-06T22:49:00+00:00",
   "started": "4:25 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:46 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:49 PM ET</p></section>"
  }
 }

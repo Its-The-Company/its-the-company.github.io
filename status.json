@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T16:42:37.136438+00:00",
+ "at": "2026-11-06T16:45:40.348956+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,30 @@
    "task": "[tools] T-3084 machine records out of git",
    "model": "opus",
    "started": "2026-11-06T15:45:41.106Z",
-   "seconds": 3416,
+   "seconds": 3599,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3083 replay merge policies",
+   "task": "[tools] T-3090 automatic merge-first list",
    "model": "opus",
-   "started": "2026-11-06T16:00:17.300Z",
-   "seconds": 2539,
+   "started": "2026-11-06T16:45:20.009Z",
+   "seconds": 20,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3083 replay merge policies",
+   "model": "opus",
+   "started": "2026-11-06T16:00:17.300Z",
+   "seconds": null,
+   "finished": "2026-11-06T16:45:05.247000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3082 merge attempt timelines",
@@ -40,7 +48,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 410,
+  "runnable_count": 407,
   "blocked_count": 121
  },
  "meter": {
@@ -83,7 +91,7 @@
   "week_pct": 64.37,
   "usage_pct": 41.9,
   "work_pct": 69.7,
-  "read_at": "2026-11-06T16:42:00+00:00",
+  "read_at": "2026-11-06T16:45:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -115,7 +123,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T11:42:00-05:00"
+  "at": "2026-11-06T11:45:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -189,10 +197,10 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Replay past merge attempts under each candidate policy",
+    "t": "Put merge-improving tasks first automatically",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-06T16:00:17.300Z",
+    "at": "2026-11-06T16:45:20.009Z",
     "o": "c"
    }
   ],
@@ -222,13 +230,6 @@
     "w": "Odalys",
     "k": "site",
     "t": "Remove the controls above the chat on the...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Replay past merge attempts under each...",
     "s": "next",
     "o": "c"
    },
@@ -266,27 +267,34 @@
     "t": "Keep real packages out until the sandbox is...",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "tools",
+    "t": "Parallel runner jobs share one asset helper",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Odalys",
-    "t": "Every merge attempt since 11-05 00:48 is now a step-by-step timeline; finished work spends 95%...",
-    "at": "2026-11-06T10:59:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "When a work session is stopped early so a due report can run, the run loop wrongly logs it as a...",
-    "at": "2026-11-06T10:58:00-05:00"
+    "t": "Not built, as the plan says: the replay of the real merge attempts found that capping each...",
+    "at": "2026-11-06T11:44:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "A stopped session's finished bookkeeping was queued to land again without a half-done test, and...",
-    "at": "2026-11-06T10:58:00-05:00"
+    "t": "A replay of yesterday's real merge attempts says today's three land changes should raise...",
+    "at": "2026-11-06T11:43:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "The experiment ledger's check passes again: two pairs of entries that shared a number now each...",
+    "at": "2026-11-06T11:43:00-05:00"
    }
   ],
   "count": {
-   "next": 410,
+   "next": 407,
    "wait": 42,
    "blocked": 79,
    "you": 20
@@ -308,10 +316,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "11:42 AM",
+  "at": "11:45 AM",
   "why": "",
-  "at_iso": "2026-11-06T16:42:00+00:00",
+  "at_iso": "2026-11-06T16:45:00+00:00",
   "started": "10:44 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:44 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:42 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:44 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:45 AM ET</p></section>"
  }
 }

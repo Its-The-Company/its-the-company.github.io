@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-06T12:09:07.089519+00:00",
+ "at": "2026-11-06T12:12:11.694868+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,30 @@
    "task": "[tools] T-2616 land on first try",
    "model": "opus",
    "started": "2026-11-06T11:32:02.665Z",
-   "seconds": 2224,
+   "seconds": 2409,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[site] T-2936 Bottlenecks split",
+   "task": "[ops] T-2927 T-2969 overdue measurements",
    "model": "opus",
-   "started": "2026-11-06T11:52:32.863Z",
-   "seconds": 994,
+   "started": "2026-11-06T12:10:33.869Z",
+   "seconds": 97,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[site] T-2936 Bottlenecks split",
+   "model": "opus",
+   "started": "2026-11-06T11:52:32.863Z",
+   "seconds": null,
+   "finished": "2026-11-06T12:09:59.866000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2905 merge fixes as Coding",
@@ -48,7 +56,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 480,
+  "runnable_count": 479,
   "blocked_count": 123
  },
  "meter": {
@@ -91,7 +99,7 @@
   "week_pct": 64.29,
   "usage_pct": 43.0,
   "work_pct": 70.6,
-  "read_at": "2026-11-06T12:09:00+00:00",
+  "read_at": "2026-11-06T12:12:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -205,7 +213,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T07:09:00-05:00"
+  "at": "2026-11-06T07:12:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -278,11 +286,11 @@
    },
    {
     "w": "Odalys",
-    "k": "site",
-    "t": "Split the Bottlenecks panel by the new merge steps",
+    "k": "ops",
+    "t": "Measure the memory archive experiment OPT-056",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-06T11:52:32.863Z",
+    "at": "2026-11-06T12:10:33.869Z",
     "o": "c"
    }
   ],
@@ -361,13 +369,13 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "When a task's merge is refused and its owner commits a fix, Home now shows that fix time as...",
-    "at": "2026-11-06T06:52:00-05:00"
+    "t": "Home's Bottlenecks panel now shows one bar per cause for hours and for usage, splits merging...",
+    "at": "2026-11-06T07:09:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "Closed with its continuation T-2713 (MacBook land checks: the MacBook tests finished work...",
-    "at": "2026-11-06T06:31:00-05:00"
+    "t": "When a task's merge is refused and its owner commits a fix, Home now shows that fix time as...",
+    "at": "2026-11-06T06:52:00-05:00"
    },
    {
     "w": "Odalys",
@@ -376,18 +384,30 @@
    }
   ],
   "count": {
-   "next": 480,
+   "next": 479,
    "wait": 43,
    "blocked": 80,
    "you": 20
   }
  },
  "qr": [],
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6684520762",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Can you explain why why the..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -398,10 +418,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "7:09 AM",
+  "at": "7:12 AM",
   "why": "",
-  "at_iso": "2026-11-06T12:09:00+00:00",
+  "at_iso": "2026-11-06T12:12:00+00:00",
   "started": "6:26 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:09 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:12 AM ET</p></section>"
  }
 }

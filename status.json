@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T11:16:00.776618+00:00",
+ "at": "2026-11-07T11:19:04.534466+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,30 @@
    "task": "[tools] T-3206 supervisor_test red on main",
    "model": "opus",
    "started": "2026-11-07T10:52:43.753Z",
-   "seconds": 1397,
+   "seconds": 1580,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "odalys",
+   "task": "[site] T-3201 both machines on Home",
+   "model": "opus",
+   "started": "2026-11-07T11:17:55.655Z",
+   "seconds": 68,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys x2",
+ "recent": [
   {
    "name": "maren",
    "task": "[report] morning",
    "model": "opus",
    "started": "2026-11-07T11:10:26.853Z",
-   "seconds": 333,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Maren",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-07T11:17:17.033000+00:00"
+  },
   {
    "name": "idris",
    "task": "[test] T-3240 StoreKit timeout on MacBook",
@@ -99,7 +107,7 @@
   "week_pct": 63.03,
   "usage_pct": 38.4,
   "work_pct": 67.6,
-  "read_at": "2026-11-07T11:16:00+00:00",
+  "read_at": "2026-11-07T11:19:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -139,7 +147,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-07T06:16:00-05:00"
+  "at": "2026-11-07T06:19:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -155,15 +163,6 @@
    "task": "[tools] T-3206 supervisor_test red on main",
    "model": "opus",
    "since": "2026-11-07T10:52:43.753Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[report] morning",
-   "model": "opus",
-   "since": "2026-11-07T11:10:26.853Z",
    "next": [],
    "effort": "high"
   },
@@ -192,6 +191,14 @@
    "next": []
   },
   {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren+Odalys, P1, Model: Sonnet medium. Investor...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P1, seen by Pernille in T-2376 (4b123c9b1, 20:1x...",
@@ -213,13 +220,14 @@
     "task": "T-3206"
    },
    {
-    "w": "Maren",
-    "k": "report",
-    "t": "Morning",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Show both machines' memory and storage on Home",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-07T11:10:26.853Z",
-    "o": "c"
+    "at": "2026-11-07T11:17:55.655Z",
+    "o": "c",
+    "task": "T-3201"
    }
   ],
   "open": [
@@ -338,10 +346,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "6:16 AM",
+  "at": "6:19 AM",
   "why": "",
-  "at_iso": "2026-11-07T11:16:00+00:00",
+  "at_iso": "2026-11-07T11:19:00+00:00",
   "started": "5:48 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:48 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:16 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:48 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:19 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T13:18:13.107214+00:00",
+ "at": "2026-11-07T13:21:18.365261+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,17 +8,25 @@
  },
  "workers": [
   {
-   "name": "ines",
-   "task": "[plan] T-3204 ruling after two refusals",
+   "name": "odalys",
+   "task": "[tools] T-3204 SKIP rows per Ines ruling",
    "model": "opus",
-   "started": "2026-11-07T13:15:58.799Z",
-   "seconds": 134,
+   "started": "2026-11-07T13:18:56.510Z",
+   "seconds": 141,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Ines",
+ "who": "Odalys",
  "recent": [
+  {
+   "name": "ines",
+   "task": "[plan] T-3204 ruling after two refusals",
+   "model": "opus",
+   "started": "2026-11-07T13:15:58.799Z",
+   "seconds": null,
+   "finished": "2026-11-07T13:18:39.515000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3204 land test rows green",
@@ -42,14 +50,6 @@
    "started": "2026-11-07T12:19:26.582Z",
    "seconds": null,
    "finished": "2026-11-07T13:12:54.801000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3258 lands replay stale memory; T-3221 trim",
-   "model": "opus",
-   "started": "2026-11-07T12:41:21.193Z",
-   "seconds": null,
-   "finished": "2026-11-07T13:08:51.254000+00:00"
   }
  ],
  "queue": {
@@ -98,7 +98,7 @@
   "week_pct": 63.03,
   "usage_pct": 38.4,
   "work_pct": 67.6,
-  "read_at": "2026-11-07T13:18:00+00:00",
+  "read_at": "2026-11-07T13:21:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -128,7 +128,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T08:12:00-05:00",
+   "at": "2026-11-07T08:18:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -138,7 +138,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-07T08:18:00-05:00"
+  "at": "2026-11-07T08:21:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -149,26 +149,26 @@
  },
  "lanes": [
   {
-   "name": "Ines",
+   "name": "Odalys",
    "state": "running",
-   "task": "[plan] T-3204 ruling after two refusals",
+   "task": "[tools] T-3204 SKIP rows per Ines ruling",
    "model": "opus",
-   "since": "2026-11-07T13:15:58.799Z",
+   "since": "2026-11-07T13:18:56.510Z",
    "next": [],
    "effort": "high"
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, after T-1035 lands (personal-account...",
-   "model": null,
-   "since": null,
-   "next": []
   },
   {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -201,12 +201,12 @@
  "tasks": {
   "run": [
    {
-    "w": "Ines",
-    "k": "plan",
+    "w": "Odalys",
+    "k": "tools",
     "t": "Find why older land test rows fail here",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-07T13:15:58.799Z",
+    "at": "2026-11-07T13:18:56.510Z",
     "o": "c",
     "task": "T-3204"
    }
@@ -328,10 +328,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "8:18 AM",
+  "at": "8:21 AM",
   "why": "",
-  "at_iso": "2026-11-07T13:18:00+00:00",
+  "at_iso": "2026-11-07T13:21:00+00:00",
   "started": "5:48 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:48 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:18 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:48 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:21 AM ET</p></section>"
  }
 }

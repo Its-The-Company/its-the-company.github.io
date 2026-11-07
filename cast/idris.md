@@ -34,10 +34,8 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 
 ## Open (mine)
 
-- T-0620: <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> fix 8f6e42005 red on its own Simulator test (T-3022); redo on main with Xcode.
-- T-0620 (2026-11-06, T-3022): parked fix 8f6e42005 red on its own Simulator test (testL5Reservations...); rework on main when Xcode is free.
+- T-0620 (2026-11-06, T-3022): <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> fix 8f6e42005 red on its own Simulator test (testL5Reservations...); rework on main when Xcode is free.
 - Lesson T-3022: for a did-not-land line, run tools/parked_verdicts.py <line id> --root <main checkout> first.
-Dated task logs and full lessons: archive.md.
 
 - Lesson T-1404: one Bash call is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
 
@@ -68,9 +66,9 @@ Dated task logs and full lessons: archive.md.
 ## Lessons
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
-- StoreKit, T-0583/T-0589, caret lessons: archive.md.
-
 - T-1861 fe0149caf: T-0678's button must call WidgetWriter.refreshButton (intent rows); mutants-t1861.json unrun. Lock queue can pass 30 min: XC_LOCK_WAIT=3000.
+
+- Lesson T-3217: 50f493ec1 asserted the template drew Updated without reading the fixture; read the fixture before a test claims its content. Runner returns no screenshots: put screen state in the failure message.
 {% endraw %}
 
 

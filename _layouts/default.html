@@ -802,7 +802,7 @@ html,body,.cv-dock textarea,.cv-dock .cv-state{overscroll-behavior-y:auto}
 <a href="{{ '/issues/' | relative_url }}" data-issues{% if page.section == "requests" %} aria-current="page"{% endif %}>Issues{% if page.issues %} <span class="nb"{% if page.issues_at %} title="{{ page.issues }} waiting on the Investors at the site build, {{ page.issues_at }}"{% endif %}>{{ page.issues }}</span>{% endif %}</a>
 <a href="{{ '/reports/' | relative_url }}"{% if page.section == "reports" or page.section == "documents" or page.section == "pitches" or page.section == "infra" %} aria-current="page"{% endif %}>Reports</a>
 </nav>
-<div class="hact"><details class="info"><summary title="About" aria-label="About this site">i</summary><div class="infop"><p>{{ site.disclosure }}</p><a href="{{ '/about.html' | relative_url }}">About the company</a></div></details></div>
+<div class="hact"><details class="info"><summary title="About" aria-label="About this site">i</summary><div class="infop"><p>{{ site.disclosure }}</p><a href="{{ '/about.html' | relative_url }}">About the company</a><p data-scoreboard hidden style="margin:var(--s2) 0 0"><a href="{{ '/scoreboard.html' | relative_url }}">Scoreboard</a></p></div></details></div>
 </div></header>
 <div class="wrap notice-row">
 {% if site.announcement and site.announcement != "" %}<p class="notice announce">{{ site.announcement }}</p>{% endif %}
@@ -821,6 +821,7 @@ html,body,.cv-dock textarea,.cv-dock .cv-state{overscroll-behavior-y:auto}
 <script src="{{ '/assets/bell.js' | relative_url }}"></script>
 <script src="{{ '/assets/swipe.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/badges.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/scoreboard.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/issuecount.js' | relative_url }}" data-count="{{ '/issues.json' | relative_url }}"></script>
 </body>
 </html>

@@ -84,6 +84,84 @@ T-2075, T-2076) and cites no Investor comment itself is not counted. The follow-
 | 43 | T-2474 | 2 d 0 h | open | P2 | - | Bring back or retire the old Overview's dashboard tests | an Investor c6650882035, 2026-11-05T05:53 | |
 
 </div>
+
+
+## Decisions (Ines, 2026-11-07 02:51 ET, T-3214)
+
+The table above is the 01:06 snapshot (43 lines). Refreshed at 02:48 the list held 53: ten more lines had crossed 48 h
+(T-0321, T-0008, T-0485, T-0820, T-1279, T-1281, T-2182, T-2480, T-2667, plus T-0680). All 53, plus T-2547 (crossed 48 h during the pass), are decided below, in
+one pass. Totals: 27 do now (one of them held on the Investors' launcher pick), 20 merged or already done (ticked, each note names the line that holds the work), 7 asked
+once to drop (#41 c6704112921, (private)
+noted on each line, ticked only after the Investors answer). board_tick.py has no priority mode, so a priority change
+is written as a note on the line ("P1 -> P0"); owners were already right except two lines with no owner field (noted).
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: Decisions (Ines, 2026-11-07 02:51 ET, T-3214), scrolls sideways" style="--tw:724px" markdown="1">
+
+| Line | Decision | Why / where |
+|---|---|---|
+| T-0073 | ask once to drop | idea-hunt tool, <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> by the Investors 10-25 |
+| T-0074 | ask once to drop | idea-hunt tool, parked by the Investors 10-25 |
+| T-0321 | merge into T-2456 | the first TestFlight build's Release checks replace this re-run |
+| T-0384 | ask once to drop | study dropped by the Investors; only a P3 fetch_cite fix left |
+| T-0380 | ask once to drop | October report redesign; reports are now a short daily update |
+| T-0381 | ask once to drop | same |
+| T-0382 | ask once to drop | same; rebuilding Reports 1-9 earns nothing |
+| T-0635 | do now, Idris, P2 | approved creative (#95) |
+| T-0637 | done (T-0642) | kinds.json fetch steps; xc-test jobs run on the MacBook |
+| T-0675 | do now, Idris, P0 | the product's core <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> |
+| T-0008 | merge into T-0680 | same device session measures cold start and memory |
+| T-0680 | do now, Idris, P0 | #192 closed; device session |
+| T-0757 | do now, Idris, P1 | owner noted (no owner field) |
+| T-0825 | done (T-0828, T-0934) | personal lane runs |
+| T-0826 | done (T-0828) | both accounts run at once, each to its limits |
+| T-0866 | do now, Idris, P1 | slice 2 is T-1905 |
+| T-0790 | do now, Idris, P1 | ruled: 1.0 lists every saved script (entity follows Projects, T-0843) |
+| T-0851 | do now, Odalys, P2 | T-0849 done |
+| T-0828 | done (T-0874 to T-0880) | slices and review done, lanes running |
+| T-0941 | done (dispatcher) | keys run first while they hold money (tools/dispatch.py KEY_FIRST) |
+| T-0485 | do now, Idris, P2 -> P1 | App Review reject without the links; Terms = Apple's standard licence |
+| T-0820 | merge into T-1216 | option A chosen on #108; details asked nearer launch |
+| T-1216 | do now on its date | waits until 11-17 as the Investors asked; Ines, P2 |
+| T-0989 | merge into T-3191 | "until daily usage" Lock In mode replaces it |
+| T-0990 | merge into T-2667 | old Home gone; day count settled in the new Home |
+| T-1062 | do now, Odalys, P1 | check what the dispatcher left (reports on any account) |
+| T-1005 | do now, Odalys, P2 | standing approval 11-07 01:09 answers its wait |
+| T-1279 | done (409e0b326, #152) | tools/guard_base.py wired in the supervisor |
+| T-1281 | merge into T-1279 | its card became #152, approved and applied |
+| T-1428 | do now, Pernille, P1 | delete tools/pkg_sandbox.py, re-point the test |
+| T-1393 | do now, Pernille, P3 | one parked Swift test file |
+| T-1776 | merge into T-2072, T-2074, T-2075, T-2076 | the four stage lines (T-3215 makes them count) |
+| T-1780 | ask once to drop | approvals now apply on their own |
+| T-1858 | merge into T-2060/T-2061/T-2062 (done), T-2587 | SSD overflow rest |
+| T-2052 | do now, Odalys, P0 | #164 closed; supervisor half can go |
+| T-2586 | do now, Odalys, P1 -> P0 | merge-first standing rule |
+| T-2467 | do now, Odalys, P0 | merge-first |
+| T-2182 | done (faaff6ab7, #180; pins #197) | claims sweep in personal_tick.sh |
+| T-2270 | do now, Idris, P0 | T-2702 landed; upload after T-2456 |
+| T-2330 | merge into T-2470 | runner 13 landed; task-at-the-lock goes to the shared queue |
+| T-2280 | merge into T-2667 | Task Lifecycle moved onto Home; Machine half is T-3201 |
+| T-2308 | do now, Odalys, P1 | also builds This Session (from T-2469) |
+| T-2985 | do now, Odalys, P3 | after T-2667; plan.js budget confirmed |
+| T-2344 | do now, Odalys, P2 | plan.js budget confirmed: 6,144 B raw / 2,560 B gz |
+| T-2346 | do now, Odalys, P1 -> P0 | left: session_end.py stops ending sessions on approve/amendment |
+| T-2372 | do now, Idris, P1 | B-staged item 6 |
+| T-2401 | do now, Odalys, P1 | Investor-requested site work |
+| T-2419 | merge into T-2470 | Simulator count belongs to the shared queue |
+| T-2469 | merge into T-2308 | Home built in T-2667; This Session left |
+| T-2470 | do now, Odalys, P1 | carries T-2419 and T-2330's rest |
+| T-2474 | do now, Odalys, P2 | owner noted (no owner field) |
+| T-2480 | merge into T-2667 | built there (ddd44ec37) |
+| T-2667 | do now, Odalys, P1 | carries T-2280, T-2480, T-0990 |
+| T-2547 | do now on the Investors' pick | held on their launcher choice (#41 c6652979259, no pick yet); Idris+Maren, P2 |
+
+</div>
+
+
+Order until the weekly reset (11-08 02:00): merge and process lines first (T-2467, T-2586, T-2346, T-2052, T-2470,
+T-1062, T-1005), site next (T-2667, T-2308, T-2401, T-2344, T-2985, T-2474, T-0851), app lines as Idris's lane allows
+(T-0675, T-0680, T-2270 first). Odalys holds 15 of the 26; that is the bottleneck, so the site lines may go to any
+free lane that can take them.
 {% endraw %}
 
 </div>

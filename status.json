@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T11:03:53.681802+00:00",
+ "at": "2026-11-07T11:06:54.977633+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,34 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-3217 ProjectsTransferUITests red",
-   "model": "opus",
-   "started": "2026-11-07T10:49:18.642Z",
-   "seconds": 875,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[tools] T-3206 supervisor_test red on main",
    "model": "opus",
    "started": "2026-11-07T10:52:43.753Z",
-   "seconds": 669,
+   "seconds": 851,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[test] T-3240 StoreKit timeout on MacBook",
+   "model": "opus",
+   "started": "2026-11-07T11:06:15.219Z",
+   "seconds": 39,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Odalys",
+ "who": "Odalys, Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-3217 ProjectsTransferUITests red",
+   "model": "opus",
+   "started": "2026-11-07T10:49:18.642Z",
+   "seconds": null,
+   "finished": "2026-11-07T11:05:40.859000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[ops] T-3220 experiment log check",
@@ -83,7 +91,7 @@
   "week_pct": 63.03,
   "usage_pct": 38.4,
   "work_pct": 67.6,
-  "read_at": "2026-11-07T11:03:00+00:00",
+  "read_at": "2026-11-07T11:06:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -113,7 +121,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T05:59:00-05:00",
+   "at": "2026-11-07T06:04:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -123,7 +131,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-07T06:03:00-05:00"
+  "at": "2026-11-07T06:06:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -134,20 +142,20 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-3217 ProjectsTransferUITests red",
-   "model": "opus",
-   "since": "2026-11-07T10:49:18.642Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-3206 supervisor_test red on main",
    "model": "opus",
    "since": "2026-11-07T10:52:43.753Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[test] T-3240 StoreKit timeout on MacBook",
+   "model": "opus",
+   "since": "2026-11-07T11:06:15.219Z",
    "next": [],
    "effort": "high"
   },
@@ -187,16 +195,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Fix the three red tests before build 3",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T10:49:18.642Z",
-    "o": "c",
-    "task": "T-3217"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Fix three test suites that are red on main",
@@ -205,6 +203,16 @@
     "at": "2026-11-07T10:52:43.753Z",
     "o": "c",
     "task": "T-3206"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "Stop the StoreKit timeout failing MacBook Xcode checks",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T11:06:15.219Z",
+    "o": "c",
+    "task": "T-3240"
    }
   ],
   "open": [
@@ -323,10 +331,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "6:03 AM",
+  "at": "6:06 AM",
   "why": "",
-  "at_iso": "2026-11-07T11:03:00+00:00",
+  "at_iso": "2026-11-07T11:06:00+00:00",
   "started": "5:48 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:48 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:03 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:48 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:06 AM ET</p></section>"
  }
 }

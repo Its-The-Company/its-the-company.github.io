@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T07:49:40.876741+00:00",
+ "at": "2026-11-07T07:52:46.355817+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[site] T-3218 hidden Investor Scoreboard",
    "model": "opus",
    "started": "2026-11-07T07:45:27.172Z",
-   "seconds": 253,
+   "seconds": 439,
    "finished": null,
    "effort": "high"
   },
@@ -21,16 +21,7 @@
    "task": "[build] T-3217 fix three red tests",
    "model": "opus",
    "started": "2026-11-07T07:45:33.326Z",
-   "seconds": 247,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "ines",
-   "task": "[ops] T-3214 triage old Investor lines",
-   "model": "opus",
-   "started": "2026-11-07T07:45:37.625Z",
-   "seconds": 243,
+   "seconds": 433,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +30,7 @@
    "task": "[tools] T-3211 confirm runner 21 live",
    "model": "opus",
    "started": "2026-11-07T07:45:42.678Z",
-   "seconds": 238,
+   "seconds": 423,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[tools] T-3213 failed runner job alarms",
    "model": "opus",
    "started": "2026-11-07T07:45:48.133Z",
-   "seconds": 232,
+   "seconds": 418,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[tools] T-3209 plan lines onto main board",
    "model": "opus",
    "started": "2026-11-07T07:45:52.628Z",
-   "seconds": 228,
+   "seconds": 413,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +57,7 @@
    "task": "[tools] T-3204 red land test rows",
    "model": "opus",
    "started": "2026-11-07T07:45:56.882Z",
-   "seconds": 223,
+   "seconds": 409,
    "finished": null,
    "effort": "high"
   },
@@ -75,18 +66,36 @@
    "task": "[tools] T-3069 merge queue waiting cut",
    "model": "opus",
    "started": "2026-11-07T07:46:02.187Z",
-   "seconds": 218,
+   "seconds": 404,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3206 red suites on main",
+   "model": "opus",
+   "started": "2026-11-07T07:52:00.864Z",
+   "seconds": 45,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x6, Idris, Ines",
- "recent": [],
+ "who": "Odalys x7, Idris",
+ "recent": [
+  {
+   "name": "ines",
+   "task": "[ops] T-3214 triage old Investor lines",
+   "model": "opus",
+   "started": "2026-11-07T07:45:37.625Z",
+   "seconds": null,
+   "finished": "2026-11-07T07:51:46.967000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 429,
-  "blocked_count": 108
+  "runnable_count": 412,
+  "blocked_count": 104
  },
  "meter": {
   "five_hour": {
@@ -128,7 +137,7 @@
   "week_pct": 63.59,
   "usage_pct": 38.9,
   "work_pct": 67.8,
-  "read_at": "2026-11-07T07:49:00+00:00",
+  "read_at": "2026-11-07T07:52:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -168,7 +177,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T02:49:00-05:00"
+  "at": "2026-11-07T02:52:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -198,12 +207,11 @@
   },
   {
    "name": "Ines",
-   "state": "running",
-   "task": "[ops] T-3214 triage old Investor lines",
-   "model": "opus",
-   "since": "2026-11-07T07:45:37.625Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Pernille",
@@ -214,17 +222,17 @@
    "next": []
   },
   {
-   "name": "Maren",
+   "name": "Wrenna",
    "state": "next",
-   "task": "Maren+Odalys, P1, Investor an Investor c6651474906 (01:33...",
+   "task": "Wrenna, P1, seen by Pernille in T-2376 (4b123c9b1, 20:1x...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Wrenna",
+   "name": "Maren",
    "state": "next",
-   "task": "Wrenna, P1, seen by Pernille in T-2376 (4b123c9b1, 20:1x...",
+   "task": "Maren, P1, Investor an Investor c6691557786 (12:50 11-06;...",
    "model": null,
    "since": null,
    "next": []
@@ -251,16 +259,6 @@
     "at": "2026-11-07T07:45:33.326Z",
     "o": "c",
     "task": "T-3217"
-   },
-   {
-    "w": "Ines",
-    "k": "ops",
-    "t": "Triage the old Investor lines in one pass",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T07:45:37.625Z",
-    "o": "c",
-    "task": "T-3214"
    },
    {
     "w": "Odalys",
@@ -311,6 +309,16 @@
     "at": "2026-11-07T07:46:02.187Z",
     "o": "c",
     "task": "T-3069"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix three test suites that are red on main",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T07:52:00.864Z",
+    "o": "c",
+    "task": "T-3206"
    }
   ],
   "open": [
@@ -387,26 +395,26 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "t": "An old stopped session's 17 leftover changes were checked one by one; all are already in the...",
-    "at": "2026-11-07T02:26:00-05:00"
+    "w": "Ines",
+    "t": "Every open task from an Investor message two or more days old now has one decision: 27 stay at...",
+    "at": "2026-11-07T02:51:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "The Issues page now shows each open question as a card with the question in plain words, our...",
-    "at": "2026-11-07T02:13:00-05:00"
+    "w": "Ines",
+    "t": "Folded into its stage lines: T-2072 (bell on every page), T-2074 (documents under Reports),...",
+    "at": "2026-11-07T02:50:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "The app's test code compiles again, so finished work can be tested and merged; two small Swift...",
-    "at": "2026-11-07T01:22:00-05:00"
+    "w": "Ines",
+    "t": "Folded into the SSD lines, all done: T-2060 (SSD as default), T-2061 (both disks shown), T-2062...",
+    "at": "2026-11-07T02:50:00-05:00"
    }
   ],
   "count": {
-   "next": 429,
-   "wait": 40,
-   "blocked": 68,
-   "you": 14
+   "next": 412,
+   "wait": 37,
+   "blocked": 67,
+   "you": 12
   }
  },
  "qr": [],
@@ -429,10 +437,10 @@
   "main": 8,
   "lanes": 0,
   "total": 8,
-  "at": "2:49 AM",
+  "at": "2:52 AM",
   "why": "",
-  "at_iso": "2026-11-07T07:49:00+00:00",
+  "at_iso": "2026-11-07T07:52:00+00:00",
   "started": "2:43 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 8, started 2:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:49 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 8, started 2:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:52 AM ET</p></section>"
  }
 }

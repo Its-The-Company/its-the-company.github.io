@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T11:58:42.984997+00:00",
+ "at": "2026-11-07T12:01:47.340929+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-3206 supervisor_test red on main",
    "model": "opus",
    "started": "2026-11-07T10:52:43.753Z",
-   "seconds": 3959,
+   "seconds": 4143,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[site] T-2667 Home slice: Task Lifecycle recut, chat hunk",
    "model": "opus",
    "started": "2026-11-07T11:49:05.888Z",
-   "seconds": 577,
+   "seconds": 761,
    "finished": null,
    "effort": "high"
   }
@@ -64,7 +64,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 412,
+  "runnable_count": 418,
   "blocked_count": 106
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 63.03,
   "usage_pct": 38.4,
   "work_pct": 67.6,
-  "read_at": "2026-11-07T11:58:00+00:00",
+  "read_at": "2026-11-07T12:01:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -137,7 +137,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T06:54:00-05:00",
+   "at": "2026-11-07T07:00:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -147,7 +147,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-07T06:58:00-05:00"
+  "at": "2026-11-07T07:01:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -304,6 +304,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "When several widgets refresh together, the one that has waited longest for a run now gets it...",
+    "at": "2026-11-07T06:59:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The MacBook test machine now reports which tests ran and which failed as plain data, and can run...",
     "at": "2026-11-07T06:50:00-05:00"
@@ -312,15 +317,10 @@
     "w": "Odalys",
     "t": "A governor test went red when the governor began reporting how far the week's usage is from its...",
     "at": "2026-11-07T06:50:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The MacBook test machine no longer repeats its 8 to 16 minute Simulator warm-up after every...",
-    "at": "2026-11-07T06:48:00-05:00"
    }
   ],
   "count": {
-   "next": 412,
+   "next": 418,
    "wait": 39,
    "blocked": 67,
    "you": 13
@@ -347,10 +347,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "6:58 AM",
+  "at": "7:01 AM",
   "why": "",
-  "at_iso": "2026-11-07T11:58:00+00:00",
+  "at_iso": "2026-11-07T12:01:00+00:00",
   "started": "5:48 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:48 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:58 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:48 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:01 AM ET</p></section>"
  }
 }

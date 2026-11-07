@@ -1,18 +1,51 @@
 {
  "schema": 1,
- "at": "2026-11-07T13:54:53.509947+00:00",
+ "at": "2026-11-07T13:57:02.817832+00:00",
  "session": {
   "active": true,
-  "kind": "runs",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-07T05:48:39-05:00"
  },
  "workers": [],
  "who": "",
- "recent": [],
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-1731 speed up land test suite",
+   "model": "opus",
+   "started": "2026-11-07T13:26:27.779Z",
+   "seconds": null,
+   "finished": "2026-11-07T13:55:34.725000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3204 SKIP rows per Ines ruling",
+   "model": "opus",
+   "started": "2026-11-07T13:18:56.510Z",
+   "seconds": null,
+   "finished": "2026-11-07T13:26:03.904000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-3204 ruling after two refusals",
+   "model": "opus",
+   "started": "2026-11-07T13:15:58.799Z",
+   "seconds": null,
+   "finished": "2026-11-07T13:18:39.515000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3204 land test rows green",
+   "model": "opus",
+   "started": "2026-11-07T13:15:24.595Z",
+   "seconds": null,
+   "finished": "2026-11-07T13:15:33.742Z"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 429,
+  "runnable_count": 427,
   "blocked_count": 106
  },
  "meter": {
@@ -55,7 +88,7 @@
   "week_pct": 63.03,
   "usage_pct": 38.4,
   "work_pct": 67.6,
-  "read_at": "2026-11-07T13:54:00+00:00",
+  "read_at": "2026-11-07T14:00:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -94,12 +127,16 @@
  },
  "lock_in": {
   "on": false,
-  "pool": 2,
-  "at": "2026-11-07T08:54:00-05:00"
+  "pool": 1,
+  "at": "2026-11-07T09:00:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: ahead of the line to use the week up by Sat 23:00, so work waits until the line passes; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "n": 1,
+  "at": "2026-11-07T05:48:29.897488-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
@@ -226,23 +263,23 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The last red tests before build 3 are fixed: they were test mistakes, not app bugs, and the...",
+    "at": "2026-11-07T08:55:00-05:00"
+   },
+   {
     "w": "Odalys",
-    "t": "Home's Machine panel now shows a small badge saying whether the Company SSD answers (SSD OK or...",
-    "at": "2026-11-07T08:46:00-05:00"
+    "t": "The test that guards every personal-account landing took longer than its time limit even on a...",
+    "at": "2026-11-07T08:55:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "The test build the Investors will use can now go to internal TestFlight and nowhere else, and it...",
-    "at": "2026-11-07T08:46:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "The stopped session's board-test fix (T-1395: tests clear the lane setting) is already on main,...",
-    "at": "2026-11-07T08:46:00-05:00"
+    "t": "The widget timeline test that failed every Xcode land was a wrong test (the template draws no...",
+    "at": "2026-11-07T08:55:00-05:00"
    }
   ],
   "count": {
-   "next": 429,
+   "next": 427,
    "wait": 39,
    "blocked": 67,
    "you": 13
@@ -257,6 +294,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -268,10 +306,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "8:54 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-07T13:54:00+00:00",
+  "at": "9:00 AM",
+  "why": "Between sessions: no session is running. Last check 5:48 AM ET.",
+  "at_iso": "2026-11-07T14:00:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:54 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:00 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 5:48 AM ET.</p></section>"
  }
 }

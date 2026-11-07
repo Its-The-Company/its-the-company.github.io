@@ -44,6 +44,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-2996: T-0824 was never a rule (my T-2379 citation; it is the rating merge); check an ID before citing it. A permission rule does not move the classifier. No route: a run ending itself by its own limit is design; stop_stuck stays --dry-run. Request terms in the record.
 - Report 31 (11-06): requests_close sweep closes the new report copy too (#210); scoreboard spent $619 vs ledger total $767 (SSD $148 not in it), open.
 - T-2866: a pinned diff applies only on the approve path, and the approve must sit on the pinning issue; a #41 "I approve" applies nothing. Count before writing a number in a commit (wrote 31 for 26).
+- T-1035: run a proposal's place against my own rules, its last verb against the guard. Git worktree is checkout, plain copy isn't. Branch to main: #113 A only.
+- T-0908, T-1001, T-0997: three times refused on my own check beside a stopped effect (T-0997: importing personal_lane). Grep is enough. Rule from reading; run nothing near it. An order for rows and mutants needs a route to run them (T-0915, T-1029 had none). T-0971: before a mechanism, read the sentence that licensed the miss.
+- T-0939: asked about one case (first run), run the whole rule on the bench figures: the warm path failed the same way. Check a gate proves what a constant needs.
+- T-0934: an approve runs apply --check only: no tests, no revert (applier line 70). Read the path a proposal takes before calling a check its test. "The item" means the packet: first refusal hands back.
+- T-0959: a rule in a held folder binds nobody who can't open it: the sentence goes in the packet. A done-note feeds reports: read it with the review ("proven on a copy"). T-0063: before "drops to 1.1", ask what else fills the slot. A meter's tag is not what the work served (T-0954).
+- T-1029: an error on my own read is data (fork failed led to ps: ten Simulators at the process limit). A <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> resting on a list the job removes is no hold. A fix to one half of an `or` is none.
+- T-3204: grep the board for the work before `add` (made T-3268, a copy of T-1731; withdrew it). Shared board: stage my lines only (hash-object + update-index), not `git commit <path>`.
 - T-1154: on a lane, board_tick queues to ops/lane-outbox and a neighbour's commit may sweep it (d363c526); read git log before committing.
 {% endraw %}
 

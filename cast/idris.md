@@ -34,10 +34,7 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 
 ## Open (mine)
 
-- T-0620 (2026-11-06, T-3022): <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> fix 8f6e42005 red on its own Simulator test (testL5Reservations...); rework on main when Xcode is free.
-- Lesson T-3022: for a did-not-land line, run tools/parked_verdicts.py <line id> --root <main checkout> first.
-
-- Lesson T-1404: one Bash call is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
+- T-2458 5bd8e7908: ProPaywall compiles, suite green (free.all test). Left: Pro/Settings shots, T-2372 key wiring, RETIRING delete. Local run: 13 ProStoreTests StoreKit 30 s timeouts + 2 "Updated" + ExtensionBridge flag red, not mine; recheck on runner.
 
 - Lesson T-1714: a rule green on the host means nothing until something writes it and something reads it: grep both call sites first.
 
@@ -45,7 +42,6 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 
 - AgeLine: T-1910/1911/1946 6edcfd497; review T-1983 F1-F3 fixed e573b6450 (t1793 56/56). Left: T-1440 must pass one `now` to face rule, drawnAt, line (noted).
 - Lesson T-1946/T-2011: NSTimeZone.default moves Calendar().timeZone, not TimeZone.current; for .current set TZ + NSTimeZone.resetSystemTimeZone(). Assert the fixture moved.
-- Lesson T-1859: a scratch copy of pywidget/ios lacks repo-level fixtures (tests/prompts): mutants there, full suite in the real tree.
 
 
 - T-0675 item 7 slice 2026-11-03 (dd26184c2): app+extension privacy manifests fixed (app was failing the Release scan). Open: Swift-half review has no task (asked Ines); privacy_scan wired to no build.
@@ -57,18 +53,24 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - Lesson T-1851: zsh never splits `$F`; pass xc_file_tests filters as ${=F}. Local xc.sh after others' commits: `xcodegen generate` first (xcodeproj is ignored, goes stale).
 
 - T-2020 22b1a3176 (two main reds; review T-2038 Pernille). Lesson: a schema row landing before its renderer turns the drawn-set test red; exempt by equality naming the drawing task, never by subtraction.
-- T-0656 2026-11-04: slice 1 parked untested in company-scratch/T-0656-idris (EditorTooling, tests, patch); board noted. Freeze passed: <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line for 1.1.
+- T-0656 2026-11-04: slice 1 <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> untested in company-scratch/T-0656-idris (EditorTooling, tests, patch); board noted. Freeze passed: <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line for 1.1.
 - Lesson T-0656: start the build first, before writing code; pgrep xcodebuild. A held lock ate 30 min and the session.
 
 - T-0389 slice b 2026-11-04: card written, never built; parked in company-scratch/T-0389-idris/tree/ and PyWidgetApp.t0389+t0657.patch (stage_hunks.py takes my hunks). Next: T-1982 (build+commit), then T-1983 jump, T-1984 perf.
 - Lesson T-0389: with ~10 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> the xcodebuild lock queue passed 45 min and then the disk line refused. Start xc.sh in the background (timeout 7200000, XC_LOCK_WAIT up) as the first step after coding, one `test` call, and check free disk before writing code.
+- T-2583 cc5c7c277 (prompt placement, T-2576 F1/F2): Desk+Placement 19/0 local; Pernille re-reviews. Real UIKit drop never reproduced (iOS 26 queues).
+- Lesson T-1404: one Bash call is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
 
 ## Lessons
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
-- T-1861 fe0149caf: T-0678's button must call WidgetWriter.refreshButton (intent rows); mutants-t1861.json unrun. Lock queue can pass 30 min: XC_LOCK_WAIT=3000.
+## Lessons
 
-- Lesson T-3217: 50f493ec1 asserted the template drew Updated without reading the fixture; read the fixture before a test claims its content. Runner returns no screenshots: put screen state in the failure message.
+- StoreKit, T-0583/T-0589, caret lessons: archive.md.
+
+- StoreKit, T-0583/T-0589, caret lessons: archive.md.
+
+- T-1732 2026-11-05 (8825c9e3a): learned stdlib root kept only if basename python3.*; review T-1912. Bridge test_device_call budget_caps flakes under load, parent too: T-1934.
 {% endraw %}
 
 

@@ -62,6 +62,32 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Standing lessons (more in archive.md)
 - The classifier refuses rm -rf of scratch trees and git restore of tracked PNGs: plan scratch so nothing needs deleting.
+- T-2630 done 33e957369: dispatcher ON 11-05 09:39 (ops/dispatch.json); supervisor Operator sessions take pick --kind operator. T-2641 cut split after 11-07; T-2642 stats +24h/+7d. Main-plan worktrees not done.
+- T-2639 done 2414c5a52: tools/retry_prune.py runs first in merge_queue (drops spent/on-main/done retry lines; done commits -> hold file). Retry live 364 -> 248 (11-05 12:08). Series ops/metrics/retry_queue.jsonl, --report 24. Rest = T-2666 (batch train, xc on MacBook).
+- Lesson: committing ops/board.md by pathspec carries others' uncommitted board edits (da92f566c took a titling pass). Check `git diff --stat ops/board.md` before.
+
+- T-2615 done 957b75f83: dispatcher counted finished-unlanded claims as sessions (0 starts in 5 ticks 11-05); now ps slot ticks. Cuts stay T-2641 (11-07); T-2677 own clock + slot limit (spares 4-6 block >3). Guard refuses reading a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s profile state dir from a session.
+
+
+
+- T-2460 done ca8e02928: approve cards need part-1 'Kind: security|real-world|creative' (else refused, make it directly). Applier untouched by <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>. Sweep: 5 open asks kept. inbox_lanes_test 2 fails pre-exist (apply_proposal not copied).
+
+- T-2692..94 done 8fc88addb: pin read from fetched origin/main (HEAD blob identical), pinned body plain text, <!-- refused on approve path. Re-review T-2711 (Pernille). Open: inline diff with ' {0,3}```' content line; auto/standing paths don't refuse <!--.
+- T-2634 built b5961ab03 (runner 16, tools/land_xc.py: xc job rides on land/<id>, prequeue via merge-tree; no result = wait 75). Open T-2713: full personal_land_test run (stopped at 600 s under load ~100 after 252/0), confirm after runner 16 updates, read --timing after (before 1.42 lands/h, ttl med 7.1 p90 137.4, n=88). Then T-2616. T-2466 ticked (81091aa96).
+- Lesson: run.sh executes tests/*.sh from the checkout, not a copy; never edit a suite while it runs.
+
+- T-2616 open: baseline + plan in its board note; half-built helpers in scratch T-2616-odalys/wt (untested). Guard refuses any command with `rebase`, even in a temp repo: test union merges another way.
+
+- T-2667 built ddd44ec37, not ticked (notes on T-2667/T-2480/T-2469 lines). Left: <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> chat.js hunk needs composer harness (T-2526); Chat threads column; This Session page; publish + #41 post (draft ops/requests/t2667-live-post.md).
+
+- T-2830 done 909a5b90c: spares <l>7-99 made on demand on SSD (company-big/work, link in ~/company-personal), 30 GB floor. Before 99.9 slot-idle min/h (n=135, 11-05). After-read T-2872 11-06 20:45 (tools/spare_idle.py). Full personal_land_test 276/4 (runner row, supervisor rows; HEAD moved mid-run). Guard refused a HEAD control run from scratch.
+
+- T-2849 done 7ed6120b7: adaptive pool (tools/pool_adapt.py, switch ops/pool_adapt.json). OPT-095 read n=30 tasks or 11-08 (before 9.5 finished/h, 0.10 time-outs/h, red 21%). Open: pool chip on Home strip (home_look.py mid-rewrite elsewhere).
+
+## Standing lessons (details in archive.md)
+
+- T-2839 done e12344992: 16 parks sorted. Lesson: a withdrawal comment that leaves the retry line live loops forever (a3 re-parked 10x); grep the live line after any withdraw. git-clean picks into log/optimizations.md can reuse taken OPT ids or land inside another block: run tools/experiments.py check before queueing.
+- Lesson: `git commit -- path` refuses an untracked file; git add it first. Other workers commit in this worktree at the same time.
 {% endraw %}
 
 

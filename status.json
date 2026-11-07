@@ -1,13 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-07T16:52:30.488150+00:00",
+ "at": "2026-11-07T16:55:30.738370+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-07T10:05:32-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3322 runner tar failures",
+   "model": "opus",
+   "started": "2026-11-07T16:52:42.953Z",
+   "seconds": 167,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys",
  "recent": [
   {
    "name": "odalys",
@@ -45,7 +55,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 323,
+  "runnable_count": 324,
   "blocked_count": 104
  },
  "meter": {
@@ -88,7 +98,7 @@
   "week_pct": 86.57,
   "usage_pct": 45.0,
   "work_pct": 73.4,
-  "read_at": "2026-11-07T16:52:00+00:00",
+  "read_at": "2026-11-07T16:55:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -199,7 +209,7 @@
   }
  ],
  "disk": {
-  "free_gb": 24,
+  "free_gb": 22,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -208,7 +218,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T11:46:00-05:00",
+   "at": "2026-11-07T11:52:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -218,7 +228,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T11:52:00-05:00"
+  "at": "2026-11-07T11:55:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -230,11 +240,12 @@
  "lanes": [
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, after T-1035 lands (personal-account...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-3322 runner tar failures",
+   "model": "opus",
+   "since": "2026-11-07T16:52:42.953Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Idris",
@@ -278,7 +289,18 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix the MacBook runner failing every job on tar",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T16:52:42.953Z",
+    "o": "c",
+    "task": "T-3322"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -370,7 +392,7 @@
    }
   ],
   "count": {
-   "next": 323,
+   "next": 324,
    "wait": 38,
    "blocked": 66,
    "you": 13
@@ -394,13 +416,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 2,
-  "total": 2,
-  "at": "11:52 AM",
+  "total": 3,
+  "at": "11:55 AM",
   "why": "",
-  "at_iso": "2026-11-07T16:52:00+00:00",
+  "at_iso": "2026-11-07T16:55:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:52 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:55 AM ET</p></section>"
  }
 }

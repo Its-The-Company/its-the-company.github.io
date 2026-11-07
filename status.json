@@ -1,47 +1,14 @@
 {
  "schema": 1,
- "at": "2026-11-07T15:04:20.021355+00:00",
+ "at": "2026-11-07T15:05:32.211648+00:00",
  "session": {
-  "active": false,
+  "active": true,
   "kind": "",
   "started": null
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[site] T-3076 T-3284 In flight on Home",
-   "model": "opus",
-   "started": "2026-11-07T14:42:33.908Z",
-   "seconds": null,
-   "finished": "2026-11-07T14:59:44.300000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-3140 tightened widget safety tests",
-   "model": "opus",
-   "started": "2026-11-07T14:42:53.786Z",
-   "seconds": null,
-   "finished": "2026-11-07T14:47:03.568000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-2703 privacy scan fixes",
-   "model": "opus",
-   "started": "2026-11-07T14:39:09.754Z",
-   "seconds": null,
-   "finished": "2026-11-07T14:46:49.917000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3112 recut two parked branches",
-   "model": "opus",
-   "started": "2026-11-07T14:28:34.448Z",
-   "seconds": null,
-   "finished": "2026-11-07T14:46:24.659000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -50,28 +17,28 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 16.0,
-   "resets_at": "2026-11-07T15:50:00.277013+00:00",
+   "pct": 29.0,
+   "resets_at": "2026-11-07T15:50:00.062867+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 84.0,
+   "left": 71.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 94.0,
-   "resets_at": "2026-11-08T07:00:00.277038+00:00",
+   "pct": 96.0,
+   "resets_at": "2026-11-08T07:00:00.062883+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 6.0,
+   "left": 4.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-08T07:00:00.277209+00:00",
+   "resets_at": "2026-11-08T07:00:00.063016+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-07T09:09:10.906654-05:00"
+  "read_at": "2026-11-07T10:05:22.608568-05:00"
  },
  "ui": {
-  "week_pct": 0.882,
+  "week_pct": 0.878,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -83,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-07T09:24:11-05:00",
+ "next_tick": null,
  "personal": {
-  "week_pct": 86.97,
+  "week_pct": 86.57,
   "usage_pct": 45.0,
   "work_pct": 73.4,
-  "read_at": "2026-11-07T15:04:00+00:00",
+  "read_at": "2026-11-07T15:05:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -118,7 +85,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T09:59:00-05:00",
+   "at": "2026-11-07T10:05:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -128,9 +95,9 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T10:04:00-05:00"
+  "at": "2026-11-07T10:05:00-05:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
  "pool": null,
  "lanes": [
@@ -286,12 +253,23 @@
   "sent": "2026-11-07T14:58:07Z",
   "seconds": 58.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6708675175",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Plan answers to the questions of..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -302,10 +280,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "10:04 AM",
-  "why": "Between sessions: no session is running. Last check 9:09 AM ET.",
-  "at_iso": "2026-11-07T15:04:00+00:00",
+  "at": "10:05 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-07T15:05:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:04 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 9:09 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:05 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

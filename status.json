@@ -1,18 +1,82 @@
 {
  "schema": 1,
- "at": "2026-11-07T15:05:32.211648+00:00",
+ "at": "2026-11-07T15:08:38.351080+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-07T10:05:32-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[release] T-3106 build 3 TestFlight",
+   "model": "opus",
+   "started": "2026-11-07T15:08:05.384Z",
+   "seconds": 32,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3288 main gate build",
+   "model": "opus",
+   "started": "2026-11-07T15:08:11.185Z",
+   "seconds": 27,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-3292 premade draw card review",
+   "model": "opus",
+   "started": "2026-11-07T15:08:16.442Z",
+   "seconds": 21,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-2711 apply fixes recheck r3",
+   "model": "opus",
+   "started": "2026-11-07T15:08:20.985Z",
+   "seconds": 17,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-3284 build In flight view",
+   "model": "opus",
+   "started": "2026-11-07T15:08:26.237Z",
+   "seconds": 12,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2641 cut old personal split",
+   "model": "opus",
+   "started": "2026-11-07T15:08:32.034Z",
+   "seconds": 6,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-3247 measure gap between sessions",
+   "model": "opus",
+   "started": "2026-11-07T15:08:37.987Z",
+   "seconds": 0,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris, Odalys x4, Pernille x2",
  "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 407,
+  "runnable_count": 406,
   "blocked_count": 107
  },
  "meter": {
@@ -55,7 +119,7 @@
   "week_pct": 86.57,
   "usage_pct": 45.0,
   "work_pct": 73.4,
-  "read_at": "2026-11-07T15:05:00+00:00",
+  "read_at": "2026-11-07T15:08:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -95,40 +159,47 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T10:05:00-05:00"
+  "at": "2026-11-07T10:08:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 10 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
+  "n": 10,
+  "at": "2026-11-07T10:05:22.929545-05:00"
+ },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, after T-1035 lands (personal-account...",
-   "model": null,
-   "since": null,
-   "next": []
+   "name": "Idris",
+   "state": "running",
+   "task": "[release] T-3106 build 3 TestFlight",
+   "model": "opus",
+   "since": "2026-11-07T15:08:05.384Z",
+   "next": [],
+   "effort": "high"
   },
   {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-3288 main gate build",
+   "model": "opus",
+   "since": "2026-11-07T15:08:11.185Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-3292 premade draw card review",
+   "model": "opus",
+   "since": "2026-11-07T15:08:16.442Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Operator + Pernille, P1, corrected (an Investor...",
    "model": null,
    "since": null,
    "next": []
@@ -151,7 +222,78 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "release",
+    "t": "Send build 3 to internal TestFlight",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T15:08:05.384Z",
+    "o": "c",
+    "task": "T-3106"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Find and fix the root cause of MacBook test failures",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T15:08:11.185Z",
+    "o": "c",
+    "task": "T-3288"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review the first draw card for premades",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T15:08:16.442Z",
+    "o": "c",
+    "task": "T-3292"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Recheck the large-change apply fixes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T15:08:20.985Z",
+    "o": "c",
+    "task": "T-2711"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Build In flight from Maren's frames",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T15:08:26.237Z",
+    "o": "c",
+    "task": "T-3284"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Cut the old personal split after the dispatcher's 48-hour check",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T15:08:32.034Z",
+    "o": "c",
+    "task": "T-2641"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Measure the gap between sessions",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T15:08:37.987Z",
+    "o": "c",
+    "task": "T-3247"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -226,23 +368,23 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "t": "Home's Simulators panel now says test runs and merge checks share the same Simulators and one...",
-    "at": "2026-11-07T09:59:00-05:00"
+    "w": "Idris",
+    "t": "Restore purchase now lines up with the other Settings rows, because it has the same small icon...",
+    "at": "2026-11-07T10:08:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "Nothing of this lane's four tasks is lost, so no retry line was added: two already landed in...",
-    "at": "2026-11-07T09:51:00-05:00"
+    "w": "Idris",
+    "t": "At large text the Pro row's status now drops whole onto its own line under the title, so the...",
+    "at": "2026-11-07T10:08:00-05:00"
    },
    {
-    "w": "Operator",
-    "t": "The work this notice was about has landed on main, so the lander closed it.",
-    "at": "2026-11-07T09:51:00-05:00"
+    "w": "Idris",
+    "t": "The MacBook test machine is set to run six test jobs side by side again, with each job's folder...",
+    "at": "2026-11-07T10:08:00-05:00"
    }
   ],
   "count": {
-   "next": 407,
+   "next": 406,
    "wait": 40,
    "blocked": 67,
    "you": 13
@@ -250,12 +392,12 @@
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-07T14:58:07Z",
-  "seconds": 58.0
+  "sent": "2026-11-07T15:04:52Z",
+  "seconds": 112.0
  },
  "inbox": [
   {
-   "id": "c6708675175",
+   "id": "c6708725795",
    "state": "received",
    "position": 1,
    "tasks": {
@@ -277,13 +419,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 7,
   "lanes": 0,
-  "total": 0,
-  "at": "10:05 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-07T15:05:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:05 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 7,
+  "at": "10:08 AM",
+  "why": "",
+  "at_iso": "2026-11-07T15:08:00+00:00",
+  "started": "10:05 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 7, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:08 AM ET</p></section>"
  }
 }

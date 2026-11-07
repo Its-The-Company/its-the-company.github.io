@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T16:06:37.317424+00:00",
+ "at": "2026-11-07T16:09:42.577177+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[site] T-3284 build In flight view",
    "model": "opus",
    "started": "2026-11-07T15:08:26.237Z",
-   "seconds": 3491,
+   "seconds": 3676,
    "finished": null,
    "effort": "high"
   },
@@ -21,31 +21,38 @@
    "task": "[build] T-2551 launcher premades Python half",
    "model": "opus",
    "started": "2026-11-07T15:31:36.327Z",
-   "seconds": 2100,
+   "seconds": 2286,
    "finished": null,
    "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-2866 repost charter proposal",
+   "model": "opus",
+   "started": "2026-11-07T16:08:34.169Z",
+   "seconds": 68,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys, Pernille, Ines",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3317 xc_route gate job status",
+   "model": "opus",
+   "started": "2026-11-07T16:04:26.125Z",
+   "seconds": null,
+   "finished": "2026-11-07T16:09:39.662000+00:00"
   },
   {
    "name": "pernille",
    "task": "[review] T-2711 apply fixes recheck r4",
    "model": "opus",
    "started": "2026-11-07T15:53:37.184Z",
-   "seconds": 780,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-07T16:08:11.842000+00:00"
   },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3317 xc_route gate job status",
-   "model": "opus",
-   "started": "2026-11-07T16:04:26.125Z",
-   "seconds": 131,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x2, Pernille x2",
- "recent": [
   {
    "name": "odalys",
    "task": "[site] T-3311 name running tasks, show account",
@@ -61,28 +68,12 @@
    "started": "2026-11-07T15:14:59.848Z",
    "seconds": null,
    "finished": "2026-11-07T16:01:48.520000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3288 main gate build",
-   "model": "opus",
-   "started": "2026-11-07T15:08:11.185Z",
-   "seconds": null,
-   "finished": "2026-11-07T15:58:50.264000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3299 applier tilde fence fix",
-   "model": "opus",
-   "started": "2026-11-07T15:19:27.586Z",
-   "seconds": null,
-   "finished": "2026-11-07T15:53:26.601000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 325,
+  "runnable_count": 323,
   "blocked_count": 106
  },
  "meter": {
@@ -125,7 +116,7 @@
   "week_pct": 86.57,
   "usage_pct": 45.0,
   "work_pct": 73.4,
-  "read_at": "2026-11-07T16:06:00+00:00",
+  "read_at": "2026-11-07T16:09:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -299,7 +290,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T11:01:00-05:00",
+   "at": "2026-11-07T11:07:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -309,7 +300,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T11:06:00-05:00"
+  "at": "2026-11-07T11:09:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -338,17 +329,18 @@
    "effort": "high"
   },
   {
+   "name": "Ines",
+   "state": "running",
+   "task": "[plan] T-2866 repost charter proposal",
+   "model": "opus",
+   "since": "2026-11-07T16:08:34.169Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -393,24 +385,14 @@
     "task": "T-2551"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Recheck the large-change apply fixes",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Repost the one-page charter for a single approve",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-07T15:53:37.184Z",
+    "at": "2026-11-07T16:08:34.169Z",
     "o": "c",
-    "task": "T-2711"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Show gate jobs as queued, not unpushed",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T16:04:26.125Z",
-    "o": "c",
-    "task": "T-3317"
+    "task": "T-2866"
    }
   ],
   "src": "plan",
@@ -488,25 +470,25 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The job-status command now finds test jobs that ride on the merge-gate branches, so a running...",
+    "at": "2026-11-07T11:09:00-05:00"
+   },
+   {
+    "w": "Pernille+odalys",
+    "t": "The tool that applies Investor-approved changes now refuses any proposal whose change GitHub...",
+    "at": "2026-11-07T11:08:00-05:00"
+   },
+   {
     "w": "Odalys+operator",
     "t": "The new Home is built and live: This Session strip with Lock In, Usage per account against its...",
-    "at": "2026-11-07T11:04:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Both personal accounts now get the main account's permission settings: the 'workspace not...",
-    "at": "2026-11-07T11:04:00-05:00"
-   },
-   {
-    "w": "Odalys+operator",
-    "t": "Superseded: the same Home build shipped under T-2667 (the new Home), and the This Session page...",
     "at": "2026-11-07T11:04:00-05:00"
    }
   ],
   "count": {
-   "next": 325,
-   "wait": 39,
-   "blocked": 67,
+   "next": 323,
+   "wait": 40,
+   "blocked": 66,
    "you": 13
   }
  },
@@ -528,13 +510,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 3,
   "lanes": 3,
-  "total": 7,
-  "at": "11:06 AM",
+  "total": 6,
+  "at": "11:09 AM",
   "why": "",
-  "at_iso": "2026-11-07T16:06:00+00:00",
+  "at_iso": "2026-11-07T16:09:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 4, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:06 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:09 AM ET</p></section>"
  }
 }

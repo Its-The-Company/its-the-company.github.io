@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T15:11:42.022692+00:00",
+ "at": "2026-11-07T15:14:44.637216+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[release] T-3106 build 3 TestFlight",
    "model": "opus",
    "started": "2026-11-07T15:08:05.384Z",
-   "seconds": 216,
+   "seconds": 399,
    "finished": null,
    "effort": "high"
   },
@@ -21,16 +21,7 @@
    "task": "[tools] T-3288 main gate build",
    "model": "opus",
    "started": "2026-11-07T15:08:11.185Z",
-   "seconds": 210,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-3292 premade draw card review",
-   "model": "opus",
-   "started": "2026-11-07T15:08:16.442Z",
-   "seconds": 205,
+   "seconds": 393,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +30,7 @@
    "task": "[review] T-2711 apply fixes recheck r3",
    "model": "opus",
    "started": "2026-11-07T15:08:20.985Z",
-   "seconds": 201,
+   "seconds": 383,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[site] T-3284 build In flight view",
    "model": "opus",
    "started": "2026-11-07T15:08:26.237Z",
-   "seconds": 195,
+   "seconds": 378,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[tools] T-2641 cut old personal split",
    "model": "opus",
    "started": "2026-11-07T15:08:32.034Z",
-   "seconds": 189,
+   "seconds": 372,
    "finished": null,
    "effort": "high"
   },
@@ -66,26 +57,43 @@
    "task": "[ops] T-3247 measure gap between sessions",
    "model": "opus",
    "started": "2026-11-07T15:08:37.987Z",
-   "seconds": 184,
+   "seconds": 366,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "idris",
+   "task": "[build] T-3298 first draw card scope fix",
+   "model": "opus",
+   "started": "2026-11-07T15:12:55.873Z",
+   "seconds": 108,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris x2, Odalys x4, Pernille",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-3285 land suite duplicate row",
    "model": "opus",
    "started": "2026-11-07T15:08:41.433Z",
-   "seconds": 180,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-07T15:14:33.989000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-3292 premade draw card review",
+   "model": "opus",
+   "started": "2026-11-07T15:08:16.442Z",
+   "seconds": null,
+   "finished": "2026-11-07T15:12:43.263000+00:00"
   }
  ],
- "who": "Idris, Odalys x5, Pernille x2",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 409,
+  "runnable_count": 408,
   "blocked_count": 107
  },
  "meter": {
@@ -128,7 +136,7 @@
   "week_pct": 86.57,
   "usage_pct": 45.0,
   "work_pct": 73.4,
-  "read_at": "2026-11-07T15:11:00+00:00",
+  "read_at": "2026-11-07T15:14:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -168,7 +176,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T10:11:00-05:00"
+  "at": "2026-11-07T10:14:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -199,9 +207,9 @@
   {
    "name": "Pernille",
    "state": "running",
-   "task": "[review] T-3292 premade draw card review",
+   "task": "[review] T-2711 apply fixes recheck r3",
    "model": "opus",
-   "since": "2026-11-07T15:08:16.442Z",
+   "since": "2026-11-07T15:08:20.985Z",
    "next": [],
    "effort": "high"
   },
@@ -255,16 +263,6 @@
    {
     "w": "Pernille",
     "k": "review",
-    "t": "Review the first draw card for premades",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T15:08:16.442Z",
-    "o": "c",
-    "task": "T-3292"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
     "t": "Recheck the large-change apply fixes",
     "m": "opus",
     "e": "high",
@@ -303,14 +301,14 @@
     "task": "T-3247"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Land suite row for a skipped duplicate commit",
+    "w": "Idris",
+    "k": "build",
+    "t": "Show the first draw card only for widgets never drawn",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-07T15:08:41.433Z",
+    "at": "2026-11-07T15:12:55.873Z",
     "o": "c",
-    "task": "T-3285"
+    "task": "T-3298"
    }
   ],
   "open": [
@@ -387,23 +385,23 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The merge suite now proves that a land leaves out a commit main already holds under a different...",
+    "at": "2026-11-07T10:14:00-05:00"
+   },
+   {
+    "w": "Pernille",
+    "t": "Checked the new card a widget shows before the app is first opened, and the crash-log timing...",
+    "at": "2026-11-07T10:12:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "Restore purchase now lines up with the other Settings rows, because it has the same small icon...",
-    "at": "2026-11-07T10:08:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "At large text the Pro row's status now drops whole onto its own line under the title, so the...",
-    "at": "2026-11-07T10:08:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The MacBook test machine is set to run six test jobs side by side again, with each job's folder...",
     "at": "2026-11-07T10:08:00-05:00"
    }
   ],
   "count": {
-   "next": 409,
+   "next": 408,
    "wait": 40,
    "blocked": 67,
    "you": 13
@@ -426,13 +424,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 8,
+  "main": 7,
   "lanes": 0,
-  "total": 8,
-  "at": "10:11 AM",
+  "total": 7,
+  "at": "10:14 AM",
   "why": "",
-  "at_iso": "2026-11-07T15:11:00+00:00",
+  "at_iso": "2026-11-07T15:14:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 8, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:11 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 7, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:14 AM ET</p></section>"
  }
 }

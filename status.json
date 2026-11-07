@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T14:24:37.729481+00:00",
+ "at": "2026-11-07T14:27:40.837470+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,25 +12,7 @@
    "task": "[review] T-3105 internal-only gate build",
    "model": "opus",
    "started": "2026-11-07T14:21:59.994Z",
-   "seconds": 157,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-3205 measure OPT-072 catch-up pool",
-   "model": "opus",
-   "started": "2026-11-07T14:22:06.445Z",
-   "seconds": 151,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-2915 Chat only the chat on phones",
-   "model": "opus",
-   "started": "2026-11-07T14:22:19.001Z",
-   "seconds": 138,
+   "seconds": 340,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +21,7 @@
    "task": "[build] T-3179 keep real crash past 14 days",
    "model": "opus",
    "started": "2026-11-07T14:22:27.101Z",
-   "seconds": 130,
+   "seconds": 313,
    "finished": null,
    "effort": "high"
   },
@@ -48,16 +30,7 @@
    "task": "[tools] T-3202 answer every issue comment",
    "model": "opus",
    "started": "2026-11-07T14:22:34.347Z",
-   "seconds": 123,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3110 retry pruner holds open commits",
-   "model": "opus",
-   "started": "2026-11-07T14:22:41.370Z",
-   "seconds": 116,
+   "seconds": 306,
    "finished": null,
    "effort": "high"
   },
@@ -66,50 +39,86 @@
    "task": "[test] T-2877 T-2858 stdlib tests red on main",
    "model": "opus",
    "started": "2026-11-07T14:23:39.645Z",
-   "seconds": 58,
+   "seconds": 241,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-2738 killed widget run memory verdict",
+   "model": "opus",
+   "started": "2026-11-07T14:25:16.563Z",
+   "seconds": 144,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-3095 In flight view of every task",
+   "model": "opus",
+   "started": "2026-11-07T14:25:25.238Z",
+   "seconds": 135,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3089 merge queue after numbers",
+   "model": "opus",
+   "started": "2026-11-07T14:26:04.622Z",
+   "seconds": 96,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-2667 new Home, Chat, Usage pages rest",
+   "model": "opus",
+   "started": "2026-11-07T14:26:12.006Z",
+   "seconds": 88,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille, Odalys x4, Idris, Wrenna",
+ "who": "Pernille x2, Idris, Odalys x3, Wrenna, Maren",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] T-3277 skip stale main red",
-   "model": "opus",
-   "started": "2026-11-07T14:21:42.345Z",
-   "seconds": null,
-   "finished": "2026-11-07T14:24:36.314000+00:00"
-  },
-  {
    "name": "pernille",
-   "task": "[review] T-3170 premade first renders fix",
+   "task": "[review] T-2676 check T-1294 before it ships",
    "model": "opus",
-   "started": "2026-11-07T14:21:51.842Z",
+   "started": "2026-11-07T14:25:09.311Z",
    "seconds": null,
-   "finished": "2026-11-07T14:24:35.633000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[ops] T-3267 trim Idris memory",
-   "model": "sonnet",
-   "started": "2026-11-07T14:22:12.147Z",
-   "seconds": null,
-   "finished": "2026-11-07T14:23:14.296000+00:00"
+   "finished": "2026-11-07T14:27:31.284000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3274 lands re-apply merged commits",
+   "task": "[site] T-2915 Chat only the chat on phones",
    "model": "opus",
-   "started": "2026-11-07T14:11:52.058Z",
+   "started": "2026-11-07T14:22:19.001Z",
    "seconds": null,
-   "finished": "2026-11-07T14:21:14.208000+00:00"
+   "finished": "2026-11-07T14:25:47.125000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-3205 measure OPT-072 catch-up pool",
+   "model": "opus",
+   "started": "2026-11-07T14:22:06.445Z",
+   "seconds": null,
+   "finished": "2026-11-07T14:25:43.806000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3110 retry pruner holds open commits",
+   "model": "opus",
+   "started": "2026-11-07T14:22:41.370Z",
+   "seconds": null,
+   "finished": "2026-11-07T14:24:55.040000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 424,
+  "runnable_count": 422,
   "blocked_count": 106
  },
  "meter": {
@@ -152,7 +161,7 @@
   "week_pct": 86.97,
   "usage_pct": 45.5,
   "work_pct": 73.6,
-  "read_at": "2026-11-07T14:24:00+00:00",
+  "read_at": "2026-11-07T14:27:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -173,7 +182,7 @@
   }
  ],
  "disk": {
-  "free_gb": 27,
+  "free_gb": 26,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -182,7 +191,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T09:19:00-05:00",
+   "at": "2026-11-07T09:25:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -192,7 +201,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T09:24:00-05:00"
+  "at": "2026-11-07T09:27:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -212,20 +221,20 @@
    "effort": "high"
   },
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[ops] T-3205 measure OPT-072 catch-up pool",
-   "model": "opus",
-   "since": "2026-11-07T14:22:06.445Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "running",
    "task": "[build] T-3179 keep real crash past 14 days",
    "model": "opus",
    "since": "2026-11-07T14:22:27.101Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-3202 answer every issue comment",
+   "model": "opus",
+   "since": "2026-11-07T14:22:34.347Z",
    "next": [],
    "effort": "high"
   },
@@ -239,17 +248,18 @@
    "effort": "high"
   },
   {
+   "name": "Maren",
+   "state": "running",
+   "task": "[design] T-3095 In flight view of every task",
+   "model": "opus",
+   "since": "2026-11-07T14:25:25.238Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren+Odalys, P1, Model: Sonnet medium. Investor...",
    "model": null,
    "since": null,
    "next": []
@@ -266,26 +276,6 @@
     "at": "2026-11-07T14:21:59.994Z",
     "o": "c",
     "task": "T-3105"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Measure whether catch-up pool sizing worked",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T14:22:06.445Z",
-    "o": "c",
-    "task": "T-3205"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Make Chat only the chat and live on phones",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T14:22:19.001Z",
-    "o": "i",
-    "task": "T-2915"
    },
    {
     "w": "Idris",
@@ -308,16 +298,6 @@
     "task": "T-3202"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop the retry pruner holding commits of open tasks",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T14:22:41.370Z",
-    "o": "c",
-    "task": "T-3110"
-   },
-   {
     "w": "Wrenna",
     "k": "test",
     "t": "Bring the stdlib manifest test up to 11 examples",
@@ -326,6 +306,46 @@
     "at": "2026-11-07T14:23:39.645Z",
     "o": "c",
     "task": "T-2877"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review the kept memory verdict on a killed widget run",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T14:25:16.563Z",
+    "o": "c",
+    "task": "T-2738"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Design an In flight view of every picked-up task",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T14:25:25.238Z",
+    "o": "i",
+    "task": "T-3095"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Read the merge queue fixes and post the after numbers",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T14:26:04.622Z",
+    "o": "c",
+    "task": "T-3089"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Build the new Home, Chat and Usage pages",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T14:26:12.006Z",
+    "o": "c",
+    "task": "T-2667"
    }
   ],
   "open": [
@@ -333,13 +353,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Read runner 18 live and run one build job",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Make Chat only the chat and live on phones",
     "s": "next",
     "o": "c"
    },
@@ -398,27 +411,34 @@
     "t": "Count any plain approval as an approve",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "This Session panel: more on mobile, one row...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Odalys",
-    "t": "The MacBook watcher no longer calls main broken, and holds every merge, when a newer full test...",
-    "at": "2026-11-07T09:24:00-05:00"
-   },
-   {
     "w": "Pernille",
-    "t": "The fix that makes a premade widget draw when it is chosen after the app has been opened once...",
-    "at": "2026-11-07T09:24:00-05:00"
+    "t": "An independent check of a widget size test fix found it correct: one sample widget that only...",
+    "at": "2026-11-07T09:27:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "Idris's notes file was already cut from 16.7 KB to 3,985 bytes by an earlier commit; I checked...",
-    "at": "2026-11-07T09:23:00-05:00"
+    "w": "Odalys",
+    "t": "The Chat page on the live site now shows only the chat, on a phone too, and it fetches new...",
+    "at": "2026-11-07T09:25:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "We checked whether letting the company add workers when it falls behind its weekly usage pace...",
+    "at": "2026-11-07T09:25:00-05:00"
    }
   ],
   "count": {
-   "next": 424,
+   "next": 422,
    "wait": 39,
    "blocked": 67,
    "you": 13
@@ -433,6 +453,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -441,13 +462,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 7,
+  "main": 8,
   "lanes": 0,
-  "total": 7,
-  "at": "9:24 AM",
+  "total": 8,
+  "at": "9:27 AM",
   "why": "",
-  "at_iso": "2026-11-07T14:24:00+00:00",
+  "at_iso": "2026-11-07T14:27:00+00:00",
   "started": "9:09 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 7, started 9:09 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:24 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 8, started 9:09 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:27 AM ET</p></section>"
  }
 }

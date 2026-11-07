@@ -41,11 +41,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-1271: an "open until X uses it" line with no hold is a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> task nobody can finish: hold it with board_tick wait. In a shared worktree add files by name, never a folder (I staged 26 other records). Same for ops/board.md: my tick commit carries everyone's uncommitted ticks (T-1394; T-2461): diff it before ticking.
 - T-2473: the applier's standing path holds a fold forever once any Investor comments on its issue (even "anything needed?"). Read the issue's comments before saying "applies by itself"; fix is T-2476.
 - T-2589: a route whose last step is a lane path (lane_take --done) must name the lane worktree as the place, or the session hand-makes the queue input and gets refused. merge_queue reads <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/ refs only.
-- T-2617: an Investor request can live in the section heading, not the line; check headings. Partial board commit: git diff -U0, keep my hunks, git apply --cached --unidiff-zero.
-- T-2846: when views split on a display rule, grep what actually draws it first (showsBadge had no caller; the demoted list already badged). Board notes on others' uncommitted lines stay unstaged.
 - T-2996: T-0824 was never a rule (my T-2379 citation; it is the rating merge); check an ID before citing it. A permission rule does not move the classifier. No route: a run ending itself by its own limit is design; stop_stuck stays --dry-run. Request terms in the record.
 - Report 31 (11-06): requests_close sweep closes the new report copy too (#210); scoreboard spent $619 vs ledger total $767 (SSD $148 not in it), open.
-- T-1271: an "open until X uses it" line with no hold is a lane task nobody can finish: hold it with board_tick wait. In a shared worktree add files by name, never a folder (I staged 26 other records).
+- T-2866: a pinned diff applies only on the approve path, and the approve must sit on the pinning issue; a #41 "I approve" applies nothing. Count before writing a number in a commit (wrote 31 for 26).
 - T-1154: on a lane, board_tick queues to ops/lane-outbox and a neighbour's commit may sweep it (d363c526); read git log before committing.
 {% endraw %}
 

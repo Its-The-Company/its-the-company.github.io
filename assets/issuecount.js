@@ -1,7 +1,7 @@
 // Source with comments: tools/site/assets/issuecount.js in the company repository.
 (() => {
 'use strict';
-var S = window.CompanySite, D = document, me = D.currentScript, K = 'company.issues.count', AGE = 6e4, KEEP = ['emergency', 'urgent', 'pitch'];
+var S = window.CompanySite, D = document, me = D.currentScript, K = 'company.issues.count', AGE = 6e4, KEEP = ['emergency', 'urgent', 'approval', 'pitch'];
 function login(u) { return String((u && u.login) || '').toLowerCase(); }
 function answered(i, last, inv) { return last ? /\(automatic receipt\)\s*$/.test(last.body || '') || inv(login(last.user || last.author)) : inv(login(i.user || i.author)); }
 function count(b, open, all) {

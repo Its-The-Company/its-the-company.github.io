@@ -70,7 +70,15 @@ if (w) out.push({ key: key, alt: clean(m[2] ? m[1] : (/\balt=["']([^"']*)/i.exec
 return out;
 }
 function answered(i, last, inv) { return last ? isReceipt(last.body) || inv(who(last)) : inv(who(i)); }
-window.CompanyNeeds = { options: options, pickAsk: pickAsk, images: images, answered: answered };
+function ago(iso, now) {
+var s = Math.max(0, Math.floor(((now || Date.now()) - Date.parse(iso)) / 1000)), n, u;
+if (!(s >= 0)) return '';
+if (s < 60) return 'asked just now';
+if (s < 3600) { n = Math.floor(s / 60); u = 'minute'; } else if (s < 172800) { n = Math.floor(s / 3600); u = 'hour'; } else { n = Math.floor(s / 86400); u = 'day'; }
+return 'asked ' + n + ' ' + u + (n === 1 ? '' : 's') + ' ago';
+}
+if (typeof document !== 'undefined' && document.querySelectorAll) Array.prototype.forEach.call(document.querySelectorAll('time.ic-at[datetime]'),(t) => { var a = ago(t.getAttribute('datetime')); if (a) t.textContent = a; });
+window.CompanyNeeds = { options: options, pickAsk: pickAsk, images: images, answered: answered, ago: ago };
 var S = window.CompanySite, root = document.getElementById('needs-root');
 if (!S || !root || !S.getToken()) return;
 var anon = document.getElementById('needs-anon'); if (anon) anon.hidden = true;
@@ -79,7 +87,7 @@ var repo = root.getAttribute('data-repo'), RI = '/repos/' + repo + '/issues', LS
 function nums(a) { return (root.getAttribute(a) || '').split(/\s+/).filter(Boolean).map(Number); }
 var named = nums('data-named'), skip = nums('data-skip'), props = nums('data-props'), shut = document.getElementById('needs-closed'), cl = null, cn = 0, cnum = null;
 var P = root.getAttribute('data-mode') === 'proposals', R = root.getAttribute('data-mode') === 'report', show = nums('data-show'), rest = nums('data-rest')[0] || 0;
-var KEEP = P ? ['proposal'] : ['emergency', 'urgent', 'pitch'], MAXF = 10 * 1048576, names = [];
+var KEEP = P ? ['proposal'] : ['emergency', 'urgent', 'approval', 'pitch'], MAXF = 10 * 1048576, names = [];
 var PO = ['Approve', 'Hold', 'No'].map((k) => ({ key: k, label: k, reply: k.toLowerCase() }));
 function mk(p, tag, cls, text) { return p.appendChild(el(tag, cls, text)); }
 function labels(i) { return (i.labels || []).map((x) => String(x.name || x).toLowerCase()); }
@@ -235,8 +243,11 @@ return box;
 }
 function box(li, n, i, ask, re, cs, onSent) {
 var b = li.querySelector('.ny-box') || li.appendChild(el('div', 'ny-box')), files = [], dk = 'company.draft.' + n, head = '', btns = [], fly = 0, doubt = null;
+var card = !re && li.classList && li.classList.contains('ic') ? li : null, picks = card ? card.querySelectorAll('.ic-opt[data-r]') : [];
+var multi = !!card && card.getAttribute('data-multi') === '1';
+if (picks.length) ask = Object.assign({}, ask, { opts: [] });
 b.textContent = '';
-if (cs) talk(b, i, cs, ask);
+if (cs && card) { var th = mk(b, 'details', 'ic-th'); th.open = !picks.length; mk(th, 'summary', null, 'The issue and its replies (' + (cs.length + 1) + ')'); talk(th, i, cs, ask); } else if (cs) talk(b, i, cs, ask);
 if (ask.answered && ask.lastInv) mk(b, 'p', 'meta ny-done', 'You answered ' + when(ask.lastInv.created_at) + ': "' + plain(ask.lastInv.body).slice(0, 80) + '". The company closes the issue once it has read it.');
 var cols = {}, grid = (ask.imgs || []).length ? mk(b, 'div', 'ny-imgs') : null;
 (ask.imgs || []).forEach((im) => {
@@ -255,20 +266,35 @@ ta.focus(); save(); mark(); sync();
 };
 });
 if (!opts.firstChild) b.removeChild(opts);
-ta.placeholder = re ? 'A follow-up on #' + n + ' (sending reopens it)' : ask.opts.length ? 'Tap an option or write your answer to #' + n : 'Your answer to #' + n;
+Array.prototype.forEach.call(picks, (d) => {
+var btn = d;
+if (d.tagName !== 'BUTTON') { btn = el('button', d.className); while (d.firstChild) btn.appendChild(d.firstChild); btn.setAttribute('data-r', d.getAttribute('data-r')); d.parentNode.replaceChild(btn, d); }
+btn.type = 'button'; btn.setAttribute('aria-pressed', 'false'); btns.push(btn);
+btn.onclick = () => {
+var v = ta.value.trim().slice(head.length).trim(), r = btn.getAttribute('data-r'), cur = head ? head.split(/\s+and\s+/) : [];
+if (multi) { cur = cur.indexOf(r) >= 0 ? cur.filter((x) => x !== r) : cur.concat(r); cur = btns.map((x) => x.getAttribute('data-r')).filter((x) => cur.indexOf(x) >= 0); } else cur = [r];
+var h = cur.join(' and ');
+ta.value = h ? (v ? h + '\n\n' + v : h) : v;
+save(); mark(); sync();
+};
+});
+ta.placeholder = re ? 'A follow-up on #' + n + ' (sending reopens it)' : picks.length ? 'A note with your answer (optional)' : ask.opts.length ? 'Tap an option or write your answer to #' + n : 'Your answer to #' + n;
 ta.setAttribute('aria-label', 'Your reply to #' + n); ta.value = LS.getItem(dk) || ''; form.appendChild(ta);
 if (ask.answered && plain(ask.lastInv.body) === ta.value.trim()) { ta.value = ''; save(); }
 mark();
 var list = mk(form, 'ul', 'ny-files'), bar = mk(form, 'div', 'ny-bar'), pick = el('input'), add = mk(bar, 'button', 'cv-tool', 'Add files');
 pick.type = 'file'; pick.multiple = true; pick.hidden = true; bar.appendChild(pick); add.type = 'button';
 add.onclick = () => pick.click();
-var go = mk(bar, 'button', 'cv-tool ny-send', re ? 'Send and reopen' : 'Send'), st = mk(form, 'p', 'meta', ''), extra = mk(form, 'div', 'ny-bar');
+var cgo = card && card.querySelector('.ic-go'), go = cgo ? el('button', 'btn primary ic-go ny-send', 'Answer') : mk(bar, 'button', 'cv-tool ny-send', re ? 'Send and reopen' : 'Send');
+if (cgo) cgo.parentNode.replaceChild(go, cgo);
+var st = mk(form, 'p', 'meta', ''), extra = mk(form, 'div', 'ny-bar');
 go.type = 'button'; st.setAttribute('role', 'status'); extra.hidden = true;
 function save() { if (ta.value.trim()) LS.setItem(dk, ta.value); else LS.removeItem(dk); }
 function sync() { go.disabled = fly || !(doubt || ta.value.trim() || files.length) || S.rejected(); }
 function mark() {
-var top = ta.value.trim().split('\n')[0].trim(), on = /^[A-Fa-f]$/.test(top);
-btns.forEach((x) => { var y = x.getAttribute('data-r') === top; x.setAttribute('aria-pressed', y); on = on || y; });
+var top = ta.value.trim().split('\n')[0].trim(), parts = top.split(/\s+and\s+/), on = /^[A-Fa-f]$/.test(top);
+btns.forEach((x) => { var y = parts.indexOf(x.getAttribute('data-r')) >= 0; x.setAttribute('aria-pressed', y); on = on || y; });
+if (on && parts.length > 1) on = parts.every((p) => btns.some((x) => x.getAttribute('data-r') === p));
 head = on ? top : '';
 }
 function say(c, t) { st.className = 'meta' + c; st.textContent = t; }
@@ -398,7 +424,8 @@ mk(sec, 'p', 'meta', 'You have replied to these. The company reads your reply an
 ansU = mk(sec, 'ul', 'list needs'); ansU.setAttribute('data-group', 'answered');
 (shut ? shut.parentNode : root).insertBefore(sec, shut);
 }
-if (!x[0].querySelector('.ny-tag-ans')) { x[0].insertBefore(document.createTextNode(' '), x[0].firstChild); x[0].insertBefore(el('span', 'tag ny-tag-ans', '\u2713 Answered'), x[0].firstChild); }
+var hd = x[0].querySelector('.ic-head') || x[0];
+if (!x[0].querySelector('.ny-tag-ans')) { hd.insertBefore(document.createTextNode(' '), hd.firstChild); hd.insertBefore(el('span', 'tag ny-tag-ans', '\u2713 Answered'), hd.firstChild); }
 x[0].classList.add('ny-ans'); ansU.appendChild(x[0]);
 Array.prototype.forEach.call(ansU.parentNode.children, (e) => { e.hidden = false; });
 fold();

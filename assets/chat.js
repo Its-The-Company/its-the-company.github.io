@@ -345,7 +345,9 @@ if (p) { put(to, txt(' ')); mk(to, 'span', 'cv-pm', 'Plan mode'); }
 if (nm) mk(to, 'span', null, '· as ' + nm);
 attr(pmb, 'aria-pressed', p ? 'true' : 'false'); hint.hidden = !p;
 [to, ta, tools, hint, out].forEach((x) => { put(dock, x); });
+fitTa();
 }
+function fitTa() { if (ta.style && ta.scrollHeight) { ta.style.height = ''; ta.style.height = ta.scrollHeight + ((ta.offsetHeight - ta.clientHeight) || 0) + 'px'; } }
 fake.onclick = () => { isOpen = true; drawDock(); if (ta.focus) ta.focus(); };
 barSend.onclick = () => { doSend(); };
 function doHide() { saveDraft(); if (ta.blur) ta.blur(); isOpen = false; drawDock(); }
@@ -354,7 +356,7 @@ pmb.onclick = () => { var k = draftKey() + '.plan'; if (pOn()) LS.removeItem(k);
 on(ta, 'input', () => {
 saveDraft(); send.disabled = barSend.disabled = !canSend();
 if (/failed/.test(out.className)) state('', '');
-if (ta.style && ta.scrollHeight) { ta.style.height = 'auto'; ta.style.height = ta.scrollHeight + 'px'; }
+fitTa();
 });
 var clearTimer = 0;
 function state(kind, text, ms) {

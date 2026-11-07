@@ -45,6 +45,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-2846: when views split on a display rule, grep what actually draws it first (showsBadge had no caller; the demoted list already badged). Board notes on others' uncommitted lines stay unstaged.
 - T-2996: T-0824 was never a rule (my T-2379 citation; it is the rating merge); check an ID before citing it. A permission rule does not move the classifier. No route: a run ending itself by its own limit is design; stop_stuck stays --dry-run. Request terms in the record.
 - Report 31 (11-06): requests_close sweep closes the new report copy too (#210); scoreboard spent $619 vs ledger total $767 (SSD $148 not in it), open.
+- T-1271: an "open until X uses it" line with no hold is a lane task nobody can finish: hold it with board_tick wait. In a shared worktree add files by name, never a folder (I staged 26 other records).
+- T-1154: on a lane, board_tick queues to ops/lane-outbox and a neighbour's commit may sweep it (d363c526); read git log before committing.
 {% endraw %}
 
 

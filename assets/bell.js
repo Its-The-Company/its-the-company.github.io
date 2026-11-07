@@ -108,7 +108,8 @@ function ui() {
 var w = hd && hd.querySelector('.wrap');
 if (!w || !D.createElementNS) return;
 w.style.position = 'relative';
-bellB = add(w, 'button', 'bell'); bellB.type = 'button';
+var g = w.querySelector && w.querySelector('.hact'), gi = g && g.firstChild;
+bellB = g ? (gi ? g.insertBefore(el('button', 'bell'), gi) : add(g, 'button', 'bell')) : add(w, 'button', 'bell'); bellB.type = 'button';
 bellP = add(w, 'div', 'bellp'); bellP.setAttribute('role', 'dialog'); bellP.setAttribute('aria-label', 'Notifications'); bellP.hidden = true;
 bellB.onclick = function (e) { if (e && e.stopPropagation) e.stopPropagation(); show(!bellOpen); };
 on(D, 'keydown', function (e) { if (bellOpen && e.key === 'Escape') { show(false); bellB.focus(); } });

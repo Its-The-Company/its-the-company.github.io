@@ -89,34 +89,41 @@ main:has(.report-grid) .callout{background:none}
 /* ---------- header: the ink band, brand, the nav of four ---------- */
 header.site{background:var(--head-bg);color:var(--head-ink)}
 header.site .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2) var(--s4);padding-top:var(--s3);padding-bottom:var(--s3)}
-header.site .brand{font-weight:800;font-size:var(--fs-3);letter-spacing:-.01em;text-decoration:none;color:var(--head-ink);white-space:nowrap}
 .tabs{display:flex;flex:1 1 320px;gap:var(--s1);padding:var(--s1);background:rgba(255,255,255,.07);border:1px solid var(--head-line);border-radius:var(--r-m)}
 .tabs a{flex:1;text-align:center;padding:var(--s2);border-radius:var(--r-s);font-size:var(--fs-1);font-weight:600;color:var(--head-dim);text-decoration:none;white-space:nowrap}
 .tabs a:hover{color:var(--head-ink);background:rgba(255,255,255,.06)}
 /* The active tab is an inverted pill with an accent underline, so it reads as selected in light and dark alike. */
 .tabs a[aria-current]{background:var(--head-ink);color:var(--head-bg);font-weight:700;box-shadow:inset 0 -3px 0 var(--tab-mark)}
 .tabs a:focus-visible{outline-color:var(--head-ink)}
-@media (min-width:880px){.tabs{flex:0 1 460px;margin-left:auto}}
 /* T-2940 (friesevan #41 c6678446926), T-3174 (friesevan #41 c6700015760): the bar stays at the top while the page scrolls,
    on every page at every width, slimmer than before (measured: desktop 92 px and scrolling away -> 58 px, phone
    130 -> 96 px; tools/header_shots.py). The notch and the Home Screen web app's status bar are cleared by the safe-area inset (the
    viewport says viewport-fit=cover). --hdr-h is its height (bell.js measures it; these are the fallbacks), for the chat's
-   own sticky rows under it and for in-page links. The logo slot is a place only: no logo until the Investors choose one
-   (T-2941, C51). */
-header.site .logo-slot{display:inline-block;width:var(--logo-w,0);height:var(--logo-h,0);flex:none}
+   own sticky rows under it and for in-page links.
+   T-3185 (friesevan #201 c6701181652): no name and no logo in the bar (none was chosen, T-2952 withdrawn); the tabs sit
+   in the centre of the bar from 880 px (a 3-column grid, the bell and info buttons in the right column); on a phone the
+   bell and info share the tabs' row, so the bar is one row (measured in the T-3185 commit). */
 header.site{position:sticky;top:0;z-index:30;border-bottom:1px solid var(--head-line)}
 header.site .wrap{padding-top:var(--s2);padding-bottom:var(--s2)}
 header.site .tabs a{padding:4px var(--s2)}
 header.site details.info{margin-block:0}header.site details.info summary,header.site .bell{width:36px;height:36px}
+header.site .hact{flex:none;display:flex;align-items:center;gap:6px}header.site .hact>*{order:0;margin:0}
+@media (min-width:880px){
+  header.site .wrap{display:grid;grid-template-columns:1fr minmax(0,460px) 1fr;column-gap:var(--s4)}
+  header.site .tabs{grid-column:2;margin:0}header.site .hact{grid-column:3;justify-self:end}
+}
 :root{--hdr-h:58px}
 html{scroll-padding-top:calc(var(--hdr-h) + var(--s2))}
 html .cv-tabs{top:var(--hdr-h)}html .cv-head{top:calc(var(--hdr-h) + var(--cv-tabs-h,57px))}
 .lk-home [id]{scroll-margin-top:calc(var(--hdr-h) + var(--s2))}
 @media (max-width:879px){
-  header.site .wrap{gap:6px var(--s3);padding-bottom:6px}
-  header.site .tabs{padding:2px}header.site .tabs a{padding:5px 4px}
-:root{--hdr-h:calc(96px + env(safe-area-inset-top))}
-  header.site .brand{order:0;flex:1 1 auto}header.site details.info{order:1;margin-left:0}header.site .tabs{order:2;flex:1 1 100%}
+  header.site .wrap{flex-wrap:nowrap;gap:var(--s2);padding-bottom:6px}
+  header.site .tabs{padding:2px;gap:2px}header.site .tabs a{padding:5px 2px;font-size:14px}header.site .tabs a{position:relative}
+  /* T-3185: a tab's count sits on its top corner, as the bell's does, so four tabs and two buttons fit one row at 320 px */
+  header.site .tabs a .nb{position:absolute;top:-6px;right:-2px;margin:0;min-width:16px;padding:0 4px;font-size:10px;line-height:16px;box-shadow:0 0 0 2px var(--head-bg)}
+  header.site .hact{gap:4px}
+:root{--hdr-h:calc(54px + env(safe-area-inset-top))}
+  header.site .tabs{order:0;flex:1 1 auto;min-width:0}header.site .hact{order:1}
   header.site .wrap{padding-top:calc(var(--s2) + env(safe-area-inset-top));padding-left:max(var(--s4),env(safe-area-inset-left));padding-right:max(var(--s4),env(safe-area-inset-right))}
 }
 /* T-1776: About as an info icon (four-sections.md 2, C44): a <details>, so it opens without script */
@@ -420,7 +427,6 @@ section.now h3{margin:0 0 var(--s1)}
 .bell{order:1;margin-left:auto;position:relative;display:grid;place-items:center;width:44px;height:44px;border:1px solid var(--head-line);border-radius:var(--r-m);background:none;color:inherit}
 .bell svg{width:22px}
 .badge{position:absolute;top:-4px;right:-4px;padding:0 6px;border-radius:9px;background:var(--hot);color:var(--bg);font:800 12px/18px var(--font)}
-@media (max-width:879px){.site .tabs{order:2;flex-basis:100%}}
 @media (min-width:880px){.bell{margin:0}.bellp{left:auto!important;width:400px}}
 .bellp,.sheet{position:absolute;top:100%;right:8px;left:8px;z-index:9;padding:var(--s3);background:var(--bg);color:var(--ink);border-radius:var(--r-l);box-shadow:var(--shadow)}
 .bellp{max-height:calc(100dvh - var(--hdr-h) - var(--s4));overflow-y:auto;overscroll-behavior:contain}
@@ -663,7 +669,7 @@ summary.cv-sec{display:list-item;cursor:pointer;min-height:44px}
 /* Render check fixes (Idris, tools/site_v3_qa.py): on a phone the fixed dock covered the footer's last row, so the
    room for the dock goes under the footer, not under main; on desktop the tiles show once, in the side. */
 @media (max-width:879px){main.cv-desk,main.cv-desk.cv-open{padding-bottom:0}
-  main.cv-desk+footer{padding-bottom:max(calc(96px + env(safe-area-inset-bottom)),var(--cv-dock-fit,0px))}main.cv-desk.cv-open+footer{padding-bottom:max(calc(200px + env(safe-area-inset-bottom)),var(--cv-dock-fit,0px))}}
+  main.cv-desk+footer{padding-bottom:max(calc(96px + env(safe-area-inset-bottom)),var(--cv-dock-fit,0px))}main.cv-desk.cv-open+footer{padding-bottom:max(calc(128px + env(safe-area-inset-bottom)),var(--cv-dock-fit,0px))}}
 /* Odalys C13 of e5ffe2b: a 3-line state line ('Not sent: ...', urgent warnings) made the folded dock 125 px, over the
    96 px kept clear, so ~29 px of the footer's last row hid under it for up to 30 s. The line now holds at most 3 lines
    (more scrolls inside it, nothing cut), and while it shows the footer keeps that much more room (tests/site_send_test.py I). */
@@ -673,7 +679,7 @@ summary.cv-sec{display:list-item;cursor:pointer;min-height:44px}
    (its height plus --s2); each footer rule keeps the larger of its fixed room and that, so the look holds and a taller dock is cleared. */
 @media (max-width:879px){
   main.cv-desk:has(.cv-dock .cv-state:not(:empty))+footer{padding-bottom:max(calc(96px + var(--s1) + 3 * var(--lh-body) * var(--fs-0) + env(safe-area-inset-bottom)),var(--cv-dock-fit,0px))}
-  main.cv-desk.cv-open:has(.cv-dock .cv-state:not(:empty))+footer{padding-bottom:max(calc(200px + var(--s1) + 3 * var(--lh-body) * var(--fs-0) + env(safe-area-inset-bottom)),var(--cv-dock-fit,0px))}}
+  main.cv-desk.cv-open:has(.cv-dock .cv-state:not(:empty))+footer{padding-bottom:max(calc(128px + var(--s1) + 3 * var(--lh-body) * var(--fs-0) + env(safe-area-inset-bottom)),var(--cv-dock-fit,0px))}}
 
 /* ---------- Company > Work (/company/work.html, tools/site/work.py; owner: Idris) ---------- */
 .wk-sum{display:flex;align-items:baseline;gap:var(--s2);margin:0 0 var(--s3);color:var(--muted)}.wk-sum .dot{flex:none;position:relative;top:-1px}
@@ -764,6 +770,23 @@ html,body,.cv-dock textarea,.cv-dock .cv-state{overscroll-behavior-y:auto}
 .pq .ny-bar .meta{margin:0}
 /* T-3010: an answered block, said lines in the reply's bubble; a note under its answer, muted. */
 .pq-said small{display:block;color:var(--muted)}
+/* T-3185 (friesevan #201 c6701181652): on a phone the open Chat box is about half as tall (measured in the T-3185
+   commit). The "To" line shares a row with Plan mode and Hide; the text box is one line that grows as you type, up to
+   about five, with Send beside it; the type stays 16 px so iOS does not zoom. A page cannot size the phone's keyboard,
+   so this shrinks what the page draws above it; while typing on a touch screen the box also drops the home-indicator
+   room under it (env(safe-area-inset-bottom)), which the keyboard covers anyway. */
+@media (max-width:879px){
+  .cv-dock:has(>textarea){display:grid;grid-template-columns:minmax(0,1fr) auto auto auto;align-items:center;gap:6px var(--s2);
+    grid-template-areas:"grip grip grip grip" "to pmb hide hide" "ta ta ta send" "hint hint hint hint" "out out out out"}
+  .cv-dock:has(>textarea)>.cv-tools{display:contents}
+  .cv-dock>.cv-grip{grid-area:grip}.cv-dock>.cv-to{grid-area:to;margin:0;min-width:0}
+  .cv-dock>textarea{grid-area:ta}.cv-dock>.cv-hint{grid-area:hint}.cv-dock>.cv-state{grid-area:out}
+  .cv-dock .cv-pmb{grid-area:pmb}.cv-dock .cv-hide{grid-area:hide;justify-self:end}.cv-dock .cv-tools .cv-send{grid-area:send;margin:0;align-self:end}
+  .cv-dock .cv-tool{min-height:32px}
+  .cv-dock textarea{height:40px;min-height:40px;max-height:min(40vh,8.5em);padding:8px var(--s3);font-size:max(16px,var(--fs-2));line-height:1.375}
+  .cv-dock .cv-send{width:40px;height:40px}.cv-bar .cv-fake{min-height:40px;font-size:max(16px,var(--fs-2))}
+}
+@media (max-width:879px) and (pointer:coarse){.cv-dock:focus-within{padding-bottom:var(--s2)}}
 {% endraw %}
 /* investors/site/theme.css */
 {% raw %}/* The Investors' styles for the site. Anything here is added after the site's own styles, so it wins.
@@ -773,14 +796,13 @@ html,body,.cv-dock textarea,.cv-dock .cv-state{overscroll-behavior-y:auto}
 <body>
 <a class="skip" href="#main">Skip to the content</a>
 <header class="site"><div class="wrap">
-<a class="brand" href="{{ '/' | relative_url }}"><span class="logo-slot" aria-hidden="true"></span>{{ site.title }}</a>
 <nav class="tabs" aria-label="Sections">
 <a href="{{ '/' | relative_url }}"{% if page.section == "home" %} aria-current="page"{% endif %}>Home</a>
 <a href="{{ '/chat/' | relative_url }}" data-chat-tab{% if page.section == "chat" %} aria-current="page"{% endif %}>Chat</a>
 <a href="{{ '/issues/' | relative_url }}" data-issues{% if page.section == "requests" %} aria-current="page"{% endif %}>Issues{% if page.issues %} <span class="nb"{% if page.issues_at %} title="{{ page.issues }} waiting on the Investors at the site build, {{ page.issues_at }}"{% endif %}>{{ page.issues }}</span>{% endif %}</a>
 <a href="{{ '/reports/' | relative_url }}"{% if page.section == "reports" or page.section == "documents" or page.section == "pitches" or page.section == "infra" %} aria-current="page"{% endif %}>Reports</a>
 </nav>
-<details class="info"><summary title="About" aria-label="About this site">i</summary><div class="infop"><p>{{ site.disclosure }}</p><a href="{{ '/about.html' | relative_url }}">About the company</a></div></details>
+<div class="hact"><details class="info"><summary title="About" aria-label="About this site">i</summary><div class="infop"><p>{{ site.disclosure }}</p><a href="{{ '/about.html' | relative_url }}">About the company</a></div></details></div>
 </div></header>
 <div class="wrap notice-row">
 {% if site.announcement and site.announcement != "" %}<p class="notice announce">{{ site.announcement }}</p>{% endif %}

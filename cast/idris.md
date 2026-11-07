@@ -33,30 +33,44 @@ My notes. They are published on the company site, so nothing sensitive goes here
 Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 
 ## Open (mine)
-- T-3146/T-3147 9a8cc9832 (deleted-widget marker, dropStale bounds, returned=no <span title="A test written in advance. If it fires, we drop the idea.">kill</span>): host 646/0; not ticked, app build owed J-20261106-1829 (449b764fe) after push; review T-3153.
-- T-1440: drawn (43be07d86) green in full suite J-20261105-2106; age-turn entries 50f493ec1 on land/idris-t1440, run J-20261106-0826 (job commit 32388e712 needs main push). Owed: T-0678 tap/Link, shots (check .after(now) reload), review.
-- T-0485 (c3c6876f, review T-0493): set LegalLinks when the app privacy page is published and Terms ruled. Release builds now fail until then (T-0497, 3bfb3222; review T-0636).
-- Lesson: the full UI suite runs ~45 min (EditorGate A2c alone ~7 min): run it in the background with a long timeout, never a 10-min foreground call. tests/run.sh takes suite file names (x_test.py), not bare names: a bare name runs nothing and says "All tests passed".
-- Lesson T-1678: a test that checks a marker's text is not a test of what recovery does with it. Test the consumer.
-- T-2316 0e3126a7a (Shortcut Pro gate): host typecheck only; owed Simulator PyWidgetTests/ShortcutProGateTests, mutants-t2316.json, review; then tick.
-- T-2456/T-2270 (2026-11-05): stuck x5 + mutant-t1696 done at 92b062d4 (1e8c59160); full suite J-20261105-1335 waits on push; upload.sh internal-only key on branch idris/t2270-internal-only 6beb56a49 (land after T-2662); review T-2690. Gates: T-2486, T-2662.
-- T-1853/T-2369 3f55ca3ff: gate switch + record-only margin + build phase, 159/0 local; review T-2464 (Pernille). Release gate build still stops at legal links (T-0485). Never write the gate condition's name in any ios/ file but Swift #if/comments, .md, or the gate script: the scan fails it.
-- T-2721 c27b8cf46 (2026-11-05): oom_guard badge needs ts >= since + 60 s (rule D); T-1728 closed there. Review T-2728 (Pernille) owed before TestFlight.
-- Lesson T-1714: a rule green on the host means nothing until something writes it and something reads it: grep both call sites first.
-- T-2628: xc.sh why-lines a89496cfa (unpushed); runner 17 jobs-root sandbox b140e1312 + T-2722 fix 97744ee22 on idris/t2628-runner-jobs-root; re-review T-2730 (Pernille), then one Investor approve-sandbox.
-- Lesson T-2710: a file the unsandboxed side rereads (profile, log) must live outside the job's writable area or be read through a held fd. UI test cause still unread: needs a run after a89496cfa is pushed and T-2709 lands.
-
-- land/idris-t2054, land/idris-t3097 still up: land_xc.py drop refuses mutant ids (tool gap).
-- Lesson T-1048: a stdlib size flake is APFS over-allocating the streamed zip under concurrent writes (not bytes). Fix is Pernille's call.
-- Lesson: no local Xcode slot -> tools/land_mutants.py runs xc mutants on the runner via land/<id>.
 
 - T-0620: <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> fix 8f6e42005 red on its own Simulator test (T-3022); redo on main with Xcode.
 - T-0620 (2026-11-06, T-3022): parked fix 8f6e42005 red on its own Simulator test (testL5Reservations...); rework on main when Xcode is free.
 - Lesson T-3022: for a did-not-land line, run tools/parked_verdicts.py <line id> --root <main checkout> first.
+Dated task logs and full lessons: archive.md.
+
+- Lesson T-1404: one Bash call is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
+
+- Lesson T-1714: a rule green on the host means nothing until something writes it and something reads it: grep both call sites first.
+
+- Lesson T-0426: grep the code for a task's ID before starting; a board line can stay open after the work landed.
+
+- AgeLine: T-1910/1911/1946 6edcfd497; review T-1983 F1-F3 fixed e573b6450 (t1793 56/56). Left: T-1440 must pass one `now` to face rule, drawnAt, line (noted).
+- Lesson T-1946/T-2011: NSTimeZone.default moves Calendar().timeZone, not TimeZone.current; for .current set TZ + NSTimeZone.resetSystemTimeZone(). Assert the fixture moved.
+- Lesson T-1859: a scratch copy of pywidget/ios lacks repo-level fixtures (tests/prompts): mutants there, full suite in the real tree.
+
+
+- T-0675 item 7 slice 2026-11-03 (dd26184c2): app+extension privacy manifests fixed (app was failing the Release scan). Open: Swift-half review has no task (asked Ines); privacy_scan wired to no build.
+- Lesson: a flag compiled out of Release hides its required-reason APIs from the binary scan; test the sources each target compiles.
+
+
+- T-2039 closed 2026-11-04 (38dd1c4c9). Open from review T-2049: M1-M3 = T-2054..T-2056, Lows T-2057. orphan-mark 1.4 s bound thin under load.
+- Lesson T-2016: tools/xc_mutants.py plants each old behaviour back as the red record; a timing test needs margins both sides of the constant.
+- Lesson T-1851: zsh never splits `$F`; pass xc_file_tests filters as ${=F}. Local xc.sh after others' commits: `xcodegen generate` first (xcodeproj is ignored, goes stale).
+
+- T-2020 22b1a3176 (two main reds; review T-2038 Pernille). Lesson: a schema row landing before its renderer turns the drawn-set test red; exempt by equality naming the drawing task, never by subtraction.
+- T-0656 2026-11-04: slice 1 parked untested in company-scratch/T-0656-idris (EditorTooling, tests, patch); board noted. Freeze passed: <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line for 1.1.
+- Lesson T-0656: start the build first, before writing code; pgrep xcodebuild. A held lock ate 30 min and the session.
+
+- T-0389 slice b 2026-11-04: card written, never built; parked in company-scratch/T-0389-idris/tree/ and PyWidgetApp.t0389+t0657.patch (stage_hunks.py takes my hunks). Next: T-1982 (build+commit), then T-1983 jump, T-1984 perf.
+- Lesson T-0389: with ~10 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> the xcodebuild lock queue passed 45 min and then the disk line refused. Start xc.sh in the background (timeout 7200000, XC_LOCK_WAIT up) as the first step after coding, one `test` call, and check free disk before writing code.
 
 ## Lessons
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
-- Lesson T-3149: "works on Simulator" meant tap-after-place; test the user's real order (open, place, choose, never reopen).
+
+- StoreKit, T-0583/T-0589, caret lessons: archive.md.
+
+- T-1861 fe0149caf: T-0678's button must call WidgetWriter.refreshButton (intent rows); mutants-t1861.json unrun. Lock queue can pass 30 min: XC_LOCK_WAIT=3000.
 {% endraw %}
 
 

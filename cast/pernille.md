@@ -46,13 +46,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-2376 (4b123c9b1): Shortcut recipes in widgets/recipes/ (premade/*.py all ship as tiles); device pywidget.context = mode only. Open: T-2857 e2e.
 - T-3133/T-3142 (5051f1926): F1-F4 fixed; re-review PASS-with-fixes, M1/M2 = T-3146/47 (Idris). Mine: t1140 L4 open; detail names are UUIDs, so prune by mtime, not name.
 - Lesson: a file kept "until settled" needs a settle for every way the write can fail (folder gone), or it leaks.
+- T-3121 (cd0dd3591): ADR-009, https via URLSession + strip _ssl/_hashlib (8,266,336 B) awaits Ines/chair; follow-up T-3168 Idris. A lane's task line may exist only on main's live board (task_context reads the local one).
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## Lessons (2026-10-27, T-0416 to T-0448 reviews)
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
-- T-2204: recuts: `git rebase` is blocked by the session hook; cherry-pick `git cherry`'s + commits onto main in a scratch worktree. A retry name must start <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/<id>/ (retry_one skips any other name).
 - T-2690 (33763e9fb): upload may go once T-2702 (Idris lands 6beb56a49) closes. Lesson: real-binary checks without xcodebuild: `xcrun --sdk iphoneos swiftc -target arm64-apple-ios17.0`, then strip/codesign.
 {% endraw %}
 

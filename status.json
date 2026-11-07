@@ -1,24 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-07T05:07:01.737918+00:00",
+ "at": "2026-11-07T05:08:44.506381+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-06T23:09:00-05:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[site] T-3187 Home favorites search expand",
    "model": "opus",
    "started": "2026-11-07T04:11:38.649Z",
-   "seconds": 3323,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-07T05:07:28.979000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3192 fix failed merges",
@@ -31,7 +29,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 407,
+  "runnable_count": 408,
   "blocked_count": 121
  },
  "meter": {
@@ -74,56 +72,8 @@
   "week_pct": 63.71,
   "usage_pct": 39.6,
   "work_pct": 68.2,
-  "read_at": "2026-11-07T05:07:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-3007",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retry finished work that could not be merged",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T21:37:14-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-3008",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retry finished work that could not be merged",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T21:37:14-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-3019",
-    "w": "Idris",
-    "k": "tools",
-    "t": "Retry finished work that could not be merged",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T21:37:14-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-1880",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retry work from a session that did not end cleanly",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T21:37:14-05:00",
-    "n": "Evan",
-    "d": 1
-   }
-  ]
+  "read_at": "2026-11-07T05:12:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -161,8 +111,8 @@
  },
  "lock_in": {
   "on": false,
-  "pool": 2,
-  "at": "2026-11-07T00:07:00-05:00"
+  "pool": 1,
+  "at": "2026-11-07T00:12:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -174,12 +124,11 @@
  "lanes": [
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[site] T-3187 Home favorites search expand",
-   "model": "opus",
-   "since": "2026-11-07T04:11:38.649Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
@@ -223,17 +172,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Favorite, search and expand tasks on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T04:11:38.649Z",
-    "o": "i"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -309,6 +248,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "On Home each running or queued task has a star both Investors share; starred tasks list first...",
+    "at": "2026-11-07T00:07:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "Tonight's failed merges were mostly the external SSD hanging under the lanes' work folders, not...",
     "at": "2026-11-06T23:58:00-05:00"
    },
@@ -316,15 +260,10 @@
     "w": "Pernille",
     "t": "Second look at the fixes for crash records of deleted widgets and finished runs: they work, but...",
     "at": "2026-11-06T23:26:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Read the security-guard revert watch at day 3: false refusals per day 4, 19, 16, so the rule to...",
-    "at": "2026-11-06T23:25:00-05:00"
    }
   ],
   "count": {
-   "next": 407,
+   "next": 408,
    "wait": 44,
    "blocked": 77,
    "you": 20
@@ -347,13 +286,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
-  "lanes": 1,
-  "total": 2,
-  "at": "12:07 AM",
-  "why": "",
-  "at_iso": "2026-11-07T05:07:00+00:00",
-  "started": "11:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 11:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:07 AM ET</p></section>"
+  "main": 0,
+  "lanes": 0,
+  "total": 0,
+  "at": "12:12 AM",
+  "why": "Between sessions: no session is running. Last check 11:08 PM ET.",
+  "at_iso": "2026-11-07T05:12:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:12 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 11:08 PM ET.</p></section>"
  }
 }

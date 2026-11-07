@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-07T09:00:08.968056+00:00",
+ "at": "2026-11-07T09:00:39.946084+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "inbox",
+  "started": "2026-11-07T04:00:09-05:00"
  },
  "workers": [],
  "who": "",
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 412,
+  "runnable_count": 413,
   "blocked_count": 105
  },
  "meter": {
@@ -99,7 +99,11 @@
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: ahead of the line to use the week up by Sat 23:00, so work waits until the line passes; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "n": 1,
+  "at": "2026-11-07T03:59:59.933538-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
@@ -242,7 +246,7 @@
    }
   ],
   "count": {
-   "next": 412,
+   "next": 413,
    "wait": 38,
    "blocked": 67,
    "you": 13
@@ -250,26 +254,14 @@
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-07T08:28:38Z",
+  "sent": "2026-11-07T08:59:38Z",
   "seconds": 50.0
  },
- "inbox": [
-  {
-   "id": "c6704784317",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "What is causing all of these Macbook..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -281,9 +273,9 @@
   "lanes": 0,
   "total": 0,
   "at": "4:00 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "why": "Between sessions: no session is running. Last check 3:59 AM ET.",
   "at_iso": "2026-11-07T09:00:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:00 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:00 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 3:59 AM ET.</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T03:32:19.474175+00:00",
+ "at": "2026-11-07T03:35:20.480493+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,30 +8,30 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[site] T-3185 slim top bar and Chat box",
-   "model": "opus",
-   "started": "2026-11-07T02:59:28.551Z",
-   "seconds": 1970,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "pernille",
    "task": "[review] T-3170 review premade first-render fix",
    "model": "opus",
    "started": "2026-11-07T02:59:39.834Z",
-   "seconds": 1959,
+   "seconds": 2140,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Pernille",
- "recent": [],
+ "who": "Pernille",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[site] T-3185 slim top bar and Chat box",
+   "model": "opus",
+   "started": "2026-11-07T02:59:28.551Z",
+   "seconds": null,
+   "finished": "2026-11-07T03:34:27.954000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 400,
+  "runnable_count": 399,
   "blocked_count": 120
  },
  "meter": {
@@ -74,7 +74,7 @@
   "week_pct": 63.38,
   "usage_pct": 39.8,
   "work_pct": 68.4,
-  "read_at": "2026-11-07T03:32:00+00:00",
+  "read_at": "2026-11-07T03:35:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -156,7 +156,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T22:32:00-05:00"
+  "at": "2026-11-06T22:35:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -167,15 +167,6 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[site] T-3185 slim top bar and Chat box",
-   "model": "opus",
-   "since": "2026-11-07T02:59:28.551Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Pernille",
    "state": "running",
    "task": "[review] T-3170 review premade first-render fix",
@@ -183,6 +174,14 @@
    "since": "2026-11-07T02:59:39.834Z",
    "next": [],
    "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
@@ -219,15 +218,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Slim the site's top bar and Chat box",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T02:59:28.551Z",
-    "o": "c"
-   },
    {
     "w": "Pernille",
     "k": "review",
@@ -298,19 +288,24 @@
    {
     "w": "Odalys",
     "k": "site",
-    "t": "Slim the site's top bar and Chat box",
+    "t": "Favorite, search and expand tasks on Home",
     "s": "next",
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Favorite, search and expand tasks on Home",
+    "w": "Pernille",
+    "k": "build",
+    "t": "Keep real packages out until the sandbox is...",
     "s": "next",
     "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "The site's top bar drops the company name and centres the tabs; on a phone the bell and info...",
+    "at": "2026-11-06T22:34:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "The small first build that puts the app on a fresh Simulator now keeps its build files on the...",
@@ -320,15 +315,10 @@
     "w": "Odalys",
     "t": "Looked at why the board-test fix T-1395 (tests clearing the lane setting) kept coming back: the...",
     "at": "2026-11-06T22:08:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "The work this notice was about has landed on main, so the lander closed it.",
-    "at": "2026-11-06T22:08:00-05:00"
    }
   ],
   "count": {
-   "next": 400,
+   "next": 399,
    "wait": 42,
    "blocked": 78,
    "you": 19
@@ -351,13 +341,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 1,
-  "total": 3,
-  "at": "10:32 PM",
+  "total": 2,
+  "at": "10:35 PM",
   "why": "",
-  "at_iso": "2026-11-07T03:32:00+00:00",
+  "at_iso": "2026-11-07T03:35:00+00:00",
   "started": "9:58 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:58 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:32 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:58 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:35 PM ET</p></section>"
  }
 }

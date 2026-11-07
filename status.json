@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T15:32:58.666567+00:00",
+ "at": "2026-11-07T15:36:01.715651+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-3288 main gate build",
    "model": "opus",
    "started": "2026-11-07T15:08:11.185Z",
-   "seconds": 1487,
+   "seconds": 1670,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[site] T-3284 build In flight view",
    "model": "opus",
    "started": "2026-11-07T15:08:26.237Z",
-   "seconds": 1472,
+   "seconds": 1655,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[tools] T-2641 cut old personal split",
    "model": "opus",
    "started": "2026-11-07T15:08:32.034Z",
-   "seconds": 1466,
+   "seconds": 1649,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +39,7 @@
    "task": "[build] T-3298 first draw card scope fix",
    "model": "opus",
    "started": "2026-11-07T15:12:55.873Z",
-   "seconds": 1202,
+   "seconds": 1385,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +48,7 @@
    "task": "[tools] T-3069 merge queue next slice",
    "model": "opus",
    "started": "2026-11-07T15:14:59.848Z",
-   "seconds": 1078,
+   "seconds": 1261,
    "finished": null,
    "effort": "high"
   },
@@ -57,16 +57,7 @@
    "task": "[tools] T-3299 applier tilde fence fix",
    "model": "opus",
    "started": "2026-11-07T15:19:27.586Z",
-   "seconds": 811,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3282 cap widget marker read",
-   "model": "opus",
-   "started": "2026-11-07T15:24:10.791Z",
-   "seconds": 527,
+   "seconds": 994,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +66,7 @@
    "task": "[build] T-2551 launcher premades Python half",
    "model": "opus",
    "started": "2026-11-07T15:31:36.327Z",
-   "seconds": 82,
+   "seconds": 265,
    "finished": null,
    "effort": "high"
   },
@@ -84,13 +75,21 @@
    "task": "[design] T-3295 fix phone header in frames",
    "model": "opus",
    "started": "2026-11-07T15:32:21.112Z",
-   "seconds": 37,
+   "seconds": 220,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x5, Idris x2, Pernille, Maren",
+ "who": "Odalys x5, Idris, Pernille, Maren",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-3282 cap widget marker read",
+   "model": "opus",
+   "started": "2026-11-07T15:24:10.791Z",
+   "seconds": null,
+   "finished": "2026-11-07T15:35:03.755000+00:00"
+  },
   {
    "name": "maren",
    "task": "[design] T-3295 This Session flowchart frames",
@@ -114,20 +113,12 @@
    "started": "2026-11-07T15:08:05.384Z",
    "seconds": null,
    "finished": "2026-11-07T15:20:40.553000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-2711 apply fixes recheck r3",
-   "model": "opus",
-   "started": "2026-11-07T15:08:20.985Z",
-   "seconds": null,
-   "finished": "2026-11-07T15:19:12.050000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 325,
+  "runnable_count": 326,
   "blocked_count": 106
  },
  "meter": {
@@ -170,7 +161,7 @@
   "week_pct": 86.57,
   "usage_pct": 45.0,
   "work_pct": 73.4,
-  "read_at": "2026-11-07T15:33:00+00:00",
+  "read_at": "2026-11-07T15:36:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -337,7 +328,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T10:33:00-05:00"
+  "at": "2026-11-07T10:36:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -463,16 +454,6 @@
     "task": "T-3299"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Cap how much of the run marker the widget reads",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T15:24:10.791Z",
-    "o": "c",
-    "task": "T-3282"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "Build all six app launcher premades",
@@ -481,6 +462,16 @@
     "at": "2026-11-07T15:31:36.327Z",
     "o": "c",
     "task": "T-2551"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Draw the This Session flowchart frames",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T15:32:21.112Z",
+    "o": "c",
+    "task": "T-3295"
    }
   ],
   "open": [
@@ -573,7 +564,7 @@
    }
   ],
   "count": {
-   "next": 325,
+   "next": 326,
    "wait": 39,
    "blocked": 67,
    "you": 13
@@ -581,8 +572,8 @@
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-07T15:31:25Z",
-  "seconds": 75.0
+  "sent": "2026-11-07T15:33:33Z",
+  "seconds": 33.0
  },
  "inbox": [],
  "trimmed": [
@@ -597,13 +588,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 9,
+  "main": 8,
   "lanes": 3,
-  "total": 12,
-  "at": "10:33 AM",
+  "total": 11,
+  "at": "10:36 AM",
   "why": "",
-  "at_iso": "2026-11-07T15:33:00+00:00",
+  "at_iso": "2026-11-07T15:36:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>12</b> agents running now</p><p class=\"an-sub\">Main session 9, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:33 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>11</b> agents running now</p><p class=\"an-sub\">Main session 8, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:36 AM ET</p></section>"
  }
 }

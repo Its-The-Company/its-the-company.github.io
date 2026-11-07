@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-07T09:00:39.946084+00:00",
+ "at": "2026-11-07T09:03:49.779165+00:00",
  "session": {
-  "active": true,
-  "kind": "inbox",
-  "started": "2026-11-07T04:00:09-05:00"
+  "active": false,
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
@@ -38,8 +38,8 @@
   "read_at": "2026-11-07T03:59:59.657626-05:00"
  },
  "ui": {
-  "week_pct": 0.797,
-  "five_hour_pct": 0.368,
+  "week_pct": 0.809,
+  "five_hour_pct": 0.44,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -50,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-07T04:18:40-05:00",
  "personal": {
   "week_pct": 63.08,
   "usage_pct": 38.5,
   "work_pct": 67.6,
-  "read_at": "2026-11-07T09:02:00+00:00",
+  "read_at": "2026-11-07T09:05:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -85,7 +85,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T04:02:00-05:00",
+   "at": "2026-11-07T04:04:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -95,15 +95,11 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-07T04:02:00-05:00"
+  "at": "2026-11-07T04:05:00-05:00"
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Spread: ahead of the line to use the week up by Sat 23:00, so work waits until the line passes; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
-  "n": 1,
-  "at": "2026-11-07T03:59:59.933538-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -232,17 +228,17 @@
    {
     "w": "Operator",
     "t": "Main passes its Xcode checks again: job J-20261107-0257-xc-test on the MacBook no longer shows...",
+    "at": "2026-11-07T04:03:00-05:00"
+   },
+   {
+    "w": "Operator",
+    "t": "Main passes its Xcode checks again: job J-20261107-0315-land-a30-148807 on the MacBook no longer...",
+    "at": "2026-11-07T04:02:00-05:00"
+   },
+   {
+    "w": "Operator",
+    "t": "Main passes its Xcode checks again: job J-20261107-0257-xc-test on the MacBook no longer shows...",
     "at": "2026-11-07T03:59:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Home's Running filter tabs now read left to right in the order work runs, Coding through...",
-    "at": "2026-11-07T03:13:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The site now has a hidden Investor Scoreboard, a friendly leaderboard counted from GitHub's...",
-    "at": "2026-11-07T03:09:00-05:00"
    }
   ],
   "count": {
@@ -257,11 +253,35 @@
   "sent": "2026-11-07T08:59:38Z",
   "seconds": 50.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6704797547",
+   "state": "waiting",
+   "position": 1,
+   "eta": "2026-11-07T04:18:40-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "done"
+  },
+  {
+   "id": "c6704807467",
+   "state": "waiting",
+   "position": 2,
+   "eta": "2026-11-07T04:18:40-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Prioritize these fixes (process..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -272,10 +292,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "4:02 AM",
-  "why": "Waiting for the week's line: the week is ahead of its pace to be used up before it resets. Last check 4:02 AM ET.",
-  "at_iso": "2026-11-07T09:02:00+00:00",
+  "at": "4:05 AM",
+  "why": "Waiting for the week's line: the week is ahead of its pace to be used up before it resets. Last check 4:05 AM ET.",
+  "at_iso": "2026-11-07T09:05:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:02 AM ET</p><p class=\"an-why\">Waiting for the week's line: the week is ahead of its pace to be used up before it resets. Last check 4:02 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:05 AM ET</p><p class=\"an-why\">Waiting for the week's line: the week is ahead of its pace to be used up before it resets. Last check 4:05 AM ET.</p></section>"
  }
 }

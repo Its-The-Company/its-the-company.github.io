@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T12:17:02.566121+00:00",
+ "at": "2026-11-07T12:20:04.162367+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,25 +9,33 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-3206 supervisor_test red on main",
+   "task": "[site] T-2667 Home slice: Task Lifecycle recut, chat hunk",
    "model": "opus",
-   "started": "2026-11-07T10:52:43.753Z",
-   "seconds": 5058,
+   "started": "2026-11-07T11:49:05.888Z",
+   "seconds": 1858,
    "finished": null,
    "effort": "high"
   },
   {
-   "name": "odalys",
-   "task": "[site] T-2667 Home slice: Task Lifecycle recut, chat hunk",
-   "model": "opus",
-   "started": "2026-11-07T11:49:05.888Z",
-   "seconds": 1676,
+   "name": "idris",
+   "task": "[build] T-3217 ProjectsTransferUITests import step (Fable)",
+   "model": "fable",
+   "started": "2026-11-07T12:19:26.582Z",
+   "seconds": 37,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2",
+ "who": "Odalys, Idris",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3206 supervisor_test red on main",
+   "model": "opus",
+   "started": "2026-11-07T10:52:43.753Z",
+   "seconds": null,
+   "finished": "2026-11-07T12:18:57.583000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3251 runner re-warm after red job",
@@ -51,14 +59,6 @@
    "started": "2026-11-07T11:10:26.853Z",
    "seconds": null,
    "finished": "2026-11-07T11:17:17.033000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[test] T-3240 StoreKit timeout on MacBook",
-   "model": "opus",
-   "started": "2026-11-07T11:06:15.219Z",
-   "seconds": null,
-   "finished": "2026-11-07T11:10:06.031000+00:00"
   }
  ],
  "queue": {
@@ -107,7 +107,7 @@
   "week_pct": 63.03,
   "usage_pct": 38.4,
   "work_pct": 67.6,
-  "read_at": "2026-11-07T12:17:00+00:00",
+  "read_at": "2026-11-07T12:20:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -128,7 +128,7 @@
   }
  ],
  "disk": {
-  "free_gb": 28,
+  "free_gb": 29,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -137,7 +137,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T07:11:00-05:00",
+   "at": "2026-11-07T07:17:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -147,7 +147,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-07T07:17:00-05:00"
+  "at": "2026-11-07T07:20:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -160,19 +160,20 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-3206 supervisor_test red on main",
+   "task": "[site] T-2667 Home slice: Task Lifecycle recut, chat hunk",
    "model": "opus",
-   "since": "2026-11-07T10:52:43.753Z",
+   "since": "2026-11-07T11:49:05.888Z",
    "next": [],
    "effort": "high"
   },
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-3217 ProjectsTransferUITests import step (Fable)",
+   "model": "fable",
+   "since": "2026-11-07T12:19:26.582Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -211,16 +212,6 @@
   "run": [
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "Fix three test suites that are red on main",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T10:52:43.753Z",
-    "o": "c",
-    "task": "T-3206"
-   },
-   {
-    "w": "Odalys",
     "k": "site",
     "t": "Build the new Home, Chat and Usage pages",
     "m": "opus",
@@ -228,6 +219,16 @@
     "at": "2026-11-07T11:49:05.888Z",
     "o": "c",
     "task": "T-2667"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Fix the three red tests before build 3",
+    "m": "fable",
+    "e": "high",
+    "at": "2026-11-07T12:19:26.582Z",
+    "o": "c",
+    "task": "T-3217"
    }
   ],
   "open": [
@@ -304,6 +305,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The supervisor's test suite, which blocked every lane's merge, passes again in about 4 minutes...",
+    "at": "2026-11-07T07:18:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "When several widgets refresh together, the one that has waited longest for a run now gets it...",
     "at": "2026-11-07T06:59:00-05:00"
@@ -311,11 +317,6 @@
    {
     "w": "Odalys",
     "t": "The MacBook test machine now reports which tests ran and which failed as plain data, and can run...",
-    "at": "2026-11-07T06:50:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "A governor test went red when the governor began reporting how far the week's usage is from its...",
     "at": "2026-11-07T06:50:00-05:00"
    }
   ],
@@ -347,10 +348,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "7:17 AM",
+  "at": "7:20 AM",
   "why": "",
-  "at_iso": "2026-11-07T12:17:00+00:00",
+  "at_iso": "2026-11-07T12:20:00+00:00",
   "started": "5:48 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:48 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:17 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:48 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:20 AM ET</p></section>"
  }
 }

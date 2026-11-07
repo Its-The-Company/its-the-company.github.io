@@ -36,14 +36,14 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Archive: dated task notes and older lessons (11-07 T-3221 moved the rest there; nothing deleted).
 
 ## Open (2026-11-07)
-- Reads due: OPT-101 n=30 attempts (land_why.py --since). OPT-102 n=60 or 11-09. OPT-100 n=3 main reds or 11-13. OPT-095, 098, 099 11-08..09. OPT-107 n=40 or 11-13. OPT-115 n=24 or 11-09, then #41 reply. OPT-085, 077, 079, 081 11-11.
+- Reads due: OPT-100 n=3 main reds or 11-13. OPT-095, 098, 099 11-08..09. OPT-107 n=40 or 11-13. OPT-115 n=24 or 11-09, then #41 reply. OPT-085, 077, 079, 081 11-11.
 - T-3258 d8ba0328f: MEMORY.md merges by tools/memory_merge.py (keeps main's file, adds only new lines, 4096 <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>). Suite rows not written (guard refused the write). Watch the next replay land: this file must not grow.
+- T-3274 bd2f3b6b7: land drops commits main has by (author, time, subject). Open: end-to-end drop rows in personal_land_test.sh (guard refused my setup text: ff merge + push; someone else writes them).
 - T-3213 runner_watch: read runner_health.jsonl idle/red minutes after 11-08. T-3102: requeue and red shares at n=60 queues or 11-09.
-- Mine next: T-3208 (#211 after next applier run), T-3209, T-3215. T-2667 left: threads column, This Session page, #41 post. T-2616: baseline and plan in its board note. T-3069 record-train half (diff in scratch).
+- Mine next: T-3215 (T-3202, T-3208, T-3209 done 11-07). T-2667 left: threads column, This Session page, #41 post. T-2616: baseline and plan in its board note. T-3069: records train shipped 10e9648fe (OPT-117 read n=60 lands or 11-09); left T-2616 rest, T-2666, T-2467. Hourly prune skipped hours 11-07 (3 samples 03:38-09:02).
 
 ## Lessons
-- A guard or classifier refusal stops the item: no rewording, no other tool. Refused before: commands naming a rebase (even in a temp repo), supervisor_test.sh and bash -n supervisor.sh, cp of rules/, globbing ~/*, reading the personal profile, git stash in the shared checkout, a heredoc writing test text that names a worktree fast-forward.
-- Say only what I have read: never state a suite result before reading its output file. Take the clock from `date` before writing a time.
+- land_stats time to land restarts its clock at each failed try (last try only); say so beside any median. T-3089: OPT-101, 102 kept 11-07.
 - Parallel test parts: a machine-wide pgrep row sees a sibling part's processes; give each part distinct markers.
 - Measure: a before number is a claim; rebuild it from raw. Process rows read only the run's own processes; races need repeated rows; time each group before blaming load.
 - Tests: no pytest, stdlib unittest with a __main__. One suite at a time; check ps for another run.sh. personal_land_test takes ~420 s: SUITE_TIMEOUT=900. Read reds by cause.

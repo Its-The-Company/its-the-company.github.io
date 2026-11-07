@@ -403,6 +403,46 @@ The header then reads "Could not get new data", "Failed · From the widget". Why
 
 Open: glyph names (Idris, [recall]); the Lock Screen tap after unlock and on a locked device, iOS 18 and 26 (Idris, Simulator, T-0678 item 2; the three points under the constraint paragraph); the system's pending look (Idris, Simulator, under T-0678); the small-widget short form is settled above (T-1797: A, plus the abbreviated weekday at xxxLarge); Lock Screen text growth past 13 pt (Idris); C51 with the next creative batch.
 
+## 11. Why the picture stopped updating (T-3290, Maren, 2026-11-07; words DRAFT C51, NOT APPROVED)
+
+Read at HEAD aa76a3bfe: Widget/PyWidget.swift `drawn` (:42-69), Shared/TreeView.swift `CornerMark` (:86-140), Shared/LaneGuard.swift `WidgetLane.badged` (:32), Shared/WidgetStatus.swift `showsBadge` (:267) and the writers (:147-245), ADR-007 Amendment 4. **The gap.** The slot is built and drawn (`CornerMark`, `.badge` and `.stale`), but `entry.badged` is set only from the demoted list (`WidgetLane.badged`, flag off in Release). `showsBadge` has no caller outside tests, so no `status.json` outcome (script errors, timeouts, start_failed, oom_guard) draws a badge. A widget whose runs fail keeps its last picture with no mark until it crosses `stale_after`, and then shows the grey clock, which says "old", not "broken". Frames: `why-stale-light.jpg`, `why-stale-dark.jpg` (small and medium in full colour, the three Lock Screen families in vibrant), drawn by `draw_why_stale.py`; QA `why-stale-qa.json`.
+
+**The decision in one sentence.** One mark says whether the picture is old or the run failed; the cause is said (VoiceOver) and shown one tap away (Activity), never written on a widget that still has a picture. Why: the slot is 16 pt in the content margin so it never covers the person's layout; any words there would, and in accented and vibrant a second glyph shape at 14-16 pt is a code nobody learns.
+
+**What draws a mark** (with a last good render; s1 rows 4 and 5, first match wins; taps-off, s3.3, stays above both):
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 11: 11. Why the picture stopped updating (T-3290, Maren, 2026-11-07; words DRAFT…, scrolls sideways" style="--tw:1206px" markdown="1">
+
+| `status.json` | Mark | VoiceOver (combined element, s7) | Tap (s2) |
+|---|---|---|---|
+| missing, `ok`, `deferred` only, unknown word | none; the clock once past `stale_after` | the script's own label; `voiceover.stale` with the clock | the script's `widgetURL` |
+| `expired` with no `failing_since` | as above | as above | as above |
+| `error` (any type but `InternalError`), `timeout`, `stuck` | badge | `badge.script`: "{widget}. Last run failed at {time}. Showing the result from {good_time}." (today's `error_badge`) | Activity, `show=failed` |
+| `error` with `InternalError` (start_failed, ADR-007 am. 4), `killed` | badge | `badge.norun`: "{widget}. Could not run at {time}. Showing the result from {good_time}. Opening [appname] updates it." | Activity, `show=failed` |
+| `oom_guard` and `showsBadge` true (60 s gap) | badge | `badge.memory`: "{widget}. Skipped to save memory since {time}. Showing the result from {good_time}." | Activity, All (12.4's oom_guard rule) |
+| `expired` with `failing_since` set | badge (the failure still stands) | `badge.script` or `badge.norun` by `error_type` | Activity, `show=failed` |
+| demoted (`WidgetLane.badged`) | badge | `badge.moved`: "{widget}. Last run was stopped at {time}. It now updates when [appname] opens." | Activity, `show=failed` |
+
+</div>
+
+
+`{time}` is `status.json` `ts` (for memory, `oom_guard_since`, or `ts` when that is the year-1 under-way stamp); `{good_time}` is the tree's `sampled_at`, and with none the clause drops. Times as the age line writes them (s10 c). No exception message, file name or traceback in any string (s3 "No traceback, anywhere"). Medium and larger: the slot's `Link` is its own element, "Why it stopped updating. Opens Activity." (`badge.link`). Small: no separate target (s2), so the string carries no "Double-tap".
+
+**Quiet.** A picture minutes old is not an error: nothing is drawn until the script's own `stale_after` passes, and then only the grey clock (light weight, `text.secondary`; 0.66 in vibrant). `deferred`, `busy`, a lone `expired` and the first oom_guard refusal of one reload draw nothing: they mend themselves, and the clock covers them if they last. Only a failed run turns the corner red, and the badge outranks the clock (s1). One glyph for every failure cause: the badge is `exclamationmark.circle.fill`, heavy, `status.danger`, as built.
+
+**Families.** Small, medium, large, extra large: the s2 slot, unchanged geometry and knock-out halo. Badge contrast on the dark card at the slot's own point on the gradient: 3.96:1 small, 4.68:1 medium, 3.86:1 large (3:1 floor, 1.4.11); 6.54:1 on light (`why-stale-qa.json`; 0 slots over text). accessoryRectangular: content 18 pt narrower, 14 pt glyph top-trailing (s5). accessoryCircular: 14 pt glyph in the square's top-trailing corner, clipping unverified (s8 item 2). accessoryInline: the badge replaces the leading symbol; the text stays. Vibrant: badge white 1.0, clock 0.66.
+
+**No picture yet: the norun card.** With no tree and `error_type` `InternalError` or `killed`, s3's error card would say "Script error / Line 12" about a script that never ran. Variant (DRAFT C51): small `norun.title` "Could not run", `error.tap` "Tap to open"; medium adds `norun.detail` "Your script did not run" and "Failing since {time}" (as s3's medium); large and extra large: the medium words, no run list. accessoryCircular: glyph, "Open"; accessoryRectangular: glyph + "Could not run", the widget name, "Tap to open"; accessoryInline: glyph + "Could not run" (13 chars). VoiceOver `norun_card`: "{widget}. Could not run. Your script did not run. Double-tap to open its activity." Tap: `pywidget://open?widget=<id>&view=activity&show=failed` (no line to go to). At HEAD the no-tree case draws `Text("No view for this size")` (TreeView.swift :83), so the s3 error card itself is not built either; this variant lands with it.
+
+**How it clears.** The next `ok` from either lane clears `failing_since` and the outcome (`WidgetStatus.ok`), and the reload that follows the run drops the badge from every entry. Opening [appname] runs every placed widget (WidgetWriter.passIDs), so for norun and memory opening the app is the fix. The badge is read once per timeline and set on every entry, as `badged` is today; it never clears on its own, by time, or on `expired`, `deferred` or `busy`. A refresh tap that fails (s10 d) badges as before.
+
+**Build (Idris).** In `TreeProvider.drawn`, `.drawn` case: read `widgets/<id>/status.json` through `WidgetStatusStore`; `e.badged = WidgetLane.badged(...) || WidgetStatus.showsBadge(status, treeExists: true)`; change `showsBadge`'s `.expired` case to `status.failingSince != nil`. Carry the cause (`script`, `norun`, `memory`, `moved`) on the entry so `CornerMark` reads the s11 VoiceOver string instead of the fixed "Last run was stopped"; on medium and larger wrap the slot in `Link` to the route above. The norun card with the s3 error card. Tests: one per row of the table, the clear on `ok`, and `expired` after `error` keeping the badge.
+
+**[appname]** is a placeholder: no product name is approved (creative/approved.md, Not yet approved item 12). Layout, glyphs and colours are approved item 2 and s2 as built; only the words wait on C51.
+
+**What would make this wrong.** If testers read the one badge as "my script is broken" when the cause was ours (norun), a second glyph for norun comes back to me; and if the dark large slot measures under 3:1 on a device (the gradient is a CSS approximation), the badge takes a 1 pt ring in the halo.
+
 ## Chair ruling, 2026-10-25 20:08 ET (Ines): may a free user place a Pro premade on the Home Screen
 
 Open item 1 above. Read: PROPOSAL-001 (options 2 and 3, questions 1-2), PROPOSAL-002 s5-s6 (3 free, 9 Pro; 6 and 6 under option 3), ADR-001 3.1 (C11, C12), L11 s1 and s3 (window effects, conversion assumptions), app-review-matrix.md rows 25 and 32 and the 3.1.1 and 2.5.16 lines in its section 1.
@@ -469,7 +509,7 @@ Ines, CEO
 **Card grammar.** Follows the Pro card (s3.2): centred, whole-widget, no corner slot, no name line (the id `new_widget` is never shown), `text.primary` headline, `text.secondary` caption and glyph. It is not a fault, so the glyph is `text.secondary`, never `status.warning` or `status.danger`. Glyph: `square.dashed` [recall, Idris confirms the name]; accented: the glyph alone is accentable; vibrant: white 1.0. Layout per family: ProCardView's `content` switch with the name line removed.
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 11: Ruling, 2026-10-31 12:25 ET (Maren, with Idris, T-0684 part b, F19): what a…, scrolls sideways" style="--tw:888px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 12: Ruling, 2026-10-31 12:25 ET (Maren, with Idris, T-0684 part b, F19): what a…, scrolls sideways" style="--tw:888px" markdown="1">
 
 | ID | Family | Copy (DRAFT, C51) |
 |---|---|---|

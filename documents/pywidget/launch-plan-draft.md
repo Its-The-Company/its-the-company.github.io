@@ -150,7 +150,7 @@ The window is no longer three days. Release is Tuesday 2026-12-15 (Day 55) and t
 | Case | Buyers per 1,000 downloads at 1% / 2% / 3% | Net at $10.49 a sale (30%) | Net at $12.74 (15%) |
 |---|---|---|---|
 | **$14.99, decided (#87)** | 10 / 20 / 30 | $105 / $210 / $315 | $127 / $255 / $382 |
-| $4.99, the earlier case table's figure for a themes-only Pro (widgets cut; Ines judges the rate lower, 0.5%). **Not a decided 6b price** | 5 at 0.5% | $17 | $21 |
+| $4.99, the earlier case table's figure for a themes-only Pro (widgets cut; Ines judges the rate lower, 0.5%). **Not a decided 6b price**; it is `pywidget/runtime/pro-variants/c2-themes.json`'s case (widgets cut, $4.99 only then, Ines T-0888), not 6b | 5 at 0.5% | $17 | $21 |
 
 </div>
 

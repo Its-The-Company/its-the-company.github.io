@@ -33,6 +33,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 
 ## Open (mine)
+- T-3106: build-3 bump 377d22cf8 must be pushed before upload (upload.sh wants HEAD on origin/main). Gate build proven.
 
 - T-2458 5bd8e7908: ProPaywall compiles, suite green (free.all test). Left: Pro/Settings shots, T-2372 key wiring, RETIRING delete. Local run: 13 ProStoreTests StoreKit 30 s timeouts + 2 "Updated" + ExtensionBridge flag red, not mine; recheck on runner.
 
@@ -64,13 +65,7 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 ## Lessons
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
-## Lessons
-
-- StoreKit, T-0583/T-0589, caret lessons: archive.md.
-
-- StoreKit, T-0583/T-0589, caret lessons: archive.md.
-
-- T-1732 2026-11-05 (8825c9e3a): learned stdlib root kept only if basename python3.*; review T-1912. Bridge test_device_call budget_caps flakes under load, parent too: T-1934.
+- T-3279 9873136c3 2026-11-07: first-draw card for a widget with no tree (slice 1). Owed: runner FirstDrawCardTests, Maren <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span> on first_draw.* words; slice 2 (bundled first renders) open on the line.
 {% endraw %}
 
 

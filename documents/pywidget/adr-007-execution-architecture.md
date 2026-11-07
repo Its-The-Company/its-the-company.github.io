@@ -1031,6 +1031,25 @@ Form: independent views, then the chair (C13). My own view was written first (sc
 **What would make this fail.** A widget whose tree asks wrongly and often, waking the app every 15 minutes for nothing: the 24 h cap bounds only the far side. iOS decides the real cadence ("won't begin sooner"), and T-0680's 3-day reload log is the check. Or default widgets that should not refresh in the background: today none such exists, and `never` is the author's way out.
 
 **Board.** T-2846 ticked. New T-2852 (Odalys, P1): the ask reader with its filter and the `from` rename, review by Pernille. New T-2853 (Idris, P1): the second-process demotion badge test. Notes on T-0793 (items 2-4 are what it builds), T-2841 ((c) answered by item 7) and T-2845 (does not wait).
+
+## Amendment 4 (Maren), 2026-11-07 09:40 ET: 7.2 for a lane turn that could not start (T-2574, from T-2272 F6)
+
+Read at HEAD 1522a9ea9: ExtensionLane.swift `runInBridge` (:480-507) and `turn()` (:242-301), PyBridge `run` (:566-570), WidgetStatus, Widget/PyWidget.swift :49-67, ide/spec.md 12.4, review t2272-pernille.md F6. Hand-off for T-2496 (Idris).
+
+**The case.** The lane got as far as running and Python never went: `no runtime config`, `Python unavailable` (`bridge.start` threw), `not queued` (`bridge.run` threw `notStarted`), or `no marker` (the marker could not be written, so the lane refused to run). Today each returns `Ran.log == nil`: no row, `status.json` untouched. These are not one-off: a broken RuntimeConfig or a runtime that will not start fails the same way on every reload of every lane widget, and the app shows "Working".
+
+**Ruling.**
+1. **Word: `error`, type `InternalError`.** No new 7.2 word. `InternalError` already means "our side failed, not your script" (7.2 mapping, contract s11 A4), is in 7.1 row 4's badge set and in the Failed filter, and costs no change to `RunOutcomeWord`, export or the precedence. Not `deferred`: deferred is "will run next trigger" and self-heals; this does not, and deferred carries no badge.
+2. **Row: one lane row per turn**, through `log(id, .error, "start_failed", reason:)`, with `reason` one of `no_config`, `python`, `not_queued`, `no_marker`, and `start_error`: the bridge's error text, cut to 200 bytes (it is our enum's text, never user data). No file, line, traceback or detail file. No throttle: a working lane writes one row per reload too, so the volume is the same.
+3. **status.json: `WidgetStatus.error` with `Failure(errorType: "InternalError")`**, no file or line; `failing_since` keeps the streak's start. The next `ok` from either lane clears it. A `no_marker` turn writes best-effort: if the App Group is not writable, the row and status are lost too, and that is accepted.
+4. **Badge: yes, 7.1 row 4** (with a tree), 7.1 row 3's error card without one. The reason is freshness: this is the one failure that never mends itself, and a picture going quietly old is the thing Tenet 1 forbids. **Gap found while reading, not ruled here:** at HEAD the drawn badge is only `WidgetLane.badged` (the demoted list, PyWidget.swift :60); `showsBadge` has no caller outside tests, so no `status.json` outcome draws a badge on the Home Screen yet, script errors included. Until 7.1 row 4 is drawn, this case shows in the app only: the Activity row and the strip's "Failing".
+5. **No demotion.** The cause is the build or the process, not the widget's script. Demoting would move every lane widget to the app and make the person confirm each one back after the fix. The marker is cleared as today. The app's foreground pass already runs every placed widget (WidgetWriter.passIDs), so opening the app updates it and clears the status.
+6. **`not queued` with `BridgeError.stuck` is not this case.** That is the closed lane (T-1852): `logClosed`, `deferred`, `lane_outcome=closed`, as today.
+7. **Copy (DRAFT, C51, in ide/spec.md 12.4):** row reason `o.nostart` "Could not start"; detail `d.nostart` "Python could not start in the widget, so your script did not run. The widget kept its last picture; opening [appname] updates it." then `d.noran`. A failing status with no line (any `InternalError`) shows no `act.open` button: there is nothing in the file to fix.
+
+**What would make this wrong.** A start failure that is transient and frequent on real phones (the T-0680 log would show `start_failed` rows between `ok` rows); then a one-reload grace before the status write comes back to me.
+
+**Board.** T-2574 ticked; note on T-2496 (Idris builds items 1-3, 6, 7's reason switch). Item 4's gap goes to Ines for a line.
 {% endraw %}
 
 </div>

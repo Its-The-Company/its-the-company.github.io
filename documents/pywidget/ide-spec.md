@@ -869,6 +869,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | `stuck` (run, or launch recovery) | as error | `o.stuck` | yes | the frame, if known |
    | `killed` (launch recovery) | as error | `o.killed` | yes | `d.killed.bg` with `backgrounded`, else `d.killed.mem` |
    | `killed`, `lane_outcome=demoted`, `reason=marker` (widget) | as error | `o.killed` | yes | `d.moved.kill`, then the 12.4.3 card |
+   | `error`, `lane_outcome=start_failed` (widget; ADR-007 amendment 4, T-2574) | as error | `o.nostart` | yes | `d.nostart`, `d.noran`; no traceback card, no `act.open` |
    | `tree_too_large` (recordRenderFaults; no trigger) | s3.1's glyph, `status.warning` | `o.big`, line 2 `t.draw` | yes | `d.big`; Started by hides |
    | `deferred`, editor_save yielded to Run (T-1681, no error named) | `clock`, `text.secondary` | `o.waited` | no | `d.wait.run`, `d.noran` (frame 15) |
    | `deferred`, `lane_outcome=late`, `reason=no_time` | as above | `o.waited` | no | `d.wait.time`, `d.noran` |
@@ -892,6 +893,8 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **12.4.2 In-widget rows.** The extension writes `deferred`, `killed`, `oom_guard`, its runs' own words, and `lane_outcome=deadline`. Each carries `lane.widget` on line 2 and `d.where.w` as Ran in. The lane flag is off in Release (LaneGuard.swift:16), so v1 shows none of them.
 
    **12.4.3 Lifting a move (T-1643, not built).** Where: a card `lift.t` under the status strip while the widget is moved to [appname] (frame 16), and the same card on the row that moved it (frame 18). What it says: `lift.wait` until a run in [appname] ends `ok`; then `lift.b` and one secondary button `lift.go`. The tap is the person's say-so: `LaneDemotions` drops the id and the body becomes `lift.done`, with no button. If it fails in the widget again, it moves back by the usual rule and the card returns. No alert: the <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lift</span> is easy to undo. *At AX5* (T-2239, Maren, 2026-11-05; frame 18): the card shortens; the frame does not just scroll to the button. A card whose button sits a scroll below its title asks the person to hold a sentence in mind across a swipe, and the button is the whole point of the card. Three cuts, none of them truncation: (1) from AX1 the widget glyph hides and the title and body take the full card width, the Apple pattern of dropping a leading decorative glyph at accessibility sizes; (2) `lift.b` loses its middle sentence, which only repeated the button, at every size, not an AX-only string; (3) `lift.go` drops "Again", so it wraps to two lines at AX5, not three. Drawn at AX5 on a 390 pt phone the card is about 715 pt against about 740 pt of scroll view, so title, body and button sit on one screen (frame 18, scrolled 700 pt). Nothing is clamped or cut: on a shorter phone (667 pt tall) the card still runs past the screen and scrolls, as all Dynamic Type content does; the frame proves the 390 x 844 case only, and AX5 sizes are the recalled table (13.7 (c)). The Simulator check in 12.11 covers it.
+
+   **On the widget (T-3290).** Which of these outcomes draw a mark on the Home and Lock Screen, what each says, and how it clears: states/state-spec.md s11 (frames `why-stale-light.jpg`, `why-stale-dark.jpg`).
 
    **The Failed set is exactly ADR-007 7.1 rows 3 and 4** (error card and badge), so the list the badge opens always holds the run that set it. Not-failed rows sit in grey and never turn the strip red.
 
@@ -978,6 +981,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | `o.notree` | No widget drawn | row reason, error type NoTree (the script ended or exited 0 before it built its widget) | DRAFT |
    | `o.schema` | View could not be read | row reason, error type schema_error (the tree failed the schema) | DRAFT |
    | `o.internal` | Internal error | row reason, error type InternalError | DRAFT |
+   | `o.nostart` | Could not start | row reason, error with lane_outcome start_failed (ahead of `o.internal`) | DRAFT |
    | `o.timeout` | Took too long | row reason, outcome timeout | DRAFT |
    | `o.stuck` | Would not stop | row reason, outcome stuck | DRAFT |
    | `o.killed` | Closed while it ran | row reason, outcome killed | DRAFT |
@@ -1052,6 +1056,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    | `d.mem.skip` | There was not enough free memory to run it safely. The widget kept its last picture. | oom_guard, lane_outcome oom_guard | DRAFT |
    | `d.moved.mem` | Not enough memory, twice. It runs in [appname] from now on, where there is more room. | oom_guard, lane_outcome demoted, reason refused | DRAFT |
    | `d.moved.kill` | Its last run never finished. It runs in [appname] from now on. | killed, lane_outcome demoted, reason marker | DRAFT |
+   | `d.nostart` | Python could not start in the widget, so your script did not run. The widget kept its last picture; opening [appname] updates it. | error, lane_outcome start_failed | DRAFT |
    | `d.late.show` | This finished after the widget had to show a picture. The new one shows at the next update. | any row with lane_outcome deadline | DRAFT |
    | `lift.t` | Runs in [appname] for now | T-1643 card: under the strip while the widget is moved, and on the row that moved it | DRAFT |
    | `lift.b` | It ran without a problem in [appname]. If it fails in the widget again, it moves back. | T-1643 card body after an ok run in [appname] | DRAFT |

@@ -1,18 +1,37 @@
 {
  "schema": 1,
- "at": "2026-11-07T05:28:47.622939+00:00",
+ "at": "2026-11-07T05:31:52.512223+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-07T00:28:47-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "pernille",
+   "task": "[review] T-2711 recheck apply fixes",
+   "model": "opus",
+   "started": "2026-11-07T05:29:18.997Z",
+   "seconds": 153,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3202 issue replies and apply-check",
+   "model": "opus",
+   "started": "2026-11-07T05:29:27.834Z",
+   "seconds": 144,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Pernille, Odalys",
  "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 408,
+  "runnable_count": 409,
   "blocked_count": 121
  },
  "meter": {
@@ -55,7 +74,7 @@
   "week_pct": 63.32,
   "usage_pct": 39.3,
   "work_pct": 68.0,
-  "read_at": "2026-11-07T05:28:00+00:00",
+  "read_at": "2026-11-07T05:31:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -95,19 +114,38 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-07T00:28:00-05:00"
+  "at": "2026-11-07T00:31:00-05:00"
  },
  "next_tick_why": "session",
- "idle": null,
- "pool": null,
+ "idle": {
+  "since": "2026-11-07T00:08:46-05:00",
+  "minutes": 23,
+  "why": "a tick has spent 16 min on steps before the session",
+  "healed": []
+ },
+ "pool": {
+  "why": "Spread: 12% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 9 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
+  "n": 2,
+  "at": "2026-11-07T00:28:38.260534-05:00"
+ },
  "lanes": [
   {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-2711 recheck apply fixes",
+   "model": "opus",
+   "since": "2026-11-07T05:29:18.997Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, after T-1035 lands (personal-account...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-3202 issue replies and apply-check",
+   "model": "opus",
+   "since": "2026-11-07T05:29:27.834Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Idris",
@@ -121,14 +159,6 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -151,7 +181,28 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Recheck the large-change apply fixes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T05:29:18.997Z",
+    "o": "c",
+    "task": "T-2711"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Answer every issue comment and fix the email approve",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T05:29:27.834Z",
+    "o": "c",
+    "task": "T-3202"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -242,7 +293,7 @@
    }
   ],
   "count": {
-   "next": 408,
+   "next": 409,
    "wait": 44,
    "blocked": 77,
    "you": 20
@@ -265,13 +316,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 0,
-  "total": 0,
-  "at": "12:28 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-07T05:28:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:28 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 2,
+  "at": "12:31 AM",
+  "why": "",
+  "at_iso": "2026-11-07T05:31:00+00:00",
+  "started": "12:28 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:28 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:31 AM ET</p></section>"
  }
 }

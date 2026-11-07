@@ -432,9 +432,70 @@ fold();
 }
 if (!quiet) tally();
 }
+var QST = null, QS = null, OPEN = {};
+function ox(x) { var i = OPEN[x[1]]; return { l: labels(i), dl: window.IssueQ.dl(i.body) }; }
+function dueText(v) { return v ? 'Due ' + day(new Date(v).toISOString()) : 'No deadline: Urgent'; }
+function qsec(k) {
+var sec = el('section', 'ny-q-sec'), h = mk(sec, 'h2', null, k === 'N' ? 'Needs you ' : 'Later ');
+h.id = 'ny-q-' + k; sec.setAttribute('aria-labelledby', h.id);
+QS[k] = { sec: sec, n: mk(h, 'span', 'num ny-count', '0'), none: mk(sec, 'p', 'meta', k === 'N' ? 'Nothing needs you right now.' : 'Nothing is waiting for later.') };
+mk(sec, 'p', 'meta', k === 'N' ? 'A deadline within 24 hours, or none. Mute takes the badge off and leaves the issue here.' : 'A deadline more than 24 hours away. It moves to Needs you by itself when the deadline is within 24 hours. Acknowledge takes the badge off.');
+QS[k].ul = mk(sec, 'ul', 'list needs'); QS[k].ul.setAttribute('data-queue', k);
+return sec;
+}
+function ctl(x) {
+var Q = window.IssueQ, n = x[1], b = mk(x[0], 'div', 'ny-bar ny-dl'), d = mk(b, 'input'), w = mk(b, 'input');
+x.info = mk(b, 'span', 'meta ny-due');
+d.type = 'number'; d.min = '0'; d.step = 'any'; d.placeholder = 'days'; d.setAttribute('aria-label', 'Days to delay #' + n);
+w.type = 'datetime-local'; w.setAttribute('aria-label', 'Deadline for #' + n);
+function btn(t, f) { var c = mk(b, 'button', 'cv-tool', t); c.type = 'button'; c.onclick = f; return c; }
+function go(kind, v) { Q.act(QST, n, ox(x), kind, v, Date.now()); Q.save(QST); paint(); tally(); }
+btn('Delay', () => { var v = parseFloat(d.value); if (v >= 0) go('delay', Date.now() + v * Q.DAY); else d.focus(); });
+btn('Set deadline', () => { var v = Date.parse(w.value); if (v) go('delay', v); else w.focus(); });
+btn('No deadline (Urgent)', () => go('delay', 0));
+x.mute = btn('Mute', () => go('mute')); x.ack = btn('Acknowledge', () => go('ack'));
+b.insertBefore(x.info, b.firstChild);
+}
+function paint() {
+var Q = window.IssueQ;
+if (R || P || !QST || !Q) return;
+var now = Date.now(), vis = ROWS.filter((x) => !x[0].hidden && !x.ans && OPEN[x[1]]), by = { N: [], L: [] };
+if (!QS) {
+QS = {}; var box = el('div', 'ny-queues'), a = document.querySelector('ul[data-group="open"]') || root.firstChild;
+box.appendChild(qsec('N')); box.appendChild(qsec('L'));
+if (a && a.parentNode) a.parentNode.insertBefore(box, a); else root.appendChild(box);
+}
+vis.forEach((x) => { x.q = Q.queue(x[1], ox(x), QST, now); by[x.q].push(x); if (!x.info) ctl(x); });
+['N', 'L'].forEach((k) => {
+by[k].sort((a, b) => Q.due(a[1], ox(a), QST) - Q.due(b[1], ox(b), QST)).forEach((x) => {
+var src = x[0].parentNode; QS[k].ul.appendChild(x[0]);
+if (src && !src.hasAttribute('data-queue') && !src.children.length) { src.removeAttribute('data-group'); src.hidden = true; }
+});
+QS[k].n.textContent = String(by[k].length); QS[k].none.hidden = by[k].length > 0;
+});
+vis.forEach((x) => {
+var o = ox(x), bd = Q.badged(x[1], o, QST, now), hd = x[0].querySelector('.ic-head') || x[0], nb = x[0].querySelector('.ny-nb');
+x.info.textContent = dueText(Q.due(x[1], o, QST)) + (QST.d[x[1]] !== undefined ? ' (set here)' : '');
+x.mute.hidden = !(x.q === 'N' && bd); x.ack.hidden = !(x.q === 'L' && bd);
+if (bd && !nb) { hd.appendChild(document.createTextNode(' ')); hd.appendChild(el('span', 'nb ny-nb', 'New')); }
+if (!bd && nb) nb.remove();
+});
+}
+function ready() {
+if (R || P || !window.IssueQ) return;
+window.IssueQ.load(repo).then((s0) => {
+QST = s0;
+function round() {
+var qs = {}; ROWS.forEach((x) => { if (!x[0].hidden && OPEN[x[1]]) qs[x[1]] = ox(x); });
+window.IssueQ.sync(QST, qs, Date.now(), false); paint(); tally();
+}
+round(); setInterval(round, 6e4);
+});
+}
 function tally() {
 var n = rest, a = 0;
-ROWS.forEach((x) => { if (!x[0].hidden) { if (x.ans) a++; else n++; } });
+var now = Date.now();
+ROWS.forEach((x) => { if (!x[0].hidden) { if (x.ans) a++; else if (!QST || window.IssueQ.badged(x[1], ox(x), QST, now)) n++; } });
 if (ansN) ansN.textContent = String(a);
 if (!R && !P && window.IssueCount) window.IssueCount.put(n, a);
 }
@@ -472,9 +533,9 @@ if (R) {
 var n = rows.length + rest; document.getElementById('needs-count').textContent = n + ' request' + (n === 1 ? ' is' : 's are') + ' open.';
 if (rest) { var more = mk(mk(root, 'p', 'meta'), 'a', null, rest + ' more on Issues'); more.href = root.getAttribute('data-requests'); }
 }
-ROWS = rows;
-var wait = rows.length, done = () => { if (!--wait) tally(); };
-if (!wait) tally();
+ROWS = rows; OPEN = open;
+var wait = rows.length, done = () => { if (!--wait) { tally(); ready(); } };
+if (!wait) { tally(); ready(); }
 rows.forEach((x) => {
 var i = open[x[1]], b = x[0].querySelector('.ny-box') || x[0].appendChild(el('div', 'ny-box'));
 b.textContent = 'Reading the question...';

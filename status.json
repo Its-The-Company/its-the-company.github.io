@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "at": "2026-11-07T18:49:50.553555+00:00",
+ "at": "2026-11-07T19:03:52.773937+00:00",
  "session": {
-  "active": false,
+  "active": true,
   "kind": "",
   "started": null
  },
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 329,
+  "runnable_count": 327,
   "blocked_count": 103
  },
  "meter": {
@@ -50,64 +50,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-07T13:55:17-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 87.06,
   "usage_pct": 44.1,
   "work_pct": 71.8,
-  "read_at": "2026-11-07T18:50:00+00:00",
-  "running": [
-   {
-    "lane": "a2",
-    "task": "T-3322",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Fix the MacBook runner failing every job on tar",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T13:03:56-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3300",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Run land checks outside the supervisor tick",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T13:03:56-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3312",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Install the jobs loop and read its first 48 hours",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T13:03:56-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-2985",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Show \"N questions waiting\" on Chat thread rows",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-07T13:03:56-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-07T19:06:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -136,7 +85,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T13:44:00-05:00",
+   "at": "2026-11-07T13:59:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -146,9 +95,9 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T13:50:00-05:00"
+  "at": "2026-11-07T14:06:00-05:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
  "pool": null,
  "lanes": [
@@ -185,17 +134,17 @@
    "next": []
   },
   {
-   "name": "Maren",
+   "name": "Wrenna",
    "state": "next",
-   "task": "Maren+Odalys, P1, Model: Sonnet medium. Investor...",
+   "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Wrenna",
+   "name": "Maren",
    "state": "next",
-   "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
+   "task": "Maren, P1, screen read of the Settings screen (T-0657,...",
    "model": null,
    "since": null,
    "next": []
@@ -277,23 +226,23 @@
   ],
   "done": [
    {
+    "w": "Maren",
+    "t": "The Issues page now has Needs You and Later lists, a Delay control on every open issue, Mute and...",
+    "at": "2026-11-07T14:02:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "The MacBook test machine had filled its disk with old job folders, so every test job failed; it...",
+    "at": "2026-11-07T14:02:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Closed as a duplicate of T-3107 (the same reading of the Investors' phone measurements, tied to...",
     "at": "2026-11-07T13:45:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Already done under T-1192 (lane sessions claim one task at a time): a personal session now takes...",
-    "at": "2026-11-07T13:25:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Nothing left to build for this line: plain task names, the Issues cards and free disk space for...",
-    "at": "2026-11-07T13:25:00-05:00"
    }
   ],
   "count": {
-   "next": 329,
+   "next": 327,
    "wait": 37,
    "blocked": 66,
    "you": 13
@@ -317,12 +266,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "1:50 PM",
-  "why": "",
-  "at_iso": "2026-11-07T18:50:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "2:06 PM",
+  "why": "Plan limit: the weekly allowance is used up; it resets Sun 2:00 AM ET. Last check 2:05 PM ET.",
+  "at_iso": "2026-11-07T19:06:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:50 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:06 PM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 2:00 AM ET. Last check 2:05 PM ET.</p></section>"
  }
 }

@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-07T18:12:03.604360+00:00",
+ "at": "2026-11-07T18:25:55.301539+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-07T13:11:51-05:00"
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
@@ -12,30 +12,30 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 333,
+  "runnable_count": 329,
   "blocked_count": 103
  },
  "meter": {
   "five_hour": {
    "pct": 6.0,
-   "resets_at": "2026-11-07T20:49:59.813150+00:00",
+   "resets_at": "2026-11-07T20:49:59.863407+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 94.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-08T06:59:59.813167+00:00",
+   "resets_at": "2026-11-08T06:59:59.863431+00:00",
    "used_words": "of your weekly allowance used",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-08T06:59:59.813281+00:00",
+   "resets_at": "2026-11-08T06:59:59.863594+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-07T13:11:37.808815-05:00"
+  "read_at": "2026-11-07T13:25:43.646870-05:00"
  },
  "ui": {
   "week_pct": 0.883,
@@ -54,8 +54,8 @@
  "personal": {
   "week_pct": 87.06,
   "usage_pct": 44.1,
-  "work_pct": 72.2,
-  "read_at": "2026-11-07T18:15:00+00:00",
+  "work_pct": 72.0,
+  "read_at": "2026-11-07T18:25:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -111,7 +111,7 @@
  "api_credits": [
   {
    "name": "company",
-   "used_usd": 194.14,
+   "used_usd": 194.41,
    "total_usd": 200.0
   },
   {
@@ -130,12 +130,12 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 524
+   "free_gb": 522
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T13:05:00-05:00",
+   "at": "2026-11-07T13:16:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -145,24 +145,12 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T13:15:00-05:00"
+  "at": "2026-11-07T13:25:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 12 (held: all signals under their lines, a raise waits 30 minutes a step)",
-  "n": 12,
-  "at": "2026-11-07T13:11:38.237964-05:00"
- },
+ "pool": null,
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, after T-1035 lands (personal-account...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -188,6 +176,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Maren",
    "state": "next",
    "task": "Maren+Odalys, P1, Model: Sonnet medium. Investor...",
@@ -206,7 +202,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "api",
   "open": [
    {
     "w": "Odalys",
@@ -282,22 +277,22 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "The SSD was measured folder by folder without hanging, and the cleanup deleted finished task...",
-    "at": "2026-11-07T11:58:00-05:00"
+    "t": "Already done under T-1192 (lane sessions claim one task at a time): a personal session now takes...",
+    "at": "2026-11-07T13:25:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "Landing finished work no longer waits for the shared Xcode slot when a branch changes only...",
-    "at": "2026-11-07T11:48:00-05:00"
+    "t": "Nothing left to build for this line: plain task names, the Issues cards and free disk space for...",
+    "at": "2026-11-07T13:25:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "The MacBook test machine now runs several test jobs at once without the file-permission failure...",
-    "at": "2026-11-07T11:48:00-05:00"
+    "t": "Measured how often a task was picked up and then found already done since Nov 1 (18 whole tasks,...",
+    "at": "2026-11-07T13:25:00-05:00"
    }
   ],
   "count": {
-   "next": 333,
+   "next": 329,
    "wait": 37,
    "blocked": 66,
    "you": 13
@@ -323,10 +318,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "1:15 PM",
+  "at": "1:25 PM",
   "why": "",
-  "at_iso": "2026-11-07T18:15:00+00:00",
+  "at_iso": "2026-11-07T18:25:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:25 PM ET</p></section>"
  }
 }

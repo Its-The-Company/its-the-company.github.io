@@ -1,37 +1,18 @@
 {
  "schema": 1,
- "at": "2026-11-07T03:08:04.201132+00:00",
+ "at": "2026-11-07T03:11:04.725755+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-06T21:58:51-05:00"
+  "kind": "",
+  "started": null
  },
- "workers": [
-  {
-   "name": "odalys",
-   "task": "[site] T-3185 slim top bar and Chat box",
-   "model": "opus",
-   "started": "2026-11-07T02:59:28.551Z",
-   "seconds": 515,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-3170 review premade first-render fix",
-   "model": "opus",
-   "started": "2026-11-07T02:59:39.834Z",
-   "seconds": 504,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Pernille",
+ "workers": [],
+ "who": "",
  "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 399,
+  "runnable_count": 400,
   "blocked_count": 120
  },
  "meter": {
@@ -74,7 +55,7 @@
   "week_pct": 63.38,
   "usage_pct": 39.8,
   "work_pct": 68.4,
-  "read_at": "2026-11-07T03:08:00+00:00",
+  "read_at": "2026-11-07T03:11:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -140,44 +121,35 @@
   }
  ],
  "disk": {
-  "free_gb": 8.4,
+  "free_gb": 8.2,
   "gate": "closed",
   "ssd": {
    "mounted": true,
    "free_gb": 447
   },
-  "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free."
+  "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
+  "ssd_check": {
+   "ok": true,
+   "at": "2026-11-06T22:09:00-05:00",
+   "recovery": null
+  }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T22:08:00-05:00"
+  "at": "2026-11-06T22:11:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Spread: 14% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 9 of 11 lands failed in 3 hours (8 red))",
-  "n": 2,
-  "at": "2026-11-06T21:58:42.297725-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[site] T-3185 slim top bar and Chat box",
-   "model": "opus",
-   "since": "2026-11-07T02:59:28.551Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-3170 review premade first-render fix",
-   "model": "opus",
-   "since": "2026-11-07T02:59:39.834Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
@@ -191,6 +163,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -213,26 +193,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Slim the site's top bar and Chat box",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T02:59:28.551Z",
-    "o": "c"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the premade first renders fix",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T02:59:39.834Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -307,23 +268,23 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Looked at why the board-test fix T-1395 (tests clearing the lane setting) kept coming back: the...",
+    "at": "2026-11-06T22:08:00-05:00"
+   },
+   {
+    "w": "Operator",
+    "t": "The work this notice was about has landed on main, so the lander closed it.",
+    "at": "2026-11-06T22:08:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "Withdrawn: Evan picked none of the three logos on and asked instead for a slimmer top bar with...",
     "at": "2026-11-06T21:44:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The site's top bar now stays on screen on every page and is slimmer, the bell works everywhere,...",
-    "at": "2026-11-06T21:43:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Done under T-3174: the notification bell is on main, rebuilt on today's code instead of moving...",
-    "at": "2026-11-06T21:43:00-05:00"
    }
   ],
   "count": {
-   "next": 399,
+   "next": 400,
    "wait": 42,
    "blocked": 78,
    "you": 19
@@ -346,13 +307,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 0,
   "lanes": 1,
-  "total": 3,
-  "at": "10:08 PM",
+  "total": 1,
+  "at": "10:11 PM",
   "why": "",
-  "at_iso": "2026-11-07T03:08:00+00:00",
-  "started": "9:58 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 9:58 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:08 PM ET</p></section>"
+  "at_iso": "2026-11-07T03:11:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:11 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T06:05:22.030224+00:00",
+ "at": "2026-11-07T06:08:22.208988+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,30 @@
    "task": "[tools] T-3200 stale Investor requests",
    "model": "opus",
    "started": "2026-11-07T05:45:11.300Z",
-   "seconds": 1210,
+   "seconds": 1390,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-2842 runner Spotlight load gate",
+   "task": "[site] T-3199 Issues page cards",
    "model": "opus",
-   "started": "2026-11-07T05:51:09.711Z",
-   "seconds": 852,
+   "started": "2026-11-07T06:07:40.618Z",
+   "seconds": 41,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2842 runner Spotlight load gate",
+   "model": "opus",
+   "started": "2026-11-07T05:51:09.711Z",
+   "seconds": null,
+   "finished": "2026-11-07T06:07:16.917000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-2866 charter rebuild and apply",
@@ -56,7 +64,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 411,
+  "runnable_count": 412,
   "blocked_count": 122
  },
  "meter": {
@@ -99,7 +107,7 @@
   "week_pct": 63.32,
   "usage_pct": 39.3,
   "work_pct": 68.0,
-  "read_at": "2026-11-07T06:05:00+00:00",
+  "read_at": "2026-11-07T06:08:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -120,7 +128,7 @@
   }
  ],
  "disk": {
-  "free_gb": 31,
+  "free_gb": 29,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -129,7 +137,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": false,
-   "at": "2026-11-07T01:01:00-05:00",
+   "at": "2026-11-07T01:02:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-06T23:08:00-05:00"
@@ -139,7 +147,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-07T01:05:00-05:00"
+  "at": "2026-11-07T01:08:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -213,13 +221,13 @@
    },
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "Find what holds the MacBook runner on its load gate",
+    "k": "site",
+    "t": "Build the new Issues page cards",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-07T05:51:09.711Z",
+    "at": "2026-11-07T06:07:40.618Z",
     "o": "c",
-    "task": "T-2842"
+    "task": "T-3199"
    }
   ],
   "open": [
@@ -312,7 +320,7 @@
    }
   ],
   "count": {
-   "next": 411,
+   "next": 412,
    "wait": 44,
    "blocked": 78,
    "you": 20
@@ -320,8 +328,8 @@
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-07T04:55:23Z",
-  "seconds": 1.0
+  "sent": "2026-11-07T06:07:26Z",
+  "seconds": 45.0
  },
  "inbox": [],
  "trimmed": [
@@ -338,10 +346,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "1:05 AM",
+  "at": "1:08 AM",
   "why": "",
-  "at_iso": "2026-11-07T06:05:00+00:00",
+  "at_iso": "2026-11-07T06:08:00+00:00",
   "started": "12:28 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:28 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:05 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:28 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:08 AM ET</p></section>"
  }
 }

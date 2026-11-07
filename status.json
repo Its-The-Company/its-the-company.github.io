@@ -1,47 +1,14 @@
 {
  "schema": 1,
- "at": "2026-11-07T16:15:53.758160+00:00",
+ "at": "2026-11-07T16:18:57.405547+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-07T10:05:32-05:00"
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[site] T-3284 build In flight view",
-   "model": "opus",
-   "started": "2026-11-07T15:08:26.237Z",
-   "seconds": null,
-   "finished": "2026-11-07T16:12:06.709000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-2866 repost charter proposal",
-   "model": "opus",
-   "started": "2026-11-07T16:08:34.169Z",
-   "seconds": null,
-   "finished": "2026-11-07T16:11:57.886000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-2551 launcher premades Python half",
-   "model": "opus",
-   "started": "2026-11-07T15:31:36.327Z",
-   "seconds": null,
-   "finished": "2026-11-07T16:10:30.475000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3317 xc_route gate job status",
-   "model": "opus",
-   "started": "2026-11-07T16:04:26.125Z",
-   "seconds": null,
-   "finished": "2026-11-07T16:09:39.662000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -88,7 +55,7 @@
   "week_pct": 86.57,
   "usage_pct": 45.0,
   "work_pct": 73.4,
-  "read_at": "2026-11-07T16:15:00+00:00",
+  "read_at": "2026-11-07T16:18:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -258,12 +225,12 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 507
+   "free_gb": 522
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T11:12:00-05:00",
+   "at": "2026-11-07T11:18:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -273,15 +240,11 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T11:15:00-05:00"
+  "at": "2026-11-07T11:18:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 10 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
-  "n": 10,
-  "at": "2026-11-07T10:05:22.929545-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -334,7 +297,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Odalys",
@@ -440,7 +402,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -452,10 +413,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "11:15 AM",
+  "at": "11:18 AM",
   "why": "",
-  "at_iso": "2026-11-07T16:15:00+00:00",
-  "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:15 AM ET</p></section>"
+  "at_iso": "2026-11-07T16:18:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:18 AM ET</p></section>"
  }
 }

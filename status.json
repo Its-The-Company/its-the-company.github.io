@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T15:57:23.424607+00:00",
+ "at": "2026-11-07T16:00:27.990547+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,19 +9,10 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-3288 main gate build",
-   "model": "opus",
-   "started": "2026-11-07T15:08:11.185Z",
-   "seconds": 2952,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[site] T-3284 build In flight view",
    "model": "opus",
    "started": "2026-11-07T15:08:26.237Z",
-   "seconds": 2937,
+   "seconds": 3121,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +21,7 @@
    "task": "[tools] T-3069 merge queue next slice",
    "model": "opus",
    "started": "2026-11-07T15:14:59.848Z",
-   "seconds": 2543,
+   "seconds": 2728,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +30,7 @@
    "task": "[build] T-2551 launcher premades Python half",
    "model": "opus",
    "started": "2026-11-07T15:31:36.327Z",
-   "seconds": 1547,
+   "seconds": 1731,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[site] T-3311 name running tasks, show account",
    "model": "opus",
    "started": "2026-11-07T15:37:51.066Z",
-   "seconds": 1172,
+   "seconds": 1356,
    "finished": null,
    "effort": "high"
   },
@@ -57,13 +48,21 @@
    "task": "[review] T-2711 apply fixes recheck r4",
    "model": "opus",
    "started": "2026-11-07T15:53:37.184Z",
-   "seconds": 226,
+   "seconds": 410,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x4, Pernille x2",
+ "who": "Odalys x3, Pernille x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3288 main gate build",
+   "model": "opus",
+   "started": "2026-11-07T15:08:11.185Z",
+   "seconds": null,
+   "finished": "2026-11-07T15:58:50.264000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3299 applier tilde fence fix",
@@ -87,20 +86,12 @@
    "started": "2026-11-07T15:12:55.873Z",
    "seconds": null,
    "finished": "2026-11-07T15:42:16.061000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-2641 cut old personal split",
-   "model": "opus",
-   "started": "2026-11-07T15:08:32.034Z",
-   "seconds": null,
-   "finished": "2026-11-07T15:38:56.657000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 329,
+  "runnable_count": 327,
   "blocked_count": 106
  },
  "meter": {
@@ -143,7 +134,7 @@
   "week_pct": 86.57,
   "usage_pct": 45.0,
   "work_pct": 73.4,
-  "read_at": "2026-11-07T15:57:00+00:00",
+  "read_at": "2026-11-07T16:00:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -327,7 +318,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T10:57:00-05:00"
+  "at": "2026-11-07T11:00:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -340,9 +331,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-3288 main gate build",
+   "task": "[site] T-3284 build In flight view",
    "model": "opus",
-   "since": "2026-11-07T15:08:11.185Z",
+   "since": "2026-11-07T15:08:26.237Z",
    "next": [],
    "effort": "high"
   },
@@ -390,16 +381,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Find and fix the root cause of MacBook test failures",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T15:08:11.185Z",
-    "o": "c",
-    "task": "T-3288"
-   },
    {
     "w": "Odalys",
     "k": "site",
@@ -517,9 +498,9 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Find and fix the root cause of MacBook test...",
+    "w": "Idris",
+    "k": "build",
+    "t": "Run Python widget scripts inside the widget...",
     "s": "next",
     "o": "c"
    }
@@ -527,22 +508,22 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "App changes made straight on the shared code now need a passed MacBook build and test of that...",
+    "at": "2026-11-07T10:58:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "A home-screen widget that has drawn before no longer wrongly says Not drawn yet when its saved...",
+    "at": "2026-11-07T10:58:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The tool that applies Investor-approved rule changes now refuses a proposal whose diff GitHub...",
     "at": "2026-11-07T10:53:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The 4-hour lane stop on 11-06 came from a web edit that broke the company's settings file; the...",
-    "at": "2026-11-07T10:43:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The one program that hands work to each account ran clean for its first 48 hours, so the older...",
-    "at": "2026-11-07T10:38:00-05:00"
    }
   ],
   "count": {
-   "next": 329,
+   "next": 327,
    "wait": 39,
    "blocked": 67,
    "you": 13
@@ -566,13 +547,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 6,
+  "main": 5,
   "lanes": 3,
-  "total": 9,
-  "at": "10:57 AM",
+  "total": 8,
+  "at": "11:00 AM",
   "why": "",
-  "at_iso": "2026-11-07T15:57:00+00:00",
+  "at_iso": "2026-11-07T16:00:00+00:00",
   "started": "10:05 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 6, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:57 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:05 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:00 AM ET</p></section>"
  }
 }

@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "at": "2026-11-07T21:47:14.626834+00:00",
+ "at": "2026-11-07T21:51:56.669758+00:00",
  "session": {
-  "active": true,
+  "active": false,
   "kind": "",
   "started": null
  },
@@ -50,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-07T17:04:31-05:00",
  "personal": {
   "week_pct": 87.06,
   "usage_pct": 44.1,
   "work_pct": 71.5,
-  "read_at": "2026-11-07T21:49:00+00:00",
+  "read_at": "2026-11-07T21:56:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -106,109 +106,6 @@
     "at": "2026-11-07T15:25:43-05:00",
     "n": "Jeremy",
     "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3215",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Count Investor work carried on by other lines",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T15:25:17-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3231",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Chat drawer: swipe anywhere to hide it",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-07T15:25:17-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3233",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Sweeps drop finished and obsolete queued tasks",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-07T15:25:17-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3316",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Show each task's parents and children on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T15:25:17-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3297",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Build the This Session flowchart",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T15:25:17-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3207",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Measure whether SSD scratch kept the disk free",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-07T15:25:17-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3002",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop a hung Xcode run from holding the machine lock",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T15:25:17-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3127",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Find what sends main sessions a stray SIGTERM",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T15:25:17-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
    }
   ]
  },
@@ -230,7 +127,7 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -239,7 +136,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T16:49:00-05:00",
+   "at": "2026-11-07T16:55:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -249,9 +146,9 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T16:49:00-05:00"
+  "at": "2026-11-07T16:56:00-05:00"
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
  "pool": null,
  "lanes": [
@@ -420,12 +317,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "4:49 PM",
+  "lanes": 1,
+  "total": 1,
+  "at": "4:56 PM",
   "why": "",
-  "at_iso": "2026-11-07T21:49:00+00:00",
+  "at_iso": "2026-11-07T21:56:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:56 PM ET</p></section>"
  }
 }

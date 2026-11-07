@@ -14,8 +14,8 @@ description: "How the company works: the Handbook."
 <div class="ix">
 
 <h2 id="documents">Documents</h2>
-<p class="meta">1 document, most recently updated first.</p>
-<div class="cards"><a class="card" href="{{ '/documents/company/handbook.html' | relative_url }}"><span class="meta"><span class="kind grey">Handbook</span><span>Ines</span><span>Day 1 · Thu Oct 22</span></span><b>Company Handbook</b><p>We have one goal this month: an iOS app that earns $200 in net proceeds by <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span>. Everything below exists to get there with as little ceremony as…</p></a></div>
+<p class="meta">2 documents, most recently updated first.</p>
+<div class="cards"><a class="card" href="{{ '/documents/company/rules.html' | relative_url }}"><span class="meta"><span class="kind grey">Handbook</span><span>Day 4 · Sun Oct 25</span></span><b>Company Handbook: operating rules</b><p>The rules the Commandments held until the charter (CLAUDE.md, version 3, T-2660) replaced them, kept here with their old numbers so every tool, hook…</p></a><a class="card" href="{{ '/documents/company/handbook.html' | relative_url }}"><span class="meta"><span class="kind grey">Handbook</span><span>Ines</span><span>Day 1 · Thu Oct 22</span></span><b>Company Handbook</b><p>We have one goal this month: an iOS app that earns $200 in net proceeds by <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span>. Everything below exists to get there with as little ceremony as…</p></a></div>
 
 
 

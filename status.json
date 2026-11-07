@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-07T17:19:05.856210+00:00",
+ "at": "2026-11-07T17:19:30.559924+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-07T12:19:06-05:00"
  },
  "workers": [],
  "who": "",
@@ -55,7 +55,7 @@
   "week_pct": 87.06,
   "usage_pct": 44.2,
   "work_pct": 73.2,
-  "read_at": "2026-11-07T17:19:00+00:00",
+  "read_at": "2026-11-07T17:21:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -140,11 +140,15 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T12:19:00-05:00"
+  "at": "2026-11-07T12:21:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 11 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
+  "n": 11,
+  "at": "2026-11-07T12:18:51.615937-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
@@ -197,6 +201,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "api",
   "open": [
    {
     "w": "Odalys",
@@ -313,10 +318,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "12:19 PM",
+  "at": "12:21 PM",
   "why": "",
-  "at_iso": "2026-11-07T17:19:00+00:00",
+  "at_iso": "2026-11-07T17:21:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:19 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:21 PM ET</p></section>"
  }
 }

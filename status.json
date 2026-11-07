@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-07T01:03:49.657583+00:00",
+ "at": "2026-11-07T01:07:14.282160+00:00",
  "session": {
-  "active": true,
-  "kind": "inbox",
-  "started": "2026-11-06T20:03:14-05:00"
+  "active": false,
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
@@ -38,8 +38,8 @@
   "read_at": "2026-11-06T20:03:04.743907-05:00"
  },
  "ui": {
-  "week_pct": 0.708,
-  "five_hour_pct": 0.0,
+  "week_pct": 0.721,
+  "five_hour_pct": 0.088,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -50,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-06T20:22:04-05:00",
  "personal": {
   "week_pct": 64.02,
   "usage_pct": 40.0,
   "work_pct": 68.6,
-  "read_at": "2026-11-07T01:04:00+00:00",
+  "read_at": "2026-11-07T01:08:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -112,7 +112,7 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 13,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -123,15 +123,11 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-06T20:04:00-05:00"
+  "at": "2026-11-06T20:08:00-05:00"
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Spread: ahead of the line to use the week up by Sat 23:00, so work waits until the line passes; the machine allows 8 (at its floor: 11 of 25 lands failed in 3 hours (8 red))",
-  "n": 1,
-  "at": "2026-11-06T20:03:05.074804-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -285,11 +281,24 @@
   "sent": "2026-11-07T01:01:35Z",
   "seconds": 116.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6700082948",
+   "state": "received",
+   "position": 1,
+   "eta": "2026-11-06T20:22:04-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "How many pending tasks are dedicated..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -300,10 +309,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "8:04 PM",
+  "at": "8:08 PM",
   "why": "",
-  "at_iso": "2026-11-07T01:04:00+00:00",
+  "at_iso": "2026-11-07T01:08:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:04 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:08 PM ET</p></section>"
  }
 }

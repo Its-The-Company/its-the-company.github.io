@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-07T08:22:14.740308+00:00",
+ "at": "2026-11-07T08:22:33.738175+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "inbox",
+  "started": "2026-11-07T03:22:15-05:00"
  },
  "workers": [],
  "who": "",
@@ -99,7 +99,11 @@
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: ahead of the line to use the week up by Sat 23:00, so work waits until the line passes; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "n": 1,
+  "at": "2026-11-07T03:22:04.573933-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
@@ -250,21 +254,10 @@
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-07T08:14:53Z",
-  "seconds": 150.0
+  "sent": "2026-11-07T08:19:29Z",
+  "seconds": 177.0
  },
- "inbox": [
-  {
-   "id": "c6704411970",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Just replugged the ssd"
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -280,9 +273,9 @@
   "lanes": 0,
   "total": 0,
   "at": "3:22 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "why": "Between sessions: no session is running. Last check 3:22 AM ET.",
   "at_iso": "2026-11-07T08:22:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:22 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:22 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 3:22 AM ET.</p></section>"
  }
 }

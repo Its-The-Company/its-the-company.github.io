@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-07T17:24:14.698996+00:00",
+ "at": "2026-11-07T17:33:11.088513+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-07T12:23:45-05:00"
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
@@ -18,24 +18,24 @@
  "meter": {
   "five_hour": {
    "pct": 6.0,
-   "resets_at": "2026-11-07T20:50:00.374567+00:00",
+   "resets_at": "2026-11-07T20:49:59.793793+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 94.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-08T07:00:00.374587+00:00",
+   "resets_at": "2026-11-08T06:59:59.793816+00:00",
    "used_words": "of your weekly allowance used",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-08T07:00:00.374724+00:00",
+   "resets_at": "2026-11-08T06:59:59.793971+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-07T12:18:51.142635-05:00"
+  "read_at": "2026-11-07T12:32:50.966280-05:00"
  },
  "ui": {
   "week_pct": 0.883,
@@ -54,8 +54,8 @@
  "personal": {
   "week_pct": 87.06,
   "usage_pct": 44.2,
-  "work_pct": 73.1,
-  "read_at": "2026-11-07T17:26:00+00:00",
+  "work_pct": 72.9,
+  "read_at": "2026-11-07T17:33:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -100,13 +100,110 @@
     "at": "2026-11-07T10:54:36-05:00",
     "n": "Evan",
     "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3249",
+    "w": "Maren",
+    "k": "site",
+    "t": "Issues \"Later\" queue, delay, badges and deadline notifications",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-07T12:30:40-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3318",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Show each running task's account or API key on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T12:30:40-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3311",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Name every running task and show its account",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T12:30:40-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3321",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Catch tasks other work already built",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T12:30:40-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-2944",
+    "w": "Pernille",
+    "k": "measure",
+    "t": "Read the phones' real numbers from the gate build",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T12:30:32-05:00",
+    "n": "Evan",
+    "d": 1,
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3304",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Propose a security-guard change for paths named in command text",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T12:30:32-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3118",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Make Xcode's own DerivedData folder internal again",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T12:30:32-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3062",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Keep work moving when the Company SSD stops answering",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T12:30:32-05:00",
+    "n": "Evan",
+    "src": "plan-a"
    }
   ]
  },
  "api_credits": [
   {
    "name": "company",
-   "used_usd": 192.66,
+   "used_usd": 192.97,
    "total_usd": 200.0
   },
   {
@@ -130,7 +227,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T12:22:00-05:00",
+   "at": "2026-11-07T12:27:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -140,15 +237,11 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T12:26:00-05:00"
+  "at": "2026-11-07T12:33:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 11 (held: all signals under their lines, a raise waits 30 minutes a step)",
-  "n": 11,
-  "at": "2026-11-07T12:23:33.670729-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -201,7 +294,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "api",
   "open": [
    {
     "w": "Odalys",
@@ -316,12 +408,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "12:26 PM",
+  "lanes": 3,
+  "total": 3,
+  "at": "12:33 PM",
   "why": "",
-  "at_iso": "2026-11-07T17:26:00+00:00",
+  "at_iso": "2026-11-07T17:33:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:26 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:33 PM ET</p></section>"
  }
 }

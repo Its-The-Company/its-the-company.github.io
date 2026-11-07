@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T00:15:28.957898+00:00",
+ "at": "2026-11-07T00:18:32.466362+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[build] T-3149 premade widgets no view",
    "model": "opus",
    "started": "2026-11-06T23:12:28.163Z",
-   "seconds": 3780,
+   "seconds": 3964,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[site] T-3163 Home task names",
    "model": "opus",
    "started": "2026-11-07T00:09:22.798Z",
-   "seconds": 366,
+   "seconds": 549,
    "finished": null,
    "effort": "high"
   }
@@ -107,7 +107,7 @@
   "week_pct": 63.9,
   "usage_pct": 41.0,
   "work_pct": 68.8,
-  "read_at": "2026-11-07T00:15:00+00:00",
+  "read_at": "2026-11-07T00:18:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -176,28 +176,6 @@
     "e": "high",
     "at": "2026-11-06T19:02:18-05:00",
     "n": "Evan"
-   },
-   {
-    "lane": "b2",
-    "task": "T-2836",
-    "w": "Idris",
-    "k": "build",
-    "t": "Give a report demotion its demoted mark and row",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T18:09:21-05:00",
-    "n": "Jeremy"
-   },
-   {
-    "lane": "b2",
-    "task": "T-1284",
-    "w": "Idris",
-    "k": "test",
-    "t": "Test that unsafe links in tree views draw no link",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-06T18:09:21-05:00",
-    "n": "Jeremy"
    }
   ]
  },
@@ -230,7 +208,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T19:15:00-05:00"
+  "at": "2026-11-06T19:18:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -410,7 +388,18 @@
  },
  "qr": [],
  "reply": null,
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6699433280",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Where\u2019s the evening report?"
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -424,12 +413,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "7:15 PM",
+  "lanes": 2,
+  "total": 4,
+  "at": "7:18 PM",
   "why": "",
-  "at_iso": "2026-11-07T00:15:00+00:00",
+  "at_iso": "2026-11-07T00:18:00+00:00",
   "started": "4:25 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:18 PM ET</p></section>"
  }
 }

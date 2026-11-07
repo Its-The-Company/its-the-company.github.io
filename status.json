@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T11:49:35.204077+00:00",
+ "at": "2026-11-07T11:52:36.075658+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-3206 supervisor_test red on main",
    "model": "opus",
    "started": "2026-11-07T10:52:43.753Z",
-   "seconds": 3411,
+   "seconds": 3592,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[site] T-2667 Home slice: Task Lifecycle recut, chat hunk",
    "model": "opus",
    "started": "2026-11-07T11:49:05.888Z",
-   "seconds": 29,
+   "seconds": 210,
    "finished": null,
    "effort": "high"
   }
@@ -64,7 +64,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 414,
+  "runnable_count": 412,
   "blocked_count": 106
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 63.03,
   "usage_pct": 38.4,
   "work_pct": 67.6,
-  "read_at": "2026-11-07T11:49:00+00:00",
+  "read_at": "2026-11-07T11:52:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -147,7 +147,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-07T06:49:00-05:00"
+  "at": "2026-11-07T06:52:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -305,22 +305,22 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "The MacBook test machine no longer repeats its 8 to 16 minute Simulator warm-up after every...",
-    "at": "2026-11-07T06:48:00-05:00"
+    "t": "The MacBook test machine now reports which tests ran and which failed as plain data, and can run...",
+    "at": "2026-11-07T06:50:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "Home's Machine panel now shows the Mac mini and the MacBook side by side: free memory, disk and...",
-    "at": "2026-11-07T06:38:00-05:00"
+    "t": "A governor test went red when the governor began reporting how far the week's usage is from its...",
+    "at": "2026-11-07T06:50:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "The StoreKit timeout reported for two MacBook checks came from the runner's planned warm-up...",
-    "at": "2026-11-07T06:09:00-05:00"
+    "w": "Odalys",
+    "t": "The MacBook test machine no longer repeats its 8 to 16 minute Simulator warm-up after every...",
+    "at": "2026-11-07T06:48:00-05:00"
    }
   ],
   "count": {
-   "next": 414,
+   "next": 412,
    "wait": 39,
    "blocked": 67,
    "you": 13
@@ -347,10 +347,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "6:49 AM",
+  "at": "6:52 AM",
   "why": "",
-  "at_iso": "2026-11-07T11:49:00+00:00",
+  "at_iso": "2026-11-07T11:52:00+00:00",
   "started": "5:48 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:48 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:49 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:48 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:52 AM ET</p></section>"
  }
 }

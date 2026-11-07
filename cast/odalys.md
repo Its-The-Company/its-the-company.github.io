@@ -46,14 +46,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3311 ebdf97e18: names fixed (<span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">Parked</span> left out of the build list), src data in; display T-3318 after T-3284, then tick T-3311.
 - Mine next: T-3215 (T-3202, T-3208, T-3209 done 11-07). T-2667 left: threads column, This Session page, #41 post. T-2616: baseline and plan in its board note. T-3069: only reads left (OPT-115, OPT-117 by 11-09), then #41 before/after. Keeper runs merge queue in sessions 5884472ae.
 
+- T-2587 (T-3335 9ab77fd1f): read ops/metrics/ssd_kernel.log at next hang; Spotlight-off read 11-10 11:13; T-3343 decision (Ines). Then tick.
+
 - T-3288 74f5a5670: main gate live (tools/main_gate.py, pre-commit). OPT-119 read 11-14 or n=60 gated commits. xc_route.py status misreads land/m* jobs as "not pushed".
 
 - T-3284 1e59212bf: In flight built (+Evan c6708949111: bars everywhere, Merge testing in both panels). Left: done count (T-3190), Coding/test minutes (T-3113), stopped rows (no record).
 
 ## Lessons
-- Lands: union on a file main trimmed replays the parked side's whole hunk. A whole-branch merge-tree overcalls conflicts: replay per commit. A re-land of an old branch puts back ledger entries under pre-renumber ids.
-- tools/site/<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span>.py PINS: run tests/site_lanes_test.py, set DIGEST.
-- Disk: df before and after each move; ditto copies sparse files at full size; Simulators can't live on the SSD.
 - An open board line with work on main often has its tick on a parked branch: scan records first.
 - Older notes, task by task: archive.md (nothing is deleted; tools/memory_archive.py runs at session close, T-3134).
 - Lesson: a red's board commit moves main, so whole-tree keys rarely match after a red; content keys beat tip keys.

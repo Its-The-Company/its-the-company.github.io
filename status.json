@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T11:46:34.185561+00:00",
+ "at": "2026-11-07T11:49:35.204077+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,30 @@
    "task": "[tools] T-3206 supervisor_test red on main",
    "model": "opus",
    "started": "2026-11-07T10:52:43.753Z",
-   "seconds": 3230,
+   "seconds": 3411,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3251 runner re-warm after red job",
+   "task": "[site] T-2667 Home slice: Task Lifecycle recut, chat hunk",
    "model": "opus",
-   "started": "2026-11-07T11:38:59.357Z",
-   "seconds": 454,
+   "started": "2026-11-07T11:49:05.888Z",
+   "seconds": 29,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3251 runner re-warm after red job",
+   "model": "opus",
+   "started": "2026-11-07T11:38:59.357Z",
+   "seconds": null,
+   "finished": "2026-11-07T11:48:39.143000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[site] T-3201 both machines on Home",
@@ -51,20 +59,12 @@
    "started": "2026-11-07T11:06:15.219Z",
    "seconds": null,
    "finished": "2026-11-07T11:10:06.031000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3217 ProjectsTransferUITests red",
-   "model": "opus",
-   "started": "2026-11-07T10:49:18.642Z",
-   "seconds": null,
-   "finished": "2026-11-07T11:05:40.859000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 415,
+  "runnable_count": 414,
   "blocked_count": 106
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 63.03,
   "usage_pct": 38.4,
   "work_pct": 67.6,
-  "read_at": "2026-11-07T11:46:00+00:00",
+  "read_at": "2026-11-07T11:49:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -137,7 +137,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T06:43:00-05:00",
+   "at": "2026-11-07T06:49:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -147,7 +147,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-07T06:46:00-05:00"
+  "at": "2026-11-07T06:49:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -221,13 +221,13 @@
    },
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "Stop failed MacBook jobs warming their Simulator again",
+    "k": "site",
+    "t": "Build the new Home, Chat and Usage pages",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-07T11:38:59.357Z",
+    "at": "2026-11-07T11:49:05.888Z",
     "o": "c",
-    "task": "T-3251"
+    "task": "T-2667"
    }
   ],
   "open": [
@@ -305,6 +305,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "The MacBook test machine no longer repeats its 8 to 16 minute Simulator warm-up after every...",
+    "at": "2026-11-07T06:48:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "Home's Machine panel now shows the Mac mini and the MacBook side by side: free memory, disk and...",
     "at": "2026-11-07T06:38:00-05:00"
    },
@@ -312,15 +317,10 @@
     "w": "Idris",
     "t": "The StoreKit timeout reported for two MacBook checks came from the runner's planned warm-up...",
     "at": "2026-11-07T06:09:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The same experiment-log fix as T-3220 (a duplicate line on the board): the company's experiment...",
-    "at": "2026-11-07T05:52:00-05:00"
    }
   ],
   "count": {
-   "next": 415,
+   "next": 414,
    "wait": 39,
    "blocked": 67,
    "you": 13
@@ -347,10 +347,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "6:46 AM",
+  "at": "6:49 AM",
   "why": "",
-  "at_iso": "2026-11-07T11:46:00+00:00",
+  "at_iso": "2026-11-07T11:49:00+00:00",
   "started": "5:48 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:48 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:46 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:48 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:49 AM ET</p></section>"
  }
 }

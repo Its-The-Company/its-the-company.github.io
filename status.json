@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T06:20:28.159620+00:00",
+ "at": "2026-11-07T06:23:28.481322+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,21 @@
    "task": "[site] T-3199 Issues page cards",
    "model": "opus",
    "started": "2026-11-07T06:07:40.618Z",
-   "seconds": 767,
+   "seconds": 947,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-3212 fix RunLogUITests compile",
    "model": "opus",
    "started": "2026-11-07T06:19:09.261Z",
-   "seconds": 78,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-07T06:22:13.366000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3200 stale Investor requests",
@@ -51,20 +50,12 @@
    "started": "2026-11-07T05:51:09.711Z",
    "seconds": null,
    "finished": "2026-11-07T06:07:16.917000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-2866 charter rebuild and apply",
-   "model": "opus",
-   "started": "2026-11-07T05:47:34.664Z",
-   "seconds": null,
-   "finished": "2026-11-07T05:50:50.909000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 416,
+  "runnable_count": 415,
   "blocked_count": 121
  },
  "meter": {
@@ -107,7 +98,7 @@
   "week_pct": 63.32,
   "usage_pct": 39.3,
   "work_pct": 68.0,
-  "read_at": "2026-11-07T06:20:00+00:00",
+  "read_at": "2026-11-07T06:23:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -147,7 +138,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-07T01:20:00-05:00"
+  "at": "2026-11-07T01:23:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -168,12 +159,11 @@
   },
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-3212 fix RunLogUITests compile",
-   "model": "opus",
-   "since": "2026-11-07T06:19:09.261Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -219,16 +209,6 @@
     "at": "2026-11-07T06:07:40.618Z",
     "o": "c",
     "task": "T-3199"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Fix the UI test that stops build 3 compiling",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T06:19:09.261Z",
-    "o": "c",
-    "task": "T-3212"
    }
   ],
   "open": [
@@ -305,6 +285,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The app's test code compiles again, so finished work can be tested and merged; two small Swift...",
+    "at": "2026-11-07T01:22:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Investor requests can no longer sit forgotten: a wait on an answered issue now clears by itself,...",
     "at": "2026-11-07T01:15:00-05:00"
@@ -313,15 +298,10 @@
     "w": "Odalys",
     "t": "On Home each running or queued task has a star both Investors share; starred tasks list first...",
     "at": "2026-11-07T00:07:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Tonight's failed merges were mostly the external SSD hanging under the lanes' work folders, not...",
-    "at": "2026-11-06T23:58:00-05:00"
    }
   ],
   "count": {
-   "next": 416,
+   "next": 415,
    "wait": 43,
    "blocked": 78,
    "you": 19
@@ -345,13 +325,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "1:20 AM",
+  "total": 1,
+  "at": "1:23 AM",
   "why": "",
-  "at_iso": "2026-11-07T06:20:00+00:00",
+  "at_iso": "2026-11-07T06:23:00+00:00",
   "started": "12:28 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:28 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:20 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 12:28 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:23 AM ET</p></section>"
  }
 }

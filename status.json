@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T14:30:44.004524+00:00",
+ "at": "2026-11-07T14:33:47.242171+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,29 +8,11 @@
  },
  "workers": [
   {
-   "name": "maren",
-   "task": "[design] T-3095 In flight view of every task",
-   "model": "opus",
-   "started": "2026-11-07T14:25:25.238Z",
-   "seconds": 318,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3089 merge queue after numbers",
-   "model": "opus",
-   "started": "2026-11-07T14:26:04.622Z",
-   "seconds": 279,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[site] T-2667 new Home, Chat, Usage pages rest",
    "model": "opus",
    "started": "2026-11-07T14:26:12.006Z",
-   "seconds": 271,
+   "seconds": 455,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +21,7 @@
    "task": "[tools] T-3210 T-2874 apply path inline diff refusals",
    "model": "opus",
    "started": "2026-11-07T14:27:54.052Z",
-   "seconds": 169,
+   "seconds": 353,
    "finished": null,
    "effort": "high"
   },
@@ -48,16 +30,7 @@
    "task": "[tools] T-3112 recut two parked branches",
    "model": "opus",
    "started": "2026-11-07T14:28:34.448Z",
-   "seconds": 129,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "wrenna",
-   "task": "[research] T-2859 verify Shortcuts recipe steps",
-   "model": "opus",
-   "started": "2026-11-07T14:29:17.549Z",
-   "seconds": 86,
+   "seconds": 312,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +39,7 @@
    "task": "[release] T-3106 build 3 to internal TestFlight",
    "model": "opus",
    "started": "2026-11-07T14:29:56.620Z",
-   "seconds": 47,
+   "seconds": 230,
    "finished": null,
    "effort": "high"
   },
@@ -75,60 +48,87 @@
    "task": "[review] T-3283 old crash record fix",
    "model": "opus",
    "started": "2026-11-07T14:30:03.918Z",
-   "seconds": 40,
+   "seconds": 223,
    "finished": null,
    "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-3278 T-2859 two refusal decisions",
+   "model": "opus",
+   "started": "2026-11-07T14:31:23.143Z",
+   "seconds": 144,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[test] T-1664 test that lets a broken change pass",
+   "model": "opus",
+   "started": "2026-11-07T14:31:31.026Z",
+   "seconds": 136,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-2574 log word for a widget that cannot start",
+   "model": "opus",
+   "started": "2026-11-07T14:32:57.087Z",
+   "seconds": 50,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3069 merge queue next slice",
+   "model": "opus",
+   "started": "2026-11-07T14:33:16.346Z",
+   "seconds": 30,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys x4, Idris, Pernille x2, Ines, Maren",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3089 merge queue after numbers",
+   "model": "opus",
+   "started": "2026-11-07T14:26:04.622Z",
+   "seconds": null,
+   "finished": "2026-11-07T14:32:55.238000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-3095 In flight view of every task",
+   "model": "opus",
+   "started": "2026-11-07T14:25:25.238Z",
+   "seconds": null,
+   "finished": "2026-11-07T14:32:37+00:00"
   },
   {
    "name": "wrenna",
    "task": "[release] T-2990 themes-only fallback in docs",
    "model": "opus",
    "started": "2026-11-07T14:30:09.394Z",
-   "seconds": 34,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Maren, Odalys x4, Wrenna x2, Idris, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-07T14:30:59.404000+00:00"
+  },
   {
    "name": "wrenna",
-   "task": "[test] T-2877 T-2858 stdlib tests red on main",
+   "task": "[research] T-2859 verify Shortcuts recipe steps",
    "model": "opus",
-   "started": "2026-11-07T14:23:39.645Z",
+   "started": "2026-11-07T14:29:17.549Z",
    "seconds": null,
-   "finished": "2026-11-07T14:29:27.301000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-2738 killed widget run memory verdict",
-   "model": "opus",
-   "started": "2026-11-07T14:25:16.563Z",
-   "seconds": null,
-   "finished": "2026-11-07T14:29:23.843000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3179 keep real crash past 14 days",
-   "model": "opus",
-   "started": "2026-11-07T14:22:27.101Z",
-   "seconds": null,
-   "finished": "2026-11-07T14:29:10.860000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-3105 internal-only gate build",
-   "model": "opus",
-   "started": "2026-11-07T14:21:59.994Z",
-   "seconds": null,
-   "finished": "2026-11-07T14:28:53.461000+00:00"
+   "finished": "2026-11-07T14:30:51.425000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 418,
-  "blocked_count": 106
+  "runnable_count": 416,
+  "blocked_count": 107
  },
  "meter": {
   "five_hour": {
@@ -170,7 +170,7 @@
   "week_pct": 86.97,
   "usage_pct": 45.5,
   "work_pct": 73.6,
-  "read_at": "2026-11-07T14:30:00+00:00",
+  "read_at": "2026-11-07T14:33:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -191,16 +191,16 @@
   }
  ],
  "disk": {
-  "free_gb": 26,
+  "free_gb": 27,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 477
+   "free_gb": 474
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T09:25:00-05:00",
+   "at": "2026-11-07T09:31:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -210,7 +210,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T09:30:00-05:00"
+  "at": "2026-11-07T09:33:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -221,29 +221,11 @@
  },
  "lanes": [
   {
-   "name": "Maren",
-   "state": "running",
-   "task": "[design] T-3095 In flight view of every task",
-   "model": "opus",
-   "since": "2026-11-07T14:25:25.238Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-3089 merge queue after numbers",
+   "task": "[site] T-2667 new Home, Chat, Usage pages rest",
    "model": "opus",
-   "since": "2026-11-07T14:26:04.622Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Wrenna",
-   "state": "running",
-   "task": "[research] T-2859 verify Shortcuts recipe steps",
-   "model": "opus",
-   "since": "2026-11-07T14:29:17.549Z",
+   "since": "2026-11-07T14:26:12.006Z",
    "next": [],
    "effort": "high"
   },
@@ -267,8 +249,26 @@
   },
   {
    "name": "Ines",
+   "state": "running",
+   "task": "[plan] T-3278 T-2859 two refusal decisions",
+   "model": "opus",
+   "since": "2026-11-07T14:31:23.143Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[design] T-2574 log word for a widget that cannot start",
+   "model": "opus",
+   "since": "2026-11-07T14:32:57.087Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Wrenna",
    "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
+   "task": "Wrenna, P2, from T-2376 (4b123c9b1): the app guide...",
    "model": null,
    "since": null,
    "next": []
@@ -276,26 +276,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "Design an In flight view of every picked-up task",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T14:25:25.238Z",
-    "o": "i",
-    "task": "T-3095"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Read the merge queue fixes and post the after numbers",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T14:26:04.622Z",
-    "o": "c",
-    "task": "T-3089"
-   },
    {
     "w": "Odalys",
     "k": "site",
@@ -327,16 +307,6 @@
     "task": "T-3112"
    },
    {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Check the recipe steps against Apple's Shortcuts guide",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T14:29:17.549Z",
-    "o": "c",
-    "task": "T-2859"
-   },
-   {
     "w": "Idris",
     "k": "release",
     "t": "Send build 3 to internal TestFlight",
@@ -355,6 +325,36 @@
     "at": "2026-11-07T14:30:03.918Z",
     "o": "c",
     "task": "T-3283"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Prove the land skips an already landed commit",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T14:31:23.143Z",
+    "o": "c",
+    "task": "T-3278"
+   },
+   {
+    "w": "Pernille",
+    "k": "test",
+    "t": "Fix a test that lets a broken change pass",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T14:31:31.026Z",
+    "o": "c",
+    "task": "T-1664"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Decide what the log says when a widget cannot start",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T14:32:57.087Z",
+    "o": "c",
+    "task": "T-2574"
    }
   ],
   "open": [
@@ -385,13 +385,6 @@
     "t": "Let the Xcode lock pass over a frozen build",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Read the merge queue fixes and post the...",
-    "s": "next",
-    "o": "i"
    },
    {
     "w": "Idris",
@@ -427,28 +420,35 @@
     "t": "Confirm the new MacBook runner is live and...",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Prune stale tasks from the board",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Wrenna",
-    "t": "The two library test failures from the new earthquakes example are gone on main: Pernille's fix...",
-    "at": "2026-11-07T09:29:00-05:00"
+    "w": "Odalys",
+    "t": "The two merge-queue fixes are measured and kept: work that merges rose from 24% to 44% of...",
+    "at": "2026-11-07T09:32:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "When a widget's run crashes the app and the person doesn't open PyWidget again for over two...",
-    "at": "2026-11-07T09:29:00-05:00"
+    "w": "Maren",
+    "t": "Drew how Home will show every task the company has picked up, from coding through queues, tests,...",
+    "at": "2026-11-07T09:32:00-05:00"
    },
    {
     "w": "Wrenna",
-    "t": "The Python library tests on main are green again on both Python versions: Pernille's fix already...",
-    "at": "2026-11-07T09:29:00-05:00"
+    "t": "The launch plan, press kit and store page now agree: if background refresh fails, Pro is the...",
+    "at": "2026-11-07T09:30:00-05:00"
    }
   ],
   "count": {
-   "next": 418,
-   "wait": 39,
+   "next": 416,
+   "wait": 40,
    "blocked": 67,
    "you": 13
   }
@@ -474,10 +474,10 @@
   "main": 9,
   "lanes": 0,
   "total": 9,
-  "at": "9:30 AM",
+  "at": "9:33 AM",
   "why": "",
-  "at_iso": "2026-11-07T14:30:00+00:00",
+  "at_iso": "2026-11-07T14:33:00+00:00",
   "started": "9:09 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 9, started 9:09 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:30 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 9, started 9:09 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:33 AM ET</p></section>"
  }
 }

@@ -1,88 +1,51 @@
 {
  "schema": 1,
- "at": "2026-11-07T08:11:07.011335+00:00",
+ "at": "2026-11-07T08:14:09.531058+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-07T02:43:32-05:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-3204 red land test rows",
    "model": "opus",
    "started": "2026-11-07T07:45:56.882Z",
-   "seconds": 1510,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3069 merge queue waiting cut",
-   "model": "opus",
-   "started": "2026-11-07T07:46:02.187Z",
-   "seconds": 1504,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3206 red suites on main",
-   "model": "opus",
-   "started": "2026-11-07T07:52:00.864Z",
-   "seconds": 1146,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-07T08:13:50.828000+00:00"
   },
   {
    "name": "odalys",
    "task": "[site] T-3219 Running subtabs order",
    "model": "opus",
    "started": "2026-11-07T07:57:01.449Z",
-   "seconds": 845,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x4",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[site] T-3218 hidden Investor Scoreboard",
-   "model": "opus",
-   "started": "2026-11-07T07:45:27.172Z",
    "seconds": null,
-   "finished": "2026-11-07T08:10:02.269000+00:00"
+   "finished": "2026-11-07T08:13:48.199000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3213 failed runner job alarms",
+   "task": "[tools] T-3069 merge queue waiting cut",
    "model": "opus",
-   "started": "2026-11-07T07:45:48.133Z",
+   "started": "2026-11-07T07:46:02.187Z",
    "seconds": null,
-   "finished": "2026-11-07T08:09:24.335000+00:00"
+   "finished": "2026-11-07T08:12:46.562000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3209 plan lines onto main board",
+   "task": "[tools] T-3206 red suites on main",
    "model": "opus",
-   "started": "2026-11-07T07:45:52.628Z",
+   "started": "2026-11-07T07:52:00.864Z",
    "seconds": null,
-   "finished": "2026-11-07T08:09:07.571000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3102 land jobs waiting on runner",
-   "model": "opus",
-   "started": "2026-11-07T07:57:43.727Z",
-   "seconds": null,
-   "finished": "2026-11-07T08:08:33.361000+00:00"
+   "finished": "2026-11-07T08:11:18.684000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 407,
+  "runnable_count": 408,
   "blocked_count": 104
  },
  "meter": {
@@ -125,7 +88,7 @@
   "week_pct": 63.59,
   "usage_pct": 38.9,
   "work_pct": 67.8,
-  "read_at": "2026-11-07T08:11:00+00:00",
+  "read_at": "2026-11-07T08:14:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -155,7 +118,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": false,
-   "at": "2026-11-07T03:01:00-05:00",
+   "at": "2026-11-07T03:06:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-06T23:08:00-05:00"
@@ -163,9 +126,9 @@
   }
  },
  "lock_in": {
-  "on": true,
+  "on": false,
   "pool": 1,
-  "at": "2026-11-07T03:11:00-05:00"
+  "at": "2026-11-07T03:14:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -177,12 +140,11 @@
  "lanes": [
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-3204 red land test rows",
-   "model": "opus",
-   "since": "2026-11-07T07:45:56.882Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
@@ -226,48 +188,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Find why older land test rows fail here",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T07:45:56.882Z",
-    "o": "c",
-    "task": "T-3204"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Merging work goes next after TestFlight",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T07:46:02.187Z",
-    "o": "c",
-    "task": "T-3069"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Fix three test suites that are red on main",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T07:52:00.864Z",
-    "o": "c",
-    "task": "T-3206"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Put Home's Running subtabs in run order",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T07:57:01.449Z",
-    "o": "c",
-    "task": "T-3219"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -343,6 +264,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "Home's Running filter tabs now read left to right in the order work runs, Coding through...",
+    "at": "2026-11-07T03:13:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The site now has a hidden Investor Scoreboard, a friendly leaderboard counted from GitHub's...",
     "at": "2026-11-07T03:09:00-05:00"
    },
@@ -350,15 +276,10 @@
     "w": "Odalys",
     "t": "When a MacBook test job fails, or several merge checks fail on the same error because main...",
     "at": "2026-11-07T03:09:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "The approved change on (reading an Investor's approve sent by email reply) applied on its own at...",
-    "at": "2026-11-07T03:08:00-05:00"
    }
   ],
   "count": {
-   "next": 407,
+   "next": 408,
    "wait": 37,
    "blocked": 67,
    "you": 12
@@ -382,13 +303,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 0,
   "lanes": 0,
-  "total": 4,
-  "at": "3:11 AM",
-  "why": "",
-  "at_iso": "2026-11-07T08:11:00+00:00",
+  "total": 0,
+  "at": "3:14 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-07T08:14:00+00:00",
   "started": "2:43 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 2:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:11 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:14 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

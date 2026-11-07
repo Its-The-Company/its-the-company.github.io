@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "at": "2026-11-07T01:07:14.282160+00:00",
+ "at": "2026-11-07T01:14:08.044197+00:00",
  "session": {
-  "active": false,
+  "active": true,
   "kind": "",
   "started": null
  },
@@ -18,28 +18,28 @@
  "meter": {
   "five_hour": {
    "pct": 0.0,
-   "resets_at": "2026-11-07T05:49:59.900665+00:00",
+   "resets_at": "2026-11-07T05:49:59.961597+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 86.0,
-   "resets_at": "2026-11-08T06:59:59.900688+00:00",
+   "resets_at": "2026-11-08T06:59:59.961619+00:00",
    "used_words": "of your weekly allowance used",
    "left": 14.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 1.0,
-   "resets_at": "2026-11-08T06:59:59.900836+00:00",
+   "resets_at": "2026-11-08T06:59:59.961759+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-06T20:03:04.743907-05:00"
+  "read_at": "2026-11-06T20:13:56.806780-05:00"
  },
  "ui": {
-  "week_pct": 0.721,
-  "five_hour_pct": 0.088,
+  "week_pct": 0.731,
+  "five_hour_pct": 0.157,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -50,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-06T20:22:04-05:00",
+ "next_tick": null,
  "personal": {
-  "week_pct": 64.02,
+  "week_pct": 64.0,
   "usage_pct": 40.0,
   "work_pct": 68.6,
-  "read_at": "2026-11-07T01:10:00+00:00",
+  "read_at": "2026-11-07T01:14:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -112,7 +112,7 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 14,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -123,9 +123,9 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-06T20:10:00-05:00"
+  "at": "2026-11-06T20:14:00-05:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
  "pool": null,
  "lanes": [
@@ -278,20 +278,19 @@
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-07T01:01:35Z",
-  "seconds": 116.0
+  "sent": "2026-11-07T01:06:43Z",
+  "seconds": 47.0
  },
  "inbox": [
   {
-   "id": "c6700082948",
+   "id": "c6700170191",
    "state": "received",
    "position": 1,
-   "eta": "2026-11-06T20:22:04-05:00",
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "How many pending tasks are dedicated..."
+   "title": "Can you do a quick sweep to identify..."
   }
  ],
  "trimmed": [
@@ -309,10 +308,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "8:10 PM",
+  "at": "8:14 PM",
   "why": "",
-  "at_iso": "2026-11-07T01:10:00+00:00",
+  "at_iso": "2026-11-07T01:14:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:10 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:14 PM ET</p></section>"
  }
 }

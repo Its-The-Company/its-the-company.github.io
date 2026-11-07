@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T22:33:32.862670+00:00",
+ "at": "2026-11-07T22:38:11.613015+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -12,30 +12,30 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 354,
+  "runnable_count": 355,
   "blocked_count": 104
  },
  "meter": {
   "five_hour": {
    "pct": 0.0,
-   "resets_at": "2026-11-08T02:49:59.649696+00:00",
+   "resets_at": "2026-11-08T02:49:59.796867+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-08T06:59:59.649718+00:00",
+   "resets_at": "2026-11-08T06:59:59.796887+00:00",
    "used_words": "of your weekly allowance used",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-08T06:59:59.649855+00:00",
+   "resets_at": "2026-11-08T06:59:59.797026+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-07T17:24:28.380848-05:00"
+  "read_at": "2026-11-07T17:34:54.782908-05:00"
  },
  "ui": {
   "week_pct": 0.883,
@@ -50,70 +50,68 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-07T17:48:09-05:00",
+ "next_tick": "2026-11-07T17:53:05-05:00",
  "personal": {
   "week_pct": 87.06,
   "usage_pct": 44.1,
   "work_pct": 71.5,
-  "read_at": "2026-11-07T22:35:00+00:00",
+  "read_at": "2026-11-07T22:38:00+00:00",
   "running": [
    {
     "lane": "a",
+    "task": "T-3362",
+    "k": "ops",
+    "t": "Commit the charter v3 fold's handbook and rulings files",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T17:37:03-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-3363",
+    "k": "ops",
+    "t": "Copy the retired amendments into the rulings log",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T17:37:03-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-3360",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Alert at once when the push URL stops matching GitHub",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T17:37:03-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
     "task": "T-3341",
     "w": "Odalys",
     "k": "tools",
     "t": "Decide how often parked work retries landing",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-07T17:24:49-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-3332",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Install the land job and read its first 48 hours",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T17:24:49-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-3312",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Install the jobs loop and read its first 48 hours",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T17:24:49-05:00",
+    "at": "2026-11-07T17:37:03-05:00",
     "n": "Evan",
     "src": "plan-a"
    },
    {
     "lane": "a2",
-    "task": "T-3361",
+    "task": "T-3346",
     "w": "Odalys",
     "k": "tools",
-    "t": "Lands stop waiting for an inbox session that cannot run",
+    "t": "Let a chat reply start past the usual holds",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-07T17:24:34-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3113",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Build a timeline feed for every picked-up task",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T17:24:34-05:00",
+    "at": "2026-11-07T17:37:03-05:00",
     "n": "Evan",
     "src": "plan-a"
    },
@@ -152,54 +150,6 @@
     "at": "2026-11-07T17:24:34-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "b",
-    "task": "T-3358",
-    "k": "ops",
-    "t": "Find who set main's push address to no-push",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T17:24:45-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-3357",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Stop Plan mode answer boxes losing focus while typing",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T17:24:45-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-3360",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Alert at once when the push URL stops matching GitHub",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T17:24:45-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-3336",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Redo gather every document under the Reports page",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T17:24:45-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
    }
   ]
  },
@@ -221,7 +171,7 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -230,7 +180,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T17:34:00-05:00",
+   "at": "2026-11-07T17:37:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -238,9 +188,9 @@
   }
  },
  "lock_in": {
-  "on": true,
+  "on": false,
   "pool": 1,
-  "at": "2026-11-07T17:35:00-05:00"
+  "at": "2026-11-07T17:38:00-05:00"
  },
  "next_tick_why": "last_tick",
  "idle": null,
@@ -249,7 +199,7 @@
   {
    "name": "Idris",
    "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
    "model": null,
    "since": null,
    "next": []
@@ -298,6 +248,13 @@
  "tasks": {
   "run": [],
   "open": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Find why build 3's premades other than...",
+    "s": "next",
+    "o": "c"
+   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -360,13 +317,6 @@
     "t": "Last checks before the first test build",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Run Python widget scripts inside the widget...",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -387,7 +337,7 @@
    }
   ],
   "count": {
-   "next": 354,
+   "next": 355,
    "wait": 37,
    "blocked": 67,
    "you": 13
@@ -395,14 +345,27 @@
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-07T22:32:29Z",
-  "seconds": 58.0
+  "sent": "2026-11-07T22:34:19Z",
+  "seconds": 77.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6713953911",
+   "state": "received",
+   "position": 1,
+   "eta": "2026-11-07T17:53:05-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Also, is there anything that can be..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -411,12 +374,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 4,
-  "total": 4,
-  "at": "5:35 PM",
+  "lanes": 3,
+  "total": 3,
+  "at": "5:38 PM",
   "why": "",
-  "at_iso": "2026-11-07T22:35:00+00:00",
+  "at_iso": "2026-11-07T22:38:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 5:35 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 5:38 PM ET</p></section>"
  }
 }

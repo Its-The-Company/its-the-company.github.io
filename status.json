@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "at": "2026-11-07T18:40:21.866481+00:00",
+ "at": "2026-11-07T18:49:50.553555+00:00",
  "session": {
-  "active": true,
+  "active": false,
   "kind": "",
   "started": null
  },
@@ -50,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-07T13:55:17-05:00",
  "personal": {
   "week_pct": 87.06,
   "usage_pct": 44.1,
   "work_pct": 71.8,
-  "read_at": "2026-11-07T18:40:00+00:00",
+  "read_at": "2026-11-07T18:50:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -136,7 +136,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T13:40:00-05:00",
+   "at": "2026-11-07T13:44:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -146,9 +146,9 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T13:40:00-05:00"
+  "at": "2026-11-07T13:50:00-05:00"
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
  "pool": null,
  "lanes": [
@@ -277,6 +277,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "Closed as a duplicate of T-3107 (the same reading of the Investors' phone measurements, tied to...",
+    "at": "2026-11-07T13:45:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Already done under T-1192 (lane sessions claim one task at a time): a personal session now takes...",
     "at": "2026-11-07T13:25:00-05:00"
@@ -284,11 +289,6 @@
    {
     "w": "Odalys",
     "t": "Nothing left to build for this line: plain task names, the Issues cards and free disk space for...",
-    "at": "2026-11-07T13:25:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Measured how often a task was picked up and then found already done since Nov 1 (18 whole tasks,...",
     "at": "2026-11-07T13:25:00-05:00"
    }
   ],
@@ -301,26 +301,14 @@
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-07T17:12:41Z",
-  "seconds": 92.0
+  "sent": "2026-11-07T18:40:01Z",
+  "seconds": 36.0
  },
- "inbox": [
-  {
-   "id": "c6711464866",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "What is running right now. Are..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -331,10 +319,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "1:40 PM",
+  "at": "1:50 PM",
   "why": "",
-  "at_iso": "2026-11-07T18:40:00+00:00",
+  "at_iso": "2026-11-07T18:50:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:40 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:50 PM ET</p></section>"
  }
 }

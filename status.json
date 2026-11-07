@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T16:46:20.847645+00:00",
+ "at": "2026-11-07T16:49:26.874114+00:00",
  "session": {
   "active": true,
   "kind": "",
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 326,
+  "runnable_count": 323,
   "blocked_count": 104
  },
  "meter": {
@@ -55,7 +55,7 @@
   "week_pct": 86.57,
   "usage_pct": 45.0,
   "work_pct": 73.4,
-  "read_at": "2026-11-07T16:46:00+00:00",
+  "read_at": "2026-11-07T16:49:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -133,11 +133,7 @@
    {
     "lane": "a2",
     "task": "T-3151",
-    "w": "Odalys",
-    "k": "tools",
     "t": "Confirm the runner's approval request, then rerun jobs",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-07T10:48:31-05:00",
     "n": "Evan",
     "src": "plan-a"
@@ -145,11 +141,7 @@
    {
     "lane": "a2",
     "task": "T-2887",
-    "w": "Odalys",
-    "k": "tools",
     "t": "Confirm the runner's approval request, then rerun jobs",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-07T10:48:31-05:00",
     "n": "Evan",
     "src": "plan-a"
@@ -174,7 +166,7 @@
   }
  ],
  "disk": {
-  "free_gb": 25,
+  "free_gb": 24,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -183,7 +175,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T11:41:00-05:00",
+   "at": "2026-11-07T11:46:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -193,7 +185,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T11:46:00-05:00"
+  "at": "2026-11-07T11:49:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -324,23 +316,23 @@
   ],
   "done": [
    {
-    "w": "Ines",
-    "t": "The one-page charter that replaces the 68 KB Commandments and 17 KB of amendments is posted as...",
-    "at": "2026-11-07T11:11:00-05:00"
+    "w": "Odalys",
+    "t": "Landing finished work no longer waits for the shared Xcode slot when a branch changes only...",
+    "at": "2026-11-07T11:48:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "Home's Running list is now In flight: every picked-up task, queued and parked too, with one bar...",
-    "at": "2026-11-07T11:10:00-05:00"
+    "t": "The MacBook test machine now runs several test jobs at once without the file-permission failure...",
+    "at": "2026-11-07T11:48:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "The job-status command now finds test jobs that ride on the merge-gate branches, so a running...",
-    "at": "2026-11-07T11:09:00-05:00"
+    "t": "The MacBook test machine now runs several test jobs at once without the file-permission failure...",
+    "at": "2026-11-07T11:48:00-05:00"
    }
   ],
   "count": {
-   "next": 326,
+   "next": 323,
    "wait": 38,
    "blocked": 66,
    "you": 13
@@ -366,10 +358,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "11:46 AM",
+  "at": "11:49 AM",
   "why": "",
-  "at_iso": "2026-11-07T16:46:00+00:00",
+  "at_iso": "2026-11-07T16:49:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:46 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:49 AM ET</p></section>"
  }
 }

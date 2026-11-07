@@ -1,14 +1,102 @@
 {
  "schema": 1,
- "at": "2026-11-07T14:21:37.124136+00:00",
+ "at": "2026-11-07T14:24:37.729481+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-07T09:09:22-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "pernille",
+   "task": "[review] T-3105 internal-only gate build",
+   "model": "opus",
+   "started": "2026-11-07T14:21:59.994Z",
+   "seconds": 157,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-3205 measure OPT-072 catch-up pool",
+   "model": "opus",
+   "started": "2026-11-07T14:22:06.445Z",
+   "seconds": 151,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-2915 Chat only the chat on phones",
+   "model": "opus",
+   "started": "2026-11-07T14:22:19.001Z",
+   "seconds": 138,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-3179 keep real crash past 14 days",
+   "model": "opus",
+   "started": "2026-11-07T14:22:27.101Z",
+   "seconds": 130,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3202 answer every issue comment",
+   "model": "opus",
+   "started": "2026-11-07T14:22:34.347Z",
+   "seconds": 123,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3110 retry pruner holds open commits",
+   "model": "opus",
+   "started": "2026-11-07T14:22:41.370Z",
+   "seconds": 116,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "wrenna",
+   "task": "[test] T-2877 T-2858 stdlib tests red on main",
+   "model": "opus",
+   "started": "2026-11-07T14:23:39.645Z",
+   "seconds": 58,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Pernille, Odalys x4, Idris, Wrenna",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3277 skip stale main red",
+   "model": "opus",
+   "started": "2026-11-07T14:21:42.345Z",
+   "seconds": null,
+   "finished": "2026-11-07T14:24:36.314000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-3170 premade first renders fix",
+   "model": "opus",
+   "started": "2026-11-07T14:21:51.842Z",
+   "seconds": null,
+   "finished": "2026-11-07T14:24:35.633000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[ops] T-3267 trim Idris memory",
+   "model": "sonnet",
+   "started": "2026-11-07T14:22:12.147Z",
+   "seconds": null,
+   "finished": "2026-11-07T14:23:14.296000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3274 lands re-apply merged commits",
@@ -21,7 +109,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 427,
+  "runnable_count": 424,
   "blocked_count": 106
  },
  "meter": {
@@ -64,7 +152,7 @@
   "week_pct": 86.97,
   "usage_pct": 45.5,
   "work_pct": 73.6,
-  "read_at": "2026-11-07T14:21:00+00:00",
+  "read_at": "2026-11-07T14:24:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -104,7 +192,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T09:21:00-05:00"
+  "at": "2026-11-07T09:24:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -115,33 +203,45 @@
  },
  "lanes": [
   {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-3105 internal-only gate build",
+   "model": "opus",
+   "since": "2026-11-07T14:21:59.994Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, after T-1035 lands (personal-account...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[ops] T-3205 measure OPT-072 catch-up pool",
+   "model": "opus",
+   "since": "2026-11-07T14:22:06.445Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-3179 keep real crash past 14 days",
+   "model": "opus",
+   "since": "2026-11-07T14:22:27.101Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Wrenna",
+   "state": "running",
+   "task": "[test] T-2877 T-2858 stdlib tests red on main",
+   "model": "opus",
+   "since": "2026-11-07T14:23:39.645Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Operator + Pernille, P1, corrected (an Investor...",
    "model": null,
    "since": null,
    "next": []
@@ -153,18 +253,81 @@
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Wrenna",
-   "state": "next",
-   "task": "Wrenna, P1, seen by Pernille in T-2376 (4b123c9b1, 20:1x...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review the internal-only gate build",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T14:21:59.994Z",
+    "o": "c",
+    "task": "T-3105"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Measure whether catch-up pool sizing worked",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T14:22:06.445Z",
+    "o": "c",
+    "task": "T-3205"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Make Chat only the chat and live on phones",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T14:22:19.001Z",
+    "o": "i",
+    "task": "T-2915"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Keep a real crash older than 14 days",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T14:22:27.101Z",
+    "o": "c",
+    "task": "T-3179"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Answer every issue comment and fix the email approve",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T14:22:34.347Z",
+    "o": "i",
+    "task": "T-3202"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stop the retry pruner holding commits of open tasks",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T14:22:41.370Z",
+    "o": "c",
+    "task": "T-3110"
+   },
+   {
+    "w": "Wrenna",
+    "k": "test",
+    "t": "Bring the stdlib manifest test up to 11 examples",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T14:23:39.645Z",
+    "o": "c",
+    "task": "T-2877"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -240,22 +403,22 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "Merging finished work no longer copies in changes that main already has, which had put duplicate...",
-    "at": "2026-11-07T09:21:00-05:00"
+    "t": "The MacBook watcher no longer calls main broken, and holds every merge, when a newer full test...",
+    "at": "2026-11-07T09:24:00-05:00"
    },
    {
-    "w": "Operator",
-    "t": "Main passes its Xcode checks again: job J-20261107-0813-xc-test on the MacBook no longer shows...",
-    "at": "2026-11-07T09:10:00-05:00"
+    "w": "Pernille",
+    "t": "The fix that makes a premade widget draw when it is chosen after the app has been opened once...",
+    "at": "2026-11-07T09:24:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "The plan for the widget's Activity row (T-1854: the extension writes its status and run log) now...",
-    "at": "2026-11-07T09:08:00-05:00"
+    "t": "Idris's notes file was already cut from 16.7 KB to 3,985 bytes by an earlier commit; I checked...",
+    "at": "2026-11-07T09:23:00-05:00"
    }
   ],
   "count": {
-   "next": 427,
+   "next": 424,
    "wait": 39,
    "blocked": 67,
    "you": 13
@@ -278,13 +441,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 7,
   "lanes": 0,
-  "total": 0,
-  "at": "9:21 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-07T14:21:00+00:00",
+  "total": 7,
+  "at": "9:24 AM",
+  "why": "",
+  "at_iso": "2026-11-07T14:24:00+00:00",
   "started": "9:09 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:09 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:21 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 7, started 9:09 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:24 AM ET</p></section>"
  }
 }

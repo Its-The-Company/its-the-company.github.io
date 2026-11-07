@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-07T07:33:12.710908+00:00",
+ "at": "2026-11-07T07:33:31.546705+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "inbox",
+  "started": "2026-11-07T02:33:13-05:00"
  },
  "workers": [],
  "who": "",
@@ -100,11 +100,15 @@
  "next_tick_why": "session",
  "idle": {
   "since": "2026-11-07T02:15:28-05:00",
-  "minutes": 17,
+  "minutes": 18,
   "why": "the last tick ended without starting a session",
   "healed": []
  },
- "pool": null,
+ "pool": {
+  "why": "Spread: ahead of the line to use the week up by Sat 23:00, so work waits until the line passes; the machine allows 8 (at its floor: 5 of 19 finished tasks were redone in 6 hours)",
+  "n": 1,
+  "at": "2026-11-07T02:33:03.712152-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
@@ -255,21 +259,10 @@
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-07T06:18:16Z",
-  "seconds": 72.0
+  "sent": "2026-11-07T07:32:48Z",
+  "seconds": 10.0
  },
- "inbox": [
-  {
-   "id": "c6703959020",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Why is nothing running"
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -285,9 +278,9 @@
   "lanes": 0,
   "total": 0,
   "at": "2:33 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "why": "Between sessions: no session is running. Last check 2:33 AM ET.",
   "at_iso": "2026-11-07T07:33:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:33 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:33 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 2:33 AM ET.</p></section>"
  }
 }

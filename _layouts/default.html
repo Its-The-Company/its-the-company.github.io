@@ -97,19 +97,27 @@ header.site .brand{font-weight:800;font-size:var(--fs-3);letter-spacing:-.01em;t
 .tabs a[aria-current]{background:var(--head-ink);color:var(--head-bg);font-weight:700;box-shadow:inset 0 -3px 0 var(--tab-mark)}
 .tabs a:focus-visible{outline-color:var(--head-ink)}
 @media (min-width:880px){.tabs{flex:0 1 460px;margin-left:auto}}
-/* T-2940 (friesevan #41 c6678446926): on phones the bar stays at the top while the page scrolls; the notch and the Home Screen
-   web app's status bar are cleared by the safe-area inset (the viewport says viewport-fit=cover). --hdr-h is its height, for
-   the chat's own sticky rows under it. The logo slot is a place only: no logo until the Investors choose one (T-2941, C51). */
+/* T-2940 (friesevan #41 c6678446926), T-3174 (friesevan #41 c6700015760): the bar stays at the top while the page scrolls,
+   on every page at every width, slimmer than before (measured: desktop 92 px and scrolling away -> 58 px, phone
+   130 -> 96 px; tools/header_shots.py). The notch and the Home Screen web app's status bar are cleared by the safe-area inset (the
+   viewport says viewport-fit=cover). --hdr-h is its height (bell.js measures it; these are the fallbacks), for the chat's
+   own sticky rows under it and for in-page links. The logo slot is a place only: no logo until the Investors choose one
+   (T-2941, C51). */
 header.site .logo-slot{display:inline-block;width:var(--logo-w,0);height:var(--logo-h,0);flex:none}
+header.site{position:sticky;top:0;z-index:30;border-bottom:1px solid var(--head-line)}
+header.site .wrap{padding-top:var(--s2);padding-bottom:var(--s2)}
+header.site .tabs a{padding:4px var(--s2)}
+header.site details.info{margin-block:0}header.site details.info summary,header.site .bell{width:36px;height:36px}
+:root{--hdr-h:58px}
+html{scroll-padding-top:calc(var(--hdr-h) + var(--s2))}
+html .cv-tabs{top:var(--hdr-h)}html .cv-head{top:calc(var(--hdr-h) + var(--cv-tabs-h,57px))}
+.lk-home [id]{scroll-margin-top:calc(var(--hdr-h) + var(--s2))}
 @media (max-width:879px){
-  header.site{position:sticky;top:0;z-index:30;border-bottom:1px solid var(--head-line)}
-  header.site .wrap{gap:var(--s1) var(--s3);padding-bottom:var(--s2)}
-  header.site details.info summary{width:36px;height:36px}
-:root{--hdr-h:calc(131px + env(safe-area-inset-top))}
-  html .cv-tabs{top:var(--hdr-h)}html .cv-head{top:calc(var(--hdr-h) + var(--cv-tabs-h,57px))}
-  .lk-home [id]{scroll-margin-top:calc(var(--hdr-h) + var(--s2))}
+  header.site .wrap{gap:6px var(--s3);padding-bottom:6px}
+  header.site .tabs{padding:2px}header.site .tabs a{padding:5px 4px}
+:root{--hdr-h:calc(96px + env(safe-area-inset-top))}
   header.site .brand{order:0;flex:1 1 auto}header.site details.info{order:1;margin-left:0}header.site .tabs{order:2;flex:1 1 100%}
-  header.site .wrap{padding-top:calc(var(--s3) + env(safe-area-inset-top));padding-left:max(var(--s4),env(safe-area-inset-left));padding-right:max(var(--s4),env(safe-area-inset-right))}
+  header.site .wrap{padding-top:calc(var(--s2) + env(safe-area-inset-top));padding-left:max(var(--s4),env(safe-area-inset-left));padding-right:max(var(--s4),env(safe-area-inset-right))}
 }
 /* T-1776: About as an info icon (four-sections.md 2, C44): a <details>, so it opens without script */
 details.info{position:relative;order:2;margin-left:auto}details.info:has(~ .bell){margin-left:0}@media (min-width:880px){details.info{margin-left:0}}details.info summary{list-style:none;cursor:pointer;width:44px;height:44px;box-sizing:border-box;display:grid;place-items:center;border:1px solid var(--head-line);border-radius:var(--r-m);font:italic 700 var(--fs-2) Georgia,serif;color:var(--head-ink)}details.info summary::-webkit-details-marker{display:none}.infop{position:absolute;right:0;top:52px;z-index:20;width:min(300px,80vw);padding:var(--s3);background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:var(--r-m);font-size:13px}.infop p{margin:0 0 var(--s2)}
@@ -415,7 +423,10 @@ section.now h3{margin:0 0 var(--s1)}
 @media (max-width:879px){.site .tabs{order:2;flex-basis:100%}}
 @media (min-width:880px){.bell{margin:0}.bellp{left:auto!important;width:400px}}
 .bellp,.sheet{position:absolute;top:100%;right:8px;left:8px;z-index:9;padding:var(--s3);background:var(--bg);color:var(--ink);border-radius:var(--r-l);box-shadow:var(--shadow)}
-.bellp h4{margin:var(--s3) 0 0;font-size:var(--fs-0);text-transform:uppercase;color:var(--muted)}
+.bellp{max-height:calc(100dvh - var(--hdr-h) - var(--s4));overflow-y:auto;overscroll-behavior:contain}
+.bellp h4{margin:var(--s3) 0 var(--s1);font-size:15px;font-weight:700;color:var(--ink)}
+.bellp a.item{display:flex;gap:var(--s2);align-items:center;min-height:36px;color:inherit;text-decoration:none;border-top:1px solid var(--line)}.bellp a.item:hover span:last-child{text-decoration:underline}
+.bellp a.item span:last-child{flex:1;min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
 .trial{display:flex;flex-wrap:wrap;align-items:center;gap:var(--s2);padding:var(--s2) var(--s3);border-radius:var(--r-m);background:var(--soft)}
 .trial b{flex:1}.trial small{flex-basis:100%}
 .seg2{display:flex;padding:2px;border-radius:99px;background:var(--soft-2)}
@@ -545,7 +556,8 @@ nav.subtabs.hometabs .num{font-weight:400}
 .cv-wait{justify-self:start;display:flex;align-items:center;gap:var(--s2);padding:var(--s2) var(--s3);border:1px dashed var(--line);border-radius:var(--r-l);font-size:var(--fs-0);color:var(--muted)}
 .cv-dot{width:8px;height:8px;border-radius:50%;background:var(--ok);flex:none;animation:cv-pulse 1.6s ease-in-out infinite}
 @keyframes cv-pulse{50%{opacity:.35}}
-.cv-jump{position:fixed;left:50%;transform:translateX(-50%);bottom:84px;z-index:6;min-height:36px;padding:0 var(--s4);border:0;border-radius:var(--r-pill);background:var(--ink);color:var(--bg);font:inherit;font-size:var(--fs-0);font-weight:700;box-shadow:var(--shadow)}
+/* T-3174: the Latest button (it was "Top", T-0640, and the centred "new" pill): right, above the box. */
+.cv-jump{position:fixed;right:var(--s3);bottom:calc(var(--cv-dock-fit,84px) + var(--s2));z-index:6;min-height:44px;min-width:44px;padding:0 var(--s4);border:1px solid var(--line);border-radius:var(--r-pill);background:var(--bg);color:var(--ink);font:inherit;font-size:var(--fs-0);font-weight:700;box-shadow:var(--shadow)}
 
 /* ---------- the dock: collapsed bar or open composer, pinned to the bottom on a phone ---------- */
 .cv-dock{position:fixed;left:0;right:0;bottom:0;z-index:7;background:var(--bg);border-top:1px solid var(--line);box-shadow:0 -6px 24px rgba(20,24,40,.12);
@@ -710,9 +722,8 @@ summary.cv-sec{display:list-item;cursor:pointer;min-height:44px}
 .report-main p>a.thumb{display:block;cursor:zoom-in}.report-main p>a.thumb:hover>img{border-color:var(--accent)}
 /* T-0640: the Chat page scrolls as a page. Nothing here traps a wheel or touch scroll; the dock's own scrollers hand over at their ends. */
 html,body,.cv-dock textarea,.cv-dock .cv-state{overscroll-behavior-y:auto}
-.cv-top{position:fixed;right:var(--s3);bottom:calc(var(--cv-dock-fit,84px) + var(--s2));z-index:6;min-height:44px;min-width:44px;padding:0 var(--s4);border:1px solid var(--line);border-radius:var(--r-pill);background:var(--bg);color:var(--ink);font:inherit;font-size:var(--fs-0);font-weight:700;box-shadow:var(--shadow)}
-.cv-top[hidden]{display:none}
-@media (min-width:880px){.cv-top{right:var(--s5,24px);bottom:max(120px,calc(var(--cv-dock-fit,0px) + var(--s2)))}}
+.cv-jump[hidden]{display:none}
+@media (min-width:880px){.cv-jump{right:var(--s5,24px);bottom:max(120px,calc(var(--cv-dock-fit,0px) + var(--s2)))}}
 /* T-1752: report subtitle, opening quote with the animated portrait, and charts drawn from a report's chart blocks */
 .page-head .dek{margin:var(--s2) 0 0;font-size:var(--fs-3);color:var(--muted)}
 .report-quote{display:flex;align-items:center;gap:var(--s3);margin:var(--s3) 0;padding:var(--s3);border-left:3px solid var(--accent)}
@@ -785,6 +796,7 @@ html,body,.cv-dock textarea,.cv-dock .cv-state{overscroll-behavior-y:auto}
 </main>
 <footer><span>{{ site.title }}</span>{% if page.url == "/" %}<a href="{{ '/connect.html' | relative_url }}#setup">Investor setup</a>{% endif %}<a href="{{ '/privacy.html' | relative_url }}">Privacy</a><a href="{{ '/support.html' | relative_url }}">Support</a><a href="{{ '/press.html' | relative_url }}">Press kit</a><a href="{{ '/subscribe.html' | relative_url }}">Subscribe (RSS)</a></footer>
 <script src="{{ '/assets/app.js' | relative_url }}"></script>
+<script src="{{ '/assets/bell.js' | relative_url }}"></script>
 <script src="{{ '/assets/swipe.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/badges.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/issuecount.js' | relative_url }}" data-count="{{ '/issues.json' | relative_url }}"></script>

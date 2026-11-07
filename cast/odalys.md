@@ -38,9 +38,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (as of 2026-11-06; task notes in archive.md)
 - Reads due: OPT-101 n=30 attempts after 09:33 11-06 (land_why.py --since; n=2 at 10:00). OPT-102 n=60 or 11-09. OPT-100 n=3 main reds or 11-13 (spares entry is OPT-104, inbox OPT-103). OPT-095, OPT-098, OPT-099 11-08..09. OPT-085, OPT-077, OPT-079, OPT-081 11-11. Older reads: archive.md.
-- T-3096 c3de1d332: send/lock_in/dashboard/swipe suites green (GraphQL read is not a send; refresh pages raced swipe). Open: run tests/run.sh site_test.sh (want 93/0), then tick.
-- T-3090 done (0d6dbdac2): merge_first list fills itself (board_tick/taskstore add hook + supervisor 1f sync). Watch for false positives; "# not T-x" keeps one off. supervisor_test 2 reds pre-exist on HEAD (plan reopens; inbox_gap).
-- T-3084 (3a401c373): records out of git, list in tools/records.py. Read 11-07: main commits touching them should be 0 (before 73/509 per 24 h).
 - T-3092 6241b20c2: log/optimizations.md merges by tools/ledger_merge.py (driver in .git/config runs a copy in the git common dir, install at each land; no driver = plain text, never a splice). personal_land_test unfinished at load 300: rerun quiet. OPT-107 read n=40 or 11-13 (before 6/145, 0/43 conflicts). <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">Parked</span> T-1735 copies now conflict on their entry (main's is OPT-106). Guard refuses a command naming a rebase onto main, even in a temp repo.
 - T-3091 done (6a9e6ac44): T-2895 superseded by T-2977; its 4 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> copies on ops/merge_queue_hold.txt. T-2895 board line still open: close as superseded. Gap: tools/site/ changes add no site_test floor at land.
 - T-3014 done ee7da3a3f: xc_lock takeover (fresh lock file by rename, LOCK.stalled.<pid>, LOG.stalled, event=stalled row). Follow-ups T-3119 (sim install build still on SSD DerivedData, P0), T-3120. Lesson: <span title="A test written in advance. If it fires, we drop the idea.">kill</span> of my own crashed test's fixture sleeps was refused by classifier; tests must reap xc.sh (wait) before reading pipes.
@@ -50,7 +47,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Lesson: a red's board commit moves main, so whole-tree keys rarely match after a red; content keys beat tip keys.
 
 - T-3163 169fa967f: Home names via tools/site/task_names.py; live variable trims lane titles last. Part 0 d764af923: OPT-109/110/111 renumbered, dispatcher read is OPT-112 (not_an_experiment). T-3092 done-note still says OPT-107 (=OPT-110).
+- T-3175 809f1b528: ops/kind_first.json (tools/kind_first.py) puts process/site lines first until 11-08 02:00 ET; keep_first T-3105/3106/3170. Delete or let expire after.
 - Lesson: the token view reads the trimmed COMPANY_STATUS variable, not live.json; check fit() before blaming the data.
+
+- T-3174 8b7d0984a: sticky slim header, bell.js on every page, Chat/Reports tab badges, Latest on Chat. T-2398/T-2602 ticked; T-2072 open (explainer paragraphs, badge colour Q3). tools/header_shots.py checks it. Site suites t2940/t3009/t3094/t3163 overwrite tracked PNGs in ops/site-checks; git restore refused by classifier, left dirty.
+- Lesson: the SSD can stop answering mid-task; ssd_guard refuses then. Keep baselines in /private/tmp scratch.
 
 ## Standing lessons (more in archive.md)
 ## Standing lessons

@@ -45,7 +45,6 @@ var s = Math.max(0, (Date.now() - Date.parse(iso)) / 1000);
 if (isNaN(s)) return '';
 return s < 90 ? Math.round(s) + ' s' : s < 5400 ? Math.round(s / 60) + ' min' : s < 172800 ? Math.round(s / 3600) + ' h' : Math.round(s / 86400) + ' d';
 }
-function clock(iso) { return iso ? new Date(iso).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }) : ''; }
 function setText(id, text) { var e = byId(id); if (e && text != null) e.textContent = text; }
 function when(iso, wk) { return iso ? new Date(iso).toLocaleString([], { weekday: wk && 'short', hour: 'numeric', minute: '2-digit', timeZone: 'America/New_York' }) + ' ET' : ''; }
 function tail(m, wk) { var r = when(m.resets_at, wk); return (m.left != null ? ' · ' + Math.round(m.left) + '% left' : '') + (r ? ' · resets ' + r : ''); }
@@ -193,166 +192,6 @@ if (tokenPath) { pub(true); onDrawn.push(function () { frame(function () { later
 else { timer = setInterval(live, 60000); live(true); }
 on(document, 'visibilitychange', function () { if (!document.hidden && (started || !tokenPath)) live(); });
 }
-var NL = 'company.notify', NC = 'company.notify.count', GAP = 12e4;
-var bellB = null, bellP = null, bellOpen = false, items = null, known = null, lastNote = 0, held = [], heldT = 0, chatOpen = null, title0 = '';
-function flagOn() { var r = byId('chat-root'); return !(r && r.getAttribute('data-notify') === 'off'); }
-function hasN() { return typeof Notification !== 'undefined'; }
-function iPhone() { var n = typeof navigator !== 'undefined' ? navigator : {}; return /iP(hone|ad|od)/.test(n.userAgent || '') && !n.standalone; }
-function allowed() { return flagOn() && hasN() && Notification.permission === 'granted' && localStorage.getItem(NL) === 'on'; }
-function weekKey() { var d = new Date(Date.now()); d.setHours(0, 0, 0, 0); d.setDate(d.getDate() - (d.getDay() + 6) % 7); return d.toDateString(); }
-function weekCount(add) {
-var c; try { c = JSON.parse(localStorage.getItem(NC)) || {}; } catch (e) { c = {}; }
-if (c.w !== weekKey()) c = { w: weekKey(), n: 0 };
-if (add) { c.n += add; localStorage.setItem(NC, JSON.stringify(c)); }
-return c.n;
-}
-function plain(b) {
-b = String(b || '').replace(/<!--[\s\S]*?-->|<[^>]*>/g, '').replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1')
-.replace(/^\s*(#+|>|[-*+]|\d+\.)\s+/gm, '').replace(/[*_\x60~]+/g, '').replace(/\s+/g, ' ').trim(); return b.length > 140 ? b.slice(0, 137) + '...' : b; }
-function btn(box, text, cls, fn) { var b = add(box, 'button', 'btn' + (cls ? ' ' + cls : ''), text); b.type = 'button'; b.onclick = fn; return b; }
-function toThread(n) { showBell(false); location.hash = '#t=' + n; }
-function compose(n, text) { showBell(false); if (chatOpen) chatOpen(n, text); else toThread(n); }
-function dueWords(ms) {
-var a = Math.abs(ms), t = a < 36e5 ? Math.max(1, Math.round(a / 6e4)) + ' min' : a < 1728e5 ? Math.round(a / 36e5) + ' h' : Math.round(a / 864e5) + ' d';
-return ms < 0 ? 'Overdue by ' + t : 'Due in ' + t;
-}
-function feed(issues, comments, names, dl, kind, open) {
-chatOpen = open;
-var s0 = localStorage.getItem('company.seen0') || '', need = [], rep = [], info = [];
-function seen(n) { var x = localStorage.getItem('company.seen.' + n); return x && x > s0 ? x : s0; }
-issues.forEach(function (i) {
-var ap = (i.labels || []).some(function (l) { return String(l.name || l).toLowerCase() === 'approval'; }), k = kind(i);
-if (i.state === 'open' && (k === 'urgent' || ap)) need.push({ k: 'i' + i.number, n: i.number, i: i, ap: ap && k !== 'urgent', d: dl(i) });
-else if (k === 'report' && Date.now() - Date.parse(i.created_at) < 2592e5) info.push({ n: i.number, i: i });
-});
-need.sort(function (a, b) { var x = a.d && a.d.t, y = b.d && b.d.t; return x && y ? x - y : x ? -1 : y ? 1 : a.i.created_at < b.i.created_at ? -1 : 1; });
-comments.forEach(function (c) {
-var n = +String(c.issue_url || '').split('/').pop(), who = String((c.user && c.user.login) || '').toLowerCase();
-if (names.indexOf(who) < 0 && !/\(automatic receipt\)\s*$/.test(c.body || '') && c.created_at > seen(n)) rep.push({ k: 'c' + c.id, n: n, c: c });
-});
-rep.sort(function (a, b) { return a.c.created_at < b.c.created_at ? 1 : -1; });
-items = { need: need, rep: rep, info: info.slice(0, 3) };
-var fresh = need.concat(rep).filter(function (x) { return known && !known[x.k]; });
-known = known || {}; need.concat(rep).forEach(function (x) { known[x.k] = 1; });
-if (!bellB) bellUI();
-if (fresh.length && allowed()) { held = held.concat(fresh); if (!heldT) heldT = later(flush, Math.max(0, lastNote + GAP - Date.now())); }
-drawBell();
-}
-function flush() {
-heldT = 0; var h = held; held = [];
-if (!h.length || !allowed()) return;
-lastNote = Date.now();
-var one = h.length === 1 ? h[0] : null, all = h.every(function (x) { return x.c; });
-var n = new Notification(one ? (one.c ? 'Reply on #' : 'Issue #') + one.n : h.length + (all ? ' new replies' : ' new items'),
-{ body: one ? (one.c ? plain(one.c.body) : one.i.title) : 'Open the bell on the company site.', tag: 'company-bell' });
-weekCount(1);
-n.onclick = function () { if (window.focus) window.focus(); if (one) toThread(one.n); else showBell(true); if (n.close) n.close(); };
-drawBell();
-}
-function svg(tag, a) {
-var e = document.createElementNS('http://www.w3.org/2000/svg', tag);
-Object.keys(a).forEach(function (k) { e.setAttribute(k, a[k]); }); return e;
-}
-function bellUI() {
-var w = document.querySelector && document.querySelector('header.site .wrap');
-if (!w || !document.createElementNS) return;
-title0 = document.title;
-w.style.position = 'relative';
-bellB = add(w, 'button', 'bell'); bellB.type = 'button';
-bellP = add(w, 'div', 'bellp'); bellP.setAttribute('role', 'dialog'); bellP.setAttribute('aria-label', 'Notifications'); bellP.hidden = true;
-bellB.onclick = function () { showBell(!bellOpen); };
-on(document, 'keydown', function (e) { if (bellOpen && e.key === 'Escape') { showBell(false); bellB.focus(); } });
-on(document, 'click', function (e) { var t = e.target; if (bellOpen && bellP.contains && !bellP.contains(t) && !bellB.contains(t)) showBell(false); });
-onReject.push(function () { bellB.hidden = bellP.hidden = true; document.title = title0; });
-}
-function showBell(open) { bellOpen = open; drawBell(); }
-function drawBell() {
-if (!bellB || !items) return;
-var n = items.need.length + items.rep.length, s = svg('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '1.8', 'aria-hidden': 'true' });
-s.appendChild(svg('path', { d: 'M12 3.5a5.5 5.5 0 0 0-5.5 5.5v3.6L4.8 15.8h14.4l-1.7-3.2V9A5.5 5.5 0 0 0 12 3.5z', 'stroke-linejoin': 'round' }));
-s.appendChild(svg('path', { d: 'M9.8 18.6a2.3 2.3 0 0 0 4.4 0', 'stroke-linecap': 'round' }));
-bellB.textContent = ''; bellB.appendChild(s);
-if (n) add(bellB, 'span', 'badge', String(n));
-bellB.setAttribute('aria-label', 'Notifications, ' + (n ? n + ' need you' : 'nothing waiting on you'));
-bellB.setAttribute('aria-expanded', bellOpen ? 'true' : 'false');
-document.title = (n ? '(' + n + ') ' : '') + title0;
-bellP.hidden = !bellOpen;
-if (!bellOpen) return;
-bellP.textContent = '';
-trial(add(bellP, 'div', 'trial'));
-[['Issues', items.need, needItem], ['Replies', items.rep, repItem], ['For information', items.info, infoItem]].forEach(function (g) {
-if (!g[1].length) return;
-add(bellP, 'h4', null, g[0]);
-g[1].forEach(function (x) { bellP.appendChild(g[2](x)); });
-});
-if (!n && !items.info.length) add(bellP, 'p', 'muted', 'Nothing is waiting on you.');
-}
-function trial(t) {
-function say(b, small) { add(t, 'b', null, b); if (small) add(t, 'small', 'muted', small); }
-if (!flagOn()) return say('Notifications are off', 'Turned off for both of you on #24. The bell still lists everything.');
-if (iPhone()) return say('Notifications', 'On iPhone, Safari sends them only to a site added to the Home Screen (iOS 16.4 or later). Share, then Add to Home Screen.');
-if (!hasN()) return say('Notifications', 'This browser does not offer them. The bell still lists everything.');
-if (Notification.permission === 'denied') return say('Notifications', 'Blocked in this browser’s settings for this site. The bell still lists everything.');
-if (Notification.permission !== 'granted' || !localStorage.getItem(NL)) {
-add(t, 'b', null, 'Try notifications (trial)');
-btn(t, 'Turn on', 'primary', function () {
-function done() { if (Notification.permission === 'granted') localStorage.setItem(NL, 'on'); drawBell(); }
-var r = Notification.requestPermission(done); if (r && r.then) r.then(done);
-});
-return add(t, 'small', 'muted', 'Only while this tab is open. One per item, at most one every 2 minutes.');
-}
-add(t, 'b', null, 'Notifications');
-var seg = add(t, 'span', 'seg2'), cur = localStorage.getItem(NL);
-['On', 'Off'].forEach(function (w) {
-var a = add(seg, 'a', null, w); a.href = '#';
-if (cur === w.toLowerCase()) a.setAttribute('aria-current', 'true');
-a.onclick = function (e) { if (e && e.preventDefault) e.preventDefault(); localStorage.setItem(NL, w.toLowerCase()); drawBell(); };
-});
-add(t, 'small', 'muted', 'Trial · ' + weekCount(0) + ' this week · off for both of you: write "notifications off" on #24');
-}
-function needItem(x) {
-var d = el('div', 'item'), top = add(d, 'div', 'acts'), dl = x.d, a;
-add(top, 'span', 'chip ' + (x.ap ? 'pitch' : 'urgent'), x.ap ? 'Approval (C51)' : 'Urgent');
-add(top, 'span', 'ref', '#' + x.n);
-add(d, 'b', null, x.i.title);
-if (dl && dl.t) {
-var left = dl.t - Date.now(), span = dl.t - Date.parse(x.i.created_at), w = dueWords(left), bar = add(d, 'div', 'due');
-bar.setAttribute('role', 'img'); bar.setAttribute('aria-label', w);
-add(bar, 'i').style.width = Math.max(0, Math.min(100, span > 0 ? 100 * left / span : 0)).toFixed(1) + '%';
-add(d, 'small', 'muted', w + ' · ' + when(new Date(dl.t).toISOString(), 1));
-} else if (dl) add(d, 'small', 'muted', 'Deadline: ' + dl.text);
-a = add(d, 'div', 'acts');
-if (x.ap) {
-[['Approve', 'Approved'], ['Ask for changes', 'Changes asked'], ['Reject', 'Rejected']].forEach(function (b, k) {
-btn(a, b[0], k ? '' : 'primary', function () { compose(x.n, b[1] + ': ' + x.i.title); });
-});
-add(d, 'small', 'muted', 'Each opens the composer with your words pre-filled; nothing posts until you press Send.');
-} else {
-btn(a, 'Reply', 'primary', function () { compose(x.n, ''); });
-btn(a, 'Open thread', '', function () { toThread(x.n); });
-}
-return d;
-}
-function repItem(x) {
-var d = el('div', 'item'), top = add(d, 'div'), a;
-add(top, 'span', 'chip sender company', 'Company');
-add(top, 'small', 'muted', ' ' + clock(x.c.created_at) + ' · #' + x.n);
-add(d, 'span', null, plain(x.c.body));
-a = add(d, 'div', 'acts');
-btn(a, 'Reply', '', function () { compose(x.n, ''); });
-btn(a, 'Mark seen', '', function () {
-var k = 'company.seen.' + x.n; if ((localStorage.getItem(k) || '') < x.c.created_at) localStorage.setItem(k, x.c.created_at);
-items.rep = items.rep.filter(function (y) { return y.n !== x.n || y.c.created_at > x.c.created_at; }); drawBell();
-});
-return d;
-}
-function infoItem(x) {
-var d = el('div', 'item'), s = add(d, 'span'), a;
-add(s, 'span', 'chip report', 'Report'); add(s, 'span', null, ' ');
-a = add(s, 'a', null, x.i.title); a.href = '#t=' + x.n;
-add(d, 'small', 'muted', ago(x.i.created_at) + ' ago');
-return d;
-}
 function tokenBox(root) {
 var repo = root.getAttribute('data-repo');
 var bar = el('div', 'chat-bar'), input = el('input'); input.type = 'password'; input.autocomplete = 'off';
@@ -384,7 +223,7 @@ show();
 window.CompanySite = { API: API, KEY: KEY, NAME: NAME, ALLOW: ALLOW, NO_TOKEN: NO_TOKEN, el: el, byId: byId, on: on, later: later, stop: stop,
 getToken: getToken, setToken: setToken, tokenStore: tokenStore, hdrs: hdrs, gh: gh, said: said, ago: ago, checkAuth: checkAuth, parseAllow: parseAllow,
 onDrawn: onDrawn, onReject: onReject, rejected: function () { return rejected; },
-status: function () { return lastSt; }, onStatus: onStatus, tiles: tiles, added: added, feed: feed };
+status: function () { return lastSt; }, onStatus: onStatus, tiles: tiles, added: added, feed: function () { window.CompanySite.fed = arguments; } };
 var n = byId('now-panel'); if (n) nowPanel(n);
 var c = byId('chat-root'), t = byId('token-root');
 function load(src) { var s = document.createElement('script'); s.src = src; (document.head || document.body).appendChild(s); }

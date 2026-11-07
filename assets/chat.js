@@ -127,12 +127,16 @@ function noToken() { status.textContent = NO_TOKEN + ' '; mk(status, 'a', null, 
 if (links) put(col, links);
 var dock = mk(col, 'div', 'cv-dock');
 if (W.ResizeObserver) new W.ResizeObserver(() => { DE.style.setProperty('--cv-dock-fit', 'calc(' + dock.getBoundingClientRect().height + 'px + var(--s2))'); }).observe(dock);
-var jump = mk(col, 'button', 'cv-jump'); jump.type = 'button'; jump.hidden = true;
-jump.onclick = () => { bottom(); jump.hidden = true; markSeen(cur); drawTabs(); };
-var topBtn = mk(col, 'button', 'cv-top', 'Top'); topBtn.type = 'button'; topBtn.hidden = true; topBtn.setAttribute('aria-label', 'Scroll to the top of the page');
-topBtn.onclick = () => { if (W.scrollTo) W.scrollTo(0, 0); };
-function topShow() { topBtn.hidden = !(W.scrollY > 240); }
-if (W.addEventListener) { W.addEventListener('scroll', topShow, { passive: true }); topShow(); }
+var jump = mk(col, 'button', 'cv-jump', 'Latest'); jump.type = 'button'; jump.hidden = true; jump.setAttribute('aria-label', 'Go to the latest message');
+function seenAll() { jump.textContent = 'Latest'; markSeen(cur); drawTabs(); }
+jump.onclick = () => { bottom(); jump.hidden = true; seenAll(); };
+function atLast() {
+var m = log && log.lastElementChild; if (!m || !m.getBoundingClientRect) return true;
+var d = dock.getBoundingClientRect(), v = Math.min(W.innerHeight || 0, d.height ? d.top : 1e9);
+return m.getBoundingClientRect().bottom <= v + 2;
+}
+function latestShow() { var at = atLast(); if (at && jump.textContent !== 'Latest') seenAll(); jump.hidden = at; }
+if (W.addEventListener) { W.addEventListener('scroll', latestShow, { passive: true }); W.addEventListener('resize', latestShow); }
 function login(x) { return String((x && x.user && x.user.login) || '').toLowerCase(); }
 function numOf(c) { return +String(c.issue_url || '').split('/').pop(); }
 function isInv(l) { return names.indexOf(l) >= 0; }
@@ -266,7 +270,7 @@ if (!nw.length) return waitLine();
 if (nw.some((x) => x.at < lastAt)) { var below = de ? de.scrollHeight - W.scrollY : 0; drawView(false); if (de && W.scrollTo) W.scrollTo(0, de.scrollHeight - below); return; }
 var at = nearBottom();
 nw.forEach((x) => { add(x); }); waitLine();
-if (at) { bottom(); markSeen(cur); } else { jump.textContent = '↓ ' + nw.length + ' new'; jump.hidden = false; }
+if (at) { bottom(); markSeen(cur); } else { jump.textContent = 'Latest · ' + nw.length + ' new'; jump.hidden = false; }
 }
 function readThread(n) {
 if (!issue(n)) get(RI + '/' + n).then((i) => { extra[n] = i; if (cur === n) { drawTabs(); drawView(true); } }, () => {});

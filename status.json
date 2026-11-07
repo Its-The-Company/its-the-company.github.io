@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "at": "2026-11-07T09:44:10.227784+00:00",
+ "at": "2026-11-07T10:03:07.353279+00:00",
  "session": {
-  "active": false,
+  "active": true,
   "kind": "",
   "started": null
  },
@@ -38,8 +38,8 @@
   "read_at": "2026-11-07T04:39:02.507080-05:00"
  },
  "ui": {
-  "week_pct": 0.861,
-  "five_hour_pct": 0.732,
+  "week_pct": 0.873,
+  "five_hour_pct": 0.801,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -50,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-07T04:58:59-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 63.05,
   "usage_pct": 38.4,
   "work_pct": 67.6,
-  "read_at": "2026-11-07T09:44:00+00:00",
+  "read_at": "2026-11-07T10:05:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -85,7 +85,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T04:43:00-05:00",
+   "at": "2026-11-07T04:56:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -95,9 +95,9 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-07T04:44:00-05:00"
+  "at": "2026-11-07T05:05:00-05:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
  "pool": null,
  "lanes": [
@@ -250,27 +250,14 @@
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-07T09:38:38Z",
-  "seconds": 55.0
+  "sent": "2026-11-07T09:43:29Z",
+  "seconds": 59.0
  },
- "inbox": [
-  {
-   "id": "c6705196859",
-   "state": "received",
-   "position": 1,
-   "eta": "2026-11-07T04:58:59-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "How many site/process tasks left in..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -281,10 +268,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "4:44 AM",
-  "why": "Between sessions: no session is running. Last check 4:43 AM ET.",
-  "at_iso": "2026-11-07T09:44:00+00:00",
+  "at": "5:05 AM",
+  "why": "Waiting for the week's line: the week is ahead of its pace to be used up before it resets. Last check 5:05 AM ET.",
+  "at_iso": "2026-11-07T10:05:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:44 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 4:43 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:05 AM ET</p><p class=\"an-why\">Waiting for the week's line: the week is ahead of its pace to be used up before it resets. Last check 5:05 AM ET.</p></section>"
  }
 }

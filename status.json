@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T00:24:38.019809+00:00",
+ "at": "2026-11-07T00:28:03.533047+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[build] T-3149 premade widgets no view",
    "model": "opus",
    "started": "2026-11-06T23:12:28.163Z",
-   "seconds": 4329,
+   "seconds": 4535,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[site] T-3163 Home task names",
    "model": "opus",
    "started": "2026-11-07T00:09:22.798Z",
-   "seconds": 915,
+   "seconds": 1120,
    "finished": null,
    "effort": "high"
   }
@@ -107,8 +107,41 @@
   "week_pct": 63.9,
   "usage_pct": 41.0,
   "work_pct": 68.8,
-  "read_at": "2026-11-07T00:25:00+00:00",
+  "read_at": "2026-11-07T00:28:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-3166",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Key each landing check by the files it reads",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T19:25:52-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-3105",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review the internal-only gate build",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T19:25:52-05:00",
+    "n": "Evan"
+   },
+   {
+    "lane": "a",
+    "task": "T-3121",
+    "w": "Pernille",
+    "k": "research",
+    "t": "Use Apple encryption for Python https",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-06T19:25:52-05:00",
+    "n": "Evan"
+   },
    {
     "lane": "a2",
     "task": "T-3119",
@@ -141,7 +174,8 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-06T19:05:57-05:00",
-    "n": "Evan"
+    "n": "Evan",
+    "d": 1
    },
    {
     "lane": "a3",
@@ -208,7 +242,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T19:25:00-05:00"
+  "at": "2026-11-06T19:28:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -402,12 +436,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 2,
-  "total": 4,
-  "at": "7:25 PM",
+  "lanes": 3,
+  "total": 5,
+  "at": "7:28 PM",
   "why": "",
-  "at_iso": "2026-11-07T00:25:00+00:00",
+  "at_iso": "2026-11-07T00:28:00+00:00",
   "started": "4:25 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:25 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:28 PM ET</p></section>"
  }
 }

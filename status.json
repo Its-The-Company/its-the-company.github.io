@@ -1,14 +1,66 @@
 {
  "schema": 1,
- "at": "2026-11-07T12:32:16.995386+00:00",
+ "at": "2026-11-07T12:35:21.871083+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-07T05:48:39-05:00"
  },
- "workers": [],
- "who": "",
- "recent": [],
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[site] T-2667 Home slice: Task Lifecycle recut, chat hunk",
+   "model": "opus",
+   "started": "2026-11-07T11:49:05.888Z",
+   "seconds": 2775,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-3217 ProjectsTransferUITests import step (Fable)",
+   "model": "fable",
+   "started": "2026-11-07T12:19:26.582Z",
+   "seconds": 955,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys, Idris",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3206 supervisor_test red on main",
+   "model": "opus",
+   "started": "2026-11-07T10:52:43.753Z",
+   "seconds": null,
+   "finished": "2026-11-07T12:18:57.583000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3251 runner re-warm after red job",
+   "model": "opus",
+   "started": "2026-11-07T11:38:59.357Z",
+   "seconds": null,
+   "finished": "2026-11-07T11:48:39.143000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-3201 both machines on Home",
+   "model": "opus",
+   "started": "2026-11-07T11:17:55.655Z",
+   "seconds": null,
+   "finished": "2026-11-07T11:38:33.425000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[report] morning",
+   "model": "opus",
+   "started": "2026-11-07T11:10:26.853Z",
+   "seconds": null,
+   "finished": "2026-11-07T11:17:17.033000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -55,7 +107,7 @@
   "week_pct": 63.03,
   "usage_pct": 38.4,
   "work_pct": 67.6,
-  "read_at": "2026-11-07T12:32:00+00:00",
+  "read_at": "2026-11-07T12:35:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -85,7 +137,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T07:28:00-05:00",
+   "at": "2026-11-07T07:34:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -95,27 +147,33 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-07T07:32:00-05:00"
+  "at": "2026-11-07T07:35:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: 8% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "n": 2,
+  "at": "2026-11-07T05:48:29.897488-05:00"
+ },
  "lanes": [
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, after T-1035 lands (personal-account...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[site] T-2667 Home slice: Task Lifecycle recut, chat hunk",
+   "model": "opus",
+   "since": "2026-11-07T11:49:05.888Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-3217 ProjectsTransferUITests import step (Fable)",
+   "model": "fable",
+   "since": "2026-11-07T12:19:26.582Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -151,7 +209,28 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Build the new Home, Chat and Usage pages",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T11:49:05.888Z",
+    "o": "c",
+    "task": "T-2667"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Fix the three red tests before build 3",
+    "m": "fable",
+    "e": "high",
+    "at": "2026-11-07T12:19:26.582Z",
+    "o": "c",
+    "task": "T-3217"
+   }
+  ],
   "open": [
    {
     "w": "Odalys",
@@ -257,6 +336,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -265,13 +345,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 0,
-  "total": 0,
-  "at": "7:32 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-07T12:32:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:32 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 2,
+  "at": "7:35 AM",
+  "why": "",
+  "at_iso": "2026-11-07T12:35:00+00:00",
+  "started": "5:48 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:48 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:35 AM ET</p></section>"
  }
 }

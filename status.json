@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T13:24:21.049248+00:00",
+ "at": "2026-11-07T13:27:26.192981+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,16 +9,24 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-3204 SKIP rows per Ines ruling",
+   "task": "[tools] T-1731 speed up land test suite",
    "model": "opus",
-   "started": "2026-11-07T13:18:56.510Z",
-   "seconds": 324,
+   "started": "2026-11-07T13:26:27.779Z",
+   "seconds": 58,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3204 SKIP rows per Ines ruling",
+   "model": "opus",
+   "started": "2026-11-07T13:18:56.510Z",
+   "seconds": null,
+   "finished": "2026-11-07T13:26:03.904000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-3204 ruling after two refusals",
@@ -42,20 +50,12 @@
    "started": "2026-11-07T13:13:26.088Z",
    "seconds": null,
    "finished": "2026-11-07T13:14:54.948000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3217 ProjectsTransferUITests import step (Fable)",
-   "model": "fable",
-   "started": "2026-11-07T12:19:26.582Z",
-   "seconds": null,
-   "finished": "2026-11-07T13:12:54.801000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 422,
+  "runnable_count": 421,
   "blocked_count": 106
  },
  "meter": {
@@ -98,7 +98,7 @@
   "week_pct": 63.03,
   "usage_pct": 38.4,
   "work_pct": 67.6,
-  "read_at": "2026-11-07T13:24:00+00:00",
+  "read_at": "2026-11-07T13:27:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -138,7 +138,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-07T08:24:00-05:00"
+  "at": "2026-11-07T08:27:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -151,9 +151,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-3204 SKIP rows per Ines ruling",
+   "task": "[tools] T-1731 speed up land test suite",
    "model": "opus",
-   "since": "2026-11-07T13:18:56.510Z",
+   "since": "2026-11-07T13:26:27.779Z",
    "next": [],
    "effort": "high"
   },
@@ -203,12 +203,12 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Find why older land test rows fail here",
+    "t": "Speed up the personal landing test near its limit",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-07T13:18:56.510Z",
+    "at": "2026-11-07T13:26:27.779Z",
     "o": "c",
-    "task": "T-3204"
+    "task": "T-1731"
    }
   ],
   "open": [
@@ -286,6 +286,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "The merge-queue test file is green again: its two hook-comparison checks now say SKIP with a...",
+    "at": "2026-11-07T08:25:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "A new test proves the memory-file merge rule works: old notes a worker already archived stay...",
     "at": "2026-11-07T08:14:00-05:00"
    },
@@ -293,15 +298,10 @@
     "w": "Odalys",
     "t": "Odalys's memory notes, which every one of her model calls carries, are back under the 4 KB limit...",
     "at": "2026-11-07T08:08:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "A stopped session's saved work was checked and not sent back for landing, because one part was...",
-    "at": "2026-11-07T07:47:00-05:00"
    }
   ],
   "count": {
-   "next": 422,
+   "next": 421,
    "wait": 39,
    "blocked": 67,
    "you": 13
@@ -328,10 +328,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "8:24 AM",
+  "at": "8:27 AM",
   "why": "",
-  "at_iso": "2026-11-07T13:24:00+00:00",
+  "at_iso": "2026-11-07T13:27:00+00:00",
   "started": "5:48 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:48 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:24 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:48 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:27 AM ET</p></section>"
  }
 }

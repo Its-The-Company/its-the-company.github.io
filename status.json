@@ -1,31 +1,14 @@
 {
  "schema": 1,
- "at": "2026-11-07T05:08:44.506381+00:00",
+ "at": "2026-11-07T05:28:47.622939+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-06T23:09:00-05:00"
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[site] T-3187 Home favorites search expand",
-   "model": "opus",
-   "started": "2026-11-07T04:11:38.649Z",
-   "seconds": null,
-   "finished": "2026-11-07T05:07:28.979000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3192 fix failed merges",
-   "model": "opus",
-   "started": "2026-11-07T04:11:29.356Z",
-   "seconds": null,
-   "finished": "2026-11-07T04:59:54.703000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -34,29 +17,29 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 8.0,
-   "resets_at": "2026-11-07T05:49:59.558065+00:00",
+   "pct": 17.0,
+   "resets_at": "2026-11-07T05:50:00.298722+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 92.0,
+   "left": 83.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 87.0,
-   "resets_at": "2026-11-08T06:59:59.558084+00:00",
+   "pct": 88.0,
+   "resets_at": "2026-11-08T07:00:00.298739+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 13.0,
+   "left": 12.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 1.0,
-   "resets_at": "2026-11-08T06:59:59.558217+00:00",
+   "resets_at": "2026-11-08T07:00:00.298856+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-06T23:08:42.679275-05:00"
+  "read_at": "2026-11-07T00:28:37.971385-05:00"
  },
  "ui": {
-  "week_pct": 0.741,
-  "five_hour_pct": 0.253,
+  "week_pct": 0.737,
+  "five_hour_pct": 0.24,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -69,10 +52,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 63.71,
-  "usage_pct": 39.6,
-  "work_pct": 68.2,
-  "read_at": "2026-11-07T05:12:00+00:00",
+  "week_pct": 63.32,
+  "usage_pct": 39.3,
+  "work_pct": 68.0,
+  "read_at": "2026-11-07T05:28:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -102,7 +85,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T00:04:00-05:00",
+   "at": "2026-11-07T00:12:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-06T23:08:00-05:00"
@@ -111,16 +94,12 @@
  },
  "lock_in": {
   "on": false,
-  "pool": 1,
-  "at": "2026-11-07T00:12:00-05:00"
+  "pool": 2,
+  "at": "2026-11-07T00:28:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Spread: 12% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 9 of 16 lands failed in 3 hours (8 red))",
-  "n": 2,
-  "at": "2026-11-06T23:08:43.311420-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Odalys",
@@ -289,10 +268,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "12:12 AM",
-  "why": "Between sessions: no session is running. Last check 11:08 PM ET.",
-  "at_iso": "2026-11-07T05:12:00+00:00",
+  "at": "12:28 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-07T05:28:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:12 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 11:08 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:28 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

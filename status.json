@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T08:05:00.157243+00:00",
+ "at": "2026-11-07T08:08:02.191869+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[site] T-3218 hidden Investor Scoreboard",
    "model": "opus",
    "started": "2026-11-07T07:45:27.172Z",
-   "seconds": 1172,
+   "seconds": 1355,
    "finished": null,
    "effort": "high"
   },
@@ -21,16 +21,7 @@
    "task": "[tools] T-3213 failed runner job alarms",
    "model": "opus",
    "started": "2026-11-07T07:45:48.133Z",
-   "seconds": 1152,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3209 plan lines onto main board",
-   "model": "opus",
-   "started": "2026-11-07T07:45:52.628Z",
-   "seconds": 1147,
+   "seconds": 1334,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +30,7 @@
    "task": "[tools] T-3204 red land test rows",
    "model": "opus",
    "started": "2026-11-07T07:45:56.882Z",
-   "seconds": 1143,
+   "seconds": 1325,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[tools] T-3069 merge queue waiting cut",
    "model": "opus",
    "started": "2026-11-07T07:46:02.187Z",
-   "seconds": 1137,
+   "seconds": 1320,
    "finished": null,
    "effort": "high"
   },
@@ -57,7 +48,7 @@
    "task": "[tools] T-3206 red suites on main",
    "model": "opus",
    "started": "2026-11-07T07:52:00.864Z",
-   "seconds": 779,
+   "seconds": 961,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +57,7 @@
    "task": "[site] T-3219 Running subtabs order",
    "model": "opus",
    "started": "2026-11-07T07:57:01.449Z",
-   "seconds": 478,
+   "seconds": 660,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +66,16 @@
    "task": "[tools] T-3102 land jobs waiting on runner",
    "model": "opus",
    "started": "2026-11-07T07:57:43.727Z",
-   "seconds": 436,
+   "seconds": 618,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3209 plan lines onto main board",
+   "model": "opus",
+   "started": "2026-11-07T07:45:52.628Z",
+   "seconds": 1329,
    "finished": null,
    "effort": "high"
   }
@@ -110,7 +110,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 412,
+  "runnable_count": 411,
   "blocked_count": 104
  },
  "meter": {
@@ -153,7 +153,7 @@
   "week_pct": 63.59,
   "usage_pct": 38.9,
   "work_pct": 67.8,
-  "read_at": "2026-11-07T08:05:00+00:00",
+  "read_at": "2026-11-07T08:08:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -174,7 +174,7 @@
   }
  ],
  "disk": {
-  "free_gb": 27,
+  "free_gb": 25,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -183,7 +183,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": false,
-   "at": "2026-11-07T02:57:00-05:00",
+   "at": "2026-11-07T03:01:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-06T23:08:00-05:00"
@@ -193,7 +193,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T03:05:00-05:00"
+  "at": "2026-11-07T03:08:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -411,6 +411,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "When a lane adds a task to the board, the line now appears on the main board at once instead of...",
+    "at": "2026-11-07T03:07:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The MacBook test machine now runs runner 21, which no longer waits on a busy-looking load figure...",
     "at": "2026-11-07T02:56:00-05:00"
    },
@@ -418,15 +423,10 @@
     "w": "Ines",
     "t": "Every open task from an Investor message two or more days old now has one decision: 27 stay at...",
     "at": "2026-11-07T02:51:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "Folded into its stage lines: T-2072 (bell on every page), T-2074 (documents under Reports),...",
-    "at": "2026-11-07T02:50:00-05:00"
    }
   ],
   "count": {
-   "next": 412,
+   "next": 411,
    "wait": 37,
    "blocked": 67,
    "you": 12
@@ -452,10 +452,10 @@
   "main": 8,
   "lanes": 0,
   "total": 8,
-  "at": "3:05 AM",
+  "at": "3:08 AM",
   "why": "",
-  "at_iso": "2026-11-07T08:05:00+00:00",
+  "at_iso": "2026-11-07T08:08:00+00:00",
   "started": "2:43 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 8, started 2:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:05 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 8, started 2:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:08 AM ET</p></section>"
  }
 }

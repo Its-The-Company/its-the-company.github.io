@@ -1,77 +1,44 @@
 {
  "schema": 1,
- "at": "2026-11-07T17:09:09.847541+00:00",
+ "at": "2026-11-07T17:19:05.856210+00:00",
  "session": {
-  "active": false,
+  "active": true,
   "kind": "",
   "started": null
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-3322 runner tar failures",
-   "model": "opus",
-   "started": "2026-11-07T16:52:42.953Z",
-   "seconds": null,
-   "finished": "2026-11-07T17:04:25.986000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-3284 build In flight view",
-   "model": "opus",
-   "started": "2026-11-07T15:08:26.237Z",
-   "seconds": null,
-   "finished": "2026-11-07T16:12:06.709000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-2866 repost charter proposal",
-   "model": "opus",
-   "started": "2026-11-07T16:08:34.169Z",
-   "seconds": null,
-   "finished": "2026-11-07T16:11:57.886000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-2551 launcher premades Python half",
-   "model": "opus",
-   "started": "2026-11-07T15:31:36.327Z",
-   "seconds": null,
-   "finished": "2026-11-07T16:10:30.475000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 328,
+  "runnable_count": 329,
   "blocked_count": 103
  },
  "meter": {
   "five_hour": {
-   "pct": 29.0,
-   "resets_at": "2026-11-07T15:50:00.062867+00:00",
+   "pct": 6.0,
+   "resets_at": "2026-11-07T20:50:00.374567+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 71.0,
+   "left": 94.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 96.0,
-   "resets_at": "2026-11-08T07:00:00.062883+00:00",
+   "pct": 100.0,
+   "resets_at": "2026-11-08T07:00:00.374587+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 4.0,
+   "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-08T07:00:00.063016+00:00",
+   "resets_at": "2026-11-08T07:00:00.374724+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-07T10:05:22.608568-05:00"
+  "read_at": "2026-11-07T12:18:51.142635-05:00"
  },
  "ui": {
-  "week_pct": 0.878,
+  "week_pct": 0.883,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -83,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-07T10:20:22-05:00",
+ "next_tick": null,
  "personal": {
-  "week_pct": 86.57,
+  "week_pct": 87.06,
   "usage_pct": 44.2,
   "work_pct": 73.2,
-  "read_at": "2026-11-07T17:11:00+00:00",
+  "read_at": "2026-11-07T17:19:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -133,47 +100,6 @@
     "at": "2026-11-07T10:54:36-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3312",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Install the jobs loop and read its first 48 hours",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T10:48:31-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-2719",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Move main-plan work sessions into their own worktrees",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T10:48:31-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3151",
-    "t": "Confirm the runner's approval request, then rerun jobs",
-    "at": "2026-11-07T10:48:31-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-2887",
-    "t": "Confirm the runner's approval request, then rerun jobs",
-    "at": "2026-11-07T10:48:31-05:00",
-    "n": "Evan",
-    "src": "plan-a"
    }
   ]
  },
@@ -199,12 +125,12 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 520
+   "free_gb": 522
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T12:04:00-05:00",
+   "at": "2026-11-07T12:12:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -214,9 +140,9 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T12:11:00-05:00"
+  "at": "2026-11-07T12:19:00-05:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
  "pool": null,
  "lanes": [
@@ -361,7 +287,7 @@
    }
   ],
   "count": {
-   "next": 328,
+   "next": 329,
    "wait": 37,
    "blocked": 66,
    "you": 13
@@ -369,14 +295,13 @@
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-07T16:32:39Z",
-  "seconds": 44.0
+  "sent": "2026-11-07T17:12:41Z",
+  "seconds": 92.0
  },
  "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -386,12 +311,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "12:11 PM",
+  "lanes": 1,
+  "total": 1,
+  "at": "12:19 PM",
   "why": "",
-  "at_iso": "2026-11-07T17:11:00+00:00",
+  "at_iso": "2026-11-07T17:19:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:11 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:19 PM ET</p></section>"
  }
 }

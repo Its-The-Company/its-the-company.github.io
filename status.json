@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T14:42:59.760210+00:00",
+ "at": "2026-11-07T14:46:06.917302+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,28 +9,10 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-3210 T-2874 apply path inline diff refusals",
-   "model": "opus",
-   "started": "2026-11-07T14:27:54.052Z",
-   "seconds": 905,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[tools] T-3112 recut two parked branches",
    "model": "opus",
    "started": "2026-11-07T14:28:34.448Z",
-   "seconds": 865,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3069 merge queue next slice",
-   "model": "opus",
-   "started": "2026-11-07T14:33:16.346Z",
-   "seconds": 583,
+   "seconds": 1052,
    "finished": null,
    "effort": "high"
   },
@@ -39,25 +21,7 @@
    "task": "[tools] T-3288 root cause of MacBook test failures",
    "model": "opus",
    "started": "2026-11-07T14:37:10.437Z",
-   "seconds": 349,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-3290 show why a stale widget is stale",
-   "model": "opus",
-   "started": "2026-11-07T14:38:01.179Z",
-   "seconds": 298,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3279 draw premade before first app open",
-   "model": "opus",
-   "started": "2026-11-07T14:38:41.182Z",
-   "seconds": 258,
+   "seconds": 536,
    "finished": null,
    "effort": "high"
   },
@@ -66,7 +30,7 @@
    "task": "[review] T-2703 privacy scan fixes",
    "model": "opus",
    "started": "2026-11-07T14:39:09.754Z",
-   "seconds": 230,
+   "seconds": 417,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +39,7 @@
    "task": "[site] T-3076 T-3284 In flight on Home",
    "model": "opus",
    "started": "2026-11-07T14:42:33.908Z",
-   "seconds": 25,
+   "seconds": 213,
    "finished": null,
    "effort": "high"
   },
@@ -84,50 +48,50 @@
    "task": "[review] T-3140 tightened widget safety tests",
    "model": "opus",
    "started": "2026-11-07T14:42:53.786Z",
-   "seconds": 5,
+   "seconds": 193,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x5, Maren, Idris, Pernille x2",
+ "who": "Odalys x3, Pernille x2",
  "recent": [
   {
    "name": "idris",
-   "task": "[build] T-3289 tighten old crash record fix",
+   "task": "[build] T-3279 draw premade before first app open",
    "model": "opus",
-   "started": "2026-11-07T14:37:28.889Z",
+   "started": "2026-11-07T14:38:41.182Z",
    "seconds": null,
-   "finished": "2026-11-07T14:42:33.561000+00:00"
+   "finished": "2026-11-07T14:45:23.014000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-3290 show why a stale widget is stale",
+   "model": "opus",
+   "started": "2026-11-07T14:38:01.179Z",
+   "seconds": null,
+   "finished": "2026-11-07T14:45:04.280000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[site] T-2667 new Home, Chat, Usage pages rest",
+   "task": "[tools] T-3069 merge queue next slice",
    "model": "opus",
-   "started": "2026-11-07T14:26:12.006Z",
+   "started": "2026-11-07T14:33:16.346Z",
    "seconds": null,
-   "finished": "2026-11-07T14:42:05.583000+00:00"
+   "finished": "2026-11-07T14:44:59.357000+00:00"
   },
   {
-   "name": "pernille",
-   "task": "[test] T-1393 rating test leaves settings files",
+   "name": "odalys",
+   "task": "[tools] T-3210 T-2874 apply path inline diff refusals",
    "model": "opus",
-   "started": "2026-11-07T14:37:35.826Z",
+   "started": "2026-11-07T14:27:54.052Z",
    "seconds": null,
-   "finished": "2026-11-07T14:38:54.493000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[release] T-3106 build 3 to internal TestFlight",
-   "model": "opus",
-   "started": "2026-11-07T14:29:56.620Z",
-   "seconds": null,
-   "finished": "2026-11-07T14:37:58.376000+00:00"
+   "finished": "2026-11-07T14:44:15.031000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 410,
+  "runnable_count": 409,
   "blocked_count": 106
  },
  "meter": {
@@ -170,7 +134,7 @@
   "week_pct": 86.97,
   "usage_pct": 45.5,
   "work_pct": 73.6,
-  "read_at": "2026-11-07T14:43:00+00:00",
+  "read_at": "2026-11-07T14:46:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -210,7 +174,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T09:43:00-05:00"
+  "at": "2026-11-07T09:46:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -223,27 +187,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-3210 T-2874 apply path inline diff refusals",
+   "task": "[tools] T-3112 recut two parked branches",
    "model": "opus",
-   "since": "2026-11-07T14:27:54.052Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[design] T-3290 show why a stale widget is stale",
-   "model": "opus",
-   "since": "2026-11-07T14:38:01.179Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-3279 draw premade before first app open",
-   "model": "opus",
-   "since": "2026-11-07T14:38:41.182Z",
+   "since": "2026-11-07T14:28:34.448Z",
    "next": [],
    "effort": "high"
   },
@@ -257,9 +203,25 @@
    "effort": "high"
   },
   {
+   "name": "Idris",
+   "state": "next",
+   "task": "Idris, P2, from T-1105 (Maren's spoken-label table,...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren+Odalys, P1, Model: Sonnet medium. Investor...",
    "model": null,
    "since": null,
    "next": []
@@ -278,16 +240,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Refuse raw HTML around an inline diff",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T14:27:54.052Z",
-    "o": "c",
-    "task": "T-3210"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Recut two parked branches that no longer apply to main",
     "m": "opus",
     "e": "high",
@@ -298,42 +250,12 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Merging work goes next after TestFlight",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T14:33:16.346Z",
-    "o": "c",
-    "task": "T-3069"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Find and fix the root cause of MacBook test failures",
     "m": "opus",
     "e": "high",
     "at": "2026-11-07T14:37:10.437Z",
     "o": "c",
     "task": "T-3288"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "Show why a stale widget is stale",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T14:38:01.179Z",
-    "o": "c",
-    "task": "T-3290"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Draw a premade picked before the first app open",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T14:38:41.182Z",
-    "o": "c",
-    "task": "T-3279"
    },
    {
     "w": "Pernille",
@@ -354,6 +276,16 @@
     "at": "2026-11-07T14:42:33.908Z",
     "o": "c",
     "task": "T-3076"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Recheck the tightened widget safety tests",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T14:42:53.786Z",
+    "o": "c",
+    "task": "T-3140"
    }
   ],
   "open": [
@@ -430,23 +362,23 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "A proposal with a stray carriage-return character is now refused, since GitHub would treat it as...",
+    "at": "2026-11-07T09:44:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "A proposal can no longer hide its change inside HTML that GitHub does not show; the applier now...",
+    "at": "2026-11-07T09:44:00-05:00"
+   },
+   {
     "w": "Maren",
-    "t": "This older plan for a separate In flight tab is replaced by the Investor's later choice: Home's...",
-    "at": "2026-11-07T09:42:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "When a widget's run is killed and the app then fails in its first seconds, the next opening...",
-    "at": "2026-11-07T09:42:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The rating tests now reuse one settings file per test instead of leaving two new files in the...",
-    "at": "2026-11-07T09:38:00-05:00"
+    "t": "A widget whose script keeps failing now has a design for a small red mark in its corner, so...",
+    "at": "2026-11-07T09:44:00-05:00"
    }
   ],
   "count": {
-   "next": 410,
+   "next": 409,
    "wait": 39,
    "blocked": 67,
    "you": 13
@@ -470,13 +402,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 9,
+  "main": 5,
   "lanes": 0,
-  "total": 9,
-  "at": "9:43 AM",
+  "total": 5,
+  "at": "9:46 AM",
   "why": "",
-  "at_iso": "2026-11-07T14:43:00+00:00",
+  "at_iso": "2026-11-07T14:46:00+00:00",
   "started": "9:09 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 9, started 9:09 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:43 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:09 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:46 AM ET</p></section>"
  }
 }

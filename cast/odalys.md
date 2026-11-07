@@ -38,25 +38,27 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open (2026-11-07)
 - Reads due: OPT-100 n=3 main reds or 11-13. OPT-095, 098, 099 11-08..09. OPT-107 n=40 or 11-13. OPT-115 n=24 or 11-09, then #41 reply. OPT-085, 077, 079, 081 11-11.
 - T-3258 d8ba0328f: MEMORY.md merges by tools/memory_merge.py (keeps main's file, adds only new lines, 4096 <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>). Suite rows not written (guard refused the write). Watch the next replay land: this file must not grow.
-- T-3274 bd2f3b6b7: land drops commits main has by (author, time, subject). Open: end-to-end drop rows in personal_land_test.sh (guard refused my setup text: ff merge + push; someone else writes them).
+- T-3274 bd2f3b6b7: land drops commits main has by (author, time, subject). Suite row T-3285 1cf475651 (commits alone: cherry-pick + amend renumber, land pushes itself; no sync line needed).
 - T-3213 runner_watch: read runner_health.jsonl idle/red minutes after 11-08. T-3102: requeue and red shares at n=60 queues or 11-09.
-- Mine next: T-3215 (T-3202, T-3208, T-3209 done 11-07). T-2667 left: threads column, This Session page, #41 post. T-2616: baseline and plan in its board note. T-3069: records train shipped 10e9648fe (OPT-117 read n=60 lands or 11-09); left T-2616 rest, T-2666, T-2467. Hourly prune skipped hours 11-07 (3 samples 03:38-09:02).
+- T-3247 5bca5857e: tools/session_gaps.py, ops/plans/one-coordinator.md; mine T-3300..T-3303 (land, jobs, coordinator, 48-h check). Weeks bound by allowance: gaps cost time, not usage; say so.
+- T-2641 (11-07): dispatcher 48 h clean (tools/dispatch_clean.py); old split cut from personal_tick.sh, OPT-118 read with OPT-112 on 11-12. Mine: T-3306 claim released early, T-3307 settings JSONDecodeError, T-3308 governor api_pick.
+- T-3311 ebdf97e18: names fixed (<span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">Parked</span> left out of the build list), src data in; display T-3318 after T-3284, then tick T-3311.
+- Mine next: T-3215 (T-3202, T-3208, T-3209 done 11-07). T-2667 left: threads column, This Session page, #41 post. T-2616: baseline and plan in its board note. T-3069: only reads left (OPT-115, OPT-117 by 11-09), then #41 before/after. Keeper runs merge queue in sessions 5884472ae.
+
+- T-3288 74f5a5670: main gate live (tools/main_gate.py, pre-commit). OPT-119 read 11-14 or n=60 gated commits. xc_route.py status misreads land/m* jobs as "not pushed".
+
+- T-3284 1e59212bf: In flight built (+Evan c6708949111: bars everywhere, Merge testing in both panels). Left: done count (T-3190), Coding/test minutes (T-3113), stopped rows (no record).
 
 ## Lessons
-- land_stats time to land restarts its clock at each failed try (last try only); say so beside any median. T-3089: OPT-101, 102 kept 11-07.
-- Parallel test parts: a machine-wide pgrep row sees a sibling part's processes; give each part distinct markers.
-- Measure: a before number is a claim; rebuild it from raw. Process rows read only the run's own processes; races need repeated rows; time each group before blaming load.
-- Tests: no pytest, stdlib unittest with a __main__. One suite at a time; check ps for another run.sh. personal_land_test takes ~420 s: SUITE_TIMEOUT=900. Read reds by cause.
-- Git: `git commit -- path` commits the whole file; stage hunks, check diff --cached stat. Commit each file once green (others' pathspec commits sweep in edits). git add an untracked file first. Author odalys@company.
-- Lands: union on a file main trimmed replays the <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> side's whole hunk. A whole-branch merge-tree overcalls conflicts: replay per commit. A re-land of an old branch puts back ledger entries under pre-renumber ids.
+- Lands: union on a file main trimmed replays the parked side's whole hunk. A whole-branch merge-tree overcalls conflicts: replay per commit. A re-land of an old branch puts back ledger entries under pre-renumber ids.
 - tools/site/<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span>.py PINS: run tests/site_lanes_test.py, set DIGEST.
 - Disk: df before and after each move; ditto copies sparse files at full size; Simulators can't live on the SSD.
 - An open board line with work on main often has its tick on a parked branch: scan records first.
 - Older notes, task by task: archive.md (nothing is deleted; tools/memory_archive.py runs at session close, T-3134).
-- T-3148 bc9e39fc1: kept passes by input hash (tools/check_cache.py), OPT-108 read 11-09 (ceiling 6-27 of 158 re-run min). Finer key T-3166. Ledger dup ids left: OPT-106 x3, OPT-107 x2.
 - Lesson: a red's board commit moves main, so whole-tree keys rarely match after a red; content keys beat tip keys.
-- T-3163 169fa967f: Home names via tools/site/task_names.py; live variable trims lane titles last. Part 0 d764af923: OPT-109/110/111 renumbered, dispatcher read is OPT-112 (not_an_experiment). T-3092 done-note still says OPT-107 (=OPT-110).
 - Lesson: the token view reads the trimmed COMPANY_STATUS variable, not live.json; check fit() before blaming the data.
+- A tick step runs only between sessions; read a record's real cadence before setting a window's n (T-3069: hourly was 0.48/h).
+- T-3301 1e8fde968: tools/jobs_loop.py (13 jobs, mid-session sync); tick skips a job only on fresh heartbeat. Not live until T-3312 installs it. Rest T-3313..T-3315.
 {% endraw %}
 
 

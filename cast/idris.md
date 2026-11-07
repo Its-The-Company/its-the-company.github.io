@@ -44,12 +44,9 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - AgeLine: T-1910/1911/1946 6edcfd497; review T-1983 F1-F3 fixed e573b6450 (t1793 56/56). Left: T-1440 must pass one `now` to face rule, drawnAt, line (noted).
 - Lesson T-1946/T-2011: NSTimeZone.default moves Calendar().timeZone, not TimeZone.current; for .current set TZ + NSTimeZone.resetSystemTimeZone(). Assert the fixture moved.
 
-
 - T-0675 item 7 slice 2026-11-03 (dd26184c2): app+extension privacy manifests fixed (app was failing the Release scan). Open: Swift-half review has no task (asked Ines); privacy_scan wired to no build.
 - Lesson: a flag compiled out of Release hides its required-reason APIs from the binary scan; test the sources each target compiles.
 
-
-- T-2039 closed 2026-11-04 (38dd1c4c9). Open from review T-2049: M1-M3 = T-2054..T-2056, Lows T-2057. orphan-mark 1.4 s bound thin under load.
 - Lesson T-2016: tools/xc_mutants.py plants each old behaviour back as the red record; a timing test needs margins both sides of the constant.
 - Lesson T-1851: zsh never splits `$F`; pass xc_file_tests filters as ${=F}. Local xc.sh after others' commits: `xcodegen generate` first (xcodeproj is ignored, goes stale).
 
@@ -63,9 +60,10 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - Lesson T-1404: one Bash call is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
 
 ## Lessons
+- T-3298 11-07: M1 fix UNCOMMITTED (+patch scratch T-3298-idris); gate job ...1023-land-m-265a18 waits on push; rerun main_gate check, commit. L4 open.
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
-- T-3279 9873136c3 2026-11-07: first-draw card for a widget with no tree (slice 1). Owed: runner FirstDrawCardTests, Maren <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span> on first_draw.* words; slice 2 (bundled first renders) open on the line.
+- Lesson T-3298: pre-commit main_gate refuses product commits without a MacBook verdict; run main_gate.py check first. PreviewQueueTests forbids naming tree.json outside its list: pass the URL in.
 {% endraw %}
 
 

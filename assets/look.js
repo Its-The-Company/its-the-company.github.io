@@ -48,7 +48,7 @@ var no=document.getElementById('lk-q-none');if(!no&&Q){no=document.createElement
 if(no)no.hidden=!Q||rows.some(function(c){return !c.hidden})}
 function count(){if(!fn2)return;if(!Q){fn2.textContent='';return}
 var r=document.querySelectorAll('#lk-run .lk-run').length,q=document.querySelectorAll('#lk-q>.lk-q:not([hidden])').length;
-fn2.textContent=r+' in Running, '+q+' in Queued match'}
+fn2.textContent=r+' in flight, '+q+' in Queued match'}
 function fire(){fn.forEach(function(f){try{f()}catch(e){}});queued();count()}
 function read(){return S.gh(path()+'?ref=main').then(function(r){if(r.status===404)return{list:[],sha:null};if(!r.ok)throw new Error(S.said(r));
 return r.json().then(function(j){var o=null;try{o=JSON.parse(unb64(j.content||''))}catch(e){}
@@ -96,38 +96,51 @@ if(a==='main'){if(m.five_hour)set(row,'five',m.five_hour,5);if(m.weekly)set(row,
 if(!ms)return;var r=ms[a]||null,p=set(row,'five',r&&r.five,5);set(row,'week',r&&r.week,168);if(p!==null&&p>=100)z++});
 var pz=document.getElementById('lk-pz');if(pz&&ms){pz.hidden=false;pz.querySelector('b').textContent=z}}
 S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});
-// T-2667 (T-2469, friesevan #41 c6650882035): Running follows every status, from lanes.js's sources (the main account's tasks,
-// then each personal row not done); T-3009: only those (an agent at work now). The tasks the build saw in a test or merge
-// stage are counted apart in #lk-wq (Waiting for tests, Waiting to merge), from data-life's stages. Each task's stage
-// comes from the build's machine records, else Review for a review task, else Coding. Sorted by stage (last first, or first
-// first), filtered by a chip, four cards (three at 390) before Show more; the choice is kept in localStorage.
+// T-2667 (T-2469, friesevan #41 c6650882035): In flight (T-3284, was Running) follows every status, from lanes.js's sources
+// (the main account's tasks, then each personal row not done), and T-3284 item 3 adds every task the build saw in a queue,
+// a test, Parked or a merge (data-life's init). Each task's stage comes from the build's machine records, else Review for a
+// review task, else Coding. All, Coding and Review filter; the chips past them jump to their panel. Each card's track is its
+// history (steps(), hist_steps in home_look.py). Sorted by stage (last first, or first first), four cards (three at 390)
+// before Show more; the choice is kept in localStorage.
 document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,box=document.getElementById('lk-run');if(!box)return;
 var f={},L={};try{f=JSON.parse(box.getAttribute('data-faces')||'{}')}catch(e){}try{L=JSON.parse(box.getAttribute('data-life')||'{}')}catch(e){}
-var RUN=['coding','review','testq','testing','mergeq','mergetest','parked','merging'],ST=RUN.slice().reverse(),TR=RUN.filter(function(s){return s!=='parked'}),Q={testq:1,mergeq:1,parked:1},
-LB={coding:'Coding',testq:'Test queue',testing:'Testing',review:'Review',mergeq:'Merge queue',mergetest:'Merge testing',parked:'Parked',merging:'Merging'};
+var RUN=['coding','review','testq','testing','mergeq','mergetest','parked','merging'],ST=RUN.slice().reverse(),Q={testq:1,mergeq:1,parked:1},
+LB={coding:'Coding',testq:'Test queue',testing:'Testing',review:'Review',mergeq:'Merge queue',mergetest:'Merge testing',parked:'Parked',merging:'Merging'},
+JU={testq:'lk-simq',testing:'simulators',mergeq:'lk-mqh',mergetest:'lk-mt',parked:'lk-parked',merging:'merging'},
+M3=['mergeq','mergetest','merging'],EX={coding:M3,review:M3,testq:['testing'].concat(M3),testing:M3,mergeq:M3.slice(1),parked:M3,mergetest:['merging'],merging:[]};
 var pic={};[].forEach.call(document.querySelectorAll('.lk-team a'),function(a){var m=/cast\/([^/.]+)\.html/.exec(a.getAttribute('href')||''),g=a.querySelector('img');if(m&&g)pic[m[1]]=g.getAttribute('src')});
-var K='lk-run-more',fl='all',up=false,all=false,items=L.init||[];try{all=localStorage.getItem(K)==='1'}catch(e){}
+var K='lk-run-more',fl='all',up=false,all=false,items=L.init||[],IN={};try{all=localStorage.getItem(K)==='1'}catch(e){}
+items.forEach(function(x){if(x.id)IN[x.id]=x});
 function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;p.appendChild(e);return e}
 function cap(s){s=String(s||'');return s.charAt(0).toUpperCase()+s.slice(1)}
 function nm(s){s=String(s||'').replace(/^\s*\[[^\]]*\]\s*/,'').replace(/^\s*T-\d+\s*[:,]?\s*/,'');s=cap(s);return s.length>160?s.slice(0,159).replace(/\s+\S*$/,'')+'…':s}
 var K3=window.CompanySite&&window.CompanySite.lk;  // T-3187: stars, search and open cards (the block above)
 function mins(n){return n>=60?Math.floor(n/60)+' h '+(n%60)+' min':n+' min'}
 function mark(p,s){mk(p,'span',Q[s]?'lk-qm':'lk-dot')}
-function card(x){var c=mk(box,'div','lk-card lk-run'),r=mk(c,'div','lk-r1'),fs=mk(r,'span','lk-faces'),t,rt,ol,tr=x.s==='parked'?TR.map(function(s){return s==='mergetest'?'parked':s}):TR,i=tr.indexOf(x.s),sc;c.setAttribute('data-stage',x.s);
+function steps(x){var p=(x.h||[]).map(function(h){return h.slice()}),c=Q[x.s]?'q':'a';
+if(!p.length&&x.s!=='coding'&&x.s!=='review')p=[['coding',null,'d','']];if(x.s==='coding'&&p.length&&p[p.length-1][2]==='f')c='a lb';
+p.push([x.s,x.min>=0?x.min:null,c,'']);return p.concat(EX[x.s].filter(function(e){return e!=='mergetest'||x.x}).map(function(e){return[e,null,'n','']}))}
+function hist(c,x){var st=steps(x),k=st.filter(function(h){return h[2]!=='n'}).length,old=Math.max(0,k-6),ol=mk(c,'ol','lk-hist');
+ol.setAttribute('aria-label','Steps, now '+LB[x.s]);if(old)mk(ol,'li','e','+'+old+' earlier');
+var wd=[],nx=[];st.forEach(function(h,j){var li=mk(ol,'li',(h[2]+(j<old?' old':'')).trim(),LB[h[0]]),w=[h[1]==null?'':h[1]<1?'<1 min':mins(h[1]),h[3]].filter(Boolean).join(' · ');if(w)mk(li,'small','',w);
+li.title=LB[h[0]]+(w?' · '+w:'')+({f:' · failed',q:' · waiting now',n:' · expected'}[h[2]]||(h[2].indexOf('a')>=0?' · now':''));
+if(h[2]==='n')nx.push(LB[h[0]]);else wd.push((h[2].indexOf('lb')>=0?'↩ ':'')+LB[h[0]]+(w?' '+w:''))});
+mk(c,'p','lk-hw meta',wd.join(' → ')+(nx.length?'; next: '+nx.join(', '):''))}
+function card(x){var c=mk(box,'div','lk-card lk-run'),r=mk(c,'div','lk-r1'),fs=mk(r,'span','lk-faces'),t,m,rt,sc;c.setAttribute('data-stage',x.s);
 c.setAttribute('data-id',x.id||x.t);if(K3&&K3.open(x.id||x.t))c.classList.add('lk-open');
 (x.w||[]).slice(0,2).forEach(function(w){var p=f[String(w).toLowerCase()],g;if(p&&pic[p]){g=mk(fs,'img');g.src=pic[p];g.alt='';g.width=g.height=40}});
-t=mk(r,'span','t');mk(t,'b','lk-tn',x.t);mk(t,'span','',[(x.w||[]).filter(Boolean).map(cap).join(', '),cap(x.m),x.min>=0?mins(x.min):''].filter(Boolean).join(' · '));
+t=mk(r,'span','t');mk(t,'b','lk-tn',x.t);m=mk(t,'span','',[(x.w||[]).filter(Boolean).map(cap).join(', '),cap(x.m),x.min>=0?mins(x.min):''].filter(Boolean).join(' · '));
+if(x.a){m.appendChild(document.createTextNode(' '));mk(m,'span','lk-tag',x.a)}
 rt=mk(r,'span','lk-rt');if(x.id)mk(rt,'span','idb',x.id);if(x.n)mk(rt,'span','lk-nt',x.n);if(K3){K3.star(r,x.id);K3.aria(c)}
-ol=mk(c,'ol','lk-track');ol.setAttribute('aria-label','Stage: '+LB[x.s]);tr.forEach(function(s,j){mk(ol,'li',j<i?'d':j===i?(Q[s]?'q':'a'):'',LB[s])});
-sc=mk(c,'span','lk-ch lk-stc');mark(sc,x.s);sc.appendChild(document.createTextNode(LB[x.s]))}
+hist(c,x);sc=mk(c,'span','lk-ch lk-stc');mark(sc,x.s);sc.appendChild(document.createTextNode(LB[x.s]))}
 function order(a,b){var d=ST.indexOf(a.s)-ST.indexOf(b.s),fa=K3&&K3.fav(a.id)?1:0,fb=K3&&K3.fav(b.id)?1:0;return (fb-fa)||(up?-d:d)||((b.min||0)-(a.min||0))}
-function hit(x){return !K3||K3.match([x.t,x.id,(x.w||[]).join(' '),LB[x.s],x.n].map(function(s){return s||''}).join(' '))}
+function hit(x){return !K3||K3.match([x.t,x.id,(x.w||[]).join(' '),LB[x.s],x.n,x.a].map(function(s){return s||''}).join(' '))}
 function render(){var flt=document.getElementById('lk-flt'),cnt={},v,mo,so,c;items.forEach(function(x){cnt[x.s]=(cnt[x.s]||0)+1});if(fl!=='all'&&!cnt[fl])fl='all';
 if(flt){flt.textContent='';[['all','All',items.length]].concat(RUN.filter(function(s){return cnt[s]}).map(function(s){return[s,LB[s],cnt[s]]})).forEach(function(c){
-var b=mk(flt,'button','lk-ch');b.type='button';b.setAttribute('aria-pressed',fl===c[0]);if(c[0]!=='all')mark(b,c[0]);b.appendChild(document.createTextNode(c[1]+' '));mk(b,'small','',String(c[2]));
-b.onclick=function(){fl=c[0];render()}})}
+var j=JU[c[0]],b=mk(flt,j?'a':'button',j?'lk-ch lk-jump':'lk-ch');if(j)b.href='#'+j;else{b.type='button';b.setAttribute('aria-pressed',fl===c[0]);b.onclick=function(){fl=c[0];render()}}
+if(c[0]!=='all')mark(b,c[0]);b.appendChild(document.createTextNode(c[1]+' '));mk(b,'small','',String(c[2]))})}
 var sq=!!(K3&&K3.q());box.textContent='';v=items.filter(function(x){return (fl==='all'||x.s===fl)&&hit(x)}).sort(order);v.forEach(card);
-if(!items.length)mk(box,'p','','Nothing running.');else if(!v.length&&sq)mk(box,'p','meta','No running task matches.');
+if(!items.length)mk(box,'p','','Nothing in flight.');else if(!v.length&&sq)mk(box,'p','meta','No task in flight matches.');
 box.classList.toggle('lk-short',!all&&!sq);
 ['lk-run-more','lk-run-more-top'].forEach(function(k){mo=document.getElementById(k);
 if(mo){mo.hidden=v.length<=3||sq;mo.textContent='';mo.classList.toggle('lk-o3',!all&&v.length<=4);mo.setAttribute('aria-expanded',all);
@@ -139,20 +152,19 @@ if(so)so.onclick=function(){up=!up;render()};['lk-run-more','lk-run-more-top'].f
 // T-2833: the idle alarm (no work session for 15+ minutes while work is allowed) follows every status too.
 function idle(st){var q=st.idle,sf=document.getElementById('lk-sf'),ie=document.getElementById('lk-idle');if(sf&&!ie){ie=document.createElement('p');ie.id='lk-idle';ie.className='meta lk-idle';sf.insertBefore(ie,sf.firstChild)}
 if(ie){if(q&&q.why&&q.since){var mn=Math.max(0,Math.round((Date.now()-Date.parse(q.since))/6e4));ie.textContent='No work session for '+(mn>=60?Math.floor(mn/60)+' h '+(mn%60)+' m':mn+' min')+' while work is allowed: '+q.why+'.'+(q.healed&&q.healed.length?' Done: '+q.healed.join('; ')+'.':'');ie.hidden=false}else ie.hidden=true}}
-function draw(st,isPub){var l=S.lane.main(st,isPub).concat(S.lane.rows(st).filter(function(r){return!r.d})),seen={},u=[],now=Date.now(),o={},wk;
-l.forEach(function(r){var t=String(r.t||r.task||''),id=r.task||(t.match(/\bT-\d+/)||[''])[0],k=id||nm(t),s=(L.st||{})[id],m;if(s&&s[0]==='parked'&&r.at&&Date.parse(r.at)>s[2])s=[r.k==='review'?'review':'coding','Fix after a failed merge'];if(r.w)o[String(r.w).toLowerCase()]=1;if(!k||seen[k])return;seen[k]=1;
-m=r.at?Math.round((now-Date.parse(r.at))/6e4):NaN;u.push({id:id,t:nm(r.t||r.task)||nm((L.nm||{})[id])||'Name not recorded',w:[r.w],m:r.m,min:m>=0?m:-1,s:s?s[0]:r.k==='review'?'review':'coding',n:s?s[1]:''})});
+function draw(st,isPub){var ml=S.lane.main(st,isPub),l=ml.concat(S.lane.rows(st).filter(function(r){return!r.d})),seen={},u=[],now=Date.now(),o={},wk;
+l.forEach(function(r){var t=String(r.t||r.task||''),id=r.task||(t.match(/\bT-\d+/)||[''])[0],k=id||nm(t),s=(L.st||{})[id],m,b=IN[id]||{},ln=/^([ab])\d*$/.exec(r.lane||'');if(s&&s[0]==='parked'&&r.at&&Date.parse(r.at)>s[2])s=[r.k==='review'?'review':'coding','Fix after a failed merge'];if(r.w)o[String(r.w).toLowerCase()]=1;if(!k||seen[k])return;seen[k]=1;
+m=r.at?Math.round((now-Date.parse(r.at))/6e4):NaN;u.push({id:id,t:nm(r.t||r.task)||nm((L.nm||{})[id])||'Name not recorded',w:[r.w],m:r.m,min:m>=0?m:-1,s:s?s[0]:r.k==='review'?'review':'coding',n:s?s[1]:'',
+a:ml.indexOf(r)>=0?'Main':ln?'Account '+ln[1].toUpperCase():'',h:b.h,x:b.x})});
+(L.init||[]).forEach(function(x){if(x.s!=='coding'&&x.s!=='review'&&!seen[x.id||x.t]){seen[x.id||x.t]=1;u.push(x)}});  // T-3284 item 3
 items=u;render();wk=document.getElementById('lk-working');if(wk)wk.textContent=Object.keys(o).length+' working';idle(st)}
-(function(){var W={tests:{testq:1},merge:{mergeq:1}},st=L.st||{};
-[].forEach.call(document.querySelectorAll('#lk-wq a[data-wq]'),function(a){var w=W[a.getAttribute('data-wq')]||{},n=0,b=a.querySelector('b');
-Object.keys(st).forEach(function(k){if(st[k]&&w[st[k][0]])n++});if(b)b.textContent=n})})();
 render();if(K3)K3.on(render);if(S&&S.onStatus&&S.lane){S.onStatus.push(draw);if(S.status&&S.status())draw(S.status(),true)}});
 // T-2940: Queued (and T-3094 the Merge queue) folds behind a button at the top of its list: rows past data-max carry lk-fold; the one Lock In dropdown in Usage (main account, all lanes or
 // any subset) posts through lockin.js (S.lockSet: LOCK IN / UNLOCK on the Chat issue) and personal.js (S.laneLock: the lane's
 // own lock key, in the file the Lanes switches write). A token holder only; each send takes two taps, as every other Lock In button does.
 document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,d=document.getElementById('lk-lockmenu');
 function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;p.appendChild(e);return e}
-[['lk-q','lk-q-more'],['lk-mq','lk-mq-more']].forEach(function(k){var q=document.getElementById(k[0]),qb=document.getElementById(k[1]),qa=false,mx,n;if(!q||!qb)return;
+[['lk-q','lk-q-more'],['lk-mq','lk-mq-more'],['lk-pk','lk-pk-more']].forEach(function(k){var q=document.getElementById(k[0]),qb=document.getElementById(k[1]),qa=false,mx,n;if(!q||!qb)return;
 mx=+q.getAttribute('data-max')||4;n=q.children.length;[].forEach.call(q.children,function(c,i){c.classList.toggle('lk-fold',i>=mx)});
 function pq(){q.classList.toggle('lk-qshort',!qa);qb.hidden=n<=mx;qb.setAttribute('aria-expanded',qa);qb.textContent=qa?'Show fewer ▴':'Show '+(n-mx)+' more ▾'}
 qb.onclick=function(){qa=!qa;pq()};pq()});

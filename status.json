@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T20:31:49.689312+00:00",
+ "at": "2026-11-07T20:46:08.149519+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -12,30 +12,30 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 337,
+  "runnable_count": 338,
   "blocked_count": 103
  },
  "meter": {
   "five_hour": {
    "pct": 6.0,
-   "resets_at": "2026-11-07T20:50:00.138053+00:00",
+   "resets_at": "2026-11-07T20:49:59.957544+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 94.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-08T07:00:00.138072+00:00",
+   "resets_at": "2026-11-08T06:59:59.957563+00:00",
    "used_words": "of your weekly allowance used",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-08T07:00:00.138211+00:00",
+   "resets_at": "2026-11-08T06:59:59.957716+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-07T15:19:04.824487-05:00"
+  "read_at": "2026-11-07T15:33:53.403033-05:00"
  },
  "ui": {
   "week_pct": 0.883,
@@ -50,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-07T15:41:42-05:00",
+ "next_tick": "2026-11-07T15:48:54-05:00",
  "personal": {
   "week_pct": 87.06,
   "usage_pct": 44.1,
   "work_pct": 71.5,
-  "read_at": "2026-11-07T20:34:00+00:00",
+  "read_at": "2026-11-07T20:47:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -79,6 +79,7 @@
     "e": "high",
     "at": "2026-11-07T15:22:55-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -102,6 +103,54 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-07T15:22:55-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3337",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Keep Plan mode answers only in the Investor's reply",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T15:41:39-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3338",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Use AM and PM times; close chat on outside click",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T15:41:39-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3339",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Clearer task steps, list boxes and In Flight filters",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T15:41:39-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3342",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Schedule the deadline alert hourly",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T15:41:39-05:00",
     "n": "Evan",
     "src": "plan-a"
    },
@@ -319,16 +368,16 @@
   }
  ],
  "disk": {
-  "free_gb": 19,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 520
+   "free_gb": 518
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T15:32:00-05:00",
+   "at": "2026-11-07T15:47:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -338,7 +387,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T15:34:00-05:00"
+  "at": "2026-11-07T15:47:00-05:00"
  },
  "next_tick_why": "last_tick",
  "idle": null,
@@ -485,7 +534,7 @@
    }
   ],
   "count": {
-   "next": 337,
+   "next": 338,
    "wait": 37,
    "blocked": 66,
    "you": 13
@@ -509,12 +558,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 5,
-  "total": 5,
-  "at": "3:34 PM",
+  "lanes": 6,
+  "total": 6,
+  "at": "3:47 PM",
   "why": "",
-  "at_iso": "2026-11-07T20:34:00+00:00",
+  "at_iso": "2026-11-07T20:47:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 3:34 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 3:47 PM ET</p></section>"
  }
 }

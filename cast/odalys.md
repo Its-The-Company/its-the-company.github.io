@@ -42,6 +42,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3213 runner_watch: read runner_health.jsonl idle/red minutes after 11-08. T-3102: requeue and red shares at n=60 queues or 11-09.
 - T-3247 5bca5857e: tools/session_gaps.py, ops/plans/one-coordinator.md; mine T-3300..T-3303 (land, jobs, coordinator, 48-h check). Weeks bound by allowance: gaps cost time, not usage; say so.
 - T-2641 (11-07): dispatcher 48 h clean (tools/dispatch_clean.py); old split cut from personal_tick.sh, OPT-118 read with OPT-112 on 11-12. Mine: T-3306 claim released early, T-3307 settings JSONDecodeError, T-3308 governor api_pick.
+- T-3321 b0a7187e7: board_stale "elsewhere" flags (dispatch/lane_take). Replay caught 9/153 past pickups: waste is parallel twins. Weak "tick T-Y" flags were 1/4 right.
 - T-3311 ebdf97e18: names fixed (<span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">Parked</span> left out of the build list), src data in; display T-3318 after T-3284, then tick T-3311.
 - Mine next: T-3215 (T-3202, T-3208, T-3209 done 11-07). T-2667 left: threads column, This Session page, #41 post. T-2616: baseline and plan in its board note. T-3069: only reads left (OPT-115, OPT-117 by 11-09), then #41 before/after. Keeper runs merge queue in sessions 5884472ae.
 

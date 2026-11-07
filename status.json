@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T16:31:07.943005+00:00",
+ "at": "2026-11-07T16:34:11.155675+00:00",
  "session": {
   "active": true,
   "kind": "",
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 325,
+  "runnable_count": 326,
   "blocked_count": 104
  },
  "meter": {
@@ -55,7 +55,7 @@
   "week_pct": 86.57,
   "usage_pct": 45.0,
   "work_pct": 73.4,
-  "read_at": "2026-11-07T16:31:00+00:00",
+  "read_at": "2026-11-07T16:34:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -153,54 +153,6 @@
     "at": "2026-11-07T10:48:31-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-2999",
-    "t": "Stop a hung Company SSD from ending whole sessions",
-    "at": "2026-11-07T10:25:04-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3190",
-    "w": "Odalys",
-    "k": "site",
-    "t": "This Session panel: more on mobile, one row per session",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T10:25:04-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3191",
-    "w": "Odalys",
-    "k": "site",
-    "t": "One Lock In switch for every account",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T10:25:04-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3230",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Prune stale tasks from the board",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-07T10:25:04-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
    }
   ]
  },
@@ -241,7 +193,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-07T11:31:00-05:00"
+  "at": "2026-11-07T11:34:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -388,7 +340,7 @@
    }
   ],
   "count": {
-   "next": 325,
+   "next": 326,
    "wait": 38,
    "blocked": 66,
    "you": 13
@@ -396,8 +348,8 @@
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-07T15:44:12Z",
-  "seconds": 65.0
+  "sent": "2026-11-07T16:32:39Z",
+  "seconds": 44.0
  },
  "inbox": [],
  "trimmed": [
@@ -412,12 +364,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "11:31 AM",
+  "lanes": 2,
+  "total": 2,
+  "at": "11:34 AM",
   "why": "",
-  "at_iso": "2026-11-07T16:31:00+00:00",
+  "at_iso": "2026-11-07T16:34:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:31 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:34 AM ET</p></section>"
  }
 }

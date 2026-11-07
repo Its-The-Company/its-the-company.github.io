@@ -1,24 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-07T00:53:00.507504+00:00",
+ "at": "2026-11-07T00:54:46.734139+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-06T16:25:07-05:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[site] T-3163 Home task names",
    "model": "opus",
    "started": "2026-11-07T00:09:22.798Z",
-   "seconds": 2617,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-07T00:54:02.504000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-3149 premade widgets no view",
@@ -42,14 +40,6 @@
    "started": "2026-11-06T23:07:32.987Z",
    "seconds": null,
    "finished": "2026-11-06T23:32:38.364000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[report] evening",
-   "model": "opus",
-   "started": "2026-11-06T23:05:11.652Z",
-   "seconds": null,
-   "finished": "2026-11-06T23:11:46.578000+00:00"
   }
  ],
  "queue": {
@@ -98,43 +88,8 @@
   "week_pct": 63.9,
   "usage_pct": 41.0,
   "work_pct": 68.8,
-  "read_at": "2026-11-07T00:53:00+00:00",
+  "read_at": "2026-11-07T00:58:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-3166",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Key each landing check by the files it reads",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T19:25:52-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a",
-    "task": "T-3105",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the internal-only gate build",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T19:25:52-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a",
-    "task": "T-3121",
-    "w": "Pernille",
-    "k": "research",
-    "t": "Use Apple encryption for Python https",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T19:25:52-05:00",
-    "n": "Evan",
-    "d": 1
-   },
    {
     "lane": "a2",
     "task": "T-3119",
@@ -169,40 +124,6 @@
     "at": "2026-11-06T19:05:57-05:00",
     "n": "Evan",
     "d": 1
-   },
-   {
-    "lane": "a3",
-    "task": "T-3110",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop the retry pruner holding commits of open tasks",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T19:02:18-05:00",
-    "n": "Evan",
-    "d": 1
-   },
-   {
-    "lane": "a3",
-    "task": "T-3062",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Keep work moving when the Company SSD stops answering",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T19:02:18-05:00",
-    "n": "Evan"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3132",
-    "w": "Idris",
-    "k": "build",
-    "t": "Confirm the activity log works on the Simulator",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-06T19:02:18-05:00",
-    "n": "Evan"
    }
   ]
  },
@@ -224,18 +145,18 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 14,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 460
+   "free_gb": 461
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB."
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-06T19:53:00-05:00"
+  "at": "2026-11-06T19:58:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -247,12 +168,11 @@
  "lanes": [
   {
    "name": "Odalys",
-   "state": "running",
-   "task": "[site] T-3163 Home task names",
-   "model": "opus",
-   "since": "2026-11-07T00:09:22.798Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Odalys, P1, after T-1035 lands (personal-account...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Idris",
@@ -296,17 +216,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Give every Home task its name",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T00:09:22.798Z",
-    "o": "c"
-   }
-  ],
+  "run": [],
   "open": [
    {
     "w": "Odalys",
@@ -381,6 +291,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Every task card on Home now has a name: names come from the board, the archive, the finished...",
+    "at": "2026-11-06T19:53:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "Ready-made widgets showed No view for this size because the app only drew widgets already placed...",
     "at": "2026-11-06T19:46:00-05:00"
@@ -389,11 +304,6 @@
     "w": "Odalys+operator",
     "t": "Odalys's working-memory file was trimmed under its 4 KB limit and the session close now trims...",
     "at": "2026-11-06T19:43:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "When finished work is retried for landing, tests that already passed on exactly the same files...",
-    "at": "2026-11-06T19:08:00-05:00"
    }
   ],
   "count": {
@@ -405,24 +315,12 @@
  },
  "qr": [],
  "reply": null,
- "inbox": [
-  {
-   "id": "c6699892919",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Thinking about it, this view doesn't..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -430,13 +328,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
-  "lanes": 3,
-  "total": 4,
-  "at": "7:53 PM",
+  "main": 0,
+  "lanes": 1,
+  "total": 1,
+  "at": "7:58 PM",
   "why": "",
-  "at_iso": "2026-11-07T00:53:00+00:00",
-  "started": "4:25 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 4:25 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:53 PM ET</p></section>"
+  "at_iso": "2026-11-07T00:58:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:58 PM ET</p></section>"
  }
 }

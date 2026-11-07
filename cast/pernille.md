@@ -44,15 +44,14 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-2724: runtime sends frames_cut_at; RunDetail trim drops next to the cut, counts all. Open: ADR-007 says "outer end", Ines <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note.
 - T-2319 (c9d371621): stdlib_cut check reads the interpreter's inittab/_frozen/PyInit_ and fails closed; open: first Release archive must show Xcode's embed strip keeps the exported symbols.
 - T-2376 (4b123c9b1): Shortcut recipes in widgets/recipes/ (premade/*.py all ship as tiles); device pywidget.context = mode only. Open: T-2857 e2e.
+- T-3133/T-3142 (5051f1926): F1-F4 fixed; re-review PASS-with-fixes, M1/M2 = T-3146/47 (Idris). Mine: t1140 L4 open; detail names are UUIDs, so prune by mtime, not name.
+- Lesson: a file kept "until settled" needs a settle for every way the write can fail (folder gone), or it leaks.
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## Lessons (2026-10-27, T-0416 to T-0448 reviews)
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
-- T-1048 (8a7458951): zip written once; size check = st_size rounded to 4 KiB (stdlib_cut.file_bytes), not st_blocks. APFS over-allocation did not recur on demand (0/148); F_PREALLOCATE (fcntl 42) makes it. Byte-compare zips only from `cp -Rp` copies (mtimes). Open: T-1047 upload.sh identity.
-- T-2412 (1712ff298): load-robust timing = bound plus the run's own lag (a 1 s answer timed before/after), skip past a <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>, self-check cap vs dead-deadline wait.
-- T-2710 (3b3788e2b): FAIL b140e1312; job-writable <jdir>/sandbox.sb reread per step = escape (measured). Re-review after Idris's T-2722.
 - T-2204: recuts: `git rebase` is blocked by the session hook; cherry-pick `git cherry`'s + commits onto main in a scratch worktree. A retry name must start <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/<id>/ (retry_one skips any other name).
 - T-2690 (33763e9fb): upload may go once T-2702 (Idris lands 6beb56a49) closes. Lesson: real-binary checks without xcodebuild: `xcrun --sdk iphoneos swiftc -target arm64-apple-ios17.0`, then strip/codesign.
 {% endraw %}

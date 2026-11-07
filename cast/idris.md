@@ -33,7 +33,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 
 ## Open (mine)
-- T-1669/T-1678: T-1716 d21a36896, T-1696 d074ebd44 landed (Simulator 55/0); independent review of both due before TestFlight.
+- T-3146/T-3147 9a8cc9832 (deleted-widget marker, dropStale bounds, returned=no <span title="A test written in advance. If it fires, we drop the idea.">kill</span>): host 646/0; not ticked, app build owed J-20261106-1829 (449b764fe) after push; review T-3153.
 - T-1440: drawn (43be07d86) green in full suite J-20261105-2106; age-turn entries 50f493ec1 on land/idris-t1440, run J-20261106-0826 (job commit 32388e712 needs main push). Owed: T-0678 tap/Link, shots (check .after(now) reload), review.
 - T-0485 (c3c6876f, review T-0493): set LegalLinks when the app privacy page is published and Terms ruled. Release builds now fail until then (T-0497, 3bfb3222; review T-0636).
 - Lesson: the full UI suite runs ~45 min (EditorGate A2c alone ~7 min): run it in the background with a long timeout, never a 10-min foreground call. tests/run.sh takes suite file names (x_test.py), not bare names: a bare name runs nothing and says "All tests passed".
@@ -46,15 +46,17 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - T-2628: xc.sh why-lines a89496cfa (unpushed); runner 17 jobs-root sandbox b140e1312 + T-2722 fix 97744ee22 on idris/t2628-runner-jobs-root; re-review T-2730 (Pernille), then one Investor approve-sandbox.
 - Lesson T-2710: a file the unsandboxed side rereads (profile, log) must live outside the job's writable area or be read through a held fd. UI test cause still unread: needs a run after a89496cfa is pushed and T-2709 lands.
 
-- T-2054/T-2055/T-3097 done 2026-11-06 (dc5e9a4b9). land/idris-t2054 and land/idris-t3097 still up: land_xc.py drop refuses mutant ids (tool gap).
+- land/idris-t2054, land/idris-t3097 still up: land_xc.py drop refuses mutant ids (tool gap).
 - Lesson T-1048: a stdlib size flake is APFS over-allocating the streamed zip under concurrent writes (not bytes). Fix is Pernille's call.
 - Lesson: no local Xcode slot -> tools/land_mutants.py runs xc mutants on the runner via land/<id>.
 
+- T-0620: <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> fix 8f6e42005 red on its own Simulator test (T-3022); redo on main with Xcode.
+- T-0620 (2026-11-06, T-3022): parked fix 8f6e42005 red on its own Simulator test (testL5Reservations...); rework on main when Xcode is free.
+- Lesson T-3022: for a did-not-land line, run tools/parked_verdicts.py <line id> --root <main checkout> first.
+
 ## Lessons
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
-- T-2853 cf0f59ceb (badge via demotion after 2nd-process refusal): green J-20261105-2326-xc-test (91/0); mutant J-...-2326-xc-test-2 rides land/idris-t2853 (7c0d0db93), result pending; then Pernille review, drop the ref, tick.
-- T-2851 46ab6c49a on main (unpushed): review T-3105 (Pernille), upload build 3 T-3106 (mine), read T-3107. Full suite owed after push; land-ref push for a pre-push run was classifier-refused.
-- Lesson T-2851: a fresh device's first ProStoreTests run stalls the same 12 (T-1467): rerun, don't chase.
+- Lesson T-3149: "works on Simulator" meant tap-after-place; test the user's real order (open, place, choose, never reopen).
 {% endraw %}
 
 

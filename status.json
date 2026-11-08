@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T12:29:14.555733+00:00",
+ "at": "2026-11-08T12:32:17.323744+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,30 @@
    "task": "[build] T-3550 keep good widgets on sensor timeout",
    "model": "opus",
    "started": "2026-11-08T11:58:13.871Z",
-   "seconds": 1860,
+   "seconds": 2043,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "pernille",
+   "task": "[review] T-3411 review per-premade first-render tests",
+   "model": "opus",
+   "started": "2026-11-08T12:31:49.979Z",
+   "seconds": 27,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris, Pernille",
+ "recent": [
   {
    "name": "idris",
    "task": "[test] T-3518 read MacBook job result",
    "model": "sonnet",
    "started": "2026-11-08T12:20:07.733Z",
-   "seconds": 546,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-08T12:31:34.736000+00:00"
+  },
   {
    "name": "idris",
    "task": "[test] T-3518 MacBook run of sensor-stall tests",
@@ -56,7 +64,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 511,
+  "runnable_count": 510,
   "blocked_count": 108
  },
  "meter": {
@@ -99,7 +107,7 @@
   "week_pct": 3.33,
   "usage_pct": 54.9,
   "work_pct": 88.2,
-  "read_at": "2026-11-08T12:29:00+00:00",
+  "read_at": "2026-11-08T12:32:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -136,7 +144,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T07:29:00-05:00"
+  "at": "2026-11-08T07:32:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -156,17 +164,18 @@
    "effort": "high"
   },
   {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-3411 review per-premade first-render tests",
+   "model": "opus",
+   "since": "2026-11-08T12:31:49.979Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -209,14 +218,14 @@
     "task": "T-3550"
    },
    {
-    "w": "Idris",
-    "k": "test",
-    "t": "Run the sensor-stall fix's tests on the MacBook",
-    "m": "sonnet",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review the per-premade gallery and widget tests",
+    "m": "opus",
     "e": "high",
-    "at": "2026-11-08T12:20:07.733Z",
+    "at": "2026-11-08T12:31:49.979Z",
     "o": "c",
-    "task": "T-3518"
+    "task": "T-3411"
    }
   ],
   "src": "plan",
@@ -294,6 +303,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The sensor-stall fix's tests passed on the MacBook Simulator: 17 tests, none failed, so the fix...",
+    "at": "2026-11-08T07:31:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Re-measured whether letting the landing robot skip unchanged host tests is worth it; the tracing...",
     "at": "2026-11-08T07:12:00-05:00"
@@ -302,15 +316,10 @@
     "w": "Odalys",
     "t": "Holding work on named paths only kept landing conflicts low, 8 of 99 land attempts (0.08)...",
     "at": "2026-11-08T07:12:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "lands and the merge queue now start the suites with the most past reds first, but the replay of...",
-    "at": "2026-11-08T07:09:00-05:00"
    }
   ],
   "count": {
-   "next": 511,
+   "next": 510,
    "wait": 40,
    "blocked": 68,
    "you": 19
@@ -354,10 +363,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "7:29 AM",
+  "at": "7:32 AM",
   "why": "",
-  "at_iso": "2026-11-08T12:29:00+00:00",
+  "at_iso": "2026-11-08T12:32:00+00:00",
   "started": "6:37 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:29 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:32 AM ET</p></section>"
  }
 }

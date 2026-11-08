@@ -1,13 +1,32 @@
 {
  "schema": 1,
- "at": "2026-11-08T20:20:39.137155+00:00",
+ "at": "2026-11-08T20:23:44.056402+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-08T15:20:39-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[build] T-3405 land stall test via gate",
+   "model": "opus",
+   "started": "2026-11-08T20:21:27.853Z",
+   "seconds": 136,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[build] T-3582 issue page and compact list",
+   "model": "opus",
+   "started": "2026-11-08T20:21:36.622Z",
+   "seconds": 127,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris, Odalys",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -55,7 +74,7 @@
   "week_pct": 3.73,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-08T20:20:00+00:00",
+  "read_at": "2026-11-08T20:23:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -92,25 +111,39 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T15:20:00-05:00",
+  "at": "2026-11-08T15:23:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
  "idle": {
   "since": "2026-11-08T15:03:32-05:00",
-  "minutes": 17,
+  "minutes": 20,
   "why": "a tick has spent 10 min on steps before the session",
   "healed": []
  },
- "pool": null,
+ "pool": {
+  "why": "Spread: 90% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 9 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
+  "n": 2,
+  "at": "2026-11-08T15:20:28.191812-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-3405 land stall test via gate",
+   "model": "opus",
+   "since": "2026-11-08T20:21:27.853Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[build] T-3582 issue page and compact list",
+   "model": "opus",
+   "since": "2026-11-08T20:21:36.622Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -124,14 +157,6 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -154,7 +179,29 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Prove a stalled sensor call cannot starve the premade pass",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T20:21:27.853Z",
+    "o": "c",
+    "task": "T-3405"
+   },
+   {
+    "w": "Odalys",
+    "k": "build",
+    "t": "Build the issue page and compact Issues list",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T20:21:36.622Z",
+    "o": "i",
+    "task": "T-3582"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -249,6 +296,10 @@
    "wait": 45,
    "blocked": 68,
    "you": 20
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [],
@@ -268,13 +319,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 0,
-  "total": 0,
-  "at": "3:20 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-08T20:20:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:20 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 2,
+  "at": "3:23 PM",
+  "why": "",
+  "at_iso": "2026-11-08T20:23:00+00:00",
+  "started": "3:20 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:20 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:23 PM ET</p></section>"
  }
 }

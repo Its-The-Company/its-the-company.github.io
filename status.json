@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T19:13:38.332127+00:00",
+ "at": "2026-11-08T19:16:39.729816+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[build] T-3666 T-3667 launcher sheet and iPad windows",
    "model": "opus",
    "started": "2026-11-08T18:32:17.345Z",
-   "seconds": 2480,
+   "seconds": 2662,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[test] T-3173 T-1783 red site and lane tests",
    "model": "opus",
    "started": "2026-11-08T18:52:21.284Z",
-   "seconds": 1277,
+   "seconds": 1458,
    "finished": null,
    "effort": "high"
   }
@@ -64,7 +64,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 584,
+  "runnable_count": 586,
   "blocked_count": 111
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 3.66,
   "usage_pct": 33.5,
   "work_pct": 78.9,
-  "read_at": "2026-11-08T19:13:00+00:00",
+  "read_at": "2026-11-08T19:16:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -157,40 +157,6 @@
     "at": "2026-11-08T13:34:00-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3543",
-    "w": "Ines",
-    "k": "tools",
-    "t": "Redo an Investor request on fresh main",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T12:16:25-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3359",
-    "t": "Check the MacBook runner reads plain approvals after its update",
-    "at": "2026-11-08T12:16:25-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-2266",
-    "w": "Idris",
-    "k": "test",
-    "t": "Run the stuck-signal tests on the MacBook",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T12:16:25-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
    }
   ]
  },
@@ -212,7 +178,7 @@
   }
  ],
  "disk": {
-  "free_gb": 9.1,
+  "free_gb": 7.3,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -221,14 +187,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T14:08:00-05:00",
+   "at": "2026-11-08T14:14:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T14:13:00-05:00",
+  "at": "2026-11-08T14:16:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -404,7 +370,7 @@
    }
   ],
   "count": {
-   "next": 584,
+   "next": 586,
    "wait": 43,
    "blocked": 68,
    "you": 19
@@ -460,12 +426,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "2:13 PM",
+  "lanes": 2,
+  "total": 4,
+  "at": "2:16 PM",
   "why": "",
-  "at_iso": "2026-11-08T19:13:00+00:00",
+  "at_iso": "2026-11-08T19:16:00+00:00",
   "started": "11:55 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 2:13 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:16 PM ET</p></section>"
  }
 }

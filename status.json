@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-08T23:43:13.663431+00:00",
+ "at": "2026-11-08T23:49:58.474209+00:00",
  "session": {
-  "active": true,
-  "kind": "evening",
-  "started": "2026-11-08T18:40:11-05:00"
+  "active": false,
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
@@ -21,7 +21,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 600,
+  "runnable_count": 602,
   "blocked_count": 112
  },
  "meter": {
@@ -59,12 +59,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-08T18:54:52-05:00",
  "personal": {
   "week_pct": 3.76,
-  "usage_pct": 23.9,
+  "usage_pct": 23.8,
   "work_pct": 71.4,
-  "read_at": "2026-11-08T23:43:00+00:00",
+  "read_at": "2026-11-08T23:51:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -137,7 +137,7 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -146,28 +146,19 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T18:22:00-05:00",
+   "at": "2026-11-08T18:45:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T18:43:00-05:00",
+  "at": "2026-11-08T18:51:00-05:00",
   "mode": null
  },
- "next_tick_why": "session",
- "idle": {
-  "since": "2026-11-08T18:13:46-05:00",
-  "minutes": 29,
-  "why": "a tick has spent 16 min on steps before the session",
-  "healed": []
- },
- "pool": {
-  "why": "Spread: 88% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 9 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
-  "n": 2,
-  "at": "2026-11-08T18:39:52.336647-05:00"
- },
+ "next_tick_why": "last_tick",
+ "idle": null,
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -220,7 +211,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -265,6 +255,13 @@
     "o": "i"
    },
    {
+    "w": "Odalys",
+    "k": "fix",
+    "t": "Make the landing gate tests pass on main again",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
@@ -282,13 +279,6 @@
     "w": "Idris",
     "k": "build",
     "t": "Run Python widget scripts inside the widget...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "measure",
-    "t": "Run the device test session for the widget...",
     "s": "next",
     "o": "c"
    }
@@ -311,38 +301,22 @@
    }
   ],
   "count": {
-   "next": 600,
+   "next": 602,
    "wait": 45,
    "blocked": 67,
    "you": 19
-  },
-  "fin": {
-   "n": 0,
-   "rows": []
   }
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-08T23:15:51Z",
-  "seconds": 142.0
+  "sent": "2026-11-08T23:42:18Z",
+  "seconds": 86.0
  },
- "inbox": [
-  {
-   "id": "c6728815352",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Look into this issue: \"You have one..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -353,10 +327,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "6:43 PM",
+  "at": "6:51 PM",
   "why": "",
-  "at_iso": "2026-11-08T23:43:00+00:00",
-  "started": "6:40 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 6:40 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:43 PM ET</p></section>"
+  "at_iso": "2026-11-08T23:51:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:51 PM ET</p></section>"
  }
 }

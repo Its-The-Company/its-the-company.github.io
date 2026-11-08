@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T14:35:40.287152+00:00",
+ "at": "2026-11-08T14:38:39.583058+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-3579 revert restores main folder",
    "model": "opus",
    "started": "2026-11-08T14:24:47.400Z",
-   "seconds": 652,
+   "seconds": 832,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[review] T-3571 then [release] T-3574 build 4",
    "model": "opus",
    "started": "2026-11-08T14:32:52.693Z",
-   "seconds": 167,
+   "seconds": 346,
    "finished": null,
    "effort": "high"
   }
@@ -64,7 +64,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 522,
+  "runnable_count": 521,
   "blocked_count": 107
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 3.66,
   "usage_pct": 45.7,
   "work_pct": 83.3,
-  "read_at": "2026-11-08T14:35:00+00:00",
+  "read_at": "2026-11-08T14:38:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -128,7 +128,7 @@
   }
  ],
  "disk": {
-  "free_gb": 19,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -137,14 +137,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T09:32:00-05:00",
+   "at": "2026-11-08T09:38:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T09:35:00-05:00"
+  "at": "2026-11-08T09:38:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -303,6 +303,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "Checked Pernille's fix that gives sensor times a time zone (so Steps, Distance and Altitude draw...",
+    "at": "2026-11-08T09:36:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "The new editor theme picker passed review: testers on build 4 see no change because the themes...",
     "at": "2026-11-08T09:32:00-05:00"
@@ -311,22 +316,21 @@
     "w": "Odalys",
     "t": "Typing an answer in a Plan mode question card, or a reply in an issue thread, no longer gets...",
     "at": "2026-11-08T09:24:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Checked that a premade widget whose first run fails now leaves a Run log row naming the error,...",
-    "at": "2026-11-08T09:20:00-05:00"
    }
   ],
   "count": {
-   "next": 522,
+   "next": 521,
    "wait": 41,
    "blocked": 66,
    "you": 18
   },
   "fin": {
-   "n": 7,
+   "n": 8,
    "rows": [
+    [
+     "T-3571",
+     "Review the time-zone fix for..."
+    ],
     [
      "T-3576",
      "Review the editor theme..."
@@ -346,10 +350,6 @@
     [
      "T-3330",
      "Check finished work before..."
-    ],
-    [
-     "T-3572",
-     "Log every failed run with..."
     ]
    ]
   }
@@ -377,10 +377,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "9:35 AM",
+  "at": "9:38 AM",
   "why": "",
-  "at_iso": "2026-11-08T14:35:00+00:00",
+  "at_iso": "2026-11-08T14:38:00+00:00",
   "started": "8:22 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:35 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:38 AM ET</p></section>"
  }
 }

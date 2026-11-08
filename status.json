@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T15:48:54.958353+00:00",
+ "at": "2026-11-08T15:51:57.564110+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,17 +8,25 @@
  },
  "workers": [
   {
-   "name": "pernille",
-   "task": "[review] T-3584 two commits before build 5",
+   "name": "ines",
+   "task": "[plan] T-3585 reopen landing outside main folder",
    "model": "opus",
-   "started": "2026-11-08T15:42:45.703Z",
-   "seconds": 369,
+   "started": "2026-11-08T15:49:41.761Z",
+   "seconds": 135,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille",
+ "who": "Ines",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-3584 two commits before build 5",
+   "model": "opus",
+   "started": "2026-11-08T15:42:45.703Z",
+   "seconds": null,
+   "finished": "2026-11-08T15:49:17.718000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-2586 merges stopping without conflict",
@@ -42,20 +50,12 @@
    "started": "2026-11-08T15:29:14.723Z",
    "seconds": null,
    "finished": "2026-11-08T15:38:21.720000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3448 name the commit that turned main red",
-   "model": "opus",
-   "started": "2026-11-08T15:20:03.741Z",
-   "seconds": null,
-   "finished": "2026-11-08T15:30:32.431000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 518,
+  "runnable_count": 517,
   "blocked_count": 107
  },
  "meter": {
@@ -98,7 +98,7 @@
   "week_pct": 3.66,
   "usage_pct": 45.7,
   "work_pct": 83.3,
-  "read_at": "2026-11-08T15:48:00+00:00",
+  "read_at": "2026-11-08T15:51:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -135,7 +135,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T10:48:00-05:00"
+  "at": "2026-11-08T10:51:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -146,11 +146,11 @@
  },
  "lanes": [
   {
-   "name": "Pernille",
+   "name": "Ines",
    "state": "running",
-   "task": "[review] T-3584 two commits before build 5",
+   "task": "[plan] T-3585 reopen landing outside main folder",
    "model": "opus",
-   "since": "2026-11-08T15:42:45.703Z",
+   "since": "2026-11-08T15:49:41.761Z",
    "next": [],
    "effort": "high"
   },
@@ -163,9 +163,9 @@
    "next": []
   },
   {
-   "name": "Ines",
+   "name": "Pernille",
    "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
+   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -198,14 +198,14 @@
  "tasks": {
   "run": [
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review two unreviewed commits before build 5",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Reopen landing outside the main folder",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-08T15:42:45.703Z",
+    "at": "2026-11-08T15:49:41.761Z",
     "o": "c",
-    "task": "T-3584"
+    "task": "T-3585"
    }
   ],
   "src": "plan",
@@ -283,6 +283,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "Idris's change that stops two project files differing only in capital letters from overwriting...",
+    "at": "2026-11-08T10:49:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "A merge no longer stops when a test leaves a changed file behind; that was the one non-conflict...",
     "at": "2026-11-08T10:48:00-05:00"
@@ -291,22 +296,21 @@
     "w": "Maren",
     "t": "The Issues page now has a drawn design: short rows that open each issue on its own page, Now and...",
     "at": "2026-11-08T10:38:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "When main's own tests go red, the nightly check now finds the change that broke them and puts...",
-    "at": "2026-11-08T10:30:00-05:00"
    }
   ],
   "count": {
-   "next": 518,
+   "next": 517,
    "wait": 41,
    "blocked": 66,
    "you": 18
   },
   "fin": {
-   "n": 18,
+   "n": 19,
    "rows": [
+    [
+     "T-3584",
+     "Review two unreviewed..."
+    ],
     [
      "T-2586",
      "Find why merges stop without..."
@@ -326,10 +330,6 @@
     [
      "T-3573",
      "Fix the merge-fix scores..."
-    ],
-    [
-     "T-3580",
-     "Move unused work folders to..."
     ]
    ]
   }
@@ -357,10 +357,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "10:48 AM",
+  "at": "10:51 AM",
   "why": "",
-  "at_iso": "2026-11-08T15:48:00+00:00",
+  "at_iso": "2026-11-08T15:51:00+00:00",
   "started": "8:22 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:48 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:51 AM ET</p></section>"
  }
 }

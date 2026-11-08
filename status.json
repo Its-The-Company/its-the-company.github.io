@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T22:28:58.589505+00:00",
+ "at": "2026-11-08T22:31:58.547091+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,25 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[tools] T-3691 proactive disk keeper",
-   "model": "opus",
-   "started": "2026-11-08T21:24:58.110Z",
-   "seconds": 3840,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "idris",
    "task": "[build] T-3667 run iPad window check and land",
    "model": "opus",
    "started": "2026-11-08T21:56:08.300Z",
-   "seconds": 1970,
+   "seconds": 2150,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Idris",
+ "who": "Idris",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3691 proactive disk keeper",
+   "model": "opus",
+   "started": "2026-11-08T21:24:58.110Z",
+   "seconds": null,
+   "finished": "2026-11-08T22:31:07.744000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3690 free internal disk now",
@@ -51,14 +50,6 @@
    "started": "2026-11-08T21:10:35.388Z",
    "seconds": null,
    "finished": "2026-11-08T21:19:33.470000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3671 widget tap opens widget",
-   "model": "opus",
-   "started": "2026-11-08T20:47:41.439Z",
-   "seconds": null,
-   "finished": "2026-11-08T21:10:14.854000+00:00"
   }
  ],
  "queue": {
@@ -107,7 +98,7 @@
   "week_pct": 3.73,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-08T22:28:00+00:00",
+  "read_at": "2026-11-08T22:31:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -131,6 +122,7 @@
     "e": "high",
     "at": "2026-11-08T17:06:55-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -178,7 +170,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -187,14 +179,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T17:23:00-05:00",
+   "at": "2026-11-08T17:29:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T17:28:00-05:00",
+  "at": "2026-11-08T17:31:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -205,15 +197,6 @@
   "at": "2026-11-08T15:20:28.191812-05:00"
  },
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-3691 proactive disk keeper",
-   "model": "opus",
-   "since": "2026-11-08T21:24:58.110Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "running",
@@ -240,6 +223,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Maren",
    "state": "next",
    "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
@@ -258,16 +249,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Keep the internal disk clear before it blocks work",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T21:24:58.110Z",
-    "o": "c",
-    "task": "T-3691"
-   },
    {
     "w": "Idris",
     "k": "build",
@@ -355,6 +336,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "A new disk keeper checks the Mac mini's disk every 5 minutes; under 30 GB it moves company build...",
+    "at": "2026-11-08T17:30:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The Mac mini's main disk went from about 5.4 GB free to about 24.7 GB, so held work can start...",
     "at": "2026-11-08T16:55:00-05:00"
    },
@@ -362,11 +348,6 @@
     "w": "Idris",
     "t": "Tapping a widget on the Home Screen now opens that same widget in the app, instead of dropping...",
     "at": "2026-11-08T16:19:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "A landing retry now reruns only the parts of the host tests whose own input files changed, for...",
-    "at": "2026-11-08T16:18:00-05:00"
    }
   ],
   "count": {
@@ -376,8 +357,12 @@
    "you": 19
   },
   "fin": {
-   "n": 6,
+   "n": 7,
    "rows": [
+    [
+     "T-3691",
+     "Keep the internal disk clear..."
+    ],
     [
      "T-3690",
      "Free the Mac mini's internal..."
@@ -397,10 +382,6 @@
     [
      "T-3273",
      "Main refused a record from a..."
-    ],
-    [
-     "T-3405",
-     "Prove a stalled sensor call..."
     ]
    ]
   }
@@ -420,17 +401,18 @@
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 2,
-  "total": 4,
-  "at": "5:28 PM",
+  "total": 3,
+  "at": "5:31 PM",
   "why": "",
-  "at_iso": "2026-11-08T22:28:00+00:00",
+  "at_iso": "2026-11-08T22:31:00+00:00",
   "started": "3:20 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:20 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:28 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 3:20 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:31 PM ET</p></section>"
  }
 }

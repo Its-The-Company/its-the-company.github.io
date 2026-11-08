@@ -1,45 +1,18 @@
 {
  "schema": 1,
- "at": "2026-11-08T07:28:45.876647+00:00",
+ "at": "2026-11-08T07:31:46.220302+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-08T02:07:25-05:00"
+  "kind": "",
+  "started": null
  },
- "workers": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-3419 speculative parallel landing",
-   "model": "opus",
-   "started": "2026-11-08T07:11:31.652Z",
-   "seconds": 1034,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[ops] T-3207 measure OPT-071 disk",
-   "model": "opus",
-   "started": "2026-11-08T07:18:34.136Z",
-   "seconds": null,
-   "finished": "2026-11-08T07:23:20.030000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3422 merge fixes impact order",
-   "model": "opus",
-   "started": "2026-11-08T07:11:20.100Z",
-   "seconds": null,
-   "finished": "2026-11-08T07:18:03.161000+00:00"
-  }
- ],
+ "workers": [],
+ "who": "",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 421,
+  "runnable_count": 420,
   "blocked_count": 106
  },
  "meter": {
@@ -82,7 +55,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T07:28:00+00:00",
+  "read_at": "2026-11-08T07:31:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -103,7 +76,7 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 14,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -112,7 +85,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T02:23:00-05:00",
+   "at": "2026-11-08T02:29:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -122,25 +95,12 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T02:28:00-05:00"
+  "at": "2026-11-08T02:31:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Spread: 100% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
-  "n": 2,
-  "at": "2026-11-08T02:07:16.060197-05:00"
- },
+ "pool": null,
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-3419 speculative parallel landing",
-   "model": "opus",
-   "since": "2026-11-08T07:11:31.652Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -166,6 +126,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Maren",
    "state": "next",
    "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
@@ -183,19 +151,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Test several waiting lands at once, in parallel",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T07:11:31.652Z",
-    "o": "c",
-    "task": "T-3419"
-   }
-  ],
-  "src": "plan",
+  "run": [],
   "open": [
    {
     "w": "Idris",
@@ -208,13 +164,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Read runner 18 live and run one build job",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Send build 3 to internal TestFlight",
     "s": "next",
     "o": "c"
    },
@@ -266,9 +215,21 @@
     "t": "Keep real packages out until the sandbox is...",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "release",
+    "t": "Last checks before the first test build",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Idris",
+    "t": "Build 3 of the app, the first real archive of the device gate build, went to App Store Connect...",
+    "at": "2026-11-08T02:30:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "Moving new scratch work to the external drive did not keep the main disk above 15 GB free on...",
@@ -278,15 +239,10 @@
     "w": "Odalys",
     "t": "Merge fixes on the merge-first list are now handed out and landed in order of expected effect...",
     "at": "2026-11-08T02:17:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "The setting that blocked uploads to GitHub on Saturday afternoon is gone and was set by no...",
-    "at": "2026-11-08T02:12:00-05:00"
    }
   ],
   "count": {
-   "next": 421,
+   "next": 420,
    "wait": 40,
    "blocked": 66,
    "you": 16
@@ -309,13 +265,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "2:28 AM",
-  "why": "",
-  "at_iso": "2026-11-08T07:28:00+00:00",
-  "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:28 AM ET</p></section>"
+  "total": 0,
+  "at": "2:31 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-08T07:31:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:31 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

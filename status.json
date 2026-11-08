@@ -1,13 +1,32 @@
 {
  "schema": 1,
- "at": "2026-11-08T11:37:33.397939+00:00",
+ "at": "2026-11-08T11:40:35.699475+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-08T06:37:33-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[ops] T-3549 free Mac mini disk to SSD",
+   "model": "opus",
+   "started": "2026-11-08T11:38:13.766Z",
+   "seconds": 141,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[test] T-3518 MacBook run of sensor-stall tests",
+   "model": "opus",
+   "started": "2026-11-08T11:38:21.085Z",
+   "seconds": 134,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys, Idris",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -55,7 +74,7 @@
   "week_pct": 3.33,
   "usage_pct": 54.9,
   "work_pct": 88.2,
-  "read_at": "2026-11-08T11:37:00+00:00",
+  "read_at": "2026-11-08T11:40:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -92,19 +111,33 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T06:37:00-05:00"
+  "at": "2026-11-08T06:40:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: 96% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 102 of 117 lands failed in 3 hours (3 red); 11 of 29 finished tasks were...",
+  "n": 2,
+  "at": "2026-11-08T06:37:21.265325-05:00"
+ },
  "lanes": [
   {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[ops] T-3549 free Mac mini disk to SSD",
+   "model": "opus",
+   "since": "2026-11-08T11:38:13.766Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[test] T-3518 MacBook run of sensor-stall tests",
+   "model": "opus",
+   "since": "2026-11-08T11:38:21.085Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -118,14 +151,6 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -148,7 +173,29 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Free Mac mini disk by moving data to the SSD",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T11:38:13.766Z",
+    "o": "c",
+    "task": "T-3549"
+   },
+   {
+    "w": "Idris",
+    "k": "test",
+    "t": "Run the sensor-stall fix's tests on the MacBook",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T11:38:21.085Z",
+    "o": "c",
+    "task": "T-3518"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -243,6 +290,10 @@
    "wait": 40,
    "blocked": 65,
    "you": 17
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [],
@@ -262,13 +313,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 0,
-  "total": 0,
-  "at": "6:37 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-08T11:37:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:37 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 2,
+  "at": "6:40 AM",
+  "why": "",
+  "at_iso": "2026-11-08T11:40:00+00:00",
+  "started": "6:37 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:40 AM ET</p></section>"
  }
 }

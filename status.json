@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T22:41:07.833121+00:00",
+ "at": "2026-11-08T22:44:10.921942+00:00",
  "session": {
   "active": true,
   "kind": "",
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 581,
+  "runnable_count": 580,
   "blocked_count": 111
  },
  "meter": {
@@ -55,7 +55,7 @@
   "week_pct": 3.73,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-08T22:41:00+00:00",
+  "read_at": "2026-11-08T22:44:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -80,32 +80,6 @@
     "at": "2026-11-08T17:37:18-05:00",
     "n": "Jeremy",
     "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3539",
-    "w": "Ines",
-    "k": "design",
-    "t": "Redo an Investor request on fresh main",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T17:06:55-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3678",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Redo build the issue page and compact Issues list",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T17:06:55-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
    }
   ]
  },
@@ -127,7 +101,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -136,14 +110,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T17:35:00-05:00",
+   "at": "2026-11-08T17:41:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T17:41:00-05:00",
+  "at": "2026-11-08T17:44:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -275,6 +249,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "Nothing to redo. Maren's look check of the In flight steps, scroll boxes, filter chips and View...",
+    "at": "2026-11-08T17:42:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "A new disk keeper checks the Mac mini's disk every 5 minutes; under 30 GB it moves company build...",
     "at": "2026-11-08T17:30:00-05:00"
@@ -283,15 +262,10 @@
     "w": "Odalys",
     "t": "The Mac mini's main disk went from about 5.4 GB free to about 24.7 GB, so held work can start...",
     "at": "2026-11-08T16:55:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Tapping a widget on the Home Screen now opens that same widget in the app, instead of dropping...",
-    "at": "2026-11-08T16:19:00-05:00"
    }
   ],
   "count": {
-   "next": 581,
+   "next": 580,
    "wait": 44,
    "blocked": 67,
    "you": 19
@@ -315,12 +289,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "5:41 PM",
+  "lanes": 1,
+  "total": 1,
+  "at": "5:44 PM",
   "why": "",
-  "at_iso": "2026-11-08T22:41:00+00:00",
+  "at_iso": "2026-11-08T22:44:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:41 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:44 PM ET</p></section>"
  }
 }

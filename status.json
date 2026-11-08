@@ -1,54 +1,18 @@
 {
  "schema": 1,
- "at": "2026-11-08T08:42:30.799355+00:00",
+ "at": "2026-11-08T08:45:32.340299+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-08T02:49:03-05:00"
+  "kind": "runs",
+  "started": null
  },
- "workers": [
-  {
-   "name": "idris",
-   "task": "[release] T-3323 upload refuses its own export",
-   "model": "opus",
-   "started": "2026-11-08T08:27:47.535Z",
-   "seconds": 883,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3408 land parked backlog faster",
-   "model": "opus",
-   "started": "2026-11-08T08:29:35.679Z",
-   "seconds": 775,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Odalys",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[build] T-3393 why only Countdown draws",
-   "model": "opus",
-   "started": "2026-11-08T07:49:52.601Z",
-   "seconds": null,
-   "finished": "2026-11-08T08:27:59.838000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-3373 retire amendments file",
-   "model": "opus",
-   "started": "2026-11-08T07:50:03.111Z",
-   "seconds": null,
-   "finished": "2026-11-08T08:27:29.154000+00:00"
-  }
- ],
+ "workers": [],
+ "who": "",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 462,
+  "runnable_count": 465,
   "blocked_count": 105
  },
  "meter": {
@@ -91,7 +55,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T08:42:00+00:00",
+  "read_at": "2026-11-08T08:45:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -305,33 +269,19 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T03:42:00-05:00"
+  "at": "2026-11-08T03:45:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Spread: 99% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 9 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
-  "n": 2,
-  "at": "2026-11-08T02:48:46.290137-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[release] T-3323 upload refuses its own export",
-   "model": "opus",
-   "since": "2026-11-08T08:27:47.535Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-3408 land parked backlog faster",
-   "model": "opus",
-   "since": "2026-11-08T08:29:35.679Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -345,6 +295,14 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -367,29 +325,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "release",
-    "t": "Stop the upload refusing its own export folder",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T08:27:47.535Z",
-    "o": "c",
-    "task": "T-3323"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Land the parked-work backlog faster",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T08:29:35.679Z",
-    "o": "c",
-    "task": "T-3408"
-   }
-  ],
-  "src": "plan",
+  "run": [],
   "open": [
    {
     "w": "Idris",
@@ -480,14 +416,10 @@
    }
   ],
   "count": {
-   "next": 462,
+   "next": 465,
    "wait": 40,
    "blocked": 65,
    "you": 17
-  },
-  "fin": {
-   "n": 0,
-   "rows": []
   }
  },
  "qr": [],
@@ -507,13 +439,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 0,
   "lanes": 4,
-  "total": 6,
-  "at": "3:42 AM",
+  "total": 4,
+  "at": "3:45 AM",
   "why": "",
-  "at_iso": "2026-11-08T08:42:00+00:00",
-  "started": "2:49 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:42 AM ET</p></section>"
+  "at_iso": "2026-11-08T08:45:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:45 AM ET</p></section>"
  }
 }

@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "at": "2026-11-08T23:18:34.601032+00:00",
+ "at": "2026-11-08T23:40:10.896976+00:00",
  "session": {
-  "active": false,
+  "active": true,
   "kind": "",
   "started": null
  },
@@ -12,20 +12,20 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 595,
+  "runnable_count": 600,
   "blocked_count": 112
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
-   "resets_at": "2026-11-09T02:59:59.523806+00:00",
+   "pct": 4.0,
+   "resets_at": "2026-11-09T02:59:59.780634+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 97.0,
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 12.0,
-   "resets_at": "2026-11-15T06:59:59.523830+00:00",
+   "resets_at": "2026-11-15T06:59:59.780651+00:00",
    "used_words": "of your weekly allowance used",
    "left": 88.0,
    "left_words": "of your weekly allowance left"
@@ -35,7 +35,7 @@
    "resets_at": "2026-11-15T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-08T18:09:23.999007-05:00"
+  "read_at": "2026-11-08T18:39:51.804375-05:00"
  },
  "ui": {
   "week_pct": 0.009,
@@ -50,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-08T18:24:24-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 3.76,
   "usage_pct": 23.9,
   "work_pct": 71.4,
-  "read_at": "2026-11-08T23:20:00+00:00",
+  "read_at": "2026-11-08T23:40:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -67,6 +67,7 @@
     "e": "high",
     "at": "2026-11-08T17:37:18-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -91,6 +92,7 @@
     "e": "high",
     "at": "2026-11-08T17:55:11-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -125,27 +127,32 @@
   }
  ],
  "disk": {
-  "free_gb": 17,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 269
+   "free_gb": 267
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
-   "ok": false,
-   "at": "2026-11-08T18:01:00-05:00",
+   "ok": true,
+   "at": "2026-11-08T18:22:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T18:20:00-05:00",
+  "at": "2026-11-08T18:40:00-05:00",
   "mode": null
  },
- "next_tick_why": "last_tick",
- "idle": null,
+ "next_tick_why": "session",
+ "idle": {
+  "since": "2026-11-08T18:13:46-05:00",
+  "minutes": 26,
+  "why": "a tick has spent 16 min on steps before the session",
+  "healed": []
+ },
  "pool": null,
  "lanes": [
   {
@@ -289,7 +296,7 @@
    }
   ],
   "count": {
-   "next": 595,
+   "next": 600,
    "wait": 45,
    "blocked": 67,
    "you": 19
@@ -315,10 +322,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "6:20 PM",
+  "at": "6:40 PM",
   "why": "",
-  "at_iso": "2026-11-08T23:20:00+00:00",
+  "at_iso": "2026-11-08T23:40:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:20 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:40 PM ET</p></section>"
  }
 }

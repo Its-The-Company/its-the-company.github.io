@@ -1,13 +1,32 @@
 {
  "schema": 1,
- "at": "2026-11-08T08:00:12.316570+00:00",
+ "at": "2026-11-08T08:04:24.453815+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-08T02:49:03-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[build] T-3393 why only Countdown draws",
+   "model": "opus",
+   "started": "2026-11-08T07:49:52.601Z",
+   "seconds": 871,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-3373 retire amendments file",
+   "model": "opus",
+   "started": "2026-11-08T07:50:03.111Z",
+   "seconds": 861,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris, Odalys",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -55,7 +74,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T08:01:00+00:00",
+  "read_at": "2026-11-08T08:04:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -178,54 +197,6 @@
     "src": "plan-a"
    },
    {
-    "lane": "b2",
-    "task": "T-3380",
-    "w": "Maren",
-    "k": "design",
-    "t": "Check the look of In flight steps and list boxes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T02:45:29-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-2629",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Finish the prompt alert checks once the suite is green",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T02:45:29-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3411",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the per-premade gallery and widget tests",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T02:45:29-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-2056",
-    "w": "Idris",
-    "k": "test",
-    "t": "Add tests for the end of a run",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T02:45:29-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
     "lane": "b3",
     "task": "T-3280",
     "w": "Idris",
@@ -301,19 +272,33 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T03:01:00-05:00"
+  "at": "2026-11-08T03:04:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: 99% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 9 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
+  "n": 2,
+  "at": "2026-11-08T02:48:46.290137-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-3393 why only Countdown draws",
+   "model": "opus",
+   "since": "2026-11-08T07:49:52.601Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[ops] T-3373 retire amendments file",
+   "model": "opus",
+   "since": "2026-11-08T07:50:03.111Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -327,14 +312,6 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -357,7 +334,29 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Find why only Countdown draws on Jeremy's iPhone",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T07:49:52.601Z",
+    "o": "c",
+    "task": "T-3393"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Retire the amendments file and the constitution",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T07:50:03.111Z",
+    "o": "c",
+    "task": "T-3373"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -452,6 +451,10 @@
    "wait": 40,
    "blocked": 64,
    "you": 16
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [],
@@ -471,13 +474,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
-  "lanes": 5,
-  "total": 5,
-  "at": "3:01 AM",
+  "main": 2,
+  "lanes": 4,
+  "total": 6,
+  "at": "3:04 AM",
   "why": "",
-  "at_iso": "2026-11-08T08:01:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 3:01 AM ET</p></section>"
+  "at_iso": "2026-11-08T08:04:00+00:00",
+  "started": "2:49 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:04 AM ET</p></section>"
  }
 }

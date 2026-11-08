@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T21:06:32.624846+00:00",
+ "at": "2026-11-08T21:09:33.325025+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[build] T-3582 issue page and compact list",
    "model": "opus",
    "started": "2026-11-08T20:21:36.622Z",
-   "seconds": 2696,
+   "seconds": 2876,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[build] T-3671 widget tap opens widget",
    "model": "opus",
    "started": "2026-11-08T20:47:41.439Z",
-   "seconds": 1131,
+   "seconds": 1311,
    "finished": null,
    "effort": "high"
   }
@@ -48,7 +48,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 583,
+  "runnable_count": 577,
   "blocked_count": 113
  },
  "meter": {
@@ -91,7 +91,7 @@
   "week_pct": 3.73,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-08T21:06:00+00:00",
+  "read_at": "2026-11-08T21:09:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -112,7 +112,7 @@
   }
  ],
  "disk": {
-  "free_gb": 9.7,
+  "free_gb": 6.5,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -121,14 +121,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T16:02:00-05:00",
+   "at": "2026-11-08T16:07:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T16:06:00-05:00",
+  "at": "2026-11-08T16:09:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -288,30 +288,38 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "A new test proves that when a phone's step counter or location never answers, the other...",
-    "at": "2026-11-08T15:33:00-05:00"
+    "w": "Odalys",
+    "t": "The gallery task T-2296 (Idris's next gallery slice) that a lane failed to post is now on the...",
+    "at": "2026-11-08T16:08:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "The machine now checks every 5 minutes for any deletion a safety check refused and adds it to...",
-    "at": "2026-11-08T14:59:00-05:00"
+    "t": "A board task for reading the widget's free memory on a real phone had been lost because it had...",
+    "at": "2026-11-08T16:08:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "Clean-up tools now read one list of paths a safety check refused to delete, and leave those...",
-    "at": "2026-11-08T14:53:00-05:00"
+    "w": "Operator",
+    "t": "The work this notice was about has landed on main, so the lander closed it.",
+    "at": "2026-11-08T16:08:00-05:00"
    }
   ],
   "count": {
-   "next": 583,
+   "next": 577,
    "wait": 45,
    "blocked": 68,
    "you": 20
   },
   "fin": {
-   "n": 1,
+   "n": 3,
    "rows": [
+    [
+     "T-3264",
+     "Main refused a record from a..."
+    ],
+    [
+     "T-3273",
+     "Main refused a record from a..."
+    ],
     [
      "T-3405",
      "Prove a stalled sensor call..."
@@ -340,10 +348,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "4:06 PM",
+  "at": "4:09 PM",
   "why": "",
-  "at_iso": "2026-11-08T21:06:00+00:00",
+  "at_iso": "2026-11-08T21:09:00+00:00",
   "started": "3:20 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:20 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:06 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:20 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:09 PM ET</p></section>"
  }
 }

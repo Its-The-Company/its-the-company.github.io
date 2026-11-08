@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T09:19:07.911810+00:00",
+ "at": "2026-11-08T09:22:09.290967+00:00",
  "session": {
   "active": true,
   "kind": "",
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 509,
+  "runnable_count": 510,
   "blocked_count": 105
  },
  "meter": {
@@ -55,85 +55,8 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T09:19:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-3412",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Twelve-hour times in live JS views and the personal page",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T03:24:41-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-3436",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retry finished work that could not be merged",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T03:24:41-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-3437",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retry finished work that could not be merged",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T03:24:41-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-3380",
-    "w": "Maren",
-    "k": "design",
-    "t": "Check the look of In flight steps and list boxes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T03:24:41-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3449",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Run the suites likeliest to fail first",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-08T03:24:13-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3405",
-    "w": "Idris",
-    "k": "build",
-    "t": "Prove a stalled sensor call cannot starve the premade pass",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T03:24:13-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   }
-  ]
+  "read_at": "2026-11-08T09:22:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -169,7 +92,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T04:19:00-05:00"
+  "at": "2026-11-08T04:22:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -316,7 +239,7 @@
    }
   ],
   "count": {
-   "next": 509,
+   "next": 510,
    "wait": 40,
    "blocked": 65,
    "you": 17
@@ -340,12 +263,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "4:19 AM",
-  "why": "",
-  "at_iso": "2026-11-08T09:19:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "4:22 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-08T09:22:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:19 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:22 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

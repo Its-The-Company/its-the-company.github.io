@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T13:56:00.220772+00:00",
+ "at": "2026-11-08T13:59:04.501288+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,34 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-3572 log every failed run",
-   "model": "opus",
-   "started": "2026-11-08T13:34:15.147Z",
-   "seconds": 1305,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[site] T-3357 keep focus in Chat boxes",
    "model": "opus",
    "started": "2026-11-08T13:50:19.572Z",
-   "seconds": 340,
+   "seconds": 524,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[release] T-3574 build 4 to TestFlight",
+   "model": "opus",
+   "started": "2026-11-08T13:58:16.914Z",
+   "seconds": 47,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Odalys",
+ "who": "Odalys, Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-3572 log every failed run",
+   "model": "opus",
+   "started": "2026-11-08T13:34:15.147Z",
+   "seconds": null,
+   "finished": "2026-11-08T13:57:30.825000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3300 land checks own job",
@@ -51,14 +59,6 @@
    "started": "2026-11-08T13:23:23.975Z",
    "seconds": null,
    "finished": "2026-11-08T13:33:39.514000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3566 automatic SSD moves",
-   "model": "opus",
-   "started": "2026-11-08T13:23:32.202Z",
-   "seconds": null,
-   "finished": "2026-11-08T13:29:23.585000+00:00"
   }
  ],
  "queue": {
@@ -107,7 +107,7 @@
   "week_pct": 3.66,
   "usage_pct": 45.7,
   "work_pct": 83.3,
-  "read_at": "2026-11-08T13:56:00+00:00",
+  "read_at": "2026-11-08T13:59:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -132,19 +132,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 275
+   "free_gb": 287
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T08:51:00-05:00",
+   "at": "2026-11-08T08:57:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T08:56:00-05:00"
+  "at": "2026-11-08T08:59:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -155,20 +155,20 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-3572 log every failed run",
-   "model": "opus",
-   "since": "2026-11-08T13:34:15.147Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[site] T-3357 keep focus in Chat boxes",
    "model": "opus",
    "since": "2026-11-08T13:50:19.572Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[release] T-3574 build 4 to TestFlight",
+   "model": "opus",
+   "since": "2026-11-08T13:58:16.914Z",
    "next": [],
    "effort": "high"
   },
@@ -208,16 +208,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Log every failed run with its error",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T13:34:15.147Z",
-    "o": "c",
-    "task": "T-3572"
-   },
-   {
     "w": "Odalys",
     "k": "site",
     "t": "Stop Plan mode answer boxes losing focus while typing",
@@ -226,6 +216,16 @@
     "at": "2026-11-08T13:50:19.572Z",
     "o": "c",
     "task": "T-3357"
+   },
+   {
+    "w": "Idris",
+    "k": "release",
+    "t": "Send build 4 with the widget fixes to TestFlight",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T13:58:16.914Z",
+    "o": "c",
+    "task": "T-3574"
    }
   ],
   "src": "plan",
@@ -303,6 +303,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "When a ready-made widget failed its very first run, the Run log kept no line for it, so we could...",
+    "at": "2026-11-08T08:57:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "When the Mac mini's own disk drops under 20 GB free, finished company build files and scratch...",
     "at": "2026-11-08T08:48:00-05:00"
@@ -311,11 +316,6 @@
     "w": "Pernille",
     "t": "Sensor and web readings now carry their time zone when the app makes them, so widgets that show...",
     "at": "2026-11-08T08:13:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The merge gate no longer stops dead on a test that is already failing on main, still hands over...",
-    "at": "2026-11-08T08:10:00-05:00"
    }
   ],
   "count": {
@@ -325,8 +325,12 @@
    "you": 18
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-3572",
+     "Log every failed run with..."
+    ],
     [
      "T-3566",
      "Move company data to the SSD..."
@@ -343,6 +347,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -355,10 +360,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "8:56 AM",
+  "at": "8:59 AM",
   "why": "",
-  "at_iso": "2026-11-08T13:56:00+00:00",
+  "at_iso": "2026-11-08T13:59:00+00:00",
   "started": "8:22 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:56 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:59 AM ET</p></section>"
  }
 }

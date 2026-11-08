@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T18:24:36.774923+00:00",
+ "at": "2026-11-08T18:27:44.215393+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[site] T-3325 redo one Lock In switch",
    "model": "opus",
    "started": "2026-11-08T17:50:47.450Z",
-   "seconds": 2029,
+   "seconds": 2216,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[review] T-3663 launcher tap handler review",
    "model": "opus",
    "started": "2026-11-08T18:22:25.478Z",
-   "seconds": 131,
+   "seconds": 318,
    "finished": null,
    "effort": "high"
   }
@@ -107,60 +107,8 @@
   "week_pct": 3.66,
   "usage_pct": 33.5,
   "work_pct": 78.9,
-  "read_at": "2026-11-08T18:24:00+00:00",
+  "read_at": "2026-11-08T18:27:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-3446",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Count the rebuilds that reordering the queue causes",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-08T12:04:43-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-3447",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Count a red a later stack passes as a flake",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-08T12:04:43-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-3451",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Count what reaches main without a check first",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-08T12:04:43-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-3490",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Log per-suite seconds and re-measure the red-first suite order",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-08T12:04:43-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
    {
     "lane": "b",
     "task": "T-3568",
@@ -197,6 +145,7 @@
     "e": "high",
     "at": "2026-11-08T12:16:24-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -315,7 +264,7 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 13,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -324,14 +273,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T13:18:00-05:00",
+   "at": "2026-11-08T13:25:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T13:24:00-05:00",
+  "at": "2026-11-08T13:27:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -563,12 +512,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 4,
-  "total": 6,
-  "at": "1:24 PM",
+  "lanes": 3,
+  "total": 5,
+  "at": "1:27 PM",
   "why": "",
-  "at_iso": "2026-11-08T18:24:00+00:00",
+  "at_iso": "2026-11-08T18:27:00+00:00",
   "started": "11:55 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:24 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:27 PM ET</p></section>"
  }
 }

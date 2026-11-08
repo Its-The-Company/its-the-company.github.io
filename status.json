@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-08T07:07:24.954556+00:00",
+ "at": "2026-11-08T07:10:30.628814+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-08T02:07:25-05:00"
  },
  "workers": [],
  "who": "",
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 421,
+  "runnable_count": 420,
   "blocked_count": 107
  },
  "meter": {
@@ -55,7 +55,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T07:07:00+00:00",
+  "read_at": "2026-11-08T07:10:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -95,16 +95,15 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T02:07:00-05:00"
+  "at": "2026-11-08T02:10:00-05:00"
  },
  "next_tick_why": "session",
- "idle": {
-  "since": "2026-11-07T15:27:05-05:00",
-  "minutes": 640,
-  "why": "the last tick ended without starting a session",
-  "healed": []
+ "idle": null,
+ "pool": {
+  "why": "Spread: 100% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "n": 2,
+  "at": "2026-11-08T02:07:16.060197-05:00"
  },
- "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -157,6 +156,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -231,23 +231,23 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "The charter v3 rule book and the 25 retired Investor instructions were saved in the company's...",
+    "at": "2026-11-08T02:10:00-05:00"
+   },
+   {
+    "w": "Operator",
+    "t": "The 25 retired Investor instructions are back in the rulings log word for word, in the same...",
+    "at": "2026-11-08T02:10:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The SSD-hang task's earlier work was already on main, so nothing was redone; it was checked...",
     "at": "2026-11-07T16:00:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Eight stuck branches of finished work were checked one by one; seven are already on main in...",
-    "at": "2026-11-07T15:59:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "The Issues page now has Needs You and Later lists, a Delay control on every open issue, Mute and...",
-    "at": "2026-11-07T14:02:00-05:00"
    }
   ],
   "count": {
-   "next": 421,
+   "next": 420,
    "wait": 40,
    "blocked": 67,
    "you": 16
@@ -255,26 +255,14 @@
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-08T05:52:58Z",
-  "seconds": 71.0
+  "sent": "2026-11-08T06:43:14Z",
+  "seconds": 1220.0
  },
- "inbox": [
-  {
-   "id": "c6718358111",
-   "state": "waiting",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "In-flight and queued tasks should be..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -285,10 +273,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "2:07 AM",
+  "at": "2:10 AM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-08T07:07:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:07 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "at_iso": "2026-11-08T07:10:00+00:00",
+  "started": "2:07 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:10 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

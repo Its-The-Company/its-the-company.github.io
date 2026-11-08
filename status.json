@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-07T23:58:28.618117+00:00",
+ "at": "2026-11-08T00:03:13.007794+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -12,30 +12,30 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 357,
+  "runnable_count": 360,
   "blocked_count": 104
  },
  "meter": {
   "five_hour": {
    "pct": 0.0,
-   "resets_at": "2026-11-08T02:49:59.580975+00:00",
+   "resets_at": "2026-11-08T02:49:59.711254+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-08T06:59:59.581000+00:00",
+   "resets_at": "2026-11-08T06:59:59.711272+00:00",
    "used_words": "of your weekly allowance used",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-08T06:59:59.581157+00:00",
+   "resets_at": "2026-11-08T06:59:59.711389+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-07T18:43:31.730272-05:00"
+  "read_at": "2026-11-07T18:58:39.346042-05:00"
  },
  "ui": {
   "week_pct": 0.883,
@@ -50,25 +50,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-07T19:02:28-05:00",
+ "next_tick": "2026-11-07T19:13:39-05:00",
  "personal": {
   "week_pct": 87.06,
   "usage_pct": 44.1,
   "work_pct": 71.5,
-  "read_at": "2026-11-07T23:58:00+00:00",
+  "read_at": "2026-11-08T00:07:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-3127",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Find what sends main sessions a stray SIGTERM",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T18:06:17-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "a2",
     "task": "T-3341",
@@ -90,6 +78,55 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-07T17:37:03-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3264",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Main refused a record from a personal account",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T19:05:12-05:00",
+    "n": "Evan",
+    "d": 1,
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3273",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Main refused a record from a personal account",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T19:05:12-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3302",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Keep one coordinator session running",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T19:05:12-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3296",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Feed each task's steps into the live status",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T19:05:12-05:00",
     "n": "Evan",
     "src": "plan-a"
    }
@@ -122,7 +159,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T18:58:00-05:00",
+   "at": "2026-11-07T19:06:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -132,7 +169,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-07T18:58:00-05:00"
+  "at": "2026-11-07T19:07:00-05:00"
  },
  "next_tick_why": "last_tick",
  "idle": null,
@@ -279,7 +316,7 @@
    }
   ],
   "count": {
-   "next": 357,
+   "next": 360,
    "wait": 37,
    "blocked": 67,
    "you": 13
@@ -305,10 +342,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "6:58 PM",
+  "at": "7:07 PM",
   "why": "",
-  "at_iso": "2026-11-07T23:58:00+00:00",
+  "at_iso": "2026-11-08T00:07:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:58 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:07 PM ET</p></section>"
  }
 }

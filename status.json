@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T14:32:36.268531+00:00",
+ "at": "2026-11-08T14:35:40.287152+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,12 +12,21 @@
    "task": "[tools] T-3579 revert restores main folder",
    "model": "opus",
    "started": "2026-11-08T14:24:47.400Z",
-   "seconds": 468,
+   "seconds": 652,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[review] T-3571 then [release] T-3574 build 4",
+   "model": "opus",
+   "started": "2026-11-08T14:32:52.693Z",
+   "seconds": 167,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys",
+ "who": "Odalys, Idris",
  "recent": [
   {
    "name": "pernille",
@@ -98,7 +107,7 @@
   "week_pct": 3.66,
   "usage_pct": 45.7,
   "work_pct": 83.3,
-  "read_at": "2026-11-08T14:32:00+00:00",
+  "read_at": "2026-11-08T14:35:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -123,19 +132,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 271
+   "free_gb": 269
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T09:26:00-05:00",
+   "at": "2026-11-08T09:32:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T09:32:00-05:00"
+  "at": "2026-11-08T09:35:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -156,11 +165,12 @@
   },
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[review] T-3571 then [release] T-3574 build 4",
+   "model": "opus",
+   "since": "2026-11-08T14:32:52.693Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -206,6 +216,16 @@
     "at": "2026-11-08T14:24:47.400Z",
     "o": "c",
     "task": "T-3579"
+   },
+   {
+    "w": "Idris",
+    "k": "review",
+    "t": "Review the time-zone fix for device readings",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T14:32:52.693Z",
+    "o": "c",
+    "task": "T-3571"
    }
   ],
   "src": "plan",
@@ -354,13 +374,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 0,
-  "total": 1,
-  "at": "9:32 AM",
+  "total": 2,
+  "at": "9:35 AM",
   "why": "",
-  "at_iso": "2026-11-08T14:32:00+00:00",
+  "at_iso": "2026-11-08T14:35:00+00:00",
   "started": "8:22 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:32 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:35 AM ET</p></section>"
  }
 }

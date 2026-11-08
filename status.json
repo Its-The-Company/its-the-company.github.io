@@ -1,13 +1,32 @@
 {
  "schema": 1,
- "at": "2026-11-08T13:22:25.920956+00:00",
+ "at": "2026-11-08T13:25:29.559083+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-08T08:22:28-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[build] T-3393 only Countdown runs on iPhone",
+   "model": "opus",
+   "started": "2026-11-08T13:23:23.975Z",
+   "seconds": 125,
+   "finished": null,
+   "effort": "xhigh"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3566 automatic SSD moves",
+   "model": "opus",
+   "started": "2026-11-08T13:23:32.202Z",
+   "seconds": 117,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris, Odalys",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -55,7 +74,7 @@
   "week_pct": 3.66,
   "usage_pct": 45.7,
   "work_pct": 83.3,
-  "read_at": "2026-11-08T13:22:00+00:00",
+  "read_at": "2026-11-08T13:25:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -92,19 +111,33 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T08:22:00-05:00"
+  "at": "2026-11-08T08:25:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: 95% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 20 of 24 lands failed in 3 hours (6 red); 12 of 41 finished tasks were...",
+  "n": 2,
+  "at": "2026-11-08T08:21:46.280885-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-3393 only Countdown runs on iPhone",
+   "model": "opus",
+   "since": "2026-11-08T13:23:23.975Z",
+   "next": [],
+   "effort": "xhigh"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-3566 automatic SSD moves",
+   "model": "opus",
+   "since": "2026-11-08T13:23:32.202Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -118,14 +151,6 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -148,7 +173,29 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Find why only Countdown draws on Jeremy's iPhone",
+    "m": "opus",
+    "e": "xhigh",
+    "at": "2026-11-08T13:23:23.975Z",
+    "o": "c",
+    "task": "T-3393"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Move company data to the SSD automatically",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T13:23:32.202Z",
+    "o": "c",
+    "task": "T-3566"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -243,12 +290,16 @@
    "wait": 41,
    "blocked": 66,
    "you": 18
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-08T13:10:06Z",
-  "seconds": 43.0
+  "sent": "2026-11-08T13:22:55Z",
+  "seconds": 91.0
  },
  "inbox": [],
  "trimmed": [
@@ -262,13 +313,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 0,
-  "total": 0,
-  "at": "8:22 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-08T13:22:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:22 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 2,
+  "at": "8:25 AM",
+  "why": "",
+  "at_iso": "2026-11-08T13:25:00+00:00",
+  "started": "8:22 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:25 AM ET</p></section>"
  }
 }

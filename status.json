@@ -1,50 +1,14 @@
 {
  "schema": 1,
- "at": "2026-11-08T21:00:23.866088+00:00",
+ "at": "2026-11-08T21:03:27.821694+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-08T15:20:39-05:00"
+  "kind": "",
+  "started": null
  },
- "workers": [
-  {
-   "name": "odalys",
-   "task": "[build] T-3582 issue page and compact list",
-   "model": "opus",
-   "started": "2026-11-08T20:21:36.622Z",
-   "seconds": 2327,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3671 widget tap opens widget",
-   "model": "opus",
-   "started": "2026-11-08T20:47:41.439Z",
-   "seconds": 762,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Idris",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[build] T-3667 launcher taps reuse iPad window",
-   "model": "opus",
-   "started": "2026-11-08T20:34:27.035Z",
-   "seconds": null,
-   "finished": "2026-11-08T20:46:58.606000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3405 land stall test via gate",
-   "model": "opus",
-   "started": "2026-11-08T20:21:27.853Z",
-   "seconds": null,
-   "finished": "2026-11-08T20:37:33.798000+00:00"
-  }
- ],
+ "workers": [],
+ "who": "",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -91,7 +55,7 @@
   "week_pct": 3.73,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-08T21:00:00+00:00",
+  "read_at": "2026-11-08T21:03:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -112,7 +76,7 @@
   }
  ],
  "disk": {
-  "free_gb": 9.2,
+  "free_gb": 9.7,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -121,41 +85,27 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T15:56:00-05:00",
+   "at": "2026-11-08T16:02:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T16:00:00-05:00",
+  "at": "2026-11-08T16:03:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Spread: 90% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 9 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
-  "n": 2,
-  "at": "2026-11-08T15:20:28.191812-05:00"
- },
+ "pool": null,
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[build] T-3582 issue page and compact list",
-   "model": "opus",
-   "since": "2026-11-08T20:21:36.622Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-3671 widget tap opens widget",
-   "model": "opus",
-   "since": "2026-11-08T20:47:41.439Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -169,6 +119,14 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -191,29 +149,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "build",
-    "t": "Build the issue page and compact Issues list",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T20:21:36.622Z",
-    "o": "i",
-    "task": "T-3582"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Open the tapped widget, not the Console",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T20:47:41.439Z",
-    "o": "c",
-    "task": "T-3671"
-   }
-  ],
-  "src": "plan",
+  "run": [],
   "open": [
    {
     "w": "Idris",
@@ -308,15 +244,6 @@
    "wait": 45,
    "blocked": 68,
    "you": 20
-  },
-  "fin": {
-   "n": 1,
-   "rows": [
-    [
-     "T-3405",
-     "Prove a stalled sensor call..."
-    ]
-   ]
   }
  },
  "qr": [],
@@ -329,7 +256,6 @@
   "lane_next",
   "queue_text",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -337,13 +263,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 0,
   "lanes": 0,
-  "total": 2,
-  "at": "4:00 PM",
-  "why": "",
-  "at_iso": "2026-11-08T21:00:00+00:00",
-  "started": "3:20 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:20 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:00 PM ET</p></section>"
+  "total": 0,
+  "at": "4:03 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-08T21:03:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:03 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

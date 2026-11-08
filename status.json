@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T14:23:28.134739+00:00",
+ "at": "2026-11-08T14:26:29.943121+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,34 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[site] T-3357 keep focus in Chat boxes",
-   "model": "opus",
-   "started": "2026-11-08T13:50:19.572Z",
-   "seconds": 1988,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "pernille",
    "task": "[review] T-3576 editor theme picker review",
    "model": "opus",
    "started": "2026-11-08T14:21:43.645Z",
-   "seconds": 104,
+   "seconds": 286,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3579 revert restores main folder",
+   "model": "opus",
+   "started": "2026-11-08T14:24:47.400Z",
+   "seconds": 102,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Pernille",
+ "who": "Pernille, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[site] T-3357 keep focus in Chat boxes",
+   "model": "opus",
+   "started": "2026-11-08T13:50:19.572Z",
+   "seconds": null,
+   "finished": "2026-11-08T14:24:25.553000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-3575 T-3577 T-3330 build 4 reviews",
@@ -51,20 +59,12 @@
    "started": "2026-11-08T13:34:15.147Z",
    "seconds": null,
    "finished": "2026-11-08T13:57:30.825000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3300 land checks own job",
-   "model": "opus",
-   "started": "2026-11-08T13:49:04.187Z",
-   "seconds": null,
-   "finished": "2026-11-08T13:49:59.272000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 524,
+  "runnable_count": 523,
   "blocked_count": 107
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 3.66,
   "usage_pct": 45.7,
   "work_pct": 83.3,
-  "read_at": "2026-11-08T14:23:00+00:00",
+  "read_at": "2026-11-08T14:26:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -144,7 +144,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T09:23:00-05:00"
+  "at": "2026-11-08T09:26:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -155,20 +155,20 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[site] T-3357 keep focus in Chat boxes",
-   "model": "opus",
-   "since": "2026-11-08T13:50:19.572Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Pernille",
    "state": "running",
    "task": "[review] T-3576 editor theme picker review",
    "model": "opus",
    "since": "2026-11-08T14:21:43.645Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-3579 revert restores main folder",
+   "model": "opus",
+   "since": "2026-11-08T14:24:47.400Z",
    "next": [],
    "effort": "high"
   },
@@ -208,16 +208,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Stop Plan mode answer boxes losing focus while typing",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T13:50:19.572Z",
-    "o": "c",
-    "task": "T-3357"
-   },
-   {
     "w": "Pernille",
     "k": "review",
     "t": "Review the editor theme picker before it ships",
@@ -226,6 +216,16 @@
     "at": "2026-11-08T14:21:43.645Z",
     "o": "c",
     "task": "T-3576"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Make the auto-revert restore the main folder too",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T14:24:47.400Z",
+    "o": "c",
+    "task": "T-3579"
    }
   ],
   "src": "plan",
@@ -303,6 +303,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Typing an answer in a Plan mode question card, or a reply in an issue thread, no longer gets...",
+    "at": "2026-11-08T09:24:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Checked that a premade widget whose first run fails now leaves a Run log row naming the error,...",
     "at": "2026-11-08T09:20:00-05:00"
@@ -311,22 +316,21 @@
     "w": "Pernille",
     "t": "Checked the fix that makes the app drop a saved location as soon as location access is turned...",
     "at": "2026-11-08T09:20:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Checked the rule that decides whether a refresh tap got new data by its timestamps, not its...",
-    "at": "2026-11-08T09:20:00-05:00"
    }
   ],
   "count": {
-   "next": 524,
+   "next": 523,
    "wait": 41,
    "blocked": 66,
    "you": 18
   },
   "fin": {
-   "n": 5,
+   "n": 6,
    "rows": [
+    [
+     "T-3357",
+     "Stop Plan mode answer boxes..."
+    ],
     [
      "T-3575",
      "Review the Run log row for a..."
@@ -372,10 +376,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "9:23 AM",
+  "at": "9:26 AM",
   "why": "",
-  "at_iso": "2026-11-08T14:23:00+00:00",
+  "at_iso": "2026-11-08T14:26:00+00:00",
   "started": "8:22 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:23 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:26 AM ET</p></section>"
  }
 }

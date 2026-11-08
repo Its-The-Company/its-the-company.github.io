@@ -52,7 +52,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-3422 e6252697e: merge-first in impact order (merge_first.py score_map/rank, ops/metrics/merge_impact.jsonl). Shares are guesses: Spearman read at n=10 after-reads. Runner still a set. merge_queue_test supervisor row red (T-3301 moved the queue).
 
-- T-3419 2cc7cd8d1: speculative gate (merge_queue.py --gate, personal_land.sh spec, ops/land_spec.json). OPT-121 read 11-15 or n=40 gate trains. Left (no board line, title refused): chain runs, xc via runner_queue, spec_kick row.
+- T-3419/T-3435 45661b9b5: gate folds main's reds (land_fold covered), settles prefix ahead of a stop, chains runs (LAND_SPEC_CHAIN 6). OPT-121 read 11-15 or n=40 runs. Left: T-3568 xc via land_xc, T-3569 load reds, T-3570 moved member.
 - T-3408 2101d203a (OPT-122): retry-spare + train cap 8. Before 145 live, 100 ready. After-read T-3544 (12 h on), review T-3545. Real cap 11-07 was a failed sync, not the stamp.
 - T-3542 73dd8009b: claim refuses tasks a ready marker carries (`personal_claims.py waiting`). Held/parked not counted (185/492 open lines). Review T-3548.
 - T-3373 b950d9961: rules via tools/ruling_record.py; #226 pins d0b2461fe. Cleanup T-3476; twin T-3426 (Ines).
@@ -60,7 +60,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 - Older notes, task by task: archive.md (nothing is deleted; tools/memory_archive.py runs at session close, T-3134).
-- T-3427: tools/task_category.py board_categories (Home badge; T-3428 counts must use it). 0.7% of 3,756 uncategorised; 91.3% agree with ws (n=1,713).
 - T-3423 d7278138e: tools/worker_start_tokens.py (start split; k 0.4166). Before 30,452 tok (n=161), base 16.5k. Agent-tool proposal; after-read T-3474, memory gate T-3475.
 {% endraw %}
 

@@ -4,8 +4,22 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-08T03:27:20-05:00</updated>
+<updated>2026-11-08T07:45:48-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Review: T-3561: reviewed 16e32a86e, PASS with fixes; naive runtime reading times explain Steps/Dis</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-08:event/2026-11-08t07-45-48-05-00-review-t-3561-reviewed-16e32a86e-pass-with-fi</id>
+<updated>2026-11-08T07:45:48-05:00</updated>
+<summary type="text">T-3561: reviewed 16e32a86e, PASS with fixes; naive runtime reading times explain Steps/Distance/Altitude blanking on a phone with sensors, not Sun; source fix T-3562 P0 (mine), plus T-3563..65</summary>
+</entry>
+<entry>
+<title>Review: T-3477: reviewed Idris&#x27;s sensor-stall fix 5914346c4, PASS with fixes; the fallback can ove</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-08:event/2026-11-08t06-57-50-05-00-review-t-3477-reviewed-idris-s-sensor-stall-fi</id>
+<updated>2026-11-08T06:57:50-05:00</updated>
+<summary type="text">T-3477: reviewed Idris&#x27;s sensor-stall fix 5914346c4, PASS with fixes; the fallback can overwrite a good widget with false text (T-3550, P0); fix cannot explain Sunrise going blank</summary>
+</entry>
 <entry>
 <title>Milestone: Investor rule changes now go straight to log/rulings.md and the Handbook (tools/ruling_rec</title>
 <link href="https://its-the-company.github.io/"/>
@@ -341,19 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-02:event/2026-11-02t00-09-18-05-00-milestone-t-0995-personal-lane-sessions-run-a-poo</id>
 <updated>2026-11-02T00:09:18-05:00</updated>
 <summary type="text">T-0995: personal lane sessions run a pool of 4 agents over a claimed queue, take each line&#x27;s model, retry a no-commit task once, and see 65 lines instead of 9 (bb240b7a). Before: 18 personal runs, 0 finished tasks credited.</summary>
-</entry>
-<entry>
-<title>Decision: T-0963 restart at close: the effect the guard named, secret-store access, is dropped and n</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-01:event/2026-11-01t19-21-56-05-00-decision-t-0963-restart-at-close-the-effect-the</id>
-<updated>2026-11-01T19:21:56-05:00</updated>
-<summary type="text">T-0963 restart at close: the effect the guard named, secret-store access, is dropped and never needed. The job left is committing one test line; no suite runs in that command. A second refusal goes to Ines.</summary>
-</entry>
-<entry>
-<title>Decision: T-0963 stopped on a guard refusal (scratch clone git checkout of rules/). Restart decided:</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-01:event/2026-11-01t18-24-43-05-00-decision-t-0963-stopped-on-a-guard-refusal-scrat</id>
-<updated>2026-11-01T18:24:43-05:00</updated>
-<summary type="text">T-0963 stopped on a guard refusal (scratch clone git checkout of rules/). Restart decided: that effect dropped for good, no scratch or other checkout of rules/; job continues in the main checkout by reading and running.</summary>
 </entry>
 </feed>

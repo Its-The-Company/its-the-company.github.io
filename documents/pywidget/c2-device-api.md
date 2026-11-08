@@ -53,7 +53,7 @@ Every sensor read returns a `Reading`, never a bare value, so no script can show
 @dataclass(frozen=True)
 class Reading(Generic[T]):
     value: T | None
-    sampled_at: datetime | None        # when the sensor produced it, not when the script ran
+    sampled_at: datetime | None        # when the sensor produced it, not when the script ran; aware, phone's zone (T-3562)
     source: str                        # "live" | "refresh" | "history" | "app_cache" | "network" | "cache"
     stale_after: datetime | None       # author-declared or the per-module default
     unavailable_reason: str | None     # why a fresh value could not be read; the value may still be a cached one

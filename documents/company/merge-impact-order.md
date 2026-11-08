@@ -79,6 +79,24 @@ The shares (0.5, 0.25) and the default are guesses, stated as guesses. The after
 
 Tests: tests/merge_first_test.py (T-3422 rows), tests/dispatch_test.py (test_merge_first_ranked_by_impact,
 test_merge_first_impact_default_and_failure), tests/merge_first_auto_test.py unchanged and green.
+
+## Suite order by failure history (T-3449, Odalys; merge-outside-practice row 12 is not on main or here)
+
+Change: tools/suite_order.py orders suites by red rate in ops/runs/test-runs.jsonl (last 14 days; reds / rows that named the
+suite), then shortest median seconds; unseen suites keep their order, after the reds. Used by personal_land.sh (before
+tests/run.sh; run.sh now starts named Python suites in the order named), merge_queue.py run_checks (stops at first red) and
+the gate's Gate.run (starts suites before host and xc). No Xcode. Unchanged: where a run stops or continues.
+
+Measure: `python3 tools/suite_order.py --replay` replays every red row that named 2+ suites (n = 9 of 69 rows; the log has
+6 days, 2026-11-02..08). Order chosen from rows before each run only. Sequential model: first red = seconds of the suites up
+to and including the first red one; a suite's seconds = median wall_s of rows naming it alone (else the row's wall_s / suites).
+- Seconds to first red, order as given: median 91, mean 156.
+- Ordered: median 193, mean 193. Better 1, same 6, worse 2.
+Reading: no win shown, a loss on two runs. 11-05 (3 suites all red; history put the 355 s one first) and 11-07 (12 site
+suites; a past red, site_personal_test, led). Where several suites are red together the cheapest red should lead; the rank
+sees only past rates. n = 9, so I did not tune it to these. Per-suite seconds are not logged (only wall_s), which makes the
+time terms guesses. Next: log per-suite seconds and red in tests/run.sh, then re-read at n = 20 ordered red runs. Revert: remove the
+suite_order lines in the three callers.
 {% endraw %}
 
 </div>

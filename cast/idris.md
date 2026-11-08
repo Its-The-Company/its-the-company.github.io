@@ -33,9 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 
 ## Open (mine)
-- Lesson T-3106: --out outside the clone keeps upload.sh's dirty check. A cold archive takes 22 min, not 4.
-
-- T-2458 5bd8e7908: ProPaywall compiles, suite green (free.all test). Left: Pro/Settings shots, T-2372 key wiring, RETIRING delete. Local run: 13 ProStoreTests StoreKit 30 s timeouts + 2 "Updated" + ExtensionBridge flag red, not mine; recheck on runner.
 
 - Lesson T-1714: a rule green on the host means nothing until something writes it and something reads it: grep both call sites first.
 
@@ -48,7 +45,7 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - Lesson: a flag compiled out of Release hides its required-reason APIs from the binary scan; test the sources each target compiles.
 
 - Lesson T-2016: tools/xc_mutants.py plants each old behaviour back as the red record; a timing test needs margins both sides of the constant.
-- Lesson T-1851: zsh never splits `$F`; pass xc_file_tests filters as ${=F}. Local xc.sh after others' commits: `xcodegen generate` first (xcodeproj is ignored, goes stale).
+- Lesson T-1851/T-3550: zsh never splits `$F`; pass xc_file_tests filters and main_gate paths as ${=F}. "checking 0 file(s)" = gate ran HEAD, not my change. Local xc.sh after others' commits: `xcodegen generate` first (xcodeproj is ignored, goes stale).
 
 - T-2020 22b1a3176 (two main reds; review T-2038 Pernille). Lesson: a schema row landing before its renderer turns the drawn-set test red; exempt by equality naming the drawing task, never by subtraction.
 - T-0656 2026-11-04: slice 1 <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> untested in company-scratch/T-0656-idris (EditorTooling, tests, patch); board noted. Freeze passed: <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line for 1.1.
@@ -59,6 +56,7 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - T-2583 cc5c7c277 (prompt placement, T-2576 F1/F2): Desk+Placement 19/0 local; Pernille re-reviews. Real UIKit drop never reproduced (iOS 26 queues).
 - Lesson T-1404: one Bash call is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
 
+- T-3550 16e32a86e (review T-3561 Pernille): timeout keeps fresh tree; runtime readings are naive local (_wire.want_time), premades wrap with aware(). Sun use_current path unchecked; T-3551 open.
 - T-3393 fix 5914346c4 (gate green J-...0354-land-m-36b1df); MacBook job waits for push. Lesson: main_gate's key skips pywidget/tests; a fixture-only fix reuses a stale red slot.
 
 ## Lessons

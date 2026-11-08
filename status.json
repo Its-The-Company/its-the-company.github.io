@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "at": "2026-11-08T03:30:48.845227+00:00",
+ "at": "2026-11-08T03:35:21.229245+00:00",
  "session": {
-  "active": true,
+  "active": false,
   "kind": "",
   "started": null
  },
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 387,
+  "runnable_count": 388,
   "blocked_count": 106
  },
  "meter": {
@@ -50,126 +50,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-07T22:49:11-05:00",
  "personal": {
   "week_pct": 87.06,
   "usage_pct": 44.1,
   "work_pct": 71.5,
-  "read_at": "2026-11-08T03:34:00+00:00",
+  "read_at": "2026-11-08T03:36:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-3341",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Decide how often parked work retries landing",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T21:48:37-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3387",
-    "w": "Odalys",
-    "k": "measure",
-    "t": "Measure the time the pipeline fixes won back",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T22:27:56-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3303",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Check the coordinator after 48 hours",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T22:27:56-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3272",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Main refused a record from a personal account",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T22:27:56-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3287",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Main refused a record from a personal account",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T22:27:56-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "b",
-    "task": "T-3145",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Clear finished task copies from the main temp folder",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T21:34:13-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-3152",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Clear finished job folders from the MacBook",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T21:34:13-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-2888",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Clear finished job folders from the MacBook",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T21:34:13-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-3305",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Judge the remaining open board lines for staleness",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-07T21:34:13-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
    {
     "lane": "b2",
     "task": "T-3367",
@@ -267,16 +154,16 @@
   }
  ],
  "disk": {
-  "free_gb": 17,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 408
+   "free_gb": 400
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T22:33:00-05:00",
+   "at": "2026-11-07T22:35:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -286,9 +173,9 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-07T22:34:00-05:00"
+  "at": "2026-11-07T22:36:00-05:00"
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
  "pool": null,
  "lanes": [
@@ -433,7 +320,7 @@
    }
   ],
   "count": {
-   "next": 387,
+   "next": 388,
    "wait": 39,
    "blocked": 67,
    "you": 15
@@ -444,11 +331,24 @@
   "sent": "2026-11-08T03:25:25Z",
   "seconds": 75.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6716775528",
+   "state": "received",
+   "position": 1,
+   "eta": "2026-11-07T22:49:11-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "A nitpick, and not requiring much..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -457,12 +357,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 5,
-  "total": 5,
-  "at": "10:34 PM",
+  "lanes": 2,
+  "total": 2,
+  "at": "10:36 PM",
   "why": "",
-  "at_iso": "2026-11-08T03:34:00+00:00",
+  "at_iso": "2026-11-08T03:36:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 10:34 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:36 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T08:26:38.672328+00:00",
+ "at": "2026-11-08T08:29:39.705909+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,29 +9,46 @@
  "workers": [
   {
    "name": "idris",
+   "task": "[release] T-3323 upload refuses its own export",
+   "model": "opus",
+   "started": "2026-11-08T08:27:47.535Z",
+   "seconds": 112,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3408 land parked backlog faster",
+   "model": "opus",
+   "started": "2026-11-08T08:29:35.679Z",
+   "seconds": 4,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris, Odalys",
+ "recent": [
+  {
+   "name": "idris",
    "task": "[build] T-3393 why only Countdown draws",
    "model": "opus",
    "started": "2026-11-08T07:49:52.601Z",
-   "seconds": 2206,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-08T08:27:59.838000+00:00"
   },
   {
    "name": "odalys",
    "task": "[ops] T-3373 retire amendments file",
    "model": "opus",
    "started": "2026-11-08T07:50:03.111Z",
-   "seconds": 2195,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-08T08:27:29.154000+00:00"
   }
  ],
- "who": "Idris, Odalys",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 453,
+  "runnable_count": 454,
   "blocked_count": 105
  },
  "meter": {
@@ -74,7 +91,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T08:26:00+00:00",
+  "read_at": "2026-11-08T08:29:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -267,16 +284,16 @@
   }
  ],
  "disk": {
-  "free_gb": 12,
-  "gate": "open",
+  "free_gb": 7.7,
+  "gate": "closed",
   "ssd": {
    "mounted": true,
-   "free_gb": 305
+   "free_gb": 295
   },
-  "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
+  "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
-   "ok": true,
-   "at": "2026-11-08T03:22:00-05:00",
+   "ok": false,
+   "at": "2026-11-08T03:25:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -286,7 +303,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T03:26:00-05:00"
+  "at": "2026-11-08T03:29:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -299,18 +316,18 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[build] T-3393 why only Countdown draws",
+   "task": "[release] T-3323 upload refuses its own export",
    "model": "opus",
-   "since": "2026-11-08T07:49:52.601Z",
+   "since": "2026-11-08T08:27:47.535Z",
    "next": [],
    "effort": "high"
   },
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[ops] T-3373 retire amendments file",
+   "task": "[tools] T-3408 land parked backlog faster",
    "model": "opus",
-   "since": "2026-11-08T07:50:03.111Z",
+   "since": "2026-11-08T08:29:35.679Z",
    "next": [],
    "effort": "high"
   },
@@ -351,23 +368,23 @@
   "run": [
    {
     "w": "Idris",
-    "k": "build",
-    "t": "Find why only Countdown draws on Jeremy's iPhone",
+    "k": "release",
+    "t": "Stop the upload refusing its own export folder",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-08T07:49:52.601Z",
+    "at": "2026-11-08T08:27:47.535Z",
     "o": "c",
-    "task": "T-3393"
+    "task": "T-3323"
    },
    {
     "w": "Odalys",
-    "k": "ops",
-    "t": "Retire the amendments file and the constitution",
+    "k": "tools",
+    "t": "Land the parked-work backlog faster",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-08T07:50:03.111Z",
+    "at": "2026-11-08T08:29:35.679Z",
     "o": "c",
-    "task": "T-3373"
+    "task": "T-3408"
    }
   ],
   "src": "plan",
@@ -461,7 +478,7 @@
    }
   ],
   "count": {
-   "next": 453,
+   "next": 454,
    "wait": 40,
    "blocked": 65,
    "you": 17
@@ -491,10 +508,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "3:26 AM",
+  "at": "3:29 AM",
   "why": "",
-  "at_iso": "2026-11-08T08:26:00+00:00",
+  "at_iso": "2026-11-08T08:29:00+00:00",
   "started": "2:49 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:26 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:29 AM ET</p></section>"
  }
 }

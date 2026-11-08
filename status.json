@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "at": "2026-11-08T23:11:15.138565+00:00",
+ "at": "2026-11-08T23:18:34.601032+00:00",
  "session": {
-  "active": true,
+  "active": false,
   "kind": "",
   "started": null
  },
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 586,
+  "runnable_count": 595,
   "blocked_count": 112
  },
  "meter": {
@@ -38,51 +38,25 @@
   "read_at": "2026-11-08T18:09:23.999007-05:00"
  },
  "ui": {
-  "week_pct": 0.0,
-  "five_hour_pct": 0.0,
+  "week_pct": 0.009,
+  "five_hour_pct": 0.051,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
   },
   "warn": false,
   "over": false,
-  "coverage": null,
+  "coverage": 1.0,
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-08T18:24:24-05:00",
  "personal": {
   "week_pct": 3.76,
   "usage_pct": 23.9,
   "work_pct": 71.4,
-  "read_at": "2026-11-08T23:11:00+00:00",
+  "read_at": "2026-11-08T23:20:00+00:00",
   "running": [
-   {
-    "lane": "b",
-    "task": "T-3116",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Record the waits the task timeline misses",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T17:54:43-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-3549",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Free Mac mini disk by moving data to the SSD",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T17:54:43-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
    {
     "lane": "b2",
     "task": "T-3695",
@@ -167,10 +141,10 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T18:11:00-05:00",
+  "at": "2026-11-08T18:20:00-05:00",
   "mode": null
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
  "pool": null,
  "lanes": [
@@ -255,6 +229,20 @@
     "o": "c"
    },
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Refresh a stale usage reading before holding...",
+    "s": "next",
+    "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Trace main-session outages and alert after...",
+    "s": "next",
+    "o": "i"
+   },
+   {
     "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
@@ -281,20 +269,6 @@
     "t": "Run the device test session for the widget...",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Find why only Countdown draws on Jeremy's iPhone",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Free Mac mini disk by moving data to the SSD",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
@@ -315,7 +289,7 @@
    }
   ],
   "count": {
-   "next": 586,
+   "next": 595,
    "wait": 45,
    "blocked": 67,
    "you": 19
@@ -323,26 +297,14 @@
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-08T22:46:16Z",
-  "seconds": 573.0
+  "sent": "2026-11-08T23:15:51Z",
+  "seconds": 142.0
  },
- "inbox": [
-  {
-   "id": "c6728454947",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Plan answers to the questions of..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -351,12 +313,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "6:11 PM",
+  "lanes": 2,
+  "total": 2,
+  "at": "6:20 PM",
   "why": "",
-  "at_iso": "2026-11-08T23:11:00+00:00",
+  "at_iso": "2026-11-08T23:20:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:11 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:20 PM ET</p></section>"
  }
 }

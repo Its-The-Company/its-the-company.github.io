@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "at": "2026-11-08T02:20:13.253973+00:00",
+ "at": "2026-11-08T02:24:59.098947+00:00",
  "session": {
-  "active": false,
+  "active": true,
   "kind": "",
   "started": null
  },
@@ -18,24 +18,24 @@
  "meter": {
   "five_hour": {
    "pct": 0.0,
-   "resets_at": "2026-11-08T02:50:00.389880+00:00",
+   "resets_at": "2026-11-08T02:49:59.753950+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-08T07:00:00.389897+00:00",
+   "resets_at": "2026-11-08T06:59:59.753973+00:00",
    "used_words": "of your weekly allowance used",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-08T07:00:00.390009+00:00",
+   "resets_at": "2026-11-08T06:59:59.754161+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-07T21:09:09.131074-05:00"
+  "read_at": "2026-11-07T21:24:24.578069-05:00"
  },
  "ui": {
   "week_pct": 0.883,
@@ -50,52 +50,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-07T21:33:58-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 87.06,
   "usage_pct": 44.1,
   "work_pct": 71.5,
-  "read_at": "2026-11-08T02:24:00+00:00",
+  "read_at": "2026-11-08T02:29:00+00:00",
   "running": [
-   {
-    "lane": "b",
-    "task": "T-3372",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Make main's site suites green after charter v3",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T20:46:37-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-3113",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Build a timeline feed for every picked-up task",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T20:46:37-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-3296",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Feed each task's steps into the live status",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T20:46:37-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
    {
     "lane": "b2",
     "task": "T-3367",
@@ -132,6 +93,42 @@
     "at": "2026-11-07T19:58:06-05:00",
     "n": "Jeremy",
     "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-3150",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Make the scoreboard's spend match the ledger",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T21:26:55-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-3169",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Build host's per-sub-suite traced key (OPT-113)",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T21:26:55-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-3127",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Find what sends main sessions a stray SIGTERM",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T21:26:55-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -153,16 +150,16 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 450
+   "free_gb": 448
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T21:24:00-05:00",
+   "at": "2026-11-07T21:28:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -172,9 +169,9 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-07T21:24:00-05:00"
+  "at": "2026-11-07T21:29:00-05:00"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
  "pool": null,
  "lanes": [
@@ -345,10 +342,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "9:24 PM",
+  "at": "9:29 PM",
   "why": "",
-  "at_iso": "2026-11-08T02:24:00+00:00",
+  "at_iso": "2026-11-08T02:29:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:24 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 9:29 PM ET</p></section>"
  }
 }

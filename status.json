@@ -1,70 +1,18 @@
 {
  "schema": 1,
- "at": "2026-11-08T09:13:00.998438+00:00",
+ "at": "2026-11-08T09:16:05.446877+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-08T02:49:03-05:00"
+  "kind": "",
+  "started": null
  },
- "workers": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-3408 land parked backlog faster",
-   "model": "opus",
-   "started": "2026-11-08T08:29:35.679Z",
-   "seconds": 2605,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3203 plain approval counts",
-   "model": "opus",
-   "started": "2026-11-08T09:03:17.004Z",
-   "seconds": 583,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x2",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[build] T-3393 land sensor-deadline fix",
-   "model": "opus",
-   "started": "2026-11-08T08:52:45.050Z",
-   "seconds": null,
-   "finished": "2026-11-08T09:02:38.593000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[release] T-3323 upload refuses its own export",
-   "model": "opus",
-   "started": "2026-11-08T08:27:47.535Z",
-   "seconds": null,
-   "finished": "2026-11-08T08:52:26.712000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3393 why only Countdown draws",
-   "model": "opus",
-   "started": "2026-11-08T07:49:52.601Z",
-   "seconds": null,
-   "finished": "2026-11-08T08:27:59.838000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-3373 retire amendments file",
-   "model": "opus",
-   "started": "2026-11-08T07:50:03.111Z",
-   "seconds": null,
-   "finished": "2026-11-08T08:27:29.154000+00:00"
-  }
- ],
+ "workers": [],
+ "who": "",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 508,
+  "runnable_count": 509,
   "blocked_count": 105
  },
  "meter": {
@@ -107,7 +55,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T09:13:00+00:00",
+  "read_at": "2026-11-08T09:16:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -221,25 +169,12 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T04:13:00-05:00"
+  "at": "2026-11-08T04:16:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Spread: 98% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 9 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
-  "n": 2,
-  "at": "2026-11-08T02:48:46.290137-05:00"
- },
+ "pool": null,
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-3408 land parked backlog faster",
-   "model": "opus",
-   "since": "2026-11-08T08:29:35.679Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -265,6 +200,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Maren",
    "state": "next",
    "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
@@ -282,29 +225,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Land the parked-work backlog faster",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T08:29:35.679Z",
-    "o": "c",
-    "task": "T-3408"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Count any plain approval as an approve",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T09:03:17.004Z",
-    "o": "i",
-    "task": "T-3203"
-   }
-  ],
-  "src": "plan",
+  "run": [],
   "open": [
    {
     "w": "Idris",
@@ -395,23 +316,10 @@
    }
   ],
   "count": {
-   "next": 508,
+   "next": 509,
    "wait": 40,
    "blocked": 65,
    "you": 17
-  },
-  "fin": {
-   "n": 2,
-   "rows": [
-    [
-     "T-2896",
-     "Decide how 1.0 offers the..."
-    ],
-    [
-     "T-3323",
-     "Stop the upload refusing its..."
-    ]
-   ]
   }
  },
  "qr": [],
@@ -424,7 +332,6 @@
   "lane_next",
   "queue_text",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -432,13 +339,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 0,
   "lanes": 2,
-  "total": 4,
-  "at": "4:13 AM",
+  "total": 2,
+  "at": "4:16 AM",
   "why": "",
-  "at_iso": "2026-11-08T09:13:00+00:00",
-  "started": "2:49 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:13 AM ET</p></section>"
+  "at_iso": "2026-11-08T09:16:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:16 AM ET</p></section>"
  }
 }

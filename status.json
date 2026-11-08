@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T17:47:56.237569+00:00",
+ "at": "2026-11-08T17:50:53.659140+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,34 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[tools] T-3659 classify the retry lines",
-   "model": "opus",
-   "started": "2026-11-08T17:20:27.775Z",
-   "seconds": 1648,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "idris",
    "task": "[build] T-2551 launcher tap-to-open path",
    "model": "opus",
    "started": "2026-11-08T17:39:24.071Z",
-   "seconds": 512,
+   "seconds": 689,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-3325 redo one Lock In switch",
+   "model": "opus",
+   "started": "2026-11-08T17:50:47.450Z",
+   "seconds": 6,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Idris",
+ "who": "Idris, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3659 classify the retry lines",
+   "model": "opus",
+   "started": "2026-11-08T17:20:27.775Z",
+   "seconds": null,
+   "finished": "2026-11-08T17:50:16.157000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[build] T-2551 launcher premades through the gate",
@@ -51,20 +59,12 @@
    "started": "2026-11-08T16:56:29.221Z",
    "seconds": null,
    "finished": "2026-11-08T17:15:59.188000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3589 idle-account alarm and fix",
-   "model": "opus",
-   "started": "2026-11-08T16:56:38.281Z",
-   "seconds": null,
-   "finished": "2026-11-08T17:05:34.918000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 576,
+  "runnable_count": 575,
   "blocked_count": 110
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 3.66,
   "usage_pct": 33.5,
   "work_pct": 78.9,
-  "read_at": "2026-11-08T17:47:00+00:00",
+  "read_at": "2026-11-08T17:51:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -384,7 +384,7 @@
   }
  ],
  "disk": {
-  "free_gb": 12,
+  "free_gb": 13,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -393,14 +393,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T12:42:00-05:00",
+   "at": "2026-11-08T12:49:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T12:47:00-05:00"
+  "at": "2026-11-08T12:51:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -411,20 +411,20 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-3659 classify the retry lines",
-   "model": "opus",
-   "since": "2026-11-08T17:20:27.775Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "running",
    "task": "[build] T-2551 launcher tap-to-open path",
    "model": "opus",
    "since": "2026-11-08T17:39:24.071Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[site] T-3325 redo one Lock In switch",
+   "model": "opus",
+   "since": "2026-11-08T17:50:47.450Z",
    "next": [],
    "effort": "high"
   },
@@ -464,16 +464,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Find what the extra retry lines are",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T17:20:27.775Z",
-    "o": "c",
-    "task": "T-3659"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Build all six app launcher premades",
@@ -482,6 +472,16 @@
     "at": "2026-11-08T17:39:24.071Z",
     "o": "c",
     "task": "T-2551"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Redo one Lock In switch for every account",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T17:50:47.450Z",
+    "o": "i",
+    "task": "T-3325"
    }
   ],
   "src": "plan",
@@ -560,6 +560,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "The retry list held lines for work that was already merged under a different fingerprint, so...",
+    "at": "2026-11-08T12:49:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The MacBook runner installed its update twice as planned, so it now reads approvals written in...",
     "at": "2026-11-08T12:31:00-05:00"
    },
@@ -567,22 +572,21 @@
     "w": "Odalys",
     "t": "The parked fix for Chat's 30 second refresh (it pushed people out of the box they were typing...",
     "at": "2026-11-08T12:25:00-05:00"
-   },
-   {
-    "w": "Maren+operator",
-    "t": "Four more app launcher designs that also show a clock, weather, transit times or a focus timer...",
-    "at": "2026-11-08T12:19:00-05:00"
    }
   ],
   "count": {
-   "next": 576,
+   "next": 575,
    "wait": 43,
    "blocked": 67,
    "you": 19
   },
   "fin": {
-   "n": 7,
+   "n": 8,
    "rows": [
+    [
+     "T-3659",
+     "Find what the extra retry..."
+    ],
     [
      "T-3359",
      "Check the MacBook runner..."
@@ -602,10 +606,6 @@
     [
      "T-3588",
      "Stop memory pressure from..."
-    ],
-    [
-     "T-3589",
-     "Fix and report when extra..."
     ]
    ]
   }
@@ -619,6 +619,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -632,10 +633,10 @@
   "main": 2,
   "lanes": 6,
   "total": 8,
-  "at": "12:47 PM",
+  "at": "12:51 PM",
   "why": "",
-  "at_iso": "2026-11-08T17:47:00+00:00",
+  "at_iso": "2026-11-08T17:51:00+00:00",
   "started": "11:55 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 12:47 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 12:51 PM ET</p></section>"
  }
 }

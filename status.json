@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T07:16:33.793919+00:00",
+ "at": "2026-11-08T07:19:38.977231+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,29 +9,38 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-3422 merge fixes impact order",
+   "task": "[tools] T-3419 speculative parallel landing",
    "model": "opus",
-   "started": "2026-11-08T07:11:20.100Z",
-   "seconds": 313,
+   "started": "2026-11-08T07:11:31.652Z",
+   "seconds": 487,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3419 speculative parallel landing",
+   "task": "[ops] T-3207 measure OPT-071 disk",
    "model": "opus",
-   "started": "2026-11-08T07:11:31.652Z",
-   "seconds": 302,
+   "started": "2026-11-08T07:18:34.136Z",
+   "seconds": 64,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2",
- "recent": [],
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3422 merge fixes impact order",
+   "model": "opus",
+   "started": "2026-11-08T07:11:20.100Z",
+   "seconds": null,
+   "finished": "2026-11-08T07:18:03.161000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 420,
+  "runnable_count": 421,
   "blocked_count": 106
  },
  "meter": {
@@ -74,7 +83,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T07:16:00+00:00",
+  "read_at": "2026-11-08T07:19:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -95,7 +104,7 @@
   }
  ],
  "disk": {
-  "free_gb": 16,
+  "free_gb": 15,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -104,7 +113,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T02:12:00-05:00",
+   "at": "2026-11-08T02:18:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -114,7 +123,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T02:16:00-05:00"
+  "at": "2026-11-08T02:19:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -127,9 +136,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-3422 merge fixes impact order",
+   "task": "[tools] T-3419 speculative parallel landing",
    "model": "opus",
-   "since": "2026-11-08T07:11:20.100Z",
+   "since": "2026-11-08T07:11:31.652Z",
    "next": [],
    "effort": "high"
   },
@@ -179,22 +188,22 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Hand out the highest-impact merge fixes first",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T07:11:20.100Z",
-    "o": "i",
-    "task": "T-3422"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Test several waiting lands at once, in parallel",
     "m": "opus",
     "e": "high",
     "at": "2026-11-08T07:11:31.652Z",
     "o": "c",
     "task": "T-3419"
+   },
+   {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Measure whether SSD scratch kept the disk free",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T07:18:34.136Z",
+    "o": "c",
+    "task": "T-3207"
    }
   ],
   "src": "plan",
@@ -272,6 +281,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Merge fixes on the merge-first list are now handed out and landed in order of expected effect...",
+    "at": "2026-11-08T02:17:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "The setting that blocked uploads to GitHub on Saturday afternoon is gone and was set by no...",
     "at": "2026-11-08T02:12:00-05:00"
@@ -280,15 +294,10 @@
     "w": "Operator",
     "t": "The charter v3 rule book and the 25 retired Investor instructions were saved in the company's...",
     "at": "2026-11-08T02:10:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "The 25 retired Investor instructions are back in the rulings log word for word, in the same...",
-    "at": "2026-11-08T02:10:00-05:00"
    }
   ],
   "count": {
-   "next": 420,
+   "next": 421,
    "wait": 40,
    "blocked": 66,
    "you": 16
@@ -314,10 +323,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "2:16 AM",
+  "at": "2:19 AM",
   "why": "",
-  "at_iso": "2026-11-08T07:16:00+00:00",
+  "at_iso": "2026-11-08T07:19:00+00:00",
   "started": "2:07 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:16 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:07 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:19 AM ET</p></section>"
  }
 }

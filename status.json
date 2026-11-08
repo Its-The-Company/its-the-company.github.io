@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T18:27:44.215393+00:00",
+ "at": "2026-11-08T18:30:48.892890+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[site] T-3325 redo one Lock In switch",
    "model": "opus",
    "started": "2026-11-08T17:50:47.450Z",
-   "seconds": 2216,
+   "seconds": 2401,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[review] T-3663 launcher tap handler review",
    "model": "opus",
    "started": "2026-11-08T18:22:25.478Z",
-   "seconds": 318,
+   "seconds": 503,
    "finished": null,
    "effort": "high"
   }
@@ -64,7 +64,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 578,
+  "runnable_count": 579,
   "blocked_count": 110
  },
  "meter": {
@@ -107,59 +107,33 @@
   "week_pct": 3.66,
   "usage_pct": 33.5,
   "work_pct": 78.9,
-  "read_at": "2026-11-08T18:27:00+00:00",
+  "read_at": "2026-11-08T18:30:00+00:00",
   "running": [
    {
-    "lane": "b",
-    "task": "T-3568",
+    "lane": "a2",
+    "task": "T-3441",
     "w": "Odalys",
     "k": "tools",
-    "t": "Send the gate's xc lines to the MacBook runner",
+    "t": "Retry finished work that could not be merged",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-08T12:16:24-05:00",
-    "n": "Jeremy",
+    "at": "2026-11-08T13:28:35-05:00",
+    "n": "Evan",
     "d": 1,
-    "src": "plan-b"
+    "src": "plan-a"
    },
    {
-    "lane": "b",
-    "task": "T-3128",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Make main's Simulator suite pass again",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T12:16:24-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-3445",
+    "lane": "a2",
+    "task": "T-3442",
     "w": "Odalys",
     "k": "tools",
-    "t": "Size the gate window from its own pass rate",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-08T12:16:24-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-3312",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Install the jobs loop and read its first 48 hours",
+    "t": "Retry finished work that could not be merged",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-08T12:16:24-05:00",
-    "n": "Jeremy",
+    "at": "2026-11-08T13:28:35-05:00",
+    "n": "Evan",
     "d": 1,
-    "src": "plan-b"
+    "src": "plan-a"
    },
    {
     "lane": "b2",
@@ -280,7 +254,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T13:27:00-05:00",
+  "at": "2026-11-08T13:30:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -456,7 +430,7 @@
    }
   ],
   "count": {
-   "next": 578,
+   "next": 579,
    "wait": 43,
    "blocked": 67,
    "you": 19
@@ -514,10 +488,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "1:27 PM",
+  "at": "1:30 PM",
   "why": "",
-  "at_iso": "2026-11-08T18:27:00+00:00",
+  "at_iso": "2026-11-08T18:30:00+00:00",
   "started": "11:55 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:27 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:30 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T12:35:17.855148+00:00",
+ "at": "2026-11-08T12:38:21.727929+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,42 @@
  },
  "workers": [
   {
+   "name": "odalys",
+   "task": "[tools] T-3435 chain gate runs, xc via runner",
+   "model": "opus",
+   "started": "2026-11-08T12:37:05.491Z",
+   "seconds": 76,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-3561 review sensor-timeout fix 16e32a86e",
+   "model": "opus",
+   "started": "2026-11-08T12:37:58.810Z",
+   "seconds": 22,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys, Pernille",
+ "recent": [
+  {
    "name": "idris",
    "task": "[build] T-3550 keep good widgets on sensor timeout",
    "model": "opus",
    "started": "2026-11-08T11:58:13.871Z",
-   "seconds": 2223,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-08T12:37:43.689000+00:00"
   },
   {
    "name": "pernille",
    "task": "[review] T-3411 review per-premade first-render tests",
    "model": "opus",
    "started": "2026-11-08T12:31:49.979Z",
-   "seconds": 207,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-08T12:36:47.700000+00:00"
+  },
   {
    "name": "idris",
    "task": "[test] T-3518 read MacBook job result",
@@ -43,28 +59,12 @@
    "started": "2026-11-08T11:38:21.085Z",
    "seconds": null,
    "finished": "2026-11-08T12:19:47.606000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-3477 review stalled-sensor fix 5914346c4",
-   "model": "opus",
-   "started": "2026-11-08T11:47:27.278Z",
-   "seconds": null,
-   "finished": "2026-11-08T11:57:55.712000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-3549 free Mac mini disk to SSD",
-   "model": "opus",
-   "started": "2026-11-08T11:38:13.766Z",
-   "seconds": null,
-   "finished": "2026-11-08T11:46:54.382000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 510,
+  "runnable_count": 513,
   "blocked_count": 108
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 3.33,
   "usage_pct": 54.9,
   "work_pct": 88.2,
-  "read_at": "2026-11-08T12:35:00+00:00",
+  "read_at": "2026-11-08T12:38:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -144,7 +144,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T07:35:00-05:00"
+  "at": "2026-11-08T07:38:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -155,35 +155,35 @@
  },
  "lanes": [
   {
-   "name": "Idris",
+   "name": "Odalys",
    "state": "running",
-   "task": "[build] T-3550 keep good widgets on sensor timeout",
+   "task": "[tools] T-3435 chain gate runs, xc via runner",
    "model": "opus",
-   "since": "2026-11-08T11:58:13.871Z",
+   "since": "2026-11-08T12:37:05.491Z",
    "next": [],
    "effort": "high"
   },
   {
    "name": "Pernille",
    "state": "running",
-   "task": "[review] T-3411 review per-premade first-render tests",
+   "task": "[review] T-3561 review sensor-timeout fix 16e32a86e",
    "model": "opus",
-   "since": "2026-11-08T12:31:49.979Z",
+   "since": "2026-11-08T12:37:58.810Z",
    "next": [],
    "effort": "high"
   },
   {
-   "name": "Ines",
+   "name": "Idris",
    "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
+   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Odalys",
+   "name": "Ines",
    "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -208,24 +208,24 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Keep good widgets when a sensor read times out",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Chain gate runs and send xc lines through the runner",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-08T11:58:13.871Z",
+    "at": "2026-11-08T12:37:05.491Z",
     "o": "c",
-    "task": "T-3550"
+    "task": "T-3435"
    },
    {
     "w": "Pernille",
     "k": "review",
-    "t": "Review the per-premade gallery and widget tests",
+    "t": "Review the sensor-timeout fix for three premades",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-08T12:31:49.979Z",
+    "at": "2026-11-08T12:37:58.810Z",
     "o": "c",
-    "task": "T-3411"
+    "task": "T-3561"
    }
   ],
   "src": "plan",
@@ -304,29 +304,37 @@
   "done": [
    {
     "w": "Idris",
+    "t": "When the phone's step counter or location is slow to answer, the Steps, Altitude and Distance...",
+    "at": "2026-11-08T07:37:00-05:00"
+   },
+   {
+    "w": "Pernille",
+    "t": "The new per-premade tests do catch a premade that crashes, but they miss three ways that only...",
+    "at": "2026-11-08T07:36:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "The sensor-stall fix's tests passed on the MacBook Simulator: 17 tests, none failed, so the fix...",
     "at": "2026-11-08T07:31:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Re-measured whether letting the landing robot skip unchanged host tests is worth it; the tracing...",
-    "at": "2026-11-08T07:12:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Holding work on named paths only kept landing conflicts low, 8 of 99 land attempts (0.08)...",
-    "at": "2026-11-08T07:12:00-05:00"
    }
   ],
   "count": {
-   "next": 510,
+   "next": 513,
    "wait": 40,
    "blocked": 68,
    "you": 19
   },
   "fin": {
-   "n": 3,
+   "n": 5,
    "rows": [
+    [
+     "T-3550",
+     "Keep good widgets when a..."
+    ],
+    [
+     "T-3411",
+     "Review the per-premade..."
+    ],
     [
      "T-3390",
      "Re-measure OPT-113 under the..."
@@ -351,6 +359,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -363,10 +372,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "7:35 AM",
+  "at": "7:38 AM",
   "why": "",
-  "at_iso": "2026-11-08T12:35:00+00:00",
+  "at_iso": "2026-11-08T12:38:00+00:00",
   "started": "6:37 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:35 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:38 AM ET</p></section>"
  }
 }

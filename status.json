@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T21:24:41.885898+00:00",
+ "at": "2026-11-08T21:27:46.066649+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,12 +12,21 @@
    "task": "[tools] T-3690 free internal disk now",
    "model": "opus",
    "started": "2026-11-08T21:16:08.750Z",
-   "seconds": 513,
+   "seconds": 697,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3691 proactive disk keeper",
+   "model": "opus",
+   "started": "2026-11-08T21:24:58.110Z",
+   "seconds": 167,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys",
+ "who": "Odalys x2",
  "recent": [
   {
    "name": "odalys",
@@ -98,7 +107,7 @@
   "week_pct": 3.73,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-08T21:24:00+00:00",
+  "read_at": "2026-11-08T21:27:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -119,29 +128,29 @@
   }
  ],
  "disk": {
-  "free_gb": 5.4,
+  "free_gb": 11,
   "gate": "closed",
   "ssd": {
    "mounted": true,
-   "free_gb": 273
+   "free_gb": 246
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T16:19:00-05:00",
+   "at": "2026-11-08T16:25:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T16:24:00-05:00",
+  "at": "2026-11-08T16:27:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Spread: 90% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 9 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
+  "why": "Spread: 89% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 9 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
   "n": 2,
   "at": "2026-11-08T15:20:28.191812-05:00"
  },
@@ -207,6 +216,16 @@
     "at": "2026-11-08T21:16:08.750Z",
     "o": "c",
     "task": "T-3690"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Keep the internal disk clear before it blocks work",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T21:24:58.110Z",
+    "o": "c",
+    "task": "T-3691"
    }
   ],
   "src": "plan",
@@ -350,13 +369,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 0,
-  "total": 1,
-  "at": "4:24 PM",
+  "total": 2,
+  "at": "4:27 PM",
   "why": "",
-  "at_iso": "2026-11-08T21:24:00+00:00",
+  "at_iso": "2026-11-08T21:27:00+00:00",
   "started": "3:20 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 3:20 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:24 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:20 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:27 PM ET</p></section>"
  }
 }

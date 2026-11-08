@@ -37,22 +37,20 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-2724: runtime sends frames_cut_at; RunDetail trim drops next to the cut, counts all. Open: ADR-007 says "outer end", Ines <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note.
 - T-2319 (c9d371621): stdlib_cut check reads the interpreter's inittab/_frozen/PyInit_ and fails closed; open: first Release archive must show Xcode's embed strip keeps the exported symbols.
-- T-2376 (4b123c9b1): Shortcut recipes in widgets/recipes/ (premade/*.py all ship as tiles); device pywidget.context = mode only. Open: T-2857 e2e.
 - T-3133/T-3142 (5051f1926): F1-F4 fixed; re-review PASS-with-fixes, M1/M2 = T-3146/47 (Idris). Mine: t1140 L4 open; detail names are UUIDs, so prune by mtime, not name.
 - T-3292 (9a7bc4c65): T-3289 PASS; T-3279 PASS w/ M1 = T-3298 (`.missing` also means unreadable/undecodable/folder gone). Runner J-20261107-1010 owed. Lesson: rename keeps mtime.
-- T-2551 (11-07, uncommitted in tree): 5 launcher premades in widgets/premade/launcher/ + tests/widgets/test_launchers.py; links pywidget://open?slot=<id>. Commit needs a green `main_gate.py check` (HEAD moves; each 540 s wait is costly); MAIN_GATE_SKIP commit refused by classifier. Dial left.
+- T-2551 (089904eda): six launchers unreleased. T-3663 (08f3ba930): Idris's tap path PASS w/ findings, M1/M2 = T-3666/67. Mine (L5): _launch.SLOT_RE `$` takes a trailing \n; fullmatch + test. Lesson: a WindowGroup with no handlesExternalEvents opens a new iPad window per URL.
 - Lesson: a file kept "until settled" needs a settle for every way the write can fail (folder gone), or it leaks.
 - T-3477 (7c7faa433): stall test must assert the stalled call was reached. T-3562 (afb32bf63): readings aware at source; review T-3571 Idris. Lesson: zsh never splits $P, so `main_gate check $P` checked HEAD and said "already verified"; pass paths via $(cat file).
 - T-3411 (3b8109b48): T-3364 tests PASS w/ fixes, T-3557..60 Idris. Lesson: a "draws" check is <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span> where the premade catches Exception into a notice; inject offered/gates, don't stub them.
-- T-3121 (cd0dd3591): ADR-009, https via URLSession + strip _ssl/_hashlib (8,266,336 B) awaits Ines/chair; follow-up T-3168 Idris. A <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s task line may exist only on main's live board (task_context reads the local one).
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## Lessons
-- 11-08 T-3575/77/3330, T-3576 (2cd4ab3a9) PASS w/ findings; T-3576 L1/L2 unlined, owed before T-0769.
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 
-- T-2690 (33763e9fb): upload may go once T-2702 (Idris lands 6beb56a49) closes. Lesson: real-binary checks without xcodebuild: `xcrun --sdk iphoneos swiftc -target arm64-apple-ios17.0`, then strip/codesign.
+- T-3107 (9df51f3dc): partial read of Jeremy's #227 export; [b] on #231 (3-day export, by 11-12); <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G3</span> premade = T-3657 (Idris). Lesson: board_tick note/block from a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> only queue in ops/lane-outbox (commit them); add writes main's board live.
+- Device CPython is 3.15.1, not 3.13. T-2896 (recipes in 1.0) with Idris+Ines.
 {% endraw %}
 
 

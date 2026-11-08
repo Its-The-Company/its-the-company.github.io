@@ -28,17 +28,48 @@ else if(on){b=document.createElement('span');b.className='lk-star on';b.setAttri
 if(b)p.appendChild(b)}
 function aria(c){var n=c&&c.querySelector('.lk-tn');if(n){n.setAttribute('role','button');n.tabIndex=0;n.setAttribute('aria-expanded',c.classList.contains('lk-open'))}}
 function key(c){return c.getAttribute('data-id')||((c.querySelector('.lk-tn')||{}).textContent||'')}
-function toggle(c){var k=key(c),on=!c.classList.contains('lk-open');c.classList.toggle('lk-open',on);if(on)O[k]=1;else delete O[k];aria(c)}
+function toggle(c){var k=key(c),on=!c.classList.contains('lk-open');c.classList.toggle('lk-open',on);if(on){O[k]=1;tree(c)}else delete O[k];aria(c)}
+// T-3316 (friesevan #41 c6709231564; redone as T-3434): each task's parents and children. data-lin is lineage.page_data:
+// n {id: [name, state]}, u {child: [parents]}, a {second lead ID: first}; G.d is the same edges the other way. walk() is
+// lineage.rows: each task once in full, a later meeting one row marked again, so a cycle ends. A relative with a card here
+// is a link to it (go); one with none is its name and a word, never a dead link. The tree is drawn when a card first
+// opens. Text goes in as textContent.
+var G={n:{},u:{},a:{},d:{}},J={},LS={q:'Queued',w:'Waiting',b:'Blocked',d:'Done',a:'Archived',c:'Cancelled',u:'Not on the board'},LMAX=40;
+try{var g0=JSON.parse(H.getAttribute('data-lin')||'{}');G.n=g0.n||{};G.u=g0.u||{};G.a=g0.a||{}}catch(e){}
+Object.keys(G.u).sort().forEach(function(c){G.u[c].forEach(function(p){(G.d[p]=G.d[p]||[]).push(c)})});
+function lid(i){i=String(i||'').replace(/\.\d+$/,'');return G.a[i]||i}
+function pl(n,w,e){return n?n+' '+w+(n===1?'':e):''}
+function lw(i){i=lid(i);return[pl((G.u[i]||[]).length,'parent','s'),pl((G.d[i]||[]).length,'child','ren')].filter(Boolean).join(' · ')}
+function badge(p,i){var w=lw(i);if(w)mk(p,'span','lk-lin',w)}
+function walk(i,g){var s={},o=[],t=[],n;s[i]=1;function push(x,d){(g[x]||[]).slice().reverse().forEach(function(y){t.push([y,d])})}push(i,1);
+while(t.length&&o.length<LMAX){n=t.pop();o.push([n[1],n[0],s[n[0]]?1:0]);if(!s[n[0]]){s[n[0]]=1;push(n[0],n[1]+1)}}
+if(t.length)while(t.length){n=t.pop();if(!s[n[0]]){s[n[0]]=1;push(n[0],0)}}
+o.left=Object.keys(s).length-1-o.filter(function(r){return !r[2]}).length;return o}
+function qcard(i){var q=document.getElementById('lk-q');return q?[].filter.call(q.children,function(c){return lid(c.getAttribute('data-id'))===i})[0]:null}
+function carded(i){return !!((S.lk.has&&S.lk.has(i))||qcard(i)||(A||[]).some(function(a){return a[0]===i}))}
+function qname(i){var c=qcard(i),a=(A||[]).filter(function(x){return x[0]===i})[0];return c?(c.querySelector('.lk-tn')||{}).textContent:a?a[2]:''}
+function lrow(ul,r,me){var t=r[1],li=mk(ul,'li'),go=!r[2]&&carded(t),n=G.n[t]||['','u'],e=mk(li,go?'a':'span');
+li.setAttribute('data-tid',t);li.setAttribute('data-d',r[0]);if(r[2])li.setAttribute('data-again','1');li.style.paddingLeft=(Math.min(r[0],5)-1)*14+'px';
+if(go){e.href='#lk-run';e.setAttribute('data-go',t)}mk(e,'span','idb',t);mk(e,'span','lk-tt',n[0]||qname(t)||'Name not recorded ('+t+')');
+if(r[2])mk(e,'span','lk-ts',t===me?'This task':'Shown above');else if(!go)mk(e,'span','lk-ts',LS[n[1]]||LS.u)}
+function tree(c){var i=lid(c.getAttribute('data-id')),o;if(!c.matches('.lk-run,.lk-q')||c.querySelector('.lk-tree')||!lw(i))return;o=mk(c,'div','lk-tree');
+[['up','Parents',G.u],['down','Children',G.d]].forEach(function(s){var rs=walk(i,s[2]),ul;if(!rs.length)return;mk(o,'h4','',s[1]);ul=mk(o,'ul');ul.setAttribute('data-way',s[0]);
+rs.forEach(function(r){lrow(ul,r,i)});if(rs.left>0)mk(ul,'li','lk-tm','+'+rs.left+' more on the board')})}
+function go(i){var c,n,b;if(Q&&inp){inp.value='';Q='';H.classList.remove('lk-searching');fire()}
+c=S.lk.run&&S.lk.run(i);if(!c){J[i]=1;queued();c=qcard(i);b=document.getElementById('lk-q-more');
+if(c&&c.classList.contains('lk-fold')&&b&&c.parentNode.classList.contains('lk-qshort'))b.click()}
+if(!c)return;if(!c.classList.contains('lk-open'))toggle(c);c.classList.add('lk-hit');setTimeout(function(){c.classList.remove('lk-hit')},2000);
+c.scrollIntoView({block:'center'});n=c.querySelector('.lk-tn');if(n)n.focus({preventScroll:true})}
 var A=null,pic={},fc={};[].forEach.call(document.querySelectorAll('.lk-team a'),function(a){var m=/cast\/([^/.]+)\.html/.exec(a.getAttribute('href')||''),g=a.querySelector('img');if(m&&g)pic[m[1]]=g.getAttribute('src')});
 try{fc=JSON.parse((document.getElementById('lk-run')||H).getAttribute('data-faces')||'{}')}catch(e){}
 function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;p.appendChild(e);return e}
 // a Queued row past the page's 30, from data-all ([id, number, name, worker, category]): drawn while it matches the search or is starred
 function qrow(a){var c=document.createElement('div'),p=fc[String(a[3]||'').toLowerCase()],g,t;c.className='lk-card lk-q lk-x';c.setAttribute('data-id',a[0]);c.setAttribute('data-n',a[1]);
 c.setAttribute('data-q',[a[2],a[0],a[3]].join(' '));mk(c,'span','lk-n',String(a[1]));if(p&&pic[p]){g=mk(c,'img');g.src=pic[p];g.alt='';g.width=g.height=24}else mk(c,'span').style.width='24px';
-t=mk(c,'span','t');mk(t,'b','lk-tn',a[2]);if(a[4]){g=mk(c,'span','lk-cat',a[4]);g.title='Category: '+a[4]}mk(c,'span','idb',a[0]);aria(c);return c}
+t=mk(c,'span','t');mk(t,'b','lk-tn',a[2]);badge(t,a[0]);if(a[4]){g=mk(c,'span','lk-cat',a[4]);g.title='Category: '+a[4]}mk(c,'span','idb',a[0]);aria(c);return c}
 function queued(){var q=document.getElementById('lk-q'),rows,mx,qb;if(!q)return;if(!A){A=[];try{A=JSON.parse(q.getAttribute('data-all')||'[]')}catch(e){}}
 [].slice.call(q.querySelectorAll('.lk-x')).forEach(function(c){q.removeChild(c)});
-A.forEach(function(a){if(okId(a[0])&&(F[a[0]]||(Q&&match([a[2],a[0],a[3]].join(' ')))))q.appendChild(qrow(a))});
+A.forEach(function(a){if(okId(a[0])&&(F[a[0]]||J[a[0]]||(Q&&match([a[2],a[0],a[3]].join(' ')))))q.appendChild(qrow(a))});
 rows=[].slice.call(q.children);mx=+q.getAttribute('data-max')||4;qb=document.getElementById('lk-q-more');
 if(qb&&/^Show \d+ more/.test(qb.textContent))qb.textContent='Show '+Math.max(0,rows.length-mx)+' more ▾';
 rows.sort(function(a,b){return (F[b.getAttribute('data-id')]?1:0)-(F[a.getAttribute('data-id')]?1:0)||(+a.getAttribute('data-n')-+b.getAttribute('data-n'))});
@@ -66,8 +97,10 @@ if(!r.ok)throw new Error(S.said(r)+(r.status===403||r.status===404?' (does the t
 function tap(id){var on=!F[id];if(on)F[id]=1;else delete F[id];fire();say('Saving the star on GitHub...');
 chain=chain.then(function(){return save(id,on)}).then(function(w){say(w==='same'?(on?'Already starred; nothing sent.':'Already unstarred; nothing sent.'):on?'Starred '+id+' for both of you. Chat gets a notice when it merges.':'Star taken off '+id+'.')},
 function(e){if(on)delete F[id];else F[id]=1;fire();say('Not saved: '+(e&&e.message?e.message:'network error')+'.')})}
-S.lk={fav:function(id){return !!F[id]},on:function(f){fn.push(f)},match:match,q:function(){return Q},star:star,open:function(k){return !!O[k]},aria:aria};
-H.addEventListener('click',function(e){var t=e.target,c;if(!t.closest||t.closest('button,a,input,summary,select,label'))return;c=t.closest(CARD);
+S.lk={fav:function(id){return !!F[id]},on:function(f){fn.push(f)},match:match,q:function(){return Q},star:star,open:function(k){return !!O[k]},aria:aria,id:lid,
+lin:function(c,i){badge(c,i);if(c.classList.contains('lk-open'))tree(c)}};
+H.addEventListener('click',function(e){var t=e.target,c,l=t.closest&&t.closest('a[data-go]');if(l){e.preventDefault();go(l.getAttribute('data-go'));return}
+if(!t.closest||t.closest('button,a,input,summary,select,label,.lk-tree'))return;c=t.closest(CARD);
 if(c&&H.contains(c)&&c.querySelector('.lk-tn'))toggle(c)});
 H.addEventListener('keydown',function(e){var t=e.target,c;if((e.key==='Enter'||e.key===' ')&&t.classList&&t.classList.contains('lk-tn')){c=t.closest(CARD);if(c){e.preventDefault();toggle(c)}}});
 [].forEach.call(H.querySelectorAll('.lk-tn'),function(n){aria(n.closest(CARD))});
@@ -136,7 +169,7 @@ t=mk(r,'span','t');mk(t,'b','lk-tn',x.t);m=mk(t,'span','',[(x.w||[]).filter(Bool
 if(x.a){m.appendChild(document.createTextNode(' '));sc=mk(m,'span','lk-tag'+(x.sr?' lk-src':''),x.a);if(x.sr)sc.title='Runs on: '+x.a}
 if(x.c){sc=mk(m,'span','lk-cat',x.c);sc.title='Category: '+x.c}
 rt=mk(r,'span','lk-rt');if(x.id)mk(rt,'span','idb',x.id);if(x.n)mk(rt,'span','lk-nt',x.n);if(K3){K3.star(r,x.id);K3.aria(c)}
-hist(c,x);sc=mk(c,'span','lk-ch lk-stc');mark(sc,x.s);sc.appendChild(document.createTextNode(LB[x.s]))}
+hist(c,x);sc=mk(c,'span','lk-ch lk-stc');mark(sc,x.s);sc.appendChild(document.createTextNode(LB[x.s]));if(K3)K3.lin(c,x.id)}
 function order(a,b){var d=ST.indexOf(a.s)-ST.indexOf(b.s),fa=K3&&K3.fav(a.id)?1:0,fb=K3&&K3.fav(b.id)?1:0;return (fb-fa)||(up?-d:d)||((b.min||0)-(a.min||0))}
 function hit(x){return !K3||K3.match([x.t,x.id,(x.w||[]).join(' '),LB[x.s],x.n,x.a].map(function(s){return s||''}).join(' '))}
 function render(){var flt=document.getElementById('lk-flt'),cnt={},v,mo,so,c;items.forEach(function(x){cnt[x.s]=(cnt[x.s]||0)+1});if(fl!=='all'&&!cnt[fl])fl='all';
@@ -167,10 +200,14 @@ m=r.at?Math.round((now-Date.parse(r.at))/6e4):NaN;u.push({id:id,t:nm(r.t||r.task
 a:rs||(mn?'Main':ln?'Account '+ln[1].toUpperCase():''),sr:rs?1:0,h:b.h,x:b.x,c:b.c||CT[id]||''})});
 (L.init||[]).forEach(function(x){if(x.s!=='coding'&&x.s!=='review'&&!seen[x.id||x.t]){seen[x.id||x.t]=1;u.push(x)}});  // T-3284 item 3
 items=u;render();wk=document.getElementById('lk-working');if(wk)wk.textContent=Object.keys(o).length+' working';idle(st);fin(st)}
+// T-3316: a tree's link to an In flight card shows the whole list, then hands back the card
+if(K3){K3.has=function(i){return items.some(function(x){return K3.id(x.id)===i})};K3.run=function(i){if(!K3.has(i))return null;fl='all';all=true;render();
+return [].filter.call(box.children,function(c){return K3.id(c.getAttribute('data-id'))===i})[0]||null}}
 render();if(K3)K3.on(render);if(S&&S.onStatus&&S.lane){S.onStatus.push(draw);if(S.status&&S.status())draw(S.status(),true)}});
-// T-2940: Queued (and T-3094 the Merge queue) folds behind a button at the top of its list: rows past data-max carry lk-fold; the one Lock In dropdown in Usage (main account, all lanes or
-// any subset) posts through lockin.js (S.lockSet: LOCK IN / UNLOCK on the Chat issue) and personal.js (S.laneLock: the lane's
-// own lock key, in the file the Lanes switches write). A token holder only; each send takes two taps, as every other Lock In button does.
+// T-2940: Queued (and T-3094 the Merge queue) folds behind a button at the top of its list: rows past data-max carry lk-fold.
+// T-3325 (redo of T-3191; friesevan #41 c6701941684, c6702049968): the one Lock In control in Usage sets every account, the
+// main one and each enabled lane, together: Spread, Lock In until midnight or Lock In until daily usage, posted through
+// lockin.js (S.lockSet: UNLOCK, LOCK IN or LOCK IN DAILY on the Chat issue). No per-lane choice. A token holder only; two taps.
 document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,d=document.getElementById('lk-lockmenu');
 function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;p.appendChild(e);return e}
 [['lk-q','lk-q-more'],['lk-mq','lk-mq-more'],['lk-pk','lk-pk-more']].forEach(function(k){var q=document.getElementById(k[0]),qb=document.getElementById(k[1]),qa=false,mx,n;if(!q||!qb)return;
@@ -178,19 +215,15 @@ mx=+q.getAttribute('data-max')||4;n=q.children.length;[].forEach.call(q.children
 function pq(){q.classList.toggle('lk-qshort',!qa);qb.hidden=n<=mx;qb.setAttribute('aria-expanded',qa);qb.textContent=qa?'Show fewer ▴':'Show '+(n-mx)+' more ▾'}
 qb.onclick=function(){qa=!qa;pq()};pq()});
 if(!d||!S||!S.getToken||!S.getToken())return;d.hidden=false;
-var box=d.querySelector('div'),arm=null,armT=0,tm,note;
-function build(){var p=document.getElementById('personal'),st=(p&&p.getAttribute('data-state')||'').split(' ').filter(Boolean),rows=[['All lanes','all'],['Main account','main']],cb={},b;
-st.forEach(function(x){var a=x.split(':');if(a[1]==='1'&&/^[a-z0-9]$/.test(a[0]))rows.push(['Account '+a[0].toUpperCase(),a[0]])});
-box.textContent='';box.className='lk-lm';
-rows.forEach(function(r){var l=mk(box,'label'),i=mk(l,'input');i.type='checkbox';cb[r[1]]=i;l.appendChild(document.createTextNode(r[0]));
-i.onchange=function(){if(r[1]==='all')Object.keys(cb).forEach(function(k){if(k!=='main')cb[k].checked=i.checked});arm=null}});
+var box=d.querySelector('div'),arm=null,armT=0,tm,note,bs=[];
+function mark(){var m=S.lockMode?S.lockMode():'';bs.forEach(function(x){x[0].setAttribute('aria-pressed',x[1]===m?'true':'false');x[0].classList.toggle('on',x[1]===m)})}
+function build(){var b;box.textContent='';box.className='lk-lm';bs=[];
+mk(box,'p','meta','One setting for every account: the main account and each lane. All go back to Spread at midnight.');
 b=mk(box,'div','lk-lb');note=mk(box,'small','meta');note.setAttribute('role','status');
-[['Lock In',true,'lk-lgo'],['Spread',false,'lk-lsp']].forEach(function(o){var bt=mk(b,'button','btn '+o[2],o[0]);bt.type='button';
-bt.onclick=function(){var t=Date.now(),ids=Object.keys(cb).filter(function(k){return k!=='all'&&k!=='main'&&cb[k].checked}),m=cb.main.checked;
-if(!m&&!ids.length){note.textContent='Pick the main account or a lane first.';return}
-if(arm!==o[1]){arm=o[1];armT=t;clearTimeout(tm);tm=setTimeout(function(){arm=null;note.textContent=''},5000);note.textContent='Tap again within 5 seconds to '+(o[1]?'lock in':'spread')+'.';return}
-if(t-armT<400)return;arm=null;clearTimeout(tm);note.textContent='Sending...';
-if(m&&S.lockSet)S.lockSet(o[1]);
-if(ids.length&&S.laneLock)S.laneLock(ids,o[1]).then(function(w){note.textContent=w},function(e){note.textContent='Not sent: '+(e&&e.message?e.message:'network error')+'.'});
-else note.textContent=ids.length?'Lanes are not available here.':'Sent. This changes when the company reads it, usually within 15 minutes.'}})}
+[['Spread','spread','lk-lsp','Each account spreads its week to finish a few hours before its own reset.'],['Lock In until midnight','midnight','lk-lgo','Every account at full speed until midnight, then Spread.'],['Lock In until daily usage','daily','lk-lgd','Every account at full speed until it has used its share of today (its remaining week split evenly over the days to its reset), then it holds until midnight.']].forEach(function(o){
+var bt=mk(b,'button','btn '+o[2],o[0]);bt.type='button';bt.title=o[3];bs.push([bt,o[1]]);
+bt.onclick=function(){var t=Date.now();
+if(arm!==o[1]){arm=o[1];armT=t;clearTimeout(tm);tm=setTimeout(function(){arm=null;note.textContent=''},5000);note.textContent='Tap again within 5 seconds for '+o[0]+', every account. '+o[3];return}
+if(t-armT<400)return;arm=null;clearTimeout(tm);note.textContent=S.lockSet?S.lockSet(o[1]):'Not available here.';mark()}});mark()}
+if(S.onStatus)S.onStatus.push(mark);
 d.addEventListener('toggle',function(){if(d.open)build()})});

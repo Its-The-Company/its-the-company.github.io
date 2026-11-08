@@ -99,6 +99,13 @@ sees only past rates. n = 9, so I did not tune it to these. Per-suite seconds ar
 time terms guesses. Next: log per-suite seconds and red in tests/run.sh, then re-read at n = 20 ordered red runs. Revert: remove the
 suite_order lines in the three callers.
 
+T-3490 re-measure (Odalys, 2026-11-08 12:10 ET): the log now has 42 red rows naming 2+ suites (was 9). `suite_order.py --replay`:
+seconds to first red, as given median 122, mean 264; ordered median 92, mean 209; better 21, same 16, worse 5. So the order
+is faster on the larger sample, and tools/suite_order.py stays in personal_land.sh, tests/run.sh and merge_queue.py. Caveats:
+per-suite seconds are still estimated from wall_s for these rows, and rows after 03:47 on 11-08 already ran in the ordered
+order, so "as given" is not independent. tests/run.sh now writes `suite_s` (each suite's own seconds) per row; re-read when
+20 red multi-suite rows carry it.
+
 ## Corrected scores (T-3573, Odalys, 2026-11-08)
 
 Why: the 08:19 tick (ops/metrics/merge_impact.jsonl row 4) ranked T-3300 first at 702.5 lands a day from OPT-121.

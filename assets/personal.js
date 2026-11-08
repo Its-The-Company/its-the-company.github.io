@@ -9,12 +9,11 @@ var WHAT = 'Each bar: this project, then other use.';
 function clean(n) { return typeof n === 'string' ? Array.from(n.replace(/\s+/g, ' ').replace(/\p{C}/gu, '').trim()).slice(0, MAX).join('').trim() : ''; }
 var accts = fixed.getAttribute('data-state').split(' ').map((x) => {
 var p = x.split(':');
-return { id: p[0], on: p[1] === '1' ? true : p[1] === '0' ? false : null, lock: p[2] === '1', pick: p[2] === '1', chose: 0, name: clean(fixed.getAttribute('data-name-' + p[0])), draft: null, edit: 0, arm: 0, armWhat: '', armWas: null, armT: 0, busy: 0, note: '' };
+return { id: p[0], on: p[1] === '1' ? true : p[1] === '0' ? false : null, name: clean(fixed.getAttribute('data-name-' + p[0])), draft: null, edit: 0, arm: 0, armWhat: '', armWas: null, armT: 0, busy: 0, note: '' };
 });
 function key(a) { return 'personal_lane_' + a.id; }
 function lockKey(a) { return key(a) + '_lock_in'; }
 function nameKey(a) { return key(a) + '_name'; }
-function mode(lock) { return lock ? 'Lock In' : 'Spread'; }
 function mk(p, t, c, x) { var e = p.appendChild(D.createElement(t)); if (c) e.className = c; if (x) e.textContent = x; return e; }
 function b64(t) { var b = new TextEncoder().encode(t), s = ''; for (var i = 0; i < b.length; i++) s += String.fromCharCode(b[i]); return btoa(s); }
 function unb64(s) { var a = atob(s.replace(/\n/g, '')), b = new Uint8Array(a.length); for (var i = 0; i < a.length; i++) b[i] = a.charCodeAt(i); return new TextDecoder().decode(b); }
@@ -32,9 +31,7 @@ return { data: o, sha: j.sha };
 }
 function take(o) {
 accts.forEach((a) => {
-a.on = o[key(a)] === true; a.lock = o[lockKey(a)] === true; a.name = clean(o[nameKey(a)]);
-if (a.on) a.chose = 0;
-if (!a.chose) a.pick = a.lock;
+a.on = o[key(a)] === true; a.name = clean(o[nameKey(a)]);
 });
 }
 function load() {
@@ -59,20 +56,14 @@ return done;
 });
 });
 }
-function power(a, on, lock) {
+function power(a, on) {
 return commit((o) => {
-if (on && o[key(a)] === true) return 'Already on, ' + mode(o[lockKey(a)] === true) + '; nothing sent.';
+if (on && o[key(a)] === true) return 'Already on; nothing sent.';
 if (!on && o[key(a)] !== true) return 'Already off; nothing sent.';
 o[key(a)] = on;
-if (on) o[lockKey(a)] = lock;
-}, a.id + (on ? ' on, ' + mode(lock) : ' off'), on ? 'Saved on GitHub. The company takes it at its next pull: usually within 15 minutes, longer while a session runs.'
+delete o[lockKey(a)];
+}, a.id + (on ? ' on' : ' off'), on ? 'Saved on GitHub. The company takes it at its next pull: usually within 15 minutes, longer while a session runs.'
 : 'Saved on GitHub. A running session stops within about 10 minutes.');
-}
-function setMode(a, lock) {
-return commit((o) => {
-if ((o[lockKey(a)] === true) === lock) return 'Already ' + mode(lock) + '; nothing sent.';
-o[lockKey(a)] = lock;
-}, a.id + ' ' + mode(lock), 'Saved on GitHub. A running session keeps its mode; the next session takes the new one.');
 }
 function setName(a, n) {
 return commit((o) => {
@@ -121,7 +112,7 @@ return load();
 }
 function tap(a, what) {
 if (a.busy || S.rejected()) return;
-var t = Date.now(), was = what === 'mode' ? a.lock : what === 'power' ? a.on : 0;
+var t = Date.now(), was = what === 'power' ? a.on : 0;
 if (!a.arm || a.armWhat !== what) {
 clearTimeout(a.armT); a.arm = t; a.armWhat = what; a.armWas = was; a.note = ''; draw();
 a.armT = setTimeout(() => { a.arm = 0; draw(); }, 5000);
@@ -130,7 +121,7 @@ return;
 if (t - a.arm < 400) return;
 a.arm = 0; clearTimeout(a.armT);
 if (was !== a.armWas) { draw(); return; }
-run(a, () => (what === 'mode' ? setMode(a, !a.lock) : what === 'lift' ? lift(a) : power(a, a.on === false, a.pick)));
+run(a, () => (what === 'lift' ? lift(a) : power(a, a.on === false)));
 }
 function saveName(a) {
 if (a.busy || S.rejected()) return;
@@ -175,34 +166,27 @@ x.count.textContent = accts.some((a) => a.on === null) ? ' Not known' : ' ' + ac
 x.rows.forEach((w) => {
 meters(w);
 var a = w.a, off = a.on === false, name = a.name || 'Account ' + a.id;
-var armP = a.arm && a.armWhat === 'power', armM = a.arm && a.armWhat === 'mode', armL = a.arm && a.armWhat === 'lift', next = mode(!a.lock), wait = a.busy ? 'true' : 'false';
+var armP = a.arm && a.armWhat === 'power', armL = a.arm && a.armWhat === 'lift', wait = a.busy ? 'true' : 'false';
 w.name.textContent = name;
-w.state.textContent = a.on === null ? ' Not known' : a.on ? ' On, ' + mode(a.lock) : ' Off';
+w.state.textContent = a.on === null ? ' Not known' : a.on ? ' On' : ' Off';
 w.btn.textContent = (armP ? 'Tap again to turn ' : 'Turn ') + (off ? 'on' : 'off');
-w.mode.textContent = (armM ? 'Tap again to switch to ' : 'Switch to ') + next;
 w.lift.textContent = armL ? 'Tap again to lift stop' : 'Lift stop';
-[w.btn, w.mode, w.lift, w.save, w.edit].forEach((b) => { b.setAttribute('aria-disabled', wait); });
+[w.btn, w.lift, w.save, w.edit].forEach((b) => { b.setAttribute('aria-disabled', wait); });
 w.btn.setAttribute('aria-label', w.btn.textContent + ': ' + name);
-w.mode.setAttribute('aria-label', w.mode.textContent + ': ' + name);
 w.lift.setAttribute('aria-label', w.lift.textContent + ': ' + name);
 w.save.setAttribute('aria-label', 'Save name for ' + name);
 w.edit.setAttribute('aria-label', 'Edit name: ' + name);
 w.edit.setAttribute('aria-expanded', a.edit ? 'true' : 'false');
 w.btn.hidden = no;
-w.sel.hidden = no || !off;
-w.mode.hidden = no || a.on !== true;
 w.lift.hidden = no;
 w.edit.hidden = no;
 var named = !no && a.edit;
 w.names.hidden = !named;
 w.names.style.display = named ? 'flex' : 'none';
-w.sel.value = a.pick ? 'lock' : 'spread';
-w.sel.setAttribute('aria-label', 'Mode for ' + name);
 w.input.setAttribute('aria-label', 'Name for ' + name);
 var v = a.draft === null ? a.name : a.draft;
 if (w.input.value !== v) w.input.value = v;
-w.note.textContent = a.note || (armP ? 'Tap again within 5 seconds to turn ' + (off ? 'on, ' + mode(a.pick) : 'off') + '.'
-: armM ? 'Tap again within 5 seconds to switch to ' + next + '.'
+w.note.textContent = a.note || (armP ? 'Tap again within 5 seconds to turn ' + (off ? 'on' : 'off') + '.'
 : armL ? 'Tap again within 5 seconds to post LANE CLEAR ' + a.id + ' on its newest “Personal account ' + a.id + ' stopped itself” issue (reopened if closed).' : '');
 });
 });
@@ -228,13 +212,7 @@ w.edit = mk(row, 'button', 'btn cv-pedit', 'Edit'); w.edit.type = 'button'; w.ed
 w.edit.onclick = () => { if (a.busy || S.rejected()) return; a.edit = a.edit ? 0 : 1; a.draft = null; draw(); if (a.edit) w.input.focus(); };
 w.m5 = bar(row); w.mw = bar(row);
 w.read = mk(row, 'span', 'cv-sub'); w.read.style.display = 'block';
-w.sel = mk(row, 'select', 'field'); w.sel.style.width = 'auto';
-[['spread', 'Spread'], ['lock', 'Lock In']].forEach((o) => { mk(w.sel, 'option', null, o[1]).value = o[0]; });
-w.sel.onchange = () => { a.pick = w.sel.value === 'lock'; a.chose = 1; a.arm = 0; clearTimeout(a.armT); draw(); };
-mk(row, 'span', null, ' ');
 w.btn = mk(row, 'button', 'btn cv-ppower'); w.btn.type = 'button'; w.btn.onclick = () => tap(a, 'power'); w.btn.onkeydown = held;
-mk(row, 'span', null, ' ');
-w.mode = mk(row, 'button', 'btn cv-pmode'); w.mode.type = 'button'; w.mode.onclick = () => tap(a, 'mode'); w.mode.onkeydown = held;
 mk(row, 'span', null, ' ');
 w.lift = mk(row, 'button', 'btn cv-plift'); w.lift.type = 'button'; w.lift.onclick = () => tap(a, 'lift'); w.lift.onkeydown = held;
 w.names = mk(row, 'span'); w.names.style.gap = '8px'; w.names.style.marginTop = '8px'; w.names.style.flexWrap = 'wrap';
@@ -249,11 +227,6 @@ return w;
 boxes.push(x); draw();
 }
 S.endTile = mount;
-S.laneLock = (ids, lock) => commit((o) => {
-var c = 0;
-ids.forEach((i) => { var k = 'personal_lane_' + i + '_lock_in'; if ((o[k] === true) !== lock) { o[k] = lock; c = 1; } });
-if (!c) return 'Already ' + mode(lock) + '; nothing sent.';
-}, ids.join(', ') + ' ' + mode(lock), 'Saved on GitHub. A running session keeps its mode; the next session takes the new one.');
 [].slice.call(D.querySelectorAll('.cv-glance')).forEach((g) => { if (!g.querySelector('.cv-personal')) mount(g); });
 if (S.onReject) S.onReject.push(draw);
 if (S.onStatus) S.onStatus.push(draw);

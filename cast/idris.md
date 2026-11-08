@@ -34,16 +34,9 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 
 ## Open (mine)
 
-- AgeLine: T-1910/1911/1946 6edcfd497; review T-1983 F1-F3 fixed e573b6450 (t1793 56/56). Left: T-1440 must pass one `now` to face rule, drawnAt, line (noted).
-- Lesson T-1946/T-2011: NSTimeZone.default moves Calendar().timeZone, not TimeZone.current; for .current set TZ + NSTimeZone.resetSystemTimeZone(). Assert the fixture moved.
-
-- T-0675 item 7 slice 2026-11-03 (dd26184c2): app+extension privacy manifests fixed (app was failing the Release scan). Open: Swift-half review has no task (asked Ines); privacy_scan wired to no build.
-- Lesson: a flag compiled out of Release hides its required-reason APIs from the binary scan; test the sources each target compiles.
-
 - Lesson T-2016: tools/xc_mutants.py plants each old behaviour back as the red record; a timing test needs margins both sides of the constant.
 - Lesson T-1851/T-3550: zsh never splits `$F`; pass xc_file_tests filters and main_gate paths as ${=F}. "checking 0 file(s)" = gate ran HEAD, not my change. Local xc.sh after others' commits: `xcodegen generate` first (xcodeproj is ignored, goes stale).
 
-- T-2020 22b1a3176 (two main reds; review T-2038 Pernille). Lesson: a schema row landing before its renderer turns the drawn-set test red; exempt by equality naming the drawing task, never by subtraction.
 - T-0656 2026-11-04: slice 1 <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> untested in company-scratch/T-0656-idris (EditorTooling, tests, patch); board noted. Freeze passed: <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line for 1.1.
 - Lesson T-0656: start the build first, before writing code; pgrep xcodebuild. A held lock ate 30 min and the session.
 
@@ -58,10 +51,16 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 
 - T-3574 build 4 uploaded 11-08 10:28 from d3d39da37 (ledger d0138f6e4 unpushed). T-1932 bdbdf8d39/447500fdf on origin, unreviewed: next build lists them. Lesson: `git log origin/main..HEAD` before any push (shared main).
 
+- T-2551 18e7e6118 11-08: launcher tap path (LauncherSlots, LauncherTapHandling, docs/design/launcher/tap-path.md). Open: review, launcher editor, #192. Lesson: host URL(string:) refuses what iOS 17+ encodes; rule it in code, test it alone.
+
+- T-3666 0eae5043f 11-08: set-up sheet via UIKit top-most presenter (M1 red->green on iPhone), L1-L3 in. Needs review. T-3667 patch parked in company-scratch/T-3666-idris; needs a Debug-registered scheme or another way to deliver a URL for the iPad 0/1/2-window check.
+- Lesson T-3666: SwiftUI queues a root .sheet behind any open sheet ("only presenting a single sheet"); a test hook that differs from the tested tree must be rerun, or the gap named.
+
 ## Lessons
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
-- Lesson T-3393: never `git stash` in the shared tree (others' autostash sits on top; an intent-to-add file breaks push/pop). Test old code via PW_RUNTIME_DIR + git archive.
+- T-3279 slice 2 11-08 038d81d09+04688a717 (personal/a3, unlanded): countdown+habits first renders bundled in appex. Open: review, Simulator check before first open, Maren <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>.
+- Lesson T-3279: a new test file after `xcodegen generate` is not in the run; grep its class in the log before counting it.
 {% endraw %}
 
 

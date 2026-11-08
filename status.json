@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T08:32:45.137785+00:00",
+ "at": "2026-11-08T08:34:20.981897+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[release] T-3323 upload refuses its own export",
    "model": "opus",
    "started": "2026-11-08T08:27:47.535Z",
-   "seconds": 297,
+   "seconds": 393,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-3408 land parked backlog faster",
    "model": "opus",
    "started": "2026-11-08T08:29:35.679Z",
-   "seconds": 189,
+   "seconds": 285,
    "finished": null,
    "effort": "high"
   }
@@ -48,7 +48,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 454,
+  "runnable_count": 457,
   "blocked_count": 105
  },
  "meter": {
@@ -91,7 +91,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T08:32:00+00:00",
+  "read_at": "2026-11-08T08:36:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -115,6 +115,7 @@
     "e": "high",
     "at": "2026-11-08T03:24:41-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -284,7 +285,7 @@
   }
  ],
  "disk": {
-  "free_gb": 7.7,
+  "free_gb": 8.4,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -292,8 +293,8 @@
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
-   "ok": false,
-   "at": "2026-11-08T03:25:00-05:00",
+   "ok": true,
+   "at": "2026-11-08T03:35:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -303,7 +304,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T03:32:00-05:00"
+  "at": "2026-11-08T03:36:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -478,7 +479,7 @@
    }
   ],
   "count": {
-   "next": 454,
+   "next": 457,
    "wait": 40,
    "blocked": 65,
    "you": 17
@@ -508,10 +509,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "3:32 AM",
+  "at": "3:36 AM",
   "why": "",
-  "at_iso": "2026-11-08T08:32:00+00:00",
+  "at_iso": "2026-11-08T08:36:00+00:00",
   "started": "2:49 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:32 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:36 AM ET</p></section>"
  }
 }

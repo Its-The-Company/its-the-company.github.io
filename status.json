@@ -1,14 +1,66 @@
 {
  "schema": 1,
- "at": "2026-11-08T13:05:58.436310+00:00",
+ "at": "2026-11-08T13:09:01.268973+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-08T06:37:33-05:00"
  },
- "workers": [],
- "who": "",
- "recent": [],
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3435 chain gate runs, xc via runner",
+   "model": "opus",
+   "started": "2026-11-08T12:37:05.491Z",
+   "seconds": 1915,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-3562 aware device reading times at source",
+   "model": "opus",
+   "started": "2026-11-08T12:46:28.248Z",
+   "seconds": 1353,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys, Pernille",
+ "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-3561 review sensor-timeout fix 16e32a86e",
+   "model": "opus",
+   "started": "2026-11-08T12:37:58.810Z",
+   "seconds": null,
+   "finished": "2026-11-08T12:46:13.831000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-3550 keep good widgets on sensor timeout",
+   "model": "opus",
+   "started": "2026-11-08T11:58:13.871Z",
+   "seconds": null,
+   "finished": "2026-11-08T12:37:43.689000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-3411 review per-premade first-render tests",
+   "model": "opus",
+   "started": "2026-11-08T12:31:49.979Z",
+   "seconds": null,
+   "finished": "2026-11-08T12:36:47.700000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[test] T-3518 read MacBook job result",
+   "model": "sonnet",
+   "started": "2026-11-08T12:20:07.733Z",
+   "seconds": null,
+   "finished": "2026-11-08T12:31:34.736000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -55,7 +107,7 @@
   "week_pct": 3.33,
   "usage_pct": 54.9,
   "work_pct": 88.2,
-  "read_at": "2026-11-08T13:05:00+00:00",
+  "read_at": "2026-11-08T13:09:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -92,12 +144,34 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T08:05:00-05:00"
+  "at": "2026-11-08T08:09:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: 96% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 102 of 117 lands failed in 3 hours (3 red); 11 of 29 finished tasks were...",
+  "n": 2,
+  "at": "2026-11-08T06:37:21.265325-05:00"
+ },
  "lanes": [
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-3435 chain gate runs, xc via runner",
+   "model": "opus",
+   "since": "2026-11-08T12:37:05.491Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[build] T-3562 aware device reading times at source",
+   "model": "opus",
+   "since": "2026-11-08T12:46:28.248Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Idris",
    "state": "next",
@@ -110,22 +184,6 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -148,7 +206,29 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Chain gate runs and send xc lines through the runner",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T12:37:05.491Z",
+    "o": "c",
+    "task": "T-3435"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Make device readings carry a time zone",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T12:46:28.248Z",
+    "o": "c",
+    "task": "T-3562"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -243,18 +323,49 @@
    "wait": 41,
    "blocked": 66,
    "you": 18
+  },
+  "fin": {
+   "n": 6,
+   "rows": [
+    [
+     "T-3561",
+     "Review the sensor-timeout..."
+    ],
+    [
+     "T-3550",
+     "Keep good widgets when a..."
+    ],
+    [
+     "T-3411",
+     "Review the per-premade..."
+    ],
+    [
+     "T-3390",
+     "Re-measure OPT-113 under the..."
+    ],
+    [
+     "T-3449",
+     "Run the suites likeliest to..."
+    ],
+    [
+     "T-3477",
+     "Review the stalled-sensor..."
+    ]
+   ]
   }
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-08T12:56:53Z",
-  "seconds": 46.0
+  "sent": "2026-11-08T13:06:55Z",
+  "seconds": 54.0
  },
  "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -262,13 +373,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 0,
-  "total": 0,
-  "at": "8:05 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-08T13:05:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:05 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 2,
+  "at": "8:09 AM",
+  "why": "",
+  "at_iso": "2026-11-08T13:09:00+00:00",
+  "started": "6:37 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:09 AM ET</p></section>"
  }
 }

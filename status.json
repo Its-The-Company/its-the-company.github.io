@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T07:37:52.090844+00:00",
+ "at": "2026-11-08T07:45:24.694307+00:00",
  "session": {
   "active": true,
   "kind": "",
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 415,
+  "runnable_count": 416,
   "blocked_count": 104
  },
  "meter": {
@@ -55,8 +55,93 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T07:37:00+00:00",
-  "running": []
+  "read_at": "2026-11-08T07:46:00+00:00",
+  "running": [
+   {
+    "lane": "b2",
+    "task": "T-3380",
+    "w": "Maren",
+    "k": "design",
+    "t": "Check the look of In flight steps and list boxes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T02:45:29-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-2629",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Finish the prompt alert checks once the suite is green",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T02:45:29-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-3411",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review the per-premade gallery and widget tests",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T02:45:29-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-2056",
+    "w": "Idris",
+    "k": "test",
+    "t": "Add tests for the end of a run",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T02:45:29-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-3280",
+    "w": "Idris",
+    "k": "test",
+    "t": "Test the placed widget path in the premade suite again",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T02:46:06-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-3248",
+    "w": "Idris",
+    "k": "build",
+    "t": "Say what each task notification is about",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T02:46:06-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-2896",
+    "w": "Idris",
+    "k": "build",
+    "t": "Decide how 1.0 offers the three Shortcut recipes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T02:46:06-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -85,7 +170,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T02:34:00-05:00",
+   "at": "2026-11-08T02:40:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -95,7 +180,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T02:37:00-05:00"
+  "at": "2026-11-08T02:46:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -227,22 +312,22 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "The finished-task count now sits beside the In flight heading on Home and the finished tasks are...",
-    "at": "2026-11-08T02:37:00-05:00"
+    "t": "An Xcode run whose log goes silent for 30 minutes before any result now ends itself and frees...",
+    "at": "2026-11-08T02:40:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "Home now shows how many tasks were finished this session right beside the In flight heading,...",
-    "at": "2026-11-08T02:37:00-05:00"
+    "t": "Waiting work is now tested several pieces at once, each on top of the ones ahead of it; a piece...",
+    "at": "2026-11-08T02:39:00-05:00"
    },
    {
-    "w": "Wrenna+odalys",
-    "t": "Apple's own reasons data confirms the three privacy reason codes our Python framework declares,...",
-    "at": "2026-11-08T02:34:00-05:00"
+    "w": "Odalys",
+    "t": "The merge-queue test's check of how the supervisor starts the queue now expects both starts,...",
+    "at": "2026-11-08T02:39:00-05:00"
    }
   ],
   "count": {
-   "next": 415,
+   "next": 416,
    "wait": 40,
    "blocked": 64,
    "you": 16
@@ -266,12 +351,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "2:37 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-08T07:37:00+00:00",
+  "lanes": 2,
+  "total": 2,
+  "at": "2:46 AM",
+  "why": "",
+  "at_iso": "2026-11-08T07:46:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:37 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:46 AM ET</p></section>"
  }
 }

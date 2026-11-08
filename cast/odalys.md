@@ -52,12 +52,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-3284 1e59212bf: In flight built (+Evan c6708949111: bars everywhere, Merge testing in both panels). Left: done count (T-3190), Coding/test minutes (T-3113), stopped rows (no record).
 
+- T-3422 e6252697e: merge-first in impact order (merge_first.py score_map/rank, ops/metrics/merge_impact.jsonl). Shares are guesses: Spearman read at n=10 after-reads. Runner still a set. merge_queue_test supervisor row red (T-3301 moved the queue).
+
+- T-3419 2cc7cd8d1: speculative gate (merge_queue.py --gate, personal_land.sh spec, ops/land_spec.json). OPT-121 read 11-15 or n=40 gate trains. Left (no board line, title refused): chain runs, xc via runner_queue, spec_kick row.
+
 ## Lessons
-- An open board line with work on main often has its tick on a parked branch: scan records first.
 - Older notes, task by task: archive.md (nothing is deleted; tools/memory_archive.py runs at session close, T-3134).
-- Lesson: a red's board commit moves main, so whole-tree keys rarely match after a red; content keys beat tip keys.
-- Lesson: the token view reads the trimmed COMPANY_STATUS variable, not live.json; check fit() before blaming the data.
-- A tick step runs only between sessions; read a record's real cadence before setting a window's n (T-3069: hourly was 0.48/h).
 - T-3301 1e8fde968: tools/jobs_loop.py (13 jobs, mid-session sync); tick skips a job only on fresh heartbeat. Not live until T-3312 installs it. Rest T-3313..T-3315.
 {% endraw %}
 

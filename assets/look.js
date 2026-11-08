@@ -154,12 +154,17 @@ if(so)so.onclick=function(){up=!up;render()};['lk-run-more','lk-run-more-top'].f
 // T-2833: the idle alarm (no work session for 15+ minutes while work is allowed) follows every status too.
 function idle(st){var q=st.idle,sf=document.getElementById('lk-sf'),ie=document.getElementById('lk-idle');if(sf&&!ie){ie=document.createElement('p');ie.id='lk-idle';ie.className='meta lk-idle';sf.insertBefore(ie,sf.firstChild)}
 if(ie){if(q&&q.why&&q.since){var mn=Math.max(0,Math.round((Date.now()-Date.parse(q.since))/6e4));ie.textContent='No work session for '+(mn>=60?Math.floor(mn/60)+' h '+(mn%60)+' m':mn+' min')+' while work is allowed: '+q.why+'.'+(q.healed&&q.healed.length?' Done: '+q.healed.join('; ')+'.':'');ie.hidden=false}else ie.hidden=true}}
+// T-3190: the tasks finished this session, from each status (Home is built far less often than a status is written)
+function fin(st){var d=(st.session||{}).active?(st.tasks||{}).fin:null,e=document.getElementById('lk-dn'),b=document.getElementById('lk-fin'),u=document.getElementById('lk-fin-l'),m=document.getElementById('lk-fin-m'),r=d&&d.rows||[],x=d?d.n-r.length:0;
+if(e){e.hidden=!d;if(d)e.querySelector('b').textContent=d.n}if(!b||!u)return;b.hidden=!r.length;u.textContent='';
+r.forEach(function(a){var li=mk(u,'li');mk(li,'span','idb',a[0]);li.appendChild(document.createTextNode(' '+(nm(a[1])||nm((L.nm||{})[a[0]])||'Name not recorded')))});
+if(m){m.hidden=x<1;m.textContent='and '+x+' earlier'}}
 function draw(st,isPub){var ml=S.lane.main(st,isPub),l=ml.concat(S.lane.rows(st).filter(function(r){return!r.d})),seen={},u=[],now=Date.now(),o={},wk,ms=sw((st.tasks||{}).src);
 l.forEach(function(r){var t=String(r.t||r.task||''),id=r.task||(t.match(/\bT-\d+/)||[''])[0],k=id||nm(t),s=(L.st||{})[id],m,b=IN[id]||{},ln=/^([ab])\d*$/.exec(r.lane||''),mn=ml.indexOf(r)>=0,rs=mn?ms:sw(r.src||(ln?'plan-'+ln[1]:''),r.n);if(s&&s[0]==='parked'&&r.at&&Date.parse(r.at)>s[2])s=[r.k==='review'?'review':'coding','Fix after a failed merge'];if(r.w)o[String(r.w).toLowerCase()]=1;if(!k||seen[k])return;seen[k]=1;
 m=r.at?Math.round((now-Date.parse(r.at))/6e4):NaN;u.push({id:id,t:nm(r.t||r.task)||nm((L.nm||{})[id])||'Name not recorded',w:[r.w],m:r.m,min:m>=0?m:-1,s:s?s[0]:r.k==='review'?'review':'coding',n:s?s[1]:'',
 a:rs||(mn?'Main':ln?'Account '+ln[1].toUpperCase():''),sr:rs?1:0,h:b.h,x:b.x})});
 (L.init||[]).forEach(function(x){if(x.s!=='coding'&&x.s!=='review'&&!seen[x.id||x.t]){seen[x.id||x.t]=1;u.push(x)}});  // T-3284 item 3
-items=u;render();wk=document.getElementById('lk-working');if(wk)wk.textContent=Object.keys(o).length+' working';idle(st)}
+items=u;render();wk=document.getElementById('lk-working');if(wk)wk.textContent=Object.keys(o).length+' working';idle(st);fin(st)}
 render();if(K3)K3.on(render);if(S&&S.onStatus&&S.lane){S.onStatus.push(draw);if(S.status&&S.status())draw(S.status(),true)}});
 // T-2940: Queued (and T-3094 the Merge queue) folds behind a button at the top of its list: rows past data-max carry lk-fold; the one Lock In dropdown in Usage (main account, all lanes or
 // any subset) posts through lockin.js (S.lockSet: LOCK IN / UNLOCK on the Chat issue) and personal.js (S.laneLock: the lane's

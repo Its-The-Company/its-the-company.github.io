@@ -318,15 +318,27 @@ var grip = el('div', 'cv-grip'), g0 = null, g0t = 0;
 attr(grip, 'aria-hidden', 'true'); mk(grip, 'span', 'cv-grip-bar');
 function gy(e) { var t = (e.touches && e.touches[0]) || (e.changedTouches && e.changedTouches[0]); return t ? t.clientY : 0; }
 function gripTo(y) { dock.style.transform = y ? 'translateY(' + y + 'px)' : ''; }
-on(grip, 'touchstart', (e) => { g0 = gy(e); g0t = Date.now(); dc(' cv-dragging'); });
-on(grip, 'touchmove', (e) => { if (g0 !== null) gripTo(dragVerdict(gy(e) - g0, 1).y); });
+var gx = 0, gOn = false, gSc = null;
+function scr(t) { while (t && t !== dock) { if (t.scrollHeight > t.clientHeight + 1 && /auto|scroll/.test((W.getComputedStyle(t) || {}).overflowY || '')) return t; t = t.parentNode; } return null; }
+function tp(e) { var t = (e.touches && e.touches[0]) || (e.changedTouches && e.changedTouches[0]); return t ? t.clientX : 0; }
 function gripEnd(e, cancel) {
 if (g0 === null) return;
-var v = dragVerdict(gy(e) - g0, Date.now() - g0t); g0 = null; dc();
-if (v.hide && !cancel) { gripTo(0); doHide(); } else gripTo(0);
+var v = dragVerdict(gy(e) - g0, Date.now() - g0t), was = gOn; g0 = null; gOn = false; gSc = null; dc();
+if (was && v.hide && !cancel) { gripTo(0); doHide(); } else gripTo(0);
 }
-on(grip, 'touchend', (e) => { gripEnd(e, false); });
-on(grip, 'touchcancel', (e) => { gripEnd(e, true); });
+dock.addEventListener('touchstart', (e) => { if (!isOpen || (e.touches && e.touches.length > 1)) { g0 = null; return; } g0 = gy(e); gx = tp(e); g0t = Date.now(); gOn = false; gSc = scr(e.target); if (gSc && gSc.scrollTop > 0) g0 = null; }, { passive: true });
+dock.addEventListener('touchmove', (e) => {
+if (g0 === null) return;
+var dy = gy(e) - g0, dx = tp(e) - gx;
+if (!gOn) {
+if (dy < 8 || dy < Math.abs(dx)) { if (dy < -8 || (Math.abs(dx) > 8 && Math.abs(dx) > dy)) g0 = null; return; }
+gOn = true; dc(' cv-dragging');
+}
+if (e.cancelable) e.preventDefault();
+gripTo(dragVerdict(dy, 1).y);
+}, { passive: false });
+on(dock, 'touchend', (e) => { gripEnd(e, false); });
+on(dock, 'touchcancel', (e) => { gripEnd(e, true); });
 function drawDock() {
 dock.textContent = ''; dock.hidden = false;
 if (!composerOn) { mk(dock, 'p', 'muted', 'Sending is off.'); return; }

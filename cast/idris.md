@@ -33,7 +33,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 
 ## Open (mine)
-- T-3106: build-3 bump 377d22cf8 must be pushed before upload (upload.sh wants HEAD on origin/main). Gate build proven.
+- T-3106 done 11-07: 0.1 (3) uploaded, cdd8cb483. Investors confirm internal-only. T-3323 still owed.
+- Lesson T-3106: --out outside the clone keeps upload.sh's dirty check. A cold archive takes 22 min, not 4.
 
 - T-2458 5bd8e7908: ProPaywall compiles, suite green (free.all test). Left: Pro/Settings shots, T-2372 key wiring, RETIRING delete. Local run: 13 ProStoreTests StoreKit 30 s timeouts + 2 "Updated" + ExtensionBridge flag red, not mine; recheck on runner.
 
@@ -60,7 +61,6 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - Lesson T-1404: one Bash call is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
 
 ## Lessons
-- T-3298 11-07: M1 fix UNCOMMITTED (+patch scratch T-3298-idris); gate job ...1023-land-m-265a18 waits on push; rerun main_gate check, commit. L4 open.
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
 - Lesson T-3298: pre-commit main_gate refuses product commits without a MacBook verdict; run main_gate.py check first. PreviewQueueTests forbids naming tree.json outside its list: pass the URL in.

@@ -1,18 +1,61 @@
 {
  "schema": 1,
- "at": "2026-11-08T18:49:06.279645+00:00",
+ "at": "2026-11-08T18:52:13.058194+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-08T11:55:50-05:00"
  },
- "workers": [],
- "who": "",
- "recent": [],
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[build] T-3666 T-3667 launcher sheet and iPad windows",
+   "model": "opus",
+   "started": "2026-11-08T18:32:17.345Z",
+   "seconds": 1195,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[site] T-3325 redo one Lock In switch",
+   "model": "opus",
+   "started": "2026-11-08T17:50:47.450Z",
+   "seconds": null,
+   "finished": "2026-11-08T18:51:45.152000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-3663 launcher tap handler review",
+   "model": "opus",
+   "started": "2026-11-08T18:22:25.478Z",
+   "seconds": null,
+   "finished": "2026-11-08T18:31:52.596000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-2551 launcher tap-to-open path",
+   "model": "opus",
+   "started": "2026-11-08T17:39:24.071Z",
+   "seconds": null,
+   "finished": "2026-11-08T18:21:45.466000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3659 classify the retry lines",
+   "model": "opus",
+   "started": "2026-11-08T17:20:27.775Z",
+   "seconds": null,
+   "finished": "2026-11-08T17:50:16.157000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 580,
+  "runnable_count": 579,
   "blocked_count": 111
  },
  "meter": {
@@ -55,7 +98,7 @@
   "week_pct": 3.66,
   "usage_pct": 33.5,
   "work_pct": 78.9,
-  "read_at": "2026-11-08T18:49:00+00:00",
+  "read_at": "2026-11-08T18:52:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -67,6 +110,7 @@
     "e": "high",
     "at": "2026-11-08T13:33:59-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -159,7 +203,7 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 12,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -168,27 +212,32 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T13:44:00-05:00",
+   "at": "2026-11-08T13:50:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T13:49:00-05:00",
+  "at": "2026-11-08T13:52:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: 91% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 6 of 8 lands failed in 3 hours (5 red))",
+  "n": 2,
+  "at": "2026-11-08T11:55:35.621542-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-3666 T-3667 launcher sheet and iPad windows",
+   "model": "opus",
+   "since": "2026-11-08T18:32:17.345Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -232,7 +281,19 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Show the launcher setup sheet over other sheets",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T18:32:17.345Z",
+    "o": "c",
+    "task": "T-3666"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -245,13 +306,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Read runner 18 live and run one build job",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "One Lock In switch for every account",
     "s": "next",
     "o": "c"
    },
@@ -303,30 +357,66 @@
     "t": "Prove a stalled sensor call cannot starve...",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Let the Investors send files in Chat",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Home now has one Lock In control for the main account and every lane together: Spread, Lock In...",
+    "at": "2026-11-08T13:51:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "Home now has one Lock In control for the main account and every lane together: Spread, Lock In...",
+    "at": "2026-11-08T13:51:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The widget timeline test that held Simulator landings is green again; T-3217 (a test fix on...",
     "at": "2026-11-08T13:33:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The between-session jobs loop (a launchd job that runs upkeep steps beside the sessions) is not...",
-    "at": "2026-11-08T13:32:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The task that kept coming back could not be done from a lane because the install runs only from...",
-    "at": "2026-11-08T13:32:00-05:00"
    }
   ],
   "count": {
-   "next": 580,
+   "next": 579,
    "wait": 43,
    "blocked": 68,
    "you": 19
+  },
+  "fin": {
+   "n": 14,
+   "rows": [
+    [
+     "T-3191",
+     "One Lock In switch for every..."
+    ],
+    [
+     "T-3325",
+     "Redo one Lock In switch for..."
+    ],
+    [
+     "T-3128",
+     "Make main's Simulator suite..."
+    ],
+    [
+     "T-3312",
+     "Install the jobs loop and..."
+    ],
+    [
+     "T-3461",
+     "Look at work that keeps..."
+    ],
+    [
+     "T-3663",
+     "Review the launcher tap..."
+    ]
+   ]
   }
  },
  "qr": [],
@@ -338,21 +428,24 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 3,
-  "total": 3,
-  "at": "1:49 PM",
+  "total": 4,
+  "at": "1:52 PM",
   "why": "",
-  "at_iso": "2026-11-08T18:49:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:49 PM ET</p></section>"
+  "at_iso": "2026-11-08T18:52:00+00:00",
+  "started": "11:55 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:52 PM ET</p></section>"
  }
 }

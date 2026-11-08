@@ -11,7 +11,7 @@ var SAYS = /\b(?:reply|replies|answer|say)\b/i;
 var PAIR = /\b(?:[Rr]eply|[Aa]nswer|[Ss]ay)\s+(?:with\s+)?["\u201c*]*([A-Z][a-z]{0,11})["\u201d*]*\s+or\s+["\u201c*]*([A-Z][a-z]{0,11})\b/;
 var NOTE = /<!--[\s\S]*?(?:-->|$)/g;
 function prep(s) { return String(s || '').slice(0, 20000).replace(NOTE, '').replace(/\r/g, '').replace(/```[\s\S]*?```/g, ''); }
-function clean(s) { return String(s || '').replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1').replace(/\*\*|__|`/g, '').replace(/\s+/g, ' ').trim(); }
+function clean(s) { return String(s || '').slice(0, 1000).replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1').replace(/\*\*|__|`/g, '').replace(/\s+/g, ' ').trim(); }
 function short(s) {
 s = clean(String(s).slice(0, 400));
 if (s.charAt(0) === '(') { var e = s.indexOf(')'); if (e > 0) s = s.slice(1, e); }

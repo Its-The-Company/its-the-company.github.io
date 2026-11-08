@@ -67,7 +67,7 @@ if (!a || c.n == null) return;
 if (!c.n) { Array.prototype.forEach.call(a.querySelectorAll('.nbs, .nb'), (e) => e.remove()); return; }
 var t = c.n + ' waiting on the Investors' + (c.live ? ', read from GitHub at ' + hm(c.t) : ' at the site build, ' + new Date(c.t).toLocaleString([], { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }))
 + (c.red != null ? '; ' + c.red + ' past due or with no deadline, ' + (c.n - c.red) + ' new' : '')
-+ (c.later ? '; ' + c.later + ' of them in Later and not delayed, still new: Mark Read on Issues clears ' + (c.later === 1 ? 'it' : 'them') : '')
++ (c.later ? '; ' + c.later + ' of them in Later and not delayed, still new: opening ' + (c.later === 1 ? 'it' : 'each') + ' on Issues clears ' + (c.later === 1 ? 'it' : 'them') : '')
 + (c.ans ? '; ' + c.ans + ' answered, waiting on the company' : '');
 var w = a.querySelector('.nbs');
 Array.prototype.forEach.call(a.querySelectorAll('.nb'), (e) => e.remove());
@@ -129,10 +129,12 @@ z.fresh.forEach((n) => note(n, 0, open[n] && open[n].t)); z.moved.forEach((n) =>
 if (JSON.stringify(st) !== before) save(st);
 }
 window.IssueQ.load = load; window.IssueQ.save = save; window.IssueQ.sync = sync;
+var gen = 0;
 function read(force) {
-var c = null; try { c = JSON.parse(sessionStorage.getItem(K) || 'null'); } catch (e) { /* read it */ }
+var c = null, my; try { c = JSON.parse(sessionStorage.getItem(K) || 'null'); } catch (e) { /* read it */ }
 if (!force && c && Date.now() - c.t < AGE) return draw(c);
 var root = D.getElementById('needs-root'); if (root && !root.getAttribute('data-mode')) return;
+my = ++gen;
 fetch(me.getAttribute('data-count'), { cache: 'no-store' }).then(json).then((b) => {
 var rp = String(b.repo || '').split('/'), h = S.hdrs(); h['Content-Type'] = 'application/json';
 return fetch(S.API + '/graphql', { method: 'POST', headers: h, body: JSON.stringify({ query: Q, variables: { o: rp[0], r: rp[1] } }) }).then(S.checkAuth).then(json).then((g) => {
@@ -144,10 +146,11 @@ open[i.number] = { l: i.labels.nodes.map((x) => String(x.name).toLowerCase()), a
 });
 var all = !r.i.pageInfo.hasNextPage, now = Date.now(), qs = {};
 Object.keys(open).forEach((k) => { var o = open[k]; if (o.l.some((x) => KEEP.indexOf(x) >= 0) && o.l.indexOf('unrelated') < 0 && o.l.indexOf('main') < 0 && o.l.indexOf('site-state') < 0) qs[k] = o; });
-return load(b.repo).then((st) => { sync(st, qs, now, all); var x = count(b, open, all, st, now); put(x.n, x.ans, x.later, x.red); });
+return load(b.repo).then((st) => { if (my !== gen) return; sync(st, qs, now, all); var x = count(b, open, all, st, now); put(x.n, x.ans, x.later, x.red); });
 }, () => draw({ n: b.n, t: Date.parse(b.at) }));
 }).catch(() => { /* no issues.json: the layout's count stays */ });
 }
+window.IssueCount.read = read;
 read();
 D.addEventListener('visibilitychange', () => { if (!D.hidden) read(); });
 })();

@@ -53,14 +53,14 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 
 - T-2551 18e7e6118 11-08: launcher tap path (LauncherSlots, LauncherTapHandling, docs/design/launcher/tap-path.md). Open: review, launcher editor, #192. Lesson: host URL(string:) refuses what iOS 17+ encodes; rule it in code, test it alone.
 
-- T-3666 0eae5043f 11-08: set-up sheet via UIKit top-most presenter (M1 red->green on iPhone), L1-L3 in. Needs review. T-3667 patch parked in company-scratch/T-3666-idris; needs a Debug-registered scheme or another way to deliver a URL for the iPad 0/1/2-window check.
+- T-3666 0eae5043f 11-08: set-up sheet via UIKit presenter; needs review. T-3667 a3415f7c8 11-08: window test (both links, 0/1/2) green with AND without the fix; M2 never reproduced (full-screen). Open: windowed mode, real widget tap, review.
+- Lesson T-3667: a run script phase with no inputFiles can run before ProcessInfoPlistFile, which overwrites its plist edit; input = built plist.
 - Lesson T-3666: SwiftUI queues a root .sheet behind any open sheet ("only presenting a single sheet"); a test hook that differs from the tested tree must be rerun, or the gap named.
 
 ## Lessons
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
-- T-3279 slice 2 11-08 038d81d09+04688a717 (personal/a3, unlanded): countdown+habits first renders bundled in appex. Open: review, Simulator check before first open, Maren <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>.
-- Lesson T-3279: a new test file after `xcodegen generate` is not in the run; grep its class in the log before counting it.
+- Lesson T-3671: host type-check of app code w/o Xcode: scratch tc.sh (swiftc -typecheck -disable-batch-mode -continue-building-after-errors + asset stubs); plant an error to prove it reaches the file.
 {% endraw %}
 
 

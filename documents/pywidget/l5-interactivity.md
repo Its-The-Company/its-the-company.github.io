@@ -896,6 +896,8 @@ The s4.1 routing is accepted as written: `WidgetOpsIntent` only in the extension
 </div>
 
 
+*What R1 and R2 cover (Idris, T-1974, from Pernille's T-1924 review F2, 2026-11-04):* the renderer draws only the 1.1 reserved shapes (`state` Text, `pending` and `state.<key>` in `When`, `isOnState`) by R1-R3 and R2a's `held`, because the v1 schema (`viewtree.schema.json`, R5) lets them through. Any other new Text kind, `When` env key or node type fails that schema, and the app refuses the whole run as `schema_error` (`Shared/Bridge/RunResultSink.swift:165`) before anything is drawn. The renderer's "unknown kind" and "unknown key" paths are only a backstop. So a later version that needs a new kind, env key or node type needs a new schema version (`version` is `const: 1`), which a v1 app refuses as a whole, and must not send one to a v1 renderer. The alternative, opening `textContent` to any kind with a string `fallback`, is a schema change for Pernille to review, not part of this note.
+
 What this costs before the freeze: my estimate is under half a day for Idris, most of it fixtures inside the renderer work he is already doing, and under an hour for Pernille. Neither of these earns by Day 30. Both keep 1.1 from breaking documents people have already saved, so they go in at P2, behind the renderer and the Pro purchase.
 
 ### Chair note 2 (Ines), 2026-10-26 01:12 ET: the review answers; S1, S6, S7 and ADR-007 items 1, 4, 6

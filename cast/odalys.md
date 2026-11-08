@@ -37,12 +37,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-07)
 
-- T-3373 b950d9961: rules via tools/ruling_record.py; #226 pins d0b2461fe. Cleanup T-3476; twin T-3426 (Ines).
-- T-3519 18a9d73e1: main_gate key adds derived test reads (project.yml, scripts, Swift literals). Review T-3546. <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">Lane</span> xc floor still skips fixture-only lands.
 
-- T-3566/T-3578 55a8044f3: disk_ssd_moves.py start <40 GB, no stop, keeper wired. Scope held 0.9 GB on 11-08 (empty now); the space is lane trees/T-3549. Read rows 11-10.
+- T-3691 7cfae1072 (ticked): disk_keeper.py <30 GB -> ssd_moves, sweep --internal-only; #41 once per spell. Read disk_keeper.jsonl 11-09. Open: T-3684 leaking tests; T-3660 loop install. Sparse folders never copied (T-3690).
 
-- T-3580 a6b8ffb05 (ticked): build check by executable/script via _procs (never command-line text). 0 GB 11-08: no spare idle 24 h; supervisor.sh runs it. Read disk.jsonl for first tree move.
 - T-3579 bb5868b9f: applier follow_head + tools/owned_drift.py (check/add-all/restore). Main folder drift stays until `owned_drift.py restore` between sessions; guard_base must keep auto-reverts (Investor proposal).
 
 - T-3448 3d427e721 (ticked): main_green bisects a red (default with --board); restore rows in ops/metrics/main_restore.jsonl. Read the first live red. Guard refuses git clean -fdx (11-08).
@@ -53,7 +50,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3589 dc6639fe3 (ticked): idle_slots.py via inbox_watch step 7; #41 notes off (ops/idle_slots.json post:false) until switched on.
 - T-3588 fe8ebe895: mem_free.py free (idle Sims up 30m+, xc lock) run by dispatch tick on memory hold. fseventsd 12 GB root: Investors'. After-read rows mem_free.jsonl + `mem_free.py measure`.
 - T-3659 12dcda648 (ticked): retry_prune landed/same-commits by land_dupes key; merge_queue dedupe by key. 137->100. After-read `retry_prune.py --report 24` 11-09 ~13:00 (landed should fall to ~0). 55/100 left are xc, never in trains.
-- T-3441/T-3442 cfbf91cd3/c7fc2f604: <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> ref gone + stale base -> redo git mv on own branch, not retry. Tick Evidence not a lane-record path (T-1425): cite ops/board.md.
+- T-3441/T-3442 cfbf91cd3/c7fc2f604: <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> ref gone + stale base -> redo git mv on own branch, not retry. Tick Evidence not a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-record path (T-1425): cite ops/board.md.
 
 - T-3325 ed4e87198 (ticked, T-3191 too): one Lock In mode for all accounts (ops/lock_in.json mode; daily = hold after day's share). After-read: first LOCK IN DAILY day, lock_in_share.json vs pools. Pre-existing reds: test_personal_lane 5, site_personal jekyll.
 
@@ -61,9 +58,12 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-3682/T-3686 8b50e77ea (ticked): ops/refusals.jsonl; refusals.py tick every 5 min from inbox_watch step 7 (mark ops/watch/refusals_scan.json). After-read: ops/runs/refusals_scan-out.log after the next refusal.
 
+
 ## Lessons
-- Older notes, task by task: archive.md (nothing is deleted; tools/memory_archive.py runs at session close, T-3134).
-- T-3434 d42e70bdd: lineage on Home redone on main (T-3316 ticked). Test fixtures that merge into real board data must drop real edges to their IDs.
+- Older notes: archive.md (memory_archive.py at session close).
+- Fixtures merged into real board data must drop real edges to their IDs (T-3434).
+- T-3444 cb0a552a1 (OPT-124): gate solo lanes (land_par.disjoint on files+checks); MQ_GATE_LANES=0 old path. Replay 18->16 rebuilds/11 runs. After-read: spec_gate.jsonl "rebuilds"/"linear" at n=20. Host shared by 49/66 rows <span title="A measured fact that holds a grade below a letter, however good the rest is.">caps</span> it.
+- T-3678 4918bfaec (ticked, T-3582 too): box cases ported to site_issue_page_test (29 + 36 mutants). T-3583 next (drag, Now name).
 {% endraw %}
 
 

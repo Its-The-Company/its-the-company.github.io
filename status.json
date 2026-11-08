@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T20:23:44.056402+00:00",
+ "at": "2026-11-08T20:26:46.666736+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[build] T-3405 land stall test via gate",
    "model": "opus",
    "started": "2026-11-08T20:21:27.853Z",
-   "seconds": 136,
+   "seconds": 318,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[build] T-3582 issue page and compact list",
    "model": "opus",
    "started": "2026-11-08T20:21:36.622Z",
-   "seconds": 127,
+   "seconds": 310,
    "finished": null,
    "effort": "high"
   }
@@ -74,7 +74,7 @@
   "week_pct": 3.73,
   "usage_pct": 27.2,
   "work_pct": 75.0,
-  "read_at": "2026-11-08T20:23:00+00:00",
+  "read_at": "2026-11-08T20:26:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -95,7 +95,7 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 16,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -104,23 +104,18 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T15:08:00-05:00",
+   "at": "2026-11-08T15:25:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T15:23:00-05:00",
+  "at": "2026-11-08T15:26:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
- "idle": {
-  "since": "2026-11-08T15:03:32-05:00",
-  "minutes": 20,
-  "why": "a tick has spent 10 min on steps before the session",
-  "healed": []
- },
+ "idle": null,
  "pool": {
   "why": "Spread: 90% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 9 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
   "n": 2,
@@ -322,10 +317,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "3:23 PM",
+  "at": "3:26 PM",
   "why": "",
-  "at_iso": "2026-11-08T20:23:00+00:00",
+  "at_iso": "2026-11-08T20:26:00+00:00",
   "started": "3:20 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:20 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:23 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:20 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:26 PM ET</p></section>"
  }
 }

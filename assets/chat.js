@@ -152,9 +152,9 @@ function go(k) { if (k === 'main') k = mainN() || k; var h = '#t=' + k; if (W.lo
 function select(k) {
 if (k === 'main') k = mainN() || k;
 if (k !== 'main') { k = +k; if (!(k > 0)) k = 'main'; }
-saveDraft(); cur = k; limit = 30; jump.hidden = true; isOpen = isDesk || (isMain(k) && composerOn); drawTabs(); drawView(true); drawDock();
+saveDraft(); cur = k; limit = 30; jump.hidden = true; C.open = isDesk || (isMain(k) && composerOn); drawTabs(); drawView(true); drawDock();
 bottom();
-if (isDesk && composerOn && isMain(k) && ta.focus) ta.focus();
+if (isDesk && composerOn && isMain(k) && C.ta.focus) C.ta.focus();
 }
 function drawTabs() {}
 on(W, 'hashchange', () => { var k = parse(); if (String(k) !== String(cur)) select(k); });
@@ -232,6 +232,7 @@ if (start > 0) {
 var e = mk(log, 'button', 'cv-earlier', 'Load earlier messages'); e.type = 'button';
 e.onclick = () => { var de = DE, below = de.scrollHeight - W.scrollY; limit += 30; drawView(false); W.scrollTo(0, de.scrollHeight - below); };
 }
+all.slice(0, start).forEach((x) => { shown[x.id] = 1; });
 all.slice(start).forEach((x, j2) => { var m = add(x, answered && j2 + start === q); if (j2 + start === q) anchor = m; });
 waitLine();
 if (open) position();
@@ -268,7 +269,7 @@ if (typeof cur !== 'number' || !log) return;
 var nw = items(cur).filter((x) => !shown[x.id]), de = DE;
 if (!nw.length) return waitLine();
 if (nw.some((x) => x.at < lastAt)) { var below = de ? de.scrollHeight - W.scrollY : 0; drawView(false); if (de && W.scrollTo) W.scrollTo(0, de.scrollHeight - below); return; }
-var at = nearBottom();
+var at = nearBottom() && !box();
 nw.forEach((x) => { add(x); }); waitLine();
 if (at) { bottom(); markSeen(cur); } else { jump.textContent = 'Latest · ' + nw.length + ' new'; jump.hidden = false; }
 }
@@ -290,91 +291,36 @@ if (!d || !d.t) return null;
 var e = el('span', 'cv-due' + (d.t - Date.now() < 864e5 ? ' cv-soon' : ''), new Date(d.t).toLocaleString([], { weekday: 'short', hour: 'numeric', minute: '2-digit' }));
 attr(e, 'data-t', new Date(d.t).toISOString()); e.title = 'Deadline: ' + d.text; return e;
 }
+function box() { var f = document.activeElement, s = f && f.tagName === 'TEXTAREA' && f.closest('.cv-view [aria-labelledby]'); return s && s.getAttribute('aria-labelledby'); }
 function drawView(open) {
+var k = box(), f = document.activeElement, a = f && f.selectionStart, z = f && f.selectionEnd;
 view.textContent = ''; log = head = anchor = null;
 if (!lastDraw) { var p = mk(view, 'p', 'muted', S.rejected() ? NO_TOKEN + ' ' : 'Loading...'); if (S.rejected()) mk(p, 'a', null, 'Change the token').href = connect; return; }
 if (cur === 'main') return;  // no Chat issue yet: nothing above the box until the first message (T-3080)
 drawThread(open);
+if (k && (f = view.querySelector('[aria-labelledby="' + k + '"] textarea'))) { f.focus({ preventScroll: true }); f.setSelectionRange(a, z); }
 }
-var isOpen = isDesk, sending = false;
-var fake = el('button', 'cv-fake'), barSend = el('button', 'cv-send', '↑'), to = el('div', 'cv-to');
-var ta = el('textarea'), tools = el('div', 'cv-tools'), out = el('p', 'cv-state', '');
-var pmb = mk(tools, 'button', 'cv-tool cv-pmb', 'Plan mode'), hide = mk(tools, 'button', 'cv-tool cv-hide', 'Hide ⌄'), send = mk(tools, 'button', 'cv-send', '↑');
+var pmb = el('button', 'cv-tool cv-pmb', 'Plan mode');
 var hint = el('p', 'cv-hint', 'Plan mode: the company reads the code, the board and past decisions first, then replies with questions to tap. Slower than chat, and it uses more of the week.');
-[fake, barSend, pmb, hide, send].forEach((b) => { b.type = 'button'; });
-attr(barSend, 'aria-label', 'Send'); attr(send, 'aria-label', 'Send'); attr(hide, 'aria-label', 'Hide the composer');
-ta.rows = 3; attr(ta, 'aria-label', 'Message'); ta.placeholder = 'Handled as if typed into Claude Code.';
-attr(out, 'role', 'status');
+pmb.type = 'button';
 function isMain(k) { return k === 'main' || (k > 0 && k === mainN()); }
 function target() { return typeof cur === 'number' ? cur : mainN() || 'main'; }
 function draftKey() { return 'company.draft.' + target(); }
 function pOn() { return LS.getItem(draftKey() + '.plan') === '1'; }
-function dc(x) { dock.className = 'cv-dock' + (pOn() ? ' cv-plan' : '') + (x || ''); }
-function saveDraft() { if (cur === null) return; if (ta.value.trim()) LS.setItem(draftKey(), ta.value); else LS.removeItem(draftKey()); }
 function toText() { var n = target(), i = issue(n); return isMain(n) ? 'Chat' : '#' + n + (i ? ' ' + i.title : ''); }
-function canSend() { return !!ta.value.trim() && !S.rejected() && !sending; }
-function dragVerdict(dy, ms) { var d = dy > 0 ? dy : 0; return { y: d, hide: d >= 60 || (d >= 24 && ms > 0 && d / ms >= 0.6) }; }
-var grip = el('div', 'cv-grip'), g0 = null, g0t = 0;
-attr(grip, 'aria-hidden', 'true'); mk(grip, 'span', 'cv-grip-bar');
-function gy(e) { var t = (e.touches && e.touches[0]) || (e.changedTouches && e.changedTouches[0]); return t ? t.clientY : 0; }
-function gripTo(y) { dock.style.transform = y ? 'translateY(' + y + 'px)' : ''; }
-var gx = 0, gOn = false, gSc = null;
-function scr(t) { while (t && t !== dock) { if (t.scrollHeight > t.clientHeight + 1 && /auto|scroll/.test((W.getComputedStyle(t) || {}).overflowY || '')) return t; t = t.parentNode; } return null; }
-function tp(e) { var t = (e.touches && e.touches[0]) || (e.changedTouches && e.changedTouches[0]); return t ? t.clientX : 0; }
-function gripEnd(e, cancel) {
-if (g0 === null) return;
-var v = dragVerdict(gy(e) - g0, Date.now() - g0t), was = gOn; g0 = null; gOn = false; gSc = null; dc();
-if (was && v.hide && !cancel) { gripTo(0); doHide(); } else gripTo(0);
-}
-dock.addEventListener('touchstart', (e) => { if (!isOpen || (e.touches && e.touches.length > 1)) { g0 = null; return; } g0 = gy(e); gx = tp(e); g0t = Date.now(); gOn = false; gSc = scr(e.target); if (gSc && gSc.scrollTop > 0) g0 = null; }, { passive: true });
-dock.addEventListener('touchmove', (e) => {
-if (g0 === null) return;
-var dy = gy(e) - g0, dx = tp(e) - gx;
-if (!gOn) {
-if (dy < 8 || dy < Math.abs(dx)) { if (dy < -8 || (Math.abs(dx) > 8 && Math.abs(dx) > dy)) g0 = null; return; }
-gOn = true; dc(' cv-dragging');
-}
-if (e.cancelable) e.preventDefault();
-gripTo(dragVerdict(dy, 1).y);
-}, { passive: false });
-on(dock, 'touchend', (e) => { gripEnd(e, false); });
-on(dock, 'touchcancel', (e) => { gripEnd(e, true); });
-function drawDock() {
-dock.textContent = ''; dock.hidden = false;
-if (!composerOn) { mk(dock, 'p', 'muted', 'Sending is off.'); return; }
-ta.value = LS.getItem(draftKey()) || ''; dc();
-barSend.disabled = send.disabled = !canSend();
-if (main) main.className = 'cv-desk' + (isOpen ? ' cv-open' : '');
-if (!isOpen) {
-var b = mk(dock, 'div', 'cv-bar'); put(b, fake); put(b, barSend); put(dock, out);
-fake.textContent = ta.value.trim() ? ta.value.trim().split('\n')[0] : isMain(target()) ? 'Message the company...' : 'Reply to ' + toText() + '...';
-return;
-}
-put(dock, grip);
+var C = S.compose(dock, { key: draftKey, keep: () => cur !== null, open: isDesk, ph: 'Handled as if typed into Claude Code.',
+tools: [pmb], after: [hint], cls: () => pOn() ? ' cv-plan' : '', on: () => composerOn, send: () => { doSend(); },
+drawn: (o) => { if (main) main.className = 'cv-desk' + (o ? ' cv-open' : ''); },
+bar: () => isMain(target()) ? 'Message the company...' : 'Reply to ' + toText() + '...',
+to: (to) => {
 var p = pOn(), nm = LS.getItem(NAME);
 to.textContent = 'To '; mk(to, 'b', null, toText());
 if (p) { put(to, txt(' ')); mk(to, 'span', 'cv-pm', 'Plan mode'); }
 if (nm) mk(to, 'span', null, '· as ' + nm);
 attr(pmb, 'aria-pressed', p ? 'true' : 'false'); hint.hidden = !p;
-[to, ta, tools, hint, out].forEach((x) => { put(dock, x); });
-fitTa();
-}
-function fitTa() { if (ta.style && ta.scrollHeight) { ta.style.height = ''; ta.style.height = ta.scrollHeight + ((ta.offsetHeight - ta.clientHeight) || 0) + 'px'; } }
-fake.onclick = () => { isOpen = true; drawDock(); if (ta.focus) ta.focus(); };
-barSend.onclick = () => { doSend(); };
-function doHide() { saveDraft(); if (ta.blur) ta.blur(); isOpen = false; drawDock(); }
-hide.onclick = doHide;
+} });
+var ta = C.ta, drawDock = C.draw, saveDraft = C.save, state = C.state;
 pmb.onclick = () => { var k = draftKey() + '.plan'; if (pOn()) LS.removeItem(k); else LS.setItem(k, '1'); drawDock(); };
-on(ta, 'input', () => {
-saveDraft(); send.disabled = barSend.disabled = !canSend();
-if (/failed/.test(out.className)) state('', '');
-fitTa();
-});
-var clearTimer = 0;
-function state(kind, text, ms) {
-S.stop(clearTimer); out.className = 'cv-state' + (kind ? ' cv-' + kind : ''); out.textContent = text;
-if (ms) clearTimer = later(() => { out.className = 'cv-state'; out.textContent = ''; }, ms);
-}
 function post(path, body) {
 var h = hdrs(); h['Content-Type'] = 'application/json';
 return fetch(API + path, { method: 'POST', headers: h, body: JSON.stringify(body) })
@@ -383,10 +329,10 @@ return fetch(API + path, { method: 'POST', headers: h, body: JSON.stringify(body
 function cleanName(n) { return (n || '').replace(/[^A-Za-z0-9 _.-]/g, '').trim().slice(0, 40); }
 function stamp(text, name, p) { return text.replace(NOTE, '').trim() + (p ? '\n\n' + PTAG : '') + (name ? '\n\n<!-- as: ' + name + ' -->' : ''); }
 function doSend() {
-if (!composerOn || sending || S.rejected()) return;
+if (!composerOn || C.busy || S.rejected()) return;
 var text = ta.value.trim(), name = cleanName(LS.getItem(NAME)), p = pOn(), n = target(), dk = draftKey();
 if (!text) { state('failed', 'Write a message first.', 4000); return; }
-sending = true; send.disabled = barSend.disabled = true; state('', 'Sending...');
+C.set(true); state('', 'Sending...');
 var w0 = Promise.resolve();
 var who = n === 'main' ? get(RI + '?labels=main').then((l) => { if (l && l[0]) extra[n = l[0].number] = l[0]; return w0; }) : w0;
 who.then(() => {
@@ -396,15 +342,14 @@ return post(RI + '/' + n + '/comments', { body: stamp(text, name, p) });
 LS.removeItem(dk); LS.removeItem(dk + '.plan'); ta.value = '';
 var made = typeof n !== 'number' && r.number;
 state('sent', 'Sent' + (made ? ' as #' + r.number : '') + '. A receipt follows within a tick.', 8000);
-etags = {}; sending = false;
+etags = {}; C.busy = false;
 if (made) { extra[r.number] = r; threads[r.number] = []; go(r.number); }
 else { if (r.id && threads[n]) threads[n].push(r); else if (r.id) comments.unshift(r); if (cur !== n) go(n); else { update(); drawDock(); } }
 load();
 }).catch((e) => {
 state('failed', 'Not sent: ' + e.message + '. Your text is kept; tap Send to retry.', 30000);
-}).then(() => { sending = false; send.disabled = barSend.disabled = !canSend(); });
+}).then(() => { C.set(false); });
 }
-send.onclick = (ev) => { stop(ev); doSend(); };
 S.planCtx = { md: md, items: () => items(cur), isInv: isInv, clock: clock, name: () => cleanName(LS.getItem(NAME)),
 send: (t) => post(RI + '/' + cur + '/comments', { body: t }).then((r) => { if (threads[cur]) threads[cur].push(r); else comments.unshift(r); update(); return r; }) };
 function get(path) {
@@ -441,7 +386,7 @@ names = res[0]; issues = res[1].filter((i) => !i.pull_request && labelsOf(i).ind
 comments = (res[2] || []).filter((c) => String(c.body || '').trim().indexOf('<!-- site-state') !== 0);
 if (!lastDraw) { lastDraw = res; select(parse()); } else if (!same) { lastDraw = res; refresh(); }
 onDrawn.splice(0).forEach((f) => { f(); });
-S.feed(issues, allComments(), names, deadlineOf, kindOf, (k, t) => { go(k); if (t && !ta.value.trim()) { ta.value = t; saveDraft(); } isOpen = true; drawDock(); });
+S.feed(issues, allComments(), names, deadlineOf, kindOf, (k, t) => { go(k); if (t && !C.ta.value.trim()) { C.ta.value = t; saveDraft(); } C.open = true; drawDock(); });
 if (cached) allow().then((a) => { if (String(a) !== String(cached.names)) refresh(); }, () => {});
 if (typeof cur === 'number' && threads[cur] && n === 100) readThread(cur);
 status.textContent = 'Updated ' + clock(now().toISOString()) + '.';
@@ -459,7 +404,7 @@ var loadTimer = setInterval(load, 30000);
 on(document, 'visibilitychange', () => { if (!document.hidden && !S.rejected()) load(); });
 on(W, 'pageshow', (e) => { if (e.persisted && !S.rejected()) load(); });
 onReject.push(() => {
-clearInterval(loadTimer); send.disabled = barSend.disabled = true;
+clearInterval(loadTimer); C.dis();
 noToken(); var u = byId('urgent'); if (u) u.hidden = false; if (!lastDraw) drawView(false);
 });
 load();

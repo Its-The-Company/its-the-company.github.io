@@ -34,10 +34,6 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 
 ## Open (mine)
 
-- Lesson T-1714: a rule green on the host means nothing until something writes it and something reads it: grep both call sites first.
-
-- Lesson T-0426: grep the code for a task's ID before starting; a board line can stay open after the work landed.
-
 - AgeLine: T-1910/1911/1946 6edcfd497; review T-1983 F1-F3 fixed e573b6450 (t1793 56/56). Left: T-1440 must pass one `now` to face rule, drawnAt, line (noted).
 - Lesson T-1946/T-2011: NSTimeZone.default moves Calendar().timeZone, not TimeZone.current; for .current set TZ + NSTimeZone.resetSystemTimeZone(). Assert the fixture moved.
 
@@ -57,7 +53,10 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - Lesson T-1404: one Bash call is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
 
 - T-3550 16e32a86e (review T-3561 Pernille): timeout keeps fresh tree; runtime readings are naive local (_wire.want_time), premades wrap with aware(). Sun use_current path unchecked; T-3551 open.
-- T-3393 fix 5914346c4 (gate green J-...0354-land-m-36b1df); MacBook job waits for push. Lesson: main_gate's key skips pywidget/tests; a fixture-only fix reuses a stale red slot.
+- T-3393/T-3572 11-08: a premade's failed first run had no row (its lock lives in widgets/<id>); RunLogStore makes a premade's folder now. Open: next build's Run log, Sun/Distance.
+- Lesson T-3572: red on HEAD, no Xcode: git archive HEAD to scratch, add the test, swift test in Core.
+
+- T-3574 build 4 uploaded 11-08 10:28 from d3d39da37 (ledger d0138f6e4 unpushed). T-1932 bdbdf8d39/447500fdf on origin, unreviewed: next build lists them. Lesson: `git log origin/main..HEAD` before any push (shared main).
 
 ## Lessons
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.

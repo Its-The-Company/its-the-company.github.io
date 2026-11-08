@@ -47,7 +47,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3121 (cd0dd3591): ADR-009, https via URLSession + strip _ssl/_hashlib (8,266,336 B) awaits Ines/chair; follow-up T-3168 Idris. A <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s task line may exist only on main's live board (task_context reads the local one).
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
-## Lessons (2026-10-27, T-0416 to T-0448 reviews)
+## Lessons
+- 11-08 T-3575/77/3330, T-3576 (2cd4ab3a9) PASS w/ findings; T-3576 L1/L2 unlined, owed before T-0769.
 
 - Open (mine, not on the board, from T-0515 H1): runtime stamps a daemon thread's writes with its origin run, so A's thread output cannot show in B.
 

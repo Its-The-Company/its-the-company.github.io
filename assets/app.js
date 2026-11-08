@@ -226,9 +226,10 @@ onDrawn: onDrawn, onReject: onReject, rejected: function () { return rejected; }
 status: function () { return lastSt; }, onStatus: onStatus, tiles: tiles, added: added, feed: function () { window.CompanySite.fed = arguments; } };
 var n = byId('now-panel'); if (n) nowPanel(n);
 var c = byId('chat-root'), t = byId('token-root');
-function load(src) { var s = document.createElement('script'); s.src = src; (document.head || document.body).appendChild(s); }
+function load(src, q) { var s = document.createElement('script'); s.src = src; if (q) s.async = false; (document.head || document.body).appendChild(s); }
 var js = c && c.getAttribute('data-js'), wiz = (c || t) && (c || t).getAttribute('data-setup'), wizOn = false;
-if (js && getToken()) load(js);
+var cj = c && c.getAttribute('data-compose');
+if (js && getToken()) { if (cj) load(cj, 1); load(js, 1); }
 function setup() { if (wiz && !wizOn) { wizOn = true; load(wiz); } }
 function hashSetup() { if (/^#(setup|name)/.test(location.hash || '')) setup(); }
 var first = byId('first-run');

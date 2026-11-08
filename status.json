@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T18:52:13.058194+00:00",
+ "at": "2026-11-08T18:55:15.975054+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,12 +12,21 @@
    "task": "[build] T-3666 T-3667 launcher sheet and iPad windows",
    "model": "opus",
    "started": "2026-11-08T18:32:17.345Z",
-   "seconds": 1195,
+   "seconds": 1378,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[test] T-3173 T-1783 red site and lane tests",
+   "model": "opus",
+   "started": "2026-11-08T18:52:21.284Z",
+   "seconds": 174,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris",
+ "who": "Idris, Odalys",
  "recent": [
   {
    "name": "odalys",
@@ -98,7 +107,7 @@
   "week_pct": 3.66,
   "usage_pct": 33.5,
   "work_pct": 78.9,
-  "read_at": "2026-11-08T18:52:00+00:00",
+  "read_at": "2026-11-08T18:55:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -219,7 +228,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T13:52:00-05:00",
+  "at": "2026-11-08T13:55:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -240,6 +249,15 @@
    "effort": "high"
   },
   {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[test] T-3173 T-1783 red site and lane tests",
+   "model": "opus",
+   "since": "2026-11-08T18:52:21.284Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
@@ -251,14 +269,6 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -291,6 +301,16 @@
     "at": "2026-11-08T18:32:17.345Z",
     "o": "c",
     "task": "T-3666"
+   },
+   {
+    "w": "Odalys",
+    "k": "test",
+    "t": "Fix the 17 failing site tests on main",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T18:52:21.284Z",
+    "o": "c",
+    "task": "T-3173"
    }
   ],
   "src": "plan",
@@ -439,13 +459,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 3,
-  "total": 4,
-  "at": "1:52 PM",
+  "total": 5,
+  "at": "1:55 PM",
   "why": "",
-  "at_iso": "2026-11-08T18:52:00+00:00",
+  "at_iso": "2026-11-08T18:55:00+00:00",
   "started": "11:55 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:52 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:55 PM ET</p></section>"
  }
 }

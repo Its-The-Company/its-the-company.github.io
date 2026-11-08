@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T10:50:56.424574+00:00",
+ "at": "2026-11-08T10:53:57.006336+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,25 +9,33 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-3408 land parked backlog faster",
+   "task": "[tools] T-3542 stop double-worked claims",
    "model": "opus",
-   "started": "2026-11-08T08:29:35.679Z",
-   "seconds": 8480,
+   "started": "2026-11-08T10:13:45.594Z",
+   "seconds": 2411,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3542 stop double-worked claims",
+   "task": "[tools] T-3519 fixtures in main gate key",
    "model": "opus",
-   "started": "2026-11-08T10:13:45.594Z",
-   "seconds": 2230,
+   "started": "2026-11-08T10:52:42.264Z",
+   "seconds": 74,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3408 land parked backlog faster",
+   "model": "opus",
+   "started": "2026-11-08T08:29:35.679Z",
+   "seconds": null,
+   "finished": "2026-11-08T10:52:24.956000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3203 plain approval counts",
@@ -51,20 +59,12 @@
    "started": "2026-11-08T08:27:47.535Z",
    "seconds": null,
    "finished": "2026-11-08T08:52:26.712000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3393 why only Countdown draws",
-   "model": "opus",
-   "started": "2026-11-08T07:49:52.601Z",
-   "seconds": null,
-   "finished": "2026-11-08T08:27:59.838000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 511,
+  "runnable_count": 512,
   "blocked_count": 105
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T10:50:00+00:00",
+  "read_at": "2026-11-08T10:53:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -137,14 +137,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T05:47:00-05:00",
+   "at": "2026-11-08T05:53:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T05:50:00-05:00"
+  "at": "2026-11-08T05:53:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -157,9 +157,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-3408 land parked backlog faster",
+   "task": "[tools] T-3542 stop double-worked claims",
    "model": "opus",
-   "since": "2026-11-08T08:29:35.679Z",
+   "since": "2026-11-08T10:13:45.594Z",
    "next": [],
    "effort": "high"
   },
@@ -209,22 +209,22 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Land the parked-work backlog faster",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T08:29:35.679Z",
-    "o": "c",
-    "task": "T-3408"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Stop a claimed line being worked twice",
     "m": "opus",
     "e": "high",
     "at": "2026-11-08T10:13:45.594Z",
     "o": "c",
     "task": "T-3542"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Put test fixtures in the main gate's content key",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T10:52:42.264Z",
+    "o": "c",
+    "task": "T-3519"
    }
   ],
   "src": "plan",
@@ -265,13 +265,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Land the parked-work backlog faster",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
@@ -298,9 +291,21 @@
     "t": "Run the device test session for the widget...",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Prove a stalled sensor call cannot starve...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "Parked work that waits to be merged no longer queues behind a one-an-hour limit: each retry now...",
+    "at": "2026-11-08T05:51:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "The supervisor now checks before every push that GitHub's push address matches its fetch...",
@@ -310,22 +315,21 @@
     "w": "Operator",
     "t": "The work this notice was about has landed on main, so the lander closed it.",
     "at": "2026-11-08T05:43:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "An Investor's comment that says they approve in ordinary words (such as \"I approve\" or \"approve,...",
-    "at": "2026-11-08T05:18:00-05:00"
    }
   ],
   "count": {
-   "next": 511,
+   "next": 512,
    "wait": 40,
    "blocked": 65,
    "you": 17
   },
   "fin": {
-   "n": 6,
+   "n": 7,
    "rows": [
+    [
+     "T-3408",
+     "Land the parked-work backlog..."
+    ],
     [
      "T-3360",
      "Alert at once when the push..."
@@ -345,10 +349,6 @@
     [
      "T-2896",
      "Decide how 1.0 offers the..."
-    ],
-    [
-     "T-3323",
-     "Stop the upload refusing its..."
     ]
    ]
   }
@@ -368,6 +368,7 @@
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -375,10 +376,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "5:50 AM",
+  "at": "5:53 AM",
   "why": "",
-  "at_iso": "2026-11-08T10:50:00+00:00",
+  "at_iso": "2026-11-08T10:53:00+00:00",
   "started": "2:49 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:50 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:53 AM ET</p></section>"
  }
 }

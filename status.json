@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T12:44:29.980522+00:00",
+ "at": "2026-11-08T12:47:30.465854+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,30 @@
    "task": "[tools] T-3435 chain gate runs, xc via runner",
    "model": "opus",
    "started": "2026-11-08T12:37:05.491Z",
-   "seconds": 444,
+   "seconds": 624,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "pernille",
-   "task": "[review] T-3561 review sensor-timeout fix 16e32a86e",
+   "task": "[build] T-3562 aware device reading times at source",
    "model": "opus",
-   "started": "2026-11-08T12:37:58.810Z",
-   "seconds": 391,
+   "started": "2026-11-08T12:46:28.248Z",
+   "seconds": 62,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys, Pernille",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-3561 review sensor-timeout fix 16e32a86e",
+   "model": "opus",
+   "started": "2026-11-08T12:37:58.810Z",
+   "seconds": null,
+   "finished": "2026-11-08T12:46:13.831000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-3550 keep good widgets on sensor timeout",
@@ -51,20 +59,12 @@
    "started": "2026-11-08T12:20:07.733Z",
    "seconds": null,
    "finished": "2026-11-08T12:31:34.736000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[test] T-3518 MacBook run of sensor-stall tests",
-   "model": "opus",
-   "started": "2026-11-08T11:38:21.085Z",
-   "seconds": null,
-   "finished": "2026-11-08T12:19:47.606000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 513,
+  "runnable_count": 516,
   "blocked_count": 108
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 3.33,
   "usage_pct": 54.9,
   "work_pct": 88.2,
-  "read_at": "2026-11-08T12:44:00+00:00",
+  "read_at": "2026-11-08T12:47:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -128,7 +128,7 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 17,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -137,14 +137,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T07:40:00-05:00",
+   "at": "2026-11-08T07:47:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T07:44:00-05:00"
+  "at": "2026-11-08T07:47:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -166,9 +166,9 @@
   {
    "name": "Pernille",
    "state": "running",
-   "task": "[review] T-3561 review sensor-timeout fix 16e32a86e",
+   "task": "[build] T-3562 aware device reading times at source",
    "model": "opus",
-   "since": "2026-11-08T12:37:58.810Z",
+   "since": "2026-11-08T12:46:28.248Z",
    "next": [],
    "effort": "high"
   },
@@ -219,13 +219,13 @@
    },
    {
     "w": "Pernille",
-    "k": "review",
-    "t": "Review the sensor-timeout fix for three premades",
+    "k": "build",
+    "t": "Make device readings carry a time zone",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-08T12:37:58.810Z",
+    "at": "2026-11-08T12:46:28.248Z",
     "o": "c",
-    "task": "T-3561"
+    "task": "T-3562"
    }
   ],
   "src": "plan",
@@ -303,6 +303,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "The fix keeps a good widget when a sensor is slow, and it showed why Steps, Distance and...",
+    "at": "2026-11-08T07:45:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "When the phone's step counter or location is slow to answer, the Steps, Altitude and Distance...",
     "at": "2026-11-08T07:37:00-05:00"
@@ -311,22 +316,21 @@
     "w": "Pernille",
     "t": "The new per-premade tests do catch a premade that crashes, but they miss three ways that only...",
     "at": "2026-11-08T07:36:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The sensor-stall fix's tests passed on the MacBook Simulator: 17 tests, none failed, so the fix...",
-    "at": "2026-11-08T07:31:00-05:00"
    }
   ],
   "count": {
-   "next": 513,
+   "next": 516,
    "wait": 40,
    "blocked": 68,
    "you": 19
   },
   "fin": {
-   "n": 5,
+   "n": 6,
    "rows": [
+    [
+     "T-3561",
+     "Review the sensor-timeout..."
+    ],
     [
      "T-3550",
      "Keep good widgets when a..."
@@ -372,10 +376,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "7:44 AM",
+  "at": "7:47 AM",
   "why": "",
-  "at_iso": "2026-11-08T12:44:00+00:00",
+  "at_iso": "2026-11-08T12:47:00+00:00",
   "started": "6:37 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:44 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:47 AM ET</p></section>"
  }
 }

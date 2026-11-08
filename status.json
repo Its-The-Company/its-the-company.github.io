@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T08:54:39.394848+00:00",
+ "at": "2026-11-08T08:57:42.751698+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-3408 land parked backlog faster",
    "model": "opus",
    "started": "2026-11-08T08:29:35.679Z",
-   "seconds": 1503,
+   "seconds": 1687,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[build] T-3393 land sensor-deadline fix",
    "model": "opus",
    "started": "2026-11-08T08:52:45.050Z",
-   "seconds": 114,
+   "seconds": 297,
    "finished": null,
    "effort": "high"
   }
@@ -56,7 +56,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 481,
+  "runnable_count": 487,
   "blocked_count": 105
  },
  "meter": {
@@ -99,7 +99,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T08:54:00+00:00",
+  "read_at": "2026-11-08T08:57:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -111,6 +111,7 @@
     "e": "high",
     "at": "2026-11-08T03:24:41-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -215,7 +216,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T03:54:00-05:00"
+  "at": "2026-11-08T03:57:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -374,6 +375,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "The work this notice was about has landed on main, so the lander closed it.",
+    "at": "2026-11-08T03:55:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The TestFlight upload no longer refuses itself because of its own export folder; a plain gate...",
     "at": "2026-11-08T03:52:00-05:00"
@@ -382,15 +388,10 @@
     "w": "Odalys",
     "t": "An Xcode run whose log goes silent for 30 minutes before any result now ends itself and frees...",
     "at": "2026-11-08T02:40:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Waiting work is now tested several pieces at once, each on top of the ones ahead of it; a piece...",
-    "at": "2026-11-08T02:39:00-05:00"
    }
   ],
   "count": {
-   "next": 481,
+   "next": 487,
    "wait": 40,
    "blocked": 65,
    "you": 17
@@ -426,10 +427,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "3:54 AM",
+  "at": "3:57 AM",
   "why": "",
-  "at_iso": "2026-11-08T08:54:00+00:00",
+  "at_iso": "2026-11-08T08:57:00+00:00",
   "started": "2:49 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:54 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:57 AM ET</p></section>"
  }
 }

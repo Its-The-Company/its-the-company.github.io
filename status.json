@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T10:57:01.126958+00:00",
+ "at": "2026-11-08T11:00:01.606005+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,21 @@
    "task": "[tools] T-3542 stop double-worked claims",
    "model": "opus",
    "started": "2026-11-08T10:13:45.594Z",
-   "seconds": 2595,
+   "seconds": 2776,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-3519 fixtures in main gate key",
    "model": "opus",
    "started": "2026-11-08T10:52:42.264Z",
-   "seconds": 258,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-08T10:58:23.192000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3408 land parked backlog faster",
@@ -51,20 +50,12 @@
    "started": "2026-11-08T08:52:45.050Z",
    "seconds": null,
    "finished": "2026-11-08T09:02:38.593000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[release] T-3323 upload refuses its own export",
-   "model": "opus",
-   "started": "2026-11-08T08:27:47.535Z",
-   "seconds": null,
-   "finished": "2026-11-08T08:52:26.712000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 512,
+  "runnable_count": 513,
   "blocked_count": 105
  },
  "meter": {
@@ -107,7 +98,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T10:57:00+00:00",
+  "read_at": "2026-11-08T11:00:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -132,19 +123,19 @@
   "gate": "closed",
   "ssd": {
    "mounted": true,
-   "free_gb": 291
+   "free_gb": 303
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T05:53:00-05:00",
+   "at": "2026-11-08T05:58:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T05:57:00-05:00"
+  "at": "2026-11-08T06:00:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -215,16 +206,6 @@
     "at": "2026-11-08T10:13:45.594Z",
     "o": "c",
     "task": "T-3542"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Put test fixtures in the main gate's content key",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T10:52:42.264Z",
-    "o": "c",
-    "task": "T-3519"
    }
   ],
   "src": "plan",
@@ -303,6 +284,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "The check before code joins main now also covers the test data files the app's tests read, so a...",
+    "at": "2026-11-08T05:58:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "Parked work that waits to be merged no longer queues behind a one-an-hour limit: each retry now...",
     "at": "2026-11-08T05:51:00-05:00"
    },
@@ -310,22 +296,21 @@
     "w": "Odalys",
     "t": "The supervisor now checks before every push that GitHub's push address matches its fetch...",
     "at": "2026-11-08T05:43:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "The work this notice was about has landed on main, so the lander closed it.",
-    "at": "2026-11-08T05:43:00-05:00"
    }
   ],
   "count": {
-   "next": 512,
+   "next": 513,
    "wait": 40,
    "blocked": 65,
    "you": 17
   },
   "fin": {
-   "n": 7,
+   "n": 8,
    "rows": [
+    [
+     "T-3519",
+     "Put test fixtures in the..."
+    ],
     [
      "T-3408",
      "Land the parked-work backlog..."
@@ -345,10 +330,6 @@
     [
      "T-3436",
      "Retry finished work that..."
-    ],
-    [
-     "T-2896",
-     "Decide how 1.0 offers the..."
     ]
    ]
   }
@@ -373,13 +354,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "5:57 AM",
+  "total": 1,
+  "at": "6:00 AM",
   "why": "",
-  "at_iso": "2026-11-08T10:57:00+00:00",
+  "at_iso": "2026-11-08T11:00:00+00:00",
   "started": "2:49 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:57 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:00 AM ET</p></section>"
  }
 }

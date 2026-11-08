@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T09:34:26.553127+00:00",
+ "at": "2026-11-08T09:37:29.782696+00:00",
  "session": {
   "active": true,
   "kind": "",
@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 509,
+  "runnable_count": 508,
   "blocked_count": 105
  },
  "meter": {
@@ -55,7 +55,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T09:34:00+00:00",
+  "read_at": "2026-11-08T09:37:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -76,7 +76,7 @@
   }
  ],
  "disk": {
-  "free_gb": 11,
+  "free_gb": 10,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -85,14 +85,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T04:29:00-05:00",
+   "at": "2026-11-08T04:35:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T04:34:00-05:00"
+  "at": "2026-11-08T04:37:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -223,6 +223,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The unfinished Chat-thread fix (T-3348: long Chat threads no longer redraw on each poll) was...",
+    "at": "2026-11-08T04:34:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "The work this notice was about has landed on main, so the lander closed it.",
     "at": "2026-11-08T04:30:00-05:00"
@@ -231,15 +236,10 @@
     "w": "Ines+pernille+idris",
     "t": "The app will offer the three ready-made Shortcut recipes in its Gallery: tapping one makes your...",
     "at": "2026-11-08T04:08:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "The work this notice was about has landed on main, so the lander closed it.",
-    "at": "2026-11-08T03:55:00-05:00"
    }
   ],
   "count": {
-   "next": 509,
+   "next": 508,
    "wait": 40,
    "blocked": 65,
    "you": 17
@@ -265,10 +265,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "4:34 AM",
+  "at": "4:37 AM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-08T09:34:00+00:00",
+  "at_iso": "2026-11-08T09:37:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:34 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:37 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

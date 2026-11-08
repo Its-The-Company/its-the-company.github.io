@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T14:17:22.270272+00:00",
+ "at": "2026-11-08T14:20:27.674463+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[site] T-3357 keep focus in Chat boxes",
    "model": "opus",
    "started": "2026-11-08T13:50:19.572Z",
-   "seconds": 1622,
+   "seconds": 1808,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[review] T-3575 T-3577 T-3330 build 4 reviews",
    "model": "opus",
    "started": "2026-11-08T14:11:34.257Z",
-   "seconds": 348,
+   "seconds": 533,
    "finished": null,
    "effort": "high"
   }
@@ -64,7 +64,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 526,
+  "runnable_count": 523,
   "blocked_count": 107
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 3.66,
   "usage_pct": 45.7,
   "work_pct": 83.3,
-  "read_at": "2026-11-08T14:17:00+00:00",
+  "read_at": "2026-11-08T14:20:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -128,23 +128,23 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 272
+   "free_gb": 271
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T09:14:00-05:00",
+   "at": "2026-11-08T09:20:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T09:17:00-05:00"
+  "at": "2026-11-08T09:20:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -303,30 +303,42 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "When a ready-made widget failed its very first run, the Run log kept no line for it, so we could...",
-    "at": "2026-11-08T08:57:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "When the Mac mini's own disk drops under 20 GB free, finished company build files and scratch...",
-    "at": "2026-11-08T08:48:00-05:00"
+    "w": "Pernille",
+    "t": "Checked that a premade widget whose first run fails now leaves a Run log row naming the error,...",
+    "at": "2026-11-08T09:20:00-05:00"
    },
    {
     "w": "Pernille",
-    "t": "Sensor and web readings now carry their time zone when the app makes them, so widgets that show...",
-    "at": "2026-11-08T08:13:00-05:00"
+    "t": "Checked the fix that makes the app drop a saved location as soon as location access is turned...",
+    "at": "2026-11-08T09:20:00-05:00"
+   },
+   {
+    "w": "Pernille",
+    "t": "Checked the rule that decides whether a refresh tap got new data by its timestamps, not its...",
+    "at": "2026-11-08T09:20:00-05:00"
    }
   ],
   "count": {
-   "next": 526,
+   "next": 523,
    "wait": 41,
    "blocked": 66,
    "you": 18
   },
   "fin": {
-   "n": 2,
+   "n": 5,
    "rows": [
+    [
+     "T-3575",
+     "Review the Run log row for a..."
+    ],
+    [
+     "T-3577",
+     "Review the location..."
+    ],
+    [
+     "T-3330",
+     "Check finished work before..."
+    ],
     [
      "T-3572",
      "Log every failed run with..."
@@ -360,10 +372,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "9:17 AM",
+  "at": "9:20 AM",
   "why": "",
-  "at_iso": "2026-11-08T14:17:00+00:00",
+  "at_iso": "2026-11-08T14:20:00+00:00",
   "started": "8:22 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:17 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:20 AM ET</p></section>"
  }
 }

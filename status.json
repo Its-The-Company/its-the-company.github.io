@@ -1,18 +1,61 @@
 {
  "schema": 1,
- "at": "2026-11-08T19:34:58.776036+00:00",
+ "at": "2026-11-08T19:37:59.173885+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-08T11:55:50-05:00"
  },
- "workers": [],
- "who": "",
- "recent": [],
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[test] T-3173 T-1783 red site and lane tests",
+   "model": "opus",
+   "started": "2026-11-08T18:52:21.284Z",
+   "seconds": 2737,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3433 main disk under its line",
+   "model": "opus",
+   "started": "2026-11-08T19:23:23.138Z",
+   "seconds": null,
+   "finished": "2026-11-08T19:36:59.462000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-3666 T-3667 launcher sheet and iPad windows",
+   "model": "opus",
+   "started": "2026-11-08T18:32:17.345Z",
+   "seconds": null,
+   "finished": "2026-11-08T19:19:01.500000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-3325 redo one Lock In switch",
+   "model": "opus",
+   "started": "2026-11-08T17:50:47.450Z",
+   "seconds": null,
+   "finished": "2026-11-08T18:51:45.152000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-3663 launcher tap handler review",
+   "model": "opus",
+   "started": "2026-11-08T18:22:25.478Z",
+   "seconds": null,
+   "finished": "2026-11-08T18:31:52.596000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 585,
+  "runnable_count": 586,
   "blocked_count": 112
  },
  "meter": {
@@ -55,7 +98,7 @@
   "week_pct": 3.66,
   "usage_pct": 33.5,
   "work_pct": 78.9,
-  "read_at": "2026-11-08T19:35:00+00:00",
+  "read_at": "2026-11-08T19:38:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -118,13 +161,26 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T14:35:00-05:00",
+  "at": "2026-11-08T14:38:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: 91% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 6 of 8 lands failed in 3 hours (5 red))",
+  "n": 2,
+  "at": "2026-11-08T11:55:35.621542-05:00"
+ },
  "lanes": [
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[test] T-3173 T-1783 red site and lane tests",
+   "model": "opus",
+   "since": "2026-11-08T18:52:21.284Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Idris",
    "state": "next",
@@ -150,14 +206,6 @@
    "next": []
   },
   {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Maren",
    "state": "next",
    "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
@@ -175,7 +223,19 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "test",
+    "t": "Fix the 17 failing site tests on main",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T18:52:21.284Z",
+    "o": "c",
+    "task": "T-3173"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -202,6 +262,13 @@
     "w": "Odalys",
     "k": "ops",
     "t": "Prune stale tasks from the board",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Make scratch clean-up skip anything a guard...",
     "s": "next",
     "o": "c"
    },
@@ -239,16 +306,14 @@
     "t": "Prove a stalled sensor call cannot starve...",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Let the Investors send files in Chat",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "The main disk had 6.9 GB free and now has 18.5 GB. Four old scratch copies that were already...",
+    "at": "2026-11-08T14:36:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "Finished work no longer sits for 30 minutes after an Investor message when no session can start...",
@@ -258,18 +323,42 @@
     "w": "Idris",
     "t": "Tapping a launcher icon now shows its setup sheet even when another sheet is already open;...",
     "at": "2026-11-08T14:19:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Home now has one Lock In control for the main account and every lane together: Spread, Lock In...",
-    "at": "2026-11-08T13:51:00-05:00"
    }
   ],
   "count": {
-   "next": 585,
+   "next": 586,
    "wait": 44,
    "blocked": 68,
    "you": 20
+  },
+  "fin": {
+   "n": 17,
+   "rows": [
+    [
+     "T-3433",
+     "Find what still drains the..."
+    ],
+    [
+     "T-3361",
+     "Lands stop waiting for an..."
+    ],
+    [
+     "T-3666",
+     "Show the launcher setup..."
+    ],
+    [
+     "T-3191",
+     "One Lock In switch for every..."
+    ],
+    [
+     "T-3325",
+     "Redo one Lock In switch for..."
+    ],
+    [
+     "T-3128",
+     "Make main's Simulator suite..."
+    ]
+   ]
   }
  },
  "qr": [],
@@ -281,21 +370,24 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 1,
-  "total": 1,
-  "at": "2:35 PM",
+  "total": 2,
+  "at": "2:38 PM",
   "why": "",
-  "at_iso": "2026-11-08T19:35:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:35 PM ET</p></section>"
+  "at_iso": "2026-11-08T19:38:00+00:00",
+  "started": "11:55 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:38 PM ET</p></section>"
  }
 }

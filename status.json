@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T10:17:24.757941+00:00",
+ "at": "2026-11-08T10:20:26.365707+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-3408 land parked backlog faster",
    "model": "opus",
    "started": "2026-11-08T08:29:35.679Z",
-   "seconds": 6469,
+   "seconds": 6650,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-3542 stop double-worked claims",
    "model": "opus",
    "started": "2026-11-08T10:13:45.594Z",
-   "seconds": 219,
+   "seconds": 400,
    "finished": null,
    "effort": "high"
   }
@@ -107,7 +107,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T10:17:00+00:00",
+  "read_at": "2026-11-08T10:20:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -128,23 +128,23 @@
   }
  ],
  "disk": {
-  "free_gb": 9.6,
+  "free_gb": 10,
   "gate": "closed",
   "ssd": {
    "mounted": true,
-   "free_gb": 293
+   "free_gb": 291
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T05:13:00-05:00",
+   "at": "2026-11-08T05:19:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T05:17:00-05:00"
+  "at": "2026-11-08T05:20:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -245,13 +245,6 @@
    },
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "Count any plain approval as an approve",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
     "k": "site",
     "t": "One Lock In switch for every account",
     "s": "next",
@@ -298,9 +291,21 @@
     "t": "Run Python widget scripts inside the widget...",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "measure",
+    "t": "Run the device test session for the widget...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "An Investor's comment that says they approve in ordinary words (such as \"I approve\" or \"approve,...",
+    "at": "2026-11-08T05:18:00-05:00"
+   },
    {
     "w": "Maren",
     "t": "I checked how the In flight steps, scroll boxes, filter chips and View button look on phone and...",
@@ -310,11 +315,6 @@
     "w": "Odalys",
     "t": "The unfinished Chat-thread fix (T-3348: long Chat threads no longer redraw on each poll) was...",
     "at": "2026-11-08T04:34:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "The work this notice was about has landed on main, so the lander closed it.",
-    "at": "2026-11-08T04:30:00-05:00"
    }
   ],
   "count": {
@@ -324,8 +324,12 @@
    "you": 17
   },
   "fin": {
-   "n": 4,
+   "n": 5,
    "rows": [
+    [
+     "T-3203",
+     "Count any plain approval as..."
+    ],
     [
      "T-3380",
      "Check the look of In flight..."
@@ -367,10 +371,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "5:17 AM",
+  "at": "5:20 AM",
   "why": "",
-  "at_iso": "2026-11-08T10:17:00+00:00",
+  "at_iso": "2026-11-08T10:20:00+00:00",
   "started": "2:49 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:17 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:20 AM ET</p></section>"
  }
 }

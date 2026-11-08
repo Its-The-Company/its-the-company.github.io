@@ -12,7 +12,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 365,
+  "runnable_count": 366,
   "blocked_count": 104
  },
  "meter": {
@@ -55,7 +55,7 @@
   "week_pct": 87.06,
   "usage_pct": 44.1,
   "work_pct": 71.5,
-  "read_at": "2026-11-08T01:38:00+00:00",
+  "read_at": "2026-11-08T01:40:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -106,19 +106,6 @@
     "at": "2026-11-07T19:58:06-05:00",
     "n": "Jeremy",
     "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3252",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Say plainly when the MacBook has no SSD on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T19:58:02-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
    }
   ]
  },
@@ -140,16 +127,16 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 478
+   "free_gb": 480
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T20:38:00-05:00",
+   "at": "2026-11-07T20:39:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -159,7 +146,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-07T20:38:00-05:00"
+  "at": "2026-11-07T20:40:00-05:00"
  },
  "next_tick_why": "last_tick",
  "idle": null,
@@ -306,7 +293,7 @@
    }
   ],
   "count": {
-   "next": 365,
+   "next": 366,
    "wait": 37,
    "blocked": 67,
    "you": 13
@@ -330,12 +317,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "8:38 PM",
+  "lanes": 2,
+  "total": 2,
+  "at": "8:40 PM",
   "why": "",
-  "at_iso": "2026-11-08T01:38:00+00:00",
+  "at_iso": "2026-11-08T01:40:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:38 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 8:40 PM ET</p></section>"
  }
 }

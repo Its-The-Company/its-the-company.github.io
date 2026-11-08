@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T06:15:02.977714+00:00",
+ "at": "2026-11-08T06:19:43.395048+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -25,17 +25,17 @@
   },
   "weekly": {
    "pct": 100.0,
-   "resets_at": "2026-11-08T07:00:00.411309+00:00",
+   "resets_at": "2026-11-08T06:59:59.989705+00:00",
    "used_words": "of your weekly allowance used",
    "left": 0.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-08T07:00:00.411447+00:00",
+   "resets_at": "2026-11-08T06:59:59.989876+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-08T01:05:16.041275-05:00"
+  "read_at": "2026-11-08T01:15:49.734468-05:00"
  },
  "ui": {
   "week_pct": 0.883,
@@ -50,53 +50,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-08T01:29:28-05:00",
+ "next_tick": "2026-11-08T01:34:28-05:00",
  "personal": {
   "week_pct": 87.06,
   "usage_pct": 44.1,
   "work_pct": 71.5,
-  "read_at": "2026-11-08T06:19:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-3250",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Test the hourly idle count behind an experiment verdict",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-07T23:53:41-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-3390",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Re-measure OPT-113 under the sound trace rule, and its overhead",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T23:53:41-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-3124",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Read conflicts after holding named paths only",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-07T23:53:41-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-08T06:21:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -125,7 +85,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T01:19:00-05:00",
+   "at": "2026-11-08T01:20:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -135,7 +95,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-08T01:19:00-05:00"
+  "at": "2026-11-08T01:21:00-05:00"
  },
  "next_tick_why": "last_tick",
  "idle": null,
@@ -306,12 +266,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "1:19 AM",
-  "why": "",
-  "at_iso": "2026-11-08T06:19:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "1:21 AM",
+  "why": "Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 1:21 AM ET.",
+  "at_iso": "2026-11-08T06:21:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:19 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:21 AM ET</p><p class=\"an-why\">Plan limit: the weekly allowance is used up; it resets Sun 1:59 AM ET. Last check 1:21 AM ET.</p></section>"
  }
 }

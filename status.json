@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T14:20:27.674463+00:00",
+ "at": "2026-11-08T14:23:28.134739+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,30 @@
    "task": "[site] T-3357 keep focus in Chat boxes",
    "model": "opus",
    "started": "2026-11-08T13:50:19.572Z",
-   "seconds": 1808,
+   "seconds": 1988,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "pernille",
-   "task": "[review] T-3575 T-3577 T-3330 build 4 reviews",
+   "task": "[review] T-3576 editor theme picker review",
    "model": "opus",
-   "started": "2026-11-08T14:11:34.257Z",
-   "seconds": 533,
+   "started": "2026-11-08T14:21:43.645Z",
+   "seconds": 104,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys, Pernille",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-3575 T-3577 T-3330 build 4 reviews",
+   "model": "opus",
+   "started": "2026-11-08T14:11:34.257Z",
+   "seconds": null,
+   "finished": "2026-11-08T14:20:49.967000+00:00"
+  },
   {
    "name": "idris",
    "task": "[release] T-3574 build 4 to TestFlight",
@@ -51,20 +59,12 @@
    "started": "2026-11-08T13:49:04.187Z",
    "seconds": null,
    "finished": "2026-11-08T13:49:59.272000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3566 SSD moves, restart",
-   "model": "opus",
-   "started": "2026-11-08T13:29:49.206Z",
-   "seconds": null,
-   "finished": "2026-11-08T13:48:44.528000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 523,
+  "runnable_count": 524,
   "blocked_count": 107
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 3.66,
   "usage_pct": 45.7,
   "work_pct": 83.3,
-  "read_at": "2026-11-08T14:20:00+00:00",
+  "read_at": "2026-11-08T14:23:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -144,7 +144,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T09:20:00-05:00"
+  "at": "2026-11-08T09:23:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -166,9 +166,9 @@
   {
    "name": "Pernille",
    "state": "running",
-   "task": "[review] T-3575 T-3577 T-3330 build 4 reviews",
+   "task": "[review] T-3576 editor theme picker review",
    "model": "opus",
-   "since": "2026-11-08T14:11:34.257Z",
+   "since": "2026-11-08T14:21:43.645Z",
    "next": [],
    "effort": "high"
   },
@@ -220,12 +220,12 @@
    {
     "w": "Pernille",
     "k": "review",
-    "t": "Review the Run log row for a failed first run",
+    "t": "Review the editor theme picker before it ships",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-08T14:11:34.257Z",
+    "at": "2026-11-08T14:21:43.645Z",
     "o": "c",
-    "task": "T-3575"
+    "task": "T-3576"
    }
   ],
   "src": "plan",
@@ -319,7 +319,7 @@
    }
   ],
   "count": {
-   "next": 523,
+   "next": 524,
    "wait": 41,
    "blocked": 66,
    "you": 18
@@ -372,10 +372,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "9:20 AM",
+  "at": "9:23 AM",
   "why": "",
-  "at_iso": "2026-11-08T14:20:00+00:00",
+  "at_iso": "2026-11-08T14:23:00+00:00",
   "started": "8:22 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:20 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:23 AM ET</p></section>"
  }
 }

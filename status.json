@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T08:10:34.382167+00:00",
+ "at": "2026-11-08T08:13:37.744376+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[build] T-3393 why only Countdown draws",
    "model": "opus",
    "started": "2026-11-08T07:49:52.601Z",
-   "seconds": 1241,
+   "seconds": 1425,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[ops] T-3373 retire amendments file",
    "model": "opus",
    "started": "2026-11-08T07:50:03.111Z",
-   "seconds": 1231,
+   "seconds": 1414,
    "finished": null,
    "effort": "high"
   }
@@ -31,7 +31,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 421,
+  "runnable_count": 430,
   "blocked_count": 104
  },
  "meter": {
@@ -74,7 +74,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T08:10:00+00:00",
+  "read_at": "2026-11-08T08:13:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -86,6 +86,7 @@
     "e": "medium",
     "at": "2026-11-08T02:58:38-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -122,6 +123,7 @@
     "e": "high",
     "at": "2026-11-08T02:58:35-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -196,54 +198,6 @@
     "at": "2026-11-08T02:58:35-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3408",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Land the parked-work backlog faster",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T03:06:57-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3420",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Hand out less new work while the landing backlog grows",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T03:06:57-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3435",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Chain gate runs and send xc lines through the runner",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T03:06:57-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3107",
-    "w": "Pernille",
-    "k": "measure",
-    "t": "Read the phones' real numbers from the gate build",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T03:06:57-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
    },
    {
     "lane": "b3",
@@ -322,7 +276,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T03:10:00-05:00"
+  "at": "2026-11-08T03:13:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -497,7 +451,7 @@
    }
   ],
   "count": {
-   "next": 421,
+   "next": 430,
    "wait": 40,
    "blocked": 64,
    "you": 16
@@ -525,12 +479,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 5,
-  "total": 7,
-  "at": "3:10 AM",
+  "lanes": 4,
+  "total": 6,
+  "at": "3:13 AM",
   "why": "",
-  "at_iso": "2026-11-08T08:10:00+00:00",
+  "at_iso": "2026-11-08T08:13:00+00:00",
   "started": "2:49 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 3:10 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 3:13 AM ET</p></section>"
  }
 }

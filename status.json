@@ -1,71 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-08T18:30:48.892890+00:00",
+ "at": "2026-11-08T18:33:52.643769+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-08T11:55:50-05:00"
+  "kind": "",
+  "started": null
  },
- "workers": [
-  {
-   "name": "odalys",
-   "task": "[site] T-3325 redo one Lock In switch",
-   "model": "opus",
-   "started": "2026-11-08T17:50:47.450Z",
-   "seconds": 2401,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-3663 launcher tap handler review",
-   "model": "opus",
-   "started": "2026-11-08T18:22:25.478Z",
-   "seconds": 503,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Pernille",
- "recent": [
-  {
-   "name": "idris",
-   "task": "[build] T-2551 launcher tap-to-open path",
-   "model": "opus",
-   "started": "2026-11-08T17:39:24.071Z",
-   "seconds": null,
-   "finished": "2026-11-08T18:21:45.466000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3659 classify the retry lines",
-   "model": "opus",
-   "started": "2026-11-08T17:20:27.775Z",
-   "seconds": null,
-   "finished": "2026-11-08T17:50:16.157000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-2551 launcher premades through the gate",
-   "model": "opus",
-   "started": "2026-11-08T17:19:34.368Z",
-   "seconds": null,
-   "finished": "2026-11-08T17:38:56.919000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-3420 backlog-gated dispatch",
-   "model": "opus",
-   "started": "2026-11-08T17:06:20.342Z",
-   "seconds": null,
-   "finished": "2026-11-08T17:20:01.132000+00:00"
-  }
- ],
+ "workers": [],
+ "who": "",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 579,
-  "blocked_count": 110
+  "runnable_count": 577,
+  "blocked_count": 111
  },
  "meter": {
   "five_hour": {
@@ -107,34 +55,8 @@
   "week_pct": 3.66,
   "usage_pct": 33.5,
   "work_pct": 78.9,
-  "read_at": "2026-11-08T18:30:00+00:00",
+  "read_at": "2026-11-08T18:33:00+00:00",
   "running": [
-   {
-    "lane": "a2",
-    "task": "T-3441",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retry finished work that could not be merged",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T13:28:35-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3442",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retry finished work that could not be merged",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T13:28:35-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
    {
     "lane": "b2",
     "task": "T-3569",
@@ -170,6 +92,7 @@
     "e": "high",
     "at": "2026-11-08T12:16:27-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -238,51 +161,29 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 12,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 276
+   "free_gb": 274
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T13:25:00-05:00",
+   "at": "2026-11-08T13:31:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T13:30:00-05:00",
+  "at": "2026-11-08T13:33:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Spread: 92% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 6 of 8 lands failed in 3 hours (5 red))",
-  "n": 2,
-  "at": "2026-11-08T11:55:35.621542-05:00"
- },
+ "pool": null,
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[site] T-3325 redo one Lock In switch",
-   "model": "opus",
-   "since": "2026-11-08T17:50:47.450Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-3663 launcher tap handler review",
-   "model": "opus",
-   "since": "2026-11-08T18:22:25.478Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -295,6 +196,22 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -317,29 +234,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Redo one Lock In switch for every account",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T17:50:47.450Z",
-    "o": "i",
-    "task": "T-3325"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the launcher tap handler before the next test build",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T18:22:25.478Z",
-    "o": "c",
-    "task": "T-3663"
-   }
-  ],
-  "src": "plan",
+  "run": [],
   "open": [
    {
     "w": "Idris",
@@ -414,55 +309,26 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "t": "The retry list held lines for work that was already merged under a different fingerprint, so...",
-    "at": "2026-11-08T12:49:00-05:00"
+    "w": "Idris",
+    "t": "The widget timeline test that held Simulator landings is green again; T-3217 (a test fix on...",
+    "at": "2026-11-08T13:33:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "The MacBook runner installed its update twice as planned, so it now reads approvals written in...",
-    "at": "2026-11-08T12:31:00-05:00"
+    "t": "The between-session jobs loop (a launchd job that runs upkeep steps beside the sessions) is not...",
+    "at": "2026-11-08T13:32:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "The parked fix for Chat's 30 second refresh (it pushed people out of the box they were typing...",
-    "at": "2026-11-08T12:25:00-05:00"
+    "t": "The task that kept coming back could not be done from a lane because the install runs only from...",
+    "at": "2026-11-08T13:32:00-05:00"
    }
   ],
   "count": {
-   "next": 579,
+   "next": 577,
    "wait": 43,
-   "blocked": 67,
+   "blocked": 68,
    "you": 19
-  },
-  "fin": {
-   "n": 8,
-   "rows": [
-    [
-     "T-3659",
-     "Find what the extra retry..."
-    ],
-    [
-     "T-3359",
-     "Check the MacBook runner..."
-    ],
-    [
-     "T-3438",
-     "Retry finished work that..."
-    ],
-    [
-     "T-2552",
-     "Draw more launcher options..."
-    ],
-    [
-     "T-3420",
-     "Hand out less new work while..."
-    ],
-    [
-     "T-3588",
-     "Stop memory pressure from..."
-    ]
-   ]
   }
  },
  "qr": [],
@@ -474,24 +340,21 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "1:30 PM",
+  "main": 0,
+  "lanes": 2,
+  "total": 2,
+  "at": "1:33 PM",
   "why": "",
-  "at_iso": "2026-11-08T18:30:00+00:00",
-  "started": "11:55 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:30 PM ET</p></section>"
+  "at_iso": "2026-11-08T18:33:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:33 PM ET</p></section>"
  }
 }

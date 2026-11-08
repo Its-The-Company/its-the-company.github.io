@@ -1,55 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-08T12:07:53.594818+00:00",
+ "at": "2026-11-08T12:10:58.570366+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-08T06:37:33-05:00"
+  "kind": "",
+  "started": null
  },
- "workers": [
-  {
-   "name": "idris",
-   "task": "[test] T-3518 MacBook run of sensor-stall tests",
-   "model": "opus",
-   "started": "2026-11-08T11:38:21.085Z",
-   "seconds": 1772,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3550 keep good widgets on sensor timeout",
-   "model": "opus",
-   "started": "2026-11-08T11:58:13.871Z",
-   "seconds": 579,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris x2",
- "recent": [
-  {
-   "name": "pernille",
-   "task": "[review] T-3477 review stalled-sensor fix 5914346c4",
-   "model": "opus",
-   "started": "2026-11-08T11:47:27.278Z",
-   "seconds": null,
-   "finished": "2026-11-08T11:57:55.712000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-3549 free Mac mini disk to SSD",
-   "model": "opus",
-   "started": "2026-11-08T11:38:13.766Z",
-   "seconds": null,
-   "finished": "2026-11-08T11:46:54.382000+00:00"
-  }
- ],
+ "workers": [],
+ "who": "",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 516,
-  "blocked_count": 106
+  "runnable_count": 511,
+  "blocked_count": 108
  },
  "meter": {
   "five_hour": {
@@ -91,7 +55,7 @@
   "week_pct": 3.33,
   "usage_pct": 54.9,
   "work_pct": 88.2,
-  "read_at": "2026-11-08T12:07:00+00:00",
+  "read_at": "2026-11-08T12:10:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -128,24 +92,19 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T07:07:00-05:00"
+  "at": "2026-11-08T07:10:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Spread: 96% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 102 of 117 lands failed in 3 hours (3 red); 11 of 29 finished tasks were...",
-  "n": 2,
-  "at": "2026-11-08T06:37:21.265325-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[test] T-3518 MacBook run of sensor-stall tests",
-   "model": "opus",
-   "since": "2026-11-08T11:38:21.085Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -189,29 +148,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "Run the sensor-stall fix's tests on the MacBook",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T11:38:21.085Z",
-    "o": "c",
-    "task": "T-3518"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Keep good widgets when a sensor read times out",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T11:58:13.871Z",
-    "o": "c",
-    "task": "T-3550"
-   }
-  ],
-  "src": "plan",
+  "run": [],
   "open": [
    {
     "w": "Idris",
@@ -286,35 +223,26 @@
   ],
   "done": [
    {
-    "w": "Pernille",
-    "t": "The fix lets Steps and Altitude draw a notice when a phone sensor never answers, but that notice...",
-    "at": "2026-11-08T06:57:00-05:00"
+    "w": "Odalys",
+    "t": "lands and the merge queue now start the suites with the most past reds first, but the replay of...",
+    "at": "2026-11-08T07:09:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "Taking a task now fails, naming the lane, when another lane already finished it and its work is...",
-    "at": "2026-11-08T06:10:00-05:00"
+    "w": "Operator",
+    "t": "The work this notice was about has landed on main, so the lander closed it.",
+    "at": "2026-11-08T07:09:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "The check before code joins main now also covers the test data files the app's tests read, so a...",
-    "at": "2026-11-08T05:58:00-05:00"
+    "w": "Operator",
+    "t": "The work this notice was about has landed on main, so the lander closed it.",
+    "at": "2026-11-08T07:09:00-05:00"
    }
   ],
   "count": {
-   "next": 516,
+   "next": 511,
    "wait": 40,
-   "blocked": 66,
-   "you": 17
-  },
-  "fin": {
-   "n": 1,
-   "rows": [
-    [
-     "T-3477",
-     "Review the stalled-sensor..."
-    ]
-   ]
+   "blocked": 68,
+   "you": 19
   }
  },
  "qr": [],
@@ -327,7 +255,6 @@
   "lane_next",
   "queue_text",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -335,13 +262,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 0,
   "lanes": 0,
-  "total": 2,
-  "at": "7:07 AM",
-  "why": "",
-  "at_iso": "2026-11-08T12:07:00+00:00",
-  "started": "6:37 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:07 AM ET</p></section>"
+  "total": 0,
+  "at": "7:10 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-08T12:10:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:10 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

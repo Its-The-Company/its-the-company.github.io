@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T15:45:54.018332+00:00",
+ "at": "2026-11-08T15:48:54.958353+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,25 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[tools] T-2586 merges stopping without conflict",
-   "model": "opus",
-   "started": "2026-11-08T15:30:50.050Z",
-   "seconds": 903,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "pernille",
    "task": "[review] T-3584 two commits before build 5",
    "model": "opus",
    "started": "2026-11-08T15:42:45.703Z",
-   "seconds": 188,
+   "seconds": 369,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Pernille",
+ "who": "Pernille",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-2586 merges stopping without conflict",
+   "model": "opus",
+   "started": "2026-11-08T15:30:50.050Z",
+   "seconds": null,
+   "finished": "2026-11-08T15:48:16.076000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-3582 size limits for issue page",
@@ -51,20 +50,12 @@
    "started": "2026-11-08T15:20:03.741Z",
    "seconds": null,
    "finished": "2026-11-08T15:30:32.431000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[review] T-3571 then [release] T-3574 build 4",
-   "model": "opus",
-   "started": "2026-11-08T14:32:52.693Z",
-   "seconds": null,
-   "finished": "2026-11-08T15:28:44.951000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 517,
+  "runnable_count": 518,
   "blocked_count": 107
  },
  "meter": {
@@ -107,7 +98,7 @@
   "week_pct": 3.66,
   "usage_pct": 45.7,
   "work_pct": 83.3,
-  "read_at": "2026-11-08T15:45:00+00:00",
+  "read_at": "2026-11-08T15:48:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -132,37 +123,28 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 268
+   "free_gb": 279
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T10:42:00-05:00",
+   "at": "2026-11-08T10:48:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T10:45:00-05:00"
+  "at": "2026-11-08T10:48:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Spread: 94% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 20 of 24 lands failed in 3 hours (6 red); 12 of 41 finished tasks were...",
+  "why": "Spread: 93% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 20 of 24 lands failed in 3 hours (6 red); 12 of 41 finished tasks were...",
   "n": 2,
   "at": "2026-11-08T08:21:46.280885-05:00"
  },
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-2586 merges stopping without conflict",
-   "model": "opus",
-   "since": "2026-11-08T15:30:50.050Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Pernille",
    "state": "running",
@@ -189,6 +171,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Maren",
    "state": "next",
    "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
@@ -207,16 +197,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Find why merges stop without a conflict and fix it",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T15:30:50.050Z",
-    "o": "c",
-    "task": "T-2586"
-   },
    {
     "w": "Pernille",
     "k": "review",
@@ -303,6 +283,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "A merge no longer stops when a test leaves a changed file behind; that was the one non-conflict...",
+    "at": "2026-11-08T10:48:00-05:00"
+   },
+   {
     "w": "Maren",
     "t": "The Issues page now has a drawn design: short rows that open each issue on its own page, Now and...",
     "at": "2026-11-08T10:38:00-05:00"
@@ -311,22 +296,21 @@
     "w": "Odalys",
     "t": "When main's own tests go red, the nightly check now finds the change that broke them and puts...",
     "at": "2026-11-08T10:30:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Build 4 is with Apple for internal TestFlight: it carries the fixes for the blank Steps,...",
-    "at": "2026-11-08T10:28:00-05:00"
    }
   ],
   "count": {
-   "next": 517,
+   "next": 518,
    "wait": 41,
    "blocked": 66,
    "you": 18
   },
   "fin": {
-   "n": 17,
+   "n": 18,
    "rows": [
+    [
+     "T-2586",
+     "Find why merges stop without..."
+    ],
     [
      "T-3581",
      "Design the new Issues list..."
@@ -346,18 +330,14 @@
     [
      "T-3580",
      "Move unused work folders to..."
-    ],
-    [
-     "T-3343",
-     "Decide if work trees and..."
     ]
    ]
   }
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-08T15:26:27Z",
-  "seconds": 63.0
+  "sent": "2026-11-08T15:46:09Z",
+  "seconds": 68.0
  },
  "inbox": [],
  "trimmed": [
@@ -374,13 +354,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "10:45 AM",
+  "total": 1,
+  "at": "10:48 AM",
   "why": "",
-  "at_iso": "2026-11-08T15:45:00+00:00",
+  "at_iso": "2026-11-08T15:48:00+00:00",
   "started": "8:22 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:45 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:48 AM ET</p></section>"
  }
 }

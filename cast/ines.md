@@ -52,6 +52,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-1029: an error on my own read is data (fork failed led to ps: ten Simulators at the process limit). A <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> resting on a list the job removes is no hold. A fix to one half of an `or` is none.
 - T-3204: grep the board for the work before `add` (made T-3268, a copy of T-1731; withdrew it). Shared board: stage my lines only (hash-object + update-index), not `git commit <path>`.
 - T-1154: on a lane, board_tick queues to ops/lane-outbox and a neighbour's commit may sweep it (d363c526); read git log before committing.
+- T-2896 (ADR-010): recipes open as Gallery copies under their ui.Widget id, build T-3440 after T-0901. On a lane, board_tick add writes main's board at once (T-3209); ticks queue in the outbox.
 {% endraw %}
 
 

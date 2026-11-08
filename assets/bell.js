@@ -45,14 +45,16 @@ function lab(i) { return (i.labels || []).map(function (l) { return String(l.nam
 function company(who, body, names) { return names.indexOf(who) < 0 && !/\(automatic receipt\)\s*$/.test(body || ''); }
 function feed(issues, comments, names) {
 var chat = {};
-issues.forEach(function (i) { if (i.state === 'open' && isChat(lab(i))) chat[i.number] = 1; });
+issues.forEach(function (i) { if (i.state === 'open' && isChat(lab(i))) chat[i.number] = String(i.title || ''); });
 took(comments.map(function (c) {
-return { n: +String(c.issue_url || '').split('/').pop(), id: c.id, w: String((c.user && c.user.login) || '').toLowerCase(), t: c.created_at, b: c.body };
+var n = +String(c.issue_url || '').split('/').pop();
+return { n: n, id: c.id, w: String((c.user && c.user.login) || '').toLowerCase(), t: c.created_at, b: c.body, ti: chat[n] };
 }).filter(function (c) { return chat[c.n]; }), names);
 }
+function sender(c) { var m = /<!-- ?as: ?([^>]{1,40}?) ?-->/.exec(c.b || ''); return m ? m[1] : c.w; }
 function took(cs, names) {
 rep = [];
-cs.forEach(function (c) { if (company(c.w, c.b, names) && c.t > seenAt(c.n)) rep.push({ k: 'c' + c.id, n: c.n, t: c.t, b: plain(c.b) }); });
+cs.forEach(function (c) { if (company(c.w, c.b, names) && c.t > seenAt(c.n)) rep.push({ k: 'c' + c.id, n: c.n, t: c.t, b: plain(c.b), ti: String(c.ti || '').replace(/\s+/g, ' ').trim().slice(0, 80), w: sender(c) }); });
 rep.sort(function (a, b) { return a.t < b.t ? 1 : -1; });
 rep = rep.slice(0, 20);
 try { LS.setItem(CK, JSON.stringify(rep)); } catch (e) { /* full: this page still shows them */ }
@@ -62,7 +64,7 @@ if (fresh.length && allowed()) { held = held.concat(fresh); if (!heldT) heldT = 
 draw();
 }
 var Q = 'query($o:String!,$r:String!){repository(owner:$o,name:$r){a:object(expression:"HEAD:investors/allowlist.md"){...on Blob{text}}'
-+ 'i:issues(states:OPEN,first:30,orderBy:{field:UPDATED_AT,direction:DESC}){nodes{number labels(first:10){nodes{name}}comments(last:10){nodes{databaseId author{login}body createdAt}}}}}}';
++ 'i:issues(states:OPEN,first:30,orderBy:{field:UPDATED_AT,direction:DESC}){nodes{number title labels(first:10){nodes{name}}comments(last:10){nodes{databaseId author{login}body createdAt}}}}}}';
 function read() {
 if (!repo || !S.getToken || !S.getToken() || S.byId('chat-root') || (S.rejected && S.rejected())) return;
 var c = json(RK, null, sessionStorage);
@@ -74,7 +76,7 @@ var r = g && g.data && g.data.repository, cs = [];
 if (!r || !r.i) return;
 r.i.nodes.forEach(function (i) {
 if (!isChat(lab({ labels: i.labels.nodes }))) return;
-i.comments.nodes.forEach(function (x) { cs.push({ n: i.number, id: x.databaseId, w: String((x.author && x.author.login) || '').toLowerCase(), t: x.createdAt, b: x.body }); });
+i.comments.nodes.forEach(function (x) { cs.push({ n: i.number, id: x.databaseId, w: String((x.author && x.author.login) || '').toLowerCase(), t: x.createdAt, b: x.body, ti: i.title }); });
 });
 var names = S.parseAllow(r.a && r.a.text);
 try { sessionStorage.setItem(RK, JSON.stringify({ at: Date.now(), cs: cs, names: names })); } catch (e) { /* private mode */ }
@@ -85,8 +87,11 @@ function flush() {
 heldT = 0; var h = held; held = [];
 if (!h.length || !allowed()) return;
 lastNote = Date.now();
-var one = h.length === 1 ? h[0] : null;
-var n = new Notification(one ? 'Reply on #' + one.n : h.length + ' new replies', { body: one ? one.b : 'Open the bell on the company site.', tag: 'company-bell' });
+var one = h.length === 1 ? h[0] : null, ns = [], tis = [];
+h.slice().sort(function (a, b) { return a.n - b.n; }).forEach(function (x) { if (ns.indexOf(x.n) < 0) { ns.push(x.n); tis.push('#' + x.n + (x.ti ? ' ' + x.ti : '')); } });
+var more = ns.length > 4 ? ' and ' + (ns.length - 4) + ' more' : '';
+var n = new Notification(one ? 'Reply from ' + one.w + ' on #' + one.n : h.length + ' new replies on ' + ns.slice(0, 4).map(function (k) { return '#' + k; }).join(', ') + more,
+{ body: one ? (one.ti ? one.ti + '\n' : '') + one.b : tis.slice(0, 4).join('; '), tag: 'company-bell' });
 weekCount(1);
 n.onclick = function () { if (window.focus) window.focus(); if (one) location.href = href('/chat/#t=' + one.n); else show(true); if (n.close) n.close(); };
 draw();

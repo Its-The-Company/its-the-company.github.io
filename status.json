@@ -1,24 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-08T11:09:09.943704+00:00",
+ "at": "2026-11-08T11:16:01.904866+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-08T02:49:03-05:00"
+  "active": false,
+  "kind": "",
+  "started": null
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-3542 stop double-worked claims",
    "model": "opus",
    "started": "2026-11-08T10:13:45.594Z",
-   "seconds": 3324,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-08T11:10:38.874000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3519 fixtures in main gate key",
@@ -42,14 +40,6 @@
    "started": "2026-11-08T09:03:17.004Z",
    "seconds": null,
    "finished": "2026-11-08T10:13:22.966000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3393 land sensor-deadline fix",
-   "model": "opus",
-   "started": "2026-11-08T08:52:45.050Z",
-   "seconds": null,
-   "finished": "2026-11-08T09:02:38.593000+00:00"
   }
  ],
  "queue": {
@@ -93,12 +83,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-08T03:03:46-05:00",
  "personal": {
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T11:09:00+00:00",
+  "read_at": "2026-11-08T11:16:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -128,32 +118,19 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T06:04:00-05:00",
+   "at": "2026-11-08T06:10:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T06:09:00-05:00"
+  "at": "2026-11-08T06:16:00-05:00"
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Spread: 97% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 9 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
-  "n": 2,
-  "at": "2026-11-08T02:48:46.290137-05:00"
- },
+ "pool": null,
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-3542 stop double-worked claims",
-   "model": "opus",
-   "since": "2026-11-08T10:13:45.594Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -179,6 +156,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Maren",
    "state": "next",
    "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
@@ -196,19 +181,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop a claimed line being worked twice",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T10:13:45.594Z",
-    "o": "c",
-    "task": "T-3542"
-   }
-  ],
-  "src": "plan",
+  "run": [],
   "open": [
    {
     "w": "Idris",
@@ -284,6 +257,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "Taking a task now fails, naming the lane, when another lane already finished it and its work is...",
+    "at": "2026-11-08T06:10:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The check before code joins main now also covers the test data files the app's tests read, so a...",
     "at": "2026-11-08T05:58:00-05:00"
    },
@@ -291,11 +269,6 @@
     "w": "Odalys",
     "t": "Parked work that waits to be merged no longer queues behind a one-an-hour limit: each retry now...",
     "at": "2026-11-08T05:51:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The supervisor now checks before every push that GitHub's push address matches its fetch...",
-    "at": "2026-11-08T05:43:00-05:00"
    }
   ],
   "count": {
@@ -303,35 +276,6 @@
    "wait": 40,
    "blocked": 65,
    "you": 17
-  },
-  "fin": {
-   "n": 8,
-   "rows": [
-    [
-     "T-3519",
-     "Put test fixtures in the..."
-    ],
-    [
-     "T-3408",
-     "Land the parked-work backlog..."
-    ],
-    [
-     "T-3360",
-     "Alert at once when the push..."
-    ],
-    [
-     "T-3203",
-     "Count any plain approval as..."
-    ],
-    [
-     "T-3380",
-     "Check the look of In flight..."
-    ],
-    [
-     "T-3436",
-     "Retry finished work that..."
-    ]
-   ]
   }
  },
  "qr": [],
@@ -345,22 +289,20 @@
   "queue_text",
   "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "6:09 AM",
-  "why": "",
-  "at_iso": "2026-11-08T11:09:00+00:00",
-  "started": "2:49 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:09 AM ET</p></section>"
+  "total": 0,
+  "at": "6:16 AM",
+  "why": "Between sessions: no session is running. Last check 2:48 AM ET.",
+  "at_iso": "2026-11-08T11:16:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:16 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 2:48 AM ET.</p></section>"
  }
 }

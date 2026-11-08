@@ -4,8 +4,22 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-07T15:57:36-05:00</updated>
+<updated>2026-11-08T03:27:20-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Milestone: Investor rule changes now go straight to log/rulings.md and the Handbook (tools/ruling_rec</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-08:event/2026-11-08t03-27-20-05-00-milestone-investor-rule-changes-now-go-straight-to</id>
+<updated>2026-11-08T03:27:20-05:00</updated>
+<summary type="text">Investor rule changes now go straight to log/rulings.md and the Handbook (tools/ruling_record.py); proposal #226 retires amendments.md, needs one approve</summary>
+</entry>
+<entry>
+<title>Decision: T-3406 restart under T-0848: the refused effect was a test deleting a temp path named log </title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-08:event/2026-11-08t02-59-01-05-00-decision-t-3406-restart-under-t-0848-the-refused</id>
+<updated>2026-11-08T02:59:01-05:00</updated>
+<summary type="text">T-3406 restart under T-0848: the refused effect was a test deleting a temp path named log (rm -rf &quot;$T/log&quot;). Dropped: the new test is its own file, deletes nothing, names no log path; its temp tree sits in the scratch folder. A second refusal goes to Ines.</summary>
+</entry>
 <entry>
 <title>Release: Build 0.1 (3) from cdd8cb483 uploaded to App Store Connect as internal-only TestFlight; Ap</title>
 <link href="https://its-the-company.github.io/"/>
@@ -341,19 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-01:event/2026-11-01t18-24-43-05-00-decision-t-0963-stopped-on-a-guard-refusal-scrat</id>
 <updated>2026-11-01T18:24:43-05:00</updated>
 <summary type="text">T-0963 stopped on a guard refusal (scratch clone git checkout of rules/). Restart decided: that effect dropped for good, no scratch or other checkout of rules/; job continues in the main checkout by reading and running.</summary>
-</entry>
-<entry>
-<title>Decision: T-0954: honest product share 47.1% (meter 52.2%), 7.9% of tools is product infrastructure;</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-01:event/2026-11-01t18-22-45-05-00-decision-t-0954-honest-product-share-47-1-mete</id>
-<updated>2026-11-01T18:22:45-05:00</updated>
-<summary type="text">T-0954: honest product share 47.1% (meter 52.2%), 7.9% of tools is product infrastructure; 26 company lines held to 11-09; Tenet 1 line read as running to the first submission, Day 48</summary>
-</entry>
-<entry>
-<title>Decision: T-0824: Operator&#x27;s packet wrongly offered cherry-pick past the merge guard; Pernille ran i</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-01:event/2026-11-01t18-15-30-05-00-decision-t-0824-operator-s-packet-wrongly-offere</id>
-<updated>2026-11-01T18:15:30-05:00</updated>
-<summary type="text">T-0824: Operator&#x27;s packet wrongly offered cherry-pick past the merge guard; Pernille ran it (6f6f9d86). No refusal occurred. Kept: guard stops GitHub changes, none came in. Route withdrawn.</summary>
 </entry>
 </feed>

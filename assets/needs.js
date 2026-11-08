@@ -439,22 +439,21 @@ function qsec(k) {
 var sec = el('section', 'ny-q-sec'), h = mk(sec, 'h2', null, k === 'N' ? 'Needs you ' : 'Later ');
 h.id = 'ny-q-' + k; sec.setAttribute('aria-labelledby', h.id);
 QS[k] = { sec: sec, n: mk(h, 'span', 'num ny-count', '0'), none: mk(sec, 'p', 'meta', k === 'N' ? 'Nothing needs you right now.' : 'Nothing is waiting for later.') };
-mk(sec, 'p', 'meta', k === 'N' ? 'A deadline within 24 hours, or none. Mute takes the badge off and leaves the issue here.' : 'A deadline more than 24 hours away. It moves to Needs you by itself when the deadline is within 24 hours. Acknowledge takes the badge off.');
+mk(sec, 'p', 'meta', k === 'N' ? 'A deadline within 24 hours, or none. Mark Read takes the badge off and leaves the issue here.' : 'A deadline more than 24 hours away. It moves to Needs you by itself when the deadline is within 24 hours. Mark Read takes the badge off, and it stays off in Later.');
 QS[k].ul = mk(sec, 'ul', 'list needs'); QS[k].ul.setAttribute('data-queue', k);
 return sec;
 }
 function ctl(x) {
-var Q = window.IssueQ, n = x[1], b = mk(x[0], 'div', 'ny-bar ny-dl'), d = mk(b, 'input'), w = mk(b, 'input');
+var Q = window.IssueQ, n = x[1], b = x[0].querySelector('.ny-shut') || mk(x[0].querySelector('.ny-box') || x[0], 'div', 'ny-bar ny-shut'), w = mk(b, 'input'), g;
+b.classList.add('ny-dl');
 x.info = mk(b, 'span', 'meta ny-due');
-d.type = 'number'; d.min = '0'; d.step = 'any'; d.placeholder = 'days'; d.setAttribute('aria-label', 'Days to delay #' + n);
-w.type = 'datetime-local'; w.setAttribute('aria-label', 'Deadline for #' + n);
-function btn(t, f) { var c = mk(b, 'button', 'cv-tool', t); c.type = 'button'; c.onclick = f; return c; }
+w.type = 'datetime-local'; w.setAttribute('aria-label', 'New deadline for #' + n);
+function btn(t, f) { var c = mk(b, 'button', 'cv-tool ny-act-b', t); c.type = 'button'; c.onclick = f; return c; }
 function go(kind, v) { Q.act(QST, n, ox(x), kind, v, Date.now()); Q.save(QST); paint(); tally(); }
-btn('Delay', () => { var v = parseFloat(d.value); if (v >= 0) go('delay', Date.now() + v * Q.DAY); else d.focus(); });
-btn('Set deadline', () => { var v = Date.parse(w.value); if (v) go('delay', v); else w.focus(); });
-btn('No deadline (Urgent)', () => go('delay', 0));
-x.mute = btn('Mute', () => go('mute')); x.ack = btn('Acknowledge', () => go('ack'));
-b.insertBefore(x.info, b.firstChild);
+x.dlb = btn('Set Deadline', () => { var v = Date.parse(w.value); if (v) go('delay', v); else w.focus(); });
+x.rd = btn('Mark Read', () => go(Q.badged(n, ox(x), QST, Date.now()) ? 'read' : 'unread'));
+g = b.querySelector('button'); b.insertBefore(x.info, b.firstChild); b.insertBefore(w, g);
+Array.prototype.forEach.call(b.querySelectorAll(':scope > .meta:not(.ny-due)'), (e) => b.appendChild(e));
 }
 function paint() {
 var Q = window.IssueQ;
@@ -476,7 +475,7 @@ QS[k].n.textContent = String(by[k].length); QS[k].none.hidden = by[k].length > 0
 vis.forEach((x) => {
 var o = ox(x), bd = Q.badged(x[1], o, QST, now), hd = x[0].querySelector('.ic-head') || x[0], nb = x[0].querySelector('.ny-nb');
 x.info.textContent = dueText(Q.due(x[1], o, QST)) + (QST.d[x[1]] !== undefined ? ' (set here)' : '');
-x.mute.hidden = !(x.q === 'N' && bd); x.ack.hidden = !(x.q === 'L' && bd);
+x.rd.textContent = bd ? 'Mark Read' : 'Mark Unread'; x.rd.setAttribute('aria-pressed', bd ? 'false' : 'true');
 if (bd && !nb) { hd.appendChild(document.createTextNode(' ')); hd.appendChild(el('span', 'nb ny-nb', 'New')); }
 if (!bd && nb) nb.remove();
 });
@@ -493,11 +492,11 @@ round(); setInterval(round, 6e4);
 });
 }
 function tally() {
-var n = rest, a = 0;
-var now = Date.now();
-ROWS.forEach((x) => { if (!x[0].hidden) { if (x.ans) a++; else if (!QST || window.IssueQ.badged(x[1], ox(x), QST, now)) n++; } });
+var n = rest, a = 0, lt = 0, red = 0;
+var now = Date.now(), Q = window.IssueQ;
+ROWS.forEach((x) => { if (!x[0].hidden) { if (x.ans) a++; else if (!QST || Q.badged(x[1], ox(x), QST, now)) { n++; if (QST && Q.queue(x[1], ox(x), QST, now) === 'L') lt++; if (Q.tier(x[1], ox(x), QST, now) === 'r') red++; } } });
 if (ansN) ansN.textContent = String(a);
-if (!R && !P && window.IssueCount) window.IssueCount.put(n, a);
+if (!R && !P && window.IssueCount) window.IssueCount.put(n, a, lt, red);
 }
 function fold() {
 Array.prototype.forEach.call(document.querySelectorAll('ul[data-group]'), (ul) => {

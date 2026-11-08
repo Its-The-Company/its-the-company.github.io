@@ -62,6 +62,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## 2026-11-02 T-0337 recall checks: 3 of 5 (f0988b3b, 53793e7d; not ticked; R3 HIG, R4 agreement left)
 - Lesson: take Apple help-page paths from a saved page's sidebar links before fetching; a guessed path gives "Page Not Found" with HTTP 200 and still costs the day <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> (12, shared by every lane).
+## 2026-11-08 T-3421 merge practice vs ours (ae5f131a2, tick e9ceff079); gaps T-3444..T-3452 to Odalys
+- Lessons: board titles 3-10 words (count first); a lane's `add` writes main's board at once, ticks queue in the outbox. A 308 means read Location, not ask twice.
 {% endraw %}
 
 

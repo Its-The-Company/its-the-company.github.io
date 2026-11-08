@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T15:30:36.025042+00:00",
+ "at": "2026-11-08T15:33:39.554898+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,12 +12,21 @@
    "task": "[design] T-3581 Issues list and issue page",
    "model": "opus",
    "started": "2026-11-08T15:29:14.723Z",
-   "seconds": 81,
+   "seconds": 264,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2586 merges stopping without conflict",
+   "model": "opus",
+   "started": "2026-11-08T15:30:50.050Z",
+   "seconds": 169,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Maren",
+ "who": "Maren, Odalys",
  "recent": [
   {
    "name": "odalys",
@@ -98,7 +107,7 @@
   "week_pct": 3.66,
   "usage_pct": 45.7,
   "work_pct": 83.3,
-  "read_at": "2026-11-08T15:30:00+00:00",
+  "read_at": "2026-11-08T15:33:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -119,7 +128,7 @@
   }
  ],
  "disk": {
-  "free_gb": 19,
+  "free_gb": 18,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -128,14 +137,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T10:25:00-05:00",
+   "at": "2026-11-08T10:31:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T10:30:00-05:00"
+  "at": "2026-11-08T10:33:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -151,6 +160,15 @@
    "task": "[design] T-3581 Issues list and issue page",
    "model": "opus",
    "since": "2026-11-08T15:29:14.723Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-2586 merges stopping without conflict",
+   "model": "opus",
+   "since": "2026-11-08T15:30:50.050Z",
    "next": [],
    "effort": "high"
   },
@@ -179,14 +197,6 @@
    "next": []
   },
   {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Wrenna",
    "state": "next",
    "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
@@ -206,6 +216,16 @@
     "at": "2026-11-08T15:29:14.723Z",
     "o": "c",
     "task": "T-3581"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Find why merges stop without a conflict and fix it",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T15:30:50.050Z",
+    "o": "c",
+    "task": "T-2586"
    }
   ],
   "src": "plan",
@@ -354,13 +374,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 0,
-  "total": 1,
-  "at": "10:30 AM",
+  "total": 2,
+  "at": "10:33 AM",
   "why": "",
-  "at_iso": "2026-11-08T15:30:00+00:00",
+  "at_iso": "2026-11-08T15:33:00+00:00",
   "started": "8:22 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:30 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:33 AM ET</p></section>"
  }
 }

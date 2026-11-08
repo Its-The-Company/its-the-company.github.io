@@ -1,32 +1,13 @@
 {
  "schema": 1,
- "at": "2026-11-08T07:58:14.523680+00:00",
+ "at": "2026-11-08T08:00:12.316570+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-08T02:49:03-05:00"
+  "kind": "",
+  "started": null
  },
- "workers": [
-  {
-   "name": "idris",
-   "task": "[build] T-3393 why only Countdown draws",
-   "model": "opus",
-   "started": "2026-11-08T07:49:52.601Z",
-   "seconds": 501,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[ops] T-3373 retire amendments file",
-   "model": "opus",
-   "started": "2026-11-08T07:50:03.111Z",
-   "seconds": 491,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Odalys",
+ "workers": [],
+ "who": "",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -74,8 +55,128 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T07:58:00+00:00",
+  "read_at": "2026-11-08T08:01:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-3431",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Make the MacBook runner take merge fixes in impact order",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-08T02:58:38-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-3312",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Install the jobs loop and read its first 48 hours",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T02:58:38-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3406",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Close the supervisor's alerts once their cause clears",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T02:58:35-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3421",
+    "w": "Wrenna",
+    "k": "research",
+    "t": "Compare our merge queue with published practice",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T02:58:35-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3395",
+    "w": "Ines",
+    "k": "ops",
+    "t": "Give each report's opening quote more personality",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-08T02:58:35-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3417",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Mark Read replaces Mute and Acknowledge on Issues",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-08T02:58:35-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3423",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Measure and trim what every worker reads at start",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T02:58:35-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3427",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Label every task by category with a badge",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T02:58:35-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3281",
+    "w": "Idris",
+    "k": "build",
+    "t": "Run the gate build's Settings row once",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T02:58:35-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-0892",
+    "w": "Idris",
+    "k": "test",
+    "t": "Make the first-widget flow test start clean",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T02:58:35-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "b2",
     "task": "T-3380",
@@ -190,7 +291,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T02:54:00-05:00",
+   "at": "2026-11-08T02:59:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -200,33 +301,19 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T02:58:00-05:00"
+  "at": "2026-11-08T03:01:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Spread: 99% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 9 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
-  "n": 2,
-  "at": "2026-11-08T02:48:46.290137-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-3393 why only Countdown draws",
-   "model": "opus",
-   "since": "2026-11-08T07:49:52.601Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[ops] T-3373 retire amendments file",
-   "model": "opus",
-   "since": "2026-11-08T07:50:03.111Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -240,6 +327,14 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -262,29 +357,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Find why only Countdown draws on Jeremy's iPhone",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T07:49:52.601Z",
-    "o": "c",
-    "task": "T-3393"
-   },
-   {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Retire the amendments file and the constitution",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T07:50:03.111Z",
-    "o": "c",
-    "task": "T-3373"
-   }
-  ],
-  "src": "plan",
+  "run": [],
   "open": [
    {
     "w": "Idris",
@@ -379,10 +452,6 @@
    "wait": 40,
    "blocked": 64,
    "you": 16
-  },
-  "fin": {
-   "n": 0,
-   "rows": []
   }
  },
  "qr": [],
@@ -402,13 +471,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
-  "lanes": 2,
-  "total": 4,
-  "at": "2:58 AM",
+  "main": 0,
+  "lanes": 5,
+  "total": 5,
+  "at": "3:01 AM",
   "why": "",
-  "at_iso": "2026-11-08T07:58:00+00:00",
-  "started": "2:49 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:58 AM ET</p></section>"
+  "at_iso": "2026-11-08T08:01:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 3:01 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T08:51:36.343010+00:00",
+ "at": "2026-11-08T08:54:39.394848+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,34 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[release] T-3323 upload refuses its own export",
-   "model": "opus",
-   "started": "2026-11-08T08:27:47.535Z",
-   "seconds": 1428,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[tools] T-3408 land parked backlog faster",
    "model": "opus",
    "started": "2026-11-08T08:29:35.679Z",
-   "seconds": 1320,
+   "seconds": 1503,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-3393 land sensor-deadline fix",
+   "model": "opus",
+   "started": "2026-11-08T08:52:45.050Z",
+   "seconds": 114,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Odalys",
+ "who": "Odalys, Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[release] T-3323 upload refuses its own export",
+   "model": "opus",
+   "started": "2026-11-08T08:27:47.535Z",
+   "seconds": null,
+   "finished": "2026-11-08T08:52:26.712000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-3393 why only Countdown draws",
@@ -48,7 +56,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 469,
+  "runnable_count": 481,
   "blocked_count": 105
  },
  "meter": {
@@ -91,7 +99,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T08:51:00+00:00",
+  "read_at": "2026-11-08T08:54:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -139,56 +147,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-08T03:24:41-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3406",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Close the supervisor's alerts once their cause clears",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T02:58:35-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3421",
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Compare our merge queue with published practice",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T02:58:35-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3395",
-    "w": "Ines",
-    "k": "ops",
-    "t": "Give each report's opening quote more personality",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-08T02:58:35-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3417",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Mark Read replaces Mute and Acknowledge on Issues",
-    "m": "sonnet",
-    "e": "medium",
-    "at": "2026-11-08T02:58:35-05:00",
     "n": "Evan",
     "d": 1,
     "src": "plan-a"
@@ -238,7 +196,7 @@
   }
  ],
  "disk": {
-  "free_gb": 9.4,
+  "free_gb": 9.1,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -247,7 +205,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T03:47:00-05:00",
+   "at": "2026-11-08T03:53:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -257,31 +215,31 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T03:51:00-05:00"
+  "at": "2026-11-08T03:54:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Spread: 99% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 9 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
+  "why": "Spread: 98% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 9 (raised a step: load, time-outs, failed lands and redone tasks all under their lines)",
   "n": 2,
   "at": "2026-11-08T02:48:46.290137-05:00"
  },
  "lanes": [
-  {
-   "name": "Idris",
-   "state": "running",
-   "task": "[release] T-3323 upload refuses its own export",
-   "model": "opus",
-   "since": "2026-11-08T08:27:47.535Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-3408 land parked backlog faster",
    "model": "opus",
    "since": "2026-11-08T08:29:35.679Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-3393 land sensor-deadline fix",
+   "model": "opus",
+   "since": "2026-11-08T08:52:45.050Z",
    "next": [],
    "effort": "high"
   },
@@ -321,16 +279,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "release",
-    "t": "Stop the upload refusing its own export folder",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T08:27:47.535Z",
-    "o": "c",
-    "task": "T-3323"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Land the parked-work backlog faster",
@@ -339,6 +287,16 @@
     "at": "2026-11-08T08:29:35.679Z",
     "o": "c",
     "task": "T-3408"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Find why only Countdown draws on Jeremy's iPhone",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T08:52:45.050Z",
+    "o": "c",
+    "task": "T-3393"
    }
   ],
   "src": "plan",
@@ -416,6 +374,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The TestFlight upload no longer refuses itself because of its own export folder; a plain gate...",
+    "at": "2026-11-08T03:52:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "An Xcode run whose log goes silent for 30 minutes before any result now ends itself and frees...",
     "at": "2026-11-08T02:40:00-05:00"
@@ -424,22 +387,22 @@
     "w": "Odalys",
     "t": "Waiting work is now tested several pieces at once, each on top of the ones ahead of it; a piece...",
     "at": "2026-11-08T02:39:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The merge-queue test's check of how the supervisor starts the queue now expects both starts,...",
-    "at": "2026-11-08T02:39:00-05:00"
    }
   ],
   "count": {
-   "next": 469,
+   "next": 481,
    "wait": 40,
    "blocked": 65,
    "you": 17
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-3323",
+     "Stop the upload refusing its..."
+    ]
+   ]
   }
  },
  "qr": [],
@@ -452,6 +415,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -460,12 +424,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "3:51 AM",
+  "lanes": 2,
+  "total": 4,
+  "at": "3:54 AM",
   "why": "",
-  "at_iso": "2026-11-08T08:51:00+00:00",
+  "at_iso": "2026-11-08T08:54:00+00:00",
   "started": "2:49 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:51 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:54 AM ET</p></section>"
  }
 }

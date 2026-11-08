@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T12:17:07.210304+00:00",
+ "at": "2026-11-08T12:20:07.641395+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,25 +9,24 @@
  "workers": [
   {
    "name": "idris",
-   "task": "[test] T-3518 MacBook run of sensor-stall tests",
-   "model": "opus",
-   "started": "2026-11-08T11:38:21.085Z",
-   "seconds": 2326,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
    "task": "[build] T-3550 keep good widgets on sensor timeout",
    "model": "opus",
    "started": "2026-11-08T11:58:13.871Z",
-   "seconds": 1133,
+   "seconds": 1313,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2",
+ "who": "Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[test] T-3518 MacBook run of sensor-stall tests",
+   "model": "opus",
+   "started": "2026-11-08T11:38:21.085Z",
+   "seconds": null,
+   "finished": "2026-11-08T12:19:47.606000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-3477 review stalled-sensor fix 5914346c4",
@@ -91,7 +90,7 @@
   "week_pct": 3.33,
   "usage_pct": 54.9,
   "work_pct": 88.2,
-  "read_at": "2026-11-08T12:17:00+00:00",
+  "read_at": "2026-11-08T12:20:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -112,7 +111,7 @@
   }
  ],
  "disk": {
-  "free_gb": 18,
+  "free_gb": 17,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -121,14 +120,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T07:11:00-05:00",
+   "at": "2026-11-08T07:17:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T07:17:00-05:00"
+  "at": "2026-11-08T07:20:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -141,9 +140,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[test] T-3518 MacBook run of sensor-stall tests",
+   "task": "[build] T-3550 keep good widgets on sensor timeout",
    "model": "opus",
-   "since": "2026-11-08T11:38:21.085Z",
+   "since": "2026-11-08T11:58:13.871Z",
    "next": [],
    "effort": "high"
   },
@@ -190,16 +189,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "Run the sensor-stall fix's tests on the MacBook",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T11:38:21.085Z",
-    "o": "c",
-    "task": "T-3518"
-   },
    {
     "w": "Idris",
     "k": "build",
@@ -343,13 +332,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "7:17 AM",
+  "total": 1,
+  "at": "7:20 AM",
   "why": "",
-  "at_iso": "2026-11-08T12:17:00+00:00",
+  "at_iso": "2026-11-08T12:20:00+00:00",
   "started": "6:37 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:17 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 6:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:20 AM ET</p></section>"
  }
 }

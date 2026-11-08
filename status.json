@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T08:19:45.719900+00:00",
+ "at": "2026-11-08T08:22:49.274871+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[build] T-3393 why only Countdown draws",
    "model": "opus",
    "started": "2026-11-08T07:49:52.601Z",
-   "seconds": 1793,
+   "seconds": 1976,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[ops] T-3373 retire amendments file",
    "model": "opus",
    "started": "2026-11-08T07:50:03.111Z",
-   "seconds": 1782,
+   "seconds": 1966,
    "finished": null,
    "effort": "high"
   }
@@ -31,7 +31,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 430,
+  "runnable_count": 451,
   "blocked_count": 104
  },
  "meter": {
@@ -74,7 +74,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T08:19:00+00:00",
+  "read_at": "2026-11-08T08:23:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -173,44 +173,6 @@
     "at": "2026-11-08T02:58:35-05:00",
     "n": "Evan",
     "src": "plan-a"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3280",
-    "w": "Idris",
-    "k": "test",
-    "t": "Test the placed widget path in the premade suite again",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T02:46:06-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3248",
-    "w": "Idris",
-    "k": "build",
-    "t": "Say what each task notification is about",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T02:46:06-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-2896",
-    "w": "Idris",
-    "k": "build",
-    "t": "Decide how 1.0 offers the three Shortcut recipes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T02:46:06-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
    }
   ]
  },
@@ -232,16 +194,16 @@
   }
  ],
  "disk": {
-  "free_gb": 11,
+  "free_gb": 12,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 307
+   "free_gb": 305
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T03:13:00-05:00",
+   "at": "2026-11-08T03:22:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -251,7 +213,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T03:19:00-05:00"
+  "at": "2026-11-08T03:23:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -426,7 +388,7 @@
    }
   ],
   "count": {
-   "next": 430,
+   "next": 451,
    "wait": 40,
    "blocked": 64,
    "you": 16
@@ -454,12 +416,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "3:19 AM",
+  "lanes": 2,
+  "total": 4,
+  "at": "3:23 AM",
   "why": "",
-  "at_iso": "2026-11-08T08:19:00+00:00",
+  "at_iso": "2026-11-08T08:23:00+00:00",
   "started": "2:49 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:19 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:23 AM ET</p></section>"
  }
 }

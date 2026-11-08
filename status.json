@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T15:18:22.776109+00:00",
+ "at": "2026-11-08T15:21:27.316259+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,38 @@
    "task": "[review] T-3571 then [release] T-3574 build 4",
    "model": "opus",
    "started": "2026-11-08T14:32:52.693Z",
-   "seconds": 2730,
+   "seconds": 2914,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3573 fix merge-fix scores",
+   "task": "[tools] T-3448 name the commit that turned main red",
    "model": "opus",
-   "started": "2026-11-08T15:13:46.271Z",
-   "seconds": 276,
+   "started": "2026-11-08T15:20:03.741Z",
+   "seconds": 83,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Idris, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3361 lands skip dead inbox wait",
+   "model": "opus",
+   "started": "2026-11-08T15:19:32.579Z",
+   "seconds": null,
+   "finished": "2026-11-08T15:19:43.352Z"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3573 fix merge-fix scores",
+   "model": "opus",
+   "started": "2026-11-08T15:13:46.271Z",
+   "seconds": null,
+   "finished": "2026-11-08T15:19:14.798000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3580 build check, restart",
@@ -43,28 +59,12 @@
    "started": "2026-11-08T15:02:29.648Z",
    "seconds": null,
    "finished": "2026-11-08T15:10:41.061000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] T-3343 T-3300 Ines two decisions",
-   "model": "opus",
-   "started": "2026-11-08T14:58:29.585Z",
-   "seconds": null,
-   "finished": "2026-11-08T15:02:13.736000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3578 SSD moves past 20 GB",
-   "model": "opus",
-   "started": "2026-11-08T14:48:29.223Z",
-   "seconds": null,
-   "finished": "2026-11-08T14:58:03.536000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 517,
+  "runnable_count": 516,
   "blocked_count": 107
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 3.66,
   "usage_pct": 45.7,
   "work_pct": 83.3,
-  "read_at": "2026-11-08T15:18:00+00:00",
+  "read_at": "2026-11-08T15:21:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -137,14 +137,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T10:13:00-05:00",
+   "at": "2026-11-08T10:19:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T10:18:00-05:00"
+  "at": "2026-11-08T10:21:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -166,9 +166,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-3573 fix merge-fix scores",
+   "task": "[tools] T-3448 name the commit that turned main red",
    "model": "opus",
-   "since": "2026-11-08T15:13:46.271Z",
+   "since": "2026-11-08T15:20:03.741Z",
    "next": [],
    "effort": "high"
   },
@@ -220,12 +220,12 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Fix the merge-fix scores that misread predictions",
+    "t": "Name the commit that turned main red",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-08T15:13:46.271Z",
+    "at": "2026-11-08T15:20:03.741Z",
     "o": "c",
-    "task": "T-3573"
+    "task": "T-3448"
    }
   ],
   "src": "plan",
@@ -304,6 +304,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "The merge-fix ranking no longer credits a task with another task's prediction or pairs numbers...",
+    "at": "2026-11-08T10:18:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "Unused work folders can now move from the Mac mini's disk to the external SSD on their own,...",
     "at": "2026-11-08T10:13:00-05:00"
    },
@@ -311,22 +316,21 @@
     "w": "Ines",
     "t": "Decided that unused work folders move from the Mac mini's disk to the external SSD...",
     "at": "2026-11-08T10:01:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "Dropped, not built: a separate job for bringing finished work into main would save about an hour...",
-    "at": "2026-11-08T10:01:00-05:00"
    }
   ],
   "count": {
-   "next": 517,
+   "next": 516,
    "wait": 41,
    "blocked": 66,
    "you": 18
   },
   "fin": {
-   "n": 13,
+   "n": 14,
    "rows": [
+    [
+     "T-3573",
+     "Fix the merge-fix scores..."
+    ],
     [
      "T-3580",
      "Move unused work folders to..."
@@ -346,10 +350,6 @@
     [
      "T-3579",
      "Make the auto-revert restore..."
-    ],
-    [
-     "T-3571",
-     "Review the time-zone fix for..."
     ]
    ]
   }
@@ -377,10 +377,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "10:18 AM",
+  "at": "10:21 AM",
   "why": "",
-  "at_iso": "2026-11-08T15:18:00+00:00",
+  "at_iso": "2026-11-08T15:21:00+00:00",
   "started": "8:22 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:18 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:21 AM ET</p></section>"
  }
 }

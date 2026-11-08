@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T19:47:06.584418+00:00",
+ "at": "2026-11-08T19:50:10.495242+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,25 +9,33 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[test] T-3173 T-1783 red site and lane tests",
+   "task": "[tools] T-3682 deletion tools skip refused paths",
    "model": "opus",
-   "started": "2026-11-08T18:52:21.284Z",
-   "seconds": 3285,
+   "started": "2026-11-08T19:37:59.411Z",
+   "seconds": 731,
    "finished": null,
    "effort": "high"
   },
   {
-   "name": "odalys",
-   "task": "[tools] T-3682 deletion tools skip refused paths",
+   "name": "ines",
+   "task": "[plan] T-3683 ruling on deletion after refusal",
    "model": "opus",
-   "started": "2026-11-08T19:37:59.411Z",
-   "seconds": 547,
+   "started": "2026-11-08T19:48:18.790Z",
+   "seconds": 111,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2",
+ "who": "Odalys, Ines",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[test] T-3173 T-1783 red site and lane tests",
+   "model": "opus",
+   "started": "2026-11-08T18:52:21.284Z",
+   "seconds": null,
+   "finished": "2026-11-08T19:47:58.872000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3433 main disk under its line",
@@ -51,20 +59,12 @@
    "started": "2026-11-08T17:50:47.450Z",
    "seconds": null,
    "finished": "2026-11-08T18:51:45.152000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-3663 launcher tap handler review",
-   "model": "opus",
-   "started": "2026-11-08T18:22:25.478Z",
-   "seconds": null,
-   "finished": "2026-11-08T18:31:52.596000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 583,
+  "runnable_count": 582,
   "blocked_count": 112
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 3.66,
   "usage_pct": 33.5,
   "work_pct": 78.9,
-  "read_at": "2026-11-08T19:47:00+00:00",
+  "read_at": "2026-11-08T19:50:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -166,7 +166,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T14:47:00-05:00",
+  "at": "2026-11-08T14:50:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -180,9 +180,18 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[test] T-3173 T-1783 red site and lane tests",
+   "task": "[tools] T-3682 deletion tools skip refused paths",
    "model": "opus",
-   "since": "2026-11-08T18:52:21.284Z",
+   "since": "2026-11-08T19:37:59.411Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Ines",
+   "state": "running",
+   "task": "[plan] T-3683 ruling on deletion after refusal",
+   "model": "opus",
+   "since": "2026-11-08T19:48:18.790Z",
    "next": [],
    "effort": "high"
   },
@@ -190,14 +199,6 @@
    "name": "Idris",
    "state": "next",
    "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -231,16 +232,6 @@
   "run": [
    {
     "w": "Odalys",
-    "k": "test",
-    "t": "Fix the 17 failing site tests on main",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T18:52:21.284Z",
-    "o": "c",
-    "task": "T-3173"
-   },
-   {
-    "w": "Odalys",
     "k": "tools",
     "t": "Make scratch clean-up skip anything a guard refused",
     "m": "opus",
@@ -248,6 +239,16 @@
     "at": "2026-11-08T19:37:59.411Z",
     "o": "c",
     "task": "T-3682"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Rule on the scratch deletion made after a refusal",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T19:48:18.790Z",
+    "o": "c",
+    "task": "T-3683"
    }
   ],
   "src": "plan",
@@ -325,6 +326,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The site's personal-account test runs green again (221 checks, 0 red): one code bug stopped the...",
+    "at": "2026-11-08T14:47:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "The Steps, Distance and Altitude widget tests now feed in a known sensor reading and fail unless...",
     "at": "2026-11-08T14:46:00-05:00"
@@ -333,22 +339,21 @@
     "w": "Odalys",
     "t": "A land made while a work session runs now pushes main to GitHub at once, instead of waiting for...",
     "at": "2026-11-08T14:45:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Folded into T-2561 (the Xcode lock waiting on a finished run), which already covers this bug;...",
-    "at": "2026-11-08T14:45:00-05:00"
    }
   ],
   "count": {
-   "next": 583,
+   "next": 582,
    "wait": 44,
    "blocked": 68,
    "you": 20
   },
   "fin": {
-   "n": 19,
+   "n": 20,
    "rows": [
+    [
+     "T-3173",
+     "Fix the 17 failing site..."
+    ],
     [
      "T-3559",
      "Fail the sensor premade..."
@@ -368,10 +373,6 @@
     [
      "T-3666",
      "Show the launcher setup..."
-    ],
-    [
-     "T-3191",
-     "One Lock In switch for every..."
     ]
    ]
   }
@@ -399,10 +400,10 @@
   "main": 2,
   "lanes": 1,
   "total": 3,
-  "at": "2:47 PM",
+  "at": "2:50 PM",
   "why": "",
-  "at_iso": "2026-11-08T19:47:00+00:00",
+  "at_iso": "2026-11-08T19:50:00+00:00",
   "started": "11:55 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:47 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:50 PM ET</p></section>"
  }
 }

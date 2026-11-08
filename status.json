@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T18:21:32.591755+00:00",
+ "at": "2026-11-08T18:24:36.774923+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,34 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-2551 launcher tap-to-open path",
-   "model": "opus",
-   "started": "2026-11-08T17:39:24.071Z",
-   "seconds": 2528,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[site] T-3325 redo one Lock In switch",
    "model": "opus",
    "started": "2026-11-08T17:50:47.450Z",
-   "seconds": 1845,
+   "seconds": 2029,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-3663 launcher tap handler review",
+   "model": "opus",
+   "started": "2026-11-08T18:22:25.478Z",
+   "seconds": 131,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Odalys",
+ "who": "Odalys, Pernille",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-2551 launcher tap-to-open path",
+   "model": "opus",
+   "started": "2026-11-08T17:39:24.071Z",
+   "seconds": null,
+   "finished": "2026-11-08T18:21:45.466000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3659 classify the retry lines",
@@ -51,20 +59,12 @@
    "started": "2026-11-08T17:06:20.342Z",
    "seconds": null,
    "finished": "2026-11-08T17:20:01.132000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3588 memory pressure lane starts",
-   "model": "opus",
-   "started": "2026-11-08T16:56:29.221Z",
-   "seconds": null,
-   "finished": "2026-11-08T17:15:59.188000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 576,
+  "runnable_count": 578,
   "blocked_count": 110
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 3.66,
   "usage_pct": 33.5,
   "work_pct": 78.9,
-  "read_at": "2026-11-08T18:21:00+00:00",
+  "read_at": "2026-11-08T18:24:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -271,6 +271,7 @@
     "e": "high",
     "at": "2026-11-08T12:16:25-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -330,7 +331,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T13:21:00-05:00",
+  "at": "2026-11-08T13:24:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -342,15 +343,6 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-2551 launcher tap-to-open path",
-   "model": "opus",
-   "since": "2026-11-08T17:39:24.071Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[site] T-3325 redo one Lock In switch",
@@ -360,17 +352,26 @@
    "effort": "high"
   },
   {
-   "name": "Ines",
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-3663 launcher tap handler review",
+   "model": "opus",
+   "since": "2026-11-08T18:22:25.478Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
    "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
+   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Pernille",
+   "name": "Ines",
    "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -395,16 +396,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Build all six app launcher premades",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T17:39:24.071Z",
-    "o": "c",
-    "task": "T-2551"
-   },
-   {
     "w": "Odalys",
     "k": "site",
     "t": "Redo one Lock In switch for every account",
@@ -413,6 +404,16 @@
     "at": "2026-11-08T17:50:47.450Z",
     "o": "i",
     "task": "T-3325"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review the launcher tap handler before the next test build",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T18:22:25.478Z",
+    "o": "c",
+    "task": "T-3663"
    }
   ],
   "src": "plan",
@@ -506,7 +507,7 @@
    }
   ],
   "count": {
-   "next": 576,
+   "next": 578,
    "wait": 43,
    "blocked": 67,
    "you": 19
@@ -564,10 +565,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "1:21 PM",
+  "at": "1:24 PM",
   "why": "",
-  "at_iso": "2026-11-08T18:21:00+00:00",
+  "at_iso": "2026-11-08T18:24:00+00:00",
   "started": "11:55 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:21 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:24 PM ET</p></section>"
  }
 }

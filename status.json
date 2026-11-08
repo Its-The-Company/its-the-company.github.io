@@ -1,14 +1,66 @@
 {
  "schema": 1,
- "at": "2026-11-08T18:43:02.129519+00:00",
+ "at": "2026-11-08T18:46:00.365979+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-08T11:55:50-05:00"
  },
- "workers": [],
- "who": "",
- "recent": [],
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[site] T-3325 redo one Lock In switch",
+   "model": "opus",
+   "started": "2026-11-08T17:50:47.450Z",
+   "seconds": 3312,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-3666 T-3667 launcher sheet and iPad windows",
+   "model": "opus",
+   "started": "2026-11-08T18:32:17.345Z",
+   "seconds": 823,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys, Idris",
+ "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-3663 launcher tap handler review",
+   "model": "opus",
+   "started": "2026-11-08T18:22:25.478Z",
+   "seconds": null,
+   "finished": "2026-11-08T18:31:52.596000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-2551 launcher tap-to-open path",
+   "model": "opus",
+   "started": "2026-11-08T17:39:24.071Z",
+   "seconds": null,
+   "finished": "2026-11-08T18:21:45.466000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3659 classify the retry lines",
+   "model": "opus",
+   "started": "2026-11-08T17:20:27.775Z",
+   "seconds": null,
+   "finished": "2026-11-08T17:50:16.157000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-2551 launcher premades through the gate",
+   "model": "opus",
+   "started": "2026-11-08T17:19:34.368Z",
+   "seconds": null,
+   "finished": "2026-11-08T17:38:56.919000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -55,7 +107,7 @@
   "week_pct": 3.66,
   "usage_pct": 33.5,
   "work_pct": 78.9,
-  "read_at": "2026-11-08T18:43:00+00:00",
+  "read_at": "2026-11-08T18:46:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -209,7 +261,7 @@
   }
  ],
  "disk": {
-  "free_gb": 14,
+  "free_gb": 13,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -218,27 +270,41 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T13:37:00-05:00",
+   "at": "2026-11-08T13:44:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T13:43:00-05:00",
+  "at": "2026-11-08T13:46:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: 91% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 6 of 8 lands failed in 3 hours (5 red))",
+  "n": 2,
+  "at": "2026-11-08T11:55:35.621542-05:00"
+ },
  "lanes": [
   {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[site] T-3325 redo one Lock In switch",
+   "model": "opus",
+   "since": "2026-11-08T17:50:47.450Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-3666 T-3667 launcher sheet and iPad windows",
+   "model": "opus",
+   "since": "2026-11-08T18:32:17.345Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -252,14 +318,6 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -282,7 +340,29 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Redo one Lock In switch for every account",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T17:50:47.450Z",
+    "o": "i",
+    "task": "T-3325"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Show the launcher setup sheet over other sheets",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T18:32:17.345Z",
+    "o": "c",
+    "task": "T-3666"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -377,6 +457,35 @@
    "wait": 43,
    "blocked": 68,
    "you": 19
+  },
+  "fin": {
+   "n": 12,
+   "rows": [
+    [
+     "T-3128",
+     "Make main's Simulator suite..."
+    ],
+    [
+     "T-3312",
+     "Install the jobs loop and..."
+    ],
+    [
+     "T-3461",
+     "Look at work that keeps..."
+    ],
+    [
+     "T-3663",
+     "Review the launcher tap..."
+    ],
+    [
+     "T-3659",
+     "Find what the extra retry..."
+    ],
+    [
+     "T-3359",
+     "Check the MacBook runner..."
+    ]
+   ]
   }
  },
  "qr": [],
@@ -384,25 +493,40 @@
   "sent": "2026-11-08T16:22:09Z",
   "seconds": 52.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6725543994",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Priority item: Allow the Investors..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
+  "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 4,
-  "total": 4,
-  "at": "1:43 PM",
+  "total": 6,
+  "at": "1:46 PM",
   "why": "",
-  "at_iso": "2026-11-08T18:43:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:43 PM ET</p></section>"
+  "at_iso": "2026-11-08T18:46:00+00:00",
+  "started": "11:55 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:46 PM ET</p></section>"
  }
 }

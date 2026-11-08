@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T17:04:59.762807+00:00",
+ "at": "2026-11-08T17:07:59.883568+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,31 @@
    "task": "[tools] T-3588 memory pressure lane starts",
    "model": "opus",
    "started": "2026-11-08T16:56:29.221Z",
-   "seconds": 510,
+   "seconds": 690,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3589 idle-account alarm and fix",
+   "task": "[ops] T-3420 backlog-gated dispatch",
    "model": "opus",
-   "started": "2026-11-08T16:56:38.281Z",
-   "seconds": 501,
+   "started": "2026-11-08T17:06:20.342Z",
+   "seconds": 99,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2",
- "recent": [],
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3589 idle-account alarm and fix",
+   "model": "opus",
+   "started": "2026-11-08T16:56:38.281Z",
+   "seconds": null,
+   "finished": "2026-11-08T17:05:34.918000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -74,7 +83,7 @@
   "week_pct": 3.66,
   "usage_pct": 33.5,
   "work_pct": 78.9,
-  "read_at": "2026-11-08T17:05:00+00:00",
+  "read_at": "2026-11-08T17:08:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -122,6 +131,7 @@
     "e": "medium",
     "at": "2026-11-08T12:04:43-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -216,23 +226,23 @@
   }
  ],
  "disk": {
-  "free_gb": 19,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 278
+   "free_gb": 289
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T12:00:00-05:00",
+   "at": "2026-11-08T12:06:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T12:05:00-05:00"
+  "at": "2026-11-08T12:08:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -306,13 +316,13 @@
    },
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "Fix and report when extra accounts sit idle",
+    "k": "ops",
+    "t": "Hand out less new work while the landing backlog grows",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-08T16:56:38.281Z",
+    "at": "2026-11-08T17:06:20.342Z",
     "o": "c",
-    "task": "T-3589"
+    "task": "T-3420"
    }
   ],
   "src": "plan",
@@ -391,12 +401,12 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "The Reports page now holds every document, pitch and Infrastructure page under one address with...",
-    "at": "2026-11-08T11:57:00-05:00"
+    "t": "When the extra accounts sit idle for an hour with work waiting because of a machine problem, a...",
+    "at": "2026-11-08T12:05:00-05:00"
    },
    {
-    "w": "Operator",
-    "t": "The work this notice was about has landed on main, so the lander closed it.",
+    "w": "Odalys",
+    "t": "The Reports page now holds every document, pitch and Infrastructure page under one address with...",
     "at": "2026-11-08T11:57:00-05:00"
    },
    {
@@ -412,8 +422,12 @@
    "you": 18
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-3589",
+     "Fix and report when extra..."
+    ],
     [
      "T-3336",
      "Redo gather every document..."
@@ -442,10 +456,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "12:05 PM",
+  "at": "12:08 PM",
   "why": "",
-  "at_iso": "2026-11-08T17:05:00+00:00",
+  "at_iso": "2026-11-08T17:08:00+00:00",
   "started": "11:55 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:05 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:08 PM ET</p></section>"
  }
 }

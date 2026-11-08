@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T09:00:46.495939+00:00",
+ "at": "2026-11-08T09:03:46.100812+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,30 @@
    "task": "[tools] T-3408 land parked backlog faster",
    "model": "opus",
    "started": "2026-11-08T08:29:35.679Z",
-   "seconds": 1870,
+   "seconds": 2050,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3203 plain approval counts",
+   "model": "opus",
+   "started": "2026-11-08T09:03:17.004Z",
+   "seconds": 29,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys x2",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-3393 land sensor-deadline fix",
    "model": "opus",
    "started": "2026-11-08T08:52:45.050Z",
-   "seconds": 481,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-08T09:02:38.593000+00:00"
+  },
   {
    "name": "idris",
    "task": "[release] T-3323 upload refuses its own export",
@@ -56,7 +64,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 491,
+  "runnable_count": 496,
   "blocked_count": 105
  },
  "meter": {
@@ -99,7 +107,7 @@
   "week_pct": null,
   "usage_pct": null,
   "work_pct": null,
-  "read_at": "2026-11-08T09:00:00+00:00",
+  "read_at": "2026-11-08T09:03:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -213,7 +221,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T04:00:00-05:00"
+  "at": "2026-11-08T04:03:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -234,12 +242,11 @@
   },
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-3393 land sensor-deadline fix",
-   "model": "opus",
-   "since": "2026-11-08T08:52:45.050Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -287,14 +294,14 @@
     "task": "T-3408"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Find why only Countdown draws on Jeremy's iPhone",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Count any plain approval as an approve",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-08T08:52:45.050Z",
-    "o": "c",
-    "task": "T-3393"
+    "at": "2026-11-08T09:03:17.004Z",
+    "o": "i",
+    "task": "T-3203"
    }
   ],
   "src": "plan",
@@ -388,7 +395,7 @@
    }
   ],
   "count": {
-   "next": 491,
+   "next": 496,
    "wait": 40,
    "blocked": 65,
    "you": 17
@@ -424,10 +431,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "4:00 AM",
+  "at": "4:03 AM",
   "why": "",
-  "at_iso": "2026-11-08T09:00:00+00:00",
+  "at_iso": "2026-11-08T09:03:00+00:00",
   "started": "2:49 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:00 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:49 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:03 AM ET</p></section>"
  }
 }

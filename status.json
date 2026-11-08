@@ -1,18 +1,61 @@
 {
  "schema": 1,
- "at": "2026-11-08T16:31:29.462961+00:00",
+ "at": "2026-11-08T16:34:34.969096+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-08T08:22:28-05:00"
  },
- "workers": [],
- "who": "",
- "recent": [],
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[site] T-3582 issue page and compact list",
+   "model": "opus",
+   "started": "2026-11-08T15:54:45.896Z",
+   "seconds": 2389,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3586 titles on land's board lines",
+   "model": "opus",
+   "started": "2026-11-08T15:59:39.590Z",
+   "seconds": null,
+   "finished": "2026-11-08T16:33:47.841000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3587 commit worker memory at hand-back",
+   "model": "opus",
+   "started": "2026-11-08T15:54:38.585Z",
+   "seconds": null,
+   "finished": "2026-11-08T15:59:22.647000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-3585 reopen landing outside main folder",
+   "model": "opus",
+   "started": "2026-11-08T15:49:41.761Z",
+   "seconds": null,
+   "finished": "2026-11-08T15:53:47.955000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-3584 two commits before build 5",
+   "model": "opus",
+   "started": "2026-11-08T15:42:45.703Z",
+   "seconds": null,
+   "finished": "2026-11-08T15:49:17.718000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 529,
+  "runnable_count": 579,
   "blocked_count": 107
  },
  "meter": {
@@ -55,7 +98,7 @@
   "week_pct": 3.66,
   "usage_pct": 45.7,
   "work_pct": 83.3,
-  "read_at": "2026-11-08T16:31:00+00:00",
+  "read_at": "2026-11-08T16:34:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -92,12 +135,25 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T11:31:00-05:00"
+  "at": "2026-11-08T11:34:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: 93% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 20 of 24 lands failed in 3 hours (6 red); 12 of 41 finished tasks were...",
+  "n": 2,
+  "at": "2026-11-08T08:21:46.280885-05:00"
+ },
  "lanes": [
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[site] T-3582 issue page and compact list",
+   "model": "opus",
+   "since": "2026-11-08T15:54:45.896Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Idris",
    "state": "next",
@@ -123,14 +179,6 @@
    "next": []
   },
   {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Maren",
    "state": "next",
    "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
@@ -148,7 +196,19 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Build the issue page and compact Issues list",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T15:54:45.896Z",
+    "o": "c",
+    "task": "T-3582"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -224,12 +284,12 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "The merge fixes were judged from GitHub, git and MacBook results rather than the merge tool:...",
-    "at": "2026-11-08T11:31:00-05:00"
+    "t": "Automatic warnings from the landing robot had been rejected by the board for lacking a title...",
+    "at": "2026-11-08T11:33:00-05:00"
    },
    {
-    "w": "Operator",
-    "t": "The work this notice was about has landed on main, so the lander closed it.",
+    "w": "Odalys",
+    "t": "The merge fixes were judged from GitHub, git and MacBook results rather than the merge tool:...",
     "at": "2026-11-08T11:31:00-05:00"
    },
    {
@@ -239,10 +299,39 @@
    }
   ],
   "count": {
-   "next": 529,
+   "next": 579,
    "wait": 41,
    "blocked": 66,
    "you": 18
+  },
+  "fin": {
+   "n": 23,
+   "rows": [
+    [
+     "T-3586",
+     "Give the land's automatic..."
+    ],
+    [
+     "T-3087",
+     "Judge the merge fixes..."
+    ],
+    [
+     "T-3587",
+     "Commit worker memory when..."
+    ],
+    [
+     "T-3585",
+     "Reopen landing outside the..."
+    ],
+    [
+     "T-3584",
+     "Review two unreviewed..."
+    ],
+    [
+     "T-2586",
+     "Find why merges stop without..."
+    ]
+   ]
   }
  },
  "qr": [],
@@ -254,21 +343,24 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 0,
-  "total": 0,
-  "at": "11:31 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-08T16:31:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:31 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 1,
+  "at": "11:34 AM",
+  "why": "",
+  "at_iso": "2026-11-08T16:34:00+00:00",
+  "started": "8:22 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:34 AM ET</p></section>"
  }
 }

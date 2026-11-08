@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T17:01:58.281193+00:00",
+ "at": "2026-11-08T17:04:59.762807+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-3588 memory pressure lane starts",
    "model": "opus",
    "started": "2026-11-08T16:56:29.221Z",
-   "seconds": 329,
+   "seconds": 510,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-3589 idle-account alarm and fix",
    "model": "opus",
    "started": "2026-11-08T16:56:38.281Z",
-   "seconds": 320,
+   "seconds": 501,
    "finished": null,
    "effort": "high"
   }
@@ -74,8 +74,129 @@
   "week_pct": 3.66,
   "usage_pct": 33.5,
   "work_pct": 78.9,
-  "read_at": "2026-11-08T17:01:00+00:00",
-  "running": []
+  "read_at": "2026-11-08T17:05:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-3446",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Count the rebuilds that reordering the queue causes",
+    "m": "sonnet",
+    "e": "high",
+    "at": "2026-11-08T12:04:43-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-3447",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Count a red a later stack passes as a flake",
+    "m": "sonnet",
+    "e": "high",
+    "at": "2026-11-08T12:04:43-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-3451",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Count what reaches main without a check first",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-08T12:04:43-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a",
+    "task": "T-3490",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Log per-suite seconds and re-measure the red-first suite order",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-08T12:04:43-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3107",
+    "w": "Pernille",
+    "k": "measure",
+    "t": "Read the phones' real numbers from the gate build",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T12:04:46-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3434",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Redo show each task's parents and children on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T12:04:46-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3582",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Build the issue page and compact Issues list",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T12:04:43-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3583",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Drag issues between Now and Later",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T12:04:43-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3426",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Propose retiring the amendments file",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T12:04:43-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3438",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Retry finished work that could not be merged",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T12:04:43-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -111,7 +232,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T12:01:00-05:00"
+  "at": "2026-11-08T12:05:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -319,12 +440,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 0,
-  "total": 2,
-  "at": "12:01 PM",
+  "lanes": 3,
+  "total": 5,
+  "at": "12:05 PM",
   "why": "",
-  "at_iso": "2026-11-08T17:01:00+00:00",
+  "at_iso": "2026-11-08T17:05:00+00:00",
   "started": "11:55 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:01 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:05 PM ET</p></section>"
  }
 }

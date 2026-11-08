@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T17:38:39.330844+00:00",
+ "at": "2026-11-08T17:41:54.440006+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,34 @@
  },
  "workers": [
   {
-   "name": "pernille",
-   "task": "[build] T-2551 launcher premades through the gate",
-   "model": "opus",
-   "started": "2026-11-08T17:19:34.368Z",
-   "seconds": 1144,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[tools] T-3659 classify the retry lines",
    "model": "opus",
    "started": "2026-11-08T17:20:27.775Z",
-   "seconds": 1091,
+   "seconds": 1286,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-2551 launcher tap-to-open path",
+   "model": "opus",
+   "started": "2026-11-08T17:39:24.071Z",
+   "seconds": 150,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille, Odalys",
+ "who": "Odalys, Idris",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[build] T-2551 launcher premades through the gate",
+   "model": "opus",
+   "started": "2026-11-08T17:19:34.368Z",
+   "seconds": null,
+   "finished": "2026-11-08T17:38:56.919000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[ops] T-3420 backlog-gated dispatch",
@@ -99,7 +107,7 @@
   "week_pct": 3.66,
   "usage_pct": 33.5,
   "work_pct": 78.9,
-  "read_at": "2026-11-08T17:38:00+00:00",
+  "read_at": "2026-11-08T17:41:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -392,7 +400,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T12:38:00-05:00"
+  "at": "2026-11-08T12:41:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -402,15 +410,6 @@
   "at": "2026-11-08T11:55:35.621542-05:00"
  },
  "lanes": [
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[build] T-2551 launcher premades through the gate",
-   "model": "opus",
-   "since": "2026-11-08T17:19:34.368Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Odalys",
    "state": "running",
@@ -422,16 +421,25 @@
   },
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-2551 launcher tap-to-open path",
+   "model": "opus",
+   "since": "2026-11-08T17:39:24.071Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -456,16 +464,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Build all six app launcher premades",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T17:19:34.368Z",
-    "o": "c",
-    "task": "T-2551"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Find what the extra retry lines are",
@@ -474,6 +472,16 @@
     "at": "2026-11-08T17:20:27.775Z",
     "o": "c",
     "task": "T-3659"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Build all six app launcher premades",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T17:39:24.071Z",
+    "o": "c",
+    "task": "T-2551"
    }
   ],
   "src": "plan",
@@ -624,10 +632,10 @@
   "main": 2,
   "lanes": 6,
   "total": 8,
-  "at": "12:38 PM",
+  "at": "12:41 PM",
   "why": "",
-  "at_iso": "2026-11-08T17:38:00+00:00",
+  "at_iso": "2026-11-08T17:41:00+00:00",
   "started": "11:55 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 12:38 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 2, started 11:55 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 12:41 PM ET</p></section>"
  }
 }

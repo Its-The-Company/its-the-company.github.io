@@ -1,18 +1,62 @@
 {
  "schema": 1,
- "at": "2026-11-08T13:46:48.569757+00:00",
+ "at": "2026-11-08T13:49:53.277587+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-08T08:22:28-05:00"
  },
- "workers": [],
- "who": "",
- "recent": [],
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[build] T-3572 log every failed run",
+   "model": "opus",
+   "started": "2026-11-08T13:34:15.147Z",
+   "seconds": 938,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3300 land checks own job",
+   "model": "opus",
+   "started": "2026-11-08T13:49:04.187Z",
+   "seconds": 49,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris, Odalys",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3566 SSD moves, restart",
+   "model": "opus",
+   "started": "2026-11-08T13:29:49.206Z",
+   "seconds": null,
+   "finished": "2026-11-08T13:48:44.528000+00:00"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-3393 only Countdown runs on iPhone",
+   "model": "opus",
+   "started": "2026-11-08T13:23:23.975Z",
+   "seconds": null,
+   "finished": "2026-11-08T13:33:39.514000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3566 automatic SSD moves",
+   "model": "opus",
+   "started": "2026-11-08T13:23:32.202Z",
+   "seconds": null,
+   "finished": "2026-11-08T13:29:23.585000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 522,
+  "runnable_count": 521,
   "blocked_count": 107
  },
  "meter": {
@@ -55,7 +99,7 @@
   "week_pct": 3.66,
   "usage_pct": 45.7,
   "work_pct": 83.3,
-  "read_at": "2026-11-08T13:46:00+00:00",
+  "read_at": "2026-11-08T13:49:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -92,19 +136,33 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T08:46:00-05:00"
+  "at": "2026-11-08T08:49:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: 95% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 20 of 24 lands failed in 3 hours (6 red); 12 of 41 finished tasks were...",
+  "n": 2,
+  "at": "2026-11-08T08:21:46.280885-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-3572 log every failed run",
+   "model": "opus",
+   "since": "2026-11-08T13:34:15.147Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-3300 land checks own job",
+   "model": "opus",
+   "since": "2026-11-08T13:49:04.187Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -118,14 +176,6 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -148,7 +198,29 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Log every failed run with its error",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T13:34:15.147Z",
+    "o": "c",
+    "task": "T-3572"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Run land checks outside the supervisor tick",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T13:49:04.187Z",
+    "o": "c",
+    "task": "T-3300"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -223,6 +295,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "When the Mac mini's own disk drops under 20 GB free, finished company build files and scratch...",
+    "at": "2026-11-08T08:48:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Sensor and web readings now carry their time zone when the app makes them, so widgets that show...",
     "at": "2026-11-08T08:13:00-05:00"
@@ -231,18 +308,22 @@
     "w": "Odalys",
     "t": "The merge gate no longer stops dead on a test that is already failing on main, still hands over...",
     "at": "2026-11-08T08:10:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The fix keeps a good widget when a sensor is slow, and it showed why Steps, Distance and...",
-    "at": "2026-11-08T07:45:00-05:00"
    }
   ],
   "count": {
-   "next": 522,
+   "next": 521,
    "wait": 41,
    "blocked": 66,
    "you": 18
+  },
+  "fin": {
+   "n": 1,
+   "rows": [
+    [
+     "T-3566",
+     "Move company data to the SSD..."
+    ]
+   ]
   }
  },
  "qr": [],
@@ -255,6 +336,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -262,13 +344,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 2,
   "lanes": 0,
-  "total": 0,
-  "at": "8:46 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-08T13:46:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:46 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 2,
+  "at": "8:49 AM",
+  "why": "",
+  "at_iso": "2026-11-08T13:49:00+00:00",
+  "started": "8:22 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:49 AM ET</p></section>"
  }
 }

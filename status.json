@@ -55,7 +55,7 @@
   "week_pct": 87.06,
   "usage_pct": 44.1,
   "work_pct": 71.5,
-  "read_at": "2026-11-08T00:56:00+00:00",
+  "read_at": "2026-11-08T00:59:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -172,6 +172,66 @@
     "n": "Evan",
     "d": 1,
     "src": "plan-a"
+   },
+   {
+    "lane": "b",
+    "task": "T-3336",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Redo gather every document under the Reports page",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T19:58:48-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-3367",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Hold back lines that wait on unnamed work",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T19:58:06-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-3338",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Use AM and PM times; close chat on outside click",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T19:58:06-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-3339",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Clearer task steps, list boxes and In Flight filters",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T19:58:06-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-3252",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Say plainly when the MacBook has no SSD on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-07T19:58:02-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -193,16 +253,16 @@
   }
  ],
  "disk": {
-  "free_gb": 21,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 489
+   "free_gb": 488
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-07T19:55:00-05:00",
+   "at": "2026-11-07T19:58:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -212,7 +272,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-07T19:56:00-05:00"
+  "at": "2026-11-07T19:59:00-05:00"
  },
  "next_tick_why": "last_tick",
  "idle": null,
@@ -383,12 +443,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "7:56 PM",
+  "lanes": 6,
+  "total": 6,
+  "at": "7:59 PM",
   "why": "",
-  "at_iso": "2026-11-08T00:56:00+00:00",
+  "at_iso": "2026-11-08T00:59:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:56 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 6 sessions \u00b7 as of 7:59 PM ET</p></section>"
  }
 }

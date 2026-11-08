@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T11:55:43.670103+00:00",
+ "at": "2026-11-08T11:58:45.631237+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,30 @@
    "task": "[test] T-3518 MacBook run of sensor-stall tests",
    "model": "opus",
    "started": "2026-11-08T11:38:21.085Z",
-   "seconds": 1042,
+   "seconds": 1224,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "idris",
+   "task": "[build] T-3550 keep good widgets on sensor timeout",
+   "model": "opus",
+   "started": "2026-11-08T11:58:13.871Z",
+   "seconds": 31,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris x2",
+ "recent": [
   {
    "name": "pernille",
    "task": "[review] T-3477 review stalled-sensor fix 5914346c4",
    "model": "opus",
    "started": "2026-11-08T11:47:27.278Z",
-   "seconds": 496,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-08T11:57:55.712000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[ops] T-3549 free Mac mini disk to SSD",
@@ -40,7 +48,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 512,
+  "runnable_count": 516,
   "blocked_count": 106
  },
  "meter": {
@@ -83,7 +91,7 @@
   "week_pct": 3.33,
   "usage_pct": 54.9,
   "work_pct": 88.2,
-  "read_at": "2026-11-08T11:55:00+00:00",
+  "read_at": "2026-11-08T11:58:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -120,7 +128,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T06:55:00-05:00"
+  "at": "2026-11-08T06:58:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
@@ -140,18 +148,17 @@
    "effort": "high"
   },
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-3477 review stalled-sensor fix 5914346c4",
-   "model": "opus",
-   "since": "2026-11-08T11:47:27.278Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -194,14 +201,14 @@
     "task": "T-3518"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the stalled-sensor fix for blank premades",
+    "w": "Idris",
+    "k": "build",
+    "t": "Keep good widgets when a sensor read times out",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-08T11:47:27.278Z",
+    "at": "2026-11-08T11:58:13.871Z",
     "o": "c",
-    "task": "T-3477"
+    "task": "T-3550"
    }
   ],
   "src": "plan",
@@ -279,6 +286,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "The fix lets Steps and Altitude draw a notice when a phone sensor never answers, but that notice...",
+    "at": "2026-11-08T06:57:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Taking a task now fails, naming the lane, when another lane already finished it and its work is...",
     "at": "2026-11-08T06:10:00-05:00"
@@ -287,22 +299,22 @@
     "w": "Odalys",
     "t": "The check before code joins main now also covers the test data files the app's tests read, so a...",
     "at": "2026-11-08T05:58:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Parked work that waits to be merged no longer queues behind a one-an-hour limit: each retry now...",
-    "at": "2026-11-08T05:51:00-05:00"
    }
   ],
   "count": {
-   "next": 512,
+   "next": 516,
    "wait": 40,
    "blocked": 66,
    "you": 17
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-3477",
+     "Review the stalled-sensor..."
+    ]
+   ]
   }
  },
  "qr": [],
@@ -315,6 +327,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -325,10 +338,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "6:55 AM",
+  "at": "6:58 AM",
   "why": "",
-  "at_iso": "2026-11-08T11:55:00+00:00",
+  "at_iso": "2026-11-08T11:58:00+00:00",
   "started": "6:37 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:55 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:58 AM ET</p></section>"
  }
 }

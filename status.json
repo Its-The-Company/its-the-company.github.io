@@ -1,8 +1,8 @@
 {
  "schema": 1,
- "at": "2026-11-08T04:59:52.215829+00:00",
+ "at": "2026-11-08T05:09:12.288046+00:00",
  "session": {
-  "active": true,
+  "active": false,
   "kind": "",
   "started": null
  },
@@ -50,12 +50,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-08T00:17:30-05:00",
  "personal": {
   "week_pct": 87.06,
   "usage_pct": 44.1,
   "work_pct": 71.5,
-  "read_at": "2026-11-08T05:02:00+00:00",
+  "read_at": "2026-11-08T05:11:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -96,53 +96,26 @@
     "src": "plan-a"
    },
    {
-    "lane": "a3",
-    "task": "T-3323",
-    "w": "Idris",
-    "k": "release",
-    "t": "Stop the upload refusing its own export folder",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T22:54:25-05:00",
+    "lane": "a2",
+    "task": "T-2948",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Keep Xcode's lock in a copy outside git",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-08T00:08:49-05:00",
     "n": "Evan",
-    "d": 1,
     "src": "plan-a"
    },
    {
-    "lane": "a3",
-    "task": "T-3393",
-    "w": "Idris",
-    "k": "build",
-    "t": "Find why only Countdown draws on Jeremy's iPhone",
+    "lane": "a2",
+    "task": "T-3377",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Show each coordinator hand-out in the step feed",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-07T22:54:25-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3168",
-    "w": "Idris",
-    "k": "release",
-    "t": "Record the Investors' encryption answer in the app's settings",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T22:54:25-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3350",
-    "w": "Idris",
-    "k": "release",
-    "t": "Describe each TestFlight build in detail",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-07T22:54:25-05:00",
+    "at": "2026-11-08T00:08:49-05:00",
     "n": "Evan",
     "src": "plan-a"
    }
@@ -170,12 +143,12 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 314
+   "free_gb": 312
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T00:02:00-05:00",
+   "at": "2026-11-08T00:06:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-07T03:59:00-05:00"
@@ -185,9 +158,9 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-08T00:02:00-05:00"
+  "at": "2026-11-08T00:11:00-05:00"
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
  "pool": null,
  "lanes": [
@@ -224,17 +197,17 @@
    "next": []
   },
   {
-   "name": "Wrenna",
+   "name": "Maren",
    "state": "next",
-   "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
+   "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Maren",
+   "name": "Wrenna",
    "state": "next",
-   "task": "Maren, P1, screen read of the Settings screen (T-0657,...",
+   "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
    "model": null,
    "since": null,
    "next": []
@@ -358,10 +331,10 @@
   "main": 0,
   "lanes": 2,
   "total": 2,
-  "at": "12:02 AM",
+  "at": "12:11 AM",
   "why": "",
-  "at_iso": "2026-11-08T05:02:00+00:00",
+  "at_iso": "2026-11-08T05:11:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:02 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 12:11 AM ET</p></section>"
  }
 }

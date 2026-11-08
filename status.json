@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-08T14:47:51.876809+00:00",
+ "at": "2026-11-08T14:50:52.792647+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,12 +12,21 @@
    "task": "[review] T-3571 then [release] T-3574 build 4",
    "model": "opus",
    "started": "2026-11-08T14:32:52.693Z",
-   "seconds": 899,
+   "seconds": 1080,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3578 SSD moves past 20 GB",
+   "model": "opus",
+   "started": "2026-11-08T14:48:29.223Z",
+   "seconds": 143,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris",
+ "who": "Idris, Odalys",
  "recent": [
   {
    "name": "odalys",
@@ -98,7 +107,7 @@
   "week_pct": 3.66,
   "usage_pct": 45.7,
   "work_pct": 83.3,
-  "read_at": "2026-11-08T14:47:00+00:00",
+  "read_at": "2026-11-08T14:50:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -119,28 +128,28 @@
   }
  ],
  "disk": {
-  "free_gb": 19,
+  "free_gb": 20,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 269
+   "free_gb": 281
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T09:44:00-05:00",
+   "at": "2026-11-08T09:50:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T09:47:00-05:00"
+  "at": "2026-11-08T09:50:00-05:00"
  },
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Spread: 95% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 20 of 24 lands failed in 3 hours (6 red); 12 of 41 finished tasks were...",
+  "why": "Spread: 94% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 20 of 24 lands failed in 3 hours (6 red); 12 of 41 finished tasks were...",
   "n": 2,
   "at": "2026-11-08T08:21:46.280885-05:00"
  },
@@ -151,6 +160,15 @@
    "task": "[review] T-3571 then [release] T-3574 build 4",
    "model": "opus",
    "since": "2026-11-08T14:32:52.693Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-3578 SSD moves past 20 GB",
+   "model": "opus",
+   "since": "2026-11-08T14:48:29.223Z",
    "next": [],
    "effort": "high"
   },
@@ -166,14 +184,6 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -206,6 +216,16 @@
     "at": "2026-11-08T14:32:52.693Z",
     "o": "c",
     "task": "T-3571"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Keep moving idle data to the SSD past 20 GB",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T14:48:29.223Z",
+    "o": "c",
+    "task": "T-3578"
    }
   ],
   "src": "plan",
@@ -354,13 +374,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 0,
-  "total": 1,
-  "at": "9:47 AM",
+  "total": 2,
+  "at": "9:50 AM",
   "why": "",
-  "at_iso": "2026-11-08T14:47:00+00:00",
+  "at_iso": "2026-11-08T14:50:00+00:00",
   "started": "8:22 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:47 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:22 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:50 AM ET</p></section>"
  }
 }

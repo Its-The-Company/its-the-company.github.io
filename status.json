@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-09T02:58:23.513518+00:00",
+ "at": "2026-11-09T03:01:24.245727+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,25 +9,24 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-3444 disjoint retry lines on own stacks",
-   "model": "opus",
-   "started": "2026-11-09T02:50:17.608Z",
-   "seconds": 485,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[tools] T-3740 retry a land that hits its time limit",
    "model": "opus",
    "started": "2026-11-09T02:56:16.513Z",
-   "seconds": 127,
+   "seconds": 307,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2",
+ "who": "Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3444 disjoint retry lines on own stacks",
+   "model": "opus",
+   "started": "2026-11-09T02:50:17.608Z",
+   "seconds": null,
+   "finished": "2026-11-09T03:01:01.973000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3738 landing script from saved copy",
@@ -51,14 +50,6 @@
    "started": "2026-11-09T02:13:41.970Z",
    "seconds": null,
    "finished": "2026-11-09T02:47:32.823000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-2401 make Move up live, bump parents",
-   "model": "opus",
-   "started": "2026-11-09T02:16:23.120Z",
-   "seconds": null,
-   "finished": "2026-11-09T02:34:34.984000+00:00"
   }
  ],
  "queue": {
@@ -91,7 +82,7 @@
  },
  "ui": {
   "week_pct": 0.009,
-  "five_hour_pct": 0.051,
+  "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -107,7 +98,7 @@
   "week_pct": 3.85,
   "usage_pct": 22.9,
   "work_pct": 68.2,
-  "read_at": "2026-11-09T02:58:00+00:00",
+  "read_at": "2026-11-09T03:01:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -219,7 +210,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T21:58:00-05:00",
+  "at": "2026-11-08T22:01:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -233,9 +224,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-3444 disjoint retry lines on own stacks",
+   "task": "[tools] T-3740 retry a land that hits its time limit",
    "model": "opus",
-   "since": "2026-11-09T02:50:17.608Z",
+   "since": "2026-11-09T02:56:16.513Z",
    "next": [],
    "effort": "high"
   },
@@ -282,16 +273,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Check unrelated retry lines on their own stacks",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T02:50:17.608Z",
-    "o": "c",
-    "task": "T-3444"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -379,6 +360,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "The merge gate now tests a change that shares no files and no checks with the changes ahead of...",
+    "at": "2026-11-08T21:59:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The merge of 8 finished tasks, the charter-copies fix among them, failed because its tests ran...",
     "at": "2026-11-08T21:55:00-05:00"
    },
@@ -386,11 +372,6 @@
     "w": "Odalys",
     "t": "The inbox watcher now runs only code that has been committed and passed the gate; a...",
     "at": "2026-11-08T21:49:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Investors can now move a queued task up from Home: the site posts the move to a closed tracking...",
-    "at": "2026-11-08T21:33:00-05:00"
    }
   ],
   "count": {
@@ -400,8 +381,12 @@
    "you": 19
   },
   "fin": {
-   "n": 12,
+   "n": 13,
    "rows": [
+    [
+     "T-3444",
+     "Check unrelated retry lines..."
+    ],
     [
      "T-3734",
      "Keep the live inbox watcher..."
@@ -421,10 +406,6 @@
     [
      "T-3729",
      "Show only work still waiting..."
-    ],
-    [
-     "T-3730",
-     "Hold a branch in line while..."
     ]
    ]
   }
@@ -449,13 +430,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 3,
-  "total": 5,
-  "at": "9:58 PM",
+  "total": 4,
+  "at": "10:01 PM",
   "why": "",
-  "at_iso": "2026-11-09T02:58:00+00:00",
+  "at_iso": "2026-11-09T03:01:00+00:00",
   "started": "7:53 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:58 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:01 PM ET</p></section>"
  }
 }

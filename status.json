@@ -1,66 +1,14 @@
 {
  "schema": 1,
- "at": "2026-11-09T03:07:28.714893+00:00",
+ "at": "2026-11-09T03:10:33.502599+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-08T19:53:34-05:00"
+  "kind": "",
+  "started": null
  },
- "workers": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-3740 retry a land that hits its time limit",
-   "model": "opus",
-   "started": "2026-11-09T02:56:16.513Z",
-   "seconds": 672,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3296 bring the parked step feed to main",
-   "model": "opus",
-   "started": "2026-11-09T03:01:27.077Z",
-   "seconds": 361,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x2",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-3444 disjoint retry lines on own stacks",
-   "model": "opus",
-   "started": "2026-11-09T02:50:17.608Z",
-   "seconds": null,
-   "finished": "2026-11-09T03:01:01.973000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3738 landing script from saved copy",
-   "model": "opus",
-   "started": "2026-11-09T02:48:33.221Z",
-   "seconds": null,
-   "finished": "2026-11-09T02:55:44.234000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3734 watcher runs committed code only",
-   "model": "opus",
-   "started": "2026-11-09T02:35:15.389Z",
-   "seconds": null,
-   "finished": "2026-11-09T02:49:42.728000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3733 park the 45 stuck spares",
-   "model": "opus",
-   "started": "2026-11-09T02:13:41.970Z",
-   "seconds": null,
-   "finished": "2026-11-09T02:47:32.823000+00:00"
-  }
- ],
+ "workers": [],
+ "who": "",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -107,7 +55,7 @@
   "week_pct": 3.85,
   "usage_pct": 22.9,
   "work_pct": 68.2,
-  "read_at": "2026-11-09T03:07:00+00:00",
+  "read_at": "2026-11-09T03:10:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -204,7 +152,7 @@
   }
  ],
  "disk": {
-  "free_gb": 52,
+  "free_gb": 54,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -213,33 +161,20 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T22:04:00-05:00",
+   "at": "2026-11-08T22:10:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T22:07:00-05:00",
+  "at": "2026-11-08T22:10:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Spread: 86% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (cut a step: 4 of 11 lands failed in 3 hours (4 red))",
-  "n": 2,
-  "at": "2026-11-08T19:53:22.765859-05:00"
- },
+ "pool": null,
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-3740 retry a land that hits its time limit",
-   "model": "opus",
-   "since": "2026-11-09T02:56:16.513Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -265,6 +200,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Maren",
    "state": "next",
    "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
@@ -282,29 +225,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retry a landing that hits its time limit",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T02:56:16.513Z",
-    "o": "c",
-    "task": "T-3740"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Feed each task's steps into the live status",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T03:01:27.077Z",
-    "o": "c",
-    "task": "T-3296"
-   }
-  ],
-  "src": "plan",
+  "run": [],
   "open": [
    {
     "w": "Idris",
@@ -399,35 +320,6 @@
    "wait": 45,
    "blocked": 67,
    "you": 19
-  },
-  "fin": {
-   "n": 13,
-   "rows": [
-    [
-     "T-3444",
-     "Check unrelated retry lines..."
-    ],
-    [
-     "T-3734",
-     "Keep the live inbox watcher..."
-    ],
-    [
-     "T-2401",
-     "Let Investors reorder queued..."
-    ],
-    [
-     "T-3724",
-     "Moving a task up also moves..."
-    ],
-    [
-     "T-3732",
-     "Give held spares their..."
-    ],
-    [
-     "T-3729",
-     "Show only work still waiting..."
-    ]
-   ]
   }
  },
  "qr": [],
@@ -439,24 +331,21 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 0,
   "lanes": 3,
-  "total": 5,
-  "at": "10:07 PM",
+  "total": 3,
+  "at": "10:10 PM",
   "why": "",
-  "at_iso": "2026-11-09T03:07:00+00:00",
-  "started": "7:53 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:07 PM ET</p></section>"
+  "at_iso": "2026-11-09T03:10:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:10 PM ET</p></section>"
  }
 }

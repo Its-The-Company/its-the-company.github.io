@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-09T00:29:45.100577+00:00",
+ "at": "2026-11-09T00:32:46.336884+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,22 +12,21 @@
    "task": "[site] T-3670 file attach in Chat",
    "model": "opus",
    "started": "2026-11-09T00:00:16.894Z",
-   "seconds": 1768,
+   "seconds": 1949,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-3393 run log reason and Home Screen run",
    "model": "opus",
    "started": "2026-11-09T00:07:06.583Z",
-   "seconds": 1358,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-09T00:29:55.027000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-3393 premades not drawing",
@@ -83,7 +82,7 @@
   "week_pct": 3.74,
   "usage_pct": 23.8,
   "work_pct": 71.4,
-  "read_at": "2026-11-09T00:29:00+00:00",
+  "read_at": "2026-11-09T00:32:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -120,7 +119,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T19:29:00-05:00",
+  "at": "2026-11-08T19:32:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -142,12 +141,11 @@
   },
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-3393 run log reason and Home Screen run",
-   "model": "opus",
-   "since": "2026-11-09T00:07:06.583Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -193,16 +191,6 @@
     "at": "2026-11-09T00:00:16.894Z",
     "o": "c",
     "task": "T-3670"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Find why only Countdown draws on Jeremy's iPhone",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T00:07:06.583Z",
-    "o": "c",
-    "task": "T-3393"
    }
   ],
   "src": "plan",
@@ -323,13 +311,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "7:29 PM",
+  "total": 1,
+  "at": "7:32 PM",
   "why": "",
-  "at_iso": "2026-11-09T00:29:00+00:00",
+  "at_iso": "2026-11-09T00:32:00+00:00",
   "started": "6:59 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 6:59 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:29 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 6:59 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:32 PM ET</p></section>"
  }
 }

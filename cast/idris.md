@@ -33,17 +33,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (mine)
 
-- Lesson T-1851/T-3550: zsh never splits `$F`; pass xc_file_tests filters and main_gate paths as ${=F}. "checking 0 file(s)" = gate ran HEAD, not my change. Local xc.sh after others' commits: `xcodegen generate` first (xcodeproj is ignored, goes stale).
-
 - Lesson T-0656: start the build first, before writing code; pgrep xcodebuild. A held lock ate 30 min and the session.
 
 - T-0389 slice b 2026-11-04: card written, never built; <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> in company-scratch/T-0389-idris/tree/ and PyWidgetApp.t0389+t0657.patch (stage_hunks.py takes my hunks). Next: T-1982 (build+commit), then T-1983 jump, T-1984 perf.
-- Lesson T-0389: with ~10 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> the xcodebuild lock queue passed 45 min and then the disk line refused. Start xc.sh in the background (timeout 7200000, XC_LOCK_WAIT up) as the first step after coding, one `test` call, and check free disk before writing code.
 - T-2583 cc5c7c277 (prompt placement, T-2576 F1/F2): Desk+Placement 19/0 local; Pernille re-reviews. Real UIKit drop never reproduced (iOS 26 queues).
 - Lesson T-1404: one Bash call is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
 
-- T-3550 16e32a86e (review T-3561 Pernille): timeout keeps fresh tree; runtime readings are naive local (_wire.want_time), premades wrap with aware(). Sun use_current path unchecked; T-3551 open.
-- T-3393 11-09 03:3x: upgrade path b3->b4 NOT run (lock held by lane b all slice). Trees+test ready in /tmp/company-scratch/T-3393-idris. Lesson: board_tick.py "<prefix>" "<note>" TICKS; an open-line note is `board_tick.py note`. I ticked T-3393 by mistake; Operator must reopen.
+- T-3783 11-09 07:0x: upgrade b3->b4 run on Sim (Release+gate, 27.1): all 5 trees written and kept; cause still open. Not covered: placed widgets, 27.2, device. Lesson: /tmp scratch can vanish; ssd_guard refuses any command text naming the SSD path. 11-09 build 5 held (T-3757/T-3718/T-3762/T-3349 + review T-3813). Lesson: before any build, grep the board for "before TestFlight" lines, not only main_gate.
 - Lesson T-3393: git archive builds need pywidget+tools+log/assets.md, Vendor symlinked, xcodegen.
 - Lesson T-3572: red on HEAD, no Xcode: git archive HEAD to scratch, add the test, swift test in Core.
 
@@ -55,10 +51,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Lesson T-3667: a run script phase with no inputFiles can run before ProcessInfoPlistFile, which overwrites its plist edit; input = built plist.
 - Lesson T-3666: SwiftUI queues a root .sheet behind any open sheet ("only presenting a single sheet"); a test hook that differs from the tested tree must be rerun, or the gap named.
 
+- T-3814 11-09: per-widget tree.json report (Export measurements manifest) green on Core+host, NOT landed (runner silent, gate exit 3); patch in company-scratch/T-3814-idris; review T-3817. Lesson: never leave unlanded work in the main checkout; other gates sweep it.
+
 ## Lessons
 - StoreKit, T-0583/T-0589, caret lessons and dated logs: archive.md.
 
-- T-3757 11-09: hold fix for not-started rows written, UNCOMMITTED in main checkout + scratch patch; runner silent, gate exit 3. Lesson: check runner liveness (xc_route status) before main_gate; host suites cost 21 min first.
 - T-3553 03bf4f46a 11-08: http.py keeps device.BUDGET_RESERVE_S; review T-3743 (Pernille); T-3400 rebases http.py. Lesson: bridge_driver Stop starts with Python's clock, so a full-budget race passes on host: stop_after < budget models Swift's lag.
 {% endraw %}
 

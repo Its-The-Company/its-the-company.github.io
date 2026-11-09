@@ -1,11 +1,44 @@
 {
  "schema": 1,
- "at": "2026-11-09T11:32:50.791238+00:00",
+ "at": "2026-11-09T13:48:48.364157+00:00",
  "session": {
   "active": true,
-  "kind": "morning",
-  "started": "2026-11-09T06:28:16-05:00",
+  "kind": "work",
+  "started": "2026-11-09T06:41:44-05:00",
   "flow": [
+   {
+    "t": "T-1643",
+    "name": "Let a person's say-so lift a widget demotion",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794231352
+     }
+    ]
+   },
+   {
+    "t": "T-2409",
+    "name": "Check the USGS earthquake feed before building on it",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794224615
+     }
+    ]
+   },
+   {
+    "t": "T-1972",
+    "name": "Test that one refresh tap writes only one row",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794224197
+     }
+    ]
+   },
    {
     "t": "T-2870",
     "name": "Close the small gaps left in the completion import guard",
@@ -41,120 +74,139 @@
   ],
   "done": [
    {
-    "t": "T-3786",
-    "name": "Redo browser read of the JS-drawn views for 24-hour text",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794221420,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3786",
-    "name": "Redo browser read of the JS-drawn views for 24-hour text",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794221418,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3785",
+    "t": "T-3551",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
-    "end_at": 1794221415
+    "end_at": 1794231310
    },
    {
-    "t": "T-2539",
-    "name": "Sort 34 parked app snapshots into keep or drop",
+    "t": "T-0956",
+    "name": "Replay the widget tests with the shipped Python layout",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
-    "end_at": 1794221407
+    "end_at": 1794230752
    },
    {
-    "t": "T-3293",
+    "t": "T-3752",
+    "name": "Read the gate window once 10 runs carry it",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
-    "end_at": 1794221407
+    "end_at": 1794230752
    },
    {
-    "t": "T-0043",
-    "name": "Strip unneeded Python modules from the release bundle",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794221393,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-3327",
-    "name": "Every Running card names its worker and model",
+    "t": "T-2271",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
-    "end_at": 1794220397
+    "end_at": 1794230697
    },
    {
-    "t": "T-3708",
-    "name": "Trace main-session outages and alert after three failed ticks",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794220397
-   },
-   {
-    "t": "T-3707",
-    "name": "Refresh a stale usage reading before holding a slot",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794220397
-   },
-   {
-    "t": "T-2491",
-    "name": "Stop the stuck extension from recreating deleted widget folders",
+    "t": "T-3789",
+    "name": "Check the run history privacy wording",
     "acct": "Personal b",
     "steps": [],
-    "end": "failed",
-    "end_at": 1794219342,
-    "why": "tests failed"
+    "end": "landed",
+    "end_at": 1794229815
+   },
+   {
+    "t": "T-3747",
+    "name": "Make status posts and card deadlines use 12-hour times",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794229815
+   },
+   {
+    "t": "T-3398",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794229555
+   },
+   {
+    "t": "T-3287",
+    "name": "Main refused a record from a personal account",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794229546
+   },
+   {
+    "t": "T-3758",
+    "name": "Prune run history while the app stays open",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794228875
+   },
+   {
+    "t": "T-3558",
+    "name": "Test which gallery tiles the gallery model runs",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794228875
    }
   ],
-  "landed": 25,
-  "failed": 32
+  "landed": 23,
+  "failed": 29
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "idris",
-   "task": "[report] morning",
+   "name": "odalys",
+   "task": "[tools] T-3818 leftover test programs failing merges",
    "model": "opus",
-   "started": "2026-11-09T11:28:41.643Z",
+   "started": "2026-11-09T12:44:38.183Z",
    "seconds": null,
-   "finished": "2026-11-09T11:29:46.466000+00:00"
+   "finished": "2026-11-09T13:45:50.271000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3708 trace main-session outages, alert",
+   "model": "opus",
+   "started": "2026-11-09T12:33:04.436Z",
+   "seconds": null,
+   "finished": "2026-11-09T13:22:37.133000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[ops] T-3811 safe ways to reach the locked SSD",
+   "model": "opus",
+   "started": "2026-11-09T12:33:15.203Z",
+   "seconds": null,
+   "finished": "2026-11-09T12:43:12.814000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3810 merge on internal disk while SSD locked",
+   "model": "opus",
+   "started": "2026-11-09T12:13:33.527Z",
+   "seconds": null,
+   "finished": "2026-11-09T12:32:31.057000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 611,
+  "runnable_count": 617,
   "blocked_count": 117
  },
  "meter": {
   "five_hour": {
    "pct": 13.0,
-   "resets_at": "2026-11-09T13:00:00.226769+00:00",
+   "resets_at": "2026-11-09T12:59:59.975678+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 87.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 19.0,
-   "resets_at": "2026-11-15T07:00:00.226789+00:00",
+   "resets_at": "2026-11-15T06:59:59.975694+00:00",
    "used_words": "of your weekly allowance used",
    "left": 81.0,
    "left_words": "of your weekly allowance left"
@@ -164,7 +216,7 @@
    "resets_at": "2026-11-15T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-09T06:28:02.585317-05:00"
+  "read_at": "2026-11-09T06:41:32.768070-05:00"
  },
  "ui": {
   "week_pct": 0.008,
@@ -181,11 +233,37 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 3.68,
-  "usage_pct": 16.2,
-  "work_pct": 57.7,
-  "read_at": "2026-11-09T11:34:00+00:00",
-  "running": []
+  "week_pct": 3.67,
+  "usage_pct": 15.0,
+  "work_pct": 55.6,
+  "read_at": "2026-11-09T13:52:00+00:00",
+  "running": [
+   {
+    "lane": "b",
+    "task": "T-3401",
+    "w": "Idris",
+    "k": "build",
+    "t": "Add a general web request call and an OpenSSL check",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-09T08:28:51-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-2494",
+    "w": "Idris",
+    "k": "build",
+    "t": "Finish the widget's log write before the extension quits",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-09T08:28:51-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -205,7 +283,7 @@
   }
  ],
  "disk": {
-  "free_gb": 22,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -214,22 +292,25 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-09T06:05:00-05:00",
-   "recovery": null
+   "at": "2026-11-09T08:42:00-05:00",
+   "recovery": {
+    "what": "answers again",
+    "at": "2026-11-09T08:43:00-05:00"
+   }
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-09T06:34:00-05:00",
+  "at": "2026-11-09T08:52:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Spread: 81% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 10 of 14 lands failed in 3 hours (4 red))",
+  "why": "Spread: 80% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (at its floor: 10 of 14 lands failed in 3 hours (4 red))",
   "n": 2,
-  "at": "2026-11-09T06:28:02.892882-05:00"
+  "at": "2026-11-09T06:41:33.117310-05:00"
  },
  "lanes": [
   {
@@ -358,56 +439,84 @@
   ],
   "done": [
    {
-    "w": "Pernille",
-    "t": "One app test froze on the older Python because it tried to write inside the Xcode app folder,...",
-    "at": "2026-11-09T05:58:00-05:00"
+    "w": "Idris",
+    "t": "The stalled-sensor tests now really make Distance and Sunrise ask a phone sensor that never...",
+    "at": "2026-11-09T08:35:00-05:00"
    },
    {
-    "w": "Pernille",
-    "t": "Pernille's agent memory file is now 3,929 bytes, under the 4,096-byte limit, with no repeated...",
-    "at": "2026-11-09T05:50:00-05:00"
+    "w": "Idris",
+    "t": "The test that proves a widget's run is written down before a tampered run can end the process...",
+    "at": "2026-11-09T08:24:00-05:00"
    },
    {
-    "w": "Ines",
-    "t": "A lane can now record an Investor rule change it holds, and proposal to close the retired...",
-    "at": "2026-11-09T05:50:00-05:00"
+    "w": "Idris",
+    "t": "The extension tests that once failed to compile on the Mac runner now build and pass, and the...",
+    "at": "2026-11-09T08:24:00-05:00"
    }
   ],
   "count": {
-   "next": 611,
+   "next": 617,
    "wait": 46,
    "blocked": 71,
    "you": 20
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 11,
+   "rows": [
+    [
+     "T-3551",
+     "Make the stall tests reach a..."
+    ],
+    [
+     "T-2229",
+     "Add a test that run rows..."
+    ],
+    [
+     "T-2271",
+     "Fix extension tests that..."
+    ],
+    [
+     "T-1260",
+     "Retry work from a third..."
+    ],
+    [
+     "T-3398",
+     "Make the Issues badge count..."
+    ],
+    [
+     "T-3811",
+     "Find safe ways to reach the..."
+    ]
+   ]
   }
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-09T04:49:25Z",
-  "seconds": 331.0
+  "sent": "2026-11-09T13:44:40Z",
+  "seconds": 98.0
  },
  "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "6:34 AM",
-  "why": "Between sessions: no session is running. Last check 6:28 AM ET.",
-  "at_iso": "2026-11-09T11:34:00+00:00",
+  "lanes": 1,
+  "total": 1,
+  "at": "8:52 AM",
+  "why": "",
+  "at_iso": "2026-11-09T13:52:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:34 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 6:28 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:52 AM ET</p></section>"
  }
 }

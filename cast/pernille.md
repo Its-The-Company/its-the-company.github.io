@@ -32,7 +32,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Offer: 7600 credits a month. Probation packet (bridge contract, DSL v1, stdlib manifest) is in archive.md.
 
 ## Open
-- T-1103 (b11fe55b): gallery tile and Pro row rules in Core. Open for Maren: 9.4 read strictly puts a spinner over a kept live tree on a foreground rerun.
 
 - T-2724: runtime sends frames_cut_at; RunDetail trim drops next to the cut, counts all. Open: ADR-007 says "outer end", Ines <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note.
 - T-2319 (c9d371621): stdlib_cut check reads the interpreter's inittab/_frozen/PyInit_ and fails closed; open: first Release archive must show Xcode's embed strip keeps the exported symbols.
@@ -49,6 +48,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3546 (858f9cbe0): T-3519 FAIL; T-3780..82 Odalys. Lesson: a text scan for reads can't follow $REPO vars or a tool's constants; key the data folder, list tools by hand.
 - T-3545 (uncommitted: main_gate refused, bridge red): T-3408 PASS w/ fixes; T-3799/3800 Odalys. Race probe refused by security-guard (scratch $HOME/company-personal). Lesson: retry_into deletes the <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> name before mark_ready on n=1, so a refusal strands the work on the spare.
 - T-3802 (c64c68bf4): bridge red on 3.9 was a hang, not load: mkdir into /Applications/Xcode.app blocks with no answer on macOS 27. Tick refused (Evidence must be a bare path), not ticked. Lesson: a child with bytecode writes on must set pycache_prefix.
+- T-3813 (59b4edb8d): build 5 review, no cause for the iPhone bug; M1 = T-3814 (Idris). Lesson: a fallback picture that looks like real output blinds a hunt; check what a fix does to the symptom's face.
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## Lessons

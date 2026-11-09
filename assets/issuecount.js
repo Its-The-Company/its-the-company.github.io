@@ -12,7 +12,15 @@ o = Date.UTC(+p.year, p.month - 1, +p.day, +p.hour, +p.minute) - g;
 } catch (e) { o = -5 * 36e5; }
 return g - o;
 }
-function dl(body) { var m = /^[ \t>*_-]*Deadline\b[*_:\s]*(\d{4}-\d\d-\d\d)(?:[ T]+(\d\d:\d\d))?/im.exec(String(body || '')); return m ? etMs(m[1], m[2]) || 0 : 0; }
+function dl(body) {
+var m = /^[ \t>*_-]*Deadline\b[*_:\s]*(\d{4}-\d\d-\d\d)(?:[ \t]+|T)?(?:(\d{1,2}):(\d\d)(?:[ \t]*([AaPp])\.?[Mm]\b\.?)?)?/im.exec(String(body || '')), h;
+if (!m) return 0;
+if (m[2] === undefined) return etMs(m[1]) || 0;
+h = +m[2];
+if (m[4]) { if (h < 1 || h > 12) return 0; h = h % 12 + (/p/i.test(m[4]) ? 12 : 0); }
+if (h > 23) return 0;
+return etMs(m[1], (h < 10 ? '0' : '') + h + ':' + m[3]) || 0;
+}
 function due(n, o, st) { var v = st.d[n]; return v === undefined ? (o.dl || 0) : v; }
 function queue(n, o, st, now) { var v = due(n, o, st); return !v || v - now <= DAY || o.l.indexOf('emergency') >= 0 ? 'N' : 'L'; }
 function badged(n, o, st, now) { return st.r.indexOf(n) < 0; }

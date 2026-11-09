@@ -35,6 +35,41 @@ it predates the hook and is a product path, which the hook now gates.
 
 Decision. The counts show no red from tools/ or tests/ direct commits, so no extension of the hook's host check is proposed.
 Re-count when OPT-119's read (11-14) comes in, and again if main_restore.jsonl gets a row.
+
+## Re-count, 2026-11-09 06:45 ET (Odalys)
+
+Window: 2026-11-01 00:00 to main 31c4589b1 (11-09 06:32), first-parent, n = 4313 commits. Read-only: git log, the
+main_green record, the supervisor log. Counting script kept in scratch (T-3451-odalys/count.py), not a tool.
+
+Road, by committer identity (git keeps no "came through the land" mark): the land rebases with the Operator identity, so
+committer Operator with another author = land (677); a worker committer address = a lane branch fast-forwarded by the
+land (619); Operator author and committer = the supervisor's and lander's own commits (1256, hook-exempt); the main
+folder's account = direct (1696); GitHub web = Investors' commits (65). A green main_gate verdict counts only where the
+hook covered that path at the commit's time: product from 74f5a5670 (11-07 10:38), tools/ tests/ site/ from dc36d3896
+(11-09 05:22).
+
+Commits that reached main with no check first, by path group (a commit can touch several):
+- tools/: 291. Odalys 222, Operator 28, Idris 15, itsthecompany 10, Pernille 5, Ines 5, Wrenna 3, Investors 3.
+- tests/: 272. Odalys 226, Operator 15, Idris 14, itsthecompany 10, Wrenna 3, Pernille 2, Ines 2.
+- pywidget/: 421: 412 direct before the product hook went live, 9 Operator's own. (1 direct after it, hook-covered.)
+- site: 0 outside the land.
+- ops/: 2030 and other: 830 (direct, Operator and GitHub web); no hook covers them and none is meant to.
+- Direct tools/ or tests/ commits since the T-3795 hook went live: 0 (one hour of data).
+
+Reds from tools/main_green.py since 11-01 (it started 11-06): 1 of 23 completed checks (22 green, 174 skipped; ops/runs/supervisor.log).
+T-3715, main 81d978ece, 11-08 18:19: widgets (3.9.6), 2 subtests of test_premade_sensor_timeout, 'interrupted' != 'ok'.
+Attribution method: (1) main_green's own bisect (main_restore.jsonl): undecided, the suite passes alone at 81d978ece;
+(2) inputs: the 61 commits since the last green 7ee9259e8 changed no file under pywidget/tests/widgets or
+pywidget/docs/design/widgets; (3) the next check, fa8933296, was green with only Swift changes between (nothing the
+Python suite reads). So the red traces to no commit: a timing flake under load. Reds traced to untested commits: 0 of 1.
+
+Not a main_green red, noted for completeness: T-3720 (personal_land_test red on main, 11-08) came from 6a1e026cd, a land
+commit (tested in its lane), not an untested one.
+
+Decision. Still no red from an untested tools/ or tests/ commit, so no proposal. Main-account commits to tools/ and
+tests/ are now covered by the hook (T-3795); the open gap is Operator's own commits (28 tools/, 15 tests/ in the
+window: salvages, applied proposals, work-run records), which the hook exempts. Re-count when main_restore.jsonl names
+a commit, or at 11-16.
 {% endraw %}
 
 </div>

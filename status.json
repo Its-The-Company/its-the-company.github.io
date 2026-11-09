@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-09T01:08:48.802039+00:00",
+ "at": "2026-11-09T01:11:51.492449+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,25 +9,33 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-3722 Mac mini data to SSD",
+   "task": "[tools] T-3720 landing gate tests green",
    "model": "opus",
-   "started": "2026-11-09T00:58:06.975Z",
-   "seconds": 641,
+   "started": "2026-11-09T00:58:15.037Z",
+   "seconds": 816,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3720 landing gate tests green",
+   "task": "[tools] T-3713 tests that block landings",
    "model": "opus",
-   "started": "2026-11-09T00:58:15.037Z",
-   "seconds": 633,
+   "started": "2026-11-09T01:09:47.140Z",
+   "seconds": 124,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3722 Mac mini data to SSD",
+   "model": "opus",
+   "started": "2026-11-09T00:58:06.975Z",
+   "seconds": null,
+   "finished": "2026-11-09T01:09:32.033000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[fix] T-3720 landing gate tests green",
@@ -83,7 +91,7 @@
   "week_pct": 3.85,
   "usage_pct": 22.9,
   "work_pct": 68.2,
-  "read_at": "2026-11-09T01:08:00+00:00",
+  "read_at": "2026-11-09T01:11:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -113,14 +121,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T20:04:00-05:00",
+   "at": "2026-11-08T20:10:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T20:08:00-05:00",
+  "at": "2026-11-08T20:11:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -134,9 +142,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-3722 Mac mini data to SSD",
+   "task": "[tools] T-3720 landing gate tests green",
    "model": "opus",
-   "since": "2026-11-09T00:58:06.975Z",
+   "since": "2026-11-09T00:58:15.037Z",
    "next": [],
    "effort": "high"
   },
@@ -186,22 +194,22 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Move Mac mini data to the SSD before it fills",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T00:58:06.975Z",
-    "o": "c",
-    "task": "T-3722"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Make the landing gate tests pass on main again",
     "m": "opus",
     "e": "high",
     "at": "2026-11-09T00:58:15.037Z",
     "o": "c",
     "task": "T-3720"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Fix the tests that most often block a landing",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-09T01:09:47.140Z",
+    "o": "c",
+    "task": "T-3713"
    }
   ],
   "src": "plan",
@@ -231,13 +239,6 @@
     "w": "Odalys",
     "k": "ops",
     "t": "Prune stale tasks from the board",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Move Mac mini data to the SSD before it fills",
     "s": "next",
     "o": "c"
    },
@@ -275,9 +276,21 @@
     "t": "Last checks before the first test build",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Run Python widget scripts inside the widget...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "When the Mac mini's disk runs low, the company now starts moving its own files to the SSD and...",
+    "at": "2026-11-08T20:09:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "The site's Chat now has an Attach control (a + on a phone, drop or paste too); each file is...",
@@ -287,11 +300,6 @@
     "w": "Operator",
     "t": "Main's own tests pass again on a clean copy of main (fa8933296), so finished work is no longer...",
     "at": "2026-11-08T18:57:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The pre-commit check for main now reruns the test suites for any site or tools file that changed...",
-    "at": "2026-11-08T18:56:00-05:00"
    }
   ],
   "count": {
@@ -301,8 +309,13 @@
    "you": 19
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-3722",
+     "Move Mac mini data to the..."
+    ]
+   ]
   }
  },
  "qr": [],
@@ -315,6 +328,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -325,10 +339,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "8:08 PM",
+  "at": "8:11 PM",
   "why": "",
-  "at_iso": "2026-11-09T01:08:00+00:00",
+  "at_iso": "2026-11-09T01:11:00+00:00",
   "started": "7:53 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:08 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:11 PM ET</p></section>"
  }
 }

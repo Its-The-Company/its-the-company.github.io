@@ -1,18 +1,61 @@
 {
  "schema": 1,
- "at": "2026-11-09T01:45:16.199943+00:00",
+ "at": "2026-11-09T01:48:20.864906+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-08T19:53:34-05:00"
  },
- "workers": [],
- "who": "",
- "recent": [],
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3729 Parked shows only waiting work",
+   "model": "opus",
+   "started": "2026-11-09T01:36:23.408Z",
+   "seconds": 717,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3730 hold branch while main is red",
+   "model": "opus",
+   "started": "2026-11-09T01:28:52.726Z",
+   "seconds": null,
+   "finished": "2026-11-09T01:48:12.662000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3727 main gate runs app Python tests",
+   "model": "opus",
+   "started": "2026-11-09T01:20:30.798Z",
+   "seconds": null,
+   "finished": "2026-11-09T01:35:24.544000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3714 measure and shorten parked queue",
+   "model": "opus",
+   "started": "2026-11-09T01:18:11.198Z",
+   "seconds": null,
+   "finished": "2026-11-09T01:28:32.363000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3720 landing gate tests green",
+   "model": "opus",
+   "started": "2026-11-09T00:58:15.037Z",
+   "seconds": null,
+   "finished": "2026-11-09T01:19:58.364000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 603,
+  "runnable_count": 602,
   "blocked_count": 112
  },
  "meter": {
@@ -55,7 +98,7 @@
   "week_pct": 3.85,
   "usage_pct": 22.9,
   "work_pct": 68.2,
-  "read_at": "2026-11-09T01:45:00+00:00",
+  "read_at": "2026-11-09T01:48:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -76,29 +119,42 @@
   }
  ],
  "disk": {
-  "free_gb": 12,
+  "free_gb": 11,
   "gate": "closed",
   "ssd": {
    "mounted": true,
-   "free_gb": 279
+   "free_gb": 278
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T20:39:00-05:00",
+   "at": "2026-11-08T20:45:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T20:45:00-05:00",
+  "at": "2026-11-08T20:48:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: 87% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (cut a step: 4 of 11 lands failed in 3 hours (4 red))",
+  "n": 2,
+  "at": "2026-11-08T19:53:22.765859-05:00"
+ },
  "lanes": [
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-3729 Parked shows only waiting work",
+   "model": "opus",
+   "since": "2026-11-09T01:36:23.408Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Idris",
    "state": "next",
@@ -124,14 +180,6 @@
    "next": []
   },
   {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Maren",
    "state": "next",
    "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
@@ -149,7 +197,19 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Show only work still waiting under Parked",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-09T01:36:23.408Z",
+    "o": "c",
+    "task": "T-3729"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -225,6 +285,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "A branch whose test fails only where the main copy fails too now waits in line and lands once...",
+    "at": "2026-11-08T20:47:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "Before a change to the app's Python code or examples goes straight onto main, the main gate...",
     "at": "2026-11-08T20:34:00-05:00"
    },
@@ -232,18 +297,42 @@
     "w": "Odalys",
     "t": "A new script counts parked work: 63% of 1,181 parked branches hold work already finished, 164...",
     "at": "2026-11-08T20:28:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "On the Issues page the Investor can now drag an issue into Now (due now) or onto a day in Later...",
-    "at": "2026-11-08T20:24:00-05:00"
    }
   ],
   "count": {
-   "next": 603,
+   "next": 602,
    "wait": 45,
    "blocked": 67,
    "you": 19
+  },
+  "fin": {
+   "n": 7,
+   "rows": [
+    [
+     "T-3730",
+     "Hold a branch in line while..."
+    ],
+    [
+     "T-3727",
+     "Run the app's Python tests..."
+    ],
+    [
+     "T-3714",
+     "Measure and shorten the..."
+    ],
+    [
+     "T-3583",
+     "Drag issues between Now and..."
+    ],
+    [
+     "T-3720",
+     "Make the landing gate tests..."
+    ],
+    [
+     "T-3713",
+     "Fix the tests that most..."
+    ]
+   ]
   }
  },
  "qr": [],
@@ -255,21 +344,24 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 0,
-  "total": 0,
-  "at": "8:45 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-09T01:45:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:45 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 1,
+  "at": "8:48 PM",
+  "why": "",
+  "at_iso": "2026-11-09T01:48:00+00:00",
+  "started": "7:53 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:48 PM ET</p></section>"
  }
 }

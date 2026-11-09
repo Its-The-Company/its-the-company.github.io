@@ -65,6 +65,23 @@ After it: n=36 messages from 6:00 AM 11-08 to 1:00 AM 11-09, median 86 s, max 57
 
 - `python3 tools/retry_stats.py --since 2026-11-10`: the idle line ("no session this tick, so the held retry goes back to
   land") appears and the "next line no session" share of stamp waits falls toward 0. Owned-path rows after T-3751.
+
+## 4. Closed without the idle-retry patch (T-3771, Odalys, 11-09 afternoon)
+
+T-3827 slice 3 (aea8bc967, landed 1:10 PM 11-09 through the main gate) changed the stamp: it now holds main's commit,
+and a held line goes back at once when main has moved, session or not (the T-3768 rule above, done). The patch no
+longer applies (`git apply --check`: tools/personal_tick.sh and tools/site/home_look.py fail), and its Home string
+is moot: the Parked note no longer says "once an hour".
+
+What the patch would still add, measured over the idle waits 11-03 to 1:10 PM 11-09 (retry_stats.py's definition,
+ops/runs/personal-tick-{a,b}.log, account's last "goes back to land" line against `git log main --first-parent`):
+n=185 idle waits; 5 paused (the patch held those too); 143 had main move since the account's last retry, so slice 3
+retries them now; 37 had main unchanged. Those 37 are the patch's whole remaining reach, and a retry onto an unchanged
+main passed 2 of 20 (row 3 above). That spends a merge check on a likely repeat of the same failure, against slice 3's
+own reason. Not landed; ops/plans/t3341-idle-retry.patch stays as the record.
+
+After-read now: `python3 tools/retry_stats.py --since 2026-11-10`; "a retry waits" lines should read "onto this same
+main", and the idle share should fall with main's commit rate.
 {% endraw %}
 
 </div>

@@ -1,11 +1,99 @@
 {
  "schema": 1,
- "at": "2026-11-09T17:27:34.839326+00:00",
+ "at": "2026-11-09T21:22:38.259580+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
+   {
+    "t": "T-3409",
+    "name": "Put proof the run-marker tests catch bugs on main",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794259337
+     }
+    ]
+   },
+   {
+    "t": "T-3657",
+    "name": "Add the memory-overrun test widget to the gate build",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794259320
+     }
+    ]
+   },
+   {
+    "t": "T-2230",
+    "name": "Mark the widget deadline outcome reliably",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794259043
+     }
+    ]
+   },
+   {
+    "t": "T-1643",
+    "name": "Let a person's say-so lift a widget demotion",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794256352
+     }
+    ]
+   },
+   {
+    "t": "T-2548",
+    "name": "Make the send check test prove its timing fix",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794255505
+     }
+    ]
+   },
+   {
+    "t": "T-3563",
+    "name": "Mark a premade reading only once its tree is written",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794254231
+     }
+    ]
+   },
+   {
+    "t": "T-2494",
+    "name": "Finish the widget's log write before the extension quits",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794250473
+     }
+    ]
+   },
+   {
+    "t": "T-0021",
+    "name": "Check how the preview draws Material and container shapes",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794250457
+     }
+    ]
+   },
    {
     "t": "T-0556",
     "name": "Take the app pictures that were missing",
@@ -18,17 +106,6 @@
     ]
    },
    {
-    "t": "T-3127",
-    "name": "Find what sends main sessions a stray SIGTERM",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794237667
-     }
-    ]
-   },
-   {
     "t": "T-2260",
     "name": "Make closed widget turns draw their timeline",
     "acct": "Personal a",
@@ -36,17 +113,6 @@
      {
       "s": "testq",
       "at": 1794234200
-     }
-    ]
-   },
-   {
-    "t": "T-1643",
-    "name": "Let a person's say-so lift a widget demotion",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794231352
      }
     ]
    },
@@ -86,152 +152,150 @@
   ],
   "done": [
    {
-    "t": "T-0392",
-    "name": "Move test sources into fixture files",
-    "acct": "Personal b",
+    "t": "T-2629",
+    "name": "Finish the prompt alert checks once the suite is green",
+    "acct": "Personal a",
     "steps": [],
     "end": "failed",
-    "end_at": 1794240546,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-3231",
-    "name": "Chat drawer: swipe anywhere to hide it",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794240546,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-3695",
-    "name": "Land branches refused for old copies of main commits",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794240546,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-3735",
-    "name": "Show what blocks each blocked task on Home",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794237662,
+    "end_at": 1794259317,
     "why": "did not merge cleanly"
    },
    {
-    "t": "T-3570",
-    "name": "Keep the gate's passing lines when one member moves",
+    "t": "T-3704",
+    "name": "Add a Live step after site and app changes land",
     "acct": "Personal b",
     "steps": [],
     "end": "failed",
-    "end_at": 1794236961,
+    "end_at": 1794258368,
     "why": "did not merge cleanly"
    },
    {
-    "t": "T-3741",
-    "name": "Split the host check so unrelated app changes pass apart",
+    "t": "T-3788",
+    "name": "Redo an Investor request on fresh main",
     "acct": "Personal b",
     "steps": [],
     "end": "failed",
-    "end_at": 1794236948,
+    "end_at": 1794258368,
     "why": "did not merge cleanly"
    },
    {
-    "t": "T-3705",
-    "name": "Land and close the work held by old charter copies",
+    "t": "T-3788",
+    "name": "Redo an Investor request on fresh main",
     "acct": "Personal b",
     "steps": [],
     "end": "failed",
-    "end_at": 1794236948,
+    "end_at": 1794254806,
     "why": "did not merge cleanly"
    },
    {
-    "t": "T-3751",
-    "name": "Merge every branch held only for touching Investor files",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794236948,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3701",
-    "name": "Mark a session lost with no commit",
+    "t": "T-3754",
+    "name": "Put every Issues page ask in Now or Later",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
-    "end_at": 1794236910
+    "end_at": 1794254799
    },
    {
-    "t": "T-3699",
-    "name": "Mark tasks paused by usage limits or a stop",
+    "t": "T-3812",
+    "name": "Ask the Investors about wrong security stops",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794254323,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3812",
+    "name": "Ask the Investors about wrong security stops",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794254315,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3816",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
-    "end_at": 1794236910
+    "end_at": 1794254291
+   },
+   {
+    "t": "T-1643",
+    "name": "Let a person's say-so lift a widget demotion",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794254189,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3401",
+    "name": "Add a general web request call and an OpenSSL check",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794250502
    }
   ],
-  "landed": 29,
-  "failed": 27
+  "landed": 36,
+  "failed": 37
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "odalys",
-   "task": "[site] T-3828 Home merge steps and slots",
+   "task": "[tools] T-3885 T-3875 lanes finish parked work first and agent count fits merges",
    "model": "opus",
-   "started": "2026-11-09T16:39:30.210Z",
+   "started": "2026-11-09T20:29:53.077Z",
    "seconds": null,
-   "finished": "2026-11-09T17:21:35.495000+00:00"
+   "finished": "2026-11-09T21:17:46.625000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3846 MacBook runner silent",
+   "task": "[tools] T-3866 land the applier's test-time fix",
    "model": "opus",
-   "started": "2026-11-09T16:58:16.928Z",
+   "started": "2026-11-09T19:13:02.463Z",
    "seconds": null,
-   "finished": "2026-11-09T17:11:17.540000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3844 parked Xcode build reds",
-   "model": "opus",
-   "started": "2026-11-09T16:39:12.997Z",
-   "seconds": null,
-   "finished": "2026-11-09T17:11:07.692000+00:00"
+   "finished": "2026-11-09T21:17:20.793000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3827 drain slice 3: batches",
+   "task": "[tools] T-3818 then T-3862 part 2: land the two saved patches in order",
    "model": "opus",
-   "started": "2026-11-09T16:38:46.146Z",
+   "started": "2026-11-09T20:32:32.445Z",
    "seconds": null,
-   "finished": "2026-11-09T17:10:28.965000+00:00"
+   "finished": "2026-11-09T20:59:47.451000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3882 skip page-speed timing when busy, land the size trim",
+   "model": "opus",
+   "started": "2026-11-09T20:27:15.648Z",
+   "seconds": null,
+   "finished": "2026-11-09T20:44:22.657000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 643,
+  "runnable_count": 652,
   "blocked_count": 119
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
-   "resets_at": "2026-11-09T17:59:59.951643+00:00",
+   "pct": 33.0,
+   "resets_at": "2026-11-09T17:59:59.566345+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 95.0,
+   "left": 67.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 21.0,
-   "resets_at": "2026-11-15T06:59:59.951662+00:00",
+   "pct": 24.0,
+   "resets_at": "2026-11-15T06:59:59.566368+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 79.0,
+   "left": 76.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -239,10 +303,10 @@
    "resets_at": "2026-11-15T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-09T08:58:51.241818-05:00"
+  "read_at": "2026-11-09T12:35:19.450171-05:00"
  },
  "ui": {
-  "week_pct": 0.009,
+  "week_pct": 0.008,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -254,129 +318,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-09T09:13:51-05:00",
+ "next_tick": "2026-11-09T12:50:19-05:00",
  "personal": {
-  "week_pct": 3.7,
-  "usage_pct": 13.2,
-  "work_pct": 53.6,
-  "read_at": "2026-11-09T17:28:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-3834",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Merge and retry parked work in task priority order",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T11:22:07-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a",
-    "task": "T-3833",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Redo show what blocks each blocked task on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T11:22:07-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3560",
-    "w": "Idris",
-    "k": "test",
-    "t": "Tighten the per-premade first-render tests",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T11:41:07-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3716",
-    "w": "Idris",
-    "k": "test",
-    "t": "Find why the Simulator location test now fails",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T11:41:07-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-2027",
-    "w": "Idris",
-    "k": "build",
-    "t": "Re-run the notification test on a fresh Simulator",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T11:41:07-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3675",
-    "w": "Idris",
-    "k": "build",
-    "t": "Pass the launcher editor's saved apps to the launcher widgets",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T11:41:17-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3680",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the launcher sheet fix over other sheets",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T11:41:17-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3098",
-    "w": "Idris",
-    "k": "fix",
-    "t": "Keep input prompts from following a finished run",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T11:41:17-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-0042",
-    "w": "Idris",
-    "k": "build",
-    "t": "Add an Acknowledgements screen for vendored packages",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T11:41:17-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   }
-  ]
+  "week_pct": 3.65,
+  "usage_pct": 10.9,
+  "work_pct": 51.7,
+  "read_at": "2026-11-09T21:23:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -396,16 +344,16 @@
   }
  ],
  "disk": {
-  "free_gb": 9.8,
+  "free_gb": 17,
   "gate": "closed",
   "ssd": {
    "mounted": true,
-   "free_gb": 254
+   "free_gb": 234
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-09T12:21:00-05:00",
+   "at": "2026-11-09T16:15:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-09T08:43:00-05:00"
@@ -415,7 +363,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-09T12:28:00-05:00",
+  "at": "2026-11-09T16:23:00-05:00",
   "mode": null
  },
  "next_tick_why": "last_tick",
@@ -512,13 +460,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Merge every branch held only for touching...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Merge every parked change today and cap the...",
     "s": "next",
     "o": "c"
@@ -531,60 +472,78 @@
     "o": "i"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Trace main-session outages and alert after...",
-    "s": "next",
-    "o": "i"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "release",
+    "t": "Last checks before the first test build",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Run Python widget scripts inside the widget...",
     "s": "next",
     "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Ines",
-    "t": "A worker whose command was refused by a guard made the same change with a different tool; the...",
-    "at": "2026-11-09T09:49:00-05:00"
+    "w": "Odalys",
+    "t": "A work lane that already has unfinished parked work now gets that work back (a retry or its open...",
+    "at": "2026-11-09T15:45:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "The stalled-sensor tests now really make Distance and Sunrise ask a phone sensor that never...",
-    "at": "2026-11-09T08:35:00-05:00"
+    "w": "Odalys",
+    "t": "The small script that counts waiting Investor requests on the site was trimmed back under its...",
+    "at": "2026-11-09T15:44:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "The test that proves a widget's run is written down before a tampered run can end the process...",
-    "at": "2026-11-09T08:24:00-05:00"
+    "w": "Odalys",
+    "t": "The site's page-speed tests now skip only their timing checks when the build machine is too busy...",
+    "at": "2026-11-09T15:44:00-05:00"
    }
   ],
   "count": {
-   "next": 643,
+   "next": 652,
    "wait": 47,
    "blocked": 72,
-   "you": 20
+   "you": 22
   }
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-09T17:05:59Z",
-  "seconds": 324.0
+  "sent": "2026-11-09T18:39:18Z",
+  "seconds": 69.0
  },
  "inbox": [
   {
-   "id": "c6746755346",
+   "id": "c6751782955",
    "state": "received",
    "position": 1,
-   "eta": "2026-11-09T09:13:51-05:00",
+   "eta": "2026-11-09T12:50:19-05:00",
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "A"
+   "title": "The company may do this itself"
+  },
+  {
+   "id": "c6751800160",
+   "state": "received",
+   "position": 2,
+   "eta": "2026-11-09T12:50:19-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Remove the safety check and allow..."
   }
  ],
  "trimmed": [
@@ -592,6 +551,7 @@
   "queue_text",
   "recent",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -600,12 +560,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "12:28 PM",
-  "why": "",
-  "at_iso": "2026-11-09T17:28:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "4:23 PM",
+  "why": "Between sessions: no session is running. Last check 12:35 PM ET.",
+  "at_iso": "2026-11-09T21:23:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 12:28 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:23 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 12:35 PM ET.</p></section>"
  }
 }

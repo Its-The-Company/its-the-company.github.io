@@ -77,6 +77,48 @@ where the replay can model it, so T-3087 has a prediction to judge.
 - T-3451 Measure what reaches main unchecked, then decide on a gate (row 1).
 - T-3452 Let host lines pass a slow xc line, after T-3435 (rows 7, 8).
 
+## Second pass, 2026-11-09: the <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> queue (Investor an Investor #41 c6742422211, c6748284039)
+
+Wrenna, 15:20 to 15:35 ET. Already here before this pass: rows 1-20, gap lines T-3444..T-3452 (all landed or ticked
+since, apart from T-3445, T-3446 and T-3447, which are open with Odalys's counts on rows 4 and 9), and the tool notes
+below. This pass adds rows 21-27 on the question the Investor asked today: why parked work grows faster than it lands.
+
+The measured picture (ops/runs/t3827-blockers.md, Odalys, 14:16): 205 parked tasks; 128 conflict with main in their
+own code files; 121 of 213 conflicting refs carry more than one task. Counted for this pass, by script, at 15:20:
+500 parked refs, median age 35.7 h (from the time in each ref's name); 199 older than 48 h, 77 older than 96 h.
+115 refs carry today's date (recuts included) against 14 successful pushes of main today
+(ops/runs/land_push.jsonl, 2026-11-09 to 15:16; 49 failed, all 49 for one reason, row 27). Packet figure: about 8
+lands per 3 hours.
+
+New pages, read one at a time through tools/terms_guard.py, signed out, at least 6 s apart, 15:22 to 15:24 ET, saved
+in research/inbound/t3421-merge-practice/ (requests.jsonl): DORA "Trunk-based development" and "Work in process limits"
+(dora.dev); trunkbaseddevelopment.com "Short-lived feature branches" (no terms page, a copyright line only; robots.txt
+allowed it); Google, *Software Engineering at Google*, ch. 22 "Large-Scale Changes" (abseil.io, CC BY-NC-ND 4.0, short
+quotes only). Not read: Graydon Hoare's post again, terms_guard refused it a second day (robots.txt answered 504, which
+counts as a full Disallow); the rule still rests on bors.tech's wording. My slip: I fetched the trunkbaseddevelopment.com
+page before looking for its terms; none exist, so nothing was breached, but the order was wrong. The trunkbaseddevelopment.com page
+now mentions "a commit queue and AI-led review". That is information about the site, not advice to us.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: Second pass, 2026-11-09: the parked queue (Investor an Investor #41…, scrolls sideways" data-n="1" style="--tw:1185px" markdown="1">
+
+| # | Technique (source) | Ours | Free tool that fits | Expected effect on our numbers |
+|---|---|---|---|---|
+| 21 | One change per branch and per queue entry (GitHub, Zuul: one PR or change per entry; DORA small batches; DORA trunk-based: developers "divides their own work into small batches and merges that work into trunk at least once (and potentially several times) a day") | in part | git itself: split at park time by the task ID in each commit subject | Gate entries and retry lines are one task each, but `park` puts a lane's whole personal branch on one parked name, so 121 of 213 conflicting refs hold more than one task. One task per name means a conflict holds only its own task. How many tasks that frees is unmeasured; T-3883 counts it first (tasks whose own commits stack clean while their ref conflicts). |
+| 22 | Rebase and retest against the queue head; a change that no longer merges leaves the queue at once (Zuul gating; GitHub merge queue; trunkbaseddevelopment.com: the branch "has to be brought right up to date with main (trunk) in a merge operation before the result being merged back") | in part | `git merge-tree --write-tree` (read-only; park_batch.py stack already uses it) | The land rebases onto main and runs every check there (yes). A parked ref is not looked at again until its retry line runs, so a conflict is found hours or days late (median ref age 35.7 h). An hourly read-only pass (4 min 14 s for 425 refs on 11-09) would name each new conflict within an hour, with the main commit that caused it, while the owner still has the context. T-3884. |
+| 23 | Speculative batching with bisection (bors-ng: "tests them in batches (and bisects if a batch fails)"; Zuul dependent pipeline; Uber SubmitQueue; Google TAP train, ch. 22: changes that passed alone ride one combined run, a failing test is "rerun individually") | yes, in part for trains | (ours) | The gate stacks k=6 speculatively (row 2). tools/park_batch.py (T-3827) checks a stack once and halves a red one up to 3 times in the same run, as bors does. Retry trains still halve once per hourly tick (row 5). Since 11-09 park_batch carries the drain, so no new line; T-3445 (window) and T-3872 (batch the clean refs) are the open work. |
+| 24 | Limit work in process to what the queue absorbs (DORA WIP limits: "After the WIP limit is reached, no more cards can be added to the column, and the team must wait for a card to move to the next column"; "Determine WIP limits by team capacity") | in part | (ours) | The Investor's lock-in until 20 parked (T-3841, tools/governor.py) is the only limit, and it ends at 20. The standing cap is T-3827 item 4, not built yet, so no new line. Sizing by Little's law (queue = arrival rate x wait): at about 8 lands per 3 h (2.7 an hour), a cap of 20 means about 7.5 h of waiting for the last entry, inside DORA's "at least once a day"; a cap above about 64 could not meet it at today's rate. |
+| 25 | Stop starting, start finishing: work that is waiting is pulled through before new work starts (DORA WIP limits: "pull the highest priority piece of work waiting"; DORA trunk-based: "Have three or fewer active branches") | no | tools/dispatch.py rule, no new tool | Today 115 refs were parked against 14 successful pushes: inflow is several times outflow. If a lane must take its own parked work (recut, red fix, retry) before any new task, each lane holds at most one parked ref, so parked refs stay at or under the lane count, and the lanes that hold a conflict's context do the recut. T-3885. |
+| 26 | How long a change may wait before it is redone instead of rebased (trunkbaseddevelopment.com: the branch "should only last a couple of days. Any longer than two days, and there is a risk of the branch becoming a long-lived feature branch"; Google SWE book ch. 22: changes as "cattle", new ones "generated at very low cost", the TAP train "started fresh every three hours"; DORA trunk-based: "The longer a merge is delayed, the more likely it is to create merge conflicts") | in part | tools/investor_age.py's redo-line writer, reused | Only Investor-sourced tasks become "Redo ... on fresh main" when they conflict (investor_age.py); every other task waits for a hand recut, and recuts are slow: T-3865 handed 5 in two slices. 199 of 500 parked refs are over 48 h. Above 48 h, a ref that does not stack clean would become one redo line with the old ref kept as reading. Expected: the conflicting share of those 199 leaves the parked count on the day the rule runs and comes back as ordinary tasks; the cost is sessions spent redoing work, which the prediction must weigh against recut sessions. T-3886. |
+| 27 | Queue head blocked: the queue stops when the base cannot move (Mergify "Pause"/"Freeze"; GitHub status check timeout) | (finding) | (ours) | 49 of 63 pushes of main today failed, all with "a commit on main not on GitHub touches an Investor-owned path; the sync pushes it after the session's file guard". While that holds, nothing that lands reaches GitHub, whatever the queue does. Lines exist: T-3706 (P1) and T-3755 (P2, held-push merge). I recommend Ines weigh both as P0 merge-first; no new line from me. |
+
+</div>
+
+
+New lines, all P0 merge-first, owner Odalys, prediction in log/optimizations.md first, each feeds T-3087: T-3883
+(row 21), T-3884 (row 22), T-3885 (row 25), T-3886 (row 26). No line for rows 23 and 24: T-3872, T-3445 and T-3827
+item 4 already hold that work.
+
 ## Tools that would fit
 
 Free and already here: git itself (`git bisect run` for T-3448; `git merge-tree`, already used by lane_landcheck.py),

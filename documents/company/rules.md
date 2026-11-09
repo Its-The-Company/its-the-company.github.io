@@ -522,6 +522,9 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-08 22:55 ET** ((private)): Option A on #232: an Investor's #41 c6703194946 'no formalities' message wins: changes to the charter's wording, investors/ and ban-keeping guards apply with no approve comment, after the applier's usual test run; real money, creative identity and human checks still go to the Investors; sections 6, 7, 11 stand. The company proposes the matching section 59 wording.
 - **2026-11-08 23:09 ET** ((private)): A land no longer refuses a branch for touching an Investor-owned path; it merges and posts on #41 what it changed in those paths. Every parked branch refused for that reason is merged at once without re-running its tests. Guard and hook refusals (T-0848) and sections 6, 7, 11 still stand.
 - **2026-11-09 07:30 ET** ((private)): On Monday 11-09, process and site work both come first; app work is reduced, not stopped. Tenet 1 shares return on 11-10 as ruled.
+- **2026-11-09 13:30 ET** ((private)): Company data on the Mac mini's internal disk is kept to what must be there; everything else moves to the Company SSD or the SanDisk (once erased as APFS, #245).
+- **2026-11-09 13:34 ET** ((private)): The company itself undoes the 10-31 security-guard tightening (a91aebe8), through the applier as a proposal, so wrong stops end; merging work comes before this guard's extra coverage.
+- **2026-11-09 13:39 ET** ((private)): Until midnight 11-09, parked-queue and merge work may run past Spread's pool (up to what the machine allows, about 8), without Lock In; other work stays at Spread pace.
 {% endraw %}
 
 </div>

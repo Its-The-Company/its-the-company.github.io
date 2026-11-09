@@ -51,14 +51,16 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-3814 11-09: per-widget tree.json report (Export measurements manifest) green on Core+host, NOT landed (runner silent, gate exit 3); patch in company-scratch/T-3814-idris; review T-3817. Lesson: never leave unlanded work in the main checkout; other gates sweep it.
 
-- T-3843 11-09: a3 recut handed (parked/a3/20261109-120825-recut, T-1736+T-1972); notes ops/runs/t3843-recut.md. Left: T-2583/T-2548/T-1732/T-3664 refs. T-1861 done on main, tick it. Lesson: grep ops/personal_retry.txt for the task before recutting; the merge queue may have queued it alone.
+- Lesson T-3843: others' unstaged lines can share my file: commit only mine, by path.
 
 - T-3844 11-09 68be20b80: 34 xc-65 refs grouped (ops/runs/t3844-xc65-groups.md); fixes B (control literal) + C (statvfs race) in company-scratch/T-3844-idris/T-3844.patch, NOT landed (gate red on widgets http timing; runner silent). Lesson: ps -ax hangs here; use the runner's result.json on origin/macbook-results.
+
+- T-3877 11-09 6d3ce7431: 6 recuts handed (ops/runs/t3877-retry-lines.txt, Operator copies; board note unstaged, others' lines share the hunk). Left T-1672 redo, T-2538 xc.sh, T-2612 after T-3350, T-0272. Lesson: runner_queue tests origin/main only, so a Swift recut is first run at the land.
 
 ## Lessons
 - StoreKit, T-0583/T-0589, caret lessons and dated logs: archive.md.
 
-- T-3553 03bf4f46a 11-08: http.py keeps device.BUDGET_RESERVE_S; review T-3743 (Pernille); T-3400 rebases http.py. Lesson: bridge_driver Stop starts with Python's clock, so a full-budget race passes on host: stop_after < budget models Swift's lag.
+- T-3871 11-09: T-3281+T-0892 recut = parked/a3/20261109-150707-recut (land xc + widgetkit_check owed). archive() refused by classifier: 3 verdicts undone. T-0025 Swift half only on refs/wip/t0025-idris.
 {% endraw %}
 
 

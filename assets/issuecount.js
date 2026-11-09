@@ -13,13 +13,9 @@ o = Date.UTC(+p.year, p.month - 1, +p.day, +p.hour, +p.minute) - g;
 return g - o;
 }
 function dl(body) {
-var m = /^[ \t>*_-]*Deadline\b[*_:\s]*(\d{4}-\d\d-\d\d)(?:[ \t]+|T)?(?:(\d{1,2}):(\d\d)(?:[ \t]*([AaPp])\.?[Mm]\b\.?)?)?/im.exec(String(body || '')), h;
-if (!m) return 0;
-if (m[2] === undefined) return etMs(m[1]) || 0;
-h = +m[2];
-if (m[4]) { if (h < 1 || h > 12) return 0; h = h % 12 + (/p/i.test(m[4]) ? 12 : 0); }
-if (h > 23) return 0;
-return etMs(m[1], (h < 10 ? '0' : '') + h + ':' + m[3]) || 0;
+var m = /^[ \t>*_-]*Deadline\b[*_:\s]*(\d{4}-\d\d-\d\d)(?:[ \t]+|T)?(?:(\d{1,2}):(\d\d)(?:[ \t]*([AaPp])\.?[Mm]\b\.?)?)?/im.exec(String(body || '')), h = m && +m[2];
+if (m && m[4]) h = h < 1 || h > 12 ? 99 : h % 12 + (/p/i.test(m[4]) ? 12 : 0);
+return !m || h > 23 ? 0 : etMs(m[1], m[2] && ('0' + h).slice(-2) + ':' + m[3]) || 0;
 }
 function due(n, o, st) { var v = st.d[n]; return v === undefined ? (o.dl || 0) : v; }
 function queue(n, o, st, now) { var v = due(n, o, st); return !v || v - now <= DAY || o.l.indexOf('emergency') >= 0 ? 'N' : 'L'; }
@@ -71,17 +67,17 @@ return { n: n, ans: ans, later: later, red: red };
 function draw(c) {
 var a = D.querySelector('nav a[data-issues]'), b = a && a.querySelector('.nb');
 if (!a || c.n == null) return;
-if (!c.n) { Array.prototype.forEach.call(a.querySelectorAll('.nbs, .nb'), (e) => e.remove()); return; }
+if (!c.n) { a.querySelectorAll('.nbs, .nb').forEach((e) => e.remove()); return; }
 var t = c.n + ' waiting on the Investors' + (c.live ? ', read from GitHub at ' + S.clock(c.t) : ' at the site build, ' + S.clock(c.t, { month: 'short', day: 'numeric' }))
 + (c.red != null ? '; ' + c.red + ' past due or with no deadline, ' + (c.n - c.red) + ' new' : '')
 + (c.later ? '; ' + c.later + ' of them in Later and not delayed, still new: opening ' + (c.later === 1 ? 'it' : 'each') + ' on Issues clears ' + (c.later === 1 ? 'it' : 'them') : '')
 + (c.ans ? '; ' + c.ans + ' answered, waiting on the company' : '');
 var w = a.querySelector('.nbs');
-Array.prototype.forEach.call(a.querySelectorAll('.nb'), (e) => e.remove());
+a.querySelectorAll('.nb').forEach((e) => e.remove());
 if (!w) { a.appendChild(D.createTextNode(' ')); w = a.appendChild(S.el('span', 'nbs')); }
 (c.red == null ? [['', c.n]] : [['nb-r', c.red], ['nb-b', c.n - c.red]]).forEach((p) => { if (p[1] > 0) { var e = w.appendChild(S.el('span', 'nb' + (p[0] ? ' ' + p[0] : ''))); e.textContent = String(p[1]); e.title = t; e.setAttribute('aria-label', t); } });
 }
-function put(n, ans, later, red) { var c = { n: n, ans: ans, later: later || 0, red: red == null ? null : red, t: Date.now(), live: 1 }; try { sessionStorage.setItem(K, JSON.stringify(c)); } catch (e) { /* private mode */ } draw(c); }
+function put(n, ans, later, red) { var c = { n: n, ans: ans, later: later || 0, red: red == null ? null : red, t: Date.now(), live: 1 }; try { sessionStorage.setItem(K, JSON.stringify(c)); } catch (e) {} draw(c); }
 window.IssueCount = { answered: answered, count: count, put: put };
 window.IssueQ = { dl: dl, queue: queue, tier: tier, badged: badged, act: act, settle: settle, norm: norm, due: due, DAY: DAY, et: etMs };
 if (!S || !S.getToken || !S.getToken() || !me) return;
@@ -109,26 +105,26 @@ hno = no; if (!no) return st;
 return S.gh('/repos/' + repo + '/issues/' + no + '/comments?per_page=100').then(json).then((list) => {
 rem = mine(list, l);
 var r = norm(rem && (() => { try { return JSON.parse(rem.body.slice(SM.length)); } catch (e) { return null; } })());
-if (r.t > st.t) { st = r; try { LS.setItem(SL, JSON.stringify(st)); } catch (e) { /* full */ } }
+if (r.t > st.t) { st = r; try { LS.setItem(SL, JSON.stringify(st)); } catch (e) {} }
 return st;
 });
 })).catch(() => st);
 }
 function save(st) {
 st.t = Date.now();
-try { LS.setItem(SL, JSON.stringify(st)); sessionStorage.removeItem(K); } catch (e) { /* blocked */ }
+try { LS.setItem(SL, JSON.stringify(st)); sessionStorage.removeItem(K); } catch (e) {}
 if (!hno) return;
 if (busy) { dirty = st; return; }
 busy = 1;
 var h = S.hdrs(); h['Content-Type'] = 'application/json';
 var body = JSON.stringify({ body: SM + '\n' + JSON.stringify(st) });
 fetch(S.API + '/repos/' + rp + (rem ? '/issues/comments/' + rem.id : '/issues/' + hno + '/comments'), { method: rem ? 'PATCH' : 'POST', headers: h, body: body }).then(S.checkAuth).then(json)
-.then((c) => { rem = c; }, () => { /* the local copy keeps it; the next save tries again */ })
+.then((c) => { rem = c; }, () => {})
 .then(() => { busy = 0; if (dirty) { var d = dirty; dirty = null; save(d); } });
 }
 function note(n, due, title) {
 if (typeof Notification === 'undefined' || Notification.permission !== 'granted' || LS.getItem('company.notify') !== 'on') return;
-try { new Notification(due ? 'Issue #' + n + ' is due within 24 hours' : 'New issue #' + n, { body: title || '', tag: 'company-issue-' + n + (due ? 'd' : '') }); } catch (e) { /* not allowed here */ }
+try { new Notification(due ? 'Issue #' + n + ' is due within 24 hours' : 'New issue #' + n, { body: title || '', tag: 'company-issue-' + n + (due ? 'd' : '') }); } catch (e) {}
 }
 function sync(st, open, now, all) {
 var before = JSON.stringify(st), z = settle(st, open, now, all);
@@ -138,7 +134,7 @@ if (JSON.stringify(st) !== before) save(st);
 window.IssueQ.load = load; window.IssueQ.save = save; window.IssueQ.sync = sync;
 var gen = 0;
 function read(force) {
-var c = null, my; try { c = JSON.parse(sessionStorage.getItem(K) || 'null'); } catch (e) { /* read it */ }
+var c = null, my; try { c = JSON.parse(sessionStorage.getItem(K) || 'null'); } catch (e) {}
 if (!force && c && Date.now() - c.t < AGE) return draw(c);
 var root = D.getElementById('needs-root'); if (root && !root.getAttribute('data-mode')) return;
 my = ++gen;
@@ -155,7 +151,7 @@ var all = !r.i.pageInfo.hasNextPage, now = Date.now(), qs = {};
 Object.keys(open).forEach((k) => { var o = open[k]; if (o.l.some((x) => KEEP.indexOf(x) >= 0) && o.l.indexOf('unrelated') < 0 && o.l.indexOf('main') < 0 && o.l.indexOf('site-state') < 0) qs[k] = o; });
 return load(b.repo).then((st) => { if (my !== gen) return; sync(st, qs, now, all); var x = count(b, open, all, st, now); put(x.n, x.ans, x.later, x.red); });
 }, () => draw({ n: b.n, t: Date.parse(b.at) }));
-}).catch(() => { /* no issues.json: the layout's count stays */ });
+}).catch(() => {});
 }
 window.IssueCount.read = read;
 read();

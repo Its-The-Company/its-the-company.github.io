@@ -33,7 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open
 
-- T-2724: runtime sends frames_cut_at; RunDetail trim drops next to the cut, counts all. Open: ADR-007 says "outer end", Ines <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note.
 - T-2319 (c9d371621): stdlib_cut check reads the interpreter's inittab/_frozen/PyInit_ and fails closed; open: first Release archive must show Xcode's embed strip keeps the exported symbols.
 - T-3133/T-3142 (5051f1926): F1-F4 fixed; re-review PASS-with-fixes, M1/M2 = T-3146/47 (Idris). Mine: t1140 L4 open; detail names are UUIDs, so prune by mtime, not name.
 - T-3292 (9a7bc4c65): T-3289 PASS; T-3279 PASS w/ M1 = T-3298 (`.missing` also means unreadable/undecodable/folder gone). Runner J-20261107-1010 owed. Lesson: rename keeps mtime.
@@ -48,7 +47,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3546 (858f9cbe0): T-3519 FAIL; T-3780..82 Odalys. Lesson: a text scan for reads can't follow $REPO vars or a tool's constants; key the data folder, list tools by hand.
 - T-3545 (uncommitted: main_gate refused, bridge red): T-3408 PASS w/ fixes; T-3799/3800 Odalys. Race probe refused by security-guard (scratch $HOME/company-personal). Lesson: retry_into deletes the <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> name before mark_ready on n=1, so a refusal strands the work on the spare.
 - T-3802 (c64c68bf4): bridge red on 3.9 was a hang, not load: mkdir into /Applications/Xcode.app blocks with no answer on macOS 27. Tick refused (Evidence must be a bare path), not ticked. Lesson: a child with bytecode writes on must set pycache_prefix.
-- T-3813 (59b4edb8d): build 5 review, no cause for the iPhone bug; M1 = T-3814 (Idris). Lesson: a fallback picture that looks like real output blinds a hunt; check what a fix does to the symptom's face.
+- T-3813 (59b4edb8d): build 5 review, no cause for the iPhone bug; M1 = T-3814 (Idris).
+- T-3867 (uncommitted, commit refused by classifier): guard_test rows pinned Investor values; now shape checks. Lesson: in zsh "$h:a" is a modifier; write ${h}.
+- T-3873 (2ad88dfc1, b7f9c136e): T-0588/T-0725 recuts handed. Lesson: a stop_on marker printed before the try lets the first soft Stop land outside it under load; print the marker inside.
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## Lessons

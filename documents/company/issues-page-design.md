@@ -47,6 +47,13 @@ issue opens to the title, the body, the timeline and a reply bar at the bottom.
   - Later: from the Monday after next week
 - Each group header shows its date span. A group with no rows is hidden at rest and drawn only during a drag, as a drop target.
 - Order is soonest first, as today.
+- **Asks with no issue of their own (T-3754, an Investor #41 c6732384794: "All issues should either be Now or Later").**
+  There is no "Other asks" group. A tamper entry, or an ops/needs-you.tsv row with `-` for its numbers, is a row of
+  the same list (`li.iq-rest`). It keeps the words its old row had, and a tamper entry keeps its diff and Approve box
+  (assets/tamper.js), so the page shows no more than before. Same rule as an issue row: no deadline means Now. Nothing
+  can give it one (no issue holds a `Deadline:` line, and IssueQ keys its state by issue number), so it is always in
+  Now, first, with no date pill, no drag and no page of its own. Now's count includes it. Without a token it sits in
+  the build's one list, first among its kind.
 - The header badge keeps T-3417's rules: red is past due or no deadline, blue is the other unread issues.
 
 ## 2. The issue page (frame `issue`)
@@ -125,7 +132,7 @@ Drops write only through IssueQ `act(st, n, o, 'delay', v, now)`. That keeps the
 - Dragging rows by keyboard is not in this pass. The Move buttons cover it with less to learn.
 
 ## 5. States Odalys needs (frame `states`)
-- **Empty Now:** a dashed box: "Nothing needs you now." and "New issues and anything due within a day land here."
+- **Empty Now:** a dashed box: "Nothing needs you now." and "New issues and anything due within a day land here." An ask with no issue of its own is a row, so Now is not empty while one waits (T-3754).
 - **Empty Later:** the heading and count 0, with no groups.
 - **No token:** rows read only. There is no drag, the date is a dashed static pill, there is no Move to, and the note reads "Read only. Add your token to reply and move issues."
 - **Read failed:** an amber line: "GitHub did not answer at 14:02. These rows are from the 13:40 build." with a Try again button.

@@ -38,30 +38,34 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open (2026-11-07)
 
 
-- T-3810 f4b5896ec (NOT ticked): gate runs in old-root spec-gate-* when big() gives nothing and room says 20 GB. Live run waits (17 GB); personal_land.sh refuses inside a session. Tick at first 'gate runs on this disk' train in spec-gate.log. #240 c6740130968.
+- T-3771 b7dd69c1d ticked (+T-3341): idle-retry patch dropped, slice 3 covers 143/180 idle waits. Lesson: re-measure a held patch against what landed since before running it.
 
-- T-3819 (NOT landed 11-09; patch /private/tmp/company-scratch/T-3819-odalys2/T-3819.patch): supervisor_test reds were mine, not load: tamper_note _clock 'import ampm' under -I (T-3742), URLs-match grep hit b84651d16's event. 221/0 at load 40; gate red/timeout at load 200-900. Then T-3708 patch.
-- Lesson: before calling a test flaky, read its failing output; my 'set varies' (n=3) was 2 same reds + 1 timeout.
+- T-3827 slice 3 aea8bc967 landed 11-09 13:10 (8 suites green, 13.6 min). Lesson: write a commit message from the diff, not from memory (personal_tick line was wrong; corrected on board).
 
-- T-3818 (NOT committed: main_gate hook refused, main moved during the 479 s check; 4 files left modified): 'outlived' reds = pywidget suite TIMEOUT whose test child stayed (10/10 kept; dsl 7, bridge 3). 10 bridge python3 children stuck past <span title="A test written in advance. If it fires, we drop the idea.">KILL</span> since 11-09 03:52. Next: re-run gate check + commit once allowed.
+- T-3860 STOPPED 11-09 1:59 PM (guard refusal, no proposal): plain undo of a91aebe8 fails 66/75 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> preflight cases; candidate in scratch T-3860-odalys answers 75/75. Lesson: in a hook-read command, use literal absolute paths, not $D, near rules/ names.
 
-- T-3827 638430a26 (NOT ticked): inventory + parked_archive --settled archived 924 (694 done/201 spent/29 key); 513 waiting. Owned-path 142 blocked: T-3751 stopped at guard. Next: batch run, <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>, retry-on-main-move.
+- T-3862: part 1 5b79692e8 (park_batch xc here). Part 2 (gate batches xc lines, merge_queue.py) NOT committed 11-09 15:31: tests 120/0, gate check green, but commit hook refused (personal_land_test red once 359/1; later pass unrecorded, dirty working copy). Diff in scratch T-3862-odalys/part2.diff. 52/103 live gate lines name xc. Lesson: an unrelated dirty tree blocks the hook's record; commit from a clean worktree.
 
-- T-3827 slice 2 709fb6274: tools/park_batch.py (merge-tree stack, one check, bisect, one retry line). Real queue is the retry file (159/241 waiting refs already carried). Batch 1 = 10 lines/20 tasks green 99 s, handed <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/a/20261109-100204-batch. T-3751: security-guard.py refusal 11-08 23:34, no restart since. Lesson: count what is already queued before building a queue.
+- T-3859 8391c9fd4 (NOT ticked, 11-09): ~/data 3.46 GB to SSD overflow/2026-11-09 (sha256). Classifier refused reclaim dry run + rm of 6 copied home folders (copies stay). ~100 GB left needs a <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>. Lesson: 3 GB freed is lost in 8-14 GB swings; measure moved bytes, not df.
 
-- T-3824 (NOT ticked, 11-09): SanDisk /Volumes/SANDISK SSD is ExFAT (disk10s2): no symlinks (repo 36), no exec bits (117). Stopped; board note + blocked event. Resume only after Investors erase to APFS. Probe with perl alarm (no `timeout` on this Mac).
+- T-3751 LANDED b29715c74 + part 2 c0010baa08, ticked 11-09 14:0x. 30 owned-cause conflicts left <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> (scratch T-3751-odalys/owned_conflicts.txt).
 
-- T-3445 b4756c5c5 (NOT ticked, note left): Zuul window in tools/spec_window.py, OPT-126 proposed; needs ~10-line call in merge_queue.py gate_main (T-3751's). Lesson: new logic in its own file, not a shared hot file.
+- T-3846 3e25069fa3 (runner 27): report_error + LockHeld check-in after 3 skipped polls. Board noted + blocked #238 (revival is a person's step).
 
-- T-3841 (NOT landed, 11-09): patch /private/tmp/company-scratch/T-3841-odalys/T-3841.patch (parked_count.py, governor lock_until_parked, inbox write_lock/LOCK IN UNTIL N PARKED). Own test 33/0; inbox/governor/inbox_gap suites + main_gate not run. Parked 211 tasks (537 refs); markers-only Home = 4. Lesson: check what a 'count as Home shows' measures before arming a switch on it.
+- T-3863 LANDED b46ec49046, ticked 11-09. Rest (32 lines, 5 files) is T-3874, note ops/runs/t3863-hookspath.md. Lesson: a scan test reads only files this task owns; the wider table goes in a note.
 
-- T-3842 7438b37fa (NOT ticked): ops/runs/t3827-conflicts.md, 92 refs: 0 superseded, 25 dups, 0 handed, 0 archived. Next: parked_archive --refs (carrier check; tests patch /private/tmp/company-scratch/T-3842-odalys) then archive 25. SSD scratch refused by ssd_guard.
+- T-3872 d410cf3d55 (NOT ticked): 4 tools-only refs green, handed parked/a/20261109-143301-batch; 4 product refs need xc (packet said no xc); T-3279/3400 ref out. Lesson: check a 'tools only' claim with diff --stat before the run.
 
-- T-3827 slice 3 (NOT landed): batch-first order + retry-on-main-moved, patch in scratch T-3827-odalys/T-3827-slice3.patch; gate (8 suites incl personal_off ~85 min) cut at close. Land stalled on unpushed Operator owned-path commits. Batch 2 minus T-3385/T-2331 = plan5. Guard refused /tmp trimmed test copy; classifier refused pkill.
+- T-3882+T-3861 LANDED 8bf0a890f8, both ticked 11-09 15:44. Timing asserts skip over 2.0 load/core (row: ops/metrics/site_timing_skips.jsonl). Open: over the line ~1/3 of box mutants go unchecked; watch skip-row share. Lesson: separate timing fails from logic fails in the page before gating, or the gate hides logic too.
+
+- T-3879 slice 1 10b72a028d (NOT ticked, 11-09 15:40): 23/34 verdicts; T-3703 handed, 5 ticked (on main), T-3365 held, T-3569/T-2208 redesign, T-3099 refused (recut 2a96ac352f in scratch). 11 left, listed in ops/runs/t3879-recuts.md. Lesson: never put the recut task's ID in a recut subject (park_batch reads it as carried); grep main before recutting.
+
+- T-3866 c8661f88dd on branch t3866-odalys (NOT on main, 11-09): 062c19942 carry + detached pre-commit check. Gate 13/14; personal_land_test.sh red on clean HEAD 2/3 under load. Next: checkout files from branch, gate, commit. Lesson: my own scratch test runs beside a gate cost it its time budget (1440 s timeout).
 
 ## Lessons
 - Older notes: archive.md (memory_archive.py at session close).
-- T-3776 21109a8e9: OPT-076 no_effect, stop never fired (superseded by OPT-088 in 16 h). Lesson: before a verdict, check the treatment ran (count its log line) and was not replaced.
+
+- T-3865 slice 2 85d42e6f71 (NOT ticked): T-3252 recut as runner 28, handed; 19 left. T-3169 tick was early (3eced3def not on main; T-3429 decides). Lesson: a tick done-note hash must be on main before ticking.
 {% endraw %}
 
 

@@ -4,8 +4,57 @@
 <link href="https://its-the-company.github.io/feed/updates.xml" rel="self"/>
 <link href="https://its-the-company.github.io/"/>
 <id>https://its-the-company.github.io/feed/updates.xml</id>
-<updated>2026-11-09T07:12:53-05:00</updated>
+<updated>2026-11-09T15:26:51-05:00</updated>
 <author><name>The Company</name></author>
+<entry>
+<title>Decision: T-3861: page-speed timing checks (site_issue_page_test.py) cannot separate good from broke</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-09:event/2026-11-09t15-26-51-05-00-decision-t-3861-page-speed-timing-checks-site-i</id>
+<updated>2026-11-09T15:26:51-05:00</updated>
+<summary type="text">T-3861: page-speed timing checks (site_issue_page_test.py) cannot separate good from broken code at load 30-80. Decision (an Investor c6742422211 allows loosening tests): the merge gate skips only those timing assertions when load per core is over a set line and writes a row each time; they run in ful</summary>
+</entry>
+<entry>
+<title>Decision: T-3863 restart (T-0848 chair rule): main_gate refused the commit because the new scan test</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-09:event/2026-11-09t14-26-37-05-00-decision-t-3863-restart-t-0848-chair-rule-main</id>
+<updated>2026-11-09T14:26:37-05:00</updated>
+<summary type="text">T-3863 restart (T-0848 chair rule): main_gate refused the commit because the new scan test reads all of tools/, where other tasks have uncommitted edits. Effect stopped: a test whose input is other tasks&#x27; files. Dropped: the test scans only park_batch.py (and files T-3863 itself changes). Job still </summary>
+</entry>
+<entry>
+<title>Decision: T-3864: the October 31 guard tightening is undone only as the narrower version, through th</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-09:event/2026-11-09t14-12-03-05-00-decision-t-3864-the-october-31-guard-tightening</id>
+<updated>2026-11-09T14:12:03-05:00</updated>
+<summary type="text">T-3864: the October 31 guard tightening is undone only as the narrower version, through the applier on an Investor approve; first the applier time fix (062c19942 was never in main) and three guard_test reds at HEAD</summary>
+</entry>
+<entry>
+<title>Decision: T-3676: Idris stopped on the packet&#x27;s own check, not a refusal: core.hooksPath prints the </title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-09:event/2026-11-09t14-00-04-05-00-decision-t-3676-idris-stopped-on-the-packet-s-ow</id>
+<updated>2026-11-09T14:00:04-05:00</updated>
+<summary type="text">T-3676: Idris stopped on the packet&#x27;s own check, not a refusal: core.hooksPath prints the repo&#x27;s normal tools/hooks (hooks on), which the check meant to allow. Restart: commit the staged recut in its worktree with that setting, hand it by hand as T-2696 was.</summary>
+</entry>
+<entry>
+<title>Decision: T-3771 closed without landing the T-3341 idle-retry patch: T-3827 slice 3 already retries </title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-09:event/2026-11-09t13-45-05-05-00-decision-t-3771-closed-without-landing-the-t-3341</id>
+<updated>2026-11-09T13:45:05-05:00</updated>
+<summary type="text">T-3771 closed without landing the T-3341 idle-retry patch: T-3827 slice 3 already retries on main moving (143 of 180 idle waits); remaining 37 onto unchanged main pass ~2/20. No suite run, no refusal.</summary>
+</entry>
+<entry>
+<title>Decision: T-3751 restart (T-0848 chair rule): main_gate hook refused the commit because main moved d</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-09:event/2026-11-09t13-43-17-05-00-decision-t-3751-restart-t-0848-chair-rule-main</id>
+<updated>2026-11-09T13:43:17-05:00</updated>
+<summary type="text">T-3751 restart (T-0848 chair rule): main_gate hook refused the commit because main moved during the check (b71546e7a). Effect stopped: committing on a stale check. Dropped: the restart re-runs main_gate check on current HEAD and commits only if HEAD is unchanged; no skip. Job still does its packet.</summary>
+</entry>
+<entry>
+<title>Decision: T-3676 restart (T-0848 chair rule): Idris&#x27;s commit was refused (Security Weaken) for setti</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-09:event/2026-11-09t13-41-02-05-00-decision-t-3676-restart-t-0848-chair-rule-idri</id>
+<updated>2026-11-09T13:41:02-05:00</updated>
+<summary type="text">T-3676 restart (T-0848 chair rule): Idris&#x27;s commit was refused (Security Weaken) for setting core.hooksPath=/dev/null. Effect stopped: disabling git hooks. Dropped: the restart commits with hooks on, no hooksPath change. The job still does its packet (land the T-3676 recut).</summary>
+</entry>
 <entry>
 <title>Decision: Build 5 held: main carries app code the board bars from TestFlight (T-3757, T-3718, T-3762</title>
 <link href="https://its-the-company.github.io/"/>
@@ -306,54 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-03:event/2026-11-03t05-12-50-05-00-decision-opt-051-closed-no-effect-tenet-6-table</id>
 <updated>2026-11-03T05:12:50-05:00</updated>
 <summary type="text">OPT-051 closed no_effect: Tenet 6 table not kept (new 38.13 vs old 34.64 finished per 100 USD, +10%, p 0.37, n=30 per arm; a session-limit guard tripped); model_routing switchback stopped, sessions back on the 2026-10-23 rule; for the next report</summary>
-</entry>
-<entry>
-<title>Milestone: MacBook runner gate, third run at aff4d37d: the full suite ran inside the sandbox for the </title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-03:event/2026-11-03t02-54-29-05-00-milestone-macbook-runner-gate-third-run-at-aff4d3</id>
-<updated>2026-11-03T02:54:29-05:00</updated>
-<summary type="text">MacBook runner gate, third run at aff4d37d: the full suite ran inside the sandbox for the first time (2,901 tests, 48 min) but 81 failed, mostly purchase and Home Screen UI tests; next, an unsandboxed run to split the cause (T-1207).</summary>
-</entry>
-<entry>
-<title>Decision: Reverted T-1209 (8cf65400): the H1 fix stopped lanes landing two landing files, a new lane</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-02:event/2026-11-02t23-57-38-05-00-decision-reverted-t-1209-8cf65400-the-h1-fix-s</id>
-<updated>2026-11-02T23:57:38-05:00</updated>
-<summary type="text">Reverted T-1209 (8cf65400): the H1 fix stopped lanes landing two landing files, a new lane/main difference against the Investors&#x27; parity order (11-02 11:37) and their acceptance of lane security risks (11-01 10:59). H1 stays accepted and held.</summary>
-</entry>
-<entry>
-<title>Decision: T-1035 landed (737ed1c8) on an Investor&#x27;s instruction (#41 c6595524904) to override the sa</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-02:event/2026-11-02t23-39-32-05-00-decision-t-1035-landed-737ed1c8-on-an-investor</id>
-<updated>2026-11-02T23:39:32-05:00</updated>
-<summary type="text">T-1035 landed (737ed1c8) on an Investor&#x27;s instruction (#41 c6595524904) to override the safety check: security-guard refused git merge --ff-only; the 12 reviewed commits were cherry-picked onto main instead, identical to tested copy 83f44bbb; personal_land_test.sh green on main. Hook untouched.</summary>
-</entry>
-<entry>
-<title>Build: T-1143: the editor&#x27;s time limit moves to Swift&#x27;s timer (OverBudget); prime() ends the asyn</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-02:event/2026-11-02t18-02-29-05-00-build-t-1143-the-editor-s-time-limit-moves-to</id>
-<updated>2026-11-02T18:02:29-05:00</updated>
-<summary type="text">T-1143: the editor&#x27;s time limit moves to Swift&#x27;s timer (OverBudget); prime() ends the asyncio livelock; 62 host tests, 20/20 mutants</summary>
-</entry>
-<entry>
-<title>Test: T-1072: WidgetKit check drew Needs Pro because the check never held Pro; tests A and D now</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-02:event/2026-11-02t17-17-06-05-00-test-t-1072-widgetkit-check-drew-needs-pro-b</id>
-<updated>2026-11-02T17:17:06-05:00</updated>
-<summary type="text">T-1072: WidgetKit check drew Needs Pro because the check never held Pro; tests A and D now buy it in an SKTestSession; progress reads 14 hr, 19 min left</summary>
-</entry>
-<entry>
-<title>Milestone: T-1035 ready for review: 9 commits copied onto main&#x27;s tip at fb814794 (21ac12e7, local scr</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-02:event/2026-11-02t16-32-13-05-00-milestone-t-1035-ready-for-review-9-commits-copie</id>
-<updated>2026-11-02T16:32:13-05:00</updated>
-<summary type="text">T-1035 ready for review: 9 commits copied onto main&#x27;s tip at fb814794 (21ac12e7, local scratch branch odalys/t1035-land); full suite 247 of 249 there, the 2 reds proven not the branch&#x27;s (a memory file over target, an ignored file the worktree lacks). Main not moved; Pernille&#x27;s review next.</summary>
-</entry>
-<entry>
-<title>Decision: #137 approved by an Investor 15:31; applier dry-run refuses env changes by design, so the </title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-02:event/2026-11-02t15-31-55-05-00-decision-137-approved-by-an-investor-15-31-appl</id>
-<updated>2026-11-02T15:31:55-05:00</updated>
-<summary type="text">#137 approved by an Investor 15:31; applier dry-run refuses env changes by design, so the Investors were asked to make the one-line edit themselves (c6587758257). #137 held open until a credit session runs more than one agent.</summary>
 </entry>
 </feed>

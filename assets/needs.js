@@ -87,14 +87,17 @@ if (a && a.parentNode) a.parentNode.insertBefore(b, a); else root.appendChild(b)
 }
 vis.forEach((x) => { by[Q.queue(x[1], ox(x), QST, now)].push(x); });
 GL = G.map(gsec);
+var rs = document.querySelectorAll('li.iq-rest'), a0 = document.querySelector('ul[data-group="open"]');
+Array.prototype.forEach.call(rs, (li) => { QS.N.ul.appendChild(li); });
 Object.keys(QS.L.g).forEach((k) => { if (!G.some((g) => g[0] === k)) { QS.L.g[k].li.remove(); delete QS.L.g[k]; } });
 ['N', 'L'].forEach((k) => {
 by[k].sort((a, b) => due(a) - due(b)).forEach((x) => {
 var src = x[0].parentNode; (k === 'N' ? QS.N : QS.L.g[C.grp(due(x), G)[0]]).ul.appendChild(x[0]);
 if (src && !src.closest('[data-queue]') && !src.children.length) { src.removeAttribute('data-group'); src.hidden = true; }
 });
-QS[k].n.textContent = String(by[k].length); QS[k].none.hidden = by[k].length > 0;
+var c = by[k].length + (k === 'N' ? rs.length : 0); QS[k].n.textContent = String(c); QS[k].none.hidden = c > 0;
 });
+if (a0 && !a0.children.length) { a0.removeAttribute('data-group'); a0.hidden = true; }
 GL.forEach((o) => { o.li.classList.toggle('iq-e', !o.ul.children.length); });
 vis.forEach((x) => {
 var o = ox(x), bd = Q.badged(x[1], o, QST, now), li = x[0], dot = li.querySelector('.iq-dot'), m = li.querySelector('.iq-m'), nw = li.querySelector('.iq-new');

@@ -51,14 +51,14 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 2026-10-25 entries (privacy drafts, names, App Review matrix v1, store page, L15, CORRECTIONS pass 1, #54 docs, OPS-7 audit, T-0075): archive.md. Standing: grep counts before typing; `date` before every time.
 
-## 2026-11-02 T-0259 reason codes confirmed (92bcd355; ticked; T-1215 to Idris for the app manifest gap; landed 11-04 by T-1736, docs only)
-- Lesson: Apple's .md key pages carry no values; the tutorials/data .json holds them. Grep the code for new API calls before calling a manifest right.
-## 2026-11-02 T-0337 recall checks: 3 of 5 (f0988b3b, 53793e7d; not ticked; R3 HIG, R4 agreement left)
-- Lesson: take Apple help-page paths from a saved page's sidebar links before fetching; a guessed path gives "Page Not Found" with HTTP 200 and still costs the day <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> (12, shared by every lane).
 ## 2026-11-09 T-3778 run-history 14-day wording (d740400f6, ticked); Idris check T-3789
 - Lesson: a policy promise needs an upper bound that is true for every path (Shortcut launches, widget appends also prune); say "can stay until the next check", not a day count. `git -c user.email=wrenna@company` when the repo user is someone else.
 ## 2026-11-09 T-3674 known-app list: 8 apps, sources e2f191fd1; app patch in scratch (base is <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> T-3664 slice 1, not main); not ticked
 - Lesson: per new host, terms page BEFORE the doc page (find it by search, not a fetch of the doc). Four doc reads wasted on barred hosts.
+## 2026-11-09 T-3798 timing sentences to F1 for main (6f63ec6014; noted, not ticked; swap to F2 when T-3758 lands)
+- Lesson: a policy sentence follows the build that ships; when the candidate is unsettled, write main's truth and leave the swap in the change log.
+## 2026-11-09 T-3421 pass 2, parked queue (a16d3fd938, ticked); lines T-3883..T-3886 (Odalys); board lines left uncommitted for the Operator (board had others' edits)
+- Lesson: I fetched trunkbaseddevelopment.com before its terms look AGAIN. On a new host, search for its terms before running the driver.
 {% endraw %}
 
 

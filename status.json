@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-09T01:27:03.217896+00:00",
+ "at": "2026-11-09T01:30:06.639264+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,25 +9,33 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-3714 measure and shorten parked queue",
+   "task": "[tools] T-3727 main gate runs app Python tests",
    "model": "opus",
-   "started": "2026-11-09T01:18:11.198Z",
-   "seconds": 532,
+   "started": "2026-11-09T01:20:30.798Z",
+   "seconds": 575,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3727 main gate runs app Python tests",
+   "task": "[tools] T-3730 hold branch while main is red",
    "model": "opus",
-   "started": "2026-11-09T01:20:30.798Z",
-   "seconds": 392,
+   "started": "2026-11-09T01:28:52.726Z",
+   "seconds": 73,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3714 measure and shorten parked queue",
+   "model": "opus",
+   "started": "2026-11-09T01:18:11.198Z",
+   "seconds": null,
+   "finished": "2026-11-09T01:28:32.363000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3720 landing gate tests green",
@@ -51,20 +59,12 @@
    "started": "2026-11-09T00:58:06.975Z",
    "seconds": null,
    "finished": "2026-11-09T01:09:32.033000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[fix] T-3720 landing gate tests green",
-   "model": "opus",
-   "started": "2026-11-09T00:57:58.254Z",
-   "seconds": null,
-   "finished": "2026-11-09T00:57:58.312Z"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 602,
+  "runnable_count": 603,
   "blocked_count": 112
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 3.85,
   "usage_pct": 22.9,
   "work_pct": 68.2,
-  "read_at": "2026-11-09T01:27:00+00:00",
+  "read_at": "2026-11-09T01:30:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -128,7 +128,7 @@
   }
  ],
  "disk": {
-  "free_gb": 13,
+  "free_gb": 12,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -137,14 +137,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T20:22:00-05:00",
+   "at": "2026-11-08T20:27:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T20:27:00-05:00",
+  "at": "2026-11-08T20:30:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -158,9 +158,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-3714 measure and shorten parked queue",
+   "task": "[tools] T-3727 main gate runs app Python tests",
    "model": "opus",
-   "since": "2026-11-09T01:18:11.198Z",
+   "since": "2026-11-09T01:20:30.798Z",
    "next": [],
    "effort": "high"
   },
@@ -210,22 +210,22 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Measure and shorten the parked queue",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T01:18:11.198Z",
-    "o": "c",
-    "task": "T-3714"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Run the app's Python tests before commits onto main",
     "m": "opus",
     "e": "high",
     "at": "2026-11-09T01:20:30.798Z",
     "o": "c",
     "task": "T-3727"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Hold a branch in line while main is red",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-09T01:28:52.726Z",
+    "o": "c",
+    "task": "T-3730"
    }
   ],
   "src": "plan",
@@ -304,6 +304,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "A new script counts parked work: 63% of 1,181 parked branches hold work already finished, 164...",
+    "at": "2026-11-08T20:28:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "On the Issues page the Investor can now drag an issue into Now (due now) or onto a day in Later...",
     "at": "2026-11-08T20:24:00-05:00"
    },
@@ -311,22 +316,21 @@
     "w": "Odalys",
     "t": "The land system's own test was failing on main because its practice copy lacked one file, so 138...",
     "at": "2026-11-08T20:19:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The two tests that blocked the most landings this week are fixed or loosened with the reason...",
-    "at": "2026-11-08T20:17:00-05:00"
    }
   ],
   "count": {
-   "next": 602,
+   "next": 603,
    "wait": 45,
    "blocked": 67,
    "you": 19
   },
   "fin": {
-   "n": 4,
+   "n": 5,
    "rows": [
+    [
+     "T-3714",
+     "Measure and shorten the..."
+    ],
     [
      "T-3583",
      "Drag issues between Now and..."
@@ -355,6 +359,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -367,10 +372,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "8:27 PM",
+  "at": "8:30 PM",
   "why": "",
-  "at_iso": "2026-11-09T01:27:00+00:00",
+  "at_iso": "2026-11-09T01:30:00+00:00",
   "started": "7:53 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:27 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:30 PM ET</p></section>"
  }
 }

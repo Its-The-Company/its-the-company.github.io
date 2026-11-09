@@ -38,32 +38,26 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open (2026-11-07)
 
 
-- T-3746 622f3ba06 (ticked): S.clock in app.js + data.hm_of/et_hm; site times '6:00 PM ET', sort keys stay 24-hour. After-read: live Chat/Needs pills show AM/PM ET.
-
-- T-3779 008365891 (ticked): OPT-099 no_effect, land 33.7% (n=341, 48 h) vs 23%, no XmR signal; tests red 51%->9%. Next lever: owned-path refusals on stale bases, machine lines 57.
-
-- T-3790 8b85e210d (ticked): drag status line says the drop value (S.clock), rewritten only on change. needs.js 6,837/7,680 gz. Drag test takes SCHEME=dark.
-
-
-- T-3731 36df22b9d (ticked): hook refuses pywidget/ commits without pywidget:<suite> pass (host_refused row); bare "ios" followed via IOS joins. Swift-only n=132: median 9->5. Gap: floor misses tests/ suites by what they name (facts_test<-report_facts.py, home_now_line<-site_build). After-read: first host_refused row.
-
-- T-3372 e3cf3cd44 (ticked): workflow ladder lost report kinds; cause was governor's 'inbox_first() or session()' return (T-1423), not charter v3. Lesson: read the parser before blaming the named source.
-
-- T-3795 dc36d3896 (ticked): gate runs suites that name a changed tools/ file; hook wants their pass (suite_refused row). n=250: +10.5 s median. Gaps: hubs >16, imports not followed, land/MQ floor-only. After-read: first suite_refused row.
-
-- T-3801 2836af9cb (board NOT ticked: board_tick refused, prefix lacked 'T-3801 '): docs paths keyed by code reads only (comments/docstrings skipped, deepest tree part, made-up docs/x nothing). Review reached 4 suites, now 0.
-
-- T-3451 28e225805 (ticked): untested-to-main n=4313: tools 291, tests 272; main_green reds 1 (flake), 0 traced. No proposal. Re-count at a named culprit or 11-16.
-
-- T-3775 f61cd6328 (ticked): OPT-065 no_effect, idle median 36.8 n=10 vs 22.9; queue 6.2 but tick clock (15.3 floor) took it back. personal_wait.py misses numbered <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> (personal/a50): fix + land-live metric, new entry first.
-
-- T-0898 7df16b611 (ticked): OPT-062 verdict revert, rule fired (false 4,19,16,3; n=4 of 7 days, days 4-6 on locked SSD #243). In_flight until Ines confirms the split, T-3809. ops/runs-archive is a link to the SSD: probe with alarm first.
-
 - T-3810 f4b5896ec (NOT ticked): gate runs in old-root spec-gate-* when big() gives nothing and room says 20 GB. Live run waits (17 GB); personal_land.sh refuses inside a session. Tick at first 'gate runs on this disk' train in spec-gate.log. #240 c6740130968.
 
-- T-3708 (NOT ticked, 11-09): main_gate refused; supervisor_test.sh red on main 217/3 (n=3, set varies). Patch in scratch T-3708-odalys (run_loop_failing in run.json + work.md, sync_cause 29/0). Land when that suite is green/quarantined.
+- T-3819 (NOT landed 11-09; patch /private/tmp/company-scratch/T-3819-odalys2/T-3819.patch): supervisor_test reds were mine, not load: tamper_note _clock 'import ampm' under -I (T-3742), URLs-match grep hit b84651d16's event. 221/0 at load 40; gate red/timeout at load 200-900. Then T-3708 patch.
+- Lesson: before calling a test flaky, read its failing output; my 'set varies' (n=3) was 2 same reds + 1 timeout.
 
 - T-3818 (NOT committed: main_gate hook refused, main moved during the 479 s check; 4 files left modified): 'outlived' reds = pywidget suite TIMEOUT whose test child stayed (10/10 kept; dsl 7, bridge 3). 10 bridge python3 children stuck past <span title="A test written in advance. If it fires, we drop the idea.">KILL</span> since 11-09 03:52. Next: re-run gate check + commit once allowed.
+
+- T-3827 638430a26 (NOT ticked): inventory + parked_archive --settled archived 924 (694 done/201 spent/29 key); 513 waiting. Owned-path 142 blocked: T-3751 stopped at guard. Next: batch run, <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>, retry-on-main-move.
+
+- T-3827 slice 2 709fb6274: tools/park_batch.py (merge-tree stack, one check, bisect, one retry line). Real queue is the retry file (159/241 waiting refs already carried). Batch 1 = 10 lines/20 tasks green 99 s, handed <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/a/20261109-100204-batch. T-3751: security-guard.py refusal 11-08 23:34, no restart since. Lesson: count what is already queued before building a queue.
+
+- T-3824 (NOT ticked, 11-09): SanDisk /Volumes/SANDISK SSD is ExFAT (disk10s2): no symlinks (repo 36), no exec bits (117). Stopped; board note + blocked event. Resume only after Investors erase to APFS. Probe with perl alarm (no `timeout` on this Mac).
+
+- T-3445 b4756c5c5 (NOT ticked, note left): Zuul window in tools/spec_window.py, OPT-126 proposed; needs ~10-line call in merge_queue.py gate_main (T-3751's). Lesson: new logic in its own file, not a shared hot file.
+
+- T-3841 (NOT landed, 11-09): patch /private/tmp/company-scratch/T-3841-odalys/T-3841.patch (parked_count.py, governor lock_until_parked, inbox write_lock/LOCK IN UNTIL N PARKED). Own test 33/0; inbox/governor/inbox_gap suites + main_gate not run. Parked 211 tasks (537 refs); markers-only Home = 4. Lesson: check what a 'count as Home shows' measures before arming a switch on it.
+
+- T-3842 7438b37fa (NOT ticked): ops/runs/t3827-conflicts.md, 92 refs: 0 superseded, 25 dups, 0 handed, 0 archived. Next: parked_archive --refs (carrier check; tests patch /private/tmp/company-scratch/T-3842-odalys) then archive 25. SSD scratch refused by ssd_guard.
+
+- T-3827 slice 3 (NOT landed): batch-first order + retry-on-main-moved, patch in scratch T-3827-odalys/T-3827-slice3.patch; gate (8 suites incl personal_off ~85 min) cut at close. Land stalled on unpushed Operator owned-path commits. Batch 2 minus T-3385/T-2331 = plan5. Guard refused /tmp trimmed test copy; classifier refused pkill.
 
 ## Lessons
 - Older notes: archive.md (memory_archive.py at session close).

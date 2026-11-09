@@ -33,8 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (mine)
 
-- Lesson T-0656: start the build first, before writing code; pgrep xcodebuild. A held lock ate 30 min and the session.
-
 - T-0389 slice b 2026-11-04: card written, never built; <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> in company-scratch/T-0389-idris/tree/ and PyWidgetApp.t0389+t0657.patch (stage_hunks.py takes my hunks). Next: T-1982 (build+commit), then T-1983 jump, T-1984 perf.
 - T-2583 cc5c7c277 (prompt placement, T-2576 F1/F2): Desk+Placement 19/0 local; Pernille re-reviews. Real UIKit drop never reproduced (iOS 26 queues).
 - Lesson T-1404: one Bash call is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
@@ -52,6 +50,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Lesson T-3666: SwiftUI queues a root .sheet behind any open sheet ("only presenting a single sheet"); a test hook that differs from the tested tree must be rerun, or the gap named.
 
 - T-3814 11-09: per-widget tree.json report (Export measurements manifest) green on Core+host, NOT landed (runner silent, gate exit 3); patch in company-scratch/T-3814-idris; review T-3817. Lesson: never leave unlanded work in the main checkout; other gates sweep it.
+
+- T-3843 11-09: a3 recut handed (parked/a3/20261109-120825-recut, T-1736+T-1972); notes ops/runs/t3843-recut.md. Left: T-2583/T-2548/T-1732/T-3664 refs. T-1861 done on main, tick it. Lesson: grep ops/personal_retry.txt for the task before recutting; the merge queue may have queued it alone.
+
+- T-3844 11-09 68be20b80: 34 xc-65 refs grouped (ops/runs/t3844-xc65-groups.md); fixes B (control literal) + C (statvfs race) in company-scratch/T-3844-idris/T-3844.patch, NOT landed (gate red on widgets http timing; runner silent). Lesson: ps -ax hangs here; use the runner's result.json on origin/macbook-results.
 
 ## Lessons
 - StoreKit, T-0583/T-0589, caret lessons and dated logs: archive.md.

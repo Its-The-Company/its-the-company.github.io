@@ -1,0 +1,97 @@
+---
+layout: "default"
+title: "This Session"
+description: "How the company's work runs, live."
+section: "home"
+---
+<style>
+.ts-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ts{border:1px solid var(--line);border-radius:var(--r-l);padding:var(--s3) var(--s4);margin:0 0 var(--s3)}
+.ts-hd{display:flex;align-items:center;gap:var(--s3);flex-wrap:wrap}
+.ts-hd .ts-t{color:var(--ink);font-weight:800;text-decoration:none}
+.ts-live{font-size:12px;color:var(--muted);white-space:nowrap}
+.ts-live::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ok);margin-right:6px;vertical-align:1px}
+.ts-full{margin-left:auto;font-size:13px;font-weight:700;color:var(--accent);text-decoration:none;white-space:nowrap}
+.ts-full:hover{text-decoration:underline}.ts a:focus-visible,.ts-pg a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+.ts-hd .lk-m,.ts-hd .lk-rep{font-size:12px;color:var(--muted);white-space:nowrap}.ts-hd .lk-rep.late{color:var(--amber-fg)}
+.ts-k{font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin:0 0 4px}
+/* the flow: coordinator -> accounts -> steps */
+.ts-flow{display:grid;grid-template-columns:minmax(150px,190px) 28px minmax(200px,1fr) 28px minmax(330px,1.7fr);align-items:stretch;margin:var(--s3) 0 0}
+.ts-ar{position:relative;align-self:center;height:2px;background:var(--muted);margin:0 6px 0 2px}
+.ts-ar::after{content:"";position:absolute;right:-6px;top:-4px;border:5px solid transparent;border-left:6px solid var(--muted);border-right:0}
+.ts-node{border:2px solid var(--accent);background:var(--accent-soft);border-radius:var(--r-m);padding:var(--s2) var(--s3);min-width:0}
+.ts-node b{display:block;font-size:var(--fs-1)}.ts-node span{display:block;font-size:12px;color:var(--ink);line-height:1.4}
+.ts-srcl{list-style:none;margin:0;padding:0;display:grid;gap:3px}
+.ts-srcl li{display:grid;grid-template-columns:minmax(76px,auto) 1fr auto;align-items:center;gap:var(--s2);font-size:12px;line-height:18px;margin:0}
+.ts-srcl li>span:first-child{font-weight:600;white-space:nowrap}.ts-srcl small{font-size:11px;color:var(--muted);white-space:nowrap;min-width:26px;text-align:right}
+.ts-srcl li.off>span:first-child{color:var(--muted)}.ts-srcl li.off small{color:var(--amber-fg)}
+.ts-dots{display:inline-flex;gap:3px}.ts-dots i{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--muted)}
+.ts-dots i.on{background:var(--accent);border-color:var(--accent)}
+.ts-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.ts-steps li{margin:0;border:1px solid var(--line);border-radius:var(--r-s);padding:4px 2px 5px;text-align:center;line-height:1.15}
+.ts-steps li b{display:block;font-size:var(--fs-3)}.ts-steps li span{display:block;font-size:11px;color:var(--muted);overflow-wrap:normal}
+.ts-steps li.has{border-color:var(--accent);background:var(--accent-soft)}.ts-steps li.has span{color:var(--blue-fg)}
+.ts-steps li.end b{font-size:var(--fs-1);line-height:22px}.ts-steps li.end b em{font-style:normal;color:var(--hot)}
+/* a task's track: passed shaded with time, current filled, next dashed */
+.ts-rows{list-style:none;margin:var(--s3) 0 0;padding:0;display:grid;gap:6px}
+.ts-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,1.4fr) 185px;align-items:center;gap:var(--s3);margin:0}
+.ts-who{display:flex;align-items:center;gap:var(--s2);min-width:0;font-size:13px;line-height:1.3}
+.ts-who img{flex:none;border-radius:50%;background:var(--portrait)}
+.ts-who>span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.ts-who code{font:600 12px var(--mono);color:var(--muted);margin-right:6px;white-space:nowrap;overflow-wrap:normal}
+.ts-trk{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.ts-trk li{margin:0;min-height:22px;border-radius:6px;display:flex;flex-direction:column;justify-content:center;align-items:center;font-size:11px;line-height:1.2;text-align:center;overflow-wrap:normal;white-space:nowrap;padding:2px}
+.ts-trk li b{font-weight:700}.ts-trk li small{font-size:11px;display:none;color:inherit}
+.ts-trk .p{background:var(--accent-soft);color:var(--blue-fg)}
+.ts-trk .c{background:var(--accent);color:var(--accent-ink);box-shadow:0 0 0 1.5px var(--bg),0 0 0 3px var(--accent)}.ts-trk .c b{font-weight:800}
+.ts-trk .n{border:1px dashed var(--muted);opacity:.55}
+.ts-trk .ok{background:var(--green-bg);color:var(--green-fg)}.ts-trk .no{background:var(--hot-bg);color:var(--hot)}
+.ts-now{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.ts-now b{color:var(--ink)}
+.ts-more{font-size:12px;color:var(--muted);margin:var(--s2) 0 0}
+.ts-bes{font-size:12px;color:var(--muted);margin:var(--s3) 0 0;padding-top:var(--s2);border-top:1px dashed var(--line)}.ts-bes b{color:var(--ink)}
+.ts-soon{font-size:var(--fs-0);color:var(--muted);margin:var(--s2) 0 0}
+@media (max-width:700px){
+.ts{padding:var(--s3)}.ts-full{margin-left:0}
+.ts-hd .lk-m,.ts-hd .lk-rep{display:none}
+.ts-flow{grid-template-columns:1fr;gap:0}
+.ts-ar{width:2px;height:16px;justify-self:start;margin:4px 0 8px 20px}
+.ts-ar::after{right:-4px;top:auto;bottom:-6px;border:5px solid transparent;border-top:6px solid var(--muted);border-bottom:0}
+.ts-srcl{grid-template-columns:1fr 1fr;column-gap:var(--s4)}.ts-srcl li.off small{grid-column:1/-1;text-align:left;margin-top:-4px}
+.ts-steps{grid-template-columns:repeat(4,minmax(0,1fr))}
+.ts-row{grid-template-columns:1fr;gap:4px}.ts-row+.ts-row{border-top:1px solid var(--line);padding-top:6px}
+}
+.ts-flow .ts-note{font-size:12px;color:var(--muted);margin:0}
+
+.ts-pg h1{font-size:var(--fs-5);line-height:var(--lh-tight);margin:var(--s2) 0 var(--s1)}
+.ts-pg h2{font-size:var(--fs-3);margin:var(--s6) 0 var(--s2)}
+.ts-back{font-size:13px;font-weight:600;color:var(--accent);text-decoration:none}
+.ts-top{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:var(--s4);align-items:start;margin-top:var(--s4)}.ts-top.one{grid-template-columns:minmax(0,1fr);max-width:720px}
+.ts-top .ts-node{padding:var(--s3) var(--s4)}.ts-top .ts-node b{font-size:var(--fs-3)}.ts-top .ts-node span{font-size:13px;margin-top:2px}
+.ts-hold{display:flex;flex-wrap:wrap;gap:4px;margin:var(--s2) 0 0;padding:0;list-style:none}
+.ts-hold li{margin:0;font-size:12px;font-weight:600;border:1px solid var(--accent);border-radius:var(--r-pill);padding:1px 9px;background:var(--bg);color:var(--blue-fg)}
+.ts-clock{border:1px dashed var(--muted);border-radius:var(--r-m);padding:var(--s3) var(--s4)}
+.ts-clock table{display:table;width:100%;border-collapse:collapse;font-size:12px}.ts-clock td{padding:3px 0;vertical-align:top;border-top:1px solid var(--line)}
+.ts-clock tr:first-child td{border-top:0}.ts-clock td:first-child{font-weight:600;padding-right:var(--s2)}.ts-clock td:last-child{text-align:right;white-space:nowrap;color:var(--muted)}
+.ts-clock td small{font-size:11px;font-weight:400;color:var(--muted);margin-left:6px}.ts-clock td:last-child small{display:block;margin:0}
+.ts-down{display:flex;align-items:center;gap:var(--s2);margin:var(--s2) 0 var(--s2) 40px;font-size:12px;color:var(--muted)}
+.ts-down::before{content:"";width:2px;height:28px;background:var(--muted);flex:none}
+.ts-down i{width:0;height:0;border:5px solid transparent;border-top:6px solid var(--muted);border-bottom:0;margin:28px 0 0 -14px;flex:none}
+.ts-srcs{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:var(--s2)}
+.ts-srcs li{margin:0;border:1px solid var(--line);border-radius:var(--r-m);padding:var(--s2) var(--s3);font-size:12px;line-height:1.45;min-width:0}
+.ts-srcs li b,.ts-srcs li>span{display:block}.ts-srcs li b{font-size:var(--fs-1)}.ts-srcs li .ts-dots{display:flex;margin:4px 0}.ts-srcs li small{display:block;font-size:12px;color:var(--muted)}
+.ts-srcs li.off{border-style:dashed}.ts-srcs li.off em{font-style:normal;color:var(--amber-fg);display:block}
+.ts-srcs code{font:600 11px var(--mono);white-space:nowrap}
+.ts-ph{display:grid;grid-template-columns:minmax(0,1fr) minmax(560px,2.6fr);gap:var(--s3);font-size:11px;font-weight:700;color:var(--muted);margin:0 0 4px}
+.ts-ph ol{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}.ts-ph li{margin:0}
+.ts-pg .ts-row{grid-template-columns:minmax(0,1fr) minmax(560px,2.6fr)}.ts-pg .ts-now{display:none}
+.ts-pg .ts-trk li{min-height:40px}.ts-pg .ts-trk li small{display:block;opacity:.9}
+.ts-pg .ts-rows{border-top:1px solid var(--line);padding-top:var(--s2);margin:0}
+.ts-pg .ts-who>span{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.ts-note{font-size:12px;color:var(--muted);margin:var(--s2) 0 0}
+@media (max-width:700px){
+.ts-top{grid-template-columns:1fr}
+.ts-srcs{grid-template-columns:1fr 1fr}
+.ts-ph{display:none}
+.ts-pg .ts-row{grid-template-columns:1fr}.ts-pg .ts-now{display:block}
+.ts-pg .ts-trk li{min-height:24px}.ts-pg .ts-trk li small{display:none}
+}
+</style><div class="ts-pg" id="ts-page" data-status="{{ '/status.json' | relative_url }}" data-repo="Its-The-Company/itsthecompany" data-img="{{ '/assets/portraits/still/' | relative_url }}"><a class="ts-back" href="{{ '/' | relative_url }}">‹ Home</a><h1>This Session</h1><p class="meta" id="ts-meta" hidden></p><p class="ts-soon">Coming: a live chart of every task’s path, from one coordinating session to a worker on any account, through the MacBook’s tests, to landed. It appears here once the coordinator runs.</p><div id="ts-chart" hidden></div></div><script defer src="{{ '/assets/session.js' | relative_url }}"></script>

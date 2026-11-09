@@ -41,7 +41,7 @@ if (text.length > 80) text = text.slice(0, 77) + '...';
 return text ? { text: text, t: deadlineTime(text) } : null;
 }
 function now() { return new Date(Date.now()); }
-function clock(iso) { return new Date(iso).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }); }
+function clock(iso) { return S.clock(iso); }
 function dayKey(d) { return d.getFullYear() + '-' + d.getMonth() + '-' + d.getDate(); }
 function dayLabel(iso) { var d = new Date(iso); return dayKey(d) === dayKey(now()) ? 'Today' : d.toLocaleDateString([], { weekday: 'short', day: 'numeric', month: 'short' }); }
 function newestPages(count) { var p = Math.ceil((+count || 0) / 100); return p > 1 ? [p - 1, p] : [1]; }
@@ -288,7 +288,7 @@ drawTabs();
 }
 function due(d) {
 if (!d || !d.t) return null;
-var e = el('span', 'cv-due' + (d.t - Date.now() < 864e5 ? ' cv-soon' : ''), new Date(d.t).toLocaleString([], { weekday: 'short', hour: 'numeric', minute: '2-digit' }));
+var e = el('span', 'cv-due' + (d.t - Date.now() < 864e5 ? ' cv-soon' : ''), S.clock(d.t, { weekday: 'short' }));
 attr(e, 'data-t', new Date(d.t).toISOString()); e.title = 'Deadline: ' + d.text; return e;
 }
 function box() { var f = document.activeElement, s = f && f.tagName === 'TEXTAREA' && f.closest('.cv-view [aria-labelledby]'); return s && s.getAttribute('aria-labelledby'); }

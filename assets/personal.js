@@ -97,7 +97,7 @@ return fetch(S.API + '/repos/' + repo + '/issues/' + hit.number + '/comments', {
 body: JSON.stringify({ body: 'LANE CLEAR ' + a.id }) }).then(S.checkAuth, () => null).then((r) => {
 if (!r) return said + 'No answer from GitHub. The comment may have landed: look on #' + hit.number + ' before you tap again.';
 if (!r.ok) throw new Error(said + S.said(r) + perm(r));
-return said + 'Sent LANE CLEAR ' + a.id + ' on #' + hit.number + ' at ' + new Date().toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' })
+return said + 'Sent LANE CLEAR ' + a.id + ' on #' + hit.number + ' at ' + S.clock(Date.now())
 + '. The inbox lifts the stop within minutes and replies on #' + hit.number + ' with what it did.';
 });
 });
@@ -130,7 +130,7 @@ var n = clean(a.draft === null ? a.name : a.draft);
 run(a, () => setName(a, n).then((m) => { a.draft = null; a.edit = 0; return m; }));
 }
 function held(e) { if (e.repeat && e.key === 'Enter') e.preventDefault(); }  // L3: a held key is one tap
-function et(t) { return new Date(t).toLocaleString('en-US', { timeZone: 'America/New_York', weekday: 'short', hour: 'numeric', minute: '2-digit' }) + ' ET'; }
+function et(t) { return S.clock(t, { weekday: 'short' }); }
 function meter(b, label, w, none) {
 b.bar.hidden = !w; b.bar.style.display = w ? 'flex' : 'none';
 if (!w) { b.head.textContent = none; return; }

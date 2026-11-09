@@ -143,6 +143,29 @@ Drops write only through IssueQ `act(st, n, o, 'delay', v, now)`. That keeps the
   - the issue page code, on its own page
 - Each file needs its own ceiling. That is a company decision on sizes, as in 1f48cc35, for Ines to set before T-3582 lands, not a reason to raise needs.js again.
 - The NEW CSS block is 8,544 B raw, measured, including mock-only rules (the float position and the frame-6 focus ring). It goes in needs.css or site.css within their budgets.
+
+## Departures, T-3721
+Maren, 2026-11-09. Odalys's build (397c59924) named three departures. Read against the shots in
+ops/site-checks/t3583/ and the code in tools/site/assets/.
+
+1. **Accepted: Pick a date on the issue page opens inline Day and Time, not the sheet.** issue.js is 5,944 B of a
+   6,144 B gzip ceiling, so 200 B are left and the sheet does not fit. The sheet's quick buttons are already the Move to
+   row above it. The fields are the native date and time inputs with the labels Day and Time, Eastern; an empty time
+   means 23:59; Save calls the same `act`. issue-390 shows them at 390 px with no overflow. Section 4's "opens the date
+   sheet" now means these fields on the issue page.
+2. **Accepted, with one change: the slot, not the group header, says what a drop sets.** The slot is the right
+   place, because a drop between two rows sets their midpoint, not 23:59, so a sentence on the header would be wrong
+   for most drops. But the lifted row sits on top of the slot: in drag-390 and drag-1280 the slot's words cannot be
+   read. The change: the status line at the top, which nothing covers, also says what a drop sets, for example
+   "Moving #302. Drop: Thu 12 Nov, 23:59. Esc cancels." It is `role=status`, so it changes only when the drop value
+   changes, not on every pointer move. needs.js has 825 B gzip left (6,855 of 7,680), and this needs about 60 B.
+   The header keeps its tint.
+3. **Accepted: a drop into Later always lands more than 24 hours out.** The floor is now + 24 h + 1 min. My section 3
+   sentence, that tomorrow at end of day is always more than 24 h away, was wrong. It fails after 23:59 Eastern and on
+   the spring-forward day, when tomorrow 23:59 can be as little as 23 h 29 min away (from Sat 13 Mar 2027, 23:30). A
+   row dropped in Later would then show up in Now at once. The floor stops that. In that edge a drop on Tomorrow lands
+   on the next day, and the Undo line names the day it actually went to, so nothing is hidden. Read section 3's
+   constraint with this floor.
 {% endraw %}
 
 </div>

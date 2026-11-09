@@ -46,7 +46,11 @@ if (isNaN(s)) return '';
 return s < 90 ? Math.round(s) + ' s' : s < 5400 ? Math.round(s / 60) + ' min' : s < 172800 ? Math.round(s / 3600) + ' h' : Math.round(s / 86400) + ' d';
 }
 function setText(id, text) { var e = byId(id); if (e && text != null) e.textContent = text; }
-function when(iso, wk) { return iso ? new Date(iso).toLocaleString([], { weekday: wk && 'short', hour: 'numeric', minute: '2-digit', timeZone: 'America/New_York' }) + ' ET' : ''; }
+function clock(t, o) {
+var d = t == null || t === '' ? NaN : new Date(t);
+return isNaN(d) ? '' : d.toLocaleString('en-US', Object.assign({ timeZone: 'America/New_York', hour: 'numeric', minute: '2-digit', hour12: true }, o)).replace(/\s+/g, ' ').replace(' at ', ', ') + ' ET';
+}
+function when(iso, wk) { return clock(iso, wk && { weekday: 'short' }); }
 function tail(m, wk) { var r = when(m.resets_at, wk); return (m.left != null ? ' · ' + Math.round(m.left) + '% left' : '') + (r ? ' · resets ' + r : ''); }
 function meters(st) {
 var box = el('div'), m = st.meter || {};
@@ -221,7 +225,7 @@ show();
 show();
 }
 window.CompanySite = { API: API, KEY: KEY, NAME: NAME, ALLOW: ALLOW, NO_TOKEN: NO_TOKEN, el: el, byId: byId, on: on, later: later, stop: stop,
-getToken: getToken, setToken: setToken, tokenStore: tokenStore, hdrs: hdrs, gh: gh, said: said, ago: ago, checkAuth: checkAuth, parseAllow: parseAllow,
+clock: clock, getToken: getToken, setToken: setToken, tokenStore: tokenStore, hdrs: hdrs, gh: gh, said: said, ago: ago, checkAuth: checkAuth, parseAllow: parseAllow,
 onDrawn: onDrawn, onReject: onReject, rejected: function () { return rejected; },
 status: function () { return lastSt; }, onStatus: onStatus, tiles: tiles, added: added, feed: function () { window.CompanySite.fed = arguments; } };
 var n = byId('now-panel'); if (n) nowPanel(n);

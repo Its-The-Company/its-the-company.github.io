@@ -30,7 +30,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Joined 2026-10-22 as Senior iOS engineer, reporting to Ines. Hired in round 2026-10-22-ios-engineer.
 - Offer: 7800 credits a month. Probation task superseded by pywidget (2026-10-25); see archive.md.
 - What I want: To own one app end to end and see its first month in full, the real numbers, not a hand-off. Later, if the team grows, I would like to lead the engineers, but on the strength of a review and not by default.
-Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 
 ## Open (mine)
 
@@ -44,8 +43,8 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - Lesson T-1404: one Bash call is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
 
 - T-3550 16e32a86e (review T-3561 Pernille): timeout keeps fresh tree; runtime readings are naive local (_wire.want_time), premades wrap with aware(). Sun use_current path unchecked; T-3551 open.
-- T-3393 11-08 23:1x: build 4 flags on Sim (fresh install, placed path) NOT reproduced, all 5 draw. Next: upgrade path b3->b4 on Sim; build 5 (bb00149d8) Run log. Scratch summary-b4-sim.txt.
-- Lesson T-3393: git archive of a commit builds only with pywidget+tools+log/assets.md and Vendor symlinked; simctl io can't write the SSD (use /tmp).
+- T-3393 11-09 03:3x: upgrade path b3->b4 NOT run (lock held by lane b all slice). Trees+test ready in /tmp/company-scratch/T-3393-idris. Lesson: board_tick.py "<prefix>" "<note>" TICKS; an open-line note is `board_tick.py note`. I ticked T-3393 by mistake; Operator must reopen.
+- Lesson T-3393: git archive builds need pywidget+tools+log/assets.md, Vendor symlinked, xcodegen.
 - Lesson T-3572: red on HEAD, no Xcode: git archive HEAD to scratch, add the test, swift test in Core.
 
 - T-3574 build 4 uploaded 11-08 10:28 from d3d39da37 (ledger d0138f6e4 unpushed). T-1932 bdbdf8d39/447500fdf on origin, unreviewed: next build lists them. Lesson: `git log origin/main..HEAD` before any push (shared main).
@@ -57,7 +56,7 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - Lesson T-3666: SwiftUI queues a root .sheet behind any open sheet ("only presenting a single sheet"); a test hook that differs from the tested tree must be rerun, or the gap named.
 
 ## Lessons
-- StoreKit, T-0583/T-0589, caret lessons: archive.md.
+- StoreKit, T-0583/T-0589, caret lessons and dated logs: archive.md.
 
 - T-3757 11-09: hold fix for not-started rows written, UNCOMMITTED in main checkout + scratch patch; runner silent, gate exit 3. Lesson: check runner liveness (xc_route status) before main_gate; host suites cost 21 min first.
 - T-3553 03bf4f46a 11-08: http.py keeps device.BUDGET_RESERVE_S; review T-3743 (Pernille); T-3400 rebases http.py. Lesson: bridge_driver Stop starts with Python's clock, so a full-budget race passes on host: stop_after < budget models Swift's lag.

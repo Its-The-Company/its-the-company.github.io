@@ -51,19 +51,14 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 2026-10-25 entries (privacy drafts, names, App Review matrix v1, store page, L15, CORRECTIONS pass 1, #54 docs, OPS-7 audit, T-0075): archive.md. Standing: grep counts before typing; `date` before every time.
 
-## 2026-11-05 T-2535 app launcher note (62a569b29); tick refused (Plain 302 > 280), left for Operator
-- Lessons: count the Plain field with `len()` before board_tick. Gumroad terms forbid automated access: its pages stay unread.
-
-## 2026-11-05 T-2409 E1 earthquakes example (c678b3723); T-2723 Simulator check open; E2 held
-- Lesson: build an example's test on one saved real response, and test that the docstring matches it. Adding a script to pywidget/examples breaks the Swift "exactly N" tests: edit them in the same commit.
 ## 2026-11-02 T-0259 reason codes confirmed (92bcd355; ticked; T-1215 to Idris for the app manifest gap; landed 11-04 by T-1736, docs only)
 - Lesson: Apple's .md key pages carry no values; the tutorials/data .json holds them. Grep the code for new API calls before calling a manifest right.
-## 2026-11-02 T-0337 recall checks: 3 of 5 (f0988b3b, 53793e7d; not ticked; R3 HIG, R4 agreement left; landed 11-04 by T-1736)
-
 ## 2026-11-02 T-0337 recall checks: 3 of 5 (f0988b3b, 53793e7d; not ticked; R3 HIG, R4 agreement left)
 - Lesson: take Apple help-page paths from a saved page's sidebar links before fetching; a guessed path gives "Page Not Found" with HTTP 200 and still costs the day <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> (12, shared by every lane).
-## 2026-11-08 T-3421 merge practice vs ours (ae5f131a2, tick e9ceff079); gaps T-3444..T-3452 to Odalys
-- Lessons: board titles 3-10 words (count first); a lane's `add` writes main's board at once, ticks queue in the outbox. A 308 means read Location, not ask twice.
+## 2026-11-09 T-3778 run-history 14-day wording (d740400f6, ticked); Idris check T-3789
+- Lesson: a policy promise needs an upper bound that is true for every path (Shortcut launches, widget appends also prune); say "can stay until the next check", not a day count. `git -c user.email=wrenna@company` when the repo user is someone else.
+## 2026-11-09 T-3674 known-app list: 8 apps, sources e2f191fd1; app patch in scratch (base is <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> T-3664 slice 1, not main); not ticked
+- Lesson: per new host, terms page BEFORE the doc page (find it by search, not a fetch of the doc). Four doc reads wasted on barred hosts.
 {% endraw %}
 
 

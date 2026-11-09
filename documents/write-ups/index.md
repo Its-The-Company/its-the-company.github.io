@@ -15,7 +15,7 @@ description: "Analyses and dataset notes written outside the product docs, newes
 
 <h2 id="documents">Documents</h2>
 <p class="meta">1 write-up, most recently updated first.</p>
-<div class="cards"><a class="card" href="{{ '/documents/how-work-flows.html' | relative_url }}"><span class="meta"><span class="kind blue">Analysis</span><span>Odalys</span><span>Day 14 · Wed Nov 4, 00:20</span></span><b>How work flows through the company</b><p>One page, with diagrams, of how a task goes from the to-do list to finished work on main, what runs in the background every 15 minutes, and where…</p></a></div>
+<div class="cards"><a class="card" href="{{ '/documents/how-work-flows.html' | relative_url }}"><span class="meta"><span class="kind blue">Analysis</span><span>Odalys</span><span>Day 14 · Wed Nov 4, 12:20 AM ET</span></span><b>How work flows through the company</b><p>One page, with diagrams, of how a task goes from the to-do list to finished work on main, what runs in the background every 15 minutes, and where…</p></a></div>
 
 
 

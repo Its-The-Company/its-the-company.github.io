@@ -1,37 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-09T07:45:46.748500+00:00",
+ "at": "2026-11-09T11:03:14.276525+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
-   {
-    "t": "T-3570",
-    "name": "Keep the gate's passing lines when one member moves",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794204126
-     },
-     {
-      "s": "landing",
-      "at": 1794207221
-     }
-    ]
-   },
-   {
-    "t": "T-0444",
-    "name": "Fix the version wording in Acknowledgements rows",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794202611
-     }
-    ]
-   },
    {
     "t": "T-3132",
     "w": "Idris",
@@ -39,17 +13,6 @@
      {
       "s": "testq",
       "at": 1794201371
-     }
-    ]
-   },
-   {
-    "t": "T-2098",
-    "name": "Fix paths in the mutation check files",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794199398
      }
     ]
    },
@@ -63,167 +26,150 @@
       "at": 1794195883
      }
     ]
+   }
+  ],
+  "done": [
+   {
+    "t": "T-3786",
+    "name": "Redo browser read of the JS-drawn views for 24-hour text",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794221420,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3786",
+    "name": "Redo browser read of the JS-drawn views for 24-hour text",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794221418,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3785",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794221415
+   },
+   {
+    "t": "T-2539",
+    "name": "Sort 34 parked app snapshots into keep or drop",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794221407
+   },
+   {
+    "t": "T-3293",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794221407
+   },
+   {
+    "t": "T-0043",
+    "name": "Strip unneeded Python modules from the release bundle",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794221393,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-3327",
+    "name": "Every Running card names its worker and model",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794220397
+   },
+   {
+    "t": "T-3708",
+    "name": "Trace main-session outages and alert after three failed ticks",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794220397
+   },
+   {
+    "t": "T-3707",
+    "name": "Refresh a stale usage reading before holding a slot",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794220397
    },
    {
     "t": "T-2491",
     "name": "Stop the stuck extension from recreating deleted widget folders",
     "acct": "Personal b",
-    "steps": [
-     {
-      "s": "macbook",
-      "at": 1794187968
-     },
-     {
-      "s": "testq",
-      "at": 1794189056
-     }
-    ]
-   }
-  ],
-  "done": [
-   {
-    "t": "T-3553",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794210170
-   },
-   {
-    "t": "T-3695",
-    "name": "Land branches refused for old copies of main commits",
-    "acct": "Personal b",
     "steps": [],
     "end": "failed",
-    "end_at": 1794209255,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-3548",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794204120
-   },
-   {
-    "t": "T-0811",
-    "name": "Give the bundled examples an iPhone entry point",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794199176,
-    "why": "Xcode tests failed"
-   },
-   {
-    "t": "T-0914",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794195849,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-2871",
-    "name": "Review the saved-run traceback cut",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794195849,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-2325",
-    "name": "Find why Investor replies were sometimes late",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794195849,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-2331",
-    "name": "Add a test that pins the route's file list",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794195849,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-0760",
-    "name": "Share the keyboard fix across app picture tests",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794193640
-   },
-   {
-    "t": "T-1993",
-    "name": "Count a try only for tasks the session started",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794192216,
+    "end_at": 1794219342,
     "why": "tests failed"
    }
   ],
-  "landed": 41,
-  "failed": 19
+  "landed": 25,
+  "failed": 32
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] T-3777 measure adaptive pool",
+   "name": "pernille",
+   "task": "[test] T-3802 bridge host suite red",
    "model": "opus",
-   "started": "2026-11-09T07:14:50.236Z",
+   "started": "2026-11-09T10:36:39.510Z",
    "seconds": null,
-   "finished": "2026-11-09T07:23:51.797000+00:00"
+   "finished": "2026-11-09T10:57:59.752000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3776 measure report lateness",
+   "task": "[tools] T-3801 docs skip host suites",
    "model": "opus",
-   "started": "2026-11-09T07:14:55.841Z",
+   "started": "2026-11-09T10:36:23.564Z",
    "seconds": null,
-   "finished": "2026-11-09T07:19:04.196000+00:00"
+   "finished": "2026-11-09T10:41:49.668000+00:00"
   },
   {
-   "name": "maren",
-   "task": "[build] T-3366 site Send test double count",
+   "name": "pernille",
+   "task": "[fix] T-3802 bridge host suite red",
    "model": "opus",
-   "started": "2026-11-09T07:03:42.846Z",
+   "started": "2026-11-09T10:36:30.975Z",
    "seconds": null,
-   "finished": "2026-11-09T07:14:28.254000+00:00"
+   "finished": "2026-11-09T10:36:31.039Z"
   },
   {
-   "name": "odalys",
-   "task": "[tools] T-2950 runner status splits joined tasks",
+   "name": "pernille",
+   "task": "[review] T-3545 spare retries and train cap",
    "model": "opus",
-   "started": "2026-11-09T07:03:36.208Z",
+   "started": "2026-11-09T10:17:33.026Z",
    "seconds": null,
-   "finished": "2026-11-09T07:05:16.011000+00:00"
+   "finished": "2026-11-09T10:35:44.328000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 612,
-  "blocked_count": 116
+  "runnable_count": 611,
+  "blocked_count": 117
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
-   "resets_at": "2026-11-09T07:59:59.807469+00:00",
+   "pct": 0.0,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "left": 95.0,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 15.0,
-   "resets_at": "2026-11-15T06:59:59.807489+00:00",
+   "pct": 17.0,
+   "resets_at": "2026-11-15T07:00:00.442068+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 85.0,
+   "left": 83.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -231,10 +177,10 @@
    "resets_at": "2026-11-15T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-09T00:09:59.594866-05:00"
+  "read_at": "2026-11-09T03:08:34.170073-05:00"
  },
  "ui": {
-  "week_pct": 0.008,
+  "week_pct": 0.009,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -246,13 +192,40 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-09T00:25:00-05:00",
+ "next_tick": "2026-11-09T03:23:34-05:00",
  "personal": {
-  "week_pct": 3.68,
-  "usage_pct": 17.9,
-  "work_pct": 60.0,
-  "read_at": "2026-11-09T07:47:00+00:00",
-  "running": []
+  "week_pct": 3.72,
+  "usage_pct": 16.2,
+  "work_pct": 57.7,
+  "read_at": "2026-11-09T11:04:00+00:00",
+  "running": [
+   {
+    "lane": "b3",
+    "task": "T-3551",
+    "w": "Idris",
+    "k": "test",
+    "t": "Make the stall tests reach a stalled sensor",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-09T04:37:19-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-1643",
+    "w": "Idris",
+    "k": "build",
+    "t": "Let a person's say-so lift a widget demotion",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-09T04:37:19-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -272,38 +245,33 @@
   }
  ],
  "disk": {
-  "free_gb": 17,
+  "free_gb": 16,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 269
+   "free_gb": 271
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": false,
-   "at": "2026-11-09T02:41:00-05:00",
+   "at": "2026-11-09T05:50:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-09T02:47:00-05:00",
+  "at": "2026-11-09T06:04:00-05:00",
   "mode": null
  },
  "next_tick_why": "last_tick",
- "idle": {
-  "since": "2026-11-09T02:24:26-05:00",
-  "minutes": 21,
-  "why": "a tick has spent 2 h 37 m on steps before the session",
-  "healed": []
- },
+ "idle": null,
  "pool": null,
  "lanes": [
   {
    "name": "Idris",
    "state": "next",
-   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
+   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
    "model": null,
    "since": null,
    "next": []
@@ -333,17 +301,17 @@
    "next": []
   },
   {
-   "name": "Maren",
+   "name": "Wrenna",
    "state": "next",
-   "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
+   "task": "Wrenna, P1, from T-3789...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Wrenna",
+   "name": "Maren",
    "state": "next",
-   "task": "Wrenna, P2, from T-3664: replace the two placeholder...",
+   "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
    "model": null,
    "since": null,
    "next": []
@@ -352,6 +320,13 @@
  "tasks": {
   "run": [],
   "open": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Keep finding why only Countdown draws on the...",
+    "s": "next",
+    "o": "c"
+   },
    {
     "w": "Idris",
     "k": "build",
@@ -414,35 +389,28 @@
     "t": "Last checks before the first test build",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Run Python widget scripts inside the widget...",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "When the network hangs, a widget's web request now gives up half a second before the app's time...",
-    "at": "2026-11-09T02:42:00-05:00"
+    "w": "Pernille",
+    "t": "One app test froze on the older Python because it tried to write inside the Xcode app folder,...",
+    "at": "2026-11-09T05:58:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "Letting the machine choose how many agents run at once did not finish more tasks an hour; it...",
-    "at": "2026-11-09T02:23:00-05:00"
+    "w": "Pernille",
+    "t": "Pernille's agent memory file is now 3,929 bytes, under the 4,096-byte limit, with no repeated...",
+    "at": "2026-11-09T05:50:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "The change that was meant to stop a running work session so the twice-daily report goes out on...",
-    "at": "2026-11-09T02:18:00-05:00"
+    "w": "Ines",
+    "t": "A lane can now record an Investor rule change it holds, and proposal to close the retired...",
+    "at": "2026-11-09T05:50:00-05:00"
    }
   ],
   "count": {
-   "next": 612,
-   "wait": 45,
+   "next": 611,
+   "wait": 46,
    "blocked": 71,
    "you": 20
   }
@@ -466,12 +434,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 0,
-  "total": 0,
-  "at": "2:47 AM",
-  "why": "Between sessions: no session is running. Last check 12:10 AM ET.",
-  "at_iso": "2026-11-09T07:47:00+00:00",
+  "lanes": 1,
+  "total": 1,
+  "at": "6:04 AM",
+  "why": "",
+  "at_iso": "2026-11-09T11:04:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:47 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 12:10 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:04 AM ET</p></section>"
  }
 }

@@ -81,8 +81,8 @@ return 'asked ' + n + ' ' + u + (n === 1 ? '' : 's') + ' ago';
 }
 if (typeof document !== 'undefined' && document.querySelectorAll) Array.prototype.forEach.call(document.querySelectorAll('time.ic-at[datetime]'),(t) => { var a = ago(t.getAttribute('datetime')); if (a) t.textContent = a; });
 function plain(b) { return String(b || '').replace(NOTE, '').replace(/<img[^>]{0,800}>/gi, '[image]').replace(/!\[([^\]]{0,400})\]\([^)]{0,800}\)/g, '[image: $1]').replace(/\r/g, '').trim(); }
-function when(iso) { return iso ? new Date(iso).toLocaleString([], { weekday: 'short', hour: 'numeric', minute: '2-digit' }) : ''; }
-function day(iso) { return iso ? new Date(iso).toLocaleString([], { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) : ''; }
+function when(iso) { return S.clock(iso, { weekday: 'short' }); }
+function day(iso) { return S.clock(iso, { month: 'short', day: 'numeric' }); }
 function getJ(p) { return S.gh(p).then((r) => { if (!r.ok) throw new Error(S.said(r)); return r.json(); }); }
 function send(method, p, body) {
 var h = S.hdrs(); h['Content-Type'] = 'application/json';

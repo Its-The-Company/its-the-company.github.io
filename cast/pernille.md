@@ -46,6 +46,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3495 (e9f3b0a0d): T-3323 PASS w/ fixes; M1/M2 board lines refused by classifier, not added, T-3495 not ticked. Lesson: an exclusion that is empty at the first status is first tested after the archive; an index-only tracked check misses staged deletions.
 - T-3692 (15ed1952d): T-3671/T-3667 PASS w/ fixes; T-3762 (stale Gallery request, before build), T-3763..66 Idris. Lesson: a UI test that passes with and without the fix proves nothing; demand a red run.
 - T-3743 (42ea04c89): T-3553 PASS w/ fixes; M1 board add refused (title 11 words), line in scratch, not ticked. Lesson: Darwin lock waits (join, Timer, Event) wake ~150 ms late, socket timeouts 2 ms; a deadline on a lock wait is not a deadline.
+- T-3546 (858f9cbe0): T-3519 FAIL; T-3780..82 Odalys. Lesson: a text scan for reads can't follow $REPO vars or a tool's constants; key the data folder, list tools by hand.
+- T-3545 (uncommitted: main_gate refused, bridge red): T-3408 PASS w/ fixes; T-3799/3800 Odalys. Race probe refused by security-guard (scratch $HOME/company-personal). Lesson: retry_into deletes the <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> name before mark_ready on n=1, so a refusal strands the work on the spare.
+- T-3802 (c64c68bf4): bridge red on 3.9 was a hang, not load: mkdir into /Applications/Xcode.app blocks with no answer on macOS 27. Tick refused (Evidence must be a bare path), not ticked. Lesson: a child with bytecode writes on must set pycache_prefix.
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## Lessons

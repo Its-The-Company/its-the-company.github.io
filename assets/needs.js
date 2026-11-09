@@ -45,11 +45,12 @@ x[0].classList.add('ny-ans'); ansU.appendChild(x[0]); fold();
 function ox(x) { var i = OPEN[x[1]]; return { l: labels(i), dl: window.IssueQ.dl(i.body) }; }
 function lab(v, now) {
 if (!v) return ['No date', 1];
-var d = new Date(v), t = d.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false }), m = Math.round((now - v) / 6e4);
+var d = C.ymd(v), t = S.clock(v), m = Math.round((now - v) / 6e4);
 if (v <= now) return [m < 1 ? 'Due now' : m < 60 ? m + ' min late' : m < 2880 ? Math.round(m / 60) + ' h late' : Math.round(m / 1440) + ' d late', 1];
-if (d.toDateString() === new Date(now).toDateString()) return ['Due ' + t, 0];
-return [d.toLocaleDateString([], { weekday: 'short', day: 'numeric', month: 'short' }) + (t === '23:59' ? '' : ', ' + t), 0];
+if (d === C.ymd(now)) return ['Due ' + t, 0];
+return [fd(d) + (h23(v) === '23:59' ? '' : ', ' + t), 0];
 }
+function h23(t) { return new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(new Date(t)); }
 function qsec(k) {
 var sec = el('section', 'iq-q'), h = mk(sec, 'h2', 'iq-h', k === 'N' ? 'Now ' : 'Later '), q = QS[k] = { sec: sec, g: {} };
 h.id = 'ny-q-' + k; sec.setAttribute('aria-labelledby', h.id);
@@ -153,7 +154,6 @@ var li = D.li, r = li.getBoundingClientRect();
 clearTimeout(D.p); D.on = 1; D.dx = D.x0 - r.left; D.dy = D.y0 - r.top; D.cx = cx; D.cy = cy;
 D.slot = el('li', 'iq-slot'); li.parentNode.insertBefore(D.slot, li);
 li.style.width = r.width + 'px'; li.classList.remove('iq-press'); li.classList.add('iq-lift'); BD.classList.add('iq-dragging');
-line('Moving #' + D.x[1] + '. Let go on a day, or over Now to make it due now. Esc cancels.', null, 1);
 move(); tick();
 }
 function move() {
@@ -161,11 +161,12 @@ var t = aim(D.cx, D.cy), now = Date.now(), on = BD.querySelectorAll('.iq-on');
 D.li.style.transform = 'translate(' + (D.cx - D.dx) + 'px,' + (D.cy - D.dy) + 'px)';
 Array.prototype.forEach.call(on, (e) => { e.classList.remove('iq-on'); });
 D.t2 = t; D.slot.hidden = !t;
+var w = !t ? '' : t.o ? fd(C.ymd(val(t, now))) + ', ' + S.clock(val(t, now)) : 'due now (' + S.clock(now + 6e4) + ')';
+if (w !== D.w) { D.w = w; line('Moving #' + D.x[1] + '. ' + (w ? 'Drop: ' + w : 'Let go on a day, or over Now to make it due now') + '. Esc cancels.', null, 1); }
 if (!t) return;
 t.ul.insertBefore(D.slot, t.b);
 (t.o ? t.o.li : QS.N.sec).classList.add('iq-on');
-var v = val(t, now);
-D.slot.textContent = t.o ? 'Drop: ' + lab(v, now)[0] + (t.o && C.at(t.o.g) === v ? ', 23:59' : '') : 'Drop: due now (' + lab(now + 6e4, now)[0].replace('Due ', '') + ')';
+D.slot.textContent = 'Drop: ' + w;
 }
 function tick() {
 if (!D || !D.on) return;
@@ -203,9 +204,8 @@ f.method = 'dialog';
 mk(f, 'h2', null, 'When is #' + n + ' due?'); mk(f, 'p', 'iq-d', OPEN[n] ? OPEN[n].title : '');
 q = mk(f, 'div', 'iq-qk');
 function fill(dd, tt, b, isNow) { di.value = dd; ti.value = tt; nw = isNow; Array.prototype.forEach.call(q.children, (c) => { c.setAttribute('aria-pressed', c === b ? 'true' : 'false'); }); }
-function hm(t) { return new Intl.DateTimeFormat('en-GB', { timeZone: 'America/New_York', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).format(new Date(t)); }
 var mon = G.filter((g) => g[0] === 'X')[0][2], cur = v ? C.ymd(v) : '';
-[['Now', C.ymd(now), hm(now), 1], ['Tomorrow', G[0][2], ''], [cur && fd(cur), cur, v && hm(v) !== '23:59' ? hm(v) : ''], [fd(mon), mon, '']].forEach((k, i) => {
+[['Now', C.ymd(now), h23(now), 1], ['Tomorrow', G[0][2], ''], [cur && fd(cur), cur, v && h23(v) !== '23:59' ? h23(v) : ''], [fd(mon), mon, '']].forEach((k, i) => {
 if (!k[0] || (i === 2 && (cur === G[0][2] || cur === mon))) return;
 var b = mk(q, 'button', 'cv-tool', k[0]); b.type = 'button'; b.setAttribute('aria-pressed', 'false');
 b.onclick = () => { fill(k[1], k[2], b, k[3]); };
@@ -216,7 +216,7 @@ di = inp('Day', 'date'); ti = inp('Time, Eastern', 'time'); di.required = true;
 mk(f, 'p', 'iq-note', 'Left blank, the time is the end of the day (23:59).');
 row = mk(f, 'div', 'iq-sb'); no = mk(row, 'button', 'cv-tool', 'Cancel'); sv = mk(row, 'button', 'cv-tool iq-save', 'Save');
 no.type = 'button'; no.onclick = () => { d.close(); };
-if (cur) { di.value = cur; ti.value = hm(v) === '23:59' ? '' : hm(v); Array.prototype.forEach.call(q.children, (c) => { if (c.textContent === fd(cur) || (cur === G[0][2] && c.textContent === 'Tomorrow')) c.setAttribute('aria-pressed', 'true'); }); }
+if (cur) { di.value = cur; ti.value = h23(v) === '23:59' ? '' : h23(v); Array.prototype.forEach.call(q.children, (c) => { if (c.textContent === fd(cur) || (cur === G[0][2] && c.textContent === 'Tomorrow')) c.setAttribute('aria-pressed', 'true'); }); }
 f.onsubmit = (e) => { e.preventDefault(); var t = nw ? Date.now() : window.IssueQ.et(di.value, ti.value || '23:59'); if (!di.value || !t) { di.focus(); return; } d.close(); set(x, t); };
 d.onclose = () => { d.remove(); bt.focus(); };
 d.showModal();

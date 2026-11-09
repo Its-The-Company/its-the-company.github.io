@@ -38,29 +38,33 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open (2026-11-07)
 
 
-- T-3722 7f7390365 (ticked): disk_free no Investor emergency while SSD >=50 GB free; acts (disk_free_act rows). Sim set on SSD refused (sandbox); sparse image on SSD works (n=1). Rest T-3726. After-read df / after 21:05 11-08.
-- T-3670 566e6adfb (ticked): Chat files via attach.js -> contents PUT research/inbound/<n>/ + 'File:' lines. site_send_test 8 reds at HEAD too (issuecount site-state POST counted as a send): harness fix open.
-
-- T-3714 8275bde68: park_stats.py. Before: 435 waiting refs, <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">park</span>-to-land 11.0 h. T-3730 a6bdf0bb5 (ticked): main-red waits in line (mainred marker). After-read park_stats red (106) 11-10.
-
-- T-3729/T-3732 9889951fc (ticked): park_held.py hourly via inbox_watch; 96/144 parked. T-3733 9c5247e1f: park_unlinked names those (gitdir gone) by branch only. After-read: next park_held row failed 0. T-3734 b6a1e47bd: watcher runs HEAD copy; restart on commit only.
-- T-2401/T-3724 d2021d932 (ticked): Move up live on CLOSED queue issue #236 (state=all lookup; requests_close never reopens queue). Target skips X's parents; page names them. Part (2) Blocked list now T-3735. After-read: first real /move row in log/queue.jsonl.
-- T-3727 8935a5fe6 (ticked): main_gate check runs run_host suites a pywidget/ change reaches (pywidget:<suite> rows). Open T-3731: hook enforcement, bare "ios" reach (~450 s per Swift change).
-
-- T-3740 dfb7c2056 (ticked): land limit by clock (SECONDS) + limit mark -> 143, retried. After-read: next over-limit land under load says 'queued again'. Scratch kit needs .gitattributes, ops/title_words.txt, ops/workstreams.json, git init.
-
-- T-3296 1b6b60e81 (ticked): step feed salvaged by cherry-pick alone (charter copy left). T-3297 chart fe53f740f on parked/b3 (no charter): same route. personal_land_test 354/1 flaky at load 200 (n=2).
-- T-3444 6a1e026cd (ticked 1148165d9): OPT-124 solo stacks. Live n=3: rebuilds 0, linear 0. After-read n=20 or 11-15; next lever T-3741 (split host).
-
-- T-3742 21b0e7681 (ticked): tools/ampm.py 12-hour clock + lint (report_check, plan_block, inbox comment()). Before: 33/34 reports 24-hour (924 hits). Rest T-3746 site, T-3747 posters/card Deadline. After-read: next report_check ok with 0 time misses.
-
-- T-3568 48d6e9b90 + T-3759 f528af8e4 (ticked): gate xc via land_xc.py on land/g<n>; green kept by tree (xc_green.py), line/tip/spare reuse. Live n=0. After-read: spec_gate xc_reused, 'green already'.
-
 - T-3341 a0691b2a7 (open): retry_stats.py; passes follow main moving, not time. Idle-retry patch in ops/plans, green run refused (pkill in cmd: never pkill shared suites).
 
 - T-3452 ddc4b7b4b (ticked): OPT-125 second path for lines stacked on an xc line (MQ_GATE_ALT=0 reverts). Live n=0. After-read spec_gate alts/alt_landed. Next lever: hand over without waiting the full xc limit.
 
 - T-3777 3d57c135b (ticked): OPT-097 no_effect, 8.78/h vs 9.50, guards held; pool at floor 8 61%. Next lever: redone signal's board lag (new entry first).
+
+- T-3780 5dd67143b (ticked): main gate keys pywidget/licenses, pkg_stage/pkg_verify, pywidget/tests data (EXTRA_READS + BuildReads scan test). Cost n=4221 commits: gated 326->330. M1/M2 stay T-3781/T-3782. log/assets.md unkeyed (Release only).
+
+- T-3781/T-3782 93ed47969 (ticked): gate reads from the keyed tree; literals only under pywidget/tests. Audit 50 s vs 31 s (n=1). Review M2 misnamed the source: it is DeviceModulesSlice2Tests "a/../../b". L1 (dead :// skip) still open.
+
+- T-3748 13ba2ebe3 (ticked): proposal #241 (section 59 + applier auto path per #232 A). Needs one approve. Allowlist kept approve-only, flagged #232 c6736090780. After-read: #241 applied, then first no-approve guard/charter change.
+
+- T-3746 622f3ba06 (ticked): S.clock in app.js + data.hm_of/et_hm; site times '6:00 PM ET', sort keys stay 24-hour. After-read: live Chat/Needs pills show AM/PM ET.
+
+- T-3779 008365891 (ticked): OPT-099 no_effect, land 33.7% (n=341, 48 h) vs 23%, no XmR signal; tests red 51%->9%. Next lever: owned-path refusals on stale bases, machine lines 57.
+
+- T-3790 8b85e210d (ticked): drag status line says the drop value (S.clock), rewritten only on change. needs.js 6,837/7,680 gz. Drag test takes SCHEME=dark.
+
+- T-3678/T-3582 1abed117f (ticked): already on main (c8cff359b, 54d80e876); re-tested, shots t3678. Other asks AM/PM fixed T-3794 2b0c3c386 (tamper_note._clock; settle refuses 24h why).
+
+- T-3731 36df22b9d (ticked): hook refuses pywidget/ commits without pywidget:<suite> pass (host_refused row); bare "ios" followed via IOS joins. Swift-only n=132: median 9->5. Gap: floor misses tests/ suites by what they name (facts_test<-report_facts.py, home_now_line<-site_build). After-read: first host_refused row.
+
+- T-3372 e3cf3cd44 (ticked): workflow ladder lost report kinds; cause was governor's 'inbox_first() or session()' return (T-1423), not charter v3. Lesson: read the parser before blaming the named source.
+
+- T-3795 dc36d3896 (ticked): gate runs suites that name a changed tools/ file; hook wants their pass (suite_refused row). n=250: +10.5 s median. Gaps: hubs >16, imports not followed, land/MQ floor-only. After-read: first suite_refused row.
+
+- T-3801 2836af9cb (board NOT ticked: board_tick refused, prefix lacked 'T-3801 '): docs paths keyed by code reads only (comments/docstrings skipped, deepest tree part, made-up docs/x nothing). Review reached 4 suites, now 0.
 
 ## Lessons
 - Older notes: archive.md (memory_archive.py at session close).

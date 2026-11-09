@@ -60,12 +60,11 @@ if (!shown[k] && b.named.indexOf(k) < 0 && !off(o, k) && o.l.indexOf('unrelated'
 });
 return { n: n, ans: ans, later: later, red: red };
 }
-function hm(t) { return new Date(t).toLocaleString([], { hour: 'numeric', minute: '2-digit' }); }
 function draw(c) {
 var a = D.querySelector('nav a[data-issues]'), b = a && a.querySelector('.nb');
 if (!a || c.n == null) return;
 if (!c.n) { Array.prototype.forEach.call(a.querySelectorAll('.nbs, .nb'), (e) => e.remove()); return; }
-var t = c.n + ' waiting on the Investors' + (c.live ? ', read from GitHub at ' + hm(c.t) : ' at the site build, ' + new Date(c.t).toLocaleString([], { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }))
+var t = c.n + ' waiting on the Investors' + (c.live ? ', read from GitHub at ' + S.clock(c.t) : ' at the site build, ' + S.clock(c.t, { month: 'short', day: 'numeric' }))
 + (c.red != null ? '; ' + c.red + ' past due or with no deadline, ' + (c.n - c.red) + ' new' : '')
 + (c.later ? '; ' + c.later + ' of them in Later and not delayed, still new: opening ' + (c.later === 1 ? 'it' : 'each') + ' on Issues clears ' + (c.later === 1 ? 'it' : 'them') : '')
 + (c.ans ? '; ' + c.ans + ' answered, waiting on the company' : '');

@@ -10,7 +10,7 @@ function mk(p, t, c, x) { return p.appendChild(el(t, c, x)); }
 function at(e, k, v) { e.setAttribute(k, v); return e; }
 function bt(p, x, f, c) { var b = mk(p, 'button', 'btn' + (c ? ' ' + c : ''), x); b.type = 'button'; b.onclick = e => { if (e && e.stopPropagation) e.stopPropagation(); f(e); }; return b; }
 function cap(s) { s = String(s || ''); return s.charAt(0).toUpperCase() + s.slice(1); }
-function clock(t) { return t ? new Date(t).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' }) : ''; }
+function clock(t) { return S.clock(t); }
 function on(t, e, f) { if (t && t.addEventListener) t.addEventListener(e, f); }
 function tx(p, t) { p.appendChild(D.createTextNode(t)); }
 var f0 = S.feed;

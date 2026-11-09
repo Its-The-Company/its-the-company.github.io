@@ -38,20 +38,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open (2026-11-07)
 
 
-- T-3691 7cfae1072 (ticked): disk_keeper.py <30 GB -> ssd_moves, sweep --internal-only; #41 once per spell. Read disk_keeper.jsonl 11-09. Open: T-3684 leaking tests; T-3660 loop install. Sparse folders never copied (T-3690).
-
-- T-3579 bb5868b9f: applier follow_head + tools/owned_drift.py (check/add-all/restore). Main folder drift stays until `owned_drift.py restore` between sessions; guard_base must keep auto-reverts (Investor proposal).
-
-- T-3448 3d427e721 (ticked): main_green bisects a red (default with --board); restore rows in ops/metrics/main_restore.jsonl. Read the first live red. Guard refuses git clean -fdx (11-08).
-
-- T-2586 77db47b23 (ticked): post-check rebases met test leftovers; reset after run_tests. Read land_stats for "not on a conflict" after 11-10. Part 8 kit rows red at HEAD (main_green T-0001 line differs between arms).
-
-- T-3587 7a5ebefe0 (ticked): tools/memory_commit.py commits a worker's memory folder (private index); session_end check/done sweep. After-read: `memory_commit.py waits` over next 8 h vs 24 (03:24-10:50 11-08). SubagentStop hook would need a settings proposal.
-- T-3589 dc6639fe3 (ticked): idle_slots.py via inbox_watch step 7; #41 notes off (ops/idle_slots.json post:false) until switched on.
-- T-3588 fe8ebe895: mem_free.py free (idle Sims up 30m+, xc lock) run by dispatch tick on memory hold. fseventsd 12 GB root: Investors'. After-read rows mem_free.jsonl + `mem_free.py measure`.
-- T-3659 12dcda648 (ticked): retry_prune landed/same-commits by land_dupes key; merge_queue dedupe by key. 137->100. After-read `retry_prune.py --report 24` 11-09 ~13:00 (landed should fall to ~0). 55/100 left are xc, never in trains.
-- T-3441/T-3442 cfbf91cd3/c7fc2f604: <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> ref gone + stale base -> redo git mv on own branch, not retry. Tick Evidence not a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-record path (T-1425): cite ops/board.md.
-
 - T-3325 ed4e87198 (ticked, T-3191 too): one Lock In mode for all accounts (ops/lock_in.json mode; daily = hold after day's share). After-read: first LOCK IN DAILY day, lock_in_share.json vs pools. Pre-existing reds: test_personal_lane 5, site_personal jekyll.
 
 - T-3173 e700999cb (ticked): site_personal 221/0. Build red a780a76e8 (Liquid in account name, code); 19 rows cc2a57bc6 (badge site-state comment, test). T-1783 open: guard refused an import of test_personal_lane.py (11-08).
@@ -59,7 +45,21 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3682/T-3686 8b50e77ea (ticked): ops/refusals.jsonl; refusals.py tick every 5 min from inbox_watch step 7 (mark ops/watch/refusals_scan.json). After-read: ops/runs/refusals_scan-out.log after the next refusal.
 
 
+- T-3722 7f7390365 (ticked): disk_free no Investor emergency while SSD >=50 GB free; acts (disk_free_act rows). Sim set on SSD refused (sandbox); sparse image on SSD works (n=1). Rest T-3726. After-read df / after 21:05 11-08.
 - T-3670 566e6adfb (ticked): Chat files via attach.js -> contents PUT research/inbound/<n>/ + 'File:' lines. site_send_test 8 reds at HEAD too (issuecount site-state POST counted as a send): harness fix open.
+
+- T-3714 8275bde68: park_stats.py. Before: 435 waiting refs, <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">park</span>-to-land 11.0 h. T-3730 a6bdf0bb5 (ticked): main-red waits in line (mainred marker). After-read park_stats red (106) 11-10.
+
+- T-3729/T-3732 9889951fc (ticked): park_held.py hourly via inbox_watch; 96/144 parked. T-3733 9c5247e1f: park_unlinked names those (gitdir gone) by branch only. After-read: next park_held row failed 0. T-3734 b6a1e47bd: watcher runs HEAD copy; restart on commit only.
+- T-2401/T-3724 d2021d932 (ticked): Move up live on CLOSED queue issue #236 (state=all lookup; requests_close never reopens queue). Target skips X's parents; page names them. Part (2) Blocked list now T-3735. After-read: first real /move row in log/queue.jsonl.
+- T-3727 8935a5fe6 (ticked): main_gate check runs run_host suites a pywidget/ change reaches (pywidget:<suite> rows). Open T-3731: hook enforcement, bare "ios" reach (~450 s per Swift change).
+
+- T-3740 dfb7c2056 (ticked): land limit by clock (SECONDS) + limit mark -> 143, retried. After-read: next over-limit land under load says 'queued again'. Scratch kit needs .gitattributes, ops/title_words.txt, ops/workstreams.json, git init.
+
+- T-3296 1b6b60e81 (ticked): step feed salvaged by cherry-pick alone (charter copy left). T-3297 chart fe53f740f on parked/b3 (no charter): same route. personal_land_test 354/1 flaky at load 200 (n=2).
+- T-3444 6a1e026cd (ticked 1148165d9): OPT-124 solo stacks. Live n=3: rebuilds 0, linear 0. After-read n=20 or 11-15; next lever T-3741 (split host).
+
+- T-3742 21b0e7681 (ticked): tools/ampm.py 12-hour clock + lint (report_check, plan_block, inbox comment()). Before: 33/34 reports 24-hour (924 hits). Rest T-3746 site, T-3747 posters/card Deadline. After-read: next report_check ok with 0 time misses.
 
 ## Lessons
 - Older notes: archive.md (memory_archive.py at session close).

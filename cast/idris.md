@@ -34,7 +34,6 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 
 ## Open (mine)
 
-- Lesson T-2016: tools/xc_mutants.py plants each old behaviour back as the red record; a timing test needs margins both sides of the constant.
 - Lesson T-1851/T-3550: zsh never splits `$F`; pass xc_file_tests filters and main_gate paths as ${=F}. "checking 0 file(s)" = gate ran HEAD, not my change. Local xc.sh after others' commits: `xcodegen generate` first (xcodeproj is ignored, goes stale).
 
 - T-0656 2026-11-04: slice 1 <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> untested in company-scratch/T-0656-idris (EditorTooling, tests, patch); board noted. Freeze passed: <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line for 1.1.
@@ -46,7 +45,8 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - Lesson T-1404: one Bash call is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
 
 - T-3550 16e32a86e (review T-3561 Pernille): timeout keeps fresh tree; runtime readings are naive local (_wire.want_time), premades wrap with aware(). Sun use_current path unchecked; T-3551 open.
-- T-3393 bb00149d8 11-08: rows carry NotWritten/NoScript + reason (gate green). Cause not found; Simulator Release+gate run refused at disk line (17<20 GB). Next: that run, build 5.
+- T-3393 11-08 23:1x: build 4 flags on Sim (fresh install, placed path) NOT reproduced, all 5 draw. Next: upgrade path b3->b4 on Sim; build 5 (bb00149d8) Run log. Scratch summary-b4-sim.txt.
+- Lesson T-3393: git archive of a commit builds only with pywidget+tools+log/assets.md and Vendor symlinked; simctl io can't write the SSD (use /tmp).
 - Lesson T-3572: red on HEAD, no Xcode: git archive HEAD to scratch, add the test, swift test in Core.
 
 - T-3574 build 4 uploaded 11-08 10:28 from d3d39da37 (ledger d0138f6e4 unpushed). T-1932 bdbdf8d39/447500fdf on origin, unreviewed: next build lists them. Lesson: `git log origin/main..HEAD` before any push (shared main).
@@ -60,7 +60,7 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 ## Lessons
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
-- Lesson T-3671: host type-check of app code w/o Xcode: scratch tc.sh (swiftc -typecheck -disable-batch-mode -continue-building-after-errors + asset stubs); plant an error to prove it reaches the file.
+- T-3557 2e0cbfe28 11-08: first-open pass on product offered+mayWrite, 4/4 mutants killed. Full run red only on testLocationSampleThroughTheBridge (no Sim fix, pre-existing): T-3716.
 {% endraw %}
 
 

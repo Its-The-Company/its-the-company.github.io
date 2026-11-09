@@ -1,33 +1,172 @@
 {
  "schema": 1,
- "at": "2026-11-09T04:14:19.389867+00:00",
+ "at": "2026-11-09T04:20:56.242873+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-08T19:53:34-05:00"
+  "active": false,
+  "kind": "",
+  "started": null,
+  "flow": [
+   {
+    "t": "T-0811",
+    "name": "Give the bundled examples an iPhone entry point",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794197412
+     }
+    ]
+   },
+   {
+    "t": "T-0588",
+    "name": "Test the on-screen keyboard's delete key",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794195883
+     }
+    ]
+   },
+   {
+    "t": "T-3695",
+    "name": "Land branches refused for old copies of main commits",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794193650
+     }
+    ]
+   },
+   {
+    "t": "T-2491",
+    "name": "Stop the stuck extension from recreating deleted widget folders",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "macbook",
+      "at": 1794187968
+     },
+     {
+      "s": "testq",
+      "at": 1794189056
+     }
+    ]
+   }
+  ],
+  "done": [
+   {
+    "t": "T-0914",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794195849,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-2871",
+    "name": "Review the saved-run traceback cut",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794195849,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-2325",
+    "name": "Find why Investor replies were sometimes late",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794195849,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-2331",
+    "name": "Add a test that pins the route's file list",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794195849,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-0760",
+    "name": "Share the keyboard fix across app picture tests",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794193640
+   },
+   {
+    "t": "T-1993",
+    "name": "Count a try only for tasks the session started",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794192216,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-0392",
+    "name": "Move test sources into fixture files",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794192216,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-3099",
+    "name": "Remove test branches left on GitHub after runs",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794192216,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-2212",
+    "name": "Fix a test that fails with Apple's OpenSSL",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794192216,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-0025",
+    "name": "Move app strings into a String Catalog",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794192216,
+    "why": "tests failed"
+   }
+  ],
+  "landed": 63,
+  "failed": 31
  },
- "workers": [
-  {
-   "name": "odalys",
-   "task": "[site] T-3297 bring the parked flowchart to main",
-   "model": "opus",
-   "started": "2026-11-09T03:27:09.869Z",
-   "seconds": 2829,
-   "finished": null,
-   "effort": "high"
-  },
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-3393 Simulator Home Screen run, build 4 flags",
    "model": "opus",
    "started": "2026-11-09T03:54:03.512Z",
-   "seconds": 1215,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-09T04:16:04.716000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[site] T-3297 bring the parked flowchart to main",
+   "model": "opus",
+   "started": "2026-11-09T03:27:09.869Z",
+   "seconds": null,
+   "finished": "2026-11-09T04:15:50.614000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3742 AM/PM times for the Investors",
@@ -43,28 +182,12 @@
    "started": "2026-11-09T02:56:16.513Z",
    "seconds": null,
    "finished": "2026-11-09T03:34:17.184000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3296 bring the parked step feed to main",
-   "model": "opus",
-   "started": "2026-11-09T03:01:27.077Z",
-   "seconds": null,
-   "finished": "2026-11-09T03:26:46.378000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3444 disjoint retry lines on own stacks",
-   "model": "opus",
-   "started": "2026-11-09T02:50:17.608Z",
-   "seconds": null,
-   "finished": "2026-11-09T03:01:01.973000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 612,
+  "runnable_count": 605,
   "blocked_count": 112
  },
  "meter": {
@@ -102,13 +225,62 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-08T20:08:22-05:00",
  "personal": {
   "week_pct": 3.85,
-  "usage_pct": 22.9,
-  "work_pct": 68.2,
-  "read_at": "2026-11-09T04:14:00+00:00",
+  "usage_pct": 19.9,
+  "work_pct": 65.2,
+  "read_at": "2026-11-09T04:23:00+00:00",
   "running": [
+   {
+    "lane": "b2",
+    "task": "T-3751",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Merge every branch held only for touching Investor files",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T23:16:52-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-3705",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Land and close the work held by old charter copies",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T23:16:52-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-3741",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Split the host check so unrelated app changes pass apart",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-08T23:16:52-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-3665",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Read the gate window after 10 runs",
+    "m": "sonnet",
+    "e": "high",
+    "at": "2026-11-08T23:16:52-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
+   },
    {
     "lane": "b3",
     "task": "T-3735",
@@ -169,34 +341,20 @@
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-08T23:14:00-05:00",
+  "at": "2026-11-08T23:23:00-05:00",
   "mode": "midnight"
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Spread: 86% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (cut a step: 4 of 11 lands failed in 3 hours (4 red))",
-  "n": 2,
-  "at": "2026-11-08T19:53:22.765859-05:00"
- },
+ "pool": null,
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[site] T-3297 bring the parked flowchart to main",
-   "model": "opus",
-   "since": "2026-11-09T03:27:09.869Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-3393 Simulator Home Screen run, build 4 flags",
-   "model": "opus",
-   "since": "2026-11-09T03:54:03.512Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P0, Investor an Investor c6713953911 (17:37...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -210,6 +368,14 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -232,29 +398,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Build the This Session flowchart",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T03:27:09.869Z",
-    "o": "c",
-    "task": "T-3297"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Find why only Countdown draws on Jeremy's iPhone",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T03:54:03.512Z",
-    "o": "c",
-    "task": "T-3393"
-   }
-  ],
-  "src": "plan",
+  "run": [],
   "open": [
    {
     "w": "Idris",
@@ -329,55 +473,26 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "t": "Reports, Chat receipts, deadline alerts and the site's machine panel now write times as 10:18 PM...",
-    "at": "2026-11-08T22:53:00-05:00"
+    "w": "Operator",
+    "t": "this retry line asked for parked work to be merged again, and the sweep found every commit of it...",
+    "at": "2026-11-08T23:18:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "A merge whose tests run out of time on a busy machine is now tried again instead of being thrown...",
-    "at": "2026-11-08T22:33:00-05:00"
+    "w": "Operator",
+    "t": "this retry line asked for parked work to be merged again, and the sweep found every commit of it...",
+    "at": "2026-11-08T23:18:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "The live status now carries each task's steps with their start times (claimed, worker, tests...",
-    "at": "2026-11-08T22:25:00-05:00"
+    "w": "Operator",
+    "t": "this retry line asked for parked work to be merged again, and the sweep found every commit of it...",
+    "at": "2026-11-08T23:18:00-05:00"
    }
   ],
   "count": {
-   "next": 612,
+   "next": 605,
    "wait": 45,
    "blocked": 67,
    "you": 19
-  },
-  "fin": {
-   "n": 16,
-   "rows": [
-    [
-     "T-3742",
-     "Show every time to the..."
-    ],
-    [
-     "T-3740",
-     "Retry a landing that hits..."
-    ],
-    [
-     "T-3296",
-     "Feed each task's steps into..."
-    ],
-    [
-     "T-3444",
-     "Check unrelated retry lines..."
-    ],
-    [
-     "T-3734",
-     "Keep the live inbox watcher..."
-    ],
-    [
-     "T-2401",
-     "Let Investors reorder queued..."
-    ]
-   ]
   }
  },
  "qr": [],
@@ -391,22 +506,20 @@
   "queue_text",
   "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "11:14 PM",
+  "main": 0,
+  "lanes": 2,
+  "total": 2,
+  "at": "11:23 PM",
   "why": "",
-  "at_iso": "2026-11-09T04:14:00+00:00",
-  "started": "7:53 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:14 PM ET</p></section>"
+  "at_iso": "2026-11-09T04:23:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 11:23 PM ET</p></section>"
  }
 }

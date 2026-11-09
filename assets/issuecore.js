@@ -212,9 +212,18 @@ inl(para, ln.trim(), pics, 0); i++;
 }
 return box;
 }
+function ymd(t) { var p = {}; new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' }).formatToParts(new Date(t)).forEach((x) => { p[x.type] = x.value; }); return p.year + '-' + p.month + '-' + p.day; }
+function plus(d, k) { return new Date(Date.parse(d + 'T12:00Z') + k * 864e5).toISOString().slice(0, 10); }
+function groups(now) {
+var d = ymd(now), sun = plus(d, (7 - new Date(d + 'T12:00Z').getUTCDay()) % 7), x = plus(d, 2);
+return [['T', 'Tomorrow', plus(d, 1), plus(d, 1)], ['W', 'This week', x, sun], ['X', 'Next week', plus(sun, 1) > x ? plus(sun, 1) : x, plus(sun, 7)],
+['F', 'Later', plus(sun, 8), '']].filter((g) => !g[3] || g[2] <= g[3]);
+}
+function grp(v, G) { var d = ymd(v); return G.filter((g) => !g[3] || d <= g[3])[0]; }
+function at(g, t) { return window.IssueQ.et(g[2], t || '23:59'); }
 var RI = '';
 var core = { options: options, pickAsk: pickAsk, images: images, answered: answered, ago: ago, clean: clean, plain: plain, when: when, day: day,
-md: md, pic: pic, where: where, who: who, isReceipt: isReceipt, NOTE: NOTE, getJ: getJ, send: send, allow: allow, thread: thread,
+md: md, pic: pic, where: where, who: who, isReceipt: isReceipt, NOTE: NOTE, getJ: getJ, send: send, allow: allow, thread: thread, groups: groups, grp: grp, at: at, ymd: ymd, plus: plus,
 use: (r) => { repo = r; RI = '/repos/' + r + '/issues'; return RI; } };
 window.CompanyNeeds = S.core = core;
 })();

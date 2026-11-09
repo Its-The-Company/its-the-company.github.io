@@ -517,6 +517,10 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-08 09:13 ET** ((private)): The company may free internal disk space past the 20 GB line when work needs it (moves to the SSD first, per #228); guard refusals still stop an item.
 - **2026-11-08 18:08 ET** ((private)): Monday 11-09 is a full process day on the three stall causes; process work returns to the 10% share after; the company may erase unused Simulators through a tool path (a guard or classifier refusal still stops it, T-0848).
 - **2026-11-08 19:06 ET** ((private)): The company keeps the Mac mini's disk clear itself, before it runs short, by moving its files to the Company SSD or working on the SSD directly; low disk is no longer brought to the Investors as a request.
+- **2026-11-08 19:46 ET** ((private)): Merging finished <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> work into main is the top priority, ahead of new work (emergencies still win).
+- **2026-11-08 22:18 ET** ((private)): Times shown to the Investors use the 12-hour clock with AM/PM (e.g. 10:18 PM ET), never 24-hour time.
+- **2026-11-08 22:55 ET** ((private)): Option A on #232: an Investor's #41 c6703194946 'no formalities' message wins: changes to the charter's wording, investors/ and ban-keeping guards apply with no approve comment, after the applier's usual test run; real money, creative identity and human checks still go to the Investors; sections 6, 7, 11 stand. The company proposes the matching section 59 wording.
+- **2026-11-08 23:09 ET** ((private)): A land no longer refuses a branch for touching an Investor-owned path; it merges and posts on #41 what it changed in those paths. Every parked branch refused for that reason is merged at once without re-running its tests. Guard and hook refusals (T-0848) and sections 6, 7, 11 still stand.
 {% endraw %}
 
 </div>

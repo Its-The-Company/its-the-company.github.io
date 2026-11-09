@@ -73,7 +73,7 @@ A.forEach(function(a){if(okId(a[0])&&(F[a[0]]||J[a[0]]||(Q&&match([a[2],a[0],a[3
 rows=[].slice.call(q.children);mx=+q.getAttribute('data-max')||4;qb=document.getElementById('lk-q-more');
 if(qb&&/^Show \d+ more/.test(qb.textContent))qb.textContent='Show '+Math.max(0,rows.length-mx)+' more ▾';
 rows.sort(function(a,b){return (F[b.getAttribute('data-id')]?1:0)-(F[a.getAttribute('data-id')]?1:0)||(+a.getAttribute('data-n')-+b.getAttribute('data-n'))});
-rows.forEach(function(c,i){var s=c.querySelector('.lk-star');q.appendChild(c);c.classList.toggle('lk-fold',i>=mx);if(s)s.parentNode.removeChild(s);star(c,c.getAttribute('data-id'));
+rows.forEach(function(c,i){var s=c.querySelector('.lk-star');q.appendChild(c);c.classList.toggle('lk-fold',i>=mx);if(s)s.parentNode.removeChild(s);tok&&up(c,c.getAttribute('data-id'));star(c,c.getAttribute('data-id'));
 c.hidden=!match(c.getAttribute('data-q'))});
 var no=document.getElementById('lk-q-none');if(!no&&Q){no=document.createElement('p');no.id='lk-q-none';no.className='meta';no.textContent='No queued task matches.';q.parentNode.insertBefore(no,q.nextSibling)}
 if(no)no.hidden=!Q||rows.some(function(c){return !c.hidden})}
@@ -86,6 +86,35 @@ return r.json().then(function(j){var o=null;try{o=JSON.parse(unb64(j.content||''
 if(!o||typeof o!=='object'||Array.isArray(o))throw new Error('investors/favorites.json on GitHub is not valid JSON');
 return{list:(Array.isArray(o.tasks)?o.tasks:[]).filter(okId),sha:j.sha,o:o}})})}
 function take(l){F={};l.forEach(function(i){F[i]=1});fire()}
+// T-2401 (1) and T-3724 (friesevan #41 c6648649825, c6729595823, c6729606115): Move up on a queued card, token only. It posts
+// `/move X before Y` with the Investor's own token, as queue.js posts, on the issue labelled queue, found open or closed (it is
+// closed on purpose: open issues are only what waits on the Investors, #54 c6406649834). Y is the first card above X in the start
+// order (the number, not the starred-first view's place) that is not one of X's own parents: moving a child up moves its open
+// parents and grandparents just ahead of it (c6729606115, which replaced c6709231564's refusal), and the page names them.
+// tools/inbox_route.py checks the allowlist and runs tools/queue_order.py apply through board_tick.py, which re-checks the
+// lineage on the live board. The new order shows at the next build (the board's order is the queue).
+var QI=null,KIN=['parent','grandparent','great-grandparent'];
+function anc(i){var s={},t=[[lid(i),0]],x;while(t.length){x=t.shift();(G.u[x[0]]||[]).forEach(function(p){p=lid(p);if(!s[p]){s[p]=x[1]+1;t.push([p,x[1]+1])}})}return s}
+function nums(){var m={},q=document.getElementById('lk-q');(A||[]).forEach(function(a){if(okId(a[0]))m[lid(a[0])]=a[1]});
+[].forEach.call(q?q.children:[],function(d){var i=d.getAttribute('data-id');if(okId(i))m[lid(i)]=+d.getAttribute('data-n')});return m}
+function target(x,c){var s=anc(x),m=nums(),by={},n=+c.getAttribute('data-n'),y=null,go=[],may=[];Object.keys(m).forEach(function(i){by[m[i]]=i});
+while(--n>0&&by[n]&&s[by[n]]);if(n>0&&by[n])y=by[n];
+Object.keys(s).sort(function(a,b){return s[a]-s[b]||+a.slice(2)-+b.slice(2)}).forEach(function(a){var w=a+', its '+(KIN[s[a]-1]||'ancestor'),st=(G.n[a]||[])[1];
+if(m[a]){if(y&&m[a]>n)go.push(w)}else if(st==='b'||st==='w')may.push(w+' ('+LS[st].toLowerCase()+')')});return{y:y,go:go,may:may}}
+function kinl(l){return l.length<2?l.join(''):l.slice(0,-1).join(', ')+', and '+l[l.length-1]}
+function up(c,id){var o=c.querySelector('.lk-up'),b;if(o)o.parentNode.removeChild(o);if(!okId(id)||!(+c.getAttribute('data-n')>1))return;
+b=document.createElement('button');b.type='button';b.className='lk-up';b.textContent='↑';b.title='Move up one place in the start order: before number '+(+c.getAttribute('data-n')-1)+', its open parents with it';
+b.setAttribute('aria-label','Move '+id+' up one place in the start order');b.onclick=function(e){e.stopPropagation();mv(id,c)};c.appendChild(b)}
+function qiss(){if(QI)return Promise.resolve(QI);return fetch(S.API+'/repos/'+repo+'/issues?labels=queue&state=all',{headers:S.hdrs()}).then(S.checkAuth)
+.then(function(r){return r.ok?r.json():[]}).then(function(a){var i=(a||[]).filter(function(x){return x&&!x.pull_request})[0];QI=i?i.number:null;return QI})}
+function mv(x,c){var t=target(x,c),y=t.y,w;if(!okId(y)){say('Not moved: '+x+' already sits just behind its own parents at the top of the start order.');return}
+w=(t.go.length?'; it also moves '+kinl(t.go):'')+(t.may.length?'; '+kinl(t.may)+(t.may.length>1?' move too if they sit':' moves too if it sits')+' lower on the board':'');
+say('Sending: '+x+' before '+y+w+'...');
+chain=chain.then(qiss).then(function(q){if(!q)throw new Error('no issue labelled queue');var h=S.hdrs();h['Content-Type']='application/json';
+return fetch(S.API+'/repos/'+repo+'/issues/'+q+'/comments',{method:'POST',headers:h,body:JSON.stringify({body:'/move '+x+' before '+y})})}).then(S.checkAuth)
+.then(function(r){if(!r.ok)throw new Error(S.said(r)+(r.status===403||r.status===404?' (does the token have Issues: read and write?)':''));
+say('Sent: '+x+' moves ahead of '+y+w+'. The company applies it at its next inbox check; Home shows the new order after the next build.')})
+.catch(function(e){say('Not sent: '+(e&&e.message?e.message:'network error')+'.')})}
 function save(id,on,again){return read().then(function(f){var l=f.list.filter(function(i){return i!==id}),h,o;
 if((f.list.indexOf(id)>=0)===on){take(f.list);return 'same'}
 if(on)l.push(id);l.sort(function(a,b){return +a.slice(2)-+b.slice(2)});o=f.o||{};o.tasks=l;h=S.hdrs();h['Content-Type']='application/json';
@@ -147,6 +176,8 @@ items.forEach(function(x){if(x.id)IN[x.id]=x});
 var CT={};Object.keys(L.cat||{}).forEach(function(k){String(L.cat[k]).split(' ').forEach(function(n){if(n)CT['T-'+n]=k})});  // T-3427: {label: "numbers"}
 function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;p.appendChild(e);return e}
 function cap(s){s=String(s||'');return s.charAt(0).toUpperCase()+s.slice(1)}
+// T-2401 (#41 c6648649825): the model and the effort a lane gives the task, 'Opus high', as home_look.level
+function lv(x){return x.m?[cap(x.m),x.e].filter(Boolean).join(' '):''}
 // T-3318: src_words in home_look.py; '' for an unknown source, never a guess
 function sw(s,n){s=String(s||'');var k=/^(plan|key)-([a-z])$/.exec(s);return s==='plan'?'Main plan':s==='api'?'Company API credits':k?(k[1]==='key'?'Key '+k[2].toUpperCase():String(n||'')||'Account '+k[2].toUpperCase()):''}
 function nm(s){s=String(s||'').replace(/^\s*\[[^\]]*\]\s*/,'').replace(/^\s*T-\d+\s*[:,]?\s*/,'');s=cap(s);return s.length>160?s.slice(0,159).replace(/\s+\S*$/,'')+'…':s}
@@ -165,7 +196,7 @@ mk(c,'p','lk-hw meta',wd.join(' → ')+(nx.length?'; next: '+nx.join(', '):''))}
 function card(x){var c=mk(box,'div','lk-card lk-run'),r=mk(c,'div','lk-r1'),fs=mk(r,'span','lk-faces'),t,m,rt,sc;c.setAttribute('data-stage',x.s);
 c.setAttribute('data-id',x.id||x.t);if(K3&&K3.open(x.id||x.t))c.classList.add('lk-open');
 (x.w||[]).slice(0,2).forEach(function(w){var p=f[String(w).toLowerCase()],g;if(p&&pic[p]){g=mk(fs,'img');g.src=pic[p];g.alt='';g.width=g.height=40}});
-t=mk(r,'span','t');mk(t,'b','lk-tn',x.t);m=mk(t,'span','',[(x.w||[]).filter(Boolean).map(cap).join(', '),cap(x.m),x.min>=0?mins(x.min):''].filter(Boolean).join(' · '));
+t=mk(r,'span','t');mk(t,'b','lk-tn',x.t);m=mk(t,'span','',[(x.w||[]).filter(Boolean).map(cap).join(', '),lv(x),x.min>=0?mins(x.min):''].filter(Boolean).join(' · '));
 if(x.a){m.appendChild(document.createTextNode(' '));sc=mk(m,'span','lk-tag'+(x.sr?' lk-src':''),x.a);if(x.sr)sc.title='Runs on: '+x.a}
 if(x.c){sc=mk(m,'span','lk-cat',x.c);sc.title='Category: '+x.c}
 rt=mk(r,'span','lk-rt');if(x.id)mk(rt,'span','idb',x.id);if(x.n)mk(rt,'span','lk-nt',x.n);if(K3){K3.star(r,x.id);K3.aria(c)}
@@ -196,7 +227,7 @@ r.forEach(function(a){var li=mk(u,'li');mk(li,'span','idb',a[0]);li.appendChild(
 if(m){m.hidden=x<1;m.textContent='and '+x+' earlier'}}
 function draw(st,isPub){var ml=S.lane.main(st,isPub),l=ml.concat(S.lane.rows(st).filter(function(r){return!r.d})),seen={},u=[],now=Date.now(),o={},wk,ms=sw((st.tasks||{}).src);
 l.forEach(function(r){var t=String(r.t||r.task||''),id=r.task||(t.match(/\bT-\d+/)||[''])[0],k=id||nm(t),s=(L.st||{})[id],m,b=IN[id]||{},ln=/^([ab])\d*$/.exec(r.lane||''),mn=ml.indexOf(r)>=0,rs=mn?ms:sw(r.src||(ln?'plan-'+ln[1]:''),r.n);if(s&&s[0]==='parked'&&r.at&&Date.parse(r.at)>s[2])s=[r.k==='review'?'review':'coding','Fix after a failed merge'];if(r.w)o[String(r.w).toLowerCase()]=1;if(!k||seen[k])return;seen[k]=1;
-m=r.at?Math.round((now-Date.parse(r.at))/6e4):NaN;u.push({id:id,t:nm(r.t||r.task)||nm((L.nm||{})[id])||'Name not recorded',w:[r.w],m:r.m,min:m>=0?m:-1,s:s?s[0]:r.k==='review'?'review':'coding',n:s?s[1]:'',
+m=r.at?Math.round((now-Date.parse(r.at))/6e4):NaN;u.push({id:id,t:nm(r.t||r.task)||nm((L.nm||{})[id])||'Name not recorded',w:[r.w],m:r.m,e:r.e||'',min:m>=0?m:-1,s:s?s[0]:r.k==='review'?'review':'coding',n:s?s[1]:'',
 a:rs||(mn?'Main':ln?'Account '+ln[1].toUpperCase():''),sr:rs?1:0,h:b.h,x:b.x,c:b.c||CT[id]||''})});
 (L.init||[]).forEach(function(x){if(x.s!=='coding'&&x.s!=='review'&&!seen[x.id||x.t]){seen[x.id||x.t]=1;u.push(x)}});  // T-3284 item 3
 items=u;render();wk=document.getElementById('lk-working');if(wk)wk.textContent=Object.keys(o).length+' working';idle(st);fin(st)}

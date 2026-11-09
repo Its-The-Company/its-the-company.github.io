@@ -81,16 +81,37 @@ if (!btns.length) c.removeChild(o);
 mark();
 }
 function side(p) {
-var s = mk(mk(p, 'aside', 'iq-side'), 'div', 'iq-when'), due, w, set, st, x;
-mk(s, 'p', 'iq-k', 'Due'); due = mk(s, 'p', 'iq-due big'); w = mk(s, 'input', 'iq-in'); set = mk(s, 'button', 'cv-tool', 'Set deadline');
+var s = mk(mk(p, 'aside', 'iq-side'), 'div', 'iq-when'), due, mv, pk, di, ti, sv, st, x;
+mk(s, 'p', 'iq-k', 'Due'); due = mk(s, 'p', 'iq-due big'); mv = mk(s, 'div', 'iq-mv'); mv.setAttribute('role', 'group'); mv.setAttribute('aria-label', 'Move to');
+mk(mv, 'p', 'iq-k', 'Move to'); pk = mk(s, 'div', 'iq-dt'); pk.hidden = true;
+di = mk(mk(pk, 'label', null, 'Day'), 'input', 'iq-in'); ti = mk(mk(pk, 'label', null, 'Time, Eastern'), 'input', 'iq-in'); sv = mk(pk, 'button', 'cv-tool', 'Save');
+di.type = 'date'; ti.type = 'time';
 x = mk(s, 'button', 'cv-tool', 'Close #' + N); st = mk(s, 'p', 'meta');
-st.setAttribute('role', 'status'); w.type = 'datetime-local'; w.setAttribute('aria-label', 'New deadline for #' + N); set.type = x.type = 'button';
-function paint(qs) { var v = Q().due(N, ox(I), qs), late = !v || v < Date.now(); due.className = 'iq-due big' + (late ? ' late' : ''); due.textContent = v ? (v < Date.now() ? 'Past due: ' : '') + C.day(new Date(v).toISOString()) : 'No deadline: Urgent'; }
-function shut() { w.hidden = set.hidden = x.hidden = I.state === 'closed'; }
+st.setAttribute('role', 'status'); sv.type = x.type = 'button';
+function paint(qs) {
+var now = Date.now(), v = Q().due(N, ox(I), qs), late = !v || v <= now, G = C.groups(now), on = Q().queue(N, ox(I), qs, now) === 'N' ? 'N' : C.grp(v, G)[0];
+due.className = 'iq-due big' + (late ? ' late' : ''); due.textContent = v ? (v <= now ? 'Past due: ' : '') + C.day(new Date(v).toISOString()) : 'No deadline: Urgent';
+mv.querySelectorAll('button').forEach((b) => { b.remove(); });
+[['N', 'Now']].concat(G).concat([['P', 'Pick a date']]).forEach((g) => {
+var b = mk(mv, 'button', 'cv-tool', g[1]); b.type = 'button'; b.setAttribute('aria-pressed', g[0] === on ? 'true' : 'false');
+b.onclick = () => {
+if (g[0] === 'P') { pk.hidden = false; if (v) di.value = C.ymd(v); di.focus(); return; }
+go(qs, g[0] === 'N' ? Date.now() : Math.max(C.at(g), Date.now() + Q().DAY + 6e4), g[1]);
+mv.querySelectorAll('button')[[['N']].concat(G).findIndex((y) => y[0] === g[0])].focus();
+};
+});
+}
+function go(qs, v, name) {
+var keep = JSON.stringify(qs), u;
+Q().act(qs, N, ox(I), 'delay', v, Date.now()); Q().save(qs); paint(qs);
+st.textContent = '#' + N + ' moved to ' + name + ', ' + C.day(new Date(v).toISOString()) + '. '; u = mk(st, 'button', 'cv-tool', 'Undo'); u.type = 'button';
+u.onclick = () => { Object.assign(qs, JSON.parse(keep)); Q().save(qs); paint(qs); st.textContent = 'Undone.'; };
+}
+function shut() { mv.hidden = x.hidden = I.state === 'closed'; pk.hidden = pk.hidden || mv.hidden; }
 Q().load(repo).then((qs) => {
 if (I.state !== 'closed' && Q().badged(N, ox(I), qs, Date.now())) { Q().act(qs, N, ox(I), 'read', 0, Date.now()); Q().save(qs); if (window.IssueCount && window.IssueCount.read) window.IssueCount.read(1); }
 paint(qs);
-set.onclick = () => { var v = Date.parse(w.value); if (!v) { w.focus(); return; } Q().act(qs, N, ox(I), 'delay', v, Date.now()); Q().save(qs); paint(qs); st.textContent = 'Deadline set.'; };
+sv.onclick = () => { var v = Q().et(di.value, ti.value || '23:59'); if (!di.value || !v) { di.focus(); return; } pk.hidden = true; go(qs, v, Q().queue(N, ox(I), { d: { [N]: v } }, Date.now()) === 'N' ? 'Now' : C.grp(v, C.groups(Date.now()))[1]); };
 });
 shut();
 x.onclick = () => {

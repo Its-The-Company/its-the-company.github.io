@@ -51,6 +51,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-3107 (9df51f3dc): partial read of Jeremy's #227 export; [b] on #231 (3-day export, by 11-12); <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G3</span> premade = T-3657 (Idris). Lesson: board_tick note/block from a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> only queue in ops/lane-outbox (commit them); add writes main's board live.
 - Device CPython is 3.15.1, not 3.13. T-2896 (recipes in 1.0) with Idris+Ines.
+- T-1992 (01a58b94f): keeper stops show only in the exit code. T-2971 reviews my fix. Lesson: count a fix in the logs before calling a finding closed.
 {% endraw %}
 
 

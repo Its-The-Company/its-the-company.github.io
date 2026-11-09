@@ -76,7 +76,7 @@ if (!w) { a.appendChild(D.createTextNode(' ')); w = a.appendChild(S.el('span', '
 }
 function put(n, ans, later, red) { var c = { n: n, ans: ans, later: later || 0, red: red == null ? null : red, t: Date.now(), live: 1 }; try { sessionStorage.setItem(K, JSON.stringify(c)); } catch (e) { /* private mode */ } draw(c); }
 window.IssueCount = { answered: answered, count: count, put: put };
-window.IssueQ = { dl: dl, queue: queue, tier: tier, badged: badged, act: act, settle: settle, norm: norm, due: due, DAY: DAY };
+window.IssueQ = { dl: dl, queue: queue, tier: tier, badged: badged, act: act, settle: settle, norm: norm, due: due, DAY: DAY, et: etMs };
 if (!S || !S.getToken || !S.getToken() || !me) return;
 var Q = 'query($o:String!,$r:String!){repository(owner:$o,name:$r){a:object(expression:"HEAD:investors/allowlist.md"){...on Blob{text}}'
 + 'i:issues(states:OPEN,first:100){pageInfo{hasNextPage}nodes{number title body author{login}labels(first:20){nodes{name}}comments(last:1){nodes{author{login}body}}}}}}';

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-09T01:57:29.075063+00:00",
+ "at": "2026-11-09T02:00:30.282962+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,25 +9,33 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[site] T-2401 reorder queued tasks on Home",
+   "task": "[tools] T-3732 park held spares hourly",
    "model": "opus",
-   "started": "2026-11-09T01:48:49.889Z",
-   "seconds": 519,
+   "started": "2026-11-09T01:55:39.793Z",
+   "seconds": 290,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3732 park held spares hourly",
+   "task": "[site] T-2401 Home move-up control and apply step",
    "model": "opus",
-   "started": "2026-11-09T01:55:39.793Z",
-   "seconds": 109,
+   "started": "2026-11-09T01:59:06.289Z",
+   "seconds": 83,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[site] T-2401 reorder queued tasks on Home",
+   "model": "opus",
+   "started": "2026-11-09T01:48:49.889Z",
+   "seconds": null,
+   "finished": "2026-11-09T01:58:44.865000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3729 Parked shows only waiting work",
@@ -51,14 +59,6 @@
    "started": "2026-11-09T01:20:30.798Z",
    "seconds": null,
    "finished": "2026-11-09T01:35:24.544000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3714 measure and shorten parked queue",
-   "model": "opus",
-   "started": "2026-11-09T01:18:11.198Z",
-   "seconds": null,
-   "finished": "2026-11-09T01:28:32.363000+00:00"
   }
  ],
  "queue": {
@@ -107,7 +107,7 @@
   "week_pct": 3.85,
   "usage_pct": 22.9,
   "work_pct": 68.2,
-  "read_at": "2026-11-09T01:57:00+00:00",
+  "read_at": "2026-11-09T02:00:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -144,7 +144,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T20:57:00-05:00",
+  "at": "2026-11-08T21:00:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -158,9 +158,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[site] T-2401 reorder queued tasks on Home",
+   "task": "[tools] T-3732 park held spares hourly",
    "model": "opus",
-   "since": "2026-11-09T01:48:49.889Z",
+   "since": "2026-11-09T01:55:39.793Z",
    "next": [],
    "effort": "high"
   },
@@ -209,16 +209,6 @@
   "run": [
    {
     "w": "Odalys",
-    "k": "site",
-    "t": "Let Investors reorder queued tasks on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T01:48:49.889Z",
-    "o": "c",
-    "task": "T-2401"
-   },
-   {
-    "w": "Odalys",
     "k": "tools",
     "t": "Give held spares their parked name within the hour",
     "m": "opus",
@@ -226,6 +216,16 @@
     "at": "2026-11-09T01:55:39.793Z",
     "o": "c",
     "task": "T-3732"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Let Investors reorder queued tasks on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-09T01:59:06.289Z",
+    "o": "c",
+    "task": "T-2401"
    }
   ],
   "src": "plan",
@@ -377,10 +377,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "8:57 PM",
+  "at": "9:00 PM",
   "why": "",
-  "at_iso": "2026-11-09T01:57:00+00:00",
+  "at_iso": "2026-11-09T02:00:00+00:00",
   "started": "7:53 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:57 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:00 PM ET</p></section>"
  }
 }

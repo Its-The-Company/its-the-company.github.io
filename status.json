@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-09T02:15:38.317976+00:00",
+ "at": "2026-11-09T02:18:43.733538+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,25 +9,33 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[site] T-2401 Home move-up control and apply step",
+   "task": "[tools] T-3733 park the 45 stuck spares",
    "model": "opus",
-   "started": "2026-11-09T01:59:06.289Z",
-   "seconds": 992,
+   "started": "2026-11-09T02:13:41.970Z",
+   "seconds": 301,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3733 park the 45 stuck spares",
+   "task": "[site] T-2401 make Move up live, bump parents",
    "model": "opus",
-   "started": "2026-11-09T02:13:41.970Z",
-   "seconds": 116,
+   "started": "2026-11-09T02:16:23.120Z",
+   "seconds": 140,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[site] T-2401 Home move-up control and apply step",
+   "model": "opus",
+   "started": "2026-11-09T01:59:06.289Z",
+   "seconds": null,
+   "finished": "2026-11-09T02:15:40.889000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3732 park held spares hourly",
@@ -51,14 +59,6 @@
    "started": "2026-11-09T01:36:23.408Z",
    "seconds": null,
    "finished": "2026-11-09T01:55:23.366000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3730 hold branch while main is red",
-   "model": "opus",
-   "started": "2026-11-09T01:28:52.726Z",
-   "seconds": null,
-   "finished": "2026-11-09T01:48:12.662000+00:00"
   }
  ],
  "queue": {
@@ -107,7 +107,7 @@
   "week_pct": 3.85,
   "usage_pct": 22.9,
   "work_pct": 68.2,
-  "read_at": "2026-11-09T02:15:00+00:00",
+  "read_at": "2026-11-09T02:18:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -144,7 +144,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T21:15:00-05:00",
+  "at": "2026-11-08T21:18:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -158,9 +158,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[site] T-2401 Home move-up control and apply step",
+   "task": "[tools] T-3733 park the 45 stuck spares",
    "model": "opus",
-   "since": "2026-11-09T01:59:06.289Z",
+   "since": "2026-11-09T02:13:41.970Z",
    "next": [],
    "effort": "high"
   },
@@ -209,16 +209,6 @@
   "run": [
    {
     "w": "Odalys",
-    "k": "site",
-    "t": "Let Investors reorder queued tasks on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T01:59:06.289Z",
-    "o": "c",
-    "task": "T-2401"
-   },
-   {
-    "w": "Odalys",
     "k": "tools",
     "t": "Give the 45 stuck spare branches their parked name too",
     "m": "opus",
@@ -226,6 +216,16 @@
     "at": "2026-11-09T02:13:41.970Z",
     "o": "c",
     "task": "T-3733"
+   },
+   {
+    "w": "Odalys",
+    "k": "site",
+    "t": "Let Investors reorder queued tasks on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-09T02:16:23.120Z",
+    "o": "c",
+    "task": "T-2401"
    }
   ],
   "src": "plan",
@@ -377,10 +377,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "9:15 PM",
+  "at": "9:18 PM",
   "why": "",
-  "at_iso": "2026-11-09T02:15:00+00:00",
+  "at_iso": "2026-11-09T02:18:00+00:00",
   "started": "7:53 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:18 PM ET</p></section>"
  }
 }

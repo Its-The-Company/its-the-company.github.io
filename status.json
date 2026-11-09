@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-09T01:24:01.438718+00:00",
+ "at": "2026-11-09T01:27:03.217896+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-3714 measure and shorten parked queue",
    "model": "opus",
    "started": "2026-11-09T01:18:11.198Z",
-   "seconds": 350,
+   "seconds": 532,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-3727 main gate runs app Python tests",
    "model": "opus",
    "started": "2026-11-09T01:20:30.798Z",
-   "seconds": 210,
+   "seconds": 392,
    "finished": null,
    "effort": "high"
   }
@@ -64,7 +64,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 603,
+  "runnable_count": 602,
   "blocked_count": 112
  },
  "meter": {
@@ -107,7 +107,7 @@
   "week_pct": 3.85,
   "usage_pct": 22.9,
   "work_pct": 68.2,
-  "read_at": "2026-11-09T01:24:00+00:00",
+  "read_at": "2026-11-09T01:27:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -144,7 +144,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T20:24:00-05:00",
+  "at": "2026-11-08T20:27:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -304,6 +304,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "On the Issues page the Investor can now drag an issue into Now (due now) or onto a day in Later...",
+    "at": "2026-11-08T20:24:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The land system's own test was failing on main because its practice copy lacked one file, so 138...",
     "at": "2026-11-08T20:19:00-05:00"
    },
@@ -311,22 +316,21 @@
     "w": "Odalys",
     "t": "The two tests that blocked the most landings this week are fixed or loosened with the reason...",
     "at": "2026-11-08T20:17:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "When the Mac mini's disk runs low, the company now starts moving its own files to the SSD and...",
-    "at": "2026-11-08T20:09:00-05:00"
    }
   ],
   "count": {
-   "next": 603,
+   "next": 602,
    "wait": 45,
    "blocked": 67,
    "you": 19
   },
   "fin": {
-   "n": 3,
+   "n": 4,
    "rows": [
+    [
+     "T-3583",
+     "Drag issues between Now and..."
+    ],
     [
      "T-3720",
      "Make the landing gate tests..."
@@ -363,10 +367,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "8:24 PM",
+  "at": "8:27 PM",
   "why": "",
-  "at_iso": "2026-11-09T01:24:00+00:00",
+  "at_iso": "2026-11-09T01:27:00+00:00",
   "started": "7:53 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:24 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:27 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-09T03:43:58.571602+00:00",
+ "at": "2026-11-09T03:46:59.479130+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[site] T-3297 bring the parked flowchart to main",
    "model": "opus",
    "started": "2026-11-09T03:27:09.869Z",
-   "seconds": 1008,
+   "seconds": 1189,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[tools] T-3742 AM/PM times for the Investors",
    "model": "opus",
    "started": "2026-11-09T03:34:51.685Z",
-   "seconds": 546,
+   "seconds": 727,
    "finished": null,
    "effort": "high"
   }
@@ -64,7 +64,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 605,
+  "runnable_count": 606,
   "blocked_count": 112
  },
  "meter": {
@@ -107,33 +107,8 @@
   "week_pct": 3.85,
   "usage_pct": 22.9,
   "work_pct": 68.2,
-  "read_at": "2026-11-09T03:43:00+00:00",
+  "read_at": "2026-11-09T03:47:00+00:00",
   "running": [
-   {
-    "lane": "b",
-    "task": "T-3665",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Read the gate window after 10 runs",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-08T21:19:00-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-3570",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Keep the gate's passing lines when one member moves",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-08T21:19:00-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
    {
     "lane": "b2",
     "task": "T-3282",
@@ -156,32 +131,6 @@
     "e": "high",
     "at": "2026-11-08T21:26:07-05:00",
     "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3553",
-    "w": "Idris",
-    "k": "build",
-    "t": "Give web requests the same drawing time reserve",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T21:26:09-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3548",
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the claim refusal for work waiting to land",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T21:26:09-05:00",
-    "n": "Jeremy",
-    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -220,7 +169,7 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T22:43:00-05:00",
+  "at": "2026-11-08T22:47:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -395,7 +344,7 @@
    }
   ],
   "count": {
-   "next": 605,
+   "next": 606,
    "wait": 45,
    "blocked": 67,
    "you": 19
@@ -451,12 +400,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "10:43 PM",
+  "lanes": 1,
+  "total": 3,
+  "at": "10:47 PM",
   "why": "",
-  "at_iso": "2026-11-09T03:43:00+00:00",
+  "at_iso": "2026-11-09T03:47:00+00:00",
   "started": "7:53 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 10:43 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:47 PM ET</p></section>"
  }
 }

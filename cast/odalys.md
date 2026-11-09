@@ -38,13 +38,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Open (2026-11-07)
 
 
-- T-3325 ed4e87198 (ticked, T-3191 too): one Lock In mode for all accounts (ops/lock_in.json mode; daily = hold after day's share). After-read: first LOCK IN DAILY day, lock_in_share.json vs pools. Pre-existing reds: test_personal_lane 5, site_personal jekyll.
-
-- T-3173 e700999cb (ticked): site_personal 221/0. Build red a780a76e8 (Liquid in account name, code); 19 rows cc2a57bc6 (badge site-state comment, test). T-1783 open: guard refused an import of test_personal_lane.py (11-08).
-
-- T-3682/T-3686 8b50e77ea (ticked): ops/refusals.jsonl; refusals.py tick every 5 min from inbox_watch step 7 (mark ops/watch/refusals_scan.json). After-read: ops/runs/refusals_scan-out.log after the next refusal.
-
-
 - T-3722 7f7390365 (ticked): disk_free no Investor emergency while SSD >=50 GB free; acts (disk_free_act rows). Sim set on SSD refused (sandbox); sparse image on SSD works (n=1). Rest T-3726. After-read df / after 21:05 11-08.
 - T-3670 566e6adfb (ticked): Chat files via attach.js -> contents PUT research/inbound/<n>/ + 'File:' lines. site_send_test 8 reds at HEAD too (issuecount site-state POST counted as a send): harness fix open.
 
@@ -61,9 +54,17 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-3742 21b0e7681 (ticked): tools/ampm.py 12-hour clock + lint (report_check, plan_block, inbox comment()). Before: 33/34 reports 24-hour (924 hits). Rest T-3746 site, T-3747 posters/card Deadline. After-read: next report_check ok with 0 time misses.
 
+- T-3568 48d6e9b90 + T-3759 f528af8e4 (ticked): gate xc via land_xc.py on land/g<n>; green kept by tree (xc_green.py), line/tip/spare reuse. Live n=0. After-read: spec_gate xc_reused, 'green already'.
+
+- T-3341 a0691b2a7 (open): retry_stats.py; passes follow main moving, not time. Idle-retry patch in ops/plans, green run refused (pkill in cmd: never pkill shared suites).
+
+- T-3452 ddc4b7b4b (ticked): OPT-125 second path for lines stacked on an xc line (MQ_GATE_ALT=0 reverts). Live n=0. After-read spec_gate alts/alt_landed. Next lever: hand over without waiting the full xc limit.
+
+- T-3777 3d57c135b (ticked): OPT-097 no_effect, 8.78/h vs 9.50, guards held; pool at floor 8 61%. Next lever: redone signal's board lag (new entry first).
+
 ## Lessons
 - Older notes: archive.md (memory_archive.py at session close).
-- T-3549 a2e3fb0d6 (open): spare trees a4-b6 (~11.6 GB) now count idle past Vendor relinks/index refresh. 17.4 GB / at 18:03 11-08; SSD not answering (ssd_guard refused). After-read: df / once the keeper moves them.
+- T-3776 21109a8e9: OPT-076 no_effect, stop never fired (superseded by OPT-088 in 16 h). Lesson: before a verdict, check the treatment ran (count its log line) and was not replaced.
 {% endraw %}
 
 

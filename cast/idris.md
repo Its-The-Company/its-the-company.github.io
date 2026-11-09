@@ -36,10 +36,9 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 
 - Lesson T-1851/T-3550: zsh never splits `$F`; pass xc_file_tests filters and main_gate paths as ${=F}. "checking 0 file(s)" = gate ran HEAD, not my change. Local xc.sh after others' commits: `xcodegen generate` first (xcodeproj is ignored, goes stale).
 
-- T-0656 2026-11-04: slice 1 <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> untested in company-scratch/T-0656-idris (EditorTooling, tests, patch); board noted. Freeze passed: <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line for 1.1.
 - Lesson T-0656: start the build first, before writing code; pgrep xcodebuild. A held lock ate 30 min and the session.
 
-- T-0389 slice b 2026-11-04: card written, never built; parked in company-scratch/T-0389-idris/tree/ and PyWidgetApp.t0389+t0657.patch (stage_hunks.py takes my hunks). Next: T-1982 (build+commit), then T-1983 jump, T-1984 perf.
+- T-0389 slice b 2026-11-04: card written, never built; <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> in company-scratch/T-0389-idris/tree/ and PyWidgetApp.t0389+t0657.patch (stage_hunks.py takes my hunks). Next: T-1982 (build+commit), then T-1983 jump, T-1984 perf.
 - Lesson T-0389: with ~10 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> the xcodebuild lock queue passed 45 min and then the disk line refused. Start xc.sh in the background (timeout 7200000, XC_LOCK_WAIT up) as the first step after coding, one `test` call, and check free disk before writing code.
 - T-2583 cc5c7c277 (prompt placement, T-2576 F1/F2): Desk+Placement 19/0 local; Pernille re-reviews. Real UIKit drop never reproduced (iOS 26 queues).
 - Lesson T-1404: one Bash call is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
@@ -60,7 +59,8 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 ## Lessons
 - StoreKit, T-0583/T-0589, caret lessons: archive.md.
 
-- T-3557 2e0cbfe28 11-08: first-open pass on product offered+mayWrite, 4/4 mutants killed. Full run red only on testLocationSampleThroughTheBridge (no Sim fix, pre-existing): T-3716.
+- T-3757 11-09: hold fix for not-started rows written, UNCOMMITTED in main checkout + scratch patch; runner silent, gate exit 3. Lesson: check runner liveness (xc_route status) before main_gate; host suites cost 21 min first.
+- T-3553 03bf4f46a 11-08: http.py keeps device.BUDGET_RESERVE_S; review T-3743 (Pernille); T-3400 rebases http.py. Lesson: bridge_driver Stop starts with Python's clock, so a full-budget race passes on host: stop_after < budget models Swift's lag.
 {% endraw %}
 
 

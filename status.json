@@ -1,11 +1,47 @@
 {
  "schema": 1,
- "at": "2026-11-09T05:04:47.435113+00:00",
+ "at": "2026-11-09T07:45:46.748500+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
+   {
+    "t": "T-3570",
+    "name": "Keep the gate's passing lines when one member moves",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794204126
+     },
+     {
+      "s": "landing",
+      "at": 1794207221
+     }
+    ]
+   },
+   {
+    "t": "T-0444",
+    "name": "Fix the version wording in Acknowledgements rows",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794202611
+     }
+    ]
+   },
+   {
+    "t": "T-3132",
+    "w": "Idris",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794201371
+     }
+    ]
+   },
    {
     "t": "T-2098",
     "name": "Fix paths in the mutation check files",
@@ -29,17 +65,6 @@
     ]
    },
    {
-    "t": "T-3695",
-    "name": "Land branches refused for old copies of main commits",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794193650
-     }
-    ]
-   },
-   {
     "t": "T-2491",
     "name": "Stop the stuck extension from recreating deleted widget folders",
     "acct": "Personal b",
@@ -56,6 +81,29 @@
    }
   ],
   "done": [
+   {
+    "t": "T-3553",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794210170
+   },
+   {
+    "t": "T-3695",
+    "name": "Land branches refused for old copies of main commits",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794209255,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-3548",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794204120
+   },
    {
     "t": "T-0811",
     "name": "Give the bundled examples an iPhone entry point",
@@ -116,58 +164,64 @@
     "end": "failed",
     "end_at": 1794192216,
     "why": "tests failed"
-   },
-   {
-    "t": "T-0392",
-    "name": "Move test sources into fixture files",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794192216,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-3099",
-    "name": "Remove test branches left on GitHub after runs",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794192216,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-2212",
-    "name": "Fix a test that fails with Apple's OpenSSL",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794192216,
-    "why": "tests failed"
    }
   ],
-  "landed": 57,
-  "failed": 30
+  "landed": 41,
+  "failed": 19
  },
  "workers": [],
  "who": "",
- "recent": [],
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3777 measure adaptive pool",
+   "model": "opus",
+   "started": "2026-11-09T07:14:50.236Z",
+   "seconds": null,
+   "finished": "2026-11-09T07:23:51.797000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3776 measure report lateness",
+   "model": "opus",
+   "started": "2026-11-09T07:14:55.841Z",
+   "seconds": null,
+   "finished": "2026-11-09T07:19:04.196000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[build] T-3366 site Send test double count",
+   "model": "opus",
+   "started": "2026-11-09T07:03:42.846Z",
+   "seconds": null,
+   "finished": "2026-11-09T07:14:28.254000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-2950 runner status splits joined tasks",
+   "model": "opus",
+   "started": "2026-11-09T07:03:36.208Z",
+   "seconds": null,
+   "finished": "2026-11-09T07:05:16.011000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 609,
-  "blocked_count": 112
+  "runnable_count": 612,
+  "blocked_count": 116
  },
  "meter": {
   "five_hour": {
-   "pct": 4.0,
-   "resets_at": "2026-11-09T07:59:59.896736+00:00",
+   "pct": 5.0,
+   "resets_at": "2026-11-09T07:59:59.807469+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 96.0,
+   "left": 95.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 15.0,
-   "resets_at": "2026-11-15T06:59:59.896756+00:00",
+   "resets_at": "2026-11-15T06:59:59.807489+00:00",
    "used_words": "of your weekly allowance used",
    "left": 85.0,
    "left_words": "of your weekly allowance left"
@@ -177,10 +231,10 @@
    "resets_at": "2026-11-15T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-08T23:40:59.343185-05:00"
+  "read_at": "2026-11-09T00:09:59.594866-05:00"
  },
  "ui": {
-  "week_pct": 0.009,
+  "week_pct": 0.008,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -192,185 +246,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-08T23:56:00-05:00",
+ "next_tick": "2026-11-09T00:25:00-05:00",
  "personal": {
-  "week_pct": 3.72,
-  "usage_pct": 19.7,
-  "work_pct": 62.5,
-  "read_at": "2026-11-09T05:07:00+00:00",
-  "running": [
-   {
-    "lane": "a2",
-    "task": "T-3707",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Refresh a stale usage reading before holding a slot",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T23:25:52-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3708",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Trace main-session outages and alert after three failed ticks",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T23:25:52-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3719",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Apply the five-file change an Investor approved",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T23:25:52-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3327",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Every Running card names its worker and model",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T23:25:52-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3679",
-    "w": "Ines",
-    "k": "plan",
-    "t": "Redo propose retiring the amendments file",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T23:25:50-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3662",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Find why the post-apply test run timed out",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T23:25:50-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3706",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop the sync rewriting main commits while pushes are held",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T23:25:50-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3508",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Browser read of the JS-drawn views for 24-hour text",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T23:25:50-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3751",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Merge every branch held only for touching Investor files",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T23:16:52-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3705",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Land and close the work held by old charter copies",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T23:16:52-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3741",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Split the host check so unrelated app changes pass apart",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T23:16:52-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3665",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Read the gate window after 10 runs",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-08T23:16:52-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3735",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Show what blocks each blocked task on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T22:56:46-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3127",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Find what sends main sessions a stray SIGTERM",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-08T22:56:46-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   }
-  ]
+  "week_pct": 3.68,
+  "usage_pct": 17.9,
+  "work_pct": 60.0,
+  "read_at": "2026-11-09T07:47:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -390,30 +272,30 @@
   }
  ],
  "disk": {
-  "free_gb": 36,
+  "free_gb": 17,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 256
+   "free_gb": 269
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": false,
-   "at": "2026-11-08T23:53:00-05:00",
+   "at": "2026-11-09T02:41:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-09T00:07:00-05:00",
+  "at": "2026-11-09T02:47:00-05:00",
   "mode": null
  },
  "next_tick_why": "last_tick",
  "idle": {
-  "since": "2026-11-08T23:45:08-05:00",
-  "minutes": 19,
-  "why": "a tick has spent 39 min on steps before the session",
+  "since": "2026-11-09T02:24:26-05:00",
+  "minutes": 21,
+  "why": "a tick has spent 2 h 37 m on steps before the session",
   "healed": []
  },
  "pool": null,
@@ -543,26 +425,26 @@
   ],
   "done": [
    {
-    "w": "Operator",
-    "t": "this retry line asked for parked work to be merged again, and the sweep found every commit of it...",
-    "at": "2026-11-08T23:18:00-05:00"
+    "w": "Idris",
+    "t": "When the network hangs, a widget's web request now gives up half a second before the app's time...",
+    "at": "2026-11-09T02:42:00-05:00"
    },
    {
-    "w": "Operator",
-    "t": "this retry line asked for parked work to be merged again, and the sweep found every commit of it...",
-    "at": "2026-11-08T23:18:00-05:00"
+    "w": "Odalys",
+    "t": "Letting the machine choose how many agents run at once did not finish more tasks an hour; it...",
+    "at": "2026-11-09T02:23:00-05:00"
    },
    {
-    "w": "Operator",
-    "t": "this retry line asked for parked work to be merged again, and the sweep found every commit of it...",
-    "at": "2026-11-08T23:18:00-05:00"
+    "w": "Odalys",
+    "t": "The change that was meant to stop a running work session so the twice-daily report goes out on...",
+    "at": "2026-11-09T02:18:00-05:00"
    }
   ],
   "count": {
-   "next": 609,
+   "next": 612,
    "wait": 45,
-   "blocked": 67,
-   "you": 19
+   "blocked": 71,
+   "you": 20
   }
  },
  "qr": [],
@@ -574,6 +456,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -583,12 +466,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 4,
-  "total": 4,
-  "at": "12:07 AM",
-  "why": "",
-  "at_iso": "2026-11-09T05:07:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "2:47 AM",
+  "why": "Between sessions: no session is running. Last check 12:10 AM ET.",
+  "at_iso": "2026-11-09T07:47:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 12:07 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:47 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 12:10 AM ET.</p></section>"
  }
 }

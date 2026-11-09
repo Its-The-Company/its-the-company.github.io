@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-09T00:53:33.578069+00:00",
+ "at": "2026-11-09T00:56:40.015997+00:00",
  "session": {
   "active": true,
-  "kind": "",
-  "started": null
+  "kind": "work",
+  "started": "2026-11-08T19:53:34-05:00"
  },
  "workers": [],
  "who": "",
@@ -55,7 +55,7 @@
   "week_pct": 3.85,
   "usage_pct": 22.9,
   "work_pct": 68.2,
-  "read_at": "2026-11-09T00:53:00+00:00",
+  "read_at": "2026-11-09T00:56:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -92,12 +92,16 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T19:53:00-05:00",
+  "at": "2026-11-08T19:56:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: 87% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (cut a step: 4 of 11 lands failed in 3 hours (4 red))",
+  "n": 2,
+  "at": "2026-11-08T19:53:22.765859-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
@@ -150,6 +154,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -244,6 +249,10 @@
    "wait": 45,
    "blocked": 67,
    "you": 19
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [],
@@ -254,7 +263,7 @@
  "inbox": [
   {
    "id": "c6729576810",
-   "state": "received",
+   "state": "in_progress",
    "position": 1,
    "tasks": {
     "open": 0,
@@ -264,7 +273,7 @@
   },
   {
    "id": "c6729595823",
-   "state": "received",
+   "state": "in_progress",
    "position": 2,
    "tasks": {
     "open": 0,
@@ -274,7 +283,7 @@
   },
   {
    "id": "c6729606115",
-   "state": "received",
+   "state": "in_progress",
    "position": 3,
    "tasks": {
     "open": 0,
@@ -298,10 +307,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "7:53 PM",
+  "at": "7:56 PM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-09T00:53:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:53 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "at_iso": "2026-11-09T00:56:00+00:00",
+  "started": "7:53 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:56 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-09T02:49:12.284720+00:00",
+ "at": "2026-11-09T02:52:16.044434+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,25 +9,33 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-3734 watcher runs committed code only",
+   "task": "[tools] T-3738 landing script from saved copy",
    "model": "opus",
-   "started": "2026-11-09T02:35:15.389Z",
-   "seconds": 836,
+   "started": "2026-11-09T02:48:33.221Z",
+   "seconds": 222,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3738 landing script from saved copy",
+   "task": "[tools] T-3444 disjoint retry lines on own stacks",
    "model": "opus",
-   "started": "2026-11-09T02:48:33.221Z",
-   "seconds": 39,
+   "started": "2026-11-09T02:50:17.608Z",
+   "seconds": 118,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3734 watcher runs committed code only",
+   "model": "opus",
+   "started": "2026-11-09T02:35:15.389Z",
+   "seconds": null,
+   "finished": "2026-11-09T02:49:42.728000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3733 park the 45 stuck spares",
@@ -51,14 +59,6 @@
    "started": "2026-11-09T01:59:06.289Z",
    "seconds": null,
    "finished": "2026-11-09T02:15:40.889000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3732 park held spares hourly",
-   "model": "opus",
-   "started": "2026-11-09T01:55:39.793Z",
-   "seconds": null,
-   "finished": "2026-11-09T02:12:24.662000+00:00"
   }
  ],
  "queue": {
@@ -107,7 +107,7 @@
   "week_pct": 3.85,
   "usage_pct": 22.9,
   "work_pct": 68.2,
-  "read_at": "2026-11-09T02:49:00+00:00",
+  "read_at": "2026-11-09T02:52:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -207,19 +207,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 258
+   "free_gb": 273
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T21:45:00-05:00",
+   "at": "2026-11-08T21:51:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T21:49:00-05:00",
+  "at": "2026-11-08T21:52:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -233,9 +233,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-3734 watcher runs committed code only",
+   "task": "[tools] T-3738 landing script from saved copy",
    "model": "opus",
-   "since": "2026-11-09T02:35:15.389Z",
+   "since": "2026-11-09T02:48:33.221Z",
    "next": [],
    "effort": "high"
   },
@@ -285,22 +285,22 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Keep the live inbox watcher on committed code",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-09T02:35:15.389Z",
-    "o": "c",
-    "task": "T-3734"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Run the landing script from a saved copy",
     "m": "opus",
     "e": "high",
     "at": "2026-11-09T02:48:33.221Z",
     "o": "c",
     "task": "T-3738"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Check unrelated retry lines on their own stacks",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-09T02:50:17.608Z",
+    "o": "c",
+    "task": "T-3444"
    }
   ],
   "src": "plan",
@@ -452,10 +452,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "9:49 PM",
+  "at": "9:52 PM",
   "why": "",
-  "at_iso": "2026-11-09T02:49:00+00:00",
+  "at_iso": "2026-11-09T02:52:00+00:00",
   "started": "7:53 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:53 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:52 PM ET</p></section>"
  }
 }

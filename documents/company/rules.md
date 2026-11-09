@@ -516,6 +516,7 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-08 07:50 ET** ((private)): Standing: whenever the Mac mini's disk runs short and the Company SSD has room, the company moves its own data there automatically, with no Investor step; Jeremy does not delete the four duplicate folders for now.
 - **2026-11-08 09:13 ET** ((private)): The company may free internal disk space past the 20 GB line when work needs it (moves to the SSD first, per #228); guard refusals still stop an item.
 - **2026-11-08 18:08 ET** ((private)): Monday 11-09 is a full process day on the three stall causes; process work returns to the 10% share after; the company may erase unused Simulators through a tool path (a guard or classifier refusal still stops it, T-0848).
+- **2026-11-08 19:06 ET** ((private)): The company keeps the Mac mini's disk clear itself, before it runs short, by moving its files to the Company SSD or working on the SSD directly; low disk is no longer brought to the Investors as a request.
 {% endraw %}
 
 </div>

@@ -59,11 +59,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3682/T-3686 8b50e77ea (ticked): ops/refusals.jsonl; refusals.py tick every 5 min from inbox_watch step 7 (mark ops/watch/refusals_scan.json). After-read: ops/runs/refusals_scan-out.log after the next refusal.
 
 
+- T-3670 566e6adfb (ticked): Chat files via attach.js -> contents PUT research/inbound/<n>/ + 'File:' lines. site_send_test 8 reds at HEAD too (issuecount site-state POST counted as a send): harness fix open.
+
 ## Lessons
 - Older notes: archive.md (memory_archive.py at session close).
-- Fixtures merged into real board data must drop real edges to their IDs (T-3434).
-- T-3444 cb0a552a1 (OPT-124): gate solo lanes (land_par.disjoint on files+checks); MQ_GATE_LANES=0 old path. Replay 18->16 rebuilds/11 runs. After-read: spec_gate.jsonl "rebuilds"/"linear" at n=20. Host shared by 49/66 rows <span title="A measured fact that holds a grade below a letter, however good the rest is.">caps</span> it.
-- T-3678 4918bfaec (ticked, T-3582 too): box cases ported to site_issue_page_test (29 + 36 mutants). T-3583 next (drag, Now name).
+- T-3549 a2e3fb0d6 (open): spare trees a4-b6 (~11.6 GB) now count idle past Vendor relinks/index refresh. 17.4 GB / at 18:03 11-08; SSD not answering (ssd_guard refused). After-read: df / once the keeper moves them.
 {% endraw %}
 
 

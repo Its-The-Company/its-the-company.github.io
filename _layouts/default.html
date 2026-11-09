@@ -789,6 +789,20 @@ html,body,.cv-dock textarea,.cv-dock .cv-state{overscroll-behavior-y:auto}
   .cv-dock .cv-send{width:40px;height:40px}.cv-bar .cv-fake{min-height:40px;font-size:max(16px,var(--fs-2))}
 }
 @media (max-width:879px) and (pointer:coarse){.cv-dock:focus-within{padding-bottom:var(--s2)}}
+/* T-3670: Chat's files (attach.js). The list sits under the box: a small picture for an image, the name and size, Remove;
+   a page-wide drag of a file outlines the box. On a phone, Attach is a round + left of the text box, as in Messages,
+   so the To row keeps its room. */
+.cv-files{list-style:none;margin:var(--s2) 0 0;padding:0;font-size:var(--fs-0)}.cv-files:empty{display:none}
+.cv-files li{display:flex;align-items:center;gap:var(--s2);margin-top:var(--s1);min-width:0}
+.cv-files li>span{flex:1;min-width:0;overflow-wrap:anywhere}.cv-files img{width:32px;height:32px;object-fit:cover;border-radius:var(--r-s)}
+.cv-files .cv-note{color:var(--muted)}
+.cv-dock.cv-drop{outline:2px dashed var(--accent);outline-offset:-4px}
+@media (max-width:879px){
+  .cv-dock:has(>textarea):has(.cv-att){grid-template-columns:auto minmax(0,1fr) auto auto auto;
+    grid-template-areas:"grip grip grip grip grip" "to to pmb hide hide" "att ta ta ta send" "files files files files files" "hint hint hint hint hint" "out out out out out"}
+  .cv-dock .cv-att{grid-area:att;align-self:end;justify-content:center;width:40px;height:40px;padding:0;font-size:0}
+  .cv-dock .cv-att::before{content:"+";font-size:24px;font-weight:400;line-height:1}.cv-dock>.cv-files{grid-area:files;margin:0}
+}
 {% endraw %}
 /* investors/site/theme.css */
 {% raw %}/* The Investors' styles for the site. Anything here is added after the site's own styles, so it wins.

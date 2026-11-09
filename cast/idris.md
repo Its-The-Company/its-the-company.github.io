@@ -46,7 +46,7 @@ Dated task logs and full lessons (StoreKit, T-0583/T-0589, caret): archive.md.
 - Lesson T-1404: one Bash call is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
 
 - T-3550 16e32a86e (review T-3561 Pernille): timeout keeps fresh tree; runtime readings are naive local (_wire.want_time), premades wrap with aware(). Sun use_current path unchecked; T-3551 open.
-- T-3393/T-3572 11-08: a premade's failed first run had no row (its lock lives in widgets/<id>); RunLogStore makes a premade's folder now. Open: next build's Run log, Sun/Distance.
+- T-3393 bb00149d8 11-08: rows carry NotWritten/NoScript + reason (gate green). Cause not found; Simulator Release+gate run refused at disk line (17<20 GB). Next: that run, build 5.
 - Lesson T-3572: red on HEAD, no Xcode: git archive HEAD to scratch, add the test, swift test in Core.
 
 - T-3574 build 4 uploaded 11-08 10:28 from d3d39da37 (ledger d0138f6e4 unpushed). T-1932 bdbdf8d39/447500fdf on origin, unreviewed: next build lists them. Lesson: `git log origin/main..HEAD` before any push (shared main).

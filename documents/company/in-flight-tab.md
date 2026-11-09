@@ -69,6 +69,30 @@ For example: coding, test queue, testing, coding, test queue, testing, review, m
 - **The merge-time test queue is the same single runner queue**, so on the track it reads "test queue" before Merge
   Testing, and while it waits the task shows under Simulator only (as decided above).
 
+## The waits the timeline must record (an Investor c6695106661, 3:46 PM; T-3116)
+
+The data step (2) reads tools/task_stages.py's per-task stages. c6695106661 asks for ten parts. Where each stands
+(2026-11-08):
+
+1. **Track order** Coding, Test queue, Testing, Review, Merge queue, Merging. Not changed. Two later Investor
+   comments replaced it. c6695632816 (4:08 PM, above) makes the track the task's real history, in any order.
+   c6704144871 (11-07, T-3219) set the stage chips to Coding, Review, Test queue, Testing, Merge queue, Merge
+   testing, Parked, Merging. home_look.py follows both.
+2. **Review split** into waiting for a reviewer and reviewing, so Running stays Claude-only: T-3698.
+3. **Parked** is its own step, with the refusal's reason, split from Merging. Done in T-3116. A refused try with no
+   fix commit is Parked until the retry's land starts (its first land step row), or stays open if never retried.
+   Parked time still counts in the merge_queue bottleneck row. On the main checkout's records over 240 h (1,207
+   tasks), the tasks shown as Merging went from 260 to 4. The other 256 are now Parked.
+4. **Paused** for usage limits, PAUSE and lane stops (fills the usage row): T-3699.
+5. **Blocked** for disk holds, Investor waits and other tasks (fills the disk and depends rows): T-3700.
+6. **Lost session**, a claim that ends with no commit and is taken again: T-3701.
+7. **xc.sh records its task** (0 of 1,737 rows in ops/metrics/xc.jsonl have one, 11-08): T-3702.
+8. **A retry with no fix** adds another merge pass, and only a fix commit adds a Coding step. Done in T-3116, with
+   part 3. Each land try is one Merging pass. With no land step row for a retry, its pass is recorded with no
+   length (start = end).
+9. **Machine change** when a merge check falls back from the MacBook to the Mac mini: T-3703.
+10. **Live** after landing, done when the change is on the site or in TestFlight: T-3704.
+
 ## Steps (board lines)
 
 1. **Design (Maren, T-3095, updated):** frames of In flight and its three subtabs at 390 and 1280, light and dark.

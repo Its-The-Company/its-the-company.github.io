@@ -65,7 +65,7 @@ function inline(box, s) {
 s.split(TOK).forEach((p, k) => {
 if (!(k % 2)) { if (p) put(box, txt(p)); return; }
 if (p.slice(0, 2) === '**') return mk(box, 'b', null, p.slice(2, -2));
-var a = mk(box, 'a', null, p), t = p.charAt(0) === '#';
+var a = mk(box, 'a', null, /\/research\/inbound\/\d+\/[^/]+$/.test(p) ? p.split('/').pop().replace(/^\d{8}T\d{6}(-\d)?-/, '') : p), t = p.charAt(0) === '#';
 a.href = t ? '#t=' + p.slice(1) : p; if (!t) { a.rel = 'noopener'; a.target = '_blank'; }
 });
 }
@@ -308,8 +308,10 @@ function target() { return typeof cur === 'number' ? cur : mainN() || 'main'; }
 function draftKey() { return 'company.draft.' + target(); }
 function pOn() { return LS.getItem(draftKey() + '.plan') === '1'; }
 function toText() { var n = target(), i = issue(n); return isMain(n) ? 'Chat' : '#' + n + (i ? ' ' + i.title : ''); }
+var F = S.attach && S.attach(dock, { say: (k, t, ms) => C.state(k, t, ms), dis: () => C.dis(), ok: () => composerOn && !S.rejected(),
+open: () => { if (!C.open) { C.open = true; drawDock(); } } });
 var C = S.compose(dock, { key: draftKey, keep: () => cur !== null, open: isDesk, ph: 'Handled as if typed into Claude Code.',
-tools: [pmb], after: [hint], cls: () => pOn() ? ' cv-plan' : '', on: () => composerOn, send: () => { doSend(); },
+tools: [pmb].concat(F ? F.tools : []), after: [hint].concat(F ? F.after : []), cls: () => pOn() ? ' cv-plan' : '', on: () => composerOn, send: () => { doSend(); },
 drawn: (o) => { if (main) main.className = 'cv-desk' + (o ? ' cv-open' : ''); },
 bar: () => isMain(target()) ? 'Message the company...' : 'Reply to ' + toText() + '...',
 to: (to) => {
@@ -320,6 +322,7 @@ if (nm) mk(to, 'span', null, '· as ' + nm);
 attr(pmb, 'aria-pressed', p ? 'true' : 'false'); hint.hidden = !p;
 } });
 var ta = C.ta, drawDock = C.draw, saveDraft = C.save, state = C.state;
+if (F) C.can = ((f) => () => f() || (F.n() > 0 && !C.busy && !S.rejected()))(C.can);
 pmb.onclick = () => { var k = draftKey() + '.plan'; if (pOn()) LS.removeItem(k); else LS.setItem(k, '1'); drawDock(); };
 function post(path, body) {
 var h = hdrs(); h['Content-Type'] = 'application/json';
@@ -331,15 +334,15 @@ function stamp(text, name, p) { return text.replace(NOTE, '').trim() + (p ? '\n\
 function doSend() {
 if (!composerOn || C.busy || S.rejected()) return;
 var text = ta.value.trim(), name = cleanName(LS.getItem(NAME)), p = pOn(), n = target(), dk = draftKey();
-if (!text) { state('failed', 'Write a message first.', 4000); return; }
+if (!text && !(F && F.n())) { state('failed', 'Write a message first.', 4000); return; }
 C.set(true); state('', 'Sending...');
 var w0 = Promise.resolve();
 var who = n === 'main' ? get(RI + '?labels=main').then((l) => { if (l && l[0]) extra[n = l[0].number] = l[0]; return w0; }) : w0;
 who.then(() => {
-if (typeof n !== 'number') return post(RI, { title: 'Chat', body: stamp(text, name, p), labels: ['chat', 'main'] });
-return post(RI + '/' + n + '/comments', { body: stamp(text, name, p) });
+if (typeof n !== 'number') { if (F && F.n()) throw new Error('Chat opens with a first message; send it without files'); return post(RI, { title: 'Chat', body: stamp(text, name, p), labels: ['chat', 'main'] }); }
+return (F ? F.up(repo, n) : w0).then((fl) => post(RI + '/' + n + '/comments', { body: stamp(text + (fl || ''), name, p) }));
 }).then((r) => {
-LS.removeItem(dk); LS.removeItem(dk + '.plan'); ta.value = '';
+LS.removeItem(dk); LS.removeItem(dk + '.plan'); ta.value = ''; if (F) F.done();
 var made = typeof n !== 'number' && r.number;
 state('sent', 'Sent' + (made ? ' as #' + r.number : '') + '. A receipt follows within a tick.', 8000);
 etags = {}; C.busy = false;

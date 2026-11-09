@@ -1,39 +1,14 @@
 {
  "schema": 1,
- "at": "2026-11-09T00:39:28.595888+00:00",
+ "at": "2026-11-09T00:53:33.578069+00:00",
  "session": {
   "active": true,
-  "kind": "work",
-  "started": "2026-11-08T18:59:09-05:00"
+  "kind": "",
+  "started": null
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[site] T-3670 file attach in Chat",
-   "model": "opus",
-   "started": "2026-11-09T00:00:16.894Z",
-   "seconds": null,
-   "finished": "2026-11-09T00:38:39.233000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3393 run log reason and Home Screen run",
-   "model": "opus",
-   "started": "2026-11-09T00:07:06.583Z",
-   "seconds": null,
-   "finished": "2026-11-09T00:29:55.027000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3393 premades not drawing",
-   "model": "opus",
-   "started": "2026-11-09T00:00:09.568Z",
-   "seconds": null,
-   "finished": "2026-11-09T00:06:48.329000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -42,17 +17,17 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 4.0,
-   "resets_at": "2026-11-09T02:59:59.782895+00:00",
+   "pct": 7.0,
+   "resets_at": "2026-11-09T02:59:59.672189+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 96.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 12.0,
-   "resets_at": "2026-11-15T06:59:59.782913+00:00",
+   "pct": 13.0,
+   "resets_at": "2026-11-15T06:59:59.672206+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 88.0,
+   "left": 87.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -60,7 +35,7 @@
    "resets_at": "2026-11-15T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-08T18:58:57.541601-05:00"
+  "read_at": "2026-11-08T19:53:22.442604-05:00"
  },
  "ui": {
   "week_pct": 0.009,
@@ -77,10 +52,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 3.74,
-  "usage_pct": 23.8,
-  "work_pct": 71.4,
-  "read_at": "2026-11-09T00:43:00+00:00",
+  "week_pct": 3.85,
+  "usage_pct": 22.9,
+  "work_pct": 68.2,
+  "read_at": "2026-11-09T00:53:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -101,7 +76,7 @@
   }
  ],
  "disk": {
-  "free_gb": 19,
+  "free_gb": 14,
   "gate": "closed",
   "ssd": {
    "mounted": true,
@@ -110,23 +85,19 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-08T19:34:00-05:00",
+   "at": "2026-11-08T19:44:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-08T19:43:00-05:00",
+  "at": "2026-11-08T19:53:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
  "idle": null,
- "pool": {
-  "why": "Spread: 88% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 9 (held: all signals under their lines, a raise waits 30 minutes a step)",
-  "n": 2,
-  "at": "2026-11-08T18:58:57.848790-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -179,7 +150,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -274,15 +244,6 @@
    "wait": 45,
    "blocked": 67,
    "you": 19
-  },
-  "fin": {
-   "n": 1,
-   "rows": [
-    [
-     "T-3670",
-     "Let the Investors send files..."
-    ]
-   ]
   }
  },
  "qr": [],
@@ -290,12 +251,43 @@
   "sent": "2026-11-09T00:06:51Z",
   "seconds": 114.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6729576810",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "i still see a massive Parked queue...."
+  },
+  {
+   "id": "c6729595823",
+   "state": "received",
+   "position": 2,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "I am also interested in the This..."
+  },
+  {
+   "id": "c6729606115",
+   "state": "received",
+   "position": 3,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "as a side note, moving a child task..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -306,10 +298,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "7:43 PM",
-  "why": "Between sessions: no session is running. Last check 6:58 PM ET.",
-  "at_iso": "2026-11-09T00:43:00+00:00",
+  "at": "7:53 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-09T00:53:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:43 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 6:58 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:53 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

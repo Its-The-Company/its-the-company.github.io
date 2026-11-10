@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-10T20:20:56.086499+00:00",
+ "at": "2026-11-10T20:39:14.945881+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -102,24 +102,24 @@
  "meter": {
   "five_hour": {
    "pct": 19.0,
-   "resets_at": "2026-11-10T20:50:00.195779+00:00",
+   "resets_at": "2026-11-10T20:49:59.648989+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 81.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 44.0,
-   "resets_at": "2026-11-15T06:59:59.195797+00:00",
+   "resets_at": "2026-11-15T06:59:59.649010+00:00",
    "used_words": "of your weekly allowance used",
    "left": 56.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-15T07:00:00.195920+00:00",
+   "resets_at": "2026-11-15T06:59:59.649206+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-10T15:04:44.007987-05:00"
+  "read_at": "2026-11-10T15:23:49.432306-05:00"
  },
  "ui": {
   "week_pct": 0.184,
@@ -134,12 +134,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-10T15:19:44-05:00",
+ "next_tick": "2026-11-10T15:38:49-05:00",
  "personal": {
   "week_pct": 24.54,
   "usage_pct": 35.8,
   "work_pct": 79.3,
-  "read_at": "2026-11-10T20:24:00+00:00",
+  "read_at": "2026-11-10T20:41:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -169,14 +169,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T15:20:00-05:00",
+   "at": "2026-11-10T15:40:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 0,
-  "at": "2026-11-10T15:24:00-05:00",
+  "at": "2026-11-10T15:41:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "last_tick",
@@ -308,6 +308,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
+    "at": "2026-11-10T15:22:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "When a change fails its merge checks, the lane that wrote it now gets it back as its next task...",
     "at": "2026-11-10T12:39:00-05:00"
@@ -316,11 +321,6 @@
     "w": "Odalys",
     "t": "Home's task list now shows work that is moving before work that is held, each stage button shows...",
     "at": "2026-11-10T12:00:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Each worker now gets a private copy of the code to work in, so one worker's half-done edits can...",
-    "at": "2026-11-10T11:22:00-05:00"
    }
   ],
   "count": {
@@ -383,10 +383,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "3:24 PM",
-  "why": "Plan limit: the 5-hour allowance is near its end; it resets at 3:50 PM ET. Last check 3:23 PM ET.",
-  "at_iso": "2026-11-10T20:24:00+00:00",
+  "at": "3:41 PM",
+  "why": "Plan limit: the 5-hour allowance is near its end; it resets at 3:49 PM ET. Last check 3:41 PM ET.",
+  "at_iso": "2026-11-10T20:41:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:24 PM ET</p><p class=\"an-why\">Plan limit: the 5-hour allowance is near its end; it resets at 3:50 PM ET. Last check 3:23 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:41 PM ET</p><p class=\"an-why\">Plan limit: the 5-hour allowance is near its end; it resets at 3:49 PM ET. Last check 3:41 PM ET.</p></section>"
  }
 }

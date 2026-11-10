@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-10T16:59:56.193858+00:00",
+ "at": "2026-11-10T17:02:59.121052+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -95,16 +95,24 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[site] T-4007 three task-list fixes",
-   "model": "opus",
-   "started": "2026-11-10T16:23:50.570Z",
-   "seconds": 2165,
+   "task": "[tools] T-4011 failed changes back to author",
+   "model": "fable",
+   "started": "2026-11-10T17:01:52.824Z",
+   "seconds": 66,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[site] T-4007 three task-list fixes",
+   "model": "opus",
+   "started": "2026-11-10T16:23:50.570Z",
+   "seconds": null,
+   "finished": "2026-11-10T17:00:39.669000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3978 worker copies via land --from",
@@ -168,7 +176,7 @@
   "week_pct": 50.07,
   "usage_pct": 36.8,
   "work_pct": 80.2,
-  "read_at": "2026-11-10T16:59:00+00:00",
+  "read_at": "2026-11-10T17:02:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -205,7 +213,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-10T11:59:00-05:00",
+  "at": "2026-11-10T12:02:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -219,9 +227,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[site] T-4007 three task-list fixes",
-   "model": "opus",
-   "since": "2026-11-10T16:23:50.570Z",
+   "task": "[tools] T-4011 failed changes back to author",
+   "model": "fable",
+   "since": "2026-11-10T17:01:52.824Z",
    "next": [],
    "effort": "high"
   },
@@ -270,13 +278,13 @@
   "run": [
    {
     "w": "Odalys",
-    "k": "site",
-    "t": "Flow tab task list with old Home filters",
-    "m": "opus",
+    "k": "tools",
+    "t": "Send failed changes back to their author with the reason",
+    "m": "fable",
     "e": "high",
-    "at": "2026-11-10T16:23:50.570Z",
+    "at": "2026-11-10T17:01:52.824Z",
     "o": "c",
-    "task": "T-4007"
+    "task": "T-4011"
    }
   ],
   "src": "plan",
@@ -355,6 +363,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "Home's task list now shows work that is moving before work that is held, each stage button shows...",
+    "at": "2026-11-10T12:00:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "Each worker now gets a private copy of the code to work in, so one worker's half-done edits can...",
     "at": "2026-11-10T11:22:00-05:00"
    },
@@ -362,11 +375,6 @@
     "w": "Operator",
     "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
     "at": "2026-11-10T10:08:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "When the company cannot push its work to GitHub for a while, the sync can now keep that work's...",
-    "at": "2026-11-10T09:56:00-05:00"
    }
   ],
   "count": {
@@ -376,8 +384,12 @@
    "you": 17
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-4007",
+     "Flow tab task list with old..."
+    ],
     [
      "T-3978",
      "Give every worker its own..."
@@ -439,10 +451,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "11:59 AM",
+  "at": "12:02 PM",
   "why": "",
-  "at_iso": "2026-11-10T16:59:00+00:00",
+  "at_iso": "2026-11-10T17:02:00+00:00",
   "started": "10:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:59 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:02 PM ET</p></section>"
  }
 }

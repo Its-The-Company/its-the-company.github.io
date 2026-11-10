@@ -35,26 +35,21 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Site chat plan facts: measured floors behind #24
 - Archive: dated task notes and older lessons (11-07 T-3221 moved the rest there; nothing deleted).
 
-## Open (2026-11-07)
+## Open (2026-11-09 23:4x)
 
-- T-3907 (NOT landed, 11-09 19:4x): design note dafa99459c+06e7d4aec4 on main. Runner kind host patch green (35/381/135) at SSD scratch T-3907-odalys/t3907-runner.patch, worktree wt/ there; main_gate route DRAFT untested beside it. <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Ruling</span> #251 c6755547646: no approve-kind; next add host to SEEDED_KINDS. Baseline host run on mini: median 306 s, p90 1,241 s (n=13).
+- Landed T-3974 df40f13ef4 (24-h after-number owed). Waiting, files at HEAD, patches on SSD company-scratch: T-3907 runner + main-gate, T-3962/65, T-3978 all blocked on main_gate_test.py by tools/site/home_look.py (T-3908); T-3962 also sim_hold (T-3967), T-3978 also xc_sim.py. T-3818 (SSD T-3818-odalys/) refused host_refused 8 suites after green run; HEAD moved mid-run.
+- T-3963: merge_rate.py + test untracked in main, not committed.
+- T-3979 (3) lease warning and (5) Home panel left.
 
 ## Lessons
+
 - Older notes: archive.md (memory_archive.py at session close).
 
-- T-3865 slice 4 2981333ef4 (NOT ticked, 11-09 19:00): T-3396 ported onto ampm.py, handed <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/b/20261109-185915-batch (6,427 to 0 on 900 pages); 7 left. Lessons: park_batch's sparse check lacks research/, so site_method_v2 is always red there; staged hunks in the shared checkout get taken by others' whole-index commits, so stage and commit in one command.
+- T-3971 (NOT landed, 11-09 23:3x): merge-only switch, patch SSD scratch T-3971-odalys/t3971.patch (13 files), all suites green after the site_lanes DIGEST fix. Lesson: a change to board.py lanes_view moves tools/site/<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span>.py DIGEST; update the page sentence in the same patch. Under load, run.sh -j 1 one run at a time.
 
-- T-3901 4ce050a4e7 (NOT ticked, 11-09 7:2x PM): merge mode in dispatch.py + personal_tick.sh, gate green 12 suites. Live now (155 refs/101 retry over lines). After-number to read: refs and retry lines 24 h on, lands/hour. Board had others' edits, so no board commit.
+- T-3967 (NOT landed 11-09 23:3x): patch SSD scratch T-3967-odalys/t3967.patch (sim_hold.py, xc.sh gate, xc_sim idle-down, supervisor tick). Gate green in clean wt at a57f07a4ed, commit refused when main moved. Lesson: run main_gate check in a clean scratch wt at main's HEAD, then commit in the shared copy at once.
 
-- Land run 11-09 17:3x-19:2x: on main T-3891 bc19f499f2, T-3888 32d67117e0, T-3866 269802c39a, T-3862 pt2 d1236cc017, T-3824 bfe6c4ca03, T-3232 c1e0433949, T-3894 dd40b606b4. T-3818 hook-refused (main moved mid-check), T-3859 stdlib host red (no log kept). Lesson: a gate in the shared copy can green on another task's dirty file; re-run HEAD alone in a clean worktree.
-
-- T-3868 (STOPPED 11-09 7:2x PM, security-guard): ran candidate guard on allow rows from scratch, refused (personal <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> profile). Rows check: candidate 148/440 wrong (146 tightening refuse rows, 2 allow rows it refuses). #247 approve does not count (main_thread_approve reads #41 only). Lesson: plan every guard probe inside the one scratch script up front; an ad-hoc probe that gets refused ends the item.
-
-- T-3904 landed 6a14a5697f, ticked on board (uncommitted, board had others' edits). T-3818: gate on 4 files ran over 20 min with no verdict, killed by my shell limit; files reverted, patch still at /private/tmp scratch. Lesson: run T-3818's gate in background with a 60-min limit.
-
-- T-3905 (NOT committed, 11-09 19:4x): patch SSD scratch T-3905-odalys/t3905.patch (main_gate SRC_ONLY + part 8 split); main tools/ had others' personal_land.sh. Lesson: under load the suite is throughput-bound (3 parts at once), so splitting parts buys no wall time; only fewer runs or less work does. Measure paired, same time.
-
-- T-3908 (NOT landed, 11-09 7:4x PM, session closed): draft merge_page.py at SSD scratch T-3908-odalys/t3908.patch; board note says next steps. Lesson: lifecycle.read already has the queue; reuse life, 0.04 s extra.
+- 11-09: keep an applied patch out of main while blocked; its files dirty others' checks (deadlock). Map blockers with main_gate.wanted_suites per changed file.
 {% endraw %}
 
 

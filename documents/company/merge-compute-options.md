@@ -102,6 +102,34 @@ need to run jobs side by side.
 hours. On 11-05, 20 of its 34 jobs failed (`ops/metrics/runner_health.jsonl`). Doing this makes the most fragile part
 of our setup carry more of the load.
 
+### Restart the runner
+
+For the Investors, when the MacBook runner has gone quiet (the site shows no check-in for over 2 hours) or after the
+MacBook restarts. About 5 minutes. Nothing here needs a password beyond your normal login, and nothing is approved:
+the runner turns on its own job kinds under your standing <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> (#251, 11-09 7:43 PM).
+
+1. Plug the MacBook into power and open the lid.
+2. In your own account, System Settings > Battery: set Low Power Mode to "Never". Under Options, turn on "Prevent
+   automatic sleeping on power adapter when the display is off". (You asked for both on 11-09.)
+3. Log in to the runner account, `itsthecompany runner`, with fast user switching (menu bar, your name, then the
+   runner account). After any restart the runner stays stopped until this account is logged in again.
+4. In the runner account, open Terminal and paste:
+   `tail -3 ~/itsthecompany-runner/runner.log`
+   A line with `idle`, `checkin` or `job` dated in the last 2 minutes means it is running. Go to step 7.
+5. If the last line is old, check for a pause: `ls ~/itsthecompany-runner/PAUSE`. If that file is listed, remove it
+   with `rm ~/itsthecompany-runner/PAUSE`, wait 2 minutes, and repeat step 4.
+6. If it is still quiet, install it again from a fresh copy of `main` (this is the documented install; it refuses to
+   run in any other account):
+   `rm -rf ~/itsthecompany-setup && gh repo clone Its-The-Company/itsthecompany ~/itsthecompany-setup && bash ~/itsthecompany-setup/tools/macbook-runner/install.sh`
+   Wait 2 minutes and repeat step 4. If it still shows nothing new, paste the last 20 lines
+   (`tail -20 ~/itsthecompany-runner/runner.log`) into the issue thread; do not try anything else.
+7. Switch back to your own account with fast user switching. Do not log the runner account out; it keeps working in
+   the background.
+
+The company then checks, without you: the next check-in on `macbook-results` shows runner 28 or later, kinds `build`
+and `host` on, and up to 8 jobs side by side. If the runner stays silent, the Mac mini runs every check itself (Xcode
+since T-3891; the Python suites once T-3907's gate route lands), so merges slow down but do not stop.
+
 ## 3. Option B: rented test machines and merge-queue services
 
 ### GitHub's own test machines (GitHub Actions)

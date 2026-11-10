@@ -167,6 +167,9 @@ footer a{color:inherit}
 .tile{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-m);padding:var(--s3)}
 .tile b{display:block;font-size:var(--fs-4);letter-spacing:-.02em}.tile span{font-size:var(--fs-0);color:var(--muted)}
 .tile .bar{margin:6px 0 0}.tile .bar-head{display:none}
+/* T-3908: /merge-queue.html, the stage holding most outlined; a target row (a link from a task) marked */
+.mq-stages .tile small{display:block;margin-top:2px}.mq-stages .tile.mq-top{border:2px solid var(--accent);background:var(--accent-soft)}
+.mq tr:target td{background:var(--accent-soft)}.mq td small{font-size:var(--fs-0)}.lk-mql{margin:0 0 var(--s2)}
 .bar{margin:10px 0}.bar-head{display:flex;justify-content:space-between;gap:10px;font-size:var(--fs-0);color:var(--muted);margin-bottom:4px}
 .bar-head span:first-child{color:var(--ink);white-space:nowrap}.bar-head span:last-child{text-align:right}
 .bar-track{position:relative;height:10px;background:var(--soft-2);border-radius:6px;overflow:hidden}

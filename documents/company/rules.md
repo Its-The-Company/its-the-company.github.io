@@ -538,6 +538,10 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-09 21:06 ET** ((private)): Merge-improving tasks never enter the parked queue and are merged ahead of all other work at every stage; parked merge-improving work is merged first; the merge/park queue is the top priority until solved.
 - **2026-11-09 21:10 ET** ((private)): Only merge-queue work starts until the Investors say the queue is in a better spot; as many workers as needed; self-imposed usage limits do not stop it.
 - **2026-11-09 21:13 ET** ((private)): Simulators may be stopped when they use CPU the merge improvements need; they restart once app work needs to merge.
+- **2026-11-09 21:47 ET** ((private)): A stopped fix an Investor could make is raised as an issue instead of set aside; the safety checks are to let the company boot and shut down Simulators as needed, so idle ones never waste CPU.
+- **2026-11-09 22:17 ET** ((private)): No change to how the personal-account sessions run: neither option 1 nor off from c6757912971 is taken; they keep running as they are, still handed merge-queue work only under the 21:10 ruling.
+- **2026-11-09 22:22 ET** ((private)): Per-worker copies are built end to end (work, merge queue, parked queue); a copy is deleted as soon as every task that needed it is complete, and a routine sweep removes any copy that was missed.
+- **2026-11-09 22:32 ET** ((private)): Workers get what they need while they work, not at session end; runs that are doomed stop early; new work starts as soon as a slot frees; fixes are built end to end at the root cause.
 {% endraw %}
 
 </div>

@@ -84,6 +84,13 @@
 <summary type="text">T-3545: review of T-3408 PASS with fixes (2 Medium, 2 Low); T-3799/T-3800 added for Odalys; commit refused by main_gate (bridge host suite red), review file left uncommitted; race probe refused by security-guard</summary>
 </entry>
 <entry>
+<title>Build: T-1643: LaneDemotions.remove lifts a widget-lane demotion only under the list&#x27;s lock and o</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-09:event/2026-11-09t05-00-21-05-00-build-t-1643-lanedemotions-remove-lifts-a-wid</id>
+<updated>2026-11-09T05:00:21-05:00</updated>
+<summary type="text">T-1643: LaneDemotions.remove lifts a widget-lane demotion only under the list&#x27;s lock and only after an app-lane ok run stamped after the list&#x27;s last write; 11 tests red on a stub (7 failing) then green, 12/12 mutants killed. UI half (T-3791) waits on T-1140&#x27;s Activity screen; test L re-run is T-3792</summary>
+</entry>
+<entry>
 <title>Review: T-3546: review of the main gate&#x27;s derived test reads (T-3519) FAIL; licence registry, pkg_</title>
 <link href="https://its-the-company.github.io/"/>
 <id>tag:its-the-company.github.io,2026-11-09:event/2026-11-09t03-30-04-05-00-review-t-3546-review-of-the-main-gate-s-derive</id>
@@ -348,12 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-03:event/2026-11-03t11-35-22-05-00-build-t-1439-ui-refreshbutton-reserved-pywid</id>
 <updated>2026-11-03T11:35:22-05:00</updated>
 <summary type="text">T-1439: ui.RefreshButton (reserved pywidget.refresh) and ui.Updated age node in the DSL and schema; prefix mutants caught (ebb68f4b1)</summary>
-</entry>
-<entry>
-<title>Decision: T-1288 restart under T-0848: the guard refused copying HEAD&#x27;s tools/supervisor.sh into scr</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-03:event/2026-11-03t08-13-21-05-00-decision-t-1288-restart-under-t-0848-the-guard-r</id>
-<updated>2026-11-03T08:13:21-05:00</updated>
-<summary type="text">T-1288 restart under T-0848: the guard refused copying HEAD&#x27;s tools/supervisor.sh into scratch (git show HEAD:tools/supervisor.sh &gt; scratch, read as a Keychain effect). Restart drops that effect: no copy of supervisor.sh anywhere, tests run in the worktree only. Same packet; a second refusal stops i</summary>
 </entry>
 </feed>

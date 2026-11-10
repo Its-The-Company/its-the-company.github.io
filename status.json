@@ -1,26 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-10T07:41:41.361955+00:00",
+ "at": "2026-11-10T08:01:13.238618+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
-   {
-    "t": "T-2628",
-    "name": "The Files export and import UI test fails",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794295701
-     },
-     {
-      "s": "macbook",
-      "at": 1794296496
-     }
-    ]
-   },
    {
     "t": "T-2230",
     "name": "Mark the widget deadline outcome reliably",
@@ -43,12 +28,56 @@
     "steps": [
      {
       "s": "testq",
-      "at": 1794254258
+      "at": 1794258340
      }
     ]
    }
   ],
   "done": [
+   {
+    "t": "T-2701",
+    "name": "Read the first queued runner job, then count a week",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794297197,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-2470",
+    "name": "One shared queue for all Simulator test work",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794297197,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-2442",
+    "name": "Review one change independently before TestFlight",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794297197,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3339",
+    "name": "Clearer task steps, list boxes and In Flight filters",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794297197,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-2628",
+    "name": "The Files export and import UI test fails",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794296806
+   },
    {
     "t": "T-3306",
     "name": "Find what released a running lane's claim early",
@@ -91,45 +120,6 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794294532
-   },
-   {
-    "t": "T-3707",
-    "name": "Refresh a stale usage reading before holding a slot",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794294470
-   },
-   {
-    "t": "T-2212",
-    "name": "Fix a test that fails with Apple's OpenSSL",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794294470
-   },
-   {
-    "t": "T-0025",
-    "name": "Move app strings into a String Catalog",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794294470
-   },
-   {
-    "t": "T-3231",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794294470
-   },
-   {
-    "t": "T-3215",
-    "name": "Count Investor work carried on by other lines",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794294470
    }
   ],
   "landed": 53,
@@ -141,34 +131,34 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 661,
+  "runnable_count": 662,
   "blocked_count": 114
  },
  "meter": {
   "five_hour": {
-   "pct": 40.0,
-   "resets_at": "2026-11-10T09:00:00.196758+00:00",
+   "pct": 66.0,
+   "resets_at": "2026-11-10T09:00:00.317850+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 60.0,
+   "left": 34.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 49.0,
-   "resets_at": "2026-11-15T07:00:00.196776+00:00",
+   "pct": 56.0,
+   "resets_at": "2026-11-15T07:00:00.317867+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 51.0,
+   "left": 44.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 17.0,
-   "resets_at": "2026-11-15T07:00:00.196934+00:00",
+   "pct": 30.0,
+   "resets_at": "2026-11-15T07:00:00.318038+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-10T02:05:19.138668-05:00"
+  "read_at": "2026-11-10T02:44:02.744753-05:00"
  },
  "ui": {
-  "week_pct": 0.136,
-  "five_hour_pct": 1.076,
+  "week_pct": 0.155,
+  "five_hour_pct": 3.229,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -179,12 +169,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-10T02:20:20-05:00",
+ "next_tick": "2026-11-10T02:59:03-05:00",
  "personal": {
-  "week_pct": 28.62,
+  "week_pct": 32.71,
   "usage_pct": 36.9,
   "work_pct": 81.2,
-  "read_at": "2026-11-10T07:44:00+00:00",
+  "read_at": "2026-11-10T08:04:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -209,12 +199,12 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 182
+   "free_gb": 184
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T02:22:00-05:00",
+   "at": "2026-11-10T03:01:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-09T08:43:00-05:00"
@@ -224,7 +214,7 @@
  "lock_in": {
   "on": false,
   "pool": 0,
-  "at": "2026-11-10T02:44:00-05:00",
+  "at": "2026-11-10T03:04:00-05:00",
   "mode": null
  },
  "next_tick_why": "last_tick",
@@ -356,6 +346,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The automatic test that saves a file to the Files app and opens it again failed because it...",
+    "at": "2026-11-10T02:46:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "The site's browser tests used to overwrite saved screenshots on every run, which left stray...",
     "at": "2026-11-10T02:20:00-05:00"
@@ -364,15 +359,10 @@
     "w": "Ines",
     "t": "The CEO decided Python scripts in version 1.0 lose their own secure-connection module so web...",
     "at": "2026-11-10T02:08:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "The work this notice was about has landed on main, so the lander closed it.",
-    "at": "2026-11-10T02:07:00-05:00"
    }
   ],
   "count": {
-   "next": 661,
+   "next": 662,
    "wait": 46,
    "blocked": 68,
    "you": 17
@@ -431,10 +421,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "2:44 AM",
-  "why": "Plan limit: the 5-hour allowance is near its end; it resets at 4:00 AM ET. Last check 2:44 AM ET.",
-  "at_iso": "2026-11-10T07:44:00+00:00",
+  "at": "3:04 AM",
+  "why": "Plan limit: the 5-hour allowance is near its end; it resets at 4:00 AM ET. Last check 3:04 AM ET.",
+  "at_iso": "2026-11-10T08:04:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:44 AM ET</p><p class=\"an-why\">Plan limit: the 5-hour allowance is near its end; it resets at 4:00 AM ET. Last check 2:44 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:04 AM ET</p><p class=\"an-why\">Plan limit: the 5-hour allowance is near its end; it resets at 4:00 AM ET. Last check 3:04 AM ET.</p></section>"
  }
 }

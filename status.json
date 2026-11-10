@@ -1,12 +1,78 @@
 {
  "schema": 1,
- "at": "2026-11-10T14:49:07.777990+00:00",
+ "at": "2026-11-10T15:10:16.745151+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [],
   "done": [
+   {
+    "t": "T-0885",
+    "name": "Read the shared-tree repair trial's reopen rule",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794323119
+   },
+   {
+    "t": "T-1732",
+    "name": "Keep the learned Python library root only if valid",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794323112
+   },
+   {
+    "t": "T-3150",
+    "name": "Make the scoreboard's spend match the ledger",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794322592,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-0885",
+    "name": "Read the shared-tree repair trial's reopen rule",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794322592,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3703",
+    "name": "Show when a merge check moves to the Mac mini",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794322482
+   },
+   {
+    "t": "T-3812",
+    "name": "Ask the Investors about wrong security stops",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794322155
+   },
+   {
+    "t": "T-3706",
+    "name": "Stop the sync rewriting main commits while pushes are held",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794322155
+   },
+   {
+    "t": "T-2076",
+    "name": "Build the site stages behind off-by-default switches",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794322155
+   },
    {
     "t": "T-3316",
     "acct": "Personal b",
@@ -23,82 +89,10 @@
     "end": "failed",
     "end_at": 1794321957,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-0885",
-    "name": "Read the shared-tree repair trial's reopen rule",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794321957,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3703",
-    "name": "Show when a merge check moves to the Mac mini",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794321957,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3150",
-    "name": "Make the scoreboard's spend match the ledger",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794321951,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3150",
-    "name": "Make the scoreboard's spend match the ledger",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794321285,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-0885",
-    "name": "Read the shared-tree repair trial's reopen rule",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794321285,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3703",
-    "name": "Show when a merge check moves to the Mac mini",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794321285,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3812",
-    "name": "Ask the Investors about wrong security stops",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794321285,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3706",
-    "name": "Stop the sync rewriting main commits while pushes are held",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794321285,
-    "why": "did not merge cleanly"
    }
   ],
-  "landed": 54,
-  "failed": 60
+  "landed": 53,
+  "failed": 62
  },
  "workers": [],
  "who": "",
@@ -106,33 +100,33 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 641,
+  "runnable_count": 639,
   "blocked_count": 113
  },
  "meter": {
   "five_hour": {
-   "pct": 11.0,
-   "resets_at": "2026-11-10T18:59:59.604595+00:00",
+   "pct": 15.0,
+   "resets_at": "2026-11-10T19:00:00.124903+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 89.0,
+   "left": 85.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 85.0,
-   "resets_at": "2026-11-15T06:59:59.604620+00:00",
+   "pct": 86.0,
+   "resets_at": "2026-11-15T07:00:00.124926+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 15.0,
+   "left": 14.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 88.0,
-   "resets_at": "2026-11-15T06:59:59.604826+00:00",
+   "pct": 91.0,
+   "resets_at": "2026-11-15T07:00:00.125112+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-10T09:43:06.804477-05:00"
+  "read_at": "2026-11-10T10:10:06.987475-05:00"
  },
  "ui": {
-  "week_pct": 0.339,
+  "week_pct": 0.343,
   "five_hour_pct": 7.596,
   "caps_pct": {
    "week": 3.0,
@@ -144,12 +138,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-10T09:58:07-05:00",
+ "next_tick": "2026-11-10T10:25:07-05:00",
  "personal": {
-  "week_pct": 49.54,
+  "week_pct": 50.07,
   "usage_pct": 36.8,
   "work_pct": 80.2,
-  "read_at": "2026-11-10T14:52:00+00:00",
+  "read_at": "2026-11-10T15:10:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -170,23 +164,23 @@
   }
  ],
  "disk": {
-  "free_gb": 33,
+  "free_gb": 32,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 179
+   "free_gb": 186
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T09:49:00-05:00",
+   "at": "2026-11-10T10:08:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 0,
-  "at": "2026-11-10T09:52:00-05:00",
+  "at": "2026-11-10T10:10:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "last_tick",
@@ -318,23 +312,23 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "After tapping a widget, the Gallery no longer reopens that widget's page every time it is opened...",
-    "at": "2026-11-10T09:11:00-05:00"
+    "w": "Operator",
+    "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
+    "at": "2026-11-10T10:08:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "Five stuck branches of finished work were checked one commit at a time; most was already on main...",
-    "at": "2026-11-10T08:46:00-05:00"
+    "w": "Odalys",
+    "t": "When the company cannot push its work to GitHub for a while, the sync can now keep that work's...",
+    "at": "2026-11-10T09:56:00-05:00"
    },
    {
-    "w": "Maren",
-    "t": "Drew the screen where people choose which app each launcher tile opens, from a list, a pasted...",
-    "at": "2026-11-10T08:25:00-05:00"
+    "w": "Ines+operator",
+    "t": "The Investors now have a decision card asking whether to widen the fix for the security check...",
+    "at": "2026-11-10T09:49:00-05:00"
    }
   ],
   "count": {
-   "next": 641,
+   "next": 639,
    "wait": 45,
    "blocked": 68,
    "you": 17
@@ -393,10 +387,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "9:52 AM",
-  "why": "Plan limit: the 5-hour allowance is near its end; it resets at 1:59 PM ET. Last check 9:52 AM ET.",
-  "at_iso": "2026-11-10T14:52:00+00:00",
+  "at": "10:10 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-10T15:10:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:52 AM ET</p><p class=\"an-why\">Plan limit: the 5-hour allowance is near its end; it resets at 1:59 PM ET. Last check 9:52 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:10 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

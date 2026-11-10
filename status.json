@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-10T19:10:57.914762+00:00",
+ "at": "2026-11-10T19:11:51.994778+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "inbox",
+  "started": "2026-11-10T14:10:58-05:00",
   "flow": [],
   "done": [
    {
@@ -92,44 +92,11 @@
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-3975 stop at first red, skip known red",
-   "model": "opus",
-   "started": "2026-11-10T18:12:29.582Z",
-   "seconds": null,
-   "finished": "2026-11-10T18:45:48.429000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4012 retire retry routes",
-   "model": "opus",
-   "started": "2026-11-10T17:41:05.825Z",
-   "seconds": null,
-   "finished": "2026-11-10T18:11:51.624000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4011 failed changes back to author",
-   "model": "fable",
-   "started": "2026-11-10T17:01:52.824Z",
-   "seconds": null,
-   "finished": "2026-11-10T17:40:25.512000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-4007 three task-list fixes",
-   "model": "opus",
-   "started": "2026-11-10T16:23:50.570Z",
-   "seconds": null,
-   "finished": "2026-11-10T17:00:39.669000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 640,
+  "runnable_count": 641,
   "blocked_count": 112
  },
  "meter": {
@@ -167,12 +134,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-10T14:25:48-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 33.38,
   "usage_pct": 35.8,
   "work_pct": 79.3,
-  "read_at": "2026-11-10T19:11:00+00:00",
+  "read_at": "2026-11-10T19:12:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -193,29 +160,29 @@
   }
  ],
  "disk": {
-  "free_gb": 33,
+  "free_gb": 32,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 186
+   "free_gb": 185
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T13:52:00-05:00",
+   "at": "2026-11-10T14:12:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 0,
-  "at": "2026-11-10T14:11:00-05:00",
+  "at": "2026-11-10T14:12:00-05:00",
   "mode": "midnight"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": {
   "since": "2026-11-10T13:46:23-05:00",
-  "minutes": 24,
+  "minutes": 25,
   "why": "a tick has spent 16 min on steps before the session",
   "healed": []
  },
@@ -362,10 +329,14 @@
    }
   ],
   "count": {
-   "next": 640,
+   "next": 641,
    "wait": 44,
    "blocked": 68,
    "you": 17
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -403,26 +374,24 @@
   ]
  ],
  "reply": {
-  "sent": "2026-11-10T17:37:12Z",
-  "seconds": 49.0
+  "sent": "2026-11-10T19:10:13Z",
+  "seconds": 32.0
  },
  "inbox": [
   {
-   "id": "c6776697148",
+   "id": "c6776728481",
    "state": "received",
    "position": 1,
-   "eta": "2026-11-10T14:25:48-05:00",
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "On the Home page, the Flow panel..."
+   "title": "The same principles apply to the Now..."
   }
  ],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "inbox_title",
   "task_title",
@@ -435,10 +404,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "2:11 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-10T19:11:00+00:00",
+  "at": "2:12 PM",
+  "why": "Plan limit: the 5-hour allowance is near its end; it resets at 3:49 PM ET. Last check 2:12 PM ET.",
+  "at_iso": "2026-11-10T19:12:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:11 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:12 PM ET</p><p class=\"an-why\">Plan limit: the 5-hour allowance is near its end; it resets at 3:49 PM ET. Last check 2:12 PM ET.</p></section>"
  }
 }

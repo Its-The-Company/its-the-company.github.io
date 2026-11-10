@@ -1,186 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-10T06:45:48.480358+00:00",
+ "at": "2026-11-10T07:04:23.032954+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
-   {
-    "t": "T-2327",
-    "name": "Log the session end check only when its answer changes",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794288420
-     }
-    ]
-   },
-   {
-    "t": "T-1918",
-    "name": "Count overdue Xcode jobs for the runner review",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794288420
-     }
-    ]
-   },
-   {
-    "t": "T-3388",
-    "name": "Agree which home folders the sweep may clear",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794288420
-     }
-    ]
-   },
-   {
-    "t": "T-3145",
-    "name": "Clear finished task copies from the main temp folder",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794288420
-     }
-    ]
-   },
-   {
-    "t": "T-2677",
-    "name": "Give the dispatcher its own clock and more slots",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794288420
-     }
-    ]
-   },
-   {
-    "t": "T-3302",
-    "name": "Keep one coordinator session running",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794288420
-     }
-    ]
-   },
-   {
-    "t": "T-3389",
-    "name": "Remove the five spare trees that git lost track of",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794288420
-     }
-    ]
-   },
-   {
-    "t": "T-3319",
-    "name": "Remove unused spare checkouts from the SSD",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794288420
-     }
-    ]
-   },
-   {
-    "t": "T-2538",
-    "name": "Land five smaller parked fixes the sweep could not merge",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794288420
-     }
-    ]
-   },
-   {
-    "t": "T-0198",
-    "name": "Record expired runs in the widget status file",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794288420
-     }
-    ]
-   },
-   {
-    "t": "T-3703",
-    "name": "Show when a merge check moves to the Mac mini",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794288420
-     }
-    ]
-   },
-   {
-    "t": "T-3879",
-    "name": "Recut Odalys's conflicting parked tasks onto main",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794288420
-     }
-    ]
-   },
-   {
-    "t": "T-3150",
-    "name": "Make the scoreboard's spend match the ledger",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794288420
-     }
-    ]
-   },
-   {
-    "t": "T-3812",
-    "name": "Ask the Investors about wrong security stops",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794288420
-     }
-    ]
-   },
-   {
-    "t": "T-1993",
-    "name": "Count a try only for tasks the session started",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794288420
-     }
-    ]
-   },
-   {
-    "t": "T-1064",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794288420
-     }
-    ]
-   },
    {
     "t": "T-2230",
     "name": "Mark the widget deadline outcome reliably",
@@ -189,97 +14,117 @@
      {
       "s": "testq",
       "at": 1794259043
+     },
+     {
+      "s": "macbook",
+      "at": 1794293545
+     }
+    ]
+   },
+   {
+    "t": "T-3401",
+    "name": "Add a general web request call and an OpenSSL check",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794254258
      }
     ]
    }
   ],
   "done": [
    {
-    "t": "T-3109",
-    "name": "Keep Xcode's lock in a copy outside git",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794290703,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3113",
-    "name": "Build a timeline feed for every picked-up task",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794290513
-   },
-   {
-    "t": "T-3396",
-    "name": "Finish twelve-hour times on every site page",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794290513
-   },
-   {
-    "t": "T-1732",
-    "name": "Keep the learned Python library root only if valid",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794290496,
-    "why": "Xcode tests failed"
-   },
-   {
-    "t": "T-0769",
-    "name": "Set the Pro test purchase price to 14.99 dollars",
+    "t": "T-3364",
+    "name": "Find why build 3's premades other than Countdown draw nothing",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
-    "end_at": 1794290473
+    "end_at": 1794293586
    },
    {
-    "t": "T-3127",
-    "name": "Find what sends main sessions a stray SIGTERM",
-    "acct": "Personal b",
+    "t": "T-1064",
+    "acct": "Personal a",
     "steps": [],
     "end": "failed",
-    "end_at": 1794289606,
+    "end_at": 1794293494,
     "why": "tests failed"
    },
    {
-    "t": "T-3705",
-    "name": "Land and close the work held by old charter copies",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794289321
-   },
-   {
-    "t": "T-3719",
-    "name": "Apply the five-file change an Investor approved",
+    "t": "T-1993",
+    "name": "Count a try only for tasks the session started",
     "acct": "Personal a",
     "steps": [],
-    "end": "landed",
-    "end_at": 1794288406
+    "end": "failed",
+    "end_at": 1794293494,
+    "why": "tests failed"
    },
    {
-    "t": "T-2948",
-    "name": "Keep Xcode's lock in a copy outside git",
+    "t": "T-3812",
+    "name": "Ask the Investors about wrong security stops",
     "acct": "Personal a",
     "steps": [],
-    "end": "landed",
-    "end_at": 1794287874
+    "end": "failed",
+    "end_at": 1794293494,
+    "why": "tests failed"
    },
    {
-    "t": "T-1289",
-    "name": "Reject line breaks in widget text suffixes",
+    "t": "T-3150",
+    "name": "Make the scoreboard's spend match the ledger",
     "acct": "Personal a",
     "steps": [],
-    "end": "landed",
-    "end_at": 1794285326
+    "end": "failed",
+    "end_at": 1794293494,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-3879",
+    "name": "Recut Odalys's conflicting parked tasks onto main",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794293494,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-3703",
+    "name": "Show when a merge check moves to the Mac mini",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794293494,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-0198",
+    "name": "Record expired runs in the widget status file",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794293494,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-2538",
+    "name": "Land five smaller parked fixes the sweep could not merge",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794293494,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-3319",
+    "name": "Remove unused spare checkouts from the SSD",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794293494,
+    "why": "tests failed"
    }
   ],
-  "landed": 45,
-  "failed": 24
+  "landed": 44,
+  "failed": 38
  },
  "workers": [],
  "who": "",
@@ -292,29 +137,29 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 30.0,
-   "resets_at": "2026-11-10T09:00:00.253297+00:00",
+   "pct": 35.0,
+   "resets_at": "2026-11-10T09:00:00.479609+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 70.0,
+   "left": 65.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 46.0,
-   "resets_at": "2026-11-15T07:00:00.253318+00:00",
+   "pct": 48.0,
+   "resets_at": "2026-11-15T07:00:00.479629+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 54.0,
+   "left": 52.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 13.0,
-   "resets_at": "2026-11-15T07:00:00.253488+00:00",
+   "pct": 16.0,
+   "resets_at": "2026-11-15T07:00:00.479760+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-10T01:27:07.256149-05:00"
+  "read_at": "2026-11-10T01:46:12.081907-05:00"
  },
  "ui": {
-  "week_pct": 0.127,
-  "five_hour_pct": 0.12,
+  "week_pct": 0.133,
+  "five_hour_pct": 0.359,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -325,12 +170,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-10T01:42:07-05:00",
+ "next_tick": "2026-11-10T02:01:13-05:00",
  "personal": {
-  "week_pct": 26.87,
+  "week_pct": 28.04,
   "usage_pct": 36.9,
   "work_pct": 81.2,
-  "read_at": "2026-11-10T06:46:00+00:00",
+  "read_at": "2026-11-10T07:05:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -351,7 +196,7 @@
   }
  ],
  "disk": {
-  "free_gb": 35,
+  "free_gb": 34,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -360,7 +205,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T01:43:00-05:00",
+   "at": "2026-11-10T02:02:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-09T08:43:00-05:00"
@@ -370,7 +215,7 @@
  "lock_in": {
   "on": false,
   "pool": 0,
-  "at": "2026-11-10T01:46:00-05:00",
+  "at": "2026-11-10T02:05:00-05:00",
   "mode": null
  },
  "next_tick_why": "last_tick",
@@ -438,13 +283,6 @@
    },
    {
     "w": "Idris",
-    "k": "build",
-    "t": "Find why build 3's premades other than...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
     "k": "bug",
     "t": "Fix the template test that fails since the...",
     "s": "next",
@@ -498,18 +336,25 @@
     "t": "Last checks before the first test build",
     "s": "next",
     "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Run Python widget scripts inside the widget...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "Not fixed: all 12 premades draw in the Simulator, so the iPhone symptom did not reproduce; 12...",
+    "at": "2026-11-10T01:53:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "The work this notice was about has landed on main, so the lander closed it.",
     "at": "2026-11-10T01:01:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Every parked change on this notice is settled (2 queued again on a retry line), so the 'did not...",
-    "at": "2026-11-10T00:41:00-05:00"
    },
    {
     "w": "Odalys",
@@ -577,10 +422,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "1:46 AM",
-  "why": "Waiting for the week's line: the week is ahead of its pace to be used up before it resets. Last check 1:46 AM ET.",
-  "at_iso": "2026-11-10T06:46:00+00:00",
+  "at": "2:05 AM",
+  "why": "Waiting for the week's line: the week is ahead of its pace to be used up before it resets. Last check 2:05 AM ET.",
+  "at_iso": "2026-11-10T07:05:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:46 AM ET</p><p class=\"an-why\">Waiting for the week's line: the week is ahead of its pace to be used up before it resets. Last check 1:46 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:05 AM ET</p><p class=\"an-why\">Waiting for the week's line: the week is ahead of its pace to be used up before it resets. Last check 2:05 AM ET.</p></section>"
  }
 }

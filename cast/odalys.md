@@ -51,6 +51,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 11-09: keep an applied patch out of main while blocked; its files dirty others' checks (deadlock). Map blockers with main_gate.wanted_suites per changed file.
 - T-3215 35df2470a: investor_age inherits via named parent; 2 slow suites unrun by me (land gate). Mine next: T-2667. Left: threads column, This Session page, #41 post. T-2616: baseline and plan in its board note. T-3069: only reads left (OPT-115, OPT-117 by 11-09), then #41 before/after. Keeper runs merge queue in sessions 5884472ae.
+- T-3331 3bcbbe39f: store+tsv on main, add seeds; no reader. T-3392: wire or retire (Ines).
 {% endraw %}
 
 

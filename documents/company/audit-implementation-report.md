@@ -11,17 +11,17 @@ description: "The company now stops starting work it cannot merge, merges withou
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Written 5:25 AM ET on 2026-11-10 by the Fable session, for the Investors. It answers the ten points the mandate of 2026-11-10 asked for, and its closing question. The work is not finished: phases 2 and 3 have parts not started, and they are listed under point 10. The running log, with every commit and its test, is [`ops/plans/audit-implementation.md`](audit-implementation.html).
+Written 5:42 AM ET on 2026-11-10 by the Fable session, for the Investors. It answers the ten points the mandate of 2026-11-10 asked for, and its closing question. The work is not finished: phases 2 and 3 have parts not started, and they are listed under point 10. The running log, with every commit and its test, is [`ops/plans/audit-implementation.md`](audit-implementation.html).
 
 ## The short answer
 
-The company now stops starting work it cannot merge, merges without waiting for a session or a message, clears work that cannot merge instead of retrying it without end, and shows one true count on Home, This Session and the report. The count of tasks waiting to merge went from 215 to 120 in four and a half hours.
+The company now stops starting work it cannot merge, merges without waiting for a session or a message, clears work that cannot merge instead of retrying it without end, and shows one true count on Home, This Session and the report. The count of tasks waiting to merge went from 215 to 96 in five hours.
 
-The merge step itself is not faster yet. Tasks merge at about 4 an hour, the same as before. Most of the fall in the count came from the reset rule (87 tasks sent back to "to do"), not from more merging. Making each merge try cheaper and more likely to land is the main work left.
+The merge step itself is not faster yet. Tasks merge at about 4 an hour, the same as before. Most of the fall in the count came from the reset rule (112 tasks sent back to "to do"), not from more merging. Making each merge try cheaper and more likely to land is the main work left.
 
 ## 1. What changed
 
-27 changes reached main through the merge gate between 12:51 AM and 5:21 AM.
+28 changes reached main through the merge gate between 12:51 AM and 5:21 AM.
 
 - **One limit.** One count of unique tasks waiting to merge, taken every 10 minutes and kept as a record. No new work starts at 12 or more. The dispatcher, the main session's pool, the personal accounts, the handbook and both worker prompts read that one limit.
 - **Idle is fine.** "Never idle", "use the whole allowance" and "every worker always has a task" are gone from the handbook and the prompts. The pace and the allowance are ceilings.
@@ -39,12 +39,12 @@ The merge step itself is not faster yet. Tasks merge at about 4 an hour, the sam
 
 | Phase | State | Proof |
 |---|---|---|
-| 0. Stabilize | Done, with two test files left red (point 10) | T-3972 and T-3818 on main and ticked; rows fixed in 10 test files that were red on main |
-| 1. One limit | Done except one file | Tests below, at and above the limit, with the count unreadable, with duplicate branches and with the mode on (`merge_limit_test.py` 55 rows, `personal_pool_test.sh` 108, `lane_take_test.py` 23). The scheduler's own part waits for a clearing word (point 10) |
+| 0. Stabilize | Done, with three test files left red (point 10) | T-3972 and T-3818 on main and ticked; rows fixed in 10 test files: 5 that this session's first change broke, 5 that were red before it |
+| 1. One limit | Done except one file | Tests below, at and above the limit, with the count unreadable, with duplicate branches and with the mode on (`merge_limit_test.py` 55 rows, `personal_pool_test.sh` 108, `lane_take_test.py` 23). The scheduler's own part was cleared by an Investor at 4:40 AM and is in testing (point 10) |
 | 2. Quiet main, one road | Part done | The cleanup's code road is closed (`session_salvage_test.py` 86 rows, 3 mutants). Three parts not started |
 | 3. One merge line | Part done | No message hold, no session needed, the reset rule, the self-starting line, cut checks keeping passes (`personal_land_test.sh` 381 rows, `merge_reset_test.py` 110, `land_kick_test.py` 28). Three parts not started |
 | 4. One record, Home, This Session | Done, with gaps in the record | `flow_test.py` 45 rows, `site_home_flow_test.py` 151, `site_session_view_test.py` 78, `machine_load_test.py` 60 |
-| 5. Return to app work | Built, not yet in effect | The exit rule and the app-first order are on main (`kind_first_test.py` 24). The mode is still on: 120 is not under 20 |
+| 5. Return to app work | Built, not yet in effect | The exit rule and the app-first order are on main (`kind_first_test.py` 24). The mode is still on: 96 is not under 20 |
 
 </div>
 
@@ -77,23 +77,23 @@ Not yet removed, though now unused: the old inbox-hold tool and the Home code fo
 ## 6. The merge queue now
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 6. The merge queue now, scrolls sideways" style="--tw:809px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: 6. The merge queue now, scrolls sideways" style="--tw:923px" markdown="1">
 
 | Measure | Before (Nov 9 or 12:15 AM) | Now (5:21 AM) |
 |---|---|---|
-| Unique tasks waiting to merge | 215 | 120 |
-| Waiting branches | 615 | 387 |
-| Tasks reset to "to do" by the rule | 0 | 87 (224 branches archived, none deleted) |
-| Tasks waiting over 48 hours | 136 | about 50, all sharing a branch with a newer task |
+| Unique tasks waiting to merge | 215 | 96 (5:41 AM) |
+| <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">Parked</span> branches | 615 (3:21 AM, before the first reset run) | 332 (5:41 AM) |
+| Tasks reset to "to do" by the rule | 0 | 112 (290 branches archived, none deleted) |
+| Tasks waiting over 48 hours | 136 | 31, each sharing a branch with a newer task or with a task whose board line is not open |
 | Merge tries that landed | 57 of 188 on Nov 9 (30%) | 11 of 34 since 12:51 AM (32%) |
 | Merge time spent on tries that landed | 24% on Nov 9 | 41% from 12:51 PM to 4:07 AM; 16% since (a small sample: 14 tries) |
 | Tasks merged per hour | 3.5 on Nov 9 | 4.0 over the last 5 hours |
-| New work | Started regardless | Held: 120 is over the limit of 12 |
+| New work | Held by merge-queue-only mode since 9:10 PM Nov 9, by three rules that counted differently | Held by the one limit: 96 is over 12; it stays in force after the mode ends |
 
 </div>
 
 
-The count is taken from one source, `ops/metrics/waiting.jsonl`, 23 readings so far.
+The count is taken from one source, `ops/metrics/waiting.jsonl`, 25 readings so far.
 
 ## 7. The merge line
 
@@ -109,15 +109,15 @@ What they cannot show yet, and say so: the moment a task is handed to a worker, 
 
 ## 9. The three approvals
 
-1. **"Idle is fine when merging is the limit."** In force in the handbook, the prompts, the dispatcher, the pool and the personal accounts. Not yet in the main session's scheduler file (point 10).
-2. **Merge-queue-only mode ends under 20 for 24 hours.** In force. Unique task IDs, one source, a continuous record; a gap or an unreadable count resets the clock. The clock is not running: the count is 120. When it ends, app work goes first with process work at about 10%. Visible on Home and in the report.
+1. **"Idle is fine when merging is the limit."** In force in the handbook, the prompts, the dispatcher, the pool and the personal accounts. The main session's scheduler file is the last place; its change is written, its tests pass, and it is in a wider test run before the gate (point 10).
+2. **Merge-queue-only mode ends under 20 for 24 hours.** In force. Unique task IDs, one source, a continuous record; a gap or an unreadable count resets the clock. The clock is not running: the count is 96. When it ends, app work goes first with process work at about 10%. Visible on Home and in the report.
 3. **An Investor message never holds a merge.** In force since 12:51 AM, with tests. The safety checks and the protected-file rules are unchanged.
 
 ## 10. What is left, and what blocks it
 
-**Needs an Investor:**
-- **The scheduler's part of approval 1.** A safety check refused a command of mine at 1:11 AM, and the company's rule is that the item then stops. "Go ahead with the scheduler tests" on #41 clears it.
-- **Proposal #237.** Approved on Nov 9, applied, then undone when its test run timed out three times on an overloaded machine. It needs "approve" again. One guard test stays red until then.
+**Asked of an Investor, and answered at 4:40 AM by an Investor:**
+- **The scheduler's part of approval 1.** A safety check refused a command of mine at 1:11 AM, and the company's rule is that the item then stops. "go ahead with the scheduler tests" cleared it. The two test files are updated and pass (220 and 45 rows). While testing I found and fixed a fault in my own change: with the limit closed and nothing for a worker to do, a waiting Investor message would have opened no session. It now always gets its short reply session. The change goes to the gate after a run of every test file that names the scheduler.
+- **Proposal #237.** Approved again at 4:41 AM and applied again by the company's own tool at 5:34 AM. One guard test row depends on it.
 
 **Not started:**
 - The gate checking a change outside the main folder, so a change is not live before it passes.
@@ -129,7 +129,7 @@ What they cannot show yet, and say so: the moment a task is handed to a worker, 
 - Recording hand-outs, test-run lengths and main-session merges in the workflow record.
 - Closing the experiments this work replaces; removing the unused code named in point 5.
 
-**Found red on main and not fixed:** the guard tests (3 rows; two expect Investor settings as they used to be, one waits on #237), the blob-drop tests (4 rows, not yet read), and one row that checks five other test files. The merge tool's own tests fail on four rows when run from a personal account's folder.
+**Found red on main and not fixed:** the guard tests (two rows expect Investor settings as they used to be; a third depended on #237, now applied again), the blob-drop tests (4 rows, not yet read), and one row that checks five other test files. The merge tool's own tests fail on four rows when run from a personal account's folder.
 
 ## This session's own mistakes
 
@@ -145,13 +145,13 @@ Each was corrected and is described in [`ops/plans/audit-implementation.md`](aud
 
 *Is this engineering system now better at turning the work it produces into verified, useful software than it was before the audit, and what concrete evidence proves that it is?*
 
-**Better at not making the problem worse: yes, and proven.** New work has been held since 1:16 AM while 120 or more tasks wait. Before, six personal-account slots and the main session kept starting work into a queue of over 200.
+**Better at not making the problem worse: yes, and proven.** One limit now holds new work wherever a session could start it, and it stays after merge-queue-only mode ends. Before, the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> was a temporary mode read through three rules that counted the queue differently, and on Nov 9 the personal accounts ran 35 sessions into a queue of about 200.
 
 **Better at merging unattended: yes, and proven.** 21 tasks merged with no session running. Before, nothing merged between sessions, and a message from an Investor stopped merging for up to 30 minutes.
 
-**Better at telling the truth: yes, and proven.** Twelve test files were red on main without anyone knowing; ten are fixed. Home showed three queue numbers that disagreed; it shows one. This Session showed nothing; it shows every task's path.
+**Better at telling the truth: yes, and proven.** Eight test files were red on main without anyone knowing; five are fixed and three are listed. (Five more went red from my own first change and were repaired within 70 minutes.) Home showed three queue numbers that disagreed; it shows one. This Session showed nothing; it shows every task's path.
 
-**Better at merging faster: not yet proven.** About 4 tasks an hour merge now, against 3.5 on Nov 9. A third of merge tries land, as before. The count fell mostly because unmergeable work was cleared, which is honest progress but is not throughput.
+**Better at merging faster: not yet proven.** About 4 tasks an hour merge now, against 3.5 on Nov 9. A third of merge tries land, as before. The count fell from 215 to 96 mostly because 112 tasks that could not merge were cleared, which is honest progress but is not throughput.
 
 **Better at shipping the app: not yet.** That starts when the count has stayed under 20 for 24 hours. At tonight's rate, with the reset rule clearing what cannot merge, that is days away, not hours. The measures to watch are in `log/optimizations.md`, entry OPT-128, read on Nov 13 and Nov 17.
 {% endraw %}

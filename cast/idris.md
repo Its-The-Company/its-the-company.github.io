@@ -62,6 +62,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3560 11-09: F4-F6 tightening written, never run (xc.sh 75, disk); patch in company-scratch/T-3560-idris. T-3364's PremadeFirstRenderTests never landed; the patch re-adds it.
 - T-1643 11-09: LaneDemotions.remove (locked; proof = app ok row after list mtime). UI T-3791 (needs T-1140), test L T-3792. Lesson: shared worktree's uncommitted tests ride in my xc.sh run.
 - Lesson T-1404: one Bash call <span title="A measured fact that holds a grade below a letter, however good the rest is.">caps</span> at 10 min; split test L (WK_LANE_LIST). A failed test L leaves its widget placed: check pids.
+- T-3762 11-09: GalleryPush, request used once; UI test red on old code. Lesson: clear a pushed view's request on pop. (T-3757: archive.md.)
 {% endraw %}
 
 

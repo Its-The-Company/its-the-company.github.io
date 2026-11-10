@@ -1,27 +1,77 @@
 {
  "schema": 1,
- "at": "2026-11-10T14:30:16.371884+00:00",
+ "at": "2026-11-10T14:36:04.472393+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
-  "flow": [
+  "flow": [],
+  "done": [
+   {
+    "t": "T-3150",
+    "name": "Make the scoreboard's spend match the ledger",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794321285,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-0885",
+    "name": "Read the shared-tree repair trial's reopen rule",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794321285,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3703",
+    "name": "Show when a merge check moves to the Mac mini",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794321285,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3812",
+    "name": "Ask the Investors about wrong security stops",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794321285,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3706",
+    "name": "Stop the sync rewriting main commits while pushes are held",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794321285,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-2076",
+    "name": "Build the site stages behind off-by-default switches",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794321285,
+    "why": "did not merge cleanly"
+   },
    {
     "t": "T-0622",
     "name": "Merge two editor appearance flags into one",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794319879
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794321197,
+    "why": "tests failed"
+   },
    {
     "t": "T-3762",
-    "name": "Stop the Gallery reopening a tapped widget's page",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -42,66 +92,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794318822
-   },
-   {
-    "t": "T-3027",
-    "name": "Retry finished work that could not be merged",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794318371
-   },
-   {
-    "t": "T-0851",
-    "name": "Split the app guide into one document per section",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794318371
-   },
-   {
-    "t": "T-2026",
-    "name": "Print which tests were skipped in the build summary",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794318371
-   },
-   {
-    "t": "T-1442",
-    "name": "Swap in the draft words iOS shows outside the app",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794317146
-   },
-   {
-    "t": "T-3669",
-    "name": "Draw the launcher slot editor screen",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794317135
-   },
-   {
-    "t": "T-3763",
-    "name": "Open the file a widget runs when ids repeat",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794317121
-   },
-   {
-    "t": "T-0444",
-    "name": "Fix the version wording in Acknowledgements rows",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794317104
    }
   ],
-  "landed": 60,
-  "failed": 48
+  "landed": 57,
+  "failed": 55
  },
  "workers": [],
  "who": "",
@@ -109,7 +103,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 640,
+  "runnable_count": 642,
   "blocked_count": 113
  },
  "meter": {
@@ -135,13 +129,13 @@
   "read_at": "2026-11-10T09:30:05.011603-05:00"
  },
  "ui": {
-  "week_pct": 0.309,
-  "five_hour_pct": 0.0,
+  "week_pct": 0.327,
+  "five_hour_pct": 4.456,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
   },
-  "warn": false,
+  "warn": true,
   "over": false,
   "coverage": 1.0,
   "show_coverage": false,
@@ -152,7 +146,7 @@
   "week_pct": 49.55,
   "usage_pct": 36.8,
   "work_pct": 81.2,
-  "read_at": "2026-11-10T14:30:00+00:00",
+  "read_at": "2026-11-10T14:36:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -188,17 +182,12 @@
  },
  "lock_in": {
   "on": false,
-  "pool": 0,
-  "at": "2026-11-10T09:30:00-05:00",
+  "pool": 1,
+  "at": "2026-11-10T09:36:00-05:00",
   "mode": null
  },
  "next_tick_why": "last_tick",
- "idle": {
-  "since": "2026-11-10T07:41:17-05:00",
-  "minutes": 108,
-  "why": "a tick has spent 13 min on steps before the session",
-  "healed": []
- },
+ "idle": null,
  "pool": null,
  "lanes": [
   {
@@ -342,7 +331,7 @@
    }
   ],
   "count": {
-   "next": 640,
+   "next": 642,
    "wait": 45,
    "blocked": 68,
    "you": 17
@@ -383,38 +372,14 @@
   ]
  ],
  "reply": {
-  "sent": "2026-11-10T12:34:52Z",
-  "seconds": 366.0
+  "sent": "2026-11-10T14:29:28Z",
+  "seconds": 97.0
  },
- "inbox": [
-  {
-   "id": "c6769610237",
-   "state": "received",
-   "position": 1,
-   "eta": "2026-11-10T09:45:05-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Reword this prompt as needed, then..."
-  },
-  {
-   "id": "c6769965368",
-   "state": "received",
-   "position": 2,
-   "eta": "2026-11-10T09:45:05-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Also, don't stop Fable work at 90%\u2013..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -425,10 +390,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "9:30 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-10T14:30:00+00:00",
+  "at": "9:36 AM",
+  "why": "Between sessions: no session is running. Last check 9:30 AM ET.",
+  "at_iso": "2026-11-10T14:36:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:30 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:36 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 9:30 AM ET.</p></section>"
  }
 }

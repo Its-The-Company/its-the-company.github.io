@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-10T20:39:14.945881+00:00",
+ "at": "2026-11-10T20:51:42.819111+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -102,44 +102,44 @@
  "meter": {
   "five_hour": {
    "pct": 19.0,
-   "resets_at": "2026-11-10T20:49:59.648989+00:00",
+   "resets_at": "2026-11-10T20:50:00.466488+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 81.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 44.0,
-   "resets_at": "2026-11-15T06:59:59.649010+00:00",
+   "resets_at": "2026-11-15T06:59:59.466509+00:00",
    "used_words": "of your weekly allowance used",
    "left": 56.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-15T06:59:59.649206+00:00",
+   "resets_at": "2026-11-15T07:00:00.466660+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-10T15:23:49.432306-05:00"
+  "read_at": "2026-11-10T15:41:29.347934-05:00"
  },
  "ui": {
   "week_pct": 0.184,
-  "five_hour_pct": 8.214,
+  "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
   },
-  "warn": true,
-  "over": true,
+  "warn": false,
+  "over": false,
   "coverage": 1.0,
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-10T15:38:49-05:00",
+ "next_tick": "2026-11-10T16:06:29-05:00",
  "personal": {
   "week_pct": 24.54,
   "usage_pct": 35.8,
   "work_pct": 79.3,
-  "read_at": "2026-11-10T20:41:00+00:00",
+  "read_at": "2026-11-10T20:51:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -169,18 +169,23 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T15:40:00-05:00",
+   "at": "2026-11-10T15:51:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
-  "pool": 0,
-  "at": "2026-11-10T15:41:00-05:00",
+  "pool": 1,
+  "at": "2026-11-10T15:51:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "last_tick",
- "idle": null,
+ "idle": {
+  "since": "2026-11-10T14:16:39-05:00",
+  "minutes": 95,
+  "why": "a tick has spent 0 min on steps before the session",
+  "healed": []
+ },
  "pool": null,
  "lanes": [
   {
@@ -368,11 +373,24 @@
   "sent": "2026-11-10T19:11:38Z",
   "seconds": 275.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6778934260",
+   "state": "received",
+   "position": 1,
+   "eta": "2026-11-10T16:06:29-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Any progress update on the audit?..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -383,10 +401,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "3:41 PM",
-  "why": "Plan limit: the 5-hour allowance is near its end; it resets at 3:49 PM ET. Last check 3:41 PM ET.",
-  "at_iso": "2026-11-10T20:41:00+00:00",
+  "at": "3:51 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-10T20:51:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:41 PM ET</p><p class=\"an-why\">Plan limit: the 5-hour allowance is near its end; it resets at 3:49 PM ET. Last check 3:41 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:51 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

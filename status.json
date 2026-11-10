@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-10T20:51:42.819111+00:00",
+ "at": "2026-11-10T20:54:47.208873+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-10T15:51:43-05:00",
   "flow": [],
   "done": [
    {
@@ -134,12 +134,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-10T16:06:29-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 24.54,
   "usage_pct": 35.8,
   "work_pct": 79.3,
-  "read_at": "2026-11-10T20:51:00+00:00",
+  "read_at": "2026-11-10T20:54:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -175,18 +175,22 @@
  },
  "lock_in": {
   "on": true,
-  "pool": 1,
-  "at": "2026-11-10T15:51:00-05:00",
+  "pool": 2,
+  "at": "2026-11-10T15:54:00-05:00",
   "mode": "midnight"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": {
   "since": "2026-11-10T14:16:39-05:00",
-  "minutes": 95,
+  "minutes": 98,
   "why": "a tick has spent 0 min on steps before the session",
   "healed": []
  },
- "pool": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight; the 5-hour window allows 1; the machine allows 2 (new work waits: 35 tasks wait to merge (limit 12): 2 agents finish and merge...",
+  "n": 1,
+  "at": "2026-11-10T15:51:29.097711-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
@@ -239,6 +243,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -333,6 +338,10 @@
    "wait": 44,
    "blocked": 68,
    "you": 17
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -370,27 +379,14 @@
   ]
  ],
  "reply": {
-  "sent": "2026-11-10T19:11:38Z",
-  "seconds": 275.0
+  "sent": "2026-11-10T20:50:53Z",
+  "seconds": 122.0
  },
- "inbox": [
-  {
-   "id": "c6778934260",
-   "state": "received",
-   "position": 1,
-   "eta": "2026-11-10T16:06:29-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Any progress update on the audit?..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -401,10 +397,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "3:51 PM",
+  "at": "3:54 PM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-10T20:51:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:51 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "at_iso": "2026-11-10T20:54:00+00:00",
+  "started": "3:51 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 3:51 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:54 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

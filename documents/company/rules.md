@@ -533,6 +533,8 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-09 19:43 ET** ((private)): A new MacBook runner job kind the company proposes counts as approved by the Investors; the runner may switch it on itself (as runner 18 did for build), each switch logged and reported. The runner's protected box, limits and self-test still hold.
 - **2026-11-09 19:45 ET** ((private)): The company deletes the company's own files it judges safe to delete on the Mac mini (test leftovers, unused Simulators, idle spare copies, finished scratch), checking each first; the Investors' personal files stay off limits (charter ban unchanged).
 - **2026-11-09 19:49 ET** ((private)): No more Needs-you entries for a session's changes to Investor-owned files. Accidental ones are dropped by the company; intended changes go through the applier, which applies alone what charter 59 allows. Full auto-approve of every such change is asked back on #41 (c6755673143); until answered, the charter-reserved items keep needing approve.
+- **2026-11-09 19:58 ET** ((private)): Entries about edits to Investor-owned files no longer go to the Investors; accidental ones are dropped; real changes go through the proposal tool.
+- **2026-11-09 20:00 ET** ((private)): One approve on an issue covers every change that accomplishes that issue's stated goal; the company does not ask again on the same issue.
 {% endraw %}
 
 </div>

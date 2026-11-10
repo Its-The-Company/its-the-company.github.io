@@ -1,11 +1,26 @@
 {
  "schema": 1,
- "at": "2026-11-10T00:57:14.984437+00:00",
+ "at": "2026-11-10T01:05:20.896757+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "inbox",
+  "started": "2026-11-09T20:00:40-05:00",
   "flow": [
+   {
+    "t": "T-0556",
+    "name": "Take the app pictures that were missing",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794240552
+     },
+     {
+      "s": "macbook",
+      "at": 1794272655
+     }
+    ]
+   },
    {
     "t": "T-3127",
     "name": "Find what sends main sessions a stray SIGTERM",
@@ -40,17 +55,6 @@
      {
       "s": "testq",
       "at": 1794256352
-     }
-    ]
-   },
-   {
-    "t": "T-0556",
-    "name": "Take the app pictures that were missing",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794240552
      }
     ]
    }
@@ -143,59 +147,26 @@
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[tools] T-3907 merge checks on the MacBook runner",
-   "model": "opus",
-   "started": "2026-11-10T00:35:51.335Z",
-   "seconds": null,
-   "finished": "2026-11-10T00:47:16.448000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3904 T-3818 land two saved patches",
-   "model": "opus",
-   "started": "2026-11-10T00:23:04.446Z",
-   "seconds": null,
-   "finished": "2026-11-10T00:45:07.504000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-3908 merge queue page",
-   "model": "opus",
-   "started": "2026-11-10T00:36:43.136Z",
-   "seconds": null,
-   "finished": "2026-11-10T00:40:16.982000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3905 cut merge tool test time",
-   "model": "opus",
-   "started": "2026-11-10T00:03:30.394Z",
-   "seconds": null,
-   "finished": "2026-11-10T00:38:09.530000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 660,
-  "blocked_count": 115
+  "runnable_count": 663,
+  "blocked_count": 114
  },
  "meter": {
   "five_hour": {
-   "pct": 37.0,
-   "resets_at": "2026-11-09T23:00:00.507894+00:00",
+   "pct": 19.0,
+   "resets_at": "2026-11-10T03:59:59.596027+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 63.0,
+   "left": 81.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 30.0,
-   "resets_at": "2026-11-15T07:00:00.507922+00:00",
+   "pct": 35.0,
+   "resets_at": "2026-11-15T06:59:59.596045+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 70.0,
+   "left": 65.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -203,11 +174,11 @@
    "resets_at": "2026-11-15T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-09T16:24:29.290435-05:00"
+  "read_at": "2026-11-09T20:00:20.687891-05:00"
  },
  "ui": {
-  "week_pct": 0.008,
-  "five_hour_pct": 0.0,
+  "week_pct": 0.018,
+  "five_hour_pct": 0.062,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -218,12 +189,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-09T16:39:29-05:00",
+ "next_tick": null,
  "personal": {
-  "week_pct": 3.66,
+  "week_pct": 3.57,
   "usage_pct": 9.3,
   "work_pct": 50.0,
-  "read_at": "2026-11-10T00:58:00+00:00",
+  "read_at": "2026-11-10T01:06:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -244,7 +215,7 @@
   }
  ],
  "disk": {
-  "free_gb": 43,
+  "free_gb": 42,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -253,7 +224,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-09T19:51:00-05:00",
+   "at": "2026-11-09T20:00:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-09T08:43:00-05:00"
@@ -262,13 +233,17 @@
  },
  "lock_in": {
   "on": false,
-  "pool": 1,
-  "at": "2026-11-09T19:58:00-05:00",
+  "pool": 2,
+  "at": "2026-11-09T20:06:00-05:00",
   "mode": null
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: 65% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 8 (cut a step: 162 lane branches parked in 24 hours, over 40; 109 retry lines wait, over 50)",
+  "n": 2,
+  "at": "2026-11-09T20:00:21.488165-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
@@ -321,6 +296,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -411,36 +387,26 @@
    }
   ],
   "count": {
-   "next": 660,
+   "next": 663,
    "wait": 46,
-   "blocked": 69,
-   "you": 19
+   "blocked": 68,
+   "you": 18
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-10T00:48:44Z",
-  "seconds": 144.0
+  "sent": "2026-11-10T01:00:03Z",
+  "seconds": 113.0
  },
- "inbox": [
-  {
-   "id": "c6755760889",
-   "state": "received",
-   "position": 1,
-   "eta": "2026-11-09T16:39:29-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Remove Latest Report, Needs You, and..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -451,10 +417,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "7:58 PM",
-  "why": "Between sessions: no session is running. Last check 4:24 PM ET.",
-  "at_iso": "2026-11-10T00:58:00+00:00",
+  "at": "8:06 PM",
+  "why": "Between sessions: no session is running. Last check 8:00 PM ET.",
+  "at_iso": "2026-11-10T01:06:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:58 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 4:24 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:06 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 8:00 PM ET.</p></section>"
  }
 }

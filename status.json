@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-10T15:13:20.911645+00:00",
+ "at": "2026-11-10T15:16:21.036100+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-10T10:10:17-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-0622",
+    "name": "Merge two editor appearance flags into one",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794323765
+   },
    {
     "t": "T-0885",
     "name": "Read the shared-tree repair trial's reopen rule",
@@ -80,18 +88,9 @@
     "end": "failed",
     "end_at": 1794321963,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3150",
-    "name": "Make the scoreboard's spend match the ledger",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794321957,
-    "why": "did not merge cleanly"
    }
   ],
-  "landed": 53,
+  "landed": 54,
   "failed": 62
  },
  "workers": [
@@ -100,7 +99,7 @@
    "task": "[site] T-4007 Home strip and list agree",
    "model": "opus",
    "started": "2026-11-10T15:11:31.313Z",
-   "seconds": 109,
+   "seconds": 289,
    "finished": null,
    "effort": "high"
   }
@@ -153,7 +152,7 @@
   "week_pct": 50.07,
   "usage_pct": 36.8,
   "work_pct": 80.2,
-  "read_at": "2026-11-10T15:13:00+00:00",
+  "read_at": "2026-11-10T15:16:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -174,23 +173,23 @@
   }
  ],
  "disk": {
-  "free_gb": 32,
+  "free_gb": 33,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 186
+   "free_gb": 184
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T10:08:00-05:00",
+   "at": "2026-11-10T10:15:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-10T10:13:00-05:00",
+  "at": "2026-11-10T10:16:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -418,10 +417,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "10:13 AM",
+  "at": "10:16 AM",
   "why": "",
-  "at_iso": "2026-11-10T15:13:00+00:00",
+  "at_iso": "2026-11-10T15:16:00+00:00",
   "started": "10:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:13 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:16 AM ET</p></section>"
  }
 }

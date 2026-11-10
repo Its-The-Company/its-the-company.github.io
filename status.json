@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-10T19:16:37.852606+00:00",
+ "at": "2026-11-10T19:20:55.656507+00:00",
  "session": {
-  "active": true,
-  "kind": "inbox",
-  "started": "2026-11-10T14:15:49-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [],
   "done": [
    {
@@ -122,24 +122,24 @@
   "read_at": "2026-11-10T14:10:48.448684-05:00"
  },
  "ui": {
-  "week_pct": 0.24,
-  "five_hour_pct": 4.225,
+  "week_pct": 0.251,
+  "five_hour_pct": 8.214,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
   },
   "warn": true,
-  "over": false,
+  "over": true,
   "coverage": 1.0,
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-10T14:30:37-05:00",
  "personal": {
   "week_pct": 33.38,
   "usage_pct": 35.8,
   "work_pct": 79.3,
-  "read_at": "2026-11-10T19:19:00+00:00",
+  "read_at": "2026-11-10T19:21:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -160,7 +160,7 @@
   }
  ],
  "disk": {
-  "free_gb": 34,
+  "free_gb": 32,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -169,17 +169,17 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T14:15:00-05:00",
+   "at": "2026-11-10T14:20:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 0,
-  "at": "2026-11-10T14:19:00-05:00",
+  "at": "2026-11-10T14:21:00-05:00",
   "mode": "midnight"
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
  "pool": null,
  "lanes": [
@@ -234,7 +234,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -329,10 +328,6 @@
    "wait": 44,
    "blocked": 68,
    "you": 17
-  },
-  "fin": {
-   "n": 0,
-   "rows": []
   }
  },
  "qr": [
@@ -388,10 +383,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "2:19 PM",
-  "why": "Between sessions: no session is running. Last check 2:15 PM ET.",
-  "at_iso": "2026-11-10T19:19:00+00:00",
+  "at": "2:21 PM",
+  "why": "Plan limit: the 5-hour allowance is near its end; it resets at 3:49 PM ET. Last check 2:21 PM ET.",
+  "at_iso": "2026-11-10T19:21:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:19 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 2:15 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:21 PM ET</p><p class=\"an-why\">Plan limit: the 5-hour allowance is near its end; it resets at 3:49 PM ET. Last check 2:21 PM ET.</p></section>"
  }
 }

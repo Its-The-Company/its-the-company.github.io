@@ -1,52 +1,30 @@
 {
  "schema": 1,
- "at": "2026-11-10T02:24:21.993564+00:00",
+ "at": "2026-11-10T04:44:26.940803+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-09T21:33:09-05:00",
   "flow": [
    {
-    "t": "T-3680",
-    "name": "Review the launcher sheet fix over other sheets",
+    "t": "T-2948",
+    "name": "Keep Xcode's lock in a copy outside git",
     "acct": "Personal a",
     "steps": [
      {
-      "s": "macbook",
-      "at": 1794274004
+      "s": "testq",
+      "at": 1794285344
      }
     ]
    },
    {
-    "t": "T-3098",
-    "name": "Keep input prompts from following a finished run",
+    "t": "T-1732",
+    "name": "Keep the learned Python library root only if valid",
     "acct": "Personal a",
     "steps": [
      {
-      "s": "macbook",
-      "at": 1794274004
-     }
-    ]
-   },
-   {
-    "t": "T-0042",
-    "name": "Add an Acknowledgements screen for vendored packages",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "macbook",
-      "at": 1794274004
-     }
-    ]
-   },
-   {
-    "t": "T-3675",
-    "name": "Pass the launcher editor's saved apps to the launcher widgets",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "macbook",
-      "at": 1794273237
+      "s": "testq",
+      "at": 1794277891
      }
     ]
    },
@@ -62,17 +40,6 @@
      {
       "s": "testq",
       "at": 1794277219
-     }
-    ]
-   },
-   {
-    "t": "T-3716",
-    "name": "Find why the Simulator location test now fails",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794273437
      }
     ]
    },
@@ -101,144 +68,163 @@
       "at": 1794259043
      }
     ]
-   },
-   {
-    "t": "T-1643",
-    "name": "Let a person's say-so lift a widget demotion",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794256352
-     }
-    ]
    }
   ],
   "done": [
    {
-    "t": "T-0622",
-    "name": "Merge two editor appearance flags into one",
+    "t": "T-1289",
+    "name": "Reject line breaks in widget text suffixes",
     "acct": "Personal a",
     "steps": [],
+    "end": "landed",
+    "end_at": 1794285326
+   },
+   {
+    "t": "T-3805",
+    "name": "Stop a bridge test hanging on Python 3.9",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794283886
+   },
+   {
+    "t": "T-1764",
+    "name": "Write each widget run record when the run ends",
+    "acct": "Personal b",
+    "steps": [],
     "end": "failed",
-    "end_at": 1794277198,
+    "end_at": 1794283870,
     "why": "Xcode tests failed"
    },
    {
-    "t": "T-0556",
-    "name": "Take the app pictures that were missing",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794277173
-   },
-   {
-    "t": "T-3705",
-    "name": "Land and close the work held by old charter copies",
+    "t": "T-1764",
+    "name": "Write each widget run record when the run ends",
     "acct": "Personal b",
     "steps": [],
     "end": "failed",
-    "end_at": 1794273796,
-    "why": "did not merge cleanly"
+    "end_at": 1794282922,
+    "why": "Xcode tests failed"
    },
    {
-    "t": "T-3827",
-    "name": "Merge every parked change today and cap the queue",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794273796,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3833",
-    "name": "Redo show what blocks each blocked task on Home",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794273385,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3834",
-    "name": "Merge and retry parked work in task priority order",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794273385,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3833",
-    "name": "Redo show what blocks each blocked task on Home",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794273059,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3826",
-    "name": "Stop one stuck step silencing every widget the app writes",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794271056
-   },
-   {
-    "t": "T-3783",
-    "name": "Keep finding why only Countdown draws on the iPhone",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794269707
-   },
-   {
-    "t": "T-3657",
-    "name": "Add the memory-overrun test widget to the gate build",
+    "t": "T-3382",
+    "name": "Finish pruning the stale product lines",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
-    "end_at": 1794269695
+    "end_at": 1794282893
+   },
+   {
+    "t": "T-3152",
+    "name": "Clear finished job folders from the MacBook",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794282893
+   },
+   {
+    "t": "T-2871",
+    "name": "Review the saved-run traceback cut",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794282893
+   },
+   {
+    "t": "T-2491",
+    "name": "Stop the stuck extension from recreating deleted widget folders",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794281970,
+    "why": "Xcode tests failed"
+   },
+   {
+    "t": "T-3305",
+    "name": "Judge the remaining open board lines for staleness",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794281305
+   },
+   {
+    "t": "T-2888",
+    "name": "Clear finished job folders from the MacBook",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794281305
    }
   ],
-  "landed": 29,
-  "failed": 32
+  "landed": 42,
+  "failed": 25
  },
  "workers": [],
  "who": "",
- "recent": [],
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3907 land five merge patches",
+   "model": "opus",
+   "started": "2026-11-10T03:45:00.969Z",
+   "seconds": null,
+   "finished": "2026-11-10T04:42:40.295000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3976 storage makeup on Home",
+   "model": "opus",
+   "started": "2026-11-10T04:12:37.867Z",
+   "seconds": null,
+   "finished": "2026-11-10T04:32:53.443000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3967 T-3973 Simulator idle tool",
+   "model": "opus",
+   "started": "2026-11-10T02:49:45.211Z",
+   "seconds": null,
+   "finished": "2026-11-10T04:32:03.267000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3971 merge-only switch",
+   "model": "opus",
+   "started": "2026-11-10T02:45:31.120Z",
+   "seconds": null,
+   "finished": "2026-11-10T04:24:01.257000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 680,
-  "blocked_count": 114
+  "runnable_count": 683,
+  "blocked_count": 115
  },
  "meter": {
   "five_hour": {
-   "pct": 20.0,
-   "resets_at": "2026-11-10T03:59:59.784694+00:00",
+   "pct": 15.0,
+   "resets_at": "2026-11-10T08:59:59.744993+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 80.0,
+   "left": 85.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 35.0,
-   "resets_at": "2026-11-15T06:59:59.784712+00:00",
+   "pct": 42.0,
+   "resets_at": "2026-11-15T06:59:59.745012+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 65.0,
+   "left": 58.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 0.0,
-   "resets_at": "2026-11-15T07:00:00+00:00",
+   "pct": 5.0,
+   "resets_at": "2026-11-15T06:59:59.745162+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-09T21:24:08.475272-05:00"
+  "read_at": "2026-11-09T23:44:14.623166-05:00"
  },
  "ui": {
-  "week_pct": 0.096,
-  "five_hour_pct": 0.554,
+  "week_pct": 0.102,
+  "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -249,12 +235,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-09T21:39:08-05:00",
+ "next_tick": null,
  "personal": {
-  "week_pct": 3.56,
-  "usage_pct": 9.2,
-  "work_pct": 50.0,
-  "read_at": "2026-11-10T02:25:00+00:00",
+  "week_pct": 3.79,
+  "usage_pct": 8.3,
+  "work_pct": 48.4,
+  "read_at": "2026-11-10T04:44:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -275,16 +261,16 @@
   }
  ],
  "disk": {
-  "free_gb": 42,
+  "free_gb": 35,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 192
+   "free_gb": 177
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-09T21:18:00-05:00",
+   "at": "2026-11-09T23:44:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-09T08:43:00-05:00"
@@ -293,13 +279,17 @@
  },
  "lock_in": {
   "on": false,
-  "pool": 2,
-  "at": "2026-11-09T21:25:00-05:00",
+  "pool": 1,
+  "at": "2026-11-09T23:44:00-05:00",
   "mode": null
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: ahead of the line to use the week up by Sat 23:00, so work waits until the line passes; the machine allows 3 (cut a step: 7 of 27 finished tasks were redone in 6 hours; 124 lane branches...",
+  "n": 1,
+  "at": "2026-11-09T23:44:15.033575-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
@@ -368,6 +358,13 @@
     "o": "c"
    },
    {
+    "w": "Idris",
+    "k": "bug",
+    "t": "Fix the template test that fails since the...",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Odalys",
     "k": "tools",
     "t": "Read runner 18 live and run one build job",
@@ -415,37 +412,59 @@
     "t": "Last checks before the first test build",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Run Python widget scripts inside the widget...",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
    {
     "w": "Operator",
-    "t": "Main passes its Xcode checks again: job J-20261109-1938-land-a47-2703da on the MacBook no longer...",
-    "at": "2026-11-09T20:41:00-05:00"
+    "t": "Folded into T-3784 (the same Python 3.9 bridge test hang, already on the board for Pernille);...",
+    "at": "2026-11-09T23:11:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "T-3904 (batch check reads research): the batch check copy now includes the research folder, so...",
-    "at": "2026-11-09T19:34:00-05:00"
+    "t": "An outside check of the change that keeps saved Python error details honest found them true in...",
+    "at": "2026-11-09T22:54:00-05:00"
    },
    {
-    "w": "Odalys",
-    "t": "When an app change lands on main while a system or site change is being checked, the land now...",
-    "at": "2026-11-09T19:20:00-05:00"
+    "w": "Idris",
+    "t": "Tests now cover the last moment of a script run, and all three planted faults in that window are...",
+    "at": "2026-11-09T22:28:00-05:00"
    }
   ],
   "count": {
-   "next": 680,
-   "wait": 46,
-   "blocked": 68,
-   "you": 18
+   "next": 683,
+   "wait": 49,
+   "blocked": 66,
+   "you": 17
+  },
+  "fin": {
+   "n": 11,
+   "rows": [
+    [
+     "T-2871",
+     "Review the saved-run..."
+    ],
+    [
+     "T-2056",
+     "Add tests for the end of a run"
+    ],
+    [
+     "T-0039",
+     "Check widget sizes and color..."
+    ],
+    [
+     "T-1042",
+     "Check that debug info..."
+    ],
+    [
+     "T-1113",
+     "Run the copy message test on..."
+    ],
+    [
+     "T-1114",
+     "Test the location permission..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -483,17 +502,31 @@
   ]
  ],
  "reply": {
-  "sent": "2026-11-10T02:15:21Z",
-  "seconds": 34.0
+  "sent": "2026-11-10T04:20:36Z",
+  "seconds": 187.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6759051959",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "approve"
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -501,10 +534,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "9:25 PM",
-  "why": "Between sessions: no session is running. Last check 9:24 PM ET.",
-  "at_iso": "2026-11-10T02:25:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:25 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 9:24 PM ET.</p></section>"
+  "at": "11:44 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-10T04:44:00+00:00",
+  "started": "9:33 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:33 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:44 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

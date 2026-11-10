@@ -203,6 +203,13 @@
 <summary type="text">T-3406 restart under T-0848: the refused effect was a test deleting a temp path named log (rm -rf &quot;$T/log&quot;). Dropped: the new test is its own file, deletes nothing, names no log path; its temp tree sits in the scratch folder. A second refusal goes to Ines.</summary>
 </entry>
 <entry>
+<title>Decision: ADR-009 accepted: scripts lose import ssl in 1.0; Python https moves to Apple&#x27;s encryption</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-07:event/2026-11-07t23-03-47-05-00-decision-adr-009-accepted-scripts-lose-import-ss</id>
+<updated>2026-11-07T23:03:47-05:00</updated>
+<summary type="text">ADR-009 accepted: scripts lose import ssl in 1.0; Python https moves to Apple&#x27;s encryption and OpenSSL leaves, if done by the 2026-11-30 freeze, else 1.0.1. Export answer card drafted for #138.</summary>
+</entry>
+<entry>
 <title>Release: Build 0.1 (3) from cdd8cb483 uploaded to App Store Connect as internal-only TestFlight; Ap</title>
 <link href="https://its-the-company.github.io/"/>
 <id>tag:its-the-company.github.io,2026-11-07:event/2026-11-07t15-57-36-05-00-release-build-0-1-3-from-cdd8cb483-uploaded-to</id>
@@ -348,12 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-03:event/2026-11-03t14-24-38-05-00-decision-t-1634-item-1-ruled-extension-lane-firs</id>
 <updated>2026-11-03T14:24:38-05:00</updated>
 <summary type="text">T-1634 item 1 ruled: extension lane first-run figure 21 MiB, margin 2x (42 MiB vs limit 30), so no first run fits until T-0680&#x27;s device Release measurement; lane flag stays off; clocks and progress off the lane list.</summary>
-</entry>
-<entry>
-<title>Build: T-1439: ui.RefreshButton (reserved pywidget.refresh) and ui.Updated age node in the DSL an</title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-03:event/2026-11-03t11-35-22-05-00-build-t-1439-ui-refreshbutton-reserved-pywid</id>
-<updated>2026-11-03T11:35:22-05:00</updated>
-<summary type="text">T-1439: ui.RefreshButton (reserved pywidget.refresh) and ui.Updated age node in the DSL and schema; prefix mutants caught (ebb68f4b1)</summary>
 </entry>
 </feed>

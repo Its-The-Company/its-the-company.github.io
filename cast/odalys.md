@@ -50,6 +50,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3967 (NOT landed 11-09 23:3x): patch SSD scratch T-3967-odalys/t3967.patch (sim_hold.py, xc.sh gate, xc_sim idle-down, supervisor tick). Gate green in clean wt at a57f07a4ed, commit refused when main moved. Lesson: run main_gate check in a clean scratch wt at main's HEAD, then commit in the shared copy at once.
 
 - 11-09: keep an applied patch out of main while blocked; its files dirty others' checks (deadlock). Map blockers with main_gate.wanted_suites per changed file.
+- T-3215 35df2470a: investor_age inherits via named parent; 2 slow suites unrun by me (land gate). Mine next: T-2667. Left: threads column, This Session page, #41 post. T-2616: baseline and plan in its board note. T-3069: only reads left (OPT-115, OPT-117 by 11-09), then #41 before/after. Keeper runs merge queue in sessions 5884472ae.
 {% endraw %}
 
 

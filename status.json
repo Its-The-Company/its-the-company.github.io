@@ -1,11 +1,41 @@
 {
  "schema": 1,
- "at": "2026-11-10T11:52:27.994262+00:00",
+ "at": "2026-11-10T12:31:23.535856+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
+   {
+    "t": "T-0974",
+    "name": "Give Acknowledgements readable names for new components",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794312762
+     },
+     {
+      "s": "macbook",
+      "at": 1794313236
+     }
+    ]
+   },
+   {
+    "t": "T-1732",
+    "name": "Keep the learned Python library root only if valid",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794311219
+     },
+     {
+      "s": "macbook",
+      "at": 1794311773
+     }
+    ]
+   },
    {
     "t": "T-3762",
     "name": "Stop the Gallery reopening a tapped widget's page",
@@ -54,20 +84,16 @@
       "at": 1794308100
      }
     ]
-   },
-   {
-    "t": "T-1732",
-    "name": "Keep the learned Python library root only if valid",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794311219
-     }
-    ]
    }
   ],
   "done": [
+   {
+    "t": "T-0425",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794311848
+   },
    {
     "t": "T-2098",
     "name": "Fix paths in the mutation check files",
@@ -143,18 +169,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794303814
-   },
-   {
-    "t": "T-0851",
-    "name": "Split the app guide into one document per section",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794303277,
-    "why": "did not merge cleanly"
    }
   ],
-  "landed": 53,
+  "landed": 54,
   "failed": 48
  },
  "workers": [],
@@ -178,44 +195,44 @@
  "meter": {
   "five_hour": {
    "pct": 27.0,
-   "resets_at": "2026-11-10T13:59:59.513044+00:00",
+   "resets_at": "2026-11-10T14:00:00.345162+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 73.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 72.0,
-   "resets_at": "2026-11-15T06:59:59.513070+00:00",
+   "resets_at": "2026-11-15T07:00:00.345183+00:00",
    "used_words": "of your weekly allowance used",
    "left": 28.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 62.0,
-   "resets_at": "2026-11-15T06:59:59.513219+00:00",
+   "resets_at": "2026-11-15T07:00:00.345344+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-10T06:38:02.490911-05:00"
+  "read_at": "2026-11-10T07:31:06.118252-05:00"
  },
  "ui": {
   "week_pct": 0.229,
-  "five_hour_pct": 12.0,
+  "five_hour_pct": 4.0,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
   },
   "warn": true,
-  "over": true,
+  "over": false,
   "coverage": 1.0,
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-10T06:53:03-05:00",
+ "next_tick": "2026-11-10T07:46:06-05:00",
  "personal": {
   "week_pct": 41.99,
   "usage_pct": 36.8,
   "work_pct": 81.2,
-  "read_at": "2026-11-10T11:56:00+00:00",
+  "read_at": "2026-11-10T12:31:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -236,16 +253,16 @@
   }
  ],
  "disk": {
-  "free_gb": 33,
+  "free_gb": 35,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 191
+   "free_gb": 179
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T06:54:00-05:00",
+   "at": "2026-11-10T07:12:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-09T08:43:00-05:00"
@@ -254,12 +271,17 @@
  },
  "lock_in": {
   "on": false,
-  "pool": 0,
-  "at": "2026-11-10T06:56:00-05:00",
+  "pool": 1,
+  "at": "2026-11-10T07:31:00-05:00",
   "mode": null
  },
  "next_tick_why": "last_tick",
- "idle": null,
+ "idle": {
+  "since": "2026-11-10T06:25:03-05:00",
+  "minutes": 66,
+  "why": "a tick has spent 17 min on steps before the session",
+  "healed": []
+ },
  "pool": null,
  "lanes": [
   {
@@ -447,11 +469,35 @@
   "sent": "2026-11-10T09:47:44Z",
   "seconds": 225.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6767183169",
+   "state": "received",
+   "position": 1,
+   "eta": "2026-11-10T07:46:06-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Is nothing running now?"
+  },
+  {
+   "id": "c6767282678",
+   "state": "received",
+   "position": 2,
+   "eta": "2026-11-10T07:46:06-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Get back to work on reducing the..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -462,10 +508,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "6:56 AM",
-  "why": "Plan limit: the 5-hour allowance is near its end; it resets at 8:59 AM ET. Last check 6:56 AM ET.",
-  "at_iso": "2026-11-10T11:56:00+00:00",
+  "at": "7:31 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-10T12:31:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:56 AM ET</p><p class=\"an-why\">Plan limit: the 5-hour allowance is near its end; it resets at 8:59 AM ET. Last check 6:56 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:31 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

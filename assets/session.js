@@ -1,6 +1,6 @@
 // Source with comments: tools/site/assets/session.js in the company repository.
 (function () {
-var S = window.CompanySite || {}, D = document, H = D.getElementById('lk-sess'), P = D.getElementById('ts-page');
+var S = window.CompanySite || {}, D = document, H = D.getElementById('lk-reply'), P = D.getElementById('ts-page');
 function clock(ms) {  // 12-hour, AM/PM, Eastern (T-3742)
 return new Date(ms).toLocaleString('en-US', { timeZone: 'America/New_York', hour: 'numeric', minute: '2-digit', hour12: true });
 }

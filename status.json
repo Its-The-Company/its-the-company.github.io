@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-10T09:51:04.801209+00:00",
+ "at": "2026-11-10T09:56:41.204732+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -127,7 +127,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 646,
+  "runnable_count": 645,
   "blocked_count": 114
  },
  "meter": {
@@ -153,8 +153,8 @@
   "read_at": "2026-11-10T04:41:39.051302-05:00"
  },
  "ui": {
-  "week_pct": 0.21,
-  "five_hour_pct": 23.424,
+  "week_pct": 0.22,
+  "five_hour_pct": 35.478,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -170,7 +170,7 @@
   "week_pct": 40.3,
   "usage_pct": 36.9,
   "work_pct": 81.2,
-  "read_at": "2026-11-10T09:51:00+00:00",
+  "read_at": "2026-11-10T10:01:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -210,7 +210,7 @@
  "lock_in": {
   "on": false,
   "pool": 0,
-  "at": "2026-11-10T04:51:00-05:00",
+  "at": "2026-11-10T05:01:00-05:00",
   "mode": null
  },
  "next_tick_why": "last_tick",
@@ -343,8 +343,8 @@
   "done": [
    {
     "w": "Operator",
-    "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
-    "at": "2026-11-10T04:05:00-05:00"
+    "t": "this retry line asked for parked work to be merged again, and the sweep found every commit of it...",
+    "at": "2026-11-10T04:55:00-05:00"
    },
    {
     "w": "Operator",
@@ -354,11 +354,11 @@
    {
     "w": "Operator",
     "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
-    "at": "2026-11-10T04:04:00-05:00"
+    "at": "2026-11-10T04:05:00-05:00"
    }
   ],
   "count": {
-   "next": 646,
+   "next": 645,
    "wait": 46,
    "blocked": 68,
    "you": 17
@@ -399,38 +399,14 @@
   ]
  ],
  "reply": {
-  "sent": "2026-11-10T09:40:41Z",
-  "seconds": 67.0
+  "sent": "2026-11-10T09:47:44Z",
+  "seconds": 225.0
  },
- "inbox": [
-  {
-   "id": "c6764073852",
-   "state": "received",
-   "position": 1,
-   "eta": "2026-11-10T05:05:50-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "I added a fresh approve to 237 as well"
-  },
-  {
-   "id": "c6764187584",
-   "state": "received",
-   "position": 2,
-   "eta": "2026-11-10T05:05:50-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Stopped, and why. One command of..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -441,10 +417,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "4:51 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-10T09:51:00+00:00",
+  "at": "5:01 AM",
+  "why": "Between sessions: no session is running. Last check 4:50 AM ET.",
+  "at_iso": "2026-11-10T10:01:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:51 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:01 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 4:50 AM ET.</p></section>"
  }
 }

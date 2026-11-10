@@ -1,8 +1,10 @@
 // Home (T-2667 for T-2480 and T-2469). Source: tools/site/home_look.py. Bubbles: one panel open at a time; the hash names it.
 (function(){var b=document.querySelectorAll('.lk-b');function show(h){b.forEach(function(a){var on=a.hash===h;a.classList.toggle('open',on);
 a.setAttribute('aria-expanded',on);var p=document.querySelector(a.hash);if(p)p.classList.toggle('open',on)})}
-b.forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var h=a.classList.contains('open')?'':a.hash;
-history.replaceState(null,'',h||location.pathname);show(h)})});if(location.hash)show(location.hash)})();
+b.forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();var h=a.classList.contains('open')?'':a.hash,p;
+history.replaceState(null,'',h||location.pathname);show(h);
+// T-3996: the panels sit under More now, and Needs you's count links to one from the top of the page: bring it into view
+p=h&&document.querySelector(h);if(p&&p.scrollIntoView)p.scrollIntoView({block:'nearest'})})});if(location.hash)show(location.hash)})();
 // T-3187 (friesevan #41 c6701678631): (1) a star on each Running and Queued card; the stars are shared by both Investors, in
 // investors/favorites.json on GitHub ({"tasks": [...]}), written with the Investor's own token, one commit a tap, read fresh
 // first and once more if GitHub moved it (as personal.js writes billing.json); no token: the build's stars show, no buttons.
@@ -78,8 +80,8 @@ c.hidden=!match(c.getAttribute('data-q'))});
 var no=document.getElementById('lk-q-none');if(!no&&Q){no=document.createElement('p');no.id='lk-q-none';no.className='meta';no.textContent='No queued task matches.';q.parentNode.insertBefore(no,q.nextSibling)}
 if(no)no.hidden=!Q||rows.some(function(c){return !c.hidden})}
 function count(){if(!fn2)return;if(!Q){fn2.textContent='';return}
-var r=document.querySelectorAll('#lk-run .lk-run').length,q=document.querySelectorAll('#lk-q>.lk-q:not([hidden])').length;
-fn2.textContent=r+' in flight, '+q+' in Queued match'}
+var q=document.querySelectorAll('#lk-q>.lk-q:not([hidden])').length;
+fn2.textContent=q+(q===1?' queued task matches':' queued tasks match')}
 function fire(){fn.forEach(function(f){try{f()}catch(e){}});queued();count()}
 function read(){return S.gh(path()+'?ref=main').then(function(r){if(r.status===404)return{list:[],sha:null};if(!r.ok)throw new Error(S.said(r));
 return r.json().then(function(j){var o=null;try{o=JSON.parse(unb64(j.content||''))}catch(e){}
@@ -136,6 +138,13 @@ H.addEventListener('keydown',function(e){var t=e.target,c;if((e.key==='Enter'||e
 if(inp&&fb){fb.hidden=false;inp.addEventListener('input',function(){Q=inp.value.trim().toLowerCase();H.classList.toggle('lk-searching',!!Q);fire()})}
 queued();
 if(tok)read().then(function(f){take(f.list)},function(){})});
+// T-3996: the Team row's "N working" follows every status the page already reads (no loop of its own): the In flight
+// cards that used to set it left Home. The same sources: the main account's tasks, then each personal row not done.
+document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,wk=document.getElementById('lk-working');
+if(!S||!S.onStatus||!S.lane||!wk||document.getElementById('lk-run'))return;
+function draw(st,isPub){var o={};S.lane.main(st,isPub).concat(S.lane.rows(st).filter(function(r){return!r.d})).forEach(function(r){if(r.w)o[String(r.w).toLowerCase()]=1});
+wk.textContent=Object.keys(o).length+' working'}
+S.onStatus.push(draw);if(S.status&&S.status())draw(S.status(),true)});
 // T-2400: Usage's tiles (personal accounts, API credits, the share) follow the live status, as the Overview glance did.
 document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,u=document.querySelector('#usage .lk-pt');
 if(!S||!S.onStatus||!S.added||!u)return;function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;e.textContent=x;p.appendChild(e);return e}

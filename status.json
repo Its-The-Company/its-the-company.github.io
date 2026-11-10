@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-10T01:36:33.156196+00:00",
+ "at": "2026-11-10T01:44:10.255527+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "inbox",
+  "started": "2026-11-09T20:42:03-05:00",
   "flow": [
    {
     "t": "T-3680",
@@ -233,7 +233,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 669,
+  "runnable_count": 672,
   "blocked_count": 114
  },
  "meter": {
@@ -259,8 +259,8 @@
   "read_at": "2026-11-09T20:36:20.732192-05:00"
  },
  "ui": {
-  "week_pct": 0.029,
-  "five_hour_pct": 0.129,
+  "week_pct": 0.051,
+  "five_hour_pct": 0.272,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -271,12 +271,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-09T20:51:21-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 3.57,
   "usage_pct": 9.3,
   "work_pct": 50.0,
-  "read_at": "2026-11-10T01:40:00+00:00",
+  "read_at": "2026-11-10T01:44:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -301,12 +301,12 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 195
+   "free_gb": 192
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-09T20:29:00-05:00",
+   "at": "2026-11-09T20:43:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-09T08:43:00-05:00"
@@ -316,12 +316,16 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-09T20:40:00-05:00",
+  "at": "2026-11-09T20:44:00-05:00",
   "mode": null
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: 65% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 7 (held, just changed: 156 lane branches parked in 24 hours, over 40; 109 retry lines wait,...",
+  "n": 2,
+  "at": "2026-11-09T20:43:55.575555-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
@@ -448,6 +452,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "Main passes its Xcode checks again: job J-20261109-1938-land-a47-2703da on the MacBook no longer...",
+    "at": "2026-11-09T20:41:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "T-3904 (batch check reads research): the batch check copy now includes the research folder, so...",
     "at": "2026-11-09T19:34:00-05:00"
@@ -456,47 +465,67 @@
     "w": "Odalys",
     "t": "When an app change lands on main while a system or site change is being checked, the land now...",
     "at": "2026-11-09T19:20:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "While too much finished work is waiting to merge, each work line now merges waiting changes (its...",
-    "at": "2026-11-09T19:11:00-05:00"
    }
   ],
   "count": {
-   "next": 669,
+   "next": 672,
    "wait": 46,
    "blocked": 68,
    "you": 18
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
- "qr": [],
+ "qr": [
+  [
+   "c6756500355",
+   "ok"
+  ],
+  [
+   "c6756500614",
+   "ok"
+  ],
+  [
+   "c6756500825",
+   "ok"
+  ],
+  [
+   "c6756501054",
+   "ok"
+  ],
+  [
+   "c6756501304",
+   "ok"
+  ],
+  [
+   "c6756501550",
+   "ok"
+  ],
+  [
+   "c6756501771",
+   "ok"
+  ],
+  [
+   "c6756502044",
+   "ok"
+  ]
+ ],
  "reply": {
-  "sent": "2026-11-10T01:16:06Z",
-  "seconds": 552.0
+  "sent": "2026-11-10T01:41:21Z",
+  "seconds": 115.0
  },
  "inbox": [
   {
-   "id": "c6756338057",
-   "state": "received",
+   "id": "c6756523110",
+   "state": "waiting",
    "position": 1,
-   "eta": "2026-11-09T20:51:21-05:00",
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "What are you currently working on..."
-  },
-  {
-   "id": "c6756394671",
-   "state": "received",
-   "position": 2,
-   "eta": "2026-11-09T20:51:21-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Would it make sense if we took note..."
+   "title": "T-3907 and T-3890 should be created..."
   }
  ],
  "trimmed": [
@@ -514,10 +543,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "8:40 PM",
-  "why": "Between sessions: no session is running. Last check 8:36 PM ET.",
-  "at_iso": "2026-11-10T01:40:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:40 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 8:36 PM ET.</p></section>"
+  "at": "8:44 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-10T01:44:00+00:00",
+  "started": "8:42 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:42 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:44 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

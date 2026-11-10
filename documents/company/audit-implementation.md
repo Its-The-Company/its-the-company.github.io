@@ -75,11 +75,11 @@ Until T-3992 to T-3997 are ticked, only the Fable session changes these files. O
 
 | Phase | Board line | State |
 |---|---|---|
-| 0. Stabilize | T-3992 | in progress: inventory done, 12 lines closed, T-3972 landed, every red found on main fixed (9 suites); the gate no longer reads a cut host run as red; T-3818's saved patch (Odalys) is in the gate |
+| 0. Stabilize | T-3992 | landed: inventory done, 12 lines closed, T-3972 and T-3818 on main and ticked, every red found on main fixed (9 suites), the gate no longer reads a cut host run as red. Left: T-3908's line (its page is on main) and T-3974/T-3975's remaining items |
 | 1. Admission: one limit on unmerged work | T-3993 | landed except one file: count, record, limit, dispatcher, pool, lane tick, lane_take, handbook, prompts and Home's line are on main; tools/governor.py's part (its own next-step text, the last-day release) is stopped by a guard (T-0848) and waits for a clearing word |
-| 2. Quiet main, one road | T-3994 | in progress: the close sweep and the salvage setting leftover code aside instead of committing it, being built in an isolated copy |
-| 3. One merge line | T-3995 | in progress: message hold removed and lands no longer need a session (landed, with a way back); the two-returns-or-48-hours reset tool is built and tested (110 rows) and waits for its gate run; its plan on live data: 73 of 207 waiting tasks reset (40 of them app work), 185 branches to the archive, 51 more held back by branches they share |
-| 4. One record, Home, This Session | T-3996 | in progress: the load recorder, the workflow record, the live-feed fix and Home's limit line are on main; the new Home and the new This Session page are being built in isolated copies from that record |
+| 2. Quiet main, one road | T-3994 | in progress: the close sweep and the salvage set leftover code aside on a leftover/ branch instead of committing it (built, 86 rows, in the gate). Not started: the gate checking a candidate outside the main folder, main-session code through branches, records out of code history |
+| 3. One merge line | T-3995 | in progress: message hold removed and lands no longer need a session (landed, with a way back); the reset rule is on main and applied (73 tasks, count 206 to 133); its hourly job is written and its suites are running; about 50 old tasks stay because they share a branch with a newer task; one task per branch, the sent-back state and retiring the other retry routes are not started |
+| 4. One record, Home, This Session | T-3996 | in progress: the load recorder, the workflow record, the live-feed fix and Home's limit line are on main; the new This Session page is built (stages as columns, workers as rows, each task's history try by try; 78 rows; screenshots in ops/site-checks/t3996-session/) and queued for the gate; the new Home is still being built |
 | 5. Return to app work | T-3997 | in progress: the exit rule is live and recording (207 waiting at 2:17 AM; the 24-hour clock is not running); the app-first rule with its 10% process share and the report's section are on main; OPT-128 in log/optimizations.md holds the baseline and the predictions |
 
 </div>
@@ -90,7 +90,7 @@ Until T-3992 to T-3997 are ticked, only the Fable session changes these files. O
 (newest last; each line: time, commit, what, the test that proves it)
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 4: Log of what landed, scrolls sideways" style="--tw:842px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: Log of what landed, scrolls sideways" style="--tw:1089px" markdown="1">
 
 | Time (11-10) | Commit | What | Proof |
 |---|---|---|---|
@@ -111,6 +111,9 @@ Until T-3992 to T-3997 are ticked, only the Fable session changes these files. O
 | 2:47 AM | 7aedaedafa | The merge queue page's lead no longer trips the wording lint (red on main since the close sweep of 11-09 11:43 PM put the page there ungated) | site_money_wording_test.py, site_test.sh |
 | 2:47 AM | 5bb02af271 | The report's facts carry the limit, the exit rule's clock, the last 24 hours of flow and the machine's load | report_flow_test.py 15 rows |
 | 2:49 AM | 1db12f9ad1 | A host check cut by the gate's time limit keeps what passed and answers "no result yet" (exit 75), never red | main_gate_test.py 4 new, 77 pass |
+| 3:16 AM | 715120da92 | T-3818 (Odalys's patch of 11-09): a suite at its time limit is stopped with its child programs; a land's log names what a check left | the runner suite 35 tests, personal_land_product_test.sh 128, 14 host suites on both Pythons in 543 s |
+| 3:21 AM | d3ca62289c | The two-returns-or-48-hours reset tool (tools/merge_reset.py: plan, apply, undo, status; ops/metrics/merge_reset.jsonl) | merge_reset_test.py 110 rows, 4 mutants |
+| 3:22 to 3:30 AM | a4385a965d, 87fa5e14e1, a37bb198e9 (board notes) | The rule applied by hand in three runs, oldest first: 73 tasks back to "to do" (71 past 48 hours, 2 sent back twice; 40 app, 21 process, 5 site, 7 not categorised), 185 branches to refs/archive/parked, none deleted, none refused | the one count after each run: 206, 181, 162, 133, each fall equal to the tasks reset; parked branches 615 to 430, archive 1,015 to 1,200; `merge_reset.py status` |
 
 </div>
 

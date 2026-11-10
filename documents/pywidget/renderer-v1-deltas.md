@@ -11,7 +11,7 @@ description: "104 premade x family x appearance rows (12 premades): 54 pass, 20 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Maren, 2026-10-27 02:29-02:45 ET by `date`. Read-only: no Swift, Python or token changed.
+Maren, 2026-10-27 2:29-2:45 AM ET by `date`. Read-only: no Swift, Python or token changed.
 
 ## Summary
 
@@ -184,7 +184,7 @@ None of these fails needs a new identity decision. The F1 token values come from
 
 render.py's text widths are narrower than SwiftUI's. Its "0 truncations" QA passed text that the real renderer cuts (F3). Until render.py measures text the way SwiftUI does, truncation is judged on the Simulator sheets.
 
-## T-0399 and T-0429: landed (Maren, 2026-10-27 13:13 ET)
+## T-0399 and T-0429: landed (Maren, 2026-10-27 1:13 PM ET)
 
 **Map for Idris (T-0433 item 2), `TreePaint.onCard`:** `bg.sunken` -> asset `WidgetOnCardGround` (token `widget.onCard.ground`), `accent.soft` -> asset `WidgetOnCardSoft` (token `widget.onCard.soft`). Full colour on the `widgetCard` paint only, like the four rows already there. Values (light, dark, lightHC, darkHC): ground `#EEEBE4`, `rgba(255,255,255,0.28)`, `#EEEBE4`, `rgba(255,255,255,0.28)`; soft `#E4EBF8`, `rgba(0,0,0,0.24)`, `#E4EBF8`, `rgba(0,0,0,0.24)`. Both colour sets are in `ios/Shared/Theme.xcassets` (appearance.py export). `WidgetCardTests` line 160 expects `bg.sunken` on the card to stay `BgSunken`; it changes to `WidgetOnCardGround`.
 

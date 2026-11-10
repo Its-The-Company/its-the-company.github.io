@@ -11,7 +11,7 @@ description: "Approve. The rule matches the spec on all five rows and on the ord
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Reviewer: Odalys, 2026-11-03 23:15 ET. Independent (Commandment 13): judged from the diff, state-spec s1 "Which state shows" (state-spec.md:12-30) and state-tokens.json `priority` (line 7) and `priority_note` (line 9). Author's done-note not used.
+Reviewer: Odalys, 2026-11-03 11:15 PM ET. Independent (Commandment 13): judged from the diff, state-spec s1 "Which state shows" (state-spec.md:12-30) and state-tokens.json `priority` (line 7) and `priority_note` (line 9). Author's done-note not used.
 
 ## Verdict
 
@@ -24,7 +24,7 @@ Reviewer: Odalys, 2026-11-03 23:15 ET. Independent (Commandment 13): judged from
 
 | # | Run | Result | n |
 |---|---|---|---|
-| 1 | `swift test` in pywidget/ios/Core, main checkout, 22:42-22:50 | WidgetFaceRuleTests 15 passed, 0 failed. The whole run: 444 executed, 20 failures, all 20 in StaleEntryPlanTests. That suite is untracked work in progress by another agent (Shared/StaleEntryPlan.swift, Tests/Core/StaleEntryPlanTests.swift, `??` in git status), not part of 825e6083d | 444 |
+| 1 | `swift test` in pywidget/ios/Core, main checkout, 10:42-10:50 PM | WidgetFaceRuleTests 15 passed, 0 failed. The whole run: 444 executed, 20 failures, all 20 in StaleEntryPlanTests. That suite is untracked work in progress by another agent (Shared/StaleEntryPlan.swift, Tests/Core/StaleEntryPlanTests.swift, `??` in git status), not part of 825e6083d | 444 |
 | 2 | Scratch copy of Core at a15f3a2a8 (`git archive`, symlinks dereferenced, state-tokens.json placed above it at the same relative path), `swift test --filter WidgetFaceRuleTests` | 15 passed, 0 failed. So the <span title="A test written in advance. If it fires, we drop the idea.">kills</span> below are real kills | 15 |
 | 3 | `tools/mutation_check.py . mutants-t1754.json --filter WidgetFaceRuleTests` on the scratch copy | 23 of 23 killed | 23 |
 | 4 | My own 6 probe mutants, same tool and filter (scratch only, not committed) | 3 killed, 3 survived (see findings 1 and 2) | 6 |
@@ -66,7 +66,7 @@ The tests catch a stale off-by-one. Boundary at exactly T (Tests:100), T - 1 ms 
 3. **Low, advisory, no board line: the defaults fail toward the plain render.** `Facts` defaults `versionReadable = true` and `goodRenderExists = true` (:37, :43). If a caller forgets a fact, it gets the quietest wrong face, not a card. That is fine for the tests' helper. When T-0048 (Idris) wires the provider, it should set all six state facts explicitly, and its review should check this.
 4. **Info: the token test fails loudly when the docs are missing.** Tests:119-132 walks up from `#filePath` and fails, rather than skipping, when state-tokens.json is absent. That is the right choice. Any scratch copy used for mutants must place the file above the package, as I did in runs 2-4. Without it, every mutant "dies" on the token test alone.
 
-Nothing in the diff touches Widget/. `WidgetFace` and `WidgetFaceRule` have no name clash in the app, the widget or Shared (grep, 23:00).
+Nothing in the diff touches Widget/. `WidgetFace` and `WidgetFaceRule` have no name clash in the app, the widget or Shared (grep, 11:00 PM).
 {% endraw %}
 
 </div>

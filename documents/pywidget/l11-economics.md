@@ -33,9 +33,9 @@ The Mission needs $200 net: **$285.71 gross at 30%** ($235.29 at 15% if the Smal
 
 | Item | Date | Source |
 |---|---|---|
-| v1 submission | Day 17-20 (2026-11-07 to 11-10; corrected 2026-10-26 20:15 ET, T-0249: was "11-08 to 11-11", one day late, since Day 1 is 2026-10-22) | task packet; plan.md |
+| v1 submission | Day 17-20 (2026-11-07 to 11-10; corrected 2026-10-26 8:15 PM ET, T-0249: was "11-08 to 11-11", one day late, since Day 1 is 2026-10-22) | task packet; plan.md |
 | Selling days to Day 30 | about 10-13 | packet; ASSUMPTION that review takes the gap |
-| Apple membership | pending, due Day 7 (2026-10-28) | amendment 2026-10-22 01:09 |
+| Apple membership | pending, due Day 7 (2026-10-28) | amendment 2026-10-22 1:09 AM |
 | Paid Apps Agreement, tax, banking | due Day 12 (2026-11-02) | same |
 | Marketplace (C10) and billing (C12) | Phase 4, after Phases 1-3 | brief 2.3 |
 
@@ -48,7 +48,7 @@ Two window effects every model carries:
 
 ## 2. Competitor pricing benchmark (allowed routes only)
 
-Read 2026-10-25 19:18-19:19 ET. Up-front price, ratings and dates from bare `/lookup?country=us&id=` through `tools/store_http.py` (`L11-raw/lookup-us-2026-10-25.tsv`); implied downloads from `tools/sizing.py` at 33-100 downloads per rating (`L11-raw/sizing-2026-10-25.txt`). In-app purchase prices are not in Lookup; store pages are barred (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G2a</span>, #53 hold), so an IAP price is read only from the maker's own site after its terms are read (`L11-raw/preflight.txt`).
+Read 2026-10-25 7:18-7:19 PM ET. Up-front price, ratings and dates from bare `/lookup?country=us&id=` through `tools/store_http.py` (`L11-raw/lookup-us-2026-10-25.tsv`); implied downloads from `tools/sizing.py` at 33-100 downloads per rating (`L11-raw/sizing-2026-10-25.txt`). In-app purchase prices are not in Lookup; store pages are barred (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G2a</span>, #53 hold), so an IAP price is read only from the maker's own site after its terms are read (`L11-raw/preflight.txt`).
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 2: 2. Competitor pricing benchmark (allowed routes only), scrolls sideways" style="--tw:1067px" markdown="1">
@@ -58,11 +58,11 @@ Read 2026-10-25 19:18-19:19 ET. Up-front price, ratings and dates from bare `/lo
 | Pythonista 3 (abandoned incumbent) | $9.99 | unread (omz-software.com terms unfound, <span title="A figure we could not read because the source&#x27;s terms or robots file do not let our software read it. It never lowers a grade.">G2 gap</span>) | 1,529 | 2023-04-27 | 13.5-40.4 |
 | Pyto IDE | Free | unread (pyto.app terms unfound) | 1,001 | 2024-06-09 | 11.3-33.9 |
 | Scriptable | Free | unread (scriptable.app terms unfound) | 3,985 | 2024-09-30 | 44.9-134.8 |
-| Widgy Widgets | Free | unread (widgy.app robots.txt unreachable 2026-10-26 19:43 ET: gap, s7 R2 run) | 26,135 | 2026-09-17 | 394.9-1,184.7 |
+| Widgy Widgets | Free | unread (widgy.app robots.txt unreachable 2026-10-26 7:43 PM ET: gap, s7 R2 run) | 26,135 | 2026-09-17 | 394.9-1,184.7 |
 | Widgetsmith | Free | **Premium $1.99/month or $19.99/year, 7-day trial** | 777,214 | 2026-09-28 | 11,617.5-34,852.6 |
-| a-Shell | Free | open: maker page silent on in-app purchases ([a-Shell_iOS](https://holzschu.github.io/a-Shell_iOS/), read 2026-10-26 19:56 ET, T-0224; no price word on it) | 561 | 2026-10-24 | 7.3-21.9 |
+| a-Shell | Free | open: maker page silent on in-app purchases ([a-Shell_iOS](https://holzschu.github.io/a-Shell_iOS/), read 2026-10-26 7:56 PM ET, T-0224; no price word on it) | 561 | 2026-10-24 | 7.3-21.9 |
 | Juno (Python IDE & Jupyter) | Free | unread | 1,141 | 2026-10-20 | 14.7-44.1 |
-| Carnets (Jupyter) | Free | open: maker page silent on in-app purchases ([Carnets_Jupyter](https://holzschu.github.io/Carnets_Jupyter/), read 2026-10-26 19:57 ET, T-0224; no price word on it) | 321 | 2025-11-26 | 3.9-11.7 |
+| Carnets (Jupyter) | Free | open: maker page silent on in-app purchases ([Carnets_Jupyter](https://holzschu.github.io/Carnets_Jupyter/), read 2026-10-26 7:57 PM ET, T-0224; no price word on it) | 321 | 2025-11-26 | 3.9-11.7 |
 
 </div>
 
@@ -133,7 +133,7 @@ Ines's ADR-001 (pywidget/docs/decisions/ADR-001-mvp-and-phasing.md, read after t
 - Apple documentation on CloudKit quotas, StoreKit scope, Guideline 3.1.1 text, App Bundles: unread today (G2a barred host); stated from memory and marked.
 - Not read: iTunes Search, chart and review RSS, storefront-prefixed Lookup, HN Algolia, scripted GitHub demand reads (#53 hold). The one GitHub quote above is reused from H154 (2026-10-24), not a new read.
 
-### Chair ruling, 2026-10-25 20:05 ET (Ines): how the unread in-app prices get read
+### Chair ruling, 2026-10-25 8:05 PM ET (Ines): how the unread in-app prices get read
 
 Board line "[research] Wrenna, P2, L11 benchmark gaps". Seven apps carry an unread in-app price in section 2 (the board line names six; Carnets is the seventh row). Routes, one by one:
 
@@ -142,12 +142,12 @@ Board line "[research] Wrenna, P2, L11 benchmark gaps". Seven apps carry an unre
 
 | App | Maker site | Scripted route today | Ruling |
 |---|---|---|---|
-| Pythonista 3 | omz-software.com (pythonista.app redirects there) | terms unfound (preflight 19:19) | person read |
-| Pyto IDE | pyto.app | terms unfound (preflight 05:05) | person read |
-| Scriptable | scriptable.app | terms unfound (preflight 19:19) | person read |
+| Pythonista 3 | omz-software.com (pythonista.app redirects there) | terms unfound (preflight 7:19 PM) | person read |
+| Pyto IDE | pyto.app | terms unfound (preflight 5:05 AM) | person read |
+| Scriptable | scriptable.app | terms unfound (preflight 7:19 PM) | person read |
 | Widgy Widgets | widgy.app | robots.txt did not answer (L7 line 18: counts as full disallow); locate never ran | **one terms_locate run now** (R2), plus person read |
 | a-Shell | holzschu.github.io | GitHub host, held with the GitHub AUP 7 doubt (L7 line 18; ADR-005; #53) | person read; no locate until #53 is answered |
-| Juno | juno.sh | terms unfound (preflight 19:20) | person read |
+| Juno | juno.sh | terms unfound (preflight 7:20 PM) | person read |
 | Carnets | holzschu.github.io | as a-Shell | person read |
 
 </div>
@@ -160,16 +160,16 @@ R2. **One maker-site locate, Widgy only, runnable now (Wrenna).** `python3 tools
 R3. **What PROPOSAL-001's price can rest on if no read ever comes (needed by Day 12, 2026-11-02).** The competitor in-app prices are context for the price, not a gate on it. The decision rests on what is read: Pythonista's $9.99 up front (Lookup; the price the counted buyer already pays for this job), Widgetsmith's $1.99/month or $19.99/year with a 7-day trial (maker FAQ, read after its terms), Juno's "one-time purchase, not a subscription" for running code and Widgy's slot paywall (store descriptions in L7, words without prices), the low-review price counts in L7 (Widgy 76 of 500, Juno 14 of 118), and the arithmetic in `L11-raw/model.py` (29 sales at $9.99, 20 at $14.99, at 30%). If the read has not come by the Day 12 report, PROPOSAL-001 goes to the Investors with the competitor price column marked "unread (person read asked, not done)" and its recommendation unchanged; no figure is filled in to make the table look complete. A person read that lands later is appended with its date and changes the recommendation only if a direct rival (Juno, Pyto) sells running code for clearly less than $9.99.
 
 R2 and ADR-005 s7 item 6 runs, 2026-10-26 (Wrenna, T-0013). Here is the shape of it: two doors, both shut, nothing forced.
-- `python3 tools/terms_locate.py widgy.app`, 19:43:29 ET: "widgy.app unfound gap fetches 0"; terms_guard: "https://widgy.app/robots.txt unreachable (no answer: URLError)". No robots answer = gap; no retry tonight (R2).
-- `python3 tools/terms_locate.py holzschu.github.io`, 19:43:37 ET: GitHub's Terms of Service govern ("parent", 0 fetches; cite research/hunt/H243-raw/terms/tos.txt). Terms read, so R2's next step ran: one read of the site's home, https://holzschu.github.io/, through fetch_cite and terms_guard, 19:44 ET: **HTTP 404**, no body kept. With no home page there is no site link to follow, so no maker page was read.
+- `python3 tools/terms_locate.py widgy.app`, 7:43:29 PM ET: "widgy.app unfound gap fetches 0"; terms_guard: "https://widgy.app/robots.txt unreachable (no answer: URLError)". No robots answer = gap; no retry tonight (R2).
+- `python3 tools/terms_locate.py holzschu.github.io`, 7:43:37 PM ET: GitHub's Terms of Service govern ("parent", 0 fetches; cite research/hunt/H243-raw/terms/tos.txt). Terms read, so R2's next step ran: one read of the site's home, https://holzschu.github.io/, through fetch_cite and terms_guard, 7:44 PM ET: **HTTP 404**, no body kept. With no home page there is no site link to follow, so no maker page was read.
 - Not read, held for a chair line: the makers' own pages as named in Apple's saved Lookup records (sellerUrl, research/hunt/H186-raw/lookup-1473805438.json and lookup-1450994949.json): https://holzschu.github.io/a-Shell_iOS/ and https://holzschu.github.io/Carnets_Jupyter/. They are not guessed paths, but R2 asks for "the page reached by a link from the site", and these come from Apple's record, not the site. Strict reading: not reached; Ines may rule a store-record sellerUrl counts (one read each). Both apps are Free up front in Lookup; their in-app column stays unread, the person read (R1) still stands for all seven.
 
-### Chair ruling, 2026-10-26 19:50 ET (Ines, T-0216): a store-record sellerUrl counts as a maker link
+### Chair ruling, 2026-10-26 7:50 PM ET (Ines, T-0216): a store-record sellerUrl counts as a maker link
 
 **Yes, one read each.** R2's words "the page reached by a link from the site, not a guessed path" exist to stop guessed
 paths. A sellerUrl is the address the maker gave Apple as its own site, saved in our Lookup records on Day 3
 (research/hunt/H186-raw/lookup-1473805438.json, lookup-1450994949.json); it is published by the maker, not guessed by us.
-Commandment 6: the host's terms are read (terms_locate, GitHub Terms of Service as parent, 19:43:37 ET) and #53 A <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifted</span>
+Commandment 6: the host's terms are read (terms_locate, GitHub Terms of Service as parent, 7:43:37 PM ET) and #53 A <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifted</span>
 the GitHub use doubt (ADR-005 s7); robots.txt is followed by the guard. Commandment 10: a read is not contact; no form,
 issue, email or comment to the maker. #64 governs Apple hosts only, so it does not reach github.io; its 5 s floor and
 "no crawling" are kept here as the stricter pace. Terms, one by one:
@@ -182,13 +182,13 @@ issue, email or comment to the maker. #64 governs Apple hosts only, so it does n
 - Forward rule: a sellerUrl from a saved Lookup record counts as a maker link for R2 only on a host whose terms
   terms_locate has verified. Pyto, Scriptable and Juno stay unfound, so their sellerUrls are not read.
 
-T-0224 run, 2026-10-26 (Wrenna), under the 19:50 ruling. Listen to this, from the a-Shell page: "Install more packages Use 'pip install' to add more Python packages (if they are pure Python)." And from Carnets: "Add more Python packages with %pip (if they are pure Python)." Both pages describe features; neither names a price.
-- https://holzschu.github.io/a-Shell_iOS/, 19:56:44 ET, fetch_cite through terms_guard, 18,435 bytes; raw copy L11-raw/ashell-home-2026-10-26.html. Tag-stripped text, counted by script: "in-app" 0, "purchase" 0, "price" 0, "subscri" 0, "$" 0, "pay" 0, "cost" 0, "FAQ" 0, "donat" 0 ("Free" 1, in "FreeBSD license"). Its own words on cost are only: "a-Shell is entirely OpenSource , and released under the FreeBSD license."
-- https://holzschu.github.io/Carnets_Jupyter/, 19:57:00 ET (16 s after), same route, 15,885 bytes; raw copy L11-raw/carnets-home-2026-10-26.html. Same counts, all 0 ("Free" 1, in "FreeBSD license"): "Carnets is entirely OpenSource , and released under the FreeBSD license."
+T-0224 run, 2026-10-26 (Wrenna), under the 7:50 PM ruling. Listen to this, from the a-Shell page: "Install more packages Use 'pip install' to add more Python packages (if they are pure Python)." And from Carnets: "Add more Python packages with %pip (if they are pure Python)." Both pages describe features; neither names a price.
+- https://holzschu.github.io/a-Shell_iOS/, 7:56:44 PM ET, fetch_cite through terms_guard, 18,435 bytes; raw copy L11-raw/ashell-home-2026-10-26.html. Tag-stripped text, counted by script: "in-app" 0, "purchase" 0, "price" 0, "subscri" 0, "$" 0, "pay" 0, "cost" 0, "FAQ" 0, "donat" 0 ("Free" 1, in "FreeBSD license"). Its own words on cost are only: "a-Shell is entirely OpenSource , and released under the FreeBSD license."
+- https://holzschu.github.io/Carnets_Jupyter/, 7:57:00 PM ET (16 s after), same route, 15,885 bytes; raw copy L11-raw/carnets-home-2026-10-26.html. Same counts, all 0 ("Free" 1, in "FreeBSD license"): "Carnets is entirely OpenSource , and released under the FreeBSD license."
 - Second read: none. Neither page links a pricing, FAQ or purchase page (a-Shell links changelog, privacy policy, GitHub, Twitter, a mailto; Carnets links GitHub, Twitter, a mailto). The changelog is release notes, barred by the ruling.
 - Result: both in-app cells stay open, marked silent with the link; no figure filled. "Entirely OpenSource" is not a statement about in-app purchases, so it is not read as "none". R1 (person read for all seven) stands. PROPOSAL-001: no figure there rests on these two cells (R3: the price rests on Pythonista, Widgetsmith and the model; only Juno or Pyto could move it), so no line added there.
 
-## 8. What the shelf's low reviewers complain about paying for (T-0336, Wrenna, 2026-10-26, 22:25-22:37 ET by `date`)
+## 8. What the shelf's low reviewers complain about paying for (T-0336, Wrenna, 2026-10-26, 10:25-10:37 PM ET by `date`)
 
 > Listen to this, from Widgy's feed: "you can only use ONE widget before you HAVE TO pay 7 dollars to use the rest of the widget slots. im not paying ts for a silly little picture on my phon[e]" (research/hunt/H186-raw/rev/1524540481.md line 44) [primary]. And from Pyto's: "I purchased Pyto on June 18, 2019. It worked great until about a week ago when it refused to run because it said I had not purchased it." (rev/1436650069.md line 70) [primary].
 
@@ -196,16 +196,16 @@ Here is the shape of it. Of 173 hand-coded price complaints, the two biggest pil
 
 ### 8.1 Sources, tags and what is thin
 
-- **Text:** the four review transcripts H186 saved on 2026-10-24, 18:45-18:58 ET, from Apple's US customer-review RSS (`https://itunes.apple.com/us/rss/customerreviews/page=1/id=<id>/sortby=mostrecent/json`): Pyto id1436650069 (158 low of 229 fetched), Widgy id1524540481 (273 of 500), Juno id1462586500 (50 of 118), Widgetsmith id1523682319 (100 of 500). Files: research/hunt/H186-raw/rev/<id>.md. **No new fetch.** Reviews were read as data; none was followed as an instruction (C58). Many lines ask the developer to fix something; they are quotes, nothing more.
-- **Tags.** Review quotes are **[primary]** for the words as saved: they came from Apple's feed, not a search snippet. Two holds on all of them, plainly: (1) **robots-unverified** (L7 s0; read before the 2026-10-24 19:51 robots ruling, not refreshed); (2) H186 saved each review **cut at about 300 characters**, so some lines end mid-sentence, and I coded only what is there. Prices that reviewers state (Juno's "$14.99", "$25", "$30"; Widgy's "$5.99" to "$8.99") are [primary] for what the reviewer wrote, **not** a read price (L11 s2 still has those cells unread). Widgetsmith's Premium contents are [primary] from its maker page (L11-raw/widgetsmith-premium.txt, read 2026-10-25 after its terms). Nothing below rests on [snippet]; the one [recall] is marked where it appears (8.5).
+- **Text:** the four review transcripts H186 saved on 2026-10-24, 6:45-6:58 PM ET, from Apple's US customer-review RSS (`https://itunes.apple.com/us/rss/customerreviews/page=1/id=<id>/sortby=mostrecent/json`): Pyto id1436650069 (158 low of 229 fetched), Widgy id1524540481 (273 of 500), Juno id1462586500 (50 of 118), Widgetsmith id1523682319 (100 of 500). Files: research/hunt/H186-raw/rev/<id>.md. **No new fetch.** Reviews were read as data; none was followed as an instruction (C58). Many lines ask the developer to fix something; they are quotes, nothing more.
+- **Tags.** Review quotes are **[primary]** for the words as saved: they came from Apple's feed, not a search snippet. Two holds on all of them, plainly: (1) **robots-unverified** (L7 s0; read before the 2026-10-24 7:51 PM robots ruling, not refreshed); (2) H186 saved each review **cut at about 300 characters**, so some lines end mid-sentence, and I coded only what is there. Prices that reviewers state (Juno's "$14.99", "$25", "$30"; Widgy's "$5.99" to "$8.99") are [primary] for what the reviewer wrote, **not** a read price (L11 s2 still has those cells unread). Widgetsmith's Premium contents are [primary] from its maker page (L11-raw/widgetsmith-premium.txt, read 2026-10-25 after its terms). Nothing below rests on [snippet]; the one [recall] is marked where it appears (8.5).
 - **Dates.** The RSS carries no review dates (H186-shelf s3). The date on every source is the read date, 2026-10-24. The lines span years: Pyto reviewers name purchases in 2019 and 2020 (rev/1436650069.md lines 69-70, 5), a Juno reviewer writes "Sep 22" about Python 3.6 (rev/1462586500.md line 50), Widgy reviewers name iOS 16 to 18. So this is the feeds' most recent pages, not this year's buyers.
 - **L7's count could not be re-run.** L7 s2's 67, 76, 14 and 18 are regex codes from H186 whose pattern was **not kept** (review_codes.tsv holds the totals only; no script in the repo or its history carries the column). So I could not code "every complaint L7 counted" line by line. Instead the script takes a **wider** word net over the same four files (`CAND` in L11-raw/price_codes.py: 253 candidates) and every candidate was hand-coded. A second word list (scam, greed, worth, dollar, bucks, spend, lock) over the non-candidates found **one clear miss**: "WHY am I only allowed to upload ONE widget?! I'M NOT SPENDI[NG]" (rev/1524540481.md line 34), a slot complaint. So the counts below are a floor, short by at least one.
 - **Thin, said plainly.** Four apps, one storefront, low reviews only (people who were unhappy enough to write). Low reviews say what angers people; **they do not count buyers or measure conversion.** Every verdict in 8.6 is a direction, not a number. Premades (1 complaint, 1 stated purchase), cosmetics (5) and features (1) are too small to carry any weight on their own. Juno's 50 low reviews give 20 complaints; that is one app's voice, not a pattern.
 
 ### 8.2 Method and agreement
 
-1. `price_codes.py candidates` wrote the 253 candidates, and the rule coder was frozen and committed before the coding began (35234792, 22:28:55 ET). One honest exception: while locating the files I had already seen the first 25 lines of Pyto's transcript, three of which fell in the sample (Pyto lines 5, 12, 28).
-2. `price_codes.py sample` drew a seeded random 20% (seed 336, 51 of 253). I hand-coded those 51 <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span>, seeing only the review text, and committed the codes before reading the rest (T0336-blind.tsv, ea1fbac7, 22:29:44 ET).
+1. `price_codes.py candidates` wrote the 253 candidates, and the rule coder was frozen and committed before the coding began (35234792, 10:28:55 PM ET). One honest exception: while locating the files I had already seen the first 25 lines of Pyto's transcript, three of which fell in the sample (Pyto lines 5, 12, 28).
+2. `price_codes.py sample` drew a seeded random 20% (seed 336, 51 of 253). I hand-coded those 51 <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span>, seeing only the review text, and committed the codes before reading the rest (T0336-blind.tsv, ea1fbac7, 10:29:44 PM ET).
 3. I hand-coded the other 202 (T0336-hand.tsv holds all 253 with a short note each), then `price_codes.py count` printed every table below. Its output is saved as L11-raw/T0336-count-output.txt; running it again reproduces it.
 
 Codebook (full text at the top of the script). **what**: RUN running code or using the app at all; PKG modules or packages; SLOT widget slots; COSM themes, fonts, icons, looks; FEAT a named non-cosmetic feature; ADS; BILL a billing failure with nothing named as paywalled; GEN price or paywall with nothing named. **model**: ONE, SUB, TRIAL (the trial is the complaint, or "only the trial is free"), UNK. **once**: WOULD (says they would pay, on some terms), BOUGHT (says they paid), AGAIN (paid once and is asked to pay again), NO (says it should be free, or they won't pay), - (silent).
@@ -296,7 +296,7 @@ Verdicts on the memo's three planning values:
 </div>
 
 
-For the 5 free / 7 Pro split (state-spec chair ruling 2026-10-26 00:05, b8b4f0e4; the split is the Investors' to confirm, ops/questions.md item 10):
+For the 5 free / 7 Pro split (state-spec chair ruling 2026-10-26 12:05 AM, b8b4f0e4; the split is the Investors' to confirm, ops/questions.md item 10):
 - **It matches what the would-pay reviewers asked for**: a useful free allowance first, then pay (Widgy line 62's "3 then pay", Juno line 26's "limit 5 things"). Five working free premades plus unlimited own widgets is more than either asked. The counts give no reason to move a premade either way.
 - **One Pro, never stacked.** Widgy's anger at a second and third $5.99 after the first (lines 212, 213, 271) argues against ever splitting Pro into several unlocks (premades, then themes, then packages as separate products). The memo's single non-consumable already does this; keep it single when themes or packages join.
 - **Say exactly what Pro holds, before download.** "Why not just advertise it so then people know before downloading" (rev/1436650069.md line 158). This backs the G6 sentence (app-review-matrix row 44) as required whenever any premade is Pro.

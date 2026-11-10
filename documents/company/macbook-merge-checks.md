@@ -67,7 +67,7 @@ Kind `host`, two commands in `tools/macbook-runner/kinds.json` (one approval cov
 
 ## Expected check time
 
-Baseline (ops/metrics/main_gate.jsonl, pywidget host runs on the mini, 11-09 00:49-19:04, n=13): median 306 s,
+Baseline (ops/metrics/main_gate.jsonl, pywidget host runs on the mini, 11-09 12:49 AM-7:04 PM, n=13): median 306 s,
 p90 1,241 s. The mini was loaded through those runs. Expected on the MacBook at quiet speed: about half
 (Wrenna's 2x, her estimate, not measured), so about 150 s median. That is a guess; the first ten jobs give the number.
 The real cost is the queue wait: today a runner poll that is running Xcode jobs holds its lock until they finish (an

@@ -11,7 +11,7 @@ description: "Tool: python3 tools/session_gaps.py --since 2026-11-04 (test: test
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Odalys, 2026-11-07. Evan asked (#41, 04:11) why there are gaps between sessions and whether discrete sessions are
+Odalys, 2026-11-07. Evan asked (#41, 4:11 AM) why there are gaps between sessions and whether discrete sessions are
 needed at all. This plan measures the gaps from raw evidence and designs the change. It builds on
 ops/plans/one-dispatcher.md (who runs each task) and ops/plans/sessions-main-vs-<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span>.md (why one coordinator, plain
 workers). The This Session chart (ops/plans/this-session.md, T-3295 to T-3297) draws this flow.
@@ -21,7 +21,7 @@ workers). The This Session chart (ops/plans/this-session.md, T-3295 to T-3297) d
 Tool: `python3 tools/session_gaps.py --since 2026-11-04` (test: tests/session_gaps_test.py). It reads only
 ops/runs/supervisor.log (governor records, timed step lines, launchd retries) and the session streams in ops/runs and
 ops/runs-archive, and reuses tools/changeover_gaps.py (T-2298) for each session's agents and wind-down. Window: main
-account, 2026-11-04 00:00 to 2026-11-07 10:05 ET, 82.1 h; 61 work sessions, 20 inbox and report sessions.
+account, 2026-11-04 12:00 AM to 2026-11-07 10:05 AM ET, 82.1 h; 61 work sessions, 20 inbox and report sessions.
 
 "Seats" are the agent count the governor set for the session (its pool target: 12 on the LOCK IN day 11-05, 1 or 2
 under Spread from 11-06). A seat-hour is one seat for one hour.
@@ -52,7 +52,7 @@ fall in the interval of the next timed line)
 
 | Cause | h | seat-h | intervals |
 | --- | --- | --- | --- |
-| The supervisor's lock held 11-05 15:09 to 18:56 by a stray disk_overflow run, so no tick ran (fixed in e6363723b, 18:49) | 3.8 | 45.3 | 1 |
+| The supervisor's lock held 11-05 3:09 PM to 6:56 PM by a stray disk_overflow run, so no tick ran (fixed in e6363723b, 6:49 PM) | 3.8 | 45.3 | 1 |
 | After the session: metrics, board upkeep, runs archive, records backup, site build, git push | 4.1 | 23.3 | 399 |
 | Land checks run inside the tick, one after another (personal_land.sh) | 3.7 | 21.7 | 65 |
 | Before the session: merge queue, git sync, applier, xc route, disk sweep | 2.5 | 11.2 | 293 |
@@ -63,7 +63,7 @@ fall in the interval of the next timed line)
 </div>
 
 
-By day: 11-04 3.0 h, 11-05 7.7 h (3.8 of it the held lock), 11-06 3.2 h, 11-07 3.5 h (to 10:05).
+By day: 11-04 3.0 h, 11-05 7.7 h (3.8 of it the held lock), 11-06 3.2 h, 11-07 3.5 h (to 10:05 AM).
 
 **Inside work sessions**: 314.8 seat-h at target, 170.9 agent-h used. Empty: wind-down 93.1 seat-h (72.9 in sessions
 that ended for a between-session job, 18.0 in sessions that closed themselves, 2.2 time and hours limits), cold start
@@ -78,7 +78,7 @@ context size.
 Operator's tokens (62.4M of 634.4M, n = 51 sessions) are spent before its first agent call.
 
 **What this does not say**. Every account reached its weekly line before this week's reset: the main account read 96%
-at 10:05, personal a and b 100% (dispatch.log 10:05, readings 12 h old). So this week the gaps did not waste allowance;
+at 10:05 AM, personal a and b 100% (dispatch.log 10:05 AM, readings 12 h old). So this week the gaps did not waste allowance;
 they delayed work, and lands. They waste allowance only in a week, or on a key, where usage expires unused. The seat
 counts are the governor's targets, not proof that that many runnable, non-overlapping tasks were waiting. The personal
 lanes have the same 15-minute tick and are not in this log; dispatch.log idle hours (T-2677's measure) cover them.
@@ -97,8 +97,8 @@ No, not for the work. A session ends today for three reasons, and none needs the
 
 ## The design, in steps
 
-Build order follows the merge-first rule (Investors 2026-11-05 23:35): merge-path steps first. The amendment of
-2026-11-05 01:07 asks for such a change to be built in one go: steps 1 to 3 go together once their prerequisites are on
+Build order follows the merge-first rule (Investors 2026-11-05 11:35 PM): merge-path steps first. The amendment of
+2026-11-05 1:07 AM asks for such a change to be built in one go: steps 1 to 3 go together once their prerequisites are on
 main, then step 4 measures.
 
 0. **On the board already.** T-3288 (main stays green, so continuous landing does not fail every lane at once; P0,

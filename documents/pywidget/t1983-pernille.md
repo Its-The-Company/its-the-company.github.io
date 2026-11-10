@@ -31,7 +31,7 @@ A scratch copy of HEAD (`git archive HEAD pywidget/ios`, in `company-scratch/T-1
 | Finding | Status | How I checked |
 |---|---|---|
 | t1840 F1 (field selection had no code or test) | **Closed**, option (a) | `Field.drawnAt(now:)` drops never fetched, `cleared`, and `now >= until`. Tests cover each of those, past `max_age_s` before `until` (example 5), `stale_after: 0`, and the `until` instant itself on both sides. Mutants `field-cleared-counts`, `field-until-*`, `field-trusted-t1840`, `stale-after-zero-unset` and my `|| fields.isEmpty` are all killed. |
-| t1840 F2 (example 6 widths and comment) | **Closed** | 166.8 / 93.0 / 35.8 at xxxLarge. Example 6 now passes the `steps` field. That field is at 23:50 and `sampled_at` is 9:02 on the same Monday, so the assertion on `date` really does tell "steps counted" apart from "steps dropped". |
+| t1840 F2 (example 6 widths and comment) | **Closed** | 166.8 / 93.0 / 35.8 at xxxLarge. Example 6 now passes the `steps` field. That field is at 11:50 PM and `sampled_at` is 9:02 on the same Monday, so the assertion on `date` really does tell "steps counted" apart from "steps dropped". |
 | t1859 F1 (the UTC calendar line was invisible from a New York host) | **Closed for the deleted line** | `utc-calendar-zone-dropped` (6 failures) and `local-zone-dropped` (4) are both committed and killed. A smaller version of the same gap remains: F1. |
 
 </div>

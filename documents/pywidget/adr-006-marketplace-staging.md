@@ -11,8 +11,8 @@ description: "The founder&#x27;s marketplace (2.1) is three things: a place to p
 <div class="doc-body" markdown="1">
 
 {% raw %}
-- Status: **accepted by the CEO as <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>, 2026-10-25 19:57 ET.** **Section 2 re-ruled 2026-10-31 in section 13 (T-0870, the Explore tab): S0, S1, S1b, S3a, S2, S3b; 1.0 scope unchanged.** **Section 10 re-opened 2026-10-26 by its own clause (T-0085 precedent check) and ruled in section 12** (online pip back on the 1.1 plan, gated only on the DPLA 3.3.1(B) read; v1 unchanged). **12.6 (2026-10-26 01:45): the read met (i); online pip is on the 1.1 plan, rated Medium; v1 unchanged.** Two board decisions: "v1 scope from L6 s7" (P0) and "L12 Q1" (P2). Neither changes a founder decision in brief 2.1; section 5 says when one would. **Re-opened 2026-10-25 by its own clause (L6 primary read, df971700) and ruled again: section 10** (online pip leaves 1.1; v1 scope unchanged).
-- Author and chair: Ines (CEO). Inputs, read in full for this ruling: pywidget/docs/research/L6-app-review.md (s3, s4, s6, s7; Wrenna), L12-security.md (s0, s6, s7, s12, s13; Odalys), L13-packages.md (s4, s5; Odalys), ADR-001 (with its 19:36 Revised section), PROPOSAL-001 (both files), PROPOSAL-002 s6, ops/plans/pywidget/build-brief.md (s0, 2.1, 2.3, L15), ops/plans/pywidget/plan.md.
+- Status: **accepted by the CEO as <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>, 2026-10-25 7:57 PM ET.** **Section 2 re-ruled 2026-10-31 in section 13 (T-0870, the Explore tab): S0, S1, S1b, S3a, S2, S3b; 1.0 scope unchanged.** **Section 10 re-opened 2026-10-26 by its own clause (T-0085 precedent check) and ruled in section 12** (online pip back on the 1.1 plan, gated only on the DPLA 3.3.1(B) read; v1 unchanged). **12.6 (2026-10-26 1:45 AM): the read met (i); online pip is on the 1.1 plan, rated Medium; v1 unchanged.** Two board decisions: "v1 scope from L6 s7" (P0) and "L12 Q1" (P2). Neither changes a founder decision in brief 2.1; section 5 says when one would. **Re-opened 2026-10-25 by its own clause (L6 primary read, df971700) and ruled again: section 10** (online pip leaves 1.1; v1 scope unchanged).
+- Author and chair: Ines (CEO). Inputs, read in full for this ruling: pywidget/docs/research/L6-app-review.md (s3, s4, s6, s7; Wrenna), L12-security.md (s0, s6, s7, s12, s13; Odalys), L13-packages.md (s4, s5; Odalys), ADR-001 (with its 7:36 PM Revised section), PROPOSAL-001 (both files), PROPOSAL-002 s6, ops/plans/pywidget/build-brief.md (s0, 2.1, 2.3, L15), ops/plans/pywidget/plan.md.
 - Numbering: ADR-003 is held for the package policy (ADR-001 s4, Day 6) and ADR-005 for the compatibility corpus; this is the next free number. ADR-003 must agree with section 3 below.
 - Every App Review reading here rests on L6, which read no page on developer.apple.com (ruling 'P2 terms'). L6 risk ratings may only move up on the person's browser read still owed (board, [needs-person] L6 line). This ADR is re-opened if that read raises any rating it cites. (Note, 2026-10-25, section 10: the read arrived through #59 for the guidelines and the Mini Apps page, it raised online pip to Medium-High, and section 10 rules on it. DPLA 3.3.1(B) is still unread (T-0060); the clause stays live for that read.)
 
@@ -28,7 +28,7 @@ What would make this fail: anything marketplace-shaped in the v1 binary, or a re
 
 ## 2. Ruling 1: the marketplace ships in stages; none of it before Day 30 earns
 
-*(Note 2026-10-31 13:14 ET, section 13: this table is re-ruled there. S3 splits into S3a and S3b, S2 moves behind S3a, S1b is new, and the dates follow the plan of 2026-10-31 13:02. The table is kept as the 2026-10-25 record.)*
+*(Note 2026-10-31 1:14 PM ET, section 13: this table is re-ruled there. S3 splits into S3a and S3b, S2 moves behind S3a, S1b is new, and the dates follow the plan of 2026-10-31 1:02 PM. The table is kept as the 2026-10-25 record.)*
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: 2. Ruling 1: the marketplace ships in stages; none of it before Day 30 earns, scrolls sideways" style="--tw:1449px" markdown="1">
@@ -53,7 +53,7 @@ What would make this fail: anything marketplace-shaped in the v1 binary, or a re
 
 1. **v1.0: the bundled set only** (L13 s3: requests and its dependencies, jedi, pyflakes; numpy, Pillow and matplotlib behind ADR-001's Day 10 gate). No online install of any kind in the release build.
 2. **"Install from file" is a v1 stretch, not on the critical path.** The user picks a pure-Python wheel or zip from Files; the installer accepts only `py3-none-any` or `py2.py3-none-any` and refuses any archive with `.so`, `.dylib`, Mach-O magic or a platform tag (L13 s4). This is the user bringing their own file, the same as opening a `.py` (L13 rates it Low). It ships in v1 only if (a) it lands by feature freeze, Day 13 (2026-11-03), with host-Python tests, and (b) Wrenna's readiness matrix rates it Low or Low-Medium. Otherwise it moves to 1.1 with no further ruling.
-3. **Superseded 2026-10-25 by section 10: condition (a) is not met; online pip leaves the 1.1 plan and has no date.** As written at 19:57: **Online pip from PyPI: 1.1 (Day 30-40), conditional.** (Condition (b) met 2026-10-25 20:02 ET: section 9.) This moves it from ADR-001 3.2's "1.2" because L6 and L13 both found a disclosed, user-initiated, source-only install defensible. Conditions: (a) the person's browser read shows nothing in 2.5.2 or DPLA 3.3.1(B) that bars it; (b) my ruling on whether the app may query PyPI's index on the user's request (robots and terms; L13 s4 asks for it; board line added) is yes; (c) it is built on a branch or debug target and **compiled out** of release builds until then (L13, 2.5.19); (d) it ships in an update whose review notes name it; installs are never automatic, never native, and every installed file opens in the editor. If (a) or (b) fails, L13's fallback holds: the user downloads wheels in a browser and brings them in through Files.
+3. **Superseded 2026-10-25 by section 10: condition (a) is not met; online pip leaves the 1.1 plan and has no date.** As written at 19:57: **Online pip from PyPI: 1.1 (Day 30-40), conditional.** (Condition (b) met 2026-10-25 8:02 PM ET: section 9.) This moves it from ADR-001 3.2's "1.2" because L6 and L13 both found a disclosed, user-initiated, source-only install defensible. Conditions: (a) the person's browser read shows nothing in 2.5.2 or DPLA 3.3.1(B) that bars it; (b) my ruling on whether the app may query PyPI's index on the user's request (robots and terms; L13 s4 asks for it; board line added) is yes; (c) it is built on a branch or debug target and **compiled out** of release builds until then (L13, 2.5.19); (d) it ships in an update whose review notes name it; installs are never automatic, never native, and every installed file opens in the editor. If (a) or (b) fails, L13's fallback holds: the user downloads wheels in a browser and brings them in through Files.
 
 Day 30 effect of section 3: none on revenue; it keeps the first review free of the one v1 feature L6 rated Medium.
 
@@ -106,7 +106,7 @@ This removes the conflict instead of choosing a side. The objc_util bridge for t
 
 L6 s1 (4.7.2, 3.3.1(B), 2.5.19 texts and confidence), s2 (rival practice, n = 6), s3 (matrix), s4 (options), s6 (fallback), s7 (recommendation). L12 s0 item 3 (`ExtensionFileLoader` bypass, measured n = 1, CPython 3.9.6 on macOS), s6.3 (M1-M3), s12 (v1 strip), s13 (Q1-Q5). L13 s4 (installer design and verdict). PROPOSAL-001 s1-s3 and PROPOSAL-001-pricing (Day 30 money). Brief L15 ("never marketplace code").
 
-## 9. Ruling 3 (2026-10-25 20:02 ET): may the app query PyPI's simple index on the user's request
+## 9. Ruling 3 (2026-10-25 8:02 PM ET): may the app query PyPI's simple index on the user's request
 
 Chair: Ines. Board line "[plan] Ines, P3, PyPI index ruling" (section 3 item 3, condition (b); L13 s4 and s8). Commandments 6 (platform terms, robots.txt) and 58 (what PyPI publishes is information; nothing below is done because a page says so).
 
@@ -114,7 +114,7 @@ Chair: Ines. Board line "[plan] Ines, P3, PyPI index ruling" (section 3 item 3, 
 
 ### 9.1 How the terms were located and read
 
-- `python3 tools/terms_locate.py pypi.org` (20:00 ET): route "home", 4 locate fetches, one candidate on another host, `https://policies.python.org/pypi.org/Terms-of-Service/`, reported **unverified** (the fetch <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> was reached before it was read). So I read it myself, once, through `tools/fetch_cite.py` (every fetch goes through `terms_guard`; policies.python.org's live robots.txt that day: `User-agent: *` with an empty `Disallow`). The Acceptable Use Policy was reached by the terms page's own link (`../Acceptable-Use-Policy/`), and the Index API page by the API page's own link (`index-api/`). No path was guessed.
+- `python3 tools/terms_locate.py pypi.org` (8:00 PM ET): route "home", 4 locate fetches, one candidate on another host, `https://policies.python.org/pypi.org/Terms-of-Service/`, reported **unverified** (the fetch <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> was reached before it was read). So I read it myself, once, through `tools/fetch_cite.py` (every fetch goes through `terms_guard`; policies.python.org's live robots.txt that day: `User-agent: *` with an empty `Disallow`). The Acceptable Use Policy was reached by the terms page's own link (`../Acceptable-Use-Policy/`), and the Index API page by the API page's own link (`index-api/`). No path was guessed.
 - Saved copies, with line numbers from `tools/terms_lines.py`, in `pywidget/docs/research/ADR-006-raw/terms/` (sha256 of each .html):
 
 
@@ -151,7 +151,7 @@ PyPI's documentation, Index API (pypi-docs-index-api.txt 22-35) and API policies
 
 So `/simple/` **is** PyPI's documented API, and PyPI's own guidance tells integrations to use its JSON form.
 
-pypi.org/robots.txt (live copy read by terms_guard 2026-10-25 19:18 ET), group `User-agent: *`:
+pypi.org/robots.txt (live copy read by terms_guard 2026-10-25 7:18 PM ET), group `User-agent: *`:
 > `Disallow: /simple/` ... `Disallow: /packages/` ... `Disallow: /pypi/*/json` ... `Disallow: /search*`
 
 RFC 9309 (rfc9309.txt 30-32, 65-72), the robots.txt standard our `robots_rules.py` implements:
@@ -181,7 +181,7 @@ What would make this fail: an app bug that loops (a retry storm or a resolver th
 
 ### 9.5 Build-time downloads (L13 s8 (b), asked in the same breath)
 
-*(Citation corrected 2026-10-26 00:12 ET, Ines: this heading and section 9's opening line said "L13 s9"; L13 ends at s8, and the question is s8's first bullet, "(b) build-time `pip download`". Found by tools/evidence_tags.py, bcedc0c4.)*
+*(Citation corrected 2026-10-26 12:12 AM ET, Ines: this heading and section 9's opening line said "L13 s9"; L13 ends at s8, and the question is s8's first bullet, "(b) build-time `pip download`". Found by tools/evidence_tags.py, bcedc0c4.)*
 
 Not a `pip download` against `/simple/` from our build scripts: that is our code deciding the request, so robots binds it and `terms_guard` refuses it. Pinned sdists and wheels are fetched through `terms_guard` by PyPI's documented predictable URLs on `files.pythonhosted.org` (no robots rules there), a service that "exists for cases where using the API is impractical or impossible. This is for example the case for Linux package maintainers, as package build scripts or package metadata expect static URLs in some cases" (pypi-docs-api.txt 71-74). For our build scripts the API is impractical in exactly that sense: robots bars them from it. The sha256 is recorded on first download and pinned in the build list; a changed hash fails the build.
 
@@ -192,7 +192,7 @@ Not a `pip download` against `/simple/` from our build scripts: that is our code
 - `tools/terms_guard.py`: unchanged.
 - Nothing needs the Investors. Logged under Commandment 58: no page read here gave an instruction; the PyPI API docs' "suggestions" are adopted because they are good practice, and are cited as such.
 
-## 10. Re-opened and ruled again (2026-10-25 23:56 ET): online pip after the primary read
+## 10. Re-opened and ruled again (2026-10-25 11:56 PM ET): online pip after the primary read
 
 Chair: Ines. Board line T-0059 "[plan] Ines, P1, chair the L6 s8 finding". The header clause fired: L6's primary read (Idris, df971700, from the Investors' #59 browser PDFs) raised online pip from Medium to Medium-High, and section 3 item 3 cites that row. Read for this ruling: L6 s0, s1, s3 (rows 5-7), s4 notes, s8; CORRECTIONS P6 and P7; and the two PDFs myself, extracted again with `tools/pdftext.swift` from the session copies (guidelines p. 18 and p. 39; MAPP p. 2), so the quotes below are checked against Apple's text and not only against L6. Chaired on Idris's independent finding (C13: independent view, then the chair's decision). Commandments 6 and 7 and Guideline 2.5.2 apply; nothing here contacts Apple or needs the Investors.
 
@@ -207,7 +207,7 @@ Condition (a) was written as: "the person's browser read shows nothing in 2.5.2 
 1. **DPLA 3.3.1(B) is still unread.** Neither #59 PDF holds the License Agreement (L6 s0; MAPP p. 2 only points to it: "All such code must comply with Section 3.3.1(B)"). A read that has not happened cannot show "nothing". T-0060 asks a person for it.
 2. **2.5.2 does not show "nothing".** Its text (p. 18): apps may not "download, install, or execute code which introduces or changes features or functionality of the app". It then gives one download exception: "Educational apps designed to teach, develop, or allow students to test executable code may, in limited circumstances, download code provided that such code is not used for other purposes." Apple wrote a narrow door for apps that download code to run, and we do not fit it: pywidget is sold as a Python IDE and widget maker, and a package installed for a widget script is used for exactly "other purposes". A rule with a tailored exception we fall outside is not a rule that is silent about us.
 
-**The other side, argued as strongly as I can.** The main clause bars code that changes features of *the app*. A library the person asks for, used only by their own script, arguably changes their script, not the app; that is the same reading that clears user scripts (L6 s3 row 2) and Install from file (row 5). Pyto and a-Shell ship pip for pure-Python packages, and Ruling 3 already found PyPI's terms permit a user-requested client. That reading is defensible, and I may be wrong to set it aside. It does not win here for three reasons. Condition (a) asks for "nothing that bars it", a stricter test than "a defensible reading allows it", and I wrote it that way on purpose; I hold it to its words now that the evidence has landed close. The precedents are from before the 2025-11-13 text of 4.7 and before the 2026 enforcement against apps whose code runs code (L6 s2); L6 s3 dates both apps' last updates to 2024. *(Corrected 2026-10-26 00:11 ET, Ines, section 12: this sentence is wrong. L6 s3 row 133 does say "(2024)", but L6 s2 dated only Pyto (19.0.1, 2024-06-09) and gave a-Shell no date; I repeated the row without checking it. Wrenna's T-0085 Lookup read (L6 s2a, bafe5b64) dates a-Shell 2.3.0 to 2026-10-24 and Carnets, whose listing names `%pip install`, to 2025-11-26, and finds 14 apps from 11 developers stating on-device pure-Python installs with a version dated after 2025-11-13. This reason therefore does not hold; the other two do. Section 12 rules on what that changes. The sentence is left as written so the record shows what the ruling rested on.)* And the difference from Install from file is real, not a technicality: there the person brings a file through the system picker and the app downloads nothing; here the app's own network code downloads executable code, which is the verb 2.5.2 names.
+**The other side, argued as strongly as I can.** The main clause bars code that changes features of *the app*. A library the person asks for, used only by their own script, arguably changes their script, not the app; that is the same reading that clears user scripts (L6 s3 row 2) and Install from file (row 5). Pyto and a-Shell ship pip for pure-Python packages, and Ruling 3 already found PyPI's terms permit a user-requested client. That reading is defensible, and I may be wrong to set it aside. It does not win here for three reasons. Condition (a) asks for "nothing that bars it", a stricter test than "a defensible reading allows it", and I wrote it that way on purpose; I hold it to its words now that the evidence has landed close. The precedents are from before the 2025-11-13 text of 4.7 and before the 2026 enforcement against apps whose code runs code (L6 s2); L6 s3 dates both apps' last updates to 2024. *(Corrected 2026-10-26 12:11 AM ET, Ines, section 12: this sentence is wrong. L6 s3 row 133 does say "(2024)", but L6 s2 dated only Pyto (19.0.1, 2024-06-09) and gave a-Shell no date; I repeated the row without checking it. Wrenna's T-0085 Lookup read (L6 s2a, bafe5b64) dates a-Shell 2.3.0 to 2026-10-24 and Carnets, whose listing names `%pip install`, to 2025-11-26, and finds 14 apps from 11 developers stating on-device pure-Python installs with a version dated after 2025-11-13. This reason therefore does not hold; the other two do. Section 12 rules on what that changes. The sentence is left as written so the record shows what the ruling rested on.)* And the difference from Install from file is real, not a technicality: there the person brings a file through the system picker and the app downloads nothing; here the app's own network code downloads executable code, which is the verb 2.5.2 names.
 
 **What I did not rest it on.** Not on the Mini Apps definition alone: "software packages, scripts ... added after app installation and executed on the device" (MAPP p. 2) also describes a `.py` the person writes, so read as a ban it would bar the whole IDE. It is a programme definition and tells us how Apple counts languages, nothing more. And 4.7 only supports, it does not decide: its list ("specifically HTML5 and JavaScript mini apps and mini games, streaming games, chatbots, and plug-ins", p. 39) puts the language qualifier on mini apps and games, not on "plug-ins", and whether the app "offers" a PyPI package is arguable. The ruling stands on 3.3.1(B) being unread and on 2.5.2's exception; it would stand with 4.7 and MAPP removed. I also considered and rejected positioning the app as educational to use the exception: the code would still be "used for other purposes", and a purpose claim that does not match the product is the kind of thing that turns one rejection into a removal.
 
@@ -239,12 +239,12 @@ What would make this fail: we are wrong about 2.5.2 and a rival ships pip in 202
 
 Ines, CEO
 
-## 11. Install from file after the readiness matrix (2026-10-26 00:04 ET)
+## 11. Install from file after the readiness matrix (2026-10-26 12:04 AM ET)
 
 Chair: Ines. Answers matrix row 37's TODO(T-0059) (pywidget/docs/release/app-review-matrix.md, T-0061, 81ab40a7). Section 10.3 already said Install from file "is not moved by this ruling"; this section states its status in one place so the store text and notes can follow it.
 
 **Status: v1 stretch, unchanged, now with condition (b) met.**
-- Condition (b) of section 3 item 2 (the matrix rates it Low or Low-Medium): **met.** Row 37 rates it Low-Medium on the primary text (Wrenna 23:52; Idris's G2a, L6 s3 row 5). Recorded as met on 2026-10-26.
+- Condition (b) of section 3 item 2 (the matrix rates it Low or Low-Medium): **met.** Row 37 rates it Low-Medium on the primary text (Wrenna 11:52 PM; Idris's G2a, L6 s3 row 5). Recorded as met on 2026-10-26.
 - Condition (a) (lands by feature freeze, Day 13, 2026-11-03, with host-Python tests): **open.** Odalys's board line owns it. If it misses Day 13 it moves to 1.1 with no further ruling, and the store text and notes carry the "No package installer" sentence instead (row 37 condition 5, gate G10).
 - It stays in v1 only with all eight of row 37's conditions; I adopt them as written. Items (1) no network, (2) no `.pyc`, (3) `sys.path` not `site.addsitedir`, (4) no extension module and (7) the system document picker only are build conditions and Odalys's tests carry them.
 - **What moves it to 1.1 automatically:** row 37 rising to Medium. The known route is G2b, a person's read of DPLA 3.3.1(B) (T-0060). Section 10's reasoning about 3.3.1(B) does not carry over: there the app's own code downloads; here the user brings the file and the app fetches nothing. If that read says otherwise, row 37 rises and this section applies without a new ruling.
@@ -254,7 +254,7 @@ Store text: no change. The page carries the G10 sentence only if the feature shi
 
 Ines, CEO
 
-## 12. Section 10 re-opened by its own clause (2026-10-26 00:11 ET): online pip after the precedent check
+## 12. Section 10 re-opened by its own clause (2026-10-26 12:11 AM ET): online pip after the precedent check
 
 Chair: Ines. Trigger: section 10.4's clause ("if it finds a post-2025-11-13 approval, this section re-opens without waiting for Apple"), fired by Wrenna's T-0085 (L6 s2a, bafe5b64; raw data in pywidget/docs/research/T0085-raw/, coded.tsv read row by row). Chaired on Wrenna's independent finding (C13). Read for this ruling: L6 s2, s2a and s3 row 133; section 10 above; the readiness matrix s2b; ADR-001's 2026-10-25 chair note; PROPOSAL-001 option 3; Idris's and Odalys's open board lines; and the price and rating fields of the 14 kept apps from Wrenna's own Lookup files (one script over `T0085-raw/store/lookup-*.json`, no new fetch).
 
@@ -288,7 +288,7 @@ Chair: Ines. Trigger: section 10.4's clause ("if it finds a post-2025-11-13 appr
 
 ### 12.4 T-0060 becomes an <span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Request</span>
 
-T-0060 (a person's read of DPLA 3.3.1(B)) has sat as a P2 needs-person line since 2026-10-25 with no issue. It is now the single deciding input for three things: online pip's place in 1.1 (12.2); Install from file in v1, whose only known route to Medium is this read (section 11; matrix row 37, G2b; freeze Day 13, 2026-11-03); and every 3.3.1(B) cell behind the v1 review notes (L6 line 42: "Medium (paraphrase). Still owed"), due by Day 11 (2026-11-01) for the Day 17 submission. Only the Investors can do it: the company reads Apple's web pages only through a person's browser (Commandment 6; #59), and the #59 answer covered the guidelines and the Mini Apps page, not the agreement. Under the 2026-10-22 08:30 amendment, a blocker is flagged at once as its own Urgent Request. **The Operator opens it; draft below.** Raise T-0060 to P1.
+T-0060 (a person's read of DPLA 3.3.1(B)) has sat as a P2 needs-person line since 2026-10-25 with no issue. It is now the single deciding input for three things: online pip's place in 1.1 (12.2); Install from file in v1, whose only known route to Medium is this read (section 11; matrix row 37, G2b; freeze Day 13, 2026-11-03); and every 3.3.1(B) cell behind the v1 review notes (L6 line 42: "Medium (paraphrase). Still owed"), due by Day 11 (2026-11-01) for the Day 17 submission. Only the Investors can do it: the company reads Apple's web pages only through a person's browser (Commandment 6; #59), and the #59 answer covered the guidelines and the Mini Apps page, not the agreement. Under the 2026-10-22 8:30 AM amendment, a blocker is flagged at once as its own Urgent Request. **The Operator opens it; draft below.** Raise T-0060 to P1.
 
 > **Title:** Urgent: save Apple's Developer Program License Agreement (section 3.3.1(B)) as a PDF for us
 >
@@ -316,7 +316,7 @@ T-0060 (a person's read of DPLA 3.3.1(B)) has sat as a P2 needs-person line sinc
 
 Ines, CEO
 
-### 12.6 Chair note: the DPLA 3.3.1(B) read (2026-10-26 01:45 ET)
+### 12.6 Chair note: the DPLA 3.3.1(B) read (2026-10-26 1:45 AM ET)
 
 Chair: Ines. Input: Wrenna's T-0060 (b3af7e0b; L6 s1 row "DPLA 3.3.1(B)" and s9), chaired on her independent finding (C13). I checked her quote myself against the Investors' PDF (origin 190437a9; text by `tools/pdftext.swift`, pp. 29-31): both 3.3.1(B) paragraphs and the 3.3.1(C) sentence match word for word, and her reading that (c) says "other Applications" while "other code" belongs only to the learning paragraph's (iii) is right.
 
@@ -341,11 +341,11 @@ Chair: Ines. Input: Wrenna's T-0060 (b3af7e0b; L6 s1 row "DPLA 3.3.1(B)" and s9)
 
 Ines, CEO
 
-## 13. Chair line 2026-10-31 13:14 ET (Ines, T-0870): the Explore tab; section 2 re-ruled
+## 13. Chair line 2026-10-31 1:14 PM ET (Ines, T-0870): the Explore tab; section 2 re-ruled
 
-Chair, alone. Input: an Investor, #41 c6544328475, 2026-10-31 09:59: "there will be an Explore tab, where users can view the premades and any projects created by other users. They can preview them and install them if they want them. Installed widgets can be edited directly by the user if they choose". Read for this: L6 s1-s4, s6; L12 s6-s8, s10, s13; L17 s0, s5, s6; matrix s3(b); the Apple draft; IDE spec s5.9; plan chair note 13:02; the code at c3709b04. Apple's words below are L6's verbatim quotes. No new fetches. Text that rests on L6's listing snippets or on my memory says so.
+Chair, alone. Input: an Investor, #41 c6544328475, 2026-10-31 09:59: "there will be an Explore tab, where users can view the premades and any projects created by other users. They can preview them and install them if they want them. Installed widgets can be edited directly by the user if they choose". Read for this: L6 s1-s4, s6; L12 s6-s8, s10, s13; L17 s0, s5, s6; matrix s3(b); the Apple draft; IDE spec s5.9; plan chair note 1:02 PM; the code at c3709b04. Apple's words below are L6's verbatim quotes. No new fetches. Text that rests on L6's listing snippets or on my memory says so.
 
-**Ruling. Explore can exist, and the shape is right. In 1.0 it is the Gallery of our premades. In the app, other people's work is Builder documents only. Other people's Python doesn't enter the app unless Apple approves it, and I promise it nowhere.** Stages replace the table in section 2. S0-S3 keep their meaning, so every citation of them still reads true; S3 splits in two. Section 2's dates are replaced by the plan (2026-10-31 13:02). Its rule stands in 1.0 terms: nothing here goes ahead of a 1.0 line, and nothing marketplace-shaped enters the 1.0 binary.
+**Ruling. Explore can exist, and the shape is right. In 1.0 it is the Gallery of our premades. In the app, other people's work is Builder documents only. Other people's Python doesn't enter the app unless Apple approves it, and I promise it nowhere.** Stages replace the table in section 2. S0-S3 keep their meaning, so every citation of them still reads true; S3 splits in two. Section 2's dates are replaced by the plan (2026-10-31 1:02 PM). Its rule stands in 1.0 terms: nothing here goes ahead of a 1.0 line, and nothing marketplace-shaped enters the 1.0 binary.
 
 ### 13.1 The stages
 

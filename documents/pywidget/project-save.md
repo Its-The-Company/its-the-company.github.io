@@ -90,16 +90,16 @@ New strings, DRAFT C51, not yet on the sheets. 0 hits for "app".
 </div>
 
 
-## 4. `sampled_at` (ADR-007 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-11-01 18:17, T-0961)
+## 4. `sampled_at` (ADR-007 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-11-01 6:17 PM, T-0961)
 
 - No case touches `tree.json`. The ruling rejected a save that clears it, and the last good picture is what the marks sit on.
 - A sibling edit can carry an older hard-coded date. Under item 2 that refresh still lands, because the old tree landed before the run began. Flag off, no check runs at all.
 - `sent_at` is a file time. It never enters `isOlder`. The clock trigger compares dates of files, not `sampled_at`.
-- **One gap, flag on only, for Ines.** An old-code extension run that began before the send can land during the save's refresh, or after it with a later date. Either way a tree of old work lands after `sent_at`, so the clock trigger misses it, until the next run. The window is the 4 s deadline. Proposal: a run that began before the folder's `sent_at` writes no tree. Item 2 rejected a marker because a run in flight beats it; this check is on that run. It freezes nothing, since any run after the send writes. It changes her rule, so it is hers. It does not hold up the flag-off build. It should be answered before T-0680's chair line. **Ruled (T-0973): ADR-007 chair line 2026-11-01 18:38, which wins here. The check goes in with four additions; "it freezes nothing" needed one of them. T-0866 builds only when and how `sent_at` is stamped (item 3). The rest is T-0976.**
+- **One gap, flag on only, for Ines.** An old-code extension run that began before the send can land during the save's refresh, or after it with a later date. Either way a tree of old work lands after `sent_at`, so the clock trigger misses it, until the next run. The window is the 4 s deadline. Proposal: a run that began before the folder's `sent_at` writes no tree. Item 2 rejected a marker because a run in flight beats it; this check is on that run. It freezes nothing, since any run after the send writes. It changes her rule, so it is hers. It does not hold up the flag-off build. It should be answered before T-0680's chair line. **Ruled (T-0973): ADR-007 chair line 2026-11-01 6:38 PM, which wins here. The check goes in with four additions; "it freezes nothing" needed one of them. T-0866 builds only when and how `sent_at` is stamped (item 3). The rest is T-0976.**
 
 ## 5. Freeze row F3
 
-No new row, and the date stays 11-03 23:59. F3's test as written passes without T-0866, because "one imports the other, and run it" passes in the editor. Store page row 17 is gated on F3 and is not true for a widget without this rule.
+No new row, and the date stays 11-03 11:59 PM. F3's test as written passes without T-0866, because "one imports the other, and run it" passes in the editor. Store page row 17 is gated on F3 and is not true for a widget without this rule.
 
 - **Add one case to T-0355's UI tests:** edit only a sibling, leave the editor, the widget's tree changes.
 - **Add one shot to my F3 read:** frame 8's rows on the real screen.

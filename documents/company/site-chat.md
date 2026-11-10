@@ -11,7 +11,7 @@ description: "Every number below has its sample size beside it. Where I could no
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Author: Odalys (process and operations). Written 2026-10-22, Day 1, 23:00 ET. Revised 2026-10-23 00:10 ET with the Investors' answers (issue #24, comment 6356480193).
+Author: Odalys (process and operations). Written 2026-10-22, Day 1, 11:00 PM ET. Revised 2026-10-23 12:10 AM ET with the Investors' answers (issue #24, comment 6356480193).
 Status: Phase 1 built (live status, read-only chat page, Now panel); the zero-Claude watcher (section 5.7) is built and tested but NOT installed; the composer (Phase 2) is built and tested (tests/composer_test.py); template replies (inbox_route.py) are not.
 Asked by an Investor in #24. Reviewed by nobody yet; Ines decides what goes on the board.
 
@@ -89,12 +89,12 @@ Constraints from the task packet: Commandments 2, 3, 6, 10, 42, 50, 52 to 57; id
 
 | # | Measurement | Value | n / source |
 |---|---|---|---|
-| B1 | Minimal Operator session (Sonnet 5.5, 4 to 7 turns, no worker call): cost | median $0.238, range $0.216 to $0.247 | n=7, `ops/usage.json` runs 16:21 to 22:31 |
+| B1 | Minimal Operator session (Sonnet 5.5, 4 to 7 turns, no worker call): cost | median $0.238, range $0.216 to $0.247 | n=7, `ops/usage.json` runs 4:21 PM to 10:31 PM |
 | B2 | Same session: tokens | cache write 46k to 54k, cache read 129k to 240k, output 0.8k to 2.3k | n=7, `ops/runs/*.json` |
 | B3 | Share of B1 that is cache write (standing context: system prompt, CLAUDE.md 70 KB, prompt, state, board) | ~80% ($0.19 of $0.24) | computed: 48k x $4/MTok (1-hour cache write on Sonnet, the rate Claude Code's estimate uses; the figure matches B1 within 2%) |
 | B4 | Weekly budget in Claude Code's cost unit | $1,338.64 | governor calibration from the meter: 6% of week = $80.32 |
 | B5 | Today's share | $445.14 | `governor status` |
-| B6 | 5-hour window in the same unit | about $390 | n=1: meter read 8% at 22:46 after $30.95 spent in the prior 5 h. Rough; treat as +/- 30% |
+| B6 | 5-hour window in the same unit | about $390 | n=1: meter read 8% at 10:46 PM after $30.95 spent in the prior 5 h. Rough; treat as +/- 30% |
 | B7 | Worker call cost | median $0.36; research and <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">pitch</span> calls $2.50 to $3.54 | n=70 calls, Day 1 baseline |
 | B8 | Investor messages received | 18 (an Investor 11, an Investor 7) | `ops/inbox/messages.jsonl`, Day 1 |
 | B9 | Time to first logged company response | median 0.11 h | n=17, Day 1 baseline |
@@ -174,7 +174,7 @@ The 60-second write was the wasteful part, not the sampling. Reading the stream 
 </div>
 
 
-Unmeasured: how many distinct states a typical session produces. The count is in `ops/watch/` once the supervisor has run a day; I will report it with the first day's numbers. A scrubbed public `status.json` still goes out with the site build every 15 minutes (the 19:51 amendment's home-page button). With a token the page shows the variable (seconds old); without one, the 15-minute public version.
+Unmeasured: how many distinct states a typical session produces. The count is in `ops/watch/` once the supervisor has run a day; I will report it with the first day's numbers. A scrubbed public `status.json` still goes out with the site build every 15 minutes (the 7:51 PM amendment's home-page button). With a token the page shows the variable (seconds old); without one, the 15-minute public version.
 
 Why a variable and not a commit: a commit every few seconds would be thousands of commits a day and would push the site past the Pages build limit. A variable is overwritten in place, holds 48 KB, needs no build, and is readable with one permission (Variables: read). Fallback: the same JSON in a pinned issue body, edited in place.
 
@@ -214,7 +214,7 @@ Estimated latency, message to first reply (the receipt is mostly arithmetic, the
 | Probe, inbox read, receipt comment | 3 to 5 s | 3 gh calls at 0.45 to 1.0 s (n=3); comment post unmeasured |
 | **Receipt visible on the site** | **about 10 s mean, 20 s worst** | sum of the above; compare today's median 0.11 h = 6.6 min to first logged response (n=17) |
 | Supervisor prelude (git sync, meter if due, governor) | 10 to 30 s | unmeasured; sync and the meter dominate |
-| Claude session start, read thread, reply | 15 to 60 s | minimal sessions today ran 15 s (22:31 work run), 0.8k to 2.3k output tokens |
+| Claude session start, read thread, reply | 15 to 60 s | minimal sessions today ran 15 s (10:31 PM work run), 0.8k to 2.3k output tokens |
 | **First reply** | **estimate 1 to 2 minutes** | will be replaced by `watch.jsonl` timestamps after one live day |
 
 </div>
@@ -329,7 +329,7 @@ The chat itself is never the cost problem. The work it asks for is (F9, F10), an
 
 **Phase 1: read path and live status (Day 2 to 3; estimate $4 to $10 to build).**
 - `tools/live_status.py` with tests on a recorded stream-json fixture; wired into the supervisor tick and the keeper loop; writes `ops/live.json`, sets `COMPANY_STATUS`, and emits the scrubbed public `status.json`.
-- `site_build.py`: a `chat.html` page (token entry, topic groups with color-coded sender chips, read-only, 30-second poll with ETags; revised 2026-10-23 from three per-person lanes to topic groups) and a "Now" panel on the home page backed by `status.json` publicly and by the variable when a token is present. The 19:51 home-page button is satisfied here.
+- `site_build.py`: a `chat.html` page (token entry, topic groups with color-coded sender chips, read-only, 30-second poll with ETags; revised 2026-10-23 from three per-person lanes to topic groups) and a "Now" panel on the home page backed by `status.json` publicly and by the variable when a token is present. The 7:51 PM home-page button is satisfied here.
 - Done means: with the company's own test token the page renders every issue under its topic with sender chips; status shows the current session's worker calls within 10 to 15 s of a change; `python3 -m pytest tools/` green; site builds with `--no-gh`.
 - Needs from the Investors: nothing to build; one token to confirm the Investor identity path end to end. Creative approval of the page design when they see it.
 - Rollback: delete `chat.html`; the Requests page and GitHub stay as they are.
@@ -367,7 +367,7 @@ Decision: yes. Install the watcher at the default settings (15 s poll, 3-minute 
 Why:
 1. The Investors already asked for it. #24 answer 2: messages go straight to the Mac mini, no wait, no Claude for the polling. This is carrying out their answer, not a new choice.
 2. The cost is bounded and small. Polling is $0 (304s are free, n=3). A wake is $0.24 inbox-only (n=7) or about $0.89 as a full work session (n=37). Day 1's pattern gives 8 to 12 wakes, $1.90 to $2.90 a day. The worst case at the cap is about $21 a day, 4.8% of the day's share. All of these are Odalys's estimates from section 5.7, not measurements of the watcher itself.
-3. Tokens are free to use this week (amendment 2026-10-22 16:40), but wake costs carry on after the week resets on Sun 2026-10-25. So the decision comes with a review date, not an open tab.
+3. Tokens are free to use this week (amendment 2026-10-22 4:40 PM), but wake costs carry on after the week resets on Sun 2026-10-25. So the decision comes with a review date, not an open tab.
 4. Rollback is one command (`--unwatch`), and a dead watcher only costs speed: the 15-minute tick still reads the inbox.
 
 What would make this fail: wakes that land as full work sessions every time, with replies no faster. The keep-or-remove test is Odalys's (Phase 3): after 2 days of `ops/watch/watch.jsonl`, median message-to-first-reply must fall by at least half against the 0.11 h baseline (n=17), and $/message must not rise more than 20%. Review on Day 5 (2026-10-26), after the week reset. If either test fails, it comes out and Odalys writes it up.
@@ -388,7 +388,7 @@ Body, in short:
 - (a) C51: approve or veto the home page "Now" panel and `chat.html` (token bar, topic groups, colour-coded sender chips, composer with topic, mark urgent, display name). Screenshots attached, live URL linked.
 - (b) Create a fine-grained GitHub token: this repository only; Issues read/write, Variables read, Contents read; expiry your choice (90 days suggested). Paste it into the chat page on your own browser. The company never sees or stores it (section 7.1).
 - Blocks: switching the composer on (Phase 2), and calling the page approved on the site. Does not block: the public Now panel, the read-only chat, product work.
-- Deadline: Day 3, 2026-10-24, 20:00 ET. If no answer by then, the composer stays off and GitHub issues remain the way to reach us; nothing breaks.
+- Deadline: Day 3, 2026-10-24, 8:00 PM ET. If no answer by then, the composer stays off and GitHub issues remain the way to reach us; nothing breaks.
 - The reply that settles it: a comment on the issue from your account saying "approved" (or the changes you want) and "token works, I see the topics" (or what you saw instead).
 
 ## 12. Owners proposed (Ines decides)

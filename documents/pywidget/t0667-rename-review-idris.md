@@ -12,7 +12,7 @@ description: "Accept, with one Medium to land before T-0449&#x27;s Swift reader 
 
 {% raw %}
 Idris, 2026-10-29. Independent review (Commandment 13): I read the diff, the board line and the
-ADR-001 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line of 2026-10-29 04:08 (T-0506), not the author's reasoning. Also checked
+ADR-001 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line of 2026-10-29 4:08 AM (T-0506), not the author's reasoning. Also checked
 against the later commits c9054763 (T-0676, `lane.py`) and 1c47322e (T-0677).
 
 ## Verdict
@@ -91,7 +91,7 @@ so the PNGs say `app.json` while the copy tables (updated below) say `pywidget.j
 them. Maren can re-render the next time she touches those sheets. I did not edit the scripts,
 because editing without re-rendering would split each script from its picture.
 
-## Design docs updated in this pass (board line, Ines's chair line 04:08)
+## Design docs updated in this pass (board line, Ines's chair line 4:08 AM)
 
 - [`pywidget/docs/design/ide/home-setup.md`](home-setup.html): every `app.json` now says `pywidget.json` (16 places),
   except s7.5's question, which is kept as asked; the ruled answer follows it. The header's
@@ -99,7 +99,7 @@ because editing without re-rendering would split each script from its picture.
 - [`pywidget/docs/design/ide/run-screen.md`](run-screen.html): 2 places (the nav title source and its copy-table row).
 - [`pywidget/docs/design/ide/spec.md`](ide-spec.html) and [`pywidget/docs/decisions/ADR-004-editor-engine.md`](adr-004-editor-engine.html): no
   change. Their only hit is `tokens-app.json`, the design-token file, not the manifest.
-- Left as written: ADR-001 item 1 (line 228, the 2026-10-27 ruling text; the 04:08 chair line at
+- Left as written: ADR-001 item 1 (line 228, the 2026-10-27 ruling text; the 4:08 AM chair line at
   line 265 says item 1 now reads `pywidget.json`) and bridge-contract's v5.2 history row. Both are
   records of what was decided at the time.
 

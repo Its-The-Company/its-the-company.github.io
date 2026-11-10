@@ -18,13 +18,13 @@ Builder: `python3 tools/amend_fold.py --root . --out <dir> --proposal <this file
 
 ## What changed since #115
 
-1. Ten more entries: 2026-11-01 10:49 through 2026-11-02 23:46. 18 entries now, not 8. No earlier entry was missing.
-2. The eight folds approved on #115 are unchanged, except two places where a later ruling changed them: the personal-accounts bullet in Tenet 6 and its paragraph in Commandment 2 now carry the 2026-11-01 and 2026-11-02 lane rulings, and the temporary spread lift of 2026-10-31 10:55 is no longer written into Tenet 6, because it is spent (Spent parts, below).
+1. Ten more entries: 2026-11-01 10:49 AM through 2026-11-02 11:46 PM. 18 entries now, not 8. No earlier entry was missing.
+2. The eight folds approved on #115 are unchanged, except two places where a later ruling changed them: the personal-accounts bullet in Tenet 6 and its paragraph in Commandment 2 now carry the 2026-11-01 and 2026-11-02 lane rulings, and the temporary spread lift of 2026-10-31 10:55 AM is no longer written into Tenet 6, because it is spent (Spent parts, below).
 3. `tools/amend_fold.py` now reads "Money" on an Affects line, and writes a spent part of an entry in words under that entry in `log/rulings.md` (`PLAN["notes"]`), so nothing drops silently.
 
 ## Baseline
 
-1. `amendments.md`: 14,858 bytes, 10,762 over the 4,096-byte line. n = 18 entries, 2026-10-29 07:33 to 2026-11-02 23:46 ET.
+1. `amendments.md`: 14,858 bytes, 10,762 over the 4,096-byte line. n = 18 entries, 2026-10-29 7:33 AM to 2026-11-02 11:46 PM ET.
 2. Every worker's prompt carries the whole amendments block.
 3. `CLAUDE.md`: 62,362 bytes, loaded by the Operator only. `rules/worker-rules.md`: 10,443 bytes.
 
@@ -45,33 +45,33 @@ Measure after: `wc -c amendments.md`; the block size from `rules/build_agents.py
 
 | Ruling | Rule | Change |
 | --- | --- | --- |
-| 11-01 10:49, names on the site | Commandment 42 | "beyond what they approve (the site calls each of them "an Investor")" becomes "beyond what they approve; they approved their first names and GitHub usernames on the site". Every other item, unfixed security weaknesses included, stays. |
-| 11-01 10:59, lane security accepted | Tenet 6, Commandment 2 | The personal bullet and Commandment 2's paragraph say you accept the lane's security risks as they stand. Commandment 42 still keeps unfixed weaknesses off the site; the hook and posture check still run; Commandment 6 still applies. |
-| 11-01 12:58, site controls | Commandment 59, Tenet 6, Commandment 2 | You turn each personal account on and off, choose Spread or Lock In, and name it from the site. Commandment 59 gains one standing exception: building and changing those controls needs no request and no security analysis. |
-| 11-01 13:32, API credit caps | Tenet 6 (API credits) | "At most $50 a week" goes: a month's $200 may all be used at once. Two personal API keys of $100 each follow the same rules. Spending never passes what the credits or a key hold. Overflow only and never Fable stay. The `billing.json` reserve ($10 today) stays unspent. The Money section has no cap to change (reason written in the plan). |
-| 11-01 21:35, MacBook runner | Commandment 61 | Every lane may queue Xcode test and build runs to the runner, which may run several Simulators at once; one Xcode task at a time binds the Mac mini only. Tenet 1 holds no Xcode limit in `CLAUDE.md` (reason written in the plan). |
-| 11-01 22:22, lane capability | Tenet 6 | An enabled personal account runs as many agents as it needs, with the same kind of work, done the same way, with the usual allocation across workers. |
-| 11-02 11:37, lanes equal | Tenet 6, Commandment 2 | Same access, functionality and settings as the main account; tasks routed to each account equally. Commandment 2's personal-data ban and Commandment 6 stay. |
-| 11-02 13:54, use the API credits now | Tenet 6 (API credits) | One sentence: the credits of the cycle that began on 2026-11-01 run work sessions now, in a full pool, until used; the order ends with that cycle. |
-| 11-02 18:04, deletions | Commandment 2 | New "Cleaning up" paragraph: delete anything the project no longer needs, keep important files and unsaved work, no request per cleanup. A permission refusal stops that item (T-0848). Commandment 50 has no row to change (reason written in the plan). |
-| 11-02 23:46, sweep | Commandment 2 | Same paragraph: a standing sweep between sessions deletes scratch whose task is finished and that no open board line points to. |
+| 11-01 10:49 AM, names on the site | Commandment 42 | "beyond what they approve (the site calls each of them "an Investor")" becomes "beyond what they approve; they approved their first names and GitHub usernames on the site". Every other item, unfixed security weaknesses included, stays. |
+| 11-01 10:59 AM, lane security accepted | Tenet 6, Commandment 2 | The personal bullet and Commandment 2's paragraph say you accept the lane's security risks as they stand. Commandment 42 still keeps unfixed weaknesses off the site; the hook and posture check still run; Commandment 6 still applies. |
+| 11-01 12:58 PM, site controls | Commandment 59, Tenet 6, Commandment 2 | You turn each personal account on and off, choose Spread or Lock In, and name it from the site. Commandment 59 gains one standing exception: building and changing those controls needs no request and no security analysis. |
+| 11-01 1:32 PM, API credit caps | Tenet 6 (API credits) | "At most $50 a week" goes: a month's $200 may all be used at once. Two personal API keys of $100 each follow the same rules. Spending never passes what the credits or a key hold. Overflow only and never Fable stay. The `billing.json` reserve ($10 today) stays unspent. The Money section has no cap to change (reason written in the plan). |
+| 11-01 9:35 PM, MacBook runner | Commandment 61 | Every lane may queue Xcode test and build runs to the runner, which may run several Simulators at once; one Xcode task at a time binds the Mac mini only. Tenet 1 holds no Xcode limit in `CLAUDE.md` (reason written in the plan). |
+| 11-01 10:22 PM, lane capability | Tenet 6 | An enabled personal account runs as many agents as it needs, with the same kind of work, done the same way, with the usual allocation across workers. |
+| 11-02 11:37 AM, lanes equal | Tenet 6, Commandment 2 | Same access, functionality and settings as the main account; tasks routed to each account equally. Commandment 2's personal-data ban and Commandment 6 stay. |
+| 11-02 1:54 PM, use the API credits now | Tenet 6 (API credits) | One sentence: the credits of the cycle that began on 2026-11-01 run work sessions now, in a full pool, until used; the order ends with that cycle. |
+| 11-02 6:04 PM, deletions | Commandment 2 | New "Cleaning up" paragraph: delete anything the project no longer needs, keep important files and unsaved work, no request per cleanup. A permission refusal stops that item (T-0848). Commandment 50 has no row to change (reason written in the plan). |
+| 11-02 11:46 PM, sweep | Commandment 2 | Same paragraph: a standing sweep between sessions deletes scratch whose task is finished and that no open board line points to. |
 
 </div>
 
 
-The eight entries from 2026-10-29 07:33 to 2026-10-31 12:43 fold as approved on #115; their table and notes are in `log/audit/proposal-t0899-amendments-fold.md`, and their edits are in the diff below.
+The eight entries from 2026-10-29 7:33 AM to 2026-10-31 12:43 PM fold as approved on #115; their table and notes are in `log/audit/proposal-t0899-amendments-fold.md`, and their edits are in the diff below.
 
 Notes that say the fold happened: the Version 2 paragraph of `CLAUDE.md`, the rulings line of `rules/worker-rules.md`, line 15 of `amendments.md`, and the count line of `log/rulings.md`.
 
 ## Spent parts, written in log/rulings.md instead of a rule
 
-1. **2026-10-31 10:55, the spread lift "until this is done".** The personal-account setup is done: an Investor confirmed it working on 2026-11-01 22:22, and both accounts are on and named in `investors/billing.json`. Each account's own Spread or Lock In mode does that job now. Its "as many subagents as needed" part is kept, because the 22:22 ruling made it standing. The note sits under the entry in `log/rulings.md`.
-2. **2026-11-02 13:54, "use all of the api credits rn".** Not fully spent ($185.26 of $190 usable used at 00:41 on 2026-11-03), so it is in the rule, tied to the cycle `ops/api_now.json` names (from 2026-11-01). Its note says the order ends with that cycle and the overflow rule returns.
+1. **2026-10-31 10:55 AM, the spread lift "until this is done".** The personal-account setup is done: an Investor confirmed it working on 2026-11-01 10:22 PM, and both accounts are on and named in `investors/billing.json`. Each account's own Spread or Lock In mode does that job now. Its "as many subagents as needed" part is kept, because the 10:22 PM ruling made it standing. The note sits under the entry in `log/rulings.md`.
+2. **2026-11-02 1:54 PM, "use all of the api credits rn".** Not fully spent ($185.26 of $190 usable used at 12:41 AM on 2026-11-03), so it is in the rule, tied to the cycle `ops/api_now.json` names (from 2026-11-01). Its note says the order ends with that cycle and the overflow rule returns.
 
 ## Where this goes past your words: please check
 
-1. **The 13:54 order ends with this month's credit cycle.** You wrote "rn". If you want every month's credits run at once, say so and the company rebuilds.
-2. **The 10:55 spread lift is treated as finished.** If you meant it to keep running, say so.
+1. **The 1:54 PM order ends with this month's credit cycle.** You wrote "rn". If you want every month's credits run at once, say so and the company rebuilds.
+2. **The 10:55 AM spread lift is treated as finished.** If you meant it to keep running, say so.
 3. **"The one Xcode task at a time" limit** lives in the work-session instructions under `setup/`, not in Tenet 1; this diff writes its scope in Commandment 61 only.
 4. **Worker rule 7** still tells workers not to write "the Investors' personal details". It is a protected section the applier can't change, and it is stricter than Commandment 42 now is, so it stays.
 5. Items 1 to 8 of the T-0899 proposal's list still stand.

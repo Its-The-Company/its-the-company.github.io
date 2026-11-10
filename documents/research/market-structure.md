@@ -11,19 +11,19 @@ description: "Utilities: 92% of 8,504 tracked apps are free; 1,261 (~15%) offer 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://www.apppricinglab.com/reports/UTILITIES
 - Finding: Utilities: 92% of 8,504 tracked apps are free; 1,261 (~15%) offer IAP; #1 top paid is HotSchedules (4.6 stars, 67.1K ratings). Paid-upfront is a small slice. Page gives no median price or subscription share.
 
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://marlvel.ai/rankings/us/ios/utilities-grossing/2026-03-18
 - Finding: Cleanup: Phone Storage Cleaner was #1 US Utilities top grossing on 2026-03-18; top paid #1 was Shadowrocket (2026-03-09). Grossing led by subscription cleaner apps: saturated, risky <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>.
 
-## 2026-10-22 01:34 ET
+## 2026-10-22 1:34 AM ET
 - Source: https://itunes.apple.com/us/rss/customerreviews/page=1/id=1018655661/sortby=mostrecent/json
 - Finding: Method note: Apple public RSS feed (itunes.apple.com/us/rss/customerreviews/page=N/id=ID/sortby=mostrecent/json) works but returns zero entries for most small apps and <span title="A measured fact that holds a grade below a letter, however good the rest is.">caps</span> near 50 per page-set; 7 of 18 pulled apps returned data. Search API gives price and rating count. Script: tools/review_mine.py; per-app lists in research/reviews/.
 
-## 2026-10-22 02:17 ET
+## 2026-10-22 2:17 AM ET
 - Source: https://itunes.apple.com/search?term=film+developing+timer&entity=software&country=us&limit=15
 - Finding: <span title="How many apps on the shelf already sell the same thing.">Crowding</span> across 9 niche lanes (tools/review_mine.py crowd, top 11-15 results each): 59 apps released since 2025-01-01; 4 of them (7 percent) reached 50+ ratings. Lanes: timegrapher 8 new, turntable speed 2, film dev timer 5, film log 5, sstv 9, spoke tension 6, POTA logger 6, pickleball scorer 8, exif remover 7. Feature-level novelty in niche utilities is mostly gone by Oct 2026; discovery, trust and a mechanism nobody ships are what separate.
 {% endraw %}

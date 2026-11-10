@@ -94,7 +94,7 @@ load, buy, restore); `:360, 364, 373, 377, 383-387` (`testFailedRestoreShowsItsO
 (`testRefundWhileThePurchasedScreenIsOpenReturnsToTheOffer`); `session.buyProduct` at `:198, 210, 235, 424`.
 
 Each of these calls StoreKit (Product load, purchase, `AppStore.sync`, the test session). A stall in any of them
-holds the run until xc.sh's 20-minute limit, which is exactly the 12:47 failure this commit is meant to fix.
+holds the run until xc.sh's 20-minute limit, which is exactly the 12:47 PM failure this commit is meant to fix.
 Fix: put these under `bounded` too. `PaywallModel` calls are `@MainActor` and fit the helper as written. Then add
 a backstop for any await missed in future: `executionTimeAllowance = 120` in `ProStoreTests.setUp`, with test
 timeouts turned on for PyWidgetTests in the scheme (or `-test-timeouts-enabled YES` in the unit-test call).

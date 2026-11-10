@@ -11,7 +11,7 @@ description: "Quote: &quot;If your App doesn&#x27;t provide some sort of lasting
 <div class="doc-body" markdown="1">
 
 {% raw %}
-## 2026-10-22 15:01 ET
+## 2026-10-22 3:01 PM ET
 - Source: https://developer.apple.com/app-store/review/guidelines/
 - Finding: Read 4.2 in full (guidelines last updated 2026-10-16). Standup passes if it is a game with lasting entertainment value; it fails if it is a window on our website (4.2 and 4.2.2: not 'web clippings, content aggregators'). So the live company view is a secondary mode, never the product. 4.2.3(ii): if new days download as level data, disclose size and prompt first.
 - Quote: "If your App doesn't provide some sort of lasting entertainment value or adequate utility, it may not be accepted."
@@ -21,7 +21,7 @@ description: "Quote: &quot;If your App doesn&#x27;t provide some sort of lasting
 - Source: https://developer.apple.com/app-store/review/guidelines/#software-requirements
 - Finding: Related rules. 2.5.2 forbids downloading code that changes features; new days ship as level data read by the existing engine (content, not code) or in app updates. 2.3.1(a): "built from our real days" must be literally true; every level cites its log lines (C2). 4.3(a): one app holds all days, never one app per week. 4.1(c): no other company's brand or model name in the app name or icon.
 - Quote: "nor may they download, install, or execute code which introduces or changes features or functionality of the app"
-- Read by Ines, 2026-10-22 ~15:00 ET, full text of 4.1, 4.2, 4.3(a), 2.3.1, 2.5.2 and 5.6 (page "Last Updated: October 16, 2026"). (Note added by hand: tools/research_note.py dedups on the URL prefix, so a second note on one page is refused.)
+- Read by Ines, 2026-10-22 ~3:00 PM ET, full text of 4.1, 4.2, 4.3(a), 2.3.1, 2.5.2 and 5.6 (page "Last Updated: October 16, 2026"). (Note added by hand: tools/research_note.py dedups on the URL prefix, so a second note on one page is refused.)
 {% endraw %}
 
 </div>

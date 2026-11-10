@@ -54,8 +54,8 @@ attempts cannot share; at whole seconds a tap inside the same second as a good f
 yet, so nothing is wrong today. But the requirement is not on B5's line, and no test will hold B5's writer to it.
 The one fields.json-shaped writer in the tree writes `isoformat()` of `k.utc(now)`
 (pywidget/widgets/premade/github.py:71, :78). Failure case: B5 writes `fetched_at` the same way with the
-microseconds dropped (for example `timespec="seconds"`). A good scheduled fetch at 10:00:00.2 is followed by a
-tap whose fetch also succeeds at 10:00:00.7. Both write `10:00:00`, the rule reads "not moved", and the tap
+microseconds dropped (for example `timespec="seconds"`). A good scheduled fetch at 10:00:00 AM.2 is followed by a
+tap whose fetch also succeeds at 10:00:00 AM.7. Both write `10:00:00`, the rule reads "not moved", and the tap
 badges "Could not get new data" though new data arrived. Fix: add this to the same T-1882/T-0678 note as M1, with
 a writer test of two good fetches in the same second.
 

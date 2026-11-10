@@ -42,12 +42,12 @@ The scratch worktree was clean after the mutant runs (`git status` empty): every
 
 - A day is the Gregorian calendar day in the zone passed with the run, fixed at the run's finish. The calendar is
   named, not `Calendar.current`, so a device set to the Buddhist or Japanese calendar keys the same way.
-- 23:59 and 00:01 local are two days (test). Tokyo 23:50 and 00:10 are two days though both are 11-02 in UTC
+- 11:59 PM and 12:01 AM local are two days (test). Tokyo 11:50 PM and 12:10 AM are two days though both are 11-02 in UTC
   (test; the author's "day taken in UTC" mutant dies on it). A Tokyo day stays a Tokyo day after a move to Los
   Angeles (test).
-- Probe P6, the Los Angeles fall-back night of 2026-11-01: 01:30 PDT and 01:30 PST are one day, 23:59 PST and 00:01
+- Probe P6, the Los Angeles fall-back night of 2026-11-01: 1:30 AM PDT and 1:30 AM PST are one day, 11:59 PM PST and 12:01 AM
   the next morning are two. Correct.
-- Probe P5: Tokyo 00:30 on 11-03 and, one minute later, Los Angeles 07:31 on 11-02 count as two days. That is
+- Probe P5: Tokyo 12:30 AM on 11-03 and, one minute later, Los Angeles 7:31 AM on 11-02 count as two days. That is
   decision 3 as written (the person's calendar as lived) and matches the rule's "local calendar days". Rare enough
   to accept; no finding.
 

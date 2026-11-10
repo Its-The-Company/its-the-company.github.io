@@ -11,20 +11,20 @@ description: "Roku community thread: user says an iPhone remote app asks for a s
 <div class="doc-body" markdown="1">
 
 {% raw %}
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://community.roku.com/t5/Remotes/Iphone-app-requires-a-fee/m-p/857962
 - Finding: Roku community thread: user says an iPhone remote app asks for a subscription at 6+ USD a week. Old thread, pricing may have changed.
 - Quote: "ridiculous 6+$ a week"
 
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://marlvel.ai/api/llm/apps/utilities/com-kraftwerk9-rokie
 - Finding: Rokie (Roku remote), 4.47 stars: automated aggregator audit lists top complaint as weekly paywall blocking basic remote functions; users ask for one-time purchase. Small sample, lead only.
 
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://apps.apple.com/app/id1142635401
 - Finding: Rokumote: about 27K ratings, 4.4 average, weekly/monthly/yearly auto-renewing plans. Strong incumbents; remotes need real TV hardware to test, and we are Simulator-only.
 
-## 2026-10-22 01:34 ET
+## 2026-10-22 1:34 AM ET
 - Source: https://itunes.apple.com/us/rss/customerreviews/page=1/id=6471626032/sortby=mostrecent/json
 - Finding: TV Remote for Roku (11K ratings, 4.5): 50 reviews, 42 are 1-3 star (84 percent), paywall/subscription 17, IAP $8.99 weekly-style plus $9.99, $39.99, $49.99. Official Roku Remote is free with 6.3M ratings, so a paid remote competes with free official app; complaints are about surprise charges, not missing function.
 - Quote: "Im not paying money just because I can't find my Roku remote (1 star)"

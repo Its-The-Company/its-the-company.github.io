@@ -11,7 +11,7 @@ description: "Option (b). The three recipes in pywidget/widgets/recipes/ (next_e
 <div class="doc-body" markdown="1">
 
 {% raw %}
-- Status: **decided** (T-2896, Ines, 2026-11-08 02:51 ET). Build: Idris, the board line after T-0901.
+- Status: **decided** (T-2896, Ines, 2026-11-08 2:51 AM ET). Build: Idris, the board line after T-0901.
 - Asked by: Pernille in T-2376 (4b123c9b1). Numbering: ADR-008 stays held for the builder ADR (ADR-009 line 3), so this is ADR-010.
 - Checked at 0ed644707, plus T-2857's run (cf5a6527c, `ios/Tests/ShortcutRecipeTests.swift`, on <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/a/20261107-205309-q33 and not on main yet).
 

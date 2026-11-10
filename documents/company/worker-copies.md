@@ -66,7 +66,7 @@ and tests/worker_land_test.py (38 checks). Both were red before the code.
   `python3 tools/worker_status.py done <task>` (T-3979, on main since 175026c43b; not in this slice's base).
 - **The merge queue.** tools/merge_queue.py takes parked/ and <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> refs. A `work/` branch should join it as itself
   (with `--branch work/...`) only if a wait lasts past one pass. For now the retry above is the queue.
-- **Measure (task item 5).** Before, gate ledger ops/metrics/main_gate.jsonl, 24 h to 11-09 ~22:45 (n = 366 rows):
+- **Measure (task item 5).** Before, gate ledger ops/metrics/main_gate.jsonl, 24 h to 11-09 ~10:45 PM (n = 366 rows):
   `refused` 2, `host_refused` 4, `suite_refused` 14, `suite_red` 28, `suite_pass` 312. "Passed, not recorded" is
   printed but never written as a row, so it has no before count. Add a row for it in main_gate.py (its owner's
   task). After: the same query 48 h after the Operator wiring, plus `worker_land.jsonl` results by code.

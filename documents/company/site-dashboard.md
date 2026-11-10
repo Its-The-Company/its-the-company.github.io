@@ -11,8 +11,8 @@ description: "There are two readings, and the page shows both. Each costs one sh
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Author: Maren (product and visual design). Written 2026-10-23, Day 2, 19:45 ET. Status: sections 1 to 6 decided; reviewed against Odalys's build 2026-10-23 20:37 ET (section 9); frames in ops/site-checks/dash/.
-Asked on #37 (Investor comment after the 18:45 ET reply): the priority list lists discrete tasks, not "Your open messages"; a dashboard of what is being worked on "and to what level", which "appears to be broken"; a button for a very brief summary of current work.
+Author: Maren (product and visual design). Written 2026-10-23, Day 2, 7:45 PM ET. Status: sections 1 to 6 decided; reviewed against Odalys's build 2026-10-23 8:37 PM ET (section 9); frames in ops/site-checks/dash/.
+Asked on #37 (Investor comment after the 6:45 PM ET reply): the priority list lists discrete tasks, not "Your open messages"; a dashboard of what is being worked on "and to what level", which "appears to be broken"; a button for a very brief summary of current work.
 Data: Odalys's `tasks` key in tools/live_status.py (35920ef, WIP). Builder for the page: Odalys (queue.js). Chat.js lines: Idris. QA: Wrenna, live, 390 and 1280, light and dark.
 Inside the approved system (site-v2.md section 9, option B; site-chat-v3.md). No new colour, size or token.
 
@@ -32,10 +32,10 @@ Inside the approved system (site-v2.md section 9, option B; site-chat-v3.md). No
 | # | Finding | Evidence | Owner of the fix |
 |---|---|---|---|
 | 1 | With a token there is no Now button and no Now panel on Home. chat.js hides `.aside` (the panel) and `.now-toggle` at start, and hides the strip on the Home tab. All an Investor sees of current work is the "Right now" tile: a count and first names. | chat.js line 129 (`[composer, urgent, aside, tog]` hidden), line 392 (`stripEl.hidden = cur === 'home'`) | This spec, then Odalys |
-| 2 | **My error.** My v3 spec moved the Now cards off Home (site-chat-v3.md section 2) and made the tiles replace the strip (1.4). It kept the 5-hour % and reset time from the 19:51 amendment, but cut its other half, the brief description of current work, down to a list of names. | site-chat-v3.md 1.4 and 2 | Mine; section 3 puts it back |
-| 3 | Running workers showed as idle. A worker resumed after its turn limit read as finished (3 of 3 at 19:02), and a refused call read as "just finished". | 35920ef commit message | Odalys, fixed in 35920ef. It is live once the status loop runs that code |
-| 4 | The page will show two different "ready" numbers: the strip says 21 (read_board), the task list says 22 (`tasks.count.next`, which drops unrelated and superseded lines). | `live_status.build()`, 19:40 ET, n=1 | Odalys: the strip and tiles read `tasks.count` when it is present |
-| 5 | The live public `status.json` has no `tasks` key yet. At 23:02 UTC it showed the session active, 0 workers, and all 5 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> "next". | curl of the live file, 19:4x ET | Publish |
+| 2 | **My error.** My v3 spec moved the Now cards off Home (site-chat-v3.md section 2) and made the tiles replace the strip (1.4). It kept the 5-hour % and reset time from the 7:51 PM amendment, but cut its other half, the brief description of current work, down to a list of names. | site-chat-v3.md 1.4 and 2 | Mine; section 3 puts it back |
+| 3 | Running workers showed as idle. A worker resumed after its turn limit read as finished (3 of 3 at 7:02 PM), and a refused call read as "just finished". | 35920ef commit message | Odalys, fixed in 35920ef. It is live once the status loop runs that code |
+| 4 | The page will show two different "ready" numbers: the strip says 21 (read_board), the task list says 22 (`tasks.count.next`, which drops unrelated and superseded lines). | `live_status.build()`, 7:40 PM ET, n=1 | Odalys: the strip and tiles read `tasks.count` when it is present |
+| 5 | The live public `status.json` has no `tasks` key yet. At 11:02 PM UTC it showed the session active, 0 workers, and all 5 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> "next". | curl of the live file, 19:4x ET | Publish |
 
 </div>
 
@@ -52,13 +52,13 @@ There are two readings, and the page shows both. Each costs one short line and n
 ### 3.1 The button (Home tab, 390 and 1280)
 - The fourth tile, "Right now · 3 at work · Ines, Maren, Odalys", stays as it is. It gains `role=button`, `aria-expanded` and `aria-controls="cv-brief"`. A tap toggles the brief. It no longer navigates; Company > Work is linked inside the brief.
 - At 390 the tile is on the first screen (site-chat-v3.md 1.4). At 1280 it sits in the sticky side column, so it can be pressed from any scroll position.
-- The brief is on the Home tab only. Home is always the first tab, one tap from any thread. This is what the 19:51 amendment asked for: "a button on the home page".
+- The brief is on the Home tab only. Home is always the first tab, one tap from any thread. This is what the 7:51 PM amendment asked for: "a button on the home page".
 - The open or closed state is kept in a variable for the page's life, not in storage. The brief starts closed.
 
 ### 3.2 The brief (`#cv-brief`, directly under the tile grid)
 At most 12 lines and 280 px tall at 390 with 3 workers. It never scrolls inside itself. Top to bottom:
 
-1. **The project**, one line from the build's status sentence already in the page (`.hero .latest`), for example "No product chosen yet: ...". This is the 19:51 "what the project is working on".
+1. **The project**, one line from the build's status sentence already in the page (`.hero .latest`), for example "No product chosen yet: ...". This is the 7:51 PM "what the project is working on".
 2. **One entry per running call** (`tasks.run`, at most 5, then "+N more"). Each entry is two lines: line 1 is fs-0 muted, line 2 is fs-1 ink with a one-line ellipsis.
    `Ines · Fable, max effort · 6 min`
    `First-principles hunt H39`
@@ -75,7 +75,7 @@ At most 12 lines and 280 px tall at 390 with 3 workers. It never scrolls inside 
 - The "All tasks" link lands with the Tasks header below the sticky tab row: `#cv-tasks{scroll-margin-top:69px}` (tab row 57 + s3).
 - The strip's second number is wait + blocked (live_status), so its word is "waiting or blocked", the brief's word. This changes the visitors' strip label too (an exception to 7.7: the old word was wrong).
 
-**Amended 2026-10-26 01:50 ET (Maren, T-0121):** with 8 live calls (5 shown) the brief measured 361 px at 390, over the 280 cap; the 3-call sample hid it. Item 2 now shows at most 3 entries, same two-line format; with more than 3 running, the total leads the counts line: "8 running · 52 ready · 40 waiting or blocked" (no "+N more" line). The usage line has no top margin of its own. Measured at 390: live 254 px; worst case 274 px (8 running, 2-line project, 999 counts, 100% with a 12:59 PM reset). tools/site_dash_probe.py reads that worst case on every run.
+**Amended 2026-10-26 1:50 AM ET (Maren, T-0121):** with 8 live calls (5 shown) the brief measured 361 px at 390, over the 280 cap; the 3-call sample hid it. Item 2 now shows at most 3 entries, same two-line format; with more than 3 running, the total leads the counts line: "8 running · 52 ready · 40 waiting or blocked" (no "+N more" line). The usage line has no top margin of its own. Measured at 390: live 254 px; worst case 274 px (8 running, 2-line project, 999 counts, 100% with a 12:59 PM reset). tools/site_dash_probe.py reads that worst case on every run.
 ### 3.3 Tasks (replaces "Your open messages"; same place: Home tab, above the dock)
 Header: "Tasks" with the open count. Groups are `h3` with a count, in this order:
 
@@ -105,7 +105,7 @@ Row anatomy:
 1. Every chip and meter uses a pair the contrast script already enforces. The origin chip is "chat chip" (accent on accent-soft): 4.88:1 light, 6.51:1 dark. Meta text is muted on bg: 6.11 light, 7.39 dark. The progress fill is accent on soft-2: 4.92 light, 6.75 dark, against the 3:1 rule for graphics.
 2. Green, blue and amber chips stay state words wherever they appear (Running, Next, Blocked in the Now lanes). Tasks uses group headers instead, so it adds no state colour.
 3. No number without its words: "18 of 21 done", never a bare meter.
-4. **The hot colour and the word "you" are for Urgent Requests only.** On #37 eight open lines carry the waits-on-Investors flag. All eight are product spikes waiting on the product choice. If they were drawn hot, the page would prompt the Investors to decide, and the 2026-10-23 17:33 amendment says not to. So they show as muted words inside Waiting or blocked. They never appear in the bell, the badge or the brief's counts.
+4. **The hot colour and the word "you" are for Urgent Requests only.** On #37 eight open lines carry the waits-on-Investors flag. All eight are product spikes waiting on the product choice. If they were drawn hot, the page would prompt the Investors to decide, and the 2026-10-23 5:33 PM amendment says not to. So they show as muted words inside Waiting or blocked. They never appear in the bell, the badge or the brief's counts.
 5. Motion: only the existing pulse dot, which is off under `prefers-reduced-motion`. The brief opens with no transition.
 
 ## 5. Board line 29: "Sent as #N" on a phone (decided)
@@ -117,7 +117,7 @@ Row anatomy:
   - In the bar branch, add `put(dock, out);` after `put(b, barSend);`.
   - The bar placeholder's two "Message the company..." branches collapse into one: `target() === 'new' || isMain(target()) ? 'Message the company...' : ...`.
   - site.css gets `.cv-dock .cv-state:empty{display:none}`, so an empty line adds no height.
-- **Measured** with the builder's `slim_js` and gzip -9, 19:45 ET:
+- **Measured** with the builder's `slim_js` and gzip -9, 7:45 PM ET:
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 3: 5. Board line 29: &quot;Sent as #N&quot; on a phone (decided), scrolls sideways" style="--tw:688px" markdown="1">
@@ -133,7 +133,7 @@ Row anatomy:
 
 - **Height.** The bar plus the state line is about 83 px, inside the 96 px the footer already reserves at 390.
 
-## 6. Bytes: where the code can go (measured 2026-10-23 19:40 ET, the builder's slim_js, gzip -9)
+## 6. Bytes: where the code can go (measured 2026-10-23 7:40 PM ET, the builder's slim_js, gzip -9)
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 4: 6. Bytes: where the code can go (measured 2026-10-23 19:40 ET, the builder&#x27;s…, scrolls sideways" style="--tw:1031px" markdown="1">

@@ -5,7 +5,7 @@ section: "documents"
 description: "No High, no Medium. Two Lows, both test or rule follow-ups; neither blocks the flag-off build. Both are on the board as T-2841 (Idris, P3; L2&#x27;s question goes to Ines from there)."
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/design/' | relative_url }}">← Design &amp; Specs</a><a href="{{ '/documents/pywidget/t2728-pernille.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind grey">Review</span><span>Day 15 · Thu Nov 5</span><span><code>pywidget/docs/reviews/t2728-pernille.md</code></span></div><h1>T-2728: review of c27b8cf46 (T-2721, the oom_guard badge gap, ADR-007 2026-11-05 14:48 rule D)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind grey">Review</span><span>Day 15 · Thu Nov 5</span><span><code>pywidget/docs/reviews/t2728-pernille.md</code></span></div><h1>T-2728: review of c27b8cf46 (T-2721, the oom_guard badge gap, ADR-007 2026-11-05 2:48 PM rule D)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/pernille.svg' | relative_url }}" alt="Pernille" title="Pernille"><span>By <a href="{{ '/cast/pernille.html' | relative_url }}">Pernille</a>, Python runtime engineer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -14,7 +14,7 @@ description: "No High, no Medium. Two Lows, both test or rule follow-ups; neithe
 Reviewer: Pernille (C13, independent). Read: `git show c27b8cf46`; at HEAD, WidgetStatus.swift (`oomGuard`,
 `missingStatusSince`, `missingStatusFallback`, `showsBadge`), ExtensionLane.swift (`refresh`, `turn`, `givesWay`,
 `refused`, `log`), LaneGuard.swift (`WidgetStateLock.with`), ExtensionLaneTests.swift (its `showsBadge` and oom_guard
-asserts), <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>.py's Not held bullet; the 14:48 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line. Host only, no Xcode, no Simulator.
+asserts), <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>.py's Not held bullet; the 2:48 PM <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line. Host only, no Xcode, no Simulator.
 
 ## Verdict: PASS
 
@@ -75,7 +75,7 @@ change, not Idris's.
 ## Docstrings
 
 `oomGuard` (WidgetStatus.swift:196-207), the gap (:217-220), `missingStatusFallback` (:230), `showsBadge` (:255-259) and
-`ExtensionLane.refused` (:374-377) agree with the code and with the 14:48 line. "Inside their callers' 4 s deadline"
+`ExtensionLane.refused` (:374-377) agree with the code and with the 2:48 PM line. "Inside their callers' 4 s deadline"
 is true for refusals by the queue argument above.
 {% endraw %}
 

@@ -11,9 +11,9 @@ description: "One program, tools/dispatch.py, decides for every task that needs 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Owner: Ines. Builder: Odalys (build line T-2529). Written 2026-11-05 02:33 ET.
-Asked by: an Investor #41 c6651007804 (01:02 11-05). Built and run in one go, measured afterwards: amendment 2026-11-05 01:07
-(c6651078949). Approvals it needs are given in advance: amendment 2026-11-05 01:21 (c6651295775); guard and classifier
+Owner: Ines. Builder: Odalys (build line T-2529). Written 2026-11-05 2:33 AM ET.
+Asked by: an Investor #41 c6651007804 (1:02 AM 11-05). Built and run in one go, measured afterwards: amendment 2026-11-05 1:07 AM
+(c6651078949). Approvals it needs are given in advance: amendment 2026-11-05 1:21 AM (c6651295775); guard and classifier
 refusals still stop an item (T-0848). Folds in T-2488 (simplifications S2: app work first).
 
 ## Recommendation
@@ -50,7 +50,7 @@ the main checkout; those sessions are not dispatched tasks.
 | main plan | ops/usage.json `meter_points` (session_pct, week_pct, fable_pct and resets), budgets from `governor.py calibrate` | 5-hour window; week | 5-hour under the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> (90%), week under 100% less the governor's reserve, no rate-limit pause |
 | personal account a, b, ... | ops/personal_meter/<id>.json (pct, resets), from the account's own tick reading | 5-hour window; week | its Investor switch on, not tripped, a reading under 70 minutes old, 5-hour under 90%, week under 100% |
 | company API key | `governor.py api_status` (month cycle, weekly cap, reserve) | credits at the cycle's end | api_overflow on, key in the Keychain, room for one session (T-1230's gate) |
-| key-a, key-b | `governor.py key_status` (balance, today's spend) | nothing, but the Investors said use them first (amendment 2026-11-04 22:32) | key on, room for one session; never past what the key holds |
+| key-a, key-b | `governor.py key_status` (balance, today's spend) | nothing, but the Investors said use them first (amendment 2026-11-04 10:32 PM) | key on, room for one session; never past what the key holds |
 
 </div>
 
@@ -116,7 +116,7 @@ A source with a meter that is missing, stale or unreadable is not eligible. It f
 3. governor.py: remove api_pick and api_now_base from the work path; keep meters, record, budgets, key_status,
    api_status. tools/supervisor.sh: work sessions go to the dispatcher; Operator sessions ask `pick`.
 4. launchd: the dispatch job; the personal-tick jobs keep their reading only. Old plists archived, not deleted.
-5. Anything in rules/ (rules/personal_lane.py, the lane flags) goes as a proposal under the 01:21 advance approval.
+5. Anything in rules/ (rules/personal_lane.py, the lane flags) goes as a proposal under the 1:21 AM advance approval.
 6. tools/dispatch_stats.py (below). Take the "before" numbers first, then switch on, all in the same session.
 
 Uncommitted edits by other tasks sit in tools/supervisor.sh and tools/xc.sh in the personal/a worktree; build on main
@@ -131,12 +131,12 @@ and land through the queue.
   job; a dispatcher that fails three ticks in a row posts once to the supervisor's alert path. Rollback is one revert.
 - Moving main-plan work into worktrees adds a land step. If the main plan's land rate is under 60% at the 48-hour
   check, its work sessions return to the main checkout by one setting.
-- Lane a lost nine hours (16:27 11-04 to 01:27 11-05) to one refusal (profile stray, fixed in f15f0cc959). The
+- Lane a lost nine hours (4:27 PM 11-04 to 1:27 AM 11-05) to one refusal (profile stray, fixed in f15f0cc959). The
   dispatcher logs "eligible source, room, no session" hours, so the next such gap shows the same hour.
 
 ## How before and after are measured
 
-tools/dispatch_stats.py reads only raw files and writes ops/metrics/dispatch_stats.json. Before: 2026-11-02 00:00 ET to
+tools/dispatch_stats.py reads only raw files and writes ops/metrics/dispatch_stats.json. Before: 2026-11-02 12:00 AM ET to
 the switch-on time. After: the 7 days after it, read at +24 hours and +7 days.
 
 1. **Share of each account's usage used before reset.** For each source and window, the last reading before the reset

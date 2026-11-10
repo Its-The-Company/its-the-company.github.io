@@ -11,7 +11,7 @@ description: "What they are doing instead: makers run Pepakura on a Windows mach
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Prompted by issue #10 (amendment 2026-10-22 13:49). Earlier candidates (Stripwise, TallyProof, BeatCount, Purlwright, the cross-stitch keeper) stay stored in `pitches/` and [`research/pass4.md`](pass4.html) as pivot or side options. Nothing here repeats them.
+Prompted by issue #10 (amendment 2026-10-22 1:49 PM). Earlier candidates (Stripwise, TallyProof, BeatCount, Purlwright, the cross-stitch keeper) stay stored in `pitches/` and [`research/pass4.md`](pass4.html) as pivot or side options. Nothing here repeats them.
 
 Listen to this: "app for converting STL to papercraft nets, a sort of open source alternative to Pepakura ... It's competent, it works, someone wrote it and gave it away" (Hacker News comment, 2026-10-14, https://news.ycombinator.com/item?id=50089164).
 

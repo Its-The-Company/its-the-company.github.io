@@ -57,7 +57,7 @@ failed drop leave a mark the flag-on path checks (re-mirror or refuse that id). 
 "LaneDemotions.add waits with no bound". After T-1855 a held lock costs each `add` 0.5 s and then ends the process
 on a report (carryOut's `!written`), and "a lost id comes back with the next report" isn't a backstop against a
 holder that holds again in every run. C2's matching sentence (`docs/research/C2-device-api.md:122`) needs the same change. Owner: Pernille (the lane.py
-header is mine under Ines's 2026-11-02 04:02 item 7 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>). This is my own open thread from T-0953.
+header is mine under Ines's 2026-11-02 4:02 AM item 7 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>). This is my own open thread from T-0953.
 
 ## Info
 

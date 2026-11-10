@@ -12,7 +12,7 @@ description: "A flowchart of how the company&#x27;s work runs, live, so the Inve
 
 {% raw %}
 Written by the Operator, 2026-11-07 10:1x ET, from Evan's Plan mode answers: c6708569654 (ask), c6708675175 and
-c6708725795 (answers); company questions c6708703496 and the 09:59 block. Builds on ops/plans/sessions-main-vs-<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span>.md,
+c6708725795 (answers); company questions c6708703496 and the 9:59 AM block. Builds on ops/plans/sessions-main-vs-<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span>.md,
 ops/plans/one-dispatcher.md and ops/plans/one-coordinator.md (T-3247, being written now).
 
 ## The goal
@@ -94,7 +94,7 @@ Five keys join the existing `session` block of COMPANY_STATUS and status.json (`
 - **Scrub and size.** All text is written through the scrub (Commandment 42): `name` is the board's plain name, `why`
   and `doing` plain words with no paths, links or issue numbers, accounts by role label only. `public_full` passes only named keys, so
   these five need adding there. Measured: the sample (8 in flight, 3 finished, 5 accounts, 7 jobs) is 3,745 B compact.
-  The variable already sits at its <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>: 7,541 of 7,680 B on 2026-11-07 15:19 with 11 trim steps applied (n=1, 24 personal
+  The variable already sits at its <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>: 7,541 of 7,680 B on 2026-11-07 3:19 PM with 11 trim steps applied (n=1, 24 personal
   rows), so the feed does not fit in today's 7,680 B without trimming In flight's rows. T-3296 decides how:
   my recommendation is to fit() everything else to today's cap, keep the feed outside fit() under its own cap of
   4,096 B (cut `done`, then `flow`), and raise the variable's limit to match (GitHub's limit is 48 KB; site-dashboard

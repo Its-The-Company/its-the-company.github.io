@@ -11,13 +11,13 @@ description: "The promise v1 proves. You can write and run real Python on iPhone
 <div class="doc-body" markdown="1">
 
 {% raw %}
-- Status: accepted by the CEO, 2026-10-25 19:27 ET. Changes to founder decisions (brief 2.1) are not made here; they are in PROPOSAL-001 and wait for the Investors.
+- Status: accepted by the CEO, 2026-10-25 7:27 PM ET. Changes to founder decisions (brief 2.1) are not made here; they are in PROPOSAL-001 and wait for the Investors.
 - Author: Ines (CEO). Review: Idris reads it for engineering feasibility when the L3 spike lands; ADR-002 (execution architecture) may move the widget cut line, never the IDE scope.
 - Inputs: ops/plans/pywidget/build-brief.md (sections 0, 2.1, 2.3, 2.5, 5 L10, 6); ops/plans/apple-day7.md; <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">pitches</span>/PITCH-12.md and research/hunt/H134.md, H150.md, H154.md (the Runpy evidence).
 
 ## 1. Context
 
-The Investors chose the product at 18:39 ET on 2026-10-25 (#41 c6404397645). The brief is honest about its size: it is three to five products (L10). Read as written, it is a Python IDE, a widget engine, a block builder, a compatibility layer for another app's scripts, a web IDE with sync, a moderated code marketplace with billing, Shortcut Lab, and a possible iMessage extension.
+The Investors chose the product at 6:39 PM ET on 2026-10-25 (#41 c6404397645). The brief is honest about its size: it is three to five products (L10). Read as written, it is a Python IDE, a widget engine, a block builder, a compatibility layer for another app's scripts, a web IDE with sync, a moderated code marketplace with billing, Shortcut Lab, and a possible iMessage extension.
 
 What we have: 26 days to <span title="Our arithmetic estimate of what the idea would earn by day 30 (the $200 deadline) or day 90. It never raises a grade.">Day 30</span> (2026-11-20). One iOS engineer (Idris) and one Xcode task at a time on the Mac mini. Apple membership pending, due Day 7 (2026-10-28); Paid Apps Agreement, tax and banking due Day 12 (2026-11-02). Day 20 (2026-11-10) is the last safe submission day (ops/plans/apple-day7.md). Nothing is built yet; the CPython embed spike (L3/L13) started tonight.
 
@@ -75,7 +75,7 @@ C4 widget engine, narrow (behind the cut line in 3.3)
 - No interactive buttons in v1 (L5 is 1.1).
 
 C11 premade library
-- 12 first-party widgets, written in our own Python DSL and shipped inside the binary, source viewable and editable by the user: time and countdowns, sunrise and sunset, steps and floors (motion history), distance to a saved place, altitude, a habit tracker, a Shortcuts launcher, storage (was "battery and storage"; <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> ruling 2026-10-25 21:16 below, 09dc55c8), calendar-free day progress, a quote of the day from a bundled public-domain list, world clocks, a GitHub repository status widget (official public API, user's own token in the Keychain). Weather only if a data source with commercial-use terms and no cost is found (Wrenna's data-source line); WeatherKit needs the membership.
+- 12 first-party widgets, written in our own Python DSL and shipped inside the binary, source viewable and editable by the user: time and countdowns, sunrise and sunset, steps and floors (motion history), distance to a saved place, altitude, a habit tracker, a Shortcuts launcher, storage (was "battery and storage"; <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> ruling 2026-10-25 9:16 PM below, 09dc55c8), calendar-free day progress, a quote of the day from a bundled public-domain list, world clocks, a GitHub repository status widget (official public API, user's own token in the Keychain). Weather only if a data source with commercial-use terms and no cost is found (Wrenna's data-source line); WeatherKit needs the membership.
 
 C12 billing
 - One in-app purchase, "Pro", StoreKit 2, tested with a StoreKit configuration file in Xcode until App Store Connect exists. Contents and price per section 5 and the Investors' answer.
@@ -185,9 +185,9 @@ PROPOSAL-001 recommends adding IDE power features to Pro, because the counted pa
 - Runpy: pitches/PITCH-12.md (incumbent $9.99 paid up front, 1,528 US ratings, last update 2023-04-27; 11 of 11 2026 low reviews on 3.4; Day 30 ruled C on the paid <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>), research/hunt/H154.md (0 of 27 2026 forum posts asking where to move scripts; the stranded buyer is not counted asking).
 - ops/plans/apple-day7.md (Day 14 cut date, Day 20 last safe submission).
 
-## Revised, 2026-10-25 19:36 ET (Ines)
+## Revised, 2026-10-25 7:36 PM ET (Ines)
 
-Tonight's research landed after the 19:27 acceptance. These facts change the text above; where they conflict, this section wins. Scope and the cut date do not change.
+Tonight's research landed after the 7:27 PM acceptance. These facts change the text above; where they conflict, this section wins. Scope and the cut date do not change.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 5: Revised, 2026-10-25 19:36 ET (Ines), scrolls sideways" style="--tw:1280px" markdown="1">
@@ -210,7 +210,7 @@ Tonight's research landed after the 19:27 acceptance. These facts change the tex
 </div>
 
 
-## Chair rulings, 2026-10-25 19:57 ET (Ines): marketplace staging and L12 Q1
+## Chair rulings, 2026-10-25 7:57 PM ET (Ines): marketplace staging and L12 Q1
 
 Full text, reasons and risks: pywidget/docs/decisions/ADR-006-marketplace-staging.md. Where they conflict with the text above, ADR-006 wins. Scope, cut line and dates in sections 3.3 and 4 do not change.
 
@@ -226,23 +226,23 @@ Full text, reasons and risks: pywidget/docs/decisions/ADR-006-marketplace-stagin
 </div>
 
 
-## Note, 2026-10-25 20:15 ET (Idris): numbering of the execution-architecture ADR
+## Note, 2026-10-25 8:15 PM ET (Idris): numbering of the execution-architecture ADR
 
-Where this document says "ADR-002 (execution architecture)" (header, 3.1 C4, milestone row 6), read **ADR-007**: pywidget/docs/decisions/ADR-007-execution-architecture.md (proposed 20:12). ADR-002 is the widget view tree; ADR-003 stays reserved for packages (plan.md row 6). ADR-007 confirms this document's option-(b) default from the L3 spike's numbers and does not move the widget cut line.
+Where this document says "ADR-002 (execution architecture)" (header, 3.1 C4, milestone row 6), read **ADR-007**: pywidget/docs/decisions/ADR-007-execution-architecture.md (proposed 8:12 PM). ADR-002 is the widget view tree; ADR-003 stays reserved for packages (plan.md row 6). ADR-007 confirms this document's option-(b) default from the L3 spike's numbers and does not move the widget cut line.
 
-## Chair rulings, 2026-10-25 21:16 ET (Ines): battery premade and MET Norway weather
+## Chair rulings, 2026-10-25 9:16 PM ET (Ines): battery premade and MET Norway weather
 
 Settles CORRECTIONS U1-11 and U1-12. Scope list in 3.1 changes as below; the cut line (3.3: 8 of 12 render correctly, Day 14) does not.
 - **Battery and storage becomes "Storage" in v1.** C2 has no battery call, and with `_ctypes` stripped (ADR-006 s4) Python cannot reach UIDevice. Under option (b) any battery read would come from the app's last run, often hours old, beside Apple's own live Batteries widget; a stale battery number loses that comparison on sight. Storage needs no new API (`shutil.disk_usage` from the stdlib). Battery goes to 1.1 with a C2 module and the same freshness question C2-Q1 answered for location. Still 12 premades. Maren's R3 ("battery in extension") is dropped for v1.
-- **No MET Norway in 1.0.** The 19:36 Revised row stands and is now the ruling: weather ships as the example Shortcut recipe through Run Script with Input (a v1 intent), not as a premade. A premade calling api.met.no by default would send the user's coordinates and IP to a third party, break the privacy drafts' "no weather source" condition, and need a policy line, a credit line and at scale a proxy (a server: Investors). Day 30 rests on Pro, not weather. A user's own script may call any weather API through `pywidget.http`; that is their choice, not ours. MET Norway returns for 1.1 only with Wrenna's privacy-label read.
+- **No MET Norway in 1.0.** The 7:36 PM Revised row stands and is now the ruling: weather ships as the example Shortcut recipe through Run Script with Input (a v1 intent), not as a premade. A premade calling api.met.no by default would send the user's coordinates and IP to a third party, break the privacy drafts' "no weather source" condition, and need a policy line, a credit line and at scale a proxy (a server: Investors). Day 30 rests on Pro, not weather. A user's own script may call any weather API through `pywidget.http`; that is their choice, not ours. MET Norway returns for 1.1 only with Wrenna's privacy-label read.
 
 ## Chair note, 2026-10-25 (Ines): online pip leaves 1.1
 
 ADR-006 section 10 supersedes the "Online pip: 1.1" clause of the 3.2 Package row above. The primary read of the guidelines (L6 s8, df971700) raised online pip to Medium-High, and ADR-006 s3 item 3 condition (a) is not met (DPLA 3.3.1(B) unread; 2.5.2's only download exception is for educational apps). Online pip has no date until that read, Apple's position or a post-2025-11-13 precedent, and a new chair ruling. The 1.1 package story is the bundled set, Install from file, and wheels downloaded in a browser and added from Files. v1 scope, the cut line and the dates do not change.
 
-## Chair ruling, 2026-10-26 00:04 ET (Ines): the share extension stays in 1.1
+## Chair ruling, 2026-10-26 12:04 AM ET (Ines): the share extension stays in 1.1
 
-Settles the scope question in Wrenna's readiness matrix (pywidget/docs/release/app-review-matrix.md row 39, section 2b, gate <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G12</span>; T-0061, 81ab40a7) and CORRECTIONS U1-24. Read: 3.2 above (the "Share sheet / Action extension" row), L6 s3 share-extension row, s5 notes, s7 and s8 (df971700), CORRECTIONS (Idris 19:26 and U1-24), ADR-007 Ruling 1, L8 ground rule 2 and its Share extension row, and the open Idris lines on the board.
+Settles the scope question in Wrenna's readiness matrix (pywidget/docs/release/app-review-matrix.md row 39, section 2b, gate <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G12</span>; T-0061, 81ab40a7) and CORRECTIONS U1-24. Read: 3.2 above (the "Share sheet / Action extension" row), L6 s3 share-extension row, s5 notes, s7 and s8 (df971700), CORRECTIONS (Idris 7:26 PM and U1-24), ADR-007 Ruling 1, L8 ground rule 2 and its Share extension row, and the open Idris lines on the board.
 
 **Ruling: 3.2 stands. No share or action extension in v1.0. It is 1.1.** L6 s7 and s3 ("Ship, handing off to the app when memory runs short") are stale on this point, as U1-24 already says; L6 s8, the v1 verdict, does not name the share extension in its scope line, so nothing in Idris's primary read argues for it. v1 has one app extension, the widget extension.
 
@@ -258,17 +258,17 @@ What follows:
 
 Ines, CEO
 
-## Chair note, 2026-10-26 00:12 ET (Ines): online pip back on the 1.1 plan, gated on one read
+## Chair note, 2026-10-26 12:12 AM ET (Ines): online pip back on the 1.1 plan, gated on one read
 
 ADR-006 section 12 re-opens section 10 by its own clause (Wrenna's T-0085: 14 apps from 11 developers state on-device pure-Python installs with a version dated after 2025-11-13). Online pip returns to the 1.1 plan, gated only on a person's read of DPLA 3.3.1(B) (T-0060, now an <span title="A GitHub issue asking the Investors for something that is blocking work.">Urgent Request</span>). Not v1 and not a v1 stretch: Day 17 review risk, no Day 30 revenue, no capacity before Day 20. The 2026-10-25 note above stays as written; one reason in the ADR-006 s10 ruling it summarises (stale precedents) was wrong and is corrected in s10.2 with a dated note. v1 scope, the cut line and the dates do not change.
 
-## Chair ruling, 2026-10-26 02:36 ET (Ines): the editor-side widget preview
+## Chair ruling, 2026-10-26 2:36 AM ET (Ines): the editor-side widget preview
 
 Ruled in pywidget/docs/design/ide/editor-preview-note.md s6 (T-0173). 3.1 C5 gains, in v1: a widget preview pane in the editor, redrawn on Run and on save, with family and mode switches and the entry stepper (iPad right pane, iPhone a tab in the console sheet); it is where PROPOSAL-002 s5's "Run as widget" lives. The first-run tour's page 3 runs on the gallery path. 3.2 gains two rows, both 1.1: redraw as you type (C5), and the network-off switch (C5), which leaves PROPOSAL-002 s5's v1 list. A is due with the Day 12 iPad milestone; if it is not in that build it goes to 1.1 and store shot iPad 1 comes out. The preview queue-key fix comes before any preview code. Dates, freeze and the cut line do not change.
 
-## Chair ruling, 2026-10-27 10:05 ET (Ines): scripts that open from the Home Screen (Investor request #41 c6443662711, T-0441)
+## Chair ruling, 2026-10-27 10:05 AM ET (Ines): scripts that open from the Home Screen (Investor request #41 c6443662711, T-0441)
 
-The request (an Investor, 09:53): users can make apps that run inside pywidget and put a shortcut to one on the Home Screen, like a real app. The Operator's reply (c6443690022) named the route. I hold to it, with one narrowing it did not name: in 1.0 an app's screen is its console and native prompts, not a custom layout. Read: brief 1.1a ("native-UI mini apps"), 3.1 C5 and C7 above, L6 s1 and s8, L9 s2.3 (its Open Script row is an `OpenIntent`), bridge contract s4 (the DeviceCall channel; Context `.app` already exists), T-0208's `ScriptEntity`/`ScriptQuery` (RunScriptIntents.swift), T-0355, T-0430.
+The request (an Investor, 9:53 AM): users can make apps that run inside pywidget and put a shortcut to one on the Home Screen, like a real app. The Operator's reply (c6443690022) named the route. I hold to it, with one narrowing it did not name: in 1.0 an app's screen is its console and native prompts, not a custom layout. Read: brief 1.1a ("native-UI mini apps"), 3.1 C5 and C7 above, L6 s1 and s8, L9 s2.3 (its Open Script row is an `OpenIntent`), bridge contract s4 (the DeviceCall channel; Context `.app` already exists), T-0208's `ScriptEntity`/`ScriptQuery` (RunScriptIntents.swift), T-0355, T-0430.
 
 **Ruling: a minimal Home Screen route is in 1.0, behind its own freeze rule. Custom app screens are 1.1. The editor preview pane (T-0192) moves to 1.1 to pay for it. Day 13 freeze, Day 14 cut line and Day 17 submission do not move.**
 
@@ -291,7 +291,7 @@ The request (an Investor, 09:53): users can make apps that run inside pywidget a
 
 **4. What it displaces.** About two Xcode days on Idris's main slot on Days 11-12: about one for native prompts (owed to 3.1 regardless) and about one for the app route. The Day 12 list was already over-full (xcode-queue-day6-10.md names a drop order for it). So I rule the cut now, not under pressure on Day 12: **T-0192 (editor preview pane, part A, 2 to 2.5 Xcode days) goes to 1.1**, with its own pre-written consequence: store shot iPad 1 comes out (PROPOSAL-003 s2.6), and T-0048's "Run as widget" and entry stepper go with it. Why this line and not the app route: it is company work I added (T-0173), the app route is an Investor request ahead of company work, the widget authoring loop still closes without it (run, then the Home Screen; the gallery still previews the premades), and "put your script on your Home Screen" is a store sentence a buyer reads, where the preview pane is a convenience after purchase. Tenet 4 points the other way (refine before expanding), and that is why the app route is the narrow slice above and nothing more.
 - Day 12 main order: T-0355 projects, T-0447 prompts, T-0449 app route, then T-0193, T-0048 (without Run as widget) and the wiring items as written. Pernille's halves (T-0446, T-0448) and Maren's design (T-0450) land before Day 11 without the Xcode slot.
-- Freeze rows F17 (prompts) and F18 (the app route) are added to ops/plans/pywidget/alpha-day10-checklist.md s7 now, before any evidence. If F18 fails at 11-03 23:59, the app route is removed from the build (no dormant code, 2.5.19) and is 1.1's first line. Nothing here touches the Day 10 alpha rows.
+- Freeze rows F17 (prompts) and F18 (the app route) are added to ops/plans/pywidget/alpha-day10-checklist.md s7 now, before any evidence. If F18 fails at 11-03 11:59 PM, the app route is removed from the build (no dormant code, 2.5.19) and is 1.1's first line. Nothing here touches the Day 10 alpha rows.
 
 **5. App Review exposure: Low-Medium, the same as running user code, on one condition about words.**
 - 2.5.2: the code is the user's own, written or imported by them, fully viewable and editable, nothing downloaded by us; the app's stated function is to run it (L6 s8 row 1). The Home Screen route adds no new code path, only a new way to start one.
@@ -309,9 +309,9 @@ Lines: T-0446 (Pernille, prompts, Python), T-0447 (Idris, prompts, Swift), T-044
 
 Ines, CEO
 
-**Chair line, 2026-10-29 04:08 ET (Ines, T-0506): the manifest file is renamed `pywidget.json`, and the messages keep naming it.** Option (b). The file name is user-facing: it is printed in eleven of `app_manifest.py`'s messages and travels in every exported project zip, so s5's carve-out for internal names does not cover it; I wrote that carve-out and hold it to its words. Hiding the name (c) fails the user: a hand-edited file that is not valid JSON can only be fixed by someone told which file to open. Keeping it (a) also keeps a real fault: `app.json` is already the manifest of Expo and Heroku projects, so an imported one is refused (`wrong_schema`, T-0453) until the user deletes someone else's file. Cost now: Swift nothing (T-0449 is not built and no Swift reads the name); Python one constant, the messages, the test and fixture names, the schema title and bridge contract s7, under an hour for Pernille plus a review (T-0653). Nothing shipped reads `app.json`; after Day 12 the same change would also touch the Swift reader and F18's screenshots. The schema value `pywidget.app` stays: it is never shown. Item 1's "app.json" reads `pywidget.json` from here; everything else in this ruling stands.
+**Chair line, 2026-10-29 4:08 AM ET (Ines, T-0506): the manifest file is renamed `pywidget.json`, and the messages keep naming it.** Option (b). The file name is user-facing: it is printed in eleven of `app_manifest.py`'s messages and travels in every exported project zip, so s5's carve-out for internal names does not cover it; I wrote that carve-out and hold it to its words. Hiding the name (c) fails the user: a hand-edited file that is not valid JSON can only be fixed by someone told which file to open. Keeping it (a) also keeps a real fault: `app.json` is already the manifest of Expo and Heroku projects, so an imported one is refused (`wrong_schema`, T-0453) until the user deletes someone else's file. Cost now: Swift nothing (T-0449 is not built and no Swift reads the name); Python one constant, the messages, the test and fixture names, the schema title and bridge contract s7, under an hour for Pernille plus a review (T-0653). Nothing shipped reads `app.json`; after Day 12 the same change would also touch the Swift reader and F18's screenshots. The schema value `pywidget.app` stays: it is never shown. Item 1's "app.json" reads `pywidget.json` from here; everything else in this ruling stands.
 
-**Chair line, 2026-10-31 13:02 ET (Ines, T-0888, closes T-0805): dates, no scope.** Investor rule, amendment 2026-10-31 12:43. The 3.3 cut line applies at the feature freeze, Day 40 (2026-11-30), with the same test (it read Day 14, then Days 22-23). Section 4's table is history; current dates are in ops/plans/pywidget/plan.md, chair note of this time: submit Day 48 (12-08), release Day 55 (12-15). Scope in 3.1 and 3.2 does not move. The "Day 30" and "$200" reasoning in sections 1, 2, 5 and 7 records why the scope was set; it no longer drives anything.
+**Chair line, 2026-10-31 1:02 PM ET (Ines, T-0888, closes T-0805): dates, no scope.** Investor rule, amendment 2026-10-31 12:43 PM. The 3.3 cut line applies at the feature freeze, Day 40 (2026-11-30), with the same test (it read Day 14, then Days 22-23). Section 4's table is history; current dates are in ops/plans/pywidget/plan.md, chair note of this time: submit Day 48 (12-08), release Day 55 (12-15). Scope in 3.1 and 3.2 does not move. The "Day 30" and "$200" reasoning in sections 1, 2, 5 and 7 records why the scope was set; it no longer drives anything.
 {% endraw %}
 
 </div>

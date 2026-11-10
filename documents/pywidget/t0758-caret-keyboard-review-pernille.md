@@ -31,7 +31,7 @@ editor's keyboard inset. Only this test ran, through `tools/xc.sh`. Both runs we
 
 | Run | Simulator state | Path taken | Result | Log |
 |---|---|---|---|---|
-| Mutant | warm (left un-minimized by the 02:23 suite) | keyboard up after the tap | **failed**: "the editor never settled above the keyboard" | ops/runs/xcodebuild-20261030-024811.log |
+| Mutant | warm (left un-minimized by the 2:23 AM suite) | keyboard up after the tap | **failed**: "the editor never settled above the keyboard" | ops/runs/xcodebuild-20261030-024811.log |
 | Mutant | fresh boot | minimized, un-minimize step | **failed**, 3 failures: "stayed minimized", "changed the document" (app unresponsive about 33 s, snapshots retried), "never settled above the keyboard" | ops/runs/xcodebuild-20261030-025040.log |
 | Clean | fresh boot | minimized, un-minimize step | passed | ops/runs/xcodebuild-20261030-025400.log |
 
@@ -71,7 +71,7 @@ off, and EditorGateTests covers `revealSelection`. No new hole, but in the un-mi
 caret's position owes something to the edit as well as to the keyboard.
 
 **L3 (Low, info): CI runs the Simulator path, not the device path.** On a fresh boot (the full
-suite at 02:23, and my clean run) the test takes the un-minimize branch. A user's tap that raises
+suite at 2:23 AM, and my clean run) the test takes the un-minimize branch. A user's tap that raises
 the keyboard is only exercised when the Simulator happens to be warm. That is fine as long as M1's
 asserts hold on both paths. The branch is printed but not recorded in the result.
 

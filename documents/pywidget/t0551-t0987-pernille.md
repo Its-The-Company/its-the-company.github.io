@@ -21,7 +21,7 @@ turns a test red") is not met for the delegate's own line (M1), and the move to 
 From T-0549 R3-R6: (R3) delete the pre-T-0540 App Group copy once at launch whatever the status; (R4) `store()`
 writes nothing while a revocation flag set by the callback is on; (R5) cache folder out of backups; (R6) route
 `SystemLocationCore`'s authorisation callback through `LocationCall.authorizationChanged` so the test covers the
-code that runs, and test or explain `LocationCacheGuard.app`. Say what failed in the 07:41 log. Done: one test per
+code that runs, and test or explain `LocationCacheGuard.app`. Say what failed in the 7:41 AM log. Done: one test per
 item, removing the callback line turns a test red.
 
 ## Checked
@@ -34,7 +34,7 @@ item, removing the callback line turns a test red.
 3. **R5.** `isExcludedFromBackup` set on `Application Support/pywidget/device/` after every write. That folder
    holds only `location.json`, so nothing else is pulled out of backups. Test covers remade folder.
 4. **R6 explanation of `LocationCacheGuard.app`**: given in the test's comment; acceptable.
-5. **07:41 cause** is in the commit's done-note (tests in the tree before their fixes, ad580920). Accepted.
+5. **7:41 AM cause** is in the commit's done-note (tests in the tree before their fixes, ad580920). Accepted.
 6. **Green.** All five `LocationCacheFollowUpTests` passed in ops/runs/xcodebuild-20261102-093615.log (test case
    lines only). The cited ops/runs/xcodebuild-20261101-213413.log is not in the repo (<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> worktree, git-ignored);
    the done-note's evidence path does not resolve.

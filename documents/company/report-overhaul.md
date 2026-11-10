@@ -15,7 +15,7 @@ description: "Spec: an Investor, 2026-10-26 23:06, #41 c6432739086, verbatim at 
 >
 > **Narrowed 2026-10-26 23:15 by the Investor (#41 c6432847087): "Don't go overboard into this request. No need to do a design study. We want improved reports, but the main priority should always be the product (pywidget)".** So item 4's references study and directions (T-0375, T-0376) are dropped: reports keep the approved site look. Items 7 and 8 (T-0380, T-0382) and the design build (T-0381) wait until after the Day 17 submission. Items 1, 5 and 6 stay, done lean. Items 2 and 3 are done within the current look. The text below is as drafted before that narrowing.
 
-Spec: an Investor, 2026-10-26 23:06, #41 c6432739086, verbatim at the end of amendments.md. Read it, not this summary. Items 1-8 are its items 1-8. Board lines T-0370 to T-0383 are under "## Report overhaul".
+Spec: an Investor, 2026-10-26 11:06 PM, #41 c6432739086, verbatim at the end of amendments.md. Read it, not this summary. Items 1-8 are its items 1-8. Board lines T-0370 to T-0383 are under "## Report overhaul".
 
 Priority (Tenet 1): the alpha on Day 10 and submission on Day 17 come first. Odalys owns tools and the site, Maren owns design, I own the rules, cards and reports. Idris and Pernille's <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> take none of this, except one review by Pernille (C13). No overhaul unit is booked on Day 10. Days: Day 6 = 10-27 ... Day 12 = 11-02.
 
@@ -27,13 +27,13 @@ Order: items 1 and 6 on Day 6. Then design: references (Day 6), directions (Day 
 - rules/hooks/model-guard.py, if it refuses "[report] fresh-reader": a separate approve-only proposal.
 - Everything else is company-owned.
 
-## 1. Source (T-0370, T-0371; Odalys, Sonnet high, Day 6 12:00)
+## 1. Source (T-0370, T-0371; Odalys, Sonnet high, Day 6 12:00 PM)
 - Done-note format: `(Workers, commit; ws: <workstream>) Plain: <sentence>. Evidence: <path|https>. Detail: <optional>`.
 - board_tick refuses a note missing any field and names the field. Workstreams live in ops/workstreams.json (widgets, editor, Python runtime, packages, App Store, design, site, operations, research, team).
 - report_facts drops the 80-event <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span>, every short() cut and every slice. It writes ops/report_ledger.json (every finished task, by workstream) and ops/report_commits.md.
 - Done test: one test per missing field, plus mutants. The Report 7 to 8 window shows all 369 events whole. The ledger count equals the window's board ticks.
 
-## 6. Requests (T-0372 Ines Opus high, PROPOSAL-001 card by Day 6 10:00, the rest by 18:00; T-0373 Odalys Sonnet high, 18:00; T-0379 panel Odalys Opus high, Day 8, Pernille review Day 9)
+## 6. Requests (T-0372 Ines Opus high, PROPOSAL-001 card by Day 6 10:00 AM, the rest by 6:00 PM; T-0373 Odalys Sonnet high, 6:00 PM; T-0379 panel Odalys Opus high, Day 8, Pernille review Day 9)
 - Each card has seven parts: the decision; the options and what happens next; the recommendation and why; the default and when it takes effect; the deadline and what it blocks; evidence links; how to answer.
 - tools/request_card.py lints a card and writes the issue body. The Operator posts it.
 - PROPOSAL-001 goes first. It merges the $14.99 recommendation (T-0260) and the $4.99 fallback (T-0277). Then PR #71, the launch plan, and Maren's <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span> items.
@@ -41,23 +41,23 @@ Order: items 1 and 6 on Day 6. Then design: references (Day 6), directions (Day 
 - Needs-you panel: the live cards, buttons and comment box use the saved token. Without a token, readers see only the open count.
 - Done test: a fresh Haiku call can decide from the card alone. A sweep fixture test passes. The panel posts exactly the chosen answer.
 
-## 5. Writing (T-0374 by Day 6 16:00; T-0383)
+## 5. Writing (T-0374 by Day 6 4:00 PM; T-0383)
 - The CEO writes on Opus, in active voice, with numbers in context. Recurring features: the number, the bug, the before-and-after.
 - If a report would pass the 3% cap, the Investors get a request instead of a shorter report.
 - Day 6 evening is the first report under the new rules.
 
-## 2 and 3. Content and portraits (T-0377 Ines Opus high, Day 7 12:00; T-0378 Odalys Sonnet high, Day 8 18:00)
+## 2 and 3. Content and portraits (T-0377 Ines Opus high, Day 7 12:00 PM; T-0378 Odalys Sonnet high, Day 8 6:00 PM)
 - New files: ops/milestones.json, v1_scope.json, predictions.json.
 - The page gets the full section order from the spec: contents, a sticky menu, <details> sections, a new-since-last-visit marker, tap-to-define glossary terms, and portraits beside every worker named.
 - Done test: Reports 8 and 9 rebuild with every section. Zero undefined terms, zero names without a portrait. The page works with JavaScript off.
 
-## 4. Design (T-0375 Maren Sonnet high, Day 6 18:00; T-0376 Maren Opus high, Day 7 18:00; T-0381 build by Day 11 12:00)
+## 4. Design (T-0375 Maren Sonnet high, Day 6 6:00 PM; T-0376 Maren Opus high, Day 7 6:00 PM; T-0381 build by Day 11 12:00 PM)
 - References: 8 to 12, each with "what we take".
 - Directions: 2 or 3, drawn by code, on Reports 8 and 9, at 390 and 1280 px, light and dark. They go out as an approval card with the references on #41.
 - Default: the new content stays in the current look.
 - Build done test: zero contrast fails, zero images without alt, zero outside scripts, Maren's sign-off, screenshots at both widths in both modes before every report.
 
-## 7. Test and measure (T-0380, Odalys Sonnet high, Day 9 18:00)
+## 7. Test and measure (T-0380, Odalys Sonnet high, Day 9 6:00 PM)
 - tools/fresh_reader.py: a Haiku reader answers the 7 questions. Questions 2 to 4 are graded by code, the rest by a Haiku rubric. Misses are fixed before publishing.
 - Useful and Not useful buttons, and 5 metrics on Infrastructure.
 
@@ -83,7 +83,7 @@ raw_data: yes: ops/site-checks/fresh-reader/*.json, ops/report_ledger.json, repo
 notes: one bundle by the Investors' order; the archive scoring separates content from design only where the old reports allow
 ```
 
-## 8. Archive (T-0382, Odalys Sonnet medium, Days 11-12 12:00)
+## 8. Archive (T-0382, Odalys Sonnet medium, Days 11-12 12:00 PM)
 - Rebuild the generated parts for Reports 1 to 9.
 - Ticks from before the switch are shown as written, marked as such, with their workstream inferred and marked.
 - Prose stays byte-identical.

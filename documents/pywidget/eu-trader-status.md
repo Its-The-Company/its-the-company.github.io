@@ -13,8 +13,8 @@ description: "No earlier note existed in research/inbound or pywidget/docs. No o
 {% raw %}
 Wrenna, 2026-10-30. Not legal advice: this reports what Apple's pages say. Two Apple pages read, signed out, one at a time, 5 s or more apart, robots.txt followed (saved in research/inbound/apple/ with URL and date):
 
-- [P1] https://developer.apple.com/help/app-store-connect/manage-compliance-information/manage-european-union-digital-services-act-trader-requirements/ (fetched 2026-10-30 16:57 ET)
-- [P2] https://developer.apple.com/news/upcoming-requirements/ (fetched 2026-10-30 16:58 ET)
+- [P1] https://developer.apple.com/help/app-store-connect/manage-compliance-information/manage-european-union-digital-services-act-trader-requirements/ (fetched 2026-10-30 4:57 PM ET)
+- [P2] https://developer.apple.com/news/upcoming-requirements/ (fetched 2026-10-30 4:58 PM ET)
 
 No earlier note existed in research/inbound or pywidget/docs. No open issue asked this (searched open issues for trader/DSA/record on 2026-10-30).
 

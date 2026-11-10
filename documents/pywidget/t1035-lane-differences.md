@@ -11,9 +11,9 @@ description: "State: stopped at the coordinator&#x27;s order, 14:55, on branch o
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Odalys, 2026-11-02. an Investor's amendment of 11:37 and his 11:39 comment on #41: lanes have the main account's access, functionality and settings, and tasks route to each account equally. Default: a difference goes.
+Odalys, 2026-11-02. an Investor's amendment of 11:37 AM and his 11:39 AM comment on #41: lanes have the main account's access, functionality and settings, and tasks route to each account equally. Default: a difference goes.
 
-**State: stopped at the coordinator's order, 14:55, on branch `odalys/t1035-wip`. Not ready for review, nothing of T-1035's code is on main.** The full suite at befa4957 is red in 3 of 249 suites, causes not read: `memory_archive_undated_test.py`, `personal_lane_test.py` (its `test_no_running_path_names_the_lane`), `site_running_test.py` (its row on the board's open lines). Live paths still match 03e807d6 (T-1034). "Built" below means on the branch. The tick, menu, record and session-end rows were seen red against main's old tools at a10bd3f7. The land suites' T-1035 rows were not, apart from the two overrun rows.
+**State: stopped at the coordinator's order, 2:55 PM, on branch `odalys/t1035-wip`. Not ready for review, nothing of T-1035's code is on main.** The full suite at befa4957 is red in 3 of 249 suites, causes not read: `memory_archive_undated_test.py`, `personal_lane_test.py` (its `test_no_running_path_names_the_lane`), `site_running_test.py` (its row on the board's open lines). Live paths still match 03e807d6 (T-1034). "Built" below means on the branch. The tick, menu, record and session-end rows were seen red against main's old tools at a10bd3f7. The land suites' T-1035 rows were not, apart from the two overrun rows.
 
 ## The table
 
@@ -59,7 +59,7 @@ Rows 22 and 24 keep what the brief's list doesn't name; each changes no access a
 
 ## Why the land suite ran past 25 minutes
 
-It took 139 s on clean code at 12:14 and was killed past 25 minutes on the T-1035 code. Measured on a run at a6afd180 with no edits: the suite stopped at the first row that lands with a session running, in one `land-live` process that kept forking.
+It took 139 s on clean code at 12:14 PM and was killed past 25 minutes on the T-1035 code. Measured on a run at a6afd180 with no edits: the suite stopped at the first row that lands with a session running, in one `land-live` process that kept forking.
 
 The cause is one line. macOS's `/bin/bash` is 3.2, and 3.2 ends a `$(...)` at the first `)` of a `case` pattern inside it. So the line that finds the next ready branch ended early, ran the rest as text, and its result was never empty. The pass looped, logging a syntax error and dropping a marker that doesn't exist, until its 3000 s total (`LAND_LIVE_TOTAL_SECONDS`). In 61 s of that run: 1,116 syntax errors, 6,698 log lines. Every live row would do the same, and the suite's limit ends the run first. `bash -n` passes the file: only a run shows it.
 

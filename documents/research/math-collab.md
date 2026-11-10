@@ -119,7 +119,7 @@ That shape avoids servers, spending, moderation and outreach. It keeps the app u
 </div>
 
 
-Neither is held down by depth. Both are held down by need, which I could not count, and for the full idea by novelty and the rules. **I would not take either to a pitch** under the 2026-10-22 16:40 bar ("higher potential for profit and greater novelty than any of the pitches suggested already"). Pass 13's best was B-.
+Neither is held down by depth. Both are held down by need, which I could not count, and for the full idea by novelty and the rules. **I would not take either to a pitch** under the 2026-10-22 4:40 PM bar ("higher potential for profit and greater novelty than any of the pitches suggested already"). Pass 13's best was B-.
 
 ## 10. What would change my mind (asks, not changes to the scale)
 - An Investor read of r/math, r/LocalLLaMA and Lean Zulip threads asking for a problem map or an Erdős reader on iPad. These are 403 to us or need accounts.

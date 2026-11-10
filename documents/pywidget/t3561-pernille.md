@@ -131,7 +131,7 @@ touched.
 
 **F4 (Low, product call). Past the stale rule, a timeout swaps stale numbers for a notice.**
 - Files: steps.py:45-46, altitude.py:38-39, distance.py:61-62.
-- Failure case: Steps showed "9,412 steps" at 10:00. At 11:30 the pedometer times out, so the widget run draws
+- Failure case: Steps showed "9,412 steps" at 10:00 AM. At 11:30 AM the pedometer times out, so the widget run draws
   "No step count / Could not get new data." and ends `ok`. The count is gone.
 - Keeping the old tree would show the same count with the stale treatment, because the tree carries its own
   `stale_after` (state-spec s1). That may be more useful.

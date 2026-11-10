@@ -11,7 +11,7 @@ description: "Apple&#x27;s text (matrix 1b and 1c, p. 18): &quot;Apps should be 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Wrenna, market and product researcher. T-1761, 2026-11-04, started 21:24 ET (`date`). Draft only: **nothing here is sent**. The final replies are written on Fable in Days 49-54 (plan); this is their starting point. Worked from saved sources only; nothing was fetched.
+Wrenna, market and product researcher. T-1761, 2026-11-04, started 9:24 PM ET (`date`). Draft only: **nothing here is sent**. The final replies are written on Fable in Days 49-54 (plan); this is their starting point. Worked from saved sources only; nothing was fetched.
 
 ## How to read this file
 
@@ -102,7 +102,7 @@ Not drafted: the second 2.5.1 duty (name each framework integration in the descr
 | # | Claim | Status |
 |---|---|---|
 | 2.3.1-1 | Every conditional notes sentence is gated | **Backed for the process.** `pywidget/docs/release/review-notes-draft.md:53-57` (gate table) and matrix s4 (G1-G13). Whether each gate passed is a submission-day fact, not a HEAD fact |
-| 2.3.1-2 | The notes' Home Screen route (the T-0449 bracket) | **Not backed at HEAD.** No Open intent or project entity is on main: the only App Shortcuts are Run Script, Run Script with Input and Refresh Widgets (`pywidget/ios/App/Intents/RunScriptIntents.swift:207-215`), and board T-0449 is open. Gate G13's date (2026-11-03 23:59) has passed, so by its own rule the bracket and the code come out. Board **T-2311** |
+| 2.3.1-2 | The notes' Home Screen route (the T-0449 bracket) | **Not backed at HEAD.** No Open intent or project entity is on main: the only App Shortcuts are Run Script, Run Script with Input and Refresh Widgets (`pywidget/ios/App/Intents/RunScriptIntents.swift:207-215`), and board T-0449 is open. Gate G13's date (2026-11-03 11:59 PM) has passed, so by its own rule the bracket and the code come out. Board **T-2311** |
 | 2.3.1-3 | [T-0043 Simulator run + G8] The notes' ctypes and "only through our Swift functions" sentences | **Not backed at HEAD**, as 2.5.1-1 and 2.5.1-2. Board **T-2310** |
 | 2.3.1-4 | [G8: lane out of the Release extension] The notes' "no code paths" sentence | **Not backed at HEAD**, as 2.5.19-5. Board **T-2309** |
 

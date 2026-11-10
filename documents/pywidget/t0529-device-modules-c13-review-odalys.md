@@ -11,7 +11,7 @@ description: "Changes requested before TestFlight. No Critical or High findings.
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Reviewer: Odalys (not the author; Idris wrote the code). Date: 2026-10-28, 07:07 ET.
+Reviewer: Odalys (not the author; Idris wrote the code). Date: 2026-10-28, 7:07 AM ET.
 Commits reviewed: 1c327093 (clipboard, location, pedometer) and abe146d0 (files, notifications, keychain).
 The Swift files under `pywidget/ios/App/Device/`, `App/Bridge/` and `App/Info.plist` are unchanged between abe146d0
 and HEAD (`git diff --stat abe146d0 HEAD`; only an unrelated `project.yml` build-script change), so the line numbers
@@ -254,7 +254,7 @@ I found six Lows (R1 to R6). They go to Idris as T-0550 (files) and T-0551 (loca
 
 
 This matches Idris's 83/83 in `ops/runs/xcodebuild-20261028-074548.log`. One thing is unexplained. Idris also had a
-red run at 07:41 (`ops/runs/xcodebuild-20261028-074128.log`, exit 65, stopped by xc.sh on "Selected tests failed").
+red run at 7:41 AM (`ops/runs/xcodebuild-20261028-074128.log`, exit 65, stopped by xc.sh on "Selected tests failed").
 The commit does not mention it, and it is not one of his three red-before logs. I did not read the raw log
 (Worker Rule 11). The new tests depend on timing: they poll 50 x 20 ms, sleep 200 ms, and wait on 2.5 s and 6 s fake
 prompts. That makes them the first suspects for a flaky test. The question is in T-0551.
@@ -373,7 +373,7 @@ prompts. That makes them the first suspects for a flaky test. The question is in
 ### New board lines
 
 - T-0550 (Idris, P3): R1 and R2, files.
-- T-0551 (Idris, P3): R3 to R6, location, plus the 07:41 red run.
+- T-0551 (Idris, P3): R3 to R6, location, plus the 7:41 AM red run.
 {% endraw %}
 
 </div>

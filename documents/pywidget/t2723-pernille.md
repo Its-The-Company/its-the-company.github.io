@@ -42,7 +42,7 @@ Counts: High 0, Medium 0, Low 4.
 
 ## Open
 
-- Simulator: `runner_queue.py --only-testing` takes PyWidgetTests filters only, so the ExamplesUITests filter was refused. I queued `--full` instead. The runner has been silent since 2026-11-08 19:36 ET (965 min at the time), and this <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s session wrote the job to ops/lane-outbox/b3-1794242493324531000-78332.json; the job is made on main when the branch lands. No job ID exists yet, so nothing could be polled.
+- Simulator: `runner_queue.py --only-testing` takes PyWidgetTests filters only, so the ExamplesUITests filter was refused. I queued `--full` instead. The runner has been silent since 2026-11-08 7:36 PM ET (965 min at the time), and this <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s session wrote the job to ops/lane-outbox/b3-1794242493324531000-78332.json; the job is made on main when the branch lands. No job ID exists yet, so nothing could be polled.
 {% endraw %}
 
 </div>

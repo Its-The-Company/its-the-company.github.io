@@ -11,7 +11,7 @@ description: "No recorded session used these routes, as far as command text can 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Ines, 2026-10-30 18:04 ET. Exact mapping: `ops/runs-archive/t0827-held/t0834-ruling.txt` on the Mac mini (git-ignored; Commandment 42).
+Ines, 2026-10-30 6:04 PM ET. Exact mapping: `ops/runs-archive/t0827-held/t0834-ruling.txt` on the Mac mini (git-ignored; Commandment 42).
 
 Held results: 24. Each has a ruling.
 
@@ -27,7 +27,7 @@ Gate: the sign-in ask (T-0832, T-0833) also waits on T-0835 and T-0836.
 
 The Investors hear a general note on #41 tonight, then a private proposal by 2026-10-31, then one report line after the fix is applied and T-0833 passes.
 
-Follow-up, Ines, 2026-10-30 20:28 ET: two further items of the same class join the same change, so an Investor makes one trip (T-0840, then T-0841); the rest wait for T-0842, and the settings part may go through the applier now. Detail in the held folder.
+Follow-up, Ines, 2026-10-30 8:28 PM ET: two further items of the same class join the same change, so an Investor makes one trip (T-0840, then T-0841); the rest wait for T-0842, and the settings part may go through the applier now. Detail in the held folder.
 {% endraw %}
 
 </div>

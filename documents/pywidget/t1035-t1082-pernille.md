@@ -14,7 +14,7 @@ description: "The parity work is real, and most of it is right. The lane list an
 Pernille, 2026-11-02. Branch `odalys/t1035-land`, head `21ac12e7`, 9 commits on main `fb814794`, read in the worktree
 `/private/tmp/company-scratch/T-1035-odalys/wt` (`git diff fb814794..21ac12e7`, 23 files). I read the code and the tests,
 not the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line. The rule it must meet: enabled personal accounts get the main account's access, functionality and
-settings, and tasks route to each account equally (amendment 2026-11-02 11:37). Commandment 2's personal-data ban and
+settings, and tasks route to each account equally (amendment 2026-11-02 11:37 AM). Commandment 2's personal-data ban and
 Commandment 6 stand.
 
 ## Verdict: PASS with fixes
@@ -37,7 +37,7 @@ own claim for these suites.
 
 **Not confirmed by me: the full 247 of 249.** Load average was 50 to 120 at the time. I started the full run twice, and
 the session's background limit stopped both at 20 minutes, before `tests/run.sh` prints anything. The figure stands only
-on Odalys's own two full runs in `ops/runs/test-runs.jsonl` (16:09 at de18c8a5, 16:31 at 21ac12e7: red
+on Odalys's own two full runs in `ops/runs/test-runs.jsonl` (4:09 PM at de18c8a5, 4:31 PM at 21ac12e7: red
 `memory_archive_undated_test.py` and `site_running_test.py`, 1216 s). Neither of those is about this branch.
 
 No row exercises F1 to F5 below. Every suite here is single-landing, and none of them runs two lands or two drains at once.
@@ -59,7 +59,7 @@ No row exercises F1 to F5 below. Every suite here is single-landing, and none of
 | F8 | Low | `.gitattributes:3-5` | `merge=union` on memory and `log/*.md` keeps both sides of a conflicting hunk. Case: main trims a memory file (archives lines) while a lane appends to the same file. The rebase then puts the trimmed lines back, and the 4 KB cap (Commandment 13) breaks silently. The attribute also applies to the supervisor's own `pull --rebase`, not only to lanes. **Unmeasured:** my scratch-repo probe of this was refused by the security guard (see below), so this is from git's documented union behaviour. Keep union for the append-only `log/*.jsonl` only, or add a row that pins the memory case. |
 | F9 | Low | `tools/personal_tick.sh:689-692` | A branch that holds only records, from a session whose tasks left no commit, is marked ready under `QUEUE[0]`. That same task is also counted a try and its claim is given back. A later "did not land" line then names a task that was never done. Use a neutral name for a records-only marker. |
 | F10 | Low | `tools/personal_tick.sh:191`, `:349`, `:710` | `land_now` runs `land-live` in the slot's own tick, under its tick lock. That can last up to `LAND_LIVE_TOTAL_SECONDS` 3000 plus one 1500 s branch, and the slot starts no session in that time. This is not a fault, but slower than the table says. A `TERM` to the tick in that time holds the branch with a board line (`on_term`), where it used to wait. |
-| I1 | Info | `tools/personal_land.sh:37-41` | A lane can now change `tools/personal_land.sh` and `tests/`, which includes its own gate and the suite that passes it. The check that refuses owned paths is main's copy only for the land that changes it. After that the next land runs the branch's copy. A main session can do the same, and the Investors accepted the lane's security risks (2026-11-01 10:59), so this is not a fix line. It should be in the Limits paragraph in those words. |
+| I1 | Info | `tools/personal_land.sh:37-41` | A lane can now change `tools/personal_land.sh` and `tests/`, which includes its own gate and the suite that passes it. The check that refuses owned paths is main's copy only for the land that changes it. After that the next land runs the branch's copy. A main session can do the same, and the Investors accepted the lane's security risks (2026-11-01 10:59 AM), so this is not a fix line. It should be in the Limits paragraph in those words. |
 
 </div>
 
@@ -74,7 +74,7 @@ Checked and found sound:
 
 ## Guard refusal (T-0848)
 
-At about 16:55, a probe of F8 was refused by `rules/hooks/security-guard.py`: `git rebase` in a throwaway `git init` repo in my
+At about 4:55 PM, a probe of F8 was refused by `rules/hooks/security-guard.py`: `git rebase` in a throwaway `git init` repo in my
 scratch folder, read as "brings GitHub's changes in during a session". I stopped that item there and used no other route.
 F8 stays unmeasured. To log: the guard reads any `rebase` as a pull, even in a repo with no remote.
 {% endraw %}

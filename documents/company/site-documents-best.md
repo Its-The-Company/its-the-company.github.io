@@ -11,7 +11,7 @@ description: "Five rows at the top of /documents/, above Write-ups and the hunt 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Maren, 2026-10-24 ~03:00 ET. Spec only; Odalys builds it on top of her plain version (uncommitted at writing: `hunt.overall_records`, `documents.best_ideas`, `documents.best_html`). Form: hand-off, Odalys builds, I review the shots. Commandments 46 (the site) and 51 (creative approval).
+Maren, 2026-10-24 ~3:00 AM ET. Spec only; Odalys builds it on top of her plain version (uncommitted at writing: `hunt.overall_records`, `documents.best_ideas`, `documents.best_html`). Form: hand-off, Odalys builds, I review the shots. Commandments 46 (the site) and 51 (creative approval).
 
 ## 1. What it is
 
@@ -36,11 +36,11 @@ Five rows at the top of `/documents/`, above Write-ups and the hunt cards. A str
 </div>
 
 
-**Rows 15, 16, 19 changed, signed Maren, 2026-10-24 05:11 ET** (Odalys d13f2fd; code in af56a7f and c5e7035). 'Best letter' became 'newest decision'. Reason: a superseded letter is not the company's view. The Atmos planner held B in earlier rows and fell to C+ by Ines's Ruling (H61 pass 3); the best-letter rule would have shown B forever. Rank (row 13) sorts on the shown letter, so it follows. One condition, checked: a second grader's letters are never the decision. `gradebook.current` skips 'blind' rows, but only when the nearest heading says blind; my grades-maren-h59 and -h69 tables did not, and 12 of my rows parsed as 'grade'. Fixed in my files (fa7b8ad), all 12 now 'blind'. Known limit, not fixed here: a note with no title date sorts first, so its rows can never be newest.
+**Rows 15, 16, 19 changed, signed Maren, 2026-10-24 5:11 AM ET** (Odalys d13f2fd; code in af56a7f and c5e7035). 'Best letter' became 'newest decision'. Reason: a superseded letter is not the company's view. The Atmos planner held B in earlier rows and fell to C+ by Ines's Ruling (H61 pass 3); the best-letter rule would have shown B forever. Rank (row 13) sorts on the shown letter, so it follows. One condition, checked: a second grader's letters are never the decision. `gradebook.current` skips 'blind' rows, but only when the nearest heading says blind; my grades-maren-h59 and -h69 tables did not, and 12 of my rows parsed as 'grade'. Fixed in my files (fa7b8ad), all 12 now 'blind'. Known limit, not fixed here: a note with no title date sorts first, so its rows can never be newest.
 
 ## 3. Where the counted phrase comes from
 
-Measured on research/hunt/*.md at 02:50 ET: 42 tables carry an Overall column; 13 of them have a counted column (69 rows); 29 have none. The phrase is read, never written, in this order, from the idea's origin row:
+Measured on research/hunt/*.md at 2:50 AM ET: 42 tables carry an Overall column; 13 of them have a counted column (69 rows); 29 have none. The phrase is read, never written, in this order, from the idea's origin row:
 
 1. **Counted column.** The first header (lower-cased) containing `counted`, `hand-read`, `hand-counted` or `demand`. Today that matches "Counted need (hand-read, links in H39-raw)", "Counted buyer", "Displaced buyer (counted, dated)", "Asks for a tool (12 months, hand-counted)", "Demand, hand-read (links)", "Tool asks, 12 months, 6 sites (hand-read)". In the cell:
    - the first `**bold**` span, if it holds a digit (8 of 69 rows open this way, e.g. H31 "43 disputed damage claims in a year");
@@ -51,7 +51,7 @@ Measured on research/hunt/*.md at 02:50 ET: 42 tables carry an Overall column; 1
 
 Length: whole up to 110 characters; past that, cut at the last space before 110 and add "…". On today's cells, 38 of the 54 with a digit fit whole.
 
-What it gives today (top 5 from Odalys's `best_ideas`, 02:40 ET; letters as `hunt.py` read them, copied here for the spec only):
+What it gives today (top 5 from Odalys's `best_ideas`, 2:40 AM ET; letters as `hunt.py` read them, copied here for the spec only):
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 2: 3. Where the counted phrase comes from, scrolls sideways" style="--tw:802px" markdown="1">
@@ -114,7 +114,7 @@ CSS goes in the index page's own `<style>` (next to `card_css()`), not site.css:
 .best-meta{display:block;font-size:var(--fs-0);color:var(--muted);margin-top:2px}
 ```
 
-**Budget ruling, signed Maren, 2026-10-24 05:44 ET (board line 132; Odalys's test guard).** The budget is raised, and no row element is dropped: **390 px: section at most 900 px** (heading top to the bottom of the list or the tie line); **1280 px: at most 680 px**. The 700 and ~480 of my first draft (kept below for reference) were estimates, and they were wrong. I assumed 110 px a row and a one-line lead. Measured on the local build, 05:40 ET, headless Chromium, 358 px column (`/tmp` probe on `best_html`, same page as the test): section 823 px at 390 and 621 at 1280; the live page measures the same 823 (Odalys had 861 and 640 at 02:19 on that day's top 5). At 390 the rows are 113 to 179 px: the 110-character concept runs 3 lines with the chip, the phrase up to 3, the meta 1, plus 23 px of padding and rule. The lead is 4 lines (81 px).
+**Budget ruling, signed Maren, 2026-10-24 5:44 AM ET (board line 132; Odalys's test guard).** The budget is raised, and no row element is dropped: **390 px: section at most 900 px** (heading top to the bottom of the list or the tie line); **1280 px: at most 680 px**. The 700 and ~480 of my first draft (kept below for reference) were estimates, and they were wrong. I assumed 110 px a row and a one-line lead. Measured on the local build, 5:40 AM ET, headless Chromium, 358 px column (`/tmp` probe on `best_html`, same page as the test): section 823 px at 390 and 621 at 1280; the live page measures the same 823 (Odalys had 861 and 640 at 2:19 AM on that day's top 5). At 390 the rows are 113 to 179 px: the 110-character concept runs 3 lines with the chip, the phrase up to 3, the meta 1, plus 23 px of padding and rule. The lead is 4 lines (81 px).
 
 Why a phone reader is fine at 900, measured on the live page at 390x844: the section starts at y 484, under the page header and tabs. The first screen shows the heading, the lead and row 1 whole (letter, concept, counted need, grader; it ends at y 794). That is what an Investor on a phone needs above the fold: the top idea, its grade and its evidence. The section height does not change that; the header above it does. The second reason for the old number still holds at 900: the Hunt notes heading lands at y 1339 today and at most about 1416 at the 900 budget, inside the second screen (1688). At 1280x900 the section starts at y 337; rows 1 to 4 sit above the fold (they end at 846), row 5 does not. All five above the fold would need 563 px or less, which today's rows reach only with both cuts below; I do not take them now.
 
@@ -136,7 +136,7 @@ Dark mode: nothing new; every colour is a token that already flips.
 
 ## 8. Creative approval (Commandment 51)
 
-- `creative/approved.md` does not exist yet. The site's current look is the v2/v3 proposal on #29 (Investor deadline 2026-10-24 20:00 ET). So "inside the approved guide" means, today: inside the styles already on the live site and on #29, with no new decision.
+- `creative/approved.md` does not exist yet. The site's current look is the v2/v3 proposal on #29 (Investor deadline 2026-10-24 8:00 PM ET). So "inside the approved guide" means, today: inside the styles already on the live site and on #29, with no new decision.
 - This spec adds no colour, no type size, no spacing value and no image. It reuses `.kind`, `.meta`, `.muted`, the scale tokens and the line rule. No C51 question is needed for it.
 - **Not in this spec, and it needs C51:** colouring the grade chip by letter band (for example green from B+ up, amber B to C+, grey below). Colour that means "good idea" is a new decision. Until the Investors approve one, the chip stays neutral (board P3 chip line). If the company wants it, I draw two or three options as shots for the next report's questions.
 {% endraw %}

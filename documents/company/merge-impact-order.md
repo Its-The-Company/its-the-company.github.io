@@ -11,7 +11,7 @@ description: "The shares (0.5, 0.25) and the default are guesses, stated as gues
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Owner: Odalys. Source: Investor an Investor, #41 c6717736981 (00:28 2026-11-08), a standing rule in amendments.md:
+Owner: Odalys. Source: Investor an Investor, #41 c6717736981 (12:28 AM 2026-11-08), a standing rule in amendments.md:
 hand out the highest-impact process and merge fixes first. No Claude in the loop (Tenet 7).
 
 ## Before
@@ -21,7 +21,7 @@ hand out the highest-impact process and merge fixes first. No Claude in the loop
   fix that unblocks every land.
 - tools/merge_first.py order (tools/merge_queue.py, the tools/personal_land.sh retry order): merge-first lines first,
   then the file's own order. ops/merge_first.txt has no impact order.
-- At build time (2026-11-08 02:17 ET): 87 IDs on the list, 28 of them open on the board; 1 of the 28 (T-3069) has an
+- At build time (2026-11-08 2:17 AM ET): 87 IDs on the list, 28 of them open on the board; 1 of the 28 (T-3069) has an
   experiment in log/optimizations.md whose prediction is a number.
 
 ## The score
@@ -99,16 +99,16 @@ sees only past rates. n = 9, so I did not tune it to these. Per-suite seconds ar
 time terms guesses. Next: log per-suite seconds and red in tests/run.sh, then re-read at n = 20 ordered red runs. Revert: remove the
 suite_order lines in the three callers.
 
-T-3490 re-measure (Odalys, 2026-11-08 12:10 ET): the log now has 42 red rows naming 2+ suites (was 9). `suite_order.py --replay`:
+T-3490 re-measure (Odalys, 2026-11-08 12:10 PM ET): the log now has 42 red rows naming 2+ suites (was 9). `suite_order.py --replay`:
 seconds to first red, as given median 122, mean 264; ordered median 92, mean 209; better 21, same 16, worse 5. So the order
 is faster on the larger sample, and tools/suite_order.py stays in personal_land.sh, tests/run.sh and merge_queue.py. Caveats:
-per-suite seconds are still estimated from wall_s for these rows, and rows after 03:47 on 11-08 already ran in the ordered
+per-suite seconds are still estimated from wall_s for these rows, and rows after 3:47 AM on 11-08 already ran in the ordered
 order, so "as given" is not independent. tests/run.sh now writes `suite_s` (each suite's own seconds) per row; re-read when
 20 red multi-suite rows carry it.
 
 ## Corrected scores (T-3573, Odalys, 2026-11-08)
 
-Why: the 08:19 tick (ops/metrics/merge_impact.jsonl row 4) ranked T-3300 first at 702.5 lands a day from OPT-121.
+Why: the 8:19 AM tick (ops/metrics/merge_impact.jsonl row 4) ranked T-3300 first at 702.5 lands a day from OPT-121.
 Two faults: OPT-121 is T-3419's experiment and only names T-3300 in its source; and the per-hour pattern paired "at
 least 30 lower 7 days on" (retry lines) with "before 0.73" (a share of trains held), then x24. an Investor asked what
 the scores mean (#41 c6722332170). Rule now (tools/merge_first.py reading, own_task, score_map):
@@ -121,7 +121,7 @@ the scores mean (#41 c6722332170). Rule now (tools/merge_first.py reading, own_t
    the longer of D and the window (OPT-122's 12-h level drop is 30 over its 7-day window, not 60 a day). A line leaves
    the live list by a land or a prune. When the prediction counts prunes (drops, repeats, same-patches, retry-record),
    lines x 0.25 (PRUNED_SHARE). That 0.25 is a judgment: in retry_queue.jsonl 1326 lines were pruned in 44 ticks
-   (11-05 12:08 to 11-08 09:46), none of them a land; OPT-115's own text says landed attempts a day "do not fall", so
+   (11-05 12:08 PM to 11-08 9:46 AM), none of them a land; OPT-115's own text says landed attempts a day "do not fall", so
    its lands figure may be near 0. 0.25 credits only the retries a pruned line no longer spends.
 4. Each method starts with its kind. Measured: a figure read from the logs. Predicted: an experiment's own number.
    Guessed: anything with a judgment share or factor in it (the estimate shares 0.5 and 0.25, the read score 0.5, the
@@ -131,8 +131,8 @@ Today no score is measured or predicted: all 36 open lines are guessed. T-3419 (
 would score 4.3 predicted; T-3069 takes the larger of OPT-115 (10.4 guessed) and OPT-117 (6.7 predicted lands). The
 first measured numbers come with the after-reads (OPT-115 and OPT-117 by 11-09, OPT-121 and OPT-122 by 11-15).
 
-Ranking at 2026-11-08 10:18 ET (`merge_first.py rank`, live 133, xc 58; before = the code at a6b8ffb05, same inputs).
-T-3300 is ticked and no longer ranked; at 08:19 it led with 702.5.
+Ranking at 2026-11-08 10:18 AM ET (`merge_first.py rank`, live 133, xc 58; before = the code at a6b8ffb05, same inputs).
+T-3300 is ticked and no longer ranked; at 8:19 AM it led with 702.5.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: Corrected scores (T-3573, Odalys, 2026-11-08), scrolls sideways" data-n="4 5" style="--tw:933px" markdown="1">

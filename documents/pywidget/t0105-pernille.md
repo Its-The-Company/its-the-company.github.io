@@ -11,7 +11,7 @@ description: "One Medium is in the rules rather than the code: R2 gives v1 no re
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Reviewer: Pernille, 2026-11-04. Read against the L5 s15 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note of 2026-10-26 00:15 (rows R1-R3, `pywidget/docs/research/L5-interactivity.md:709-711`) and my T-0347 reservations (`pywidget/tests/fixtures/l5-reservations.json`). Question asked: can a tree from a later version, given to a v1 app, crash it or show something misleading? Judged from the diff and the tests.
+Reviewer: Pernille, 2026-11-04. Read against the L5 s15 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> note of 2026-10-26 12:15 AM (rows R1-R3, `pywidget/docs/research/L5-interactivity.md:709-711`) and my T-0347 reservations (`pywidget/tests/fixtures/l5-reservations.json`). Question asked: can a tree from a later version, given to a v1 app, crash it or show something misleading? Judged from the diff and the tests.
 
 ## Verdict
 

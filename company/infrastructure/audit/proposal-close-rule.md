@@ -12,21 +12,21 @@ description: "An audit, proposal or trial from the company's operations records 
 
 {% raw %}
 
-Draft by Odalys, 2026-10-26 01:18 ET. Not opened as an issue; the Operator opens it with the "proposal" label
+Draft by Odalys, 2026-10-26 1:18 AM ET. Not opened as an issue; the Operator opens it with the "proposal" label
 (#65 ruling, item 1). Exact diff: `log/audit/proposal-close-rule.diff` (`git apply --check` clean at 017f65f1).
 
-## Evidence (tools/audit_session.py --run 20261025-234823 --split 00:32; raw: the session stream)
+## Evidence (tools/audit_session.py --run 20261025-234823 --split 12:32 AM; raw: the session stream)
 
-- 23:48-00:32: mean 9.41 agents running, $145.8/h. 00:32-01:04: mean 1.27 agents, 33 of 33 minutes under 3, $14.1/h.
+- 11:48 PM-00:32: mean 9.41 agents running, $145.8/h. 12:32 AM-01:04: mean 1.27 agents, 33 of 33 minutes under 3, $14.1/h.
   That window is 3.70 agent-hours under the target of 8 (0.87 in the 44 minutes before it).
 - Runnable P1 lines on the board while the pool held 1-2 agents: T-0112, T-0113, T-0116, T-0118, T-0122, T-0123,
-  T-0124 (first named in the stream 00:14-00:41). Limits were not the reason: at 23:48 run.json showed five_hour
+  T-0124 (first named in the stream 12:14-12:41 AM). Limits were not the reason: at 11:48 PM run.json showed five_hour
   10% used (hold at 90%), pacing work_allowed true, $212 of the day's share left.
-- The Operator started no board task after 00:21 and at 00:32 wrote its session note to close (its words at 01:05 on #41: it read "wrap up after about 30
-  turns" as the reason). It was awake at 00:41, 00:43 and 00:46 for Investor messages and started only the two
-  tasks those messages asked for. The pool fell under 3 at 00:32; the Investors saw the stall first (#41, 01:04).
+- The Operator started no board task after 12:21 AM and at 12:32 AM wrote its session note to close (its words at 1:05 AM on #41: it read "wrap up after about 30
+  turns" as the reason). It was awake at 12:41 AM, 12:43 AM and 12:46 AM for Investor messages and started only the two
+  tasks those messages asked for. The pool fell under 3 at 12:32 AM; the Investors saw the stall first (#41, 1:04 AM).
 - The rule's unit cannot be observed. Claude Code counted 4 to 10 turns for each of the last 8 work sessions
-  (ops/usage.json runs[].turns); by 00:32 the Operator had made 151 model calls. Neither is "about 30".
+  (ops/usage.json runs[].turns); by 12:32 AM the Operator had made 151 model calls. Neither is "about 30".
 - The rule's reason (setup/OPERATIONS.md: a long conversation re-sends its history) is real but small: the
   Operator's median call cost $0.040 in calls 1-60, $0.055 in 61-120 and $0.069 after 120; the Operator thread
   was $10.09 of $113.66 (8.9%). A new session's first 10 calls cost $0.62, and a session gap costs a tick
@@ -50,7 +50,7 @@ wake until then; close when the running agents have reported.
   (`timed_out` in ops/usage.json), if a report session misses its slot because a work session ran on, or if Operator
   cost per session hour rises above $15 (now $7.9) with no rise in tasks finished per session.
 
-## Does it qualify for the 12 h auto-apply (#65, 2026-10-26 00:39)?
+## Does it qualify for the 12 h auto-apply (#65, 2026-10-26 12:39 AM)?
 
 No; it needs "approve". It is revertible by the supervisor and touches none of the listed protections, but the
 sentence it replaces is the Investors' own text: it has stood in ops/prompts/work.md since the initial commit

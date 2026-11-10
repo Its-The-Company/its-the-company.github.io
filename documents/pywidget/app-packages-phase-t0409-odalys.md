@@ -33,7 +33,7 @@ One gate hole (a symlinked folder passes `pkg_stage check`) and three small guar
 | 4 | xcodebuild-20261027-070151.log | PYWIDGET_WHEELS with the idna wheel missing | BUILD FAILED: `[2] idna: pinned wheel idna-3.20-py3-none-any.whl not in ...` |
 | 5 | xcodebuild-20261027-070214.log | certifi wheel with one byte flipped (same size) | BUILD FAILED: `[2] certifi: sha256 differs from the pin` |
 | 6 | xcodebuild-20261027-070235.log | PKG_SEED_DIR with `evilpkg -> /tmp/...` (symlinked folder) | **BUILD SUCCEEDED** (finding 1) |
-| 7 | xcodebuild-20261027-070257.log | test on the run 6 app | Simulator refused the install (MIFileManager validateSymlinksInURLDoNotEscapeURL) at 07:03:17; xcodebuild then hung; killed at 07:13:11 (exit 143, T-0388 pattern) |
+| 7 | xcodebuild-20261027-070257.log | test on the run 6 app | Simulator refused the install (MIFileManager validateSymlinksInURLDoNotEscapeURL) at 7:03:17 AM; xcodebuild then hung; killed at 7:13:11 AM (exit 143, T-0388 pattern) |
 | 8 | xcodebuild-20261027-071331.log | Seed removed; rebuild + AppPackagesLayoutTests | TEST SUCCEEDED, 3 tests, 0 failures |
 | 9 | xcodebuild-20261027-071423.log | Release, generic/platform=iOS, CODE_SIGNING_ALLOWED=NO, PKG_STAGE_DEBUG_BUILD=YES | BUILD SUCCEEDED; stage warnings: none |
 | 10 | xcodebuild-20261027-071626.log | Same as 9, at ad34570d in a throwaway worktree | BUILD SUCCEEDED; 9 notice warnings (rows and MPL text came later, T-0408) |

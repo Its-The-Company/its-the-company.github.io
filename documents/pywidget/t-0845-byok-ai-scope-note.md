@@ -26,7 +26,7 @@ The idea (an Investor, #41 c6536766504): the user's own Claude or ChatGPT key si
 
 | Source | How | Saved |
 |---|---|---|
-| App Review Guidelines | `fetch_cite.py --apple`, 2026-11-01 08:50 ET, one page | research/inbound/apple/developer.apple.com/app-store_review_guidelines-7d7ba114.html |
+| App Review Guidelines | `fetch_cite.py --apple`, 2026-11-01 8:50 AM ET, one page | research/inbound/apple/developer.apple.com/app-store_review_guidelines-7d7ba114.html |
 | Apple App privacy details | saved copy, fetched 2026-10-26 (T-0035); not re-fetched | research/inbound/apple/developer.apple.com/app-store_app-privacy-details-f876a284.html |
 | Anthropic Commercial Terms (effective Jun 17, 2025) | `tools/fetch_cite.py` (terms_guard), 2026-11-01 | research/inbound/t0845/anthropic_commercial.html |
 | Anthropic Usage Policy (page says "Effective Nov 12, 2026") | same | research/inbound/t0845/anthropic_aup.html |

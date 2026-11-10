@@ -22,7 +22,7 @@ reaches the app. The trouble is what goes into the count. The first thing that b
 one out for sitting in a queue, and T-1034 now spends that number on waits and on P1 lines for a person.
 
 Every finding below is **by reading, unreproduced**. The scenarios were not run: that effect was dropped under T-0848.
-The figures come from `ops/runs/personal-tick-a.log`, `ops/runs/personal-tick-b.log` and `git log`, read up to 13:52 ET.
+The figures come from `ops/runs/personal-tick-a.log`, `ops/runs/personal-tick-b.log` and `git log`, read up to 1:52 PM ET.
 The account state folders were not read, so try counts are worked out from the logs (see "Cool-offs today").
 
 ## Findings, by severity
@@ -37,9 +37,9 @@ Line 561's TERM trap falls through to it as well. Each uncommitted queued task g
 
 Failing cases from today's logs:
 
-- Limit cut: b3, 07:54 to 11:39, `exit 143, stopped by the limit`. All 5 queued tasks got a try at 11:40:22-23. Two of
-  them, T-0632 and T-0701, were then finished by account a at 13:48, so they were never tasks no <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> can finish.
-- Self-ended and too short to have reached them: b, 01:21:35 to 01:22:28, exit 0, 50 s, 5 turns, 8 queued, 8 tries.
+- Limit cut: b3, 7:54 AM to 11:39 AM, `exit 143, stopped by the limit`. All 5 queued tasks got a try at 11:40:22 AM-23. Two of
+  them, T-0632 and T-0701, were then finished by account a at 1:48 PM, so they were never tasks no <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> can finish.
+- Self-ended and too short to have reached them: b, 1:21:35 AM to 1:22:28 AM, exit 0, 50 s, 5 turns, 8 queued, 8 tries.
 - Today overall: 99 "left no commit" lines from 28 sessions started. About 28 of the 99 came from sessions that ended on
   a non-zero exit or the limit. The rest came from sessions that ended by themselves, so a check on the exit code alone
   won't close this.
@@ -75,7 +75,7 @@ By reading, unreproduced. `tools/personal_tick.sh:355-371`, comment at 358.
 The comment says a try with no time beside it doesn't cool. True only while a task has no stamp at all. `tries()` counts
 every line and `cool_left` takes the newest stamp, so one stamped try wakes all the old ones.
 
-Failing case, today: each of the nine tasks in "Cool-offs today" has exactly one stamped try, 13:48:48-49. With stamped
+Failing case, today: each of the nine tasks in "Cool-offs today" has exactly one stamped try, 1:48:48 PM-49. With stamped
 tries alone none of them would have reached two, so none would cool and none would have a look line. T-0309 went from
 no wait to 2 h on its first stamped try. The test row "tries from before this fix" covers no stamp only. It runs out as
 old tries are requeued, but nothing ages them out.
@@ -90,7 +90,7 @@ requeue whenever the branch waits to land.
 
 Failing case: account b is off (line 93 exits before any of this) with T in b's `done`. A requeue on main clears a's
 lists, and line 384 still skips T until b comes back on. With both on it only delays: a followed b by 39 minutes on
-today's 22-task requeue (07:49, 08:28) and by 4 minutes at 00:04.
+today's 22-task requeue (7:49 AM, 8:28 AM) and by 4 minutes at 12:04 AM.
 
 ### F5 Low: requeue leaves `looked`
 
@@ -116,9 +116,9 @@ F2. The two readers should share one rule.
 
 ## Cool-offs today
 
-**Nine tasks, all from one session.** Account a, 13:23:04 to 13:48:45, exit 0, 12 queued, 2 finished, is the only session
-that has ended on T-1034's code: it landed at 12:19, and a running tick keeps the file it started with. No tick has read
-the menu since, so neither log holds a "cooling" line yet: a's last line is "its branch waits to land" at 13:49:15,
+**Nine tasks, all from one session.** Account a, 1:23:04 PM to 1:48:45 PM, exit 0, 12 queued, 2 finished, is the only session
+that has ended on T-1034's code: it landed at 12:19 PM, and a running tick keeps the file it started with. No tick has read
+the menu since, so neither log holds a "cooling" line yet: a's last line is "its branch waits to land" at 1:49:15 PM,
 which exits at line 334.
 
 
@@ -126,15 +126,15 @@ which exits at line 334.
 
 | Task | Tries | Wait | Back at | A cut session among its tries |
 |---|---|---|---|---|
-| T-0631 | 2 | 30 min | 14:18 | yes: b3 limit, 11:40 |
-| T-0702 | 2 | 30 min | 14:18 | yes: b3 limit, 11:40 |
-| T-0769 | 3 | 1 h | 14:48 | yes: b exit 143, 00:15 |
-| T-0866 | 3 | 1 h | 14:48 | yes: b exit 143, 00:15 |
-| T-0892 | 3 | 1 h | 14:48 | yes: b exit 143, 00:15 |
-| T-0906 | 3 | 1 h | 14:48 | yes: b exit 143, 00:15 |
-| T-0511 | 3 | 1 h | 14:48 | no |
-| T-0622 | 3 | 1 h | 14:48 | no, but one try is the 50 s session in F1 |
-| T-0309 | 4 | 2 h | 15:48 | no |
+| T-0631 | 2 | 30 min | 2:18 PM | yes: b3 limit, 11:40 AM |
+| T-0702 | 2 | 30 min | 2:18 PM | yes: b3 limit, 11:40 AM |
+| T-0769 | 3 | 1 h | 2:48 PM | yes: b exit 143, 12:15 AM |
+| T-0866 | 3 | 1 h | 2:48 PM | yes: b exit 143, 12:15 AM |
+| T-0892 | 3 | 1 h | 2:48 PM | yes: b exit 143, 12:15 AM |
+| T-0906 | 3 | 1 h | 2:48 PM | yes: b exit 143, 12:15 AM |
+| T-0511 | 3 | 1 h | 2:48 PM | no |
+| T-0622 | 3 | 1 h | 2:48 PM | no, but one try is the 50 s session in F1 |
+| T-0309 | 4 | 2 h | 3:48 PM | no |
 
 </div>
 
@@ -144,19 +144,19 @@ try, T-0631 and T-0702 to two, the other seven to three or more, and the log sho
 
 Reading finding 1 narrowly, as cut sessions only: two tasks are cooling that otherwise wouldn't be (T-0631, T-0702), and
 four more got a longer wait and a look line they would not have had. Read in full, all nine came through that loop. The
-logs can't say whether the 13:03 and 13:48 sessions, both exit 0, reached them.
+logs can't say whether the 1:03 PM and 1:48 PM sessions, both exit 0, reached them.
 
 ## The Investors' question
 
-Cool-offs are not why personal-account work isn't landing. They began at 13:48 and have not yet held back a session.
+Cool-offs are not why personal-account work isn't landing. They began at 1:48 PM and have not yet held back a session.
 
 - The 28 stop commits today are real, from `git log --since='2026-11-02 00:00'`: 19 "stopped on", naming 32 IDs, and 9
   plain. Written as `--since=2026-11-02` the command returns 0, because git fills in the current clock time. They come
   from `park_one` (`tools/personal_land.sh:393`), not from the try loop.
-- Account b has started no session since 07:54. Its ticks log "no session" 14 times, 08:10 to 13:45, for a profile check.
-- Account a's 13:03 branch (T-0043, T-0449, T-0464, T-0790, T-0891) was parked at 13:22 as "did not land". Its land log
+- Account b has started no session since 7:54 AM. Its ticks log "no session" 14 times, 8:10 AM to 1:45 PM, for a profile check.
+- Account a's 1:03 PM branch (T-0043, T-0449, T-0464, T-0790, T-0891) was parked at 1:22 PM as "did not land". Its land log
   ends on Xcode exit 65. T-1051 and T-1052 say the same of a and a3.
-- 11 left commits on today's parked branches carry no task ID, all from ticks that started before 11215bdb (09:22). They
+- 11 left commits on today's parked branches carry no task ID, all from ticks that started before 11215bdb (9:22 AM). They
   can't come back through `attempts`, and neither log has ever said "carries on from" or "is told about", so M3 has not
   run outside tests. b3's limit-cut work, 578 lines in `4a0860a1`, is one of them.
 

@@ -12,7 +12,7 @@ description: "One place on Home that shows every task the company has picked up,
 
 {% raw %}
 Investor an Investor, Plan mode on #41: ask c6694237490 (3:02 PM 11-06), questions c6694425930, answers c6694984984
-(3:39 PM). Investor-requested site work, outside the 5% site share (amendment 2026-11-04 20:45). Builds on Maren's
+(3:39 PM). Investor-requested site work, outside the 5% site share (amendment 2026-11-04 8:45 PM). Builds on Maren's
 Home spec ops/site-checks/t2480/spec.md and T-3095.
 
 ## Goal

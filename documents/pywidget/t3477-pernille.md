@@ -77,7 +77,7 @@ No. Only **2 of 12** do: Steps and Altitude. See F2.
 `widgets/premade/steps.py:42-43,87-88`, `widgets/premade/altitude.py:35-37,82-83` and
 `widgets/premade/distance.py:58-60` turn every exception into "unavailable" or "off". This commit makes that path
 fire on every stalled call (`_pywidget_runtime/device.py:70-73`). Failure case: Steps is placed and drew 6,200
-steps at 09:00. At 10:00 the app comes to the front and the pedometer query stalls. The wait ends at 4.5 s, the
+steps at 9:00 AM. At 10:00 AM the app comes to the front and the pedometer query stalls. The wait ends at 4.5 s, the
 run ends `ok`, and `tree.json` is overwritten with "No step count. This device does not count steps." on an iPhone
 that does count steps. Altitude and Distance say "Location is off" while it is on. Before this commit, that run was
 interrupted, wrote nothing, and the widget kept its last good tree under its own stale rule. A blank first render

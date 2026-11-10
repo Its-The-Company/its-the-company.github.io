@@ -11,7 +11,7 @@ description: "A hang of the Company SSD costs minutes, not hours: no build freez
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Asked by an Investor in Plan mode, #41 c6684978381 (07:37 11-06); questions c6685008504; answers c6685030830 (07:40).
+Asked by an Investor in Plan mode, #41 c6684978381 (7:37 AM 11-06); questions c6685008504; answers c6685030830 (7:40 AM).
 
 ## Goal
 A hang of the Company SSD costs minutes, not hours: no build freezes on it, no frozen build keeps the Mac mini's one
@@ -28,7 +28,7 @@ Xcode slot, and the drive is brought back without a person where that is possibl
 ## Cause, as found (07:4x 11-06)
 Since T-2060 (11-05) tools/xc.sh puts DerivedData on "/Volumes/Company SSD/company-big/". When the SSD hangs, a build
 sits in open() in an uninterruptible wait; <span title="A test written in advance. If it fires, we drop the idea.">kill</span> -9 does not end it, so it holds the lock (tools/xc_lock.py) until the
-drive answers or the Mac restarts. <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">Lane</span> a's T-2044 test (pids 74475, 43632, 43663, since 02:43) is that case.
+drive answers or the Mac restarts. <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">Lane</span> a's T-2044 test (pids 74475, 43632, 43663, since 2:43 AM) is that case.
 Why the drive hangs is not known yet: T-2587 step (b) reads the system log for it.
 
 ## Steps (board lines)
@@ -44,7 +44,7 @@ Why the drive hangs is not known yet: T-2587 step (b) reads the system log for i
    timeout, logged; on failure, or if the volume comes back locked, one emergency issue. Never a read of the SSD
    itself while it hangs.
 4. **Root cause** (T-2587, Odalys, P1): T-2587 step (b), already on the board: `log show` for the disk and USB around each hang
-   (11-05 ~05:25, 11-06 ~04:00), disk sleep, Spotlight, power; the finding goes on #41.
+   (11-05 ~5:25 AM, 11-06 ~4:00 AM), disk sleep, Spotlight, power; the finding goes on #41.
 
 ## Risks
 - Internal space: build files back on a 228 GB disk with ~12 GB free. Step 1's sweep must hold the 20 GB line, or

@@ -12,16 +12,16 @@ description: "An audit, proposal or trial from the company's operations records 
 
 {% raw %}
 
-Odalys, 2026-10-25 23:03 ET. From the Investor's #41 request (c6407113363, 22:49), item 1: keep every transcript, compressed, on the Mac mini for the whole experiment, out of git and off the site.
+Odalys, 2026-10-25 11:03 PM ET. From the Investor's #41 request (c6407113363, 10:49 PM), item 1: keep every transcript, compressed, on the Mac mini for the whole experiment, out of git and off the site.
 
 ## What changed
-- Before: `tools/supervisor.sh` ran `find ops/runs -name '*.jsonl' -mtime +7 -exec rm` after every session. Nothing had been deleted yet: the oldest stream is from 2026-10-22 01:28, under 4 days old.
+- Before: `tools/supervisor.sh` ran `find ops/runs -name '*.jsonl' -mtime +7 -exec rm` after every session. Nothing had been deleted yet: the oldest stream is from 2026-10-22 1:28 AM, under 4 days old.
 - After: the same place in the tick runs `tools/runs_archive.py archive --hours 48` (env `RUNS_ARCHIVE_HOURS`). It compresses each finished, dated stream older than 48 h into `ops/runs-archive/<name>.jsonl.gz` and deletes nothing. `meter.jsonl` is never touched, because every tick rewrites it.
 - Before the original is removed, each file is checked four ways: it is not open in any process (lsof; a running session holds its stream open); it is compressed to a `.tmp`, fsynced, read back and SHA-256-compared; its size and mtime have not changed since the start; and the archive takes the original's mtime, so MB per day can still be measured.
 - Method: zstd when the binary is on PATH, otherwise gzip. zstd is not installed on this Mac and I did not install it (no entry in log/software.md). The reasons are below.
 - Out of git: `.gitignore` gains `ops/runs-archive/`. Off the site: no file under tools/site reads ops/runs or ops/runs-archive.
 - Readers: `governor.find_run` and `governor.read_text` follow a record's old `ops/runs/<name>.jsonl` path to its `.gz` or `.zst`, and `governor.read_run` uses them. `ops_metrics.stream_path` resolves through `find_run`. Tests: tests/runs_archive_test.py 22/0; supervisor 118/0 (5 new checks); governor and ops_metrics green.
-- No files were moved by hand tonight. The dry run (22:54) would compress 94 streams, 192.6 MB. The first real pass happens at the next session's end.
+- No files were moved by hand tonight. The dry run (10:54 PM) would compress 94 streams, 192.6 MB. The first real pass happens at the next session's end.
 
 ## Measured figures
 1. ops/runs now: 599 MiB by `du -sh` (613,088 KiB), 427 entries. Of these, 146 streams are .jsonl (610.9 MB decimal, one of them the session running now), 141 are .json results (0.7 MB), 138 are .log files (8.8 MB), and there is 1 other file.
@@ -35,10 +35,10 @@ Odalys, 2026-10-25 23:03 ET. From the Investor's #41 request (c6407113363, 22:49
 
 | Day | Streams | Raw MB | gzip MB |
 |---|---|---|---|
-| 2026-10-22 (from 01:28) | 45 | 32.7 | 15.4 |
+| 2026-10-22 (from 1:28 AM) | 45 | 32.7 | 15.4 |
 | 2026-10-23 | 51 | 161.1 | 85.0 |
 | 2026-10-24 | 33 | 319.5 | 175.4 |
-| 2026-10-25 (to 23:00) | 18 | 97.4 | 37.7 (finished only) |
+| 2026-10-25 (to 11:00 PM) | 18 | 97.4 | 37.7 (finished only) |
 
 </div>
 

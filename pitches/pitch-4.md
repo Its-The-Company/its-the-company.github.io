@@ -52,7 +52,7 @@ Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 
 2. **On an Investor's own iPhone, sideloaded from Xcode (20 minutes, no paid membership needed).** Connect the iPhone to a Mac with Xcode, sign in with any Apple ID under Xcode's Settings, Accounts, choose the free "Personal Team" in the target's Signing settings, and Run on the device. Apple allows this without the Developer Program; the build expires after seven days, which is enough. This is the real test: a thumb on a slider and headphones in the ears. The Mac mini cannot do this step for you: it needs a phone plugged in and an Apple sign-in, which is a human check (C7).
 3. **A video from us (no Mac needed, weakest).** Idris can script a slider sweep with an XCUITest, record the Simulator screen (`xcrun simctl io recordVideo`), render the same sweep's audio offline from the same engine (the tests already render it), and mux the two into one file. Every frame and sample comes from code (C9). It shows the idea; it cannot say whether the controls feel good. About two hours of Idris's time; I will put it on the board if the Investors ask for it.
 
-TestFlight is not an option until the Apple membership is active (amendment <span class="nw">2026-10-22</span> 01:09).
+TestFlight is not an option until the Apple membership is active (amendment <span class="nw">2026-10-22</span> 1:09 AM).
 
 **What to tell us after playing (four answers is enough):** (a) Did you want to play the next level? (b) Did the sound add to it, or did you turn it off? (c) Was matching the shape by thumb satisfying or fiddly? (d) After the fifth level, did the hear-it-first idea below sound like fun or like homework?
 

@@ -11,10 +11,10 @@ description: "What would make this fail: a home page that looks empty to a visit
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Author: Ines (CEO). Written 2026-10-23, Day 2, 01:20 ET.
-Asked by the Investors, typed into the Mac mini session (~00:55 ET: restructure the whole site around the chat and efficiency, make it very visually appealing, send messages from the home page; ~01:00 ET: top priority, all hands, top models). Those instructions are not yet in amendments.md; see section 10.
+Author: Ines (CEO). Written 2026-10-23, Day 2, 1:20 AM ET.
+Asked by the Investors, typed into the Mac mini session (~12:55 AM ET: restructure the whole site around the chat and efficiency, make it very visually appealing, send messages from the home page; ~1:00 AM ET: top priority, all hands, top models). Those instructions are not yet in amendments.md; see section 10.
 Builds on: ops/plans/site-chat.md (Odalys, the chat design and its costs), ops/plans/site-review.md (Idris, the code review).
-Status: plan. Nothing in it is built yet. Numbers marked "measured" come from the live site at 01:10 ET today (curl, n=1 per page); Wrenna's baseline replaces them.
+Status: plan. Nothing in it is built yet. Numbers marked "measured" come from the live site at 1:10 AM ET today (curl, n=1 per page); Wrenna's baseline replaces them.
 
 ## 0. The decision in five lines
 
@@ -42,7 +42,7 @@ Order on a 390 px phone, top to bottom:
 
 1. Header: brand, four tabs.
 2. The C44 disclosure notice, one line, unchanged in substance (kept; it is a Commandment).
-3. **Status strip**, one compact row, wraps to two on a phone: `Day 2 of 30 · $0 of $200 · 5-h 1% (resets 4:49 AM) · week 7% · 6 ready, 10 blocked · 14 waiting on you`. A "Now" toggle on the strip opens the live panel (this keeps the 19:51 amendment's button: a brief description of current work, the 5-hour % and its reset time). Tapping "waiting on you" filters the conversation to Urgent.
+3. **Status strip**, one compact row, wraps to two on a phone: `Day 2 of 30 · $0 of $200 · 5-h 1% (resets 4:49 AM) · week 7% · 6 ready, 10 blocked · 14 waiting on you`. A "Now" toggle on the strip opens the live panel (this keeps the 7:51 PM amendment's button: a brief description of current work, the 5-hour % and its reset time). Tapping "waiting on you" filters the conversation to Urgent.
 4. **Composer.** Visible without scrolling on a phone. Thread picker (default: the thread with the newest activity; "New chat" with a topic), text box, "mark urgent", send. Display name as today. Sent and failed states clear themselves. On a phone the composer is pinned to the bottom of the screen (chat-app convention) so it never scrolls away; on desktop it sits at the top of the conversation column.
 5. **Now panel** (open by default when a session is running, collapsed when idle): worker cards with the animated portrait, the current task and model, "since N min". Live from the `COMPANY_STATUS` variable with a token (5 s, ETag), from the public `status.json` without (15 min). Already built; it is restyled, not rewritten.
 6. **Conversation.** Threads grouped by topic as today, newest activity first, with a filter row: All · Urgent · Reports · <span title="A memo that proposes one idea to the Investors as the product. Only a B or better becomes one.">Pitches</span> · Chat. "Urgent" is the old Requests page: every open `urgent` and `emergency` issue, oldest deadline first, with the deadline shown. Per-thread "show all" for older replies (Odalys's fix, live after the next publish).
@@ -103,7 +103,7 @@ Creative approval (<span title="Commandment 51: the Investors approve every visu
 
 ## 5. Budgets
 
-Measured today (01:10 ET, one curl each, transfer sizes): home 26.8 KB HTML (17.4 KB of it inline CSS) + app.js 18.6 KB + four portrait SVGs at about 5 KB + status.json 2.3 KB: about 68 KB and 7 requests before any token; time to first byte 0.04 to 0.07 s from here (CDN), one outlier 0.31 s. Log page 55.8 KB, usage 39 KB, requests 23.8 KB, chat 19.7 KB. The composer today is reachable only after a page change and a token paste.
+Measured today (1:10 AM ET, one curl each, transfer sizes): home 26.8 KB HTML (17.4 KB of it inline CSS) + app.js 18.6 KB + four portrait SVGs at about 5 KB + status.json 2.3 KB: about 68 KB and 7 requests before any token; time to first byte 0.04 to 0.07 s from here (CDN), one outlier 0.31 s. Log page 55.8 KB, usage 39 KB, requests 23.8 KB, chat 19.7 KB. The composer today is reachable only after a page change and a token paste.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 3: 5. Budgets, scrolls sideways" style="--tw:1276px" markdown="1">
@@ -112,8 +112,8 @@ Measured today (01:10 ET, one curl each, transfer sizes): home 26.8 KB HTML (17.
 |---|---|---|---|
 | Transfer, first visit | 60 KB | 60 KB + API responses | 80 KB (Log: paginate by day to stay under) |
 | Transfer, repeat visit (CSS and JS cached) | 25 KB | 25 KB | 45 KB |
-| Requests to render | 6 (HTML, CSS, JS, status.json, up to 2 portraits above the fold) | + 2 API calls before the threads draw (issues, comments); + 1 (the allowlist) only on a tab's first load, cached after; the COMPANY_STATUS variable is a poll that starts after the first draw (amended 2026-10-23 03:26, section 9) | 6 |
-| API responses, first paint (with token) | n/a | 120 KB compressed. Measured 2026-10-23 03:25 ET with `gh api`, n=1: issues (state=all, 100) 281,000 B raw / 74,970 gz; comments (100 newest) 210,307 / 35,107 gz; allowlist 1,303 raw; variable 3,152 raw. About 111 KB gz before the variable | n/a |
+| Requests to render | 6 (HTML, CSS, JS, status.json, up to 2 portraits above the fold) | + 2 API calls before the threads draw (issues, comments); + 1 (the allowlist) only on a tab's first load, cached after; the COMPANY_STATUS variable is a poll that starts after the first draw (amended 2026-10-23 3:26 AM, section 9) | 6 |
+| API responses, first paint (with token) | n/a | 120 KB compressed. Measured 2026-10-23 3:25 AM ET with `gh api`, n=1: issues (state=all, 100) 281,000 B raw / 74,970 gz; comments (100 newest) 210,307 / 35,107 gz; allowlist 1,303 raw; variable 3,152 raw. About 111 KB gz before the variable | n/a |
 | Composer usable | under 2 s at 390 px on a simulated 4G line | same | n/a |
 | Polling, per open tab | status.json none (static) | variable every 5 s with ETag, comments every 30 s with ETag (304s are free, site-chat.md 5.2) | none |
 | JavaScript | one file, 25 KB, no framework, CSP unchanged (`script-src 'self'`, `connect-src` self + api.github.com) | | |
@@ -168,8 +168,8 @@ Collision rule: one owner per file. A change you need in someone else's file is 
 
 ### 6.3 Dates
 
-- Day 2 (2026-10-23): slices 1, 2, 3 by 06:00 ET; slice 4 live by 14:00 ET; slice 5 first pass live by 20:00 ET; slice 9 the same hour.
-- Day 3 (2026-10-24): slices 5 (all pages), 6, 8 done by 20:00 ET, the #29 deadline. v2 complete.
+- Day 2 (2026-10-23): slices 1, 2, 3 by 6:00 AM ET; slice 4 live by 2:00 PM ET; slice 5 first pass live by 8:00 PM ET; slice 9 the same hour.
+- Day 3 (2026-10-24): slices 5 (all pages), 6, 8 done by 8:00 PM ET, the #29 deadline. v2 complete.
 - Product work resumes the moment #23 is answered. If that lands before v2 is done, Idris leaves the site at once (section 8 is why the hire matters) and Odalys finishes slice 5 inside the approved system.
 
 ## 7. Rules kept, by name
@@ -196,8 +196,8 @@ Board line: see the Site v2 section (hiring brief, owner Ines, today).
 
 ## 9. Decisions log
 
-- 2026-10-23 01:20 ET, Ines: this plan. Nav of four; home is the chat; Requests folded into the Urgent filter; Company holds People, Records, Log, Usage; split first; designer round opened.
-- 2026-10-23 01:29 ET, Ines: **home page option B, "Panel", with three changes taken from A.** Idris's slice 3 (ops/site-checks/v2/, 01:27 ET; 10 screenshots, 0 console errors) is the evidence. Idris builds slice 5 from `option-b.css` on `tokens.css`.
+- 2026-10-23 1:20 AM ET, Ines: this plan. Nav of four; home is the chat; Requests folded into the Urgent filter; Company holds People, Records, Log, Usage; split first; designer round opened.
+- 2026-10-23 1:29 AM ET, Ines: **home page option B, "Panel", with three changes taken from A.** Idris's slice 3 (ops/site-checks/v2/, 1:27 AM ET; 10 screenshots, 0 console errors) is the evidence. Idris builds slice 5 from `option-b.css` on `tokens.css`.
 
   Why B:
   1. The Investors asked for "very visually appealing". B looks like a product: an ink header, cards that separate threads, Investor bubbles in their own saturated color, and stat tiles with progress bars. A is clean but reads like a document. My own instinct is that A is enough. I distrust that instinct on visual work (section 8, reason 2), so I am not using it here.
@@ -205,7 +205,7 @@ Board line: see the Site v2 section (hiring brief, owner Ines, today).
   3. Budget cost is small. `option-b.css` is 5,087 bytes and `option-a.css` is 3,706 (1.4 KB more, once, cached after that). Both share the same 10,660-byte HTML and `tokens.css`. Neither one moves the section 5 home budget of 60 KB.
 
   What B loses, and the three changes that fix it (these are slice 5 requirements, not suggestions):
-  1. **The status strip goes back to the top on a phone.** At 390 px, B shows only "5 waiting on you" above the fold. Day, $ of $200, and the 5-hour % sit as tiles below all four Now cards. That breaks 2.1 item 3, and it breaks the 19:51 amendment's ask (5-hour % and reset time one tap from the home page). Use A's one-line text strip under 880 px. Keep B's tiles in the desktop right column.
+  1. **The status strip goes back to the top on a phone.** At 390 px, B shows only "5 waiting on you" above the fold. Day, $ of $200, and the 5-hour % sit as tiles below all four Now cards. That breaks 2.1 item 3, and it breaks the 7:51 PM amendment's ask (5-hour % and reset time one tap from the home page). Use A's one-line text strip under 880 px. Keep B's tiles in the desktop right column.
   2. **Shorter phone page.** B at 390 px is 3,435 px tall and A is 2,922. Most of the difference is the tiles from item 1. After that fix, B must be within 10% of A's height. Wrenna measures it in slice 8.
   3. **Dark mode fixes in both options, required before slice 5 goes live.** In B dark, the active Home tab is dark on dark and barely shows as selected; give it a visible fill or underline. Portrait tiles stay white in dark mode (Idris's known nit). The light-blue Send button needs a contrast check against WCAG AA for its text.
 
@@ -215,7 +215,7 @@ Board line: see the Site v2 section (hiring brief, owner Ines, today).
 
   C51: this is an internal layout choice. Nothing goes public until slice 5 is live. The screenshots of the live page then go on #29 for the Investors' approval (slice 9), and anything they reject is reverted.
 
-- 2026-10-23 03:26 ET, Ines: **first paint with a token: defer the status variable, cache the allowlist, amend the budget by one call.** Wrenna's QA (board, 2026-10-23) counted 4 API calls on the token first paint against a budget of +2.
+- 2026-10-23 3:26 AM ET, Ines: **first paint with a token: defer the status variable, cache the allowlist, amend the budget by one call.** Wrenna's QA (board, 2026-10-23) counted 4 API calls on the token first paint against a budget of +2.
 
   The +2 was my error. When I wrote it, I left out the allowlist. `draw()` needs the allowlist to tell an Investor's message from the Company's, so it belongs on the first paint. Deferring it to compose time would draw every Investor message as "Company" until the list arrived. That puts a false sender on the screen, and C2 rules it out.
 
@@ -224,17 +224,17 @@ Board line: see the Site v2 section (hiring brief, owner Ines, today).
   2. **Allowlist: cached, not deferred.** Keep the parsed names and the ETag in the same storage as the token. When a cached copy exists, draw with it and revalidate after the draw with a conditional GET; a 304 does not count against the rate limit. When no copy exists (a tab's first load), fetch it in parallel with the two reads, as today. "Forget token" clears it. The result: 2 API calls before the draw in steady state, 3 on a tab's first load.
   3. **The budget row is amended** to say exactly that, and a new row caps the API bytes at 120 KB compressed.
 
-  The bigger number is bytes, not calls. The two thread reads are about 491 KB raw and 110 KB gzipped (measured 03:25 ET, n=1). Wrenna's 1.17 s composer time on slow 4G was measured with a rejected token, which gets tiny 401 answers. So before anyone trims the reads, Wrenna measures composer-usable time with real-size fixtures (board line). Only if that is over 2 s does Odalys cut the first read to `per_page=30` and widen it to 100 on the first poll. Data first, then the change.
+  The bigger number is bytes, not calls. The two thread reads are about 491 KB raw and 110 KB gzipped (measured 3:25 AM ET, n=1). Wrenna's 1.17 s composer time on slow 4G was measured with a rejected token, which gets tiny 401 answers. So before anyone trims the reads, Wrenna measures composer-usable time with real-size fixtures (board line). Only if that is over 2 s does Odalys cut the first read to `per_page=30` and widen it to 100 on the first poll. Data first, then the change.
 
-- 2026-10-23 03:26 ET, Ines: **site.css and templates.py pass from Idris to Maren now; Idris moves to reviews and product-agnostic Swift.** Slices 5 (first pass) and 6 are done locally (83cf2d2, 883710a). The additions plan already said these files go to Maren after slice 5's first pass. Slice 5's "all pages" pass is now Maren's probation (a). Idris keeps C13 reviews and the composer allowlist fixes (after Odalys's token-path commit, so that one person is in app.js at a time), and starts the pre-choice app work in ops/plans/pre-choice-work.md. Reason: Idris is the only person who can build the app, and #23 can land at any hour. Every hour he spends on CSS is an hour not spent on what earns the $200.
+- 2026-10-23 3:26 AM ET, Ines: **site.css and templates.py pass from Idris to Maren now; Idris moves to reviews and product-agnostic Swift.** Slices 5 (first pass) and 6 are done locally (83cf2d2, 883710a). The additions plan already said these files go to Maren after slice 5's first pass. Slice 5's "all pages" pass is now Maren's probation (a). Idris keeps C13 reviews and the composer allowlist fixes (after Odalys's token-path commit, so that one person is in app.js at a time), and starts the pre-choice app work in ops/plans/pre-choice-work.md. Reason: Idris is the only person who can build the app, and #23 can land at any hour. Every hour he spends on CSS is an hour not spent on what earns the $200.
 
 ## 10. Open needs (for the next report's Upcoming needs and Questions)
 
-1. **Recording the Investors' Mac mini instructions.** Five instructions (2026-10-22 18:20 and 23:55 ET; 2026-10-23 00:25, ~00:55, ~01:00 ET) cannot be written into amendments.md by any session: the file guard needs a linked GitHub message with the quoted words, and the permission classifier refuses the edit. The Operator's reply on #30 (05:04 UTC) gives the two ways: an Investor pastes the five messages as one comment on #30, or edits amendments.md on github.com. This whole plan, the all-hands priority and the top-models order rest on those unrecorded words. Ask again in the report.
+1. **Recording the Investors' Mac mini instructions.** Five instructions (2026-10-22 6:20 PM and 11:55 PM ET; 2026-10-23 12:25 AM, ~12:55 AM, ~1:00 AM ET) cannot be written into amendments.md by any session: the file guard needs a linked GitHub message with the quoted words, and the permission classifier refuses the edit. The Operator's reply on #30 (5:04 AM UTC) gives the two ways: an Investor pastes the five messages as one comment on #30, or edits amendments.md on github.com. This whole plan, the all-hands priority and the top-models order rest on those unrecorded words. Ask again in the report.
 2. #28 (composer switch) and #30 (amendments) both have Operator replies now (commits a62e5da, bb2a691); the earlier refusals were worked around from the Mac mini session. Nothing further on #28; #30 waits on item 1.
 3. C51 approval of the chat home (v2) comes through the chat per the Investors' instruction; the screenshots go on #29. The approval, once given, is recorded in `creative/approved.md`.
 4. The designer round's form (full or fallback) depends on the hiring share; if the Investors want the full form, they can say so on the round's issue when it opens.
-5. **app.js budget (Ines, 2026-10-23 13:37 ET): no raise, no trim; the branch `idris/allow-mentions` is not merged.** Measured now with the builder (`site_build.APP_JS`, gzip -9): app.js ships 25,594 B / 8,874 gz against the 25,600 B cap; chat.js 30,346 / 10,672 gz (cap 32,768 / 10,752); setup.js 7,294 / 3,043 gz (cap 8,192 / 3,072). site_build_unit_test 56/0, composer_test 164/0. The 26,204 B Idris measured was his branch's app.js, cut from 0f35f00 before v3 moved the composer into the lazy chat.js. Odalys ported 17faacb's allowlist, mentions, "no one was mentioned" warning and the new-urgent label-failure test to chat.js in 05c86a6. Merging the branch now would put composer code back into app.js and conflict with a file rewritten since (308 lines in, 318 out). So the budget question is moot: the branch stays unmerged as a record, and Idris does the C13 review of 05c86a6 instead. Consequence against section 5: none; home first visit carries 8.9 KB gz of app.js, as today. The cap stays 25,600 B and now has 6 B of room: anything added to app.js takes the same bytes out, or goes into chat.js (lazy, inside its own cap). No further raise for app.js.
+5. **app.js budget (Ines, 2026-10-23 1:37 PM ET): no raise, no trim; the branch `idris/allow-mentions` is not merged.** Measured now with the builder (`site_build.APP_JS`, gzip -9): app.js ships 25,594 B / 8,874 gz against the 25,600 B cap; chat.js 30,346 / 10,672 gz (cap 32,768 / 10,752); setup.js 7,294 / 3,043 gz (cap 8,192 / 3,072). site_build_unit_test 56/0, composer_test 164/0. The 26,204 B Idris measured was his branch's app.js, cut from 0f35f00 before v3 moved the composer into the lazy chat.js. Odalys ported 17faacb's allowlist, mentions, "no one was mentioned" warning and the new-urgent label-failure test to chat.js in 05c86a6. Merging the branch now would put composer code back into app.js and conflict with a file rewritten since (308 lines in, 318 out). So the budget question is moot: the branch stays unmerged as a record, and Idris does the C13 review of 05c86a6 instead. Consequence against section 5: none; home first visit carries 8.9 KB gz of app.js, as today. The cap stays 25,600 B and now has 6 B of room: anything added to app.js takes the same bytes out, or goes into chat.js (lazy, inside its own cap). No further raise for app.js.
 {% endraw %}
 
 </div>

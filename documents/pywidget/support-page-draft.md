@@ -39,7 +39,7 @@ Source: app guide 4.3 (added in `ed65b220`) and 3.2; ADR-007 (`docs/decisions/AD
 
 Not with new data, at this build. A widget-side Python mode is built but switched off in the code (`WidgetLane.extensionFlag` is `false` in `ios/Shared/LaneGuard.swift`), and it can only be forced on in a Debug build. Do not rely on it. Whether iOS reloads a widget about every 15 to 60 minutes is Apple's call [unverified].
 
-Source: `ios/Shared/LaneGuard.swift`; ADR-007 (<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> lines 2026-10-29 08:03 onward); app guide 4.3 and 9.1.
+Source: `ios/Shared/LaneGuard.swift`; ADR-007 (<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> lines 2026-10-29 8:03 AM onward); app guide 4.3 and 9.1.
 
 ### 4. What is the little clock in the corner of my widget?
 

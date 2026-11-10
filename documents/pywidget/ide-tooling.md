@@ -35,7 +35,7 @@ Board line: "[research] Odalys, P1, in-app Python tooling read". Brief section 2
 - Harness: `pywidget/tests/tooling/bench_tooling.py`. Each row runs in a fresh child interpreter. Inside the child, `subprocess.Popen`, `os.fork`, `os.posix_spawn*`, `os.system`, `os.popen`, `os.exec*`, `os.spawnv*` are replaced by functions that raise and count. Timing runs and memory runs are separate (tracemalloc slows these tools about 2-3x).
 - 500-line file: stdlib `wave.py` (513 lines). Stdlib corpus: 652 `.py` files, 296,703 lines (stdlib minus tests, idle tests, site-packages). "big4": `argparse.py`, `typing.py`, `subprocess.py`, `asyncio/base_events.py`, 8,785 lines.
 - jedi probes appended at the end of `wave.py`: `os.path.`, an instance of a class in the file (`w.get`), `asyncio.`, `argparse.ArgumentParser().add_`, `'a,b'.split(',')[0].st`, a bare name. Warm = new `Script` object after a one-line edit, median of 5 per probe, then median over probes.
-- Sample: 2 full harness runs (19:31 and 19:34 ET), results in `pywidget/tests/tooling/results/host-py39.json` and `host-py39-run2.json`. Machine shared with other agents' work during both runs. Both values shown as run1 / run2.
+- Sample: 2 full harness runs (7:31 PM and 7:34 PM ET), results in `pywidget/tests/tooling/results/host-py39.json` and `host-py39-run2.json`. Machine shared with other agents' work during both runs. Both values shown as run1 / run2.
 
 ## Numbers (host, Python 3.9.6, n = 2 runs)
 

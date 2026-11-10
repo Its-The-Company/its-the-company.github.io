@@ -11,7 +11,7 @@ description: "Option A. No automatic fallback. As built in 799cb51c4 and 4818b80
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Ines, 2026-11-04 00:39 ET. Question from T-1894 (Odalys; pywidget/docs/reviews/t1116-pernille.md M2 (d)): when the MacBook runner's check-in is stale, should `tools/xc_route.py route` run the Xcode test here on the Mac mini, under the machine lock, instead of queuing it?
+Ines, 2026-11-04 12:39 AM ET. Question from T-1894 (Odalys; pywidget/docs/reviews/t1116-pernille.md M2 (d)): when the MacBook runner's check-in is stale, should `tools/xc_route.py route` run the Xcode test here on the Mac mini, under the machine lock, instead of queuing it?
 
 ## Decision
 
@@ -20,9 +20,9 @@ Option A. No automatic fallback. As built in 799cb51c4 and 4818b80d8: `route` wa
 ## Why
 
 1. The Investors asked for it in plain words. an Investor, #41 c6589434651: "make sure the macbook runner is being leveraged for Xcode checks so we don't use more storage." Commandment 61 puts Simulator runs on the MacBook. An automatic fallback would quietly undo both on every night the MacBook sleeps.
-2. This machine can't carry it. At 00:37 tonight the load average was 963 and free disk was 10.9 GB, down from 11.6 GB in eight minutes. Xcode has been stopped by disk here before (T-1001). B would put DerivedData back on the Mac mini for whole nights, which is when the runner goes quiet.
+2. This machine can't carry it. At 12:37 AM tonight the load average was 963 and free disk was 10.9 GB, down from 11.6 GB in eight minutes. Xcode has been stopped by disk here before (T-1001). B would put DerivedData back on the Mac mini for whole nights, which is when the runner goes quiet.
 3. A stale check-in is not proof the runner is down. A failed results push looks the same, and then B runs the test twice, once on each machine.
-4. The cost of A is real but bounded. Over 7 days, 5 silent gaps over 40 min, 34 h in all, nearly all of it in two gaps (19 h from 11-01 13:32, 12 h from 10-30 06:05). Those were the MacBook off or asleep, not short blips. A fallback would not shorten them; it would move a night of runs onto the weaker machine.
+4. The cost of A is real but bounded. Over 7 days, 5 silent gaps over 40 min, 34 h in all, nearly all of it in two gaps (19 h from 11-01 1:32 PM, 12 h from 10-30 6:05 AM). Those were the MacBook off or asleep, not short blips. A fallback would not shorten them; it would move a night of runs onto the weaker machine.
 5. C (queue and run here both) doubles the cost on every job. Rejected.
 
 ## How workers use XC_LOCAL=1 while the runner is silent

@@ -28,7 +28,7 @@ T-0860's finding read this as fixed_size above a ProgressView. It is wider than 
 - A crash stops the extension, so every placed widget of the app stops drawing until WidgetKit starts it again.
 
 Second class, found by the sweep: numbers the validator accepts. 1e308 in padding crashed the extension. `line_limit(10**30)`
-and `fraction_digits=10**30` trap in `Int()`, and `fraction_digits=-1` traps in SwiftUI (22 fatal errors, run 08:21). Width,
+and `fraction_digits=10**30` trap in `Int()`, and `fraction_digits=-1` traps in SwiftUI (22 fatal errors, run 8:21 AM). Width,
 font and spacing at 1e308 blanked the widget. min_width above max_width logged SwiftUI's invalid frame fault.
 
 ## The fix
@@ -45,7 +45,7 @@ width. No crash and no ellipsis. API.md says to use `suffix`.
 
 ## Evidence
 
-Failing first: 3 runs on the unfixed renderer, 63 cases: 07:39, 07:53, 08:21 (ops/runs/xcodebuild-20261031-*.log).
+Failing first: 3 runs on the unfixed renderer, 63 cases: 7:39 AM, 7:53 AM, 8:21 AM (ops/runs/xcodebuild-20261031-*.log).
 After the fix, all 0 fatal errors and 0 crash reports:
 
 
@@ -53,16 +53,16 @@ After the fix, all 0 fatal errors and 0 crash reports:
 
 | Run | What | Result |
 |---|---|---|
-| 08:31 | 45 cases, small and medium | 0 fatal; 12 frame faults on one case, fixed after with frameMaximum |
-| 08:58 | 10 cases, one of each class, small, medium, large and the 3 Lock Screen families | passed |
-| 09:13 | testA, the 12 design trees at Home Screen families | passed |
-| 09:29 | live text first in accessoryInline, with fixed_size and suffix | passed; the shot reads "20 hr 38 min left" |
-| 09:31 | a live text case, small and medium, after the inline line | passed |
+| 8:31 AM | 45 cases, small and medium | 0 fatal; 12 frame faults on one case, fixed after with frameMaximum |
+| 8:58 AM | 10 cases, one of each class, small, medium, large and the 3 Lock Screen families | passed |
+| 9:13 AM | testA, the 12 design trees at Home Screen families | passed |
+| 9:29 AM | live text first in accessoryInline, with fixed_size and suffix | passed; the shot reads "20 hr 38 min left" |
+| 9:31 AM | a live text case, small and medium, after the inline line | passed |
 
 </div>
 
 
-Unit tests: TreeRulesTests 9, app suites 56 (08:54). Host 2,210 on 3.9 and 3.13. Shots: ops/site-checks/t0867-extension/.
+Unit tests: TreeRulesTests 9, app suites 56 (8:54 AM). Host 2,210 on 3.9 and 3.13. Shots: ops/site-checks/t0867-extension/.
 widgetkit_check.sh now fails a run on any extension fatal error or crash report. Passed is not the same as drawn: reports
 alone undercount, 7 reports for 13 crashes in one run.
 
@@ -85,7 +85,7 @@ Verdict: approved, one finding fixed here, one check open.
 - **Low, for Pernille:** LIBRARY_VERSION stays 0.3.0 with a new public keyword, and `generator.version` will not tell the two
   apart.
 - **Open, device check:** whether a live date inside an interpolated Text keeps ticking is unproven. A Simulator shot cannot
-  say: the 20 hour timer with no suffix read the same twice, 4 s apart (09:38), so `testHSuffixTextKeepsTicking` skips when its
+  say: the 20 hour timer with no suffix read the same twice, 4 s apart (9:38 AM), so `testHSuffixTextKeepsTicking` skips when its
   control stands still. Day progress small depends on this.
 - Not re-run by me: the extension reads of clocks-widest and progress at T-0860's small rows. The snapshot tests that read
   them through ImageRenderer are green with this renderer. Maren's read of T-0860 is still hers.

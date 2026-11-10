@@ -11,7 +11,7 @@ description: "Gap that matters: I cannot say which packages ship cp315 iOS wheel
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Odalys, 2026-10-25 19:25 ET. Research and pipeline design only; nothing built, no Xcode or Simulator run (Idris holds them).
+Odalys, 2026-10-25 7:25 PM ET. Research and pipeline design only; nothing built, no Xcode or Simulator run (Idris holds them).
 Feeds: the package-policy ADR (owner to be named by Ines), L3 (Idris), L6 (Wrenna). Wrenna's L6 is the authority on App Review; every App Review statement here defers to it.
 
 ## 0. Method and what I could not read
@@ -27,7 +27,7 @@ Feeds: the package-policy ADR (owner to be named by Ines), L3 (Idris), L6 (Wrenn
 | github.com/beeware/mobile-forge README | WebFetch | read |
 | pillow.readthedocs.io 11.3.0 release notes, platform-support page | WebFetch | read |
 | pypi.anaconda.org/beeware/simple (BeeWare's iOS wheel index) | script through tools/terms_guard.fetch; HEAD for sizes | 53 projects listed; 13 probed |
-| pypi.org JSON API and /simple/ | terms_guard | **refused**: robots.txt `Disallow: /pypi/*/json`, `Disallow: /simple/` (live copy 2026-10-25 19:18) |
+| pypi.org JSON API and /simple/ | terms_guard | **refused**: robots.txt `Disallow: /pypi/*/json`, `Disallow: /simple/` (live copy 2026-10-25 7:18 PM) |
 | pypi.org/project/<name>/ HTML | terms_guard | robots allows it, but the reply is a JavaScript "Client Challenge". That is a human check (Commandment 11). Not bypassed. |
 | Wheel files (METADATA, license files) | terms_guard | **refused**: anaconda redirects downloads to an S3 host whose terms are unread (P2 gate) |
 | developer.apple.com (guidelines, ODR, MetricKit docs) | n/a | **refused by company <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G2a</span>**: Apple's terms forbid scripted reads. A person must read these pages. |
@@ -110,7 +110,7 @@ Payload estimate (compressed, device slice): numpy 5.6 MB + Pillow ~1 MB + matpl
 - **Online pip from PyPI: medium-to-high risk, and the main L6 question.** Packages are third-party code that changes what the user's scripts can do, though not what the app does. The defence is (a) source-only, viewable and editable; (b) user-initiated, never automatic; (c) never native; (d) no access to native APIs beyond what the user's own script already has. That last point touches 4.7.2 ("may not be given access to native platform APIs without Apple's prior permission", per the brief), so a person must read it against the current text.
 - Precedents: Pyto and a-Shell are said to offer pure-Python pip on the App Store; Pythonista does not, officially. Unverified this session; L6 should confirm.
 
-- Update after reading CORRECTIONS.md (Wrenna, 19:23): the 2.5.2 exception covers "Educational apps designed to teach, develop, or allow students to test executable code", "in limited circumstances". DPLA 3.3.1(B) also applies. Guideline 2.5.19 (2026-10-16) bars "hidden, dormant, or undocumented features".
+- Update after reading CORRECTIONS.md (Wrenna, 7:23 PM): the 2.5.2 exception covers "Educational apps designed to teach, develop, or allow students to test executable code", "in limited circumstances". DPLA 3.3.1(B) also applies. Guideline 2.5.19 (2026-10-16) bars "hidden, dormant, or undocumented features".
 
 **Verdict:** ship v1 with offline "Install from file" (pure-Python only, enforced). Develop online pip in a branch or debug-only build target, **compiled out of release builds**. Because of 2.5.19, it must not ship dormant behind a flag. It enters a release only after Wrenna's L6 ruling, in an update whose App Review notes describe it. If L6 rules against it, the fallback is a web page where users download wheels themselves and bring them in through Files.
 

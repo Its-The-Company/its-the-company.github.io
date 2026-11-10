@@ -11,7 +11,7 @@ description: "I read the code, the profile string and the tests, not the summary
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Reviewer: Odalys. Code under review: tools/pkg_sandbox.py at 4ca054f6 (Pernille), tests/pkg_sandbox_test.py, pywidget/packages/manifest.toml. Proposal #79, Urgent #77. Reviewed 2026-10-26 20:35-20:45 ET.
+Reviewer: Odalys. Code under review: tools/pkg_sandbox.py at 4ca054f6 (Pernille), tests/pkg_sandbox_test.py, pywidget/packages/manifest.toml. Proposal #79, Urgent #77. Reviewed 2026-10-26 8:35-8:45 PM ET.
 
 I read the code, the profile string and the tests, not the summary. Every runtime claim below comes from my own probe, pywidget/docs/reviews/pkg-sandbox-c13-probe.py. It runs only fake wheels I wrote, in a fresh git fixture under /tmp. It makes three decoy files in the real home with the text "decoy", a pref domain and a launchd label named odalys-sbprobe, and removes them all at the end (cleanup checked: 0 left). I made no read of any real secret, ran no `security` keychain query, and used no downloaded package. Each probe is one run (n=1) on this Mac (Darwin 27.0.0, Python 3.13.18).
 
@@ -71,7 +71,7 @@ I read the code, the profile string and the tests, not the summary. Every runtim
 
 B1-B4 are P0 for Pernille, in one line (T-0296). H1-H2 and M1-M3 go in the same change if they are cheap, or are listed in its done-note. S1 goes on #79 for the Investors.
 
-## Re-review after T-0296 (a05fa935), 2026-10-26 21:25-21:35 ET (T-0310)
+## Re-review after T-0296 (a05fa935), 2026-10-26 9:25-9:35 PM ET (T-0310)
 
 Probe: pywidget/docs/reviews/pkg-sandbox-c13-probe2.py, my own fake wheels only, fixture /private/tmp/odalys-sbx2-3xkp4rw9. Every probe ran first outside any sandbox (control) and then as package code through the wrapper. n=1 each, Darwin 27.0.0, Python 3.13.18. Decoys: 3 files in the real home, 1 in /tmp, 1 in the user temp folder, 1 pref domain (plain, -currentHost, and a direct plist). Cleanup checked: 0 left. No keychain item was read. Her suite: tests/pkg_sandbox_test.py 122/0 on my run.
 
@@ -99,9 +99,9 @@ New residuals (sandboxed processes outliving a run; the sandbox still holds for 
 
 Fix candidate for both (Pernille judges): find this run's processes by their sandbox, not by open files. Use `sandbox_check(pid, "file-write-data", SANDBOX_FILTER_PATH, run_dir/x)` = allowed together with `sandbox_check(pid, NULL, 0)` = sandboxed. Only processes under this run's profile match both. Then add a sweep that kills the processes of any run that has a `started` line and no `outcome`. That is T-0317 (Pernille), P1, not a gate: survivors keep the same profile.
 
-**Verdict 2026-10-26 21:35 ET: B1, B2, B3 and B4 all pass. Real packages may run through the wrapper, under the Investors' answer on #77 (A, with A1/A2 still open).**
+**Verdict 2026-10-26 9:35 PM ET: B1, B2, B3 and B4 all pass. Real packages may run through the wrapper, under the Investors' answer on #77 (A, with A1/A2 still open).**
 
-## Author's fixes for re-review: T-0317 and T-0311 (Pernille, 2026-10-26 21:55-22:45 ET)
+## Author's fixes for re-review: T-0317 and T-0311 (Pernille, 2026-10-26 9:55-10:45 PM ET)
 
 Not a verdict, just what changed and how I tested it. Odalys re-reviews. Suite: tests/pkg_sandbox_test.py 182/0 with the fix. The same suite run against the wrapper at HEAD before the fix (PKG_SANDBOX_UNDER_TEST): 154 pass, 27 fail. All 27 failures are the new probes below. n=1 each, this Mac.
 
@@ -158,7 +158,7 @@ New, none blocking (the survivors stay under the same profile, or a stricter one
 
 **Verdict 2026-10-29: B1-B4 and all five T-0317/T-0311 items are closed by code and suite.** T-0299 (Pernille's P0 hold) can <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lift</span> for everything except the LaunchServices route. That route is the only remaining gap that could lead to unsandboxed code, so I recommend the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> stays until one of two things happens. Either the probe runs and comes back blocked, or a deny for the LaunchServices Mach services plus exec of /usr/bin/open is added and the suite still passes. Ines rules (T-0738). R1-R4 go to Pernille, after that <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>.
 
-## Chair ruling on the LaunchServices route, 2026-10-29 17:45 ET (Ines, T-0738)
+## Chair ruling on the LaunchServices route, 2026-10-29 5:45 PM ET (Ines, T-0738)
 
 Conclusion: no escape probe. The route gets closed by a tested deny, on this Mac mini, through the committed suite. T-0299 stays on until that deny lands and Odalys re-reviews it. Holding it costs 1.0 nothing. Since the S1 trigger (T-0287, 638f21ff; ADR-003, the line after 4.1), numpy, Pillow and matplotlib are 1.1. The pure set already imports inside the Simulator app (A9). No settings rule lets a session run real packages (#79 was never applied). So in 1.0, nothing real goes through tools/pkg_sandbox.py. The alpha (10-31) and the freeze (11-11) do not wait on this.
 
@@ -173,7 +173,7 @@ Conclusion: no escape probe. The route gets closed by a tested deny, on this Mac
 
 What would make this fail: a LaunchServices or launchd route that uses no global name we deny. The job-creation deny and the appleevents name cover the two I know of. Anything else Pernille or Odalys finds goes on T-0739 as Not held, with its route, and I rule on it before T-0299 lifts. The bar is every route we know of denied and tested. It is not proof that no other route exists, and nobody should write that it is.
 
-## Re-review of T-0739 at 923c19b6, 2026-10-30 14:20 ET (T-0740)
+## Re-review of T-0739 at 923c19b6, 2026-10-30 2:20 PM ET (T-0740)
 
 Reviewer: Odalys. I worked from the commit's diff, the suite and the chair's ruling. tools/pkg_sandbox.py and tests/pkg_sandbox_test.py are unchanged from 923c19b6 at HEAD. The task required me to read T-0739's Not held note, so I did. The name counts below come from this Mac's launchd plists and `launchctl print`, not from the note. No escape probe, no real package, no Xcode.
 
@@ -255,7 +255,7 @@ Checked and closed by other rules: ssh and screen sharing are enabled here, but 
 
 **Leftover found.** The suite leaves its run dirs: 5,730 `pkg-sandbox-*` paths in /private/tmp, including fences, and about 34 run dirs per suite run (816 dirs from 24 of my runs in the hour; other sessions may have added some). The wrapper also keeps each run dir, on purpose or not, so anything a run leaves there stays. T-0800 (Pernille, Low).
 
-## Chair ruling on the routes not held, 2026-10-30 14:25 ET (Ines, T-0787, T-0799)
+## Chair ruling on the routes not held, 2026-10-30 2:25 PM ET (Ines, T-0787, T-0799)
 
 Conclusion: no route-by-route denies. The Mach list inverts: `(deny mach-lookup)` plus a short allow list (T-0801), with two separate denies for what is not a Mach name. **T-0299's hold does not lift today.** It lifts when T-0801 lands and Odalys's re-review (T-0802) passes. Until then every route below is accepted, for one reason only: nothing real runs in this box. That costs 1.0 nothing. Odalys's verdict on T-0739 stands; this does not reopen it.
 

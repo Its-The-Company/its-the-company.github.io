@@ -11,7 +11,7 @@ description: "One page, with diagrams, of how a task goes from the to-do list to
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Written for the Investors (an Investor asked on #41, 2026-11-03 23:26). Every box and arrow below was checked against
+Written for the Investors (an Investor asked on #41, 2026-11-03 11:26 PM). Every box and arrow below was checked against
 the code on 2026-11-04; the reference after each one (`file:line`) is where it lives. The diagrams are plain text
 typed by hand, so they follow Commandment 9. The numbers in the last section come from the supervisor's own log and
 git, rebuilt by `tools/flow_costs.py` (run it to check them).
@@ -184,7 +184,7 @@ in line (`tools/xc.sh:32-40`; the main session also sends at most one Xcode task
 
 The MacBook runner is a small program on an Investor's MacBook that runs only commands from a fixed list
 (`tools/jobs.py:3-5`). It saves disk on the Mac mini (T-1116, an Investor #41). Its record so far: 4 jobs, 1 refused
-(2026-10-26), 2 failed, 1 passed (2026-11-03 20:15 job, 2,506 s, about 42 minutes).
+(2026-10-26), 2 failed, 1 passed (2026-11-03 8:15 PM job, 2,506 s, about 42 minutes).
 
 **Landing** is the one way a lane's work reaches main (`tools/personal_land.sh:2`). The supervisor runs it every tick,
 before the governor decides (`tools/supervisor.sh:271-272`):
@@ -234,7 +234,7 @@ it starts. When a session ends and work remains, it starts the next tick at once
  13  CHAIN: start the next tick now if work remains                        supervisor.sh:687
 ```
 
-**Reports** are sessions the governor starts itself: the evening report after 18:00 and the morning report when due
+**Reports** are sessions the governor starts itself: the evening report after 6:00 PM and the morning report when due
 (`tools/governor.py:1657`, `:1665`). They are exempt from the daily share but not from a plan limit.
 
 ## 7. Investor messages and requests
@@ -254,7 +254,7 @@ it starts. When a session ends and work remains, it starts the next tick at once
 
 ## 8. Where time is lost, ranked by measured cost
 
-Window: 2026-11-01 00:00 to 2026-11-04 00:10 ET (about 72 hours), from `ops/runs/supervisor.log` and git, through
+Window: 2026-11-01 12:00 AM to 2026-11-04 12:10 AM ET (about 72 hours), from `ops/runs/supervisor.log` and git, through
 `python3 tools/flow_costs.py --since 2026-11-01`. "Main-account time" means time the company's own subscription ran
 no session while work was waiting; that is allowance the week can't get back.
 
@@ -276,13 +276,13 @@ no session while work was waiting; that is allowance the week can't get back.
    already on main, so a red is found after landing. Fix: send the runner the unit tests first (134 to 189 s
    locally) and the long UI run only once a day.
 5. **<span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">Parked</span> lane attempts pile up.** 182 parked branches are kept in git (each one a lane attempt kept for a retry
-   or for a person). The stale-line check, which runs after every session, looks through them; it took 121 s in one timed run while lanes were busy (n=1), though the log puts it under 14 s at the 21:58 tick on 2026-11-03, so its true cost is not yet known. Fix: delete
+   or for a person). The stale-line check, which runs after every session, looks through them; it took 121 s in one timed run while lanes were busy (n=1), though the log puts it under 14 s at the 9:58 PM tick on 2026-11-03, so its true cost is not yet known. Fix: delete
    parked branches whose task is done and archived, after a 7-day hold.
 6. **Pushes collide with GitHub.** 9 of 72 sessions needed a second push because GitHub had moved; 1 push failed;
    3 ticks failed on sync. Small: about a minute each. Fix: none needed now; watch it.
 
 Not counted as lost: 7 gaps of 30 minutes or more on 2026-11-01 and 11-02 were the governor waiting on purpose
-(today's share spent, or holding for an inbox session). The amendment of 2026-11-03 19:16 <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> that wait while the
+(today's share spent, or holding for an inbox session). The amendment of 2026-11-03 7:16 PM <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> that wait while the
 week is behind.
 
 Each of items 1 to 5 is now a line on the board, to be done in this order.

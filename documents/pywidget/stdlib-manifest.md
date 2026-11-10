@@ -11,7 +11,7 @@ description: "Runtime: CPython 3.15.1 from pywidget/ios/Vendor/python/Python.xcf
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Pernille, 2026-10-25. Board line "[build] Pernille, P1, Python runtime engineer probation", part (b). **Status: ruled (Ines, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> ruling 2026-10-25 21:09 ET, below): 29 strips accepted; `profiling.sampling` stripped, not all of `profiling`.** Sections 1-4 are the proposal as the chair read it, unchanged. Section 5 is manifest v2, which carries out the ruling, and the format the build phase reads.
+Pernille, 2026-10-25. Board line "[build] Pernille, P1, Python runtime engineer probation", part (b). **Status: ruled (Ines, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> ruling 2026-10-25 9:09 PM ET, below): 29 strips accepted; `profiling.sampling` stripped, not all of `profiling`.** Sections 1-4 are the proposal as the chair read it, unchanged. Section 5 is manifest v2, which carries out the ruling, and the format the build phase reads.
 
 - Data: `pywidget/runtime/stdlib-manifest.json` (every module, shipped or stripped, with its sizes and the reason for each strip).
 - <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">Generator</span>: `pywidget/runtime/stdlib_manifest.py` (`--check` fails when the file no longer matches the vendored tree).
@@ -75,7 +75,7 @@ Seeded mutation: moving `socket` from shipped to stripped fails both checks (`ht
 - **Enforcement.** This manifest only describes the cut. The build phase must apply it (`install_stdlib.sh` today strips only the spike list) and fail on the L12 denylist; that is Idris's Xcode work, and the generator's `stripped` list is the input it should read.
 - Not measured: a device build, App Store thinning, code-signature overhead per framework.
 
-## Chair ruling (Ines), 2026-10-25 21:09 ET
+## Chair ruling (Ines), 2026-10-25 9:09 PM ET
 
 Form: Pernille's proposal is the first view; my own read of the vendored 3.15.1 tree (`ios/Vendor/python/Python.xcframework/lib/python3.15/`) is the second, made before ruling. Idris applies it in the build phase.
 
@@ -91,7 +91,7 @@ Follow-ups (board lines):
 - Pernille: manifest v2 for this ruling: generator supports a subpackage strip (`profiling.sampling`), `import_breaks` pinned with the test in item 5, a host probe that `import cProfile` and `cProfile.runctx("sum(range(10))", {}, {})` work on the shipped set (the 3.15 wrapper is a static check; host 3.9/3.13 cProfile differs), sizes re-measured; status `ruled` with a pointer to this section.
 - Idris (build phase): `ios/scripts/install_stdlib.sh` reads the manifest's `stripped` list instead of its own spike list; the build fails if any L12 denylist name (`_ctypes`, `ctypes`, `_ctypes_test`, `_remote_debugging`, `_test*`, `xx*`) is present in the built `.app` (python/ zip or Frameworks/); bundle sizes checked against the manifest within 5%.
 
-## 5. Manifest v2 (Pernille, 2026-10-25 21:17 ET)
+## 5. Manifest v2 (Pernille, 2026-10-25 9:17 PM ET)
 
 v2 carries out the ruling. 30 names stripped: the 29 above plus `profiling.sampling`. The generator refuses to write (exit 1) if the cut breaks anything beyond the pinned allowlist.
 

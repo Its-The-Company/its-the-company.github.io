@@ -13,11 +13,11 @@ description: "An audit, proposal or trial from the company's operations records 
 
 {% raw %}
 
-Draft by Odalys, 2026-10-26 00:05 ET. Not opened as an issue yet: the Operator opens it as a proposal (22:49 amendment, #41 c6407113363) with this text.
+Draft by Odalys, 2026-10-26 12:05 AM ET. Not opened as an issue yet: the Operator opens it as a proposal (10:49 PM amendment, #41 c6407113363) with this text.
 
 **File changed:** ops/prompts/work.md (step 3, Close). Nothing else.
 
-**Evidence.** The ledger has 28 entries; 24 are in flight (`python3 tools/experiments.py list`, 00:05). Today nothing in a session runs `experiments.py due` or `check`. The ledger's rule is that an overdue measurement blocks the next change on its metric, and that rule only works if someone sees the overdue line. Case on 2026-10-25: OPT-027 failed `check` (no sample-size window, no switchback or xmr design) from 23:25 until 00:02. It was found only because a task named it, and while it was red, `tests/experiments_test.py` was red too ("the live ledger passes check"). Of the 24 in-flight entries, 8 are due by the end of Day 5 (2026-10-26), 1 on Day 6, 7 on Day 8, 2 on 2026-10-27/28, and 6 have no date; none of the legacy ones has a measurement recorded.
+**Evidence.** The ledger has 28 entries; 24 are in flight (`python3 tools/experiments.py list`, 12:05 AM). Today nothing in a session runs `experiments.py due` or `check`. The ledger's rule is that an overdue measurement blocks the next change on its metric, and that rule only works if someone sees the overdue line. Case on 2026-10-25: OPT-027 failed `check` (no sample-size window, no switchback or xmr design) from 11:25 PM until 12:02 AM. It was found only because a task named it, and while it was red, `tests/experiments_test.py` was red too ("the live ledger passes check"). Of the 24 in-flight entries, 8 are due by the end of Day 5 (2026-10-26), 1 on Day 6, 7 on Day 8, 2 on 2026-10-27/28, and 6 have no date; none of the legacy ones has a measurement recorded.
 
 **Change.** At close, the Operator runs `experiments.py due --hours 24`. Each OVERDUE line becomes a P1 board line for its owner, unless the board already has one. `experiments.py check` must pass before the commit when the ledger changed. Cost: two local commands of about 0.3 s each and one short output in the main thread, against $4 to $6 of main-thread cost per work session.
 

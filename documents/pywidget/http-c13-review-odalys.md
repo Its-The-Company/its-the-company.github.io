@@ -11,7 +11,7 @@ description: "Not ready for the alpha build until H1 is fixed. H1 is a leak of a
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Reviewer: Odalys. Written 2026-10-28 02:41 ET. Commit under review: 18310b6a (T-0394, Pernille), read from
+Reviewer: Odalys. Written 2026-10-28 2:41 AM ET. Commit under review: 18310b6a (T-0394, Pernille), read from
 the code alone; the author's reasoning was not given to me.
 
 Files read at HEAD (0870bd1e):
@@ -213,7 +213,7 @@ The probes open only 127.0.0.1 and localhost sockets.
 
 ## Re-review of 709fbdf8 (T-0524), 2026-10-28
 
-Reviewer: Odalys. Written 2026-10-28 03:00 ET. Commit under review: 709fbdf8 (Pernille: T-0520, T-0521, T-0522),
+Reviewer: Odalys. Written 2026-10-28 3:00 AM ET. Commit under review: 709fbdf8 (Pernille: T-0520, T-0521, T-0522),
 read from the diff and the code at HEAD 39c1492d alone. New probe: `http-c13-odalys/probe_rr.py` (R1 to R6,
 local sockets only, throwaway CA). Every probe below was run on 3.9.6 and 3.13.18; both gave the same result.
 

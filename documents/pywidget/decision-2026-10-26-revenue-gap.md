@@ -11,7 +11,7 @@ description: "On organic reach, the $200 target is unlikely at any price. My mos
 <div class="doc-body" markdown="1">
 
 {% raw %}
-- Ines (CEO, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>), 2026-10-26, written 20:16-20:21 ET (`date`). Board line T-0260. Commandment 30: this memo is the record.
+- Ines (CEO, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>), 2026-10-26, written 8:16-8:21 PM ET (`date`). Board line T-0260. Commandment 30: this memo is the record.
 - Read: pywidget/docs/release/launch-plan-draft.md and press-kit-draft.md (Wrenna, c8b9fd2c), PROPOSAL-001-v1-paid-tier.md, research/L11-economics.md, decisions/ADR-001-mvp-and-phasing.md (3.1, 3.3, 4, Revised), ADR-004 ruling 3 (themes), IDE spec s5 item 7 (Pro rows).
 - What the company decides here: what it builds and what it recommends. What stays with the Investors: the price, the Pro contents that depart from founder decision 2.1 (PROPOSAL-001), creative approval (<span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>), and every post (C10).
 
@@ -36,7 +36,7 @@ L11 labels both inputs ASSUMPTION (s3, s7): 5-35 downloads a day, and 1-4% of do
 | Input | Pushes it down | Pushes it up | My planning value |
 |---|---|---|---|
 | Downloads a day, 5-35 | The anchors are rivals' **lifetime** averages, and those rivals have ratings we will not have: a-Shell 561, Carnets 321, Juno 1,141 (L11 s2). A new app with 0 ratings, and with search barred to us for checking our own rank, likely sits in the lower half. | Launch-day posts, which L11 leaves out by design (C10) | 5-20 a day organic, about 150 in the window |
-| Buyers per download, 1-4% | (a) The one counted willingness to pay is $9.99 **for running Python** (Pythonista, 1,529 ratings, L11 s2). We give that away free. Pro sells extras, so the counted buyer is not counted for Pro. (b) Window lag: a download on Day 27 may buy on Day 35. (c) Price fatigue in the <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span>'s own reviews: Pyto 67 of 158 low reviews on price, Juno 14 of 50, Widgy 76 of 500 (L7). | Pyto sells numpy, pandas and matplotlib behind a purchase and keeps 1,001 ratings. Widgetsmith sells cosmetics at $19.99 a year at scale (L11 s2). The live preview of Pro premades on the user's own data (state-spec chair ruling 2026-10-25 20:08) is the strongest honest pull we have. | **2%** (range 1-3%). 4% only if Pro holds the packages |
+| Buyers per download, 1-4% | (a) The one counted willingness to pay is $9.99 **for running Python** (Pythonista, 1,529 ratings, L11 s2). We give that away free. Pro sells extras, so the counted buyer is not counted for Pro. (b) Window lag: a download on Day 27 may buy on Day 35. (c) Price fatigue in the <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span>'s own reviews: Pyto 67 of 158 low reviews on price, Juno 14 of 50, Widgy 76 of 500 (L7). | Pyto sells numpy, pandas and matplotlib behind a purchase and keeps 1,001 ratings. Widgetsmith sells cosmetics at $19.99 a year at scale (L11 s2). The live preview of Pro premades on the user's own data (state-spec chair ruling 2026-10-25 8:08 PM) is the strongest honest pull we have. | **2%** (range 1-3%). 4% only if Pro holds the packages |
 
 </div>
 
@@ -134,7 +134,7 @@ At $14.99 and 30%, at my planning conversion of 2% (range 1-3%):
 - T-0274 Wrenna, P2: update launch-plan-draft s4-s5 to this memo ($14.99 row first, the 2% planning value, asks 1, 3, 4), and the store copy's <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G6</span> sentences for packages off while widgets ship.
 - Done with this memo (Ines): PROPOSAL-001 s5 and s7 carry a dated note pointing here; ops/questions.md "For the next report" has one line.
 
-## 8. Fallback Pro content when widgets are cut and the native packages fail (added 2026-10-26 20:32 ET, `date`; T-0277)
+## 8. Fallback Pro content when widgets are cut and the native packages fail (added 2026-10-26 8:32 PM ET, `date`; T-0277)
 
 Wrenna found the hole (T-0274, 4c85c8ae; store-page-draft s6b case C): section 3 moves the packages into Pro if widgets are cut on Day 14, but if no native package passes ADR-003's Day 10 gate, that move has nothing to carry, and Pro is empty. ADR-001's risk table already said so ("Widget engine misses Day 14: Pro has no v1 content under 2.1"). It is ruled here, before either date.
 
@@ -167,11 +167,11 @@ Why C3 ships no purchase rather than a thin one. A Pro screen that unlocks nothi
 
 Checked against single public Apple pages, signed out, under the #64 ruling; each saved with its URL and date in research/inbound/apple/. Rows R1-R5 in [CORRECTIONS.md](corrections.html) (T-0337 section). Nothing above this note has been edited.
 
-1. **Small Business Program rate, from when** (s4 item 1): **corrected.** "Your proceeds will be adjusted fifteen (15) days after the end of the fiscal calendar month in which your enrollment is approved." https://developer.apple.com/app-store/small-business-program/, fetched 2026-11-02 23:49 ET. Not back-dated, but it does not start at enrollment either; the lag is about two to six weeks.
-2. **Family Sharing can't be turned off** (s3): **[apple-page], confirmed.** "Keep in mind that once you turn on Family Sharing for an In-App Purchases in App Store Connect, you can't turn it off." https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/turn-on-family-sharing-for-in-app-purchases, fetched 2026-11-02 23:50 ET.
-3. **requestReview limits and HIG timing** (s3): **open**, not fetched; the day cap stopped it at 23:51 ET on 2026-11-02.
-4. **IAP review needs the Paid Apps Agreement** (s5): **open, still [recall].** The page read doesn't mention the agreement. It does say: "The first consumable, non-consumable, auto-renewable subscription, and non-renewing subscription In-App Purchase of each type must be submitted with a new app version." https://developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/submit-an-in-app-purchase, fetched 2026-11-02 23:50 ET.
-5. **Featuring nomination** (s4 item 4): **[apple-page], confirmed**, with the lead time now a number. "Tip: To ensure operational efficiency, we recommend submitting plans as early as possible, with a minimum lead time of 3 weeks." https://developer.apple.com/help/app-store-connect/manage-featuring-nominations/nominate-your-app-for-featuring, fetched 2026-11-02 23:50 ET.
+1. **Small Business Program rate, from when** (s4 item 1): **corrected.** "Your proceeds will be adjusted fifteen (15) days after the end of the fiscal calendar month in which your enrollment is approved." https://developer.apple.com/app-store/small-business-program/, fetched 2026-11-02 11:49 PM ET. Not back-dated, but it does not start at enrollment either; the lag is about two to six weeks.
+2. **Family Sharing can't be turned off** (s3): **[apple-page], confirmed.** "Keep in mind that once you turn on Family Sharing for an In-App Purchases in App Store Connect, you can't turn it off." https://developer.apple.com/help/app-store-connect/configure-in-app-purchase-settings/turn-on-family-sharing-for-in-app-purchases, fetched 2026-11-02 11:50 PM ET.
+3. **requestReview limits and HIG timing** (s3): **open**, not fetched; the day cap stopped it at 11:51 PM ET on 2026-11-02.
+4. **IAP review needs the Paid Apps Agreement** (s5): **open, still [recall].** The page read doesn't mention the agreement. It does say: "The first consumable, non-consumable, auto-renewable subscription, and non-renewing subscription In-App Purchase of each type must be submitted with a new app version." https://developer.apple.com/help/app-store-connect/manage-submissions-to-app-review/submit-an-in-app-purchase, fetched 2026-11-02 11:50 PM ET.
+5. **Featuring nomination** (s4 item 4): **[apple-page], confirmed**, with the lead time now a number. "Tip: To ensure operational efficiency, we recommend submitting plans as early as possible, with a minimum lead time of 3 weeks." https://developer.apple.com/help/app-store-connect/manage-featuring-nominations/nominate-your-app-for-featuring, fetched 2026-11-02 11:50 PM ET.
 {% endraw %}
 
 </div>

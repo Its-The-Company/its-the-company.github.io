@@ -13,7 +13,7 @@ description: "An audit, proposal or trial from the company's operations records 
 
 {% raw %}
 
-Tree: clean worktree `/tmp/sweep-2013` at HEAD a298a637, made 20:13 ET, removed at the end. No Xcode run (Idris held the slot).
+Tree: clean worktree `/tmp/sweep-2013` at HEAD a298a637, made 8:13 PM ET, removed at the end. No Xcode run (Idris held the slot).
 Runs, all in the foreground:
 
 
@@ -21,9 +21,9 @@ Runs, all in the foreground:
 
 | Run | Started | Result |
 |---|---|---|
-| `python3 pywidget/tests/run_host.py --both` | 20:13 | green: 2 interpreters (3.9.6, 3.13.18), 24 suites, 1180 tests, 0 failed |
-| `bash tests/run.sh` (every suite, default -j) | 20:14 | 166 suites, 2 red: site_dashboard_test.py (76/2), wiki_views_pv_test.py (26/1); 453 s wall |
-| OPT-034 pair2 replay test (copied into tests/ of the worktree) | 20:24 | 52/1, the "#53 hold seed" case |
+| `python3 pywidget/tests/run_host.py --both` | 8:13 PM | green: 2 interpreters (3.9.6, 3.13.18), 24 suites, 1180 tests, 0 failed |
+| `bash tests/run.sh` (every suite, default -j) | 8:14 PM | 166 suites, 2 red: site_dashboard_test.py (76/2), wiki_views_pv_test.py (26/1); 453 s wall |
+| OPT-034 pair2 replay test (copied into tests/ of the worktree) | 8:24 PM | 52/1, the "#53 hold seed" case |
 
 </div>
 
@@ -33,10 +33,10 @@ Not run: `tests/site_funnel_test.py.new` (not a suite by name; the runner skips 
 ## Red tests
 
 1. **tests/wiki_views_pv_test.py, B2 "real robots: 2 pageviews requests, none to /w/"** (n=1 check of 27).
-   - Cause: test-only. Part B fakes `urllib.request.urlopen` but used the shared live-robots cache under `$TMPDIR/itsthecompany-robots-live`. terms_guard reads live robots.txt before any URL (ruling robots-recheck-2026-10-25 04:58). With today's wikimedia.org record in the shared cache there are 2 requests and the test passes; without it there are 3 (robots.txt first) and it fails. So the result depended on the day and on what else had run.
+   - Cause: test-only. Part B fakes `urllib.request.urlopen` but used the shared live-robots cache under `$TMPDIR/itsthecompany-robots-live`. terms_guard reads live robots.txt before any URL (ruling robots-recheck-2026-10-25 4:58 AM). With today's wikimedia.org record in the shared cache there are 2 requests and the test passes; without it there are 3 (robots.txt first) and it fails. So the result depended on the day and on what else had run.
    - Earlier commits: the same, by cache state. With no record, it fails from 54405461 to HEAD. Archived copies of d5a1ba63, fdb6903b and 54405461 passed once a record existed.
    - Owner: Odalys (tool and test are mine). **Fixed** in bce06d03: Part B now uses `tg.use_live_dir(mkdtemp)`, and B2 expects exactly one robots.txt read, then 2 pageviews requests, none to /w/. 27/0 twice in the main tree and in the worktree, plus `tests/run.sh wiki_views_pv_test.py` green.
-   - My own fault during the sweep: replaying archived pre-a091b467 tools (before the "fake reader never writes the shared cache" guard) wrote a fake 404 record `https_wikimedia.org.json` (20:22:51) into the shared cache. A 404 robots record means "allow all" for that host until ET midnight. I removed it at 20:24. It was the only cache file written since 20:00 apart from files.pythonhosted.org at 20:09, which is not mine. Lesson: run old-commit replays with their own `TMPDIR`.
+   - My own fault during the sweep: replaying archived pre-a091b467 tools (before the "fake reader never writes the shared cache" guard) wrote a fake 404 record `https_wikimedia.org.json` (8:22:51 PM) into the shared cache. A 404 robots record means "allow all" for that host until ET midnight. I removed it at 8:24 PM. It was the only cache file written since 8:00 PM apart from files.pythonhosted.org at 8:09 PM, which is not mine. Lesson: run old-commit replays with their own `TMPDIR`.
 
 2. **tests/site_dashboard_test.py, case_counts phone 390 and desktop 1280** (n=2 checks of 78).
    - Cause: a product fault, not the test. `tools/site/build.py` applies `live_status.board_count` only `if public_status`. `ops/live.json` is git-ignored, so a tree without it (a clean worktree or a fresh clone) writes `status.json` as `{}`. The Now panel then reads "Queue: 0 ready, 0 waiting or blocked", while the strip and Company > Work read "46 ready, 45 waiting or blocked". The live site is not affected while the Mac mini has `ops/live.json`.

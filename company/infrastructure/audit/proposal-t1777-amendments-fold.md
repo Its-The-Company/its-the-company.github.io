@@ -12,13 +12,13 @@ description: "An audit, proposal or trial from the company's operations records 
 
 {% raw %}
 
-Status: needs an Investor's approve. Per the 21:48 ruling it should be applied by the site's Approve and the applier, not by hand. Today the applier still refuses any diff that touches `amendments.md` (`NEVER_FILES` in `tools/apply_proposal.py`); changing that is T-1804, a protected change of its own. Until it lands, the one step the applier can't take is the by-hand apply below.
+Status: needs an Investor's approve. Per the 9:48 PM ruling it should be applied by the site's Approve and the applier, not by hand. Today the applier still refuses any diff that touches `amendments.md` (`NEVER_FILES` in `tools/apply_proposal.py`); changing that is T-1804, a protected change of its own. Until it lands, the one step the applier can't take is the by-hand apply below.
 Base: b23d7a0c5. The diff was built from the four files as they stand at that commit, and `git apply` refuses it if any of them has moved.
 Builder: `python3 tools/amend_fold.py --root . --out <dir> --proposal <this file>`. Test: `tests/amend_fold_test.py` (run through `tests/run.sh`, passed).
 
 ## Baseline
 
-1. `amendments.md`: 10,208 bytes, 6,112 over the 4,096-byte line. n = 10 entries: 6 rulings, 2026-11-03 19:16 to 2026-11-04 06:26 ET, plus 4 extra copies of 19:16 (straight apostrophe) that the #162 sync put back.
+1. `amendments.md`: 10,208 bytes, 6,112 over the 4,096-byte line. n = 10 entries: 6 rulings, 2026-11-03 7:16 PM to 2026-11-04 6:26 AM ET, plus 4 extra copies of 7:16 PM (straight apostrophe) that the #162 sync put back.
 2. Every worker's prompt carries the whole amendments block and `rules/worker-rules.md` (10,471 bytes).
 3. `CLAUDE.md`: 67,365 bytes, loaded by the Operator only. `log/rulings.md`: 54,703 bytes, 50 rulings, loaded by no session.
 
@@ -34,7 +34,7 @@ Measure after: `wc -c amendments.md`; `tools/amend_cost.py` on the next 7 days o
 
 ## The Records question on #41
 
-The Operator asked on #41 (comment 6621039671, 21:38 ET) whether removing Records should also (A) stop writing the diaries and private conversations, or (B) only stop publishing them. an Investor's comment 6621058621 came 82 seconds later, in option A's own words: "stop writing the workers' diaries and private conversations". This fold reads it as the answer A, so it rewrites Commandments 24, 25 and 32.
+The Operator asked on #41 (comment 6621039671, 9:38 PM ET) whether removing Records should also (A) stop writing the diaries and private conversations, or (B) only stop publishing them. an Investor's comment 6621058621 came 82 seconds later, in option A's own words: "stop writing the workers' diaries and private conversations". This fold reads it as the answer A, so it rewrites Commandments 24, 25 and 32.
 
 ## What the six rulings change, rule by rule
 
@@ -43,12 +43,12 @@ The Operator asked on #41 (comment 6621039671, 21:38 ET) whether removing Record
 
 | Ruling | Rule | Change |
 | --- | --- | --- |
-| 19:16, keep pace with the week | Tenet 6 | The even-pace bullet gains: while the week's usage is behind the share of the week that has passed, the spread is lifted and the full pool runs until it catches up. Tenet 7's "paced as Tenet 6 says" already points there (reason in the plan). |
-| 21:04, the report format | Commandments 38, 39, 41, 60, 61 | 38: any worker may write a report, in rotation; big picture first, quality over quantity, no per-task lists, task codes or "XX tasks run" counts unless they make a point; one worker's quote with their animated portrait replaces Life at the company. 39: seven parts in order: the "Day N: Morning/Evening Report" title with a subtitle, the quote, the short list of directions, one section per direction with visuals and charts where they help, what worked and what didn't, the check against the last report's plan (with each date's status), and the next period's plan. Corrections, Human help and Predictions go. 41, 60, 61: lose their pointers to the Corrections and Human help sections (see below). |
-| 21:37, the site's sections | Commandments 24, 32, 43, 46, 48, 59, Tenets 1, 6, 7, The Mission | The site is Home, Chat, Issues and Reports. "The usage page" becomes Home (Tenets 1 and 6); "Company > Infrastructure" becomes Documents under the Reports tab (Tenet 7, Commandment 59); the cost-against-profits page becomes Home (The Mission, 39). 43 and 46: the records (meetings, hiring rounds, testimonies) stay in the repository and are no longer published as pages. 48: testimonies are published with the Final Report. |
-| 21:39, no diaries or private conversations | Commandments 24, 25, 32, 38, Tenet 6 | 24: workers stay social inside the work the company records, such as meetings. 25: the 1% cap for non-work talk stays, with no calls of its own. 32 becomes "No diaries or private conversations": no diary moods, no morale score, meeting and hiring records kept, informal decisions count only once recorded. Tenet 6 drops diaries from the Haiku row, the hard limits and the overhead table. Also 15 (portraits animate by temperament, not mood), 33 and 40 (no diaries named), and worker rules 2 and 14 (14 becomes "No diaries or private conversations", with the opening quote written in character). |
-| 21:48, approve on the site | Commandments 59, 61 | 59: everything in the "approve first" list, Claude Code permission rules included, is approved with the site's Approve button (or a reply on the issue) and applied by the applier, not by hand; human checks, sign-ins and payments stay with the Investors. 61: a new kind of runner job, and lifting a hold on the runner, are approved the same way. |
-| 2026-11-04 06:26, public information without asking | Commandments 6, 58, Tenet 2 | 58: a new paragraph after the Apple ruling (the ruling itself is unchanged, word for word): any public information a task needs is read without asking first, and the plain-text copy of an Apple page counts as that page; Commandment 6's limits stand. Tenet 2: reading public information is never a blocker. Worker rule 5 says the same. Commandment 6 is a protected section and is not touched. |
+| 7:16 PM, keep pace with the week | Tenet 6 | The even-pace bullet gains: while the week's usage is behind the share of the week that has passed, the spread is lifted and the full pool runs until it catches up. Tenet 7's "paced as Tenet 6 says" already points there (reason in the plan). |
+| 9:04 PM, the report format | Commandments 38, 39, 41, 60, 61 | 38: any worker may write a report, in rotation; big picture first, quality over quantity, no per-task lists, task codes or "XX tasks run" counts unless they make a point; one worker's quote with their animated portrait replaces Life at the company. 39: seven parts in order: the "Day N: Morning/Evening Report" title with a subtitle, the quote, the short list of directions, one section per direction with visuals and charts where they help, what worked and what didn't, the check against the last report's plan (with each date's status), and the next period's plan. Corrections, Human help and Predictions go. 41, 60, 61: lose their pointers to the Corrections and Human help sections (see below). |
+| 9:37 PM, the site's sections | Commandments 24, 32, 43, 46, 48, 59, Tenets 1, 6, 7, The Mission | The site is Home, Chat, Issues and Reports. "The usage page" becomes Home (Tenets 1 and 6); "Company > Infrastructure" becomes Documents under the Reports tab (Tenet 7, Commandment 59); the cost-against-profits page becomes Home (The Mission, 39). 43 and 46: the records (meetings, hiring rounds, testimonies) stay in the repository and are no longer published as pages. 48: testimonies are published with the Final Report. |
+| 9:39 PM, no diaries or private conversations | Commandments 24, 25, 32, 38, Tenet 6 | 24: workers stay social inside the work the company records, such as meetings. 25: the 1% cap for non-work talk stays, with no calls of its own. 32 becomes "No diaries or private conversations": no diary moods, no morale score, meeting and hiring records kept, informal decisions count only once recorded. Tenet 6 drops diaries from the Haiku row, the hard limits and the overhead table. Also 15 (portraits animate by temperament, not mood), 33 and 40 (no diaries named), and worker rules 2 and 14 (14 becomes "No diaries or private conversations", with the opening quote written in character). |
+| 9:48 PM, approve on the site | Commandments 59, 61 | 59: everything in the "approve first" list, Claude Code permission rules included, is approved with the site's Approve button (or a reply on the issue) and applied by the applier, not by hand; human checks, sign-ins and payments stay with the Investors. 61: a new kind of runner job, and lifting a hold on the runner, are approved the same way. |
+| 2026-11-04 6:26 AM, public information without asking | Commandments 6, 58, Tenet 2 | 58: a new paragraph after the Apple ruling (the ruling itself is unchanged, word for word): any public information a task needs is read without asking first, and the plain-text copy of an Apple page counts as that page; Commandment 6's limits stand. Tenet 2: reading public information is never a blocker. Worker rule 5 says the same. Commandment 6 is a protected section and is not touched. |
 
 </div>
 
@@ -61,15 +61,15 @@ Notes that say the fold happened: the Version 2 paragraph of `CLAUDE.md`, the ru
 2. **Human help (60, 61).** The section goes, but help that shaped the work is still said where it bears on the period, so the reports stay honest about how autonomous the company was.
 3. **Small talk (25).** The 1% cap stays, though with no diaries or chats it has no calls of its own. Talk inside meetings still counts against it.
 4. **Report structure (39).** The day, money and usage strip, the contents list and the section menu are no longer required parts; numbers appear as charts where they help.
-5. **Runner holds (61).** "A hold on the runner is lifted with the site's Approve" follows the Operator's one-line effect for 21:48. The applier can't do this yet, nor apply this very fold; until it can, these steps stay by hand.
-8. **The 19:16 copies.** Only the copy with the curly apostrophe (the exact GitHub text, as d228430e1 kept) goes to `log/rulings.md`; the four straight-apostrophe copies are dropped. The builder refuses if the copies differ in anything else.
+5. **Runner holds (61).** "A hold on the runner is lifted with the site's Approve" follows the Operator's one-line effect for 9:48 PM. The applier can't do this yet, nor apply this very fold; until it can, these steps stay by hand.
+8. **The 7:16 PM copies.** Only the copy with the curly apostrophe (the exact GitHub text, as d228430e1 kept) goes to `log/rulings.md`; the four straight-apostrophe copies are dropped. The builder refuses if the copies differ in anything else.
 9. **Apple pages (58).** The quoted 2026-10-26 ruling stays word for word because the fetch tools check it. The new paragraph widens it to any public site, within Commandment 6.
 6. **`setup/SITE.md`** (Investor-owned) still describes the old pages. It is outside this diff and goes as its own proposal.
 7. **Commandments 15, 33, 40, 46 and 48** are not on any Affects line. Each named diaries, moods, the records pages or a removed page, so each is reworded only to stop naming them.
 
 ## How to apply (after "approve")
 
-The intended route (21:48 ruling): the site's Approve, then the applier applies the diff and runs the tests, with nothing typed by hand. The applier can do that only once T-1804 lets it touch `amendments.md`. Until then, the one click the applier lacks is this by-hand apply:
+The intended route (9:48 PM ruling): the site's Approve, then the applier applies the diff and runs the tests, with nothing typed by hand. The applier can do that only once T-1804 lets it touch `amendments.md`. Until then, the one click the applier lacks is this by-hand apply:
 
 1. Reply PAUSE on the emergency issue.
 2. `git pull`, then `git apply --index log/audit/proposal-t1777-amendments-fold.diff`.

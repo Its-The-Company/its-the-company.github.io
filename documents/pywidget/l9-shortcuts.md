@@ -13,7 +13,7 @@ description: "Recommend iOS 18.0, with iOS 26 additions behind #available. Reaso
 {% raw %}
 Idris, 2026-10-25, Day 4. Brief L9 (Blocking for the C7 Shortcut Lab parts). Same sources and tags as L8-integrations.md:
 **[SDK]** iOS 27.1 SDK, **[CLI]** macOS 27.0.1 `shortcuts` tool run here, **[M]** memory, to be checked in a person's browser.
-- **[apple-page A#]** (added 2026-10-26, T-0142): Apple's developer page, read signed out on 2026-10-26 01:15-01:17 ET under the Investors' #64 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>; quote, URL and time in pywidget/docs/release/app-review-matrix.md s1d item A#; the saved copy is in research/inbound/apple/developer.apple.com/ (index.tsv). A3 = Keeping a widget up to date, A4 = Accessing location information in widgets, A2 = Describing use of required reason API, A5 = AppShortcutsProvider, A6 = Complying with Encryption Export Regulations.
+- **[apple-page A#]** (added 2026-10-26, T-0142): Apple's developer page, read signed out on 2026-10-26 1:15-1:17 AM ET under the Investors' #64 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>; quote, URL and time in pywidget/docs/release/app-review-matrix.md s1d item A#; the saved copy is in research/inbound/apple/developer.apple.com/ (index.tsv). A3 = Keeping a widget up to date, A4 = Accessing location information in widgets, A2 = Describing use of required reason API, A5 = AppShortcutsProvider, A6 = Complying with Encryption Export Regulations.
 Evidence: `L8-L9-raw/sdk-checks.txt` (script `L8-L9-raw/bin/sdk_checks.sh`).
 
 ## 1. Verdicts first
@@ -24,7 +24,7 @@ Evidence: `L8-L9-raw/sdk-checks.txt` (script `L8-L9-raw/bin/sdk_checks.sh`).
 | Question | Verdict |
 |---|---|
 | Can the app list, read or edit the user's shortcuts? | **No.** The iOS SDK has no API for it. The only listing API, `INVoiceShortcutCenter` (iOS 12) [SDK], returns voice shortcuts made from *this app's* SiriKit intents, nothing else |
-| Is there a supported way to create an importable shortcut from iOS? | **No.** No public iOS API creates, imports or signs a shortcut. Signing exists only as the macOS `shortcuts sign` tool [CLI], and it refuses to run unless the Mac is signed into iCloud (observed 19:21 ET: "Error: In order to do this, you must be signed into iCloud.") |
+| Is there a supported way to create an importable shortcut from iOS? | **No.** No public iOS API creates, imports or signs a shortcut. Signing exists only as the macOS `shortcuts sign` tool [CLI], and it refuses to run unless the Mac is signed into iCloud (observed 7:21 PM ET: "Error: In order to do this, you must be signed into iCloud.") |
 | What does work with no setup? | App Shortcuts from an `AppShortcutsProvider` (iOS 16+) [SDK]: our actions appear in Shortcuts, Spotlight and Siri as soon as the app is installed |
 | Shortcut Lab: history | **Feasible, supported** (stores the files the user shares; no parsing needed) |
 | Shortcut Lab: diff | **Two tiers.** "Changed since last snapshot" by hash: feasible, supported. Action-level diff: **feasible but fragile** (needs the undocumented format) |

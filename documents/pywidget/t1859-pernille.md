@@ -32,21 +32,21 @@ Stamp and read in the same zone; "old" is d22c35d4f's parent's startOfDay count.
 
 | Case | Zone | Elapsed | Old | New | Form |
 |---|---|---|---|---|---|
-| 09-06 12:00 to 09-07 12:00 (skipped midnight) | America/Santiago | 24 h | 0 | 1 | weekday |
+| 09-06 12:00 PM to 09-07 12:00 PM (skipped midnight) | America/Santiago | 24 h | 0 | 1 | weekday |
 | 09-06 to 09-13 | America/Santiago | 168 h | 6 | 7 | date |
-| 09-05 23:59 to 09-06 01:00 | America/Santiago | 1 min | 1 | 1 | weekday |
+| 09-05 11:59 PM to 09-06 1:00 AM | America/Santiago | 1 min | 1 | 1 | weekday |
 | 03-08 to 03-09 | America/Havana | 24 h | 0 | 1 | weekday |
 | 04-24 to 04-25 | Africa/Cairo | 24 h | 0 | 1 | weekday |
-| fall back, 23:30 then 23:30 again (2026-04-04) | America/Santiago | 1 h | 0 | 0 | time |
-| 04-04 22:30 to 04-05 00:30 | America/Santiago | 3 h | 1 | 1 | weekday |
-| 2011-12-29 12:00 to 12-31 12:00 (12-30 never happened) | Pacific/Apia | 24 h | 1 | 2 | weekday |
-| 2011-12-29 23:59 to 12-31 00:00 | Pacific/Apia | 1 min | 1 | 2 | weekday |
+| fall back, 11:30 PM then 11:30 PM again (2026-04-04) | America/Santiago | 1 h | 0 | 0 | time |
+| 04-04 10:30 PM to 04-05 12:30 AM | America/Santiago | 3 h | 1 | 1 | weekday |
+| 2011-12-29 12:00 PM to 12-31 12:00 PM (12-30 never happened) | Pacific/Apia | 24 h | 1 | 2 | weekday |
+| 2011-12-29 11:59 PM to 12-31 12:00 AM | Pacific/Apia | 1 min | 1 | 2 | weekday |
 | 2011-12-25 to 12-31 (6 dates) | Pacific/Apia | 120 h | 5 | 6 | weekday |
 | 2011-12-24 to 12-31 (7 dates) | Pacific/Apia | 144 h | 6 | 7 | date |
 | 1994-12-30 to 1995-01-01 (12-31 skipped) | Pacific/Kiritimati | 24 h | 1 | 2 | weekday |
 | 11-01 to 11-02 | America/New_York | 24 h | 1 | 1 | weekday |
 | stamp 35 min ahead, across midnight | America/New_York | -35 min | -1 | -1 | time |
-| 12-31 23:00 to 01-01 00:01 | America/New_York | 62 min | 1 | 1 | weekday |
+| 12-31 11:00 PM to 01-01 12:01 AM | America/New_York | 62 min | 1 | 1 | weekday |
 
 </div>
 
@@ -62,7 +62,7 @@ Apia is the case that tells calendar dates from elapsed days, and calendar dates
 ## Findings
 
 ### F1. Medium. The F2 fix rests on one line the suite cannot see from a New York host.
-`AgeLine.swift:54` (`utc.timeZone = TimeZone(secondsFromGMT: 0)!`). Delete it and `utc` takes the process zone. On this machine that is America/New_York: **39/39 pass**, so that mutant survives. On a phone in Santiago, Havana or Cairo, the rebuilt midnights are local again, 2026-09-06's midnight is 01:00 again, and yesterday reads as the time again. That is F2's bug back, with every test green. The other side is thin too. Deleting `local.timeZone = timeZone` is caught by one assertion only (Tests:162, `testTheTimeZoneIsAnInput`). The committed `zone-ignored` mutant swaps in Tokyo, which is easy to <span title="A test written in advance. If it fires, we drop the idea.">kill</span>; the realistic edit is a deleted line.
+`AgeLine.swift:54` (`utc.timeZone = TimeZone(secondsFromGMT: 0)!`). Delete it and `utc` takes the process zone. On this machine that is America/New_York: **39/39 pass**, so that mutant survives. On a phone in Santiago, Havana or Cairo, the rebuilt midnights are local again, 2026-09-06's midnight is 1:00 AM again, and yesterday reads as the time again. That is F2's bug back, with every test green. The other side is thin too. Deleting `local.timeZone = timeZone` is caught by one assertion only (Tests:162, `testTheTimeZoneIsAnInput`). The committed `zone-ignored` mutant swaps in Tokyo, which is easy to <span title="A test written in advance. If it fires, we drop the idea.">kill</span>; the realistic edit is a deleted line.
 Fix: run the skipped-midnight tests (Tests:139-158) with the process zone set to the zone under test (`NSTimeZone.default = z`, restored in a `defer` or `tearDown`), so the host zone cannot hide the fixed UTC calendar. Add both deletions to `mutants-t1793.json`.
 
 ### F2. Medium. T-1440's own line still describes the two-step line, and two things still decide the length.
@@ -70,7 +70,7 @@ The board line for T-1440 says the renderer "draws ViewThatFits of "Updated {tim
 Fix (Idris, on the T-1440 line): say three steps for the weekday, and pick one decider. Either draw what `Line.visible` names, measured, with `ViewThatFits` absent, or draw `ViewThatFits` of `ladder(for:)` and keep `Line.visible` as a test. Pass the same `TimeZone` to the weekday formatter (`\.timeZone`) as to `line`, so the name and the count agree. Ask Maren to update B3 (state-spec:329) to the three-step ladder.
 
 ### F3. Low. Where the form changes, for the widget timeline.
-The form depends on `now`. A timeline has to change entries at the next local date change, and again 7 dates on. On a skipped-midnight day that moment is 01:00, and Apia 2011 lost a whole date. If T-1440 builds the boundary as `DateComponents(hour: 0)` it gets nil or a shifted time there. The safe build is `startOfDay(for:)` of the next date. A small pure `AgeLine.nextChange(after: date, now:, timeZone:)`, tested in the same zones as F2, would keep T-1440 from deriving midnight a second time. Not a bug in this commit.
+The form depends on `now`. A timeline has to change entries at the next local date change, and again 7 dates on. On a skipped-midnight day that moment is 1:00 AM, and Apia 2011 lost a whole date. If T-1440 builds the boundary as `DateComponents(hour: 0)` it gets nil or a shifted time there. The safe build is `startOfDay(for:)` of the next date. A small pure `AgeLine.nextChange(after: date, now:, timeZone:)`, tested in the same zones as F2, would keep T-1440 from deriving midnight a second time. Not a bug in this commit.
 
 ### F4. Low. One test width is the wrong size.
 Tests:174-177 `widestWeekday` is labelled "at xxxLarge", but its full width 107.9 is "Updated Wednesday @11" (Large) in `age-line-qa.json:373`. At xxxLarge it is 166.8 (`@17`). Every assertion's outcome is unchanged, since both exceed 78, but the comment and the number should agree with the QA file.

@@ -11,7 +11,7 @@ description: "Academic study of 6,390 low-rated reviews of 20 free iOS apps: top
 <div class="doc-body" markdown="1">
 
 {% raw %}
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://swag.uwaterloo.ca/publications/what-do-mobile-app-users-complain-about.html
 - Finding: Academic study of 6,390 low-rated reviews of 20 free iOS apps: top complaints are functional errors, feature requests, crashes; privacy and hidden-cost complaints hurt ratings most. Supports privacy-first, honest pricing, heavy testing.
 {% endraw %}

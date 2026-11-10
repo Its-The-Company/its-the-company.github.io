@@ -13,7 +13,7 @@ description: "An audit, proposal or trial from the company's operations records 
 
 {% raw %}
 
-Odalys, 2026-10-27 19:49 ET (`date`). Raw sources only: ops/runs and ops/runs-archive streams, ops/usage.json, git history of ops/board.md. Scripts below were run from the repo root (refusals.py from ops/runs); outputs pasted unedited.
+Odalys, 2026-10-27 7:49 PM ET (`date`). Raw sources only: ops/runs and ops/runs-archive streams, ops/usage.json, git history of ops/board.md. Scripts below were run from the repo root (refusals.py from ops/runs); outputs pasted unedited.
 
 ## OPT-027: task-ID share of top-level worker-call cost
 
@@ -108,7 +108,7 @@ for f in sys.argv[1:]:
 
 ## OPT-019: board.py stale-deps
 
-Every `python3 tools/board.py stale-deps` run in any stream since 2026-10-24 19:33 (sd_runs.py; timestamps UTC; lines listed = 'line N:' rows in the recorded output, a lower bound where the caller piped through tail or cut):
+Every `python3 tools/board.py stale-deps` run in any stream since 2026-10-24 7:33 PM (sd_runs.py; timestamps UTC; lines listed = 'line N:' rows in the recorded output, a lower bound where the caller piped through tail or cut):
 
 ```
 20261027-181343	2026-10-27T23:48	0	
@@ -143,7 +143,7 @@ Fate of each distinct listed line: the first commit after its first listing that
 2026-10-25T10:36 | Odalys, P2, R32-1 applied (after H258; refill | ticked 66ff5453 2026-10-25T11:04
 ```
 
-The three holds carry the chair's reason in the line: H177-H180 (4faf02d4, Operator 10-24 22:43 ET, and db7092f3, Ines 04:12 'stale-deps checked by hand ... score after 20:00 ET today, not before'); refill 22 score (db7092f3: 'H194 has no T1 row yet'); refill 23 score (db7092f3: waiting until 2026-10-28, a Day 6 score date). Board at 19:49 ET: 138 open lines, 0 with an 'after Hnnn' clause, 34 with 'after T-nnnn'; stale-deps lists 0.
+The three holds carry the chair's reason in the line: H177-H180 (4faf02d4, Operator 10-24 10:43 PM ET, and db7092f3, Ines 4:12 AM 'stale-deps checked by hand ... score after 8:00 PM ET today, not before'); refill 22 score (db7092f3: 'H194 has no T1 row yet'); refill 23 score (db7092f3: waiting until 2026-10-28, a Day 6 score date). Board at 7:49 PM ET: 138 open lines, 0 with an 'after Hnnn' clause, 34 with 'after T-nnnn'; stale-deps lists 0.
 
 ```python
 # sd_runs.py (argv: repo root, first stream stem)

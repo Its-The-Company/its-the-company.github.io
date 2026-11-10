@@ -44,7 +44,7 @@ Clean, with the check behind each:
   widgets before B and C. If A's widgets are missing, B and C fail on XCTUnwrap.
 - **testB is a real check.** Over 6,000 red and 6,000 blue pixels can only come from chart.png. The record has 18,240 of each.
 - **A frozen timer fails the grader's read.** A timer stuck at 5:25:00 gives the tree's start, which falls before A5b's window opens (dry run:
-  11:25:00 against 11:25:52). 0:00 fails too: the window ends hours before the card's end. No test asserts this value; the F1 grader's
+  11:25:00 AM against 11:25:52 AM). 0:00 fails too: the window ends hours before the card's end. No test asserts this value; the F1 grader's
   read is the only check, and it holds.
 
 Rows that pass when the thing is broken:

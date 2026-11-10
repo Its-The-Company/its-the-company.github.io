@@ -12,7 +12,7 @@ description: "An audit, proposal or trial from the company's operations records 
 
 {% raw %}
 
-Drafted 2026-10-26 01:21 ET by Odalys for the Operator to open as a GitHub issue, label `proposal` (not
+Drafted 2026-10-26 1:21 AM ET by Odalys for the Operator to open as a GitHub issue, label `proposal` (not
 `urgent`: no work waits on it). It changes how the applier checks approval, so under the standing ruling
 (#65 c6408374269 item 2) it needs an explicit **approve**; the applier itself refuses to auto-apply it
 (ops/proposal_auto.json is on its list of paths that always need approve). The code is in main since

@@ -11,11 +11,11 @@ description: "One sentence. The person&#x27;s manifest names one public JSON URL
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Pernille, 2026-10-30, T-0679. Status: **spec finished; names not yet reviewed.** Nothing here is built. The build is T-0682, held until T-0680's verdict: it starts only if the extension <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> fails its gates after one cut and re-run (ADR-007 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-10-29 08:03, items 3 ii and 6). If the lane passes, none of this ships in 1.0.
+Pernille, 2026-10-30, T-0679. Status: **spec finished; names not yet reviewed.** Nothing here is built. The build is T-0682, held until T-0680's verdict: it starts only if the extension <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> fails its gates after one cut and re-run (ADR-007 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-10-29 8:03 AM, items 3 ii and 6). If the lane passes, none of this ships in 1.0.
 
 **One sentence.** The person's manifest names one public JSON URL and the fields to pull from it; on each reload the widget extension fetches it with no Python, keeps those few values in `data/<id>/fields.json`, and the renderer puts them into the `Text` and `ProgressView` nodes marked `bind`, so those numbers can move without the app running. Everything else in the picture stays as old as the last app run.
 
-**What it is not.** It cannot compute: no arithmetic, no conditions, no colour that turns red at 10 minutes. A feed that needs more than a path is the lane's job or the app lane's. No statement here says how often a reload comes; that belongs to Apple's budget and to item 7 of the 08:03 session.
+**What it is not.** It cannot compute: no arithmetic, no conditions, no colour that turns red at 10 minutes. A feed that needs more than a path is the lane's job or the app lane's. No statement here says how often a reload comes; that belongs to Apple's budget and to item 7 of the 8:03 AM session.
 
 ## 0. What exists at HEAD (6e5a6907), checked in the code
 
@@ -24,7 +24,7 @@ Pernille, 2026-10-30, T-0679. Status: **spec finished; names not yet reviewed.**
 
 | Thing | At HEAD | Consequence |
 |---|---|---|
-| `ProgressBar` (the 08:03 line and the board say this) | **No such name.** The node and the DSL class are `ProgressView` | `bind` goes on `ProgressView`; the words in the ADR are a slip |
+| `ProgressBar` (the 8:03 AM line and the board say this) | **No such name.** The node and the DSL class are `ProgressView` | `bind` goes on `ProgressView`; the words in the ADR are a slip |
 | `pywidget.json` | Real: `app_manifest.py`, schema `pywidget.app`, unknown keys kept (`Manifest.extra`) | `fetch` and `sensors` live there, read the way `lane.lane_of` reads `lane`. `manifest.schema.json` is Odalys's L12 marketplace draft with `additionalProperties: false`; nothing reads it, and this spec does not touch it |
 | `lane` in `app-manifest.schema.json` | Absent; the key is in `lane.py` only | Same treatment for `fetch` and `sensors`: the fragment in s2 is the contract, and T-0682 adds it with `lane` |
 | `data/<id>/` | Named only in my 10-30 view. Not in ADR-007 5.2's layout, not in code | New. Needs the ADR-007 line in s10 |
@@ -150,7 +150,7 @@ A value of the wrong type, `null`, a bool, an object or an array counts as missi
 - **`attempted_at`, `fetched_at`**: the last request of any outcome, and the last that gave a 2xx JSON body. Step 4 of s5 reads both.
 - **`error`** is one code or null: `offline`, `timeout`, `http_status`, `too_large`, `tls`, `not_json`, `bad_value`, `no_permission`, `unavailable`. Never a URL, path or query (NetFetch's rule). The app shows it in Activity.
 - **`until`**: a sensor's day ends. Steps "today" expire at the next local midnight, and the value is then gone, not stale (s6). Without this a Tuesday morning shows Monday's total.
-- **Writers.** The reloading extension, and on iOS 27+ the app if the Refresh intent is pinned to `.main` (08:03 item 2). Atomic per ADR-007 5.2 (temp, `fsync`, `rename`). A field whose `at` is newer than the writer's is kept. No `flock`: this is a cache, and a lost write costs one refresh.
+- **Writers.** The reloading extension, and on iOS 27+ the app if the Refresh intent is pinned to `.main` (8:03 AM item 2). Atomic per ADR-007 5.2 (temp, `fsync`, `rename`). A field whose `at` is newer than the writer's is kept. No `flock`: this is a cache, and a lost write costs one refresh.
 - **Creation and removal.** The extension creates `data/<id>/` (unlike `widgets/<id>/`, which it may never create). The app removes `data/<id>/` in the same step that moves a widget to `.trash`; a restored widget refetches. Deleting a widget must leave no step count behind.
 - **Size.** 8 fields of 256 scalars and the declared block: a few KiB, by arithmetic.
 
@@ -189,7 +189,7 @@ In `getTimeline`, with the lane flag off. Never a failure path: any step that fa
 
 A field's age limit is `fetch.max_age`; for `steps`, a constant `SENSOR_MAX_AGE_S` = 3,600 (L1's default for steps; tune from T-0680, not a measurement).
 
-**Two clocks, earliest wins.** T(tree) = `sampled_at + stale_after`, unchanged (ADR-007 7.4). T(field) = the earliest `at + limit` among fields this tree binds and that have a value. The provider uses `min(T(tree), T(field))`, and inserts its synthetic entry there, and one more at each `until`. `When("stale")` resolves to the same flag. Threat-model floor (16:54 line, 2a): a stale picture always carries its mark.
+**Two clocks, earliest wins.** T(tree) = `sampled_at + stale_after`, unchanged (ADR-007 7.4). T(field) = the earliest `at + limit` among fields this tree binds and that have a value. The provider uses `min(T(tree), T(field))`, and inserts its synthetic entry there, and one more at each `until`. `When("stale")` resolves to the same flag. Threat-model floor (4:54 PM line, 2a): a stale picture always carries its mark.
 
 So a widget whose only moving parts are bound leaves `stale_after` unset, or its 30-minute template clock marks fresh numbers stale. The New-widget template needs a bound variant if T-0682 ships.
 
@@ -210,12 +210,12 @@ So a widget whose only moving parts are bound leaves `stale_after` unset, or its
 | Whether `CMPedometer` answers inside any extension | **Unverified** | T-0011 |
 | Whether a Motion prompt can come from an extension, and whether that extension needs its own `NSMotionUsageDescription` (the key is in the app's Info.plist only) | **Unverified** | T-0011 |
 | Whether a pedometer query works with the phone locked | **Unverified** | L1 open list |
-| Whether the extension's `URLSession` call finishes inside 3 s on cellular | **Unverified** | 08:03 item 5.6 |
-| How long `getTimeline` may wait before the system ends it | **Unverified**; Apple publishes no number; `getTimeline` halt time is unmeasured | 08:03 item 5.4 |
+| Whether the extension's `URLSession` call finishes inside 3 s on cellular | **Unverified** | 8:03 AM item 5.6 |
+| How long `getTimeline` may wait before the system ends it | **Unverified**; Apple publishes no number; `getTimeline` halt time is unmeasured | 8:03 AM item 5.4 |
 | Memory of `JSONSerialization` on a 256 KiB body in the extension | **Unverified**; "a few hundred KB" in my 10-30 view was a guess, and this replaces it | T-0696 covers the fetch, not the parse |
 | Whether the extension can write the App Group file before first unlock, and after it while locked | **Unverified** | None in the repo |
 | RFC 9535 subset claim | **Unverified** [recalled] | Not read |
-| How often any reload happens | **Not claimed here** | 08:03 item 5.7 |
+| How often any reload happens | **Not claimed here** | 8:03 AM item 5.7 |
 
 </div>
 
@@ -262,9 +262,9 @@ BF1-BF3 need no bound-fields code and belong in T-0680's one session: they are i
 
 **Branch `pernille/t0679-bound-fields`, pushed, not merged:** `viewtree.schema.json` (`numberFormat`, `fieldName`, `textBind`, the `Text` and `ProgressView` rows), `pywidget_ui` (`bind`, `Number.suffix`, `validate`), `__init__.pyi`, API.md rows, `tests/dsl/test_bind.py` (27 tests since T-1753, 81ef0a5b5). Host suites on the branch: 2,248 tests on 3.9 and 3.13, 0 failed suites (2026-11-05). 18 seeded mutants, 18 killed: one survived the first run because a test was too loose, and the test was tightened.
 
-**Why it is off main, and stays off.** Alpha rows A4 to A6 run the bundled schema (`RunResultSink`, `ViewTreeSchema`) and `pywidget_ui`, so this change would sit under the alpha commit: code freeze applies. **The freeze lifting does not change the answer.** A public `bind=` that nothing fills is a parameter that does nothing, and `Number.suffix` draws without its suffix until Swift has the case. Idris's objection, accepted at 08:03 item 3, is a public surface kept for ever for a path Python covers. So the branch merges **only when T-0682 starts**, and if the lane passes it does not merge in 1.0. It will drift; rebasing it is part of T-0682.
+**Why it is off main, and stays off.** Alpha rows A4 to A6 run the bundled schema (`RunResultSink`, `ViewTreeSchema`) and `pywidget_ui`, so this change would sit under the alpha commit: code freeze applies. **The freeze lifting does not change the answer.** A public `bind=` that nothing fills is a parameter that does nothing, and `Number.suffix` draws without its suffix until Swift has the case. Idris's objection, accepted at 8:03 AM item 3, is a public surface kept for ever for a path Python covers. So the branch merges **only when T-0682 starts**, and if the lane passes it does not merge in 1.0. It will drift; rebasing it is part of T-0682.
 
-**T-0682's real size.** The 3-day build in 08:03 item 3 rests on my 10-30 view, which said the pedometer waits on T-0011 and priced no target. (a) `fetch` alone, in the current extension: 3 days stands, plus my half-day for the manifest check and the name check. (b) `sensors` needs the second extension, and T-0053 has not built it. If it is missing when T-0682 starts, `steps` costs that target as well, not estimated here. `fetch` can ship without `steps`.
+**T-0682's real size.** The 3-day build in 8:03 AM item 3 rests on my 10-30 view, which said the pedometer waits on T-0011 and priced no target. (a) `fetch` alone, in the current extension: 3 days stands, plus my half-day for the manifest check and the name check. (b) `sensors` needs the second extension, and T-0053 has not built it. If it is missing when T-0682 starts, `steps` costs that target as well, not estimated here. `fetch` can ship without `steps`.
 
 **ADR-007 needs one dated line before T-0682 writes anything.** Amendment 2 item 1 says the extension writes only `wants-run`, `location/last.json` and `state.json`. `data/<id>/fields.json` joins that list, with `data/` in the 5.2 layout. That line is the chair's.
 

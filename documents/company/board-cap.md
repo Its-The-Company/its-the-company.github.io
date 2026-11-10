@@ -13,12 +13,12 @@ description: "Before: 421 898 bytes, 446 open, 90 waiting (2026-11-05, after the
 {% raw %}
 Status: proposal for Ines. Nothing here is enforced yet.
 
-## Baseline (ops/board.md, 2026-11-05 ~06:00 ET)
+## Baseline (ops/board.md, 2026-11-05 ~6:00 AM ET)
 
 - 446 982 bytes before this task's archive pass, 421 898 after (28 ticked lines moved; n = 1 pass).
 - 446 open ('- [ ]') and 90 waiting ('- [b]') lines. Ticked lines were 25 KB of it; open and waiting lines are 411 KB.
 - The archive is not the leak: since 2026-11-04 the supervisor's step 12a archived 22 times and logged no skip
-  (ops/runs/supervisor.log). The 28 ticked lines left this morning were ticked after the 05:18 pass.
+  (ops/runs/supervisor.log). The 28 ticked lines left this morning were ticked after the 5:18 AM pass.
 - Open + waiting lines by kind tag (the board's workstream tag), lines / KB:
 
 

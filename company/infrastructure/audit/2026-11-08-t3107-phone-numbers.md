@@ -17,7 +17,7 @@ extension <= 0.6 C; G3 a deliberate over-allocation lands as `killed` -> lane `a
 pywidget/docs/decisions/gate-session-build.md "How G1-G3 get their numbers in the gate build" says.
 
 **What this is.** T-3107 waits for three days of the gate build on the Investors' phones and an export sent for it.
-That has not happened. What exists is one export Jeremy attached on #227 (the blank-widgets question) at 08:04 ET
+That has not happened. What exists is one export Jeremy attached on #227 (the blank-widgets question) at 8:04 AM ET
 11-08, from build 3, about 16 hours after build 3's first lane run on his phone. It is real data, so it is read here,
 and every result below is marked partial. The T-3107 line stays open.
 
@@ -108,7 +108,7 @@ export from a TestFlight build can read G3 until one is built into the gate buil
    Screen, from each Investor phone that has it. G1 then reaches n >= 6.
 2. Quote or habits actually running in the lane on the phone (T-3393), or G2 stays unreadable.
 3. The G3 over-allocation premade in the gate build, and one placement of it with a screen recording.
-4. The company promised on #192 (01:09 11-06) to post these steps on #41 once the build was on TestFlight. They were
+4. The company promised on #192 (1:09 AM 11-06) to post these steps on #41 once the build was on TestFlight. They were
    not posted; the build 3 and build 4 posts mention the Export row but not the three days.
 {% endraw %}
 

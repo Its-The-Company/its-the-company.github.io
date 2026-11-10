@@ -11,7 +11,7 @@ description: "Decision. 7.9% of tools work is product infrastructure. Counted ho
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Ines, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>, 2026-11-01 18:21 ET. Decided alone; this memo is the record (Commandment 30). Window: 2026-10-26 to 11-01, $1,759.3 of project usage. Every figure comes from the run streams, booked by kind tag and task ID: `python3 ops/plans/t0954-count.py`. Its kind totals match `tools/governor.py status`. Which task counts as what is my judgment, and the lists are in that script.
+Ines, <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>, 2026-11-01 6:21 PM ET. Decided alone; this memo is the record (Commandment 30). Window: 2026-10-26 to 11-01, $1,759.3 of project usage. Every figure comes from the run streams, booked by kind tag and task ID: `python3 ops/plans/t0954-count.py`. Its kind totals match `tools/governor.py status`. Which task counts as what is my judgment, and the lists are in that script.
 
 **Decision.** 7.9% of tools work is product infrastructure. Counted honestly, the product share is 47.1%, lower than the meter's 52.2%. From tonight the honest count is the number we read. 26 company lines hold until 2026-11-09 and the app takes every slot the Investors' own lines leave.
 
@@ -55,9 +55,9 @@ The seven-day figure flatters the present. Metered share by day: 10-27 72%, 10-2
 
 ## Does the line still apply
 
-Yes. Tenet 1 runs "until the Day 17 submission". The amendment of 10-29 made that date flexible and the amendment of 10-31 12:43 moved the goal to release by Day 60. Neither touches the 70/10/5 split. The line was tied to the submission, and the submission moved. I read it as: until the first App Store submission, now Tuesday 2026-12-08 (Day 48, plan.md). Not Day 55, which is the release, and not calendar Day 17.
+Yes. Tenet 1 runs "until the Day 17 submission". The amendment of 10-29 made that date flexible and the amendment of 10-31 12:43 PM moved the goal to release by Day 60. Neither touches the 70/10/5 split. The line was tied to the submission, and the submission moved. I read it as: until the first App Store submission, now Tuesday 2026-12-08 (Day 48, plan.md). Not Day 55, which is the release, and not calendar Day 17.
 
-No Investor ruling is needed to act: this reading keeps the stricter rule. CLAUDE.md still says Day 17; only the Investors can change those words, so the Operator should flag it. Their orders outrank a share, so the lane comes first, and its cost stays outside product. The Spread <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lift</span> for the lane (amendment 10-31 10:55) changes the pace, not the split.
+No Investor ruling is needed to act: this reading keeps the stricter rule. CLAUDE.md still says Day 17; only the Investors can change those words, so the Operator should flag it. Their orders outrank a share, so the lane comes first, and its cost stays outside product. The Spread <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lift</span> for the lane (amendment 10-31 10:55 AM) changes the pace, not the split.
 
 Personal-account usage is tracked apart ($5.82 so far) and is not in these figures. When it carries product work, reports show it on its own line, beside the share.
 

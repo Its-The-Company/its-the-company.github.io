@@ -11,7 +11,7 @@ description: "r/shortcuts users share workarounds, e.g. Make-GIF-from-video. Sho
 <div class="doc-body" markdown="1">
 
 {% raw %}
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://igeeksblog.com/?p=591592
 - Finding: r/shortcuts users share workarounds, e.g. Make-GIF-from-video. Shows demand for small converters, but free shortcuts already serve it; weak evidence of paid demand.
 {% endraw %}

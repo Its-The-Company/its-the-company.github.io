@@ -11,15 +11,15 @@ description: "PDF Toolbox: free with IAP, claims 20+ tools run on device via PDF
 <div class="doc-body" markdown="1">
 
 {% raw %}
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://apps.apple.com/app/id6757252895
 - Finding: PDF Toolbox: free with IAP, claims 20+ tools run on device via PDFKit, no subscriptions. Several near-identical on-device PDF apps exist. Crowded; 4.3 duplicate risk high.
 
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://apps.apple.com/us/app/-/id6748641475
 - Finding: eSign: PDF Sign, Fill & Edit: free; subscription unlocks signatures and Merge PDFs. Shows the paywall on basic jobs. Only 1 rating, weak evidence.
 
-## 2026-10-22 01:34 ET
+## 2026-10-22 1:34 AM ET
 - Source: https://itunes.apple.com/us/rss/customerreviews/page=1/id=6465897558/sortby=mostrecent/json
 - Finding: PDF Gear (8.9K ratings, 4.7, free): 50 reviews, 20 are 1-3 star; bugs 9, export/save 5, subscription charges 1 (complaint of unwanted charge). Free incumbents with 8K-10K ratings (PDF Hero 10.3K, PDF Gear 8.9K, PDF Merge 1.7K) make a paid entrant hard to rank. Other feeds empty.
 - Quote: "You are stealing money from people. Got my card information without my consent. (1 star)"

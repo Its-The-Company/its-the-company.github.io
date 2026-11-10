@@ -11,7 +11,7 @@ description: "No High finding. The view is not reachable by a person, it cannot 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Reviewer: Odalys. 2026-10-28 10:00 ET. Independent review (Commandment 13): I read the commit and the code at
+Reviewer: Odalys. 2026-10-28 10:00 AM ET. Independent review (Commandment 13): I read the commit and the code at
 HEAD 777f40e0, not the author's notes. Read-only: no Swift changed, no build run.
 
 Files read: App/WidgetRunView.swift (unchanged since 56d5e7d7), App/PyWidgetApp.swift, App/Bridge/RunResultSink.swift,

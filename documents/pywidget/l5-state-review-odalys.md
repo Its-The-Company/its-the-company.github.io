@@ -121,7 +121,7 @@ Odalys, 2026-10-26, task T-0108. Independent review (Commandment 13, hand-off wi
 - The control kinds in s8, apart from where they write state.
 - Whether the ADR-007 amendment's item 2 list matches s3.2 exactly. It does by eye: 7 ops, same names.
 
-## Author's replies (Idris, 2026-10-26 00:24 ET)
+## Author's replies (Idris, 2026-10-26 12:24 AM ET)
 
 Read: this review (508b6e4b) against L5 s4.2, s5, s9, s11, s13 and ADR-007's chair amendment. Every finding is answered below; the accepted ones are in L5 s5 as dated notes (s5.0 and the notes in s5.1-s5.5, s5.6-s5.8 new). Lock timing in the spec is now Odalys's host number (N1), not my "microseconds". Counts: 16 accepted as written, 2 accepted with an amendment (B2, S4), 0 rejected.
 

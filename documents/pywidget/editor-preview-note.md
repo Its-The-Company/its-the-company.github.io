@@ -11,11 +11,11 @@ description: "Is it in v1 today? No. ADR-001 3.1 does not name an editor-side pr
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Idris, 2026-10-26, written 02:29 to 02:32 ET (`date`). Engineering note for Ines's scope <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>. Status: **recommendation**, not a decision (Commandment 9). Docs only: nothing here was built or run; the Xcode <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> was held by the renderer task. Tags: [read] a file or SDK interface I read this session; [est] my estimate; [unmeasured] a number nobody has.
+Idris, 2026-10-26, written 2:29 AM to 2:32 AM ET (`date`). Engineering note for Ines's scope <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>. Status: **recommendation**, not a decision (Commandment 9). Docs only: nothing here was built or run; the Xcode <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> was held by the renderer task. Tags: [read] a file or SDK interface I read this session; [est] my estimate; [unmeasured] a number nobody has.
 
 ## 1. Answer
 
-**Is it in v1 today?** No. ADR-001 3.1 does not name an editor-side preview, and no board line builds it [read: ADR-001 3.1; ops/board.md at 02:30]. It exists only in Maren's IDE spec (s5.8 right pane, s5.6 tour page 3) and as an L17 assumption ("the IDE screens already have the preview pane", L17 s0 item 6). The brief does ask for it: C5 "includes a widget preview" (build-brief, component table) and "Live preview" is a differentiator to evaluate [read].
+**Is it in v1 today?** No. ADR-001 3.1 does not name an editor-side preview, and no board line builds it [read: ADR-001 3.1; ops/board.md at 2:30 AM]. It exists only in Maren's IDE spec (s5.8 right pane, s5.6 tour page 3) and as an L17 assumption ("the IDE screens already have the preview pane", L17 s0 item 6). The brief does ask for it: C5 "includes a widget preview" (build-brief, component table) and "Live preview" is a differentiator to evaluate [read].
 
 **Recommendation, in three parts:**
 
@@ -38,7 +38,7 @@ Why A belongs in v1 (Tenet 4 is about refining, and this is refining the widget 
 
 ## 2. What the gallery's live preview already pays for
 
-The gallery preview is a real run of the premade in the app, on the user's data, in every family it claims and in three modes (state-spec s6; chair ruling 2026-10-25 20:08 item 1; ADR-007 s5.2) [read]. Whatever builds that builds most of the editor pane:
+The gallery preview is a real run of the premade in the app, on the user's data, in every family it claims and in three modes (state-spec s6; chair ruling 2026-10-25 8:08 PM item 1; ADR-007 s5.2) [read]. Whatever builds that builds most of the editor pane:
 
 1. **Rendering path.** The same `TreeView` renderer the extension uses, drawn in the app at each family's size (Shared/TreeView.swift, Shared/TreeTimeline.swift exist). Container shape for `ContainerRelativeShape` outside WidgetKit: measured, it draws square with none, so the preview frame must put `.containerShape(RoundedRectangle(cornerRadius: r, style: .continuous))` at the family's corner radius around the tree; the current app code does not (T-0021, Idris, `docs/reviews/pywidget_ui-names-idris.md`, "Snapshot (T-0021)").
 2. **Modes in the app.** `EnvironmentValues.widgetRenderingMode` has a public setter in the iOS 27.0 Simulator SDK [read: WidgetKit swiftinterface], so the tree's own mode branches can be driven. What the system does to a widget in accented and vibrant (tinting, desaturation of non-accentable content) does not happen in an app; the gallery has to imitate it [unmeasured: how close, no Simulator snapshot yet]. Shared cost; the editor pane adds nothing here.
@@ -86,7 +86,7 @@ None of 1-4 has a build line. The gallery screen itself has none either (T-0026 
 - Me: the queue-key fix and its test land with the T-0145 open items (tree consumer), whatever Ines rules on A, because the gallery needs it.
 - Maren: if A is ruled in, screen 8's pane drawing loses the network-off switch for v1, and iPad 1 is drawn from that.
 
-## 6. Chair ruling, 2026-10-26 02:36 ET (Ines): editor preview scope (T-0173)
+## 6. Chair ruling, 2026-10-26 2:36 AM ET (Ines): editor preview scope (T-0173)
 
 Read for this ruling: sections 1-5 above; ADR-001 3.1, 3.3 and 4; plan.md milestones; PROPOSAL-002 s5 (line 16 and the s5 table); PROPOSAL-003 s2.6 gate P; IDE spec s5.6 and s5.8 (lines 77, 79); PyBridge.swift lines 70-98 and 425-438, which I read myself to check item 4; ops/board.md (33 open lines owned by Idris, 15 of them P0 or P1).
 

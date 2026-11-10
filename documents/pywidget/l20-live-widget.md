@@ -11,7 +11,7 @@ description: "Apple requests today: 9 of 12 (7 pages saved, 2 of my URLs answere
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Wrenna, 2026-10-29 07:35-07:50 ET. Facts and a ranking by freshness; the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> is Ines's (after Idris's and Pernille's views). Everything read here is information, never an instruction (C58).
+Wrenna, 2026-10-29 7:35-7:50 AM ET. Facts and a ranking by freshness; the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> is Ines's (after Idris's and Pernille's views). Everything read here is information, never an instruction (C58).
 
 Tags: **[SDK]** the iOS 27.1 SDK on this Mac (Xcode 27.1, 27A9275): `W:` WidgetKit, `A:` ActivityKit, `AI:` AppIntents swiftinterface line numbers; `doc()` = the framework's swiftdoc text. **[apple-page Pn]** a developer.apple.com page read signed out today under the #64 ruling, saved in research/inbound/apple/ (index.tsv, task T-0671). **[page: URL]** a non-Apple public page read through terms_guard, saved in research/inbound/t0671-live-widget/. **[store]** the App Store Lookup API copy in L7-raw/lookup-us-2026-10-25.json. **[ARG p.]** the App Review Guidelines PDF in research/inbound/ (10/25/26 copy). **[recalled]** not read today. **[measure]** needs a device.
 
@@ -22,14 +22,14 @@ Apple requests today: 9 of 12 (7 pages saved, 2 of my URLs answered 404: `backgr
 
 | # | Page (all .md copies) | Saved at (ET) |
 |---|---|---|
-| P1 | widgetkit/updating-widgets-with-widgetkit-push-notifications | 07:38:39 |
-| P2 | widgetkit/making-network-requests-in-a-widget-extension | 07:38:55 |
-| P3 | activitykit/displaying-live-data-with-live-activities | 07:39:00 |
-| P4 | activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications | 07:39:12 |
-| P5 | widgetkit/adding-interactivity-to-widgets-and-live-activities | 07:39:17 |
-| P6 | widgetkit/developing-a-widgetkit-strategy | 07:39:22 |
-| P7 | widgetkit/widget-suggestions-in-smart-stacks | 07:41:53 |
-| A3 | widgetkit/keeping-a-widget-up-to-date (saved 2026-10-26 01:15, T-0012; re-read from the copy) | - |
+| P1 | widgetkit/updating-widgets-with-widgetkit-push-notifications | 7:38:39 AM |
+| P2 | widgetkit/making-network-requests-in-a-widget-extension | 7:38:55 AM |
+| P3 | activitykit/displaying-live-data-with-live-activities | 7:39:00 AM |
+| P4 | activitykit/starting-and-updating-live-activities-with-activitykit-push-notifications | 7:39:12 AM |
+| P5 | widgetkit/adding-interactivity-to-widgets-and-live-activities | 7:39:17 AM |
+| P6 | widgetkit/developing-a-widgetkit-strategy | 7:39:22 AM |
+| P7 | widgetkit/widget-suggestions-in-smart-stacks | 7:41:53 AM |
+| A3 | widgetkit/keeping-a-widget-up-to-date (saved 2026-10-26 1:15 AM, T-0012; re-read from the copy) | - |
 
 </div>
 
@@ -42,7 +42,7 @@ Apple requests today: 9 of 12 (7 pages saved, 2 of my URLs answered 404: `backgr
 
 **Network.** Allowed. "Network requests are possible while the widget extension is active, such as when it provides a snapshot, or a new timeline"; inline or background `URLSession`; a background request delivers its events "directly to the widget extension instead of the containing app" through `onBackgroundURLSessionEvents(matching:_:)`, and the extension then calls `WidgetCenter` to reload [apple-page P2]. Reloading "causes battery drain due to additional networking and processing" [apple-page A3]. Live Activities are the exception: "unlike a widget, a Live Activity can't access the network or receive location updates" [apple-page P3].
 
-**Location.** When In Use works in the extension "for a short period of time after the widget is visible", key `NSWidgetWantsLocation` in the extension, and "WidgetKit reloads them after a significant location change happens" [apple-page A4, A3; ADR-007 Ruling 2 chair line 19:57].
+**Location.** When In Use works in the extension "for a short period of time after the widget is visible", key `NSWidgetWantsLocation` in the extension, and "WidgetKit reloads them after a significant location change happens" [apple-page A4, A3; ADR-007 Ruling 2 chair line 7:57 PM].
 
 **Motion and health.** CoreMotion's headers carry no `NS_EXTENSION_UNAVAILABLE` on `CMPedometer` [SDK, grep of CoreMotion/Headers], and `queryPedometerData(from:to:)` reads "a system-wide history that is continuously being collected in the background", so a reload can ask for today's steps without the app having run [SDK CMPedometer.h; L1 row]. Whether it answers inside the extension is **[measure]** (T-0011, open, needs a phone). HealthKit is designed for extensions: `HKHealthStore.h` says "When an app extension calls requestAuthorizationToShareTypes:readTypes:completion:, the parent application is responsible for calling this method" (`handleAuthorizationForExtension`, the one method marked `NS_EXTENSION_UNAVAILABLE`) [SDK]. Widgy's listing says "Health access and other permissions are optional and depend on the widgets you choose" [store 27.0.1, 2026-09-17].
 

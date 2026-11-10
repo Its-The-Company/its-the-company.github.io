@@ -11,11 +11,11 @@ description: "Lemmy discussion: a commenter says top iOS apps nearly all use sub
 <div class="doc-body" markdown="1">
 
 {% raw %}
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://lemmy.ndlug.org/post/20149/44801
 - Finding: Lemmy discussion: a commenter says top iOS apps nearly all use subscription pricing and one-time purchase has all but died. Anecdotal forum post, count 1.
 
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://www.indiehackers.com/post/why-are-tv-remote-apps-on-ios-mostly-subscription-based-now-916027908f
 - Finding: Indie Hackers post (search snippet only; fetch returned 403): a free app with a paywall ranks and gets installs while a 4 USD one-time utility does not. Discovery is the risk for any one-time-price idea.
 {% endraw %}

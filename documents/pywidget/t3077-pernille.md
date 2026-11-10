@@ -45,7 +45,7 @@ the verdict is PASS and nobody has to review again.
   mutants-t2055.json at base 32388e712. I could not queue it myself: runner_queue.py takes only commits on
   origin/main, and land_mutants.py pushes a land ref, which I may not do.
 - The size flake: this is the third time I have seen it (12.28 MB in T-0553, 12,349,440 B in T-1048, 12,271,616 B
-  here). Jobs -4 at 09:46 and -6 at 10:02 unpacked the same cache with the same sha256 on the same Simulator slot and
+  here). Jobs -4 at 9:46 AM and -6 at 10:02 AM unpacked the same cache with the same sha256 on the same Simulator slot and
   passed the same check. So something outside the tree changes python/lib by about 950 KB. Most likely it is
   `__pycache__`. That is T-1048's question, and I have added this case to it as a note. It is not a new line.
 

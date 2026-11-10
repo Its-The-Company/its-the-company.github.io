@@ -53,7 +53,7 @@ Wrenna, market and product researcher. First draft 2026-10-26 (T-0249). This dra
 
 ## 1b. Scope map (T-1152)
 
-State is `ops/v1_scope.json` as_of 2026-10-29. Rows: runtime, editor, intents, device-modules, widget-engine, examples, pure-packages, pro are done and stated plainly where the fact sheet says so. completion-lint (E), traceback-taps (F9), projects (F3), prompts (F17), home-screen-scripts (F18, 1.1 since G13 fired 2026-11-03 23:59, so no press-kit row), widget-by-tap and premades (W, N), pro-placement (F7), settings (F8), themes (F13), ipad (F4) are not done and keep their gate form. preview-pane, install-from-file and share-extension are cut to 1.1 and sit under Not in 1.0. Full claim-by-claim table: store-page-draft.md section 10.
+State is `ops/v1_scope.json` as_of 2026-10-29. Rows: runtime, editor, intents, device-modules, widget-engine, examples, pure-packages, pro are done and stated plainly where the fact sheet says so. completion-lint (E), traceback-taps (F9), projects (F3), prompts (F17), home-screen-scripts (F18, 1.1 since G13 fired 2026-11-03 11:59 PM, so no press-kit row), widget-by-tap and premades (W, N), pro-placement (F7), settings (F8), themes (F13), ipad (F4) are not done and keep their gate form. preview-pane, install-from-file and share-extension are cut to 1.1 and sit under Not in 1.0. Full claim-by-claim table: store-page-draft.md section 10.
 
 ## 2. Descriptions
 

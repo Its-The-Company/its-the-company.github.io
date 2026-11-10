@@ -75,7 +75,7 @@ Dropped: Chartwright (an app "ChartWright" exists), Knitwright (.com taken, a kn
 
 ### <span title="Whether we may and can build it: our rules and banned areas, and a first version Idris can finish by Day 22. A subject off the Investors&#x27; list is noted, not dropped.">Fit</span>
 - A tool with a real job and deep domain rules (Commandment 8). Crafts are not a banned area (7). No server, no account, no personal data; privacy label "Data Not Collected" (6).
-- Entirely buildable and testable on one M1 Mac mini in the Simulator: SwiftUI Canvas for the grid, a pure Swift engine package with XCTest, document-based app over Files, PDF export via UIGraphicsPDFRenderer, StoreKit testing in Xcode. Nothing needs App Store Connect before Day 7 (amendment of <span class="nw">2026-10-22</span> 01:09).
+- Entirely buildable and testable on one M1 Mac mini in the Simulator: SwiftUI Canvas for the grid, a pure Swift engine package with XCTest, document-based app over Files, PDF export via UIGraphicsPDFRenderer, StoreKit testing in Xcode. Nothing needs App Store Connect before Day 7 (amendment of <span class="nw">2026-10-22</span> 1:09 AM).
 - Icon, symbols, screenshots: all drawn by code (9). Knitting symbols are geometric glyphs by nature.
 - Scope: see the roadmap. Version 1 is a coherent slice App Review will accept (2.1): draw, validate, write, export.
 

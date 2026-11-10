@@ -11,7 +11,7 @@ description: "Constraint I am keeping on purpose: one token file feeds the app (
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Maren, 2026-10-25; appearances added 2026-10-26. Status: **direction approved** (creative/approved.md item 2, #60, an Investor 2026-10-25 23:59 ET: "Keep both themes as light-mode and dark-mode options"). The app's **light appearance is A Paper and its dark appearance is B Studio**, following the system Light/Dark setting. Icon, App Store screenshots and store copy are not approved and come back as their own proposals.
+Maren, 2026-10-25; appearances added 2026-10-26. Status: **direction approved** (creative/approved.md item 2, #60, an Investor 2026-10-25 11:59 PM ET: "Keep both themes as light-mode and dark-mode options"). The app's **light appearance is A Paper and its dark appearance is B Studio**, following the system Light/Dark setting. Icon, App Store screenshots and store copy are not approved and come back as their own proposals.
 
 Source of truth: `tokens.json` (this folder; the `appearances` block maps light and dark). `appearance.py all` resolves it into `tokens-app.json` (four sets with the same keys: light, dark, lightHC, darkHC), the asset catalog `pywidget/ios/Shared/Theme.xcassets` and `tokens.css`. Contrast is checked by script, not by eye: `python3 pywidget/docs/design/check_tokens.py` checks 820 pairs, 0 below their floor (336 direction pairs as before, plus 484 for the four shipped sets), and fails if the catalog or the CSS is stale. Mockups: `mockups/draw.py` renders 10 PNGs and writes `mockups/qa.json`: all 10 screens report 0 on each check. Previews of the four sets and of the dark widget in the stripped modes: `preview_appearances.py OUTDIR` (PNGs on the design-previews branch, `appearances/`).
 
@@ -247,14 +247,14 @@ In accented, vibrant and clear the system removes the container background, so B
 4. **Nothing means anything by hue or gradient.** Status travels with a symbol or a word; no text sits on meaning carried by the gradient.
 5. **Every paint is a token**, so the system can remap it per mode. No literal colours on Text or Image.
 
-`check_widget_modes.py` reads the 12 premade trees (52 family views) and counts what must be 0: literal colours 0, gradient paints 0, system-family views with no accentable node 0, colour-only status marks 0 (`--strict` fails on any). It also counted two gaps the dark appearance opened in the trees, which were work for the DSL and renderer owners. **Both closed** (checked 2026-10-26 19:46 by T-0200: `serif 0`, `cardbg 0`; the trees carry 27 `design: "display"` fonts and 28 `widgetCard` container paints; Idris's renderer draws both, 238c5e1e, section 8.4):
+`check_widget_modes.py` reads the 12 premade trees (52 family views) and counts what must be 0: literal colours 0, gradient paints 0, system-family views with no accentable node 0, colour-only status marks 0 (`--strict` fails on any). It also counted two gaps the dark appearance opened in the trees, which were work for the DSL and renderer owners. **Both closed** (checked 2026-10-26 7:46 PM by T-0200: `serif 0`, `cardbg 0`; the trees carry 27 `design: "display"` fonts and 28 `widgetCard` container paints; Idris's renderer draws both, 238c5e1e, section 8.4):
 
 - ~~**26 hero Text nodes hard-code `design: serif`.**~~ In dark they would draw New York, not the approved rounded face. Needed: an appearance-aware display design in viewtree (for example `"design": "display"`, resolved by the Swift renderer from `colorScheme`: serif in light, rounded in dark), and `pywidget_ui` emitting it for hero numbers.
 - ~~**28 views set `containerBackground` to `bg.surface`.**~~ In dark full colour that draws B's flat surface, not its gradient card. Needed: a `widget.card` paint (gradient `widget.card.start` to `widget.card.end`; solid in light because both stops are `bg.surface`).
 
 Preview (approximation of the system, `preview_appearances.py`): `appearances/dark-widget-modes.png` on design-previews, the countdown widget in full colour (mockup card and shipped card), accented, clear on a dark wallpaper and clear on a light wallpaper. Clear on a light wallpaper is where white content is weakest; the system adapts the glass there, and only Idris's device check can say how much.
 
-### 8.4 Renderer check against this spec (T-0200, 2026-10-26 19:46)
+### 8.4 Renderer check against this spec (T-0200, 2026-10-26 7:46 PM)
 
 Idris's tree renderer (238c5e1e: `Shared/TreePaint.swift`, `TreeView.swift`, `Widget/PyWidget.swift`) compared value by value with sections 2.0, 2.1, 8.2 and 8.3 and with render.py, the drawn reference. Evidence: the code, the asset catalog's colour sets, and pixels read from `ops/site-checks/widget-card/card-{light,dark}.png` (1.5x; card 237 px = 158 pt). No Xcode run.
 
@@ -282,7 +282,7 @@ Idris's tree renderer (238c5e1e: `Shared/TreePaint.swift`, `TreeView.swift`, `Wi
 
 Result: the display design and the `widgetCard` paint are cleared. One fix (row 8, Idris, T-0219); three spec gaps closed by writing the renderer's values in (rows 6, 7, 9). Everything stays inside creative/approved.md item 2 (the approved tokens and faces); row 8 is a contrast fix inside the approved style and is listed here for the next report.
 
-**T-0399 and T-0429 fixes (Maren, 2026-10-27 13:13 ET), listed for the next report.** All inside creative/approved.md item 2: approved tokens rearranged, and two on-card values drawn from the approved B mockup's translucent card fills.
+**T-0399 and T-0429 fixes (Maren, 2026-10-27 1:13 PM ET), listed for the next report.** All inside creative/approved.md item 2: approved tokens rearranged, and two on-card values drawn from the approved B mockup's translucent card fills.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 9: 8.4 Renderer check against this spec (T-0200, 2026-10-26 19:46), scrolls sideways" data-n="1" style="--tw:907px" markdown="1">
@@ -300,7 +300,7 @@ Result: the display design and the `widgetCard` paint are cleared. One fix (row 
 
 ## 9. Two directions (history: the #60 choice)
 
-The Investors kept both (#60, 2026-10-25 23:59 ET): A is the light appearance, B the dark one (section 2.0). The table and the recommendation below are the proposal as it was put to them; the recommendation for A alone was not taken.
+The Investors kept both (#60, 2026-10-25 11:59 PM ET): A is the light appearance, B the dark one (section 2.0). The table and the recommendation below are the proposal as it was put to them; the recommendation for A alone was not taken.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 10: 9. Two directions (history: the #60 choice), scrolls sideways" style="--tw:739px" markdown="1">
@@ -331,7 +331,7 @@ What B does better: it reads as "creative tool" at a glance and photographs well
 - ~~The Investors choose a direction~~: done, #60 (section 2.0, creative/approved.md item 2).
 - ~~High-contrast palette variants (7:1)~~: done 2026-10-26 (section 2.0).
 - Idris: run `xcodegen generate` in pywidget/ios so `Shared/Theme.xcassets` joins both targets, build, and check in the Simulator: Light, Dark, and both with Increase Contrast (Settings, Accessibility, Display and Text Size). Then the widget family sizes and the four rendering modes, clear on a light wallpaper first (section 8.3).
-- ~~DSL and renderer owners: the display design and the `widget.card` paint (section 8.3), then the premade trees regenerate.~~ Done: trees regenerated (`check_widget_modes.py` serif 0, cardbg 0), renderer 238c5e1e checked value by value 2026-10-26 19:46 (section 8.4); one fix left, T-0219 (Idris, stripped-mode tertiary 0.66).
+- ~~DSL and renderer owners: the display design and the `widget.card` paint (section 8.3), then the premade trees regenerate.~~ Done: trees regenerated (`check_widget_modes.py` serif 0, cardbg 0), renderer 238c5e1e checked value by value 2026-10-26 7:46 PM (section 8.4); one fix left, T-0219 (Idris, stripped-mode tertiary 0.66).
 - For the next report (C51 visibility, inside the approved style): the dark card start `#A08BFF` to `#5B33E6` (section 2.0), and the Increase Contrast sets.
 - App icon and App Store screenshots: separate C51 proposal in the approved appearances (board line).
 - QA note: both galleries report 1 element past the canvas edge in qa.json (`offcanvas`); no text is clipped (clip 0) and the PNGs show no cut content. Not yet traced.

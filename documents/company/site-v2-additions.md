@@ -11,8 +11,8 @@ description: "What would make this fail: a pretty queue that the supervisor igno
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Author: Ines (CEO). Written 2026-10-23, Day 2, 02:20 ET.
-Asked by: an Investor on #24 (comments 6358584701, 6358668923, 6358735562; 02:04-02:14 ET) and on #31 (01:55 ET). Both are recorded in amendments.md (2026-10-23 entries).
+Author: Ines (CEO). Written 2026-10-23, Day 2, 2:20 AM ET.
+Asked by: an Investor on #24 (comments 6358584701, 6358668923, 6358735562; 2:04-2:14 AM ET) and on #31 (1:55 AM ET). Both are recorded in amendments.md (2026-10-23 entries).
 Builds on: ops/plans/site-v2.md (page map, budgets, file owners, collision rule). Everything there still holds unless this file says otherwise.
 Status: plan. Nothing here is built. Slices start after site-v2.md slices 4 to 6 are live (section 8).
 
@@ -32,7 +32,7 @@ What would make this fail: a pretty queue that the supervisor ignores. The drag 
 
 ### 1.1 What happens today (measured from #24, 2026-10-23)
 
-Each Investor comment produced two comments from the company: an "automatic receipt" within about 20 s (06:04:04 to 06:04:27 UTC), then the reply. Every company comment is a GitHub email to both Investors. Three messages between 02:04 and 02:14 ET produced four company comments, which means four emails, and three of those four carried no information. On the site, nothing tells you a reply has arrived unless you reload and look.
+Each Investor comment produced two comments from the company: an "automatic receipt" within about 20 s (6:04:04 AM to 6:04:27 AM UTC), then the reply. Every company comment is a GitHub email to both Investors. Three messages between 2:04 AM and 2:14 AM ET produced four company comments, which means four emails, and three of those four carried no information. On the site, nothing tells you a reply has arrived unless you reload and look.
 
 ### 1.2 What changes
 
@@ -61,7 +61,7 @@ C57 check: "every Investor message gets a reply confirming it arrived" stays tru
 - Items, newest first, grouped: Needs you · Replies · For information. Each item has one primary action, in place: Reply (opens the composer on that thread), Approve / Ask for changes / Reject (pre-filled composer), Open thread. Swipe or "Mark seen" clears it.
 - Style: B "Panel" system. Items are the chat-bubble card at a smaller size, the sender chip with the name printed, and a deadline as a thin bar that shortens. The colour states are the existing tokens, and colour is never the only signal (the words say "Due in 6 h").
 - No Web Push in v2. Push needs a service worker, a push service and a stored subscription, and GitHub's email already reaches your phone.
-- **In-tab system notifications: a trial, approved 2026-10-23 02:31 ET (#24, comment 6358965333).** While the site is open in a tab, an item that reaches "Needs you" or "Replies" also raises a system notification (the browser Notification API, no server, zero model tokens). How it runs:
+- **In-tab system notifications: a trial, approved 2026-10-23 2:31 AM ET (#24, comment 6358965333).** While the site is open in a tab, an item that reaches "Needs you" or "Replies" also raises a system notification (the browser Notification API, no server, zero model tokens). How it runs:
   - The browser asks permission only after a tap. The first time the bell opens, its top row reads "Try notifications (trial)" with a Turn on button. Nothing prompts on page load.
   - Off switches, both one tap: "Notifications: On \| Off" at the top of the bell (per browser, localStorage), and a site-wide `notify_trial` flag in site.json. Either Investor can turn it off for both with one line on #24 ("notifications off"); the company flips the flag in the next build and records it.
   - Limits: one notification per item, at most one per 2 minutes (more are grouped: "3 new replies"). Reports and status never notify. Tapping the notification focuses the tab and opens the item.
@@ -135,7 +135,7 @@ What costs nothing, and is shown as 0 with the count so the point is visible: wa
 - Usage: governor category `unrelated`, outside the 90% product share and outside "Running the site". It is shown on Company > Usage as its own line, in points of the weekly allowance.
 - Site: unrelated threads never appear in public HTML, the public request list, status.json, reports' narrative, or the log page. With a token, they appear under a fifth filter, "Unrelated". The C42 scrub test gets a fixture: an `unrelated` issue must produce zero public bytes.
 - Queue: unrelated requests sit in the same draggable list with a grey "Unrelated" chip. New ones land at the bottom; you can drag them anywhere.
-- First check (Odalys, before any build): can a session write to `~/unrelated/`? If the permission classifier refuses it, that is a blocker. She opens an Urgent Request at once, per the 08:30 amendment.
+- First check (Odalys, before any build): can a session write to `~/unrelated/`? If the permission classifier refuses it, that is a blocker. She opens an Urgent Request at once, per the 8:30 AM amendment.
 
 ## 6. Prompt priority: drag, settings, safe write path
 
@@ -185,7 +185,7 @@ Cost hint under each choice: "Typical: about 2% of your 5-hour allowance" only w
 - The per-message settings override the governor's model, effort and split choice for those lines, within the hard limits.
 - Done-test (slice D): two Investor messages, reordered from the phone; the next session's run file shows the tasks started in the new order, with the chosen model and effort recorded in ops/usage.json. Wrenna verifies on the live site, and Odalys attaches the run file.
 
-### 6.6 Conditions and ties: "do B after A" (Investor, #24 comment 6358965333, 02:31 ET)
+### 6.6 Conditions and ties: "do B after A" (Investor, #24 comment 6358965333, 2:31 AM ET)
 
 The list stays one ordered list. A condition is a property of a row, never a second structure to learn. Three kinds, and no more in v2:
 
@@ -203,7 +203,7 @@ The list stays one ordered list. A condition is a property of a row, never a sec
 
 `/clear B` removes every condition on B. A row may wait on at most three others. Chains may be at most four deep.
 
-**The three-wait limit is per block** (Ines, 2026-10-23 22:15 ET, answering Idris's note that MAX_WAITS counts one row's waits, so a tied block of k rows could wait on 3k). A tied block is one card, one chip and one run, and the depth limit already counts it as one node, so the wait limit counts it the same way: the distinct rows that any member of the block waits on, outside the block, are at most three. A row that is not tied is a block of one, so nothing changes for it. The check runs on the merged state, so a `/tie` that would give the new block a fourth wait is refused as `too_many_waits` and names the tie line, exactly as a fourth `/after` is. Waited-on rows are counted as rows, not blocks, because the chip names rows ("After: Fix the bell").
+**The three-wait limit is per block** (Ines, 2026-10-23 10:15 PM ET, answering Idris's note that MAX_WAITS counts one row's waits, so a tied block of k rows could wait on 3k). A tied block is one card, one chip and one run, and the depth limit already counts it as one node, so the wait limit counts it the same way: the distinct rows that any member of the block waits on, outside the block, are at most three. A row that is not tied is a block of one, so nothing changes for it. The check runs on the merged state, so a `/tie` that would give the new block a fourth wait is refused as `too_many_waits` and names the tie line, exactly as a fourth `/after` is. Waited-on rows are counted as rows, not blocks, because the chip names rows ("After: Fix the bell").
 
 **How it looks (one list, no graph view).**
 - A row that waits sits in the list wherever its order puts it. On its left, under the grip, a 2 px rail in the row's state colour runs up to the row it waits for, with a small elbow. Rows that are next to each other show a short rail; for distant rows the rail is replaced by a chip, so the list never becomes a wiring diagram.
@@ -252,7 +252,7 @@ The list stays one ordered list. A condition is a property of a row, never a sec
 - A new `queue.js`, at or under 10 KB raw, loads only after a token is present (dynamic ``, same origin, CSP unchanged). It is not counted in the anonymous 60 KB home budget, and it is counted in the "with token" column.
 - CSS additions at or under 4 KB raw and 1.5 KB gzipped in site.css (raised from 3 KB raw on 2026-10-23, see below). Requests to first paint: unchanged (6 anonymous).
 - **Cap raised, 2026-10-23 (Ines).** Maren's additions.css came in at 3,846 B raw, 1,350 B gzipped, 774 B raw over my 3 KB cap. I raise the cap rather than drop a component. Reason: every component in the file is one the Investors asked for on #24 and #31 (bell and trial, lanes, state chips, meters with denominators, settings sheet, condition rails and tied card), and my 3 KB was a guess made before any CSS existed, not a measurement. That is my error. The consequence: site.css is inlined into every page and not cached, so the whole 1,350 B gzipped rides on every page view, first and repeat. The 774 B over the old cap is 219 B of that (3,072 B raw gzips to 1,145 B). Measured against section 5 with Wrenna's slice 8 numbers: home first visit about 20.1 to 21.5 KB wire (cap 60 KB), repeat visit about 13.4 to 14.8 KB (cap 25 KB), every other page plus 1.4 KB (cap 80 KB). Requests unchanged. The new cap leaves 250 B raw of room. Any further additions CSS beyond it comes out of an existing rule, one in, one out; it does not move the cap again. make.py now checks both numbers (gzipped is what travels) and exits 0 at today's file.
-- **queue.js cap set, 2026-10-23 14:07 ET (Ines).** Measured: 13,993 B raw / 5,695 B gzipped shipped (6e2d728, comments stripped by build.py), against my 10 KB raw guess. Odalys proposed 14,336 / 6,144. I accept the measurement and set the cap at **16,384 B raw / 6,656 B gzipped shipped**, above her proposal, for one reason: Idris's C13 review (board, F1-F8) found real bugs (false "Saved", a drag that lands one row off, Retry that drops a batch, the Queue issue lost past 30 updates, dialog focus). Those fixes add code, and a cap with 343 B of room would bring the same question back within the hour or tempt someone to trim a fix. Who pays: the file loads only after a token is present, so anonymous home weight is unchanged (0 B); the two Investors load it once per cache life, about 6.5 KB gzipped at most. Nothing is cut. Conditions: (1) this is the last raise for queue.js; after F1-F8, any new piece is one in, one out; (2) the unbuilt pieces ('Moved by', 'Suggested' rails, Fable-paused note) fit inside the cap or wait; (3) cost hints are not built until a measured number exists to show; no row says "not measured yet" from this file; (4) build.py's JS_BUDGETS carries 16384/6656 and the build fails above either. Odalys sets it with her F1 fix.
+- **queue.js cap set, 2026-10-23 2:07 PM ET (Ines).** Measured: 13,993 B raw / 5,695 B gzipped shipped (6e2d728, comments stripped by build.py), against my 10 KB raw guess. Odalys proposed 14,336 / 6,144. I accept the measurement and set the cap at **16,384 B raw / 6,656 B gzipped shipped**, above her proposal, for one reason: Idris's C13 review (board, F1-F8) found real bugs (false "Saved", a drag that lands one row off, Retry that drops a batch, the Queue issue lost past 30 updates, dialog focus). Those fixes add code, and a cap with 343 B of room would bring the same question back within the hour or tempt someone to trim a fix. Who pays: the file loads only after a token is present, so anonymous home weight is unchanged (0 B); the two Investors load it once per cache life, about 6.5 KB gzipped at most. Nothing is cut. Conditions: (1) this is the last raise for queue.js; after F1-F8, any new piece is one in, one out; (2) the unbuilt pieces ('Moved by', 'Suggested' rails, Fable-paused note) fit inside the cap or wait; (3) cost hints are not built until a measured number exists to show; no row says "not measured yet" from this file; (4) build.py's JS_BUDGETS carries 16384/6656 and the build fails above either. Odalys sets it with her F1 fix.
 - Polling: unchanged. No new poll; one new field in the variable.
 
 ### 7.2 Runtime model budget
@@ -261,7 +261,7 @@ Section 3.3: Running the site, at most 3% of the weekly allowance and 5% of any 
 
 ### 7.3 Build budget (model spend to build this, my estimates; the governor's actuals replace them)
 
-The weekly allowance is estimated at about $1,420 (ops/usage.json `estimates.week`, median of 5). At 02:16 ET today the meter read 9% of the weekly allowance used.
+The weekly allowance is estimated at about $1,420 (ops/usage.json `estimates.week`, median of 5). At 2:16 AM ET today the meter read 9% of the weekly allowance used.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 5: 7.3 Build budget (model spend to build this, my estimates; the governor&#x27;s…, scrolls sideways" style="--tw:775px" markdown="1">
@@ -309,12 +309,12 @@ Owners follow site-v2.md 6.1. The one change: after Idris's slice 5 first pass i
 Order. These start after site-v2.md slices 4 to 6 are live, because they build on the new home, Company and stylesheet.
 
 1. **E0 (now, 10 minutes, Odalys):** test whether a session can write `~/unrelated/`. If refused, open an Urgent Request at once.
-2. **B (first):** the usage labels and Running the site line. These are the smallest and the clearest win, and the Investors' 06:14 UTC comment is about trust in the numbers. Due Day 3 (2026-10-24), 12:00 ET.
-3. **A:** notifications. Due Day 3, 20:00 ET (with v2's #29 deadline).
-4. **C:** worker lanes. Due Day 4 (2026-10-25), 12:00 ET.
-5. **D:** queue, drag and settings. It needs C's `from:` links. Due Day 4, 20:00 ET.
-6. **D2:** conditions and ties (6.6). It needs D's list and parser. Due Day 5 (2026-10-26), 08:00 ET.
-7. **E:** Unrelated mode. Due Day 5 (2026-10-26), 12:00 ET. It is lowest because the Investors can already ask unrelated things in any issue meanwhile. The Operator routes them by hand to `~/unrelated/` and tags them.
+2. **B (first):** the usage labels and Running the site line. These are the smallest and the clearest win, and the Investors' 6:14 AM UTC comment is about trust in the numbers. Due Day 3 (2026-10-24), 12:00 PM ET.
+3. **A:** notifications. Due Day 3, 8:00 PM ET (with v2's #29 deadline).
+4. **C:** worker lanes. Due Day 4 (2026-10-25), 12:00 PM ET.
+5. **D:** queue, drag and settings. It needs C's `from:` links. Due Day 4, 8:00 PM ET.
+6. **D2:** conditions and ties (6.6). It needs D's list and parser. Due Day 5 (2026-10-26), 8:00 AM ET.
+7. **E:** Unrelated mode. Due Day 5 (2026-10-26), 12:00 PM ET. It is lowest because the Investors can already ask unrelated things in any issue meanwhile. The Operator routes them by hand to `~/unrelated/` and tags them.
 
 **What runs now, before v2 slice 6 is live (amendment #3: nobody idles).** The back half of every slice touches no page and can start today: Odalys builds the code paths (inbox.py reactions, the `/order` `/set` `/after` `/tie` `/notbefore` `/clear` parser with its cycle tests, investor.json, the governor reading it, the `lanes` and `inbox` fields in live_status.py) behind tests. Wrenna writes the site_qa checks against fixtures. Maren draws the bell, lanes, chips, rail and sheet as static code-rendered screenshots in ops/site-checks/additions/ for the C51 post. Idris reviews each back-end commit. Only the page wiring waits on slice 6. Board lines carry one slice each.
 
@@ -325,14 +325,14 @@ Each slice: tests, the C13 review, Wrenna's live QA at 390 px and desktop, and b
 Nothing blocks this plan today, so no Urgent Request is opened. Three non-blocking questions go on #24:
 1. Queue moves: is the reaction plus the live order enough as the company's reply, or do you want the hourly summary comment (the default)?
 2. If you keep the Queue issue's summary, mute that one issue on GitHub to avoid the emails.
-3. The bell's in-tab system notifications: answered 2026-10-23 02:31 ET, a trial with an off switch (section 1.3). Review question goes on #24 on Day 5.
+3. The bell's in-tab system notifications: answered 2026-10-23 2:31 AM ET, a trial with an off switch (section 1.3). Review question goes on #24 on Day 5.
 
 The token already has Issues: write and Variables: read (ops/plans/investor-token-steps.md step 6), so no new token step is needed.
 
 ## 10. Decisions log
 
-- 2026-10-23 02:20 ET, Ines: this plan. Zero model calls in the UI path. Reaction receipts, with the comment receipt only where C57 requires it. Every % names its denominator. A Running the site line with a 3% weekly cap. Worker lanes linked to Investor messages by a `from:` field. The queue is written by allowlisted comments parsed by code. Unrelated mode with its own label, workspace and bucket. Slices B, A, C, D, E after v2 slices 4 to 6. site.css and templates.py move to Maren after slice 5's first pass.
-- 2026-10-23 02:48 ET, Ines (per #24 comment 6358965333): in-tab notifications ship as a trial, turned on by a tap in the bell, with a per-browser and a site-wide off switch; review Day 5. The priority list gains conditions (After, Tied, Not before) shown as rails and word chips inside the one list, set from the row menu, parsed by code from allowlisted Queue comments with cycle and depth checks; new slice D2, due Day 5 08:00 ET. Back-end halves of B, A, C, D, D2 start now behind tests; only page wiring waits on v2 slice 6.
+- 2026-10-23 2:20 AM ET, Ines: this plan. Zero model calls in the UI path. Reaction receipts, with the comment receipt only where C57 requires it. Every % names its denominator. A Running the site line with a 3% weekly cap. Worker lanes linked to Investor messages by a `from:` field. The queue is written by allowlisted comments parsed by code. Unrelated mode with its own label, workspace and bucket. Slices B, A, C, D, E after v2 slices 4 to 6. site.css and templates.py move to Maren after slice 5's first pass.
+- 2026-10-23 2:48 AM ET, Ines (per #24 comment 6358965333): in-tab notifications ship as a trial, turned on by a tap in the bell, with a per-browser and a site-wide off switch; review Day 5. The priority list gains conditions (After, Tied, Not before) shown as rails and word chips inside the one list, set from the row menu, parsed by code from allowlisted Queue comments with cycle and depth checks; new slice D2, due Day 5 8:00 AM ET. Back-end halves of B, A, C, D, D2 start now behind tests; only page wiring waits on v2 slice 6.
 {% endraw %}
 
 </div>

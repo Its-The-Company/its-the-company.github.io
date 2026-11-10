@@ -65,7 +65,7 @@ Verdict: Guideline risk is low to medium, and lower than Scope's 4.3 risk. The l
 
 ## Candidate: Boardseat
 
-Mockup: `pitches/mockups/standup.png` (drawn by `standup()` in `tools/mockup.py`; type and rectangles only, no images). Every task, time and the amendment on it are real Day 1 entries in `log/events.jsonl` (03:57 amendment from #1; Idris hired 02:59; verifier 04:16; the Mac asleep 05:13 to 07:58). The player's "2 done" score is illustrative.
+Mockup: `pitches/mockups/standup.png` (drawn by `standup()` in `tools/mockup.py`; type and rectangles only, no images). Every task, time and the amendment on it are real Day 1 entries in `log/events.jsonl` (3:57 AM amendment from #1; Idris hired 2:59 AM; verifier 4:16 AM; the Mac asleep 5:13 AM to 7:58 AM). The player's "2 done" score is illustrative.
 
 ### The idea, and what is new
 Each level is a slice of one real company day: the task board at that hour, the workers with their real strengths and weaknesses from their personnel files (Ines cuts research a day early; Wrenna counts carefully and sizes weakly; Idris is strong on Swift and image formats), the token budget, the rules in force, and the events that really happened in that window. You assign, pair, review and escalate. The simulation is deterministic, so a level is a puzzle with a best answer, not a dice roll. The score has three parts: work shipped, rules kept (reviews done, nothing shipped untested, blockers escalated at once), and tokens spent. Your run is shown against a ghost of the real company's run.

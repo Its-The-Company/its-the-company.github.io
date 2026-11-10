@@ -17,7 +17,7 @@ Pernille, 2026-10-31. Reviewed 31b0ccf1 on idris/t0355-projects from the diff, t
 
 ## Evidence
 
-One Simulator run in a throwaway worktree at 31b0ccf1, plus the probes: `T0865ReviewTests` 11 of 11, `WidgetScriptSaveTests` 22 of 22 (iPhone 17e, 2026-10-31 11:16, log `ops/runs/xcodebuild-20261031-111535.log`). An earlier attempt the same session stopped on two compile errors in my probe file and ran no tests. The probes assert what the reading predicts, so green means the defect is as described, not that the code is correct. Source and raw lines: `pywidget/docs/reviews/t0865-evidence/`.
+One Simulator run in a throwaway worktree at 31b0ccf1, plus the probes: `T0865ReviewTests` 11 of 11, `WidgetScriptSaveTests` 22 of 22 (iPhone 17e, 2026-10-31 11:16 AM, log `ops/runs/xcodebuild-20261031-111535.log`). An earlier attempt the same session stopped on two compile errors in my probe file and ran no tests. The probes assert what the reading predicts, so green means the defect is as described, not that the code is correct. Source and raw lines: `pywidget/docs/reviews/t0865-evidence/`.
 
 The probes use a link in the widget folder as the refused sibling, because that is how to force `place` to fail in a test. Disk full, the natural cause, takes the same return at line 200 and was not simulated.
 

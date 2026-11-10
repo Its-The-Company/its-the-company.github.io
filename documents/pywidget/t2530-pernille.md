@@ -12,7 +12,7 @@ description: "Approve. No work needed before TestFlight. The code is the chair l
 
 {% raw %}
 Reviewer: Pernille, 2026-11-05. Independent review (Commandment 13): I read the diff, the tests, the mutant files and
-ADR-007's <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-11-05 02:12 (a) and (c). I did not read Idris's notes beyond the results file the commit ships.
+ADR-007's <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-11-05 2:12 AM (a) and (c). I did not read Idris's notes beyond the results file the commit ships.
 Host only: `swift test` in scratch `T-2530-pernille` (rsync -aL of pywidget/ios/Core at HEAD d9cad3f2e; WidgetStatus.swift
 and WidgetStatusTests.swift unchanged since 0eb733cce). No Xcode, no Simulator.
 
@@ -61,8 +61,8 @@ Each `find` occurs exactly once in WidgetStatus.swift (counted in the scratch co
 `if s.oomGuardSince == nil { s.oomGuardSince = underWay`, `underWay ? missingStatusSince(now) : now`.
 They still mutate the intended code: the set line removed, the set-once guard removed, and the under-way branch forced
 to `now`. To check they are not killed only by the new T-2518 tests, I ran the three alone with
-`--filter WidgetStatusTests/testOomGuardOnAMissingStatusBadgesWithATree` (the T-1714 / 20:00 missing-status test):
-3/3 killed (3, 2, 2 failures). The 20:00 behaviour they were written for still guards them.
+`--filter WidgetStatusTests/testOomGuardOnAMissingStatusBadgesWithATree` (the T-1714 / 8:00 PM missing-status test):
+3/3 killed (3, 2, 2 failures). The 8:00 PM behaviour they were written for still guards them.
 
 ## Findings
 

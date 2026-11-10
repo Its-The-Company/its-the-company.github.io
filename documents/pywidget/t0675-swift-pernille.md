@@ -12,8 +12,8 @@ description: "No blocker for a TestFlight build with the flag off. WidgetLane.ex
 
 {% raw %}
 Independent review (Commandment 13) required by T-0675's done condition before any TestFlight build. Read against
-ADR-007 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-10-29 08:03 items 1-2 (with the later chair lines the code cites: 2026-11-01 13:03, 18:17,
-2026-11-03 14:24) and the T-0675 board line. I read the code at HEAD (1b57eb1d2), not Idris's notes. Scope: Idris's
+ADR-007 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-10-29 8:03 AM items 1-2 (with the later chair lines the code cites: 2026-11-01 1:03 PM, 6:17 PM,
+2026-11-03 2:24 PM) and the T-0675 board line. I read the code at HEAD (1b57eb1d2), not Idris's notes. Scope: Idris's
 T-0675 commits 5e8bd7660 through f75c0ff34 and dd26184c2 (privacy manifests). Files read: Shared/ExtensionLane.swift,
 Shared/LaneGuard.swift, Shared/Bridge/RunResultSink.swift (lines 20-137), App/Projects/LaneMirror.swift,
 App/Projects/WidgetScriptSave.swift (send's mirror path), Widget/PyWidget.swift (provider), Shared/WidgetPlacement.swift
@@ -43,7 +43,7 @@ answer, unknown". The SDK header says otherwise: "0 is returned if the calling p
 process exceeds its memory limit" (os/proc.h:81-82). On a phone, 0 is either "this process has no limit we can read"
 or "already over it". In both cases the rule passes, and Python starts in the one state the margin rule exists to
 stop. The next jetsam <span title="A test written in advance. If it fires, we drop the idea.">kill</span> then demotes the widget, but only after a kill, which is what the rule was meant to avoid on
-a smaller phone (08:03 item 5, last sentence). ExtensionLane.swift:66 makes it worse: `headroom` defaults to `{ 0 }`,
+a smaller phone (8:03 AM item 5, last sentence). ExtensionLane.swift:66 makes it worse: `headroom` defaults to `{ 0 }`,
 so any caller that leaves it out gets the rule switched off without anyone noticing.
 
 Fix: treat 0 as unknown only under `#if targetEnvironment(simulator)`. On a device, 0 refuses (`oomGuard`, the
@@ -127,7 +127,7 @@ mirror failure should remove `lane-scripts/<id>/` best-effort and let the save s
 ## Checked and sound
 
 - **Margin rule** apart from F1: need = 2 x (peak - residue), overflow clamped, no peak or 0 is the first-run figure
-  (LaneGuard.swift:243-247), matching the 2026-11-01 13:03 line. Lifetime peak is counted only when this run raised it
+  (LaneGuard.swift:243-247), matching the 2026-11-01 1:03 PM line. Lifetime peak is counted only when this run raised it
   (LaneGuard.swift:287-291), so a neighbour's peak never charges this widget.
 - **Deadline**: `upTo` never waits on the script thread and never cancels it (ExtensionLane.swift:166-182). The `Once`
   wrapper resumes exactly once. A snapshot never runs (PyWidget.swift:31-38).

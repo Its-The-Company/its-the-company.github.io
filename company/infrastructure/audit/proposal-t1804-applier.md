@@ -14,7 +14,7 @@ description: "An audit, proposal or trial from the company's operations records 
 
 Author: Odalys, 2026-11-04. Diff: `log/audit/proposal-t1804-applier.diff` (27,015 bytes; `tools/apply_proposal.py` +142/-26 lines, `tests/apply_proposal_test.py` +169/-6). Not landed: `tools/apply_proposal.py` in main is unchanged until an Investor replies approve on the request. Commandment 59: the applier's own check needs that approve first.
 
-Source: amendment 2026-11-03 21:48, an Investor, #41 c6621180287 ("Everything should be approvable via the site").
+Source: amendment 2026-11-03 9:48 PM, an Investor, #41 c6621180287 ("Everything should be approvable via the site").
 
 ## What changes
 

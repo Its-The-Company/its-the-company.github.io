@@ -15,7 +15,7 @@ Idris, 2026-10-25, desk research only. Sources and tags follow L1 section 0:
 - **[SDK]**: the local iOS 27.1 SDK.
 - **[recalled]**: not re-read today, because developer.apple.com is refused to scripted reads.
 - **[measure]**: needs a device.
-- **[apple-page A#]** (added 2026-10-26, T-0142): Apple's developer page, read signed out on 2026-10-26 01:15-01:17 ET under the Investors' #64 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>; quote, URL and time in pywidget/docs/release/app-review-matrix.md s1d item A#; the saved copy is in research/inbound/apple/developer.apple.com/ (index.tsv). A3 = Keeping a widget up to date, A4 = Accessing location information in widgets, A2 = Describing use of required reason API, A5 = AppShortcutsProvider, A6 = Complying with Encryption Export Regulations.
+- **[apple-page A#]** (added 2026-10-26, T-0142): Apple's developer page, read signed out on 2026-10-26 1:15-1:17 AM ET under the Investors' #64 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>; quote, URL and time in pywidget/docs/release/app-review-matrix.md s1d item A#; the saved copy is in research/inbound/apple/developer.apple.com/ (index.tsv). A3 = Keeping a widget up to date, A4 = Accessing location information in widgets, A2 = Describing use of required reason API, A5 = AppShortcutsProvider, A6 = Complying with Encryption Export Regulations.
 
 The ADR comes later, after the L3 benchmarks.
 
@@ -104,7 +104,7 @@ Output card:
 </div>
 
 
-#### 3.2.1 Draft words for PWL003 and the own-widget handler warning (Maren, 2026-10-26 20:04 ET, T-0237; DRAFT, <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>)
+#### 3.2.1 Draft words for PWL003 and the own-widget handler warning (Maren, 2026-10-26 8:04 PM ET, T-0237; DRAFT, <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>)
 
 Draft copy, not approved. Idris writes the chosen line into the table above and the lint. Voice follows the rows above: one fact, then one instruction, second person, code in backticks, about 20 to 30 words. Word counts by script.
 
@@ -115,7 +115,7 @@ Draft copy, not approved. Idris writes the chosen line into the table above and 
 - Why the recommended one: it is true whether or not C2-Q1 lands by Day 13. "Only for a few minutes after the widget is seen" (the old row) holds only for a fix in the extension; under ADR-001 a background app run gets no fix at all (C2 s7, "The trap", `when_in_use_background`). It names no permission, because When In Use is the only grant in v1 and 1.1, so there is nothing to choose. It gives a beginner the words to show, as Apple asks ("indicate that the user's location is not currently available").
 - Not in the message: `unavailable_reason`. It is set on a cached value too, so "when `unavailable_reason` is set" would tell people to hide a usable old location. If the editor has a details link, it can say: "`unavailable_reason` says why the value is not fresh."
 
-**PWL012** (warning; code proposed, next free number; trigger per L5 s5.9 chair note 19:56, Q-T174-2 item 3, 5cb79881: a handler calls `pywidget.widgets.state()` with its own widget's id; module name follows Pernille's Q4)
+**PWL012** (warning; code proposed, next free number; trigger per L5 s5.9 chair note 7:56 PM, Q-T174-2 item 3, 5cb79881: a handler calls `pywidget.widgets.state()` with its own widget's id; module name follows Pernille's Q4)
 
 - Recommended (27 words): "This handler writes its own widget with `pywidget.widgets.state()`. For the keys it changes, that write wins over the `state` you return. Change `state` and return it instead."
 - Alternative (31 words): "Your handler's write to its own widget is applied again after it returns, so it replaces those keys in the `state` you return. Put the change in `state` and return it."
@@ -131,9 +131,9 @@ Draft copy, not approved. Idris writes the chosen line into the table above and 
 ## 4. Open
 
 - [measure] ~~Budget per instance or per app.~~ (per instance, A3, 2026-10-26) Accounting for Shortcuts-triggered reloads (~~and intent-triggered~~: exempt, A3). The `getTimeline` time limit. The rarely-viewed band.
-- [browser] ~~Read the "Keeping a widget up to date" article~~ (read 2026-10-26 01:15:53 ET, matrix s1d A3; exemption list now in section 1) and the WWDC25 widgets session for the push budget wording. Still unread: the push budget page and the WWDC session (T-0012, Wrenna, P3). The debugging-lifts-limits sentence has no source yet.
+- [browser] ~~Read the "Keeping a widget up to date" article~~ (read 2026-10-26 1:15:53 AM ET, matrix s1d A3; exemption list now in section 1) and the WWDC25 widgets session for the push budget wording. Still unread: the push budget page and the WWDC session (T-0012, Wrenna, P3). The debugging-lifts-limits sentence has no source yet.
 - 2026-10-26 (T-0142), for the lint copy: PWL003 ends "or ask for 'Always'". Apple: "For most widgets, requesting When In Use authorization is the right choice" [apple-page A4]. I leave the message as it is; whether we ever suggest Always goes to Ines with C2-Q1 and Maren for the words.
-- Chair line (Ines), 2026-10-26 19:57 ET, T-0221 (ADR-007 Ruling 2 chair line, item 3): PWL003 no longer suggests Always; there is no Always in v1 or 1.1. Its condition becomes "script reads location" (When In Use is the only grant). Its message tells the author to show `sampled_at` and to say when no location is available (Apple: "indicate that the user’s location is not currently available"; C2's `unavailable_reason`). Meaning only; the words are Maren's, and Idris writes them into the row above and the lint. Until then the row stands as written.
+- Chair line (Ines), 2026-10-26 7:57 PM ET, T-0221 (ADR-007 Ruling 2 chair line, item 3): PWL003 no longer suggests Always; there is no Always in v1 or 1.1. Its condition becomes "script reads location" (When In Use is the only grant). Its message tells the author to show `sampled_at` and to say when no location is available (Apple: "indicate that the user’s location is not currently available"; C2's `unavailable_reason`). Meaning only; the words are Maren's, and Idris writes them into the row above and the lint. Until then the row stands as written.
 {% endraw %}
 
 </div>

@@ -11,7 +11,7 @@ description: "Start the app work that every candidate needs. The three candidate
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Ines, 2026-10-23 03:26 ET. Status: decided. Board lines are in ops/board.md under "Pre-choice work".
+Ines, 2026-10-23 3:26 AM ET. Status: decided. Board lines are in ops/board.md under "Pre-choice work".
 
 ## Conclusion
 
@@ -67,7 +67,7 @@ Cap: one day.
 
 Draw two layout options for the one-time-unlock paywall, as code-drawn screens in the design/screens.py system: icon or hero, the three benefits, price, Restore, and the no-subscription line, at 390 pt in light and dark. Choose one with me (for the selling job) and Idris (for whether it builds in SwiftUI). Idris then matches `UnlockPaywall` to the chosen option. It goes to C51 together with the product's screenshots.
 
-**Selling-job pick (Ines, 2026-10-23 05:20 ET): B "result", with A as the fallback.** Read: design/review/paywall-{netsmith,ledger}.png, design/paywall.py. Idris's SwiftUI check is still open; if B does not build cleanly at AX5, he says so and we decide together.
+**Selling-job pick (Ines, 2026-10-23 5:20 AM ET): B "result", with A as the fallback.** Read: design/review/paywall-{netsmith,ledger}.png, design/paywall.py. Idris's SwiftUI check is still open; if B does not build cleanly at AX5, he says so and we decide together.
 
 - **Why B.** The paywall appears at the moment the buyer reaches for the locked thing: Export PDF in Netsmith, a second source in Ledger. B puts their own result on top, and the eyebrow line says why the sheet is there ("Export PDF is part of Unlimited"). A asks them to buy an icon. B also fills the dead space that A leaves between the benefits card and the button.
 - **A stays as the fallback.** Use it where there is no result to show: the Restore or Unlock row in Settings, or a gate reached before the first import. `UnlockPaywall` takes an optional hero view. With no hero, it draws A.
@@ -77,7 +77,7 @@ Draw two layout options for the one-time-unlock paywall, as code-drawn screens i
 - **What would make B fail:** a hero that takes longer to draw than the sheet takes to appear. The hero must come from a render the app already holds (the page preview, or the chart on screen), never a fresh render. If it isn't ready, show A.
 - Minor: design/paywall.py's docstring cites "PITCH-4 Netsmith"; Netsmith is PITCH-3.
 
-**Status-state overflow (Ines, 2026-10-23 13:37 ET): the status line goes over the hero.** Idris found B with Netsmith's 196 x 277 pt hero 3 to 53 pt taller than an 844 pt screen at the default text size whenever a status line shows (847 loading, purchasing, restoring; 875 failed; 897 pending and failed load). The button slides under the fold at the moment the buyer is paying. Of his three options:
+**Status-state overflow (Ines, 2026-10-23 1:37 PM ET): the status line goes over the hero.** Idris found B with Netsmith's 196 x 277 pt hero 3 to 53 pt taller than an 844 pt screen at the default text size whenever a status line shows (847 loading, purchasing, restoring; 875 failed; 897 pending and failed load). The button slides under the fold at the moment the buyer is paying. Of his three options:
 
 - **Chosen: the status line sits over the bottom of the hero**, in a band on the system material, 2 lines at most at the default size, the hero's own corner radius. The page is the same height in every state, so the button never moves between tap and result. The hero is the buyer's preview; covering its lower edge for a few seconds sells nothing less. The status is posted to VoiceOver as an announcement, because an overlay is easy to miss.
 - **At accessibility sizes the status goes back in the flow**, directly above the button. The page already scrolls there (Idris's AX5 check), and a band over the hero would cover most of it.

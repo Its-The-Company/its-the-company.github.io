@@ -11,7 +11,7 @@ description: "The predecessor died by staying on old iOS and Python versions. Th
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Odalys, 2026-10-25 19:25 ET. Plan only; nothing installed or scheduled. Inputs: build brief L10, my L13-packages.md, Idris's pinned runtime (python.org iOS XCframework 3.15.1). This machine has Xcode 27.1.
+Odalys, 2026-10-25 7:25 PM ET. Plan only; nothing installed or scheduled. Inputs: build brief L10, my L13-packages.md, Idris's pinned runtime (python.org iOS XCframework 3.15.1). This machine has Xcode 27.1.
 
 The predecessor died by staying on old iOS and Python versions. The plan below is built so that falling behind shows up as a red line within a day, not as an App Store rejection months later.
 

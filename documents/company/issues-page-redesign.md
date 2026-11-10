@@ -11,7 +11,7 @@ description: "Make Home &gt; Issues read like GitHub&#x27;s app: a short list th
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Plan mode with an Investor on #41: asked 2026-11-08 10:22 (c6723293041), questions 10:23 (c6723305755), answers 10:26
+Plan mode with an Investor on #41: asked 2026-11-08 10:22 AM (c6723293041), questions 10:23 AM (c6723305755), answers 10:26 AM
 (c6723335442). Written by the Operator. Investor-requested site work (outside the 5% site share; inside the site and
 process push's scope, ops/plans/site-process-push.md).
 

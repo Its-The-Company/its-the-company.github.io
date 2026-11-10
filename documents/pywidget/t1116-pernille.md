@@ -103,7 +103,7 @@ fixture marker is set (for example, a runner-only env variable from kinds.json).
 - The dirty check leaves out tools other than xc.sh and xc_verdict.py. The runner runs its own tools at the pinned
   commit, so an edit to the Mac mini's tools/xc_sim.py does not change a runner result.
 
-## Re-review 2026-11-04 00:45 ET: the M1 and M2 fixes (T-1914)
+## Re-review 2026-11-04 12:45 AM ET: the M1 and M2 fixes (T-1914)
 
 Reviewer: Pernille. Author: Odalys. Commits: 799cb51c4 (T-1893, T-1894) and 4818b80d8 (busy runner gets the run's
 limit). Files read: tools/xc_route.py, tests/xc_route_test.py. Also read the parts of runner.py (job loop, check-in),

@@ -11,13 +11,13 @@ description: "Goal. Release version 1.0 on Tuesday 2026-12-15 (Day 55), inside t
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Ines, 2026-10-25 19:27 ET; redrawn 2026-10-31 13:02 ET (T-0888). Scope: pywidget/docs/decisions/ADR-001-mvp-and-phasing.md. Money: ops/requests/PROPOSAL-001-card.md "Decided" (#87). Brief: ops/plans/pywidget/build-brief.md. Every task is a line under "## Build: pywidget" on ops/board.md. Current dates and status: ops/milestones.json.
+Ines, 2026-10-25 7:27 PM ET; redrawn 2026-10-31 1:02 PM ET (T-0888). Scope: pywidget/docs/decisions/ADR-001-mvp-and-phasing.md. Money: ops/requests/PROPOSAL-001-card.md "Decided" (#87). Brief: ops/plans/pywidget/build-brief.md. Every task is a line under "## Build: pywidget" on ops/board.md. Current dates and status: ops/milestones.json.
 
-**Goal.** Release version 1.0 on Tuesday 2026-12-15 (Day 55), inside the Investors' goal of release by Day 60 (2026-12-20). Feature freeze Monday 2026-11-30 (Day 40). Submit Tuesday 2026-12-08 (Day 48), with the Investors' approval. The date can move either way; every move goes in the next report and a comment on #41. v1 = the IDE (runtime, editor, console, projects, native prompts, Shortcuts) plus a narrow widget engine and 12 premade widgets, with one Pro purchase. Widget freshness is the first product priority (amendment 2026-10-29 07:33).
+**Goal.** Release version 1.0 on Tuesday 2026-12-15 (Day 55), inside the Investors' goal of release by Day 60 (2026-12-20). Feature freeze Monday 2026-11-30 (Day 40). Submit Tuesday 2026-12-08 (Day 48), with the Investors' approval. The date can move either way; every move goes in the next report and a comment on #41. v1 = the IDE (runtime, editor, console, projects, native prompts, Shortcuts) plus a narrow widget engine and 12 premade widgets, with one Pro purchase. Widget freshness is the first product priority (amendment 2026-10-29 7:33 AM).
 
-## <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Chair</span> note, 2026-10-31 13:02 ET (Ines, T-0888): release by Day 60
+## <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Chair</span> note, 2026-10-31 1:02 PM ET (Ines, T-0888): release by Day 60
 
-Investor rule (an Investor, #41 c6546244045, amendment 2026-10-31 12:43): no hard 30-day deadline, no $200 target or need date, release by Day 60, movable, moves reported. Decided alone, as chair; this note is the record (Commandment 30). It replaces every date in the chair note of 2026-10-29 08:03 from Day 21 on. The architecture in that note stands.
+Investor rule (an Investor, #41 c6546244045, amendment 2026-10-31 12:43 PM): no hard 30-day deadline, no $200 target or need date, release by Day 60, movable, moves reported. Decided alone, as chair; this note is the record (Commandment 30). It replaces every date in the chair note of 2026-10-29 8:03 AM from Day 21 on. The architecture in that note stands.
 
 **The dates.**
 
@@ -31,7 +31,7 @@ Investor rule (an Investor, #41 c6546244045, amendment 2026-10-31 12:43): no har
 | 24-27 | 11-14 to 11-17 | Only if the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> fails <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span> or G2: bound fields (T-0682), then a second device session. Otherwise the 1.0 board | Idris, Pernille |
 | 16-39 | 11-06 to 11-29 | The 1.0 board to freeze rows F1-F20: gallery, Settings, completion, prompts, Home Screen route, Pro placement, themes, iPad, accessibility; the alpha's fail list; internal TestFlight builds as soon as #100 and #98 2A allow | Idris, Maren, Pernille, Wrenna |
 | 30 | 11-20 | <span title="Can a buyer find it? Yes if the phrase is a store search suggestion or a top-10 app under it has over 100 ratings.">Pull</span>-in check (below). An ordinary evening report; no ending, no tally | Ines |
-| 40 | 11-30 | Feature freeze, 23:59; widget cut line (ADR-001 3.3) applied at the same commit | Ines, Idris, Maren |
+| 40 | 11-30 | Feature freeze, 11:59 PM; widget cut line (ADR-001 3.3) applied at the same commit | Ines, Idris, Maren |
 | 41-45 | 12-01 to 12-05 | Beta on the freeze build: bug fixes only, Investors' phones, more testers if the Investors choose. Icon, screenshots and store page go to them for <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span> on Day 41, answer wanted by Day 45 | Idris, Maren, Wrenna |
 | 46 | 12-06 | Release candidate; Fable whole-product review; launch sweep T-0788 | Ines, Idris, Wrenna |
 | 47 | 12-07 | Submission approval asked | Ines |
@@ -52,7 +52,7 @@ Investor rule (an Investor, #41 c6546244045, amendment 2026-10-31 12:43): no har
 
 **Why Day 55 and not Day 48 or Day 60.** My sizing, a judgment and not a measurement: freshness about 10 lane days (T-0675 3.5, T-0687 and T-0696 1, T-0678 1, T-0198 and T-0793 2, review 1, gate 2), the 1.0 board about 14. That is 24 of the 30 days from 11-01 to 11-30, about five days of slack, more than any plan here has had. No usage from the personal lane is counted. Day 60 is a Sunday, right before the holidays [recall: Apple warns of slower review in late December, unverified], and a slip past it would cost more than a slip in November. Day 55 is the last Tuesday inside it; the launch plan's rooms favour a Tuesday [judgment, launch plan s5.3].
 
-**Pull-in check, written before the evidence.** On Day 30 (2026-11-20 23:59), I move freeze, submit and release in by seven days (release Tuesday 12-08) only if all of these hold: T-0680's verdict and the flag default are written in ADR-007; T-0793 is on main; F6, F7, F8, F17 and F18 each have a passing record; A11 is green at that commit. All or nothing. If they hold and T-0192 looks better than a week, the Investors choose. Otherwise the table stands.
+**Pull-in check, written before the evidence.** On Day 30 (2026-11-20 11:59 PM), I move freeze, submit and release in by seven days (release Tuesday 12-08) only if all of these hold: T-0680's verdict and the flag default are written in ADR-007; T-0793 is on main; F6, F7, F8, F17 and F18 each have a passing record; A11 is green at that commit. All or nothing. If they hold and T-0192 looks better than a week, the Investors choose. Otherwise the table stands.
 
 **Slip triggers.** T-0675 not on main by Day 18 (11-08), or no T-0680 verdict by Day 27 (11-17): I re-date the same day and say so on #41. Past Day 21 without #100 and #98 2A, the gate and the first TestFlight build wait day for day.
 
@@ -77,13 +77,13 @@ Investor rule (an Investor, #41 c6546244045, amendment 2026-10-31 12:43): no har
 </div>
 
 
-**Old dates in board lines and ADRs.** A date below reads as the one beside it, until the line is rewritten. Freeze Day 13, 11-02 23:59, 11-03 23:59 and Day 21: read 2026-11-30 23:59. Release candidate Day 24: read Day 46 (12-06). Submit Day 25 or Day 28: read Day 48. ADR-007's T-0793 cuts (chair line 2026-10-30 13:35, item 5) name the freeze and the release candidate, so they follow; I still want T-0793 on main by Day 21. T-0101 waits until 2026-12-09, the day after submission (the 01:03 chair line below said 11-16). Investor asks keep their dates: bank and tax, #90 and #92 Day 12; #98 2A 11-05; #100 no later than Day 21. The launch-plan review moves from Day 15 to T-0890, Day 41.
+**Old dates in board lines and ADRs.** A date below reads as the one beside it, until the line is rewritten. Freeze Day 13, 11-02 11:59 PM, 11-03 11:59 PM and Day 21: read 2026-11-30 11:59 PM. Release candidate Day 24: read Day 46 (12-06). Submit Day 25 or Day 28: read Day 48. ADR-007's T-0793 cuts (chair line 2026-10-30 1:35 PM, item 5) name the freeze and the release candidate, so they follow; I still want T-0793 on main by Day 21. T-0101 waits until 2026-12-09, the day after submission (the 1:03 AM chair line below said 11-16). Investor asks keep their dates: bank and tax, #90 and #92 Day 12; #98 2A 11-05; #100 no later than Day 21. The launch-plan review moves from Day 15 to T-0890, Day 41.
 
 What would make this fail: the lane fails its gates and T-0682 eats all the slack; #100 waits past Day 21; a second rejection lands in the holidays; or thirty free days invite scope drift and tool work that takes Idris's slots.
 
 ## Milestones and owners (2026-10-25, history)
 
-**History.** The rows for Days 5-8 stand. The rows for Days 9-17 are the plan of 2026-10-25, kept as written and no longer current: they were replaced by the chair note of 2026-10-29 08:03 below, and that table's rows from Day 21 on by the chair note of 2026-10-31 13:02 above.
+**History.** The rows for Days 5-8 stand. The rows for Days 9-17 are the plan of 2026-10-25, kept as written and no longer current: they were replaced by the chair note of 2026-10-29 8:03 AM below, and that table's rows from Day 21 on by the chair note of 2026-10-31 1:02 PM above.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 3: Milestones and owners (2026-10-25, history), scrolls sideways" data-n="1" style="--tw:769px" markdown="1">
@@ -130,13 +130,13 @@ Five of six seats: Ines (CEO, chair, money, review pack sign-off), Idris (iOS: r
 
 Round lines are on the board, tagged [hiring]: brief on Opus (Ines), slate and interviews on Sonnet (Operator), panel with Idris, decision on Opus (Ines). Target: hired by Day 6 (2026-10-27). Until then Odalys holds the Python-side lines.
 
-## Chair note, 2026-10-26 22:17 ET (Ines, T-0331): Xcode queue Day 6-10
+## Chair note, 2026-10-26 10:17 PM ET (Ines, T-0331): Xcode queue Day 6-10
 
-Ruled in ops/plans/pywidget/xcode-queue-day6-10.md. Main slot order: T-0206 (running) + T-0161, T-0312a (input), T-0208, T-0052, T-0207 (now P0), T-0286, T-0041, T-0031, end to end, T-0051. The worktree slot takes checks and records only (T-0021, T-0024, T-0306, T-0039, T-0213 measurements, T-0321 after #83, device runs after membership). Nothing is planned on the MacBook until the Investors install the runner. Moved off Idris: T-0042 text (Odalys), T-0273 rule and T-0106 schema (Pernille), T-0259 (Wrenna). To 1.1: T-0212, T-0032, T-0044. The line that moves the alpha if late: T-0207, checkpoint Day 9 18:00.
+Ruled in ops/plans/pywidget/xcode-queue-day6-10.md. Main slot order: T-0206 (running) + T-0161, T-0312a (input), T-0208, T-0052, T-0207 (now P0), T-0286, T-0041, T-0031, end to end, T-0051. The worktree slot takes checks and records only (T-0021, T-0024, T-0306, T-0039, T-0213 measurements, T-0321 after #83, device runs after membership). Nothing is planned on the MacBook until the Investors install the runner. Moved off Idris: T-0042 text (Odalys), T-0273 rule and T-0106 schema (Pernille), T-0259 (Wrenna). To 1.1: T-0212, T-0032, T-0044. The line that moves the alpha if late: T-0207, checkpoint Day 9 6:00 PM.
 
-## Chair note, 2026-10-29 08:03 ET (Ines, T-0671): widget freshness moves the dates
+## Chair note, 2026-10-29 8:03 AM ET (Ines, T-0671): widget freshness moves the dates
 
-Investor rule (amendments.md, 2026-10-29 07:33): widget freshness beats a quick launch, Day 17 is flexible. Ruled in ADR-007's chair line of 2026-10-29 08:03: Python runs in the widget extension for `lane: widget` scripts (ADR-007 option c), built now behind the flag, the flag's default set from device numbers before the release candidate; the declared Swift steps (net fetch, location, steps) ship either way; bound fields are a specified contingency built only if the lane fails its gates. About 7 new days on Idris's lane. New milestones; rows above Day 9 stand.
+Investor rule (amendments.md, 2026-10-29 7:33 AM): widget freshness beats a quick launch, Day 17 is flexible. Ruled in ADR-007's chair line of 2026-10-29 08:03: Python runs in the widget extension for `lane: widget` scripts (ADR-007 option c), built now behind the flag, the flag's default set from device numbers before the release candidate; the declared Swift steps (net fetch, location, steps) ship either way; bound fields are a specified contingency built only if the lane fails its gates. About 7 new days on Idris's lane. New milestones; rows above Day 9 stand.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 5: Chair note, 2026-10-29 08:03 ET (Ines, T-0671): widget freshness moves the dates, scrolls sideways" style="--tw:760px" markdown="1">
@@ -156,7 +156,7 @@ Investor rule (amendments.md, 2026-10-29 07:33): widget freshness beats a quick 
 </div>
 
 
-History: the rows from Day 21 on and the next paragraph are replaced by the chair note of 2026-10-31 13:02 at the top.
+History: the rows from Day 21 on and the next paragraph are replaced by the chair note of 2026-10-31 1:02 PM at the top.
 
 Consequence, reported not decided: 1.0 is on sale around Day 27-28 at best, so the Mission's $200 by Day 30 cannot come from more than two or three selling days. Decision issues due Day 12 (#87, #90, #92, #98) keep their dates; they are needed before the freeze regardless.
 
@@ -164,9 +164,9 @@ Consequence, reported not decided: 1.0 is on sale around Day 27-28 at best, so t
 
 Human checkpoints (brief section 0): no accounts, spending, contact with Apple or third parties, TestFlight or App Store submission, publishing, pricing, legal terms, or 2.1 changes without the Investors. PROPOSALs for any change to 2.1. One ADR per significant choice. Every outside library and asset logged with its licence (Commandments 4, 5, 9). Every visual drawn by code and approved before it ships (Commandments 9, 51). No scripted reads against a host's terms (Commandment 6); the GitHub hold (#53) stands until a ruling says otherwise.
 
-**Chair line, 2026-10-31 01:03 ET (Ines, T-0852; an Investor, #41 c6539190636).** Document upkeep that doesn't serve the app stops. Recurring passes stop unless a named reader needs them before submission: T-0023, T-0115 and T-0222 have none and stop today; CORRECTIONS.md stays as it stands. 1.1 design notes wait behind the first submission: T-0101 waits until 2026-11-16, the day after Day 25. T-0845 stays: the Investors asked for it and are its reader. Launch documents state only what the code does at that commit. For packets: a new document names its reader and use, or it isn't written.
+**Chair line, 2026-10-31 1:03 AM ET (Ines, T-0852; an Investor, #41 c6539190636).** Document upkeep that doesn't serve the app stops. Recurring passes stop unless a named reader needs them before submission: T-0023, T-0115 and T-0222 have none and stop today; CORRECTIONS.md stays as it stands. 1.1 design notes wait behind the first submission: T-0101 waits until 2026-11-16, the day after Day 25. T-0845 stays: the Investors asked for it and are its reader. Launch documents state only what the code does at that commit. For packets: a new document names its reader and use, or it isn't written.
 
-## Chair note, 2026-11-03 21:09 ET (Ines, board <span title="A numbered batch of planned work, with its own plan file.">refill</span>): Xcode slot order after T-1728
+## Chair note, 2026-11-03 9:09 PM ET (Ines, board <span title="A numbered batch of planned work, with its own plan file.">refill</span>): Xcode slot order after T-1728
 
 One Xcode task at a time on the Mac mini, and the MacBook gate J-20261103-2015-xc-test is still running. From 11-04, [ops] stays at 10% and [site] at 5% (#41 c6619795358). So Idris's slot goes to freshness first, as the 10-31 chair note's row for 11-01 to 11-11 says, and everything that can run without Xcode moves off his lane.
 
@@ -180,17 +180,17 @@ Not next: T-0198's host half landed (186e9027); its T2 call rides with T-0793, w
 
 **Off the slot tonight (T-1754 to T-1762).** These are host-only or need no build. Pure rules in the Core package go to Pernille and Odalys: which widget state shows, where the stale entry goes, the traceback fold, and the refresh schedule. Their Xcode wiring stays inside T-0048, T-0389 and T-0793. Pernille also gets a test that the bundled files open clean in the editor. Maren specs the iPhone examples entry before T-0811. Wrenna drafts the support Q&A, the rejection replies and the review-notes scope map from saved sources. No hiring: the gap is the Xcode slot, not hands (Commandment 18).
 
-**Second batch, 22:16 (T-1792 to T-1801).** Same rule: no Xcode, no Simulator, each under about 90 minutes. Run order, freshness first: T-1792 (Idris reviews T-1439, the refresh button and age line DSL), T-1793 (age line rule) and T-1794 (what a refresh clears) as pure rules in Core for T-1440 and T-0678; T-1795 (premades declare stale_after) and T-1796 (lane list against the scan) for Pernille; T-1797 (small age line, measured) and T-1798 (Activity words for every outcome) for Maren; T-1799 (freshness claims against saved Apple pages) and T-1800 (privacy label against HEAD) for Wrenna; T-1801 (Idris reviews T-0309's Python half before T-1786). Still no hiring.
+**Second batch, 10:16 PM (T-1792 to T-1801).** Same rule: no Xcode, no Simulator, each under about 90 minutes. Run order, freshness first: T-1792 (Idris reviews T-1439, the refresh button and age line DSL), T-1793 (age line rule) and T-1794 (what a refresh clears) as pure rules in Core for T-1440 and T-0678; T-1795 (premades declare stale_after) and T-1796 (lane list against the scan) for Pernille; T-1797 (small age line, measured) and T-1798 (Activity words for every outcome) for Maren; T-1799 (freshness claims against saved Apple pages) and T-1800 (privacy label against HEAD) for Wrenna; T-1801 (Idris reviews T-0309's Python half before T-1786). Still no hiring.
 
-## Chair note, 2026-11-03 22:22 ET (Ines, T-1802): the runner job folders on the Mac mini
+## Chair note, 2026-11-03 10:22 PM ET (Ines, T-1802): the runner job folders on the Mac mini
 
 **Ruling: not needed; they go only through the Investors.** Read only, nothing tried. There are six folders under ~/t0351-runner-work/jobs, not five, about 12.7 GB by du, not 10.5. Each is one runner_profile_compare.py run (T-0351, T-0369, T-1201, T-1207). Five left their result row in ops/metrics/runner-profile-compare.jsonl, committed (status, counts, failing test names, log tail); 11b82eb7 stopped mid-download and has no row and nothing to keep. No open line reads them: T-1703 makes its own device set on the SSD, and T-1466 and T-1652 cite the committed rows. Any folder comes back by rerunning its commit.
 
-**Route.** Odalys's rm -rf was refused, so under T-0848 and Commandment 2 the company's part ends there: no rewording, no other tool, no split, no standing sweep, and no new cleanup flag in the compare tool aimed at these six. The one legitimate route is a request: action card ops/requests/t1802-disk-card.md (recommend A: an Investor runs the delete; B: they name the route; C: no). The Operator posts it. Default: nothing is deleted. Until there is an answer, the Mac mini's Xcode gate stays shut and Idris's slot waits for the MacBook runner. The 21:09 order stands.
+**Route.** Odalys's rm -rf was refused, so under T-0848 and Commandment 2 the company's part ends there: no rewording, no other tool, no split, no standing sweep, and no new cleanup flag in the compare tool aimed at these six. The one legitimate route is a request: action card ops/requests/t1802-disk-card.md (recommend A: an Investor runs the delete; B: they name the route; C: no). The Operator posts it. Default: nothing is deleted. Until there is an answer, the Mac mini's Xcode gate stays shut and Idris's slot waits for the MacBook runner. The 9:09 PM order stands.
 
-## Chair note, 2026-11-04 22:03 ET (Ines, T-2354): version 1.0 re-planned around B-staged (#142)
+## Chair note, 2026-11-04 10:03 PM ET (Ines, T-2354): version 1.0 re-planned around B-staged (#142)
 
-Investor an Investor chose **B-staged** on #142 (c6648346528, 2026-11-04 21:50) from the costing card of 2026-11-03 14:49. Decided alone, as chair; this note is the record (Commandment 30). The dates in the 2026-10-31 note stand; this note changes what 1.0 holds and what comes after it.
+Investor an Investor chose **B-staged** on #142 (c6648346528, 2026-11-04 9:50 PM) from the costing card of 2026-11-03 2:49 PM. Decided alone, as chair; this note is the record (Commandment 30). The dates in the 2026-10-31 note stand; this note changes what 1.0 holds and what comes after it.
 
 **Reading of the answer.** "B-staged" came without "6a" or "6b". The card recommended B-staged with 6a, so 6a is the plan: the internet is free in scripts, the editor and every premade; a widget that keeps itself fresh from the internet in the background is Pro. One word from the Investors switches it to 6b (Pro = themes only). Said plainly on #142.
 

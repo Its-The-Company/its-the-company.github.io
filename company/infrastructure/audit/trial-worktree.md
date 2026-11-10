@@ -12,7 +12,7 @@ description: "An audit, proposal or trial from the company's operations records 
 
 {% raw %}
 
-Idris, 2026-10-25 22:58-23:16 ET. Task OPS-6 from #41 (c6407113363 item 3; c6407181591, ops first).
+Idris, 2026-10-25 10:58-11:16 PM ET. Task OPS-6 from #41 (c6407113363 item 3; c6407181591, ops first).
 Status: **prototype tested, not switched on.** The Operator prompt change goes to the Investors as a
 proposal (#41 item 7). Every number below comes from git history, the HEAD reflog, ops/runs/
 transcripts, the supervisor log, or a timed run. Nothing comes from memories or reports.
@@ -23,7 +23,7 @@ Tool: `python3 tools/shared_tree_incidents.py [--since D --until D] [--json]` (t
 tests/shared_tree_incidents_test.py, 7/0; 4 of 4 single-site mutants caught). The class definitions
 are frozen as of this entry and will not be changed to fit a result.
 
-Window 2026-10-22 00:00 to 2026-10-26 00:00 ET, 2,429 commits:
+Window 2026-10-22 12:00 AM to 2026-10-26 12:00 AM ET, 2,429 commits:
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: 1. Evidence: what the shared tree costs now, scrolls sideways" data-n="2" style="--tw:473px" markdown="1">
@@ -112,7 +112,7 @@ from Day 2). Workers already reach for worktrees when they need isolation.
    - It made `.claude/worktrees/agent-<id>` inside the repo (excluded in .git/info/exclude) on
      branch `worktree-agent-<id>`, as a full 1.1 GB checkout with no Vendor link. It was removed
      automatically because nothing changed.
-   - It was based on **origin/main = 2e4251f9 (2026-10-24 20:12), 780 commits behind local
+   - It was based on **origin/main = 2e4251f9 (2026-10-24 8:12 PM), 780 commits behind local
      main**. Pushes have been refused since then: the supervisor log says "a commit to push holds a
      file over GitHub's 100 MB limit" (#54).
    - Claude Code's own check refused a compound command with git calls in it.

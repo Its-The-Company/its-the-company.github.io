@@ -19,7 +19,7 @@ that screen. The Lows can wait.
 Read: 0cfa6404b, 94f1203da, 8b90f35f8, f13def282, 3727c91d9 and the files they touch at HEAD (69018af2d);
 ExtensionLane.swift (0e756d6cc and later fixes); CrashMarker.swift; PyBridge.swift runAndEmit/doStart; LaneGuard.swift
 WidgetStateLock; WidgetStatus.swift WidgetStatusStore; RunLogStore/RunLogRetention; WidgetScriptSave.swift's commit;
-ADR-007 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-11-02 17:15 items 1-7; board lines T-1140/T-3132 and T-0198. I did not see Idris's reasoning.
+ADR-007 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-11-02 5:15 PM items 1-7; board lines T-1140/T-3132 and T-0198. I did not see Idris's reasoning.
 
 Ran: `swift test --filter 'RunLog|WidgetStatus'` in pywidget/ios/Core on the host: 128 tests, 0 failures. On the host,
 a 12-line Swift script showed that an `AsyncStream` loop whose task is cancelled ends without the element yielded after

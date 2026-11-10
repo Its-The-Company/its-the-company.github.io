@@ -21,14 +21,14 @@ merges can absorb"); asked again #41 c6754467284; Operator c6754514005.
 
 | Measure | Value | Source, sample |
 |---|---|---|
-| Land attempts / landed per day, 11-03..11-09 | 109/49, 46/26, 76/21, 172/57, 48/36, 251/77, 64/35 (11-09 to ~18:30) | tools/land_stats.py --json, 766 attempts |
+| Land attempts / landed per day, 11-03..11-09 | 109/49, 46/26, 76/21, 172/57, 48/36, 251/77, 64/35 (11-09 to ~6:30 PM) | tools/land_stats.py --json, 766 attempts |
 | Landed per day, median | 36 (range 21-77) | same, 7 days |
 | Land pass rate per day | 45%, 57%, 28%, 33%, 75%, 31%, 55% | same |
-| Waiting <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> refs by stamp day (UTC), 11-06..11-09 | 68, 39, 133, 155 | ops/runs/.dispatch-parked.json 18:30, 478 refs |
+| Waiting <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> refs by stamp day (UTC), 11-06..11-09 | 68, 39, 133, 155 | ops/runs/.dispatch-parked.json 6:30 PM, 478 refs |
 | Parked against landed, 11-09 | 147 parked, 35 landed (Operator's count) | task packet |
 | Live retry lines | 11-08 62-163, 11-09 77-110 (now 109) | ops/metrics/retry_queue.jsonl, 43 rows |
 | main_gate run time | median 479 s, p90 1279 s | ops/metrics/main_gate.jsonl, 276 runs |
-| Load | 120-430 on 8 cores (15-54 a core); pool.jsonl 12:35 read 13.3 a core | task packet, ops/metrics/pool.jsonl |
+| Load | 120-430 on 8 cores (15-54 a core); pool.jsonl 12:35 PM read 13.3 a core | task packet, ops/metrics/pool.jsonl |
 
 </div>
 
@@ -85,7 +85,7 @@ new-task sessions and the reserve as functions there (agent_limits, new_left, re
 owns tools/dispatch.py and tools/personal_tick.sh (the merge-first switch) and wires those functions in. Both read the
 lines from ops/merge_capacity.json.
 
-Dry read on live files, 11-09 ~19:10 (scratch code, nothing armed): parked refs stamped in 24 h 154 (line 40), live
+Dry read on live files, 11-09 ~7:10 PM (scratch code, nothing armed): parked refs stamped in 24 h 154 (line 40), live
 retry lines 101 (line 50), pass rate 64% of 11 lands in 3 h (line 70%): all three over, so the pool would step from
 9 toward 2, one step per 20 minutes (about 140 minutes). Load 6.5 a core (line 10). Reserve account: b (resets last).
 {% endraw %}

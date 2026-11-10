@@ -15,7 +15,7 @@ Odalys, 2026-10-26, task T-0244. Independent review (Commandment 13, hand-off wi
 
 **Disclosure.** I wrote L13, and its s3 (c) is the licence allowlist that certifi fails. Below I review an exception to my own rule. Weigh my view on certifi with that in mind.
 
-**Measured (n = 8 wheels, 2026-10-26 20:25:50-20:26:19 ET).** I fetched all eight pure pins again through `terms_guard.fetch`, each into its own fresh temp folder, using a new checker, `tools/pkg_verify.py` (tests in `tests/pkg_verify_test.py`: 17/0 on 3.9.6 and 3.13.18; 5 of 5 seeded mutants killed). Nothing from a wheel was imported or run. The checker reads bytes only, and `pkg_measure` ran under `-I` with the unpacked folders passed as arguments. Results:
+**Measured (n = 8 wheels, 2026-10-26 8:25:50-8:26:19 PM ET).** I fetched all eight pure pins again through `terms_guard.fetch`, each into its own fresh temp folder, using a new checker, `tools/pkg_verify.py` (tests in `tests/pkg_verify_test.py`: 17/0 on 3.9.6 and 3.13.18; 5 of 5 seeded mutants killed). Nothing from a wheel was imported or run. The checker reads bytes only, and `pkg_measure` ran under `-I` with the unpacked folders passed as arguments. Results:
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1, scrolls sideways" style="--tw:640px" markdown="1">

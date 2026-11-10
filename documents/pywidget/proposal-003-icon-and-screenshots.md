@@ -12,7 +12,7 @@ description: "All drawn by code; none comes from an image model (Commandment 9).
 
 {% raw %}
 - Status: **proposed. Creative approval by the Investors (<span title="Commandment 51: the Investors approve every visual before it ships.">Commandment 51</span>).** Nothing here is approved or shipped. Asked in ops/questions.md, "For the next report: Creative approvals", item 11.
-- Author: Maren (product and visual designer), 2026-10-26, 00:12 to 00:28 ET by `date`. Board line T-0099.
+- Author: Maren (product and visual designer), 2026-10-26, 12:12 AM to 12:28 AM ET by `date`. Board line T-0099.
 - Inside: the approved two appearances (creative/approved.md item 2, #60): light = A Paper, dark = B Studio. Every light picture here is A Paper; every dark one is B Studio. The icon and the screenshots are the parts item 2 sent back for their own approval.
 - Inputs: release/store-page-draft.md (sections 3, 6, 7, 8), release/app-review-matrix.md (rows 31, 33, 34, 39, 44; section 1b, Apple's text), design/icon/README.md (v0 directions), design/ide/spec.md, design/widgets (premade trees), the 5 free / 7 Pro <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> ruling (b8b4f0e4).
 - Tags: [doc] a company file says it; [recall] my memory, unverified; [measured] a script printed it.
@@ -143,11 +143,11 @@ Caption contrast [measured, store/qa.json]: light 15.8 and 6.77 (accent line); d
 </div>
 
 
-### 2.6 Chair note, 2026-10-26 01:19 ET (Ines, T-0120): caption review
+### 2.6 Chair note, 2026-10-26 1:19 AM ET (Ines, T-0120): caption review
 
 Maren's captions in 2.3 stay as written; my suggested wording sits beside them. Both go to the Investors with ops/questions.md item 11, and they choose.
 
-Held to: ADR-001 3.1 with tonight's rulings (5 free / 7 Pro, b8b4f0e4; no share extension in v1, ADR-001 00:04; no online pip in v1, ADR-006 s10 and s12; Install from file a stretch, G10), store-page-draft.md (sections 6 and 7), matrix rows 25, 31, 33, 34 and 44, and Apple's text from the #59 PDF copy (/private/tmp/i59pdf/guidelines.txt):
+Held to: ADR-001 3.1 with tonight's rulings (5 free / 7 Pro, b8b4f0e4; no share extension in v1, ADR-001 12:04 AM; no online pip in v1, ADR-006 s10 and s12; Install from file a stretch, G10), store-page-draft.md (sections 6 and 7), matrix rows 25, 31, 33, 34 and 44, and Apple's text from the #59 PDF copy (/private/tmp/i59pdf/guidelines.txt):
 - 2.3 (p. 12): "make sure all your app metadata, including privacy information, your app description, screenshots, and previews accurately reflect the app's core experience"
 - 2.3.1(a) (p. 12): "marketing your app in a misleading way, such as by promoting content or services that it does not actually offer ... is grounds for removal"
 - 2.3.2 (pp. 12-13): "make sure your app description, screenshots, and previews clearly indicate whether any featured items, levels, subscriptions, etc. require additional purchases."
@@ -185,7 +185,7 @@ Owed outside this file (board lines added with this note):
 2. draw_store.py checks captions against its DENY list, not the text on the screens; the 84.50 sat on a screen. A screen-text check for money-shaped numbers (two decimals, a currency sign) belongs in its QA. Maren.
 3. Gate P: Idris says whether the editor-side widget preview (IDE spec screen 8) is in the v1 build and what it costs; I rule scope on his answer.
 
-Note, 2026-10-26 02:32 ET (Maren, T-0137). Row 6 and item 2 done; captions 3 and iPad 1 wait for item 11. Shot 6's sample is now the password_generator example (one of the 10 in pywidget/examples): length, symbols, look-alikes, how many; no money (`form_screen` in draw_store.py). I took it over the habit form because it is already one of the 10 examples. "10 lines or fewer" cannot be checked yet: no example asks through a form today (all 10 use `input()`), and the form call in `pywidget.ui` is Idris's to name. draw_store.py's QA now reads the text laid out on each screen against `MONEY` (a currency sign or code, two-decimal numbers without a unit, grouped numbers with cents); `test_money.py` fails on the old shot 6 ("84.50", twice) and passes on the new one. Full set: 18 shots, 0 faults. A bare grouped count ("7,842 of 10,000" steps, shot 2) is not money and passes. The previews branch still shows the old shot 6.
+Note, 2026-10-26 2:32 AM ET (Maren, T-0137). Row 6 and item 2 done; captions 3 and iPad 1 wait for item 11. Shot 6's sample is now the password_generator example (one of the 10 in pywidget/examples): length, symbols, look-alikes, how many; no money (`form_screen` in draw_store.py). I took it over the habit form because it is already one of the 10 examples. "10 lines or fewer" cannot be checked yet: no example asks through a form today (all 10 use `input()`), and the form call in `pywidget.ui` is Idris's to name. draw_store.py's QA now reads the text laid out on each screen against `MONEY` (a currency sign or code, two-decimal numbers without a unit, grouped numbers with cents); `test_money.py` fails on the old shot 6 ("84.50", twice) and passes on the new one. Full set: 18 shots, 0 faults. A bare grouped count ("7,842 of 10,000" steps, shot 2) is not money and passes. The previews branch still shows the old shot 6.
 
 ## Found on the way (fixes owed outside this proposal)
 

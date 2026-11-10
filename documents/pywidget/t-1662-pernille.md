@@ -78,7 +78,7 @@ half of L1 is written.
 
 ## The b5 landing failure (Operator's question)
 
-The b5 landing at 14:55 (`ops/runs/personal-land-b5.log` in the main checkout) failed
+The b5 landing at 2:55 PM (`ops/runs/personal-land-b5.log` in the main checkout) failed
 `BridgeTests.testNotificationScheduleAndCancelThroughTheBridge` (DeviceModulesSlice2Tests.swift:605-608). The
 suggested cause, 6ce0b3410's checks rejecting the test's values, does not hold:
 
@@ -88,8 +88,8 @@ suggested cause, 6ce0b3410's checks rejecting the test's values, does not hold:
 3. The failing run printed nothing (`r.stdout == ""`), so the script failed before its first `print`, at
    `request_permission`, before `schedule` was reached. The case took 122.25 s, about `_wire.PERMISSION_WAIT_S`
    (120 s): consistent with the permission call waiting out its full wait, not with a `ValueError`.
-4. The same failure is already T-1466 (Idris, P2): red on the Mac mini at 01:46 on 11-03, before 6ce0b3410 was
-   written at 09:13, and tied there to the Simulator's notification permission state. I added this run's evidence
+4. The same failure is already T-1466 (Idris, P2): red on the Mac mini at 1:46 AM on 11-03, before 6ce0b3410 was
+   written at 9:13 AM, and tied there to the Simulator's notification permission state. I added this run's evidence
    to T-1466 as a note; no new line.
 
 App Review: nothing in this slice. Crash: none found; every refusal is a Python exception raised before the call.

@@ -11,7 +11,7 @@ description: "[App Name] is a Python development environment for iPhone and iPad
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Wrenna, 2026-10-25, started 19:57 ET; revised 20:01 ET for ADR-006 (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G10</span> package sentence; G5 now strips every premade mention). Revised 2026-10-30 (T-0812) against the code at HEAD 01af3633 (app code unchanged since 6f3cade5): section HEAD CHECK below lists each claim. Draft, not approved. Pasting it into App Store Connect, submitting, and any reply to App Review are human checkpoints. Matrix and sources: app-review-matrix.md (same folder). Every guideline reading behind this text is provisional until a person reads Apple's page (matrix section 0).
+Wrenna, 2026-10-25, started 7:57 PM ET; revised 8:01 PM ET for ADR-006 (<span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G10</span> package sentence; G5 now strips every premade mention). Revised 2026-10-30 (T-0812) against the code at HEAD 01af3633 (app code unchanged since 6f3cade5): section HEAD CHECK below lists each claim. Draft, not approved. Pasting it into App Store Connect, submitting, and any reply to App Review are human checkpoints. Matrix and sources: app-review-matrix.md (same folder). Every guideline reading behind this text is provisional until a person reads Apple's page (matrix section 0).
 
 ## How to use this draft
 
@@ -106,7 +106,7 @@ Method as in store-page-draft.md section 7: **Confirmed** means I read the code 
 | Demo 3 "Examples > Steps Today" | Steps Today is a premade widget, not an example, and no screen runs it | **Failed.** Rewritten as a two-line script (G9: the prompt wording is checked on a device) |
 | Demo 4 "add the Sunrise widget; open Widgets in the app" | One widget, "Python widget", with a ChooseWidgetIntent picker (`Widget/PyWidget.swift`, `WidgetPlacement.swift`); no Widgets screen | **Failed.** Add Python widget, then choose Sunrise; the source step carries T-0191 |
 | Run Script "from the user's library" | The picker lists widgets/<id> ids only (T-0790) | **Failed.** Reworded; T-0790 bracket |
-| "extension only draws it and runs no code" | `Widget/PyWidget.swift` `timeline(for:)` draws the saved document (ADR-007 chair line 17:14) | Confirmed; bracketed LANE-OFF |
+| "extension only draws it and runs no code" | `Widget/PyWidget.swift` `timeline(for:)` draws the saved document (ADR-007 chair line 5:14 PM) | Confirmed; bracketed LANE-OFF |
 | [T-0043 Simulator run + G8] ctypes and the Objective-C bridge removed | `stdlib-manifest.json` L12 denylist; `stdlib_cut.py` DENY_EXACT | Confirmed in the build recipe; the sentence stays bracketed until T-0043's Simulator run and G8 pass |
 | requests, jedi, pyflakes bundled | Pinned pure wheels staged by `install_packages.sh`; no run | Confirmed in the recipe; Simulator row A9 for requests |
 | No HealthKit, contacts, photos, calendar | No such API or plist key in App, Shared, Widget, Core | Confirmed |
@@ -124,9 +124,9 @@ Follow-ups for code, on the board: T-0811 (iPhone examples), T-0191, T-0355, T-0
 
 `python3 -c "import re,sys;t=open(sys.argv[1]).read();n=re.search(r'\n(.*?)\n',t,re.S).group(1);print(len(n),'chars',len(n.encode()),'bytes')" pywidget/docs/release/review-notes-draft.md`
 
-Count at draft time, with every bracket still in: 3,578 characters, 3,578 bytes, all ASCII (2026-10-25 19:59 ET, by the command above); 422 left for fills. Bracket fills (version, package list, Pro name and contents) must keep it under 4,000.
+Count at draft time, with every bracket still in: 3,578 characters, 3,578 bytes, all ASCII (2026-10-25 7:59 PM ET, by the command above); 422 left for fills. Bracket fills (version, package list, Pro name and contents) must keep it under 4,000.
 
-Recount 2026-10-25 20:01 ET after the ADR-006 revision (G10 brackets added), same command: 3,781 characters, 3,781 bytes, all ASCII, with both G10 brackets in. Only one is kept at paste: 3,713 if Install from file ships, 3,597 if not (by script, each bracket removed in turn). Worst case leaves 287 for the other fills; the Pro paragraph (G6) is the one to watch.
+Recount 2026-10-25 8:01 PM ET after the ADR-006 revision (G10 brackets added), same command: 3,781 characters, 3,781 bytes, all ASCII, with both G10 brackets in. Only one is kept at paste: 3,713 if Install from file ships, 3,597 if not (by script, each bracket removed in turn). Worst case leaves 287 for the other fills; the Pro paragraph (G6) is the one to watch.
 
 Recount 2026-10-30 (T-0812), same command, every bracket still in: 3997 characters, 3997 bytes, ascii=True; with every T-bracket deleted, 3563. Other brackets (G1, G5, G6, G9, LANE-OFF) are filled or deleted at paste; the Pro paragraph (G6) is the one to watch.
 
@@ -136,9 +136,9 @@ Trim 2026-11-02 (T-1084, Wrenna): repetition cut, no fact removed. Worst case, e
 
 Recount 2026-11-04 (T-2397, Wrenna), tools/store_copy_check.py --notes, every bracket in: 3993 characters, 3993 bytes, of 4,000 (was 3,890). Changed for B-staged 6a (#142): (a) the T-0191 bracket "the Pro ones once bought" is gone, replaced by [T-0901: Premades open as editable copies.]; (b) "Twelve premade widgets" gains [T-2372: , all free]; (c) the background refresh sentence gains [T-2373: Pro unlocks it.] with the 6b fallback beside it (if T-0795 cuts refresh, the sentence goes and Pro is themes only); (d) [contents - G6] now reads [G6: [T-2373: background refresh and ][T-0272: editor themes]]. Nothing at HEAD changed: no entitlement check on refresh and no theme picker were found (scope map rows below), so every new claim is bracketed. Seven characters of headroom: the next added bracket needs a cut first.
 
-## Scope map (T-1762, Wrenna, 2026-11-04 22:10 ET): each claim and demo step against ops/v1_scope.json
+## Scope map (T-1762, Wrenna, 2026-11-04 10:10 PM ET): each claim and demo step against ops/v1_scope.json
 
-Form as store-page-draft.md section 10. Scope is the B-staged re-plan (#142; ops/plans/pywidget/plan.md chair note 2026-11-04, Ines T-2354; ops/v1_scope.json as_of 2026-11-04T22:03). "Open line" is from `grep "^- \[.\]" ops/board.md` at 22:10 ET; "done" means the row is done and no line is needed, with the path. Source read at HEAD 858c96cfe, no build run. Where HEAD and a row disagree, HEAD is written here and the row goes to Ines (T-2381, T-2396). Freeze is 2026-11-30. A bracket whose line misses is deleted whole, never softened. This replaces the 2026-11-03 table, which was read against the old scope.
+Form as store-page-draft.md section 10. Scope is the B-staged re-plan (#142; ops/plans/pywidget/plan.md chair note 2026-11-04, Ines T-2354; ops/v1_scope.json as_of 2026-11-04T22:03). "Open line" is from `grep "^- \[.\]" ops/board.md` at 10:10 PM ET; "done" means the row is done and no line is needed, with the path. Source read at HEAD 858c96cfe, no build run. Where HEAD and a row disagree, HEAD is written here and the row goes to Ines (T-2381, T-2396). Freeze is 2026-11-30. A bracket whose line misses is deleted whole, never softened. This replaces the 2026-11-03 table, which was read against the old scope.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 3: Scope map (T-1762, Wrenna, 2026-11-04 22:10 ET): each claim and demo step…, scrolls sideways" style="--tw:1869px" markdown="1">
@@ -183,7 +183,7 @@ Form as store-page-draft.md section 10. Scope is the B-staged re-plan (#142; ops
 
 Read for the freeze: demo step 1 on iPhone (T-0811) is still the step most at risk; demo step 4 and its source follow-on hang on T-0757, T-2268 and T-0901. One bracket is flagged for removal now, not at the freeze: "the Pro ones once bought" (no Pro premade in 1.0; T-2397 (a)). The T-0449 Home Screen sentence is deleted (G13 fired, 1.1; T-2320 (c)). The ctypes, "no code paths" and LANE-OFF sentences wait on T-0043, T-2317 and G8. Demo steps 2, 3 and 5 depend on no open build line. This table changes no sentence between the markers; the count is unchanged.
 
-2026-11-05 (T-2482 for T-2320, Wrenna): T-2320's wording re-applied on this version. The ctypes and Swift-only sentences sit behind [T-0043 Simulator run + G8] with no fallback (Ines ruling T-2310, R2); "no code paths" sits behind [G8: lane out of the Release extension] with the fallback "Nothing is switched on at runtime or from a server." (T-2309, R1); the T-0449 bracket is deleted, gate G13 fired 2026-11-03 23:59 and the feature is 1.1 (T-2311, R3; ops/plans/release-rulings-2026-11-04.md). The text between the markers changed, so I recounted: `tools/store_copy_check.py --notes`, every bracket in, 3940 characters, 3940 bytes, of 4,000.
+2026-11-05 (T-2482 for T-2320, Wrenna): T-2320's wording re-applied on this version. The ctypes and Swift-only sentences sit behind [T-0043 Simulator run + G8] with no fallback (Ines ruling T-2310, R2); "no code paths" sits behind [G8: lane out of the Release extension] with the fallback "Nothing is switched on at runtime or from a server." (T-2309, R1); the T-0449 bracket is deleted, gate G13 fired 2026-11-03 11:59 PM and the feature is 1.1 (T-2311, R3; ops/plans/release-rulings-2026-11-04.md). The text between the markers changed, so I recounted: `tools/store_copy_check.py --notes`, every bracket in, 3940 characters, 3940 bytes, of 4,000.
 
 2026-11-05 (T-2527, Wrenna): the gate row's stdlib_cut.py cites checked at HEAD 966f36dce and moved from :31 and :280 to :36 (DENY_EXACT) and :284-285 (the bundle denylist test in check()); the row now names T-2319's vendored-slice interp scan as also not enough. The ctypes bracket stays: no Release archive has been checked. Nothing between the markers changed: `tools/store_copy_check.py --notes`, 3940 characters, 3940 bytes, of 4,000.
 {% endraw %}

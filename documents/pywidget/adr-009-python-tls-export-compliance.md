@@ -37,8 +37,8 @@ The first thing that breaks the "None" answer is two files. Python's `_ssl` and 
 Everything else is Apple's: `pywidget.net.get` uses URLSession (`Shared/NetFetch.swift`), the Keychain, and a CryptoKit digest (submission-answers.md 2b). The widget extension runs no Python (`lane.py:279` lists `ssl`, `urllib`, `http` as names it cannot import).
 
 Apple's published rules (saved under `research/inbound/apple/developer.apple.com/`):
-- *Overview of export compliance* (fetched 2026-11-06 19:29): "If your app uses, accesses, contains, implements, or incorporates encryption ...". Its examples include "Standard encryption algorithms" and "Crypto functionality within Apple's operating system".
-- *Export compliance documentation for encryption* (19:29): "encryption limited to that within the Apple operating system" needs **no documentation**. "An industry standard algorithm, not provided within the Apple operating system" needs the **French encryption declaration**, which is "only required if you're distributing your app on the App Store in France".
+- *Overview of export compliance* (fetched 2026-11-06 7:29 PM): "If your app uses, accesses, contains, implements, or incorporates encryption ...". Its examples include "Standard encryption algorithms" and "Crypto functionality within Apple's operating system".
+- *Export compliance documentation for encryption* (7:29 PM): "encryption limited to that within the Apple operating system" needs **no documentation**. "An industry standard algorithm, not provided within the Apple operating system" needs the **French encryption declaration**, which is "only required if you're distributing your app on the App Store in France".
 - *Complying with Encryption Export Regulations* (2026-10-26): `ITSAppUsesNonExemptEncryption` is `NO` if the app "including any third-party libraries it links against" uses no encryption or only exempt forms, or `YES` otherwise. The page also says exempt forms may still need a year-end self-classification report.
 - None of the three pages mentions hashing.
 

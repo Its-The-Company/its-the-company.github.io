@@ -11,7 +11,7 @@ description: "I chose that seed because it does not repeat any of the author&#x2
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Reviewer: Pernille. Change under review: 367abe7c (Idris, T-0412), pywidget/ios/project.yml: the two copyFiles resource lines (Acknowledgements/ at the bundle root) and the last PyWidget phase, "Acknowledgements check". Reviewed 2026-10-27 06:55-07:05 ET from the diff and the regenerated project.pbxproj; not from the commit or board notes. tools/acknowledgements.py itself is T-0417 (Odalys) and was not under review.
+Reviewer: Pernille. Change under review: 367abe7c (Idris, T-0412), pywidget/ios/project.yml: the two copyFiles resource lines (Acknowledgements/ at the bundle root) and the last PyWidget phase, "Acknowledgements check". Reviewed 2026-10-27 6:55-7:05 AM ET from the diff and the regenerated project.pbxproj; not from the commit or board notes. tools/acknowledgements.py itself is T-0417 (Odalys) and was not under review.
 
 **Verdict: pass.** No fixes needed.
 

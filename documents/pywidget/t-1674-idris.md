@@ -32,8 +32,8 @@ about my own code, and someone other than me reviews its fix.
 - Checked each claim in the Not held bullet against the Swift: `LaneMargin.need`/`firstRunPeak` (LaneGuard.swift:239-246),
   `LaneRunFiles.refusal`/`record(refusal:)` (LaneGuard.swift:300-340), `ExtensionLane.refused` (ExtensionLane.swift:147-155),
   `WidgetStatus.showsBadge` (WidgetStatus.swift:222, false for `oom_guard`).
-- Checked the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> lines in ADR-007: 2026-10-29 16:54 (line 512) and 2026-11-02 04:02 (line 716), plus 2026-11-03
-  14:24 (line 810) for the 21 MiB.
+- Checked the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> lines in ADR-007: 2026-10-29 4:54 PM (line 512) and 2026-11-02 4:02 AM (line 716), plus 2026-11-03
+  2:24 PM (line 810) for the 21 MiB.
 
 ## Findings
 
@@ -42,11 +42,11 @@ about my own code, and someone other than me reviews its fix.
 
 | # | Sev | Finding | Where | Status |
 |---|---|---|---|---|
-| F1 | Low | C2 1.7's Not held intro cites "ADR-007 2026-11-02 line, item 4" with no time. There are two 2026-11-02 lines (04:02 and 17:15). T-1642 fixed the same ambiguity in the stated-limit line two paragraphs down, but not here. | pywidget/docs/research/C2-device-api.md:112 | Fixed: "2026-11-02 04:02 line, item 4". |
+| F1 | Low | C2 1.7's Not held intro cites "ADR-007 2026-11-02 line, item 4" with no time. There are two 2026-11-02 lines (4:02 AM and 5:15 PM). T-1642 fixed the same ambiguity in the stated-limit line two paragraphs down, but not here. | pywidget/docs/research/C2-device-api.md:112 | Fixed: "2026-11-02 04:02 line, item 4". |
 | F2 | Nit | One line of the new bullet runs to 116 columns, where the header elsewhere wraps at 100. | pywidget/ios/App/Runtime/_pywidget_runtime/<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>.py:194 | Fixed: rewrapped. Docstring only, no code. |
 | F3 | Low | The new test's docstring says a learned root wider than the stdlib (a builder that compiled at "/") "can't make a person's script trusted". That is true for files under a user root, and the test proves it. But with "/" trusted, every other absolute file name is trusted too: `_under(x, "/")` holds for any absolute x. Nothing checks that the learned root looks like a stdlib folder. On a sane build the root is relative (`Platforms/Apple/iOS/.../lib/python3.15`) or the stdlib folder, so this is a build-shape risk and does not affect any current build. A cheap guard would keep the learned root only if its basename starts with `python3`. Without that, a wide root makes the lane fail open, and the guard makes it fail closed. | lane.py:1044-1052, 1063; tests/bridge/test_lane.py:200-204 | Line T-1677 (mine, with an independent review). |
-| F4 | Info | For T-1650 (2): the ordinary route (04:02 item 3's stated limit) also deletes `lane-refused`, because an app run that clears `widgets/<id>/` takes it. That reaches "never demoted, only skipped" only if an app run lands between every two refusals. Those app runs paint the widget's picture themselves, so the cached tree is not left stale. When they stop, the next refusal in a later process demotes. This is my reading of the code, not a run, and nothing in the code I read contradicts it. So the stale picture with no badge needs a deliberate deleter, such as another widget's script deleting by path, and not an ordinary script. | ExtensionLane.swift:147-155; ADR-007:743-744 | Added as a note on T-1650. No new line. |
-| F5 | Info | The packet and T-1642's board line date the first chair line "2026-11-01 16:54". It is 2026-10-29 16:54 (ADR-007:512). Pernille's I1 says the same. lane.py and C2 cite the right date or the time only. | ops/board.md (T-1642 line) | No change: a ticked line stays as written. |
+| F4 | Info | For T-1650 (2): the ordinary route (4:02 AM item 3's stated limit) also deletes `lane-refused`, because an app run that clears `widgets/<id>/` takes it. That reaches "never demoted, only skipped" only if an app run lands between every two refusals. Those app runs paint the widget's picture themselves, so the cached tree is not left stale. When they stop, the next refusal in a later process demotes. This is my reading of the code, not a run, and nothing in the code I read contradicts it. So the stale picture with no badge needs a deliberate deleter, such as another widget's script deleting by path, and not an ordinary script. | ExtensionLane.swift:147-155; ADR-007:743-744 | Added as a note on T-1650. No new line. |
+| F5 | Info | The packet and T-1642's board line date the first chair line "2026-11-01 16:54". It is 2026-10-29 4:54 PM (ADR-007:512). Pernille's I1 says the same. lane.py and C2 cite the right date or the time only. | ops/board.md (T-1642 line) | No change: a ticked line stays as written. |
 
 </div>
 
@@ -58,22 +58,22 @@ about my own code, and someone other than me reviews its fix.
   is user code (`<string>`, `<editor:...>`, look-alike prefixes; `_under` needs the separator). User roots are asked
   before trusted ones, and the new test now pins that order. Forging the compiled name with `compile()` is the
   "fakes its own file name" route that the header already lists (lane.py:34), so it needs deliberate reach (2c).
-- **The `mirror_entry` docstring.** It now says `lane-scripts`, which matches `SCRIPTS_DIR` (lane.py:1077) and 04:02
+- **The `mirror_entry` docstring.** It now says `lane-scripts`, which matches `SCRIPTS_DIR` (lane.py:1077) and 4:02 AM
   item 1.
 - **The Not held bullet, effect by effect.**
   - A marker written: wrong blame among the person's own widgets.
-  - A marker deleted in every run: 04:02 item 4's named row. Its words match the chair's backstop.
+  - A marker deleted in every run: 4:02 AM item 4's named row. Its words match the chair's backstop.
   - `lane-peak` high: the widget is refused, then demoted in a later process (`refused()`).
   - Another widget's `lane-refused` with foreign text: it demotes at that widget's next refusal, and the file alone
     does nothing.
   - `lane-peak` deleted or unreadable: it reads as `firstRunPeak`. `need` maps nil and 0 to 21 MiB, so the bullet's
-    "lets through only a widget whose real peak was higher" is correct. On the 14:24 figures (need 42 MiB against
+    "lets through only a widget whose real peak was higher" is correct. On the 2:24 PM figures (need 42 MiB against
     C = 30) it lets nothing through on a device. Only a headroom of 0, the Simulator's answer, passes.
 - **The two effects outside item 3** (low `lane-peak`, and `lane-refused` deleted every time). They are marked as
   waiting on the chair, with "none yet" for the backstop. Item 3 says the list may not hold a route that has no
   backstop. The text says so openly and points to T-1650, which is the honest state. T-1650 blocks the flag default.
   It does not block this verdict, because the flag is off.
-- **The stated limit.** The text in lane.py and C2 is word for word the text in 04:02 item 3.
+- **The stated limit.** The text in lane.py and C2 is word for word the text in 4:02 AM item 3.
 
 ## Tests
 

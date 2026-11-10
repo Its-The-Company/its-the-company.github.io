@@ -4,7 +4,7 @@ title: "Issues"
 section: "requests"
 permalink: "/issues/"
 issues: "4"
-issues_at: "12:47 AM ET, Nov 10"
+issues_at: "1:05 AM ET, Nov 10"
 ---
 
 # Issues
@@ -26,4 +26,4 @@ issues_at: "12:47 AM ET, Nov 10"
 <script defer src="{{ '/assets/issuecore.js' | relative_url }}"></script><script defer src="{{ '/assets/needs.js' | relative_url }}"></script>
 
 <h2>Status</h2>
-<ul class="list needs"><li class="ny"><span class="ny-q">Apple Developer Program membership: active (an Investor, 2026-10-28 06:54, #41 c6467128467); Day 7 date met. Paid Apps Agreement signed; bank and tax not yet added (due Day 12, 2026-11-02; until then no sandbox IAP on device, no sales).</span><span class="ny-r">Nothing to reply until Apple approves; then say so in Chat.</span></li></ul>
+<ul class="list needs"><li class="ny"><span class="ny-q">Apple Developer Program membership: active (an Investor, 2026-10-28 6:54 AM, #41 c6467128467); Day 7 date met. Paid Apps Agreement signed; bank and tax not yet added (due Day 12, 2026-11-02; until then no sandbox IAP on device, no sales).</span><span class="ny-r">Nothing to reply until Apple approves; then say so in Chat.</span></li></ul>

@@ -11,7 +11,7 @@ description: "T-1775, Maren, 2026-11-03. Brief: an Investor on #41, c6621025992 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-T-1775, Maren, 2026-11-03. Brief: an Investor on #41, c6621025992 (21:37 ET), the Operator's reply c6621039671, and the amendments.md entries of 21:37 (sections) and 21:39 (no diaries or mood words). Builder: Odalys, T-1776, in the stages of section 10.
+T-1775, Maren, 2026-11-03. Brief: an Investor on #41, c6621025992 (9:37 PM ET), the Operator's reply c6621039671, and the amendments.md entries of 9:37 PM (sections) and 9:39 PM (no diaries or mood words). Builder: Odalys, T-1776, in the stages of section 10.
 
 Frames: `frames/*.svg`, drawn by `draw_site.py` from rectangles, text and the code-drawn portraits in `personnel/portraits/` (Commandment 9; no generative tool). Colours and type are the live tokens from `tools/site/assets/site.css` `:root` and its dark block. Every figure in a frame is a sample, not a reading. `python3 draw_site.py --check` prints the contrast of every text and ground pair the frames use: 22 pairs, light and dark, lowest 4.88:1 (current filter chip, light), all at or above 4.5:1.
 
@@ -98,7 +98,7 @@ From top to bottom (frame home-1280-light):
    - **Machine:** section 6.
 3. **Team.** One row: each active worker's portrait (40 px at 1280, 48 px at 390) and first name, linking to their page.
    - Former workers and "Considered, not hired" are not listed.
-   - No mood word and no team morale tile (amendment 21:39).
+   - No mood word and no team morale tile (amendment 9:39 PM).
 4. **Running** (left, 680 px), in the Work page's look. One card per running task:
    - the portraits of the workers on it (44 px, overlapping by 18 px);
    - its plain-English name (section 8);

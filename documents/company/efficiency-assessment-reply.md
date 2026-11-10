@@ -15,7 +15,7 @@ Honest answer: partly, and less than the effort put in. Finished work now reache
 
 
 ### Q1. Monday's fix time?
-Why: The push runs to 11-09 23:59; this decides how much goes to the three biggest stall causes.
+Why: The push runs to 11-09 11:59 PM; this decides how much goes to the three biggest stall causes.
 - **A (recommended):** Morning only: disk leaks, stale usage reading, main-session failure alert; app from noon
 - **B:** The whole day on process, as planned
 - **C:** App now; fix a stall only when it happens

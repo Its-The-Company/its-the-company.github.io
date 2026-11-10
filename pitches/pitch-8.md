@@ -37,7 +37,7 @@ meta             ████░  4   built in public on our own reviews; releas
 
 **Complexity, honestly.** Below Netsmith and well below Partfix. Fetching and parsing reviews is a day. Clustering is NaturalLanguage sentence embeddings on device plus agglomerative grouping with editable theme names, two to three days, and the hard part is making the groups make sense to a human, which is why every count is one tap from its reviews. Version trends are a join on the review's version field. Export is Markdown. The honest complexity is in the data source, not the algorithm, and that is a risk, not a moat. Eight to ten engineer-days for version 1 on iPhone, iPad and Mac (Catalyst).
 
-What would make this fail: the public review feed. Apple's RSS endpoint for customer reviews returned zero entries for a whole research pass earlier today and returned zero again when I checked it at 15:35 ET (`itunes.apple.com/us/rss/customerreviews/.../id=884984324`). When it is empty, competitor mining is empty. Your own app's reviews come from the App Store Connect API with your own key, which is reliable and official, so version 1's dependable half is "your own apps" and the competitor half is best effort.
+What would make this fail: the public review feed. Apple's RSS endpoint for customer reviews returned zero entries for a whole research pass earlier today and returned zero again when I checked it at 3:35 PM ET (`itunes.apple.com/us/rss/customerreviews/.../id=884984324`). When it is empty, competitor mining is empty. Your own app's reviews come from the App Store Connect API with your own key, which is reliable and official, so version 1's dependable half is "your own apps" and the competitor half is best effort.
 
 ---
 
@@ -45,7 +45,7 @@ What would make this fail: the public review feed. Apple's RSS endpoint for cust
 
 <code>pitches/PITCH-8.md</code>, as written, scrubbed for the public site.
 
-Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 6 (`research/pass6.md`, idea D) and pass 5 (3C), plus my own checks today (Apple's public review feed, store search, names, the 5.2.2 and 5.6 guideline text). Posted as a `pitch` issue as soon as formed, per #6. Pitches #7, #9, #11, #12, #14, Pitch 6 (Partfix) and Pitch 7 (Seatsolve) stay stored; nothing is withdrawn. This is the meta pitch the Investors asked for at 15:24 ET: meta components like Boardseat's, with a different product.
+Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 6 (`research/pass6.md`, idea D) and pass 5 (3C), plus my own checks today (Apple's public review feed, store search, names, the 5.2.2 and 5.6 guideline text). Posted as a `pitch` issue as soon as formed, per #6. Pitches #7, #9, #11, #12, #14, Pitch 6 (Partfix) and Pitch 7 (Seatsolve) stay stored; nothing is withdrawn. This is the meta pitch the Investors asked for at 3:24 PM ET: meta components like Boardseat's, with a different product.
 
 **Conflict of interest, first.** This idea is Wrenna's own research method turned into a product, and Wrenna said so in writing twice (pass 5 and pass 6) and graded it with a heavy hand. I have weighed it myself from the evidence and not from their enthusiasm, and I rate it the weakest of the three for Day 30 money. It stays in the round because the Investors asked for a meta pitch and this is the honest one.
 

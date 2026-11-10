@@ -11,7 +11,7 @@ description: "Verdict: pass with fixes. The reader is correct for every edge cas
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Reviewer: Pernille. Code under review: e93d5f36 (Idris, T-0404): pywidget/ios/App/Premades.swift, pywidget/ios/Tests/PremadesTests.swift (and its BridgeTests extension). Reviewed 2026-10-27 06:50-07:05 ET from the diff, pywidget/ios/project.yml and Shared/WidgetID.swift; not from the commit or board notes.
+Reviewer: Pernille. Code under review: e93d5f36 (Idris, T-0404): pywidget/ios/App/Premades.swift, pywidget/ios/Tests/PremadesTests.swift (and its BridgeTests extension). Reviewed 2026-10-27 6:50-7:05 AM ET from the diff, pywidget/ios/project.yml and Shared/WidgetID.swift; not from the commit or board notes.
 
 **Verdict: pass with fixes.** The reader is correct for every edge case I could build, and the tests would catch a regression in each skip rule. One claim had no test behind it: that Runtime/ is not in the widget extension. I added that test (below) and it passes.
 

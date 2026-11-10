@@ -11,33 +11,33 @@ description: "Investor an Investor #41 c6727216067 (16:14): &quot;Why don&#x27;t
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Investor an Investor #41 c6727216067 (16:14): "Why don't we have a more proactive system for managing storage
+Investor an Investor #41 c6727216067 (4:14 PM): "Why don't we have a more proactive system for managing storage
 space? Make this a top priority". The Operator's reply c6727232490 promised: a check every few minutes, action at a
 warning line around 30 GB, company output moved to the Company SSD, company test leftovers cleared, and a #41 post
 only when it cannot get back over the line. This is that keeper. Code, no Claude (Tenet 7).
 
-## 1. Why it fell to 9.5 GB (ops/metrics/disk.jsonl, n=26 rows 14:26-16:25 11-08; `df` GB = KB / 1024^2)
+## 1. Why it fell to 9.5 GB (ops/metrics/disk.jsonl, n=26 rows 2:26-4:25 PM 11-08; `df` GB = KB / 1024^2)
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: 1. Why it fell to 9.5 GB (ops/metrics/disk.jsonl, n=26 rows 14:26-16:25 11-08…, scrolls sideways" style="--tw:488px" markdown="1">
 
 | When | Free | |
 |---|---|---|
-| 14:33 | 19.9 GB | after T-3433's relief |
-| 15:37 | 14.3 GB | |
-| 15:44 | 10.2 GB | 4.1 GB in 7 minutes |
-| 15:50 | 9.5 GB | the gate closes (under 10) |
-| 16:13 | 5.1 GB | the low point |
-| 16:25 | 10.8 GB | T-3690 moving by hand (SSD free fell 28 GB) |
+| 2:33 PM | 19.9 GB | after T-3433's relief |
+| 3:37 PM | 14.3 GB | |
+| 3:44 PM | 10.2 GB | 4.1 GB in 7 minutes |
+| 3:50 PM | 9.5 GB | the gate closes (under 10) |
+| 4:13 PM | 5.1 GB | the low point |
+| 4:25 PM | 10.8 GB | T-3690 moving by hand (SSD free fell 28 GB) |
 
 </div>
 
 
-1. Nothing acted early enough on what was growing. 14:33 to 15:50 lost 10.4 GB in 77 minutes (about 140 MB a
+1. Nothing acted early enough on what was growing. 2:33 PM to 3:50 PM lost 10.4 GB in 77 minutes (about 140 MB a
    minute) while sessions ran. The only movers were disk_overflow.py (starts under 20 GB) and disk_ssd_moves.py
    (starts under 40 GB). Both have a narrow scope.
 2. disk_overflow.py found nothing it may move, and disk_ssd_moves.py logged "nothing in scope to move" at 6.4 GB
-   (16:07). Their scope is finished task scratch plus DerivedData whose workspace is gone (overflow) or that has been
+   (4:07 PM). Their scope is finished task scratch plus DerivedData whose workspace is gone (overflow) or that has been
    idle 12 h (ssd_moves). Finished scratch was already on the SSD; most of it went at 14:2x (T-3433). Every live
    DerivedData folder had been used within 12 h.
 3. The space sat where no tool was allowed to act:
@@ -46,7 +46,7 @@ only when it cannot get back over the line. This is that keeper. Code, no Claude
      folders were never looked at.
    - Simulator devices: 26.46 GB. Trimming them was refused as irreversible (T-2587). They stay.
 4. The sweep runs only between sessions (supervisor step 1b, hourly). On 11-08 sessions ran most of the day, so it
-   acted at 11:50 and 15:14 and not again before the low point (ops/metrics/sweep.jsonl rows).
+   acted at 11:50 AM and 3:14 PM and not again before the low point (ops/metrics/sweep.jsonl rows).
 
 ## 2. What the keeper does (tools/disk_keeper.py `tick`)
 
@@ -110,7 +110,7 @@ minutes at 140 MB a minute and about 35 minutes at the worst 7-minute rate (abou
 
 `python3 tools/disk_keeper.py status` and ops/metrics/disk_keeper.jsonl after 24 h: how many ticks acted, the lowest
 free figure, and whether the gate closed (disk_free rows with "seen_by": "gate" under 10 GB). Before number: 11-08,
-gate closed 15:50-16:25 and lowest 5.1 GB.
+gate closed 3:50-4:25 PM and lowest 5.1 GB.
 
 ## 6. Speed (measured 11-08, read only)
 

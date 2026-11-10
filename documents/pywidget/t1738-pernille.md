@@ -16,7 +16,7 @@ Reviewer: Pernille, 2026-11-04. Independent review (Commandment 13). I judged fr
 **Verdict.** d21a36896: **approve.** It closes t1678 F2 and F3. d074ebd44: **approve with one change.** It closes t1694 P2-1, but the new marker read races the marker write (M1 below), so the test can fail when nothing is wrong.
 
 ## Simulator evidence
-The log shows `Executed 55 tests, with 0 failures` and `** TEST SUCCEEDED **`, run on an iPhone 17e from `/tmp/t1693-idris/repo`. These tests passed in that run: `testT1680RefreshIntentRowsSayShortcut`, `testT1681AYieldedSaveRunIsLoggedDeferredAndNeverBadges`, `testStopStuckNative` (8.1 s) and every RunLogRecorderTests case I checked. The log was written at 20:36 and the commits landed at 20:43-20:44, so I cannot tie the log to the committed bytes. The commit message says the run was on "scratch tree at 168bb0106 + this diff". I accept that, given the diffs are test plus one-file changes.
+The log shows `Executed 55 tests, with 0 failures` and `** TEST SUCCEEDED **`, run on an iPhone 17e from `/tmp/t1693-idris/repo`. These tests passed in that run: `testT1680RefreshIntentRowsSayShortcut`, `testT1681AYieldedSaveRunIsLoggedDeferredAndNeverBadges`, `testStopStuckNative` (8.1 s) and every RunLogRecorderTests case I checked. The log was written at 8:36 PM and the commits landed at 8:43-8:44 PM, so I cannot tie the log to the committed bytes. The commit message says the run was on "scratch tree at 168bb0106 + this diff". I accept that, given the diffs are test plus one-file changes.
 
 ## t1678 F2 (Refresh Widgets intent logged `intent`): closed
 - `installAppWriter` now calls `WidgetWriter.app.refreshIntent()`, and `refreshIntentTrigger` is `.shortcut`. No `trigger: .intent` is left in App, Shared or Widget.
@@ -32,7 +32,7 @@ The log shows `Executed 55 tests, with 0 failures` and `** TEST SUCCEEDED **`, r
 ## t1694 P2-1 (the marker's `stuck` line untested): closed, with M1
 - `testStopStuckNative` reads the marker file while the bridge reports stuck and asserts the `stuck`, `run <id>` and `context app` lines. `mutants-t1696.json` deletes `PyBridge.swift:719` (it was :683). Its `find` string matches HEAD exactly once.
 - By reading the code, the mutant must be killed. `CrashMarker.noteStuck` (CrashMarker.swift:111) is the only writer of `stuckLine`, and `markStuck` is its only caller.
-- Low L4: there is no committed record of the "1/1 KILLED" run. The 03:07 and 07:50 logs only copy the JSON into the bundle. Next time, put the mutant summary under ops/runs or bench.
+- Low L4: there is no committed record of the "1/1 KILLED" run. The 3:07 AM and 7:50 AM logs only copy the JSON into the bundle. Next time, put the mutant summary under ops/runs or bench.
 
 ### M1. Medium. The new assertion races `markStuck`'s marker write, so `testStopStuckNative` can fail when nothing is wrong
 `pywidget/ios/Tests/BridgeSlice2Tests.swift:430` against `pywidget/ios/Shared/Bridge/PyBridge.swift:704-719`.

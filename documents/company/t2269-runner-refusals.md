@@ -16,7 +16,7 @@ Odalys, 2026-11-04. Scope: investigate and report. No settings, permission rule 
 ## Where the evidence is
 
 Company work sessions run with `--no-session-persistence`, so there is no `.jsonl` transcript under
-`~/.claude/projects/` for them. The 19:58 session (`dd2ff918`) left only subagent `.meta.json` files there. The full
+`~/.claude/projects/` for them. The 7:58 PM session (`dd2ff918`) left only subagent `.meta.json` files there. The full
 record is the session's stream: `ops/runs/20261104-195808-work.jsonl` (5.1 MB, subagent tool calls included through
 `--forward-subagent-text`). Everything below comes from that stream, `log/events.jsonl` and git. Personal-<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> streams
 live in the lane profile's state folder; I did not open it (standing rule), so lane sessions are not counted here.
@@ -36,32 +36,32 @@ inference, not something the log says.
 
 | Task | When (ET, from commits and events) | Description | Command |
 |---|---|---|---|
-| T-0656 | between 20:11:47 (06c77dbdc) and 20:13:42 (refusal event) | `Queue filtered test run on MacBook runner` | `cd pywidget/ios && F=$(python3 ../../tools/xc_file_tests.py PyWidgetTests Tests/EditorToolingTests.swift Tests/ConsoleEditorOpenTests.swift \| sed 's/^/-only-testing:/' \| tr '\n' ' '); echo "$F"; ../../tools/xc.sh -scheme PyWidget -destination 'platform=iOS Simulator,name=iPhone 16' ${=F} test 2>&1 \| tail -15; echo "exit ${pipestatus[1]}"` (timeout 300000) |
-| T-2054/55/56 | between 20:12:39 (654bf72e6) and 20:13:30 (f7ca2d3bd) | `Queue red-first test job on MacBook runner` | `cd pywidget/ios && T=PyWidgetTests/BridgeTests; ../../tools/xc.sh -project PyWidget.xcodeproj -scheme PyWidget -destination 'platform=iOS Simulator,name=iPhone 16' test -only-testing:$T/testRunStillEndingAtTheStuckDeadlineSendsNoStuck -only-testing:$T/testStopClaimedInTheRunsTailSendsNoStatus -only-testing:$T/testStopClaimedBeforeAnInternalErrorFinishedSendsNoStatus -only-testing:$T/testLadderOfARunAlreadyCleanedUpIsNotInstalled -only-testing:$T/testNothingFromPythonFollowsTheRunsFinished -only-testing:$T/testParkedWriterOfAnEndedRunQueuesNothing -only-testing:$T/testStopStatusPrecedesFinishedWhenTheRunEndsFirst -only-testing:$T/testStopAfterTheRunEndedByItselfSendsNoStatus 2>&1 \| tail -8; echo "exit ${pipestatus[1]}"` |
-| T-0191 | between 20:13:49 (eab3728af) and 20:14 (subagent end) | `Route gallery tests to the MacBook runner` | `cd pywidget/ios && ../../tools/xc.sh -scheme PyWidget -destination 'platform=iOS Simulator,name=iPhone 16' test -only-testing:PyWidgetTests/GalleryPreviewTests -only-testing:PyWidgetUITests/GalleryUITests 2>&1 \| tail -15; echo "exit ${pipestatus[1]}"` (timeout 120000) |
+| T-0656 | between 8:11:47 PM (06c77dbdc) and 8:13:42 PM (refusal event) | `Queue filtered test run on MacBook runner` | `cd pywidget/ios && F=$(python3 ../../tools/xc_file_tests.py PyWidgetTests Tests/EditorToolingTests.swift Tests/ConsoleEditorOpenTests.swift \| sed 's/^/-only-testing:/' \| tr '\n' ' '); echo "$F"; ../../tools/xc.sh -scheme PyWidget -destination 'platform=iOS Simulator,name=iPhone 16' ${=F} test 2>&1 \| tail -15; echo "exit ${pipestatus[1]}"` (timeout 300000) |
+| T-2054/55/56 | between 8:12:39 PM (654bf72e6) and 8:13:30 PM (f7ca2d3bd) | `Queue red-first test job on MacBook runner` | `cd pywidget/ios && T=PyWidgetTests/BridgeTests; ../../tools/xc.sh -project PyWidget.xcodeproj -scheme PyWidget -destination 'platform=iOS Simulator,name=iPhone 16' test -only-testing:$T/testRunStillEndingAtTheStuckDeadlineSendsNoStuck -only-testing:$T/testStopClaimedInTheRunsTailSendsNoStatus -only-testing:$T/testStopClaimedBeforeAnInternalErrorFinishedSendsNoStatus -only-testing:$T/testLadderOfARunAlreadyCleanedUpIsNotInstalled -only-testing:$T/testNothingFromPythonFollowsTheRunsFinished -only-testing:$T/testParkedWriterOfAnEndedRunQueuesNothing -only-testing:$T/testStopStatusPrecedesFinishedWhenTheRunEndsFirst -only-testing:$T/testStopAfterTheRunEndedByItselfSendsNoStatus 2>&1 \| tail -8; echo "exit ${pipestatus[1]}"` |
+| T-0191 | between 8:13:49 PM (eab3728af) and 8:14 PM (subagent end) | `Route gallery tests to the MacBook runner` | `cd pywidget/ios && ../../tools/xc.sh -scheme PyWidget -destination 'platform=iOS Simulator,name=iPhone 16' test -only-testing:PyWidgetTests/GalleryPreviewTests -only-testing:PyWidgetUITests/GalleryUITests 2>&1 \| tail -15; echo "exit ${pipestatus[1]}"` (timeout 120000) |
 
 </div>
 
 
 (`\|` in the table is a plain `|` in the command.)
 
-For comparison, the same session's queue call that was allowed, at 20:56 (T-2225, description
+For comparison, the same session's queue call that was allowed, at 8:56 PM (T-2225, description
 `Queue full suite on the MacBook runner`):
 `cd pywidget/ios && tools/xc.sh -project PyWidget.xcodeproj -scheme PyWidget -destination 'platform=iOS Simulator,name=iPhone 17e' test 2>&1 | tail -6; ...`
 It queued J-20261104-2056-xc-test.
 
-An earlier refusal of a different kind, same tool, 11-04 13:50 session (`20261104-135038-work.jsonl`), description
+An earlier refusal of a different kind, same tool, 11-04 1:50 PM session (`20261104-135038-work.jsonl`), description
 `Run ExtensionLane and WidgetWriter tests locally`: `... XC_LOCAL=1 ../../tools/xc.sh -scheme PyWidget -destination
 'platform=iOS Simulator,name=iPhone 17e' ${=F} test 2>&1 \| tail -40`, refused with `[Safety Bypass Flag]`. The name of
 the opt-out variable reads like a safety switch being turned off.
 
 Findings, with the count beside each:
-1. Queue attempts through xc.sh in the 19:58 session: 4; refused 3, allowed 1 (n=4).
+1. Queue attempts through xc.sh in the 7:58 PM session: 4; refused 3, allowed 1 (n=4).
 2. All 3 refused calls used the relative form `cd .../pywidget/ios && ../../tools/xc.sh`. All 7 allowed xc.sh build or
    test calls in that session used the absolute path `[local folder]` (n=10). That pattern is real, but neither
    form matches `Bash(tools/*)` (section 3), so all 10 went to the classifier. The path form alone does not explain the
    verdict. It is a correlation with a small sample.
-3. Classifier refusals of xc.sh test calls in company sessions since the route landed (11-03 23:07): 4 of 40
+3. Classifier refusals of xc.sh test calls in company sessions since the route landed (11-03 11:07 PM): 4 of 40
    (3 "Interfere With Workloads", 1 "Safety Bypass Flag").
 
 ## 2. What the refused command would have done, and the plausible trigger
@@ -88,7 +88,7 @@ Stopping other processes, shutting down shared Simulators and holding a lock tha
 reviewer that it won't. The refused agents also had context pointing the same way. The T-0656 agent's last `git status`
 showed other workers' uncommitted files in the same tree (`SettingsView.swift`, `PyBridge.swift`). The T-2054 agent
 had just read the xc.sh lines about booting the Simulator and setting its location. Other xcodebuild work from T-2225
-was running on the machine (its build began 20:08). My best explanation: the classifier read the command as "start a
+was running on the machine (its build began 8:08 PM). My best explanation: the classifier read the command as "start a
 test run that may stop or take over other workers' Simulators and processes on a shared machine". That is an
 inference. The label is the only reason recorded.
 
@@ -127,14 +127,14 @@ permission question, and that goes to the Investors as a request.
 ## 5. How often xc.sh refuses (exit 2) for uncommitted pywidget/ changes
 
 Source: every Bash tool call that runs `xc.sh ... -scheme ... test` in the 41 company work-session streams in
-`ops/runs/*-work.jsonl` (11-02 20:10 to 11-04 21:04). There are 40 such calls since the route landed at 11-03 23:07.
+`ops/runs/*-work.jsonl` (11-02 8:10 PM to 11-04 9:04 PM). There are 40 such calls since the route landed at 11-03 11:07 PM.
 xc.sh writes no metrics row when route refuses. Its only trace is the stderr line in the session stream, so these
 counts are a floor.
 
 1. Calls refused with exit 2 for uncommitted paths: 2 of 40 (5%).
    - 11-03 23:49: "18 uncommitted path(s) under pywidget, tools/xc.sh, tools/xc_verdict.py". This was the session
      building the route itself, so the changes were most likely its own.
-   - 11-04 07:15 (T-1850): 6 paths, `ExtensionLane.swift`, `LaneGuard.swift` and their tests. These are T-1850's own
+   - 11-04 7:15 AM (T-1850): 6 paths, `ExtensionLane.swift`, `LaneGuard.swift` and their tests. These are T-1850's own
      files, most likely its own uncommitted work.
    - Refusals observed so far because of another worker's changes: 0 of 40. The log can't attribute paths to
      workers, so this rests on the file names.

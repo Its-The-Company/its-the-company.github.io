@@ -11,7 +11,7 @@ description: "hud() stays text, symbol and seconds in v1. No progress argument a
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Owner: Pernille (Python half, T-0446). Swift half: Idris (T-0447). Sources: ADR-001 3.1 C5 "Native UI from scripts" and the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> ruling of 2026-10-27 10:05, item 3; bridge contract s4 (DeviceCall) and s9 (shared fixtures); IDE spec s3 "Prompts" (how each kind is drawn). Status: **proposed**; Idris reads it before T-0447 starts.
+Owner: Pernille (Python half, T-0446). Swift half: Idris (T-0447). Sources: ADR-001 3.1 C5 "Native UI from scripts" and the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> ruling of 2026-10-27 10:05 AM, item 3; bridge contract s4 (DeviceCall) and s9 (shared fixtures); IDE spec s3 "Prompts" (how each kind is drawn). Status: **proposed**; Idris reads it before T-0447 starts.
 
 Code: `pywidget/ios/App/Runtime/pywidget/prompts.py`, stub `prompts.pyi` beside it. Wire: `pywidget/tests/prompts/fixtures/prompt_calls.json` (61 cases, written by `prompt_calls_build.py`; its `rules` are the wire contract). Host tests: `pywidget/tests/prompts/test_prompts.py`.
 

@@ -35,7 +35,7 @@ code on origin/main (aaebd7bc6).
   - `local_time` back to `datetime.fromtimestamp(seconds)` (naive, the old behaviour): KILLED, 16 failures, 1 error.
   - `local_time` as `datetime.fromtimestamp(seconds).astimezone()` (local first, not from UTC): survives, and
     rightly: `fromtimestamp` sets `fold` on the repeated hour, so both forms give the same instant at
-    2026-11-01 01:00 and 01:59:59. Equivalent, not a gap.
+    2026-11-01 1:00 AM and 1:59:59 AM. Equivalent, not a gap.
 - Stub probe, parent 37a6a29a3^ against HEAD (finding L1 below), TZ=America/New_York.
 
 ## The two checks the board line asked for
@@ -54,8 +54,8 @@ pywidget/ios/python-stubs/pywidget/_host.py:66-71 (`local` uses `astimezone()`, 
 pywidget/ios/python-stubs/pywidget/device/pedometer.py:69-85 (`now.replace(hour=0)`, `midnight - timedelta(days=i)`).
 Arithmetic on a fixed-offset datetime keeps the offset of `now`, not of the day it lands on.
 Failure case, TZ=America/New_York: `fixed_now = datetime(2026, 11, 3, 12, 0)` (EST), `feed_steps(datetime(2026, 10, 28, 0, 30), 500)`,
-`by_day(7)[0]`: before this commit, start 2026-10-28 00:00, 500 steps; now, start 2026-10-28 00:00-05:00
-(01:00 EDT), 0 steps. On the phone `by_day` is Swift's calendar, so the stub and the phone now disagree for
+`by_day(7)[0]`: before this commit, start 2026-10-28 12:00 AM, 500 steps; now, start 2026-10-28 12:00-5:00 AM
+(1:00 AM EDT), 0 steps. On the phone `by_day` is Swift's calendar, so the stub and the phone now disagree for
 a script author testing in the week after a clock change. Stubs only; nothing in build 4 runs this code.
 Fix: build the day starts as naive wall-clock times, then `local()` each one (or use the ZoneInfo that
 `_premade.local_zone` already finds).

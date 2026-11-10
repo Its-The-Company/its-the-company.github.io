@@ -11,11 +11,11 @@ description: "Times in ms, memory in MB (phys_footprint). &quot;to entry&quot; i
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Idris, 2026-10-25 (runs 19:29-20:07 ET). Board line "[build] Idris, P0, L3/L13 C1 spike". Simulator only (Apple membership pending; no device). Raw lines: `pywidget/ios/bench/*.txt`; table made by `pywidget/ios/scripts/summarize.py bench/*.txt`.
+Idris, 2026-10-25 (runs 7:29-8:07 PM ET). Board line "[build] Idris, P0, L3/L13 C1 spike". Simulator only (Apple membership pending; no device). Raw lines: `pywidget/ios/bench/*.txt`; table made by `pywidget/ios/scripts/summarize.py bench/*.txt`.
 
 ## 1. Result in four lines
 
-- Upstream CPython 3.15.1 (python.org iOS XCframework, PEP 730) embeds through the C API and runs in the app and inside the WidgetKit extension process; the Home Screen widget shows the Python result (screenshot checked, 20:01).
+- Upstream CPython 3.15.1 (python.org iOS XCframework, PEP 730) embeds through the C API and runs in the app and inside the WidgetKit extension process; the Home Screen widget shows the Python result (screenshot checked, 8:01 PM).
 - In the extension, Python adds about 23 ms to a cold start of about 375 ms (init 8-9 ms, tiny script 14 ms) and about 4 MB of footprint (7.7 MB before, 11.9 MB peak).
 - A network/data import set (ssl, sqlite3, asyncio, decimal, zoneinfo ...) takes the extension to 21.6 MB peak; a warm extension process that already ran it sits at 27-28 MB. That is close to the ~30 MB ceiling the brief calls "widely reported". The Simulator enforces no ceiling, so the ceiling itself is **not measured**.
 - Zipped stdlib cuts the bundle's `python/` from 237 MB to 12 MB at no measurable cost in time or memory. PEP 810 lazy imports (`-X lazy_imports=all`) cut the heavy import set by a third in time and 2.5 MB in peak (zip vs zip + lazy: app 18.5 -> 16.0, extension 20.7 -> 18.2; corrected 2026-10-25 from 3.5 MB after Odalys's ADR-007 review S1, which compared two changes at once).
@@ -74,7 +74,7 @@ Notes on the table:
 - The zip-lazy extension file has 6 cold lines; one is `lazy: false` (the reload WidgetKit makes on reinstall, before the app wrote the lazy flag) and is left out of the row.
 - Warm rows: the interpreter is already up and every module from the previous call stays imported, so the footprint is whatever the last script left behind. The warm row is the cumulative cost, not a fresh one.
 - `os_proc_available_memory()` returned 0 in every extension run: the Simulator applies no per-process memory limit. Nothing here proves the extension would survive on a phone.
-- Earlier (19:31) the widget gallery's preview ran `getSnapshot` in an extension process whose footprint was 14.3 MB before Python and 27.9 MB after the heavy set. The gallery path is also a Python path and must obey the same limits.
+- Earlier (7:31 PM) the widget gallery's preview ran `getSnapshot` in an extension process whose footprint was 14.3 MB before Python and 27.9 MB after the heavy set. The gallery path is also a Python path and must obey the same limits.
 
 ## 4. Bundle sizes (Debug, simulator, fat arm64 + x86_64)
 

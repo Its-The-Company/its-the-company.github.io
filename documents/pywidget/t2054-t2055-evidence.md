@@ -34,7 +34,7 @@ The local Xcode slot is held (#203), so tools/land_mutants.py (6894c2607) built 
 `python3 tools/land_mutants.py status --id idris-t2054`.
 
 Pending at 09:01: all six queued (J-20261106-0833-mut-idris-t2054-1 to -6: -1..-3 are mutants-t2054.json,
--4..-6 mutants-t2055.json); the runner has said "waiting busy (load > 1 per core)" since 08:45 and started none.
+-4..-6 mutants-t2055.json); the runner has said "waiting busy (load > 1 per core)" since 8:45 AM and started none.
 Ticks wait for six KILLED. Each mutant commit was checked by diff to change one line only, and each restore commit's
 tree equals the base's.
 

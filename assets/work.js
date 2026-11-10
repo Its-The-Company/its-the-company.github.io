@@ -7,7 +7,7 @@ var repo = box.getAttribute('data-repo'), built = box.getAttribute('data-built')
 src = box.querySelector('.wk-src'), ul = box.querySelector('ul'), el = S.el, ago = S.ago;
 var LABEL = { running: ['Working now', 'run', 'Now'], next: ['Up next', 'q', 'First up'], blocked: ['Blocked', 'wait', 'Waiting on'], idle: ['Idle', 'done', 'Now'] };
 function mk(p, t, c, x) { return p.appendChild(el(t, c, x)); }
-function et(t) { var d = new Date(t); return isNaN(d) ? '' : d.toLocaleString('en-US', { timeZone: 'America/New_York', hour: 'numeric', minute: '2-digit' }) + ' ET'; }
+function et(t) { return S.clock(t); }  // T-3396: the shared 12-hour clock (Eastern, ' ET')
 function cap(s) { s = String(s || ''); return s.charAt(0).toUpperCase() + s.slice(1); }
 function lvl(m, e) { return m ? cap(m) + (e ? ', ' + e + ' effort' : '') : ''; }
 function pub(t, who) {

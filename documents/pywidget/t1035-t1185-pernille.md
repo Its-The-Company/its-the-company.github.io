@@ -49,7 +49,7 @@ say. They contain no weakened assertion, no skip, and no row that passes trivial
 
 ## Suites
 
-Full suite on the branch at bd0f9b68 (`tests/run.sh`, 2026-11-02 20:10-20:5x, load average 60 to 209): exit 1.
+Full suite on the branch at bd0f9b68 (`tests/run.sh`, 2026-11-02 8:10 PM-20:5x, load average 60 to 209): exit 1.
 Six suites were red. None of the reds is in the code these three commits changed:
 
 

@@ -13,7 +13,7 @@ description: "Verdict: the rule is correct against 5.1 T2 and chair items 5 and 
 {% raw %}
 Pernille, 2026-11-05. Independent review (Commandment 13): I read the code and tests, not the author's reasoning.
 
-**Read:** `pywidget/ios/Shared/RefreshSchedule.swift` (29 lines, symlinked into Core as `Sources/PyWidgetCore/RefreshSchedule.swift`), `pywidget/ios/Tests/Core/RefreshScheduleTests.swift` (9 tests), `Core/mutants-t1758.json` and its results file, against ADR-007 5.1 T2, 5.3 and the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-11-05 19:55 (T-2846), items 1, 2, 5 and 6. Target membership: `Shared` is a source of both `PyWidget` and `PyWidgetExtension` in `project.yml` (lines 145, 340), so the file builds in the app, where T-0793 needs it.
+**Read:** `pywidget/ios/Shared/RefreshSchedule.swift` (29 lines, symlinked into Core as `Sources/PyWidgetCore/RefreshSchedule.swift`), `pywidget/ios/Tests/Core/RefreshScheduleTests.swift` (9 tests), `Core/mutants-t1758.json` and its results file, against ADR-007 5.1 T2, 5.3 and the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-11-05 7:55 PM (T-2846), items 1, 2, 5 and 6. Target membership: `Shared` is a source of both `PyWidget` and `PyWidgetExtension` in `project.yml` (lines 145, 340), so the file builds in the app, where T-0793 needs it.
 
 **Ran:**
 - `swift test` in `pywidget/ios/Core` at HEAD f8fb59ae8: 589 tests, 0 failures.

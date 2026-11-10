@@ -11,7 +11,7 @@ description: "Sawmill Creek: a woodworker calls several woodworking apps mostly 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://sawmillcreek.org/goto/post?id=2957344
 - Finding: Sawmill Creek: a woodworker calls several woodworking apps mostly useless and uses a general construction calculator. Single comment, count 1; weak.
 {% endraw %}

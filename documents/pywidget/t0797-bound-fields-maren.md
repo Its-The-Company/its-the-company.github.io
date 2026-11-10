@@ -11,7 +11,7 @@ description: "Nothing merges from this; the branch waits for T-0682. These are v
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Maren, 2026-11-03 21:07 ET. <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">Blind</span> to Idris's verdict. Read: branch `pernille/t0679-bound-fields` (`git diff main...`: `pywidget_ui/__init__.py`, `.pyi`, `API.md`, `viewtree.schema.json`), main's pywidget/docs/design/bound-fields.md s11, creative/approved.md, and for precedent `pywidget.device.location.sample(max_age=)`, `app_manifest.py`'s texts, API.md's naming rule.
+Maren, 2026-11-03 9:07 PM ET. <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">Blind</span> to Idris's verdict. Read: branch `pernille/t0679-bound-fields` (`git diff main...`: `pywidget_ui/__init__.py`, `.pyi`, `API.md`, `viewtree.schema.json`), main's pywidget/docs/design/bound-fields.md s11, creative/approved.md, and for precedent `pywidget.device.location.sample(max_age=)`, `app_manifest.py`'s texts, API.md's naming rule.
 
 Nothing merges from this; the branch waits for T-0682. These are verdicts on names and words only.
 

@@ -11,12 +11,12 @@ description: "Of the 62 failed land checks, 59 (95%) failed on a red that main a
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Odalys, 2026-11-07. Investor ask: an Investor #41 c6708273903 (09:35). Status: evidence and design done; the fix is
+Odalys, 2026-11-07. Investor ask: an Investor #41 c6708273903 (9:35 AM). Status: evidence and design done; the fix is
 not built yet (see "What is left").
 
 ## 1. Evidence
 
-Source: every result.json on origin/macbook-results finished 2026-11-04 00:00 ET to 2026-11-07 09:35 ET, read with
+Source: every result.json on origin/macbook-results finished 2026-11-04 12:00 AM ET to 2026-11-07 9:35 AM ET, read with
 tools/runner_watch.py (records(), first_error()), each job's base from ops/metrics/land_xc.jsonl, each introducing
 commit from git log. n = 146 finished jobs: 29 passed, 117 failed. Runner time on failed jobs: 945 min.
 Scripts: company-scratch/T-3288-odalys/dump.py and classify.py (signature regexes below).
@@ -29,15 +29,15 @@ Scripts: company-scratch/T-3288-odalys/dump.py and classify.py (signature regexe
 | Class | Jobs | Land checks among them | Runner min | Root cause |
 |---|---|---|---|---|
 | A. A main-<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> commit put a red on main before any Xcode run | 79 | 59 | 510 | see 1.2 |
-|    RunLogUITests.swift:134 compile error (b4632bfb6, 11-06 17:38; fixed 811b2f838 01:22) | 26 | 21 | 46 | |
-|    TreeTimelineTests stale-after expectation (50f493ec1, 11-06 08:26; fixed 097bc9d0a 02:56) | 31 | 28 | 233 | |
+|    RunLogUITests.swift:134 compile error (b4632bfb6, 11-06 5:38 PM; fixed 811b2f838 1:22 AM) | 26 | 21 | 46 | |
+|    TreeTimelineTests stale-after expectation (50f493ec1, 11-06 8:26 AM; fixed 097bc9d0a 2:56 AM) | 31 | 28 | 233 | |
 |    testT0750ConsoleRunYieldsSaveRunsOnceQueued (b4632bfb6 changed the call it text-matches; fixed 097bc9d0a) | 9 | 8 | 102 | |
-|    SettingsView.swift:24 main-actor compile error (036c854f7, 11-04 17:28; 477813574 20:56) | 6 | 0 | 4 | |
-|    TreeNodesTests weekday zone (43be07d86, 11-05 13:42) | 4 | 2 | 49 | |
-|    ExtensionLane.Ran not Equatable (0e756d6cc, 11-04 13:31) | 3 | 0 | 76 | |
+|    SettingsView.swift:24 main-actor compile error (036c854f7, 11-04 5:28 PM; 477813574 8:56 PM) | 6 | 0 | 4 | |
+|    TreeNodesTests weekday zone (43be07d86, 11-05 1:42 PM) | 4 | 2 | 49 | |
+|    ExtensionLane.Ran not Equatable (0e756d6cc, 11-04 1:31 PM) | 3 | 0 | 76 | |
 | B. A worker's own follow-up job, red on its own commit already on main (no cascade) | 4 | 0 | 110 | same road as A |
 | C. Nondeterministic tests (Files UI picker x3; notification authorization x3; a "two seconds later" timing test x2) | 8 | 1 | 277 | test design |
-| D. Runner/Simulator environment (job folder permission on Theme.xcassets x5, 11-05 09:57-13:56; testmanagerd socket x3, 11-05 03:45-06:00) | 8 | 0 | 18 | runner; none since 11-05 14:00 |
+| D. Runner/Simulator environment (job folder permission on Theme.xcassets x5, 11-05 9:57 AM-1:56 PM; testmanagerd socket x3, 11-05 3:45-6:00 AM) | 8 | 0 | 18 | runner; none since 11-05 2:00 PM |
 | E. Mutants, meant to fail (13 -mut- jobs + 1 mutant queued as xc-test, 81d4a64d5) | 14 | 0 | 19 | by design |
 | F. The gate worked: a lane's own red stopped before main (ProStoreTests, WidgetWriterTests), or a branch run (TreeNodes toggle x2) | 4 | 2 | 12 | by design |
 
@@ -83,7 +83,7 @@ main, by construction. Every land check then tests a lane on top of that main, s
 lane until a person fixes it. runner_watch.py (T-3213) sees the red after the fact; it limits the damage, it does not
 prevent it.
 
-Not root causes here: the runner (8 environment failures, none since 11-05 14:00), stale-base land checks (0), lanes
+Not root causes here: the runner (8 environment failures, none since 11-05 2:00 PM), stale-base land checks (0), lanes
 skipping xc (0). Flaky tests (8) are a real second problem, smaller, and mostly in UI tests that land checks do not run.
 
 ## 3. The structural fix: one gate for every road into main

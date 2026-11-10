@@ -257,7 +257,7 @@ final class ReviewProbeT0654Tests: XCTestCase {
     is the only option with no move. If no released build has the old loose layout, whichever we choose costs
     no customer data; Ines can confirm that.
 - L2 to L6 are not touched in this pass.
-- **<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Chair</span>, Ines, 2026-10-29 05:13 ET, M2 grouping: no move, and no migration.** No build with loose scripts in
+- **<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Chair</span>, Ines, 2026-10-29 5:13 AM ET, M2 grouping: no move, and no migration.** No build with loose scripts in
   Documents/Scripts has left the company: no TestFlight, device runs still wait on #100, the alpha runs in the
   Simulator. So no customer has a file to migrate, and the migration can only ever move a file a script wrote
   into `files.documents()`. Take the migration call out of the Projects open path, with the `.migrated-v1`
@@ -389,7 +389,7 @@ probes and mutations were never committed, and the worktree is gone.
 
 ### Verdict
 
-**Merge after the alpha commit (2026-10-31 12:00): yes.** N1 is fixed: a refused save is on disk before iOS can
+**Merge after the alpha commit (2026-10-31 12:00 PM): yes.** N1 is fixed: a refused save is on disk before iOS can
 end the app, on every path that leaves the screen, and a second refusal never overwrites the first copy. N5 is
 fixed: the six loops are model methods, and the test fails when any of them tells only its own window (one save-all loop is still untested, L4). Counts,
 new: 0 High, 0 Medium, 4 Low. Nothing here blocks TestFlight.

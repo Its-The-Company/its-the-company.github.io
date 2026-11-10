@@ -11,7 +11,7 @@ description: "Sheets, drawn by draw_run_screen.py (imports draw_ide.py, no image
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Maren, 2026-10-27. <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Ruling</span>: ADR-001 chair ruling 2026-10-27 10:05, s1 and s5. Build spec for T-0449 (Idris reads before building). Layout and states are spec; every string is DRAFT <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>. Slice 2 (Make App flow, Add to Home Screen walkthrough): [`home-setup.md`](home-setup.html) (T-0503).
+Maren, 2026-10-27. <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Ruling</span>: ADR-001 chair ruling 2026-10-27 10:05 AM, s1 and s5. Build spec for T-0449 (Idris reads before building). Layout and states are spec; every string is DRAFT <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>. Slice 2 (Make App flow, Add to Home Screen walkthrough): [`home-setup.md`](home-setup.html) (T-0503).
 
 Sheets, drawn by `draw_run_screen.py` (imports `draw_ide.py`, no image model): `A-run-phone.png`, `A-run-ipad.png` (light, A Paper), `B-run-phone.png`, `B-run-ipad.png` (dark, B Studio). QA: `qa-run-screen.json` (4 sheets, 28 frames, 0 clipped, truncated, overlapping or under-11 pt texts; min contrast 4.86 light, 6.32 dark; each PNG under 300 KB). Regenerate: `python3 pywidget/docs/design/ide/draw_run_screen.py`; copy table: `--strings`.
 

@@ -16,7 +16,7 @@ return old(st, isPub) && !(age(st) < LANE_MS) ? [] : (st.tasks || {}).run
 }
 function word(r) { return r.lane ? (r.n ? r.n + "'s account" : 'Personal account') + ' (session ' + (r.lane.slice(1) || 1) + ')' : 'Main account'; }
 function level(r) { return r.m ? r.m.charAt(0).toUpperCase() + r.m.slice(1) + (r.e ? ', ' + r.e + ' effort' : '') : ''; }
-function et(t) { var d = new Date(t); return isNaN(d) ? '' : d.toLocaleString('en-US', { timeZone: 'America/New_York', hour: 'numeric', minute: '2-digit' }) + ' ET'; }
+function et(t) { return S.clock(t); }  // T-3396: the shared 12-hour clock (Eastern, ' ET')
 function pl(n, w) { return n + ' ' + w + (n === 1 ? '' : 's'); }
 function sessions(l) { var o = {}, a = []; l.forEach(r => { var k = r.lane + r.at; if (!o[k]) a.push(o[k] = { r: r, t: [] }); o[k].t.push(r); }); return a; }
 function row(ul, r, work) {

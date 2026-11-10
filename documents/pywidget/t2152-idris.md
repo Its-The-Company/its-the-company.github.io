@@ -58,7 +58,7 @@ fake API's write log, not on the message alone.
    sits in an earlier `deny:` list returns false. Failure scenario: the Investor presses Approve; no file is written;
    the record says approve with `applied: []`; the page says "The change is already in place on GitHub". It is not
    (Commandment 2). Because the record now says approve, every later press answers "Already approved; nothing
-   written", so the Investor cannot retry from the site (Amendment 2026-11-03 21:48 made the site the way to approve).
+   written", so the Investor cannot retry from the site (Amendment 2026-11-03 9:48 PM made the site the way to approve).
    Fix: decide "already applied" by count, not presence: the line block appears in the file now more times than it
    appears in the file the session started from (`f.after` minus the appended `f['new']`). That still catches the
    stacking case (a second copy at any position) and stops matching lines that were there before. Pin it with test
@@ -89,7 +89,7 @@ fake API's write log, not on the message alone.
   (79/79, 103/103, tamper.js unchanged from the parked tip, finding 3 unfixed).
 - 59: no new write path; the page reads `ops/tamper/decided/<id>.json` and `ops/tamper/moved/<id>.json` and writes
   the same files as before.
-- 42: no private data in the page or tests; fixture text is the public 19:16 amendment.
+- 42: no private data in the page or tests; fixture text is the public 7:16 PM amendment.
 {% endraw %}
 
 </div>

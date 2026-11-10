@@ -11,7 +11,7 @@ description: "Here is the shape of it. Messages gives an extension a card, a URL
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Wrenna, 2026-10-25 (started 19:33 ET by `date`). Desk research only. No prototype was built: the brief's prototype and any C14 build wait for a human approval (brief section 0, Phase 6). Status: **draft for Ines and the Investors; recommends nothing that needs App Store Connect before the membership is active.**
+Wrenna, 2026-10-25 (started 7:33 PM ET by `date`). Desk research only. No prototype was built: the brief's prototype and any C14 build wait for a human approval (brief section 0, Phase 6). Status: **draft for Ines and the Investors; recommends nothing that needs App Store Connect before the membership is active.**
 
 > "This NSUUID identifies the message's sender. This value is scoped to the current device and will be different on all devices that participate in the conversation."
 > (Messages.framework, `MSMessage.h`, `senderParticipantIdentifier`, iOS 27.1 SDK)

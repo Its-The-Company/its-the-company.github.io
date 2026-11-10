@@ -13,7 +13,7 @@ description: "Not option B (measure G1-G3 through the margin rule). The only way
 {% raw %}
 Idris, 2026-11-04. Board T-1853, from Pernille's review of T-0675's Swift half, F4
 (`docs/reviews/t0675-swift-pernille.md`). Applies to T-0680 (the device gate session, ADR-007 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-10-29
-08:03 item 5). This is an engineering decision inside T-0680's plan. The flag default stays with the chair line that
+8:03 AM item 5). This is an engineering decision inside T-0680's plan. The flag default stays with the chair line that
 T-0680 ends with.
 
 ## The failure
@@ -46,7 +46,7 @@ in Release:
    (marker without `backgrounded`), the tamper and `grave_full` rules and the stuck path all behave as they ship.
    G3 tests exactly those paths.
 
-**Why record-only gives the chair what it asked for.** Ines 2026-11-01 13:04 (5bb6692c): "Record any run that passes
+**Why record-only gives the chair what it asked for.** Ines 2026-11-01 1:04 PM (5bb6692c): "Record any run that passes
 the margin and dies, and any refusal of a run that fits." In the gate build, a `margin=fits` run that is killed is the
 first case, and a `margin=would_refuse` run that finishes is the second. An enforcing margin can record only the first.
 
@@ -136,7 +136,7 @@ share sheet open.
 - `WidgetLane.extensionFlag` and `LaneMargin.recordOnly` (`Shared/LaneGuard.swift`) read the condition. `ExtensionLane`
   takes `recordOnly` (default `LaneMargin.recordOnly`, so tests inject it), reads headroom, last peak and residue once,
   and refuses only when the margin says no and the build enforces.
-- One change from item 2's wording: the row's `headroom` is its existing column (RunRow, chair line 2026-11-02 17:15),
+- One change from item 2's wording: the row's `headroom` is its existing column (RunRow, chair line 2026-11-02 5:15 PM),
   whole MiB rounded down, or `unknown` for 0. An int under that key reads back as MiB, so bytes there would be read as
   MiB. The exact figure goes under `headroom_bytes` (absent when unknown). `need` and `residue` are bytes, as decided.
   The keys appear only on a record-only build's run rows; the shipping rows are unchanged.

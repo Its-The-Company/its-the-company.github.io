@@ -69,9 +69,9 @@ These come from the iOS 26 system `List`. Settings should follow Apple's convent
 
 Apple conventions met: Restore Purchases sits on the Settings screen next to the product (App Review 3.1.1), the large title is used, rows that open the web carry the up-right arrow, and the version is at the foot.
 
-## Recheck, 2026-11-05 14:50 (code read of 1e1ff0619)
+## Recheck, 2026-11-05 2:50 PM (code read of 1e1ff0619)
 
-Maren. Idris's fix for T-2696..T-2700 is commit 1e1ff0619. At 14:43 it was on `personal/b2`, `b5`, `b6` and two <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> branches, not on main or origin/main. `ops/jobs/` has no job at that commit; the newest Settings job is J-20261105-1335 (T-2456) at 92b062d47. The shots in `ops/site-checks/settings-T-2225/` are still build 47781357. **No new shot exists, so every finding below is confirmed by reading the code only.** No build or Simulator was run.
+Maren. Idris's fix for T-2696..T-2700 is commit 1e1ff0619. At 2:43 PM it was on `personal/b2`, `b5`, `b6` and two <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> branches, not on main or origin/main. `ops/jobs/` has no job at that commit; the newest Settings job is J-20261105-1335 (T-2456) at 92b062d47. The shots in `ops/site-checks/settings-T-2225/` are still build 47781357. **No new shot exists, so every finding below is confirmed by reading the code only.** No build or Simulator was run.
 
 The MacBook run cannot produce the shots. `testScreenshotsForReview` and the new `testProRowAtXXXLargeWithPendingForReview` skip unless `TEST_RUNNER_PW_SETTINGS_SHOTS` is set. `tools/xc_route.py:139` keeps any `TEST_RUNNER_*` run local ("settings the runner can't carry"). The MacBook run gives the green tests. The PNGs need one run on the local Mac mini slot with that variable set, at a build that holds 1e1ff0619, saved to a new folder (`ops/site-checks/settings-T-2696/`).
 

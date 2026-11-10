@@ -12,14 +12,14 @@ description: "An audit, proposal or trial from the company's operations records 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-**What this is, in plain English.** Every worker call today auto-loads that worker's whole notes file (MEMORY.md, median 19,680 B since 00:00 today) on every model call, though about 94% of it names nothing the task touches. This lets a switchback (half the work sessions, alternating) try the other way: on the new arm the worker gets only its identity and standing lessons (802 B to 4,053 B) and fetches a task packet for its board line with `tools/task_context.py`. The old arm is today's build, byte for byte. It is OPT-032, written at 01:17 today on top of OPT-030's diff; OPT-030 never applied and was stopped when you merged PR #71 (19:54), so this is the same change rebuilt against rules/build_agents.py as it stands on main at 6a12854c, with nothing of OPT-030 in it.
+**What this is, in plain English.** Every worker call today auto-loads that worker's whole notes file (MEMORY.md, median 19,680 B since 12:00 AM today) on every model call, though about 94% of it names nothing the task touches. This lets a switchback (half the work sessions, alternating) try the other way: on the new arm the worker gets only its identity and standing lessons (802 B to 4,053 B) and fetches a task packet for its board line with `tools/task_context.py`. The old arm is today's build, byte for byte. It is OPT-032, written at 1:17 AM today on top of OPT-030's diff; OPT-030 never applied and was stopped when you merged PR #71 (7:54 PM), so this is the same change rebuilt against rules/build_agents.py as it stands on main at 6a12854c, with nothing of OPT-030 in it.
 
 ## Evidence (raw)
 
-- `python3 tools/context_use.py --since 2026-10-26T00:00` (ops/runs transcripts, 142 persona threads, 00:00 to 20:10 ET): MEMORY.md at thread start median 19,680 B; keyed entries that share a key with the task 7.7%, used share of bytes 6.2%; 34.5 model calls per thread median; 70.3 M tokens of memory carried; orientation (tool calls before the first change) median 13.
+- `python3 tools/context_use.py --since 2026-10-26T00:00` (ops/runs transcripts, 142 persona threads, 12:00 AM to 8:10 PM ET): MEMORY.md at thread start median 19,680 B; keyed entries that share a key with the task 7.7%, used share of bytes 6.2%; 34.5 model calls per thread median; 70.3 M tokens of memory carried; orientation (tool calls before the first change) median 13.
 - Per work session, median orientation: 20261025-234823 13.0 (50 threads), 20261026-013629 10 (25), 20261026-022551 16 (25), 20261026-193827 12.0 (46); mean 12.75, sd 2.5, n=4.
-- Earlier window (10-25 00:00 to 10-26 01:10, 353 threads): memory median 17,513 B, used bytes 5.8%; full numbers in log/audit/proposal-task-context.md.
-- Switchback state: ops/switchback.json holds `task_context` / OPT-032 since 19:57:31, waiting for `TASK_CONTEXT_FLAG = "task_context"` in rules/build_agents.py, so no session has an arm yet (n=0).
+- Earlier window (10-25 12:00 AM to 10-26 1:10 AM, 353 threads): memory median 17,513 B, used bytes 5.8%; full numbers in log/audit/proposal-task-context.md.
+- Switchback state: ops/switchback.json holds `task_context` / OPT-032 since 7:57:31 PM, waiting for `TASK_CONTEXT_FLAG = "task_context"` in rules/build_agents.py, so no session has an arm yet (n=0).
 
 ## Change
 

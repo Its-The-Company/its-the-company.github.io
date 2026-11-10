@@ -11,7 +11,7 @@ description: "Sheets, drawn by draw_home_setup.py (imports draw_run_screen.py an
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Maren, 2026-10-27. <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Ruling</span>: ADR-001 chair ruling 2026-10-27 10:05, s1 ("Make App" writes the manifest, `pywidget.json` since the chair line of 2026-10-29 04:08, T-0506; a lone script first goes into a new project), s2 (the walkthrough), s3 (container projects only), s5 (the words). Build spec for T-0449; Idris reads it, with [`run-screen.md`](run-screen.html) (slice 1), before building. Layout and behaviour are spec; every string is DRAFT <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>.
+Maren, 2026-10-27. <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Ruling</span>: ADR-001 chair ruling 2026-10-27 10:05 AM, s1 ("Make App" writes the manifest, `pywidget.json` since the chair line of 2026-10-29 4:08 AM, T-0506; a lone script first goes into a new project), s2 (the walkthrough), s3 (container projects only), s5 (the words). Build spec for T-0449; Idris reads it, with [`run-screen.md`](run-screen.html) (slice 1), before building. Layout and behaviour are spec; every string is DRAFT <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>.
 
 Sheets, drawn by `draw_home_setup.py` (imports `draw_run_screen.py` and `draw_ide.py`; no image model): `A-home-phone.png`, `A-home-ipad.png` (light, A Paper), `B-home-phone.png`, `B-home-ipad.png` (dark, B Studio); revisions after s7 are in s8 (`*-home-rev-*`). QA: `qa-home-setup.json` (4 sheets, 28 frames, 0 clipped, truncated, overlapping or under-11 pt texts; min contrast 5.49 light, 6.37 dark; each PNG under 300 KB). Regenerate: `python3 pywidget/docs/design/ide/draw_home_setup.py`; copy table: `--strings`.
 
@@ -144,7 +144,7 @@ Word check('app', 'apps', 'mini app'): 55 strings, hits none
 
 ## 7. Engineering read (Idris), 2026-10-27
 
-Read for T-0504 before building T-0449: this file, [`run-screen.md`](run-screen.html), the sheets A-/B-run-* and A-/B-home-*, ADR-001's chair ruling of 2026-10-27 10:05, T-0448's reader (`_pywidget_runtime/app_manifest.py`) and T-0208's `RunScriptIntents.swift`. No Xcode run; every iOS behaviour below is from what I know, with how sure I am. Anything marked CHECK goes into T-0449's Simulator hand run (F18) with a screenshot, beside the five rows of s4. Redraws are board line T-0505 (Maren).
+Read for T-0504 before building T-0449: this file, [`run-screen.md`](run-screen.html), the sheets A-/B-run-* and A-/B-home-*, ADR-001's chair ruling of 2026-10-27 10:05 AM, T-0448's reader (`_pywidget_runtime/app_manifest.py`) and T-0208's `RunScriptIntents.swift`. No Xcode run; every iOS behaviour below is from what I know, with how sure I am. Anything marked CHECK goes into T-0449's Simulator hand run (F18) with a screenshot, beside the five rows of s4. Redraws are board line T-0505 (Maren).
 
 ### 7.1 Edit while a script is running (run-screen.md s2): disabled
 
@@ -200,7 +200,7 @@ Moves on this device: I keep the move, with one engineering limit. Anything anot
 
 `app_manifest.py`'s user-facing messages name the file `app.json`, for example "This project's app.json names the same field twice." Maren's word check counts "App Store" as a hit. Whether a file name counts under ruling s5 is Ines's call, and the answer may change Pernille's messages.
 
-Ruled (Ines, 2026-10-29 04:08, T-0506; ADR-001 chair line of that time): it counts. The file becomes `pywidget.json`, the messages keep naming it, Pernille renames in T-0653 before T-0449, and the Swift reader uses the new name.
+Ruled (Ines, 2026-10-29 4:08 AM, T-0506; ADR-001 chair line of that time): it counts. The file becomes `pywidget.json`, the messages keep naming it, Pernille renames in T-0653 before T-0449, and the Swift reader uses the new name.
 
 ### 7.6 The hand run
 

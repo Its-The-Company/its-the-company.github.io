@@ -11,7 +11,7 @@ description: "Unstar utilities negative-review index returned 403; Reddit not di
 <div class="doc-body" markdown="1">
 
 {% raw %}
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://unstar.app/category/utilities
 - Finding: Unstar utilities negative-review index returned 403; Reddit not directly reachable; no direct review counts possible. Findings are mostly listings, aggregator audits and forum snippets. A second pass needs counted reviews per candidate.
 {% endraw %}

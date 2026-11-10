@@ -11,12 +11,12 @@ description: "Acoustic timegrapher apps: inconsistent readings is the repeated c
 <div class="doc-body" markdown="1">
 
 {% raw %}
-## 2026-10-22 02:17 ET
+## 2026-10-22 2:17 AM ET
 - Source: https://apps.apple.com/us/app/id991367080?see-all=reviews
 - Finding: Acoustic timegrapher apps: inconsistent readings is the repeated complaint. Coded embedded store reviews: Watch Tuner ($1.99 + IAP, 80 ratings, 3.8) 3 of 4 low reviews on inconsistency; Timegrapher id6450460771 (46 ratings, 2.8) 2 of 2; Toolwatch (457, 3.3) 2 of 5 on wrong math, others forced login and 12h wait. 7 of 11 low reviews across 3 apps = accuracy/consistency.
 - Quote: "A waste of $15. This app give inconsistent readings and as a result I adjusted the Beat Error because it was telling me the BE was 3.5 to 7.5 (1 star, 2023-04-14)"
 
-## 2026-10-22 02:17 ET
+## 2026-10-22 2:17 AM ET
 - Source: https://itunes.apple.com/search?term=timegrapher&entity=software&country=us&limit=15
 - Finding: <span title="How many apps on the shelf already sell the same thing.">Crowding</span>: 8 of top 14 'timegrapher' results released since 2025; 1 of them (tickIQ, 804 ratings, paid tiers) broke 50 ratings. A newcomer can win here, but it is the most crowded <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> I checked.
 {% endraw %}

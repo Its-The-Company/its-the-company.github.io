@@ -26,16 +26,16 @@ events from the session's start to 3 h after its record, to check the sort by ey
 
 ## Findings
 
-1. The tool's share is 7 of 37 (n=80 records, 2026-10-27 18:40 to 2026-11-03 18:10):
-   - 3 closes written as worker `Operator` (capital O); the report matched `operator` only (11-02 13:05, 11-02 23:59, 11-03 01:01);
-   - 3 closes written as type `close`, not `session` (10-31 04:10, 10-31 09:46, 11-02 11:39); each is a session summary;
-   - 1 session of 0 minutes (11-03 00:52, 0.26 USD) whose event came 3 to 15 minutes after its record.
+1. The tool's share is 7 of 37 (n=80 records, 2026-10-27 6:40 PM to 2026-11-03 6:10 PM):
+   - 3 closes written as worker `Operator` (capital O); the report matched `operator` only (11-02 1:05 PM, 11-02 11:59 PM, 11-03 1:01 AM);
+   - 3 closes written as type `close`, not `session` (10-31 4:10 AM, 10-31 9:46 AM, 11-02 11:39 AM); each is a session summary;
+   - 1 session of 0 minutes (11-03 12:52 AM, 0.26 USD) whose event came 3 to 15 minutes after its record.
 2. The window is not the cause for short sessions. 14 of the 80 ran under 30 minutes; the report missed 6 of them,
-   and only 1 of those 6 (00:52 above) has a session event the window dropped. The rest are case (1), or real (4).
+   and only 1 of those 6 (12:52 AM above) has a session event the window dropped. The rest are case (1), or real (4).
 3. The real count is 30 of 80 (37.5%): 26 sessions wrote other Operator events (message, decision, investor, report)
-   but no session or close event; 4 wrote no Operator event at all (10-28 06:16, 10-28 12:29, 10-29 19:49, 11-03 05:05).
+   but no session or close event; 4 wrote no Operator event at all (10-28 6:16 AM, 10-28 12:29 PM, 10-29 7:49 PM, 11-03 5:05 AM).
    In OPT-050's 40-session window: 19 by the tool, 17 real (2 were type `close`).
-4. Before (2026-10-25 to 10-27 18:40, n=25 records): the tool counts 7; 2 of them are worker `Operator`; 5 of 25 real.
+4. Before (2026-10-25 to 10-27 6:40 PM, n=25 records): the tool counts 7; 2 of them are worker `Operator`; 5 of 25 real.
    So the real rate rose from 5 of 25 (20%) to 30 of 80 (37.5%).
 5. Where the close drops it: ops/prompts/work.md step 3 (Close) says only "the event log (python3 tools/events.py
    add ...)". It names no worker, no type and no summary for the session event, and no prompt has named
@@ -47,7 +47,7 @@ events from the session's start to 3 h after its record, to check the sort by ey
 ## Change made
 
 tools/session_salvage.py report counts a worker `operator` in any case, type `session` or `close` (test 5a in
-tests/session_salvage_test.py; suite 22 of 22). The report now reads 31 of 80 (30 real + the 00:52 one). Not
+tests/session_salvage_test.py; suite 22 of 22). The report now reads 31 of 80 (30 real + the 12:52 AM one). Not
 changed: the salvage's own "the Operator already wrote one" check (same predicate, around line 98), and the window.
 Board line for the prompt step: T-1692 follow-up in ops/board.md.
 

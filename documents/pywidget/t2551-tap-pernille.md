@@ -37,11 +37,11 @@ fixed before any launcher premade ships (the #192 run).
 ## Apple's documentation (standing <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> #64, signed out, one page at a time, through tools/fetch_cite.py --apple)
 
 - `widgetURL(_:)`, https://developer.apple.com/documentation/swiftui/view/widgeturl(_:).md, fetched 2026-11-08
-  13:23:28 ET: "The URL to open in the containing app." Saved under research/inbound/apple/developer.apple.com/.
-- `Link`, https://developer.apple.com/documentation/swiftui/link.md, fetched 2026-11-08 13:23:39 ET: nothing about
+  1:23:28 PM ET: "The URL to open in the containing app." Saved under research/inbound/apple/developer.apple.com/.
+- `Link`, https://developer.apple.com/documentation/swiftui/link.md, fetched 2026-11-08 1:23:39 PM ET: nothing about
   widgets or schemes.
 - `handlesExternalEvents(matching:)`, https://developer.apple.com/documentation/swiftui/scene/handlesexternalevents(matching:).md,
-  fetched 2026-11-08 13:25:38 ET (for M2).
+  fetched 2026-11-08 1:25:38 PM ET (for M2).
 - Already saved for T-2535: "Linking to specific app scenes from your widget or Live Activity" (2026-11-05): "the
   system activates the containing app and passes the URL to [onOpenURL] ...".
 

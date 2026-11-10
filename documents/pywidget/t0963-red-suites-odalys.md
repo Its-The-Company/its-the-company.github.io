@@ -21,15 +21,15 @@ Simulator, no tick, no live account. Switch state read first: `personal_lane_a` 
 
 | Suite | Row | Commit that turned it red | Cause | What was done |
 |---|---|---|---|---|
-| governor_test | the week's overflow <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> used | a9a554fb, an Investor, 11-01 13:35 ET (`weekly_cap_usd` 50 to 200) | The row pinned the old cap | Already fixed, 607f3add. Green today: 88/0, n=3 |
+| governor_test | the week's overflow <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> used | a9a554fb, an Investor, 11-01 1:35 PM ET (`weekly_cap_usd` 50 to 200) | The row pinned the old cap | Already fixed, 607f3add. Green today: 88/0, n=3 |
 | guard_test | the Investors' billing switch ships, with the caps | a9a554fb, as above | The row pinned `==50` | Already fixed, 2055e967. Green today: 496/0, n=3 |
-| personal_land_test | a real tick lands a ready branch through the hook, on a tick with no session | 08e0c113, itsthecompany, 11-01 10:05 (guard_test row added) | Leftover, below | Fixed here |
+| personal_land_test | a real tick lands a ready branch through the hook, on a tick with no session | 08e0c113, itsthecompany, 11-01 10:05 AM (guard_test row added) | Leftover, below | Fixed here |
 | personal_land_test | a real skip tick with a red branch leaves no more dirty than one without | 08e0c113 | Same | Fixed here |
 | personal_land_test | a pause set before the tick holds the landing back | 08e0c113 | Same | Fixed here |
-| personal_lane_test | Inert.test_no_running_path_names_the_lane | bcbba40d, Odalys, 11-01 18:46 (then dba5aade, d98a9e8e, d6928f04) | Real row, mine, three times. Tools named the tick, none starts it | Fixed here |
-| site_personal_test | the real file's bytes: name and on for b leave every other key as it was | 32b5d092, an Investor, 11-01 21:10 (b turned on) | Test defect: read live Investor bytes | Fixed here |
+| personal_lane_test | Inert.test_no_running_path_names_the_lane | bcbba40d, Odalys, 11-01 6:46 PM (then dba5aade, d98a9e8e, d6928f04) | Real row, mine, three times. Tools named the tick, none starts it | Fixed here |
+| site_personal_test | the real file's bytes: name and on for b leave every other key as it was | 32b5d092, an Investor, 11-01 9:10 PM (b turned on) | Test defect: read live Investor bytes | Fixed here |
 | site_personal_test | the real file's bytes: the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s reader sees b on and a as it was | 32b5d092 | Same | Fixed here |
-| personal_off_test | no account key reads true in the file this tree holds | b9566c53, an Investor, 11-01 12:26 (a turned on) | By design, t0880-<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>-line-2 L5 | Left red, not a defect |
+| personal_off_test | no account key reads true in the file this tree holds | b9566c53, an Investor, 11-01 12:26 PM (a turned on) | By design, t0880-<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span>-line-2 L5 | Left red, not a defect |
 | personal_lane_test | Inert.test_billing_file_holds_no_true_switch | b9566c53 | By design, L5 | Left red, not a defect |
 
 </div>
@@ -52,10 +52,10 @@ Simulator, no tick, no live account. Switch state read first: `personal_lane_a` 
    pattern fires. This is a judgment call on a row meant to go red on purpose. Ines can overrule it.
 4. site_personal_test real_bytes: `confirm` turns b on, but b was already on in the live file, so the click turned it off.
    The stand-in now starts from the real bytes with b off. The live file is only compared. One new row pins that start.
-5. The two by-design reds hid a real one. personal_lane_test read red for a known reason from 11-01 12:26, so nobody
-   looked when a second row went red at 18:46. Failure count by row is the check, not the suite's colour.
+5. The two by-design reds hid a real one. personal_lane_test read red for a known reason from 11-01 12:26 PM, so nobody
+   looked when a second row went red at 6:46 PM. Failure count by row is the check, not the suite's colour.
 
-## After the fixes (n=1, this tree, read before 04:51 ET)
+## After the fixes (n=1, this tree, read before 4:51 AM ET)
 
 governor 88/0, guard 496/0, personal_land 182/0, site_personal 207/0. personal_off 1 pass, 1 fail and
 personal_lane 1 failure, 2 skipped: only the two by-design rows. Raw output was in scratch; these counts are from it.
@@ -63,9 +63,9 @@ personal_lane 1 failure, 2 skipped: only the two by-design rows. Raw output was 
 ## Open, no line raised
 
 - While a switch is on, personal_off_test stops before section 2, so the tick's stand-in rows have not run since
-  11-01 12:26. 10 commits changed tools/personal_tick.sh in that time. The chair accepted this cost in L5. It is Ines's to
+  11-01 12:26 PM. 10 commits changed tools/personal_tick.sh in that time. The chair accepted this cost in L5. It is Ines's to
   reopen.
-- One guard refusal, between 04:27 and 04:28: my own command chained a listing of the home folder's Claude paths onto
+- One guard refusal, between 4:27 AM and 04:28: my own command chained a listing of the home folder's Claude paths onto
   the switch read. The guard named the lane's profile. Nothing ran. No suite needed that listing and it was dropped, not
   retried. The chair line and the switch value were then read as separate plain reads, which the task asks for.
 

@@ -11,29 +11,29 @@ description: "Apiarist, 4.5 stars from 81 ratings: one reviewer wants fewer step
 <div class="doc-body" markdown="1">
 
 {% raw %}
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://splitmetrics.com/apps/apiarist-beekeeper-assistant/id1436515928
 - Finding: Apiarist, 4.5 stars from 81 ratings: one reviewer wants fewer steps to start an inspection entry, another says there is no easy way to export data for AG reports.
 - Quote: "no easy way to export the data"
 
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://www.capterra.in/software/1089243/HiveLog
 - Finding: HiveLog places CSV/JSON export, harvest tracking and dashboards in premium features. Export is paywalled in at least two beekeeping apps.
 
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://apps.apple.com/ee/app/id6785985599
 - Finding: Combwise: Beekeeping Log markets against apps that want an account and subscription before you can write anything down; free log with export. A new entrant already attacks this gap, so it is not unique.
 
-## 2026-10-22 01:34 ET
+## 2026-10-22 1:34 AM ET
 - Source: https://apps.apple.com/us/app/beeplus-beekeeping-manager/id1018655661
 - Finding: BeePlus: paid upfront $9.99, no IAP, 876 ratings at 4.7, reviews dated 2017-2020 so older demand. RSS feed empty so no counted 1-3 star set. Store reviews ask for frame counts per box, mark To Do done, easier use with gloved hands.
 - Quote: "it's too hard to use my iPad while holding frames. (WeNeedBees, 2018)"
 
-## 2026-10-22 01:34 ET
+## 2026-10-22 1:34 AM ET
 - Source: https://apps.apple.com/us/app/hive-logger-beekeeping-app/id6670728627
 - Finding: Hive Logger: free, Pro $3.49/mo or $34.99/yr, 24 ratings. Search for beekeeping hive log returned 8 apps: 7 free with 0-24 ratings, all with new ID ranges (67xxxxx-68xxxxx), only BeePlus has traction. <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">Lane</span> is filling with near-identical new entrants: demand small, 4.3 risk high. No counted reviews exist (feeds empty).
 
-## 2026-10-22 01:34 ET
+## 2026-10-22 1:34 AM ET
 - Source: https://itunes.apple.com/search?term=aquarium+log+tracker&entity=software&country=us&limit=5
 - Finding: Same pattern in aquarium, coffee brew, sourdough, garden logs: 4 of 5 coffee-brew results and 3 of 5 aquarium results have 0 ratings and new IDs; only a few have 250+ ratings. Generic logbook is a flooded lane. Downgrade candidate 1.
 {% endraw %}

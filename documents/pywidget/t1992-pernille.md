@@ -14,7 +14,7 @@ description: "The first thing that broke was the word &quot;cut&quot;. The fix i
 Files read as they stand on `personal/b3` at 7cc45fb65: `tools/personal_tick.sh`, `tools/session_holder.py`, `keep` in
 `rules/personal_lane.py`, `tests/personal_parked_test.sh`. Line numbers are that commit's. The account state folders and
 streams were not read: sessions don't touch them. Figures come from `ops/runs/personal-tick-a.log` and
-`personal-tick-b.log`, read up to 2026-11-06 03:29 ET.
+`personal-tick-b.log`, read up to 2026-11-06 3:29 AM ET.
 
 ## Verdict: F3 closed, F1 not closed; fixed here
 
@@ -35,7 +35,7 @@ sessions were never stamped. T-1064's own claim holds for the sessions it recogn
 
 ## The count since T-1064 landed
 
-75 sessions in the logs started after 01:15 on 2026-11-04, by which time cd15cd6e3 was on main.
+75 sessions in the logs started after 1:15 AM on 2026-11-04, by which time cd15cd6e3 was on main.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 2: The count since T-1064 landed, scrolls sideways" data-n="2 3 4 5" style="--tw:605px" markdown="1">
@@ -69,7 +69,7 @@ same run: line 941's comment says "The keeper's own signal shows only in the exi
 Failing case, on the code as it stood: stand-in keeper sends TERM, `PERSONAL_LOOK_TRIES=1`. Log says exit 143 and
 "keeper: stopped", the try has no stamp, one look line goes up. New row "the keeper's signal raises no look line".
 
-Real cases: b 2026-11-05 22:25:05 (T-2027) and b 2026-11-04 19:59:27 (T-1854), a2 2026-11-04 08:49:56 (T-1117, T-1284,
+Real cases: b 2026-11-05 10:25:05 PM (T-2027) and b 2026-11-04 7:59:27 PM (T-1854), a2 2026-11-04 8:49:56 AM (T-1117, T-1284,
 T-1243). Those five lines went to the board at P1 from sessions something else ended. I can't say from the logs whether
 those tasks needed a person anyway. The three uncounted stop words (`watcher`, `check`, `error`) fail the same way.
 
@@ -77,9 +77,9 @@ those tasks needed a person anyway. The three uncounted stop words (`watcher`, `
 
 Reproduced. `tools/personal_tick.sh:976`, same line.
 
-Exit 1 sessions end on `is_error=True` or at `num_turns=0`, with agents still out: b3 2026-11-04 23:15:34, 2251 s in, 8
+Exit 1 sessions end on `is_error=True` or at `num_turns=0`, with agents still out: b3 2026-11-04 11:15:34 PM, 2251 s in, 8
 tries and a look line for T-2021. The tick's own line 1025 calls this "did not end clean" and <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parks</span> the branch, but
-charges every task a real try. Three such ends fell on account b within nine minutes (23:15 to 23:24). That looks like an
+charges every task a real try. Three such ends fell on account b within nine minutes (11:15 PM to 11:24 PM). That looks like an
 account-wide cause, but the streams that would say so are not mine to read, so this is unconfirmed.
 
 Failing case: `ctl/exit` 1, `PERSONAL_LOOK_TRIES=1`, two ticks: a line, and no stamp. New rows "a session that dies on

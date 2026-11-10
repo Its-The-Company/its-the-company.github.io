@@ -85,7 +85,7 @@ Dropped: Unfolder (the Mac incumbent's name; Tile Unfolder also on the store), F
 
 ### <span title="Whether we may and can build it: our rules and banned areas, and a first version Idris can finish by Day 22. A subject off the Investors&#x27; list is noted, not dropped.">Fit</span>
 - A tool with a real job and real geometry (Commandment 8); crafts and making are not a banned area (7). No server, no account, privacy label "Data Not Collected" (6).
-- Buildable and testable on one M1 Mac mini in the Simulator: a pure Swift `Unfold` package (mesh parsing, graph, flatten, overlap, tabs, packing) with XCTest on fixture models; SceneKit for the 3D view; SwiftUI for the page editor; UIGraphicsPDFRenderer for export; StoreKit testing in Xcode. Nothing needs App Store Connect before the membership is active (amendment of <span class="nw">2026-10-22</span> 01:09).
+- Buildable and testable on one M1 Mac mini in the Simulator: a pure Swift `Unfold` package (mesh parsing, graph, flatten, overlap, tabs, packing) with XCTest on fixture models; SceneKit for the 3D view; SwiftUI for the page editor; UIGraphicsPDFRenderer for export; StoreKit testing in Xcode. Nothing needs App Store Connect before the membership is active (amendment of <span class="nw">2026-10-22</span> 1:09 AM).
 - Every visual is drawn from the mesh (9). The icon is a net of a cube; screenshots are the app's own output.
 - Scope: see Roadmap. Version 1 is a coherent slice App Review will accept (2.1): import, unfold, check, export.
 

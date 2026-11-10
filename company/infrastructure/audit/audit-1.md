@@ -12,15 +12,15 @@ description: "An audit, proposal or trial from the company's operations records 
 
 {% raw %}
 
-Odalys, 2026-10-25 23:09 ET. Asked in #41 c6407113363 (item 3). Window: from the first transcript (2026-10-22 01:28 ET) to the request, 2026-10-25 22:49 ET.
+Odalys, 2026-10-25 11:09 PM ET. Asked in #41 c6407113363 (item 3). Window: from the first transcript (2026-10-22 1:28 AM ET) to the request, 2026-10-25 10:49 PM ET.
 
 Every number below comes from one command, and rebuilds byte for byte (checked twice with `cmp`):
 
-    python3 tools/audit_losses.py --until 2026-10-25T22:49:00-04:00 --json ops/metrics/audit-1/audit.json
+    python3 tools/audit_losses.py --until 2026-10-25T22:49:00-4:00 AM --json ops/metrics/audit-1/audit.json
 
 Raw output: `ops/metrics/audit-1/audit.txt` and `audit.json`. GitHub timestamps: `ops/metrics/audit-1/github.json` (numbers, logins, times and labels only; no titles or bodies). Test: `tests/audit_losses_test.py`, 40 checks; two deliberate mutations both failed it. Transcripts are read from ops/runs/ and ops/runs-archive/ (OPS-1 compresses there), so the figures still rebuild after archiving. The method is in the script's docstring. Sources: 147 transcripts (ops/runs/*.jsonl), ops/runs/supervisor.log, git (2,420 commits), GitHub (61 issues, 320 comments), and the usage meter. Reports, diaries, state.md text and memories were not used as evidence. Their sizes in git were measured, because their size is the cost.
 
-Units. Usage is list-priced dollars from the transcripts (tools/governor.py prices). The meter puts this week at **$17.58 per 1% of the weekly limit** (0% to 19% between 03:04 and 22:09 today). Transcripts total $1,711.08. The meter's plan cost is $1,837.87 at 22:09, so the transcripts explain 93% of it (baseline gap 1). Tokens of a tool result = characters x R. R = 0.495 tokens per character, calibrated from the transcripts themselves (context growth after single-tool calls, n=5,799; Read results 0.42, Bash 0.49). Treat token figures as ±15%.
+Units. Usage is list-priced dollars from the transcripts (tools/governor.py prices). The meter puts this week at **$17.58 per 1% of the weekly limit** (0% to 19% between 3:04 AM and 10:09 PM today). Transcripts total $1,711.08. The meter's plan cost is $1,837.87 at 10:09 PM, so the transcripts explain 93% of it (baseline gap 1). Tokens of a tool result = characters x R. R = 0.495 tokens per character, calibrated from the transcripts themselves (context growth after single-tool calls, n=5,799; Read results 0.42, Bash 0.49). Treat token figures as ±15%.
 
 ## The five largest losses
 
@@ -36,7 +36,7 @@ Ranked within each unit: hours first, then usage. Ranking dollars against hours 
 ### 2. Calendar hours with no session running: 32.7 h of 94.3 h (35%)
 
 - **Number.** Sessions covered 61.56 h of the 94.26 h span. The supervisor log gives the reason for each gap:
-  - daily share spent: 15.93 h. Today's share was gone at 08:04, so nothing ran from 08:51 to 18:07.
+  - daily share spent: 15.93 h. Today's share was gone at 8:04 AM, so nothing ran from 8:51 AM to 6:07 PM.
   - between ticks, no reason logged: 11.25 h. Across all 99 gaps the median is 15.0 min.
   - git sync failed: 4.39 h. The chain needs a clean sync.
   - session failed or stopped: 0.70 h.
@@ -54,15 +54,15 @@ Ranked within each unit: hours first, then usage. Ranking dollars against hours 
 
 ### 4. Weekly limit left unused at the reset: 8.0% of week 1
 
-- **Number.** The last reading before the 03:00 reset (02:49 today) was 92.0%. 8.0% expired, about $131 at week 1's $16.35 per 1%. The same pacing then idled 15.9 h of Day 4 (loss 2).
+- **Number.** The last reading before the 3:00 AM reset (2:49 AM today) was 92.0%. 8.0% expired, about $131 at week 1's $16.35 per 1%. The same pacing then idled 15.9 h of Day 4 (loss 2).
 - **Source.** ops/usage.json meter_points (the meter readings).
 - **Experiment.** *Hypothesis:* the even daily share leaves the end of the week unspent. A share that grows as the reset nears, and releases the whole remainder in the last 24 h, uses 98% or more of each week. *Metric:* week_pct at the last reading before reset. *Predicted:* 92 up to 98 or more. *Window:* one reset. That is n=1, so the leading indicator is the governor's forecast against the meter, checked every session. *Revert:* if a plan-limit pause occurs in the final day, or the 5-hour window leaves more than 2 h idle.
 
 ### 5. Reading the board: $91.55 (5.4% of usage, 5.2% of a weekly limit)
 
-- **Number.** 7.61M tokens of board text entered context across 129 work sessions: median 39.6k tokens per session, p90 148k, max 277k. The board peaked at 657,378 B in 791 lines at 04:26 on Day 4, with 626 finished, 46 open and 37 blocked. The Investor's 484 KB in 586 lines is one point on that curve. Now: 99,696 B in 167 lines (77 finished, 58 open, 12 blocked), after the prune at 19:59 (b243f791).
+- **Number.** 7.61M tokens of board text entered context across 129 work sessions: median 39.6k tokens per session, p90 148k, max 277k. The board peaked at 657,378 B in 791 lines at 4:26 AM on Day 4, with 626 finished, 46 open and 37 blocked. The Investor's 484 KB in 586 lines is one point on that curve. Now: 99,696 B in 167 lines (77 finished, 58 open, 12 blocked), after the prune at 7:59 PM (b243f791).
 - **Source.** Transcripts: Read, Grep and Bash results naming ops/board.md or tools/board.py, excluding board_tick. Board history from git.
-- **Experiment.** One change is already in flight on this metric: the 19:59 prune. Only 3 work sessions have run since, which is too few to judge, so it is measured first. Next comes a runnable-only view: the work prompt reads `tools/board.py runnable` instead of the whole file, and later a task store. *Hypothesis:* a session needs only runnable lines. *Metric:* board tokens per work session (median). *Predicted:* about 15k after the prune, 5k or less with the runnable view. *Window:* 20 work sessions per arm, switchback by session parity. *Revert:* if tasks finished per session fall more than 20%, or a runnable line waits 2 or more sessions while the pool has room. The work prompt is protected, so this goes as a proposal.
+- **Experiment.** One change is already in flight on this metric: the 7:59 PM prune. Only 3 work sessions have run since, which is too few to judge, so it is measured first. Next comes a runnable-only view: the work prompt reads `tools/board.py runnable` instead of the whole file, and later a task store. *Hypothesis:* a session needs only runnable lines. *Metric:* board tokens per work session (median). *Predicted:* about 15k after the prune, 5k or less with the runnable view. *Window:* 20 work sessions per arm, switchback by session parity. *Revert:* if tasks finished per session fall more than 20%, or a runnable line waits 2 or more sessions while the pool has room. The work prompt is protected, so this goes as a proposal.
 
 ## Losses ranked 6 and below
 
@@ -71,7 +71,7 @@ Ranked within each unit: hours first, then usage. Ranking dollars against hours 
 
 | Rank | Loss | Number | Source |
 |---|---|---|---|
-| 6 | GitHub push blocked | 23.98 h in 3 episodes; longest 23.19 h from 2026-10-24 22:43, caused by a 112 MB file in research/hunt/H206-raw. The site and the Investors' view were stale throughout | supervisor.log |
+| 6 | GitHub push blocked | 23.98 h in 3 episodes; longest 23.19 h from 2026-10-24 10:43 PM, caused by a 112 MB file in research/hunt/H206-raw. The site and the Investors' view were stale throughout | supervisor.log |
 | 7 | Pool below target (8) | 140.65 agent-hours short; mean shortfall 4.31 agents over 32.67 target-window hours; 13.74 of 61.56 session hours with no agent running. While the daily share binds, this costs calendar time, not usage | transcripts |
 | 8 | Operator main thread | $160.66 (9.4%) against workers $1,550.41. Overhead, partly overlapping loss 5 | transcripts |
 | 9 | Reading ops/state.md | $18.92 (1.68M tokens) | transcripts |
@@ -99,11 +99,11 @@ Ranked within each unit: hours first, then usage. Ranking dollars against hours 
 | Step | Designed (code) | Observed (logs) |
 |---|---|---|
 | Session cadence | Tick every 15 min; chain at once after a clean work session (supervisor.sh section 13) | 99 gaps, median 15.0 min; chain ends on 81 failed syncs; 32.7 h with no session |
-| Pacing | Even daily share (governor) | Day 4 share spent by 08:04, then 15.9 h idle; week 1 left 8.0% at reset |
+| Pacing | Even daily share (governor) | Day 4 share spent by 8:04 AM, then 15.9 h idle; week 1 left 8.0% at reset |
 | Pool | 8 or more agents at once (work.md) | Mean shortfall 4.31; 22% of session time with no agent running |
 | Board | Read at start; write only through board_tick (work.md) | 7.61M tokens read; 28 lock refusals; 13 restore or re-add commits |
 | Commits | Pathspec commits per worker; no pull or push in a session; supervisor pushes | 201 private-index workarounds; 34 push rejections inside sessions; a 112 MB file blocked every push for 23.2 h |
-| Investor message | inbox_wait wakes the Operator within minutes (amendment 2026-10-24 09:56) | To reply: median 0.04 h, p90 0.48 h, max 1.32 h (n=60). To a commit naming the issue: median 0.43 h, p90 1.51 h, max 15.29 h (n=54). The supervisor queued 10 messages for a later inbox session |
+| Investor message | inbox_wait wakes the Operator within minutes (amendment 2026-10-24 9:56 AM) | To reply: median 0.04 h, p90 0.48 h, max 1.32 h (n=60). To a commit naming the issue: median 0.43 h, p90 1.51 h, max 15.29 h (n=54). The supervisor queued 10 messages for a later inbox session |
 | Answer to resumed work | The inbox turns the `[b]` line back to `[ ]` | Answer to commit naming #N: median 0.54 h, max 15.29 h (n=6) |
 | Memory | Append, keep short, archive (rule 13) | 372 memory-only commits; 8.3 to 24.5 KB loaded in 1,191 persona calls |
 | state.md | Under 150 lines | 73 of 117 versions over 15 KB |
@@ -118,7 +118,7 @@ Ranked within each unit: hours first, then usage. Ranking dollars against hours 
 2. Carry cost ignores cache expiry, which would raise it, and cross-call cache sharing of system prompts, which would lower the cache-write part of memory auto-load. Adding the compaction rule (stop carrying when context shrinks below 80%) changed no total.
 3. Memory auto-load uses the committed MEMORY.md size at each call's start; uncommitted edits are not seen.
 4. Collision cost counts only the failing turn and the one after it. Repair commits are counted, not priced, because no task IDs exist yet (plan item 3).
-5. pool_max is not archived per session, so the pool target is taken as 8 for every work session after 2026-10-23 19:20.
+5. pool_max is not archived per session, so the pool target is taken as 8 for every work session after 2026-10-23 7:20 PM.
 6. Blocked hours resolve to board commit times. Answers given in another issue (the product choice in #41) are not linked to the pitch issues they settle.
 {% endraw %}
 

@@ -11,8 +11,8 @@ description: "A tamper entry (tools/tamper_note.py, shown on Needs you) offers &
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Owner: Odalys. From #54 c6406649834 (an Investor, 2026-10-25 22:08 ET): Investor-owned files hold rules the company
-cannot edit; they should not hold settings that hold back the company's work. Written 2026-10-25 22:25 ET.
+Owner: Odalys. From #54 c6406649834 (an Investor, 2026-10-25 10:08 PM ET): Investor-owned files hold rules the company
+cannot edit; they should not hold settings that hold back the company's work. Written 2026-10-25 10:25 PM ET.
 
 ## When the choice appears
 
@@ -69,7 +69,7 @@ Sources: issues #13, #32, #36 and #58, plus every `file guard:` line in `ops/run
   sent.
 - **Settings: none.** Every entry was an amendment record, which is a rule. No event restored a file under
   `investors/`, `rules/`, `setup/`, `.claude/` or `CLAUDE.md`, and the log has 0 `restored <file>` lines.
-- `ops/tamper/` has no entries yet. The new path started at badec2ba (2026-10-25 20:29 ET), and nothing has been
+- `ops/tamper/` has no entries yet. The new path started at badec2ba (2026-10-25 8:29 PM ET), and nothing has been
   restored since.
 - The friction these show is in the amendment format and the quote check, not in a misplaced setting. That fix
   belongs in how sessions write amendments (quote the comment exactly, give the username and link). Moving

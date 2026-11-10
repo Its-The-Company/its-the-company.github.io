@@ -12,14 +12,14 @@ description: "An audit, proposal or trial from the company's operations records 
 
 {% raw %}
 
-Measured by Odalys, 2026-10-26 01:20-01:27 ET. Tool: `tools/drain_cost.py --since 2026-10-25T00:00 --until 2026-10-26T01:30`
+Measured by Odalys, 2026-10-26 1:20-1:27 AM ET. Tool: `tools/drain_cost.py --since 2026-10-25T00:00 --until 2026-10-26T01:30`
 (raw rows: `log/audit/drain-cost.json`). Evidence: 17 session streams in ops/runs (task_started / task_notification
 records of every `local_agent` task) and the governor's decisions in ops/runs/supervisor.log.
 
 Definition (the Investor's): a drain runs from the last task a work session started to the next work session's first
 task. Idle agent-minutes = the integral of max(0, 8 - agents running) over that window; 8 is the floor in
 ops/prompts/work.md. Split: tail (last start -> session end), gap (end -> next session start), ramp (start -> first
-task). One gap (07:18 -> 19:11 on 10-25) was the governor holding work for the day's budget share; it is counted
+task). One gap (7:18 AM -> 7:11 PM on 10-25) was the governor holding work for the day's budget share; it is counted
 apart, because no session-end rule wins those minutes back.
 
 ## Results (n = 9 drains, 8 not held)
@@ -45,16 +45,16 @@ Median 160.6 agent-min (2.7 agent-hours) per session end. Including the budget-h
 
 1. The largest part is between sessions, not inside them (n=8). Every gap without an inbox session was 15.4-15.5
    minutes: the next session waited for the 15-minute launchd tick. The chain that should start it at once
-   (supervisor step 13) required a clean git sync, and every push failed from 2026-10-24 22:43 (a 112 MB file in the
-   unpushed commits from 04:40 on 10-25; plain push failures before that). Last chain: 2026-10-24 20:12. Two gaps
+   (supervisor step 13) required a clean git sync, and every push failed from 2026-10-24 10:43 PM (a 112 MB file in the
+   unpushed commits from 4:40 AM on 10-25; plain push failures before that). Last chain: 2026-10-24 8:12 PM. Two gaps
    were about 31 minutes because a short inbox session sat between two work sessions and does not chain either.
-2. Tails: median 2.6 min, but 13.7, 12.9 and 24.0 min in three sessions (21:03 session: 154 idle agent-min while
+2. Tails: median 2.6 min, but 13.7, 12.9 and 24.0 min in three sessions (9:03 PM session: 154 idle agent-min while
    it waited on its last agents).
 3. Mid-session stalls are outside this definition and larger: audit 2 measured 3.70 agent-hours under target in
-   the 33 minutes 00:32-01:04 of the session that started 23:48, after the Operator decided to close on "about 30
+   the 33 minutes 12:32-1:04 AM of the session that started 11:48 PM, after the Operator decided to close on "about 30
    turns" (`tools/audit_session.py --run 20261025-234823 --split 00:32`; log/audit/proposal-close-rule.md).
 4. The Operator's context at session end, 2026-10-24/25 work sessions: 87k-288k tokens; the current session was at
-   368k at 01:22. None near the 1M window.
+   368k at 1:22 AM. None near the 1M window.
 
 ## Fix already made (company code, Commandment 3; tests/supervisor_test.sh 153/0, 72 s)
 

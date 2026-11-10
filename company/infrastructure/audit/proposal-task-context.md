@@ -13,13 +13,13 @@ description: "An audit, proposal or trial from the company's operations records 
 
 {% raw %}
 
-Odalys, 2026-10-26 01:17 ET. Task T-0005 (#41 c6407113363 item 3). Status: **tool and tests in company code;
+Odalys, 2026-10-26 1:17 AM ET. Task T-0005 (#41 c6407113363 item 3). Status: **tool and tests in company code;
 the switch is this diff to rules/build_agents.py, queued behind OPT-030.** Every number below comes from
 ops/runs transcripts and git history through `tools/context_use.py`; nothing from memories or reports.
 
 ## 1. What a worker thread carries now
 
-`python3 tools/context_use.py --since 2026-10-25T00:00` (353 persona threads, 2026-10-25 00:00 to 10-26 01:10 ET):
+`python3 tools/context_use.py --since 2026-10-25T00:00` (353 persona threads, 2026-10-25 12:00 AM to 10-26 1:10 AM ET):
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: 1. What a worker thread carries now, scrolls sideways" style="--tw:640px" markdown="1">
@@ -41,13 +41,13 @@ All 1,441 persona threads since 2026-10-22: used share 6.8%, 301 M tokens carrie
 entries (identity, prose lessons) are never counted as used. Even so, at least about 90% of what each call
 carries names nothing the task touches.
 
-**Turn-limit stops are not a memory effect.** Since 10-25 00:00, 9 of 353 threads stopped at the turn limit, all
+**Turn-limit stops are not a memory effect.** Since 10-25 12:00 AM, 9 of 353 threads stopped at the turn limit, all
 Pernille's (persona maxTurns 40; the other five say 150; OPT-031 fixes that). Those 9 had median 2 context reads,
 the same as the rest; what differed was code orientation: 20 calls and 113 K chars before the first change, against
 8 and 43 K. So the trial is sized on carry cost and orientation, not on limit stops.
 
-Orientation moved with the phase: median per session 4 to 6.5 in the seven work sessions 10-24 22:46 to 10-25
-06:36, then 11.5 to 16.5 in the five build sessions since 19:11 (mean 14.6, sd about 2.1). A before/after would
+Orientation moved with the phase: median per session 4 to 6.5 in the seven work sessions 10-24 10:46 PM to 10-25
+6:36 AM, then 11.5 to 16.5 in the five build sessions since 7:11 PM (mean 14.6, sd about 2.1). A before/after would
 read that phase change as an effect; this runs as a switchback.
 
 ## 2. The trial
@@ -82,7 +82,7 @@ equal. No change to ops/prompts/: the worker fetches its own packet.
   commits on the new arm exceed the old arm's over the window. Keep only if orientation drops by 3 or more and no
   guard trips; otherwise record no_effect and stop.
 
-## 4. Does it qualify for 12 h auto-apply (ruling 2026-10-26 00:39, #65)?
+## 4. Does it qualify for 12 h auto-apply (ruling 2026-10-26 12:39 AM, #65)?
 
 Yes, once its preconditions hold:
 - Supervisor-revertible: yes, by `switchback.py stop`; the old arm is today's build.

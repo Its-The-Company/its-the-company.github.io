@@ -65,14 +65,14 @@ From Wrenna's note, [`pywidget/docs/research/app-launcher.md`](app-launcher.html
 
 Maren, 2026-11-07. **Proposal only (Commandment 51); nothing is built until the Investors pick.** Asked on #41 (an Investor, c6653117254): "a few more options, with another widget function incorporated into the design. For example, a clock, weather display, transit widget, or some other function."
 
-Same frame set and the same script (`draw_launcher.py`): small, medium, large, light and dark, placeholder apps, the approved A Paper and B Studio widget tokens. Every value on the frames is invented sample data (09:41 on Sat 7 Nov, a place called Harbour, a stop called Elm St). The weather symbols are circles, rays and one cloud path drawn in the script. 7 to 10 draw no badges: a count on another app's tile is not possible (section above), and these widgets already have a second job.
+Same frame set and the same script (`draw_launcher.py`): small, medium, large, light and dark, placeholder apps, the approved A Paper and B Studio widget tokens. Every value on the frames is invented sample data (9:41 AM on Sat 7 Nov, a place called Harbour, a stop called Elm St). The weather symbols are circles, rays and one cloud path drawn in the script. 7 to 10 draw no badges: a count on another app's tile is not possible (section above), and these widgets already have a second job.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 2: 7 to 10: a launcher that also does another job (T-2552), scrolls sideways" data-n="1" style="--tw:681px" markdown="1">
 
 | # | Name | The other job | The idea | Sheet |
 |---|---|---|---|---|
-| 7 | Hours | Clock | A live clock with the apps for this part of the day. The script swaps the set at the hours it chooses (here 12:00 and 18:00). Large adds two more time zones and the day as a strip. | `7-hours.png` |
+| 7 | Hours | Clock | A live clock with the apps for this part of the day. The script swaps the set at the hours it chooses (here 12:00 PM and 6:00 PM). Large adds two more time zones and the day as a strip. | `7-hours.png` |
 | 8 | Forecast | Weather | The weather now and over the next hours, and the apps the script picks for it: "Dry now: Run, Atlas", "From 14:00: Read, Tunes". | `8-forecast.png` |
 | 9 | Board | Transit | A departure board for your stop. Each row opens your transit app; your apps for the ride sit beside it. | `9-board.png` |
 | 10 | Focus | Focus timer | A countdown for the current block (Write, 25 min) with that block's apps. Pause and Skip are buttons on the widget; the script sets the blocks. | `10-focus.png` |
@@ -96,7 +96,7 @@ A frequently viewed widget gets about 40 to 70 reloads a day, 15 to 60 minutes a
 
 | # | Stays live with no reload | Changes on planned entries (no fetch) | Needs a budgeted reload |
 |---|---|---|---|
-| 7 Hours | The time, to the minute: `Text(.currentDate, format:)` (iOS 18; in the iOS 27.1 SDK; the app targets iOS 18.0). The other time zones use the same view with their time zone. Fallback since iOS 14: `Text(midnight, style: .timer)`, which shows the seconds as well. | The app set at 06:00, 12:00 and 18:00: three entries from one script run. | None, beyond one run a day. |
+| 7 Hours | The time, to the minute: `Text(.currentDate, format:)` (iOS 18; in the iOS 27.1 SDK; the app targets iOS 18.0). The other time zones use the same view with their time zone. Fallback since iOS 14: `Text(midnight, style: .timer)`, which shows the seconds as well. | The app set at 6:00 AM, 12:00 PM and 18:00: three entries from one script run. | None, beyond one run a day. |
 | 8 Forecast | Nothing about the weather. "Checked 09:30" says how old it is. | The hour columns: one fetch returns the hourly forecast, so the script plans an entry per hour and the "now" column moves on without a fetch. | The weather itself: one fetch per reload, so what is shown can be up to one reload old (15 to 60 min). The script's choice of apps follows each fetch. |
 | 9 Board | The minutes to each departure count down by themselves: the iOS 18 offset format (`SystemFormatStyle.DateOffset`, minutes only, in the SDK), or `Text(departure, style: .relative)`, which also shows seconds. | One entry per departure, from the timetable the app stored, so the next bus replaces the one that left. | Only a new timetable, which the app fetches when opened or in background refresh (when iOS allows). No live delays. |
 | 10 Focus | The countdown and the ring: `Text(timerInterval:)` and `ProgressView(timerInterval:)`. | The next block at each block's end. | None. Pause and Skip are `Button(intent:)`: a tap runs in the extension, and the reload after it is not charged to the budget (Apple, L2). |

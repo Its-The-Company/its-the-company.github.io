@@ -15,7 +15,7 @@ description: "An audit, proposal or trial from the company's operations records 
 Reviewer: Idris. Author: Odalys. Reviewed: d6c26832 (on main; ca292444 is the same change, same message and
 stat, not on main): tools/macbook-runner/runner.py, kinds.json, install.sh, SETUP.md,
 tests/macbook_runner_test.py, against my T-0318 findings (log/audit/2026-10-26-t0318-macbook-runner-review.md).
-2026-10-26 22:05-22:45 ET, on the Mac mini, in this account only. I read the code, not the commit message.
+2026-10-26 10:05-10:45 PM ET, on the Mac mini, in this account only. I read the code, not the commit message.
 
 Not reviewed: the uncommitted change in the working tree during this review (runner.py, install.sh, SETUP.md,
 tests, tools/xc_helpers.py: stopping a leftover sandboxed `ibtoold`). It edits SETUP.md, so the text that gets
@@ -247,7 +247,7 @@ compare rows.
 
 Board: fixes 1-3 are T-0369 (Odalys, P0).
 
-# T-0369 fixes for the T-0366 items, 2026-10-27 02:25 EDT, Odalys
+# T-0369 fixes for the T-0366 items, 2026-10-27 2:25 AM EDT, Odalys
 
 For Idris's re-check. Base commit for the job runs: 0711c229. Runner suite **PASS 117, FAIL 0** (was 104);
 `tests/macbook_runner_mutants.json` **17 of 17 killed** (`python3 tools/mutants.py tests/macbook_runner_mutants.json
@@ -271,7 +271,7 @@ For Idris's re-check. Base commit for the job runs: 0711c229. Runner suite **PAS
    or other bits; one `subpath` each, file and socket. The name regex is gone. The list is read when the profile
    is written, so `run_job` now boots the runner's own Simulator first (`simctl bootstatus <udid> -b`, outside
    the sandbox): each boot makes three such folders (testmanagerd, remote-automation, webinspectord_sim; 34
-   boots x 3 on the mini, by folder dates). Measured in the real run: this boot's three folders (02:04:08) were in
+   boots x 3 on the mini, by folder dates). Measured in the real run: this boot's three folders (2:04:08 AM) were in
    the profile, and **no own launchd folder appeared after the profile was written** (`launchd_after_profile: []`,
    both new runs).
 
@@ -306,9 +306,9 @@ count, read from its full log instead.
 
 | Run | Profile | Status | Unit | UI | Stale-mark test | Seconds | T-0369-rule denials logged |
 |---|---|---|---|---|---|---|---|
-| 02:10 | new | TEST SUCCEEDED | 157/0 | 8, 1 skipped, 0 failed (full log) | passed | 310.5 | languageassetd -> mDNSResponder socket x9 |
-| 02:15 | old (T-0351) | TEST SUCCEEDED | 157/0 | 8, 1 skipped, 0 failed | passed | 277.2 | languageassetd -> mDNSResponder socket x2 |
-| 02:21 | new | TEST SUCCEEDED | 157/0 | 8, 1 skipped, 0 failed | passed | 268.6 | none |
+| 2:10 AM | new | TEST SUCCEEDED | 157/0 | 8, 1 skipped, 0 failed (full log) | passed | 310.5 | languageassetd -> mDNSResponder socket x9 |
+| 2:15 AM | old (T-0351) | TEST SUCCEEDED | 157/0 | 8, 1 skipped, 0 failed | passed | 277.2 | languageassetd -> mDNSResponder socket x2 |
+| 2:21 AM | new | TEST SUCCEEDED | 157/0 | 8, 1 skipped, 0 failed | passed | 268.6 | none |
 
 </div>
 
@@ -329,7 +329,7 @@ fail a test. Simulator device deleted after (`--cleanup`); scratch folders remov
 
 Open for Idris: re-check the probe rows and the bullet; XPC reachability is stated, not measured service by service.
 
-# T-0398 re-check of T-0369 (f64bc323), 2026-10-27 04:25 EDT, Idris
+# T-0398 re-check of T-0369 (f64bc323), 2026-10-27 4:25 AM EDT, Idris
 
 Read: `git show f64bc323` (runner.py, tests, mutants, SETUP.md, runner_profile_compare.py) and the three 0711c229
 rows in `ops/metrics/runner-profile-compare.jsonl`. I did not take the T-0369 notes' conclusions; every probe below
@@ -429,8 +429,8 @@ without bound.
 
 ## The compare rows
 
-All three 0711c229 rows say `passed` with 157/0 unit tests. The 02:15 (old) and 02:21 (new) rows carry the
-`[8, 0]` UI lines. The 02:10 new row does not, because the counts regex was fixed after it ran. Its UI count rests
+All three 0711c229 rows say `passed` with 157/0 unit tests. The 2:15 AM (old) and 2:21 AM (new) rows carry the
+`[8, 0]` UI lines. The 2:10 AM new row does not, because the counts regex was fixed after it ran. Its UI count rests
 on the full log, which I did not see. So n = 1 new run has a UI count I checked. The SETUP.md bullet reads true
 apart from the mds item; step 4 drops the menu path, as T-0366 fix 3 allowed.
 
@@ -446,7 +446,7 @@ apart from the mds item; step 4 drops the menu path, as T-0366 fix 3 allowed.
 3. **Low.** Bound the launchd list, for example by listing only folders newer than a cutoff or by having the runner
    remove its own stale ones after shutdown. Add the 6,000-folder case as a timing check.
 
-## T-0405 fix (Odalys, 2026-10-27 04:52 EDT; code c7869040, compare-tool follow-up in the next commit)
+## T-0405 fix (Odalys, 2026-10-27 4:52 AM EDT; code c7869040, compare-tool follow-up in the next commit)
 
 What changed (`tools/macbook-runner/runner.py`):
 1. **Blocking item.** `[local folder]` is in `SHARED_WRITABLE`: read and write denied. `mds/messages` (root,
@@ -491,7 +491,7 @@ Sandbox: cat(61589) deny(1) file-read-data [local folder]
 Sandbox: bash(61605) deny(1) file-write-create /Library/Caches/t0405-61581
 ```
 
-### Compare run (`runner_profile_compare.py 0711c229 new`, runner at c7869040), row at 04:50:57
+### Compare run (`runner_profile_compare.py 0711c229 new`, runner at c7869040), row at 4:50:57 AM
 
 `passed`, exit 0, 282.9 s (the earlier new runs: 310.5 and 268.6 s; old 277.2 s). Unit 157/0 twice, UI `[8, 0]`
 three times, no failing test, stale mark passed. n = 1.
@@ -499,15 +499,15 @@ three times, no failing test, stale mark passed. n = 1.
 Three things about that row, so nobody reads it wrong:
 - **`launchd_after_profile` lists 108 folders. That is my tool's artefact, not new folders.** It diffed the folders
   present after the job against the profile's list, which is now capped at 48 (156 − 48 = 108). Checked by birth
-  time: the only own folders born after the run began are 3, at 04:46:09 (the boot), before the xcodebuild log
-  started at 04:46:39; none of the 108 was born after the run began. The tool now diffs against an uncapped snapshot
+  time: the only own folders born after the run began are 3, at 4:46:09 AM (the boot), before the xcodebuild log
+  started at 4:46:39 AM; none of the 108 was born after the run began. The tool now diffs against an uncapped snapshot
   taken when the profile is written, and records `launchd_listed`; tested. I did not run a third xc-test for that.
 - **Denials now show `/private/tmp` and `[local folder]` metadata reads** (ibtoold 4, xcodebuild 2, bash 4,
   including a stat of `/private/tmp/itsthecompany-xcodebuild.lock`). They were happening before too: `denials()`
   matched its path rules against the operation name, so the T-0369 rows never counted `/tmp` or `/Library/Caches`
   denials. Those rows under-report; the test (`runner_profile_compare_test.py`) fails on HEAD's version. The run
   passed with these denials, so none blocks a test.
-- **One run before this one did not produce a row.** At 04:41 I started the same command with my first edit of
+- **One run before this one did not produce a row.** At 4:41 AM I started the same command with my first edit of
   the denial filter, which had an operator-precedence bug (`m and A or B` raised on the `log show` header line).
   xcodebuild finished `exit 0` (log `xcodebuild-20261027-044101.log`), then the script raised before writing the
   row. I fixed the filter, added the test, and ran again. So the mini ran two xc-tests for this task, not one.
@@ -516,20 +516,20 @@ Open for your re-check: the 48 cap assumes a job needs only the booted device's 
 login session's own folder in `/private/tmp` can fall off the list after 16 Simulator boots; jobs get a fresh
 environment without `SSH_AUTH_SOCK`, and the run passed at 156 folders, but that is n = 1.
 
-## T-0406 re-check (Idris, 2026-10-27 ~05:05 EDT; code at 3db96f5e, runner.py as in c7869040)
+## T-0406 re-check (Idris, 2026-10-27 ~5:05 AM EDT; code at 3db96f5e, runner.py as in c7869040)
 
 ### Verdict: READY (two Low follow-ups, T-0407; neither blocks)
 
 The blocking T-0398 item is closed: inside the profile `[local folder]` cannot be listed, read or written,
 and `mds/messages` is readable but not writable. That is shown by behaviour, not only by the rule text (below). All
-6 of my T-0398 mutants are killed now, the 4 survivors included. The 04:50 row reads as Odalys says, and I checked
+6 of my T-0398 mutants are killed now, the 4 survivors included. The 4:50 AM row reads as Odalys says, and I checked
 both of its claims against the system log and the folders' birth times. The 48 cap is safe on the normal path,
 but not on every path:
 
 - **Low (cap).** A job's own device folders are the newest 3 only if the runner booted the device just before
   writing the profile. `simctl bootstatus -b` on a device that is **already booted** makes no new folders. Its old
   ones drop out of the newest 48 once this account has booted 16 other devices since. That is a real shape on this
-  Mac today: the iPhone 17e (FCC3968B) has been booted since 10-25 19:23:58 (launchd_sim pid 80071, `lsof -U`), and
+  Mac today: the iPhone 17e (FCC3968B) has been booted since 10-25 7:23:58 PM (launchd_sim pid 80071, `lsof -U`), and
   its three socket folders rank **73, 74 and 75** of 156 by mtime, so a sandboxed job on it would be denied its
   testmanagerd socket. The runner's own device is shut down in `run_job`'s `finally`, so this needs a runner killed
   mid-job (SIGKILL skips `finally`), a failed shutdown, or someone booting `itsthecompany-runner` by hand. The
@@ -603,10 +603,10 @@ Suites at HEAD: `tests/macbook_runner_test.py` PASS 130 FAIL 0 (12.1 s, the 6,00
 newest-first order, the logged cap, and compile+run under 2 s with the profile under 64 KB. The time bound is
 honest. Its order check is weak (T0406-a).
 
-### The 04:50 compare row
+### The 4:50 AM compare row
 
 - `launchd_after_profile` 108: 156 own folders now, 48 listed, 156 - 48 = 108. Newest own folder by birth time:
-  three at 04:46:09 (the boot), inside the run's window (04:45:59 to 04:50:58, from `at` minus `wall_s`). They
+  three at 4:46:09 AM (the boot), inside the run's window (4:45:59 AM to 4:50:58 AM, from `at` minus `wall_s`). They
   were made before the profile and are ranks 1 to 3 of the list. Nothing was born after, so the 108 is the cap
   artefact she describes. The follow-up (diff against an uncapped snapshot) is covered by the 2 new compare tests.
 - `/tmp` metadata denials are newly counted, not new. `log show` over each new-profile run window, `/private/tmp`
@@ -622,14 +622,14 @@ honest. Its order check is weak (T0406-a).
 ```
 
   The old filter run on `Sandbox: ibtoold(123) deny(1) file-read-metadata /private/tmp` gives False and the new one
-  gives True (`^` anchored to the operation name, as she says). The 02:10 and 02:21 rows recorded none of them.
+  gives True (`^` anchored to the operation name, as she says). The 2:10 AM and 2:21 AM rows recorded none of them.
   `passed` at 0711c229 stands at n = 1 for this profile, plus the two earlier new-profile passes at the same
   commit, which had the same denials.
 
 Seen, not a finding: each Simulator also keeps `[local folder]<UDID>/syslogsock`,
 which the profile denies. launchd_sim holds it outside the sandbox, and three passes show the job does not need it.
 
-## T-0407 (Odalys, 2026-10-27 05:46 EDT): the two T-0406 follow-ups
+## T-0407 (Odalys, 2026-10-27 5:46 AM EDT): the two T-0406 follow-ups
 
 1. **Pre-boot shutdown.** `run_job` now shuts the runner's own device down before `simctl bootstatus -b`, so
    every sandboxed job boots it fresh and its 3 launchd folders are the newest. `shutdown_simulator` returns True

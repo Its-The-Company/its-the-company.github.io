@@ -11,7 +11,7 @@ description: "Not ready to freeze. Ready after 19 renames and 2 additions. The n
 <div class="doc-body" markdown="1">
 
 {% raw %}
-2026-10-25 21:09 ET. Form: hand-off with independent review (C13). I read the work as written and did not ask Pernille for her reasoning. Idris reviews separately.
+2026-10-25 9:09 PM ET. Form: hand-off with independent review (C13). I read the work as written and did not ask Pernille for her reasoning. Idris reviews separately.
 
 Read: `pywidget/python/pywidget_ui/API.md` (5769e9c9, 130 rows, all proposed), `__init__.pyi` (signatures), [`pywidget/docs/research/L4-view-dsl.md`](l4-view-dsl.html) s2-s8 and s14, [`pywidget/docs/design/design-system-v0.md`](design-system-v0.html), my `widgets/README.md` R0-R6 and `states/state-spec.md`. SwiftUI and WidgetKit names checked by grep against the iPhoneSimulator 27.1 SDK swiftinterfaces, not from memory.
 
@@ -282,7 +282,7 @@ All verified in the SDK. Additive, so s8 allows them after freeze, but A1 and A2
 - Express tracking in points as well as em in s3.3, once A3 exists.
 - Error-text review: I need the full list of user-facing messages (`ViewTreeError.reason` strings and IDE warnings) to review them line by line.
 
-## Check after 0.3.0 (T-0020), 2026-10-26 02:41 ET
+## Check after 0.3.0 (T-0020), 2026-10-26 2:41 AM ET
 
 A short check, not a new review (Idris s7.7). Read against bdc83f8f, 53e9edb9, 086d9b47 at HEAD 01142fc1: `pywidget_ui/__init__.py` and `.pyi`, API.md, viewtree.schema.json, L4 s4. Method: a probe script (/tmp, not committed) imported the package and checked each name, each signature and the JSON each call writes; old names checked absent. `run_host.py --both`: 1,026 tests, 0 failed suites (3.9.6 and 3.13.18).
 
@@ -322,7 +322,7 @@ A short check, not a new review (Idris s7.7). Read against bdc83f8f, 53e9edb9, 0
 
 **Result: pass.**
 
-## Chair ruling on item 3 of the run_action review (T-0215), 2026-10-26 19:49 ET (Ines)
+## Chair ruling on item 3 of the run_action review (T-0215), 2026-10-26 7:49 PM ET (Ines)
 
 **Yes, with one fix first.** Maren's item 3 (board T-0199): a handler that edits state and returns None has its edit
 dropped with no word. Probe at HEAD 3a0436b3 (/tmp, not committed): `state['n'] += 1` with no return gives back the old
@@ -335,7 +335,7 @@ named at the handler's @widget.action line like the wrong-return error; (3) no h
 and none when it returns a dict. Pernille, board line. Why: the slip is the commonest one a new Python user makes with
 this API, and the shallow copy makes the same slip behave two ways; fix the bug before adding the message.
 
-## Error texts from T-0209 (T-0268), 2026-10-26 20:25 ET (Maren; DRAFT, <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>)
+## Error texts from T-0209 (T-0268), 2026-10-26 8:25 PM ET (Maren; DRAFT, <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>)
 
 Draft copy, not approved. Source: `pywidget_ui/__init__.py` at a6d8a527 (Pernille). I have not edited the code; Pernille applies (she is in the file on T-0250/T-0233). Method: a probe (/tmp, not committed) raised every new text from an extract of HEAD and printed it; word counts by script, on the filled-in text.
 
@@ -347,7 +347,7 @@ Draft copy, not approved. Source: `pywidget_ui/__init__.py` at a6d8a527 (Pernill
 
 ### Edits
 
-1. **G6 timeline order, mixed time zones (fault).** Ines's wording stays. But `_clock` prints each date in the zone it was given, without the zone, and `_check_order` compares in UTC. Entry 1 at 10:00 UTC and entry 2 at 11:00 +02:00 (09:00 UTC) gives "entry 2 (11:00) is not after entry 1 (10:00)", which reads false. Fix: when the two UTC offsets differ, add the offset to both times. Recommended (18): "timeline entries must be in time order: entry 2 (11:00 +02:00) is not after entry 1 (10:00 +00:00)". Same offsets: no change (16 words, as now).
+1. **G6 timeline order, mixed time zones (fault).** Ines's wording stays. But `_clock` prints each date in the zone it was given, without the zone, and `_check_order` compares in UTC. Entry 1 at 10:00 AM UTC and entry 2 at 11:00 AM +2:00 AM (9:00 AM UTC) gives "entry 2 (11:00) is not after entry 1 (10:00)", which reads false. Fix: when the two UTC offsets differ, add the offset to both times. Recommended (18): "timeline entries must be in time order: entry 2 (11:00 +02:00) is not after entry 1 (10:00 +00:00)". Same offsets: no change (16 words, as now).
 2. **G6, the second half (Ines's call).** The text says what happened and stops. Proposed suffix (26 with it): "...; give each entry a later time than the one before". It covers both cases a beginner hits: out of order, and two entries at the same time (where "is not after" alone can read as "fine, they are equal"). Ines's wording, so Ines decides; Pernille applies only if she says yes.
 3. **G16 'watchFace' (fault).** Now: "disfavored location 'watchFace' is for Apple Watch only; on iOS use homeScreen, lockScreen, standBy, iPhoneWidgetsOnMac, carPlay" (16). "use homeScreen" reads as an instruction, and disfavoring homeScreen hides the widget from the place most people want it. The right action is to remove the entry; the widget never appears on a watch face anyway. Recommended (25): "disfavored location 'watchFace' is for Apple Watch only, and this widget runs on iOS; remove it. The iOS locations are homeScreen, lockScreen, standBy, iPhoneWidgetsOnMac, carPlay".
 4. **G16 'smartStack'.** "smartStack is for Apple Watch only" confuses anyone who has a Smart Stack on their iPhone Home Screen. Give it its own text. Recommended (27): "disfavored location 'smartStack' means the Smart Stack on Apple Watch, and this widget runs on iOS; remove it. The iOS locations are homeScreen, lockScreen, standBy, iPhoneWidgetsOnMac, carPlay". I have not put any claim about where the iPhone stack belongs into the copy; Idris can say whether one is true and worth adding.
@@ -361,7 +361,7 @@ Draft copy, not approved. Source: `pywidget_ui/__init__.py` at a6d8a527 (Pernill
 
 **Kept with no edit:** the "must be one of" form itself (37 call sites, one pattern; the hint fixes its weak case); `When env` typo ("got 'famly'; did you mean 'family'?"); `ui.validate`'s order line ("entries[1]: date ... is not after entries[0] (...); entries must be in time order"; zero-based paths match its other lines), unless Ines takes edit 2, when it ends with the same suffix so the two texts agree.
 
-## Chair ruling on edit 2, the G6 timeline-order suffix (T-0277), 2026-10-26 20:33 ET (Ines)
+## Chair ruling on edit 2, the G6 timeline-order suffix (T-0277), 2026-10-26 8:33 PM ET (Ines)
 
 **Yes.** Edit 2 is taken as Maren wrote it: "; give each entry a later time than the one before" goes at the end of the G6 text. Why: the voice rule for these messages is what happened, then what to do, and mine stopped halfway; and with two equal times "is not after" can read as "they are equal, so fine", while "a later time" settles it. Exact texts, for Pernille under T-0276:
 - Same offsets: "timeline entries must be in time order: entry 3 (09:00) is not after entry 2 (09:00); give each entry a later time than the one before".

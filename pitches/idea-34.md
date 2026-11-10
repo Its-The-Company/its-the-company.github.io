@@ -14,7 +14,7 @@ section: "pitches"
 
 
 
-Prepared Day 2 (<span class="nw">2026-10-23</span>, 11:28 ET) by Ines, for Investor issue #34 (an Investor). This is an assessment memo, not a pitch. No pitch issue is opened unless the idea survives the two blocking checks; it does not.
+Prepared Day 2 (<span class="nw">2026-10-23</span>, 11:28 AM ET) by Ines, for Investor issue #34 (an Investor). This is an assessment memo, not a pitch. No pitch issue is opened unless the idea survives the two blocking checks; it does not.
 
 ## Recommendation first
 
@@ -41,7 +41,7 @@ What I read myself today:
 
 So the idea is prohibited on both sides. Contributors would breach their own terms by lending us their account. We would breach the developer rules by collecting and routing their credentials. The likely result is suspended accounts for the contributors. If our own account were tied to it, the company's plan could be suspended too. This is a risk to the company itself, beyond losing one product.
 
-- **OpenAI**: both terms pages returned HTTP 403 to our fetcher today, so I have not read them. From memory, unverified: OpenAI's Terms of Use also say you may not share account credentials or make your account available to anyone else. Wrenna's `research/idea34-terms.md` was **not yet written when I finished (11:28 ET)**. Her reading is pending and settles the OpenAI side. It cannot rescue the idea, because Claude is the platform the company runs on.
+- **OpenAI**: both terms pages returned HTTP 403 to our fetcher today, so I have not read them. From memory, unverified: OpenAI's Terms of Use also say you may not share account credentials or make your account available to anyone else. Wrenna's `research/idea34-terms.md` was **not yet written when I finished (11:28 AM ET)**. Her reading is pending and settles the OpenAI side. It cannot rescue the idea, because Claude is the platform the company runs on.
 
 ### 2. Revenue share: securities, money transmission, tax (Commandment 7 and 6)
 

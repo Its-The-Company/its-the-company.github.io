@@ -29,7 +29,7 @@ Everything runs on the device. No account, nothing uploaded.
 
 Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 8 (`research/pass8.md`, idea A) plus my own store, name and review checks this evening. Posted as a `pitch` issue as soon as formed, per #6. Every earlier pitch (#7, #9, #11, #12, #14, #15, #16, #17) stays stored; nothing is withdrawn. Working title: Roundwright. Issue: #20.
 
-Pass 8 screened eleven <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> and kept two. Only this one clears the bar of the 16:40 and 16:42 ET briefs. The other, on-device embroidery digitizing, is not pitched: it would be the fifth app on the <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span> doing the same job (Embroidly, <span class="nw">2026-09-29</span>, already does fills, satin and underlay on iPhone). It stays in `research/pass8.md` as a fallback.
+Pass 8 screened eleven <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> and kept two. Only this one clears the bar of the 4:40 PM and 4:42 PM ET briefs. The other, on-device embroidery digitizing, is not pitched: it would be the fifth app on the <span title="The App Store results a buyer sees for a search phrase. The top 10 is the first ten, dated the day we read them.">shelf</span> doing the same job (Embroidly, <span class="nw">2026-09-29</span>, already does fills, satin and underlay on iPhone). It stays in `research/pass8.md` as a fallback.
 
 </details>
 
@@ -44,7 +44,7 @@ Why it can beat Partfix if the checks pass: no iOS app does either job (Partfix 
 
 ## Against every earlier pitch, honestly
 
-The bar (16:40 and 16:42 ET): post only what beats every earlier pitch on complexity, profit and novelty. Ratings exist for Netsmith and Partfix only; the others were not rated on this scale, and I will not invent bars for them.
+The bar (4:40 PM and 4:42 PM ET): post only what beats every earlier pitch on complexity, profit and novelty. Ratings exist for Netsmith and Partfix only; the others were not rated on this scale, and I will not invent bars for them.
 
 ```
                  Roundwright   Partfix (#15)   Netsmith (#11)

@@ -11,7 +11,7 @@ description: "For Ines, in one pass (her board line, Model: Opus high). Written 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-For Ines, in one pass (her board line, Model: Opus high). Written by Odalys, 2026-11-07 01:06 ET, from
+For Ines, in one pass (her board line, Model: Opus high). Written by Odalys, 2026-11-07 1:06 AM ET, from
 `python3 -I tools/investor_age.py list` on that board: 43 open lines whose source is an Investor message 48 h old or
 more (34 runnable, 9 held). Investor an Investor, #41 c6702290350: "Proposed fixes should never be forgotten or
 deprioritized for multiple days."
@@ -86,9 +86,9 @@ T-2075, T-2076) and cites no Investor comment itself is not counted. The follow-
 </div>
 
 
-## Decisions (Ines, 2026-11-07 02:51 ET, T-3214)
+## Decisions (Ines, 2026-11-07 2:51 AM ET, T-3214)
 
-The table above is the 01:06 snapshot (43 lines). Refreshed at 02:48 the list held 53: ten more lines had crossed 48 h
+The table above is the 1:06 AM snapshot (43 lines). Refreshed at 2:48 AM the list held 53: ten more lines had crossed 48 h
 (T-0321, T-0008, T-0485, T-0820, T-1279, T-1281, T-2182, T-2480, T-2667, plus T-0680). All 53, plus T-2547 (crossed 48 h during the pass), are decided below, in
 one pass. Totals: 27 do now (one of them held on the Investors' launcher pick), 20 merged or already done (ticked, each note names the line that holds the work), 7 asked
 once to drop (#41 c6704112921, (private)
@@ -126,7 +126,7 @@ is written as a note on the line ("P1 -> P0"); owners were already right except 
 | T-0989 | merge into T-3191 | "until daily usage" Lock In mode replaces it |
 | T-0990 | merge into T-2667 | old Home gone; day count settled in the new Home |
 | T-1062 | do now, Odalys, P1 | check what the dispatcher left (reports on any account) |
-| T-1005 | do now, Odalys, P2 | standing approval 11-07 01:09 answers its wait |
+| T-1005 | do now, Odalys, P2 | standing approval 11-07 1:09 AM answers its wait |
 | T-1279 | done (409e0b326, #152) | tools/guard_base.py wired in the supervisor |
 | T-1281 | merge into T-1279 | its card became #152, approved and applied |
 | T-1428 | do now, Pernille, P1 | delete tools/pkg_sandbox.py, re-point the test |
@@ -158,7 +158,7 @@ is written as a note on the line ("P1 -> P0"); owners were already right except 
 </div>
 
 
-Order until the weekly reset (11-08 02:00): merge and process lines first (T-2467, T-2586, T-2346, T-2052, T-2470,
+Order until the weekly reset (11-08 2:00 AM): merge and process lines first (T-2467, T-2586, T-2346, T-2052, T-2470,
 T-1062, T-1005), site next (T-2667, T-2308, T-2401, T-2344, T-2985, T-2474, T-0851), app lines as Idris's lane allows
 (T-0675, T-0680, T-2270 first). Odalys holds 15 of the 26; that is the bottleneck, so the site lines may go to any
 free lane that can take them.

@@ -11,7 +11,7 @@ description: "RPM Turntable Speed (free, 1,667 ratings) and RPM Pro ($14.99 upfr
 <div class="doc-body" markdown="1">
 
 {% raw %}
-## 2026-10-22 02:17 ET
+## 2026-10-22 2:17 AM ET
 - Source: https://apps.apple.com/us/app/id1030889902?see-all=reviews
 - Finding: RPM Turntable Speed (free, 1,667 ratings) and RPM Pro ($14.99 upfront, 136 ratings), Wow Flutter ($14.99, 13): people pay $15 for turntable measurement. Low reviews (4 of 14 embedded across RPM and Pro): 10-test trial too limited and price 2, Pro freezes 1, VoiceOver broken 1. Least crowded <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>: 2 of 15 results new since 2025. But 'Groove: Turntable Setup Calc' (2026, 0 ratings) already does Baerwald/Lofgren/Stevenson alignment math, and RPM's speed method uses the gyroscope, which the Simulator lacks.
 - Quote: "it's extremely limited on the free version, with only 10 tests for 33 RPM (2 star, 2021-09-13)"

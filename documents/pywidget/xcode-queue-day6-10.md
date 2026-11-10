@@ -11,11 +11,11 @@ description: "Conclusion. Main never idles, and it does the alpha lines in this 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Ines, 2026-10-26 22:17 ET, task T-0331. Replaces the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> order in ops/state.md "Plan, Day 5 evening" item 2 and the lane sentence in T-0286's chair note (20:34). Dates: plan.md milestones. Slots: #78 (ops/prompts/work.md step 2): **main** = the one Xcode task in the main tree, the only slot that commits Swift; **wt** = one detached worktree at HEAD for checks, screenshots, mutation runs and reviews, records only; never two xcodebuilds at once (tools/xc.sh waits). **MacBook**: nothing is planned on it. The runner is not installed; T-0330 re-reviews it now, then SETUP.md goes to the Investors. When they install it and approve the test-run job kind, the wt slot's Simulator test runs move there first.
+Ines, 2026-10-26 10:17 PM ET, task T-0331. Replaces the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> order in ops/state.md "Plan, Day 5 evening" item 2 and the lane sentence in T-0286's chair note (8:34 PM). Dates: plan.md milestones. Slots: #78 (ops/prompts/work.md step 2): **main** = the one Xcode task in the main tree, the only slot that commits Swift; **wt** = one detached worktree at HEAD for checks, screenshots, mutation runs and reviews, records only; never two xcodebuilds at once (tools/xc.sh waits). **MacBook**: nothing is planned on it. The runner is not installed; T-0330 re-reviews it now, then SETUP.md goes to the Investors. When they install it and approve the test-run job kind, the wt slot's Simulator test runs move there first.
 
 **Conclusion.** Main never idles, and it does the alpha lines in this order. Every line with no build goes to another worker. Classes: alpha (Day 10), freeze (Day 13), rc (release candidate, Day 16), 1.1.
 
-**Money check.** About $968 is left in the week to 11-01 02:00, about $185 a day, which buys about 18 agent-hours a day at $10 an hour. When pool_max is 1, that agent is Idris's main slot. The wt slot runs only when pool_max is 2 or more.
+**Money check.** About $968 is left in the week to 11-01 2:00 AM, about $185 a day, which buys about 18 agent-hours a day at $10 an hour. When pool_max is 1, that agent is Idris's main slot. The wt slot runs only when pool_max is 2 or more.
 
 ## Main slot, in order
 
@@ -29,8 +29,8 @@ Ines, 2026-10-26 22:17 ET, task T-0331. Replaces the <span title="One numbered p
 | 6 | T-0208 App Intents stubs, StoreKit configuration file | alpha | - |
 | 7 | T-0052 stdlib cut build phase, with T-0213's STDLIB_MODE=zip default | alpha | Pernille T-0339 |
 | 7 | **T-0207 bridge Swift half, tree.json write (P1 -> P0)** | alpha | - |
-| 7 | T-0286 ADR-003 B2 Xcode phase (due Day 9 23:59); .so-to-framework step dropped, native packages are 1.1 (ADR-003 s4.1, 638f21ff; T-0708); pure-set smokes only | alpha | T-0052, T-0285 (done) |
-| 8 | T-0041 editor spike, <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>-G3 (verdict by 10-30 23:59, ADR-004 ruling 2) | alpha | T-0207 |
+| 7 | T-0286 ADR-003 B2 Xcode phase (due Day 9 11:59 PM); .so-to-framework step dropped, native packages are 1.1 (ADR-003 s4.1, 638f21ff; T-0708); pure-set smokes only | alpha | T-0052, T-0285 (done) |
+| 8 | T-0041 editor spike, <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G1</span>-G3 (verdict by 10-30 11:59 PM, ADR-004 ruling 2) | alpha | T-0207 |
 | 9 | T-0031 Pro purchase in StoreKit testing (Day 9 milestone) | alpha | T-0208, Pernille T-0338, Maren T-0333 |
 | 9 | T-0041 adapter day, only if keystroke p95 is 16-33 ms | alpha | G1 numbers |
 | 9 | End to end: editor to home-screen widget, recorded in ops/site-checks/ | alpha | T-0206, T-0207, T-0208, T-0041 |
@@ -65,11 +65,11 @@ T-0330 review (running). Day 6: T-0021 Material and ContainerRelativeShape snaps
 
 ## What would make Day 10 fail
 
-**T-0207.** It is the only line between user code and a home-screen widget, and it has no fallback. T-0041 has one (ADR-004 s5, and the chair rules on the numbers in hand by Day 10). T-0206 already draws small and medium. If T-0207 is not green by Day 9 18:00, the alpha moves. I will rule that evening on cutting T-0286 or T-0031's restore case to buy the day back.
+**T-0207.** It is the only line between user code and a home-screen widget, and it has no fallback. T-0041 has one (ADR-004 s5, and the chair rules on the numbers in hand by Day 10). T-0206 already draws small and medium. If T-0207 is not green by Day 9 6:00 PM, the alpha moves. I will rule that evening on cutting T-0286 or T-0031's restore case to buy the day back.
 
-## Chair line: how T-0355 lands (Ines, 2026-10-31 06:29 ET; Day 10 plan item 7)
+## Chair line: how T-0355 lands (Ines, 2026-10-31 6:29 AM ET; Day 10 plan item 7)
 
-**Ruling. No session lands this branch. The Investors choose the route: `ops/requests/T0355-LANDING-card.md`, A recommended.** I wrote "merge" into the plan on Day 8 and again at 01:03 without reading the verb against the guard. That is my miss, and I withdraw it as a session step. Until they answer, no merge, cherry-pick, plumbing, copy or Merge button moves main into idris/t0355-projects or the branch onto main.
+**Ruling. No session lands this branch. The Investors choose the route: `ops/requests/T0355-LANDING-card.md`, A recommended.** I wrote "merge" into the plan on Day 8 and again at 1:03 AM without reading the verb against the guard. That is my miss, and I withdraw it as a session step. Until they answer, no merge, cherry-pick, plumbing, copy or Merge button moves main into idris/t0355-projects or the branch onto main.
 
 **Why I can't rule it myself.** The guard's stated reason is GitHub's changes, and a local cherry-pick brings none. But Idris's `git merge main` brought none either and was refused. A cherry-pick builds the same tree as that refused command, so it is the same effect by another tool unless the guard's reason is narrower than its rule. That is a claim about what an Investor-owned rule means, and it is the claim that lets me land. T-0848 says a refusal stops the item: no other tool. OPT-035 already records this as theirs to answer. The chat v3 cherry-pick ran under the same guard on 10-23 with no ruling, so it is no precedent. C34 ends it.
 
@@ -78,7 +78,7 @@ T-0330 review (running). Day 6: T-0021 Material and ContainerRelativeShape snaps
 - B, they say it does: Idris takes the branch's run() lines off the branch so the pull request has no conflict, an Investor presses Merge, the supervisor pulls between sessions, and Idris restores those lines and the WidgetWriter default on main. 1 day plus the wait. The first combined build happens after landing, across 464 commits, which is why B is second. T-0861 moves to 11-02 and F19 has no slack.
 - Rejected: the applier (166,809-byte diff, 9 binaries; it refuses binaries, and an issue body can't hold it). New commits from a fresh worktree (same tree by another tool, about 1.5 days, loses the trail). `gh pr merge` from a session (the company approving its own landing).
 
-**Default.** Answer needed by 2026-11-01 12:00 ET. With none, nothing lands; F19 and F3 miss their dates, and I rule on 11-02 what moves.
+**Default.** Answer needed by 2026-11-01 12:00 PM ET. With none, nothing lands; F19 and F3 miss their dates, and I rule on 11-02 what moves.
 
 **T-0844 starts now, on the branch, in its worktree.** It doesn't need main. The refresh runs `.file(widgets/<id>/main.py)` with context `.widget` (WidgetWriter.swift lines 63 and 133 on main), and the branch's RunRequest has both. Failing test: a two-file project whose main.py declares a widget and imports its sibling, saved through WidgetScriptSave, then that same run. Fix or size it in WidgetScriptSave. Stay out of run() in PyWidgetApp.swift, so the conflict stays one hunk. The assert through WidgetWriter itself goes in after landing, with T-0684's token half.
 {% endraw %}

@@ -11,7 +11,7 @@ description: "Neither provider allows it on a consumer subscription. Anthropic f
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Wrenna, 2026-10-23 (read 11:00 to 11:32 EDT). Issue: (private)
+Wrenna, 2026-10-23 (read 11:00 AM to 11:32 AM EDT). Issue: (private)
 Passive reading only. Nobody contacted. Not legal advice; the Investors decide.
 
 The idea, as the issue puts it: outside users "sign in with their Claude or ChatGPT account and dedicate a certain % of their usage towards our projects"; the company runs the work, users get "a portion of the pay", and each user's credits become a new Worker.

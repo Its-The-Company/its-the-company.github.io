@@ -38,7 +38,7 @@ issue opens to the title, the body, the timeline and a reply bar at the bottom.
 - Column 3 is the date button: a pill 32 px high, with a 44 px hit area from a `::after` inset. It is its own button, not inside the link.
 - Date labels:
   - In Now: `2 h late` or `No date` (red: `--hot-bg`/`--hot`), or `Due 18:00` when due today.
-  - In Later: `Mon 9 Nov`. The time shows only when it is not 23:59 (`Thu 12 Nov, 14:00`).
+  - In Later: `Mon 9 Nov`. The time shows only when it is not 11:59 PM (`Thu 12 Nov, 14:00`).
 - Desktop (900 px and up) puts the two queues side by side, Now \| Later. Phones stack Now, then Later.
 - Later's groups are calendar days in Eastern time, Monday to Sunday weeks:
   - Tomorrow
@@ -75,14 +75,14 @@ Drops write only through IssueQ `act(st, n, o, 'delay', v, now)`. That keeps the
 | Drop | Deadline set (Eastern) |
 |---|---|
 | Into Now, anywhere | `now` (ms at the drop). The row shows `Due now`, then `n min late`. It stays in Now until answered. |
-| On a Later group header, or an empty group | The group's first day, at 23:59. Tomorrow is tomorrow. This week is the day after tomorrow. Next week is next Monday. Later is the Monday after. The earliest day is the safe one; tap the date to push it out. |
-| Between two Later rows | The midpoint of their deadlines, to the minute. First in a group: the row below minus 1 min, but not before the group's first day 00:00. Last: the row above plus 1 min, but not past the group's last day 23:59. |
+| On a Later group header, or an empty group | The group's first day, at 11:59 PM. Tomorrow is tomorrow. This week is the day after tomorrow. Next week is next Monday. Later is the Monday after. The earliest day is the safe one; tap the date to push it out. |
+| Between two Later rows | The midpoint of their deadlines, to the minute. First in a group: the row below minus 1 min, but not before the group's first day 12:00 AM. Last: the row above plus 1 min, but not past the group's last day 11:59 PM. |
 | From Now into Later | The same Later rules. |
 
 </div>
 
 
-- **Constraint, named:** "tomorrow at end of day" is always more than 24 h away when it is set, so it lands in Later. At 23:59 tonight it crosses into Now (the existing 24 h rule) and counts again. That is the rule working, not a bug. I did not add a new rule to stop it.
+- **Constraint, named:** "tomorrow at end of day" is always more than 24 h away when it is set, so it lands in Later. At 11:59 PM tonight it crosses into Now (the existing 24 h rule) and counts again. That is the rule working, not a bug. I did not add a new rule to stop it.
 
 **Desktop, pointer (mouse or pen):**
 - Uses Pointer Events, not HTML5 drag and drop: the HTML5 kind cannot draw the <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lift</span> and does not run on iOS.
@@ -117,7 +117,7 @@ Drops write only through IssueQ `act(st, n, o, 'delay', v, now)`. That keeps the
 **Tap the date (frame `date`):**
 - The date button opens a sheet from the bottom on a phone, or a 340 px popover under the date on desktop.
 - The sheet has the title "When is #n due?", the issue title, and quick buttons: Now, Tomorrow, the current day, and next Monday.
-- It has two native inputs, `type=date` and `type=time`, labelled Day and Time, Eastern. An empty time means 23:59.
+- It has two native inputs, `type=date` and `type=time`, labelled Day and Time, Eastern. An empty time means 11:59 PM.
 - Cancel and Save. Save calls the same `act`.
 - Focus is trapped while it is open, and Esc closes it.
 - This is not a "Set Deadline" button. It is the date itself, made tappable.
@@ -158,18 +158,18 @@ ops/site-checks/t3583/ and the code in tools/site/assets/.
 1. **Accepted: Pick a date on the issue page opens inline Day and Time, not the sheet.** issue.js is 5,944 B of a
    6,144 B gzip ceiling, so 200 B are left and the sheet does not fit. The sheet's quick buttons are already the Move to
    row above it. The fields are the native date and time inputs with the labels Day and Time, Eastern; an empty time
-   means 23:59; Save calls the same `act`. issue-390 shows them at 390 px with no overflow. Section 4's "opens the date
+   means 11:59 PM; Save calls the same `act`. issue-390 shows them at 390 px with no overflow. Section 4's "opens the date
    sheet" now means these fields on the issue page.
 2. **Accepted, with one change: the slot, not the group header, says what a drop sets.** The slot is the right
-   place, because a drop between two rows sets their midpoint, not 23:59, so a sentence on the header would be wrong
+   place, because a drop between two rows sets their midpoint, not 11:59 PM, so a sentence on the header would be wrong
    for most drops. But the lifted row sits on top of the slot: in drag-390 and drag-1280 the slot's words cannot be
    read. The change: the status line at the top, which nothing covers, also says what a drop sets, for example
    "Moving #302. Drop: Thu 12 Nov, 23:59. Esc cancels." It is `role=status`, so it changes only when the drop value
    changes, not on every pointer move. needs.js has 825 B gzip left (6,855 of 7,680), and this needs about 60 B.
    The header keeps its tint.
 3. **Accepted: a drop into Later always lands more than 24 hours out.** The floor is now + 24 h + 1 min. My section 3
-   sentence, that tomorrow at end of day is always more than 24 h away, was wrong. It fails after 23:59 Eastern and on
-   the spring-forward day, when tomorrow 23:59 can be as little as 23 h 29 min away (from Sat 13 Mar 2027, 23:30). A
+   sentence, that tomorrow at end of day is always more than 24 h away, was wrong. It fails after 11:59 PM Eastern and on
+   the spring-forward day, when tomorrow 11:59 PM can be as little as 23 h 29 min away (from Sat 13 Mar 2027, 11:30 PM). A
    row dropped in Later would then show up in Now at once. The floor stops that. In that edge a drop on Tomorrow lands
    on the next day, and the Undo line names the day it actually went to, so nothing is hidden. Read section 3's
    constraint with this floor.

@@ -11,7 +11,7 @@ description: "What the list is for. Row 43 and the T-0063 ruling: a saved place 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Pernille, 2026-11-02, 16:47-16:52 ET. Board line T-1032 (Ines, T-0063 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> ruling 2026-11-02 09:00; matrix rows 27 and 43). Research only: nothing here is in the build, and no list goes in `log/assets.md` until one is chosen and lands.
+Pernille, 2026-11-02, 4:47-4:52 PM ET. Board line T-1032 (Ines, T-0063 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> ruling 2026-11-02 9:00 AM; matrix rows 27 and 43). Research only: nothing here is in the build, and no list goes in `log/assets.md` until one is chosen and lands.
 
 What the list is for. Row 43 and the T-0063 ruling: a saved place comes from a fix the person takes or text they type, it stays on the device, and nothing is sent to Apple (no MapKit, no CLGeocoder). Row 27: Sunrise falls back to a city the person types. A bundled list turns typed text into coordinates (and a time zone) with no network call. The coordinates come from the list, not from Apple, so the DPLA Attachment 6 limits on stored Map Data (T-1030 review, P1) do not touch them.
 
@@ -32,12 +32,12 @@ What the list is for. Row 43 and the T-0063 ruling: a saved place comes from a f
 | Item | Value |
 |---|---|
 | Publisher | Natural Earth (NACIS) |
-| Licence page | https://www.naturalearthdata.com/about/terms-of-use/, read 2026-11-02 16:48 ET |
+| Licence page | https://www.naturalearthdata.com/about/terms-of-use/, read 2026-11-02 4:48 PM ET |
 | Licence, quoted | "All versions of Natural Earth raster + vector map data found on this website are in the public domain." "...invites you to use them for personal, educational, and commercial purposes. No permission is needed to use Natural Earth. Crediting the authors is unnecessary." The page also says names data for more than 20 languages came from Wikidata "under a CC0 (public domain) license". |
 | Commercial use | Yes, stated on the page |
 | Attribution | Not required. Credit text the page offers: "Made with Natural Earth." |
-| Download page | https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/ ("Download populated places (2.68 MB) version 5.1.2"), read 2026-11-02 16:48 ET |
-| File fetched | https://naciscdn.org/naturalearth/10m/cultural/ne_10m_populated_places.zip, 2026-11-02 16:48:47 ET, 2,811,199 bytes, sha256 `cd149186f03d2603e0410da399b980a4357d0ac32d3a2305a49ed3dffcc41d7b`. The page's own link (`www.naturalearthdata.com/http//...download/10m/cultural/...`) answered HTTP 406 to our client. naciscdn.org is the host that link points to, so this is still the publisher's file. |
+| Download page | https://www.naturalearthdata.com/downloads/10m-cultural-vectors/10m-populated-places/ ("Download populated places (2.68 MB) version 5.1.2"), read 2026-11-02 4:48 PM ET |
+| File fetched | https://naciscdn.org/naturalearth/10m/cultural/ne_10m_populated_places.zip, 2026-11-02 4:48:47 PM ET, 2,811,199 bytes, sha256 `cd149186f03d2603e0410da399b980a4357d0ac32d3a2305a49ed3dffcc41d7b`. The page's own link (`www.naturalearthdata.com/http//...download/10m/cultural/...`) answered HTTP 406 to our client. naciscdn.org is the host that link points to, so this is still the publisher's file. |
 | Rows | 7,342 |
 | Countries | 225 ISO alpha-2 codes. Kosovo, Northern Cyprus and Somaliland (12 rows) carry `-99`, not a code. Compared with the 247 codes in tz `zone1970.tab`, the 22 codes with no row are all small territories: AI BL BQ CC CX GG IO JE MF MS NF NR NU PM PN SH SX TF TK UM VG WF. |
 | Smallest place | POP_MAX 1 (Peter I Island, Antarctica). Outside Antarctica the smallest is 10 (Agapa RU, Andoas PE, Berenice EG). 10 rows have POP_MAX 0 and 40 rows are in Antarctica. Rows with POP_MAX of at least 1,000 / 5,000 / 15,000 / 100,000 / 1,000,000: 6,931 / 6,488 / 5,764 / 3,089 / 505. The publisher's description: "all admin-0 and many admin-1 capitals, major cities and towns, plus a sampling of smaller towns in sparsely inhabited regions". |
@@ -77,11 +77,11 @@ Two decimal places put a point within about 1.1 km north-south, which is finer t
 | Item | Value |
 |---|---|
 | Publisher | GeoNames (geonames.org) |
-| Licence pages | https://www.geonames.org/about.html and https://www.geonames.org/export/, both read 2026-11-02 16:47-16:48 ET |
+| Licence pages | https://www.geonames.org/about.html and https://www.geonames.org/export/, both read 2026-11-02 4:47-4:48 PM ET |
 | Licence, quoted | about.html: "available for download free of charge under a creative commons attribution license", linked to https://creativecommons.org/licenses/by/4.0/. export/: "cc-by licence (creative commons attribution license). You should give credit to GeoNames when using data or web services with a link or another reference to GeoNames. commercial usage is allowed 'as is'". |
 | Commercial use | Yes, stated on the page |
 | Attribution | Required: credit and a link to GeoNames. CC BY 4.0 also asks for the licence link and a note when the data has been changed. I did not fetch the legal code in this task, so read it before any notice ships. |
-| Download | **Refused by terms_guard.** `download.geonames.org/robots.txt` has `Disallow: /` for `User-agent: *` (live copy read 2026-11-02 16:47). The company's tools may not fetch any dump file or `readme.txt` from that host. This was the task's one guard refusal. Nothing was retried, and no mirror was used. |
+| Download | **Refused by terms_guard.** `download.geonames.org/robots.txt` has `Disallow: /` for `User-agent: *` (live copy read 2026-11-02 4:47 PM). The company's tools may not fetch any dump file or `readme.txt` from that host. This was the task's one guard refusal. Nothing was retried, and no mirror was used. |
 | Coverage, bytes | **Not measured.** Without the file I have no row count, country count, smallest city or duplicate count to give, and I will not quote numbers I did not see. about.html says only that the whole database has "5.2 million populated places". |
 
 </div>
@@ -96,8 +96,8 @@ The commercial API (`api.geonames.org`) needs an account, and Commandment 7 bars
 
 | Item | Value |
 |---|---|
-| Publisher | IANA. Page https://www.iana.org/time-zones, read 2026-11-02 16:49 ET (latest release listed: 2026f, 2026-10-27) |
-| File fetched | https://data.iana.org/time-zones/releases/tzdata2026b.tar.gz, 2026-11-02 16:49:08 ET, 473,703 bytes, sha256 `114543d9f19a6bfeb5bca43686aea173d38755a3db1f2eec112647ae92c6f544`. I picked 2026b to match this Mac's `/usr/share/zoneinfo/+VERSION`. 2026f is newer and should be used if this source is ever chosen. |
+| Publisher | IANA. Page https://www.iana.org/time-zones, read 2026-11-02 4:49 PM ET (latest release listed: 2026f, 2026-10-27) |
+| File fetched | https://data.iana.org/time-zones/releases/tzdata2026b.tar.gz, 2026-11-02 4:49:08 PM ET, 473,703 bytes, sha256 `114543d9f19a6bfeb5bca43686aea173d38755a3db1f2eec112647ae92c6f544`. I picked 2026b to match this Mac's `/usr/share/zoneinfo/+VERSION`. 2026f is newer and should be used if this source is ever chosen. |
 | Licence, quoted from LICENSE in the tarball | "Unless specified below, all files in the tz code and data (including this LICENSE file) are in the public domain." The BSD exception covers only date.c, newstrftime.3 and strftime.c, which are code, not data. |
 | Commercial use and attribution | Public domain, so both are fine and no credit is required |
 | Coverage | 312 rows (one city per zone), 247 country codes, no duplicate city names. Bergen, for example, is absent because Oslo stands for Europe/Oslo. |

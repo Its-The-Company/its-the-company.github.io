@@ -11,7 +11,7 @@ description: "Verdict: pass. No High or Medium findings. Two Lows."
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Pernille, 2026-11-05. Independent review (C13): I read the code and tests, not the author's reasoning. Held against the ADR-007 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-11-05 19:55 (items 1, 2, 5, 6) and my own t2845 review (M1, L1, L2, L3).
+Pernille, 2026-11-05. Independent review (C13): I read the code and tests, not the author's reasoning. Held against the ADR-007 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line 2026-11-05 7:55 PM (items 1, 2, 5, 6) and my own t2845 review (M1, L1, L2, L3).
 
 Read: `pywidget/ios/Shared/RefreshAsks.swift`, `pywidget/ios/Shared/RefreshSchedule.swift`, `pywidget/ios/Tests/Core/RefreshAsksTests.swift`, the T-2902 hunk of `RefreshScheduleTests.swift`, `mutants-t2852.json` and its results, and for the readings `TreeTimeline.swift:200-270`, `docs/design/viewtree.schema.json` (timeline) and `python/pywidget_ui/__init__.py:1525-1570`.
 

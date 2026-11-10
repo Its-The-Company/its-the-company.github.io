@@ -12,7 +12,7 @@ description: "An audit, proposal or trial from the company's operations records 
 
 {% raw %}
 
-Label: `proposal` (not `urgent`: no work waits on it). Owner: Odalys, T-0111. Drafted 2026-10-26 01:18 ET against HEAD 50b4623c. The Operator opens it; the body is this file.
+Label: `proposal` (not `urgent`: no work waits on it). Owner: Odalys, T-0111. Drafted 2026-10-26 1:18 AM ET against HEAD 50b4623c. The Operator opens it; the body is this file.
 
 ## What it changes
 
@@ -31,18 +31,18 @@ One file, `setup/OPERATIONS.md`, 13 hunks, about 22 sentences or table rows. Eac
 | 4 | s2 steps 6, 10, 12; session table | No live status or stream archive; commit and push only; no chain; `work` is sonnet, medium, 40 turns | live status every 5 s, streams older than 48 h compressed and never deleted (7e42d93d, 656e28fb); step 12a board archive (2f2d12aa) and 12b metric series (b4ccd8be), each in its own commit; chain (2610eed8); `tools/governor.py` line 103: `work` is opus, high, 80 turns (41fc578b, Investors 2026-10-23) |
 | 5 | s2 session sketch | "Stop at about 30 turns" | Turn cap 80 (41fc578b) |
 | 6 | s4 kinds | No task ID | `ops/prompts/work.md`: the task ID goes right after the kind tag (2c7fd4be). The guide does not add `[ops]`: #62 is approved but not applied at HEAD (`rules/hooks/model-guard.py` line 28) |
-| 7 | s7 channels | Urgent Requests held in quiet hours; no Proposal channel; a message during a session waits for the next one; the Operator closes issues by hand | Amendments 2026-10-22 02:54, 04:05, 08:30 (any hour, one issue per blocker); amendments 2026-10-25 22:49 and 2026-10-26 00:39 (proposals); `tools/inbox_wait.sh` (9b32153f, amendment 2026-10-24 09:56); `tools/requests_close.py sweep` (e7ffcb1f, amendment 2026-10-25 22:08) |
-| 8 | s8 daily report, questions | Facts carry "the latest ledger lines" and, on weekly runs, "the latest optimizations"; questions do not list proposals | `tools/report_facts.py` Experiments and Metrics sections in every kind, raw `log/optimizations.md` lines never pasted (bb97d9a6); open proposals listed one line each (ruling 2026-10-26 00:39 item 1) |
+| 7 | s7 channels | Urgent Requests held in quiet hours; no Proposal channel; a message during a session waits for the next one; the Operator closes issues by hand | Amendments 2026-10-22 2:54 AM, 4:05 AM, 8:30 AM (any hour, one issue per blocker); amendments 2026-10-25 10:49 PM and 2026-10-26 12:39 AM (proposals); `tools/inbox_wait.sh` (9b32153f, amendment 2026-10-24 9:56 AM); `tools/requests_close.py sweep` (e7ffcb1f, amendment 2026-10-25 10:08 PM) |
+| 8 | s8 daily report, questions | Facts carry "the latest ledger lines" and, on weekly runs, "the latest optimizations"; questions do not list proposals | `tools/report_facts.py` Experiments and Metrics sections in every kind, raw `log/optimizations.md` lines never pasted (bb97d9a6); open proposals listed one line each (ruling 2026-10-26 12:39 AM item 1) |
 | 9 | s8 weekly item 5 | "the week's optimizations and their measured savings" | Same as 8: experiments with verdicts against prediction, and the XmR charts (bb97d9a6, e0bff368) |
 | 10 | s9 files | Board without IDs; no `ops/metrics/xmr/`; streams "kept 7 days" | 2c7fd4be; e0bff368 and b4ccd8be; 656e28fb (archived, never deleted; `.gitignore` line 16) |
 | 11 | s9 `log/` | No experiment ledger, `board-archive.md` or `audit/` | 4501d2ee; 2f2d12aa; `log/audit/` exists at HEAD |
-| 12 | s11 hand-offs | Board upkeep "A script" (still to do); each hand-off logged with "saving expected and measured a week later" | `tools/board.py`, `tools/board_tick.py`, supervisor step 12a (2f2d12aa); every change is a ledger entry with prediction, one metric, window and revert rule (4501d2ee, amendment 2026-10-25 22:49) |
+| 12 | s11 hand-offs | Board upkeep "A script" (still to do); each hand-off logged with "saving expected and measured a week later" | `tools/board.py`, `tools/board_tick.py`, supervisor step 12a (2f2d12aa); every change is a ledger entry with prediction, one metric, window and revert rule (4501d2ee, amendment 2026-10-25 10:49 PM) |
 | 13 | s12 | "logging each change" | Logged as an experiment entry in the ledger (4501d2ee) |
 
 </div>
 
 
-## Does it qualify for the 12-hour auto-apply (ruling of 2026-10-26 00:39, item 2)?
+## Does it qualify for the 12-hour auto-apply (ruling of 2026-10-26 12:39 AM, item 2)?
 
 Yes, on all four conditions as written:
 
@@ -65,15 +65,15 @@ Revert (`git revert <apply commit>`, one file) if any sentence the diff adds is 
 
 These need "approve" (they describe protections, settings or credentials) or are code that disagrees with an amendment. Each wants its own owner.
 
-1. s3 "Investor-owned files": "Each restore opens an emergency." Since amendments 2026-10-25 18:53 and 22:08, a restore is a Needs You entry with the exact diff and Approve/Disapprove. Describes the file guard: needs approve.
+1. s3 "Investor-owned files": "Each restore opens an emergency." Since amendments 2026-10-25 6:53 PM and 10:08 PM, a restore is a Needs You entry with the exact diff and Approve/Disapprove. Describes the file guard: needs approve.
 2. s7 "Amendments" row: a failed entry gives "the Investors ... an emergency". Same amendments; describes `rules/amendment-check.py`: needs approve.
 3. s3 "Environment" and s5 "Cast size": "at most 3 subagents at once" and "the settings cap is 3". `.claude/settings.json` sets `CLAUDE_CODE_MAX_CONCURRENT_SUBAGENTS` 2000 and spawn depth 5; `work.md` runs 8 to 12 agents. Describes settings: needs approve.
 4. s7 "Answering from the site" and `setup/SITE.md` "Answering from the site": both say the site cannot post. `tools/site/assets/needs.js` now answers with an Investor's own token in the browser (#54, #61). Credential handling: needs approve, with the site owner.
-5. `setup/SITE.md` pages table: Requests page, Pitches in the nav, the AI-characters tagline. Changed by amendments 2026-10-25 22:08 and 23:46 (Home with Overview and Issues, Documents in folders, tagline removed). The site code is changing tonight (uncommitted edits in `tools/site/`), so this waits until it settles.
+5. `setup/SITE.md` pages table: Requests page, Pitches in the nav, the AI-characters tagline. Changed by amendments 2026-10-25 10:08 PM and 11:46 PM (Home with Overview and Issues, Documents in folders, tagline removed). The site code is changing tonight (uncommitted edits in `tools/site/`), so this waits until it settles.
 6. `setup/INVESTORS.md` section 6: urgent requests "held during quiet hours", the "Requests page", replies that "confirm it arrived", and "Changing a rule" without proposals. Text addressed to the Investors: needs approve.
-7. s7 "Receipts" row against amendment 2026-10-25 23:46 ("no receipt-only comment"): the supervisor still runs `tools/inbox.py receipt` (line 273) and `work.md` still asks for replies "out of character". A code and prompt conflict, not guide drift; the guide is right about the code.
-8. #62 (`[ops]` kind tag) and #63 (`work.md` close step) are approved but not applied at HEAD. `apply_proposal.py --dry-run` applies both. The supervisor runs the applier only after a clean sync; `ops/runs/supervisor.log` shows 79 failed ticks in a row on git sync (last 2026-10-25 23:47) and "another run is in progress" at every tick from 00:09 to 00:54.
-9. `setup/APPLE.md`: not checked line by line against the Apple gate amendment (2026-10-22 01:09).
+7. s7 "Receipts" row against amendment 2026-10-25 11:46 PM ("no receipt-only comment"): the supervisor still runs `tools/inbox.py receipt` (line 273) and `work.md` still asks for replies "out of character". A code and prompt conflict, not guide drift; the guide is right about the code.
+8. #62 (`[ops]` kind tag) and #63 (`work.md` close step) are approved but not applied at HEAD. `apply_proposal.py --dry-run` applies both. The supervisor runs the applier only after a clean sync; `ops/runs/supervisor.log` shows 79 failed ticks in a row on git sync (last 2026-10-25 11:47 PM) and "another run is in progress" at every tick from 12:09 AM to 12:54 AM.
+9. `setup/APPLE.md`: not checked line by line against the Apple gate amendment (2026-10-22 1:09 AM).
 
 ## The diff
 
@@ -224,7 +224,7 @@ index 8b462ba4..e84648cf 100644
  \| Build and test triage \| `tools/xc.sh` (already shipped) \|
  
 -Free models are left out of this list on purpose. Claude Haiku already costs a twentieth of Sonnet, so moving Haiku work to a free model saves little; one is adopted only if an optimization review measures a real saving (Tenet 7). The large savings come from scripts that remove whole Operator turns, and from shorter sessions. Each handoff is logged in `log/optimizations.md` with the saving expected and the saving measured a week later from `ops/usage.json`.
-+Free models are left out of this list on purpose. Claude Haiku already costs a twentieth of Sonnet, so moving Haiku work to a free model saves little; one is adopted only if an optimization review measures a real saving (Tenet 7). The large savings come from scripts that remove whole Operator turns, and from shorter sessions. Each handoff is an entry in the experiment ledger (`log/optimizations.md`, read by `tools/experiments.py`): a prediction, one metric, a window, and a revert rule, written before it ships and judged from raw evidence when the window closes (amendment of 2026-10-25 22:49).
++Free models are left out of this list on purpose. Claude Haiku already costs a twentieth of Sonnet, so moving Haiku work to a free model saves little; one is adopted only if an optimization review measures a real saving (Tenet 7). The large savings come from scripts that remove whole Operator turns, and from shorter sessions. Each handoff is an entry in the experiment ledger (`log/optimizations.md`, read by `tools/experiments.py`): a prediction, one metric, a window, and a revert rule, written before it ships and judged from raw evidence when the window closes (amendment of 2026-10-25 10:49 PM).
  
  ### Research protocol (Phase 1)
  

@@ -11,15 +11,15 @@ description: "Event Countdown Timer &amp; Widget: aggregator sentiment Frustrate
 <div class="doc-body" markdown="1">
 
 {% raw %}
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://marlvel.ai/api/llm/apps/utilities/event-countdown-timer-widget
 - Finding: Event Countdown Timer & Widget: aggregator sentiment Frustrated from only 15 reviews; complaints of paywalls and lifetime purchases not honored. Low confidence.
 
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://apps.apple.com/ca/app/id6762545324
 - Finding: Days Since Counter: LastTap is a one-time 3.99 GBP widget-first app; Tiny Tally 2.99 USD buy-once; Tallies 2.99 unlock. All brand new with 0-2 ratings: many cheap entrants, crowded, 4.3-prone.
 
-## 2026-10-22 01:34 ET
+## 2026-10-22 1:34 AM ET
 - Source: https://itunes.apple.com/us/rss/customerreviews/page=1/id=1412716242/sortby=mostrecent/json
 - Finding: Tally: Counter and Score Tracker (1.1K ratings): 50 reviews, 23 are 1-3 star; bugs 10 (widgets not refreshing on iPad, stuck for hours), paywall/subscription 6, plus one $30/yr complaint. Counter Tally Count (14K ratings, 4.8) has only a $19.99 Remove Ads IAP, so a free incumbent dominates; feed returned no reviews.
 - Quote: "A subscription fee to use a tally app. It takes about an hour to program a tally app and they want to charge a monthly subscription fee to use this (1 star)"

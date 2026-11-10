@@ -11,9 +11,9 @@ description: "Finish the site and process work that pays back before the 11-30 f
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Plan mode with an Investor on #41: asked 2026-11-07 21:25 (c6716149093), questions 21:27 (c6716173503), answers 21:39
+Plan mode with an Investor on #41: asked 2026-11-07 9:25 PM (c6716149093), questions 9:27 PM (c6716173503), answers 9:39 PM
 (c6716280761). Written by the Operator (<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>-b2). Either Investor decides alone (charter 57). This changes the standing
-rule of 11-06 20:01 (an Investor c6700015760), which put site and process first only until the 11-08 02:00 reset. The
+rule of 11-06 8:01 PM (an Investor c6700015760), which put site and process first only until the 11-08 2:00 AM reset. The
 main session copies the answer into amendments.md and folds it (charter 59).
 
 ## Goal
@@ -24,16 +24,16 @@ meantime. Return the company to the app by Tuesday 11-10, and say what that does
 - **Scope (Q1 B):** the pipeline fixes, meaning the MacBook runner, the merge queue, landing, pushes and the main gate,
   plus every Investor-asked site and process line ("Investor ..." in its source). Every other open [site], [tools] and
   [ops] line is <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> until the push ends. A parked line keeps its text and its priority.
-- **End (Q2 B):** end of Monday 2026-11-09 (23:59 ET). Whatever is left then shares time with the app.
+- **End (Q2 B):** end of Monday 2026-11-09 (11:59 PM ET). Whatever is left then shares time with the app.
 - **<span title="A measured fact that holds a grade below a letter, however good the rest is.">Cap</span> (Q3 A):** until the push ends, a new [tools], [ops] or [site] line is added only for a blocker, a guard, or an
   Investor's ask.
 - **App share (Q4 B):** app tasks ([build], [fix], [test], [ios], land:xc) take the Mac mini's Xcode slot and the MacBook
   runner whenever either is free. They never wait for the push to end.
 
 ## Steps (board lines)
-1. **Unblock first (existing lines, merge-first):** T-3362 and T-3363 (pushes and lane lands, held since 17:19 11-07),
+1. **Unblock first (existing lines, merge-first):** T-3362 and T-3363 (pushes and lane lands, held since 5:19 PM 11-07),
    then T-3360 and T-3361.
-2. **T-3383 (Odalys, P0):** the dispatcher applies the push. Lines in scope go before other lines until 11-09 23:59, and
+2. **T-3383 (Odalys, P0):** the dispatcher applies the push. Lines in scope go before other lines until 11-09 11:59 PM, and
    app lines go whenever Xcode or the MacBook is free.
 3. **T-3384 (Ines, P0):** mark each open site and process line as in scope or parked, together with T-3230's prune.
 4. **T-3385 (Odalys, P1):** the board tool warns about new site and process lines outside the cap, and the report counts

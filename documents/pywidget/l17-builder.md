@@ -11,7 +11,7 @@ description: "No user test with non-coders was possible: recruiting people is ou
 <div class="doc-body" markdown="1">
 
 {% raw %}
-<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">Lane</span>: L17 (brief Section 5, blocking C6). Board: T-0018 (P3). Author: Idris. Written 2026-10-26 00:11 ET. Status: desk research for a builder ADR (proposed number ADR-008, unused today). Not a decision: the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> rules.
+<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">Lane</span>: L17 (brief Section 5, blocking C6). Board: T-0018 (P3). Author: Idris. Written 2026-10-26 12:11 AM ET. Status: desk research for a builder ADR (proposed number ADR-008, unused today). Not a decision: the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> rules.
 
 Read for this: build brief s2.1, s4 and L17 text; L4-view-dsl.md (s0, s2, s8, s9, s14 <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G18</span>); viewtree.schema.json and manifest.schema.json as committed; pywidget_ui API.md (library 0.3.0) and the names reviews (s7-s8 rulings); bridge-contract.md v4 (b25dc911) s3, s7 and the `widget_tree` record; `_pywidget_runtime/widget_tree.py` `parse_request`; ADR-001 3.2 (Builder in 1.2); ADR-006 s2 (S3), s4 (compiler rule), s10.3 (1.2.1); ADR-007 s2, s4, s5.1, s8.3; Maren's C5 IDE spec (design/ide/spec.md s2, s5.6, s5.8); L6 primary rows; L7 s3 (differentiator 2).
 

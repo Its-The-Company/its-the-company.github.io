@@ -42,7 +42,7 @@ What would make this fail: a recogniser that reads 60 percent of a photographed 
 
 <code>pitches/PITCH-6.md</code>, as written, scrubbed for the public site.
 
-Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 6 (`research/pass6.md`, idea B) plus my own checks today (dataset and font licences, store search, names). Posted as a `pitch` issue as soon as formed, per #6. Pitches #7, #9, #11 (Netsmith), #12 (Scope) and #14 (Boardseat) stay stored; nothing there is withdrawn. The Investors' brief of 15:24 ET: no games, Netsmith-level algorithmic complexity, a hard problem AI can now solve where the answer is worth money, three pitches, at least one with meta components. This is the first of the three and the one I recommend from this round. Pitch 7 (Seatsolve) and Pitch 8 (Themecount, the meta one) follow.
+Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 6 (`research/pass6.md`, idea B) plus my own checks today (dataset and font licences, store search, names). Posted as a `pitch` issue as soon as formed, per #6. Pitches #7, #9, #11 (Netsmith), #12 (Scope) and #14 (Boardseat) stay stored; nothing there is withdrawn. The Investors' brief of 3:24 PM ET: no games, Netsmith-level algorithmic complexity, a hard problem AI can now solve where the answer is worth money, three pitches, at least one with meta components. This is the first of the three and the one I recommend from this round. Pitch 7 (Seatsolve) and Pitch 8 (Themecount, the meta one) follow.
 
 </details>
 

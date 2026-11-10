@@ -30,11 +30,11 @@ Saved pages (all listed in `research/inbound/apple/index.tsv`, folder `research/
 
 | Key | Page | File |
 |---|---|---|
-| K | Keeping a widget up to date (saved 2026-10-26 01:15:53, T-0012) | `documentation_widgetkit_keeping-a-widget-up-to-date.md-0b3389e1.html` |
-| S | Developing a WidgetKit strategy (2026-10-29 07:39:22, T-0671) | `documentation_widgetkit_developing-a-widgetkit-strategy.md-0574e05c.html` |
-| N | Making network requests in a widget extension (2026-10-29 07:38:55) | `documentation_widgetkit_making-network-requests-in-a-widget-extension.md-7573ac64.html` |
-| P | Updating widgets with WidgetKit push notifications (2026-10-29 07:38:39) | `documentation_widgetkit_updating-widgets-with-widgetkit-push-notifications.md-46146374.html` |
-| I | Adding interactivity to widgets and Live Activities (2026-10-29 07:39:17) | `documentation_widgetkit_adding-interactivity-to-widgets-and-live-activities.md-20980691.html` |
+| K | Keeping a widget up to date (saved 2026-10-26 1:15:53 AM, T-0012) | `documentation_widgetkit_keeping-a-widget-up-to-date.md-0b3389e1.html` |
+| S | Developing a WidgetKit strategy (2026-10-29 7:39:22 AM, T-0671) | `documentation_widgetkit_developing-a-widgetkit-strategy.md-0574e05c.html` |
+| N | Making network requests in a widget extension (2026-10-29 7:38:55 AM) | `documentation_widgetkit_making-network-requests-in-a-widget-extension.md-7573ac64.html` |
+| P | Updating widgets with WidgetKit push notifications (2026-10-29 7:38:39 AM) | `documentation_widgetkit_updating-widgets-with-widgetkit-push-notifications.md-46146374.html` |
+| I | Adding interactivity to widgets and Live Activities (2026-10-29 7:39:17 AM) | `documentation_widgetkit_adding-interactivity-to-widgets-and-live-activities.md-20980691.html` |
 
 </div>
 

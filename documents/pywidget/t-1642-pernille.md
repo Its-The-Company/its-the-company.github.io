@@ -15,8 +15,8 @@ Reviewer: Pernille. 2026-11-03. Base: 88bb11d4a (T-1634's 6920317b6 on main). Re
 `LaneFinder.configure`, `_user_frame`, `compiled_stdlib_root`, `install_finder`, the header's threat model, Not held
 list and stated limit, `mirror_entry`); test_lane.py `SourcelessStdlibTests`; LaneGuard.swift (`LaneMargin`,
 `LaneRunFiles`), ExtensionLane.swift (the margin and `refused`), WidgetStatus.swift (`oomGuard`, `showsBadge`);
-ADR-007's <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> lines of 2026-10-29 16:54 (the board line says 2026-11-01; there is no 16:54 line that day) and
-2026-11-02 04:02. Idris's notes not read, as the line asks.
+ADR-007's <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> lines of 2026-10-29 4:54 PM (the board line says 2026-11-01; there is no 4:54 PM line that day) and
+2026-11-02 4:02 AM. Idris's notes not read, as the line asks.
 
 **Verdict: passes with fixes.** The compiled root is correct and its trust is no wider than the absolute stdlib
 root's. The suite now <span title="A test written in advance. If it fires, we drop the idea.">kills</span> 13 of 13 planted bugs (12 of 13 before this review). The Not held bullet for the three
@@ -46,19 +46,19 @@ stdlib under, relative in the zipped sourceless stdlib, the stdlib folder itself
 
 | # | Severity | Finding | Evidence | Status |
 |---|---|---|---|---|
-| L1 | Low | `mirror_entry`'s docstring said the folder sits under `<group>/scripts`; the code and the 04:02 line item 1 say `lane-scripts`. | lane.py `mirror_entry`, `SCRIPTS_DIR = "lane-scripts"` | Fixed (docstring) |
+| L1 | Low | `mirror_entry`'s docstring said the folder sits under `<group>/scripts`; the code and the 4:02 AM line item 1 say `lane-scripts`. | lane.py `mirror_entry`, `SCRIPTS_DIR = "lane-scripts"` | Fixed (docstring) |
 | L2 | Medium | Not held bullet for `ext.marker`, `lane-peak`, `lane-refused`: "`lane-peak` deleted lets through a run the margin would refuse" is wrong at HEAD. A missing or unreadable `lane-peak` reads as `LaneMargin.firstRunPeak` (21 MiB, need 42 MiB), which refuses every widget whose real peak was below that. Only a low value, or a deletion for a widget whose real peak was above 21 MiB, lets a run through. | LaneGuard.swift `LaneMargin.need`, `LaneRunFiles.lastPeak` | Fixed in lane.py and C2 1.7 |
 | L3 | Low | `_user_frame` asks user roots before trusted ones, and nothing tested it: the mutant that swaps the two checks survived. It matters if a learned root is ever wider than the stdlib. | t1642-evidence/mutants_result.txt (last block) | Fixed: `test_a_user_root_inside_a_trusted_root_stays_user_code` |
-| M1 | Medium | Two effects of that bullet are outside 16:54 item 3's three effects (and 04:02 item 4's one row): a low `lane-peak` costs a memory kill whose neighbours lose that reload; a `lane-refused` deleted between every two refusals keeps the widget skipped as `oom_guard` with no demotion and no badge (`showsBadge` is false for `oom_guard`), which reads against 16:54 item 2a ("a stale picture always carries its badge"). Not mine to classify by stretching item 3. | ExtensionLane.swift `refused`, WidgetStatus.swift `showsBadge` | Board: T-1650 (Ines, chair line) |
+| M1 | Medium | Two effects of that bullet are outside 4:54 PM item 3's three effects (and 4:02 AM item 4's one row): a low `lane-peak` costs a memory kill whose neighbours lose that reload; a `lane-refused` deleted between every two refusals keeps the widget skipped as `oom_guard` with no demotion and no badge (`showsBadge` is false for `oom_guard`), which reads against 4:54 PM item 2a ("a stale picture always carries its badge"). Not mine to classify by stretching item 3. | ExtensionLane.swift `refused`, WidgetStatus.swift `showsBadge` | Board: T-1650 (Ines, chair line) |
 | L4 | Low | "Another widget's `lane-refused` written with another text refuses or demotes" overstated it: the file alone refuses nothing; it demotes at the widget's next margin refusal. "`lane-peak` high" refuses, then demotes in a later process. | ExtensionLane.swift `refused` | Fixed (wording) |
-| I1 | Info | The board line dates the first chair line 2026-11-01 16:54; it is 2026-10-29 16:54 (T-0733). lane.py and C2 cite it by time only, so no text change. | ADR-007 line 512 | Noted |
+| I1 | Info | The board line dates the first chair line 2026-11-01 4:54 PM; it is 2026-10-29 4:54 PM (T-0733). lane.py and C2 cite it by time only, so no text change. | ADR-007 line 512 | Noted |
 
 </div>
 
 
-Checked and right: the Not held intro's 04:02 item 4 row (deleted marker only, own kills unseen across processes,
-backstop the memory kill each reload, neighbours keep cached trees); the stated limit's words match 04:02 item 3
-(C2's heading now cites it as the 04:02 line, as lane.py does); the bullet's route (by path, a lane run's folder is
+Checked and right: the Not held intro's 4:02 AM item 4 row (deleted marker only, own kills unseen across processes,
+backstop the memory kill each reload, neighbours keep cached trees); the stated limit's words match 4:02 AM item 3
+(C2's heading now cites it as the 4:02 AM line, as lane.py does); the bullet's route (by path, a lane run's folder is
 `lane-scripts/<id>/`) matches `SCRIPTS_DIR` and `LaneRunFiles`.
 
 The earlier session on this task wrote the bullet's chair reference as T-1645, which is not on the board and was

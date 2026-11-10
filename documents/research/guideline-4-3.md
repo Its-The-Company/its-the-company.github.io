@@ -11,7 +11,7 @@ description: "Developer forum threads show 4.3(a) Spam rejections often name no 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://developer.apple.com/forums/thread/774789
 - Finding: Developer forum threads show 4.3(a) Spam rejections often name no specific element, even for original apps; Apple's remedy is a unique experience. Saturated categories (PDF, counters, remotes) carry real rejection risk.
 {% endraw %}

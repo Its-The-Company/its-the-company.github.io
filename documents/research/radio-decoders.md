@@ -11,7 +11,7 @@ description: "SSTV Slow Scan TV $3.99, 149 ratings, 4.0, not updated since 2017;
 <div class="doc-body" markdown="1">
 
 {% raw %}
-## 2026-10-22 02:17 ET
+## 2026-10-22 2:17 AM ET
 - Source: https://apps.apple.com/us/app/id387910013?see-all=reviews
 - Finding: SSTV Slow Scan TV $3.99, 149 ratings, 4.0, not updated since 2017; used for ISS SSTV events. Only 1 of 10 embedded reviews is low (crashes, unmaintained). 9 of 14 'sstv' results released since 2025 (Robot72 updated 2026-10-16), none above 50 ratings. Decoding is testable from WAV files on the Mac; demand evidence thin.
 - Quote: "I enjoy using it to decode SSTV transmissions from the International Space Station. Curious that it hasn't been updated in a long time (3 star, 2025-04-14)"

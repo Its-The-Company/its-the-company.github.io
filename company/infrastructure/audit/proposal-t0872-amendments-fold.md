@@ -12,13 +12,13 @@ description: "An audit, proposal or trial from the company's operations records 
 
 {% raw %}
 
-Status: superseded by `log/audit/proposal-t0899-amendments-fold.md` after the 2026-10-31 12:43 amendment (T-0899). Do not apply this diff. It read: needs an Investor's approve, then a hand-apply. The applier refuses any diff that touches `amendments.md`, even when approved, and a session can't remove an entry, so one of you applies it (steps below). Same route as #111.
+Status: superseded by `log/audit/proposal-t0899-amendments-fold.md` after the 2026-10-31 12:43 PM amendment (T-0899). Do not apply this diff. It read: needs an Investor's approve, then a hand-apply. The applier refuses any diff that touches `amendments.md`, even when approved, and a session can't remove an entry, so one of you applies it (steps below). Same route as #111.
 Base: c60e98c4. The diff was built from the four files as they stand at that commit, and `git apply` refuses it if any of them has moved.
 Builder: `python3 tools/amend_fold.py --root . --out <dir> --proposal <this file>`. Test: `tests/amend_fold_test.py`.
 
 ## Baseline
 
-1. `amendments.md`: 5,916 bytes (`wc -c`), 1,820 over the 4,096-byte line. n = 7 entries (`grep -c '^## 20'`), 2026-10-29 07:33 to 2026-10-31 10:55 ET.
+1. `amendments.md`: 5,916 bytes (`wc -c`), 1,820 over the 4,096-byte line. n = 7 entries (`grep -c '^## 20'`), 2026-10-29 7:33 AM to 2026-10-31 10:55 AM ET.
 2. Amendments block in every worker's prompt: 4,850 characters, about 2,484 tokens (`tools/amend_cost.py`: 0.51 tokens per character, 95% interval 0.50 to 0.54, n = 163 streams).
 3. `CLAUDE.md`: 62,362 bytes, loaded by the Operator only. `rules/worker-rules.md`: 10,443 bytes.
 
@@ -39,16 +39,16 @@ Measure after: `wc -c amendments.md`; the block size from `rules/build_agents.py
 
 | Ruling | Rule | Change |
 | --- | --- | --- |
-| 10-29 07:33 | The Mission, product line | "around Day 17" gains "(a flexible date; see Dates)". |
-| 10-29 07:33 | The Mission, Dates row | The row reads "About Day 17 (2026-11-07), flexible", and says a solution to widget freshness takes priority over a quick launch. |
-| 10-29 07:33, 10:17 | Tenet 1 | Adds the current priority: widget freshness, the search order, every option considered, each option's limits and delays reported. Says the work follows the Tenet 6 table and doesn't need Fable. |
-| 10-30 17:24, 10-31 10:50, 10:52, 10:55 | Tenet 6 | New "Personal accounts" bullet. |
-| 10-31 10:55 | Tenet 6, even pace | New sentence for the spread lift. Temporary: "this lift ends when that setup is done". |
-| 10-30 17:24, 10-31 10:50, 10:52 | Commandment 2 | One sentence: the personal accounts are the one exception to "personal ... accounts", for running company sessions only, with personal data still banned. |
-| 10-31 00:41 | Commandment 39 | Item 2 loses the Needs-you panel clause. |
-| 10-31 00:41 | Commandment 52 | The report copy "never appears as a request". One added sentence: reports carry no list or panel, a report session opens no request issue, requests are raised outside reports and flagged on the Issues page. |
-| 10-31 00:41 | Commandment 54 | No change. It has no clause about reports, though the ruling's Affects line names it. |
-| 10-31 00:41 | Commandment 55 | Loses "or the report" as a place to answer, the panel sentence, and the report as a source of answers. |
+| 10-29 7:33 AM | The Mission, product line | "around Day 17" gains "(a flexible date; see Dates)". |
+| 10-29 7:33 AM | The Mission, Dates row | The row reads "About Day 17 (2026-11-07), flexible", and says a solution to widget freshness takes priority over a quick launch. |
+| 10-29 7:33 AM, 10:17 AM | Tenet 1 | Adds the current priority: widget freshness, the search order, every option considered, each option's limits and delays reported. Says the work follows the Tenet 6 table and doesn't need Fable. |
+| 10-30 5:24 PM, 10-31 10:50 AM, 10:52 AM, 10:55 AM | Tenet 6 | New "Personal accounts" bullet. |
+| 10-31 10:55 AM | Tenet 6, even pace | New sentence for the spread lift. Temporary: "this lift ends when that setup is done". |
+| 10-30 5:24 PM, 10-31 10:50 AM, 10:52 AM | Commandment 2 | One sentence: the personal accounts are the one exception to "personal ... accounts", for running company sessions only, with personal data still banned. |
+| 10-31 12:41 AM | Commandment 39 | Item 2 loses the Needs-you panel clause. |
+| 10-31 12:41 AM | Commandment 52 | The report copy "never appears as a request". One added sentence: reports carry no list or panel, a report session opens no request issue, requests are raised outside reports and flagged on the Issues page. |
+| 10-31 12:41 AM | Commandment 54 | No change. It has no clause about reports, though the ruling's Affects line names it. |
+| 10-31 12:41 AM | Commandment 55 | Loses "or the report" as a place to answer, the panel sentence, and the report as a source of answers. |
 
 </div>
 
@@ -57,7 +57,7 @@ Notes that say the fold happened: the Version 2 paragraph of `CLAUDE.md`, line 1
 
 ## Two things to check
 
-1. **Commandment 56 changes, and the ruling's Affects line doesn't name it.** "Keep waiting and raise it again in the next report" becomes "raise it again on its own issue". Left alone, the fold would leave a rule telling the company to put an open request in a report, which the 00:41 ruling ended.
+1. **Commandment 56 changes, and the ruling's Affects line doesn't name it.** "Keep waiting and raise it again in the next report" becomes "raise it again on its own issue". Left alone, the fold would leave a rule telling the company to put an open request in a report, which the 12:41 AM ruling ended.
 2. **Commandment 55 keeps one part of the panel sentence.** The panel goes. The part on how it works (live from GitHub through the saved token, posted as your own account, nothing private in the public page) moves to the Issues tab, because that is how the Issues tab works (`tools/site/needs.py`). "A reader without a token sees only how many requests are open" goes: it described the panel, and the Issues tab shows public readers titles and numbers.
 
 ## What must hold, and where it sits

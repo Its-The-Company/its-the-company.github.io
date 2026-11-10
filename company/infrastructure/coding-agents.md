@@ -13,7 +13,7 @@ description: "The coding-agents catalogue: 15 techniques ranked for this company
 
 {% raw %}
 
-T-0153 [ops], Odalys, 2026-10-26 01:56 ET. Investor request: #41 c6409034578 (an Investor), items 1-4.
+T-0153 [ops], Odalys, 2026-10-26 1:56 AM ET. Investor request: #41 c6409034578 (an Investor), items 1-4.
 Inputs: research/ops/coding-agents/notes-A.md (single-agent harnesses, Wrenna, T-0149), notes-B.md (pipelines and
 SWE-bench trajectories, Wrenna, T-0150), notes-C.md (long-running loops, context, Claude Code; Odalys, T-0151),
 notes-D.md (multi-agent, simulated companies, self-improving; Odalys, T-0152). Every outside number below is copied
@@ -23,7 +23,7 @@ Nothing is "adopted" yet: adoption means it beat its control here (item 4 of the
 
 Updated 2026-10-30 (T-0772, Odalys): the table's last column, #4 to #15's decisions and the ledger section below. Text
 not marked with that date is the 2026-10-26 record. Our numbers in the update: `python3 tools/technique_counts.py`, since
-2026-10-28 00:00 (7,938 subagent tool calls, 233 worker calls joined to cost, $344.46). The triage is OPT-060.
+2026-10-28 12:00 AM (7,938 subagent tool calls, 233 worker calls joined to cost, $344.46). The triage is OPT-060.
 
 ## How to read this
 
@@ -51,7 +51,7 @@ Two cautions that apply to the whole list.
    percent of cost cannot be confirmed here in days; such items are ranked down for that reason.
 
 A constraint found while writing the ledger entries: **the switchback slot is single and congested.**
-tools/switchback.py runs one flag at a time. OPT-030 holds it (started 00:42, `armed: false`, n=0, waiting for its
+tools/switchback.py runs one flag at a time. OPT-030 holds it (started 12:42 AM, `armed: false`, n=0, waiting for its
 diff to land in rules/build_agents.py); OPT-032 and OPT-033 are queued behind it. A new switchback started today
 would start about 10-29 at one day per experiment. See "Process changes this catalogue needs" at the end.
 (2026-10-30: no longer so. A second flag can run crossed since T-0599, and the crossed slot is free since OPT-032 stopped.)
@@ -367,7 +367,7 @@ would start about 10-29 at one day per experiment. See "Process changes this cat
 - **Evidence.** SWE-agent, Lite 300, GPT-4 Turbo: file viewer 100 lines 18.0% vs full file 12.7%; summarized search
   18.0% vs iterative 12.0% (A3). Concise tool responses used "~1/3 of the tokens" (C T2). Ours: reads are 61% of
   subagent input units; 55% of result chars come from results over 8k (C M2, M8). **[here]** run_calls.py, subagent
-  Bash calls since 2026-10-25 00:00 ET (150 streams, n=8,485): largest result 29,937 chars (the 30,000 default already
+  Bash calls since 2026-10-25 12:00 AM ET (150 streams, n=8,485): largest result 29,937 chars (the 30,000 default already
   binds); a 12,000 cap would cut 481 calls (5.7%) and 2,741,808 of 25,046,718 result chars (10.9%); an 8,000 cap 909
   calls and 21.7%; 218 of the 481 over-12k results (45%) were followed in the same thread by a call with the same
   command word and under half the size (a crude "narrowed anyway" count; same word is not same intent).
@@ -445,7 +445,7 @@ would start about 10-29 at one day per experiment. See "Process changes this cat
 - **Change here.** Only if drains persist after #68 and T-0133: a command Stop hook that blocks while runnable tasks
   exist and the pool is under target. **Investor-owned?** Yes (settings).
 - **Decision (T-0772).** The job is done another way: OPT-050 (in flight) ends each session on ops/session_end.json, and
-  OPT-033 was kept by Investor instruction. 0 of 23 work sessions since 10-27 18:40 failed to close themselves. Idle
+  OPT-033 was kept by Investor instruction. 0 of 23 work sessions since 10-27 6:40 PM failed to close themselves. Idle
   minutes under a target of 8 no longer measure a loss: the spread pool is the Investors' pace and the day's share is spent.
   No Stop hook.
 
@@ -518,7 +518,7 @@ the ledger. With no ID, "Not trying" or "Already does the job" records the decis
 
 ## Process changes this catalogue needs (not techniques)
 
-1. **The switchback slot.** One flag at a time, OPT-030 holding it unarmed since 00:42. Proposal for tools/switchback.py
+1. **The switchback slot.** One flag at a time, OPT-030 holding it unarmed since 12:42 AM. Proposal for tools/switchback.py
    (company-owned): concurrent flags on disjoint metrics, each with its own arm sequence from a seeded shuffle, so arms
    are independent rather than in lockstep; and a rule that an unarmed flag older than 6 h yields the slot. Without
    it, #1 starts about 10-29. (2026-10-30: crossed flags exist, T-0599; one crossed slot. T-0777 adds an alternating arm
@@ -528,9 +528,9 @@ the ledger. With no ID, "Not trying" or "Already does the job" records the decis
    tools/experiments.py and the compare step to read arms from task records.
 3. **#5 before verdicts.** The metric-code freeze in experiments.py should land before OPT-034's live phase is graded.
 
-## Ablation tables and provisional re-check (T-0195, Wrenna, 2026-10-26 02:38-02:43 ET)
+## Ablation tables and provisional re-check (T-0195, Wrenna, 2026-10-26 2:38-2:43 AM ET)
 
-Source: three PDFs an Investor uploaded to research/inbound/70/ (#70 c6409863804, 02:37), read with `git show` from
+Source: three PDFs an Investor uploaded to research/inbound/70/ (#70 c6409863804, 2:37 AM), read with `git show` from
 origin/main into a fresh /tmp folder, text by tools/pdftext.swift; no arxiv.org request was made. Page numbers are
 the PDFs' own. The Agentless file is a browser print of arxiv.org/html/2407.01489v2 (59 pages, CC BY 4.0 on p. 1),
 so its pages are the print's; Table 4's cost column is cut off in the print and not used. The PDFs are not

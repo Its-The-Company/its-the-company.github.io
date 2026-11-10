@@ -68,7 +68,7 @@ N2. `live_merge` lands without rerunning checks when main's new commits touch no
 stated design and the same exposure as a second worker's commit; the header's Limits says so.
 
 H1. One item held in my scratch folder (Commandment 42). Low severity, inside what the Investors accepted on #41
-(2026-11-01 10:59 and 12:58). It is for Odalys, as its own line.
+(2026-11-01 10:59 AM and 12:58 PM). It is for Odalys, as its own line.
 
 ## Landing
 

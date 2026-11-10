@@ -13,27 +13,27 @@ description: "An audit, proposal or trial from the company's operations records 
 
 {% raw %}
 
-Draft by Odalys, 2026-10-26 01:27 ET, for the Operator to open as an issue labelled `proposal` (#65 ruling, item 1).
-Asked by an Investor, #41 c6408771623 (01:14). This one proposal replaces the earlier draft
+Draft by Odalys, 2026-10-26 1:27 AM ET, for the Operator to open as an issue labelled `proposal` (#65 ruling, item 1).
+Asked by an Investor, #41 c6408771623 (1:14 AM). This one proposal replaces the earlier draft
 log/audit/proposal-close-rule.md (audit 2): its measurement is folded in below; that draft should not be opened.
 Files changed by the diff: ops/prompts/work.md and setup/OPERATIONS.md.
-Exact diff: log/audit/proposal-session-end.diff (`git apply --check` clean at HEAD, 2026-10-26 01:26); the issue body
+Exact diff: log/audit/proposal-session-end.diff (`git apply --check` clean at HEAD, 2026-10-26 1:26 AM); the issue body
 carries it as its one ```diff block.
 
 ## Evidence
 
-- Drains, 2026-10-25 00:00 to 10-26 01:30 ET (log/audit/drain-cost.md, `tools/drain_cost.py`, 17 streams, n=9
+- Drains, 2026-10-25 12:00 AM to 10-26 1:30 AM ET (log/audit/drain-cost.md, `tools/drain_cost.py`, 17 streams, n=9
   drains, 8 not held by the budget): 1,875 idle agent-minutes (31.3 agent-hours) under the pool target of 8, from
   each session's last task start to the next session's first task. Median 161 agent-minutes per session end.
   67% between sessions (each about 15.5 min: the chain was blocked by failed pushes; fixed in company code, below),
   20% in tails, 9% in ramps.
 - Mid-session stall (audit 2, `tools/audit_session.py --run 20261025-234823 --split 00:32`): 3.70 agent-hours under
-  target in 33 minutes, 00:32-01:04, after the Operator read "about 30 turns" as a reason to close with seven P1
+  target in 33 minutes, 12:32-1:04 AM, after the Operator read "about 30 turns" as a reason to close with seven P1
   lines runnable and the limits far off (five_hour 10% used, work_allowed true).
 - The rule's unit can't be observed: Claude Code counted 4-10 turns for each of the last 8 work sessions; the
   Operator made 93-370 model calls per session on 10-24/25.
 - The rule's reason (a long conversation re-sends its history) is small: Operator median call $0.040 in calls
-  1-60, $0.069 after 120; the Operator thread was 8.9% of the 23:48 session's cost. Operator context at session
+  1-60, $0.069 after 120; the Operator thread was 8.9% of the 11:48 PM session's cost. Operator context at session
   end: 87k-288k tokens (368k in the session running now).
 
 ## What is already built (company code; no approval needed, Commandment 3)
@@ -61,7 +61,7 @@ company edit of `"rule": "new"`; dropping it is the revert below.
 
 ## Switchback
 
-- Flag `session_end`, experiment OPT-033 (next free id at 01:25; ledger entry written when it starts).
+- Flag `session_end`, experiment OPT-033 (next free id at 1:25 AM; ledger entry written when it starts).
   One flag at a time: OPT-030 `amend_compact` is live and OPT-032 `task_context` is queued after it. Queue with
   `python3 tools/switchback.py queue session_end OPT-033 --after OPT-032 --requires ops/prompts/work.md
   "ops/session_end.json"`, so arms start only once this diff is in. Ines may put it ahead of OPT-032 (the
@@ -75,7 +75,7 @@ company edit of `"rule": "new"`; dropping it is the revert below.
   ran on; a session is stopped at the 210-minute limit twice; Operator cost per session hour above $15 (now $7.9)
   with no rise in tasks finished per session hour; or a loop of sessions shorter than 10 minutes.
 
-## Does it qualify for the 12 h auto-apply (2026-10-26 00:39 ruling)?
+## Does it qualify for the 12 h auto-apply (2026-10-26 12:39 AM ruling)?
 
 No; it needs "approve". Auto-apply is off (ops/proposal_auto.json), and even on, ops/prompts/work.md mentions the
 amendments ("copied verbatim into amendments.md"), which tools/apply_proposal.py excludes from the 12 h path, and

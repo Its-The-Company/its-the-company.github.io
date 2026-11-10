@@ -227,7 +227,7 @@ Source: `ops/metrics/land_xc.jsonl`, `ops/metrics/runner_health.jsonl`.
 
 ### Arrival, and a correction
 
-- The figure "about 11 sessions an hour" (T-3963) counts `start` lines in `ops/runs/dispatch.log`. Those are offers, not sessions. The lane logs show 35 real lane sessions ending on 11-09 (33 on 11-08), median 54 minutes. Example: lane slot b2 was "started" at 12:19, 12:24, 12:30 and 12:34 AM on 11-09 while its log reads "its branch waits to land: no spare is free".
+- The figure "about 11 sessions an hour" (T-3963) counts `start` lines in `ops/runs/dispatch.log`. Those are offers, not sessions. The lane logs show 35 real lane sessions ending on 11-09 (33 on 11-08), median 54 minutes. Example: lane slot b2 was "started" at 12:19 PM, 12:24 PM, 12:30 PM and 12:34 AM on 11-09 while its log reads "its branch waits to land: no spare is free".
 - On 11-09, 117 different tasks were offered 921 times. Since 11-05, 490 tasks were offered 2,570 times; 220 of them (45%) have landed.
 - So "2.5 to 8.5 pieces an hour arrived" should be read this way: about 55 new change sets a day arrive (2.3 an hour), and the rest of the 8.5 is the same work coming round again after a failed land.
 - Task creation: the highest task number rose by 220 to 650 a day from 11-03 to 11-09; 115 lines were ticked done on 11-09 and 139 on 11-08. Open lines by kind: tools 377, build 184, site 67, ops 40. Among them are 58 automatic "Retry finished work" lines and 21 "do the work again" lines.

@@ -11,8 +11,8 @@ description: "An exact rule with no , Bash(python3 -I tools/sandisk_erase.py --e
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Odalys, 2026-11-09. Investor instruction: an Investor #245 c6751800160 (4:22 PM ET), <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> log/rulings.md 16:22.
-Pages read through tools/fetch_cite.py, one at a time, 2026-11-09 ~16:32 ET; raw copies in
+Odalys, 2026-11-09. Investor instruction: an Investor #245 c6751800160 (4:22 PM ET), <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> log/rulings.md 4:22 PM.
+Pages read through tools/fetch_cite.py, one at a time, 2026-11-09 ~4:32 PM ET; raw copies in
 `/Volumes/Company SSD/company-scratch/T-3824-odalys/docs/` (scratch, not committed).
 
 1. https://code.claude.com/docs/en/permissions.md

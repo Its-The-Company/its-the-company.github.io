@@ -49,7 +49,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3867 (uncommitted, commit refused by classifier): guard_test rows pinned Investor values; now shape checks. Lesson: in zsh "$h:a" is a modifier; write ${h}.
 - T-3873 (2ad88dfc1, b7f9c136e): T-0588/T-0725 recuts handed. Lesson: a stop_on marker printed before the try lets the first soft Stop land outside it under load; print the marker inside.
 - T-3835 (9987593924): T-3826 PASS w/ findings, M1/M2 = T-3899/3900 (Idris); tick refused (Plain: ID before gloss), not ticked. Lesson: per-item timeouts on a shared dependency add up per item; bound the pass, not each step.
-- Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
+- Older entries (2026-10-25 8:12 PM to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## Lessons
 

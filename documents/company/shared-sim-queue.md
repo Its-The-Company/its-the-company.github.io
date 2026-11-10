@@ -11,7 +11,7 @@ description: "Baseline figures to read before any claim of improvement (method i
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Asked by an Investor, #41 c6650882035. Owner: Odalys. Built in one go under the 01:07 amendment; measured afterwards.
+Asked by an Investor, #41 c6650882035. Owner: Odalys. Built in one go under the 1:07 AM amendment; measured afterwards.
 
 ## Baseline (what exists today)
 
@@ -20,7 +20,7 @@ Asked by an Investor, #41 c6650882035. Owner: Odalys. Built in one go under the 
    second caller waits for both, though only the build needs to be alone.
 2. MacBook: tools/xc_route.py turns a PyWidget test run into one job file (tools/jobs.py); the runner takes the
    oldest job, archives the commit, builds and tests it in one go, then the next. One job = one build, even when
-   two jobs pin the same commit. Runner 12 (#187, applied 11-05 01:29) runs each job on 3 Simulator copies.
+   two jobs pin the same commit. Runner 12 (#187, applied 11-05 1:29 AM) runs each job on 3 Simulator copies.
 3. The two machines never share work. A slow piece on one does not move to the other when it is free.
 4. Per-Simulator memory: no measurement yet (T-2419 is still open). The design takes it as a setting
    (`SIMQ_SIM_MB`, default 2500 MB, a guess) and records free memory before and after each piece so the
@@ -77,7 +77,7 @@ One queue of **pieces**. A piece is either the build of one commit or one slice 
 No runner change is needed for the first version: a lent piece is an ordinary xc-test job with only_testing.
 Follow-up (runner 13, with T-2419): keep one build-for-testing per commit in the runner's work folder and run
 later jobs at that commit with test-without-building; and choose the Simulator count from free memory. That is a
-proposal through tools/apply_proposal.py (pre-approved by the 00:06 and 01:21 amendments; a classifier refusal
+proposal through tools/apply_proposal.py (pre-approved by the 12:06 AM and 1:21 AM amendments; a classifier refusal
 stops it, T-0848).
 
 ## Measure afterwards

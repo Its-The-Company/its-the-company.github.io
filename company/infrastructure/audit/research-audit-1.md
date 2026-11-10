@@ -12,9 +12,9 @@ description: "An audit, proposal or trial from the company's operations records 
 
 {% raw %}
 
-Wrenna, 2026-10-25 23:10 ET. Board line "[ops] Wrenna, P2, OPS-7 research audit".
+Wrenna, 2026-10-25 11:10 PM ET. Board line "[ops] Wrenna, P2, OPS-7 research audit".
 
-Every number below comes from `python3 tools/research_audit.py all` (test: `python3 tests/research_audit_test.py`, 33 pass), run at 23:10 ET on HEAD 656e28fb plus the working tree. The tool reads raw sources only: the run streams in ops/runs/ through ops_metrics.py's splitter (the cost unit is the governor's recorded cost_usd per run, list-price equivalent), the backtest keys and blind grade files in research/hunt/, git (through `tools/subject_letters.py --all`), and pywidget/docs/research/CORRECTIONS.md. No number is copied from a memo, verdict, diary or event line. Where a memo said something first, I say whether the recomputation agrees.
+Every number below comes from `python3 tools/research_audit.py all` (test: `python3 tests/research_audit_test.py`, 33 pass), run at 11:10 PM ET on HEAD 656e28fb plus the working tree. The tool reads raw sources only: the run streams in ops/runs/ through ops_metrics.py's splitter (the cost unit is the governor's recorded cost_usd per run, list-price equivalent), the backtest keys and blind grade files in research/hunt/, git (through `tools/subject_letters.py --all`), and pywidget/docs/research/CORRECTIONS.md. No number is copied from a memo, verdict, diary or event line. Where a memo said something first, I say whether the recomputation agrees.
 
 Listen to this, from the H140 verdict's own limits paragraph: "Twelve of the 14 non-earners are free apps, all 15 earners are paid." That one sentence, counted across all four backtests, is most of the story.
 
@@ -22,7 +22,7 @@ Listen to this, from the H140 verdict's own limits paragraph: "Twelve of the 14 
 
 ### 1.1 Research share of usage, per day
 
-"[research]" is calls tagged [research]. "Process" adds any call whose description names a hunt lane (Hnn), blind grading, a grade, a backtest, a chair, a ruling, a re-code or a pitch, whatever its tag (blind grades were mostly tagged [review], chair grading [plan]). "Grading" is the part of the process whose description names grading, a backtest, a chair, a ruling, a re-code or a verdict. A run counts to the day it started (ET). 2026-10-25 is partial (to 23:10).
+"[research]" is calls tagged [research]. "Process" adds any call whose description names a hunt lane (Hnn), blind grading, a grade, a backtest, a chair, a ruling, a re-code or a pitch, whatever its tag (blind grades were mostly tagged [review], chair grading [plan]). "Grading" is the part of the process whose description names grading, a backtest, a chair, a ruling, a re-code or a verdict. A run counts to the day it started (ET). 2026-10-25 is partial (to 11:10 PM).
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: 1.1 Research share of usage, per day, scrolls sideways" style="--tw:855px" markdown="1">
@@ -116,12 +116,12 @@ Final letters on the 12-step scale (D- to A+). Quadratic-weighted Cohen's kappa 
 
 | Measure | Count | Source |
 |---|---|---|
-| board_tick blind-guard refusals | 2 (both H192, 2026-10-24 23:42 and 2026-10-25 02:49 UTC) | tool results in the run streams; a third string match was a reader viewing the guard's source, not a refusal |
+| board_tick blind-guard refusals | 2 (both H192, 2026-10-24 11:42 PM and 2026-10-25 2:49 AM UTC) | tool results in the run streams; a third string match was a reader viewing the guard's source, not a refusal |
 | Blind-grader calls (description names blind grading) | 87; 79 show their tool uses in the stream | run streams; 8 calls ran where the stream does not show their work and cannot be audited |
 | Calls that displayed a forbidden file (lane note, key, other grader's file) before committing their lane | **3 of 79**, all Day 2: Maren H8/H10/H11 (`cat` of the three lane notes), Maren H12-H15 (Read of H12.md), Maren H29-H31 (`cat H29.md`) | run streams |
 | Calls that handled a forbidden file without displaying it before committing (a copy to /tmp for a packet workaround, a count, an ls) | 6 (H53/H54/H69, H99, H117/H118, H136, H157, H160) | run streams |
 | Lane-note commit subjects naming a letter beside a cell | 7 of 632 | git, `subject_letters.py --all` |
-| Keys committed into the shared tree before the graders graded | H89-key 08:31, grades 08:47-08:48; H140-key in the same commit as the cards (76284287, 17:45), grades 18:01 and 18:04 | git |
+| Keys committed into the shared tree before the graders graded | H89-key 8:31 AM, grades 8:47-8:48 AM; H140-key in the same commit as the cards (76284287, 5:45 PM), grades 6:01 PM and 6:04 PM | git |
 
 </div>
 
@@ -132,12 +132,12 @@ What the scan cannot see: a grep of the board (the H186 leak that led to the gua
 
 ### 1.6 pywidget research: claims that proved wrong
 
-`research_audit.py corrections` on pywidget/docs/research/CORRECTIONS.md: 89 table rows. 22 rows are claims in the build brief that proved wrong when a primary source was read (Idris, Wrenna, Odalys, 19:23-19:37 ET); 35 rows in upkeep pass 1 (L- and C-docs against the brief, ADRs and each other; 10 of them stale claims in my own docs); 9 from Idris's primary read of the App Review Guidelines; the other 23 are status and chair-check rows, not corrections. There is no denominator yet (claims checked), so this is a count, not a rate. Experiment R3 below builds the rate.
+`research_audit.py corrections` on pywidget/docs/research/CORRECTIONS.md: 89 table rows. 22 rows are claims in the build brief that proved wrong when a primary source was read (Idris, Wrenna, Odalys, 7:23-7:37 PM ET); 35 rows in upkeep pass 1 (L- and C-docs against the brief, ADRs and each other; 10 of them stale claims in my own docs); 9 from Idris's primary read of the App Review Guidelines; the other 23 are status and chair-check rows, not corrections. There is no denominator yet (claims checked), so this is a count, not a rate. Experiment R3 below builds the rate.
 
 ## 2. Why the grade failed as a measure
 
 1. **The outcome was confounded with price, every time.** Earners were drawn from top-paid and top-grossing charts; non-earners from search results with under 20 ratings, and 92% of them (H89, H89b, H110) or 86% (H140) were free. A grader who reads "this sounds like a $5 tool" scores high on earners without knowing anything about earning. Price alone gets 0.71 to 0.93. Within free apps, v2 gets 0.52 to 0.53.
-2. **v2 was tested in-sample.** method-v2.md was first committed at 10:39 ET on 2026-10-24, after both H89 and H89b keys had been read for the H95 verdict (and it named four card names, the recorded outcome leak). H110 re-graded the same 55 cards eight minutes later (10:47), and one of its two graders (Maren) had graded both sets before. H110 measures memory and fit, not validity. Only H140 was out of sample, and it failed its pre-registered marks.
+2. **v2 was tested in-sample.** method-v2.md was first committed at 10:39 AM ET on 2026-10-24, after both H89 and H89b keys had been read for the H95 verdict (and it named four card names, the recorded outcome leak). H110 re-graded the same 55 cards eight minutes later (10:47 AM), and one of its two graders (Maren) had graded both sets before. H110 measures memory and fit, not validity. Only H140 was out of sample, and it failed its pre-registered marks.
 3. **The outcome is not the Mission's outcome.** "Earner" meant on a genre chart on one day, often with under 20 ratings; "non-earner" meant stale and unrated. That selects on survival and price, not on $200 in 30 days.
 4. **The samples are too small to decide.** 24 to 55 cards gives intervals 0.3 to 0.4 wide. Pass or fail on a pre-registered mark swung on one or two cards (by the H140 verdict, dropping two recognised cards flipped Wrenna's pass).
 5. **Reliability was mistaken for validity.** Pooled kappa 0.87 looks like a sound instrument. H89 shows the same agreement with zero separation. The graders shared a rubric and the same visible cues, so they agreed.

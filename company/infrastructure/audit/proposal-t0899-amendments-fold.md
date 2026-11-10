@@ -5,7 +5,7 @@ section: "infra"
 description: "An audit, proposal or trial from the company's operations records (log/audit/)."
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/company/infrastructure/audits.html' | relative_url }}">← Infrastructure: Audits</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Operations record</span><span><code>log/audit/proposal-t0899-amendments-fold.md</code></span><span>2026-11-03</span></div><h1>Fold amendments.md into the rules, rebuilt with the 12:43 amendment (T-0899, Commandment 59)</h1></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Operations record</span><span><code>log/audit/proposal-t0899-amendments-fold.md</code></span><span>2026-11-03</span></div><h1>Fold amendments.md into the rules, rebuilt with the 12:43 PM amendment (T-0899, Commandment 59)</h1></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -18,13 +18,13 @@ Builder: `python3 tools/amend_fold.py --root . --out <dir> --proposal <this file
 
 ## What changed since the card on #115
 
-1. One more entry: 2026-10-31 12:43, an Investor, release by Day 60. 8 entries now, not 7. No earlier entry was missing.
+1. One more entry: 2026-10-31 12:43 PM, an Investor, release by Day 60. 8 entries now, not 7. No earlier entry was missing.
 2. The seven folds on the card are unchanged, with one added sentence in the Day 17 row (check 6 below).
-3. The rest of this file is new wording for the 12:43 entry, and the numbers rebuilt.
+3. The rest of this file is new wording for the 12:43 PM entry, and the numbers rebuilt.
 
 ## Baseline
 
-1. `amendments.md`: 7,993 bytes, 3,897 over the 4,096-byte line. n = 8 entries, 2026-10-29 07:33 to 2026-10-31 12:43 ET.
+1. `amendments.md`: 7,993 bytes, 3,897 over the 4,096-byte line. n = 8 entries, 2026-10-29 7:33 AM to 2026-10-31 12:43 PM ET.
 2. Amendments block in every worker's prompt: 6,913 characters, about 3,556 tokens (`tools/amend_cost.py`: 0.51 tokens per character, n = 164 streams).
 3. `CLAUDE.md`: 62,362 bytes, loaded by the Operator only. `rules/worker-rules.md`: 10,443 bytes.
 
@@ -38,7 +38,7 @@ Builder: `python3 tools/amend_fold.py --root . --out <dir> --proposal <this file
 
 Measure after: `wc -c amendments.md`; the block size from `rules/build_agents.py`; `tools/amend_cost.py` on the next 7 days of worker streams.
 
-## What the 12:43 ruling changes, rule by rule
+## What the 12:43 PM ruling changes, rule by rule
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 1: What the 12:43 ruling changes, rule by rule, scrolls sideways" style="--tw:498px" markdown="1">
@@ -58,18 +58,18 @@ Measure after: `wc -c amendments.md`; the block size from `rules/build_agents.py
 </div>
 
 
-The entries for 07:33 to 10:55 fold as on the card; their table is in the T-0872 proposal and their edits are in the diff below.
+The entries for 7:33 AM to 10:55 AM fold as on the card; their table is in the T-0872 proposal and their edits are in the diff below.
 
 Notes that say the fold happened: the Version 2 paragraph of `CLAUDE.md`, the rulings line of `rules/worker-rules.md`, line 15 of `amendments.md`, and the count line of `log/rulings.md`.
 
 ## Where this goes past your words: please check
 
 1. **2026-12-20.** You wrote "by 60 days". The date is the Operator's reading, counted from Day 1 (2026-10-22).
-2. **Final Report on Day 60, later if the release moves past it.** You did not name a date for it. This is the Operator's reading on #41 and Ines's plan of 13:02.
+2. **Final Report on Day 60, later if the release moves past it.** You did not name a date for it. This is the Operator's reading on #41 and Ines's plan of 1:02 PM.
 3. **Weekly reviews continue every seventh day until the Final Report.** Your ruling is silent on them. This is Ines's plan.
 4. **The three endings in Commandment 48 are unchanged.** "The goal was met", "another $200 month" and "the new target" were written for the old goal. Rewording them is yours, so this diff leaves them and asks you.
 5. **Rules your Affects line doesn't name.** Each held the old target, so each changes: the Fable row of Tenet 6 ("the Day 30 verdict" becomes "the Final Report's verdict"), Commandment 19 ("progress toward the target" becomes "the release"), Commandment 23 ("the $200 target" becomes "the release"), and worker rules 1 and 3, the short forms of Tenet 1 and Commandment 23.
-6. **The Day 17 row stays, with one added sentence.** It keeps "About Day 17 (2026-11-07), flexible", because your 12:43 ruling names no submission date and the 07:33 fold must hold. Ines's plan now has submission on Day 48 (2026-12-08). The row gains "Its current date is in `ops/milestones.json`." "Until the Day 17 submission" in Tenet 1 and Commandment 45 also stays, and reads as the first submission. If you would rather the row name no day, say so and the company rebuilds.
+6. **The Day 17 row stays, with one added sentence.** It keeps "About Day 17 (2026-11-07), flexible", because your 12:43 PM ruling names no submission date and the 7:33 AM fold must hold. Ines's plan now has submission on Day 48 (2026-12-08). The row gains "Its current date is in `ops/milestones.json`." "Until the Day 17 submission" in Tenet 1 and Commandment 45 also stays, and reads as the first submission. If you would rather the row name no day, say so and the company rebuilds.
 7. **"Sales and spending stay in the report as facts", and the money strip.** You said profit leaves the title and the summaries. Commandment 41 keeps facts true, so Commandment 38's "sales and spending" stays, and so does "the day, money, and usage strip" in At a glance. Say so if the strip's money should go too.
 8. **The Long term line stays.** "Each month's proceeds cover that month's $200, and then earn back the $419" has no date on it and describes the subscription's cost. "The first month costs $619" stays too.
 
@@ -102,7 +102,7 @@ Guides, Investor-owned, which the amendment already overrides; a follow-up propo
 On the Mac mini, between sessions:
 
 1. Reply `approve` on the issue, then reply `PAUSE` so no session is running.
-2. In the company folder, run `git pull`, then `git apply --index log/audit/proposal-t0899-amendments-fold.diff`. Git prints a trailing-whitespace warning on 4 lines: those are the spaces in the 12:43 ruling, kept byte for byte, and it applies anyway. If it refuses, stop and say so on the issue: a file moved, or a new amendment landed, and the company rebuilds the diff.
+2. In the company folder, run `git pull`, then `git apply --index log/audit/proposal-t0899-amendments-fold.diff`. Git prints a trailing-whitespace warning on 4 lines: those are the spaces in the 12:43 PM ruling, kept byte for byte, and it applies anyway. If it refuses, stop and say so on the issue: a file moved, or a new amendment landed, and the company rebuilds the diff.
 3. Run `python3 rules/lookup.py --amendments`. It must print `No amendments in effect.`
 4. Run `git commit -m "Fold the amendments into the rules (T-0899)"`, then `git push`.
 5. Reply `RESUME`.

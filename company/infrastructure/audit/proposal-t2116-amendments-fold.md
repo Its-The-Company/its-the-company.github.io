@@ -14,7 +14,7 @@ description: "An audit, proposal or trial from the company's operations records 
 Proposal T-1777 (rebuilt on current main, T-2116): fold the six rulings now in `amendments.md` into the wording of the rules they changed. #172 has landed, so one Approve on the site applies it.
 
 ## 1. The decision
-Approve or refuse one change to four files: `amendments.md`, `CLAUDE.md`, `rules/worker-rules.md` and `log/rulings.md`. The six rulings in `amendments.md` (2026-11-03 19:16 to 2026-11-04 06:26) move into the rules they changed, so each rule says what it means today. Your exact words move to `log/rulings.md`, which no session loads.
+Approve or refuse one change to four files: `amendments.md`, `CLAUDE.md`, `rules/worker-rules.md` and `log/rulings.md`. The six rulings in `amendments.md` (2026-11-03 7:16 PM to 2026-11-04 6:26 AM) move into the rules they changed, so each rule says what it means today. Your exact words move to `log/rulings.md`, which no session loads.
 
 `amendments.md` is 8,297 bytes, about twice Commandment 59's 4 KB line, and every worker carries it on every call. After the fold the file is 1,101 bytes with no entries: 7,196 fewer bytes on every worker call.
 
@@ -22,7 +22,7 @@ What the rules would say:
 - Usage keeps pace with the share of the week that has passed; while behind, work runs at full strength until it catches up (Tenet 6).
 - Reports: any worker may write one; titled "Day N: Morning/Evening Report" with a subtitle; one worker's quote with their animated portrait; a short list of directions, a section for each, what worked and what didn't, a check against the last plan, and the next plan. Corrections, Human help, Predictions and per-task lists go (Commandments 38, 39).
 - The site is Home, Chat, Issues and Reports. Usage and cost show on Home; Infrastructure moves to Documents under Reports; meeting and hiring records are kept but no longer published as pages (Commandments 43, 46, 59, Tenets 1, 6, 7).
-- No more diaries or private conversations, so no diary moods (Commandments 24, 25, 32, worker rule 14). an Investor's 21:39 comment answered the Records question on #41 in option A's own words.
+- No more diaries or private conversations, so no diary moods (Commandments 24, 25, 32, worker rule 14). an Investor's 9:39 PM comment answered the Records question on #41 in option A's own words.
 - Changes you must allow go through the site's Approve and the company's applier, not by hand; human checks, sign-ins and payments stay with you (Commandments 59, 61).
 - The company reads public information a task needs without asking first; the plain-text copy of an Apple page counts as that page. Commandment 6's limits stand. Your 2026-10-26 Apple ruling stays word for word (Commandment 58, Tenet 2, worker rule 5).
 
@@ -42,7 +42,7 @@ Takes effect: never
 ## 5. The deadline
 2026-11-10. Nothing is blocked; every ruling is already in force.
 
-Why this was rebuilt: the approve of 2026-11-04 (c6633151270) met a diff built before 33801be31, which removed four duplicate copies of the 19:16 ruling from `amendments.md`, so the diff no longer applied. The rebuilt diff only stops removing those copies; the four files it produces are byte for byte the ones the approved diff would have produced.
+Why this was rebuilt: the approve of 2026-11-04 (c6633151270) met a diff built before 33801be31, which removed four duplicate copies of the 7:16 PM ruling from `amendments.md`, so the diff no longer applied. The rebuilt diff only stops removing those copies; the four files it produces are byte for byte the ones the approved diff would have produced.
 
 ## 6. Evidence
 - The diff applies cleanly to main at f9ec7a39d (`git apply --check`, a clean copy and a scratch worktree). Applied to b23d7a0c5, the previously approved diff gives the same four files, byte for byte (`cmp`). With it applied, `python3 rules/lookup.py --amendments` prints "No amendments in effect."

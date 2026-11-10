@@ -13,7 +13,7 @@ description: "The diagram data is in ops/plans/workflow-graph.json. Every arrow 
 {% raw %}
 Odalys, 2026-11-04. Asked by an Investor on #41 (comment 6647932583). Read only: no code was changed by this analysis.
 
-**Evidence.** All numbers come from raw records: the session rows in `ops/usage.json` (one per finished session), the supervisor's log `ops/runs/supervisor.log`, git history, and the personal-<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> tick logs. They are computed by `tools/workflow_stats.py --since 2026-10-28` (new, tested) and `tools/changeover_gaps.py` (T-2298). Window: 2026-10-28 00:00 to 2026-11-04 21:20 ET, 8 calendar days, **n = 138 sessions**. Dollar figures are what the same tokens would cost at API prices. The plan is not billed that way, but the figures show relative size.
+**Evidence.** All numbers come from raw records: the session rows in `ops/usage.json` (one per finished session), the supervisor's log `ops/runs/supervisor.log`, git history, and the personal-<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> tick logs. They are computed by `tools/workflow_stats.py --since 2026-10-28` (new, tested) and `tools/changeover_gaps.py` (T-2298). Window: 2026-10-28 12:00 AM to 2026-11-04 9:20 PM ET, 8 calendar days, **n = 138 sessions**. Dollar figures are what the same tokens would cost at API prices. The plan is not billed that way, but the figures show relative size.
 
 The diagram data is in `ops/plans/workflow-graph.json`. Every arrow in it names the line of code that triggers it, and `tools/workflow_graph.py --check` fails when the code moves. File:line references below are as of commit time.
 
@@ -55,8 +55,8 @@ The governor checks these in order, and the first match wins (`tools/governor.py
 |---|---|---|---|
 | 1 | hold | the company is paused, or Day 1 setup holds it | governor.py:1637 |
 | 2 | queue (no Claude) | a plan usage limit is reached and no API credits may run | :1655 |
-| 3 | **evening report session** | 18:00 or later, and no evening report yet today | :1659 |
-| 4 | **morning report session** | 06:00 to 12:00, no morning report yet, and the night was not quiet | :1665 |
+| 3 | **evening report session** | 6:00 PM or later, and no evening report yet today | :1659 |
+| 4 | **morning report session** | 6:00 AM to 12:00 PM, no morning report yet, and the night was not quiet | :1665 |
 | 5 | (billing) switch to API credits | the Investors' credits order covers this cycle, unless this is a reply-only case | :1683 |
 | 6 | queue | the plan's 5-hour window is at 90% or more | :1689 |
 | 7 | **short inbox session** | an Investor message waits **and** a work session may not start: today's share is spent, the 5-hour window is near its limit, or the board is empty and work ran in the last hour | :1699 |
@@ -77,7 +77,7 @@ A message never forces a short session on its own. When a work session may start
 Three pieces of code make it so:
 - The governor gives one answer per tick, and reports come first (rows 3-4). They are exempt from the daily share.
 - The supervisor runs one session at a time (`supervisor.sh:88`, one lock).
-- While a work session runs, the keeper sees the report coming and writes a "close by" time about 10 minutes after 06:00 or 18:00. At that time it stops the session (`tools/session_end.py:211`, the report job; the stop is `stop_at_close_by`).
+- While a work session runs, the keeper sees the report coming and writes a "close by" time about 10 minutes after 6:00 AM or 6:00 PM. At that time it stops the session (`tools/session_end.py:211`, the report job; the stop is `stop_at_close_by`).
 
 **Could reports run beside work? Yes.** A report session reads one facts file that a script writes (`supervisor.sh:437`, `tools/report_facts.py`). It needs no repository of its own and no other session's context. Nothing in the report's content needs work to stop. The separation comes from the one-session rule and the order of the governor's checks, not from the report itself. The one real constraint is that two Claude processes would commit to the same checkout at once. The fix avoids that: when a work session is running, its Operator starts one report agent with the facts file, beside the other tasks. When no session is running, the report runs alone as it does now. Tenet 6 lists "a report" as a reason a session ends, so that sentence needs the Investors (proposal below).
 
@@ -130,7 +130,7 @@ What it changed over the last 8 days (Days 7 to 14), from git (n = 4 CEO plan co
 | 9 (10-30) | 017a6697c | one line's owner (T-0756, the signed device build) |
 | 10 (10-31) | 5e089dc5d | added the three Day 10 alpha-run lines (T-0855 to T-0857), plus ticks and one block |
 | 11 (11-01) | none | did not run |
-| 12 (11-02) | 92558d05f | nothing; state.md only ("no Xcode until space returns"), and a <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line changed that order at 06:41 |
+| 12 (11-02) | 92558d05f | nothing; state.md only ("no Xcode until space returns"), and a <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line changed that order at 6:41 AM |
 | 13 (11-03) | none | did not run |
 | 14 (11-04) | none | did not run |
 

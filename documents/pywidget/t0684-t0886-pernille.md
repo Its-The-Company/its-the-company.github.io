@@ -29,7 +29,7 @@ Pernille, 2026-10-31. Commandment 13. Read from the diff, the code around it and
 
 **The writers side holds too.** `-widget-run` and `-widget-install` are wholly inside `#if DEBUG` (WidgetRunView.swift:3-64, WidgetInstallView.swift:4-51; PyWidgetApp.swift:69-71, 89-101). `WidgetLibrary.save` has one caller, behind the `heldID` refusal (WidgetScriptSave.swift:148, :258). RunResultSink writes only for ids WidgetWriter runs, and `new_widget` has no main.py to run. One edge in L2.
 
-**Limits of this answer.** It is reasoning plus a host compile of those lines. I did not inspect a Release binary: the newest Release appex on this Mac is from 02:54 today and b7e90c16 is from 12:42. Xcode's slot is T-0881's, so no Release build ran. `testHooks` itself has no test and cannot have one in Debug; a change to that one constant would fail nothing. I do not think that earns a line.
+**Limits of this answer.** It is reasoning plus a host compile of those lines. I did not inspect a Release binary: the newest Release appex on this Mac is from 2:54 AM today and b7e90c16 is from 12:42 PM. Xcode's slot is T-0881's, so no Release build ran. `testHooks` itself has no test and cannot have one in Debug; a change to that one constant would fail nothing. I do not think that earns a line.
 
 The card does read `state-tokens.json` from the extension's own signed bundle. That is the words table, not a folder anyone writes, and it is what the ruling's "no file" means in practice.
 

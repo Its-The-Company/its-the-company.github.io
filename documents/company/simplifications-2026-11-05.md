@@ -11,7 +11,7 @@ description: "Already lines, not repeated here: one dispatcher for every account
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Ines, written 2026-11-05 01:55 ET, for Investor an Investor #41 c6651078949 (amendment 2026-11-05 01:07): find the high-level changes that should make the company faster or simpler, from its most basic goals, and build each that should give a better system in one go. Results are measured afterwards from raw evidence.
+Ines, written 2026-11-05 1:55 AM ET, for Investor an Investor #41 c6651078949 (amendment 2026-11-05 1:07 AM): find the high-level changes that should make the company faster or simpler, from its most basic goals, and build each that should give a better system in one go. Results are measured afterwards from raw evidence.
 
 Already lines, not repeated here: one dispatcher for every account (T-2471), one shared Simulator queue (T-2470), approvals only where the Investors said (T-2460), the merge queue for <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> work (T-2467), answered questions no longer hold rule folds (T-2476), Evan's <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> and credit gaps (T-2479).
 
@@ -26,9 +26,9 @@ Already lines, not repeated here: one dispatcher for every account (T-2471), one
 
 - Most work is not the product. Since 11-01, 360 of 2,011 commits (18%) touch pywidget/ (git log). Open board lines: 214 [tools], 132 [build], 19 [fix], 19 [test], 17 [site] (ops/board.md, 461 open, 412 KB).
 - Half of finished work does not land. 155 land attempts on 11-03 and 11-04, 75 landed (48%). Causes of the 80: 30 rebase conflicts, 19 tests red, 14 Investor-owned files changed on main while checks ran, 7 touched an Investor-owned path, 7 checks over their time limit, 2 xcodebuild failures (tools/land_stats.py). The land test alone (personal_land_test.sh) takes 311-474 s against a 360 s <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> (ops/runs/t1663-personal-land-timing.txt). Since 11-03 the lander logged 35 "out of time, waits for the next tick" and 14 "another land is running" (ops/runs/supervisor.log).
-- A quarter of the board is machine-made. 118 of 461 open lines are the lander's own failure lines ("did not land", "stopped on", "keeps coming back"), and at 01:40 today the lander's new lines were refused by board_tick for lacking a title (supervisor.log), so some failures now go nowhere.
-- The work loop waits on metrics. Each hour the tick chain rebuilds quality metrics (79 s) and metric series (64 s) before the next session starts (supervisor.log 01:25-01:27).
-- Usage is left on the table. The main plan's 5-hour window read 2.0% at 01:40 with 58% of the week used and a reset on 11-08 (ops/live_meter_log.jsonl, supervisor.log); personal accounts added 49.1% of the plan's weekly limit this week. T-2471 and T-2479 own this.
+- A quarter of the board is machine-made. 118 of 461 open lines are the lander's own failure lines ("did not land", "stopped on", "keeps coming back"), and at 1:40 AM today the lander's new lines were refused by board_tick for lacking a title (supervisor.log), so some failures now go nowhere.
+- The work loop waits on metrics. Each hour the tick chain rebuilds quality metrics (79 s) and metric series (64 s) before the next session starts (supervisor.log 1:25-1:27 AM).
+- Usage is left on the table. The main plan's 5-hour window read 2.0% at 1:40 AM with 58% of the week used and a reset on 11-08 (ops/live_meter_log.jsonl, supervisor.log); personal accounts added 49.1% of the plan's weekly limit this week. T-2471 and T-2479 own this.
 
 ## The changes
 
@@ -55,16 +55,16 @@ Already lines, not repeated here: one dispatcher for every account (T-2471), one
 
 S1 (Odalys, after T-2467 (a)) and S3 (Ines) start now and in parallel; S2 goes into T-2471's dispatcher as it is built; S4 (Odalys) last. Each is built in one go and measured afterwards: S1 by tools/land_stats.py's land rate, S2 by the share of commits touching pywidget/, S3 by open lines and board bytes, S4 by the supervisor log's session start times.
 
-## S3 result (Ines, 2026-11-05 14:47, T-2617): measured, list ruled, archive waits on a tool
+## S3 result (Ines, 2026-11-05 2:47 PM, T-2617): measured, list ruled, archive waits on a tool
 
 **Not archived yet.** Neither tools/board_tick.py nor tools/board.py can move an open line ('- [ ]' or '- [b]') off the board with a pointer: board.py's archive modes move only finished lines and prose. The packet says to stop there rather than write the board from a script, so nothing left the board. The missing mode is lined for Odalys as T-2718 ("Archive open board lines and bring them back").
 
-**Before (2026-11-05 14:46 ET, ops/board.md at ae7405d10 plus the working tree):** 571 open lines, 486,432 bytes. Of those, 287 are [tools], [site] or [ops] (253 / 21 / 13). The S3 row above said 461 lines and 412 KB; the board grew 110 lines and 74 KB since that row was written.
+**Before (2026-11-05 2:46 PM ET, ops/board.md at ae7405d10 plus the working tree):** 571 open lines, 486,432 bytes. Of those, 287 are [tools], [site] or [ops] (253 / 21 / 13). The S3 row above said 461 lines and 412 KB; the board grew 110 lines and 74 KB since that row was written.
 
-**After (Odalys, 2026-11-05 14:55 ET, T-2718, tools/board.py archive-open, commit 99fba693f):** the 25 left the board for log/board-archive-s3-2026-11-05.md, 25 lines and 12,262 bytes, each verbatim with its heading, date, reason and restore command; one pointer line (line 140) names the file and the IDs. The board had grown since 14:46, so the counts at the apply are: before 572 open lines, 500,022 bytes; after 547 open lines, 488,122 bytes (pointer included): 25 open lines (4.4%) and 11,900 bytes (2.4%) less. None was claimed, P0 or named by an open product line when the checks ran again under the board lock. Bring one back: `python3 tools/board.py restore-open <T-ID>` (dry run; add --apply).
+**After (Odalys, 2026-11-05 2:55 PM ET, T-2718, tools/board.py archive-open, commit 99fba693f):** the 25 left the board for log/board-archive-s3-2026-11-05.md, 25 lines and 12,262 bytes, each verbatim with its heading, date, reason and restore command; one pointer line (line 140) names the file and the IDs. The board had grown since 2:46 PM, so the counts at the apply are: before 572 open lines, 500,022 bytes; after 547 open lines, 488,122 bytes (pointer included): 25 open lines (4.4%) and 11,900 bytes (2.4%) less. None was claimed, P0 or named by an open product line when the checks ran again under the board lock. Bring one back: `python3 tools/board.py restore-open <T-ID>` (dry run; add --apply).
 
 **How the list was made.** Every open [tools], [site] or [ops] line, minus each of these (counts are for those 287 lines):
-- younger than three days: an ID above T-1061, the highest ID on the board at its last commit before 2026-11-02 14:50 ET (177bd6b42, 13:28): 226 lines;
+- younger than three days: an ID above T-1061, the highest ID on the board at its last commit before 2026-11-02 2:50 PM ET (177bd6b42, 1:28 PM): 226 lines;
 - P0: 1;
 - Investor-requested by its own text (an Investor, #41, a from: ID or a comment ID): 26;
 - claimed (tools/personal_claims.py list, 25 claims): 0 left after the cuts above;

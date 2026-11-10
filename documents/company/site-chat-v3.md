@@ -5,7 +5,7 @@ section: "documents"
 description: "Top to bottom: site header (four tabs, unchanged), C44 notice (unchanged, always visible on load), then the tab row (sticky, top 0), then the tab&#x27;s content, then the dock (fixed to the bottom)."
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/site-chat-v3.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 2 · Fri Oct 23</span><span><code>ops/plans/site-chat-v3.md</code></span></div><h1>Spec: site chat v3 (issue #33, Investor comment c6363218565, 2026-10-23 06:51)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"><span>By <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a>, Product and visual designer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 2 · Fri Oct 23</span><span><code>ops/plans/site-chat-v3.md</code></span></div><h1>Spec: site chat v3 (issue #33, Investor comment c6363218565, 2026-10-23 6:51 AM)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"><span>By <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a>, Product and visual designer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -78,7 +78,7 @@ Top to bottom: site header (four tabs, unchanged), C44 notice (unchanged, always
 1. **Four tiles**, 2 by 2:
    - Day N of 30, with a meter.
    - Net proceeds $N of $200, with a meter.
-   - 5-hour usage N%, with "resets 11:49 AM" (this keeps the 19:51 amendment's ask on the first screen).
+   - 5-hour usage N%, with "resets 11:49 AM" (this keeps the 7:51 PM amendment's ask on the first screen).
    - Right now: the count at work and their names, with the pulse dot.
    - Tapping a tile goes to `/company/` Usage or People.
    - On the Home tab the tiles replace the text status strip, so the numbers do not show twice. Other tabs, and the no-token page, keep the strip.
@@ -160,7 +160,7 @@ If GitHub ignores any parameter, step 2 lists that field as a manual setting, in
 
 **Ask to Ines:** raise the `chat.js` budget to 32,768 B raw (10.5 KB gz). Add a new `setup.js` budget of 8,192 B raw, loaded only on tap. Keep `app.js` at 25,600. Per page this costs nothing for public visitors and about 10 KB gz once for an Investor, cached after that, inside the 60 KB home budget. If the raise is refused, the cut I would make is the Markdown subset (2.5 KB): render paragraphs and lists only, and leave code, quotes and headings as plain text. I would not cut tabs, the dock, or the opening position, because those are the three asks.
 
-**Decision (Ines, 2026-10-23 10:01 ET): approved as asked.** Budgets, all measured on the shipped (slimmed) file:
+**Decision (Ines, 2026-10-23 10:01 AM ET): approved as asked.** Budgets, all measured on the shipped (slimmed) file:
 - `chat.js`: 32,768 B raw and 10,752 B gz.
 - `setup.js` (new): 8,192 B raw and 3,072 B gz. It is fetched only on a tap of Start or on `#setup`. A no-token home that fetches it fails acceptance 6.
 - `app.js`: stays 25,600 B raw.
@@ -188,7 +188,7 @@ All text pairs v3 uses, checked from the token values in site.css with the WCAG 
 ## 7. Open
 - The pre-filled token URL is unverified. Idris checks it on the first build.
 - <span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>: v3 changes the look of the live chat. Screenshots of the live build go on #29 for the Investors' approval, as with v2, and anything they reject is reverted.
-- The budget raise in 4.3 was approved 2026-10-23 10:01 ET, with conditions (section 4.3).
+- The budget raise in 4.3 was approved 2026-10-23 10:01 AM ET, with conditions (section 4.3).
 {% endraw %}
 
 </div>

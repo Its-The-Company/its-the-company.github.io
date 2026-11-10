@@ -11,7 +11,7 @@ description: "A3 and A4 grade the same image, as s9 rules. Every file s9&#x27;s 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Maren, started 2026-10-31 05:49 ET. Record: `ops/site-checks/alpha-day10/8428b332/` (one run, 02:51-04:08). Rows A1, A2, A3, A4, A5, A7 of [`ops/plans/pywidget/alpha-day10-checklist.md`](alpha-day10-checklist.html), with the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line of s9 in force. I mark each image pass or fail with one reason. Row grades and the verdict are Ines's (T-0361). No new run, retake, build or Simulator was used.
+Maren, started 2026-10-31 5:49 AM ET. Record: `ops/site-checks/alpha-day10/8428b332/` (one run, 2:51-4:08 AM). Rows A1, A2, A3, A4, A5, A7 of [`ops/plans/pywidget/alpha-day10-checklist.md`](alpha-day10-checklist.html), with the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line of s9 in force. I mark each image pass or fail with one reason. Row grades and the verdict are Ines's (T-0361). No new run, retake, build or Simulator was used.
 
 ## Counts
 
@@ -59,7 +59,7 @@ Design sheet: `origin/design-previews:widgets/premade/<file>` at 3fb09bd4, the a
 </div>
 
 
-Values are checked against T-0358's trees (fixed clock 2026-10-31 09:41 America/New_York, fixed data). The sheet is the source for layout and elements, not for sample values.
+Values are checked against T-0358's trees (fixed clock 2026-10-31 9:41 AM America/New_York, fixed data). The sheet is the source for layout and elements, not for sample values.
 
 ## A1 (s9: the waiting shot only)
 
@@ -110,7 +110,7 @@ The bench's "done" strip sits below the editor on all six; s9 excludes it. No ha
 
 ## A4 <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span> read (typed from the image before the log was opened, chair line s9)
 
-`A4b/shots/t0508-token-home.png` (tracked copy, 585x1266) and `t0508-token-widget.png`: **PWT7FA9N**. Committed in 857c35a3 at 05:50 ET, before the log was opened. The log then read `T-0508 TOKEN made PWT7FA9N` and `T-0508 TOKEN PWT7FA9N on the Home Screen: read`.
+`A4b/shots/t0508-token-home.png` (tracked copy, 585x1266) and `t0508-token-widget.png`: **PWT7FA9N**. Committed in 857c35a3 at 5:50 AM ET, before the log was opened. The log then read `T-0508 TOKEN made PWT7FA9N` and `T-0508 TOKEN PWT7FA9N on the Home Screen: read`.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 6: A4 blind read (typed from the image before the log was opened, chair line s9), scrolls sideways" data-n="2" style="--tw:606px" markdown="1">
@@ -126,7 +126,7 @@ The bench's "done" strip sits below the editor on all six; s9 excludes it. No ha
 
 The count is right: countdown 11, progress 11, clocks 10, quote 13, habits 13, storage 10. No image shows the error, placeholder or unknown-node card. No stand-in beyond the three s9 allows is visible. A5a's one Expected Failure is `testHarnessFailsOnTheErrorCardAndAnUnknownNode`; its log lines are the mutant cases, red on purpose through XCTExpectFailure.
 
-A timer face is never value-read on A5a (s9), so those marks cover the rest of the image and the timer goes to the A5b table below. I treat progress's relative "left" text as a timer face: on A5a it reads 20 hr, 46 min, which is the wall clock, not 09:41.
+A timer face is never value-read on A5a (s9), so those marks cover the rest of the image and the timer goes to the A5b table below. I treat progress's relative "left" text as a timer face: on A5a it reads 20 hr, 46 min, which is the wall clock, not 9:41 AM.
 
 **countdown** (11 images, sheet 01-countdown.jpg)
 
@@ -179,10 +179,10 @@ A timer face is never value-read on A5a (s9), so those marks cover the rest of t
 
 | Image | Mark | Reason |
 | --- | --- | --- |
-| clocks-systemSmall-fullColor-light | **fail** | "12:41 AM" truncated to "12:41…"; the sheet truncates no time. |
-| clocks-systemSmall-fullColor-dark | **fail** | "12:41 AM" truncated to "12:41…"; the sheet truncates no time. |
-| clocks-systemSmall-accented-light | **fail** | "12:41 AM" truncated to "12:41…"; the sheet truncates no time. |
-| clocks-systemSmall-accented-dark | **fail** | "12:41 AM" truncated to "12:41…"; the sheet truncates no time. |
+| clocks-systemSmall-fullColor-light | **fail** | "12:41 AM" truncated to "12:41 PM…"; the sheet truncates no time. |
+| clocks-systemSmall-fullColor-dark | **fail** | "12:41 AM" truncated to "12:41 PM…"; the sheet truncates no time. |
+| clocks-systemSmall-accented-light | **fail** | "12:41 AM" truncated to "12:41 PM…"; the sheet truncates no time. |
+| clocks-systemSmall-accented-dark | **fail** | "12:41 AM" truncated to "12:41 PM…"; the sheet truncates no time. |
 | clocks-systemMedium-fullColor-light | pass | Elements as sheet, medium layout, Paper face; lowest text pair 7.08:1 (text.secondary on white). |
 | clocks-systemMedium-fullColor-dark | pass | Elements as sheet, medium layout, Studio face; lowest text 7.49:1 on darkest ground, 6.10:1 on lightest. |
 | clocks-systemMedium-accented-light | pass | Content and grouping complete; Paper face. |
@@ -264,20 +264,20 @@ A timer face is never value-read on A5a (s9), so those marks cover the rest of t
 
 ## A5b timer faces (extension process, read against the wall clock)
 
-Step window: 03:13:34 to 03:26:05 ET, from `A5b/xcresult-summary.json` (see item 7 below). Shot times are from the attachment manifest.
+Step window: 3:13:34 AM to 3:26:05 AM ET, from `A5b/xcresult-summary.json` (see item 7 below). Shot times are from the attachment manifest.
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 13: A5b timer faces (extension process, read against the wall clock), scrolls sideways" data-n="3" style="--tw:742px" markdown="1">
 
 | Image | Shot time | Mark | Reason |
 | --- | --- | --- | --- |
-| wk-countdown-systemMedium.png | 03:18:22 | **fail** | Timer reads 5:25:00. The rule needs 3:06 PM minus a time in the window: 11:39:55 to 11:52:26. |
-| wk-countdown-systemSmall.png | 03:18:22 | pass | Bar at about 51%; 50.8% is expected at that time on the tree's interval. |
-| wk-countdown-accessoryRectangular.png | 03:22:22 | pass | Bar at about 51%, same interval; all text as A5a. |
-| wk-progress-systemSmall.png | 03:19:25 | pass | "20 hr, 40 min left" equals midnight minus 03:19; bar at about 14%. |
-| wk-progress-systemMedium.png | 03:19:25 | pass | Day, Week, Month and Year bars at about 14, 73, 97 and 83%, right for the wall clock. |
-| wk-progress-accessoryRectangular.png | 03:24:00 | pass | Day bar at about 14%, right for the wall clock. |
-| wk-clocks-systemSmall.png | 03:18:06 | **fail** | Cross-check, not a timer: "12:41 A…", the same truncation as A5a in the real extension. |
+| wk-countdown-systemMedium.png | 3:18:22 AM | **fail** | Timer reads 5:25:00. The rule needs 3:06 PM minus a time in the window: 11:39:55 AM to 11:52:26 AM. |
+| wk-countdown-systemSmall.png | 3:18:22 AM | pass | Bar at about 51%; 50.8% is expected at that time on the tree's interval. |
+| wk-countdown-accessoryRectangular.png | 3:22:22 AM | pass | Bar at about 51%, same interval; all text as A5a. |
+| wk-progress-systemSmall.png | 3:19:25 AM | pass | "20 hr, 40 min left" equals midnight minus 3:19 AM; bar at about 14%. |
+| wk-progress-systemMedium.png | 3:19:25 AM | pass | Day, Week, Month and Year bars at about 14, 73, 97 and 83%, right for the wall clock. |
+| wk-progress-accessoryRectangular.png | 3:24:00 AM | pass | Day bar at about 14%, right for the wall clock. |
+| wk-clocks-systemSmall.png | 3:18:06 AM | **fail** | Cross-check, not a timer: "12:41 PM A…", the same truncation as A5a in the real extension. |
 
 </div>
 
@@ -309,8 +309,8 @@ I also read the other 19 family shots of the six premades on A5b as a cross-chec
 
 **Fails, most severe first.**
 
-1. **A5, clocks-systemSmall, 4 of 68. A product defect.** "12:41 AM" truncates to "12:41…" in all four modes, and to "12:41 A…" in the extension. The sheet does not truncate. Sydney's "Sun +15h" label and "12:41 AM" do not fit on one row. A person loses AM or PM on the Home Screen. "All 68 must pass" cannot be met as the images stand.
-2. **A5, wk-countdown-systemMedium, timer 5:25:00. The rule's clock, more likely than the product.** s9 expected a run after 09:41 and said the timer "will not read 5:25:00". The run was at 03:18, before the tree's timer start of 09:41 ET. `TreeView.swift` draws `Text(timerInterval: start...end)` with no pause time, and SwiftUI appears to hold a timer at its full length until start. That is my inference from the tree and the source; nothing in the record tests it. As written it fails. It needs your ruling, because the A5a marks for countdown-systemMedium (4 images) pass only on the rest of the image, and a retake is not allowed.
+1. **A5, clocks-systemSmall, 4 of 68. A product defect.** "12:41 AM" truncates to "12:41 PM…" in all four modes, and to "12:41 PM A…" in the extension. The sheet does not truncate. Sydney's "Sun +15h" label and "12:41 AM" do not fit on one row. A person loses AM or PM on the Home Screen. "All 68 must pass" cannot be met as the images stand.
+2. **A5, wk-countdown-systemMedium, timer 5:25:00. The rule's clock, more likely than the product.** s9 expected a run after 9:41 AM and said the timer "will not read 5:25:00". The run was at 3:18 AM, before the tree's timer start of 9:41 AM ET. `TreeView.swift` draws `Text(timerInterval: start...end)` with no pause time, and SwiftUI appears to hold a timer at its full length until start. That is my inference from the tree and the source; nothing in the record tests it. As written it fails. It needs your ruling, because the A5a marks for countdown-systemMedium (4 images) pass only on the rest of the image, and a retake is not allowed.
 3. **A7, purchased light and dark. Elements missing as written.** No caller in `App/` sets `onDoneAction`, so "Open the Gallery" never shows, while the line still says the premades are "open in the Gallery". "Done" exists only when the screen is a sheet, and s9 does not grade sheet versus push, so "Done" may fall under that clause; "Open the Gallery" does not. The Gallery is out of the alpha (s2), so the button has no target today. Both images also show Restore purchase and Terms of Use, which T-0333 does not draw there. That is not a fail item.
 4. **A2, the two middle shots. palette_check exit 1 as written, not a highlighting fault.** All 93 and 184 off-palette pixels sit where the scroll indicators cross glyphs: x 1152-1160 (the vertical bar over `T` and `{`) and, dark only, x 392-409 at y 2340-2347 (the horizontal bar over `except`). Cropped to x 146-1145, y 142-2331, both exit 0 with 0 off-palette pixels. That crop is information, not my grade: the rule says the text area, and the indicators are inside it. The past-first-screen clause itself holds by eye on all four later shots.
 5. **A7, ax5-landscape footer. Fails one clause, by design.** T-0485 moves the button and line into the scroll at an accessibility size in compact height, because a pinned bar would leave no room (`pinsFoot` in `ProPaywallView.swift`). s9 names the shot and asks for "button and its line pinned", with no exception. The source says the price stays on the first screen there; the record has no shot of that screen, so I cannot confirm it from an image.
@@ -320,9 +320,9 @@ I also read the other 19 family shots of the six premades on A5b as a cross-chec
 **Where the wording left me unsure.**
 
 6. **A2, "every keyword".** `in` and `is` draw the operator colour, and `None` and `True` draw builtin, because the vendored `highlights.scm` captures them that way. All four are Python keywords, and the ADR-004 s7 exceptions do not name them. I read "its role colour" as the capture map's role and passed them. A stricter reading fails all six shots. The rule's wording is mine, from T-0386, so I flag it rather than settle it.
-7. **A5, "the A5b step's window in results.json".** results.json carries a step's seconds, not its times. I used `A5b/xcresult-summary.json`, 03:13:34 to 03:26:05.
+7. **A5, "the A5b step's window in results.json".** results.json carries a step's seconds, not its times. I used `A5b/xcresult-summary.json`, 3:13:34 AM to 3:26:05 AM.
 8. **A5, "darkest ground pixel".** On a gradient with light text, the darkest pixel is the easy case. My wording, and a poor choice for this card. Lowest text on the darkest ground is 5.52:1, habits-systemLarge; on the lightest ground it is 4.69:1, "QUOTE OF THE DAY" on quote-systemLarge. Both clear 4.5:1, so the mark does not change. The quote glyph measures 3.24:1 at worst; it is an image, not text, so the rule does not reach it.
-9. **A5, s8.4 and s9 together.** s8.4 sends progress's 11 shots to A5b, but A5b has one mode per family, so I followed s9: all 68 on A5a, timer faces on A5b. Two things outside the fail list, for F1. On A5b, wk-progress-systemSmall pushes "left" to the far edge, away from "20 hr, 40 min"; A5a and the sheet keep them together. And at this run time the Day bar sits at 14% beside "40%", because the text is fixed at 09:41 and the bar follows the wall clock. That is the run's hour, not a defect.
+9. **A5, s8.4 and s9 together.** s8.4 sends progress's 11 shots to A5b, but A5b has one mode per family, so I followed s9: all 68 on A5a, timer faces on A5b. Two things outside the fail list, for F1. On A5b, wk-progress-systemSmall pushes "left" to the far edge, away from "20 hr, 40 min"; A5a and the sheet keep them together. And at this run time the Day bar sits at 14% beside "40%", because the text is fixed at 9:41 AM and the bar follows the wall clock. That is the run's hour, not a defect.
 10. **A2, "about line 1,000".** The rule gives no tolerance, and the test uses fixed swipes without asserting position. The middle shots open at 1021 and 1022, so line 1,000 itself is not in view. I took that as "about".
 11. **A7, "none clipped" at AX5.** I read the subline's cut at the pinned bar as the scroll edge, as T-0333's AX3 panel draws it. At the end of the AX5 scroll, "Shortcuts" passes under the back button and earlier text blurs under the status bar. I read that as normal scrolling.
 {% endraw %}

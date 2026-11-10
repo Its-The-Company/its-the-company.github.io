@@ -11,12 +11,12 @@ description: "Apple Community: after iOS 26 the Lock Screen battery widget shows
 <div class="doc-body" markdown="1">
 
 {% raw %}
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://discussions.apple.com/thread/256140565
 - Finding: Apple Community: after iOS 26 the Lock Screen battery widget shows only AirPods, not Apple Watch; replies say only one battery widget works at a time. One thread, count 1. WidgetKit cannot read other devices' battery, so buildability is doubtful.
 - Quote: "you can only use one battery widget at a time"
 
-## 2026-10-22 01:31 ET
+## 2026-10-22 1:31 AM ET
 - Source: https://community.home-assistant.io/t/ios-widget-became-empty/957947
 - Finding: Home Assistant forum: third-party widgets went blank after iOS 26 update. Platform bug, not an app gap.
 {% endraw %}

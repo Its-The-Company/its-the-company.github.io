@@ -11,25 +11,25 @@ description: "Massive Dev Chart Timer, $9.99 upfront, 55 ratings, 3.7 avg, updat
 <div class="doc-body" markdown="1">
 
 {% raw %}
-## 2026-10-22 02:17 ET
+## 2026-10-22 2:17 AM ET
 - Source: https://apps.apple.com/us/app/id402405770?see-all=reviews
 - Finding: Massive Dev Chart Timer, $9.99 upfront, 55 ratings, 3.7 avg, updated 2026-10-14. 5 of 10 embedded store reviews are 1-3 star: custom steps/agitation can't be set 3, no colour processes 1, white Dynamic Island breaks dark mode 1. Store-page sample only (RSS feed empty on 2026-10-22).
 - Quote: "there is now a large white Dynamic Island where the mode buttons are that cannot be turned dark, so there's significant light pollution in my workspace (1 star, 2026-06-30)"
 
-## 2026-10-22 02:17 ET
+## 2026-10-22 2:17 AM ET
 - Source: https://news.ycombinator.com/item?id=49978595
 - Finding: Show HN 2026-10-06, Darkplug: iPhone + smart plug as f-stop enlarger timer, 87 points, $25 unlock. Thread confirms red-on-black is a hard requirement and Apple Watch lights up unpredictably. One commenter asks whether the phone camera could meter the projected negative; nobody answers that it exists.
 - Quote: "I wonder if the iPhone's camera would be able to measure the projected negative and guide exposure time? (HN 49982816)"
 
-## 2026-10-22 02:17 ET
+## 2026-10-22 2:17 AM ET
 - Source: https://firstcall-photographic.co.uk/products/rh-designs-analyser-b-w-pro
 - Finding: Hardware easel analysers are the incumbent for print exposure and contrast: RH Designs Analyser Pro listed at GBP 469 (ZoneMaster IIm GBP 343, https://firstcall-photographic.co.uk/products/rh-designs-enlarging-meter-b-w-zonemaster-iim). Prices from a web-search summary, page not opened by me; verify before quoting.
 
-## 2026-10-22 02:17 ET
+## 2026-10-22 2:17 AM ET
 - Source: https://apps.apple.com/us/app/enlarge/id1245614609
 - Finding: enLARGE, $19.99, 2 ratings, last update 2024-02: exposure forecasting from a manual calibration; no camera metering. Proof the paid <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> is tiny, and that nobody on iOS meters the easel with the camera. Search 'darkroom enlarger meter' returns only camera light meters (Pocket Light Meter $9.99 1,045 ratings; myLightMeter PRO $4.99 1,154).
 
-## 2026-10-22 02:17 ET
+## 2026-10-22 2:17 AM ET
 - Source: https://itunes.apple.com/lookup?id=402405770,568421864,6756510462,6796387774,6760915545,6792327784,6744559427,6759682425,6478027671,6749870154,1578241522&country=us
 - Finding: Film dev timer lane is saturated at feature level: of 11 timers, 8 released 2021-2026 with 0-4 ratings each, and their descriptions already claim safelight mode (8), C-41/E-6 (7), temperature compensation (6), chemistry reuse/exhaustion (3: Agitate, ProLab $7.99, DevelopFilm), Live Activity/lock screen (3), haptics (1). Develop! (410 ratings) abandoned since 2018. A dev timer is not a novel product in Oct 2026.
 {% endraw %}

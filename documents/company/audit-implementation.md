@@ -11,7 +11,7 @@ description: "The running record of carrying out ops/plans/system-audit-2026-11.
 <div class="doc-body" markdown="1">
 
 {% raw %}
-The running record of carrying out [`ops/plans/system-audit-2026-11.md`](system-audit-2026-11.html) under the Investors' mandate of 2026-11-10 (<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> 11-10 00:12, 00:13 and 00:19 in `log/rulings.md`). Kept by the Fable session that owns the work. Board lines T-3992 to T-3997, one per phase. Times are ET.
+The running record of carrying out [`ops/plans/system-audit-2026-11.md`](system-audit-2026-11.html) under the Investors' mandate of 2026-11-10 (<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> 11-10 12:12 AM, 12:13 AM and 12:19 AM in `log/rulings.md`). Kept by the Fable session that owns the work. Board lines T-3992 to T-3997, one per phase. Times are ET.
 
 A phase is marked done only when its changes have passed their tests and are on main.
 

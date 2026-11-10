@@ -12,7 +12,7 @@ description: "The shape matches the chair line and my F1. held decides only off 
 
 {% raw %}
 Reviewer: Pernille, 2026-11-04. Independent review (Commandment 13). I judged from the diff, RendererL5Tests and
-test_renderer_l5, against the T-1973 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line (L5 s15, 2026-11-04 01:05) and my F1 in [`t0105-pernille.md`](t0105-pernille.html). I did
+test_renderer_l5, against the T-1973 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">chair</span> line (L5 s15, 2026-11-04 1:05 AM) and my F1 in [`t0105-pernille.md`](t0105-pernille.html). I did
 not read the done-note first. The 1.1 DSL writing `held` is 1.1 work and is out of scope here.
 
 ## Verdict: approve with changes

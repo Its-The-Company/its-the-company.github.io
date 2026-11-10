@@ -40,14 +40,14 @@ The first thing that broke, for the record, was `import zoneinfo`: refused at `s
 
 ## Medium
 
-**M1. `widgets/<id>/` is a script's own folder, so an ordinary script can delete `ext.marker`, `lane-peak` and `lane-refused`.** Not in this diff. It is against the 13:03 chair line's condition, and it decides what can go under "Not held".
+**M1. `widgets/<id>/` is a script's own folder, so an ordinary script can delete `ext.marker`, `lane-peak` and `lane-refused`.** Not in this diff. It is against the 1:03 PM chair line's condition, and it decides what can go under "Not held".
 
 The chair line says the three files "stay outside `scripts/<id>/`, the condition T-0720's bullet sets for the list". True, and not enough. T-0720's bullet rests on the list being in *no* script's folder. `scripts/<id>/` is the folder of a lane run only. The same widget's app-lane run, its refresh in the app and its Shortcut, runs `widgets/<id>/main.py`:
 
 - `WidgetWriter.swift:60` and `RunScriptIntents.swift:103`: the file is `<widgets>/<id>/main.py`.
 - `runner.py:1041-1042`: `main.__file__ = path`, and its folder goes on `sys.path`.
 
-So this script, with nothing from 16:54 item 2c's list, reaches them. There is no cwd for such a run, so it has to go through `__file__`, which is the usual idiom:
+So this script, with nothing from 4:54 PM item 2c's list, reaches them. There is no cwd for such a run, so it has to go through `__file__`, which is the usual idiom:
 
 ```python
 import os
@@ -63,14 +63,14 @@ Read from the lines above, not run on a phone. What it costs, delete only, since
 - `lane-peak`: back to the first run's 18 MB need.
 - `lane-refused`: the count starts over.
 
-No widget is blamed for anything, so I read no break in 2a, 2b or 2c. It also deletes `tree.json`, which is the larger loss and already possible. But 16:54 item 3 says "Not held" may not list a route an ordinary script can hit, and T-0720's branch sends exactly this case to the chair.
+No widget is blamed for anything, so I read no break in 2a, 2b or 2c. It also deletes `tree.json`, which is the larger loss and already possible. But 4:54 PM item 3 says "Not held" may not list a route an ordinary script can hit, and T-0720's branch sends exactly this case to the chair.
 
 Done: the deliberate routes are on the list. The ordinary one is named as outside it. T-0952 asks Ines to pick:
 
 - (a) Accept it as a stated limit, off the "Not held" list. No code. **My view:** this one. The harm is one missed demotion, and a repeat kill leaves its own marker.
 - (b) Move the three files to a folder no script runs from. Small in `LaneRunFiles`, but an id rename and a widget delete carry them for free today and would need their own steps.
 
-**M2. On 3.15 the shipped layout has seen one script.** The bug lived until the first real extension run because every lane suite ran on a stdlib with source. `device_replay.py` is no exception: it uses the testbed's `Python.xcframework/lib/python3.15/json/__init__.py`, not the zip. So the false-alarm suite that 16:54 item 2c names has never run on what ships. On 3.15, with the zip and lazy imports, the evidence is test K's token script.
+**M2. On 3.15 the shipped layout has seen one script.** The bug lived until the first real extension run because every lane suite ran on a stdlib with source. `device_replay.py` is no exception: it uses the testbed's `Python.xcframework/lib/python3.15/json/__init__.py`, not the zip. So the false-alarm suite that 4:54 PM item 2c names has never run on what ships. On 3.15, with the zip and lazy imports, the evidence is test K's token script.
 
 It is not true that a host can't see this. Run with the stdlib as a sourceless zip (`build_zip.py`, `run_suite.py`), the pre-fix runtime fails 10 of 33 in `test_lane` (`test_lane-prefix-on-zip.txt`), and the fixed one has no false alarm in any of the 11 lane suites (`suites-on-zip.txt`). That run needs one patch in a temp copy, because my host home keeps the zip outside `bundle_root`, where the app has it inside; `_keep_module` would purge what the app keeps. Two tests still fail there, both from the layout, neither from the lane:
 
@@ -83,13 +83,13 @@ It is not true that a host can't see this. Run with the stdlib as a sourceless z
 
 **L1. The lock's open wait now has extension callers.** `LaneGuard.swift:183`, `while flock(fd, LOCK_EX) != 0`, with no bound; T-0737 L3 said so. `ExtensionLane.swift:118`, `:142` and the `carryOut` at `:149` now call it, and turns chain at `:98`, so one held lock stalls every later turn in that process. Only a script taking the lock on purpose gets there, but "ends with the holder's process" is not one of item 3's three ends. T-0953 (Idris): the bounded wait `WidgetStateLock` already has. `add` then returns false, and the code after it already copes: the marker stays, `carryOut` ends the process.
 
-**L2. A deliberately deleted marker has an effect item 3 doesn't name.** A script that removes its own marker in every run hides its kills across processes, not "for the rest of that process", and its backstop is the kill itself, each reload, with its neighbours. It is listed because 13:03 orders it and it does end at the memory kill. T-0952 carries it for the chair to read.
+**L2. A deliberately deleted marker has an effect item 3 doesn't name.** A script that removes its own marker in every run hides its kills across processes, not "for the rest of that process", and its backstop is the kill itself, each reload, with its neighbours. It is listed because 1:03 PM orders it and it does end at the memory kill. T-0952 carries it for the chair to read.
 
 **L3. Fixed here.** `_user_frame`'s docstring still said a relative name means user code. It no longer always does.
 
-## "Not held" (chair line 13:03, item 1)
+## "Not held" (chair line 1:03 PM, item 1)
 
-Added to both places the list lives, as T-0720's route was (16:54 item 5): lane.py's header, which holds the full list, and C2 1.7, which carries the routes since T-0731. `.lane-demoted.json` was already there. New bullets: `.lane-demoted.lock`, and `ext.marker`, `lane-peak`, `lane-refused` together. My only lane.py edits are those docstring texts and L3: no code.
+Added to both places the list lives, as T-0720's route was (4:54 PM item 5): lane.py's header, which holds the full list, and C2 1.7, which carries the routes since T-0731. `.lane-demoted.json` was already there. New bullets: `.lane-demoted.lock`, and `ext.marker`, `lane-peak`, `lane-refused` together. My only lane.py edits are those docstring texts and L3: no code.
 
 ## Appendix: mutants
 

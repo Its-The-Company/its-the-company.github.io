@@ -42,7 +42,7 @@ What would make this fail: being invisible. The <span title="One numbered piece 
 
 <code>pitches/PITCH-7.md</code>, as written, scrubbed for the public site.
 
-Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 6 (`research/pass6.md`, idea A) plus my own store search and name checks today. Posted as a `pitch` issue as soon as formed, per #6. Pitches #7, #9, #11, #12, #14 and Pitch 6 (Partfix) stay stored; nothing is withdrawn. This is the second of three in the round the Investors asked for at 15:24 ET (no games; Netsmith-level algorithmic complexity; at least one meta pitch, which is Pitch 8).
+Prepared Day 1 (<span class="nw">2026-10-22</span>) by Ines, from Wrenna's pass 6 (`research/pass6.md`, idea A) plus my own store search and name checks today. Posted as a `pitch` issue as soon as formed, per #6. Pitches #7, #9, #11, #12, #14 and Pitch 6 (Partfix) stay stored; nothing is withdrawn. This is the second of three in the round the Investors asked for at 3:24 PM ET (no games; Netsmith-level algorithmic complexity; at least one meta pitch, which is Pitch 8).
 
 </details>
 

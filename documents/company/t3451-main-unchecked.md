@@ -22,7 +22,7 @@ a lane commit the main account re-committed, so read direct as an upper bound.
 Counts (commits touching the group; a commit can touch several):
 - product (pywidget/, project.yml): 409 direct, 124 land. Authors of direct: Idris 154, Pernille 124, Maren 46, Wrenna 31, Odalys 30, Ines 19, other 5.
   tools/main_gate.py audit --since 2026-11-01: 13 of 298 gated commits had a passed MacBook job before main (4.4%); the hook
-  went live 11-07 10:38 ET, and from 11-07 20:00 the share is 7 of 9 (direct 4 of 4).
+  went live 11-07 10:38 AM ET, and from 11-07 8:00 PM the share is 7 of 9 (direct 4 of 4).
 - tools/ : 251 direct, 228 land. Direct: Odalys 213, Idris 15, itsthecompany 9, Pernille 5, Ines 5, Wrenna 3, Operator 1.
 - tests/ : 247 direct, 220 land. Direct: Odalys 217, Idris 14, itsthecompany 9, Wrenna 3, Pernille 2, Ines 2.
 - tools or tests together: 279 direct, 252 land. No hook covers these; main_green.py checks main's tip afterwards.
@@ -36,17 +36,17 @@ it predates the hook and is a product path, which the hook now gates.
 Decision. The counts show no red from tools/ or tests/ direct commits, so no extension of the hook's host check is proposed.
 Re-count when OPT-119's read (11-14) comes in, and again if main_restore.jsonl gets a row.
 
-## Re-count, 2026-11-09 06:45 ET (Odalys)
+## Re-count, 2026-11-09 6:45 AM ET (Odalys)
 
-Window: 2026-11-01 00:00 to main 31c4589b1 (11-09 06:32), first-parent, n = 4313 commits. Read-only: git log, the
+Window: 2026-11-01 12:00 AM to main 31c4589b1 (11-09 6:32 AM), first-parent, n = 4313 commits. Read-only: git log, the
 main_green record, the supervisor log. Counting script kept in scratch (T-3451-odalys/count.py), not a tool.
 
 Road, by committer identity (git keeps no "came through the land" mark): the land rebases with the Operator identity, so
 committer Operator with another author = land (677); a worker committer address = a lane branch fast-forwarded by the
 land (619); Operator author and committer = the supervisor's and lander's own commits (1256, hook-exempt); the main
 folder's account = direct (1696); GitHub web = Investors' commits (65). A green main_gate verdict counts only where the
-hook covered that path at the commit's time: product from 74f5a5670 (11-07 10:38), tools/ tests/ site/ from dc36d3896
-(11-09 05:22).
+hook covered that path at the commit's time: product from 74f5a5670 (11-07 10:38 AM), tools/ tests/ site/ from dc36d3896
+(11-09 5:22 AM).
 
 Commits that reached main with no check first, by path group (a commit can touch several):
 - tools/: 291. Odalys 222, Operator 28, Idris 15, itsthecompany 10, Pernille 5, Ines 5, Wrenna 3, Investors 3.

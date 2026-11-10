@@ -11,7 +11,7 @@ description: "Plain terms. The company runs up to six lane slots (three per pers
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Ines, CEO. Written 2026-11-08 17:54 ET, for an Investor, #41 c6728210641 (17:46): "Can you give honest feedback about
+Ines, CEO. Written 2026-11-08 5:54 PM ET, for an Investor, #41 c6728210641 (5:46 PM): "Can you give honest feedback about
 how successful these efforts have been so far, and predict how successful this will be by the EOD tomorrow ... Have you
 actually implemented any changes that will genuinely increase the Company's efficiency? ... how much more efficiency can
 we add (please quantify if possible)?"
@@ -47,7 +47,7 @@ Sources, all read with the company's own scripts and records (no Claude in any o
 
 | What | Source |
 |---|---|
-| Idle slot-hours by cause | ops/runs/dispatch.log (the dispatcher's own reason on every tick; starts 11-05 09:38) |
+| Idle slot-hours by cause | ops/runs/dispatch.log (the dispatcher's own reason on every tick; starts 11-05 9:38 AM) |
 | Lane minutes lost to "no spare is free" | `python3 tools/spare_idle.py --since "2026-11-03 00:00"` |
 | Landed / not landed, causes, time to land | `python3 tools/land_stats.py --since 2026-11-03` and `--timing` |
 | Main-session spend by kind | `python3 tools/ops_metrics.py --since 2026-11-03` |
@@ -63,7 +63,7 @@ Sources, all read with the company's own scripts and records (no Claude in any o
 Method for idle slot-hours: for each dispatcher tick, the free slots it did not start, times the time to that account's
 next tick, <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at 30 minutes; the reason is the one the dispatcher logged on that tick. This is a **lower bound**:
 gaps over 30 minutes are not counted, and a start that was then refused counts as busy. The T-3585 count of the
-03:24 to 10:50 window this morning (41.6 of 44.6 slot-hours idle) is higher than this method gives for the same hours,
+3:24 AM to 10:50 AM window this morning (41.6 of 44.6 slot-hours idle) is higher than this method gives for the same hours,
 for exactly those reasons.
 
 ## Day by day
@@ -75,10 +75,10 @@ for exactly those reasons.
 |---|---|---|---|---|---|---|---|---|---|
 | 11-03 | 49 | 109 | 45% | 2.04 | 8 / 127 | 86 | 61 | not logged | 1,025 |
 | 11-04 | 26 | 46 | 56% | 1.08 | 6 / 44 | 118 | 87 | not logged | 92 |
-| 11-05 | 21 | 76 | 28% | 0.88 | 8 / 343 | 113 | 110 | 12.2 (from 13:05) | 1,993 |
+| 11-05 | 21 | 76 | 28% | 0.88 | 8 / 343 | 113 | 110 | 12.2 (from 1:05 PM) | 1,993 |
 | 11-06 | 57 | 172 | 33% | 2.38 | 25 / 204 | 23 | 91 | 33.0 | 120 |
 | 11-07 | 36 | 48 | 75% | 1.50 | 13 / 493 | 31 | 63 | 16.5, plus 6.6 h with no dispatcher tick | 0 |
-| 11-08 (to 17:48) | 68 | 237 | 29% | 3.88 | 12 / 1,006 | 36 | 75 | 65.8 | 684 |
+| 11-08 (to 5:48 PM) | 68 | 237 | 29% | 3.88 | 12 / 1,006 | 36 | 75 | 65.8 | 684 |
 
 </div>
 
@@ -95,7 +95,7 @@ What the table says:
 - **Redone work** (since 11-01): 11 tasks were built again after they were already built elsewhere: 14.0 lane hours
   and 3.6 main-session hours ($15).
 
-## Where the idle time went (11-05 13:05 to 11-08 17:48, 127.5 slot-hours at least)
+## Where the idle time went (11-05 1:05 PM to 11-08 5:48 PM, 127.5 slot-hours at least)
 
 
 <div class="tbl" role="region" tabindex="0" aria-label="Table 3: Where the idle time went (11-05 13:05 to 11-08 17:48, 127.5 slot-hours at least), scrolls sideways" data-n="2 3" style="--tw:786px" markdown="1">
@@ -112,7 +112,7 @@ What the table says:
 </div>
 
 
-Outside the lanes, the **main session was down 10.5 hours** from 11-07 16:19 to 11-08 02:47: 97 ticks in a row failed
+Outside the lanes, the **main session was down 10.5 hours** from 11-07 4:19 PM to 11-08 02:47: 97 ticks in a row failed
 with "git sync failed". The alarm noted 640 minutes with no session. I have not traced its cause; it is not in the
 events log. On 11-06 seven main work sessions were killed (exit 137 or 143), and on 11-06 to 11-08 the main tick held
 its lock 17 to 36 minutes before any session nine times (ops/metrics/idle_alarm.jsonl).
@@ -122,23 +122,23 @@ its lock 17 to 36 minutes before any session nine times (ops/metrics/idle_alarm.
 **Measured effect, positive**
 - Landing throughput (the landing and merge-queue changes, for example OPT-101 and OPT-102): lands per hour roughly
   doubled, as above. I cannot split the gain between single changes. Median time from finished to on main stays 6 to 25 minutes.
-- Clearing the staged Investor-owned files from the main checkout (an Operator action after T-3585, 10:52 today):
-  135 land refusals for "touches an Investor-owned path" before 10:00, 3 from 12:00 to 18:00, and 62 landings in
+- Clearing the staged Investor-owned files from the main checkout (an Operator action after T-3585, 10:52 AM today):
+  135 land refusals for "touches an Investor-owned path" before 10:00 AM, 3 from 12:00 PM to 6:00 PM, and 62 landings in
   those afternoon hours.
 
 **Shipped, but the stall came back**
-- Disk. OPT-071 was marked "kept" on 11-06. On 11-08 the disk gate held every lane 03:39 to 08:54 and again
-  13:34 to about 16:54. T-3433 freed 11.6 GB at about 14:25; by 16:17 the disk was down to 5.4 GB again. T-3690 freed
-  it to 24.7 GB at 16:54; by 17:41 it was 18.6 GB. **The disk is filling at about 8 GB an hour under load**, so the gate
-  closes again around 18:45 tonight unless the keeper acts. The leaks are known (ops/runs/t3690-disk.md): check
+- Disk. OPT-071 was marked "kept" on 11-06. On 11-08 the disk gate held every lane 3:39 AM to 8:54 AM and again
+  1:34 PM to about 4:54 PM. T-3433 freed 11.6 GB at about 2:25 PM; by 4:17 PM the disk was down to 5.4 GB again. T-3690 freed
+  it to 24.7 GB at 4:54 PM; by 5:41 PM it was 18.6 GB. **The disk is filling at about 8 GB an hour under load**, so the gate
+  closes again around 6:45 PM tonight unless the keeper acts. The leaks are known (ops/runs/t3690-disk.md): check
   worktrees left behind after landing (15 GB), temp-folder leftovers (11.9 GB), one test leaving 49,034 folders, and
   Simulators (26 GB, which no company tool may erase).
 - "No spare free". OPT-104 was marked "kept" on 11-06 (120 minutes that day, 0 on 11-07). It was 684 minutes on 11-08.
-- The idle alarm (T-3589). It now tells you when slots sit idle (posted 12:01 and 14:34 today). Its two automatic fixes
+- The idle alarm (T-3589). It now tells you when slots sit idle (posted 12:01 PM and 2:34 PM today). Its two automatic fixes
   both ran and found nothing to do ("found none it may move"; "found none"). It reports; it did not fix.
 
 **Shipped, not measured yet**
-- The disk keeper (T-3691, landed 7cfae1072 at 17:30). It runs from each supervisor tick when the disk is under
+- The disk keeper (T-3691, landed 7cfae1072 at 5:30 PM). It runs from each supervisor tick when the disk is under
   30 GB. It has not yet run live. Tonight is its first test.
 - The experiment ledger holds 121 changes: 23 kept, 13 no effect, 7 reverted, 19 not experiments, 6 proposed and
   **53 still in flight with no verdict**. Many of the in-flight ones measure our own process.
@@ -211,7 +211,7 @@ failed attempts since 11-03), which is a separate and larger job I would not sta
 
 ## Limits of these numbers
 
-- The dispatcher log starts 11-05 09:38; 11-03 and 11-04 have no idle-by-cause figure.
+- The dispatcher log starts 11-05 9:38 AM; 11-03 and 11-04 have no idle-by-cause figure.
 - Idle slot-hours are a lower bound (method above).
 - Lane spend in dollars is not readable here (lane streams sit in the personal profiles); spend figures are the main
   session's only.

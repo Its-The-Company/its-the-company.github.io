@@ -11,7 +11,7 @@ description: "Finished work reaches main, green, within minutes, and the number 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Asked by an Investor, #41 c6687528036 (09:44 11-06, Plan mode); questions c6687558940; answers c6687614090 (09:48).
+Asked by an Investor, #41 c6687528036 (9:44 AM 11-06, Plan mode); questions c6687558940; answers c6687614090 (9:48 AM).
 
 ## Goal
 Finished work reaches main, green, within minutes, and the number of finished board tasks reaching main per day rises.
@@ -29,7 +29,7 @@ MacBook runner's result files. Scoreboard: DORA's lead time for changes and chan
   <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">generator</span> reads them from disk.
 
 ## Steps (board lines)
-1. Raw timelines (T-3082): rebuild every merge attempt since 2026-11-05 00:48 as a step-by-step timeline (ready,
+1. Raw timelines (T-3082): rebuild every merge attempt since 2026-11-05 12:48 AM as a step-by-step timeline (ready,
    rebase, each suite start/end, result, exit code) from ops/runs/ logs, git (`log --first-parent`, reflog), GitHub
    push times and runner job results; per-test results with reruns at the same commit (flake rate per test); the
    conflicting files and lines of each conflict. Output: a value-stream map (waiting vs working per step), a

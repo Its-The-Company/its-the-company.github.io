@@ -13,7 +13,7 @@ description: "Here is the shape of it: B is the only one where the hard problem 
 {% raw %}
 Listen to this: "Requirements for the Seating Chart Optimizer I made for planning my wedding party: * 120 guests: 49 couples and 22 singles * To be seated at 11-ish tables of 8, 10, 12 people each ... * Couples must be seated at the same table" (HN, 2024-01-02, https://news.ycombinator.com/item?id=38846503). Here is the shape of it: the people with the hardest problems are writing their own solvers, because the paid apps sell drag-and-drop and a subscription.
 
-Brief: issue #10 comment (amendments.md, 2026-10-22 15:24 ET). No games. Utility or convenience apps with Netsmith-level algorithmic depth, or a hard problem AI can now solve where the answer is worth money. Stay outside Commandments 6-8. At least one idea with a meta component.
+Brief: issue #10 comment (amendments.md, 2026-10-22 3:24 PM ET). No games. Utility or convenience apps with Netsmith-level algorithmic depth, or a hard problem AI can now solve where the answer is worth money. Stay outside Commandments 6-8. At least one idea with a meta component.
 
 ## Method and limits
 - Passive reading only (C10). No one contacted, nothing posted.

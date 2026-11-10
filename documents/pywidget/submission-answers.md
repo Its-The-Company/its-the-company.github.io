@@ -16,8 +16,8 @@ T-1110, Wrenna, 2026-11-02. Reader: the Investors, at submission (Days 47-48). T
 **Code read at commit `33789648`** (HEAD of main when written; `pywidget/ios`). Facts from `Shared/NetFetch.swift` were last changed at `17108b8e`. Every fact below carries the grep or file that supports it. Re-run them at the submitted build; any change in the web, sharing or crypto rows below changes an answer.
 
 **Apple's text**, saved signed out under the 2026-10-26 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>, no fresh page fetched:
-- Age ratings: https://developer.apple.com/help/app-store-connect/reference/app-information/age-ratings-values-and-definitions, fetched 2026-10-26 01:17:46 ET, `research/inbound/apple/developer.apple.com/help_app-store-connect_reference_app-information_age-ratings-values-and-definitions-e3df83c5.html` (T-0132). Called **AGE** below.
-- Encryption: https://developer.apple.com/documentation/security/complying-with-encryption-export-regulations.md, fetched 2026-10-26 01:17:51 ET, `research/inbound/apple/developer.apple.com/documentation_security_complying-with-encryption-export-regulations.md-d41c9f28.html`. Called **ENC** below.
+- Age ratings: https://developer.apple.com/help/app-store-connect/reference/app-information/age-ratings-values-and-definitions, fetched 2026-10-26 1:17:46 AM ET, `research/inbound/apple/developer.apple.com/help_app-store-connect_reference_app-information_age-ratings-values-and-definitions-e3df83c5.html` (T-0132). Called **AGE** below.
+- Encryption: https://developer.apple.com/documentation/security/complying-with-encryption-export-regulations.md, fetched 2026-10-26 1:17:51 AM ET, `research/inbound/apple/developer.apple.com/documentation_security_complying-with-encryption-export-regulations.md-d41c9f28.html`. Called **ENC** below.
 
 Marks: **[mine]** a reading from code, safe to type as written; **[theirs]** the Investors' to give, with the reason.
 

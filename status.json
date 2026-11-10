@@ -1,30 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-09T21:22:38.259580+00:00",
+ "at": "2026-11-10T00:57:14.984437+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
    {
-    "t": "T-3409",
-    "name": "Put proof the run-marker tests catch bugs on main",
+    "t": "T-3127",
+    "name": "Find what sends main sessions a stray SIGTERM",
     "acct": "Personal b",
     "steps": [
      {
-      "s": "testq",
-      "at": 1794259337
-     }
-    ]
-   },
-   {
-    "t": "T-3657",
-    "name": "Add the memory-overrun test widget to the gate build",
-    "acct": "Personal b",
-    "steps": [
+      "s": "landing",
+      "at": 1794269085
+     },
      {
       "s": "testq",
-      "at": 1794259320
+      "at": 1794271148
      }
     ]
    },
@@ -51,50 +44,6 @@
     ]
    },
    {
-    "t": "T-2548",
-    "name": "Make the send check test prove its timing fix",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794255505
-     }
-    ]
-   },
-   {
-    "t": "T-3563",
-    "name": "Mark a premade reading only once its tree is written",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794254231
-     }
-    ]
-   },
-   {
-    "t": "T-2494",
-    "name": "Finish the widget's log write before the extension quits",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794250473
-     }
-    ]
-   },
-   {
-    "t": "T-0021",
-    "name": "Check how the preview draws Material and container shapes",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794250457
-     }
-    ]
-   },
-   {
     "t": "T-0556",
     "name": "Take the app pictures that were missing",
     "acct": "Personal b",
@@ -104,198 +53,149 @@
       "at": 1794240552
      }
     ]
+   }
+  ],
+  "done": [
+   {
+    "t": "T-3826",
+    "name": "Stop one stuck step silencing every widget the app writes",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794271056
+   },
+   {
+    "t": "T-3783",
+    "name": "Keep finding why only Countdown draws on the iPhone",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794269707
+   },
+   {
+    "t": "T-3657",
+    "name": "Add the memory-overrun test widget to the gate build",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794269695
+   },
+   {
+    "t": "T-2548",
+    "name": "Make the send check test prove its timing fix",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794267116
    },
    {
     "t": "T-2260",
     "name": "Make closed widget turns draw their timeline",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794234200
-     }
-    ]
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794266619,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3563",
+    "name": "Mark a premade reading only once its tree is written",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794266607
+   },
+   {
+    "t": "T-2494",
+    "name": "Finish the widget's log write before the extension quits",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794266097
+   },
+   {
+    "t": "T-0021",
+    "name": "Check how the preview draws Material and container shapes",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794265534
    },
    {
     "t": "T-2409",
     "name": "Check the USGS earthquake feed before building on it",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794224615
-     }
-    ]
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794264848
    },
    {
     "t": "T-1972",
     "name": "Test that one refresh tap writes only one row",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794224197
-     }
-    ]
-   },
-   {
-    "t": "T-2870",
-    "name": "Close the small gaps left in the completion import guard",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794222428
-     }
-    ]
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794263972
    }
   ],
-  "done": [
-   {
-    "t": "T-2629",
-    "name": "Finish the prompt alert checks once the suite is green",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794259317,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3704",
-    "name": "Add a Live step after site and app changes land",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794258368,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3788",
-    "name": "Redo an Investor request on fresh main",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794258368,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3788",
-    "name": "Redo an Investor request on fresh main",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794254806,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3754",
-    "name": "Put every Issues page ask in Now or Later",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794254799
-   },
-   {
-    "t": "T-3812",
-    "name": "Ask the Investors about wrong security stops",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794254323,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3812",
-    "name": "Ask the Investors about wrong security stops",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794254315,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3816",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794254291
-   },
-   {
-    "t": "T-1643",
-    "name": "Let a person's say-so lift a widget demotion",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794254189,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3401",
-    "name": "Add a general web request call and an OpenSSL check",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794250502
-   }
-  ],
-  "landed": 36,
-  "failed": 37
+  "landed": 37,
+  "failed": 27
  },
  "workers": [],
  "who": "",
  "recent": [
   {
    "name": "odalys",
-   "task": "[tools] T-3885 T-3875 lanes finish parked work first and agent count fits merges",
+   "task": "[tools] T-3907 merge checks on the MacBook runner",
    "model": "opus",
-   "started": "2026-11-09T20:29:53.077Z",
+   "started": "2026-11-10T00:35:51.335Z",
    "seconds": null,
-   "finished": "2026-11-09T21:17:46.625000+00:00"
+   "finished": "2026-11-10T00:47:16.448000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3866 land the applier's test-time fix",
+   "task": "[tools] T-3904 T-3818 land two saved patches",
    "model": "opus",
-   "started": "2026-11-09T19:13:02.463Z",
+   "started": "2026-11-10T00:23:04.446Z",
    "seconds": null,
-   "finished": "2026-11-09T21:17:20.793000+00:00"
+   "finished": "2026-11-10T00:45:07.504000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3818 then T-3862 part 2: land the two saved patches in order",
+   "task": "[site] T-3908 merge queue page",
    "model": "opus",
-   "started": "2026-11-09T20:32:32.445Z",
+   "started": "2026-11-10T00:36:43.136Z",
    "seconds": null,
-   "finished": "2026-11-09T20:59:47.451000+00:00"
+   "finished": "2026-11-10T00:40:16.982000+00:00"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-3882 skip page-speed timing when busy, land the size trim",
+   "task": "[tools] T-3905 cut merge tool test time",
    "model": "opus",
-   "started": "2026-11-09T20:27:15.648Z",
+   "started": "2026-11-10T00:03:30.394Z",
    "seconds": null,
-   "finished": "2026-11-09T20:44:22.657000+00:00"
+   "finished": "2026-11-10T00:38:09.530000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 652,
-  "blocked_count": 119
+  "runnable_count": 660,
+  "blocked_count": 115
  },
  "meter": {
   "five_hour": {
-   "pct": 33.0,
-   "resets_at": "2026-11-09T17:59:59.566345+00:00",
+   "pct": 37.0,
+   "resets_at": "2026-11-09T23:00:00.507894+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 67.0,
+   "left": 63.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 24.0,
-   "resets_at": "2026-11-15T06:59:59.566368+00:00",
+   "pct": 30.0,
+   "resets_at": "2026-11-15T07:00:00.507922+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 76.0,
+   "left": 70.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -303,7 +203,7 @@
    "resets_at": "2026-11-15T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-09T12:35:19.450171-05:00"
+  "read_at": "2026-11-09T16:24:29.290435-05:00"
  },
  "ui": {
   "week_pct": 0.008,
@@ -318,12 +218,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-09T12:50:19-05:00",
+ "next_tick": "2026-11-09T16:39:29-05:00",
  "personal": {
-  "week_pct": 3.65,
-  "usage_pct": 10.9,
-  "work_pct": 51.7,
-  "read_at": "2026-11-09T21:23:00+00:00",
+  "week_pct": 3.66,
+  "usage_pct": 9.3,
+  "work_pct": 50.0,
+  "read_at": "2026-11-10T00:58:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -344,16 +244,16 @@
   }
  ],
  "disk": {
-  "free_gb": 17,
-  "gate": "closed",
+  "free_gb": 43,
+  "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 234
+   "free_gb": 196
   },
-  "words": "free on the Mac mini. New Xcode runs and personal sessions wait until 20 GB is free.",
+  "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-09T16:15:00-05:00",
+   "at": "2026-11-09T19:51:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-09T08:43:00-05:00"
@@ -362,8 +262,8 @@
  },
  "lock_in": {
   "on": false,
-  "pool": 2,
-  "at": "2026-11-09T16:23:00-05:00",
+  "pool": 1,
+  "at": "2026-11-09T19:58:00-05:00",
   "mode": null
  },
  "next_tick_why": "last_tick",
@@ -379,17 +279,17 @@
    "next": []
   },
   {
-   "name": "Pernille",
+   "name": "Ines",
    "state": "next",
-   "task": "Pernille, P1, independent review (Commandment 13) of...",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Ines",
+   "name": "Pernille",
    "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
+   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -496,54 +396,43 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "A work lane that already has unfinished parked work now gets that work back (a retry or its open...",
-    "at": "2026-11-09T15:45:00-05:00"
+    "t": "T-3904 (batch check reads research): the batch check copy now includes the research folder, so...",
+    "at": "2026-11-09T19:34:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "The small script that counts waiting Investor requests on the site was trimmed back under its...",
-    "at": "2026-11-09T15:44:00-05:00"
+    "t": "When an app change lands on main while a system or site change is being checked, the land now...",
+    "at": "2026-11-09T19:20:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "The site's page-speed tests now skip only their timing checks when the build machine is too busy...",
-    "at": "2026-11-09T15:44:00-05:00"
+    "t": "While too much finished work is waiting to merge, each work line now merges waiting changes (its...",
+    "at": "2026-11-09T19:11:00-05:00"
    }
   ],
   "count": {
-   "next": 652,
-   "wait": 47,
-   "blocked": 72,
-   "you": 22
+   "next": 660,
+   "wait": 46,
+   "blocked": 69,
+   "you": 19
   }
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-09T18:39:18Z",
-  "seconds": 69.0
+  "sent": "2026-11-10T00:48:44Z",
+  "seconds": 144.0
  },
  "inbox": [
   {
-   "id": "c6751782955",
+   "id": "c6755760889",
    "state": "received",
    "position": 1,
-   "eta": "2026-11-09T12:50:19-05:00",
+   "eta": "2026-11-09T16:39:29-05:00",
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "The company may do this itself"
-  },
-  {
-   "id": "c6751800160",
-   "state": "received",
-   "position": 2,
-   "eta": "2026-11-09T12:50:19-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Remove the safety check and allow..."
+   "title": "Remove Latest Report, Needs You, and..."
   }
  ],
  "trimmed": [
@@ -562,10 +451,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "4:23 PM",
-  "why": "Between sessions: no session is running. Last check 12:35 PM ET.",
-  "at_iso": "2026-11-09T21:23:00+00:00",
+  "at": "7:58 PM",
+  "why": "Between sessions: no session is running. Last check 4:24 PM ET.",
+  "at_iso": "2026-11-10T00:58:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:23 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 12:35 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:58 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 4:24 PM ET.</p></section>"
  }
 }

@@ -59,6 +59,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Lesson: a policy sentence follows the build that ships; when the candidate is unsettled, write main's truth and leave the swap in the change log.
 ## 2026-11-09 T-3421 pass 2, parked queue (a16d3fd938, ticked); lines T-3883..T-3886 (Odalys); board lines left uncommitted for the Operator (board had others' edits)
 - Lesson: I fetched trunkbaseddevelopment.com before its terms look AGAIN. On a new host, search for its terms before running the driver.
+## 2026-11-09 T-3902 merge-compute options (242a2d726b, ticked; board uncommitted)
+- Lesson: a ledger's row count is not a run count; dedupe by run (time, task, seconds) before quoting a median.
 {% endraw %}
 
 

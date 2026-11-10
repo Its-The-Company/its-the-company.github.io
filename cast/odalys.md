@@ -37,35 +37,24 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-07)
 
-
-- T-3771 b7dd69c1d ticked (+T-3341): idle-retry patch dropped, slice 3 covers 143/180 idle waits. Lesson: re-measure a held patch against what landed since before running it.
-
-- T-3827 slice 3 aea8bc967 landed 11-09 13:10 (8 suites green, 13.6 min). Lesson: write a commit message from the diff, not from memory (personal_tick line was wrong; corrected on board).
-
-- T-3860 STOPPED 11-09 1:59 PM (guard refusal, no proposal): plain undo of a91aebe8 fails 66/75 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> preflight cases; candidate in scratch T-3860-odalys answers 75/75. Lesson: in a hook-read command, use literal absolute paths, not $D, near rules/ names.
-
-- T-3862: part 1 5b79692e8 (park_batch xc here). Part 2 (gate batches xc lines, merge_queue.py) NOT committed 11-09 15:31: tests 120/0, gate check green, but commit hook refused (personal_land_test red once 359/1; later pass unrecorded, dirty working copy). Diff in scratch T-3862-odalys/part2.diff. 52/103 live gate lines name xc. Lesson: an unrelated dirty tree blocks the hook's record; commit from a clean worktree.
-
-- T-3859 8391c9fd4 (NOT ticked, 11-09): ~/data 3.46 GB to SSD overflow/2026-11-09 (sha256). Classifier refused reclaim dry run + rm of 6 copied home folders (copies stay). ~100 GB left needs a <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>. Lesson: 3 GB freed is lost in 8-14 GB swings; measure moved bytes, not df.
-
-- T-3751 LANDED b29715c74 + part 2 c0010baa08, ticked 11-09 14:0x. 30 owned-cause conflicts left <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> (scratch T-3751-odalys/owned_conflicts.txt).
-
-- T-3846 3e25069fa3 (runner 27): report_error + LockHeld check-in after 3 skipped polls. Board noted + blocked #238 (revival is a person's step).
-
-- T-3863 LANDED b46ec49046, ticked 11-09. Rest (32 lines, 5 files) is T-3874, note ops/runs/t3863-hookspath.md. Lesson: a scan test reads only files this task owns; the wider table goes in a note.
-
-- T-3872 d410cf3d55 (NOT ticked): 4 tools-only refs green, handed parked/a/20261109-143301-batch; 4 product refs need xc (packet said no xc); T-3279/3400 ref out. Lesson: check a 'tools only' claim with diff --stat before the run.
-
-- T-3882+T-3861 LANDED 8bf0a890f8, both ticked 11-09 15:44. Timing asserts skip over 2.0 load/core (row: ops/metrics/site_timing_skips.jsonl). Open: over the line ~1/3 of box mutants go unchecked; watch skip-row share. Lesson: separate timing fails from logic fails in the page before gating, or the gate hides logic too.
-
-- T-3879 slice 1 10b72a028d (NOT ticked, 11-09 15:40): 23/34 verdicts; T-3703 handed, 5 ticked (on main), T-3365 held, T-3569/T-2208 redesign, T-3099 refused (recut 2a96ac352f in scratch). 11 left, listed in ops/runs/t3879-recuts.md. Lesson: never put the recut task's ID in a recut subject (park_batch reads it as carried); grep main before recutting.
-
-- T-3866 c8661f88dd on branch t3866-odalys (NOT on main, 11-09): 062c19942 carry + detached pre-commit check. Gate 13/14; personal_land_test.sh red on clean HEAD 2/3 under load. Next: checkout files from branch, gate, commit. Lesson: my own scratch test runs beside a gate cost it its time budget (1440 s timeout).
+- T-3907 (NOT landed, 11-09 19:4x): design note dafa99459c+06e7d4aec4 on main. Runner kind host patch green (35/381/135) at SSD scratch T-3907-odalys/t3907-runner.patch, worktree wt/ there; main_gate route DRAFT untested beside it. <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">Ruling</span> #251 c6755547646: no approve-kind; next add host to SEEDED_KINDS. Baseline host run on mini: median 306 s, p90 1,241 s (n=13).
 
 ## Lessons
 - Older notes: archive.md (memory_archive.py at session close).
 
-- T-3865 slice 2 85d42e6f71 (NOT ticked): T-3252 recut as runner 28, handed; 19 left. T-3169 tick was early (3eced3def not on main; T-3429 decides). Lesson: a tick done-note hash must be on main before ticking.
+- T-3865 slice 4 2981333ef4 (NOT ticked, 11-09 19:00): T-3396 ported onto ampm.py, handed <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/b/20261109-185915-batch (6,427 to 0 on 900 pages); 7 left. Lessons: park_batch's sparse check lacks research/, so site_method_v2 is always red there; staged hunks in the shared checkout get taken by others' whole-index commits, so stage and commit in one command.
+
+- T-3901 4ce050a4e7 (NOT ticked, 11-09 7:2x PM): merge mode in dispatch.py + personal_tick.sh, gate green 12 suites. Live now (155 refs/101 retry over lines). After-number to read: refs and retry lines 24 h on, lands/hour. Board had others' edits, so no board commit.
+
+- Land run 11-09 17:3x-19:2x: on main T-3891 bc19f499f2, T-3888 32d67117e0, T-3866 269802c39a, T-3862 pt2 d1236cc017, T-3824 bfe6c4ca03, T-3232 c1e0433949, T-3894 dd40b606b4. T-3818 hook-refused (main moved mid-check), T-3859 stdlib host red (no log kept). Lesson: a gate in the shared copy can green on another task's dirty file; re-run HEAD alone in a clean worktree.
+
+- T-3868 (STOPPED 11-09 7:2x PM, security-guard): ran candidate guard on allow rows from scratch, refused (personal <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> profile). Rows check: candidate 148/440 wrong (146 tightening refuse rows, 2 allow rows it refuses). #247 approve does not count (main_thread_approve reads #41 only). Lesson: plan every guard probe inside the one scratch script up front; an ad-hoc probe that gets refused ends the item.
+
+- T-3904 landed 6a14a5697f, ticked on board (uncommitted, board had others' edits). T-3818: gate on 4 files ran over 20 min with no verdict, killed by my shell limit; files reverted, patch still at /private/tmp scratch. Lesson: run T-3818's gate in background with a 60-min limit.
+
+- T-3905 (NOT committed, 11-09 19:4x): patch SSD scratch T-3905-odalys/t3905.patch (main_gate SRC_ONLY + part 8 split); main tools/ had others' personal_land.sh. Lesson: under load the suite is throughput-bound (3 parts at once), so splitting parts buys no wall time; only fewer runs or less work does. Measure paired, same time.
+
+- T-3908 (NOT landed, 11-09 7:4x PM, session closed): draft merge_page.py at SSD scratch T-3908-odalys/t3908.patch; board note says next steps. Lesson: lifecycle.read already has the queue; reuse life, 0.04 s extra.
 {% endraw %}
 
 

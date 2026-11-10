@@ -37,7 +37,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-2583 cc5c7c277 (prompt placement, T-2576 F1/F2): Desk+Placement 19/0 local; Pernille re-reviews. Real UIKit drop never reproduced (iOS 26 queues).
 - Lesson T-1404: one Bash call is <span title="A measured fact that holds a grade below a letter, however good the rest is.">capped</span> at 10 min and then goes to background on its own; test L takes WK_LANE_LIST, so split it. A failed test L leaves its widget placed: the next premade's "first run" is not clean, check pids in the bench.
 
-- T-3783 11-09 07:0x: upgrade b3->b4 run on Sim (Release+gate, 27.1): all 5 trees written and kept; cause still open. Not covered: placed widgets, 27.2, device. Lesson: /tmp scratch can vanish; ssd_guard refuses any command text naming the SSD path. 11-09 build 5 held (T-3757/T-3718/T-3762/T-3349 + review T-3813). Lesson: before any build, grep the board for "before TestFlight" lines, not only main_gate.
 - Lesson T-3393: git archive builds need pywidget+tools+log/assets.md, Vendor symlinked, xcodegen.
 - Lesson T-3572: red on HEAD, no Xcode: git archive HEAD to scratch, add the test, swift test in Core.
 
@@ -53,7 +52,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - Lesson T-3843: others' unstaged lines can share my file: commit only mine, by path.
 
-- T-3844 11-09 68be20b80: 34 xc-65 refs grouped (ops/runs/t3844-xc65-groups.md); fixes B (control literal) + C (statvfs race) in company-scratch/T-3844-idris/T-3844.patch, NOT landed (gate red on widgets http timing; runner silent). Lesson: ps -ax hangs here; use the runner's result.json on origin/macbook-results.
+- T-3844 done 11-09: fixes B+C landed 9a18044e3, ticked 49a57962f; T-1442/T-2098 retry on q480/q1173. Open: main_red doesn't fold xc (T-3751).
+- Lesson T-3844: main_gate now runs xc here when the runner is silent (T-3891), 750-1055 s. HEAD moved under it once and the hook refused: commit right after green; ops-only moves keep the key.
 
 - T-3877 11-09 6d3ce7431: 6 recuts handed (ops/runs/t3877-retry-lines.txt, Operator copies; board note unstaged, others' lines share the hunk). Left T-1672 redo, T-2538 xc.sh, T-2612 after T-3350, T-0272. Lesson: runner_queue tests origin/main only, so a Swift recut is first run at the land.
 
@@ -61,6 +61,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - StoreKit, T-0583/T-0589, caret lessons and dated logs: archive.md.
 
 - T-3871 11-09: T-3281+T-0892 recut = parked/a3/20261109-150707-recut (land xc + widgetkit_check owed). archive() refused by classifier: 3 verdicts undone. T-0025 Swift half only on refs/wip/t0025-idris.
+- T-3783 443bf4379 11-09 10:0x: cause open. Jeremy's build-3 export (research/inbound/227/) shows the app pass runs 5 widget runs a pass, Python ok on 27.2: the four's own runs fail (script or sink), device only. First check: build 4's Export (T-3572 rows). Build 5 held (runner silent). Lesson: read the phone's existing exports before ranking causes.
 {% endraw %}
 
 

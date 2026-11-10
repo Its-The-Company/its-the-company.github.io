@@ -160,7 +160,10 @@ The order is T-0680's: item 2 first, so C and B exist before any lane run.
 - **G3**: a deliberate over-allocation premade (a debug premade, never in the catalog) runs past C. The row it
   should have written is missing, the marker stays, and the next process demotes it. That shows up as `killed` ->
   lane `app`, with the cached tree and the badge, and the Activity row (the extension writes those rows since T-1854, 0e756d6cc; that path's Simulator rerun is T-2271). What the
-  widget shows during the <span title="A test written in advance. If it fires, we drop the idea.">kill</span> is recorded with a screen recording.
+  widget shows during the <span title="A test written in advance. If it fires, we drop the idea.">kill</span> is recorded with a screen recording. T-3657: the premade is `overrun`
+  (widgets/gate/overrun.py, "Memory overrun (gate)" in the picker): 64 MiB in 1 MiB steps, each page written.
+  scripts/gate_premade.py puts it in Runtime/premade and on lane.json in the gate build only; Shared/GatePremade.swift
+  (inside the condition) has the picker offer it, never locked. It is in no catalog or flag file.
 - **The largest lane premade's cold peak above baseline** (chair line 5bb6692c) is read the same way as G1. It
   replaces `firstRunPeak` (21 MiB) in the flag-default chair line. `margin=would_refuse` rows that finished are listed
   there by count.

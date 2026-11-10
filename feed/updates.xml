@@ -56,6 +56,13 @@
 <summary type="text">T-3676 restart (T-0848 chair rule): Idris&#x27;s commit was refused (Security Weaken) for setting core.hooksPath=/dev/null. Effect stopped: disabling git hooks. Dropped: the restart commits with hooks on, no hooksPath change. The job still does its packet (land the T-3676 recut).</summary>
 </entry>
 <entry>
+<title>Build: T-3826: bounded every wait before a widget run (15 s) and the wait on a pass (120 s); a st</title>
+<link href="https://its-the-company.github.io/"/>
+<id>tag:its-the-company.github.io,2026-11-09:event/2026-11-09t10-29-37-05-00-build-t-3826-bounded-every-wait-before-a-widg</id>
+<updated>2026-11-09T10:29:37-05:00</updated>
+<summary type="text">T-3826: bounded every wait before a widget run (15 s) and the wait on a pass (120 s); a stuck step now writes a deferred Run log row instead of silencing every widget. Tests red without the bound, green with it.</summary>
+</entry>
+<entry>
 <title>Decision: Build 5 held: main carries app code the board bars from TestFlight (T-3757, T-3718, T-3762</title>
 <link href="https://its-the-company.github.io/"/>
 <id>tag:its-the-company.github.io,2026-11-09:event/2026-11-09t07-12-53-05-00-decision-build-5-held-main-carries-app-code-the</id>
@@ -348,12 +355,5 @@
 <id>tag:its-the-company.github.io,2026-11-03:event/2026-11-03t08-13-21-05-00-decision-t-1288-restart-under-t-0848-the-guard-r</id>
 <updated>2026-11-03T08:13:21-05:00</updated>
 <summary type="text">T-1288 restart under T-0848: the guard refused copying HEAD&#x27;s tools/supervisor.sh into scratch (git show HEAD:tools/supervisor.sh &gt; scratch, read as a Keychain effect). Restart drops that effect: no copy of supervisor.sh anywhere, tests run in the worktree only. Same packet; a second refusal stops i</summary>
-</entry>
-<entry>
-<title>Decision: OPT-051 closed no_effect: Tenet 6 table not kept (new 38.13 vs old 34.64 finished per 100 </title>
-<link href="https://its-the-company.github.io/"/>
-<id>tag:its-the-company.github.io,2026-11-03:event/2026-11-03t05-12-50-05-00-decision-opt-051-closed-no-effect-tenet-6-table</id>
-<updated>2026-11-03T05:12:50-05:00</updated>
-<summary type="text">OPT-051 closed no_effect: Tenet 6 table not kept (new 38.13 vs old 34.64 finished per 100 USD, +10%, p 0.37, n=30 per arm; a session-limit guard tripped); model_routing switchback stopped, sessions back on the 2026-10-23 rule; for the next report</summary>
 </entry>
 </feed>

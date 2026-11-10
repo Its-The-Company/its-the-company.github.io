@@ -33,8 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open
 
-- T-2319 (c9d371621): stdlib_cut check reads the interpreter's inittab/_frozen/PyInit_ and fails closed; open: first Release archive must show Xcode's embed strip keeps the exported symbols.
-- T-3133/T-3142 (5051f1926): F1-F4 fixed; re-review PASS-with-fixes, M1/M2 = T-3146/47 (Idris). Mine: t1140 L4 open; detail names are UUIDs, so prune by mtime, not name.
 - T-3292 (9a7bc4c65): T-3289 PASS; T-3279 PASS w/ M1 = T-3298 (`.missing` also means unreadable/undecodable/folder gone). Runner J-20261107-1010 owed. Lesson: rename keeps mtime.
 - T-2551 (089904eda): six launchers unreleased. T-3663 (08f3ba930): Idris's tap path PASS w/ findings, M1/M2 = T-3666/67. Mine (L5): _launch.SLOT_RE `$` takes a trailing \n; fullmatch + test. Lesson: a WindowGroup with no handlesExternalEvents opens a new iPad window per URL.
 - T-1677 (91ea35ab2): PASS w/ fixes, M1/M2 = T-3757/58 (Idris). Lesson: a test that passes a HoldLog and never asserts it hides an unheld write.
@@ -50,6 +48,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3813 (59b4edb8d): build 5 review, no cause for the iPhone bug; M1 = T-3814 (Idris).
 - T-3867 (uncommitted, commit refused by classifier): guard_test rows pinned Investor values; now shape checks. Lesson: in zsh "$h:a" is a modifier; write ${h}.
 - T-3873 (2ad88dfc1, b7f9c136e): T-0588/T-0725 recuts handed. Lesson: a stop_on marker printed before the try lets the first soft Stop land outside it under load; print the marker inside.
+- T-3835 (9987593924): T-3826 PASS w/ findings, M1/M2 = T-3899/3900 (Idris); tick refused (Plain: ID before gloss), not ticked. Lesson: per-item timeouts on a shared dependency add up per item; bound the pass, not each step.
 - Older entries (2026-10-25 20:12 to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## Lessons

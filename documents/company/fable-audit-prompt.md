@@ -21,7 +21,7 @@ The company makes finished work faster than it can check and merge it. On the ni
 
 Do not assume the merge queue is the root problem. Treat it as a possible symptom of a deeper constraint in architecture, operations or organization. Think about the whole system: we want fundamental improvements to how it operates, not tuning of single parts.
 
-This is an investigation, not an implementation. Read only. Do not edit, commit, stage or revert files. Do not create branches or worktrees, run git pull, push, merge, rebase or fetch, or change any setting, lock, queue file, board line or GitHub issue. Do not start workers, sessions or long test runs. The one file you may write is your report, as a new file: `ops/plans/system-audit-2026-11.md`.
+This is an investigation, not an implementation. Read only. Do not edit, commit, stage or revert files. Do not create branches or worktrees, run git pull, push, merge, rebase or fetch, or change any setting, lock, queue file, board line or GitHub issue. Do not start workers, sessions or long test runs. The one file you may write is your report, as a new file: [`ops/plans/system-audit-2026-11.md`](system-audit-2026-11.html).
 
 ## Ground rules for this machine
 

@@ -5,7 +5,7 @@ section: "documents"
 description: "The main session&#x27;s workers shared the main checkout. One worker&#x27;s uncommitted edit made another&#x27;s gate say &quot;passed, not recorded&quot;, or a commit carried a stranger&#x27;s file, or a hook refused because main moved mid-check\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/worker-copies.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 19 · Mon Nov 9</span><span><code>ops/plans/worker-copies.md</code></span></div><h1>Every worker its own copy of the code (T-3978, folds in T-2719)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"><span>By <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a>, Process and operations engineer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 20 · Tue Nov 10</span><span><code>ops/plans/worker-copies.md</code></span></div><h1>Every worker its own copy of the code (T-3978, folds in T-2719)</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/odalys.svg' | relative_url }}" alt="Odalys" title="Odalys"><span>By <a href="{{ '/cast/odalys.html' | relative_url }}">Odalys</a>, Process and operations engineer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
@@ -19,68 +19,76 @@ the main session's workers only.
 
 The main session's workers shared the main checkout. One worker's uncommitted edit made another's gate say "passed, not
 recorded", or a commit carried a stranger's file, or a hook refused because main moved mid-check (11-09: T-3818, T-3863,
-T-3963, T-3908). A copy per worker removes the shared working tree; only main's ref is shared, and a fast-forward
-moves it atomically.
+T-3963, T-3908). A copy per worker removes the shared working tree: a change sits in its own copy until
+`main_gate.py land --from` has checked it there and commits exactly its files on main.
 
-## The design, end to end
+## The design, end to end (one road, 2026-11-10)
 
-1. **Start.** The Operator makes the copy when the packet goes out:
-   `python3 tools/scratch.py worktree <task> --worker <Name>` prints `<place>/<task>-<name>/code`, a git worktree on
-   branch `work/<task>-<name>` from main. `<place>` is `/Volumes/SANDISK SSD/company-worktrees` while that volume
-   answers, else scratch's own place. `WORKTREE.json` beside `code/` records task, worker, branch, base, start commit
-   and every task that uses the copy (`--for T-xxxx` adds one).
-2. **Stacked.** A task that builds on another's unlanded change starts from that branch:
-   `... worktree <task> --worker <Name> --from work/<other>`. It never shares the other's folder. It cannot land
-   before its base (exit 7); once the base is on main it rebases like any branch, and git drops the base's commits by
-   patch.
-3. **Work.** The worker edits, runs its tests and commits in its copy only. The main checkout is the Operator's:
+The 11-09 slice built a second lander (tools/worker_land.py) and a `work/` branch per copy. The Investors' mandate of
+11-10 (#41 c6759690460) and the audit's "one road to main" (T-3994) replaced both: there is one lander,
+`main_gate.py land --from`, and no new branch namespace. worker_land.py was never landed and is retired. What it did
+that `land --from` lacks, and why none of it goes into main_gate.py:
+
+- rebase on main: a copy is brought up by its worker (`git -C "$W" stash; git -C "$W" checkout --detach main;
+  git -C "$W" stash pop`), and `land --from` already keeps a check when main moved in none of the named files;
+- its own ledger (worker_land.jsonl): main_gate.jsonl already has a row per check, refusal and land, and
+  `main_gate.py unrecorded` counts the wasted runs;
+- stacked copies (`--from work/<other>`): with no branches there is nothing to stack on; a task that needs another's
+  unlanded change waits for it to land, then makes its copy;
+- `--remove` after a land: that is `scratch.py worktree ... --remove`, below.
+
+1. **Start.** At dispatch: `W="$(python3 tools/scratch.py worktree <task> --worker <Name>)"`. It makes the scratch
+   folder (`scratch.py new`, OWNER.json), then `git worktree add --detach "$D/wt" main`, and prints `$D/wt`.
+   WORKTREE.json in the folder lists every task that needs the copy (`--for T-xxxx` adds one). Run twice: the same path.
+2. **Work.** The worker edits and runs its tests in `$W` only, in the foreground. The main folder is the Operator's:
    board, records, inbox.
-4. **Land.** `python3 tools/worker_land.py <task> --worker <Name>`: rebase on main (seconds), main_gate's checks
-   in the copy on exactly the branch's files, then a fast-forward of main. If main moved during the check in none of
-   the branch's files, the checks stand (the land-live rule); if it moved in them, one more check, then land.
-   Exit codes: 0 landed or nothing to land, 1 red, 2 refused before any check (dirty copy, Investor-owned path, no
-   copy), 3 gate runner offline, 4 rebase conflict, 5 the main checkout refused the fast-forward (it names the
-   files), 6 main moved in its files twice, 7 waits for its stacked base, 75 gate still waiting. One row per
-   attempt in `ops/metrics/worker_land.jsonl`.
-5. **Wait as itself, never <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>.** Nothing the land meets puts the work on a parked/ ref (T-3965). A branch that
-   can't land at once stays as `work/<task>-<name>` in its copy. Exit 1 and 4 go back to the worker (fix, commit,
-   land again). 3, 5, 6, 7 and 75 wait: the Operator runs the same command again on its next pass, merge-first
-   tasks first (ops/merge_first.txt). The copy stays while its branch holds anything main lacks.
-6. **Remove.** After a land, `worker_land.py ... --remove` or
-   `python3 tools/scratch.py worktree <task> --worker <Name> --remove` removes the worktree, the branch and the record
-   when nothing in it is uncommitted, its branch holds nothing main lacks, and every task in its record is finished
-   on the board (or is its own task and its branch landed). Otherwise it stays and says why.
-7. **Sweep.** `python3 tools/scratch.py sweep` (dry run) and `sweep --apply` apply the same rule to every copy: no
-   live task, nothing unlanded, nothing uncommitted, no refusal on record. That catches copies whose removal was
-   missed.
+3. **Land.** From the main folder: `python3 tools/main_gate.py land --from "$W" --author 'Name <email>' -m MSGFILE
+   --task <task> <paths...>`. The copy must differ from main's HEAD only in those paths. It checks in the copy and
+   commits exactly those files on main. Exit 75, or "main changed ... during the check": bring the copy up (above)
+   and land again. Never pull, merge or rebase in the main folder.
+4. **Remove.** `python3 tools/scratch.py worktree <task> --worker <Name> --remove` after the land. The copy goes when
+   (a) no refusal on record covers it, (b) everything it changed since it left main is on main by content (each path
+   holds on main's tip, or held in a commit on main since, exactly the copy's content; this covers what `git cherry`
+   sees and the uncommitted files `land --from` takes), (c) no other task in its record is live, and (d) it holds
+   landed work or its own task is finished. A fresh copy of a live task stays. Removal is `git worktree remove`
+   (`--force` only after (b) passed; ignored files such as build output go with it). The scratch folder and its
+   OWNER.json stay; they are scratch's.
+5. **Sweep.** `python3 tools/scratch.py sweep` (dry run) and `sweep --apply`: rule 4 over every linked worktree of
+   main that sits in a scratch folder (`<place>/<T-NNNN-name>/<dir>`), made by the tool or by hand. A copy with work
+   main lacks is never removed; it is listed with its paths. Worktrees outside the scratch places are never touched,
+   and `git worktree prune` is never run (a copy on an unmounted SSD is not a gone one).
 
-Built in this slice: 1, 2, 4, 6, 7, and the never-parked part of 5. Tests: tests/worker_copies_test.py (32 checks)
-and tests/worker_land_test.py (38 checks). Both were red before the code.
+Built and landed in this slice (T-3978, 11-10): 1, 4, 5, the packet paragraph below and ops/prompts/work.md. Tests:
+tests/worker_copies_test.py, written red first.
 
-## Next slice (not built)
+## Next (not built)
 
-- **Operator wiring.** At dispatch, make the copy and put its path in the packet. On each pass, run the land again for
-  every copy whose last `worker_land.jsonl` row is a wait code (3, 5, 6, 7, 75), merge-first first, then
-  `scratch.py sweep --apply`. That is tools/supervisor.sh or dispatch.py, which this task did not touch.
-- **Live status.** When a copy is removed (worker_land --remove, scratch.py --remove, the sweep), call
-  `python3 tools/worker_status.py done <task>` (T-3979, on main since 175026c43b; not in this slice's base).
-- **The merge queue.** tools/merge_queue.py takes parked/ and <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> refs. A `work/` branch should join it as itself
-  (with `--branch work/...`) only if a wait lasts past one pass. For now the retry above is the queue.
+- **The hook (Investor-owned; through the applier).** Refuse, in the main folder, a non-exempt commit whose staged
+  files are in the gate's scope unless `land --from` made it. It needs: (1) `land --from` to mark its own commit,
+  e.g. an environment variable such as MAIN_GATE_FROM=<copy> on its `git commit` call (main_gate.py, company-owned);
+  (2) the pre-commit path (`main_gate.py hook`, wherever the Investors' settings call it) to refuse gate-scope files
+  without that mark, record authors (EXEMPT_AUTHORS) and records-only commits passing as now; (3) a way back the
+  Investors control: a flag file or setting that turns the refusal off, with a ledger row each time it is used; (4)
+  optionally a PreToolUse guard refusing Edit/Write by a worker on gate-scope paths under the main folder. The mark
+  is a guardrail, not a lock: a worker could set it by hand; the ledger row from `land --from` shows the difference.
+- **Operator wiring.** Run `scratch.py sweep --apply` once per pass (tools/supervisor.sh), after its dry run has
+  been read once by a person: the first dry run on 11-10 is in the T-3978 board note.
 - **Measure (task item 5).** Before, gate ledger ops/metrics/main_gate.jsonl, 24 h to 11-09 ~10:45 PM (n = 366 rows):
-  `refused` 2, `host_refused` 4, `suite_refused` 14, `suite_red` 28, `suite_pass` 312. "Passed, not recorded" is
-  printed but never written as a row, so it has no before count. Add a row for it in main_gate.py (its owner's
-  task). After: the same query 48 h after the Operator wiring, plus `worker_land.jsonl` results by code.
+  `refused` 2, `host_refused` 4, `suite_refused` 14, `suite_red` 28, `suite_pass` 312. "Passed, not recorded" had no
+  row then; `main_gate.py unrecorded` counts it now. After: the same query, and `unrecorded`, for the 48 h after
+  every packet carries the paragraph below.
 
 ## The paragraph for every worker packet
 
-> **Your copy of the code.** Work only in your own copy: `<copy path>` (branch `work/<task>-<name>`), never in the main
-> checkout. Edit, test and commit there, as yourself. Quote the path; it has spaces. When your tests are green and
-> your work is committed, land it with `python3 tools/worker_land.py <task> --worker <Name> --remove`. It rebases
-> on main, runs the gate's checks in your copy, and moves main. Exit 0 is landed. 1 (red) or 4 (conflict): fix it
-> in your copy, commit, and run it again. 3, 5, 6, 7 or 75: it is waiting, not failed; say so in your reply and the
-> Operator retries it. Nothing is parked. Never pull, merge, rebase or push in the main checkout, and never edit files
-> there. If your task builds on another's unlanded branch, the Operator made your copy `--from` that branch, and it
-> lands after that one. Board notes and ticks still go through `python3 tools/board_tick.py` from the main checkout.
+> **Your copy of the code.** Make your own copy and work only there, never in the main folder:
+> `W="$(python3 tools/scratch.py worktree <task> --worker <Name>)"` (quote "$W"; the path has a space). Edit and run
+> your tests there, in the foreground: every test file that names a tool you changed (`grep -l <tool> tests/*`).
+> Land from the main folder: `python3 tools/main_gate.py land --from "$W" --author '<Name> <<name>@itsthecompany.local>'
+> -m <msgfile> --task <task> <paths...>`; the copy must differ from main's HEAD only in those paths. One gate run at a
+> time. If main moved in your files, bring the copy up (`git -C "$W" stash; git -C "$W" checkout --detach main;
+> git -C "$W" stash pop`) and land again; never pull, merge or rebase in the main folder. After it lands, run
+> `python3 tools/scratch.py worktree <task> --worker <Name> --remove`; it keeps a copy that still holds work main
+> lacks and says which files. Board notes and ticks go through `python3 tools/board_tick.py` from the main folder.
 {% endraw %}
 
 </div>

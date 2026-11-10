@@ -31,45 +31,43 @@ Kept by whoever is doing the work. Update "Where it stands" each time something 
 
 ## Where it stands
 
-Last updated: 2026-11-10 9:50 AM ET, by the Fable session.
+Last updated: 2026-11-10 10:06 AM ET, by the Fable session, at its hand-off (Fable's weekly limit; the reset was asked in #258).
 
-- 38 code changes are on main since 12:51 AM (the log, with each commit and its test, is [`ops/plans/audit-implementation.md`](audit-implementation.html); the write-up for the Investors is [`ops/plans/audit-implementation-report.md`](audit-implementation-report.html)).
+- 44 code changes are on main since 12:51 AM (the log, with each commit and its test, is [`ops/plans/audit-implementation.md`](audit-implementation.html); the write-up for the Investors is [`ops/plans/audit-implementation-report.md`](audit-implementation-report.html)).
 - The count of tasks waiting to merge is 59 (215 at 1:35 AM); 41 tasks merged on 11-10 by 9:24 AM, 24 of them app work. New work is held. Merges run by themselves. The reset rule runs hourly.
 - The experiment entry with the baseline and the predictions is OPT-128 in `log/optimizations.md`, read on 11-13 and 11-17.
 
 ### In flight when this was written
 
+1:50 PM: the Opus work session closed at its 3-hour line. Item 12 (T-3975 item 3) was not landed: Odalys's copy is at "/Volumes/Company SSD/company-scratch/T-3975-odalys/wt", her T-3975 board note says what is done and the land command; the next session finishes it from that copy (don't make a new one). Item 10 slice 1 landed 1:05 PM (0157ccd5b0). Item 9 37b62c8ec4 (after-number owed 11-11; baseline 12:30 PM: 65 arrived, 128 merged, 67% first try, 99 sent back). Item 0 e4c770e538; item 4 f372af7f9f. Item 23's overdue experiments are board line T-4013. Trap: a refused rm in a copy followed by `worktree --remove` deleted the refused files too; packets say skip --remove after any refused deletion.
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: In flight when this was written, scrolls sideways" style="--tw:960px" markdown="1">
-
-| What | Where | State |
-|---|---|---|
-| Home: panels back at the top, one list of all tasks with the old styling, search, filters and sorting, "Needs you" off Home (board lines T-4004, T-4005, T-4007) | branch `fable/h2-home`, a worktree under the session's scratch folder | a helper agent is building it; if the session has ended, check the branch for a commit starting "T-4007 Fable:", run the Home suites, and land it |
-| One automatic rerun of an iPhone test run that fails for no fault of the change | on main | **done**, 49ff572448 (`tools/xc_rerun.py`, `ops/xc_rerun_tests.txt`; `python3 tools/xc_rerun.py stats` says how its reruns end) |
-
-</div>
-
-
-A scratch folder under `/private/tmp` does not survive a restart of the Mac mini. If a branch above is missing, the item starts again from its description in "The list".
+Scratch copies the session made are linked worktrees and one clone under its scratch folder (`git worktree list` shows them: `wt`, `wg`, `h2`, `f2`, `p3`, `p237`, `oldwt`; the clone `x1`). Nothing in them is unmerged except as listed here. Remove each with `git worktree remove <path>` once `git -C <path> status --short` is empty or holds only what is on main; their branches (`fable/audit`, `fable/h2-home`, `fable/f2-flow`, `fable/x1-xcrerun`) are merged by content and can be deleted after `git cherry -v main <branch>` shows nothing main lacks.
 
 ## The list
 
 Numbers match the list posted on #41 at 8:15 AM on 11-10 (comment 6768272273). Mark each line done with its commit.
 
+**0. Home (the Investors' asks of 11-10, board lines T-4004, T-4005, T-4007): done**, 5aed12987d; the three list fixes e4c770e538 (T-4007 ticked); the strip/list counts, `live` and the six numbers done e688c5920d (10:46 AM); screenshots in `ops/site-checks/t4007-home/`. Left to do, in this order:
+- The list's cards take their stage from the live status files and the Flow strip above takes its numbers from the record; at 9:21 AM they disagreed (the strip said 59 waiting to merge and 29 being built; the list's columns said 2 waiting, 1 and 1 in tests, 50 sent back, 0 being built). The strip's "waiting to merge" is the one count and includes work sent back; say so on the page, or make both read `tools/flow.py now()`.
+- `flow.now()` rows carry `live` since 1ddc23b0bb: use it for "Being built" in the strip (29 there are old claims, not work in hand), and put `flow.daily()`'s six numbers on Home.
+- The helper's own notes: the default sort puts held work second, so moving tasks can fold away; the stage chips lost their counts; "N done this session" was not restored; `/merge-queue.html` still builds, unlinked (remove it under item 24).
+- Ask the Investors on #41 whether the restored list is what they wanted before polishing further.
+
 **A. One road to main**
 - 3. Checking a change away from the main folder: **done**, 199e281191 (`main_gate.py check --from`, `land --from`).
 - 3b. Two faults of that road, met in its first hour and fixed in 424019ef2e: main gaining commits during the check, and a new tool landing with its new suite. Known limit: `land --from` wants the copy to differ from main's HEAD in the named files alone, so two unrelated changes in one copy land together or from two copies.
-- 4. The main session's own code through a separate copy: not started, and half-built elsewhere: **read board line T-3978 first** ("Give every worker its own copy of the code", Odalys). Its code never reached main: `tools/worker_copies.py`, `tools/worker_land.py`, a `worktree` mode in `tools/scratch.py`, tests green on 11-09, as a patch at `/Volumes/Company SSD/company-scratch/T-3978-odalys/t3978.patch` (put a time limit on any read of the SSD), plan in [`ops/plans/worker-copies.md`](worker-copies.html). `worker_land.py` does what `main_gate.py land --from` now does on main: keep one road (`land --from`), take the copy-making and the sweep from the patch, then the packet paragraph in `ops/prompts/work.md`. Original note: The work prompt (`ops/prompts/work.md`) still lets agents edit the main folder. Change the packets and the prompt so each agent works in its own worktree and lands with `main_gate.py land --from`; then make the hook refuse a non-exempt commit of gate-scope files that did not come that way, with a way back.
+- 3c. A refused landing now checks that the main folder really was put back (bfe8dcda8f; its message says 104 tests, 103 ran). At 10:00 AM three test files of a refused landing stayed in the main folder until put back by hand.
+- 4. Every worker's own copy: **done**, f372af7f9f (`tools/scratch.py worktree <task> --worker <Name>`, `--remove`, `sweep [--apply]`; tools/worker_copies.py; the packet paragraph in `ops/prompts/work.md`). worker_land.py dropped (one road: `land --from`). Left: the hook that refuses a main-folder commit of gate-scope files (Investor-owned settings: a proposal through the applier; needs in ops/plans/worker-copies.md), and `sweep --apply` on a schedule in the supervisor (Investor-owned? tools/supervisor.sh is company code; check). First dry run: 41 copies, 5 removable, 25 with unlanded work.
 - 5. Record files committed in batches by one recorder; no record files in work branches: not started. Measure first (`git log --format=%s --since=...` by subject); the biggest sources on 11-10 were the <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> records (three commits per apply in `tools/lane_outbox.py`), board ticks and notes, and the merge queue run. Batch first; a separate `records` branch later, if at all.
 - 6. The merge tools change in one batch a day while the line is in use: not started. A handbook rule, and a note in the gate when a pipeline tool is changed.
 - 7. Record "passed, not recorded": **done**, be1668eaf6 (`suite_unrecorded` rows; `python3 tools/main_gate.py unrecorded --days 7`).
 
 **B. One merge line**
 - 8. One task per branch (T-3883): **measured, no change made**. Of 249 merge tries on 11-10, 239 carried one task (10 carried more, 3 of those landed); `tools/merge_queue.py` already re-cuts every <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> branch into one entry a task each hour. 47 old parked branches still carry several tasks, most of them already merged another way. What is left, if it is ever worth it: a lane's first try at session end carries whatever its branch holds. Original note: `park` in `tools/personal_land.sh` puts every commit of a lane's branch under one parked name; split by the task ID in each commit subject. The lane's own branch carrying many tasks (17 at 1:21 AM on 11-10) is the same problem at the source: a lane should hand in one task at a time.
-- 9. A "sent back to its author" state: not started. `merge_work()` in `tools/dispatch.py` already gives a lane its own parked work first ("fix", "own"); what is missing is the reason travelling with it and a stage of its own in the workflow record.
-- 10. Retire the other retry routes (the retry file, the queued and hold lists, the automatic retry and redo board lines): after 9.
+- 9. A "sent back to its author" state: **done**, 37b62c8ec4 (T-4011): `tools/sent_back.py` ledger (ops/metrics/sent_back.jsonl, out of git), the reason in the lane packet ("Why it came back"), `with_author` stage in tools/flow.py; closing rule is merge_reset.py as it was. After-number owed 11-11.
+- 10. Retire the other retry routes: slice 1 **done**, 0157ccd5b0 (T-4012 open, noted): the spare's retry of another lane's lines (retry_other) is gone. Kept until T-4011's after-number shows the send-back landing work (it made 0 fix hand-outs by 1:05 PM): the retry file, the hourly re-pick and the queued and hold ledgers (the only route landing parked work: 133 lines added, 36 own retries on 11-10). Ready: removing the automatic "Retry finished work" board line, patch at SSD scratch T-4012-slice2-board-line.patch (four land suites still assert it). Kept for good: the P0 redo line (Investor ruling T-3200); ops/personal_requeue.txt (a person restarting a task, not a retry route).
 - 11. One Mac run and one iPhone run for a group of changes: not started. The speculative gate (`tools/merge_queue.py --gate`, lanes g10 to g14) is the existing piece; it excludes nothing by design but ran three stacked checks of one bad branch on 11-10.
-- 12. Likeliest-red suites first and stop at the first red; skip a check already known red (T-3975 item 3): not started. `tools/suite_order.py` orders; the stop is missing.
+- 12. Likeliest-red suites first and stop at the first red; skip a check already known red (T-3975 item 3): in hand, Odalys, 1:15 PM 11-10. `tools/suite_order.py` orders; the stop is missing.
 - 13. Per-suite keeping for the app's host suites: not started. The helper's notes are in the commit message of 009baddbfe.
 - 14. The app's tests read all of `tools/` (`tools/check_cache.py` lines 19 to 21): not started. Move the few checkers they need under `pywidget/`.
 - 2 (from the first list). One rerun for a red iPhone run that is probably not the change's fault: **done**, 49ff572448. Not covered: the merge gate's own iPhone checks (`tools/merge_queue.py`, `tools/main_gate.py` call `tools/land_xc.py` themselves). The cure is the store tests passing with 5 Simulators at once, or the runner giving them one at a time: T-4008 on the board.

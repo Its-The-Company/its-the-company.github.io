@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-10T18:43:32.355384+00:00",
+ "at": "2026-11-10T18:50:30.611925+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-10T10:10:17-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [],
   "done": [
    {
@@ -66,7 +66,6 @@
    },
    {
     "t": "T-3812",
-    "name": "Ask the Investors about wrong security stops",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
@@ -74,7 +73,6 @@
    },
    {
     "t": "T-3706",
-    "name": "Stop the sync rewriting main commits while pushes are held",
     "acct": "Personal a",
     "steps": [],
     "end": "landed",
@@ -92,19 +90,17 @@
   "landed": 40,
   "failed": 56
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-3975 stop at first red, skip known red",
    "model": "opus",
    "started": "2026-11-10T18:12:29.582Z",
-   "seconds": 1862,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-10T18:45:48.429000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4012 retire retry routes",
@@ -128,20 +124,12 @@
    "started": "2026-11-10T16:23:50.570Z",
    "seconds": null,
    "finished": "2026-11-10T17:00:39.669000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3978 worker copies via land --from",
-   "model": "opus",
-   "started": "2026-11-10T15:52:43.512Z",
-   "seconds": null,
-   "finished": "2026-11-10T16:23:16.170000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 639,
+  "runnable_count": 640,
   "blocked_count": 112
  },
  "meter": {
@@ -179,12 +167,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-10T10:25:07-05:00",
  "personal": {
   "week_pct": 50.07,
-  "usage_pct": 36.8,
-  "work_pct": 80.2,
-  "read_at": "2026-11-10T18:43:00+00:00",
+  "usage_pct": 35.8,
+  "work_pct": 79.3,
+  "read_at": "2026-11-10T18:51:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -220,23 +208,14 @@
  },
  "lock_in": {
   "on": true,
-  "pool": 1,
-  "at": "2026-11-10T13:43:00-05:00",
+  "pool": 0,
+  "at": "2026-11-10T13:51:00-05:00",
   "mode": "midnight"
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
  "pool": null,
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-3975 stop at first red, skip known red",
-   "model": "opus",
-   "since": "2026-11-10T18:12:29.582Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -262,6 +241,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P1, from T-3789...",
@@ -279,19 +266,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop losing check time on attempts that will not land",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-10T18:12:29.582Z",
-    "o": "c",
-    "task": "T-3975"
-   }
-  ],
-  "src": "plan",
+  "run": [],
   "open": [
    {
     "w": "Idris",
@@ -382,27 +357,10 @@
    }
   ],
   "count": {
-   "next": 639,
+   "next": 640,
    "wait": 44,
    "blocked": 68,
    "you": 17
-  },
-  "fin": {
-   "n": 3,
-   "rows": [
-    [
-     "T-4011",
-     "Send failed changes back to..."
-    ],
-    [
-     "T-4007",
-     "Flow tab task list with old..."
-    ],
-    [
-     "T-3978",
-     "Give every worker its own..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -449,7 +407,6 @@
   "queue_text",
   "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -457,13 +414,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "1:43 PM",
-  "why": "",
-  "at_iso": "2026-11-10T18:43:00+00:00",
-  "started": "10:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:43 PM ET</p></section>"
+  "total": 0,
+  "at": "1:51 PM",
+  "why": "Between sessions: no session is running. Last check 10:10 AM ET.",
+  "at_iso": "2026-11-10T18:51:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:51 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 10:10 AM ET.</p></section>"
  }
 }

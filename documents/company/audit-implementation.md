@@ -156,6 +156,30 @@ Until T-3992 to T-3997 are ticked, only the Fable session changes these files. O
 - **One item stopped by a guard (T-0848), 1:11 AM:** the records guard refused a command that edited tests/governor_test.sh and tests/pacing_test.sh and ran them. The governor's part of "idle is fine" waits on those two files; asked on #41 (c6760458993).
   Cleared by Investor an Investor at 4:40 AM ("go ahead with the scheduler tests", #41 c6764049323); the two test files were then edited with the edit tool and run by a separate plain command, and the change landed at 6:35 AM (ce8522d75a). Writing its rows found a fault in the change itself: with the limit closed and no session to open for work, a waiting Investor message got no session. Fixed before it reached the gate.
 - **tests/site_test.sh went red on main at about 6:00 AM**, by data: its row that keeps the old $200 goal block off Home read the usage bar's "$195 of $200 used" as that block. Found when the governor change's gate run asked for the suite; the pattern was narrowed in the same commit.
+
+## Landed 8:06 AM to 10:06 AM on 11-10 (the session's last stretch before Fable's limit)
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: Landed 8:06 AM to 10:06 AM on 11-10 (the session&#x27;s last stretch before Fable&#x27;s…, scrolls sideways" style="--tw:498px" markdown="1">
+
+| Time | Commit | What |
+|---|---|---|
+| 8:16 AM | 199e281191 | The gate checks a change in another copy and lands it only when green (`main_gate.py check --from`, `land --from`) |
+| 8:20 AM | b45263e592 | The work restarts from #41: hand-over file, the prompts and the scheduler read it; a question is not a task |
+| 8:27 AM | 23cbae142e | `tests/guard_test.sh` and `tests/lane_env_test.py` green (red on main for eight days) |
+| 8:52 AM | be1668eaf6 | The applier blames a proposal only for a test red alone on the applied commit; the gate records an uncounted pass |
+| 9:16 AM | 424019ef2e | A landing from a copy survives main moving; a new tool lands with its new suite |
+| 9:18 AM | 49ff572448 | One rerun for a red iPhone check that is probably not the change's fault; the real-tick fixture opens the limit (two rows my 6:35 AM change had broken) |
+| 9:24 AM | 1ddc23b0bb | The workflow record: hand-outs, test times, time-outs, gate merges, resets, closed lines; the six daily numbers |
+| 10:00 AM | 5aed12987d | Home: the four panels back on top, one list of all tasks with search, filters, sorting and the shared stage columns |
+| 10:06 AM | bfe8dcda8f | A refused landing checks that the main folder was put back |
+
+</div>
+
+
+Faults of my own in this stretch, each found by a test or a helper and fixed in the commit named: the scheduler change of 6:35 AM broke two rows of `tests/personal_land_test.sh` in every folder, unseen for three hours (49ff572448); `land --from` refused after a full run when main moved, and could not land a new tool with its new suite (424019ef2e); a refused landing left three files in the main folder and said it had not (bfe8dcda8f); my first applier fix would have reverted a proposal on "no result" (caught by its own test before the gate); 23cbae142e changed a test row an approved proposal's diff rewrites, so #237 had to be posted again as #257. Times written wrong and corrected: a test time in #257's text, the hand-over file's "last updated" line.
+
+Opened for the Investors: #257 (the proposal, one approve), #258 (the Fable reset). Board: T-4008 (a declined Ask to Buy read as granted under load: find out whether it is the app or the test).
 {% endraw %}
 
 </div>

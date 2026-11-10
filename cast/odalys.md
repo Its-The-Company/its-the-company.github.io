@@ -35,23 +35,23 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Site chat plan facts: measured floors behind #24
 - Archive: dated task notes and older lessons (11-07 T-3221 moved the rest there; nothing deleted).
 
-## Open (2026-11-09 23:4x)
+## Open (2026-11-10 12:4x)
 
-- Landed T-3974 df40f13ef4 (24-h after-number owed). Waiting, files at HEAD, patches on SSD company-scratch: T-3907 runner + main-gate, T-3962/65, T-3978 all blocked on main_gate_test.py by tools/site/home_look.py (T-3908); T-3962 also sim_hold (T-3967), T-3978 also xc_sim.py. T-3818 (SSD T-3818-odalys/) refused host_refused 8 suites after green run; HEAD moved mid-run.
-- T-3963: merge_rate.py + test untracked in main, not committed.
-- T-3979 (3) lease warning and (5) Home panel left.
+- T-4011 landed 37b62c8ec4, ticked 5ccb73406a: sent_back.py ledger (ops/metrics/sent_back.jsonl), dispatch fix/own hand-outs carry the reason, flow.py with_author stage, packet "Why it came back". 24-h after number owed: ledger rows, handout rows with kind fix/own, flow now() with_author count. Item 10 next (retire retry file, queued/hold ledgers, retry/redo lines).
+- T-4012 slice 1 landed 0157ccd5b0 (retry_other retired), noted not ticked. Slice 2 patch: company-scratch/T-4012-slice2-board-line.patch (board line; 4 land suites still assert it). Retry file/merge-queue re-pick/ledgers wait on T-4011 after-number (11-10: 0 fix hand-outs, no sent_back rows).
+- Unlanded patches on SSD company-scratch: T-3907 runner+main-gate; T-3962/65 (T-3962 also sim_hold, T-3967); T-3971 merge-only switch (13 files, green). T-3818 refused host_refused.
+- T-3974 df40f13ef4 after-number owed. T-3978 left: hook (Investor), supervisor sweep --apply. T-3963 merge_rate.py untracked. T-3979 (3) lease warning, (5) Home panel.
 
 ## Lessons
 
+- Land road (11-10, twice): scratch.py worktree -> edit -> main_gate.wanted_suites for the suite list -> tests/run.sh -j 2 those -> main_gate.py land --from. dispatch_test asserts cmd_tick's source text; session_page tests want exactly 7 columns (map a new flow stage via COL_OF).
+- memory_archive.py --limit 2 moved the whole Open block and Lessons (11-10): rewrite by hand after it, then check the file.
+- Keep an applied patch out of main while blocked; its files dirty others' checks. Gate red on a suite you didn't touch: stash, run at HEAD; fix in the same land if you own the tool.
+- Live Home shots: waiting/flow/machine jsonl are git-ignored; copy into the scratch copy, build --no-gh, delete after.
+
 - Older notes: archive.md (memory_archive.py at session close).
 
-- T-3971 (NOT landed, 11-09 23:3x): merge-only switch, patch SSD scratch T-3971-odalys/t3971.patch (13 files), all suites green after the site_lanes DIGEST fix. Lesson: a change to board.py lanes_view moves tools/site/<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span>.py DIGEST; update the page sentence in the same patch. Under load, run.sh -j 1 one run at a time.
-
-- T-3967 (NOT landed 11-09 23:3x): patch SSD scratch T-3967-odalys/t3967.patch (sim_hold.py, xc.sh gate, xc_sim idle-down, supervisor tick). Gate green in clean wt at a57f07a4ed, commit refused when main moved. Lesson: run main_gate check in a clean scratch wt at main's HEAD, then commit in the shared copy at once.
-
-- 11-09: keep an applied patch out of main while blocked; its files dirty others' checks (deadlock). Map blockers with main_gate.wanted_suites per changed file.
-- T-3215 35df2470a: investor_age inherits via named parent; 2 slow suites unrun by me (land gate). Mine next: T-2667. Left: threads column, This Session page, #41 post. T-2616: baseline and plan in its board note. T-3069: only reads left (OPT-115, OPT-117 by 11-09), then #41 before/after. Keeper runs merge queue in sessions 5884472ae.
-- T-3331 3bcbbe39f: store+tsv on main, add seeds; no reader. T-3392: wire or retire (Ines).
+- T-3706 c0f18a5e4 (ticked): held-push merge switch (ops/sync_held_merge.json, off). Before n=164 held ticks, 41 copies. Turn-on T-3755; after-read sync_hold_stats.py.
 {% endraw %}
 
 

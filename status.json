@@ -1,12 +1,56 @@
 {
  "schema": 1,
- "at": "2026-11-10T14:45:28.181565+00:00",
+ "at": "2026-11-10T14:49:07.777990+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-10T09:43:17-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [],
   "done": [
+   {
+    "t": "T-3316",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794321963,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3150",
+    "name": "Make the scoreboard's spend match the ledger",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794321957,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-0885",
+    "name": "Read the shared-tree repair trial's reopen rule",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794321957,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3703",
+    "name": "Show when a merge check moves to the Mac mini",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794321957,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3150",
+    "name": "Make the scoreboard's spend match the ledger",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794321951,
+    "why": "did not merge cleanly"
+   },
    {
     "t": "T-3150",
     "name": "Make the scoreboard's spend match the ledger",
@@ -51,51 +95,10 @@
     "end": "failed",
     "end_at": 1794321285,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-2076",
-    "name": "Build the site stages behind off-by-default switches",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794321285,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-0622",
-    "name": "Merge two editor appearance flags into one",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794321197,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-3762",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794319863
-   },
-   {
-    "t": "T-0620",
-    "name": "Check the app reads the same view schema",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794318834
-   },
-   {
-    "t": "T-3664",
-    "name": "Let people choose the app behind each launcher slot",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794318822
    }
   ],
-  "landed": 57,
-  "failed": 55
+  "landed": 54,
+  "failed": 60
  },
  "workers": [],
  "who": "",
@@ -103,7 +106,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 642,
+  "runnable_count": 641,
   "blocked_count": 113
  },
  "meter": {
@@ -141,12 +144,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-10T09:58:07-05:00",
  "personal": {
   "week_pct": 49.54,
   "usage_pct": 36.8,
-  "work_pct": 81.2,
-  "read_at": "2026-11-10T14:48:00+00:00",
+  "work_pct": 80.2,
+  "read_at": "2026-11-10T14:52:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -176,23 +179,19 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T09:42:00-05:00",
+   "at": "2026-11-10T09:49:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 0,
-  "at": "2026-11-10T09:48:00-05:00",
+  "at": "2026-11-10T09:52:00-05:00",
   "mode": "midnight"
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the 5-hour window allows 1; the machine allows 2 (new work waits: 57 tasks wait to merge (limit 12): 2 agents finish and merge...",
-  "n": 1,
-  "at": "2026-11-10T09:43:07.121595-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -245,7 +244,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -336,14 +334,10 @@
    }
   ],
   "count": {
-   "next": 642,
+   "next": 641,
    "wait": 45,
    "blocked": 68,
    "you": 17
-  },
-  "fin": {
-   "n": 0,
-   "rows": []
   }
  },
  "qr": [
@@ -399,10 +393,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "9:48 AM",
-  "why": "Between sessions: no session is running. Last check 9:43 AM ET.",
-  "at_iso": "2026-11-10T14:48:00+00:00",
+  "at": "9:52 AM",
+  "why": "Plan limit: the 5-hour allowance is near its end; it resets at 1:59 PM ET. Last check 9:52 AM ET.",
+  "at_iso": "2026-11-10T14:52:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:48 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 9:43 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:52 AM ET</p><p class=\"an-why\">Plan limit: the 5-hour allowance is near its end; it resets at 1:59 PM ET. Last check 9:52 AM ET.</p></section>"
  }
 }

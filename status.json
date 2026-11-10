@@ -1,39 +1,67 @@
 {
  "schema": 1,
- "at": "2026-11-10T10:20:08.995591+00:00",
+ "at": "2026-11-10T10:34:05.654778+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
    {
-    "t": "T-2296",
-    "name": "Finish the gallery pager, iPad layout and detail foot",
-    "acct": "Personal b",
+    "t": "T-0622",
+    "name": "Merge two editor appearance flags into one",
+    "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1794305215
-     },
-     {
-      "s": "macbook",
-      "at": 1794305744
-     }
-    ]
-   },
-   {
-    "t": "T-2715",
-    "name": "Keep screen titles right when appearance changes",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "macbook",
-      "at": 1794303831
+      "at": 1794306680
      }
     ]
    }
   ],
   "done": [
+   {
+    "t": "T-2296",
+    "name": "Finish the gallery pager, iPad layout and detail foot",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794306383
+   },
+   {
+    "t": "T-2715",
+    "name": "Keep screen titles right when appearance changes",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794306366
+   },
+   {
+    "t": "T-2331",
+    "name": "Add a test that pins the route's file list",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794306196,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-2325",
+    "name": "Find why Investor replies were sometimes late",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794306196,
+    "why": "tests failed"
+   },
+   {
+    "t": "T-3027",
+    "name": "Retry finished work that could not be merged",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794306196,
+    "why": "tests failed"
+   },
    {
     "t": "T-1732",
     "name": "Keep the learned Python library root only if valid",
@@ -77,54 +105,10 @@
     "end": "failed",
     "end_at": 1794303277,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-2331",
-    "name": "Add a test that pins the route's file list",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794303277,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-2325",
-    "name": "Find why Investor replies were sometimes late",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794303277,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3027",
-    "name": "Retry finished work that could not be merged",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794303277,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-2491",
-    "name": "Stop the stuck extension from recreating deleted widget folders",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794302922
-   },
-   {
-    "t": "T-2098",
-    "name": "Fix paths in the mutation check files",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794302899,
-    "why": "Xcode tests failed"
    }
   ],
-  "landed": 55,
-  "failed": 47
+  "landed": 57,
+  "failed": 49
  },
  "workers": [],
  "who": "",
@@ -137,29 +121,29 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 17.0,
-   "resets_at": "2026-11-10T13:59:59.532515+00:00",
+   "pct": 23.0,
+   "resets_at": "2026-11-10T14:00:00.082710+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 83.0,
+   "left": 77.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 69.0,
-   "resets_at": "2026-11-15T06:59:59.532536+00:00",
+   "pct": 71.0,
+   "resets_at": "2026-11-15T07:00:00.082734+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 31.0,
+   "left": 29.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 57.0,
-   "resets_at": "2026-11-15T06:59:59.532799+00:00",
+   "pct": 59.0,
+   "resets_at": "2026-11-15T07:00:00.082914+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-10T04:41:39.051302-05:00"
+  "read_at": "2026-11-10T05:24:15.045707-05:00"
  },
  "ui": {
-  "week_pct": 0.22,
-  "five_hour_pct": 35.478,
+  "week_pct": 0.226,
+  "five_hour_pct": 105.29,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -170,12 +154,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-10T05:05:50-05:00",
+ "next_tick": "2026-11-10T05:39:15-05:00",
  "personal": {
-  "week_pct": 40.3,
+  "week_pct": 41.45,
   "usage_pct": 36.9,
   "work_pct": 81.2,
-  "read_at": "2026-11-10T10:24:00+00:00",
+  "read_at": "2026-11-10T10:35:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -196,16 +180,16 @@
   }
  ],
  "disk": {
-  "free_gb": 31,
+  "free_gb": 30,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 195
+   "free_gb": 183
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T05:17:00-05:00",
+   "at": "2026-11-10T05:33:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-09T08:43:00-05:00"
@@ -215,7 +199,7 @@
  "lock_in": {
   "on": false,
   "pool": 0,
-  "at": "2026-11-10T05:24:00-05:00",
+  "at": "2026-11-10T05:35:00-05:00",
   "mode": null
  },
  "next_tick_why": "last_tick",
@@ -348,18 +332,18 @@
   "done": [
    {
     "w": "Operator",
-    "t": "this retry line asked for parked work to be merged again, and the sweep found every commit of it...",
-    "at": "2026-11-10T04:55:00-05:00"
+    "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
+    "at": "2026-11-10T05:22:00-05:00"
    },
    {
     "w": "Operator",
     "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
-    "at": "2026-11-10T04:05:00-05:00"
+    "at": "2026-11-10T05:22:00-05:00"
    },
    {
     "w": "Operator",
     "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
-    "at": "2026-11-10T04:05:00-05:00"
+    "at": "2026-11-10T05:22:00-05:00"
    }
   ],
   "count": {
@@ -422,10 +406,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "5:24 AM",
-  "why": "Plan limit: the 5-hour allowance is near its end; it resets at 8:59 AM ET. Last check 5:24 AM ET.",
-  "at_iso": "2026-11-10T10:24:00+00:00",
+  "at": "5:35 AM",
+  "why": "Plan limit: the 5-hour allowance is near its end; it resets at 9:00 AM ET. Last check 5:35 AM ET.",
+  "at_iso": "2026-11-10T10:35:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:24 AM ET</p><p class=\"an-why\">Plan limit: the 5-hour allowance is near its end; it resets at 8:59 AM ET. Last check 5:24 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:35 AM ET</p><p class=\"an-why\">Plan limit: the 5-hour allowance is near its end; it resets at 9:00 AM ET. Last check 5:35 AM ET.</p></section>"
  }
 }

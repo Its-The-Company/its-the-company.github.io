@@ -1,11 +1,186 @@
 {
  "schema": 1,
- "at": "2026-11-10T05:20:45.491094+00:00",
+ "at": "2026-11-10T05:30:11.382023+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
+   {
+    "t": "T-2327",
+    "name": "Log the session end check only when its answer changes",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794288420
+     }
+    ]
+   },
+   {
+    "t": "T-1918",
+    "name": "Count overdue Xcode jobs for the runner review",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794288420
+     }
+    ]
+   },
+   {
+    "t": "T-3388",
+    "name": "Agree which home folders the sweep may clear",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794288420
+     }
+    ]
+   },
+   {
+    "t": "T-3145",
+    "name": "Clear finished task copies from the main temp folder",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794288420
+     }
+    ]
+   },
+   {
+    "t": "T-2677",
+    "name": "Give the dispatcher its own clock and more slots",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794288420
+     }
+    ]
+   },
+   {
+    "t": "T-3302",
+    "name": "Keep one coordinator session running",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794288420
+     }
+    ]
+   },
+   {
+    "t": "T-3389",
+    "name": "Remove the five spare trees that git lost track of",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794288420
+     }
+    ]
+   },
+   {
+    "t": "T-3319",
+    "name": "Remove unused spare checkouts from the SSD",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794288420
+     }
+    ]
+   },
+   {
+    "t": "T-2538",
+    "name": "Land five smaller parked fixes the sweep could not merge",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794288420
+     }
+    ]
+   },
+   {
+    "t": "T-0198",
+    "name": "Record expired runs in the widget status file",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794288420
+     }
+    ]
+   },
+   {
+    "t": "T-3703",
+    "name": "Show when a merge check moves to the Mac mini",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794288420
+     }
+    ]
+   },
+   {
+    "t": "T-3879",
+    "name": "Recut Odalys's conflicting parked tasks onto main",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794288420
+     }
+    ]
+   },
+   {
+    "t": "T-3150",
+    "name": "Make the scoreboard's spend match the ledger",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794288420
+     }
+    ]
+   },
+   {
+    "t": "T-3812",
+    "name": "Ask the Investors about wrong security stops",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794288420
+     }
+    ]
+   },
+   {
+    "t": "T-1993",
+    "name": "Count a try only for tasks the session started",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794288420
+     }
+    ]
+   },
+   {
+    "t": "T-1064",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794288420
+     }
+    ]
+   },
    {
     "t": "T-1732",
     "name": "Keep the learned Python library root only if valid",
@@ -60,6 +235,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-3719",
+    "name": "Apply the five-file change an Investor approved",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794288406
+   },
    {
     "t": "T-2948",
     "name": "Keep Xcode's lock in a copy outside git",
@@ -131,17 +314,9 @@
     "end": "failed",
     "end_at": 1794281970,
     "why": "Xcode tests failed"
-   },
-   {
-    "t": "T-3305",
-    "name": "Judge the remaining open board lines for staleness",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794281305
    }
   ],
-  "landed": 43,
+  "landed": 44,
   "failed": 25
  },
  "workers": [],
@@ -150,33 +325,33 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 680,
+  "runnable_count": 679,
   "blocked_count": 114
  },
  "meter": {
   "five_hour": {
-   "pct": 16.0,
-   "resets_at": "2026-11-10T08:59:59.899143+00:00",
+   "pct": 18.0,
+   "resets_at": "2026-11-10T08:59:59.734960+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 84.0,
+   "left": 82.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 42.0,
-   "resets_at": "2026-11-15T06:59:59.899166+00:00",
+   "pct": 43.0,
+   "resets_at": "2026-11-15T06:59:59.734983+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 58.0,
+   "left": 57.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 6.0,
-   "resets_at": "2026-11-15T06:59:59.899328+00:00",
+   "pct": 7.0,
+   "resets_at": "2026-11-15T06:59:59.735117+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-10T00:11:14.505397-05:00"
+  "read_at": "2026-11-10T00:22:03.649673-05:00"
  },
  "ui": {
-  "week_pct": 0.116,
+  "week_pct": 0.119,
   "five_hour_pct": 0.086,
   "caps_pct": {
    "week": 3.0,
@@ -188,12 +363,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-10T00:26:14-05:00",
+ "next_tick": "2026-11-10T00:37:03-05:00",
  "personal": {
-  "week_pct": 3.79,
+  "week_pct": 3.88,
   "usage_pct": 8.3,
   "work_pct": 48.4,
-  "read_at": "2026-11-10T05:22:00+00:00",
+  "read_at": "2026-11-10T05:32:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -223,7 +398,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T00:17:00-05:00",
+   "at": "2026-11-10T00:25:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-09T08:43:00-05:00"
@@ -233,7 +408,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-10T00:22:00-05:00",
+  "at": "2026-11-10T00:32:00-05:00",
   "mode": null
  },
  "next_tick_why": "last_tick",
@@ -365,23 +540,23 @@
   ],
   "done": [
    {
-    "w": "Operator",
-    "t": "Folded into T-3784 (the same Python 3.9 bridge test hang, already on the board for Pernille);...",
-    "at": "2026-11-09T23:11:00-05:00"
-   },
-   {
     "w": "Odalys",
-    "t": "An outside check of the change that keeps saved Python error details honest found them true in...",
-    "at": "2026-11-09T22:54:00-05:00"
+    "t": "The five-file change an Investor asked about was the automatic undo of two approved improvements,...",
+    "at": "2026-11-10T00:26:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "Tests now cover the last moment of a script run, and all three planted faults in that window are...",
-    "at": "2026-11-09T22:28:00-05:00"
+    "w": "Operator",
+    "t": "Closed as a duplicate, by the Investors' instruction of 11-10. The merge queue page is one piece...",
+    "at": "2026-11-10T00:21:00-05:00"
+   },
+   {
+    "w": "Operator",
+    "t": "Dropped and not built, by the Investors' instruction of 11-10. Ordering merges by their starting...",
+    "at": "2026-11-10T00:21:00-05:00"
    }
   ],
   "count": {
-   "next": 680,
+   "next": 679,
    "wait": 48,
    "blocked": 66,
    "you": 17
@@ -440,10 +615,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "12:22 AM",
-  "why": "Waiting for the week's line: the week is ahead of its pace to be used up before it resets. Last check 12:22 AM ET.",
-  "at_iso": "2026-11-10T05:22:00+00:00",
+  "at": "12:32 AM",
+  "why": "Waiting for the week's line: the week is ahead of its pace to be used up before it resets. Last check 12:31 AM ET.",
+  "at_iso": "2026-11-10T05:32:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:22 AM ET</p><p class=\"an-why\">Waiting for the week's line: the week is ahead of its pace to be used up before it resets. Last check 12:22 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:32 AM ET</p><p class=\"an-why\">Waiting for the week's line: the week is ahead of its pace to be used up before it resets. Last check 12:31 AM ET.</p></section>"
  }
 }

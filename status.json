@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-10T18:10:00.538076+00:00",
+ "at": "2026-11-10T18:13:05.540182+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -95,16 +95,24 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4012 retire retry routes",
+   "task": "[tools] T-3975 stop at first red, skip known red",
    "model": "opus",
-   "started": "2026-11-10T17:41:05.825Z",
-   "seconds": 1734,
+   "started": "2026-11-10T18:12:29.582Z",
+   "seconds": 35,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4012 retire retry routes",
+   "model": "opus",
+   "started": "2026-11-10T17:41:05.825Z",
+   "seconds": null,
+   "finished": "2026-11-10T18:11:51.624000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4011 failed changes back to author",
@@ -128,14 +136,6 @@
    "started": "2026-11-10T15:52:43.512Z",
    "seconds": null,
    "finished": "2026-11-10T16:23:16.170000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-4007 Home strip and list agree",
-   "model": "opus",
-   "started": "2026-11-10T15:11:31.313Z",
-   "seconds": null,
-   "finished": "2026-11-10T15:52:02.756000+00:00"
   }
  ],
  "queue": {
@@ -184,7 +184,7 @@
   "week_pct": 50.07,
   "usage_pct": 36.8,
   "work_pct": 80.2,
-  "read_at": "2026-11-10T18:10:00+00:00",
+  "read_at": "2026-11-10T18:13:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -209,19 +209,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 186
+   "free_gb": 188
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T13:06:00-05:00",
+   "at": "2026-11-10T13:12:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-10T13:10:00-05:00",
+  "at": "2026-11-10T13:13:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -235,9 +235,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4012 retire retry routes",
+   "task": "[tools] T-3975 stop at first red, skip known red",
    "model": "opus",
-   "since": "2026-11-10T17:41:05.825Z",
+   "since": "2026-11-10T18:12:29.582Z",
    "next": [],
    "effort": "high"
   },
@@ -287,12 +287,12 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Retire the retry routes the send-back replaces",
+    "t": "Stop losing check time on attempts that will not land",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-10T17:41:05.825Z",
+    "at": "2026-11-10T18:12:29.582Z",
     "o": "c",
-    "task": "T-4012"
+    "task": "T-3975"
    }
   ],
   "src": "plan",
@@ -451,6 +451,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -463,10 +464,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "1:10 PM",
+  "at": "1:13 PM",
   "why": "",
-  "at_iso": "2026-11-10T18:10:00+00:00",
+  "at_iso": "2026-11-10T18:13:00+00:00",
   "started": "10:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:10 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:13 PM ET</p></section>"
  }
 }

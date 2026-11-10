@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-10T16:20:23.799112+00:00",
+ "at": "2026-11-10T16:23:28.448403+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -92,19 +92,17 @@
   "landed": 47,
   "failed": 59
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-3978 worker copies via land --from",
    "model": "opus",
    "started": "2026-11-10T15:52:43.512Z",
-   "seconds": 1660,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-10T16:23:16.170000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[site] T-4007 Home strip and list agree",
@@ -118,7 +116,7 @@
   "runnable": [],
   "blocked": [],
   "runnable_count": 639,
-  "blocked_count": 113
+  "blocked_count": 112
  },
  "meter": {
   "five_hour": {
@@ -160,7 +158,7 @@
   "week_pct": 50.07,
   "usage_pct": 36.8,
   "work_pct": 80.2,
-  "read_at": "2026-11-10T16:20:00+00:00",
+  "read_at": "2026-11-10T16:23:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -190,14 +188,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T11:16:00-05:00",
+   "at": "2026-11-10T11:22:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-10T11:20:00-05:00",
+  "at": "2026-11-10T11:23:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -208,15 +206,6 @@
   "at": "2026-11-10T10:10:07.322492-05:00"
  },
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-3978 worker copies via land --from",
-   "model": "opus",
-   "since": "2026-11-10T15:52:43.512Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -242,6 +231,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P1, from T-3789...",
@@ -259,18 +256,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Give every worker its own copy of the code",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-10T15:52:43.512Z",
-    "o": "c",
-    "task": "T-3978"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -346,6 +332,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Each worker now gets a private copy of the code to work in, so one worker's half-done edits can...",
+    "at": "2026-11-10T11:22:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
     "at": "2026-11-10T10:08:00-05:00"
@@ -354,22 +345,22 @@
     "w": "Odalys",
     "t": "When the company cannot push its work to GitHub for a while, the sync can now keep that work's...",
     "at": "2026-11-10T09:56:00-05:00"
-   },
-   {
-    "w": "Ines+operator",
-    "t": "The Investors now have a decision card asking whether to widen the fix for the security check...",
-    "at": "2026-11-10T09:49:00-05:00"
    }
   ],
   "count": {
    "next": 639,
-   "wait": 45,
+   "wait": 44,
    "blocked": 68,
    "you": 17
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-3978",
+     "Give every worker its own..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -415,6 +406,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -422,13 +414,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "11:20 AM",
-  "why": "",
-  "at_iso": "2026-11-10T16:20:00+00:00",
+  "total": 0,
+  "at": "11:23 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-10T16:23:00+00:00",
   "started": "10:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:20 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 10:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:23 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

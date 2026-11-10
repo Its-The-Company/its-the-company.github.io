@@ -71,16 +71,16 @@ Until T-3992 to T-3997 are ticked, only the Fable session changes these files. O
 ## Phases
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Phases, scrolls sideways" style="--tw:499px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Phases, scrolls sideways" style="--tw:718px" markdown="1">
 
 | Phase | Board line | State |
 |---|---|---|
-| 0. Stabilize | T-3992 | in progress |
-| 1. Admission: one limit on unmerged work | T-3993 | not started |
+| 0. Stabilize | T-3992 | in progress: inventory done, 12 lines closed, reds on main being fixed; T-3818 and T-3972 next |
+| 1. Admission: one limit on unmerged work | T-3993 | in progress: count, record, limit, dispatcher and pool landed; the governor's part stopped by a guard (T-0848); wording and lane path in testing |
 | 2. Quiet main, one road | T-3994 | not started |
-| 3. One merge line | T-3995 | not started |
-| 4. One record, Home, This Session | T-3996 | not started |
-| 5. Return to app work | T-3997 | not started |
+| 3. One merge line | T-3995 | in progress: message hold removed and lands no longer need a session (landed); the rest not started |
+| 4. One record, Home, This Session | T-3996 | in progress: the load recorder, the workflow record and the live-feed fix are being built in isolated copies |
+| 5. Return to app work | T-3997 | in progress: the exit rule is live and recording (215 waiting at 1:35 AM; the 24-hour clock is not running) |
 
 </div>
 
@@ -88,6 +88,29 @@ Until T-3992 to T-3997 are ticked, only the Fable session changes these files. O
 ## Log of what landed
 
 (newest last; each line: time, commit, what, the test that proves it)
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: Log of what landed, scrolls sideways" style="--tw:842px" markdown="1">
+
+| Time (11-10) | Commit | What | Proof |
+|---|---|---|---|
+| 12:51 AM | 56d2ee153e | No Investor-message hold on merging; land-live runs with no session, taking the supervisor's lock for the merge alone | tests/personal_land_test.sh, 16 new rows, 2 mutants |
+| 12:55 AM | cda1d3ca73 | The idle alarm leaves a land's lock alone | tests/idle_alarm_test.py, 2 new rows |
+| 12:57 AM | a1a49d99db | The one count of unique tasks waiting to merge, its record, the limit of 12, the 20-for-24-hours exit rule (tools/merge_limit.py) | tests/merge_limit_test.py, 52 rows |
+| 1:13 AM | 0314de4bd3 | Slot test fixture (two rows the first change turned red) | tests/personal_slots_test.sh, 32 pass |
+| 1:16 AM | 01415bcbe9 | The dispatcher reads the one limit; a waiting branch lands before its lane takes any task; three older lines removed | dispatch_merge_mode_test.py, dispatch_own_first_test.py and 10 more suites in the gate |
+| 1:18 AM | 2b4d5f6468 | The main session's pool follows the one limit (2 agents while new work waits); T-3875's three readings and four unused helpers removed | merge_capacity_test.py (rewritten), merge_limit_test.py 55 rows |
+
+</div>
+
+
+## What went wrong, and what it shows
+
+- **The first change left suites red that the gate did not ask for.** tools/personal_land.sh is named by so many suites that the main gate maps only personal_land_test.sh to it. 56d2ee153e turned rows red in personal_slots_test.sh (2), personal_off_test.sh (18), personal_parked_test.sh (17) and site_lanes_test.py (the pinned lane rules). Found by running every suite that names the land tool; fixed with a way back (LAND_LIVE_ALWAYS=0, or the file ops/land_session_only) that those suites pin.
+- **Older reds on main, found the same way:** personal_train_test.sh, 3 rows since T-3659 (11-08 12:47 PM; its fixture lacked tools/land_dupes.py); personal_land_product_test.sh, 2 rows (a mutant whose pattern T-3974 left matching nothing at 11:24 PM 11-09, and the Vendor links row). No routine run of all of tests/ exists, so a red in a suite the gate does not map stays unseen.
+- **Code in the main folder is live before its gate ends.** The lane ticks run tools from the main folder's working files, so a candidate placed there for the gate was run by a tick 19 seconds later (the dispatcher change, 1:13 AM). It had passed its suites in the isolated copy first. The fix belongs to phase 2 (the gate checks a candidate that is not in the main folder).
+- **The close sweep landed 841 lines of code with no gate pass** (0a7568c844, 11:43 PM 11-09: the merge queue page, the throughput tool and two tests, as "ops: work run"). Phase 2 removes that road.
+- **One item stopped by a guard (T-0848), 1:11 AM:** the records guard refused a command that edited tests/governor_test.sh and tests/pacing_test.sh and ran them. The governor's part of "idle is fine" waits on those two files; asked on #41 (c6760458993).
 {% endraw %}
 
 </div>

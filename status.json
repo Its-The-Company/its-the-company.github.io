@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-10T11:23:56.144200+00:00",
+ "at": "2026-11-10T11:33:50.277798+00:00",
  "session": {
-  "active": true,
-  "kind": "morning",
-  "started": "2026-11-10T06:14:34-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-2857",
@@ -128,7 +128,7 @@
     "why": "did not merge cleanly"
    }
   ],
-  "landed": 54,
+  "landed": 53,
   "failed": 48
  },
  "workers": [],
@@ -184,12 +184,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-10T06:28:56-05:00",
  "personal": {
   "week_pct": 41.45,
-  "usage_pct": 36.9,
+  "usage_pct": 36.8,
   "work_pct": 81.2,
-  "read_at": "2026-11-10T11:24:00+00:00",
+  "read_at": "2026-11-10T11:34:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -229,10 +229,10 @@
  "lock_in": {
   "on": false,
   "pool": 0,
-  "at": "2026-11-10T06:24:00-05:00",
+  "at": "2026-11-10T06:34:00-05:00",
   "mode": null
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
  "pool": null,
  "lanes": [
@@ -287,7 +287,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -382,10 +381,6 @@
    "wait": 45,
    "blocked": 68,
    "you": 17
-  },
-  "fin": {
-   "n": 0,
-   "rows": []
   }
  },
  "qr": [
@@ -441,10 +436,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "6:24 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-10T11:24:00+00:00",
-  "started": "6:14 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 6:14 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:24 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "at": "6:34 AM",
+  "why": "Between sessions: no session is running. Last check 6:13 AM ET.",
+  "at_iso": "2026-11-10T11:34:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:34 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 6:13 AM ET.</p></section>"
  }
 }

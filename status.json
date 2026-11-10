@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-10T14:36:04.472393+00:00",
+ "at": "2026-11-10T14:38:34.933041+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -141,12 +141,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-10T09:45:05-05:00",
+ "next_tick": "2026-11-10T09:53:17-05:00",
  "personal": {
   "week_pct": 49.55,
   "usage_pct": 36.8,
   "work_pct": 81.2,
-  "read_at": "2026-11-10T14:36:00+00:00",
+  "read_at": "2026-11-10T14:38:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -176,14 +176,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T09:14:00-05:00",
+   "at": "2026-11-10T09:38:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-10T09:36:00-05:00",
+  "at": "2026-11-10T09:38:00-05:00",
   "mode": null
  },
  "next_tick_why": "last_tick",
@@ -375,11 +375,24 @@
   "sent": "2026-11-10T14:29:28Z",
   "seconds": 97.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6770142720",
+   "state": "received",
+   "position": 1,
+   "eta": "2026-11-10T09:53:17-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "I see the issue was created to apply..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -390,10 +403,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "9:36 AM",
-  "why": "Between sessions: no session is running. Last check 9:30 AM ET.",
-  "at_iso": "2026-11-10T14:36:00+00:00",
+  "at": "9:38 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-10T14:38:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:36 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 9:30 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:38 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

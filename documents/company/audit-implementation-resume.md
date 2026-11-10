@@ -21,6 +21,7 @@ Kept by whoever is doing the work. Update "Where it stands" each time something 
 ## Rules for this work
 
 - **It is not held by the limit on new work.** The <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span> above says so: it removes that limit's cause. Everything else about the limit stands.
+- **As many agents as the changes need** (an Investor, #41 c6779999925, 4:41 PM 11-10, in log/rulings.md): not the governor's merge-only pool of 2. Still held: one gate run at a time, one Xcode or Simulator task at a time, the machine's limits, and tasks touching the same files in order. The order to work in is the list posted on #41 c6780023051 (4:4x PM 11-10): T-4016, T-4017, 12; then 0 (with T-4014, T-4015), 18, 10 slice 2, 16, 17, 11, 13, 14, 2 (T-4008), 5, 6, 4, 19, 20, 21, 22, 23 (T-4013), 24.
 - **Updates go to #41 as each change merges**, in plain English, 12-hour times taken from `date`, never estimated.
 - **Every code change goes through the gate from its own copy.** Make a worktree or clone, change it there, run every test file that names the changed tool (`grep -l <tool> tests/*`), then from the main folder: `python3 tools/main_gate.py land --from <copy> --author '<Name> <email>' -m <message file> --task T-NNNN <path>...`. Never edit code in the main folder. One gate run at a time in the main folder; never run `tests/run.sh` there while one is in flight.
 - **A guard or permission refusal stops that item** (T-0848). Report it on #41 and go to the next item.
@@ -38,6 +39,8 @@ Last updated: 2026-11-10 10:06 AM ET, by the Fable session, at its hand-off (Fab
 - The experiment entry with the baseline and the predictions is OPT-128 in `log/optimizations.md`, read on 11-13 and 11-17.
 
 ### In flight when this was written
+
+4:00 PM 11-10 (Opus work session from 3:51 PM): no work session ran 1:50-3:51 PM: the governor's 5-hour budget estimate had fallen to $3.64 (the Fable session's usage moves the meter but not plan_cost), so it held work at 19% used. Reset to 320 by `governor.py set-5h-budget` (about 3:56 PM); code fix T-4016 (Odalys). Personal landings stuck since 2:10 PM on a stale record in after_sync: T-4017 (Odalys). Item 12 (T-3975) lands after T-4016 from Odalys's existing copy. Reply to an Investor on #41: c6778975973.
 
 1:50 PM: the Opus work session closed at its 3-hour line. Item 12 (T-3975 item 3) was not landed: Odalys's copy is at "/Volumes/Company SSD/company-scratch/T-3975-odalys/wt", her T-3975 board note says what is done and the land command; the next session finishes it from that copy (don't make a new one). Item 10 slice 1 landed 1:05 PM (0157ccd5b0). Item 9 37b62c8ec4 (after-number owed 11-11; baseline 12:30 PM: 65 arrived, 128 merged, 67% first try, 99 sent back). Item 0 e4c770e538; item 4 f372af7f9f. Item 23's overdue experiments are board line T-4013. Trap: a refused rm in a copy followed by `worktree --remove` deleted the refused files too; packets say skip --remove after any refused deletion.
 

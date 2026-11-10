@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-10T09:04:21.650950+00:00",
+ "at": "2026-11-10T09:23:10.381029+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -14,6 +14,10 @@
      {
       "s": "testq",
       "at": 1794301241
+     },
+     {
+      "s": "macbook",
+      "at": 1794301791
      }
     ]
    },
@@ -27,20 +31,35 @@
       "at": 1794298541
      }
     ]
-   },
-   {
-    "t": "T-3401",
-    "name": "Add a general web request call and an OpenSSL check",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794258340
-     }
-    ]
    }
   ],
   "done": [
+   {
+    "t": "T-2318",
+    "name": "Leave the unused manifest reader out of the Release app",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794302336
+   },
+   {
+    "t": "T-2442",
+    "name": "Review one change independently before TestFlight",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794301822,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3339",
+    "name": "Clearer task steps, list boxes and In Flight filters",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794301822,
+    "why": "did not merge cleanly"
+   },
    {
     "t": "T-2230",
     "name": "Mark the widget deadline outcome reliably",
@@ -101,36 +120,10 @@
     "end": "failed",
     "end_at": 1794295693,
     "why": "tests failed"
-   },
-   {
-    "t": "T-3109",
-    "name": "Keep Xcode's lock in a copy outside git",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794295693,
-    "why": "tests failed"
-   },
-   {
-    "t": "T-2491",
-    "name": "Stop the stuck extension from recreating deleted widget folders",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794295355,
-    "why": "Xcode tests failed"
-   },
-   {
-    "t": "T-3331",
-    "name": "Name each new board line when it is added",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794294532
    }
   ],
-  "landed": 53,
-  "failed": 41
+  "landed": 54,
+  "failed": 39
  },
  "workers": [],
  "who": "",
@@ -143,28 +136,28 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 100.0,
-   "resets_at": "2026-11-10T09:00:00.270419+00:00",
+   "pct": 4.0,
+   "resets_at": "2026-11-10T13:59:59.951968+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 0.0,
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 65.0,
-   "resets_at": "2026-11-15T07:00:00.270441+00:00",
+   "pct": 66.0,
+   "resets_at": "2026-11-15T06:59:59.951989+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 35.0,
+   "left": 34.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 48.0,
-   "resets_at": "2026-11-15T07:00:00.270584+00:00",
+   "pct": 51.0,
+   "resets_at": "2026-11-15T06:59:59.952180+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-10T03:46:47.300657-05:00"
+  "read_at": "2026-11-10T04:06:22.923163-05:00"
  },
  "ui": {
-  "week_pct": 0.18,
+  "week_pct": 0.183,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -176,12 +169,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-10T04:01:47-05:00",
+ "next_tick": "2026-11-10T04:21:23-05:00",
  "personal": {
-  "week_pct": 37.97,
+  "week_pct": 38.55,
   "usage_pct": 36.9,
   "work_pct": 81.2,
-  "read_at": "2026-11-10T09:06:00+00:00",
+  "read_at": "2026-11-10T09:25:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -202,7 +195,7 @@
   }
  ],
  "disk": {
-  "free_gb": 31,
+  "free_gb": 30,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -211,7 +204,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T04:04:00-05:00",
+   "at": "2026-11-10T04:23:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-09T08:43:00-05:00"
@@ -221,7 +214,7 @@
  "lock_in": {
   "on": false,
   "pool": 0,
-  "at": "2026-11-10T04:06:00-05:00",
+  "at": "2026-11-10T04:25:00-05:00",
   "mode": null
  },
  "next_tick_why": "last_tick",
@@ -355,17 +348,17 @@
    {
     "w": "Operator",
     "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
-    "at": "2026-11-10T03:30:00-05:00"
+    "at": "2026-11-10T04:05:00-05:00"
    },
    {
     "w": "Operator",
     "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
-    "at": "2026-11-10T03:30:00-05:00"
+    "at": "2026-11-10T04:05:00-05:00"
    },
    {
     "w": "Operator",
     "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
-    "at": "2026-11-10T03:29:00-05:00"
+    "at": "2026-11-10T04:04:00-05:00"
    }
   ],
   "count": {
@@ -428,10 +421,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "4:06 AM",
-  "why": "Plan limit: the 5-hour allowance is near its end; it resets at 4:00 AM ET. Last check 4:06 AM ET.",
-  "at_iso": "2026-11-10T09:06:00+00:00",
+  "at": "4:25 AM",
+  "why": "Plan limit: the 5-hour allowance is near its end; it resets at 8:59 AM ET. Last check 4:24 AM ET.",
+  "at_iso": "2026-11-10T09:25:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:06 AM ET</p><p class=\"an-why\">Plan limit: the 5-hour allowance is near its end; it resets at 4:00 AM ET. Last check 4:06 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:25 AM ET</p><p class=\"an-why\">Plan limit: the 5-hour allowance is near its end; it resets at 8:59 AM ET. Last check 4:24 AM ET.</p></section>"
  }
 }

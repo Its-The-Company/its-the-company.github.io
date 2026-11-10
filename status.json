@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-10T02:03:29.670750+00:00",
+ "at": "2026-11-10T02:07:36.018809+00:00",
  "session": {
-  "active": true,
-  "kind": "inbox",
-  "started": "2026-11-09T20:58:51-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-3680",
@@ -233,20 +233,20 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 674,
+  "runnable_count": 676,
   "blocked_count": 114
  },
  "meter": {
   "five_hour": {
    "pct": 20.0,
-   "resets_at": "2026-11-10T03:59:59.528090+00:00",
+   "resets_at": "2026-11-10T04:00:00.306581+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 80.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 35.0,
-   "resets_at": "2026-11-15T06:59:59.528113+00:00",
+   "resets_at": "2026-11-15T07:00:00.306602+00:00",
    "used_words": "of your weekly allowance used",
    "left": 65.0,
    "left_words": "of your weekly allowance left"
@@ -256,10 +256,10 @@
    "resets_at": "2026-11-15T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-09T20:48:49.351531-05:00"
+  "read_at": "2026-11-09T21:07:24.979464-05:00"
  },
  "ui": {
-  "week_pct": 0.071,
+  "week_pct": 0.07,
   "five_hour_pct": 0.394,
   "caps_pct": {
    "week": 3.0,
@@ -271,12 +271,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-09T21:22:25-05:00",
  "personal": {
   "week_pct": 3.57,
   "usage_pct": 9.2,
   "work_pct": 50.0,
-  "read_at": "2026-11-10T02:06:00+00:00",
+  "read_at": "2026-11-10T02:09:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -306,7 +306,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-09T20:53:00-05:00",
+   "at": "2026-11-09T21:07:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-09T08:43:00-05:00"
@@ -316,16 +316,12 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-09T21:06:00-05:00",
+  "at": "2026-11-09T21:09:00-05:00",
   "mode": null
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Spread: 65% of the week left, to use up by Sat 23:00, 3 hours before the week resets; the machine allows 6 (held, just changed: 156 lane branches parked in 24 hours, over 40; 100 retry lines wait,...",
-  "n": 2,
-  "at": "2026-11-09T20:58:36.440566-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -378,7 +374,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -469,14 +464,10 @@
    }
   ],
   "count": {
-   "next": 674,
+   "next": 676,
    "wait": 46,
    "blocked": 68,
    "you": 18
-  },
-  "fin": {
-   "n": 0,
-   "rows": []
   }
  },
  "qr": [
@@ -517,11 +508,24 @@
   "sent": "2026-11-10T01:58:54Z",
   "seconds": 179.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6756912112",
+   "state": "received",
+   "position": 1,
+   "eta": "2026-11-09T21:22:25-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "End this session gracefully and..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -532,10 +536,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "9:06 PM",
-  "why": "Between sessions: no session is running. Last check 8:58 PM ET.",
-  "at_iso": "2026-11-10T02:06:00+00:00",
+  "at": "9:09 PM",
+  "why": "Between sessions: no session is running. Last check 9:07 PM ET.",
+  "at_iso": "2026-11-10T02:09:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:06 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 8:58 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:09 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 9:07 PM ET.</p></section>"
  }
 }

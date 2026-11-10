@@ -535,6 +535,7 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-09 19:49 ET** ((private)): No more Needs-you entries for a session's changes to Investor-owned files. Accidental ones are dropped by the company; intended changes go through the applier, which applies alone what charter 59 allows. Full auto-approve of every such change is asked back on #41 (c6755673143); until answered, the charter-reserved items keep needing approve.
 - **2026-11-09 19:58 ET** ((private)): Entries about edits to Investor-owned files no longer go to the Investors; accidental ones are dropped; real changes go through the proposal tool.
 - **2026-11-09 20:00 ET** ((private)): One approve on an issue covers every change that accomplishes that issue's stated goal; the company does not ask again on the same issue.
+- **2026-11-09 21:06 ET** ((private)): Merge-improving tasks never enter the parked queue and are merged ahead of all other work at every stage; parked merge-improving work is merged first; the merge/park queue is the top priority until solved.
 {% endraw %}
 
 </div>

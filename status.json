@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-10T09:44:58.880977+00:00",
+ "at": "2026-11-10T09:51:04.801209+00:00",
  "session": {
-  "active": true,
-  "kind": "inbox",
-  "started": "2026-11-10T04:42:08-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-2715",
@@ -14,6 +14,17 @@
      {
       "s": "macbook",
       "at": 1794303831
+     }
+    ]
+   },
+   {
+    "t": "T-1732",
+    "name": "Keep the learned Python library root only if valid",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794303955
      }
     ]
    }
@@ -142,24 +153,24 @@
   "read_at": "2026-11-10T04:41:39.051302-05:00"
  },
  "ui": {
-  "week_pct": 0.191,
-  "five_hour_pct": 0.0,
+  "week_pct": 0.21,
+  "five_hour_pct": 23.424,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
   },
-  "warn": false,
-  "over": false,
+  "warn": true,
+  "over": true,
   "coverage": 1.0,
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-10T05:05:50-05:00",
  "personal": {
   "week_pct": 40.3,
   "usage_pct": 36.9,
   "work_pct": 81.2,
-  "read_at": "2026-11-10T09:47:00+00:00",
+  "read_at": "2026-11-10T09:51:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -180,7 +191,7 @@
   }
  ],
  "disk": {
-  "free_gb": 30,
+  "free_gb": 28,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -189,7 +200,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T04:47:00-05:00",
+   "at": "2026-11-10T04:50:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-09T08:43:00-05:00"
@@ -199,16 +210,11 @@
  "lock_in": {
   "on": false,
   "pool": 0,
-  "at": "2026-11-10T04:47:00-05:00",
+  "at": "2026-11-10T04:51:00-05:00",
   "mode": null
  },
- "next_tick_why": "session",
- "idle": {
-  "since": "2026-11-10T00:12:06-05:00",
-  "minutes": 272,
-  "why": "a tick has spent 0 min on steps before the session",
-  "healed": []
- },
+ "next_tick_why": "last_tick",
+ "idle": null,
  "pool": null,
  "lanes": [
   {
@@ -356,10 +362,6 @@
    "wait": 46,
    "blocked": 68,
    "you": 17
-  },
-  "fin": {
-   "n": 0,
-   "rows": []
   }
  },
  "qr": [
@@ -403,19 +405,32 @@
  "inbox": [
   {
    "id": "c6764073852",
-   "state": "in_progress",
+   "state": "received",
    "position": 1,
+   "eta": "2026-11-10T05:05:50-05:00",
    "tasks": {
     "open": 0,
     "done": 0
    },
    "title": "I added a fresh approve to 237 as well"
+  },
+  {
+   "id": "c6764187584",
+   "state": "received",
+   "position": 2,
+   "eta": "2026-11-10T05:05:50-05:00",
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Stopped, and why. One command of..."
   }
  ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -426,10 +441,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "4:47 AM",
-  "why": "Plan limit: the 5-hour allowance is near its end; it resets at 8:59 AM ET. Last check 4:47 AM ET.",
-  "at_iso": "2026-11-10T09:47:00+00:00",
+  "at": "4:51 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-10T09:51:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:47 AM ET</p><p class=\"an-why\">Plan limit: the 5-hour allowance is near its end; it resets at 8:59 AM ET. Last check 4:47 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:51 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

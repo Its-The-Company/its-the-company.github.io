@@ -537,6 +537,7 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-09 20:00 ET** ((private)): One approve on an issue covers every change that accomplishes that issue's stated goal; the company does not ask again on the same issue.
 - **2026-11-09 21:06 ET** ((private)): Merge-improving tasks never enter the parked queue and are merged ahead of all other work at every stage; parked merge-improving work is merged first; the merge/park queue is the top priority until solved.
 - **2026-11-09 21:10 ET** ((private)): Only merge-queue work starts until the Investors say the queue is in a better spot; as many workers as needed; self-imposed usage limits do not stop it.
+- **2026-11-09 21:13 ET** ((private)): Simulators may be stopped when they use CPU the merge improvements need; they restart once app work needs to merge.
 {% endraw %}
 
 </div>

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-10T15:49:50.516254+00:00",
+ "at": "2026-11-10T15:52:54.300701+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,16 +96,25 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[site] T-4007 Home strip and list agree",
+   "task": "[tools] T-3978 worker copies via land --from",
    "model": "opus",
-   "started": "2026-11-10T15:11:31.313Z",
-   "seconds": 2299,
+   "started": "2026-11-10T15:52:43.512Z",
+   "seconds": 10,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys",
- "recent": [],
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[site] T-4007 Home strip and list agree",
+   "model": "opus",
+   "started": "2026-11-10T15:11:31.313Z",
+   "seconds": null,
+   "finished": "2026-11-10T15:52:02.756000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -152,7 +161,7 @@
   "week_pct": 50.07,
   "usage_pct": 36.8,
   "work_pct": 80.2,
-  "read_at": "2026-11-10T15:49:00+00:00",
+  "read_at": "2026-11-10T15:52:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -182,14 +191,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T10:45:00-05:00",
+   "at": "2026-11-10T10:51:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-10T10:49:00-05:00",
+  "at": "2026-11-10T10:52:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -203,9 +212,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[site] T-4007 Home strip and list agree",
+   "task": "[tools] T-3978 worker copies via land --from",
    "model": "opus",
-   "since": "2026-11-10T15:11:31.313Z",
+   "since": "2026-11-10T15:52:43.512Z",
    "next": [],
    "effort": "high"
   },
@@ -254,13 +263,13 @@
   "run": [
    {
     "w": "Odalys",
-    "k": "site",
-    "t": "Flow tab task list with old Home filters",
+    "k": "tools",
+    "t": "Give every worker its own copy of the code",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-10T15:11:31.313Z",
+    "at": "2026-11-10T15:52:43.512Z",
     "o": "c",
-    "task": "T-4007"
+    "task": "T-3978"
    }
   ],
   "src": "plan",
@@ -417,10 +426,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "10:49 AM",
+  "at": "10:52 AM",
   "why": "",
-  "at_iso": "2026-11-10T15:49:00+00:00",
+  "at_iso": "2026-11-10T15:52:00+00:00",
   "started": "10:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:49 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:52 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-10T17:39:30.549924+00:00",
+ "at": "2026-11-10T17:42:31.748264+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -95,16 +95,24 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4011 failed changes back to author",
-   "model": "fable",
-   "started": "2026-11-10T17:01:52.824Z",
-   "seconds": 2257,
+   "task": "[tools] T-4012 retire retry routes",
+   "model": "opus",
+   "started": "2026-11-10T17:41:05.825Z",
+   "seconds": 85,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4011 failed changes back to author",
+   "model": "fable",
+   "started": "2026-11-10T17:01:52.824Z",
+   "seconds": null,
+   "finished": "2026-11-10T17:40:25.512000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[site] T-4007 three task-list fixes",
@@ -133,7 +141,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 638,
+  "runnable_count": 639,
   "blocked_count": 112
  },
  "meter": {
@@ -176,7 +184,7 @@
   "week_pct": 50.07,
   "usage_pct": 36.8,
   "work_pct": 80.2,
-  "read_at": "2026-11-10T17:39:00+00:00",
+  "read_at": "2026-11-10T17:42:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -213,7 +221,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-10T12:39:00-05:00",
+  "at": "2026-11-10T12:42:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -227,9 +235,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4011 failed changes back to author",
-   "model": "fable",
-   "since": "2026-11-10T17:01:52.824Z",
+   "task": "[tools] T-4012 retire retry routes",
+   "model": "opus",
+   "since": "2026-11-10T17:41:05.825Z",
    "next": [],
    "effort": "high"
   },
@@ -279,12 +287,12 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Send failed changes back to their author with the reason",
-    "m": "fable",
+    "t": "Retire the retry routes the send-back replaces",
+    "m": "opus",
     "e": "high",
-    "at": "2026-11-10T17:01:52.824Z",
+    "at": "2026-11-10T17:41:05.825Z",
     "o": "c",
-    "task": "T-4011"
+    "task": "T-4012"
    }
   ],
   "src": "plan",
@@ -363,6 +371,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "When a change fails its merge checks, the lane that wrote it now gets it back as its next task...",
+    "at": "2026-11-10T12:39:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "Home's task list now shows work that is moving before work that is held, each stage button shows...",
     "at": "2026-11-10T12:00:00-05:00"
    },
@@ -370,22 +383,21 @@
     "w": "Odalys",
     "t": "Each worker now gets a private copy of the code to work in, so one worker's half-done edits can...",
     "at": "2026-11-10T11:22:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
-    "at": "2026-11-10T10:08:00-05:00"
    }
   ],
   "count": {
-   "next": 638,
+   "next": 639,
    "wait": 44,
    "blocked": 68,
    "you": 17
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-4011",
+     "Send failed changes back to..."
+    ],
     [
      "T-4007",
      "Flow tab task list with old..."
@@ -451,10 +463,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "12:39 PM",
+  "at": "12:42 PM",
   "why": "",
-  "at_iso": "2026-11-10T17:39:00+00:00",
+  "at_iso": "2026-11-10T17:42:00+00:00",
   "started": "10:10 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:39 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:10 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:42 PM ET</p></section>"
  }
 }

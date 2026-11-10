@@ -43,6 +43,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 2026-11-09 T-3669: launcher editor drawn + spec pywidget/docs/design/launcher/editor.md, UNCOMMITTED: main_gate waits on the silent MacBook runner; the MAIN_GATE_SKIP commit was refused (CI Bypass). Commit and tick when the runner answers.
 - 2026-11-09 T-3424: Work and bottlenecks panel designed (one panel, 4th bubble renamed Work), ops/plans/home-metrics-panels/ (sample.py, draw.py, spec.md, 16 shots, 0 fails). UNCOMMITTED: main_gate waits on the silent MacBook runner; commit + tick when it answers. Lesson: a range headline is computed over raw records (agg), never averaged from bucket medians.
+- 2026-11-08 T-3669 (a6b5c6bd2): launcher slot editor frames + launcher/editor.md for T-3664 (Idris). Open: store needs symbol/hue, delete, reorder, LauncherTarget.refusal; known-app list (25 max) is Wrenna's; shortcuts:// unconfirmed (#192). Lesson: board_tick add writes main's live board; grep the main checkout's board for a parent line, not the worktree's.
 {% endraw %}
 
 

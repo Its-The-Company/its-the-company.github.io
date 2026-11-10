@@ -1,50 +1,78 @@
 {
  "schema": 1,
- "at": "2026-11-10T13:13:58.261800+00:00",
+ "at": "2026-11-10T13:32:33.140712+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
    {
-    "t": "T-3669",
-    "name": "Draw the launcher slot editor screen",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "macbook",
-      "at": 1794316411
-     }
-    ]
-   },
-   {
-    "t": "T-3763",
-    "name": "Open the file a widget runs when ids repeat",
+    "t": "T-2026",
+    "name": "Print which tests were skipped in the build summary",
     "acct": "Personal b",
     "steps": [
      {
-      "s": "macbook",
-      "at": 1794316384
+      "s": "testq",
+      "at": 1794317541
      }
     ]
    },
    {
-    "t": "T-0444",
-    "name": "Fix the version wording in Acknowledgements rows",
-    "acct": "Personal a",
+    "t": "T-0851",
+    "name": "Split the app guide into one document per section",
+    "acct": "Personal b",
     "steps": [
      {
       "s": "testq",
-      "at": 1794315630
-     },
+      "at": 1794317541
+     }
+    ]
+   },
+   {
+    "t": "T-3027",
+    "name": "Retry finished work that could not be merged",
+    "acct": "Personal b",
+    "steps": [
      {
-      "s": "macbook",
-      "at": 1794316349
+      "s": "testq",
+      "at": 1794317541
      }
     ]
    }
   ],
   "done": [
+   {
+    "t": "T-1442",
+    "name": "Swap in the draft words iOS shows outside the app",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794317146
+   },
+   {
+    "t": "T-3669",
+    "name": "Draw the launcher slot editor screen",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794317135
+   },
+   {
+    "t": "T-3763",
+    "name": "Open the file a widget runs when ids repeat",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794317121
+   },
+   {
+    "t": "T-0444",
+    "name": "Fix the version wording in Acknowledgements rows",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794317104
+   },
    {
     "t": "T-0623",
     "name": "Fix the licence wording in Acknowledgements rows",
@@ -97,41 +125,10 @@
     "end": "failed",
     "end_at": 1794315520,
     "why": "Xcode tests failed"
-   },
-   {
-    "t": "T-0425",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794311848
-   },
-   {
-    "t": "T-2098",
-    "name": "Fix paths in the mutation check files",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794308998
-   },
-   {
-    "t": "T-0945",
-    "name": "Retry a widget save fix cut off earlier",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794308173
-   },
-   {
-    "t": "T-2296",
-    "name": "Finish the gallery pager, iPad layout and detail foot",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794306383
    }
   ],
-  "landed": 53,
-  "failed": 53
+  "landed": 57,
+  "failed": 49
  },
  "workers": [],
  "who": "",
@@ -139,33 +136,33 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 643,
+  "runnable_count": 641,
   "blocked_count": 113
  },
  "meter": {
   "five_hour": {
-   "pct": 33.0,
-   "resets_at": "2026-11-10T13:59:59.553909+00:00",
+   "pct": 41.0,
+   "resets_at": "2026-11-10T14:00:00.392447+00:00",
    "used_words": "of your 5-hour allowance used",
-   "left": 67.0,
+   "left": 59.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 73.0,
-   "resets_at": "2026-11-15T06:59:59.553935+00:00",
+   "pct": 76.0,
+   "resets_at": "2026-11-15T07:00:00.392472+00:00",
    "used_words": "of your weekly allowance used",
-   "left": 27.0,
+   "left": 24.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
-   "pct": 65.0,
-   "resets_at": "2026-11-15T06:59:59.554082+00:00",
+   "pct": 69.0,
+   "resets_at": "2026-11-15T07:00:00.392632+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-10T07:56:43.522565-05:00"
+  "read_at": "2026-11-10T08:14:27.053918-05:00"
  },
  "ui": {
-  "week_pct": 0.266,
+  "week_pct": 0.277,
   "five_hour_pct": 6.245,
   "caps_pct": {
    "week": 3.0,
@@ -177,12 +174,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-10T08:11:43-05:00",
+ "next_tick": "2026-11-10T08:29:27-05:00",
  "personal": {
-  "week_pct": 42.56,
+  "week_pct": 44.31,
   "usage_pct": 36.8,
   "work_pct": 81.2,
-  "read_at": "2026-11-10T13:14:00+00:00",
+  "read_at": "2026-11-10T13:36:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -203,7 +200,7 @@
   }
  ],
  "disk": {
-  "free_gb": 35,
+  "free_gb": 34,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -212,7 +209,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T08:13:00-05:00",
+   "at": "2026-11-10T08:31:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-09T08:43:00-05:00"
@@ -222,7 +219,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-10T08:14:00-05:00",
+  "at": "2026-11-10T08:36:00-05:00",
   "mode": null
  },
  "next_tick_why": "last_tick",
@@ -354,23 +351,23 @@
   ],
   "done": [
    {
-    "w": "Operator",
-    "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
-    "at": "2026-11-10T08:03:00-05:00"
+    "w": "Maren",
+    "t": "Drew the screen where people choose which app each launcher tile opens, from a list, a pasted...",
+    "at": "2026-11-10T08:25:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "Tapping a script widget now opens the file that widget actually runs, not a leftover conflict or...",
+    "at": "2026-11-10T08:25:00-05:00"
    },
    {
     "w": "Operator",
     "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
     "at": "2026-11-10T08:03:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Main was not failing. One waiting change had its own compile error, and three stacked checks of...",
-    "at": "2026-11-10T07:57:00-05:00"
    }
   ],
   "count": {
-   "next": 643,
+   "next": 641,
    "wait": 45,
    "blocked": 68,
    "you": 17
@@ -429,10 +426,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "8:14 AM",
-  "why": "Waiting for the week's line: this week's usage is ahead of its even pace. Last check 8:14 AM ET.",
-  "at_iso": "2026-11-10T13:14:00+00:00",
+  "at": "8:36 AM",
+  "why": "Waiting for the week's line: this week's usage is ahead of its even pace. Last check 8:36 AM ET.",
+  "at_iso": "2026-11-10T13:36:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:14 AM ET</p><p class=\"an-why\">Waiting for the week's line: this week's usage is ahead of its even pace. Last check 8:14 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:36 AM ET</p><p class=\"an-why\">Waiting for the week's line: this week's usage is ahead of its even pace. Last check 8:36 AM ET.</p></section>"
  }
 }

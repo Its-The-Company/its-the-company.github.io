@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-10T05:11:27.450127+00:00",
+ "at": "2026-11-10T05:20:45.491094+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
-   {
-    "t": "T-2948",
-    "name": "Keep Xcode's lock in a copy outside git",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794285344
-     }
-    ]
-   },
    {
     "t": "T-1732",
     "name": "Keep the learned Python library root only if valid",
@@ -71,6 +60,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-2948",
+    "name": "Keep Xcode's lock in a copy outside git",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794287874
+   },
    {
     "t": "T-1289",
     "name": "Reject line breaks in widget text suffixes",
@@ -142,16 +139,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794281305
-   },
-   {
-    "t": "T-2888",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794281305
    }
   ],
-  "landed": 42,
+  "landed": 43,
   "failed": 25
  },
  "workers": [],
@@ -160,8 +150,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 684,
-  "blocked_count": 115
+  "runnable_count": 680,
+  "blocked_count": 114
  },
  "meter": {
   "five_hour": {
@@ -186,8 +176,8 @@
   "read_at": "2026-11-10T00:11:14.505397-05:00"
  },
  "ui": {
-  "week_pct": 0.11,
-  "five_hour_pct": 0.046,
+  "week_pct": 0.116,
+  "five_hour_pct": 0.086,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -203,7 +193,7 @@
   "week_pct": 3.79,
   "usage_pct": 8.3,
   "work_pct": 48.4,
-  "read_at": "2026-11-10T05:14:00+00:00",
+  "read_at": "2026-11-10T05:22:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -224,7 +214,7 @@
   }
  ],
  "disk": {
-  "free_gb": 36,
+  "free_gb": 35,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -233,7 +223,7 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T00:09:00-05:00",
+   "at": "2026-11-10T00:17:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-09T08:43:00-05:00"
@@ -243,16 +233,11 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-10T00:14:00-05:00",
+  "at": "2026-11-10T00:22:00-05:00",
   "mode": null
  },
  "next_tick_why": "last_tick",
- "idle": {
-  "since": "2026-11-09T23:45:13-05:00",
-  "minutes": 26,
-  "why": "a tick has spent 17 min on steps before the session",
-  "healed": []
- },
+ "idle": null,
  "pool": null,
  "lanes": [
   {
@@ -396,8 +381,8 @@
    }
   ],
   "count": {
-   "next": 684,
-   "wait": 49,
+   "next": 680,
+   "wait": 48,
    "blocked": 66,
    "you": 17
   }
@@ -437,22 +422,10 @@
   ]
  ],
  "reply": {
-  "sent": "2026-11-10T04:32:36Z",
-  "seconds": 734.0
+  "sent": "2026-11-10T04:55:54Z",
+  "seconds": 914.0
  },
- "inbox": [
-  {
-   "id": "c6759374274",
-   "state": "waiting",
-   "position": 1,
-   "eta": "2026-11-10T00:26:14-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "approve"
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -467,10 +440,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "12:14 AM",
-  "why": "Between sessions: no session is running. Last check 12:11 AM ET.",
-  "at_iso": "2026-11-10T05:14:00+00:00",
+  "at": "12:22 AM",
+  "why": "Waiting for the week's line: the week is ahead of its pace to be used up before it resets. Last check 12:22 AM ET.",
+  "at_iso": "2026-11-10T05:22:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:14 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 12:11 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:22 AM ET</p><p class=\"an-why\">Waiting for the week's line: the week is ahead of its pace to be used up before it resets. Last check 12:22 AM ET.</p></section>"
  }
 }

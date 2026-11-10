@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-10T23:38:42.832519+00:00",
+ "at": "2026-11-10T23:41:44.690409+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
    "task": "[tools] T-4016 five-hour false hold",
    "model": "opus",
    "started": "2026-11-10T23:38:11.801Z",
-   "seconds": 31,
+   "seconds": 212,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +105,7 @@
    "task": "[tools] T-3975 land item 3 stop-at-red",
    "model": "opus",
    "started": "2026-11-10T23:38:18.000Z",
-   "seconds": 24,
+   "seconds": 206,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +114,7 @@
    "task": "[tools] T-4017 unstick personal landings",
    "model": "opus",
    "started": "2026-11-10T23:38:25.452Z",
-   "seconds": 17,
+   "seconds": 199,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[test] audit item 18 drop_blob_test lift",
    "model": "opus",
    "started": "2026-11-10T23:38:30.805Z",
-   "seconds": 12,
+   "seconds": 193,
    "finished": null,
    "effort": "high"
   },
@@ -132,12 +132,57 @@
    "task": "[tools] T-4013 close overdue experiments",
    "model": "opus",
    "started": "2026-11-10T23:38:37.747Z",
-   "seconds": 5,
+   "seconds": 186,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-4014 T-4015 Home panels slim",
+   "model": "opus",
+   "started": "2026-11-10T23:38:44.201Z",
+   "seconds": 180,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4008 declined Ask to Buy",
+   "model": "opus",
+   "started": "2026-11-10T23:39:22.453Z",
+   "seconds": 142,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[tools] audit item 17 nightly suite run",
+   "model": "opus",
+   "started": "2026-11-10T23:39:28.650Z",
+   "seconds": 136,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] audit item 19 milestones refresh",
+   "model": "opus",
+   "started": "2026-11-10T23:39:35.101Z",
+   "seconds": 129,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] audit item 21 merge_rate session count",
+   "model": "opus",
+   "started": "2026-11-10T23:39:40.173Z",
+   "seconds": 124,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x5",
+ "who": "Odalys x6, Maren, Idris, Pernille, Ines",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -185,7 +230,7 @@
   "week_pct": 24.09,
   "usage_pct": 35.4,
   "work_pct": 78.4,
-  "read_at": "2026-11-10T23:38:00+00:00",
+  "read_at": "2026-11-10T23:41:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -206,23 +251,23 @@
   }
  ],
  "disk": {
-  "free_gb": 35,
+  "free_gb": 34,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 180
+   "free_gb": 176
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T18:35:00-05:00",
+   "at": "2026-11-10T18:40:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-10T18:38:00-05:00",
+  "at": "2026-11-10T18:41:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -243,41 +288,45 @@
    "effort": "high"
   },
   {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
-   "model": null,
-   "since": null,
-   "next": []
+   "name": "Maren",
+   "state": "running",
+   "task": "[design] T-4014 T-4015 Home panels slim",
+   "model": "opus",
+   "since": "2026-11-10T23:38:44.201Z",
+   "next": [],
+   "effort": "high"
   },
   {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-4008 declined Ask to Buy",
+   "model": "opus",
+   "since": "2026-11-10T23:39:22.453Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] audit item 17 nightly suite run",
+   "model": "opus",
+   "since": "2026-11-10T23:39:28.650Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Ines",
+   "state": "running",
+   "task": "[plan] audit item 19 milestones refresh",
+   "model": "opus",
+   "since": "2026-11-10T23:39:35.101Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P1, from T-3789...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
    "model": null,
    "since": null,
    "next": []
@@ -333,6 +382,35 @@
     "at": "2026-11-10T23:38:37.747Z",
     "o": "c",
     "task": "T-4013"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Shrink the Home Flow panel to graphs and numbers",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-10T23:38:44.201Z",
+    "o": "c",
+    "task": "T-4014"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Find why a declined Ask to Buy read as granted",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-10T23:39:22.453Z",
+    "o": "c",
+    "task": "T-4008"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Audit item 17 nightly suite run",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-10T23:39:28.650Z",
+    "o": "c"
    }
   ],
   "src": "plan",
@@ -486,13 +564,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 5,
+  "main": 10,
   "lanes": 0,
-  "total": 5,
-  "at": "6:38 PM",
+  "total": 10,
+  "at": "6:41 PM",
   "why": "",
-  "at_iso": "2026-11-10T23:38:00+00:00",
+  "at_iso": "2026-11-10T23:41:00+00:00",
   "started": "6:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 6:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:38 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>10</b> agents running now</p><p class=\"an-sub\">Main session 10, started 6:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:41 PM ET</p></section>"
  }
 }

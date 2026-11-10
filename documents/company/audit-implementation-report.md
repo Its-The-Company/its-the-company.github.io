@@ -21,7 +21,7 @@ The merge step itself is not faster yet. Tasks merge at about 4 an hour, the sam
 
 ## 1. What changed
 
-28 changes reached main through the merge gate between 12:51 AM and 5:21 AM.
+29 changes reached main through the merge gate between 12:51 AM and 6:35 AM.
 
 - **One limit.** One count of unique tasks waiting to merge, taken every 10 minutes and kept as a record. No new work starts at 12 or more. The dispatcher, the main session's pool, the personal accounts, the handbook and both worker prompts read that one limit.
 - **Idle is fine.** "Never idle", "use the whole allowance" and "every worker always has a task" are gone from the handbook and the prompts. The pace and the allowance are ceilings.
@@ -40,7 +40,7 @@ The merge step itself is not faster yet. Tasks merge at about 4 an hour, the sam
 | Phase | State | Proof |
 |---|---|---|
 | 0. Stabilize | Done, with three test files left red (point 10) | T-3972 and T-3818 on main and ticked; rows fixed in 10 test files: 5 that this session's first change broke, 5 that were red before it |
-| 1. One limit | Done except one file | Tests below, at and above the limit, with the count unreadable, with duplicate branches and with the mode on (`merge_limit_test.py` 55 rows, `personal_pool_test.sh` 108, `lane_take_test.py` 23). The scheduler's own part was cleared by an Investor at 4:40 AM and is in testing (point 10) |
+| 1. One limit | Done (the last file landed at 6:35 AM) | Tests below, at and above the limit, with the count unreadable, with duplicate branches and with the mode on (`merge_limit_test.py` 55 rows, `personal_pool_test.sh` 108, `lane_take_test.py` 23). The scheduler's own part: `governor_test.sh` 220 rows, 16 of them new |
 | 2. Quiet main, one road | Part done | The cleanup's code road is closed (`session_salvage_test.py` 86 rows, 3 mutants). Three parts not started |
 | 3. One merge line | Part done | No message hold, no session needed, the reset rule, the self-starting line, cut checks keeping passes (`personal_land_test.sh` 381 rows, `merge_reset_test.py` 110, `land_kick_test.py` 28). Three parts not started |
 | 4. One record, Home, This Session | Done, with gaps in the record | `flow_test.py` 45 rows, `site_home_flow_test.py` 151, `site_session_view_test.py` 78, `machine_load_test.py` 60 |
@@ -109,14 +109,14 @@ What they cannot show yet, and say so: the moment a task is handed to a worker, 
 
 ## 9. The three approvals
 
-1. **"Idle is fine when merging is the limit."** In force in the handbook, the prompts, the dispatcher, the pool and the personal accounts. The main session's scheduler file is the last place; its change is written, its tests pass, and it is in a wider test run before the gate (point 10).
+1. **"Idle is fine when merging is the limit."** In force in the handbook, the prompts, the dispatcher, the pool and the personal accounts. The main session's scheduler file was the last place; it landed at 6:35 AM, after an Investor cleared its stopped tests at 4:40 AM.
 2. **Merge-queue-only mode ends under 20 for 24 hours.** In force. Unique task IDs, one source, a continuous record; a gap or an unreadable count resets the clock. The clock is not running: the count is 96. When it ends, app work goes first with process work at about 10%. Visible on Home and in the report.
 3. **An Investor message never holds a merge.** In force since 12:51 AM, with tests. The safety checks and the protected-file rules are unchanged.
 
 ## 10. What is left, and what blocks it
 
 **Asked of an Investor, and answered at 4:40 AM by an Investor:**
-- **The scheduler's part of approval 1.** A safety check refused a command of mine at 1:11 AM, and the company's rule is that the item then stops. "go ahead with the scheduler tests" cleared it. The two test files are updated and pass (220 and 45 rows). While testing I found and fixed a fault in my own change: with the limit closed and nothing for a worker to do, a waiting Investor message would have opened no session. It now always gets its short reply session. The change goes to the gate after a run of every test file that names the scheduler.
+- **The scheduler's part of approval 1.** A safety check refused a command of mine at 1:11 AM, and the company's rule is that the item then stops. "go ahead with the scheduler tests" cleared it. The two test files are updated and pass (220 and 45 rows). While testing I found and fixed a fault in my own change: with the limit closed and nothing for a worker to do, a waiting Investor message would have opened no session. It now always gets its short reply session. The change landed at 6:35 AM (`ce8522d75a`), after a run of every test file that names the scheduler (43 files).
 - **Proposal #237.** Approved again at 4:41 AM and applied again by the company's own tool at 5:34 AM. One guard test row depends on it.
 
 **Not started:**

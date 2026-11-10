@@ -76,7 +76,7 @@ Until T-3992 to T-3997 are ticked, only the Fable session changes these files. O
 | Phase | Board line | State |
 |---|---|---|
 | 0. Stabilize | T-3992 | landed: inventory done, 12 lines closed, T-3972 and T-3818 on main and ticked, every red found on main fixed (9 suites), the gate no longer reads a cut host run as red. Left: T-3908's line (its page is on main) and T-3974/T-3975's remaining items |
-| 1. Admission: one limit on unmerged work | T-3993 | landed except one file: count, record, limit, dispatcher, pool, lane tick, lane_take, handbook, prompts and Home's line are on main; tools/governor.py's part (its own next-step text, the last-day release) is stopped by a guard (T-0848) and waits for a clearing word |
+| 1. Admission: one limit on unmerged work | T-3993 | landed and ticked (6:35 AM): the count, its record, the limit, the dispatcher, the pool, the lane tick, lane_take, the handbook, the prompts, Home's line and the governor |
 | 2. Quiet main, one road | T-3994 | in progress: the close sweep and the salvage set leftover code aside on a leftover/ branch instead of committing it (landed). Not started: the gate checking a candidate outside the main folder, main-session code through branches, records out of code history |
 | 3. One merge line | T-3995 | in progress: message hold removed and lands no longer need a session (landed, with a way back); the reset rule is on main and applied (73 tasks, count 206 to 133); its hourly job is written, checked in a full clone (personal_land_test.sh 373 pass) and in the gate; about 50 old tasks stay because they share a branch with a newer task; one task per branch, the sent-back state and retiring the other retry routes are not started |
 | 4. One record, Home, This Session | T-3996 | in progress: the load recorder, the workflow record, the live-feed fix and Home's limit line are on main; landed: the load record, the workflow record, the live-status loop, This Session and the new Home are on main. Left: the record does not yet hold a hand-out, a test run's length or a main-gate merge; the unused Home pieces (session_facts.py, the In flight, Simulators, Merging and finance code) wait for a removal of their own |
@@ -119,6 +119,10 @@ Until T-3992 to T-3997 are ticked, only the Fable session changes these files. O
 | 3:58 AM | f93ddfeb92 | The reset rule as an hourly job (tools/jobs_loop.py merge_reset, and the same step in the supervisor's tick when no jobs loop is live); off switch ops/merge_reset_off | jobs_loop_test.py 13 new (99 pass); personal_land_test.sh 373 pass in a full clone; supervisor_test.sh in the gate |
 | 4:07 AM | 1b9818e4f2 | The watcher starts a land pass whenever a branch waits and none is running (the line stood idle 39 of 120 minutes from 2:00 to 4:00 AM); off switch ops/land_kick_off | land_kick_test.py 28 rows; 9 suites in the gate |
 | 5:14 AM | a15dd24770 | The new Home: Now, Needs you, one Flow strip from the one count and the one record, The app, Stuck or failing only when true, the rest under More; the last reply time kept on its first line (T-3117) | site_home_flow_test.py 149 rows; 26 suites' rows changed and marked T-3996; 40 suites in the gate; screenshots in ops/site-checks/t3996-home/ |
+| 5:19 AM | 009baddbfe | T-3975 item 2: a suites run cut at the time limit keeps the passes of the suites that had finished (tests/run.sh writes each suite's result as it ends); the real-tick fixture keeps the hourly reset out of every arm | personal_land_test.sh 381 rows (5 of 8 new rows red on the old code, 1 mutant), run_progress_test.py 12 |
+| 5:19 AM | f829bb3135 | The new Home's four screenshots | |
+| 5:21 AM | 77718596eb | Home's oldest waiting change falls back to the count's own branches when the record's task is no longer waiting | site_home_flow_test.py 151 |
+| 6:35 AM | ce8522d75a | The scheduler asks the one limit before any work session (merge work only while it is closed; no session and no <span title="A numbered batch of planned work, with its own plan file.">refill</span> when nothing needs a worker; an Investor's message always answered); the last-day release retired; the site suite's goal-block row no longer trips on the usage bar | governor_test.sh 220 (16 new), pacing_test.sh 45, supervisor_test.sh 221, site_lanes_test.py 51; 43 suites that name the scheduler run first |
 
 </div>
 
@@ -129,6 +133,12 @@ Until T-3992 to T-3997 are ticked, only the Fable session changes these files. O
 - **tests/lane_env_test.py, 1 row** ("each test that runs a queued tool clears the lane"): it names five suites that do not (investor_age_test.py, land_xc_test.py, merge_first_auto_test.py, settings_json_check_test.py, supervisor_sync_cause_test.sh). Red on unchanged main at 4:58 AM 11-10; none of the five is this work's.
 - **tests/drop_blob_test.py, 4 rows** (the supervisor's drop, pull and push around a big untracked file). Red in the main folder on unchanged main at 3:46 AM 11-10; cause not yet read.
 - **tests/personal_land_test.sh, the four "real tick" rows of part 9 (T-3905, 11-09 9:54 PM)** fail with "not a git repository" whenever the suite runs from a linked worktree (an isolated copy or a lane's folder); they pass in the main folder and in a full clone (373 pass with tonight's changes). A lane whose check includes this suite will read red there.
+
+## The cleanup's new behaviour, seen at work
+
+- The close sweep set aside this session's own gate candidates twice, as built: `leftover/20261110-045254-sweep` (4:52 AM, the new Home's 31 files, while their gate run was in flight) and `leftover/20261110-062514-sweep` (6:25 AM, the scheduler change's 5 files). Both times the files were under ten minutes old, so they were left in place and only a safety copy was made; neither gate run was disturbed.
+- The first copy then read as "1 file waits" in the 6:00 AM report's facts, because the row in tests/site_s30_test.py was changed on purpose before the Home landed (a15dd24770). It was superseded, not unfinished, so that one branch was deleted at 6:38 AM (its only difference from main was the older row). The second reads as settled.
+- What it shows: a safety copy of an in-flight gate candidate can look like waiting work. It goes away when the gate checks a candidate outside the main folder (phase 2, not started).
 
 ## What went wrong, and what it shows
 
@@ -144,6 +154,8 @@ Until T-3992 to T-3997 are ticked, only the Fable session changes these files. O
 - **Code in the main folder is live before its gate ends.** The lane ticks run tools from the main folder's working files, so a candidate placed there for the gate was run by a tick 19 seconds later (the dispatcher change, 1:13 AM). It had passed its suites in the isolated copy first. The fix belongs to phase 2 (the gate checks a candidate that is not in the main folder).
 - **The close sweep landed 841 lines of code with no gate pass** (0a7568c844, 11:43 PM 11-09: the merge queue page, the throughput tool and two tests, as "ops: work run"). Phase 2 removes that road.
 - **One item stopped by a guard (T-0848), 1:11 AM:** the records guard refused a command that edited tests/governor_test.sh and tests/pacing_test.sh and ran them. The governor's part of "idle is fine" waits on those two files; asked on #41 (c6760458993).
+  Cleared by Investor an Investor at 4:40 AM ("go ahead with the scheduler tests", #41 c6764049323); the two test files were then edited with the edit tool and run by a separate plain command, and the change landed at 6:35 AM (ce8522d75a). Writing its rows found a fault in the change itself: with the limit closed and no session to open for work, a waiting Investor message got no session. Fixed before it reached the gate.
+- **tests/site_test.sh went red on main at about 6:00 AM**, by data: its row that keeps the old $200 goal block off Home read the usage bar's "$195 of $200 used" as that block. Found when the governor change's gate run asked for the suite; the pattern was narrowed in the same commit.
 {% endraw %}
 
 </div>

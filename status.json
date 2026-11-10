@@ -1,11 +1,44 @@
 {
  "schema": 1,
- "at": "2026-11-10T01:24:22.214342+00:00",
+ "at": "2026-11-10T01:36:33.156196+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
   "flow": [
+   {
+    "t": "T-3680",
+    "name": "Review the launcher sheet fix over other sheets",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "macbook",
+      "at": 1794274004
+     }
+    ]
+   },
+   {
+    "t": "T-3098",
+    "name": "Keep input prompts from following a finished run",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "macbook",
+      "at": 1794274004
+     }
+    ]
+   },
+   {
+    "t": "T-0042",
+    "name": "Add an Acknowledgements screen for vendored packages",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "macbook",
+      "at": 1794274004
+     }
+    ]
+   },
    {
     "t": "T-3675",
     "name": "Pass the launcher editor's saved apps to the launcher widgets",
@@ -191,8 +224,8 @@
     "why": "did not merge cleanly"
    }
   ],
-  "landed": 33,
-  "failed": 32
+  "landed": 28,
+  "failed": 33
  },
  "workers": [],
  "who": "",
@@ -200,20 +233,20 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 667,
+  "runnable_count": 669,
   "blocked_count": 114
  },
  "meter": {
   "five_hour": {
    "pct": 19.0,
-   "resets_at": "2026-11-10T03:59:59.897563+00:00",
+   "resets_at": "2026-11-10T03:59:59.933251+00:00",
    "used_words": "of your 5-hour allowance used",
    "left": 81.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 35.0,
-   "resets_at": "2026-11-15T06:59:59.897587+00:00",
+   "resets_at": "2026-11-15T06:59:59.933272+00:00",
    "used_words": "of your weekly allowance used",
    "left": 65.0,
    "left_words": "of your weekly allowance left"
@@ -223,11 +256,11 @@
    "resets_at": "2026-11-15T07:00:00+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-09T20:24:03.744361-05:00"
+  "read_at": "2026-11-09T20:36:20.732192-05:00"
  },
  "ui": {
-  "week_pct": 0.018,
-  "five_hour_pct": 0.062,
+  "week_pct": 0.029,
+  "five_hour_pct": 0.129,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -238,12 +271,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-09T20:39:04-05:00",
+ "next_tick": "2026-11-09T20:51:21-05:00",
  "personal": {
   "week_pct": 3.57,
   "usage_pct": 9.3,
   "work_pct": 50.0,
-  "read_at": "2026-11-10T01:28:00+00:00",
+  "read_at": "2026-11-10T01:40:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -264,16 +297,16 @@
   }
  ],
  "disk": {
-  "free_gb": 42,
+  "free_gb": 43,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 196
+   "free_gb": 195
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-09T20:07:00-05:00",
+   "at": "2026-11-09T20:29:00-05:00",
    "recovery": {
     "what": "answers again",
     "at": "2026-11-09T08:43:00-05:00"
@@ -283,16 +316,11 @@
  "lock_in": {
   "on": false,
   "pool": 2,
-  "at": "2026-11-09T20:28:00-05:00",
+  "at": "2026-11-09T20:40:00-05:00",
   "mode": null
  },
  "next_tick_why": "last_tick",
- "idle": {
-  "since": "2026-11-09T20:02:30-05:00",
-  "minutes": 21,
-  "why": "a tick has spent 14 min on steps before the session",
-  "healed": []
- },
+ "idle": null,
  "pool": null,
  "lanes": [
   {
@@ -436,7 +464,7 @@
    }
   ],
   "count": {
-   "next": 667,
+   "next": 669,
    "wait": 46,
    "blocked": 68,
    "you": 18
@@ -444,42 +472,31 @@
  },
  "qr": [],
  "reply": {
-  "sent": "2026-11-10T01:00:03Z",
-  "seconds": 113.0
+  "sent": "2026-11-10T01:16:06Z",
+  "seconds": 552.0
  },
  "inbox": [
   {
-   "id": "c6755953531",
+   "id": "c6756338057",
    "state": "received",
    "position": 1,
-   "eta": "2026-11-09T20:39:04-05:00",
+   "eta": "2026-11-09T20:51:21-05:00",
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "The Macbook being able to merge..."
+   "title": "What are you currently working on..."
   },
   {
-   "id": "c6756064373",
+   "id": "c6756394671",
    "state": "received",
    "position": 2,
-   "eta": "2026-11-09T20:39:04-05:00",
+   "eta": "2026-11-09T20:51:21-05:00",
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "Any metrics that are necessary to..."
-  },
-  {
-   "id": "c6756073579",
-   "state": "received",
-   "position": 3,
-   "eta": "2026-11-09T20:39:04-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Is this resolved?"
+   "title": "Would it make sense if we took note..."
   }
  ],
  "trimmed": [
@@ -497,10 +514,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "8:28 PM",
-  "why": "Between sessions: no session is running. Last check 8:24 PM ET.",
-  "at_iso": "2026-11-10T01:28:00+00:00",
+  "at": "8:40 PM",
+  "why": "Between sessions: no session is running. Last check 8:36 PM ET.",
+  "at_iso": "2026-11-10T01:40:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:28 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 8:24 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:40 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 8:36 PM ET.</p></section>"
  }
 }

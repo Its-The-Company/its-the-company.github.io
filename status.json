@@ -1,24 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-11T17:02:20.414543+00:00",
+ "at": "2026-11-11T17:05:23.734446+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-11T08:37:55-05:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "pernille",
    "task": "[tools] T-3995 audit item 5 merge-line record commits batched",
    "model": "opus",
    "started": "2026-11-11T15:11:22.609Z",
-   "seconds": 6657,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-11T17:02:27.041000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4084 wire the Investor usage stop into the supervisor",
@@ -42,14 +40,6 @@
    "started": "2026-11-11T15:39:30.840Z",
    "seconds": null,
    "finished": "2026-11-11T16:50:36.050000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[tools] T-3150 land the held scoreboard spend fix",
-   "model": "opus",
-   "started": "2026-11-11T16:27:12.153Z",
-   "seconds": null,
-   "finished": "2026-11-11T16:50:25.815000+00:00"
   }
  ],
  "queue": {
@@ -98,7 +88,7 @@
   "week_pct": 24.43,
   "usage_pct": 30.4,
   "work_pct": 76.7,
-  "read_at": "2026-11-11T17:02:00+00:00",
+  "read_at": "2026-11-11T17:05:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -123,19 +113,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 183
+   "free_gb": 185
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-11T11:59:00-05:00",
+   "at": "2026-11-11T12:05:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T12:02:00-05:00",
+  "at": "2026-11-11T12:05:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -146,15 +136,6 @@
   "at": "2026-11-11T08:37:46.446952-05:00"
  },
  "lanes": [
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[tools] T-3995 audit item 5 merge-line record commits...",
-   "model": "opus",
-   "since": "2026-11-11T15:11:22.609Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -167,6 +148,14 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -197,18 +186,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Pernille",
-    "k": "tools",
-    "t": "Replace the waiting pile with one merge line",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-11T15:11:22.609Z",
-    "o": "c",
-    "task": "T-3995"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -367,13 +345,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "12:02 PM",
-  "why": "",
-  "at_iso": "2026-11-11T17:02:00+00:00",
+  "total": 0,
+  "at": "12:05 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-11T17:05:00+00:00",
   "started": "8:37 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 8:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:02 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 8:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:05 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

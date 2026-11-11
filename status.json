@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-11T21:50:44.004840+00:00",
+ "at": "2026-11-11T21:53:44.683595+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,26 +8,25 @@
  },
  "workers": [
   {
-   "name": "maren",
-   "task": "[site] T-4094 Retry Queue and sorts on Home",
-   "model": "opus",
-   "started": "2026-11-11T20:40:56.653Z",
-   "seconds": 4187,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[tools] T-4092 pin queue audit to Evan's account",
    "model": "opus",
    "started": "2026-11-11T20:41:06.841Z",
-   "seconds": 4177,
+   "seconds": 4357,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Maren, Odalys",
+ "who": "Odalys",
  "recent": [
+  {
+   "name": "maren",
+   "task": "[site] T-4094 Retry Queue and sorts on Home",
+   "model": "opus",
+   "started": "2026-11-11T20:40:56.653Z",
+   "seconds": null,
+   "finished": "2026-11-11T21:52:27.318000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3995 item 20 live notes migration",
@@ -40,7 +39,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 691,
+  "runnable_count": 690,
   "blocked_count": 113
  },
  "meter": {
@@ -89,7 +88,7 @@
   "week_pct": 24.68,
   "usage_pct": 28.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-11T21:50:00+00:00",
+  "read_at": "2026-11-11T21:53:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -126,7 +125,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T16:50:00-05:00",
+  "at": "2026-11-11T16:53:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -137,15 +136,6 @@
   "at": "2026-11-11T15:37:31.744236-05:00"
  },
  "lanes": [
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[site] T-4094 Retry Queue and sorts on Home",
-   "model": "opus",
-   "since": "2026-11-11T20:40:56.653Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Odalys",
    "state": "running",
@@ -186,20 +176,18 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Maren",
-    "k": "site",
-    "t": "Retry Queue stage and new sorts on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-11T20:40:56.653Z",
-    "o": "c",
-    "task": "T-4094"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -287,6 +275,11 @@
   "done": [
    {
     "w": "Maren",
+    "t": "Home's task list now calls sent-back work the Retry Queue and shows it there only while it...",
+    "at": "2026-11-11T16:52:00-05:00"
+   },
+   {
+    "w": "Maren",
     "t": "The money wording check was red on main because Home and This Session said 'to go round again',...",
     "at": "2026-11-11T09:36:00-05:00"
    },
@@ -294,22 +287,22 @@
     "w": "Operator",
     "t": "Main passes its Xcode checks again: job J-20261111-0204-xc-test on the MacBook no longer shows...",
     "at": "2026-11-11T02:58:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Main passes its Xcode checks again: job J-20261110-2147-xc-test-8 on the MacBook no longer shows...",
-    "at": "2026-11-11T02:21:00-05:00"
    }
   ],
   "count": {
-   "next": 691,
+   "next": 690,
    "wait": 44,
    "blocked": 69,
    "you": 19
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-4094",
+     "Retry Queue stage and new..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -355,6 +348,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -362,13 +356,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "4:50 PM",
+  "total": 1,
+  "at": "4:53 PM",
   "why": "",
-  "at_iso": "2026-11-11T21:50:00+00:00",
+  "at_iso": "2026-11-11T21:53:00+00:00",
   "started": "3:37 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 3:37 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:50 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 3:37 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:53 PM ET</p></section>"
  }
 }

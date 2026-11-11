@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-11T15:09:36.844755+00:00",
+ "at": "2026-11-11T15:12:36.826470+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,19 +9,10 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4084 Investor usage stop for personal accounts",
-   "model": "opus",
-   "started": "2026-11-11T14:27:53.432Z",
-   "seconds": 2503,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[tools] T-3995 audit item 20 board notes",
    "model": "opus",
    "started": "2026-11-11T13:41:12.703Z",
-   "seconds": 5304,
+   "seconds": 5484,
    "finished": null,
    "effort": "high"
   },
@@ -30,13 +21,30 @@
    "task": "[site] T-3996 audit item 24 remove unused code",
    "model": "opus",
    "started": "2026-11-11T13:41:19.903Z",
-   "seconds": 5296,
+   "seconds": 5476,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[tools] T-3995 audit item 5 merge-line record commits batched",
+   "model": "opus",
+   "started": "2026-11-11T15:11:22.609Z",
+   "seconds": 74,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2, Maren",
+ "who": "Odalys, Maren, Pernille",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4084 Investor usage stop for personal accounts",
+   "model": "opus",
+   "started": "2026-11-11T14:27:53.432Z",
+   "seconds": null,
+   "finished": "2026-11-11T15:10:46.785000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[review] T-4012 audit readings items 10 and 16",
@@ -92,7 +100,7 @@
   "week_pct": 24.43,
   "usage_pct": 30.4,
   "work_pct": 76.7,
-  "read_at": "2026-11-11T15:09:00+00:00",
+  "read_at": "2026-11-11T15:12:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -122,14 +130,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-11T10:03:00-05:00",
+   "at": "2026-11-11T10:11:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T10:09:00-05:00",
+  "at": "2026-11-11T10:12:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -159,6 +167,15 @@
    "effort": "high"
   },
   {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[tools] T-3995 audit item 5 merge-line record commits...",
+   "model": "opus",
+   "since": "2026-11-11T15:11:22.609Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
@@ -170,14 +187,6 @@
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -214,14 +223,14 @@
     "task": "T-3996"
    },
    {
-    "w": "Odalys",
+    "w": "Pernille",
     "k": "tools",
-    "t": "Investors stop personal accounts at a usage percent they choose",
+    "t": "Replace the waiting pile with one merge line",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-11T14:27:53.432Z",
+    "at": "2026-11-11T15:11:22.609Z",
     "o": "c",
-    "task": "T-4084"
+    "task": "T-3995"
    }
   ],
   "src": "plan",
@@ -384,10 +393,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "10:09 AM",
+  "at": "10:12 AM",
   "why": "",
-  "at_iso": "2026-11-11T15:09:00+00:00",
+  "at_iso": "2026-11-11T15:12:00+00:00",
   "started": "8:37 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:09 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:12 AM ET</p></section>"
  }
 }

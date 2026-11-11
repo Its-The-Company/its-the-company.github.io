@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-11T00:30:51.394100+00:00",
+ "at": "2026-11-11T00:33:53.902808+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -108,16 +108,7 @@
    "task": "[tools] T-4016 five-hour false hold",
    "model": "opus",
    "started": "2026-11-10T23:38:11.801Z",
-   "seconds": 3159,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3975 land item 3 stop-at-red",
-   "model": "opus",
-   "started": "2026-11-10T23:38:18.000Z",
-   "seconds": 3153,
+   "seconds": 3342,
    "finished": null,
    "effort": "high"
   },
@@ -126,7 +117,7 @@
    "task": "[tools] T-4017 unstick personal landings",
    "model": "opus",
    "started": "2026-11-10T23:38:25.452Z",
-   "seconds": 3145,
+   "seconds": 3328,
    "finished": null,
    "effort": "high"
   },
@@ -135,7 +126,7 @@
    "task": "[design] T-4014 T-4015 Home panels slim",
    "model": "opus",
    "started": "2026-11-10T23:38:44.201Z",
-   "seconds": 3127,
+   "seconds": 3309,
    "finished": null,
    "effort": "high"
   },
@@ -144,7 +135,7 @@
    "task": "[build] T-4008 declined Ask to Buy",
    "model": "opus",
    "started": "2026-11-10T23:39:22.453Z",
-   "seconds": 3088,
+   "seconds": 3271,
    "finished": null,
    "effort": "high"
   },
@@ -153,7 +144,7 @@
    "task": "[tools] audit item 17 nightly suite run",
    "model": "opus",
    "started": "2026-11-10T23:39:28.650Z",
-   "seconds": 3082,
+   "seconds": 3265,
    "finished": null,
    "effort": "high"
   },
@@ -162,7 +153,7 @@
    "task": "[plan] audit item 19 milestones refresh",
    "model": "opus",
    "started": "2026-11-10T23:39:35.101Z",
-   "seconds": 3076,
+   "seconds": 3258,
    "finished": null,
    "effort": "high"
   },
@@ -171,13 +162,30 @@
    "task": "[tools] audit item 5 record batching",
    "model": "opus",
    "started": "2026-11-10T23:58:37.241Z",
-   "seconds": 1934,
+   "seconds": 2116,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] audit item 13 per-suite keeping",
+   "model": "opus",
+   "started": "2026-11-11T00:33:32.443Z",
+   "seconds": 21,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x4, Maren, Idris, Pernille, Ines",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3975 land item 3 stop-at-red",
+   "model": "opus",
+   "started": "2026-11-10T23:38:18.000Z",
+   "seconds": null,
+   "finished": "2026-11-11T00:33:00.973000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[test] audit item 18 drop_blob_test lift",
@@ -207,7 +215,7 @@
   "runnable": [],
   "blocked": [],
   "runnable_count": 642,
-  "blocked_count": 113
+  "blocked_count": 112
  },
  "meter": {
   "five_hour": {
@@ -249,7 +257,7 @@
   "week_pct": 24.09,
   "usage_pct": 35.4,
   "work_pct": 78.4,
-  "read_at": "2026-11-11T00:30:00+00:00",
+  "read_at": "2026-11-11T00:33:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -286,7 +294,7 @@
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-10T19:30:00-05:00",
+  "at": "2026-11-10T19:33:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -366,16 +374,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Stop losing check time on attempts that will not land",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-10T23:38:18.000Z",
-    "o": "c",
-    "task": "T-3975"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Unstick personal landings waiting on GitHub",
     "m": "opus",
     "e": "high",
@@ -428,6 +426,15 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-10T23:58:37.241Z",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Audit item 13 per-suite keeping",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-11T00:33:32.443Z",
     "o": "c"
    }
   ],
@@ -507,6 +514,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "Merge checks now stop at the first failing test instead of running the rest, and skip a test...",
+    "at": "2026-11-10T19:32:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The company's list of trial changes had nine results past their reading date; each now has a...",
     "at": "2026-11-10T18:57:00-05:00"
    },
@@ -514,22 +526,21 @@
     "w": "Operator",
     "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
     "at": "2026-11-10T15:22:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "When a change fails its merge checks, the lane that wrote it now gets it back as its next task...",
-    "at": "2026-11-10T12:39:00-05:00"
    }
   ],
   "count": {
    "next": 642,
-   "wait": 45,
+   "wait": 44,
    "blocked": 68,
    "you": 17
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-3975",
+     "Stop losing check time on..."
+    ],
     [
      "T-4013",
      "Read or close the nine..."
@@ -591,10 +602,10 @@
   "main": 8,
   "lanes": 0,
   "total": 8,
-  "at": "7:30 PM",
+  "at": "7:33 PM",
   "why": "",
-  "at_iso": "2026-11-11T00:30:00+00:00",
+  "at_iso": "2026-11-11T00:33:00+00:00",
   "started": "6:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 8, started 6:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:30 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 8, started 6:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:33 PM ET</p></section>"
  }
 }

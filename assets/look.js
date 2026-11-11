@@ -20,9 +20,23 @@ try{JSON.parse(H.getAttribute('data-fav')||'[]').forEach(function(i){F[i]=1})}ca
 // 'long' longest in its stage, 'cat' by category, 'who' by worker. Starred tasks stay first in every order. CF: a
 // category's first word ('App'), '' for all. With a category chosen, or a sort that reorders Queued, every queued task
 // past the page's 30 is drawn too, as a search draws its matches.
-var SO='def',CF='',so=document.getElementById('lk-sort'),cf=document.getElementById('lk-cat');
+// T-4094 (friesevan #41 c6804999684): the sorts are Stage, Time on Stage, Category, Worker, Time Created, Time Started
+// and Retries (home_look.SORTS), each ascending (SD 1) or descending (-1), its first direction DF's; S2 and D2 an optional
+// second sort for ties. by() compares two records {stage, time, cat, who, created, started, retries}, In flight's and
+// Queued's alike; a value not recorded sorts last whichever the direction. Time Created is the task's number: the board
+// gives numbers out in the order tasks are added. Then the order the list had (look.js's default, Queued's start order).
+var SO='def',SD=1,S2='',D2=1,DF={stage:1,time:-1,cat:1,who:1,created:1,started:1,retries:-1},CF='',so=document.getElementById('lk-sort'),cf=document.getElementById('lk-cat'),
+so2=document.getElementById('lk-sort2'),dr=document.getElementById('lk-dir'),dr2=document.getElementById('lk-dir2'),sb2=document.getElementById('lk-so2');
 function catok(c){return !CF||String(c||'').split(' · ')[0]===CF}
 function txt(a,b){a=String(a||'').toLowerCase();b=String(b||'').toLowerCase();return a===b?0:!a?1:!b?-1:a<b?-1:1}
+function tnum(i){var m=/^T-(\d+)/.exec(String(i||''));return m?+m[1]:null}
+function cmpk(k,d,a,b){var x=a[k],y=b[k],nx=x==null||x===''||x!==x,ny=y==null||y===''||y!==y;if(nx||ny)return nx&&ny?0:nx?1:-1;return (typeof x==='string'?txt(x,y):x-y)*d}
+function by(a,b){return (SO==='def'?0:cmpk(SO,SD,a,b))||(S2&&S2!==SO?cmpk(S2,D2,a,b):0)}
+function reorders(k){return ['cat','who','created','started','retries'].indexOf(k)>=0}
+function qrec(c){return {stage:null,time:null,cat:qc(c)||null,who:c.getAttribute('data-w')||null,created:tnum(c.getAttribute('data-id')),started:Date.parse(c.getAttribute('data-ps')||'')||null,retries:+(c.getAttribute('data-r')||0)}}
+function dword(b,d){if(!b)return;b.textContent=d>0?'Ascending':'Descending';b.setAttribute('aria-label',(d>0?'Ascending':'Descending')+'; tap for '+(d>0?'descending':'ascending'))}
+function sorts(){if(dr){dr.hidden=SO==='def';dword(dr,SD)}if(sb2)sb2.hidden=SO==='def';if(so2){[].forEach.call(so2.options,function(o){o.disabled=!!o.value&&o.value===SO});if(S2===SO){S2='';so2.value=''}}
+if(dr2){dr2.hidden=!S2||SO==='def';dword(dr2,D2)}}
 function qc(c){var e=c.querySelector('.lk-cat');return e?e.textContent:''}
 // T-4007: a task with a card in In flight is not listed again in Queued. The build leaves its row out and keeps its
 // number in data-all with a sixth field, 1 (Move up counts places by those numbers); a task a later status puts in
@@ -84,15 +98,15 @@ try{fc=JSON.parse((document.getElementById('lk-run')||H).getAttribute('data-face
 function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;p.appendChild(e);return e}
 // a Queued row past the page's 30, from data-all ([id, number, name, worker, category]): drawn while it matches the search or is starred
 function qrow(a){var c=document.createElement('div'),p=fc[String(a[3]||'').toLowerCase()],g,t;c.className='lk-card lk-q lk-x';c.setAttribute('data-id',a[0]);c.setAttribute('data-n',a[1]);
-c.setAttribute('data-q',[a[2],a[0],a[3]].join(' '));c.setAttribute('data-w',a[3]||'');mk(c,'span','lk-n',String(a[1]));if(p&&pic[p]){g=mk(c,'img');g.src=pic[p];g.alt='';g.width=g.height=24}else mk(c,'span').style.width='24px';
-t=mk(c,'span','t');mk(t,'b','lk-tn',a[2]);badge(t,a[0]);if(a[4]){g=mk(c,'span','lk-cat',a[4]);g.title='Category: '+a[4]}mk(c,'span','idb',a[0]);aria(c);return c}
+c.setAttribute('data-q',[a[2],a[0],a[3]].join(' '));c.setAttribute('data-w',a[3]||'');if(a[6])c.setAttribute('data-ps',a[6]);if(a[7])c.setAttribute('data-r',a[7]);mk(c,'span','lk-n',String(a[1]));if(p&&pic[p]){g=mk(c,'img');g.src=pic[p];g.alt='';g.width=g.height=24}else mk(c,'span').style.width='24px';
+t=mk(c,'span','t');mk(t,'b','lk-tn',a[2]);badge(t,a[0]);if(a[7])mk(c,'span','lk-rty','retry '+a[7]);if(a[4]){g=mk(c,'span','lk-cat',a[4]);g.title='Category: '+a[4]}mk(c,'span','idb',a[0]);aria(c);return c}
 // T-4007: the fold counts the rows on show (k), so a category that leaves three rows shows three and no Show more
-function queued(){var q=document.getElementById('lk-q'),rows,mx,qb,k=0,wide=!!CF||SO==='cat'||SO==='who';if(!q)return;if(!A){A=[];try{A=JSON.parse(q.getAttribute('data-all')||'[]')}catch(e){}}
+function queued(){var q=document.getElementById('lk-q'),rows,mx,qb,k=0,wide=!!CF||(SO!=='def'&&(reorders(SO)||reorders(S2)));if(!q)return;if(!A){A=[];try{A=JSON.parse(q.getAttribute('data-all')||'[]')}catch(e){}}
 [].slice.call(q.querySelectorAll('.lk-x')).forEach(function(c){q.removeChild(c)});
 A.forEach(function(a){if(okId(a[0])&&inq(a[0],a[5])&&(F[a[0]]||J[a[0]]||(Q?match([a[2],a[0],a[3]].join(' ')):wide&&catok(a[4]))||(a[5]&&+a[1]<=(+q.getAttribute('data-last')||0))))q.appendChild(qrow(a))});
 rows=[].slice.call(q.children);mx=+q.getAttribute('data-max')||4;qb=document.getElementById('lk-q-more');
 rows.sort(function(a,b){return (F[b.getAttribute('data-id')]?1:0)-(F[a.getAttribute('data-id')]?1:0)
-||(SO==='cat'?txt(qc(a),qc(b)):SO==='who'?txt(a.getAttribute('data-w'),b.getAttribute('data-w')):0)||(+a.getAttribute('data-n')-+b.getAttribute('data-n'))});
+||by(qrec(a),qrec(b))||(+a.getAttribute('data-n')-+b.getAttribute('data-n'))});
 rows.forEach(function(c){var s=c.querySelector('.lk-star'),on=match(c.getAttribute('data-q'))&&catok(qc(c))&&!fly(c.getAttribute('data-id'));q.appendChild(c);c.classList.toggle('lk-fold',on&&k++>=mx);if(s)s.parentNode.removeChild(s);tok&&up(c,c.getAttribute('data-id'));star(c,c.getAttribute('data-id'));
 c.hidden=!on});
 if(qb){if(/^Show \d+ more/.test(qb.textContent))qb.textContent='Show '+Math.max(0,k-mx)+' more ▾';qb.hidden=k<=mx}
@@ -151,7 +165,7 @@ function(e){if(on)delete F[id];else F[id]=1;fire();say('Not saved: '+(e&&e.messa
 S.lk={fav:function(id){return !!F[id]},on:function(f){fn.push(f)},match:match,q:function(){return Q},star:star,open:function(k){return !!O[k]},aria:aria,id:lid,
 lin:function(c,i){badge(c,i);if(c.classList.contains('lk-open'))tree(c)},
 // T-4007: the sort and the category In flight draws by, and how many tasks are queued (the page's rows and the rest of the index)
-sort:function(){return SO},catok:catok,txt:txt,requeue:function(){queued();count()},
+sort:function(){return SO},dir:function(){return SD},by:by,tnum:tnum,catok:catok,txt:txt,requeue:function(){queued();count()},
 qn:function(){var q=document.getElementById('lk-q');if(q&&!A)queued();return q?[].filter.call(q.querySelectorAll('.lk-q:not(.lk-x)'),function(c){return inq(c.getAttribute('data-id'),0)}).length
 +(A||[]).filter(function(a){return inq(a[0],a[5])}).length:0}};
 H.addEventListener('click',function(e){var t=e.target,c,l=t.closest&&t.closest('a[data-go]');if(l){e.preventDefault();go(l.getAttribute('data-go'));return}
@@ -161,7 +175,10 @@ H.addEventListener('keydown',function(e){var t=e.target,c;if((e.key==='Enter'||e
 [].forEach.call(H.querySelectorAll('.lk-tn'),function(n){aria(n.closest(CARD))});
 if(inp&&fb){fb.hidden=false;inp.addEventListener('input',function(){Q=inp.value.trim().toLowerCase();H.classList.toggle('lk-searching',!!Q);fire()})}
 if(fb&&document.getElementById('lk-q-how'))document.getElementById('lk-q-how').hidden=false;
-if(so)so.addEventListener('change',function(){SO=so.value;fire()});
+if(so)so.addEventListener('change',function(){SO=so.value;SD=DF[SO]||1;sorts();fire()});
+if(dr)dr.addEventListener('click',function(){SD=-SD;sorts();fire()});
+if(so2)so2.addEventListener('change',function(){S2=so2.value;D2=DF[S2]||1;sorts();fire()});
+if(dr2)dr2.addEventListener('click',function(){D2=-D2;sorts();fire()});sorts();
 if(cf)cf.addEventListener('change',function(){CF=cf.value;fire()});
 queued();
 if(tok)read().then(function(f){take(f.list)},function(){})});
@@ -199,9 +216,9 @@ S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});
 // home_look.py), and first, beside the stage, which retry it is on past a first try (x.y, flow.now()'s retry; T-3996).
 document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,box=document.getElementById('lk-run');if(!box)return;
 var f={},L={};try{f=JSON.parse(box.getAttribute('data-faces')||'{}')}catch(e){}try{L=JSON.parse(box.getAttribute('data-life')||'{}')}catch(e){}
-var RUN=['coding','review','testq','testing','mergeq','mergetest','parked','merging'],ST=RUN.slice().reverse(),Q={testq:1,mergeq:1,parked:1},
-LB={coding:'Coding',testq:'Test queue',testing:'Testing',review:'Review',mergeq:'Merge queue',mergetest:'Merge testing',parked:'Parked',merging:'Merging'},
-M3=['mergeq','mergetest','merging'],EX={coding:M3,review:M3,testq:['testing'].concat(M3),testing:M3,mergeq:M3.slice(1),parked:M3,mergetest:['merging'],merging:[]};
+var RUN=['coding','review','testq','testing','mergeq','simq','mergetest','parked','aside','merging'],ST=RUN.slice().reverse(),Q={testq:1,mergeq:1,simq:1,parked:1,aside:1},
+LB={coding:'Coding',testq:'Test queue',testing:'Testing',review:'Review',mergeq:'Merge queue',mergetest:'Merge testing',parked:'Retry Queue',merging:'Merging',simq:'Simulator Queue',aside:'Set aside'},
+M3=['mergeq','mergetest','merging'],EX={coding:M3,review:M3,testq:['testing'].concat(M3),testing:M3,mergeq:M3.slice(1),parked:M3,mergetest:['merging'],merging:[],simq:M3.slice(1),aside:[]};
 // T-4007 (JeremyFries, typed 2026-11-10: "the way that it lists the current step of the task ... (6 stages, shared by all
 // tasks, with totals summed) ... should be included in the full task list"): a card's step is shown as This Session
 // shows it: one row of stage columns shared by every card, (#lk-cols; no totals since c6797836020), and on each card
@@ -209,11 +226,13 @@ M3=['mergeq','mergetest','merging'],EX={coding:M3,review:M3,testq:['testing'].co
 // build's eight steps into the five of This Session's columns a listed task can be in (CK, its order; CL, its names);
 // MK is the mark where the task waits or was sent back; SN the step inside Being built that is not plain coding; HW
 // the same names for an open card's history in words.
-var CK=['being_built','waiting_to_merge','mac_tests','iphone_tests','sent_back'],
-COL={coding:CK[0],review:CK[0],testq:CK[0],testing:CK[0],mergeq:CK[1],merging:CK[2],mergetest:CK[3],parked:CK[4]},
-CL={being_built:'Building',waiting_to_merge:'Merge Queue',mac_tests:'Testing',iphone_tests:'Simulator',sent_back:'Sent Back'},
-MK={waiting_to_merge:'q',sent_back:'f'},SN={review:'review',testq:'waiting for its own test run',testing:'its own test run'},
-HW={coding:'Building',review:'Review',testq:'Waiting for its own test run',testing:'Its own test run',mergeq:'Merge Queue',merging:'Testing',mergetest:'Simulator',parked:'Sent Back'};
+// T-4094: Simulator Queue between Testing and the Simulator; Retry Queue (was Sent Back) only for a task in its lane's
+// sent-back queue; Set aside, a card in none of the columns (home_look COLS, HL, retry_queue).
+var CK=['being_built','waiting_to_merge','mac_tests','sim_queue','iphone_tests','sent_back'],
+COL={coding:'being_built',review:'being_built',testq:'being_built',testing:'being_built',mergeq:'waiting_to_merge',merging:'mac_tests',simq:'sim_queue',mergetest:'iphone_tests',parked:'sent_back',aside:'aside'},
+CL={being_built:'Building',waiting_to_merge:'Merge Queue',mac_tests:'Testing',sim_queue:'Simulator Queue',iphone_tests:'Simulator',sent_back:'Retry Queue',aside:'Set aside'},
+MK={waiting_to_merge:'q',sim_queue:'q',sent_back:'f',aside:'q'},SN={review:'review',testq:'waiting for its own test run',testing:'its own test run'},
+HW={coding:'Building',review:'Review',testq:'Waiting for its own test run',testing:'Its own test run',mergeq:'Merge Queue',merging:'Testing',simq:'Simulator Queue',mergetest:'Simulator',parked:'Retry Queue',aside:'Set aside'};
 var pic={};[].forEach.call(document.querySelectorAll('.lk-team a'),function(a){var m=/cast\/([^/.]+)\.html/.exec(a.getAttribute('href')||''),g=a.querySelector('img');if(m&&g)pic[m[1]]=g.getAttribute('src')});
 var K='lk-run-more',fl='all',all=false,items=L.init||[],IN={};try{all=localStorage.getItem(K)==='1'}catch(e){}
 items.forEach(function(x){if(x.id)IN[x.id]=x});
@@ -241,11 +260,13 @@ if(h[2].charAt(0)==='n')nx.push((h[2]==='n r'?'back to ':'')+LB[h[0]]);else wd.p
 mk(c,'p','lk-hw meta',wd.join(' → ')+(nx.length?'; next: '+nx.join(', '):''))}
 // the track: "now" where the task is, "was" where this try has been (a try sent back: the try that failed), "" elsewhere
 function cells(x){var here=COL[x.s],h=x.h||[],f=[],cur,been={};h.forEach(function(s,i){if(s[2]==='f')f.push(i)});
-if(here===CK[0])cur=[];else if(here===CK[4]&&f.length)cur=h.slice(f.length>1?f[f.length-2]+1:0,f[f.length-1]+1);else cur=f.length?h.slice(f[f.length-1]+1):h;
-cur.forEach(function(s){if(COL[s[0]])been[COL[s[0]]]=1});if(here!==CK[0])been[CK[0]]=1;
-if(here===CK[2]||here===CK[3]||here===CK[4]||been[CK[2]]||been[CK[3]])been[CK[1]]=1;
-// c6797836020: a step the task does not need is blank in its own column (home_look col_cells, needs_sim)
-return CK.map(function(k){var v=k===here?'now':been[k]?'was':'';return v===''&&(k===CK[4]||(k===CK[3]&&sim(x)===false))?'skip':v})}
+if(here==='being_built')cur=[];else if(here==='sent_back'&&f.length)cur=h.slice(f.length>1?f[f.length-2]+1:0,f[f.length-1]+1);else cur=f.length?h.slice(f[f.length-1]+1):h;
+cur.forEach(function(s){if(COL[s[0]])been[COL[s[0]]]=1});if(here!=='being_built')been.being_built=1;
+if(['mac_tests','sim_queue','iphone_tests','sent_back'].indexOf(here)>=0||been.mac_tests||been.iphone_tests)been.waiting_to_merge=1;
+if(here==='sim_queue')been.mac_tests=1;if(here==='iphone_tests'||been.iphone_tests)been.sim_queue=1;
+// c6797836020: a step the task does not need is blank in its own column (home_look col_cells, needs_sim); T-4094: the
+// Retry Queue is lit only for a task waiting in it now
+return CK.map(function(k){var v=k===here?'now':been[k]&&k!=='sent_back'?'was':'';return v===''&&(k==='sent_back'||((k==='sim_queue'||k==='iphone_tests')&&sim(x)===false))?'skip':v})}
 function sim(x){if(x.x)return true;var c=String(x.c||'');return c?c.indexOf('App')===0:null}
 function track(c,x){var here=COL[x.s],t=mk(c,'span','ts-trk'),wd=[],nx=[];t.setAttribute('aria-hidden','true');
 cells(x).forEach(function(v){var i=mk(t,'i');if(v==='now')i.className=MK[here]||'a';else if(v==='was')i.className='d';else if(v==='skip')i.className='o'});
@@ -253,14 +274,20 @@ steps(x).forEach(function(h,j){var w=[h[1]==null?'':h[1]<1?'<1 min':mins(h[1]),h
 if(h[2].charAt(0)==='n')nx.push([CK.indexOf(COL[h[0]]),j,(h[2]==='n r'?'back to ':'')+HW[h[0]]]);else wd.push((h[2].indexOf('lb')>=0?'back to ':'')+HW[h[0]]+(w?' '+w:''))});
 nx.sort(function(a,b){return a[0]-b[0]||a[1]-b[1]});
 mk(c,'p','lk-hw meta',wd.join(' → ')+(nx.length?'; next: '+nx.map(function(n){return n[2]}).join(', '):''));if(x.b)mk(c,'p','lk-hw meta',x.b)}
+// T-4094 (c6804999684): beside the worker, the model and effort only in Building; any other stage says its own fact
+// (home_look fact()); an open card past Building names its build's worker, model and effort (past_html)
+function fact(x){return COL[x.s]==='being_built'?lv(x):x.s==='parked'||x.s==='aside'?(x.f||''):(x.f||x.n||'')}
+function past(c,x){if(COL[x.s]==='being_built')return;var w=(x.w||[]).filter(function(v){return v&&!/not recorded/.test(v)}).map(cap).join(', '),l=x.m&&!/not recorded/.test(x.m)?lv(x):'';
+mk(c,'p','lk-hw meta lk-past','Building: '+(w?'built by '+w:'worker not recorded')+(l?', '+l:', model not recorded'))}
 function card(x){var c=mk(box,'div','lk-card lk-run'),r=mk(c,'div','lk-r1'),fs=mk(r,'span','lk-faces'),t,m,rt,sc,col=COL[x.s];c.setAttribute('data-stage',x.s);c.setAttribute('data-col',col);
 c.setAttribute('data-id',x.id||x.t);if(K3&&K3.open(x.id||x.t))c.classList.add('lk-open');
 (x.w||[]).slice(0,2).forEach(function(w){var p=f[String(w).toLowerCase()],g;if(p&&pic[p]){g=mk(fs,'img');g.src=pic[p];g.alt='';g.width=g.height=40}});
-t=mk(r,'span','t');mk(t,'b','lk-tn',x.t);m=mk(t,'span','',[(x.w||[]).filter(Boolean).map(cap).join(', '),lv(x),x.min>=0?mins(x.min):''].filter(Boolean).join(' · '));
+t=mk(r,'span','t');mk(t,'b','lk-tn',x.t);m=mk(t,'span','',[(x.w||[]).filter(Boolean).map(cap).join(', '),fact(x)].filter(Boolean).join(' · '));
+if(x.min>=0){if(m.textContent)m.appendChild(document.createTextNode(' · '));mk(m,'span','lk-nw',mins(x.min))}
 if(x.a){m.appendChild(document.createTextNode(' '));sc=mk(m,'span','lk-tag'+(x.sr?' lk-src':''),x.a);if(x.sr)sc.title='Runs on: '+x.a}
 if(x.c){sc=mk(m,'span','lk-cat',x.c);sc.title='Category: '+x.c}
-rt=mk(r,'span','lk-rt');if(x.id)mk(rt,'span','idb',x.id);if(x.n)mk(rt,'span','lk-nt',x.n);if(K3){K3.star(r,x.id);K3.aria(c)}
-track(c,x);sc=mk(c,'span','lk-ch lk-stc');mark(sc,x.s);sc.appendChild(document.createTextNode(CL[col]));
+rt=mk(r,'span','lk-rt');if(x.id)mk(rt,'span','idb',x.id);if(x.n&&col==='being_built')mk(rt,'span','lk-nt',x.n);if(K3){K3.star(r,x.id);K3.aria(c)}
+track(c,x);past(c,x);sc=mk(c,'span','lk-ch lk-stc');mark(sc,x.s);sc.appendChild(document.createTextNode(CL[col]));
 m=[x.y>=1?'retry '+x.y:'',SN[x.s],x.g].filter(Boolean).join(' · ');if(m)mk(c,'span','lk-mg',m);if(K3)K3.lin(c,x.id)}
 // the worker a card sorts by: its first, a card with none recorded last
 function who(x){var w=String((x.w||[])[0]||'');return /not recorded/.test(w)?'':w}
@@ -268,20 +295,22 @@ function who(x){var w=String((x.w||[])[0]||'');return /not recorded/.test(w)?'':
 // held work second let the moving cards fold behind Show more), each the last step first, then the longest in its step;
 // the work set aside, which Home listed in its Merging panel and not here, comes after the held marker (z). As
 // flight_key in home_look.py. 'first' follows the columns, left to right.
-var PC={testq:1,mergeq:1,parked:2};
+var PC={testq:1,mergeq:1,simq:1,parked:2,aside:2};
+// T-4094: the record a sort reads (K3.by); Stage is the column, left to right, Set aside after them, then the step in it
+function rec(x){var k=CK.indexOf(COL[x.s]);return {stage:(k<0?CK.length:k)*100+RUN.indexOf(x.s),time:x.min>=0?x.min:null,cat:x.c||null,who:who(x)||null,
+created:K3&&K3.tnum?K3.tnum(x.id):null,started:Date.parse(x.ps||'')||null,retries:x.y||0}}
 function order(a,b){var d=ST.indexOf(a.s)-ST.indexOf(b.s),fa=K3&&K3.fav(a.id)?1:0,fb=K3&&K3.fav(b.id)?1:0,sm=K3&&K3.sort?K3.sort():'def',z=(a.z||0)-(b.z||0);
-return (fb-fa)||(sm==='cat'?K3.txt(a.c,b.c):sm==='who'?K3.txt(who(a),who(b)):sm==='long'?(b.min>=0?b.min:-1)-(a.min>=0?a.min:-1):sm==='first'?CK.indexOf(COL[a.s])-CK.indexOf(COL[b.s])||-d:0)
-||(sm==='first'?0:(sm==='def'?(PC[a.s]||0)-(PC[b.s]||0):0)||z||d)||((b.min||0)-(a.min||0))}
+return (fb-fa)||(K3&&K3.by?K3.by(rec(a),rec(b)):0)||(sm==='stage'?0:(sm==='def'?(PC[a.s]||0)-(PC[b.s]||0):0)||z||d)||((b.min||0)-(a.min||0))}
 function hit(x){return !K3||K3.match([x.t,x.id,(x.w||[]).join(' '),LB[x.s],CL[COL[x.s]],x.n,x.a,x.g].map(function(s){return s||''}).join(' '))}
 function render(){var flt=document.getElementById('lk-flt'),cnt={},v,mo,c,qn=K3&&K3.qn?K3.qn():0,pf=document.getElementById('lk-pf'),pq=document.getElementById('lk-pq');
 items.forEach(function(x){var k=COL[x.s];cnt[k]=(cnt[k]||0)+1});if(fl!=='all'&&!(fl==='queued'?qn:cnt[fl]))fl='all';
 // the chips filter, each with its count as before T-3996 (T-4007, friesevan #41 c6772135629)
-if(flt){flt.textContent='';[['all','All',items.length+qn]].concat(qn?[['queued','Queued',qn]]:[]).concat(CK.filter(function(k){return cnt[k]}).map(function(k){return[k,CL[k],cnt[k]]})).forEach(function(c){
+if(flt){flt.textContent='';[['all','All',items.length+qn]].concat(qn?[['queued','Queued',qn]]:[]).concat(CK.concat(['aside']).filter(function(k){return cnt[k]}).map(function(k){return[k,CL[k],cnt[k]]})).forEach(function(c){
 var b=mk(flt,'button','lk-ch');b.type='button';b.setAttribute('aria-pressed',fl===c[0]);b.onclick=function(){fl=c[0];render()};
 if(c[0]!=='all')mk(b,'span',c[0]==='queued'||MK[c[0]]?'lk-qm':'lk-dot');b.appendChild(document.createTextNode(c[1]+(c.length>2?' ':'')));if(c.length>2)mk(b,'small','',String(c[2]))})}
 // one part alone under a stage chip; the columns left to right puts Queued, which comes before the first of them, above In flight
 if(pf)pf.hidden=fl==='queued';if(pq)pq.hidden=fl!=='all'&&fl!=='queued';
-if(pf&&pq&&pf.parentNode===pq.parentNode){if(K3&&K3.sort&&K3.sort()==='first'){if(pq.nextElementSibling!==pf)pf.parentNode.insertBefore(pq,pf)}else if(pf.nextElementSibling!==pq)pf.parentNode.insertBefore(pf,pq)}
+if(pf&&pq&&pf.parentNode===pq.parentNode){if(K3&&K3.sort&&K3.sort()==='stage'&&K3.dir&&K3.dir()>0){if(pq.nextElementSibling!==pf)pf.parentNode.insertBefore(pq,pf)}else if(pf.nextElementSibling!==pq)pf.parentNode.insertBefore(pf,pq)}
 var sq=!!(K3&&K3.q());box.textContent='';v=items.filter(function(x){return (fl==='all'||COL[x.s]===fl)&&hit(x)&&(!K3||!K3.catok||K3.catok(x.c))}).sort(order);v.forEach(card);
 if(!items.length)mk(box,'p','','Nothing in flight.');else if(!v.length&&sq)mk(box,'p','meta','No task in flight matches.');
 box.classList.toggle('lk-short',!all&&!sq);
@@ -301,7 +330,7 @@ if(m){m.hidden=x<1;m.textContent='and '+x+' earlier'}}
 function draw(st,isPub){var ml=S.lane.main(st,isPub),l=ml.concat(S.lane.rows(st).filter(function(r){return!r.d})),seen={},u=[],now=Date.now(),o={},wk,ms=sw((st.tasks||{}).src);
 l.forEach(function(r){var t=String(r.t||r.task||''),id=r.task||(t.match(/\bT-\d+/)||[''])[0],k=id||nm(t),s=(L.st||{})[id],m,b=IN[id]||{},ln=/^([ab])\d*$/.exec(r.lane||''),mn=ml.indexOf(r)>=0,rs=mn?ms:sw(r.src||(ln?'plan-'+ln[1]:''),r.n);if(s&&s[0]==='parked'&&r.at&&Date.parse(r.at)>s[2])s=[r.k==='review'?'review':'coding','Fix after a failed merge'];if(r.w)o[String(r.w).toLowerCase()]=1;if(!k||seen[k])return;seen[k]=1;
 m=r.at?Math.round((now-Date.parse(r.at))/6e4):NaN;u.push({id:id,t:nm(r.t||r.task)||nm((L.nm||{})[id])||'Name not recorded',w:[r.w||(b.w||[])[0]||'worker not recorded'],m:r.m||b.m||'model not recorded',e:r.e&&r.m?r.e:r.m?'':b.e||'',min:m>=0?m:-1,s:s?s[0]:r.k==='review'?'review':'coding',n:s?s[1]:'',
-a:rs||(mn?'Main':ln?'Account '+ln[1].toUpperCase():''),sr:rs?1:0,h:b.h,x:b.x,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0})});
+a:rs||(mn?'Main':ln?'Account '+ln[1].toUpperCase():''),sr:rs?1:0,h:b.h,x:b.x,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});
 (L.init||[]).forEach(function(x){if(x.s!=='coding'&&x.s!=='review'&&!seen[x.id||x.t]){seen[x.id||x.t]=1;u.push(x)}});  // T-3284 item 3
 items=u;render();if(K3&&K3.requeue)K3.requeue();wk=document.getElementById('lk-working');if(wk)wk.textContent=Object.keys(o).length+' working';idle(st);fin(st)}
 // T-3316: a tree's link to an In flight card shows the whole list, then hands back the card

@@ -575,6 +575,9 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-11 1:15 PM ET** ((private)): An Investor may lift a personal account's stop at any time; a clear wins until the weekly reset, and the supervisor does not re-stop that account while it is over its line.
 - **2026-11-11 1:30 PM ET** ((private)): The task queue audit (T-4092) runs on Evan's personal account with Fable at xhigh effort, not on the main account; its start still waits on the Investors' go.
 - **2026-11-11 1:34 PM ET** ((private)): The queue audit waits until item 20's notes migration lands (then the company posts ready and waits for the go). When that Fable audit starts on Evan's account, Evan's 50% stop line is lifted; Jeremy's 50% line stays, kept for a later app audit.
+- **2026-11-11 3:33 PM ET** ((private)): The go for the task queue audit (T-4092): on Evan's personal account (a), Fable xhigh, updates on #41 per step; scope adds ideas for prioritising tasks when they enter the queue by parent/child/umbrella status.
+- **2026-11-11 3:37 PM ET** ((private)): The queue audit starts once the merge audit's last step (item 20's live notes migration) is merged, unless safe sooner; no second go needed.
+- **2026-11-11 5:09 PM ET** ((private)): A to the 5:05 PM question: the queue audit T-4092 keeps running on Fable past half of Evan's (account a) week until it is done; the Fable half-week rule stays for all other work.
 {% endraw %}
 
 </div>

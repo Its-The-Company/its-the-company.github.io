@@ -37,7 +37,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-10 12:4x)
 
-- Item 20 slice 3 LANDED 0aa8530010 (11-11 3:26 PM). Live-board probe 28/28 readers same, 227 lines/652 notes. Next: Operator migrates + switch. Copy T-3995b-odalys/wt left (no work; scratch refused unknown task).
+- T-4092 merge-mode pass + pinned Fable past 50% LANDED 453d8ad70a (6:09 PM 11-11); dry tick a: slot 1 takes T-4092. Pre-existing red on HEAD: test_personal_lane 5, guard_supervisor 1 (copy path).
+- T-4092 pin LANDED 3b908fa9b6 (11-11 5:02 PM): tools/line_pin.py "Account: a" honoured by dispatch/board/personal_tick/lane_take; T-4092 line pinned (a, Fable xhigh). Open: a Fable line waits at Evan's week >=50% (FABLE_WEEK_PCT, Tenet 6) unless Investors say otherwise.
+- Item 20 DONE dfa3adf059 (11-11 3:4x PM): live board migrated, 663 notes/229 lines, 796,224->540,992 B, check 0, 28/28 readers same; note_to_record ON. Before copy: scratch T-3995-odalys.
 
 - T-3996 LANDED 7ae80b76f5 (11-11 11:49 AM) flow.py: sent_back only in <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s queue (src parked_ref), fix/own hand-out = being_built, readers' `retry` (null on try 1, else try-1). Item 16 gaps all 5 closed; check before 13/19 (4+10 one-side) after 10/18 (0+8, causes 1-2 = rule difference). Owed: after-number on the live record once collect runs.
 - Item 11 (T-3995) 11-10 9:5x PM: grouping NOT worth it, nothing landed (bisection eats saving at ~25% red; script company-scratch/T-3995-odalys/item11_group_runs.py). Revisit if red share <10%.
@@ -52,13 +54,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 
-- A copy lacks git-ignored ops/live.json: site_live_test reds there (and on main's copy). zsh: pass a path list as ${(f)...} array, not $P.
-- Measure a shell reader's per-call cost before routing a loop through python: 843 ms/line at load 53 vs 1 ms grep of one expanded file.
-
-- Classifier refuses pkill of my own suite run (11-11): don't start a long run near a wind-down.
-
-- No git stash in copies (one list for all worktrees): `checkout --merge --detach main`.
-- scratch.py worktree <task> returns an existing copy: check `ps` for a live run in it before checkout (11-11).
 - main_gate land runs the scoped suite: >10 min under load. Run it in background and land early on a wind-down day.
 - Applier never applies a settings `hooks` change (#205): Investors apply a committed .diff by hand.
 {% endraw %}

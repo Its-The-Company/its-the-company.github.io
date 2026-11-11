@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-11T06:10:39.599693+00:00",
+ "at": "2026-11-11T06:13:51.380690+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -55,6 +55,16 @@
      {
       "s": "testq",
       "at": 1794365250
+     }
+    ]
+   },
+   {
+    "t": "T-4008",
+    "w": "Idris",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794354789
      }
     ]
    }
@@ -160,9 +170,9 @@
  "next_tick": null,
  "personal": {
   "week_pct": 24.25,
-  "usage_pct": 32.2,
-  "work_pct": 77.5,
-  "read_at": "2026-11-11T06:10:00+00:00",
+  "usage_pct": 30.4,
+  "work_pct": 76.7,
+  "read_at": "2026-11-11T06:17:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -199,7 +209,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-11T01:10:00-05:00",
+  "at": "2026-11-11T01:17:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -430,10 +440,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "1:10 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-11T06:10:00+00:00",
-  "started": "9:49 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:49 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:10 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "at": "1:17 AM",
+  "why": "Between sessions: no session is running. Last check 9:49 PM ET.",
+  "at_iso": "2026-11-11T06:17:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:17 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 9:49 PM ET.</p></section>"
  }
 }

@@ -33,9 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open
 
-- T-3292 (9a7bc4c65): T-3289 PASS; T-3279 PASS w/ M1 = T-3298 (`.missing` also means unreadable/undecodable/folder gone). Runner J-20261107-1010 owed. Lesson: rename keeps mtime.
-- T-2551 (089904eda): six launchers unreleased. T-3663 (08f3ba930): Idris's tap path PASS w/ findings, M1/M2 = T-3666/67. Mine (L5): _launch.SLOT_RE `$` takes a trailing \n; fullmatch + test. Lesson: a WindowGroup with no handlesExternalEvents opens a new iPad window per URL.
-- T-1677 (91ea35ab2): PASS w/ fixes, M1/M2 = T-3757/58 (Idris). Lesson: a test that passes a HoldLog and never asserts it hides an unheld write.
 - Lesson: a file kept "until settled" needs a settle for every way the write can fail (folder gone), or it leaks.
 - T-3477 (7c7faa433): stall test must assert the stalled call was reached. T-3562 (afb32bf63): readings aware at source; review T-3571 Idris. Lesson: zsh never splits $P, so `main_gate check $P` checked HEAD and said "already verified"; pass paths via $(cat file).
 - T-3411 (3b8109b48): T-3364 tests PASS w/ fixes, T-3557..60 Idris. Lesson: a "draws" check is <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span> where the premade catches Exception into a notice; inject offered/gates, don't stub them.
@@ -49,6 +46,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3867 (uncommitted, commit refused by classifier): guard_test rows pinned Investor values; now shape checks. Lesson: in zsh "$h:a" is a modifier; write ${h}.
 - T-3873 (2ad88dfc1, b7f9c136e): T-0588/T-0725 recuts handed. Lesson: a stop_on marker printed before the try lets the first soft Stop land outside it under load; print the marker inside.
 - T-3835 (9987593924): T-3826 PASS w/ findings, M1/M2 = T-3899/3900 (Idris); tick refused (Plain: ID before gloss), not ticked. Lesson: per-item timeouts on a shared dependency add up per item; bound the pass, not each step.
+- T-4018 (audit item 17, nightly host suites): tools/nightly_suites.py; Home hook latest(). Lesson: scratch.py wants T-NNNN, reserve with board_tick id --reserve; never pkill -f a filename my own run's command line holds.
+- T-3995 i14 landed 70fbc08fae. Lesson: a completion notice is not a commit; git cat-file it (two false 'landed' hashes tonight). A pgrep -f waiter matches its own command line and never ends; wait on the pid.
+- 11-11 merge work: T-3741 landed a706e9d6f9 (tick refused: Workers join with '+', not ticked); T-3774 file 7aa7c36e48; T-3150 held in copy T-3150-pernille/wt, gate red on main's site_money_wording. Lesson: a top-level import of a new tool breaks every test kit that copies a fixed tool list; import it where used.
 - Older entries (2026-10-25 8:12 PM to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## Lessons

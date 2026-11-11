@@ -202,6 +202,7 @@ Every worker call carries its kind tag. Anything a script can do goes to a scrip
 
 - 2026-10-22, Day 1: first version (Ines).
 - 2026-11-04, Day 14: every board line carries a plain title, checked by a script (T-2402, Ines).
+- 2026-11-10, Day 20: rule 62 in handbook/rules.md, pipeline tools change in one batch a day while the merge line is in use; a fix that stops merging lands at once (audit item 6, cf1debd054, Odalys).
 {% endraw %}
 
 </div>

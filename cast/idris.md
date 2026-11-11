@@ -53,16 +53,16 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-3877 11-09 6d3ce7431: 6 recuts handed (ops/runs/t3877-retry-lines.txt, Operator copies; board note unstaged, others' lines share the hunk). Left T-1672 redo, T-2538 xc.sh, T-2612 after T-3350, T-0272. Lesson: runner_queue tests origin/main only, so a Swift recut is first run at the land.
 
+- T-4008 11-10 0dc00ac09b: Ask to Buy red = StoreKit test env lists a verified purchase for a deferred request; test skips with facts. Rerun line off after a clean week (xc_rerun.jsonl).
+- Lesson T-4008: main unpushed? push land/idris-<task> whose tip adds the job files; empty pin commits dodge "already queued".
+
 ## Lessons
 - StoreKit, T-0583/T-0589, caret lessons and dated logs: archive.md.
 
-- T-3871 11-09: T-3281+T-0892 recut = parked/a3/20261109-150707-recut (land xc + widgetkit_check owed). archive() refused by classifier: 3 verdicts undone. T-0025 Swift half only on refs/wip/t0025-idris.
-- T-3783 443bf4379 11-09 10:0x: cause open. Jeremy's build-3 export (research/inbound/227/) shows the app pass runs 5 widget runs a pass, Python ok on 27.2: the four's own runs fail (script or sink), device only. First check: build 4's Export (T-3572 rows). Build 5 held (runner silent). Lesson: read the phone's existing exports before ranking causes.
-- T-3098 11-09: input()-after-finished fix + Swift/host tests written, host green, Swift never ran (xc.sh 75, disk 9.6 GB; SSD down). NOT committed; patch on 2769da8ae in /private/tmp/company-scratch/T-3098-idris. Lesson: a red run needs its own build slot; budget two lock waits.
-- T-3560 11-09: F4-F6 tightening written, never run (xc.sh 75, disk); patch in company-scratch/T-3560-idris. T-3364's PremadeFirstRenderTests never landed; the patch re-adds it.
-- T-1643 11-09: LaneDemotions.remove (locked; proof = app ok row after list mtime). UI T-3791 (needs T-1140), test L T-3792. Lesson: shared worktree's uncommitted tests ride in my xc.sh run.
-- Lesson T-1404: one Bash call <span title="A measured fact that holds a grade below a letter, however good the rest is.">caps</span> at 10 min; split test L (WK_LANE_LIST). A failed test L leaves its widget placed: check pids.
 - T-3762 11-09: GalleryPush, request used once; UI test red on old code. Lesson: clear a pushed view's request on pop. (T-3757: archive.md.)
+- T-3657 924c71fd7 11-09: <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G3</span> overrun premade, gate build only; + 1cfbdc4f4 gate-build test fix; needs review. Lesson: Simulator can't jetsam; model the <span title="A test written in advance. If it fires, we drop the idea.">kill</span> as a run that never returns.
+- T-3826 2efa9e46b 11-09: pre-run awaits bounded 15 s (deferred row "timed out: <step>"; no `skipped` word), pass wait 120 s; 6 tests red on mutation, green with bound; full suite 1531/0 (102856). Open: review T-3835 (Pernille). Lesson: <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> share one Xcode lock; a filtered run waited 10.5 min.
+- Lesson T-4012 merge 11-11: scratch.py worktree takes a bare T-id; a refused name returns "" and `git -C ""` hits the main folder. Guard `[ -n "$W" ]`. T-2857 de0219ab45, T-2376 7c6c860b1e landed; T-0042 merge not started.
 {% endraw %}
 
 

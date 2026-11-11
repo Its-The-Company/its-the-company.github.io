@@ -203,7 +203,7 @@ JU={testq:'lk-simq',testing:'simulators',mergeq:'lk-mqh',mergetest:'lk-mt',parke
 M3=['mergeq','mergetest','merging'],EX={coding:M3,review:M3,testq:['testing'].concat(M3),testing:M3,mergeq:M3.slice(1),parked:M3,mergetest:['merging'],merging:[]};
 // T-4007 (JeremyFries, typed 2026-11-10: "the way that it lists the current step of the task ... (6 stages, shared by all
 // tasks, with totals summed) ... should be included in the full task list"): a card's step is shown as This Session
-// shows it: one row of stage columns shared by every card, with the count of cards in each (#lk-cols), and on each card
+// shows it: one row of stage columns shared by every card, with the record's count in each (#lk-cols, as built; T-3996 item 0), and on each card
 // a track of marks under those columns (session_page.py's _track; cells() is col_cells in home_look.py). COL folds the
 // build's eight steps into the five of This Session's columns a listed task can be in (CK, its order; CL, its names);
 // MK is the mark where the task waits or was sent back; SN the step inside Being built that is not plain coding; HW
@@ -229,12 +229,14 @@ function mins(n){return n>=1440?Math.floor(n/1440)+' d '+Math.floor(n%1440/60)+'
 function mark(p,s){mk(p,'span',Q[s]||s==='queued'?'lk-qm':'lk-dot')}
 function steps(x){var p=(x.h||[]).map(function(h){return h.slice()}),c=Q[x.s]?'q':'a';
 if(!p.length&&x.s!=='coding'&&x.s!=='review')p=[['coding',null,'d','']];if(x.s==='coding'&&p.length&&p[p.length-1][2]==='f')c='a lb';
-p.push([x.s,x.min>=0?x.min:null,c,'']);return p.concat(EX[x.s].filter(function(e){return e!=='mergetest'||x.x}).map(function(e){return[e,null,'n','']}))}
-function hist(c,x){var st=steps(x),k=st.filter(function(h){return h[2]!=='n'}).length,old=Math.max(0,k-6),ol=mk(c,'ol','lk-hist');
+p.push([x.s,x.min>=0?x.min:null,c,'']);var ex=EX[x.s].filter(function(e){return e!=='mergetest'||x.x}).map(function(e){return[e,null,'n','']});
+// T-4019: sent back goes round again: a fix to Coding, a retry to the merge line (home_look.hist_steps)
+if(x.s==='parked'){if(x.k==='retry'){if(ex.length)ex[0][2]='n r'}else ex.unshift(['coding',null,'n r',''])}return p.concat(ex)}
+function hist(c,x){var st=steps(x),k=st.filter(function(h){return h[2].charAt(0)!=='n'}).length,old=Math.max(0,k-6),ol=mk(c,'ol','lk-hist');
 ol.setAttribute('aria-label','Steps, now '+LB[x.s]);if(old)mk(ol,'li','e','+'+old+' earlier');
 var wd=[],nx=[];st.forEach(function(h,j){var li=mk(ol,'li',(h[2]+(j<old?' old':'')).trim(),LB[h[0]]),w=[h[1]==null?'':h[1]<1?'<1 min':mins(h[1]),h[3]].filter(Boolean).join(' · ');if(w)mk(li,'small','',w);
 li.title=LB[h[0]]+(w?' · '+w:'')+({f:' · failed',q:' · waiting now',n:' · expected'}[h[2]]||(h[2].indexOf('a')>=0?' · now':''));
-if(h[2]==='n')nx.push(LB[h[0]]);else wd.push((h[2].indexOf('lb')>=0?'↩ ':'')+LB[h[0]]+(w?' '+w:''))});
+if(h[2].charAt(0)==='n')nx.push((h[2]==='n r'?'↩ ':'')+LB[h[0]]);else wd.push((h[2].indexOf('lb')>=0?'↩ ':'')+LB[h[0]]+(w?' '+w:''))});
 mk(c,'p','lk-hw meta',wd.join(' → ')+(nx.length?'; next: '+nx.join(', '):''))}
 function ord(n){var t=n%100;return n+(t>=10&&t<=20?'th':({1:'st',2:'nd',3:'rd'})[n%10]||'th')}
 // the track: "now" where the task is, "was" where this try has been (a try sent back: the try that failed), "" elsewhere
@@ -246,9 +248,9 @@ return CK.map(function(k){return k===here?'now':been[k]?'was':''})}
 function track(c,x){var here=COL[x.s],t=mk(c,'span','ts-trk'),wd=[],nx=[];t.setAttribute('aria-hidden','true');
 cells(x).forEach(function(v){var i=mk(t,'i');if(v==='now')i.className=MK[here]||'a';else if(v==='was')i.className='d'});
 steps(x).forEach(function(h,j){var w=[h[1]==null?'':h[1]<1?'<1 min':mins(h[1]),h[3]].filter(Boolean).join(' · ');
-if(h[2]==='n')nx.push([CK.indexOf(COL[h[0]]),j,HW[h[0]]]);else wd.push((h[2].indexOf('lb')>=0?'↩ ':'')+HW[h[0]]+(w?' '+w:''))});
+if(h[2].charAt(0)==='n')nx.push([CK.indexOf(COL[h[0]]),j,(h[2]==='n r'?'↩ ':'')+HW[h[0]]]);else wd.push((h[2].indexOf('lb')>=0?'↩ ':'')+HW[h[0]]+(w?' '+w:''))});
 nx.sort(function(a,b){return a[0]-b[0]||a[1]-b[1]});
-mk(c,'p','lk-hw meta',wd.join(' → ')+(nx.length?'; next: '+nx.map(function(n){return n[2]}).join(', '):''))}
+mk(c,'p','lk-hw meta',wd.join(' → ')+(nx.length?'; next: '+nx.map(function(n){return n[2]}).join(', '):''));if(x.b)mk(c,'p','lk-hw meta',x.b)}
 function card(x){var c=mk(box,'div','lk-card lk-run'),r=mk(c,'div','lk-r1'),fs=mk(r,'span','lk-faces'),t,m,rt,sc,col=COL[x.s];c.setAttribute('data-stage',x.s);c.setAttribute('data-col',col);
 c.setAttribute('data-id',x.id||x.t);if(K3&&K3.open(x.id||x.t))c.classList.add('lk-open');
 (x.w||[]).slice(0,2).forEach(function(w){var p=f[String(w).toLowerCase()],g;if(p&&pic[p]){g=mk(fs,'img');g.src=pic[p];g.alt='';g.width=g.height=40}});
@@ -275,7 +277,7 @@ items.forEach(function(x){var k=COL[x.s];cnt[k]=(cnt[k]||0)+1});if(fl!=='all'&&!
 if(flt){flt.textContent='';[['all','All',items.length+qn]].concat(qn?[['queued','Queued',qn]]:[]).concat(CK.filter(function(k){return cnt[k]}).map(function(k){return[k,CL[k],cnt[k]]})).forEach(function(c){
 var b=mk(flt,'button','lk-ch');b.type='button';b.setAttribute('aria-pressed',fl===c[0]);b.onclick=function(){fl=c[0];render()};
 if(c[0]!=='all')mk(b,'span',c[0]==='queued'||MK[c[0]]?'lk-qm':'lk-dot');b.appendChild(document.createTextNode(c[1]+(c.length>2?' ':'')));if(c.length>2)mk(b,'small','',String(c[2]))})}
-[].forEach.call(document.querySelectorAll('#lk-cols [data-col]'),function(e){e.textContent=cnt[e.getAttribute('data-col')]||0});
+// T-3996 item 0: #lk-cols holds the workflow record's counts, as built; a status redraw leaves them
 // one part alone under a stage chip; the columns left to right puts Queued, which comes before the first of them, above In flight
 if(pf)pf.hidden=fl==='queued';if(pq)pq.hidden=fl!=='all'&&fl!=='queued';
 if(pf&&pq&&pf.parentNode===pq.parentNode){if(K3&&K3.sort&&K3.sort()==='first'){if(pq.nextElementSibling!==pf)pf.parentNode.insertBefore(pq,pf)}else if(pf.nextElementSibling!==pq)pf.parentNode.insertBefore(pf,pq)}

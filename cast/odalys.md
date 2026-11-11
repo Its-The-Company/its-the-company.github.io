@@ -37,21 +37,23 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-10 12:4x)
 
+- Item 20 (T-3995), 11-10 9:40 PM, NOT landed: copy T-3995-odalys/wt holds tools/board_notes.py (new), tests/board_notes_test.py (new, 39/39), board_tick.py (apply commit hook, note switch off), dispatch.py + lane_owner.py (read expanded), tests/xc_rerun_test.py (COMPANY_LANE pop; was red at HEAD). Msg: ../msg-item20.txt. 68/83 suites run (res/); red: board_weekly (red at HEAD too), disk_sweep + land_parallel (timing, load 40-60), personal_land_product (fixture lacks suite_floor.py); 15 unrun. Copy dry run: limit 1000 moves 612 notes off 226 lines, 767,990 -> 540,350 B, 809 segments hash-equal. Do NOT migrate main until ~28 other readers expand and supervisor.sh/jobs_loop.py commit ops/board_notes/. Stash in copy: flow.py put_down patch (also ../flow-put_down-unlanded.patch).
+
+- Item 11 (T-3995) 11-10 9:5x PM: grouping NOT worth it, nothing landed (bisection eats saving at ~25% red; script company-scratch/T-3995-odalys/item11_group_runs.py). Revisit if red share <10%.
+- T-4084 STOPPED 11-11 12:22 AM: guard refused dispatch.py week-stop step (read lanes' profile dir). Copy T-4084-odalys/wt holds unlanded dispatch.py. Board note line 383.
+
 - T-4011 landed 37b62c8ec4, ticked 5ccb73406a: sent_back.py ledger (ops/metrics/sent_back.jsonl), dispatch fix/own hand-outs carry the reason, flow.py with_author stage, packet "Why it came back". 24-h after number owed: ledger rows, handout rows with kind fix/own, flow now() with_author count. Item 10 next (retire retry file, queued/hold ledgers, retry/redo lines).
-- T-4012 slice 1 landed 0157ccd5b0 (retry_other retired), noted not ticked. Slice 2 patch: company-scratch/T-4012-slice2-board-line.patch (board line; 4 land suites still assert it). Retry file/merge-queue re-pick/ledgers wait on T-4011 after-number (11-10: 0 fix hand-outs, no sent_back rows).
+- T-4012 0b48b7f25e (11-11 12:36 AM) personal_land.sh batch landed: slice 2 (no Retry line), host_keep wired, records apply 1 commit, pywidget/tools host floor, named docs/design .md runs xc. Left: retry file/re-pick/ledgers after T-4011 number. Owed: host_keep.jsonl rows; 'ops: lane records applied' count vs 72/49.
 - Unlanded patches on SSD company-scratch: T-3907 runner+main-gate; T-3962/65 (T-3962 also sim_hold, T-3967); T-3971 merge-only switch (13 files, green). T-3818 refused host_refused.
-- T-3974 df40f13ef4 after-number owed. T-3978 left: hook (Investor), supervisor sweep --apply. T-3963 merge_rate.py untracked. T-3979 (3) lease warning, (5) Home panel.
+- T-4013 ccf7ff1ed8 ticked: overdue OPTs read (scripts log/audit/t4013/). Owed: OPT-068 read 11-16; OPT-108 5-row rerun; OPT-114 load per slow job; OPT-114 dup rename waits on merge_queue_hold.txt:1095.
+- T-3974 df40f13ef4 after-number owed. T-3963 merge_rate.py untracked. T-3979 (3) lease warning, (5) Home panel.
+- Item 4: sweep in supervisor; guard tools/main_folder_guard.py landed 842051d6c9 (76/0), NOT active until Investors apply settings.diff (company-scratch/T-3995h-odalys; Operator posts). After-number: .git/main-folder-guard.jsonl rows, false refusals.
 
 ## Lessons
 
-- Land road (11-10, twice): scratch.py worktree -> edit -> main_gate.wanted_suites for the suite list -> tests/run.sh -j 2 those -> main_gate.py land --from. dispatch_test asserts cmd_tick's source text; session_page tests want exactly 7 columns (map a new flow stage via COL_OF).
-- memory_archive.py --limit 2 moved the whole Open block and Lessons (11-10): rewrite by hand after it, then check the file.
-- Keep an applied patch out of main while blocked; its files dirty others' checks. Gate red on a suite you didn't touch: stash, run at HEAD; fix in the same land if you own the tool.
-- Live Home shots: waiting/flow/machine jsonl are git-ignored; copy into the scratch copy, build --no-gh, delete after.
-
-- Older notes: archive.md (memory_archive.py at session close).
-
-- T-3706 c0f18a5e4 (ticked): held-push merge switch (ops/sync_held_merge.json, off). Before n=164 held ticks, 41 copies. Turn-on T-3755; after-read sync_hold_stats.py.
+- No git stash in copies (one list for all worktrees): `checkout --merge --detach main`.
+- scratch.py worktree <task> returns an existing copy: check `ps` for a live run in it before checkout (11-11).
+- Applier never applies a settings `hooks` change (#205): Investors apply a committed .diff by hand.
 {% endraw %}
 
 

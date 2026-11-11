@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-11T22:02:53.456580+00:00",
+ "at": "2026-11-11T22:05:54.654525+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -9,16 +9,24 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4092 pin queue audit to Evan's account",
+   "task": "[tools] T-4092 pinned line passes merge mode",
    "model": "opus",
-   "started": "2026-11-11T20:41:06.841Z",
-   "seconds": 4906,
+   "started": "2026-11-11T22:05:00.881Z",
+   "seconds": 53,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4092 pin queue audit to Evan's account",
+   "model": "opus",
+   "started": "2026-11-11T20:41:06.841Z",
+   "seconds": null,
+   "finished": "2026-11-11T22:03:13.566000+00:00"
+  },
   {
    "name": "maren",
    "task": "[site] T-4094 Retry Queue and sorts on Home",
@@ -88,7 +96,7 @@
   "week_pct": 24.68,
   "usage_pct": 28.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-11T22:02:00+00:00",
+  "read_at": "2026-11-11T22:05:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -125,7 +133,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T17:02:00-05:00",
+  "at": "2026-11-11T17:05:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -139,9 +147,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4092 pin queue audit to Evan's account",
+   "task": "[tools] T-4092 pinned line passes merge mode",
    "model": "opus",
-   "since": "2026-11-11T20:41:06.841Z",
+   "since": "2026-11-11T22:05:00.881Z",
    "next": [],
    "effort": "high"
   },
@@ -194,7 +202,7 @@
     "t": "Audit and clean up the whole task queue",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-11T20:41:06.841Z",
+    "at": "2026-11-11T22:05:00.881Z",
     "o": "c",
     "task": "T-4092"
    }
@@ -291,8 +299,8 @@
   ],
   "count": {
    "next": 690,
-   "wait": 44,
-   "blocked": 69,
+   "wait": 45,
+   "blocked": 68,
    "you": 19
   },
   "fin": {
@@ -359,10 +367,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "5:02 PM",
+  "at": "5:05 PM",
   "why": "",
-  "at_iso": "2026-11-11T22:02:00+00:00",
+  "at_iso": "2026-11-11T22:05:00+00:00",
   "started": "3:37 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 3:37 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:02 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 3:37 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:05 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-11T05:15:52.714884+00:00",
+ "at": "2026-11-11T05:18:54.593124+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -86,16 +86,7 @@
    "task": "[tools] T-4012 personal_land.sh batch: items 13, 10s2, 5",
    "model": "opus",
    "started": "2026-11-11T02:51:20.048Z",
-   "seconds": 8672,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4012 settle the 41 sent-back pieces held as done",
-   "model": "opus",
-   "started": "2026-11-11T04:49:54.484Z",
-   "seconds": 1558,
+   "seconds": 8854,
    "finished": null,
    "effort": "high"
   },
@@ -104,13 +95,30 @@
    "task": "[site] T-3996 audit items 0 and 24 Home columns and cleanup",
    "model": "opus",
    "started": "2026-11-11T05:12:01.577Z",
-   "seconds": 231,
+   "seconds": 413,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4084 personal accounts fix sent-back work, 50% stop",
+   "model": "opus",
+   "started": "2026-11-11T05:17:33.583Z",
+   "seconds": 81,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2, Maren",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4012 settle the 41 sent-back pieces held as done",
+   "model": "opus",
+   "started": "2026-11-11T04:49:54.484Z",
+   "seconds": null,
+   "finished": "2026-11-11T05:15:57.491000+00:00"
+  },
   {
    "name": "maren",
    "task": "[site] T-3979 audit item 22 worker status on This Session",
@@ -134,20 +142,12 @@
    "started": "2026-11-11T03:55:15.186Z",
    "seconds": null,
    "finished": "2026-11-11T04:43:10.336000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3995 land main-folder guard tool",
-   "model": "opus",
-   "started": "2026-11-11T04:14:42.155Z",
-   "seconds": null,
-   "finished": "2026-11-11T04:19:35.342000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 686,
+  "runnable_count": 687,
   "blocked_count": 112
  },
  "meter": {
@@ -190,7 +190,7 @@
   "week_pct": 24.25,
   "usage_pct": 32.2,
   "work_pct": 77.5,
-  "read_at": "2026-11-11T05:15:00+00:00",
+  "read_at": "2026-11-11T05:18:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -227,7 +227,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-11T00:15:00-05:00",
+  "at": "2026-11-11T00:18:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -302,16 +302,6 @@
     "task": "T-4012"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retire the retry routes the send-back replaces",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-11T04:49:54.484Z",
-    "o": "c",
-    "task": "T-4012"
-   },
-   {
     "w": "Maren",
     "k": "site",
     "t": "Show one true record on Home and This Session",
@@ -320,6 +310,16 @@
     "at": "2026-11-11T05:12:01.577Z",
     "o": "c",
     "task": "T-3996"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Personal accounts fix sent-back work to half their week",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-11T05:17:33.583Z",
+    "o": "c",
+    "task": "T-4084"
    }
   ],
   "src": "plan",
@@ -413,7 +413,7 @@
    }
   ],
   "count": {
-   "next": 686,
+   "next": 687,
    "wait": 44,
    "blocked": 68,
    "you": 18
@@ -463,28 +463,16 @@
   ]
  ],
  "reply": {
-  "sent": "2026-11-11T03:34:14Z",
-  "seconds": 65.0
+  "sent": "2026-11-11T05:15:17Z",
+  "seconds": 146.0
  },
- "inbox": [
-  {
-   "id": "c6787708643",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "You may use the personal accounts..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -495,10 +483,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "12:15 AM",
+  "at": "12:18 AM",
   "why": "",
-  "at_iso": "2026-11-11T05:15:00+00:00",
+  "at_iso": "2026-11-11T05:18:00+00:00",
   "started": "9:49 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:49 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:15 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:49 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:18 AM ET</p></section>"
  }
 }

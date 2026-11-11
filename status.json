@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-11T02:49:15.893716+00:00",
+ "at": "2026-11-11T02:52:17.543200+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-10T21:49:16-05:00",
   "flow": [
    {
     "t": "T-3393",
@@ -108,6 +108,13 @@
     "end_at": 1794323112
    },
    {
+    "t": "T-3706",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794322606
+   },
+   {
     "t": "T-3150",
     "name": "Make the scoreboard's spend match the ledger",
     "acct": "Personal a",
@@ -132,54 +139,60 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794322482
-   },
-   {
-    "t": "T-3812",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794322155
    }
   ],
-  "landed": 10,
+  "landed": 8,
   "failed": 2
  },
- "workers": [],
- "who": "",
- "recent": [
+ "workers": [
   {
    "name": "odalys",
-   "task": "[tools] audit item 20 notes off board lines",
+   "task": "[tools] T-3996 land audit item 16 record gaps",
    "model": "opus",
-   "started": "2026-11-11T00:38:17.970Z",
-   "seconds": null,
-   "finished": "2026-11-11T02:40:30.266000+00:00"
+   "started": "2026-11-11T02:51:06.049Z",
+   "seconds": 71,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[site] T-4019 sent-back queue per lane on Home",
+   "model": "opus",
+   "started": "2026-11-11T02:51:12.853Z",
+   "seconds": 64,
+   "finished": null,
+   "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-4017 unstick personal landings",
+   "task": "[tools] T-4012 personal_land.sh batch: items 13, 10s2, 5",
    "model": "opus",
-   "started": "2026-11-10T23:38:25.452Z",
-   "seconds": null,
-   "finished": "2026-11-11T02:40:07.855000+00:00"
+   "started": "2026-11-11T02:51:20.048Z",
+   "seconds": 57,
+   "finished": null,
+   "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] audit item 6 merge-tool change batch",
+   "task": "[tools] T-3995 audit item 11 grouped Mac/iPhone runs",
    "model": "opus",
-   "started": "2026-11-11T02:00:00.684Z",
-   "seconds": null,
-   "finished": "2026-11-11T02:32:00.408000+00:00"
+   "started": "2026-11-11T02:51:26.497Z",
+   "seconds": 51,
+   "finished": null,
+   "effort": "high"
   },
   {
    "name": "pernille",
-   "task": "[tools] audit item 17 nightly suite run",
+   "task": "[tools] T-3995 audit item 14 app tests off tools/",
    "model": "opus",
-   "started": "2026-11-10T23:39:28.650Z",
-   "seconds": null,
-   "finished": "2026-11-11T02:28:50.610000+00:00"
+   "started": "2026-11-11T02:51:31.271Z",
+   "seconds": 46,
+   "finished": null,
+   "effort": "high"
   }
  ],
+ "who": "Odalys x3, Maren, Pernille",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -221,12 +234,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-10T22:04:04-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 24.25,
   "usage_pct": 32.2,
   "work_pct": 77.5,
-  "read_at": "2026-11-11T02:49:00+00:00",
+  "read_at": "2026-11-11T02:52:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -263,13 +276,44 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-10T21:49:00-05:00",
+  "at": "2026-11-10T21:52:00-05:00",
   "mode": "midnight"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 2 (new work waits: 35 tasks wait to merge (limit 12): 2 agents finish and merge waiting work)",
+  "n": 2,
+  "at": "2026-11-10T21:49:04.586960-05:00"
+ },
  "lanes": [
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-3996 land audit item 16 record gaps",
+   "model": "opus",
+   "since": "2026-11-11T02:51:06.049Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[site] T-4019 sent-back queue per lane on Home",
+   "model": "opus",
+   "since": "2026-11-11T02:51:12.853Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[tools] T-3995 audit item 14 app tests off tools/",
+   "model": "opus",
+   "since": "2026-11-11T02:51:31.271Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Idris",
    "state": "next",
@@ -287,40 +331,68 @@
    "next": []
   },
   {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P1, from T-3789...",
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Show one true record on Home and This Session",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-11T02:51:06.049Z",
+    "o": "c",
+    "task": "T-3996"
+   },
+   {
+    "w": "Maren",
+    "k": "site",
+    "t": "Show each session's sent-back queue on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-11T02:51:12.853Z",
+    "o": "c",
+    "task": "T-4019"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Retire the retry routes the send-back replaces",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-11T02:51:20.048Z",
+    "o": "c",
+    "task": "T-4012"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Replace the waiting pile with one merge line",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-11T02:51:26.497Z",
+    "o": "c",
+    "task": "T-3995"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Replace the waiting pile with one merge line",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-11T02:51:31.271Z",
+    "o": "c",
+    "task": "T-3995"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -415,6 +487,10 @@
    "wait": 43,
    "blocked": 68,
    "you": 17
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -452,28 +528,14 @@
   ]
  ],
  "reply": {
-  "sent": "2026-11-11T02:39:11Z",
-  "seconds": 28.0
+  "sent": "2026-11-11T02:45:53Z",
+  "seconds": 243.0
  },
- "inbox": [
-  {
-   "id": "c6785467194",
-   "state": "received",
-   "position": 1,
-   "eta": "2026-11-10T22:04:04-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "When will the full This Session..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -481,13 +543,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 5,
   "lanes": 0,
-  "total": 0,
-  "at": "9:49 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-11T02:49:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:49 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 5,
+  "at": "9:52 PM",
+  "why": "",
+  "at_iso": "2026-11-11T02:52:00+00:00",
+  "started": "9:49 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:49 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:52 PM ET</p></section>"
  }
 }

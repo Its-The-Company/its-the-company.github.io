@@ -1,67 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-11T14:45:09.699722+00:00",
+ "at": "2026-11-11T14:48:16.378672+00:00",
  "session": {
   "active": true,
   "kind": "work",
-  "started": "2026-11-11T08:37:55-05:00",
-  "flow": [
-   {
-    "t": "T-3393",
-    "w": "Idris",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794365256
-     }
-    ]
-   },
-   {
-    "t": "T-2056",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794365255
-     }
-    ]
-   },
-   {
-    "t": "T-2456",
-    "name": "Last checks before the first test build",
-    "w": "Odalys",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794365251
-     }
-    ]
-   },
-   {
-    "t": "T-2266",
-    "name": "Run the stuck-signal tests on the MacBook",
-    "w": "Odalys",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794365251
-     }
-    ]
-   },
-   {
-    "t": "T-2723",
-    "name": "Run the new earthquakes example in the Simulator",
-    "w": "Pernille",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794365250
-     }
-    ]
-   }
-  ],
-  "done": [],
-  "landed": 0,
-  "failed": 0
+  "started": "2026-11-11T08:37:55-05:00"
  },
  "workers": [
   {
@@ -69,7 +12,7 @@
    "task": "[tools] T-4084 Investor usage stop for personal accounts",
    "model": "opus",
    "started": "2026-11-11T14:27:53.432Z",
-   "seconds": 1036,
+   "seconds": 1222,
    "finished": null,
    "effort": "high"
   },
@@ -78,7 +21,7 @@
    "task": "[tools] T-3995 audit item 20 board notes",
    "model": "opus",
    "started": "2026-11-11T13:41:12.703Z",
-   "seconds": 3836,
+   "seconds": 4023,
    "finished": null,
    "effort": "high"
   },
@@ -87,7 +30,7 @@
    "task": "[site] T-3996 audit item 24 remove unused code",
    "model": "opus",
    "started": "2026-11-11T13:41:19.903Z",
-   "seconds": 3829,
+   "seconds": 4016,
    "finished": null,
    "effort": "high"
   }
@@ -149,7 +92,7 @@
   "week_pct": 24.43,
   "usage_pct": 30.4,
   "work_pct": 76.7,
-  "read_at": "2026-11-11T14:45:00+00:00",
+  "read_at": "2026-11-11T14:48:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -186,7 +129,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T09:45:00-05:00",
+  "at": "2026-11-11T09:48:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -441,10 +384,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "9:45 AM",
+  "at": "9:48 AM",
   "why": "",
-  "at_iso": "2026-11-11T14:45:00+00:00",
+  "at_iso": "2026-11-11T14:48:00+00:00",
   "started": "8:37 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:45 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:48 AM ET</p></section>"
  }
 }

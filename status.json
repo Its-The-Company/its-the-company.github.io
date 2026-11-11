@@ -1,47 +1,42 @@
 {
  "schema": 1,
- "at": "2026-11-11T17:52:41.346051+00:00",
+ "at": "2026-11-11T17:55:44.068218+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-11T12:52:41-05:00"
  },
- "workers": [],
- "who": "",
- "recent": [
+ "workers": [
   {
    "name": "pernille",
-   "task": "[tools] T-3995 audit item 5 merge-line record commits batched",
+   "task": "[tools] T-3995 supervisor red + child-kill",
    "model": "opus",
-   "started": "2026-11-11T15:11:22.609Z",
-   "seconds": null,
-   "finished": "2026-11-11T17:02:27.041000+00:00"
+   "started": "2026-11-11T17:54:32.041Z",
+   "seconds": 72,
+   "finished": null,
+   "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-4084 wire the Investor usage stop into the supervisor",
+   "task": "[tools] T-3995 item 20 slice 3 land",
    "model": "opus",
-   "started": "2026-11-11T16:21:47.459Z",
-   "seconds": null,
-   "finished": "2026-11-11T16:59:40.535000+00:00"
+   "started": "2026-11-11T17:54:41.207Z",
+   "seconds": 62,
+   "finished": null,
+   "effort": "high"
   },
   {
-   "name": "idris",
-   "task": "[site] T-3996 Home main-account 5-hour reading frozen mid-session",
+   "name": "maren",
+   "task": "[site] T-3996 Home retry N label",
    "model": "opus",
-   "started": "2026-11-11T16:17:30.180Z",
-   "seconds": null,
-   "finished": "2026-11-11T16:54:51.576000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3996 flow.py Sent Back meaning and item 16 gaps",
-   "model": "opus",
-   "started": "2026-11-11T15:39:30.840Z",
-   "seconds": null,
-   "finished": "2026-11-11T16:50:36.050000+00:00"
+   "started": "2026-11-11T17:54:47.426Z",
+   "seconds": 56,
+   "finished": null,
+   "effort": "high"
   }
  ],
+ "who": "Pernille, Odalys, Maren",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -89,12 +84,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-11T13:07:31-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 24.54,
   "usage_pct": 28.7,
   "work_pct": 75.8,
-  "read_at": "2026-11-11T17:52:00+00:00",
+  "read_at": "2026-11-11T17:55:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -131,18 +126,44 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T12:52:00-05:00",
+  "at": "2026-11-11T12:55:00-05:00",
   "mode": "midnight"
  },
- "next_tick_why": "last_tick",
- "idle": {
-  "since": "2026-11-11T12:13:09-05:00",
-  "minutes": 39,
-  "why": "a tick has spent 29 min on steps before the session",
-  "healed": []
+ "next_tick_why": "session",
+ "idle": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 2 (new work waits: 19 tasks wait to merge (limit 12): 2 agents finish and merge waiting work)",
+  "n": 2,
+  "at": "2026-11-11T12:52:31.015370-05:00"
  },
- "pool": null,
  "lanes": [
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[tools] T-3995 supervisor red + child-kill",
+   "model": "opus",
+   "since": "2026-11-11T17:54:32.041Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-3995 item 20 slice 3 land",
+   "model": "opus",
+   "since": "2026-11-11T17:54:41.207Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[site] T-3996 Home retry N label",
+   "model": "opus",
+   "since": "2026-11-11T17:54:47.426Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Idris",
    "state": "next",
@@ -160,40 +181,48 @@
    "next": []
   },
   {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P1, from T-3789...",
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Replace the waiting pile with one merge line",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-11T17:54:32.041Z",
+    "o": "c",
+    "task": "T-3995"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Replace the waiting pile with one merge line",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-11T17:54:41.207Z",
+    "o": "c",
+    "task": "T-3995"
+   },
+   {
+    "w": "Maren",
+    "k": "site",
+    "t": "Show one true record on Home and This Session",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-11T17:54:47.426Z",
+    "o": "i",
+    "task": "T-3996"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -288,6 +317,10 @@
    "wait": 45,
    "blocked": 69,
    "you": 20
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -332,7 +365,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -341,13 +373,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 3,
   "lanes": 0,
-  "total": 0,
-  "at": "12:52 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-11T17:52:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:52 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 3,
+  "at": "12:55 PM",
+  "why": "",
+  "at_iso": "2026-11-11T17:55:00+00:00",
+  "started": "12:52 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:52 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:55 PM ET</p></section>"
  }
 }

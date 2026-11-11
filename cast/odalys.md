@@ -37,12 +37,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-10 12:4x)
 
-- Item 20 (T-3995), 11-10 9:40 PM, NOT landed: copy T-3995-odalys/wt holds tools/board_notes.py (new), tests/board_notes_test.py (new, 39/39), board_tick.py (apply commit hook, note switch off), dispatch.py + lane_owner.py (read expanded), tests/xc_rerun_test.py (COMPANY_LANE pop; was red at HEAD). Msg: ../msg-item20.txt. 68/83 suites run (res/); red: board_weekly (red at HEAD too), disk_sweep + land_parallel (timing, load 40-60), personal_land_product (fixture lacks suite_floor.py); 15 unrun. Copy dry run: limit 1000 moves 612 notes off 226 lines, 767,990 -> 540,350 B, 809 segments hash-equal. Do NOT migrate main until ~28 other readers expand and supervisor.sh/jobs_loop.py commit ops/board_notes/. Stash in copy: flow.py put_down patch (also ../flow-put_down-unlanded.patch).
+- Item 20: a0282ad2f8 + 8fcd9e27cb landed. Slice 3 (readers expand) UNLANDED in copy T-3995-odalys/wt, test 48/0; live-copy probe clean. Open: full suite run, land, then live_status.py (Idris) + personal_tick.sh waits_on, then migrate. Board line 397.
 
+- T-3996 LANDED 7ae80b76f5 (11-11 11:49 AM) flow.py: sent_back only in <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s queue (src parked_ref), fix/own hand-out = being_built, readers' `retry` (null on try 1, else try-1). Item 16 gaps all 5 closed; check before 13/19 (4+10 one-side) after 10/18 (0+8, causes 1-2 = rule difference). Owed: after-number on the live record once collect runs.
 - Item 11 (T-3995) 11-10 9:5x PM: grouping NOT worth it, nothing landed (bisection eats saving at ~25% red; script company-scratch/T-3995-odalys/item11_group_runs.py). Revisit if red share <10%.
-- T-4084 STOPPED 11-11 12:22 AM: guard refused dispatch.py week-stop step (read lanes' profile dir). Copy T-4084-odalys/wt holds unlanded dispatch.py. Board note line 383.
+- T-4084 step 3 (11-11 11:5x AM): built in copy T-4084-odalys/wt, NOT landed (wind-down; patch step3-supervisor-stop-unlanded.patch). Guard allowed trip in supervisor.sh lane_stop_tick. Green: lane_stop 62/0, supervisor_lane_stop 21/0, records 18/0. Owed: supervisor_test (lanestop group), personal_off (4 rows), suites naming changed tools, personal_land -j 1, then land. Open: LANE CLEAR while latched gets re-tripped next tick; a failure trip lifted by auto_lift leaves <=15 min before re-trip.
 
-- T-4011 landed 37b62c8ec4, ticked 5ccb73406a: sent_back.py ledger (ops/metrics/sent_back.jsonl), dispatch fix/own hand-outs carry the reason, flow.py with_author stage, packet "Why it came back". 24-h after number owed: ledger rows, handout rows with kind fix/own, flow now() with_author count. Item 10 next (retire retry file, queued/hold ledgers, retry/redo lines).
+- T-4011 after-number read 11-11 8:45 AM (a23d1a4355): route untried (0 sent_back rows, 0 fix/own, merge mode held lanes). Item 10 removal: NO. Re-read after 10 give_up events or 48 h of lane lands.
 - T-4012 0b48b7f25e (11-11 12:36 AM) personal_land.sh batch landed: slice 2 (no Retry line), host_keep wired, records apply 1 commit, pywidget/tools host floor, named docs/design .md runs xc. Left: retry file/re-pick/ledgers after T-4011 number. Owed: host_keep.jsonl rows; 'ops: lane records applied' count vs 72/49.
 - Unlanded patches on SSD company-scratch: T-3907 runner+main-gate; T-3962/65 (T-3962 also sim_hold, T-3967); T-3971 merge-only switch (13 files, green). T-3818 refused host_refused.
 - T-4013 ccf7ff1ed8 ticked: overdue OPTs read (scripts log/audit/t4013/). Owed: OPT-068 read 11-16; OPT-108 5-row rerun; OPT-114 load per slow job; OPT-114 dup rename waits on merge_queue_hold.txt:1095.
@@ -51,8 +52,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 
+- Classifier refuses pkill of my own suite run (11-11): don't start a long run near a wind-down.
+
 - No git stash in copies (one list for all worktrees): `checkout --merge --detach main`.
 - scratch.py worktree <task> returns an existing copy: check `ps` for a live run in it before checkout (11-11).
+- main_gate land runs the scoped suite: >10 min under load. Run it in background and land early on a wind-down day.
 - Applier never applies a settings `hooks` change (#205): Investors apply a committed .diff by hand.
 {% endraw %}
 

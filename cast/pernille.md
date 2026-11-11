@@ -33,7 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open
 
-- Lesson: a file kept "until settled" needs a settle for every way the write can fail (folder gone), or it leaks.
 - T-3477 (7c7faa433): stall test must assert the stalled call was reached. T-3562 (afb32bf63): readings aware at source; review T-3571 Idris. Lesson: zsh never splits $P, so `main_gate check $P` checked HEAD and said "already verified"; pass paths via $(cat file).
 - T-3411 (3b8109b48): T-3364 tests PASS w/ fixes, T-3557..60 Idris. Lesson: a "draws" check is <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span> where the premade catches Exception into a notice; inject offered/gates, don't stub them.
 - T-3495 (e9f3b0a0d): T-3323 PASS w/ fixes; M1/M2 board lines refused by classifier, not added, T-3495 not ticked. Lesson: an exclusion that is empty at the first status is first tested after the archive; an index-only tracked check misses staged deletions.
@@ -48,7 +47,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3835 (9987593924): T-3826 PASS w/ findings, M1/M2 = T-3899/3900 (Idris); tick refused (Plain: ID before gloss), not ticked. Lesson: per-item timeouts on a shared dependency add up per item; bound the pass, not each step.
 - T-4018 (audit item 17, nightly host suites): tools/nightly_suites.py; Home hook latest(). Lesson: scratch.py wants T-NNNN, reserve with board_tick id --reserve; never pkill -f a filename my own run's command line holds.
 - T-3995 i14 landed 70fbc08fae. Lesson: a completion notice is not a commit; git cat-file it (two false 'landed' hashes tonight). A pgrep -f waiter matches its own command line and never ends; wait on the pid.
-- 11-11 merge work: T-3741 landed a706e9d6f9 (tick refused: Workers join with '+', not ticked); T-3774 file 7aa7c36e48; T-3150 held in copy T-3150-pernille/wt, gate red on main's site_money_wording. Lesson: a top-level import of a new tool breaks every test kit that copies a fixed tool list; import it where used.
+- 11-11 merge work: T-3741 landed a706e9d6f9 (tick refused: Workers join with '+', not ticked); T-3774 file 7aa7c36e48; T-3150 held in copy T-3150-pernille/wt (on b1b629e3ee, 11:51 AM wind-down): supervisor_test red at load 70, log lost in run.sh temp; rerun at low load, then land. Lesson: a top-level import of a new tool breaks every test kit that copies a fixed tool list; import it where used.
 - Older entries (2026-10-25 8:12 PM to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## Lessons

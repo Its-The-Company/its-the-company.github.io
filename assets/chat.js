@@ -202,7 +202,7 @@ clearTimeout(tm); tm = setTimeout(() => { b.textContent = 'Copy'; b.setAttribute
 }); };
 return b;
 }
-function sysEl(x) { var s = el('div', 'cv-sys'); mk(s, 'span', 'cv-ok', '✓'); put(s, txt('Received ' + clock(x.at))); copyBtn(s, 'Received ' + clock(x.at)); return s; }
+function sysEl(x) { var s = el('div', 'cv-sys'); mk(s, 'span', 'cv-ok', ''); put(s, txt('Received ' + clock(x.at))); copyBtn(s, 'Received ' + clock(x.at)); return s; }
 var log = null, head = null, pin = null, anchor = null, shown = {}, lastDay = '', lastAt = '', waitEl = null, pinObs = null;
 function items(n) {
 var i = issue(n), out = i ? [{ id: 'i' + n, l: login(i), body: i.body, at: i.created_at }] : [];

@@ -11,7 +11,7 @@ history.replaceState(null,'',h||location.pathname);show(h)})});if(location.hash)
 // Registered before Running's listener, so S.lk is there when Running draws. Text goes in as textContent.
 document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,H=document.querySelector('.lk-home');if(!S||!H)return;
 var F={},fn=[],O={},Q='',P='investors/favorites.json',repo=H.getAttribute('data-repo')||'',chain=Promise.resolve(),
-CARD='.lk-run,.lk-q,.lk-qr,.lk-mnow,.lk-blk',inp=document.getElementById('lk-find'),fb=document.getElementById('lk-findbox'),
+CARD='.lk-run,.lk-q,.lk-qr,.lk-blk',inp=document.getElementById('lk-find'),fb=document.getElementById('lk-findbox'),
 fn2=document.getElementById('lk-find-n'),fv=document.getElementById('lk-fav-n'),tok=!!(S.getToken&&S.getToken()&&/^[\w.-]+\/[\w.-]+$/.test(repo));
 try{JSON.parse(H.getAttribute('data-fav')||'[]').forEach(function(i){F[i]=1})}catch(e){}
 // T-4007 (JeremyFries and friesevan, #41, 2026-11-10): In flight and Queued are one list under Flow, with one search, one
@@ -37,11 +37,13 @@ function unb64(s){var a=atob(String(s).replace(/\n/g,'')),b=new Uint8Array(a.len
 function path(){return '/repos/'+repo+'/contents/'+P}
 function say(t){if(fv){fv.textContent=t;fv.hidden=!t}}
 function match(t){if(!Q)return true;t=String(t||'').toLowerCase();return Q.split(/\s+/).every(function(w){return t.indexOf(w)>=0})}
+// friesevan #41 c6797513466 (11-11): no emoji or symbol glyphs; the star is drawn: filled on, outlined off
+function SV(on){return '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 2.5l2.8 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.2l-6.1 3.6 1.6-6.8-5.2-4.6 6.9-.6z" '+(on?'fill="currentColor"':'fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"')+'/></svg>'}
 function star(p,id){var on=!!F[id],b;if(!okId(id))return;
 if(tok){b=document.createElement('button');b.type='button';b.className='lk-star';b.setAttribute('aria-pressed',on);
 b.setAttribute('aria-label','Star '+id);b.title=on?'Starred: sorts first; a notice in Chat when it merges':'Star: sorts first; a notice in Chat when it merges';
-b.textContent=on?'★':'☆';b.onclick=function(e){e.stopPropagation();tap(id)}}
-else if(on){b=document.createElement('span');b.className='lk-star on';b.setAttribute('role','img');b.setAttribute('aria-label','Starred');b.textContent='★'}
+b.innerHTML=SV(on);b.onclick=function(e){e.stopPropagation();tap(id)}}
+else if(on){b=document.createElement('span');b.className='lk-star on';b.setAttribute('role','img');b.setAttribute('aria-label','Starred');b.innerHTML=SV(1)}
 if(b)p.appendChild(b)}
 function aria(c){var n=c&&c.querySelector('.lk-tn');if(n){n.setAttribute('role','button');n.tabIndex=0;n.setAttribute('aria-expanded',c.classList.contains('lk-open'))}}
 function key(c){return c.getAttribute('data-id')||((c.querySelector('.lk-tn')||{}).textContent||'')}
@@ -199,20 +201,19 @@ document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite
 var f={},L={};try{f=JSON.parse(box.getAttribute('data-faces')||'{}')}catch(e){}try{L=JSON.parse(box.getAttribute('data-life')||'{}')}catch(e){}
 var RUN=['coding','review','testq','testing','mergeq','mergetest','parked','merging'],ST=RUN.slice().reverse(),Q={testq:1,mergeq:1,parked:1},
 LB={coding:'Coding',testq:'Test queue',testing:'Testing',review:'Review',mergeq:'Merge queue',mergetest:'Merge testing',parked:'Parked',merging:'Merging'},
-JU={testq:'lk-simq',testing:'simulators',mergeq:'lk-mqh',mergetest:'lk-mt',parked:'lk-parked',merging:'merging'},
 M3=['mergeq','mergetest','merging'],EX={coding:M3,review:M3,testq:['testing'].concat(M3),testing:M3,mergeq:M3.slice(1),parked:M3,mergetest:['merging'],merging:[]};
 // T-4007 (JeremyFries, typed 2026-11-10: "the way that it lists the current step of the task ... (6 stages, shared by all
 // tasks, with totals summed) ... should be included in the full task list"): a card's step is shown as This Session
-// shows it: one row of stage columns shared by every card, with the record's count in each (#lk-cols, as built; T-3996 item 0), and on each card
+// shows it: one row of stage columns shared by every card, (#lk-cols; no totals since c6797836020), and on each card
 // a track of marks under those columns (session_page.py's _track; cells() is col_cells in home_look.py). COL folds the
 // build's eight steps into the five of This Session's columns a listed task can be in (CK, its order; CL, its names);
 // MK is the mark where the task waits or was sent back; SN the step inside Being built that is not plain coding; HW
 // the same names for an open card's history in words.
 var CK=['being_built','waiting_to_merge','mac_tests','iphone_tests','sent_back'],
 COL={coding:CK[0],review:CK[0],testq:CK[0],testing:CK[0],mergeq:CK[1],merging:CK[2],mergetest:CK[3],parked:CK[4]},
-CL={being_built:'Being built',waiting_to_merge:'Waiting to merge',mac_tests:'Mac tests',iphone_tests:'iPhone tests',sent_back:'Sent back'},
+CL={being_built:'Building',waiting_to_merge:'Merge Queue',mac_tests:'Testing',iphone_tests:'Simulator',sent_back:'Sent Back'},
 MK={waiting_to_merge:'q',sent_back:'f'},SN={review:'review',testq:'waiting for its own test run',testing:'its own test run'},
-HW={coding:'Being built',review:'Review',testq:'Waiting for its own test run',testing:'Its own test run',mergeq:'Waiting to merge',merging:'Mac tests',mergetest:'iPhone tests',parked:'Sent back'};
+HW={coding:'Building',review:'Review',testq:'Waiting for its own test run',testing:'Its own test run',mergeq:'Merge Queue',merging:'Testing',mergetest:'Simulator',parked:'Sent Back'};
 var pic={};[].forEach.call(document.querySelectorAll('.lk-team a'),function(a){var m=/cast\/([^/.]+)\.html/.exec(a.getAttribute('href')||''),g=a.querySelector('img');if(m&&g)pic[m[1]]=g.getAttribute('src')});
 var K='lk-run-more',fl='all',all=false,items=L.init||[],IN={};try{all=localStorage.getItem(K)==='1'}catch(e){}
 items.forEach(function(x){if(x.id)IN[x.id]=x});
@@ -236,7 +237,7 @@ function hist(c,x){var st=steps(x),k=st.filter(function(h){return h[2].charAt(0)
 ol.setAttribute('aria-label','Steps, now '+LB[x.s]);if(old)mk(ol,'li','e','+'+old+' earlier');
 var wd=[],nx=[];st.forEach(function(h,j){var li=mk(ol,'li',(h[2]+(j<old?' old':'')).trim(),LB[h[0]]),w=[h[1]==null?'':h[1]<1?'<1 min':mins(h[1]),h[3]].filter(Boolean).join(' · ');if(w)mk(li,'small','',w);
 li.title=LB[h[0]]+(w?' · '+w:'')+({f:' · failed',q:' · waiting now',n:' · expected'}[h[2]]||(h[2].indexOf('a')>=0?' · now':''));
-if(h[2].charAt(0)==='n')nx.push((h[2]==='n r'?'↩ ':'')+LB[h[0]]);else wd.push((h[2].indexOf('lb')>=0?'↩ ':'')+LB[h[0]]+(w?' '+w:''))});
+if(h[2].charAt(0)==='n')nx.push((h[2]==='n r'?'back to ':'')+LB[h[0]]);else wd.push((h[2].indexOf('lb')>=0?'back to ':'')+LB[h[0]]+(w?' '+w:''))});
 mk(c,'p','lk-hw meta',wd.join(' → ')+(nx.length?'; next: '+nx.join(', '):''))}
 function ord(n){var t=n%100;return n+(t>=10&&t<=20?'th':({1:'st',2:'nd',3:'rd'})[n%10]||'th')}
 // the track: "now" where the task is, "was" where this try has been (a try sent back: the try that failed), "" elsewhere
@@ -244,11 +245,13 @@ function cells(x){var here=COL[x.s],h=x.h||[],f=[],cur,been={};h.forEach(functio
 if(here===CK[0])cur=[];else if(here===CK[4]&&f.length)cur=h.slice(f.length>1?f[f.length-2]+1:0,f[f.length-1]+1);else cur=f.length?h.slice(f[f.length-1]+1):h;
 cur.forEach(function(s){if(COL[s[0]])been[COL[s[0]]]=1});if(here!==CK[0])been[CK[0]]=1;
 if(here===CK[2]||here===CK[3]||here===CK[4]||been[CK[2]]||been[CK[3]])been[CK[1]]=1;
-return CK.map(function(k){return k===here?'now':been[k]?'was':''})}
+// c6797836020: a step the task does not need is blank in its own column (home_look col_cells, needs_sim)
+return CK.map(function(k){var v=k===here?'now':been[k]?'was':'';return v===''&&(k===CK[4]||(k===CK[3]&&sim(x)===false))?'skip':v})}
+function sim(x){if(x.x)return true;var c=String(x.c||'');return c?c.indexOf('App')===0:null}
 function track(c,x){var here=COL[x.s],t=mk(c,'span','ts-trk'),wd=[],nx=[];t.setAttribute('aria-hidden','true');
-cells(x).forEach(function(v){var i=mk(t,'i');if(v==='now')i.className=MK[here]||'a';else if(v==='was')i.className='d'});
+cells(x).forEach(function(v){var i=mk(t,'i');if(v==='now')i.className=MK[here]||'a';else if(v==='was')i.className='d';else if(v==='skip')i.className='o'});
 steps(x).forEach(function(h,j){var w=[h[1]==null?'':h[1]<1?'<1 min':mins(h[1]),h[3]].filter(Boolean).join(' · ');
-if(h[2].charAt(0)==='n')nx.push([CK.indexOf(COL[h[0]]),j,(h[2]==='n r'?'↩ ':'')+HW[h[0]]]);else wd.push((h[2].indexOf('lb')>=0?'↩ ':'')+HW[h[0]]+(w?' '+w:''))});
+if(h[2].charAt(0)==='n')nx.push([CK.indexOf(COL[h[0]]),j,(h[2]==='n r'?'back to ':'')+HW[h[0]]]);else wd.push((h[2].indexOf('lb')>=0?'back to ':'')+HW[h[0]]+(w?' '+w:''))});
 nx.sort(function(a,b){return a[0]-b[0]||a[1]-b[1]});
 mk(c,'p','lk-hw meta',wd.join(' → ')+(nx.length?'; next: '+nx.map(function(n){return n[2]}).join(', '):''));if(x.b)mk(c,'p','lk-hw meta',x.b)}
 function card(x){var c=mk(box,'div','lk-card lk-run'),r=mk(c,'div','lk-r1'),fs=mk(r,'span','lk-faces'),t,m,rt,sc,col=COL[x.s];c.setAttribute('data-stage',x.s);c.setAttribute('data-col',col);
@@ -277,7 +280,6 @@ items.forEach(function(x){var k=COL[x.s];cnt[k]=(cnt[k]||0)+1});if(fl!=='all'&&!
 if(flt){flt.textContent='';[['all','All',items.length+qn]].concat(qn?[['queued','Queued',qn]]:[]).concat(CK.filter(function(k){return cnt[k]}).map(function(k){return[k,CL[k],cnt[k]]})).forEach(function(c){
 var b=mk(flt,'button','lk-ch');b.type='button';b.setAttribute('aria-pressed',fl===c[0]);b.onclick=function(){fl=c[0];render()};
 if(c[0]!=='all')mk(b,'span',c[0]==='queued'||MK[c[0]]?'lk-qm':'lk-dot');b.appendChild(document.createTextNode(c[1]+(c.length>2?' ':'')));if(c.length>2)mk(b,'small','',String(c[2]))})}
-// T-3996 item 0: #lk-cols holds the workflow record's counts, as built; a status redraw leaves them
 // one part alone under a stage chip; the columns left to right puts Queued, which comes before the first of them, above In flight
 if(pf)pf.hidden=fl==='queued';if(pq)pq.hidden=fl!=='all'&&fl!=='queued';
 if(pf&&pq&&pf.parentNode===pq.parentNode){if(K3&&K3.sort&&K3.sort()==='first'){if(pq.nextElementSibling!==pf)pf.parentNode.insertBefore(pq,pf)}else if(pf.nextElementSibling!==pq)pf.parentNode.insertBefore(pf,pq)}
@@ -313,7 +315,7 @@ render();if(K3)K3.on(render);if(S&&S.onStatus&&S.lane){S.onStatus.push(draw);if(
 // lockin.js (S.lockSet: UNLOCK, LOCK IN or LOCK IN DAILY on the Chat issue). No per-lane choice. A token holder only; two taps.
 document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,d=document.getElementById('lk-lockmenu');
 function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;p.appendChild(e);return e}
-[['lk-q','lk-q-more'],['lk-mq','lk-mq-more'],['lk-pk','lk-pk-more']].forEach(function(k){var q=document.getElementById(k[0]),qb=document.getElementById(k[1]),qa=false,mx,n;if(!q||!qb)return;
+[['lk-q','lk-q-more']].forEach(function(k){var q=document.getElementById(k[0]),qb=document.getElementById(k[1]),qa=false,mx,n;if(!q||!qb)return;
 mx=+q.getAttribute('data-max')||4;n=q.children.length;[].forEach.call(q.children,function(c,i){c.classList.toggle('lk-fold',i>=mx)});
 function pq(){q.classList.toggle('lk-qshort',!qa);qb.hidden=n<=mx;qb.setAttribute('aria-expanded',qa);qb.textContent=qa?'Show fewer ▴':'Show '+(n-mx)+' more ▾'}
 qb.onclick=function(){qa=!qa;pq()};pq()});

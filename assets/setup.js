@@ -43,7 +43,7 @@ btn(act, 'Signed in, next', () => go(2), 'btn primary');
 (s, h, act) => {
 h.textContent = 'Make the key on GitHub';
 mk(s, 'p', null, 'The button opens GitHub with these filled in (set any blank one by hand):');
-var li = mk(mk(s, 'ul', 'cv-filled'), 'li'); mk(li, 'span', 'cv-ok', '✓'); li.appendChild(txt('Name, owner ' + owner + ', 90 days; Issues: read and write; Contents and Variables: read'));
+var li = mk(mk(s, 'ul', 'cv-filled'), 'li'); mk(li, 'span', 'cv-ok', ''); li.appendChild(txt('Name, owner ' + owner + ', 90 days; Issues: read and write; Contents and Variables: read'));
 para(s, ['', 'Set by hand:', ' under Repository access pick the middle option, then ' + rname + ':']);
 var sc = mk(s, 'div', 'cv-schem'); sc.setAttribute('aria-label', 'GitHub’s options');
 mk(sc, 'p', 'cv-cap', 'Repository access');
@@ -79,7 +79,7 @@ var ul = mk(s, 'ul', 'cv-checks'), rows = [];
 var li = mk(ul, 'li', 'cv-todo'); mk(li, 'span', 'cv-mk', '·'); rows.push([li, mk(li, 'span', null, t)]);
 });
 function mark(k, ok, text, fix) {
-var r = rows[k]; r[0].className = ok ? 'cv-pass' : 'cv-fail'; r[0].firstChild.textContent = ok ? '✓' : '!';
+var r = rows[k]; r[0].className = ok ? 'cv-pass' : 'cv-fail'; r[0].firstChild.textContent = ok ? '' : '!';
 if (text) r[1].textContent = text; if (fix) mk(r[0], 'span', 'cv-fix', fix);
 }
 var again = btn(act, 'Check again', draw), next = btn(act, 'Next', () => go(6), 'btn primary');

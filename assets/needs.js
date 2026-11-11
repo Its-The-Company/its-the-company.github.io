@@ -39,7 +39,7 @@ ansU = mk(sec, 'ul', 'iq-list'); ansU.setAttribute('data-group', 'answered');
 (shut ? shut.parentNode : root).insertBefore(sec, shut);
 }
 var m = x[0].querySelector('.iq-m');
-if (m && !m.querySelector('.ny-tag-ans')) m.insertBefore(el('span', 'tag ny-tag-ans', '✓ Answered'), m.firstChild);
+if (m && !m.querySelector('.ny-tag-ans')) m.insertBefore(el('span', 'tag ny-tag-ans', 'Answered'), m.firstChild);
 x[0].classList.add('ny-ans'); ansU.appendChild(x[0]); fold();
 }
 function ox(x) { var i = OPEN[x[1]]; return { l: labels(i), dl: window.IssueQ.dl(i.body) }; }

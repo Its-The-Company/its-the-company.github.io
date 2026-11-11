@@ -62,6 +62,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3762 11-09: GalleryPush, request used once; UI test red on old code. Lesson: clear a pushed view's request on pop. (T-3757: archive.md.)
 - T-3657 924c71fd7 11-09: <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">G3</span> overrun premade, gate build only; + 1cfbdc4f4 gate-build test fix; needs review. Lesson: Simulator can't jetsam; model the <span title="A test written in advance. If it fires, we drop the idea.">kill</span> as a run that never returns.
 - T-3826 2efa9e46b 11-09: pre-run awaits bounded 15 s (deferred row "timed out: <step>"; no `skipped` word), pass wait 120 s; 6 tests red on mutation, green with bound; full suite 1531/0 (102856). Open: review T-3835 (Pernille). Lesson: <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> share one Xcode lock; a filtered run waited 10.5 min.
+- T-3996 12f8b43634 11-11: Home meter = newer of usage.json / ops/live_meter.json, past reset = no reading. Open: confirm ops/live.json once the status loop restarts (a running loop keeps old code). Lesson: background shells die at 10 min; run long suites in sequence.
 - Lesson T-4012 merge 11-11: scratch.py worktree takes a bare T-id; a refused name returns "" and `git -C ""` hits the main folder. Guard `[ -n "$W" ]`. T-2857 de0219ab45, T-2376 7c6c860b1e landed; T-0042 merge not started.
 {% endraw %}
 

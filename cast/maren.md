@@ -43,7 +43,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - 2026-11-09 T-3424: Work and bottlenecks panel designed (one panel, 4th bubble renamed Work), ops/plans/home-metrics-panels/ (sample.py, draw.py, spec.md, 16 shots, 0 fails). UNCOMMITTED: main_gate waits on the silent MacBook runner; commit + tick when it answers. Lesson: a range headline is computed over raw records (agg), never averaged from bucket medians.
 - 2026-11-11 T-3979 slice 1 landed 24c26e2565 (This Session Workers now block, worker_status check/stale, packet line); noted, not ticked. Lesson: main_gate 'git add failed' with no lock left was transient; one retry landed.
-- 2026-11-11 T-3996 item 0 landed 5150b82733 (Home columns read flow.now via home_flow.columns). Item 24 not started: session_facts.py is still imported (session_page, pages); merge-queue.html still built by pages.py. Lesson: before blaming my change for a red browser test, run it on a clean HEAD copy (t3219 was red on main).
+- 2026-11-11 T-3996: item 24 e6ca28e217, Sent back button + no emojis 4fe6ce3fd8, (a) b86a248975, (b) 07e48f9315, (d) b1b629e3ee. (e): flow.py now's 6 'waiting to merge' lack their send-back rows (Odalys). Lessons: a blanket test rename hits CLI words too (sent_back 'Sent back (return'); a broad pkill is refused, stop by task ID; build each later piece in a scratch worktree, land it as a patch onto main.
 {% endraw %}
 
 

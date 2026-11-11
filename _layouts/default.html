@@ -167,9 +167,6 @@ footer a{color:inherit}
 .tile{background:var(--bg);border:1px solid var(--line);border-radius:var(--r-m);padding:var(--s3)}
 .tile b{display:block;font-size:var(--fs-4);letter-spacing:-.02em}.tile span{font-size:var(--fs-0);color:var(--muted)}
 .tile .bar{margin:6px 0 0}.tile .bar-head{display:none}
-/* T-3908: /merge-queue.html, the stage holding most outlined; a target row (a link from a task) marked */
-.mq-stages .tile small{display:block;margin-top:2px}.mq-stages .tile.mq-top{border:2px solid var(--accent);background:var(--accent-soft)}
-.mq tr:target td{background:var(--accent-soft)}.mq td small{font-size:var(--fs-0)}.lk-mql{margin:0 0 var(--s2)}
 .bar{margin:10px 0}.bar-head{display:flex;justify-content:space-between;gap:10px;font-size:var(--fs-0);color:var(--muted);margin-bottom:4px}
 .bar-head span:first-child{color:var(--ink);white-space:nowrap}.bar-head span:last-child{text-align:right}
 .bar-track{position:relative;height:10px;background:var(--soft-2);border-radius:6px;overflow:hidden}
@@ -751,7 +748,6 @@ html,body,.cv-dock textarea,.cv-dock .cv-state{overscroll-behavior-y:auto}
 /* Plan mode in Chat (T-2344; Maren's spec and rules ops/site-checks/t2343/spec.md, plan.css): pink marks a plan,
    blue stays "you"; existing tokens only. */
 .cv-tools .cv-pmb[aria-pressed=true]{background:var(--pink-bg);color:var(--pink-fg);border-color:var(--pink)}
-.cv-tools .cv-pmb[aria-pressed=true]::before{content:"\2713"}
 .cv-dock.cv-plan textarea,.cv-dock.cv-plan .cv-fake{border-color:var(--pink)}
 .cv-hint{margin:var(--s2) 0 0;font-size:var(--fs-0);color:var(--muted)}
 .cv-pm{display:inline-flex;align-items:center;padding:0 var(--s2);border-radius:var(--r-pill);background:var(--pink-bg);color:var(--pink-fg);font-size:var(--fs-0);font-weight:700;line-height:1.6;white-space:nowrap}
@@ -765,7 +761,9 @@ html,body,.cv-dock textarea,.cv-dock .cv-state{overscroll-behavior-y:auto}
 .pq-t{margin:var(--s1) 0 0;font-size:var(--fs-2);font-weight:700;line-height:var(--lh-tight)}
 .pq-why{margin:var(--s1) 0 0;font-size:var(--fs-0);color:var(--muted)}
 .pq .ny-opts{margin:var(--s3) 0 var(--s2)}
-.pq .cv-tool[aria-pressed=true]::before{content:"\2713"}
+/* friesevan #41 c6797513466 (11-11): no emoji or symbol glyphs; a check is drawn by two borders */
+.cv-tools .cv-pmb[aria-pressed=true]::before,.pq .cv-tool[aria-pressed=true]::before,.cv-sys .cv-ok::before,.cv-filled .cv-ok::before,.cv-checks .cv-pass .cv-mk::before{content:"";display:inline-block;width:.3em;height:.62em;border:solid currentColor;border-width:0 .15em .15em 0;transform:translateY(-.1em) rotate(45deg);margin-right:.45em}
+.cv-checks .cv-pass .cv-mk::before{margin:0}
 .pq .cv-tool:disabled{cursor:default}
 .pq .ny-opts .cv-tool{flex-wrap:wrap;column-gap:6px;row-gap:0;padding-top:var(--s1);padding-bottom:var(--s1)}
 .pq-rec{flex-basis:100%;font-weight:400}

@@ -572,6 +572,9 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-11 10:22 AM ET** ((private)): A task may be parent, child and umbrella at once: links are recorded per task as typed links ('part of T-X', 'needs T-Y'), roles derived from them, reverse links shown; replaces the one-label-per-task design of 10:20 AM.
 - **2026-11-11 10:29 AM ET** ((private)): Queue audit deliverable: the queue holds only tasks whose prerequisites are done (an umbrella counts as done when its pieces are), children enter by priority as parents finish; Home nests children and pieces under their parent or umbrella, expandable at every level, and search finds and opens subtasks.
 - **2026-11-11 10:36 AM ET** ((private)): The queue audit (T-4092) does not start automatically: the company posts on #41 when it is ready and starts only on an Investor's go.
+- **2026-11-11 1:15 PM ET** ((private)): An Investor may lift a personal account's stop at any time; a clear wins until the weekly reset, and the supervisor does not re-stop that account while it is over its line.
+- **2026-11-11 1:30 PM ET** ((private)): The task queue audit (T-4092) runs on Evan's personal account with Fable at xhigh effort, not on the main account; its start still waits on the Investors' go.
+- **2026-11-11 1:34 PM ET** ((private)): The queue audit waits until item 20's notes migration lands (then the company posts ready and waits for the go). When that Fable audit starts on Evan's account, Evan's 50% stop line is lifted; Jeremy's 50% line stays, kept for a later app audit.
 {% endraw %}
 
 </div>

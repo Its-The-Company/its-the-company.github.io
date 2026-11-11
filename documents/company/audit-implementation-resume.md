@@ -32,13 +32,15 @@ Kept by whoever is doing the work. Update "Where it stands" each time something 
 
 ## Where it stands
 
-Last updated: 2026-11-11 12:0x PM ET, by the Opus work session at its 3-hour close (see the item lines: 5, 16, 20, 24 and Home updated today). Before: 2026-11-10 10:06 AM ET, by the Fable session, at its hand-off (Fable's weekly limit; the reset was asked in #258).
+Last updated: 2026-11-11 3:3x PM ET, by the 12:52 PM Opus work session (see "In flight"). Before: 12:0x PM ET, by the Opus work session at its 3-hour close (see the item lines: 5, 16, 20, 24 and Home updated today). Before: 2026-11-10 10:06 AM ET, by the Fable session, at its hand-off (Fable's weekly limit; the reset was asked in #258).
 
 - 44 code changes are on main since 12:51 AM (the log, with each commit and its test, is [`ops/plans/audit-implementation.md`](audit-implementation.html); the write-up for the Investors is [`ops/plans/audit-implementation-report.md`](audit-implementation-report.html)).
 - The count of tasks waiting to merge is 59 (215 at 1:35 AM); 41 tasks merged on 11-10 by 9:24 AM, 24 of them app work. New work is held. Merges run by themselves. The reset rule runs hourly.
 - The experiment entry with the baseline and the predictions is OPT-128 in `log/optimizations.md`, read on 11-13 and 11-17.
 
 ### In flight when this was written
+
+3:3x PM 11-11 (Opus work session 12:52 PM-3:3x PM): landed 8755eab0cb (supervisor_test red was a load race in the test; run_limited ends children at its limit), 0aa8530010 (item 20 slice 3: 28 readers read moved notes; switch OFF, live board NOT migrated), 3af038aeb8 (Home 'retry N', item 16's last piece). Left before the queue audit: item 20's live migration (next session first). Then post 'ready' on #41 and wait for the go; it runs on Evan's personal account, Fable xhigh (rulings 1:30 PM, 1:34 PM). Investor Home ask T-4094 (P0, Maren) is part of T-3996.
 
 Correction owed on #41 c6786245000 (reply to an Investor 10:34 PM, posted about 10:40 PM): it said "27 items, 17 done or settled, five in progress". The true count is 26 items: 14 done, 1 measured and dropped (11), 7 in progress (0, 4, 5, 10, 13, 14, 16), 4 left (20, 22, 24, 26). Editing the comment by ID was refused by the classifier (T-0848: not retried); stated in the 10:55 PM update, #41 c6786536880. Main red (swift_strings_catalog_test) fixed 656217e42b (Idris, 10:54 PM); item 14 landing from Pernille's copy.
 

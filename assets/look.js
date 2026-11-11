@@ -196,7 +196,7 @@ S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});
 // second. Every chip filters now (the Merging and Simulators panels they jumped to are off Home), and Queued is a chip
 // too: a stage chip shows that stage's cards alone, Queued the queued rows alone. The order is the sort the block above
 // keeps (K3.sort()); a card in the merge line says where its change stands beside its stage (x.g, merge_words in
-// home_look.py), and which try it is on once past its first (x.y, the workflow record's count).
+// home_look.py), and first, beside the stage, which retry it is on past a first try (x.y, flow.now()'s retry; T-3996).
 document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,box=document.getElementById('lk-run');if(!box)return;
 var f={},L={};try{f=JSON.parse(box.getAttribute('data-faces')||'{}')}catch(e){}try{L=JSON.parse(box.getAttribute('data-life')||'{}')}catch(e){}
 var RUN=['coding','review','testq','testing','mergeq','mergetest','parked','merging'],ST=RUN.slice().reverse(),Q={testq:1,mergeq:1,parked:1},
@@ -239,7 +239,6 @@ var wd=[],nx=[];st.forEach(function(h,j){var li=mk(ol,'li',(h[2]+(j<old?' old':'
 li.title=LB[h[0]]+(w?' · '+w:'')+({f:' · failed',q:' · waiting now',n:' · expected'}[h[2]]||(h[2].indexOf('a')>=0?' · now':''));
 if(h[2].charAt(0)==='n')nx.push((h[2]==='n r'?'back to ':'')+LB[h[0]]);else wd.push((h[2].indexOf('lb')>=0?'back to ':'')+LB[h[0]]+(w?' '+w:''))});
 mk(c,'p','lk-hw meta',wd.join(' → ')+(nx.length?'; next: '+nx.join(', '):''))}
-function ord(n){var t=n%100;return n+(t>=10&&t<=20?'th':({1:'st',2:'nd',3:'rd'})[n%10]||'th')}
 // the track: "now" where the task is, "was" where this try has been (a try sent back: the try that failed), "" elsewhere
 function cells(x){var here=COL[x.s],h=x.h||[],f=[],cur,been={};h.forEach(function(s,i){if(s[2]==='f')f.push(i)});
 if(here===CK[0])cur=[];else if(here===CK[4]&&f.length)cur=h.slice(f.length>1?f[f.length-2]+1:0,f[f.length-1]+1);else cur=f.length?h.slice(f[f.length-1]+1):h;
@@ -262,7 +261,7 @@ if(x.a){m.appendChild(document.createTextNode(' '));sc=mk(m,'span','lk-tag'+(x.s
 if(x.c){sc=mk(m,'span','lk-cat',x.c);sc.title='Category: '+x.c}
 rt=mk(r,'span','lk-rt');if(x.id)mk(rt,'span','idb',x.id);if(x.n)mk(rt,'span','lk-nt',x.n);if(K3){K3.star(r,x.id);K3.aria(c)}
 track(c,x);sc=mk(c,'span','lk-ch lk-stc');mark(sc,x.s);sc.appendChild(document.createTextNode(CL[col]));
-m=[SN[x.s],x.g,x.y>1?ord(x.y)+' try':''].filter(Boolean).join(' · ');if(m)mk(c,'span','lk-mg',m);if(K3)K3.lin(c,x.id)}
+m=[x.y>=1?'retry '+x.y:'',SN[x.s],x.g].filter(Boolean).join(' · ');if(m)mk(c,'span','lk-mg',m);if(K3)K3.lin(c,x.id)}
 // the worker a card sorts by: its first, a card with none recorded last
 function who(x){var w=String((x.w||[])[0]||'');return /not recorded/.test(w)?'':w}
 // 'def': starred, then moving work, then work waiting in a line, then held work (PC; T-4007, friesevan #41 c6772135629:

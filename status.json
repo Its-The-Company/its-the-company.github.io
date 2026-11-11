@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-11T16:16:29.447534+00:00",
+ "at": "2026-11-11T16:19:32.017706+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-3995 audit item 20 board notes",
    "model": "opus",
    "started": "2026-11-11T13:41:12.703Z",
-   "seconds": 9316,
+   "seconds": 9499,
    "finished": null,
    "effort": "high"
   },
@@ -21,7 +21,7 @@
    "task": "[site] T-3996 audit item 24 remove unused code",
    "model": "opus",
    "started": "2026-11-11T13:41:19.903Z",
-   "seconds": 9309,
+   "seconds": 9492,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +30,7 @@
    "task": "[tools] T-3995 audit item 5 merge-line record commits batched",
    "model": "opus",
    "started": "2026-11-11T15:11:22.609Z",
-   "seconds": 3906,
+   "seconds": 4089,
    "finished": null,
    "effort": "high"
   },
@@ -39,12 +39,21 @@
    "task": "[tools] T-3996 flow.py Sent Back meaning and item 16 gaps",
    "model": "opus",
    "started": "2026-11-11T15:39:30.840Z",
-   "seconds": 2218,
+   "seconds": 2401,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[site] T-3996 Home main-account 5-hour reading frozen mid-session",
+   "model": "opus",
+   "started": "2026-11-11T16:17:30.180Z",
+   "seconds": 121,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2, Maren, Pernille",
+ "who": "Odalys x2, Maren, Pernille, Idris",
  "recent": [
   {
    "name": "odalys",
@@ -109,7 +118,7 @@
   "week_pct": 24.43,
   "usage_pct": 30.4,
   "work_pct": 76.7,
-  "read_at": "2026-11-11T16:16:00+00:00",
+  "read_at": "2026-11-11T16:19:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -146,7 +155,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T11:16:00-05:00",
+  "at": "2026-11-11T11:19:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -186,11 +195,12 @@
   },
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[site] T-3996 Home main-account 5-hour reading frozen...",
+   "model": "opus",
+   "since": "2026-11-11T16:17:30.180Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -248,6 +258,16 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-11T15:39:30.840Z",
+    "o": "c",
+    "task": "T-3996"
+   },
+   {
+    "w": "Idris",
+    "k": "site",
+    "t": "Show one true record on Home and This Session",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-11T16:17:30.180Z",
     "o": "c",
     "task": "T-3996"
    }
@@ -393,27 +413,15 @@
   ]
  ],
  "reply": {
-  "sent": "2026-11-11T15:51:51Z",
-  "seconds": 57.0
+  "sent": "2026-11-11T16:16:09Z",
+  "seconds": 71.0
  },
- "inbox": [
-  {
-   "id": "c6801026602",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "The 5-hour usage amounts don't..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -421,13 +429,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 5,
   "lanes": 0,
-  "total": 4,
-  "at": "11:16 AM",
+  "total": 5,
+  "at": "11:19 AM",
   "why": "",
-  "at_iso": "2026-11-11T16:16:00+00:00",
+  "at_iso": "2026-11-11T16:19:00+00:00",
   "started": "8:37 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 8:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:16 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 8:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:19 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-11T01:56:47.105175+00:00",
+ "at": "2026-11-11T01:59:46.320027+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -94,19 +94,10 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4016 five-hour false hold",
-   "model": "opus",
-   "started": "2026-11-10T23:38:11.801Z",
-   "seconds": 8315,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[tools] T-4017 unstick personal landings",
    "model": "opus",
    "started": "2026-11-10T23:38:25.452Z",
-   "seconds": 8301,
+   "seconds": 8480,
    "finished": null,
    "effort": "high"
   },
@@ -115,7 +106,7 @@
    "task": "[design] T-4014 T-4015 Home panels slim",
    "model": "opus",
    "started": "2026-11-10T23:38:44.201Z",
-   "seconds": 8282,
+   "seconds": 8462,
    "finished": null,
    "effort": "high"
   },
@@ -124,16 +115,7 @@
    "task": "[tools] audit item 17 nightly suite run",
    "model": "opus",
    "started": "2026-11-10T23:39:28.650Z",
-   "seconds": 8238,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] audit item 16 flow record gaps",
-   "model": "opus",
-   "started": "2026-11-11T00:38:05.005Z",
-   "seconds": 4722,
+   "seconds": 8417,
    "finished": null,
    "effort": "high"
   },
@@ -142,13 +124,29 @@
    "task": "[tools] audit item 20 notes off board lines",
    "model": "opus",
    "started": "2026-11-11T00:38:17.970Z",
-   "seconds": 4709,
+   "seconds": 4888,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x4, Maren, Pernille",
+ "who": "Odalys x2, Maren, Pernille",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4016 five-hour false hold",
+   "model": "opus",
+   "started": "2026-11-10T23:38:11.801Z",
+   "seconds": null,
+   "finished": "2026-11-11T01:59:04.863000+00:00"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] audit item 16 flow record gaps",
+   "model": "opus",
+   "started": "2026-11-11T00:38:05.005Z",
+   "seconds": null,
+   "finished": "2026-11-11T01:56:57.096000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] audit item 13 per-suite keeping",
@@ -164,28 +162,12 @@
    "started": "2026-11-10T23:39:22.453Z",
    "seconds": null,
    "finished": "2026-11-11T00:57:11.719000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] audit item 5 record batching",
-   "model": "opus",
-   "started": "2026-11-10T23:58:37.241Z",
-   "seconds": null,
-   "finished": "2026-11-11T00:36:29.933000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] audit item 19 milestones refresh",
-   "model": "opus",
-   "started": "2026-11-10T23:39:35.101Z",
-   "seconds": null,
-   "finished": "2026-11-11T00:35:10.979000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 641,
+  "runnable_count": 640,
   "blocked_count": 112
  },
  "meter": {
@@ -228,7 +210,7 @@
   "week_pct": 24.09,
   "usage_pct": 35.4,
   "work_pct": 78.4,
-  "read_at": "2026-11-11T01:56:00+00:00",
+  "read_at": "2026-11-11T01:59:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -249,7 +231,7 @@
   }
  ],
  "disk": {
-  "free_gb": 31,
+  "free_gb": 32,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -258,14 +240,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T20:51:00-05:00",
+   "at": "2026-11-10T20:57:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-10T20:56:00-05:00",
+  "at": "2026-11-10T20:59:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -279,9 +261,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4016 five-hour false hold",
+   "task": "[tools] T-4017 unstick personal landings",
    "model": "opus",
-   "since": "2026-11-10T23:38:11.801Z",
+   "since": "2026-11-10T23:38:25.452Z",
    "next": [],
    "effort": "high"
   },
@@ -333,16 +315,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Stop the false five-hour hold on work sessions",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-10T23:38:11.801Z",
-    "o": "c",
-    "task": "T-4016"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Unstick personal landings waiting on GitHub",
     "m": "opus",
     "e": "high",
@@ -367,15 +339,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-10T23:39:28.650Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Audit item 16 flow record gaps",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-11T00:38:05.005Z",
     "o": "c"
    },
    {
@@ -463,6 +426,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Work sessions no longer stop when the usage meter is well under its limit. A dollar estimate...",
+    "at": "2026-11-10T20:58:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "A store test kept failing as if a declined family purchase request had unlocked Pro. The app was...",
     "at": "2026-11-10T19:56:00-05:00"
@@ -471,22 +439,21 @@
     "w": "Odalys",
     "t": "Merge checks now stop at the first failing test instead of running the rest, and skip a test...",
     "at": "2026-11-10T19:32:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The company's list of trial changes had nine results past their reading date; each now has a...",
-    "at": "2026-11-10T18:57:00-05:00"
    }
   ],
   "count": {
-   "next": 641,
+   "next": 640,
    "wait": 44,
    "blocked": 68,
    "you": 17
   },
   "fin": {
-   "n": 3,
+   "n": 4,
    "rows": [
+    [
+     "T-4016",
+     "Stop the false five-hour..."
+    ],
     [
      "T-4008",
      "Find why a declined Ask to..."
@@ -554,13 +521,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 6,
+  "main": 4,
   "lanes": 0,
-  "total": 6,
-  "at": "8:56 PM",
+  "total": 4,
+  "at": "8:59 PM",
   "why": "",
-  "at_iso": "2026-11-11T01:56:00+00:00",
+  "at_iso": "2026-11-11T01:59:00+00:00",
   "started": "6:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 6, started 6:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:56 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 6:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:59 PM ET</p></section>"
  }
 }

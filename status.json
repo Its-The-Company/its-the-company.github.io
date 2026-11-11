@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-11T06:13:51.380690+00:00",
+ "at": "2026-11-11T06:46:01.105397+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-10T21:49:16-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-3393",
@@ -129,7 +129,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 686,
+  "runnable_count": 689,
   "blocked_count": 113
  },
  "meter": {
@@ -167,12 +167,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-10T22:04:04-05:00",
  "personal": {
   "week_pct": 24.25,
   "usage_pct": 30.4,
   "work_pct": 76.7,
-  "read_at": "2026-11-11T06:17:00+00:00",
+  "read_at": "2026-11-11T06:47:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -202,23 +202,19 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-11T01:09:00-05:00",
+   "at": "2026-11-11T01:18:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-11T01:17:00-05:00",
+  "at": "2026-11-11T01:47:00-05:00",
   "mode": null
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Spread: usage is ahead of the week's even pace to Sat 23:00, so work waits until the line passes; the machine allows 2 (new work waits: 35 tasks wait to merge (limit 12): 2 agents finish and merge...",
-  "n": 1,
-  "at": "2026-11-10T21:49:04.586960-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -271,7 +267,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -362,27 +357,10 @@
    }
   ],
   "count": {
-   "next": 686,
+   "next": 689,
    "wait": 44,
    "blocked": 69,
    "you": 19
-  },
-  "fin": {
-   "n": 3,
-   "rows": [
-    [
-     "T-2376",
-     "Make three Shortcut recipes..."
-    ],
-    [
-     "T-2857",
-     "Run the three Shortcut..."
-    ],
-    [
-     "T-4019",
-     "Show each session's..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -429,7 +407,6 @@
   "queue_text",
   "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -440,10 +417,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "1:17 AM",
-  "why": "Between sessions: no session is running. Last check 9:49 PM ET.",
-  "at_iso": "2026-11-11T06:17:00+00:00",
+  "at": "1:47 AM",
+  "why": "Waiting for the week's line: this week's usage is ahead of its even pace. Last check 1:47 AM ET.",
+  "at_iso": "2026-11-11T06:47:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:17 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 9:49 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:47 AM ET</p><p class=\"an-why\">Waiting for the week's line: this week's usage is ahead of its even pace. Last check 1:47 AM ET.</p></section>"
  }
 }

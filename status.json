@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-11T00:33:53.902808+00:00",
+ "at": "2026-11-11T00:36:59.780306+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -108,7 +108,7 @@
    "task": "[tools] T-4016 five-hour false hold",
    "model": "opus",
    "started": "2026-11-10T23:38:11.801Z",
-   "seconds": 3342,
+   "seconds": 3527,
    "finished": null,
    "effort": "high"
   },
@@ -117,7 +117,7 @@
    "task": "[tools] T-4017 unstick personal landings",
    "model": "opus",
    "started": "2026-11-10T23:38:25.452Z",
-   "seconds": 3328,
+   "seconds": 3514,
    "finished": null,
    "effort": "high"
   },
@@ -126,7 +126,7 @@
    "task": "[design] T-4014 T-4015 Home panels slim",
    "model": "opus",
    "started": "2026-11-10T23:38:44.201Z",
-   "seconds": 3309,
+   "seconds": 3495,
    "finished": null,
    "effort": "high"
   },
@@ -135,7 +135,7 @@
    "task": "[build] T-4008 declined Ask to Buy",
    "model": "opus",
    "started": "2026-11-10T23:39:22.453Z",
-   "seconds": 3271,
+   "seconds": 3457,
    "finished": null,
    "effort": "high"
   },
@@ -144,25 +144,7 @@
    "task": "[tools] audit item 17 nightly suite run",
    "model": "opus",
    "started": "2026-11-10T23:39:28.650Z",
-   "seconds": 3265,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "ines",
-   "task": "[plan] audit item 19 milestones refresh",
-   "model": "opus",
-   "started": "2026-11-10T23:39:35.101Z",
-   "seconds": 3258,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] audit item 5 record batching",
-   "model": "opus",
-   "started": "2026-11-10T23:58:37.241Z",
-   "seconds": 2116,
+   "seconds": 3451,
    "finished": null,
    "effort": "high"
   },
@@ -171,13 +153,29 @@
    "task": "[tools] audit item 13 per-suite keeping",
    "model": "opus",
    "started": "2026-11-11T00:33:32.443Z",
-   "seconds": 21,
+   "seconds": 207,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x4, Maren, Idris, Pernille, Ines",
+ "who": "Odalys x3, Maren, Idris, Pernille",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] audit item 5 record batching",
+   "model": "opus",
+   "started": "2026-11-10T23:58:37.241Z",
+   "seconds": null,
+   "finished": "2026-11-11T00:36:29.933000+00:00"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] audit item 19 milestones refresh",
+   "model": "opus",
+   "started": "2026-11-10T23:39:35.101Z",
+   "seconds": null,
+   "finished": "2026-11-11T00:35:10.979000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-3975 land item 3 stop-at-red",
@@ -193,22 +191,6 @@
    "started": "2026-11-10T23:38:30.805Z",
    "seconds": null,
    "finished": "2026-11-11T00:06:04.169000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4013 close overdue experiments",
-   "model": "opus",
-   "started": "2026-11-10T23:38:37.747Z",
-   "seconds": null,
-   "finished": "2026-11-10T23:58:01.744000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] audit item 21 merge_rate session count",
-   "model": "opus",
-   "started": "2026-11-10T23:39:40.173Z",
-   "seconds": null,
-   "finished": "2026-11-10T23:45:19.051000+00:00"
   }
  ],
  "queue": {
@@ -257,7 +239,7 @@
   "week_pct": 24.09,
   "usage_pct": 35.4,
   "work_pct": 78.4,
-  "read_at": "2026-11-11T00:33:00+00:00",
+  "read_at": "2026-11-11T00:37:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -278,23 +260,23 @@
   }
  ],
  "disk": {
-  "free_gb": 32,
+  "free_gb": 33,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 169
+   "free_gb": 171
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T19:29:00-05:00",
+   "at": "2026-11-10T19:36:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 2,
-  "at": "2026-11-10T19:33:00-05:00",
+  "at": "2026-11-10T19:37:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -343,12 +325,11 @@
   },
   {
    "name": "Ines",
-   "state": "running",
-   "task": "[plan] audit item 19 milestones refresh",
-   "model": "opus",
-   "since": "2026-11-10T23:39:35.101Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Wrenna",
@@ -408,24 +389,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-10T23:39:28.650Z",
-    "o": "c"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Audit item 19 milestones refresh",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-10T23:39:35.101Z",
-    "o": "c"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Audit item 5 record batching",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-10T23:58:37.241Z",
     "o": "c"
    },
    {
@@ -590,6 +553,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -599,13 +563,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 8,
+  "main": 6,
   "lanes": 0,
-  "total": 8,
-  "at": "7:33 PM",
+  "total": 6,
+  "at": "7:37 PM",
   "why": "",
-  "at_iso": "2026-11-11T00:33:00+00:00",
+  "at_iso": "2026-11-11T00:37:00+00:00",
   "started": "6:35 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 8, started 6:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:33 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 6, started 6:35 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:37 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-11T02:52:17.543200+00:00",
+ "at": "2026-11-11T02:55:19.593723+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -131,17 +131,9 @@
     "end": "failed",
     "end_at": 1794322592,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3703",
-    "name": "Show when a merge check moves to the Mac mini",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794322482
    }
   ],
-  "landed": 8,
+  "landed": 7,
   "failed": 2
  },
  "workers": [
@@ -150,7 +142,7 @@
    "task": "[tools] T-3996 land audit item 16 record gaps",
    "model": "opus",
    "started": "2026-11-11T02:51:06.049Z",
-   "seconds": 71,
+   "seconds": 253,
    "finished": null,
    "effort": "high"
   },
@@ -159,7 +151,7 @@
    "task": "[site] T-4019 sent-back queue per lane on Home",
    "model": "opus",
    "started": "2026-11-11T02:51:12.853Z",
-   "seconds": 64,
+   "seconds": 246,
    "finished": null,
    "effort": "high"
   },
@@ -168,16 +160,7 @@
    "task": "[tools] T-4012 personal_land.sh batch: items 13, 10s2, 5",
    "model": "opus",
    "started": "2026-11-11T02:51:20.048Z",
-   "seconds": 57,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-3995 audit item 11 grouped Mac/iPhone runs",
-   "model": "opus",
-   "started": "2026-11-11T02:51:26.497Z",
-   "seconds": 51,
+   "seconds": 239,
    "finished": null,
    "effort": "high"
   },
@@ -186,18 +169,36 @@
    "task": "[tools] T-3995 audit item 14 app tests off tools/",
    "model": "opus",
    "started": "2026-11-11T02:51:31.271Z",
-   "seconds": 46,
+   "seconds": 228,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-3995 audit item 4 copy sweep schedule and hook",
+   "model": "opus",
+   "started": "2026-11-11T02:55:09.489Z",
+   "seconds": 10,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x3, Maren, Pernille",
- "recent": [],
+ "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3995 audit item 11 grouped Mac/iPhone runs",
+   "model": "opus",
+   "started": "2026-11-11T02:51:26.497Z",
+   "seconds": null,
+   "finished": "2026-11-11T02:54:48.724000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 688,
-  "blocked_count": 111
+  "runnable_count": 687,
+  "blocked_count": 112
  },
  "meter": {
   "five_hour": {
@@ -239,7 +240,7 @@
   "week_pct": 24.25,
   "usage_pct": 32.2,
   "work_pct": 77.5,
-  "read_at": "2026-11-11T02:52:00+00:00",
+  "read_at": "2026-11-11T02:55:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -264,19 +265,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 190
+   "free_gb": 184
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T21:46:00-05:00",
+   "at": "2026-11-10T21:54:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-10T21:52:00-05:00",
+  "at": "2026-11-10T21:55:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -372,22 +373,22 @@
     "task": "T-4012"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Replace the waiting pile with one merge line",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-11T02:51:26.497Z",
-    "o": "c",
-    "task": "T-3995"
-   },
-   {
     "w": "Pernille",
     "k": "tools",
     "t": "Replace the waiting pile with one merge line",
     "m": "opus",
     "e": "high",
     "at": "2026-11-11T02:51:31.271Z",
+    "o": "c",
+    "task": "T-3995"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Replace the waiting pile with one merge line",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-11T02:55:09.489Z",
     "o": "c",
     "task": "T-3995"
    }
@@ -483,8 +484,8 @@
    }
   ],
   "count": {
-   "next": 688,
-   "wait": 43,
+   "next": 687,
+   "wait": 44,
    "blocked": 68,
    "you": 17
   },
@@ -546,10 +547,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "9:52 PM",
+  "at": "9:55 PM",
   "why": "",
-  "at_iso": "2026-11-11T02:52:00+00:00",
+  "at_iso": "2026-11-11T02:55:00+00:00",
   "started": "9:49 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:49 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:52 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:49 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:55 PM ET</p></section>"
  }
 }

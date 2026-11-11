@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-11T13:44:05.088690+00:00",
+ "at": "2026-11-11T13:47:10.010617+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -69,7 +69,7 @@
    "task": "[tools] T-3995 audit item 20 board notes",
    "model": "opus",
    "started": "2026-11-11T13:41:12.703Z",
-   "seconds": 172,
+   "seconds": 357,
    "finished": null,
    "effort": "high"
   },
@@ -78,22 +78,22 @@
    "task": "[site] T-3996 audit item 24 remove unused code",
    "model": "opus",
    "started": "2026-11-11T13:41:19.903Z",
-   "seconds": 165,
+   "seconds": 350,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys, Maren",
+ "recent": [
   {
    "name": "odalys",
    "task": "[review] T-4012 audit readings items 10 and 16",
    "model": "opus",
    "started": "2026-11-11T13:41:27.738Z",
-   "seconds": 157,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-11T13:46:40.909000+00:00"
   }
  ],
- "who": "Odalys x2, Maren",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -140,7 +140,7 @@
   "week_pct": 24.43,
   "usage_pct": 30.4,
   "work_pct": 76.7,
-  "read_at": "2026-11-11T13:44:00+00:00",
+  "read_at": "2026-11-11T13:47:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -177,7 +177,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T08:44:00-05:00",
+  "at": "2026-11-11T08:47:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -260,16 +260,6 @@
     "at": "2026-11-11T13:41:19.903Z",
     "o": "c",
     "task": "T-3996"
-   },
-   {
-    "w": "Odalys",
-    "k": "review",
-    "t": "Retire the retry routes the send-back replaces",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-11T13:41:27.738Z",
-    "o": "c",
-    "task": "T-4012"
    }
   ],
   "src": "plan",
@@ -408,7 +398,7 @@
   ]
  ],
  "reply": {
-  "sent": "2026-11-11T13:42:59Z",
+  "sent": "2026-11-11T13:46:05Z",
   "seconds": 33.0
  },
  "inbox": [],
@@ -423,13 +413,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "8:44 AM",
+  "total": 2,
+  "at": "8:47 AM",
   "why": "",
-  "at_iso": "2026-11-11T13:44:00+00:00",
+  "at_iso": "2026-11-11T13:47:00+00:00",
   "started": "8:37 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:44 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:47 AM ET</p></section>"
  }
 }

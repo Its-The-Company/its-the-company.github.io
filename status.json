@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-11T03:53:19.031201+00:00",
+ "at": "2026-11-11T03:56:20.360493+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -93,7 +93,7 @@
    "task": "[tools] T-3996 land audit item 16 record gaps",
    "model": "opus",
    "started": "2026-11-11T02:51:06.049Z",
-   "seconds": 3732,
+   "seconds": 3914,
    "finished": null,
    "effort": "high"
   },
@@ -102,7 +102,7 @@
    "task": "[site] T-4019 sent-back queue per lane on Home",
    "model": "opus",
    "started": "2026-11-11T02:51:12.853Z",
-   "seconds": 3726,
+   "seconds": 3907,
    "finished": null,
    "effort": "high"
   },
@@ -111,7 +111,7 @@
    "task": "[tools] T-4012 personal_land.sh batch: items 13, 10s2, 5",
    "model": "opus",
    "started": "2026-11-11T02:51:20.048Z",
-   "seconds": 3718,
+   "seconds": 3900,
    "finished": null,
    "effort": "high"
   },
@@ -120,22 +120,30 @@
    "task": "[tools] T-3995 audit item 4 copy sweep schedule and hook",
    "model": "opus",
    "started": "2026-11-11T02:55:09.489Z",
-   "seconds": 3489,
+   "seconds": 3670,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "pernille",
+   "task": "[tools] T-3995 land audit item 14 from copy",
+   "model": "opus",
+   "started": "2026-11-11T03:55:15.186Z",
+   "seconds": 65,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys x3, Maren, Pernille",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-2551 fix main-red swift strings catalog suite",
    "model": "opus",
    "started": "2026-11-11T03:33:29.453Z",
-   "seconds": 1189,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x3, Maren, Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-11T03:55:06.328000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[tools] T-3995 audit item 14 app tests off tools/",
@@ -199,7 +207,7 @@
   "week_pct": 24.25,
   "usage_pct": 32.2,
   "work_pct": 77.5,
-  "read_at": "2026-11-11T03:53:00+00:00",
+  "read_at": "2026-11-11T03:56:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -224,19 +232,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 179
+   "free_gb": 181
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-10T22:49:00-05:00",
+   "at": "2026-11-10T22:55:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-10T22:53:00-05:00",
+  "at": "2026-11-10T22:56:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -266,26 +274,26 @@
    "effort": "high"
   },
   {
-   "name": "Idris",
+   "name": "Pernille",
    "state": "running",
-   "task": "[build] T-2551 fix main-red swift strings catalog suite",
+   "task": "[tools] T-3995 land audit item 14 from copy",
    "model": "opus",
-   "since": "2026-11-11T03:33:29.453Z",
+   "since": "2026-11-11T03:55:15.186Z",
    "next": [],
    "effort": "high"
   },
   {
-   "name": "Ines",
+   "name": "Idris",
    "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
+   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Pernille",
+   "name": "Ines",
    "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
+   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -342,14 +350,14 @@
     "task": "T-3995"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Build all six app launcher premades",
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Replace the waiting pile with one merge line",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-11T03:33:29.453Z",
+    "at": "2026-11-11T03:55:15.186Z",
     "o": "c",
-    "task": "T-2551"
+    "task": "T-3995"
    }
   ],
   "src": "plan",
@@ -506,10 +514,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "10:53 PM",
+  "at": "10:56 PM",
   "why": "",
-  "at_iso": "2026-11-11T03:53:00+00:00",
+  "at_iso": "2026-11-11T03:56:00+00:00",
   "started": "9:49 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:49 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:53 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 9:49 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:56 PM ET</p></section>"
  }
 }

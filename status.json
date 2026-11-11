@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-11T10:31:00.522095+00:00",
+ "at": "2026-11-11T11:03:50.730738+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -142,17 +142,17 @@
   },
   "weekly": {
    "pct": 56.0,
-   "resets_at": "2026-11-15T06:59:59.156104+00:00",
+   "resets_at": "2026-11-15T06:59:59.167075+00:00",
    "used_words": "of your weekly allowance used",
    "left": 44.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 3.0,
-   "resets_at": "2026-11-15T07:00:00.156266+00:00",
+   "resets_at": "2026-11-15T07:00:00.167213+00:00",
    "used_words": "of the Fable weekly allowance used"
   },
-  "read_at": "2026-11-11T05:30:57.006524-05:00"
+  "read_at": "2026-11-11T06:03:35.917567-05:00"
  },
  "ui": {
   "week_pct": 0.192,
@@ -167,12 +167,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-11T05:45:57-05:00",
+ "next_tick": "2026-11-11T06:18:36-05:00",
  "personal": {
   "week_pct": 24.44,
   "usage_pct": 30.4,
   "work_pct": 76.7,
-  "read_at": "2026-11-11T10:31:00+00:00",
+  "read_at": "2026-11-11T11:03:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -202,18 +202,23 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-11T05:27:00-05:00",
+   "at": "2026-11-11T05:47:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-11T05:31:00-05:00",
+  "at": "2026-11-11T06:03:00-05:00",
   "mode": null
  },
  "next_tick_why": "last_tick",
- "idle": null,
+ "idle": {
+  "since": "2026-11-11T01:12:24-05:00",
+  "minutes": 291,
+  "why": "a tick has spent 14 min on steps before the session",
+  "healed": []
+ },
  "pool": null,
  "lanes": [
   {
@@ -417,10 +422,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "5:31 AM",
-  "why": "Waiting for the week's line: this week's usage is ahead of its even pace. Last check 5:30 AM ET.",
-  "at_iso": "2026-11-11T10:31:00+00:00",
+  "at": "6:03 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-11T11:03:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:31 AM ET</p><p class=\"an-why\">Waiting for the week's line: this week's usage is ahead of its even pace. Last check 5:30 AM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:03 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

@@ -1,24 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-11T20:25:32.597454+00:00",
+ "at": "2026-11-11T20:28:35.363841+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-11T12:52:41-05:00"
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-3995 item 20 slice 3 land",
    "model": "opus",
    "started": "2026-11-11T17:54:41.207Z",
-   "seconds": 9051,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-11T20:28:00.499000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[tools] T-3995 supervisor red + child-kill",
@@ -44,19 +42,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 30.0,
+   "pct": 31.0,
    "resets_at": "2026-11-11T16:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-11T15:03:03.170491-05:00",
+   "read_at": "2026-11-11T15:27:37.047771-05:00",
    "source": "live",
-   "left": 70.0,
+   "left": 69.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 62.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-11T15:03:03.170491-05:00",
+   "read_at": "2026-11-11T15:27:37.047771-05:00",
    "source": "live",
    "left": 38.0,
    "left_words": "of your weekly allowance left"
@@ -68,7 +66,7 @@
    "read_at": "2026-11-11T12:52:30.703876-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-11T15:03:03.170491-05:00"
+  "read_at": "2026-11-11T15:27:37.047771-05:00"
  },
  "ui": {
   "week_pct": 0.202,
@@ -88,7 +86,7 @@
   "week_pct": 24.54,
   "usage_pct": 28.7,
   "work_pct": 75.8,
-  "read_at": "2026-11-11T20:25:00+00:00",
+  "read_at": "2026-11-11T20:28:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -109,7 +107,7 @@
   }
  ],
  "disk": {
-  "free_gb": 39,
+  "free_gb": 40,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -118,14 +116,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-11T15:21:00-05:00",
+   "at": "2026-11-11T15:27:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T15:25:00-05:00",
+  "at": "2026-11-11T15:28:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -136,15 +134,6 @@
   "at": "2026-11-11T12:52:31.015370-05:00"
  },
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-3995 item 20 slice 3 land",
-   "model": "opus",
-   "since": "2026-11-11T17:54:41.207Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -170,6 +159,14 @@
    "next": []
   },
   {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P1, from T-3789...",
@@ -187,18 +184,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Replace the waiting pile with one merge line",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-11T17:54:41.207Z",
-    "o": "c",
-    "task": "T-3995"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -350,13 +336,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "3:25 PM",
-  "why": "",
-  "at_iso": "2026-11-11T20:25:00+00:00",
+  "total": 0,
+  "at": "3:28 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-11T20:28:00+00:00",
   "started": "12:52 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 12:52 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:25 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 12:52 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:28 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

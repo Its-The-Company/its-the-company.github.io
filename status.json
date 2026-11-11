@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-11T14:32:55.356470+00:00",
+ "at": "2026-11-11T14:35:58.788871+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -66,34 +66,33 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-3995 audit item 20 board notes",
+   "task": "[tools] T-4084 Investor usage stop for personal accounts",
    "model": "opus",
-   "started": "2026-11-11T13:41:12.703Z",
-   "seconds": 3102,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "maren",
-   "task": "[site] T-3996 audit item 24 remove unused code",
-   "model": "opus",
-   "started": "2026-11-11T13:41:19.903Z",
-   "seconds": 3095,
+   "started": "2026-11-11T14:27:53.432Z",
+   "seconds": 485,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-4084 Investor usage stop for personal accounts",
+   "task": "[tools] T-3995 audit item 20 board notes",
    "model": "opus",
-   "started": "2026-11-11T14:27:53.432Z",
-   "seconds": 301,
+   "started": "2026-11-11T13:41:12.703Z",
+   "seconds": 3286,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2, Maren",
+ "who": "Odalys x2",
  "recent": [
+  {
+   "name": "maren",
+   "task": "[site] T-3996 audit item 24 remove unused code",
+   "model": "opus",
+   "started": "2026-11-11T13:41:19.903Z",
+   "seconds": null,
+   "finished": "2026-11-11T14:35:45.934000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[review] T-4012 audit readings items 10 and 16",
@@ -149,7 +148,7 @@
   "week_pct": 24.43,
   "usage_pct": 30.4,
   "work_pct": 76.7,
-  "read_at": "2026-11-11T14:32:00+00:00",
+  "read_at": "2026-11-11T14:36:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -186,7 +185,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T09:32:00-05:00",
+  "at": "2026-11-11T09:36:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -203,15 +202,6 @@
    "task": "[tools] T-3995 audit item 20 board notes",
    "model": "opus",
    "since": "2026-11-11T13:41:12.703Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[site] T-3996 audit item 24 remove unused code",
-   "model": "opus",
-   "since": "2026-11-11T13:41:19.903Z",
    "next": [],
    "effort": "high"
   },
@@ -246,6 +236,14 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
@@ -259,16 +257,6 @@
     "at": "2026-11-11T13:41:12.703Z",
     "o": "c",
     "task": "T-3995"
-   },
-   {
-    "w": "Maren",
-    "k": "site",
-    "t": "Show one true record on Home and This Session",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-11T13:41:19.903Z",
-    "o": "c",
-    "task": "T-3996"
    },
    {
     "w": "Odalys",
@@ -432,13 +420,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "9:32 AM",
+  "total": 2,
+  "at": "9:36 AM",
   "why": "",
-  "at_iso": "2026-11-11T14:32:00+00:00",
+  "at_iso": "2026-11-11T14:36:00+00:00",
   "started": "8:37 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 8:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:32 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 8:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:36 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-11T18:47:43.379576+00:00",
+ "at": "2026-11-11T18:50:45.118887+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -12,7 +12,7 @@
    "task": "[tools] T-3995 supervisor red + child-kill",
    "model": "opus",
    "started": "2026-11-11T17:54:32.041Z",
-   "seconds": 3191,
+   "seconds": 3373,
    "finished": null,
    "effort": "high"
   },
@@ -21,22 +21,22 @@
    "task": "[tools] T-3995 item 20 slice 3 land",
    "model": "opus",
    "started": "2026-11-11T17:54:41.207Z",
-   "seconds": 3182,
+   "seconds": 3363,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Pernille, Odalys",
+ "recent": [
   {
    "name": "maren",
    "task": "[site] T-3996 Home retry N label",
    "model": "opus",
    "started": "2026-11-11T17:54:47.426Z",
-   "seconds": 3175,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-11T18:49:34.866000+00:00"
   }
  ],
- "who": "Pernille, Odalys, Maren",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -45,19 +45,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 24.0,
+   "pct": 25.0,
    "resets_at": "2026-11-11T16:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-11T13:35:56.266704-05:00",
+   "read_at": "2026-11-11T13:48:45.180442-05:00",
    "source": "live",
-   "left": 76.0,
+   "left": 75.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 61.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-11T13:35:56.266704-05:00",
+   "read_at": "2026-11-11T13:48:45.180442-05:00",
    "source": "live",
    "left": 39.0,
    "left_words": "of your weekly allowance left"
@@ -69,7 +69,7 @@
    "read_at": "2026-11-11T12:52:30.703876-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-11T13:35:56.266704-05:00"
+  "read_at": "2026-11-11T13:48:45.180442-05:00"
  },
  "ui": {
   "week_pct": 0.202,
@@ -89,7 +89,7 @@
   "week_pct": 24.54,
   "usage_pct": 28.7,
   "work_pct": 75.8,
-  "read_at": "2026-11-11T18:47:00+00:00",
+  "read_at": "2026-11-11T18:50:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -119,14 +119,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-11T13:43:00-05:00",
+   "at": "2026-11-11T13:48:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T13:47:00-05:00",
+  "at": "2026-11-11T13:50:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -156,15 +156,6 @@
    "effort": "high"
   },
   {
-   "name": "Maren",
-   "state": "running",
-   "task": "[site] T-3996 Home retry N label",
-   "model": "opus",
-   "since": "2026-11-11T17:54:47.426Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
@@ -184,6 +175,14 @@
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P1, from T-3789...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
    "model": null,
    "since": null,
    "next": []
@@ -210,16 +209,6 @@
     "at": "2026-11-11T17:54:41.207Z",
     "o": "c",
     "task": "T-3995"
-   },
-   {
-    "w": "Maren",
-    "k": "site",
-    "t": "Show one true record on Home and This Session",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-11T17:54:47.426Z",
-    "o": "i",
-    "task": "T-3996"
    }
   ],
   "src": "plan",
@@ -373,13 +362,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "1:47 PM",
+  "total": 2,
+  "at": "1:50 PM",
   "why": "",
-  "at_iso": "2026-11-11T18:47:00+00:00",
+  "at_iso": "2026-11-11T18:50:00+00:00",
   "started": "12:52 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 12:52 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:47 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:52 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:50 PM ET</p></section>"
  }
 }

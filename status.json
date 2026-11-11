@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-11T05:21:56.791836+00:00",
+ "at": "2026-11-11T05:24:59.402542+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -86,7 +86,7 @@
    "task": "[tools] T-4012 personal_land.sh batch: items 13, 10s2, 5",
    "model": "opus",
    "started": "2026-11-11T02:51:20.048Z",
-   "seconds": 9036,
+   "seconds": 9219,
    "finished": null,
    "effort": "high"
   },
@@ -95,22 +95,39 @@
    "task": "[site] T-3996 audit items 0 and 24 Home columns and cleanup",
    "model": "opus",
    "started": "2026-11-11T05:12:01.577Z",
-   "seconds": 595,
+   "seconds": 777,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "idris",
+   "task": "[build] T-2857 fix and merge sent-back app pieces",
+   "model": "opus",
+   "started": "2026-11-11T05:23:35.863Z",
+   "seconds": 83,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[tools] T-3150 fix and merge sent-back tools pieces",
+   "model": "opus",
+   "started": "2026-11-11T05:23:41.537Z",
+   "seconds": 77,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys, Maren, Idris, Pernille",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4084 personal accounts fix sent-back work, 50% stop",
    "model": "opus",
    "started": "2026-11-11T05:17:33.583Z",
-   "seconds": 263,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x2, Maren",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-11T05:22:30.144000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4012 settle the 41 sent-back pieces held as done",
@@ -134,21 +151,13 @@
    "started": "2026-11-11T02:51:12.853Z",
    "seconds": null,
    "finished": "2026-11-11T04:49:21.500000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[tools] T-3995 land audit item 14 from copy",
-   "model": "opus",
-   "started": "2026-11-11T03:55:15.186Z",
-   "seconds": null,
-   "finished": "2026-11-11T04:43:10.336000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 687,
-  "blocked_count": 112
+  "runnable_count": 686,
+  "blocked_count": 113
  },
  "meter": {
   "five_hour": {
@@ -190,7 +199,7 @@
   "week_pct": 24.25,
   "usage_pct": 32.2,
   "work_pct": 77.5,
-  "read_at": "2026-11-11T05:21:00+00:00",
+  "read_at": "2026-11-11T05:25:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -227,7 +236,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-11T00:21:00-05:00",
+  "at": "2026-11-11T00:25:00-05:00",
   "mode": null
  },
  "next_tick_why": "session",
@@ -258,24 +267,26 @@
   },
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-2857 fix and merge sent-back app pieces",
+   "model": "opus",
+   "since": "2026-11-11T05:23:35.863Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[tools] T-3150 fix and merge sent-back tools pieces",
+   "model": "opus",
+   "since": "2026-11-11T05:23:41.537Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P2, the C51 voice card (Maren's...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -312,14 +323,24 @@
     "task": "T-3996"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Personal accounts fix sent-back work to half their week",
+    "w": "Idris",
+    "k": "build",
+    "t": "Run the three Shortcut recipes end to end",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-11T05:17:33.583Z",
+    "at": "2026-11-11T05:23:35.863Z",
     "o": "c",
-    "task": "T-4084"
+    "task": "T-2857"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Make the scoreboard's spend match the ledger",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-11T05:23:41.537Z",
+    "o": "c",
+    "task": "T-3150"
    }
   ],
   "src": "plan",
@@ -413,10 +434,10 @@
    }
   ],
   "count": {
-   "next": 687,
+   "next": 686,
    "wait": 44,
-   "blocked": 68,
-   "you": 18
+   "blocked": 69,
+   "you": 19
   },
   "fin": {
    "n": 1,
@@ -480,13 +501,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 4,
   "lanes": 0,
-  "total": 3,
-  "at": "12:21 AM",
+  "total": 4,
+  "at": "12:25 AM",
   "why": "",
-  "at_iso": "2026-11-11T05:21:00+00:00",
+  "at_iso": "2026-11-11T05:25:00+00:00",
   "started": "9:49 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:49 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:21 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:49 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:25 AM ET</p></section>"
  }
 }

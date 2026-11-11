@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-11T20:35:19.859136+00:00",
+ "at": "2026-11-11T20:37:41.247865+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -43,33 +43,33 @@
  "meter": {
   "five_hour": {
    "pct": 31.0,
-   "resets_at": "2026-11-11T16:00:00-05:00",
+   "resets_at": "2026-11-11T20:59:59.594070+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-11T15:27:37.047771-05:00",
-   "source": "live",
+   "read_at": "2026-11-11T15:37:31.442572-05:00",
+   "source": "usage",
    "left": 69.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 62.0,
-   "resets_at": "2026-11-15T02:00:00-05:00",
+   "pct": 63.0,
+   "resets_at": "2026-11-15T06:59:59.594087+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-11T15:27:37.047771-05:00",
-   "source": "live",
-   "left": 38.0,
+   "read_at": "2026-11-11T15:37:31.442572-05:00",
+   "source": "usage",
+   "left": 37.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-15T06:59:59.699728+00:00",
+   "resets_at": "2026-11-15T06:59:59.594252+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-11T12:52:30.703876-05:00",
+   "read_at": "2026-11-11T15:37:31.442572-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-11T15:27:37.047771-05:00"
+  "read_at": "2026-11-11T15:37:31.442572-05:00"
  },
  "ui": {
-  "week_pct": 0.202,
+  "week_pct": 0.203,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -81,12 +81,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-11T13:07:31-05:00",
+ "next_tick": "2026-11-11T15:52:31-05:00",
  "personal": {
-  "week_pct": 24.54,
+  "week_pct": 24.68,
   "usage_pct": 28.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-11T20:36:00+00:00",
+  "read_at": "2026-11-11T20:37:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -116,14 +116,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-11T15:30:00-05:00",
+   "at": "2026-11-11T15:37:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T15:36:00-05:00",
+  "at": "2026-11-11T15:37:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "last_tick",
@@ -320,7 +320,7 @@
    "id": "c6806546659",
    "state": "received",
    "position": 1,
-   "eta": "2026-11-11T13:07:31-05:00",
+   "eta": "2026-11-11T15:52:31-05:00",
    "tasks": {
     "open": 0,
     "done": 0
@@ -343,10 +343,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "3:36 PM",
-  "why": "Between sessions: no session is running. Last check 12:52 PM ET.",
-  "at_iso": "2026-11-11T20:36:00+00:00",
+  "at": "3:37 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-11T20:37:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:36 PM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 12:52 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:37 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

@@ -1,13 +1,41 @@
 {
  "schema": 1,
- "at": "2026-11-11T20:40:43.844873+00:00",
+ "at": "2026-11-11T20:43:46.160701+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-11T15:37:41-05:00"
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-3995 item 20 live notes migration",
+   "model": "opus",
+   "started": "2026-11-11T20:40:48.848Z",
+   "seconds": 177,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[site] T-4094 Retry Queue and sorts on Home",
+   "model": "opus",
+   "started": "2026-11-11T20:40:56.653Z",
+   "seconds": 169,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4092 pin queue audit to Evan's account",
+   "model": "opus",
+   "started": "2026-11-11T20:41:06.841Z",
+   "seconds": 159,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys x2, Maren",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -17,20 +45,20 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 31.0,
-   "resets_at": "2026-11-11T20:59:59.594070+00:00",
+   "pct": 32.0,
+   "resets_at": "2026-11-11T16:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-11T15:37:31.442572-05:00",
-   "source": "usage",
-   "left": 69.0,
+   "read_at": "2026-11-11T15:42:45.276020-05:00",
+   "source": "live",
+   "left": 68.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 63.0,
-   "resets_at": "2026-11-15T06:59:59.594087+00:00",
+   "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-11T15:37:31.442572-05:00",
-   "source": "usage",
+   "read_at": "2026-11-11T15:42:45.276020-05:00",
+   "source": "live",
    "left": 37.0,
    "left_words": "of your weekly allowance left"
   },
@@ -41,7 +69,7 @@
    "read_at": "2026-11-11T15:37:31.442572-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-11T15:37:31.442572-05:00"
+  "read_at": "2026-11-11T15:42:45.276020-05:00"
  },
  "ui": {
   "week_pct": 0.203,
@@ -61,7 +89,7 @@
   "week_pct": 24.68,
   "usage_pct": 28.1,
   "work_pct": 75.0,
-  "read_at": "2026-11-11T20:40:00+00:00",
+  "read_at": "2026-11-11T20:43:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -86,19 +114,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 185
+   "free_gb": 181
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-11T15:37:00-05:00",
+   "at": "2026-11-11T15:42:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T15:40:00-05:00",
+  "at": "2026-11-11T15:43:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -109,6 +137,24 @@
   "at": "2026-11-11T15:37:31.744236-05:00"
  },
  "lanes": [
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-3995 item 20 live notes migration",
+   "model": "opus",
+   "since": "2026-11-11T20:40:48.848Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[site] T-4094 Retry Queue and sorts on Home",
+   "model": "opus",
+   "since": "2026-11-11T20:40:56.653Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Idris",
    "state": "next",
@@ -134,32 +180,47 @@
    "next": []
   },
   {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P1, from T-3789...",
    "model": null,
    "since": null,
    "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
-   "model": null,
-   "since": null,
-   "next": []
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Replace the waiting pile with one merge line",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-11T20:40:48.848Z",
+    "o": "c",
+    "task": "T-3995"
+   },
+   {
+    "w": "Maren",
+    "k": "site",
+    "t": "Retry Queue stage and new sorts on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-11T20:40:56.653Z",
+    "o": "c",
+    "task": "T-4094"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Audit and clean up the whole task queue",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-11T20:41:06.841Z",
+    "o": "c",
+    "task": "T-4092"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -311,13 +372,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 3,
   "lanes": 0,
-  "total": 0,
-  "at": "3:40 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-11T20:40:00+00:00",
+  "total": 3,
+  "at": "3:43 PM",
+  "why": "",
+  "at_iso": "2026-11-11T20:43:00+00:00",
   "started": "3:37 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 3:37 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:40 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 3:37 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:43 PM ET</p></section>"
  }
 }

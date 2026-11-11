@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-11T16:25:37.166892+00:00",
+ "at": "2026-11-11T16:28:41.240050+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -8,20 +8,11 @@
  },
  "workers": [
   {
-   "name": "maren",
-   "task": "[site] T-3996 audit item 24 remove unused code",
-   "model": "opus",
-   "started": "2026-11-11T13:41:19.903Z",
-   "seconds": 9857,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "pernille",
    "task": "[tools] T-3995 audit item 5 merge-line record commits batched",
    "model": "opus",
    "started": "2026-11-11T15:11:22.609Z",
-   "seconds": 4454,
+   "seconds": 4638,
    "finished": null,
    "effort": "high"
   },
@@ -30,7 +21,7 @@
    "task": "[tools] T-3996 flow.py Sent Back meaning and item 16 gaps",
    "model": "opus",
    "started": "2026-11-11T15:39:30.840Z",
-   "seconds": 2766,
+   "seconds": 2950,
    "finished": null,
    "effort": "high"
   },
@@ -39,7 +30,7 @@
    "task": "[site] T-3996 Home main-account 5-hour reading frozen mid-session",
    "model": "opus",
    "started": "2026-11-11T16:17:30.180Z",
-   "seconds": 486,
+   "seconds": 671,
    "finished": null,
    "effort": "high"
   },
@@ -48,7 +39,7 @@
    "task": "[tools] T-3995 audit item 20 board notes",
    "model": "opus",
    "started": "2026-11-11T13:41:12.703Z",
-   "seconds": 9864,
+   "seconds": 10048,
    "finished": null,
    "effort": "high"
   },
@@ -57,13 +48,30 @@
    "task": "[tools] T-4084 wire the Investor usage stop into the supervisor",
    "model": "opus",
    "started": "2026-11-11T16:21:47.459Z",
-   "seconds": 229,
+   "seconds": 413,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[tools] T-3150 land the held scoreboard spend fix",
+   "model": "opus",
+   "started": "2026-11-11T16:27:12.153Z",
+   "seconds": 89,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Maren, Pernille, Odalys x3, Idris",
+ "who": "Pernille x2, Odalys x3, Idris",
  "recent": [
+  {
+   "name": "maren",
+   "task": "[site] T-3996 audit item 24 remove unused code",
+   "model": "opus",
+   "started": "2026-11-11T13:41:19.903Z",
+   "seconds": null,
+   "finished": "2026-11-11T16:26:47.936000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4084 Investor usage stop for personal accounts",
@@ -127,7 +135,7 @@
   "week_pct": 24.43,
   "usage_pct": 30.4,
   "work_pct": 76.7,
-  "read_at": "2026-11-11T16:25:00+00:00",
+  "read_at": "2026-11-11T16:28:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -152,19 +160,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 181
+   "free_gb": 183
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-11T11:19:00-05:00",
+   "at": "2026-11-11T11:27:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T11:25:00-05:00",
+  "at": "2026-11-11T11:28:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -181,15 +189,6 @@
    "task": "[tools] T-3995 audit item 20 board notes",
    "model": "opus",
    "since": "2026-11-11T13:41:12.703Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[site] T-3996 audit item 24 remove unused code",
-   "model": "opus",
-   "since": "2026-11-11T13:41:19.903Z",
    "next": [],
    "effort": "high"
   },
@@ -226,6 +225,14 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
@@ -239,16 +246,6 @@
     "at": "2026-11-11T13:41:12.703Z",
     "o": "c",
     "task": "T-3995"
-   },
-   {
-    "w": "Maren",
-    "k": "site",
-    "t": "Show one true record on Home and This Session",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-11T13:41:19.903Z",
-    "o": "c",
-    "task": "T-3996"
    },
    {
     "w": "Pernille",
@@ -289,6 +286,16 @@
     "at": "2026-11-11T16:21:47.459Z",
     "o": "c",
     "task": "T-4084"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Make the scoreboard's spend match the ledger",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-11T16:27:12.153Z",
+    "o": "c",
+    "task": "T-3150"
    }
   ],
   "src": "plan",
@@ -451,10 +458,10 @@
   "main": 6,
   "lanes": 0,
   "total": 6,
-  "at": "11:25 AM",
+  "at": "11:28 AM",
   "why": "",
-  "at_iso": "2026-11-11T16:25:00+00:00",
+  "at_iso": "2026-11-11T16:28:00+00:00",
   "started": "8:37 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 6, started 8:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:25 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 6, started 8:37 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:28 AM ET</p></section>"
  }
 }

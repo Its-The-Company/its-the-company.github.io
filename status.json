@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T06:10:40.717897+00:00",
+ "at": "2026-11-12T06:13:39.875552+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -66,7 +66,7 @@
    "task": "[tools] T-4125 T-4128 Fable 5.2 lane setting and pause near limit",
    "model": "opus",
    "started": "2026-11-12T06:06:44.388Z",
-   "seconds": 236,
+   "seconds": 415,
    "finished": null,
    "effort": "high"
   },
@@ -75,7 +75,7 @@
    "task": "[build] T-4093 tester-only Pro switch for TestFlight",
    "model": "opus",
    "started": "2026-11-12T06:08:52.015Z",
-   "seconds": 108,
+   "seconds": 287,
    "finished": null,
    "effort": "high"
   }
@@ -110,7 +110,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 644,
+  "runnable_count": 645,
   "blocked_count": 86
  },
  "meter": {
@@ -159,7 +159,7 @@
   "week_pct": 27.44,
   "usage_pct": 28.7,
   "work_pct": 74.0,
-  "read_at": "2026-11-12T06:10:00+00:00",
+  "read_at": "2026-11-12T06:13:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -195,6 +195,7 @@
     "e": "high",
     "at": "2026-11-12T01:10:28-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -245,7 +246,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T01:10:00-05:00",
+  "at": "2026-11-12T01:13:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -421,7 +422,7 @@
    }
   ],
   "count": {
-   "next": 644,
+   "next": 645,
    "wait": 40,
    "blocked": 46,
    "you": 14
@@ -466,30 +467,24 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T06:10:22Z",
-  "s": {}
+  "at": "2026-11-12T06:13:31Z",
+  "s": {
+   "T-4093": [
+    "testing",
+    "its own tests, in its copy",
+    1794464011907
+   ]
+  }
  },
  "reply": {
-  "sent": "2026-11-12T06:05:20Z",
-  "seconds": 3.0
+  "sent": "2026-11-12T06:10:14Z",
+  "seconds": 87.0
  },
- "inbox": [
-  {
-   "id": "c6816169923",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "I don't understand the \"Set Aside\"..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -500,10 +495,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "1:10 AM",
+  "at": "1:13 AM",
   "why": "",
-  "at_iso": "2026-11-12T06:10:00+00:00",
+  "at_iso": "2026-11-12T06:13:00+00:00",
   "started": "12:58 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:10 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:13 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T02:57:52.724337+00:00",
+ "at": "2026-11-12T03:17:22.840403+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -81,33 +81,33 @@
  "meter": {
   "five_hour": {
    "pct": 2.0,
-   "resets_at": "2026-11-12T02:00:00-05:00",
+   "resets_at": "2026-11-12T07:00:00.209623+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-11T21:53:14.915930-05:00",
-   "source": "live",
+   "read_at": "2026-11-11T22:17:13.257014-05:00",
+   "source": "usage",
    "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 66.0,
-   "resets_at": "2026-11-15T02:00:00-05:00",
+   "resets_at": "2026-11-15T06:59:59.209641+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-11T21:53:14.915930-05:00",
-   "source": "live",
+   "read_at": "2026-11-11T22:17:13.257014-05:00",
+   "source": "usage",
    "left": 34.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-15T06:59:59.807636+00:00",
+   "resets_at": "2026-11-15T07:00:00.209758+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-11T19:09:38.806490-05:00",
+   "read_at": "2026-11-11T22:17:13.257014-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-11T21:53:14.915930-05:00"
+  "read_at": "2026-11-11T22:17:13.257014-05:00"
  },
  "ui": {
-  "week_pct": 0.201,
+  "week_pct": 0.2,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -119,12 +119,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-11T19:24:39-05:00",
+ "next_tick": "2026-11-11T22:32:13-05:00",
  "personal": {
-  "week_pct": 25.01,
-  "usage_pct": 27.3,
-  "work_pct": 73.7,
-  "read_at": "2026-11-12T02:59:00+00:00",
+  "week_pct": 25.34,
+  "usage_pct": 27.7,
+  "work_pct": 74.0,
+  "read_at": "2026-11-12T03:17:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -136,6 +136,7 @@
     "e": "xhigh",
     "at": "2026-11-11T21:58:42-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    }
   ]
@@ -167,18 +168,23 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-11T21:53:00-05:00",
+   "at": "2026-11-11T22:06:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T21:59:00-05:00",
+  "at": "2026-11-11T22:17:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "last_tick",
- "idle": null,
+ "idle": {
+  "since": "2026-11-11T21:54:41-05:00",
+  "minutes": 22,
+  "why": "a tick has spent 14 min on steps before the session",
+  "healed": []
+ },
  "pool": null,
  "lanes": [
   {
@@ -306,6 +312,11 @@
   ],
   "done": [
    {
+    "w": "Operator",
+    "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
+    "at": "2026-11-11T22:16:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "Every wait before a widget run is now bounded, so one stuck step can no longer stop the app...",
     "at": "2026-11-11T20:23:00-05:00"
@@ -313,11 +324,6 @@
    {
     "w": "Idris",
     "t": "The app's autosave and recovery messages now use the agreed wording, so a person reading them...",
-    "at": "2026-11-11T20:23:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "Release builds now fail before upload when the app uses a required-reason API it does not...",
     "at": "2026-11-11T20:23:00-05:00"
    }
   ],
@@ -363,12 +369,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T02:57:52Z",
-  "s": {}
+  "at": "2026-11-12T03:17:22Z",
+  "s": {
+   "T-4107": [
+    "merging",
+    "Rebasing onto current main",
+    1794453442840
+   ]
+  }
  },
  "reply": {
-  "sent": "2026-11-12T02:50:44Z",
-  "seconds": 77.0
+  "sent": "2026-11-12T03:14:07Z",
+  "seconds": 35.0
  },
  "inbox": [],
  "trimmed": [
@@ -386,10 +398,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "9:59 PM",
+  "at": "10:17 PM",
   "why": "",
-  "at_iso": "2026-11-12T02:59:00+00:00",
+  "at_iso": "2026-11-12T03:17:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:59 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:17 PM ET</p></section>"
  }
 }

@@ -1,35 +1,29 @@
 {
  "schema": 1,
- "at": "2026-11-12T07:49:39.654702+00:00",
+ "at": "2026-11-12T07:56:43.124224+00:00",
  "session": {
   "active": false,
   "kind": "",
   "started": null,
-  "flow": [
+  "flow": [],
+  "done": [
+   {
+    "t": "T-3888",
+    "name": "Make the landing test pass on main every time",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794469986,
+    "why": "did not merge cleanly"
+   },
    {
     "t": "T-3859",
     "name": "Move everything not needed off the Mac mini disk",
     "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794469343
-     }
-    ]
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794469978
    },
-   {
-    "t": "T-4091",
-    "name": "Make main pass its Xcode checks again",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794467779
-     }
-    ]
-   }
-  ],
-  "done": [
    {
     "t": "T-4114",
     "name": "Judge the last app lines of the task queue",
@@ -87,25 +81,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794465104
-   },
-   {
-    "t": "T-3867",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794464836
-   },
-   {
-    "t": "T-3862",
-    "name": "App merge checks run here when the MacBook is silent",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794464709
    }
   ],
-  "landed": 18,
-  "failed": 1
+  "landed": 19,
+  "failed": 2
  },
  "workers": [],
  "who": "",
@@ -146,39 +125,39 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 624,
+  "runnable_count": 622,
   "blocked_count": 84
  },
  "meter": {
   "five_hour": {
-   "pct": 2.0,
-   "resets_at": "2026-11-12T07:00:00-05:00",
+   "pct": 3.0,
+   "resets_at": "2026-11-12T11:59:59.554197+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T02:41:17.561206-05:00",
-   "source": "live",
-   "left": 98.0,
+   "read_at": "2026-11-12T02:56:33.273935-05:00",
+   "source": "usage",
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 68.0,
-   "resets_at": "2026-11-15T02:00:00-05:00",
+   "pct": 69.0,
+   "resets_at": "2026-11-15T06:59:59.554222+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T02:41:17.561206-05:00",
-   "source": "live",
-   "left": 32.0,
+   "read_at": "2026-11-12T02:56:33.273935-05:00",
+   "source": "usage",
+   "left": 31.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-15T06:59:59.672408+00:00",
+   "resets_at": "2026-11-15T06:59:59.554385+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-12T00:55:30.451494-05:00",
+   "read_at": "2026-11-12T02:56:33.273935-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T02:41:17.561206-05:00"
+  "read_at": "2026-11-12T02:56:33.273935-05:00"
  },
  "ui": {
-  "week_pct": 0.245,
+  "week_pct": 0.243,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -190,21 +169,17 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-12T01:13:22-05:00",
+ "next_tick": "2026-11-12T03:11:33-05:00",
  "personal": {
-  "week_pct": 27.44,
+  "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T07:51:00+00:00",
+  "read_at": "2026-11-12T07:56:00+00:00",
   "running": [
    {
     "lane": "b",
     "task": "T-4091",
-    "w": "Operator",
-    "k": "fix",
     "t": "Make main pass its Xcode checks again",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-12T02:03:28-05:00",
     "n": "Jeremy",
     "d": 1,
@@ -243,23 +218,23 @@
   }
  ],
  "disk": {
-  "free_gb": 30,
+  "free_gb": 37,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 173
+   "free_gb": 177
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T02:41:00-05:00",
+   "at": "2026-11-12T02:52:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T02:51:00-05:00",
+  "at": "2026-11-12T02:56:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "last_tick",
@@ -392,22 +367,22 @@
   "done": [
    {
     "w": "Operator",
-    "t": "Not needed: merge mode was to be turned back on only so the audit's lines pinned to Evan's...",
-    "at": "2026-11-12T02:42:00-05:00"
+    "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
+    "at": "2026-11-12T02:55:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "The widget runtime now trusts a learned Python library folder only when it is named like one, so...",
-    "at": "2026-11-12T02:42:00-05:00"
+    "w": "Operator",
+    "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
+    "at": "2026-11-12T02:55:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "The 34 snapshots of unfinished app work left by stopped sessions were each read against the main...",
-    "at": "2026-11-12T02:42:00-05:00"
+    "w": "Operator",
+    "t": "Main passes its Xcode checks again: job J-20261112-0135-land-m-201c55 on the MacBook no longer...",
+    "at": "2026-11-12T02:55:00-05:00"
    }
   ],
   "count": {
-   "next": 624,
+   "next": 622,
    "wait": 40,
    "blocked": 44,
    "you": 13
@@ -448,93 +423,96 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T07:49:39Z",
+  "at": "2026-11-12T07:56:43Z",
   "s": {
    "T-3859": [
     "merging",
-    "Host checks on the Mac mini",
-    1794469359654
+    "Rebasing onto current main",
+    1794470023124
    ],
    "T-3986": [
     "mergeq",
     "1st to merge",
-    1794467439654
+    1794467443124
    ],
    "T-3865": [
     "mergeq",
     "1st to merge",
-    1794467439654
+    1794467443124
    ],
    "T-3950": [
     "mergeq",
     "2nd to merge",
-    1794469179654
-   ],
-   "T-3888": [
-    "mergeq",
-    "3rd to merge",
-    1794469479654
-   ],
-   "T-3997": [
-    "mergeq",
-    "4th to merge",
-    1794469479654
+    1794469183124
    ],
    "T-4091": [
     "mergeq",
-    "6th to merge",
-    1794469299654
+    "3rd to merge",
+    1794469303124
+   ],
+   "T-3888": [
+    "mergetest",
+    "Xcode checks on the MacBook, 4th to merge",
+    1794470023124
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T07:49:39Z",
+  "at": "2026-11-12T07:56:43Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 6,
-    "conflicted": 1,
+    "checking": 2,
+    "inline": 4,
+    "conflicted": 2,
     "failed": 0,
-    "held": 2,
+    "held": 1,
     "retry": 0,
     "parked": 5
    },
    "m": {
-    "checking": 7,
-    "inline": 9,
-    "conflicted": 2728,
+    "checking": 3,
+    "inline": 31,
+    "conflicted": 1369,
     "failed": null,
-    "held": 2595,
+    "held": 2735,
     "retry": null,
-    "parked": 4537
+    "parked": 4544
    },
    "cur": [
     [
      [
       "T-3859"
      ],
-     "Mac tests",
+     "lining up with main",
      "Mac mini",
-     7
+     3
+    ],
+    [
+     [
+      "T-3888"
+     ],
+     "iPhone app tests",
+     "MacBook",
+     3
     ]
    ],
    "ld": [
-    19,
-    "2026-11-12T07:42:12Z"
+    20,
+    "2026-11-12T07:52:58Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T07:49:40Z",
-    "ld": 7.97,
+    "at": "2026-11-12T07:56:43Z",
+    "ld": 2.37,
     "c": 8,
     "sb": 1,
     "dk": [
-     36.7,
+     35.0,
      228.3
     ],
     "ss": [
-     177.2,
+     180.6,
      953.7
     ],
     "sn": [
@@ -542,8 +520,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-12T07:23:24Z",
-    "ld": 1.93,
+    "at": "2026-11-12T07:54:01Z",
+    "ld": 0.22,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -574,10 +552,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "2:51 AM",
+  "at": "2:56 AM",
   "why": "",
-  "at_iso": "2026-11-12T07:51:00+00:00",
+  "at_iso": "2026-11-12T07:56:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:51 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:56 AM ET</p></section>"
  }
 }

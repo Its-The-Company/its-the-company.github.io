@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-12T07:42:15.056047+00:00",
+ "at": "2026-11-12T07:45:20.044793+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T00:58:32-05:00",
   "flow": [
+   {
+    "t": "T-3859",
+    "name": "Move everything not needed off the Mac mini disk",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794469343
+     }
+    ]
+   },
    {
     "t": "T-4091",
     "name": "Make main pass its Xcode checks again",
@@ -142,7 +153,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 625,
+  "runnable_count": 624,
   "blocked_count": 84
  },
  "meter": {
@@ -191,28 +202,8 @@
   "week_pct": 27.44,
   "usage_pct": 28.7,
   "work_pct": 74.0,
-  "read_at": "2026-11-12T07:42:00+00:00",
+  "read_at": "2026-11-12T07:45:00+00:00",
   "running": [
-   {
-    "lane": "a2",
-    "task": "T-3997",
-    "t": "Return to app work when the queue is short",
-    "at": "2026-11-12T01:10:28-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3888",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Make the landing test pass on main every time",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T01:10:28-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
    {
     "lane": "b",
     "task": "T-4091",
@@ -300,7 +291,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T02:42:00-05:00",
+  "at": "2026-11-12T02:45:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -400,13 +391,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Turn merge mode back on until the Investors...",
-    "s": "next",
-    "o": "i"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
@@ -433,9 +417,21 @@
     "t": "Run the Restructuring on Evan's account",
     "s": "next",
     "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Retire the Set aside stage on Home",
+    "s": "next",
+    "o": "i"
    }
   ],
   "done": [
+   {
+    "w": "Operator",
+    "t": "Not needed: merge mode was to be turned back on only so the audit's lines pinned to Evan's...",
+    "at": "2026-11-12T02:42:00-05:00"
+   },
    {
     "w": "Idris",
     "t": "The widget runtime now trusts a learned Python library folder only when it is named like one, so...",
@@ -445,15 +441,10 @@
     "w": "Idris",
     "t": "The 34 snapshots of unfinished app work left by stopped sessions were each read against the main...",
     "at": "2026-11-12T02:42:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "A widget script that was judged harmful stays penalized even when the penalty list cannot be...",
-    "at": "2026-11-12T02:42:00-05:00"
    }
   ],
   "count": {
-   "next": 625,
+   "next": 624,
    "wait": 40,
    "blocked": 44,
    "you": 13
@@ -523,69 +514,56 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T07:41:55Z",
+  "at": "2026-11-12T07:45:20Z",
   "s": {
-   "T-4114": [
+   "T-3859": [
     "merging",
-    "Merging onto main",
-    1794469315794
+    "Host checks on the Mac mini",
+    1794469400044
    ],
    "T-3986": [
     "mergeq",
     "1st to merge",
-    1794467455794
+    1794467480044
    ],
    "T-3865": [
     "mergeq",
     "1st to merge",
-    1794467455794
+    1794467480044
    ],
    "T-3950": [
     "mergeq",
-    "3rd to merge",
-    1794469195794
+    "2nd to merge",
+    1794469160044
    ],
-   "T-3859": [
+   "T-3888": [
+    "mergeq",
+    "3rd to merge",
+    1794469520044
+   ],
+   "T-3997": [
     "mergeq",
     "4th to merge",
-    1794468835794
+    1794469520044
    ],
    "T-4091": [
     "mergeq",
     "5th to merge",
-    1794469315794
-   ],
-   "T-3997": [
-    "merged",
-    "on main 1:31 AM ET",
-    1794465075000,
-    "Operator"
+    1794469340044
    ]
   }
  },
  "reply": {
-  "sent": "2026-11-12T07:38:36Z",
-  "seconds": 35.0
+  "sent": "2026-11-12T07:40:47Z",
+  "seconds": 94.0
  },
- "inbox": [
-  {
-   "id": "c6817746629",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Amazing! does this mean the..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -595,12 +573,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "2:42 AM",
+  "lanes": 2,
+  "total": 2,
+  "at": "2:45 AM",
   "why": "",
-  "at_iso": "2026-11-12T07:42:00+00:00",
+  "at_iso": "2026-11-12T07:45:00+00:00",
   "started": "12:58 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 2:42 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 2:45 AM ET</p></section>"
  }
 }

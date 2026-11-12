@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T15:40:36.481561+00:00",
+ "at": "2026-11-12T15:43:42.217528+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -113,7 +113,7 @@
    "task": "[tools] T-4157 Fable-only accounts, second change",
    "model": "opus",
    "started": "2026-11-12T15:15:18.260Z",
-   "seconds": 1518,
+   "seconds": 1703,
    "finished": null,
    "effort": "high"
   },
@@ -122,7 +122,7 @@
    "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
    "started": "2026-11-12T15:15:25.110Z",
-   "seconds": 1511,
+   "seconds": 1697,
    "finished": null,
    "effort": "high"
   },
@@ -131,7 +131,7 @@
    "task": "[site] T-4162 a name for every task",
    "model": "opus",
    "started": "2026-11-12T15:15:30.908Z",
-   "seconds": 1505,
+   "seconds": 1691,
    "finished": null,
    "effort": "high"
   },
@@ -140,7 +140,7 @@
    "task": "[build] T-3757 hold background task for unstarted rows",
    "model": "opus",
    "started": "2026-11-12T15:15:38.458Z",
-   "seconds": 1498,
+   "seconds": 1683,
    "finished": null,
    "effort": "high"
   },
@@ -149,7 +149,7 @@
    "task": "[build] T-3784 bridge tests hang on Python 3.9",
    "model": "opus",
    "started": "2026-11-12T15:36:55.299Z",
-   "seconds": 221,
+   "seconds": 406,
    "finished": null,
    "effort": "high"
   }
@@ -241,7 +241,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T15:40:00+00:00",
+  "read_at": "2026-11-12T15:43:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -253,6 +253,7 @@
     "e": "xhigh",
     "at": "2026-11-12T10:33:05-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -303,7 +304,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T10:40:00-05:00",
+  "at": "2026-11-12T10:43:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -569,32 +570,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T15:40:29Z",
+  "at": "2026-11-12T15:43:42Z",
   "s": {
    "T-3757": [
-    "merging",
-    "Mac tests at the main gate \u00b7 5 groups of tests done",
-    1794497729269
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4162": [
     "testing",
     "its own tests, in its copy",
-    1794497189269
+    1794497142217
    ],
    "T-3784": [
     "testing",
     "its own tests, in its copy",
-    1794497969269
+    1794497922217
    ],
    "T-4157": [
     "testing",
     "its own tests, in its copy",
-    1794496589269
+    1794496602217
    ],
    "T-4160": [
     "testing",
     "its own tests, in its copy",
-    1794496589269
+    1794498162217
    ],
    "T-4114": [
     "merged",
@@ -605,7 +606,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T15:40:29Z",
+  "at": "2026-11-12T15:43:42Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -619,11 +620,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 46,
+    "conflicted": 49,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 36
+    "parked": 39
    },
    "cur": [],
    "ld": [
@@ -633,12 +634,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T15:40:30Z",
-    "ld": 6.42,
+    "at": "2026-11-12T15:42:54Z",
+    "ld": 6.14,
     "c": 8,
     "sb": 1,
     "dk": [
-     28.5,
+     28.2,
      228.3
     ],
     "ss": [
@@ -650,8 +651,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-12T15:34:03Z",
-    "ld": 1.58,
+    "at": "2026-11-12T15:42:16Z",
+    "ld": 0.46,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -682,10 +683,10 @@
   "main": 5,
   "lanes": 2,
   "total": 7,
-  "at": "10:40 AM",
+  "at": "10:43 AM",
   "why": "",
-  "at_iso": "2026-11-12T15:40:00+00:00",
+  "at_iso": "2026-11-12T15:43:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:40 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:43 AM ET</p></section>"
  }
 }

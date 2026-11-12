@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T12:06:53.766675+00:00",
+ "at": "2026-11-12T12:09:59.668055+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -108,7 +108,7 @@
    "task": "[tools] T-4154 pinned line takes idle held slot",
    "model": "opus",
    "started": "2026-11-12T11:49:24.594Z",
-   "seconds": 1049,
+   "seconds": 1235,
    "finished": null,
    "effort": "high"
   }
@@ -156,20 +156,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": null,
-   "resets_at": null,
+   "pct": 1.0,
+   "resets_at": "2026-11-12T12:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T06:44:08.930743-05:00",
+   "read_at": "2026-11-12T07:09:13.259523-05:00",
    "source": "live",
-   "last_reset": "2026-11-12T07:00:00-05:00",
-   "left": null,
+   "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 71.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T06:44:08.930743-05:00",
+   "read_at": "2026-11-12T07:09:13.259523-05:00",
    "source": "live",
    "left": 29.0,
    "left_words": "of your weekly allowance left"
@@ -181,7 +180,7 @@
    "read_at": "2026-11-12T05:47:09.793608-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T06:44:08.930743-05:00"
+  "read_at": "2026-11-12T07:09:13.259523-05:00"
  },
  "ui": {
   "week_pct": 0.242,
@@ -201,7 +200,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T12:06:00+00:00",
+  "read_at": "2026-11-12T12:10:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -252,37 +251,6 @@
     "src": "plan-a"
    },
    {
-    "lane": "b2",
-    "task": "T-3756",
-    "t": "Parked list counts the parked branches still waiting",
-    "at": "2026-11-12T05:04:28-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3856",
-    "w": "Ines",
-    "k": "tools",
-    "t": "Redo find what sends main sessions a stray SIGTERM",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T05:04:28-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3903",
-    "t": "Restore a lost Investor ruling to the rulings log",
-    "at": "2026-11-12T05:04:28-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
     "lane": "b3",
     "task": "T-3909",
     "w": "Odalys",
@@ -316,6 +284,7 @@
     "e": "high",
     "at": "2026-11-12T06:52:04-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -338,23 +307,23 @@
   }
  ],
  "disk": {
-  "free_gb": 33,
+  "free_gb": 35,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 183
+   "free_gb": 181
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T07:02:00-05:00",
+   "at": "2026-11-12T07:09:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T07:06:00-05:00",
+  "at": "2026-11-12T07:10:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -589,24 +558,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T12:06:53Z",
+  "at": "2026-11-12T12:09:47Z",
   "s": {
    "T-4154": [
     "testing",
     "its own tests, in its copy",
-    1794484433766
-   ],
-   "T-3756": [
-    "merged",
-    "on main 5:08 AM ET",
-    1794478104000,
-    ""
-   ],
-   "T-3903": [
-    "merged",
-    "on main 5:07 AM ET",
-    1794478034000,
-    ""
+    1794485267017
    ],
    "T-4100": [
     "merged",
@@ -617,7 +574,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T12:06:53Z",
+  "at": "2026-11-12T12:09:47Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -631,11 +588,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 77,
+    "conflicted": 79,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 234
+    "parked": 237
    },
    "cur": [],
    "ld": [
@@ -645,12 +602,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T12:06:30Z",
-    "ld": 2.53,
+    "at": "2026-11-12T12:09:00Z",
+    "ld": 3.89,
     "c": 8,
     "sb": 0,
     "dk": [
-     32.6,
+     34.6,
      228.3
     ],
     "ss": [
@@ -691,12 +648,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 4,
-  "total": 5,
-  "at": "7:06 AM",
+  "lanes": 3,
+  "total": 4,
+  "at": "7:10 AM",
   "why": "",
-  "at_iso": "2026-11-12T12:06:00+00:00",
+  "at_iso": "2026-11-12T12:10:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:06 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:10 AM ET</p></section>"
  }
 }

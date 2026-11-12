@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T23:33:16.302183+00:00",
+ "at": "2026-11-12T23:36:46.630763+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
    "task": "[build] T-4216 add-app slot overwrite race",
    "model": "opus",
    "started": "2026-11-12T22:33:49.320Z",
-   "seconds": 3566,
+   "seconds": 3777,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +105,7 @@
    "task": "[build] T-4218 redraw launcher after slot edit",
    "model": "opus",
    "started": "2026-11-12T23:21:24.535Z",
-   "seconds": 711,
+   "seconds": 922,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +114,7 @@
    "task": "[build] T-3848 T-3847 launcher tap fixes",
    "model": "opus",
    "started": "2026-11-12T23:32:10.601Z",
-   "seconds": 65,
+   "seconds": 276,
    "finished": null,
    "effort": "high"
   }
@@ -206,8 +206,21 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-12T23:33:00+00:00",
-  "running": []
+  "read_at": "2026-11-12T23:36:00+00:00",
+  "running": [
+   {
+    "lane": "b",
+    "task": "T-4194",
+    "w": "Idris",
+    "k": "tools",
+    "t": "Build the feature session for app work",
+    "m": "opus",
+    "e": "xhigh",
+    "at": "2026-11-12T18:33:20-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -243,7 +256,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T18:33:00-05:00",
+  "at": "2026-11-12T18:36:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -502,26 +515,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T23:33:02Z",
+  "at": "2026-11-12T23:36:46Z",
   "s": {
    "T-4216": [
     "merging",
     "Mac tests at the main gate",
-    1794526322847
+    1794526366630
    ],
    "T-4218": [
     "testing",
     "Mac Mini \u00b7 test",
     null
+   ],
+   "T-3848": [
+    "testing",
+    "MacBook \u00b7 test",
+    null
    ]
   },
   "nm": {
    "T-4216": "Stop Add App from overwriting a newly saved slot",
-   "T-4218": "Redraw a placed launcher after a slot edit"
+   "T-4218": "Redraw a placed launcher after a slot edit",
+   "T-3848": "Keep a second launcher tap from dropping a script's prompt"
   }
  },
  "ln": {
-  "at": "2026-11-12T23:33:02Z",
+  "at": "2026-11-12T23:36:46Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -535,11 +554,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 475,
+    "conflicted": 479,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 519
+    "parked": 523
    },
    "cur": [],
    "ld": [
@@ -549,12 +568,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T23:32:18Z",
-    "ld": 12.28,
+    "at": "2026-11-12T23:36:49Z",
+    "ld": 20.27,
     "c": 8,
     "sb": 1,
     "dk": [
-     23.6,
+     23.1,
      228.3
     ],
     "ss": [
@@ -566,8 +585,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-12T23:31:10Z",
-    "ld": 1.3,
+    "at": "2026-11-12T23:35:18Z",
+    "ld": 0.66,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -585,8 +604,17 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 11 tasks",
+   "t": "Work session",
    "at": "2026-11-12T17:24:30-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy",
+   "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-12T18:33:20-05:00"
   }
  ],
  "reply": {
@@ -609,12 +637,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 0,
-  "total": 3,
-  "at": "6:33 PM",
+  "lanes": 1,
+  "total": 4,
+  "at": "6:36 PM",
   "why": "",
-  "at_iso": "2026-11-12T23:33:00+00:00",
+  "at_iso": "2026-11-12T23:36:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:33 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:36 PM ET</p></section>"
  }
 }

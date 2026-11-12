@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T19:28:23.478590+00:00",
+ "at": "2026-11-12T19:31:27.559126+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -109,7 +109,7 @@
    "task": "[build] T-4205 prune on background starts",
    "model": "opus",
    "started": "2026-11-12T18:36:21.956Z",
-   "seconds": 3121,
+   "seconds": 3305,
    "finished": null,
    "effort": "high"
   },
@@ -118,7 +118,7 @@
    "task": "[site] T-4136 Operators and Direct on Home",
    "model": "opus",
    "started": "2026-11-12T19:14:53.752Z",
-   "seconds": 809,
+   "seconds": 993,
    "finished": null,
    "effort": "high"
   }
@@ -166,19 +166,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 18.0,
+   "pct": 19.0,
    "resets_at": "2026-11-12T17:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T14:22:53.132239-05:00",
+   "read_at": "2026-11-12T14:28:53.049570-05:00",
    "source": "live",
-   "left": 82.0,
+   "left": 81.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 77.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T14:22:53.132239-05:00",
+   "read_at": "2026-11-12T14:28:53.049570-05:00",
    "source": "live",
    "left": 23.0,
    "left_words": "of your weekly allowance left"
@@ -190,7 +190,7 @@
    "read_at": "2026-11-12T13:34:12.593745-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T14:22:53.132239-05:00"
+  "read_at": "2026-11-12T14:28:53.049570-05:00"
  },
  "ui": {
   "week_pct": 0.242,
@@ -210,7 +210,7 @@
   "week_pct": 37.24,
   "usage_pct": 32.6,
   "work_pct": 78.9,
-  "read_at": "2026-11-12T19:28:00+00:00",
+  "read_at": "2026-11-12T19:31:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -240,14 +240,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T14:22:00-05:00",
+   "at": "2026-11-12T14:28:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T14:28:00-05:00",
+  "at": "2026-11-12T14:31:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -497,7 +497,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T19:28:06Z",
+  "at": "2026-11-12T19:31:27Z",
   "s": {
    "T-4205": [
     "mergetest",
@@ -507,12 +507,12 @@
    "T-4201": [
     "merging",
     "Mac tests at the main gate",
-    1794511266807
+    1794511827559
    ],
    "T-4136": [
     "testing",
     "its own tests, in its copy",
-    1794511386807
+    1794511407559
    ]
   },
   "nm": {
@@ -522,7 +522,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T19:28:06Z",
+  "at": "2026-11-12T19:31:27Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -536,11 +536,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 230,
+    "conflicted": 234,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 274
+    "parked": 278
    },
    "cur": [],
    "ld": [
@@ -550,8 +550,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T19:28:07Z",
-    "ld": 2.16,
+    "at": "2026-11-12T19:31:04Z",
+    "ld": 1.45,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -599,10 +599,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "2:28 PM",
+  "at": "2:31 PM",
   "why": "",
-  "at_iso": "2026-11-12T19:28:00+00:00",
+  "at_iso": "2026-11-12T19:31:00+00:00",
   "started": "1:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:28 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 2:31 PM ET</p></section>"
  }
 }

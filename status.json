@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-12T11:54:43.087196+00:00",
+ "at": "2026-11-12T11:57:47.487791+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T05:47:30-05:00",
   "flow": [
-   {
-    "t": "T-3428",
-    "name": "Build the Completed Work panel with its graphs",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794484411
-     }
-    ]
-   },
    {
     "t": "T-3143",
     "w": "Idris",
@@ -29,6 +18,22 @@
    }
   ],
   "done": [
+   {
+    "t": "T-3959",
+    "name": "Skip product tests for docs-only changes",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794484659
+   },
+   {
+    "t": "T-3428",
+    "name": "Build the Completed Work panel with its graphs",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794484543
+   },
    {
     "t": "T-4143",
     "name": "Redo trim Home and add task filters",
@@ -91,23 +96,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794478229
-   },
-   {
-    "t": "T-3756",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794478181
-   },
-   {
-    "t": "T-3903",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794478042
    }
   ],
-  "landed": 47,
+  "landed": 49,
   "failed": 3
  },
  "workers": [
@@ -116,7 +107,7 @@
    "task": "[tools] T-4154 pinned line takes idle held slot",
    "model": "opus",
    "started": "2026-11-12T11:49:24.594Z",
-   "seconds": 318,
+   "seconds": 502,
    "finished": null,
    "effort": "high"
   }
@@ -208,7 +199,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T11:54:00+00:00",
+  "read_at": "2026-11-12T11:57:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -220,45 +211,6 @@
     "e": "high",
     "at": "2026-11-12T05:34:02-05:00",
     "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3428",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Build the Completed Work panel with its graphs",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T05:45:12-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3959",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Skip product tests for docs-only changes",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T05:45:12-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-3960",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Quarantine flaky suites sooner",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T05:45:12-05:00",
-    "n": "Evan",
-    "d": 1,
     "src": "plan-a"
    },
    {
@@ -348,7 +300,7 @@
   }
  ],
  "disk": {
-  "free_gb": 29,
+  "free_gb": 33,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -357,14 +309,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T06:50:00-05:00",
+   "at": "2026-11-12T06:56:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T06:54:00-05:00",
+  "at": "2026-11-12T06:57:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -599,17 +551,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T11:54:31Z",
+  "at": "2026-11-12T11:57:47Z",
   "s": {
-   "T-3428": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 2 groups of tests done",
-    1794484411254
-   ],
    "T-4154": [
     "testing",
     "its own tests, in its copy",
-    1794484471254
+    1794484427487
    ],
    "T-3756": [
     "merged",
@@ -632,10 +579,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T11:54:31Z",
+  "at": "2026-11-12T11:57:47Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 3,
     "failed": 0,
@@ -644,37 +591,28 @@
     "parked": 2
    },
    "m": {
-    "checking": 1,
+    "checking": null,
     "inline": null,
-    "conflicted": 64,
+    "conflicted": 67,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 222
+    "parked": 225
    },
-   "cur": [
-    [
-     [
-      "T-3428"
-     ],
-     "Mac tests",
-     "Mac mini",
-     1
-    ]
-   ],
+   "cur": [],
    "ld": [
-    48,
-    "2026-11-12T11:49:54Z"
+    50,
+    "2026-11-12T11:57:39Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T11:53:43Z",
-    "ld": 3.93,
+    "at": "2026-11-12T11:57:25Z",
+    "ld": 2.77,
     "c": 8,
     "sb": 0,
     "dk": [
-     31.0,
+     33.0,
      228.3
     ],
     "ss": [
@@ -697,8 +635,8 @@
   }
  },
  "reply": {
-  "sent": "2026-11-12T07:40:47Z",
-  "seconds": 94.0
+  "sent": "2026-11-12T11:56:33Z",
+  "seconds": 53.0
  },
  "inbox": [],
  "trimmed": [
@@ -715,12 +653,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 4,
-  "total": 5,
-  "at": "6:54 AM",
+  "lanes": 3,
+  "total": 4,
+  "at": "6:57 AM",
   "why": "",
-  "at_iso": "2026-11-12T11:54:00+00:00",
+  "at_iso": "2026-11-12T11:57:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:54 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:57 AM ET</p></section>"
  }
 }

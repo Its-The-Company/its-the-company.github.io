@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T22:53:16.236565+00:00",
+ "at": "2026-11-12T22:56:19.078385+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -119,7 +119,7 @@
    "task": "[research] T-3674 land launcher known apps",
    "model": "opus",
    "started": "2026-11-12T22:22:39.264Z",
-   "seconds": 1836,
+   "seconds": 2019,
    "finished": null,
    "effort": "high"
   },
@@ -128,7 +128,7 @@
    "task": "[build] T-4215 gate launcher editor in Release",
    "model": "opus",
    "started": "2026-11-12T22:33:44.265Z",
-   "seconds": 1171,
+   "seconds": 1354,
    "finished": null,
    "effort": "high"
   },
@@ -137,7 +137,7 @@
    "task": "[build] T-4216 add-app slot overwrite race",
    "model": "opus",
    "started": "2026-11-12T22:33:49.320Z",
-   "seconds": 1166,
+   "seconds": 1349,
    "finished": null,
    "effort": "high"
   },
@@ -146,7 +146,7 @@
    "task": "[review] T-4171 review tree.json export fix",
    "model": "opus",
    "started": "2026-11-12T22:40:32.649Z",
-   "seconds": 763,
+   "seconds": 946,
    "finished": null,
    "effort": "high"
   },
@@ -155,7 +155,7 @@
    "task": "[review] T-4217 review launcher widget picker",
    "model": "opus",
    "started": "2026-11-12T22:46:24.095Z",
-   "seconds": 412,
+   "seconds": 594,
    "finished": null,
    "effort": "high"
   }
@@ -198,18 +198,18 @@
    "pct": 6.0,
    "resets_at": "2026-11-12T22:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T17:48:58.357325-05:00",
+   "read_at": "2026-11-12T17:54:58.980825-05:00",
    "source": "live",
    "left": 94.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 80.0,
+   "pct": 81.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T17:48:58.357325-05:00",
+   "read_at": "2026-11-12T17:54:58.980825-05:00",
    "source": "live",
-   "left": 20.0,
+   "left": 19.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -219,7 +219,7 @@
    "read_at": "2026-11-12T17:19:27.311551-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T17:48:58.357325-05:00"
+  "read_at": "2026-11-12T17:54:58.980825-05:00"
  },
  "ui": {
   "week_pct": 0.24,
@@ -239,7 +239,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-12T22:53:00+00:00",
+  "read_at": "2026-11-12T22:56:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -269,14 +269,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T17:48:00-05:00",
+   "at": "2026-11-12T17:54:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T17:53:00-05:00",
+  "at": "2026-11-12T17:56:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -549,44 +549,44 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T22:53:09Z",
+  "at": "2026-11-12T22:56:12Z",
   "s": {
    "T-3674": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-4216": [
-    "mergeq",
-    "waiting for the main gate",
-    1794523569311
-   ],
    "T-4215": [
     "mergeq",
     "waiting for the main gate",
-    1794523629311
+    1794523632512
    ],
    "T-4217": [
     "testing",
     "its own tests, in its copy",
-    1794523989311
+    1794523992512
+   ],
+   "T-4216": [
+    "testing",
+    "its own tests, in its copy",
+    1794523632512
    ],
    "T-4171": [
     "testing",
     "its own tests, in its copy",
-    1794523749311
+    1794523752512
    ]
   },
   "nm": {
    "T-3674": "Fill the launcher's list of known apps",
-   "T-4216": "Stop Add App from overwriting a newly saved slot",
    "T-4215": "Keep the launcher editor out of Release builds",
    "T-4217": "Review the launcher widget picker change",
+   "T-4216": "Stop Add App from overwriting a newly saved slot",
    "T-4171": "Check finished work before it ships"
   }
  },
  "ln": {
-  "at": "2026-11-12T22:53:09Z",
+  "at": "2026-11-12T22:56:12Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -600,11 +600,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 435,
+    "conflicted": 439,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 479
+    "parked": 482
    },
    "cur": [],
    "ld": [
@@ -614,8 +614,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T22:53:09Z",
-    "ld": 1.65,
+    "at": "2026-11-12T22:55:52Z",
+    "ld": 1.28,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -672,10 +672,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "5:53 PM",
+  "at": "5:56 PM",
   "why": "",
-  "at_iso": "2026-11-12T22:53:00+00:00",
+  "at_iso": "2026-11-12T22:56:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:53 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:56 PM ET</p></section>"
  }
 }

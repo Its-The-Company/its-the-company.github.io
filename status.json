@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T16:47:47.444213+00:00",
+ "at": "2026-11-12T16:50:53.094739+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -114,7 +114,7 @@
    "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
    "started": "2026-11-12T15:15:25.110Z",
-   "seconds": 5542,
+   "seconds": 5727,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[site] T-4108 Issues badge stale count flash",
    "model": "opus",
    "started": "2026-11-12T16:32:11.872Z",
-   "seconds": 935,
+   "seconds": 1121,
    "finished": null,
    "effort": "high"
   },
@@ -132,7 +132,7 @@
    "task": "[build] T-4198 prune run history when background start fails",
    "model": "opus",
    "started": "2026-11-12T16:38:06.505Z",
-   "seconds": 580,
+   "seconds": 766,
    "finished": null,
    "effort": "high"
   },
@@ -141,7 +141,7 @@
    "task": "[tools] T-4179 a stopped task gets a second requeue",
    "model": "opus",
    "started": "2026-11-12T16:43:29.044Z",
-   "seconds": 258,
+   "seconds": 444,
    "finished": null,
    "effort": "high"
   },
@@ -150,7 +150,7 @@
    "task": "[design] T-3565 stale sensor widget on a timeout",
    "model": "opus",
    "started": "2026-11-12T16:45:32.036Z",
-   "seconds": 135,
+   "seconds": 321,
    "finished": null,
    "effort": "high"
   }
@@ -198,19 +198,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 31.0,
+   "pct": 33.0,
    "resets_at": "2026-11-12T12:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T11:42:05.771607-05:00",
+   "read_at": "2026-11-12T11:48:13.845164-05:00",
    "source": "live",
-   "left": 69.0,
+   "left": 67.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 75.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T11:42:05.771607-05:00",
+   "read_at": "2026-11-12T11:48:13.845164-05:00",
    "source": "live",
    "left": 25.0,
    "left_words": "of your weekly allowance left"
@@ -222,7 +222,7 @@
    "read_at": "2026-11-12T10:12:53.677669-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T11:42:05.771607-05:00"
+  "read_at": "2026-11-12T11:48:13.845164-05:00"
  },
  "ui": {
   "week_pct": 0.24,
@@ -242,7 +242,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T16:47:00+00:00",
+  "read_at": "2026-11-12T16:50:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -272,14 +272,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T11:42:00-05:00",
+   "at": "2026-11-12T11:48:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T11:47:00-05:00",
+  "at": "2026-11-12T11:50:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -560,32 +560,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T16:47:47Z",
+  "at": "2026-11-12T16:50:53Z",
   "s": {
    "T-4198": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
+   "T-3565": [
+    "merging",
+    "Mac tests at the main gate \u00b7 2 groups of tests done",
+    1794502133094
+   ],
    "T-4108": [
     "testing",
     "its own tests, in its copy",
-    1794501467444
-   ],
-   "T-3565": [
-    "testing",
-    "its own tests, in its copy",
-    1794502067444
+    1794501473094
    ],
    "T-4160": [
     "testing",
     "its own tests, in its copy",
-    1794501827444
+    1794501773094
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T16:47:47Z",
+  "at": "2026-11-12T16:50:53Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -599,11 +599,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 105,
+    "conflicted": 108,
     "failed": null,
     "held": null,
-    "retry": 33,
-    "parked": 114
+    "retry": 36,
+    "parked": 117
    },
    "cur": [],
    "ld": [
@@ -613,12 +613,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T16:47:47Z",
-    "ld": 2.4,
+    "at": "2026-11-12T16:50:08Z",
+    "ld": 2.58,
     "c": 8,
     "sb": 1,
     "dk": [
-     28.6,
+     28.5,
      228.3
     ],
     "ss": [
@@ -664,10 +664,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "11:47 AM",
+  "at": "11:50 AM",
   "why": "",
-  "at_iso": "2026-11-12T16:47:00+00:00",
+  "at_iso": "2026-11-12T16:50:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:47 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:50 AM ET</p></section>"
  }
 }

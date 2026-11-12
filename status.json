@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-12T06:19:48.679986+00:00",
+ "at": "2026-11-12T06:22:53.605800+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T00:58:32-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-3883",
+    "name": "Park each task on its own branch",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794464550
+   },
    {
     "t": "T-3994",
     "name": "Keep the main copy quiet with one way in",
@@ -73,7 +81,7 @@
     "why": "did not merge cleanly"
    }
   ],
-  "landed": 7,
+  "landed": 8,
   "failed": 1
  },
  "workers": [
@@ -82,7 +90,7 @@
    "task": "[tools] T-4125 T-4128 Fable 5.2 lane setting and pause near limit",
    "model": "opus",
    "started": "2026-11-12T06:06:44.388Z",
-   "seconds": 784,
+   "seconds": 969,
    "finished": null,
    "effort": "high"
   },
@@ -91,7 +99,7 @@
    "task": "[build] T-4093 tester-only Pro switch for TestFlight",
    "model": "opus",
    "started": "2026-11-12T06:08:52.015Z",
-   "seconds": 656,
+   "seconds": 841,
    "finished": null,
    "effort": "high"
   }
@@ -126,7 +134,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 645,
+  "runnable_count": 644,
   "blocked_count": 86
  },
  "meter": {
@@ -175,7 +183,7 @@
   "week_pct": 27.44,
   "usage_pct": 28.7,
   "work_pct": 74.0,
-  "read_at": "2026-11-12T06:19:00+00:00",
+  "read_at": "2026-11-12T06:23:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -224,6 +232,7 @@
     "e": "high",
     "at": "2026-11-12T01:10:28-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -248,27 +257,7 @@
     "e": "high",
     "at": "2026-11-12T01:19:13-05:00",
     "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3994",
-    "t": "Keep the main copy quiet with one way in",
-    "at": "2026-11-12T01:14:12-05:00",
-    "n": "Jeremy",
     "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3883",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Park each task on its own branch",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T01:14:12-05:00",
-    "n": "Jeremy",
     "src": "plan-b"
    }
   ]
@@ -291,7 +280,7 @@
   }
  ],
  "disk": {
-  "free_gb": 38,
+  "free_gb": 35,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -300,14 +289,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T01:15:00-05:00",
+   "at": "2026-11-12T01:22:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T01:19:00-05:00",
+  "at": "2026-11-12T01:23:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -467,6 +456,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Counted again today and splitting parked work by task would free almost nothing: the hourly...",
+    "at": "2026-11-12T01:22:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "All four parts of phase 2 are on main: records are committed in batches, code reaches main by...",
     "at": "2026-11-12T01:18:00-05:00"
@@ -475,15 +469,10 @@
     "w": "Operator",
     "t": "Merge-queue-only mode, the hold that stopped all new work while too many finished tasks waited...",
     "at": "2026-11-12T01:05:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The hourly disk clean-up that runs between work sessions can no longer keep the next session...",
-    "at": "2026-11-11T23:44:00-05:00"
    }
   ],
   "count": {
-   "next": 645,
+   "next": 644,
    "wait": 40,
    "blocked": 46,
    "you": 14
@@ -533,18 +522,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T06:19:36Z",
+  "at": "2026-11-12T06:22:34Z",
   "s": {
    "T-4093": [
     "testing",
     "Mac Mini \u00b7 test",
     null
    ],
-   "T-3994": [
-    "merged",
-    "on main 1:17 AM ET",
-    1794464253000,
-    ""
+   "T-4128": [
+    "testing",
+    "its own tests, in its copy",
+    1794464554519
    ],
    "T-3846": [
     "merged",
@@ -572,12 +560,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 4,
-  "total": 6,
-  "at": "1:19 AM",
+  "lanes": 3,
+  "total": 5,
+  "at": "1:23 AM",
   "why": "",
-  "at_iso": "2026-11-12T06:19:00+00:00",
+  "at_iso": "2026-11-12T06:23:00+00:00",
   "started": "12:58 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:19 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:23 AM ET</p></section>"
  }
 }

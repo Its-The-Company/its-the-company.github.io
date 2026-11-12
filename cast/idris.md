@@ -58,13 +58,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3143 f11e88eef8 11-12: already green since T-3217 (runner 13/0); test side was right to fix. Lesson: runner results live on origin/macbook-results:ops/jobs/<J>/result.json; the daily full suite can hold the runner ~50 min.
 
 ## Lessons
-- StoreKit, T-0583/T-0589, caret lessons and dated logs: archive.md.
+- Older lessons and dated logs: archive.md.
 
-- T-4151 bdb77002d6 11-12: overrun hold test (child ru_maxrss). Lesson: a spy that keeps references hides a freeing mutant; measure memory in a fresh process.
-- T-4152 dad9db5b52 11-12: held_mib on the gate killed row. Lesson: unstubbed footprint makes margin fits; don't assert the verdict.
-- T-4198 84505c1f81 11-12: failed start prunes (LaunchRunLog.startFailed); review T-4204 (Pernille). Gate 2a (iii) "Known gap" text in privacy draft still to clear. Lesson: a red/green of a copy goes through `main_gate.py check --from` (xc.sh queues only main's HEAD); compile errors cost a runner trip, so capture test properties into locals in @Sendable closures.
-- T-4176 2957d723e2 11-12: free by nameKey + writeNew (RENAME_EXCL); needs review line (Operator). Lesson: a red test must be one the volume can trip: test the pair both ways round, since one order already matched.
-- T-3814 c2c50da0ea 11-12: tree report + T-3817 fixes landed on personal/b2; open: Pernille re-check (L3 touches placedNow). Lesson: no 'iPhone 16' Sim here, pass -destination id=; any new file naming tree.json must join PreviewQueueTests' list.
+- T-4205 495477fa2d + T-3758 ticked 11-12: LaunchRunLog.pruneWhenDue at the top of both background roads. Open: Wrenna to reword policy (cites startFailed). Lesson (Operator 11-12): check a land once with `pgrep -fl "[m]ain_gate.py land"`; never loop on pgrep (plain patterns match the loop's own shell). Land exit 75 = runner slow: poll macbook-results for the job, rerun land at once before main moves.
+- T-3766 80866b6e16 11-12: debug_url_scheme.sh touches only app.pywidget.debug-tests; board ticked. Open: review line (Operator).
+- T-4211 5ba672265d 11-12: launcher premade copy under slots.lock; packet's 'premade run writes premade.json' was false (no launcher Store.save). Lesson: red-first on runner = land_mutants.py queue --base <local copy commit> with a revert mutant; drop ref with git push --delete (land_xc drop takes <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> ids only).
 {% endraw %}
 
 

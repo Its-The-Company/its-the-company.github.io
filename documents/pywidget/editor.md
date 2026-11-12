@@ -308,6 +308,43 @@ contents are unconfirmed, and Wrenna or Idris may grow the set.
 - **All strings are DRAFT.** "Launcher Apps" and the Widgets group name are mine. The Investors see them in the
   report with these frames.
 
+## 11a. As built (T-3664 model, Idris, 2026-11-08; T-3688 screens, 2026-11-12)
+
+- **Gate:** `LauncherEditorGate.isOn` (`ios/App/Launcher/LauncherEditor.swift`): on in a build given
+  `PYWIDGET_LAUNCHER`; in a Debug build only when launched with the `PW_LAUNCHER` environment variable (the UI test;
+  `reset` also removes slots.json first). Release builds without the flag draw no Widgets group. The tap path
+  (T-2551) was never gated by a flag: no shipped widget makes a `pywidget://open` link, so nothing reaches it.
+- **Refusals:** `LauncherTarget.refusal(_:)` in `ios/Shared/LauncherSlots.swift`; `check` reads the same rules.
+  `.unparsable` shows `bad.any`. On iOS 17+ `URL(string:)` percent-encodes rather than refuses, so it rarely fires.
+- **Store:** `save(Edit)` (name, url, symbol, hue), `delete(id)`, `reorder(ids)`, the 16 cap (`.full`). Every
+  write, the tap path's too, holds `launcher/slots.lock` (WidgetStateLock's bounded flock); a held lock is `.busy`
+  and shows `bad.write`.
+- **Known-app list:** `ios/App/Launcher/launcher-apps.json`, `{"format": 1, "symbols": [...], "apps": [{name, url,
+  symbol, hue}]}`. The two entries (Music `music://`, Shortcuts `shortcuts://`) are **placeholders**, schemes not
+  confirmed on a device; Wrenna fills it. `LSApplicationQueriesSchemes` is set in project.yml, and a Core test
+  checks the two lists match. The Symbol grid's set is the file's `symbols`.
+- **Set Up App** is presented by UIKit (`LauncherSheetPresenter`, T-3666), so it shows over any open sheet; the sheet
+  closes through the presenter, not SwiftUI's dismiss. A slot to fill opens the editor's sheet in Set Up mode; no slot
+  named (`.badLink`) or an unreadable slots.json (`.unreadable`, T-3663 L1) keeps the message-only sheet with Done,
+  since nothing can be saved. The reason text keeps the id `launcher.setup.message` the tap path's UI tests read.
+- **After each write (T-3852, 2026-11-12):** the editor and Set Up App write through `LauncherSlotStore.editor`. Where
+  the gate is on, a save, delete or reorder that changed slots.json then writes every installed launcher premade's
+  `slots` (`LauncherSlotSync`, `ios/Shared/LauncherPremadeSlots.swift`). If any premade file changed, it reloads the
+  tree widget's kind (`PyTreeWidget`, the kind a premade draws in), never every widget. A new link alone changes
+  no premade, so it asks for no reload. "Installed" means a bundled premade named `launcher-...`. **No build installs
+  one yet**: "Install premades" copies `widgets/premade/*.py`, not `launcher/`, so today the sync writes nothing (an
+  app test, `LauncherEditorSyncTests`, fails when that changes, at #192's release step). Not yet tested: a real
+  launcher widget redrawing after a reload.
+- **One writer at a time (T-4211, 2026-11-12):** the line above once named a premade run writing premade.json at the
+  same moment as a save. None does: a launcher premade's run reads its file through `_premade.Store` and never calls
+  `save()` (only altitude, github, storage and `keep_reading` do). The race that was real was two saves (the editor's
+  and Set Up App's, or two processes): each copied slots.json into the premades after letting go of
+  launcher/slots.lock, so the one that read first could write older slots over newer. The copy now happens under that
+  lock and the reload after it (`LauncherSlotSyncTests.testTwoSavesThatCrossLeaveEveryPremadeWithTheNewerSlots`
+  interleaves the two). A launcher premade whose Python saved its file would write back the `slots` it read, so it
+  would need that lock first.
+- **Still unconfirmed:** `shortcuts://run-shortcut?name=` (s11) is kept as Maren drew it, untested on a device.
+
 ## 12. Strings
 
 Printed from `draw_editor.py` (`--strings`), so the frames and this table cannot drift. `{…}` is filled in at run

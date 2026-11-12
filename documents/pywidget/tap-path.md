@@ -53,9 +53,10 @@ control character, DEL, C1 or backslash anywhere in the link, an `http(s)` link 
 `facetime:`, and Shortcuts' `shortcuts://run-shortcut?name=...`. Tests: ios/Tests/Core/LauncherSlotsTests.swift
 (23, run under `swift test` in ios/Core), with 38 mutants in ios/Core/mutants-t2551.json (31 from T-2551, 7 from T-3666), all caught.
 
-Not built here: the editor where a person picks apps from a list, names them and chooses a symbol and colour. When
-it is built, it writes this list, and it writes each launcher's `premade.json` slots from the same list. That file
-does not need the `url` key. The draw code never reads it, and the tap reads only `launcher/slots.json`.
+Not built here: the editor where a person picks apps from a list, names them and chooses a symbol and colour
+(T-3664/T-3688, editor.md). It writes this list. Since T-3852 it also writes each installed launcher's `premade.json`
+slots from the same list, without the `url` key, then reloads the tree widget's kind (editor.md s11a). The draw code
+never reads a link, and the tap reads only `launcher/slots.json`.
 
 ## Where the flash comes from
 

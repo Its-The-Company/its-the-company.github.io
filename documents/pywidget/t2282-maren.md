@@ -132,6 +132,38 @@ The MacBook run cannot produce the shots. `testScreenshotsForReview` and the new
 
 
 Result: **T-2282 stays open.** It does not pass until the shots exist. Four of the five fixes read as correct. F3 also needs T-2715.
+
+---
+
+## Addendum, 2026-11-12 1:57 PM ET, T-4199 shots
+
+Maren. **Result: pass.** No finding at Medium or above, so no board line. Read from the seven PNGs at c0e368a779 in `ops/site-checks/settings-T-4199/` (iPhone 17e Simulator, a copy at 3635ad994a that holds b84a7b1596). Sampled by script with `tools/png_sample.py`, WCAG 2 as above; px in the 1170 x 2532 shots, 3 px per pt. No build or Simulator was run.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 5: Addendum, 2026-11-12 1:57 PM ET, T-4199 shots, scrolls sideways" style="--tw:1493px" markdown="1">
+
+| Check | Shot(s) | Measured (light / dark) | Design | Result |
+|---|---|---|---|---|
+| Place | all seven | Testers sits between the Pro card and About, in its own card; About keeps its order | T-4093: after the Pro group, TestFlight or Xcode copy only | pass |
+| Wording | all seven | "Testers", "Unlock Pro (testers)", footer "For testing only. Nothing is charged, and your purchase, if any, is unchanged. Turn it off to see what you've bought." | `grp.testers`, `set.tester.pro`, `set.tester.foot` in `draw_settings.py` | pass, word for word |
+| Header | `settings-phone-light.png`, `-dark.png` | ink x 98-270, y 915-951, the same box as About (98, 1399); #5C5850 6.50:1 / #A9AFC5 8.95:1 | `header(_:)`, `text.secondary` | pass |
+| Row | same | `hammer` tile x 107-173, #2350B0 on #E4EBF8 6.16:1 / #A08BFF on #2A2350 5.25:1; title from x 226 like every other row, #1C1B19 17.21:1 / #EEF0F8 15.39:1; card #FFFFFF / #151926 | `SettingsRowLabel`, `settingsRow()` | pass |
+| Footer | same | ink x 98-1063, y 1205-1336, three lines, #5C5850 6.50:1 / #A9AFC5 8.95:1 | footnote `text.secondary` | pass |
+| Spacing | same, and both xxxLarge | Pro card foot (y 819) to Testers header ink (915) 96 px, where the About header sat in the 11-05 shots (ink from 913); Testers footer ink to About header ink 63 px. That is the system `List`'s header and footer spacing | s5.10.5, system spacing accepted | pass |
+| After Restore found nothing | `settings-phone-light-restore-none.png`, `-dark-restore-none.png` | "No Pro purchase found for this Apple Account." stays under the Pro card (ink y 851-886, 6.50:1 / 8.95:1), above the Testers header; everything below moves down 36 px (12 pt) | frame 4 | pass |
+| xxxLarge | `settings-phone-light-xxxl.png`, `-dark-xxxl.png` | "Unlock Pro (testers)" on one line, ink x 227-804, switch from x 891 (29 pt clear); the footer reflows to four whole lines (ink to x 1001, y 1319-1569); "Not purchased" stacks whole under the title (x 227-656). Nothing clipped or truncated; the page foot is on screen | s5.10.6 | pass |
+| Waiting for approval | `settings-phone-dark-xxxl-pending.png` | "Waiting for approval" whole under the title, ink x 224-805, #A9AFC5 on #151926 8.03:1; tile and chevron stay | `set.pro.pending`, s5.10.6 `ViewThatFits` | pass |
+| Dark contrast | the four dark shots | lowest text pair 8.03:1 (Pro detail); tiles 5.25:1; canvas #0A0C13, cards #151926 | `text.*`, `accent` on `accent.soft` | pass |
+| About seam (T-2914) | both xxxLarge | column x 100 is card from y 1741 to 2089 with no canvas row between Terms of Use and Acknowledgements | | not seen in these shots; T-2914 is Idris's line to close or keep |
+
+</div>
+
+
+Not findings:
+- The switch is the system `Toggle`. Its off track on the white card is #C5C5C7 at 1.72:1 in light, the same system grey as the chevron that was accepted on 11-05. The thumb and the track's outline mark the control, and Increase Contrast darkens it. Tenet 3 applies, so it stays as built.
+- No shot shows the switch turned on, or a light xxxLarge "Waiting for approval". The first is a tester-only state, and the second is the same layout as the dark shot. Neither holds this read.
+
+Owed, by me (Low; seen in `settings-phone-light.png`): s5.10.1 still has no row for the Testers group, and `draw_settings.py` has its three strings but no frame. I add the s5.10 row myself. These shots are of a tester copy and must not be used for App Store screenshots, because an App Store copy does not draw this group.
 {% endraw %}
 
 </div>

@@ -430,3 +430,19 @@ function fig(lab,v){[].forEach.call(document.querySelectorAll('.lk-bub a[href="#
 function draw(st){var g=st&&st.ln,d=st&&st.disk;LNM=(st&&st.stg&&st.stg.nm)||LNM;if(st&&Date.parse(st.at)>=B&&d&&typeof d.free_gb==='number')fig('Mac Mini',d.free_gb+' GB');
 if(!g||!(Date.parse(g.at)>=B))return;if(g.mq)merge(g.mq,g.at);if(g.mx){mach(g.mx,g.at);if(g.mx.macbook&&g.mx.macbook.dk)fig('MacBook',g.mx.macbook.dk[0]+' GB')}}
 S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});
+
+// T-4136 (friesevan #41 c6816980644): Operators & Direct follows each status newer than the build that carries the
+// "operators" block; a status without it leaves the build's cards (tools/site/ops_look.py). Text goes in as textContent.
+document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,sec=document.getElementById('lk-ops');if(!S||!S.onStatus||!sec)return;
+var F={Operator:sec.getAttribute('data-fo'),Direct:sec.getAttribute('data-fd')},B=+sec.getAttribute('data-at')||0,box=document.getElementById('lk-opl'),n=document.getElementById('lk-ops-n');
+function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;p.appendChild(e);return e}
+function cap(s){s=String(s||'');return s.charAt(0).toUpperCase()+s.slice(1)}
+function mins(n){return n>=1440?Math.floor(n/1440)+' d '+Math.floor(n%1440/60)+' h':n>=60?Math.floor(n/60)+' h '+(n%60)+' min':n+' min'}
+function draw(st){var o=st&&st.operators;if(!Array.isArray(o)||!(Date.parse(st.at)>=B))return;box.textContent='';
+o.forEach(function(r){var w=r.w==='Direct'?'Direct':'Operator',c=mk(box,'div','lk-card lk-op'),q=mk(c,'div','lk-r1'),g,t,m,a,x=Date.parse(r.at);
+c.setAttribute('data-w',w.toLowerCase());if(F[w]){g=mk(mk(q,'span','lk-faces'),'img');g.src=F[w];g.alt='';g.width=g.height=40}
+t=mk(q,'span','t');mk(t,'b','',r.t||'');m=mk(t,'span','',[w,r.m?[cap(r.m),r.e].filter(Boolean).join(' '):''].filter(Boolean).join(' · '));
+if(!isNaN(x)){m.appendChild(document.createTextNode(' · '));mk(m,'span','lk-nw',mins(Math.max(0,Math.floor((Date.now()-x)/6e4))))}
+if(r.a){m.appendChild(document.createTextNode(' '));a=mk(m,'span','lk-tag'+(r.sr?' lk-src':''),r.a);if(r.sr)a.title='Runs on: '+r.a}});
+n.textContent=o.length;sec.hidden=!o.length}
+S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});

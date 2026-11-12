@@ -547,12 +547,13 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    **10.1 Rows in v1.** Order top to bottom. A row exists only if its feature ships in that build (2.5.19).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 16: 5. Screen notes, scrolls sideways" style="--tw:1337px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 16: 5. Screen notes, scrolls sideways" style="--tw:2091px" markdown="1">
 
    | Group | Row (string id) | Shown when | Tap | Build line |
    |---|---|---|---|---|
    | (no header) | `e.settings` pywidget Pro; detail `e.settings.off`, `e.settings.on` or `set.pro.pending` | flag file `product` is not null | pushes the Pro screen in the Settings stack (s5.7.2 entry 2) | T-0031 |
    | | `link.restore` Restore purchase (accent title, no chevron) | as above | `AppStore.sync()` in place: the row dims, shows a spinner and `btn.restoring`; the result is the group's footer (`ln.restored`, `ln.none`, `set.restore.failed`). Cancelling Apple's sign-in sheet shows nothing | T-0031; review-notes-draft "Settings > [Pro] ... Restore" |
+   | Testers (`grp.testers`) | `set.tester.pro` Unlock Pro (testers), a switch with the `hammer` glyph; footer `set.tester.foot` For testing only. Nothing is charged, and your purchase, if any, is unchanged. Turn it off to see what you’ve bought. | only in a TestFlight or Xcode copy: the binary is compiled with `PYWIDGET_TESTER_PRO` (Debug, and `tools/upload.sh --internal --upload`'s internal TestFlight archive), AppTransaction reads `.sandbox` or `.xcode` at that moment, and the flag file has a product (`ProStore.showsTesterSwitch`). Drawn after the Pro group, before Editor. **Never** in an App Store copy, an App Review build, an external TestFlight group, or when AppTransaction is unread, unverified or late (`.unknown` counts as production) | flips the switch in place; on, the Pro gates open on this device (`purchased || tester`); no StoreKit call, so the Pro row's detail and Restore stay as StoreKit says; the widgets reload when the gates change | T-4093 (`Shared/TesterPro.swift`; shots `ops/site-checks/settings-T-4199/`). `draw_settings.py` holds the three strings for the C6 check but draws this group in no frame: the sheets show the App Store copy |
    | Editor | `e.theme` Editor theme; detail the chosen theme (`set.theme.default` or a Pro name) | `entitlements.themes.on` and a product | pushes the picker (10.3) | T-0272 |
    | Help | `set.tour` Show the tour again | always | presents the s5.6 tour from page 1 (iPhone full-screen cover; iPad 560 × 700 page sheet). Skip or the last page returns to Settings. Changes no project and does not reset "shown once" | s5.6 |
    | | `set.support` Support (trailing arrow up-right) | always | opens `[support URL]` in `SFSafariViewController` | matrix s2c (Support URL) |
@@ -568,6 +569,7 @@ Runs log (⋯ → Runs): one row per run with the same icon and word, run number
    - **No Appearance switch.** It is not possible in v1, not a choice I made: creative/approved.md item 2 reads the #60 answer as "the app follows the system Light/Dark setting (no in-app theme switch)" and lists an in-app switch as not approved; ADR-004 ruling 3 picks the editor theme by trait collection. The foot line `set.appear` says where the setting lives instead.
    - **No editor preferences.** None exists in v1. Code size follows Dynamic Type (`UIFontMetrics`, ADR-004 ruling 3), the indent is the file's own unit (s3.1 item 1), soft wrap is automatic at AX sizes (s2). With `themes` off, the Editor group does not appear at all. The "Font size: Body" row in s5.7's entry-points frame (`A/B-proentry-phone.png`, frame "2 · Settings row") is wrong and this item replaces it; that frame gets redrawn the next time draw_ide.py runs (owed, Maren).
    - Nothing from 1.1: no package manager row, no sync, no network switch, no debugger.
+   - **No tester build in the store's screenshots.** A shot taken from a TestFlight or Xcode copy can carry the Testers group, and with the switch on it shows Pro open with no purchase. Neither is what a buyer gets, so such a shot never becomes an App Store screenshot or store-page image, even cropped. Store screenshots come from code-drawn sheets or a Release build without `PYWIDGET_TESTER_PRO`.
 
    **10.2 States.**
 

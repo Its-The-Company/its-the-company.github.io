@@ -32,6 +32,9 @@ var SO='def',SD=1,S2='',D2=1,DF={stage:1,time:-1,cat:1,who:1,created:1,requested
 so2=document.getElementById('lk-sort2'),dr=document.getElementById('lk-dir'),dr2=document.getElementById('lk-dir2'),sb2=document.getElementById('lk-so2'),iv=document.getElementById('lk-inv'),INV={};
 try{INV=JSON.parse(H.getAttribute('data-inv')||'{}')||{}}catch(e){}
 function rq(i){var v=INV[i];return v?Date.parse(v)||null:null}
+function chips(){[].forEach.call(H.querySelectorAll('#lk-chips button'),function(b){var v=b.getAttribute('data-v');b.setAttribute('aria-pressed',v?CF.split(' \u00b7 ')[0]===v:!CF)});
+[].forEach.call(H.querySelectorAll('.lk-subs'),function(g){g.hidden=!CF||g.getAttribute('data-cat')!==CF.split(' \u00b7 ')[0];[].forEach.call(g.querySelectorAll('button'),function(b){b.setAttribute('aria-pressed',b.getAttribute('data-v')===CF)})})}
+function setCF(v){CF=v;if(cf)cf.value=v;chips();fire()}
 function catok(c,i){c=String(c||'');return (!CF||c===CF||(CF.indexOf(' · ')<0&&c.split(' · ')[0]===CF))&&(!IV||(IV==='inv')===!!INV[i])}
 function fw(){return [CF?'in '+CF:'',IV?(IV==='inv'?'requested by an Investor':'not requested by an Investor'):''].filter(Boolean).join(', ')}
 function txt(a,b){a=String(a||'').toLowerCase();b=String(b||'').toLowerCase();return a===b?0:!a?1:!b?-1:a<b?-1:1}
@@ -56,7 +59,10 @@ function b64(t){var b=new TextEncoder().encode(t),s='';for(var i=0;i<b.length;i+
 function unb64(s){var a=atob(String(s).replace(/\n/g,'')),b=new Uint8Array(a.length);for(var i=0;i<a.length;i++)b[i]=a.charCodeAt(i);return new TextDecoder().decode(b)}
 function path(){return '/repos/'+repo+'/contents/'+P}
 function say(t){if(fv){fv.textContent=t;fv.hidden=!t}}
-function match(t){if(!Q)return true;t=String(t||'').toLowerCase();return Q.split(/\s+/).every(function(w){return t.indexOf(w)>=0})}
+// T-3430: a word that is a task number ('301', 'T-301', 't-0301', '00301') finds the task whose ID has that number
+// exactly (so 31 is not T-0311), or a name that holds the word as it is; any other word is looked for as typed.
+function numbers(t){var o={},r=/\bt-0*(\d+)/g,m;while((m=r.exec(t)))o[m[1]]=1;return o}
+function match(t){if(!Q)return true;t=String(t||'').toLowerCase();var ns=numbers(t),rest=t.replace(/\bt-\d+(\.\d+)?/g,' ');return Q.split(/\s+/).every(function(w){var m=/^(?:t-?)?0*(\d+)$/.exec(w);return m?(!!ns[m[1]]||rest.indexOf(w)>=0):t.indexOf(w)>=0})}
 // friesevan #41 c6797513466 (11-11): no emoji or symbol glyphs; the star is drawn: filled on, outlined off
 function SV(on){return '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 2.5l2.8 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.2l-6.1 3.6 1.6-6.8-5.2-4.6 6.9-.6z" '+(on?'fill="currentColor"':'fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"')+'/></svg>'}
 function star(p,id){var on=!!F[id],b;if(!okId(id))return;
@@ -94,7 +100,7 @@ if(r[2])mk(e,'span','lk-ts',t===me?'This task':'Shown above');else if(!go)mk(e,'
 function tree(c){var i=lid(c.getAttribute('data-id')),o;if(!c.matches('.lk-run,.lk-q')||c.querySelector('.lk-tree')||!lw(i))return;o=mk(c,'div','lk-tree');
 [['up','Parents',G.u],['down','Children',G.d]].forEach(function(s){var rs=walk(i,s[2]),ul;if(!rs.length)return;mk(o,'h4','',s[1]);ul=mk(o,'ul');ul.setAttribute('data-way',s[0]);
 rs.forEach(function(r){lrow(ul,r,i)});if(rs.left>0)mk(ul,'li','lk-tm','+'+rs.left+' more on the board')})}
-function go(i){var c,n,b;if((Q&&inp)||CF||IV){if(inp)inp.value='';Q='';if(cf)cf.value='';CF='';if(iv)iv.value='';IV='';H.classList.remove('lk-searching');fire()}
+function go(i){var c,n,b;if((Q&&inp)||CF||IV){if(inp)inp.value='';Q='';if(cf)cf.value='';CF='';chips();if(iv)iv.value='';IV='';H.classList.remove('lk-searching');fire()}
 c=S.lk.run&&S.lk.run(i);if(!c){if(S.lk.all)S.lk.all();J[i]=1;queued();c=qcard(i);b=document.getElementById('lk-q-more');
 if(c&&c.classList.contains('lk-fold')&&b&&c.parentNode.classList.contains('lk-qshort'))b.click()}
 if(!c)return;if(!c.classList.contains('lk-open'))toggle(c);c.classList.add('lk-hit');setTimeout(function(){c.classList.remove('lk-hit')},2000);
@@ -185,7 +191,8 @@ if(so)so.addEventListener('change',function(){SO=so.value;SD=DF[SO]||1;sorts();f
 if(dr)dr.addEventListener('click',function(){SD=-SD;sorts();fire()});
 if(so2)so2.addEventListener('change',function(){S2=so2.value;D2=DF[S2]||1;sorts();fire()});
 if(dr2)dr2.addEventListener('click',function(){D2=-D2;sorts();fire()});sorts();
-if(cf)cf.addEventListener('change',function(){CF=cf.value;fire()});
+if(cf)cf.addEventListener('change',function(){setCF(cf.value)});
+[].forEach.call(H.querySelectorAll('.lk-chips button'),function(b){b.addEventListener('click',function(){setCF(b.getAttribute('data-v'))})});
 if(iv)iv.addEventListener('change',function(){IV=iv.value;fire()});
 queued();
 if(tok)read().then(function(f){take(f.list)},function(){})});

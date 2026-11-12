@@ -37,13 +37,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-10 12:4x)
 
-- T-4092 unstuck 11-11 7:4x PM: slice 1 recut landed b80a1af0eb (records 00f5d31820), T-4106 ticked superseded, claim released, rule fix 332883072a (pinned_busy counts live claims only; own recut lands first). Open: ops/task-names.tsv not merge=union (caused the <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">park</span>); old ref parked/a/20261111-184941-86640 on hold file, not archived.
-- T-4115 LANDED 01be2f1d58 11-11: sweeps --budget 60, limit 180. Open: remove ops/scratch_sweep_off after a day of 1b rows; temp fixtures (6,952 git repos, 169 s/pass) need a cheaper rule.
-
-
-- T-3996 LANDED 7ae80b76f5 (11-11 11:49 AM) flow.py: sent_back only in <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s queue (src parked_ref), fix/own hand-out = being_built, readers' `retry` (null on try 1, else try-1). Item 16 gaps all 5 closed; check before 13/19 (4+10 one-side) after 10/18 (0+8, causes 1-2 = rule difference). Owed: after-number on the live record once collect runs.
 - Item 11 (T-3995) 11-10 9:5x PM: grouping NOT worth it, nothing landed (bisection eats saving at ~25% red; script company-scratch/T-3995-odalys/item11_group_runs.py). Revisit if red share <10%.
-- T-4084 step 3 LANDED 3649b230ae (11-11 8:4x PM): supervisor lane_stop_tick live; #261 A = LANE CLEAR -> lane_stop.py cleared (wins to meter reset). Part (1) (lanes take done-list sent-back) NOT done, noted on board. After-number: ops/metrics/lane_stops.jsonl rows; first real trip of b.
+- T-4084 step 3 LANDED 3649b230ae (11-11 8:4x PM): supervisor lane_stop_tick live; #261 A = LANE CLEAR -> lane_stop.py cleared (wins to meter reset). Part (1) (<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> take done-list sent-back) NOT done, noted on board. After-number: ops/metrics/lane_stops.jsonl rows; first real trip of b.
 
 - T-4012 item 10 re-read 11-12 3:1x AM (bfa169dd2d): verdict no, 0 fix/own of 59 lane hand-outs, 3 give_ups settled other ways; old routes idle too. Next: 1:10 AM 11-14 or 10 sent_back rows. flow.py rates in main checkout refused by guard.
 - T-4012 0b48b7f25e (11-11 12:36 AM) personal_land.sh batch landed: slice 2 (no Retry line), host_keep wired, records apply 1 commit, pywidget/tools host floor, named docs/design .md runs xc. Left: retry file/re-pick/ledgers after T-4011 number. Owed: host_keep.jsonl rows; 'ops: lane records applied' count vs 72/49.
@@ -55,9 +50,18 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-3887 32d57c9c12 (11-12): Live step in task_stages (redo of T-3704), ticks b375d789cd. Owed: Live ends once a TestFlight upload follows 11-08 (13 app steps open).
 
+- T-4154 379c9842b0 (11-12): pinned line silent = on a lane done list (pause with no handoff -> done); pin_done logs it; only ops/personal_requeue.txt restarts. own_retry_lanes counts due retries only. Owed: requeue decision (Operator).
+
+- T-4155 eb920cf8bc (11-12): usage-limit end -> unfinished tasks with commits off done list, claim released, board note + state/limited/<task>.json, packet resume words (tools/limit_end.py). Owed: first live limit end (log 'ended at a usage limit'); profile state reads are refused by security-guard, use tick logs.
+
+- T-4150 c03e0e40d1 (11-12): fable_pause joins jittered resets, 85% line with no burn. Owed: first live pause; measured 1.38%/min underran real >=3.1%/min.
+
+- T-4138 7266de4234 (11-12): pinned session <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> removed (an Investor c6824162128). Owed: count fix/sent-back waits on a while 3 pinned hold every slot.
+
 ## Lessons
 
-- T-3767 cf7e9e07ae (11-12): main_fail.py + suite 22/0; wiring patch ops/plans/t3767-supervisor.patch -> Fable via T-3992 note; T-4146 (mine) lands it. Never type sync-command words in Bash (T-0848).
+- T-3950 dd55aab16e (11-12): Home old-requests link out; Time Requested sort, sub-categories, Requested by, open-card link to This Session. Not ticked. site_t3219_test red on main before it (stale after T-4094).
+- A "redo" may already be on main under a new hash: grep git log for the old task id first (T-4143: T-3950 was f9c19ea885).
 {% endraw %}
 
 

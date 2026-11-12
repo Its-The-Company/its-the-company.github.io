@@ -593,6 +593,8 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-12 1:04 AM ET** ((private)): Merge-queue-only mode ended at 1:05 AM ET 11-12 by Investor instruction, before its own 24-hour exit rule; only the 12-task limit on unmerged work now holds new work.
 - **2026-11-12 1:10 AM ET** ((private)): Set aside is no task stage: every task whose merge failed is removed, retried, or added to the Queue; a task sent back to the Queue leaves the In-Flight columns and shows only in the Queue. T-4129 carries it.
 - **2026-11-12 1:55 AM ET** ((private)): Both the queue audit and the Restructuring on Evan's account (a) run on Fable 5.2; the company confirms the model of the first Fable worker on #41 once T-4125 lands, and restores account a's pinned audit sessions (idle since merge mode ended).
+- **2026-11-12 2:04 AM ET** ((private)): First priority: finish what the queue audit and the Restructuring need (T-4125, T-4126, T-4137), then start both on account a (T-4138).
+- **2026-11-12 7:49 AM ET** ((private)): The Restructuring and the queue audit run as many concurrent Fable 5.2 sessions as their tasks allow: account a's cap on pinned sessions at once rises from 2 to all 3 of its places; independent steps inside a session run as concurrent Fable agents.
 {% endraw %}
 
 </div>

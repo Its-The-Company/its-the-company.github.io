@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T23:39:56.665673+00:00",
+ "at": "2026-11-12T23:43:26.596556+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
    "task": "[build] T-4216 add-app slot overwrite race",
    "model": "opus",
    "started": "2026-11-12T22:33:49.320Z",
-   "seconds": 3967,
+   "seconds": 4177,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +105,7 @@
    "task": "[build] T-4218 redraw launcher after slot edit",
    "model": "opus",
    "started": "2026-11-12T23:21:24.535Z",
-   "seconds": 1112,
+   "seconds": 1322,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +114,7 @@
    "task": "[build] T-3848 T-3847 launcher tap fixes",
    "model": "opus",
    "started": "2026-11-12T23:32:10.601Z",
-   "seconds": 466,
+   "seconds": 675,
    "finished": null,
    "effort": "high"
   }
@@ -206,7 +206,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-12T23:40:00+00:00",
+  "read_at": "2026-11-12T23:43:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -280,7 +280,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T18:40:00-05:00",
+  "at": "2026-11-12T18:43:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -539,22 +539,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T23:39:56Z",
+  "at": "2026-11-12T23:43:15Z",
   "s": {
    "T-4216": [
     "merging",
     "Mac tests at the main gate \u00b7 5 groups of tests done",
-    1794526316665
+    1794526335165
+   ],
+   "T-4218": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-3848": [
     "testing",
     "MacBook \u00b7 test",
     null
-   ],
-   "T-4218": [
-    "testing",
-    "its own tests, in its copy",
-    1794526676665
    ],
    "T-4116": [
     "merged",
@@ -565,13 +565,13 @@
   },
   "nm": {
    "T-4216": "Stop Add App from overwriting a newly saved slot",
-   "T-3848": "Keep a second launcher tap from dropping a script's prompt",
    "T-4218": "Redraw a placed launcher after a slot edit",
+   "T-3848": "Keep a second launcher tap from dropping a script's prompt",
    "T-4116": "Regroup the app queue into feature-sized pieces"
   }
  },
  "ln": {
-  "at": "2026-11-12T23:39:56Z",
+  "at": "2026-11-12T23:43:15Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -585,11 +585,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 482,
+    "conflicted": 486,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 526
+    "parked": 529
    },
    "cur": [],
    "ld": [
@@ -599,16 +599,20 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T23:40:05Z",
-    "ld": 19.61,
+    "at": "2026-11-12T23:42:30Z",
+    "ld": 21.49,
     "c": 8,
+    "sb": 1,
     "dk": [
-     23.3,
+     23.1,
      228.3
     ],
     "ss": [
      185.0,
      953.7
+    ],
+    "sn": [
+     "iPhone 18 Pro"
     ]
    },
    "macbook": {
@@ -631,13 +635,15 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session",
+   "t": "Work session \u2013 11 tasks",
    "at": "2026-11-12T17:24:30-05:00"
   },
   {
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-12T18:33:20-05:00"
   },
@@ -645,6 +651,8 @@
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-12T18:38:25-05:00"
   },
@@ -652,6 +660,8 @@
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-12T18:38:25-05:00"
   }
@@ -678,10 +688,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "6:40 PM",
+  "at": "6:43 PM",
   "why": "",
-  "at_iso": "2026-11-12T23:40:00+00:00",
+  "at_iso": "2026-11-12T23:43:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:40 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:43 PM ET</p></section>"
  }
 }

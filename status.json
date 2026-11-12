@@ -1,11 +1,27 @@
 {
  "schema": 1,
- "at": "2026-11-12T00:34:15.237840+00:00",
+ "at": "2026-11-12T00:37:18.217040+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-11T19:09:48-05:00",
-  "flow": [],
+  "flow": [
+   {
+    "t": "T-4092",
+    "name": "Audit and clean up the whole task queue",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794443835
+     },
+     {
+      "s": "landing",
+      "at": 1794443839
+     }
+    ]
+   }
+  ],
   "done": [
    {
     "t": "T-4092",
@@ -26,7 +42,7 @@
    "task": "[site] T-4095 Home stages live: finish and land",
    "model": "opus",
    "started": "2026-11-12T00:10:44.927Z",
-   "seconds": 1410,
+   "seconds": 1593,
    "finished": null,
    "effort": "high"
   },
@@ -35,7 +51,7 @@
    "task": "[tools] T-4084 supervisor usage stop: finish and land",
    "model": "opus",
    "started": "2026-11-12T00:10:55.125Z",
-   "seconds": 1400,
+   "seconds": 1583,
    "finished": null,
    "effort": "high"
   },
@@ -44,7 +60,7 @@
    "task": "[tools] T-4092 unstick queue audit on account a",
    "model": "opus",
    "started": "2026-11-12T00:29:58.714Z",
-   "seconds": 256,
+   "seconds": 439,
    "finished": null,
    "effort": "high"
   }
@@ -103,7 +119,7 @@
   "week_pct": 25.01,
   "usage_pct": 27.8,
   "work_pct": 74.5,
-  "read_at": "2026-11-12T00:34:00+00:00",
+  "read_at": "2026-11-12T00:37:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -140,7 +156,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T19:34:00-05:00",
+  "at": "2026-11-11T19:37:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -389,10 +405,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "7:34 PM",
+  "at": "7:37 PM",
   "why": "",
-  "at_iso": "2026-11-12T00:34:00+00:00",
+  "at_iso": "2026-11-12T00:37:00+00:00",
   "started": "7:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:34 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:37 PM ET</p></section>"
  }
 }

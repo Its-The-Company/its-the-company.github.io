@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T20:59:39.149301+00:00",
+ "at": "2026-11-12T21:02:44.622876+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
    "task": "[build] T-3852 launcher editor saves slots",
    "model": "opus",
    "started": "2026-11-12T19:58:57.130Z",
-   "seconds": 3642,
+   "seconds": 3827,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +105,7 @@
    "task": "[build] T-3766 Debug URL scheme step",
    "model": "opus",
    "started": "2026-11-12T20:25:14.217Z",
-   "seconds": 2064,
+   "seconds": 2250,
    "finished": null,
    "effort": "high"
   }
@@ -148,24 +148,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 592,
+  "runnable_count": 591,
   "blocked_count": 84
  },
  "meter": {
   "five_hour": {
-   "pct": 25.0,
+   "pct": 26.0,
    "resets_at": "2026-11-12T17:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T15:42:52.812639-05:00",
+   "read_at": "2026-11-12T16:01:02.209128-05:00",
    "source": "live",
-   "left": 75.0,
+   "left": 74.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 79.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T15:42:52.812639-05:00",
+   "read_at": "2026-11-12T16:01:02.209128-05:00",
    "source": "live",
    "left": 21.0,
    "left_words": "of your weekly allowance left"
@@ -177,7 +177,7 @@
    "read_at": "2026-11-12T13:34:12.593745-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T15:42:52.812639-05:00"
+  "read_at": "2026-11-12T16:01:02.209128-05:00"
  },
  "ui": {
   "week_pct": 0.242,
@@ -197,7 +197,7 @@
   "week_pct": 37.24,
   "usage_pct": 32.6,
   "work_pct": 78.9,
-  "read_at": "2026-11-12T20:59:00+00:00",
+  "read_at": "2026-11-12T21:02:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -218,7 +218,7 @@
   }
  ],
  "disk": {
-  "free_gb": 29,
+  "free_gb": 28,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -227,14 +227,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T15:54:00-05:00",
+   "at": "2026-11-12T16:01:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T15:59:00-05:00",
+  "at": "2026-11-12T16:02:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -393,6 +393,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "Saving, deleting or reordering apps in the launcher editor now copies the app list into every...",
+    "at": "2026-11-12T16:02:00-05:00"
+   },
+   {
     "w": "Wrenna",
     "t": "The privacy policy now says exactly when old run history is deleted: when you open the app or a...",
     "at": "2026-11-12T15:59:00-05:00"
@@ -401,22 +406,21 @@
     "w": "Maren",
     "t": "Home now has an Operators & Direct section above In flight: one card for each running Operator...",
     "at": "2026-11-12T15:37:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "A closed app deletes nothing by itself; old run history goes the next time iOS starts pywidget:...",
-    "at": "2026-11-12T15:23:00-05:00"
    }
   ],
   "count": {
-   "next": 592,
+   "next": 591,
    "wait": 40,
    "blocked": 44,
    "you": 13
   },
   "fin": {
-   "n": 25,
+   "n": 26,
    "rows": [
+    [
+     "T-3852",
+     "Call the launcher slot..."
+    ],
     [
      "T-4209",
      "Match the privacy policy to..."
@@ -436,10 +440,6 @@
     [
      "T-3664",
      "Let people choose the app..."
-    ],
-    [
-     "T-3688",
-     "Build the launcher editor..."
     ]
    ]
   }
@@ -483,17 +483,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T20:59:20Z",
+  "at": "2026-11-12T21:02:27Z",
   "s": {
    "T-3766": [
     "merging",
-    "Mac tests at the main gate \u00b7 1 group of tests done",
-    1794517160649
+    "Mac tests at the main gate \u00b7 6 groups of tests done",
+    1794517167299
    ],
    "T-3852": [
     "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "its own tests, in its copy",
+    1794517047299
    ]
   },
   "nm": {
@@ -502,7 +502,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T20:59:20Z",
+  "at": "2026-11-12T21:02:27Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -516,11 +516,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 322,
+    "conflicted": 325,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 366
+    "parked": 369
    },
    "cur": [],
    "ld": [
@@ -530,21 +530,19 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T20:58:32Z",
-    "ld": 4.33,
+    "at": "2026-11-12T21:02:09Z",
+    "ld": 6.84,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
-     28.6,
+     28.8,
      228.3
     ],
     "ss": [
      184.7,
      953.7
     ],
-    "sn": [
-     "iPhone 18 Pro"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-12T20:37:57Z",
@@ -581,10 +579,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "3:59 PM",
+  "at": "4:02 PM",
   "why": "",
-  "at_iso": "2026-11-12T20:59:00+00:00",
+  "at_iso": "2026-11-12T21:02:00+00:00",
   "started": "1:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:59 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:02 PM ET</p></section>"
  }
 }

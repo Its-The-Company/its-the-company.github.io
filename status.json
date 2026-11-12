@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-12T06:29:03.152693+00:00",
+ "at": "2026-11-12T06:32:03.032773+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T00:58:32-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-3997",
+    "name": "Return to app work when the queue is short",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794465104
+   },
    {
     "t": "T-3867",
     "name": "Make the three red guard tests green",
@@ -78,17 +86,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794446631
-   },
-   {
-    "t": "T-4092",
-    "name": "Audit and clean up the whole task queue",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794443853
    }
   ],
-  "landed": 10,
+  "landed": 11,
   "failed": 1
  },
  "workers": [
@@ -97,7 +97,7 @@
    "task": "[tools] T-4125 T-4128 Fable 5.2 lane setting and pause near limit",
    "model": "opus",
    "started": "2026-11-12T06:06:44.388Z",
-   "seconds": 1338,
+   "seconds": 1518,
    "finished": null,
    "effort": "high"
   },
@@ -106,7 +106,7 @@
    "task": "[build] T-4093 tester-only Pro switch for TestFlight",
    "model": "opus",
    "started": "2026-11-12T06:08:52.015Z",
-   "seconds": 1211,
+   "seconds": 1391,
    "finished": null,
    "effort": "high"
   }
@@ -141,15 +141,15 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 643,
-  "blocked_count": 86
+  "runnable_count": 635,
+  "blocked_count": 85
  },
  "meter": {
   "five_hour": {
    "pct": 12.0,
    "resets_at": "2026-11-12T02:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T01:15:41.579540-05:00",
+   "read_at": "2026-11-12T01:29:21.477190-05:00",
    "source": "live",
    "left": 88.0,
    "left_words": "of your 5-hour allowance left"
@@ -158,7 +158,7 @@
    "pct": 68.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T01:15:41.579540-05:00",
+   "read_at": "2026-11-12T01:29:21.477190-05:00",
    "source": "live",
    "left": 32.0,
    "left_words": "of your weekly allowance left"
@@ -170,7 +170,7 @@
    "read_at": "2026-11-12T00:55:30.451494-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T01:15:41.579540-05:00"
+  "read_at": "2026-11-12T01:29:21.477190-05:00"
  },
  "ui": {
   "week_pct": 0.245,
@@ -190,16 +190,12 @@
   "week_pct": 27.44,
   "usage_pct": 28.7,
   "work_pct": 74.0,
-  "read_at": "2026-11-12T06:29:00+00:00",
+  "read_at": "2026-11-12T06:32:00+00:00",
   "running": [
    {
     "lane": "a2",
     "task": "T-3997",
-    "w": "Operator",
-    "k": "ops",
     "t": "Return to app work when the queue is short",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-12T01:10:28-05:00",
     "n": "Evan",
     "src": "plan-a"
@@ -228,11 +224,7 @@
    {
     "lane": "b",
     "task": "T-3963",
-    "w": "Odalys",
-    "k": "tools",
     "t": "Merge faster than a Spread session makes changes",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-12T01:19:13-05:00",
     "n": "Jeremy",
     "d": 1,
@@ -267,14 +259,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T01:22:00-05:00",
+   "at": "2026-11-12T01:29:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T01:29:00-05:00",
+  "at": "2026-11-12T01:32:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -397,13 +389,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Merge every parked change today and cap the...",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
@@ -425,6 +410,13 @@
     "o": "i"
    },
    {
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Allow web fetching on every site for every...",
+    "s": "next",
+    "o": "i"
+   },
+   {
     "w": "Ines",
     "k": "plan",
     "t": "Run the Restructuring on Evan's account",
@@ -434,33 +426,53 @@
   ],
   "done": [
    {
-    "w": "Pernille",
-    "t": "A fresh run of the safety-check test suite on 2026-11-12 passed all 491 checks with none...",
-    "at": "2026-11-12T01:27:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Counted again today and splitting parked work by task would free almost nothing: the hourly...",
-    "at": "2026-11-12T01:22:00-05:00"
+    "w": "Operator",
+    "t": "Not needed: its standing cap is now the one limit on unmerged work (T-3993: the one limit,...",
+    "at": "2026-11-12T01:31:00-05:00"
    },
    {
     "w": "Operator",
-    "t": "All four parts of phase 2 are on main: records are committed in batches, code reaches main by...",
-    "at": "2026-11-12T01:18:00-05:00"
+    "t": "Not needed now: its measurement is done and posted, its session count is fixed, and the one...",
+    "at": "2026-11-12T01:31:00-05:00"
+   },
+   {
+    "w": "Operator",
+    "t": "Not needed: the audit found that holding Simulators would block the iPhone step app merges need,...",
+    "at": "2026-11-12T01:31:00-05:00"
    }
   ],
   "count": {
-   "next": 643,
-   "wait": 41,
+   "next": 635,
+   "wait": 40,
    "blocked": 45,
-   "you": 14
+   "you": 13
   },
   "fin": {
-   "n": 1,
+   "n": 9,
    "rows": [
     [
-     "T-3994",
-     "Keep the main copy quiet..."
+     "T-3827",
+     "Merge every parked change..."
+    ],
+    [
+     "T-3963",
+     "Merge faster than a Spread..."
+    ],
+    [
+     "T-3955",
+     "Record merge queue numbers..."
+    ],
+    [
+     "T-3997",
+     "Return to app work when the..."
+    ],
+    [
+     "T-3908",
+     "Show the whole merge queue..."
+    ],
+    [
+     "T-3971",
+     "Hand out only merge work..."
     ]
    ]
   }
@@ -500,17 +512,23 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T06:29:03Z",
+  "at": "2026-11-12T06:32:03Z",
   "s": {
    "T-4093": [
     "merging",
     "Mac tests at the main gate",
-    1794464643152
+    1794464643032
    ],
    "T-4128": [
     "testing",
     "its own tests, in its copy",
-    1794464523152
+    1794464523032
+   ],
+   "T-3997": [
+    "merged",
+    "on main 1:31 AM ET",
+    1794465075000,
+    "Operator"
    ],
    "T-3867": [
     "merged",
@@ -521,21 +539,10 @@
   }
  },
  "reply": {
-  "sent": "2026-11-12T06:24:07Z",
-  "seconds": 99.0
+  "sent": "2026-11-12T06:29:23Z",
+  "seconds": 44.0
  },
- "inbox": [
-  {
-   "id": "c6816474816",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "A"
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -544,6 +551,7 @@
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -551,10 +559,10 @@
   "main": 2,
   "lanes": 2,
   "total": 4,
-  "at": "1:29 AM",
+  "at": "1:32 AM",
   "why": "",
-  "at_iso": "2026-11-12T06:29:00+00:00",
+  "at_iso": "2026-11-12T06:32:00+00:00",
   "started": "12:58 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:29 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:32 AM ET</p></section>"
  }
 }

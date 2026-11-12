@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T08:05:56.001676+00:00",
+ "at": "2026-11-12T08:09:01.837584+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -105,16 +105,7 @@
    "task": "[build] T-3143 template test fix",
    "model": "opus",
    "started": "2026-11-12T08:03:43.753Z",
-   "seconds": 132,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4053 review before TestFlight",
-   "model": "opus",
-   "started": "2026-11-12T08:03:52.904Z",
-   "seconds": 123,
+   "seconds": 318,
    "finished": null,
    "effort": "high"
   },
@@ -123,34 +114,52 @@
    "task": "[tools] T-4129 retire Set aside stage",
    "model": "opus",
    "started": "2026-11-12T08:04:00.395Z",
-   "seconds": 115,
+   "seconds": 301,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-3836 gate premade review",
+   "model": "opus",
+   "started": "2026-11-12T08:08:23.157Z",
+   "seconds": 38,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Pernille, Odalys",
- "recent": [],
+ "who": "Idris, Odalys, Pernille",
+ "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-4053 review before TestFlight",
+   "model": "opus",
+   "started": "2026-11-12T08:03:52.904Z",
+   "seconds": null,
+   "finished": "2026-11-12T08:08:03.113000+00:00"
+  }
+ ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 622,
+  "runnable_count": 621,
   "blocked_count": 84
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
+   "pct": 4.0,
    "resets_at": "2026-11-12T07:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T03:01:46.473741-05:00",
+   "read_at": "2026-11-12T03:08:10.929975-05:00",
    "source": "live",
-   "left": 97.0,
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 69.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T03:01:46.473741-05:00",
+   "read_at": "2026-11-12T03:08:10.929975-05:00",
    "source": "live",
    "left": 31.0,
    "left_words": "of your weekly allowance left"
@@ -162,7 +171,7 @@
    "read_at": "2026-11-12T02:56:33.273935-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T03:01:46.473741-05:00"
+  "read_at": "2026-11-12T03:08:10.929975-05:00"
  },
  "ui": {
   "week_pct": 0.243,
@@ -182,7 +191,7 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T08:05:00+00:00",
+  "read_at": "2026-11-12T08:09:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -294,19 +303,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 181
+   "free_gb": 177
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T03:01:00-05:00",
+   "at": "2026-11-12T03:08:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T03:05:00-05:00",
+  "at": "2026-11-12T03:09:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -327,20 +336,20 @@
    "effort": "high"
   },
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-4053 review before TestFlight",
-   "model": "opus",
-   "since": "2026-11-12T08:03:52.904Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-4129 retire Set aside stage",
    "model": "opus",
    "since": "2026-11-12T08:04:00.395Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-3836 gate premade review",
+   "model": "opus",
+   "since": "2026-11-12T08:08:23.157Z",
    "next": [],
    "effort": "high"
   },
@@ -382,16 +391,6 @@
     "task": "T-3143"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T08:03:52.904Z",
-    "o": "c",
-    "task": "T-4053"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Retire the Set aside stage on Home",
@@ -400,6 +399,16 @@
     "at": "2026-11-12T08:04:00.395Z",
     "o": "i",
     "task": "T-4129"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review the gate-only memory-overrun premade",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T08:08:23.157Z",
+    "o": "c",
+    "task": "T-3836"
    }
   ],
   "src": "plan",
@@ -477,6 +486,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "An independent review found that the fix stopping one stuck step from blanking every widget is...",
+    "at": "2026-11-12T03:07:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "Done by the Investors: Evan set web reading on for every account by hand, and the Handbook...",
     "at": "2026-11-12T03:00:00-05:00"
@@ -485,22 +499,22 @@
     "w": "Operator",
     "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
     "at": "2026-11-12T02:55:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
-    "at": "2026-11-12T02:55:00-05:00"
    }
   ],
   "count": {
-   "next": 622,
+   "next": 621,
    "wait": 40,
    "blocked": 44,
    "you": 13
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-4053",
+     "Check finished work before..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -538,37 +552,41 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T08:05:56Z",
+  "at": "2026-11-12T08:09:01Z",
   "s": {
-   "T-4091": [
+   "T-3870": [
     "mergeq",
     "1st to merge",
-    1794469316001
+    1794470821837
+   ],
+   "T-4091": [
+    "mergeq",
+    "2nd to merge",
+    1794469321837
    ],
    "T-3888": [
     "mergeq",
-    "2nd to merge",
-    1794469496001
+    "3rd to merge",
+    1794469501837
    ],
    "T-3950": [
     "mergeq",
-    "4th to merge",
-    1794470396001
+    "5th to merge",
+    1794470401837
    ],
    "T-3143": [
-    "merged",
-    "on main 3:05 AM ET",
-    1794470747000,
-    ""
+    "testq",
+    "2nd for a Simulator",
+    1794470761837
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T08:05:56Z",
+  "at": "2026-11-12T08:09:01Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 3,
+    "inline": 4,
     "conflicted": 4,
     "failed": 0,
     "held": 1,
@@ -577,12 +595,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 21,
-    "conflicted": 9,
+    "inline": 16,
+    "conflicted": 12,
     "failed": null,
-    "held": 2744,
+    "held": 2747,
     "retry": null,
-    "parked": 4553
+    "parked": 4556
    },
    "cur": [],
    "ld": [
@@ -592,12 +610,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T08:05:07Z",
-    "ld": 3.81,
+    "at": "2026-11-12T08:08:37Z",
+    "ld": 4.64,
     "c": 8,
     "sb": 1,
     "dk": [
-     36.5,
+     37.1,
      228.3
     ],
     "ss": [
@@ -609,12 +627,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-12T08:01:07Z",
-    "ld": 1.41,
+    "at": "2026-11-12T08:03:13Z",
+    "ld": 0.98,
     "c": 12,
     "sb": 0,
     "dk": [
-     398.1,
+     397.9,
      926.4
     ],
     "sn": []
@@ -630,6 +648,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -640,10 +659,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "3:05 AM",
+  "at": "3:09 AM",
   "why": "",
-  "at_iso": "2026-11-12T08:05:00+00:00",
+  "at_iso": "2026-11-12T08:09:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:05 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:09 AM ET</p></section>"
  }
 }

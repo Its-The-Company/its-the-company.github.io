@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T11:24:11.258890+00:00",
+ "at": "2026-11-12T11:27:12.666622+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -103,7 +103,7 @@
    "task": "[build] T-4152 overrun premade records progress",
    "model": "opus",
    "started": "2026-11-12T11:18:01.171Z",
-   "seconds": 370,
+   "seconds": 551,
    "finished": null,
    "effort": "high"
   }
@@ -187,7 +187,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T11:24:00+00:00",
+  "read_at": "2026-11-12T11:27:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -324,23 +324,23 @@
   }
  ],
  "disk": {
-  "free_gb": 30,
+  "free_gb": 31,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 179
+   "free_gb": 181
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T06:18:00-05:00",
+   "at": "2026-11-12T06:25:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T06:24:00-05:00",
+  "at": "2026-11-12T06:27:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -575,8 +575,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T11:23:59Z",
+  "at": "2026-11-12T11:27:12Z",
   "s": {
+   "T-4152": [
+    "merging",
+    "Mac tests at the main gate",
+    1794482712666
+   ],
    "T-3887": [
     "merged",
     "on main 5:18 AM ET",
@@ -604,7 +609,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T11:23:59Z",
+  "at": "2026-11-12T11:27:12Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -618,11 +623,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 34,
+    "conflicted": 37,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 191
+    "parked": 194
    },
    "cur": [],
    "ld": [
@@ -632,16 +637,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T11:23:36Z",
-    "ld": 7.19,
+    "at": "2026-11-12T11:26:24Z",
+    "ld": 7.69,
     "c": 8,
     "sb": 0,
     "dk": [
-     30.7,
+     30.4,
      228.3
     ],
     "ss": [
-     180.6,
+     180.7,
      953.7
     ],
     "sn": []
@@ -679,10 +684,10 @@
   "main": 1,
   "lanes": 4,
   "total": 5,
-  "at": "6:24 AM",
+  "at": "6:27 AM",
   "why": "",
-  "at_iso": "2026-11-12T11:24:00+00:00",
+  "at_iso": "2026-11-12T11:27:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:24 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:27 AM ET</p></section>"
  }
 }

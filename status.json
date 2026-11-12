@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T16:17:26.165603+00:00",
+ "at": "2026-11-12T16:20:30.209732+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -114,7 +114,7 @@
    "task": "[tools] T-4157 Fable-only accounts, second change",
    "model": "opus",
    "started": "2026-11-12T15:15:18.260Z",
-   "seconds": 3727,
+   "seconds": 3911,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
    "started": "2026-11-12T15:15:25.110Z",
-   "seconds": 3721,
+   "seconds": 3905,
    "finished": null,
    "effort": "high"
   },
@@ -132,16 +132,7 @@
    "task": "[site] T-4162 a name for every task",
    "model": "opus",
    "started": "2026-11-12T15:15:30.908Z",
-   "seconds": 3715,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[build] T-3784 bridge tests hang on Python 3.9",
-   "model": "opus",
-   "started": "2026-11-12T15:36:55.299Z",
-   "seconds": 2430,
+   "seconds": 3899,
    "finished": null,
    "effort": "high"
   },
@@ -150,13 +141,30 @@
    "task": "[build] T-4176 New File must not empty a same-named file",
    "model": "opus",
    "started": "2026-11-12T15:52:56.393Z",
-   "seconds": 1469,
+   "seconds": 1653,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4178 check T-3757 before ship",
+   "model": "opus",
+   "started": "2026-11-12T16:17:53.876Z",
+   "seconds": 156,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2, Maren, Pernille, Idris",
+ "who": "Odalys x2, Maren, Idris, Pernille",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[build] T-3784 bridge tests hang on Python 3.9",
+   "model": "opus",
+   "started": "2026-11-12T15:36:55.299Z",
+   "seconds": null,
+   "finished": "2026-11-12T16:17:39.662000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-3757 hold background task for unstarted rows",
@@ -180,14 +188,6 @@
    "started": "2026-11-12T15:27:34.598Z",
    "seconds": null,
    "finished": "2026-11-12T15:36:33.064000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4073 check T-3762 before ship",
-   "model": "opus",
-   "started": "2026-11-12T15:22:03.786Z",
-   "seconds": null,
-   "finished": "2026-11-12T15:27:19.629000+00:00"
   }
  ],
  "queue": {
@@ -198,19 +198,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 24.0,
+   "pct": 25.0,
    "resets_at": "2026-11-12T12:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T11:04:49.114622-05:00",
+   "read_at": "2026-11-12T11:17:37.144744-05:00",
    "source": "live",
-   "left": 76.0,
+   "left": 75.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 74.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T11:04:49.114622-05:00",
+   "read_at": "2026-11-12T11:17:37.144744-05:00",
    "source": "live",
    "left": 26.0,
    "left_words": "of your weekly allowance left"
@@ -222,7 +222,7 @@
    "read_at": "2026-11-12T10:12:53.677669-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T11:04:49.114622-05:00"
+  "read_at": "2026-11-12T11:17:37.144744-05:00"
  },
  "ui": {
   "week_pct": 0.24,
@@ -242,7 +242,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T16:17:00+00:00",
+  "read_at": "2026-11-12T16:20:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -272,14 +272,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T11:11:00-05:00",
+   "at": "2026-11-12T11:17:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T11:17:00-05:00",
+  "at": "2026-11-12T11:20:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -309,20 +309,20 @@
    "effort": "high"
   },
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[build] T-3784 bridge tests hang on Python 3.9",
-   "model": "opus",
-   "since": "2026-11-12T15:36:55.299Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "running",
    "task": "[build] T-4176 New File must not empty a same-named file",
    "model": "opus",
    "since": "2026-11-12T15:52:56.393Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[review] T-4178 check T-3757 before ship",
+   "model": "opus",
+   "since": "2026-11-12T16:17:53.876Z",
    "next": [],
    "effort": "high"
   },
@@ -376,16 +376,6 @@
     "task": "T-4162"
    },
    {
-    "w": "Pernille",
-    "k": "build",
-    "t": "Stop the bridge host tests hanging on Python 3.9",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T15:36:55.299Z",
-    "o": "c",
-    "task": "T-3784"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Stop New File emptying a same-named file",
@@ -394,6 +384,16 @@
     "at": "2026-11-12T15:52:56.393Z",
     "o": "c",
     "task": "T-4176"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T16:17:53.876Z",
+    "o": "c",
+    "task": "T-4178"
    }
   ],
   "src": "plan",
@@ -561,22 +561,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T16:17:26Z",
+  "at": "2026-11-12T16:20:30Z",
   "s": {
    "T-4176": [
-    "merging",
-    "Mac tests at the main gate",
-    1794500186165
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4162": [
     "testing",
     "its own tests, in its copy",
-    1794498386165
-   ],
-   "T-3784": [
-    "testing",
-    "its own tests, in its copy",
-    1794499886165
+    1794498390209
    ],
    "T-4157": [
     "merged",
@@ -587,7 +582,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T16:17:26Z",
+  "at": "2026-11-12T16:20:30Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -601,11 +596,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 75,
+    "conflicted": 78,
     "failed": null,
     "held": null,
-    "retry": 3,
-    "parked": 84
+    "retry": 6,
+    "parked": 87
    },
    "cur": [],
    "ld": [
@@ -615,12 +610,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T16:17:01Z",
-    "ld": 4.89,
+    "at": "2026-11-12T16:19:45Z",
+    "ld": 4.13,
     "c": 8,
     "sb": 1,
     "dk": [
-     28.4,
+     28.5,
      228.3
     ],
     "ss": [
@@ -632,8 +627,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-12T16:15:47Z",
-    "ld": 1.85,
+    "at": "2026-11-12T16:17:53Z",
+    "ld": 1.31,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -665,10 +660,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "11:17 AM",
+  "at": "11:20 AM",
   "why": "",
-  "at_iso": "2026-11-12T16:17:00+00:00",
+  "at_iso": "2026-11-12T16:20:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:17 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:20 AM ET</p></section>"
  }
 }

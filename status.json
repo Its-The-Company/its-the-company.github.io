@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T17:18:14.278832+00:00",
+ "at": "2026-11-12T17:21:19.700278+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -114,7 +114,7 @@
    "task": "[tools] T-4179 a stopped task gets a second requeue",
    "model": "opus",
    "started": "2026-11-12T16:43:29.044Z",
-   "seconds": 2085,
+   "seconds": 2270,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[build] T-3400 Python https through iOS",
    "model": "opus",
    "started": "2026-11-12T17:02:07.937Z",
-   "seconds": 966,
+   "seconds": 1151,
    "finished": null,
    "effort": "high"
   },
@@ -132,22 +132,30 @@
    "task": "[tools] T-4161 Fable 5.2 on Jeremy's account, model log",
    "model": "opus",
    "started": "2026-11-12T17:09:33.984Z",
-   "seconds": 520,
+   "seconds": 705,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "pernille",
+   "task": "[review] T-4204 check T-4198 before ship",
+   "model": "opus",
+   "started": "2026-11-12T17:18:31.327Z",
+   "seconds": 168,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys x2, Pernille x2",
+ "recent": [
   {
    "name": "wrenna",
    "task": "[release] T-3798 privacy policy run history timing",
    "model": "opus",
    "started": "2026-11-12T17:15:58.515Z",
-   "seconds": 135,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x2, Pernille, Wrenna",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-12T17:19:45.910000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4198 prune run history when background start fails",
@@ -171,14 +179,6 @@
    "started": "2026-11-12T15:15:25.110Z",
    "seconds": null,
    "finished": "2026-11-12T17:09:13.029000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-3565 stale sensor widget on a timeout",
-   "model": "opus",
-   "started": "2026-11-12T16:45:32.036Z",
-   "seconds": null,
-   "finished": "2026-11-12T17:01:29.516000+00:00"
   }
  ],
  "queue": {
@@ -189,21 +189,21 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 2.0,
+   "pct": 4.0,
    "resets_at": "2026-11-12T17:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T12:12:46.213265-05:00",
+   "read_at": "2026-11-12T12:19:07.439794-05:00",
    "source": "live",
-   "left": 98.0,
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 75.0,
+   "pct": 76.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T12:12:46.213265-05:00",
+   "read_at": "2026-11-12T12:19:07.439794-05:00",
    "source": "live",
-   "left": 25.0,
+   "left": 24.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -213,7 +213,7 @@
    "read_at": "2026-11-12T10:12:53.677669-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T12:12:46.213265-05:00"
+  "read_at": "2026-11-12T12:19:07.439794-05:00"
  },
  "ui": {
   "week_pct": 0.24,
@@ -233,7 +233,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T17:18:00+00:00",
+  "read_at": "2026-11-12T17:21:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -263,14 +263,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T12:12:00-05:00",
+   "at": "2026-11-12T12:19:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T12:18:00-05:00",
+  "at": "2026-11-12T12:21:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -300,15 +300,6 @@
    "effort": "high"
   },
   {
-   "name": "Wrenna",
-   "state": "running",
-   "task": "[release] T-3798 privacy policy run history timing",
-   "model": "opus",
-   "since": "2026-11-12T17:15:58.515Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
@@ -320,6 +311,14 @@
    "name": "Maren",
    "state": "next",
    "task": "Maren, P1 (Investor an Investor c6816980644; plan...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Wrenna",
+   "state": "next",
+   "task": "Wrenna, P2, from T-3664: replace the two placeholder...",
    "model": null,
    "since": null,
    "next": []
@@ -366,14 +365,14 @@
     "task": "T-4161"
    },
    {
-    "w": "Wrenna",
-    "k": "release",
-    "t": "Fix the run history deletion timing in the privacy policy",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-12T17:15:58.515Z",
+    "at": "2026-11-12T17:18:31.327Z",
     "o": "c",
-    "task": "T-3798"
+    "task": "T-4204"
    }
   ],
   "src": "plan",
@@ -451,6 +450,11 @@
   ],
   "done": [
    {
+    "w": "Wrenna",
+    "t": "A second reader checked the draft privacy policy's promises about deleting old run history...",
+    "at": "2026-11-12T12:19:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "When a Shortcut or a widget refresh starts pywidget in the background and Python fails to start,...",
     "at": "2026-11-12T12:17:00-05:00"
@@ -459,11 +463,6 @@
     "w": "Maren",
     "t": "Opening a page no longer flashes an old Issues number (like 4) for a second; the badge opens on...",
     "at": "2026-11-12T12:15:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "When a usage check failed, the Fable pause skipped its decision and the session hit the 5-hour...",
-    "at": "2026-11-12T12:08:00-05:00"
    }
   ],
   "count": {
@@ -473,8 +472,12 @@
    "you": 14
   },
   "fin": {
-   "n": 18,
+   "n": 19,
    "rows": [
+    [
+     "T-3798",
+     "Fix the run history deletion..."
+    ],
     [
      "T-4198",
      "Prune run history when a..."
@@ -494,10 +497,6 @@
     [
      "T-4176",
      "Stop New File emptying a..."
-    ],
-    [
-     "T-4200",
-     "Check finished work before..."
     ]
    ]
   }
@@ -541,28 +540,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T17:17:55Z",
+  "at": "2026-11-12T17:21:02Z",
   "s": {
+   "T-3400": [
+    "merging",
+    "Mac tests at the main gate",
+    1794504002821
+   ],
    "T-4179": [
     "testing",
     "its own tests, in its copy",
-    1794503395089
+    1794503402821
    ],
    "T-4161": [
     "testing",
     "its own tests, in its copy",
-    1794503575089
-   ],
-   "T-4198": [
-    "merged",
-    "on main 12:17 PM ET",
-    1794503834000,
-    "Idris"
+    1794503522821
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T17:17:55Z",
+  "at": "2026-11-12T17:21:02Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -576,11 +574,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 135,
+    "conflicted": 138,
     "failed": null,
     "held": null,
-    "retry": 63,
-    "parked": 144
+    "retry": 67,
+    "parked": 147
    },
    "cur": [],
    "ld": [
@@ -590,8 +588,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T17:17:31Z",
-    "ld": 1.22,
+    "at": "2026-11-12T17:21:03Z",
+    "ld": 1.51,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -641,10 +639,10 @@
   "main": 4,
   "lanes": 0,
   "total": 4,
-  "at": "12:18 PM",
+  "at": "12:21 PM",
   "why": "",
-  "at_iso": "2026-11-12T17:18:00+00:00",
+  "at_iso": "2026-11-12T17:21:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:18 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:21 PM ET</p></section>"
  }
 }

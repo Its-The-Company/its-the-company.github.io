@@ -1,11 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-12T09:13:24.740589+00:00",
+ "at": "2026-11-12T09:16:26.299423+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T02:56:43-05:00",
-  "flow": [],
+  "flow": [
+   {
+    "t": "T-3968",
+    "name": "Stop the applier's raw-HTML refusal notice",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794474857
+     }
+    ]
+   }
+  ],
   "done": [
    {
     "t": "T-4127",
@@ -98,7 +110,7 @@
    "task": "[build] T-4093 tester Pro compile flag",
    "model": "opus",
    "started": "2026-11-12T09:00:23.114Z",
-   "seconds": 781,
+   "seconds": 963,
    "finished": null,
    "effort": "high"
   },
@@ -107,7 +119,7 @@
    "task": "[tools] T-4129 no fourth state, screenshots",
    "model": "opus",
    "started": "2026-11-12T09:01:52.955Z",
-   "seconds": 691,
+   "seconds": 873,
    "finished": null,
    "effort": "high"
   }
@@ -199,7 +211,7 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T09:13:00+00:00",
+  "read_at": "2026-11-12T09:16:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -339,7 +351,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T04:13:00-05:00",
+  "at": "2026-11-12T04:16:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -585,12 +597,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T09:13:24Z",
+  "at": "2026-11-12T09:16:17Z",
   "s": {
+   "T-3968": [
+    "merging",
+    "Host checks on the Mac mini \u00b7 1 group of tests done",
+    1794474857878
+   ],
+   "T-4093": [
+    "testing",
+    "its own tests, in its copy",
+    1794474977878
+   ],
    "T-4129": [
     "merged",
-    "on main 4:00 AM ET",
-    1794474044000,
+    "on main 4:15 AM ET",
+    1794474947000,
     "Odalys"
    ],
    "T-3884": [
@@ -616,20 +638,14 @@
     "on main 3:26 AM ET",
     1794471975000,
     ""
-   ],
-   "T-4093": [
-    "merged",
-    "on main 2:51 AM ET",
-    1794469894000,
-    ""
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T09:13:24Z",
+  "at": "2026-11-12T09:16:17Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 6,
     "failed": 0,
@@ -638,15 +654,24 @@
     "parked": 4
    },
    "m": {
-    "checking": null,
+    "checking": 2,
     "inline": null,
-    "conflicted": 77,
+    "conflicted": 80,
     "failed": null,
-    "held": 2812,
+    "held": 2815,
     "retry": null,
-    "parked": 3716
+    "parked": 3719
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-3968"
+     ],
+     "Mac tests",
+     "Mac mini",
+     2
+    ]
+   ],
    "ld": [
     30,
     "2026-11-12T08:48:49Z"
@@ -654,12 +679,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T09:12:37Z",
-    "ld": 3.64,
+    "at": "2026-11-12T09:15:56Z",
+    "ld": 4.2,
     "c": 8,
     "sb": 1,
     "dk": [
-     33.5,
+     33.6,
      228.3
     ],
     "ss": [
@@ -705,10 +730,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "4:13 AM",
+  "at": "4:16 AM",
   "why": "",
-  "at_iso": "2026-11-12T09:13:00+00:00",
+  "at_iso": "2026-11-12T09:16:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:13 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:16 AM ET</p></section>"
  }
 }

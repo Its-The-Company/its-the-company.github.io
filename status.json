@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T16:26:32.765355+00:00",
+ "at": "2026-11-12T16:29:35.352952+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -114,7 +114,7 @@
    "task": "[tools] T-4157 Fable-only accounts, second change",
    "model": "opus",
    "started": "2026-11-12T15:15:18.260Z",
-   "seconds": 4274,
+   "seconds": 4457,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
    "started": "2026-11-12T15:15:25.110Z",
-   "seconds": 4267,
+   "seconds": 4450,
    "finished": null,
    "effort": "high"
   },
@@ -132,7 +132,7 @@
    "task": "[site] T-4162 a name for every task",
    "model": "opus",
    "started": "2026-11-12T15:15:30.908Z",
-   "seconds": 4261,
+   "seconds": 4444,
    "finished": null,
    "effort": "high"
   },
@@ -141,7 +141,7 @@
    "task": "[build] T-4176 New File must not empty a same-named file",
    "model": "opus",
    "started": "2026-11-12T15:52:56.393Z",
-   "seconds": 2016,
+   "seconds": 2198,
    "finished": null,
    "effort": "high"
   }
@@ -233,7 +233,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T16:26:00+00:00",
+  "read_at": "2026-11-12T16:29:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -270,7 +270,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T11:26:00-05:00",
+  "at": "2026-11-12T11:29:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -541,17 +541,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T16:26:20Z",
+  "at": "2026-11-12T16:29:22Z",
   "s": {
+   "T-4176": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
    "T-4162": [
     "merging",
     "Mac tests at the main gate",
-    1794500660993
-   ],
-   "T-4176": [
-    "merging",
-    "Mac tests at the main gate",
-    1794500780993
+    1794500962542
    ],
    "T-4157": [
     "merged",
@@ -562,7 +562,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T16:26:20Z",
+  "at": "2026-11-12T16:29:22Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -576,11 +576,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 84,
+    "conflicted": 87,
     "failed": null,
     "held": null,
-    "retry": 12,
-    "parked": 93
+    "retry": 15,
+    "parked": 96
    },
    "cur": [],
    "ld": [
@@ -590,12 +590,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T16:25:57Z",
-    "ld": 4.3,
+    "at": "2026-11-12T16:29:23Z",
+    "ld": 2.85,
     "c": 8,
     "sb": 1,
     "dk": [
-     28.8,
+     28.5,
      228.3
     ],
     "ss": [
@@ -607,12 +607,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-12T16:24:55Z",
-    "ld": 1.17,
+    "at": "2026-11-12T16:29:03Z",
+    "ld": 0.61,
     "c": 12,
     "sb": 0,
     "dk": [
-     394.6,
+     395.9,
      926.4
     ],
     "sn": []
@@ -641,10 +641,10 @@
   "main": 4,
   "lanes": 0,
   "total": 4,
-  "at": "11:26 AM",
+  "at": "11:29 AM",
   "why": "",
-  "at_iso": "2026-11-12T16:26:00+00:00",
+  "at_iso": "2026-11-12T16:29:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:26 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:29 AM ET</p></section>"
  }
 }

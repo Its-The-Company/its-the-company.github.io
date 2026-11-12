@@ -1,24 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-12T09:47:00.196554+00:00",
+ "at": "2026-11-12T09:50:05.576581+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T02:56:43-05:00",
-  "flow": [
+  "flow": [],
+  "done": [
    {
     "t": "T-4140",
     "name": "Redo make the landing test pass on main every time",
     "acct": "Personal b",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794476329
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794476861
+   },
    {
     "t": "T-3767",
     "name": "Alert when the main session is down",
@@ -90,17 +86,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794471969
-   },
-   {
-    "t": "T-4012",
-    "name": "Retire the retry routes the send-back replaces",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794471954
    }
   ],
-  "landed": 33,
+  "landed": 34,
   "failed": 3
  },
  "workers": [
@@ -109,7 +97,7 @@
    "task": "[build] T-4093 tester Pro compile flag",
    "model": "opus",
    "started": "2026-11-12T09:00:23.114Z",
-   "seconds": 2797,
+   "seconds": 2982,
    "finished": null,
    "effort": "high"
   },
@@ -118,7 +106,7 @@
    "task": "[tools] T-4129 no fourth state, screenshots",
    "model": "opus",
    "started": "2026-11-12T09:01:52.955Z",
-   "seconds": 2707,
+   "seconds": 2892,
    "finished": null,
    "effort": "high"
   }
@@ -161,7 +149,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 618,
+  "runnable_count": 616,
   "blocked_count": 85
  },
  "meter": {
@@ -210,39 +198,77 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T09:47:00+00:00",
+  "read_at": "2026-11-12T09:50:00+00:00",
   "running": [
    {
     "lane": "b2",
-    "task": "T-4140",
-    "w": "Ines",
+    "task": "T-3810",
+    "w": "Odalys",
     "k": "tools",
-    "t": "Redo make the landing test pass on main every time",
+    "t": "Merge on the internal disk while the SSD is locked",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-12T02:57:59-05:00",
+    "at": "2026-11-12T04:49:04-05:00",
     "n": "Jeremy",
-    "d": 1,
     "src": "plan-b"
    },
    {
     "lane": "b2",
-    "task": "T-3870",
-    "t": "Recut parked refs whose conflicts are not theirs",
-    "at": "2026-11-12T02:57:59-05:00",
+    "task": "T-3824",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Use the new SanDisk SSD as the company's working disk",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T04:49:04-05:00",
     "n": "Jeremy",
-    "d": 1,
     "src": "plan-b"
    },
    {
     "lane": "b2",
-    "task": "T-3992",
-    "w": "Operator",
+    "task": "T-3726",
+    "w": "Odalys",
     "k": "tools",
-    "t": "Clear and merge the unfinished merge fixes",
+    "t": "Run the Simulators from a disk image on the SSD",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-12T02:57:59-05:00",
+    "at": "2026-11-12T04:49:04-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-3831",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Redo an Investor request on fresh main",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T04:49:05-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-3858",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Redo remove check worktrees when a land ends",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T04:49:05-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-3878",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Redo redo an Investor request on fresh main",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T04:49:05-05:00",
     "n": "Jeremy",
     "src": "plan-b"
    }
@@ -282,7 +308,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T04:47:00-05:00",
+  "at": "2026-11-12T04:50:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -442,30 +468,38 @@
   ],
   "done": [
    {
+    "w": "Ines",
+    "t": "The landing test no longer fails at night: its practice supervisor runs now use a fixed morning...",
+    "at": "2026-11-12T04:47:00-05:00"
+   },
+   {
+    "w": "Ines",
+    "t": "The landing test no longer fails at night: its practice supervisor runs now use a fixed morning...",
+    "at": "2026-11-12T04:47:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The company now checks a proposal for stray HTML tags before posting it, and the step that...",
     "at": "2026-11-12T04:31:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The New widget template test that went red after T-1440 (the age line work) passes on today's...",
-    "at": "2026-11-12T03:59:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "T-3814 (Idris's per-widget tree report for the iPhone hunt) needs two fixes before build 5: the...",
-    "at": "2026-11-12T03:55:00-05:00"
    }
   ],
   "count": {
-   "next": 618,
+   "next": 616,
    "wait": 40,
    "blocked": 45,
    "you": 14
   },
   "fin": {
-   "n": 8,
+   "n": 10,
    "rows": [
+    [
+     "T-3888",
+     "Make the landing test pass..."
+    ],
+    [
+     "T-4140",
+     "Redo make the landing test..."
+    ],
     [
      "T-3968",
      "Stop the applier's raw-HTML..."
@@ -481,14 +515,6 @@
     [
      "T-4132",
      "Measure the eight overdue..."
-    ],
-    [
-     "T-3977",
-     "Clear the leftover extra..."
-    ],
-    [
-     "T-3830",
-     "Redo merge every branch held..."
     ]
    ]
   }
@@ -528,94 +554,59 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T09:47:00Z",
+  "at": "2026-11-12T09:49:48Z",
   "s": {
-   "T-4140": [
-    "merging",
-    "Host checks on the Mac mini",
-    1794476340196
-   ],
-   "T-3968": [
-    "mergeq",
-    "1st to merge",
-    1794476460196
-   ],
-   "T-3977": [
-    "mergeq",
-    "1st to merge",
-    1794476460196
-   ],
-   "T-3830": [
-    "mergeq",
-    "1st to merge",
-    1794476460196
-   ],
    "T-4093": [
     "testing",
     "its own tests, in its copy",
-    1794474960196
+    1794474948445
    ],
    "T-4129": [
     "testing",
     "its own tests, in its copy",
-    1794476820196
-   ],
-   "T-3870": [
-    "merged",
-    "on main 3:26 AM ET",
-    1794471975000,
-    ""
+    1794476808445
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T09:47:00Z",
+  "at": "2026-11-12T09:49:48Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 3,
-    "conflicted": 6,
+    "checking": 0,
+    "inline": 0,
+    "conflicted": 4,
     "failed": 0,
     "held": 1,
     "retry": 0,
     "parked": 4
    },
    "m": {
-    "checking": 8,
-    "inline": 6,
+    "checking": null,
+    "inline": null,
     "conflicted": 110,
     "failed": null,
-    "held": 2845,
+    "held": 2848,
     "retry": null,
-    "parked": 3749
+    "parked": 3752
    },
-   "cur": [
-    [
-     [
-      "T-4140"
-     ],
-     "Mac tests",
-     "Mac mini",
-     8
-    ]
-   ],
+   "cur": [],
    "ld": [
-    32,
-    "2026-11-12T09:32:20Z"
+    33,
+    "2026-11-12T09:47:41Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T09:46:37Z",
-    "ld": 4.61,
+    "at": "2026-11-12T09:49:02Z",
+    "ld": 3.38,
     "c": 8,
     "sb": 1,
     "dk": [
-     34.1,
+     36.3,
      228.3
     ],
     "ss": [
-     175.4,
+     175.6,
      953.7
     ],
     "sn": [
@@ -655,12 +646,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "4:47 AM",
+  "lanes": 2,
+  "total": 4,
+  "at": "4:50 AM",
   "why": "",
-  "at_iso": "2026-11-12T09:47:00+00:00",
+  "at_iso": "2026-11-12T09:50:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:47 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:50 AM ET</p></section>"
  }
 }

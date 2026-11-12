@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-12T15:13:03.299437+00:00",
+ "at": "2026-11-12T15:16:07.620870+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-12T10:13:04-05:00",
   "flow": [
    {
     "t": "T-3143",
@@ -107,18 +107,55 @@
   "landed": 63,
   "failed": 9
  },
- "workers": [],
- "who": "",
- "recent": [
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4157 Fable-only accounts, second change",
+   "model": "opus",
+   "started": "2026-11-12T15:15:18.260Z",
+   "seconds": 49,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4160 pause on failed usage reading",
+   "model": "opus",
+   "started": "2026-11-12T15:15:25.110Z",
+   "seconds": 42,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[site] T-4162 a name for every task",
+   "model": "opus",
+   "started": "2026-11-12T15:15:30.908Z",
+   "seconds": 36,
+   "finished": null,
+   "effort": "high"
+  },
   {
    "name": "idris",
-   "task": "[report] morning",
+   "task": "[build] T-3757 hold background task for unstarted rows",
    "model": "opus",
-   "started": "2026-11-12T14:43:32.376Z",
-   "seconds": null,
-   "finished": "2026-11-12T14:44:26.739000+00:00"
+   "started": "2026-11-12T15:15:38.458Z",
+   "seconds": 29,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4070 check T-3558+T-3758 before ship",
+   "model": "opus",
+   "started": "2026-11-12T15:15:45.063Z",
+   "seconds": 22,
+   "finished": null,
+   "effort": "high"
   }
  ],
+ "who": "Odalys x2, Maren, Idris, Pernille",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -166,48 +203,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-12T10:27:54-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T15:13:00+00:00",
-  "running": [
-   {
-    "lane": "b2",
-    "task": "T-3807",
-    "t": "Confirm merges resumed after the SSD unlock",
-    "at": "2026-11-12T08:43:13-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3814",
-    "w": "Idris",
-    "k": "build",
-    "t": "Keep the bundled Countdown picture from hiding the bug",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T08:43:13-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3996",
-    "w": "Operator",
-    "k": "site",
-    "t": "Show one true record on Home and This Session",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T08:43:13-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   }
-  ]
+  "read_at": "2026-11-12T15:16:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -243,54 +245,57 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T10:13:00-05:00",
+  "at": "2026-11-12T10:16:00-05:00",
   "mode": "midnight"
  },
- "next_tick_why": "last_tick",
- "idle": {
-  "since": "2026-11-12T09:47:32-05:00",
-  "minutes": 25,
-  "why": "the last tick ended without starting a session",
-  "healed": []
+ "next_tick_why": "session",
+ "idle": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 5 (raised a step toward the floor of 8: new work may start and every signal is under its line)",
+  "n": 5,
+  "at": "2026-11-12T10:12:54.003565-05:00"
  },
- "pool": null,
  "lanes": [
   {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4157 Fable-only accounts, second change",
+   "model": "opus",
+   "since": "2026-11-12T15:15:18.260Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[site] T-4162 a name for every task",
+   "model": "opus",
+   "since": "2026-11-12T15:15:30.908Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-3757 hold background task for unstarted rows",
+   "model": "opus",
+   "since": "2026-11-12T15:15:38.458Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[review] T-4070 check T-3558+T-3758 before ship",
+   "model": "opus",
+   "since": "2026-11-12T15:15:45.063Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Wrenna",
    "state": "next",
    "task": "Wrenna, P1, from T-3789...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Maren",
-   "state": "next",
-   "task": "Maren, P0 (Investor an Investor c6826068202, 9:17 AM...",
    "model": null,
    "since": null,
    "next": []
@@ -305,7 +310,59 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Evan's account takes only Fable 5.2 tasks",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T15:15:18.260Z",
+    "o": "i",
+    "task": "T-4157"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Pause even when the usage reading fails",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T15:15:25.110Z",
+    "o": "i",
+    "task": "T-4160"
+   },
+   {
+    "w": "Maren",
+    "k": "site",
+    "t": "Show a name for every task on the site",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T15:15:30.908Z",
+    "o": "i",
+    "task": "T-4162"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Hold the background task for unstarted run rows",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T15:15:38.458Z",
+    "o": "c",
+    "task": "T-3757"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T15:15:45.063Z",
+    "o": "c",
+    "task": "T-4070"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -400,6 +457,10 @@
    "wait": 40,
    "blocked": 44,
    "you": 13
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -441,29 +502,23 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T15:13:03Z",
+  "at": "2026-11-12T15:15:49Z",
   "s": {
    "T-4162": [
     "testing",
     "its own tests, in its copy",
-    1794493983299
+    1794493969982
    ],
-   "T-3814": [
+   "T-4157": [
     "merged",
-    "on main 9:44 AM ET",
-    1794494675000,
-    ""
-   ],
-   "T-3807": [
-    "merged",
-    "on main 8:45 AM ET",
-    1794491124000,
-    ""
+    "on main 9:05 AM ET",
+    1794492359000,
+    "Odalys"
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T15:13:03Z",
+  "at": "2026-11-12T15:15:49Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -472,16 +527,16 @@
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 2
+    "parked": 4
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 10,
+    "conflicted": 13,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 226
+    "parked": 12
    },
    "cur": [],
    "ld": [
@@ -491,8 +546,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T15:13:03Z",
-    "ld": 2.02,
+    "at": "2026-11-12T15:15:23Z",
+    "ld": 1.42,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -536,13 +591,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "10:13 AM",
+  "main": 5,
+  "lanes": 0,
+  "total": 5,
+  "at": "10:16 AM",
   "why": "",
-  "at_iso": "2026-11-12T15:13:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:13 AM ET</p></section>"
+  "at_iso": "2026-11-12T15:16:00+00:00",
+  "started": "10:13 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:16 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T00:52:35.183807+00:00",
+ "at": "2026-11-12T00:55:39.829212+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -30,39 +30,47 @@
  },
  "workers": [
   {
-   "name": "maren",
-   "task": "[site] T-4095 Home stages live: finish and land",
+   "name": "odalys",
+   "task": "[tools] T-4084 supervisor usage stop: finish and land",
    "model": "opus",
-   "started": "2026-11-12T00:10:44.927Z",
-   "seconds": 2510,
+   "started": "2026-11-12T00:10:55.125Z",
+   "seconds": 2684,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "odalys",
-   "task": "[tools] T-4084 supervisor usage stop: finish and land",
+   "task": "[tools] T-4092 union merge for task-names.tsv",
    "model": "opus",
-   "started": "2026-11-12T00:10:55.125Z",
-   "seconds": 2500,
+   "started": "2026-11-12T00:54:40.157Z",
+   "seconds": 59,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys x2",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4092 unstick queue audit on account a",
    "model": "opus",
    "started": "2026-11-12T00:29:58.714Z",
-   "seconds": 1356,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-12T00:54:14.575000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[site] T-4095 Home stages live: finish and land",
+   "model": "opus",
+   "started": "2026-11-12T00:10:44.927Z",
+   "seconds": null,
+   "finished": "2026-11-12T00:53:45.534000+00:00"
   }
  ],
- "who": "Maren, Odalys x2",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 701,
+  "runnable_count": 700,
   "blocked_count": 112
  },
  "meter": {
@@ -111,8 +119,21 @@
   "week_pct": 25.01,
   "usage_pct": 27.8,
   "work_pct": 74.5,
-  "read_at": "2026-11-12T00:52:00+00:00",
-  "running": []
+  "read_at": "2026-11-12T00:55:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4096",
+    "w": "Ines",
+    "k": "ops",
+    "t": "Judge the app lines of the task queue",
+    "m": "opus",
+    "e": "xhigh",
+    "at": "2026-11-11T19:54:04-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -148,7 +169,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T19:52:00-05:00",
+  "at": "2026-11-11T19:55:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -159,15 +180,6 @@
   "at": "2026-11-11T19:09:39.114198-05:00"
  },
  "lanes": [
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[site] T-4095 Home stages live: finish and land",
-   "model": "opus",
-   "since": "2026-11-12T00:10:44.927Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Odalys",
    "state": "running",
@@ -208,20 +220,18 @@
    "model": null,
    "since": null,
    "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
+   "model": null,
+   "since": null,
+   "next": []
   }
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Maren",
-    "k": "site",
-    "t": "Home stages update live for every task",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T00:10:44.927Z",
-    "o": "i",
-    "task": "T-4095"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -238,7 +248,7 @@
     "t": "Audit and clean up the whole task queue",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-12T00:29:58.714Z",
+    "at": "2026-11-12T00:54:40.157Z",
     "o": "c",
     "task": "T-4092"
    }
@@ -318,6 +328,11 @@
   ],
   "done": [
    {
+    "w": "Maren",
+    "t": "Home now shows each task's real stage within about a minute: Building while it is being written,...",
+    "at": "2026-11-11T19:53:00-05:00"
+   },
+   {
     "w": "Odalys+ines",
     "t": "Not needed: the queue audit's first part was not redone. Its parked work was moved onto the...",
     "at": "2026-11-11T19:44:00-05:00"
@@ -326,22 +341,21 @@
     "w": "Idris+odalys",
     "t": "The first TestFlight build passed the privacy check: upload.sh --internal lets an internal-only...",
     "at": "2026-11-11T19:37:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "Home's task list now calls sent-back work the Retry Queue and shows it there only while it...",
-    "at": "2026-11-11T16:52:00-05:00"
    }
   ],
   "count": {
-   "next": 701,
+   "next": 700,
    "wait": 44,
    "blocked": 68,
    "you": 18
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-4095",
+     "Home stages update live for..."
+    ],
     [
      "T-4106",
      "Redo audit and clean up the..."
@@ -404,13 +418,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
-  "lanes": 0,
+  "main": 2,
+  "lanes": 1,
   "total": 3,
-  "at": "7:52 PM",
+  "at": "7:55 PM",
   "why": "",
-  "at_iso": "2026-11-12T00:52:00+00:00",
+  "at_iso": "2026-11-12T00:55:00+00:00",
   "started": "7:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:52 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:55 PM ET</p></section>"
  }
 }

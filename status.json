@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T16:41:40.552772+00:00",
+ "at": "2026-11-12T16:44:45.205542+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -111,19 +111,10 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4157 Fable-only accounts, second change",
-   "model": "opus",
-   "started": "2026-11-12T15:15:18.260Z",
-   "seconds": 5182,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
    "started": "2026-11-12T15:15:25.110Z",
-   "seconds": 5175,
+   "seconds": 5360,
    "finished": null,
    "effort": "high"
   },
@@ -132,7 +123,7 @@
    "task": "[site] T-4108 Issues badge stale count flash",
    "model": "opus",
    "started": "2026-11-12T16:32:11.872Z",
-   "seconds": 568,
+   "seconds": 753,
    "finished": null,
    "effort": "high"
   },
@@ -141,7 +132,7 @@
    "task": "[review] T-4200 check T-4176 before ship",
    "model": "opus",
    "started": "2026-11-12T16:37:59.791Z",
-   "seconds": 220,
+   "seconds": 405,
    "finished": null,
    "effort": "high"
   },
@@ -150,13 +141,30 @@
    "task": "[build] T-4198 prune run history when background start fails",
    "model": "opus",
    "started": "2026-11-12T16:38:06.505Z",
-   "seconds": 214,
+   "seconds": 398,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4179 a stopped task gets a second requeue",
+   "model": "opus",
+   "started": "2026-11-12T16:43:29.044Z",
+   "seconds": 76,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2, Maren, Pernille, Idris",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4157 Fable-only accounts, second change",
+   "model": "opus",
+   "started": "2026-11-12T15:15:18.260Z",
+   "seconds": null,
+   "finished": "2026-11-12T16:43:03.708000+00:00"
+  },
   {
    "name": "maren",
    "task": "[design] T-2282 Settings screen against the design",
@@ -180,39 +188,31 @@
    "started": "2026-11-12T15:15:30.908Z",
    "seconds": null,
    "finished": "2026-11-12T16:31:24.801000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[review] T-3789 run history privacy wording",
-   "model": "opus",
-   "started": "2026-11-12T16:22:07.496Z",
-   "seconds": null,
-   "finished": "2026-11-12T16:25:23.783000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 604,
+  "runnable_count": 603,
   "blocked_count": 98
  },
  "meter": {
   "five_hour": {
-   "pct": 28.0,
+   "pct": 31.0,
    "resets_at": "2026-11-12T12:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T11:36:00.912733-05:00",
+   "read_at": "2026-11-12T11:42:05.771607-05:00",
    "source": "live",
-   "left": 72.0,
+   "left": 69.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 74.0,
+   "pct": 75.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T11:36:00.912733-05:00",
+   "read_at": "2026-11-12T11:42:05.771607-05:00",
    "source": "live",
-   "left": 26.0,
+   "left": 25.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -222,7 +222,7 @@
    "read_at": "2026-11-12T10:12:53.677669-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T11:36:00.912733-05:00"
+  "read_at": "2026-11-12T11:42:05.771607-05:00"
  },
  "ui": {
   "week_pct": 0.24,
@@ -242,7 +242,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T16:41:00+00:00",
+  "read_at": "2026-11-12T16:44:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -267,19 +267,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 185
+   "free_gb": 187
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T11:35:00-05:00",
+   "at": "2026-11-12T11:42:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T11:41:00-05:00",
+  "at": "2026-11-12T11:44:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -293,9 +293,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4157 Fable-only accounts, second change",
+   "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
-   "since": "2026-11-12T15:15:18.260Z",
+   "since": "2026-11-12T15:15:25.110Z",
    "next": [],
    "effort": "high"
   },
@@ -348,16 +348,6 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Evan's account takes only Fable 5.2 tasks",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T15:15:18.260Z",
-    "o": "i",
-    "task": "T-4157"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
     "t": "Pause even when the usage reading fails",
     "m": "opus",
     "e": "high",
@@ -394,6 +384,16 @@
     "at": "2026-11-12T16:38:06.505Z",
     "o": "c",
     "task": "T-4198"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Let a stopped task get a second requeue",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T16:43:29.044Z",
+    "o": "c",
+    "task": "T-4179"
    }
   ],
   "src": "plan",
@@ -471,6 +471,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Evan's and Jeremy's accounts now start only Fable 5.2 xhigh work pinned to them (the queue audit...",
+    "at": "2026-11-12T11:42:00-05:00"
+   },
+   {
     "w": "Maren",
     "t": "The Settings screen now matches the light and dark designs in every row the latest screenshots...",
     "at": "2026-11-12T11:38:00-05:00"
@@ -479,22 +484,21 @@
     "w": "Maren",
     "t": "Home's In flight cards and This Session now look up every task's name in the same place,...",
     "at": "2026-11-12T11:30:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The draft privacy policy now says what the app really does: old run history is checked for...",
-    "at": "2026-11-12T11:25:00-05:00"
    }
   ],
   "count": {
-   "next": 604,
+   "next": 603,
    "wait": 40,
    "blocked": 58,
    "you": 14
   },
   "fin": {
-   "n": 11,
+   "n": 12,
    "rows": [
+    [
+     "T-4157",
+     "Evan's account takes only..."
+    ],
     [
      "T-2282",
      "Check the Settings screen..."
@@ -514,10 +518,6 @@
     [
      "T-4178",
      "Check finished work before..."
-    ],
-    [
-     "T-3784",
-     "Stop the bridge host tests..."
     ]
    ]
   }
@@ -561,22 +561,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T16:41:34Z",
+  "at": "2026-11-12T16:44:45Z",
   "s": {
-   "T-4157": [
+   "T-4198": [
     "merging",
     "Mac tests at the main gate",
-    1794501454836
+    1794501825205
    ],
    "T-4108": [
     "testing",
     "its own tests, in its copy",
-    1794501514836
+    1794501525205
+   ],
+   "T-4160": [
+    "testing",
+    "its own tests, in its copy",
+    1794501825205
+   ],
+   "T-4200": [
+    "merged",
+    "on main 11:44 AM ET",
+    1794501852000,
+    "Pernille"
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T16:41:34Z",
+  "at": "2026-11-12T16:44:45Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -590,11 +601,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 99,
+    "conflicted": 102,
     "failed": null,
     "held": null,
-    "retry": 27,
-    "parked": 108
+    "retry": 30,
+    "parked": 111
    },
    "cur": [],
    "ld": [
@@ -604,12 +615,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T16:41:35Z",
-    "ld": 1.65,
+    "at": "2026-11-12T16:44:21Z",
+    "ld": 2.15,
     "c": 8,
     "sb": 1,
     "dk": [
-     28.7,
+     28.6,
      228.3
     ],
     "ss": [
@@ -655,10 +666,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "11:41 AM",
+  "at": "11:44 AM",
   "why": "",
-  "at_iso": "2026-11-12T16:41:00+00:00",
+  "at_iso": "2026-11-12T16:44:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:41 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:44 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T13:44:34.190488+00:00",
+ "at": "2026-11-12T13:47:39.432191+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -29,6 +29,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-3807",
+    "name": "Confirm merges resumed after the SSD unlock",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794491146
+   },
    {
     "t": "T-4122",
     "name": "Redesign how tasks are created and kept up to date",
@@ -101,17 +109,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794484716
-   },
-   {
-    "t": "T-3959",
-    "name": "Skip product tests for docs-only changes",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794484659
    }
   ],
-  "landed": 55,
+  "landed": 56,
   "failed": 4
  },
  "workers": [
@@ -120,7 +120,7 @@
    "task": "[tools] T-4157 account a takes only Fable lines",
    "model": "opus",
    "started": "2026-11-12T13:17:49.294Z",
-   "seconds": 1604,
+   "seconds": 1790,
    "finished": null,
    "effort": "high"
   },
@@ -129,7 +129,7 @@
    "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
    "started": "2026-11-12T13:42:03.937Z",
-   "seconds": 150,
+   "seconds": 335,
    "finished": null,
    "effort": "high"
   }
@@ -172,7 +172,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 602,
+  "runnable_count": 601,
   "blocked_count": 84
  },
  "meter": {
@@ -221,7 +221,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T13:44:00+00:00",
+  "read_at": "2026-11-12T13:47:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -262,11 +262,7 @@
    {
     "lane": "b2",
     "task": "T-3807",
-    "w": "Odalys",
-    "k": "ops",
     "t": "Confirm merges resumed after the SSD unlock",
-    "m": "sonnet",
-    "e": "medium",
     "at": "2026-11-12T08:43:13-05:00",
     "n": "Jeremy",
     "d": 1,
@@ -368,7 +364,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T08:44:00-05:00",
+  "at": "2026-11-12T08:47:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -527,6 +523,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The Company SSD is unlocked and mounted, and merges have landed on main since, so I posted that...",
+    "at": "2026-11-12T08:45:00-05:00"
+   },
+   {
     "w": "Odalys+operator",
     "t": "The Restructuring restarted on Evan's account at 8:26 AM after three holds were cleared: a...",
     "at": "2026-11-12T08:33:00-05:00"
@@ -535,15 +536,10 @@
     "w": "Odalys",
     "t": "When a lane session stops because the account hit its usage limit, its unfinished tasks now go...",
     "at": "2026-11-12T08:32:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Checked the disk keeper's first days: it missed its first day while the SSD was unreachable, has...",
-    "at": "2026-11-12T07:44:00-05:00"
    }
   ],
   "count": {
-   "next": 602,
+   "next": 601,
    "wait": 40,
    "blocked": 44,
    "you": 13
@@ -617,60 +613,91 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T13:44:28Z",
+  "at": "2026-11-12T13:47:39Z",
   "s": {
    "T-4149": [
-    "mergeq",
-    "1st to merge",
-    1794488848325
+    "merging",
+    "Merging onto main",
+    1794491259432
    ],
    "T-3990": [
-    "mergeq",
-    "1st to merge",
-    1794488848325
+    "merging",
+    "Merging onto main",
+    1794491259432
    ],
    "T-3430": [
-    "mergeq",
-    "1st to merge",
-    1794488848325
+    "merging",
+    "Merging onto main",
+    1794491259432
+   ],
+   "T-3807": [
+    "merged",
+    "on main 8:45 AM ET",
+    1794491124000,
+    ""
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T13:44:28Z",
+  "at": "2026-11-12T13:47:39Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 3,
+    "checking": 3,
+    "inline": 0,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
-    "retry": 1,
+    "retry": 0,
     "parked": 1
    },
    "m": {
-    "checking": null,
-    "inline": 37,
+    "checking": 0,
+    "inline": null,
     "conflicted": null,
     "failed": null,
     "held": null,
-    "retry": 4,
-    "parked": 345
+    "retry": null,
+    "parked": 348
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4149"
+     ],
+     "going onto main",
+     "Mac mini",
+     0
+    ],
+    [
+     [
+      "T-3990"
+     ],
+     "going onto main",
+     "Mac mini",
+     0
+    ],
+    [
+     [
+      "T-3430"
+     ],
+     "going onto main",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
-    60,
-    "2026-11-12T13:26:35Z"
+    62,
+    "2026-11-12T13:45:46Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T13:43:41Z",
-    "ld": 1.67,
+    "at": "2026-11-12T13:47:16Z",
+    "ld": 1.75,
     "c": 8,
     "sb": 0,
     "dk": [
-     34.3,
+     34.2,
      228.3
     ],
     "ss": [
@@ -714,10 +741,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "8:44 AM",
+  "at": "8:47 AM",
   "why": "",
-  "at_iso": "2026-11-12T13:44:00+00:00",
+  "at_iso": "2026-11-12T13:47:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:44 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:47 AM ET</p></section>"
  }
 }

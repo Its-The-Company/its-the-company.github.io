@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T09:01:10.656018+00:00",
+ "at": "2026-11-12T09:04:17.079767+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -94,26 +94,34 @@
  },
  "workers": [
   {
-   "name": "odalys",
-   "task": "[tools] T-4129 retire Set aside stage",
-   "model": "opus",
-   "started": "2026-11-12T08:04:00.395Z",
-   "seconds": 3430,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "idris",
    "task": "[build] T-4093 tester Pro compile flag",
    "model": "opus",
    "started": "2026-11-12T09:00:23.114Z",
-   "seconds": 47,
+   "seconds": 233,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4129 no fourth state, screenshots",
+   "model": "opus",
+   "started": "2026-11-12T09:01:52.955Z",
+   "seconds": 144,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Idris",
+ "who": "Idris, Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4129 retire Set aside stage",
+   "model": "opus",
+   "started": "2026-11-12T08:04:00.395Z",
+   "seconds": null,
+   "finished": "2026-11-12T09:01:25.139000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-3143 template test fix",
@@ -137,14 +145,6 @@
    "started": "2026-11-12T08:21:32.133Z",
    "seconds": null,
    "finished": "2026-11-12T08:48:17.507000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-3823 OpenSSL symbol check",
-   "model": "opus",
-   "started": "2026-11-12T08:14:38.977Z",
-   "seconds": null,
-   "finished": "2026-11-12T08:21:01.662000+00:00"
   }
  ],
  "queue": {
@@ -199,7 +199,7 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T09:01:00+00:00",
+  "read_at": "2026-11-12T09:04:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -282,6 +282,7 @@
     "e": "high",
     "at": "2026-11-12T03:37:01-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -322,7 +323,7 @@
   }
  ],
  "disk": {
-  "free_gb": 36,
+  "free_gb": 33,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -331,14 +332,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T03:58:00-05:00",
+   "at": "2026-11-12T04:04:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T04:01:00-05:00",
+  "at": "2026-11-12T04:04:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -350,20 +351,20 @@
  },
  "lanes": [
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4129 retire Set aside stage",
-   "model": "opus",
-   "since": "2026-11-12T08:04:00.395Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "running",
    "task": "[build] T-4093 tester Pro compile flag",
    "model": "opus",
    "since": "2026-11-12T09:00:23.114Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4129 no fourth state, screenshots",
+   "model": "opus",
+   "since": "2026-11-12T09:01:52.955Z",
    "next": [],
    "effort": "high"
   },
@@ -403,16 +404,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retire the Set aside stage on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T08:04:00.395Z",
-    "o": "i",
-    "task": "T-4129"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Add a tester-only Pro switch for TestFlight builds",
@@ -421,6 +412,16 @@
     "at": "2026-11-12T09:00:23.114Z",
     "o": "c",
     "task": "T-4093"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Retire the Set aside stage on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T09:01:52.955Z",
+    "o": "i",
+    "task": "T-4129"
    }
   ],
   "src": "plan",
@@ -584,7 +585,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T09:01:10Z",
+  "at": "2026-11-12T09:04:05Z",
   "s": {
    "T-4129": [
     "merged",
@@ -625,7 +626,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T09:01:10Z",
+  "at": "2026-11-12T09:04:05Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -639,11 +640,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 65,
+    "conflicted": 67,
     "failed": null,
-    "held": 2799,
+    "held": 2802,
     "retry": null,
-    "parked": 3703
+    "parked": 3706
    },
    "cur": [],
    "ld": [
@@ -653,12 +654,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T09:01:11Z",
-    "ld": 5.81,
+    "at": "2026-11-12T09:03:17Z",
+    "ld": 5.5,
     "c": 8,
     "sb": 1,
     "dk": [
-     35.5,
+     33.5,
      228.3
     ],
     "ss": [
@@ -704,10 +705,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "4:01 AM",
+  "at": "4:04 AM",
   "why": "",
-  "at_iso": "2026-11-12T09:01:00+00:00",
+  "at_iso": "2026-11-12T09:04:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:01 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:04 AM ET</p></section>"
  }
 }

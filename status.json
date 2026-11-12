@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T22:31:56.512510+00:00",
+ "at": "2026-11-12T22:34:59.762906+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
    "task": "[build] T-4212 land launcher widget picker",
    "model": "opus",
    "started": "2026-11-12T22:22:24.577Z",
-   "seconds": 571,
+   "seconds": 755,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +105,7 @@
    "task": "[build] T-3814 tree.json presence in export",
    "model": "opus",
    "started": "2026-11-12T22:22:32.011Z",
-   "seconds": 564,
+   "seconds": 747,
    "finished": null,
    "effort": "high"
   },
@@ -114,26 +114,44 @@
    "task": "[research] T-3674 land launcher known apps",
    "model": "opus",
    "started": "2026-11-12T22:22:39.264Z",
-   "seconds": 557,
+   "seconds": 740,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "idris",
+   "task": "[build] T-4215 gate launcher editor in Release",
+   "model": "opus",
+   "started": "2026-11-12T22:33:44.265Z",
+   "seconds": 75,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4216 add-app slot overwrite race",
+   "model": "opus",
+   "started": "2026-11-12T22:33:49.320Z",
+   "seconds": 70,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris x4, Wrenna",
+ "recent": [
   {
    "name": "pernille",
    "task": "[review] T-4214 review launcher steps",
    "model": "opus",
    "started": "2026-11-12T22:22:47.223Z",
-   "seconds": 549,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-12T22:33:29.640000+00:00"
   }
  ],
- "who": "Idris x2, Wrenna, Pernille",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 592,
+  "runnable_count": 593,
   "blocked_count": 84
  },
  "meter": {
@@ -182,7 +200,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-12T22:31:00+00:00",
+  "read_at": "2026-11-12T22:35:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -219,7 +237,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T17:31:00-05:00",
+  "at": "2026-11-12T17:35:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -250,12 +268,11 @@
   },
   {
    "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-4214 review launcher steps",
-   "model": "opus",
-   "since": "2026-11-12T22:22:47.223Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Odalys",
@@ -315,14 +332,24 @@
     "task": "T-3674"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the launcher steps landed today",
+    "w": "Idris",
+    "k": "build",
+    "t": "Keep the launcher editor out of Release builds",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-12T22:22:47.223Z",
+    "at": "2026-11-12T22:33:44.265Z",
     "o": "c",
-    "task": "T-4214"
+    "task": "T-4215"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Stop Add App from overwriting a newly saved slot",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T22:33:49.320Z",
+    "o": "c",
+    "task": "T-4216"
    }
   ],
   "src": "plan",
@@ -400,6 +427,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "I reviewed the five launcher steps that landed today. Two need fixing before the feature counts...",
+    "at": "2026-11-12T17:33:00-05:00"
+   },
+   {
     "w": "Maren",
     "t": "Nothing left to redo: the Operator and Direct portraits this redo was for already reached the...",
     "at": "2026-11-12T17:21:00-05:00"
@@ -408,22 +440,21 @@
     "w": "Idris",
     "t": "When two saves of the person's launcher apps happen at once, the launcher widgets now always end...",
     "at": "2026-11-12T16:42:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The app build can now carry the six launcher widgets, but only in an internal build switched on...",
-    "at": "2026-11-12T16:23:00-05:00"
    }
   ],
   "count": {
-   "next": 592,
+   "next": 593,
    "wait": 40,
    "blocked": 44,
    "you": 13
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-4214",
+     "Review the launcher steps..."
+    ],
     [
      "T-4165",
      "Redo draw the Operator and..."
@@ -470,17 +501,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T22:31:39Z",
+  "at": "2026-11-12T22:34:48Z",
   "s": {
-   "T-4212": [
+   "T-3674": [
     "merging",
     "Mac tests at the main gate",
-    1794522279775
+    1794522828489
    ],
-   "T-3674": [
+   "T-4212": [
     "mergeq",
     "waiting for the main gate",
-    1794522459775
+    1794522828489
    ],
    "T-3814": [
     "testing",
@@ -489,13 +520,13 @@
    ]
   },
   "nm": {
-   "T-4212": "Offer the launcher widgets in the widget picker",
    "T-3674": "Fill the launcher's list of known apps",
+   "T-4212": "Offer the launcher widgets in the widget picker",
    "T-3814": "Keep the bundled Countdown picture from hiding the bug"
   }
  },
  "ln": {
-  "at": "2026-11-12T22:31:39Z",
+  "at": "2026-11-12T22:34:48Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -509,11 +540,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 414,
+    "conflicted": 417,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 458
+    "parked": 461
    },
    "cur": [],
    "ld": [
@@ -523,8 +554,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T22:31:16Z",
-    "ld": 1.38,
+    "at": "2026-11-12T22:34:03Z",
+    "ld": 1.01,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -557,7 +588,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 6 tasks",
    "at": "2026-11-12T17:24:30-05:00"
   }
  ],
@@ -578,13 +609,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 5,
   "lanes": 0,
-  "total": 4,
-  "at": "5:31 PM",
+  "total": 5,
+  "at": "5:35 PM",
   "why": "",
-  "at_iso": "2026-11-12T22:31:00+00:00",
+  "at_iso": "2026-11-12T22:35:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:31 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:35 PM ET</p></section>"
  }
 }

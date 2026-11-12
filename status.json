@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T07:59:47.473452+00:00",
+ "at": "2026-11-12T08:02:49.733361+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -93,25 +93,25 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 623,
+  "runnable_count": 622,
   "blocked_count": 84
  },
  "meter": {
   "five_hour": {
    "pct": 3.0,
-   "resets_at": "2026-11-12T11:59:59.554197+00:00",
+   "resets_at": "2026-11-12T07:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T02:56:33.273935-05:00",
-   "source": "usage",
+   "read_at": "2026-11-12T03:01:46.473741-05:00",
+   "source": "live",
    "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 69.0,
-   "resets_at": "2026-11-15T06:59:59.554222+00:00",
+   "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T02:56:33.273935-05:00",
-   "source": "usage",
+   "read_at": "2026-11-12T03:01:46.473741-05:00",
+   "source": "live",
    "left": 31.0,
    "left_words": "of your weekly allowance left"
   },
@@ -122,7 +122,7 @@
    "read_at": "2026-11-12T02:56:33.273935-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T02:56:33.273935-05:00"
+  "read_at": "2026-11-12T03:01:46.473741-05:00"
  },
  "ui": {
   "week_pct": 0.243,
@@ -142,8 +142,20 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T07:59:00+00:00",
+  "read_at": "2026-11-12T08:02:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-4127",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Run the Restructuring on Evan's account",
+    "m": "opus",
+    "e": "xhigh",
+    "at": "2026-11-12T03:01:25-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "b2",
     "task": "T-4140",
@@ -204,19 +216,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 177
+   "free_gb": 181
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T02:52:00-05:00",
+   "at": "2026-11-12T03:01:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T02:59:00-05:00",
+  "at": "2026-11-12T03:02:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -330,13 +342,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Allow web fetching on every site for every...",
-    "s": "next",
-    "o": "i"
-   },
-   {
     "w": "Ines",
     "k": "plan",
     "t": "Run the Restructuring on Evan's account",
@@ -349,13 +354,20 @@
     "t": "Retire the Set aside stage on Home",
     "s": "next",
     "o": "i"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Find every slowdown the company built into...",
+    "s": "next",
+    "o": "i"
    }
   ],
   "done": [
    {
     "w": "Operator",
-    "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
-    "at": "2026-11-12T02:55:00-05:00"
+    "t": "Done by the Investors: Evan set web reading on for every account by hand, and the Handbook...",
+    "at": "2026-11-12T03:00:00-05:00"
    },
    {
     "w": "Operator",
@@ -364,12 +376,12 @@
    },
    {
     "w": "Operator",
-    "t": "Main passes its Xcode checks again: job J-20261112-0135-land-m-201c55 on the MacBook no longer...",
+    "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
     "at": "2026-11-12T02:55:00-05:00"
    }
   ],
   "count": {
-   "next": 623,
+   "next": 622,
    "wait": 40,
    "blocked": 44,
    "you": 13
@@ -414,26 +426,31 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T07:59:39Z",
+  "at": "2026-11-12T08:02:37Z",
   "s": {
    "T-4091": [
     "mergeq",
     "1st to merge",
-    1794469299500
+    1794469297311
    ],
    "T-3888": [
-    "mergetest",
-    "Xcode checks on the MacBook, 2nd to merge",
-    1794470019500
+    "mergeq",
+    "2nd to merge",
+    1794469477311
+   ],
+   "T-3950": [
+    "mergeq",
+    "4th to merge",
+    1794470437311
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T07:59:39Z",
+  "at": "2026-11-12T08:02:37Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 1,
+    "checking": 0,
+    "inline": 3,
     "conflicted": 4,
     "failed": 0,
     "held": 1,
@@ -441,24 +458,15 @@
     "parked": 5
    },
    "m": {
-    "checking": 6,
+    "checking": null,
     "inline": 18,
-    "conflicted": 3,
+    "conflicted": 6,
     "failed": null,
-    "held": 2738,
+    "held": 2741,
     "retry": null,
-    "parked": 4547
+    "parked": 4550
    },
-   "cur": [
-    [
-     [
-      "T-3888"
-     ],
-     "iPhone app tests",
-     "MacBook",
-     6
-    ]
-   ],
+   "cur": [],
    "ld": [
     22,
     "2026-11-12T07:58:38Z"
@@ -466,12 +474,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T07:59:41Z",
-    "ld": 1.91,
+    "at": "2026-11-12T08:01:48Z",
+    "ld": 3.51,
     "c": 8,
     "sb": 1,
     "dk": [
-     34.8,
+     37.1,
      228.3
     ],
     "ss": [
@@ -483,12 +491,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-12T07:54:01Z",
-    "ld": 0.22,
+    "at": "2026-11-12T08:01:07Z",
+    "ld": 1.41,
     "c": 12,
     "sb": 0,
     "dk": [
-     398.2,
+     398.1,
      926.4
     ],
     "sn": []
@@ -512,12 +520,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "2:59 AM",
+  "lanes": 2,
+  "total": 2,
+  "at": "3:02 AM",
   "why": "",
-  "at_iso": "2026-11-12T07:59:00+00:00",
+  "at_iso": "2026-11-12T08:02:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 2:59 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:02 AM ET</p></section>"
  }
 }

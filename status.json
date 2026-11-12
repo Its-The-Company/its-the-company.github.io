@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T08:27:20.511343+00:00",
+ "at": "2026-11-12T08:30:25.222120+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -111,7 +111,7 @@
    "task": "[build] T-3143 template test fix",
    "model": "opus",
    "started": "2026-11-12T08:03:43.753Z",
-   "seconds": 1416,
+   "seconds": 1601,
    "finished": null,
    "effort": "high"
   },
@@ -120,7 +120,7 @@
    "task": "[tools] T-4129 retire Set aside stage",
    "model": "opus",
    "started": "2026-11-12T08:04:00.395Z",
-   "seconds": 1400,
+   "seconds": 1584,
    "finished": null,
    "effort": "high"
   },
@@ -129,7 +129,7 @@
    "task": "[tools] T-4132 measure overdue experiments",
    "model": "opus",
    "started": "2026-11-12T08:21:32.133Z",
-   "seconds": 348,
+   "seconds": 533,
    "finished": null,
    "effort": "high"
   }
@@ -213,7 +213,7 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T08:27:00+00:00",
+  "read_at": "2026-11-12T08:30:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -284,7 +284,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T03:27:00-05:00",
+  "at": "2026-11-12T03:30:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -524,22 +524,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T08:27:12Z",
+  "at": "2026-11-12T08:30:19Z",
   "s": {
    "T-4091": [
     "mergetest",
-    "Xcode checks on the MacBook, 1st to merge",
-    1794471432370
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4129": [
     "testing",
     "its own tests, in its copy",
-    1794471072370
+    1794472099257
    ],
    "T-3143": [
     "testing",
     "its own tests, in its copy",
-    1794471312370
+    1794471319257
    ],
    "T-3870": [
     "merged",
@@ -550,36 +550,27 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T08:27:12Z",
+  "at": "2026-11-12T08:30:19Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
-    "conflicted": 6,
+    "conflicted": 7,
     "failed": 0,
     "held": 1,
     "retry": 0,
-    "parked": 6
+    "parked": 4
    },
    "m": {
-    "checking": 10,
+    "checking": null,
     "inline": null,
     "conflicted": 31,
     "failed": null,
-    "held": 2766,
+    "held": 2769,
     "retry": null,
-    "parked": 3871
+    "parked": 3673
    },
-   "cur": [
-    [
-     [
-      "T-4091"
-     ],
-     "iPhone app tests, sent and waiting its turn",
-     "MacBook",
-     10
-    ]
-   ],
+   "cur": [],
    "ld": [
     26,
     "2026-11-12T08:26:21Z"
@@ -587,12 +578,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T08:27:14Z",
-    "ld": 3.1,
+    "at": "2026-11-12T08:29:56Z",
+    "ld": 2.39,
     "c": 8,
     "sb": 1,
     "dk": [
-     36.8,
+     36.9,
      228.3
     ],
     "ss": [
@@ -636,10 +627,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "3:27 AM",
+  "at": "3:30 AM",
   "why": "",
-  "at_iso": "2026-11-12T08:27:00+00:00",
+  "at_iso": "2026-11-12T08:30:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:27 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:30 AM ET</p></section>"
  }
 }

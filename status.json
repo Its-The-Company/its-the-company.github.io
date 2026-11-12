@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-12T06:22:53.605800+00:00",
+ "at": "2026-11-12T06:25:58.092483+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T00:58:32-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-3862",
+    "name": "App merge checks run here when the MacBook is silent",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794464709
+   },
    {
     "t": "T-3883",
     "name": "Park each task on its own branch",
@@ -81,7 +89,7 @@
     "why": "did not merge cleanly"
    }
   ],
-  "landed": 8,
+  "landed": 9,
   "failed": 1
  },
  "workers": [
@@ -90,7 +98,7 @@
    "task": "[tools] T-4125 T-4128 Fable 5.2 lane setting and pause near limit",
    "model": "opus",
    "started": "2026-11-12T06:06:44.388Z",
-   "seconds": 969,
+   "seconds": 1153,
    "finished": null,
    "effort": "high"
   },
@@ -99,7 +107,7 @@
    "task": "[build] T-4093 tester-only Pro switch for TestFlight",
    "model": "opus",
    "started": "2026-11-12T06:08:52.015Z",
-   "seconds": 841,
+   "seconds": 1026,
    "finished": null,
    "effort": "high"
   }
@@ -183,7 +191,7 @@
   "week_pct": 27.44,
   "usage_pct": 28.7,
   "work_pct": 74.0,
-  "read_at": "2026-11-12T06:23:00+00:00",
+  "read_at": "2026-11-12T06:26:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -210,32 +218,6 @@
     "src": "plan-a"
    },
    {
-    "lane": "a3",
-    "task": "T-3846",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Find why the MacBook runner stopped checking in",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T01:10:28-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3862",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "App merge checks run here when the MacBook is silent",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T01:10:28-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
     "lane": "b",
     "task": "T-3867",
     "w": "Pernille",
@@ -245,6 +227,7 @@
     "e": "high",
     "at": "2026-11-12T01:19:13-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -296,7 +279,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T01:23:00-05:00",
+  "at": "2026-11-12T01:26:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -522,29 +505,23 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T06:22:34Z",
+  "at": "2026-11-12T06:25:58Z",
   "s": {
    "T-4093": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "merging",
+    "Mac tests at the main gate",
+    1794464638092
    ],
    "T-4128": [
     "testing",
     "its own tests, in its copy",
-    1794464554519
-   ],
-   "T-3846": [
-    "merged",
-    "on main 1:13 AM ET",
-    1794464021000,
-    ""
+    1794464518092
    ]
   }
  },
  "reply": {
-  "sent": "2026-11-12T06:13:53Z",
-  "seconds": 102.0
+  "sent": "2026-11-12T06:24:07Z",
+  "seconds": 99.0
  },
  "inbox": [],
  "trimmed": [
@@ -560,12 +537,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "1:23 AM",
+  "lanes": 2,
+  "total": 4,
+  "at": "1:26 AM",
   "why": "",
-  "at_iso": "2026-11-12T06:23:00+00:00",
+  "at_iso": "2026-11-12T06:26:00+00:00",
   "started": "12:58 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:23 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:26 AM ET</p></section>"
  }
 }

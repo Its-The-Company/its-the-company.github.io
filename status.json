@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-12T03:17:22.840403+00:00",
+ "at": "2026-11-12T03:20:28.939943+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-11T22:17:23-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-4107",
+    "name": "Judge the remaining app lines of the task queue",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794453451
+   },
    {
     "t": "T-4096",
     "name": "Judge the app lines of the task queue",
@@ -33,50 +41,34 @@
     "why": "did not merge cleanly"
    }
   ],
-  "landed": 2,
+  "landed": 3,
   "failed": 1
  },
- "workers": [],
- "who": "",
- "recent": [
+ "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4100 typed Links field in board_tick",
+   "task": "[tools] T-4100 land Links field part 1",
    "model": "opus",
-   "started": "2026-11-12T01:26:11.969Z",
-   "seconds": null,
-   "finished": "2026-11-12T02:43:42.017000+00:00"
+   "started": "2026-11-12T03:18:50.854Z",
+   "seconds": 98,
+   "finished": null
   },
   {
-   "name": "ines",
-   "task": "[ops] T-4101 apply the 8 Investor-agreed audit changes",
+   "name": "pernille",
+   "task": "[tools] T-4100 queue_apply merge-namers fix",
    "model": "opus",
-   "started": "2026-11-12T01:49:09.693Z",
-   "seconds": null,
-   "finished": "2026-11-12T01:54:41.988000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[ops] T-4101 read the dry run and apply the first verdicts",
-   "model": "opus",
-   "started": "2026-11-12T01:26:04.311Z",
-   "seconds": null,
-   "finished": "2026-11-12T01:34:31.698000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4084 supervisor usage stop: finish and land",
-   "model": "opus",
-   "started": "2026-11-12T00:10:55.125Z",
-   "seconds": null,
-   "finished": "2026-11-12T01:31:37.658000+00:00"
+   "started": "2026-11-12T03:18:59.654Z",
+   "seconds": 89,
+   "finished": null
   }
  ],
+ "who": "Odalys, Pernille",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 686,
-  "blocked_count": 106
+  "runnable_count": 677,
+  "blocked_count": 104
  },
  "meter": {
   "five_hour": {
@@ -119,27 +111,13 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-11T22:32:13-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 25.34,
   "usage_pct": 27.7,
   "work_pct": 74.0,
-  "read_at": "2026-11-12T03:17:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-4107",
-    "w": "Ines",
-    "k": "ops",
-    "t": "Judge the remaining app lines of the task queue",
-    "m": "opus",
-    "e": "xhigh",
-    "at": "2026-11-11T21:58:42-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-12T03:20:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -175,38 +153,37 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T22:17:00-05:00",
+  "at": "2026-11-11T22:20:00-05:00",
   "mode": "midnight"
  },
- "next_tick_why": "last_tick",
- "idle": {
-  "since": "2026-11-11T21:54:41-05:00",
-  "minutes": 22,
-  "why": "a tick has spent 14 min on steps before the session",
-  "healed": []
+ "next_tick_why": "session",
+ "idle": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 2 (new work waits: merge-queue-only mode is on (7 tasks wait to merge; it ends after 24 hours under 20): 2 agents...",
+  "n": 2,
+  "at": "2026-11-11T22:17:13.613677-05:00"
  },
- "pool": null,
  "lanes": [
   {
-   "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
-   "model": null,
-   "since": null,
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4100 land Links field part 1",
+   "model": "opus",
+   "since": "2026-11-12T03:18:50.854Z",
    "next": []
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
+   "state": "running",
+   "task": "[tools] T-4100 queue_apply merge-namers fix",
+   "model": "opus",
+   "since": "2026-11-12T03:18:59.654Z",
    "next": []
   },
   {
-   "name": "Odalys",
+   "name": "Idris",
    "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
+   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
    "model": null,
    "since": null,
    "next": []
@@ -237,7 +214,27 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Build the typed Links field and the ledger apply",
+    "m": "opus",
+    "at": "2026-11-12T03:18:50.854Z",
+    "o": "i",
+    "task": "T-4100"
+   },
+   {
+    "w": "Pernille",
+    "k": "tools",
+    "t": "Build the typed Links field and the ledger apply",
+    "m": "opus",
+    "at": "2026-11-12T03:18:59.654Z",
+    "o": "i",
+    "task": "T-4100"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -312,26 +309,55 @@
   ],
   "done": [
    {
-    "w": "Operator",
-    "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
-    "at": "2026-11-11T22:16:00-05:00"
+    "w": "Idris",
+    "t": "The app half of the widget folder name change is compiled and tested, so a widget's files are...",
+    "at": "2026-11-11T22:17:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "Every wait before a widget run is now bounded, so one stuck step can no longer stop the app...",
-    "at": "2026-11-11T20:23:00-05:00"
+    "t": "A Shortcut can no longer run a Pro premade without the Pro entitlement, so a refund or a second...",
+    "at": "2026-11-11T22:17:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "The app's autosave and recovery messages now use the agreed wording, so a person reading them...",
-    "at": "2026-11-11T20:23:00-05:00"
+    "t": "The unused project manifest reader is out of the shipping app and lives only with the host...",
+    "at": "2026-11-11T22:17:00-05:00"
    }
   ],
   "count": {
-   "next": 686,
-   "wait": 43,
+   "next": 677,
+   "wait": 41,
    "blocked": 63,
    "you": 15
+  },
+  "fin": {
+   "n": 11,
+   "rows": [
+    [
+     "T-2302",
+     "Compile and test the widget..."
+    ],
+    [
+     "T-2316",
+     "Check the Pro entitlement..."
+    ],
+    [
+     "T-2318",
+     "Leave the unused manifest..."
+    ],
+    [
+     "T-2696",
+     "Give the dark Settings cards..."
+    ],
+    [
+     "T-2715",
+     "Keep screen titles right..."
+    ],
+    [
+     "T-0021",
+     "Check how the preview draws..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -369,39 +395,40 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T03:17:22Z",
+  "at": "2026-11-12T03:20:11Z",
   "s": {
-   "T-4107": [
-    "merging",
-    "Rebasing onto current main",
-    1794453442840
+   "T-4100": [
+    "testing",
+    "its own tests, in its copy",
+    1794453611669
    ]
   }
  },
  "reply": {
-  "sent": "2026-11-12T03:14:07Z",
-  "seconds": 35.0
+  "sent": "2026-11-12T03:18:42Z",
+  "seconds": 92.0
  },
  "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "10:17 PM",
+  "main": 2,
+  "lanes": 0,
+  "total": 2,
+  "at": "10:20 PM",
   "why": "",
-  "at_iso": "2026-11-12T03:17:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:17 PM ET</p></section>"
+  "at_iso": "2026-11-12T03:20:00+00:00",
+  "started": "10:17 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:17 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:20 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T08:09:01.837584+00:00",
+ "at": "2026-11-12T08:12:06.311620+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -105,7 +105,7 @@
    "task": "[build] T-3143 template test fix",
    "model": "opus",
    "started": "2026-11-12T08:03:43.753Z",
-   "seconds": 318,
+   "seconds": 502,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +114,7 @@
    "task": "[tools] T-4129 retire Set aside stage",
    "model": "opus",
    "started": "2026-11-12T08:04:00.395Z",
-   "seconds": 301,
+   "seconds": 485,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[review] T-3836 gate premade review",
    "model": "opus",
    "started": "2026-11-12T08:08:23.157Z",
-   "seconds": 38,
+   "seconds": 223,
    "finished": null,
    "effort": "high"
   }
@@ -191,7 +191,7 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T08:09:00+00:00",
+  "read_at": "2026-11-12T08:12:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -277,6 +277,7 @@
     "e": "high",
     "at": "2026-11-12T03:05:59-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -315,7 +316,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T03:09:00-05:00",
+  "at": "2026-11-12T03:12:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -552,37 +553,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T08:09:01Z",
+  "at": "2026-11-12T08:11:53Z",
   "s": {
    "T-3870": [
     "mergeq",
     "1st to merge",
-    1794470821837
+    1794470813484
    ],
    "T-4091": [
     "mergeq",
     "2nd to merge",
-    1794469321837
+    1794469313484
    ],
    "T-3888": [
     "mergeq",
     "3rd to merge",
-    1794469501837
+    1794469493484
    ],
    "T-3950": [
     "mergeq",
     "5th to merge",
-    1794470401837
+    1794470453484
+   ],
+   "T-4129": [
+    "testing",
+    "its own tests, in its copy",
+    1794471053484
+   ],
+   "T-3836": [
+    "testing",
+    "its own tests, in its copy",
+    1794471113484
    ],
    "T-3143": [
     "testq",
     "2nd for a Simulator",
-    1794470761837
+    1794470753484
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T08:09:01Z",
+  "at": "2026-11-12T08:11:53Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -595,12 +606,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 16,
-    "conflicted": 12,
+    "inline": 19,
+    "conflicted": 15,
     "failed": null,
-    "held": 2747,
+    "held": 2750,
     "retry": null,
-    "parked": 4556
+    "parked": 4559
    },
    "cur": [],
    "ld": [
@@ -610,12 +621,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T08:08:37Z",
-    "ld": 4.64,
+    "at": "2026-11-12T08:11:28Z",
+    "ld": 3.94,
     "c": 8,
     "sb": 1,
     "dk": [
-     37.1,
+     36.9,
      228.3
     ],
     "ss": [
@@ -659,10 +670,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "3:09 AM",
+  "at": "3:12 AM",
   "why": "",
-  "at_iso": "2026-11-12T08:09:00+00:00",
+  "at_iso": "2026-11-12T08:12:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:09 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:12 AM ET</p></section>"
  }
 }

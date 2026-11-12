@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-12T05:34:31.852765+00:00",
+ "at": "2026-11-12T05:38:22.784104+00:00",
  "session": {
-  "active": true,
-  "kind": "inbox",
-  "started": "2026-11-12T00:33:25-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [],
   "done": [
    {
@@ -90,8 +90,8 @@
   "read_at": "2026-11-12T00:28:38.813561-05:00"
  },
  "ui": {
-  "week_pct": 0.208,
-  "five_hour_pct": 0.056,
+  "week_pct": 0.216,
+  "five_hour_pct": 0.105,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -102,12 +102,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-12T00:53:08-05:00",
  "personal": {
   "week_pct": 26.38,
   "usage_pct": 28.2,
   "work_pct": 73.7,
-  "read_at": "2026-11-12T05:36:00+00:00",
+  "read_at": "2026-11-12T05:38:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -150,23 +150,19 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T00:33:00-05:00",
+   "at": "2026-11-12T00:38:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-12T00:36:00-05:00",
+  "at": "2026-11-12T00:38:00-05:00",
   "mode": null
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Spread: usage is ahead of the week's even pace to Sat 23:00, so work waits until the line passes; the machine allows 2 (new work waits: merge-queue-only mode is on (4 tasks wait to merge; it ends...",
-  "n": 1,
-  "at": "2026-11-12T00:33:15.817881-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -219,7 +215,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -314,10 +309,6 @@
    "wait": 40,
    "blocked": 45,
    "you": 13
-  },
-  "fin": {
-   "n": 0,
-   "rows": []
   }
  },
  "qr": [
@@ -355,23 +346,24 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T05:34:11Z",
+  "at": "2026-11-12T05:38:22Z",
   "s": {}
  },
  "reply": {
-  "sent": "2026-11-12T05:30:53Z",
-  "seconds": 198.0
+  "sent": "2026-11-12T05:25:13Z",
+  "seconds": 245.0
  },
  "inbox": [
   {
-   "id": "c6815482372",
-   "state": "in_progress",
+   "id": "c6815671320",
+   "state": "received",
    "position": 1,
+   "eta": "2026-11-12T00:53:08-05:00",
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "The Investors are planning to start..."
+   "title": "Switch the currently-running audit..."
   }
  ],
  "trimmed": [
@@ -389,10 +381,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "12:36 AM",
+  "at": "12:38 AM",
   "why": "",
-  "at_iso": "2026-11-12T05:36:00+00:00",
+  "at_iso": "2026-11-12T05:38:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:36 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:38 AM ET</p></section>"
  }
 }

@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-12T10:47:29.202570+00:00",
+ "at": "2026-11-12T10:50:36.493406+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-12T05:47:30-05:00",
   "flow": [
    {
     "t": "T-3143",
@@ -18,6 +18,31 @@
    }
   ],
   "done": [
+   {
+    "t": "T-3696",
+    "name": "Check the disk keeper after its first 24 hours",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794480590,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3810",
+    "name": "Merge on the internal disk while the SSD is locked",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794480529
+   },
+   {
+    "t": "T-3710",
+    "name": "Measure Monday against the forecast and tell the Investors",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794480463
+   },
    {
     "t": "T-4138",
     "name": "Resume the queue audit and start the Restructuring",
@@ -67,72 +92,18 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794477236
-   },
-   {
-    "t": "T-3858",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794477194
-   },
-   {
-    "t": "T-3831",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794477183
-   },
-   {
-    "t": "T-4140",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794476861
    }
   ],
-  "landed": 43,
-  "failed": 3
+  "landed": 45,
+  "failed": 4
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "pernille",
-   "task": "[review] T-4093 re-check H1 fix",
-   "model": "opus",
-   "started": "2026-11-12T10:25:04.531Z",
-   "seconds": null,
-   "finished": "2026-11-12T10:32:47.814000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4093 tester Pro compile flag",
-   "model": "opus",
-   "started": "2026-11-12T09:00:23.114Z",
-   "seconds": null,
-   "finished": "2026-11-12T10:24:49.800000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4129 no fourth state, screenshots",
-   "model": "opus",
-   "started": "2026-11-12T09:01:52.955Z",
-   "seconds": null,
-   "finished": "2026-11-12T10:01:29.779000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4129 retire Set aside stage",
-   "model": "opus",
-   "started": "2026-11-12T08:04:00.395Z",
-   "seconds": null,
-   "finished": "2026-11-12T09:01:25.139000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 606,
+  "runnable_count": 605,
   "blocked_count": 85
  },
  "meter": {
@@ -176,12 +147,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-12T06:02:10-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T10:47:00+00:00",
+  "read_at": "2026-11-12T10:50:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -229,45 +200,6 @@
     "e": "high",
     "at": "2026-11-12T05:45:12-05:00",
     "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3810",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Merge on the internal disk while the SSD is locked",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T05:34:06-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3710",
-    "w": "Ines",
-    "k": "plan",
-    "t": "Measure Monday against the forecast and tell the Investors",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T05:34:06-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3696",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Check the disk keeper after its first 24 hours",
-    "m": "sonnet",
-    "e": "high",
-    "at": "2026-11-12T05:34:06-05:00",
-    "n": "Evan",
-    "d": 1,
     "src": "plan-a"
    },
    {
@@ -369,12 +301,16 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T05:47:00-05:00",
+  "at": "2026-11-12T05:50:00-05:00",
   "mode": "midnight"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 3 (at its floor: load 12.4 a core is over 10)",
+  "n": 3,
+  "at": "2026-11-12T05:47:10.685559-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
@@ -427,6 +363,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -502,25 +439,38 @@
   "done": [
    {
     "w": "Odalys",
-    "t": "Each finished task now shows one more step, Live, that ends when its change reaches the public...",
-    "at": "2026-11-12T05:18:00-05:00"
+    "t": "Merge runs no longer stop waiting for the external disk; they resumed when that disk came back...",
+    "at": "2026-11-12T05:48:00-05:00"
+   },
+   {
+    "w": "Ines",
+    "t": "Monday's idle lane time was 25.7 slot-hours, inside the 20 to 35 forecast; the disk still...",
+    "at": "2026-11-12T05:47:00-05:00"
    },
    {
     "w": "Odalys",
     "t": "Each finished task now shows one more step, Live, that ends when its change reaches the public...",
     "at": "2026-11-12T05:18:00-05:00"
-   },
-   {
-    "w": "Odalys+ines",
-    "t": "The Issues page no longer has an \"Other asks\" group; every ask with no issue of its own now sits...",
-    "at": "2026-11-12T05:10:00-05:00"
    }
   ],
   "count": {
-   "next": 606,
+   "next": 605,
    "wait": 40,
    "blocked": 45,
    "you": 14
+  },
+  "fin": {
+   "n": 2,
+   "rows": [
+    [
+     "T-3810",
+     "Merge on the internal disk..."
+    ],
+    [
+     "T-3710",
+     "Measure Monday against the..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -558,13 +508,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T10:47:29Z",
+  "at": "2026-11-12T10:50:18Z",
   "s": {
-   "T-3710": [
-    "merging",
-    "Rebasing onto current main",
-    1794480269202
-   ],
    "T-3887": [
     "merged",
     "on main 5:18 AM ET",
@@ -592,49 +537,40 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T10:47:29Z",
+  "at": "2026-11-12T10:50:18Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
-    "conflicted": 1,
+    "conflicted": 4,
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 3
+    "parked": 2
    },
    "m": {
-    "checking": 3,
+    "checking": null,
     "inline": null,
-    "conflicted": 142,
+    "conflicted": 0,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 142
+    "parked": 158
    },
-   "cur": [
-    [
-     [
-      "T-3710"
-     ],
-     "lining up with main",
-     "Mac mini",
-     3
-    ]
-   ],
+   "cur": [],
    "ld": [
-    42,
-    "2026-11-12T10:42:51Z"
+    44,
+    "2026-11-12T10:48:49Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T10:47:30Z",
-    "ld": 12.34,
+    "at": "2026-11-12T10:49:33Z",
+    "ld": 12.21,
     "c": 8,
     "sb": 2,
     "dk": [
-     31.4,
+     31.2,
      228.3
     ],
     "ss": [
@@ -667,8 +603,8 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -677,12 +613,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 5,
-  "total": 5,
-  "at": "5:47 AM",
+  "lanes": 4,
+  "total": 4,
+  "at": "5:50 AM",
   "why": "",
-  "at_iso": "2026-11-12T10:47:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 5:47 AM ET</p></section>"
+  "at_iso": "2026-11-12T10:50:00+00:00",
+  "started": "5:47 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 5:50 AM ET</p></section>"
  }
 }

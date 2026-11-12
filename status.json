@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T22:22:40.367070+00:00",
+ "at": "2026-11-12T22:25:45.560731+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
    "task": "[build] T-4212 land launcher widget picker",
    "model": "opus",
    "started": "2026-11-12T22:22:24.577Z",
-   "seconds": 15,
+   "seconds": 200,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +105,7 @@
    "task": "[build] T-3814 tree.json presence in export",
    "model": "opus",
    "started": "2026-11-12T22:22:32.011Z",
-   "seconds": 8,
+   "seconds": 193,
    "finished": null,
    "effort": "high"
   },
@@ -114,12 +114,21 @@
    "task": "[research] T-3674 land launcher known apps",
    "model": "opus",
    "started": "2026-11-12T22:22:39.264Z",
-   "seconds": 1,
+   "seconds": 186,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4214 review launcher steps",
+   "model": "opus",
+   "started": "2026-11-12T22:22:47.223Z",
+   "seconds": 178,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2, Wrenna",
+ "who": "Idris x2, Wrenna, Pernille",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -129,20 +138,20 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 1.0,
-   "resets_at": "2026-11-13T03:00:00.334251+00:00",
+   "pct": 2.0,
+   "resets_at": "2026-11-12T22:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T17:19:27.311551-05:00",
-   "source": "usage",
-   "left": 99.0,
+   "read_at": "2026-11-12T17:24:41.961592-05:00",
+   "source": "live",
+   "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 80.0,
-   "resets_at": "2026-11-15T06:59:59.334270+00:00",
+   "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T17:19:27.311551-05:00",
-   "source": "usage",
+   "read_at": "2026-11-12T17:24:41.961592-05:00",
+   "source": "live",
    "left": 20.0,
    "left_words": "of your weekly allowance left"
   },
@@ -153,7 +162,7 @@
    "read_at": "2026-11-12T17:19:27.311551-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T17:19:27.311551-05:00"
+  "read_at": "2026-11-12T17:24:41.961592-05:00"
  },
  "ui": {
   "week_pct": 0.24,
@@ -173,7 +182,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-12T22:22:00+00:00",
+  "read_at": "2026-11-12T22:25:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -194,7 +203,7 @@
   }
  ],
  "disk": {
-  "free_gb": 28,
+  "free_gb": 24,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -203,14 +212,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T17:16:00-05:00",
+   "at": "2026-11-12T17:24:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T17:22:00-05:00",
+  "at": "2026-11-12T17:25:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -241,11 +250,12 @@
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[review] T-4214 review launcher steps",
+   "model": "opus",
+   "since": "2026-11-12T22:22:47.223Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Odalys",
@@ -303,6 +313,16 @@
     "at": "2026-11-12T22:22:39.264Z",
     "o": "c",
     "task": "T-3674"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review the launcher steps landed today",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T22:22:47.223Z",
+    "o": "c",
+    "task": "T-4214"
    }
   ],
   "src": "plan",
@@ -450,11 +470,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T22:22:20Z",
-  "s": {}
+  "at": "2026-11-12T22:25:28Z",
+  "s": {
+   "T-4212": [
+    "merging",
+    "Mac tests at the main gate",
+    1794522268634
+   ],
+   "T-3814": [
+    "testing",
+    "its own tests, in its copy",
+    1794522268634
+   ]
+  },
+  "nm": {
+   "T-4212": "Offer the launcher widgets in the widget picker",
+   "T-3814": "Keep the bundled Countdown picture from hiding the bug"
+  }
  },
  "ln": {
-  "at": "2026-11-12T22:22:20Z",
+  "at": "2026-11-12T22:25:28Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -468,11 +503,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 405,
+    "conflicted": 408,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 449
+    "parked": 452
    },
    "cur": [],
    "ld": [
@@ -482,12 +517,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T22:21:57Z",
-    "ld": 0.44,
+    "at": "2026-11-12T22:25:29Z",
+    "ld": 0.52,
     "c": 8,
     "sb": 0,
     "dk": [
-     25.9,
+     23.1,
      228.3
     ],
     "ss": [
@@ -517,12 +552,12 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 4 tasks",
-   "at": "2026-11-12T17:19:40-05:00"
+   "at": "2026-11-12T17:24:30-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-12T21:53:51Z",
-  "seconds": 32.0
+  "sent": "2026-11-12T22:23:48Z",
+  "seconds": 41.0
  },
  "inbox": [],
  "trimmed": [
@@ -537,13 +572,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 4,
   "lanes": 0,
-  "total": 3,
-  "at": "5:22 PM",
+  "total": 4,
+  "at": "5:25 PM",
   "why": "",
-  "at_iso": "2026-11-12T22:22:00+00:00",
+  "at_iso": "2026-11-12T22:25:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:22 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:25 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T15:16:07.620870+00:00",
+ "at": "2026-11-12T15:19:12.150058+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -104,7 +104,7 @@
     "end_at": 1794492979
    }
   ],
-  "landed": 63,
+  "landed": 62,
   "failed": 9
  },
  "workers": [
@@ -113,7 +113,7 @@
    "task": "[tools] T-4157 Fable-only accounts, second change",
    "model": "opus",
    "started": "2026-11-12T15:15:18.260Z",
-   "seconds": 49,
+   "seconds": 233,
    "finished": null,
    "effort": "high"
   },
@@ -122,7 +122,7 @@
    "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
    "started": "2026-11-12T15:15:25.110Z",
-   "seconds": 42,
+   "seconds": 227,
    "finished": null,
    "effort": "high"
   },
@@ -131,7 +131,7 @@
    "task": "[site] T-4162 a name for every task",
    "model": "opus",
    "started": "2026-11-12T15:15:30.908Z",
-   "seconds": 36,
+   "seconds": 221,
    "finished": null,
    "effort": "high"
   },
@@ -140,7 +140,7 @@
    "task": "[build] T-3757 hold background task for unstarted rows",
    "model": "opus",
    "started": "2026-11-12T15:15:38.458Z",
-   "seconds": 29,
+   "seconds": 213,
    "finished": null,
    "effort": "high"
   },
@@ -149,7 +149,7 @@
    "task": "[review] T-4070 check T-3558+T-3758 before ship",
    "model": "opus",
    "started": "2026-11-12T15:15:45.063Z",
-   "seconds": 22,
+   "seconds": 207,
    "finished": null,
    "effort": "high"
   }
@@ -164,20 +164,20 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 16.0,
-   "resets_at": "2026-11-12T16:59:59.829484+00:00",
+   "pct": 17.0,
+   "resets_at": "2026-11-12T12:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T10:12:53.677669-05:00",
-   "source": "usage",
-   "left": 84.0,
+   "read_at": "2026-11-12T10:18:09.029683-05:00",
+   "source": "live",
+   "left": 83.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 73.0,
-   "resets_at": "2026-11-15T06:59:58.829505+00:00",
+   "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T10:12:53.677669-05:00",
-   "source": "usage",
+   "read_at": "2026-11-12T10:18:09.029683-05:00",
+   "source": "live",
    "left": 27.0,
    "left_words": "of your weekly allowance left"
   },
@@ -188,7 +188,7 @@
    "read_at": "2026-11-12T10:12:53.677669-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T10:12:53.677669-05:00"
+  "read_at": "2026-11-12T10:18:09.029683-05:00"
  },
  "ui": {
   "week_pct": 0.24,
@@ -208,7 +208,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T15:16:00+00:00",
+  "read_at": "2026-11-12T15:19:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -229,7 +229,7 @@
   }
  ],
  "disk": {
-  "free_gb": 31,
+  "free_gb": 28,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -238,14 +238,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T10:09:00-05:00",
+   "at": "2026-11-12T10:18:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T10:16:00-05:00",
+  "at": "2026-11-12T10:19:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -502,23 +502,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T15:15:49Z",
+  "at": "2026-11-12T15:18:54Z",
   "s": {
+   "T-3757": [
+    "merging",
+    "Mac tests at the main gate",
+    1794496734501
+   ],
    "T-4162": [
     "testing",
     "its own tests, in its copy",
-    1794493969982
+    1794496614501
    ],
    "T-4157": [
-    "merged",
-    "on main 9:05 AM ET",
-    1794492359000,
-    "Odalys"
+    "testing",
+    "its own tests, in its copy",
+    1794496614501
+   ],
+   "T-4160": [
+    "testing",
+    "its own tests, in its copy",
+    1794496614501
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T15:15:49Z",
+  "at": "2026-11-12T15:18:54Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -532,11 +541,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 13,
+    "conflicted": 16,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 12
+    "parked": 15
    },
    "cur": [],
    "ld": [
@@ -546,12 +555,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T15:15:23Z",
-    "ld": 1.42,
+    "at": "2026-11-12T15:18:56Z",
+    "ld": 2.07,
     "c": 8,
     "sb": 1,
     "dk": [
-     30.9,
+     28.4,
      228.3
     ],
     "ss": [
@@ -594,10 +603,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "10:16 AM",
+  "at": "10:19 AM",
   "why": "",
-  "at_iso": "2026-11-12T15:16:00+00:00",
+  "at_iso": "2026-11-12T15:19:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:16 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:19 AM ET</p></section>"
  }
 }

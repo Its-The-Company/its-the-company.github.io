@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T08:45:43.409403+00:00",
+ "at": "2026-11-12T08:48:50.628123+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -19,6 +19,22 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4127",
+    "name": "Run the Restructuring on Evan's account",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794473329
+   },
+   {
+    "t": "T-3884",
+    "name": "Check parked branches against main every hour",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794473319
+   },
    {
     "t": "T-3977",
     "name": "Clear the leftover extra copies of the code",
@@ -83,25 +99,9 @@
     "end": "failed",
     "end_at": 1794471918,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3888",
-    "name": "Make the landing test pass on main every time",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794471903
-   },
-   {
-    "t": "T-3950",
-    "name": "Trim Home and add task filters",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794470318
    }
   ],
-  "landed": 28,
+  "landed": 30,
   "failed": 3
  },
  "workers": [
@@ -110,7 +110,7 @@
    "task": "[build] T-3143 template test fix",
    "model": "opus",
    "started": "2026-11-12T08:03:43.753Z",
-   "seconds": 2519,
+   "seconds": 2706,
    "finished": null,
    "effort": "high"
   },
@@ -119,22 +119,21 @@
    "task": "[tools] T-4129 retire Set aside stage",
    "model": "opus",
    "started": "2026-11-12T08:04:00.395Z",
-   "seconds": 2503,
+   "seconds": 2690,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris, Odalys",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4132 measure overdue experiments",
    "model": "opus",
    "started": "2026-11-12T08:21:32.133Z",
-   "seconds": 1451,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Odalys x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-12T08:48:17.507000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-3823 OpenSSL symbol check",
@@ -163,8 +162,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 621,
-  "blocked_count": 84
+  "runnable_count": 620,
+  "blocked_count": 85
  },
  "meter": {
   "five_hour": {
@@ -212,7 +211,7 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T08:45:00+00:00",
+  "read_at": "2026-11-12T08:48:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -351,7 +350,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T03:45:00-05:00",
+  "at": "2026-11-12T03:48:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -434,16 +433,6 @@
     "at": "2026-11-12T08:04:00.395Z",
     "o": "i",
     "task": "T-4129"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Measure the eight overdue process experiments",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T08:21:32.133Z",
-    "o": "c",
-    "task": "T-4132"
    }
   ],
   "src": "plan",
@@ -521,6 +510,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "Eight overdue process changes were measured and closed: one clearly helped (work sessions now...",
+    "at": "2026-11-12T03:47:00-05:00"
+   },
+   {
     "w": "Odalys+operator",
     "t": "The safe-to-delete list is done (171 of 183 leftover copies safe, 12 kept). Deleting them and...",
     "at": "2026-11-12T03:39:00-05:00"
@@ -529,22 +523,21 @@
     "w": "Operator",
     "t": "Nothing to redo: the original change from T-3751 (land work that touches Investor files, with a...",
     "at": "2026-11-12T03:39:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "None of the 27 parked changes in this list still needs recutting. 8 are finished on main, and...",
-    "at": "2026-11-12T03:26:00-05:00"
    }
   ],
   "count": {
-   "next": 621,
+   "next": 620,
    "wait": 40,
-   "blocked": 44,
-   "you": 13
+   "blocked": 45,
+   "you": 14
   },
   "fin": {
-   "n": 4,
+   "n": 5,
    "rows": [
+    [
+     "T-4132",
+     "Measure the eight overdue..."
+    ],
     [
      "T-3977",
      "Clear the leftover extra..."
@@ -599,22 +592,23 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T08:45:43Z",
+  "at": "2026-11-12T08:48:50Z",
   "s": {
    "T-4091": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-4132": [
-    "testing",
-    "its own tests, in its copy",
-    1794473143409
-   ],
    "T-3143": [
     "testing",
     "its own tests, in its copy",
-    1794471343409
+    1794471350628
+   ],
+   "T-3884": [
+    "merged",
+    "on main 3:48 AM ET",
+    1794473285000,
+    ""
    ],
    "T-3977": [
     "merged",
@@ -637,7 +631,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T08:45:43Z",
+  "at": "2026-11-12T08:48:50Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -651,22 +645,22 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 49,
+    "conflicted": 52,
     "failed": null,
-    "held": 2784,
-    "retry": 4,
-    "parked": 3688
+    "held": 2787,
+    "retry": 30,
+    "parked": 3691
    },
    "cur": [],
    "ld": [
-    28,
-    "2026-11-12T08:39:46Z"
+    30,
+    "2026-11-12T08:48:49Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T08:45:44Z",
-    "ld": 2.51,
+    "at": "2026-11-12T08:48:28Z",
+    "ld": 4.14,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -674,7 +668,7 @@
      228.3
     ],
     "ss": [
-     172.3,
+     172.4,
      953.7
     ],
     "sn": [
@@ -700,13 +694,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 3,
-  "total": 6,
-  "at": "3:45 AM",
+  "total": 5,
+  "at": "3:48 AM",
   "why": "",
-  "at_iso": "2026-11-12T08:45:00+00:00",
+  "at_iso": "2026-11-12T08:48:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:45 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:48 AM ET</p></section>"
  }
 }

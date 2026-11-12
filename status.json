@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T16:56:58.369462+00:00",
+ "at": "2026-11-12T17:00:01.528425+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -114,7 +114,7 @@
    "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
    "started": "2026-11-12T15:15:25.110Z",
-   "seconds": 6093,
+   "seconds": 6276,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[site] T-4108 Issues badge stale count flash",
    "model": "opus",
    "started": "2026-11-12T16:32:11.872Z",
-   "seconds": 1486,
+   "seconds": 1669,
    "finished": null,
    "effort": "high"
   },
@@ -132,7 +132,7 @@
    "task": "[build] T-4198 prune run history when background start fails",
    "model": "opus",
    "started": "2026-11-12T16:38:06.505Z",
-   "seconds": 1131,
+   "seconds": 1315,
    "finished": null,
    "effort": "high"
   },
@@ -141,7 +141,7 @@
    "task": "[tools] T-4179 a stopped task gets a second requeue",
    "model": "opus",
    "started": "2026-11-12T16:43:29.044Z",
-   "seconds": 809,
+   "seconds": 992,
    "finished": null,
    "effort": "high"
   },
@@ -150,7 +150,7 @@
    "task": "[design] T-3565 stale sensor widget on a timeout",
    "model": "opus",
    "started": "2026-11-12T16:45:32.036Z",
-   "seconds": 686,
+   "seconds": 869,
    "finished": null,
    "effort": "high"
   }
@@ -198,12 +198,13 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 33.0,
-   "resets_at": "2026-11-12T12:00:00-05:00",
+   "pct": null,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
    "read_at": "2026-11-12T11:48:13.845164-05:00",
    "source": "live",
-   "left": 67.0,
+   "last_reset": "2026-11-12T12:00:00-05:00",
+   "left": null,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
@@ -242,7 +243,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T16:56:00+00:00",
+  "read_at": "2026-11-12T17:00:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -279,7 +280,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T11:56:00-05:00",
+  "at": "2026-11-12T12:00:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -560,7 +561,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T16:56:52Z",
+  "at": "2026-11-12T16:59:50Z",
   "s": {
    "T-3565": [
     "mergetest",
@@ -570,22 +571,22 @@
    "T-4198": [
     "merging",
     "Mac tests at the main gate \u00b7 5 groups of tests done",
-    1794502372824
+    1794502370235
    ],
    "T-4108": [
     "testing",
     "its own tests, in its copy",
-    1794501472824
+    1794501470235
    ],
    "T-4160": [
     "testing",
     "its own tests, in its copy",
-    1794501772824
+    1794501770235
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T16:56:52Z",
+  "at": "2026-11-12T16:59:50Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -599,11 +600,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 114,
+    "conflicted": 117,
     "failed": null,
     "held": null,
-    "retry": 42,
-    "parked": 123
+    "retry": 45,
+    "parked": 126
    },
    "cur": [],
    "ld": [
@@ -613,8 +614,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T16:56:30Z",
-    "ld": 1.18,
+    "at": "2026-11-12T16:59:50Z",
+    "ld": 0.88,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -664,10 +665,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "11:56 AM",
+  "at": "12:00 PM",
   "why": "",
-  "at_iso": "2026-11-12T16:56:00+00:00",
+  "at_iso": "2026-11-12T17:00:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:56 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:00 PM ET</p></section>"
  }
 }

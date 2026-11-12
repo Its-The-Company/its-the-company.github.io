@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T18:19:27.797742+00:00",
+ "at": "2026-11-12T18:22:32.871801+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -105,7 +105,7 @@
     "why": "did not merge cleanly"
    }
   ],
-  "landed": 60,
+  "landed": 59,
   "failed": 10
  },
  "workers": [
@@ -114,7 +114,7 @@
    "task": "[tools] T-4206 release account when stop rule retired",
    "model": "opus",
    "started": "2026-11-12T17:59:05.541Z",
-   "seconds": 1222,
+   "seconds": 1407,
    "finished": null,
    "effort": "high"
   }
@@ -206,8 +206,33 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T18:19:00+00:00",
-  "running": []
+  "read_at": "2026-11-12T18:22:00+00:00",
+  "running": [
+   {
+    "lane": "b",
+    "task": "T-4116",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Regroup the app queue into feature-sized pieces",
+    "m": "opus",
+    "e": "xhigh",
+    "at": "2026-11-12T13:22:32-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4117",
+    "w": "Ines",
+    "k": "ops",
+    "t": "Judge the next hundred efficiency lines",
+    "m": "opus",
+    "e": "xhigh",
+    "at": "2026-11-12T13:22:33-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -236,14 +261,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T13:13:00-05:00",
+   "at": "2026-11-12T13:20:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T13:19:00-05:00",
+  "at": "2026-11-12T13:22:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -482,37 +507,52 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T18:19:16Z",
+  "at": "2026-11-12T18:22:19Z",
   "s": {
-   "T-4206": [
+   "T-3814": [
     "merging",
-    "Mac tests at the main gate",
-    1794507256781
+    "Merging onto main",
+    1794507739380
+   ],
+   "T-4206": [
+    "merged",
+    "on main 1:20 PM ET",
+    1794507608000,
+    "Odalys"
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T18:19:16Z",
+  "at": "2026-11-12T18:22:19Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 3,
     "failed": 0,
     "held": 0,
-    "retry": 1,
+    "retry": 0,
     "parked": 3
    },
    "m": {
-    "checking": null,
+    "checking": 0,
     "inline": null,
-    "conflicted": 197,
+    "conflicted": 200,
     "failed": null,
     "held": null,
-    "retry": 125,
-    "parked": 205
+    "retry": null,
+    "parked": 209
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-3814"
+     ],
+     "going onto main",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     73,
     "2026-11-12T16:10:17Z"
@@ -520,8 +560,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T18:18:32Z",
-    "ld": 0.45,
+    "at": "2026-11-12T18:22:19Z",
+    "ld": 0.51,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -569,12 +609,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 0,
-  "total": 1,
-  "at": "1:19 PM",
+  "lanes": 2,
+  "total": 3,
+  "at": "1:22 PM",
   "why": "",
-  "at_iso": "2026-11-12T18:19:00+00:00",
+  "at_iso": "2026-11-12T18:22:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:19 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:22 PM ET</p></section>"
  }
 }

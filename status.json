@@ -1,23 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-12T08:58:04.963288+00:00",
+ "at": "2026-11-12T09:01:10.656018+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T02:56:43-05:00",
-  "flow": [
-   {
-    "t": "T-3143",
-    "name": "Fix the template test that fails since the age line",
-    "w": "Idris",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794470714
-     }
-    ]
-   }
-  ],
+  "flow": [],
   "done": [
    {
     "t": "T-4127",
@@ -106,26 +94,34 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-3143 template test fix",
-   "model": "opus",
-   "started": "2026-11-12T08:03:43.753Z",
-   "seconds": 3261,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[tools] T-4129 retire Set aside stage",
    "model": "opus",
    "started": "2026-11-12T08:04:00.395Z",
-   "seconds": 3244,
+   "seconds": 3430,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4093 tester Pro compile flag",
+   "model": "opus",
+   "started": "2026-11-12T09:00:23.114Z",
+   "seconds": 47,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris, Odalys",
+ "who": "Odalys, Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-3143 template test fix",
+   "model": "opus",
+   "started": "2026-11-12T08:03:43.753Z",
+   "seconds": null,
+   "finished": "2026-11-12T09:00:03.160000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-3817 per-widget tree report review",
@@ -149,20 +145,12 @@
    "started": "2026-11-12T08:14:38.977Z",
    "seconds": null,
    "finished": "2026-11-12T08:21:01.662000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-3836 gate premade review",
-   "model": "opus",
-   "started": "2026-11-12T08:08:23.157Z",
-   "seconds": null,
-   "finished": "2026-11-12T08:14:19.488000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 619,
+  "runnable_count": 618,
   "blocked_count": 85
  },
  "meter": {
@@ -211,7 +199,7 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T08:58:00+00:00",
+  "read_at": "2026-11-12T09:01:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -350,7 +338,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T03:58:00-05:00",
+  "at": "2026-11-12T04:01:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -362,20 +350,20 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-3143 template test fix",
-   "model": "opus",
-   "since": "2026-11-12T08:03:43.753Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-4129 retire Set aside stage",
    "model": "opus",
    "since": "2026-11-12T08:04:00.395Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-4093 tester Pro compile flag",
+   "model": "opus",
+   "since": "2026-11-12T09:00:23.114Z",
    "next": [],
    "effort": "high"
   },
@@ -415,16 +403,6 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Fix the template test that fails since the age line",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T08:03:43.753Z",
-    "o": "c",
-    "task": "T-3143"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Retire the Set aside stage on Home",
@@ -433,6 +411,16 @@
     "at": "2026-11-12T08:04:00.395Z",
     "o": "i",
     "task": "T-4129"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Add a tester-only Pro switch for TestFlight builds",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T09:00:23.114Z",
+    "o": "c",
+    "task": "T-4093"
    }
   ],
   "src": "plan",
@@ -441,13 +429,6 @@
     "w": "Idris",
     "k": "build",
     "t": "Keep finding why only Countdown draws on the...",
-    "s": "next",
-    "o": "c"
-   },
-   {
-    "w": "Idris",
-    "k": "bug",
-    "t": "Fix the template test that fails since the...",
     "s": "next",
     "o": "c"
    },
@@ -506,9 +487,21 @@
     "t": "Find every slowdown the company built into...",
     "s": "next",
     "o": "i"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Add a tester-only Pro switch for TestFlight...",
+    "s": "next",
+    "o": "i"
    }
   ],
   "done": [
+   {
+    "w": "Idris",
+    "t": "The New widget template test that went red after T-1440 (the age line work) passes on today's...",
+    "at": "2026-11-12T03:59:00-05:00"
+   },
    {
     "w": "Pernille",
     "t": "T-3814 (Idris's per-widget tree report for the iPhone hunt) needs two fixes before build 5: the...",
@@ -518,22 +511,21 @@
     "w": "Odalys",
     "t": "Eight overdue process changes were measured and closed: one clearly helped (work sessions now...",
     "at": "2026-11-12T03:47:00-05:00"
-   },
-   {
-    "w": "Odalys+operator",
-    "t": "The safe-to-delete list is done (171 of 183 leftover copies safe, 12 kept). Deleting them and...",
-    "at": "2026-11-12T03:39:00-05:00"
    }
   ],
   "count": {
-   "next": 619,
+   "next": 618,
    "wait": 40,
    "blocked": 45,
    "you": 14
   },
   "fin": {
-   "n": 6,
+   "n": 7,
    "rows": [
+    [
+     "T-3143",
+     "Fix the template test that..."
+    ],
     [
      "T-3817",
      "Review the per-widget tree..."
@@ -553,10 +545,6 @@
     [
      "T-3870",
      "Recut parked refs whose..."
-    ],
-    [
-     "T-4053",
-     "Check finished work before..."
     ]
    ]
   }
@@ -596,17 +584,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T08:57:51Z",
+  "at": "2026-11-12T09:01:10Z",
   "s": {
    "T-4129": [
-    "merging",
-    "Mac tests at the main gate",
-    1794473751541
-   ],
-   "T-3143": [
-    "testing",
-    "MacBook \u00b7 test",
-    null
+    "merged",
+    "on main 4:00 AM ET",
+    1794474044000,
+    "Odalys"
    ],
    "T-3884": [
     "merged",
@@ -631,11 +615,17 @@
     "on main 3:26 AM ET",
     1794471975000,
     ""
+   ],
+   "T-4093": [
+    "merged",
+    "on main 2:51 AM ET",
+    1794469894000,
+    ""
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T08:57:51Z",
+  "at": "2026-11-12T09:01:10Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -649,11 +639,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 61,
+    "conflicted": 65,
     "failed": null,
-    "held": 2796,
+    "held": 2799,
     "retry": null,
-    "parked": 3700
+    "parked": 3703
    },
    "cur": [],
    "ld": [
@@ -663,16 +653,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T08:57:52Z",
-    "ld": 7.74,
+    "at": "2026-11-12T09:01:11Z",
+    "ld": 5.81,
     "c": 8,
     "sb": 1,
     "dk": [
-     36.3,
+     35.5,
      228.3
     ],
     "ss": [
-     174.3,
+     176.3,
      953.7
     ],
     "sn": [
@@ -680,12 +670,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-12T08:53:31Z",
-    "ld": 0.24,
+    "at": "2026-11-12T08:56:52Z",
+    "ld": 14.9,
     "c": 12,
     "sb": 0,
     "dk": [
-     396.6,
+     397.9,
      926.4
     ],
     "sn": []
@@ -706,6 +696,7 @@
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -713,10 +704,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "3:58 AM",
+  "at": "4:01 AM",
   "why": "",
-  "at_iso": "2026-11-12T08:58:00+00:00",
+  "at_iso": "2026-11-12T09:01:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:58 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:01 AM ET</p></section>"
  }
 }

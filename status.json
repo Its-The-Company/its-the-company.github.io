@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T13:14:08.019644+00:00",
+ "at": "2026-11-12T13:17:08.301626+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -117,25 +117,24 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4138 review and land pinned cap 3",
-   "model": "opus",
-   "started": "2026-11-12T12:51:49.263Z",
-   "seconds": 1338,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[tools] T-4155 give back limit-stopped tasks",
    "model": "opus",
    "started": "2026-11-12T12:55:29.637Z",
-   "seconds": 1118,
+   "seconds": 1298,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2",
+ "who": "Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4138 review and land pinned cap 3",
+   "model": "opus",
+   "started": "2026-11-12T12:51:49.263Z",
+   "seconds": null,
+   "finished": "2026-11-12T13:16:22.078000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4154 pinned line takes idle held slot",
@@ -159,14 +158,6 @@
    "started": "2026-11-12T10:52:10.771Z",
    "seconds": null,
    "finished": "2026-11-12T11:19:57.546000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[release] T-4093 internal TestFlight build 5",
-   "model": "opus",
-   "started": "2026-11-12T10:52:18.614Z",
-   "seconds": null,
-   "finished": "2026-11-12T11:16:49.867000+00:00"
   }
  ],
  "queue": {
@@ -221,7 +212,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T13:14:00+00:00",
+  "read_at": "2026-11-12T13:17:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -258,7 +249,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T08:14:00-05:00",
+  "at": "2026-11-12T08:17:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -272,9 +263,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4138 review and land pinned cap 3",
+   "task": "[tools] T-4155 give back limit-stopped tasks",
    "model": "opus",
-   "since": "2026-11-12T12:51:49.263Z",
+   "since": "2026-11-12T12:55:29.637Z",
    "next": [],
    "effort": "high"
   },
@@ -321,16 +312,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Resume the queue audit and start the Restructuring",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T12:51:49.263Z",
-    "o": "c",
-    "task": "T-4138"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -507,72 +488,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T13:13:55Z",
+  "at": "2026-11-12T13:17:02Z",
   "s": {
    "T-3756": [
     "merging",
     "Host checks on the Mac mini \u00b7 3 groups of tests done",
-    1794488755746
+    1794488762400
    ],
    "T-3856": [
     "merging",
     "Host checks on the Mac mini \u00b7 3 groups of tests done",
-    1794488755746
+    1794488762400
    ],
    "T-3903": [
     "merging",
     "Host checks on the Mac mini \u00b7 3 groups of tests done",
-    1794488755746
+    1794488762400
    ],
    "T-3909": [
     "mergeq",
     "1st to merge",
-    1794488395746
+    1794488402400
    ],
    "T-3824": [
     "mergeq",
     "2nd to merge",
-    1794488395746
+    1794488402400
    ],
    "T-4100": [
     "mergeq",
     "3rd to merge",
-    1794488515746
+    1794488522400
    ],
    "T-3430": [
     "mergeq",
     "4th to merge",
-    1794488695746
+    1794488702400
    ],
    "T-4149": [
     "mergeq",
     "6th to merge",
-    1794488875746
+    1794488882400
    ],
    "T-3990": [
     "mergeq",
     "6th to merge",
-    1794488875746
+    1794488882400
    ],
    "T-4122": [
     "mergeq",
     "7th to merge",
-    1794489055746
-   ],
-   "T-4138": [
-    "merging",
-    "Mac tests at the main gate",
-    1794489055746
+    1794489002400
    ],
    "T-4155": [
     "testing",
     "its own tests, in its copy",
-    1794488695746
+    1794488702400
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T13:13:55Z",
+  "at": "2026-11-12T13:17:02Z",
   "mq": {
    "n": {
     "checking": 3,
@@ -584,13 +560,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 8,
-    "inline": 9,
+    "checking": 11,
+    "inline": 12,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 301
+    "parked": 304
    },
    "cur": [
     [
@@ -599,7 +575,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     8
+     11
     ],
     [
      [
@@ -607,7 +583,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     8
+     11
     ],
     [
      [
@@ -615,7 +591,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     8
+     11
     ]
    ],
    "ld": [
@@ -625,8 +601,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T13:13:56Z",
-    "ld": 3.88,
+    "at": "2026-11-12T13:16:38Z",
+    "ld": 3.8,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -634,7 +610,7 @@
      228.3
     ],
     "ss": [
-     184.7,
+     186.7,
      953.7
     ],
     "sn": []
@@ -671,13 +647,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "8:14 AM",
+  "total": 1,
+  "at": "8:17 AM",
   "why": "",
-  "at_iso": "2026-11-12T13:14:00+00:00",
+  "at_iso": "2026-11-12T13:17:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:14 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:17 AM ET</p></section>"
  }
 }

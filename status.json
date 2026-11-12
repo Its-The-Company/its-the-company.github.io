@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T18:56:21.908014+00:00",
+ "at": "2026-11-12T18:59:22.112887+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -109,7 +109,7 @@
    "task": "[build] T-4205 prune on background starts",
    "model": "opus",
    "started": "2026-11-12T18:36:21.956Z",
-   "seconds": 1199,
+   "seconds": 1380,
    "finished": null,
    "effort": "high"
   },
@@ -118,7 +118,7 @@
    "task": "[build] T-4201 keep today's sensor reading",
    "model": "opus",
    "started": "2026-11-12T18:36:27.559Z",
-   "seconds": 1194,
+   "seconds": 1374,
    "finished": null,
    "effort": "high"
   },
@@ -127,7 +127,7 @@
    "task": "[build] T-4207 stuck name lookup timing",
    "model": "opus",
    "started": "2026-11-12T18:38:05.670Z",
-   "seconds": 1096,
+   "seconds": 1276,
    "finished": null,
    "effort": "high"
   },
@@ -136,7 +136,7 @@
    "task": "[tools] T-4164 T-4163 Operator session records",
    "model": "opus",
    "started": "2026-11-12T18:38:15.168Z",
-   "seconds": 1086,
+   "seconds": 1266,
    "finished": null,
    "effort": "high"
   },
@@ -145,22 +145,30 @@
    "task": "[build] T-3688 launcher editor screens",
    "model": "opus",
    "started": "2026-11-12T18:54:34.052Z",
-   "seconds": 107,
+   "seconds": 288,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "maren",
-   "task": "[review] T-4199 Settings shots read",
+   "task": "[design] T-4208 Testers row in Settings spec",
    "model": "opus",
-   "started": "2026-11-12T18:54:42.003Z",
-   "seconds": 99,
+   "started": "2026-11-12T18:57:47.975Z",
+   "seconds": 94,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Idris x4, Odalys, Maren",
  "recent": [
+  {
+   "name": "maren",
+   "task": "[review] T-4199 Settings shots read",
+   "model": "opus",
+   "started": "2026-11-12T18:54:42.003Z",
+   "seconds": null,
+   "finished": "2026-11-12T18:57:28.554000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4199 Settings shots with Testers",
@@ -173,24 +181,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 603,
+  "runnable_count": 604,
   "blocked_count": 84
  },
  "meter": {
   "five_hour": {
-   "pct": 12.0,
+   "pct": 14.0,
    "resets_at": "2026-11-12T17:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T13:45:59.247958-05:00",
+   "read_at": "2026-11-12T13:58:03.502605-05:00",
    "source": "live",
-   "left": 88.0,
+   "left": 86.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 77.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T13:45:59.247958-05:00",
+   "read_at": "2026-11-12T13:58:03.502605-05:00",
    "source": "live",
    "left": 23.0,
    "left_words": "of your weekly allowance left"
@@ -202,7 +210,7 @@
    "read_at": "2026-11-12T13:34:12.593745-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T13:45:59.247958-05:00"
+  "read_at": "2026-11-12T13:58:03.502605-05:00"
  },
  "ui": {
   "week_pct": 0.242,
@@ -222,7 +230,7 @@
   "week_pct": 37.24,
   "usage_pct": 32.6,
   "work_pct": 78.9,
-  "read_at": "2026-11-12T18:56:00+00:00",
+  "read_at": "2026-11-12T18:59:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -252,14 +260,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T13:52:00-05:00",
+   "at": "2026-11-12T13:58:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T13:56:00-05:00",
+  "at": "2026-11-12T13:59:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -291,9 +299,9 @@
   {
    "name": "Maren",
    "state": "running",
-   "task": "[review] T-4199 Settings shots read",
+   "task": "[design] T-4208 Testers row in Settings spec",
    "model": "opus",
-   "since": "2026-11-12T18:54:42.003Z",
+   "since": "2026-11-12T18:57:47.975Z",
    "next": [],
    "effort": "high"
   },
@@ -376,13 +384,13 @@
    },
    {
     "w": "Maren",
-    "k": "review",
-    "t": "Retake the Settings shots with the Testers group",
+    "k": "design",
+    "t": "Add the Testers group to the Settings spec",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-12T18:54:42.003Z",
+    "at": "2026-11-12T18:57:47.975Z",
     "o": "c",
-    "task": "T-4199"
+    "task": "T-4208"
    }
   ],
   "src": "plan",
@@ -476,7 +484,7 @@
    }
   ],
   "count": {
-   "next": 603,
+   "next": 604,
    "wait": 40,
    "blocked": 44,
    "you": 13
@@ -550,45 +558,44 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T18:56:05Z",
+  "at": "2026-11-12T18:59:08Z",
   "s": {
    "T-4205": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
+   "T-4208": [
+    "merging",
+    "Mac tests at the main gate",
+    1794509948613
+   ],
    "T-4201": [
     "merging",
     "Mac tests at the main gate \u00b7 4 groups of tests done",
-    1794509285344
+    1794509288613
    ],
    "T-4207": [
     "merging",
     "Mac tests at the main gate \u00b7 5 groups of tests done",
-    1794509345344
+    1794509348613
    ],
    "T-4164": [
     "testing",
     "its own tests, in its copy",
-    1794508865344
-   ],
-   "T-4199": [
-    "merged",
-    "on main 1:53 PM ET",
-    1794509605000,
-    ""
+    1794508808613
    ]
   },
   "nm": {
    "T-4205": "Prune run history when a background start times out",
+   "T-4208": "Add the Testers group to the Settings spec",
    "T-4201": "Keep today's sensor reading after a timeout",
    "T-4207": "Stop a stuck name lookup on time",
-   "T-4164": "Redo record what each Operator session is doing now",
-   "T-4199": "Retake the Settings shots with the Testers group"
+   "T-4164": "Redo record what each Operator session is doing now"
   }
  },
  "ln": {
-  "at": "2026-11-12T18:56:05Z",
+  "at": "2026-11-12T18:59:08Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -602,11 +609,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 233,
+    "conflicted": 236,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 242
+    "parked": 245
    },
    "cur": [],
    "ld": [
@@ -616,8 +623,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T18:55:19Z",
-    "ld": 7.28,
+    "at": "2026-11-12T18:58:43Z",
+    "ld": 5.82,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -644,8 +651,8 @@
   }
  },
  "reply": {
-  "sent": "2026-11-12T17:43:02Z",
-  "seconds": 48.0
+  "sent": "2026-11-12T18:58:21Z",
+  "seconds": 56.0
  },
  "inbox": [],
  "trimmed": [
@@ -664,10 +671,10 @@
   "main": 6,
   "lanes": 0,
   "total": 6,
-  "at": "1:56 PM",
+  "at": "1:59 PM",
   "why": "",
-  "at_iso": "2026-11-12T18:56:00+00:00",
+  "at_iso": "2026-11-12T18:59:00+00:00",
   "started": "1:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 6, started 1:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:56 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 6, started 1:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:59 PM ET</p></section>"
  }
 }

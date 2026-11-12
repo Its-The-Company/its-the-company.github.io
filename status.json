@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T14:03:50.520417+00:00",
+ "at": "2026-11-12T14:06:12.438786+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -120,7 +120,7 @@
    "task": "[tools] T-4157 account a takes only Fable lines",
    "model": "opus",
    "started": "2026-11-12T13:17:49.294Z",
-   "seconds": 2761,
+   "seconds": 2903,
    "finished": null,
    "effort": "high"
   },
@@ -129,7 +129,7 @@
    "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
    "started": "2026-11-12T13:42:03.937Z",
-   "seconds": 1306,
+   "seconds": 1448,
    "finished": null,
    "effort": "high"
   }
@@ -221,7 +221,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T14:03:00+00:00",
+  "read_at": "2026-11-12T14:08:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -257,6 +257,7 @@
     "e": "high",
     "at": "2026-11-12T08:42:50-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -302,6 +303,7 @@
     "e": "high",
     "at": "2026-11-12T08:43:12-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -366,7 +368,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T09:03:00-05:00",
+  "at": "2026-11-12T09:08:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -614,59 +616,8 @@
    "ok"
   ]
  ],
- "stg": {
-  "at": "2026-11-12T14:03:42Z",
-  "s": {
-   "T-4149": [
-    "merging",
-    "Merging onto main",
-    1794492222033
-   ],
-   "T-3990": [
-    "merging",
-    "Merging onto main",
-    1794492222033
-   ],
-   "T-3430": [
-    "merging",
-    "Merging onto main",
-    1794492222033
-   ],
-   "T-4157": [
-    "merging",
-    "Mac tests at the main gate",
-    1794491502033
-   ],
-   "T-3807": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-3814": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-3996": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-4160": [
-    "testing",
-    "its own tests, in its copy",
-    1794491382033
-   ],
-   "T-4135": [
-    "merged",
-    "on main 8:50 AM ET",
-    1794491430000,
-    ""
-   ]
-  }
- },
  "ln": {
-  "at": "2026-11-12T14:03:42Z",
+  "at": "2026-11-12T14:06:12Z",
   "mq": {
    "n": {
     "checking": 3,
@@ -684,7 +635,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 364
+    "parked": 367
    },
    "cur": [
     [
@@ -719,20 +670,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T14:03:43Z",
-    "ld": 55.03,
+    "at": "2026-11-12T14:07:02Z",
+    "ld": 46.28,
     "c": 8,
-    "sb": 1,
     "dk": [
-     33.1,
+     31.3,
      228.3
     ],
     "ss": [
      186.7,
      953.7
-    ],
-    "sn": [
-     "iPhone 18 Pro"
     ]
    },
    "macbook": {
@@ -752,13 +699,25 @@
   "sent": "2026-11-12T13:55:59Z",
   "seconds": 70.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6825788283",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Why do several tasks have no name..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -770,10 +729,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "9:03 AM",
+  "at": "9:08 AM",
   "why": "",
-  "at_iso": "2026-11-12T14:03:00+00:00",
+  "at_iso": "2026-11-12T14:08:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:03 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:08 AM ET</p></section>"
  }
 }

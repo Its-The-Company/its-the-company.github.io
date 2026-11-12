@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T04:12:23.076806+00:00",
+ "at": "2026-11-12T04:15:27.545276+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -62,7 +62,7 @@
    "task": "[tools] T-4100 land Links field part 1",
    "model": "opus",
    "started": "2026-11-12T03:18:50.854Z",
-   "seconds": 3212,
+   "seconds": 3396,
    "finished": null
   },
   {
@@ -70,11 +70,27 @@
    "task": "[tools] T-4115 sweep must not hold session start",
    "model": "opus",
    "started": "2026-11-12T03:20:56.339Z",
-   "seconds": 3086,
+   "seconds": 3271,
+   "finished": null
+  },
+  {
+   "name": "wrenna",
+   "task": "[research] T-4120 grouping and queue methods",
+   "model": "opus",
+   "started": "2026-11-12T04:15:07.382Z",
+   "seconds": 20,
+   "finished": null
+  },
+  {
+   "name": "pernille",
+   "task": "[research] T-4121 audit ledger patterns",
+   "model": "opus",
+   "started": "2026-11-12T04:15:18.194Z",
+   "seconds": 9,
    "finished": null
   }
  ],
- "who": "Odalys x2",
+ "who": "Odalys x2, Wrenna, Pernille",
  "recent": [
   {
    "name": "pernille",
@@ -88,7 +104,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 682,
+  "runnable_count": 685,
   "blocked_count": 104
  },
  "meter": {
@@ -137,7 +153,7 @@
   "week_pct": 25.34,
   "usage_pct": 27.7,
   "work_pct": 74.0,
-  "read_at": "2026-11-12T04:12:00+00:00",
+  "read_at": "2026-11-12T04:15:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -174,7 +190,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T23:12:00-05:00",
+  "at": "2026-11-11T23:15:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -194,6 +210,22 @@
    "next": []
   },
   {
+   "name": "Wrenna",
+   "state": "running",
+   "task": "[research] T-4120 grouping and queue methods",
+   "model": "opus",
+   "since": "2026-11-12T04:15:07.382Z",
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "running",
+   "task": "[research] T-4121 audit ledger patterns",
+   "model": "opus",
+   "since": "2026-11-12T04:15:18.194Z",
+   "next": []
+  },
+  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
@@ -202,25 +234,9 @@
    "next": []
   },
   {
-   "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P1, simplifications S3...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Wrenna",
-   "state": "next",
-   "task": "Wrenna, P1, from T-3789...",
    "model": null,
    "since": null,
    "next": []
@@ -253,6 +269,24 @@
     "at": "2026-11-12T03:20:56.339Z",
     "o": "c",
     "task": "T-4115"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "Research how others group changes and keep task queues",
+    "m": "opus",
+    "at": "2026-11-12T04:15:07.382Z",
+    "o": "c",
+    "task": "T-4120"
+   },
+   {
+    "w": "Pernille",
+    "k": "research",
+    "t": "Find what marks the tasks the audit removes or rewrites",
+    "m": "opus",
+    "at": "2026-11-12T04:15:18.194Z",
+    "o": "c",
+    "task": "T-4121"
    }
   ],
   "src": "plan",
@@ -346,7 +380,7 @@
    }
   ],
   "count": {
-   "next": 682,
+   "next": 685,
    "wait": 41,
    "blocked": 63,
    "you": 15
@@ -416,23 +450,23 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T04:12:05Z",
+  "at": "2026-11-12T04:15:09Z",
   "s": {
    "T-4097": [
     "mergeq",
     "1st to merge",
-    1794456365194
+    1794456369070
    ],
    "T-4100": [
     "testing",
     "its own tests, in its copy",
-    1794456545194
+    1794456789070
    ]
   }
  },
  "reply": {
-  "sent": "2026-11-12T03:58:46Z",
-  "seconds": 82.0
+  "sent": "2026-11-12T04:13:05Z",
+  "seconds": 104.0
  },
  "inbox": [],
  "trimmed": [
@@ -448,13 +482,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 4,
   "lanes": 0,
-  "total": 2,
-  "at": "11:12 PM",
+  "total": 4,
+  "at": "11:15 PM",
   "why": "",
-  "at_iso": "2026-11-12T04:12:00+00:00",
+  "at_iso": "2026-11-12T04:15:00+00:00",
   "started": "10:17 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:17 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:12 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 10:17 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:15 PM ET</p></section>"
  }
 }

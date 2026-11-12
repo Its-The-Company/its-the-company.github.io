@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T11:45:31.405812+00:00",
+ "at": "2026-11-12T11:48:35.605170+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -114,7 +114,7 @@
    "task": "[build] T-4152 overrun premade records progress",
    "model": "opus",
    "started": "2026-11-12T11:18:01.171Z",
-   "seconds": 1650,
+   "seconds": 1834,
    "finished": null,
    "effort": "high"
   }
@@ -149,7 +149,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 604,
+  "runnable_count": 603,
   "blocked_count": 85
  },
  "meter": {
@@ -198,7 +198,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T11:45:00+00:00",
+  "read_at": "2026-11-12T11:48:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -352,7 +352,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T06:45:00-05:00",
+  "at": "2026-11-12T06:48:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -501,6 +501,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The test-only memory-overrun widget now writes down how much memory it holds before each step,...",
+    "at": "2026-11-12T06:48:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "The usage meter reports its reset time slightly differently on every reading, so the Fable pause...",
     "at": "2026-11-12T06:19:00-05:00"
@@ -509,22 +514,21 @@
     "w": "Idris+pernille",
     "t": "Build 5 of the app, with a free tester-only switch that unlocks Pro so the Investors can place...",
     "at": "2026-11-12T06:17:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The test-only memory-overrun widget must hold 64 MiB at once to prove the widget limit (G3). A...",
-    "at": "2026-11-12T05:59:00-05:00"
    }
   ],
   "count": {
-   "next": 604,
+   "next": 603,
    "wait": 40,
    "blocked": 45,
    "you": 14
   },
   "fin": {
-   "n": 6,
+   "n": 7,
    "rows": [
+    [
+     "T-4152",
+     "Record how far the overrun..."
+    ],
     [
      "T-4150",
      "Pause Fable sessions before..."
@@ -544,10 +548,6 @@
     [
      "T-3810",
      "Merge on the internal disk..."
-    ],
-    [
-     "T-3710",
-     "Measure Monday against the..."
     ]
    ]
   }
@@ -587,17 +587,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T11:45:25Z",
+  "at": "2026-11-12T11:48:35Z",
   "s": {
    "T-3953": [
     "merging",
     "Host checks on the Mac mini \u00b7 5 groups of tests done",
-    1794483385302
+    1794483395605
    ],
    "T-4152": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    "merged",
+    "on main 6:48 AM ET",
+    1794484083000,
+    ""
    ],
    "T-3887": [
     "merged",
@@ -626,7 +627,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T11:45:25Z",
+  "at": "2026-11-12T11:48:35Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -638,13 +639,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 9,
+    "checking": 12,
     "inline": null,
-    "conflicted": 55,
+    "conflicted": 58,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 213
+    "parked": 216
    },
    "cur": [
     [
@@ -653,7 +654,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     9
+     12
     ]
    ],
    "ld": [
@@ -663,27 +664,27 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T11:45:22Z",
-    "ld": 7.39,
+    "at": "2026-11-12T11:48:36Z",
+    "ld": 6.79,
     "c": 8,
     "sb": 0,
     "dk": [
-     28.1,
+     29.0,
      228.3
     ],
     "ss": [
-     182.7,
+     184.8,
      953.7
     ],
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-12T11:40:40Z",
-    "ld": 1.89,
+    "at": "2026-11-12T11:47:42Z",
+    "ld": 1.5,
     "c": 12,
     "sb": 0,
     "dk": [
-     397.3,
+     397.0,
      926.4
     ],
     "sn": []
@@ -703,6 +704,7 @@
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -710,10 +712,10 @@
   "main": 1,
   "lanes": 4,
   "total": 5,
-  "at": "6:45 AM",
+  "at": "6:48 AM",
   "why": "",
-  "at_iso": "2026-11-12T11:45:00+00:00",
+  "at_iso": "2026-11-12T11:48:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:45 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:48 AM ET</p></section>"
  }
 }

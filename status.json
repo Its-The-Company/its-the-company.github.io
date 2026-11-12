@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T16:14:24.002336+00:00",
+ "at": "2026-11-12T16:17:26.165603+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -105,7 +105,7 @@
     "why": "did not merge cleanly"
    }
   ],
-  "landed": 63,
+  "landed": 62,
   "failed": 10
  },
  "workers": [
@@ -114,7 +114,7 @@
    "task": "[tools] T-4157 Fable-only accounts, second change",
    "model": "opus",
    "started": "2026-11-12T15:15:18.260Z",
-   "seconds": 3545,
+   "seconds": 3727,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
    "started": "2026-11-12T15:15:25.110Z",
-   "seconds": 3538,
+   "seconds": 3721,
    "finished": null,
    "effort": "high"
   },
@@ -132,7 +132,7 @@
    "task": "[site] T-4162 a name for every task",
    "model": "opus",
    "started": "2026-11-12T15:15:30.908Z",
-   "seconds": 3533,
+   "seconds": 3715,
    "finished": null,
    "effort": "high"
   },
@@ -141,7 +141,7 @@
    "task": "[build] T-3784 bridge tests hang on Python 3.9",
    "model": "opus",
    "started": "2026-11-12T15:36:55.299Z",
-   "seconds": 2248,
+   "seconds": 2430,
    "finished": null,
    "effort": "high"
   },
@@ -150,7 +150,7 @@
    "task": "[build] T-4176 New File must not empty a same-named file",
    "model": "opus",
    "started": "2026-11-12T15:52:56.393Z",
-   "seconds": 1287,
+   "seconds": 1469,
    "finished": null,
    "effort": "high"
   }
@@ -193,7 +193,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 607,
+  "runnable_count": 606,
   "blocked_count": 98
  },
  "meter": {
@@ -242,7 +242,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T16:14:00+00:00",
+  "read_at": "2026-11-12T16:17:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -279,7 +279,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T11:14:00-05:00",
+  "at": "2026-11-12T11:17:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -471,6 +471,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "The Python 3.9 test run no longer hangs: one test now keeps its compiled-file writes in its own...",
+    "at": "2026-11-12T11:17:00-05:00"
+   },
+   {
     "w": "Ines",
     "t": "The first pass over the app tasks in the queue gave 102 of them a written verdict with reason...",
     "at": "2026-11-12T10:47:00-05:00"
@@ -479,22 +484,21 @@
     "w": "Ines",
     "t": "Every app task in the queue, apart from the review tasks a later pass judges, now has a written...",
     "at": "2026-11-12T10:47:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "The second pass over the app tasks in the queue gave 74 of them a written verdict with reason...",
-    "at": "2026-11-12T10:47:00-05:00"
    }
   ],
   "count": {
-   "next": 607,
+   "next": 606,
    "wait": 40,
    "blocked": 58,
    "you": 14
   },
   "fin": {
-   "n": 5,
+   "n": 6,
    "rows": [
+    [
+     "T-3784",
+     "Stop the bridge host tests..."
+    ],
     [
      "T-4096",
      "Judge the app lines of the..."
@@ -557,32 +561,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T16:14:18Z",
+  "at": "2026-11-12T16:17:26Z",
   "s": {
    "T-4176": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    "merging",
+    "Mac tests at the main gate",
+    1794500186165
    ],
    "T-4162": [
     "testing",
     "its own tests, in its copy",
-    1794498378132
+    1794498386165
    ],
    "T-3784": [
     "testing",
     "its own tests, in its copy",
-    1794499878132
+    1794499886165
    ],
    "T-4157": [
-    "testing",
-    "its own tests, in its copy",
-    1794496638132
+    "merged",
+    "on main 9:05 AM ET",
+    1794492359000,
+    "Odalys"
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T16:14:18Z",
+  "at": "2026-11-12T16:17:26Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -590,17 +595,17 @@
     "conflicted": 3,
     "failed": 0,
     "held": 0,
-    "retry": 0,
-    "parked": 4
+    "retry": 1,
+    "parked": 3
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 72,
+    "conflicted": 75,
     "failed": null,
     "held": null,
-    "retry": null,
-    "parked": 70
+    "retry": 3,
+    "parked": 84
    },
    "cur": [],
    "ld": [
@@ -610,8 +615,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T16:13:31Z",
-    "ld": 5.96,
+    "at": "2026-11-12T16:17:01Z",
+    "ld": 4.89,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -627,12 +632,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-12T16:08:39Z",
-    "ld": 0.73,
+    "at": "2026-11-12T16:15:47Z",
+    "ld": 1.85,
     "c": 12,
     "sb": 0,
     "dk": [
-     396.3,
+     396.1,
      926.4
     ],
     "sn": []
@@ -660,10 +665,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "11:14 AM",
+  "at": "11:17 AM",
   "why": "",
-  "at_iso": "2026-11-12T16:14:00+00:00",
+  "at_iso": "2026-11-12T16:17:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:14 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:17 AM ET</p></section>"
  }
 }

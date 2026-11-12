@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T16:29:35.352952+00:00",
+ "at": "2026-11-12T16:32:36.081616+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -114,7 +114,7 @@
    "task": "[tools] T-4157 Fable-only accounts, second change",
    "model": "opus",
    "started": "2026-11-12T15:15:18.260Z",
-   "seconds": 4457,
+   "seconds": 4637,
    "finished": null,
    "effort": "high"
   },
@@ -123,16 +123,7 @@
    "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
    "started": "2026-11-12T15:15:25.110Z",
-   "seconds": 4450,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "maren",
-   "task": "[site] T-4162 a name for every task",
-   "model": "opus",
-   "started": "2026-11-12T15:15:30.908Z",
-   "seconds": 4444,
+   "seconds": 4630,
    "finished": null,
    "effort": "high"
   },
@@ -141,13 +132,39 @@
    "task": "[build] T-4176 New File must not empty a same-named file",
    "model": "opus",
    "started": "2026-11-12T15:52:56.393Z",
-   "seconds": 2198,
+   "seconds": 2379,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-2282 Settings screen against the design",
+   "model": "opus",
+   "started": "2026-11-12T16:32:05.577Z",
+   "seconds": 30,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[site] T-4108 Issues badge stale count flash",
+   "model": "opus",
+   "started": "2026-11-12T16:32:11.872Z",
+   "seconds": 24,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2, Maren, Idris",
+ "who": "Odalys x2, Idris, Maren x2",
  "recent": [
+  {
+   "name": "maren",
+   "task": "[site] T-4162 a name for every task",
+   "model": "opus",
+   "started": "2026-11-12T15:15:30.908Z",
+   "seconds": null,
+   "finished": "2026-11-12T16:31:24.801000+00:00"
+  },
   {
    "name": "idris",
    "task": "[review] T-3789 run history privacy wording",
@@ -171,37 +188,29 @@
    "started": "2026-11-12T15:36:55.299Z",
    "seconds": null,
    "finished": "2026-11-12T16:17:39.662000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3757 hold background task for unstarted rows",
-   "model": "opus",
-   "started": "2026-11-12T15:15:38.458Z",
-   "seconds": null,
-   "finished": "2026-11-12T15:52:36.925000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 604,
+  "runnable_count": 603,
   "blocked_count": 98
  },
  "meter": {
   "five_hour": {
-   "pct": 26.0,
+   "pct": 27.0,
    "resets_at": "2026-11-12T12:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T11:23:45.114412-05:00",
+   "read_at": "2026-11-12T11:29:53.973722-05:00",
    "source": "live",
-   "left": 74.0,
+   "left": 73.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 74.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T11:23:45.114412-05:00",
+   "read_at": "2026-11-12T11:29:53.973722-05:00",
    "source": "live",
    "left": 26.0,
    "left_words": "of your weekly allowance left"
@@ -213,7 +222,7 @@
    "read_at": "2026-11-12T10:12:53.677669-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T11:23:45.114412-05:00"
+  "read_at": "2026-11-12T11:29:53.973722-05:00"
  },
  "ui": {
   "week_pct": 0.24,
@@ -233,7 +242,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T16:29:00+00:00",
+  "read_at": "2026-11-12T16:32:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -254,7 +263,7 @@
   }
  ],
  "disk": {
-  "free_gb": 29,
+  "free_gb": 28,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -263,14 +272,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T11:23:00-05:00",
+   "at": "2026-11-12T11:29:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T11:29:00-05:00",
+  "at": "2026-11-12T11:32:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -291,20 +300,20 @@
    "effort": "high"
   },
   {
-   "name": "Maren",
-   "state": "running",
-   "task": "[site] T-4162 a name for every task",
-   "model": "opus",
-   "since": "2026-11-12T15:15:30.908Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "running",
    "task": "[build] T-4176 New File must not empty a same-named file",
    "model": "opus",
    "since": "2026-11-12T15:52:56.393Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Maren",
+   "state": "running",
+   "task": "[design] T-2282 Settings screen against the design",
+   "model": "opus",
+   "since": "2026-11-12T16:32:05.577Z",
    "next": [],
    "effort": "high"
   },
@@ -356,16 +365,6 @@
     "task": "T-4160"
    },
    {
-    "w": "Maren",
-    "k": "site",
-    "t": "Show a name for every task on the site",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T15:15:30.908Z",
-    "o": "i",
-    "task": "T-4162"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Stop New File emptying a same-named file",
@@ -374,6 +373,26 @@
     "at": "2026-11-12T15:52:56.393Z",
     "o": "c",
     "task": "T-4176"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Check the Settings screen against the design",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T16:32:05.577Z",
+    "o": "c",
+    "task": "T-2282"
+   },
+   {
+    "w": "Maren",
+    "k": "site",
+    "t": "Stop the Issues badge flashing a stale count",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T16:32:11.872Z",
+    "o": "i",
+    "task": "T-4108"
    }
   ],
   "src": "plan",
@@ -405,13 +424,6 @@
     "t": "Prune stale tasks from the board",
     "s": "next",
     "o": "c"
-   },
-   {
-    "w": "Maren",
-    "k": "site",
-    "t": "Show a name for every task on the site",
-    "s": "next",
-    "o": "i"
    },
    {
     "w": "Pernille",
@@ -447,9 +459,21 @@
     "t": "Find every slowdown the company built into...",
     "s": "next",
     "o": "i"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Regroup the app queue into feature-sized pieces",
+    "s": "next",
+    "o": "i"
    }
   ],
   "done": [
+   {
+    "w": "Maren",
+    "t": "Home's In flight cards and This Session now look up every task's name in the same place,...",
+    "at": "2026-11-12T11:30:00-05:00"
+   },
    {
     "w": "Idris",
     "t": "The draft privacy policy now says what the app really does: old run history is checked for...",
@@ -459,22 +483,21 @@
     "w": "Idris",
     "t": "When a widget's run never starts (no script, Python down, queue refused, a step timed out), the...",
     "at": "2026-11-12T11:21:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "PASS. Idris's fix for T-3757 (unstarted widget runs left their log row without asking iOS for...",
-    "at": "2026-11-12T11:21:00-05:00"
    }
   ],
   "count": {
-   "next": 604,
+   "next": 603,
    "wait": 40,
    "blocked": 58,
    "you": 14
   },
   "fin": {
-   "n": 9,
+   "n": 10,
    "rows": [
+    [
+     "T-4162",
+     "Show a name for every task..."
+    ],
     [
      "T-3789",
      "Check the run history..."
@@ -494,10 +517,6 @@
     [
      "T-4096",
      "Judge the app lines of the..."
-    ],
-    [
-     "T-4114",
-     "Judge the last app lines of..."
     ]
    ]
   }
@@ -541,17 +560,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T16:29:22Z",
+  "at": "2026-11-12T16:32:29Z",
   "s": {
    "T-4176": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
-   ],
-   "T-4162": [
-    "merging",
-    "Mac tests at the main gate",
-    1794500962542
    ],
    "T-4157": [
     "merged",
@@ -562,7 +576,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T16:29:22Z",
+  "at": "2026-11-12T16:32:29Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -576,11 +590,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 87,
+    "conflicted": 90,
     "failed": null,
     "held": null,
-    "retry": 15,
-    "parked": 96
+    "retry": 18,
+    "parked": 99
    },
    "cur": [],
    "ld": [
@@ -590,12 +604,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T16:29:23Z",
-    "ld": 2.85,
+    "at": "2026-11-12T16:32:06Z",
+    "ld": 1.91,
     "c": 8,
     "sb": 1,
     "dk": [
-     28.5,
+     28.6,
      228.3
     ],
     "ss": [
@@ -638,13 +652,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 5,
   "lanes": 0,
-  "total": 4,
-  "at": "11:29 AM",
+  "total": 5,
+  "at": "11:32 AM",
   "why": "",
-  "at_iso": "2026-11-12T16:29:00+00:00",
+  "at_iso": "2026-11-12T16:32:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:29 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:32 AM ET</p></section>"
  }
 }

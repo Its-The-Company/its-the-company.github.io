@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T23:26:44.919756+00:00",
+ "at": "2026-11-12T23:30:02.030039+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
    "task": "[build] T-4215 gate launcher editor in Release",
    "model": "opus",
    "started": "2026-11-12T22:33:44.265Z",
-   "seconds": 3180,
+   "seconds": 3377,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +105,7 @@
    "task": "[build] T-4216 add-app slot overwrite race",
    "model": "opus",
    "started": "2026-11-12T22:33:49.320Z",
-   "seconds": 3175,
+   "seconds": 3372,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +114,7 @@
    "task": "[build] T-4218 redraw launcher after slot edit",
    "model": "opus",
    "started": "2026-11-12T23:21:24.535Z",
-   "seconds": 320,
+   "seconds": 517,
    "finished": null,
    "effort": "high"
   }
@@ -206,7 +206,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-12T23:26:00+00:00",
+  "read_at": "2026-11-12T23:30:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -243,7 +243,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T18:26:00-05:00",
+  "at": "2026-11-12T18:30:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -502,7 +502,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T23:26:28Z",
+  "at": "2026-11-12T23:30:02Z",
   "s": {
    "T-4215": [
     "mergetest",
@@ -512,12 +512,12 @@
    "T-4216": [
     "mergeq",
     "waiting for the main gate",
-    1794525688151
+    1794525662030
    ],
    "T-4218": [
     "testing",
-    "its own tests, in its copy",
-    1794525928151
+    "Mac Mini \u00b7 test",
+    null
    ]
   },
   "nm": {
@@ -527,7 +527,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T23:26:28Z",
+  "at": "2026-11-12T23:30:02Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -541,11 +541,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 469,
+    "conflicted": 472,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 513
+    "parked": 516
    },
    "cur": [],
    "ld": [
@@ -555,19 +555,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T23:25:59Z",
-    "ld": 1.3,
+    "at": "2026-11-12T23:30:11Z",
+    "ld": 11.22,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     23.8,
+     23.6,
      228.3
     ],
     "ss": [
      185.0,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 18 Pro"
+    ]
    },
    "macbook": {
     "at": "2026-11-12T23:24:11Z",
@@ -615,10 +617,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "6:26 PM",
+  "at": "6:30 PM",
   "why": "",
-  "at_iso": "2026-11-12T23:26:00+00:00",
+  "at_iso": "2026-11-12T23:30:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:26 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:30 PM ET</p></section>"
  }
 }

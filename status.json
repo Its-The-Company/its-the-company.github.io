@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-12T06:16:46.617367+00:00",
+ "at": "2026-11-12T06:19:48.679986+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T00:58:32-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-3994",
+    "name": "Keep the main copy quiet with one way in",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794464289
+   },
    {
     "t": "T-3846",
     "name": "Find why the MacBook runner stopped checking in",
@@ -65,7 +73,7 @@
     "why": "did not merge cleanly"
    }
   ],
-  "landed": 6,
+  "landed": 7,
   "failed": 1
  },
  "workers": [
@@ -74,7 +82,7 @@
    "task": "[tools] T-4125 T-4128 Fable 5.2 lane setting and pause near limit",
    "model": "opus",
    "started": "2026-11-12T06:06:44.388Z",
-   "seconds": 602,
+   "seconds": 784,
    "finished": null,
    "effort": "high"
   },
@@ -83,7 +91,7 @@
    "task": "[build] T-4093 tester-only Pro switch for TestFlight",
    "model": "opus",
    "started": "2026-11-12T06:08:52.015Z",
-   "seconds": 474,
+   "seconds": 656,
    "finished": null,
    "effort": "high"
   }
@@ -167,7 +175,7 @@
   "week_pct": 27.44,
   "usage_pct": 28.7,
   "work_pct": 74.0,
-  "read_at": "2026-11-12T06:16:00+00:00",
+  "read_at": "2026-11-12T06:19:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -219,13 +227,33 @@
     "src": "plan-a"
    },
    {
-    "lane": "b2",
-    "task": "T-3994",
-    "w": "Operator",
-    "k": "tools",
-    "t": "Keep the main copy quiet with one way in",
+    "lane": "b",
+    "task": "T-3867",
+    "w": "Pernille",
+    "k": "test",
+    "t": "Make the three red guard tests green",
     "m": "opus",
     "e": "high",
+    "at": "2026-11-12T01:19:13-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-3963",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Merge faster than a Spread session makes changes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T01:19:13-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-3994",
+    "t": "Keep the main copy quiet with one way in",
     "at": "2026-11-12T01:14:12-05:00",
     "n": "Jeremy",
     "d": 1,
@@ -279,7 +307,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T01:16:00-05:00",
+  "at": "2026-11-12T01:19:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -440,6 +468,11 @@
   "done": [
    {
     "w": "Operator",
+    "t": "All four parts of phase 2 are on main: records are committed in batches, code reaches main by...",
+    "at": "2026-11-12T01:18:00-05:00"
+   },
+   {
+    "w": "Operator",
     "t": "Merge-queue-only mode, the hold that stopped all new work while too many finished tasks waited...",
     "at": "2026-11-12T01:05:00-05:00"
    },
@@ -447,11 +480,6 @@
     "w": "Odalys",
     "t": "The hourly disk clean-up that runs between work sessions can no longer keep the next session...",
     "at": "2026-11-11T23:44:00-05:00"
-   },
-   {
-    "w": "Wrenna",
-    "t": "Published methods show grouping saves iPhone test runs only when few changes fail, so the best...",
-    "at": "2026-11-11T23:26:00-05:00"
    }
   ],
   "count": {
@@ -461,8 +489,13 @@
    "you": 14
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 1,
+   "rows": [
+    [
+     "T-3994",
+     "Keep the main copy quiet..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -500,12 +533,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T06:16:46Z",
+  "at": "2026-11-12T06:19:36Z",
   "s": {
    "T-4093": [
     "testing",
     "Mac Mini \u00b7 test",
     null
+   ],
+   "T-3994": [
+    "merged",
+    "on main 1:17 AM ET",
+    1794464253000,
+    ""
    ],
    "T-3846": [
     "merged",
@@ -524,6 +563,7 @@
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -532,12 +572,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 3,
-  "total": 5,
-  "at": "1:16 AM",
+  "lanes": 4,
+  "total": 6,
+  "at": "1:19 AM",
   "why": "",
-  "at_iso": "2026-11-12T06:16:00+00:00",
+  "at_iso": "2026-11-12T06:19:00+00:00",
   "started": "12:58 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 1:16 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:19 AM ET</p></section>"
  }
 }

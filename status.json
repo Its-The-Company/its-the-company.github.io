@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T08:12:06.311620+00:00",
+ "at": "2026-11-12T08:15:09.522077+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -105,7 +105,7 @@
    "task": "[build] T-3143 template test fix",
    "model": "opus",
    "started": "2026-11-12T08:03:43.753Z",
-   "seconds": 502,
+   "seconds": 685,
    "finished": null,
    "effort": "high"
   },
@@ -114,22 +114,30 @@
    "task": "[tools] T-4129 retire Set aside stage",
    "model": "opus",
    "started": "2026-11-12T08:04:00.395Z",
-   "seconds": 485,
+   "seconds": 669,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "pernille",
-   "task": "[review] T-3836 gate premade review",
+   "task": "[review] T-3823 OpenSSL symbol check",
    "model": "opus",
-   "started": "2026-11-12T08:08:23.157Z",
-   "seconds": 223,
+   "started": "2026-11-12T08:14:38.977Z",
+   "seconds": 30,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Idris, Odalys, Pernille",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-3836 gate premade review",
+   "model": "opus",
+   "started": "2026-11-12T08:08:23.157Z",
+   "seconds": null,
+   "finished": "2026-11-12T08:14:19.488000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4053 review before TestFlight",
@@ -147,19 +155,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 4.0,
+   "pct": 5.0,
    "resets_at": "2026-11-12T07:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T03:08:10.929975-05:00",
+   "read_at": "2026-11-12T03:14:22.893180-05:00",
    "source": "live",
-   "left": 96.0,
+   "left": 95.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 69.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T03:08:10.929975-05:00",
+   "read_at": "2026-11-12T03:14:22.893180-05:00",
    "source": "live",
    "left": 31.0,
    "left_words": "of your weekly allowance left"
@@ -171,7 +179,7 @@
    "read_at": "2026-11-12T02:56:33.273935-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T03:08:10.929975-05:00"
+  "read_at": "2026-11-12T03:14:22.893180-05:00"
  },
  "ui": {
   "week_pct": 0.243,
@@ -191,7 +199,7 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T08:12:00+00:00",
+  "read_at": "2026-11-12T08:15:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -265,6 +273,7 @@
     "e": "high",
     "at": "2026-11-12T03:05:59-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -309,14 +318,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T03:08:00-05:00",
+   "at": "2026-11-12T03:14:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T03:12:00-05:00",
+  "at": "2026-11-12T03:15:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -348,9 +357,9 @@
   {
    "name": "Pernille",
    "state": "running",
-   "task": "[review] T-3836 gate premade review",
+   "task": "[review] T-3823 OpenSSL symbol check",
    "model": "opus",
-   "since": "2026-11-12T08:08:23.157Z",
+   "since": "2026-11-12T08:14:38.977Z",
    "next": [],
    "effort": "high"
   },
@@ -404,12 +413,12 @@
    {
     "w": "Pernille",
     "k": "review",
-    "t": "Review the gate-only memory-overrun premade",
+    "t": "Review the OpenSSL symbol check",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-12T08:08:23.157Z",
+    "at": "2026-11-12T08:14:38.977Z",
     "o": "c",
-    "task": "T-3836"
+    "task": "T-3823"
    }
   ],
   "src": "plan",
@@ -553,47 +562,42 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T08:11:53Z",
+  "at": "2026-11-12T08:14:49Z",
   "s": {
    "T-3870": [
     "mergeq",
     "1st to merge",
-    1794470813484
+    1794470809616
    ],
    "T-4091": [
     "mergeq",
     "2nd to merge",
-    1794469313484
+    1794469309616
    ],
    "T-3888": [
     "mergeq",
     "3rd to merge",
-    1794469493484
+    1794469489616
    ],
    "T-3950": [
     "mergeq",
     "5th to merge",
-    1794470453484
+    1794470449616
    ],
    "T-4129": [
     "testing",
     "its own tests, in its copy",
-    1794471053484
-   ],
-   "T-3836": [
-    "testing",
-    "its own tests, in its copy",
-    1794471113484
+    1794471049616
    ],
    "T-3143": [
     "testq",
     "2nd for a Simulator",
-    1794470753484
+    1794470749616
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T08:11:53Z",
+  "at": "2026-11-12T08:14:49Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -606,12 +610,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 19,
-    "conflicted": 15,
+    "inline": 22,
+    "conflicted": 18,
     "failed": null,
-    "held": 2750,
+    "held": 2753,
     "retry": null,
-    "parked": 4559
+    "parked": 4562
    },
    "cur": [],
    "ld": [
@@ -621,12 +625,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T08:11:28Z",
-    "ld": 3.94,
+    "at": "2026-11-12T08:14:50Z",
+    "ld": 3.6,
     "c": 8,
     "sb": 1,
     "dk": [
-     36.9,
+     36.5,
      228.3
     ],
     "ss": [
@@ -670,10 +674,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "3:12 AM",
+  "at": "3:15 AM",
   "why": "",
-  "at_iso": "2026-11-12T08:12:00+00:00",
+  "at_iso": "2026-11-12T08:15:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:12 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:15 AM ET</p></section>"
  }
 }

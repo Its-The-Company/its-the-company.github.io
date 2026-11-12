@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T07:17:49.927731+00:00",
+ "at": "2026-11-12T07:20:53.086836+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -109,7 +109,7 @@
    "task": "[tools] T-4125 T-4128 Fable 5.2 lane setting and pause near limit",
    "model": "opus",
    "started": "2026-11-12T06:06:44.388Z",
-   "seconds": 4265,
+   "seconds": 4448,
    "finished": null,
    "effort": "high"
   }
@@ -201,8 +201,20 @@
   "week_pct": 27.44,
   "usage_pct": 28.7,
   "work_pct": 74.0,
-  "read_at": "2026-11-12T07:17:00+00:00",
+  "read_at": "2026-11-12T07:20:00+00:00",
   "running": [
+   {
+    "lane": "a",
+    "task": "T-4114",
+    "w": "Ines",
+    "k": "ops",
+    "t": "Judge the last app lines of the task queue",
+    "m": "opus",
+    "e": "xhigh",
+    "at": "2026-11-12T02:18:14-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
    {
     "lane": "a2",
     "task": "T-3997",
@@ -308,7 +320,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T02:17:00-05:00",
+  "at": "2026-11-12T02:20:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -543,27 +555,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T07:17:42Z",
+  "at": "2026-11-12T07:20:39Z",
   "s": {
    "T-4091": [
     "merging",
     "Host checks on the Mac mini",
-    1794467802986
+    1794467799950
    ],
    "T-3986": [
     "mergeq",
     "1st to merge",
-    1794467442986
+    1794467439950
    ],
    "T-3865": [
     "mergeq",
     "1st to merge",
-    1794467442986
+    1794467439950
    ],
    "T-4128": [
     "testing",
     "its own tests, in its copy",
-    1794467742986
+    1794467739950
    ],
    "T-4125": [
     "merged",
@@ -599,12 +611,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 3,
-  "total": 4,
-  "at": "2:17 AM",
+  "lanes": 4,
+  "total": 5,
+  "at": "2:20 AM",
   "why": "",
-  "at_iso": "2026-11-12T07:17:00+00:00",
+  "at_iso": "2026-11-12T07:20:00+00:00",
   "started": "12:58 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 2:17 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:20 AM ET</p></section>"
  }
 }

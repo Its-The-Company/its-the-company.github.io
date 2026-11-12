@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T02:42:29.527541+00:00",
+ "at": "2026-11-12T02:45:33.380766+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -36,19 +36,17 @@
   "landed": 2,
   "failed": 1
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4100 typed Links field in board_tick",
    "model": "opus",
    "started": "2026-11-12T01:26:11.969Z",
-   "seconds": 4577,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-12T02:43:42.017000+00:00"
+  },
   {
    "name": "ines",
    "task": "[ops] T-4101 apply the 8 Investor-agreed audit changes",
@@ -72,14 +70,6 @@
    "started": "2026-11-12T00:10:55.125Z",
    "seconds": null,
    "finished": "2026-11-12T01:31:37.658000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4100 ledger apply for the queue audit",
-   "model": "opus",
-   "started": "2026-11-12T01:12:44.813Z",
-   "seconds": null,
-   "finished": "2026-11-12T01:25:41.140000+00:00"
   }
  ],
  "queue": {
@@ -134,7 +124,7 @@
   "week_pct": 25.01,
   "usage_pct": 27.8,
   "work_pct": 74.5,
-  "read_at": "2026-11-12T02:42:00+00:00",
+  "read_at": "2026-11-12T02:45:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -171,7 +161,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T21:42:00-05:00",
+  "at": "2026-11-11T21:45:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -182,15 +172,6 @@
   "at": "2026-11-11T19:09:39.114198-05:00"
  },
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4100 typed Links field in board_tick",
-   "model": "opus",
-   "since": "2026-11-12T01:26:11.969Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -203,6 +184,14 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -233,18 +222,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Build the typed Links field and the ledger apply",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T01:26:11.969Z",
-    "o": "c",
-    "task": "T-4100"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -424,13 +402,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "9:42 PM",
-  "why": "",
-  "at_iso": "2026-11-12T02:42:00+00:00",
+  "total": 0,
+  "at": "9:45 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-12T02:45:00+00:00",
   "started": "7:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 7:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:42 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 7:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:45 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

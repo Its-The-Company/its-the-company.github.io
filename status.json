@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T13:38:31.518670+00:00",
+ "at": "2026-11-12T13:41:35.384124+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -120,7 +120,7 @@
    "task": "[tools] T-4157 account a takes only Fable lines",
    "model": "opus",
    "started": "2026-11-12T13:17:49.294Z",
-   "seconds": 1242,
+   "seconds": 1426,
    "finished": null,
    "effort": "high"
   }
@@ -212,22 +212,8 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T13:38:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-4127",
-    "w": "Ines",
-    "k": "plan",
-    "t": "Run the Restructuring on Evan's account",
-    "m": "opus",
-    "e": "xhigh",
-    "at": "2026-11-12T08:26:48-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-12T13:41:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -263,7 +249,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T08:38:00-05:00",
+  "at": "2026-11-12T08:41:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -502,33 +488,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T13:38:14Z",
+  "at": "2026-11-12T13:41:16Z",
   "s": {
    "T-4149": [
     "merging",
     "Merging onto main",
-    1794490694014
+    1794490876737
    ],
    "T-3990": [
     "merging",
     "Merging onto main",
-    1794490694014
+    1794490876737
    ],
    "T-3430": [
     "merging",
     "Merging onto main",
-    1794490694014
-   ],
-   "T-4127": [
-    "merged",
-    "on main 3:48 AM ET",
-    1794473323000,
-    ""
+    1794490876737
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T13:38:14Z",
+  "at": "2026-11-12T13:41:16Z",
   "mq": {
    "n": {
     "checking": 3,
@@ -537,7 +517,7 @@
     "failed": 0,
     "held": 0,
     "retry": 0,
-    "parked": 1
+    "parked": 2
    },
    "m": {
     "checking": 0,
@@ -546,7 +526,7 @@
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 339
+    "parked": 171
    },
    "cur": [
     [
@@ -581,8 +561,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T13:37:29Z",
-    "ld": 1.54,
+    "at": "2026-11-12T13:41:17Z",
+    "ld": 1.05,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -609,8 +589,8 @@
   }
  },
  "reply": {
-  "sent": "2026-11-12T12:59:41Z",
-  "seconds": 50.0
+  "sent": "2026-11-12T13:40:22Z",
+  "seconds": 61.0
  },
  "inbox": [],
  "trimmed": [
@@ -628,12 +608,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 1,
-  "total": 2,
-  "at": "8:38 AM",
+  "lanes": 0,
+  "total": 1,
+  "at": "8:41 AM",
   "why": "",
-  "at_iso": "2026-11-12T13:38:00+00:00",
+  "at_iso": "2026-11-12T13:41:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:38 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:41 AM ET</p></section>"
  }
 }

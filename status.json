@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T01:10:51.966290+00:00",
+ "at": "2026-11-12T01:13:55.386019+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -34,12 +34,21 @@
    "task": "[tools] T-4084 supervisor usage stop: finish and land",
    "model": "opus",
    "started": "2026-11-12T00:10:55.125Z",
-   "seconds": 3596,
+   "seconds": 3780,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4100 ledger apply for the queue audit",
+   "model": "opus",
+   "started": "2026-11-12T01:12:44.813Z",
+   "seconds": 70,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys",
+ "who": "Odalys x2",
  "recent": [
   {
    "name": "odalys",
@@ -118,7 +127,7 @@
   "week_pct": 25.01,
   "usage_pct": 27.8,
   "work_pct": 74.5,
-  "read_at": "2026-11-12T01:10:00+00:00",
+  "read_at": "2026-11-12T01:13:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -168,7 +177,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T20:10:00-05:00",
+  "at": "2026-11-11T20:13:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -240,6 +249,16 @@
     "at": "2026-11-12T00:10:55.125Z",
     "o": "c",
     "task": "T-4084"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Build the typed Links field and the ledger apply",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T01:12:44.813Z",
+    "o": "c",
+    "task": "T-4100"
    }
   ],
   "src": "plan",
@@ -391,27 +410,15 @@
   ]
  ],
  "reply": {
-  "sent": "2026-11-12T00:27:14Z",
-  "seconds": 103.0
+  "sent": "2026-11-12T01:11:34Z",
+  "seconds": 38.0
  },
- "inbox": [
-  {
-   "id": "c6811382946",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "would it help if all tasks halted on..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -419,13 +426,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 1,
-  "total": 2,
-  "at": "8:10 PM",
+  "total": 3,
+  "at": "8:13 PM",
   "why": "",
-  "at_iso": "2026-11-12T01:10:00+00:00",
+  "at_iso": "2026-11-12T01:13:00+00:00",
   "started": "7:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 7:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:10 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:13 PM ET</p></section>"
  }
 }

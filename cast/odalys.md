@@ -50,7 +50,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4011 after-number read 11-11 8:45 AM (a23d1a4355): route untried (0 sent_back rows, 0 fix/own, merge mode held lanes). Item 10 removal: NO. Re-read after 10 give_up events or 48 h of lane lands.
 - T-4012 0b48b7f25e (11-11 12:36 AM) personal_land.sh batch landed: slice 2 (no Retry line), host_keep wired, records apply 1 commit, pywidget/tools host floor, named docs/design .md runs xc. Left: retry file/re-pick/ledgers after T-4011 number. Owed: host_keep.jsonl rows; 'ops: lane records applied' count vs 72/49.
 - Unlanded patches on SSD company-scratch: T-3907 runner+main-gate; T-3962/65 (T-3962 also sim_hold, T-3967); T-3971 merge-only switch (13 files, green). T-3818 refused host_refused.
-- T-4013 ccf7ff1ed8 ticked: overdue OPTs read (scripts log/audit/t4013/). Owed: OPT-068 read 11-16; OPT-108 5-row rerun; OPT-114 load per slow job; OPT-114 dup rename waits on merge_queue_hold.txt:1095.
+- T-4013 owed: OPT-068 read 11-16; OPT-108 rerun; OPT-114 load/slow job, dup rename (hold:1095).
+- T-3986 8aba1451a9 (11-12 2 AM) on personal/a3, not landed/ticked: status ln (merge line, machines) drawn by look.js. Red on HEAD too: site_t3219 (6), site_live (1).
 - T-3974 df40f13ef4 after-number owed. T-3963 merge_rate.py untracked. T-3979 (3) lease warning, (5) Home panel.
 - Item 4: sweep in supervisor; guard tools/main_folder_guard.py landed 842051d6c9 (76/0), NOT active until Investors apply settings.diff (company-scratch/T-3995h-odalys; Operator posts). After-number: .git/main-folder-guard.jsonl rows, false refusals.
 

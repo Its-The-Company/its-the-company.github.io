@@ -368,3 +368,41 @@ if(arm!==o[1]){arm=o[1];armT=t;clearTimeout(tm);tm=setTimeout(function(){arm=nul
 if(t-armT<400)return;arm=null;clearTimeout(tm);note.textContent=S.lockSet?S.lockSet(o[1]):'Not available here.';mark()}});mark()}
 if(S.onStatus)S.onStatus.push(mark);
 d.addEventListener('toggle',function(){if(d.open)build()})});
+// T-3986 (friesevan #41 c6758405270: Home's Simulators and merge queue near-live "if possible and not costly"; light only,
+// #41 c6759690460): Bottlenecks' merge line and the Machine panel follow the status's ln (tools/site/live_stage.py
+// lines(), read with the stages every 20 s; pushed when a count moves, else with the 5-minute heartbeat) once it is newer
+// than the build; a part ln leaves out keeps the build's. The words are merge_line_html's and machine_panel._rows'.
+// The Machine bubble's Mac Mini figure follows the status's disk, its MacBook figure ln's. No read of its own: it
+// rides on the status app.js already polls. Text goes in as textContent.
+document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,bx=document.getElementById('lk-run'),B=0,NM={};if(!S||!S.onStatus)return;
+try{var lf=JSON.parse(bx&&bx.getAttribute('data-life')||'{}');B=lf.at||0;NM=lf.nm||{}}catch(e){}
+function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;p.appendChild(e);return e}
+function tx(p,x){p.appendChild(document.createTextNode(x))}
+function nm(t){var q=document.getElementById('lk-q'),a=[];if(NM[t])return NM[t];try{a=JSON.parse(q&&q.getAttribute('data-all')||'[]')}catch(e){}a=a.filter(function(x){return x[0]===t})[0];return a&&a[2]||'Name not recorded'}
+function et(t){var d=new Date(t);return isNaN(d)?'':d.toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'})+' ET'}
+function span(n){return n>=1440?Math.floor(n/1440)+' d '+Math.floor(n%1440/60)+' h':n>=60?Math.floor(n/60)+' h '+(n%60)+' min':n+' min'}
+function hrs(m){var v=m/60;return v<1?Math.round(v*60)+' min':v<100?v.toLocaleString('en-US',{minimumFractionDigits:1,maximumFractionDigits:1})+' h':Math.round(v).toLocaleString('en-US')+' h'}
+function gb(x){return Number(x).toLocaleString('en-US',{maximumFractionDigits:1})}
+function bar(c,l,v,top,t){var b,k;c.textContent='';mk(c,'span','lk-bl',l);b=mk(c,'div','lk-bar2');k=mk(mk(b,'span','lk-trk'),'i');k.style.width=(top?Math.max(0,Math.min(100,v/top*100)):0).toFixed(0)+'%';mk(b,'span','lk-v',t);mk(c,'p','meta','')}
+function merge(q,at){var r=document.getElementById('lk-mlr'),nw=document.getElementById('lk-mnow'),lm=document.getElementById('lk-mlm'),b={},n,m,tn=0,tm=0;if(!r)return;
+try{b=JSON.parse(r.getAttribute('data-ml')||'{}')}catch(e){}n=Object.assign({},b.n||{},q.n||{});m=Object.assign({},b.m||{},q.m||{});
+Object.keys(n).forEach(function(k){tn=Math.max(tn,n[k]||0);if(m[k]!=null)tm=Math.max(tm,m[k])});
+[].forEach.call(document.querySelectorAll('.lk-bnr[data-stage]'),function(w){var k=w.getAttribute('data-stage'),c=w.children;if(!(k in n)||c.length<3)return;
+bar(c[1],'Changes',n[k],tn,String(n[k]));if(m[k]!=null)bar(c[2],'Median wait',m[k],tm,hrs(m[k]));else{c[2].textContent='';mk(c[2],'span','lk-bl','Median wait');mk(c[2],'span','lk-nm','none waiting')}});
+r.textContent=r.textContent.replace(/ Read [^.]*?ET\./,' Read '+et(at)+'.');
+if(nw&&q.cur){nw.textContent='';if(!q.cur.length)tx(nw,'Nothing is being checked to merge right now.');else{tx(nw,'Being checked now: ');q.cur.forEach(function(x,i){var w=[x[1],x[2],x[3]!=null?span(x[3]):''].filter(Boolean);if(i)tx(nw,'; ');
+(x[0]||[]).forEach(function(t,j){if(j)tx(nw,', ');mk(nw,'span','idb',t);tx(nw,' '+nm(t))});if(w.length)tx(nw,' ('+w.join(', ')+')')});tx(nw,'.')}}
+if(lm&&q.ld){lm.textContent='';if(!q.ld[0])tx(lm,'Nothing has merged through the line yet today.');else{mk(lm,'b',null,String(q.ld[0]));tx(lm,' '+(q.ld[0]===1?'change has':'changes have')+' merged through the line today'+(q.ld[1]?'; the newest at '+et(q.ld[1]):'')+'.')}}}
+function put(d,t,hot){if(d){d.textContent=t;d.className=hot?'hot':''}}
+function mach(mx,at){var any=0;['mini','macbook'].forEach(function(k){var x=mx[k],c=document.getElementById('lk-mx-'+k),r={},ag,h,lc,tl;if(!x||!c)return;ag=Math.max(0,Math.floor((Date.now()-Date.parse(x.at))/6e4));if(!(ag<40))return;any=1;
+[].forEach.call(c.querySelectorAll('dt'),function(d){r[d.textContent]=d.nextElementSibling});c.classList.remove('stale');h=c.querySelector('h3 small');if(h)h.textContent=(k==='macbook'?'checked in ':'read ')+et(x.at)+', '+span(ag)+' ago';
+lc=r['Last check-in'];if(lc){tl=lc.textContent.split(';').slice(1).join(';');put(lc,et(x.at)+', '+span(ag)+' ago'+(tl?';'+tl:''))}
+if(x.dk)put(r['Internal disk'],gb(x.dk[0])+' GB free'+(x.dk[1]!=null?' of '+gb(x.dk[1])+' GB':''),x.dk[0]<10);
+if(x.ss)put(r['SSD'],x.ss==='na'?'did not answer in time':x.ss==='nc'?'not connected':gb(x.ss[0])+' GB free'+(x.ss[1]!=null?' of '+gb(x.ss[1])+' GB':''),typeof x.ss==='string');
+if(x.ld!=null)put(r['Load per core'],x.ld.toFixed(2)+' over 5 min'+(x.c!=null?', '+x.c+' cores':'')+' (1.00 = every core busy)',x.ld>1.5);
+if(x.sb!=null)put(r['Simulators'],!x.sb?'none booted':x.sb+' booted'+(x.sn&&x.sn.length?': '+x.sn.join(', '):''))});
+var pm=document.querySelector('#machine > p.meta'),lv=document.getElementById('lk-mxlv');if(any&&pm){if(!lv){lv=mk(pm,'span');lv.id='lk-mxlv'}lv.textContent=' Disk, load and Simulators follow the live status, read '+et(at)+'.'}}
+function fig(lab,v){[].forEach.call(document.querySelectorAll('.lk-bub a[href="#machine"] .lk-f > span'),function(s){var b=s.querySelector('b');if(b&&s.lastChild&&s.lastChild.nodeValue===lab)b.textContent=v})}
+function draw(st){var g=st&&st.ln,d=st&&st.disk;if(st&&Date.parse(st.at)>=B&&d&&typeof d.free_gb==='number')fig('Mac Mini',d.free_gb+' GB');
+if(!g||!(Date.parse(g.at)>=B))return;if(g.mq)merge(g.mq,g.at);if(g.mx){mach(g.mx,g.at);if(g.mx.macbook&&g.mx.macbook.dk)fig('MacBook',g.mx.macbook.dk[0]+' GB')}}
+S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});

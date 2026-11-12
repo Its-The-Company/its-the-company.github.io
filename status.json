@@ -1,19 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-12T12:43:37.017507+00:00",
+ "at": "2026-11-12T12:46:37.456694+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T05:47:30-05:00",
   "flow": [
    {
-    "t": "T-4100",
-    "name": "Build the typed Links field and the ledger apply",
-    "acct": "Personal a",
+    "t": "T-3824",
+    "name": "Use the new SanDisk SSD as the company's working disk",
+    "acct": "Personal b",
     "steps": [
      {
       "s": "testq",
-      "at": 1794486996
+      "at": 1794487468
      }
     ]
    },
@@ -29,6 +29,22 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4149",
+    "name": "Redo check the disk keeper after its first 24 hours",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794487461
+   },
+   {
+    "t": "T-4100",
+    "name": "Build the typed Links field and the ledger apply",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794487434
+   },
    {
     "t": "T-3856",
     "name": "Redo find what sends main sessions a stray SIGTERM",
@@ -94,25 +110,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794480529
-   },
-   {
-    "t": "T-3710",
-    "name": "Measure Monday against the forecast and tell the Investors",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794480463
-   },
-   {
-    "t": "T-4138",
-    "name": "Resume the queue audit and start the Restructuring",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794480171
    }
   ],
-  "landed": 49,
+  "landed": 51,
   "failed": 4
  },
  "workers": [],
@@ -154,7 +154,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 599,
+  "runnable_count": 597,
   "blocked_count": 85
  },
  "meter": {
@@ -203,7 +203,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T12:43:00+00:00",
+  "read_at": "2026-11-12T12:46:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -221,11 +221,7 @@
    {
     "lane": "a2",
     "task": "T-4149",
-    "w": "Odalys",
-    "k": "tools",
     "t": "Redo check the disk keeper after its first 24 hours",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-12T07:03:05-05:00",
     "n": "Evan",
     "d": 1,
@@ -252,6 +248,18 @@
     "m": "sonnet",
     "e": "medium",
     "at": "2026-11-12T07:03:05-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-4122",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Redesign how tasks are created and kept up to date",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T07:45:44-05:00",
     "n": "Evan",
     "src": "plan-a"
    },
@@ -329,7 +337,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T07:43:00-05:00",
+  "at": "2026-11-12T07:46:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -467,29 +475,37 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "Checked the disk keeper's first days: it missed its first day while the SSD was unreachable, has...",
+    "at": "2026-11-12T07:44:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "The disk keeper works now: since 11-10 the disk was under 30 GB for about 2 of 48 hours. It will...",
+    "at": "2026-11-12T07:44:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The Restructuring sat unstarted for two hours because its stopped session left it on a finished...",
     "at": "2026-11-12T07:31:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Home no longer shows the old-requests list, and its task list can now be sorted by when an...",
-    "at": "2026-11-12T06:49:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Home no longer shows the old-requests list, and its task list can now be sorted by when an...",
-    "at": "2026-11-12T06:49:00-05:00"
    }
   ],
   "count": {
-   "next": 599,
+   "next": 597,
    "wait": 40,
    "blocked": 45,
    "you": 14
   },
   "fin": {
-   "n": 12,
+   "n": 14,
    "rows": [
+    [
+     "T-3696",
+     "Check the disk keeper after..."
+    ],
+    [
+     "T-4149",
+     "Redo check the disk keeper..."
+    ],
     [
      "T-4154",
      "Let a pinned line use an..."
@@ -505,14 +521,6 @@
     [
      "T-4152",
      "Record how far the overrun..."
-    ],
-    [
-     "T-3834",
-     "Merge and retry parked work..."
-    ],
-    [
-     "T-3953",
-     "Redo merge and retry parked..."
     ]
    ]
   }
@@ -552,74 +560,76 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T12:43:19Z",
+  "at": "2026-11-12T12:46:37Z",
   "s": {
-   "T-4100": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 5 groups of tests done",
-    1794487039521
-   ],
    "T-3824": [
-    "mergeq",
-    "1st to merge",
-    1794485479521
+    "merging",
+    "Host checks on the Mac mini \u00b7 3 groups of tests done",
+    1794487477456
    ],
    "T-3909": [
     "mergeq",
-    "2nd to merge",
-    1794485899521
+    "1st to merge",
+    1794485917456
    ],
    "T-4149": [
-    "mergeq",
-    "3rd to merge",
-    1794486739521
+    "merged",
+    "on main 7:44 AM ET",
+    1794487441000,
+    ""
+   ],
+   "T-4100": [
+    "merged",
+    "on main 7:36 AM ET",
+    1794486993000,
+    ""
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T12:43:19Z",
+  "at": "2026-11-12T12:46:37Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 3,
-    "conflicted": 3,
+    "inline": 1,
+    "conflicted": 0,
     "failed": 1,
     "held": 0,
     "retry": 0,
     "parked": 2
    },
    "m": {
-    "checking": 6,
-    "inline": 25,
-    "conflicted": 113,
-    "failed": 7,
+    "checking": 2,
+    "inline": 28,
+    "conflicted": null,
+    "failed": 10,
     "held": null,
     "retry": null,
-    "parked": 271
+    "parked": 274
    },
    "cur": [
     [
      [
-      "T-4100"
+      "T-3824"
      ],
      "Mac tests",
      "Mac mini",
-     6
+     2
     ]
    ],
    "ld": [
-    52,
-    "2026-11-12T11:58:46Z"
+    54,
+    "2026-11-12T12:44:21Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T12:42:44Z",
-    "ld": 5.98,
+    "at": "2026-11-12T12:45:49Z",
+    "ld": 6.72,
     "c": 8,
     "sb": 0,
     "dk": [
-     31.8,
+     31.7,
      228.3
     ],
     "ss": [
@@ -661,12 +671,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 3,
-  "total": 3,
-  "at": "7:43 AM",
+  "lanes": 4,
+  "total": 4,
+  "at": "7:46 AM",
   "why": "",
-  "at_iso": "2026-11-12T12:43:00+00:00",
+  "at_iso": "2026-11-12T12:46:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:43 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:46 AM ET</p></section>"
  }
 }

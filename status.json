@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T09:04:17.079767+00:00",
+ "at": "2026-11-12T09:07:21.193995+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -98,7 +98,7 @@
    "task": "[build] T-4093 tester Pro compile flag",
    "model": "opus",
    "started": "2026-11-12T09:00:23.114Z",
-   "seconds": 233,
+   "seconds": 418,
    "finished": null,
    "effort": "high"
   },
@@ -107,7 +107,7 @@
    "task": "[tools] T-4129 no fourth state, screenshots",
    "model": "opus",
    "started": "2026-11-12T09:01:52.955Z",
-   "seconds": 144,
+   "seconds": 328,
    "finished": null,
    "effort": "high"
   }
@@ -155,21 +155,21 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 8.0,
+   "pct": 10.0,
    "resets_at": "2026-11-12T07:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T03:51:24.531763-05:00",
+   "read_at": "2026-11-12T04:04:19.340072-05:00",
    "source": "live",
-   "left": 92.0,
+   "left": 90.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 69.0,
+   "pct": 70.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T03:51:24.531763-05:00",
+   "read_at": "2026-11-12T04:04:19.340072-05:00",
    "source": "live",
-   "left": 31.0,
+   "left": 30.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -179,7 +179,7 @@
    "read_at": "2026-11-12T02:56:33.273935-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T03:51:24.531763-05:00"
+  "read_at": "2026-11-12T04:04:19.340072-05:00"
  },
  "ui": {
   "week_pct": 0.243,
@@ -199,7 +199,7 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T09:04:00+00:00",
+  "read_at": "2026-11-12T09:07:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -339,7 +339,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T04:04:00-05:00",
+  "at": "2026-11-12T04:07:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -585,13 +585,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T09:04:05Z",
+  "at": "2026-11-12T09:07:21Z",
   "s": {
    "T-4129": [
-    "merged",
-    "on main 4:00 AM ET",
-    1794474044000,
-    "Odalys"
+    "testing",
+    "its own tests, in its copy",
+    1794474381193
    ],
    "T-3884": [
     "merged",
@@ -626,7 +625,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T09:04:05Z",
+  "at": "2026-11-12T09:07:21Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -640,11 +639,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 67,
+    "conflicted": 71,
     "failed": null,
-    "held": 2802,
+    "held": 2806,
     "retry": null,
-    "parked": 3706
+    "parked": 3710
    },
    "cur": [],
    "ld": [
@@ -654,16 +653,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T09:03:17Z",
-    "ld": 5.5,
+    "at": "2026-11-12T09:06:32Z",
+    "ld": 4.95,
     "c": 8,
     "sb": 1,
     "dk": [
-     33.5,
+     33.4,
      228.3
     ],
     "ss": [
-     176.3,
+     174.3,
      953.7
     ],
     "sn": [
@@ -705,10 +704,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "4:04 AM",
+  "at": "4:07 AM",
   "why": "",
-  "at_iso": "2026-11-12T09:04:00+00:00",
+  "at_iso": "2026-11-12T09:07:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:04 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 4:07 AM ET</p></section>"
  }
 }

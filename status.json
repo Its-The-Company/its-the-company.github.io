@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T04:24:30.299007+00:00",
+ "at": "2026-11-12T04:27:32.831438+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -58,7 +58,7 @@
    "task": "[tools] T-4100 land Links field part 1",
    "model": "opus",
    "started": "2026-11-12T03:18:50.854Z",
-   "seconds": 3939,
+   "seconds": 4121,
    "finished": null
   },
   {
@@ -66,20 +66,20 @@
    "task": "[tools] T-4115 sweep must not hold session start",
    "model": "opus",
    "started": "2026-11-12T03:20:56.339Z",
-   "seconds": 3813,
+   "seconds": 3996,
    "finished": null
-  },
+  }
+ ],
+ "who": "Odalys x2",
+ "recent": [
   {
    "name": "wrenna",
    "task": "[research] T-4120 grouping and queue methods",
    "model": "opus",
    "started": "2026-11-12T04:15:07.382Z",
-   "seconds": 562,
-   "finished": null
-  }
- ],
- "who": "Odalys x2, Wrenna",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-12T04:26:52.479000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[research] T-4121 audit ledger patterns",
@@ -149,7 +149,7 @@
   "week_pct": 25.34,
   "usage_pct": 27.7,
   "work_pct": 74.0,
-  "read_at": "2026-11-12T04:24:00+00:00",
+  "read_at": "2026-11-12T04:27:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -186,7 +186,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T23:24:00-05:00",
+  "at": "2026-11-11T23:27:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -206,14 +206,6 @@
    "next": []
   },
   {
-   "name": "Wrenna",
-   "state": "running",
-   "task": "[research] T-4120 grouping and queue methods",
-   "model": "opus",
-   "since": "2026-11-12T04:15:07.382Z",
-   "next": []
-  },
-  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
@@ -225,6 +217,14 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Wrenna",
+   "state": "next",
+   "task": "Wrenna, P1, from T-3789...",
    "model": null,
    "since": null,
    "next": []
@@ -265,15 +265,6 @@
     "at": "2026-11-12T03:20:56.339Z",
     "o": "c",
     "task": "T-4115"
-   },
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Research how others group changes and keep task queues",
-    "m": "opus",
-    "at": "2026-11-12T04:15:07.382Z",
-    "o": "c",
-    "task": "T-4120"
    }
   ],
   "src": "plan",
@@ -335,21 +326,26 @@
     "o": "c"
    },
    {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Find every slowdown the company built into...",
+    "s": "next",
+    "o": "i"
+   },
+   {
     "w": "Idris",
     "k": "build",
     "t": "Add a tester-only Pro switch for TestFlight...",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Ines",
-    "k": "ops",
-    "t": "Judge the app lines of the task queue",
-    "s": "next",
-    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Wrenna",
+    "t": "Published methods show grouping saves iPhone test runs only when few changes fail, so the best...",
+    "at": "2026-11-11T23:26:00-05:00"
+   },
    {
     "w": "Pernille",
     "t": "A first study of the queue audit's 386 decisions shows simple signals that predict them, such as...",
@@ -358,11 +354,6 @@
    {
     "w": "Pernille",
     "t": "The review of how a cut session's tries are counted is done: finding F3 is closed and F1 stays...",
-    "at": "2026-11-11T23:16:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "An Investor's answer sent by email reply is now read without the quoted notification text, so a...",
     "at": "2026-11-11T23:16:00-05:00"
    }
   ],
@@ -373,8 +364,12 @@
    "you": 13
   },
   "fin": {
-   "n": 21,
+   "n": 22,
    "rows": [
+    [
+     "T-4120",
+     "Research how others group..."
+    ],
     [
      "T-4121",
      "Find what marks the tasks..."
@@ -394,10 +389,6 @@
     [
      "T-3733",
      "Give the 45 stuck spare..."
-    ],
-    [
-     "T-0885",
-     "Read the shared-tree repair..."
     ]
    ]
   }
@@ -437,18 +428,23 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T04:24:30Z",
+  "at": "2026-11-12T04:27:32Z",
   "s": {
+   "T-4115": [
+    "merging",
+    "Mac tests at the main gate",
+    1794457532831
+   ],
    "T-4100": [
     "testing",
     "its own tests, in its copy",
-    1794456810299
+    1794456812831
    ]
   }
  },
  "reply": {
-  "sent": "2026-11-12T04:19:45Z",
-  "seconds": 84.0
+  "sent": "2026-11-12T04:25:10Z",
+  "seconds": 66.0
  },
  "inbox": [],
  "trimmed": [
@@ -464,13 +460,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "11:24 PM",
+  "total": 2,
+  "at": "11:27 PM",
   "why": "",
-  "at_iso": "2026-11-12T04:24:00+00:00",
+  "at_iso": "2026-11-12T04:27:00+00:00",
   "started": "10:17 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:17 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:24 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:17 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:27 PM ET</p></section>"
  }
 }

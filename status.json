@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-12T08:39:36.190897+00:00",
+ "at": "2026-11-12T08:42:40.815215+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T02:56:43-05:00",
   "flow": [
-   {
-    "t": "T-3830",
-    "name": "Redo merge every branch held only for touching Investor files",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1794472773
-     }
-    ]
-   },
    {
     "t": "T-3143",
     "name": "Fix the template test that fails since the age line",
@@ -30,6 +19,22 @@
    }
   ],
   "done": [
+   {
+    "t": "T-3977",
+    "name": "Clear the leftover extra copies of the code",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794472786
+   },
+   {
+    "t": "T-3830",
+    "name": "Redo merge every branch held only for touching Investor files",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794472780
+   },
    {
     "t": "T-3870",
     "name": "Recut parked refs whose conflicts are not theirs",
@@ -94,26 +99,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794470318
-   },
-   {
-    "t": "T-3888",
-    "name": "Make the landing test pass on main every time",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794469986,
-    "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3859",
-    "name": "Move everything not needed off the Mac mini disk",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794469978
    }
   ],
-  "landed": 26,
+  "landed": 28,
   "failed": 3
  },
  "workers": [
@@ -122,7 +110,7 @@
    "task": "[build] T-3143 template test fix",
    "model": "opus",
    "started": "2026-11-12T08:03:43.753Z",
-   "seconds": 2152,
+   "seconds": 2337,
    "finished": null,
    "effort": "high"
   },
@@ -131,7 +119,7 @@
    "task": "[tools] T-4129 retire Set aside stage",
    "model": "opus",
    "started": "2026-11-12T08:04:00.395Z",
-   "seconds": 2135,
+   "seconds": 2320,
    "finished": null,
    "effort": "high"
   },
@@ -140,7 +128,7 @@
    "task": "[tools] T-4132 measure overdue experiments",
    "model": "opus",
    "started": "2026-11-12T08:21:32.133Z",
-   "seconds": 1084,
+   "seconds": 1268,
    "finished": null,
    "effort": "high"
   }
@@ -175,7 +163,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 623,
+  "runnable_count": 621,
   "blocked_count": 84
  },
  "meter": {
@@ -224,7 +212,7 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T08:39:00+00:00",
+  "read_at": "2026-11-12T08:42:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -311,11 +299,7 @@
    {
     "lane": "b3",
     "task": "T-3977",
-    "w": "Odalys",
-    "k": "tools",
     "t": "Clear the leftover extra copies of the code",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-12T03:37:01-05:00",
     "n": "Jeremy",
     "d": 1,
@@ -324,11 +308,7 @@
    {
     "lane": "b3",
     "task": "T-3830",
-    "w": "Odalys",
-    "k": "tools",
     "t": "Redo merge every branch held only for touching Investor files",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-12T03:37:01-05:00",
     "n": "Jeremy",
     "d": 1,
@@ -370,7 +350,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T03:39:00-05:00",
+  "at": "2026-11-12T03:42:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -540,30 +520,38 @@
   ],
   "done": [
    {
-    "w": "Odalys",
-    "t": "None of the 27 parked changes in this list still needs recutting. 8 are finished on main, and...",
-    "at": "2026-11-12T03:26:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "An independent review found that the fix stopping one stuck step from blanking every widget is...",
-    "at": "2026-11-12T03:07:00-05:00"
+    "w": "Odalys+operator",
+    "t": "The safe-to-delete list is done (171 of 183 leftover copies safe, 12 kept). Deleting them and...",
+    "at": "2026-11-12T03:39:00-05:00"
    },
    {
     "w": "Operator",
-    "t": "Done by the Investors: Evan set web reading on for every account by hand, and the Handbook...",
-    "at": "2026-11-12T03:00:00-05:00"
+    "t": "Nothing to redo: the original change from T-3751 (land work that touches Investor files, with a...",
+    "at": "2026-11-12T03:39:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "None of the 27 parked changes in this list still needs recutting. 8 are finished on main, and...",
+    "at": "2026-11-12T03:26:00-05:00"
    }
   ],
   "count": {
-   "next": 623,
+   "next": 621,
    "wait": 40,
    "blocked": 44,
    "you": 13
   },
   "fin": {
-   "n": 2,
+   "n": 4,
    "rows": [
+    [
+     "T-3977",
+     "Clear the leftover extra..."
+    ],
+    [
+     "T-3830",
+     "Redo merge every branch held..."
+    ],
     [
      "T-3870",
      "Recut parked refs whose..."
@@ -610,13 +598,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T08:39:18Z",
+  "at": "2026-11-12T08:42:34Z",
   "s": {
-   "T-3830": [
-    "mergeq",
-    "1st to merge",
-    1794472758058
-   ],
    "T-4091": [
     "mergetest",
     "iPhone tests on the MacBook",
@@ -625,12 +608,24 @@
    "T-4129": [
     "testing",
     "its own tests, in its copy",
-    1794472098058
+    1794472114943
    ],
    "T-3143": [
     "testing",
     "its own tests, in its copy",
-    1794471318058
+    1794471334943
+   ],
+   "T-3977": [
+    "merged",
+    "on main 3:39 AM ET",
+    1794472781000,
+    ""
+   ],
+   "T-3830": [
+    "merged",
+    "on main 3:39 AM ET",
+    1794472755000,
+    ""
    ],
    "T-3870": [
     "merged",
@@ -641,36 +636,36 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T08:39:18Z",
+  "at": "2026-11-12T08:42:34Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 1,
+    "inline": 0,
     "conflicted": 6,
     "failed": 0,
     "held": 1,
-    "retry": 0,
-    "parked": 5
+    "retry": 1,
+    "parked": 4
    },
    "m": {
     "checking": null,
-    "inline": 0,
-    "conflicted": 43,
+    "inline": null,
+    "conflicted": 46,
     "failed": null,
-    "held": 2778,
-    "retry": null,
-    "parked": 2778
+    "held": 2781,
+    "retry": 1,
+    "parked": 3685
    },
    "cur": [],
    "ld": [
-    26,
-    "2026-11-12T08:26:21Z"
+    28,
+    "2026-11-12T08:39:46Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T08:38:29Z",
-    "ld": 1.88,
+    "at": "2026-11-12T08:42:11Z",
+    "ld": 2.2,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -718,10 +713,10 @@
   "main": 3,
   "lanes": 3,
   "total": 6,
-  "at": "3:39 AM",
+  "at": "3:42 AM",
   "why": "",
-  "at_iso": "2026-11-12T08:39:00+00:00",
+  "at_iso": "2026-11-12T08:42:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:39 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:42 AM ET</p></section>"
  }
 }

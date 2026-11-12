@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-12T22:19:39.084147+00:00",
+ "at": "2026-11-12T22:22:40.367070+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "work",
+  "started": "2026-11-12T17:19:40-05:00",
   "flow": [],
   "done": [
    {
@@ -90,42 +90,37 @@
   "landed": 33,
   "failed": 8
  },
- "workers": [],
- "who": "",
- "recent": [
+ "workers": [
   {
-   "name": "odalys",
-   "task": "[tools] T-4213 accounts use full window",
+   "name": "idris",
+   "task": "[build] T-4212 land launcher widget picker",
    "model": "opus",
-   "started": "2026-11-12T21:38:57.330Z",
-   "seconds": null,
-   "finished": "2026-11-12T22:10:17.209000+00:00"
+   "started": "2026-11-12T22:22:24.577Z",
+   "seconds": 15,
+   "finished": null,
+   "effort": "high"
   },
   {
    "name": "idris",
-   "task": "[build] T-4212 launchers in widget picker",
+   "task": "[build] T-3814 tree.json presence in export",
    "model": "opus",
-   "started": "2026-11-12T21:23:55.001Z",
-   "seconds": null,
-   "finished": "2026-11-12T22:09:43.872000+00:00"
+   "started": "2026-11-12T22:22:32.011Z",
+   "seconds": 8,
+   "finished": null,
+   "effort": "high"
   },
   {
-   "name": "idris",
-   "task": "[build] T-4211 launcher edit vs premade write",
+   "name": "wrenna",
+   "task": "[research] T-3674 land launcher known apps",
    "model": "opus",
-   "started": "2026-11-12T21:24:08.226Z",
-   "seconds": null,
-   "finished": "2026-11-12T21:42:41.035000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[fix] T-4211 launcher edit vs premade write",
-   "model": "opus",
-   "started": "2026-11-12T21:24:01.453Z",
-   "seconds": null,
-   "finished": "2026-11-12T21:24:01.505Z"
+   "started": "2026-11-12T22:22:39.264Z",
+   "seconds": 1,
+   "finished": null,
+   "effort": "high"
   }
  ],
+ "who": "Idris x2, Wrenna",
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -173,12 +168,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-12T17:34:27-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-12T22:19:00+00:00",
+  "read_at": "2026-11-12T22:22:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -215,20 +210,34 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T17:19:00-05:00",
+  "at": "2026-11-12T17:22:00-05:00",
   "mode": "midnight"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 7 (raised a step toward the floor of 8: new work may start and every signal is under its line)",
+  "n": 7,
+  "at": "2026-11-12T17:19:27.669996-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-4212 land launcher widget picker",
+   "model": "opus",
+   "since": "2026-11-12T22:22:24.577Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Wrenna",
+   "state": "running",
+   "task": "[research] T-3674 land launcher known apps",
+   "model": "opus",
+   "since": "2026-11-12T22:22:39.264Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Pernille",
@@ -242,14 +251,6 @@
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Wrenna",
-   "state": "next",
-   "task": "Wrenna, P2, from T-3664: replace the two placeholder...",
    "model": null,
    "since": null,
    "next": []
@@ -272,7 +273,39 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Offer the launcher widgets in the widget picker",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T22:22:24.577Z",
+    "o": "c",
+    "task": "T-4212"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Keep the bundled Countdown picture from hiding the bug",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T22:22:32.011Z",
+    "o": "c",
+    "task": "T-3814"
+   },
+   {
+    "w": "Wrenna",
+    "k": "research",
+    "t": "Fill the launcher's list of known apps",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T22:22:39.264Z",
+    "o": "c",
+    "task": "T-3674"
+   }
+  ],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -347,6 +380,11 @@
   ],
   "done": [
    {
+    "w": "Maren",
+    "t": "Nothing left to redo: the Operator and Direct portraits this redo was for already reached the...",
+    "at": "2026-11-12T17:21:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "When two saves of the person's launcher apps happen at once, the launcher widgets now always end...",
     "at": "2026-11-12T16:42:00-05:00"
@@ -355,11 +393,6 @@
     "w": "Idris",
     "t": "The app build can now carry the six launcher widgets, but only in an internal build switched on...",
     "at": "2026-11-12T16:23:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The Debug-only build step that lets UI tests open widget links used to wipe every link scheme in...",
-    "at": "2026-11-12T16:09:00-05:00"
    }
   ],
   "count": {
@@ -367,6 +400,15 @@
    "wait": 40,
    "blocked": 44,
    "you": 13
+  },
+  "fin": {
+   "n": 1,
+   "rows": [
+    [
+     "T-4165",
+     "Redo draw the Operator and..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -408,11 +450,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T22:19:39Z",
+  "at": "2026-11-12T22:22:20Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-12T22:19:39Z",
+  "at": "2026-11-12T22:22:20Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -426,11 +468,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 402,
+    "conflicted": 405,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 446
+    "parked": 449
    },
    "cur": [],
    "ld": [
@@ -440,8 +482,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T22:19:39Z",
-    "ld": 0.48,
+    "at": "2026-11-12T22:21:57Z",
+    "ld": 0.44,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -467,7 +509,17 @@
    }
   }
  },
- "operators": [],
+ "operators": [
+  {
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "opus",
+   "e": "high",
+   "t": "Work session \u2013 4 tasks",
+   "at": "2026-11-12T17:19:40-05:00"
+  }
+ ],
  "reply": {
   "sent": "2026-11-12T21:53:51Z",
   "seconds": 32.0
@@ -476,8 +528,8 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -485,13 +537,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 3,
   "lanes": 0,
-  "total": 0,
-  "at": "5:19 PM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-12T22:19:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:19 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "total": 3,
+  "at": "5:22 PM",
+  "why": "",
+  "at_iso": "2026-11-12T22:22:00+00:00",
+  "started": "5:19 PM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:22 PM ET</p></section>"
  }
 }

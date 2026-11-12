@@ -1,23 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-12T23:20:40.789988+00:00",
+ "at": "2026-11-12T23:23:43.460525+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T17:19:40-05:00",
-  "flow": [
-   {
-    "t": "T-4217",
-    "name": "Review the launcher widget picker change",
-    "w": "Pernille",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794523733
-     }
-    ]
-   }
-  ],
+  "flow": [],
   "done": [
    {
     "t": "T-4196",
@@ -104,20 +92,11 @@
  },
  "workers": [
   {
-   "name": "wrenna",
-   "task": "[research] T-3674 land launcher known apps",
-   "model": "opus",
-   "started": "2026-11-12T22:22:39.264Z",
-   "seconds": 3481,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "idris",
    "task": "[build] T-4215 gate launcher editor in Release",
    "model": "opus",
    "started": "2026-11-12T22:33:44.265Z",
-   "seconds": 2816,
+   "seconds": 2999,
    "finished": null,
    "effort": "high"
   },
@@ -126,22 +105,38 @@
    "task": "[build] T-4216 add-app slot overwrite race",
    "model": "opus",
    "started": "2026-11-12T22:33:49.320Z",
-   "seconds": 2811,
+   "seconds": 2994,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "idris",
+   "task": "[build] T-4218 redraw launcher after slot edit",
+   "model": "opus",
+   "started": "2026-11-12T23:21:24.535Z",
+   "seconds": 138,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris x3",
+ "recent": [
   {
    "name": "pernille",
    "task": "[review] T-4217 review launcher widget picker",
    "model": "opus",
    "started": "2026-11-12T22:46:24.095Z",
-   "seconds": 2056,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Wrenna, Idris x2, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-12T23:21:03.587000+00:00"
+  },
+  {
+   "name": "wrenna",
+   "task": "[research] T-3674 land launcher known apps",
+   "model": "opus",
+   "started": "2026-11-12T22:22:39.264Z",
+   "seconds": null,
+   "finished": "2026-11-12T23:20:52.502000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4171 review tree.json export fix",
@@ -157,28 +152,12 @@
    "started": "2026-11-12T23:07:51.306Z",
    "seconds": null,
    "finished": "2026-11-12T23:16:01.410000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4212 land launcher widget picker",
-   "model": "opus",
-   "started": "2026-11-12T22:22:24.577Z",
-   "seconds": null,
-   "finished": "2026-11-12T22:46:06.647000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3814 tree.json presence in export",
-   "model": "opus",
-   "started": "2026-11-12T22:22:32.011Z",
-   "seconds": null,
-   "finished": "2026-11-12T22:40:15.714000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 591,
+  "runnable_count": 590,
   "blocked_count": 84
  },
  "meter": {
@@ -227,7 +206,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-12T23:20:00+00:00",
+  "read_at": "2026-11-12T23:23:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -264,7 +243,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T18:20:00-05:00",
+  "at": "2026-11-12T18:23:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -276,15 +255,6 @@
  },
  "lanes": [
   {
-   "name": "Wrenna",
-   "state": "running",
-   "task": "[research] T-3674 land launcher known apps",
-   "model": "opus",
-   "since": "2026-11-12T22:22:39.264Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "running",
    "task": "[build] T-4215 gate launcher editor in Release",
@@ -295,12 +265,11 @@
   },
   {
    "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-4217 review launcher widget picker",
-   "model": "opus",
-   "since": "2026-11-12T22:46:24.095Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Odalys",
@@ -319,6 +288,14 @@
    "next": []
   },
   {
+   "name": "Wrenna",
+   "state": "next",
+   "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
    "name": "Maren",
    "state": "next",
    "task": "Maren, P3, PROPOSAL-003 store captions, after Ines or...",
@@ -329,16 +306,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Wrenna",
-    "k": "research",
-    "t": "Fill the launcher's list of known apps",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T22:22:39.264Z",
-    "o": "c",
-    "task": "T-3674"
-   },
    {
     "w": "Idris",
     "k": "build",
@@ -360,14 +327,14 @@
     "task": "T-4216"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the launcher widget picker change",
+    "w": "Idris",
+    "k": "build",
+    "t": "Redraw a placed launcher after a slot edit",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-12T22:46:24.095Z",
+    "at": "2026-11-12T23:21:24.535Z",
     "o": "c",
-    "task": "T-4217"
+    "task": "T-4218"
    }
   ],
   "src": "plan",
@@ -451,27 +418,31 @@
    },
    {
     "w": "Pernille",
-    "t": "A second reviewer checked T-3814 (the tester build's report on whether the app wrote each placed...",
+    "t": "Reviewed the change that puts the six launcher widgets in the widget picker of internal builds;...",
     "at": "2026-11-12T18:20:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "In the internal launcher build, the six launcher widgets now show in the iPhone's widget picker,...",
-    "at": "2026-11-12T17:45:00-05:00"
+    "w": "Pernille",
+    "t": "A second reviewer checked T-3814 (the tester build's report on whether the app wrote each placed...",
+    "at": "2026-11-12T18:20:00-05:00"
    }
   ],
   "count": {
-   "next": 591,
+   "next": 590,
    "wait": 40,
    "blocked": 44,
    "you": 13
   },
   "fin": {
-   "n": 6,
+   "n": 7,
    "rows": [
     [
      "T-3674",
      "Fill the launcher's list of..."
+    ],
+    [
+     "T-4217",
+     "Review the launcher widget..."
     ],
     [
      "T-4171",
@@ -488,10 +459,6 @@
     [
      "T-4214",
      "Review the launcher steps..."
-    ],
-    [
-     "T-4165",
-     "Redo draw the Operator and..."
     ]
    ]
   }
@@ -535,7 +502,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T23:20:34Z",
+  "at": "2026-11-12T23:23:43Z",
   "s": {
    "T-4216": [
     "mergetest",
@@ -545,37 +512,16 @@
    "T-4215": [
     "merging",
     "Mac tests at the main gate",
-    1794525634157
-   ],
-   "T-4217": [
-    "merged",
-    "on main 6:20 PM ET",
-    1794525619000,
-    "Pernille"
-   ],
-   "T-4171": [
-    "merged",
-    "on main 6:20 PM ET",
-    1794525614000,
-    "Pernille"
-   ],
-   "T-3674": [
-    "merged",
-    "on main 6:20 PM ET",
-    1794525606000,
-    ""
+    1794525643460
    ]
   },
   "nm": {
    "T-4216": "Stop Add App from overwriting a newly saved slot",
-   "T-4215": "Keep the launcher editor out of Release builds",
-   "T-4217": "Review the launcher widget picker change",
-   "T-4171": "Check finished work before it ships",
-   "T-3674": "Fill the launcher's list of known apps"
+   "T-4215": "Keep the launcher editor out of Release builds"
   }
  },
  "ln": {
-  "at": "2026-11-12T23:20:34Z",
+  "at": "2026-11-12T23:23:43Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -589,11 +535,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 463,
+    "conflicted": 466,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 507
+    "parked": 510
    },
    "cur": [],
    "ld": [
@@ -603,8 +549,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T23:20:01Z",
-    "ld": 0.47,
+    "at": "2026-11-12T23:23:21Z",
+    "ld": 1.43,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -637,7 +583,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 8 tasks",
+   "t": "Work session \u2013 9 tasks",
    "at": "2026-11-12T17:24:30-05:00"
   }
  ],
@@ -655,17 +601,18 @@
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 3,
   "lanes": 0,
-  "total": 4,
-  "at": "6:20 PM",
+  "total": 3,
+  "at": "6:23 PM",
   "why": "",
-  "at_iso": "2026-11-12T23:20:00+00:00",
+  "at_iso": "2026-11-12T23:23:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:20 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:23 PM ET</p></section>"
  }
 }

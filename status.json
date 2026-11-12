@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T06:07:38.703849+00:00",
+ "at": "2026-11-12T06:10:40.717897+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -66,12 +66,21 @@
    "task": "[tools] T-4125 T-4128 Fable 5.2 lane setting and pause near limit",
    "model": "opus",
    "started": "2026-11-12T06:06:44.388Z",
-   "seconds": 54,
+   "seconds": 236,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4093 tester-only Pro switch for TestFlight",
+   "model": "opus",
+   "started": "2026-11-12T06:08:52.015Z",
+   "seconds": 108,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys",
+ "who": "Odalys, Idris",
  "recent": [
   {
    "name": "odalys",
@@ -101,24 +110,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 645,
-  "blocked_count": 85
+  "runnable_count": 644,
+  "blocked_count": 86
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
+   "pct": 11.0,
    "resets_at": "2026-11-12T02:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T01:03:35.521012-05:00",
+   "read_at": "2026-11-12T01:09:36.731225-05:00",
    "source": "live",
-   "left": 90.0,
+   "left": 89.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 68.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T01:03:35.521012-05:00",
+   "read_at": "2026-11-12T01:09:36.731225-05:00",
    "source": "live",
    "left": 32.0,
    "left_words": "of your weekly allowance left"
@@ -130,7 +139,7 @@
    "read_at": "2026-11-12T00:55:30.451494-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T01:03:35.521012-05:00"
+  "read_at": "2026-11-12T01:09:36.731225-05:00"
  },
  "ui": {
   "week_pct": 0.245,
@@ -150,8 +159,57 @@
   "week_pct": 27.44,
   "usage_pct": 28.7,
   "work_pct": 74.0,
-  "read_at": "2026-11-12T06:07:00+00:00",
-  "running": []
+  "read_at": "2026-11-12T06:10:00+00:00",
+  "running": [
+   {
+    "lane": "a2",
+    "task": "T-3997",
+    "w": "Operator",
+    "k": "ops",
+    "t": "Return to app work when the queue is short",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T01:10:28-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a2",
+    "task": "T-3888",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Make the landing test pass on main every time",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T01:10:28-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3846",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Find why the MacBook runner stopped checking in",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T01:10:28-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   },
+   {
+    "lane": "a3",
+    "task": "T-3862",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "App merge checks run here when the MacBook is silent",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T01:10:28-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -175,19 +233,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 176
+   "free_gb": 171
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T01:03:00-05:00",
+   "at": "2026-11-12T01:09:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T01:07:00-05:00",
+  "at": "2026-11-12T01:10:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -209,11 +267,12 @@
   },
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-4093 tester-only Pro switch for TestFlight",
+   "model": "opus",
+   "since": "2026-11-12T06:08:52.015Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Pernille",
@@ -259,6 +318,16 @@
     "at": "2026-11-12T06:06:44.388Z",
     "o": "c",
     "task": "T-4125"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Add a tester-only Pro switch for TestFlight builds",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T06:08:52.015Z",
+    "o": "c",
+    "task": "T-4093"
    }
   ],
   "src": "plan",
@@ -327,9 +396,9 @@
     "o": "i"
    },
    {
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Allow web fetching on every site for every...",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Run the Restructuring on Evan's account",
     "s": "next",
     "o": "i"
    }
@@ -352,10 +421,10 @@
    }
   ],
   "count": {
-   "next": 645,
+   "next": 644,
    "wait": 40,
-   "blocked": 45,
-   "you": 13
+   "blocked": 46,
+   "you": 14
   },
   "fin": {
    "n": 0,
@@ -397,18 +466,30 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T06:07:21Z",
+  "at": "2026-11-12T06:10:22Z",
   "s": {}
  },
  "reply": {
   "sent": "2026-11-12T06:05:20Z",
   "seconds": 3.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6816169923",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "I don't understand the \"Set Aside\"..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -416,13 +497,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
-  "lanes": 0,
-  "total": 1,
-  "at": "1:07 AM",
+  "main": 2,
+  "lanes": 2,
+  "total": 4,
+  "at": "1:10 AM",
   "why": "",
-  "at_iso": "2026-11-12T06:07:00+00:00",
+  "at_iso": "2026-11-12T06:10:00+00:00",
   "started": "12:58 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:07 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:10 AM ET</p></section>"
  }
 }

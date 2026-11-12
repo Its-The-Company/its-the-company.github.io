@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T17:33:29.671919+00:00",
+ "at": "2026-11-12T17:36:34.654192+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -114,7 +114,7 @@
    "task": "[tools] T-4179 a stopped task gets a second requeue",
    "model": "opus",
    "started": "2026-11-12T16:43:29.044Z",
-   "seconds": 3000,
+   "seconds": 3185,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[tools] T-4161 Fable 5.2 on Jeremy's account, model log",
    "model": "opus",
    "started": "2026-11-12T17:09:33.984Z",
-   "seconds": 1435,
+   "seconds": 1620,
    "finished": null,
    "effort": "high"
   }
@@ -215,7 +215,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T17:33:00+00:00",
+  "read_at": "2026-11-12T17:36:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -252,7 +252,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T12:33:00-05:00",
+  "at": "2026-11-12T12:36:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -501,17 +501,23 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T17:33:12Z",
+  "at": "2026-11-12T17:36:34Z",
   "s": {
+   "T-4161": [
+    "testing",
+    "its own tests, in its copy",
+    1794504874654
+   ],
    "T-4179": [
-    "merging",
-    "Mac tests at the main gate",
-    1794504552750
+    "merged",
+    "on main 12:33 PM ET",
+    1794504819000,
+    "Odalys"
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T17:33:12Z",
+  "at": "2026-11-12T17:36:34Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -525,11 +531,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 150,
+    "conflicted": 154,
     "failed": null,
     "held": null,
-    "retry": 79,
-    "parked": 159
+    "retry": 82,
+    "parked": 163
    },
    "cur": [],
    "ld": [
@@ -539,8 +545,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T17:33:13Z",
-    "ld": 0.73,
+    "at": "2026-11-12T17:36:35Z",
+    "ld": 0.61,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -590,10 +596,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "12:33 PM",
+  "at": "12:36 PM",
   "why": "",
-  "at_iso": "2026-11-12T17:33:00+00:00",
+  "at_iso": "2026-11-12T17:36:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:33 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:36 PM ET</p></section>"
  }
 }

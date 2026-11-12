@@ -56,13 +56,15 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4008 11-10 0dc00ac09b: Ask to Buy red = StoreKit test env lists a verified purchase for a deferred request; test skips with facts. Rerun line off after a clean week (xc_rerun.jsonl).
 - Lesson T-4008: main unpushed? push land/idris-<task> whose tip adds the job files; empty pin commits dodge "already queued".
 
+- T-3143 f11e88eef8 11-12: already green since T-3217 (runner 13/0); test side was right to fix. Lesson: runner results live on origin/macbook-results:ops/jobs/<J>/result.json; the daily full suite can hold the runner ~50 min.
+
 ## Lessons
 - StoreKit, T-0583/T-0589, caret lessons and dated logs: archive.md.
 
 - T-3762 11-09: GalleryPush, request used once; UI test red on old code. Lesson: clear a pushed view's request on pop. (T-3757: archive.md.)
 - T-3996 12f8b43634 11-11: Home meter = newer of usage.json / ops/live_meter.json, past reset = no reading. Open: confirm ops/live.json once the status loop restarts (a running loop keeps old code). Lesson: background shells die at 10 min; run long suites in sequence.
 - Lesson T-4012 merge 11-11: scratch.py worktree takes a bare T-id; a refused name returns "" and `git -C ""` hits the main folder. Guard `[ -n "$W" ]`. T-2857 de0219ab45, T-2376 7c6c860b1e landed; T-0042 merge not started.
-- T-4093 6dc410c435 11-12: tester Pro switch landed (land gate 1648/0). Open: review, then upload.sh build (needs review). Lesson: App Group UserDefaults is a required-reason API (1C8F.1); the privacy host suite catches it.
+- T-4093 3b9f6e7a90 11-12: tester Pro behind PYWIDGET_TESTER_PRO (Debug + upload.sh --internal --upload only); M1 green on Sim. Open: Pernille re-check, push, Operator upload. Lesson: TEST_RUNNER_* must be env vars, not xcodebuild args; a chosen premade's Edit Widget button shows its title.
 {% endraw %}
 
 

@@ -1,15 +1,25 @@
 {
  "schema": 1,
- "at": "2026-11-12T10:34:13.884167+00:00",
+ "at": "2026-11-12T10:38:58.908971+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-12T02:56:43-05:00",
-  "flow": [],
+  "active": false,
+  "kind": "",
+  "started": null,
+  "flow": [
+   {
+    "t": "T-3143",
+    "w": "Idris",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794470714
+     }
+    ]
+   }
+  ],
   "done": [
    {
     "t": "T-3887",
-    "name": "Redo an Investor request on fresh main",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -17,7 +27,6 @@
    },
    {
     "t": "T-3889",
-    "name": "Redo put every Issues page ask in Now or Later",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -25,7 +34,6 @@
    },
    {
     "t": "T-3756",
-    "name": "Parked list counts the parked branches still waiting",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -33,7 +41,6 @@
    },
    {
     "t": "T-3903",
-    "name": "Restore a lost Investor ruling to the rulings log",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -41,7 +48,6 @@
    },
    {
     "t": "T-3774",
-    "name": "Count check copies left behind after the cleanup fix",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -49,7 +55,6 @@
    },
    {
     "t": "T-3878",
-    "name": "Redo redo an Investor request on fresh main",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -57,7 +62,6 @@
    },
    {
     "t": "T-3858",
-    "name": "Redo remove check worktrees when a land ends",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -65,7 +69,6 @@
    },
    {
     "t": "T-3831",
-    "name": "Redo an Investor request on fresh main",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -73,7 +76,6 @@
    },
    {
     "t": "T-4140",
-    "name": "Redo make the landing test pass on main every time",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -130,7 +132,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 604,
+  "runnable_count": 605,
   "blocked_count": 85
  },
  "meter": {
@@ -174,12 +176,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-12T03:11:33-05:00",
  "personal": {
   "week_pct": 27.26,
-  "usage_pct": 28.3,
-  "work_pct": 73.3,
-  "read_at": "2026-11-12T10:34:00+00:00",
+  "usage_pct": 27.7,
+  "work_pct": 72.5,
+  "read_at": "2026-11-12T10:40:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -190,18 +192,6 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-12T05:34:02-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a2",
-    "task": "T-4138",
-    "w": "Operator",
-    "k": "ops",
-    "t": "Resume the queue audit and start the Restructuring",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T05:34:05-05:00",
     "n": "Evan",
     "src": "plan-a"
    },
@@ -239,6 +229,7 @@
     "e": "high",
     "at": "2026-11-12T05:34:06-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -340,16 +331,12 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T05:34:00-05:00",
+  "at": "2026-11-12T05:40:00-05:00",
   "mode": "midnight"
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 3 (raised a step toward the floor of 8: new work may start and every signal is under its line)",
-  "n": 3,
-  "at": "2026-11-12T02:56:33.595626-05:00"
- },
+ "pool": null,
  "lanes": [
   {
    "name": "Idris",
@@ -402,7 +389,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -493,39 +479,10 @@
    }
   ],
   "count": {
-   "next": 604,
+   "next": 605,
    "wait": 40,
    "blocked": 45,
    "you": 14
-  },
-  "fin": {
-   "n": 21,
-   "rows": [
-    [
-     "T-3704",
-     "Add a Live step after site..."
-    ],
-    [
-     "T-3887",
-     "Redo an Investor request on..."
-    ],
-    [
-     "T-3754",
-     "Put every Issues page ask in..."
-    ],
-    [
-     "T-3889",
-     "Redo put every Issues page..."
-    ],
-    [
-     "T-3756",
-     "Parked list counts the..."
-    ],
-    [
-     "T-3903",
-     "Restore a lost Investor..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -563,12 +520,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T10:34:13Z",
+  "at": "2026-11-12T10:38:58Z",
   "s": {
-   "T-4093": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+   "T-4138": [
+    "merging",
+    "Rebasing onto current main",
+    1794479818908
    ],
    "T-3887": [
     "merged",
@@ -597,27 +554,36 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T10:34:13Z",
+  "at": "2026-11-12T10:38:58Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 2,
     "failed": 0,
     "held": 1,
     "retry": 0,
-    "parked": 6
+    "parked": 3
    },
    "m": {
-    "checking": null,
+    "checking": 2,
     "inline": null,
-    "conflicted": 1510,
+    "conflicted": 1515,
     "failed": null,
-    "held": 2893,
+    "held": 2897,
     "retry": null,
-    "parked": 1524
+    "parked": 159
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4138"
+     ],
+     "lining up with main",
+     "Mac mini",
+     2
+    ]
+   ],
    "ld": [
     41,
     "2026-11-12T10:18:44Z"
@@ -625,16 +591,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T10:34:14Z",
-    "ld": 4.42,
+    "at": "2026-11-12T10:39:00Z",
+    "ld": 4.55,
     "c": 8,
     "sb": 2,
     "dk": [
-     33.3,
+     33.2,
      228.3
     ],
     "ss": [
-     174.7,
+     176.8,
      953.7
     ],
     "sn": [
@@ -643,12 +609,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-12T10:16:21Z",
-    "ld": 0.15,
+    "at": "2026-11-12T10:23:28Z",
+    "ld": 1.38,
     "c": 12,
     "sb": 0,
     "dk": [
-     397.9,
+     397.6,
      926.4
     ],
     "sn": []
@@ -665,22 +631,20 @@
   "queue_text",
   "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 5,
-  "total": 5,
-  "at": "5:34 AM",
+  "lanes": 4,
+  "total": 4,
+  "at": "5:40 AM",
   "why": "",
-  "at_iso": "2026-11-12T10:34:00+00:00",
-  "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 5 sessions \u00b7 as of 5:34 AM ET</p></section>"
+  "at_iso": "2026-11-12T10:40:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 5:40 AM ET</p></section>"
  }
 }

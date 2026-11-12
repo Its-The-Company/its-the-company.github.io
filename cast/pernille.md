@@ -33,20 +33,20 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open
 
+- T-3817 (4561ebf231): T-3814 review FIXES NEEDED (M1 unbounded WidgetCenter wait in export, M2 pass in flight); ticked. Lesson: a clean git apply is not "no conflict": check main for helpers the patch should now use.
 - T-4121 (5af9f88fd0): ledger patterns first pass; tick refused (ws 'queue audit' not a workstream), not ticked. Lesson: board ws ids are in ops/workstreams.json; check before ticking.
 - T-3692 (15ed1952d): T-3671/T-3667 PASS w/ fixes; T-3762 (stale Gallery request, before build), T-3763..66 Idris. Lesson: a UI test that passes with and without the fix proves nothing; demand a red run.
-- T-3743 (42ea04c89): T-3553 PASS w/ fixes; M1 board add refused (title 11 words), line in scratch, not ticked. Lesson: Darwin lock waits (join, Timer, Event) wake ~150 ms late, socket timeouts 2 ms; a deadline on a lock wait is not a deadline.
+- T-3743: Lesson: Darwin lock waits wake ~150 ms late; a deadline on a lock wait is not a deadline.
+- T-3823 11-12: openssl_gate FIXES NEEDED (note on board): fails open on unreadable file/dir/out-of-app link. Lesson: probe a fail-closed claim with chmod 000.
 - T-3546 (858f9cbe0): T-3519 FAIL; T-3780..82 Odalys. Lesson: a text scan for reads can't follow $REPO vars or a tool's constants; key the data folder, list tools by hand.
 - T-3545 (uncommitted: main_gate refused, bridge red): T-3408 PASS w/ fixes; T-3799/3800 Odalys. Race probe refused by security-guard (scratch $HOME/company-personal). Lesson: retry_into deletes the <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> name before mark_ready on n=1, so a refusal strands the work on the spare.
 - T-3802 (c64c68bf4): bridge red on 3.9 was a hang, not load: mkdir into /Applications/Xcode.app blocks with no answer on macOS 27. Tick refused (Evidence must be a bare path), not ticked. Lesson: a child with bytecode writes on must set pycache_prefix.
-- T-3813 (59b4edb8d): build 5 review, no cause for the iPhone bug; M1 = T-3814 (Idris).
-- T-3867 done 815c43dd5d: guard_test 491/0 at 45673c703b; reds fixed on main by T-3992 + #257 before Ines's fold-in. Lesson: re-check a held patch against main before acting on the plan made for it.
-- T-3873 (2ad88dfc1, b7f9c136e): T-0588/T-0725 recuts handed. Lesson: a stop_on marker printed before the try lets the first soft Stop land outside it under load; print the marker inside.
+- T-4053 11-12: ticked SHIP internal TF for T-3826 (code = 2efa9e46b I reviewed); T-3899/T-3900 required before external. Lesson: diff the landed tree against the reviewed hash first; it may be a re-review.
+- T-3836 11-12: T-3657 overrun FIXES NEEDED, noted not ticked; 2 fix lines refused by board_tick add (links: bare T-3657), in scratch T-3836-pernille/lines.txt. Lesson: a fix line naming a task needs 'part of'/'from' for each ID.
 - T-3835 (9987593924): T-3826 PASS w/ findings, M1/M2 = T-3899/3900 (Idris); tick refused (Plain: ID before gloss), not ticked. Lesson: per-item timeouts on a shared dependency add up per item; bound the pass, not each step.
 - T-4018 (audit item 17, nightly host suites): tools/nightly_suites.py; Home hook latest(). Lesson: scratch.py wants T-NNNN, reserve with board_tick id --reserve; never pkill -f a filename my own run's command line holds.
-- T-3995 i14 landed 70fbc08fae. Lesson: a completion notice is not a commit; git cat-file it (two false 'landed' hashes tonight). A pgrep -f waiter matches its own command line and never ends; wait on the pid.
 - 11-11 merge work: T-3741 landed a706e9d6f9; T-3774 file 7aa7c36e48; T-3150 held in copy T-3150-pernille/wt: its supervisor_test red was the test_red_share load race, fixed in 8755eab0cb (T-3995, also run_limited child <span title="A test written in advance. If it fires, we drop the idea.">kill</span>); rerun and land. Lesson: a hand-off patch that kills children before the parent changes the parent's exit code (wait returns 0); signal the parent first.
-- T-4093r 11-12: review refused by main_folder_guard (reviews/ counts as code; needs scratch.py worktree + main_gate land). Not written, no note, no commit. Verdict given in reply: internal TF only; H1 sandbox=App Review, compile-time flag via upload.sh --internal.
+- T-4093 11-12: H1 re-check of 3b9f6e7a90 = clear for internal upload (board note; 4 mutants all red). Open: first real Release -O archive must hold the mark (fails closed if not). Lesson: reviews go as board notes, not files in main (main_folder_guard).
 - Older entries (2026-10-25 8:12 PM to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## Lessons

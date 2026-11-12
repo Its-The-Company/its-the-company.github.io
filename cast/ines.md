@@ -48,6 +48,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3896: a company-owned rule is not a card (no Kind fits; request_card refuses by the 11-05 amendment): decision record + plain note. Old parked: set aside via merge_queue_hold.txt, never refs/archive.
 - T-4107: a grep scoped to one file is not a repo grep; before writing 'X is gone' as a remove's evidence, run the repo-wide grep and quote its count (T-0472 row had to be superseded). Verdict counts come from the ledger's last row per ID.
 - T-4124: efficiency numbers in ops/plans/efficiency-review.md (60% of commits record-only; a session start ~49% of a thread's tokens; persona ~2%). Lane streams are refused; main's ops/runs is readable.
+- T-3889 (redo of T-3754): the "parked, did not land" premise was stale: the work (3d584b839d) was already on main; the merge reset only re-opened the board line. git merge-base --is-ancestor on the parked commits first; here the parked branch held only record commits. Closed by verifying tests and ticking.
 {% endraw %}
 
 

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T15:25:15.404505+00:00",
+ "at": "2026-11-12T15:28:16.552532+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -113,7 +113,7 @@
    "task": "[tools] T-4157 Fable-only accounts, second change",
    "model": "opus",
    "started": "2026-11-12T15:15:18.260Z",
-   "seconds": 597,
+   "seconds": 778,
    "finished": null,
    "effort": "high"
   },
@@ -122,7 +122,7 @@
    "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
    "started": "2026-11-12T15:15:25.110Z",
-   "seconds": 590,
+   "seconds": 771,
    "finished": null,
    "effort": "high"
   },
@@ -131,7 +131,7 @@
    "task": "[site] T-4162 a name for every task",
    "model": "opus",
    "started": "2026-11-12T15:15:30.908Z",
-   "seconds": 584,
+   "seconds": 765,
    "finished": null,
    "effort": "high"
   },
@@ -140,22 +140,30 @@
    "task": "[build] T-3757 hold background task for unstarted rows",
    "model": "opus",
    "started": "2026-11-12T15:15:38.458Z",
-   "seconds": 576,
+   "seconds": 758,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "pernille",
-   "task": "[review] T-4073 check T-3762 before ship",
+   "task": "[review] T-3718 check T-0729 before ship",
    "model": "opus",
-   "started": "2026-11-12T15:22:03.786Z",
-   "seconds": 191,
+   "started": "2026-11-12T15:27:34.598Z",
+   "seconds": 41,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2, Maren, Idris, Pernille",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-4073 check T-3762 before ship",
+   "model": "opus",
+   "started": "2026-11-12T15:22:03.786Z",
+   "seconds": null,
+   "finished": "2026-11-12T15:27:19.629000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4070 check T-3558+T-3758 before ship",
@@ -168,7 +176,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 606,
+  "runnable_count": 605,
   "blocked_count": 84
  },
  "meter": {
@@ -217,7 +225,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T15:25:00+00:00",
+  "read_at": "2026-11-12T15:28:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -254,7 +262,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T10:25:00-05:00",
+  "at": "2026-11-12T10:28:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -295,9 +303,9 @@
   {
    "name": "Pernille",
    "state": "running",
-   "task": "[review] T-4073 check T-3762 before ship",
+   "task": "[review] T-3718 check T-0729 before ship",
    "model": "opus",
-   "since": "2026-11-12T15:22:03.786Z",
+   "since": "2026-11-12T15:27:34.598Z",
    "next": [],
    "effort": "high"
   },
@@ -366,9 +374,9 @@
     "t": "Check finished work before it ships",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-12T15:22:03.786Z",
+    "at": "2026-11-12T15:27:34.598Z",
     "o": "c",
-    "task": "T-4073"
+    "task": "T-3718"
    }
   ],
   "src": "plan",
@@ -447,6 +455,11 @@
   "done": [
    {
     "w": "Pernille",
+    "t": "Checked the fix that stops the Gallery reopening an old widget's page when opened again from the...",
+    "at": "2026-11-12T10:26:00-05:00"
+   },
+   {
+    "w": "Pernille",
     "t": "Pass with findings. The gallery test change and the daily run-history cleanup on return to the...",
     "at": "2026-11-12T10:21:00-05:00"
    },
@@ -454,22 +467,21 @@
     "w": "Ines",
     "t": "Proposed one redesign of how tasks are made and kept: each task says how to tell it is done, one...",
     "at": "2026-11-12T10:12:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The MacBook that builds and tests the app is checking in again on the current runner version 27...",
-    "at": "2026-11-12T10:12:00-05:00"
    }
   ],
   "count": {
-   "next": 606,
+   "next": 605,
    "wait": 40,
    "blocked": 44,
    "you": 13
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-4073",
+     "Check finished work before..."
+    ],
     [
      "T-4070",
      "Check finished work before..."
@@ -516,32 +528,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T15:25:06Z",
+  "at": "2026-11-12T15:28:16Z",
   "s": {
    "T-3757": [
-    "merging",
-    "Mac tests at the main gate",
-    1794496686102
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4162": [
     "testing",
     "its own tests, in its copy",
-    1794496626102
+    1794497176552
    ],
    "T-4157": [
     "testing",
     "its own tests, in its copy",
-    1794496626102
+    1794496636552
    ],
    "T-4160": [
     "testing",
     "its own tests, in its copy",
-    1794496626102
+    1794496576552
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T15:25:06Z",
+  "at": "2026-11-12T15:28:16Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -555,11 +567,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 22,
+    "conflicted": 26,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 21
+    "parked": 24
    },
    "cur": [],
    "ld": [
@@ -569,12 +581,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T15:25:08Z",
-    "ld": 5.77,
+    "at": "2026-11-12T15:27:31Z",
+    "ld": 6.91,
     "c": 8,
     "sb": 1,
     "dk": [
-     28.8,
+     28.7,
      228.3
     ],
     "ss": [
@@ -586,7 +598,7 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-12T15:08:31Z",
+    "at": "2026-11-12T15:26:54Z",
     "ld": 0.19,
     "c": 12,
     "sb": 0,
@@ -618,10 +630,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "10:25 AM",
+  "at": "10:28 AM",
   "why": "",
-  "at_iso": "2026-11-12T15:25:00+00:00",
+  "at_iso": "2026-11-12T15:28:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:25 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:28 AM ET</p></section>"
  }
 }

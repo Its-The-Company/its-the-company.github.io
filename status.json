@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T13:41:35.384124+00:00",
+ "at": "2026-11-12T13:44:34.190488+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -120,12 +120,21 @@
    "task": "[tools] T-4157 account a takes only Fable lines",
    "model": "opus",
    "started": "2026-11-12T13:17:49.294Z",
-   "seconds": 1426,
+   "seconds": 1604,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4160 pause on failed usage reading",
+   "model": "opus",
+   "started": "2026-11-12T13:42:03.937Z",
+   "seconds": 150,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys",
+ "who": "Odalys x2",
  "recent": [
   {
    "name": "odalys",
@@ -163,24 +172,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 600,
+  "runnable_count": 602,
   "blocked_count": 84
  },
  "meter": {
   "five_hour": {
-   "pct": 6.0,
+   "pct": 8.0,
    "resets_at": "2026-11-12T12:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T08:31:58.707901-05:00",
+   "read_at": "2026-11-12T08:44:03.700172-05:00",
    "source": "live",
-   "left": 94.0,
+   "left": 92.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 72.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T08:31:58.707901-05:00",
+   "read_at": "2026-11-12T08:44:03.700172-05:00",
    "source": "live",
    "left": 28.0,
    "left_words": "of your weekly allowance left"
@@ -192,7 +201,7 @@
    "read_at": "2026-11-12T05:47:09.793608-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T08:31:58.707901-05:00"
+  "read_at": "2026-11-12T08:44:03.700172-05:00"
  },
  "ui": {
   "week_pct": 0.242,
@@ -212,8 +221,118 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T13:41:00+00:00",
-  "running": []
+  "read_at": "2026-11-12T13:44:00+00:00",
+  "running": [
+   {
+    "lane": "b",
+    "task": "T-3418",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Keep long Issues threads short and the ask clear",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-12T08:42:50-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-3961",
+    "w": "Maren",
+    "k": "site",
+    "t": "Show the merge queue on the This Session page",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T08:42:50-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-3753",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Callers pass the task to each Mac mini build",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T08:42:50-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-3807",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Confirm merges resumed after the SSD unlock",
+    "m": "sonnet",
+    "e": "medium",
+    "at": "2026-11-12T08:43:13-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-3814",
+    "w": "Idris",
+    "k": "build",
+    "t": "Keep the bundled Countdown picture from hiding the bug",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T08:43:13-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b2",
+    "task": "T-3996",
+    "w": "Operator",
+    "k": "site",
+    "t": "Show one true record on Home and This Session",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T08:43:13-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4133",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Record each session typed into the Mac mini",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T08:43:12-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4134",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Record what each Operator session is doing now",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T08:43:12-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4135",
+    "w": "Maren",
+    "k": "design",
+    "t": "Draw the Operator and Direct portraits",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T08:43:12-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -242,14 +361,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T08:37:00-05:00",
+   "at": "2026-11-12T08:44:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T08:41:00-05:00",
+  "at": "2026-11-12T08:44:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -321,6 +440,16 @@
     "at": "2026-11-12T13:17:49.294Z",
     "o": "c",
     "task": "T-4157"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Pause even when the usage reading fails",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T13:42:03.937Z",
+    "o": "c",
+    "task": "T-4160"
    }
   ],
   "src": "plan",
@@ -414,7 +543,7 @@
    }
   ],
   "count": {
-   "next": 600,
+   "next": 602,
    "wait": 40,
    "blocked": 44,
    "you": 13
@@ -488,72 +617,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T13:41:16Z",
+  "at": "2026-11-12T13:44:28Z",
   "s": {
    "T-4149": [
-    "merging",
-    "Merging onto main",
-    1794490876737
+    "mergeq",
+    "1st to merge",
+    1794488848325
    ],
    "T-3990": [
-    "merging",
-    "Merging onto main",
-    1794490876737
+    "mergeq",
+    "1st to merge",
+    1794488848325
    ],
    "T-3430": [
-    "merging",
-    "Merging onto main",
-    1794490876737
+    "mergeq",
+    "1st to merge",
+    1794488848325
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T13:41:16Z",
+  "at": "2026-11-12T13:44:28Z",
   "mq": {
    "n": {
-    "checking": 3,
-    "inline": 0,
+    "checking": 0,
+    "inline": 3,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
-    "retry": 0,
-    "parked": 2
+    "retry": 1,
+    "parked": 1
    },
    "m": {
-    "checking": 0,
-    "inline": null,
+    "checking": null,
+    "inline": 37,
     "conflicted": null,
     "failed": null,
     "held": null,
-    "retry": null,
-    "parked": 171
+    "retry": 4,
+    "parked": 345
    },
-   "cur": [
-    [
-     [
-      "T-4149"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ],
-    [
-     [
-      "T-3990"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ],
-    [
-     [
-      "T-3430"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
     60,
     "2026-11-12T13:26:35Z"
@@ -561,12 +665,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T13:41:17Z",
-    "ld": 1.05,
+    "at": "2026-11-12T13:43:41Z",
+    "ld": 1.67,
     "c": 8,
     "sb": 0,
     "dk": [
-     34.4,
+     34.3,
      228.3
     ],
     "ss": [
@@ -607,13 +711,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
-  "lanes": 0,
-  "total": 1,
-  "at": "8:41 AM",
+  "main": 2,
+  "lanes": 3,
+  "total": 5,
+  "at": "8:44 AM",
   "why": "",
-  "at_iso": "2026-11-12T13:41:00+00:00",
+  "at_iso": "2026-11-12T13:44:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:41 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:44 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T16:50:53.094739+00:00",
+ "at": "2026-11-12T16:53:57.516136+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -114,7 +114,7 @@
    "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
    "started": "2026-11-12T15:15:25.110Z",
-   "seconds": 5727,
+   "seconds": 5912,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[site] T-4108 Issues badge stale count flash",
    "model": "opus",
    "started": "2026-11-12T16:32:11.872Z",
-   "seconds": 1121,
+   "seconds": 1305,
    "finished": null,
    "effort": "high"
   },
@@ -132,7 +132,7 @@
    "task": "[build] T-4198 prune run history when background start fails",
    "model": "opus",
    "started": "2026-11-12T16:38:06.505Z",
-   "seconds": 766,
+   "seconds": 951,
    "finished": null,
    "effort": "high"
   },
@@ -141,7 +141,7 @@
    "task": "[tools] T-4179 a stopped task gets a second requeue",
    "model": "opus",
    "started": "2026-11-12T16:43:29.044Z",
-   "seconds": 444,
+   "seconds": 628,
    "finished": null,
    "effort": "high"
   },
@@ -150,7 +150,7 @@
    "task": "[design] T-3565 stale sensor widget on a timeout",
    "model": "opus",
    "started": "2026-11-12T16:45:32.036Z",
-   "seconds": 321,
+   "seconds": 505,
    "finished": null,
    "effort": "high"
   }
@@ -242,7 +242,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T16:50:00+00:00",
+  "read_at": "2026-11-12T16:53:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -279,7 +279,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T11:50:00-05:00",
+  "at": "2026-11-12T11:53:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -560,32 +560,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T16:50:53Z",
+  "at": "2026-11-12T16:53:51Z",
   "s": {
-   "T-4198": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-3565": [
     "merging",
     "Mac tests at the main gate \u00b7 2 groups of tests done",
-    1794502133094
+    1794502131805
+   ],
+   "T-4198": [
+    "merging",
+    "Mac tests at the main gate",
+    1794502371805
    ],
    "T-4108": [
     "testing",
     "its own tests, in its copy",
-    1794501473094
+    1794501471805
    ],
    "T-4160": [
     "testing",
     "its own tests, in its copy",
-    1794501773094
+    1794501771805
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T16:50:53Z",
+  "at": "2026-11-12T16:53:51Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -599,11 +599,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 108,
+    "conflicted": 111,
     "failed": null,
     "held": null,
-    "retry": 36,
-    "parked": 117
+    "retry": 39,
+    "parked": 120
    },
    "cur": [],
    "ld": [
@@ -613,12 +613,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T16:50:08Z",
-    "ld": 2.58,
+    "at": "2026-11-12T16:53:30Z",
+    "ld": 1.65,
     "c": 8,
     "sb": 1,
     "dk": [
-     28.5,
+     28.2,
      228.3
     ],
     "ss": [
@@ -630,12 +630,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-12T16:44:17Z",
-    "ld": 0.44,
+    "at": "2026-11-12T16:51:24Z",
+    "ld": 1.39,
     "c": 12,
     "sb": 0,
     "dk": [
-     395.7,
+     395.4,
      926.4
     ],
     "sn": []
@@ -664,10 +664,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "11:50 AM",
+  "at": "11:53 AM",
   "why": "",
-  "at_iso": "2026-11-12T16:50:00+00:00",
+  "at_iso": "2026-11-12T16:53:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:50 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:53 AM ET</p></section>"
  }
 }

@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-12T12:09:59.668055+00:00",
+ "at": "2026-11-12T12:13:05.326638+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T05:47:30-05:00",
   "flow": [
+   {
+    "t": "T-3856",
+    "name": "Redo find what sends main sessions a stray SIGTERM",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794485472
+     }
+    ]
+   },
    {
     "t": "T-3143",
     "w": "Idris",
@@ -108,7 +119,7 @@
    "task": "[tools] T-4154 pinned line takes idle held slot",
    "model": "opus",
    "started": "2026-11-12T11:49:24.594Z",
-   "seconds": 1235,
+   "seconds": 1420,
    "finished": null,
    "effort": "high"
   }
@@ -200,7 +211,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T12:10:00+00:00",
+  "read_at": "2026-11-12T12:13:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -323,7 +334,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T07:10:00-05:00",
+  "at": "2026-11-12T07:13:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -558,12 +569,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T12:09:47Z",
+  "at": "2026-11-12T12:12:58Z",
   "s": {
+   "T-3856": [
+    "merging",
+    "Host checks on the Mac mini \u00b7 2 groups of tests done",
+    1794485518297
+   ],
+   "T-3824": [
+    "mergeq",
+    "1st to merge",
+    1794485518297
+   ],
    "T-4154": [
     "testing",
     "its own tests, in its copy",
-    1794485267017
+    1794485278297
    ],
    "T-4100": [
     "merged",
@@ -574,11 +595,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T12:09:47Z",
+  "at": "2026-11-12T12:12:58Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 0,
+    "checking": 1,
+    "inline": 1,
     "conflicted": 3,
     "failed": 0,
     "held": 0,
@@ -586,15 +607,24 @@
     "parked": 2
    },
    "m": {
-    "checking": null,
-    "inline": null,
-    "conflicted": 79,
+    "checking": 1,
+    "inline": 1,
+    "conflicted": 83,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 237
+    "parked": 240
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-3856"
+     ],
+     "Mac tests",
+     "Mac mini",
+     1
+    ]
+   ],
    "ld": [
     52,
     "2026-11-12T11:58:46Z"
@@ -602,12 +632,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T12:09:00Z",
-    "ld": 3.89,
+    "at": "2026-11-12T12:12:59Z",
+    "ld": 6.45,
     "c": 8,
     "sb": 0,
     "dk": [
-     34.6,
+     34.4,
      228.3
     ],
     "ss": [
@@ -650,10 +680,10 @@
   "main": 1,
   "lanes": 3,
   "total": 4,
-  "at": "7:10 AM",
+  "at": "7:13 AM",
   "why": "",
-  "at_iso": "2026-11-12T12:10:00+00:00",
+  "at_iso": "2026-11-12T12:13:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:10 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:13 AM ET</p></section>"
  }
 }

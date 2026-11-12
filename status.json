@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T10:56:39.917520+00:00",
+ "at": "2026-11-12T10:59:41.046425+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -103,7 +103,7 @@
    "task": "[tools] T-4150 Fable pause before limit",
    "model": "opus",
    "started": "2026-11-12T10:52:10.771Z",
-   "seconds": 269,
+   "seconds": 450,
    "finished": null,
    "effort": "high"
   },
@@ -112,7 +112,7 @@
    "task": "[release] T-4093 internal TestFlight build 5",
    "model": "opus",
    "started": "2026-11-12T10:52:18.614Z",
-   "seconds": 261,
+   "seconds": 442,
    "finished": null,
    "effort": "high"
   },
@@ -121,7 +121,7 @@
    "task": "[test] T-4151 overrun premade memory test",
    "model": "opus",
    "started": "2026-11-12T10:53:25.205Z",
-   "seconds": 194,
+   "seconds": 375,
    "finished": null,
    "effort": "high"
   }
@@ -131,24 +131,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 606,
+  "runnable_count": 605,
   "blocked_count": 85
  },
  "meter": {
   "five_hour": {
-   "pct": 15.0,
+   "pct": 16.0,
    "resets_at": "2026-11-12T07:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T05:52:33.415198-05:00",
+   "read_at": "2026-11-12T05:59:08.941873-05:00",
    "source": "live",
-   "left": 85.0,
+   "left": 84.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 71.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T05:52:33.415198-05:00",
+   "read_at": "2026-11-12T05:59:08.941873-05:00",
    "source": "live",
    "left": 29.0,
    "left_words": "of your weekly allowance left"
@@ -160,7 +160,7 @@
    "read_at": "2026-11-12T05:47:09.793608-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T05:52:33.415198-05:00"
+  "read_at": "2026-11-12T05:59:08.941873-05:00"
  },
  "ui": {
   "week_pct": 0.242,
@@ -180,7 +180,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T10:56:00+00:00",
+  "read_at": "2026-11-12T10:59:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -315,23 +315,23 @@
   }
  ],
  "disk": {
-  "free_gb": 31,
+  "free_gb": 33,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 186
+   "free_gb": 180
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T05:52:00-05:00",
+   "at": "2026-11-12T05:59:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T05:56:00-05:00",
+  "at": "2026-11-12T05:59:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -501,6 +501,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The test-only memory-overrun widget must hold 64 MiB at once to prove the widget limit (G3). A...",
+    "at": "2026-11-12T05:59:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Pernille's review of the test-only memory-overrun widget found it can never reach a shipping...",
     "at": "2026-11-12T05:53:00-05:00"
@@ -509,22 +514,21 @@
     "w": "Operator",
     "t": "The Restructuring's stopped session left five commits on a parked branch; all five were already...",
     "at": "2026-11-12T05:51:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Merge runs no longer stop waiting for the external disk; they resumed when that disk came back...",
-    "at": "2026-11-12T05:48:00-05:00"
    }
   ],
   "count": {
-   "next": 606,
+   "next": 605,
    "wait": 40,
    "blocked": 45,
    "you": 14
   },
   "fin": {
-   "n": 3,
+   "n": 4,
    "rows": [
+    [
+     "T-4151",
+     "Test that the overrun..."
+    ],
     [
      "T-4144",
      "Personal account stopped and..."
@@ -575,17 +579,23 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T10:56:25Z",
+  "at": "2026-11-12T10:59:21Z",
   "s": {
    "T-4093": [
-    "merging",
-    "Mac tests at the main gate \u00b7 2 groups of tests done",
-    1794480805397
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4150": [
     "testing",
     "its own tests, in its copy",
-    1794480985397
+    1794480981336
+   ],
+   "T-4151": [
+    "merged",
+    "on main 5:59 AM ET",
+    1794481146000,
+    ""
    ],
    "T-3887": [
     "merged",
@@ -614,25 +624,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T10:56:25Z",
+  "at": "2026-11-12T10:59:21Z",
   "mq": {
    "n": {
     "checking": 0,
     "inline": 0,
-    "conflicted": 4,
+    "conflicted": 3,
     "failed": 0,
     "held": 0,
-    "retry": 0,
+    "retry": 1,
     "parked": 2
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 6,
+    "conflicted": 9,
     "failed": null,
     "held": null,
-    "retry": null,
-    "parked": 164
+    "retry": 3,
+    "parked": 167
    },
    "cur": [],
    "ld": [
@@ -642,12 +652,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T10:56:26Z",
-    "ld": 7.15,
+    "at": "2026-11-12T10:59:00Z",
+    "ld": 8.1,
     "c": 8,
     "sb": 0,
     "dk": [
-     33.3,
+     33.2,
      228.3
     ],
     "ss": [
@@ -657,8 +667,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-12T10:54:03Z",
-    "ld": 0.15,
+    "at": "2026-11-12T10:56:12Z",
+    "ld": 0.16,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -689,10 +699,10 @@
   "main": 3,
   "lanes": 4,
   "total": 7,
-  "at": "5:56 AM",
+  "at": "5:59 AM",
   "why": "",
-  "at_iso": "2026-11-12T10:56:00+00:00",
+  "at_iso": "2026-11-12T10:59:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 5:56 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 5:59 AM ET</p></section>"
  }
 }

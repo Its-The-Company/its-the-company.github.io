@@ -37,10 +37,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-10 12:4x)
 
-- Item 11 (T-3995) 11-10 9:5x PM: grouping NOT worth it, nothing landed (bisection eats saving at ~25% red; script company-scratch/T-3995-odalys/item11_group_runs.py). Revisit if red share <10%.
-- T-4084 step 3 LANDED 3649b230ae (11-11 8:4x PM): supervisor lane_stop_tick live; #261 A = LANE CLEAR -> lane_stop.py cleared (wins to meter reset). Part (1) (<span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lanes</span> take done-list sent-back) NOT done, noted on board. After-number: ops/metrics/lane_stops.jsonl rows; first real trip of b.
-
-- T-4012 item 10 re-read 11-12 3:1x AM (bfa169dd2d): verdict no, 0 fix/own of 59 lane hand-outs, 3 give_ups settled other ways; old routes idle too. Next: 1:10 AM 11-14 or 10 sent_back rows. flow.py rates in main checkout refused by guard.
+- T-4012 item 10 re-read 11-12 3:1x AM (bfa169dd2d): verdict no, 0 fix/own of 59 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> hand-outs, 3 give_ups settled other ways; old routes idle too. Next: 1:10 AM 11-14 or 10 sent_back rows. flow.py rates in main checkout refused by guard.
 - T-4012 0b48b7f25e (11-11 12:36 AM) personal_land.sh batch landed: slice 2 (no Retry line), host_keep wired, records apply 1 commit, pywidget/tools host floor, named docs/design .md runs xc. Left: retry file/re-pick/ledgers after T-4011 number. Owed: host_keep.jsonl rows; 'ops: lane records applied' count vs 72/49.
 - Unlanded patches on SSD company-scratch: T-3907 runner+main-gate; T-3962/65 (T-3962 also sim_hold, T-3967); T-3971 merge-only switch (13 files, green). T-3818 refused host_refused.
 - T-4013 owed: OPT-068 read 11-16; OPT-108 rerun; OPT-114 load/slow job.
@@ -54,13 +51,18 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4155 eb920cf8bc (11-12): usage-limit end -> unfinished tasks with commits off done list, claim released, board note + state/limited/<task>.json, packet resume words (tools/limit_end.py). Owed: first live limit end (log 'ended at a usage limit'); profile state reads are refused by security-guard, use tick logs.
 
-- T-4150 c03e0e40d1 (11-12): fable_pause joins jittered resets, 85% line with no burn. Owed: first live pause; measured 1.38%/min underran real >=3.1%/min.
+- T-4150/T-4160 bce6bf068d: failed reading projects from last good at >=3%/min (5-hour hold % is a floor). Owed: live projected pause.
 
 - T-4138 7266de4234 (11-12): pinned session <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> removed (an Investor c6824162128). Owed: count fix/sent-back waits on a while 3 pinned hold every slot.
 
+- T-4157 ff2a4c732d: a, b fable_only. T-4206 df0eb78f5a: investor-stop flag <span title="A new, permitted reading that removes a cap. A lift rule is that reading, written down before we look.">lifts</span> when its rule is retired/lifted for the account (lane_stop.py released). Owed: first live 'usage-line stop lifted' line (b freed by LANE CLEAR 1:18 PM first).
+
+- T-4179 30eaa45f58 (11-12): requeued records '<ID> <12-hex line hash>'; bare ID = first line for that ID. T-4127 requeued on a 12:44 PM, no session (a at 93%). Owed: first T-4127 session on a after the window allows. guard_supervisor_test 1 FAIL only from a copy path with a space.
+
+- T-4161 bd24d50c7a (11-12 12:57 PM): b on Fable 5.2 (FABLE_MODEL_B); tick logs 'session: models:'. Owed: first models line in ops/runs/personal-tick-a/b.log. guard_supervisor_test fails 1 in a copy path with a space (not mine).
+
 ## Lessons
 
-- T-3950 dd55aab16e (11-12): Home old-requests link out; Time Requested sort, sub-categories, Requested by, open-card link to This Session. Not ticked. site_t3219_test red on main before it (stale after T-4094).
 - A "redo" may already be on main under a new hash: grep git log for the old task id first (T-4143: T-3950 was f9c19ea885).
 {% endraw %}
 

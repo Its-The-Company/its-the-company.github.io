@@ -65,7 +65,7 @@ if (!shown[k] && b.named.indexOf(k) < 0 && !off(o, k) && o.l.indexOf('unrelated'
 return { n: n, ans: ans, later: later, red: red };
 }
 function draw(c) {
-var a = D.querySelector('nav a[data-issues]'), b = a && a.querySelector('.nb');
+var a = D.querySelector('nav a[data-issues]');
 if (!a || c.n == null) return;
 if (!c.n) { a.querySelectorAll('.nbs, .nb').forEach((e) => e.remove()); return; }
 var t = c.n + ' waiting on the Investors' + (c.live ? ', read from GitHub at ' + S.clock(c.t) : ' at the site build, ' + S.clock(c.t, { month: 'short', day: 'numeric' }))
@@ -77,10 +77,12 @@ a.querySelectorAll('.nb').forEach((e) => e.remove());
 if (!w) { a.appendChild(D.createTextNode(' ')); w = a.appendChild(S.el('span', 'nbs')); }
 (c.red == null ? [['', c.n]] : [['nb-r', c.red], ['nb-b', c.n - c.red]]).forEach((p) => { if (p[1] > 0) { var e = w.appendChild(S.el('span', 'nb' + (p[0] ? ' ' + p[0] : ''))); e.textContent = String(p[1]); e.title = t; e.setAttribute('aria-label', t); } });
 }
-function put(n, ans, later, red) { var c = { n: n, ans: ans, later: later || 0, red: red == null ? null : red, t: Date.now(), live: 1 }; try { sessionStorage.setItem(K, JSON.stringify(c)); } catch (e) {} draw(c); }
+function put(n, ans, later, red) { var c = { n: n, ans: ans, later: later || 0, red: red == null ? null : red, t: Date.now(), live: 1 }, j = JSON.stringify(c); try { sessionStorage.setItem(K, j); localStorage.setItem(K, j); } catch (e) {} draw(c); }
+function last() { try { return JSON.parse(localStorage.getItem(K)); } catch (e) {} }
+function build() { var o = D.querySelector('nav a[data-issues]>.nb[hidden]'), x; if (o) { x = o.cloneNode(1); x.hidden = !1; o.replaceWith(x); } }
 window.IssueCount = { answered: answered, count: count, put: put };
 window.IssueQ = { dl: dl, queue: queue, tier: tier, badged: badged, act: act, settle: settle, norm: norm, due: due, DAY: DAY, et: etMs };
-if (!S || !S.getToken || !S.getToken() || !me) return;
+if (!S || !S.getToken || !S.getToken() || !me) { build(); return; }
 var Q = 'query($o:String!,$r:String!){repository(owner:$o,name:$r){a:object(expression:"HEAD:investors/allowlist.md"){...on Blob{text}}'
 + 'i:issues(states:OPEN,first:100){pageInfo{hasNextPage}nodes{number title body author{login}labels(first:20){nodes{name}}comments(last:1){nodes{author{login}body}}}}}}';
 function json(r) { if (!r.ok) throw new Error(S.said(r)); return r.json(); }
@@ -136,6 +138,7 @@ var gen = 0;
 function read(force) {
 var c = null, my; try { c = JSON.parse(sessionStorage.getItem(K) || 'null'); } catch (e) {}
 if (!force && c && Date.now() - c.t < AGE) return draw(c);
+if ((c = last())) draw(c);
 var root = D.getElementById('needs-root'); if (root && !root.getAttribute('data-mode')) return;
 my = ++gen;
 fetch(me.getAttribute('data-count'), { cache: 'no-store' }).then(json).then((b) => {
@@ -150,8 +153,8 @@ open[i.number] = { l: i.labels.nodes.map((x) => String(x.name).toLowerCase()), a
 var all = !r.i.pageInfo.hasNextPage, now = Date.now(), qs = {};
 Object.keys(open).forEach((k) => { var o = open[k]; if (o.l.some((x) => KEEP.indexOf(x) >= 0) && o.l.indexOf('unrelated') < 0 && o.l.indexOf('main') < 0 && o.l.indexOf('site-state') < 0) qs[k] = o; });
 return load(b.repo).then((st) => { if (my !== gen) return; sync(st, qs, now, all); var x = count(b, open, all, st, now); put(x.n, x.ans, x.later, x.red); });
-}, () => draw({ n: b.n, t: Date.parse(b.at) }));
-}).catch(() => {});
+}, () => draw(last() || { n: b.n, t: Date.parse(b.at) }));
+}).catch(() => last() || build());
 }
 window.IssueCount.read = read;
 read();

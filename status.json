@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-12T18:22:32.871801+00:00",
+ "at": "2026-11-12T18:28:36.721809+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-12T10:13:04-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-3143",
@@ -54,7 +54,6 @@
    },
    {
     "t": "T-3418",
-    "name": "Keep long Issues threads short and the ask clear",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -62,7 +61,6 @@
    },
    {
     "t": "T-3418",
-    "name": "Keep long Issues threads short and the ask clear",
     "acct": "Personal b",
     "steps": [],
     "end": "failed",
@@ -71,7 +69,6 @@
    },
    {
     "t": "T-3961",
-    "name": "Show the merge queue on the This Session page",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
@@ -88,7 +85,6 @@
    },
    {
     "t": "T-3961",
-    "name": "Show the merge queue on the This Session page",
     "acct": "Personal b",
     "steps": [],
     "end": "failed",
@@ -97,7 +93,6 @@
    },
    {
     "t": "T-3418",
-    "name": "Keep long Issues threads short and the ask clear",
     "acct": "Personal b",
     "steps": [],
     "end": "failed",
@@ -105,22 +100,20 @@
     "why": "did not merge cleanly"
    }
   ],
-  "landed": 59,
+  "landed": 57,
   "failed": 10
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4206 release account when stop rule retired",
    "model": "opus",
    "started": "2026-11-12T17:59:05.541Z",
-   "seconds": 1407,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-12T18:23:39.348000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4161 Fable 5.2 on Jeremy's account, model log",
@@ -144,20 +137,12 @@
    "started": "2026-11-12T17:02:07.937Z",
    "seconds": null,
    "finished": "2026-11-12T17:31:55.859000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4204 check T-4198 before ship",
-   "model": "opus",
-   "started": "2026-11-12T17:18:31.327Z",
-   "seconds": null,
-   "finished": "2026-11-12T17:23:09.670000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 600,
+  "runnable_count": 599,
   "blocked_count": 98
  },
  "meter": {
@@ -201,12 +186,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-12T10:27:54-05:00",
  "personal": {
   "week_pct": 35.25,
-  "usage_pct": 32.6,
-  "work_pct": 78.8,
-  "read_at": "2026-11-12T18:22:00+00:00",
+  "usage_pct": 31.6,
+  "work_pct": 78.3,
+  "read_at": "2026-11-12T18:30:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -268,26 +253,13 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T13:22:00-05:00",
+  "at": "2026-11-12T13:30:00-05:00",
   "mode": "midnight"
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 5 (raised a step toward the floor of 8: new work may start and every signal is under its line)",
-  "n": 5,
-  "at": "2026-11-12T10:12:54.003565-05:00"
- },
+ "pool": null,
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4206 release account when stop rule retired",
-   "model": "opus",
-   "since": "2026-11-12T17:59:05.541Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -300,6 +272,14 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -330,19 +310,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Release an account when its stop rule is retired",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T17:59:05.541Z",
-    "o": "i",
-    "task": "T-4206"
-   }
-  ],
-  "src": "plan",
+  "run": [],
   "open": [
    {
     "w": "Idris",
@@ -418,6 +386,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "A personal account stopped at the Investors' usage limit now restarts by itself once the...",
+    "at": "2026-11-12T13:23:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "A line asking the company's lanes to restart a stopped task now gives one restart each time,...",
     "at": "2026-11-12T12:44:00-05:00"
    },
@@ -425,47 +398,13 @@
     "w": "Pernille",
     "t": "Checked Idris's change so that a widget or Shortcut whose Python fails to start still clears run...",
     "at": "2026-11-12T12:22:00-05:00"
-   },
-   {
-    "w": "Wrenna",
-    "t": "A second reader checked the draft privacy policy's promises about deleting old run history...",
-    "at": "2026-11-12T12:19:00-05:00"
    }
   ],
   "count": {
-   "next": 600,
+   "next": 599,
    "wait": 40,
    "blocked": 58,
    "you": 14
-  },
-  "fin": {
-   "n": 21,
-   "rows": [
-    [
-     "T-4179",
-     "Let a stopped task get a..."
-    ],
-    [
-     "T-4204",
-     "Check finished work before..."
-    ],
-    [
-     "T-3798",
-     "Fix the run history deletion..."
-    ],
-    [
-     "T-4198",
-     "Prune run history when a..."
-    ],
-    [
-     "T-4108",
-     "Stop the Issues badge..."
-    ],
-    [
-     "T-4160",
-     "Pause even when the usage..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -507,26 +446,24 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T18:22:19Z",
+  "at": "2026-11-12T18:28:36Z",
   "s": {
-   "T-3814": [
-    "merging",
-    "Merging onto main",
-    1794507739380
-   ],
-   "T-4206": [
+   "T-4116": [
     "merged",
-    "on main 1:20 PM ET",
-    1794507608000,
-    "Odalys"
+    "on main 11:10 AM ET",
+    1794499813000,
+    ""
    ]
+  },
+  "nm": {
+   "T-4116": "Regroup the app queue into feature-sized pieces"
   }
  },
  "ln": {
-  "at": "2026-11-12T18:22:19Z",
+  "at": "2026-11-12T18:28:36Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 3,
     "failed": 0,
@@ -535,33 +472,24 @@
     "parked": 3
    },
    "m": {
-    "checking": 0,
+    "checking": null,
     "inline": null,
-    "conflicted": 200,
+    "conflicted": 206,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 209
+    "parked": 215
    },
-   "cur": [
-    [
-     [
-      "T-3814"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    73,
-    "2026-11-12T16:10:17Z"
+    74,
+    "2026-11-12T18:22:31Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T18:22:19Z",
-    "ld": 0.51,
+    "at": "2026-11-12T18:28:37Z",
+    "ld": 0.45,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -599,22 +527,20 @@
   "queue_text",
   "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 2,
-  "total": 3,
-  "at": "1:22 PM",
+  "total": 2,
+  "at": "1:30 PM",
   "why": "",
-  "at_iso": "2026-11-12T18:22:00+00:00",
-  "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:22 PM ET</p></section>"
+  "at_iso": "2026-11-12T18:30:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:30 PM ET</p></section>"
  }
 }

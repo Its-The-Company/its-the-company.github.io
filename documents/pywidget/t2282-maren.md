@@ -2,15 +2,57 @@
 layout: "default"
 title: "T-2282: Settings screen against the design"
 section: "documents"
-description: "Colours are sampled by script, not by eye (tools/png_sample.py; contrast is WCAG 2 relative luminance, the darkest or lightest ink in a box against the box&#x27;s most common colour). Coordinates are px in the 1170 x 2532\u2026"
+description: "Result: passes for every row the shots show. One open line stays as it was (T-2914, P3, the About seam at xxxLarge), now measured in dark too. One new line for Idris: T-4199, fresh shots, because a group was added on\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/pywidget/design/' | relative_url }}">← Design &amp; Specs</a><a href="{{ '/documents/pywidget/t2282-maren.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind grey">Review</span><span>Day 15 · Thu Nov 5</span><span><code>pywidget/docs/reviews/t2282-maren.md</code></span></div><h1>T-2282: Settings screen against the design</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"><span>By <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a>, Product and visual designer</span></div></div>
+<div class="page-head"><div class="kicker"><span class="kind grey">Review</span><span>Day 22 · Thu Nov 12</span><span><code>pywidget/docs/reviews/t2282-maren.md</code></span></div><h1>T-2282: Settings screen against the design</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/maren.svg' | relative_url }}" alt="Maren" title="Maren"><span>By <a href="{{ '/cast/maren.html' | relative_url }}">Maren</a>, Product and visual designer</span></div></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
+## Read of 2026-11-12, 11:37 AM ET (Maren, after the 11-10 merge reset)
+
+**Result: passes for every row the shots show.** One open line stays as it was (T-2914, P3, the About seam at xxxLarge), now measured in dark too. One new line for Idris: T-4199, fresh shots, because a group was added on 11-12 that no shot shows.
+
+What I read. The four shots at 47781357 in `ops/site-checks/settings-T-2225/` are the build F1 to F5 below were found on; they show the old screen. Idris's fix fc4080a1bd (T-2696..T-2700) and T-2715 (title tests) are on main, and newer shots exist, so the verdict is taken from those:
+- `ops/site-checks/settings-T-2696/`: six shots from <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> commit 261151457 (holds fc4080a1bd; not T-0272, T-2499 or T-2851). Light, dark, both after Restore found nothing, light xxxLarge with "Not purchased" and with "Waiting for approval".
+- `ops/site-checks/settings-T-2715/`: nine shots at ad5b76033a (holds fc4080a1bd, T-0272, T-2499 and T-2851). Light and dark at Large and xxxLarge, and a screen left open through Light to Dark.
+
+All colours below are sampled by script (`tools/png_sample.py`; contrast is WCAG 2, darkest or lightest ink in a box against the box's most common colour). Coordinates are px in the 1170 x 2532 shots, 3 px per pt. No build or Simulator was run.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: Read of 2026-11-12, 11:37 AM ET (Maren, after the 11-10 merge reset), scrolls sideways" data-n="1 5" style="--tw:1050px" markdown="1">
+
+| # | Was | Shot now (light / dark) | Design | Result |
+|---|---|---|---|---|
+| F1 | system grey cards in dark | card #FFFFFF / #151926 at (1000,760) and (1000,1200); separators rows 636-639 and 1170-1173 at x 700: #E3DFD6 / #262C3E | `bg.surface`, `line.hairline` (A light, B dark) | pass |
+| F2 | "About" header 3.33:1 | #5C5850 on #F7F5F0, 6.50:1 / #A9AFC5 on #0A0C13, 8.95:1; also after Restore | `text.secondary` | pass |
+| F3 | SF Pro Bold, #000000 / #FFFFFF | serif in light, rounded in dark; ink #1C1B19 15.80:1 / #EEF0F8 17.17:1, box (45-500, 330-440). T-2715's open-screen shots show the same title after Light to Dark and after a size change | approved item 2, `text.primary` | pass |
+| F4 | Restore title at x 100, no tile | Restore has the 30 pt `accent.soft` tile; its title starts at x 226, the Pro title at x 226; ink #2350B0 7.38:1 / #A08BFF 6.37:1 | A and B frames 1 to 4 | pass |
+| F5 | status would wrap mid-phrase at xxxLarge | at xxxLarge both "Not purchased" and "Waiting for approval" sit whole on their own line under the title; the tile and chevron stay | s5.10.6 `ViewThatFits` | pass |
+
+</div>
+
+
+Still true from the first read: canvas #F7F5F0 / #0A0C13, Pro detail #5C5850 / #A9AFC5 (7.08:1 / 8.03:1), the Restore footnote #5C5850 / #A9AFC5 (6.50:1 / 8.95:1, ink x 99-936, y 850-886), the page foot, and the rows left out by design.
+
+Open, already on the board:
+- **T-2914 (P3, Idris), About seam at xxxLarge.** Pixel row 1282 is canvas between Terms of Use and Acknowledgements at x 0-222 and 1074-1170, inside the card's 48-1122 edge: #F7F5F0 in light (both T-2696 xxxLarge shots and `settings-T-2715/live-size-light-3-xxxl-fresh-launch.png`) and **#0A0C13 in dark** (`settings-T-2715/live-size-dark-3-xxxl-fresh-launch.png`). The line said "not read on dark"; it is the same 1 px row in dark. It is not at Large. It does not hold this read.
+
+Not covered by this verdict (no shot shows them):
+- **The Testers group (T-4093, b84a7b1596, 11-12 1:43 AM).** "Unlock Pro (testers)" with a `hammer` tile and a switch, under a "Testers" header and a footnote, drawn right after the Pro group in a TestFlight or Xcode copy only (`ProStore.showsTesterSwitch`). Every shot is older, and a Simulator run from Xcode will now draw it, so the next shots of this screen show a group the frames do not have. By reading it uses the same parts as the rest (`SettingsRowLabel`, `settingsRow()`, `header(_:)`, footer in `text.secondary`, switch tint `accent`). It is not in the App Store build. s5.10 has no row for it; I owe a one-line entry there. Fresh shots: T-4199.
+- **The Restore footer after a trip to the Pro screen (T-2499, de343f7e24).** A still cannot show it. By reading, the `onDisappear` reset is gone, so the footer stays after the Pro screen is popped, and Restore keeps its VoiceOver label with the running state as its value. That agrees with s5.10 10.2.
+- Not counted, as the line says: tour (T-0193, still nil), Editor theme (T-0272 is built but `pro-flags.json` keeps themes off, so the group is hidden), Support (T-0485), Privacy Policy (`LegalLinks.privacyPolicy` still nil). The gate build's Export measurements row (T-2851, T-3814) is behind `PYWIDGET_LANE_GATE` and is not in a shipping build.
+- Dark xxxLarge is read from the T-2715 shot only (fresh launch and screen left open); there is no dark xxxLarge "Waiting for approval" shot.
+
+The <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> patch named in the notes (`refs/archive/parked/b3/20261104-223405-57288`) holds other tasks' files (workflow map, WidgetFolderAppNames tests) and nothing from this read, so nothing was reused from it. This file's earlier reads below were already on main (7ec61279c2, ae7405d10e).
+
+---
+
+## Earlier read, 2026-11-05 (build 47781357)
+
+
 Maren, 2026-11-05. Build 47781357 (T-2225). Read from the four Simulator shots in `ops/site-checks/settings-T-2225/` (1170 x 2532 px, 3 px per pt): light, dark, and each after Restore with nothing bought. Compared with `pywidget/docs/design/ide/A-settings-phone.png` and `B-settings-phone.png` (frames 1 and 4), spec s5.10 (T-0657), `creative/approved.md` item 2 and `pywidget/docs/design/tokens.json`. No Simulator or build was run.
 
 Colours are sampled by script, not by eye (`tools/png_sample.py`; contrast is WCAG 2 relative luminance, the darkest or lightest ink in a box against the box's most common colour). Coordinates are px in the 1170 x 2532 shots. Crops are in `pywidget/docs/reviews/t2282/`.
@@ -22,7 +64,7 @@ Result: **does not pass.** Three P2 and two P3 findings, each with a board line 
 ## Findings
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 1: Findings, scrolls sideways" data-n="1 3" style="--tw:1129px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 2: Findings, scrolls sideways" data-n="1 3" style="--tw:1129px" markdown="1">
 
 | # | Board | Pri | What the shot shows | Design / rule | Where |
 |---|---|---|---|---|---|
@@ -38,7 +80,7 @@ Result: **does not pass.** Three P2 and two P3 findings, each with a board line 
 ## Matches
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 2: Matches, scrolls sideways" style="--tw:844px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Matches, scrolls sideways" style="--tw:844px" markdown="1">
 
 | Check | Shot (light / dark) | Design |
 |---|---|---|
@@ -69,14 +111,14 @@ These come from the iOS 26 system `List`. Settings should follow Apple's convent
 
 Apple conventions met: Restore Purchases sits on the Settings screen next to the product (App Review 3.1.1), the large title is used, rows that open the web carry the up-right arrow, and the version is at the foot.
 
-## Recheck, 2026-11-05 2:50 PM (code read of 1e1ff0619)
+## Recheck, 2026-11-05 2:50 PM ET (code read of 1e1ff0619)
 
-Maren. Idris's fix for T-2696..T-2700 is commit 1e1ff0619. At 2:43 PM it was on `personal/b2`, `b5`, `b6` and two <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> branches, not on main or origin/main. `ops/jobs/` has no job at that commit; the newest Settings job is J-20261105-1335 (T-2456) at 92b062d47. The shots in `ops/site-checks/settings-T-2225/` are still build 47781357. **No new shot exists, so every finding below is confirmed by reading the code only.** No build or Simulator was run.
+Maren. Idris's fix for T-2696..T-2700 is commit 1e1ff0619. At 2:43 PM ET it was on `personal/b2`, `b5`, `b6` and two parked branches, not on main or origin/main. `ops/jobs/` has no job at that commit; the newest Settings job is J-20261105-1335 (T-2456) at 92b062d47. The shots in `ops/site-checks/settings-T-2225/` are still build 47781357. **No new shot exists, so every finding below is confirmed by reading the code only.** No build or Simulator was run.
 
 The MacBook run cannot produce the shots. `testScreenshotsForReview` and the new `testProRowAtXXXLargeWithPendingForReview` skip unless `TEST_RUNNER_PW_SETTINGS_SHOTS` is set. `tools/xc_route.py:139` keeps any `TEST_RUNNER_*` run local ("settings the runner can't carry"). The MacBook run gives the green tests. The PNGs need one run on the local Mac mini slot with that variable set, at a build that holds 1e1ff0619, saved to a new folder (`ops/site-checks/settings-T-2696/`).
 
 
-<div class="tbl" role="region" tabindex="0" aria-label="Table 3: Recheck, 2026-11-05 14:50 (code read of 1e1ff0619), scrolls sideways" data-n="1" style="--tw:764px" markdown="1">
+<div class="tbl" role="region" tabindex="0" aria-label="Table 4: Recheck, 2026-11-05 2:50 PM ET (code read of 1e1ff0619), scrolls sideways" data-n="1" style="--tw:764px" markdown="1">
 
 | # | Board | Code read | Shot still needed to pass |
 |---|---|---|---|

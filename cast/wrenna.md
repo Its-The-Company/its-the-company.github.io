@@ -59,6 +59,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Lesson: a ledger's row count is not a run count; dedupe by run (time, task, seconds) before quoting a median.
 ## 2026-11-11 T-4120 queue-methods research (654eb92479, ticked)
 - Lesson: check what a named stage really runs before reasoning (the "iPhone run" is the iPhone 17e Simulator on the MacBook). Put `$(date +%H:%M)` in status steps, never a typed time.
+## 2026-11-12 T-3798 independent read (ced6f947bf, ticked); T-4205 filed (timed-out background start makes no prune)
+- Lesson: main moved mid-read (T-4198 landed); re-check `git log -1` before writing any "true at HEAD" line.
 {% endraw %}
 
 

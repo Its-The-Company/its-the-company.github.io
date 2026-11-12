@@ -45,7 +45,7 @@ drawFiles();
 }
 pick.onchange = () => { take(pick.files); pick.value = ''; };
 ta.addEventListener('paste', (ev) => { var fl = ev.clipboardData && ev.clipboardData.files; if (fl && fl.length) { take(fl); if (!ev.clipboardData.getData('text')) ev.preventDefault(); } });
-var lastDay = '';
+var lastDay = '', flab = null;
 function msg(x, ask, me) {
 var d = new Date(x.created_at).toDateString();
 if (d !== lastDay) { lastDay = d; mk(log, 'p', 'cv-day', new Date(x.created_at).toLocaleDateString([], { weekday: 'short', month: 'short', day: 'numeric' })); }
@@ -54,7 +54,14 @@ mk(f, 'b', null, y ? (a ? a[1] : l || 'You') : 'Company'); txt(f, ' '); mk(f, 's
 if (ask) { m.id = 'iq-ask'; txt(f, ' '); mk(f, 'span', 'tag ny-tag-q', 'Your reply answers this'); }
 var t = String(x.body || '').replace(C.NOTE, '').replace(MAIL, '[email]').trim();
 C.md(mk(mk(m, 'div', 'cv-body'), 'div', 'md'), t || '(no text)', !ask);
+if (flab) flab();
 return m;
+}
+function fold(l) {
+var b = el('button', 'cv-tool iq-fold'), n;
+function lab() { n = l.querySelectorAll('.cv-msg').length - 1; b.textContent = (l.classList.contains('iq-f') ? 'Show ' : 'Hide ') + n + ' earlier'; b.setAttribute('aria-expanded', !l.classList.contains('iq-f')); }
+if (l.querySelectorAll('.cv-msg').length < 4) return;
+b.type = 'button'; b.onclick = () => { l.classList.toggle('iq-f'); lab(); }; l.insertBefore(b, l.firstChild); l.classList.add('iq-f'); lab(); flab = lab;
 }
 function metaLine() {
 meta.textContent = '';
@@ -126,7 +133,7 @@ return shut;
 var reside = null;
 function show() {
 var n = num(), k = ++draw;
-N = n; I = null; files = []; doubt = null; btns = []; lastDay = ''; cnt = null; reside = null; root.textContent = ''; dock.hidden = true;
+N = n; I = null; files = []; doubt = null; btns = []; lastDay = ''; flab = null; cnt = null; reside = null; root.textContent = ''; dock.hidden = true;
 var pg = mk(root, 'div', 'iq-page'), hd = mk(pg, 'header', 'iq-hd'), back = mk(hd, 'a', 'iq-back', '← Issues');
 back.href = root.getAttribute('data-list') || '../';
 if (!n) { mk(hd, 'p', 'meta', 'No issue number in the address. Open an issue from the Issues list.'); return; }
@@ -144,6 +151,7 @@ cnt = mk(sh, 'small'); metaLine();
 log = mk(th, 'div', 'cv-log'); log.setAttribute('aria-label', 'The issue and its replies');
 if (I.comments > 100) mk(log, 'p', 'meta', 'Earlier replies are on GitHub; the latest 100 follow.');
 [I].concat(cs).forEach((x) => { msg(x, x === ask.src); });
+fold(log);
 var dk = 'company.draft.' + n;
 if (ask.answered && ask.lastInv && C.plain(ask.lastInv.body) === (LS.getItem(dk) || '').trim()) LS.removeItem(dk);
 th.appendChild(dock); cp.draw(); drawFiles();

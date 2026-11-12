@@ -346,21 +346,24 @@ if(ie){if(q&&q.why&&q.since){var mn=Math.max(0,Math.round((Date.now()-Date.parse
 // T-3190: the tasks finished this session, from each status (Home is built far less often than a status is written)
 function fin(st){var d=(st.session||{}).active?(st.tasks||{}).fin:null,e=document.getElementById('lk-dn'),b=document.getElementById('lk-fin'),u=document.getElementById('lk-fin-l'),m=document.getElementById('lk-fin-m'),r=d&&d.rows||[],x=d?d.n-r.length:0;
 if(e){e.hidden=!d;if(d)e.querySelector('b').textContent=d.n}if(!b||!u)return;b.hidden=!r.length;u.textContent='';
-r.forEach(function(a){var li=mk(u,'li');mk(li,'span','idb',a[0]);li.appendChild(document.createTextNode(' '+(nm(a[1])||nm((L.nm||{})[a[0]])||'Name not recorded')))});
+r.forEach(function(a){var li=mk(u,'li');mk(li,'span','idb',a[0]);li.appendChild(document.createTextNode(' '+(nm(a[1])||nm((L.nm||{})[a[0]])||snm(st,a[0])||'Name not recorded')))});
 if(m){m.hidden=x<1;m.textContent='and '+x+' earlier'}}
 // T-4095 (friesevan #41 c6809316957): the status's stg, the live stages (live_stage.py, read every minute with the same rule
 // as the build, home_look stage_map), wins over the build's L.st once it is newer than the build; a stage it reads that
 // it no longer names has ended (LK). mg(): Merged holds for a row begun before the commit, of the commit's worker.
 function lv0(st){var g=st&&st.stg;return g&&g.s&&Date.parse(g.at)>=(L.at||0)?g.s:null}
+// T-4162 (friesevan #41 c6826068202): the status's stg.nm names each task it lists (live_stage.add_names, task_names);
+// the build's L.nm names only the tasks the build saw, so T-3807, handed out after it, read "Name not recorded".
+function snm(st,id){var g=st&&st.stg;return nm(g&&g.nm&&g.nm[id])}
 var LK={testq:1,testing:1,mergeq:1,simq:1,mergetest:1,merging:1,merged:1};
 function sg(LS,id,r){var s=LS&&LS[id]||null,b=(L.st||{})[id],a;if(!s&&b&&!(LS&&LK[b[0]]))s=b;if(s&&s[0]==='merged'){a=Date.parse(r.at||'');if(!(a<s[2])||(s[3]&&r.w&&String(s[3]).toLowerCase()!==String(r.w).toLowerCase()))s=null}return s}
 function draw(st,isPub){var ml=S.lane.main(st,isPub),l=ml.concat(S.lane.rows(st).filter(function(r){return!r.d})),seen={},u=[],now=Date.now(),o={},wk,ms=sw((st.tasks||{}).src),LS=lv0(st);
 l.forEach(function(r){var t=String(r.t||r.task||''),id=r.task||(t.match(/\bT-\d+/)||[''])[0],k=id||nm(t),s=sg(LS,id,r),m,b=IN[id]||{},ln=/^([ab])\d*$/.exec(r.lane||''),mn=ml.indexOf(r)>=0,rs=mn?ms:sw(r.src||(ln?'plan-'+ln[1]:''),r.n);if(s&&s[0]==='parked'&&r.at&&Date.parse(r.at)>s[2])s=[r.k==='review'?'review':'coding','Fix after a failed merge'];if(r.w)o[String(r.w).toLowerCase()]=1;if(!k||seen[k])return;seen[k]=1;
-m=r.at?Math.round((now-Date.parse(r.at))/6e4):NaN;u.push({id:id,t:nm(r.t||r.task)||nm((L.nm||{})[id])||'Name not recorded',w:[r.w||(b.w||[])[0]||'worker not recorded'],m:r.m||b.m||'model not recorded',e:r.e&&r.m?r.e:r.m?'':b.e||'',min:m>=0?m:-1,s:s?s[0]:r.k==='review'?'review':'coding',n:s?s[1]:'',
+m=r.at?Math.round((now-Date.parse(r.at))/6e4):NaN;u.push({id:id,t:nm(r.t||r.task)||nm((L.nm||{})[id])||snm(st,id)||'Name not recorded',w:[r.w||(b.w||[])[0]||'worker not recorded'],m:r.m||b.m||'model not recorded',e:r.e&&r.m?r.e:r.m?'':b.e||'',min:m>=0?m:-1,s:s?s[0]:r.k==='review'?'review':'coding',n:s?s[1]:'',
 a:rs||(mn?'Main':ln?'Account '+ln[1].toUpperCase():''),sr:rs?1:0,h:b.h,x:b.x,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});
-(L.init||[]).forEach(function(x){var v;if(x.s==='coding'||x.s==='review'||seen[x.id||x.t])return;if(LS&&x.id&&LK[x.s]){v=LS[x.id];if(!v||v[0]==='merged')return;x=Object.assign({},x,{s:v[0],n:v[1]})}seen[x.id||x.t]=1;u.push(x)});  // T-3284 item 3
+(L.init||[]).forEach(function(x){var v;if(x.s==='coding'||x.s==='review'||seen[x.id||x.t])return;if(LS&&x.id&&LK[x.s]){v=LS[x.id];if(!v||v[0]==='merged')return;x=Object.assign({},x,{s:v[0],n:v[1]})}if(x.id&&/^Name not recorded/i.test(x.t||'')&&snm(st,x.id))x=Object.assign({},x,{t:snm(st,x.id)});seen[x.id||x.t]=1;u.push(x)});  // T-3284 item 3
 if(LS)Object.keys(LS).forEach(function(id){var v=LS[id],b=IN[id]||{};if(seen[id]||v[0]==='merged')return;seen[id]=1;  // T-4095: a stage the build had not seen
-u.push({id:id,t:nm((L.nm||{})[id])||'Name not recorded',w:b.w||['worker not recorded'],m:b.m||'model not recorded',e:b.e||'',min:v[2]?Math.max(0,Math.round((now-v[2])/6e4)):-1,s:v[0],n:v[1],h:b.h,x:b.x,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});
+u.push({id:id,t:nm((L.nm||{})[id])||snm(st,id)||'Name not recorded',w:b.w||['worker not recorded'],m:b.m||'model not recorded',e:b.e||'',min:v[2]?Math.max(0,Math.round((now-v[2])/6e4)):-1,s:v[0],n:v[1],h:b.h,x:b.x,c:b.c||CT[id]||'',g:b.g||'',y:b.y||0,ps:b.ps||''})});
 items=u;render();if(K3&&K3.requeue)K3.requeue();wk=document.getElementById('lk-working');if(wk)wk.textContent=Object.keys(o).length+' working';idle(st);fin(st)}
 // T-3316: a tree's link to an In flight card shows the whole list, then hands back the card
 if(K3){K3.has=function(i){return items.some(function(x){return K3.id(x.id)===i})};K3.all=function(){if(fl!=='all'){fl='all';render()}};K3.run=function(i){if(!K3.has(i))return null;fl='all';all=true;render();
@@ -395,11 +398,11 @@ d.addEventListener('toggle',function(){if(d.open)build()})});
 // than the build; a part ln leaves out keeps the build's. The words are merge_line_html's and machine_panel._rows'.
 // The Machine bubble's Mac Mini figure follows the status's disk, its MacBook figure ln's. No read of its own: it
 // rides on the status app.js already polls. Text goes in as textContent.
-document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,bx=document.getElementById('lk-run'),B=0,NM={};if(!S||!S.onStatus)return;
+document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,bx=document.getElementById('lk-run'),B=0,NM={},LNM={};if(!S||!S.onStatus)return;
 try{var lf=JSON.parse(bx&&bx.getAttribute('data-life')||'{}');B=lf.at||0;NM=lf.nm||{}}catch(e){}
 function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;p.appendChild(e);return e}
 function tx(p,x){p.appendChild(document.createTextNode(x))}
-function nm(t){var q=document.getElementById('lk-q'),a=[];if(NM[t])return NM[t];try{a=JSON.parse(q&&q.getAttribute('data-all')||'[]')}catch(e){}a=a.filter(function(x){return x[0]===t})[0];return a&&a[2]||'Name not recorded'}
+function nm(t){var q=document.getElementById('lk-q'),a=[];if(NM[t])return NM[t];if(LNM[t])return LNM[t];try{a=JSON.parse(q&&q.getAttribute('data-all')||'[]')}catch(e){}a=a.filter(function(x){return x[0]===t})[0];return a&&a[2]||'Name not recorded'}
 function et(t){var d=new Date(t);return isNaN(d)?'':d.toLocaleTimeString('en-US',{timeZone:'America/New_York',hour:'numeric',minute:'2-digit'})+' ET'}
 function span(n){return n>=1440?Math.floor(n/1440)+' d '+Math.floor(n%1440/60)+' h':n>=60?Math.floor(n/60)+' h '+(n%60)+' min':n+' min'}
 function hrs(m){var v=m/60;return v<1?Math.round(v*60)+' min':v<100?v.toLocaleString('en-US',{minimumFractionDigits:1,maximumFractionDigits:1})+' h':Math.round(v).toLocaleString('en-US')+' h'}
@@ -424,6 +427,6 @@ if(x.ld!=null)put(r['Load per core'],x.ld.toFixed(2)+' over 5 min'+(x.c!=null?',
 if(x.sb!=null)put(r['Simulators'],!x.sb?'none booted':x.sb+' booted'+(x.sn&&x.sn.length?': '+x.sn.join(', '):''))});
 var pm=document.querySelector('#machine > p.meta'),lv=document.getElementById('lk-mxlv');if(any&&pm){if(!lv){lv=mk(pm,'span');lv.id='lk-mxlv'}lv.textContent=' Disk, load and Simulators follow the live status, read '+et(at)+'.'}}
 function fig(lab,v){[].forEach.call(document.querySelectorAll('.lk-bub a[href="#machine"] .lk-f > span'),function(s){var b=s.querySelector('b');if(b&&s.lastChild&&s.lastChild.nodeValue===lab)b.textContent=v})}
-function draw(st){var g=st&&st.ln,d=st&&st.disk;if(st&&Date.parse(st.at)>=B&&d&&typeof d.free_gb==='number')fig('Mac Mini',d.free_gb+' GB');
+function draw(st){var g=st&&st.ln,d=st&&st.disk;LNM=(st&&st.stg&&st.stg.nm)||LNM;if(st&&Date.parse(st.at)>=B&&d&&typeof d.free_gb==='number')fig('Mac Mini',d.free_gb+' GB');
 if(!g||!(Date.parse(g.at)>=B))return;if(g.mq)merge(g.mq,g.at);if(g.mx){mach(g.mx,g.at);if(g.mx.macbook&&g.mx.macbook.dk)fig('MacBook',g.mx.macbook.dk[0]+' GB')}}
 S.onStatus.push(draw);if(S.status&&S.status())draw(S.status())});

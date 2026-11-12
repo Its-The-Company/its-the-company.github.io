@@ -33,20 +33,19 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open
 
-- T-3817 (4561ebf231): T-3814 review FIXES NEEDED (M1 unbounded WidgetCenter wait in export, M2 pass in flight); ticked. Lesson: a clean git apply is not "no conflict": check main for helpers the patch should now use.
-- T-4121 (5af9f88fd0): ledger patterns first pass; tick refused (ws 'queue audit' not a workstream), not ticked. Lesson: board ws ids are in ops/workstreams.json; check before ticking.
-- T-3692 (15ed1952d): T-3671/T-3667 PASS w/ fixes; T-3762 (stale Gallery request, before build), T-3763..66 Idris. Lesson: a UI test that passes with and without the fix proves nothing; demand a red run.
-- T-3743: Lesson: Darwin lock waits wake ~150 ms late; a deadline on a lock wait is not a deadline.
-- T-3823 11-12: openssl_gate FIXES NEEDED (note on board): fails open on unreadable file/dir/out-of-app link. Lesson: probe a fail-closed claim with chmod 000.
-- T-3546 (858f9cbe0): T-3519 FAIL; T-3780..82 Odalys. Lesson: a text scan for reads can't follow $REPO vars or a tool's constants; key the data folder, list tools by hand.
-- T-3545 (uncommitted: main_gate refused, bridge red): T-3408 PASS w/ fixes; T-3799/3800 Odalys. Race probe refused by security-guard (scratch $HOME/company-personal). Lesson: retry_into deletes the <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> name before mark_ready on n=1, so a refusal strands the work on the spare.
-- T-3802 (c64c68bf4): bridge red on 3.9 was a hang, not load: mkdir into /Applications/Xcode.app blocks with no answer on macOS 27. Tick refused (Evidence must be a bare path), not ticked. Lesson: a child with bytecode writes on must set pycache_prefix.
+- T-3784 11-12 (6521805448, ticked; T-3802 folded): 3.9 bridge hang = .pyc mkdir into Xcode.app blocks. Fix: -X pycache_prefix + audit-hook guard. Open: gate red twice, no log kept; reruns green. Lesson: an audit hook stops a write before the syscall.
 - T-4053 11-12: ticked SHIP internal TF for T-3826 (code = 2efa9e46b I reviewed); T-3899/T-3900 required before external. Lesson: diff the landed tree against the reviewed hash first; it may be a re-review.
 - T-3836 11-12: T-3657 overrun FIXES NEEDED, noted not ticked; 2 fix lines refused by board_tick add (links: bare T-3657), in scratch T-3836-pernille/lines.txt. Lesson: a fix line naming a task needs 'part of'/'from' for each ID.
 - T-3835 (9987593924): T-3826 PASS w/ findings, M1/M2 = T-3899/3900 (Idris); tick refused (Plain: ID before gloss), not ticked. Lesson: per-item timeouts on a shared dependency add up per item; bound the pass, not each step.
 - T-4018 (audit item 17, nightly host suites): tools/nightly_suites.py; Home hook latest(). Lesson: scratch.py wants T-NNNN, reserve with board_tick id --reserve; never pkill -f a filename my own run's command line holds.
 - 11-11 merge work: T-3741 landed a706e9d6f9; T-3774 file 7aa7c36e48; T-3150 held in copy T-3150-pernille/wt: its supervisor_test red was the test_red_share load race, fixed in 8755eab0cb (T-3995, also run_limited child <span title="A test written in advance. If it fires, we drop the idea.">kill</span>); rerun and land. Lesson: a hand-off patch that kills children before the parent changes the parent's exit code (wait returns 0); signal the parent first.
 - T-4093 11-12: H1 re-check of 3b9f6e7a90 = clear for internal upload (board note; 4 mutants all red). Open: first real Release -O archive must hold the mark (fails closed if not). Lesson: reviews go as board notes, not files in main (main_folder_guard).
+- T-4070 11-12 (4aa2dfd238): T-3558+T-3758 PASS w/ findings, ticked; M1 line refused (links: bare T-IDs), text in scratch T-4070-pernille/m1-line.txt. Lesson: a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> re-hashes on landing; check by tree diff, not "is a683 on main".
+- T-4073/T-4178 11-12 (a71fdadffb, f8ca50fdb1): T-3762, T-3757 PASS, ticked. Lesson: lane logs stay on the lane host; `xc_route.py status J-...` shows a red run's failing asserts.
+- T-3718 11-12 (cf0131288d): T-0729 PASS w/ findings; M1 = T-4176 (Idris, New File empties APFS-equal name; my T-0728 miss). Tick refused: umbrella with open piece, noted. Lesson: a 'part of' line makes the reviewed line an umbrella; tick before adding pieces, or expect it to stay open.
+- T-4200 11-12 (5dfcf280b7): T-4176 PASS w/ 3 Low; both ticked after Operator: board_tick format errors are not guard refusals, rewrite them. Lesson: name which Foundation a host probe ran on; the Simulator refused (516) where macOS emptied.
+- T-4204 11-12 (b47d4a056e): T-4198 PASS, 2 Low, ticked; L2 noted on T-4205. Lesson: a "check at each start" claim needs every early return before the start, not only the failed branch.
+- T-3400 11-12 (copy T-3400-pernille/wt, staged): shim slice green (host 3216/0, MacBook J-20261112-1222-land-m2-4427a7) but hook refused the land twice; not landed. Lines T-4202/T-4203. Lesson: the runner tests only main; the gate's land is the pre-land unit run.
 - Older entries (2026-10-25 8:12 PM to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## Lessons

@@ -44,7 +44,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Lesson T-3667: a run script phase with no inputFiles can run before ProcessInfoPlistFile, which overwrites its plist edit; input = built plist.
 - Lesson T-3666: SwiftUI queues a root .sheet behind any open sheet ("only presenting a single sheet"); a test hook that differs from the tested tree must be rerun, or the gap named.
 
-- T-3814 11-09: per-widget tree.json report (Export measurements manifest) green on Core+host, NOT landed (runner silent, gate exit 3); patch in company-scratch/T-3814-idris; review T-3817. Lesson: never leave unlanded work in the main checkout; other gates sweep it.
 
 - Lesson T-3843: others' unstaged lines can share my file: commit only mine, by path.
 
@@ -61,10 +60,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Lessons
 - StoreKit, T-0583/T-0589, caret lessons and dated logs: archive.md.
 
-- T-3762 11-09: GalleryPush, request used once; UI test red on old code. Lesson: clear a pushed view's request on pop. (T-3757: archive.md.)
-- T-4093 3b9f6e7a90 11-12: tester Pro behind PYWIDGET_TESTER_PRO (Debug + upload.sh --internal --upload only); M1 green on Sim. Open: Pernille re-check, push, Operator upload. Lesson: TEST_RUNNER_* must be env vars, not xcodebuild args; a chosen premade's Edit Widget button shows its title.
 - T-4151 bdb77002d6 11-12: overrun hold test (child ru_maxrss). Lesson: a spy that keeps references hides a freeing mutant; measure memory in a fresh process.
 - T-4152 dad9db5b52 11-12: held_mib on the gate killed row. Lesson: unstubbed footprint makes margin fits; don't assert the verdict.
+- T-4198 84505c1f81 11-12: failed start prunes (LaunchRunLog.startFailed); review T-4204 (Pernille). Gate 2a (iii) "Known gap" text in privacy draft still to clear. Lesson: a red/green of a copy goes through `main_gate.py check --from` (xc.sh queues only main's HEAD); compile errors cost a runner trip, so capture test properties into locals in @Sendable closures.
+- T-4176 2957d723e2 11-12: free by nameKey + writeNew (RENAME_EXCL); needs review line (Operator). Lesson: a red test must be one the volume can trip: test the pair both ways round, since one order already matched.
+- T-3814 c2c50da0ea 11-12: tree report + T-3817 fixes landed on personal/b2; open: Pernille re-check (L3 touches placedNow). Lesson: no 'iPhone 16' Sim here, pass -destination id=; any new file naming tree.json must join PreviewQueueTests' list.
 {% endraw %}
 
 

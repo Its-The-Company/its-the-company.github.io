@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T16:44:45.205542+00:00",
+ "at": "2026-11-12T16:47:47.444213+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -114,7 +114,7 @@
    "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
    "started": "2026-11-12T15:15:25.110Z",
-   "seconds": 5360,
+   "seconds": 5542,
    "finished": null,
    "effort": "high"
   },
@@ -123,16 +123,7 @@
    "task": "[site] T-4108 Issues badge stale count flash",
    "model": "opus",
    "started": "2026-11-12T16:32:11.872Z",
-   "seconds": 753,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4200 check T-4176 before ship",
-   "model": "opus",
-   "started": "2026-11-12T16:37:59.791Z",
-   "seconds": 405,
+   "seconds": 935,
    "finished": null,
    "effort": "high"
   },
@@ -141,7 +132,7 @@
    "task": "[build] T-4198 prune run history when background start fails",
    "model": "opus",
    "started": "2026-11-12T16:38:06.505Z",
-   "seconds": 398,
+   "seconds": 580,
    "finished": null,
    "effort": "high"
   },
@@ -150,13 +141,30 @@
    "task": "[tools] T-4179 a stopped task gets a second requeue",
    "model": "opus",
    "started": "2026-11-12T16:43:29.044Z",
-   "seconds": 76,
+   "seconds": 258,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "maren",
+   "task": "[design] T-3565 stale sensor widget on a timeout",
+   "model": "opus",
+   "started": "2026-11-12T16:45:32.036Z",
+   "seconds": 135,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2, Maren, Pernille, Idris",
+ "who": "Odalys x2, Maren x2, Idris",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-4200 check T-4176 before ship",
+   "model": "opus",
+   "started": "2026-11-12T16:37:59.791Z",
+   "seconds": null,
+   "finished": "2026-11-12T16:45:18.529000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4157 Fable-only accounts, second change",
@@ -180,20 +188,12 @@
    "started": "2026-11-12T15:52:56.393Z",
    "seconds": null,
    "finished": "2026-11-12T16:37:38.553000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[site] T-4162 a name for every task",
-   "model": "opus",
-   "started": "2026-11-12T15:15:30.908Z",
-   "seconds": null,
-   "finished": "2026-11-12T16:31:24.801000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 603,
+  "runnable_count": 601,
   "blocked_count": 98
  },
  "meter": {
@@ -242,7 +242,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T16:44:00+00:00",
+  "read_at": "2026-11-12T16:47:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -279,7 +279,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T11:44:00-05:00",
+  "at": "2026-11-12T11:47:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -309,15 +309,6 @@
    "effort": "high"
   },
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-4200 check T-4176 before ship",
-   "model": "opus",
-   "since": "2026-11-12T16:37:59.791Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "running",
    "task": "[build] T-4198 prune run history when background start fails",
@@ -325,6 +316,14 @@
    "since": "2026-11-12T16:38:06.505Z",
    "next": [],
    "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Wrenna",
@@ -366,16 +365,6 @@
     "task": "T-4108"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T16:37:59.791Z",
-    "o": "c",
-    "task": "T-4200"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Prune run history when a background start fails",
@@ -394,6 +383,16 @@
     "at": "2026-11-12T16:43:29.044Z",
     "o": "c",
     "task": "T-4179"
+   },
+   {
+    "w": "Maren",
+    "k": "design",
+    "t": "Decide what a stale sensor widget shows on a timeout",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T16:45:32.036Z",
+    "o": "c",
+    "task": "T-3565"
    }
   ],
   "src": "plan",
@@ -471,30 +470,38 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "New File, a saved conflict copy and a single Python file import can no longer empty or replace a...",
+    "at": "2026-11-12T11:45:00-05:00"
+   },
+   {
+    "w": "Pernille",
+    "t": "Pernille checked Idris's fix that stops New File emptying a file whose name the disk treats as...",
+    "at": "2026-11-12T11:45:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Evan's and Jeremy's accounts now start only Fable 5.2 xhigh work pinned to them (the queue audit...",
     "at": "2026-11-12T11:42:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "The Settings screen now matches the light and dark designs in every row the latest screenshots...",
-    "at": "2026-11-12T11:38:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "Home's In flight cards and This Session now look up every task's name in the same place,...",
-    "at": "2026-11-12T11:30:00-05:00"
    }
   ],
   "count": {
-   "next": 603,
+   "next": 601,
    "wait": 40,
    "blocked": 58,
    "you": 14
   },
   "fin": {
-   "n": 12,
+   "n": 14,
    "rows": [
+    [
+     "T-4176",
+     "Stop New File emptying a..."
+    ],
+    [
+     "T-4200",
+     "Check finished work before..."
+    ],
     [
      "T-4157",
      "Evan's account takes only..."
@@ -510,14 +517,6 @@
     [
      "T-3789",
      "Check the run history..."
-    ],
-    [
-     "T-3757",
-     "Hold the background task for..."
-    ],
-    [
-     "T-4178",
-     "Check finished work before..."
     ]
    ]
   }
@@ -561,33 +560,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T16:44:45Z",
+  "at": "2026-11-12T16:47:47Z",
   "s": {
    "T-4198": [
-    "merging",
-    "Mac tests at the main gate",
-    1794501825205
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4108": [
     "testing",
     "its own tests, in its copy",
-    1794501525205
+    1794501467444
+   ],
+   "T-3565": [
+    "testing",
+    "its own tests, in its copy",
+    1794502067444
    ],
    "T-4160": [
     "testing",
     "its own tests, in its copy",
-    1794501825205
-   ],
-   "T-4200": [
-    "merged",
-    "on main 11:44 AM ET",
-    1794501852000,
-    "Pernille"
+    1794501827444
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T16:44:45Z",
+  "at": "2026-11-12T16:47:47Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -601,11 +599,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 102,
+    "conflicted": 105,
     "failed": null,
     "held": null,
-    "retry": 30,
-    "parked": 111
+    "retry": 33,
+    "parked": 114
    },
    "cur": [],
    "ld": [
@@ -615,8 +613,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T16:44:21Z",
-    "ld": 2.15,
+    "at": "2026-11-12T16:47:47Z",
+    "ld": 2.4,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -632,8 +630,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-12T16:36:06Z",
-    "ld": 1.49,
+    "at": "2026-11-12T16:44:17Z",
+    "ld": 0.44,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -666,10 +664,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "11:44 AM",
+  "at": "11:47 AM",
   "why": "",
-  "at_iso": "2026-11-12T16:44:00+00:00",
+  "at_iso": "2026-11-12T16:47:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:44 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:47 AM ET</p></section>"
  }
 }

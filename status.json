@@ -1,24 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-12T07:08:44.018065+00:00",
+ "at": "2026-11-12T07:11:45.874880+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T00:58:32-05:00",
-  "flow": [
+  "flow": [],
+  "done": [
    {
     "t": "T-3986",
     "name": "Keep Home's tasks, Simulators and merge queue near-live",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794467197
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794467333
+   },
    {
     "t": "T-3897",
     "name": "Propose a settings rule to set aside finished parked copies",
@@ -90,17 +86,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794464550
-   },
-   {
-    "t": "T-3994",
-    "name": "Keep the main copy quiet with one way in",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794464289
    }
   ],
-  "landed": 16,
+  "landed": 17,
   "failed": 1
  },
  "workers": [
@@ -109,7 +97,7 @@
    "task": "[tools] T-4125 T-4128 Fable 5.2 lane setting and pause near limit",
    "model": "opus",
    "started": "2026-11-12T06:06:44.388Z",
-   "seconds": 3719,
+   "seconds": 3901,
    "finished": null,
    "effort": "high"
   }
@@ -201,7 +189,7 @@
   "week_pct": 27.44,
   "usage_pct": 28.7,
   "work_pct": 74.0,
-  "read_at": "2026-11-12T07:08:00+00:00",
+  "read_at": "2026-11-12T07:11:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -221,27 +209,6 @@
     "e": "high",
     "at": "2026-11-12T01:10:28-05:00",
     "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3986",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Keep Home's tasks, Simulators and merge queue near-live",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T01:32:43-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   },
-   {
-    "lane": "a3",
-    "task": "T-3865",
-    "t": "Recut parked changes that conflict after the owned-path fix",
-    "at": "2026-11-12T01:32:43-05:00",
-    "n": "Evan",
-    "d": 1,
     "src": "plan-a"
    },
    {
@@ -328,7 +295,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T02:08:00-05:00",
+  "at": "2026-11-12T02:11:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -563,29 +530,28 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T07:08:44Z",
+  "at": "2026-11-12T07:11:36Z",
   "s": {
    "T-3986": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 3 groups of tests done",
-    1794467204018
+    "mergeq",
+    "1st to merge",
+    1794467436830
+   ],
+   "T-3865": [
+    "mergeq",
+    "1st to merge",
+    1794467436830
    ],
    "T-4128": [
     "merging",
     "Mac tests at the main gate",
-    1794467204018
+    1794467196830
    ],
    "T-4125": [
     "merged",
     "on main 1:46 AM ET",
     1794465981000,
     "Odalys"
-   ],
-   "T-3865": [
-    "merged",
-    "on main 1:39 AM ET",
-    1794465584000,
-    ""
    ],
    "T-3997": [
     "merged",
@@ -615,12 +581,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 4,
-  "total": 5,
-  "at": "2:08 AM",
+  "lanes": 3,
+  "total": 4,
+  "at": "2:11 AM",
   "why": "",
-  "at_iso": "2026-11-12T07:08:00+00:00",
+  "at_iso": "2026-11-12T07:11:00+00:00",
   "started": "12:58 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 2:08 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 2:11 AM ET</p></section>"
  }
 }

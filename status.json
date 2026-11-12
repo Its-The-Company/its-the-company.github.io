@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T17:06:05.001279+00:00",
+ "at": "2026-11-12T17:09:08.458045+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -114,7 +114,7 @@
    "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
    "started": "2026-11-12T15:15:25.110Z",
-   "seconds": 6639,
+   "seconds": 6823,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[site] T-4108 Issues badge stale count flash",
    "model": "opus",
    "started": "2026-11-12T16:32:11.872Z",
-   "seconds": 2033,
+   "seconds": 2216,
    "finished": null,
    "effort": "high"
   },
@@ -132,7 +132,7 @@
    "task": "[build] T-4198 prune run history when background start fails",
    "model": "opus",
    "started": "2026-11-12T16:38:06.505Z",
-   "seconds": 1678,
+   "seconds": 1861,
    "finished": null,
    "effort": "high"
   },
@@ -141,7 +141,7 @@
    "task": "[tools] T-4179 a stopped task gets a second requeue",
    "model": "opus",
    "started": "2026-11-12T16:43:29.044Z",
-   "seconds": 1355,
+   "seconds": 1539,
    "finished": null,
    "effort": "high"
   },
@@ -150,7 +150,7 @@
    "task": "[build] T-3400 Python https through iOS",
    "model": "opus",
    "started": "2026-11-12T17:02:07.937Z",
-   "seconds": 237,
+   "seconds": 420,
    "finished": null,
    "effort": "high"
   }
@@ -193,25 +193,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 601,
+  "runnable_count": 600,
   "blocked_count": 98
  },
  "meter": {
   "five_hour": {
-   "pct": null,
-   "resets_at": null,
+   "pct": 1.0,
+   "resets_at": "2026-11-12T17:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T12:00:25.708584-05:00",
+   "read_at": "2026-11-12T12:06:36.647873-05:00",
    "source": "live",
-   "last_reset": "2026-11-12T12:00:00-05:00",
-   "left": null,
+   "left": 99.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 75.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T12:00:25.708584-05:00",
+   "read_at": "2026-11-12T12:06:36.647873-05:00",
    "source": "live",
    "left": 25.0,
    "left_words": "of your weekly allowance left"
@@ -223,7 +222,7 @@
    "read_at": "2026-11-12T10:12:53.677669-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T12:00:25.708584-05:00"
+  "read_at": "2026-11-12T12:06:36.647873-05:00"
  },
  "ui": {
   "week_pct": 0.24,
@@ -243,7 +242,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T17:06:00+00:00",
+  "read_at": "2026-11-12T17:09:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -268,19 +267,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 187
+   "free_gb": 185
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T12:00:00-05:00",
+   "at": "2026-11-12T12:06:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T12:06:00-05:00",
+  "at": "2026-11-12T12:09:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -472,6 +471,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "When a usage check failed, the Fable pause skipped its decision and the session hit the 5-hour...",
+    "at": "2026-11-12T12:08:00-05:00"
+   },
+   {
     "w": "Maren",
     "t": "When a Steps, Distance or Altitude widget's sensor does not answer, it should keep showing...",
     "at": "2026-11-12T12:00:00-05:00"
@@ -480,22 +484,21 @@
     "w": "Idris",
     "t": "New File, a saved conflict copy and a single Python file import can no longer empty or replace a...",
     "at": "2026-11-12T11:45:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Pernille checked Idris's fix that stops New File emptying a file whose name the disk treats as...",
-    "at": "2026-11-12T11:45:00-05:00"
    }
   ],
   "count": {
-   "next": 601,
+   "next": 600,
    "wait": 40,
    "blocked": 58,
    "you": 14
   },
   "fin": {
-   "n": 15,
+   "n": 16,
    "rows": [
+    [
+     "T-4160",
+     "Pause even when the usage..."
+    ],
     [
      "T-3565",
      "Decide what a stale sensor..."
@@ -515,10 +518,6 @@
     [
      "T-2282",
      "Check the Settings screen..."
-    ],
-    [
-     "T-4162",
-     "Show a name for every task..."
     ]
    ]
   }
@@ -562,32 +561,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T17:05:59Z",
+  "at": "2026-11-12T17:09:01Z",
   "s": {
-   "T-4160": [
-    "merging",
-    "Mac tests at the main gate",
-    1794503039228
-   ],
    "T-4198": [
     "merging",
     "Mac tests at the main gate",
-    1794503099228
+    1794503341615
    ],
    "T-4108": [
     "testing",
     "its own tests, in its copy",
-    1794502859228
+    1794502861615
    ],
    "T-3400": [
     "testing",
     "its own tests, in its copy",
-    1794503039228
+    1794503041615
+   ],
+   "T-4160": [
+    "merged",
+    "on main 12:08 PM ET",
+    1794503327000,
+    ""
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T17:05:59Z",
+  "at": "2026-11-12T17:09:01Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -601,11 +601,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 123,
+    "conflicted": 126,
     "failed": null,
     "held": null,
-    "retry": 52,
-    "parked": 132
+    "retry": 55,
+    "parked": 135
    },
    "cur": [],
    "ld": [
@@ -615,12 +615,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T17:05:59Z",
-    "ld": 0.76,
+    "at": "2026-11-12T17:08:37Z",
+    "ld": 0.75,
     "c": 8,
     "sb": 1,
     "dk": [
-     28.0,
+     28.4,
      228.3
     ],
     "ss": [
@@ -632,8 +632,8 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-12T17:04:26Z",
-    "ld": 2.18,
+    "at": "2026-11-12T17:07:59Z",
+    "ld": 3.88,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -666,10 +666,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "12:06 PM",
+  "at": "12:09 PM",
   "why": "",
-  "at_iso": "2026-11-12T17:06:00+00:00",
+  "at_iso": "2026-11-12T17:09:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:06 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:09 PM ET</p></section>"
  }
 }

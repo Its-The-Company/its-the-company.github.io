@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T09:59:05.702377+00:00",
+ "at": "2026-11-12T10:03:41.529244+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -97,22 +97,21 @@
    "task": "[build] T-4093 tester Pro compile flag",
    "model": "opus",
    "started": "2026-11-12T09:00:23.114Z",
-   "seconds": 3522,
+   "seconds": 3798,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4129 no fourth state, screenshots",
    "model": "opus",
    "started": "2026-11-12T09:01:52.955Z",
-   "seconds": 3432,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-12T10:01:29.779000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4129 retire Set aside stage",
@@ -136,14 +135,6 @@
    "started": "2026-11-12T08:48:56.237Z",
    "seconds": null,
    "finished": "2026-11-12T08:56:48.955000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4132 measure overdue experiments",
-   "model": "opus",
-   "started": "2026-11-12T08:21:32.133Z",
-   "seconds": null,
-   "finished": "2026-11-12T08:48:17.507000+00:00"
   }
  ],
  "queue": {
@@ -198,8 +189,33 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T10:00:00+00:00",
-  "running": []
+  "read_at": "2026-11-12T10:03:00+00:00",
+  "running": [
+   {
+    "lane": "b3",
+    "task": "T-3774",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Count check copies left behind after the cleanup fix",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T05:01:55-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-3889",
+    "w": "Ines",
+    "k": "site",
+    "t": "Redo put every Issues page ask in Now or Later",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T05:01:55-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -235,7 +251,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T05:00:00-05:00",
+  "at": "2026-11-12T05:03:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -256,18 +272,17 @@
    "effort": "high"
   },
   {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4129 no fourth state, screenshots",
-   "model": "opus",
-   "since": "2026-11-12T09:01:52.955Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -308,16 +323,6 @@
     "at": "2026-11-12T09:00:23.114Z",
     "o": "c",
     "task": "T-4093"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retire the Set aside stage on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T09:01:52.955Z",
-    "o": "i",
-    "task": "T-4129"
    }
   ],
   "src": "plan",
@@ -481,13 +486,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T09:59:05Z",
+  "at": "2026-11-12T10:03:24Z",
   "s": {
-   "T-4129": [
-    "merging",
-    "Mac tests at the main gate",
-    1794477545702
-   ],
    "T-4093": [
     "merged",
     "on main 2:51 AM ET",
@@ -497,7 +497,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T09:59:05Z",
+  "at": "2026-11-12T10:03:24Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -506,16 +506,16 @@
     "failed": 0,
     "held": 1,
     "retry": 0,
-    "parked": 4
+    "parked": 5
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 119,
+    "conflicted": 124,
     "failed": null,
-    "held": 2857,
+    "held": 2862,
     "retry": null,
-    "parked": 3761
+    "parked": 2862
    },
    "cur": [],
    "ld": [
@@ -525,16 +525,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T10:00:27Z",
-    "ld": 40.49,
+    "at": "2026-11-12T10:03:01Z",
+    "ld": 38.62,
     "c": 8,
     "sb": 2,
     "dk": [
-     32.8,
+     34.7,
      228.3
     ],
     "ss": [
-     175.6,
+     175.0,
      953.7
     ],
     "sn": [
@@ -574,13 +574,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
-  "lanes": 0,
+  "main": 1,
+  "lanes": 1,
   "total": 2,
-  "at": "5:00 AM",
+  "at": "5:03 AM",
   "why": "",
-  "at_iso": "2026-11-12T10:00:00+00:00",
+  "at_iso": "2026-11-12T10:03:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:00 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:03 AM ET</p></section>"
  }
 }

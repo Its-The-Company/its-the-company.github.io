@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T11:05:46.534292+00:00",
+ "at": "2026-11-12T11:08:50.956043+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -103,7 +103,7 @@
    "task": "[tools] T-4150 Fable pause before limit",
    "model": "opus",
    "started": "2026-11-12T10:52:10.771Z",
-   "seconds": 815,
+   "seconds": 1000,
    "finished": null,
    "effort": "high"
   },
@@ -112,7 +112,7 @@
    "task": "[release] T-4093 internal TestFlight build 5",
    "model": "opus",
    "started": "2026-11-12T10:52:18.614Z",
-   "seconds": 807,
+   "seconds": 992,
    "finished": null,
    "effort": "high"
   }
@@ -180,7 +180,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T11:05:00+00:00",
+  "read_at": "2026-11-12T11:08:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -332,7 +332,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T06:05:00-05:00",
+  "at": "2026-11-12T06:08:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -570,12 +570,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T11:05:28Z",
+  "at": "2026-11-12T11:08:50Z",
   "s": {
    "T-4150": [
     "testing",
     "its own tests, in its copy",
-    1794480988089
+    1794481010956
    ],
    "T-4093": [
     "merged",
@@ -610,7 +610,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T11:05:28Z",
+  "at": "2026-11-12T11:08:50Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -624,11 +624,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 15,
+    "conflicted": 19,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 173
+    "parked": 176
    },
    "cur": [],
    "ld": [
@@ -638,8 +638,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T11:05:04Z",
-    "ld": 6.42,
+    "at": "2026-11-12T11:08:26Z",
+    "ld": 6.06,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -647,7 +647,7 @@
      228.3
     ],
     "ss": [
-     183.8,
+     180.8,
      953.7
     ],
     "sn": []
@@ -685,10 +685,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "6:05 AM",
+  "at": "6:08 AM",
   "why": "",
-  "at_iso": "2026-11-12T11:05:00+00:00",
+  "at_iso": "2026-11-12T11:08:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:05 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:08 AM ET</p></section>"
  }
 }

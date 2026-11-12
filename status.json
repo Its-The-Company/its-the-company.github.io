@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T13:53:45.868467+00:00",
+ "at": "2026-11-12T13:56:52.559441+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -120,7 +120,7 @@
    "task": "[tools] T-4157 account a takes only Fable lines",
    "model": "opus",
    "started": "2026-11-12T13:17:49.294Z",
-   "seconds": 2156,
+   "seconds": 2343,
    "finished": null,
    "effort": "high"
   },
@@ -129,7 +129,7 @@
    "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
    "started": "2026-11-12T13:42:03.937Z",
-   "seconds": 701,
+   "seconds": 888,
    "finished": null,
    "effort": "high"
   }
@@ -221,7 +221,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T13:53:00+00:00",
+  "read_at": "2026-11-12T13:56:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -358,14 +358,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T08:50:00-05:00",
+   "at": "2026-11-12T08:56:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T08:53:00-05:00",
+  "at": "2026-11-12T08:56:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -614,27 +614,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T13:53:45Z",
+  "at": "2026-11-12T13:56:38Z",
   "s": {
    "T-4149": [
-    "merging",
-    "Merging onto main",
-    1794491625868
+    "mergeq",
+    "1st to merge",
+    1794488858779
    ],
    "T-3990": [
-    "merging",
-    "Merging onto main",
-    1794491625868
+    "mergeq",
+    "1st to merge",
+    1794488858779
    ],
    "T-3430": [
-    "merging",
-    "Merging onto main",
-    1794491625868
+    "mergeq",
+    "1st to merge",
+    1794488858779
    ],
    "T-4157": [
     "merging",
     "Mac tests at the main gate",
-    1794491505868
+    1794491498779
    ],
    "T-3807": [
     "testing",
@@ -654,7 +654,7 @@
    "T-4160": [
     "testing",
     "its own tests, in its copy",
-    1794491385868
+    1794491378779
    ],
    "T-4135": [
     "merged",
@@ -665,11 +665,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T13:53:45Z",
+  "at": "2026-11-12T13:56:38Z",
   "mq": {
    "n": {
-    "checking": 3,
-    "inline": 0,
+    "checking": 0,
+    "inline": 3,
     "conflicted": 0,
     "failed": 0,
     "held": 0,
@@ -677,40 +677,15 @@
     "parked": 1
    },
    "m": {
-    "checking": 0,
-    "inline": null,
+    "checking": null,
+    "inline": 49,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 354
+    "parked": 357
    },
-   "cur": [
-    [
-     [
-      "T-4149"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ],
-    [
-     [
-      "T-3990"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ],
-    [
-     [
-      "T-3430"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
     63,
     "2026-11-12T13:51:28Z"
@@ -718,19 +693,21 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T13:53:47Z",
-    "ld": 7.21,
+    "at": "2026-11-12T13:56:13Z",
+    "ld": 17.21,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     34.0,
+     33.9,
      228.3
     ],
     "ss": [
      186.7,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 18 Pro"
+    ]
    },
    "macbook": {
     "at": "2026-11-12T13:50:04Z",
@@ -749,13 +726,35 @@
   "sent": "2026-11-12T13:49:12Z",
   "seconds": 113.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6825519278",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Move forward with this plan and lift..."
+  },
+  {
+   "id": "c6825558715",
+   "state": "received",
+   "position": 2,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Until further notice, both Evan and..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -767,10 +766,10 @@
   "main": 2,
   "lanes": 3,
   "total": 5,
-  "at": "8:53 AM",
+  "at": "8:56 AM",
   "why": "",
-  "at_iso": "2026-11-12T13:53:00+00:00",
+  "at_iso": "2026-11-12T13:56:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:53 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 8:56 AM ET</p></section>"
  }
 }

@@ -1,11 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-12T04:03:15.160402+00:00",
+ "at": "2026-11-12T04:06:15.479450+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-11T22:17:23-05:00",
-  "flow": [],
+  "flow": [
+   {
+    "t": "T-4097",
+    "name": "Judge the efficiency and other lines of the queue",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "landing",
+      "at": 1794456333
+     }
+    ]
+   }
+  ],
   "done": [
    {
     "t": "T-4107",
@@ -50,7 +62,7 @@
    "task": "[tools] T-4100 land Links field part 1",
    "model": "opus",
    "started": "2026-11-12T03:18:50.854Z",
-   "seconds": 2664,
+   "seconds": 2844,
    "finished": null
   },
   {
@@ -58,7 +70,7 @@
    "task": "[tools] T-4115 sweep must not hold session start",
    "model": "opus",
    "started": "2026-11-12T03:20:56.339Z",
-   "seconds": 2538,
+   "seconds": 2719,
    "finished": null
   }
  ],
@@ -76,7 +88,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 679,
+  "runnable_count": 682,
   "blocked_count": 104
  },
  "meter": {
@@ -125,22 +137,8 @@
   "week_pct": 25.34,
   "usage_pct": 27.7,
   "work_pct": 74.0,
-  "read_at": "2026-11-12T04:03:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-4097",
-    "w": "Ines",
-    "k": "ops",
-    "t": "Judge the efficiency and other lines of the queue",
-    "m": "opus",
-    "e": "xhigh",
-    "at": "2026-11-11T22:33:52-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-12T04:06:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -169,14 +167,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-11T22:59:00-05:00",
+   "at": "2026-11-11T23:05:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T23:03:00-05:00",
+  "at": "2026-11-11T23:06:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -348,7 +346,7 @@
    }
   ],
   "count": {
-   "next": 679,
+   "next": 682,
    "wait": 41,
    "blocked": 63,
    "you": 15
@@ -418,17 +416,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T04:02:58Z",
+  "at": "2026-11-12T04:05:58Z",
   "s": {
+   "T-4097": [
+    "merging",
+    "Merging onto main",
+    1794456358340
+   ],
    "T-4115": [
-    "testing",
-    "its own tests, in its copy",
-    1794454678275
+    "merging",
+    "Mac tests at the main gate",
+    1794456238340
    ],
    "T-4100": [
     "testing",
     "its own tests, in its copy",
-    1794455218275
+    1794455218340
    ]
   }
  },
@@ -451,12 +454,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "11:03 PM",
+  "lanes": 0,
+  "total": 2,
+  "at": "11:06 PM",
   "why": "",
-  "at_iso": "2026-11-12T04:03:00+00:00",
+  "at_iso": "2026-11-12T04:06:00+00:00",
   "started": "10:17 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:17 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:03 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:17 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:06 PM ET</p></section>"
  }
 }

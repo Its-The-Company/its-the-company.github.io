@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T10:59:41.046425+00:00",
+ "at": "2026-11-12T11:02:45.282161+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -103,7 +103,7 @@
    "task": "[tools] T-4150 Fable pause before limit",
    "model": "opus",
    "started": "2026-11-12T10:52:10.771Z",
-   "seconds": 450,
+   "seconds": 634,
    "finished": null,
    "effort": "high"
   },
@@ -112,22 +112,22 @@
    "task": "[release] T-4093 internal TestFlight build 5",
    "model": "opus",
    "started": "2026-11-12T10:52:18.614Z",
-   "seconds": 442,
+   "seconds": 626,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys, Idris",
+ "recent": [
   {
    "name": "idris",
    "task": "[test] T-4151 overrun premade memory test",
    "model": "opus",
    "started": "2026-11-12T10:53:25.205Z",
-   "seconds": 375,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-12T10:59:48.834000+00:00"
   }
  ],
- "who": "Odalys, Idris x2",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
@@ -180,7 +180,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T10:59:00+00:00",
+  "read_at": "2026-11-12T11:02:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -293,6 +293,7 @@
     "e": "high",
     "at": "2026-11-12T05:14:47-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -331,7 +332,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T05:59:00-05:00",
+  "at": "2026-11-12T06:02:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -414,16 +415,6 @@
     "at": "2026-11-12T10:52:18.614Z",
     "o": "c",
     "task": "T-4093"
-   },
-   {
-    "w": "Idris",
-    "k": "test",
-    "t": "Test that the overrun premade holds its memory",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T10:53:25.205Z",
-    "o": "c",
-    "task": "T-4151"
    }
   ],
   "src": "plan",
@@ -579,8 +570,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T10:59:21Z",
+  "at": "2026-11-12T11:02:38Z",
   "s": {
+   "T-3950": [
+    "mergeq",
+    "1st to merge",
+    1794481358424
+   ],
    "T-4093": [
     "mergetest",
     "iPhone tests on the MacBook",
@@ -589,13 +585,7 @@
    "T-4150": [
     "testing",
     "its own tests, in its copy",
-    1794480981336
-   ],
-   "T-4151": [
-    "merged",
-    "on main 5:59 AM ET",
-    1794481146000,
-    ""
+    1794480998424
    ],
    "T-3887": [
     "merged",
@@ -624,25 +614,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T10:59:21Z",
+  "at": "2026-11-12T11:02:38Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 0,
+    "inline": 1,
     "conflicted": 3,
     "failed": 0,
     "held": 0,
-    "retry": 1,
+    "retry": 0,
     "parked": 2
    },
    "m": {
     "checking": null,
-    "inline": null,
-    "conflicted": 9,
+    "inline": 0,
+    "conflicted": 12,
     "failed": null,
     "held": null,
-    "retry": 3,
-    "parked": 167
+    "retry": null,
+    "parked": 170
    },
    "cur": [],
    "ld": [
@@ -652,16 +642,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T10:59:00Z",
-    "ld": 8.1,
+    "at": "2026-11-12T11:01:52Z",
+    "ld": 7.44,
     "c": 8,
     "sb": 0,
     "dk": [
-     33.2,
+     33.5,
      228.3
     ],
     "ss": [
-     179.9,
+     182.0,
      953.7
     ],
     "sn": []
@@ -696,13 +686,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 4,
-  "total": 7,
-  "at": "5:59 AM",
+  "total": 6,
+  "at": "6:02 AM",
   "why": "",
-  "at_iso": "2026-11-12T10:59:00+00:00",
+  "at_iso": "2026-11-12T11:02:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 5:59 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:02 AM ET</p></section>"
  }
 }

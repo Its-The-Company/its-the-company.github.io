@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T08:54:59.189400+00:00",
+ "at": "2026-11-12T08:58:04.963288+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -110,7 +110,7 @@
    "task": "[build] T-3143 template test fix",
    "model": "opus",
    "started": "2026-11-12T08:03:43.753Z",
-   "seconds": 3075,
+   "seconds": 3261,
    "finished": null,
    "effort": "high"
   },
@@ -119,22 +119,21 @@
    "task": "[tools] T-4129 retire Set aside stage",
    "model": "opus",
    "started": "2026-11-12T08:04:00.395Z",
-   "seconds": 3058,
+   "seconds": 3244,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris, Odalys",
+ "recent": [
   {
    "name": "pernille",
    "task": "[review] T-3817 per-widget tree report review",
    "model": "opus",
    "started": "2026-11-12T08:48:56.237Z",
-   "seconds": 362,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Odalys, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-12T08:56:48.955000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4132 measure overdue experiments",
@@ -158,20 +157,12 @@
    "started": "2026-11-12T08:08:23.157Z",
    "seconds": null,
    "finished": "2026-11-12T08:14:19.488000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4053 review before TestFlight",
-   "model": "opus",
-   "started": "2026-11-12T08:03:52.904Z",
-   "seconds": null,
-   "finished": "2026-11-12T08:08:03.113000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 620,
+  "runnable_count": 619,
   "blocked_count": 85
  },
  "meter": {
@@ -220,7 +211,7 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T08:55:00+00:00",
+  "read_at": "2026-11-12T08:58:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -347,19 +338,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 172
+   "free_gb": 174
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T03:51:00-05:00",
+   "at": "2026-11-12T03:58:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T03:55:00-05:00",
+  "at": "2026-11-12T03:58:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -390,12 +381,11 @@
   },
   {
    "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-3817 per-widget tree report review",
-   "model": "opus",
-   "since": "2026-11-12T08:48:56.237Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Wrenna",
@@ -443,16 +433,6 @@
     "at": "2026-11-12T08:04:00.395Z",
     "o": "i",
     "task": "T-4129"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the per-widget tree report for build 5",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T08:48:56.237Z",
-    "o": "c",
-    "task": "T-3817"
    }
   ],
   "src": "plan",
@@ -530,6 +510,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "T-3814 (Idris's per-widget tree report for the iPhone hunt) needs two fixes before build 5: the...",
+    "at": "2026-11-12T03:55:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Eight overdue process changes were measured and closed: one clearly helped (work sessions now...",
     "at": "2026-11-12T03:47:00-05:00"
@@ -538,22 +523,21 @@
     "w": "Odalys+operator",
     "t": "The safe-to-delete list is done (171 of 183 leftover copies safe, 12 kept). Deleting them and...",
     "at": "2026-11-12T03:39:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Nothing to redo: the original change from T-3751 (land work that touches Investor files, with a...",
-    "at": "2026-11-12T03:39:00-05:00"
    }
   ],
   "count": {
-   "next": 620,
+   "next": 619,
    "wait": 40,
    "blocked": 45,
    "you": 14
   },
   "fin": {
-   "n": 5,
+   "n": 6,
    "rows": [
+    [
+     "T-3817",
+     "Review the per-widget tree..."
+    ],
     [
      "T-4132",
      "Measure the eight overdue..."
@@ -612,12 +596,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T08:54:59Z",
+  "at": "2026-11-12T08:57:51Z",
   "s": {
    "T-4129": [
     "merging",
     "Mac tests at the main gate",
-    1794473699189
+    1794473751541
    ],
    "T-3143": [
     "testing",
@@ -651,7 +635,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T08:54:59Z",
+  "at": "2026-11-12T08:57:51Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -665,11 +649,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 58,
+    "conflicted": 61,
     "failed": null,
-    "held": 2793,
+    "held": 2796,
     "retry": null,
-    "parked": 3697
+    "parked": 3700
    },
    "cur": [],
    "ld": [
@@ -679,16 +663,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T08:54:10Z",
-    "ld": 7.39,
+    "at": "2026-11-12T08:57:52Z",
+    "ld": 7.74,
     "c": 8,
     "sb": 1,
     "dk": [
-     36.2,
+     36.3,
      228.3
     ],
     "ss": [
-     172.4,
+     174.3,
      953.7
     ],
     "sn": [
@@ -716,6 +700,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -725,13 +710,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 3,
-  "total": 6,
-  "at": "3:55 AM",
+  "total": 5,
+  "at": "3:58 AM",
   "why": "",
-  "at_iso": "2026-11-12T08:55:00+00:00",
+  "at_iso": "2026-11-12T08:58:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:55 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:58 AM ET</p></section>"
  }
 }

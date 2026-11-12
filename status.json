@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-12T06:59:34.691711+00:00",
+ "at": "2026-11-12T07:02:37.794601+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T00:58:32-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-3897",
+    "name": "Propose a settings rule to set aside finished parked copies",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794466825
+   },
    {
     "t": "T-3860",
     "name": "Undo the tighter security check from October 31",
@@ -78,17 +86,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794464289
-   },
-   {
-    "t": "T-3846",
-    "name": "Find why the MacBook runner stopped checking in",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794464052
    }
   ],
-  "landed": 15,
+  "landed": 16,
   "failed": 1
  },
  "workers": [
@@ -97,7 +97,7 @@
    "task": "[tools] T-4125 T-4128 Fable 5.2 lane setting and pause near limit",
    "model": "opus",
    "started": "2026-11-12T06:06:44.388Z",
-   "seconds": 3170,
+   "seconds": 3353,
    "finished": null,
    "effort": "high"
   }
@@ -140,17 +140,18 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 633,
+  "runnable_count": 637,
   "blocked_count": 85
  },
  "meter": {
   "five_hour": {
-   "pct": 15.0,
-   "resets_at": "2026-11-12T02:00:00-05:00",
+   "pct": null,
+   "resets_at": null,
    "used_words": "of your 5-hour allowance used",
    "read_at": "2026-11-12T01:55:42.821748-05:00",
    "source": "live",
-   "left": 85.0,
+   "last_reset": "2026-11-12T02:00:00-05:00",
+   "left": null,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
@@ -173,7 +174,7 @@
  },
  "ui": {
   "week_pct": 0.245,
-  "five_hour_pct": 0.259,
+  "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -189,7 +190,7 @@
   "week_pct": 27.44,
   "usage_pct": 28.7,
   "work_pct": 74.0,
-  "read_at": "2026-11-12T06:59:00+00:00",
+  "read_at": "2026-11-12T07:02:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -231,31 +232,6 @@
     "n": "Evan",
     "d": 1,
     "src": "plan-a"
-   },
-   {
-    "lane": "b",
-    "task": "T-3320",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Check the main plan's land rate after two days",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T01:58:27-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b",
-    "task": "T-3897",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Propose a settings rule to set aside finished parked copies",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T01:58:27-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
    },
    {
     "lane": "b2",
@@ -301,7 +277,7 @@
   }
  ],
  "disk": {
-  "free_gb": 36,
+  "free_gb": 37,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -310,14 +286,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T01:55:00-05:00",
+   "at": "2026-11-12T02:02:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T01:59:00-05:00",
+  "at": "2026-11-12T02:02:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -362,17 +338,17 @@
    "next": []
   },
   {
-   "name": "Ines",
+   "name": "Maren",
    "state": "next",
-   "task": "Ines, P1, T-3683 ruling (3): the 11-08 evening report...",
+   "task": "Maren, P1 (Investor an Investor c6816980644; plan...",
    "model": null,
    "since": null,
    "next": []
   },
   {
-   "name": "Maren",
+   "name": "Ines",
    "state": "next",
-   "task": "Maren, P3, PROPOSAL-003 store captions, after Ines or...",
+   "task": "Ines, P1, T-3683 ruling (3): the 11-08 evening report...",
    "model": null,
    "since": null,
    "next": []
@@ -429,6 +405,13 @@
     "o": "c"
    },
    {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Turn merge mode back on until the Investors...",
+    "s": "next",
+    "o": "i"
+   },
+   {
     "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
@@ -455,16 +438,14 @@
     "t": "Run the Restructuring on Evan's account",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Pause the audit's Fable work safely before...",
-    "s": "next",
-    "o": "i"
    }
   ],
   "done": [
+   {
+    "w": "Operator",
+    "t": "Closed without landing the new archiving tool. The proposal card was not posted because it would...",
+    "at": "2026-11-12T02:00:00-05:00"
+   },
    {
     "w": "Operator",
     "t": "Closed here because the work goes on as T-3868 (post the narrower guard undo as a proposal). A...",
@@ -474,15 +455,10 @@
     "w": "Operator",
     "t": "Closed as replaced. The Investors chose the merge-capacity fix T-3875 (pause new work when the...",
     "at": "2026-11-12T01:55:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Evan's account now starts its lane sessions so that any agent asked for Fable runs on Fable 5.2,...",
-    "at": "2026-11-12T01:46:00-05:00"
    }
   ],
   "count": {
-   "next": 633,
+   "next": 637,
    "wait": 40,
    "blocked": 45,
    "you": 13
@@ -552,12 +528,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T06:59:20Z",
+  "at": "2026-11-12T07:02:37Z",
   "s": {
    "T-4128": [
     "testing",
     "its own tests, in its copy",
-    1794466760081
+    1794466777794
    ],
    "T-4125": [
     "merged",
@@ -580,28 +556,16 @@
   }
  },
  "reply": {
-  "sent": "2026-11-12T06:55:32Z",
-  "seconds": 79.0
+  "sent": "2026-11-12T06:59:27Z",
+  "seconds": 97.0
  },
- "inbox": [
-  {
-   "id": "c6817045232",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Plan answers to the questions of..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -611,12 +575,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 4,
-  "total": 5,
-  "at": "1:59 AM",
+  "lanes": 3,
+  "total": 4,
+  "at": "2:02 AM",
   "why": "",
-  "at_iso": "2026-11-12T06:59:00+00:00",
+  "at_iso": "2026-11-12T07:02:00+00:00",
   "started": "12:58 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 1:59 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 12:58 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 2:02 AM ET</p></section>"
  }
 }

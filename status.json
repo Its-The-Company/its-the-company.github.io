@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-12T11:51:39.022719+00:00",
+ "at": "2026-11-12T11:54:43.087196+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T05:47:30-05:00",
   "flow": [
+   {
+    "t": "T-3428",
+    "name": "Build the Completed Work panel with its graphs",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794484411
+     }
+    ]
+   },
    {
     "t": "T-3143",
     "w": "Idris",
@@ -105,7 +116,7 @@
    "task": "[tools] T-4154 pinned line takes idle held slot",
    "model": "opus",
    "started": "2026-11-12T11:49:24.594Z",
-   "seconds": 134,
+   "seconds": 318,
    "finished": null,
    "effort": "high"
   }
@@ -197,7 +208,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T11:51:00+00:00",
+  "read_at": "2026-11-12T11:54:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -221,6 +232,7 @@
     "e": "high",
     "at": "2026-11-12T05:45:12-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -279,6 +291,42 @@
     "n": "Jeremy",
     "d": 1,
     "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-3909",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stop asking the Investors about restored file changes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T06:52:04-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-3976",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Show each drive's storage makeup on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T06:52:04-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-3824",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Use the new SanDisk SSD as the company's working disk",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T06:52:04-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
    }
   ]
  },
@@ -316,7 +364,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T06:51:00-05:00",
+  "at": "2026-11-12T06:54:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -551,8 +599,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T11:51:21Z",
+  "at": "2026-11-12T11:54:31Z",
   "s": {
+   "T-3428": [
+    "merging",
+    "Host checks on the Mac mini \u00b7 2 groups of tests done",
+    1794484411254
+   ],
+   "T-4154": [
+    "testing",
+    "its own tests, in its copy",
+    1794484471254
+   ],
    "T-3756": [
     "merged",
     "on main 5:08 AM ET",
@@ -574,10 +632,10 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T11:51:21Z",
+  "at": "2026-11-12T11:54:31Z",
   "mq": {
    "n": {
-    "checking": 0,
+    "checking": 1,
     "inline": 0,
     "conflicted": 3,
     "failed": 0,
@@ -586,15 +644,24 @@
     "parked": 2
    },
    "m": {
-    "checking": null,
+    "checking": 1,
     "inline": null,
-    "conflicted": 61,
+    "conflicted": 64,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 219
+    "parked": 222
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-3428"
+     ],
+     "Mac tests",
+     "Mac mini",
+     1
+    ]
+   ],
    "ld": [
     48,
     "2026-11-12T11:49:54Z"
@@ -602,12 +669,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T11:50:59Z",
-    "ld": 5.52,
+    "at": "2026-11-12T11:53:43Z",
+    "ld": 3.93,
     "c": 8,
     "sb": 0,
     "dk": [
-     32.0,
+     31.0,
      228.3
     ],
     "ss": [
@@ -648,12 +715,12 @@
  ],
  "agents_now": {
   "main": 1,
-  "lanes": 3,
-  "total": 4,
-  "at": "6:51 AM",
+  "lanes": 4,
+  "total": 5,
+  "at": "6:54 AM",
   "why": "",
-  "at_iso": "2026-11-12T11:51:00+00:00",
+  "at_iso": "2026-11-12T11:54:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 1, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 6:51 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:54 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T09:54:48.115777+00:00",
+ "at": "2026-11-12T09:59:05.702377+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -97,7 +97,7 @@
    "task": "[build] T-4093 tester Pro compile flag",
    "model": "opus",
    "started": "2026-11-12T09:00:23.114Z",
-   "seconds": 3265,
+   "seconds": 3522,
    "finished": null,
    "effort": "high"
   },
@@ -106,7 +106,7 @@
    "task": "[tools] T-4129 no fourth state, screenshots",
    "model": "opus",
    "started": "2026-11-12T09:01:52.955Z",
-   "seconds": 3175,
+   "seconds": 3432,
    "finished": null,
    "effort": "high"
   }
@@ -154,19 +154,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 12.0,
+   "pct": 13.0,
    "resets_at": "2026-11-12T07:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T04:37:57.116698-05:00",
+   "read_at": "2026-11-12T04:58:43.687325-05:00",
    "source": "live",
-   "left": 88.0,
+   "left": 87.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 70.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T04:37:57.116698-05:00",
+   "read_at": "2026-11-12T04:58:43.687325-05:00",
    "source": "live",
    "left": 30.0,
    "left_words": "of your weekly allowance left"
@@ -178,7 +178,7 @@
    "read_at": "2026-11-12T02:56:33.273935-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T04:37:57.116698-05:00"
+  "read_at": "2026-11-12T04:58:43.687325-05:00"
  },
  "ui": {
   "week_pct": 0.243,
@@ -198,45 +198,8 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T09:58:00+00:00",
-  "running": [
-   {
-    "lane": "b2",
-    "task": "T-3810",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Merge on the internal disk while the SSD is locked",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T04:49:04-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3824",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Use the new SanDisk SSD as the company's working disk",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T04:49:04-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b2",
-    "task": "T-3726",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Run the Simulators from a disk image on the SSD",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T04:49:04-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   }
-  ]
+  "read_at": "2026-11-12T10:00:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -272,7 +235,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T04:58:00-05:00",
+  "at": "2026-11-12T05:00:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -518,27 +481,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T09:54:48Z",
+  "at": "2026-11-12T09:59:05Z",
   "s": {
-   "T-3726": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-3810": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
-   "T-3824": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
    "T-4129": [
-    "testing",
-    "its own tests, in its copy",
-    1794476808115
+    "merging",
+    "Mac tests at the main gate",
+    1794477545702
    ],
    "T-4093": [
     "merged",
@@ -549,7 +497,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T09:54:48Z",
+  "at": "2026-11-12T09:59:05Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -563,11 +511,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 115,
+    "conflicted": 119,
     "failed": null,
-    "held": 2853,
+    "held": 2857,
     "retry": null,
-    "parked": 3757
+    "parked": 3761
    },
    "cur": [],
    "ld": [
@@ -577,12 +525,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T09:56:53Z",
-    "ld": 20.52,
+    "at": "2026-11-12T10:00:27Z",
+    "ld": 40.49,
     "c": 8,
     "sb": 2,
     "dk": [
-     35.0,
+     32.8,
      228.3
     ],
     "ss": [
@@ -590,13 +538,13 @@
      953.7
     ],
     "sn": [
-     "T1703 main r1",
-     "iPhone 18 Pro"
+     "iPhone 18 Pro",
+     "T1703 main r3"
     ]
    },
    "macbook": {
-    "at": "2026-11-12T09:27:25Z",
-    "ld": 0.24,
+    "at": "2026-11-12T09:57:58Z",
+    "ld": 0.23,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -627,12 +575,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "4:58 AM",
+  "lanes": 0,
+  "total": 2,
+  "at": "5:00 AM",
   "why": "",
-  "at_iso": "2026-11-12T09:58:00+00:00",
+  "at_iso": "2026-11-12T10:00:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:58 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:00 AM ET</p></section>"
  }
 }

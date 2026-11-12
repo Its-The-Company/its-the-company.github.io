@@ -1,12 +1,28 @@
 {
  "schema": 1,
- "at": "2026-11-12T10:06:40.882664+00:00",
+ "at": "2026-11-12T10:09:46.545292+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T02:56:43-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-3756",
+    "name": "Parked list counts the parked branches still waiting",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794478181
+   },
+   {
+    "t": "T-3903",
+    "name": "Restore a lost Investor ruling to the rulings log",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794478042
+   },
    {
     "t": "T-3774",
     "name": "Count check copies left behind after the cleanup fix",
@@ -70,25 +86,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794475918
-   },
-   {
-    "t": "T-4127",
-    "name": "Run the Restructuring on Evan's account",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794473329
-   },
-   {
-    "t": "T-3884",
-    "name": "Check parked branches against main every hour",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794473319
    }
   ],
-  "landed": 38,
+  "landed": 40,
   "failed": 3
  },
  "workers": [
@@ -97,7 +97,7 @@
    "task": "[build] T-4093 tester Pro compile flag",
    "model": "opus",
    "started": "2026-11-12T09:00:23.114Z",
-   "seconds": 3977,
+   "seconds": 4163,
    "finished": null,
    "effort": "high"
   }
@@ -140,7 +140,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 610,
+  "runnable_count": 608,
   "blocked_count": 85
  },
  "meter": {
@@ -189,18 +189,15 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T10:06:00+00:00",
+  "read_at": "2026-11-12T10:09:00+00:00",
   "running": [
    {
     "lane": "b2",
     "task": "T-3756",
-    "w": "Odalys",
-    "k": "site",
     "t": "Parked list counts the parked branches still waiting",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-12T05:04:28-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -218,11 +215,7 @@
    {
     "lane": "b2",
     "task": "T-3903",
-    "w": "Odalys",
-    "k": "ops",
     "t": "Restore a lost Investor ruling to the rulings log",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-12T05:04:28-05:00",
     "n": "Jeremy",
     "d": 1,
@@ -247,6 +240,7 @@
     "e": "high",
     "at": "2026-11-12T05:01:55-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -273,19 +267,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 176
+   "free_gb": 175
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T04:58:00-05:00",
+   "at": "2026-11-12T05:06:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T05:06:00-05:00",
+  "at": "2026-11-12T05:09:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -435,29 +429,37 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "Home's merge line now counts the set-aside work waiting in parked branches instead of reading...",
+    "at": "2026-11-12T05:09:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "The lost 11-09 Investor ruling on merge-queue priority is recorded once in the rulings log and...",
+    "at": "2026-11-12T05:07:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "The after-read found no leftover check copies from finished runs since the cleanup fixes landed;...",
     "at": "2026-11-12T05:05:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Done on main: the task timeline shows when a land's Xcode check moved from the MacBook to the...",
-    "at": "2026-11-12T04:53:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Done on main: the task timeline shows when a land's Xcode check moved from the MacBook to the...",
-    "at": "2026-11-12T04:53:00-05:00"
    }
   ],
   "count": {
-   "next": 610,
+   "next": 608,
    "wait": 40,
    "blocked": 45,
    "you": 14
   },
   "fin": {
-   "n": 15,
+   "n": 17,
    "rows": [
+    [
+     "T-3756",
+     "Parked list counts the..."
+    ],
+    [
+     "T-3903",
+     "Restore a lost Investor..."
+    ],
     [
      "T-3703",
      "Show when a merge check..."
@@ -473,14 +475,6 @@
     [
      "T-3858",
      "Redo remove check worktrees..."
-    ],
-    [
-     "T-3878",
-     "Redo redo an Investor..."
-    ],
-    [
-     "T-3888",
-     "Make the landing test pass..."
     ]
    ]
   }
@@ -520,12 +514,24 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T10:06:33Z",
+  "at": "2026-11-12T10:09:46Z",
   "s": {
    "T-4093": [
     "merging",
     "Mac tests at the main gate \u00b7 5 groups of tests done",
-    1794477933934
+    1794477946545
+   ],
+   "T-3756": [
+    "merged",
+    "on main 5:08 AM ET",
+    1794478104000,
+    ""
+   ],
+   "T-3903": [
+    "merged",
+    "on main 5:07 AM ET",
+    1794478034000,
+    ""
    ],
    "T-3774": [
     "merged",
@@ -536,7 +542,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T10:06:33Z",
+  "at": "2026-11-12T10:09:46Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -550,30 +556,30 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 127,
+    "conflicted": 130,
     "failed": null,
-    "held": 2865,
+    "held": 2868,
     "retry": null,
-    "parked": 2865
+    "parked": 2868
    },
    "cur": [],
    "ld": [
-    37,
-    "2026-11-12T10:05:19Z"
+    39,
+    "2026-11-12T10:09:41Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T10:06:34Z",
-    "ld": 19.57,
+    "at": "2026-11-12T10:08:59Z",
+    "ld": 12.35,
     "c": 8,
     "sb": 2,
     "dk": [
-     34.1,
+     34.0,
      228.3
     ],
     "ss": [
-     174.8,
+     172.8,
      953.7
     ],
     "sn": [
@@ -616,10 +622,10 @@
   "main": 1,
   "lanes": 2,
   "total": 3,
-  "at": "5:06 AM",
+  "at": "5:09 AM",
   "why": "",
-  "at_iso": "2026-11-12T10:06:00+00:00",
+  "at_iso": "2026-11-12T10:09:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:06 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 1, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 5:09 AM ET</p></section>"
  }
 }

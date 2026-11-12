@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T17:27:24.242445+00:00",
+ "at": "2026-11-12T17:30:26.235870+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -114,7 +114,7 @@
    "task": "[tools] T-4179 a stopped task gets a second requeue",
    "model": "opus",
    "started": "2026-11-12T16:43:29.044Z",
-   "seconds": 2635,
+   "seconds": 2817,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[build] T-3400 Python https through iOS",
    "model": "opus",
    "started": "2026-11-12T17:02:07.937Z",
-   "seconds": 1516,
+   "seconds": 1698,
    "finished": null,
    "effort": "high"
   },
@@ -132,7 +132,7 @@
    "task": "[tools] T-4161 Fable 5.2 on Jeremy's account, model log",
    "model": "opus",
    "started": "2026-11-12T17:09:33.984Z",
-   "seconds": 1070,
+   "seconds": 1252,
    "finished": null,
    "effort": "high"
   }
@@ -224,7 +224,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T17:27:00+00:00",
+  "read_at": "2026-11-12T17:30:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -261,7 +261,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T12:27:00-05:00",
+  "at": "2026-11-12T12:30:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -521,7 +521,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T17:27:07Z",
+  "at": "2026-11-12T17:30:09Z",
   "s": {
    "T-3400": [
     "mergetest",
@@ -529,19 +529,19 @@
     null
    ],
    "T-4179": [
-    "testing",
-    "its own tests, in its copy",
-    1794503407290
+    "merging",
+    "Mac tests at the main gate",
+    1794504549646
    ],
    "T-4161": [
     "testing",
     "its own tests, in its copy",
-    1794503527290
+    1794503529646
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T17:27:07Z",
+  "at": "2026-11-12T17:30:09Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -555,11 +555,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 144,
+    "conflicted": 147,
     "failed": null,
     "held": null,
-    "retry": 73,
-    "parked": 153
+    "retry": 76,
+    "parked": 156
    },
    "cur": [],
    "ld": [
@@ -569,8 +569,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T17:27:07Z",
-    "ld": 1.12,
+    "at": "2026-11-12T17:29:25Z",
+    "ld": 0.95,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -620,10 +620,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "12:27 PM",
+  "at": "12:30 PM",
   "why": "",
-  "at_iso": "2026-11-12T17:27:00+00:00",
+  "at_iso": "2026-11-12T17:30:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:27 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:30 PM ET</p></section>"
  }
 }

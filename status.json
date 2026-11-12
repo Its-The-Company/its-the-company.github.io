@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T12:49:41.048588+00:00",
+ "at": "2026-11-12T12:52:41.155303+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -115,8 +115,18 @@
   "landed": 51,
   "failed": 4
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4138 review and land pinned cap 3",
+   "model": "opus",
+   "started": "2026-11-12T12:51:49.263Z",
+   "seconds": 51,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys",
  "recent": [
   {
    "name": "odalys",
@@ -154,8 +164,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 597,
-  "blocked_count": 85
+  "runnable_count": 598,
+  "blocked_count": 84
  },
  "meter": {
   "five_hour": {
@@ -203,7 +213,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T12:49:00+00:00",
+  "read_at": "2026-11-12T12:52:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -337,7 +347,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T07:49:00-05:00",
+  "at": "2026-11-12T07:52:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -348,6 +358,15 @@
   "at": "2026-11-12T05:47:10.685559-05:00"
  },
  "lanes": [
+  {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4138 review and land pinned cap 3",
+   "model": "opus",
+   "since": "2026-11-12T12:51:49.263Z",
+   "next": [],
+   "effort": "high"
+  },
   {
    "name": "Idris",
    "state": "next",
@@ -360,14 +379,6 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -398,7 +409,18 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Resume the queue audit and start the Restructuring",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T12:51:49.263Z",
+    "o": "c",
+    "task": "T-4138"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -490,10 +512,10 @@
    }
   ],
   "count": {
-   "next": 597,
+   "next": 598,
    "wait": 40,
-   "blocked": 45,
-   "you": 14
+   "blocked": 44,
+   "you": 13
   },
   "fin": {
    "n": 14,
@@ -560,17 +582,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T12:49:29Z",
+  "at": "2026-11-12T12:52:22Z",
   "s": {
    "T-3824": [
     "merging",
     "Host checks on the Mac mini \u00b7 3 groups of tests done",
-    1794487469244
+    1794487522549
    ],
    "T-3909": [
     "mergeq",
     "1st to merge",
-    1794485909244
+    1794485902549
    ],
    "T-4149": [
     "merged",
@@ -587,7 +609,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T12:49:29Z",
+  "at": "2026-11-12T12:52:22Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -599,13 +621,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 5,
-    "inline": 31,
+    "checking": 7,
+    "inline": 34,
     "conflicted": null,
-    "failed": 13,
+    "failed": 16,
     "held": null,
     "retry": null,
-    "parked": 277
+    "parked": 280
    },
    "cur": [
     [
@@ -614,7 +636,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     5
+     7
     ]
    ],
    "ld": [
@@ -624,16 +646,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T12:49:06Z",
-    "ld": 5.06,
+    "at": "2026-11-12T12:52:23Z",
+    "ld": 5.8,
     "c": 8,
     "sb": 0,
     "dk": [
-     29.8,
+     29.7,
      228.3
     ],
     "ss": [
-     186.7,
+     184.7,
      953.7
     ],
     "sn": []
@@ -652,8 +674,8 @@
   }
  },
  "reply": {
-  "sent": "2026-11-12T11:56:33Z",
-  "seconds": 53.0
+  "sent": "2026-11-12T12:49:36Z",
+  "seconds": 60.0
  },
  "inbox": [],
  "trimmed": [
@@ -670,13 +692,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
+  "main": 1,
   "lanes": 4,
-  "total": 4,
-  "at": "7:49 AM",
+  "total": 5,
+  "at": "7:52 AM",
   "why": "",
-  "at_iso": "2026-11-12T12:49:00+00:00",
+  "at_iso": "2026-11-12T12:52:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 0, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:49 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 1, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 7:52 AM ET</p></section>"
  }
 }

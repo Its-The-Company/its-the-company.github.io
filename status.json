@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T20:23:11.314612+00:00",
+ "at": "2026-11-12T20:26:16.626277+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -88,25 +88,16 @@
     "why": "did not merge cleanly"
    }
   ],
-  "landed": 49,
-  "failed": 10
+  "landed": 45,
+  "failed": 8
  },
  "workers": [
-  {
-   "name": "idris",
-   "task": "[build] T-4205 prune on background starts",
-   "model": "opus",
-   "started": "2026-11-12T18:36:21.956Z",
-   "seconds": 6409,
-   "finished": null,
-   "effort": "high"
-  },
   {
    "name": "maren",
    "task": "[site] T-4136 Operators and Direct on Home",
    "model": "opus",
    "started": "2026-11-12T19:14:53.752Z",
-   "seconds": 4097,
+   "seconds": 4282,
    "finished": null,
    "effort": "high"
   },
@@ -115,13 +106,39 @@
    "task": "[build] T-3852 launcher editor saves slots",
    "model": "opus",
    "started": "2026-11-12T19:58:57.130Z",
-   "seconds": 1454,
+   "seconds": 1639,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "wrenna",
+   "task": "[release] T-4209 privacy policy matches pruning",
+   "model": "opus",
+   "started": "2026-11-12T20:24:27.243Z",
+   "seconds": 109,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-3766 Debug URL scheme step",
+   "model": "opus",
+   "started": "2026-11-12T20:25:14.217Z",
+   "seconds": 62,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2, Maren",
+ "who": "Maren, Idris x2, Wrenna",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4205 prune on background starts",
+   "model": "opus",
+   "started": "2026-11-12T18:36:21.956Z",
+   "seconds": null,
+   "finished": "2026-11-12T20:23:23.390000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-3688 launcher editor screens",
@@ -145,37 +162,29 @@
    "started": "2026-11-12T18:38:05.670Z",
    "seconds": null,
    "finished": "2026-11-12T19:19:15.146000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[design] T-4208 Testers row in Settings spec",
-   "model": "opus",
-   "started": "2026-11-12T18:57:47.975Z",
-   "seconds": null,
-   "finished": "2026-11-12T19:18:52.679000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 593,
+  "runnable_count": 594,
   "blocked_count": 84
  },
  "meter": {
   "five_hour": {
-   "pct": 23.0,
+   "pct": 24.0,
    "resets_at": "2026-11-12T17:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T15:17:29.273977-05:00",
+   "read_at": "2026-11-12T15:24:09.486995-05:00",
    "source": "live",
-   "left": 77.0,
+   "left": 76.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 78.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T15:17:29.273977-05:00",
+   "read_at": "2026-11-12T15:24:09.486995-05:00",
    "source": "live",
    "left": 22.0,
    "left_words": "of your weekly allowance left"
@@ -187,7 +196,7 @@
    "read_at": "2026-11-12T13:34:12.593745-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T15:17:29.273977-05:00"
+  "read_at": "2026-11-12T15:24:09.486995-05:00"
  },
  "ui": {
   "week_pct": 0.242,
@@ -207,7 +216,7 @@
   "week_pct": 37.24,
   "usage_pct": 32.6,
   "work_pct": 78.9,
-  "read_at": "2026-11-12T20:23:00+00:00",
+  "read_at": "2026-11-12T20:26:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -237,14 +246,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T15:17:00-05:00",
+   "at": "2026-11-12T15:24:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T15:23:00-05:00",
+  "at": "2026-11-12T15:26:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -256,20 +265,29 @@
  },
  "lanes": [
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4205 prune on background starts",
-   "model": "opus",
-   "since": "2026-11-12T18:36:21.956Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Maren",
    "state": "running",
    "task": "[site] T-4136 Operators and Direct on Home",
    "model": "opus",
    "since": "2026-11-12T19:14:53.752Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[build] T-3852 launcher editor saves slots",
+   "model": "opus",
+   "since": "2026-11-12T19:58:57.130Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Wrenna",
+   "state": "running",
+   "task": "[release] T-4209 privacy policy matches pruning",
+   "model": "opus",
+   "since": "2026-11-12T20:24:27.243Z",
    "next": [],
    "effort": "high"
   },
@@ -290,14 +308,6 @@
    "next": []
   },
   {
-   "name": "Wrenna",
-   "state": "next",
-   "task": "Wrenna, P2, from T-3664: replace the two placeholder...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
    "name": "Ines",
    "state": "next",
    "task": "Ines, P1, T-3683 ruling (3): the 11-08 evening report...",
@@ -308,16 +318,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Prune run history when a background start times out",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T18:36:21.956Z",
-    "o": "c",
-    "task": "T-4205"
-   },
    {
     "w": "Maren",
     "k": "site",
@@ -337,6 +337,26 @@
     "at": "2026-11-12T19:58:57.130Z",
     "o": "c",
     "task": "T-3852"
+   },
+   {
+    "w": "Wrenna",
+    "k": "release",
+    "t": "Match the privacy policy to the new pruning",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T20:24:27.243Z",
+    "o": "c",
+    "task": "T-4209"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Let the Debug scheme step remove only its own entry",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T20:25:14.217Z",
+    "o": "c",
+    "task": "T-3766"
    }
   ],
   "src": "plan",
@@ -430,7 +450,7 @@
    }
   ],
   "count": {
-   "next": 593,
+   "next": 594,
    "wait": 40,
    "blocked": 44,
    "you": 13
@@ -504,27 +524,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T20:23:11Z",
+  "at": "2026-11-12T20:26:03Z",
   "s": {
    "T-3852": [
     "testing",
     "its own tests, in its copy",
-    1794514331314
-   ],
-   "T-4205": [
-    "merged",
-    "on main 3:23 PM ET",
-    1794514981000,
-    "Idris"
+    1794514323496
    ]
   },
   "nm": {
-   "T-3852": "Call the launcher slot writer from the editor, reload...",
-   "T-4205": "Prune run history when a background start times out"
+   "T-3852": "Call the launcher slot writer from the editor, reload..."
   }
  },
  "ln": {
-  "at": "2026-11-12T20:23:11Z",
+  "at": "2026-11-12T20:26:03Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -538,11 +551,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 286,
+    "conflicted": 288,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 329
+    "parked": 332
    },
    "cur": [],
    "ld": [
@@ -552,8 +565,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T20:23:11Z",
-    "ld": 0.86,
+    "at": "2026-11-12T20:25:34Z",
+    "ld": 7.95,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -598,13 +611,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 4,
   "lanes": 0,
-  "total": 3,
-  "at": "3:23 PM",
+  "total": 4,
+  "at": "3:26 PM",
   "why": "",
-  "at_iso": "2026-11-12T20:23:00+00:00",
+  "at_iso": "2026-11-12T20:26:00+00:00",
   "started": "1:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 1:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:23 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 1:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:26 PM ET</p></section>"
  }
 }

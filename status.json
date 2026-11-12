@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T10:53:39.633969+00:00",
+ "at": "2026-11-12T10:56:39.917520+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -103,7 +103,7 @@
    "task": "[tools] T-4150 Fable pause before limit",
    "model": "opus",
    "started": "2026-11-12T10:52:10.771Z",
-   "seconds": 88,
+   "seconds": 269,
    "finished": null,
    "effort": "high"
   },
@@ -112,7 +112,7 @@
    "task": "[release] T-4093 internal TestFlight build 5",
    "model": "opus",
    "started": "2026-11-12T10:52:18.614Z",
-   "seconds": 81,
+   "seconds": 261,
    "finished": null,
    "effort": "high"
   },
@@ -121,7 +121,7 @@
    "task": "[test] T-4151 overrun premade memory test",
    "model": "opus",
    "started": "2026-11-12T10:53:25.205Z",
-   "seconds": 14,
+   "seconds": 194,
    "finished": null,
    "effort": "high"
   }
@@ -180,7 +180,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T10:53:00+00:00",
+  "read_at": "2026-11-12T10:56:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -216,6 +216,7 @@
     "e": "high",
     "at": "2026-11-12T05:45:12-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -330,7 +331,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T05:53:00-05:00",
+  "at": "2026-11-12T05:56:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -574,12 +575,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T10:53:31Z",
+  "at": "2026-11-12T10:56:25Z",
   "s": {
    "T-4093": [
     "merging",
-    "Mac tests at the main gate",
-    1794480811650
+    "Mac tests at the main gate \u00b7 2 groups of tests done",
+    1794480805397
+   ],
+   "T-4150": [
+    "testing",
+    "its own tests, in its copy",
+    1794480985397
    ],
    "T-3887": [
     "merged",
@@ -608,7 +614,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T10:53:31Z",
+  "at": "2026-11-12T10:56:25Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -622,11 +628,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 3,
+    "conflicted": 6,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 161
+    "parked": 164
    },
    "cur": [],
    "ld": [
@@ -636,27 +642,27 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T10:52:44Z",
-    "ld": 9.32,
+    "at": "2026-11-12T10:56:26Z",
+    "ld": 7.15,
     "c": 8,
     "sb": 0,
     "dk": [
-     31.5,
+     33.3,
      228.3
     ],
     "ss": [
-     184.3,
+     179.9,
      953.7
     ],
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-12T10:23:28Z",
-    "ld": 1.38,
+    "at": "2026-11-12T10:54:03Z",
+    "ld": 0.15,
     "c": 12,
     "sb": 0,
     "dk": [
-     397.6,
+     397.7,
      926.4
     ],
     "sn": []
@@ -683,10 +689,10 @@
   "main": 3,
   "lanes": 4,
   "total": 7,
-  "at": "5:53 AM",
+  "at": "5:56 AM",
   "why": "",
-  "at_iso": "2026-11-12T10:53:00+00:00",
+  "at_iso": "2026-11-12T10:56:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 5:53 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 5:56 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T17:21:19.700278+00:00",
+ "at": "2026-11-12T17:24:22.476828+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -114,7 +114,7 @@
    "task": "[tools] T-4179 a stopped task gets a second requeue",
    "model": "opus",
    "started": "2026-11-12T16:43:29.044Z",
-   "seconds": 2270,
+   "seconds": 2453,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[build] T-3400 Python https through iOS",
    "model": "opus",
    "started": "2026-11-12T17:02:07.937Z",
-   "seconds": 1151,
+   "seconds": 1334,
    "finished": null,
    "effort": "high"
   },
@@ -132,22 +132,21 @@
    "task": "[tools] T-4161 Fable 5.2 on Jeremy's account, model log",
    "model": "opus",
    "started": "2026-11-12T17:09:33.984Z",
-   "seconds": 705,
+   "seconds": 888,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys x2, Pernille",
+ "recent": [
   {
    "name": "pernille",
    "task": "[review] T-4204 check T-4198 before ship",
    "model": "opus",
    "started": "2026-11-12T17:18:31.327Z",
-   "seconds": 168,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x2, Pernille x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-12T17:23:09.670000+00:00"
+  },
   {
    "name": "wrenna",
    "task": "[release] T-3798 privacy policy run history timing",
@@ -171,20 +170,12 @@
    "started": "2026-11-12T16:32:11.872Z",
    "seconds": null,
    "finished": "2026-11-12T17:15:37.851000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4160 pause on failed usage reading",
-   "model": "opus",
-   "started": "2026-11-12T15:15:25.110Z",
-   "seconds": null,
-   "finished": "2026-11-12T17:09:13.029000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 601,
+  "runnable_count": 600,
   "blocked_count": 98
  },
  "meter": {
@@ -233,7 +224,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T17:21:00+00:00",
+  "read_at": "2026-11-12T17:24:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -270,7 +261,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T12:21:00-05:00",
+  "at": "2026-11-12T12:24:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -363,16 +354,6 @@
     "at": "2026-11-12T17:09:33.984Z",
     "o": "i",
     "task": "T-4161"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T17:18:31.327Z",
-    "o": "c",
-    "task": "T-4204"
    }
   ],
   "src": "plan",
@@ -450,6 +431,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "Checked Idris's change so that a widget or Shortcut whose Python fails to start still clears run...",
+    "at": "2026-11-12T12:22:00-05:00"
+   },
+   {
     "w": "Wrenna",
     "t": "A second reader checked the draft privacy policy's promises about deleting old run history...",
     "at": "2026-11-12T12:19:00-05:00"
@@ -458,22 +444,21 @@
     "w": "Idris",
     "t": "When a Shortcut or a widget refresh starts pywidget in the background and Python fails to start,...",
     "at": "2026-11-12T12:17:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "Opening a page no longer flashes an old Issues number (like 4) for a second; the badge opens on...",
-    "at": "2026-11-12T12:15:00-05:00"
    }
   ],
   "count": {
-   "next": 601,
+   "next": 600,
    "wait": 40,
    "blocked": 58,
    "you": 14
   },
   "fin": {
-   "n": 19,
+   "n": 20,
    "rows": [
+    [
+     "T-4204",
+     "Check finished work before..."
+    ],
     [
      "T-3798",
      "Fix the run history deletion..."
@@ -493,10 +478,6 @@
     [
      "T-3565",
      "Decide what a stale sensor..."
-    ],
-    [
-     "T-4176",
-     "Stop New File emptying a..."
     ]
    ]
   }
@@ -540,27 +521,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T17:21:02Z",
+  "at": "2026-11-12T17:24:05Z",
   "s": {
    "T-3400": [
     "merging",
-    "Mac tests at the main gate",
-    1794504002821
+    "Mac tests at the main gate \u00b7 6 groups of tests done",
+    1794504005992
    ],
    "T-4179": [
     "testing",
     "its own tests, in its copy",
-    1794503402821
+    1794503405992
    ],
    "T-4161": [
     "testing",
     "its own tests, in its copy",
-    1794503522821
+    1794503525992
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T17:21:02Z",
+  "at": "2026-11-12T17:24:05Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -574,11 +555,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 138,
+    "conflicted": 141,
     "failed": null,
     "held": null,
-    "retry": 67,
-    "parked": 147
+    "retry": 70,
+    "parked": 150
    },
    "cur": [],
    "ld": [
@@ -588,8 +569,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T17:21:03Z",
-    "ld": 1.51,
+    "at": "2026-11-12T17:23:20Z",
+    "ld": 1.79,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -636,13 +617,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 3,
   "lanes": 0,
-  "total": 4,
-  "at": "12:21 PM",
+  "total": 3,
+  "at": "12:24 PM",
   "why": "",
-  "at_iso": "2026-11-12T17:21:00+00:00",
+  "at_iso": "2026-11-12T17:24:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:21 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:24 PM ET</p></section>"
  }
 }

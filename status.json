@@ -1,11 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-12T09:37:53.250758+00:00",
+ "at": "2026-11-12T09:40:58.886264+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T02:56:43-05:00",
-  "flow": [],
+  "flow": [
+   {
+    "t": "T-4140",
+    "name": "Redo make the landing test pass on main every time",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794476329
+     }
+    ]
+   }
+  ],
   "done": [
    {
     "t": "T-3767",
@@ -97,7 +109,7 @@
    "task": "[build] T-4093 tester Pro compile flag",
    "model": "opus",
    "started": "2026-11-12T09:00:23.114Z",
-   "seconds": 2250,
+   "seconds": 2435,
    "finished": null,
    "effort": "high"
   },
@@ -106,7 +118,7 @@
    "task": "[tools] T-4129 no fourth state, screenshots",
    "model": "opus",
    "started": "2026-11-12T09:01:52.955Z",
-   "seconds": 2160,
+   "seconds": 2345,
    "finished": null,
    "effort": "high"
   }
@@ -154,19 +166,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 11.0,
+   "pct": 12.0,
    "resets_at": "2026-11-12T07:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T04:16:39.432294-05:00",
+   "read_at": "2026-11-12T04:37:57.116698-05:00",
    "source": "live",
-   "left": 89.0,
+   "left": 88.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 70.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T04:16:39.432294-05:00",
+   "read_at": "2026-11-12T04:37:57.116698-05:00",
    "source": "live",
    "left": 30.0,
    "left_words": "of your weekly allowance left"
@@ -178,7 +190,7 @@
    "read_at": "2026-11-12T02:56:33.273935-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T04:16:39.432294-05:00"
+  "read_at": "2026-11-12T04:37:57.116698-05:00"
  },
  "ui": {
   "week_pct": 0.243,
@@ -198,7 +210,7 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T09:37:00+00:00",
+  "read_at": "2026-11-12T09:41:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -232,33 +244,6 @@
     "e": "high",
     "at": "2026-11-12T02:57:59-05:00",
     "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3968",
-    "t": "Stop the applier's raw-HTML refusal notice",
-    "at": "2026-11-12T03:37:01-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3977",
-    "t": "Clear the leftover extra copies of the code",
-    "at": "2026-11-12T03:37:01-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3830",
-    "t": "Redo merge every branch held only for touching Investor files",
-    "at": "2026-11-12T03:37:01-05:00",
-    "n": "Jeremy",
-    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -297,7 +282,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T04:37:00-05:00",
+  "at": "2026-11-12T04:41:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -543,35 +528,37 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T09:37:53Z",
+  "at": "2026-11-12T09:40:46Z",
   "s": {
+   "T-4140": [
+    "merging",
+    "Host checks on the Mac mini",
+    1794476386051
+   ],
+   "T-3968": [
+    "mergeq",
+    "1st to merge",
+    1794476446051
+   ],
+   "T-3977": [
+    "mergeq",
+    "1st to merge",
+    1794476446051
+   ],
+   "T-3830": [
+    "mergeq",
+    "1st to merge",
+    1794476446051
+   ],
    "T-4093": [
     "testing",
     "its own tests, in its copy",
-    1794474953250
+    1794474946051
    ],
    "T-4129": [
     "testing",
     "its own tests, in its copy",
-    1794475073250
-   ],
-   "T-3968": [
-    "merged",
-    "on main 4:31 AM ET",
-    1794475907000,
-    ""
-   ],
-   "T-3977": [
-    "merged",
-    "on main 3:39 AM ET",
-    1794472781000,
-    ""
-   ],
-   "T-3830": [
-    "merged",
-    "on main 3:39 AM ET",
-    1794472755000,
-    ""
+    1794475066051
    ],
    "T-3870": [
     "merged",
@@ -582,11 +569,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T09:37:53Z",
+  "at": "2026-11-12T09:40:46Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 0,
+    "checking": 1,
+    "inline": 3,
     "conflicted": 6,
     "failed": 0,
     "held": 1,
@@ -594,15 +581,24 @@
     "parked": 4
    },
    "m": {
-    "checking": null,
-    "inline": null,
-    "conflicted": 101,
+    "checking": 1,
+    "inline": 0,
+    "conflicted": 104,
     "failed": null,
-    "held": 2836,
+    "held": 2839,
     "retry": null,
-    "parked": 3740
+    "parked": 3743
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4140"
+     ],
+     "Mac tests",
+     "Mac mini",
+     1
+    ]
+   ],
    "ld": [
     32,
     "2026-11-12T09:32:20Z"
@@ -610,12 +606,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T09:37:06Z",
-    "ld": 8.17,
+    "at": "2026-11-12T09:40:18Z",
+    "ld": 5.7,
     "c": 8,
     "sb": 1,
     "dk": [
-     36.3,
+     34.1,
      228.3
     ],
     "ss": [
@@ -625,6 +621,17 @@
     "sn": [
      "iPhone 18 Pro"
     ]
+   },
+   "macbook": {
+    "at": "2026-11-12T09:27:25Z",
+    "ld": 0.24,
+    "c": 12,
+    "sb": 0,
+    "dk": [
+     397.9,
+     926.4
+    ],
+    "sn": []
    }
   }
  },
@@ -648,12 +655,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 2,
-  "total": 4,
-  "at": "4:37 AM",
+  "lanes": 1,
+  "total": 3,
+  "at": "4:41 AM",
   "why": "",
-  "at_iso": "2026-11-12T09:37:00+00:00",
+  "at_iso": "2026-11-12T09:41:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:37 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:41 AM ET</p></section>"
  }
 }

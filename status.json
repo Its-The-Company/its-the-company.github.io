@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T23:17:37.586003+00:00",
+ "at": "2026-11-12T23:20:40.789988+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -14,17 +14,6 @@
      {
       "s": "testq",
       "at": 1794523733
-     }
-    ]
-   },
-   {
-    "t": "T-4171",
-    "name": "Check finished work before it ships",
-    "w": "Pernille",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794523498
      }
     ]
    }
@@ -119,7 +108,7 @@
    "task": "[research] T-3674 land launcher known apps",
    "model": "opus",
    "started": "2026-11-12T22:22:39.264Z",
-   "seconds": 3298,
+   "seconds": 3481,
    "finished": null,
    "effort": "high"
   },
@@ -128,7 +117,7 @@
    "task": "[build] T-4215 gate launcher editor in Release",
    "model": "opus",
    "started": "2026-11-12T22:33:44.265Z",
-   "seconds": 2633,
+   "seconds": 2816,
    "finished": null,
    "effort": "high"
   },
@@ -137,16 +126,7 @@
    "task": "[build] T-4216 add-app slot overwrite race",
    "model": "opus",
    "started": "2026-11-12T22:33:49.320Z",
-   "seconds": 2628,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4171 review tree.json export fix",
-   "model": "opus",
-   "started": "2026-11-12T22:40:32.649Z",
-   "seconds": 2224,
+   "seconds": 2811,
    "finished": null,
    "effort": "high"
   },
@@ -155,13 +135,21 @@
    "task": "[review] T-4217 review launcher widget picker",
    "model": "opus",
    "started": "2026-11-12T22:46:24.095Z",
-   "seconds": 1873,
+   "seconds": 2056,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Wrenna, Idris x2, Pernille x2",
+ "who": "Wrenna, Idris x2, Pernille",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-4171 review tree.json export fix",
+   "model": "opus",
+   "started": "2026-11-12T22:40:32.649Z",
+   "seconds": null,
+   "finished": "2026-11-12T23:20:39.392000+00:00"
+  },
   {
    "name": "ines",
    "task": "[report] evening",
@@ -185,20 +173,12 @@
    "started": "2026-11-12T22:22:32.011Z",
    "seconds": null,
    "finished": "2026-11-12T22:40:15.714000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4214 review launcher steps",
-   "model": "opus",
-   "started": "2026-11-12T22:22:47.223Z",
-   "seconds": null,
-   "finished": "2026-11-12T22:33:29.640000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 593,
+  "runnable_count": 591,
   "blocked_count": 84
  },
  "meter": {
@@ -247,7 +227,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-12T23:17:00+00:00",
+  "read_at": "2026-11-12T23:20:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -277,14 +257,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T18:13:00-05:00",
+   "at": "2026-11-12T18:18:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T18:17:00-05:00",
+  "at": "2026-11-12T18:20:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -316,9 +296,9 @@
   {
    "name": "Pernille",
    "state": "running",
-   "task": "[review] T-4171 review tree.json export fix",
+   "task": "[review] T-4217 review launcher widget picker",
    "model": "opus",
-   "since": "2026-11-12T22:40:32.649Z",
+   "since": "2026-11-12T22:46:24.095Z",
    "next": [],
    "effort": "high"
   },
@@ -378,16 +358,6 @@
     "at": "2026-11-12T22:33:49.320Z",
     "o": "c",
     "task": "T-4216"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T22:40:32.649Z",
-    "o": "c",
-    "task": "T-4171"
    },
    {
     "w": "Pernille",
@@ -475,30 +445,38 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "In the internal launcher build, the six launcher widgets now show in the iPhone's widget picker,...",
-    "at": "2026-11-12T17:45:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The test build's Export measurements now lists each widget on the phone and whether the app ever...",
-    "at": "2026-11-12T17:40:00-05:00"
+    "w": "Wrenna",
+    "t": "The launcher's Choose an App list now offers 12 real apps (2Do, Bear, Chrome, Google Maps,...",
+    "at": "2026-11-12T18:20:00-05:00"
    },
    {
     "w": "Pernille",
-    "t": "I reviewed the five launcher steps that landed today. Two need fixing before the feature counts...",
-    "at": "2026-11-12T17:33:00-05:00"
+    "t": "A second reviewer checked T-3814 (the tester build's report on whether the app wrote each placed...",
+    "at": "2026-11-12T18:20:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "In the internal launcher build, the six launcher widgets now show in the iPhone's widget picker,...",
+    "at": "2026-11-12T17:45:00-05:00"
    }
   ],
   "count": {
-   "next": 593,
+   "next": 591,
    "wait": 40,
    "blocked": 44,
    "you": 13
   },
   "fin": {
-   "n": 4,
+   "n": 6,
    "rows": [
+    [
+     "T-3674",
+     "Fill the launcher's list of..."
+    ],
+    [
+     "T-4171",
+     "Check finished work before..."
+    ],
     [
      "T-4212",
      "Offer the launcher widgets..."
@@ -557,44 +535,47 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T23:17:32Z",
+  "at": "2026-11-12T23:20:34Z",
   "s": {
    "T-4216": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
    ],
-   "T-3674": [
-    "mergeq",
-    "waiting for the main gate",
-    1794524252025
-   ],
    "T-4215": [
-    "mergeq",
-    "waiting for the main gate",
-    1794524852025
+    "merging",
+    "Mac tests at the main gate",
+    1794525634157
    ],
    "T-4217": [
-    "mergeq",
-    "waiting for the main gate",
-    1794524912025
+    "merged",
+    "on main 6:20 PM ET",
+    1794525619000,
+    "Pernille"
    ],
    "T-4171": [
-    "mergeq",
-    "waiting for the main gate",
-    1794525152025
+    "merged",
+    "on main 6:20 PM ET",
+    1794525614000,
+    "Pernille"
+   ],
+   "T-3674": [
+    "merged",
+    "on main 6:20 PM ET",
+    1794525606000,
+    ""
    ]
   },
   "nm": {
    "T-4216": "Stop Add App from overwriting a newly saved slot",
-   "T-3674": "Fill the launcher's list of known apps",
    "T-4215": "Keep the launcher editor out of Release builds",
    "T-4217": "Review the launcher widget picker change",
-   "T-4171": "Check finished work before it ships"
+   "T-4171": "Check finished work before it ships",
+   "T-3674": "Fill the launcher's list of known apps"
   }
  },
  "ln": {
-  "at": "2026-11-12T23:17:32Z",
+  "at": "2026-11-12T23:20:34Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -608,11 +589,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 460,
+    "conflicted": 463,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 504
+    "parked": 507
    },
    "cur": [],
    "ld": [
@@ -622,8 +603,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T23:17:09Z",
-    "ld": 0.52,
+    "at": "2026-11-12T23:20:01Z",
+    "ld": 0.47,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -668,6 +649,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -677,13 +659,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 5,
+  "main": 4,
   "lanes": 0,
-  "total": 5,
-  "at": "6:17 PM",
+  "total": 4,
+  "at": "6:20 PM",
   "why": "",
-  "at_iso": "2026-11-12T23:17:00+00:00",
+  "at_iso": "2026-11-12T23:20:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:17 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:20 PM ET</p></section>"
  }
 }

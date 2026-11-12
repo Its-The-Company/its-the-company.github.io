@@ -1,24 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-12T04:15:27.545276+00:00",
+ "at": "2026-11-12T04:18:26.337136+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-11T22:17:23-05:00",
-  "flow": [
+  "flow": [],
+  "done": [
    {
     "t": "T-4097",
     "name": "Judge the efficiency and other lines of the queue",
     "acct": "Personal a",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1794456333
-     }
-    ]
-   }
-  ],
-  "done": [
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794456972
+   },
    {
     "t": "T-4107",
     "name": "Judge the remaining app lines of the task queue",
@@ -53,7 +49,7 @@
     "why": "did not merge cleanly"
    }
   ],
-  "landed": 3,
+  "landed": 4,
   "failed": 1
  },
  "workers": [
@@ -62,7 +58,7 @@
    "task": "[tools] T-4100 land Links field part 1",
    "model": "opus",
    "started": "2026-11-12T03:18:50.854Z",
-   "seconds": 3396,
+   "seconds": 3575,
    "finished": null
   },
   {
@@ -70,7 +66,7 @@
    "task": "[tools] T-4115 sweep must not hold session start",
    "model": "opus",
    "started": "2026-11-12T03:20:56.339Z",
-   "seconds": 3271,
+   "seconds": 3449,
    "finished": null
   },
   {
@@ -78,7 +74,7 @@
    "task": "[research] T-4120 grouping and queue methods",
    "model": "opus",
    "started": "2026-11-12T04:15:07.382Z",
-   "seconds": 20,
+   "seconds": 198,
    "finished": null
   },
   {
@@ -86,7 +82,7 @@
    "task": "[research] T-4121 audit ledger patterns",
    "model": "opus",
    "started": "2026-11-12T04:15:18.194Z",
-   "seconds": 9,
+   "seconds": 188,
    "finished": null
   }
  ],
@@ -104,8 +100,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 685,
-  "blocked_count": 104
+  "runnable_count": 643,
+  "blocked_count": 85
  },
  "meter": {
   "five_hour": {
@@ -153,7 +149,7 @@
   "week_pct": 25.34,
   "usage_pct": 27.7,
   "work_pct": 74.0,
-  "read_at": "2026-11-12T04:15:00+00:00",
+  "read_at": "2026-11-12T04:18:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -183,14 +179,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-11T23:12:00-05:00",
+   "at": "2026-11-11T23:18:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T23:15:00-05:00",
+  "at": "2026-11-11T23:18:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -236,7 +232,7 @@
   {
    "name": "Ines",
    "state": "next",
-   "task": "Ines, P1, simplifications S3...",
+   "task": "Ines, P1, T-3683 ruling (3): the 11-08 evening report...",
    "model": null,
    "since": null,
    "next": []
@@ -244,7 +240,7 @@
   {
    "name": "Maren",
    "state": "next",
-   "task": "Maren, P1, report overhaul step 1 c6432739086 item 4):...",
+   "task": "Maren, P3, PROPOSAL-003 store captions, after Ines or...",
    "model": null,
    "since": null,
    "next": []
@@ -364,53 +360,53 @@
   ],
   "done": [
    {
-    "w": "Idris",
-    "t": "The app half of the widget folder name change is compiled and tested, so a widget's files are...",
-    "at": "2026-11-11T22:17:00-05:00"
+    "w": "Pernille",
+    "t": "The review of how a cut session's tries are counted is done: finding F3 is closed and F1 stays...",
+    "at": "2026-11-11T23:16:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "A Shortcut can no longer run a Pro premade without the Pro entitlement, so a refund or a second...",
-    "at": "2026-11-11T22:17:00-05:00"
+    "w": "Odalys",
+    "t": "An Investor's answer sent by email reply is now read without the quoted notification text, so a...",
+    "at": "2026-11-11T23:16:00-05:00"
    },
    {
-    "w": "Idris",
-    "t": "The unused project manifest reader is out of the shipping app and lives only with the host...",
-    "at": "2026-11-11T22:17:00-05:00"
+    "w": "Odalys",
+    "t": "The landing-cause count now names a failing shell test by its suite and case text and keeps...",
+    "at": "2026-11-11T23:16:00-05:00"
    }
   ],
   "count": {
-   "next": 685,
-   "wait": 41,
-   "blocked": 63,
-   "you": 15
+   "next": 643,
+   "wait": 40,
+   "blocked": 45,
+   "you": 13
   },
   "fin": {
-   "n": 11,
+   "n": 20,
    "rows": [
     [
-     "T-2302",
-     "Compile and test the widget..."
+     "T-1992",
+     "Review how cut sessions..."
     ],
     [
-     "T-2316",
-     "Check the Pro entitlement..."
+     "T-3012",
+     "Read emailed approvals and..."
     ],
     [
-     "T-2318",
-     "Leave the unused manifest..."
+     "T-3728",
+     "Name the failing shell test..."
     ],
     [
-     "T-2696",
-     "Give the dark Settings cards..."
+     "T-3733",
+     "Give the 45 stuck spare..."
     ],
     [
-     "T-2715",
-     "Keep screen titles right..."
+     "T-0885",
+     "Read the shared-tree repair..."
     ],
     [
-     "T-0021",
-     "Check how the preview draws..."
+     "T-2212",
+     "Fix a test that fails with..."
     ]
    ]
   }
@@ -450,17 +446,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T04:15:09Z",
+  "at": "2026-11-12T04:18:14Z",
   "s": {
-   "T-4097": [
-    "mergeq",
-    "1st to merge",
-    1794456369070
+   "T-4115": [
+    "merging",
+    "Mac tests at the main gate",
+    1794457034082
    ],
    "T-4100": [
     "testing",
     "its own tests, in its copy",
-    1794456789070
+    1794456794082
    ]
   }
  },
@@ -485,10 +481,10 @@
   "main": 4,
   "lanes": 0,
   "total": 4,
-  "at": "11:15 PM",
+  "at": "11:18 PM",
   "why": "",
-  "at_iso": "2026-11-12T04:15:00+00:00",
+  "at_iso": "2026-11-12T04:18:00+00:00",
   "started": "10:17 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 10:17 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 10:17 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:18 PM ET</p></section>"
  }
 }

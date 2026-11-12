@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T18:38:34.586771+00:00",
+ "at": "2026-11-12T18:44:14.253747+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -18,6 +18,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4117",
+    "name": "Judge the next hundred efficiency lines",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794509009
+   },
    {
     "t": "T-4118",
     "name": "Judge the second hundred efficiency lines",
@@ -90,18 +98,10 @@
     "end": "failed",
     "end_at": 1794494706,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3418",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794494706,
-    "why": "did not merge cleanly"
    }
   ],
   "landed": 54,
-  "failed": 11
+  "failed": 12
  },
  "workers": [
   {
@@ -109,7 +109,7 @@
    "task": "[build] T-4205 prune on background starts",
    "model": "opus",
    "started": "2026-11-12T18:36:21.956Z",
-   "seconds": 132,
+   "seconds": 472,
    "finished": null,
    "effort": "high"
   },
@@ -118,7 +118,7 @@
    "task": "[build] T-4201 keep today's sensor reading",
    "model": "opus",
    "started": "2026-11-12T18:36:27.559Z",
-   "seconds": 127,
+   "seconds": 466,
    "finished": null,
    "effort": "high"
   },
@@ -127,7 +127,7 @@
    "task": "[build] T-4199 Settings shots with Testers",
    "model": "opus",
    "started": "2026-11-12T18:36:34.521Z",
-   "seconds": 120,
+   "seconds": 459,
    "finished": null,
    "effort": "high"
   },
@@ -136,7 +136,7 @@
    "task": "[build] T-4207 stuck name lookup timing",
    "model": "opus",
    "started": "2026-11-12T18:38:05.670Z",
-   "seconds": 28,
+   "seconds": 368,
    "finished": null,
    "effort": "high"
   },
@@ -145,7 +145,7 @@
    "task": "[tools] T-4164 T-4163 Operator session records",
    "model": "opus",
    "started": "2026-11-12T18:38:15.168Z",
-   "seconds": 19,
+   "seconds": 359,
    "finished": null,
    "effort": "high"
   }
@@ -155,25 +155,25 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 601,
-  "blocked_count": 98
+  "runnable_count": 604,
+  "blocked_count": 84
  },
  "meter": {
   "five_hour": {
-   "pct": 9.0,
-   "resets_at": "2026-11-12T21:59:59.768928+00:00",
+   "pct": 10.0,
+   "resets_at": "2026-11-12T17:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T13:34:12.593745-05:00",
-   "source": "usage",
-   "left": 91.0,
+   "read_at": "2026-11-12T13:39:33.539595-05:00",
+   "source": "live",
+   "left": 90.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 77.0,
-   "resets_at": "2026-11-15T06:59:58.768952+00:00",
+   "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T13:34:12.593745-05:00",
-   "source": "usage",
+   "read_at": "2026-11-12T13:39:33.539595-05:00",
+   "source": "live",
    "left": 23.0,
    "left_words": "of your weekly allowance left"
   },
@@ -184,7 +184,7 @@
    "read_at": "2026-11-12T13:34:12.593745-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T13:34:12.593745-05:00"
+  "read_at": "2026-11-12T13:39:33.539595-05:00"
  },
  "ui": {
   "week_pct": 0.242,
@@ -204,22 +204,8 @@
   "week_pct": 37.24,
   "usage_pct": 32.6,
   "work_pct": 78.9,
-  "read_at": "2026-11-12T18:41:00+00:00",
-  "running": [
-   {
-    "lane": "b3",
-    "task": "T-4117",
-    "w": "Ines",
-    "k": "ops",
-    "t": "Judge the next hundred efficiency lines",
-    "m": "opus",
-    "e": "xhigh",
-    "at": "2026-11-12T13:22:33-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   }
-  ]
+  "read_at": "2026-11-12T18:44:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -255,7 +241,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T13:41:00-05:00",
+  "at": "2026-11-12T13:44:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -445,37 +431,53 @@
   ],
   "done": [
    {
-    "w": "Pernille",
-    "t": "The check that web requests in widgets stop in time to draw passed review with fixes: no serious...",
-    "at": "2026-11-12T13:37:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "The Operator and Direct now have their own code-drawn faces beside the workers': a grey figure...",
-    "at": "2026-11-12T13:36:00-05:00"
+    "w": "Odalys",
+    "t": "Xcode's own build folder is a real folder on the internal disk again instead of a link onto the...",
+    "at": "2026-11-12T13:43:00-05:00"
    },
    {
     "w": "Odalys",
-    "t": "A personal account stopped at the Investors' usage limit now restarts by itself once the...",
-    "at": "2026-11-12T13:23:00-05:00"
+    "t": "The build tool now finds its lock from a copy of the code that sits outside git, and a folder...",
+    "at": "2026-11-12T13:43:00-05:00"
+   },
+   {
+    "w": "Odalys",
+    "t": "The tool that lists how long Investor requests have waited now also counts lines that carry a...",
+    "at": "2026-11-12T13:43:00-05:00"
    }
   ],
   "count": {
-   "next": 601,
+   "next": 604,
    "wait": 40,
-   "blocked": 58,
-   "you": 14
+   "blocked": 44,
+   "you": 13
   },
   "fin": {
-   "n": 2,
+   "n": 11,
    "rows": [
     [
-     "T-3743",
-     "Check that web requests stop..."
+     "T-3118",
+     "Make Xcode's own DerivedData..."
     ],
     [
-     "T-4135",
-     "Draw the Operator and Direct..."
+     "T-3109",
+     "Keep Xcode's lock in a copy..."
+    ],
+    [
+     "T-3215",
+     "Count Investor work carried..."
+    ],
+    [
+     "T-3301",
+     "Run between-session jobs..."
+    ],
+    [
+     "T-3314",
+     "Run board upkeep and disk..."
+    ],
+    [
+     "T-3287",
+     "Main refused a record from a..."
     ]
    ]
   }
@@ -519,32 +521,38 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T18:38:34Z",
+  "at": "2026-11-12T18:43:57Z",
   "s": {
+   "T-4199": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
    "T-4201": [
     "testing",
     "its own tests, in its copy",
-    1794508714586
+    1794508857383
    ],
    "T-4164": [
     "testing",
     "its own tests, in its copy",
-    1794508714586
+    1794508857383
    ],
-   "T-4199": [
+   "T-4205": [
     "testing",
     "its own tests, in its copy",
-    1794508714586
+    1794508977383
    ]
   },
   "nm": {
+   "T-4199": "Retake the Settings shots with the Testers group",
    "T-4201": "Keep today's sensor reading after a timeout",
    "T-4164": "Redo record what each Operator session is doing now",
-   "T-4199": "Retake the Settings shots with the Testers group"
+   "T-4205": "Prune run history when a background start times out"
   }
  },
  "ln": {
-  "at": "2026-11-12T18:38:34Z",
+  "at": "2026-11-12T18:43:57Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -558,23 +566,24 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 216,
+    "conflicted": 221,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 225
+    "parked": 230
    },
    "cur": [],
    "ld": [
-    74,
-    "2026-11-12T18:22:31Z"
+    76,
+    "2026-11-12T18:43:29Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T18:40:46Z",
-    "ld": 23.79,
+    "at": "2026-11-12T18:43:10Z",
+    "ld": 41.91,
     "c": 8,
+    "sb": 1,
     "dk": [
      28.7,
      228.3
@@ -582,6 +591,9 @@
     "ss": [
      184.7,
      953.7
+    ],
+    "sn": [
+     "iPhone 17e"
     ]
    },
    "macbook": {
@@ -610,17 +622,18 @@
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
   "main": 5,
-  "lanes": 1,
-  "total": 6,
-  "at": "1:41 PM",
+  "lanes": 0,
+  "total": 5,
+  "at": "1:44 PM",
   "why": "",
-  "at_iso": "2026-11-12T18:41:00+00:00",
+  "at_iso": "2026-11-12T18:44:00+00:00",
   "started": "1:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 1:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:41 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 1:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:44 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T21:21:07.910256+00:00",
+ "at": "2026-11-12T21:24:10.875716+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -93,16 +93,41 @@
  "workers": [
   {
    "name": "idris",
-   "task": "[build] T-4210 install launcher premades",
+   "task": "[build] T-4212 launchers in widget picker",
    "model": "opus",
-   "started": "2026-11-12T21:03:13.070Z",
-   "seconds": 1074,
+   "started": "2026-11-12T21:23:55.001Z",
+   "seconds": 15,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4211 launcher edit vs premade write",
+   "model": "opus",
+   "started": "2026-11-12T21:24:08.226Z",
+   "seconds": 2,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris",
+ "who": "Idris x2",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[fix] T-4211 launcher edit vs premade write",
+   "model": "opus",
+   "started": "2026-11-12T21:24:01.453Z",
+   "seconds": null,
+   "finished": "2026-11-12T21:24:01.505Z"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-4210 install launcher premades",
+   "model": "opus",
+   "started": "2026-11-12T21:03:13.070Z",
+   "seconds": null,
+   "finished": "2026-11-12T21:23:31.474000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-3766 Debug URL scheme step",
@@ -118,22 +143,6 @@
    "started": "2026-11-12T19:58:57.130Z",
    "seconds": null,
    "finished": "2026-11-12T21:02:47.744000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[release] T-4209 privacy policy matches pruning",
-   "model": "opus",
-   "started": "2026-11-12T20:24:27.243Z",
-   "seconds": null,
-   "finished": "2026-11-12T20:59:16.893000+00:00"
-  },
-  {
-   "name": "maren",
-   "task": "[site] T-4136 Operators and Direct on Home",
-   "model": "opus",
-   "started": "2026-11-12T19:14:53.752Z",
-   "seconds": null,
-   "finished": "2026-11-12T20:37:47.678000+00:00"
   }
  ],
  "queue": {
@@ -188,7 +197,7 @@
   "week_pct": 37.24,
   "usage_pct": 32.6,
   "work_pct": 78.9,
-  "read_at": "2026-11-12T21:21:00+00:00",
+  "read_at": "2026-11-12T21:24:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -225,7 +234,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T16:21:00-05:00",
+  "at": "2026-11-12T16:24:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -239,9 +248,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[build] T-4210 install launcher premades",
+   "task": "[build] T-4212 launchers in widget picker",
    "model": "opus",
-   "since": "2026-11-12T21:03:13.070Z",
+   "since": "2026-11-12T21:23:55.001Z",
    "next": [],
    "effort": "high"
   },
@@ -291,12 +300,22 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Install the launcher premades in the app build",
+    "t": "Offer the launcher widgets in the widget picker",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-12T21:03:13.070Z",
+    "at": "2026-11-12T21:23:55.001Z",
     "o": "c",
-    "task": "T-4210"
+    "task": "T-4212"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Keep a launcher edit when a premade run writes too",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T21:24:08.226Z",
+    "o": "c",
+    "task": "T-4211"
    }
   ],
   "src": "plan",
@@ -375,6 +394,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "The app build can now carry the six launcher widgets, but only in an internal build switched on...",
+    "at": "2026-11-12T16:23:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "The Debug-only build step that lets UI tests open widget links used to wipe every link scheme in...",
     "at": "2026-11-12T16:09:00-05:00"
    },
@@ -382,11 +406,6 @@
     "w": "Idris",
     "t": "Saving, deleting or reordering apps in the launcher editor now copies the app list into every...",
     "at": "2026-11-12T16:02:00-05:00"
-   },
-   {
-    "w": "Wrenna",
-    "t": "The privacy policy now says exactly when old run history is deleted: when you open the app or a...",
-    "at": "2026-11-12T15:59:00-05:00"
    }
   ],
   "count": {
@@ -396,8 +415,12 @@
    "you": 13
   },
   "fin": {
-   "n": 27,
+   "n": 28,
    "rows": [
+    [
+     "T-4210",
+     "Install the launcher..."
+    ],
     [
      "T-3766",
      "Let the Debug scheme step..."
@@ -417,10 +440,6 @@
     [
      "T-3758",
      "Prune run history while the..."
-    ],
-    [
-     "T-4205",
-     "Prune run history when a..."
     ]
    ]
   }
@@ -464,20 +483,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T21:21:07Z",
-  "s": {
-   "T-4210": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ]
-  },
-  "nm": {
-   "T-4210": "Install the launcher premades in the app build"
-  }
+  "at": "2026-11-12T21:23:51Z",
+  "s": {}
  },
  "ln": {
-  "at": "2026-11-12T21:21:07Z",
+  "at": "2026-11-12T21:23:51Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -491,11 +501,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 343,
+    "conflicted": 346,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 387
+    "parked": 390
    },
    "cur": [],
    "ld": [
@@ -505,12 +515,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T21:21:08Z",
-    "ld": 1.44,
+    "at": "2026-11-12T21:23:26Z",
+    "ld": 1.12,
     "c": 8,
     "sb": 0,
     "dk": [
-     26.1,
+     28.1,
      228.3
     ],
     "ss": [
@@ -520,12 +530,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-12T21:15:35Z",
-    "ld": 0.84,
+    "at": "2026-11-12T21:22:38Z",
+    "ld": 1.47,
     "c": 12,
     "sb": 0,
     "dk": [
-     389.3,
+     388.5,
      926.4
     ],
     "sn": []
@@ -551,13 +561,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 2,
   "lanes": 0,
-  "total": 1,
-  "at": "4:21 PM",
+  "total": 2,
+  "at": "4:24 PM",
   "why": "",
-  "at_iso": "2026-11-12T21:21:00+00:00",
+  "at_iso": "2026-11-12T21:24:00+00:00",
   "started": "1:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 1:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:21 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:24 PM ET</p></section>"
  }
 }

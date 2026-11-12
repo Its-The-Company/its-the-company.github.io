@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T04:42:46.863730+00:00",
+ "at": "2026-11-12T04:45:47.719679+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -58,20 +58,20 @@
    "task": "[tools] T-4100 land Links field part 1",
    "model": "opus",
    "started": "2026-11-12T03:18:50.854Z",
-   "seconds": 5036,
+   "seconds": 5216,
    "finished": null
-  },
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4115 sweep must not hold session start",
    "model": "opus",
    "started": "2026-11-12T03:20:56.339Z",
-   "seconds": 4910,
-   "finished": null
-  }
- ],
- "who": "Odalys x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-12T04:45:03.765000+00:00"
+  },
   {
    "name": "wrenna",
    "task": "[research] T-4120 grouping and queue methods",
@@ -100,7 +100,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 643,
+  "runnable_count": 642,
   "blocked_count": 85
  },
  "meter": {
@@ -149,7 +149,7 @@
   "week_pct": 25.34,
   "usage_pct": 27.7,
   "work_pct": 74.0,
-  "read_at": "2026-11-12T04:42:00+00:00",
+  "read_at": "2026-11-12T04:45:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -186,7 +186,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T23:42:00-05:00",
+  "at": "2026-11-11T23:45:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -256,15 +256,6 @@
     "at": "2026-11-12T03:18:50.854Z",
     "o": "i",
     "task": "T-4100"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Keep clean-up from holding up the next session",
-    "m": "opus",
-    "at": "2026-11-12T03:20:56.339Z",
-    "o": "c",
-    "task": "T-4115"
    }
   ],
   "src": "plan",
@@ -342,6 +333,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "The hourly disk clean-up that runs between work sessions can no longer keep the next session...",
+    "at": "2026-11-11T23:44:00-05:00"
+   },
+   {
     "w": "Wrenna",
     "t": "Published methods show grouping saves iPhone test runs only when few changes fail, so the best...",
     "at": "2026-11-11T23:26:00-05:00"
@@ -350,22 +346,21 @@
     "w": "Pernille",
     "t": "A first study of the queue audit's 386 decisions shows simple signals that predict them, such as...",
     "at": "2026-11-11T23:22:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "The review of how a cut session's tries are counted is done: finding F3 is closed and F1 stays...",
-    "at": "2026-11-11T23:16:00-05:00"
    }
   ],
   "count": {
-   "next": 643,
+   "next": 642,
    "wait": 40,
    "blocked": 45,
    "you": 13
   },
   "fin": {
-   "n": 22,
+   "n": 23,
    "rows": [
+    [
+     "T-4115",
+     "Keep clean-up from holding..."
+    ],
     [
      "T-4120",
      "Research how others group..."
@@ -385,10 +380,6 @@
     [
      "T-3728",
      "Name the failing shell test..."
-    ],
-    [
-     "T-3733",
-     "Give the 45 stuck spare..."
     ]
    ]
   }
@@ -428,17 +419,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T04:42:35Z",
+  "at": "2026-11-12T04:45:36Z",
   "s": {
-   "T-4115": [
-    "merging",
-    "Mac tests at the main gate",
-    1794458435311
-   ],
    "T-4100": [
     "testing",
     "its own tests, in its copy",
-    1794457715311
+    1794458736542
    ]
   }
  },
@@ -460,13 +446,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "11:42 PM",
+  "total": 1,
+  "at": "11:45 PM",
   "why": "",
-  "at_iso": "2026-11-12T04:42:00+00:00",
+  "at_iso": "2026-11-12T04:45:00+00:00",
   "started": "10:17 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:17 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:42 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:17 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:45 PM ET</p></section>"
  }
 }

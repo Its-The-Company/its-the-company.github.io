@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T23:30:02.030039+00:00",
+ "at": "2026-11-12T23:33:16.302183+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -93,19 +93,10 @@
  "workers": [
   {
    "name": "idris",
-   "task": "[build] T-4215 gate launcher editor in Release",
-   "model": "opus",
-   "started": "2026-11-12T22:33:44.265Z",
-   "seconds": 3377,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
    "task": "[build] T-4216 add-app slot overwrite race",
    "model": "opus",
    "started": "2026-11-12T22:33:49.320Z",
-   "seconds": 3372,
+   "seconds": 3566,
    "finished": null,
    "effort": "high"
   },
@@ -114,13 +105,30 @@
    "task": "[build] T-4218 redraw launcher after slot edit",
    "model": "opus",
    "started": "2026-11-12T23:21:24.535Z",
-   "seconds": 517,
+   "seconds": 711,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-3848 T-3847 launcher tap fixes",
+   "model": "opus",
+   "started": "2026-11-12T23:32:10.601Z",
+   "seconds": 65,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Idris x3",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4215 gate launcher editor in Release",
+   "model": "opus",
+   "started": "2026-11-12T22:33:44.265Z",
+   "seconds": null,
+   "finished": "2026-11-12T23:31:54.198000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4217 review launcher widget picker",
@@ -144,37 +152,29 @@
    "started": "2026-11-12T22:40:32.649Z",
    "seconds": null,
    "finished": "2026-11-12T23:20:39.392000+00:00"
-  },
-  {
-   "name": "ines",
-   "task": "[report] evening",
-   "model": "opus",
-   "started": "2026-11-12T23:07:51.306Z",
-   "seconds": null,
-   "finished": "2026-11-12T23:16:01.410000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 590,
+  "runnable_count": 591,
   "blocked_count": 84
  },
  "meter": {
   "five_hour": {
-   "pct": 10.0,
+   "pct": 11.0,
    "resets_at": "2026-11-12T22:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T18:25:04.916722-05:00",
+   "read_at": "2026-11-12T18:31:03.807640-05:00",
    "source": "live",
-   "left": 90.0,
+   "left": 89.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 81.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T18:25:04.916722-05:00",
+   "read_at": "2026-11-12T18:31:03.807640-05:00",
    "source": "live",
    "left": 19.0,
    "left_words": "of your weekly allowance left"
@@ -186,7 +186,7 @@
    "read_at": "2026-11-12T17:19:27.311551-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T18:25:04.916722-05:00"
+  "read_at": "2026-11-12T18:31:03.807640-05:00"
  },
  "ui": {
   "week_pct": 0.24,
@@ -206,7 +206,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-12T23:30:00+00:00",
+  "read_at": "2026-11-12T23:33:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -236,14 +236,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T18:25:00-05:00",
+   "at": "2026-11-12T18:31:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T18:30:00-05:00",
+  "at": "2026-11-12T18:33:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -257,9 +257,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[build] T-4215 gate launcher editor in Release",
+   "task": "[build] T-4216 add-app slot overwrite race",
    "model": "opus",
-   "since": "2026-11-12T22:33:44.265Z",
+   "since": "2026-11-12T22:33:49.320Z",
    "next": [],
    "effort": "high"
   },
@@ -309,16 +309,6 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Keep the launcher editor out of Release builds",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T22:33:44.265Z",
-    "o": "c",
-    "task": "T-4215"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
     "t": "Stop Add App from overwriting a newly saved slot",
     "m": "opus",
     "e": "high",
@@ -335,6 +325,16 @@
     "at": "2026-11-12T23:21:24.535Z",
     "o": "c",
     "task": "T-4218"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Keep a second launcher tap from dropping a script's prompt",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T23:32:10.601Z",
+    "o": "c",
+    "task": "T-3848"
    }
   ],
   "src": "plan",
@@ -412,6 +412,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The unreleased launcher could be opened in a store build by any script that drew its widget...",
+    "at": "2026-11-12T18:31:00-05:00"
+   },
+   {
     "w": "Wrenna",
     "t": "The launcher's Choose an App list now offers 12 real apps (2Do, Bear, Chrome, Google Maps,...",
     "at": "2026-11-12T18:20:00-05:00"
@@ -420,22 +425,21 @@
     "w": "Pernille",
     "t": "Reviewed the change that puts the six launcher widgets in the widget picker of internal builds;...",
     "at": "2026-11-12T18:20:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "A second reviewer checked T-3814 (the tester build's report on whether the app wrote each placed...",
-    "at": "2026-11-12T18:20:00-05:00"
    }
   ],
   "count": {
-   "next": 590,
+   "next": 591,
    "wait": 40,
    "blocked": 44,
    "you": 13
   },
   "fin": {
-   "n": 7,
+   "n": 8,
    "rows": [
+    [
+     "T-4215",
+     "Keep the launcher editor out..."
+    ],
     [
      "T-3674",
      "Fill the launcher's list of..."
@@ -455,10 +459,6 @@
     [
      "T-3814",
      "Keep the bundled Countdown..."
-    ],
-    [
-     "T-4214",
-     "Review the launcher steps..."
     ]
    ]
   }
@@ -502,17 +502,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T23:30:02Z",
+  "at": "2026-11-12T23:33:02Z",
   "s": {
-   "T-4215": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-4216": [
-    "mergeq",
-    "waiting for the main gate",
-    1794525662030
+    "merging",
+    "Mac tests at the main gate",
+    1794526322847
    ],
    "T-4218": [
     "testing",
@@ -521,13 +516,12 @@
    ]
   },
   "nm": {
-   "T-4215": "Keep the launcher editor out of Release builds",
    "T-4216": "Stop Add App from overwriting a newly saved slot",
    "T-4218": "Redraw a placed launcher after a slot edit"
   }
  },
  "ln": {
-  "at": "2026-11-12T23:30:02Z",
+  "at": "2026-11-12T23:33:02Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -541,11 +535,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 472,
+    "conflicted": 475,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 516
+    "parked": 519
    },
    "cur": [],
    "ld": [
@@ -555,8 +549,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T23:30:11Z",
-    "ld": 11.22,
+    "at": "2026-11-12T23:32:18Z",
+    "ld": 12.28,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -572,12 +566,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-12T23:24:11Z",
-    "ld": 2.65,
+    "at": "2026-11-12T23:31:10Z",
+    "ld": 1.3,
     "c": 12,
     "sb": 0,
     "dk": [
-     387.1,
+     386.2,
      926.4
     ],
     "sn": []
@@ -591,7 +585,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 9 tasks",
+   "t": "Work session \u2013 11 tasks",
    "at": "2026-11-12T17:24:30-05:00"
   }
  ],
@@ -617,10 +611,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "6:30 PM",
+  "at": "6:33 PM",
   "why": "",
-  "at_iso": "2026-11-12T23:30:00+00:00",
+  "at_iso": "2026-11-12T23:33:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:30 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 6:33 PM ET</p></section>"
  }
 }

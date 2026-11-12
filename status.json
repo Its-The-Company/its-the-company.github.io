@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-12T08:36:32.778046+00:00",
+ "at": "2026-11-12T08:39:36.190897+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T02:56:43-05:00",
   "flow": [
+   {
+    "t": "T-3830",
+    "name": "Redo merge every branch held only for touching Investor files",
+    "acct": "Personal b",
+    "steps": [
+     {
+      "s": "landing",
+      "at": 1794472773
+     }
+    ]
+   },
    {
     "t": "T-3143",
     "name": "Fix the template test that fails since the age line",
@@ -111,7 +122,7 @@
    "task": "[build] T-3143 template test fix",
    "model": "opus",
    "started": "2026-11-12T08:03:43.753Z",
-   "seconds": 1969,
+   "seconds": 2152,
    "finished": null,
    "effort": "high"
   },
@@ -120,7 +131,7 @@
    "task": "[tools] T-4129 retire Set aside stage",
    "model": "opus",
    "started": "2026-11-12T08:04:00.395Z",
-   "seconds": 1952,
+   "seconds": 2135,
    "finished": null,
    "effort": "high"
   },
@@ -129,7 +140,7 @@
    "task": "[tools] T-4132 measure overdue experiments",
    "model": "opus",
    "started": "2026-11-12T08:21:32.133Z",
-   "seconds": 900,
+   "seconds": 1084,
    "finished": null,
    "effort": "high"
   }
@@ -213,8 +224,44 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T08:36:00+00:00",
+  "read_at": "2026-11-12T08:39:00+00:00",
   "running": [
+   {
+    "lane": "b",
+    "task": "T-3992",
+    "w": "Operator",
+    "k": "tools",
+    "t": "Clear and merge the unfinished merge fixes",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T03:37:01-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-3884",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Check parked branches against main every hour",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T03:37:01-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-3767",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Alert when the main session is down",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T03:37:01-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
    {
     "lane": "b2",
     "task": "T-4140",
@@ -248,6 +295,44 @@
     "at": "2026-11-12T02:57:59-05:00",
     "n": "Jeremy",
     "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-3968",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Stop the applier's raw-HTML refusal notice",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T03:37:01-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-3977",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Clear the leftover extra copies of the code",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T03:37:01-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-3830",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Redo merge every branch held only for touching Investor files",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T03:37:01-05:00",
+    "n": "Jeremy",
+    "d": 1,
+    "src": "plan-b"
    }
   ]
  },
@@ -278,14 +363,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T03:32:00-05:00",
+   "at": "2026-11-12T03:38:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T03:36:00-05:00",
+  "at": "2026-11-12T03:39:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -525,8 +610,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T08:36:26Z",
+  "at": "2026-11-12T08:39:18Z",
   "s": {
+   "T-3830": [
+    "mergeq",
+    "1st to merge",
+    1794472758058
+   ],
    "T-4091": [
     "mergetest",
     "iPhone tests on the MacBook",
@@ -535,12 +625,12 @@
    "T-4129": [
     "testing",
     "its own tests, in its copy",
-    1794472106760
+    1794472098058
    ],
    "T-3143": [
     "testing",
     "its own tests, in its copy",
-    1794471326760
+    1794471318058
    ],
    "T-3870": [
     "merged",
@@ -551,25 +641,25 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T08:36:26Z",
+  "at": "2026-11-12T08:39:18Z",
   "mq": {
    "n": {
     "checking": 0,
-    "inline": 0,
-    "conflicted": 7,
+    "inline": 1,
+    "conflicted": 6,
     "failed": 0,
     "held": 1,
     "retry": 0,
-    "parked": 4
+    "parked": 5
    },
    "m": {
     "checking": null,
-    "inline": null,
-    "conflicted": 37,
+    "inline": 0,
+    "conflicted": 43,
     "failed": null,
-    "held": 2775,
+    "held": 2778,
     "retry": null,
-    "parked": 3679
+    "parked": 2778
    },
    "cur": [],
    "ld": [
@@ -579,8 +669,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T08:36:03Z",
-    "ld": 1.7,
+    "at": "2026-11-12T08:38:29Z",
+    "ld": 1.88,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -626,12 +716,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 1,
-  "total": 4,
-  "at": "3:36 AM",
+  "lanes": 3,
+  "total": 6,
+  "at": "3:39 AM",
   "why": "",
-  "at_iso": "2026-11-12T08:36:00+00:00",
+  "at_iso": "2026-11-12T08:39:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:36 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:39 AM ET</p></section>"
  }
 }

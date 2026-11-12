@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T13:20:08.643681+00:00",
+ "at": "2026-11-12T13:23:08.978542+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -120,7 +120,7 @@
    "task": "[tools] T-4155 give back limit-stopped tasks",
    "model": "opus",
    "started": "2026-11-12T12:55:29.637Z",
-   "seconds": 1479,
+   "seconds": 1659,
    "finished": null,
    "effort": "high"
   },
@@ -129,7 +129,7 @@
    "task": "[tools] T-4157 account a takes only Fable lines",
    "model": "opus",
    "started": "2026-11-12T13:17:49.294Z",
-   "seconds": 139,
+   "seconds": 319,
    "finished": null,
    "effort": "high"
   }
@@ -221,7 +221,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T13:20:00+00:00",
+  "read_at": "2026-11-12T13:23:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -258,7 +258,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T08:20:00-05:00",
+  "at": "2026-11-12T08:23:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -507,67 +507,67 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T13:20:02Z",
+  "at": "2026-11-12T13:23:02Z",
   "s": {
    "T-3756": [
     "merging",
     "Host checks on the Mac mini \u00b7 4 groups of tests done",
-    1794488762666
+    1794488762829
    ],
    "T-3856": [
     "merging",
     "Host checks on the Mac mini \u00b7 4 groups of tests done",
-    1794488762666
+    1794488762829
    ],
    "T-3903": [
     "merging",
     "Host checks on the Mac mini \u00b7 4 groups of tests done",
-    1794488762666
+    1794488762829
    ],
    "T-3909": [
     "mergeq",
     "1st to merge",
-    1794488402666
+    1794488402829
    ],
    "T-3824": [
     "mergeq",
     "2nd to merge",
-    1794488402666
+    1794488402829
    ],
    "T-4100": [
     "mergeq",
     "3rd to merge",
-    1794488522666
+    1794488522829
    ],
    "T-3430": [
     "mergeq",
     "4th to merge",
-    1794488702666
+    1794488702829
    ],
    "T-4149": [
     "mergeq",
     "6th to merge",
-    1794488882666
+    1794488882829
    ],
    "T-3990": [
     "mergeq",
     "6th to merge",
-    1794488882666
+    1794488882829
    ],
    "T-4122": [
     "mergeq",
     "7th to merge",
-    1794489002666
+    1794489002829
    ],
    "T-4155": [
-    "testing",
-    "its own tests, in its copy",
-    1794488702666
+    "merging",
+    "Mac tests at the main gate",
+    1794489782829
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T13:20:02Z",
+  "at": "2026-11-12T13:23:02Z",
   "mq": {
    "n": {
     "checking": 3,
@@ -579,13 +579,13 @@
     "parked": 2
    },
    "m": {
-    "checking": 14,
-    "inline": 15,
+    "checking": 17,
+    "inline": 18,
     "conflicted": null,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 307
+    "parked": 310
    },
    "cur": [
     [
@@ -594,7 +594,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     14
+     17
     ],
     [
      [
@@ -602,7 +602,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     14
+     17
     ],
     [
      [
@@ -610,7 +610,7 @@
      ],
      "Mac tests",
      "Mac mini",
-     14
+     17
     ]
    ],
    "ld": [
@@ -620,12 +620,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T13:20:03Z",
-    "ld": 3.15,
+    "at": "2026-11-12T13:23:03Z",
+    "ld": 2.11,
     "c": 8,
     "sb": 0,
     "dk": [
-     34.0,
+     34.4,
      228.3
     ],
     "ss": [
@@ -669,10 +669,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "8:20 AM",
+  "at": "8:23 AM",
   "why": "",
-  "at_iso": "2026-11-12T13:20:00+00:00",
+  "at_iso": "2026-11-12T13:23:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:20 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:23 AM ET</p></section>"
  }
 }

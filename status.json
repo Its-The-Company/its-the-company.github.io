@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T23:52:42.750776+00:00",
+ "at": "2026-11-12T23:55:50.926349+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
    "task": "[build] T-4218 redraw launcher after slot edit",
    "model": "opus",
    "started": "2026-11-12T23:21:24.535Z",
-   "seconds": 1878,
+   "seconds": 2066,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +105,7 @@
    "task": "[build] T-3848 T-3847 launcher tap fixes",
    "model": "opus",
    "started": "2026-11-12T23:32:10.601Z",
-   "seconds": 1232,
+   "seconds": 1420,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +114,7 @@
    "task": "[release] T-4219 mark launcher builds, refuse upload",
    "model": "opus",
    "started": "2026-11-12T23:50:57.870Z",
-   "seconds": 104,
+   "seconds": 293,
    "finished": null,
    "effort": "high"
   }
@@ -206,7 +206,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-12T23:52:00+00:00",
+  "read_at": "2026-11-12T23:55:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -268,7 +268,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T18:52:00-05:00",
+  "at": "2026-11-12T18:55:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -527,32 +527,38 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T23:52:42Z",
+  "at": "2026-11-12T23:55:50Z",
   "s": {
    "T-4116": [
     "merging",
     "Merging onto main",
-    1794527562750
+    1794527750926
    ],
    "T-3848": [
     "merging",
     "Mac tests at the main gate",
-    1794527442750
+    1794527450926
    ],
    "T-4218": [
     "testing",
     "Mac Mini \u00b7 test",
     null
+   ],
+   "T-4219": [
+    "testing",
+    "its own tests, in its copy",
+    1794527750926
    ]
   },
   "nm": {
    "T-4116": "Regroup the app queue into feature-sized pieces",
    "T-3848": "Keep a second launcher tap from dropping a script's prompt",
-   "T-4218": "Redraw a placed launcher after a slot edit"
+   "T-4218": "Redraw a placed launcher after a slot edit",
+   "T-4219": "Mark launcher builds so uploads refuse them"
   }
  },
  "ln": {
-  "at": "2026-11-12T23:52:42Z",
+  "at": "2026-11-12T23:55:50Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -566,11 +572,11 @@
    "m": {
     "checking": 0,
     "inline": null,
-    "conflicted": 495,
+    "conflicted": 498,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 539
+    "parked": 542
    },
    "cur": [
     [
@@ -589,12 +595,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T23:52:45Z",
-    "ld": 9.34,
+    "at": "2026-11-12T23:55:51Z",
+    "ld": 21.26,
     "c": 8,
     "sb": 1,
     "dk": [
-     23.0,
+     22.9,
      228.3
     ],
     "ss": [
@@ -632,8 +638,6 @@
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
-   "m": "opus",
-   "e": "xhigh",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-12T18:33:20-05:00"
   },
@@ -641,8 +645,6 @@
    "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
-   "m": "opus",
-   "e": "xhigh",
    "t": "Work session \u2013 1 task",
    "at": "2026-11-12T18:38:25-05:00"
   }
@@ -669,10 +671,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "6:52 PM",
+  "at": "6:55 PM",
   "why": "",
-  "at_iso": "2026-11-12T23:52:00+00:00",
+  "at_iso": "2026-11-12T23:55:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:52 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:55 PM ET</p></section>"
  }
 }

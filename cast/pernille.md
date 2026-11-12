@@ -33,9 +33,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open
 
-- T-3477 (7c7faa433): stall test must assert the stalled call was reached. T-3562 (afb32bf63): readings aware at source; review T-3571 Idris. Lesson: zsh never splits $P, so `main_gate check $P` checked HEAD and said "already verified"; pass paths via $(cat file).
-- T-3411 (3b8109b48): T-3364 tests PASS w/ fixes, T-3557..60 Idris. Lesson: a "draws" check is <span title="A second worker who grades the idea without seeing the first worker&#x27;s grades, and records them first.">blind</span> where the premade catches Exception into a notice; inject offered/gates, don't stub them.
-- T-3495 (e9f3b0a0d): T-3323 PASS w/ fixes; M1/M2 board lines refused by classifier, not added, T-3495 not ticked. Lesson: an exclusion that is empty at the first status is first tested after the archive; an index-only tracked check misses staged deletions.
+- T-4121 (5af9f88fd0): ledger patterns first pass; tick refused (ws 'queue audit' not a workstream), not ticked. Lesson: board ws ids are in ops/workstreams.json; check before ticking.
 - T-3692 (15ed1952d): T-3671/T-3667 PASS w/ fixes; T-3762 (stale Gallery request, before build), T-3763..66 Idris. Lesson: a UI test that passes with and without the fix proves nothing; demand a red run.
 - T-3743 (42ea04c89): T-3553 PASS w/ fixes; M1 board add refused (title 11 words), line in scratch, not ticked. Lesson: Darwin lock waits (join, Timer, Event) wake ~150 ms late, socket timeouts 2 ms; a deadline on a lock wait is not a deadline.
 - T-3546 (858f9cbe0): T-3519 FAIL; T-3780..82 Odalys. Lesson: a text scan for reads can't follow $REPO vars or a tool's constants; key the data folder, list tools by hand.

@@ -72,7 +72,10 @@ the main checkout's read goes in the lane-and-records slice.
   (Until 11-11 8:48 PM every remove of a cited line was a question first; the eight asked that way were answered A.)
 - R4 App first. App lines (build, fix, test, release, design on pywidget) are judged first and move ahead of
   website and efficiency lines of the same priority. Website and efficiency lines stay only with a real use today:
-  a demonstrated bottleneck, a correctness or recovery need, or an Investor ask.
+  a demonstrated bottleneck, or a correctness or recovery need. An Investor ask alone no longer keeps one
+  (an Investor #41 c6813391969, 2026-11-11 10:21 PM): an efficiency line with limited or no effect is removed, and a
+  site line whose change a later update or view has replaced is removed; both keep their citation in the archive
+  and are listed in the final report. App features the Investors asked for stay under R3.
 - R5 Remove means obsolete. The system changed under the line (the code it names is gone or rewritten, the thing
   it measures is unmeasurable, the event it waits on passed), or a later line or ruling retired it. The reason
   names the change.

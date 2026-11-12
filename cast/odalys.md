@@ -37,10 +37,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-10 12:4x)
 
-- T-4100 part 1 (Links field) BUILT NOT LANDED 11-11 9:45 PM: copy T-4100-odalys/wt + msg.txt; owed supervisor_test (timed out 2x at 360 s) then gate. Machine adders use --links-warn.
-- T-4100 part 2 landed 307038f9b8 (11-11 8:2x PM): tools/queue_apply.py; dry run fbd83f9ada (1 remove, 2 merge, 2 rewrite, 10 refused). Rewrite text = head before ' -- ' only (T-1441 refused for that). Part 1 Links field: other agent.
+- T-4100: part 1 landed 5e9695a4d4 (11-12), part 2 307038f9b8; not ticked. Control copy T-4100c removal refused, left. supervisor_test runs 414-445 s on main: use SUITE_TIMEOUT=570.
 - T-4092 unstuck 11-11 7:4x PM: slice 1 recut landed b80a1af0eb (records 00f5d31820), T-4106 ticked superseded, claim released, rule fix 332883072a (pinned_busy counts live claims only; own recut lands first). Open: ops/task-names.tsv not merge=union (caused the <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">park</span>); old ref parked/a/20261111-184941-86640 on hold file, not archived.
-- T-4092 pin 3b908fa9b6 + merge-mode pass 453d8ad70a. Pre-existing red: test_personal_lane 5, guard_supervisor 1.
+- T-4115 LANDED 01be2f1d58 11-11: sweeps --budget 60, limit 180. Open: remove ops/scratch_sweep_off after a day of 1b rows; temp fixtures (6,952 git repos, 169 s/pass) need a cheaper rule.
 
 - Item 20 DONE dfa3adf059 (11-11 3:4x PM): live board migrated, 663 notes/229 lines, 796,224->540,992 B, check 0, 28/28 readers same; note_to_record ON. Before copy: scratch T-3995-odalys.
 

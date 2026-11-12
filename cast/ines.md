@@ -46,6 +46,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3585: a packet's premise is a claim; count the cause from the gate's own log before deciding the asked fix. T-3864: a fix the board calls live may sit only on a <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> ref (merge-base --is-ancestor), and a pass count may be on a cut test file (compare case counts to HEAD). The reverse too (T-4096): a merge-reset "back to to do" note can be stale, the commit already an ancestor of HEAD (6 of 21 ticks); a lane-outbox tick can be lost (T-2098, T-2421), so a "ticked" ID still gets a board grep.
 - T-3809: when a read's source sits on a locked disk, read the record written at the time (events log, ruled lines) and say so; a fired rule that names the Investors as the actor: ask, recommend, record the disagreement.
 - T-3896: a company-owned rule is not a card (no Kind fits; request_card refuses by the 11-05 amendment): decision record + plain note. Old parked: set aside via merge_queue_hold.txt, never refs/archive.
+- T-4107: a grep scoped to one file is not a repo grep; before writing 'X is gone' as a remove's evidence, run the repo-wide grep and quote its count (T-0472 row had to be superseded). Verdict counts come from the ledger's last row per ID.
 {% endraw %}
 
 

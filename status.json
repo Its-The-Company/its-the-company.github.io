@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T11:14:59.264357+00:00",
+ "at": "2026-11-12T11:18:02.304029+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -103,22 +103,30 @@
    "task": "[tools] T-4150 Fable pause before limit",
    "model": "opus",
    "started": "2026-11-12T10:52:10.771Z",
-   "seconds": 1368,
+   "seconds": 1551,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "idris",
-   "task": "[release] T-4093 internal TestFlight build 5",
+   "task": "[build] T-4152 overrun premade records progress",
    "model": "opus",
-   "started": "2026-11-12T10:52:18.614Z",
-   "seconds": 1360,
+   "started": "2026-11-12T11:18:01.171Z",
+   "seconds": 1,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys, Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[release] T-4093 internal TestFlight build 5",
+   "model": "opus",
+   "started": "2026-11-12T10:52:18.614Z",
+   "seconds": null,
+   "finished": "2026-11-12T11:16:49.867000+00:00"
+  },
   {
    "name": "idris",
    "task": "[test] T-4151 overrun premade memory test",
@@ -131,7 +139,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 606,
+  "runnable_count": 605,
   "blocked_count": 85
  },
  "meter": {
@@ -180,7 +188,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T11:15:00+00:00",
+  "read_at": "2026-11-12T11:18:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -251,6 +259,7 @@
     "e": "high",
     "at": "2026-11-12T05:04:28-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -332,7 +341,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T06:15:00-05:00",
+  "at": "2026-11-12T06:18:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -355,9 +364,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[release] T-4093 internal TestFlight build 5",
+   "task": "[build] T-4152 overrun premade records progress",
    "model": "opus",
-   "since": "2026-11-12T10:52:18.614Z",
+   "since": "2026-11-12T11:18:01.171Z",
    "next": [],
    "effort": "high"
   },
@@ -408,13 +417,13 @@
    },
    {
     "w": "Idris",
-    "k": "release",
-    "t": "Add a tester-only Pro switch for TestFlight builds",
+    "k": "build",
+    "t": "Record how far the overrun premade got",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-12T10:52:18.614Z",
+    "at": "2026-11-12T11:18:01.171Z",
     "o": "c",
-    "task": "T-4093"
+    "task": "T-4152"
    }
   ],
   "src": "plan",
@@ -483,14 +492,19 @@
     "o": "i"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Add a tester-only Pro switch for TestFlight...",
+    "w": "Ines",
+    "k": "ops",
+    "t": "Judge the app lines of the task queue",
     "s": "next",
-    "o": "i"
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Idris+pernille",
+    "t": "Build 5 of the app, with a free tester-only switch that unlocks Pro so the Investors can place...",
+    "at": "2026-11-12T06:17:00-05:00"
+   },
    {
     "w": "Idris",
     "t": "The test-only memory-overrun widget must hold 64 MiB at once to prove the widget limit (G3). A...",
@@ -500,22 +514,21 @@
     "w": "Pernille",
     "t": "Pernille's review of the test-only memory-overrun widget found it can never reach a shipping...",
     "at": "2026-11-12T05:53:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "The Restructuring's stopped session left five commits on a parked branch; all five were already...",
-    "at": "2026-11-12T05:51:00-05:00"
    }
   ],
   "count": {
-   "next": 606,
+   "next": 605,
    "wait": 40,
    "blocked": 45,
    "you": 14
   },
   "fin": {
-   "n": 4,
+   "n": 5,
    "rows": [
+    [
+     "T-4093",
+     "Add a tester-only Pro switch..."
+    ],
     [
      "T-4151",
      "Test that the overrun..."
@@ -570,17 +583,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T11:14:39Z",
+  "at": "2026-11-12T11:17:55Z",
   "s": {
    "T-4150": [
     "merging",
     "Mac tests at the main gate",
-    1794481839246
-   ],
-   "T-4093": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
+    1794481795293
    ],
    "T-3887": [
     "merged",
@@ -609,7 +617,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T11:14:39Z",
+  "at": "2026-11-12T11:17:55Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -623,11 +631,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 24,
+    "conflicted": 28,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 182
+    "parked": 185
    },
    "cur": [],
    "ld": [
@@ -637,12 +645,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T11:14:40Z",
-    "ld": 6.66,
+    "at": "2026-11-12T11:17:56Z",
+    "ld": 5.57,
     "c": 8,
     "sb": 0,
     "dk": [
-     32.8,
+     30.7,
      228.3
     ],
     "ss": [
@@ -684,10 +692,10 @@
   "main": 2,
   "lanes": 4,
   "total": 6,
-  "at": "6:15 AM",
+  "at": "6:18 AM",
   "why": "",
-  "at_iso": "2026-11-12T11:15:00+00:00",
+  "at_iso": "2026-11-12T11:18:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:15 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 4 sessions \u00b7 as of 6:18 AM ET</p></section>"
  }
 }

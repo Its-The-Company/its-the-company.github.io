@@ -1,19 +1,19 @@
 {
  "schema": 1,
- "at": "2026-11-12T12:34:27.234231+00:00",
+ "at": "2026-11-12T12:37:32.941373+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T05:47:30-05:00",
   "flow": [
    {
-    "t": "T-3856",
-    "name": "Redo find what sends main sessions a stray SIGTERM",
-    "acct": "Personal b",
+    "t": "T-4100",
+    "name": "Build the typed Links field and the ledger apply",
+    "acct": "Personal a",
     "steps": [
      {
       "s": "testq",
-      "at": 1794485472
+      "at": 1794486996
      }
     ]
    },
@@ -29,6 +29,15 @@
    }
   ],
   "done": [
+   {
+    "t": "T-3856",
+    "name": "Redo find what sends main sessions a stray SIGTERM",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794486980,
+    "why": "tests failed"
+   },
    {
     "t": "T-3960",
     "name": "Quarantine flaky suites sooner",
@@ -101,17 +110,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794480171
-   },
-   {
-    "t": "T-3887",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794478724
    }
   ],
   "landed": 50,
-  "failed": 3
+  "failed": 4
  },
  "workers": [],
  "who": "",
@@ -201,7 +203,7 @@
   "week_pct": 30.97,
   "usage_pct": 30.4,
   "work_pct": 77.2,
-  "read_at": "2026-11-12T12:34:00+00:00",
+  "read_at": "2026-11-12T12:37:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -311,23 +313,23 @@
   }
  ],
  "disk": {
-  "free_gb": 30,
+  "free_gb": 32,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 183
+   "free_gb": 185
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T07:28:00-05:00",
+   "at": "2026-11-12T07:35:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T07:34:00-05:00",
+  "at": "2026-11-12T07:37:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -550,64 +552,59 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T12:34:27Z",
+  "at": "2026-11-12T12:37:19Z",
   "s": {
-   "T-3856": [
+   "T-4100": [
     "merging",
-    "Host checks on the Mac mini",
-    1794485487234
+    "Host checks on the Mac mini \u00b7 4 groups of tests done",
+    1794487039924
    ],
    "T-3824": [
     "mergeq",
     "1st to merge",
-    1794485487234
+    1794485479924
    ],
    "T-3909": [
     "mergeq",
     "2nd to merge",
-    1794485907234
-   ],
-   "T-4100": [
-    "mergeq",
-    "3rd to merge",
-    1794485967234
+    1794485899924
    ],
    "T-4149": [
     "mergeq",
-    "4th to merge",
-    1794486747234
+    "3rd to merge",
+    1794486739924
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T12:34:27Z",
+  "at": "2026-11-12T12:37:19Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 4,
+    "inline": 3,
     "conflicted": 3,
-    "failed": 0,
+    "failed": 1,
     "held": 0,
     "retry": 0,
     "parked": 2
    },
    "m": {
-    "checking": 23,
-    "inline": 15,
-    "conflicted": 104,
-    "failed": null,
+    "checking": 0,
+    "inline": 19,
+    "conflicted": 107,
+    "failed": 1,
     "held": null,
     "retry": null,
-    "parked": 262
+    "parked": 265
    },
    "cur": [
     [
      [
-      "T-3856"
+      "T-4100"
      ],
      "Mac tests",
      "Mac mini",
-     23
+     0
     ]
    ],
    "ld": [
@@ -617,16 +614,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T12:33:39Z",
-    "ld": 5.96,
+    "at": "2026-11-12T12:36:30Z",
+    "ld": 5.47,
     "c": 8,
     "sb": 0,
     "dk": [
-     32.2,
+     31.8,
      228.3
     ],
     "ss": [
-     184.7,
+     186.7,
      953.7
     ],
     "sn": []
@@ -666,10 +663,10 @@
   "main": 0,
   "lanes": 3,
   "total": 3,
-  "at": "7:34 AM",
+  "at": "7:37 AM",
   "why": "",
-  "at_iso": "2026-11-12T12:34:00+00:00",
+  "at_iso": "2026-11-12T12:37:00+00:00",
   "started": "5:47 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:34 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 5:47 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 7:37 AM ET</p></section>"
  }
 }

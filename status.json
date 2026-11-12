@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T20:07:57.446146+00:00",
+ "at": "2026-11-12T20:11:02.524045+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -97,7 +97,7 @@
    "task": "[build] T-4205 prune on background starts",
    "model": "opus",
    "started": "2026-11-12T18:36:21.956Z",
-   "seconds": 5495,
+   "seconds": 5680,
    "finished": null,
    "effort": "high"
   },
@@ -106,7 +106,7 @@
    "task": "[site] T-4136 Operators and Direct on Home",
    "model": "opus",
    "started": "2026-11-12T19:14:53.752Z",
-   "seconds": 3183,
+   "seconds": 3368,
    "finished": null,
    "effort": "high"
   },
@@ -115,7 +115,7 @@
    "task": "[build] T-3852 launcher editor saves slots",
    "model": "opus",
    "started": "2026-11-12T19:58:57.130Z",
-   "seconds": 540,
+   "seconds": 725,
    "finished": null,
    "effort": "high"
   }
@@ -207,7 +207,7 @@
   "week_pct": 37.24,
   "usage_pct": 32.6,
   "work_pct": 78.9,
-  "read_at": "2026-11-12T20:08:00+00:00",
+  "read_at": "2026-11-12T20:11:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -244,7 +244,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T15:08:00-05:00",
+  "at": "2026-11-12T15:11:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -504,26 +504,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T20:06:56Z",
+  "at": "2026-11-12T20:10:51Z",
   "s": {
    "T-4205": [
     "mergetest",
     "iPhone tests on the MacBook",
     null
-   ],
-   "T-3852": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
    ]
   },
   "nm": {
-   "T-4205": "Prune run history when a background start times out",
-   "T-3852": "Call the launcher slot writer from the editor, reload..."
+   "T-4205": "Prune run history when a background start times out"
   }
  },
  "ln": {
-  "at": "2026-11-12T20:06:56Z",
+  "at": "2026-11-12T20:10:51Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -537,11 +531,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 269,
+    "conflicted": 273,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 313
+    "parked": 317
    },
    "cur": [],
    "ld": [
@@ -551,10 +545,10 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T20:07:43Z",
-    "ld": 5.98,
+    "at": "2026-11-12T20:10:51Z",
+    "ld": 5.77,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
      28.9,
      228.3
@@ -563,9 +557,7 @@
      184.7,
      953.7
     ],
-    "sn": [
-     "iPhone 18 Pro"
-    ]
+    "sn": []
    },
    "macbook": {
     "at": "2026-11-12T20:04:19Z",
@@ -602,10 +594,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "3:08 PM",
+  "at": "3:11 PM",
   "why": "",
-  "at_iso": "2026-11-12T20:08:00+00:00",
+  "at_iso": "2026-11-12T20:11:00+00:00",
   "started": "1:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 1:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:08 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 1:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:11 PM ET</p></section>"
  }
 }

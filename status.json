@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T03:20:28.939943+00:00",
+ "at": "2026-11-12T03:23:28.103069+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -50,42 +50,51 @@
    "task": "[tools] T-4100 land Links field part 1",
    "model": "opus",
    "started": "2026-11-12T03:18:50.854Z",
-   "seconds": 98,
+   "seconds": 277,
    "finished": null
   },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4115 sweep must not hold session start",
+   "model": "opus",
+   "started": "2026-11-12T03:20:56.339Z",
+   "seconds": 151,
+   "finished": null
+  }
+ ],
+ "who": "Odalys x2",
+ "recent": [
   {
    "name": "pernille",
    "task": "[tools] T-4100 queue_apply merge-namers fix",
    "model": "opus",
    "started": "2026-11-12T03:18:59.654Z",
-   "seconds": 89,
-   "finished": null
+   "seconds": null,
+   "finished": "2026-11-12T03:20:35.485000+00:00"
   }
  ],
- "who": "Odalys, Pernille",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 677,
+  "runnable_count": 678,
   "blocked_count": 104
  },
  "meter": {
   "five_hour": {
    "pct": 2.0,
-   "resets_at": "2026-11-12T07:00:00.209623+00:00",
+   "resets_at": "2026-11-12T02:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-11T22:17:13.257014-05:00",
-   "source": "usage",
+   "read_at": "2026-11-11T22:22:26.878607-05:00",
+   "source": "live",
    "left": 98.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 66.0,
-   "resets_at": "2026-11-15T06:59:59.209641+00:00",
+   "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-11T22:17:13.257014-05:00",
-   "source": "usage",
+   "read_at": "2026-11-11T22:22:26.878607-05:00",
+   "source": "live",
    "left": 34.0,
    "left_words": "of your weekly allowance left"
   },
@@ -96,7 +105,7 @@
    "read_at": "2026-11-11T22:17:13.257014-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-11T22:17:13.257014-05:00"
+  "read_at": "2026-11-11T22:22:26.878607-05:00"
  },
  "ui": {
   "week_pct": 0.2,
@@ -116,7 +125,7 @@
   "week_pct": 25.34,
   "usage_pct": 27.7,
   "work_pct": 74.0,
-  "read_at": "2026-11-12T03:20:00+00:00",
+  "read_at": "2026-11-12T03:23:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -141,19 +150,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 179
+   "free_gb": 175
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-11T22:06:00-05:00",
+   "at": "2026-11-11T22:22:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T22:20:00-05:00",
+  "at": "2026-11-11T22:23:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -173,17 +182,17 @@
    "next": []
   },
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[tools] T-4100 queue_apply merge-namers fix",
-   "model": "opus",
-   "since": "2026-11-12T03:18:59.654Z",
-   "next": []
-  },
-  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -225,13 +234,13 @@
     "task": "T-4100"
    },
    {
-    "w": "Pernille",
+    "w": "Odalys",
     "k": "tools",
-    "t": "Build the typed Links field and the ledger apply",
+    "t": "Keep clean-up from holding up the next session",
     "m": "opus",
-    "at": "2026-11-12T03:18:59.654Z",
-    "o": "i",
-    "task": "T-4100"
+    "at": "2026-11-12T03:20:56.339Z",
+    "o": "c",
+    "task": "T-4115"
    }
   ],
   "src": "plan",
@@ -325,7 +334,7 @@
    }
   ],
   "count": {
-   "next": 677,
+   "next": 678,
    "wait": 41,
    "blocked": 63,
    "you": 15
@@ -395,18 +404,19 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T03:20:11Z",
+  "at": "2026-11-12T03:23:13Z",
   "s": {
    "T-4100": [
-    "testing",
-    "its own tests, in its copy",
-    1794453611669
+    "merged",
+    "on main 10:20 PM ET",
+    1794453620000,
+    ""
    ]
   }
  },
  "reply": {
-  "sent": "2026-11-12T03:18:42Z",
-  "seconds": 92.0
+  "sent": "2026-11-12T03:21:00Z",
+  "seconds": 1.0
  },
  "inbox": [],
  "trimmed": [
@@ -425,10 +435,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "10:20 PM",
+  "at": "10:23 PM",
   "why": "",
-  "at_iso": "2026-11-12T03:20:00+00:00",
+  "at_iso": "2026-11-12T03:23:00+00:00",
   "started": "10:17 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:17 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:20 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:17 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:23 PM ET</p></section>"
  }
 }

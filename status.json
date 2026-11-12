@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T21:08:19.118568+00:00",
+ "at": "2026-11-12T21:12:00.699156+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -93,25 +93,24 @@
  "workers": [
   {
    "name": "idris",
-   "task": "[build] T-3766 Debug URL scheme step",
-   "model": "opus",
-   "started": "2026-11-12T20:25:14.217Z",
-   "seconds": 2584,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
    "task": "[build] T-4210 install launcher premades",
    "model": "opus",
    "started": "2026-11-12T21:03:13.070Z",
-   "seconds": 306,
+   "seconds": 527,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2",
+ "who": "Idris",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-3766 Debug URL scheme step",
+   "model": "opus",
+   "started": "2026-11-12T20:25:14.217Z",
+   "seconds": null,
+   "finished": "2026-11-12T21:10:15.084000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-3852 launcher editor saves slots",
@@ -135,20 +134,12 @@
    "started": "2026-11-12T19:14:53.752Z",
    "seconds": null,
    "finished": "2026-11-12T20:37:47.678000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4205 prune on background starts",
-   "model": "opus",
-   "started": "2026-11-12T18:36:21.956Z",
-   "seconds": null,
-   "finished": "2026-11-12T20:23:23.390000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 593,
+  "runnable_count": 592,
   "blocked_count": 84
  },
  "meter": {
@@ -197,7 +188,7 @@
   "week_pct": 37.24,
   "usage_pct": 32.6,
   "work_pct": 78.9,
-  "read_at": "2026-11-12T21:09:00+00:00",
+  "read_at": "2026-11-12T21:12:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -234,7 +225,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T16:09:00-05:00",
+  "at": "2026-11-12T16:12:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -248,9 +239,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[build] T-3766 Debug URL scheme step",
+   "task": "[build] T-4210 install launcher premades",
    "model": "opus",
-   "since": "2026-11-12T20:25:14.217Z",
+   "since": "2026-11-12T21:03:13.070Z",
    "next": [],
    "effort": "high"
   },
@@ -297,16 +288,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Let the Debug scheme step remove only its own entry",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T20:25:14.217Z",
-    "o": "c",
-    "task": "T-3766"
-   },
    {
     "w": "Idris",
     "k": "build",
@@ -394,6 +375,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "The Debug-only build step that lets UI tests open widget links used to wipe every link scheme in...",
+    "at": "2026-11-12T16:09:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "Saving, deleting or reordering apps in the launcher editor now copies the app list into every...",
     "at": "2026-11-12T16:02:00-05:00"
    },
@@ -401,22 +387,21 @@
     "w": "Wrenna",
     "t": "The privacy policy now says exactly when old run history is deleted: when you open the app or a...",
     "at": "2026-11-12T15:59:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "Home now has an Operators & Direct section above In flight: one card for each running Operator...",
-    "at": "2026-11-12T15:37:00-05:00"
    }
   ],
   "count": {
-   "next": 593,
+   "next": 592,
    "wait": 40,
    "blocked": 44,
    "you": 13
   },
   "fin": {
-   "n": 26,
+   "n": 27,
    "rows": [
+    [
+     "T-3766",
+     "Let the Debug scheme step..."
+    ],
     [
      "T-3852",
      "Call the launcher slot..."
@@ -436,10 +421,6 @@
     [
      "T-4205",
      "Prune run history when a..."
-    ],
-    [
-     "T-3664",
-     "Let people choose the app..."
     ]
    ]
   }
@@ -483,26 +464,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T21:08:19Z",
+  "at": "2026-11-12T21:11:42Z",
   "s": {
-   "T-3766": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-4210": [
     "testing",
     "its own tests, in its copy",
-    1794517699118
+    1794517722315
    ]
   },
   "nm": {
-   "T-3766": "Let the Debug scheme step remove only its own entry",
    "T-4210": "Install the launcher premades in the app build"
   }
  },
  "ln": {
-  "at": "2026-11-12T21:08:19Z",
+  "at": "2026-11-12T21:11:42Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -516,11 +491,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 331,
+    "conflicted": 334,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 375
+    "parked": 378
    },
    "cur": [],
    "ld": [
@@ -530,12 +505,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T21:08:15Z",
-    "ld": 2.82,
+    "at": "2026-11-12T21:11:42Z",
+    "ld": 6.86,
     "c": 8,
     "sb": 0,
     "dk": [
-     28.8,
+     28.1,
      228.3
     ],
     "ss": [
@@ -545,12 +520,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-12T21:02:29Z",
-    "ld": 0.39,
+    "at": "2026-11-12T21:09:25Z",
+    "ld": 2.25,
     "c": 12,
     "sb": 0,
     "dk": [
-     389.4,
+     389.3,
      926.4
     ],
     "sn": []
@@ -576,13 +551,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "4:09 PM",
+  "total": 1,
+  "at": "4:12 PM",
   "why": "",
-  "at_iso": "2026-11-12T21:09:00+00:00",
+  "at_iso": "2026-11-12T21:12:00+00:00",
   "started": "1:34 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 1:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:09 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 1:34 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:12 PM ET</p></section>"
  }
 }

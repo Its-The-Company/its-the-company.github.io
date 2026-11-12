@@ -1,12 +1,28 @@
 {
  "schema": 1,
- "at": "2026-11-12T09:53:03.589008+00:00",
+ "at": "2026-11-12T09:54:48.115777+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T02:56:43-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-3878",
+    "name": "Redo redo an Investor request on fresh main",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794477236
+   },
+   {
+    "t": "T-3858",
+    "name": "Redo remove check worktrees when a land ends",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794477194
+   },
    {
     "t": "T-3831",
     "name": "Redo an Investor request on fresh main",
@@ -70,25 +86,9 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794472786
-   },
-   {
-    "t": "T-3830",
-    "name": "Redo merge every branch held only for touching Investor files",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794472780
-   },
-   {
-    "t": "T-3870",
-    "name": "Recut parked refs whose conflicts are not theirs",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794471981
    }
   ],
-  "landed": 35,
+  "landed": 37,
   "failed": 3
  },
  "workers": [
@@ -97,7 +97,7 @@
    "task": "[build] T-4093 tester Pro compile flag",
    "model": "opus",
    "started": "2026-11-12T09:00:23.114Z",
-   "seconds": 3160,
+   "seconds": 3265,
    "finished": null,
    "effort": "high"
   },
@@ -106,7 +106,7 @@
    "task": "[tools] T-4129 no fourth state, screenshots",
    "model": "opus",
    "started": "2026-11-12T09:01:52.955Z",
-   "seconds": 3070,
+   "seconds": 3175,
    "finished": null,
    "effort": "high"
   }
@@ -149,7 +149,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 615,
+  "runnable_count": 611,
   "blocked_count": 85
  },
  "meter": {
@@ -198,7 +198,7 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T09:53:00+00:00",
+  "read_at": "2026-11-12T09:58:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -235,41 +235,6 @@
     "at": "2026-11-12T04:49:04-05:00",
     "n": "Jeremy",
     "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3831",
-    "t": "Redo an Investor request on fresh main",
-    "at": "2026-11-12T04:49:05-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3858",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Redo remove check worktrees when a land ends",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T04:49:05-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3878",
-    "w": "Odalys",
-    "k": "site",
-    "t": "Redo redo an Investor request on fresh main",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T04:49:05-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
    }
   ]
  },
@@ -291,23 +256,23 @@
   }
  ],
  "disk": {
-  "free_gb": 36,
+  "free_gb": 34,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 175
+   "free_gb": 176
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T04:50:00-05:00",
+   "at": "2026-11-12T04:58:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T04:53:00-05:00",
+  "at": "2026-11-12T04:58:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -468,52 +433,52 @@
   "done": [
    {
     "w": "Operator",
-    "t": "No redo needed: the parked work this line asked to redo (requeuing parked copies and closing...",
+    "t": "Done on main: the task timeline shows when a land's Xcode check moved from the MacBook to the...",
     "at": "2026-11-12T04:53:00-05:00"
    },
    {
-    "w": "Ines",
-    "t": "The landing test no longer fails at night: its practice supervisor runs now use a fixed morning...",
-    "at": "2026-11-12T04:47:00-05:00"
+    "w": "Operator",
+    "t": "Done on main: the task timeline shows when a land's Xcode check moved from the MacBook to the...",
+    "at": "2026-11-12T04:53:00-05:00"
    },
    {
-    "w": "Ines",
-    "t": "The landing test no longer fails at night: its practice supervisor runs now use a fixed morning...",
-    "at": "2026-11-12T04:47:00-05:00"
+    "w": "Operator",
+    "t": "No redo needed: the parked work this line asked to redo (requeuing parked copies and closing...",
+    "at": "2026-11-12T04:53:00-05:00"
    }
   ],
   "count": {
-   "next": 615,
+   "next": 611,
    "wait": 40,
    "blocked": 45,
    "you": 14
   },
   "fin": {
-   "n": 11,
+   "n": 15,
    "rows": [
+    [
+     "T-3703",
+     "Show when a merge check..."
+    ],
+    [
+     "T-3788",
+     "Redo an Investor request on..."
+    ],
     [
      "T-3831",
      "Redo an Investor request on..."
     ],
     [
+     "T-3858",
+     "Redo remove check worktrees..."
+    ],
+    [
+     "T-3878",
+     "Redo redo an Investor..."
+    ],
+    [
      "T-3888",
      "Make the landing test pass..."
-    ],
-    [
-     "T-4140",
-     "Redo make the landing test..."
-    ],
-    [
-     "T-3968",
-     "Stop the applier's raw-HTML..."
-    ],
-    [
-     "T-3143",
-     "Fix the template test that..."
-    ],
-    [
-     "T-3817",
-     "Review the per-widget tree..."
     ]
    ]
   }
@@ -553,36 +518,41 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T09:53:03Z",
+  "at": "2026-11-12T09:54:48Z",
   "s": {
-   "T-3858": [
-    "merging",
-    "Rebasing onto current main",
-    1794477183589
-   ],
-   "T-4093": [
+   "T-3726": [
     "testing",
-    "its own tests, in its copy",
-    1794474963589
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-3810": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
+   "T-3824": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
    ],
    "T-4129": [
     "testing",
     "its own tests, in its copy",
-    1794476823589
+    1794476808115
    ],
-   "T-3831": [
+   "T-4093": [
     "merged",
-    "on main 4:52 AM ET",
-    1794477136000,
+    "on main 2:51 AM ET",
+    1794469894000,
     ""
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T09:53:03Z",
+  "at": "2026-11-12T09:54:48Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 4,
     "failed": 0,
@@ -591,37 +561,28 @@
     "parked": 4
    },
    "m": {
-    "checking": 0,
+    "checking": null,
     "inline": null,
-    "conflicted": 113,
+    "conflicted": 115,
     "failed": null,
-    "held": 2851,
+    "held": 2853,
     "retry": null,
-    "parked": 3755
+    "parked": 3757
    },
-   "cur": [
-    [
-     [
-      "T-3858"
-     ],
-     "lining up with main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    34,
-    "2026-11-12T09:53:03Z"
+    36,
+    "2026-11-12T09:53:56Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T09:53:05Z",
-    "ld": 3.88,
+    "at": "2026-11-12T09:56:53Z",
+    "ld": 20.52,
     "c": 8,
-    "sb": 1,
+    "sb": 2,
     "dk": [
-     36.1,
+     35.0,
      228.3
     ],
     "ss": [
@@ -629,6 +590,7 @@
      953.7
     ],
     "sn": [
+     "T1703 main r1",
      "iPhone 18 Pro"
     ]
    },
@@ -665,12 +627,12 @@
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 2,
-  "total": 4,
-  "at": "4:53 AM",
+  "lanes": 1,
+  "total": 3,
+  "at": "4:58 AM",
   "why": "",
-  "at_iso": "2026-11-12T09:53:00+00:00",
+  "at_iso": "2026-11-12T09:58:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 4:53 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 4:58 AM ET</p></section>"
  }
 }

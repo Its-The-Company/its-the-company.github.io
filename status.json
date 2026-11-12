@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T22:28:51.088132+00:00",
+ "at": "2026-11-12T22:31:56.512510+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
    "task": "[build] T-4212 land launcher widget picker",
    "model": "opus",
    "started": "2026-11-12T22:22:24.577Z",
-   "seconds": 386,
+   "seconds": 571,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +105,7 @@
    "task": "[build] T-3814 tree.json presence in export",
    "model": "opus",
    "started": "2026-11-12T22:22:32.011Z",
-   "seconds": 379,
+   "seconds": 564,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +114,7 @@
    "task": "[research] T-3674 land launcher known apps",
    "model": "opus",
    "started": "2026-11-12T22:22:39.264Z",
-   "seconds": 371,
+   "seconds": 557,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[review] T-4214 review launcher steps",
    "model": "opus",
    "started": "2026-11-12T22:22:47.223Z",
-   "seconds": 363,
+   "seconds": 549,
    "finished": null,
    "effort": "high"
   }
@@ -138,19 +138,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 2.0,
+   "pct": 3.0,
    "resets_at": "2026-11-12T22:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T17:24:41.961592-05:00",
+   "read_at": "2026-11-12T17:30:41.320030-05:00",
    "source": "live",
-   "left": 98.0,
+   "left": 97.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 80.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T17:24:41.961592-05:00",
+   "read_at": "2026-11-12T17:30:41.320030-05:00",
    "source": "live",
    "left": 20.0,
    "left_words": "of your weekly allowance left"
@@ -162,7 +162,7 @@
    "read_at": "2026-11-12T17:19:27.311551-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T17:24:41.961592-05:00"
+  "read_at": "2026-11-12T17:30:41.320030-05:00"
  },
  "ui": {
   "week_pct": 0.24,
@@ -182,7 +182,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-12T22:28:00+00:00",
+  "read_at": "2026-11-12T22:31:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -203,7 +203,7 @@
   }
  ],
  "disk": {
-  "free_gb": 24,
+  "free_gb": 23,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -212,14 +212,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T17:24:00-05:00",
+   "at": "2026-11-12T17:30:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T17:28:00-05:00",
+  "at": "2026-11-12T17:31:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -470,38 +470,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T22:28:34Z",
+  "at": "2026-11-12T22:31:39Z",
   "s": {
    "T-4212": [
     "merging",
     "Mac tests at the main gate",
-    1794522274375
+    1794522279775
    ],
    "T-3674": [
     "mergeq",
     "waiting for the main gate",
-    1794522454375
+    1794522459775
    ],
    "T-3814": [
     "testing",
     "MacBook \u00b7 test",
     null
-   ],
-   "T-4214": [
-    "testing",
-    "its own tests, in its copy",
-    1794522514375
    ]
   },
   "nm": {
    "T-4212": "Offer the launcher widgets in the widget picker",
    "T-3674": "Fill the launcher's list of known apps",
-   "T-3814": "Keep the bundled Countdown picture from hiding the bug",
-   "T-4214": "Review the launcher steps landed today"
+   "T-3814": "Keep the bundled Countdown picture from hiding the bug"
   }
  },
  "ln": {
-  "at": "2026-11-12T22:28:34Z",
+  "at": "2026-11-12T22:31:39Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -515,11 +509,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 411,
+    "conflicted": 414,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 455
+    "parked": 458
    },
    "cur": [],
    "ld": [
@@ -529,8 +523,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T22:27:48Z",
-    "ld": 1.28,
+    "at": "2026-11-12T22:31:16Z",
+    "ld": 1.38,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -587,10 +581,10 @@
   "main": 4,
   "lanes": 0,
   "total": 4,
-  "at": "5:28 PM",
+  "at": "5:31 PM",
   "why": "",
-  "at_iso": "2026-11-12T22:28:00+00:00",
+  "at_iso": "2026-11-12T22:31:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:28 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:31 PM ET</p></section>"
  }
 }

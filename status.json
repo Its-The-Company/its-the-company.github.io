@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T22:34:59.762906+00:00",
+ "at": "2026-11-12T22:38:01.808038+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
    "task": "[build] T-4212 land launcher widget picker",
    "model": "opus",
    "started": "2026-11-12T22:22:24.577Z",
-   "seconds": 755,
+   "seconds": 937,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +105,7 @@
    "task": "[build] T-3814 tree.json presence in export",
    "model": "opus",
    "started": "2026-11-12T22:22:32.011Z",
-   "seconds": 747,
+   "seconds": 929,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +114,7 @@
    "task": "[research] T-3674 land launcher known apps",
    "model": "opus",
    "started": "2026-11-12T22:22:39.264Z",
-   "seconds": 740,
+   "seconds": 922,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[build] T-4215 gate launcher editor in Release",
    "model": "opus",
    "started": "2026-11-12T22:33:44.265Z",
-   "seconds": 75,
+   "seconds": 257,
    "finished": null,
    "effort": "high"
   },
@@ -132,7 +132,7 @@
    "task": "[build] T-4216 add-app slot overwrite race",
    "model": "opus",
    "started": "2026-11-12T22:33:49.320Z",
-   "seconds": 70,
+   "seconds": 252,
    "finished": null,
    "effort": "high"
   }
@@ -156,19 +156,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 3.0,
+   "pct": 4.0,
    "resets_at": "2026-11-12T22:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T17:30:41.320030-05:00",
+   "read_at": "2026-11-12T17:36:51.358991-05:00",
    "source": "live",
-   "left": 97.0,
+   "left": 96.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 80.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T17:30:41.320030-05:00",
+   "read_at": "2026-11-12T17:36:51.358991-05:00",
    "source": "live",
    "left": 20.0,
    "left_words": "of your weekly allowance left"
@@ -180,7 +180,7 @@
    "read_at": "2026-11-12T17:19:27.311551-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T17:30:41.320030-05:00"
+  "read_at": "2026-11-12T17:36:51.358991-05:00"
  },
  "ui": {
   "week_pct": 0.24,
@@ -200,7 +200,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-12T22:35:00+00:00",
+  "read_at": "2026-11-12T22:38:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -221,7 +221,7 @@
   }
  ],
  "disk": {
-  "free_gb": 23,
+  "free_gb": 24,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -230,14 +230,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T17:30:00-05:00",
+   "at": "2026-11-12T17:36:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T17:35:00-05:00",
+  "at": "2026-11-12T17:38:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -501,17 +501,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T22:34:48Z",
+  "at": "2026-11-12T22:37:55Z",
   "s": {
    "T-3674": [
     "merging",
-    "Mac tests at the main gate",
-    1794522828489
+    "Mac tests at the main gate \u00b7 6 groups of tests done",
+    1794522775322
    ],
    "T-4212": [
     "mergeq",
     "waiting for the main gate",
-    1794522828489
+    1794522835322
+   ],
+   "T-4216": [
+    "mergeq",
+    "waiting for the main gate",
+    1794523075322
    ],
    "T-3814": [
     "testing",
@@ -522,11 +527,12 @@
   "nm": {
    "T-3674": "Fill the launcher's list of known apps",
    "T-4212": "Offer the launcher widgets in the widget picker",
+   "T-4216": "Stop Add App from overwriting a newly saved slot",
    "T-3814": "Keep the bundled Countdown picture from hiding the bug"
   }
  },
  "ln": {
-  "at": "2026-11-12T22:34:48Z",
+  "at": "2026-11-12T22:37:55Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -540,11 +546,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 417,
+    "conflicted": 420,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 461
+    "parked": 464
    },
    "cur": [],
    "ld": [
@@ -554,12 +560,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T22:34:03Z",
-    "ld": 1.01,
+    "at": "2026-11-12T22:37:53Z",
+    "ld": 2.55,
     "c": 8,
     "sb": 0,
     "dk": [
-     23.1,
+     23.6,
      228.3
     ],
     "ss": [
@@ -569,12 +575,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-12T22:25:43Z",
-    "ld": 0.24,
+    "at": "2026-11-12T22:36:14Z",
+    "ld": 4.42,
     "c": 12,
     "sb": 0,
     "dk": [
-     388.4,
+     387.5,
      926.4
     ],
     "sn": []
@@ -612,10 +618,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "5:35 PM",
+  "at": "5:38 PM",
   "why": "",
-  "at_iso": "2026-11-12T22:35:00+00:00",
+  "at_iso": "2026-11-12T22:38:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:35 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:38 PM ET</p></section>"
  }
 }

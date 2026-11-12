@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-12T14:43:14.737253+00:00",
+ "at": "2026-11-12T14:46:18.198651+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "morning",
+  "started": "2026-11-12T09:43:15-05:00",
   "flow": [
    {
     "t": "T-3990",
@@ -18,13 +18,13 @@
     ]
    },
    {
-    "t": "T-3814",
-    "name": "Keep the bundled Countdown picture from hiding the bug",
+    "t": "T-3961",
+    "name": "Show the merge queue on the This Session page",
     "acct": "Personal b",
     "steps": [
      {
       "s": "testq",
-      "at": 1794493796
+      "at": 1794494712
      }
     ]
    },
@@ -40,6 +40,41 @@
    }
   ],
   "done": [
+   {
+    "t": "T-3753",
+    "name": "Callers pass the task to each Mac mini build",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794494706,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3961",
+    "name": "Show the merge queue on the This Session page",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794494706,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3418",
+    "name": "Keep long Issues threads short and the ask clear",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794494706,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3814",
+    "name": "Keep the bundled Countdown picture from hiding the bug",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794494682
+   },
    {
     "t": "T-4134",
     "name": "Record what each Operator session is doing now",
@@ -86,82 +121,27 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794489937
-   },
-   {
-    "t": "T-3856",
-    "name": "Redo find what sends main sessions a stray SIGTERM",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794489805
-   },
-   {
-    "t": "T-3909",
-    "name": "Stop asking the Investors about restored file changes",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794488740
-   },
-   {
-    "t": "T-3824",
-    "name": "Use the new SanDisk SSD as the company's working disk",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794488080
-   },
-   {
-    "t": "T-4149",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794487461
    }
   ],
-  "landed": 59,
-  "failed": 4
+  "landed": 60,
+  "failed": 7
  },
  "workers": [],
  "who": "",
  "recent": [
   {
-   "name": "odalys",
-   "task": "[tools] T-4155 give back limit-stopped tasks",
-   "model": "opus",
-   "started": "2026-11-12T12:55:29.637Z",
-   "seconds": null,
-   "finished": "2026-11-12T13:33:27.522000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4138 review and land pinned cap 3",
-   "model": "opus",
-   "started": "2026-11-12T12:51:49.263Z",
-   "seconds": null,
-   "finished": "2026-11-12T13:16:22.078000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4154 pinned line takes idle held slot",
-   "model": "opus",
-   "started": "2026-11-12T11:49:24.594Z",
-   "seconds": null,
-   "finished": "2026-11-12T12:31:09.194000+00:00"
-  },
-  {
    "name": "idris",
-   "task": "[build] T-4152 overrun premade records progress",
+   "task": "[report] morning",
    "model": "opus",
-   "started": "2026-11-12T11:18:01.171Z",
+   "started": "2026-11-12T14:43:32.376Z",
    "seconds": null,
-   "finished": "2026-11-12T11:48:39.502000+00:00"
+   "finished": "2026-11-12T14:44:26.739000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 603,
+  "runnable_count": 609,
   "blocked_count": 84
  },
  "meter": {
@@ -205,13 +185,61 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-12T09:57:50-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 35.08,
   "usage_pct": 32.5,
   "work_pct": 78.5,
-  "read_at": "2026-11-12T14:43:00+00:00",
+  "read_at": "2026-11-12T14:46:00+00:00",
   "running": [
+   {
+    "lane": "b",
+    "task": "T-4004",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Bring In flight back on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T09:46:10-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4005",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Home: drop Needs you, restore old panels",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T09:46:10-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-4006",
+    "w": "Odalys",
+    "k": "process",
+    "t": "Reduce the merge queue",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T09:46:10-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b",
+    "task": "T-3726",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Run the Simulators from a disk image on the SSD",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T09:46:10-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
    {
     "lane": "b2",
     "task": "T-3807",
@@ -243,6 +271,54 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-12T08:43:13-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-3952",
+    "w": "Odalys",
+    "k": "site",
+    "t": "Redo redo show what blocks each blocked task on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T09:46:08-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4166",
+    "w": "Ines",
+    "k": "site",
+    "t": "Redo keep long Issues threads short and the ask clear",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T09:46:08-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4167",
+    "w": "Ines",
+    "k": "site",
+    "t": "Redo show the merge queue on the This Session page",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T09:46:08-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4168",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Redo callers pass the task to each Mac mini build",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T09:46:08-05:00",
     "n": "Jeremy",
     "src": "plan-b"
    }
@@ -282,12 +358,16 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T09:43:00-05:00",
+  "at": "2026-11-12T09:46:00-05:00",
   "mode": "midnight"
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 4 (raised a step toward the floor of 8: new work may start and every signal is under its line)",
+  "n": 4,
+  "at": "2026-11-12T09:42:50.457069-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
@@ -340,6 +420,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -430,10 +511,14 @@
    }
   ],
   "count": {
-   "next": 603,
+   "next": 609,
    "wait": 40,
    "blocked": 44,
    "you": 13
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -475,72 +560,58 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T14:43:14Z",
+  "at": "2026-11-12T14:45:58Z",
   "s": {
-   "T-3814": [
+   "T-3961": [
     "merging",
-    "Host checks on the Mac mini",
-    1794493814737
+    "Host checks on the Mac mini \u00b7 1 group of tests done",
+    1794494758234
    ],
    "T-4149": [
     "mergeq",
     "1st to merge",
-    1794488894737
+    1794488878234
    ],
    "T-3990": [
     "mergeq",
     "1st to merge",
-    1794488894737
+    1794488878234
    ],
    "T-3430": [
     "mergeq",
     "1st to merge",
-    1794488894737
-   ],
-   "T-4133": [
-    "mergeq",
-    "2nd to merge",
-    1794493034737
-   ],
-   "T-4134": [
-    "mergeq",
-    "2nd to merge",
-    1794493034737
-   ],
-   "T-4135": [
-    "mergeq",
-    "2nd to merge",
-    1794493034737
+    1794488878234
    ],
    "T-3418": [
     "mergeq",
-    "3rd to merge",
-    1794494414737
-   ],
-   "T-3961": [
-    "mergeq",
-    "3rd to merge",
-    1794494414737
+    "2nd to merge",
+    1794493978234
    ],
    "T-3753": [
     "mergeq",
-    "3rd to merge",
-    1794494414737
+    "5th to merge",
+    1794494398234
    ],
    "T-4162": [
     "testing",
     "its own tests, in its copy",
-    1794493994737
+    1794493978234
    ],
    "T-4157": [
     "testing",
     "its own tests, in its copy",
-    1794492494737
+    1794492538234
    ],
    "T-4160": [
     "testing",
     "its own tests, in its copy",
-    1794491354737
+    1794491398234
+   ],
+   "T-3814": [
+    "merged",
+    "on main 9:44 AM ET",
+    1794494675000,
+    ""
    ],
    "T-3807": [
     "merged",
@@ -551,49 +622,49 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T14:43:14Z",
+  "at": "2026-11-12T14:45:58Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 9,
-    "conflicted": 0,
+    "inline": 5,
+    "conflicted": 1,
     "failed": 0,
     "held": 0,
     "retry": 0,
     "parked": 1
    },
    "m": {
-    "checking": 13,
-    "inline": 26,
-    "conflicted": null,
+    "checking": 0,
+    "inline": 98,
+    "conflicted": 1,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 404
+    "parked": 406
    },
    "cur": [
     [
      [
-      "T-3814"
+      "T-3961"
      ],
      "Mac tests",
      "Mac mini",
-     13
+     0
     ]
    ],
    "ld": [
-    66,
-    "2026-11-12T14:21:33Z"
+    67,
+    "2026-11-12T14:44:42Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T14:43:15Z",
-    "ld": 9.23,
+    "at": "2026-11-12T14:45:32Z",
+    "ld": 7.99,
     "c": 8,
     "sb": 0,
     "dk": [
-     30.5,
+     30.9,
      228.3
     ],
     "ss": [
@@ -623,7 +694,6 @@
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "task_title",
   "done_text",
@@ -633,12 +703,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "9:43 AM",
+  "lanes": 3,
+  "total": 3,
+  "at": "9:46 AM",
   "why": "",
-  "at_iso": "2026-11-12T14:43:00+00:00",
-  "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 9:43 AM ET</p></section>"
+  "at_iso": "2026-11-12T14:46:00+00:00",
+  "started": "9:43 AM",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 0, started 9:43 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 9:46 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T17:42:44.534396+00:00",
+ "at": "2026-11-12T17:45:48.308277+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -111,25 +111,24 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4179 a stopped task gets a second requeue",
-   "model": "opus",
-   "started": "2026-11-12T16:43:29.044Z",
-   "seconds": 3555,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "odalys",
    "task": "[tools] T-4161 Fable 5.2 on Jeremy's account, model log",
    "model": "opus",
    "started": "2026-11-12T17:09:33.984Z",
-   "seconds": 1990,
+   "seconds": 2174,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2",
+ "who": "Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4179 a stopped task gets a second requeue",
+   "model": "opus",
+   "started": "2026-11-12T16:43:29.044Z",
+   "seconds": null,
+   "finished": "2026-11-12T17:45:04.932000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[build] T-3400 Python https through iOS",
@@ -153,20 +152,12 @@
    "started": "2026-11-12T17:15:58.515Z",
    "seconds": null,
    "finished": "2026-11-12T17:19:45.910000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4198 prune run history when background start fails",
-   "model": "opus",
-   "started": "2026-11-12T16:38:06.505Z",
-   "seconds": null,
-   "finished": "2026-11-12T17:18:13.867000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 600,
+  "runnable_count": 599,
   "blocked_count": 98
  },
  "meter": {
@@ -215,7 +206,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T17:42:00+00:00",
+  "read_at": "2026-11-12T17:45:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -245,14 +236,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T12:37:00-05:00",
+   "at": "2026-11-12T12:43:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T12:42:00-05:00",
+  "at": "2026-11-12T12:45:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -266,9 +257,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4179 a stopped task gets a second requeue",
+   "task": "[tools] T-4161 Fable 5.2 on Jeremy's account, model log",
    "model": "opus",
-   "since": "2026-11-12T16:43:29.044Z",
+   "since": "2026-11-12T17:09:33.984Z",
    "next": [],
    "effort": "high"
   },
@@ -315,16 +306,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Let a stopped task get a second requeue",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T16:43:29.044Z",
-    "o": "c",
-    "task": "T-4179"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -411,6 +392,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "A line asking the company's lanes to restart a stopped task now gives one restart each time,...",
+    "at": "2026-11-12T12:44:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Checked Idris's change so that a widget or Shortcut whose Python fails to start still clears run...",
     "at": "2026-11-12T12:22:00-05:00"
@@ -419,22 +405,21 @@
     "w": "Wrenna",
     "t": "A second reader checked the draft privacy policy's promises about deleting old run history...",
     "at": "2026-11-12T12:19:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "When a Shortcut or a widget refresh starts pywidget in the background and Python fails to start,...",
-    "at": "2026-11-12T12:17:00-05:00"
    }
   ],
   "count": {
-   "next": 600,
+   "next": 599,
    "wait": 40,
    "blocked": 58,
    "you": 14
   },
   "fin": {
-   "n": 20,
+   "n": 21,
    "rows": [
+    [
+     "T-4179",
+     "Let a stopped task get a..."
+    ],
     [
      "T-4204",
      "Check finished work before..."
@@ -454,10 +439,6 @@
     [
      "T-4160",
      "Pause even when the usage..."
-    ],
-    [
-     "T-3565",
-     "Decide what a stale sensor..."
     ]
    ]
   }
@@ -501,23 +482,17 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T17:42:33Z",
+  "at": "2026-11-12T17:45:37Z",
   "s": {
    "T-4161": [
     "merging",
     "Mac tests at the main gate",
-    1794505233229
-   ],
-   "T-4179": [
-    "merged",
-    "on main 12:33 PM ET",
-    1794504819000,
-    "Odalys"
+    1794505237005
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T17:42:33Z",
+  "at": "2026-11-12T17:45:37Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -531,11 +506,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 160,
+    "conflicted": 163,
     "failed": null,
     "held": null,
-    "retry": 88,
-    "parked": 169
+    "retry": 91,
+    "parked": 172
    },
    "cur": [],
    "ld": [
@@ -545,8 +520,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T17:41:48Z",
-    "ld": 0.59,
+    "at": "2026-11-12T17:45:37Z",
+    "ld": 0.53,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -575,8 +550,8 @@
   }
  },
  "reply": {
-  "sent": "2026-11-12T16:38:23Z",
-  "seconds": 65.0
+  "sent": "2026-11-12T17:43:02Z",
+  "seconds": 48.0
  },
  "inbox": [],
  "trimmed": [
@@ -593,13 +568,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "12:42 PM",
+  "total": 1,
+  "at": "12:45 PM",
   "why": "",
-  "at_iso": "2026-11-12T17:42:00+00:00",
+  "at_iso": "2026-11-12T17:45:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:42 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:45 PM ET</p></section>"
  }
 }

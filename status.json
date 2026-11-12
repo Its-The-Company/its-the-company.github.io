@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T15:34:29.493906+00:00",
+ "at": "2026-11-12T15:37:34.581883+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -113,7 +113,7 @@
    "task": "[tools] T-4157 Fable-only accounts, second change",
    "model": "opus",
    "started": "2026-11-12T15:15:18.260Z",
-   "seconds": 1151,
+   "seconds": 1336,
    "finished": null,
    "effort": "high"
   },
@@ -122,7 +122,7 @@
    "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
    "started": "2026-11-12T15:15:25.110Z",
-   "seconds": 1144,
+   "seconds": 1329,
    "finished": null,
    "effort": "high"
   },
@@ -131,7 +131,7 @@
    "task": "[site] T-4162 a name for every task",
    "model": "opus",
    "started": "2026-11-12T15:15:30.908Z",
-   "seconds": 1138,
+   "seconds": 1323,
    "finished": null,
    "effort": "high"
   },
@@ -140,22 +140,38 @@
    "task": "[build] T-3757 hold background task for unstarted rows",
    "model": "opus",
    "started": "2026-11-12T15:15:38.458Z",
-   "seconds": 1131,
+   "seconds": 1316,
    "finished": null,
    "effort": "high"
   },
   {
    "name": "pernille",
-   "task": "[review] T-3718 check T-0729 before ship",
+   "task": "[build] T-3784 bridge tests hang on Python 3.9",
    "model": "opus",
-   "started": "2026-11-12T15:27:34.598Z",
-   "seconds": 414,
+   "started": "2026-11-12T15:36:55.299Z",
+   "seconds": 39,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys x2, Maren, Idris, Pernille",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[fix] T-3784 bridge tests hang on Python 3.9",
+   "model": "opus",
+   "started": "2026-11-12T15:36:48.998Z",
+   "seconds": null,
+   "finished": "2026-11-12T15:36:49.061Z"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-3718 check T-0729 before ship",
+   "model": "opus",
+   "started": "2026-11-12T15:27:34.598Z",
+   "seconds": null,
+   "finished": "2026-11-12T15:36:33.064000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4073 check T-3762 before ship",
@@ -176,7 +192,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 605,
+  "runnable_count": 606,
   "blocked_count": 84
  },
  "meter": {
@@ -225,7 +241,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T15:34:00+00:00",
+  "read_at": "2026-11-12T15:37:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -287,7 +303,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T10:34:00-05:00",
+  "at": "2026-11-12T10:37:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -328,9 +344,9 @@
   {
    "name": "Pernille",
    "state": "running",
-   "task": "[review] T-3718 check T-0729 before ship",
+   "task": "[build] T-3784 bridge tests hang on Python 3.9",
    "model": "opus",
-   "since": "2026-11-12T15:27:34.598Z",
+   "since": "2026-11-12T15:36:55.299Z",
    "next": [],
    "effort": "high"
   },
@@ -395,13 +411,13 @@
    },
    {
     "w": "Pernille",
-    "k": "review",
-    "t": "Check finished work before it ships",
+    "k": "build",
+    "t": "Stop the bridge host tests hanging on Python 3.9",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-12T15:27:34.598Z",
+    "at": "2026-11-12T15:36:55.299Z",
     "o": "c",
-    "task": "T-3718"
+    "task": "T-3784"
    }
   ],
   "src": "plan",
@@ -495,7 +511,7 @@
    }
   ],
   "count": {
-   "next": 605,
+   "next": 606,
    "wait": 40,
    "blocked": 44,
    "you": 13
@@ -553,27 +569,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T15:34:29Z",
+  "at": "2026-11-12T15:37:34Z",
   "s": {
    "T-3757": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    "merging",
+    "Mac tests at the main gate",
+    1794497734581
    ],
    "T-4162": [
     "testing",
     "its own tests, in its copy",
-    1794497189493
+    1794497194581
    ],
    "T-4157": [
     "testing",
     "its own tests, in its copy",
-    1794496589493
+    1794496594581
    ],
    "T-4160": [
     "testing",
     "its own tests, in its copy",
-    1794496589493
+    1794496594581
    ],
    "T-4114": [
     "merged",
@@ -584,7 +600,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-12T15:34:29Z",
+  "at": "2026-11-12T15:37:34Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -598,11 +614,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 40,
+    "conflicted": 43,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 30
+    "parked": 33
    },
    "cur": [],
    "ld": [
@@ -612,8 +628,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T15:34:08Z",
-    "ld": 8.41,
+    "at": "2026-11-12T15:37:36Z",
+    "ld": 8.2,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -629,12 +645,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-12T15:26:54Z",
-    "ld": 0.19,
+    "at": "2026-11-12T15:34:03Z",
+    "ld": 1.58,
     "c": 12,
     "sb": 0,
     "dk": [
-     396.9,
+     396.7,
      926.4
     ],
     "sn": []
@@ -661,10 +677,10 @@
   "main": 5,
   "lanes": 2,
   "total": 7,
-  "at": "10:34 AM",
+  "at": "10:37 AM",
   "why": "",
-  "at_iso": "2026-11-12T15:34:00+00:00",
+  "at_iso": "2026-11-12T15:37:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:34 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 10:37 AM ET</p></section>"
  }
 }

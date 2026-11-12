@@ -1,12 +1,20 @@
 {
  "schema": 1,
- "at": "2026-11-12T01:23:05.991209+00:00",
+ "at": "2026-11-12T01:26:09.622184+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-11T19:09:48-05:00",
   "flow": [],
   "done": [
+   {
+    "t": "T-4096",
+    "name": "Judge the app lines of the task queue",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794446631
+   },
    {
     "t": "T-4092",
     "name": "Audit and clean up the whole task queue",
@@ -25,7 +33,7 @@
     "why": "did not merge cleanly"
    }
   ],
-  "landed": 1,
+  "landed": 2,
   "failed": 1
  },
  "workers": [
@@ -34,22 +42,30 @@
    "task": "[tools] T-4084 supervisor usage stop: finish and land",
    "model": "opus",
    "started": "2026-11-12T00:10:55.125Z",
-   "seconds": 4330,
+   "seconds": 4514,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "ines",
+   "task": "[ops] T-4101 read the dry run and apply the first verdicts",
+   "model": "opus",
+   "started": "2026-11-12T01:26:04.311Z",
+   "seconds": 5,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Odalys, Ines",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4100 ledger apply for the queue audit",
    "model": "opus",
    "started": "2026-11-12T01:12:44.813Z",
-   "seconds": 621,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-12T01:25:41.140000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4092 union merge for task-names.tsv",
@@ -78,7 +94,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 701,
+  "runnable_count": 680,
   "blocked_count": 112
  },
  "meter": {
@@ -127,22 +143,8 @@
   "week_pct": 25.01,
   "usage_pct": 27.8,
   "work_pct": 74.5,
-  "read_at": "2026-11-12T01:23:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-4096",
-    "w": "Ines",
-    "k": "ops",
-    "t": "Judge the app lines of the task queue",
-    "m": "opus",
-    "e": "xhigh",
-    "at": "2026-11-11T19:54:04-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-12T01:26:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -178,7 +180,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T20:23:00-05:00",
+  "at": "2026-11-11T20:26:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -199,17 +201,18 @@
    "effort": "high"
   },
   {
+   "name": "Ines",
+   "state": "running",
+   "task": "[ops] T-4101 read the dry run and apply the first verdicts",
+   "model": "opus",
+   "since": "2026-11-12T01:26:04.311Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P2, the C51 voice card (Maren's...",
    "model": null,
    "since": null,
    "next": []
@@ -252,14 +255,14 @@
     "task": "T-4084"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Build the typed Links field and the ledger apply",
+    "w": "Ines",
+    "k": "ops",
+    "t": "Apply the queue audit ledger to the board",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-12T01:12:44.813Z",
+    "at": "2026-11-12T01:26:04.311Z",
     "o": "c",
-    "task": "T-4100"
+    "task": "T-4101"
    }
   ],
   "src": "plan",
@@ -337,41 +340,53 @@
   ],
   "done": [
    {
-    "w": "Maren",
-    "t": "Home now shows each task's real stage within about a minute: Building while it is being written,...",
-    "at": "2026-11-11T19:53:00-05:00"
+    "w": "Idris",
+    "t": "Every wait before a widget run is now bounded, so one stuck step can no longer stop the app...",
+    "at": "2026-11-11T20:23:00-05:00"
    },
    {
-    "w": "Odalys+ines",
-    "t": "Not needed: the queue audit's first part was not redone. Its parked work was moved onto the...",
-    "at": "2026-11-11T19:44:00-05:00"
+    "w": "Idris",
+    "t": "The app's autosave and recovery messages now use the agreed wording, so a person reading them...",
+    "at": "2026-11-11T20:23:00-05:00"
    },
    {
-    "w": "Idris+odalys",
-    "t": "The first TestFlight build passed the privacy check: upload.sh --internal lets an internal-only...",
-    "at": "2026-11-11T19:37:00-05:00"
+    "w": "Idris",
+    "t": "Release builds now fail before upload when the app uses a required-reason API it does not...",
+    "at": "2026-11-11T20:23:00-05:00"
    }
   ],
   "count": {
-   "next": 701,
+   "next": 680,
    "wait": 44,
    "blocked": 68,
    "you": 18
   },
   "fin": {
-   "n": 3,
+   "n": 24,
    "rows": [
     [
-     "T-4095",
-     "Home stages update live for..."
+     "T-3826",
+     "Stop one stuck step..."
     ],
     [
-     "T-4106",
-     "Redo audit and clean up the..."
+     "T-1120",
+     "Reword the app's autosave..."
     ],
     [
-     "T-2270",
-     "Let the first TestFlight..."
+     "T-1839",
+     "Fail the release build when..."
+    ],
+    [
+     "T-2230",
+     "Mark the widget deadline..."
+    ],
+    [
+     "T-1855",
+     "Fix three locking and save..."
+    ],
+    [
+     "T-1932",
+     "Refuse project files that..."
     ]
    ]
   }
@@ -423,17 +438,18 @@
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
   "main": 2,
-  "lanes": 1,
-  "total": 3,
-  "at": "8:23 PM",
+  "lanes": 0,
+  "total": 2,
+  "at": "8:26 PM",
   "why": "",
-  "at_iso": "2026-11-12T01:23:00+00:00",
+  "at_iso": "2026-11-12T01:26:00+00:00",
   "started": "7:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:23 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:26 PM ET</p></section>"
  }
 }

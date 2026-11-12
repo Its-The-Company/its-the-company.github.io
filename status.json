@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-12T08:15:09.522077+00:00",
+ "at": "2026-11-12T08:18:13.350264+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T02:56:43-05:00",
   "flow": [
+   {
+    "t": "T-3888",
+    "name": "Make the landing test pass on main every time",
+    "acct": "Personal a",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794471419
+     }
+    ]
+   },
    {
     "t": "T-3143",
     "name": "Fix the template test that fails since the age line",
@@ -105,7 +116,7 @@
    "task": "[build] T-3143 template test fix",
    "model": "opus",
    "started": "2026-11-12T08:03:43.753Z",
-   "seconds": 685,
+   "seconds": 869,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +125,7 @@
    "task": "[tools] T-4129 retire Set aside stage",
    "model": "opus",
    "started": "2026-11-12T08:04:00.395Z",
-   "seconds": 669,
+   "seconds": 852,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +134,7 @@
    "task": "[review] T-3823 OpenSSL symbol check",
    "model": "opus",
    "started": "2026-11-12T08:14:38.977Z",
-   "seconds": 30,
+   "seconds": 214,
    "finished": null,
    "effort": "high"
   }
@@ -199,21 +210,8 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T08:15:00+00:00",
+  "read_at": "2026-11-12T08:18:00+00:00",
   "running": [
-   {
-    "lane": "a",
-    "task": "T-4127",
-    "w": "Ines",
-    "k": "plan",
-    "t": "Run the Restructuring on Evan's account",
-    "m": "opus",
-    "e": "xhigh",
-    "at": "2026-11-12T03:01:25-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   },
    {
     "lane": "b2",
     "task": "T-4140",
@@ -249,44 +247,6 @@
     "e": "high",
     "at": "2026-11-12T02:57:59-05:00",
     "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4141",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Redo keep Home's tasks, Simulators and merge queue near-live",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T03:05:59-05:00",
-    "n": "Jeremy",
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-3871",
-    "w": "Odalys",
-    "k": "ops",
-    "t": "Archive parked refs whose work main already has",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T03:05:59-05:00",
-    "n": "Jeremy",
-    "d": 1,
-    "src": "plan-b"
-   },
-   {
-    "lane": "b3",
-    "task": "T-4012",
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retire the retry routes the send-back replaces",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T03:05:59-05:00",
-    "n": "Jeremy",
-    "d": 1,
     "src": "plan-b"
    }
   ]
@@ -325,7 +285,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T03:15:00-05:00",
+  "at": "2026-11-12T03:18:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -562,46 +522,56 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T08:14:49Z",
+  "at": "2026-11-12T08:18:06Z",
   "s": {
+   "T-3888": [
+    "merging",
+    "Host checks on the Mac mini \u00b7 1 group of tests done",
+    1794471426622
+   ],
    "T-3870": [
     "mergeq",
     "1st to merge",
-    1794470809616
+    1794470826622
    ],
-   "T-4091": [
+   "T-4141": [
     "mergeq",
     "2nd to merge",
-    1794469309616
+    1794471486622
    ],
-   "T-3888": [
-    "mergeq",
-    "3rd to merge",
-    1794469489616
+   "T-4091": [
+    "mergetest",
+    "Xcode checks on the MacBook, 3rd to merge",
+    1794471426622
    ],
    "T-3950": [
     "mergeq",
     "5th to merge",
-    1794470449616
+    1794470406622
+   ],
+   "T-3823": [
+    "testing",
+    "its own tests, in its copy",
+    1794471366622
    ],
    "T-4129": [
     "testing",
     "its own tests, in its copy",
-    1794471049616
+    1794471066622
    ],
    "T-3143": [
-    "testq",
-    "2nd for a Simulator",
-    1794470749616
+    "testing",
+    "its own tests, in its copy",
+    1794471366622
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T08:14:49Z",
+  "at": "2026-11-12T08:18:06Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 4,
+    "checking": 2,
+    "inline": 3,
     "conflicted": 4,
     "failed": 0,
     "held": 1,
@@ -609,15 +579,32 @@
     "parked": 5
    },
    "m": {
-    "checking": null,
-    "inline": 22,
-    "conflicted": 18,
+    "checking": 1,
+    "inline": 11,
+    "conflicted": 21,
     "failed": null,
-    "held": 2753,
+    "held": 2756,
     "retry": null,
-    "parked": 4562
+    "parked": 4565
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-3888"
+     ],
+     "Mac tests",
+     "Mac mini",
+     1
+    ],
+    [
+     [
+      "T-4091"
+     ],
+     "iPhone app tests, sent and waiting its turn",
+     "MacBook",
+     1
+    ]
+   ],
    "ld": [
     22,
     "2026-11-12T07:58:38Z"
@@ -625,16 +612,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T08:14:50Z",
-    "ld": 3.6,
+    "at": "2026-11-12T08:17:45Z",
+    "ld": 3.21,
     "c": 8,
     "sb": 1,
     "dk": [
-     36.5,
+     36.9,
      228.3
     ],
     "ss": [
-     176.5,
+     174.5,
      953.7
     ],
     "sn": [
@@ -672,12 +659,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 3,
-  "total": 6,
-  "at": "3:15 AM",
+  "lanes": 1,
+  "total": 4,
+  "at": "3:18 AM",
   "why": "",
-  "at_iso": "2026-11-12T08:15:00+00:00",
+  "at_iso": "2026-11-12T08:18:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:15 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:18 AM ET</p></section>"
  }
 }

@@ -578,6 +578,9 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-11 3:33 PM ET** ((private)): The go for the task queue audit (T-4092): on Evan's personal account (a), Fable xhigh, updates on #41 per step; scope adds ideas for prioritising tasks when they enter the queue by parent/child/umbrella status.
 - **2026-11-11 3:37 PM ET** ((private)): The queue audit starts once the merge audit's last step (item 20's live notes migration) is merged, unless safe sooner; no second go needed.
 - **2026-11-11 5:09 PM ET** ((private)): A to the 5:05 PM question: the queue audit T-4092 keeps running on Fable past half of Evan's (account a) week until it is done; the Fable half-week rule stays for all other work.
+- **2026-11-11 8:11 PM ET** ((private)): The task queue audit is the main priority now: its slices come ahead of other company work, and removals start taking effect as slices are judged, not only at the end.
+- **2026-11-11 8:48 PM ET** ((private)): A to the 8 audit removals and merge (T-2456, T-0064, T-0065, T-0067, T-0069, T-0073, T-0074 removed; T-2547 into T-2551); from now on the audit removes Investor-cited lines it judges obsolete on its own, asking only when high-stakes and genuinely unsure, every removal restorable and listed in the final report.
+- **2026-11-11 9:09 PM ET** ((private)): Standing site rule: as few words as make it clear; no subtitle or informational text where the title already says the purpose, on every page; Home and its App changes section trimmed first.
 {% endraw %}
 
 </div>

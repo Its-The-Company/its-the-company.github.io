@@ -37,13 +37,16 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-10 12:4x)
 
-- T-4092 merge-mode pass + pinned Fable past 50% LANDED 453d8ad70a (6:09 PM 11-11); dry tick a: slot 1 takes T-4092. Pre-existing red on HEAD: test_personal_lane 5, guard_supervisor 1 (copy path).
-- T-4092 pin LANDED 3b908fa9b6 (11-11 5:02 PM): tools/line_pin.py "Account: a" honoured by dispatch/board/personal_tick/lane_take; T-4092 line pinned (a, Fable xhigh). Open: a Fable line waits at Evan's week >=50% (FABLE_WEEK_PCT, Tenet 6) unless Investors say otherwise.
+- T-4100 part 1 (Links field) BUILT NOT LANDED 11-11 9:45 PM: copy T-4100-odalys/wt + msg.txt; owed supervisor_test (timed out 2x at 360 s) then gate. Machine adders use --links-warn.
+- T-4100 part 2 landed 307038f9b8 (11-11 8:2x PM): tools/queue_apply.py; dry run fbd83f9ada (1 remove, 2 merge, 2 rewrite, 10 refused). Rewrite text = head before ' -- ' only (T-1441 refused for that). Part 1 Links field: other agent.
+- T-4092 unstuck 11-11 7:4x PM: slice 1 recut landed b80a1af0eb (records 00f5d31820), T-4106 ticked superseded, claim released, rule fix 332883072a (pinned_busy counts live claims only; own recut lands first). Open: ops/task-names.tsv not merge=union (caused the <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">park</span>); old ref parked/a/20261111-184941-86640 on hold file, not archived.
+- T-4092 pin 3b908fa9b6 + merge-mode pass 453d8ad70a. Pre-existing red: test_personal_lane 5, guard_supervisor 1.
+
 - Item 20 DONE dfa3adf059 (11-11 3:4x PM): live board migrated, 663 notes/229 lines, 796,224->540,992 B, check 0, 28/28 readers same; note_to_record ON. Before copy: scratch T-3995-odalys.
 
 - T-3996 LANDED 7ae80b76f5 (11-11 11:49 AM) flow.py: sent_back only in <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s queue (src parked_ref), fix/own hand-out = being_built, readers' `retry` (null on try 1, else try-1). Item 16 gaps all 5 closed; check before 13/19 (4+10 one-side) after 10/18 (0+8, causes 1-2 = rule difference). Owed: after-number on the live record once collect runs.
 - Item 11 (T-3995) 11-10 9:5x PM: grouping NOT worth it, nothing landed (bisection eats saving at ~25% red; script company-scratch/T-3995-odalys/item11_group_runs.py). Revisit if red share <10%.
-- T-4084 step 3 (11-11 11:5x AM): built in copy T-4084-odalys/wt, NOT landed (wind-down; patch step3-supervisor-stop-unlanded.patch). Guard allowed trip in supervisor.sh lane_stop_tick. Green: lane_stop 62/0, supervisor_lane_stop 21/0, records 18/0. Owed: supervisor_test (lanestop group), personal_off (4 rows), suites naming changed tools, personal_land -j 1, then land. Open: LANE CLEAR while latched gets re-tripped next tick; a failure trip lifted by auto_lift leaves <=15 min before re-trip.
+- T-4084 step 3 LANDED 3649b230ae (11-11 8:4x PM): supervisor lane_stop_tick live; #261 A = LANE CLEAR -> lane_stop.py cleared (wins to meter reset). Part (1) (lanes take done-list sent-back) NOT done, noted on board. After-number: ops/metrics/lane_stops.jsonl rows; first real trip of b.
 
 - T-4011 after-number read 11-11 8:45 AM (a23d1a4355): route untried (0 sent_back rows, 0 fix/own, merge mode held lanes). Item 10 removal: NO. Re-read after 10 give_up events or 48 h of lane lands.
 - T-4012 0b48b7f25e (11-11 12:36 AM) personal_land.sh batch landed: slice 2 (no Retry line), host_keep wired, records apply 1 commit, pywidget/tools host floor, named docs/design .md runs xc. Left: retry file/re-pick/ledgers after T-4011 number. Owed: host_keep.jsonl rows; 'ops: lane records applied' count vs 72/49.
@@ -54,7 +57,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Lessons
 
-- main_gate land runs the scoped suite: >10 min under load. Run it in background and land early on a wind-down day.
 - Applier never applies a settings `hooks` change (#205): Investors apply a committed .diff by hand.
 {% endraw %}
 

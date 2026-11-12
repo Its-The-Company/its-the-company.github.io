@@ -1,11 +1,23 @@
 {
  "schema": 1,
- "at": "2026-11-12T08:02:49.733361+00:00",
+ "at": "2026-11-12T08:05:56.001676+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T02:56:43-05:00",
-  "flow": [],
+  "flow": [
+   {
+    "t": "T-3143",
+    "name": "Fix the template test that fails since the age line",
+    "w": "Idris",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794470714
+     }
+    ]
+   }
+  ],
   "done": [
    {
     "t": "T-3950",
@@ -87,8 +99,36 @@
   "landed": 20,
   "failed": 2
  },
- "workers": [],
- "who": "",
+ "workers": [
+  {
+   "name": "idris",
+   "task": "[build] T-3143 template test fix",
+   "model": "opus",
+   "started": "2026-11-12T08:03:43.753Z",
+   "seconds": 132,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4053 review before TestFlight",
+   "model": "opus",
+   "started": "2026-11-12T08:03:52.904Z",
+   "seconds": 123,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4129 retire Set aside stage",
+   "model": "opus",
+   "started": "2026-11-12T08:04:00.395Z",
+   "seconds": 115,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris, Pernille, Odalys",
  "recent": [],
  "queue": {
   "runnable": [],
@@ -142,7 +182,7 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T08:02:00+00:00",
+  "read_at": "2026-11-12T08:05:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -154,6 +194,7 @@
     "e": "xhigh",
     "at": "2026-11-12T03:01:25-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -178,6 +219,7 @@
     "e": "high",
     "at": "2026-11-12T02:57:59-05:00",
     "n": "Jeremy",
+    "d": 1,
     "src": "plan-b"
    },
    {
@@ -189,6 +231,42 @@
     "m": "opus",
     "e": "high",
     "at": "2026-11-12T02:57:59-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4141",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Redo keep Home's tasks, Simulators and merge queue near-live",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T03:05:59-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-3871",
+    "w": "Odalys",
+    "k": "ops",
+    "t": "Archive parked refs whose work main already has",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T03:05:59-05:00",
+    "n": "Jeremy",
+    "src": "plan-b"
+   },
+   {
+    "lane": "b3",
+    "task": "T-4012",
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Retire the retry routes the send-back replaces",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T03:05:59-05:00",
     "n": "Jeremy",
     "src": "plan-b"
    }
@@ -228,7 +306,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T03:02:00-05:00",
+  "at": "2026-11-12T03:05:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -241,27 +319,30 @@
  "lanes": [
   {
    "name": "Idris",
-   "state": "next",
-   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-3143 template test fix",
+   "model": "opus",
+   "since": "2026-11-12T08:03:43.753Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[review] T-4053 review before TestFlight",
+   "model": "opus",
+   "since": "2026-11-12T08:03:52.904Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-4129 retire Set aside stage",
+   "model": "opus",
+   "since": "2026-11-12T08:04:00.395Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Wrenna",
@@ -289,7 +370,38 @@
   }
  ],
  "tasks": {
-  "run": [],
+  "run": [
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Fix the template test that fails since the age line",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T08:03:43.753Z",
+    "o": "c",
+    "task": "T-3143"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Check finished work before it ships",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T08:03:52.904Z",
+    "o": "c",
+    "task": "T-4053"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Retire the Set aside stage on Home",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T08:04:00.395Z",
+    "o": "i",
+    "task": "T-4129"
+   }
+  ],
   "src": "plan",
   "open": [
    {
@@ -426,27 +538,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T08:02:37Z",
+  "at": "2026-11-12T08:05:56Z",
   "s": {
    "T-4091": [
     "mergeq",
     "1st to merge",
-    1794469297311
+    1794469316001
    ],
    "T-3888": [
     "mergeq",
     "2nd to merge",
-    1794469477311
+    1794469496001
    ],
    "T-3950": [
     "mergeq",
     "4th to merge",
-    1794470437311
+    1794470396001
+   ],
+   "T-3143": [
+    "merged",
+    "on main 3:05 AM ET",
+    1794470747000,
+    ""
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T08:02:37Z",
+  "at": "2026-11-12T08:05:56Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -459,12 +577,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 18,
-    "conflicted": 6,
+    "inline": 21,
+    "conflicted": 9,
     "failed": null,
-    "held": 2741,
+    "held": 2744,
     "retry": null,
-    "parked": 4550
+    "parked": 4553
    },
    "cur": [],
    "ld": [
@@ -474,16 +592,16 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T08:01:48Z",
-    "ld": 3.51,
+    "at": "2026-11-12T08:05:07Z",
+    "ld": 3.81,
     "c": 8,
     "sb": 1,
     "dk": [
-     37.1,
+     36.5,
      228.3
     ],
     "ss": [
-     180.6,
+     176.5,
      953.7
     ],
     "sn": [
@@ -519,13 +637,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 0,
-  "lanes": 2,
-  "total": 2,
-  "at": "3:02 AM",
+  "main": 3,
+  "lanes": 3,
+  "total": 6,
+  "at": "3:05 AM",
   "why": "",
-  "at_iso": "2026-11-12T08:02:00+00:00",
+  "at_iso": "2026-11-12T08:05:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 0, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 3:02 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 3:05 AM ET</p></section>"
  }
 }

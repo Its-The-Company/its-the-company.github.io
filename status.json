@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T00:43:28.129007+00:00",
+ "at": "2026-11-12T00:46:29.152017+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -34,7 +34,7 @@
    "task": "[site] T-4095 Home stages live: finish and land",
    "model": "opus",
    "started": "2026-11-12T00:10:44.927Z",
-   "seconds": 1963,
+   "seconds": 2144,
    "finished": null,
    "effort": "high"
   },
@@ -43,7 +43,7 @@
    "task": "[tools] T-4084 supervisor usage stop: finish and land",
    "model": "opus",
    "started": "2026-11-12T00:10:55.125Z",
-   "seconds": 1953,
+   "seconds": 2134,
    "finished": null,
    "effort": "high"
   },
@@ -52,7 +52,7 @@
    "task": "[tools] T-4092 unstick queue audit on account a",
    "model": "opus",
    "started": "2026-11-12T00:29:58.714Z",
-   "seconds": 809,
+   "seconds": 990,
    "finished": null,
    "effort": "high"
   }
@@ -62,7 +62,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 702,
+  "runnable_count": 701,
   "blocked_count": 112
  },
  "meter": {
@@ -111,7 +111,7 @@
   "week_pct": 25.01,
   "usage_pct": 27.8,
   "work_pct": 74.5,
-  "read_at": "2026-11-12T00:43:00+00:00",
+  "read_at": "2026-11-12T00:46:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -132,23 +132,23 @@
   }
  ],
  "disk": {
-  "free_gb": 38,
+  "free_gb": 39,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 175
+   "free_gb": 177
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-11T19:38:00-05:00",
+   "at": "2026-11-11T19:45:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T19:43:00-05:00",
+  "at": "2026-11-11T19:46:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -318,6 +318,11 @@
   ],
   "done": [
    {
+    "w": "Odalys+ines",
+    "t": "Not needed: the queue audit's first part was not redone. Its parked work was moved onto the...",
+    "at": "2026-11-11T19:44:00-05:00"
+   },
+   {
     "w": "Idris+odalys",
     "t": "The first TestFlight build passed the privacy check: upload.sh --internal lets an internal-only...",
     "at": "2026-11-11T19:37:00-05:00"
@@ -326,22 +331,21 @@
     "w": "Maren",
     "t": "Home's task list now calls sent-back work the Retry Queue and shows it there only while it...",
     "at": "2026-11-11T16:52:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "The money wording check was red on main because Home and This Session said 'to go round again',...",
-    "at": "2026-11-11T09:36:00-05:00"
    }
   ],
   "count": {
-   "next": 702,
+   "next": 701,
    "wait": 44,
    "blocked": 68,
    "you": 18
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-4106",
+     "Redo audit and clean up the..."
+    ],
     [
      "T-2270",
      "Let the first TestFlight..."
@@ -403,10 +407,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "7:43 PM",
+  "at": "7:46 PM",
   "why": "",
-  "at_iso": "2026-11-12T00:43:00+00:00",
+  "at_iso": "2026-11-12T00:46:00+00:00",
   "started": "7:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:43 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:46 PM ET</p></section>"
  }
 }

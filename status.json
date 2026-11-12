@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T17:15:12.033431+00:00",
+ "at": "2026-11-12T17:18:14.278832+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -110,29 +110,11 @@
  },
  "workers": [
   {
-   "name": "maren",
-   "task": "[site] T-4108 Issues badge stale count flash",
-   "model": "opus",
-   "started": "2026-11-12T16:32:11.872Z",
-   "seconds": 2580,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4198 prune run history when background start fails",
-   "model": "opus",
-   "started": "2026-11-12T16:38:06.505Z",
-   "seconds": 2225,
-   "finished": null,
-   "effort": "high"
-  },
-  {
    "name": "odalys",
    "task": "[tools] T-4179 a stopped task gets a second requeue",
    "model": "opus",
    "started": "2026-11-12T16:43:29.044Z",
-   "seconds": 1902,
+   "seconds": 2085,
    "finished": null,
    "effort": "high"
   },
@@ -141,7 +123,7 @@
    "task": "[build] T-3400 Python https through iOS",
    "model": "opus",
    "started": "2026-11-12T17:02:07.937Z",
-   "seconds": 784,
+   "seconds": 966,
    "finished": null,
    "effort": "high"
   },
@@ -150,13 +132,38 @@
    "task": "[tools] T-4161 Fable 5.2 on Jeremy's account, model log",
    "model": "opus",
    "started": "2026-11-12T17:09:33.984Z",
-   "seconds": 338,
+   "seconds": 520,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "wrenna",
+   "task": "[release] T-3798 privacy policy run history timing",
+   "model": "opus",
+   "started": "2026-11-12T17:15:58.515Z",
+   "seconds": 135,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Maren, Idris, Odalys x2, Pernille",
+ "who": "Odalys x2, Pernille, Wrenna",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4198 prune run history when background start fails",
+   "model": "opus",
+   "started": "2026-11-12T16:38:06.505Z",
+   "seconds": null,
+   "finished": "2026-11-12T17:18:13.867000+00:00"
+  },
+  {
+   "name": "maren",
+   "task": "[site] T-4108 Issues badge stale count flash",
+   "model": "opus",
+   "started": "2026-11-12T16:32:11.872Z",
+   "seconds": null,
+   "finished": "2026-11-12T17:15:37.851000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4160 pause on failed usage reading",
@@ -172,22 +179,6 @@
    "started": "2026-11-12T16:45:32.036Z",
    "seconds": null,
    "finished": "2026-11-12T17:01:29.516000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4200 check T-4176 before ship",
-   "model": "opus",
-   "started": "2026-11-12T16:37:59.791Z",
-   "seconds": null,
-   "finished": "2026-11-12T16:45:18.529000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4157 Fable-only accounts, second change",
-   "model": "opus",
-   "started": "2026-11-12T15:15:18.260Z",
-   "seconds": null,
-   "finished": "2026-11-12T16:43:03.708000+00:00"
   }
  ],
  "queue": {
@@ -242,7 +233,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T17:15:00+00:00",
+  "read_at": "2026-11-12T17:18:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -279,7 +270,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T12:15:00-05:00",
+  "at": "2026-11-12T12:18:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -290,24 +281,6 @@
   "at": "2026-11-12T10:12:54.003565-05:00"
  },
  "lanes": [
-  {
-   "name": "Maren",
-   "state": "running",
-   "task": "[site] T-4108 Issues badge stale count flash",
-   "model": "opus",
-   "since": "2026-11-12T16:32:11.872Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4198 prune run history when background start fails",
-   "model": "opus",
-   "since": "2026-11-12T16:38:06.505Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Odalys",
    "state": "running",
@@ -328,8 +301,25 @@
   },
   {
    "name": "Wrenna",
+   "state": "running",
+   "task": "[release] T-3798 privacy policy run history timing",
+   "model": "opus",
+   "since": "2026-11-12T17:15:58.515Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
    "state": "next",
-   "task": "Wrenna, P1, from T-3789...",
+   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P1 (Investor an Investor c6816980644; plan...",
    "model": null,
    "since": null,
    "next": []
@@ -345,26 +335,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Maren",
-    "k": "site",
-    "t": "Stop the Issues badge flashing a stale count",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T16:32:11.872Z",
-    "o": "i",
-    "task": "T-4108"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Prune run history when a background start fails",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T16:38:06.505Z",
-    "o": "c",
-    "task": "T-4198"
-   },
    {
     "w": "Odalys",
     "k": "tools",
@@ -394,6 +364,16 @@
     "at": "2026-11-12T17:09:33.984Z",
     "o": "i",
     "task": "T-4161"
+   },
+   {
+    "w": "Wrenna",
+    "k": "release",
+    "t": "Fix the run history deletion timing in the privacy policy",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T17:15:58.515Z",
+    "o": "c",
+    "task": "T-3798"
    }
   ],
   "src": "plan",
@@ -471,6 +451,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "When a Shortcut or a widget refresh starts pywidget in the background and Python fails to start,...",
+    "at": "2026-11-12T12:17:00-05:00"
+   },
+   {
     "w": "Maren",
     "t": "Opening a page no longer flashes an old Issues number (like 4) for a second; the badge opens on...",
     "at": "2026-11-12T12:15:00-05:00"
@@ -479,11 +464,6 @@
     "w": "Odalys",
     "t": "When a usage check failed, the Fable pause skipped its decision and the session hit the 5-hour...",
     "at": "2026-11-12T12:08:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "When a Steps, Distance or Altitude widget's sensor does not answer, it should keep showing...",
-    "at": "2026-11-12T12:00:00-05:00"
    }
   ],
   "count": {
@@ -493,8 +473,12 @@
    "you": 14
   },
   "fin": {
-   "n": 17,
+   "n": 18,
    "rows": [
+    [
+     "T-4198",
+     "Prune run history when a..."
+    ],
     [
      "T-4108",
      "Stop the Issues badge..."
@@ -514,10 +498,6 @@
     [
      "T-4200",
      "Check finished work before..."
-    ],
-    [
-     "T-4157",
-     "Evan's account takes only..."
     ]
    ]
   }
@@ -561,33 +541,28 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T17:15:12Z",
+  "at": "2026-11-12T17:17:55Z",
   "s": {
-   "T-4198": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-4179": [
     "testing",
     "its own tests, in its copy",
-    1794503412033
+    1794503395089
    ],
    "T-4161": [
     "testing",
     "its own tests, in its copy",
-    1794503532033
+    1794503575089
    ],
-   "T-4108": [
+   "T-4198": [
     "merged",
-    "on main 12:15 PM ET",
-    1794503704000,
-    "Maren"
+    "on main 12:17 PM ET",
+    1794503834000,
+    "Idris"
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T17:15:12Z",
+  "at": "2026-11-12T17:17:55Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -601,11 +576,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 132,
+    "conflicted": 135,
     "failed": null,
     "held": null,
-    "retry": 61,
-    "parked": 141
+    "retry": 63,
+    "parked": 144
    },
    "cur": [],
    "ld": [
@@ -615,12 +590,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T17:15:12Z",
-    "ld": 1.52,
+    "at": "2026-11-12T17:17:31Z",
+    "ld": 1.22,
     "c": 8,
     "sb": 1,
     "dk": [
-     26.8,
+     28.4,
      228.3
     ],
     "ss": [
@@ -632,12 +607,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-12T17:10:05Z",
-    "ld": 2.61,
+    "at": "2026-11-12T17:17:09Z",
+    "ld": 1.75,
     "c": 12,
     "sb": 0,
     "dk": [
-     395.1,
+     394.9,
      926.4
     ],
     "sn": []
@@ -663,13 +638,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 5,
+  "main": 4,
   "lanes": 0,
-  "total": 5,
-  "at": "12:15 PM",
+  "total": 4,
+  "at": "12:18 PM",
   "why": "",
-  "at_iso": "2026-11-12T17:15:00+00:00",
+  "at_iso": "2026-11-12T17:18:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:18 PM ET</p></section>"
  }
 }

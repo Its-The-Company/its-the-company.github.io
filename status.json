@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T16:38:38.536546+00:00",
+ "at": "2026-11-12T16:41:40.552772+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -114,7 +114,7 @@
    "task": "[tools] T-4157 Fable-only accounts, second change",
    "model": "opus",
    "started": "2026-11-12T15:15:18.260Z",
-   "seconds": 5000,
+   "seconds": 5182,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[tools] T-4160 pause on failed usage reading",
    "model": "opus",
    "started": "2026-11-12T15:15:25.110Z",
-   "seconds": 4993,
+   "seconds": 5175,
    "finished": null,
    "effort": "high"
   },
@@ -132,7 +132,7 @@
    "task": "[site] T-4108 Issues badge stale count flash",
    "model": "opus",
    "started": "2026-11-12T16:32:11.872Z",
-   "seconds": 386,
+   "seconds": 568,
    "finished": null,
    "effort": "high"
   },
@@ -141,7 +141,7 @@
    "task": "[review] T-4200 check T-4176 before ship",
    "model": "opus",
    "started": "2026-11-12T16:37:59.791Z",
-   "seconds": 38,
+   "seconds": 220,
    "finished": null,
    "effort": "high"
   },
@@ -150,7 +150,7 @@
    "task": "[build] T-4198 prune run history when background start fails",
    "model": "opus",
    "started": "2026-11-12T16:38:06.505Z",
-   "seconds": 32,
+   "seconds": 214,
    "finished": null,
    "effort": "high"
   }
@@ -242,7 +242,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T16:38:00+00:00",
+  "read_at": "2026-11-12T16:41:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -279,7 +279,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T11:38:00-05:00",
+  "at": "2026-11-12T11:41:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -561,28 +561,22 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T16:38:32Z",
+  "at": "2026-11-12T16:41:34Z",
   "s": {
    "T-4157": [
     "merging",
     "Mac tests at the main gate",
-    1794501452866
+    1794501454836
    ],
    "T-4108": [
     "testing",
     "its own tests, in its copy",
-    1794501512866
-   ],
-   "T-2282": [
-    "merged",
-    "on main 11:37 AM ET",
-    1794501474000,
-    "Maren"
+    1794501514836
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T16:38:32Z",
+  "at": "2026-11-12T16:41:34Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -596,11 +590,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 96,
+    "conflicted": 99,
     "failed": null,
     "held": null,
-    "retry": 24,
-    "parked": 105
+    "retry": 27,
+    "parked": 108
    },
    "cur": [],
    "ld": [
@@ -610,8 +604,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T16:38:08Z",
-    "ld": 1.45,
+    "at": "2026-11-12T16:41:35Z",
+    "ld": 1.65,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -619,7 +613,7 @@
      228.3
     ],
     "ss": [
-     184.7,
+     186.7,
      953.7
     ],
     "sn": [
@@ -640,8 +634,8 @@
   }
  },
  "reply": {
-  "sent": "2026-11-12T16:01:40Z",
-  "seconds": 149.0
+  "sent": "2026-11-12T16:38:23Z",
+  "seconds": 65.0
  },
  "inbox": [],
  "trimmed": [
@@ -661,10 +655,10 @@
   "main": 5,
   "lanes": 0,
   "total": 5,
-  "at": "11:38 AM",
+  "at": "11:41 AM",
   "why": "",
-  "at_iso": "2026-11-12T16:38:00+00:00",
+  "at_iso": "2026-11-12T16:41:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:38 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 5, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:41 AM ET</p></section>"
  }
 }

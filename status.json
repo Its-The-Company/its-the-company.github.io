@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-12T08:24:19.892544+00:00",
+ "at": "2026-11-12T08:27:20.511343+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T02:56:43-05:00",
   "flow": [
-   {
-    "t": "T-3888",
-    "name": "Make the landing test pass on main every time",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "testq",
-      "at": 1794471419
-     }
-    ]
-   },
    {
     "t": "T-3143",
     "name": "Fix the template test that fails since the age line",
@@ -30,6 +19,63 @@
    }
   ],
   "done": [
+   {
+    "t": "T-3870",
+    "name": "Recut parked refs whose conflicts are not theirs",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794471981
+   },
+   {
+    "t": "T-4091",
+    "name": "Make main pass its Xcode checks again",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794471969
+   },
+   {
+    "t": "T-4012",
+    "name": "Retire the retry routes the send-back replaces",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794471954
+   },
+   {
+    "t": "T-3871",
+    "name": "Archive parked refs whose work main already has",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794471954
+   },
+   {
+    "t": "T-4141",
+    "name": "Redo keep Home's tasks, Simulators and merge queue near-live",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794471954
+   },
+   {
+    "t": "T-4091",
+    "name": "Make main pass its Xcode checks again",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794471918,
+    "why": "did not merge cleanly"
+   },
+   {
+    "t": "T-3888",
+    "name": "Make the landing test pass on main every time",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794471903
+   },
    {
     "t": "T-3950",
     "name": "Trim Home and add task filters",
@@ -54,61 +100,10 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794469978
-   },
-   {
-    "t": "T-4114",
-    "name": "Judge the last app lines of the task queue",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794469332
-   },
-   {
-    "t": "T-3986",
-    "name": "Keep Home's tasks, Simulators and merge queue near-live",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794467333
-   },
-   {
-    "t": "T-3897",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794466825
-   },
-   {
-    "t": "T-3860",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794466532
-   },
-   {
-    "t": "T-3886",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794466509
-   },
-   {
-    "t": "T-3865",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794465593
-   },
-   {
-    "t": "T-3963",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794465274
    }
   ],
-  "landed": 20,
-  "failed": 2
+  "landed": 26,
+  "failed": 3
  },
  "workers": [
   {
@@ -116,7 +111,7 @@
    "task": "[build] T-3143 template test fix",
    "model": "opus",
    "started": "2026-11-12T08:03:43.753Z",
-   "seconds": 1236,
+   "seconds": 1416,
    "finished": null,
    "effort": "high"
   },
@@ -125,7 +120,7 @@
    "task": "[tools] T-4129 retire Set aside stage",
    "model": "opus",
    "started": "2026-11-12T08:04:00.395Z",
-   "seconds": 1219,
+   "seconds": 1400,
    "finished": null,
    "effort": "high"
   },
@@ -134,7 +129,7 @@
    "task": "[tools] T-4132 measure overdue experiments",
    "model": "opus",
    "started": "2026-11-12T08:21:32.133Z",
-   "seconds": 167,
+   "seconds": 348,
    "finished": null,
    "effort": "high"
   }
@@ -169,7 +164,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 622,
+  "runnable_count": 623,
   "blocked_count": 84
  },
  "meter": {
@@ -218,7 +213,7 @@
   "week_pct": 27.26,
   "usage_pct": 28.3,
   "work_pct": 73.3,
-  "read_at": "2026-11-12T08:24:00+00:00",
+  "read_at": "2026-11-12T08:27:00+00:00",
   "running": [
    {
     "lane": "b2",
@@ -235,11 +230,7 @@
    {
     "lane": "b2",
     "task": "T-3870",
-    "w": "Odalys",
-    "k": "tools",
     "t": "Recut parked refs whose conflicts are not theirs",
-    "m": "opus",
-    "e": "high",
     "at": "2026-11-12T02:57:59-05:00",
     "n": "Jeremy",
     "d": 1,
@@ -281,19 +272,19 @@
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 174
+   "free_gb": 172
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T03:20:00-05:00",
+   "at": "2026-11-12T03:26:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T03:24:00-05:00",
+  "at": "2026-11-12T03:27:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -463,6 +454,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "None of the 27 parked changes in this list still needs recutting. 8 are finished on main, and...",
+    "at": "2026-11-12T03:26:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "An independent review found that the fix stopping one stuck step from blanking every widget is...",
     "at": "2026-11-12T03:07:00-05:00"
@@ -471,22 +467,21 @@
     "w": "Operator",
     "t": "Done by the Investors: Evan set web reading on for every account by hand, and the Handbook...",
     "at": "2026-11-12T03:00:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "This retry notice is closed without a merge. The finished work it named waited too long or was...",
-    "at": "2026-11-12T02:55:00-05:00"
    }
   ],
   "count": {
-   "next": 622,
+   "next": 623,
    "wait": 40,
    "blocked": 44,
    "you": 13
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-3870",
+     "Recut parked refs whose..."
+    ],
     [
      "T-4053",
      "Check finished work before..."
@@ -529,103 +524,71 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T08:24:01Z",
+  "at": "2026-11-12T08:27:12Z",
   "s": {
-   "T-3888": [
-    "merging",
-    "Host checks on the Mac mini \u00b7 1 group of tests done",
-    1794471421061
-   ],
-   "T-3870": [
-    "mergeq",
-    "1st to merge",
-    1794470821061
-   ],
-   "T-4141": [
-    "mergeq",
-    "2nd to merge",
-    1794471481061
-   ],
-   "T-3871": [
-    "mergeq",
-    "4th to merge",
-    1794471601061
-   ],
-   "T-4012": [
-    "mergeq",
-    "5th to merge",
-    1794471661061
-   ],
    "T-4091": [
     "mergetest",
-    "Xcode checks on the MacBook, 7th to merge",
-    1794471421061
-   ],
-   "T-3950": [
-    "mergeq",
-    "9th to merge",
-    1794470401061
+    "Xcode checks on the MacBook, 1st to merge",
+    1794471432370
    ],
    "T-4129": [
     "testing",
     "its own tests, in its copy",
-    1794471061061
+    1794471072370
    ],
    "T-3143": [
     "testing",
     "its own tests, in its copy",
-    1794471361061
+    1794471312370
+   ],
+   "T-3870": [
+    "merged",
+    "on main 3:26 AM ET",
+    1794471975000,
+    ""
    ]
   }
  },
  "ln": {
-  "at": "2026-11-12T08:24:01Z",
+  "at": "2026-11-12T08:27:12Z",
   "mq": {
    "n": {
-    "checking": 2,
-    "inline": 5,
-    "conflicted": 4,
+    "checking": 1,
+    "inline": 0,
+    "conflicted": 6,
     "failed": 0,
     "held": 1,
     "retry": 0,
     "parked": 6
    },
    "m": {
-    "checking": 7,
-    "inline": 6,
-    "conflicted": 27,
+    "checking": 10,
+    "inline": null,
+    "conflicted": 31,
     "failed": null,
-    "held": 2762,
+    "held": 2766,
     "retry": null,
-    "parked": 3867
+    "parked": 3871
    },
    "cur": [
-    [
-     [
-      "T-3888"
-     ],
-     "Mac tests",
-     "Mac mini",
-     7
-    ],
     [
      [
       "T-4091"
      ],
      "iPhone app tests, sent and waiting its turn",
      "MacBook",
-     7
+     10
     ]
    ],
    "ld": [
-    22,
-    "2026-11-12T07:58:38Z"
+    26,
+    "2026-11-12T08:26:21Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T08:24:01Z",
-    "ld": 3.13,
+    "at": "2026-11-12T08:27:14Z",
+    "ld": 3.1,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -673,10 +636,10 @@
   "main": 3,
   "lanes": 1,
   "total": 4,
-  "at": "3:24 AM",
+  "at": "3:27 AM",
   "why": "",
-  "at_iso": "2026-11-12T08:24:00+00:00",
+  "at_iso": "2026-11-12T08:27:00+00:00",
   "started": "2:56 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:24 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 2:56 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 3:27 AM ET</p></section>"
  }
 }

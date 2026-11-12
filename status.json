@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-12T05:55:39.571029+00:00",
+ "at": "2026-11-12T05:56:44.548848+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "inbox",
+  "started": "2026-11-12T00:55:40-05:00",
   "flow": [],
   "done": [
    {
@@ -66,7 +66,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 644,
+  "runnable_count": 645,
   "blocked_count": 85
  },
  "meter": {
@@ -110,12 +110,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-12T01:10:30-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 27.44,
   "usage_pct": 28.8,
   "work_pct": 74.0,
-  "read_at": "2026-11-12T05:55:00+00:00",
+  "read_at": "2026-11-12T05:57:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -152,12 +152,16 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-12T00:55:00-05:00",
+  "at": "2026-11-12T00:57:00-05:00",
   "mode": null
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: usage is ahead of the week's even pace to Sat 23:00, so work waits until the line passes; the machine allows 2 (new work waits: merge-queue-only mode is on (4 tasks wait to merge; it ends...",
+  "n": 1,
+  "at": "2026-11-12T00:55:30.756952-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
@@ -210,6 +214,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -300,10 +305,14 @@
    }
   ],
   "count": {
-   "next": 644,
+   "next": 645,
    "wait": 40,
    "blocked": 45,
    "you": 13
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -341,31 +350,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T05:55:39Z",
+  "at": "2026-11-12T05:56:25Z",
   "s": {}
  },
  "reply": {
-  "sent": "2026-11-12T05:44:39Z",
-  "seconds": 150.0
+  "sent": "2026-11-12T05:54:28Z",
+  "seconds": 114.0
  },
- "inbox": [
-  {
-   "id": "c6815915432",
-   "state": "received",
-   "position": 1,
-   "eta": "2026-11-12T01:10:30-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Send the completed prompt about the..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -376,10 +372,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "12:55 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-12T05:55:00+00:00",
+  "at": "12:57 AM",
+  "why": "Between sessions: no session is running. Last check 12:55 AM ET.",
+  "at_iso": "2026-11-12T05:57:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:55 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:57 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 12:55 AM ET.</p></section>"
  }
 }

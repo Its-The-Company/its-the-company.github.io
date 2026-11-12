@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T17:58:01.235068+00:00",
+ "at": "2026-11-12T18:01:04.117703+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -111,16 +111,24 @@
  "workers": [
   {
    "name": "odalys",
-   "task": "[tools] T-4161 Fable 5.2 on Jeremy's account, model log",
+   "task": "[tools] T-4206 release account when stop rule retired",
    "model": "opus",
-   "started": "2026-11-12T17:09:33.984Z",
-   "seconds": 2907,
+   "started": "2026-11-12T17:59:05.541Z",
+   "seconds": 118,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Odalys",
  "recent": [
+  {
+   "name": "odalys",
+   "task": "[tools] T-4161 Fable 5.2 on Jeremy's account, model log",
+   "model": "opus",
+   "started": "2026-11-12T17:09:33.984Z",
+   "seconds": null,
+   "finished": "2026-11-12T17:58:01.633000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4179 a stopped task gets a second requeue",
@@ -144,20 +152,12 @@
    "started": "2026-11-12T17:18:31.327Z",
    "seconds": null,
    "finished": "2026-11-12T17:23:09.670000+00:00"
-  },
-  {
-   "name": "wrenna",
-   "task": "[release] T-3798 privacy policy run history timing",
-   "model": "opus",
-   "started": "2026-11-12T17:15:58.515Z",
-   "seconds": null,
-   "finished": "2026-11-12T17:19:45.910000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 599,
+  "runnable_count": 600,
   "blocked_count": 98
  },
  "meter": {
@@ -206,7 +206,7 @@
   "week_pct": 35.25,
   "usage_pct": 32.6,
   "work_pct": 78.8,
-  "read_at": "2026-11-12T17:58:00+00:00",
+  "read_at": "2026-11-12T18:01:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -243,7 +243,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T12:58:00-05:00",
+  "at": "2026-11-12T13:01:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -257,9 +257,9 @@
   {
    "name": "Odalys",
    "state": "running",
-   "task": "[tools] T-4161 Fable 5.2 on Jeremy's account, model log",
+   "task": "[tools] T-4206 release account when stop rule retired",
    "model": "opus",
-   "since": "2026-11-12T17:09:33.984Z",
+   "since": "2026-11-12T17:59:05.541Z",
    "next": [],
    "effort": "high"
   },
@@ -309,12 +309,12 @@
    {
     "w": "Odalys",
     "k": "tools",
-    "t": "Run the queue audit on Jeremy's account on Fable 5.2",
+    "t": "Release an account when its stop rule is retired",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-12T17:09:33.984Z",
+    "at": "2026-11-12T17:59:05.541Z",
     "o": "i",
-    "task": "T-4161"
+    "task": "T-4206"
    }
   ],
   "src": "plan",
@@ -408,7 +408,7 @@
    }
   ],
   "count": {
-   "next": 599,
+   "next": 600,
    "wait": 40,
    "blocked": 58,
    "you": 14
@@ -482,18 +482,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T17:57:55Z",
-  "s": {
-   "T-4161": [
-    "merged",
-    "on main 12:57 PM ET",
-    1794506244000,
-    "Odalys"
-   ]
-  }
+  "at": "2026-11-12T18:00:58Z",
+  "s": {}
  },
  "ln": {
-  "at": "2026-11-12T17:57:55Z",
+  "at": "2026-11-12T18:00:58Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -507,11 +500,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 175,
+    "conflicted": 178,
     "failed": null,
     "held": null,
-    "retry": 103,
-    "parked": 184
+    "retry": 107,
+    "parked": 187
    },
    "cur": [],
    "ld": [
@@ -521,8 +514,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T17:57:55Z",
-    "ld": 0.43,
+    "at": "2026-11-12T18:00:14Z",
+    "ld": 0.88,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -572,10 +565,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "12:58 PM",
+  "at": "1:01 PM",
   "why": "",
-  "at_iso": "2026-11-12T17:58:00+00:00",
+  "at_iso": "2026-11-12T18:01:00+00:00",
   "started": "10:13 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:58 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 10:13 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 1:01 PM ET</p></section>"
  }
 }

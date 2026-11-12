@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T22:25:45.560731+00:00",
+ "at": "2026-11-12T22:28:51.088132+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -96,7 +96,7 @@
    "task": "[build] T-4212 land launcher widget picker",
    "model": "opus",
    "started": "2026-11-12T22:22:24.577Z",
-   "seconds": 200,
+   "seconds": 386,
    "finished": null,
    "effort": "high"
   },
@@ -105,7 +105,7 @@
    "task": "[build] T-3814 tree.json presence in export",
    "model": "opus",
    "started": "2026-11-12T22:22:32.011Z",
-   "seconds": 193,
+   "seconds": 379,
    "finished": null,
    "effort": "high"
   },
@@ -114,7 +114,7 @@
    "task": "[research] T-3674 land launcher known apps",
    "model": "opus",
    "started": "2026-11-12T22:22:39.264Z",
-   "seconds": 186,
+   "seconds": 371,
    "finished": null,
    "effort": "high"
   },
@@ -123,7 +123,7 @@
    "task": "[review] T-4214 review launcher steps",
    "model": "opus",
    "started": "2026-11-12T22:22:47.223Z",
-   "seconds": 178,
+   "seconds": 363,
    "finished": null,
    "effort": "high"
   }
@@ -182,7 +182,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-12T22:25:00+00:00",
+  "read_at": "2026-11-12T22:28:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -219,7 +219,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T17:25:00-05:00",
+  "at": "2026-11-12T17:28:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -470,26 +470,38 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T22:25:28Z",
+  "at": "2026-11-12T22:28:34Z",
   "s": {
    "T-4212": [
     "merging",
     "Mac tests at the main gate",
-    1794522268634
+    1794522274375
+   ],
+   "T-3674": [
+    "mergeq",
+    "waiting for the main gate",
+    1794522454375
    ],
    "T-3814": [
     "testing",
+    "MacBook \u00b7 test",
+    null
+   ],
+   "T-4214": [
+    "testing",
     "its own tests, in its copy",
-    1794522268634
+    1794522514375
    ]
   },
   "nm": {
    "T-4212": "Offer the launcher widgets in the widget picker",
-   "T-3814": "Keep the bundled Countdown picture from hiding the bug"
+   "T-3674": "Fill the launcher's list of known apps",
+   "T-3814": "Keep the bundled Countdown picture from hiding the bug",
+   "T-4214": "Review the launcher steps landed today"
   }
  },
  "ln": {
-  "at": "2026-11-12T22:25:28Z",
+  "at": "2026-11-12T22:28:34Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -503,11 +515,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 408,
+    "conflicted": 411,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 452
+    "parked": 455
    },
    "cur": [],
    "ld": [
@@ -517,8 +529,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T22:25:29Z",
-    "ld": 0.52,
+    "at": "2026-11-12T22:27:48Z",
+    "ld": 1.28,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -532,12 +544,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-12T22:09:21Z",
-    "ld": 1.25,
+    "at": "2026-11-12T22:25:43Z",
+    "ld": 0.24,
     "c": 12,
     "sb": 0,
     "dk": [
-     387.9,
+     388.4,
      926.4
     ],
     "sn": []
@@ -575,10 +587,10 @@
   "main": 4,
   "lanes": 0,
   "total": 4,
-  "at": "5:25 PM",
+  "at": "5:28 PM",
   "why": "",
-  "at_iso": "2026-11-12T22:25:00+00:00",
+  "at_iso": "2026-11-12T22:28:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:25 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:28 PM ET</p></section>"
  }
 }

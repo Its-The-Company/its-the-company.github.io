@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T00:12:51.900353+00:00",
+ "at": "2026-11-12T00:15:55.235362+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -26,7 +26,7 @@
    "task": "[site] T-4095 Home stages live: finish and land",
    "model": "opus",
    "started": "2026-11-12T00:10:44.927Z",
-   "seconds": 126,
+   "seconds": 310,
    "finished": null,
    "effort": "high"
   },
@@ -35,7 +35,7 @@
    "task": "[tools] T-4084 supervisor usage stop: finish and land",
    "model": "opus",
    "started": "2026-11-12T00:10:55.125Z",
-   "seconds": 116,
+   "seconds": 300,
    "finished": null,
    "effort": "high"
   }
@@ -50,20 +50,20 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 11.0,
-   "resets_at": "2026-11-12T01:59:59.807490+00:00",
+   "pct": 12.0,
+   "resets_at": "2026-11-11T21:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-11T19:09:38.806490-05:00",
-   "source": "usage",
-   "left": 89.0,
+   "read_at": "2026-11-11T19:14:50.383698-05:00",
+   "source": "live",
+   "left": 88.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 65.0,
-   "resets_at": "2026-11-15T06:59:58.807505+00:00",
+   "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-11T19:09:38.806490-05:00",
-   "source": "usage",
+   "read_at": "2026-11-11T19:14:50.383698-05:00",
+   "source": "live",
    "left": 35.0,
    "left_words": "of your weekly allowance left"
   },
@@ -74,7 +74,7 @@
    "read_at": "2026-11-11T19:09:38.806490-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-11T19:09:38.806490-05:00"
+  "read_at": "2026-11-11T19:14:50.383698-05:00"
  },
  "ui": {
   "week_pct": 0.201,
@@ -94,7 +94,7 @@
   "week_pct": 25.01,
   "usage_pct": 27.8,
   "work_pct": 74.5,
-  "read_at": "2026-11-12T00:12:00+00:00",
+  "read_at": "2026-11-12T00:15:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -115,7 +115,7 @@
   }
  ],
  "disk": {
-  "free_gb": 39,
+  "free_gb": 38,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -124,14 +124,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-11T19:08:00-05:00",
+   "at": "2026-11-11T19:14:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-11T19:12:00-05:00",
+  "at": "2026-11-11T19:15:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -370,10 +370,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "7:12 PM",
+  "at": "7:15 PM",
   "why": "",
-  "at_iso": "2026-11-12T00:12:00+00:00",
+  "at_iso": "2026-11-12T00:15:00+00:00",
   "started": "7:09 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:12 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:09 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:15 PM ET</p></section>"
  }
 }

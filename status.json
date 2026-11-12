@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-12T23:49:36.350496+00:00",
+ "at": "2026-11-12T23:52:42.750776+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -87,25 +87,16 @@
     "end_at": 1794494815
    }
   ],
-  "landed": 28,
+  "landed": 26,
   "failed": 7
  },
  "workers": [
   {
    "name": "idris",
-   "task": "[build] T-4216 add-app slot overwrite race",
-   "model": "opus",
-   "started": "2026-11-12T22:33:49.320Z",
-   "seconds": 4547,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
    "task": "[build] T-4218 redraw launcher after slot edit",
    "model": "opus",
    "started": "2026-11-12T23:21:24.535Z",
-   "seconds": 1691,
+   "seconds": 1878,
    "finished": null,
    "effort": "high"
   },
@@ -114,13 +105,30 @@
    "task": "[build] T-3848 T-3847 launcher tap fixes",
    "model": "opus",
    "started": "2026-11-12T23:32:10.601Z",
-   "seconds": 1045,
+   "seconds": 1232,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[release] T-4219 mark launcher builds, refuse upload",
+   "model": "opus",
+   "started": "2026-11-12T23:50:57.870Z",
+   "seconds": 104,
    "finished": null,
    "effort": "high"
   }
  ],
  "who": "Idris x3",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4216 add-app slot overwrite race",
+   "model": "opus",
+   "started": "2026-11-12T22:33:49.320Z",
+   "seconds": null,
+   "finished": "2026-11-12T23:50:40.366000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4215 gate launcher editor in Release",
@@ -144,20 +152,12 @@
    "started": "2026-11-12T22:22:39.264Z",
    "seconds": null,
    "finished": "2026-11-12T23:20:52.502000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4171 review tree.json export fix",
-   "model": "opus",
-   "started": "2026-11-12T22:40:32.649Z",
-   "seconds": null,
-   "finished": "2026-11-12T23:20:39.392000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 592,
+  "runnable_count": 591,
   "blocked_count": 84
  },
  "meter": {
@@ -165,18 +165,18 @@
    "pct": 12.0,
    "resets_at": "2026-11-12T22:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T18:44:09.203004-05:00",
+   "read_at": "2026-11-12T18:50:11.944657-05:00",
    "source": "live",
    "left": 88.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
-   "pct": 81.0,
+   "pct": 82.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T18:44:09.203004-05:00",
+   "read_at": "2026-11-12T18:50:11.944657-05:00",
    "source": "live",
-   "left": 19.0,
+   "left": 18.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
@@ -186,7 +186,7 @@
    "read_at": "2026-11-12T17:19:27.311551-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T18:44:09.203004-05:00"
+  "read_at": "2026-11-12T18:50:11.944657-05:00"
  },
  "ui": {
   "week_pct": 0.24,
@@ -206,7 +206,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-12T23:49:00+00:00",
+  "read_at": "2026-11-12T23:52:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -261,14 +261,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T18:44:00-05:00",
+   "at": "2026-11-12T18:50:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T18:49:00-05:00",
+  "at": "2026-11-12T18:52:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -282,9 +282,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[build] T-4216 add-app slot overwrite race",
+   "task": "[build] T-4218 redraw launcher after slot edit",
    "model": "opus",
-   "since": "2026-11-12T22:33:49.320Z",
+   "since": "2026-11-12T23:21:24.535Z",
    "next": [],
    "effort": "high"
   },
@@ -334,16 +334,6 @@
    {
     "w": "Idris",
     "k": "build",
-    "t": "Stop Add App from overwriting a newly saved slot",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-12T22:33:49.320Z",
-    "o": "c",
-    "task": "T-4216"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
     "t": "Redraw a placed launcher after a slot edit",
     "m": "opus",
     "e": "high",
@@ -360,6 +350,16 @@
     "at": "2026-11-12T23:32:10.601Z",
     "o": "c",
     "task": "T-3848"
+   },
+   {
+    "w": "Idris",
+    "k": "release",
+    "t": "Mark launcher builds so uploads refuse them",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-12T23:50:57.870Z",
+    "o": "c",
+    "task": "T-4219"
    }
   ],
   "src": "plan",
@@ -438,6 +438,11 @@
   "done": [
    {
     "w": "Idris",
+    "t": "Adding an app to the launcher could silently replace another app saved with the same name while...",
+    "at": "2026-11-12T18:50:00-05:00"
+   },
+   {
+    "w": "Idris",
     "t": "The unreleased launcher could be opened in a store build by any script that drew its widget...",
     "at": "2026-11-12T18:31:00-05:00"
    },
@@ -445,22 +450,21 @@
     "w": "Wrenna",
     "t": "The launcher's Choose an App list now offers 12 real apps (2Do, Bear, Chrome, Google Maps,...",
     "at": "2026-11-12T18:20:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "Reviewed the change that puts the six launcher widgets in the widget picker of internal builds;...",
-    "at": "2026-11-12T18:20:00-05:00"
    }
   ],
   "count": {
-   "next": 592,
+   "next": 591,
    "wait": 40,
    "blocked": 44,
    "you": 13
   },
   "fin": {
-   "n": 8,
+   "n": 9,
    "rows": [
+    [
+     "T-4216",
+     "Stop Add App from..."
+    ],
     [
      "T-4215",
      "Keep the launcher editor out..."
@@ -480,10 +484,6 @@
     [
      "T-4212",
      "Offer the launcher widgets..."
-    ],
-    [
-     "T-3814",
-     "Keep the bundled Countdown..."
     ]
    ]
   }
@@ -527,42 +527,36 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-12T23:49:36Z",
+  "at": "2026-11-12T23:52:42Z",
   "s": {
    "T-4116": [
-    "mergeq",
-    "1st to merge",
-    1794527376350
-   ],
-   "T-4216": [
     "merging",
-    "Mac tests at the main gate",
-    1794527196350
+    "Merging onto main",
+    1794527562750
    ],
    "T-3848": [
-    "mergeq",
-    "waiting for the main gate",
-    1794527196350
+    "merging",
+    "Mac tests at the main gate",
+    1794527442750
    ],
    "T-4218": [
     "testing",
-    "its own tests, in its copy",
-    1794526656350
+    "Mac Mini \u00b7 test",
+    null
    ]
   },
   "nm": {
    "T-4116": "Regroup the app queue into feature-sized pieces",
-   "T-4216": "Stop Add App from overwriting a newly saved slot",
    "T-3848": "Keep a second launcher tap from dropping a script's prompt",
    "T-4218": "Redraw a placed launcher after a slot edit"
   }
  },
  "ln": {
-  "at": "2026-11-12T23:49:36Z",
+  "at": "2026-11-12T23:52:42Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 1,
+    "checking": 1,
+    "inline": 0,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -570,15 +564,24 @@
     "parked": 3
    },
    "m": {
-    "checking": null,
-    "inline": 0,
-    "conflicted": 492,
+    "checking": 0,
+    "inline": null,
+    "conflicted": 495,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 536
+    "parked": 539
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4116"
+     ],
+     "going onto main",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     79,
     "2026-11-12T20:55:28Z"
@@ -586,27 +589,29 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-12T23:49:36Z",
-    "ld": 7.32,
+    "at": "2026-11-12T23:52:45Z",
+    "ld": 9.34,
     "c": 8,
-    "sb": 0,
+    "sb": 1,
     "dk": [
-     23.1,
+     23.0,
      228.3
     ],
     "ss": [
      185.0,
      953.7
     ],
-    "sn": []
+    "sn": [
+     "iPhone 18 Pro"
+    ]
    },
    "macbook": {
-    "at": "2026-11-12T23:39:23Z",
-    "ld": 2.07,
+    "at": "2026-11-12T23:50:05Z",
+    "ld": 11.09,
     "c": 12,
     "sb": 0,
     "dk": [
-     386.1,
+     385.9,
      926.4
     ],
     "sn": []
@@ -620,7 +625,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 11 tasks",
+   "t": "Work session \u2013 12 tasks",
    "at": "2026-11-12T17:24:30-05:00"
   },
   {
@@ -664,10 +669,10 @@
   "main": 3,
   "lanes": 2,
   "total": 5,
-  "at": "6:49 PM",
+  "at": "6:52 PM",
   "why": "",
-  "at_iso": "2026-11-12T23:49:00+00:00",
+  "at_iso": "2026-11-12T23:52:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:49 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 6:52 PM ET</p></section>"
  }
 }

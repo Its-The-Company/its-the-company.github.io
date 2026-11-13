@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T02:50:15.150219+00:00",
+ "at": "2026-11-13T02:53:15.217765+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -126,7 +126,7 @@
    "task": "[site] T-4230 Restructuring on Documents",
    "model": "opus",
    "started": "2026-11-13T02:17:14.265Z",
-   "seconds": 1980,
+   "seconds": 2160,
    "finished": null,
    "effort": "high"
   },
@@ -135,16 +135,7 @@
    "task": "[tools] T-4232 Double Spread usage mode",
    "model": "opus",
    "started": "2026-11-13T02:17:34.315Z",
-   "seconds": 1960,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4229 writer test failed on MacBook",
-   "model": "opus",
-   "started": "2026-11-13T02:18:02.993Z",
-   "seconds": 1932,
+   "seconds": 2140,
    "finished": null,
    "effort": "high"
   },
@@ -153,13 +144,21 @@
    "task": "[tools] T-4235 full window before Fable pause",
    "model": "opus",
    "started": "2026-11-13T02:45:29.692Z",
-   "seconds": 285,
+   "seconds": 465,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x3, Idris",
+ "who": "Odalys x3",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4229 writer test failed on MacBook",
+   "model": "opus",
+   "started": "2026-11-13T02:18:02.993Z",
+   "seconds": null,
+   "finished": "2026-11-13T02:51:05.635000+00:00"
+  },
   {
    "name": "idris",
    "task": "[fix] T-4229 writer test failed on MacBook",
@@ -172,7 +171,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 577,
+  "runnable_count": 576,
   "blocked_count": 104
  },
  "meter": {
@@ -221,7 +220,7 @@
   "week_pct": 39.76,
   "usage_pct": 32.4,
   "work_pct": 79.4,
-  "read_at": "2026-11-13T02:50:00+00:00",
+  "read_at": "2026-11-13T02:53:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -258,7 +257,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T21:50:00-05:00",
+  "at": "2026-11-12T21:53:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -280,12 +279,11 @@
   },
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4229 writer test failed on MacBook",
-   "model": "opus",
-   "since": "2026-11-13T02:18:02.993Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Pernille",
@@ -341,16 +339,6 @@
     "at": "2026-11-13T02:17:34.315Z",
     "o": "c",
     "task": "T-4232"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Fix a MacBook test job that failed",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T02:18:02.993Z",
-    "o": "c",
-    "task": "T-4229"
    },
    {
     "w": "Odalys",
@@ -438,6 +426,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The app sometimes lost sight of a script for an instant between taking it off the waiting line...",
+    "at": "2026-11-12T21:50:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "The Restructuring's evening run was saved but sent back over a clash in a bookkeeping file; its...",
     "at": "2026-11-12T21:34:00-05:00"
@@ -446,22 +439,21 @@
     "w": "Ines+idris",
     "t": "The 300 open app tasks are now grouped into 14 features, each with one owner and a result a...",
     "at": "2026-11-12T20:45:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "A later MacBook job for the same work (J-20261112-1738-mut-idris-t4215-1) passed, so the failed...",
-    "at": "2026-11-12T20:45:00-05:00"
    }
   ],
   "count": {
-   "next": 577,
+   "next": 576,
    "wait": 39,
    "blocked": 65,
    "you": 18
   },
   "fin": {
-   "n": 1,
+   "n": 2,
    "rows": [
+    [
+     "T-4229",
+     "Fix a MacBook test job that..."
+    ],
     [
      "T-4233",
      "Redo run the Restructuring..."
@@ -508,33 +500,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T02:50:09Z",
+  "at": "2026-11-13T02:52:55Z",
   "s": {
    "T-4230": [
     "testing",
     "its own tests, in its copy",
-    1794536769309
+    1794536815531
+   ],
+   "T-4235": [
+    "testing",
+    "its own tests, in its copy",
+    1794538375531
    ],
    "T-4232": [
     "testing",
     "its own tests, in its copy",
-    1794537129309
-   ],
-   "T-4229": [
-    "merged",
-    "on main 9:48 PM ET",
-    1794538132000,
-    "Idris"
+    1794537115531
    ]
   },
   "nm": {
    "T-4230": "Show the Restructuring folder on the Documents page",
-   "T-4232": "Add a Double Spread usage mode, chosen on Home",
-   "T-4229": "Fix a MacBook test job that failed"
+   "T-4235": "Use each account's full window before the Fable pause",
+   "T-4232": "Add a Double Spread usage mode, chosen on Home"
   }
  },
  "ln": {
-  "at": "2026-11-13T02:50:09Z",
+  "at": "2026-11-13T02:52:55Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -548,11 +539,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 638,
+    "conflicted": 641,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 716
+    "parked": 719
    },
    "cur": [],
    "ld": [
@@ -562,12 +553,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T02:50:09Z",
-    "ld": 5.47,
+    "at": "2026-11-13T02:52:56Z",
+    "ld": 3.94,
     "c": 8,
     "sb": 0,
     "dk": [
-     22.7,
+     22.6,
      228.3
     ],
     "ss": [
@@ -596,13 +587,13 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 5 tasks",
-   "at": "2026-11-12T21:48:45-05:00"
+   "t": "Work session \u2013 6 tasks",
+   "at": "2026-11-12T21:53:15-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T02:47:27Z",
-  "seconds": 77.0
+  "sent": "2026-11-13T02:51:09Z",
+  "seconds": 125.0
  },
  "inbox": [],
  "trimmed": [
@@ -617,13 +608,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 3,
   "lanes": 0,
-  "total": 4,
-  "at": "9:50 PM",
+  "total": 3,
+  "at": "9:53 PM",
   "why": "",
-  "at_iso": "2026-11-13T02:50:00+00:00",
+  "at_iso": "2026-11-13T02:53:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:50 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:53 PM ET</p></section>"
  }
 }

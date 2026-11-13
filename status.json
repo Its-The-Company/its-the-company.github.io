@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T01:27:34.677936+00:00",
+ "at": "2026-11-13T01:30:39.152831+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -99,7 +99,7 @@
    "task": "[tools] T-4213 land account restart fix",
    "model": "opus",
    "started": "2026-11-13T00:14:33.768Z",
-   "seconds": 4380,
+   "seconds": 4565,
    "finished": null,
    "effort": "high"
   }
@@ -142,24 +142,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 592,
+  "runnable_count": 591,
   "blocked_count": 86
  },
  "meter": {
   "five_hour": {
-   "pct": 19.0,
+   "pct": 20.0,
    "resets_at": "2026-11-12T22:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T20:10:00.798636-05:00",
+   "read_at": "2026-11-12T20:28:04.037431-05:00",
    "source": "live",
-   "left": 81.0,
+   "left": 80.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 83.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T20:10:00.798636-05:00",
+   "read_at": "2026-11-12T20:28:04.037431-05:00",
    "source": "live",
    "left": 17.0,
    "left_words": "of your weekly allowance left"
@@ -171,7 +171,7 @@
    "read_at": "2026-11-12T17:19:27.311551-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T20:10:00.798636-05:00"
+  "read_at": "2026-11-12T20:28:04.037431-05:00"
  },
  "ui": {
   "week_pct": 0.24,
@@ -191,7 +191,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-13T01:27:00+00:00",
+  "read_at": "2026-11-13T01:30:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -221,14 +221,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T20:22:00-05:00",
+   "at": "2026-11-12T20:28:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T20:27:00-05:00",
+  "at": "2026-11-12T20:30:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -377,6 +377,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "An account that paused at its usage line no longer sits idle until the 5-hour window resets: it...",
+    "at": "2026-11-12T20:29:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "When someone renames, adds or removes an app in Launcher Apps, a launcher widget already on the...",
     "at": "2026-11-12T20:24:00-05:00"
@@ -385,22 +390,21 @@
     "w": "Idris",
     "t": "A test build with the unreleased launcher widgets now carries a hidden label in both the app and...",
     "at": "2026-11-12T20:11:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "On account b the tasks themselves run on Fable 5.2; only the session's small Opus coordinator,...",
-    "at": "2026-11-12T19:58:00-05:00"
    }
   ],
   "count": {
-   "next": 592,
+   "next": 591,
    "wait": 40,
    "blocked": 46,
    "you": 14
   },
   "fin": {
-   "n": 13,
+   "n": 14,
    "rows": [
+    [
+     "T-4213",
+     "Let the accounts restart and..."
+    ],
     [
      "T-4218",
      "Redraw a placed launcher..."
@@ -420,10 +424,6 @@
     [
      "T-4216",
      "Stop Add App from..."
-    ],
-    [
-     "T-4215",
-     "Keep the launcher editor out..."
     ]
    ]
   }
@@ -467,17 +467,18 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T01:27:34Z",
+  "at": "2026-11-13T01:30:19Z",
   "s": {
    "T-4116": [
     "mergeq",
     "1st to merge",
-    1794527374677
+    1794527359894
    ],
    "T-4213": [
-    "merging",
-    "Mac tests at the main gate",
-    1794533074677
+    "merged",
+    "on main 8:29 PM ET",
+    1794533363000,
+    "Odalys"
    ]
   },
   "nm": {
@@ -486,7 +487,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-13T01:27:34Z",
+  "at": "2026-11-13T01:30:19Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -499,12 +500,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 98,
-    "conflicted": 590,
+    "inline": 101,
+    "conflicted": 593,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 634
+    "parked": 637
    },
    "cur": [],
    "ld": [
@@ -514,12 +515,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T01:27:35Z",
-    "ld": 0.51,
+    "at": "2026-11-13T01:29:57Z",
+    "ld": 0.52,
     "c": 8,
     "sb": 0,
     "dk": [
-     22.7,
+     21.3,
      228.3
     ],
     "ss": [
@@ -548,21 +549,33 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 13 tasks",
-   "at": "2026-11-12T20:05:53-05:00"
+   "t": "Inbox \u2013 Evan's 8:29 PM Message on GitHub",
+   "at": "2026-11-12T20:30:25-05:00"
   }
  ],
  "reply": {
   "sent": "2026-11-13T01:05:25Z",
   "seconds": 27.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6841087494",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "How are we currently planning on..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -574,10 +587,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "8:27 PM",
+  "at": "8:30 PM",
   "why": "",
-  "at_iso": "2026-11-13T01:27:00+00:00",
+  "at_iso": "2026-11-13T01:30:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:27 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:30 PM ET</p></section>"
  }
 }

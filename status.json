@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T14:39:44.061571+00:00",
+ "at": "2026-11-13T14:42:44.271486+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -51,22 +51,21 @@
    "task": "[site] T-4004 then T-3735 Home in flight and blocked",
    "model": "opus",
    "started": "2026-11-13T13:53:09.418Z",
-   "seconds": 2794,
+   "seconds": 2974,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-4254 T-4255 T-4256 T-4261 editor mark fixes",
    "model": "opus",
    "started": "2026-11-13T14:11:26.887Z",
-   "seconds": 1697,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-13T14:42:41.067000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4252 completion list review",
@@ -90,20 +89,12 @@
    "started": "2026-11-13T13:59:45.678Z",
    "seconds": null,
    "finished": "2026-11-13T13:59:54.398000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2261 completion list UI test and shots",
-   "model": "opus",
-   "started": "2026-11-13T13:35:19.101Z",
-   "seconds": null,
-   "finished": "2026-11-13T13:59:07.343000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 529,
+  "runnable_count": 527,
   "blocked_count": 103
  },
  "meter": {
@@ -152,7 +143,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T14:39:00+00:00",
+  "read_at": "2026-11-13T14:42:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -182,14 +173,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T09:34:00-05:00",
+   "at": "2026-11-13T09:41:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T09:39:00-05:00",
+  "at": "2026-11-13T09:42:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -216,12 +207,11 @@
   },
   {
    "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4254 T-4255 T-4256 T-4261 editor mark fixes",
-   "model": "opus",
-   "since": "2026-11-13T14:11:26.887Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Pernille",
@@ -267,16 +257,6 @@
     "at": "2026-11-13T13:53:09.418Z",
     "o": "c",
     "task": "T-4004"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Never mark the word being typed",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T14:11:26.887Z",
-    "o": "c",
-    "task": "T-4254"
    }
   ],
   "src": "plan",
@@ -354,30 +334,38 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "The editor no longer marks a word as a mistake while you are still typing it; the mark appears...",
+    "at": "2026-11-13T09:42:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "Marks on other lines no longer blink off and on while you type; they stay put and move with the...",
+    "at": "2026-11-13T09:42:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "The review of the editor's word suggestions and error marks passed with notes; one fix for...",
     "at": "2026-11-13T09:14:00-05:00"
-   },
-   {
-    "w": "Maren",
-    "t": "Read the editor's new suggestion list and problem marks against the design: the marks are too...",
-    "at": "2026-11-13T09:08:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Home again lists the tasks being worked on, each with its stage, under All tasks on phone and...",
-    "at": "2026-11-13T08:54:00-05:00"
    }
   ],
   "count": {
-   "next": 529,
+   "next": 527,
    "wait": 49,
    "blocked": 54,
    "you": 18
   },
   "fin": {
-   "n": 15,
+   "n": 17,
    "rows": [
+    [
+     "T-4254",
+     "Never mark the word being typed"
+    ],
+    [
+     "T-4255",
+     "Keep other lines' marks..."
+    ],
     [
      "T-4252",
      "Review the editor's..."
@@ -393,14 +381,6 @@
     [
      "T-4005",
      "Home: drop Needs you,..."
-    ],
-    [
-     "T-4251",
-     "Open an Urgent issue for..."
-    ],
-    [
-     "T-4127",
-     "Run the Restructuring on..."
     ]
    ]
   }
@@ -444,26 +424,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T14:39:26Z",
+  "at": "2026-11-13T14:42:32Z",
   "s": {
-   "T-4254": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-3735": [
     "testing",
     "its own tests, in its copy",
-    1794579146899
+    1794579152850
+   ],
+   "T-4254": [
+    "merged",
+    "on main 9:42 AM ET",
+    1794580923000,
+    ""
    ]
   },
   "nm": {
-   "T-4254": "Never mark the word being typed",
-   "T-3735": "Show what blocks each blocked task on Home"
+   "T-3735": "Show what blocks each blocked task on Home",
+   "T-4254": "Never mark the word being typed"
   }
  },
  "ln": {
-  "at": "2026-11-13T14:39:26Z",
+  "at": "2026-11-13T14:42:32Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -477,11 +458,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1382,
+    "conflicted": 1385,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 7033
+    "parked": 7036
    },
    "cur": [],
    "ld": [
@@ -491,8 +472,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T14:39:27Z",
-    "ld": 0.7,
+    "at": "2026-11-13T14:42:05Z",
+    "ld": 0.64,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -508,12 +489,12 @@
     ]
    },
    "macbook": {
-    "at": "2026-11-13T14:34:23Z",
-    "ld": 0.26,
+    "at": "2026-11-13T14:41:45Z",
+    "ld": 1.67,
     "c": 12,
     "sb": 0,
     "dk": [
-     374.6,
+     374.3,
      926.4
     ],
     "sn": []
@@ -550,13 +531,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 1,
   "lanes": 0,
-  "total": 2,
-  "at": "9:39 AM",
+  "total": 1,
+  "at": "9:42 AM",
   "why": "",
-  "at_iso": "2026-11-13T14:39:00+00:00",
+  "at_iso": "2026-11-13T14:42:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:39 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:42 AM ET</p></section>"
  }
 }

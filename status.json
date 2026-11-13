@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T12:55:08.655152+00:00",
+ "at": "2026-11-13T12:58:14.787162+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -75,7 +75,7 @@
    "task": "[site] T-4246 then T-4248 Home mode bubble and Operator tab",
    "model": "opus",
    "started": "2026-11-13T12:32:55.560Z",
-   "seconds": 1333,
+   "seconds": 1519,
    "finished": null,
    "effort": "high"
   },
@@ -84,12 +84,21 @@
    "task": "[build] T-2261 editor completions build and test",
    "model": "opus",
    "started": "2026-11-13T12:42:29.647Z",
-   "seconds": 759,
+   "seconds": 945,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-3400 iOS https shim land",
+   "model": "opus",
+   "started": "2026-11-13T12:56:01.668Z",
+   "seconds": 133,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys, Idris",
+ "who": "Odalys, Idris, Pernille",
  "recent": [
   {
    "name": "odalys",
@@ -176,7 +185,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T12:55:00+00:00",
+  "read_at": "2026-11-13T12:58:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -220,14 +229,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T07:51:00-05:00",
+   "at": "2026-11-13T07:57:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T07:55:00-05:00",
+  "at": "2026-11-13T07:58:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -263,11 +272,12 @@
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[build] T-3400 iOS https shim land",
+   "model": "opus",
+   "since": "2026-11-13T12:56:01.668Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -315,6 +325,16 @@
     "at": "2026-11-13T12:42:29.647Z",
     "o": "c",
     "task": "T-2261"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Send Python's https through iOS and drop the OpenSSL modules",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-13T12:56:01.668Z",
+    "o": "c",
+    "task": "T-3400"
    }
   ],
   "src": "plan",
@@ -482,7 +502,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T12:55:08Z",
+  "at": "2026-11-13T12:58:14Z",
   "s": {
    "T-2261": [
     "mergetest",
@@ -492,7 +512,12 @@
    "T-4246": [
     "testing",
     "its own tests, in its copy",
-    1794573608655
+    1794573614787
+   ],
+   "T-3400": [
+    "testing",
+    "its own tests, in its copy",
+    1794574634787
    ],
    "T-4127": [
     "merged",
@@ -504,11 +529,12 @@
   "nm": {
    "T-2261": "Build and test the editor completion changes",
    "T-4246": "Shrink the mode panel to a small bubble",
+   "T-3400": "Send Python's https through iOS and drop the OpenSSL modules",
    "T-4127": "Run the Restructuring on Evan's account"
   }
  },
  "ln": {
-  "at": "2026-11-13T12:55:08Z",
+  "at": "2026-11-13T12:58:14Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -522,11 +548,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1277,
+    "conflicted": 1281,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1301
+    "parked": 1304
    },
    "cur": [],
    "ld": [
@@ -536,12 +562,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T12:54:44Z",
-    "ld": 3.32,
+    "at": "2026-11-13T12:58:15Z",
+    "ld": 2.03,
     "c": 8,
     "sb": 0,
     "dk": [
-     25.0,
+     24.8,
      228.3
     ],
     "ss": [
@@ -570,7 +596,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 4 tasks",
    "at": "2026-11-13T07:25:00-05:00"
   },
   {
@@ -602,13 +628,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 1,
-  "total": 3,
-  "at": "7:55 AM",
+  "total": 4,
+  "at": "7:58 AM",
   "why": "",
-  "at_iso": "2026-11-13T12:55:00+00:00",
+  "at_iso": "2026-11-13T12:58:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:55 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 7:58 AM ET</p></section>"
  }
 }

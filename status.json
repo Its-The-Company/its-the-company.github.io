@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T18:39:07.083639+00:00",
+ "at": "2026-11-13T18:42:06.252528+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -95,7 +95,7 @@
    "task": "[design] T-4287 Home lists in scroll boxes",
    "model": "opus",
    "started": "2026-11-13T17:03:21.535Z",
-   "seconds": 5745,
+   "seconds": 5924,
    "finished": null,
    "effort": "high"
   },
@@ -104,7 +104,7 @@
    "task": "[tools] T-4284 Audit mode slice 1 pause off",
    "model": "opus",
    "started": "2026-11-13T17:29:09.476Z",
-   "seconds": 4197,
+   "seconds": 4376,
    "finished": null,
    "effort": "high"
   },
@@ -113,7 +113,7 @@
    "task": "[build] T-3820 add net.request to the app",
    "model": "opus",
    "started": "2026-11-13T17:57:25.005Z",
-   "seconds": 2502,
+   "seconds": 2681,
    "finished": null,
    "effort": "high"
   },
@@ -122,7 +122,7 @@
    "task": "[build] T-4303 fix https shim before switch-on",
    "model": "opus",
    "started": "2026-11-13T18:07:27.081Z",
-   "seconds": 1900,
+   "seconds": 2079,
    "finished": null,
    "effort": "high"
   }
@@ -170,19 +170,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 33.0,
+   "pct": 34.0,
    "resets_at": "2026-11-13T15:50:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T13:35:05.237231-05:00",
+   "read_at": "2026-11-13T13:41:58.526503-05:00",
    "source": "live",
-   "left": 67.0,
+   "left": 66.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 93.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T13:35:05.237231-05:00",
+   "read_at": "2026-11-13T13:41:58.526503-05:00",
    "source": "live",
    "left": 7.0,
    "left_words": "of your weekly allowance left"
@@ -194,7 +194,7 @@
    "read_at": "2026-11-13T11:31:45.194382-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T13:35:05.237231-05:00"
+  "read_at": "2026-11-13T13:41:58.526503-05:00"
  },
  "ui": {
   "week_pct": 0.297,
@@ -214,7 +214,7 @@
   "week_pct": 43.7,
   "usage_pct": 32.7,
   "work_pct": 78.9,
-  "read_at": "2026-11-13T18:39:00+00:00",
+  "read_at": "2026-11-13T18:42:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -249,7 +249,7 @@
   }
  ],
  "disk": {
-  "free_gb": 12,
+  "free_gb": 13,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -258,14 +258,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T13:37:00-05:00",
+   "at": "2026-11-13T13:41:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-13T13:39:00-05:00",
+  "at": "2026-11-13T13:42:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -276,8 +276,8 @@
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
-  "n": 8,
+  "why": "Spread: usage is ahead of the week's even pace to Sat 23:00, so work waits until the line passes; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
+  "n": 1,
   "at": "2026-11-13T11:31:45.588365-05:00"
  },
  "lanes": [
@@ -542,27 +542,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T18:38:59Z",
+  "at": "2026-11-13T18:41:51Z",
   "s": {
    "T-4124": [
-    "merging",
-    "Rebasing onto current main",
-    1794595139475
+    "mergeq",
+    "1st to merge",
+    1794593331298
    ],
    "T-4284": [
     "merging",
     "Mac tests at the main gate",
-    1794594719475
+    1794594711298
+   ],
+   "T-4287": [
+    "merging",
+    "Mac tests at the main gate",
+    1794595191298
    ],
    "T-4303": [
     "testing",
     "its own tests, in its copy",
-    1794594239475
-   ],
-   "T-4287": [
-    "testing",
-    "its own tests, in its copy",
-    1794593939475
+    1794594231298
    ],
    "T-3820": [
     "merged",
@@ -574,17 +574,17 @@
   "nm": {
    "T-4124": "Find every slowdown the company built into its own process",
    "T-4284": "Add an Audit mode for one audit on chosen accounts",
-   "T-4303": "Fix the https shim before it turns on",
    "T-4287": "Show all Queued and In flight tasks in scroll boxes",
+   "T-4303": "Fix the https shim before it turns on",
    "T-3820": "Add the general web request call to the app"
   }
  },
  "ln": {
-  "at": "2026-11-13T18:38:59Z",
+  "at": "2026-11-13T18:41:51Z",
   "mq": {
    "n": {
-    "checking": 1,
-    "inline": 0,
+    "checking": 0,
+    "inline": 1,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -592,24 +592,15 @@
     "parked": 6
    },
    "m": {
-    "checking": 0,
-    "inline": null,
-    "conflicted": 1621,
+    "checking": null,
+    "inline": 33,
+    "conflicted": 1624,
     "failed": null,
     "held": null,
-    "retry": 105,
-    "parked": 106
+    "retry": 108,
+    "parked": 109
    },
-   "cur": [
-    [
-     [
-      "T-4124"
-     ],
-     "lining up with main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
     9,
     "2026-11-13T18:07:44Z"
@@ -617,12 +608,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T18:39:00Z",
-    "ld": 9.28,
+    "at": "2026-11-13T18:41:30Z",
+    "ld": 7.07,
     "c": 8,
     "sb": 0,
     "dk": [
-     12.0,
+     13.3,
      228.3
     ],
     "ss": [
@@ -651,8 +642,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 14 tasks",
-   "at": "2026-11-13T13:35:36-05:00"
+   "t": "Inbox \u2013 Evan's 1:41 PM Message on GitHub",
+   "at": "2026-11-13T13:41:28-05:00"
   },
   {
    "w": "Operator",
@@ -668,13 +659,25 @@
   "sent": "2026-11-13T18:35:57Z",
   "seconds": 98.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6861814529",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "T-4100 no longer shows on the board...."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -686,10 +689,10 @@
   "main": 4,
   "lanes": 1,
   "total": 5,
-  "at": "1:39 PM",
+  "at": "1:42 PM",
   "why": "",
-  "at_iso": "2026-11-13T18:39:00+00:00",
+  "at_iso": "2026-11-13T18:42:00+00:00",
   "started": "11:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:39 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:42 PM ET</p></section>"
  }
 }

@@ -74,6 +74,18 @@ day <span title="A measured fact that holds a grade below a letter, however good
 765f0785d8 (plan), 663d85081c, 62209cced5, 333f73bb8f (2a), b0d4ae5d2e, 3f4ca15744, e2423e22ad, b4ea45bd85 (2b),
 51a966075e, edcb7de30b, 2aed0887e5, 3b8cf24453, 0551cffe34 (1a), d7246eca5c, 76483ec93c (1b). Two commits carry
 another worker's email under the right name (663d85081c, d7246eca5c); not amended.
+
+## Investor addition, 5:22 PM ET 11-12 (an Investor, #41 c6837559986; log/<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span>.md 2026-11-12 5:22 PM)
+
+> Add into the audit for Restructuring that we should heavily focus on documentation during the app design process. Create dynamic workflow diagrams that visually display how everything works, and updates as code is changed. The Investors need to understand how EVERYTHING in the app works so they can be more involved in the development process
+
+For the next run: carry this into `documents/restructuring/00-plan.md`'s run rules first. The Restructuring gains a documentation part: (1) documentation as a standing step of designing each app part, not an afterthought; (2) diagrams of how everything in the app works (screens, the Python run, the widget path from script to Home Screen, storage, the extension, purchases), drawn by code from the code itself (no AI images) so they are regenerated whenever the code changes, and shown on the site where the Investors read them; (3) a first set of those diagrams built as part of the Restructuring's result, with the <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">generator</span> and how it stays current. Plain English throughout: the Investors must be able to follow every part.
+
+## Investor addition, 5:23 PM ET 11-12 (an Investor, #41 c6837583046; log/rulings.md 2026-11-12 5:23 PM)
+
+> The audit should research how other companies do this and implement a solution, considering oublic Github repo solutions or paid services if needed
+
+For the documentation part above: research how other software companies keep documentation and diagrams current with the code (web reading allowed, as in work/prompt.md), compare open-source tools on public GitHub (licence checked against Commandment 6: attribution, copyleft) and paid services, then build the chosen solution, not only recommend it. A paid service is real money: put it to the Investors as a request card with its price and wait for "approve" before any sign-up; build with a free option meanwhile where one serves.
 {% endraw %}
 
 </div>

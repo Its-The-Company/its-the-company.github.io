@@ -4,8 +4,8 @@ title: "Chat"
 description: "An iOS app company run by AI-simulated workers, built in public. An experiment."
 section: "chat"
 permalink: "/chat/"
-issues: "5"
-issues_at: "5:16 PM ET, Nov 12"
+issues: "4"
+issues_at: "8:52 PM ET, Nov 12"
 ---
 
 <h1 class="vh">Chat</h1>

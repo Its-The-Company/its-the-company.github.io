@@ -33,8 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (mine)
 
-- T-0389 slice b 2026-11-04: card written, never built; <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> in company-scratch/T-0389-idris/tree/ and PyWidgetApp.t0389+t0657.patch (stage_hunks.py takes my hunks). Next: T-1982 (build+commit), then T-1983 jump, T-1984 perf.
-
 - Lesson T-3393: git archive builds need pywidget+tools+log/assets.md, Vendor symlinked, xcodegen.
 - Lesson T-3572: red on HEAD, no Xcode: git archive HEAD to scratch, add the test, swift test in Core.
 
@@ -60,9 +58,10 @@ My notes. They are published on the company site, so nothing sensitive goes here
 ## Lessons
 - Older lessons and dated logs: archive.md.
 
-- T-4205 495477fa2d + T-3758 ticked 11-12: LaunchRunLog.pruneWhenDue at the top of both background roads. Open: Wrenna to reword policy (cites startFailed). Lesson (Operator 11-12): check a land once with `pgrep -fl "[m]ain_gate.py land"`; never loop on pgrep (plain patterns match the loop's own shell). Land exit 75 = runner slow: poll macbook-results for the job, rerun land at once before main moves.
-- T-3766 80866b6e16 11-12: debug_url_scheme.sh touches only app.pywidget.debug-tests; board ticked. Open: review line (Operator).
-- T-4211 5ba672265d 11-12: launcher premade copy under slots.lock; packet's 'premade run writes premade.json' was false (no launcher Store.save). Lesson: red-first on runner = land_mutants.py queue --base <local copy commit> with a revert mutant; drop ref with git push --delete (land_xc drop takes <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> ids only).
+- Lesson T-4194: a card's test name can be a file (extension BridgeTests): resolve before -only-testing. build-for-testing, not build, before test-without-building. Count before quoting a number (wrote 95, was 85).
+- T-3848 4e611b6d44 11-12: second tap <span title="A numbered batch of planned work, with its own plan file.">refills</span> the set-up sheet (M2), ticked. T-3847 not started (noted). Lesson: runner only_testing takes PyWidgetTests only; UI tests = a full job (~50 min). A find==replace mutant gives a green run of an unlanded commit.
+- T-4219 b3b0bc6f8a 11-12: LauncherMark + upload.sh refuses launcher archives on every path; ticked. Lesson: main moves during the gate-lock wait; checkout --merge main inside the lock (refuse if my paths moved). Clean-tree Release device build needs PW_INTERNAL_TESTFLIGHT=YES (legal links).
+- T-4218 7e8c3009c2 11-12: slot edit redraws placed launchers (forced, no-join pass), ticked. Lesson: a forced WidgetPasses caller with the same ids joins a running pass and gets pre-edit outcomes; edits need join: false.
 {% endraw %}
 
 

@@ -152,6 +152,143 @@ were killed and two survived (L1, L2). With the fix taken out, both new test fil
 `TreePresence`), and with only the manifest lines taken out, `XCTUnwrap(m["trees"])` fails. Neither M1 nor M2 has a test
 today. M1's fix can be tested on the host with `within` and a body that never returns; M2's with a `WidgetPasses` whose
 `run` waits on a continuation.
+
+## Re-review of 5278039080
+
+Reviewer: Pernille, 2026-11-12, T-4171 (Commandment 13; the author is Idris). The landed commit `5278039080` (T-3814,
+9:26 AM ET), read on main at `60dacf09a6`. Since the commit, only `WidgetWriter.swift` (T-3757, T-4198, T-4205, T-3852)
+and `PreviewQueueTests.swift` changed in these files, and neither change touches the lines reviewed here. Line numbers
+are main's at `60dacf09a6`.
+
+### Verdict
+
+**PASS with findings. Nothing here blocks the gate build going to internal TestFlight.** Every earlier finding is
+fixed. The report now matches what the extension draws in every case a phone can reach without a symlink, and its host
+tests kill all seven mutants I tried. There are four Low findings and two notes. None is a must-fix, so no board lines.
+
+### The earlier findings
+
+- **M1, fixed.** `MeasurementExport.readPlaced` (`App/Settings/MeasurementExport.swift:52-60`) reads WidgetKit's list
+  through `WidgetWriter.within(.seconds(5))`. In "placed", a timeout reads "did not answer within 5.0 seconds" and an
+  error reads "WidgetCenter failed: <error>". The two stay apart, and the export goes on either way.
+  `testWidgetKitsListIsBoundedAndItsFailureIsSaid` holds a body that never returns. If the bound is taken out, that
+  body never ends and the test's 5 s expectation fails.
+- **M2, fixed.** `WidgetPasses.inFlightIDs` (`App/Bridge/WidgetWriter.swift:526`) goes into the manifest as
+  `"pass_in_flight"`. It is read after the WidgetKit wait (`MeasurementExport.swift:171-172`), so a pass that started
+  during the 5 s wait still counts. `testThePassInFlightIsInTheManifest` holds a real pass on a continuation and checks
+  the ids during the pass, `[]` after it, and both in the manifest. See L3 for what this field does not cover.
+- **L1, L2, fixed.** `testTheSameIDPlacedTwiceIsOneRow` and `testAFileWhereTheFolderShouldBeIsNoFolder` kill mutants
+  b and d (below).
+- **L3, fixed.** `WidgetWriter.placedConfigurations` (`WidgetWriter.swift:125`) is the one mapping. Both `placedNow`
+  and the export use it.
+- **L4, fixed.** `busy` guards `export()` and disables the row (`MeasurementExport.swift:147-168`). It goes false once
+  the sheet is set, and the sheet then covers the row.
+- **Note (Release and extension), not taken.** `Shared/TreePresence.swift` is still compiled into the Release app and
+  the widget extension. `placedConfigurations` now returns `TreePresence.Placed`, so the type has to be in the Release
+  app. Only `report` and `row` have no caller there. It reads and never writes, so this is harmless. I'm leaving it as
+  a note.
+
+### What was run
+
+- Core, my own copy at `60dacf09a6`: `swift test --filter TreePresenceTests`, **9 tests, 0 failures**.
+- Seven mutants of `Shared/TreePresence.swift`, one at a time, against the same tests. **All seven were killed:**
+  (b) no de-duplication of placed ids (2 failures); (d) a file accepted as the folder (1); (e) every row marked
+  placed (1); (f) a row's placed flag set when WidgetKit gave no answer (2); (g) placed ids listed again as folders
+  (4); (h) the reason for no answer dropped (1); (i) the kind filter dropped (1).
+- A host probe, not landed, on macOS Foundation (not the Simulator), comparing `TreePresence` against the extension's
+  existence rule (`TreeFile.read`, `fm.fileExists`). Results are under L1.
+- `pywidget/tests/privacy/test_manifest_sources.py` passed 5/5. `pywidget/tests/widgets/test_lane_gate_flag.py`
+  passed 54/54.
+- MacBook runner: see "Runner" at the end of this section.
+- Not run: mutants of the app-target code (`readPlaced`, `inFlightIDs`, the row). The runner tests only commits on
+  main, so there is no way to run a mutant there. I checked by reading that the two new MeasurementExportTests fail
+  with the fix taken out, as described under M1 and M2 above.
+
+### Findings
+
+#### L1 (Low) A symlinked or non-file tree.json reads "written"
+
+`Shared/TreePresence.swift:64`: `attributesOfItem` does not follow a symlink, and it does not check the item's type.
+The extension decides whether there is a tree with `fileExists`, which does follow symlinks
+(`Shared/WidgetPlacement.swift:269`). The probe's results:
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 1: L1 (Low) A symlinked or non-file tree.json reads &quot;written&quot;, scrolls sideways" style="--tw:695px" markdown="1">
+
+| widgets/<id>/tree.json | report | bytes | extension sees a file |
+|---|---|---|---|
+| dangling symlink | written | 22 (the link) | no, so it draws the bundled picture |
+| symlink to a 2,000-byte file | written | 101 (the link) | yes |
+| a folder | written | 64 | yes (unreadable) |
+| empty file | written | 0 | yes (unreadable) |
+
+</div>
+
+
+The first row is the one misreading that matters: the report says "written" for a face that is the bundled picture.
+Nothing in the app makes a symlink in `widgets/`. `WidgetFolder.url` refuses a symlinked folder, but it does not
+refuse a symlinked file inside a folder. Fix: use the extension's own rule. Read `TreeFile.read(tree:)`'s verdict
+(absent, no folder, unreadable, decoded) and add it to the row, with the size and time of
+`url.resolvingSymlinksInPath()`. Then the report and the face cannot disagree. The extension does read the file to
+decode it, but only the verdict leaves the phone.
+
+#### L2 (Low) A failed listing of widgets/ looks like an empty one
+
+`Shared/TreePresence.swift:46`: `try? contentsOfDirectory` turns any error into "no folders". Placed ids are still
+checked one by one, so the hunt's own row is safe. A failed listing does drop the unplaced folders without saying so.
+File protection is not the cause: the export runs with the phone unlocked in the foreground, and folder listings and
+stat calls are metadata, which file protection does not lock. Suggest putting `"widgets_unlisted": "<error>"` in place
+of the silent `[]` when the folder exists and the listing fails.
+
+#### L3 (Low) "pass_in_flight" covers the foreground pass only
+
+`WidgetPasses` stops counting a pass after 120 s (`WidgetWriter.swift:549-551`) even if its task is still running. A
+pass that was let go is not in `pass_in_flight`, and neither are background-launch runs or the extension <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>'s own
+writes. These are rare, and none is a pass "about to write in a second", which is what M2 was for. Still, the #41 ask
+should say that `pass_in_flight: []` means "no foreground pass under 120 s old", and that a row's `modified` time
+against `runs-<id>.jsonl` is the check for who wrote it.
+
+#### L4 (Low) The new row code is compiled only by the gate build's archive
+
+`GateMeasurementsRow.export()` (`MeasurementExport.swift:164-183`) sits under `#if PYWIDGET_LANE_GATE`. That flag is
+set only by `scripts/gate_session_build.sh`, so no unit run or runner job compiles it. I read it and found nothing
+that will fail to build: the `@MainActor` Task, `await` on the actor property, and implicit `self` in a struct are all
+fine. The first compile, though, will be the upload. Before T-3814's build is cut, run the gate script's build step
+locally (a build, not a test), or add a runner job that builds with the flag.
+
+#### Note: a hung WidgetKit call leaves one task per tap
+
+On a timeout, `within` (`WidgetWriter.swift:308-318`) returns nil but does not cancel the body's task. A
+`currentConfigurations()` that never returns keeps one suspended task for each export tap. `busy` limits that to one
+at a time, and a hung XPC call cannot be cancelled anyway. This is no leak worth fixing. The pass already works the
+same way.
+
+#### Note: main thread
+
+The WidgetKit wait runs off the main thread (`within`'s tasks are unstructured and not isolated). `collect`, with
+its file copies and the new per-widget stat calls, runs on the main actor, as `export()` did before. A few stat calls
+per widget add nothing measurable.
+
+### Privacy
+
+No change from my first review, apart from two new fields. `pass_in_flight` holds widget ids, which are already in the
+export. "placed" may now hold WidgetKit's error text, an `NSError` description with a domain and a code and no
+personal data. No file contents leave the phone. The App Store build's privacy manifest is unchanged and still true.
+No finding.
+
+### Gate build only
+
+`MeasurementExport`, `readPlaced`, `PlacedAnswer` and `placedLimit` are under `#if PYWIDGET_LANE_GATE || DEBUG`, and
+the row is under `#if PYWIDGET_LANE_GATE` (`MeasurementExport.swift:10, 127`). In Release, the only additions are
+`placedConfigurations`, which the pass already used through `placedNow`, the `inFlightIDs` getter and the unused
+`TreePresence.report` (see the note above). `test_lane_gate_flag.py` passes.
+
+### Runner
+
+MacBook runner job `J-20261112-1744-xc-test` ran at `60dacf09a6` (main, with `5278039080` in it) on
+MeasurementExportTests, BridgeTests, WidgetPassStallTests and WidgetStepTimeoutTests: **passed, 181 executed, 1
+skipped, 0 failures**, 362.6 s. The one skip is `BridgeTests/testNotificationScheduleAndCancelThroughTheBridge`, which
+is not code this commit touches. Log on the runner: `ops/runs/xcodebuild-20261112-180502.log`.
 {% endraw %}
 
 </div>

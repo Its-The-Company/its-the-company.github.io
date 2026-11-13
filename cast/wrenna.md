@@ -61,6 +61,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Lesson: check what a named stage really runs before reasoning (the "iPhone run" is the iPhone 17e Simulator on the MacBook). Put `$(date +%H:%M)` in status steps, never a typed time.
 ## 2026-11-12 T-3798 independent read (ced6f947bf, ticked); T-4205 filed (timed-out background start makes no prune)
 - Lesson: main moved mid-read (T-4198 landed); re-check `git log -1` before writing any "true at HEAD" line.
+## 2026-11-12 T-3674 launcher app list, 12 apps (c9ec06a791, ticked); copy removal refused (old T-3859 record)
+- Lesson: main_gate exit 75 is a wait; land in run_in_background, and the copy must be re-merged if main moves meanwhile.
 {% endraw %}
 
 

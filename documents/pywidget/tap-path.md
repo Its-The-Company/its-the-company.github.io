@@ -35,7 +35,9 @@ Investors are told before any of them ships (#41 c6653117254).
    "Currently, only presenting a single sheet is supported. The next sheet will be presented when the currently
    presented sheet gets dismissed", and the tap showed nothing (ios/UITests/LauncherTapUITests.swift, red on
    2026-11-08). Now `LauncherSheetPresenter` presents it with UIKit from the window's top-most presented controller,
-   waits out a presentation still moving, and replaces the sheet from an earlier tap. The UI test opens a gallery
+   waits out a presentation still moving, and a second tap <span title="A numbered batch of planned work, with its own plan file.">refills</span> the sheet already up rather than dismissing it
+   (T-3848, Pernille's T-3680 M2: a dismiss would also take down a script's prompt sitting on the sheet, with no
+   answer; Tests/LauncherSheetPresenterTests.swift). The UI test opens a gallery
    entry, goes Home, comes back with `pywidget://open?slot=x` (a Debug launch argument, `-ui-launcher-url`, since
    XCUITest can't send an unregistered scheme), and checks that the sheet shows and that Cancel leaves the gallery's
    sheet under it.

@@ -320,8 +320,9 @@ contents are unconfirmed, and Wrenna or Idris may grow the set.
   write, the tap path's too, holds `launcher/slots.lock` (WidgetStateLock's bounded flock); a held lock is `.busy`
   and shows `bad.write`.
 - **Known-app list:** `ios/App/Launcher/launcher-apps.json`, `{"format": 1, "symbols": [...], "apps": [{name, url,
-  symbol, hue}]}`. The two entries (Music `music://`, Shortcuts `shortcuts://`) are **placeholders**, schemes not
-  confirmed on a device; Wrenna fills it. `LSApplicationQueriesSchemes` is set in project.yml, and a Core test
+  symbol, hue}]}`. Twelve entries (T-3674, Wrenna, 2026-11-12), each a link its maker documents on a public page,
+  sources in `research/inbound/t3674-sources.md`; **none confirmed on a device yet** (T-3765, TestFlight). The Music
+  and Shortcuts placeholders are gone. `LSApplicationQueriesSchemes` is set in project.yml, and a Core test
   checks the two lists match. The Symbol grid's set is the file's `symbols`.
 - **Set Up App** is presented by UIKit (`LauncherSheetPresenter`, T-3666), so it shows over any open sheet; the sheet
   closes through the presenter, not SwiftUI's dismiss. A slot to fill opens the editor's sheet in Set Up mode; no slot

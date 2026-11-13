@@ -33,9 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open
 
-- T-3784 11-12 (6521805448, ticked; T-3802 folded): 3.9 bridge hang = .pyc mkdir into Xcode.app blocks. Fix: -X pycache_prefix + audit-hook guard. Open: gate red twice, no log kept; reruns green. Lesson: an audit hook stops a write before the syscall.
-- T-4053 11-12: ticked SHIP internal TF for T-3826 (code = 2efa9e46b I reviewed); T-3899/T-3900 required before external. Lesson: diff the landed tree against the reviewed hash first; it may be a re-review.
-- T-3836 11-12: T-3657 overrun FIXES NEEDED, noted not ticked; 2 fix lines refused by board_tick add (links: bare T-3657), in scratch T-3836-pernille/lines.txt. Lesson: a fix line naming a task needs 'part of'/'from' for each ID.
 - T-3835 (9987593924): T-3826 PASS w/ findings, M1/M2 = T-3899/3900 (Idris); tick refused (Plain: ID before gloss), not ticked. Lesson: per-item timeouts on a shared dependency add up per item; bound the pass, not each step.
 - T-4018 (audit item 17, nightly host suites): tools/nightly_suites.py; Home hook latest(). Lesson: scratch.py wants T-NNNN, reserve with board_tick id --reserve; never pkill -f a filename my own run's command line holds.
 - 11-11 merge work: T-3741 landed a706e9d6f9; T-3774 file 7aa7c36e48; T-3150 held in copy T-3150-pernille/wt: its supervisor_test red was the test_red_share load race, fixed in 8755eab0cb (T-3995, also run_limited child <span title="A test written in advance. If it fires, we drop the idea.">kill</span>); rerun and land. Lesson: a hand-off patch that kills children before the parent changes the parent's exit code (wait returns 0); signal the parent first.
@@ -46,6 +43,9 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4200 11-12 (5dfcf280b7): T-4176 PASS w/ 3 Low; both ticked after Operator: board_tick format errors are not guard refusals, rewrite them. Lesson: name which Foundation a host probe ran on; the Simulator refused (516) where macOS emptied.
 - T-4204 11-12 (b47d4a056e): T-4198 PASS, 2 Low, ticked; L2 noted on T-4205. Lesson: a "check at each start" claim needs every early return before the start, not only the failed branch.
 - T-3400 11-12 (copy T-3400-pernille/wt, staged): shim slice green (host 3216/0, MacBook J-20261112-1222-land-m2-4427a7) but hook refused the land twice; not landed. Lines T-4202/T-4203. Lesson: the runner tests only main; the gate's land is the pre-land unit run.
+- T-4214 11-12 (897697441d): launcher steps FIX FIRST; M1 = T-4215 (Release tap path opens editor), M2 = T-4216 (Add overwrites slot); ticked. Lesson: a gate on the Settings row is not a gate; trace every entry point (widget links reach any build). swift_test_head.py takes no --help: it ran the suite.
+- T-4171 11-12 (bd7adfa7c7): T-3814 re-review PASS w/ 4 Low, ticked. Lesson: a runner job sits unpushed until the jobs loop pushes; say a job's state only from xc_route status, never ahead of it (I did once).
+- T-4217 11-12 (8b94b29ab4): T-4212 picker FIX FIRST; M3 = T-4218 (placed launcher stale after edit: reload redraws old tree.json, only the app pass rewrites it); ticked. Lesson: a reload is not a redraw; ask who writes what the widget reads.
 - Older entries (2026-10-25 8:12 PM to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## Lessons

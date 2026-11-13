@@ -37,8 +37,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-10 12:4x)
 
-- T-4012 item 10 re-read 11-12 3:1x AM (bfa169dd2d): verdict no, 0 fix/own of 59 <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> hand-outs, 3 give_ups settled other ways; old routes idle too. Next: 1:10 AM 11-14 or 10 sent_back rows. flow.py rates in main checkout refused by guard.
-- T-4012 0b48b7f25e (11-11 12:36 AM) personal_land.sh batch landed: slice 2 (no Retry line), host_keep wired, records apply 1 commit, pywidget/tools host floor, named docs/design .md runs xc. Left: retry file/re-pick/ledgers after T-4011 number. Owed: host_keep.jsonl rows; 'ops: lane records applied' count vs 72/49.
 - Unlanded patches on SSD company-scratch: T-3907 runner+main-gate; T-3962/65 (T-3962 also sim_hold, T-3967); T-3971 merge-only switch (13 files, green). T-3818 refused host_refused.
 - T-4013 owed: OPT-068 read 11-16; OPT-108 rerun; OPT-114 load/slow job.
 - T-4132 7155e22b37 (11-12): 8 OPTs closed; letter-met reverts 077/081/082/083/084 await a decision. Dup ids now OPT-131/132; merge_queue.py comments still say OPT-125.
@@ -47,7 +45,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-3887 32d57c9c12 (11-12): Live step in task_stages (redo of T-3704), ticks b375d789cd. Owed: Live ends once a TestFlight upload follows 11-08 (13 app steps open).
 
-- T-4154 379c9842b0 (11-12): pinned line silent = on a lane done list (pause with no handoff -> done); pin_done logs it; only ops/personal_requeue.txt restarts. own_retry_lanes counts due retries only. Owed: requeue decision (Operator).
+- T-4154 379c9842b0 (11-12): pinned line silent = on a <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> done list (pause with no handoff -> done); pin_done logs it; only ops/personal_requeue.txt restarts. own_retry_lanes counts due retries only. Owed: requeue decision (Operator).
 
 - T-4155 eb920cf8bc (11-12): usage-limit end -> unfinished tasks with commits off done list, claim released, board note + state/limited/<task>.json, packet resume words (tools/limit_end.py). Owed: first live limit end (log 'ended at a usage limit'); profile state reads are refused by security-guard, use tick logs.
 
@@ -59,7 +57,11 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4179 30eaa45f58 (11-12): requeued records '<ID> <12-hex line hash>'; bare ID = first line for that ID. T-4127 requeued on a 12:44 PM, no session (a at 93%). Owed: first T-4127 session on a after the window allows. guard_supervisor_test 1 FAIL only from a copy path with a space.
 
-- T-4161 bd24d50c7a (11-12 12:57 PM): b on Fable 5.2 (FABLE_MODEL_B); tick logs 'session: models:'. Owed: first models line in ops/runs/personal-tick-a/b.log. guard_supervisor_test fails 1 in a copy path with a space (not mine).
+- T-4161 bd24d50c7a (11-12 12:57 PM): b on Fable 5.2 (FABLE_MODEL_B); tick logs 'session: models:'. Owed: first models line in ops/runs/personal-tick-a/b.log.
+
+- T-4213 8094fd2d56 (11-12 8:29 PM): held window -> one Fable restart with pause watch (held exit 3; restart's own pause exit 0). Owed: first 'a restart in a held window' line in personal-tick-a.log (a alternates 'no task: 0 on the menu'). Land tip: update copy inside the gate lock.
+
+- T-4224 51744a9075 (11-12): lane Opus = the session's coordinator (main replies all opus, agent replies all fable); Home now says Fable. Open: coordinator could run cheaper (tick change).
 
 ## Lessons
 

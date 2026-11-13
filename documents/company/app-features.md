@@ -18,10 +18,12 @@ approach) and an Investor #41 c6814286499 (11:13 PM ET 11-11: build a way to mer
 needed). Part of T-4092. It builds on ops/plans/task-process-redesign.md (T-4122), section 4.1.
 
 The list is data: ops/plans/app-features.json. Its check is ops/plans/app-features-check.py, which reads the board
-and the audit's ledger and fails on a judged line that sits in no feature, a line in two, a step that is no longer
-open, and a target path that does not exist. Every count here is that script's output at 1:3x PM ET 11-12 unless a
-line names another source. Sections 1 and 2 are its `--table` and `--md` output and go stale as steps finish; run
-the script for the live list.
+and the audit's ledger and fails on a judged line that sits in no feature, a line in two, a step that left the
+board without a tick, and a target path that does not exist. A step ticked after the list was written is done, not
+a fault: the script counts and names it (changed at closing, 6:4x PM ET 11-12; before that it failed on the first
+step anyone finished). Every count here is that script's output at 1:3x PM ET 11-12 unless a line names another
+source. Sections 1 and 2 are its `--table` and `--md` output and go stale as steps finish; run the script for the
+live list.
 
 ## 0. In five lines
 
@@ -622,6 +624,12 @@ step of a feature folds into that feature's one review at its merge.
 - **Not done here.** The five lines the audit marked remove or merge wait for T-4101. The 76 review lines wait
   for T-4098. T-4195 and T-4196 have no short name in ops/task-names.tsv, because their titles are over 48
   characters; the site shows the title.
+- **Closing, 6:4x PM ET 11-12.** The lane b branch merged (989c0239ef, a4a15dc8fb, d84c7fee52 on main): all 206
+  links, the 14 lifted holds and the note on T-4191 are on the board. Since the post at 1:39 PM, eight steps were
+  finished and ticked (T-3664, T-3688, T-3758, T-3766, T-3852, T-4199, T-4201, T-4205), so 198 are open. T-4195 and
+  T-4196 now have short names in ops/task-names.tsv. T-4098 carries a note on the 76 review lines: judge them by
+  feature. T-4212, an app line written this afternoon, was given "part of T-4185" by its author; it is not in the
+  list, and the board's Links field, not this file, is the live record of what belongs to a feature.
 
 ## 6. What would make this fail, and what is not measured
 
@@ -647,6 +655,107 @@ step of a feature folds into that feature's one review at its merge.
 - **The 27 is arithmetic.** No feature has merged this way yet. The first week's counts replace it.
 - **The merge tools have one owner for now** (the audit-implementation session, rule 62). T-4194, T-4195 and
   T-4196 wait on its daily batch for the parts that touch them. Odalys has not yet confirmed her side of T-4196.
+
+## 7. T-4195: an iPhone pass is reused when the app's inputs did not change
+
+Idris, 2026-11-12. Design: [`ops/plans/task-process-redesign.md`](task-process-redesign.html) 4.2. Code: `tools/xc_inputs.py` (the key),
+`tools/xc_green.py` (the kept passes), `tools/land_xc.py` (the reuse and its record), `tests/xc_inputs_test.py`.
+The two counts below come from `python3 -I ops/plans/app-features-count.py`.
+
+### 7.1 What is built
+
+- **The key** is one hash over what the iPhone build and PyWidgetTests read at a commit. It covers all of
+  `pywidget/`; `tools/xc.sh`; every `tools/` file that xc.sh, `project.yml` or a script under
+  `pywidget/ios/scripts` names, and the modules those import (23 files today, `python3 -I tools/xc_inputs.py list`
+  prints them); and `log/assets.md`, which the "Install Python packages" build phase reads. All of `pywidget/` is
+  in because 34 test files build a path from their own place in the source tree and read fixtures through it, so
+  no folder there can be called unread without checking each test. The rule has a version, and the tool's own bytes are hashed with it, so a
+  change to the rule cancels every kept pass.
+- **What is kept.** Only a pass (exit 0), for 24 hours from its own result. A red at a key takes the key out. A wait
+  (75), a job the runner stopped (143) and a job the runner could not take (3) neither keep nor remove anything.
+- **The reuse.** `land_xc.py` prequeue, ensure and check look for the commit's tree first (T-3759), then for its
+  key. A pass found by the key is the answer: no job is queued, and one row with event "reused" goes into
+  `ops/metrics/land_xc.jsonl`. The row names the key, the rule, and the pass: its job, commit, tree and time. The
+  merge queue's gate calls `land_xc.py check`, so it is answered the same way and no pipeline tool changed.
+- **Found while reading the build.** `log/assets.md` is read by the build, but land_xc.py's list of paths no Xcode
+  run reads (T-3102) had all of `log/` on it. It now counts that one file as read.
+- **Tests.** 87 checks, all passing. 16 bugs planted one at a time in a scratch copy were each caught.
+
+### 7.2 The count: how much of the 384 s is the build
+
+At most about 74 s, a fifth. Three quarters of the run is the tests themselves.
+
+The window is the redesign's own: result rows from 2026-11-06 8:43 AM to 2026-11-12 6:48 AM ET. 124 rows, 118
+with a verdict, 81 passes with a median of 384.0 s. All 81 carry both marks.
+
+
+<div class="tbl" role="region" tabindex="0" aria-label="Table 3: 7.2 The count: how much of the 384 s is the build, scrolls sideways" data-n="4" style="--tw:571px" markdown="1">
+
+| Part of a passing run | Median | Quartiles | Share of its job |
+|---|---|---|---|
+| Before xc.sh starts: the runner's fetch checks, unpack and xcodegen | 13.1 s | 11 to 19 s | 4% |
+| xc.sh's start to the end of the first test class: build, install, launch | 74.0 s | 56 to 98 s | 20% |
+| From there to the job's end: the test classes, the verdict, the shutdown | 282.0 s | 257 to 308 s | 76% |
+
+</div>
+
+
+- **How it was measured.** The job list is the main checkout's `ops/metrics/land_xc.jsonl` (the file is not in
+  git, and this worktree has none). Each job's times are in the runner's `result.json` on
+  `origin/macbook-results`. Two marks cut the job's counted seconds: the time in the name of xc.sh's log, and the
+  first "Test Suite ... passed at" line the summary kept.
+- **The same count on a later window** (to 6:50 PM 11-12, 103 passes, median 387.9 s): 12.7 s, 73.0 s, 303.0 s.
+  Reds in the first window (37, both marks on 29): 15.6 s, 61.0 s, 236.0 s.
+- **What it is not.** The records hold no mark between the end of the build and the first test, so 74 s is the
+  build's upper bound: it includes the install on the Simulator and the test host's launch. The runner runs one
+  `xcodebuild test`, not a build-for-testing and a test-without-building. Each job builds in its own folder, so
+  every build is a full one. The three medians are each their own and do not add up to 384 (they sum to 369).
+  About 26 s more lie around the steps (the checkout before them, reading the log after); the 384 s does not
+  count them.
+  `ops/metrics/xc.jsonl` holds the Mac mini's own runs and no split of build and test, so it was not used.
+- **What it means for the redesign's open question.** Running only the touched test classes would be cheap. Such
+  a run would cost about 87 s (13 + 74) plus those classes' own time, against 384 s. That is an estimate from
+  these medians; no filtered run was timed.
+
+### 7.3 What the key would have answered last week: nothing (an estimate)
+
+I replayed last week's jobs against the key: 149 jobs that ran and returned a verdict, 11-06 to 7:09 PM 11-12.
+A job counts as answered when a pass with its key was kept at the moment it was queued.
+
+- **0 of 149 would have been reused.** The 149 jobs have 144 different keys, and none matched a pass that was
+  kept when the job was queued.
+- **Why.** The land already asks for an iPhone run only when a branch changes what the app is built from. 146 of
+  the 149 branches changed an input themselves. A branch that changes only records or host tools rarely reaches
+  the MacBook (3 of the 149 did), so there is almost no run for the key to save.
+- **A finer key would not help.** Leaving out the app guide, `templates/`, `pywidget/tools/` and the docs outside
+  `docs/design/` also gives 0 of 149. I did not check that those folders are unread, and I propose no line for it.
+- **Where a reuse can still come from.** The same app content checked a second time after only records moved:
+  a gate train and its spare's land with a record commit between them, or a lane's retry under another id. Last
+  week five jobs repeated an earlier job's key, and none of them was queued after a pass at that key.
+- **So the expected week's count is close to zero.** The key is safe and costs about one second a check. If the
+  week's count is zero, section 4.2 should come out of the redesign's "three layers" arithmetic.
+
+### 7.4 The week's count of reuses (T-4223 writes it here)
+
+Not counted yet: no reuse can exist before this lands. T-4223 (Idris) runs, a week after the land:
+
+`python3 -I ops/plans/app-features-count.py reuses <main checkout>/ops/metrics/land_xc.jsonl --since <land> --until <land + 7 days>`
+
+It writes here: the window; checks answered by the app key and by the tree key, the gate's apart from the
+lanes'; jobs queued; results; and the saved MacBook minutes as an estimate. It also says whether the done
+condition's first half is met: a land's record that shows a reused pass by its key.
+
+### 7.5 Not done
+
+- A pass that ran on the Mac mini (the land's fallback, the gate's run "here") is not kept by the key. Only a
+  MacBook job read through `land_xc.py` is.
+- A job already queued for a lane before a kept pass answers it is not withdrawn. T-3759's reuse by tree has the
+  same gap.
+- The gate's own count of reuses does not count one the key answered. The note on T-4195's line gives the
+  audit-implementation session the two lines for it (rule 62).
+- The land's rule for when a branch needs the iPhone run at all (`personal_land.sh`, floor) names fewer paths than
+  the build reads. It leaves out `pywidget/tests/` fixtures, `pywidget/licenses/`, `log/assets.md` and the
+  top-level tools the build runs. That is in the same note; I changed nothing there.
 {% endraw %}
 
 </div>

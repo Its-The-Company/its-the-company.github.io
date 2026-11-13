@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T13:37:59.321482+00:00",
+ "at": "2026-11-13T13:41:17.588523+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -75,7 +75,7 @@
    "task": "[site] T-4005 Home drop Needs you, restore panels",
    "model": "opus",
    "started": "2026-11-13T13:13:46.645Z",
-   "seconds": 1452,
+   "seconds": 1650,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +84,7 @@
    "task": "[build] T-2261 completion list UI test and shots",
    "model": "opus",
    "started": "2026-11-13T13:35:19.101Z",
-   "seconds": 160,
+   "seconds": 358,
    "finished": null,
    "effort": "high"
   }
@@ -132,19 +132,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 12.0,
+   "pct": 13.0,
    "resets_at": "2026-11-13T10:50:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T08:33:59.974010-05:00",
+   "read_at": "2026-11-13T08:40:01.673493-05:00",
    "source": "live",
-   "left": 88.0,
+   "left": 87.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 87.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T08:33:59.974010-05:00",
+   "read_at": "2026-11-13T08:40:01.673493-05:00",
    "source": "live",
    "left": 13.0,
    "left_words": "of your weekly allowance left"
@@ -156,7 +156,7 @@
    "read_at": "2026-11-13T04:58:50.100124-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T08:33:59.974010-05:00"
+  "read_at": "2026-11-13T08:40:01.673493-05:00"
  },
  "ui": {
   "week_pct": 0.3,
@@ -176,7 +176,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T13:38:00+00:00",
+  "read_at": "2026-11-13T13:41:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -197,7 +197,7 @@
   }
  ],
  "disk": {
-  "free_gb": 25,
+  "free_gb": 26,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -206,14 +206,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T08:33:00-05:00",
+   "at": "2026-11-13T08:39:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T08:38:00-05:00",
+  "at": "2026-11-13T08:41:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -468,27 +468,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T13:37:59Z",
+  "at": "2026-11-13T13:41:17Z",
   "s": {
+   "T-2261": [
+    "testing",
+    "its own tests, in its copy",
+    1794577277588
+   ],
    "T-4005": [
     "testing",
     "its own tests, in its copy",
-    1794576359321
-   ],
-   "T-2261": [
-    "merged",
-    "on main 8:34 AM ET",
-    1794576840000,
-    "Idris"
+    1794576377588
    ]
   },
   "nm": {
-   "T-4005": "Home: drop Needs you, restore old panels",
-   "T-2261": "Build and test the editor completion changes"
+   "T-2261": "Build and test the editor completion changes",
+   "T-4005": "Home: drop Needs you, restore old panels"
   }
  },
  "ln": {
-  "at": "2026-11-13T13:37:59Z",
+  "at": "2026-11-13T13:41:17Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -502,11 +501,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1320,
+    "conflicted": 1324,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 6972
+    "parked": 6975
    },
    "cur": [],
    "ld": [
@@ -516,12 +515,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T13:38:11Z",
-    "ld": 5.35,
+    "at": "2026-11-13T13:41:01Z",
+    "ld": 5.56,
     "c": 8,
     "sb": 1,
     "dk": [
-     25.8,
+     25.5,
      228.3
     ],
     "ss": [
@@ -578,10 +577,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "8:38 AM",
+  "at": "8:41 AM",
   "why": "",
-  "at_iso": "2026-11-13T13:38:00+00:00",
+  "at_iso": "2026-11-13T13:41:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:38 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:41 AM ET</p></section>"
  }
 }

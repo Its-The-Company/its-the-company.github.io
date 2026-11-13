@@ -33,7 +33,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - Lesson: hold a pre-written rule to its words when the evidence lands close ("no input" is not "no answer"); the point of writing it first was to not bend it after. Its words = the committed entry (OPT-049).
 - L5 (T-1012): never accept a standing red; a SKIP with a reason, or it hides the next one.
 - pywidget build — product chosen 2026-10-25; v1 scope, money path, hiring, board state at build start
-- queue audit T-4092 — started 11-11 on <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> a; plan, ledger, slices T-4096..T-4105, what each slice may apply
+- queue audit T-4092 — plan, ledger, slices; group 2 (T-4197) done 11-13, group 1's apply (T-4117) held; how to apply one group
 - task process redesign T-4122 — card, one checker, feature unit, fitted iPhone group size; who builds, dates
 - efficiency review T-4124 — a metrics row's `seconds` can be its whole run's time on every row; queue a note before writing that it exists
 - account fixes T-4305 — unified session: no; #303 pending; T-4314, T-4315; re-read 11-20
@@ -47,7 +47,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3896: a company-owned rule is not a card (no Kind fits; request_card refuses by the 11-05 amendment): decision record + plain note. Old parked: set aside via merge_queue_hold.txt, never refs/archive.
 - T-4107: a grep scoped to one file is not a repo grep; before writing 'X is gone' as a remove's evidence, run the repo-wide grep and quote its count (T-0472 row had to be superseded). Verdict counts come from the ledger's last row per ID.
 - T-3710: keep the script with every count I publish (my 11-08 idle count did not reproduce: 60.9 vs 65.8); script at ops/plans/T-3710-idle-by-cause.py.
-- T-4117: a reflog check (amendments_watch) can be green on one lane, red on another: run it where the records were made.
+- T-4117: a reflog check (amendments_watch) can be green on one <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span>, red on another: run it where the records were made.
 - T-4267: ADRs are code to main_folder_guard: worker copy + main_gate. T-4272: an answer that changes a decision's content withdraws the content, not a form the Investors approved; check what each A approved, in time order.
 {% endraw %}
 

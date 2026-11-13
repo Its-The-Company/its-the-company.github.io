@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T20:51:06.145414+00:00",
+ "at": "2026-11-13T21:09:41.987241+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -132,32 +132,31 @@
  },
  "meter": {
   "five_hour": {
-   "pct": null,
+   "pct": 0.0,
    "resets_at": null,
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T15:33:57.181476-05:00",
+   "read_at": "2026-11-13T15:52:56.933176-05:00",
    "source": "usage",
-   "last_reset": "2026-11-13T20:50:00.298799+00:00",
-   "left": null,
+   "left": 100.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 94.0,
-   "resets_at": "2026-11-15T06:59:59.298818+00:00",
+   "resets_at": "2026-11-15T06:59:59.067176+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T15:33:57.181476-05:00",
+   "read_at": "2026-11-13T15:52:56.933176-05:00",
    "source": "usage",
    "left": 6.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-15T07:00:00.298954+00:00",
+   "resets_at": "2026-11-15T07:00:00.067362+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-13T15:33:57.181476-05:00",
+   "read_at": "2026-11-13T15:52:56.933176-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T15:33:57.181476-05:00"
+  "read_at": "2026-11-13T15:52:56.933176-05:00"
  },
  "ui": {
   "week_pct": 0.304,
@@ -172,12 +171,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-13T15:48:57-05:00",
+ "next_tick": "2026-11-13T16:07:57-05:00",
  "personal": {
   "week_pct": 46.46,
   "usage_pct": 33.1,
   "work_pct": 79.4,
-  "read_at": "2026-11-13T20:53:00+00:00",
+  "read_at": "2026-11-13T21:12:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -207,14 +206,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T15:50:00-05:00",
+   "at": "2026-11-13T16:09:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-13T15:53:00-05:00",
+  "at": "2026-11-13T16:12:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -412,11 +411,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T20:51:06Z",
+  "at": "2026-11-13T21:09:41Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-13T20:51:06Z",
+  "at": "2026-11-13T21:09:41Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -430,11 +429,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 921,
+    "conflicted": 940,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 237
+    "parked": 256
    },
    "cur": [],
    "ld": [
@@ -444,28 +443,17 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T20:50:28Z",
-    "ld": 0.52,
+    "at": "2026-11-13T21:09:31Z",
+    "ld": 0.39,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.3,
+     14.0,
      228.3
     ],
     "ss": [
      186.8,
      953.7
-    ],
-    "sn": []
-   },
-   "macbook": {
-    "at": "2026-11-13T20:26:54Z",
-    "ld": 0.23,
-    "c": 12,
-    "sb": 0,
-    "dk": [
-     371.8,
-     926.4
     ],
     "sn": []
    }
@@ -491,10 +479,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "3:53 PM",
-  "why": "Waiting for the week's line: this week's usage is ahead of its even pace. Last check 3:52 PM ET.",
-  "at_iso": "2026-11-13T20:53:00+00:00",
+  "at": "4:12 PM",
+  "why": "Waiting for the week's line: this week's usage is ahead of its even pace. Last check 4:11 PM ET.",
+  "at_iso": "2026-11-13T21:12:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 3:53 PM ET</p><p class=\"an-why\">Waiting for the week's line: this week's usage is ahead of its even pace. Last check 3:52 PM ET.</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 4:12 PM ET</p><p class=\"an-why\">Waiting for the week's line: this week's usage is ahead of its even pace. Last check 4:11 PM ET.</p></section>"
  }
 }

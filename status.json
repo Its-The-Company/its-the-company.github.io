@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T04:22:02.676508+00:00",
+ "at": "2026-11-13T04:25:05.924646+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -112,17 +112,25 @@
  },
  "workers": [
   {
-   "name": "pernille",
-   "task": "[review] T-4238 review shared step wait fix",
+   "name": "idris",
+   "task": "[build] T-3895 record extension runs that never start",
    "model": "opus",
-   "started": "2026-11-13T04:17:53.608Z",
-   "seconds": 249,
+   "started": "2026-11-13T04:24:28.027Z",
+   "seconds": 37,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Pernille",
+ "who": "Idris",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-4238 review shared step wait fix",
+   "model": "opus",
+   "started": "2026-11-13T04:17:53.608Z",
+   "seconds": null,
+   "finished": "2026-11-13T04:23:45.958000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-3900 one wait per refresh on hung step",
@@ -146,14 +154,6 @@
    "started": "2026-11-13T02:17:14.265Z",
    "seconds": null,
    "finished": "2026-11-13T03:12:58.570000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4232 Double Spread usage mode",
-   "model": "opus",
-   "started": "2026-11-13T02:17:34.315Z",
-   "seconds": null,
-   "finished": "2026-11-13T03:11:26.139000+00:00"
   }
  ],
  "queue": {
@@ -208,7 +208,7 @@
   "week_pct": 39.76,
   "usage_pct": 32.4,
   "work_pct": 79.4,
-  "read_at": "2026-11-13T04:22:00+00:00",
+  "read_at": "2026-11-13T04:25:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -245,7 +245,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T23:22:00-05:00",
+  "at": "2026-11-12T23:25:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -262,18 +262,18 @@
  },
  "lanes": [
   {
-   "name": "Pernille",
+   "name": "Idris",
    "state": "running",
-   "task": "[review] T-4238 review shared step wait fix",
+   "task": "[build] T-3895 record extension runs that never start",
    "model": "opus",
-   "since": "2026-11-13T04:17:53.608Z",
+   "since": "2026-11-13T04:24:28.027Z",
    "next": [],
    "effort": "high"
   },
   {
-   "name": "Idris",
+   "name": "Pernille",
    "state": "next",
-   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
+   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -314,14 +314,14 @@
  "tasks": {
   "run": [
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the shared step wait fix",
+    "w": "Idris",
+    "k": "build",
+    "t": "Record widget runs that never start in the extension",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-13T04:17:53.608Z",
+    "at": "2026-11-13T04:24:28.027Z",
     "o": "c",
-    "task": "T-4238"
+    "task": "T-3895"
    }
   ],
   "src": "plan",
@@ -399,6 +399,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "I checked Idris's fix that makes a widget refresh wait only once when a step every widget needs...",
+    "at": "2026-11-12T23:23:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "Closed as a duplicate: the same crash in the task-names tool is already on the board as T-4221...",
     "at": "2026-11-12T23:18:00-05:00"
@@ -407,11 +412,6 @@
     "w": "Idris",
     "t": "When one step every widget needs (the Pro purchase check, starting Python, or the launch log)...",
     "at": "2026-11-12T23:16:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Finished work from a personal account no longer bounces back over the shared list of task names;...",
-    "at": "2026-11-12T22:38:00-05:00"
    }
   ],
   "count": {
@@ -421,8 +421,12 @@
    "you": 18
   },
   "fin": {
-   "n": 8,
+   "n": 9,
    "rows": [
+    [
+     "T-4238",
+     "Review the shared step wait fix"
+    ],
     [
      "T-3900",
      "Wait once per refresh when a..."
@@ -442,10 +446,6 @@
     [
      "T-4236",
      "Clear the main gate red from..."
-    ],
-    [
-     "T-4235",
-     "Use each account's full..."
     ]
    ]
   }
@@ -489,11 +489,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T04:21:45Z",
+  "at": "2026-11-13T04:24:54Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-13T04:21:45Z",
+  "at": "2026-11-13T04:24:54Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -507,11 +507,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 764,
+    "conflicted": 767,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 788
+    "parked": 791
    },
    "cur": [],
    "ld": [
@@ -521,8 +521,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T04:21:23Z",
-    "ld": 0.48,
+    "at": "2026-11-13T04:24:54Z",
+    "ld": 0.95,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -581,10 +581,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "11:22 PM",
+  "at": "11:25 PM",
   "why": "",
-  "at_iso": "2026-11-13T04:22:00+00:00",
+  "at_iso": "2026-11-13T04:25:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:22 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:25 PM ET</p></section>"
  }
 }

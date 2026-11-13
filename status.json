@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T16:35:12.076555+00:00",
+ "at": "2026-11-13T16:38:15.492285+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -63,7 +63,7 @@
    "task": "[release] T-4270 build 6 to TestFlight",
    "model": "opus",
    "started": "2026-11-13T16:33:29.474Z",
-   "seconds": 102,
+   "seconds": 286,
    "finished": null,
    "effort": "high"
   },
@@ -72,7 +72,7 @@
    "task": "[design] T-4271 Builder drag-and-drop mock-ups",
    "model": "opus",
    "started": "2026-11-13T16:33:37.534Z",
-   "seconds": 94,
+   "seconds": 277,
    "finished": null,
    "effort": "high"
   },
@@ -81,7 +81,7 @@
    "task": "[review] T-4268 review hung store check fix",
    "model": "opus",
    "started": "2026-11-13T16:33:43.235Z",
-   "seconds": 88,
+   "seconds": 272,
    "finished": null,
    "effort": "high"
   },
@@ -90,44 +90,62 @@
    "task": "[plan] T-4267 in-widget Python first plan",
    "model": "opus",
    "started": "2026-11-13T16:33:48.889Z",
-   "seconds": 83,
+   "seconds": 266,
    "finished": null,
    "effort": "high"
   },
+  {
+   "name": "idris",
+   "task": "[build] T-4258 land completion list fixes",
+   "model": "opus",
+   "started": "2026-11-13T16:35:40.793Z",
+   "seconds": 154,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4275 gate runs new app suites",
+   "model": "opus",
+   "started": "2026-11-13T16:38:14.339Z",
+   "seconds": 1,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Idris x2, Maren, Pernille, Ines, Odalys",
+ "recent": [
   {
    "name": "ines",
    "task": "[plan] T-3400 route past the gate gap",
    "model": "opus",
    "started": "2026-11-13T16:35:08.528Z",
-   "seconds": 3,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-13T16:37:59.420000+00:00"
   }
  ],
- "who": "Idris, Maren, Pernille, Ines x2",
- "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 534,
+  "runnable_count": 536,
   "blocked_count": 102
  },
  "meter": {
   "five_hour": {
-   "pct": 5.0,
-   "resets_at": "2026-11-13T20:50:00.102315+00:00",
+   "pct": 7.0,
+   "resets_at": "2026-11-13T15:50:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T11:31:45.194382-05:00",
-   "source": "usage",
-   "left": 95.0,
+   "read_at": "2026-11-13T11:37:10.382058-05:00",
+   "source": "live",
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 90.0,
-   "resets_at": "2026-11-15T06:59:59.102335+00:00",
+   "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T11:31:45.194382-05:00",
-   "source": "usage",
+   "read_at": "2026-11-13T11:37:10.382058-05:00",
+   "source": "live",
    "left": 10.0,
    "left_words": "of your weekly allowance left"
   },
@@ -138,7 +156,7 @@
    "read_at": "2026-11-13T11:31:45.194382-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T11:31:45.194382-05:00"
+  "read_at": "2026-11-13T11:37:10.382058-05:00"
  },
  "ui": {
   "week_pct": 0.297,
@@ -158,7 +176,7 @@
   "week_pct": 43.7,
   "usage_pct": 32.7,
   "work_pct": 78.9,
-  "read_at": "2026-11-13T16:35:00+00:00",
+  "read_at": "2026-11-13T16:38:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -217,23 +235,23 @@
   }
  ],
  "disk": {
-  "free_gb": 19,
+  "free_gb": 15,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 175
+   "free_gb": 185
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T11:27:00-05:00",
+   "at": "2026-11-13T11:37:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T11:35:00-05:00",
+  "at": "2026-11-13T11:38:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -287,11 +305,12 @@
   },
   {
    "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[tools] T-4275 gate runs new app suites",
+   "model": "opus",
+   "since": "2026-11-13T16:38:14.339Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Wrenna",
@@ -345,14 +364,24 @@
     "task": "T-4267"
    },
    {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Send Python's https through iOS and drop the OpenSSL modules",
+    "w": "Idris",
+    "k": "build",
+    "t": "Pin the completion list under the typed word",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-13T16:35:08.528Z",
+    "at": "2026-11-13T16:35:40.793Z",
     "o": "c",
-    "task": "T-3400"
+    "task": "T-4258"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Gate runs a new app test suite when landing",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-13T16:38:14.339Z",
+    "o": "c",
+    "task": "T-4275"
    }
   ],
   "src": "plan",
@@ -384,6 +413,13 @@
     "t": "Stopped pinned task goes back on the menu by...",
     "s": "next",
     "o": "i"
+   },
+   {
+    "w": "Operator",
+    "k": "ops",
+    "t": "Run Evan's account on the audit without the...",
+    "s": "next",
+    "o": "c"
    },
    {
     "w": "Idris",
@@ -419,13 +455,6 @@
     "t": "Retire the Set aside stage on Home",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Every premade widget draws on the iPhone",
-    "s": "next",
-    "o": "i"
    }
   ],
   "done": [
@@ -446,7 +475,7 @@
    }
   ],
   "count": {
-   "next": 534,
+   "next": 536,
    "wait": 53,
    "blocked": 49,
    "you": 18
@@ -495,11 +524,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T16:34:52Z",
-  "s": {}
+  "at": "2026-11-13T16:38:15Z",
+  "s": {
+   "T-4270": [
+    "merging",
+    "Mac tests at the main gate \u00b7 2 groups of tests done",
+    1794587835492
+   ],
+   "T-4258": [
+    "merging",
+    "Mac tests at the main gate",
+    1794587835492
+   ],
+   "T-4268": [
+    "merging",
+    "Mac tests at the main gate",
+    1794587895492
+   ]
+  },
+  "nm": {
+   "T-4270": "Send build 6 with the premades fix to TestFlight",
+   "T-4258": "Pin the completion list under the typed word",
+   "T-4268": "Review the hung store check fix"
+  }
  },
  "ln": {
-  "at": "2026-11-13T16:34:52Z",
+  "at": "2026-11-13T16:38:15Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -513,11 +563,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1497,
+    "conflicted": 1501,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 7149
+    "parked": 7152
    },
    "cur": [],
    "ld": [
@@ -527,12 +577,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T16:34:28Z",
-    "ld": 1.47,
+    "at": "2026-11-13T16:37:51Z",
+    "ld": 4.37,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.8,
+     14.7,
      228.3
     ],
     "ss": [
@@ -542,8 +592,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-13T16:05:44Z",
-    "ld": 1.76,
+    "at": "2026-11-13T16:36:18Z",
+    "ld": 0.25,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -561,7 +611,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 5 tasks",
+   "t": "Work session \u2013 6 tasks",
    "at": "2026-11-13T11:32:07-05:00"
   },
   {
@@ -571,7 +621,7 @@
    "m": "opus",
    "e": "xhigh",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-13T11:27:29-05:00"
+   "at": "2026-11-13T11:37:59-05:00"
   },
   {
    "w": "Operator",
@@ -593,8 +643,8 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-13T16:31:24Z",
-  "seconds": 161.0
+  "sent": "2026-11-13T16:35:35Z",
+  "seconds": 143.0
  },
  "inbox": [],
  "trimmed": [
@@ -608,13 +658,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 5,
+  "main": 6,
   "lanes": 3,
-  "total": 8,
-  "at": "11:35 AM",
+  "total": 9,
+  "at": "11:38 AM",
   "why": "",
-  "at_iso": "2026-11-13T16:35:00+00:00",
+  "at_iso": "2026-11-13T16:38:00+00:00",
   "started": "11:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 5, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:35 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 6, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:38 AM ET</p></section>"
  }
 }

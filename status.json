@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T04:58:31.842346+00:00",
+ "at": "2026-11-13T05:01:36.109907+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -112,17 +112,25 @@
  },
  "workers": [
   {
-   "name": "idris",
-   "task": "[build] T-3895 record extension runs that never start",
+   "name": "pernille",
+   "task": "[review] T-4242 review widget start failure rows",
    "model": "opus",
-   "started": "2026-11-13T04:24:28.027Z",
-   "seconds": 2043,
+   "started": "2026-11-13T04:59:07.229Z",
+   "seconds": 148,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris",
+ "who": "Pernille",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-3895 record extension runs that never start",
+   "model": "opus",
+   "started": "2026-11-13T04:24:28.027Z",
+   "seconds": null,
+   "finished": "2026-11-13T04:58:45.437000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[review] T-4238 review shared step wait fix",
@@ -146,20 +154,12 @@
    "started": "2026-11-13T03:11:53.611Z",
    "seconds": null,
    "finished": "2026-11-13T03:30:00.696000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-4230 Restructuring on Documents",
-   "model": "opus",
-   "started": "2026-11-13T02:17:14.265Z",
-   "seconds": null,
-   "finished": "2026-11-13T03:12:58.570000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 574,
+  "runnable_count": 575,
   "blocked_count": 103
  },
  "meter": {
@@ -208,7 +208,7 @@
   "week_pct": 39.76,
   "usage_pct": 32.4,
   "work_pct": 79.4,
-  "read_at": "2026-11-13T04:58:00+00:00",
+  "read_at": "2026-11-13T05:01:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -257,14 +257,14 @@
   }
  },
  "lock_in": {
-  "on": true,
+  "on": false,
   "pool": 1,
-  "at": "2026-11-12T23:58:00-05:00",
-  "mode": "midnight",
+  "at": "2026-11-13T00:01:00-05:00",
+  "mode": null,
   "modes": {
-   "main": "midnight",
-   "a": "midnight",
-   "b": "midnight"
+   "main": "spread",
+   "a": "spread",
+   "b": "spread"
   }
  },
  "next_tick_why": "session",
@@ -276,18 +276,18 @@
  },
  "lanes": [
   {
-   "name": "Idris",
+   "name": "Pernille",
    "state": "running",
-   "task": "[build] T-3895 record extension runs that never start",
+   "task": "[review] T-4242 review widget start failure rows",
    "model": "opus",
-   "since": "2026-11-13T04:24:28.027Z",
+   "since": "2026-11-13T04:59:07.229Z",
    "next": [],
    "effort": "high"
   },
   {
-   "name": "Pernille",
+   "name": "Idris",
    "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
+   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
    "model": null,
    "since": null,
    "next": []
@@ -328,14 +328,14 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Record widget runs that never start in the extension",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review the widget start failure rows",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-13T04:24:28.027Z",
+    "at": "2026-11-13T04:59:07.229Z",
     "o": "c",
-    "task": "T-3895"
+    "task": "T-4242"
    }
   ],
   "src": "plan",
@@ -429,7 +429,7 @@
    }
   ],
   "count": {
-   "next": 574,
+   "next": 575,
    "wait": 38,
    "blocked": 65,
    "you": 18
@@ -503,14 +503,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T04:58:31Z",
+  "at": "2026-11-13T05:01:18Z",
   "s": {
-   "T-3895": [
-    "merged",
-    "on main 11:58 PM ET",
-    1794545885000,
-    ""
-   ],
    "T-4127": [
     "merged",
     "on main 11:18 PM ET",
@@ -519,12 +513,11 @@
    ]
   },
   "nm": {
-   "T-3895": "Record widget runs that never start in the extension",
    "T-4127": "Run the Restructuring on Evan's account"
   }
  },
  "ln": {
-  "at": "2026-11-13T04:58:31Z",
+  "at": "2026-11-13T05:01:18Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -538,22 +531,22 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 801,
+    "conflicted": 804,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 824
+    "parked": 827
    },
    "cur": [],
    "ld": [
-    86,
-    "2026-11-13T04:18:54Z"
+    0,
+    null
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T04:58:32Z",
-    "ld": 0.48,
+    "at": "2026-11-13T05:00:55Z",
+    "ld": 0.51,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -621,10 +614,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "11:58 PM",
+  "at": "12:01 AM",
   "why": "",
-  "at_iso": "2026-11-13T04:58:00+00:00",
+  "at_iso": "2026-11-13T05:01:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:58 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:01 AM ET</p></section>"
  }
 }

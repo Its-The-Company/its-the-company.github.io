@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T03:05:34.635191+00:00",
+ "at": "2026-11-13T03:08:39.434912+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -117,7 +117,7 @@
    "task": "[site] T-4230 Restructuring on Documents",
    "model": "opus",
    "started": "2026-11-13T02:17:14.265Z",
-   "seconds": 2900,
+   "seconds": 3085,
    "finished": null,
    "effort": "high"
   },
@@ -126,7 +126,7 @@
    "task": "[tools] T-4232 Double Spread usage mode",
    "model": "opus",
    "started": "2026-11-13T02:17:34.315Z",
-   "seconds": 2880,
+   "seconds": 3065,
    "finished": null,
    "effort": "high"
   },
@@ -135,7 +135,7 @@
    "task": "[tools] T-4235 full window before Fable pause",
    "model": "opus",
    "started": "2026-11-13T02:45:29.692Z",
-   "seconds": 1204,
+   "seconds": 1389,
    "finished": null,
    "effort": "high"
   }
@@ -170,7 +170,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 576,
+  "runnable_count": 575,
   "blocked_count": 104
  },
  "meter": {
@@ -219,7 +219,7 @@
   "week_pct": 39.76,
   "usage_pct": 32.4,
   "work_pct": 79.4,
-  "read_at": "2026-11-13T03:05:00+00:00",
+  "read_at": "2026-11-13T03:08:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -240,7 +240,7 @@
   }
  ],
  "disk": {
-  "free_gb": 23,
+  "free_gb": 22,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -249,14 +249,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T22:01:00-05:00",
+   "at": "2026-11-12T22:07:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T22:05:00-05:00",
+  "at": "2026-11-12T22:08:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -403,13 +403,6 @@
    },
    {
     "w": "Odalys",
-    "k": "tools",
-    "t": "Use each account's full window before the...",
-    "s": "next",
-    "o": "i"
-   },
-   {
-    "w": "Odalys",
     "k": "site",
     "t": "Show the Restructuring folder on the...",
     "s": "next",
@@ -421,9 +414,21 @@
     "t": "Run the Restructuring on Evan's account",
     "s": "next",
     "o": "i"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Retire the Set aside stage on Home",
+    "s": "next",
+    "o": "i"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "Fable audit sessions on the personal accounts now pause about 4 points short of the 5-hour limit...",
+    "at": "2026-11-12T22:08:00-05:00"
+   },
    {
     "w": "Idris",
     "t": "The app sometimes lost sight of a script for an instant between taking it off the waiting line...",
@@ -433,22 +438,21 @@
     "w": "Operator",
     "t": "The Restructuring's evening run was saved but sent back over a clash in a bookkeeping file; its...",
     "at": "2026-11-12T21:34:00-05:00"
-   },
-   {
-    "w": "Ines+idris",
-    "t": "The 300 open app tasks are now grouped into 14 features, each with one owner and a result a...",
-    "at": "2026-11-12T20:45:00-05:00"
    }
   ],
   "count": {
-   "next": 576,
+   "next": 575,
    "wait": 39,
    "blocked": 65,
    "you": 18
   },
   "fin": {
-   "n": 2,
+   "n": 3,
    "rows": [
+    [
+     "T-4235",
+     "Use each account's full..."
+    ],
     [
      "T-4229",
      "Fix a MacBook test job that..."
@@ -499,32 +503,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T03:05:34Z",
+  "at": "2026-11-13T03:08:19Z",
   "s": {
-   "T-4235": [
-    "merging",
-    "Mac tests at the main gate",
-    1794538834635
-   ],
    "T-4232": [
     "merging",
     "Mac tests at the main gate",
-    1794539134635
+    1794539179832
    ],
    "T-4230": [
     "testing",
     "its own tests, in its copy",
-    1794536794635
+    1794536779832
+   ],
+   "T-4235": [
+    "merged",
+    "on main 10:08 PM ET",
+    1794539297000,
+    ""
    ]
   },
   "nm": {
-   "T-4235": "Use each account's full window before the Fable pause",
    "T-4232": "Add a Double Spread usage mode, chosen on Home",
-   "T-4230": "Show the Restructuring folder on the Documents page"
+   "T-4230": "Show the Restructuring folder on the Documents page",
+   "T-4235": "Use each account's full window before the Fable pause"
   }
  },
  "ln": {
-  "at": "2026-11-13T03:05:34Z",
+  "at": "2026-11-13T03:08:19Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -538,11 +543,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 654,
+    "conflicted": 657,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 732
+    "parked": 735
    },
    "cur": [],
    "ld": [
@@ -552,12 +557,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T03:05:08Z",
-    "ld": 3.88,
+    "at": "2026-11-13T03:08:20Z",
+    "ld": 3.69,
     "c": 8,
     "sb": 0,
     "dk": [
-     22.5,
+     22.2,
      228.3
     ],
     "ss": [
@@ -610,10 +615,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "10:05 PM",
+  "at": "10:08 PM",
   "why": "",
-  "at_iso": "2026-11-13T03:05:00+00:00",
+  "at_iso": "2026-11-13T03:08:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:05 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:08 PM ET</p></section>"
  }
 }

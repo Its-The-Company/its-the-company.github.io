@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T13:28:49.695991+00:00",
+ "at": "2026-11-13T13:31:53.520235+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -75,7 +75,7 @@
    "task": "[build] T-2261 editor completion list UI",
    "model": "opus",
    "started": "2026-11-13T13:02:06.520Z",
-   "seconds": 1603,
+   "seconds": 1787,
    "finished": null,
    "effort": "high"
   },
@@ -84,22 +84,21 @@
    "task": "[site] T-4005 Home drop Needs you, restore panels",
    "model": "opus",
    "started": "2026-11-13T13:13:46.645Z",
-   "seconds": 903,
+   "seconds": 1086,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris, Odalys",
+ "recent": [
   {
    "name": "ines",
    "task": "[plan] T-4251 Restructuring decisions as Urgent issues",
    "model": "opus",
    "started": "2026-11-13T13:22:52.242Z",
-   "seconds": 357,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris, Odalys, Ines",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-13T13:31:20.078000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[build] T-3400 iOS https shim land",
@@ -123,20 +122,12 @@
    "started": "2026-11-13T12:42:29.647Z",
    "seconds": null,
    "finished": "2026-11-13T13:09:56.432000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[site] T-4250 remaining app diagrams",
-   "model": "opus",
-   "started": "2026-11-13T12:43:22.025Z",
-   "seconds": null,
-   "finished": "2026-11-13T12:54:45.104000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 524,
+  "runnable_count": 523,
   "blocked_count": 103
  },
  "meter": {
@@ -185,7 +176,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T13:28:00+00:00",
+  "read_at": "2026-11-13T13:31:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -222,7 +213,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T08:28:00-05:00",
+  "at": "2026-11-13T08:31:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -257,18 +248,17 @@
    "effort": "high"
   },
   {
-   "name": "Ines",
-   "state": "running",
-   "task": "[plan] T-4251 Restructuring decisions as Urgent issues",
-   "model": "opus",
-   "since": "2026-11-13T13:22:52.242Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Ines",
+   "state": "next",
+   "task": "Ines, P1, T-3683 ruling (3): the 11-08 evening report...",
    "model": null,
    "since": null,
    "next": []
@@ -311,16 +301,6 @@
     "at": "2026-11-13T13:13:46.645Z",
     "o": "c",
     "task": "T-4005"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Open an Urgent issue for each Restructuring decision",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T13:22:52.242Z",
-    "o": "c",
-    "task": "T-4251"
    }
   ],
   "src": "plan",
@@ -352,13 +332,6 @@
     "t": "Stopped pinned task goes back on the menu by...",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Ines",
-    "k": "plan",
-    "t": "Open an Urgent issue for each Restructuring...",
-    "s": "next",
-    "o": "c"
    },
    {
     "w": "Pernille",
@@ -394,9 +367,21 @@
     "t": "Widgets refresh on their own and by a tap",
     "s": "next",
     "o": "i"
+   },
+   {
+    "w": "Idris",
+    "k": "measure",
+    "t": "Run the device test session for the widget...",
+    "s": "next",
+    "o": "c"
    }
   ],
   "done": [
+   {
+    "w": "Ines",
+    "t": "Every Restructuring decision that needs the Investors now has its own urgent issue labelled...",
+    "at": "2026-11-13T08:31:00-05:00"
+   },
    {
     "w": "Ines+wrenna+idris+maren",
     "t": "The Restructuring, a blank-slate rethink of the app's products, platform limits, structure, look...",
@@ -406,22 +391,21 @@
     "w": "Odalys",
     "t": "Home's Operators section hid itself whenever no session was running, so it vanished between...",
     "at": "2026-11-13T08:11:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Home's Mode panel is now a small pill in the top line, the old Lock In button's size, saying...",
-    "at": "2026-11-13T08:07:00-05:00"
    }
   ],
   "count": {
-   "next": 524,
+   "next": 523,
    "wait": 49,
    "blocked": 54,
    "you": 18
   },
   "fin": {
-   "n": 10,
+   "n": 11,
    "rows": [
+    [
+     "T-4251",
+     "Open an Urgent issue for..."
+    ],
     [
      "T-4127",
      "Run the Restructuring on..."
@@ -441,10 +425,6 @@
     [
      "T-4159",
      "Personal account stopped and..."
-    ],
-    [
-     "T-0675",
-     "Run Python widget scripts..."
     ]
    ]
   }
@@ -488,7 +468,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T13:28:49Z",
+  "at": "2026-11-13T13:31:53Z",
   "s": {
    "T-2261": [
     "mergetest",
@@ -498,7 +478,7 @@
    "T-4005": [
     "testing",
     "its own tests, in its copy",
-    1794576349695
+    1794576353520
    ]
   },
   "nm": {
@@ -507,7 +487,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-13T13:28:49Z",
+  "at": "2026-11-13T13:31:53Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -521,11 +501,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1311,
+    "conflicted": 1314,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 6963
+    "parked": 6966
    },
    "cur": [],
    "ld": [
@@ -535,12 +515,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T13:28:27Z",
-    "ld": 0.77,
+    "at": "2026-11-13T13:31:04Z",
+    "ld": 0.72,
     "c": 8,
     "sb": 0,
     "dk": [
-     24.7,
+     24.9,
      228.3
     ],
     "ss": [
@@ -569,7 +549,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-13T08:19:15-05:00"
   }
  ],
@@ -592,13 +572,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "8:28 AM",
+  "total": 2,
+  "at": "8:31 AM",
   "why": "",
-  "at_iso": "2026-11-13T13:28:00+00:00",
+  "at_iso": "2026-11-13T13:31:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:28 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:31 AM ET</p></section>"
  }
 }

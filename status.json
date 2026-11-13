@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T14:24:25.873871+00:00",
+ "at": "2026-11-13T14:27:29.338585+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -51,7 +51,7 @@
    "task": "[site] T-4004 then T-3735 Home in flight and blocked",
    "model": "opus",
    "started": "2026-11-13T13:53:09.418Z",
-   "seconds": 1876,
+   "seconds": 2059,
    "finished": null,
    "effort": "high"
   },
@@ -60,7 +60,7 @@
    "task": "[build] T-4254 T-4255 T-4256 T-4261 editor mark fixes",
    "model": "opus",
    "started": "2026-11-13T14:11:26.887Z",
-   "seconds": 778,
+   "seconds": 962,
    "finished": null,
    "effort": "high"
   }
@@ -152,7 +152,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T14:24:00+00:00",
+  "read_at": "2026-11-13T14:27:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -189,7 +189,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T09:24:00-05:00",
+  "at": "2026-11-13T09:27:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -444,20 +444,26 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T14:24:14Z",
+  "at": "2026-11-13T14:27:29Z",
   "s": {
+   "T-4254": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ],
    "T-3735": [
     "testing",
     "its own tests, in its copy",
-    1794579134196
+    1794579149338
    ]
   },
   "nm": {
+   "T-4254": "Never mark the word being typed",
    "T-3735": "Show what blocks each blocked task on Home"
   }
  },
  "ln": {
-  "at": "2026-11-13T14:24:14Z",
+  "at": "2026-11-13T14:27:29Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -471,11 +477,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1367,
+    "conflicted": 1370,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 7018
+    "parked": 7021
    },
    "cur": [],
    "ld": [
@@ -485,8 +491,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T14:23:44Z",
-    "ld": 1.66,
+    "at": "2026-11-13T14:27:04Z",
+    "ld": 1.58,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -547,10 +553,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "9:24 AM",
+  "at": "9:27 AM",
   "why": "",
-  "at_iso": "2026-11-13T14:24:00+00:00",
+  "at_iso": "2026-11-13T14:27:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:24 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:27 AM ET</p></section>"
  }
 }

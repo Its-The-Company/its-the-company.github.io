@@ -1,11 +1,22 @@
 {
  "schema": 1,
- "at": "2026-11-13T14:06:08.095107+00:00",
+ "at": "2026-11-13T14:09:12.761707+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-13T07:21:41-05:00",
   "flow": [
+   {
+    "t": "T-4252",
+    "name": "Review the editor's completion list and inline errors",
+    "w": "Pernille",
+    "steps": [
+     {
+      "s": "testq",
+      "at": 1794578863
+     }
+    ]
+   },
    {
     "t": "T-2261",
     "name": "Build and test the editor completion changes",
@@ -68,7 +79,7 @@
    "task": "[site] T-4004 then T-3735 Home in flight and blocked",
    "model": "opus",
    "started": "2026-11-13T13:53:09.418Z",
-   "seconds": 778,
+   "seconds": 963,
    "finished": null,
    "effort": "high"
   },
@@ -77,22 +88,21 @@
    "task": "[review] T-4252 completion list review",
    "model": "opus",
    "started": "2026-11-13T14:01:01.724Z",
-   "seconds": 306,
+   "seconds": 491,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys, Pernille",
+ "recent": [
   {
    "name": "maren",
    "task": "[design] T-4253 completion list design read",
    "model": "opus",
    "started": "2026-11-13T14:01:09.427Z",
-   "seconds": 298,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Pernille, Maren",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-13T14:08:24.696000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-2261 no error mark while typing",
@@ -116,20 +126,12 @@
    "started": "2026-11-13T13:13:46.645Z",
    "seconds": null,
    "finished": "2026-11-13T13:52:43.905000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2261 editor completion list UI",
-   "model": "opus",
-   "started": "2026-11-13T13:02:06.520Z",
-   "seconds": null,
-   "finished": "2026-11-13T13:34:54.009000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 523,
+  "runnable_count": 529,
   "blocked_count": 103
  },
  "meter": {
@@ -178,7 +180,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T14:06:00+00:00",
+  "read_at": "2026-11-13T14:09:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -215,7 +217,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T09:06:00-05:00",
+  "at": "2026-11-13T09:09:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -250,15 +252,6 @@
    "effort": "high"
   },
   {
-   "name": "Maren",
-   "state": "running",
-   "task": "[design] T-4253 completion list design read",
-   "model": "opus",
-   "since": "2026-11-13T14:01:09.427Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P2, from T-4238 (Pernille's review, from T-3900,...",
@@ -278,6 +271,14 @@
    "name": "Wrenna",
    "state": "next",
    "task": "Read developer.apple.com \"Keeping a widget up to date\",...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Maren",
+   "state": "next",
+   "task": "Maren, P3, PROPOSAL-003 store captions, after Ines or...",
    "model": null,
    "since": null,
    "next": []
@@ -304,16 +305,6 @@
     "at": "2026-11-13T14:01:01.724Z",
     "o": "c",
     "task": "T-4252"
-   },
-   {
-    "w": "Maren",
-    "k": "design",
-    "t": "Design read of the completion list and error marks",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T14:01:09.427Z",
-    "o": "c",
-    "task": "T-4253"
    }
   ],
   "src": "plan",
@@ -391,6 +382,11 @@
   ],
   "done": [
    {
+    "w": "Maren",
+    "t": "Read the editor's new suggestion list and problem marks against the design: the marks are too...",
+    "at": "2026-11-13T09:08:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "Home again lists the tasks being worked on, each with its stage, under All tasks on phone and...",
     "at": "2026-11-13T08:54:00-05:00"
@@ -399,22 +395,21 @@
     "w": "Odalys",
     "t": "Home has no Needs you section and the four panels (Usage, Progress, Machine, Work) sit at the...",
     "at": "2026-11-13T08:52:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "Every Restructuring decision that needs the Investors now has its own urgent issue labelled...",
-    "at": "2026-11-13T08:31:00-05:00"
    }
   ],
   "count": {
-   "next": 523,
+   "next": 529,
    "wait": 49,
    "blocked": 54,
    "you": 18
   },
   "fin": {
-   "n": 13,
+   "n": 14,
    "rows": [
+    [
+     "T-4253",
+     "Design read of the..."
+    ],
     [
      "T-4004",
      "Bring In flight back on Home"
@@ -434,10 +429,6 @@
     [
      "T-4248",
      "Bring back the Operator and..."
-    ],
-    [
-     "T-4246",
-     "Shrink the mode panel to a..."
     ]
    ]
   }
@@ -481,20 +472,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T14:06:02Z",
+  "at": "2026-11-13T14:09:12Z",
   "s": {
    "T-3735": [
     "testing",
     "its own tests, in its copy",
-    1794578282080
+    1794578292761
+   ],
+   "T-4252": [
+    "merged",
+    "on main 9:07 AM ET",
+    1794578866000,
+    "Pernille"
    ]
   },
   "nm": {
-   "T-3735": "Show what blocks each blocked task on Home"
+   "T-3735": "Show what blocks each blocked task on Home",
+   "T-4252": "Review the editor's completion list and inline errors"
   }
  },
  "ln": {
-  "at": "2026-11-13T14:06:02Z",
+  "at": "2026-11-13T14:09:12Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -508,11 +506,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1348,
+    "conflicted": 1352,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 7000
+    "parked": 7003
    },
    "cur": [],
    "ld": [
@@ -522,8 +520,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T14:06:02Z",
-    "ld": 0.69,
+    "at": "2026-11-13T14:08:25Z",
+    "ld": 1.58,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -558,7 +556,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 4 tasks",
+   "t": "Work session \u2013 3 tasks",
    "at": "2026-11-13T08:19:15-05:00"
   }
  ],
@@ -581,13 +579,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "9:06 AM",
+  "total": 2,
+  "at": "9:09 AM",
   "why": "",
-  "at_iso": "2026-11-13T14:06:00+00:00",
+  "at_iso": "2026-11-13T14:09:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:06 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:09 AM ET</p></section>"
  }
 }

@@ -2,7 +2,7 @@
 layout: "default"
 title: "T-4117 handoff"
 section: "documents"
-description: "Paused five times by tools/fable_pause.py check: 1:40 PM 11-12 on lane b3, 3:5x PM on a3, 9:2x PM on a2, 11:07 AM 11-13 on lane a, and 11:28 AM 11-13 on lane a again (the weekly Fable row at 86%, over its fixed line of\u2026"
+description: "Sixth stop, and the first that is not the Fable limit. All 100 IDs of group 1 (ops/queue_audit/t4097-remaining-2026-11-11.json) now have a ledger row. The apply (tools/queue_apply.py --apply) was read and is ready, and\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/t-4117-handoff.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
 <div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 23 · Fri Nov 13</span><span><code>ops/plans/T-4117-handoff.md</code></span></div><h1>T-4117 handoff</h1><div class="byline"><img class="avatar" src="{{ '/assets/portraits/ines.svg' | relative_url }}" alt="Ines" title="Ines"><span>By <a href="{{ '/cast/ines.html' | relative_url }}">Ines</a>, CEO</span></div></div>
@@ -11,121 +11,98 @@ description: "Paused five times by tools/fable_pause.py check: 1:40 PM 11-12 on 
 <div class="doc-body" markdown="1">
 
 {% raw %}
-Paused five times by `tools/fable_pause.py check`: 1:40 PM 11-12 on <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> b3, 3:5x PM on a3, 9:2x PM on a2, 11:07 AM
-11-13 on lane a, and 11:28 AM 11-13 on lane a again (the weekly Fable row at 86%, over its fixed line of 85%). The
-task is three-quarters done and is not ticked. Whoever resumes: read this, then `git log --grep=T-4117 main`, then
-the ledger's rows with slice 3 judged 11-12.
+Sixth stop, and the first that is not the Fable limit. All 100 IDs of group 1
+(ops/queue_audit/t4097-remaining-2026-11-11.json) now have a ledger row. The apply (`tools/queue_apply.py --apply`)
+was read and is ready, and was NOT run: from this session it could not land (see "Why the apply did not run"). The
+task is not ticked. Whoever resumes: read this, then `git log --grep=T-4117 main`, then go to "Next step".
+
+Scratch: N="/Volumes/SANDISK SSD/company-scratch/T-4117-ines" (batch4.py as run; batch4-stale-1112.py the 11-12
+draft, never run; drift_rows.py and supersede.py the superseding rows; precheck.py and readwould.py for the apply).
 
 ## Done
 
-- 75 of the 100 IDs of ops/queue_audit/t4097-remaining-2026-11-11.json have a ledger row (T-3065 to T-3459), all on
-  main. Batches 1 and 2 (50 IDs): 11 ticks, 11 keeps, 26 removes, 1 merge, 1 rewrite. Batch 3 (25 IDs, T-3385 to
-  T-3459): 17 removes, 5 keeps, 3 merges; 3 notes (T-2677, T-3250, T-3131). The T-3331 done-note correction stands.
-- Fourth session (11:05 AM to 11:08 AM 11-13) and fifth session (11:25 AM to 11:30 AM 11-13), both lane a: reads only.
-  No ledger row, no outbox record, no board change, no repo file changed but this note. The ledger has 549 lines.
+- Batches 1 to 3, 75 rows, as on main since 11-12 (2ab0ac371b, 25561c368a, 330a225ce0, 3d947f5320).
+- Batch 4, the last 25 IDs (T-3460 to T-3555), every input re-read 2:25 to 2:37 PM 11-13: 15 removes, 2 keeps
+  (T-3547, T-3549), 1 merge (T-3476 into T-3373, with a note on T-3373 through board_tick, <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> outbox
+  a2-1794598838263893000-11154), and 7 lines closed outside the audit, recorded with nothing applied (T-3460,
+  T-3462, T-3463, T-3469, T-3473 by the T-3230 prune at 7:32 AM 11-13; T-3510, T-3512 by the merge reset of 2:55 AM 11-12).
+- Seven superseding rows: T-3326, T-3453, T-3455, T-3457, T-3458, T-3459 (remove rows whose lines the T-3230 prune
+  closed before any apply) now read as closed outside the audit, so `python3 "$N/drift100.py" "$N"` shows no DRIFT;
+  and T-3230 itself, still a remove, with the facts of 11-13 (see Open points).
+- What changed against the 11-12 draft, found on the re-read:
+  - T-3549 (the 11-08 disk emergency) is a keep, not a tick. The rule I wrote beforehand fired: the keeper's log
+    (ops/metrics/disk_keeper.jsonl in the main checkout) reads under 20 GB at every run since 11:10 AM 11-13, 29
+    runs, the lowest 11.4 GB at 1:35 PM, 15.9 GB at 2:28 PM. The draft's note to T-3859 was dropped with the tick.
+  - T-3507's branch is not gone, as the draft said: it is refs/heads/<span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span>/a/20261108-035525-89744 (3 commits not
+    on HEAD). T-3510's branch is still refs/heads/parked/b3/20261108-035604-89744, not in the archive as its
+    done-note says. Both rows say so and leave the refs to T-4099.
+  - T-3470's reason: T-3326 is closed; T-3025 is the one open task it names.
+- Step 3's read, 2:45 to 2:52 PM 11-13. Dry run: "done 63, merge 5, refused merge 3, refused remove 37, remove 46,
+  rewrite 1". 52 actions are ready: 51 of group 1 and T-3723 (a row of group 2, T-4197, written 11:43 AM today; the
+  tool has no ID filter). I read each of the 52 against its line, its row and the 29 decisions of
+  documents/restructuring/06-decisions.md (an Investor #41 c6854106654) with `python3 "$N/readwould.py" "$N" a b`: I
+  stand behind all 52, none rests on a Restructuring decision, and no superseding keep was needed. Only T-3230's
+  line changed since it was judged (its row is of today). The ready set:
+  removes T-3069, T-3177, T-3182, T-3230, T-3259, T-3305, T-3306, T-3319, T-3320, T-3347, T-3351 to T-3355, T-3367,
+  T-3369, T-3374, T-3377, T-3381 to T-3385, T-3387, T-3389, T-3391, T-3392, T-3394, T-3414, T-3415, T-3429, T-3445,
+  T-3454, T-3464 to T-3468, T-3472, T-3507, T-3536, T-3540, T-3541, T-3555, T-3723;
+  merges T-3313 into T-2346, T-3403 and T-3404 into T-2677, T-3413 into T-3250, T-3476 into T-3373; rewrite T-3211.
+- Refused among the 100, left for T-4099 and T-4101: T-3065, T-3181, T-3456, T-3470, T-3471, T-3478, T-3485 (each
+  "the ledger row says active": a parked record named it when the inventory was taken).
 
-## In flight (batch 4, T-3460 to T-3555, 25 IDs: WRITTEN 11-12 evening, NOT run, partly stale, NOT yet fixed)
+## Why the apply did not run
 
-Scratch: N="/Volumes/SANDISK SSD/company-scratch/T-4117-ines" (batch4.py, recheck4.py, run_batch.py, drift100.py,
-common.py; dry0.txt is the fifth session's dry run). batch4.py is unchanged: do NOT run it as it stands.
-
-What must change in batch4.py (none of it done):
-
-- Five <span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> notices the T-3230 prune closed at 7:32 AM 11-13 become closed rows, in the form T-3510 and T-3512 have
-  there (verdict tick, closed=True, nothing applied, flags 'closed outside the audit (T-3230 prune 7:32 AM 11-13)' and
-  'not an audit tick: leave out of the audit tick count (T-4105)'). Their done-notes, read 11:26 AM in
-  log/board-archive.md lines 4046 to 4050 (all "Odalys, no commit; ws: operations", Evidence
-  ops/plans/board-prune-t3230.md): T-3460, T-3462, T-3463, T-3473 say every task the saved branch worked on was
-  finished since on its own line, and the branch stays saved; T-3469 says every change on the branch is already on
-  main. The prune record lists them at ops/plans/board-prune-t3230.md lines 82 to 85 (slice 3, section 2).
-  run_batch.py takes "active" from the stale inventory (is_active True for these five): give it an override so
-  their rows say active false.
-- T-3470 and T-3471 are open and unchanged. The prune kept both: T-3471 as "work waiting for an open task"
-  (line 89), T-3470 as "unsure" for T-3025 (line 91), and its slice 4 read T-3470 again and kept it: "every task
-  they name is still open; no new evidence" (line 154). T-3470's reason must change: T-3326 is closed (7:29 AM 11-13,
-  a copy of T-3230). Re-read T-3025 and T-3306 before writing either row.
-- The re-reads below, and the Restructuring check's last part.
-
-Read by the fifth session, 11:26 AM to 11:29 AM 11-13 (live inputs: read them again before the run):
-
-- `python3 "$N/recheck4.py" "$N"`: same 18 of 25 (the five pruned lines and T-3510, T-3512 are off the board).
-  `python3 "$N/drift100.py" "$N"`: the same six DRIFT rows and no other.
-- `python3 tools/parked_lines.py`: 39 lines (close 2, gone 31, open 6), as at 11:07 AM; of batch 4 only T-3470,
-  T-3471, T-3478 and T-3485, each "gone: ref gone". Claims and worker statuses were not re-read (11:07 AM: claims
-  T-3783 operator and T-4117 lane a; no live workers).
-- The Restructuring check (an Investor #41 c6854106654), first part. documents/restructuring/06-decisions.md read
-  whole: 29 numbered decisions, all about the app and the company around it (what 1.0 holds and when, Pages,
-  iMessage, the marketplace, components, Pro, the Project and its manifest, where Python runs, navigation, blocks,
-  accounts, mission wording, visual direction, reports, age, bank and name, testers, an iPad, money, documentation).
-  None is about the company's own machinery. A grep of documents/restructuring/*.md for batch 4's subjects
-  (personal_retry, parked, session_end, suite_floor, product_floor, amendments.md, disk_keeper, T-4012, T-3541,
-  T-3547, T-3476, T-3373, T-3549, T-3859) finds only the word "parked" used of the in-widget Python lane (decision
-  14). So by this reading none of the 25 rows rests on a Restructuring decision, T-3541, T-3547, T-3476 and the
-  T-4012 rows included, and none becomes a <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span>. Not finished: I did not read the four open lines that batch 4's
-  rows name as subjects (T-3302 for T-3465, T-3252 for T-3478, T-3306 for T-3471, T-3025 for T-3470); read each
-  against the 29 decisions before writing its row.
-- `python3 tools/queue_apply.py` dry run at 11:28 AM on the ledger as it stands (saved: "$N/dry0.txt"). Summary:
-  "done 63, merge 4, refused merge 3, refused remove 23, remove 33, rewrite 1". Nothing written. All 38 pending
-  actions are group 1 rows of batches 1 to 3:
-  removes T-3069, T-3177, T-3182, T-3259, T-3305, T-3306, T-3319, T-3320, T-3347, T-3351 to T-3355, T-3367, T-3369,
-  T-3374, T-3377, T-3381 to T-3385, T-3387, T-3389, T-3391, T-3392, T-3394, T-3414, T-3415, T-3429, T-3445, T-3454;
-  merges T-3313 into T-2346, T-3403 and T-3404 into T-2677, T-3413 into T-3250; rewrite T-3211.
-  Refused among the 100: T-3065, T-3181, T-3456 (the ledger row says active), T-3230 (named by open product line
-  T-4249), and the six drifted rows (no open line has this ID). Not read yet: each of the 38 actions, line by line.
-- The tool has no ID filter: --apply acts on every ready row of the whole ledger. To hold one row back, write a
-  superseding keep row for it first (the last row counts).
-- T-3230 needs a second look before the apply. My batch 1 row calls it a remove; Odalys's record dates its
-  slices 3 and 4 11-13 (her ticks are stamped 7:29 AM and 7:32 AM) and ends "T-3230 stays open". The row predates that work.
-  It is refused today, so nothing applies, but if the row no longer holds, supersede it with a keep.
-- The 38 pending actions were judged on 11-12, before the 8:18 AM 11-13 <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>. Read each against the 29 decisions
-  before --apply; a row that rests on one gets a superseding keep, nothing applied, flag 'waits on Restructuring
-  decision N'.
-
-NOT re-read yet (now a day old, re-read before the run): T-3549's disk numbers in ops/metrics/disk_keeper.jsonl (a
-keeper run under 20 GB after 11-09 7:38 PM makes it a keep, not a tick) and the times in its done-note and in the
-T-3859 note; T-3476's reads (amendments_watch.py and ruling_record.py check on this lane, the times in the T-3373
-note; the 4 rulings of 11-12 are still unrecorded and stay the Operator's); the subjects of the five look lines
-(T-3464 to T-3468: T-3127, T-3302, T-3296, T-3362, T-3363) and of the four refused-record notices (T-3472, T-3536,
-T-3540, T-3555); the line numbers cited for T-3541 and T-3547; T-3252 and the archive refs for T-3478, T-3485,
-T-3507.
-
-Six rows already in the ledger drifted (`python3 "$N/drift100.py" "$N"`): T-3326 (remove, batch 2) and T-3453,
-T-3455, T-3457, T-3458, T-3459 (removes, batch 3) are remove rows with nothing applied whose lines the T-3230 prune
-ticked. Their done-notes, log/board-archive.md lines 4040 to 4045: T-3326 at 7:29 AM ("a copy of the board clean-up
-task T-3230"); T-3455 at 7:32 AM (every change already on main); T-3453, T-3457, T-3458, T-3459 at 7:32 AM (every task
-finished on its own line, the branch stays saved). My intent: one superseding row each, in the closed form above,
-so the ledger's last row agrees with the board (run_batch.py refuses an ID that has a row; a short script as
-330a225ce0's did for T-3331).
+`queue_apply.py --apply` writes this worktree's ops/board.md, and the lane's branch then has to rebase onto main.
+Main's board moved after this session started: the 2:29 PM close of the main work session put T-3365 and T-3371 on
+[b] (the T-4305 records), and T-3351 to T-3355, T-3369, T-3476 and T-3374 sit on the lines beside them. A read-only
+check, `python3 "$N/precheck.py" "$N"`, builds the board the apply would leave and merges it with main's by
+`git merge-file`: 1 conflict (at T-3351 to T-3355 against T-3365). So the land would fail in ops/board.md and hold
+back the ledger commits with it. I tried to bring main in with `git rebase main`: rules/hooks/security-guard.py
+refused it ("this command brings GitHub's changes in during a session"). A refusal stops the item (Rule 14), so I
+tried nothing else and left the apply for a session that starts on fresh main.
 
 ## Next step
 
-1. Fix batch4.py as In flight says (five closed rows with active false, T-3470's reason, the re-reads, the four
-   subject lines against the 29 decisions), then `python3 "$N/run_batch.py" "$N" "$N/batch4.py" --check`, then
-   without --check. Outbox files on this lane are ops/lane-outbox/a-*.json. Commit ops/queue_audit/ledger.jsonl and
-   the new outbox files by path at once (the ledger has no union merge in .gitattributes: land soon).
-2. The six superseding rows; T-3230's row if it no longer holds; commit the ledger.
-3. `python3 tools/queue_apply.py` as a dry run, read every action (the 38 above plus batch 4's) against its line
-   and the 29 decisions, supersede what I do not stand behind, then --apply; commit ops/board.md,
-   log/board-archive-open.md, the ledger and any new outbox files by path. Expected refusals, left for T-4101: the
-   active parked notices still open (T-3065, T-3181, T-3456, T-3470, T-3471, T-3478, T-3485) and T-3230.
-4. Tick T-4117 through board_tick (true-done), one event with tools/events.py, memory, and a final commit that
+1. As the session's first act (the lane sits on main then): `python3 "$N/precheck.py" "$N"`. Expected: summary as
+   above, ready 52, outside group 1 only T-3723, CHANGED only T-3230, and "board merge against main: clean". A line
+   that shows CHANGED: read it and its row again before going on. A merge that is not clean: do not apply, report it
+   (the apply then belongs in the main checkout, under T-4101).
+2. `python3 tools/queue_apply.py --apply` at once; commit ops/board.md, log/board-archive-open.md,
+   ops/queue_audit/ledger.jsonl and the new ops/lane-outbox/a2-*.json files by path (the ledger has no union merge
+   in .gitattributes: land soon).
+3. Tick T-4117 through board_tick (true-done), one event with tools/events.py, memory, and a final commit that
    includes `git rm ops/plans/T-4117-handoff.md`.
 
-Open points the rows carry for the final report (T-4105) or for me: the T-3230 prune and the audit judged the same
-parked notices on different rules (the prune ticked what the audit calls a remove), so T-4105's counts need the
-closed rows left out; T-3182's Lock In order of 11-06 was never recorded; T-3365 and T-3371 may clash with
-c6798394283; T-3406 and T-3388 wait on a ruling of mine; T-3069's before and after for #41 was never sent;
-T-3233's done-note count (16) was never corrected to 15; the 4 unrecorded rulings of 11-12 (c6816236288,
-c6817072037, c6824162128, c6824284854: the Operator's, tools/ruling_record.py); the ledger's missing union merge.
+If a day has passed, read the live numbers again first (T-3549's disk, T-3476's amendments_watch) and supersede a
+row that no longer holds. `fable_pause.py check` says "no pause" all session on account a while Audit mode is on
+(ops/audit_mode.json), so it is no guide to the limit.
 
-## Commits (hashes as on main)
+## Open points (for the final report T-4105, the Operator, or me)
 
-- 2ab0ac371b batch 1: 25 rows (8 ticks, 8 keeps, 8 removes, 1 rewrite), 3 notes and 8 tick records
-- 25561c368a batch 2: 25 rows (3 ticks, 3 keeps, 18 removes, 1 merge), 3 tick records
-- 330a225ce0 T-3331's done-note corrected before landing, superseding row
-- 3d947f5320 batch 3: 25 rows (17 removes, 5 keeps, 3 merges), 3 notes
-- 5dff682ce7, ae32dfdf0d, f9e1d1ff73, 2b481594b2 handoff notes; c1f21f0664, 784a368224 memory
-- (fourth and fifth sessions, lane a, 11-13) no new rows; this note only
+- The Mac mini's disk is under its 20 GB line since 11:10 AM 11-13 (numbers above). T-3549 and T-3859 stay open.
+- Seven Investor <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span> are not in log/rulings.md on main (0abab709ba, 2:37 PM): the four of 11-12 (c6816236288,
+  c6817072037, c6824162128, c6824284854) and three of 11-13: 1:35 PM c6861701678 (stop the audit on Evan's account;
+  its record 8b6f01cb24 is on parked/a2/20261113-134424-88412), 1:46 PM c6861929949 (restart it) and 1:54 PM
+  c6862096217 (the 1:15 PM ruling withdrawn, which main still shows in force; its record 18796b4029 is on
+  personal/a3, whose land failed at 2:31 PM). Recording them is the Operator's (tools/ruling_record.py). The note
+  on T-3373 names the five that amendments_watch.py shows from this lane.
+- T-3230 (the board prune): my row removes it as retired by the audit and is ready. Odalys's record of this morning
+  ends "T-3230 stays open"; the row records the disagreement and carries the prune's counts for the #41 report.
+  Until the apply runs the line is open on the board: it should not be handed out again.
+- T-4105's counts: 13 group 1 rows are "closed outside the audit" (11 by the T-3230 prune, 2 by the merge reset) and
+  are not audit ticks; the prune and the audit judged the same notices on different rules.
+- Branches still under refs/heads/parked whose lines are closed or leaving: T-3457, T-3507, T-3510 (for T-4099).
+- queue_apply.py on a lane writes the lane's own board, so a main-side change next to an archived line fails the
+  land; the outbox has no such record kind (for T-4100 and T-4101).
+- Carried from before: T-3182's Lock In order of 11-06 was never recorded; T-3365 and T-3371 may clash with
+  c6798394283 (both now wait on #303); T-3406 and T-3388 wait on a ruling of mine; T-3069's before and after for
+  #41 was never sent; T-3233's done-note count (16) was never corrected to 15; the ledger's missing union merge.
+
+## Commits
+
+- On main: 2ab0ac371b, 25561c368a, 330a225ce0, 3d947f5320 (batches 1 to 3); earlier handoff notes and memory.
+- This session, on personal/a2 (hashes as before the land's rebase): 16102e9f6c batch 4 (25 rows, the T-3373 note's
+  outbox record); a9b66dcecf the seven superseding rows; then this note and my memory.
 {% endraw %}
 
 </div>

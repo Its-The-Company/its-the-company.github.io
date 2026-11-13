@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T18:04:50.023919+00:00",
+ "at": "2026-11-13T18:07:54.910724+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -38,6 +38,14 @@
    }
   ],
   "done": [
+   {
+    "t": "T-4124",
+    "name": "Find every slowdown the company built into its own process",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794593264
+   },
    {
     "t": "T-4274",
     "name": "Let Evan's account use its weekly Fable to the limit",
@@ -78,7 +86,7 @@
     "end_at": 1794565169
    }
   ],
-  "landed": 5,
+  "landed": 6,
   "failed": 0
  },
  "workers": [
@@ -87,7 +95,7 @@
    "task": "[design] T-4287 Home lists in scroll boxes",
    "model": "opus",
    "started": "2026-11-13T17:03:21.535Z",
-   "seconds": 3688,
+   "seconds": 3873,
    "finished": null,
    "effort": "high"
   },
@@ -96,25 +104,7 @@
    "task": "[tools] T-4284 Audit mode slice 1 pause off",
    "model": "opus",
    "started": "2026-11-13T17:29:09.476Z",
-   "seconds": 2140,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4300 review one Pro gates read",
-   "model": "opus",
-   "started": "2026-11-13T17:57:11.107Z",
-   "seconds": 458,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[review] T-4294 review system https shim",
-   "model": "opus",
-   "started": "2026-11-13T17:57:17.914Z",
-   "seconds": 452,
+   "seconds": 2325,
    "finished": null,
    "effort": "high"
   },
@@ -123,13 +113,38 @@
    "task": "[build] T-3820 add net.request to the app",
    "model": "opus",
    "started": "2026-11-13T17:57:25.005Z",
-   "seconds": 445,
+   "seconds": 629,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[build] T-4303 fix https shim before switch-on",
+   "model": "opus",
+   "started": "2026-11-13T18:07:27.081Z",
+   "seconds": 27,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Maren, Odalys, Pernille, Idris x2",
+ "who": "Maren, Odalys, Idris, Pernille",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[review] T-4294 review system https shim",
+   "model": "opus",
+   "started": "2026-11-13T17:57:17.914Z",
+   "seconds": null,
+   "finished": "2026-11-13T18:07:11.817000+00:00"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4300 review one Pro gates read",
+   "model": "opus",
+   "started": "2026-11-13T17:57:11.107Z",
+   "seconds": null,
+   "finished": "2026-11-13T18:04:59.555000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4277 offer free premades on store hang",
@@ -145,29 +160,13 @@
    "started": "2026-11-13T17:03:09.881Z",
    "seconds": null,
    "finished": "2026-11-13T17:34:36.670000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4289 completion list and marks review",
-   "model": "opus",
-   "started": "2026-11-13T17:07:25.189Z",
-   "seconds": null,
-   "finished": "2026-11-13T17:17:34.694000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4258 land completion list fixes",
-   "model": "opus",
-   "started": "2026-11-13T16:35:40.793Z",
-   "seconds": null,
-   "finished": "2026-11-13T17:07:04.298000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 544,
-  "blocked_count": 106
+  "runnable_count": 545,
+  "blocked_count": 105
  },
  "meter": {
   "five_hour": {
@@ -215,18 +214,15 @@
   "week_pct": 43.7,
   "usage_pct": 32.7,
   "work_pct": 78.9,
-  "read_at": "2026-11-13T18:05:00+00:00",
+  "read_at": "2026-11-13T18:08:00+00:00",
   "running": [
    {
     "lane": "a",
     "task": "T-4124",
-    "w": "Ines",
-    "k": "plan",
     "t": "Find every slowdown the company built into its own process",
-    "m": "opus",
-    "e": "xhigh",
     "at": "2026-11-13T12:56:42-05:00",
     "n": "Evan",
+    "d": 1,
     "src": "plan-a"
    },
    {
@@ -261,23 +257,23 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 14,
   "gate": "open",
   "ssd": {
    "mounted": true,
-   "free_gb": 185
+   "free_gb": 184
   },
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T13:02:00-05:00",
+   "at": "2026-11-13T13:07:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T13:05:00-05:00",
+  "at": "2026-11-13T13:08:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -312,20 +308,20 @@
    "effort": "high"
   },
   {
-   "name": "Pernille",
+   "name": "Idris",
    "state": "running",
-   "task": "[review] T-4300 review one Pro gates read",
+   "task": "[build] T-3820 add net.request to the app",
    "model": "opus",
-   "since": "2026-11-13T17:57:11.107Z",
+   "since": "2026-11-13T17:57:25.005Z",
    "next": [],
    "effort": "high"
   },
   {
-   "name": "Idris",
+   "name": "Pernille",
    "state": "running",
-   "task": "[review] T-4294 review system https shim",
+   "task": "[build] T-4303 fix https shim before switch-on",
    "model": "opus",
-   "since": "2026-11-13T17:57:17.914Z",
+   "since": "2026-11-13T18:07:27.081Z",
    "next": [],
    "effort": "high"
   },
@@ -369,26 +365,6 @@
     "task": "T-4284"
    },
    {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the one Pro gates read per pass",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T17:57:11.107Z",
-    "o": "c",
-    "task": "T-4300"
-   },
-   {
-    "w": "Idris",
-    "k": "review",
-    "t": "Review the system https shim before TestFlight",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T17:57:17.914Z",
-    "o": "c",
-    "task": "T-4294"
-   },
-   {
     "w": "Idris",
     "k": "build",
     "t": "Add the general web request call to the app",
@@ -397,6 +373,16 @@
     "at": "2026-11-13T17:57:25.005Z",
     "o": "c",
     "task": "T-3820"
+   },
+   {
+    "w": "Pernille",
+    "k": "build",
+    "t": "Fix the https shim before it turns on",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-13T18:07:27.081Z",
+    "o": "c",
+    "task": "T-4303"
    }
   ],
   "src": "plan",
@@ -474,30 +460,38 @@
   ],
   "done": [
    {
-    "w": "Pernille",
-    "t": "Checked Idris's fix that makes the app ask the App Store once per widget refresh; it works and...",
-    "at": "2026-11-13T13:03:00-05:00"
+    "w": "Ines",
+    "t": "The efficiency review now has its 11-13 follow-up: lane records reach the board in minutes while...",
+    "at": "2026-11-13T13:07:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "When Apple's store check hangs, the app now still prepares the free ready-made widgets, so one...",
-    "at": "2026-11-13T12:56:00-05:00"
+    "t": "Checked Pernille's new route for scripts' secure (https) web requests through the iPhone's own...",
+    "at": "2026-11-13T13:05:00-05:00"
    },
    {
     "w": "Pernille",
-    "t": "Python's secure web requests can now go through Apple's own network security instead of a...",
-    "at": "2026-11-13T12:33:00-05:00"
+    "t": "Checked Idris's fix that makes the app ask the App Store once per widget refresh; it works and...",
+    "at": "2026-11-13T13:03:00-05:00"
    }
   ],
   "count": {
-   "next": 544,
-   "wait": 59,
+   "next": 545,
+   "wait": 58,
    "blocked": 47,
    "you": 19
   },
   "fin": {
-   "n": 14,
+   "n": 16,
    "rows": [
+    [
+     "T-4124",
+     "Find every slowdown the..."
+    ],
+    [
+     "T-4294",
+     "Review the system https shim..."
+    ],
     [
      "T-4300",
      "Review the one Pro gates..."
@@ -513,14 +507,6 @@
     [
      "T-4289",
      "Review the completion list..."
-    ],
-    [
-     "T-4258",
-     "Pin the completion list..."
-    ],
-    [
-     "T-4259",
-     "Make completion rows 44..."
     ]
    ]
   }
@@ -564,7 +550,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T18:04:50Z",
+  "at": "2026-11-13T18:07:54Z",
   "s": {
    "T-3820": [
     "testing",
@@ -574,29 +560,29 @@
    "T-4284": [
     "testing",
     "its own tests, in its copy",
-    1794592670023
+    1794592674910
    ],
    "T-4287": [
     "testing",
     "its own tests, in its copy",
-    1794591230023
+    1794591234910
    ],
-   "T-4300": [
+   "T-4124": [
     "merged",
-    "on main 1:04 PM ET",
-    1794593057000,
-    "Pernille"
+    "on main 1:07 PM ET",
+    1794593246000,
+    ""
    ]
   },
   "nm": {
    "T-3820": "Add the general web request call to the app",
    "T-4284": "Add an Audit mode for one audit on chosen accounts",
    "T-4287": "Show all Queued and In flight tasks in scroll boxes",
-   "T-4300": "Review the one Pro gates read per pass"
+   "T-4124": "Find every slowdown the company built into its own process"
   }
  },
  "ln": {
-  "at": "2026-11-13T18:04:50Z",
+  "at": "2026-11-13T18:07:54Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -610,26 +596,26 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1587,
+    "conflicted": 1590,
     "failed": null,
     "held": null,
-    "retry": 71,
-    "parked": 72
+    "retry": 74,
+    "parked": 75
    },
    "cur": [],
    "ld": [
-    8,
-    "2026-11-13T17:58:01Z"
+    9,
+    "2026-11-13T18:07:44Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T18:04:31Z",
-    "ld": 8.2,
+    "at": "2026-11-13T18:07:38Z",
+    "ld": 8.19,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.6,
+     14.0,
      228.3
     ],
     "ss": [
@@ -658,7 +644,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 13 tasks",
+   "t": "Work session \u2013 14 tasks",
    "at": "2026-11-13T12:58:40-05:00"
   },
   {
@@ -667,8 +653,8 @@
    "sr": 1,
    "m": "opus",
    "e": "xhigh",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-13T13:03:24-05:00"
+   "t": "Work session",
+   "at": "2026-11-13T12:56:42-05:00"
   },
   {
    "w": "Operator",
@@ -699,13 +685,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 5,
+  "main": 4,
   "lanes": 2,
-  "total": 7,
-  "at": "1:05 PM",
+  "total": 6,
+  "at": "1:08 PM",
   "why": "",
-  "at_iso": "2026-11-13T18:05:00+00:00",
+  "at_iso": "2026-11-13T18:08:00+00:00",
   "started": "11:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>7</b> agents running now</p><p class=\"an-sub\">Main session 5, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:05 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 4, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 1:08 PM ET</p></section>"
  }
 }

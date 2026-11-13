@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-13T23:24:22.218516+00:00",
+ "at": "2026-11-13T23:25:30.213813+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "inbox",
+  "started": "2026-11-13T18:24:23-05:00",
   "flow": [
    {
     "t": "T-4252",
@@ -122,20 +122,11 @@
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "odalys",
-   "task": "[report] evening",
-   "model": "opus",
-   "started": "2026-11-13T23:09:18.078Z",
-   "seconds": null,
-   "finished": "2026-11-13T23:11:50.599000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 507,
+  "runnable_count": 508,
   "blocked_count": 103
  },
  "meter": {
@@ -179,12 +170,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-13T18:39:11-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 46.76,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T23:24:00+00:00",
+  "read_at": "2026-11-13T23:27:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -234,7 +225,7 @@
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-13T18:24:00-05:00",
+  "at": "2026-11-13T18:27:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -242,9 +233,13 @@
    "b": "midnight"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: usage is ahead of the week's even pace to Sat 23:00, so work waits until the line passes; the machine allows 13 (held: too few lands in 3 hours to judge a raise)",
+  "n": 1,
+  "at": "2026-11-13T18:24:11.632585-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
@@ -297,6 +292,7 @@
  ],
  "tasks": {
   "run": [],
+  "src": "plan",
   "open": [
    {
     "w": "Odalys",
@@ -387,10 +383,14 @@
    }
   ],
   "count": {
-   "next": 507,
+   "next": 508,
    "wait": 54,
    "blocked": 49,
    "you": 19
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -432,11 +432,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T23:24:22Z",
+  "at": "2026-11-13T23:25:13Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-13T23:24:22Z",
+  "at": "2026-11-13T23:25:13Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -450,11 +450,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 277,
+    "conflicted": 278,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 391
+    "parked": 392
    },
    "cur": [],
    "ld": [
@@ -464,8 +464,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T23:24:22Z",
-    "ld": 0.63,
+    "at": "2026-11-13T23:25:13Z",
+    "ld": 0.58,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -494,47 +494,32 @@
  "operators": [
   {
    "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "sonnet",
+   "e": "low",
+   "t": "Inbox session",
+   "at": "2026-11-13T18:25:26-05:00"
+  },
+  {
+   "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
    "m": "opus",
    "e": "xhigh",
-   "t": "Inbox \u2013 Jeremy's 6:20 PM Message on GitHub",
-   "at": "2026-11-13T18:21:52-05:00"
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-13T18:24:55-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T22:04:47Z",
-  "seconds": 96.0
+  "sent": "2026-11-13T23:20:26Z",
+  "seconds": 254.0
  },
- "inbox": [
-  {
-   "id": "c6867400975",
-   "state": "received",
-   "position": 1,
-   "eta": "2026-11-13T18:39:11-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Keep working as soon as you can on..."
-  },
-  {
-   "id": "c6867447682",
-   "state": "received",
-   "position": 2,
-   "eta": "2026-11-13T18:39:11-05:00",
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Also, we\u2019re currently behind the..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -545,10 +530,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "6:24 PM",
+  "at": "6:27 PM",
   "why": "",
-  "at_iso": "2026-11-13T23:24:00+00:00",
+  "at_iso": "2026-11-13T23:27:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:24 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 6:27 PM ET</p></section>"
  }
 }

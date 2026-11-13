@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T13:07:24.567416+00:00",
+ "at": "2026-11-13T13:10:30.929109+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -75,7 +75,7 @@
    "task": "[site] T-4246 then T-4248 Home mode bubble and Operator tab",
    "model": "opus",
    "started": "2026-11-13T12:32:55.560Z",
-   "seconds": 2069,
+   "seconds": 2255,
    "finished": null,
    "effort": "high"
   },
@@ -84,7 +84,7 @@
    "task": "[build] T-3400 iOS https shim land",
    "model": "opus",
    "started": "2026-11-13T12:56:01.668Z",
-   "seconds": 682,
+   "seconds": 869,
    "finished": null,
    "effort": "high"
   },
@@ -93,7 +93,7 @@
    "task": "[build] T-2261 editor completion list UI",
    "model": "opus",
    "started": "2026-11-13T13:02:06.520Z",
-   "seconds": 318,
+   "seconds": 504,
    "finished": null,
    "effort": "high"
   }
@@ -106,7 +106,7 @@
    "model": "opus",
    "started": "2026-11-13T12:42:29.647Z",
    "seconds": null,
-   "finished": "2026-11-13T13:01:48.250000+00:00"
+   "finished": "2026-11-13T13:09:56.432000+00:00"
   },
   {
    "name": "odalys",
@@ -141,19 +141,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 7.0,
+   "pct": 8.0,
    "resets_at": "2026-11-13T10:50:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T08:03:39.136111-05:00",
+   "read_at": "2026-11-13T08:09:44.219625-05:00",
    "source": "live",
-   "left": 93.0,
+   "left": 92.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 86.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T08:03:39.136111-05:00",
+   "read_at": "2026-11-13T08:09:44.219625-05:00",
    "source": "live",
    "left": 14.0,
    "left_words": "of your weekly allowance left"
@@ -165,7 +165,7 @@
    "read_at": "2026-11-13T04:58:50.100124-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T08:03:39.136111-05:00"
+  "read_at": "2026-11-13T08:09:44.219625-05:00"
  },
  "ui": {
   "week_pct": 0.3,
@@ -185,22 +185,8 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T13:07:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-4127",
-    "w": "Ines",
-    "k": "plan",
-    "t": "Run the Restructuring on Evan's account",
-    "m": "fable",
-    "e": "xhigh",
-    "at": "2026-11-13T07:24:53-05:00",
-    "n": "Evan",
-    "d": 1,
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-13T13:10:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -229,14 +215,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T08:03:00-05:00",
+   "at": "2026-11-13T08:09:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T08:07:00-05:00",
+  "at": "2026-11-13T08:10:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -502,39 +488,40 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T13:07:06Z",
+  "at": "2026-11-13T13:10:18Z",
   "s": {
-   "T-4246": [
-    "merging",
-    "Mac tests at the main gate",
-    1794574986297
-   ],
    "T-3400": [
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
+   ],
+   "T-4248": [
     "merging",
     "Mac tests at the main gate",
-    1794575046297
+    1794575418436
+   ],
+   "T-4246": [
+    "merged",
+    "on main 8:07 AM ET",
+    1794575228000,
+    "Odalys"
    ],
    "T-2261": [
-    "testing",
-    "its own tests, in its copy",
-    1794575226297
-   ],
-   "T-4127": [
     "merged",
-    "on main 5:19 AM ET",
-    1794565141000,
-    ""
+    "on main 8:01 AM ET",
+    1794574878000,
+    "Idris"
    ]
   },
   "nm": {
-   "T-4246": "Shrink the mode panel to a small bubble",
    "T-3400": "Send Python's https through iOS and drop the OpenSSL modules",
-   "T-2261": "Build and test the editor completion changes",
-   "T-4127": "Run the Restructuring on Evan's account"
+   "T-4248": "Bring back the Operator and Controls tab on Home",
+   "T-4246": "Shrink the mode panel to a small bubble",
+   "T-2261": "Build and test the editor completion changes"
   }
  },
  "ln": {
-  "at": "2026-11-13T13:07:06Z",
+  "at": "2026-11-13T13:10:18Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -548,41 +535,41 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1289,
+    "conflicted": 1293,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 1313
+    "parked": 1316
    },
    "cur": [],
    "ld": [
-    2,
-    "2026-11-13T10:19:29Z"
+    3,
+    "2026-11-13T13:07:36Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T13:06:46Z",
-    "ld": 1.04,
+    "at": "2026-11-13T13:10:18Z",
+    "ld": 1.96,
     "c": 8,
     "sb": 0,
     "dk": [
-     24.5,
+     24.9,
      228.3
     ],
     "ss": [
-     182.8,
+     182.7,
      953.7
     ],
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-13T13:01:15Z",
-    "ld": 2.48,
+    "at": "2026-11-13T13:09:27Z",
+    "ld": 0.61,
     "c": 12,
     "sb": 0,
     "dk": [
-     375.5,
+     375.6,
      926.4
     ],
     "sn": []
@@ -620,12 +607,12 @@
  ],
  "agents_now": {
   "main": 3,
-  "lanes": 1,
-  "total": 4,
-  "at": "8:07 AM",
+  "lanes": 0,
+  "total": 3,
+  "at": "8:10 AM",
   "why": "",
-  "at_iso": "2026-11-13T13:07:00+00:00",
+  "at_iso": "2026-11-13T13:10:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 8:07 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:10 AM ET</p></section>"
  }
 }

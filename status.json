@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T16:44:22.768198+00:00",
+ "at": "2026-11-13T16:47:29.880473+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -63,7 +63,7 @@
    "task": "[release] T-4270 build 6 to TestFlight",
    "model": "opus",
    "started": "2026-11-13T16:33:29.474Z",
-   "seconds": 653,
+   "seconds": 840,
    "finished": null,
    "effort": "high"
   },
@@ -72,7 +72,7 @@
    "task": "[design] T-4271 Builder drag-and-drop mock-ups",
    "model": "opus",
    "started": "2026-11-13T16:33:37.534Z",
-   "seconds": 645,
+   "seconds": 832,
    "finished": null,
    "effort": "high"
   },
@@ -81,7 +81,7 @@
    "task": "[build] T-4258 land completion list fixes",
    "model": "opus",
    "started": "2026-11-13T16:35:40.793Z",
-   "seconds": 521,
+   "seconds": 709,
    "finished": null,
    "effort": "high"
   },
@@ -90,7 +90,7 @@
    "task": "[tools] T-4275 gate runs new app suites",
    "model": "opus",
    "started": "2026-11-13T16:38:14.339Z",
-   "seconds": 368,
+   "seconds": 555,
    "finished": null,
    "effort": "high"
   },
@@ -99,7 +99,7 @@
    "task": "[plan] T-4267 land ADR-007 addendum",
    "model": "opus",
    "started": "2026-11-13T16:41:59.826Z",
-   "seconds": 142,
+   "seconds": 330,
    "finished": null,
    "effort": "high"
   }
@@ -134,7 +134,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 540,
+  "runnable_count": 541,
   "blocked_count": 103
  },
  "meter": {
@@ -183,7 +183,7 @@
   "week_pct": 43.7,
   "usage_pct": 32.7,
   "work_pct": 78.9,
-  "read_at": "2026-11-13T16:44:00+00:00",
+  "read_at": "2026-11-13T16:47:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -259,7 +259,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T11:44:00-05:00",
+  "at": "2026-11-13T11:47:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -472,7 +472,7 @@
    }
   ],
   "count": {
-   "next": 540,
+   "next": 541,
    "wait": 53,
    "blocked": 50,
    "you": 18
@@ -530,38 +530,46 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T16:44:14Z",
+  "at": "2026-11-13T16:47:14Z",
   "s": {
-   "T-4270": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-4258": [
     "merging",
     "Mac tests at the main gate \u00b7 5 groups of tests done",
-    1794587834760
+    1794587834912
    ],
    "T-4267": [
     "testing",
     "its own tests, in its copy",
-    1794588194760
+    1794588194912
    ],
    "T-4275": [
     "testing",
     "its own tests, in its copy",
-    1794588194760
+    1794588194912
+   ],
+   "T-4271": [
+    "merged",
+    "on main 11:47 AM ET",
+    1794588434000,
+    "Maren"
+   ],
+   "T-4270": [
+    "merged",
+    "on main 11:45 AM ET",
+    1794588350000,
+    ""
    ]
   },
   "nm": {
-   "T-4270": "Send build 6 with the premades fix to TestFlight",
    "T-4258": "Pin the completion list under the typed word",
    "T-4267": "Plan in-widget Python first with a shown fallback",
-   "T-4275": "Gate runs a new app test suite when landing"
+   "T-4275": "Gate runs a new app test suite when landing",
+   "T-4271": "Draw a drag-and-drop front end for the Builder",
+   "T-4270": "Send build 6 with the premades fix to TestFlight"
   }
  },
  "ln": {
-  "at": "2026-11-13T16:44:14Z",
+  "at": "2026-11-13T16:47:14Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -575,11 +583,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1507,
+    "conflicted": 1510,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 7158
+    "parked": 7161
    },
    "cur": [],
    "ld": [
@@ -589,8 +597,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T16:43:55Z",
-    "ld": 6.09,
+    "at": "2026-11-13T16:46:52Z",
+    "ld": 8.09,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -604,12 +612,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-13T16:38:26Z",
-    "ld": 0.23,
+    "at": "2026-11-13T16:45:46Z",
+    "ld": 1.2,
     "c": 12,
     "sb": 0,
     "dk": [
-     373.9,
+     373.6,
      926.4
     ],
     "sn": []
@@ -641,8 +649,8 @@
    "sr": 1,
    "m": "opus",
    "e": "xhigh",
-   "t": "Inbox \u2013 Evan's 11:43 AM Message on GitHub",
-   "at": "2026-11-13T11:43:23-05:00"
+   "t": "Inbox \u2013 Evan's 11:46 AM Message on GitHub",
+   "at": "2026-11-13T11:46:58-05:00"
   },
   {
    "w": "Operator",
@@ -655,19 +663,19 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-13T16:39:25Z",
-  "seconds": 39.0
+  "sent": "2026-11-13T16:43:11Z",
+  "seconds": 96.0
  },
  "inbox": [
   {
-   "id": "c6859129775",
+   "id": "c6859212577",
    "state": "received",
    "position": 1,
    "tasks": {
     "open": 0,
     "done": 0
    },
-   "title": "If helpful, you may make an Audit..."
+   "title": "Thank you, this is exactly what I am..."
   }
  ],
  "trimmed": [
@@ -686,10 +694,10 @@
   "main": 5,
   "lanes": 3,
   "total": 8,
-  "at": "11:44 AM",
+  "at": "11:47 AM",
   "why": "",
-  "at_iso": "2026-11-13T16:44:00+00:00",
+  "at_iso": "2026-11-13T16:47:00+00:00",
   "started": "11:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 5, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:44 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 5, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:47 AM ET</p></section>"
  }
 }

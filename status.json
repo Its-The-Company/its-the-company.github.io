@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T10:50:47.375726+00:00",
+ "at": "2026-11-13T10:56:14.010975+00:00",
  "session": {
   "active": false,
   "kind": "",
@@ -94,44 +94,11 @@
  },
  "workers": [],
  "who": "",
- "recent": [
-  {
-   "name": "pernille",
-   "task": "[review] T-4242 review widget start failure rows",
-   "model": "opus",
-   "started": "2026-11-13T04:59:07.229Z",
-   "seconds": null,
-   "finished": "2026-11-13T05:03:28.749000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3895 record extension runs that never start",
-   "model": "opus",
-   "started": "2026-11-13T04:24:28.027Z",
-   "seconds": null,
-   "finished": "2026-11-13T04:58:45.437000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4238 review shared step wait fix",
-   "model": "opus",
-   "started": "2026-11-13T04:17:53.608Z",
-   "seconds": null,
-   "finished": "2026-11-13T04:23:45.958000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3900 one wait per refresh on hung step",
-   "model": "opus",
-   "started": "2026-11-13T03:39:21.282Z",
-   "seconds": null,
-   "finished": "2026-11-13T04:17:06.294000+00:00"
-  }
- ],
+ "recent": [],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 576,
+  "runnable_count": 577,
   "blocked_count": 103
  },
  "meter": {
@@ -163,8 +130,8 @@
   "read_at": "2026-11-13T04:58:50.100124-05:00"
  },
  "ui": {
-  "week_pct": 0.263,
-  "five_hour_pct": 0.0,
+  "week_pct": 0.271,
+  "five_hour_pct": 0.053,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -180,7 +147,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T10:50:00+00:00",
+  "read_at": "2026-11-13T10:56:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -210,14 +177,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T05:50:00-05:00",
+   "at": "2026-11-13T05:51:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-13T05:50:00-05:00",
+  "at": "2026-11-13T05:56:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -370,7 +337,7 @@
    }
   ],
   "count": {
-   "next": 576,
+   "next": 577,
    "wait": 38,
    "blocked": 65,
    "you": 18
@@ -415,11 +382,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T10:50:47Z",
+  "at": "2026-11-13T10:56:14Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-13T10:50:47Z",
+  "at": "2026-11-13T10:56:14Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -433,11 +400,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1153,
+    "conflicted": 1159,
     "failed": null,
     "held": null,
-    "retry": 511,
-    "parked": 1187
+    "retry": 517,
+    "parked": 1192
    },
    "cur": [],
    "ld": [
@@ -447,8 +414,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T10:50:25Z",
-    "ld": 0.51,
+    "at": "2026-11-13T10:56:14Z",
+    "ld": 0.48,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -476,12 +443,12 @@
  },
  "operators": [],
  "reply": {
-  "sent": "2026-11-13T02:51:09Z",
-  "seconds": 125.0
+  "sent": "2026-11-13T10:49:52Z",
+  "seconds": 95.0
  },
  "inbox": [
   {
-   "id": "c6850703999",
+   "id": "c6850738885",
    "state": "received",
    "position": 1,
    "eta": "2026-11-13T06:05:35-05:00",
@@ -489,13 +456,12 @@
     "open": 0,
     "done": 0
    },
-   "title": "mode should be a tinyyyy expandable..."
+   "title": "Is Evan's account still working on..."
   }
  ],
  "trimmed": [
   "lane_next",
   "queue_text",
-  "recent",
   "task_done",
   "inbox_title",
   "task_title",
@@ -508,10 +474,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "5:50 AM",
-  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-13T10:50:00+00:00",
+  "at": "5:56 AM",
+  "why": "Between sessions: no session is running. Last check 5:50 AM ET.",
+  "at_iso": "2026-11-13T10:56:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:50 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 5:56 AM ET</p><p class=\"an-why\">Between sessions: no session is running. Last check 5:50 AM ET.</p></section>"
  }
 }

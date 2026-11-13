@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T03:30:07.824794+00:00",
+ "at": "2026-11-13T03:33:09.965635+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -150,7 +150,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 575,
+  "runnable_count": 574,
   "blocked_count": 104
  },
  "meter": {
@@ -199,7 +199,7 @@
   "week_pct": 39.76,
   "usage_pct": 32.4,
   "work_pct": 79.4,
-  "read_at": "2026-11-13T03:30:00+00:00",
+  "read_at": "2026-11-13T03:33:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -243,14 +243,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T22:26:00-05:00",
+   "at": "2026-11-12T22:32:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T22:30:00-05:00",
+  "at": "2026-11-12T22:33:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -369,13 +369,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "site",
-    "t": "Show the Restructuring folder on the...",
-    "s": "next",
-    "o": "i"
-   },
-   {
     "w": "Ines",
     "k": "plan",
     "t": "Run the Restructuring on Evan's account",
@@ -388,9 +381,21 @@
     "t": "Retire the Set aside stage on Home",
     "s": "next",
     "o": "i"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Every premade widget draws on the iPhone",
+    "s": "next",
+    "o": "i"
    }
   ],
   "done": [
+   {
+    "w": "Odalys",
+    "t": "The Investors can now read the Restructuring's plan, audit and working drafts under Documents on...",
+    "at": "2026-11-12T22:32:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "A new Double Spread usage mode paces an account to reach its weekly limit halfway through the...",
@@ -400,22 +405,21 @@
     "w": "Idris",
     "t": "The merge gate's safety scan mistook a file name inside an error message for a file the app...",
     "at": "2026-11-12T22:18:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Fable audit sessions on the personal accounts now pause about 4 points short of the 5-hour limit...",
-    "at": "2026-11-12T22:08:00-05:00"
    }
   ],
   "count": {
-   "next": 575,
+   "next": 574,
    "wait": 39,
    "blocked": 65,
    "you": 18
   },
   "fin": {
-   "n": 5,
+   "n": 6,
    "rows": [
+    [
+     "T-4230",
+     "Show the Restructuring..."
+    ],
     [
      "T-4232",
      "Add a Double Spread usage..."
@@ -478,13 +482,8 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T03:29:47Z",
+  "at": "2026-11-13T03:32:52Z",
   "s": {
-   "T-4236": [
-    "testing",
-    "its own tests, in its copy",
-    1794539987967
-   ],
    "T-4127": [
     "merged",
     "on main 9:34 PM ET",
@@ -493,12 +492,11 @@
    ]
   },
   "nm": {
-   "T-4236": "Clear the main gate red from a tester script message",
    "T-4127": "Run the Restructuring on Evan's account"
   }
  },
  "ln": {
-  "at": "2026-11-13T03:29:47Z",
+  "at": "2026-11-13T03:32:52Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -512,11 +510,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 678,
+    "conflicted": 681,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 756
+    "parked": 759
    },
    "cur": [],
    "ld": [
@@ -526,12 +524,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T03:29:25Z",
-    "ld": 0.9,
+    "at": "2026-11-13T03:32:12Z",
+    "ld": 0.78,
     "c": 8,
     "sb": 0,
     "dk": [
-     21.3,
+     21.7,
      228.3
     ],
     "ss": [
@@ -549,7 +547,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
+   "t": "Work session \u2013 1 task",
    "at": "2026-11-12T21:53:15-05:00"
   },
   {
@@ -583,10 +581,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "10:30 PM",
+  "at": "10:33 PM",
   "why": "",
-  "at_iso": "2026-11-13T03:30:00+00:00",
+  "at_iso": "2026-11-13T03:33:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:30 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:33 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T04:55:32.900615+00:00",
+ "at": "2026-11-13T04:58:31.842346+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -116,7 +116,7 @@
    "task": "[build] T-3895 record extension runs that never start",
    "model": "opus",
    "started": "2026-11-13T04:24:28.027Z",
-   "seconds": 1864,
+   "seconds": 2043,
    "finished": null,
    "effort": "high"
   }
@@ -159,8 +159,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 572,
-  "blocked_count": 104
+  "runnable_count": 574,
+  "blocked_count": 103
  },
  "meter": {
   "five_hour": {
@@ -208,7 +208,7 @@
   "week_pct": 39.76,
   "usage_pct": 32.4,
   "work_pct": 79.4,
-  "read_at": "2026-11-13T04:55:00+00:00",
+  "read_at": "2026-11-13T04:58:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -252,14 +252,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T23:50:00-05:00",
+   "at": "2026-11-12T23:56:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T23:55:00-05:00",
+  "at": "2026-11-12T23:58:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -391,6 +391,13 @@
    },
    {
     "w": "Odalys",
+    "k": "site",
+    "t": "Draw the app's diagrams from its code on the...",
+    "s": "next",
+    "o": "i"
+   },
+   {
+    "w": "Odalys",
     "k": "tools",
     "t": "Retire the Set aside stage on Home",
     "s": "next",
@@ -402,41 +409,42 @@
     "t": "Every premade widget draws on the iPhone",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Widgets refresh on their own and by a tap",
-    "s": "next",
-    "o": "i"
    }
   ],
   "done": [
    {
-    "w": "Pernille",
-    "t": "I checked Idris's fix that makes a widget refresh wait only once when a step every widget needs...",
-    "at": "2026-11-12T23:23:00-05:00"
-   },
-   {
-    "w": "Operator",
-    "t": "Closed as a duplicate: the same crash in the task-names tool is already on the board as T-4221...",
-    "at": "2026-11-12T23:18:00-05:00"
+    "w": "Idris",
+    "t": "Merged into T-3895 (recording widget runs that never start in the extension), which landed this...",
+    "at": "2026-11-12T23:58:00-05:00"
    },
    {
     "w": "Idris",
-    "t": "When one step every widget needs (the Pro purchase check, starting Python, or the launch log)...",
-    "at": "2026-11-12T23:16:00-05:00"
+    "t": "When Python could not start inside a widget, the widget used to go quietly out of date with...",
+    "at": "2026-11-12T23:58:00-05:00"
+   },
+   {
+    "w": "Pernille",
+    "t": "I checked Idris's fix that makes a widget refresh wait only once when a step every widget needs...",
+    "at": "2026-11-12T23:23:00-05:00"
    }
   ],
   "count": {
-   "next": 572,
-   "wait": 39,
+   "next": 574,
+   "wait": 38,
    "blocked": 65,
    "you": 18
   },
   "fin": {
-   "n": 9,
+   "n": 11,
    "rows": [
+    [
+     "T-2496",
+     "Log extension runs that..."
+    ],
+    [
+     "T-3895",
+     "Record widget runs that..."
+    ],
     [
      "T-4238",
      "Review the shared step wait fix"
@@ -452,14 +460,6 @@
     [
      "T-4230",
      "Show the Restructuring..."
-    ],
-    [
-     "T-4232",
-     "Add a Double Spread usage..."
-    ],
-    [
-     "T-4236",
-     "Clear the main gate red from..."
     ]
    ]
   }
@@ -503,12 +503,13 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T04:55:27Z",
+  "at": "2026-11-13T04:58:31Z",
   "s": {
    "T-3895": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    "merged",
+    "on main 11:58 PM ET",
+    1794545885000,
+    ""
    ],
    "T-4127": [
     "merged",
@@ -523,7 +524,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-13T04:55:27Z",
+  "at": "2026-11-13T04:58:31Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -537,11 +538,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 798,
+    "conflicted": 801,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 821
+    "parked": 824
    },
    "cur": [],
    "ld": [
@@ -551,8 +552,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T04:54:41Z",
-    "ld": 0.51,
+    "at": "2026-11-13T04:58:32Z",
+    "ld": 0.48,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -566,12 +567,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-13T04:50:40Z",
-    "ld": 1.05,
+    "at": "2026-11-13T04:57:47Z",
+    "ld": 1.08,
     "c": 12,
     "sb": 0,
     "dk": [
-     376.5,
+     376.3,
      926.4
     ],
     "sn": []
@@ -620,10 +621,10 @@
   "main": 1,
   "lanes": 1,
   "total": 2,
-  "at": "11:55 PM",
+  "at": "11:58 PM",
   "why": "",
-  "at_iso": "2026-11-13T04:55:00+00:00",
+  "at_iso": "2026-11-13T04:58:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:55 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:58 PM ET</p></section>"
  }
 }

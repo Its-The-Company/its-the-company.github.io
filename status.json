@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T00:41:40.411731+00:00",
+ "at": "2026-11-13T00:44:42.796343+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -73,23 +73,24 @@
     "why": "did not merge cleanly"
    },
    {
+    "t": "T-4149",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "failed",
+    "end_at": 1794495739,
+    "why": "did not merge cleanly"
+   },
+   {
     "t": "T-3753",
     "name": "Callers pass the task to each Mac mini build",
     "acct": "Personal b",
     "steps": [],
     "end": "landed",
     "end_at": 1794495702
-   },
-   {
-    "t": "T-3418",
-    "acct": "Personal b",
-    "steps": [],
-    "end": "landed",
-    "end_at": 1794495661
    }
   ],
-  "landed": 25,
-  "failed": 6
+  "landed": 23,
+  "failed": 7
  },
  "workers": [
   {
@@ -97,7 +98,7 @@
    "task": "[build] T-4218 redraw launcher after slot edit",
    "model": "opus",
    "started": "2026-11-12T23:21:24.535Z",
-   "seconds": 4815,
+   "seconds": 4998,
    "finished": null,
    "effort": "high"
   },
@@ -106,7 +107,7 @@
    "task": "[release] T-4219 mark launcher builds, refuse upload",
    "model": "opus",
    "started": "2026-11-12T23:50:57.870Z",
-   "seconds": 3042,
+   "seconds": 3224,
    "finished": null,
    "effort": "high"
   },
@@ -115,7 +116,7 @@
    "task": "[tools] T-4213 land account restart fix",
    "model": "opus",
    "started": "2026-11-13T00:14:33.768Z",
-   "seconds": 1626,
+   "seconds": 1809,
    "finished": null,
    "effort": "high"
   },
@@ -124,7 +125,7 @@
    "task": "[tools] T-4224 why audit sessions use Opus",
    "model": "opus",
    "started": "2026-11-13T00:33:22.902Z",
-   "seconds": 497,
+   "seconds": 679,
    "finished": null,
    "effort": "high"
   }
@@ -167,8 +168,8 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 594,
-  "blocked_count": 85
+  "runnable_count": 593,
+  "blocked_count": 86
  },
  "meter": {
   "five_hour": {
@@ -216,7 +217,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-13T00:41:00+00:00",
+  "read_at": "2026-11-13T00:44:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -253,7 +254,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T19:41:00-05:00",
+  "at": "2026-11-12T19:44:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -449,10 +450,10 @@
    }
   ],
   "count": {
-   "next": 594,
+   "next": 593,
    "wait": 40,
-   "blocked": 45,
-   "you": 13
+   "blocked": 46,
+   "you": 14
   },
   "fin": {
    "n": 10,
@@ -523,32 +524,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T00:41:40Z",
+  "at": "2026-11-13T00:44:24Z",
   "s": {
-   "T-4196": [
+   "T-4116": [
     "merging",
     "Merging onto main",
-    1794530500411
-   ],
-   "T-4116": [
-    "mergeq",
-    "1st to merge",
-    1794527380411
+    1794530664926
    ],
    "T-4219": [
     "merging",
     "Mac tests at the main gate \u00b7 11 groups of tests done",
-    1794530020411
+    1794530004926
    ],
    "T-4218": [
     "mergeq",
     "waiting for the main gate",
-    1794530020411
+    1794530004926
    ],
    "T-4213": [
     "mergeq",
     "waiting for the main gate",
-    1794530140411
+    1794530184926
    ],
    "T-4215": [
     "testing",
@@ -557,7 +553,6 @@
    ]
   },
   "nm": {
-   "T-4196": "Let app changes waiting to merge share one iPhone run",
    "T-4116": "Regroup the app queue into feature-sized pieces",
    "T-4219": "Mark launcher builds so uploads refuse them",
    "T-4218": "Redraw a placed launcher after a slot edit",
@@ -566,11 +561,11 @@
   }
  },
  "ln": {
-  "at": "2026-11-13T00:41:40Z",
+  "at": "2026-11-13T00:44:24Z",
   "mq": {
    "n": {
     "checking": 1,
-    "inline": 1,
+    "inline": 0,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -579,17 +574,17 @@
    },
    "m": {
     "checking": 0,
-    "inline": 52,
-    "conflicted": 544,
+    "inline": null,
+    "conflicted": 547,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 588
+    "parked": 591
    },
    "cur": [
     [
      [
-      "T-4196"
+      "T-4116"
      ],
      "going onto main",
      "Mac mini",
@@ -597,14 +592,14 @@
     ]
    ],
    "ld": [
-    81,
-    "2026-11-13T00:34:16Z"
+    82,
+    "2026-11-13T00:41:47Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T00:40:54Z",
-    "ld": 3.85,
+    "at": "2026-11-13T00:44:25Z",
+    "ld": 2.21,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -663,10 +658,10 @@
   "main": 4,
   "lanes": 0,
   "total": 4,
-  "at": "7:41 PM",
+  "at": "7:44 PM",
   "why": "",
-  "at_iso": "2026-11-13T00:41:00+00:00",
+  "at_iso": "2026-11-13T00:44:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:41 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:44 PM ET</p></section>"
  }
 }

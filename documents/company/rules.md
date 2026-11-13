@@ -602,6 +602,7 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-12 7:59 PM ET** ((private)): Every session's coordinator (the Operator) runs on Opus at high effort: personal-lane work and chat sessions and every supervisor session kind; the workers' own agents keep their task's model and effort (audit work stays Fable 5.2 xhigh).
 - **2026-11-12 8:01 PM ET** ((private)): Grouping app tasks into features becomes automatic: a new app line is placed in its feature when it is added (or flagged when none fits), and the queue-check sweep folds or flags app lines left outside a feature; built as part of the queue audit.
 - **2026-11-12 8:02 PM ET** ((private)): Narrows the 7:59 PM ruling: only work sessions' Operators move to Opus high; short sessions (message replies, morning, evening and weekly reports, the personal accounts' chat sessions) keep their cheaper models while their results stay good.
+- **2026-11-12 8:50 PM ET** ((private)): Audit work (queue audit and audit implementation) waits; the Restructuring is finished first, using both accounts.
 {% endraw %}
 
 </div>

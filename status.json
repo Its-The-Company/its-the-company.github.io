@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T18:11:49.092218+00:00",
+ "at": "2026-11-13T18:15:11.473402+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -95,7 +95,7 @@
    "task": "[design] T-4287 Home lists in scroll boxes",
    "model": "opus",
    "started": "2026-11-13T17:03:21.535Z",
-   "seconds": 4107,
+   "seconds": 4309,
    "finished": null,
    "effort": "high"
   },
@@ -104,7 +104,7 @@
    "task": "[tools] T-4284 Audit mode slice 1 pause off",
    "model": "opus",
    "started": "2026-11-13T17:29:09.476Z",
-   "seconds": 2559,
+   "seconds": 2761,
    "finished": null,
    "effort": "high"
   },
@@ -113,7 +113,7 @@
    "task": "[build] T-3820 add net.request to the app",
    "model": "opus",
    "started": "2026-11-13T17:57:25.005Z",
-   "seconds": 864,
+   "seconds": 1066,
    "finished": null,
    "effort": "high"
   },
@@ -122,7 +122,7 @@
    "task": "[build] T-4303 fix https shim before switch-on",
    "model": "opus",
    "started": "2026-11-13T18:07:27.081Z",
-   "seconds": 262,
+   "seconds": 464,
    "finished": null,
    "effort": "high"
   }
@@ -214,7 +214,7 @@
   "week_pct": 43.7,
   "usage_pct": 32.7,
   "work_pct": 78.9,
-  "read_at": "2026-11-13T18:12:00+00:00",
+  "read_at": "2026-11-13T18:16:00+00:00",
   "running": [
    {
     "lane": "a2",
@@ -264,7 +264,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T13:12:00-05:00",
+  "at": "2026-11-13T13:16:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -541,12 +541,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T18:11:49Z",
+  "at": "2026-11-13T18:15:11Z",
   "s": {
    "T-4124": [
     "mergeq",
     "1st to merge",
-    1794593329092
+    1794593351473
    ],
    "T-3820": [
     "testing",
@@ -556,12 +556,12 @@
    "T-4284": [
     "testing",
     "its own tests, in its copy",
-    1794592669092
+    1794592691473
    ],
    "T-4287": [
     "testing",
     "its own tests, in its copy",
-    1794591229092
+    1794591251473
    ]
   },
   "nm": {
@@ -572,7 +572,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-13T18:11:49Z",
+  "at": "2026-11-13T18:15:11Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -585,12 +585,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 3,
-    "conflicted": 1594,
+    "inline": 6,
+    "conflicted": 1598,
     "failed": null,
     "held": null,
-    "retry": 78,
-    "parked": 78
+    "retry": 81,
+    "parked": 82
    },
    "cur": [],
    "ld": [
@@ -600,12 +600,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T18:12:06Z",
-    "ld": 21.93,
+    "at": "2026-11-13T18:16:19Z",
+    "ld": 30.56,
     "c": 8,
     "sb": 1,
     "dk": [
-     14.0,
+     13.8,
      228.3
     ],
     "ss": [
@@ -637,27 +637,41 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 14 tasks",
-   "at": "2026-11-13T12:58:40-05:00"
+   "at": "2026-11-13T13:13:54-05:00"
   },
   {
    "w": "Operator",
    "a": "Evan",
    "sr": 1,
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-13T13:10:14-05:00"
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Inbox \u2013 Evan's 1:14 PM Message on GitHub",
+   "at": "2026-11-13T13:15:00-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T18:08:53Z",
-  "seconds": 79.0
+  "sent": "2026-11-13T18:12:31Z",
+  "seconds": 81.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6861185653",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "T-4100 displays as Opus xhigh on..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -669,10 +683,10 @@
   "main": 4,
   "lanes": 1,
   "total": 5,
-  "at": "1:12 PM",
+  "at": "1:16 PM",
   "why": "",
-  "at_iso": "2026-11-13T18:12:00+00:00",
+  "at_iso": "2026-11-13T18:16:00+00:00",
   "started": "11:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:12 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 4, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 1:16 PM ET</p></section>"
  }
 }

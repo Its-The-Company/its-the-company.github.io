@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T16:38:15.492285+00:00",
+ "at": "2026-11-13T16:41:23.373026+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -63,7 +63,7 @@
    "task": "[release] T-4270 build 6 to TestFlight",
    "model": "opus",
    "started": "2026-11-13T16:33:29.474Z",
-   "seconds": 286,
+   "seconds": 473,
    "finished": null,
    "effort": "high"
   },
@@ -72,16 +72,7 @@
    "task": "[design] T-4271 Builder drag-and-drop mock-ups",
    "model": "opus",
    "started": "2026-11-13T16:33:37.534Z",
-   "seconds": 277,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4268 review hung store check fix",
-   "model": "opus",
-   "started": "2026-11-13T16:33:43.235Z",
-   "seconds": 272,
+   "seconds": 465,
    "finished": null,
    "effort": "high"
   },
@@ -90,7 +81,7 @@
    "task": "[plan] T-4267 in-widget Python first plan",
    "model": "opus",
    "started": "2026-11-13T16:33:48.889Z",
-   "seconds": 266,
+   "seconds": 454,
    "finished": null,
    "effort": "high"
   },
@@ -99,7 +90,7 @@
    "task": "[build] T-4258 land completion list fixes",
    "model": "opus",
    "started": "2026-11-13T16:35:40.793Z",
-   "seconds": 154,
+   "seconds": 342,
    "finished": null,
    "effort": "high"
   },
@@ -108,13 +99,21 @@
    "task": "[tools] T-4275 gate runs new app suites",
    "model": "opus",
    "started": "2026-11-13T16:38:14.339Z",
-   "seconds": 1,
+   "seconds": 189,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2, Maren, Pernille, Ines, Odalys",
+ "who": "Idris x2, Maren, Ines, Odalys",
  "recent": [
+  {
+   "name": "pernille",
+   "task": "[review] T-4268 review hung store check fix",
+   "model": "opus",
+   "started": "2026-11-13T16:33:43.235Z",
+   "seconds": null,
+   "finished": "2026-11-13T16:39:29.097000+00:00"
+  },
   {
    "name": "ines",
    "task": "[plan] T-3400 route past the gate gap",
@@ -127,7 +126,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 536,
+  "runnable_count": 540,
   "blocked_count": 102
  },
  "meter": {
@@ -176,7 +175,7 @@
   "week_pct": 43.7,
   "usage_pct": 32.7,
   "work_pct": 78.9,
-  "read_at": "2026-11-13T16:38:00+00:00",
+  "read_at": "2026-11-13T16:41:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -251,7 +250,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T11:38:00-05:00",
+  "at": "2026-11-13T11:41:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -286,15 +285,6 @@
    "effort": "high"
   },
   {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-4268 review hung store check fix",
-   "model": "opus",
-   "since": "2026-11-13T16:33:43.235Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Ines",
    "state": "running",
    "task": "[plan] T-4267 in-widget Python first plan",
@@ -311,6 +301,14 @@
    "since": "2026-11-13T16:38:14.339Z",
    "next": [],
    "effort": "high"
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Wrenna",
@@ -342,16 +340,6 @@
     "at": "2026-11-13T16:33:37.534Z",
     "o": "i",
     "task": "T-4271"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the hung store check fix",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T16:33:43.235Z",
-    "o": "c",
-    "task": "T-4268"
    },
    {
     "w": "Ines",
@@ -459,30 +447,39 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "Independent check of the fix that keeps free widgets drawing when the App Store purchase check...",
+    "at": "2026-11-13T11:38:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "When the App Store purchase check hangs, the person's own widgets and the free ready-made...",
+    "at": "2026-11-13T11:38:00-05:00"
+   },
+   {
     "w": "Operator",
     "t": "The task queue clean-up was not reaching Evan's or Jeremy's accounts because each step's 'run...",
     "at": "2026-11-13T11:16:00-05:00"
-   },
-   {
-    "w": "Ines",
-    "t": "The plan now says version 1.0 ships with the Builder and Pages, likely late April 2027 (range...",
-    "at": "2026-11-13T10:56:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "Three days of machine readings were checked against failed tests and lands. No busy-machine hold...",
-    "at": "2026-11-13T10:37:00-05:00"
    }
   ],
   "count": {
-   "next": 536,
+   "next": 540,
    "wait": 53,
    "blocked": 49,
    "you": 18
   },
   "fin": {
-   "n": 0,
-   "rows": []
+   "n": 2,
+   "rows": [
+    [
+     "T-4268",
+     "Review the hung store check fix"
+    ],
+    [
+     "T-3899",
+     "Let free widgets draw when..."
+    ]
+   ]
   }
  },
  "qr": [
@@ -524,32 +521,33 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T16:38:15Z",
+  "at": "2026-11-13T16:41:23Z",
   "s": {
    "T-4270": [
-    "merging",
-    "Mac tests at the main gate \u00b7 2 groups of tests done",
-    1794587835492
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ],
    "T-4258": [
     "merging",
     "Mac tests at the main gate",
-    1794587835492
+    1794587843373
    ],
-   "T-4268": [
-    "merging",
-    "Mac tests at the main gate",
-    1794587895492
+   "T-4267": [
+    "merged",
+    "on main 11:39 AM ET",
+    1794587968000,
+    ""
    ]
   },
   "nm": {
    "T-4270": "Send build 6 with the premades fix to TestFlight",
    "T-4258": "Pin the completion list under the typed word",
-   "T-4268": "Review the hung store check fix"
+   "T-4267": "Plan in-widget Python first with a shown fallback"
   }
  },
  "ln": {
-  "at": "2026-11-13T16:38:15Z",
+  "at": "2026-11-13T16:41:23Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -563,11 +561,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1501,
+    "conflicted": 1504,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 7152
+    "parked": 7155
    },
    "cur": [],
    "ld": [
@@ -577,12 +575,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T16:37:51Z",
-    "ld": 4.37,
+    "at": "2026-11-13T16:40:58Z",
+    "ld": 6.09,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.7,
+     16.6,
      228.3
     ],
     "ss": [
@@ -592,8 +590,8 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-13T16:36:18Z",
-    "ld": 0.25,
+    "at": "2026-11-13T16:38:26Z",
+    "ld": 0.23,
     "c": 12,
     "sb": 0,
     "dk": [
@@ -621,7 +619,7 @@
    "m": "opus",
    "e": "xhigh",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-13T11:37:59-05:00"
+   "at": "2026-11-13T11:40:23-05:00"
   },
   {
    "w": "Operator",
@@ -639,18 +637,19 @@
    "m": "opus",
    "e": "xhigh",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-13T11:34:06-05:00"
+   "at": "2026-11-13T11:40:06-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T16:35:35Z",
-  "seconds": 143.0
+  "sent": "2026-11-13T16:39:25Z",
+  "seconds": 39.0
  },
  "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
+  "fin_short",
   "task_title",
   "done_text",
   "task_open",
@@ -658,13 +657,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 6,
+  "main": 5,
   "lanes": 3,
-  "total": 9,
-  "at": "11:38 AM",
+  "total": 8,
+  "at": "11:41 AM",
   "why": "",
-  "at_iso": "2026-11-13T16:38:00+00:00",
+  "at_iso": "2026-11-13T16:41:00+00:00",
   "started": "11:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>9</b> agents running now</p><p class=\"an-sub\">Main session 6, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:38 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>8</b> agents running now</p><p class=\"an-sub\">Main session 5, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 3 sessions \u00b7 as of 11:41 AM ET</p></section>"
  }
 }

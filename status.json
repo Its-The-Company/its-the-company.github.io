@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T15:41:35.307615+00:00",
+ "at": "2026-11-13T15:44:36.434472+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -70,7 +70,7 @@
    "task": "[build] T-3899 free widgets draw when store check hangs",
    "model": "opus",
    "started": "2026-11-13T15:30:12.630Z",
-   "seconds": 682,
+   "seconds": 863,
    "finished": null,
    "effort": "high"
   },
@@ -79,12 +79,21 @@
    "task": "[build] T-3783 premades refused permission on the iPhone",
    "model": "opus",
    "started": "2026-11-13T15:39:15.544Z",
-   "seconds": 139,
+   "seconds": 320,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "ines",
+   "task": "[plan] T-4266 re-date the plan for the Builder in 1.0",
+   "model": "opus",
+   "started": "2026-11-13T15:42:36.510Z",
+   "seconds": 119,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2",
+ "who": "Idris x2, Ines",
  "recent": [
   {
    "name": "odalys",
@@ -106,7 +115,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 526,
+  "runnable_count": 527,
   "blocked_count": 103
  },
  "meter": {
@@ -155,7 +164,7 @@
   "week_pct": 43.94,
   "usage_pct": 32.9,
   "work_pct": 79.1,
-  "read_at": "2026-11-13T15:41:00+00:00",
+  "read_at": "2026-11-13T15:44:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -176,7 +185,7 @@
   }
  ],
  "disk": {
-  "free_gb": 23,
+  "free_gb": 21,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -185,14 +194,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T10:38:00-05:00",
+   "at": "2026-11-13T10:44:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T10:41:00-05:00",
+  "at": "2026-11-13T10:44:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -218,6 +227,15 @@
    "effort": "high"
   },
   {
+   "name": "Ines",
+   "state": "running",
+   "task": "[plan] T-4266 re-date the plan for the Builder in 1.0",
+   "model": "opus",
+   "since": "2026-11-13T15:42:36.510Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
@@ -229,14 +247,6 @@
    "name": "Odalys",
    "state": "next",
    "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Ines",
-   "state": "next",
-   "task": "Ines, P1, T-3683 ruling (3): the 11-08 evening report...",
    "model": null,
    "since": null,
    "next": []
@@ -279,6 +289,16 @@
     "at": "2026-11-13T15:39:15.544Z",
     "o": "c",
     "task": "T-3783"
+   },
+   {
+    "w": "Ines",
+    "k": "plan",
+    "t": "Re-date the plan now that 1.0 waits for the Builder",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-13T15:42:36.510Z",
+    "o": "c",
+    "task": "T-4266"
    }
   ],
   "src": "plan",
@@ -372,7 +392,7 @@
    }
   ],
   "count": {
-   "next": 526,
+   "next": 527,
    "wait": 50,
    "blocked": 53,
    "you": 18
@@ -430,12 +450,12 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T15:41:35Z",
+  "at": "2026-11-13T15:44:24Z",
   "s": {
    "T-3899": [
     "merging",
-    "Mac tests at the main gate",
-    1794584435307
+    "Mac tests at the main gate \u00b7 5 groups of tests done",
+    1794584424081
    ]
   },
   "nm": {
@@ -443,7 +463,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-13T15:41:35Z",
+  "at": "2026-11-13T15:44:24Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -457,11 +477,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1444,
+    "conflicted": 1447,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 7095
+    "parked": 7098
    },
    "cur": [],
    "ld": [
@@ -471,8 +491,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T15:41:35Z",
-    "ld": 12.47,
+    "at": "2026-11-13T15:43:58Z",
+    "ld": 7.95,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -505,13 +525,13 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-13T10:38:57-05:00"
+   "t": "Work session \u2013 3 tasks",
+   "at": "2026-11-13T10:44:28-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T15:37:59Z",
-  "seconds": 57.0
+  "sent": "2026-11-13T15:43:52Z",
+  "seconds": 35.0
  },
  "inbox": [],
  "trimmed": [
@@ -526,13 +546,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 0,
-  "total": 2,
-  "at": "10:41 AM",
+  "total": 3,
+  "at": "10:44 AM",
   "why": "",
-  "at_iso": "2026-11-13T15:41:00+00:00",
+  "at_iso": "2026-11-13T15:44:00+00:00",
   "started": "10:26 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:41 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:44 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T02:44:08.449965+00:00",
+ "at": "2026-11-13T02:47:13.544036+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -78,6 +78,13 @@
     "end_at": 1794509009
    },
    {
+    "t": "T-3814",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794507751
+   },
+   {
     "t": "T-4118",
     "name": "Judge the second hundred efficiency lines",
     "acct": "Personal a",
@@ -108,19 +115,10 @@
     "end": "failed",
     "end_at": 1794495739,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-3990",
-    "name": "Let finished task copies be deleted safely",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794495739,
-    "why": "did not merge cleanly"
    }
   ],
   "landed": 11,
-  "failed": 11
+  "failed": 5
  },
  "workers": [
   {
@@ -128,7 +126,7 @@
    "task": "[site] T-4230 Restructuring on Documents",
    "model": "opus",
    "started": "2026-11-13T02:17:14.265Z",
-   "seconds": 1614,
+   "seconds": 1799,
    "finished": null,
    "effort": "high"
   },
@@ -137,7 +135,7 @@
    "task": "[tools] T-4232 Double Spread usage mode",
    "model": "opus",
    "started": "2026-11-13T02:17:34.315Z",
-   "seconds": 1594,
+   "seconds": 1779,
    "finished": null,
    "effort": "high"
   },
@@ -146,12 +144,21 @@
    "task": "[build] T-4229 writer test failed on MacBook",
    "model": "opus",
    "started": "2026-11-13T02:18:02.993Z",
-   "seconds": 1565,
+   "seconds": 1750,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4235 full window before Fable pause",
+   "model": "opus",
+   "started": "2026-11-13T02:45:29.692Z",
+   "seconds": 103,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Odalys x2, Idris",
+ "who": "Odalys x3, Idris",
  "recent": [
   {
    "name": "idris",
@@ -165,7 +172,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 576,
+  "runnable_count": 577,
   "blocked_count": 104
  },
  "meter": {
@@ -214,7 +221,7 @@
   "week_pct": 39.76,
   "usage_pct": 32.4,
   "work_pct": 79.4,
-  "read_at": "2026-11-13T02:44:00+00:00",
+  "read_at": "2026-11-13T02:47:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -244,14 +251,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T21:43:00-05:00",
+   "at": "2026-11-12T21:46:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T21:44:00-05:00",
+  "at": "2026-11-12T21:47:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -344,6 +351,16 @@
     "at": "2026-11-13T02:18:02.993Z",
     "o": "c",
     "task": "T-4229"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Use each account's full window before the Fable pause",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-13T02:45:29.692Z",
+    "o": "c",
+    "task": "T-4235"
    }
   ],
   "src": "plan",
@@ -399,6 +416,13 @@
    },
    {
     "w": "Odalys",
+    "k": "tools",
+    "t": "Use each account's full window before the...",
+    "s": "next",
+    "o": "i"
+   },
+   {
+    "w": "Odalys",
     "k": "site",
     "t": "Show the Restructuring folder on the...",
     "s": "next",
@@ -408,13 +432,6 @@
     "w": "Ines",
     "k": "plan",
     "t": "Run the Restructuring on Evan's account",
-    "s": "next",
-    "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retire the Set aside stage on Home",
     "s": "next",
     "o": "i"
    }
@@ -437,7 +454,7 @@
    }
   ],
   "count": {
-   "next": 576,
+   "next": 577,
    "wait": 39,
    "blocked": 65,
    "you": 18
@@ -491,7 +508,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T02:43:49Z",
+  "at": "2026-11-13T02:46:57Z",
   "s": {
    "T-4229": [
     "mergetest",
@@ -501,12 +518,12 @@
    "T-4230": [
     "testing",
     "its own tests, in its copy",
-    1794536809534
+    1794536817986
    ],
    "T-4232": [
     "testing",
     "its own tests, in its copy",
-    1794537109534
+    1794537117986
    ]
   },
   "nm": {
@@ -516,7 +533,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-13T02:43:49Z",
+  "at": "2026-11-13T02:46:57Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -530,11 +547,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 632,
+    "conflicted": 635,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 710
+    "parked": 713
    },
    "cur": [],
    "ld": [
@@ -544,12 +561,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T02:43:50Z",
-    "ld": 10.79,
+    "at": "2026-11-13T02:46:31Z",
+    "ld": 7.87,
     "c": 8,
     "sb": 0,
     "dk": [
-     22.7,
+     22.4,
      228.3
     ],
     "ss": [
@@ -578,32 +595,20 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 9:43 PM Message on GitHub",
-   "at": "2026-11-12T21:44:03-05:00"
+   "t": "Work session \u2013 5 tasks",
+   "at": "2026-11-12T21:45:41-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T02:40:19Z",
-  "seconds": 76.0
+  "sent": "2026-11-13T02:43:38Z",
+  "seconds": 122.0
  },
- "inbox": [
-  {
-   "id": "c6842238940",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Run until the 5 hour usage is..."
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
-  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -611,13 +616,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 4,
   "lanes": 0,
-  "total": 3,
-  "at": "9:44 PM",
+  "total": 4,
+  "at": "9:47 PM",
   "why": "",
-  "at_iso": "2026-11-13T02:44:00+00:00",
+  "at_iso": "2026-11-13T02:47:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:44 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:47 PM ET</p></section>"
  }
 }

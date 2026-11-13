@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-13T22:03:42.842114+00:00",
+ "at": "2026-11-13T22:03:56.638358+00:00",
  "session": {
-  "active": false,
-  "kind": "",
-  "started": null,
+  "active": true,
+  "kind": "inbox",
+  "started": "2026-11-13T17:03:43-05:00",
   "flow": [
    {
     "t": "T-4252",
@@ -171,12 +171,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": "2026-11-13T17:18:29-05:00",
+ "next_tick": null,
  "personal": {
   "week_pct": 46.46,
   "usage_pct": 33.1,
   "work_pct": 79.4,
-  "read_at": "2026-11-13T22:03:00+00:00",
+  "read_at": "2026-11-13T22:04:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -219,14 +219,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T17:03:00-05:00",
+   "at": "2026-11-13T17:04:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-13T17:03:00-05:00",
+  "at": "2026-11-13T17:04:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -234,9 +234,13 @@
    "b": "midnight"
   }
  },
- "next_tick_why": "last_tick",
+ "next_tick_why": "session",
  "idle": null,
- "pool": null,
+ "pool": {
+  "why": "Spread: usage is ahead of the week's even pace to Sat 23:00, so work waits until the line passes; the machine allows 13 (raised a step: load, time-outs, failed lands and redone tasks all under...",
+  "n": 1,
+  "at": "2026-11-13T17:03:29.587142-05:00"
+ },
  "lanes": [
   {
    "name": "Idris",
@@ -383,6 +387,10 @@
    "wait": 57,
    "blocked": 49,
    "you": 20
+  },
+  "fin": {
+   "n": 0,
+   "rows": []
   }
  },
  "qr": [
@@ -483,7 +491,26 @@
    }
   }
  },
- "operators": [],
+ "operators": [
+  {
+   "w": "Operator",
+   "a": "Main plan",
+   "sr": 1,
+   "m": "sonnet",
+   "e": "low",
+   "t": "Inbox session",
+   "at": "2026-11-13T17:03:43-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Jeremy",
+   "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Inbox \u2013 Jeremy's 5:01 PM Message on GitHub",
+   "at": "2026-11-13T17:03:54-05:00"
+  }
+ ],
  "reply": {
   "sent": "2026-11-13T21:57:52Z",
   "seconds": 65.0
@@ -491,9 +518,8 @@
  "inbox": [
   {
    "id": "c6866000821",
-   "state": "received",
+   "state": "in_progress",
    "position": 1,
-   "eta": "2026-11-13T17:18:29-05:00",
    "tasks": {
     "open": 0,
     "done": 0
@@ -515,10 +541,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "5:03 PM",
+  "at": "5:04 PM",
   "why": "",
-  "at_iso": "2026-11-13T22:03:00+00:00",
+  "at_iso": "2026-11-13T22:04:00+00:00",
   "started": "",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:03 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 5:04 PM ET</p></section>"
  }
 }

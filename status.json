@@ -1,22 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-13T17:55:40.284484+00:00",
+ "at": "2026-11-13T17:58:42.302511+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-13T11:32:07-05:00",
   "flow": [
-   {
-    "t": "T-4274",
-    "name": "Let Evan's account use its weekly Fable to the limit",
-    "acct": "Personal b",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1794592141
-     }
-    ]
-   },
    {
     "t": "T-4252",
     "w": "Pernille",
@@ -50,6 +39,14 @@
   ],
   "done": [
    {
+    "t": "T-4274",
+    "name": "Let Evan's account use its weekly Fable to the limit",
+    "acct": "Personal b",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794592681
+   },
+   {
     "t": "T-4194",
     "name": "Build the feature session for app work",
     "acct": "Personal b",
@@ -81,7 +78,7 @@
     "end_at": 1794565169
    }
   ],
-  "landed": 4,
+  "landed": 5,
   "failed": 0
  },
  "workers": [
@@ -90,16 +87,7 @@
    "task": "[design] T-4287 Home lists in scroll boxes",
    "model": "opus",
    "started": "2026-11-13T17:03:21.535Z",
-   "seconds": 3138,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-4277 offer free premades on store hang",
-   "model": "opus",
-   "started": "2026-11-13T17:03:29.368Z",
-   "seconds": 3130,
+   "seconds": 3320,
    "finished": null,
    "effort": "high"
   },
@@ -108,13 +96,48 @@
    "task": "[tools] T-4284 Audit mode slice 1 pause off",
    "model": "opus",
    "started": "2026-11-13T17:29:09.476Z",
-   "seconds": 1590,
+   "seconds": 1772,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "pernille",
+   "task": "[review] T-4300 review one Pro gates read",
+   "model": "opus",
+   "started": "2026-11-13T17:57:11.107Z",
+   "seconds": 91,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[review] T-4294 review system https shim",
+   "model": "opus",
+   "started": "2026-11-13T17:57:17.914Z",
+   "seconds": 84,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "idris",
+   "task": "[build] T-3820 add net.request to the app",
+   "model": "opus",
+   "started": "2026-11-13T17:57:25.005Z",
+   "seconds": 77,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Maren, Idris, Odalys",
+ "who": "Maren, Odalys, Pernille, Idris x2",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-4277 offer free premades on store hang",
+   "model": "opus",
+   "started": "2026-11-13T17:03:29.368Z",
+   "seconds": null,
+   "finished": "2026-11-13T17:56:39.740000+00:00"
+  },
   {
    "name": "pernille",
    "task": "[build] T-3400 land https shim",
@@ -138,14 +161,6 @@
    "started": "2026-11-13T16:35:40.793Z",
    "seconds": null,
    "finished": "2026-11-13T17:07:04.298000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[fix] T-4277 offer free premades on store hang",
-   "model": "opus",
-   "started": "2026-11-13T17:03:15.833Z",
-   "seconds": null,
-   "finished": "2026-11-13T17:03:15.886Z"
   }
  ],
  "queue": {
@@ -156,19 +171,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 23.0,
+   "pct": 25.0,
    "resets_at": "2026-11-13T15:50:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-13T12:49:44.680570-05:00",
+   "read_at": "2026-11-13T12:56:10.660380-05:00",
    "source": "live",
-   "left": 77.0,
+   "left": 75.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 92.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-13T12:49:44.680570-05:00",
+   "read_at": "2026-11-13T12:56:10.660380-05:00",
    "source": "live",
    "left": 8.0,
    "left_words": "of your weekly allowance left"
@@ -180,7 +195,7 @@
    "read_at": "2026-11-13T11:31:45.194382-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-13T12:49:44.680570-05:00"
+  "read_at": "2026-11-13T12:56:10.660380-05:00"
  },
  "ui": {
   "week_pct": 0.297,
@@ -200,8 +215,21 @@
   "week_pct": 43.7,
   "usage_pct": 32.7,
   "work_pct": 78.9,
-  "read_at": "2026-11-13T17:55:00+00:00",
-  "running": []
+  "read_at": "2026-11-13T17:58:00+00:00",
+  "running": [
+   {
+    "lane": "a",
+    "task": "T-4124",
+    "w": "Ines",
+    "k": "plan",
+    "t": "Find every slowdown the company built into its own process",
+    "m": "opus",
+    "e": "xhigh",
+    "at": "2026-11-13T12:56:42-05:00",
+    "n": "Evan",
+    "src": "plan-a"
+   }
+  ]
  },
  "api_credits": [
   {
@@ -221,7 +249,7 @@
   }
  ],
  "disk": {
-  "free_gb": 15,
+  "free_gb": 14,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -230,14 +258,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T12:52:00-05:00",
+   "at": "2026-11-13T12:56:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T12:55:00-05:00",
+  "at": "2026-11-13T12:58:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -263,15 +291,6 @@
    "effort": "high"
   },
   {
-   "name": "Idris",
-   "state": "running",
-   "task": "[build] T-4277 offer free premades on store hang",
-   "model": "opus",
-   "since": "2026-11-13T17:03:29.368Z",
-   "next": [],
-   "effort": "high"
-  },
-  {
    "name": "Odalys",
    "state": "running",
    "task": "[tools] T-4284 Audit mode slice 1 pause off",
@@ -282,11 +301,21 @@
   },
   {
    "name": "Pernille",
-   "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
+   "state": "running",
+   "task": "[review] T-4300 review one Pro gates read",
+   "model": "opus",
+   "since": "2026-11-13T17:57:11.107Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
+   "name": "Idris",
+   "state": "running",
+   "task": "[review] T-4294 review system https shim",
+   "model": "opus",
+   "since": "2026-11-13T17:57:17.914Z",
+   "next": [],
+   "effort": "high"
   },
   {
    "name": "Ines",
@@ -318,16 +347,6 @@
     "task": "T-4287"
    },
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Offer free premades when the store check hangs",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T17:03:29.368Z",
-    "o": "c",
-    "task": "T-4277"
-   },
-   {
     "w": "Odalys",
     "k": "tools",
     "t": "Add an Audit mode for one audit on chosen accounts",
@@ -336,6 +355,36 @@
     "at": "2026-11-13T17:29:09.476Z",
     "o": "c",
     "task": "T-4284"
+   },
+   {
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review the one Pro gates read per pass",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-13T17:57:11.107Z",
+    "o": "c",
+    "task": "T-4300"
+   },
+   {
+    "w": "Idris",
+    "k": "review",
+    "t": "Review the system https shim before TestFlight",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-13T17:57:17.914Z",
+    "o": "c",
+    "task": "T-4294"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Add the general web request call to the app",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-13T17:57:25.005Z",
+    "o": "c",
+    "task": "T-3820"
    }
   ],
   "src": "plan",
@@ -413,6 +462,11 @@
   ],
   "done": [
    {
+    "w": "Idris",
+    "t": "When Apple's store check hangs, the app now still prepares the free ready-made widgets, so one...",
+    "at": "2026-11-13T12:56:00-05:00"
+   },
+   {
     "w": "Pernille",
     "t": "Python's secure web requests can now go through Apple's own network security instead of a...",
     "at": "2026-11-13T12:33:00-05:00"
@@ -421,11 +475,6 @@
     "w": "Pernille",
     "t": "An independent check of Idris's fixes to the code editor's suggestion list and its spoken error...",
     "at": "2026-11-13T12:16:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The suggestion list in the code editor now opens right under the word being typed and stays put...",
-    "at": "2026-11-13T12:06:00-05:00"
    }
   ],
   "count": {
@@ -435,8 +484,12 @@
    "you": 19
   },
   "fin": {
-   "n": 12,
+   "n": 13,
    "rows": [
+    [
+     "T-4277",
+     "Offer free premades when the..."
+    ],
     [
      "T-3400",
      "Send Python's https through..."
@@ -456,10 +509,6 @@
     [
      "T-4260",
      "Say syntax errors as errors..."
-    ],
-    [
-     "T-4272",
-     "Rewrite the design records..."
     ]
    ]
   }
@@ -503,81 +552,59 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T17:55:25Z",
+  "at": "2026-11-13T17:58:22Z",
   "s": {
-   "T-4274": [
-    "merging",
-    "Merging onto main",
-    1794592525081
-   ],
-   "T-4277": [
+   "T-4284": [
     "testing",
     "its own tests, in its copy",
-    1794591205081
+    1794592642881
    ],
    "T-4287": [
     "testing",
     "its own tests, in its copy",
-    1794591205081
-   ],
-   "T-4284": [
-    "merged",
-    "on main 12:55 PM ET",
-    1794592506000,
-    "Odalys"
+    1794591202881
    ]
   },
   "nm": {
-   "T-4274": "Let Evan's account use its weekly Fable to the limit",
-   "T-4277": "Offer free premades when the store check hangs",
-   "T-4287": "Show all Queued and In flight tasks in scroll boxes",
-   "T-4284": "Add an Audit mode for one audit on chosen accounts"
+   "T-4284": "Add an Audit mode for one audit on chosen accounts",
+   "T-4287": "Show all Queued and In flight tasks in scroll boxes"
   }
  },
  "ln": {
-  "at": "2026-11-13T17:55:25Z",
+  "at": "2026-11-13T17:58:22Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
-    "retry": 0,
+    "retry": 1,
     "parked": 7
    },
    "m": {
-    "checking": 0,
+    "checking": null,
     "inline": null,
-    "conflicted": 1578,
+    "conflicted": 1581,
     "failed": null,
     "held": null,
-    "retry": null,
-    "parked": 62
+    "retry": 65,
+    "parked": 65
    },
-   "cur": [
-    [
-     [
-      "T-4274"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    7,
-    "2026-11-13T17:52:54Z"
+    8,
+    "2026-11-13T17:58:01Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T17:55:25Z",
-    "ld": 7.41,
+    "at": "2026-11-13T17:57:39Z",
+    "ld": 6.62,
     "c": 8,
     "sb": 0,
     "dk": [
-     14.5,
+     14.8,
      228.3
     ],
     "ss": [
@@ -606,13 +633,22 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 10 tasks",
-   "at": "2026-11-13T12:53:31-05:00"
+   "t": "Work session \u2013 13 tasks",
+   "at": "2026-11-13T12:58:40-05:00"
+  },
+  {
+   "w": "Operator",
+   "a": "Evan",
+   "sr": 1,
+   "m": "opus",
+   "e": "xhigh",
+   "t": "Work session \u2013 1 task",
+   "at": "2026-11-13T12:56:42-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T17:52:56Z",
-  "seconds": 34.0
+  "sent": "2026-11-13T17:57:27Z",
+  "seconds": 70.0
  },
  "inbox": [],
  "trimmed": [
@@ -629,13 +665,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
-  "lanes": 0,
-  "total": 3,
-  "at": "12:55 PM",
+  "main": 5,
+  "lanes": 1,
+  "total": 6,
+  "at": "12:58 PM",
   "why": "",
-  "at_iso": "2026-11-13T17:55:00+00:00",
+  "at_iso": "2026-11-13T17:58:00+00:00",
   "started": "11:32 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 12:55 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>6</b> agents running now</p><p class=\"an-sub\">Main session 5, started 11:32 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:58 PM ET</p></section>"
  }
 }

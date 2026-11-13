@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T14:48:54.456556+00:00",
+ "at": "2026-11-13T14:52:00.354035+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -51,7 +51,7 @@
    "task": "[site] T-4004 then T-3735 Home in flight and blocked",
    "model": "opus",
    "started": "2026-11-13T13:53:09.418Z",
-   "seconds": 3345,
+   "seconds": 3530,
    "finished": null,
    "effort": "high"
   },
@@ -60,22 +60,21 @@
    "task": "[build] T-4258 T-4259 T-4260 completion list fixes",
    "model": "opus",
    "started": "2026-11-13T14:43:07.515Z",
-   "seconds": 346,
+   "seconds": 532,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys, Idris",
+ "recent": [
   {
    "name": "pernille",
    "task": "[review] T-4261 VoiceOver announcement review",
    "model": "opus",
    "started": "2026-11-13T14:43:15.010Z",
-   "seconds": 339,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys, Idris, Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-13T14:49:10.081000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4254 T-4255 T-4256 T-4261 editor mark fixes",
@@ -99,14 +98,6 @@
    "started": "2026-11-13T14:01:09.427Z",
    "seconds": null,
    "finished": "2026-11-13T14:08:24.696000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-2261 no error mark while typing",
-   "model": "opus",
-   "started": "2026-11-13T13:59:45.678Z",
-   "seconds": null,
-   "finished": "2026-11-13T13:59:54.398000+00:00"
   }
  ],
  "queue": {
@@ -161,7 +152,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T14:48:00+00:00",
+  "read_at": "2026-11-13T14:52:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -191,14 +182,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T09:47:00-05:00",
+   "at": "2026-11-13T09:49:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T09:48:00-05:00",
+  "at": "2026-11-13T09:52:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -234,12 +225,11 @@
   },
   {
    "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-4261 VoiceOver announcement review",
-   "model": "opus",
-   "since": "2026-11-13T14:43:15.010Z",
-   "next": [],
-   "effort": "high"
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
   },
   {
    "name": "Ines",
@@ -287,16 +277,6 @@
     "at": "2026-11-13T14:43:07.515Z",
     "o": "c",
     "task": "T-4258"
-   },
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Tell VoiceOver when the completion list opens",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T14:43:15.010Z",
-    "o": "c",
-    "task": "T-4261"
    }
   ],
   "src": "plan",
@@ -464,32 +444,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T14:48:41Z",
+  "at": "2026-11-13T14:51:53Z",
   "s": {
    "T-4258": [
     "merging",
-    "Mac tests at the main gate",
-    1794581201476
-   ],
-   "T-4261": [
-    "merging",
-    "Mac tests at the main gate",
-    1794581321476
-   ],
-   "T-3735": [
-    "testing",
-    "its own tests, in its copy",
-    1794579161476
+    "Mac tests at the main gate \u00b7 5 groups of tests done",
+    1794581213495
    ]
   },
   "nm": {
-   "T-4258": "Pin the completion list under the typed word",
-   "T-4261": "Tell VoiceOver when the completion list opens",
-   "T-3735": "Show what blocks each blocked task on Home"
+   "T-4258": "Pin the completion list under the typed word"
   }
  },
  "ln": {
-  "at": "2026-11-13T14:48:41Z",
+  "at": "2026-11-13T14:51:53Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -503,11 +471,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1391,
+    "conflicted": 1394,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 7042
+    "parked": 7046
    },
    "cur": [],
    "ld": [
@@ -517,12 +485,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T14:47:53Z",
-    "ld": 2.15,
+    "at": "2026-11-13T14:51:29Z",
+    "ld": 1.88,
     "c": 8,
     "sb": 1,
     "dk": [
-     24.4,
+     24.3,
      228.3
     ],
     "ss": [
@@ -553,7 +521,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 6 tasks",
+   "t": "Work session \u2013 5 tasks",
    "at": "2026-11-13T08:19:15-05:00"
   }
  ],
@@ -576,13 +544,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "9:48 AM",
+  "total": 2,
+  "at": "9:52 AM",
   "why": "",
-  "at_iso": "2026-11-13T14:48:00+00:00",
+  "at_iso": "2026-11-13T14:52:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:48 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:52 AM ET</p></section>"
  }
 }

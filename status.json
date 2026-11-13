@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T13:53:54.799045+00:00",
+ "at": "2026-11-13T13:57:00.142737+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -68,7 +68,7 @@
    "task": "[build] T-2261 completion list UI test and shots",
    "model": "opus",
    "started": "2026-11-13T13:35:19.101Z",
-   "seconds": 1115,
+   "seconds": 1301,
    "finished": null,
    "effort": "high"
   },
@@ -77,7 +77,7 @@
    "task": "[site] T-4004 then T-3735 Home in flight and blocked",
    "model": "opus",
    "started": "2026-11-13T13:53:09.418Z",
-   "seconds": 45,
+   "seconds": 230,
    "finished": null,
    "effort": "high"
   }
@@ -120,7 +120,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 522,
+  "runnable_count": 521,
   "blocked_count": 103
  },
  "meter": {
@@ -169,7 +169,7 @@
   "week_pct": 42.8,
   "usage_pct": 33.2,
   "work_pct": 79.5,
-  "read_at": "2026-11-13T13:53:00+00:00",
+  "read_at": "2026-11-13T13:57:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -206,7 +206,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T08:53:00-05:00",
+  "at": "2026-11-13T08:57:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -372,6 +372,11 @@
   "done": [
    {
     "w": "Odalys",
+    "t": "Home again lists the tasks being worked on, each with its stage, under All tasks on phone and...",
+    "at": "2026-11-13T08:54:00-05:00"
+   },
+   {
+    "w": "Odalys",
     "t": "Home has no Needs you section and the four panels (Usage, Progress, Machine, Work) sit at the...",
     "at": "2026-11-13T08:52:00-05:00"
    },
@@ -379,22 +384,21 @@
     "w": "Ines",
     "t": "Every Restructuring decision that needs the Investors now has its own urgent issue labelled...",
     "at": "2026-11-13T08:31:00-05:00"
-   },
-   {
-    "w": "Ines+wrenna+idris+maren",
-    "t": "The Restructuring, a blank-slate rethink of the app's products, platform limits, structure, look...",
-    "at": "2026-11-13T08:20:00-05:00"
    }
   ],
   "count": {
-   "next": 522,
+   "next": 521,
    "wait": 49,
    "blocked": 54,
    "you": 18
   },
   "fin": {
-   "n": 12,
+   "n": 13,
    "rows": [
+    [
+     "T-4004",
+     "Bring In flight back on Home"
+    ],
     [
      "T-4005",
      "Home: drop Needs you,..."
@@ -414,10 +418,6 @@
     [
      "T-4246",
      "Shrink the mode panel to a..."
-    ],
-    [
-     "T-4250",
-     "Draw the app's remaining..."
     ]
    ]
   }
@@ -461,7 +461,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T13:53:37Z",
+  "at": "2026-11-13T13:56:43Z",
   "s": {
    "T-2261": [
     "mergetest",
@@ -474,7 +474,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-13T13:53:37Z",
+  "at": "2026-11-13T13:56:43Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -488,11 +488,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1336,
+    "conflicted": 1339,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 6987
+    "parked": 6991
    },
    "cur": [],
    "ld": [
@@ -502,8 +502,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T13:52:59Z",
-    "ld": 2.38,
+    "at": "2026-11-13T13:56:20Z",
+    "ld": 1.51,
     "c": 8,
     "sb": 1,
     "dk": [
@@ -511,7 +511,7 @@
      228.3
     ],
     "ss": [
-     182.2,
+     180.2,
      953.7
     ],
     "sn": [
@@ -564,10 +564,10 @@
   "main": 2,
   "lanes": 0,
   "total": 2,
-  "at": "8:53 AM",
+  "at": "8:57 AM",
   "why": "",
-  "at_iso": "2026-11-13T13:53:00+00:00",
+  "at_iso": "2026-11-13T13:57:00+00:00",
   "started": "7:21 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:53 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 7:21 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:57 AM ET</p></section>"
  }
 }

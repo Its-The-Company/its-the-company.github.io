@@ -1,32 +1,11 @@
 {
  "schema": 1,
- "at": "2026-11-13T04:15:57.588265+00:00",
+ "at": "2026-11-13T04:18:57.843653+00:00",
  "session": {
   "active": true,
   "kind": "work",
   "started": "2026-11-12T21:13:35-05:00",
   "flow": [
-   {
-    "t": "T-4124",
-    "name": "Find every slowdown the company built into its own process",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1794541236
-     }
-    ]
-   },
-   {
-    "t": "T-3696",
-    "acct": "Personal a",
-    "steps": [
-     {
-      "s": "landing",
-      "at": 1794541236
-     }
-    ]
-   },
    {
     "t": "T-4215",
     "steps": [
@@ -58,6 +37,21 @@
    }
   ],
   "done": [
+   {
+    "t": "T-3696",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794543527
+   },
+   {
+    "t": "T-4124",
+    "name": "Find every slowdown the company built into its own process",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794543527
+   },
    {
     "t": "T-4195",
     "name": "Reuse an iPhone pass when the app's inputs are unchanged",
@@ -113,22 +107,30 @@
     "end_at": 1794507751
    }
   ],
-  "landed": 7,
+  "landed": 9,
   "failed": 0
  },
  "workers": [
+  {
+   "name": "pernille",
+   "task": "[review] T-4238 review shared step wait fix",
+   "model": "opus",
+   "started": "2026-11-13T04:17:53.608Z",
+   "seconds": 64,
+   "finished": null,
+   "effort": "high"
+  }
+ ],
+ "who": "Pernille",
+ "recent": [
   {
    "name": "idris",
    "task": "[build] T-3900 one wait per refresh on hung step",
    "model": "opus",
    "started": "2026-11-13T03:39:21.282Z",
-   "seconds": 2196,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-13T04:17:06.294000+00:00"
+  },
   {
    "name": "idris",
    "task": "[tools] T-4236 clear main gate red, land T-4232",
@@ -152,20 +154,12 @@
    "started": "2026-11-13T02:17:34.315Z",
    "seconds": null,
    "finished": "2026-11-13T03:11:26.139000+00:00"
-  },
-  {
-   "name": "odalys",
-   "task": "[tools] T-4235 full window before Fable pause",
-   "model": "opus",
-   "started": "2026-11-13T02:45:29.692Z",
-   "seconds": null,
-   "finished": "2026-11-13T03:09:08.753000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 573,
+  "runnable_count": 572,
   "blocked_count": 104
  },
  "meter": {
@@ -214,7 +208,7 @@
   "week_pct": 39.76,
   "usage_pct": 32.4,
   "work_pct": 79.4,
-  "read_at": "2026-11-13T04:15:00+00:00",
+  "read_at": "2026-11-13T04:19:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -244,14 +238,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T23:14:00-05:00",
+   "at": "2026-11-12T23:17:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T23:15:00-05:00",
+  "at": "2026-11-12T23:19:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -268,18 +262,18 @@
  },
  "lanes": [
   {
-   "name": "Idris",
+   "name": "Pernille",
    "state": "running",
-   "task": "[build] T-3900 one wait per refresh on hung step",
+   "task": "[review] T-4238 review shared step wait fix",
    "model": "opus",
-   "since": "2026-11-13T03:39:21.282Z",
+   "since": "2026-11-13T04:17:53.608Z",
    "next": [],
    "effort": "high"
   },
   {
-   "name": "Pernille",
+   "name": "Idris",
    "state": "next",
-   "task": "Pernille, P1, premades and gallery take the age line...",
+   "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
    "model": null,
    "since": null,
    "next": []
@@ -320,14 +314,14 @@
  "tasks": {
   "run": [
    {
-    "w": "Idris",
-    "k": "build",
-    "t": "Wait once per refresh when a shared step hangs",
+    "w": "Pernille",
+    "k": "review",
+    "t": "Review the shared step wait fix",
     "m": "opus",
     "e": "high",
-    "at": "2026-11-13T03:39:21.282Z",
+    "at": "2026-11-13T04:17:53.608Z",
     "o": "c",
-    "task": "T-3900"
+    "task": "T-4238"
    }
   ],
   "src": "plan",
@@ -406,29 +400,33 @@
   "done": [
    {
     "w": "Operator",
+    "t": "Closed as a duplicate: the same crash in the task-names tool is already on the board as T-4221...",
+    "at": "2026-11-12T23:18:00-05:00"
+   },
+   {
+    "w": "Idris",
+    "t": "When one step every widget needs (the Pro purchase check, starting Python, or the launch log)...",
+    "at": "2026-11-12T23:16:00-05:00"
+   },
+   {
+    "w": "Operator",
     "t": "Finished work from a personal account no longer bounces back over the shared list of task names;...",
     "at": "2026-11-12T22:38:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "The Investors can now read the Restructuring's plan, audit and working drafts under Documents on...",
-    "at": "2026-11-12T22:32:00-05:00"
-   },
-   {
-    "w": "Odalys",
-    "t": "A new Double Spread usage mode paces an account to reach its weekly limit halfway through the...",
-    "at": "2026-11-12T22:29:00-05:00"
    }
   ],
   "count": {
-   "next": 573,
+   "next": 572,
    "wait": 39,
    "blocked": 65,
    "you": 18
   },
   "fin": {
-   "n": 7,
+   "n": 8,
    "rows": [
+    [
+     "T-3900",
+     "Wait once per refresh when a..."
+    ],
     [
      "T-4234",
      "Stop task names blocking..."
@@ -448,10 +446,6 @@
     [
      "T-4235",
      "Use each account's full..."
-    ],
-    [
-     "T-4229",
-     "Fix a MacBook test job that..."
     ]
    ]
   }
@@ -495,42 +489,36 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T04:15:57Z",
+  "at": "2026-11-13T04:18:44Z",
   "s": {
    "T-4124": [
-    "mergeq",
-    "1st to merge",
-    1794541257588
+    "merging",
+    "Merging onto main",
+    1794543524243
    ],
    "T-3696": [
-    "mergeq",
-    "1st to merge",
-    1794541257588
+    "merging",
+    "Merging onto main",
+    1794543524243
    ],
    "T-4127": [
     "mergeq",
-    "2nd to merge",
-    1794543237588
-   ],
-   "T-3900": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
+    "1st to merge",
+    1794543224243
    ]
   },
   "nm": {
    "T-4124": "Find every slowdown the company built into its own process",
    "T-3696": "Check the disk keeper after its first 24 hours",
-   "T-4127": "Run the Restructuring on Evan's account",
-   "T-3900": "Wait once per refresh when a shared step hangs"
+   "T-4127": "Run the Restructuring on Evan's account"
   }
  },
  "ln": {
-  "at": "2026-11-13T04:15:57Z",
+  "at": "2026-11-13T04:18:44Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 3,
+    "checking": 2,
+    "inline": 1,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -538,15 +526,32 @@
     "parked": 2
    },
    "m": {
-    "checking": null,
-    "inline": 35,
-    "conflicted": 758,
+    "checking": 0,
+    "inline": 5,
+    "conflicted": 761,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 792
+    "parked": 795
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4124"
+     ],
+     "going onto main",
+     "Mac mini",
+     0
+    ],
+    [
+     [
+      "T-3696"
+     ],
+     "going onto main",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     84,
     "2026-11-13T02:18:36Z"
@@ -554,8 +559,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T04:15:25Z",
-    "ld": 0.55,
+    "at": "2026-11-13T04:18:44Z",
+    "ld": 0.48,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -569,12 +574,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-13T04:08:36Z",
-    "ld": 0.85,
+    "at": "2026-11-13T04:15:45Z",
+    "ld": 3.04,
     "c": 12,
     "sb": 0,
     "dk": [
-     377.1,
+     376.9,
      926.4
     ],
     "sn": []
@@ -614,10 +619,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "11:15 PM",
+  "at": "11:19 PM",
   "why": "",
-  "at_iso": "2026-11-13T04:15:00+00:00",
+  "at_iso": "2026-11-13T04:19:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:15 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:19 PM ET</p></section>"
  }
 }

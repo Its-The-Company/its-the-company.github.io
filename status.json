@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T16:07:01.820790+00:00",
+ "at": "2026-11-13T16:10:06.121291+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -39,6 +39,14 @@
   ],
   "done": [
    {
+    "t": "T-4117",
+    "name": "Judge the next hundred efficiency lines",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794586156
+   },
+   {
     "t": "T-4127",
     "acct": "Personal a",
     "steps": [],
@@ -61,7 +69,7 @@
     "end_at": 1794543527
    }
   ],
-  "landed": 3,
+  "landed": 4,
   "failed": 0
  },
  "workers": [],
@@ -103,7 +111,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 529,
+  "runnable_count": 530,
   "blocked_count": 103
  },
  "meter": {
@@ -152,21 +160,8 @@
   "week_pct": 43.94,
   "usage_pct": 32.9,
   "work_pct": 79.1,
-  "read_at": "2026-11-13T16:07:00+00:00",
-  "running": [
-   {
-    "lane": "a",
-    "task": "T-4117",
-    "w": "Ines",
-    "k": "ops",
-    "t": "Judge the next hundred efficiency lines",
-    "m": "fable",
-    "e": "xhigh",
-    "at": "2026-11-13T11:04:43-05:00",
-    "n": "Evan",
-    "src": "plan-a"
-   }
-  ]
+  "read_at": "2026-11-13T16:10:00+00:00",
+  "running": []
  },
  "api_credits": [
   {
@@ -186,7 +181,7 @@
   }
  ],
  "disk": {
-  "free_gb": 20,
+  "free_gb": 19,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -195,14 +190,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-13T11:05:00-05:00",
+   "at": "2026-11-13T11:10:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T11:07:00-05:00",
+  "at": "2026-11-13T11:10:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -307,6 +302,13 @@
     "o": "c"
    },
    {
+    "w": "Idris",
+    "k": "release",
+    "t": "Send build 6 with the premades fix to TestFlight",
+    "s": "next",
+    "o": "c"
+   },
+   {
     "w": "Pernille",
     "k": "build",
     "t": "Keep real packages out until the sandbox is...",
@@ -333,13 +335,6 @@
     "t": "Every premade widget draws on the iPhone",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Widgets refresh on their own and by a tap",
-    "s": "next",
-    "o": "i"
    }
   ],
   "done": [
@@ -360,7 +355,7 @@
    }
   ],
   "count": {
-   "next": 529,
+   "next": 530,
    "wait": 50,
    "blocked": 53,
    "you": 18
@@ -422,11 +417,11 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T16:06:54Z",
+  "at": "2026-11-13T16:10:06Z",
   "s": {}
  },
  "ln": {
-  "at": "2026-11-13T16:06:54Z",
+  "at": "2026-11-13T16:10:06Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -440,26 +435,26 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1469,
+    "conflicted": 1472,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 7121
+    "parked": 7124
    },
    "cur": [],
    "ld": [
-    3,
-    "2026-11-13T13:07:36Z"
+    4,
+    "2026-11-13T16:09:16Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T16:06:30Z",
-    "ld": 2.2,
+    "at": "2026-11-13T16:09:44Z",
+    "ld": 1.33,
     "c": 8,
     "sb": 0,
     "dk": [
-     20.2,
+     18.7,
      228.3
     ],
     "ss": [
@@ -488,17 +483,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session",
    "at": "2026-11-13T11:03:53-05:00"
-  },
-  {
-   "w": "Operator",
-   "a": "Evan",
-   "sr": 1,
-   "m": "opus",
-   "e": "xhigh",
-   "t": "Work session \u2013 1 task",
-   "at": "2026-11-13T11:04:43-05:00"
   }
  ],
  "reply": {
@@ -520,12 +506,12 @@
  ],
  "agents_now": {
   "main": 0,
-  "lanes": 1,
-  "total": 1,
-  "at": "11:07 AM",
-  "why": "",
-  "at_iso": "2026-11-13T16:07:00+00:00",
+  "lanes": 0,
+  "total": 0,
+  "at": "11:10 AM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-13T16:10:00+00:00",
   "started": "10:26 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 10:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 11:07 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 10:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:10 AM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

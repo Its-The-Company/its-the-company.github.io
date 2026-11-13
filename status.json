@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T03:36:11.531217+00:00",
+ "at": "2026-11-13T03:39:13.923935+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -150,7 +150,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 574,
+  "runnable_count": 573,
   "blocked_count": 104
  },
  "meter": {
@@ -199,7 +199,7 @@
   "week_pct": 39.76,
   "usage_pct": 32.4,
   "work_pct": 79.4,
-  "read_at": "2026-11-13T03:36:00+00:00",
+  "read_at": "2026-11-13T03:39:00+00:00",
   "running": [
    {
     "lane": "a",
@@ -243,14 +243,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T22:32:00-05:00",
+   "at": "2026-11-12T22:38:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T22:36:00-05:00",
+  "at": "2026-11-12T22:39:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -362,13 +362,6 @@
     "o": "c"
    },
    {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Stop task names blocking finished work from...",
-    "s": "next",
-    "o": "c"
-   },
-   {
     "w": "Ines",
     "k": "plan",
     "t": "Run the Restructuring on Evan's account",
@@ -388,9 +381,21 @@
     "t": "Every premade widget draws on the iPhone",
     "s": "next",
     "o": "i"
+   },
+   {
+    "w": "Idris",
+    "k": "build",
+    "t": "Widgets refresh on their own and by a tap",
+    "s": "next",
+    "o": "i"
    }
   ],
   "done": [
+   {
+    "w": "Operator",
+    "t": "Finished work from a personal account no longer bounces back over the shared list of task names;...",
+    "at": "2026-11-12T22:38:00-05:00"
+   },
    {
     "w": "Odalys",
     "t": "The Investors can now read the Restructuring's plan, audit and working drafts under Documents on...",
@@ -400,22 +405,21 @@
     "w": "Odalys",
     "t": "A new Double Spread usage mode paces an account to reach its weekly limit halfway through the...",
     "at": "2026-11-12T22:29:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The merge gate's safety scan mistook a file name inside an error message for a file the app...",
-    "at": "2026-11-12T22:18:00-05:00"
    }
   ],
   "count": {
-   "next": 574,
+   "next": 573,
    "wait": 39,
    "blocked": 65,
    "you": 18
   },
   "fin": {
-   "n": 6,
+   "n": 7,
    "rows": [
+    [
+     "T-4234",
+     "Stop task names blocking..."
+    ],
     [
      "T-4230",
      "Show the Restructuring..."
@@ -435,10 +439,6 @@
     [
      "T-4229",
      "Fix a MacBook test job that..."
-    ],
-    [
-     "T-4233",
-     "Redo run the Restructuring..."
     ]
    ]
   }
@@ -482,7 +482,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T03:36:00Z",
+  "at": "2026-11-13T03:39:07Z",
   "s": {
    "T-4127": [
     "merged",
@@ -496,7 +496,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-13T03:36:00Z",
+  "at": "2026-11-13T03:39:07Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -504,17 +504,17 @@
     "conflicted": 3,
     "failed": 0,
     "held": 0,
-    "retry": 0,
-    "parked": 3
+    "retry": 1,
+    "parked": 2
    },
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 684,
+    "conflicted": 687,
     "failed": null,
     "held": null,
-    "retry": null,
-    "parked": 762
+    "retry": 4,
+    "parked": 755
    },
    "cur": [],
    "ld": [
@@ -524,12 +524,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T03:35:12Z",
-    "ld": 1.89,
+    "at": "2026-11-13T03:39:06Z",
+    "ld": 1.81,
     "c": 8,
     "sb": 0,
     "dk": [
-     21.6,
+     21.7,
      228.3
     ],
     "ss": [
@@ -558,7 +558,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 1 task",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-12T21:53:15-05:00"
   },
   {
@@ -585,6 +585,7 @@
   "task_title",
   "done_text",
   "task_open",
+  "fin_six",
   "lane_task",
   "task_next"
  ],
@@ -592,10 +593,10 @@
   "main": 0,
   "lanes": 1,
   "total": 1,
-  "at": "10:36 PM",
+  "at": "10:39 PM",
   "why": "",
-  "at_iso": "2026-11-13T03:36:00+00:00",
+  "at_iso": "2026-11-13T03:39:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:36 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 10:39 PM ET</p></section>"
  }
 }

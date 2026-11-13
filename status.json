@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T00:14:14.930534+00:00",
+ "at": "2026-11-13T00:17:17.223027+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -97,7 +97,7 @@
    "task": "[build] T-4218 redraw launcher after slot edit",
    "model": "opus",
    "started": "2026-11-12T23:21:24.535Z",
-   "seconds": 3170,
+   "seconds": 3352,
    "finished": null,
    "effort": "high"
   },
@@ -106,12 +106,21 @@
    "task": "[release] T-4219 mark launcher builds, refuse upload",
    "model": "opus",
    "started": "2026-11-12T23:50:57.870Z",
-   "seconds": 1397,
+   "seconds": 1579,
+   "finished": null,
+   "effort": "high"
+  },
+  {
+   "name": "odalys",
+   "task": "[tools] T-4213 land account restart fix",
+   "model": "opus",
+   "started": "2026-11-13T00:14:33.768Z",
+   "seconds": 163,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2",
+ "who": "Idris x2, Odalys",
  "recent": [
   {
    "name": "idris",
@@ -149,7 +158,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 590,
+  "runnable_count": 591,
   "blocked_count": 84
  },
  "meter": {
@@ -198,7 +207,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-13T00:14:00+00:00",
+  "read_at": "2026-11-13T00:17:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -253,14 +262,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T19:09:00-05:00",
+   "at": "2026-11-12T19:15:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T19:14:00-05:00",
+  "at": "2026-11-12T19:17:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -281,17 +290,18 @@
    "effort": "high"
   },
   {
+   "name": "Odalys",
+   "state": "running",
+   "task": "[tools] T-4213 land account restart fix",
+   "model": "opus",
+   "since": "2026-11-13T00:14:33.768Z",
+   "next": [],
+   "effort": "high"
+  },
+  {
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
-   "model": null,
-   "since": null,
-   "next": []
-  },
-  {
-   "name": "Odalys",
-   "state": "next",
-   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -342,6 +352,16 @@
     "at": "2026-11-12T23:50:57.870Z",
     "o": "c",
     "task": "T-4219"
+   },
+   {
+    "w": "Odalys",
+    "k": "tools",
+    "t": "Let the accounts restart and use their full window",
+    "m": "opus",
+    "e": "high",
+    "at": "2026-11-13T00:14:33.768Z",
+    "o": "i",
+    "task": "T-4213"
    }
   ],
   "src": "plan",
@@ -435,7 +455,7 @@
    }
   ],
   "count": {
-   "next": 590,
+   "next": 591,
    "wait": 40,
    "blocked": 44,
    "you": 13
@@ -509,27 +529,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T00:14:14Z",
+  "at": "2026-11-13T00:17:00Z",
   "s": {
    "T-4116": [
-    "mergeq",
-    "1st to merge",
-    1794527354930
+    "merging",
+    "Merging onto main",
+    1794529020285
    ],
    "T-4218": [
     "merging",
-    "Mac tests at the main gate",
-    1794528614930
+    "Mac tests at the main gate \u00b7 6 groups of tests done",
+    1794528660285
    ],
    "T-4219": [
     "mergeq",
     "waiting for the main gate",
-    1794528794930
+    1794528780285
    ],
    "T-4215": [
     "testing",
     "MacBook \u00b7 test",
     null
+   ],
+   "T-4213": [
+    "testing",
+    "its own tests, in its copy",
+    1794528900285
    ],
    "T-4196": [
     "merged",
@@ -543,15 +568,16 @@
    "T-4218": "Redraw a placed launcher after a slot edit",
    "T-4219": "Mark launcher builds so uploads refuse them",
    "T-4215": "Keep the launcher editor out of Release builds",
+   "T-4213": "Let the accounts restart and use their full window",
    "T-4196": "Let app changes waiting to merge share one iPhone run"
   }
  },
  "ln": {
-  "at": "2026-11-13T00:14:14Z",
+  "at": "2026-11-13T00:17:00Z",
   "mq": {
    "n": {
-    "checking": 0,
-    "inline": 1,
+    "checking": 1,
+    "inline": 0,
     "conflicted": 2,
     "failed": 0,
     "held": 0,
@@ -559,15 +585,24 @@
     "parked": 3
    },
    "m": {
-    "checking": null,
-    "inline": 25,
-    "conflicted": 517,
+    "checking": 0,
+    "inline": null,
+    "conflicted": 519,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 560
+    "parked": 563
    },
-   "cur": [],
+   "cur": [
+    [
+     [
+      "T-4116"
+     ],
+     "going onto main",
+     "Mac mini",
+     0
+    ]
+   ],
    "ld": [
     80,
     "2026-11-13T00:01:32Z"
@@ -575,8 +610,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T00:13:26Z",
-    "ld": 5.47,
+    "at": "2026-11-13T00:16:20Z",
+    "ld": 3.45,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -609,8 +644,8 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Inbox \u2013 Evan's 7:13 PM Message on GitHub",
-   "at": "2026-11-12T19:14:08-05:00"
+   "t": "Work session \u2013 12 tasks",
+   "at": "2026-11-12T19:14:42-05:00"
   },
   {
    "w": "Operator",
@@ -619,7 +654,7 @@
    "m": "opus",
    "e": "xhigh",
    "t": "Work session \u2013 1 task",
-   "at": "2026-11-12T19:04:48-05:00"
+   "at": "2026-11-12T19:15:34-05:00"
   },
   {
    "w": "Operator",
@@ -632,21 +667,10 @@
   }
  ],
  "reply": {
-  "sent": "2026-11-12T22:23:48Z",
-  "seconds": 41.0
+  "sent": "2026-11-13T00:14:24Z",
+  "seconds": 69.0
  },
- "inbox": [
-  {
-   "id": "c6839792179",
-   "state": "received",
-   "position": 1,
-   "tasks": {
-    "open": 0,
-    "done": 0
-   },
-   "title": "Did you restart the audits yet"
-  }
- ],
+ "inbox": [],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -661,13 +685,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 2,
+  "main": 3,
   "lanes": 2,
-  "total": 4,
-  "at": "7:14 PM",
+  "total": 5,
+  "at": "7:17 PM",
   "why": "",
-  "at_iso": "2026-11-13T00:14:00+00:00",
+  "at_iso": "2026-11-13T00:17:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 2, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:14 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>5</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 2 sessions \u00b7 as of 7:17 PM ET</p></section>"
  }
 }

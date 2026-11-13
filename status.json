@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T02:19:43.725555+00:00",
+ "at": "2026-11-13T02:22:43.610512+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -119,7 +119,7 @@
     "why": "did not merge cleanly"
    }
   ],
-  "landed": 12,
+  "landed": 11,
   "failed": 11
  },
  "workers": [
@@ -128,7 +128,7 @@
    "task": "[site] T-4230 Restructuring on Documents",
    "model": "opus",
    "started": "2026-11-13T02:17:14.265Z",
-   "seconds": 149,
+   "seconds": 329,
    "finished": null,
    "effort": "high"
   },
@@ -137,7 +137,7 @@
    "task": "[tools] T-4232 Double Spread usage mode",
    "model": "opus",
    "started": "2026-11-13T02:17:34.315Z",
-   "seconds": 129,
+   "seconds": 309,
    "finished": null,
    "effort": "high"
   },
@@ -146,7 +146,7 @@
    "task": "[build] T-4229 writer test failed on MacBook",
    "model": "opus",
    "started": "2026-11-13T02:18:02.993Z",
-   "seconds": 100,
+   "seconds": 280,
    "finished": null,
    "effort": "high"
   }
@@ -214,7 +214,7 @@
   "week_pct": 39.76,
   "usage_pct": 32.4,
   "work_pct": 79.4,
-  "read_at": "2026-11-13T02:19:00+00:00",
+  "read_at": "2026-11-13T02:22:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -251,7 +251,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T21:19:00-05:00",
+  "at": "2026-11-12T21:22:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -486,11 +486,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T02:19:38Z",
-  "s": {}
+  "at": "2026-11-13T02:22:43Z",
+  "s": {
+   "T-4229": [
+    "testing",
+    "Mac Mini \u00b7 test",
+    null
+   ]
+  },
+  "nm": {
+   "T-4229": "Fix a MacBook test job that failed"
+  }
  },
  "ln": {
-  "at": "2026-11-13T02:19:38Z",
+  "at": "2026-11-13T02:22:43Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -504,11 +513,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 608,
+    "conflicted": 611,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 686
+    "parked": 689
    },
    "cur": [],
    "ld": [
@@ -518,12 +527,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T02:19:36Z",
-    "ld": 1.24,
+    "at": "2026-11-13T02:21:55Z",
+    "ld": 2.8,
     "c": 8,
     "sb": 0,
     "dk": [
-     22.5,
+     22.6,
      228.3
     ],
     "ss": [
@@ -575,10 +584,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "9:19 PM",
+  "at": "9:22 PM",
   "why": "",
-  "at_iso": "2026-11-13T02:19:00+00:00",
+  "at_iso": "2026-11-13T02:22:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:19 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:22 PM ET</p></section>"
  }
 }

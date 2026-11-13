@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T04:25:05.924646+00:00",
+ "at": "2026-11-13T04:28:09.371193+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -116,7 +116,7 @@
    "task": "[build] T-3895 record extension runs that never start",
    "model": "opus",
    "started": "2026-11-13T04:24:28.027Z",
-   "seconds": 37,
+   "seconds": 221,
    "finished": null,
    "effort": "high"
   }
@@ -208,7 +208,7 @@
   "week_pct": 39.76,
   "usage_pct": 32.4,
   "work_pct": 79.4,
-  "read_at": "2026-11-13T04:25:00+00:00",
+  "read_at": "2026-11-13T04:28:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -238,14 +238,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T23:20:00-05:00",
+   "at": "2026-11-12T23:26:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T23:25:00-05:00",
+  "at": "2026-11-12T23:28:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -489,11 +489,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T04:24:54Z",
-  "s": {}
+  "at": "2026-11-13T04:27:56Z",
+  "s": {
+   "T-3895": [
+    "testing",
+    "its own tests, in its copy",
+    1794544076826
+   ]
+  },
+  "nm": {
+   "T-3895": "Record widget runs that never start in the extension"
+  }
  },
  "ln": {
-  "at": "2026-11-13T04:24:54Z",
+  "at": "2026-11-13T04:27:56Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -507,11 +516,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 767,
+    "conflicted": 770,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 791
+    "parked": 794
    },
    "cur": [],
    "ld": [
@@ -521,8 +530,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T04:24:54Z",
-    "ld": 0.95,
+    "at": "2026-11-13T04:27:24Z",
+    "ld": 1.44,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -581,10 +590,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "11:25 PM",
+  "at": "11:28 PM",
   "why": "",
-  "at_iso": "2026-11-13T04:25:00+00:00",
+  "at_iso": "2026-11-13T04:28:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:25 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:28 PM ET</p></section>"
  }
 }

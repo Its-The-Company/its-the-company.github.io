@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T03:57:29.782149+00:00",
+ "at": "2026-11-13T04:00:36.499156+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -131,7 +131,7 @@
    "task": "[build] T-3900 one wait per refresh on hung step",
    "model": "opus",
    "started": "2026-11-13T03:39:21.282Z",
-   "seconds": 1088,
+   "seconds": 1275,
    "finished": null,
    "effort": "high"
   }
@@ -223,7 +223,7 @@
   "week_pct": 39.76,
   "usage_pct": 32.4,
   "work_pct": 79.4,
-  "read_at": "2026-11-13T03:57:00+00:00",
+  "read_at": "2026-11-13T04:00:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -260,7 +260,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T22:57:00-05:00",
+  "at": "2026-11-12T23:00:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -504,27 +504,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T03:57:29Z",
+  "at": "2026-11-13T04:00:36Z",
   "s": {
    "T-4124": [
     "mergeq",
     "1st to merge",
-    1794541289782
+    1794541236499
    ],
    "T-3696": [
     "mergeq",
     "1st to merge",
-    1794541289782
+    1794541236499
    ],
    "T-4127": [
     "mergeq",
     "2nd to merge",
-    1794541229782
+    1794541236499
    ],
    "T-3900": [
-    "merging",
-    "Mac tests at the main gate",
-    1794542129782
+    "mergetest",
+    "iPhone tests on the MacBook",
+    null
    ]
   },
   "nm": {
@@ -535,7 +535,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-13T03:57:29Z",
+  "at": "2026-11-13T04:00:36Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -548,12 +548,12 @@
    },
    "m": {
     "checking": null,
-    "inline": 16,
-    "conflicted": 740,
+    "inline": 20,
+    "conflicted": 743,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 773
+    "parked": 776
    },
    "cur": [],
    "ld": [
@@ -563,12 +563,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T03:57:20Z",
-    "ld": 0.69,
+    "at": "2026-11-13T04:00:36Z",
+    "ld": 0.64,
     "c": 8,
     "sb": 0,
     "dk": [
-     21.7,
+     21.5,
      228.3
     ],
     "ss": [
@@ -578,12 +578,12 @@
     "sn": []
    },
    "macbook": {
-    "at": "2026-11-13T03:53:07Z",
-    "ld": 1.08,
+    "at": "2026-11-13T03:59:18Z",
+    "ld": 0.44,
     "c": 12,
     "sb": 0,
     "dk": [
-     377.3,
+     376.6,
      926.4
     ],
     "sn": []
@@ -623,10 +623,10 @@
   "main": 1,
   "lanes": 0,
   "total": 1,
-  "at": "10:57 PM",
+  "at": "11:00 PM",
   "why": "",
-  "at_iso": "2026-11-13T03:57:00+00:00",
+  "at_iso": "2026-11-13T04:00:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:57 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 11:00 PM ET</p></section>"
  }
 }

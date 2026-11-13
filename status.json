@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T01:42:51.841312+00:00",
+ "at": "2026-11-13T01:46:09.182843+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -22,6 +22,14 @@
     "steps": [],
     "end": "landed",
     "end_at": 1794528092
+   },
+   {
+    "t": "T-4127",
+    "name": "Run the Restructuring on Evan's account",
+    "acct": "Personal a",
+    "steps": [],
+    "end": "landed",
+    "end_at": 1794516928
    },
    {
     "t": "T-4196",
@@ -80,17 +88,9 @@
     "end": "failed",
     "end_at": 1794495739,
     "why": "did not merge cleanly"
-   },
-   {
-    "t": "T-4149",
-    "acct": "Personal a",
-    "steps": [],
-    "end": "failed",
-    "end_at": 1794495739,
-    "why": "did not merge cleanly"
    }
   ],
-  "landed": 16,
+  "landed": 15,
   "failed": 8
  },
  "workers": [],
@@ -132,39 +132,39 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 591,
+  "runnable_count": 590,
   "blocked_count": 86
  },
  "meter": {
   "five_hour": {
-   "pct": 20.0,
-   "resets_at": "2026-11-12T22:00:00-05:00",
+   "pct": 21.0,
+   "resets_at": "2026-11-13T02:59:59.913108+00:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T20:28:04.037431-05:00",
-   "source": "live",
-   "left": 80.0,
+   "read_at": "2026-11-12T20:45:59.689258-05:00",
+   "source": "usage",
+   "left": 79.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 83.0,
-   "resets_at": "2026-11-15T02:00:00-05:00",
+   "resets_at": "2026-11-15T06:59:58.913133+00:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T20:28:04.037431-05:00",
-   "source": "live",
+   "read_at": "2026-11-12T20:45:59.689258-05:00",
+   "source": "usage",
    "left": 17.0,
    "left_words": "of your weekly allowance left"
   },
   "fable": {
    "pct": 4.0,
-   "resets_at": "2026-11-15T07:00:00.334407+00:00",
+   "resets_at": "2026-11-15T06:59:59.913283+00:00",
    "used_words": "of the Fable weekly allowance used",
-   "read_at": "2026-11-12T17:19:27.311551-05:00",
+   "read_at": "2026-11-12T20:45:59.689258-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T20:28:04.037431-05:00"
+  "read_at": "2026-11-12T20:45:59.689258-05:00"
  },
  "ui": {
-  "week_pct": 0.24,
+  "week_pct": 0.239,
   "five_hour_pct": 0.0,
   "caps_pct": {
    "week": 3.0,
@@ -178,10 +178,10 @@
  },
  "next_tick": null,
  "personal": {
-  "week_pct": 38.42,
-  "usage_pct": 32.4,
+  "week_pct": 39.57,
+  "usage_pct": 32.3,
   "work_pct": 79.1,
-  "read_at": "2026-11-13T01:42:00+00:00",
+  "read_at": "2026-11-13T01:46:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -211,22 +211,22 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T20:40:00-05:00",
+   "at": "2026-11-12T20:45:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T20:42:00-05:00",
+  "at": "2026-11-12T20:46:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
  "idle": null,
  "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 7 (raised a step toward the floor of 8: new work may start and every signal is under its line)",
-  "n": 7,
-  "at": "2026-11-12T17:19:27.669996-05:00"
+  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (raised a step toward the floor of 8: new work may start and every signal is under its line)",
+  "n": 8,
+  "at": "2026-11-12T20:46:00.001001-05:00"
  },
  "lanes": [
   {
@@ -280,7 +280,6 @@
  ],
  "tasks": {
   "run": [],
-  "src": "plan",
   "open": [
    {
     "w": "Idris",
@@ -347,38 +346,42 @@
    },
    {
     "w": "Ines",
-    "k": "plan",
-    "t": "Regroup the app queue into feature-sized pieces",
+    "k": "ops",
+    "t": "Judge the efficiency and other lines of the...",
     "s": "next",
-    "o": "i"
+    "o": "c"
    }
   ],
   "done": [
    {
+    "w": "Ines+idris",
+    "t": "The 300 open app tasks are now grouped into 14 features, each with one owner and a result a...",
+    "at": "2026-11-12T20:45:00-05:00"
+   },
+   {
+    "w": "Operator",
+    "t": "A later MacBook job for the same work (J-20261112-1738-mut-idris-t4215-1) passed, so the failed...",
+    "at": "2026-11-12T20:45:00-05:00"
+   },
+   {
     "w": "Odalys",
     "t": "An account that paused at its usage line no longer sits idle until the 5-hour window resets: it...",
     "at": "2026-11-12T20:29:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "When someone renames, adds or removes an app in Launcher Apps, a launcher widget already on the...",
-    "at": "2026-11-12T20:24:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "A test build with the unreleased launcher widgets now carries a hidden label in both the app and...",
-    "at": "2026-11-12T20:11:00-05:00"
    }
   ],
   "count": {
-   "next": 591,
+   "next": 590,
    "wait": 40,
    "blocked": 46,
    "you": 14
   },
   "fin": {
-   "n": 14,
+   "n": 15,
    "rows": [
+    [
+     "T-4116",
+     "Regroup the app queue into..."
+    ],
     [
      "T-4213",
      "Let the accounts restart and..."
@@ -398,10 +401,6 @@
     [
      "T-3848",
      "Keep a second launcher tap..."
-    ],
-    [
-     "T-4216",
-     "Stop Add App from..."
     ]
    ]
   }
@@ -445,23 +444,14 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T01:42:46Z",
-  "s": {
-   "T-4116": [
-    "merging",
-    "Merging onto main",
-    1794534166117
-   ]
-  },
-  "nm": {
-   "T-4116": "Regroup the app queue into feature-sized pieces"
-  }
+  "at": "2026-11-13T01:46:09Z",
+  "s": {}
  },
  "ln": {
-  "at": "2026-11-13T01:42:46Z",
+  "at": "2026-11-13T01:46:09Z",
   "mq": {
    "n": {
-    "checking": 1,
+    "checking": 0,
     "inline": 0,
     "conflicted": 2,
     "failed": 0,
@@ -470,37 +460,28 @@
     "parked": 3
    },
    "m": {
-    "checking": 0,
+    "checking": null,
     "inline": null,
-    "conflicted": 605,
+    "conflicted": 608,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 649
+    "parked": 652
    },
-   "cur": [
-    [
-     [
-      "T-4116"
-     ],
-     "going onto main",
-     "Mac mini",
-     0
-    ]
-   ],
+   "cur": [],
    "ld": [
-    82,
-    "2026-11-13T00:41:47Z"
+    83,
+    "2026-11-13T01:45:43Z"
    ]
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T01:41:59Z",
+    "at": "2026-11-13T01:45:48Z",
     "ld": 0.46,
     "c": 8,
     "sb": 0,
     "dk": [
-     22.7,
+     22.5,
      228.3
     ],
     "ss": [
@@ -525,10 +506,7 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
+   "a": "Main",
    "t": "Work session \u2013 13 tasks",
    "at": "2026-11-12T20:40:59-05:00"
   }
@@ -537,13 +515,25 @@
   "sent": "2026-11-13T01:40:15Z",
   "seconds": 43.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6841314635",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Also, consider the order of the two..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "recent",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -555,10 +545,10 @@
   "main": 0,
   "lanes": 0,
   "total": 0,
-  "at": "8:42 PM",
+  "at": "8:46 PM",
   "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
-  "at_iso": "2026-11-13T01:42:00+00:00",
+  "at_iso": "2026-11-13T01:46:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:42 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:46 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

@@ -7,6 +7,7 @@ var fixed = D.getElementById('lockin'), cr = D.getElementById('chat-root');
 var repo = (cr && cr.getAttribute('data-repo')) || (fixed && fixed.getAttribute('data-repo'));
 var sent = null, posted = 0, arm = 0, armOn = null, armT = 0, sentT = 0, err = '', tiles = [];
 var W = { spread: 'UNLOCK', midnight: 'LOCK IN', daily: 'LOCK IN DAILY' };
+var MW = { spread: 'SPREAD', 'double-spread': 'DOUBLE SPREAD', midnight: 'LOCK IN', daily: 'LOCK IN DAILY' };
 var N = { spread: 'Spread', midnight: 'Lock In until midnight', daily: 'Lock In until daily usage' }, Y = 'Sent. This changes when the company reads it, usually within 15 minutes.';
 function day(x) { return new Date(x).toLocaleDateString('en-CA', { timeZone: 'America/New_York' }); }
 function today(t) { return !!t && day(t) === day(Date.now()); }
@@ -19,10 +20,9 @@ return o;
 }
 function mk(p, t, c, x) { var e = p.appendChild(D.createElement(t)); if (c) e.className = c; if (x) e.textContent = x; return e; }
 function draw() {
-var k = now(), on = k.on, n = k.pool, md = D.getElementById('lk-mode');
-var lp = D.getElementById('lk-lockpace'); if (lp) lp.hidden = k.mode !== 'midnight';
-if (md) md.textContent = N[k.mode];
-if (sent === k.mode) { sent = null; clearTimeout(sentT); }
+var k = now(), on = k.on, n = k.pool, ms = (S.modes && S.modes()) || {};
+var sm = /^(\w+) (.+)$/.exec(sent || ''), got = sm && (sm[1] === 'all' ? Object.keys(ms).length && Object.keys(ms).every((a) => ms[a] === sm[2]) : ms[sm[1]] === sm[2]);
+if (sent === k.mode || got) { sent = null; clearTimeout(sentT); }
 tiles.forEach((x) => {
 var pill = x.box === fixed && fixed.hasAttribute('data-btn');
 if (pill) x.box.classList.toggle('on', on);
@@ -37,9 +37,9 @@ x.note.textContent = err || (sent !== null ? (posted ? Y : 'Sending...')
 : arm ? (on ? 'Tap again within 5 seconds to unlock.' : 'Tap again within 5 seconds to lock in.') : '');
 });
 }
-function send(to) {
+function send(to, word) {
 sent = to = to || (now().on ? 'spread' : 'midnight');
-var word = W[to]; posted = 0; err = ''; draw();
+word = word || W[to]; posted = 0; err = ''; draw();
 S.gh('/repos/' + repo + '/issues?labels=main&state=open&per_page=5').then((r) => {
 if (!r.ok) throw new Error(S.said(r));
 return r.json();
@@ -73,6 +73,9 @@ tiles.push(x); draw();
 }
 if (fx) { if (fixed.hasAttribute('data-btn')) button(fx, fixed); else tiles.push(fx); }
 S.lockMode = () => now().mode;
+S.modes = () => { var st = (S.status && S.status()) || {}, k = st.lock_in || {}; return k.modes && today(k.at || st.at) ? k.modes : null; };
+S.modeSet = (a, m) => !MW[m] || !/^(all|main|[a-z])$/.test(a) || S.rejected() ? 'Not sent.' : sent !== null ? 'Already sent; waiting.'
+: (send(a + ' ' + m, 'MODE ' + a.toUpperCase() + ' ' + MW[m]), Y);
 S.lockSet = (m) => !W[m] || S.rejected() ? 'Not sent.' : sent !== null ? 'Already sent; waiting.'
 : now().mode === m ? 'Already ' + N[m] + '; nothing sent.' : (send(m), Y);
 if (S.onReject) S.onReject.push(() => { tiles.forEach((x) => { if (x.btn) x.btn.hidden = x.note.hidden = true; }); });

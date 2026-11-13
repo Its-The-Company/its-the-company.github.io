@@ -370,28 +370,30 @@ if(K3){K3.has=function(i){return items.some(function(x){return K3.id(x.id)===i})
 return [].filter.call(box.children,function(c){return K3.id(c.getAttribute('data-id'))===i})[0]||null}}
 render();if(K3)K3.on(render);if(S&&S.onStatus&&S.lane){S.onStatus.push(draw);if(S.status&&S.status())draw(S.status(),true)}});
 // T-2940: Queued (and T-3094 the Merge queue) folds behind a button at the top of its list: rows past data-max carry lk-fold.
-// T-3325 (redo of T-3191; friesevan #41 c6701941684, c6702049968): the one Lock In control in Usage sets every account, the
-// main one and each enabled lane, together: Spread, Lock In until midnight or Lock In until daily usage, posted through
-// lockin.js (S.lockSet: UNLOCK, LOCK IN or LOCK IN DAILY on the Chat issue). No per-lane choice. A token holder only; two taps.
-document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,d=document.getElementById('lk-lockmenu');
-function mk(p,t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x)e.textContent=x;p.appendChild(e);return e}
+// T-4232 (friesevan #41 c6841754758): Home's Mode block (mode_html), first on the page. Each account's mode follows the
+// live status (lock_in.modes, through lockin.js's S.modes). A token holder picks an account (All accounts first) and a
+// mode; a second tap within 5 seconds posts MODE <account> <mode> on the Chat issue through lockin.js's S.modeSet, the
+// Lock In write path (T-3325's Lock In menu in Usage is gone). The Queued fold rides in the same handler, as before.
+document.addEventListener('DOMContentLoaded',function(){var S=window.CompanySite,d=document.getElementById('lk-modeset'),ml=document.getElementById('lk-modelist');
 [['lk-q','lk-q-more']].forEach(function(k){var q=document.getElementById(k[0]),qb=document.getElementById(k[1]),qa=false,mx,n;if(!q||!qb)return;
 mx=+q.getAttribute('data-max')||4;n=q.children.length;[].forEach.call(q.children,function(c,i){c.classList.toggle('lk-fold',i>=mx)});
 function pq(){q.classList.toggle('lk-qshort',!qa);qb.hidden=n<=mx;qb.setAttribute('aria-expanded',qa);qb.textContent=qa?'Show fewer ▴':'Show '+(n-mx)+' more ▾'}
 qb.onclick=function(){qa=!qa;pq()};pq()});
-if(!d||!S||!S.getToken||!S.getToken())return;d.hidden=false;
-var box=d.querySelector('div'),arm=null,armT=0,tm,note,bs=[];
-function mark(){var m=S.lockMode?S.lockMode():'';bs.forEach(function(x){x[0].setAttribute('aria-pressed',x[1]===m?'true':'false');x[0].classList.toggle('on',x[1]===m)})}
-function build(){var b;box.textContent='';box.className='lk-lm';bs=[];
-mk(box,'p','meta','One setting for every account: the main account and each lane. All go back to Spread at midnight.');
-b=mk(box,'div','lk-lb');note=mk(box,'small','meta');note.setAttribute('role','status');
-[['Spread','spread','lk-lsp','Each account spreads its week to finish a few hours before its own reset.'],['Lock In until midnight','midnight','lk-lgo','Every account at full speed until midnight, then Spread.'],['Lock In until daily usage','daily','lk-lgd','Every account at full speed until it has used its share of today (its remaining week split evenly over the days to its reset), then it holds until midnight.']].forEach(function(o){
-var bt=mk(b,'button','btn '+o[2],o[0]);bt.type='button';bt.title=o[3];bs.push([bt,o[1]]);
-bt.onclick=function(){var t=Date.now();
-if(arm!==o[1]){arm=o[1];armT=t;clearTimeout(tm);tm=setTimeout(function(){arm=null;note.textContent=''},5000);note.textContent='Tap again within 5 seconds for '+o[0]+', every account. '+o[3];return}
-if(t-armT<400)return;arm=null;clearTimeout(tm);note.textContent=S.lockSet?S.lockSet(o[1]):'Not available here.';mark()}});mark()}
-if(S.onStatus)S.onStatus.push(mark);
-d.addEventListener('toggle',function(){if(d.open)build()})});
+if(!S)return;
+var NM={spread:'Spread','double-spread':'Double Spread',midnight:'Lock In until midnight',daily:'Lock In until daily usage'};
+function lis(){return ml?[].slice.call(ml.querySelectorAll('li[data-acct]')):[]}
+function show(){var m=S.modes?S.modes():null;if(m)lis().forEach(function(li){var v=m[li.getAttribute('data-acct')],e=li.querySelector('.lk-mn');if(e&&NM[v]){e.textContent=NM[v];e.setAttribute('data-mode',v)}})}
+if(S.onStatus)S.onStatus.push(show);show();
+if(!d||!S.getToken||!S.getToken()||!S.modeSet)return;d.hidden=false;
+var sel=document.getElementById('lk-macct'),note=document.getElementById('lk-mnote'),bs=[].slice.call(d.querySelectorAll('button[data-m]')),arm=null,armT=0,tm;
+function now(a){var m={};lis().forEach(function(li){var e=li.querySelector('.lk-mn');m[li.getAttribute('data-acct')]=e?e.getAttribute('data-mode'):''});
+var ks=a==='all'?Object.keys(m):[a],v=m[ks[0]];return ks.every(function(k){return m[k]===v})?v:''}
+function mark(){var v=now(sel.value);bs.forEach(function(b){var on=b.getAttribute('data-m')===v;b.setAttribute('aria-pressed',on?'true':'false');b.classList.toggle('on',on)})}
+sel.onchange=function(){arm=null;clearTimeout(tm);note.textContent='';mark()};
+bs.forEach(function(b){b.onclick=function(){var t=Date.now(),m=b.getAttribute('data-m'),a=sel.value,k=a+' '+m,w=a==='all'?'every account':sel.options[sel.selectedIndex].text;
+if(arm!==k){arm=k;armT=t;clearTimeout(tm);tm=setTimeout(function(){arm=null;note.textContent=''},5000);note.textContent='Tap again within 5 seconds for '+NM[m]+', '+w+'. '+b.title;return}
+if(t-armT<400)return;arm=null;clearTimeout(tm);note.textContent=S.modeSet(a,m);mark()}});
+if(S.onStatus)S.onStatus.push(mark);mark()});
 // T-3986 (friesevan #41 c6758405270: Home's Simulators and merge queue near-live "if possible and not costly"; light only,
 // #41 c6759690460): Bottlenecks' merge line and the Machine panel follow the status's ln (tools/site/live_stage.py
 // lines(), read with the stages every 20 s; pushed when a count moves, else with the 5-minute heartbeat) once it is newer

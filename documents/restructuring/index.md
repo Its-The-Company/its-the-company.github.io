@@ -1,0 +1,25 @@
+---
+layout: "default"
+title: "The Restructuring \u00b7 Documents"
+section: "documents"
+description: "The Investors&#x27; Restructuring of pywidget (T-4127), as it runs: the run plan, each phase&#x27;s write-up with its questions for the Investors, the working drafts and the mock-ups."
+---
+<div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/' | relative_url }}">← Documents</a></div>
+
+<div class="page-head"><div class="kicker"><span class="trail"><a href="{{ '/documents/' | relative_url }}">Documents</a> › <span>The Restructuring</span></span></div><h1>The Restructuring</h1><p class="lead">The Investors' Restructuring of pywidget (T-4127), as it runs: the run plan, each phase's write-up with its questions for the Investors, the working drafts and the mock-ups.</p><p class="meta"><b>The Restructuring is still running: files appear here as the run commits them, and drafts change between builds. The questions for the Investors stay in each document, each with a recommendation.</b></p></div>
+
+<nav class="subtabs doc-tabs" aria-label="Documents or Archive"><a href="{{ '/documents/' | relative_url }}" aria-current="true">Documents</a><a href="{{ '/documents/archive/' | relative_url }}">Archive</a></nav>
+<style>.doc-tabs{margin:var(--s3) 0 var(--s4)}.fld-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,160px),1fr));gap:var(--s2);margin:var(--s3) 0 var(--s5)}.fld-grid .btn.fld{flex-direction:column;align-items:flex-start;justify-content:center;gap:2px;min-width:0;min-height:64px;padding:var(--s2) var(--s3);text-align:left}.btn.fld b{font-size:var(--fs-2);line-height:1.25}.btn.fld small{font-weight:400;font-size:var(--fs-0);color:var(--muted)}.btn.fld:hover{border-color:var(--accent)}.btn.fld:focus-visible{outline:2px solid var(--accent);outline-offset:2px}</style>
+
+<h2 id="folders">Folders</h2>
+<nav class="fld-grid" aria-label="Folders"><a class="btn fld" href="{{ '/documents/restructuring/work/' | relative_url }}"><b>Working drafts</b><small>4 documents</small></a><a class="btn fld" href="{{ '/documents/restructuring/04-mockups/' | relative_url }}"><b>Mock-ups</b><small>Nothing yet</small></a></nav>
+
+<div class="ix">
+
+<h2 id="documents">Documents in this folder</h2>
+<p class="meta">5 documents, in the run's order.</p>
+<div class="cards"><a class="card" href="{{ '/documents/restructuring/00-plan.html' | relative_url }}"><span class="meta"><span class="kind blue">Restructuring</span><span>Day 22 · Thu Nov 12, 11:18 PM ET</span></span><b>The Restructuring (T-4127): run plan</b><p>Kept current by the Operator at each step; every step commits its own files by path on personal/a with the ID first.</p></a><a class="card" href="{{ '/documents/restructuring/01-questions-and-limits.html' | relative_url }}"><span class="meta"><span class="kind blue">Restructuring</span><span>Wrenna</span><span>Day 22 · Thu Nov 12, 11:18 PM ET</span></span><b>The Restructuring, phase 1: questions, objections and limits</b><p>Blank-slate questions for the Investors, platform limits, App Review risks, marketplace needs and what "served equally" means.</p></a><a class="card" href="{{ '/documents/restructuring/02-audit.html' | relative_url }}"><span class="meta"><span class="kind blue">Restructuring</span><span>Ines</span><span>Day 22 · Thu Nov 12, 9:34 PM ET</span></span><b>The Restructuring, phase 2: audit of the current plan</b><p>What the present pywidget plan, its decisions and its board hold against the Investors' new product statement, and what to keep, change or drop.</p></a><a class="card" href="{{ '/documents/restructuring/03-structure.html' | relative_url }}"><span class="meta"><span class="kind blue">Restructuring</span><span>Ines</span><span>Day 22 · Thu Nov 12, 11:18 PM ET</span></span><b>The Restructuring, phase 3: structure</b><p>The project model, the app's navigation, the Builder and the marketplace, drawn so that one Project serves the programmer, the casual creator and the…</p></a><a class="card" href="{{ '/documents/restructuring/07-documentation.html' | relative_url }}"><span class="meta"><span class="kind blue">Restructuring</span><span>Wrenna</span><span>Day 22 · Thu Nov 12, 9:34 PM ET</span></span><b>The Restructuring, documentation part: diagrams drawn from the code</b><p>How other software companies keep documentation and diagrams current with their code, the free tools and paid services compared with licences…</p></a></div>
+
+
+
+</div>

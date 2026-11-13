@@ -37,8 +37,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open (2026-11-10 12:4x)
 
-- Unlanded patches on SSD company-scratch: T-3907 runner+main-gate; T-3962/65 (T-3962 also sim_hold, T-3967); T-3971 merge-only switch (13 files, green). T-3818 refused host_refused.
-- T-4013 owed: OPT-068 read 11-16; OPT-108 rerun; OPT-114 load/slow job.
 - T-4132 7155e22b37 (11-12): 8 OPTs closed; letter-met reverts 077/081/082/083/084 await a decision. Dup ids now OPT-131/132; merge_queue.py comments still say OPT-125.
 - T-3974 df40f13ef4 after-number owed. T-3963 merge_rate.py untracked. T-3979 (3) lease warning, (5) Home panel.
 - Item 4: sweep in supervisor; guard tools/main_folder_guard.py landed 842051d6c9 (76/0), NOT active until Investors apply settings.diff (company-scratch/T-3995h-odalys; Operator posts). After-number: .git/main-folder-guard.jsonl rows, false refusals.
@@ -59,9 +57,13 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-4161 bd24d50c7a (11-12 12:57 PM): b on Fable 5.2 (FABLE_MODEL_B); tick logs 'session: models:'. Owed: first models line in ops/runs/personal-tick-a/b.log.
 
-- T-4213 8094fd2d56 (11-12 8:29 PM): held window -> one Fable restart with pause watch (held exit 3; restart's own pause exit 0). Owed: first 'a restart in a held window' line in personal-tick-a.log (a alternates 'no task: 0 on the menu'). Land tip: update copy inside the gate lock.
+- T-4213 8094fd2d56: held window -> one Fable restart. T-4235 db5c635452 (11-12 10 PM): pause reserve fixed 3 pts 5h / 1 Fable (was burn x wrap). Owed: first live line ~91%; >90% readings are refused by the <span title="What keeps an idea below the top: the cap that applies to it now.">hold</span> (projection only).
 
 - T-4224 51744a9075 (11-12): lane Opus = the session's coordinator (main replies all opus, agent replies all fable); Home now says Fable. Open: coordinator could run cheaper (tick change).
+
+- T-4232 (11-12 10 PM): Double Spread + per-account modes (tools/usage_mode.py, ops/usage_mode.json; MODE <ALL|MAIN|A|B> <mode> via inbox) + Home Mode block. NOT landed: main_gate_test red on main (T-4236). Ready in company-scratch/T-4232-odalys/wt (16 paths, msg.txt). site_live_test needs ops/live.json copied into a worktree.
+
+- T-4230 f054a45347 (branch odalys/t4230-restructuring-docs, unlanded 11-12 22:1x): Restructuring folder under Documents. Owed: land; first live mock-up copy (phase 4).
 
 ## Lessons
 

@@ -1,10 +1,10 @@
 {
  "schema": 1,
- "at": "2026-11-13T05:01:36.109907+00:00",
+ "at": "2026-11-13T05:08:17.365568+00:00",
  "session": {
-  "active": true,
-  "kind": "work",
-  "started": "2026-11-12T21:13:35-05:00",
+  "active": false,
+  "kind": "",
+  "started": null,
   "flow": [
    {
     "t": "T-4215",
@@ -110,19 +110,17 @@
   "landed": 9,
   "failed": 0
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "pernille",
    "task": "[review] T-4242 review widget start failure rows",
    "model": "opus",
    "started": "2026-11-13T04:59:07.229Z",
-   "seconds": 148,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Pernille",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-13T05:03:28.749000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-3895 record extension runs that never start",
@@ -146,14 +144,6 @@
    "started": "2026-11-13T03:39:21.282Z",
    "seconds": null,
    "finished": "2026-11-13T04:17:06.294000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[tools] T-4236 clear main gate red, land T-4232",
-   "model": "opus",
-   "started": "2026-11-13T03:11:53.611Z",
-   "seconds": null,
-   "finished": "2026-11-13T03:30:00.696000+00:00"
   }
  ],
  "queue": {
@@ -164,19 +154,19 @@
  },
  "meter": {
   "five_hour": {
-   "pct": 6.0,
+   "pct": 7.0,
    "resets_at": "2026-11-13T03:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T23:32:27.857761-05:00",
+   "read_at": "2026-11-13T00:02:25.184719-05:00",
    "source": "live",
-   "left": 94.0,
+   "left": 93.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 85.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T23:32:27.857761-05:00",
+   "read_at": "2026-11-13T00:02:25.184719-05:00",
    "source": "live",
    "left": 15.0,
    "left_words": "of your weekly allowance left"
@@ -188,7 +178,7 @@
    "read_at": "2026-11-12T21:11:28.806353-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T23:32:27.857761-05:00"
+  "read_at": "2026-11-13T00:02:25.184719-05:00"
  },
  "ui": {
   "week_pct": 0.261,
@@ -203,12 +193,12 @@
   "show_coverage": false,
   "words": "of this week's allowance"
  },
- "next_tick": null,
+ "next_tick": "2026-11-12T21:28:25-05:00",
  "personal": {
   "week_pct": 39.76,
-  "usage_pct": 32.4,
-  "work_pct": 79.4,
-  "read_at": "2026-11-13T05:01:00+00:00",
+  "usage_pct": 31.7,
+  "work_pct": 78.8,
+  "read_at": "2026-11-13T05:09:00+00:00",
   "running": [
    {
     "lane": "b",
@@ -252,14 +242,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T23:56:00-05:00",
+   "at": "2026-11-13T00:03:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": false,
   "pool": 1,
-  "at": "2026-11-13T00:01:00-05:00",
+  "at": "2026-11-13T00:09:00-05:00",
   "mode": null,
   "modes": {
    "main": "spread",
@@ -267,27 +257,22 @@
    "b": "spread"
   }
  },
- "next_tick_why": "session",
+ "next_tick_why": "last_tick",
  "idle": null,
- "pool": {
-  "why": "Locked in for today by an Investor: full speed until midnight; the machine allows 8 (held: too few lands in 3 hours to judge a raise)",
-  "n": 8,
-  "at": "2026-11-12T21:13:25.367029-05:00"
- },
+ "pool": null,
  "lanes": [
-  {
-   "name": "Pernille",
-   "state": "running",
-   "task": "[review] T-4242 review widget start failure rows",
-   "model": "opus",
-   "since": "2026-11-13T04:59:07.229Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
    "task": "Idris, P0, reopens T-3393 c6713953911, c6725543994),...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Pernille",
+   "state": "next",
+   "task": "Pernille, P1, premades and gallery take the age line...",
    "model": null,
    "since": null,
    "next": []
@@ -326,19 +311,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Pernille",
-    "k": "review",
-    "t": "Review the widget start failure rows",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T04:59:07.229Z",
-    "o": "c",
-    "task": "T-4242"
-   }
-  ],
-  "src": "plan",
+  "run": [],
   "open": [
    {
     "w": "Idris",
@@ -413,6 +386,11 @@
   ],
   "done": [
    {
+    "w": "Pernille",
+    "t": "Checked the change that makes a widget log a 'could not start' entry when Python fails to start...",
+    "at": "2026-11-13T00:03:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "Merged into T-3895 (recording widget runs that never start in the extension), which landed this...",
     "at": "2026-11-12T23:58:00-05:00"
@@ -421,11 +399,6 @@
     "w": "Idris",
     "t": "When Python could not start inside a widget, the widget used to go quietly out of date with...",
     "at": "2026-11-12T23:58:00-05:00"
-   },
-   {
-    "w": "Pernille",
-    "t": "I checked Idris's fix that makes a widget refresh wait only once when a step every widget needs...",
-    "at": "2026-11-12T23:23:00-05:00"
    }
   ],
   "count": {
@@ -433,35 +406,6 @@
    "wait": 38,
    "blocked": 65,
    "you": 18
-  },
-  "fin": {
-   "n": 11,
-   "rows": [
-    [
-     "T-2496",
-     "Log extension runs that..."
-    ],
-    [
-     "T-3895",
-     "Record widget runs that..."
-    ],
-    [
-     "T-4238",
-     "Review the shared step wait fix"
-    ],
-    [
-     "T-3900",
-     "Wait once per refresh when a..."
-    ],
-    [
-     "T-4234",
-     "Stop task names blocking..."
-    ],
-    [
-     "T-4230",
-     "Show the Restructuring..."
-    ]
-   ]
   }
  },
  "qr": [
@@ -503,7 +447,7 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T05:01:18Z",
+  "at": "2026-11-13T05:08:17Z",
   "s": {
    "T-4127": [
     "merged",
@@ -517,7 +461,7 @@
   }
  },
  "ln": {
-  "at": "2026-11-13T05:01:18Z",
+  "at": "2026-11-13T05:08:17Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -531,11 +475,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 804,
+    "conflicted": 811,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 827
+    "parked": 834
    },
    "cur": [],
    "ld": [
@@ -545,8 +489,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T05:00:55Z",
-    "ld": 0.51,
+    "at": "2026-11-13T05:08:17Z",
+    "ld": 0.72,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -575,15 +519,6 @@
  "operators": [
   {
    "w": "Operator",
-   "a": "Main plan",
-   "sr": 1,
-   "m": "opus",
-   "e": "high",
-   "t": "Work session \u2013 2 tasks",
-   "at": "2026-11-12T21:53:15-05:00"
-  },
-  {
-   "w": "Operator",
    "a": "Jeremy",
    "sr": 1,
    "m": "opus",
@@ -602,22 +537,20 @@
   "queue_text",
   "recent",
   "task_done",
-  "fin_short",
   "task_title",
   "done_text",
   "task_open",
-  "fin_six",
   "lane_task",
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 1,
-  "total": 2,
-  "at": "12:01 AM",
+  "total": 1,
+  "at": "12:09 AM",
   "why": "",
-  "at_iso": "2026-11-13T05:01:00+00:00",
-  "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 1, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:01 AM ET</p></section>"
+  "at_iso": "2026-11-13T05:09:00+00:00",
+  "started": "",
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 0 \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 1 session \u00b7 as of 12:09 AM ET</p></section>"
  }
 }

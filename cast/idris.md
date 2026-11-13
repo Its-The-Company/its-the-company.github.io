@@ -55,13 +55,15 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 - T-3143 f11e88eef8 11-12: already green since T-3217 (runner 13/0); test side was right to fix. Lesson: runner results live on origin/macbook-results:ops/jobs/<J>/result.json; the daily full suite can hold the runner ~50 min.
 
+- T-3764 11-12: stopped, no code. Runner {SIM} is always an iPhone (runner.py simulator()); every .pad UI test skips there. iPad proof needs a runner change first (line noted).
+
 ## Lessons
 - Older lessons and dated logs: archive.md.
 
-- Lesson T-4194: a card's test name can be a file (extension BridgeTests): resolve before -only-testing. build-for-testing, not build, before test-without-building. Count before quoting a number (wrote 95, was 85).
-- T-3848 4e611b6d44 11-12: second tap <span title="A numbered batch of planned work, with its own plan file.">refills</span> the set-up sheet (M2), ticked. T-3847 not started (noted). Lesson: runner only_testing takes PyWidgetTests only; UI tests = a full job (~50 min). A find==replace mutant gives a green run of an unlanded commit.
-- T-4219 b3b0bc6f8a 11-12: LauncherMark + upload.sh refuses launcher archives on every path; ticked. Lesson: main moves during the gate-lock wait; checkout --merge main inside the lock (refuse if my paths moved). Clean-tree Release device build needs PW_INTERNAL_TESTFLIGHT=YES (legal links).
-- T-4218 7e8c3009c2 11-12: slot edit redraws placed launchers (forced, no-join pass), ticked. Lesson: a forced WidgetPasses caller with the same ids joins a running pass and gets pre-edit outcomes; edits need join: false.
+- T-4229 a2237bff00 11-12: PyBridge runPending gap (dequeued, not yet current) closed; ticked. Lesson: XCTest reports one failure per source line in a loop; print to see every pass. Gate land job = runner proof (land/m*).
+- T-4236 b99902435e 11-12: BuildReads tripwire (in the test, not the gate) now drops error:/warning:/note: literals; T-4232 landed 1aa720198c. Lesson: the gate runs suites in the --from copy, so move it onto main first; a flake's green rerun goes in via known_red.py clear.
+- T-3900 8624ba85ad 11-12: shared-step hang waited once a pass, pass limit resets on progress; ticked, review T-4238 (Pernille). Lesson: red for a test-only change = main_gate check --from a 2nd worktree; read the red reason (my first was 'no script', wrong).
+- T-3895 8b567d1a86 11-12: <span title="One numbered piece of research into one area of ideas. Each lane has its own file.">lane</span> start failures write error/InternalError start_failed rows + status; T-2496 merged; review T-4242 (Pernille). Lesson: a deferred status writes no last_outcome, only deferred_since; red-first for a test-only change = gate check --from the copy, then edit once its job is queued (pinned commit).
 {% endraw %}
 
 

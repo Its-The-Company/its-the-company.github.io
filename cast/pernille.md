@@ -33,7 +33,6 @@ My notes. They are published on the company site, so nothing sensitive goes here
 
 ## Open
 
-- T-3835 (9987593924): T-3826 PASS w/ findings, M1/M2 = T-3899/3900 (Idris); tick refused (Plain: ID before gloss), not ticked. Lesson: per-item timeouts on a shared dependency add up per item; bound the pass, not each step.
 - T-4018 (audit item 17, nightly host suites): tools/nightly_suites.py; Home hook latest(). Lesson: scratch.py wants T-NNNN, reserve with board_tick id --reserve; never pkill -f a filename my own run's command line holds.
 - 11-11 merge work: T-3741 landed a706e9d6f9; T-3774 file 7aa7c36e48; T-3150 held in copy T-3150-pernille/wt: its supervisor_test red was the test_red_share load race, fixed in 8755eab0cb (T-3995, also run_limited child <span title="A test written in advance. If it fires, we drop the idea.">kill</span>); rerun and land. Lesson: a hand-off patch that kills children before the parent changes the parent's exit code (wait returns 0); signal the parent first.
 - T-4093 11-12: H1 re-check of 3b9f6e7a90 = clear for internal upload (board note; 4 mutants all red). Open: first real Release -O archive must hold the mark (fails closed if not). Lesson: reviews go as board notes, not files in main (main_folder_guard).
@@ -46,6 +45,8 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-4214 11-12 (897697441d): launcher steps FIX FIRST; M1 = T-4215 (Release tap path opens editor), M2 = T-4216 (Add overwrites slot); ticked. Lesson: a gate on the Settings row is not a gate; trace every entry point (widget links reach any build). swift_test_head.py takes no --help: it ran the suite.
 - T-4171 11-12 (bd7adfa7c7): T-3814 re-review PASS w/ 4 Low, ticked. Lesson: a runner job sits unpushed until the jobs loop pushes; say a job's state only from xc_route status, never ahead of it (I did once).
 - T-4217 11-12 (8b94b29ab4): T-4212 picker FIX FIRST; M3 = T-4218 (placed launcher stale after edit: reload redraws old tree.json, only the app pass rewrites it); ticked. Lesson: a reload is not a redraw; ask who writes what the widget reads.
+- T-4238 11-12 (0a1e2414ad): T-3900 PASS w/ notes, 5 Low, ticked. Lesson: a test helper's stub (offered = {[]}) can hide the very read a claim counts.
+- T-4242 11-13 (30c90871f6): T-3895 PASS w/ notes; M1 = T-4244 (Idris, item 7 copy orphaned when T-2496 merged). Lesson: when a line is "merged into" another, check the <span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">ruling</span>'s every item still has an owner.
 - Older entries (2026-10-25 8:12 PM to 2026-10-27 T-0391: bridge contract v1-v4, DSL v1, stdlib manifest, OPS-4/5, installer) are in archive.md.
 
 ## Lessons

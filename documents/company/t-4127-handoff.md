@@ -1,91 +1,71 @@
 ---
 layout: "default"
-title: "T-4127 handoff before the Fable limit (Operator, 15:5x 11-12)"
+title: "T-4127 handoff before the Fable limit (Operator, 22:4x 11-12)"
 section: "documents"
-description: "The Restructuring&#x27;s third run on account a: restarted 15:39 11-12 after the 15:30 reset, paused 15:47 by the pause file (T-4128): &quot;the 5-hour row at 66% burns 8.112%/min: 4.1 min to its limit, one wrap-up is 4.6 min\u2026"
+description: "The Restructuring&#x27;s fifth run, on account a, ran 22:25 to 22:38 11-12 from main at b99902435e (plus 7ad7c8fb1f, the parked run&#x27;s one leftover record), and was paused 22:38 by the pause file: the 5-hour row was at 95%\u2026"
 ---
 <div class="crumbs" role="navigation" aria-label="Back"><a class="back" href="{{ '/documents/operations/' | relative_url }}">← Operations</a><a href="{{ '/documents/company/t-4127-handoff.html' | relative_url }}" rel="bookmark">Permanent link</a></div>
-<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 22 · Thu Nov 12</span><span><code>ops/plans/T-4127-handoff.md</code></span></div><h1>T-4127 handoff before the Fable limit (Operator, 15:5x 11-12)</h1></div>
+<div class="page-head"><div class="kicker"><span class="kind blue">Plan</span><span>Day 22 · Thu Nov 12</span><span><code>ops/plans/T-4127-handoff.md</code></span></div><h1>T-4127 handoff before the Fable limit (Operator, 22:4x 11-12)</h1></div>
 
 <style>.doc-body{overflow-wrap:break-word}.doc-src{overflow-wrap:anywhere}.tbl[data-n~="1"] tr>:nth-child(1),.tbl[data-n~="2"] tr>:nth-child(2),.tbl[data-n~="3"] tr>:nth-child(3),.tbl[data-n~="4"] tr>:nth-child(4),.tbl[data-n~="5"] tr>:nth-child(5),.tbl[data-n~="6"] tr>:nth-child(6),.tbl[data-n~="7"] tr>:nth-child(7),.tbl[data-n~="8"] tr>:nth-child(8),.tbl[data-n~="9"] tr>:nth-child(9),.tbl[data-n~="10"] tr>:nth-child(10),.tbl[data-n~="11"] tr>:nth-child(11),.tbl[data-n~="12"] tr>:nth-child(12){min-width:0;overflow-wrap:normal}.tbl[data-o="1"] tr>:nth-child(1),.tbl[data-o="2"] tr>:nth-child(2),.tbl[data-o="3"] tr>:nth-child(3),.tbl[data-o="4"] tr>:nth-child(4),.tbl[data-o="5"] tr>:nth-child(5),.tbl[data-o="6"] tr>:nth-child(6),.tbl[data-o="7"] tr>:nth-child(7),.tbl[data-o="8"] tr>:nth-child(8),.tbl[data-o="9"] tr>:nth-child(9),.tbl[data-o="10"] tr>:nth-child(10),.tbl[data-o="11"] tr>:nth-child(11),.tbl[data-o="12"] tr>:nth-child(12){position:sticky;right:0;overflow-wrap:normal;background:var(--page);box-shadow:-1px 0 var(--line),-9px 0 8px -8px var(--sh)}</style>
 <div class="doc-body" markdown="1">
 
 {% raw %}
-The Restructuring's third run on account a: restarted 3:39 PM 11-12 after the 3:30 PM reset, paused 3:47 PM by the pause
-file (T-4128): "the 5-hour row at 66% burns 8.112%/min: 4.1 min to its limit, one wrap-up is 4.6 min (pause line
-53.1%)". Every agent stopped at its next tool round and committed; nothing was lost and nothing is loose. Read
-`documents/restructuring/00-plan.md` and `work/prompt.md` first, then this note.
+The Restructuring's fifth run, on account a, ran 10:25 PM to 10:38 PM 11-12 from main at b99902435e (plus 7ad7c8fb1f, the
+<span title="An idea that reaches B or better but is held below B by a measured cap. No graders until a permitted reading lifts the cap.">parked</span> run's one leftover record), and was paused 10:38 PM by the pause file: the 5-hour row was at 95% and burning 1.7
+to 2.8% a minute (readings in ops/runs/personal-tick-a.log). Two workers ran, both finished and committed before the
+pause; nothing was in flight. Read [`documents/restructuring/00-plan.md`](../restructuring/00-plan.html) (run rules and the step table, both current)
+and `work/prompt.md` first, then this note.
 
 ## Done
 
-- Run plan updated for this run (step 2 split into 2a Ines and 2b Pernille, so the audit finishes sooner).
-- 1a (Idris), `work/01a-platform-limits.md`, 1,339 words: all six sections written (WidgetKit, Pages, iMessage,
-  Shortcuts and background, Sources, Questions). Marked [recalled]: the iOS sandbox wording, what a Messages extension
-  cannot do, `LongRunningIntent` details, Background Tasks in iOS 27, an app-owned helper process, the 30 MB widget
-  figure. Nothing measured.
-- 1b (Wrenna), `work/01b-review-and-marketplace.md`, 2,071 words: sections 1 to 3 written (review and agreement points
-  with quotes and risks, marketplace needs, the three audiences). Found: the guidelines PDF and the live page have the
-  same wording; the live licence agreement is newer (October 29 against October 13) but 3.3.1(B) is identical and
-  bars a storefront for "other Applications" ("other code" appears only in the learning paragraph).
-- 2a (Ines), `02-audit.md`, 2,496 of 3,500 words: front matter, model and commit line (read at 765f0785d8), what the
-  plan, state and board say, positioning, founder decisions 1 to 10, every ADR.
-- 2b (Pernille), `work/02b-code-and-design.md`, 1,039 words (read at 765f0785d8): sections 1 to 3 (what exists,
-  architecture, navigation and design). Three findings so far: nothing is proven on a phone (the only device record is
-  a failure, T-3783 open); a project is three copies joined by scanning source for `Widget("id")`, with five
-  identities, no assets and no manifest of outputs; the approved layout (tab bar, Projects home, preview pane) is
-  unbuilt and the app opens on an editor.
-- S (Odalys): read only, no file changed. Her plan is under Next step.
+- The parked fourth run (parked/a/20261112-211856-42832): its work landed on main as 464e00c005; the one record left
+  behind, T-4230's name in ops/task-names.tsv (the line the rebase conflicted on), is 7ad7c8fb1f.
+- Step 1 (Wrenna), `01-questions-and-limits.md`, final 20865b05ee, 2,993 words: sections 1 to 6 merged under the 13
+  questions (unchanged from 349261bb52), keys P1 to P16 (platform limits) and R1 to R9 (review points). To fit, section
+  1 is a short index, and two 1a items were cut ("WidgetKit lists nothing after June 2025"; the "How fresh" paragraph,
+  folded into the refresh bullet). Still recalled: the CloudKit quota, GDPR rights, the sandbox facts.
+- Step 3 (Ines), `03-structure.md`, final af19dceb7d, 3,488 words, commit read 3cc4481247: project model, navigation
+  and first run, the Builder, the marketplace, documentation, nine questions, a maybe-later list. Open points it names:
+  the Builder's custom-block option for hand-written code is new and unsized (phase 5 sizes it); the first-run screen
+  is onboarding, which creative/approved.md item 2 leaves unapproved; the docs folder `pywidget/docs/how-it-works/` is
+  a proposal for D2 to confirm; "an app cannot place a widget on the Home Screen" is recalled, to verify.
+- Step S: on main as T-4230 (638e59888e), so D2 waits on D1 only.
+- Progress posted on #41: c6842876933 (start, 10:27 PM ET) and the pause post after this note.
 
 ## In flight
 
-Nothing running. No commit ends "final"; the steps below pick up from the committed drafts.
+Nothing. Both workers reported before the pause.
 
 ## Next step
 
-1. 1a (Idris): cut about 40 words to stay under 1,300, then a commit ending "final".
-2. 1b (Wrenna): section 4 Sources (keys S1 to S6 are already cited in the text), section 5 Questions with
-   recommendations, then cut from 2,071 to about 1,600 words; commit ending "final". The live Mini Apps Partner
-   Program page is unread (the PDF of 10-25 only); hosting costs, the CloudKit quota, the DMCA agent fee, COPPA, GDPR
-   and CCPA lines are marked "recalled" and want a web check.
-3. 2b (Pernille): section 4 (one manifest and identity; components from the premades' read/draw split; permissions
-   enforced at the device router; a tab shell) and section 5 (device proof, imported code's trust model, extension
-   memory unmeasured), about 460 words; commit ending "final".
-4. 2a (Ines): the numbered questions with recommendations, "More intuitive, and room for the Builder", "Risks,
-   ranked" (about 700 words), then fold 2b into "Where the app stands (from 2b)" (about 300) with cuts to stay under
-   3,500; commit ending "final".
-5. S (Odalys), ready to build: a new FOLDERS entry "restructuring" in tools/site/documents.py, its loader called
-   after load_library; pages at `/documents/restructuring/<name>.html`, the mock-ups' index at
-   `/documents/restructuring/04-mockups/`; relative links get relink tokens before the scrub (delink drops them);
-   mock-up files go through site.copy of scrubbed text (Site.write would rewrite their clock times); refusals listed in
-   the folder's held list with the reason; test beside tests/site_documents_test.py. Operator's answers to her three
-   open points: (a) strip_media holds mock-ups until a creative approval (<span title="Commandment 51: the Investors approve every visual before it ships.">C51</span>), but the Investor asked for the whole
-   result to show under Documents (an Investor #41 c6815915432), so these publish, each page marked "proposal, not
-   approved"; (b) rule 42: the Operator reads 02-audit.md before it lands and HOLD stays the switch, no automatic
-   hold; (c) keep the "Questions for the Investors" sections here: the questions are what these documents are for.
-6. Then the plan's chain: 1 (merge), 3, 4A to 4C with 5, 6, and the #41 link.
+Steps that need nothing else now (run them two at a time, or more when the account isn't shared, per c6841598799):
 
-Pacing, measured this run: five xhigh Fable agents burned about 8% of account a's 5-hour row a minute (66% eight
-minutes in), so the pause line sat at 53%, half the window kept for the wrap-up. Fewer agents at once (two or three)
-spend the same total but let the pause line sit much higher, so more of each window does work. The Apple fetch tool's
-day <span title="A measured fact that holds a grade below a letter, however good the rest is.">cap</span> (12 pages) was reached on 11-12; it is fresh on 11-13.
+1. 4A, 4B, 4C (Maren, one direction each): phase 4 round 1 from `03-structure.md`, HTML/SVG in
+   `documents/restructuring/04-mockups/` with `index.md`, under 15 files, every page marked "proposal, not approved";
+   say plainly where a direction departs from Paper and Studio.
+2. Step 5 (Ines): `05-timeline.md`, under 2,500 words, from 01, 02 and 03; it sizes the Builder's custom-block option.
+3. D1 (Wrenna): trim `07-documentation.md` from 2,066 to under 2,000 words; one-line notes for DOT, UML, "vendored" and
+   Docker; re-check the [W] quotes; commit ending "final". Then D2 (Odalys, Opus suits it) builds the <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">generator</span> and the
+   first diagrams; it confirms or changes 03's proposed `pywidget/docs/how-it-works/` folder.
+4. Then step 6 (Ines) once 4 and 5 are final, and the #41 link.
+
+Small cleanups for whoever writes next: `tools/ampm.py lint` flags the front-matter `time:` line of 01, 02 and 03 (the
+README and the site's parse_when want it 24-hour, so leave it), and the run notes in 00-plan.md still carry 24-hour
+times in the body (3:14 AM, 8:39 AM, 3:30 PM, 3:47 PM, 8:30 PM, 8:58 PM, 9:16 PM): change them to 12-hour with ET when the plan is
+next edited.
 
 ## Commits
 
-765f0785d8 (plan), 663d85081c, 62209cced5, 333f73bb8f (2a), b0d4ae5d2e, 3f4ca15744, e2423e22ad, b4ea45bd85 (2b),
-51a966075e, edcb7de30b, 2aed0887e5, 3b8cf24453, 0551cffe34 (1a), d7246eca5c, 76483ec93c (1b). Two commits carry
-another worker's email under the right name (663d85081c, d7246eca5c); not amended.
+This run: 7ad7c8fb1f (T-4230 name), 3cc4481247 and the plan with this note (Operator); 58fb0ba0f3 (a duplicate board
+line, T-4237, closed in favour of T-4221); 1f1e881551, f9bae3b073, 2c2a4d0a21, 0803e4cb11, 804951f297, 75de328141,
+c8a9cda034, 20865b05ee (step 1, Wrenna); 5aebb9e1b3, 2eea9a408d, f92c4c7e50, 3932e50371, b8d402c1f5, 899a1dc965,
+803f9eaf33, af19dceb7d (step 3, Ines).
 
-## Investor addition, 5:22 PM ET 11-12 (an Investor, #41 c6837559986; log/<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span>.md 2026-11-12 5:22 PM)
+## Investor additions (5:22 and 5:23 PM ET 11-12)
 
-> Add into the audit for Restructuring that we should heavily focus on documentation during the app design process. Create dynamic workflow diagrams that visually display how everything works, and updates as code is changed. The Investors need to understand how EVERYTHING in the app works so they can be more involved in the development process
-
-For the next run: carry this into `documents/restructuring/00-plan.md`'s run rules first. The Restructuring gains a documentation part: (1) documentation as a standing step of designing each app part, not an afterthought; (2) diagrams of how everything in the app works (screens, the Python run, the widget path from script to Home Screen, storage, the extension, purchases), drawn by code from the code itself (no AI images) so they are regenerated whenever the code changes, and shown on the site where the Investors read them; (3) a first set of those diagrams built as part of the Restructuring's result, with the <span title="The starting recipe a lane uses to look for ideas. G2, for example, starts from public datasets.">generator</span> and how it stays current. Plain English throughout: the Investors must be able to follow every part.
-
-## Investor addition, 5:23 PM ET 11-12 (an Investor, #41 c6837583046; log/rulings.md 2026-11-12 5:23 PM)
-
-> The audit should research how other companies do this and implement a solution, considering oublic Github repo solutions or paid services if needed
-
-For the documentation part above: research how other software companies keep documentation and diagrams current with the code (web reading allowed, as in work/prompt.md), compare open-source tools on public GitHub (licence checked against Commandment 6: attribution, copyleft) and paid services, then build the chosen solution, not only recommend it. A paid service is real money: put it to the Investors as a request card with its price and wait for "approve" before any sign-up; build with a free option meanwhile where one serves.
+Both are carried into `00-plan.md`'s run rules (the documentation part, steps D1 and D2); their exact words are in
+log/<span title="The worker who reads both graders and decides. The decision, a ruling, is one row in the rulings file.">rulings</span>.md (2026-11-12 5:22 PM, 5:23 PM).
 {% endraw %}
 
 </div>

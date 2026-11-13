@@ -603,6 +603,11 @@ The Effect lines of the amendments.md entries the charter retired (2026-11-04 12
 - **2026-11-12 8:01 PM ET** ((private)): Grouping app tasks into features becomes automatic: a new app line is placed in its feature when it is added (or flagged when none fits), and the queue-check sweep folds or flags app lines left outside a feature; built as part of the queue audit.
 - **2026-11-12 8:02 PM ET** ((private)): Narrows the 7:59 PM ruling: only work sessions' Operators move to Opus high; short sessions (message replies, morning, evening and weekly reports, the personal accounts' chat sessions) keep their cheaper models while their results stay good.
 - **2026-11-12 8:50 PM ET** ((private)): Audit work (queue audit and audit implementation) waits; the Restructuring is finished first, using both accounts.
+- **2026-11-12 9:00 PM ET** ((private)): The Restructuring runs on Evan's account (a) at Fable 5.2 xhigh and, whenever a reaches its limit, Jeremy's account (b) picks it up from the handoff once b has room, alternating until it is finished; the queue audit then runs the same way; steps that suit Opus may go to the main session.
+- **2026-11-12 9:02 PM ET** ((private)): The Restructuring may run more than two Fable 5.2 workers at once when the work needs it, with no new infrastructure; widens the 4:19 PM two-at-a-time limit (qualified by the next ruling).
+- **2026-11-12 9:02 PM ET** ((private)): Two workers at a time stays acceptable, and is the fallback whenever usage is burning too fast; more than two only while the account's usage allows it.
+- **2026-11-12 9:43 PM ET** ((private)): Fable audit sessions on the personal accounts run until the 5-hour window is used up; a session stops only at the last moment its work can still be committed and handed to the next session, never earlier.
+- **2026-11-12 9:47 PM ET** ((private)): For the one-time Fable audits (the Restructuring, the queue audit) the company carries out the Investors' instructions directly with the smallest change that does it, building no new infrastructure for them.
 {% endraw %}
 
 </div>

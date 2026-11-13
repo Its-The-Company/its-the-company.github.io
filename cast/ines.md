@@ -48,6 +48,7 @@ My notes. They are published on the company site, so nothing sensitive goes here
 - T-3710: keep the script with every count I publish (my 11-08 idle count did not reproduce: 60.9 vs 65.8); script at ops/plans/T-3710-idle-by-cause.py.
 - T-3889: "parked, did not land" was stale (work already on main); check ancestry first, then verify tests and tick.
 - T-3953 (redo of T-3834): check each sub-goal's target task before redoing it; T-3751's frees score was moot (ticked, fix b29715c748 on main). Main had grown T-3827 batch-first and T-3828 land order since: fold in, not over.
+- T-4117: a check that reads a checkout's reflog (amendments_watch) can be green on one lane, red on another: run it where the records were made. Re-read a handoff's numbers.
 {% endraw %}
 
 

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T01:39:48.862944+00:00",
+ "at": "2026-11-13T01:42:51.841312+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -93,19 +93,17 @@
   "landed": 16,
   "failed": 8
  },
- "workers": [
+ "workers": [],
+ "who": "",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4213 land account restart fix",
    "model": "opus",
    "started": "2026-11-13T00:14:33.768Z",
-   "seconds": 5115,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-13T01:42:10.015000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-4218 redraw launcher after slot edit",
@@ -129,14 +127,6 @@
    "started": "2026-11-13T00:33:22.902Z",
    "seconds": null,
    "finished": "2026-11-13T00:58:49.965000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[build] T-3848 T-3847 launcher tap fixes",
-   "model": "opus",
-   "started": "2026-11-12T23:32:10.601Z",
-   "seconds": null,
-   "finished": "2026-11-13T00:10:13.346000+00:00"
   }
  ],
  "queue": {
@@ -191,7 +181,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-13T01:39:00+00:00",
+  "read_at": "2026-11-13T01:42:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -221,14 +211,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T20:34:00-05:00",
+   "at": "2026-11-12T20:40:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T20:39:00-05:00",
+  "at": "2026-11-12T20:42:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -239,15 +229,6 @@
   "at": "2026-11-12T17:19:27.669996-05:00"
  },
  "lanes": [
-  {
-   "name": "Odalys",
-   "state": "running",
-   "task": "[tools] T-4213 land account restart fix",
-   "model": "opus",
-   "since": "2026-11-13T00:14:33.768Z",
-   "next": [],
-   "effort": "high"
-  },
   {
    "name": "Idris",
    "state": "next",
@@ -260,6 +241,14 @@
    "name": "Pernille",
    "state": "next",
    "task": "Pernille, P1, premades and gallery take the age line...",
+   "model": null,
+   "since": null,
+   "next": []
+  },
+  {
+   "name": "Odalys",
+   "state": "next",
+   "task": "Odalys, P1, T-1776 stage 3, Reports with every document...",
    "model": null,
    "since": null,
    "next": []
@@ -290,18 +279,7 @@
   }
  ],
  "tasks": {
-  "run": [
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Let the accounts restart and use their full window",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T00:14:33.768Z",
-    "o": "i",
-    "task": "T-4213"
-   }
-  ],
+  "run": [],
   "src": "plan",
   "open": [
    {
@@ -467,27 +445,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T01:39:37Z",
+  "at": "2026-11-13T01:42:46Z",
   "s": {
    "T-4116": [
     "merging",
     "Merging onto main",
-    1794533977303
-   ],
-   "T-4213": [
-    "merged",
-    "on main 8:29 PM ET",
-    1794533363000,
-    "Odalys"
+    1794534166117
    ]
   },
   "nm": {
-   "T-4116": "Regroup the app queue into feature-sized pieces",
-   "T-4213": "Let the accounts restart and use their full window"
+   "T-4116": "Regroup the app queue into feature-sized pieces"
   }
  },
  "ln": {
-  "at": "2026-11-13T01:39:37Z",
+  "at": "2026-11-13T01:42:46Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -501,11 +472,11 @@
    "m": {
     "checking": 0,
     "inline": null,
-    "conflicted": 602,
+    "conflicted": 605,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 646
+    "parked": 649
    },
    "cur": [
     [
@@ -524,8 +495,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T01:39:37Z",
-    "ld": 0.4,
+    "at": "2026-11-13T01:41:59Z",
+    "ld": 0.46,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -559,12 +530,12 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 13 tasks",
-   "at": "2026-11-12T20:34:52-05:00"
+   "at": "2026-11-12T20:40:59-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T01:34:20Z",
-  "seconds": 31.0
+  "sent": "2026-11-13T01:40:15Z",
+  "seconds": 43.0
  },
  "inbox": [],
  "trimmed": [
@@ -581,13 +552,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 1,
+  "main": 0,
   "lanes": 0,
-  "total": 1,
-  "at": "8:39 PM",
-  "why": "",
-  "at_iso": "2026-11-13T01:39:00+00:00",
+  "total": 0,
+  "at": "8:42 PM",
+  "why": "A session is running, but no worker agent is at work in it (it is starting or closing).",
+  "at_iso": "2026-11-13T01:42:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:39 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>0</b> agents running now</p><p class=\"an-sub\">Main session 0, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:42 PM ET</p><p class=\"an-why\">A session is running, but no worker agent is at work in it (it is starting or closing).</p></section>"
  }
 }

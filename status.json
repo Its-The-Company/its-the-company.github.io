@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T02:56:17.870449+00:00",
+ "at": "2026-11-13T02:59:22.771301+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -118,7 +118,7 @@
    }
   ],
   "landed": 11,
-  "failed": 5
+  "failed": 4
  },
  "workers": [
   {
@@ -126,7 +126,7 @@
    "task": "[site] T-4230 Restructuring on Documents",
    "model": "opus",
    "started": "2026-11-13T02:17:14.265Z",
-   "seconds": 2343,
+   "seconds": 2528,
    "finished": null,
    "effort": "high"
   },
@@ -135,7 +135,7 @@
    "task": "[tools] T-4232 Double Spread usage mode",
    "model": "opus",
    "started": "2026-11-13T02:17:34.315Z",
-   "seconds": 2323,
+   "seconds": 2508,
    "finished": null,
    "effort": "high"
   },
@@ -144,7 +144,7 @@
    "task": "[tools] T-4235 full window before Fable pause",
    "model": "opus",
    "started": "2026-11-13T02:45:29.692Z",
-   "seconds": 648,
+   "seconds": 833,
    "finished": null,
    "effort": "high"
   }
@@ -228,7 +228,7 @@
   "week_pct": 39.76,
   "usage_pct": 32.4,
   "work_pct": 79.4,
-  "read_at": "2026-11-13T02:56:00+00:00",
+  "read_at": "2026-11-13T02:59:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -265,7 +265,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T21:56:00-05:00",
+  "at": "2026-11-12T21:59:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -508,32 +508,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T02:56:11Z",
+  "at": "2026-11-13T02:59:14Z",
   "s": {
+   "T-4232": [
+    "merging",
+    "Mac tests at the main gate",
+    1794538694220
+   ],
    "T-4230": [
     "testing",
     "its own tests, in its copy",
-    1794536771745
+    1794536774220
    ],
    "T-4235": [
     "testing",
     "its own tests, in its copy",
-    1794538391745
-   ],
-   "T-4232": [
-    "testing",
-    "its own tests, in its copy",
-    1794538571745
+    1794538394220
    ]
   },
   "nm": {
+   "T-4232": "Add a Double Spread usage mode, chosen on Home",
    "T-4230": "Show the Restructuring folder on the Documents page",
-   "T-4235": "Use each account's full window before the Fable pause",
-   "T-4232": "Add a Double Spread usage mode, chosen on Home"
+   "T-4235": "Use each account's full window before the Fable pause"
   }
  },
  "ln": {
-  "at": "2026-11-13T02:56:11Z",
+  "at": "2026-11-13T02:59:14Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -547,11 +547,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 645,
+    "conflicted": 648,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 722
+    "parked": 725
    },
    "cur": [],
    "ld": [
@@ -561,12 +561,12 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T02:56:12Z",
-    "ld": 3.64,
+    "at": "2026-11-13T02:58:49Z",
+    "ld": 5.36,
     "c": 8,
     "sb": 0,
     "dk": [
-     22.3,
+     22.6,
      228.3
     ],
     "ss": [
@@ -619,10 +619,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "9:56 PM",
+  "at": "9:59 PM",
   "why": "",
-  "at_iso": "2026-11-13T02:56:00+00:00",
+  "at_iso": "2026-11-13T02:59:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:56 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:59 PM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T15:50:47.822904+00:00",
+ "at": "2026-11-13T15:54:45.459297+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -67,19 +67,10 @@
  "workers": [
   {
    "name": "idris",
-   "task": "[build] T-3899 free widgets draw when store check hangs",
-   "model": "opus",
-   "started": "2026-11-13T15:30:12.630Z",
-   "seconds": 1235,
-   "finished": null,
-   "effort": "high"
-  },
-  {
-   "name": "idris",
    "task": "[build] T-3783 premades refused permission on the iPhone",
    "model": "opus",
    "started": "2026-11-13T15:39:15.544Z",
-   "seconds": 692,
+   "seconds": 929,
    "finished": null,
    "effort": "high"
   },
@@ -88,13 +79,21 @@
    "task": "[plan] T-4266 re-date the plan for the Builder in 1.0",
    "model": "opus",
    "started": "2026-11-13T15:42:36.510Z",
-   "seconds": 491,
+   "seconds": 728,
    "finished": null,
    "effort": "high"
   }
  ],
- "who": "Idris x2, Ines",
+ "who": "Idris, Ines",
  "recent": [
+  {
+   "name": "idris",
+   "task": "[build] T-3899 free widgets draw when store check hangs",
+   "model": "opus",
+   "started": "2026-11-13T15:30:12.630Z",
+   "seconds": null,
+   "finished": "2026-11-13T15:53:17.321000+00:00"
+  },
   {
    "name": "odalys",
    "task": "[tools] T-4265 busy-machine line for sessions",
@@ -115,7 +114,7 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 528,
+  "runnable_count": 529,
   "blocked_count": 103
  },
  "meter": {
@@ -148,7 +147,7 @@
  },
  "ui": {
   "week_pct": 0.3,
-  "five_hour_pct": 0.222,
+  "five_hour_pct": 0.17,
   "caps_pct": {
    "week": 3.0,
    "five_hour": 5.0
@@ -164,7 +163,7 @@
   "week_pct": 43.94,
   "usage_pct": 32.9,
   "work_pct": 79.1,
-  "read_at": "2026-11-13T15:51:00+00:00",
+  "read_at": "2026-11-13T15:54:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -201,7 +200,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-13T10:51:00-05:00",
+  "at": "2026-11-13T10:54:00-05:00",
   "mode": "midnight",
   "modes": {
    "main": "midnight",
@@ -220,9 +219,9 @@
   {
    "name": "Idris",
    "state": "running",
-   "task": "[build] T-3899 free widgets draw when store check hangs",
+   "task": "[build] T-3783 premades refused permission on the iPhone",
    "model": "opus",
-   "since": "2026-11-13T15:30:12.630Z",
+   "since": "2026-11-13T15:39:15.544Z",
    "next": [],
    "effort": "high"
   },
@@ -270,16 +269,6 @@
  ],
  "tasks": {
   "run": [
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Let free widgets draw when the store check hangs",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T15:30:12.630Z",
-    "o": "c",
-    "task": "T-3899"
-   },
    {
     "w": "Idris",
     "k": "build",
@@ -392,7 +381,7 @@
    }
   ],
   "count": {
-   "next": 528,
+   "next": 529,
    "wait": 50,
    "blocked": 53,
    "you": 18
@@ -450,33 +439,27 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T15:50:47Z",
+  "at": "2026-11-13T15:54:27Z",
   "s": {
-   "T-3899": [
-    "mergetest",
-    "iPhone tests on the MacBook",
-    null
-   ],
    "T-3783": [
     "testing",
-    "Mac Mini \u00b7 test",
-    null
+    "its own tests, in its copy",
+    1794585267801
    ],
    "T-4266": [
     "merged",
-    "on main 10:50 AM ET",
-    1794585018000,
+    "on main 10:53 AM ET",
+    1794585204000,
     ""
    ]
   },
   "nm": {
-   "T-3899": "Let free widgets draw when the store check hangs",
    "T-3783": "Keep finding why only Countdown draws on the iPhone",
    "T-4266": "Re-date the plan now that 1.0 waits for the Builder"
   }
  },
  "ln": {
-  "at": "2026-11-13T15:50:47Z",
+  "at": "2026-11-13T15:54:27Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -490,11 +473,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 1453,
+    "conflicted": 1457,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 7105
+    "parked": 7108
    },
    "cur": [],
    "ld": [
@@ -504,10 +487,10 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T15:51:38Z",
-    "ld": 26.93,
+    "at": "2026-11-13T15:54:05Z",
+    "ld": 20.31,
     "c": 8,
-    "sb": 1,
+    "sb": 0,
     "dk": [
      20.2,
      228.3
@@ -516,17 +499,15 @@
      184.8,
      953.7
     ],
-    "sn": [
-     "iPhone 18 Pro"
-    ]
+    "sn": []
    },
    "macbook": {
-    "at": "2026-11-13T15:44:49Z",
-    "ld": 0.22,
+    "at": "2026-11-13T15:52:11Z",
+    "ld": 1.78,
     "c": 12,
     "sb": 0,
     "dk": [
-     374.3,
+     374.0,
      926.4
     ],
     "sn": []
@@ -540,20 +521,32 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
-   "at": "2026-11-13T10:49:00-05:00"
+   "t": "Inbox \u2013 Evan's 10:54 AM Message on GitHub",
+   "at": "2026-11-13T10:54:45-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T15:47:54Z",
-  "seconds": 64.0
+  "sent": "2026-11-13T15:50:48Z",
+  "seconds": 81.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6858012498",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "Here they are Files: - manifest.json..."
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
   "task_done",
   "fin_short",
+  "inbox_title",
   "task_title",
   "done_text",
   "task_open",
@@ -561,13 +554,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 2,
   "lanes": 0,
-  "total": 3,
-  "at": "10:51 AM",
+  "total": 2,
+  "at": "10:54 AM",
   "why": "",
-  "at_iso": "2026-11-13T15:51:00+00:00",
+  "at_iso": "2026-11-13T15:54:00+00:00",
   "started": "10:26 AM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 10:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:51 AM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>2</b> agents running now</p><p class=\"an-sub\">Main session 2, started 10:26 AM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:54 AM ET</p></section>"
  }
 }

@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T00:56:54.179871+00:00",
+ "at": "2026-11-13T00:59:58.208884+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -98,7 +98,7 @@
    "task": "[build] T-4218 redraw launcher after slot edit",
    "model": "opus",
    "started": "2026-11-12T23:21:24.535Z",
-   "seconds": 5729,
+   "seconds": 5913,
    "finished": null,
    "effort": "high"
   },
@@ -107,7 +107,7 @@
    "task": "[release] T-4219 mark launcher builds, refuse upload",
    "model": "opus",
    "started": "2026-11-12T23:50:57.870Z",
-   "seconds": 3956,
+   "seconds": 4140,
    "finished": null,
    "effort": "high"
   },
@@ -116,22 +116,21 @@
    "task": "[tools] T-4213 land account restart fix",
    "model": "opus",
    "started": "2026-11-13T00:14:33.768Z",
-   "seconds": 2540,
+   "seconds": 2724,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Idris x2, Odalys",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4224 why audit sessions use Opus",
    "model": "opus",
    "started": "2026-11-13T00:33:22.902Z",
-   "seconds": 1411,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Idris x2, Odalys x2",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-13T00:58:49.965000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-3848 T-3847 launcher tap fixes",
@@ -155,20 +154,12 @@
    "started": "2026-11-12T22:33:44.265Z",
    "seconds": null,
    "finished": "2026-11-12T23:31:54.198000+00:00"
-  },
-  {
-   "name": "pernille",
-   "task": "[review] T-4217 review launcher widget picker",
-   "model": "opus",
-   "started": "2026-11-12T22:46:24.095Z",
-   "seconds": null,
-   "finished": "2026-11-12T23:21:03.587000+00:00"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 593,
+  "runnable_count": 592,
   "blocked_count": 86
  },
  "meter": {
@@ -217,7 +208,7 @@
   "week_pct": 38.42,
   "usage_pct": 32.4,
   "work_pct": 79.1,
-  "read_at": "2026-11-13T00:56:00+00:00",
+  "read_at": "2026-11-13T01:00:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -247,14 +238,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T19:51:00-05:00",
+   "at": "2026-11-12T19:57:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T19:56:00-05:00",
+  "at": "2026-11-12T20:00:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -347,16 +338,6 @@
     "at": "2026-11-13T00:14:33.768Z",
     "o": "i",
     "task": "T-4213"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Find why audit sessions use Opus for some replies",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T00:33:22.902Z",
-    "o": "c",
-    "task": "T-4224"
    }
   ],
   "src": "plan",
@@ -434,6 +415,11 @@
   ],
   "done": [
    {
+    "w": "Odalys",
+    "t": "On account b the tasks themselves run on Fable 5.2; only the session's small Opus coordinator,...",
+    "at": "2026-11-12T19:58:00-05:00"
+   },
+   {
     "w": "Idris",
     "t": "Tapping a launcher widget a second time while its Set Up App sheet was open closed that sheet,...",
     "at": "2026-11-12T19:09:00-05:00"
@@ -442,22 +428,21 @@
     "w": "Idris",
     "t": "Adding an app to the launcher could silently replace another app saved with the same name while...",
     "at": "2026-11-12T18:50:00-05:00"
-   },
-   {
-    "w": "Idris",
-    "t": "The unreleased launcher could be opened in a store build by any script that drew its widget...",
-    "at": "2026-11-12T18:31:00-05:00"
    }
   ],
   "count": {
-   "next": 593,
+   "next": 592,
    "wait": 40,
    "blocked": 46,
    "you": 14
   },
   "fin": {
-   "n": 10,
+   "n": 11,
    "rows": [
+    [
+     "T-4224",
+     "Find why audit sessions use..."
+    ],
     [
      "T-3848",
      "Keep a second launcher tap..."
@@ -477,10 +462,6 @@
     [
      "T-4217",
      "Review the launcher widget..."
-    ],
-    [
-     "T-4171",
-     "Check finished work before..."
     ]
    ]
   }
@@ -524,50 +505,38 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T00:56:46Z",
+  "at": "2026-11-13T00:59:58Z",
   "s": {
    "T-4116": [
     "merging",
     "Merging onto main",
-    1794531406327
+    1794531598208
    ],
    "T-4218": [
     "merging",
     "Mac tests at the main gate",
-    1794530926327
+    1794531538208
    ],
    "T-4213": [
     "mergeq",
     "waiting for the main gate",
-    1794531286327
-   ],
-   "T-4224": [
-    "mergeq",
-    "waiting for the main gate",
-    1794530986327
+    1794531598208
    ],
    "T-4219": [
-    "mergeq",
-    "waiting for the main gate",
-    1794531046327
-   ],
-   "T-4215": [
     "testing",
-    "MacBook \u00b7 test",
-    null
+    "its own tests, in its copy",
+    1794528778208
    ]
   },
   "nm": {
    "T-4116": "Regroup the app queue into feature-sized pieces",
    "T-4218": "Redraw a placed launcher after a slot edit",
    "T-4213": "Let the accounts restart and use their full window",
-   "T-4224": "Find why audit sessions use Opus for some replies",
-   "T-4219": "Mark launcher builds so uploads refuse them",
-   "T-4215": "Keep the launcher editor out of Release builds"
+   "T-4219": "Mark launcher builds so uploads refuse them"
   }
  },
  "ln": {
-  "at": "2026-11-13T00:56:46Z",
+  "at": "2026-11-13T00:59:58Z",
   "mq": {
    "n": {
     "checking": 1,
@@ -581,11 +550,11 @@
    "m": {
     "checking": 0,
     "inline": null,
-    "conflicted": 559,
+    "conflicted": 562,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 603
+    "parked": 606
    },
    "cur": [
     [
@@ -604,8 +573,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T00:56:01Z",
-    "ld": 0.65,
+    "at": "2026-11-13T00:59:58Z",
+    "ld": 0.59,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -615,6 +584,17 @@
     "ss": [
      185.0,
      953.7
+    ],
+    "sn": []
+   },
+   "macbook": {
+    "at": "2026-11-13T00:59:35Z",
+    "ld": 0.42,
+    "c": 12,
+    "sb": 0,
+    "dk": [
+     376.8,
+     926.4
     ],
     "sn": []
    }
@@ -628,14 +608,25 @@
    "m": "opus",
    "e": "high",
    "t": "Work session \u2013 13 tasks",
-   "at": "2026-11-12T19:54:17-05:00"
+   "at": "2026-11-12T19:58:32-05:00"
   }
  ],
  "reply": {
-  "sent": "2026-11-13T00:53:35Z",
-  "seconds": 41.0
+  "sent": "2026-11-13T00:57:56Z",
+  "seconds": 35.0
  },
- "inbox": [],
+ "inbox": [
+  {
+   "id": "c6840578140",
+   "state": "received",
+   "position": 1,
+   "tasks": {
+    "open": 0,
+    "done": 0
+   },
+   "title": "All Operators should run on Opus High"
+  }
+ ],
  "trimmed": [
   "lane_next",
   "queue_text",
@@ -650,13 +641,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 4,
+  "main": 3,
   "lanes": 0,
-  "total": 4,
-  "at": "7:56 PM",
+  "total": 3,
+  "at": "8:00 PM",
   "why": "",
-  "at_iso": "2026-11-13T00:56:00+00:00",
+  "at_iso": "2026-11-13T01:00:00+00:00",
   "started": "5:19 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>4</b> agents running now</p><p class=\"an-sub\">Main session 4, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 7:56 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 5:19 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 8:00 PM ET</p></section>"
  }
 }

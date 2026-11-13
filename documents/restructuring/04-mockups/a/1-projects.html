@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction A, screen 1: Projects (proposal, not approved)</title>
+<style>
+/* Direction A, "evolve what is approved". Hand-written HTML and SVG, no images, no script.
+   Every colour, size and face below is copied by value from pywidget/docs/design/tokens.css
+   (generated from tokens.json): .paper = light, A Paper; .studio = dark, B Studio. Nothing is new.
+   Each screen is drawn once in <defs> and shown twice; the appearance comes from the class on the frame. */
+html{color-scheme:light dark}
+body{margin:0;padding:16px 16px 56px;background:#F7F5F0;color:#1C1B19;font:15px/1.45 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+main{max-width:1180px;margin:0 auto}
+h1{font:600 28px/1.2 ui-serif,'New York',Georgia,serif;margin:20px 0 6px}
+h2{font:600 20px/1.25 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;margin:36px 0 10px}
+p{margin:0 0 10px;max-width:68ch}
+.mark{display:inline-block;border:1.5px solid #8F5400;color:#8F5400;border-radius:999px;padding:3px 12px;font-weight:600;font-size:13px}
+.phones{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,390px));gap:24px;align-items:start}
+figure{margin:0 0 24px}
+figcaption{font-size:13px;color:#5C5850;margin-top:8px}
+svg.frame{display:block;width:100%;height:auto}
+svg.pad{max-width:1180px}
+svg.defs{position:absolute;width:0;height:0;overflow:hidden}
+@media (prefers-color-scheme:dark){
+  body{background:#0A0C13;color:#EEF0F8}
+  .mark{border-color:#FFC266;color:#FFC266}
+  figcaption{color:#A9AFC5}
+}
+
+/* tokens */
+.paper{--bg-canvas:#F7F5F0;--bg-surface:#FFFFFF;--bg-raised:#FFFFFF;--bg-sunken:#EEEBE4;--bg-editor:#FCFBF8;--bg-console:#F3F1EB;
+  --line-hairline:#E3DFD6;--line-strong:#C9C4B8;--text-primary:#1C1B19;--text-secondary:#5C5850;--text-tertiary:#6A665D;--text-onAccent:#FFFFFF;
+  --accent:#2350B0;--accent-soft:#E4EBF8;--status-success:#1D7442;--status-warning:#8F5400;--status-danger:#B3261E;
+  --glass-fill:#FFFFFF;--glass-stroke:#E3DFD6;
+  --card-primary:#1C1B19;--card-secondary:#5C5850;--card-accent:#2350B0;--card-ground:#EEEBE4;--card-stroke:#E3DFD6;
+  --font-display:ui-serif,'New York',Georgia,serif;--w-title:600;--w-num:500;
+  --shadow:rgba(28,27,25,.10);--d-paper:inline;--d-studio:none}
+.studio{--bg-canvas:#0A0C13;--bg-surface:#151926;--bg-raised:#1E2333;--bg-sunken:#06070C;--bg-editor:#0E1120;--bg-console:#080A12;
+  --line-hairline:#262C3E;--line-strong:#394158;--text-primary:#EEF0F8;--text-secondary:#A9AFC5;--text-tertiary:#8A91AA;--text-onAccent:#120A33;
+  --accent:#A08BFF;--accent-soft:#2A2350;--status-success:#4FD39A;--status-warning:#FFC266;--status-danger:#FF7A8A;
+  --glass-fill:rgba(30,35,51,.55);--glass-stroke:rgba(255,255,255,.14);
+  --card-primary:#FFFFFF;--card-secondary:rgba(255,255,255,.78);--card-accent:#B0A3FD;--card-ground:rgba(255,255,255,.28);--card-stroke:rgba(255,255,255,.14);
+  --font-display:ui-rounded,system-ui,sans-serif;--w-title:700;--w-num:600;
+  --shadow:rgba(0,0,0,0);--d-paper:none;--d-studio:inline}
+
+/* type: the scale in design-system-v0.md section 3.2 */
+/* Inside a <use> copy only single-class selectors are safe (Chromium drops descendant selectors there),
+   so the defaults ride on inheritance from the frame and every other rule is one class. */
+svg.frame{fill:var(--text-primary);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:15px}
+.lt{font-family:var(--font-display);font-weight:var(--w-title);font-size:34px}
+.t1{font-family:var(--font-display);font-weight:var(--w-title);font-size:28px}
+.t2{font-family:var(--font-display);font-weight:var(--w-title);font-size:22px}
+.hl{font-size:17px;font-weight:600}
+.bd{font-size:17px}
+.sb{font-size:15px}
+.fn{font-size:13px}
+.c1{font-size:12px}
+.c2{font-size:11px;font-weight:500}
+.eb{font-size:12px;letter-spacing:.04em;fill:var(--text-secondary)}
+.md{font-weight:500}.sm{font-weight:600}
+.mono{font-family:ui-monospace,Menlo,Consolas,'Roboto Mono',monospace}
+.num{font-variant-numeric:tabular-nums}
+.end{text-anchor:end}.mid{text-anchor:middle}
+.s{fill:var(--text-secondary)}
+.t{fill:var(--text-tertiary)}
+.a{fill:var(--accent)}
+.oa{fill:var(--text-onAccent)}
+.ok{fill:var(--status-success)}
+.wp{fill:var(--card-primary)}
+.ws{fill:var(--card-secondary)}
+.hero{font-family:var(--font-display);font-weight:var(--w-num);font-size:46px}
+
+/* surfaces and marks */
+.canvas{fill:var(--bg-canvas)}.surface{fill:var(--bg-surface)}.raised{fill:var(--bg-raised)}.sunken{fill:var(--bg-sunken)}
+.editor{fill:var(--bg-editor)}.console{fill:var(--bg-console)}
+.card{fill:var(--bg-surface);stroke:var(--line-hairline)}
+.hair{stroke:var(--line-hairline);stroke-width:1;fill:none}
+.chip{fill:var(--bg-sunken)}
+.acc{fill:var(--accent)}.soft{fill:var(--accent-soft)}
+.glass{fill:var(--glass-fill);stroke:var(--glass-stroke)}
+.sh{fill:var(--shadow)}
+.ink{fill:var(--text-primary)}
+.ic{fill:none;stroke:var(--text-secondary);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.ic-a{stroke:var(--accent)}
+.ic-on{stroke:var(--text-onAccent)}
+.fa{fill:var(--accent)}
+.wcard{fill:var(--bg-surface);stroke:var(--card-stroke)}
+.wacc{fill:var(--card-accent)}.wgr{fill:var(--card-ground)}.wink{fill:var(--card-primary)}
+.wline{fill:none;stroke:var(--card-accent);stroke-width:1.4;stroke-linecap:round}
+.op{display:var(--d-paper)}.os{display:var(--d-studio)}
+</style>
+</head>
+<body>
+<div role="note" class="rs-proposal" style="position:sticky;top:0;z-index:2147483647;margin:0;padding:6px 10px;background:#7a4b00;color:#fff;font:600 14px/1.4 -apple-system,system-ui,sans-serif;text-align:center">Proposal, not approved: the mock-ups are options for the Investors to review. Nothing here is adopted until the Investors approve it.</div>
+<main>
+<p><span class="mark">Proposal, not approved</span></p>
+<h1>Direction A, screen 1: Projects</h1>
+<p>Direction A stays inside the two approved appearances: Paper in light, Studio in dark. The colours, the type and the four tabs are the approved ones. What changes is the arrangement: each project is shown as a live picture of what it makes, and New offers three ways to start. Sample data throughout. Project and Gallery are placeholder names.</p>
+
+<svg class="defs" aria-hidden="true" focusable="false">
+<defs>
+  <linearGradient id="g-pill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A08BFF"/><stop offset="1" stop-color="#FF9B6A"/></linearGradient>
+  <linearGradient id="g-card" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5B33E6"/><stop offset="1" stop-color="#1E1450"/></linearGradient>
+  <filter id="f-soft" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="7"/></filter>
+  <filter id="f-tight" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="2"/></filter>
+  <clipPath id="clip-phone"><rect width="390" height="844" rx="40"/></clipPath>
+  <clipPath id="clip-pad"><rect width="1180" height="820" rx="24"/></clipPath>
+
+  <!-- small marks -->
+  <g id="i-sun"><circle r="2.6" class="wacc"/><path class="wline" d="M0-5.6V-4.4M0 4.4V5.6M-5.6 0H-4.4M4.4 0H5.6M-4-4L-3.1-3.1M3.1 3.1L4 4M-4 4L-3.1 3.1M3.1-3.1L4-4"/></g>
+  <g id="i-cloud"><path class="wacc" d="M-5 3.5a3 3 0 0 1 .4-6 4 4 0 0 1 7.6 1 2.6 2.6 0 0 1-.4 5z"/></g>
+  <g id="i-moon"><path class="wacc" d="M2.5 4.6A5 5 0 0 1 .2-4.9 4 4 0 1 0 4.9 1.4a5 5 0 0 1-2.4 3.2z"/></g>
+
+  <!-- status bars -->
+  <g id="sb-phone">
+    <text class="hl" x="42" y="34">9:41</text>
+    <rect class="ink" x="291" y="30" width="3" height="5" rx="1"/><rect class="ink" x="296" y="28" width="3" height="7" rx="1"/><rect class="ink" x="301" y="25.5" width="3" height="9.5" rx="1"/><rect class="ink" x="306" y="23" width="3" height="12" rx="1"/>
+    <path d="M316 28.5a9 9 0 0 1 14 0M318.6 31.2a5.6 5.6 0 0 1 8.8 0" fill="none" stroke="var(--text-primary)" stroke-width="1.8" stroke-linecap="round"/><circle class="ink" cx="323" cy="34" r="1.4"/>
+    <rect x="338.5" y="23.5" width="24" height="11.5" rx="3.5" fill="none" stroke="var(--text-tertiary)"/><rect class="ink" x="340.5" y="25.5" width="20" height="7.5" rx="2"/><rect x="364" y="27.5" width="1.6" height="4" rx=".8" fill="var(--text-tertiary)"/>
+  </g>
+
+  <!-- live widgets at their own size; the list shows them small -->
+  <g id="w-weather-s">
+    <rect class="sh" y="4" width="158" height="158" rx="22" filter="url(#f-soft)"/>
+    <rect class="wcard" width="158" height="158" rx="22"/>
+    <rect class="os" width="158" height="158" rx="22" fill="url(#g-card)"/>
+    <text class="c1 sm ws" x="16" y="32">Home</text>
+    <text class="hero wp num" x="14" y="88">18°</text>
+    <text class="fn wp" x="16" y="116">Mostly sunny</text>
+    <text class="c2 ws" x="16" y="134">H 19° · L 11°</text>
+  </g>
+  <g id="w-weather-m">
+    <rect class="sh" y="4" width="338" height="158" rx="22" filter="url(#f-soft)"/>
+    <rect class="wcard" width="338" height="158" rx="22"/>
+    <rect class="os" width="338" height="158" rx="22" fill="url(#g-card)"/>
+    <text class="c1 sm ws" x="16" y="32">Home</text>
+    <text class="hero wp num" x="14" y="88">18°</text>
+    <text class="fn wp" x="16" y="116">Mostly sunny</text>
+    <text class="c2 ws" x="16" y="134">H 19° · L 11°</text>
+    <g class="c2 mid">
+      <text class="c2 ws mid" x="166" y="32">Now</text><text class="c2 ws mid" x="196" y="32">15</text><text class="c2 ws mid" x="226" y="32">16</text><text class="c2 ws mid" x="256" y="32">17</text><text class="c2 ws mid" x="286" y="32">18</text><text class="c2 ws mid" x="316" y="32">19</text>
+    </g>
+    <use href="#i-sun" x="166" y="50"/><use href="#i-sun" x="196" y="50"/><use href="#i-sun" x="226" y="50"/><use href="#i-sun" x="256" y="50"/><use href="#i-cloud" x="286" y="50"/><use href="#i-moon" x="316" y="50"/>
+    <text class="c1 sm wp mid num" x="167" y="78">18°</text><text class="c1 sm wp mid num" x="197" y="78">19°</text><text class="c1 sm wp mid num" x="227" y="78">19°</text><text class="c1 sm wp mid num" x="257" y="78">18°</text><text class="c1 sm wp mid num" x="287" y="78">16°</text><text class="c1 sm wp mid num" x="317" y="78">14°</text>
+    <rect class="wacc" x="164.5" y="90" width="3" height="20" rx="1.5"/><rect class="wacc" x="194.5" y="90" width="3" height="24" rx="1.5"/><rect class="wacc" x="224.5" y="90" width="3" height="24" rx="1.5"/><rect class="wacc" x="254.5" y="90" width="3" height="20" rx="1.5"/><rect class="wacc" x="284.5" y="90" width="3" height="13" rx="1.5"/><rect class="wacc" x="314.5" y="90" width="3" height="7" rx="1.5"/>
+  </g>
+  <g id="w-trip-s">
+    <rect class="sh" y="4" width="158" height="158" rx="22" filter="url(#f-soft)"/>
+    <rect class="wcard" width="158" height="158" rx="22"/>
+    <rect class="os" width="158" height="158" rx="22" fill="url(#g-card)"/>
+    <text class="c2 ws" x="16" y="31" style="letter-spacing:.06em">TRIP</text>
+    <text class="hero wp num" x="14" y="88">12</text>
+    <text class="fn wp" x="16" y="114">days to go</text>
+    <rect class="wgr" x="16" y="134" width="126" height="5" rx="2.5"/><rect class="wink" x="16" y="134" width="88" height="5" rx="2.5"/>
+  </g>
+  <g id="w-habit-s">
+    <rect class="sh" y="4" width="158" height="158" rx="22" filter="url(#f-soft)"/>
+    <rect class="wcard" width="158" height="158" rx="22"/>
+    <rect class="os" width="158" height="158" rx="22" fill="url(#g-card)"/>
+    <text class="c2 ws" x="16" y="31" style="letter-spacing:.06em">HABITS</text>
+    <text class="hero wp num" x="14" y="88">27</text>
+    <text class="fn ws" x="74" y="88">of 35</text>
+    <circle class="wacc" cx="24" cy="124" r="7.5"/><circle class="wacc" cx="42.3" cy="124" r="7.5"/><circle class="wgr" cx="60.6" cy="124" r="7.5"/><circle class="wacc" cx="79" cy="124" r="7.5"/><circle class="wacc" cx="97.3" cy="124" r="7.5"/><circle class="wacc" cx="115.6" cy="124" r="7.5"/><circle class="wgr" cx="134" cy="124" r="7.5"/>
+  </g>
+  <!-- what a script makes: its last console lines -->
+  <g id="thumb-console">
+    <rect class="console" width="48" height="48" rx="10" stroke="var(--line-hairline)"/>
+    <text class="mono s" x="7" y="16" style="font-size:6.5px">rides   24</text>
+    <text class="mono s" x="7" y="26" style="font-size:6.5px">total 548.4</text>
+    <text class="mono s" x="7" y="36" style="font-size:6.5px">mean  22.8</text>
+  </g>
+  <g id="thumb-form">
+    <rect class="console" width="48" height="48" rx="10" stroke="var(--line-hairline)"/>
+    <rect class="surface" x="7" y="9" width="34" height="8" rx="2.5" stroke="var(--line-hairline)" stroke-width=".8"/>
+    <rect class="surface" x="7" y="21" width="34" height="8" rx="2.5" stroke="var(--line-hairline)" stroke-width=".8"/>
+    <rect class="acc" x="7" y="33" width="18" height="7" rx="3.5"/>
+  </g>
+  <g id="thumb-shortcut">
+    <rect class="soft" width="48" height="48" rx="10"/>
+    <path class="ic ic-a" d="M24 14l11 6-11 6-11-6zM13 26l11 6 11-6"/>
+  </g>
+
+  <!-- the list: grounds, then rows (the iPad draws its selection between the two) -->
+  <g id="list-ground">
+    <rect class="sunken" x="16" y="146" width="358" height="36" rx="10"/>
+    <circle class="ic" cx="33" cy="163" r="5.5"/><path class="ic" d="M37.2 167.2L41 171"/>
+    <text class="bd t" x="50" y="170">Search projects and files</text>
+    <rect class="sunken" x="16" y="194" width="358" height="32" rx="9"/>
+    <rect class="sh" x="18" y="197" width="88" height="28" rx="7" filter="url(#f-tight)"/>
+    <rect class="raised" x="18" y="196" width="88" height="28" rx="7"/>
+    <text class="sb sm mid" x="62" y="215">All</text><text class="sb s mid" x="151" y="215">Widgets</text><text class="sb s mid" x="240" y="215">Shortcuts</text><text class="sb s mid" x="329" y="215">Scripts</text>
+    <text class="eb" x="20" y="256">PINNED</text>
+    <rect class="card" x="16" y="266" width="358" height="136" rx="14"/>
+    <text class="eb" x="20" y="430">RECENT</text>
+    <rect class="card" x="16" y="440" width="358" height="340" rx="14"/>
+  </g>
+  <g id="list-rows">
+    <!-- row: picture 48 at x 30, name, how it was made, chips for what it makes -->
+    <use href="#w-weather-s" transform="translate(30 276) scale(.304)"/>
+    <text class="hl" x="92" y="296">Weather</text>
+    <text class="sb s" x="92" y="318">On Home Screen · 1.3 is available</text>
+    <rect class="chip" x="308" y="279" width="50" height="22" rx="6"/><text class="c1 md s mid" x="333" y="294.5">Widget</text>
+    <path class="hair" d="M92 334H358"/>
+
+    <use href="#thumb-console" x="30" y="344"/>
+    <text class="hl" x="92" y="364">rides</text>
+    <text class="sb s" x="92" y="386">Python · 3 files · ran 2 min ago</text>
+    <rect class="chip" x="314" y="347" width="44" height="22" rx="6"/><text class="c1 md s mid" x="336" y="362.5">Script</text>
+
+    <use href="#w-habit-s" transform="translate(30 450) scale(.304)"/>
+    <text class="hl" x="92" y="470">Habit check-off</text>
+    <text class="sb s" x="92" y="492">Made with blocks · 2 buttons</text>
+    <rect class="chip" x="242" y="453" width="50" height="22" rx="6"/><text class="c1 md s mid" x="267" y="468.5">Widget</text>
+    <rect class="chip" x="298" y="453" width="60" height="22" rx="6"/><text class="c1 md s mid" x="328" y="468.5">Shortcut</text>
+    <path class="hair" d="M92 508H358"/>
+
+    <use href="#w-trip-s" transform="translate(30 518) scale(.304)"/>
+    <text class="hl" x="92" y="538">Trip countdown</text>
+    <text class="sb s" x="92" y="560">From the Gallery</text>
+    <rect class="chip" x="308" y="521" width="50" height="22" rx="6"/><text class="c1 md s mid" x="333" y="536.5">Widget</text>
+    <path class="hair" d="M92 576H358"/>
+
+    <use href="#thumb-form" x="30" y="586"/>
+    <text class="hl" x="92" y="606">tip_splitter</text>
+    <text class="sb s" x="92" y="628">Python · 1 file</text>
+    <rect class="chip" x="314" y="589" width="44" height="22" rx="6"/><text class="c1 md s mid" x="336" y="604.5">Script</text>
+    <path class="hair" d="M92 644H358"/>
+
+    <use href="#thumb-shortcut" x="30" y="654"/>
+    <text class="hl" x="92" y="674">Clean clipboard</text>
+    <text class="sb s" x="92" y="696">Share sheet action · Python</text>
+    <rect class="chip" x="298" y="657" width="60" height="22" rx="6"/><text class="c1 md s mid" x="328" y="672.5">Shortcut</text>
+    <path class="hair" d="M92 712H358"/>
+
+    <use href="#thumb-console" x="30" y="722"/>
+    <text class="hl" x="92" y="742">server_status</text>
+    <text class="sb s" x="92" y="764">Python · every 15 min</text>
+    <rect class="chip" x="308" y="725" width="50" height="22" rx="6"/><text class="c1 md s mid" x="333" y="740.5">Widget</text>
+  </g>
+
+  <!-- the New pill: solid ink-blue in Paper, violet to coral in Studio -->
+  <g id="pill-new">
+    <rect class="sh" x="2" y="6" width="98" height="52" rx="26" filter="url(#f-soft)"/>
+    <rect class="acc" width="102" height="52" rx="26"/>
+    <rect class="os" width="102" height="52" rx="26" fill="url(#g-pill)"/>
+    <path class="ic ic-on" d="M22 26H36M29 19V33" stroke-width="2"/>
+    <text class="hl oa" x="46" y="32">New</text>
+  </g>
+
+  <!-- iPhone tab bar, Projects selected -->
+  <g id="tabs-phone">
+    <rect class="sh" x="24" y="770" width="342" height="62" rx="31" filter="url(#f-soft)"/>
+    <rect class="glass" x="20" y="764" width="350" height="62" rx="31"/>
+    <g transform="translate(64 785)"><rect class="fa" x="-10" y="-9" width="9" height="9" rx="2.2"/><rect class="fa" x="1" y="-9" width="9" height="9" rx="2.2"/><rect class="fa" x="-10" y="2" width="9" height="9" rx="2.2"/><rect class="fa" x="1" y="2" width="9" height="9" rx="2.2"/></g>
+    <text class="c2 sm a mid" x="64" y="813">Projects</text>
+    <g transform="translate(151 786)"><rect class="ic" x="-9" y="-9" width="8" height="8" rx="2"/><rect class="ic" x="1" y="-9" width="8" height="8" rx="2"/><rect class="ic" x="-9" y="2" width="18" height="8" rx="2"/></g>
+    <text class="c2 sm s mid" x="151" y="813">Gallery</text>
+    <g transform="translate(239 786)"><path class="ic" d="M0-7.5c-3-2-6-2-9.5-1v15c3.5-1 6.500-1 9.500 1 3-2 6-2 9.500-1v-15c-3.500-1-6.500-1-9.500 1zM0-7.500v15.500"/></g>
+    <text class="c2 sm s mid" x="239" y="813">Docs</text>
+    <g transform="translate(326 786)"><circle class="ic" r="3.4"/><circle class="ic" r="7.2"/><circle class="ic" r="9.6" stroke-width="3" stroke-dasharray="3 4.54" stroke-linecap="butt"/></g>
+    <text class="c2 sm s mid" x="326" y="813">Settings</text>
+  </g>
+
+  <!-- screen 1, iPhone -->
+  <g id="projects-phone">
+    <g clip-path="url(#clip-phone)">
+      <rect class="canvas" width="390" height="844"/>
+      <use href="#sb-phone"/>
+      <text class="bd a end" x="370" y="84">Select</text>
+      <text class="lt" x="20" y="130">Projects</text>
+      <use href="#list-ground"/>
+      <use href="#list-rows"/>
+      <use href="#pill-new" x="272" y="696"/>
+      <use href="#tabs-phone"/>
+    </g>
+  </g>
+
+  <!-- the New menu, open: three ways to start (03, question 4) -->
+  <g id="new-open">
+    <rect class="canvas" width="390" height="272" rx="20"/>
+    <rect class="sh" x="114" y="24" width="256" height="174" rx="14" filter="url(#f-soft)"/>
+    <rect class="raised" x="110" y="16" width="264" height="174" rx="14" stroke="var(--line-hairline)"/>
+    <text class="bd" x="126" y="41">From the Gallery</text>
+    <text class="fn s" x="126" y="60">Use or change a finished one</text>
+    <g transform="translate(350 45)"><rect class="ic" x="-9" y="-9" width="8" height="8" rx="2"/><rect class="ic" x="1" y="-9" width="8" height="8" rx="2"/><rect class="ic" x="-9" y="2" width="18" height="8" rx="2"/></g>
+    <path class="hair" d="M110 74H374"/>
+    <text class="bd" x="126" y="99">With blocks</text>
+    <text class="fn s" x="126" y="118">Build your own, no code</text>
+    <g transform="translate(350 103)"><rect class="ic" x="-9" y="-9" width="18" height="5" rx="2"/><rect class="ic" x="-9" y="-1.5" width="12" height="5" rx="2"/><rect class="ic" x="-9" y="6" width="18" height="5" rx="2"/></g>
+    <path class="hair" d="M110 132H374"/>
+    <text class="bd" x="126" y="157">With Python</text>
+    <text class="fn s" x="126" y="176">Write it in the editor</text>
+    <path class="ic" d="M346 154l-6 7 6 7M354 154l6 7-6 7"/>
+    <use href="#pill-new" x="272" y="204"/>
+  </g>
+
+  <!-- iPad chrome -->
+  <g id="sb-pad">
+    <text class="fn sm" x="20" y="17">9:41</text><text class="fn sm" x="58" y="17">Thu 12 Nov</text>
+    <path d="M1067 11.5a8 8 0 0 1 12 0M1069.6 14a4.6 4.6 0 0 1 6.8 0" fill="none" stroke="var(--text-primary)" stroke-width="1.6" stroke-linecap="round"/><circle class="ink" cx="1073" cy="16.2" r="1.2"/>
+    <text class="fn sm end" x="1132" y="17">100%</text>
+    <rect x="1137.5" y="7.5" width="22" height="10.5" rx="3" fill="none" stroke="var(--text-tertiary)"/><rect class="ink" x="1139.5" y="9.5" width="18" height="6.5" rx="1.8"/>
+  </g>
+  <g id="tabs-pad">
+    <rect class="ic" x="20" y="42" width="21" height="16" rx="4"/><path class="ic" d="M27.5 42V58"/>
+    <rect class="sunken" x="436" y="32" width="308" height="36" rx="18"/>
+    <rect class="sh" x="438" y="35" width="84" height="32" rx="16" filter="url(#f-tight)"/>
+    <rect class="raised" x="438" y="34" width="84" height="32" rx="16"/>
+    <text class="sb sm mid" x="480" y="55">Projects</text><text class="sb s mid" x="562" y="55">Gallery</text><text class="sb s mid" x="636" y="55">Docs</text><text class="sb s mid" x="706" y="55">Settings</text>
+  </g>
+  <g id="pill-new-pad">
+    <rect class="acc" width="92" height="36" rx="18"/>
+    <rect class="os" width="92" height="36" rx="18" fill="url(#g-pill)"/>
+    <path class="ic ic-on" d="M19 18H31M25 12V24" stroke-width="2"/>
+    <text class="sb sm oa" x="40" y="23">New</text>
+  </g>
+
+  <!-- screen 1, iPad: the list, and beside it the project page (Outputs, Code, Touches, From) -->
+  <g id="projects-pad">
+    <g clip-path="url(#clip-pad)">
+      <rect class="canvas" width="1180" height="820"/>
+      <use href="#sb-pad"/>
+      <use href="#tabs-pad"/>
+      <text class="bd a end" x="1052" y="56">Select</text>
+      <use href="#pill-new-pad" x="1068" y="32"/>
+      <text class="lt" x="20" y="120">Projects</text>
+      <g transform="translate(0 -10)">
+        <use href="#list-ground"/>
+        <path class="soft" d="M16.5 334V280a13.5 13.5 0 0 1 13.5-13.5H360a13.5 13.5 0 0 1 13.5 13.5V334z"/>
+        <use href="#list-rows"/>
+      </g>
+      <path class="hair" d="M390 84V820"/>
+
+      <text class="t1" x="422" y="126">Weather</text>
+      <text class="sb s" x="422" y="150">A widget, made with blocks · from the Gallery, version 1.2</text>
+      <rect class="soft" x="880" y="100" width="84" height="36" rx="18"/><text class="sb sm a mid" x="922" y="123">Blocks</text>
+      <rect class="soft" x="972" y="100" width="84" height="36" rx="18"/><text class="sb sm a mid" x="1014" y="123">Code</text>
+      <rect class="soft" x="1064" y="100" width="84" height="36" rx="18"/><text class="sb sm a mid" x="1106" y="123">Preview</text>
+
+      <rect class="sunken" x="422" y="168" width="726" height="190" rx="20"/>
+      <use href="#w-weather-s" x="438" y="184"/>
+      <use href="#w-weather-m" x="612" y="184"/>
+      <text class="eb" x="968" y="208">LIVE PICTURE</text>
+      <text class="sb" x="968" y="234">Updated 2 min ago</text>
+      <text class="fn s" x="968" y="256">Small is on the Home Screen</text>
+      <path d="M969 283l3.5 3.5 6.5-7.5" fill="none" stroke="var(--status-success)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text class="fn ok" x="986" y="288">Fits small and medium</text>
+
+      <text class="eb" x="426" y="388">OUTPUTS</text>
+      <rect class="card" x="422" y="398" width="355" height="168" rx="14"/>
+      <text class="hl" x="438" y="422">Today</text><text class="fn s" x="438" y="441">Widget · small, medium</text><text class="fn s end" x="761" y="432">uses sources/weather.py</text>
+      <path class="hair" d="M438 454H761"/>
+      <text class="hl" x="438" y="478">Forecast</text><text class="fn s" x="438" y="497">Page · planned for 1.1</text><text class="fn s end" x="761" y="488">uses sources/weather.py</text>
+      <path class="hair" d="M438 510H761"/>
+      <text class="hl" x="438" y="534">Refresh</text><text class="fn s" x="438" y="553">Shortcut</text><text class="fn s end" x="761" y="544">runs main.py</text>
+
+      <text class="eb" x="426" y="596">TOUCHES</text>
+      <rect class="card" x="422" y="606" width="355" height="96" rx="14"/>
+      <text class="bd" x="438" y="636">Location</text><text class="fn s end" x="761" y="635">while the app is in use</text>
+      <path class="hair" d="M438 654H761"/>
+      <text class="bd" x="438" y="684">Network</text><text class="fn s end" x="761" y="683">one host: api.example.org</text>
+
+      <text class="eb" x="797" y="388">CODE</text>
+      <rect class="card" x="793" y="398" width="355" height="260" rx="14"/>
+      <text class="sb mono" x="809" y="420">sources/weather.py</text><text class="fn s" x="809" y="439">Used by: Today widget, Forecast page</text>
+      <path class="hair" d="M809 450H1132"/>
+      <text class="sb mono" x="809" y="472">views/today.py</text><text class="fn s" x="809" y="491">Used by: Today widget</text>
+      <rect class="chip" x="1056" y="464" width="76" height="22" rx="6"/><text class="c1 md s mid" x="1094" y="479.5">From blocks</text>
+      <path class="hair" d="M809 502H1132"/>
+      <text class="sb mono" x="809" y="524">views/forecast.py</text><text class="fn s" x="809" y="543">Used by: Forecast page</text>
+      <path class="hair" d="M809 554H1132"/>
+      <text class="sb mono" x="809" y="576">main.py</text><text class="fn s" x="809" y="595">Used by: Refresh shortcut</text>
+      <path class="hair" d="M809 606H1132"/>
+      <text class="sb mono" x="809" y="628">notes/scratch.py</text><text class="fn s" x="809" y="647">Not used by any output</text>
+
+      <text class="eb" x="797" y="688">FROM</text>
+      <rect class="card" x="793" y="698" width="355" height="96" rx="14"/>
+      <text class="bd" x="809" y="728">Gallery: Weather, version 1.2</text><text class="fn s end" x="1132" y="727">by pywidget</text>
+      <path class="hair" d="M809 746H1132"/>
+      <text class="bd" x="809" y="776">Version 1.3 is available</text><text class="sb a end" x="1132" y="776">See what changed</text>
+    </g>
+  </g>
+</defs>
+</svg>
+
+<h2>iPhone, 390 wide</h2>
+<div class="phones">
+<figure>
+  <svg class="frame paper" viewBox="0 0 390 844" role="img" aria-label="Projects on iPhone in Paper, the light appearance: a list of projects, each with a small live picture of what it makes."><use href="#projects-phone"/></svg>
+  <figcaption>Projects, iPhone, Paper (light). Proposal, not approved.</figcaption>
+</figure>
+<figure>
+  <svg class="frame studio" viewBox="0 0 390 844" role="img" aria-label="Projects on iPhone in Studio, the dark appearance."><use href="#projects-phone"/></svg>
+  <figcaption>Projects, iPhone, Studio (dark). Proposal, not approved.</figcaption>
+</figure>
+</div>
+<p>What to look at: the picture at the left of each row is the thing the project makes, drawn live (a widget, or a script's last lines), so a person who only installed widgets sees widgets. The line under the name says how it was made: from the Gallery, with blocks, or in Python. The chips say what it makes.</p>
+
+<h2>New, open: three ways to start</h2>
+<div class="phones">
+<figure>
+  <svg class="frame paper" viewBox="0 0 390 272" role="img" aria-label="The New menu open in Paper: From the Gallery, With blocks, With Python."><use href="#new-open"/></svg>
+  <figcaption>Detail: the New menu, Paper. The system's own menu, three entries, one per audience. Proposal, not approved.</figcaption>
+</figure>
+<figure>
+  <svg class="frame studio" viewBox="0 0 390 272" role="img" aria-label="The New menu open in Studio."><use href="#new-open"/></svg>
+  <figcaption>Detail: the New menu, Studio. Proposal, not approved.</figcaption>
+</figure>
+</div>
+
+<h2>iPad</h2>
+<p>The same list sits beside the project page, the hub of 03 section 2: Outputs, Code, Touches and From. Each code row says which outputs use it; each output row says what it uses.</p>
+<figure>
+  <svg class="frame pad paper" viewBox="0 0 1180 820" role="img" aria-label="Projects on iPad in Paper: the project list on the left, the Weather project's page on the right with its outputs, code, what it touches and where it came from."><use href="#projects-pad"/></svg>
+  <figcaption>Projects, iPad, Paper (light). Proposal, not approved.</figcaption>
+</figure>
+<figure>
+  <svg class="frame pad studio" viewBox="0 0 1180 820" role="img" aria-label="Projects on iPad in Studio."><use href="#projects-pad"/></svg>
+  <figcaption>Projects, iPad, Studio (dark). Proposal, not approved.</figcaption>
+</figure>
+</main>
+</body>
+</html>

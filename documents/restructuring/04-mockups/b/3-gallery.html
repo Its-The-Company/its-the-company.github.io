@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction B, screen 4: the Gallery (proposal, not approved)</title>
+<style>
+/* Direction B, "programmer-first workbench". PROPOSAL, NOT APPROVED. Hand-written HTML and SVG: no images, no script, no webfont.
+   Faces: the system monospace (ui-monospace, Menlo, Consolas; never SF Mono by name) and the system sans; the widget cards keep
+   the approved display faces (ui-serif / New York in light, ui-rounded in dark).
+   .bl = B light, .bd = B dark. Grounds, lines and greys are NEW values (neutral, no warm paper, no navy, no glass, no gradient chrome).
+   Kept by value from pywidget/docs/design/tokens.json: accent, accent.soft, status.*, text.onAccent, the Quill light and Lumen dark
+   syntax colours, and the widget card (white in light; #5B33E6 to #1E1450 in dark).
+   Each screen is drawn once in <defs> and shown twice; the class on the frame sets the appearance.
+   Inside a <use> copy only single-class selectors are used. */
+html{color-scheme:light dark}
+body{margin:0;padding:16px 16px 56px;background:#F3F4F6;color:#14161A;font:15px/1.45 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+main{max-width:1180px;margin:0 auto}
+h1{font:600 22px/1.25 ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;margin:14px 0 8px}
+h2{font:600 15px/1.3 ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;margin:34px 0 8px}
+p{margin:0 0 10px;max-width:74ch}
+.mark{display:inline-block;border:1.5px solid #8F5400;color:#8F5400;border-radius:4px;padding:3px 10px;font:600 13px/1.4 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.02em}
+.phones{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,390px));gap:24px;align-items:start}
+figure{margin:0 0 24px}
+figcaption{font-size:13px;color:#474C56;margin-top:8px;max-width:74ch}
+table.dk{border-collapse:collapse;font-size:13px;margin:8px 0 14px;max-width:980px}
+table.dk th,table.dk td{text-align:left;vertical-align:top;padding:5px 12px 5px 0;border-bottom:1px solid #DFE2E7}
+table.dk th{font:600 12px/1.4 ui-monospace,Menlo,Consolas,monospace}
+svg.frame{display:block;width:100%;height:auto;border-radius:10px;outline:1px solid #B4BAC4}
+svg.ph{border-radius:22px}
+svg.defs{position:absolute;width:0;height:0;overflow:hidden}
+@media (prefers-color-scheme:dark){
+  body{background:#0D0E10;color:#ECEEF1}
+  .mark{border-color:#FFC266;color:#FFC266}
+  figcaption{color:#A7ADB7}
+  table.dk th,table.dk td{border-color:#26292E}
+  svg.frame{outline-color:#3B4047}
+}
+
+/* B tokens (proposal) */
+.bl{--canvas:#F3F4F6;--surface:#FFFFFF;--raised:#FFFFFF;--sunken:#E8EAEE;--editor:#FFFFFF;--console:#EEF0F3;--band:#EEF1F6;--sel:#E3EAF8;
+  --hair:#DFE2E7;--strong:#B4BAC4;--t1:#14161A;--t2:#474C56;--t3:#5F6570;--on:#FFFFFF;
+  --acc:#2350B0;--soft:#E4EBF8;--ok:#1D7442;--warn:#8F5400;--bad:#B3261E;
+  --sc:#6B675E;--sk:#8A2F8F;--sg:#1D6B40;--sn:#9A4500;--sf:#2350B0;--sy:#795700;--sb:#0B6670;
+  --wbg:#FFFFFF;--w1:#1C1B19;--w2:#5C5850;--wa:#2350B0;--wg:#EEEBE4;--wst:#E3DFD6;
+  --wfont:ui-serif,'New York',Georgia,serif;--wnum:500;--dd:none}
+.bd{--canvas:#0D0E10;--surface:#16181B;--raised:#1F2226;--sunken:#08090A;--editor:#0D0E10;--console:#08090A;--band:#181A1E;--sel:#28234F;
+  --hair:#26292E;--strong:#3B4047;--t1:#ECEEF1;--t2:#A7ADB7;--t3:#9097A2;--on:#120A33;
+  --acc:#A08BFF;--soft:#2A2350;--ok:#4FD39A;--warn:#FFC266;--bad:#FF7A8A;
+  --sc:#9198B5;--sk:#C59BFF;--sg:#7FE3BA;--sn:#FFB86E;--sf:#72BBFF;--sy:#FFD970;--sb:#FF93B6;
+  --wbg:#1E1450;--w1:#FFFFFF;--w2:rgba(255,255,255,.78);--wa:#B0A3FD;--wg:rgba(255,255,255,.28);--wst:rgba(255,255,255,.14);
+  --wfont:ui-rounded,system-ui,sans-serif;--wnum:600;--dd:inline}
+/* a widget drawn in a fixed appearance, whatever the frame (the preview matrix) */
+.wl{--wbg:#FFFFFF;--w1:#1C1B19;--w2:#5C5850;--wa:#2350B0;--wg:#EEEBE4;--wst:#E3DFD6;--wfont:ui-serif,'New York',Georgia,serif;--wnum:500;--dd:none}
+.wd{--wbg:#1E1450;--w1:#FFFFFF;--w2:rgba(255,255,255,.78);--wa:#B0A3FD;--wg:rgba(255,255,255,.28);--wst:rgba(255,255,255,.14);--wfont:ui-rounded,system-ui,sans-serif;--wnum:600;--dd:inline}
+
+/* type: monospace leads; sans (.ss) only for prose and the system's own chrome */
+svg.frame{fill:var(--t1);font-family:ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;font-size:13px;font-variant-numeric:tabular-nums}
+.ss{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.f20{font-size:20px}.f17{font-size:17px}.f15{font-size:15px}.f13{font-size:13px}.f12{font-size:12px}.f11{font-size:11px}
+.w5{font-weight:500}.w6{font-weight:600}
+.eb{font-size:11px;letter-spacing:.06em;fill:var(--t3)}
+.c2{fill:var(--t2)}.c3{fill:var(--t3)}.ca{fill:var(--acc)}.co{fill:var(--on)}
+.ok{fill:var(--ok)}.wn{fill:var(--warn)}.bad{fill:var(--bad)}
+.e{text-anchor:end}.mid{text-anchor:middle}
+.cm{fill:var(--sc);font-style:italic}.k{fill:var(--sk)}.s{fill:var(--sg)}.n{fill:var(--sn)}.fn{fill:var(--sf)}.ty{fill:var(--sy)}.bi{fill:var(--sb)}
+
+/* surfaces, lines, marks */
+.canvas{fill:var(--canvas)}.surface{fill:var(--surface)}.raised{fill:var(--raised)}.sunken{fill:var(--sunken)}
+.editor{fill:var(--editor)}.console{fill:var(--console)}.band{fill:var(--band)}.sel{fill:var(--sel)}.soft{fill:var(--soft)}
+.ink{fill:var(--t1)}.accf{fill:var(--acc)}
+.hl{stroke:var(--hair);stroke-width:1;fill:none}
+.sl{stroke:var(--strong);stroke-width:1;fill:none}
+.btn{fill:var(--surface);stroke:var(--strong);stroke-width:1}
+.seg{fill:var(--sunken)}
+.ic{fill:none;stroke:var(--t2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ica{fill:none;stroke:var(--acc);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ico{fill:none;stroke:var(--on);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+/* the widget card: approved values */
+.wc{fill:var(--wbg);stroke:var(--wst);stroke-width:1}
+.wgrad{display:var(--dd)}
+.w1{fill:var(--w1)}.w2{fill:var(--w2)}.wa{fill:var(--wa)}.wg{fill:var(--wg)}
+.was{fill:none;stroke:var(--wa);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.whero{font-family:var(--wfont);font-weight:var(--wnum);font-size:50px;fill:var(--w1)}
+.wnum{font-family:var(--wfont);font-weight:var(--wnum);fill:var(--w1)}
+.wlab{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:12px;letter-spacing:.04em;fill:var(--w2)}
+.wtx{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:13px}
+.pre{white-space:pre}
+.sq{fill:none;stroke:var(--warn);stroke-width:1.2}
+.dash{stroke-dasharray:4 3}
+</style>
+</head>
+<body>
+<div role="note" class="rs-proposal" style="position:sticky;top:0;z-index:2147483647;margin:0;padding:6px 10px;background:#7a4b00;color:#fff;font:600 14px/1.4 -apple-system,system-ui,sans-serif;text-align:center">Proposal, not approved: the mock-ups are options for the Investors to review. Nothing here is adopted until the Investors approve it.</div>
+<main>
+<p class="mark">Proposal, not approved</p>
+<h1>Direction B, screen 4: the Gallery</h1>
+<p>B is a programmer-first workbench (see screen 1 for where it departs from Paper and Studio and what it keeps). The Gallery is where a marketplace would live. Here it is drawn as it would be in 1.0 under the working assumptions: every item is ours and ships inside the app, and there is no account, rating or feed. B treats an item like a package: what it makes, what it touches and its code are on the page before anything is installed. Project, Page, Builder and Gallery are placeholder names.</p>
+
+<h2>iPhone, 390 wide</h2>
+<svg class="defs" aria-hidden="true"><defs>
+<linearGradient id="gc" x1=".2" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="#5B33E6"/><stop offset="1" stop-color="#1E1450"/></linearGradient>
+<g id="sb"><text class="ss f15 w6" x="30" y="31">9:41</text><rect class="sl" x="336.5" y="19.5" width="25" height="12" rx="3.5"/><rect class="ink" x="338.5" y="21.5" width="17" height="8" rx="2"/></g>
+<g id="tb">
+<rect class="surface" y="761" width="390" height="83"/><path class="hl" d="M0 761.5H390"/>
+<path class="ic" d="M39 776h20M39 782h20M39 788h20"/><text class="ss f11 mid c2" x="49" y="808">Projects</text>
+<path class="ica" d="M137 773h7v7h-7zM148 773h7v7h-7zM137 784h7v7h-7zM148 784h7v7h-7z"/><text class="ss f11 w5 mid ca" x="146" y="808">Gallery</text>
+<path class="ic" d="M237 772h10l4 4v16h-14zM241 781h7M241 786h7"/><text class="ss f11 mid c2" x="244" y="808">Docs</text>
+<path class="ic" d="M331 777h5M342 777h9M331 787h11M348 787h3"/><circle class="ic" cx="339" cy="777" r="3"/><circle class="ic" cx="345" cy="787" r="3"/><text class="ss f11 mid c2" x="341" y="808">Settings</text>
+<rect class="ink" x="128" y="831" width="134" height="5" rx="2.5"/>
+</g>
+<g id="wbody"><text class="wlab" x="16" y="31">BERGEN</text><text class="whero" x="14" y="92">14°</text><text class="wtx w1" x="16" y="120">Light rain</text><text class="wtx w2" x="16" y="140">H 16°  L 9°</text></g>
+<g id="wS"><rect class="wc" x=".5" y=".5" width="157" height="157" rx="24"/><rect class="wgrad" x=".5" y=".5" width="157" height="157" rx="24" fill="url(#gc)"/><use href="#wbody"/>
+<path class="was" d="M118 34h18a6 6 0 0 0 0 -12a9 9 0 0 0 -17 -2a7 7 0 0 0 -1 14zM121 40l-2 5M129 40l-2 5M137 40l-2 5"/></g>
+<g id="wM"><rect class="wc" x=".5" y=".5" width="337" height="157" rx="24"/><rect class="wgrad" x=".5" y=".5" width="337" height="157" rx="24" fill="url(#gc)"/><use href="#wbody"/>
+<text class="wlab mid" x="150" y="31">15</text><text class="wlab mid" x="182" y="31">16</text><text class="wlab mid" x="214" y="31">17</text><text class="wlab mid" x="246" y="31">18</text><text class="wlab mid" x="278" y="31">19</text><text class="wlab mid" x="310" y="31">20</text>
+<path class="was" d="M150 62L182 62L214 72L246 82L278 92L310 102"/>
+<circle class="wa" cx="150" cy="62" r="3"/><circle class="wa" cx="182" cy="62" r="3"/><circle class="wa" cx="214" cy="72" r="3"/><circle class="wa" cx="246" cy="82" r="3"/><circle class="wa" cx="278" cy="92" r="3"/><circle class="wa" cx="310" cy="102" r="3"/>
+<text class="wtx w1 mid" x="150" y="140">14°</text><text class="wtx w1 mid" x="182" y="140">14°</text><text class="wtx w1 mid" x="214" y="140">13°</text><text class="wtx w1 mid" x="246" y="140">12°</text><text class="wtx w1 mid" x="278" y="140">11°</text><text class="wtx w1 mid" x="310" y="140">10°</text></g>
+<g id="padbar"><!-- stand-in for the system's status bar and top tab bar -->
+<text class="ss f12 w6" x="20" y="17">9:41</text><rect class="sl" x="1136.5" y="6.5" width="22" height="11" rx="3"/><rect class="ink" x="1138.5" y="8.5" width="15" height="7" rx="1.5"/>
+<rect class="seg" x="430" y="30" width="320" height="28" rx="14"/>
+</g>
+<g id="tc"><rect class="wc" x=".5" y=".5" width="31" height="31" rx="7"/><rect class="wgrad" x=".5" y=".5" width="31" height="31" rx="7" fill="url(#gc)"/></g>
+<g id="t1"><use href="#tc"/><text class="wnum mid" x="16" y="21" font-size="15">14°</text></g>
+<g id="t2"><use href="#tc"/><text class="wnum mid" x="16" y="21" font-size="15">53</text></g>
+<g id="t3"><use href="#tc"/><rect class="wg" x="7" y="16" width="4" height="9"/><rect class="wa" x="13" y="10" width="4" height="15"/><rect class="wg" x="19" y="13" width="4" height="12"/><rect class="wg" x="25" y="19" width="2" height="6"/></g>
+<g id="t4"><use href="#tc"/><circle class="wg" cx="16" cy="16" r="8"/><path class="w1" d="M16 8a8 8 0 0 1 0 16a11 11 0 0 0 0 -16z"/></g>
+<g id="t5"><use href="#tc"/><circle class="was" cx="16" cy="16" r="8" stroke-width="1.5"/><path class="was" stroke-width="1.5" d="M16 11v5l4 2"/></g>
+<g id="t6"><use href="#tc"/><circle class="wg" cx="16" cy="16" r="8" fill="none"/><path class="was" d="M16 8a8 8 0 1 1 -7.5 5.2" stroke-width="2.5"/></g>
+<g id="t7"><use href="#tc"/><rect class="w1" x="8" y="9" width="16" height="2.5" rx="1"/><rect class="w2" x="8" y="15" width="12" height="2.5" rx="1"/><rect class="w2" x="8" y="21" width="14" height="2.5" rx="1"/></g>
+<g id="t8"><rect class="sunken" x=".5" y=".5" width="31" height="31" rx="7"/><text class="f12 w6 c2 mid" x="16" y="20">&gt;_</text></g>
+<g id="t9"><rect class="sunken" x=".5" y=".5" width="31" height="31" rx="7"/><text class="f12 w6 c2 mid" x="16" y="20">{ }</text></g>
+<!-- the Gallery rows: one drawing for the phone and the iPad pane. Three shelves by what a person does with the item. -->
+<g id="galL">
+<text class="eb" x="12" y="15">WIDGETS · GET ONE</text>
+<use href="#t1" x="12" y="29"/><text class="f15 w5" x="54" y="42">Weather</text><text class="f11 c3" x="54" y="58">S M · 1.3 · location, 1 host</text>
+<use href="#t2" x="12" y="73"/><text class="f15 w5" x="54" y="86">Countdown</text><text class="f11 c3" x="54" y="102">S · 1.2 · touches nothing</text>
+<use href="#t4" x="12" y="117"/><text class="f15 w5" x="54" y="130">Moon</text><text class="f11 c3" x="54" y="146">S · 1.0 · touches nothing</text>
+<use href="#t5" x="12" y="161"/><text class="f15 w5" x="54" y="174">World Clocks</text><text class="f11 c3" x="54" y="190">M · 1.2 · touches nothing</text>
+<use href="#t3" x="12" y="205"/><text class="f15 w5" x="54" y="218">Tide Table</text><text class="f11 c3" x="54" y="234">M · 1.0 · location, 1 host</text>
+<text class="eb" x="12" y="265">STARTERS · MAKE ONE YOURS</text>
+<use href="#tc" x="12" y="279"/><text class="f15 w5" x="54" y="292">Blank widget</text><text class="f11 c3" x="54" y="308">opens in the Builder · 1 block</text>
+<use href="#t2" x="12" y="323"/><text class="f15 w5" x="54" y="336">Number and label</text><text class="f11 c3" x="54" y="352">opens in the Builder · 3 blocks</text>
+<text class="eb" x="12" y="383">PARTS · ADD TO A PROJECT</text>
+<use href="#t9" x="12" y="397"/><text class="f15 w5" x="54" y="410">weather</text><text class="f11 c3" x="54" y="426">source · 6 values · location, 1 host</text>
+<use href="#t9" x="12" y="441"/><text class="f15 w5" x="54" y="454">countdown</text><text class="f11 c3" x="54" y="470">source · 3 values · touches nothing</text>
+<use href="#t7" x="12" y="485"/><text class="f15 w5" x="54" y="498">hero number</text><text class="f11 c3" x="54" y="514">view · draws 1 value</text>
+</g>
+
+<g id="ph4">
+<rect class="canvas" width="390" height="844"/>
+<use href="#sb"/>
+<text class="f20 w6" x="12" y="77">Gallery</text>
+<rect class="seg" x="12" y="97" width="366" height="32" rx="6"/><rect class="btn" x="14.5" y="99.5" width="87" height="27" rx="4"/>
+<text class="f12 w6 mid" x="58" y="118">All</text><text class="f12 mid c2" x="149" y="118">Widgets</text><text class="f12 mid c2" x="241" y="118">Starters</text><text class="f12 mid c2" x="332" y="118">Parts</text>
+<rect class="seg" x="12" y="139" width="366" height="36" rx="6"/><circle class="ic" cx="28" cy="156" r="5"/><path class="ic" d="M32 160l4 4"/><text class="f13 c3" x="46" y="162">Search the Gallery</text>
+<rect class="surface" y="206" width="390" height="220"/><rect class="surface" y="456" width="390" height="88"/><rect class="surface" y="574" width="390" height="132"/>
+<path class="hl" d="M0 205.5H390M54 249.5H390M54 293.5H390M54 337.5H390M54 381.5H390M0 426.5H390M0 455.5H390M54 499.5H390M0 544.5H390M0 573.5H390M54 617.5H390M54 661.5H390M0 706.5H390"/>
+<use href="#galL" y="183"/>
+<rect class="btn" x="326.5" y="214.5" width="51" height="27" rx="6"/><text class="f12 w6 mid ca" x="352" y="232">Get</text>
+<rect class="btn" x="326.5" y="258.5" width="51" height="27" rx="6"/><text class="f12 w6 mid ca" x="352" y="276">Get</text>
+<rect class="btn" x="326.5" y="302.5" width="51" height="27" rx="6"/><text class="f12 w6 mid ca" x="352" y="320">Get</text>
+<rect class="btn" x="326.5" y="346.5" width="51" height="27" rx="6"/><text class="f12 w6 mid ca" x="352" y="364">Get</text>
+<rect class="btn" x="326.5" y="390.5" width="51" height="27" rx="6"/><text class="f12 w6 mid ca" x="352" y="408">Get</text>
+<rect class="btn" x="274.5" y="464.5" width="103" height="27" rx="6"/><text class="f12 w6 mid ca" x="326" y="482">Make it mine</text>
+<rect class="btn" x="274.5" y="508.5" width="103" height="27" rx="6"/><text class="f12 w6 mid ca" x="326" y="526">Make it mine</text>
+<rect class="btn" x="326.5" y="582.5" width="51" height="27" rx="6"/><text class="f12 w6 mid ca" x="352" y="600">Add</text>
+<rect class="btn" x="326.5" y="626.5" width="51" height="27" rx="6"/><text class="f12 w6 mid ca" x="352" y="644">Add</text>
+<rect class="btn" x="326.5" y="670.5" width="51" height="27" rx="6"/><text class="f12 w6 mid ca" x="352" y="688">Add</text>
+<text class="ss f12 c3" x="12" y="731">Every item ships inside the app. No account.</text>
+<use href="#tb"/>
+</g>
+</defs></svg>
+
+<div class="phones">
+<figure><svg class="frame ph bl" viewBox="0 0 390 844" role="img" aria-label="Direction B, the Gallery on iPhone, light"><use href="#ph4"/></svg>
+<figcaption>B light. Look at: ten items on one screen in three shelves, named for what a person does: get a widget, make a starter theirs, add a part to a project. Each row says the sizes, the version and what the item touches, before a tap. The button on the row does the thing in one tap; the row itself opens the item's page. The pictures are the app's own live drawing of each widget.</figcaption></figure>
+<figure><svg class="frame ph bd" viewBox="0 0 390 844" role="img" aria-label="Direction B, the Gallery on iPhone, dark"><use href="#ph4"/></svg>
+<figcaption>B dark. The same drawing. No price, rating, chart or author picture is drawn on any row.</figcaption></figure>
+</div>
+<h2>iPad, 1180 by 820: the shelf, the item, its code</h2>
+<svg class="defs" aria-hidden="true"><defs>
+<g id="code1" xml:space="preserve">
+<text class="f11 c3 e" y="-5"><tspan x="30" dy="19">1</tspan><tspan x="30" dy="19">2</tspan><tspan x="30" dy="19">3</tspan><tspan x="30" dy="19">4</tspan><tspan x="30" dy="19">5</tspan><tspan x="30" dy="19">6</tspan><tspan x="30" dy="19">7</tspan><tspan x="30" dy="19">8</tspan><tspan x="30" dy="19">9</tspan><tspan x="30" dy="19">10</tspan><tspan x="30" dy="19">11</tspan><tspan x="30" dy="19">12</tspan><tspan x="30" dy="19">13</tspan><tspan x="30" dy="19">14</tspan><tspan x="30" dy="19">15</tspan><tspan x="30" dy="19">16</tspan><tspan x="30" dy="19">17</tspan><tspan x="30" dy="19">18</tspan><tspan x="30" dy="19">19</tspan><tspan x="30" dy="19">20</tspan><tspan x="30" dy="19">21</tspan><tspan x="30" dy="19">22</tspan><tspan x="30" dy="19">23</tspan><tspan x="30" dy="19">24</tspan></text>
+<text class="f13 pre" y="-5"><tspan x="40" dy="19" class="s">"""Local weather: one fetch a refresh."""</tspan><tspan x="40" dy="19"><tspan class="k">import</tspan> json</tspan><tspan x="40" dy="19"><tspan class="k">from</tspan> pywidget <tspan class="k">import</tspan> http</tspan><tspan x="40" dy="38">HOST = <tspan class="s">"api.weather.example"</tspan></tspan><tspan x="40" dy="57"><tspan class="k">def</tspan> <tspan class="fn">read</tspan>(settings):</tspan><tspan x="40" dy="19">    <tspan class="s">"""Return data. Never draws."""</tspan></tspan><tspan x="40" dy="19">    units = settings.get(<tspan class="s">"units"</tspan>, <tspan class="s">"c"</tspan>)</tspan><tspan x="40" dy="19">    place = settings[<tspan class="s">"place"</tspan>]</tspan><tspan x="40" dy="19">    reply = http.get(</tspan><tspan x="40" dy="19">        <tspan class="s">f"https://{HOST}/v1/now"</tspan>,</tspan><tspan x="40" dy="19">        params={<tspan class="s">"q"</tspan>: place, <tspan class="s">"u"</tspan>: units},</tspan><tspan x="40" dy="19">    )</tspan><tspan x="40" dy="19">    now = reply.json()</tspan><tspan x="40" dy="19">    <tspan class="k">return</tspan> {</tspan><tspan x="40" dy="19">        <tspan class="s">"place"</tspan>: place,</tspan><tspan x="40" dy="19">        <tspan class="s">"temp"</tspan>: <tspan class="bi">round</tspan>(now[<tspan class="s">"temp"</tspan>]),</tspan><tspan x="40" dy="19">        <tspan class="s">"high"</tspan>: <tspan class="bi">round</tspan>(now[<tspan class="s">"high"</tspan>]),</tspan><tspan x="40" dy="19">        <tspan class="s">"low"</tspan>: <tspan class="bi">round</tspan>(now[<tspan class="s">"low"</tspan>]),</tspan><tspan x="40" dy="19">        <tspan class="s">"summary"</tspan>: now[<tspan class="s">"text"</tspan>],</tspan><tspan x="40" dy="19">        <tspan class="s">"hours"</tspan>: now[<tspan class="s">"hours"</tspan>][:<tspan class="n">6</tspan>],</tspan><tspan x="40" dy="19">    }</tspan></text>
+</g>
+<g id="pad4">
+<rect class="canvas" width="1180" height="820"/>
+<use href="#padbar"/><rect class="btn" x="512.5" y="32.5" width="77" height="23" rx="11.5"/>
+<text class="ss f13 mid c2" x="471" y="49">Projects</text><text class="ss f13 w6 mid ca" x="551" y="49">Gallery</text><text class="ss f13 mid c2" x="631" y="49">Docs</text><text class="ss f13 mid c2" x="711" y="49">Settings</text>
+<rect class="surface" x="341" y="65" width="419" height="755"/>
+<rect class="editor" x="761" y="125" width="419" height="475"/>
+<rect class="surface" y="158" width="340" height="220"/><rect class="surface" y="408" width="340" height="88"/><rect class="surface" y="526" width="340" height="132"/>
+<rect class="sel" y="158" width="340" height="44"/><rect class="accf" y="158" width="3" height="44"/>
+<path class="hl" d="M0 64.5H1180M340.5 65V820M760.5 65V820"/>
+
+<!-- pane 1: the shelves -->
+<text class="eb" x="12" y="88">GALLERY</text>
+<rect class="seg" x="12" y="98" width="316" height="28" rx="6"/><rect class="btn" x="14.5" y="100.5" width="74" height="23" rx="4"/>
+<text class="f12 w6 mid" x="51" y="117">All</text><text class="f12 mid c2" x="130" y="117">Widgets</text><text class="f12 mid c2" x="210" y="117">Starters</text><text class="f12 mid c2" x="288" y="117">Parts</text>
+<path class="hl" d="M0 157.5H340M54 201.5H340M54 245.5H340M54 289.5H340M54 333.5H340M0 378.5H340M0 407.5H340M54 451.5H340M0 496.5H340M0 525.5H340M54 569.5H340M54 613.5H340M0 658.5H340"/>
+<use href="#galL" y="135"/>
+<text class="ss f12 c3" x="12" y="684">Every item ships inside the app. No account.</text>
+
+<!-- pane 2: the item -->
+<text class="f20 w6" x="356" y="99">Weather</text>
+<text class="f11 c3" x="356" y="118">widget · S M · version 1.3 · made by us</text>
+<rect class="accf" x="356" y="134" width="72" height="30" rx="6"/><text class="f12 w6 co mid" x="392" y="154">Get</text>
+<rect class="btn" x="436.5" y="134.5" width="111" height="29" rx="6"/><text class="f12 w5 mid" x="492" y="154">Make it mine</text>
+<rect class="btn" x="556.5" y="134.5" width="131" height="29" rx="6"/><text class="f12 w5 mid" x="622" y="154">Add to project…</text>
+<text class="ss f12 c3" x="356" y="187">Get makes a copy in your projects. The copy is yours to change.</text>
+<text class="eb" x="356" y="216">PREVIEW</text>
+<path class="hl" d="M341 224.5H760M341 606.5H760M341 738.5H760"/>
+<use href="#wS" x="356" y="238"/>
+<text class="eb" x="530" y="252">TOUCHES</text>
+<text class="f13 w5" x="530" y="277">location</text><text class="f12 c3" x="530" y="294">while in use</text>
+<text class="f13 w5" x="530" y="323">network</text><text class="f12 c3" x="530" y="340">api.weather.example</text><text class="f12 c3" x="530" y="357">1 named host</text>
+<use href="#wM" x="356" y="412"/>
+<text class="eb" x="356" y="598">FACTS</text>
+<text class="f13 c2" x="356" y="628">maker</text><text class="f13" x="450" y="628">us · ships inside the app</text>
+<text class="f13 c2" x="356" y="652">version</text><text class="f13" x="450" y="652">1.3 · you have 1.2 in My Weather</text>
+<text class="f13 c2" x="356" y="676">licence</text><text class="f13" x="450" y="676">shown here before install</text>
+<text class="f13 c2" x="356" y="700">makes</text><text class="f13" x="450" y="700">today (widget S M), refresh (shortcut)</text>
+<text class="f13 c2" x="356" y="724">parts</text><text class="f13" x="450" y="724">weather (source), today (view)</text>
+<text class="ss f12 c3" x="356" y="762">A newer version is offered. It is never installed for you.</text>
+
+<!-- pane 3: the code, before install -->
+<rect class="seg" x="772" y="70" width="140" height="26" rx="6"/><rect class="btn" x="843.5" y="72.5" width="66" height="21" rx="4"/><text class="f12 mid c2" x="807" y="88">Blocks</text><text class="f12 w6 mid" x="877" y="88">Python</text>
+<text class="f11 c3 e" x="1168" y="88">read it before you install</text>
+<path class="hl" d="M761 100.5H1180M761 124.5H1180M761 600.5H1180M761 630.5H1180M772 674.5H1180M761 718.5H1180"/>
+<text class="f11 w6" x="772" y="116">sources/weather.py</text><rect class="accf" x="772" y="122" width="120" height="2"/><text class="f11 c3" x="908" y="116">views/today.py</text><text class="f11 c3" x="1016" y="116">pywidget.json</text>
+<use href="#code1" x="761" y="125"/>
+<text class="eb" x="772" y="621">PARTS IN THIS ITEM</text>
+<text class="f13 w5" x="772" y="650">weather</text><text class="f11 c3" x="772" y="666">source · returns 6 values</text>
+<rect class="btn" x="1044.5" y="639.5" width="123" height="27" rx="6"/><text class="f12 w5 mid ca" x="1106" y="657">Add to project…</text>
+<text class="f13 w5" x="772" y="694">today</text><text class="f11 c3" x="772" y="710">view · draw(data) · 8 blocks</text>
+<rect class="btn" x="1044.5" y="683.5" width="123" height="27" rx="6"/><text class="f12 w5 mid ca" x="1106" y="701">Add to project…</text>
+<text class="ss f12 c3" x="772" y="744">Add to project copies one part into a project you pick.</text>
+<text class="ss f12 c3" x="772" y="762">If the part touches more than the project does, it asks first.</text>
+</g>
+</defs></svg>
+
+<figure><svg class="frame bl" viewBox="0 0 1180 820" role="img" aria-label="Direction B, the Gallery on iPad, light"><use href="#pad4"/></svg>
+<figcaption>B light. Look at: three panes. The shelves on the left. The chosen item in the middle: the widget at both sizes with the approved card, what it touches beside the picture, and the facts as a short table. On the right the item's own Python, whole and readable, before anything is installed, and under it the two parts that can be added to another project one at a time. The three actions are Get, Make it mine and Add to project.</figcaption></figure>
+<figure><svg class="frame bd" viewBox="0 0 1180 820" role="img" aria-label="Direction B, the Gallery on iPad, dark"><use href="#pad4"/></svg>
+<figcaption>B dark. The same drawing. Not drawn, because it is not decided: how a premade that belongs to Pro looks on a shelf.</figcaption></figure>
+
+<p>Hand-written HTML and SVG. No images, no script, no outside assets. The status bar and tab bar are stand-ins for the system's own. All names, versions and numbers on the screens are sample content.</p>
+</main>
+</body>
+</html>

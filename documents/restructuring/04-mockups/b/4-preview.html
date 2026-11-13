@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction B, screen 5: the preview (proposal, not approved)</title>
+<style>
+/* Direction B, "programmer-first workbench". PROPOSAL, NOT APPROVED. Hand-written HTML and SVG: no images, no script, no webfont.
+   Faces: the system monospace (ui-monospace, Menlo, Consolas; never SF Mono by name) and the system sans; the widget cards keep
+   the approved display faces (ui-serif / New York in light, ui-rounded in dark).
+   .bl = B light, .bd = B dark. Grounds, lines and greys are NEW values (neutral, no warm paper, no navy, no glass, no gradient chrome).
+   Kept by value from pywidget/docs/design/tokens.json: accent, accent.soft, status.*, text.onAccent, the Quill light and Lumen dark
+   syntax colours, and the widget card (white in light; #5B33E6 to #1E1450 in dark).
+   Each screen is drawn once in <defs> and shown twice; the class on the frame sets the appearance.
+   Inside a <use> copy only single-class selectors are used. */
+html{color-scheme:light dark}
+body{margin:0;padding:16px 16px 56px;background:#F3F4F6;color:#14161A;font:15px/1.45 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+main{max-width:1180px;margin:0 auto}
+h1{font:600 22px/1.25 ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;margin:14px 0 8px}
+h2{font:600 15px/1.3 ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;margin:34px 0 8px}
+p{margin:0 0 10px;max-width:74ch}
+.mark{display:inline-block;border:1.5px solid #8F5400;color:#8F5400;border-radius:4px;padding:3px 10px;font:600 13px/1.4 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.02em}
+.phones{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,390px));gap:24px;align-items:start}
+figure{margin:0 0 24px}
+figcaption{font-size:13px;color:#474C56;margin-top:8px;max-width:74ch}
+table.dk{border-collapse:collapse;font-size:13px;margin:8px 0 14px;max-width:980px}
+table.dk th,table.dk td{text-align:left;vertical-align:top;padding:5px 12px 5px 0;border-bottom:1px solid #DFE2E7}
+table.dk th{font:600 12px/1.4 ui-monospace,Menlo,Consolas,monospace}
+svg.frame{display:block;width:100%;height:auto;border-radius:10px;outline:1px solid #B4BAC4}
+svg.ph{border-radius:22px}
+svg.defs{position:absolute;width:0;height:0;overflow:hidden}
+@media (prefers-color-scheme:dark){
+  body{background:#0D0E10;color:#ECEEF1}
+  .mark{border-color:#FFC266;color:#FFC266}
+  figcaption{color:#A7ADB7}
+  table.dk th,table.dk td{border-color:#26292E}
+  svg.frame{outline-color:#3B4047}
+}
+
+/* B tokens (proposal) */
+.bl{--canvas:#F3F4F6;--surface:#FFFFFF;--raised:#FFFFFF;--sunken:#E8EAEE;--editor:#FFFFFF;--console:#EEF0F3;--band:#EEF1F6;--sel:#E3EAF8;
+  --hair:#DFE2E7;--strong:#B4BAC4;--t1:#14161A;--t2:#474C56;--t3:#5F6570;--on:#FFFFFF;
+  --acc:#2350B0;--soft:#E4EBF8;--ok:#1D7442;--warn:#8F5400;--bad:#B3261E;
+  --sc:#6B675E;--sk:#8A2F8F;--sg:#1D6B40;--sn:#9A4500;--sf:#2350B0;--sy:#795700;--sb:#0B6670;
+  --wbg:#FFFFFF;--w1:#1C1B19;--w2:#5C5850;--wa:#2350B0;--wg:#EEEBE4;--wst:#E3DFD6;
+  --wfont:ui-serif,'New York',Georgia,serif;--wnum:500;--dd:none}
+.bd{--canvas:#0D0E10;--surface:#16181B;--raised:#1F2226;--sunken:#08090A;--editor:#0D0E10;--console:#08090A;--band:#181A1E;--sel:#28234F;
+  --hair:#26292E;--strong:#3B4047;--t1:#ECEEF1;--t2:#A7ADB7;--t3:#9097A2;--on:#120A33;
+  --acc:#A08BFF;--soft:#2A2350;--ok:#4FD39A;--warn:#FFC266;--bad:#FF7A8A;
+  --sc:#9198B5;--sk:#C59BFF;--sg:#7FE3BA;--sn:#FFB86E;--sf:#72BBFF;--sy:#FFD970;--sb:#FF93B6;
+  --wbg:#1E1450;--w1:#FFFFFF;--w2:rgba(255,255,255,.78);--wa:#B0A3FD;--wg:rgba(255,255,255,.28);--wst:rgba(255,255,255,.14);
+  --wfont:ui-rounded,system-ui,sans-serif;--wnum:600;--dd:inline}
+/* a widget drawn in a fixed appearance, whatever the frame (the preview matrix) */
+.wl{--wbg:#FFFFFF;--w1:#1C1B19;--w2:#5C5850;--wa:#2350B0;--wg:#EEEBE4;--wst:#E3DFD6;--wfont:ui-serif,'New York',Georgia,serif;--wnum:500;--dd:none}
+.wd{--wbg:#1E1450;--w1:#FFFFFF;--w2:rgba(255,255,255,.78);--wa:#B0A3FD;--wg:rgba(255,255,255,.28);--wst:rgba(255,255,255,.14);--wfont:ui-rounded,system-ui,sans-serif;--wnum:600;--dd:inline}
+
+/* type: monospace leads; sans (.ss) only for prose and the system's own chrome */
+svg.frame{fill:var(--t1);font-family:ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;font-size:13px;font-variant-numeric:tabular-nums}
+.ss{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.f20{font-size:20px}.f17{font-size:17px}.f15{font-size:15px}.f13{font-size:13px}.f12{font-size:12px}.f11{font-size:11px}
+.w5{font-weight:500}.w6{font-weight:600}
+.eb{font-size:11px;letter-spacing:.06em;fill:var(--t3)}
+.c2{fill:var(--t2)}.c3{fill:var(--t3)}.ca{fill:var(--acc)}.co{fill:var(--on)}
+.ok{fill:var(--ok)}.wn{fill:var(--warn)}.bad{fill:var(--bad)}
+.e{text-anchor:end}.mid{text-anchor:middle}
+.cm{fill:var(--sc);font-style:italic}.k{fill:var(--sk)}.s{fill:var(--sg)}.n{fill:var(--sn)}.fn{fill:var(--sf)}.ty{fill:var(--sy)}.bi{fill:var(--sb)}
+
+/* surfaces, lines, marks */
+.canvas{fill:var(--canvas)}.surface{fill:var(--surface)}.raised{fill:var(--raised)}.sunken{fill:var(--sunken)}
+.editor{fill:var(--editor)}.console{fill:var(--console)}.band{fill:var(--band)}.sel{fill:var(--sel)}.soft{fill:var(--soft)}
+.ink{fill:var(--t1)}.accf{fill:var(--acc)}
+.hl{stroke:var(--hair);stroke-width:1;fill:none}
+.sl{stroke:var(--strong);stroke-width:1;fill:none}
+.btn{fill:var(--surface);stroke:var(--strong);stroke-width:1}
+.seg{fill:var(--sunken)}
+.ic{fill:none;stroke:var(--t2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ica{fill:none;stroke:var(--acc);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ico{fill:none;stroke:var(--on);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+/* the widget card: approved values */
+.wc{fill:var(--wbg);stroke:var(--wst);stroke-width:1}
+.wgrad{display:var(--dd)}
+.w1{fill:var(--w1)}.w2{fill:var(--w2)}.wa{fill:var(--wa)}.wg{fill:var(--wg)}
+.was{fill:none;stroke:var(--wa);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.whero{font-family:var(--wfont);font-weight:var(--wnum);font-size:50px;fill:var(--w1)}
+.wnum{font-family:var(--wfont);font-weight:var(--wnum);fill:var(--w1)}
+.wlab{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:12px;letter-spacing:.04em;fill:var(--w2)}
+.wtx{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:13px}
+.pre{white-space:pre}
+.sq{fill:none;stroke:var(--warn);stroke-width:1.2}
+.dash{stroke-dasharray:4 3}
+</style>
+</head>
+<body>
+<div role="note" class="rs-proposal" style="position:sticky;top:0;z-index:2147483647;margin:0;padding:6px 10px;background:#7a4b00;color:#fff;font:600 14px/1.4 -apple-system,system-ui,sans-serif;text-align:center">Proposal, not approved: the mock-ups are options for the Investors to review. Nothing here is adopted until the Investors approve it.</div>
+<main>
+<p class="mark">Proposal, not approved</p>
+<h1>Direction B, screen 5: the preview</h1>
+<p>B is a programmer-first workbench (see screen 1 for where it departs from Paper and Studio and what it keeps). The preview is where B is least changed: the widget is drawn with the approved card, faces and colours, at its real size. What B adds is around it: both appearances at once, the data the code returned, and how long each step took. Project, Page, Builder and Gallery are placeholder names.</p>
+
+<h2>iPhone, 390 wide: the preview pulled up from a tool</h2>
+<svg class="defs" aria-hidden="true"><defs>
+<linearGradient id="gc" x1=".2" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="#5B33E6"/><stop offset="1" stop-color="#1E1450"/></linearGradient>
+<g id="sb"><text class="ss f15 w6" x="30" y="31">9:41</text><rect class="sl" x="336.5" y="19.5" width="25" height="12" rx="3.5"/><rect class="ink" x="338.5" y="21.5" width="17" height="8" rx="2"/></g>
+<g id="wbody"><text class="wlab" x="16" y="31">BERGEN</text><text class="whero" x="14" y="92">14°</text><text class="wtx w1" x="16" y="120">Light rain</text><text class="wtx w2" x="16" y="140">H 16°  L 9°</text></g>
+<g id="wS"><rect class="wc" x=".5" y=".5" width="157" height="157" rx="24"/><rect class="wgrad" x=".5" y=".5" width="157" height="157" rx="24" fill="url(#gc)"/><use href="#wbody"/>
+<path class="was" d="M118 34h18a6 6 0 0 0 0 -12a9 9 0 0 0 -17 -2a7 7 0 0 0 -1 14zM121 40l-2 5M129 40l-2 5M137 40l-2 5"/></g>
+<g id="wM"><rect class="wc" x=".5" y=".5" width="337" height="157" rx="24"/><rect class="wgrad" x=".5" y=".5" width="337" height="157" rx="24" fill="url(#gc)"/><use href="#wbody"/>
+<text class="wlab mid" x="150" y="31">15</text><text class="wlab mid" x="182" y="31">16</text><text class="wlab mid" x="214" y="31">17</text><text class="wlab mid" x="246" y="31">18</text><text class="wlab mid" x="278" y="31">19</text><text class="wlab mid" x="310" y="31">20</text>
+<path class="was" d="M150 62L182 62L214 72L246 82L278 92L310 102"/>
+<circle class="wa" cx="150" cy="62" r="3"/><circle class="wa" cx="182" cy="62" r="3"/><circle class="wa" cx="214" cy="72" r="3"/><circle class="wa" cx="246" cy="82" r="3"/><circle class="wa" cx="278" cy="92" r="3"/><circle class="wa" cx="310" cy="102" r="3"/>
+<text class="wtx w1 mid" x="150" y="140">14°</text><text class="wtx w1 mid" x="182" y="140">14°</text><text class="wtx w1 mid" x="214" y="140">13°</text><text class="wtx w1 mid" x="246" y="140">12°</text><text class="wtx w1 mid" x="278" y="140">11°</text><text class="wtx w1 mid" x="310" y="140">10°</text></g>
+<g id="padbar"><!-- stand-in for the system's status bar and top tab bar -->
+<text class="ss f12 w6" x="20" y="17">9:41</text><rect class="sl" x="1136.5" y="6.5" width="22" height="11" rx="3"/><rect class="ink" x="1138.5" y="8.5" width="15" height="7" rx="1.5"/>
+<rect class="seg" x="430" y="30" width="320" height="28" rx="14"/>
+</g>
+<g id="data1">
+<text class="f13 c2" x="16" y="22">place</text><text class="f13 s" x="110" y="22">"Bergen"</text>
+<text class="f13 c2" x="16" y="46">temp</text><text class="f13 n" x="110" y="46">14</text>
+<text class="f13 c2" x="16" y="70">high</text><text class="f13 n" x="110" y="70">16</text>
+<text class="f13 c2" x="16" y="94">low</text><text class="f13 n" x="110" y="94">9</text>
+<text class="f13 c2" x="16" y="118">summary</text><text class="f13 s" x="110" y="118">"Light rain"</text>
+<text class="f13 c2" x="16" y="142">hours</text><text class="f13 n" x="110" y="142">[14, 14, 13, 12, 11, 10]</text>
+</g>
+<g id="padtabs"><use href="#padbar"/><rect class="btn" x="432.5" y="32.5" width="77" height="23" rx="11.5"/>
+<text class="ss f13 w6 mid ca" x="471" y="49">Projects</text><text class="ss f13 mid c2" x="551" y="49">Gallery</text><text class="ss f13 mid c2" x="631" y="49">Docs</text><text class="ss f13 mid c2" x="711" y="49">Settings</text></g>
+<!-- the project's own tree: outputs, code with its used-by line, touches -->
+<g id="tree">
+<path class="ica" d="M18 80l-5 5l5 5"/><text class="f12 ca" x="24" y="89">Projects</text>
+<text class="f15 w6" x="12" y="118">My Weather</text>
+<text class="eb" x="12" y="146">OUTPUTS</text>
+<path class="hl" d="M0 154.5H240M12 198.5H240M12 242.5H240M0 286.5H240"/>
+<text class="f13 w5" x="12" y="173">today</text><text class="f11 c3" x="12" y="189">widget · S M</text>
+<text class="f13 w5" x="12" y="217">refresh</text><text class="f11 c3" x="12" y="233">shortcut</text>
+<text class="f13 w5 c3" x="12" y="261">forecast</text><text class="f11 c3" x="12" y="277">page · in 1.1</text>
+<text class="eb" x="12" y="311">CODE</text>
+<path class="hl" d="M0 319.5H240M12 363.5H240M12 407.5H240M12 451.5H240M12 495.5H240M12 539.5H240M0 583.5H240"/>
+<text class="f13 w5" x="12" y="338">sources/weather.py</text><text class="f11 c3" x="12" y="354">used by today, forecast</text>
+<text class="f13 w5" x="12" y="382">views/today.py</text><text class="f11 c3" x="12" y="398">used by today · read-only</text>
+<text class="f13 w5" x="12" y="426">views/forecast.py</text><text class="f11 c3" x="12" y="442">used by forecast</text>
+<text class="f13 w5" x="12" y="470">main.py</text><text class="f11 c3" x="12" y="486">used by refresh</text>
+<text class="f13 w5" x="12" y="514">blocks/today.blocks.json</text><text class="f11 c3" x="12" y="530">8 blocks · writes views/today.py</text>
+<text class="f13 w5 c3" x="12" y="558">old_view.py</text><text class="f11 c3" x="12" y="574">○ not used</text>
+<text class="eb" x="12" y="608">TOUCHES</text>
+<path class="hl" d="M0 616.5H240"/>
+<text class="f12" x="12" y="638">location <tspan class="c3">· while in use</tspan></text>
+<text class="f12" x="12" y="660">network <tspan class="c3">· 1 named host</tspan></text>
+</g>
+<g id="runs" xml:space="preserve"><text class="f12 pre c2" y="-2"><tspan x="16" dy="24">14:02:11  <tspan class="ok">●</tspan> ok        412 ms</tspan><tspan x="16" dy="24">13:47:02  <tspan class="ok">●</tspan> ok        398 ms</tspan><tspan x="16" dy="24">13:32:40  <tspan class="bad">✕ failed</tspan>    timed out</tspan><tspan x="16" dy="24">13:17:15  <tspan class="ok">●</tspan> ok        431 ms</tspan><tspan x="16" dy="24">13:02:09  <tspan class="ok">●</tspan> ok        405 ms</tspan></text></g>
+
+<g id="ph5">
+<rect class="sunken" width="390" height="844"/>
+<use href="#sb"/>
+<rect class="surface" y="56" width="390" height="788" rx="14"/><rect class="surface" y="80" width="390" height="764"/>
+<rect class="sunken" x="177" y="62" width="36" height="4" rx="2"/>
+<text class="f20 w6" x="12" y="94">Preview</text><text class="ss f15 w6 ca e" x="378" y="93">Done</text>
+<rect class="seg" x="12" y="106" width="366" height="32" rx="6"/><rect class="btn" x="14.5" y="108.5" width="118" height="27" rx="4"/>
+<text class="f12 w6 mid" x="73" y="127">today</text><text class="f12 mid c2" x="195" y="127">refresh</text><text class="f12 mid c3" x="317" y="127">forecast · 1.1</text>
+<text class="f11 c3" x="12" y="155">widget · views/today.py · data from weather</text>
+<rect class="sunken" y="166" width="390" height="210"/>
+<g class="wl"><use href="#wS" x="28" y="180"/></g><g class="wd"><use href="#wS" x="204" y="180"/></g>
+<text class="f11 c3 mid" x="107" y="360">light</text><text class="f11 c3 mid" x="283" y="360">dark</text>
+<rect class="seg" x="12" y="388" width="96" height="32" rx="6"/><rect class="btn" x="14.5" y="390.5" width="45" height="27" rx="4"/><text class="f12 w6 mid" x="37" y="409">S</text><text class="f12 mid c2" x="84" y="409">M</text>
+<rect class="seg" x="120" y="388" width="258" height="32" rx="6"/><rect class="btn" x="122.5" y="390.5" width="96" height="27" rx="4"/><text class="f12 w6 mid" x="170" y="409">Full colour</text><text class="f12 mid c2" x="262" y="409">Tinted</text><text class="f12 mid c2" x="338" y="409">Clear</text>
+<text class="eb" x="12" y="444">DATA · WHAT read() RETURNED</text>
+<path class="hl" d="M0 452.5H390M0 606.5H390M0 636.5H390"/>
+<use href="#data1" x="-4" y="452"/>
+<text class="eb" x="12" y="628">TIMING</text>
+<text class="f13 c2" x="12" y="658">read()</text><text class="f13 e" x="378" y="658">409 ms</text>
+<text class="f13 c2" x="12" y="682">draw(today)</text><text class="f13 e" x="378" y="682">3 ms</text>
+<text class="f13 c2" x="12" y="706">saved for the widget</text><text class="f13 e" x="378" y="706">14:02:11</text>
+<text class="ss f12 c3" x="12" y="738">The widget is as fresh as the app's last run.</text>
+<rect class="accf" x="12" y="766" width="366" height="44" rx="8"/><text class="ss f15 w6 co mid" x="195" y="793">Add to Home Screen: show the steps</text>
+<rect class="ink" x="128" y="831" width="134" height="5" rx="2.5"/>
+</g>
+</defs></svg>
+
+<div class="phones">
+<figure><svg class="frame ph bl" viewBox="0 0 390 844" role="img" aria-label="Direction B, the preview on iPhone, light"><use href="#ph5"/></svg>
+<figcaption>B light. Look at: the widget at its real size in both appearances at once, Paper's white card with the serif number beside Studio's violet card with the rounded number. Both are drawn exactly as approved. The switch at the top offers only this project's outputs. Under the widget, the six values the code returned and the time each step took. One filled button: Add to Home Screen.</figcaption></figure>
+<figure><svg class="frame ph bd" viewBox="0 0 390 844" role="img" aria-label="Direction B, the preview on iPhone, dark"><use href="#ph5"/></svg>
+<figcaption>B dark. The same drawing; the two widgets do not change with the frame, only the workbench around them does. Tinted and Clear are named on the switch and not drawn in this round.</figcaption></figure>
+</div>
+
+<h2>iPad, 1180 by 820: every size in both appearances</h2>
+<svg class="defs" aria-hidden="true"><defs>
+<g id="pad5">
+<rect class="canvas" width="1180" height="820"/>
+<use href="#padtabs"/>
+<rect class="sunken" x="241" y="101" width="619" height="431"/>
+<rect class="surface" x="241" y="533" width="619" height="263"/>
+<rect class="surface" y="797" width="1180" height="23"/>
+<rect class="sel" y="155" width="240" height="44"/><rect class="accf" y="155" width="3" height="44"/>
+<path class="hl" d="M0 64.5H1180M240.5 65V796M860.5 65V796M0 796.5H1180M241 100.5H1180M241 532.5H860M241 564.5H860"/>
+<use href="#tree"/>
+
+<text class="f13 w6" x="252" y="88">today</text><text class="f11 c3" x="304" y="88">widget · views/today.py</text>
+<rect class="seg" x="588" y="70" width="260" height="26" rx="6"/><rect class="btn" x="590.5" y="72.5" width="94" height="21" rx="4"/><text class="f12 w6 mid" x="637" y="88">Full colour</text><text class="f12 mid c2" x="728" y="88">Tinted</text><text class="f12 mid c2" x="808" y="88">Clear</text>
+<text class="eb" x="264" y="124">S · 158 × 158</text><text class="eb" x="446" y="124">M · 338 × 158</text>
+<g class="wl"><use href="#wS" x="264" y="136"/><use href="#wM" x="446" y="136"/></g>
+<text class="f11 c3" x="264" y="312">light</text>
+<g class="wd"><use href="#wS" x="264" y="336"/><use href="#wM" x="446" y="336"/></g>
+<text class="f11 c3" x="264" y="512">dark</text>
+<text class="eb" x="252" y="554">CHECKS · THIS OUTPUT</text>
+<text class="f13 c2" x="252" y="588">text cut off</text><text class="f13" x="420" y="588">0 of 4 drawings</text>
+<text class="f13 c2" x="252" y="612">smallest text</text><text class="f13" x="420" y="612">12 pt · the floor is 11</text>
+<text class="f13 c2" x="252" y="636">colour-only marks</text><text class="f13" x="420" y="636">0</text>
+<text class="f13 c2" x="252" y="660">sizes declared</text><text class="f13" x="420" y="660">S, M · both drawn</text>
+<text class="ss f12 c3" x="252" y="692">Each check is counted from the drawing, not judged by eye.</text>
+
+<text class="eb" x="876" y="88">DATA · WHAT read() RETURNED</text>
+<path class="hl" d="M861 256.5H1180M861 286.5H1180M861 370.5H1180M861 400.5H1180M861 532.5H1180"/>
+<use href="#data1" x="860" y="100"/>
+<text class="eb" x="876" y="278">TIMING</text>
+<text class="f13 c2" x="876" y="310">read()</text><text class="f13 e" x="1164" y="310">409 ms</text>
+<text class="f13 c2" x="876" y="334">draw(today)</text><text class="f13 e" x="1164" y="334">3 ms</text>
+<text class="f13 c2" x="876" y="358">saved for the widget</text><text class="f13 e" x="1164" y="358">14:02:11</text>
+<text class="eb" x="876" y="392">LAST RUNS</text>
+<use href="#runs" x="860" y="400"/>
+<text class="ss f12 c3" x="876" y="558">The widget is as fresh as the app's last run.</text>
+<rect class="accf" x="876" y="578" width="288" height="36" rx="6"/><text class="ss f13 w6 co mid" x="1020" y="601">Add to Home Screen: show the steps</text>
+<text class="f11 c3" x="12" y="813">My Weather · 3 outputs · 6 files</text><text class="f11 c3" x="252" y="813">today · 2 sizes · 2 appearances</text><text class="f11 c3 e" x="1164" y="813">⌘R run</text>
+</g>
+</defs></svg>
+
+<figure><svg class="frame bl" viewBox="0 0 1180 820" role="img" aria-label="Direction B, the preview on iPad, light"><use href="#pad5"/></svg>
+<figcaption>B light. Look at: the project's tree on the left with the today output chosen. In the middle, a grid: small and medium across, light and dark down, four drawings at real size. Under the grid, four counted checks for this output. On the right, the data, the timing and the last five runs. The check numbers are sample content; no checker exists yet.</figcaption></figure>
+<figure><svg class="frame bd" viewBox="0 0 1180 820" role="img" aria-label="Direction B, the preview on iPad, dark"><use href="#pad5"/></svg>
+<figcaption>B dark. The same drawing. The four widgets are identical in both frames, which is the point: B changes the workbench and leaves the product alone.</figcaption></figure>
+<p>Hand-written HTML and SVG. No images, no script, no outside assets. The status bar and tab bar are stand-ins for the system's own. All names, times and numbers on the screens are sample content.</p>
+</main>
+</body>
+</html>

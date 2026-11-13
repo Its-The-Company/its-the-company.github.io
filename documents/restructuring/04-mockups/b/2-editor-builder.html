@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction B, screens 2 and 3: the editor and the Builder (proposal, not approved)</title>
+<style>
+/* Direction B, "programmer-first workbench". PROPOSAL, NOT APPROVED. Hand-written HTML and SVG: no images, no script, no webfont.
+   Faces: the system monospace (ui-monospace, Menlo, Consolas; never SF Mono by name) and the system sans; the widget cards keep
+   the approved display faces (ui-serif / New York in light, ui-rounded in dark).
+   .bl = B light, .bd = B dark. Grounds, lines and greys are NEW values (neutral, no warm paper, no navy, no glass, no gradient chrome).
+   Kept by value from pywidget/docs/design/tokens.json: accent, accent.soft, status.*, text.onAccent, the Quill light and Lumen dark
+   syntax colours, and the widget card (white in light; #5B33E6 to #1E1450 in dark).
+   Each screen is drawn once in <defs> and shown twice; the class on the frame sets the appearance.
+   Inside a <use> copy only single-class selectors are used. */
+html{color-scheme:light dark}
+body{margin:0;padding:16px 16px 56px;background:#F3F4F6;color:#14161A;font:15px/1.45 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+main{max-width:1180px;margin:0 auto}
+h1{font:600 22px/1.25 ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;margin:14px 0 8px}
+h2{font:600 15px/1.3 ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;margin:34px 0 8px}
+p{margin:0 0 10px;max-width:74ch}
+.mark{display:inline-block;border:1.5px solid #8F5400;color:#8F5400;border-radius:4px;padding:3px 10px;font:600 13px/1.4 ui-monospace,Menlo,Consolas,monospace;letter-spacing:.02em}
+.phones{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,390px));gap:24px;align-items:start}
+figure{margin:0 0 24px}
+figcaption{font-size:13px;color:#474C56;margin-top:8px;max-width:74ch}
+table.dk{border-collapse:collapse;font-size:13px;margin:8px 0 14px;max-width:980px}
+table.dk th,table.dk td{text-align:left;vertical-align:top;padding:5px 12px 5px 0;border-bottom:1px solid #DFE2E7}
+table.dk th{font:600 12px/1.4 ui-monospace,Menlo,Consolas,monospace}
+svg.frame{display:block;width:100%;height:auto;border-radius:10px;outline:1px solid #B4BAC4}
+svg.ph{border-radius:22px}
+svg.defs{position:absolute;width:0;height:0;overflow:hidden}
+@media (prefers-color-scheme:dark){
+  body{background:#0D0E10;color:#ECEEF1}
+  .mark{border-color:#FFC266;color:#FFC266}
+  figcaption{color:#A7ADB7}
+  table.dk th,table.dk td{border-color:#26292E}
+  svg.frame{outline-color:#3B4047}
+}
+
+/* B tokens (proposal) */
+.bl{--canvas:#F3F4F6;--surface:#FFFFFF;--raised:#FFFFFF;--sunken:#E8EAEE;--editor:#FFFFFF;--console:#EEF0F3;--band:#EEF1F6;--sel:#E3EAF8;
+  --hair:#DFE2E7;--strong:#B4BAC4;--t1:#14161A;--t2:#474C56;--t3:#5F6570;--on:#FFFFFF;
+  --acc:#2350B0;--soft:#E4EBF8;--ok:#1D7442;--warn:#8F5400;--bad:#B3261E;
+  --sc:#6B675E;--sk:#8A2F8F;--sg:#1D6B40;--sn:#9A4500;--sf:#2350B0;--sy:#795700;--sb:#0B6670;
+  --wbg:#FFFFFF;--w1:#1C1B19;--w2:#5C5850;--wa:#2350B0;--wg:#EEEBE4;--wst:#E3DFD6;
+  --wfont:ui-serif,'New York',Georgia,serif;--wnum:500;--dd:none}
+.bd{--canvas:#0D0E10;--surface:#16181B;--raised:#1F2226;--sunken:#08090A;--editor:#0D0E10;--console:#08090A;--band:#181A1E;--sel:#28234F;
+  --hair:#26292E;--strong:#3B4047;--t1:#ECEEF1;--t2:#A7ADB7;--t3:#9097A2;--on:#120A33;
+  --acc:#A08BFF;--soft:#2A2350;--ok:#4FD39A;--warn:#FFC266;--bad:#FF7A8A;
+  --sc:#9198B5;--sk:#C59BFF;--sg:#7FE3BA;--sn:#FFB86E;--sf:#72BBFF;--sy:#FFD970;--sb:#FF93B6;
+  --wbg:#1E1450;--w1:#FFFFFF;--w2:rgba(255,255,255,.78);--wa:#B0A3FD;--wg:rgba(255,255,255,.28);--wst:rgba(255,255,255,.14);
+  --wfont:ui-rounded,system-ui,sans-serif;--wnum:600;--dd:inline}
+/* a widget drawn in a fixed appearance, whatever the frame (the preview matrix) */
+.wl{--wbg:#FFFFFF;--w1:#1C1B19;--w2:#5C5850;--wa:#2350B0;--wg:#EEEBE4;--wst:#E3DFD6;--wfont:ui-serif,'New York',Georgia,serif;--wnum:500;--dd:none}
+.wd{--wbg:#1E1450;--w1:#FFFFFF;--w2:rgba(255,255,255,.78);--wa:#B0A3FD;--wg:rgba(255,255,255,.28);--wst:rgba(255,255,255,.14);--wfont:ui-rounded,system-ui,sans-serif;--wnum:600;--dd:inline}
+
+/* type: monospace leads; sans (.ss) only for prose and the system's own chrome */
+svg.frame{fill:var(--t1);font-family:ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;font-size:13px;font-variant-numeric:tabular-nums}
+.ss{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+.f20{font-size:20px}.f17{font-size:17px}.f15{font-size:15px}.f13{font-size:13px}.f12{font-size:12px}.f11{font-size:11px}
+.w5{font-weight:500}.w6{font-weight:600}
+.eb{font-size:11px;letter-spacing:.06em;fill:var(--t3)}
+.c2{fill:var(--t2)}.c3{fill:var(--t3)}.ca{fill:var(--acc)}.co{fill:var(--on)}
+.ok{fill:var(--ok)}.wn{fill:var(--warn)}.bad{fill:var(--bad)}
+.e{text-anchor:end}.mid{text-anchor:middle}
+.cm{fill:var(--sc);font-style:italic}.k{fill:var(--sk)}.s{fill:var(--sg)}.n{fill:var(--sn)}.fn{fill:var(--sf)}.ty{fill:var(--sy)}.bi{fill:var(--sb)}
+
+/* surfaces, lines, marks */
+.canvas{fill:var(--canvas)}.surface{fill:var(--surface)}.raised{fill:var(--raised)}.sunken{fill:var(--sunken)}
+.editor{fill:var(--editor)}.console{fill:var(--console)}.band{fill:var(--band)}.sel{fill:var(--sel)}.soft{fill:var(--soft)}
+.ink{fill:var(--t1)}.accf{fill:var(--acc)}
+.hl{stroke:var(--hair);stroke-width:1;fill:none}
+.sl{stroke:var(--strong);stroke-width:1;fill:none}
+.btn{fill:var(--surface);stroke:var(--strong);stroke-width:1}
+.seg{fill:var(--sunken)}
+.ic{fill:none;stroke:var(--t2);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ica{fill:none;stroke:var(--acc);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ico{fill:none;stroke:var(--on);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+/* the widget card: approved values */
+.wc{fill:var(--wbg);stroke:var(--wst);stroke-width:1}
+.wgrad{display:var(--dd)}
+.w1{fill:var(--w1)}.w2{fill:var(--w2)}.wa{fill:var(--wa)}.wg{fill:var(--wg)}
+.was{fill:none;stroke:var(--wa);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.whero{font-family:var(--wfont);font-weight:var(--wnum);font-size:50px;fill:var(--w1)}
+.wnum{font-family:var(--wfont);font-weight:var(--wnum);fill:var(--w1)}
+.wlab{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:12px;letter-spacing:.04em;fill:var(--w2)}
+.wtx{font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:13px}
+.pre{white-space:pre}
+.sq{fill:none;stroke:var(--warn);stroke-width:1.2}
+.dash{stroke-dasharray:4 3}
+</style>
+</head>
+<body>
+<div role="note" class="rs-proposal" style="position:sticky;top:0;z-index:2147483647;margin:0;padding:6px 10px;background:#7a4b00;color:#fff;font:600 14px/1.4 -apple-system,system-ui,sans-serif;text-align:center">Proposal, not approved: the mock-ups are options for the Investors to review. Nothing here is adopted until the Investors approve it.</div>
+<main>
+<p class="mark">Proposal, not approved</p>
+<h1>Direction B, screens 2 and 3: the editor and the Builder</h1>
+<p>B is a programmer-first workbench (see screen 1 for where it departs from Paper and Studio and what it keeps). Here the code is never out of sight: the editor keeps the console and the preview on the same screen, and the Builder shows the Python it writes beside the blocks. Project, Page, Builder and Gallery are placeholder names. The Python on these screens is sample text; its module and function names are not the shipped ones.</p>
+
+<h2>The editor on iPhone, 390 wide</h2>
+<svg class="defs" aria-hidden="true"><defs>
+<linearGradient id="gc" x1=".2" y1="0" x2=".8" y2="1"><stop offset="0" stop-color="#5B33E6"/><stop offset="1" stop-color="#1E1450"/></linearGradient>
+<g id="sb"><text class="ss f15 w6" x="30" y="31">9:41</text><rect class="sl" x="336.5" y="19.5" width="25" height="12" rx="3.5"/><rect class="ink" x="338.5" y="21.5" width="17" height="8" rx="2"/></g>
+<g id="tb">
+<rect class="surface" y="761" width="390" height="83"/><path class="hl" d="M0 761.5H390"/>
+<path class="ica" d="M39 776h20M39 782h20M39 788h20"/><text class="ss f11 w5 mid ca" x="49" y="808">Projects</text>
+<path class="ic" d="M137 773h7v7h-7zM148 773h7v7h-7zM137 784h7v7h-7zM148 784h7v7h-7z"/><text class="ss f11 mid c2" x="146" y="808">Gallery</text>
+<path class="ic" d="M237 772h10l4 4v16h-14zM241 781h7M241 786h7"/><text class="ss f11 mid c2" x="244" y="808">Docs</text>
+<path class="ic" d="M331 777h5M342 777h9M331 787h11M348 787h3"/><circle class="ic" cx="339" cy="777" r="3"/><circle class="ic" cx="345" cy="787" r="3"/><text class="ss f11 mid c2" x="341" y="808">Settings</text>
+<rect class="ink" x="128" y="831" width="134" height="5" rx="2.5"/>
+</g>
+<g id="wbody"><text class="wlab" x="16" y="31">BERGEN</text><text class="whero" x="14" y="92">14°</text><text class="wtx w1" x="16" y="120">Light rain</text><text class="wtx w2" x="16" y="140">H 16°  L 9°</text></g>
+<g id="wS"><rect class="wc" x=".5" y=".5" width="157" height="157" rx="24"/><rect class="wgrad" x=".5" y=".5" width="157" height="157" rx="24" fill="url(#gc)"/><use href="#wbody"/>
+<path class="was" d="M118 34h18a6 6 0 0 0 0 -12a9 9 0 0 0 -17 -2a7 7 0 0 0 -1 14zM121 40l-2 5M129 40l-2 5M137 40l-2 5"/></g>
+<g id="wM"><rect class="wc" x=".5" y=".5" width="337" height="157" rx="24"/><rect class="wgrad" x=".5" y=".5" width="337" height="157" rx="24" fill="url(#gc)"/><use href="#wbody"/>
+<text class="wlab mid" x="150" y="31">15</text><text class="wlab mid" x="182" y="31">16</text><text class="wlab mid" x="214" y="31">17</text><text class="wlab mid" x="246" y="31">18</text><text class="wlab mid" x="278" y="31">19</text><text class="wlab mid" x="310" y="31">20</text>
+<path class="was" d="M150 62L182 62L214 72L246 82L278 92L310 102"/>
+<circle class="wa" cx="150" cy="62" r="3"/><circle class="wa" cx="182" cy="62" r="3"/><circle class="wa" cx="214" cy="72" r="3"/><circle class="wa" cx="246" cy="82" r="3"/><circle class="wa" cx="278" cy="92" r="3"/><circle class="wa" cx="310" cy="102" r="3"/>
+<text class="wtx w1 mid" x="150" y="140">14°</text><text class="wtx w1 mid" x="182" y="140">14°</text><text class="wtx w1 mid" x="214" y="140">13°</text><text class="wtx w1 mid" x="246" y="140">12°</text><text class="wtx w1 mid" x="278" y="140">11°</text><text class="wtx w1 mid" x="310" y="140">10°</text></g>
+<g id="padbar"><!-- stand-in for the system's status bar and top tab bar -->
+<text class="ss f12 w6" x="20" y="17">9:41</text><rect class="sl" x="1136.5" y="6.5" width="22" height="11" rx="3"/><rect class="ink" x="1138.5" y="8.5" width="15" height="7" rx="1.5"/>
+<rect class="seg" x="430" y="30" width="320" height="28" rx="14"/>
+</g>
+<!-- the code, drawn once for the phone and the iPad: numbers end at x 30, code starts at x 40, 19 px a line -->
+<g id="code1" xml:space="preserve">
+<text class="f11 c3 e" y="-5"><tspan x="30" dy="19">1</tspan><tspan x="30" dy="19">2</tspan><tspan x="30" dy="19">3</tspan><tspan x="30" dy="19">4</tspan><tspan x="30" dy="19">5</tspan><tspan x="30" dy="19">6</tspan><tspan x="30" dy="19">7</tspan><tspan x="30" dy="19">8</tspan><tspan x="30" dy="19">9</tspan><tspan x="30" dy="19">10</tspan><tspan x="30" dy="19">11</tspan><tspan x="30" dy="19">12</tspan><tspan x="30" dy="19">13</tspan><tspan x="30" dy="19">14</tspan><tspan x="30" dy="19">15</tspan><tspan x="30" dy="19">16</tspan><tspan x="30" dy="19">17</tspan><tspan x="30" dy="19">18</tspan><tspan x="30" dy="19" class="ink">19</tspan><tspan x="30" dy="19">20</tspan><tspan x="30" dy="19">21</tspan><tspan x="30" dy="19">22</tspan><tspan x="30" dy="19">23</tspan><tspan x="30" dy="19">24</tspan></text>
+<text class="f13 pre" y="-5"><tspan x="40" dy="19" class="s">"""Local weather: one fetch a refresh."""</tspan><tspan x="40" dy="19"><tspan class="k">import</tspan> json</tspan><tspan x="40" dy="19"><tspan class="k">from</tspan> pywidget <tspan class="k">import</tspan> http</tspan><tspan x="40" dy="38">HOST = <tspan class="s">"api.weather.example"</tspan></tspan><tspan x="40" dy="57"><tspan class="k">def</tspan> <tspan class="fn">read</tspan>(settings):</tspan><tspan x="40" dy="19">    <tspan class="s">"""Return data. Never draws."""</tspan></tspan><tspan x="40" dy="19">    units = settings.get(<tspan class="s">"units"</tspan>, <tspan class="s">"c"</tspan>)</tspan><tspan x="40" dy="19">    place = settings[<tspan class="s">"place"</tspan>]</tspan><tspan x="40" dy="19">    reply = http.get(</tspan><tspan x="40" dy="19">        <tspan class="s">f"https://{HOST}/v1/now"</tspan>,</tspan><tspan x="40" dy="19">        params={<tspan class="s">"q"</tspan>: place, <tspan class="s">"u"</tspan>: units},</tspan><tspan x="40" dy="19">    )</tspan><tspan x="40" dy="19">    now = reply.json()</tspan><tspan x="40" dy="19">    <tspan class="k">return</tspan> {</tspan><tspan x="40" dy="19">        <tspan class="s">"place"</tspan>: place,</tspan><tspan x="40" dy="19">        <tspan class="s">"temp"</tspan>: <tspan class="bi">round</tspan>(now[<tspan class="s">"temp"</tspan>]),</tspan><tspan x="40" dy="19">        <tspan class="s">"high"</tspan>: <tspan class="bi">round</tspan>(now[<tspan class="s">"high"</tspan>]),</tspan><tspan x="40" dy="19">        <tspan class="s">"low"</tspan>: <tspan class="bi">round</tspan>(now[<tspan class="s">"low"</tspan>]),</tspan><tspan x="40" dy="19">        <tspan class="s">"summary"</tspan>: now[<tspan class="s">"text"</tspan>],</tspan><tspan x="40" dy="19">        <tspan class="s">"hours"</tspan>: now[<tspan class="s">"hours"</tspan>][:<tspan class="n">6</tspan>],</tspan><tspan x="40" dy="19">    }</tspan></text>
+<path class="sq" d="M40 36q2-3 4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0t4 0"/>
+<text class="f11 wn" x="150" y="33">▲ F401 unused import</text>
+</g>
+<g id="con1" xml:space="preserve"><text class="f12 pre" y="5"><tspan x="12" dy="17">read()        5 keys     409 ms</tspan><tspan x="12" dy="17">draw(today)   14 nodes     3 ms</tspan><tspan x="12" dy="17">saved for the widget: small, medium</tspan><tspan x="12" dy="17" class="c3">&gt;&gt;&gt;</tspan></text></g>
+<!-- the preview, at rest: 52 px, pulls up to a sheet -->
+<g id="pvbar"><rect class="surface" width="390" height="52"/><path class="hl" d="M0 .5H390"/><rect class="sunken" x="177" y="5" width="36" height="4" rx="2"/>
+<use href="#wS" transform="translate(12,10) scale(.228)"/><text class="f13 w6" x="60" y="27">Preview</text><text class="f11 c3" x="60" y="42">today · widget · S</text><path class="ic" d="M356 33l8 -8l8 8"/></g>
+<!-- the top of a tool on the phone: back, Blocks or Code, Run -->
+<g id="nav"><rect class="surface" width="390" height="119"/><use href="#sb"/><path class="ica" d="M19 62l-7 7l7 7"/><text class="f13 ca" x="26" y="74">My Weather</text>
+<rect class="seg" x="150" y="55" width="120" height="28" rx="6"/>
+<rect class="accf" x="318" y="54" width="60" height="30" rx="6"/><path class="co" d="M329 63l8 6l-8 6z"/><text class="f12 w6 co" x="343" y="74">Run</text><path class="hl" d="M0 119.5H390"/></g>
+
+<g id="ph2">
+<rect class="editor" width="390" height="844"/>
+<use href="#nav"/><rect class="btn" x="211.5" y="57.5" width="56" height="23" rx="4"/><text class="f12 mid c2" x="180" y="74">Blocks</text><text class="f12 w6 mid" x="240" y="74">Code</text>
+<text class="f13 w6" x="12" y="110">sources/weather.py</text><text class="f11 c3 e" x="378" y="110">used by today, forecast</text>
+<rect class="band" y="462" width="390" height="19"/>
+<use href="#code1" y="120"/>
+<rect class="console" y="582" width="390" height="127"/><path class="hl" d="M0 582.5H390"/>
+<text class="eb" x="12" y="599">CONSOLE</text><text class="f11 e c2" x="378" y="599"><tspan class="ok">●</tspan> ok · 412 ms · 14:02:11</text>
+<use href="#con1" y="604"/>
+<use href="#pvbar" y="709"/>
+<use href="#tb"/>
+</g>
+</defs></svg>
+
+<div class="phones">
+<figure><svg class="frame ph bl" viewBox="0 0 390 844" role="img" aria-label="Direction B, the editor on iPhone, light"><use href="#ph2"/></svg>
+<figcaption>B light. Look at: 24 lines of code, the console and the preview bar on one screen, with nothing hidden behind a tab. The line under the title says which outputs use this file. The warning on line 2 is a squiggle and words, not colour alone. Code is 13 pt, in the approved Quill colours.</figcaption></figure>
+<figure><svg class="frame ph bd" viewBox="0 0 390 844" role="img" aria-label="Direction B, the editor on iPhone, dark"><use href="#ph2"/></svg>
+<figcaption>B dark. The same drawing, in the approved Lumen code colours on a neutral ground (#0D0E10 in place of Studio's #0E1120). Run is a solid violet button, not Studio's gradient.</figcaption></figure>
+</div>
+<h2>The editor on iPad, 1180 by 820: five panes</h2>
+<svg class="defs" aria-hidden="true"><defs>
+<g id="data1">
+<text class="f13 c2" x="16" y="22">place</text><text class="f13 s" x="110" y="22">"Bergen"</text>
+<text class="f13 c2" x="16" y="46">temp</text><text class="f13 n" x="110" y="46">14</text>
+<text class="f13 c2" x="16" y="70">high</text><text class="f13 n" x="110" y="70">16</text>
+<text class="f13 c2" x="16" y="94">low</text><text class="f13 n" x="110" y="94">9</text>
+<text class="f13 c2" x="16" y="118">summary</text><text class="f13 s" x="110" y="118">"Light rain"</text>
+<text class="f13 c2" x="16" y="142">hours</text><text class="f13 n" x="110" y="142">[14, 14, 13, 12, 11, 10]</text>
+</g>
+<g id="padtabs"><use href="#padbar"/><rect class="btn" x="432.5" y="32.5" width="77" height="23" rx="11.5"/>
+<text class="ss f13 w6 mid ca" x="471" y="49">Projects</text><text class="ss f13 mid c2" x="551" y="49">Gallery</text><text class="ss f13 mid c2" x="631" y="49">Docs</text><text class="ss f13 mid c2" x="711" y="49">Settings</text></g>
+<!-- the project's own tree: outputs, code with its used-by line, touches -->
+<g id="tree">
+<path class="ica" d="M18 80l-5 5l5 5"/><text class="f12 ca" x="24" y="89">Projects</text>
+<text class="f15 w6" x="12" y="118">My Weather</text>
+<text class="eb" x="12" y="146">OUTPUTS</text>
+<path class="hl" d="M0 154.5H240M12 198.5H240M12 242.5H240M0 286.5H240"/>
+<text class="f13 w5" x="12" y="173">today</text><text class="f11 c3" x="12" y="189">widget · S M</text>
+<text class="f13 w5" x="12" y="217">refresh</text><text class="f11 c3" x="12" y="233">shortcut</text>
+<text class="f13 w5 c3" x="12" y="261">forecast</text><text class="f11 c3" x="12" y="277">page · in 1.1</text>
+<text class="eb" x="12" y="311">CODE</text>
+<path class="hl" d="M0 319.5H240M12 363.5H240M12 407.5H240M12 451.5H240M12 495.5H240M12 539.5H240M0 583.5H240"/>
+<text class="f13 w5" x="12" y="338">sources/weather.py</text><text class="f11 c3" x="12" y="354">used by today, forecast</text>
+<text class="f13 w5" x="12" y="382">views/today.py</text><text class="f11 c3" x="12" y="398">used by today · read-only</text>
+<text class="f13 w5" x="12" y="426">views/forecast.py</text><text class="f11 c3" x="12" y="442">used by forecast</text>
+<text class="f13 w5" x="12" y="470">main.py</text><text class="f11 c3" x="12" y="486">used by refresh</text>
+<text class="f13 w5" x="12" y="514">blocks/today.blocks.json</text><text class="f11 c3" x="12" y="530">8 blocks · writes views/today.py</text>
+<text class="f13 w5 c3" x="12" y="558">old_view.py</text><text class="f11 c3" x="12" y="574">○ not used</text>
+<text class="eb" x="12" y="608">TOUCHES</text>
+<path class="hl" d="M0 616.5H240"/>
+<text class="f12" x="12" y="638">location <tspan class="c3">· while in use</tspan></text>
+<text class="f12" x="12" y="660">network <tspan class="c3">· 1 named host</tspan></text>
+</g>
+
+<g id="pad2">
+<rect class="canvas" width="1180" height="820"/>
+<use href="#padtabs"/>
+<rect class="surface" x="241" y="65" width="579" height="36"/>
+<rect class="editor" x="241" y="101" width="579" height="499"/>
+<rect class="console" x="241" y="600" width="579" height="196"/>
+<rect class="surface" y="797" width="1180" height="23"/>
+<rect class="sel" y="320" width="240" height="44"/><rect class="accf" y="320" width="3" height="44"/>
+<path class="hl" d="M0 64.5H1180M240.5 65V796M820.5 65V796M0 796.5H1180M241 100.5H820M241 124.5H820M241 600.5H820"/>
+<use href="#tree"/>
+
+<rect class="editor" x="241" y="65" width="104" height="36"/><rect class="accf" x="241" y="65" width="104" height="2"/>
+<text class="f12 w6" x="253" y="88">weather.py</text><text class="f12 c2" x="359" y="88">today.py</text><text class="f12 c2" x="441" y="88">forecast.py</text>
+<rect class="seg" x="604" y="69" width="112" height="26" rx="6"/><rect class="btn" x="661.5" y="71.5" width="52" height="21" rx="4"/><text class="f12 mid c2" x="632" y="87">Blocks</text><text class="f12 w6 mid" x="688" y="87">Code</text>
+<rect class="accf" x="724" y="68" width="84" height="28" rx="6"/><path class="co" d="M734 76l8 6l-8 6z"/><text class="f12 w6 co" x="748" y="87">Run ⌘R</text>
+<text class="f11 c3" x="252" y="116">read(settings) returns data · used by today, forecast</text><text class="f11 c3 e" x="808" y="116">hand-written</text>
+<rect class="band" x="241" y="467" width="579" height="19"/>
+<use href="#code1" x="246" y="125"/>
+<text class="eb" x="252" y="619">CONSOLE</text><text class="f11 e c2" x="808" y="619"><tspan class="ok">●</tspan> ok · 412 ms · 14:02:11</text>
+<text class="f12 c3" x="252" y="645">14:02:11  run today</text>
+<use href="#con1" x="240" y="645"/>
+
+<text class="eb" x="836" y="88">PREVIEW</text><text class="f12 e c2" x="1164" y="88">today · widget</text>
+<use href="#wS" x="836" y="104"/>
+<text class="eb" x="1014" y="118">SIZE</text>
+<rect class="seg" x="1014" y="126" width="72" height="26" rx="6"/><rect class="btn" x="1016.5" y="128.5" width="33" height="21" rx="4"/><text class="f12 w6 mid" x="1033" y="144">S</text><text class="f12 mid c2" x="1068" y="144">M</text>
+<text class="eb" x="1014" y="178">APPEARANCE</text>
+<rect class="seg" x="1014" y="186" width="150" height="26" rx="6"/><rect class="btn" x="1016.5" y="188.5" width="47" height="21" rx="4"/><text class="f12 w6 mid" x="1040" y="204">Auto</text><text class="f12 mid c2" x="1089" y="204">Light</text><text class="f12 mid c2" x="1139" y="204">Dark</text>
+<text class="eb" x="1014" y="238">MODE</text><text class="f12" x="1014" y="258">Full colour</text>
+<path class="hl" d="M821 278.5H1180M821 308.5H1180M821 464.5H1180M821 494.5H1180M821 578.5H1180M821 608.5H1180"/>
+<text class="eb" x="836" y="300">DATA · WHAT read() RETURNED</text>
+<use href="#data1" x="820" y="308"/>
+<text class="eb" x="836" y="486">TIMING</text>
+<text class="f13 c2" x="836" y="516">read()</text><text class="f13 e" x="1164" y="516">409 ms</text>
+<text class="f13 c2" x="836" y="540">draw(today)</text><text class="f13 e" x="1164" y="540">3 ms</text>
+<text class="f13 c2" x="836" y="564">saved for the widget</text><text class="f13 e" x="1164" y="564">14:02:11</text>
+<text class="eb" x="836" y="600">LAST RUNS</text>
+<g xml:space="preserve"><text class="f12 pre c2" y="606"><tspan x="836" dy="24">14:02:11  <tspan class="ok">●</tspan> ok        412 ms</tspan><tspan x="836" dy="24">13:47:02  <tspan class="ok">●</tspan> ok        398 ms</tspan><tspan x="836" dy="24">13:32:40  <tspan class="bad">✕ failed</tspan>    timed out</tspan><tspan x="836" dy="24">13:17:15  <tspan class="ok">●</tspan> ok        431 ms</tspan><tspan x="836" dy="24">13:02:09  <tspan class="ok">●</tspan> ok        405 ms</tspan></text></g>
+<text class="ss f12 c3" x="836" y="762">The widget is as fresh as the app's last run.</text>
+<text class="f11 c3" x="12" y="813">My Weather · 3 outputs · 6 files</text><text class="f11 c3" x="252" y="813">ln 19, col 21 · spaces 4 · saved</text><text class="f11 c3 e" x="1164" y="813">⌘R run · ⌘. stop · ⌘P open file</text>
+</g>
+</defs></svg>
+
+<figure><svg class="frame bl" viewBox="0 0 1180 820" role="img" aria-label="Direction B, the editor on iPad, light"><use href="#pad2"/></svg>
+<figcaption>B light. Look at: five panes that stay put. The project's tree on the left lists outputs first, then each file with the outputs that use it. Code in the middle with the console under it. On the right the widget, the data the code returned, how long each step took and the last five runs. The bottom line carries the keyboard shortcuts.</figcaption></figure>
+<figure><svg class="frame bd" viewBox="0 0 1180 820" role="img" aria-label="Direction B, the editor on iPad, dark"><use href="#pad2"/></svg>
+<figcaption>B dark. The same drawing. The failed run in the list is a cross and a word as well as a colour.</figcaption></figure>
+
+<h2>The Builder on iPhone, 390 wide</h2>
+<svg class="defs" aria-hidden="true"><defs>
+<!-- the block outline: left parts from x 12, line ranges end at x 0; one drawing for the phone and the iPad pane -->
+<g id="blocksL">
+<path class="hl" d="M20.5 88V352M36.5 220V308"/>
+<rect class="seg" x="12" y="7" width="54" height="18" rx="4"/><text class="eb mid" x="39" y="20">DATA</text><text class="f13 w5" x="74" y="19">weather</text><text class="f11 c3" x="74" y="35">custom block · sources/weather.py</text>
+<rect class="seg" x="12" y="51" width="54" height="18" rx="4"/><text class="eb mid" x="39" y="64">STACK</text><text class="f13 w5" x="74" y="63">vertical</text><text class="f11 c3" x="74" y="79">spacing 4</text>
+<rect class="seg" x="28" y="95" width="54" height="18" rx="4"/><text class="eb mid" x="55" y="108">TEXT</text><text class="f13 w5" x="90" y="107">place</text><text class="f11 c3" x="90" y="123">{place} · caption</text>
+<rect class="seg" x="28" y="139" width="54" height="18" rx="4"/><text class="eb mid" x="55" y="152">TEXT</text><text class="f13 w6" x="90" y="151">temperature</text><text class="f11 c3" x="90" y="167">{temp}° · hero number</text>
+<rect class="seg" x="28" y="183" width="54" height="18" rx="4"/><text class="eb mid" x="55" y="196">ROW</text><text class="f13 w5" x="90" y="195">row</text><text class="f11 c3" x="90" y="211">spacing 6</text>
+<rect class="seg" x="44" y="227" width="54" height="18" rx="4"/><text class="eb mid" x="71" y="240">SYMBOL</text><text class="f13 w5" x="106" y="239">cloud.rain</text><text class="f11 c3" x="106" y="255">a system symbol</text>
+<rect class="seg" x="44" y="271" width="54" height="18" rx="4"/><text class="eb mid" x="71" y="284">TEXT</text><text class="f13 w5" x="106" y="283">summary</text><text class="f11 c3" x="106" y="299">{summary}</text>
+<rect class="seg" x="28" y="315" width="54" height="18" rx="4"/><text class="eb mid" x="55" y="328">TEXT</text><text class="f13 w5" x="90" y="327">high and low</text><text class="f11 c3" x="90" y="343">H {high}° L {low}°</text>
+<text class="f13 w5 ca" x="12" y="379">+ Add block</text>
+</g>
+<g id="blocksR">
+<text class="f11 c3 e" y="19">source</text><text class="f11 c3 e" y="63">ln 7–8</text><text class="f11 c3 e" y="107">ln 9–10</text><text class="f11 c2 e" y="151">ln 11–12</text><text class="f11 c3 e" y="195">ln 13–14</text><text class="f11 c3 e" y="239">ln 15–16</text><text class="f11 c3 e" y="283">ln 17–18</text><text class="f11 c3 e" y="327">ln 19–20</text>
+</g>
+
+<g id="ph3">
+<rect class="canvas" width="390" height="844"/>
+<use href="#nav"/><rect class="btn" x="152.5" y="57.5" width="56" height="23" rx="4"/><text class="f12 w6 mid" x="180" y="74">Blocks</text><text class="f12 mid c2" x="240" y="74">Code</text>
+<text class="f13 w6" x="12" y="110">today.blocks.json</text><text class="f11 c3 e" x="378" y="110">writes views/today.py</text>
+<rect class="surface" y="120" width="390" height="396"/>
+<rect class="sel" y="252" width="390" height="44"/><rect class="accf" y="252" width="3" height="44"/>
+<path class="hl" d="M12 163.5H390M12 207.5H390M28 251.5H390M28 295.5H390M28 339.5H390M44 383.5H390M28 427.5H390M12 471.5H390M0 516.5H390"/>
+<use href="#blocksL" y="120"/><use href="#blocksR" x="378" y="120"/>
+<text class="f11 c3 e" x="378" y="499">8 blocks</text>
+<rect class="editor" y="517" width="390" height="67"/><rect class="band" y="541" width="390" height="38"/>
+<text class="eb" x="12" y="534">TODAY.PY · LINES 11–12 · READ-ONLY</text><text class="f12 w5 ca e" x="378" y="534">Edit as code</text>
+<g xml:space="preserve"><text class="f11 c3 e" x="30" y="555">11</text><text class="f11 c3 e" x="30" y="574">12</text>
+<text class="f13 pre cm" x="40" y="555"># Text: temperature</text><text class="f13 pre" x="40" y="574">ui.text(<tspan class="s">f"{data['temp']}°"</tspan>, font=<tspan class="s">"hero"</tspan>)</text></g>
+<rect class="surface" y="585" width="390" height="124"/>
+<path class="hl" d="M0 584.5H390M0 608.5H390M12 652.5H390M0 696.5H390"/>
+<text class="eb" x="12" y="601">TEXT · TEMPERATURE</text>
+<text class="f13 c2" x="12" y="635">value</text><text class="f13" x="110" y="635">{temp}°</text><path class="ic" d="M366 624l6 6l-6 6"/>
+<text class="f13 c2" x="12" y="679">font</text><text class="f13" x="110" y="679">hero number</text><path class="ic" d="M366 668l6 6l-6 6"/>
+<use href="#pvbar" y="709"/>
+<use href="#tb"/>
+</g>
+</defs></svg>
+
+<div class="phones">
+<figure><svg class="frame ph bl" viewBox="0 0 390 844" role="img" aria-label="Direction B, the Builder on iPhone, light"><use href="#ph3"/></svg>
+<figcaption>B light. Look at: the blocks are an outline, one 44 pt row each, indented the way the Python is indented. Each row says which lines of the file it writes. The chosen block shows its two lines of Python under the list, read-only, with "Edit as code" beside them, and its settings under that. No code is typed here; the weather source is hand-written Python shown as one block. Block names are sample content.</figcaption></figure>
+<figure><svg class="frame ph bd" viewBox="0 0 390 844" role="img" aria-label="Direction B, the Builder on iPhone, dark"><use href="#ph3"/></svg>
+<figcaption>B dark. The same drawing.</figcaption></figure>
+</div>
+
+<h2>The Builder on iPad, 1180 by 820: blocks beside the Python they write</h2>
+<svg class="defs" aria-hidden="true"><defs>
+<g id="code2" xml:space="preserve">
+<text class="f11 c3 e" y="-5"><tspan x="30" dy="19">1</tspan><tspan x="30" dy="19">2</tspan><tspan x="30" dy="19">3</tspan><tspan x="30" dy="19">4</tspan><tspan x="30" dy="19">5</tspan><tspan x="30" dy="19">6</tspan><tspan x="30" dy="19">7</tspan><tspan x="30" dy="19">8</tspan><tspan x="30" dy="19">9</tspan><tspan x="30" dy="19">10</tspan><tspan x="30" dy="19" class="ink">11</tspan><tspan x="30" dy="19" class="ink">12</tspan><tspan x="30" dy="19">13</tspan><tspan x="30" dy="19">14</tspan><tspan x="30" dy="19">15</tspan><tspan x="30" dy="19">16</tspan><tspan x="30" dy="19">17</tspan><tspan x="30" dy="19">18</tspan><tspan x="30" dy="19">19</tspan><tspan x="30" dy="19">20</tspan></text>
+<text class="f13 pre" y="-5"><tspan x="40" dy="19" class="cm"># Written by the Builder from today.blocks.json.</tspan><tspan x="40" dy="19" class="cm"># Change the blocks, or choose "Edit as code".</tspan><tspan x="40" dy="19"><tspan class="k">from</tspan> pywidget <tspan class="k">import</tspan> ui</tspan><tspan x="40" dy="57"><tspan class="k">def</tspan> <tspan class="fn">draw</tspan>(data):</tspan><tspan x="40" dy="19" class="cm">    # Stack: vertical, spacing 4</tspan><tspan x="40" dy="19">    <tspan class="k">with</tspan> ui.stack(<tspan class="s">"vertical"</tspan>, spacing=<tspan class="n">4</tspan>):</tspan><tspan x="40" dy="19" class="cm">        # Text: place</tspan><tspan x="40" dy="19">        ui.text(data[<tspan class="s">"place"</tspan>], font=<tspan class="s">"caption"</tspan>)</tspan><tspan x="40" dy="19" class="cm">        # Text: temperature</tspan><tspan x="40" dy="19">        ui.text(<tspan class="s">f"{data['temp']}°"</tspan>, font=<tspan class="s">"hero"</tspan>)</tspan><tspan x="40" dy="19" class="cm">        # Row: spacing 6</tspan><tspan x="40" dy="19">        <tspan class="k">with</tspan> ui.row(spacing=<tspan class="n">6</tspan>):</tspan><tspan x="40" dy="19" class="cm">            # Symbol: cloud.rain</tspan><tspan x="40" dy="19">            ui.symbol(<tspan class="s">"cloud.rain"</tspan>)</tspan><tspan x="40" dy="19" class="cm">            # Text: summary</tspan><tspan x="40" dy="19">            ui.text(data[<tspan class="s">"summary"</tspan>])</tspan><tspan x="40" dy="19" class="cm">        # Text: high and low</tspan><tspan x="40" dy="19">        ui.text(<tspan class="s">f"H {data['high']}° L {data['low']}°"</tspan>)</tspan></text>
+</g>
+
+<g id="pad3">
+<rect class="canvas" width="1180" height="820"/>
+<use href="#padtabs"/>
+<rect class="surface" x="191" y="101" width="329" height="396"/>
+<rect class="editor" x="521" y="101" width="469" height="399"/>
+<rect class="console" x="521" y="500" width="469" height="296"/>
+<rect class="surface" y="797" width="1180" height="23"/>
+<rect class="sel" x="191" y="233" width="329" height="44"/><rect class="accf" x="191" y="233" width="3" height="44"/>
+<rect class="sel" x="521" y="291" width="469" height="38"/><rect class="accf" x="521" y="291" width="3" height="38"/>
+<path class="hl" d="M0 64.5H1180M190.5 65V796M520.5 65V796M990.5 65V796M0 796.5H1180M191 100.5H1180M521 500.5H990"/>
+
+<!-- pane 1: the catalog -->
+<path class="ica" d="M18 80l-5 5l5 5"/><text class="f12 ca" x="24" y="89">My Weather</text>
+<path class="hl" d="M0 132.5H190M12 176.5H190M0 220.5H190M0 253.5H190M12 297.5H190M12 341.5H190M0 385.5H190M0 418.5H190M12 462.5H190M12 506.5H190M12 550.5H190M0 594.5H190M0 627.5H190M0 671.5H190"/>
+<text class="eb" x="12" y="124">DATA</text>
+<text class="f13 w5" x="12" y="152">weather</text><text class="f11 c3" x="12" y="168">in use · your Python</text>
+<text class="f13 w5 ca" x="12" y="204">Add a source…</text>
+<text class="eb" x="12" y="245">LAYOUT</text>
+<text class="f13 w5" x="12" y="273">Stack</text><text class="ss f11 c3" x="12" y="289">top to bottom</text>
+<text class="f13 w5" x="12" y="317">Row</text><text class="ss f11 c3" x="12" y="333">side by side</text>
+<text class="f13 w5" x="12" y="361">Spacer</text><text class="ss f11 c3" x="12" y="377">pushes things apart</text>
+<text class="eb" x="12" y="410">CONTENT</text>
+<text class="f13 w5" x="12" y="438">Text</text><text class="ss f11 c3" x="12" y="454">words or a value</text>
+<text class="f13 w5" x="12" y="482">Symbol</text><text class="ss f11 c3" x="12" y="498">a system symbol</text>
+<text class="f13 w5" x="12" y="526">Gauge</text><text class="ss f11 c3" x="12" y="542">a value on a ring</text>
+<text class="f13 w5" x="12" y="570">Chart</text><text class="ss f11 c3" x="12" y="586">a short series</text>
+<text class="eb" x="12" y="619">YOUR OWN</text>
+<text class="f13 w5 ca" x="12" y="647">Custom block…</text><text class="ss f11 c3" x="12" y="663">your Python, never rewritten</text>
+
+<!-- pane 2: the outline -->
+<text class="f13 w6" x="202" y="88">today.blocks.json</text><text class="f11 c3 e" x="508" y="88">8 blocks</text>
+<path class="hl" d="M202 144.5H520M202 188.5H520M218 232.5H520M218 276.5H520M218 320.5H520M234 364.5H520M218 408.5H520M202 452.5H520M191 497.5H520"/>
+<use href="#blocksL" x="190" y="101"/><use href="#blocksR" x="508" y="101"/>
+<text class="ss f12 c3" x="202" y="526">Tap a block to change it. Drag to move it.</text>
+<text class="ss f12 c3" x="202" y="546">The Python on the right is written for you</text>
+<text class="ss f12 c3" x="202" y="564">and lights up as you go.</text>
+
+<!-- pane 3: the Python the blocks write -->
+<text class="f13 w6" x="532" y="88">views/today.py</text><text class="f11 c3" x="656" y="88">read-only</text>
+<rect class="btn" x="876.5" y="70.5" width="101" height="25" rx="6"/><text class="f12 w5 mid ca" x="927" y="87">Edit as code</text>
+<use href="#code2" x="511" y="101"/>
+<text class="eb" x="532" y="519">CONSOLE</text><text class="f11 e c2" x="978" y="519"><tspan class="ok">●</tspan> ok · 412 ms · 14:02:11</text>
+<g xml:space="preserve"><text class="f12 pre" y="528"><tspan x="532" dy="17">compiled 8 blocks to views/today.py</tspan><tspan x="532" dy="17">20 lines · the same blocks always write the same file</tspan><tspan x="532" dy="17">read()        5 keys     409 ms</tspan><tspan x="532" dy="17">draw(today)   14 nodes     3 ms</tspan><tspan x="532" dy="17">saved for the widget: small, medium</tspan></text></g>
+
+<!-- pane 4: the chosen block and the result -->
+<text class="eb" x="1002" y="88">BLOCK</text>
+<rect class="accf" x="1104" y="68" width="64" height="28" rx="6"/><path class="co" d="M1116 76l8 6l-8 6z"/><text class="f12 w6 co" x="1130" y="87">Run</text>
+<text class="eb" x="1002" y="124">TEXT · TEMPERATURE</text>
+<path class="hl" d="M991 132.5H1180M1002 176.5H1180M1002 220.5H1180M1002 264.5H1180M991 308.5H1180M991 539.5H1180"/>
+<text class="f11 c3" x="1002" y="150">value</text><text class="f13" x="1002" y="167">{temp}°</text>
+<text class="f11 c3" x="1002" y="194">font</text><text class="f13" x="1002" y="211">hero number</text>
+<text class="f11 c3" x="1002" y="238">colour</text><text class="f13" x="1002" y="255">primary</text>
+<text class="f11 c3" x="1002" y="282">lines</text><text class="f13" x="1002" y="299">today.py 11–12</text>
+<text class="eb" x="1002" y="333">PREVIEW</text>
+<use href="#wS" x="1006" y="345"/><rect class="ica dash" x="1015.5" y="398.5" width="92" height="46" rx="4"/>
+<text class="eb" x="1002" y="531">DATA BLOCK · WEATHER</text>
+<text class="f12" x="1002" y="560">read by today, forecast</text><text class="f12 c3" x="1002" y="580">one fetch a refresh</text><text class="f12 c3" x="1002" y="600">sources/weather.py</text>
+<text class="f11 c3" x="12" y="813">today.blocks.json · 8 blocks</text><text class="f11 c3" x="532" y="813">views/today.py · 20 lines · read-only until "Edit as code"</text><text class="f11 c3 e" x="1164" y="813">⌘R run</text>
+</g>
+</defs></svg>
+
+<figure><svg class="frame bl" viewBox="0 0 1180 820" role="img" aria-label="Direction B, the Builder on iPad, light"><use href="#pad3"/></svg>
+<figcaption>B light. Look at: four panes. The catalog of blocks, in plain words. The outline. The Python the blocks write, always on view and read-only: choose the temperature block and lines 11 and 12 light up. The chosen block's settings, with the same block outlined on the widget. "Edit as code" is one button, top right of the code. "Custom block" is how hand-written Python joins without being rewritten.</figcaption></figure>
+<figure><svg class="frame bd" viewBox="0 0 1180 820" role="img" aria-label="Direction B, the Builder on iPad, dark"><use href="#pad3"/></svg>
+<figcaption>B dark. The same drawing. The comments above each statement name the block that wrote it, so the file reads top to bottom like the outline.</figcaption></figure>
+
+<p>Hand-written HTML and SVG. No images, no script, no outside assets. The status bar and tab bar are stand-ins for the system's own. All names, times and numbers on the screens are sample content.</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Direction C, screens 2 and 3: the Builder and the editor (proposal, not approved)</title>
+<style>
+/* Direction C, "creative-first". Hand-written HTML and SVG, no images, no script, system fonts only.
+   .lite = C in light, standing on Paper's colours; .dark = C in dark, standing on Studio's.
+   Copied by value from pywidget/docs/design/tokens.css: every ground, line, text, accent and status colour,
+   the widget card colours and the syntax themes. New in C, and in no token file: the six tile tints
+   (--t-*) in each appearance, the rounded title face in light, the larger type scale, the 28 px corners.
+   Each screen is drawn once in <defs> and shown twice; the appearance comes from the class on the frame. */
+html{color-scheme:light dark}
+body{margin:0;padding:16px 16px 56px;background:#F7F5F0;color:#1C1B19;font:16px/1.5 system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+main{max-width:1180px;margin:0 auto}
+h1{font:700 30px/1.2 ui-rounded,'SF Pro Rounded',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;margin:20px 0 6px}
+h2{font:700 21px/1.25 ui-rounded,'SF Pro Rounded',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;margin:36px 0 10px}
+p,li{max-width:70ch}
+p{margin:0 0 10px}
+ul{margin:0 0 10px;padding-left:20px}
+.mark{display:inline-block;border:1.5px solid #8F5400;color:#8F5400;border-radius:999px;padding:3px 12px;font-weight:600;font-size:14px}
+.phones{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,390px));gap:24px;align-items:start}
+figure{margin:0 0 24px}
+figcaption{font-size:14px;color:#5C5850;margin-top:8px}
+table{border-collapse:collapse;margin:0 0 14px;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:7px 14px 7px 0;border-bottom:1px solid #E3DFD6}
+svg.frame{display:block;width:100%;height:auto}
+svg.pad{max-width:1180px}
+svg.defs{position:absolute;width:0;height:0;overflow:hidden}
+@media (prefers-color-scheme:dark){
+  body{background:#0A0C13;color:#EEF0F8}
+  .mark{border-color:#FFC266;color:#FFC266}
+  figcaption{color:#A9AFC5}
+  th,td{border-color:#262C3E}
+}
+
+/* tokens: approved values first, then C's own tints */
+.lite{--canvas:#F7F5F0;--surface:#FFFFFF;--sunken:#EEEBE4;--editor:#FCFBF8;--console:#F3F1EB;
+  --hair:#E3DFD6;--strong:#C9C4B8;--tx:#1C1B19;--tx2:#5C5850;--tx3:#6A665D;--on:#FFFFFF;
+  --accent:#2350B0;--soft:#E4EBF8;--ok:#1D7442;--warn:#8F5400;
+  --card-primary:#1C1B19;--card-secondary:#5C5850;--card-accent:#2350B0;--card-ground:#EEEBE4;--card-stroke:#E3DFD6;
+  --wfont:ui-serif,'New York',Georgia,serif;--wnum:500;
+  --sx-text:#1C1B19;--sx-comment:#6B675E;--sx-keyword:#8A2F8F;--sx-string:#1D6B40;--sx-number:#9A4500;--sx-function:#2350B0;--sx-builtin:#0B6670;--sx-gutter:#6A665D;--sx-currentLine:#F6F4EE;
+  --t-sky:#DCE8FA;--t-mint:#D9EFE1;--t-sun:#FBEBC8;--t-rose:#F9DDD8;--t-lilac:#E6DFF8;--t-sand:#ECE6D8;
+  --shadow:rgba(28,27,25,.10);--d-l:inline;--d-d:none}
+.dark{--canvas:#0A0C13;--surface:#151926;--sunken:#06070C;--editor:#0E1120;--console:#080A12;
+  --hair:#262C3E;--strong:#394158;--tx:#EEF0F8;--tx2:#A9AFC5;--tx3:#8A91AA;--on:#120A33;
+  --accent:#A08BFF;--soft:#2A2350;--ok:#4FD39A;--warn:#FFC266;
+  --card-primary:#FFFFFF;--card-secondary:rgba(255,255,255,.78);--card-accent:#B0A3FD;--card-ground:rgba(255,255,255,.28);--card-stroke:rgba(255,255,255,.14);
+  --wfont:ui-rounded,'SF Pro Rounded',system-ui,sans-serif;--wnum:600;
+  --sx-text:#E6E9F5;--sx-comment:#9198B5;--sx-keyword:#C59BFF;--sx-string:#7FE3BA;--sx-number:#FFB86E;--sx-function:#72BBFF;--sx-builtin:#FF93B6;--sx-gutter:#8089A6;--sx-currentLine:#151929;
+  --t-sky:#1B2A4A;--t-mint:#16342B;--t-sun:#3A2E14;--t-rose:#3D1F27;--t-lilac:#2A2350;--t-sand:#262A36;
+  --shadow:rgba(0,0,0,0);--d-l:none;--d-d:inline}
+
+/* type: C's scale, one step up from the approved one. Nothing C draws itself is under 13 px;
+   the system tab bar's labels and the text inside a widget keep their own sizes.
+   Inside a <use> copy only single-class selectors are safe (Chromium drops descendant selectors there). */
+svg.frame{fill:var(--tx);font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:17px}
+.lt{font-family:ui-rounded,'SF Pro Rounded',system-ui,sans-serif;font-weight:700;font-size:40px}
+.t1{font-family:ui-rounded,'SF Pro Rounded',system-ui,sans-serif;font-weight:700;font-size:30px}
+.t2{font-family:ui-rounded,'SF Pro Rounded',system-ui,sans-serif;font-weight:700;font-size:24px}
+.hl{font-family:ui-rounded,'SF Pro Rounded',system-ui,sans-serif;font-weight:600;font-size:20px}
+.bd{font-size:19px}
+.sb{font-size:17px}
+.fn{font-size:15px}
+.c1{font-size:13px}
+.tab{font-size:11px;font-weight:500}
+.md{font-weight:500}.sm{font-weight:600}
+.mono{font-family:ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;white-space:pre}
+.num{font-variant-numeric:tabular-nums}
+.end{text-anchor:end}.mid{text-anchor:middle}
+.s{fill:var(--tx2)}
+.t{fill:var(--tx3)}
+.a{fill:var(--accent)}
+.oa{fill:var(--on)}
+.ok{fill:var(--ok)}
+.wn{fill:var(--warn)}
+/* inside a widget: the approved drawing's faces and sizes */
+.hero{font-family:var(--wfont);font-weight:var(--wnum);font-size:46px}
+.w13{font-size:13px}.w12{font-size:12px;font-weight:600}.w11{font-size:11px;font-weight:500}
+.wp{fill:var(--card-primary)}
+.ws{fill:var(--card-secondary)}
+
+/* surfaces and marks */
+.canvas{fill:var(--canvas)}.surface{fill:var(--surface)}.sunken{fill:var(--sunken)}
+.editor{fill:var(--editor)}.console{fill:var(--console);stroke:var(--hair)}
+.tile{fill:var(--surface);stroke:var(--hair)}
+.dash{fill:none;stroke:var(--strong);stroke-width:1.5;stroke-dasharray:6 6}
+.hair{stroke:var(--hair);stroke-width:1;fill:none}
+.acc{fill:var(--accent)}.soft{fill:var(--soft)}.ink{fill:var(--tx)}
+.onfill{fill:var(--on)}
+.onstroke{fill:none;stroke:var(--on);stroke-width:2}
+.ring{fill:none;stroke:var(--accent);stroke-width:3}
+.sky{fill:var(--t-sky)}.mint{fill:var(--t-mint)}.sun{fill:var(--t-sun)}.rose{fill:var(--t-rose)}.lilac{fill:var(--t-lilac)}.sand{fill:var(--t-sand)}
+.sh{fill:var(--shadow)}
+.ico{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.cp{color:var(--tx)}.cs{color:var(--tx2)}.ca{color:var(--accent)}.co{color:var(--on)}
+.wcard{fill:var(--surface);stroke:var(--card-stroke)}
+.wacc{fill:var(--card-accent)}.wgr{fill:var(--card-ground)}
+.wline{fill:none;stroke:var(--card-accent);stroke-width:1.4;stroke-linecap:round}
+.whair{fill:none;stroke:var(--card-ground);stroke-width:1}
+.ol{display:var(--d-l)}.od{display:var(--d-d)}
+.grip{fill:none;stroke:var(--tx3);stroke-width:2;stroke-linecap:round}
+/* code: Quill in light, Lumen in dark, as approved; 15 px, numbers 13 px */
+.cd{font-family:ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;font-size:15px;fill:var(--sx-text);white-space:pre}
+.gu{font-family:ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;font-size:13px;fill:var(--sx-gutter);text-anchor:end}
+.gl{font-family:ui-monospace,Menlo,Consolas,'Roboto Mono',monospace;font-size:13px;fill:var(--sx-text);text-anchor:end}
+.xc{fill:var(--sx-comment)}.xk{fill:var(--sx-keyword)}.xs{fill:var(--sx-string)}.xn{fill:var(--sx-number)}.xf{fill:var(--sx-function)}.xb{fill:var(--sx-builtin)}
+.lit{fill:var(--sx-currentLine)}
+.edcard{fill:var(--editor);stroke:var(--hair)}
+.okline{fill:none;stroke:var(--ok);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+</style>
+</head>
+<body>
+<div role="note" class="rs-proposal" style="position:sticky;top:0;z-index:2147483647;margin:0;padding:6px 10px;background:#7a4b00;color:#fff;font:600 14px/1.4 -apple-system,system-ui,sans-serif;text-align:center">Proposal, not approved: the mock-ups are options for the Investors to review. Nothing here is adopted until the Investors approve it.</div>
+<main>
+<p><span class="mark">Proposal, not approved</span></p>
+<h1>Direction C, screens 2 and 3: the Builder and the editor</h1>
+<p>In direction C the finished thing is on the screen at every step. The Builder comes first on this page because C puts it first: the widget sits on a stage at the top and the blocks are large cards under it. The editor is the same project one tap away, through the Blocks and Code switch or through the round code button on a block. The sample Python and its module names are placeholders, not the app's API. Builder and Project are placeholder names.</p>
+
+<svg class="defs" aria-hidden="true" focusable="false">
+<defs>
+<!-- shared:begin -->
+  <linearGradient id="g-pill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A08BFF"/><stop offset="1" stop-color="#FF9B6A"/></linearGradient>
+  <linearGradient id="g-card" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5B33E6"/><stop offset="1" stop-color="#1E1450"/></linearGradient>
+  <filter id="f-soft" x="-30%" y="-30%" width="160%" height="180%"><feGaussianBlur stdDeviation="7"/></filter>
+  <clipPath id="clip-phone"><rect width="390" height="844" rx="40"/></clipPath>
+  <clipPath id="clip-pad"><rect width="1180" height="820" rx="24"/></clipPath>
+
+  <!-- icons, 22 px box, centred on 0,0; the colour comes from the class on each use -->
+  <g id="i-tiles" class="ico"><rect x="-10" y="-10" width="8.5" height="8.5" rx="2.5"/><rect x="1.5" y="-10" width="8.5" height="8.5" rx="2.5"/><rect x="-10" y="1.5" width="8.5" height="8.5" rx="2.5"/><rect x="1.5" y="1.5" width="8.5" height="8.5" rx="2.5"/></g>
+  <g id="i-stack" class="ico"><rect x="-10" y="-4" width="20" height="14" rx="3.5"/><path d="M-7-7.5H7M-4-11H4"/></g>
+  <g id="i-book" class="ico"><path d="M0-7.5C-3-9.5-7-9.5-10-8.5V7.5C-7 6.5-3 6.5 0 8.5 3 6.5 7 6.5 10 7.5V-8.5C7-9.5 3-9.5 0-7.5ZM0-7.5V8.5"/></g>
+  <g id="i-sliders" class="ico"><path d="M-10-6H-2M4-6H10M-10 6H-4M2 6H10"/><circle cx="1" cy="-6" r="3"/><circle cx="-1" cy="6" r="3"/></g>
+  <g id="i-code" class="ico"><path d="M-4-6L-10 0L-4 6M4-6L10 0L4 6"/></g>
+  <g id="i-search" class="ico"><circle cx="-1.5" cy="-1.5" r="6.5"/><path d="M3.5 3.5L9 9"/></g>
+  <g id="i-plus" class="ico"><path d="M0-8V8M-8 0H8"/></g>
+  <g id="i-back" class="ico"><path d="M3-8L-5 0L3 8"/></g>
+  <g id="i-play" class="ico"><path d="M-5-8L8 0L-5 8Z"/></g>
+  <!-- the code button: one tap from any tile to its Python -->
+  <g id="b-code"><circle class="tile" r="16"/><use href="#i-code" class="cp" transform="scale(.62)"/></g>
+
+  <g id="i-sun"><circle r="2.6" class="wacc"/><path class="wline" d="M0-5.6V-4.4M0 4.4V5.6M-5.6 0H-4.4M4.4 0H5.6M-4-4L-3.1-3.1M3.1 3.1L4 4M-4 4L-3.1 3.1M3.1-3.1L4-4"/></g>
+  <g id="i-cloud"><path class="wacc" d="M-5 3.5a3 3 0 0 1 .4-6 4 4 0 0 1 7.6 1 2.6 2.6 0 0 1-.4 5z"/></g>
+  <g id="i-moon"><path class="wacc" d="M2.5 4.6A5 5 0 0 1 .2-4.9 4 4 0 1 0 4.9 1.4a5 5 0 0 1-2.4 3.2z"/></g>
+
+  <!-- status bars -->
+  <g id="sb-phone">
+    <text class="sb sm" x="42" y="34">9:41</text>
+    <rect class="ink" x="291" y="30" width="3" height="5" rx="1"/><rect class="ink" x="296" y="28" width="3" height="7" rx="1"/><rect class="ink" x="301" y="25.5" width="3" height="9.5" rx="1"/><rect class="ink" x="306" y="23" width="3" height="12" rx="1"/>
+    <path d="M316 28.5a9 9 0 0 1 14 0M318.6 31.2a5.6 5.6 0 0 1 8.8 0" fill="none" stroke="var(--tx)" stroke-width="1.8" stroke-linecap="round"/><circle class="ink" cx="323" cy="34" r="1.4"/>
+    <rect x="338.5" y="23.5" width="24" height="11.5" rx="3.5" fill="none" stroke="var(--tx3)"/><rect class="ink" x="340.5" y="25.5" width="20" height="7.5" rx="2"/>
+  </g>
+  <g id="sb-pad">
+    <text class="c1 sm" x="28" y="22">9:41</text><text class="c1 s" x="66" y="22">Fri 13 Nov</text>
+    <rect x="1128.5" y="11.5" width="24" height="11.5" rx="3.5" fill="none" stroke="var(--tx3)"/><rect class="ink" x="1130.5" y="13.5" width="20" height="7.5" rx="2"/>
+  </g>
+
+  <!-- the widgets, at their own size and in the approved look; tiles show them smaller -->
+  <g id="w-weather-s">
+    <rect class="sh" y="4" width="158" height="158" rx="22" filter="url(#f-soft)"/>
+    <rect class="wcard" width="158" height="158" rx="22"/><rect class="od" width="158" height="158" rx="22" fill="url(#g-card)"/>
+    <text class="w12 ws" x="16" y="32">Home</text>
+    <text class="hero wp num" x="14" y="88">18°</text>
+    <text class="w13 wp" x="16" y="116">Mostly sunny</text>
+    <text class="w11 ws" x="16" y="134">H 19° · L 11°</text>
+  </g>
+  <g id="w-weather-m">
+    <rect class="sh" y="4" width="338" height="158" rx="22" filter="url(#f-soft)"/>
+    <rect class="wcard" width="338" height="158" rx="22"/><rect class="od" width="338" height="158" rx="22" fill="url(#g-card)"/>
+    <text class="w12 ws" x="16" y="32">Home</text>
+    <text class="hero wp num" x="14" y="88">18°</text>
+    <text class="w13 wp" x="16" y="116">Mostly sunny</text>
+    <text class="w11 ws" x="16" y="134">H 19° · L 11°</text>
+    <text class="w11 ws mid" x="172" y="38">Now</text><text class="w11 ws mid" x="201" y="38">13</text><text class="w11 ws mid" x="230" y="38">14</text><text class="w11 ws mid" x="259" y="38">15</text><text class="w11 ws mid" x="288" y="38">16</text><text class="w11 ws mid" x="317" y="38">17</text>
+    <use href="#i-sun" x="172" y="58"/><use href="#i-sun" x="201" y="58"/><use href="#i-sun" x="230" y="58"/><use href="#i-sun" x="259" y="58"/><use href="#i-cloud" x="288" y="58"/><use href="#i-moon" x="317" y="58"/>
+    <text class="w12 wp mid num" x="172" y="86">18°</text><text class="w12 wp mid num" x="201" y="86">19°</text><text class="w12 wp mid num" x="230" y="86">19°</text><text class="w12 wp mid num" x="259" y="86">18°</text><text class="w12 wp mid num" x="288" y="86">16°</text><text class="w12 wp mid num" x="317" y="86">14°</text>
+    <path class="whair" d="M160 106.5H322"/>
+    <text class="w11 ws" x="160" y="134">Cloud from 16:00</text>
+  </g>
+  <g id="w-habit-s">
+    <rect class="sh" y="4" width="158" height="158" rx="22" filter="url(#f-soft)"/>
+    <rect class="wcard" width="158" height="158" rx="22"/><rect class="od" width="158" height="158" rx="22" fill="url(#g-card)"/>
+    <text class="w12 ws" x="16" y="32">Read 20 min</text>
+    <text class="hero wp num" x="14" y="88">5</text>
+    <text class="w13 wp" x="16" y="114">of 7 days</text>
+    <circle class="wacc" cx="22" cy="136" r="6"/><circle class="wacc" cx="41" cy="136" r="6"/><circle class="wacc" cx="60" cy="136" r="6"/><circle class="wacc" cx="79" cy="136" r="6"/><circle class="wacc" cx="98" cy="136" r="6"/><circle class="wgr" cx="117" cy="136" r="6"/><circle class="wgr" cx="136" cy="136" r="6"/>
+  </g>
+  <g id="w-trip-s">
+    <rect class="sh" y="4" width="158" height="158" rx="22" filter="url(#f-soft)"/>
+    <rect class="wcard" width="158" height="158" rx="22"/><rect class="od" width="158" height="158" rx="22" fill="url(#g-card)"/>
+    <text class="w12 ws" x="16" y="32">Lisbon</text>
+    <text class="hero wp num" x="14" y="88">12</text>
+    <text class="w13 wp" x="16" y="114">days to go</text>
+    <rect class="wgr" x="16" y="131" width="126" height="6" rx="3"/><rect class="wacc" x="16" y="131" width="88" height="6" rx="3"/>
+  </g>
+  <g id="w-moon-s">
+    <rect class="sh" y="4" width="158" height="158" rx="22" filter="url(#f-soft)"/>
+    <rect class="wcard" width="158" height="158" rx="22"/><rect class="od" width="158" height="158" rx="22" fill="url(#g-card)"/>
+    <text class="w12 ws" x="16" y="32">Moon</text>
+    <circle class="wgr" cx="128" cy="30" r="12"/><path class="wacc" d="M128 18a12 12 0 0 1 0 24a6 12 0 0 0 0-24z"/>
+    <text class="hero wp num" x="14" y="88">62%</text>
+    <text class="w13 wp" x="16" y="114">Waxing gibbous</text>
+    <text class="w11 ws" x="16" y="134">Full in 5 days</text>
+  </g>
+  <!-- a script's picture is its last lines -->
+  <g id="th-console">
+    <rect class="console" width="158" height="158" rx="22"/>
+    <text class="w12 s" x="16" y="32">Console</text>
+    <text class="mono fn num" x="16" y="68">Dune     412</text>
+    <text class="mono fn num" x="16" y="92">Emma     320</text>
+    <text class="mono fn num ok" x="16" y="116">Total    732</text>
+  </g>
+<!-- shared:end -->
+
+  <!-- bars inside a tool: the tool fills the screen, so the tab bar gives way -->
+  <g id="bar-phone">
+    <use href="#sb-phone"/>
+    <circle class="tile" cx="42" cy="82" r="22"/><use href="#i-back" class="cp" x="42" y="82"/>
+    <rect class="sunken" x="111" y="62" width="168" height="40" rx="20"/>
+    <circle class="tile" cx="348" cy="82" r="22"/><circle class="ink" cx="340" cy="82" r="2"/><circle class="ink" cx="348" cy="82" r="2"/><circle class="ink" cx="356" cy="82" r="2"/>
+  </g>
+  <g id="bottom-phone">
+    <rect class="surface" y="762" width="390" height="82"/><path class="hair" d="M0 762.5H390"/>
+    <rect class="acc" x="20" y="772" width="350" height="50" rx="25"/><rect class="od" x="20" y="772" width="350" height="50" rx="25" fill="url(#g-pill)"/>
+    <rect class="ink" x="128" y="831" width="134" height="5" rx="2.5"/>
+  </g>
+  <g id="bar-pad">
+    <use href="#sb-pad"/>
+    <circle class="tile" cx="54" cy="64" r="22"/><use href="#i-back" class="cp" x="54" y="64"/>
+    <text class="hl" x="90" y="71">Weather</text>
+    <rect class="sunken" x="494" y="42" width="192" height="44" rx="22"/>
+  </g>
+
+  <!-- the blocks of the Today widget, as cards 350 wide; the third is chosen and open -->
+  <g id="blocks-stack">
+    <rect class="sand" width="350" height="56" rx="20"/><circle class="surface" cx="28" cy="28" r="16"/><use href="#i-cloud" transform="translate(28 28) scale(1.5)"/>
+    <text class="sb sm" x="56" y="24">Local weather</text><text class="c1 s" x="56" y="43">Data · place, now, hours</text><path class="grip" d="M314 22H330M314 28H330M314 34H330"/>
+    <rect class="mint" y="66" width="350" height="56" rx="20"/><circle class="surface" cx="28" cy="94" r="16"/><text class="c1 sm mid" x="28" y="99">T</text>
+    <text class="sb sm" x="56" y="90">Text</text><text class="c1 s" x="56" y="109">Place name</text><path class="grip" d="M314 88H330M314 94H330M314 100H330"/>
+    <rect class="sun" y="132" width="350" height="150" rx="20"/><rect class="ring" x="1.5" y="133.5" width="347" height="147" rx="19"/>
+    <circle class="surface" cx="28" cy="160" r="16"/><text class="c1 sm mid" x="28" y="165">18</text>
+    <text class="sb sm" x="56" y="156">Big number</text><text class="c1 s" x="56" y="175">Temperature now</text><use href="#b-code" x="322" y="160"/>
+    <text class="fn" x="20" y="215">Shows</text><rect class="tile" x="170" y="192" width="164" height="36" rx="18"/><text class="c1 sm mid" x="252" y="215">Temperature now</text>
+    <text class="fn" x="20" y="257">Tint with the Home Screen</text><rect class="acc" x="286" y="238" width="48" height="30" rx="15"/><circle class="onfill" cx="319" cy="253" r="12"/>
+    <rect class="mint" y="292" width="350" height="56" rx="20"/><circle class="surface" cx="28" cy="320" r="16"/><text class="c1 sm mid" x="28" y="325">T</text>
+    <text class="sb sm" x="56" y="316">Text</text><text class="c1 s" x="56" y="335">Summary</text><path class="grip" d="M314 314H330M314 320H330M314 326H330"/>
+    <rect class="lilac" y="358" width="350" height="56" rx="20"/><circle class="surface" cx="28" cy="386" r="16"/><circle class="ink" cx="21" cy="386" r="2"/><circle class="ink" cx="28" cy="386" r="2"/><circle class="ink" cx="35" cy="386" r="2"/>
+    <text class="sb sm" x="56" y="382">Row of hours</text><text class="c1 s" x="56" y="401">Medium only</text><path class="grip" d="M314 380H330M314 386H330M314 392H330"/>
+  </g>
+
+  <!-- iPad: the stage holds both sizes at real size -->
+  <g id="stage-pad">
+    <rect class="sky" width="422" height="370" rx="28"/>
+    <use href="#w-weather-s" x="132" y="16"/><use href="#w-weather-m" x="42" y="192"/>
+  </g>
+  <g id="stage-rings"><rect class="ring" x="141" y="69" width="88" height="44" rx="10"/><rect class="ring" x="51" y="245" width="88" height="44" rx="10"/></g>
+  <g id="fits">
+    <rect class="tile" width="422" height="60" rx="22"/><path class="okline" d="M22 30l7 7 13-14"/>
+    <text class="fn sm" x="56" y="35">Fits small and medium</text><text class="c1 s end" x="402" y="35">Sample data</text>
+  </g>
+
+  <!-- the Python the blocks produce, lines 6 to 12; the chosen block's lines are lit -->
+  <g id="code-today">
+    <rect class="lit" x="1" y="55" width="420" height="72"/><rect class="acc" x="1" y="55" width="3" height="72"/>
+    <text class="gu" x="30" y="24">6</text><text class="cd" x="42" y="24">    now = data[<tspan class="xs">"now"</tspan>]</text>
+    <text class="gu" x="30" y="48">7</text><text class="cd" x="42" y="48">    <tspan class="xk">return</tspan> ui.stack(</text>
+    <text class="gl" x="30" y="72">8</text><text class="cd" x="42" y="72">        <tspan class="xc"># Big number: temperature now</tspan></text>
+    <text class="gl" x="30" y="96">9</text><text class="cd" x="42" y="96">        ui.text(now[<tspan class="xs">"temp"</tspan>],</text>
+    <text class="gl" x="30" y="120">10</text><text class="cd" x="42" y="120">            style=<tspan class="xs">"hero"</tspan>, tint=<tspan class="xk">True</tspan>),</text>
+    <text class="gu" x="30" y="144">11</text><text class="cd" x="42" y="144">        <tspan class="xc"># Text: summary</tspan></text>
+    <text class="gu" x="30" y="168">12</text><text class="cd" x="42" y="168">        ui.text(now[<tspan class="xs">"summary"</tspan>],</text>
+  </g>
+  <!-- a file the person wrote: sources/weather.py -->
+  <g id="code-weather">
+    <text class="gu" x="28" y="26">1</text><text class="cd" x="40" y="26"><tspan class="xk">import</tspan> pywidget</text>
+    <text class="gu" x="28" y="52">2</text>
+    <text class="gu" x="28" y="78">3</text><text class="cd" x="40" y="78">PLACE = <tspan class="xs">"Home"</tspan></text>
+    <text class="gu" x="28" y="104">4</text>
+    <text class="gu" x="28" y="130">5</text><text class="cd" x="40" y="130"><tspan class="xk">def</tspan> <tspan class="xf">read</tspan>():</text>
+    <text class="gu" x="28" y="156">6</text><text class="cd" x="40" y="156">    w = pywidget.weather(PLACE)</text>
+    <text class="gu" x="28" y="182">7</text><text class="cd" x="40" y="182">    <tspan class="xk">return</tspan> {</text>
+    <text class="gu" x="28" y="208">8</text><text class="cd" x="40" y="208">        <tspan class="xs">"place"</tspan>: PLACE,</text>
+    <text class="gu" x="28" y="234">9</text><text class="cd" x="40" y="234">        <tspan class="xs">"now"</tspan>: w.now,</text>
+    <text class="gu" x="28" y="260">10</text><text class="cd" x="40" y="260">        <tspan class="xs">"hours"</tspan>: w.hours[:<tspan class="xn">6</tspan>],</text>
+    <text class="gu" x="28" y="286">11</text><text class="cd" x="40" y="286">    }</text>
+  </g>
+
+  <g id="builder-phone">
+    <g clip-path="url(#clip-phone)">
+      <rect class="canvas" width="390" height="844"/>
+      <use href="#bar-phone"/>
+      <rect class="tile" x="115" y="66" width="82" height="32" rx="16"/><text class="fn sm mid" x="156" y="87">Blocks</text><text class="fn s mid" x="236" y="87">Code</text>
+      <!-- the stage: the finished thing first -->
+      <rect class="sky" x="20" y="118" width="350" height="180" rx="28"/>
+      <use href="#w-weather-s" x="36" y="129"/><rect class="ring" x="45" y="182" width="88" height="44" rx="10"/>
+      <text class="hl" x="214" y="156">Today</text><text class="c1 s" x="214" y="176">Widget · live</text>
+      <rect class="soft" x="214" y="190" width="68" height="44" rx="22"/><text class="c1 sm a mid" x="248" y="217">Small</text>
+      <rect class="tile" x="288" y="190" width="72" height="44" rx="22"/><text class="c1 sm mid" x="324" y="217">Medium</text>
+      <text class="c1 s" x="214" y="260">The ring marks the</text><text class="c1 s" x="214" y="278">block you chose.</text>
+      <text class="hl" x="20" y="330">What it shows</text><text class="c1 s end" x="370" y="330">5 blocks, top to bottom</text>
+      <use href="#blocks-stack" x="20" y="342"/>
+      <use href="#bottom-phone"/>
+      <use href="#i-plus" class="co" transform="translate(142 797) scale(.8)"/><text class="sb sm oa mid" x="205" y="803">Add a block</text>
+    </g>
+  </g>
+
+  <g id="builder-pad">
+    <g clip-path="url(#clip-pad)">
+      <rect class="canvas" width="1180" height="820"/>
+      <use href="#bar-pad"/>
+      <rect class="tile" x="498" y="46" width="92" height="36" rx="18"/><text class="fn sm mid" x="544" y="69">Blocks</text><text class="fn s mid" x="636" y="69">Code</text>
+      <rect class="acc" x="960" y="42" width="188" height="44" rx="22"/><rect class="od" x="960" y="42" width="188" height="44" rx="22" fill="url(#g-pill)"/><text class="fn sm oa mid" x="1054" y="69">Add to Home Screen</text>
+      <!-- the blocks to pick from, as tiles -->
+      <text class="hl" x="32" y="132">Add a block</text>
+      <rect class="sand" x="32" y="148" width="132" height="76" rx="20"/><circle class="surface" cx="56" cy="172" r="14"/><use href="#i-cloud" transform="translate(56 172) scale(1.4)"/><text class="c1 sm" x="46" y="210">Local weather</text>
+      <rect class="sand" x="180" y="148" width="132" height="76" rx="20"/><circle class="surface" cx="204" cy="172" r="14"/><text class="tab mid" x="204" y="176">31</text><text class="c1 sm" x="194" y="210">Calendar</text>
+      <rect class="mint" x="32" y="236" width="132" height="76" rx="20"/><circle class="surface" cx="56" cy="260" r="14"/><text class="c1 sm mid" x="56" y="265">T</text><text class="c1 sm" x="46" y="298">Text</text>
+      <rect class="sun" x="180" y="236" width="132" height="76" rx="20"/><circle class="surface" cx="204" cy="260" r="14"/><text class="tab mid" x="204" y="264">18</text><text class="c1 sm" x="194" y="298">Big number</text>
+      <rect class="lilac" x="32" y="324" width="132" height="76" rx="20"/><circle class="surface" cx="56" cy="348" r="14"/><circle class="ink" cx="50" cy="348" r="1.8"/><circle class="ink" cx="56" cy="348" r="1.8"/><circle class="ink" cx="62" cy="348" r="1.8"/><text class="c1 sm" x="46" y="386">Row of hours</text>
+      <rect class="rose" x="180" y="324" width="132" height="76" rx="20"/><circle class="surface" cx="204" cy="348" r="14"/><use href="#i-sun" transform="translate(204 348) scale(1.5)"/><text class="c1 sm" x="194" y="386">Symbol</text>
+      <rect class="sky" x="32" y="412" width="132" height="76" rx="20"/><circle class="surface" cx="56" cy="436" r="14"/><rect class="acc" x="48" y="433.5" width="16" height="5" rx="2.5"/><text class="c1 sm" x="46" y="474">Bar</text>
+      <rect class="tile" x="180" y="412" width="132" height="76" rx="20"/><circle class="soft" cx="204" cy="436" r="14"/><use href="#i-code" class="ca" transform="translate(204 436) scale(.6)"/><text class="c1 sm" x="194" y="474">Your Python</text>
+      <text class="c1 s" x="32" y="516">Your Python is a file of your own.</text><text class="c1 s" x="32" y="534">The Builder shows it as one block.</text>
+      <rect class="tile" x="32" y="556" width="280" height="60" rx="20"/><use href="#i-stack" class="ca" transform="translate(60 586) scale(.85)"/><text class="fn sm" x="84" y="591">Parts from the Gallery</text>
+      <!-- the widget's blocks -->
+      <text class="t2" x="344" y="132">Today</text><text class="c1 s end" x="694" y="132">5 blocks, top to bottom</text>
+      <use href="#blocks-stack" x="344" y="148"/>
+      <rect class="dash" x="344.75" y="572.75" width="348.5" height="54.5" rx="20"/><text class="c1 s mid" x="519" y="605">Drop a block here</text>
+      <!-- the stage, and the Python under it -->
+      <use href="#stage-pad" x="726" y="100"/><use href="#stage-rings" x="726" y="100"/>
+      <rect class="edcard" x="726" y="486" width="422" height="234" rx="22"/>
+      <use href="#i-code" class="cs" transform="translate(754 514) scale(.8)"/><text class="c1 sm" x="774" y="519">Python, read only</text><text class="c1 sm a end" x="1128" y="519">Edit as code</text>
+      <use href="#code-today" x="726" y="528"/>
+      <use href="#fits" x="726" y="736"/>
+    </g>
+  </g>
+
+  <g id="editor-phone">
+    <g clip-path="url(#clip-phone)">
+      <rect class="canvas" width="390" height="844"/>
+      <use href="#bar-phone"/>
+      <rect class="tile" x="197" y="66" width="78" height="32" rx="16"/><text class="fn s mid" x="156" y="87">Blocks</text><text class="fn sm mid" x="236" y="87">Code</text>
+      <!-- files as pills; the row scrolls sideways -->
+      <rect class="soft" x="20" y="116" width="104" height="40" rx="20"/><text class="fn sm a mid" x="72" y="141">weather.py</text>
+      <rect class="tile" x="132" y="116" width="92" height="40" rx="20"/><text class="fn mid" x="178" y="141">today.py</text>
+      <rect class="tile" x="232" y="116" width="160" height="40" rx="20"/><text class="fn" x="250" y="141">today.blocks.json</text>
+      <text class="c1 s" x="20" y="180">sources/weather.py · used by the Today widget</text>
+      <rect class="edcard" x="12" y="192" width="366" height="368" rx="22"/>
+      <use href="#code-weather" x="12" y="200"/>
+      <!-- the finished thing stays in view: a floating live picture, 62% of real size -->
+      <use href="#w-weather-s" transform="translate(268 496) scale(.62)"/>
+      <rect class="console" x="12" y="606" width="366" height="96" rx="22"/>
+      <text class="c1 s" x="32" y="634">Console</text><text class="mono fn" x="32" y="660">run 14 · 0.21 s</text><text class="mono fn ok" x="32" y="684">6 hours returned</text>
+      <use href="#bottom-phone"/>
+      <use href="#i-play" class="co" transform="translate(172 797) scale(.7)"/><text class="sb sm oa mid" x="203" y="803">Run</text>
+    </g>
+  </g>
+
+  <g id="editor-pad">
+    <g clip-path="url(#clip-pad)">
+      <rect class="canvas" width="1180" height="820"/>
+      <use href="#bar-pad"/>
+      <rect class="tile" x="590" y="46" width="92" height="36" rx="18"/><text class="fn s mid" x="544" y="69">Blocks</text><text class="fn sm mid" x="636" y="69">Code</text>
+      <rect class="acc" x="1040" y="42" width="108" height="44" rx="22"/><rect class="od" x="1040" y="42" width="108" height="44" rx="22" fill="url(#g-pill)"/><use href="#i-play" class="co" transform="translate(1076 64) scale(.7)"/><text class="fn sm oa" x="1092" y="69">Run</text>
+      <!-- files as cards -->
+      <text class="hl" x="32" y="132">Files</text>
+      <rect class="tile" x="32" y="148" width="280" height="60" rx="20"/><use href="#i-code" class="cs" transform="translate(60 178) scale(.7)"/><text class="fn sm" x="84" y="174">today.py</text><text class="c1 s" x="84" y="193">views · made by blocks, read only</text>
+      <rect class="soft" x="32" y="218" width="280" height="60" rx="20"/><rect class="ring" x="33.5" y="219.5" width="277" height="57" rx="19"/><use href="#i-code" class="ca" transform="translate(60 248) scale(.7)"/><text class="fn sm" x="84" y="244">weather.py</text><text class="c1 s" x="84" y="263">sources · yours</text>
+      <rect class="tile" x="32" y="288" width="280" height="60" rx="20"/><use href="#i-tiles" class="cs" transform="translate(60 318) scale(.7)"/><text class="fn sm" x="84" y="314">today.blocks.json</text><text class="c1 s" x="84" y="333">blocks · the Builder's document</text>
+      <rect class="tile" x="32" y="358" width="280" height="60" rx="20"/><use href="#i-sliders" class="cs" transform="translate(60 388) scale(.7)"/><text class="fn sm" x="84" y="384">pywidget.json</text><text class="c1 s" x="84" y="403">what the project touches</text>
+      <rect class="dash" x="32.75" y="428.75" width="278.5" height="54.5" rx="20"/><use href="#i-plus" class="ca" transform="translate(60 456) scale(.7)"/><text class="fn sm a" x="84" y="461">New file</text>
+      <!-- the editor and the console -->
+      <rect class="edcard" x="344" y="100" width="350" height="440" rx="22"/>
+      <text class="c1 sm" x="364" y="130">sources/weather.py</text><text class="c1 s end" x="674" y="130">yours</text>
+      <use href="#code-weather" x="344" y="140"/>
+      <rect class="console" x="344" y="556" width="350" height="104" rx="22"/>
+      <text class="c1 s" x="364" y="584">Console</text><text class="mono fn" x="364" y="612">run 14 · 0.21 s</text><text class="mono fn ok" x="364" y="638">6 hours returned</text>
+      <!-- the stage, and who uses this file -->
+      <use href="#stage-pad" x="726" y="100"/>
+      <rect class="tile" x="726" y="486" width="422" height="112" rx="28"/>
+      <text class="hl" x="750" y="522">Used by</text><text class="fn" x="750" y="550">Today widget</text><text class="fn s" x="750" y="576">Forecast page · planned for 1.1</text>
+      <use href="#fits" x="726" y="614"/>
+    </g>
+  </g>
+</defs>
+</svg>
+
+<h2>The Builder, iPhone, 390 wide</h2>
+<div class="phones">
+<figure>
+  <svg class="frame lite" viewBox="0 0 390 844" role="img" aria-label="The Builder on iPhone in direction C, light: the Today widget on a stage at the top, five block cards under it, the Big number block open with its two settings, and an Add a block button."><use href="#builder-phone"/></svg>
+  <figcaption>The Builder, iPhone, C in light. Proposal, not approved.</figcaption>
+</figure>
+<figure>
+  <svg class="frame dark" viewBox="0 0 390 844" role="img" aria-label="The Builder on iPhone in direction C, dark."><use href="#builder-phone"/></svg>
+  <figcaption>The Builder, iPhone, C in dark. Proposal, not approved.</figcaption>
+</figure>
+</div>
+<p>What to look at:</p>
+<ul>
+<li>The widget is at the top, at real size, and stays there while the blocks scroll under it. Direction A rests the preview at the bottom.</li>
+<li>Choosing a block rings its part of the widget. A lights the block's Python lines; C lights the picture, and keeps the Python one tap away.</li>
+<li>Blocks are cards 56 px high, tinted by kind: data, text, number, row. The chosen card opens in place with its settings.</li>
+<li>Two ways to code, each one tap: the Blocks and Code switch for the whole file, and the round button on the chosen block for its own lines.</li>
+<li>Inside a tool the tab bar gives way to one large button. 03's phone sketch keeps the tab bar; C does not.</li>
+</ul>
+
+<h2>The Builder, iPad</h2>
+<p>Three columns: the blocks to pick from as tiles, the widget's own blocks, and the stage with both sizes at real size. The Python the blocks produce sits under the stage, read only, with the chosen block's three lines lit and "Edit as code" beside it. "Your Python" is 03's custom block: a file the person wrote, shown as one block.</p>
+<figure>
+  <svg class="frame pad lite" viewBox="0 0 1180 820" role="img" aria-label="The Builder on iPad in direction C, light: block tiles on the left, the widget's five block cards in the middle, and on the right a stage with the small and medium widget and the read-only Python under it."><use href="#builder-pad"/></svg>
+  <figcaption>The Builder, iPad, C in light. Proposal, not approved.</figcaption>
+</figure>
+<figure>
+  <svg class="frame pad dark" viewBox="0 0 1180 820" role="img" aria-label="The Builder on iPad in direction C, dark."><use href="#builder-pad"/></svg>
+  <figcaption>The Builder, iPad, C in dark. Proposal, not approved.</figcaption>
+</figure>
+
+<h2>The editor, iPhone, 390 wide</h2>
+<div class="phones">
+<figure>
+  <svg class="frame lite" viewBox="0 0 390 844" role="img" aria-label="The editor on iPhone in direction C, light, Quill syntax theme: file pills, eleven lines of Python on a card, a small live picture of the widget floating at the lower right, the console, and a Run button."><use href="#editor-phone"/></svg>
+  <figcaption>The editor, iPhone, C in light, Quill syntax theme. Proposal, not approved.</figcaption>
+</figure>
+<figure>
+  <svg class="frame dark" viewBox="0 0 390 844" role="img" aria-label="The editor on iPhone in direction C, dark, Lumen syntax theme."><use href="#editor-phone"/></svg>
+  <figcaption>The editor, iPhone, C in dark, Lumen syntax theme. Proposal, not approved.</figcaption>
+</figure>
+</div>
+<p>What to look at:</p>
+<ul>
+<li>The code is the approved editor: Quill in light, Lumen in dark, 15 px, nothing restyled. C changes what is around it.</li>
+<li>Files are pills in a row that scrolls sideways. The line under them says which outputs use the open file.</li>
+<li>The widget floats over the editor as a small live picture and redraws on each run. It can be dragged, and a tap opens the full preview. 03 has a sheet pulled up from the bottom; C departs here, and the cost is that the picture covers 98 by 98 px of the screen.</li>
+<li>Run is one large button at the bottom, in the same place as "Add a block" in the Builder.</li>
+</ul>
+
+<h2>The editor, iPad</h2>
+<p>The same three columns as the Builder, so the switch moves nothing: files as cards on the left, the editor and console in the middle, the stage on the right. Under the stage, "Used by" says which outputs read the open file.</p>
+<figure>
+  <svg class="frame pad lite" viewBox="0 0 1180 820" role="img" aria-label="The editor on iPad in direction C, light: file cards on the left, the Python editor and console in the middle, and the stage with both widget sizes on the right."><use href="#editor-pad"/></svg>
+  <figcaption>The editor, iPad, C in light. Proposal, not approved.</figcaption>
+</figure>
+<figure>
+  <svg class="frame pad dark" viewBox="0 0 1180 820" role="img" aria-label="The editor on iPad in direction C, dark."><use href="#editor-pad"/></svg>
+  <figcaption>The editor, iPad, C in dark. Proposal, not approved.</figcaption>
+</figure>
+
+<h2>Where these screens depart, and what they keep</h2>
+<ul>
+<li>Kept: the syntax themes, the editor and console grounds, the Blocks and Code switch, read-only generated Python with "Edit as code", hand-written code as one block, every approved colour. The full table is on <a href="1-projects.html">screen 1</a>.</li>
+<li>Departs from the approved drawings: the editor sits on a rounded card with room around it, where the approved editor runs edge to edge. The file list is pills and cards, not a tree.</li>
+<li>Departs from 03: no tab bar inside a tool on iPhone; a floating picture in place of the pull-up sheet; on iPad the Python sits under the stage, smaller, not beside the blocks.</li>
+<li>New here and in no token file: the tile tints on block cards, one tint for each kind of block.</li>
+</ul>
+
+</main>
+</body>
+</html>

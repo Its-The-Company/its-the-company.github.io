@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T03:08:39.434912+00:00",
+ "at": "2026-11-13T03:11:40.406656+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -117,31 +117,29 @@
    "task": "[site] T-4230 Restructuring on Documents",
    "model": "opus",
    "started": "2026-11-13T02:17:14.265Z",
-   "seconds": 3085,
+   "seconds": 3266,
    "finished": null,
    "effort": "high"
-  },
+  }
+ ],
+ "who": "Odalys",
+ "recent": [
   {
    "name": "odalys",
    "task": "[tools] T-4232 Double Spread usage mode",
    "model": "opus",
    "started": "2026-11-13T02:17:34.315Z",
-   "seconds": 3065,
-   "finished": null,
-   "effort": "high"
+   "seconds": null,
+   "finished": "2026-11-13T03:11:26.139000+00:00"
   },
   {
    "name": "odalys",
    "task": "[tools] T-4235 full window before Fable pause",
    "model": "opus",
    "started": "2026-11-13T02:45:29.692Z",
-   "seconds": 1389,
-   "finished": null,
-   "effort": "high"
-  }
- ],
- "who": "Odalys x3",
- "recent": [
+   "seconds": null,
+   "finished": "2026-11-13T03:09:08.753000+00:00"
+  },
   {
    "name": "idris",
    "task": "[build] T-3764 iPad window test red without fix",
@@ -157,20 +155,12 @@
    "started": "2026-11-13T02:18:02.993Z",
    "seconds": null,
    "finished": "2026-11-13T02:51:05.635000+00:00"
-  },
-  {
-   "name": "idris",
-   "task": "[fix] T-4229 writer test failed on MacBook",
-   "model": "opus",
-   "started": "2026-11-13T02:17:49.620Z",
-   "seconds": null,
-   "finished": "2026-11-13T02:17:49.705Z"
   }
  ],
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 575,
+  "runnable_count": 576,
   "blocked_count": 104
  },
  "meter": {
@@ -219,7 +209,7 @@
   "week_pct": 39.76,
   "usage_pct": 32.4,
   "work_pct": 79.4,
-  "read_at": "2026-11-13T03:08:00+00:00",
+  "read_at": "2026-11-13T03:11:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -256,7 +246,7 @@
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T22:08:00-05:00",
+  "at": "2026-11-12T22:11:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -328,26 +318,6 @@
     "at": "2026-11-13T02:17:14.265Z",
     "o": "i",
     "task": "T-4230"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Add a Double Spread usage mode, chosen on Home",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T02:17:34.315Z",
-    "o": "c",
-    "task": "T-4232"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Use each account's full window before the Fable pause",
-    "m": "opus",
-    "e": "high",
-    "at": "2026-11-13T02:45:29.692Z",
-    "o": "c",
-    "task": "T-4235"
    }
   ],
   "src": "plan",
@@ -377,6 +347,13 @@
     "w": "Odalys",
     "k": "ops",
     "t": "Prune stale tasks from the board",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Idris",
+    "k": "tools",
+    "t": "Clear the main gate red from a tester script...",
     "s": "next",
     "o": "c"
    },
@@ -414,13 +391,6 @@
     "t": "Run the Restructuring on Evan's account",
     "s": "next",
     "o": "i"
-   },
-   {
-    "w": "Odalys",
-    "k": "tools",
-    "t": "Retire the Set aside stage on Home",
-    "s": "next",
-    "o": "i"
    }
   ],
   "done": [
@@ -441,7 +411,7 @@
    }
   ],
   "count": {
-   "next": 575,
+   "next": 576,
    "wait": 39,
    "blocked": 65,
    "you": 18
@@ -503,33 +473,20 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T03:08:19Z",
+  "at": "2026-11-13T03:11:34Z",
   "s": {
-   "T-4232": [
-    "merging",
-    "Mac tests at the main gate",
-    1794539179832
-   ],
    "T-4230": [
     "testing",
     "its own tests, in its copy",
-    1794536779832
-   ],
-   "T-4235": [
-    "merged",
-    "on main 10:08 PM ET",
-    1794539297000,
-    ""
+    1794536794691
    ]
   },
   "nm": {
-   "T-4232": "Add a Double Spread usage mode, chosen on Home",
-   "T-4230": "Show the Restructuring folder on the Documents page",
-   "T-4235": "Use each account's full window before the Fable pause"
+   "T-4230": "Show the Restructuring folder on the Documents page"
   }
  },
  "ln": {
-  "at": "2026-11-13T03:08:19Z",
+  "at": "2026-11-13T03:11:34Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -543,11 +500,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 657,
+    "conflicted": 660,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 735
+    "parked": 738
    },
    "cur": [],
    "ld": [
@@ -557,8 +514,8 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T03:08:20Z",
-    "ld": 3.69,
+    "at": "2026-11-13T03:11:10Z",
+    "ld": 2.53,
     "c": 8,
     "sb": 0,
     "dk": [
@@ -591,7 +548,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 5 tasks",
+   "t": "Work session \u2013 2 tasks",
    "at": "2026-11-12T21:53:15-05:00"
   }
  ],
@@ -603,6 +560,7 @@
  "trimmed": [
   "lane_next",
   "queue_text",
+  "recent",
   "task_done",
   "fin_short",
   "task_title",
@@ -612,13 +570,13 @@
   "task_next"
  ],
  "agents_now": {
-  "main": 3,
+  "main": 1,
   "lanes": 0,
-  "total": 3,
-  "at": "10:08 PM",
+  "total": 1,
+  "at": "10:11 PM",
   "why": "",
-  "at_iso": "2026-11-13T03:08:00+00:00",
+  "at_iso": "2026-11-13T03:11:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:08 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>1</b> agent running now</p><p class=\"an-sub\">Main session 1, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 10:11 PM ET</p></section>"
  }
 }

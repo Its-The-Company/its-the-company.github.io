@@ -1,6 +1,6 @@
 {
  "schema": 1,
- "at": "2026-11-13T02:35:00.589783+00:00",
+ "at": "2026-11-13T02:38:02.537317+00:00",
  "session": {
   "active": true,
   "kind": "work",
@@ -128,7 +128,7 @@
    "task": "[site] T-4230 Restructuring on Documents",
    "model": "opus",
    "started": "2026-11-13T02:17:14.265Z",
-   "seconds": 1066,
+   "seconds": 1248,
    "finished": null,
    "effort": "high"
   },
@@ -137,7 +137,7 @@
    "task": "[tools] T-4232 Double Spread usage mode",
    "model": "opus",
    "started": "2026-11-13T02:17:34.315Z",
-   "seconds": 1046,
+   "seconds": 1228,
    "finished": null,
    "effort": "high"
   },
@@ -146,7 +146,7 @@
    "task": "[build] T-4229 writer test failed on MacBook",
    "model": "opus",
    "started": "2026-11-13T02:18:02.993Z",
-   "seconds": 1017,
+   "seconds": 1199,
    "finished": null,
    "effort": "high"
   }
@@ -165,24 +165,24 @@
  "queue": {
   "runnable": [],
   "blocked": [],
-  "runnable_count": 575,
+  "runnable_count": 576,
   "blocked_count": 104
  },
  "meter": {
   "five_hour": {
-   "pct": 23.0,
+   "pct": 24.0,
    "resets_at": "2026-11-12T22:00:00-05:00",
    "used_words": "of your 5-hour allowance used",
-   "read_at": "2026-11-12T21:24:46.893105-05:00",
+   "read_at": "2026-11-12T21:37:10.289948-05:00",
    "source": "live",
-   "left": 77.0,
+   "left": 76.0,
    "left_words": "of your 5-hour allowance left"
   },
   "weekly": {
    "pct": 83.0,
    "resets_at": "2026-11-15T02:00:00-05:00",
    "used_words": "of your weekly allowance used",
-   "read_at": "2026-11-12T21:24:46.893105-05:00",
+   "read_at": "2026-11-12T21:37:10.289948-05:00",
    "source": "live",
    "left": 17.0,
    "left_words": "of your weekly allowance left"
@@ -194,7 +194,7 @@
    "read_at": "2026-11-12T21:11:28.806353-05:00",
    "source": "usage"
   },
-  "read_at": "2026-11-12T21:24:46.893105-05:00"
+  "read_at": "2026-11-12T21:37:10.289948-05:00"
  },
  "ui": {
   "week_pct": 0.261,
@@ -214,7 +214,7 @@
   "week_pct": 39.76,
   "usage_pct": 32.4,
   "work_pct": 79.4,
-  "read_at": "2026-11-13T02:35:00+00:00",
+  "read_at": "2026-11-13T02:38:00+00:00",
   "running": []
  },
  "api_credits": [
@@ -235,7 +235,7 @@
   }
  ],
  "disk": {
-  "free_gb": 22,
+  "free_gb": 23,
   "gate": "open",
   "ssd": {
    "mounted": true,
@@ -244,14 +244,14 @@
   "words": "free on the Mac mini. New Xcode runs and personal sessions stop under 10 GB.",
   "ssd_check": {
    "ok": true,
-   "at": "2026-11-12T21:31:00-05:00",
+   "at": "2026-11-12T21:37:00-05:00",
    "recovery": null
   }
  },
  "lock_in": {
   "on": true,
   "pool": 1,
-  "at": "2026-11-12T21:35:00-05:00",
+  "at": "2026-11-12T21:38:00-05:00",
   "mode": "midnight"
  },
  "next_tick_why": "session",
@@ -392,6 +392,13 @@
    },
    {
     "w": "Odalys",
+    "k": "tools",
+    "t": "Stop task names blocking finished work from...",
+    "s": "next",
+    "o": "c"
+   },
+   {
+    "w": "Odalys",
     "k": "site",
     "t": "Show the Restructuring folder on the...",
     "s": "next",
@@ -408,13 +415,6 @@
     "w": "Odalys",
     "k": "tools",
     "t": "Retire the Set aside stage on Home",
-    "s": "next",
-    "o": "i"
-   },
-   {
-    "w": "Idris",
-    "k": "build",
-    "t": "Every premade widget draws on the iPhone",
     "s": "next",
     "o": "i"
    }
@@ -437,7 +437,7 @@
    }
   ],
   "count": {
-   "next": 575,
+   "next": 576,
    "wait": 39,
    "blocked": 65,
    "you": 18
@@ -491,32 +491,32 @@
   ]
  ],
  "stg": {
-  "at": "2026-11-13T02:34:43Z",
+  "at": "2026-11-13T02:37:54Z",
   "s": {
-   "T-4229": [
-    "testing",
-    "Mac Mini \u00b7 test",
-    null
-   ],
    "T-4230": [
     "testing",
     "its own tests, in its copy",
-    1794536803960
+    1794536814933
+   ],
+   "T-4229": [
+    "testing",
+    "its own tests, in its copy",
+    1794537474933
    ],
    "T-4232": [
     "testing",
     "its own tests, in its copy",
-    1794537163960
+    1794537114933
    ]
   },
   "nm": {
-   "T-4229": "Fix a MacBook test job that failed",
    "T-4230": "Show the Restructuring folder on the Documents page",
+   "T-4229": "Fix a MacBook test job that failed",
    "T-4232": "Add a Double Spread usage mode, chosen on Home"
   }
  },
  "ln": {
-  "at": "2026-11-13T02:34:43Z",
+  "at": "2026-11-13T02:37:54Z",
   "mq": {
    "n": {
     "checking": 0,
@@ -530,11 +530,11 @@
    "m": {
     "checking": null,
     "inline": null,
-    "conflicted": 623,
+    "conflicted": 626,
     "failed": null,
     "held": null,
     "retry": null,
-    "parked": 701
+    "parked": 704
    },
    "cur": [],
    "ld": [
@@ -544,17 +544,28 @@
   },
   "mx": {
    "mini": {
-    "at": "2026-11-13T02:34:23Z",
-    "ld": 25.03,
+    "at": "2026-11-13T02:37:55Z",
+    "ld": 25.91,
     "c": 8,
     "sb": 0,
     "dk": [
-     22.9,
+     22.8,
      228.3
     ],
     "ss": [
      185.0,
      953.7
+    ],
+    "sn": []
+   },
+   "macbook": {
+    "at": "2026-11-13T02:25:06Z",
+    "ld": 0.2,
+    "c": 12,
+    "sb": 0,
+    "dk": [
+     377.8,
+     926.4
     ],
     "sn": []
    }
@@ -567,7 +578,7 @@
    "sr": 1,
    "m": "opus",
    "e": "high",
-   "t": "Work session \u2013 3 tasks",
+   "t": "Work session \u2013 4 tasks",
    "at": "2026-11-12T21:32:22-05:00"
   }
  ],
@@ -591,10 +602,10 @@
   "main": 3,
   "lanes": 0,
   "total": 3,
-  "at": "9:35 PM",
+  "at": "9:38 PM",
   "why": "",
-  "at_iso": "2026-11-13T02:35:00+00:00",
+  "at_iso": "2026-11-13T02:38:00+00:00",
   "started": "9:13 PM",
-  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:35 PM ET</p></section>"
+  "html": "<section class=\"agents-now\" id=\"agents-now\" aria-label=\"Agents running now\"><p class=\"an-n\"><b>3</b> agents running now</p><p class=\"an-sub\">Main session 3, started 9:13 PM \u00b7 <span title=\"An Investor's own Claude account, working through board tasks in sessions of its own.\">personal lanes</span> 0 sessions \u00b7 as of 9:38 PM ET</p></section>"
  }
 }
